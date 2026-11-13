@@ -91,8 +91,8 @@ var f = n(626584),
     I = n(75076),
     p = n(46653),
     m = n(652215);
-let g = new f.A("RTCConnectionStore"),
-    T = [],
+let T = new f.A("RTCConnectionStore"),
+    g = [],
     S = null,
     N = null,
     C = null,
@@ -256,7 +256,7 @@ class B extends a.Ay.Store {
         return null != i ? i.quality : m.bFR.UNKNOWN;
     }
     getPings() {
-        return null != i ? i.getPings() : T;
+        return null != i ? i.getPings() : g;
     }
     getAveragePing() {
         return null != i ? i?.getAveragePing() : 0;
@@ -415,7 +415,7 @@ let V = new B(
                           if ((G(), null == e.channelId)) return;
                           let t = new l.Ep();
                           (t.start(3e4, () => {
-                              (g.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", {
+                              (T.warn("No VOICE_STATE_UPDATE received within 30000ms of VOICE_CHANNEL_SELECT", {
                                   joinVoiceId: e.joinVoiceId,
                                   channelId: e.channelId,
                                   guildId: e.guildId,

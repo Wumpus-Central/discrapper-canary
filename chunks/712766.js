@@ -120,7 +120,7 @@ class m extends A.A {
     }
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-let g = {
+let T = {
     Escape: 27,
     Digit0: 48,
     Digit1: 49,
@@ -197,7 +197,7 @@ let g = {
     ArrowLeft: 37,
     ArrowRight: 39,
 };
-class T {
+class g {
     connection;
     keyHandler;
     mouseHandler;
@@ -247,9 +247,9 @@ class T {
     _handleKeyEvent(e) {
         (e.preventDefault(), this.isMouseCaptured && "Escape" === e.code)
             ? this._dropController()
-            : null == g[e.code]
+            : null == T[e.code]
               ? this.logger.log(`Unhandled key code ${e.code}`)
-              : this.connection.sendKey(this.sessionId, g[e.code], "keydown" === e.type);
+              : this.connection.sendKey(this.sessionId, T[e.code], "keydown" === e.type);
     }
     _handleMouseEvent(e) {
         (e.preventDefault(),
@@ -548,7 +548,7 @@ let Y = new W(o.h, {
                             null != n &&
                             (B(),
                             E.A.getRTCConnection(e)?.setAvSyncEnabled(t, !1),
-                            (v = { streamKey: e, inputGuest: new T(n, t, e) }),
+                            (v = { streamKey: e, inputGuest: new g(n, t, e) }),
                             !0)
                         );
                     })(t, i)

@@ -26,8 +26,8 @@ var i = n(477900),
     v = n(166403),
     j = n(473145),
     O = n(448645),
-    R = n(580630),
-    D = n(682502),
+    D = n(580630),
+    R = n(682502),
     L = n(816571),
     P = n(682901),
     G = n(818348),
@@ -75,7 +75,7 @@ function k(e) {
             transitionState: o,
             onBack: f,
             onNext: v,
-            onClose: D,
+            onClose: R,
         } = e,
         [L, G] = l.useState(!1),
         [V, k] = l.useState(null),
@@ -86,9 +86,9 @@ function k(e) {
                 return [[], !0];
             }
         }, [t]),
-        B = l.useRef(D);
+        B = l.useRef(R);
     (l.useEffect(() => {
-        B.current = D;
+        B.current = R;
     }),
         l.useEffect(() => {
             F && B.current();
@@ -121,7 +121,7 @@ function k(e) {
     if (null == K || null == X || null == z || null == Y)
         return (0, i.jsxs)(u.d, {
             transitionState: o,
-            onClose: D,
+            onClose: R,
             "aria-label": M.intl.string(M.t.CRwE7n),
             children: [
                 (0, i.jsx)(p.e0, { children: (0, i.jsx)(x.s3, { title: M.intl.string(M.t.CRwE7n) }) }),
@@ -151,7 +151,7 @@ function k(e) {
             (ee = M.intl.format(M.t.eb0xgS, { expirationDate: s.endsAt.toDate() })),
         (0, i.jsxs)(u.d, {
             transitionState: o,
-            onClose: D,
+            onClose: R,
             "aria-label": M.intl.string(M.t.CRwE7n),
             children: [
                 (0, i.jsx)(p.e0, { children: (0, i.jsx)(x.s3, { title: M.intl.string(M.t.CRwE7n) }) }),
@@ -171,7 +171,7 @@ function k(e) {
                                     (0, i.jsx)(N.Xd, { children: M.intl.string(M.t.iqhIp4) }),
                                     (0, i.jsx)(N.oR, {
                                         label: M.intl.format(M.t["Vg+LRr"], { subscriptionCount: 1 }),
-                                        value: (0, R.CE)((0, R.$g)(Q, t.currency), J, $),
+                                        value: (0, D.CE)((0, D.$g)(Q, t.currency), J, $),
                                         className: U.Au,
                                     }),
                                     null != W && W.length > 0
@@ -258,7 +258,7 @@ function w(e) {
 }
 function F(e) {
     let { step: t } = e;
-    throw new D.f({ message: `Unexpected step: ${t}`, extraSentryInformation: { step: t } });
+    throw new R.f({ message: `Unexpected step: ${t}`, extraSentryInformation: { step: t } });
 }
 n.d(
     t,

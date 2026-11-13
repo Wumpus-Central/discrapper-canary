@@ -16,8 +16,8 @@ var i = n(855986),
     I = n(48345),
     p = n(661886),
     m = n(96175),
-    g = n(237984),
-    T = n(293432),
+    T = n(237984),
+    g = n(293432),
     S = n(392164);
 let N = new r.Vy("OverlayV3NativeModuleUtils"),
     C = new _.A("OverlayV3NativeModule");
@@ -120,7 +120,7 @@ class D {
             }),
                 await (async function () {
                     let e;
-                    if (null == T.A.getWindow(S.f)) return;
+                    if (null == g.A.getWindow(S.f)) return;
                     N.warn("Waiting for previous overlay popout to be destroyed.");
                     let t = new Promise((e) => {
                         setTimeout(() => {
@@ -128,17 +128,17 @@ class D {
                         }, 5e3);
                     });
                     function n() {
-                        null == T.A.getWindow(S.f) && e?.();
+                        null == g.A.getWindow(S.f) && e?.();
                     }
                     let i = new Promise((t) => {
-                        ((e = t), T.A.addChangeListener(n));
+                        ((e = t), g.A.addChangeListener(n));
                     });
                     try {
                         await Promise.race([t, i]);
                     } finally {
-                        T.A.removeChangeListener(n);
+                        g.A.removeChangeListener(n);
                     }
-                    null != T.A.getWindow(S.f) && N.error("Previous overlay popout was not destroyed after 5 seconds!");
+                    null != g.A.getWindow(S.f) && N.error("Previous overlay popout was not destroyed after 5 seconds!");
                 })(),
                 (t = await this.openOverlayPopout()),
                 await (0, c.hJ)(e),
@@ -208,7 +208,7 @@ class D {
             (this.lastAssociatedPID = e));
     }
     async openOverlayPopout() {
-        return (await (0, g.o)(), await this.getWindowWithRetry());
+        return (await (0, T.o)(), await this.getWindowWithRetry());
     }
     async getWithRetry(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,

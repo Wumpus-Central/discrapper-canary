@@ -24,8 +24,8 @@ function h() {
 let I = [],
     p = null,
     m = [],
-    g = 1,
-    T = null,
+    T = 1,
+    g = null,
     S = null,
     N = !1,
     C = !1;
@@ -42,10 +42,10 @@ function y() {
     m = m.filter((e) => I.some((t) => t.id === e));
 }
 function D() {
-    ((I = []), (p = null), (m = []), (T = null));
+    ((I = []), (p = null), (m = []), (g = null));
 }
 function b(e) {
-    (T === p && (T = null),
+    (g === p && (g = null),
         (I = I.map((t) => {
             if (t.id !== p) return t;
             let n = [...t.entries.slice(0, t.index + 1), e].slice(-50);
@@ -58,7 +58,7 @@ function v(e) {
         i = null != n ? n.entries.slice(Math.max(0, n.index - 10), n.index + 1).map((e) => ({ ...e })) : [],
         r = i.at(-1),
         a = null != r && u(r, e) ? i : [...i, e].slice(-11);
-    return { id: String(g++), ...e, pinned: !1, entries: a, index: a.length - 1 };
+    return { id: String(T++), ...e, pinned: !1, entries: a, index: a.length - 1 };
 }
 function P(e, t, n, i) {
     return { id: e.id, pinned: !0 === e.pinned, ...t, entries: n, index: i };
@@ -94,7 +94,7 @@ function k(e) {
     let n = t.index + e,
         i = t.entries[n];
     if (null == i) return !1;
-    (T === p && (T = null), (I = I.map((e) => (e.id === p ? P(e, i, e.entries, n) : e))));
+    (g === p && (g = null), (I = I.map((e) => (e.id === p ? P(e, i, e.entries, n) : e))));
 }
 function F(e) {
     let { channel: t } = e;
@@ -130,7 +130,7 @@ class B extends r.Ay.PersistedStore {
             )),
             (p = e?.activeTabId ?? null),
             (m = []),
-            (g =
+            (T =
                 I.reduce((e, t) => {
                     let n = Number(t.id);
                     return Number.isFinite(n) && n > e ? n : e;
@@ -162,7 +162,7 @@ class B extends r.Ay.PersistedStore {
         return I.find((e) => e.id === S) ?? null;
     }
     isActiveTabFresh() {
-        return null != T && T === p;
+        return null != g && g === p;
     }
     getMaxTabs() {
         return h();
@@ -188,14 +188,14 @@ let V = new B(a.h, {
                 : { kind: "channel", channelId: e.channelId, guildId: e.guildId },
             e.sourceTabId ?? p,
         );
-        ((I = [...I, t]), (!0 === e.active || null == p) && L(t.id), !0 === e.fresh && (T = t.id));
+        ((I = [...I, t]), (!0 === e.active || null == p) && L(t.id), !0 === e.fresh && (g = t.id));
     },
     CHANNEL_TABS_CLOSE: function (e) {
         let { tabId: t } = e,
             n = I.findIndex((e) => e.id === t);
         if (-1 === n || 1 === I.length) return !1;
         let i = I[n].id === p;
-        if ((T === t && (T = null), (I = I.filter((e) => e.id !== t)), y(), i)) {
+        if ((g === t && (g = null), (I = I.filter((e) => e.id !== t)), y(), i)) {
             let e = I[Math.min(n, I.length - 1)];
             ((p = null), L(m[0] ?? e.id));
         }

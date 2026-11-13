@@ -17,17 +17,17 @@ function h(e) {
     let { controls: t, children: n, listProps: a, onScroll: l, scrollerRef: E } = e,
         [f, h] = r.useState(!1),
         [I, p] = r.useState(!0),
-        [m, g] = r.useState(null != a),
-        T = r.useRef(null),
-        S = (0, d.A)(T, a?.ref, E),
+        [m, T] = r.useState(null != a),
+        g = r.useRef(null),
+        S = (0, d.A)(g, a?.ref, E),
         N = r.useRef(null),
         C = r.useRef(void 0),
         O = null != t;
     r.useEffect(
         () => (
             (C.current = o()(() => {
-                T?.current != null &&
-                    (O && h(T.current?.getDistanceFromTop() > 12), p(T.current?.getDistanceFromBottom() > 12));
+                g?.current != null &&
+                    (O && h(g.current?.getDistanceFromTop() > 12), p(g.current?.getDistanceFromBottom() > 12));
             }, 200)),
             () => {
                 C.current?.cancel();
@@ -45,13 +45,13 @@ function h(e) {
     return (
         r.useLayoutEffect(() => {
             let e = new (N?.current?.ownerDocument?.defaultView ?? window).ResizeObserver(() => {
-                    if (L) return void g(!0);
-                    let e = T?.current?.getScrollerNode() ?? null;
+                    if (L) return void T(!0);
+                    let e = g?.current?.getScrollerNode() ?? null;
                     if (null == e || N?.current == null) return;
                     let t = e.getBoundingClientRect();
-                    g(N.current.getBoundingClientRect().height > t.height);
+                    T(N.current.getBoundingClientRect().height > t.height);
                 }),
-                t = T?.current?.getScrollerNode() ?? null;
+                t = g?.current?.getScrollerNode() ?? null;
             return (null != t && e.observe(t), N?.current != null && e.observe(N.current), () => e.disconnect());
         }, [L]),
         (0, i.jsxs)(c.F, {

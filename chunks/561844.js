@@ -16,8 +16,8 @@ var f = n(710969),
     I = n(814793),
     p = n(590202),
     m = n(823784),
-    g = n(652215);
-let T = new Set([g.HAw.QUEST_CONTENT_VIEWED, g.HAw.QUEST_CONTENT_ENGAGED_VIEWED, g.HAw.QUEST_CONTENT_CLICKED]);
+    T = n(652215);
+let g = new Set([T.HAw.QUEST_CONTENT_VIEWED, T.HAw.QUEST_CONTENT_ENGAGED_VIEWED, T.HAw.QUEST_CONTENT_CLICKED]);
 function S(e, t) {
     return t ? e : ((0, l.Vc)()?.uuid ?? null);
 }
@@ -38,7 +38,7 @@ function O(e, t) {
         (u.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", e, t), i)
     )
         return;
-    let r = T.has(e);
+    let r = g.has(e);
     if (n) return o.Ay.trackWithMetadata(e, t, r);
     _.default.track(e, t, { flush: r });
 }
@@ -153,20 +153,20 @@ n.d(
                 s = (0, p.fF)(n);
             R({
                 questId: t,
-                event: g.HAw.QUEST_CONTENT_RENDERING_FAILURE,
+                event: T.HAw.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: { content_id: s.content_id, content_name: s.content_name, reason: r, impression_id: a },
                 sourceQuestContent: i,
             });
         },
         DZ: function (e, t) {
-            o.Ay.trackWithMetadata(g.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
+            o.Ay.trackWithMetadata(T.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
         },
         Dq: { MAIN_CTA: "main_cta", RATING_STAT: "rating_stat", SEE_MORE: "see_more" },
         LW: y,
         OQ: function (e) {
             let { searchSessionId: t } = e,
                 n = (0, s.sN)().uuid;
-            _.default.track(g.HAw.QUEST_HOME_SEARCH_ENTERED, {
+            _.default.track(T.HAw.QUEST_HOME_SEARCH_ENTERED, {
                 client_ad_session_id: n,
                 billing_session_id: S(n, !1),
                 search_session_id: t,
@@ -179,7 +179,7 @@ n.d(
             L({
                 adContentId: t,
                 adCreativeType: n,
-                event: g.HAw.QUEST_BAR_MODE_CHANGED,
+                event: T.HAw.QUEST_BAR_MODE_CHANGED,
                 properties: { content_id: l.content_id, content_name: l.content_name, mode: a, previous_mode: s },
                 sourceQuestContent: r,
             });
@@ -187,7 +187,7 @@ n.d(
         XH: function (e) {
             let { searchSessionId: t, searchSessionDurationMs: n } = e,
                 i = (0, s.sN)().uuid;
-            _.default.track(g.HAw.QUEST_HOME_SEARCH_CLOSED, {
+            _.default.track(T.HAw.QUEST_HOME_SEARCH_CLOSED, {
                 client_ad_session_id: i,
                 billing_session_id: S(i, !1),
                 search_session_id: t,
@@ -209,7 +209,7 @@ n.d(
                 c = (0, f.Gp)(d, t);
             R({
                 questId: t,
-                event: g.HAw.QUEST_CONTENT_CLICKED,
+                event: T.HAw.QUEST_CONTENT_CLICKED,
                 properties: {
                     ...(await y({
                         questContent: n,
@@ -249,7 +249,7 @@ n.d(
                     overlay_variant: a,
                 };
             switch (s) {
-                case g.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
                     L({
                         adContentId: t,
                         adCreativeType: n,
@@ -258,7 +258,7 @@ n.d(
                         sourceQuestContent: i.sourceQuestContent,
                     });
                     break;
-                case g.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
                     L({
                         adContentId: t,
                         adCreativeType: n,
@@ -267,7 +267,7 @@ n.d(
                         sourceQuestContent: i.sourceQuestContent,
                     });
                     break;
-                case g.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
                     L({
                         adContentId: t,
                         adCreativeType: n,
@@ -276,8 +276,8 @@ n.d(
                         sourceQuestContent: i.sourceQuestContent,
                     });
                     break;
-                case g.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
-                case g.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
                     L({
                         adContentId: t,
                         adCreativeType: n,
@@ -292,7 +292,7 @@ n.d(
                 s = (0, p.fF)(t);
             R({
                 questId: i,
-                event: g.HAw.QUEST_BAR_MODE_CHANGED,
+                event: T.HAw.QUEST_BAR_MODE_CHANGED,
                 properties: { content_id: s.content_id, content_name: s.content_name, mode: r, previous_mode: a },
                 sourceQuestContent: n,
             });
@@ -319,7 +319,7 @@ n.d(
                     overlay_variant: r,
                 };
             switch (a) {
-                case g.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_CLOSED:
                     R({
                         questId: t.id,
                         event: a,
@@ -327,7 +327,7 @@ n.d(
                         sourceQuestContent: n.sourceQuestContent,
                     });
                     break;
-                case g.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_RETURNED:
                     R({
                         questId: t.id,
                         event: a,
@@ -335,7 +335,7 @@ n.d(
                         sourceQuestContent: n.sourceQuestContent,
                     });
                     break;
-                case g.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_BACKGROUNDED:
                     R({
                         questId: t.id,
                         event: a,
@@ -343,15 +343,15 @@ n.d(
                         sourceQuestContent: n.sourceQuestContent,
                     });
                     break;
-                case g.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
-                case g.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED:
+                case T.HAw.QUEST_APP_STORE_OVERLAY_OPEN_FAILED:
                     R({ questId: t.id, event: a, properties: o, sourceQuestContent: n.sourceQuestContent });
             }
         },
         gr: function (e) {
             let { searchSessionId: t, searchQuery: n, searchQueryLength: i, resultsCount: r, hasResults: a } = e,
                 l = (0, s.sN)().uuid;
-            _.default.track(g.HAw.QUEST_HOME_SEARCH_QUERY_SUBMITTED, {
+            _.default.track(T.HAw.QUEST_HOME_SEARCH_QUERY_SUBMITTED, {
                 client_ad_session_id: l,
                 billing_session_id: S(l, !1),
                 search_session_id: t,
@@ -374,7 +374,7 @@ n.d(
             L({
                 adContentId: t,
                 adCreativeType: n,
-                event: g.HAw.QUEST_CONTENT_RENDERING_FAILURE,
+                event: T.HAw.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: { content_id: l.content_id, content_name: l.content_name, reason: a, impression_id: s },
                 sourceQuestContent: r,
             });
@@ -390,7 +390,7 @@ n.d(
                     carouselSize: o,
                 } = e,
                 d = (0, s.sN)().uuid;
-            _.default.track(g.HAw.QUEST_HOME_CAROUSEL_SCROLL, {
+            _.default.track(T.HAw.QUEST_HOME_CAROUSEL_SCROLL, {
                 scrolling_type: t,
                 client_ad_session_id: d,
                 billing_session_id: S(d, (0, f.xn)(l)),

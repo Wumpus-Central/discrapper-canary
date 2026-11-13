@@ -10,17 +10,17 @@ var i = n(477900),
     d = n(401843),
     m = n(71689),
     h = n(338771),
-    g = n(208603),
-    f = n(929921),
+    f = n(208603),
+    g = n(929921),
     A = n(754712),
     p = n(723702),
     E = n(74329),
     C = n(192308),
     b = n(231723),
     v = n(212245),
-    T = n(676030),
+    I = n(676030),
     _ = n(474626),
-    I = n(375742),
+    T = n(375742),
     y = n(734057),
     R = n(71393),
     S = n(309010),
@@ -44,15 +44,15 @@ function D(e) {
                 t = m.Ay.getLastPickedContent();
             return { desktopSourceId: e?.id, lastPickedContent: t };
         }),
-        G = (0, l.bG)([f.A], () => f.A.getState().soundshareEnabled),
+        G = (0, l.bG)([g.A], () => g.A.getState().soundshareEnabled),
         F = A.Ay.supports(N.O5.DESKTOP_CAPTURE_APPLICATIONS),
         H = (0, l.bG)([A.Ay], () => A.Ay.supports(N.O5.SOUNDSHARE)),
         W = (0, l.bG)([A.Ay], () => A.Ay.supportsScreenSoundshare()),
         B = (function (e, t) {
-            let { preset: a, resolution: o, fps: u, soundshareEnabled: d } = (0, l.cf)([f.A], () => f.A.getState()),
+            let { preset: a, resolution: o, fps: u, soundshareEnabled: d } = (0, l.cf)([g.A], () => g.A.getState()),
                 m = (0, l.bG)([A.Ay], () => A.Ay.getGoLiveSource()),
                 h = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
-                g = (0, l.bG)([R.A], () => R.A.getGuild(e?.guildId)?.premiumTier),
+                f = (0, l.bG)([R.A], () => R.A.getGuild(e?.guildId)?.premiumTier),
                 { location: p } = (0, v.p)(),
                 E = (0, l.bG)([S.Ay, y.A], () => y.A.getChannel(S.Ay.getVoiceChannelId())),
                 M = r.useCallback(
@@ -109,13 +109,13 @@ function D(e) {
                 j = (0, _.A)("useStreamSettingsItems", h, e.guildId),
                 w = o === j?.maxResolution && u === j?.maxFPS;
             function U(e) {
-                return w ? ((0, I.A)(e, h, g, E) ?? o) : o;
+                return w ? ((0, T.A)(e, h, f, E) ?? o) : o;
             }
             let z = U(u),
                 L = P.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
                         l = U(t),
-                        a = (0, T.A)(P.jQ.PRESET_CUSTOM, l, t, h, g, E);
+                        a = (0, I.A)(P.jQ.PRESET_CUSTOM, l, t, h, f, E);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -133,7 +133,7 @@ function D(e) {
                 }),
                 V = P.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, T.A)(P.jQ.PRESET_CUSTOM, t, D, h, g, E);
+                        l = (0, I.A)(P.jQ.PRESET_CUSTOM, t, D, h, f, E);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -159,7 +159,7 @@ function D(e) {
         K = (0, E.A)(t, z, M.FX),
         q = null != L && H && (!L.startsWith("screen") || W),
         X = (0, l.bG)([A.Ay], () => A.Ay.getUseSystemScreensharePicker() && (0, p.j9)()),
-        Y = (0, g.A)(t),
+        Y = (0, f.A)(t),
         Q = r.useCallback(() => {
             L?.startsWith("prepicked:")
                 ? A.Ay.getMediaEngine().eachConnection((e) => {
@@ -178,7 +178,7 @@ function D(e) {
                 ? k.intl.string(k.t.eAktHv)
                 : k.intl.string(k.t.qntSal),
         et = r.useCallback(() => {
-            let { preset: e, resolution: t, fps: n } = f.A.getState(),
+            let { preset: e, resolution: t, fps: n } = g.A.getState(),
                 i = { qualityOptions: { preset: e, resolution: t, frameRate: n }, context: N.x.STREAM };
             (null != L && (i.desktopSettings = { sourceId: L, sound: !G }),
                 (0, d.Xd)({ preset: e, resolution: t, frameRate: n, soundshareEnabled: !G }),

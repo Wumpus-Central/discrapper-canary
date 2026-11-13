@@ -33,7 +33,7 @@ function m(e) {
         ? f.LO.NONE
         : O(t.map((t) => (D(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.Vq));
 }
-function g(e, t) {
+function T(e, t) {
     if (t === f.LO.NONE || null == e) return !1;
     if (
         e.attachments?.some((e) => S({ type: E.D.Attachment, media: e }, t).length > 0) ||
@@ -46,10 +46,10 @@ function g(e, t) {
         null == n || 0 === n.length)
     )
         return !1;
-    for (let e of n) if (g(e.message, t)) return !0;
+    for (let e of n) if (T(e.message, t)) return !0;
     return !1;
 }
-function T(e) {
+function g(e) {
     let t = [];
     if ((null != e.components && t.push(...(0, h.A)(e.components)), null != e.embeds))
         for (let n of e.embeds) null != n.components && t.push(...(0, h.A)(n.components));
@@ -191,7 +191,7 @@ function b(e) {
             Fg: p,
             KM: function (e) {
                 let t = p(e);
-                return g(e, t);
+                return T(e, t);
             },
             LE: O,
             M: function (e) {
@@ -216,7 +216,7 @@ function b(e) {
                 if (
                     t.attachments?.some((e) => N({ type: E.D.Attachment, media: e }, i)) ||
                     t.embeds?.some((e) => N({ type: E.D.Embed, media: e }, i)) ||
-                    T(t).some((e) => N({ type: E.D.GenericMedia, media: e }, i))
+                    g(t).some((e) => N({ type: E.D.GenericMedia, media: e }, i))
                 )
                     return !0;
                 let r = null;
@@ -237,8 +237,8 @@ function b(e) {
                 return 0 !== n.length && n.filter((t) => C(t, e)).length > 0;
             },
             s9: function (e) {
-                return !T(e).some((e) => e.loadingState === a.TD.LOADING);
+                return !g(e).some((e) => e.loadingState === a.TD.LOADING);
             },
-            y5: g,
+            y5: T,
         },
     ));

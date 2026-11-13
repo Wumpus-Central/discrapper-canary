@@ -57,13 +57,13 @@ function m(e) {
     for (let e of t) f(a.Ay.createFromServer(e));
     return !0;
 }
-function g(e) {
+function T(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) e?.application != null && (f(a.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
-function T(e) {
+function g(e) {
     let { guildId: t } = e;
     if (!d.has(t)) return !1;
     d.delete(t);
@@ -176,9 +176,9 @@ let N = new S(r.h, {
         let { application: t } = e;
         I(t);
     },
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: g,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: g,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: g,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: T,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: T,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
@@ -193,10 +193,10 @@ let N = new S(r.h, {
         let s = d.get(t);
         (null == s && ((s = new Map()), d.set(t, s)), s.set(n, r));
     },
-    GUILD_INTEGRATIONS_UPDATE: T,
-    INTEGRATION_CREATE: T,
-    INTEGRATION_UPDATE: T,
-    INTEGRATION_DELETE: T,
+    GUILD_INTEGRATIONS_UPDATE: g,
+    INTEGRATION_CREATE: g,
+    INTEGRATION_UPDATE: g,
+    INTEGRATION_DELETE: g,
     PAYMENT_UPDATE: function (e) {
         let { payment: t } = e;
         if (t.sku?.application == null) return !1;

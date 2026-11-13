@@ -1,4 +1,4 @@
-n.d(t, { zR: () => em, Q_: () => ef, Ay: () => eT, Bx: () => eg, zF: () => eI, Gm: () => eh });
+n.d(t, { zR: () => em, Q_: () => ef, Ay: () => eg, Bx: () => eT, zF: () => eI, Gm: () => eh });
 var i,
     r = n(300259),
     a = n(323073),
@@ -19,8 +19,8 @@ let m = (0, E.throttle)(() => (0, f.P0)({ text: p.intl.string(p.t["+5kSoW"]), va
     leading: !0,
     trailing: !1,
 });
-var g = n(265422),
-    T = n(967198),
+var T = n(265422),
+    g = n(967198),
     S = n(188567),
     N = n(652215),
     C = n(192308),
@@ -156,8 +156,8 @@ let em = {
                 let t = o.Ay.getChannelId(),
                     n = l.A.getChannel(t);
                 window.location.pathname.startsWith(N.BVt.CHANNEL(N.gNP)) && null != n
-                    ? (0, g.i)(n.guild_id, t)
-                    : (0, g.a)(N.BVt.CHANNEL(N.gNP, t ?? void 0));
+                    ? (0, T.i)(n.guild_id, t)
+                    : (0, T.a)(N.BVt.CHANNEL(N.gNP, t ?? void 0));
             })(),
             S._.dispatch(N.jej.TOGGLE_INBOX),
             !1),
@@ -167,7 +167,7 @@ let em = {
         binds: ["mod+u"],
         comboKeysBindGlobal: !0,
         action() {
-            let e = T.A.getGuildId(),
+            let e = g.A.getGuildId(),
                 t = o.Ay.getChannelId(e),
                 n = l.A.getChannel(t),
                 i = null != t && n?.isVocalThread() === !0 && el.A.getUserParticipantCount(t) > 0;
@@ -208,7 +208,7 @@ let em = {
     [N.IWg.CREATE_DM_GROUP]: {
         binds: ["mod+shift+t"],
         comboKeysBindGlobal: !0,
-        action: () => (null != T.A.getGuildId() && (0, g.i)(N.ME), S._.safeDispatch(N.jej.TOGGLE_DM_CREATE), !1),
+        action: () => (null != g.A.getGuildId() && (0, T.i)(N.ME), S._.safeDispatch(N.jej.TOGGLE_DM_CREATE), !1),
     },
     [N.IWg.CREATE_THREAD]: {
         binds: ["mod+shift+alt+n"],
@@ -277,7 +277,7 @@ let em = {
             (e.preventDefault(), e.stopPropagation());
             let t = v.A.getGuildId(),
                 n = v.A.getChannelId();
-            return (null != n && (0, g.i)(t ?? N.ME, n), !1);
+            return (null != n && (0, T.i)(t ?? N.ME, n), !1);
         },
     },
     [N.IWg.ZOOM_IN]: eA.Ur,
@@ -287,7 +287,7 @@ let em = {
         binds: ["mod+ctrl+a"],
         comboKeysBindGlobal: !0,
         action() {
-            let e = T.A.getGuildId() ?? void 0;
+            let e = g.A.getGuildId() ?? void 0;
             (0, G.transitionToGlobalDiscovery)({
                 tab: k.GlobalDiscoveryTab.APPS,
                 newSessionState: { guildId: e ?? null, entrypoint: { name: x.sW.KEYBOARD_SHORTCUT } },
@@ -336,7 +336,7 @@ let em = {
         },
     },
 };
-function eg() {
+function eT() {
     return [
         {
             description: p.intl.string(p.t.bx4Uyz),
@@ -411,4 +411,4 @@ function eg() {
         { description: p.intl.string(p.t.z9c6mt), binds: ep(N.IWg.VIBE_WITH_WUMPUS), group: "MISCELLANEOUS" },
     ];
 }
-let eT = em;
+let eg = em;

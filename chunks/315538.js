@@ -16,17 +16,17 @@ var i = n(515029),
     I = n(309010),
     p = n(967198),
     m = n(811091);
-function g(e) {
+function T(e) {
     return (
         (null != e.attachments && e.attachments.length > 0) ||
         (null != e.embeds && e.embeds.length > 0) ||
         (null != e.components && e.components.length > 0)
     );
 }
-function T(e) {
+function g(e) {
     if (null == e) return !1;
     let t = "messageSnapshots" in e ? e.messageSnapshots : e.message_snapshots;
-    return g(e) || (null != t && t?.some((e) => g(e.message)));
+    return T(e) || (null != t && t?.some((e) => T(e.message)));
 }
 var S = n(135598),
     N = n(930125),
@@ -193,7 +193,7 @@ function k(e, t) {
             attributesByChannelId: d,
             attributesByMessageId: c,
         } = ((n = e.filter((e) => {
-            let t = T(e),
+            let t = g(e),
                 n = 0 !== (0, L.Fg)(e);
             return t && n;
         })),
@@ -203,7 +203,7 @@ function k(e, t) {
                     null != e &&
                     "referenced_message" in e &&
                     null != e.referenced_message &&
-                    T(e.referenced_message) &&
+                    g(e.referenced_message) &&
                     0 !== (0, L.Fg)(e.referenced_message)
                 )
                     return e.referenced_message;
@@ -349,7 +349,7 @@ function q(e) {
                     messagesPendingScan: l,
                     attributesByChannelId: o,
                     attributesByMessageId: d,
-                } = ((t = e.filter((e) => T(e) && 0 !== (0, L.Fg)(e))),
+                } = ((t = e.filter((e) => g(e) && 0 !== (0, L.Fg)(e))),
                 (n = e
                     .map((e) => {
                         if (y.sl8.has(e.type) && null != e.messageReference) {
@@ -357,7 +357,7 @@ function q(e) {
                             if (
                                 t.state === _.a.LOADED &&
                                 null != t.message &&
-                                T(t.message) &&
+                                g(t.message) &&
                                 0 !== (0, L.Fg)(t.message)
                             )
                                 return t.message;

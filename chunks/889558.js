@@ -40,16 +40,16 @@ let h = class {
 var I = n(343328),
     p = n(235393),
     m = n(694403);
-let g = new Set(),
-    T = {
+let T = new Set(),
+    g = {
         show(e) {
             let { url: t, trustUrl: i, onConfirm: r, onCancel: a, isProtocol: s, contextKey: l } = e,
                 o = `masked-link-${t}`;
-            if (g.has(o)) return void a();
-            g.add(o);
+            if (T.has(o)) return void a();
+            T.add(o);
             let d = !1;
             function _(e) {
-                d || ((d = !0), g.delete(o), e ? r() : a());
+                d || ((d = !0), T.delete(o), e ? r() : a());
             }
             (0, u.mM)(
                 async () => {
@@ -161,8 +161,8 @@ function W(e, t) {
 function Y(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         s = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: c, onClick: u, onConfirm: E, onCancel: g, shouldConfirm: L, messageId: y, channelId: D } = e,
-        v = g ?? (() => {}),
+        { trusted: c, onClick: u, onConfirm: E, onCancel: T, shouldConfirm: L, messageId: y, channelId: D } = e,
+        v = T ?? (() => {}),
         P = r().sanitizeUrl(e.href);
     if (null == P) {
         (null != t && t.preventDefault(),
@@ -257,10 +257,10 @@ function Y(e, t) {
                   sourceGuildId: k,
               }));
     if ((null != t && t.preventDefault(), Y))
-        T.show({ url: M, trustUrl: o, onConfirm: V, onCancel: v, isProtocol: !0, contextKey: s });
+        g.show({ url: M, trustUrl: o, onConfirm: V, onCancel: v, isProtocol: !0, contextKey: s });
     else {
         let e = (0, m.W1)(M),
             t = null != e ? e.displayTarget : M;
-        T.show({ url: t, trustUrl: l, onConfirm: V, onCancel: v, isProtocol: !1, contextKey: s });
+        g.show({ url: t, trustUrl: l, onConfirm: V, onCancel: v, isProtocol: !1, contextKey: s });
     }
 }

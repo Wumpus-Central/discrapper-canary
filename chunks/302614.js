@@ -9,8 +9,8 @@ var i = n(477900),
     d = n(52133),
     m = n(684013),
     h = n(869146),
-    g = n(373954),
-    f = n(723702),
+    f = n(373954),
+    g = n(723702),
     A = n(41984),
     p = n(127242),
     E = n(545807),
@@ -25,7 +25,7 @@ function v(e, t) {
         bottom: Math.ceil(t.bottom),
     };
 }
-let T = r.createContext(
+let I = r.createContext(
     new (class {
         resizeObserver;
         mutationObserver;
@@ -77,7 +77,7 @@ let T = r.createContext(
             { trailing: !0, maxWait: 1e3 },
         );
         updateZones() {
-            if (!f.isPlatformEmbedded) return;
+            if (!g.isPlatformEmbedded) return;
             let e = h.A.getWindow(C.f);
             null != e &&
                 m.A.setClickZones(
@@ -109,9 +109,9 @@ n.d(
     {
         A: function (e) {
             let { observe: t = !0, className: n, style: l, children: a } = e,
-                o = r.useContext(T),
+                o = r.useContext(I),
                 u = (0, c.bG)([p.A], () => p.A.hasRenderDebugMode(A.x7.ClickZones)),
-                d = (0, c.bG)([g.default], () => g.default.disableClickableRegions),
+                d = (0, c.bG)([f.default], () => f.default.disableClickableRegions),
                 [{ refHandler: m, setObserve: h }] = r.useState(() => {
                     let e = null;
                     return {

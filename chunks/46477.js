@@ -32,7 +32,7 @@ function m(e, t, n) {
     let a = e[(0, c.Eu)((0, A.Ap)(n), E.RA.CHANNEL)];
     return null != a ? a.permission : null;
 }
-function g(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     if (null == e) return null;
     if (!r) {
         let t = e[(0, c.Eu)(n, E.RA.USER)];
@@ -56,14 +56,14 @@ n.d(
     {
         CA: p,
         _W: m,
-        we: g,
+        we: T,
         zl: function (e, t, n) {
             let {
                     context: i,
                     commandTypes: r,
                     allowNsfw: c,
                     computedPermissions: p,
-                    userId: T,
+                    userId: g,
                     roleIds: S,
                     isImpersonating: N,
                     hasBaseAccessPermissions: C,
@@ -101,7 +101,7 @@ n.d(
                 let t = m(e.permissions, i, P);
                 if (!1 === t || (!0 !== t && !1 === L)) return 6;
             }
-            let M = g(e.permissions, P, T, S, N);
+            let M = T(e.permissions, P, g, S, N);
             if (!0 === M) return 0;
             if (!1 === M) return 7;
             if (!1 === R) return 7;

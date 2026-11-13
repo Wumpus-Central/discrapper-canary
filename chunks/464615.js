@@ -15,10 +15,10 @@ var i = n(439372),
     I = n(901173),
     p = n(652215),
     m = n(746080);
-class g extends i.A {
+class T extends i.A {
     actions = { CONJURE_TURN_SETTLED: S, CONJURE_TURN_NOTIFICATION: N, LOGOUT: C };
 }
-let T = new g();
+let g = new T();
 function S(e) {
     let { projectId: t, guildId: n, title: i, body: r, nonce: a } = e;
     O(t, n, i, r, a);
@@ -31,10 +31,10 @@ function N(e) {
 function C() {
     b.clear();
 }
-function O(e, t, n, i, g) {
-    if (null != g) {
-        if (g <= (b.get(e) ?? 0)) return;
-        b.set(e, g);
+function O(e, t, n, i, T) {
+    if (null != T) {
+        if (T <= (b.get(e) ?? 0)) return;
+        b.set(e, T);
     }
     if (
         f.A.areTurnNotificationsDisabled() ||
@@ -44,7 +44,7 @@ function O(e, t, n, i, g) {
         (0, A.j)(l.A.settings, e)
     )
         return;
-    let T = !o.A.isSoundDisabled(L),
+    let g = !o.A.isSoundDisabled(L),
         S = c.A.getGuildId();
     if (
         (_.A.getShownProjectId() === e ||
@@ -52,7 +52,7 @@ function O(e, t, n, i, g) {
             (null != S && E.Ay.getSelectedProjectId(S) === e && d.Ay.getChannelId() === m.VV.CONJURE)) &&
         f.A.isWindowFocused()
     ) {
-        T && (0, a.Ak)(R, D);
+        g && (0, a.Ak)(R, D);
         return;
     }
     let N = t ?? (0, h.oX)(y);
@@ -62,7 +62,7 @@ function O(e, t, n, i, g) {
         title: n,
         body: (0, I.Lj)(i),
         route: null == N ? null : p.BVt.CHANNEL(N, m.VV.CONJURE, e),
-        sound: T ? R : void 0,
+        sound: g ? R : void 0,
         volume: D,
     });
 }
@@ -71,4 +71,4 @@ let R = "bit_message1",
     y = "ConjureChatStore",
     D = 0.4,
     b = new Map();
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

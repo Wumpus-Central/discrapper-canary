@@ -254,13 +254,13 @@ let p = "migrated",
             version: 4,
         },
     };
-function g(e, t) {
+function T(e, t) {
     let n = r[e];
     if (null == n) return !1;
     let a = i[n.layoutId];
     return null != a && t(n, a);
 }
-function T(e) {
+function g(e) {
     let t = m[e];
     if (null != t) return t.defaultSettings;
 }
@@ -324,7 +324,7 @@ class S extends o.Ay.PersistedStore {
                         return;
                     let s = (0, l.A)();
                     n.widgets = [a, s];
-                    let o = T(h.uss.GUILDS_TEXT);
+                    let o = g(h.uss.GUILDS_TEXT);
                     null != o && r.push([s, { ...o, type: h.uss.GUILDS_TEXT, id: s, layoutId: t, zIndex: 2 }]);
                 }),
                 { widgets: r, layouts: a }
@@ -383,7 +383,7 @@ class S extends o.Ay.PersistedStore {
                     if (null != o || m[i].version !== e.version) continue;
                     s = a = !0;
                     let d = (0, l.A)(),
-                        c = T(i);
+                        c = g(i);
                     if (null == c) return;
                     ((o = new E({ ...c, type: i, id: d, layoutId: t, zIndex: n.length })),
                         n.push(o),
@@ -448,7 +448,7 @@ class S extends o.Ay.PersistedStore {
         return m[e];
     }
     getWidgetDefaultSettings(e) {
-        return T(e);
+        return g(e);
     }
     getWidgetType(e) {
         let t = r[e];
@@ -472,7 +472,7 @@ class S extends o.Ay.PersistedStore {
                     case f.X.REQUIRED:
                     case f.X.OPTIONAL_DEFAULT:
                         if ((i.version ?? 0) === t) {
-                            let t = T(r);
+                            let t = g(r);
                             if (null == t) return;
                             n.push({ ...t, type: r, id: (0, l.A)(), layoutId: e });
                         }
@@ -510,7 +510,7 @@ let N = new S(c.h, {
     },
     LAYOUT_SET_PINNED: function (e) {
         let { widgetId: t, pinned: n } = e;
-        return g(t, (e, t) => {
+        return T(t, (e, t) => {
             var i, a;
             ((i = e), (a = n), (r = { ...r, [i.id]: i.set("pinned", a ?? !i.pinned) }));
         });
@@ -526,7 +526,7 @@ let N = new S(c.h, {
     },
     LAYOUT_UPDATE_WIDGET: function (e) {
         let { widgetId: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
-        return g(t, (e, t) =>
+        return T(t, (e, t) =>
             (function (e) {
                 let { widget: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
                 if (
@@ -549,7 +549,7 @@ let N = new S(c.h, {
     },
     LAYOUT_SET_TOP_WIDGET: function (e) {
         let { widgetId: t } = e;
-        return g(t, (e, t) =>
+        return T(t, (e, t) =>
             (function (e, t) {
                 let n,
                     i =
@@ -610,14 +610,14 @@ let N = new S(c.h, {
     },
     LAYOUT_SET_WIDGET_META: function (e) {
         let { widgetId: t, meta: n } = e;
-        return g(t, (e, t) => {
+        return T(t, (e, t) => {
             var i, a;
             ((i = e), (a = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...a } }) }));
         });
     },
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: function (e) {
         let { widgetId: t } = e;
-        return g(t, (e, t) => {
+        return T(t, (e, t) => {
             r = { ...r, [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) };
         });
     },

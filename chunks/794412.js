@@ -32,8 +32,8 @@ var i = n(435558),
     I = n(576705),
     p = n(309010),
     m = n(967198),
-    g = n(927813),
-    T = n(811091),
+    T = n(927813),
+    g = n(811091),
     S = n(181079),
     N = n(266599),
     C = n(796637),
@@ -135,7 +135,7 @@ function j(e) {
     return _.wc.updateAsync("favorites", t, n ? _.Sb.FREQUENT_USER_ACTION : _.Sb.INFREQUENT_USER_ACTION, H);
 }
 function W(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.default.fromTimestamp(Date.now());
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.default.fromTimestamp(Date.now());
     return ((e[n] = s.wL.create({ nickname: t, type: s.Ip.CATEGORY, position: w(e), parentId: "0" })), n);
 }
 function Y(e, t) {
@@ -221,7 +221,7 @@ let Q = 0,
     J = null;
 async function Z() {
     let e = A.default.getId();
-    if (!q() || (e === J && Date.now() - Q < g.A.Millis.DAY)) return;
+    if (!q() || (e === J && Date.now() - Q < T.A.Millis.DAY)) return;
     let t = S.A.pruneInactiveThreadsScope,
         n = t === P.l0 ? (0, N.PG)() : null;
     if (n?.length === 0) return;
@@ -248,7 +248,7 @@ async function Z() {
 async function ee(e) {
     if (!(0, R.QN)(e)) return null;
     let t = e.trim(),
-        n = T.default.fromTimestamp(Date.now());
+        n = g.default.fromTimestamp(Date.now());
     return (
         await j({
             update: (e) => {

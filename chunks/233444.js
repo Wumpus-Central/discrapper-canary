@@ -66,8 +66,8 @@ var i,
         (d.CLAN_TAG = "clan_tag"),
         d),
     m = n(855986),
-    g = n(47167),
-    T = n(734057),
+    T = n(47167),
+    g = n(734057),
     S = n(576705),
     N = n(994500),
     C = n(287809),
@@ -97,7 +97,7 @@ function P(e, t) {
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L.FXj,
         r = arguments.length > 3 ? arguments[3] : void 0,
         a = arguments.length > 4 ? arguments[4] : void 0,
-        s = null != t ? (0, g.m1)(t, C.default, N.A) : y.intl.string(y.t.J90oLW),
+        s = null != t ? (0, T.m1)(t, C.default, N.A) : y.intl.string(y.t.J90oLW),
         l = (function (e) {
             let t = v(e, A.BLOCK_PROFILE_UPDATE_TYPE);
             if (null != t) return t;
@@ -153,8 +153,8 @@ function P(e, t) {
         })(l, o, d);
         if (null != e) return e;
     }
-    let T = S.A.can(L.xBc.VIEW_CHANNEL, t);
-    n = null == t ? (e) => e : T ? i : L.FXj;
+    let g = S.A.can(L.xBc.VIEW_CHANNEL, t);
+    n = null == t ? (e) => e : g ? i : L.FXj;
     let O = (function (e, t, n) {
         let i = v(e, A.VOICE_CHANNEL_STATUS_OUTCOME);
         if (null == i) return null;
@@ -251,14 +251,14 @@ function w(e) {
         applicationName: v(e, A.APPLICATION_NAME),
         interactionUserId: v(e, A.INTERACTION_USER_ID),
         interactionCallbackType: v(e, A.INTERACTION_CALLBACK_TYPE),
-        embedChannel: T.A.getChannel(t),
+        embedChannel: g.A.getChannel(t),
         embedChannelId: t,
         alertActionsExecution: i ?? void 0,
     };
 }
 function G(e) {
     let t = c.useMemo(() => w(e), [e]),
-        n = (0, m.bG)([T.A], () => T.A.getChannel(t.embedChannelId), [t.embedChannelId]);
+        n = (0, m.bG)([g.A], () => g.A.getChannel(t.embedChannelId), [t.embedChannelId]);
     return { ...t, embedChannel: n };
 }
 function x(e) {

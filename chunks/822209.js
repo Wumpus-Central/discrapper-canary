@@ -16,8 +16,8 @@ var i = n(73153),
     I = n(967347),
     p = n(929921),
     m = n(734057),
-    g = n(754712),
-    T = n(495867),
+    T = n(754712),
+    g = n(495867),
     S = n(873985),
     N = n(753181),
     C = n(129230),
@@ -74,17 +74,17 @@ let q = {
                 let { voiceChannelId: t, voiceState: n } = e,
                     i = m.A.getChannel(t),
                     r = i?.isGuildStageVoice() && n?.suppress,
-                    a = T.A.getMediaSessionId();
+                    a = g.A.getMediaSessionId();
                 if (
                     null != i &&
                     null != a &&
-                    !g.Ay.getInputDetectedThisConnection() &&
-                    T.A.getState() === L.S7L.RTC_CONNECTED &&
-                    g.Ay.getSettings().mode === L.TBI.VOICE_ACTIVITY &&
-                    g.Ay.getSettings().silenceWarning &&
-                    !1 === g.Ay.getInputDetected() &&
+                    !T.Ay.getInputDetectedThisConnection() &&
+                    g.A.getState() === L.S7L.RTC_CONNECTED &&
+                    T.Ay.getSettings().mode === L.TBI.VOICE_ACTIVITY &&
+                    T.Ay.getSettings().silenceWarning &&
+                    !1 === T.Ay.getInputDetected() &&
                     !r &&
-                    !g.Ay.isSelfMute()
+                    !T.Ay.isSelfMute()
                 )
                     return [{ type: d.iy.NO_AUDIO_INPUT_DETECTED, ...(0, U.jY)() }];
             },
@@ -95,8 +95,8 @@ let q = {
                 let { voiceChannelId: t, voiceState: n } = e,
                     i = m.A.getChannel(t),
                     r = i?.isGuildStageVoice() && n?.suppress,
-                    a = 0 === Object.keys(g.Ay.getInputDevices()).length,
-                    s = T.A.getMediaSessionId();
+                    a = 0 === Object.keys(T.Ay.getInputDevices()).length,
+                    s = g.A.getMediaSessionId();
                 if (a && null != i && null != s && !r) return [{ type: d.iy.NO_INPUT_DEVICES, ...(0, U.jY)() }];
             },
             makeErrorContextKey: (e) => `${e.mediaSessionId}`,
@@ -237,13 +237,13 @@ let q = {
         [d.iy.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH]: {
             getActiveErrors: () => {
                 if (
-                    (T.A.getRTCConnection()?.getDurationSeconds() ?? 0) < 30 ||
-                    performance.now() - g.Ay.getLastAudioInputDeviceChangeTimestamp() < w
+                    (g.A.getRTCConnection()?.getDurationSeconds() ?? 0) < 30 ||
+                    performance.now() - T.Ay.getLastAudioInputDeviceChangeTimestamp() < w
                 )
                     return;
                 let e =
                     h.A.getConnectionStats(
-                        T.A.getRTCConnection()?.getMediaEngineConnectionId(),
+                        g.A.getRTCConnection()?.getMediaEngineConnectionId(),
                     )?.stats.rtp.outbound.find((e) => "audio" === e.type)?.sampleRateMismatchPercent ?? 0;
                 if (Math.abs(e) > 30)
                     return [
@@ -298,11 +298,11 @@ let q = {
         },
         [d.iy.CAMERA_SEND_LOW_FPS]: {
             getActiveErrors: () => {
-                let e = T.A.getRTCConnection();
+                let e = g.A.getRTCConnection();
                 if (null == e) return null;
                 let t = e.getMediaEngineConnectionId();
-                if (null == t || !g.Ay.isVideoEnabled()) return null;
-                let n = T.A.getLastNonZeroRemoteVideoSinkWantsTime();
+                if (null == t || !T.Ay.isVideoEnabled()) return null;
+                let n = g.A.getLastNonZeroRemoteVideoSinkWantsTime();
                 if ((null != n && performance.now() - n < V) || !e.hasActiveRemoteWants()) return null;
                 let i = F(t, G.default.getId());
                 return null == i
@@ -413,7 +413,7 @@ class Z extends r.A {
                     W = "voiceProcessingErrorDetails" in t ? t.voiceProcessingErrorDetails : void 0,
                     Y = null != o ? (0, f.Iy)(o) : null,
                     K = null != o ? N.A.getRTCConnection(o) : null,
-                    $ = null != o ? K : T.A.getRTCConnection(),
+                    $ = null != o ? K : g.A.getRTCConnection(),
                     X = null != o ? K?.analyticsContext?.streamApplication : null,
                     { resolution: z, fps: q } = p.A.getState(),
                     { gameName: Q, gameId: J, exe: Z, distributor: ee } = (0, A.wH)(X),
@@ -444,13 +444,13 @@ class Z extends r.A {
                             channel_id: a ?? null,
                             channel_type: s?.type ?? null,
                             rtc_connection_id: w ?? null,
-                            media_session_id: U ?? T.A.getMediaSessionId() ?? null,
+                            media_session_id: U ?? g.A.getMediaSessionId() ?? null,
                             parent_media_session_id: K?.parentMediaSessionId ?? null,
                             context: c ?? null,
-                            voice_backend_version: T.A.getRTCConnection()?.getVoiceVersion() ?? null,
-                            rtc_worker_backend_version: T.A.getRTCConnection()?.getRtcWorkerVersion() ?? null,
-                            guild_region: S.A.getRegion(T.A.getHostname()) ?? null,
-                            hostname: T.A.getHostname() ?? null,
+                            voice_backend_version: g.A.getRTCConnection()?.getVoiceVersion() ?? null,
+                            rtc_worker_backend_version: g.A.getRTCConnection()?.getRtcWorkerVersion() ?? null,
+                            guild_region: S.A.getRegion(g.A.getHostname()) ?? null,
+                            hostname: g.A.getHostname() ?? null,
                             duration: $?.getDurationSeconds() ?? null,
                             participant_type: er ?? null,
                             num_frames: n?.num_frames ?? 0,
@@ -525,28 +525,28 @@ class Z extends r.A {
                                 h.A.getConnectionStats(ea)?.stats.transport.outboundBitrateEstimate ?? null,
                             inbound_bitrate_estimate:
                                 h.A.getConnectionStats(ea)?.stats.transport.inboundBitrateEstimate ?? null,
-                            hardware_enabled: g.Ay.getHardwareEncoding(),
-                            audio_input_device_name: B ?? g.Ay.getInputDevices()[g.Ay.getInputDeviceId()]?.name,
-                            audio_output_device_name: V ?? g.Ay.getOutputDevices()[g.Ay.getOutputDeviceId()]?.name,
-                            video_device_name: H ?? g.Ay.getVideoDevices()[g.Ay.getVideoDeviceId()]?.name,
-                            audio_subsystem: g.Ay.getMediaEngine().getAudioSubsystem(),
-                            automatic_audio_subsystem: g.Ay.getSettings().automaticAudioSubsystem,
-                            audio_layer: g.Ay.getMediaEngine().getAudioLayer(),
-                            audio_input_mode: g.Ay.getSettings().mode,
-                            automatic_audio_input_sensitivity_enabled: g.Ay.getSettings().modeOptions.autoThreshold,
-                            audio_input_sensitivity: g.Ay.getSettings().modeOptions.threshold,
-                            echo_cancellation_enabled: g.Ay.getEchoCancellation(),
-                            noise_suppression_enabled: g.Ay.getNoiseSuppression(),
-                            noise_cancellation_enabled: g.Ay.getNoiseCancellation(),
-                            automatic_gain_control_enabled: g.Ay.getAutomaticGainControl(),
-                            sidechain_compression_enabled: g.Ay.getSidechainCompression(),
-                            input_volume: g.Ay.getInputVolume(),
-                            output_volume: g.Ay.getOutputVolume(),
-                            audio_input_device_count: Object.keys(g.Ay.getInputDevices()).length,
-                            audio_output_device_count: Object.keys(g.Ay.getOutputDevices()).length,
+                            hardware_enabled: T.Ay.getHardwareEncoding(),
+                            audio_input_device_name: B ?? T.Ay.getInputDevices()[T.Ay.getInputDeviceId()]?.name,
+                            audio_output_device_name: V ?? T.Ay.getOutputDevices()[T.Ay.getOutputDeviceId()]?.name,
+                            video_device_name: H ?? T.Ay.getVideoDevices()[T.Ay.getVideoDeviceId()]?.name,
+                            audio_subsystem: T.Ay.getMediaEngine().getAudioSubsystem(),
+                            automatic_audio_subsystem: T.Ay.getSettings().automaticAudioSubsystem,
+                            audio_layer: T.Ay.getMediaEngine().getAudioLayer(),
+                            audio_input_mode: T.Ay.getSettings().mode,
+                            automatic_audio_input_sensitivity_enabled: T.Ay.getSettings().modeOptions.autoThreshold,
+                            audio_input_sensitivity: T.Ay.getSettings().modeOptions.threshold,
+                            echo_cancellation_enabled: T.Ay.getEchoCancellation(),
+                            noise_suppression_enabled: T.Ay.getNoiseSuppression(),
+                            noise_cancellation_enabled: T.Ay.getNoiseCancellation(),
+                            automatic_gain_control_enabled: T.Ay.getAutomaticGainControl(),
+                            sidechain_compression_enabled: T.Ay.getSidechainCompression(),
+                            input_volume: T.Ay.getInputVolume(),
+                            output_volume: T.Ay.getOutputVolume(),
+                            audio_input_device_count: Object.keys(T.Ay.getInputDevices()).length,
+                            audio_output_device_count: Object.keys(T.Ay.getOutputDevices()).length,
                             app_hardware_acceleration_enabled: O.A.getAppHardwareAccelerationEnabled(),
-                            input_device_os_muted: g.Ay.getInputDeviceOSMuted() ?? null,
-                            input_device_os_volume: g.Ay.getInputDeviceOSVolume() ?? null,
+                            input_device_os_muted: T.Ay.getInputDeviceOSMuted() ?? null,
+                            input_device_os_volume: T.Ay.getInputDeviceOSVolume() ?? null,
                         };
                         C.default.track(L.HAw.AV_ERROR_REPORTED, i);
                     }));

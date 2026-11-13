@@ -10,8 +10,8 @@ var i = n(477900),
     d = n(97808),
     m = n(778712),
     h = n(939249),
-    g = n(717421),
-    f = n(684013),
+    f = n(717421),
+    g = n(684013),
     A = n(789645),
     p = n(616566);
 let E = (e) => {
@@ -28,9 +28,9 @@ E.displayName = "DismissButton";
 var C = n(302614),
     b = n(887287),
     v = n(222506),
-    T = n(57019),
+    I = n(57019),
     _ = n(652215),
-    I = n(792996),
+    T = n(792996),
     y = n(709946);
 function R(e) {
     e.currentTarget.scrollTo(0, 0);
@@ -40,12 +40,12 @@ let S = r.memo(function (e) {
         n,
         {
             maxBodyLines: l,
-            expand: g = !1,
-            onNotificationShow: f,
+            expand: f = !1,
+            onNotificationShow: g,
             onDismissClick: A,
             onConfirmClick: p,
             onCancelClick: C,
-            onNotificationClick: T,
+            onNotificationClick: I,
             hint: S,
             cancelText: x,
             confirmText: O,
@@ -62,11 +62,11 @@ let S = r.memo(function (e) {
             unreadAccessory: V,
         } = e,
         [G, F] = r.useState(!1),
-        H = g || G || w === _.yFH.FOCUSED,
+        H = f || G || w === _.yFH.FOCUSED,
         W = (0, o.bG)([v.A, b.A], () => v.A.isInputLocked(b.A.getTargetPID()));
     r.useEffect(() => {
-        f?.();
-    }, [f]);
+        g?.();
+    }, [g]);
     let B = r.useCallback(
             (e) => {
                 (e.stopPropagation(), A?.(e));
@@ -102,8 +102,8 @@ let S = r.memo(function (e) {
                         ignoreKeyPress: !0,
                         onMouseOver: X,
                         onMouseLeave: Y,
-                        onClick: T,
-                        className: s()(y.kL, { [y.vk]: null != T }, z),
+                        onClick: I,
+                        className: s()(y.kL, { [y.vk]: null != I }, z),
                         children:
                             ((t = D?.(H, W)),
                             (0, i.jsxs)(i.Fragment, {
@@ -162,7 +162,7 @@ let S = r.memo(function (e) {
                                                                                 size: "sm",
                                                                                 variant: P,
                                                                                 onClick: K,
-                                                                                text: O ?? I.intl.string(I.t.BddRzS),
+                                                                                text: O ?? T.intl.string(T.t.BddRzS),
                                                                             }),
                                                                         })
                                                                       : null,
@@ -173,7 +173,7 @@ let S = r.memo(function (e) {
                                                                                 size: "sm",
                                                                                 variant: "secondary",
                                                                                 onClick: q,
-                                                                                text: x ?? I.intl.string(I.t["ETE/oC"]),
+                                                                                text: x ?? T.intl.string(T.t["ETE/oC"]),
                                                                             }),
                                                                         })
                                                                       : null,
@@ -196,7 +196,7 @@ let S = r.memo(function (e) {
                     null == V ? null : (0, i.jsx)("div", { className: y.B3, children: V(G) }),
                 ],
             }),
-            (0, i.jsx)(E, { className: y.r, onDismiss: B, "aria-label": I.intl.string(I.t.LnEgqX) }),
+            (0, i.jsx)(E, { className: y.r, onDismiss: B, "aria-label": T.intl.string(T.t.LnEgqX) }),
         ],
     });
 });
@@ -247,14 +247,14 @@ function N(e) {
         }, [c, u]),
         b = r.useCallback(
             (e) => {
-                (f.A.updateNotificationStatus(u), d?.(e, u));
+                (g.A.updateNotificationStatus(u), d?.(e, u));
             },
             [u, d],
         ),
         { clickSpring: v, handleMouseClick: _ } = (function () {
             let [e, t] = r.useState(!1),
                 [n, i] = r.useState(!1),
-                l = (0, g.z)({
+                l = (0, f.z)({
                     scale: e ? 0.975 : 1,
                     config: P,
                     onRest: () => {
@@ -271,7 +271,7 @@ function N(e) {
                 }, []),
             };
         })(),
-        I = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 (m?.(e, u), _());
             },
@@ -306,7 +306,7 @@ function N(e) {
         } = t,
         F = !s && l,
         H = 0 === n && !z && !F,
-        { ref: W, springs: B } = (0, T.Ru)(t.id, a, o);
+        { ref: W, springs: B } = (0, I.Ru)(t.id, a, o);
     return (0, i.jsx)(x, {
         transitionState: a,
         springs: B,
@@ -324,7 +324,7 @@ function N(e) {
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? C : void 0,
                 onDismissClick: b,
-                onNotificationClick: I,
+                onNotificationClick: T,
                 onConfirmClick: null != h ? y : void 0,
                 onCancelClick: null != A ? R : void 0,
                 renderFooter: N,

@@ -16,8 +16,8 @@ var i = n(681154),
     I = n(71393),
     p = n(596344),
     m = n(576705),
-    g = n(218461),
-    T = n(994500),
+    T = n(218461),
+    g = n(994500),
     S = n(543465),
     N = n(287809),
     C = n(927813),
@@ -72,10 +72,10 @@ let k = +C.A.Millis.DAY,
 function em() {
     ((eI = R.lo), (ep = null));
 }
-function eg() {
+function eT() {
     (R.C2.resetSession(), em());
 }
-function eT(e) {
+function eg(e) {
     return (
         null != e.userId &&
         A.default.isAuthenticated() &&
@@ -86,10 +86,10 @@ function eT(e) {
 }
 function eS() {
     let e = R.C2.observeGate((0, E.SL)(F));
-    return null == ep || eT(ep) ? !(!e && (null == ep || R.C2.matches(ep))) && (em(), !0) : (eg(), !0);
+    return null == ep || eg(ep) ? !(!e && (null == ep || R.C2.matches(ep))) && (em(), !0) : (eT(), !0);
 }
 function eN(e) {
-    return eT(e) && R.C2.canApply(e, (0, E.SL)(F));
+    return eg(e) && R.C2.canApply(e, (0, E.SL)(F));
 }
 function eC(e, t) {
     if (Date.now() - j > 6 * C.A.Millis.HOUR) {
@@ -152,7 +152,7 @@ function ey() {
     W.forEach((e) => {
         (($[e.id] = e),
             e.type === D.Mm.CUSTOM_STATUS &&
-                (T.A.isBlockedOrIgnored(e.data.user_id) ? (z[e.id] = !0) : (X[e.id] = (0, v.YM)(e))));
+                (g.A.isBlockedOrIgnored(e.data.user_id) ? (z[e.id] = !0) : (X[e.id] = (0, v.YM)(e))));
     });
 }
 function eD(e) {
@@ -315,7 +315,7 @@ class ek extends r.Ay.PersistedStore {
     static displayName = "ICYMIStore";
     static persistKey = "ICYMIStore";
     initialize(e) {
-        (this.waitFor(c.A, A.default, f.A, s.A, d.A, h.A, u.Ay, I.A, y.A, b.A, p.A, m.A, g.Ay, T.A, S.Ay, N.default),
+        (this.waitFor(c.A, A.default, f.A, s.A, d.A, h.A, u.Ay, I.A, y.A, b.A, p.A, m.A, T.Ay, g.A, S.Ay, N.default),
             this.syncWith([c.A, A.default, N.default], eS),
             null != e &&
                 ((V = e.dehydratedItems ?? []).forEach((e) => {
@@ -441,7 +441,7 @@ class ek extends r.Ay.PersistedStore {
 }
 let eF = new ek(a.h, {
     LOGOUT: function () {
-        (eg(),
+        (eT(),
             (V = []),
             (W = []),
             (Y = []),
@@ -470,18 +470,18 @@ let eF = new ek(a.h, {
             (en = null),
             (ef = 0));
     },
-    LOGIN_SUCCESS: eg,
+    LOGIN_SUCCESS: eT,
     LOGIN_RESET: function (e) {
         let { isMultiAccount: t } = e;
         if (t) return !1;
-        eg();
+        eT();
     },
-    AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eg,
-    CLOSE_SUSPENDED_USER: eg,
+    AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eT,
+    CLOSE_SUSPENDED_USER: eT,
     CONNECTION_CLOSED: function (e) {
         let { code: t } = e;
         if (4004 !== t) return !1;
-        eg();
+        eT();
     },
     CONNECTION_OPEN: eS,
     AUTH_SESSION_CHANGE: eS,
@@ -501,7 +501,7 @@ let eF = new ek(a.h, {
     DISCOVER_PICKER_COMMIT: function (e) {
         let { identity: t } = e,
             n = (0, E.SL)(F);
-        if ((R.C2.observeGate(n), !R.C2.matches(t) || !eT(t))) return !1;
+        if ((R.C2.observeGate(n), !R.C2.matches(t) || !eg(t))) return !1;
         ((eI = (0, R.Sw)(eI, { type: "commit", enabled: n })), (ep = t));
     },
     DISCOVER_REQUEST_STARTED: function (e) {

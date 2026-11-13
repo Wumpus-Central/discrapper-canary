@@ -21,10 +21,10 @@ function m(e) {
     let a = r?.embeds?.[0]?.fields?.find((e) => e.rawName === A.uN.CONTENT_TYPE);
     a?.rawValue === A.Wv.MANUAL_REVIEW_SUBMITTED && (0, h.xf)();
 }
-function g(e) {
+function T(e) {
     r.A.fetchMessages({ channelId: e, limit: 30 });
 }
-class T extends a.A {
+class g extends a.A {
     _previousAgeVerificationStatus = null;
     handlePostConnectionOpen = () => {
         this._previousAgeVerificationStatus = E.default.getCurrentUser()?.ageVerificationStatus ?? null;
@@ -44,11 +44,11 @@ class T extends a.A {
                 let e = _.Ay.getChannelId();
                 if (null != e) {
                     let t;
-                    (g(e),
+                    (T(e),
                         (t = c.A.getChannel(e)),
                         (t?.type === I.rbe.GUILD_FORUM || t?.type === I.rbe.GUILD_MEDIA) && (0, o.kB)(t));
                     let n = d.Ay.getCurrentSidebarChannelId(e);
-                    null != n && g(n);
+                    null != n && T(n);
                 }
             }
         } catch (e) {
@@ -63,5 +63,5 @@ class T extends a.A {
         MESSAGE_CREATE: m,
     };
 }
-let S = new T();
+let S = new g();
 n.d(t, {}, { A: S });

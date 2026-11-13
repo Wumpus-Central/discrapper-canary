@@ -14,8 +14,8 @@ var a = n(855986),
     I = n(859034),
     p = n(95701),
     m = n(734057),
-    g = n(287809),
-    T = n(448645),
+    T = n(287809),
+    g = n(448645),
     S = n(427262),
     N = n(644235),
     C = n(385803),
@@ -25,7 +25,7 @@ let L = !0,
     y = !1,
     D = !1;
 function b(e) {
-    return !(0, c.oB)(e.id) || null == g.default.getCurrentUser() || !(0, d.$X)(O.vB.CLIENT_THEME);
+    return !(0, c.oB)(e.id) || null == T.default.getCurrentUser() || !(0, d.$X)(O.vB.CLIENT_THEME);
 }
 function v(e) {
     if (null == e) return;
@@ -47,7 +47,7 @@ function U() {
             null != t && ((i = t), (e = !0));
         }
     } else ((i = void 0), (e = !0));
-    let t = !T.Ay.canUseClientThemes(g.default.getCurrentUser());
+    let t = !g.Ay.canUseClientThemes(T.default.getCurrentUser());
     if (t === L) return e;
     ((L = t), (D = !1));
 }
@@ -90,8 +90,8 @@ class F extends a.Ay.PersistedStore {
     initialize(e) {
         ((D = !1),
             null != e && ((i = v(e.gradientPresetId)), (L = !0 !== e.canUseClientThemes)),
-            this.waitFor(m.A, u.A, E.A, A.Ay, h.A, g.default),
-            this.syncWith([g.default], U),
+            this.waitFor(m.A, u.A, E.A, A.Ay, h.A, T.default),
+            this.syncWith([T.default], U),
             this.syncWith([u.A], w));
     }
     getState() {
@@ -151,7 +151,7 @@ let B = new F(l.h, {
     CLIENT_THEMES_EDITOR_CLOSE: M,
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
-            i = g.default.getCurrentUser();
+            i = T.default.getCurrentUser();
         if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, S.G2)(i)) return;
         let r = m.A.getChannel(t);
         null != r && (0, p.ke)(r.type) && (y = !0);

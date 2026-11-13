@@ -16,8 +16,8 @@ let _ = new Map(),
     I = new Map(),
     p = new Set(),
     m = new Set(),
-    g = [];
-function T(e, t, n) {
+    T = [];
+function g(e, t, n) {
     let i = _.get(e);
     if (null == i) return;
     let r = (0, o.Si)(i, t);
@@ -84,7 +84,7 @@ class O extends i.Ay.Store {
         this.waitFor(a.Ay);
     }
     getMessages(e) {
-        return _.get(e) ?? g;
+        return _.get(e) ?? T;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -339,7 +339,7 @@ let v = new O(r.h, {
             r = _.get(t);
         return (
             ("preview_ready" !== n.kind || null != i || (null != r && -1 !== (0, o.Si)(r, void 0))) &&
-            (T(t, i, (e) => {
+            (g(t, i, (e) => {
                 let t = (0, d.IC)(e.steps, n);
                 return t === e.steps ? e : { ...e, steps: t };
             }),
@@ -359,7 +359,7 @@ let v = new O(r.h, {
                     return n;
                 }),
             ),
-            T(t, i, (e) => ({
+            g(t, i, (e) => ({
                 ...e,
                 finished: !0,
                 finished_at: Date.now(),
@@ -460,7 +460,7 @@ let v = new O(r.h, {
     },
     CONJURE_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n, turnId: i } = e;
-        (T(t, i, (e) => {
+        (g(t, i, (e) => {
             let t = { ...e, ...n };
             return ("todos" in n && (t.provisionalTodo = void 0), t);
         }),

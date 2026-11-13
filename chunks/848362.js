@@ -9,15 +9,15 @@ var i = n(477900),
     d = n(74329),
     m = n(600125),
     h = n(338771),
-    g = n(616356),
-    f = n(287809),
+    f = n(616356),
+    g = n(287809),
     A = n(562153),
     p = n(652215),
     E = n(792996);
 function C(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
-        s = (0, l.bG)([g.A], () => (null != i ? g.A.getActiveStreamForStreamKey(i) : null), [i]),
-        a = (0, l.cf)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [
+        s = (0, l.bG)([f.A], () => (null != i ? f.A.getActiveStreamForStreamKey(i) : null), [i]),
+        a = (0, l.cf)([g.default], () => n.reduce((e, t) => ((e[t.ownerId] = g.default.getUser(t.ownerId)), e), {}), [
             n,
         ]);
     return r.useMemo(() => {
@@ -39,21 +39,21 @@ n.d(
                     activeStreams: r,
                     hideSelfOptions: l = !1,
                     showReportOption: c = !1,
-                    handleGoLive: g,
-                    onClose: f,
+                    handleGoLive: f,
+                    onClose: g,
                     onSelect: A,
                     appContext: b = p.BRT.APP,
                     disableChangeWindows: v = !1,
-                    onInteraction: T,
+                    onInteraction: I,
                 } = e,
                 _ = r.find((e) => e.ownerId === n?.id) ?? null,
-                I = C(t, n, r),
+                T = C(t, n, r),
                 y = (0, d.A)(_, b),
                 R = (0, m.E)({
                     disableChangeWindows: v,
                     stream: _,
                     showReportOption: c,
-                    handleGoLive: g,
+                    handleGoLive: f,
                     minimal: !0,
                     appContext: b,
                 });
@@ -63,12 +63,12 @@ n.d(
                     "data-menu-migrated": !0,
                     onSelect: A,
                     navId: "manage-streams",
-                    onClose: f,
-                    onInteraction: T,
+                    onClose: g,
+                    onInteraction: I,
                     "aria-label": null != _ ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
                     children: [
                         (0, i.jsx)(a.rX, {
-                            children: I.map((e) => {
+                            children: T.map((e) => {
                                 let { stream: t, username: n } = e;
                                 return (0, i.jsx)(
                                     a.Dr,

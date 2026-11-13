@@ -43,8 +43,8 @@ let m = new (class {
             : Promise.resolve(null);
     }
 })();
-var g = n(644727),
-    T = n(687658),
+var T = n(644727),
+    g = n(687658),
     S = n(384077),
     N = n(321034);
 let C = new l.A("RunningGameSystemMetricsMonitor"),
@@ -61,9 +61,9 @@ function R(e) {
     };
 }
 let L = new (class {
-    cpuHistogram = new T.d();
-    memoryHistogram = new T.d();
-    discordMemoryHistogram = new T.d();
+    cpuHistogram = new g.d();
+    memoryHistogram = new g.d();
+    discordMemoryHistogram = new g.d();
     lastCpuSnapshot = null;
     samplingInterval = null;
     enable() {
@@ -113,9 +113,9 @@ let L = new (class {
         );
     }
     resetHistograms() {
-        ((this.cpuHistogram = new T.d()),
-            (this.memoryHistogram = new T.d()),
-            (this.discordMemoryHistogram = new T.d()));
+        ((this.cpuHistogram = new g.d()),
+            (this.memoryHistogram = new g.d()),
+            (this.discordMemoryHistogram = new g.d()));
     }
     async takeSample() {
         (this.sampleDiscordMemory(), await this.sampleCpuAndMemory());
@@ -266,7 +266,7 @@ class M extends s.A {
                 game_distributor_game_id: s.sku,
                 game_metadata: (0, I.EQ)(s, null != s.processGame, (0, I.wH)((0, y.Un)(s)).gameId),
                 game_executable: (0, I.Ic)(s.exePath),
-                game_detection_enabled: (0, g.Xr)(s),
+                game_detection_enabled: (0, T.Xr)(s),
                 initial_heartbeat: t,
                 final_heartbeat: n,
                 game_session_id: e.sessionId,
@@ -274,7 +274,7 @@ class M extends s.A {
                 rtc_connection_id: E.A.getRTCConnectionId(),
                 media_session_id: E.A.getMediaSessionId(),
             },
-            T = (function (e) {
+            g = (function (e) {
                 if (!o.O) return null;
                 let t = c.default.getTrackedGameByPid(e);
                 return {
@@ -293,7 +293,7 @@ class M extends s.A {
                     ...(a ?? {}),
                     ...(e ?? {}),
                     ...(i ?? {}),
-                    ...(T ?? {}),
+                    ...(g ?? {}),
                 });
             })
             .catch((e) => {
@@ -303,12 +303,12 @@ class M extends s.A {
                         ...S,
                         ...(a ?? {}),
                         ...(i ?? {}),
-                        ...(T ?? {}),
+                        ...(g ?? {}),
                     }));
             });
     }
     processSessionChanges() {
-        let e = g.Ay.getRunningGames(),
+        let e = T.Ay.getRunningGames(),
             t = performance.now(),
             n = new Set(),
             r = this.windowTrackingEnabled ? this.peekWindowStateDurations() : null;

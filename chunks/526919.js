@@ -1,4 +1,4 @@
-n.d(t, { yA: () => p, Tn: () => T, sL: () => O, TC: () => f, AV: () => S, z8: () => R, NP: () => I, XQ: () => h });
+n.d(t, { yA: () => p, Tn: () => g, sL: () => O, TC: () => f, AV: () => S, z8: () => R, NP: () => I, XQ: () => h });
 var i = n(855986),
     r = n(858899),
     a = n(73153),
@@ -41,7 +41,7 @@ function m(e, t, n) {
               (A.info(`${e} failed to initialize.`, t),
               o.default.track(_.HAw.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED, { success: !1, source: n, modules: [e] })));
 }
-function g(e) {
+function T(e) {
     d.isPlatformEmbedded &&
         (u.Ay.InputEventServiceSetStatusCallback((t) => {
             m("input-service", t, e);
@@ -52,10 +52,10 @@ function g(e) {
         }),
         u.Ay.ToolServiceSetAllowed(!0));
 }
-async function T(e) {
+async function g(e) {
     if (d.isPlatformEmbedded && f())
         try {
-            ((await u.Ay.DoesSystemServiceHaveUpdate()) && (await u.Ay.UpdateSystemService()), g(e));
+            ((await u.Ay.DoesSystemServiceHaveUpdate()) && (await u.Ay.UpdateSystemService()), T(e));
         } catch (e) {
             throw (
                 c.A.captureMessage("Error during system service initialization", { extra: { error: e } }),
@@ -101,7 +101,7 @@ async function O(e) {
                 A.info("System service installed."),
                 o.default.track(_.HAw.SYSTEM_SERVICE_INSTALL_ATTEMPTED, { success: !0, source: e }),
                 C({ text: E.intl.string(E.t.kQnWby), variant: "success" }, t),
-                g("after-install"));
+                T("after-install"));
         } catch (i) {
             let n = N(i);
             if (null == n && i instanceof Error) {

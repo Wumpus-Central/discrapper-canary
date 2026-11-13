@@ -16,8 +16,8 @@ var i,
     I,
     p,
     m,
-    g,
     T,
+    g,
     S,
     N,
     C = n(852015),
@@ -1238,7 +1238,7 @@ class eI extends L.G {
         super("discord_protos.discord_experimentation.v1.SDKVersion", [
             { no: 1, name: "ranges", kind: "message", repeat: 1, T: () => eR },
             { no: 2, name: "work_around_pyoto_bug", kind: "scalar", T: 8 },
-            { no: 3, name: "os_version", kind: "message", T: () => eg },
+            { no: 3, name: "os_version", kind: "message", T: () => eT },
             { no: 4, name: "allow_sdk_fallback", kind: "scalar", T: 8 },
         ]);
     }
@@ -1263,7 +1263,7 @@ class eI extends L.G {
                     r.workAroundPyotoBug = e.bool();
                     break;
                 case 3:
-                    r.osVersion = eg.internalBinaryRead(e, e.uint32(), n, r.osVersion);
+                    r.osVersion = eT.internalBinaryRead(e, e.uint32(), n, r.osVersion);
                     break;
                 case 4:
                     r.allowSdkFallback = e.bool();
@@ -1282,7 +1282,7 @@ class eI extends L.G {
         for (let i = 0; i < e.ranges.length; i++)
             eR.internalBinaryWrite(e.ranges[i], t.tag(1, C.O0.LengthDelimited).fork(), n).join();
         (!1 !== e.workAroundPyotoBug && t.tag(2, C.O0.Varint).bool(e.workAroundPyotoBug),
-            e.osVersion && eg.internalBinaryWrite(e.osVersion, t.tag(3, C.O0.LengthDelimited).fork(), n).join(),
+            e.osVersion && eT.internalBinaryWrite(e.osVersion, t.tag(3, C.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.allowSdkFallback && t.tag(4, C.O0.Varint).bool(e.allowSdkFallback));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
@@ -1326,8 +1326,8 @@ class em extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eg = new em();
-class eT extends L.G {
+let eT = new em();
+class eg extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.OSVersionRange", [
             { no: 1, name: "lower_bound", kind: "message", T: () => eC },
@@ -1371,7 +1371,7 @@ class eT extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eS = new eT();
+let eS = new eg();
 class eN extends L.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.OSVersionRangeBound", [
@@ -2681,12 +2681,12 @@ var tE = n(335871),
         (c[(c.OVERRIDES_ONLY = 4)] = "OVERRIDES_ONLY"),
         (c[(c.OFF = 5)] = "OFF"),
         c),
-    tg =
+    tT =
         (((u = {})[(u.DEFAULT = 0)] = "DEFAULT"),
         (u[(u.HOLDOUT = 1)] = "HOLDOUT"),
         (u[(u.NUMBERLINE = 2)] = "NUMBERLINE"),
         u),
-    tT =
+    tg =
         (((_ = {})[(_.CUSTOM_UNIT_PREFIX_UNSPECIFIED = 0)] = "CUSTOM_UNIT_PREFIX_UNSPECIFIED"),
         (_[(_.SEO_URL_SLUG = 1)] = "SEO_URL_SLUG"),
         _),
@@ -2730,21 +2730,21 @@ var tE = n(335871),
         (m[(m.DISABLED = 2)] = "DISABLED"),
         m),
     tD =
-        (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (g[(g.ACTIVE = 1)] = "ACTIVE"),
-        (g[(g.UNUSED = 2)] = "UNUSED"),
-        (g[(g.BURNED = 3)] = "BURNED"),
-        (g[(g.PRESERVED = 4)] = "PRESERVED"),
-        g),
-    tb =
         (((T = {})[(T.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (T[(T.DRAFT = 1)] = "DRAFT"),
-        (T[(T.ACTIVE = 2)] = "ACTIVE"),
-        (T[(T.PAUSED_MANUAL = 3)] = "PAUSED_MANUAL"),
-        (T[(T.PAUSED_HEALTH_CHECK = 4)] = "PAUSED_HEALTH_CHECK"),
-        (T[(T.COMPLETED = 5)] = "COMPLETED"),
-        (T[(T.CANCELED = 6)] = "CANCELED"),
+        (T[(T.ACTIVE = 1)] = "ACTIVE"),
+        (T[(T.UNUSED = 2)] = "UNUSED"),
+        (T[(T.BURNED = 3)] = "BURNED"),
+        (T[(T.PRESERVED = 4)] = "PRESERVED"),
         T),
+    tb =
+        (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (g[(g.DRAFT = 1)] = "DRAFT"),
+        (g[(g.ACTIVE = 2)] = "ACTIVE"),
+        (g[(g.PAUSED_MANUAL = 3)] = "PAUSED_MANUAL"),
+        (g[(g.PAUSED_HEALTH_CHECK = 4)] = "PAUSED_HEALTH_CHECK"),
+        (g[(g.COMPLETED = 5)] = "COMPLETED"),
+        (g[(g.CANCELED = 6)] = "CANCELED"),
+        g),
     tv =
         (((S = {})[(S.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (S[(S.PENDING = 1)] = "PENDING"),
@@ -2817,7 +2817,7 @@ class tM extends L.G {
                 no: 26,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", tg],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", tT],
             },
             { no: 27, name: "is_template", kind: "scalar", T: 8 },
             { no: 28, name: "field_numbers_to_copy", kind: "scalar", repeat: 1, T: 5 },
@@ -2832,7 +2832,7 @@ class tM extends L.G {
                 no: 36,
                 name: "custom_unit_prefix",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", tT],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", tg],
             },
             {
                 no: 45,

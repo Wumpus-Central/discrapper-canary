@@ -17,8 +17,8 @@ var u = n(343328),
     I = n(95701),
     p = n(799704),
     m = n(734057),
-    g = n(71393),
-    T = n(218461),
+    T = n(71393),
+    g = n(218461),
     S = n(309010),
     N = n(967198),
     C = n(927813),
@@ -58,9 +58,9 @@ function P(e) {
         (!d || E.A.isConnected() || N.loadingMore
             ? N.loadingMore || (N.ready && !N.cached)
                 ? null != a && (C = !0)
-                : (null == t || null != g.A.getGuild(t)) && (C = !0)
+                : (null == t || null != T.A.getGuild(t)) && (C = !0)
             : (C = !0),
-        (0, u.A)(n) && T.Ay.hasUnread(n) && (C = !0),
+        (0, u.A)(n) && g.Ay.hasUnread(n) && (C = !0),
         C)
     )
         if ((c.A.commit(N.mutate({ loadingMore: !0 })), null != a))
@@ -77,7 +77,7 @@ function P(e) {
         else if (
             S?.isThread() &&
             (function (e) {
-                if (T.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
+                if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
                 i[e] = Date.now();
                 let t = Date.now() - M;
                 for (let e in i) i[e] < t && delete i[e];
@@ -96,8 +96,8 @@ function P(e) {
                     fetchKey: h,
                 })
             );
-        else if (S?.isThread() && T.Ay.hasTrackedUnread(S.id) && !N.ready) {
-            let e = T.Ay.getTrackedAckMessageId(S.id);
+        else if (S?.isThread() && g.Ay.hasTrackedUnread(S.id) && !N.ready) {
+            let e = g.Ay.getTrackedAckMessageId(S.id);
             return (
                 v.log(`Jumping to most recent message in thread ${S.id} - ${e}`),
                 l.A.fetchMessages({

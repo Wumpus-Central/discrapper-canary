@@ -75,7 +75,7 @@ function p(e) {
     };
 }
 let m = d.iu(0);
-function g(e, t, n) {
+function T(e, t, n) {
     let i = n[(0, _.Eu)(e.userId, A.RA.USER)];
     if (null != i) return i.permission;
     let r = !1;
@@ -312,10 +312,10 @@ n.d(
             if (n.ownerId === i.userId || t.can(I.xB.ADMINISTRATOR, n)) return !0;
             let l = n.id;
             if (null != a) {
-                let e = g(i, l, a);
+                let e = T(i, l, a);
                 if ("boolean" == typeof e) return e;
             }
-            let o = g(i, l, r);
+            let o = T(i, l, r);
             return ("boolean" != typeof o || !!o) && (null == s || (!d.aI(s, m) && t.can(s, n)));
         },
     },

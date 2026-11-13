@@ -17,8 +17,8 @@ var f = n(460288),
     I = n(617617),
     p = n(159201),
     m = n(761821),
-    g = n(355097),
-    T = n(652215);
+    T = n(355097),
+    g = n(652215);
 let S = "UserSettingsProtoLastWriteTimes";
 (Date.now(),
     c.h.subscribe("CONNECTION_OPEN", () => {
@@ -55,7 +55,7 @@ class N {
                       type: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
                       settings: { type: this.type, proto: s },
                       delaySeconds: n,
-                      jitter: n === g.Sb.AUTOMATED || n === g.Sb.DAILY,
+                      jitter: n === T.Sb.AUTOMATED || n === T.Sb.DAILY,
                       partial: !0,
                       resetEditInfo: !1,
                       local: !0,
@@ -63,7 +63,7 @@ class N {
                 : (this.logger.log(`Updating ${String(e)} with delay ${n}`),
                   this.markDirty(s, {
                       delaySeconds: n,
-                      jitter: n === g.Sb.AUTOMATED || n === g.Sb.DAILY,
+                      jitter: n === T.Sb.AUTOMATED || n === T.Sb.DAILY,
                       onError: i,
                   })));
     }
@@ -119,7 +119,7 @@ class N {
         try {
             this.saveLastSendTime();
             let { body: n } = await a.Bo.patch({
-                url: T.Rsh.USER_SETTINGS_PROTO(this.type),
+                url: g.Rsh.USER_SETTINGS_PROTO(this.type),
                 body: { settings: t, required_data_version: e.offlineEditDataVersion },
                 rejectWithError: !1,
             });
@@ -141,7 +141,7 @@ class N {
                 isNaN(t) && (t = 60);
                 let n = setTimeout(this.persistChanges, Math.min(30 * A.A.Millis.SECOND, t * A.A.Millis.SECOND));
                 this.dispatchChanges({ rateLimited: !0, timeout: n });
-            } else if (400 === e.status && e.body?.code === T.t02.INVALID_USER_SETTINGS_DATA)
+            } else if (400 === e.status && e.body?.code === g.t02.INVALID_USER_SETTINGS_DATA)
                 throw (
                     this.logger.log("Reloading do to invalid data"),
                     this.getEditInfo().editInfo.errorCallbacks.forEach((t) => t(e)),
@@ -175,7 +175,7 @@ class N {
             try {
                 let {
                         body: { settings: t },
-                    } = await a.Bo.get({ url: T.Rsh.USER_SETTINGS_PROTO(this.type), rejectWithError: !1 }),
+                    } = await a.Bo.get({ url: g.Rsh.USER_SETTINGS_PROTO(this.type), rejectWithError: !1 }),
                     n = (0, m.ii)(this.ProtoClass, t);
                 if (null == n) return void this.dispatchChanges({ loading: !1, loaded: !0 });
                 let i = h.A[this.type],
@@ -202,7 +202,7 @@ class N {
                 null == this.getEditInfo().editInfo.offlineEditDataVersion,
                 "offline changes are not supported with migrations",
             ),
-            this.markDirty(e, { cleanup: t, dispatch: !1, delaySeconds: g.Sb.AUTOMATED, jitter: !0 }));
+            this.markDirty(e, { cleanup: t, dispatch: !1, delaySeconds: T.Sb.AUTOMATED, jitter: !0 }));
     }
     markDirtyIfHasPendingChange(e) {
         this.beforeSendCallbacks.some((e) => {
@@ -221,9 +221,9 @@ class N {
         this.dispatchChanges({ timeout: n, timeoutDelay: t });
     }
 }
-let C = new N(o.nT, g.oD.PRELOADED_USER_SETTINGS),
-    O = new N(l.aw, g.oD.FRECENCY_AND_FAVORITES_SETTINGS),
-    R = { [g.oD.PRELOADED_USER_SETTINGS]: C, [g.oD.FRECENCY_AND_FAVORITES_SETTINGS]: O };
+let C = new N(o.nT, T.oD.PRELOADED_USER_SETTINGS),
+    O = new N(l.aw, T.oD.FRECENCY_AND_FAVORITES_SETTINGS),
+    R = { [T.oD.PRELOADED_USER_SETTINGS]: C, [T.oD.FRECENCY_AND_FAVORITES_SETTINGS]: O };
 function L(e, t, n) {
     return C.updateAsync("guilds", (n) => (0, m.$o)(n, e, t), n);
 }
@@ -233,7 +233,7 @@ function y(e, t) {
         (e) => {
             e.guildThemeSourcePreference = t;
         },
-        g.Sb.INFREQUENT_USER_ACTION,
+        T.Sb.INFREQUENT_USER_ACTION,
     );
 }
 async function D(e, t) {
@@ -242,12 +242,12 @@ async function D(e, t) {
         (n) => {
             n.recurringDismissibleContentStates[e] = { ...n.recurringDismissibleContentStates[e], ...t };
         },
-        g.Sb.INFREQUENT_USER_ACTION,
+        T.Sb.INFREQUENT_USER_ACTION,
     );
 }
 n.d(
     t,
-    { Sb: () => g.Sb },
+    { Sb: () => T.Sb },
     {
         $w: D,
         D1: async function () {
@@ -260,7 +260,7 @@ n.d(
                         (0, _.Zm)(i) ? (t.recurringDismissibleContentStates[i] = e(i)) : (n = (0, f.Vf)(n, i));
                     t.dismissedContents = n;
                 },
-                g.Sb.INFREQUENT_USER_ACTION,
+                T.Sb.INFREQUENT_USER_ACTION,
             );
         },
         Df: R,
@@ -271,7 +271,7 @@ n.d(
                     if ((t.defaultGuildThemePreference ?? o.tI.UNSPECIFIED) === e) return !1;
                     t.defaultGuildThemePreference = e;
                 },
-                g.Sb.INFREQUENT_USER_ACTION,
+                T.Sb.INFREQUENT_USER_ACTION,
             );
         },
         Sh: function (e) {
@@ -298,7 +298,7 @@ n.d(
                 (e) => {
                     ((e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {}));
                 },
-                g.Sb.INFREQUENT_USER_ACTION,
+                T.Sb.INFREQUENT_USER_ACTION,
             );
         },
         o_: function (e) {
@@ -306,10 +306,10 @@ n.d(
             let i;
             return (
                 (t = e),
-                I.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS) ||
+                I.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
                     ((n = t),
                     (null != (i = I.A.settings.userContent?.dismissedContents) && (0, f.c0)(i, n)) ||
-                        E.default.track(T.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, {
+                        E.default.track(g.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, {
                             content_type: s.M[t],
                         })),
                 C.updateAsync(
@@ -318,7 +318,7 @@ n.d(
                         if ((0, f.c0)(t.dismissedContents, e)) return !1;
                         t.dismissedContents = (0, f.Vf)(t.dismissedContents, e);
                     },
-                    g.Sb.INFREQUENT_USER_ACTION,
+                    T.Sb.INFREQUENT_USER_ACTION,
                 )
             );
         },
@@ -330,7 +330,7 @@ n.d(
                     if (!(0, f.c0)(t.dismissedContents, e)) return !1;
                     t.dismissedContents = (0, f.We)(t.dismissedContents, e);
                 },
-                g.Sb.INFREQUENT_USER_ACTION,
+                T.Sb.INFREQUENT_USER_ACTION,
             );
         },
         xs: async function (e, t, n) {
@@ -339,7 +339,7 @@ n.d(
                 (t) => {
                     t.guildDismissibleContentStates[e] = { ...t.guildDismissibleContentStates[e], ...n };
                 },
-                g.Sb.INFREQUENT_USER_ACTION,
+                T.Sb.INFREQUENT_USER_ACTION,
             );
         },
     },

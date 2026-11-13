@@ -75,7 +75,7 @@ class m extends i.Ay.Store {
         return null != r ? (0, u.U$)(r, i) * n : 0;
     }
 }
-let g = new m(s.h, {
+let T = new m(s.h, {
     POGGERMODE_UPDATE_COMBO: function (e) {
         let { type: t, ...n } = e;
         if (!c.A.isEnabled()) return !1;
@@ -97,8 +97,8 @@ let g = new m(s.h, {
                             let n = r.multiplier !== t.multiplier && r.value !== t.value;
                             t.value <= 0 || n
                                 ? (t.decayInterval?.stop(),
-                                  t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), g.emitChange()))
-                                : (e({ ...t, value: t.value - 1 }), g.emitChange());
+                                  t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), T.emitChange()))
+                                : (e({ ...t, value: t.value - 1 }), T.emitChange());
                         }
                     }));
         })(n);
@@ -129,4 +129,4 @@ let g = new m(s.h, {
         return !1;
     },
 });
-n.d(t, {}, { Ay: g, gN: p });
+n.d(t, {}, { Ay: T, gN: p });

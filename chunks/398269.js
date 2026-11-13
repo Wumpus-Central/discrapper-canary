@@ -16,8 +16,8 @@ var i = n(284009),
     I = n(808728),
     p = n(596344),
     m = n(218461),
-    g = n(994500),
-    T = n(711014),
+    T = n(994500),
+    g = n(711014),
     S = n(543465),
     N = n(287809),
     C = n(645959),
@@ -144,7 +144,7 @@ function z() {
 }
 function q() {
     let { notifyingChannelIds: e, staleChannelIds: t } = (function () {
-        let e = T.Ay.getFlattenedGuildIds().flatMap((e) => I.A.getSelectableChannelIds(e)),
+        let e = g.Ay.getFlattenedGuildIds().flatMap((e) => I.A.getSelectableChannelIds(e)),
             t = u.A.getAllActiveJoinedThreads();
         function n(e) {
             if (P.kvI.ALL_DMS.has(e.type)) {
@@ -152,7 +152,7 @@ function q() {
                 if (e.type === P.rbe.DM) {
                     let t = h.A.getChannel(e.id),
                         n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
-                    if (null != n && g.A.isBlocked(n)) return !1;
+                    if (null != n && T.A.isBlocked(n)) return !1;
                 }
                 return !0;
             }
@@ -296,7 +296,7 @@ function et(e) {
 class en extends a.Ay.Store {
     static displayName = "NotificationsInboxStore";
     initialize() {
-        this.waitFor(o.A, u.A, h.A, I.A, _.A, p.A, C.A, m.Ay, d.Ay, g.A, T.Ay, S.Ay, N.default);
+        this.waitFor(o.A, u.A, h.A, I.A, _.A, p.A, C.A, m.Ay, d.Ay, T.A, g.Ay, S.Ay, N.default);
     }
     canLoadMore(e) {
         let { preload: t } = e;

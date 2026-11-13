@@ -70,15 +70,15 @@ function h(e) {
         I = (0, i.bG)([u.A], () => u.A.getPremiumTypeSubscription()),
         p = (0, i.bG)([E.A], () => E.A.getPremiumTypeOverride()),
         m = l(s.t["2pG5Ga"], "2026-11-nitro-mking-page-main-cta", "element1", o),
-        g = a ?? s.intl.string(m),
-        T = null != I ? (0, _.EL)(I) : null,
-        S = void 0 !== p ? p : null != T ? (0, _.m6)(T.planId) : h?.premiumType,
+        T = a ?? s.intl.string(m),
+        g = null != I ? (0, _.EL)(I) : null,
+        S = void 0 !== p ? p : null != g ? (0, _.m6)(g.planId) : h?.premiumType,
         N = t === A.pe.TIER_2 && null != S && [A.PremiumTypes.TIER_0, A.PremiumTypes.TIER_1].includes(S),
-        C = null != n && null != T && T?.planId !== n;
-    (N || C) && (g = s.intl.string(s.t.IJI7yk));
+        C = null != n && null != g && g?.planId !== n;
+    (N || C) && (T = s.intl.string(s.t.IJI7yk));
     let O = null != I && (0, _.Nc)(I);
     if (!((null != I && I.status !== f.Dmq.ACCOUNT_HOLD && !(0, d.m1)(I.planId) && !N && !C && void 0 === p) || O))
-        return { buttonText: r ?? g };
+        return { buttonText: r ?? T };
     {
         let e = (function (e) {
             let t,
@@ -101,7 +101,7 @@ function h(e) {
             );
         })({ ctaSubscriptionSkuId: t, currentPremiumType: S, isSwitchingDisabled: O, subscription: I });
         return {
-            buttonText: e.disabledButtonText ?? r ?? g,
+            buttonText: e.disabledButtonText ?? r ?? T,
             buttonTooltipText: e.disabledButtonTooltipText,
             disabled: !0,
         };

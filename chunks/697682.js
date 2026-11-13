@@ -15,8 +15,8 @@ let d = function (e) {
 };
 var m = n(543699),
     h = n(527212),
-    g = n(991988),
-    f = n(917445);
+    f = n(991988),
+    g = n(917445);
 let A = (0, n(945810).mj)({
     name: "2026-09-video-background-profile-fetch",
     kind: "user",
@@ -34,15 +34,15 @@ let b = function (e) {
             userId: c,
             guildId: b,
             pulseSpeakingIndicator: v = !1,
-            speaking: T = !1,
+            speaking: I = !1,
             ..._
         } = e,
-        I = l ?? n,
-        y = (0, u.Ay)(I, a.A.unsafe_rawColors.PRIMARY_800.css),
+        T = l ?? n,
+        y = (0, u.Ay)(T, a.A.unsafe_rawColors.PRIMARY_800.css),
         R = A.useConfig({ location: "VideoBackground" }).enabled,
         S = (0, h.Ay)(c ?? "", b),
         x = (0, m.tM)(S?.themeColors?.[0]) ?? p.NJ8.DARK,
-        { profileThemeStyle: O, profileThemeClassName: P } = (0, g.A)({
+        { profileThemeStyle: O, profileThemeClassName: P } = (0, f.A)({
             theme: x,
             themeType: E.d.VIDEO_TILE_BACKGROUND,
             primaryColor: S?.themeColors?.[0] ?? null,
@@ -51,7 +51,7 @@ let b = function (e) {
         N = S?.themeColors?.[0] != null && S?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && R && (0, f.A)(c, void 0, { guildId: b });
+            null != c && R && (0, g.A)(c, void 0, { guildId: b });
         }, [R, c, b]),
         null == n)
     )
@@ -61,6 +61,6 @@ let b = function (e) {
     return (0, i.jsx)("div", {
         style: N ? { ...t, ...O } : { ...M },
         className: s()(C.T, { [P]: N }),
-        children: v ? (0, i.jsx)(d, { shouldAnimate: T, children: k }) : k,
+        children: v ? (0, i.jsx)(d, { shouldAnimate: I, children: k }) : k,
     });
 };

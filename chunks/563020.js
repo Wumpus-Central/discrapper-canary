@@ -77,12 +77,12 @@ n.d(
                 f = null != s ? s : e.amount,
                 p = (0, d.$g)(f, u),
                 m = c ? p : (0, d.CE)(p, _.interval, _.intervalCount),
-                g = I(e),
-                T = e.discounts ?? [],
-                S = T.find((e) => e.type === a.iS.PREMIUM_TRIAL),
-                N = T.find((e) => e.type === a.iS.ENTITLEMENT),
-                C = T.reduce((e, t) => e + t.amount, 0),
-                O = f + (g?.amount ?? 0);
+                T = I(e),
+                g = e.discounts ?? [],
+                S = g.find((e) => e.type === a.iS.PREMIUM_TRIAL),
+                N = g.find((e) => e.type === a.iS.ENTITLEMENT),
+                C = g.reduce((e, t) => e + t.amount, 0),
+                O = f + (T?.amount ?? 0);
             return {
                 label: A,
                 value: m,
@@ -94,7 +94,7 @@ n.d(
                 subscriptionPlan: _,
                 subscriptionTrial: n,
                 trialDiscount: S,
-                subscriptionDiscount: g,
+                subscriptionDiscount: T,
                 entitlementDiscount: N,
             };
         },
@@ -164,12 +164,12 @@ n.d(
                     r.subscriptionPlanPrice - (r.discounts?.find((e) => e.type === n)?.amount ?? 0)),
                 I = r.quantity * h,
                 m = r.amount + (null != c ? c.amount : 0) - I + (null != _ ? _.amount : 0),
-                g = l.filter(
+                T = l.filter(
                     (e) =>
                         e.subscriptionPlanId === u.gD.PREMIUM_MONTH_GUILD ||
                         e.subscriptionPlanId === u.gD.PREMIUM_YEAR_GUILD,
                 ),
-                T = g.reduce((e, t) => e + t.amount, 0),
+                g = T.reduce((e, t) => e + t.amount, 0),
                 S = [];
             return (
                 0 === m ||
@@ -185,24 +185,24 @@ n.d(
                         amount: m,
                         lineItemType: "adjustment",
                     }),
-                0 !== T &&
+                0 !== g &&
                     S.push({
                         id: "guild-subscription-adjustment",
                         label: A.intl.string(A.t["+as5ZZ"]),
                         tooltipText: A.intl.format(A.t.UDop9c, {}),
                         tooltipAriaLabel: A.intl.string(A.t.P68ePO),
-                        value: (0, d.$g)(T, e.currency),
-                        amount: T,
+                        value: (0, d.$g)(g, e.currency),
+                        amount: g,
                         lineItemType: "adjustment",
                     }),
                 {
                     newPlanInvoiceItem: r,
                     basePlanFullAmount: I,
                     basePlanAdjustment: m,
-                    guildSubscriptionAdjustment: T,
+                    guildSubscriptionAdjustment: g,
                     isTrialItem: E,
                     invoiceAdjustmentDisplayItems: S,
-                    guildSubscriptionInvoiceItems: g,
+                    guildSubscriptionInvoiceItems: T,
                     promotionItem: _,
                     basePlanCreditItem: c,
                 }

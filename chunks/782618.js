@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(253932),
     p = n(287809),
     m = n(458976),
-    g = n(453997),
-    T = n(792348),
+    T = n(453997),
+    g = n(792348),
     S = n(533491),
     N = n(257645),
     C = n(792996),
@@ -26,12 +26,12 @@ function R(e) {
         { emojiId: A, emojiName: f } = t,
         { text: h, icon: I } = (function (e) {
             switch (e) {
-                case g.p.FAVORITE:
+                case T.p.FAVORITE:
                     return {
                         text: C.intl.string(C.t["iJA/TE"]),
                         icon: (0, i.jsx)(d.StarIcon, { size: "xs", color: "currentColor", className: O.zr }),
                     };
-                case g.p.FREQUENTLY_USED:
+                case T.p.FREQUENTLY_USED:
                     return {
                         text: C.intl.string(C.t["+cGVV6"]),
                         icon: (0, i.jsx)(c.ClockIcon, { size: "xs", color: "currentColor", className: O.zr }),
@@ -46,7 +46,7 @@ function R(e) {
         m = r.useCallback(() => {
             a(!1);
         }, [a]),
-        T = (0, i.jsx)("div", {
+        g = (0, i.jsx)("div", {
             onMouseEnter: p,
             onMouseLeave: m,
             children: (0, i.jsx)(S.PI, { sound: t, previewSound: l, analyticsLocations: o }),
@@ -71,7 +71,7 @@ function R(e) {
                   }),
                   (0, i.jsx)("div", {
                       className: O.d7,
-                      children: (0, i.jsxs)("div", { className: O.O5, children: [T, N] }),
+                      children: (0, i.jsxs)("div", { className: O.O5, children: [g, N] }),
                   }),
               ],
           })
@@ -81,7 +81,7 @@ function R(e) {
                   (0, i.jsx)("div", { className: O.LQ }),
                   (0, i.jsxs)("div", {
                       className: O.O5,
-                      children: [T, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), N],
+                      children: [g, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), N],
                   }),
               ],
           });
@@ -99,7 +99,7 @@ n.d(
                     interactive: c,
                     onMouseEnter: _,
                     openUpsellForSound: E,
-                    analyticsLocations: g,
+                    analyticsLocations: T,
                     ref: S,
                 } = e,
                 { name: L, emojiId: y, emojiName: D } = t,
@@ -108,7 +108,7 @@ n.d(
                     playSoundboardSound: v,
                     previewSound: P,
                     isPlayingSound: M,
-                } = (0, T.A)(
+                } = (0, g.A)(
                     t,
                     n?.id ?? null,
                     I.dG.getSetting()?.volume ?? 100,
@@ -123,9 +123,9 @@ n.d(
                 [B, V] = r.useState(!1),
                 H = r.useCallback(
                     (e) => {
-                        F ? E?.(e) : v(g);
+                        F ? E?.(e) : v(T);
                     },
-                    [F, E, v, g],
+                    [F, E, v, T],
                 );
             return (0, i.jsx)("li", {
                 ref: S,
@@ -161,7 +161,7 @@ n.d(
                                 disabled: F,
                                 setIsChildTooltipShowing: V,
                                 previewSound: P,
-                                analyticsLocations: g,
+                                analyticsLocations: T,
                             }),
                         ],
                     }),

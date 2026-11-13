@@ -15,8 +15,8 @@ var u = n(380335),
     I = n(543465),
     p = n(287809),
     m = n(811091),
-    g = n(746080);
-let T = new d.J(
+    T = n(746080);
+let g = new d.J(
     function (e) {
         let { isRequest: t, isFavorite: n } = e;
         return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
@@ -48,22 +48,22 @@ function S(e) {
     };
 }
 function N() {
-    (T.clear(),
+    (g.clear(),
         Object.values(A.A.getMutablePrivateChannels()).forEach((e) => {
-            T.set(e.id, S(e));
+            g.set(e.id, S(e));
         }));
 }
 function C() {
     let e = A.A.getMutablePrivateChannels();
-    for (let t in e) T.set(t, S(e[t]));
+    for (let t in e) g.set(t, S(e[t]));
 }
 let O =
     ((i = []),
     (r = []),
     (a = []),
     () => {
-        let e = T.values("FAVORITE"),
-            t = T.values("DEFAULT");
+        let e = g.values("FAVORITE"),
+            t = g.values("DEFAULT");
         return (
             (i !== e || r !== t) &&
                 ((a = []),
@@ -89,12 +89,12 @@ class R extends o.Ay.Store {
         return O();
     }
     getSortedChannels() {
-        return [T.values("FAVORITE"), T.values("DEFAULT")];
+        return [g.values("FAVORITE"), g.values("DEFAULT")];
     }
     serializeForOverlay() {
         let e = {};
         return (
-            T.values().forEach((t) => {
+            g.values().forEach((t) => {
                 let { channelId: n, lastMessageId: i } = t;
                 e[n] = i;
             }),
@@ -111,29 +111,29 @@ let L = new R(c.h, {
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         t.forEach((e) => {
-            !e.hasFlag(g.lx.UNLISTED) && ((0, E.Gw)(e.type) || T.has(e.id)) && T.set(e.id, S(e));
+            !e.hasFlag(T.lx.UNLISTED) && ((0, E.Gw)(e.type) || g.has(e.id)) && g.set(e.id, S(e));
         });
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (!(0, E.Gw)(t.type) || "131" === t.id || t.hasFlag(g.lx.UNLISTED)) return !1;
-        T.set(t.id, S(t));
+        if (!(0, E.Gw)(t.type) || "131" === t.id || t.hasFlag(T.lx.UNLISTED)) return !1;
+        g.set(t.id, S(t));
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return T.delete(t.id);
+        return g.delete(t.id);
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e;
-        if (!T.has(t)) return !1;
+        if (!g.has(t)) return !1;
         let i = A.A.getChannel(t);
-        return null != i && T.set(t, S(i, n.id));
+        return null != i && g.set(t, S(i, n.id));
     },
     GUILD_CREATE: function (e) {
         let t = e.guild.id;
-        return T.delete(t);
+        return g.delete(t);
     },
     LOGOUT: function () {
-        T.clear();
+        g.clear();
     },
 });

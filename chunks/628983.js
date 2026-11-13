@@ -16,8 +16,8 @@ var i = n(284009),
     I = n(209932),
     p = n(312006),
     m = n(616356),
-    g = n(46653),
-    T = n(470710),
+    T = n(46653),
+    g = n(470710),
     S = n(734057),
     N = n(290863),
     C = n(309010),
@@ -66,7 +66,7 @@ function z(e) {
                       n === P._Of.VOICE ? (delete B[e], delete V[e]) : (B[e] = n);
                   })(n),
                   (function (e) {
-                      let t = g.default.getId(),
+                      let t = T.default.getId(),
                           n = X(e);
                       if (0 === n.size() || C.Ay.getVoiceChannelId() !== e) return ee(e, null);
                       let i = v.jd.NONE,
@@ -139,7 +139,7 @@ function ei() {
         null != (t = C.Ay.getChannelId()) && e.push(t),
         null == (n = C.Ay.getVoiceChannelId()) || e.includes(n) || e.push(n),
         (i = f.default.getRemoteSessionId()),
-        (r = y.A.getVoiceStateForSession(g.default.getId(), i)),
+        (r = y.A.getVoiceStateForSession(T.default.getId(), i)),
         r?.channelId != null && e.push(r?.channelId),
         s().difference(w, e).forEach(en),
         (a = s().difference(e, w)),
@@ -198,8 +198,8 @@ class eE extends l.Ay.PersistedStore {
         (this.waitFor(
             c.A,
             m.A,
-            g.default,
-            T.A,
+            T.default,
+            g.A,
             S.A,
             u.Ay,
             d.Ay,
@@ -377,7 +377,7 @@ let eA = new eE(o.h, {
         if ((ee(n, [i ?? v.jd.NONE, a]), (0, h.wL)(i))) {
             try {
                 let { ownerId: e } = (0, h.Iy)(i);
-                e === g.default.getId() && q(e, [n]);
+                e === T.default.getId() && q(e, [n]);
             } catch (e) {
                 M.warn(`INVALID STREAM KEY FORMAT ${i}`, e);
             }
@@ -428,7 +428,7 @@ let eA = new eE(o.h, {
     },
     STREAM_UPDATE_SELF_HIDDEN: function (e) {
         let { channelId: t, selfStreamHidden: n } = e,
-            i = g.default.getId();
+            i = T.default.getId();
         if (n) {
             let [e] = Q(t);
             (0, h.wL)(e) && e.includes(i) && ee(t, null);
@@ -470,7 +470,7 @@ let eA = new eE(o.h, {
     GUILD_SOUNDBOARD_SOUND_PLAY_START: el,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: el,
     PUSH_TO_TALK_STATE_CHANGE: function () {
-        return z((e) => e.updateParticipantSpeaking(g.default.getId()));
+        return z((e) => e.updateParticipantSpeaking(T.default.getId()));
     },
     USER_UPDATE: eo,
     GUILD_MEMBER_UPDATE: eo,

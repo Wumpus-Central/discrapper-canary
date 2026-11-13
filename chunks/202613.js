@@ -69,9 +69,9 @@ class l extends r.A {
             case s.hes.MOMO_WALLET:
                 return new p({ ...n });
             case s.hes.KAKAOPAY:
-                return new g({ ...n });
-            case s.hes.GOPAY_WALLET:
                 return new T({ ...n });
+            case s.hes.GOPAY_WALLET:
+                return new g({ ...n });
             case s.hes.BANCONTACT:
                 return new S({ ...n });
             case s.hes.IDEAL:
@@ -113,9 +113,9 @@ class l extends r.A {
             case s.hes.VENMO:
                 return new m(e);
             case s.hes.KAKAOPAY:
-                return new g(e);
-            case s.hes.GOPAY_WALLET:
                 return new T(e);
+            case s.hes.GOPAY_WALLET:
+                return new g(e);
             case s.hes.BANCONTACT:
                 return new S(e);
             case s.hes.EPS:
@@ -252,13 +252,13 @@ class m extends l {
         this.username = e.username || "";
     }
 }
-class g extends l {
+class T extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.KAKAOPAY))
             throw Error(`Cannot instantiate KaKaoPaySourceRecord with type: ${e.type}, must be ${s.hes.KAKAOPAY}`);
     }
 }
-class T extends l {
+class g extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.GOPAY_WALLET))
             throw Error(
@@ -340,8 +340,8 @@ n.d(
         YS: o,
         _1: m,
         am: p,
-        cg: T,
-        i6: g,
+        cg: g,
+        i6: T,
         rJ: E,
     },
 );

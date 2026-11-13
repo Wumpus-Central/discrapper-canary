@@ -5,11 +5,11 @@ n.d(t, {
     WU: () => A,
     IY: () => I,
     A5: () => u,
-    UT: () => g,
+    UT: () => T,
     St: () => m,
     Bs: () => p,
     mU: () => S,
-    Bf: () => T,
+    Bf: () => g,
 });
 var i,
     r,
@@ -84,10 +84,10 @@ function p(e, t, n) {
 function m(e, t, n, i) {
     c.default.track(_.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
 }
-function g(e, t) {
+function T(e, t) {
     c.default.track(_.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
 }
-function T(e, t, n) {
+function g(e, t, n) {
     c.default.track(_.HAw.NSFW_SPACE_WARNING_MODAL_VIEWED, { channel_id: t, guild_id: n, modal_type: e });
 }
 function S(e, t, n, i) {

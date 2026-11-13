@@ -15,8 +15,8 @@ let d = new Map(),
     I = 0,
     p = {},
     m = 0,
-    g = 0,
     T = 0,
+    g = 0,
     S = { friends: void 0, blocked: void 0, ignored: void 0, blockedOrIgnored: void 0 },
     N = new Set();
 function C(e) {
@@ -53,7 +53,7 @@ function P(e) {
     null != t && (d.delete(e), b.get(t)?.delete(e), C(t));
 }
 function M() {
-    ((g = E.size), (T = f.size), (m = Math.max((b.get(o.eA$.PENDING_INCOMING)?.size ?? 0) - g - T, 0)), I++);
+    ((T = E.size), (g = f.size), (m = Math.max((b.get(o.eA$.PENDING_INCOMING)?.size ?? 0) - T - g, 0)), I++);
 }
 class U extends i.Ay.Store {
     static displayName = "RelationshipStore";
@@ -98,10 +98,10 @@ class U extends i.Ay.Store {
         return m;
     }
     getSpamCount() {
-        return g;
+        return T;
     }
     getPendingIgnoredCount() {
-        return T;
+        return g;
     }
     getOutgoingCount() {
         return b.get(o.eA$.PENDING_OUTGOING)?.size ?? 0;

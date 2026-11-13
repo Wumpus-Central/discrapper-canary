@@ -80,7 +80,7 @@ class m extends i.Ay.Store {
         return _.version;
     }
 }
-let g = new m(a.h, {
+let T = new m(a.h, {
     CONNECTION_OPEN: function (e) {
         (_.clear(),
             e.gameRelationships.forEach((e) => {
@@ -110,4 +110,4 @@ let g = new m(a.h, {
         }
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

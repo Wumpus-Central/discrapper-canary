@@ -65,8 +65,8 @@ let p = class e {
         }
     }.empty(),
     m = !1,
-    g = null,
-    T = new Map();
+    T = null,
+    g = new Map();
 function S(e, t, n) {
     return `${e}:${t}:${n}`;
 }
@@ -83,7 +83,7 @@ function O() {
     });
 }
 function R() {
-    null != g && (g.destroy(), (g = null));
+    null != T && (T.destroy(), (T = null));
 }
 O();
 class L extends i.Ay.Store {
@@ -146,7 +146,7 @@ let y = new L(a.h, {
         if ((R(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
         let i = n.createReplayConnection(c.x.DEFAULT, t);
         null != i &&
-            ((g = i),
+            ((T = i),
             i.on(r.yq.Video, (e, t, n, r, s) => {
                 a.h.dispatch({
                     type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -170,7 +170,7 @@ let y = new L(a.h, {
         A.set(I(t, n), i);
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        null != e.channelId && (O(), A.clear(), T.clear());
+        null != e.channelId && (O(), A.clear(), g.clear());
     },
     RTC_CONNECTION_VIDEO: function (e) {
         if (null === e.streamId) {
@@ -201,9 +201,9 @@ let y = new L(a.h, {
                             c = n;
                         if (null != n.screenshare) {
                             let e = `${t}:${i}`,
-                                s = T.get(e),
+                                s = g.get(e),
                                 l = r[i]?.screenshare;
-                            if ((T.set(e, d), null != s && null != l)) {
+                            if ((g.set(e, d), null != s && null != l)) {
                                 var a;
                                 let e,
                                     t,

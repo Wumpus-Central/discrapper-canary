@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(28863),
     p = n(417098),
     m = n(95362),
-    g = n(398590),
-    T = n(58736),
+    T = n(398590),
+    g = n(58736),
     S = n(471245),
     N = n(269880),
     C = n(25044),
@@ -552,23 +552,23 @@ function et(e) {
             (0, i.jsxs)("div", {
                 className: B.Qs,
                 children: [
-                    (0, i.jsxs)(T.Ay, {
+                    (0, i.jsxs)(g.Ay, {
                         className: B.wx,
                         children: [
-                            null != E ? (0, i.jsx)(T.Ay.Title, { children: E }) : null,
+                            null != E ? (0, i.jsx)(g.Ay.Title, { children: E }) : null,
                             null != S
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          null != E ? (0, i.jsx)(T.Ay.Caret, { className: B.zN }) : null,
-                                          (0, i.jsx)(T.Ay.Title, { children: S }),
+                                          null != E ? (0, i.jsx)(g.Ay.Caret, { className: B.zN }) : null,
+                                          (0, i.jsx)(g.Ay.Title, { children: S }),
                                       ],
                                   })
                                 : null,
                             _?.docs != null
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T.Ay.Divider, { className: B.zN }),
-                                          (0, i.jsx)(T.Ay.Title, {
+                                          (0, i.jsx)(g.Ay.Divider, { className: B.zN }),
+                                          (0, i.jsx)(g.Ay.Title, {
                                               children: (0, i.jsx)(I.Anchor, { href: _.docs, children: "Docs" }),
                                           }),
                                       ],
@@ -585,7 +585,7 @@ function et(e) {
                                         icon: o.XSmallIcon,
                                         "aria-label": z.intl.string(z.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: g.jH,
+                                        onClick: T.jH,
                                     }),
                                 ],
                             }),

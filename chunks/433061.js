@@ -1,4 +1,4 @@
-(n.d(t, { m9: () => p, ZG: () => I, Uc: () => N, uh: () => S, Jm: () => C, VR: () => T, Fc: () => g, JS: () => m }),
+(n.d(t, { m9: () => p, ZG: () => I, Uc: () => N, uh: () => S, Jm: () => C, VR: () => g, Fc: () => T, JS: () => m }),
     n(321073));
 var i,
     r = (((i = {}).TRANSFER_EXISTING_CALL = "TRANSFER_EXISTING_CALL"), (i.CREATE_NEW_CALL = "CREATE_NEW_CALL"), i),
@@ -77,10 +77,10 @@ function m(e, t) {
     }),
         h("VOICE_STATE_UPDATE", e));
 }
-function g(e) {
+function T(e) {
     (s.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), h("DISCONNECT", e), I());
 }
-function T(e, t, n, i) {
+function g(e, t, n, i) {
     let r = (0, o.o)(n);
     null != r &&
         (s.h.dispatch({

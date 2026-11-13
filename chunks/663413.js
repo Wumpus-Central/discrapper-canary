@@ -19,7 +19,7 @@ let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
         let { children: t, skipsSettingDefaultPageTitle: n } = e;
         (0, f.cu)({ skipsSettingDefaultPageTitle: n });
         let { clientThemesClassName: a, clientThemesCSS: m } = (0, c.Ay)(),
-            g = r.createElement("style", { [c.Vg]: !0 }, m);
+            T = r.createElement("style", { [c.Vg]: !0 }, m);
         return (0, i.jsxs)(l.mg, {
             children: [
                 (function (e) {
@@ -36,7 +36,7 @@ let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
                         className: s()(a, e, { overlay: __OVERLAY__ }),
                     });
                 })(a),
-                g,
+                T,
                 t,
             ],
         });

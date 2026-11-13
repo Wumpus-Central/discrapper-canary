@@ -10,12 +10,12 @@
     $N: () => e_,
     b8: () => Z,
     U1: () => ei,
-    lZ: () => eT,
+    lZ: () => eg,
     su: () => q,
     a3: () => V,
     listProjects: () => x,
     tF: () => Q,
-    kY: () => eg,
+    kY: () => eT,
     tf: () => et,
     hy: () => k,
     GO: () => eS,
@@ -47,11 +47,11 @@ var i = n(158390),
     I = n(639519),
     p = n(754027),
     m = n(869018),
-    g = n(326843),
-    T = n(457827),
+    T = n(326843),
+    g = n(457827),
     S = n(964404);
 function N(e) {
-    for (let t of (0, p.Mm)(e)) (0, g.A)(t, S.Ay) || (0, T.r)(t.id);
+    for (let t of (0, p.Mm)(e)) (0, T.A)(t, S.Ay) || (0, g.r)(t.id);
 }
 var C = n(153207),
     O = n(260498),
@@ -357,12 +357,12 @@ async function ep(e) {
 function em(e, t) {
     ep(e).then(() => void 0, t);
 }
-async function eg(e) {
+async function eT(e) {
     let t = O.Ay.getProject(e)?.preview_application_id,
         { body: n } = await a.Bo.del({ url: `${D.Rsh.CONJURE_PROJECT(e)}/server`, rejectWithError: !0 });
     (es(e, n, ea(e)), null != t && t !== n.project.preview_application_id && N(t));
 }
-async function eT(e) {
+async function eg(e) {
     let { body: t } = await a.Bo.put({ url: `${D.Rsh.CONJURE_PROJECT(e)}/owner-install`, rejectWithError: !0 });
     es(e, t, ea(e));
 }

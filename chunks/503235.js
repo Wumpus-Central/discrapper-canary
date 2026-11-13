@@ -95,7 +95,7 @@ let A = {
 function m(e) {
     return (0, o.nb)(e.trait, e.optionId);
 }
-function g(e) {
+function T(e) {
     let { trait: t, rarity: n } = e;
     if (null == n) {
         let n = I[t];
@@ -111,7 +111,7 @@ function g(e) {
         ? _.intl.string(E ? d : i)
         : _.intl.formatToPlainString(E ? c : o, { percent: 100 - a.ei[n] });
 }
-let T = {
+let g = {
     [r.V.FACE]: u.default["4IdR/H"],
     [r.V.OUTFIT]: u.default.NuujPd,
     [r.V.HAT]: u.default.o1Zign,
@@ -125,10 +125,10 @@ n.d(
     {
         C5: m,
         Cz: function (e) {
-            let t = T[e];
+            let t = g[e];
             return null != t ? _.intl.string(t) : void 0;
         },
-        Oq: g,
+        Oq: T,
         Ux: function (e) {
             switch (e) {
                 case "base":
@@ -168,7 +168,7 @@ n.d(
                 t || null == e.rarity || i.push(_.intl.string(c.iG[e.rarity])),
                 !n)
             ) {
-                let t = g(e);
+                let t = T(e);
                 null != t && i.push(t);
             }
             return i.join(", ");

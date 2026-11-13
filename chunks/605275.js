@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => eT }), n(321073));
+(n.d(t, { Ay: () => eg }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(478676),
@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(258072),
     p = n(717125),
     m = n(47167),
-    g = n(499211),
-    T = n(376943),
+    T = n(499211),
+    g = n(376943),
     S = n(576705),
     N = n(994500),
     C = n(486020),
@@ -53,7 +53,7 @@ function U(e) {
 }
 function w(e, t) {
     let n = u.A.getChannel(e),
-        i = (0, g.p)(e, u.A, p.A, S.A).isSubscriptionGated,
+        i = (0, T.p)(e, u.A, p.A, S.A).isSubscriptionGated,
         r = (0, O.QG)(n) ?? "text";
     if (null != t) {
         let a = t.find((t) => t.id === e);
@@ -81,7 +81,7 @@ function w(e, t) {
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, L.Y)(n.type),
-              canViewChannel: (0, T.nc)(n),
+              canViewChannel: (0, g.nc)(n),
               roleSubscriptionGated: i,
               iconType: r,
               parentId: n.parent_id,
@@ -177,7 +177,7 @@ let B = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = T.BM.exec(e);
+            let t = g.BM.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
@@ -186,7 +186,7 @@ let B = {
                 a = e[2],
                 s = e[3],
                 l = e[4],
-                o = (0, T.te)(l);
+                o = (0, g.te)(l);
             if (null == a) return G(i);
             let d = w(a, null),
                 c = null == d ? k(r, a, s, v(n.channelId), i) : F(d, s, v(n.channelId), i);
@@ -196,7 +196,7 @@ let B = {
     H = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => T.En.exec(e),
+        match: (e) => g.En.exec(e),
         parse(e, t, n) {
             let i = e[0],
                 r = e[1],
@@ -673,7 +673,7 @@ function em(e, t, n) {
     let i = t + n;
     return i === e.length || "" === e.charAt(i).trim();
 }
-let eg = (0, Z.A)([
+let eT = (0, Z.A)([
         {
             highlightWord: {
                 order: -1,
@@ -708,7 +708,7 @@ let eg = (0, Z.A)([
         },
         r().omit(ed, ["url"]),
     ]),
-    eT = {
+    eg = {
         RULES: ed,
         CHANNEL_TOPIC_RULES: ec,
         VOICE_CHANNEL_STATUS_RULES: eu,
@@ -717,6 +717,6 @@ let eg = (0, Z.A)([
         GUILD_VERIFICATION_FORM_RULES: eA,
         GUILD_EVENT_RULES: eh,
         PROFILE_BIO_RULES: ef,
-        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eg,
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eT,
         NATIVE_SEARCH_RESULT_LINK_RULES: eI,
     };

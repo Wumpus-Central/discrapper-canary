@@ -1,10 +1,10 @@
-n.d(t, { kc: () => I, vy: () => _, iX: () => E });
+n.d(t, { kc: () => A, vy: () => g, iX: () => R });
 var l = n(477900),
     r = n(582128),
     i = n(265872),
     o = n(165862),
-    a = n(503002),
-    s = n(939496),
+    s = n(503002),
+    a = n(939496),
     u = n(993401);
 let c = (0, n(945810).mj)({
     name: "2026-11-shop-this-look-full-profile-button",
@@ -14,48 +14,48 @@ let c = (0, n(945810).mj)({
 });
 var d = n(674954),
     f = n(996988),
-    A = n(792996);
-let p = r.createContext(!1);
-function E() {
-    let e = r.useContext(p),
-        { themeType: t } = (0, s.E)();
+    p = n(792996);
+let E = r.createContext(!1);
+function R() {
+    let e = r.useContext(E),
+        { themeType: t } = (0, a.E)();
     return e && t === f.d.MODAL_V2;
 }
-function g(e) {
+function _(e) {
     let { children: t } = e,
         { enabled: n } = c.useConfig({ location: "FullProfileShopThisLook" });
-    return (0, l.jsx)(p.Provider, { value: n, children: t });
+    return (0, l.jsx)(E.Provider, { value: n, children: t });
 }
-function _(e) {
+function g(e) {
     let { user: t, guildId: n, children: r } = e,
         { visible: i } = (0, d.aC)(t, n, null);
-    return i ? (0, l.jsx)(g, { children: r }) : r;
+    return i ? (0, l.jsx)(_, { children: r }) : r;
 }
-function I(e) {
+function A(e) {
     let { user: t, guildId: n } = e,
-        s = E(),
-        { visible: c, contents: f, hasRenderableContent: p } = (0, d.aC)(t, n, "full_profile_button"),
-        g = r.useRef(null);
-    return s && c && p
+        a = R(),
+        { visible: c, contents: f, hasRenderableContent: E } = (0, d.aC)(t, n, "full_profile_button"),
+        _ = r.useRef(null);
+    return a && c && E
         ? (0, l.jsx)(i.Y, {
-              targetElementRef: g,
+              targetElementRef: _,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, l.jsx)(o.W, {
                       navId: "full-profile-shop-this-look",
                       onSelect: void 0,
                       onClose: t,
-                      "aria-label": A.intl.string(A.t.xNdRDO),
+                      "aria-label": p.intl.string(p.t.xNdRDO),
                       children: f,
                   });
               },
               children: (e) =>
                   (0, l.jsx)(u.q3, {
                       ...e,
-                      buttonRef: g,
+                      buttonRef: _,
                       action: "PRESS_SHOP_THIS_LOOK",
-                      icon: a.ShopSparkleIcon,
-                      tooltipText: A.intl.string(A.t.xNdRDO),
+                      icon: s.ShopSparkleIcon,
+                      tooltipText: p.intl.string(p.t.xNdRDO),
                   }),
           })
         : null;

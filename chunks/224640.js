@@ -24,15 +24,15 @@ n.d(
                     returnRef: I,
                     role: p = "dialog",
                     "aria-label": m,
-                    dismissable: g = !0,
-                    maxHeight: T = "default",
+                    dismissable: T = !0,
+                    maxHeight: g = "default",
                     onClose: S,
                     contentOutsideContainer: N,
                     trackingProps: C,
                     children: O,
                 } = e,
                 R = r.useId(),
-                L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: g }), [g, R, S]),
+                L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: T }), [T, R, S]),
                 y = (0, _.kS)(t, n),
                 D = r.useRef(null);
             return (0, i.jsx)(u.V.Provider, {
@@ -55,7 +55,7 @@ n.d(
                                     ref: D,
                                     "data-mana-component": "modal",
                                     className: s()(A.container, A[`size-${a}`], A[`padding-size-${f}`], {
-                                        [A.maxHeightViewport]: "viewport" === T,
+                                        [A.maxHeightViewport]: "viewport" === g,
                                         [A.exiting]: t === E.i.EXITING || t === E.i.EXITED,
                                     }),
                                     style: y,

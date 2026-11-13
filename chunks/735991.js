@@ -16,8 +16,8 @@ var i = n(487899),
     I = n(327891),
     p = n(486020),
     m = n(723702),
-    g = n(989837),
-    T = n(500049),
+    T = n(989837),
+    g = n(500049),
     S = n(652215),
     N = n(73510),
     C = n(381941),
@@ -113,7 +113,7 @@ n.d(
                             maxSizeCallback: l,
                             commandOrigin: d,
                             sectionName: o,
-                            source: g.A.entrypoint(),
+                            source: T.A.entrypoint(),
                         });
                         if (t.inputType === c.y$.BUILT_IN_TEXT && null != e && null != i.channel) {
                             let t = h.Ay.parse(u, e.content);
@@ -182,7 +182,7 @@ n.d(
             return L(e) ? e.name : O.intl.string(O.t.UB2gG2);
         },
         sw: function (e) {
-            return e === T.s4.TEXT;
+            return e === g.s4.TEXT;
         },
         u8: function (e) {
             return L(e) ? e.description : O.intl.string(O.t.X9fusn);

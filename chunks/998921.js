@@ -21,7 +21,7 @@ function p(e) {
 function m(e) {
     return new Promise((t, n) => {
         "string" == typeof e && (e = A.net.createConnection(e));
-        let i = new T(e, "json");
+        let i = new g(e, "json");
         function r() {
             i.close(E.YI$.CLOSE_NORMAL, "test client going away");
         }
@@ -48,10 +48,10 @@ function m(e) {
                 throw (r(), e);
             },
         );
-        return (e.write(g(h.PING, s().uniqueId())), a.then(t, n));
+        return (e.write(T(h.PING, s().uniqueId())), a.then(t, n));
     });
 }
-function g(e, t) {
+function T(e, t) {
     t = JSON.stringify(t);
     let n = i.hp.byteLength(t),
         r = i.hp.alloc(8 + n);
@@ -62,7 +62,7 @@ function g(e, t) {
         r.buffer.slice(r.byteOffset, r.byteOffset + r.byteLength)
     );
 }
-class T extends c.A {
+class g extends c.A {
     messageBuffer = i.hp.alloc(0);
     currentHeader = null;
     MAX_BUFFER_SIZE = 5242880;
@@ -83,11 +83,11 @@ class T extends c.A {
         return (e.copy(r, 0, t, n), r);
     }
     send(e) {
-        (f.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(g(h.FRAME, e)));
+        (f.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(T(h.FRAME, e)));
     }
     close(e, t) {
         try {
-            this.socket.end(g(h.CLOSE, { code: e, message: t }));
+            this.socket.end(T(h.CLOSE, { code: e, message: t }));
         } catch (e) {
             f.error(`Socket End Error: ${e.message}`);
         }
@@ -139,7 +139,7 @@ class T extends c.A {
     dispatchMessage(e, t) {
         switch (e) {
             case h.PING:
-                (this.socket.emit("ping", t), this.socket.write(g(h.PONG, t)));
+                (this.socket.emit("ping", t), this.socket.write(T(h.PONG, t)));
                 break;
             case h.PONG:
                 this.socket.emit("pong", t);
@@ -178,7 +178,7 @@ class S extends r.EventEmitter {
         if (this.activeConnections >= this.MAX_CONNECTIONS) {
             f.warn(`Connection limit reached (${this.MAX_CONNECTIONS}), rejecting connection`);
             try {
-                e.end(g(h.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
+                e.end(T(h.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
             } catch (e) {
                 f.error(`Socket End Error: ${e.message}`);
             }
@@ -190,7 +190,7 @@ class S extends r.EventEmitter {
             return;
         }
         this.activeConnections++;
-        let t = new T(e, "json", () => {
+        let t = new g(e, "json", () => {
                 (this.activeConnections--,
                     f.info(`Socket Close: ${t.id} ${t.clientId ?? "unknown"} (active: ${this.activeConnections})`),
                     t.abortController.abort(),

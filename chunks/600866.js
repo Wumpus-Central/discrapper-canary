@@ -57,7 +57,7 @@ class m {
         if ((null == this.shouldIndex || this.shouldIndex(e)) && null != t) return "string" == typeof t ? e[t] : t(e);
     }
 }
-class g {
+class T {
     kkvDatabase;
     partition;
     constructor(e, t) {
@@ -91,7 +91,7 @@ class g {
         return this.kkvDatabase.memoizedSinglePartition(this.partition, e, t);
     }
 }
-class T {
+class g {
     nextVersion;
     state;
     secondaryIndexes = [];
@@ -99,17 +99,17 @@ class T {
         ((this.nextVersion = e), (this.state = this.emptyState()));
     }
     addSecondaryKVIndex(e, t) {
-        let n = new T(this.nextVersion),
+        let n = new g(this.nextVersion),
             i = new m("kv", n, e, void 0, t);
         return (this.secondaryIndexes.push(i), n.intoKV());
     }
     addSecondaryKKVIndex(e, t, n) {
-        let i = new T(this.nextVersion),
+        let i = new g(this.nextVersion),
             r = new m("kkv", i, e, t, n);
         return (this.secondaryIndexes.push(r), i);
     }
     intoKV(e) {
-        return new g(this, e ?? "0");
+        return new T(this, e ?? "0");
     }
     version() {
         return this.state.version;
@@ -697,18 +697,18 @@ class S extends i.il {
         });
     }
     addKKVDatabase(e, t) {
-        let n = new T(this.nextVersion.bind(this));
+        let n = new g(this.nextVersion.bind(this));
         if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? p), null != this.shadowDatabases)) {
-            let n = new T(this.nextVersion.bind(this));
+            let n = new g(this.nextVersion.bind(this));
             ((this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? p));
         }
         return n;
     }
     addKVDatabase(e, t) {
-        let n = new T(this.nextVersion.bind(this)),
+        let n = new g(this.nextVersion.bind(this)),
             i = n.intoKV();
         if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? p), null != this.shadowDatabases)) {
-            let n = new T(this.nextVersion.bind(this));
+            let n = new g(this.nextVersion.bind(this));
             ((this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? p));
         }
         return i;

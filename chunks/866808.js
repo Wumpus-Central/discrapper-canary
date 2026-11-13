@@ -11,7 +11,7 @@ var i = n(73153),
     E = n(652215),
     A = n(165610);
 class f extends a.A {
-    actions = { GUILD_DELETE: m, CONJURE_SERVER_OVERLAY_WIDGETS_FETCH_SUCCESS: g };
+    actions = { GUILD_DELETE: m, CONJURE_SERVER_OVERLAY_WIDGETS_FETCH_SUCCESS: T };
 }
 let h = new f();
 function I(e) {
@@ -38,7 +38,7 @@ function m(e) {
         (i.h.dispatch({ type: "CONJURE_SERVER_OVERLAY_WIDGETS_GUILD_REMOVE", guildId: t.id }),
         p(new Set([...r, ...a])));
 }
-function g(e) {
+function T(e) {
     let { projects: t } = e,
         n = new Set(t.map((e) => e.application_id));
     p(

@@ -16,18 +16,18 @@ var i = n(350835),
     I = n(746080);
 let p = null,
     m = null,
-    g = null,
     T = null,
+    g = null,
     S = !1;
 function N() {
-    null != g && (clearTimeout(g), (g = null));
+    null != T && (clearTimeout(T), (T = null));
 }
 function C(e) {
     let t = h.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
 function O() {
-    null != T && (clearTimeout(T), (T = null));
+    null != g && (clearTimeout(g), (g = null));
 }
 function R() {
     return (N(), O(), (p = null), null != m && ((m = null), !0));
@@ -51,9 +51,9 @@ function y(e) {
     })();
     if (null == n)
         return null != m && t
-            ? (null == g &&
-                  (g = setTimeout(() => {
-                      ((g = null), R() && b.emitChange());
+            ? (null == T &&
+                  (T = setTimeout(() => {
+                      ((T = null), R() && b.emitChange());
                   }, 3e4)),
               !1)
             : R();
@@ -74,8 +74,8 @@ function y(e) {
           L(r),
           !(function e() {
               (O(),
-                  (T = setTimeout(() => {
-                      ((T = null), null != m && ((m = { ...m, details: C(m.details) }), e(), b.emitChange()));
+                  (g = setTimeout(() => {
+                      ((g = null), null != m && ((m = { ...m, details: C(m.details) }), e(), b.emitChange()));
                   }, 3e5)));
           })(),
           !0);

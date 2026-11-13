@@ -9,11 +9,11 @@ var n = l(477900),
     c = l(97808),
     f = l(834730),
     m = l(442433),
-    A = l(682163),
-    h = l(562153),
-    g = l(939496);
+    h = l(682163),
+    A = l(562153),
+    p = l(939496);
 l(518477);
-var p = l(996988),
+var g = l(996988),
     v = l(792996),
     b = l(247261);
 let x = (0, u.FT)(u._3.SIZE_16);
@@ -23,14 +23,14 @@ l.d(
     {
         A: function (e) {
             let { user: t, guild: E, nick: j, onSelect: y } = e,
-                { theme: C, themeType: M } = (0, g.E)(),
+                { theme: M, themeType: C } = (0, p.E)(),
                 S = t.hasAvatarForGuild(E.id),
                 I = i.useId(),
-                N = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: E.name });
+                w = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: E.name });
             return (0, n.jsxs)(o.D, {
-                focusProps: M === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+                focusProps: C === g.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: b.nM,
-                "aria-label": N,
+                "aria-label": w,
                 "aria-describedby": S || null != j ? I : void 0,
                 onClick: y,
                 onContextMenu: function (e) {
@@ -638,18 +638,18 @@ l.d(
                     });
                 },
                 children: [
-                    (0, n.jsx)(A.Ay, {
+                    (0, n.jsx)(h.Ay, {
                         "aria-hidden": !0,
                         tabIndex: -1,
                         guild: E,
                         showBadge: !0,
                         className: null != E.icon ? b.Kk : b.lN,
-                        badgeStrokeColor: (0, s.M)(C)
+                        badgeStrokeColor: (0, s.M)(M)
                             ? a.A.unsafe_rawColors.PRIMARY_600.css
                             : a.A.unsafe_rawColors.WHITE.css,
                         badgeTooltipColor: d.oM.PRIMARY,
                         badgeTooltipDelay: 300,
-                        size: A.Ay.Sizes.MEDIUM,
+                        size: h.Ay.Sizes.MEDIUM,
                         active: !0,
                     }),
                     (0, n.jsxs)("div", {
@@ -671,7 +671,7 @@ l.d(
                                             variant: "body-xs/medium",
                                             children: (0, n.jsx)(r.A, {
                                                 delay: 300,
-                                                children: j ?? h.Ay.getName(E.id, void 0, t),
+                                                children: j ?? A.Ay.getName(E.id, void 0, t),
                                             }),
                                         }),
                                     ],

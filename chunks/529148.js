@@ -54,8 +54,8 @@ var A = n(775602),
     I = n(652215);
 let p = ["Shift", "Alt", "Meta", "Control"];
 var m = n(534409),
-    g = n(945810);
-let T = (0, g.mj)({
+    T = n(945810);
+let g = (0, T.mj)({
     name: "2026-08-rive-web-perf",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -72,7 +72,7 @@ var S = n(869146),
     b = n(964486),
     v = n(657043),
     P = n(723702);
-let M = (0, g.mj)({
+let M = (0, T.mj)({
     kind: "user",
     name: "2026-10-mana-badge-refresh",
     defaultConfig: { enabled: !1 },
@@ -96,8 +96,8 @@ function x(e) {
             saturation: I,
             desaturateUserColors: p,
             useForcedColors: m,
-            systemForcedColors: g,
-            useReducedMotion: T,
+            systemForcedColors: T,
+            useReducedMotion: g,
             alwaysShowLinkDecorations: S,
             hardwareAccelerationEnabled: N,
             highContrastMode: C,
@@ -167,12 +167,12 @@ function x(e) {
                 "no-webkit-scrollbar": !x,
                 "has-webkit-scrollbar": x,
                 "mouse-mode": f,
-                "reduce-motion": T,
-                "full-motion": !T,
+                "reduce-motion": g,
+                "full-motion": !g,
                 "is-mobile": y.Fr,
                 "app-focused": u,
                 "desaturate-user-colors": p,
-                "disable-forced-colors": !m && "active" === g,
+                "disable-forced-colors": !m && "active" === T,
                 "enable-forced-colors": m,
                 "visual-refresh": !0,
                 "hardware-acceleration-disabled": !N,
@@ -212,7 +212,7 @@ function $(e) {
         [u] = a.useState(() => R.Ay.getEnableHardwareAcceleration()),
         {
             locale: _,
-            theme: g,
+            theme: T,
             focused: y,
             mainWindowVisible: D,
             currentWindow: b,
@@ -284,7 +284,7 @@ function $(e) {
         Z = (0, m.qK)("RootThemeContextProvider"),
         ee = (0, m.k5)("RootThemeContextProvider"),
         et = (0, m.lV)("RootThemeContextProvider"),
-        en = T.useConfig({ location: "RootThemeContextProvider" }).enabled,
+        en = g.useConfig({ location: "RootThemeContextProvider" }).enabled,
         ei = (0, f.m2)({ isPopoutWindow: s }),
         er = (function (e) {
             let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: s, locale: l } = e,
@@ -407,7 +407,7 @@ function $(e) {
                 )
             );
         })({
-            theme: g,
+            theme: T,
             saturation: U,
             enabledExperiments: a.useMemo(() => {
                 let e = [];
@@ -426,13 +426,13 @@ function $(e) {
     return (0, r.jsx)(c.GE, {
         value: er,
         children: (0, r.jsx)(E, {
-            theme: g,
+            theme: T,
             flags: Q,
             saturation: U,
             density: J,
             children: (0, r.jsx)(x, {
                 lang: _,
-                theme: g,
+                theme: T,
                 density: J,
                 focused: y,
                 fontScale: v,

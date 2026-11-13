@@ -85,8 +85,8 @@ class h {
         return this.listeners.get(e);
     }
 }
-let g = i.createContext(new h(!0));
-function f(e, t, n) {
+let f = i.createContext(new h(!0));
+function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
 let A = { mass: 0.8, friction: 25, tension: 320 };
@@ -95,7 +95,7 @@ n.d(
     {},
     {
         Fn: h,
-        Gt: g,
+        Gt: f,
         Ru: function (e, t, n) {
             let [s, h] = (0, r.z)(
                     () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
@@ -103,7 +103,7 @@ n.d(
                     [],
                 ),
                 p = i.useRef(h),
-                E = i.useContext(g),
+                E = i.useContext(f),
                 C = i.useMemo(() => {
                     let t = !1;
                     return (n) => {
@@ -120,15 +120,15 @@ n.d(
                                           n,
                                       );
                                   }
-                                  let { current: g } = p,
+                                  let { current: f } = p,
                                       E = {
                                           opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
                                           scale: i ? Math.min(1 - h / 4, 1) : 1,
-                                          transform: f(h, i, s),
+                                          transform: g(h, i, s),
                                           contentOpacity: i && h > 0 ? 0 : 1,
                                           height: i ? r : l,
                                       };
-                                  (g({
+                                  (f({
                                       from: t
                                           ? void 0
                                           : {
@@ -154,7 +154,7 @@ n.d(
                             to: {
                                 scale: 0.8,
                                 opacity: 0,
-                                transform: f(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
+                                transform: g(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
                             },
                             config: A,
                         }),

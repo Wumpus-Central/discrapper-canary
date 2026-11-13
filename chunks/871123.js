@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(79871),
     p = n(188275),
     m = n(652215),
-    g = n(758836);
-let T = A.QB ? "webp" : "jpg";
+    T = n(758836);
+let g = A.QB ? "webp" : "jpg";
 function S(e) {
     if (h.A.getStorefrontGuildIds().has(e.id)) return !0;
     if ("type" in e) return !1;
@@ -71,7 +71,7 @@ function y(e) {
 }
 function D(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.qg)(t);
-    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === g.G2.GAME_SHOPS && s === n && (null == i || l === i);
+    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === T.G2.GAME_SHOPS && s === n && (null == i || l === i);
 }
 function b(e, t) {
     return null == e || D(location.pathname, location.search, t.applicationId)
@@ -117,7 +117,7 @@ n.d(
         NH: function (e) {
             let t = e.pages.find((e) => e.leaderboard?.backgroundImageAssetId != null)?.leaderboard
                 ?.backgroundImageAssetId;
-            return null != t ? (0, A.YE)(e.applicationId, t, 1024, T) : null;
+            return null != t ? (0, A.YE)(e.applicationId, t, 1024, g) : null;
         },
         OY: b,
         Q6: function (e, t) {
@@ -178,7 +178,7 @@ n.d(
                 t,
             );
         },
-        pV: T,
+        pV: g,
         rG: function (e, t, n, i) {
             return D(e, t, n) || (null != i && e.indexOf((0, p.Ny)(i)) >= 0);
         },
@@ -241,7 +241,7 @@ n.d(
                 { size: n = 1024 } = t;
             if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
                 return f.A.toURLSafe(
-                    (0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, T),
+                    (0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, g),
                 );
         },
         zl: function (e) {

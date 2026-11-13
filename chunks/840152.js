@@ -16,8 +16,8 @@ var i = n(478437),
     I = n(927813),
     p = n(652215);
 let m = 10 * I.A.Millis.SECOND,
-    g = 5 * I.A.Millis.MINUTE;
-class T extends A.A {
+    T = 5 * I.A.Millis.MINUTE;
+class g extends A.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
         CHANNEL_SELECT: (e) => this.onChannelSelect(e),
@@ -26,7 +26,7 @@ class T extends A.A {
         LOGOUT: () => this.onLogout(),
     };
     stores = new Map([[c.A, () => this.onPremiumGiftingIntentStoreChange()]]);
-    reconcileBackoff = new u.A(m, g);
+    reconcileBackoff = new u.A(m, T);
     isReconciling = !1;
     heldGiftingPromptSystemMessage = !1;
     lastReconciledDismissalAtMs = new Map();
@@ -99,7 +99,7 @@ class T extends A.A {
     }
 }
 var S = n(682901);
-let N = new (class extends T {
+let N = new (class extends g {
     isChannelEligible(e) {
         switch (e.type) {
             case i.r.DM:

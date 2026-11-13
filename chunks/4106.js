@@ -16,18 +16,18 @@ let h = Promise.resolve(),
     I = null,
     p = 0,
     m = 0,
-    g = 0,
-    T = new Set(),
+    T = 0,
+    g = new Set(),
     S = {},
     N = null,
     C = o.default.isAuthenticated() ? (o.default.getId() ?? null) : null,
     O = null != C ? (o.default.getAuthSessionIdHash() ?? null) : null,
     R = {};
 function L() {
-    for (let e of T) e();
+    for (let e of g) e();
 }
 function y() {
-    ((N = null), (S = {}), (m = 0), (g = 0), I?.abort(), (R = {}), _.C2.resetSession());
+    ((N = null), (S = {}), (m = 0), (T = 0), I?.abort(), (R = {}), _.C2.resetSession());
 }
 function D(e) {
     C !== e && (y(), (C = e), (O = null));
@@ -82,9 +82,9 @@ function v() {
                     return !1;
                 },
                 subscribeDiscoverRequests: (e) => (
-                    T.add(e),
+                    g.add(e),
                     () => {
-                        T.delete(e);
+                        g.delete(e);
                     }
                 ),
                 hasDiscoverRequestInFlight: () => p > 0,
@@ -116,7 +116,7 @@ function v() {
                                 let { isInitialLoad: t, isReloading: n, isDiscoverPickerCommit: a } = e,
                                     E = d.default.getCurrentUser()?.id,
                                     A = a ? N : null,
-                                    T = S,
+                                    g = S,
                                     C = R;
                                 _.C2.observeGate((0, s.SL)("fetchDehydrated"));
                                 let O = _.C2.capture(E ?? null, o.default.getAuthSessionIdHash() ?? null),
@@ -137,14 +137,14 @@ function v() {
                                     return v() && _.C2.canRun(O, (0, s.SL)("fetchDehydrated"));
                                 }
                                 function M() {
-                                    return P() && T === S && _.C2.matches(O);
+                                    return P() && g === S && _.C2.matches(O);
                                 }
                                 let U = h;
                                 p++;
                                 let w = (async function () {
                                     try {
                                         await (async function () {
-                                            if ((await U, !P() || (!a && T !== S))) return;
+                                            if ((await U, !P() || (!a && g !== S))) return;
                                             let e = A ?? N;
                                             if (
                                                 (M() &&
@@ -153,12 +153,12 @@ function v() {
                                                         identity: O,
                                                     }),
                                                     (y = !0)),
-                                                P() && (a || T === S))
+                                                P() && (a || g === S))
                                             ) {
                                                 n && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
                                                 try {
-                                                    if (Date.now() < g)
-                                                        throw ((D = g), Error("Discover is rate limited"));
+                                                    if (Date.now() < T)
+                                                        throw ((D = T), Error("Discover is rate limited"));
                                                     let a = new URLSearchParams();
                                                     for (let t of e?.picks ?? l.A.getPicks()) a.append("game_ids", t);
                                                     null != e && a.append("refresh", "true");
@@ -217,7 +217,7 @@ function v() {
                                                         "number" == typeof t && Number.isFinite(t) && t >= 0
                                                             ? Math.max(1, t)
                                                             : 5;
-                                                D = g = Math.max(g, Date.now() + 1e3 * n);
+                                                D = T = Math.max(T, Date.now() + 1e3 * n);
                                             }
                                             try {
                                                 await r.h.dispatch({

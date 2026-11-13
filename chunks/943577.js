@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(587895),
     p = n(626584),
     m = n(225123),
-    g = n(294857),
-    T = n(361686),
+    T = n(294857),
+    g = n(361686),
     S = n(812020),
     N = n(57985),
     C = n(907459),
@@ -108,7 +108,7 @@ function ei(e, t, n) {
         if ((0, f.qR)(n)) continue;
         let i = q(e.id);
         if ((null != t && w.push({ stream: t, streamUser: e, activity: i }), null == i)) continue;
-        let a = (0, g.A)(i);
+        let a = (0, T.A)(i);
         if (null == a) continue;
         b = a === O.WY;
         let l = (function (e) {
@@ -146,7 +146,7 @@ function ei(e, t, n) {
             )
                 continue;
         }
-        if (!T.IS(i) || null == l || L.has(l.id)) continue;
+        if (!g.IS(i) || null == l || L.has(l.id)) continue;
         let E = null != i ? ee(i) : null;
         (null == E || E.id !== l.id) && (i = null);
         let A = [];

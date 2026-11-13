@@ -89,7 +89,7 @@ function m(e) {
         };
     }, [t, n, _?.premiumType, d, r, a, o, u]);
 }
-function g(e) {
+function T(e) {
     let t = (0, s.bG)([o.default], () => o.default.locale);
     return i.useMemo(
         () =>
@@ -111,7 +111,7 @@ n.d(
     {
         CD: function (e) {
             let { sku: t, priceSetAssignmentPurchaseType: n = f.lid.DEFAULT } = e;
-            return g(m({ sku: t, priceSetAssignmentPurchaseType: n }));
+            return T(m({ sku: t, priceSetAssignmentPurchaseType: n }));
         },
         JL: function (e) {
             let { sku: t, priceSetAssignmentPurchaseType: n = f.lid.DEFAULT } = e,
@@ -156,7 +156,7 @@ n.d(
                 })),
             };
         },
-        j9: g,
+        j9: T,
         ou: m,
     },
 );

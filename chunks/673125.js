@@ -184,5 +184,5 @@ class E extends s.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let _ = new E();
-l.d(t, {}, { Ay: _, EB: C, Y0: m });
+let g = new E();
+l.d(t, {}, { Ay: g, EB: C, Y0: m });

@@ -15,8 +15,8 @@ let E = {},
     I = [],
     p = new Set(),
     m = {},
-    g = {},
-    T = new Set();
+    T = {},
+    g = new Set();
 function S(e) {
     let t = d.A.createFromServer(e),
         n = t.code,
@@ -48,7 +48,7 @@ function S(e) {
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t && !T.has(e.channel_id)) return !1;
+    if (t && !g.has(e.channel_id)) return !1;
     let n = (0, c.pF)(e) ? (0, c.e7)(e?.embeds != null ? e?.embeds[0].url : void 0) : (0, c.e7)(e.content);
     if (0 === n.length) return !1;
     let i = e.type === _.lAJ.CUSTOM_GIFT || (null != e.author && e.author.id === u.default.getId());
@@ -69,7 +69,7 @@ function O(e) {
 }
 function R(e) {
     let { channelId: t, messages: n } = e;
-    (T.add(t), n.forEach((e) => N(e, !0)));
+    (g.add(t), n.forEach((e) => N(e, !0)));
 }
 function L(e) {
     let { firstMessages: t } = e;
@@ -86,7 +86,7 @@ class y extends a.Ay.Store {
         return null == t || t.isExpired() ? null : t;
     }
     getError(e) {
-        return null != e ? g[e] : null;
+        return null != e ? T[e] : null;
     }
     getForGifterSKUAndPlan(e, t, n) {
         return Array.from(A.values()).filter(
@@ -120,11 +120,11 @@ class y extends a.Ay.Store {
 }
 let D = new y(l.h, {
     CONNECTION_OPEN: function () {
-        return (T.clear(), !1);
+        return (g.clear(), !1);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (null != t && T.add(t), !1);
+        return (null != t && g.add(t), !1);
     },
     GIFT_CODE_RESOLVE: C,
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
@@ -133,7 +133,7 @@ let D = new y(l.h, {
     },
     GIFT_CODE_RESOLVE_FAILURE: function (e) {
         let { code: t, error: n } = e;
-        ((f = f.filter((e) => e !== t)), I.includes(t) || (I = [...I, t]), null != n && (g[t] = n));
+        ((f = f.filter((e) => e !== t)), I.includes(t) || (I = [...I, t]), null != n && (T[t] = n));
     },
     GIFT_CODE_REDEEM: function (e) {
         let { code: t } = e;
@@ -149,7 +149,7 @@ let D = new y(l.h, {
         let { code: t, error: n } = e;
         h = h.filter((e) => e !== t);
         let i = A.get(t);
-        if (((g[t] = n), null != i))
+        if (((T[t] = n), null != i))
             switch (n.code) {
                 case _.t02.UNKNOWN_GIFT_CODE:
                     A.set(t, i.set("revoked", !0));

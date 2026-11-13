@@ -19,8 +19,8 @@ n.d(
                 errorCodeMessage: d,
                 size: m,
                 className: h,
-                artURL: g,
-                noArt: f = !1,
+                artURL: f,
+                noArt: g = !1,
                 selected: A = !1,
             } = e;
             return (0, i.jsxs)(o.A, {
@@ -30,9 +30,9 @@ n.d(
                 direction: o.A.Direction.VERTICAL,
                 style: { padding: 4 },
                 children: [
-                    !f &&
-                        null != g &&
-                        (0, i.jsx)("div", { className: l()(u.art, u[m]), style: { backgroundImage: `url(${g})` } }),
+                    !g &&
+                        null != f &&
+                        (0, i.jsx)("div", { className: l()(u.art, u[m]), style: { backgroundImage: `url(${f})` } }),
                     null != r
                         ? (0, i.jsx)(s.E, {
                               color: "none",

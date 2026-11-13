@@ -26,8 +26,8 @@ var i = n(435558),
     I = n(290863),
     p = n(495867),
     m = n(994500),
-    g = n(309010),
-    T = n(967198),
+    T = n(309010),
+    g = n(967198),
     S = n(977997),
     N = n(129230),
     C = n(488926),
@@ -112,8 +112,8 @@ function P(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (N.default.isThrottled(e)) return;
     let i = !("location" in t) || t.location !== R.ThZ.GUILD_CREATE_INVITE_SUGGESTION,
-        r = "guild_id" in t ? t.guild_id : i ? T.A.getGuildId() : null,
-        a = "channel_id" in t ? t.channel_id : i ? g.Ay.getChannelId(r) : null,
+        r = "guild_id" in t ? t.guild_id : i ? g.A.getGuildId() : null,
+        a = "channel_id" in t ? t.channel_id : i ? T.Ay.getChannelId(r) : null,
         s = d.A.getChannel(a),
         l = null == s ? (r ?? null) : s.isPrivate() ? null : (s.getGuildId() ?? r ?? null),
         o = {

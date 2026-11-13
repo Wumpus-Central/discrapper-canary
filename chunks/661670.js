@@ -109,10 +109,10 @@ class p {
     }
 }
 var m = n(652215);
-function g(e) {
+function T(e) {
     return null != e && "null" !== e && e !== m.ME && "undefined" !== e && !(0, d.ai)(e);
 }
-var T = n(343446),
+var g = n(343446),
     S = n(857071),
     N = n(655116),
     C = n(46653);
@@ -200,28 +200,28 @@ let U = new (class {
             (this._pending = {}));
     }
     subscribeUser(e, t) {
-        g(e) && this._members.subscribe(e, t);
+        T(e) && this._members.subscribe(e, t);
     }
     unsubscribeUser(e, t) {
-        g(e) && this._members.unsubscribe(e, t);
+        T(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        return !!g(e) && this._channels.subscribe(e, t, n, i);
+        return !!T(e) && this._channels.subscribe(e, t, n, i);
     }
     subscribeToMemberUpdates(e) {
-        if (!g(e)) return !1;
+        if (!T(e)) return !1;
         (this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e));
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!g(e)) return !1;
+        if (!T(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
     subscribeThreadMemberList(e, t, n) {
-        return !!g(e) && this._threadMemberLists.subscribe(e, t, n);
+        return !!T(e) && this._threadMemberLists.subscribe(e, t, n);
     }
     unsubscribeThreadMemberList(e, t) {
-        return !!g(e) && this._threadMemberLists.unsubscribe(e, t);
+        return !!T(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
         (this._subscribeToFeature(e, this._typing, { typing: !0 }),
@@ -229,7 +229,7 @@ let U = new (class {
             this._subscribeToFeature(e, this._threads, { threads: !0 }));
     }
     _subscribeToFeature(e, t, n) {
-        !g(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
+        !T(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
     }
 })((e) => {
     for (let t in e) null != D.A.getGuild(t) || L.A.isUnavailable(t) || delete e[t];
@@ -298,7 +298,7 @@ function V() {
 class H extends s.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        (this.waitFor(C.default, O.Ay, R.A, T.A, L.A, y.Ay, D.A, S.A, b.A, v.A, P.Ay, M.A, N.A),
+        (this.waitFor(C.default, O.Ay, R.A, g.A, L.A, y.Ay, D.A, S.A, b.A, v.A, P.Ay, M.A, N.A),
             this.syncWith([N.A], V),
             this.syncWith([O.Ay], B));
     }

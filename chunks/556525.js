@@ -29,8 +29,8 @@ n.d(
                 p = (0, o.Us)() === c.BRT.OVERLAY,
                 {
                     shouldReduceMotion: m,
-                    useForcedColors: g,
-                    isAppFocusedOrOverlayVisible: T,
+                    useForcedColors: T,
+                    isAppFocusedOrOverlayVisible: g,
                 } = (0, a.cf)(
                     [s.Ay, d.A, I],
                     () => ({
@@ -50,16 +50,16 @@ n.d(
                         a = 3;
                     -1 / 0 !== i &&
                         !m &&
-                        T &&
+                        g &&
                         ((n = "INSET_ONLY" === E ? 0 : _(i, A)),
                         (r = "OUTSET_ONLY" === E ? 0 : _(i, f)),
                         (a = "OUTSET_ONLY" === E ? 0 : r + 1));
                     let s = "var(--status-speaking)";
-                    (g ? (s = "Highlight") : t === u.T2.PLAYING_SOUNDBOARD && (s = "var(--brand-500)"),
+                    (T ? (s = "Highlight") : t === u.T2.PLAYING_SOUNDBOARD && (s = "var(--brand-500)"),
                         (e.boxShadow = `0 0 0 ${n}px ${s}, inset 0 0 0 ${r}px ${s}, inset 0 0 0 ${a}px var(--background-base-lower)`));
                 }
-                return (T && (e.transition = "box-shadow 50ms ease-out"), e);
-            }, [t, T, m, g, i, E, A, f, h]);
+                return (g && (e.transition = "box-shadow 50ms ease-out"), e);
+            }, [t, g, m, T, i, E, A, f, h]);
         },
     },
 );

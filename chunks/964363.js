@@ -1,4 +1,4 @@
-n.d(t, { h0: () => T, Bl: () => N, Gv: () => m, fK: () => S, I5: () => p, wy: () => g, sW: () => I.s });
+n.d(t, { h0: () => g, Bl: () => N, Gv: () => m, fK: () => S, I5: () => p, wy: () => T, sW: () => I.s });
 var i,
     r = n(127258),
     a = n(620632),
@@ -29,14 +29,14 @@ async function m(e) {
             guildId: p,
             localState: m,
         } = e,
-        T = u.default.fromTimestamp(Date.now());
-    if (!E.Ay.canQueueInteraction(n, T)) return;
+        g = u.default.fromTimestamp(Date.now());
+    if (!E.Ay.canQueueInteraction(n, g)) return;
     try {
         await d.A.unarchiveThreadIfNecessary(I);
     } catch {
         return;
     }
-    ((0, _.tU)(T, {
+    ((0, _.tU)(g, {
         messageId: n,
         data: { interactionType: r.G.MESSAGE_COMPONENT, applicationId: f, customId: s, componentId: A },
         onFailure: (e, t) => {
@@ -44,10 +44,10 @@ async function m(e) {
             return ((n = I), (i = e), void (null == t && null != i && l.A.sendClydeError(n, i)));
         },
     }),
-        null != m && (0, _.Sw)(n, T, m, A));
+        null != m && (0, _.Sw)(n, g, m, A));
     let S = {
         type: r.G.MESSAGE_COMPONENT,
-        nonce: T,
+        nonce: g,
         guild_id: p,
         channel_id: I,
         message_flags: i,
@@ -81,10 +81,10 @@ async function m(e) {
         },
     };
     await a.Bo.post({ url: h.Rsh.INTERACTIONS, body: S, timeout: 3e3, rejectWithError: (0, a.fT)() }, (e) => {
-        g(T, e, f, I, p);
+        T(g, e, f, I, p);
     });
 }
-function g(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     if (!t.ok) {
         if (!t.hasErr)
             if (!(t.status >= 400) || !(t.status < 500) || !t.body) return void (0, _.C1)(e, t.body?.code);
@@ -121,7 +121,7 @@ function g(e, t, n, i, r) {
         (0, _.C1)(e);
     }
 }
-var T =
+var g =
     (((i = {})[(i.SENDING = 0)] = "SENDING"),
     (i[(i.CREATED = 1)] = "CREATED"),
     (i[(i.FAILED = 2)] = "FAILED"),

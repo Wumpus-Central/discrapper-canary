@@ -15,7 +15,7 @@ let u = {},
     I = !0,
     p = 0,
     m = d.l0;
-function g() {
+function T() {
     let e = l.A.settings.favorites,
         t = e?.muted ?? !1,
         n = {},
@@ -37,20 +37,20 @@ function g() {
                 }));
         }
     let c = e?.guildVisible?.value ?? !(0, i.isEmpty)(n),
-        g = "never";
-    e?.autoAddJoinedThreads === !0 && (g = e.autoAddJoinedThreadsPerGuild ? d.Gv : d.AK);
-    let T = e?.pruneInactiveThreads?.value ?? !0,
+        T = "never";
+    e?.autoAddJoinedThreads === !0 && (T = e.autoAddJoinedThreadsPerGuild ? d.Gv : d.AK);
+    let g = e?.pruneInactiveThreads?.value ?? !0,
         S = e?.pruneInactiveThreadsDays ?? 0,
         N = e?.pruneAllFavoritedThreads === !0 ? "all" : d.l0;
     return (
-        !(A === t && f === c && h === g && I === T && p === S && m === N && (0, i.isEqual)(u, n)) &&
-        ((A = t), (f = c), (h = g), (I = T), (p = S), (m = N), (u = n), (_ = r), (E = s), !0)
+        !(A === t && f === c && h === T && I === g && p === S && m === N && (0, i.isEqual)(u, n)) &&
+        ((A = t), (f = c), (h = T), (I = g), (p = S), (m = N), (u = n), (_ = r), (E = s), !0)
     );
 }
-class T extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        (this.waitFor(l.A), g(), this.syncWith([l.A], g));
+        (this.waitFor(l.A), T(), this.syncWith([l.A], T));
     }
     getFavoriteChannels() {
         return u;
@@ -112,5 +112,5 @@ class T extends r.Ay.Store {
         return !(0, i.isEmpty)(this.getFavoriteChannels());
     }
 }
-let S = new T(s.h, {});
+let S = new g(s.h, {});
 n.d(t, {}, { A: S });

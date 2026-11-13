@@ -14,8 +14,8 @@ var s = n(435558),
     I = n(626584),
     p = n(644727),
     m = n(46653),
-    g = n(417869),
-    T = n(885576),
+    T = n(417869),
+    g = n(885576),
     S = n(290863),
     N = n(485296),
     C = n(977997),
@@ -232,7 +232,7 @@ function el() {
 }
 function eo() {
     let e = Object.keys($),
-        t = g.A.getAccounts().filter((e) => {
+        t = T.A.getAccounts().filter((e) => {
             let { type: t } = e;
             return t === v.fg2.SPOTIFY;
         });
@@ -361,7 +361,7 @@ function e_(e, t) {
 class eE extends d.Ay.Store {
     static displayName = "SpotifyStore";
     initialize() {
-        (this.waitFor(m.default, g.A, T.A, S.A, p.Ay, N.A, C.A),
+        (this.waitFor(m.default, T.A, g.A, S.A, p.Ay, N.A, C.A),
             this.syncWith([S.A], () =>
                 (function () {
                     if (null == r || null == J()) return !1;
@@ -419,7 +419,7 @@ class eE extends d.Ay.Store {
         return z[e];
     }
     shouldShowActivity() {
-        return null != i && i.account.showActivity && !T.A.isIdle();
+        return null != i && i.account.showActivity && !g.A.isIdle();
     }
     getActivity() {
         let e, t, n;
@@ -452,7 +452,7 @@ class eE extends d.Ay.Store {
                 type: u,
                 button_urls: [],
             },
-            g = {
+            T = {
                 name: P.name,
                 assets: f,
                 details: I,
@@ -460,7 +460,7 @@ class eE extends d.Ay.Store {
                 timestamps: { start: _, end: _ + d },
                 party: { id: n },
             };
-        return (c || ((g.sync_id = o), (g.flags = v.jUm.PLAY | v.jUm.SYNC), (g.metadata = p)), g);
+        return (c || ((T.sync_id = o), (T.flags = v.jUm.PLAY | v.jUm.SYNC), (T.metadata = p)), T);
     }
 }
 let eA = new eE(_.h, {
@@ -495,9 +495,9 @@ let eA = new eE(_.h, {
                 (null == e ? (X[s].push(A), (I = !0)) : (0, c.A)(e, A) || (Object.assign(e, A), (I = !0)), ea(s, A.id));
             } else ((X[s] = [A]), (I = !0));
         o ? Q?.start(w, ed) : ((u = null), Q?.stop());
-        let p = g.A.getAccount(s, v.fg2.SPOTIFY);
+        let p = T.A.getAccount(s, v.fg2.SPOTIFY);
         if (null == p) return I;
-        let T = z[s],
+        let g = z[s],
             S =
                 null != u
                     ? {
@@ -505,7 +505,7 @@ let eA = new eE(_.h, {
                           track: u,
                           startTime:
                               ((t = Date.now()),
-                              (n = null != T ? T.startTime : 0),
+                              (n = null != g ? g.startTime : 0),
                               Math.abs((a = t - E) - n) > k ? a : n),
                           position: E,
                           positionUpdatedAt: Date.now(),
@@ -514,7 +514,7 @@ let eA = new eE(_.h, {
                       }
                     : null;
         r?.waitingForHost === !0 && f?.uri !== r.albumContextUri && (r.waitingForHost = void 0);
-        let N = null != T ? T.position + Math.max(0, Date.now() - T.positionUpdatedAt) : 0,
+        let N = null != g ? g.position + Math.max(0, Date.now() - g.positionUpdatedAt) : 0,
             C =
                 null != A &&
                 null != r &&
@@ -524,10 +524,10 @@ let eA = new eE(_.h, {
                 o &&
                 null != u &&
                 u.id !== r.trackId &&
-                null != T &&
-                T.track.id === r.trackId &&
-                T.track.duration > 0 &&
-                Math.abs(T.track.duration - N) <= x;
+                null != g &&
+                g.track.id === r.trackId &&
+                g.track.duration > 0 &&
+                Math.abs(g.track.duration - N) <= x;
         C &&
             null != r &&
             ((r.waitingForHost = !0),
@@ -558,8 +558,8 @@ let eA = new eE(_.h, {
                       (V.info("Stopping listening along"), (0, h.A)(), Z(p.id));
                   })),
             L === i ||
-                (null == T && null == S) ||
-                (null != T && null != S && T.track.id === S.track.id && T.startTime === S.startTime))
+                (null == g && null == S) ||
+                (null != g && null != S && g.track.id === S.track.id && g.startTime === S.startTime))
         )
             return I;
         null != u &&

@@ -4,8 +4,8 @@ n.d(t, {
     uK: () => em,
     r6: () => ep,
     IV: () => eR,
-    tc: () => eT,
-    ey: () => eg,
+    tc: () => eg,
+    ey: () => eT,
     u6: () => W,
     Z9: () => U,
     im: () => j,
@@ -62,8 +62,8 @@ var i = n(536637),
     I = n(284009),
     p = n.n(I),
     m = n(626584),
-    g = n(558740),
-    T = n(295562),
+    T = n(558740),
+    g = n(295562),
     S = n(652215),
     N = n(792996);
 async function C(e) {
@@ -187,7 +187,7 @@ async function y(e, t, n, i) {
             o = d.Ay.createFromServer(l.body);
         return (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: o }), o);
     } catch (t) {
-        let e = t instanceof T.CaptchaCancelError ? new l.Ey(t.message, o.tG.INVALID_PAYMENT_SOURCE) : (0, o.Wd)(t);
+        let e = t instanceof g.CaptchaCancelError ? new l.Ey(t.message, o.tG.INVALID_PAYMENT_SOURCE) : (0, o.Wd)(t);
         throw (
             t?.body?.adyen_redirect_url && (e.fields.adyen_redirect_url = t?.body?.adyen_redirect_url),
             e.code !== o.tG.CONFIRMATION_REQUIRED &&
@@ -347,7 +347,7 @@ async function W(e, t, n, i) {
         throw R(e);
     }
     let a = await C(n),
-        l = g._Z(n),
+        l = T._Z(n),
         { setupIntent: o, error: d } = await e.confirmCardSetup(r, {
             payment_method: { card: { token: t }, billing_details: l },
         }),
@@ -406,7 +406,7 @@ function z(e) {
     if (b.Kc.has(e.type)) return S.DYY.has(e.type) ? null : JSON.stringify({ type: b.Kc.get(e.type) ?? null });
     return (async function (e) {
         if (S.DYY.has(e.type)) return null;
-        let t = await g.Cv();
+        let t = await T.Cv();
         if (null == t) throw new l.Ey("Stripe not loaded", l.Ey.ErrorCodes.UNKNOWN);
         let { email: n, name: i, line1: r, line2: a, city: s, state: o, postalCode: d, country: c } = e.billingAddress,
             u = {
@@ -558,12 +558,12 @@ class Z extends J {
         let t = null != e && "" !== e ? e : "",
             n = this.stripeByMerchantAccountId.get(t);
         if (null != n) return n;
-        let i = await g.Cv(e);
+        let i = await T.Cv(e);
         if (null == i) throw R("Stripe cannot be null on a redirect.");
         return (this.stripeByMerchantAccountId.set(t, i), i);
     }
     getPaymentIntentInfo() {
-        return g.yx(this.paymentId);
+        return T.yx(this.paymentId);
     }
     async getStripeRedirect(e) {
         let { clientSecret: t, state: n, paymentMethodId: i, merchantAccountId: r } = e,
@@ -962,10 +962,10 @@ function ep(e, t, n, i, r) {
 function em(e, t, n, i, r) {
     return ef(e, { paymentSource: t }, { amount: 0, currency: n.currency }, n, i, r);
 }
-function eg() {
+function eT() {
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });
 }
-function eT() {
+function eg() {
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR" });
 }
 function eS() {

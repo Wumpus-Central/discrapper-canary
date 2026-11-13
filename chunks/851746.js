@@ -16,8 +16,8 @@ let d = null,
     I = null,
     p = new Set(),
     m = [],
-    g = [],
-    T = !1,
+    T = [],
+    g = !1,
     S = !1,
     N = null,
     C = null,
@@ -26,10 +26,10 @@ function R() {
     return !0;
 }
 function L() {
-    ((p = new Set()), (m = []), (g = []));
+    ((p = new Set()), (m = []), (T = []));
 }
 function y(e) {
-    (p.delete(e), (m = m.filter((t) => t !== e)), (g = g.filter((t) => t !== e)));
+    (p.delete(e), (m = m.filter((t) => t !== e)), (T = T.filter((t) => t !== e)));
 }
 function D(e) {
     let { messages: t } = e;
@@ -71,10 +71,10 @@ class v extends r.Ay.Store {
         return m.includes(e);
     }
     hasFetchedUserEligibility(e) {
-        return g.includes(e);
+        return T.includes(e);
     }
     getIsEligibleToSendReferrals() {
-        return T;
+        return g;
     }
     getHasEligibleFriends() {
         return S;
@@ -114,7 +114,7 @@ let P = new v(a.h, {
             reminder_state_id: s,
             recurring_reminder_state_id: l,
         } = e;
-        ((T = !0),
+        ((g = !0),
             (S = a),
             (_ = !1),
             (d = t),
@@ -129,7 +129,7 @@ let P = new v(a.h, {
     },
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
         let {} = e;
-        ((T = !1), (S = !1), (N = null), (_ = !1));
+        ((g = !1), (S = !1), (N = null), (_ = !1));
         let t = (h += 1) <= 3 ? 1e3 * Math.pow(2, h) : 8e3 * Math.pow(4, h - 3);
         I = Date.now() + Math.min(3e5, t);
     },
@@ -163,7 +163,7 @@ let P = new v(a.h, {
     REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_SUCCESS: function (e) {
         let { recipientIds: t, eligibleRecipientIds: n } = e,
             i = new Set(n);
-        for (let e of t) (g.includes(e) || g.push(e), i.has(e) && !c.has(e) && 0 !== d && p.add(e));
+        for (let e of t) (T.includes(e) || T.push(e), i.has(e) && !c.has(e) && 0 !== d && p.add(e));
         m = m.filter((e) => !t.includes(e));
     },
     REFERRAL_RECIPIENT_ELIGIBILITY_FETCH_FAILURE: function (e) {
@@ -173,7 +173,7 @@ let P = new v(a.h, {
     RELATIONSHIP_REMOVE: function (e) {
         let { relationship: t } = e,
             n = t.id;
-        return (!!p.has(n) || !!m.includes(n) || !!g.includes(n)) && (y(n), !0);
+        return (!!p.has(n) || !!m.includes(n) || !!T.includes(n)) && (y(n), !0);
     },
     LOAD_MESSAGES_SUCCESS: D,
     MESSAGE_CREATE: function (e) {
@@ -191,7 +191,7 @@ let P = new v(a.h, {
             (h = 0),
             (I = null),
             L(),
-            (T = !1),
+            (g = !1),
             (S = !1),
             (N = null),
             (u = new Map()),

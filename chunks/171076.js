@@ -15,8 +15,8 @@ var i = n(684013),
     I = n(956753),
     p = n(861862),
     m = n(887287),
-    g = n(222506),
-    T = n(897720),
+    T = n(222506),
+    g = n(897720),
     S = n(145567),
     N = n(652215);
 function C(e) {
@@ -499,8 +499,8 @@ function D(e) {
 }
 async function b(e) {
     let t = await y();
-    if (!(null == t || g.A.isInputLocked(m.A.getTargetPID())))
-        for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
+    if (!(null == t || T.A.isInputLocked(m.A.getTargetPID())))
+        for (let n of t.getNotificationsForChannel(e, g.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
 function v() {
     !(function () {

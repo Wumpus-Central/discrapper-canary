@@ -21,8 +21,8 @@ function I() {
 n(321073);
 var p = n(869431),
     m = n(594615);
-let g = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    T = g + 4,
+let T = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    g = T + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -106,8 +106,8 @@ function C(e) {
                         })(C, e, t)
                     ],
                 )
-                    ? T
-                    : g,
+                    ? g
+                    : T,
             [H, C],
         ),
         J = r.useCallback(
@@ -160,7 +160,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? T : g), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : T), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,

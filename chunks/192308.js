@@ -137,7 +137,7 @@ function m(e, t) {
         i = e[n];
     return null != i && i.some((e) => e.key === t);
 }
-function g(e, t) {
+function T(e, t) {
     return m(A.getState(), e, t);
 }
 n.d(
@@ -211,7 +211,7 @@ n.d(
             return null == n || !(n.length > 0) || (n.at(-1)?.allowsNavigation ?? !1);
         },
         fD: m,
-        kB: g,
+        kB: T,
         lx: _,
         mM: async function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -224,7 +224,7 @@ n.d(
                 o = await e();
             return (
                 clearTimeout(l),
-                s ? g(a, n) && I(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
+                s ? T(a, n) && I(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
                 a
             );
         },

@@ -20,12 +20,12 @@ var i,
         (r[(r.OUT = 3)] = "OUT"),
         r),
     m = (((a = {})[(a.DEFAULT = 182)] = "DEFAULT"), (a[(a.WIDE = 256)] = "WIDE"), a),
-    g =
+    T =
         (((s = {}).SEARCH_ICON = "search icon"),
         (s.SEARCH_BAR = "search bar"),
         (s.SEARCH_BAR_CLEAR = "search bar clear"),
         s),
-    T = (((l = {}).SEARCH = "SEARCH"), l),
+    g = (((l = {}).SEARCH = "SEARCH"), l),
     S = (((o = {}).ENTER = "enter"), (o.SUGGESTION = "suggestion"), o),
     N = (((d = {}).HTTP = "http"), (d.NETWORK = "network"), d),
     C =
@@ -111,7 +111,7 @@ n.d(
         QB: b,
         Tq: {},
         Vf: S,
-        Xi: T,
+        Xi: g,
         _6: D,
         ck: [
             "1212569433839636530",
@@ -462,6 +462,6 @@ n.d(
         },
         sH: v,
         tD: "game_server_game_id",
-        uY: g,
+        uY: T,
     },
 );

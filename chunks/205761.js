@@ -43,12 +43,12 @@ function p(e) {
             ((h = n ?? null),
             null != n &&
                 E.Ut1.test(n) &&
-                ((i = !0), f.track(n), g.pendingUsages.push({ key: n, timestamp: Date.now() }))),
+                ((i = !0), f.track(n), T.pendingUsages.push({ key: n, timestamp: Date.now() }))),
         t !== I &&
             ((I = t ?? null),
             null != t &&
                 E.Ut1.test(t) &&
-                ((i = !0), f.track(t), g.pendingUsages.push({ key: t, timestamp: Date.now() }))),
+                ((i = !0), f.track(t), T.pendingUsages.push({ key: t, timestamp: Date.now() }))),
         i
     );
 }
@@ -57,23 +57,23 @@ function m() {
     if (null == e) return !1;
     f.overwriteHistory(
         r().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        g.pendingUsages,
+        T.pendingUsages,
     );
 }
-let g = { pendingUsages: [] };
-class T extends a.Ay.PersistedStore {
+let T = { pendingUsages: [] };
+class g extends a.Ay.PersistedStore {
     static displayName = "FrecencyStore";
     static persistKey = "FrecencyStore";
     initialize(e) {
         (this.waitFor(d.A, c.A, u.Ay, _.A, o.A),
-            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && E.Ut1.test(e.key))), (g = e)),
+            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && E.Ut1.test(e.key))), (T = e)),
             this.syncWith([o.A], m));
     }
     getState() {
-        return g;
+        return T;
     }
     hasPendingUsage() {
-        return g.pendingUsages.length > 0;
+        return T.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
         return f;
@@ -98,7 +98,7 @@ class T extends a.Ay.PersistedStore {
         return f.version;
     }
 }
-let S = new T(s.h, {
+let S = new g(s.h, {
     CHANNEL_SELECT: p,
     VOICE_CHANNEL_SELECT: p,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
@@ -106,7 +106,7 @@ let S = new T(s.h, {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        return t === A.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((g.pendingUsages = []), !0);
+        return t === A.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((T.pendingUsages = []), !0);
     },
 });
 n.d(t, {}, { A: S });

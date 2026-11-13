@@ -8,15 +8,15 @@ var l = t(477900),
     c = t(702476),
     d = t(501925),
     f = t(900179),
-    A = t(792996),
-    S = t(975316);
-let h = i.memo(function (e) {
+    S = t(792996),
+    A = t(975316);
+let T = i.memo(function (e) {
     let {
             userId: n,
             userBio: t,
             onClose: r,
-            animateOnHoverOrFocusOnly: h = !1,
-            isHoveringOrFocusing: T = !1,
+            animateOnHoverOrFocusOnly: T = !1,
+            isHoveringOrFocusing: h = !1,
             hidePersonalInformation: m = !1,
             hideRestrictedProfile: g = !1,
             viewFullBioDisabled: x = !1,
@@ -29,7 +29,7 @@ let h = i.memo(function (e) {
     if (m || null == t || "" === t) return null;
     let P = p || y;
     return (0, l.jsxs)(f.A, {
-        heading: A.intl.string(A.t.ZzAR2Y),
+        heading: S.intl.string(S.t.ZzAR2Y),
         hideHeading: !0,
         children: [
             (0, l.jsx)("div", {
@@ -39,7 +39,7 @@ let h = i.memo(function (e) {
                             (C(!y && e.scrollHeight - e.clientHeight > 1),
                             e.getBoundingClientRect().height > 57.75 && j(!0)));
                 },
-                className: a()(S.mA, y && S.Em, P && S.ps),
+                className: a()(A.mA, y && A.Em, P && A.ps),
                 onBlur: function (e) {
                     null == v.current ||
                         v.current.contains(e.relatedTarget) ||
@@ -52,18 +52,18 @@ let h = i.memo(function (e) {
                     userBio: t,
                     setLineClamp: !1,
                     textColor: "text-strong",
-                    animateOnHoverOrFocusOnly: h,
-                    isHoveringOrFocusing: T,
+                    animateOnHoverOrFocusOnly: T,
+                    isHoveringOrFocusing: h,
                 }),
             }),
             P &&
                 (0, l.jsx)("div", {
-                    className: S.HV,
+                    className: A.HV,
                     children: (0, l.jsx)(s.Q, {
                         textVariant: "body-xs/normal",
                         size: "sm",
                         variant: "secondary",
-                        text: A.intl.string(A.t.YDiPq8),
+                        text: S.intl.string(S.t.YDiPq8),
                         onClick: function () {
                             (r?.(),
                                 (0, c.openUserProfileModal)({
@@ -79,4 +79,4 @@ let h = i.memo(function (e) {
         ],
     });
 });
-t.d(n, {}, { A: h });
+t.d(n, {}, { A: T });

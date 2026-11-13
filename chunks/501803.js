@@ -6,8 +6,8 @@ n.d(t, {
     gN: () => N,
     as: () => E,
     Xr: () => O,
-    UZ: () => g,
-    fF: () => T,
+    UZ: () => T,
+    fF: () => g,
     eT: () => C,
     mT: () => S,
     nO: () => m,
@@ -94,18 +94,18 @@ function p(e) {
 }
 function m(e) {
     let t = e[0];
-    if (null == t) return g(0);
+    if (null == t) return T(0);
     let [n] = I(t);
-    return g(f(n - h[0].hueShift));
-}
-function g(e) {
-    return r().hsl(e, 0.78, 0.72).num();
+    return T(f(n - h[0].hueShift));
 }
 function T(e) {
+    return r().hsl(e, 0.78, 0.72).num();
+}
+function g(e) {
     return Number.isInteger(e) && e >= 0 && e <= 0xffffff;
 }
 function S(e) {
-    return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors.filter(T) };
+    return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors.filter(g) };
 }
 function N(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],

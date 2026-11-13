@@ -17,8 +17,8 @@ var r = n(192308),
     I = n(498642),
     p = n(873985),
     m = n(309010),
-    g = n(753181),
-    T = n(287809),
+    T = n(753181),
+    g = n(287809),
     S = n(927813),
     N = n(652896),
     C = n(55010),
@@ -54,10 +54,10 @@ function x(e, t) {
 }
 function k(e, t) {
     let n = t ?? p.A.getPreferredRegion();
-    null != n && n !== p.A.getRegion(g.A.getHostname(e)) && (0, u.dA)(e, n);
+    null != n && n !== p.A.getRegion(T.A.getHostname(e)) && (0, u.dA)(e, n);
 }
 function F(e, t) {
-    if (g.A.getAllActiveStreamKeys().includes(e)) return;
+    if (T.A.getAllActiveStreamKeys().includes(e)) return;
     let n = y[e] ?? new d.Ep();
     ((y[e] = n),
         n.start(t ? v : b, () => {
@@ -87,7 +87,7 @@ class B extends _.A {
         let { streamKey: t } = e;
         (G(t), U());
         let { ownerId: n, guildId: i } = (0, N.Iy)(t);
-        if (null == i || null == n || n !== T.default.getCurrentUser()?.id) return;
+        if (null == i || null == n || n !== g.default.getCurrentUser()?.id) return;
         let r = I.A.getMemberCount(i);
         null == r || r <= 30 || r > C.G1 || (f.wv.getSetting() && R(t));
     };
@@ -97,7 +97,7 @@ class B extends _.A {
         (G(n),
             U(),
             i ||
-                (null != (t = g.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
+                (null != (t = T.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
                     c.h.dispatch({
                         type: "MEDIA_ENGINE_CONNECTION_USER_STATS_RESET",
                         mediaEngineConnectionId: t,

@@ -28,8 +28,8 @@ n.d(
                     poll: I,
                     sharedCustomTheme: p,
                     changelogId: m,
-                    giftingPrompt: g,
-                    state: T,
+                    giftingPrompt: T,
+                    state: g,
                     mediaMention: S,
                 } = e,
                 N = [];
@@ -58,7 +58,7 @@ n.d(
                     mention_roles: [],
                     mention_everyone: !1,
                     timestamp: new Date().toISOString(),
-                    state: T ?? d.cmJ.SENDING,
+                    state: g ?? d.cmJ.SENDING,
                     tts: i,
                     message_reference: _,
                     message_snapshots: [],
@@ -67,7 +67,7 @@ n.d(
                     poll: I,
                     shared_client_theme: p,
                     changelog_id: m,
-                    gifting_prompt: g,
+                    gifting_prompt: T,
                     media_mention: S,
                 }
             );

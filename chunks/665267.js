@@ -28,7 +28,7 @@ var i = n(477900),
 function O() {
     ((0, g.nf)(g.HP.CLIENT_THEMES), (0, _.default)());
 }
-function R() {
+function D() {
     let e = (0, S.O)(),
         t = (0, p.U9)(e, y.pe.TIER_2)
             ? v.intl.formatToPlainString(v.t.bkQ4bH, { percent: e?.discount.amount })
@@ -40,7 +40,7 @@ function R() {
         fullWidth: !0,
     });
 }
-function D() {
+function R() {
     let e = (0, s.bG)([d.A], () => d.A.isPreview),
         t = (0, T.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
     return !e || t
@@ -49,7 +49,7 @@ function D() {
               className: j.gY,
               children: [
                   (0, i.jsx)(r.$, { variant: "secondary", text: v.intl.string(v.t["E+COuA"]), onClick: O }),
-                  (0, i.jsx)(R, {}),
+                  (0, i.jsx)(D, {}),
               ],
           });
 }
@@ -107,7 +107,7 @@ n.d(
                     children: [
                         (0, i.jsx)(c.ew, {
                             isCoachmark: !1,
-                            renderCTAButtons: () => (0, i.jsx)(D, {}),
+                            renderCTAButtons: () => (0, i.jsx)(R, {}),
                             headingClassName: j.EK,
                             titleTextVariant: "body-md/semibold",
                             titleClassName: j.cI,

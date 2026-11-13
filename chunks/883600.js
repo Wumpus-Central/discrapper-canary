@@ -17,7 +17,7 @@ let c = {},
 function m() {
     h = l.pK.getSetting();
 }
-class g extends i.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
         (this.waitFor(s.default, o.A), this.syncWith([s.default], () => !0), this.syncWith([o.A], m));
@@ -60,7 +60,7 @@ class g extends i.Ay.Store {
         return p.size > 0;
     }
 }
-let T = new g(a.h, {
+let g = new T(a.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
         if (p.has(t)) return !1;
@@ -103,4 +103,4 @@ let T = new g(a.h, {
         ((I = new Date(t)), r.w.set(f, t));
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

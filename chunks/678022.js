@@ -13,7 +13,7 @@ n.d(t, {
     Qb: () => V,
     tx: () => S,
     PL: () => B,
-    vB: () => g,
+    vB: () => T,
     hF: () => O,
     hw: () => v,
     JZ: () => b,
@@ -24,7 +24,7 @@ n.d(t, {
     tn: () => M,
     Sw: () => k,
     _A: () => Y,
-    MK: () => T,
+    MK: () => g,
     Sn: () => j,
     EJ: () => p,
     Hd: () => L,
@@ -111,10 +111,10 @@ function p(e) {
 function m(e) {
     return f(r.bb.ANIMATED_EMOJIS, e);
 }
-function g(e) {
+function T(e) {
     return f(r.bb.EMOJIS_EVERYWHERE, e);
 }
-function T(e) {
+function g(e) {
     return f(r.bb.SOUNDBOARD_EVERYWHERE, e);
 }
 function S(e) {

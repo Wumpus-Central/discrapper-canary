@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(938796));
+(n.d(t, { A: () => T }), n(938796));
 var i = n(136722),
     r = n(665260),
     a = n(76573),
@@ -16,7 +16,7 @@ var i = n(136722),
     I = n(811091),
     p = n(652215),
     m = n(682901);
-class g extends s.A {
+class T extends s.A {
     id;
     username;
     discriminator;
@@ -298,4 +298,4 @@ class g extends s.A {
         return this.premiumState?.premiumSubscriptionGroupRole ?? a.qT.UNSPECIFIED;
     }
 }
-new g({ id: "0" });
+new T({ id: "0" });

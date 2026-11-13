@@ -46,8 +46,8 @@ function m(e) {
         .reverse()
         .value();
 }
-let g = [];
-class T extends l.Ay.Store {
+let T = [];
+class g extends l.Ay.Store {
     static displayName = "ArchivedThreadsStore";
     initialize() {
         this.waitFor(_.A, f.A, E.Ay);
@@ -70,10 +70,10 @@ class T extends l.Ay.Store {
     }
     getThreads(e, t, n, i) {
         let r = h.get(I(e, t, n, i));
-        return r?.threads ?? g;
+        return r?.threads ?? T;
     }
 }
-let S = new T(o.h, {
+let S = new g(o.h, {
     CONNECTION_OPEN: function () {
         h.clear();
     },

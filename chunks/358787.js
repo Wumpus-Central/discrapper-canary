@@ -87,8 +87,8 @@ var N = n(85563),
     v = n(83617),
     j = n(615396),
     O = n(526292),
-    R = n(881489),
-    D = n(573359),
+    D = n(881489),
+    R = n(573359),
     L = n(423814),
     P = n(774774),
     G = n(543767),
@@ -345,7 +345,7 @@ let $ = function (e) {
                                                         r ||
                                                             ((r = !0),
                                                             C._.dispatch(X.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                                                            D.A.isDisplayingWowMomentConfirmation && D.A.isAnimated
+                                                            R.A.isDisplayingWowMomentConfirmation && R.A.isAnimated
                                                                 ? setTimeout(() => {
                                                                       n.onClose();
                                                                   }, 1e3)
@@ -358,7 +358,7 @@ let $ = function (e) {
                                                 r ||
                                                     ((r = !0),
                                                     C._.dispatch(X.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                                                    D.A.isDisplayingWowMomentConfirmation && D.A.isAnimated
+                                                    R.A.isDisplayingWowMomentConfirmation && R.A.isAnimated
                                                         ? setTimeout(() => {
                                                               (0, u.Oo)(e);
                                                           }, 1e3)
@@ -408,7 +408,7 @@ let $ = function (e) {
         es = el?.discount?.amount,
         er = (0, O.k5)(),
         ea = (0, O.nf)(),
-        eo = (0, R.ds)(),
+        eo = (0, D.ds)(),
         eu = y.Ay.getPlanIdFromInvoice(t, l);
     if ((0, p.m1)(eu)) return null;
     let ed = y.Ay.getStatusFromInvoice(t, l),

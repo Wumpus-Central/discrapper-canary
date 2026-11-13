@@ -45,8 +45,8 @@ function p(e) {
     I.getState().addLog(n);
 }
 var m = n(457421),
-    g = n(4227),
-    T = n(993408),
+    T = n(4227),
+    g = n(993408),
     S = n(442007),
     N = n(510801);
 class C {
@@ -578,8 +578,8 @@ class q {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, T.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, T.f6)(e.logo_display_config)));
+            (this.bannerDisplayConfig = (0, g.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, g.f6)(e.logo_display_config)));
     }
     static fromServer(e) {
         return new q(e);
@@ -686,7 +686,7 @@ async function es(e, t, n) {
     }
 }
 async function el() {
-    if (g.A.isFetching) return;
+    if (T.A.isFetching) return;
     o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
     let e = c.Ay.get("shop_show_debug_overlay");
     e && p("fetchCollectiblesPurchases started");
@@ -734,7 +734,7 @@ async function ed(e, t) {
 }
 function ec(e) {
     let t = Date.now();
-    for (let n of (0, T.XS)([e]))
+    for (let n of (0, g.XS)([e]))
         null == h.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }

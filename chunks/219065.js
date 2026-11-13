@@ -116,10 +116,10 @@ class m {
         return [l, d?.toLowerCase(), s];
     }
 }
-function g(e) {
-    return T(e.user.id);
-}
 function T(e) {
+    return g(e.user.id);
+}
+function g(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n in p) p[n].updateUserId(e) && (t = !0);
@@ -141,7 +141,7 @@ class N extends a.Ay.Store {
                 for (let n in p) e.has(n) || (delete p[n], (t = !0));
                 return t;
             }),
-            this.syncWith([u.A], () => T(_.default.getCurrentUser()?.id)));
+            this.syncWith([u.A], () => g(_.default.getCurrentUser()?.id)));
     }
     getMemberListVersion(e) {
         return p[e]?.version;
@@ -195,19 +195,19 @@ let C = new N(s.h, {
             a = r?.parent_id;
         null != a && ((p[t] = new m(n, a, t)), p[t].rebuild(i.map((e) => e.user_id)));
     },
-    USER_UPDATE: g,
+    USER_UPDATE: T,
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
         return t
             .map((e) => {
                 let { user: t } = e;
-                return T(t.id);
+                return g(t.id);
             })
             .some((e) => e);
     },
-    GUILD_MEMBER_ADD: g,
-    GUILD_MEMBER_UPDATE: g,
-    GUILD_MEMBER_REMOVE: g,
+    GUILD_MEMBER_ADD: T,
+    GUILD_MEMBER_UPDATE: T,
+    GUILD_MEMBER_REMOVE: T,
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e,
             n = r()(t)
@@ -231,7 +231,7 @@ let C = new N(s.h, {
     GUILD_ROLE_UPDATE: S,
     GUILD_ROLE_DELETE: S,
     PASSIVE_UPDATE_V2: function (e) {
-        return e.members.reduce((e, t) => T(t.user.id) || e, !1);
+        return e.members.reduce((e, t) => g(t.user.id) || e, !1);
     },
 });
 n.d(t, {}, { A: C });

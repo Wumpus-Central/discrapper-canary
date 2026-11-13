@@ -19,8 +19,8 @@ function f(e, t, n) {
                 dir: I = "ltr",
                 orientation: p = "vertical",
                 overflow: m = "scroll",
-                fade: g = !1,
-                customTheme: T = !1,
+                fade: T = !1,
+                customTheme: g = !1,
                 scrollbarGutter: S = "stable",
                 style: N,
                 gap: C,
@@ -42,7 +42,7 @@ function f(e, t, n) {
             ? (0, i.jsx)(l.B, {
                   gap: C,
                   ref: D,
-                  className: s()(h, M, { [e]: !0, [t]: g, [n]: T }),
+                  className: s()(h, M, { [e]: !0, [t]: T, [n]: g }),
                   style: (0, E.Ay)(N, p, m),
                   dir: I,
                   ...y,
@@ -50,7 +50,7 @@ function f(e, t, n) {
               })
             : (0, i.jsx)("div", {
                   ref: D,
-                  className: s()(h, M, { [e]: !0, [t]: g, [n]: T }),
+                  className: s()(h, M, { [e]: !0, [t]: T, [n]: g }),
                   style: (0, E.Ay)(N, p, m),
                   dir: I,
                   ...y,

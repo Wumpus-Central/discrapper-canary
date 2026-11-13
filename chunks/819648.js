@@ -19,10 +19,10 @@ var _ = n(407905),
 let I = [a.pJ.HOURS, a.pJ.MINUTES],
     p = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
     m = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
-function g(e) {
+function T(e) {
     return new Intl.NumberFormat(h.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
 }
-function T(e) {
+function g(e) {
     return Math.min(Math.max(Math.round((e / 100) * 6), 1), 5);
 }
 n.d(
@@ -65,12 +65,12 @@ n.d(
                 cardColorPalette: (0, c.o)(t),
             };
         },
-        Le: g,
+        Le: T,
         R8: function (e) {
             let t;
             return {
-                powerLevel: g(e.powerLevel),
-                powerLevelUnits: T(e.powerLevelPercentile),
+                powerLevel: T(e.powerLevel),
+                powerLevelUnits: g(e.powerLevelPercentile),
                 voice: {
                     text:
                         (t = Math.round(e.totalVoiceMinutes)) > 0
@@ -224,7 +224,7 @@ n.d(
                       cardColorPalette: e.card_color_palette ?? i.h.NONE,
                   };
         },
-        sX: T,
+        sX: g,
         vF: function (e, t) {
             let n = [];
             return (

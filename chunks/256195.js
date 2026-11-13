@@ -10,8 +10,8 @@ var r = n(503698),
     d = n(401843),
     m = n(616356),
     h = n(46653),
-    g = n(200749),
-    f = n(792996),
+    f = n(200749),
+    g = n(792996),
     A = n(604889);
 let p = n(913516);
 n.d(
@@ -29,13 +29,13 @@ n.d(
                 );
             return (0, i.jsx)("div", {
                 className: l()(A.Qs, A.FY),
-                children: (0, i.jsx)(g.A, {
+                children: (0, i.jsx)(f.A, {
                     className: A.FP,
                     artURL: p,
                     noArt: r,
                     selected: E,
-                    size: (0, g.J)(n),
-                    header: C ? null : f.intl.string(f.t.epU4Ec),
+                    size: (0, f.J)(n),
+                    header: C ? null : g.intl.string(g.t.epU4Ec),
                     description: E
                         ? null
                         : (0, i.jsxs)("div", {
@@ -46,19 +46,19 @@ n.d(
                                       children: (0, i.jsx)(a.$, {
                                           variant: "secondary",
                                           size: C ? "sm" : "md",
-                                          text: n < 175 ? f.intl.string(f.t.I6JG46) : f.intl.string(f.t["7Xq/nV"]),
+                                          text: n < 175 ? g.intl.string(g.t.I6JG46) : g.intl.string(g.t["7Xq/nV"]),
                                       }),
                                   }),
                                   b
                                       ? (0, i.jsx)("div", {
                                             className: l()(A.lO, A.EU),
                                             children: (0, i.jsx)(o.m, {
-                                                text: f.intl.string(f.t.wCrzut),
+                                                text: g.intl.string(g.t.wCrzut),
                                                 children: (0, i.jsx)(u.K, {
                                                     variant: "secondary",
                                                     size: C ? "sm" : "md",
                                                     icon: c.EyePlusIcon,
-                                                    "aria-label": f.intl.string(f.t.wCrzut),
+                                                    "aria-label": g.intl.string(g.t.wCrzut),
                                                     onClick: (e) => {
                                                         (e.stopPropagation(),
                                                             (0, d.A9)(t.stream, { forceMultiple: !0 }));

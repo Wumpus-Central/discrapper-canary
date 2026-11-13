@@ -15,8 +15,8 @@ var i = n(47167),
     I = n(690521),
     p = n(811091),
     m = n(408018),
-    g = n(652215),
-    T = n(307731);
+    T = n(652215),
+    g = n(307731);
 function S(e, t, n, m) {
     let { allowUsers: S = !0, allowRoles: C = !0 } = m ?? {};
     switch (e[0]) {
@@ -57,7 +57,7 @@ function S(e, t, n, m) {
                     d = r.Ay.getDisambiguatedEmojiContext(t),
                     c = (0, s.A)(d, l),
                     u = null != n ? o.A.getChannel(n) : null;
-                return null == c || I.Ay.isEmojiFiltered({ emoji: c, channel: u, intention: T.EmojiIntention.CHAT })
+                return null == c || I.Ay.isEmojiFiltered({ emoji: c, channel: u, intention: g.EmojiIntention.CHAT })
                     ? null
                     : {
                           type: "customEmoji",
@@ -86,7 +86,7 @@ function S(e, t, n, m) {
                 if (e !== d.I) {
                     for (let { channel: t } of d.A.getChannels(L)[e])
                         if ((0, i.m1)(t, f.default, A.A) === O) {
-                            if (t.isCategory() && !E.A.can(g.xBc.VIEW_CHANNEL, t)) continue;
+                            if (t.isCategory() && !E.A.can(T.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
                         }
                 }

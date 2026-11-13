@@ -40,13 +40,13 @@ function p(e) {
 function m() {
     ((E = {}), null != _ && p(_));
 }
-function g(e) {
+function T(e) {
     let {
         guild: { id: t },
     } = e;
     ((E[t] = void 0), _ === t && p(t));
 }
-function T(e) {
+function g(e) {
     let {
         channel: { guild_id: t },
     } = e;
@@ -83,16 +83,16 @@ let R = new O(r.h, {
     CONNECTION_OPEN: m,
     OVERLAY_INITIALIZE: m,
     CACHE_LOADED_LAZY: m,
-    GUILD_CREATE: g,
-    GUILD_UPDATE: g,
+    GUILD_CREATE: T,
+    GUILD_UPDATE: T,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
         } = e;
         delete E[t];
     },
-    CHANNEL_CREATE: T,
-    CHANNEL_DELETE: T,
+    CHANNEL_CREATE: g,
+    CHANNEL_DELETE: g,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;

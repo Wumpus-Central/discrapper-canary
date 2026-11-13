@@ -56,7 +56,7 @@ let I = h(_.K),
         [c.V.AURA]: u.r6,
         [c.V.BASE]: u.dW,
     },
-    g = {
+    T = {
         [c.V.FACE]: E.CC,
         [c.V.OUTFIT]: E.M,
         [c.V.HAT]: E.c0,
@@ -65,7 +65,7 @@ let I = h(_.K),
         [c.V.AURA]: E.kU,
         [c.V.BASE]: E.EN,
     },
-    T = {
+    g = {
         [c.V.FACE]: f(a.D),
         [c.V.OUTFIT]: f(l.r),
         [c.V.HAT]: f(s.N),
@@ -194,7 +194,7 @@ function y(e, t) {
         {
             $C: y,
             FA: L,
-            Rk: T,
+            Rk: g,
             XI: function (e) {
                 return {
                     base: e[c.V.BASE] ?? r.R.ICY,
@@ -212,7 +212,7 @@ function y(e, t) {
             mf: A,
             nb: N,
             ps: C,
-            qM: g,
+            qM: T,
             tS: function (e, t, n) {
                 let { stats: i, hasNitro: r, savedCharacter: a } = n;
                 if (a?.[e] === t) return !1;

@@ -39,7 +39,7 @@ async function p(e) {
 function m(e) {
     return e?.type === "error" ? A : h;
 }
-async function g(e) {
+async function T(e) {
     let {
         shouldFetch: t,
         filteredSkuIds: n,
@@ -100,7 +100,7 @@ n.d(
         },
         N4: async function (e) {
             let { skuIds: t } = e;
-            await g({ type: "skus", skuIds: t });
+            await T({ type: "skus", skuIds: t });
         },
         cF: async function (e, t) {
             let n;
@@ -115,7 +115,7 @@ n.d(
         },
         l9: async function (e) {
             let { applicationId: t } = e;
-            await g({ type: "application", applicationId: t });
+            await T({ type: "application", applicationId: t });
         },
         rd: p,
         tx: async function (e) {

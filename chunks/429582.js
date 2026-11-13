@@ -16,8 +16,8 @@ let s = new r.Vy("NativeFrameView"),
     I = !1,
     p = null,
     m = null,
-    g = null,
-    T = new WeakSet(),
+    T = null,
+    g = new WeakSet(),
     S = new Set();
 function N() {
     let e = !1;
@@ -180,7 +180,7 @@ function e_(e) {
     return (null == t && ((t = P++), v.set(e, t)), t);
 }
 function eE() {
-    if (null != g) return g;
+    if (null != T) return T;
     for (let e of l.values()) return e.iframe;
     return null;
 }
@@ -263,13 +263,13 @@ function em(e) {
         s = e.getBoundingClientRect();
     return s.right > t && s.left < t + r && s.bottom > n && s.top < n + a;
 }
-function eg(e) {
+function eT(e) {
     if (null == e || e === document || e === window) return !0;
     if (!(0, i.vq)(e, Element)) return !1;
     for (let t of l.values()) if (e.contains(t.iframe)) return !0;
     return !1;
 }
-function eT(e) {
+function eg(e) {
     let t = eS(e);
     if (null == t) return !1;
     for (let n of [...Z.keys(), ...ee.keys(), ...et]) if (t.contains(n) && !n.contains(e)) return !0;
@@ -318,15 +318,15 @@ function eC(e) {
     }, eS(t));
 }
 function eO() {
-    let e = g;
-    if (null != e && eT(e)) return ((D = !0), !0);
+    let e = T;
+    if (null != e && eg(e)) return ((D = !0), !0);
     if (D || null == R || null == e) return !1;
     for (let t of l.values()) if (t.iframe !== e && e5(t.iframe)?.clip != null) return !1;
     let t = e5(e);
     return t?.clip != null && JSON.stringify(t) === R.layout && eC({ iframe: e, clip: t.clip }) === R.value;
 }
 function eR(e) {
-    if (((I = !1), (m = e[0]?.clip ?? null), (g = 1 === e.length ? e[0].iframe : null), (h = performance.now()), x)) {
+    if (((I = !1), (m = e[0]?.clip ?? null), (T = 1 === e.length ? e[0].iframe : null), (h = performance.now()), x)) {
         for (let e of ((x = !1), ee.keys())) e.removeAttribute(Y);
         for (let [e, t] of (ee.clear(), [...Z])) ea(e, t);
     }
@@ -468,7 +468,7 @@ function eR(e) {
     p = u.size > 0 && 1 === e.length ? E : null;
     let A = new WeakSet([...t.keys(), ...n]);
     for (let { iframe: t } of e) for (let e = t; null != e; e = e.parentElement) A.add(e);
-    ((T = A),
+    ((g = A),
         (function (e, t) {
             if (null == M) return;
             let n = "";
@@ -533,11 +533,11 @@ function eF(e) {
 function eB() {
     let e = eD,
         t = e3();
-    if (null == e || ev === e || null != ey || null != c || t?.setOnTop == null || (null != g && eT(g))) return;
+    if (null == e || ev === e || null != ey || null != c || t?.setOnTop == null || (null != T && eg(T))) return;
     let n = l.get(e),
         i = n?.inputTarget,
         r = n?.input;
-    if (null == n || n.iframe !== g || null == i || null == r || n.inputSuspended || !r.idle() || null == m || N())
+    if (null == n || n.iframe !== T || null == i || null == r || n.inputSuspended || !r.idle() || null == m || N())
         return;
     for (let e of C) e.isConnected || C.delete(e);
     for (let e of eG) ep(e) || eG.delete(e);
@@ -592,7 +592,7 @@ function eH(e) {
                     if (JSON.stringify(e5(e.iframe)) !== e.lastLayout) return void eV();
                     for (let n of t.keys())
                         if (
-                            !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || T.has(n)) &&
+                            !(!n.isConnected || n === e.iframe || n.contains(e.iframe) || g.has(n)) &&
                             eA(n, t.get(n) ?? 0)
                         ) {
                             (eG.add(n), eV());
@@ -673,7 +673,7 @@ function eX() {
     let i = A;
     ((A = !1), (f = !1));
     let r = n || x || i,
-        a = 1 === t.length && eT(t[0].iframe);
+        a = 1 === t.length && eg(t[0].iframe);
     if (a) (r && eL(t[0].clip), (r = !1), (D = !0));
     else if (D) {
         for (let e of ((D = !1), (r = !0), b)) {
@@ -758,7 +758,7 @@ function ez(e) {
                                     if ((a--, !em(i))) continue;
                                     let e = getComputedStyle(i);
                                     if ("none" === e.pointerEvents && er(e)) {
-                                        if ((r ??= null != t && eT(t))) {
+                                        if ((r ??= null != t && eg(t))) {
                                             b.add(i);
                                             continue;
                                         }
@@ -783,8 +783,8 @@ function ez(e) {
             )
                 return void eW(!0);
             if ("childList" === t.type) {
-                if (n.some((e) => (0, i.vq)(e, Element) && (null != m || eg(e)))) return void eW(!0);
-            } else if ((0, i.vq)(e, Element) && (T.has(e) || eg(e))) return void eW(!0);
+                if (n.some((e) => (0, i.vq)(e, Element) && (null != m || eT(e)))) return void eW(!0);
+            } else if ((0, i.vq)(e, Element) && (g.has(e) || eT(e))) return void eW(!0);
         }
         e.some((e) => "attributes" === e.type) && eY();
     }
@@ -1113,18 +1113,18 @@ n.d(
                                       (null != n && h({ ...p("mouseUp", e), button: n, clickCount: e.detail }),
                                           eD === t && eB());
                                   }));
-                              let g = !1;
+                              let T = !1;
                               for (let e of (n.addEventListener(
                                   "pointerrawupdate",
                                   (e) => {
-                                      (g = "mouse" === e.pointerType) &&
+                                      (T = "mouse" === e.pointerType) &&
                                           !a &&
                                           ((u = e.buttons), f(p("mouseMove", e)), ek(t, !0));
                                   },
                                   { signal: r },
                               ),
                               I("mousemove", (e) => {
-                                  g || ((u = e.buttons), f(p("mouseMove", e)), ek(t, !0));
+                                  T || ((u = e.buttons), f(p("mouseMove", e)), ek(t, !0));
                               }),
                               I("mouseenter", (e) => {
                                   (h(p("mouseEnter", e)), ek(t, !0));
@@ -1194,7 +1194,7 @@ n.d(
             function N() {
                 l.get(t) === I &&
                     (l.delete(t),
-                    g === e && (g = null),
+                    T === e && (T = null),
                     ey === t && (ey = null),
                     eP++,
                     eD === t && (eD = null),
@@ -1280,7 +1280,7 @@ n.d(
                     document.addEventListener(
                         "scroll",
                         (e) => {
-                            eg(e.target) && eW(!1);
+                            eT(e.target) && eW(!1);
                         },
                         r,
                     ),
@@ -1310,7 +1310,7 @@ n.d(
                                             }
                                         }
                                     })(n),
-                                        eg(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && T.has(n) && eW(!0));
+                                        eT(n) ? (S.add(n), eW(!0)) : "transitionrun" === e && g.has(n) && eW(!0));
                                 }
                             },
                             n,

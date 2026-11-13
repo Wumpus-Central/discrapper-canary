@@ -36,10 +36,10 @@ let h = n.n(f)().v4().source,
     ),
     p = /`{3,}[\s\S]*?(?:`{3,}|$)|(`{1,2})[^`]+\1(?!`)/g,
     m = /[.,;:?'*_~|]+$/;
-function g(e) {
+function T(e) {
     return e.replace(m, "");
 }
-var T = n(652215),
+var g = n(652215),
     S = n(758836);
 let N = /^\/([a-zA-Z0-9-]+)$/,
     C = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
@@ -64,9 +64,9 @@ let F = /^\/oauth2\/authorize/,
     V = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     H = Q(window.GLOBAL_ENV.INVITE_HOST),
     j = Q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    W = Q(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${T.U2_}`),
-    Y = Q(`//canary.${T.U2_}`),
-    K = Q(`//ptb.${T.U2_}`),
+    W = Q(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${g.U2_}`),
+    Y = Q(`//canary.${g.U2_}`),
+    K = Q(`//ptb.${g.U2_}`),
     $ = Q("discordapp.com"),
     X = Q("discord.com"),
     z = [
@@ -127,7 +127,7 @@ function ei(e) {
     if (null == e) return [];
     let n =
             ((t = (e = e.replace(q, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(p, " ").match(I)),
-            t?.map(g) ?? []),
+            t?.map(T) ?? []),
         r = e.match(V);
     return (function (e) {
         if (null == e || 0 === e.length) return [];
@@ -185,15 +185,15 @@ function ei(e) {
                     e.scopes?.some((e) => e !== a.F.APPLICATIONS_COMMANDS) ||
                     r(A.I.APP_OAUTH2_LINK, t);
             }
-            let g = h?.match(L);
-            if (null != g) {
-                let e = g[2];
+            let T = h?.match(L);
+            if (null != T) {
+                let e = T[2];
                 r(A.I.APP_DIRECTORY_PROFILE, e);
             }
-            let T = h?.match(y);
-            if (null != T) {
-                let e = T[2],
-                    t = T[3];
+            let g = h?.match(y);
+            if (null != g) {
+                let e = g[2],
+                    t = g[3];
                 if (null != t) {
                     let n = (0, s.L)(e, t);
                     r(A.I.APP_DIRECTORY_STOREFRONT_SKU, n);

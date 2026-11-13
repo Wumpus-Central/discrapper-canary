@@ -59,7 +59,7 @@ class m extends i.Ay.Store {
         return !("passed" === _ || "suppress" === _ || p());
     }
 }
-let g = new m(a.h, {
+let T = new m(a.h, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
         u = !0;
     },
@@ -96,4 +96,4 @@ let g = new m(a.h, {
         ((_ = "suppress"), (E = null), h(), I());
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

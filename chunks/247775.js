@@ -55,17 +55,17 @@ function m() {
         )),
         (f = !0));
 }
-function g() {
+function T() {
     f || m();
 }
-function T(e) {
+function g(e) {
     return (m(), null != e) ? _[e] : i;
 }
 function S(e, t) {
     (null != t && (_[t] = e), u ? C() : ((r = i), (E = _), h()));
 }
 function N(e) {
-    g();
+    T();
     let t = i;
     return (
         null != e && ((t = _[e]), delete _[e], delete E[e]),
@@ -75,7 +75,7 @@ function N(e) {
     );
 }
 function C() {
-    (g(),
+    (T(),
         d?.isEncryptionAvailable()
             ? (null != i && (r = p(i)),
               (E = o(
@@ -94,11 +94,11 @@ n.d(
     {
         encryptAndStoreTokens: C,
         getAnalyticsToken: function () {
-            return T(l);
+            return g(l);
         },
-        getToken: T,
+        getToken: g,
         hideToken: function () {
-            A || (g(), (A = !0), h());
+            A || (T(), (A = !0), h());
         },
         init: m,
         removeAnalyticsToken: function () {
@@ -106,13 +106,13 @@ n.d(
         },
         removeToken: N,
         setAnalyticsToken: function (e) {
-            null == e ? N(l) : (g(), S(e, l));
+            null == e ? N(l) : (T(), S(e, l));
         },
         setToken: function (e, t) {
-            null == e ? N(t) : (g(), (i = e), S(e, t));
+            null == e ? N(t) : (T(), (i = e), S(e, t));
         },
         showToken: function () {
-            A && (g(), (A = !1), h());
+            A && (T(), (A = !1), h());
         },
     },
 );

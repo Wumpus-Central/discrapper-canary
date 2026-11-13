@@ -26,8 +26,8 @@ var h = n(400492),
     I = n(312671),
     p = n(458640),
     m = n(734057),
-    g = n(803224),
-    T = n(994500),
+    T = n(803224),
+    g = n(994500),
     S = n(351906),
     N = n(287809),
     C = n(129230),
@@ -278,7 +278,7 @@ let X = {
                             e(o.src);
                         }));
                 }))),
-            b && g.A.taskbarFlash && y.Ay.flashFrame(!0));
+            b && T.A.taskbarFlash && y.Ay.flashFrame(!0));
         let V = null;
         if (u) {
             let a = { title: t, body: n };
@@ -294,7 +294,7 @@ let X = {
                     t = r.messageRecord.author;
                 a.threadIdentifier = e;
                 let n = m.A.getChannel(e);
-                null != n && (a.groupName = (0, d.m1)(n, N.default, T.A));
+                null != n && (a.groupName = (0, d.m1)(n, N.default, g.A));
                 let i = n?.getGuildId();
                 ((a.senderIdentifier = t.id),
                     (a.senderDisplayName = R.Ay.getName(i, e, t)),

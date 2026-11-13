@@ -74,7 +74,7 @@ class m extends r.il {
         return c.has(e);
     }
 }
-let g = new m(a.h, {
+let T = new m(a.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
         let { skuId: t } = e;
         d.add(t);
@@ -118,4 +118,4 @@ let g = new m(a.h, {
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: h,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: h,
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

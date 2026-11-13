@@ -16,8 +16,8 @@ var i = n(574381),
     I = n(754712),
     p = n(287809),
     m = n(741394),
-    g = n(474090),
-    T = n(734066),
+    T = n(474090),
+    g = n(734066),
     S = n(205693),
     N = n(439372),
     C = n(967347),
@@ -80,7 +80,7 @@ class K extends N.A {
     };
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, T.Pm)() || n !== H.S7L.RTC_CONNECTED) return;
+        if (!(0, g.Pm)() || n !== H.S7L.RTC_CONNECTED) return;
         let r = h.default.getId();
         switch (t) {
             case S.x.DEFAULT:
@@ -130,8 +130,8 @@ class K extends N.A {
         y.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        (0, T.ri)(I.Ay) &&
-            ((this.applyNativeClipsSettings(), (0, T.Pm)())
+        (0, g.ri)(I.Ay) &&
+            ((this.applyNativeClipsSettings(), (0, g.Pm)())
                 ? (this.loadClipsFromStorage(), this.maybeStartNtpClock(), this.updateHardwareClassification())
                 : s.h.dispatch({ type: "CLIPS_APPLY_DEFAULT_SETTINGS_COMPLETE" }));
     }
@@ -175,7 +175,7 @@ class K extends N.A {
     getClipsDefaultSettingsDecision(e) {
         if (e === U.k9.UNKNOWN || M.Ay.getClipsDefaultSettingsState().version >= 1) return null;
         let t = p.default.getCurrentUser();
-        if (!(0, T.qj)(t) || !v.A.getConfig({ location: "getClipsDefaultSettingsDecision" }).enabled) return null;
+        if (!(0, g.qj)(t) || !v.A.getConfig({ location: "getClipsDefaultSettingsDecision" }).enabled) return null;
         let n = t?.nsfwAllowed ?? null,
             i = !0 === n && e === U.k9.MEETS_AUTO_ENABLE,
             r = !0 === n ? P.getConfig({ location: "getClipsDefaultSettingsDecision" }).allowDefaultOn : null;
@@ -190,7 +190,7 @@ class K extends N.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== S.x.STREAM || !(0, T.ri)(I.Ay)) return;
+        if (n !== S.x.STREAM || !(0, g.ri)(I.Ay)) return;
         let a = D.A.getRTCConnection(
             _._z({ streamType: null != r ? j.U4.GUILD : j.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
@@ -270,7 +270,7 @@ class K extends N.A {
                 await this.applyClipsDefaultSettings(e, this.getClipsDefaultSettingsDecision(e))));
     }
     applyUserVoiceRecording(e) {
-        if (!(0, T.ri)(I.Ay)) return;
+        if (!(0, g.ri)(I.Ay)) return;
         let t = y.A.getRTCConnection();
         if (null == t) return;
         if (L.A.getChannel(y.A.getChannelId())?.isGuildStageVoice()) return void t.setClipRecordUser(e, "audio", !1);
@@ -279,12 +279,12 @@ class K extends N.A {
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
-        if (!(0, T.ri)(I.Ay)) return;
+        if (!(0, g.ri)(I.Ay)) return;
         let t = y.A.getRTCConnection();
         null != t && t.setClipRecordUser(e, "soundboard", (0, V.T)());
     }
     applyStreamRecording(e, t) {
-        if ((0, T.ri)(I.Ay) && h.default.getId() === e) {
+        if ((0, g.ri)(I.Ay) && h.default.getId() === e) {
             let n = (0, V.T)();
             (t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n));
             return;
@@ -368,7 +368,7 @@ let eo = new (class extends K {
         if (t.length > 0) return void (0, ee.eM)();
         let i = n.map((e) => e.id).find((e) => null != e);
         null == i ||
-            (0, g.YE)(p.default.getCurrentUser(), es.PremiumTypes.TIER_2) ||
+            (0, T.YE)(p.default.getCurrentUser(), es.PremiumTypes.TIER_2) ||
             ((0, $.C)("ClipsManager").enabled && (0, ee.OT)(i));
     }
     shouldUseClipsInUseNotice() {
@@ -381,7 +381,7 @@ let eo = new (class extends K {
         if (
             ((e?.settings.clipsEnabled != null || e?.settings.enableAutoclipping != null) &&
                 this.installGameEventIntegrations(),
-            !(0, T.ri)(I.Ay))
+            !(0, g.ri)(I.Ay))
         )
             return;
         (0, Q.mj)();
@@ -432,7 +432,7 @@ let eo = new (class extends K {
     fireClipsInitEvent() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (
-            !(0, T.ri)(I.Ay) ||
+            !(0, g.ri)(I.Ay) ||
             !(0, V.T)() ||
             (!e &&
                 !I.Ay.getMediaEngine().supports(W.O5.UNIFIED_CAPTURE_BROKER) &&

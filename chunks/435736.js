@@ -118,12 +118,12 @@ class m extends o.A {
         OVERLAY_READY: this.handleOverlayReady,
     };
 }
-let g = new m();
+let T = new m();
 n.d(
     t,
     {},
     {
-        Ay: g,
+        Ay: T,
         C3: function (e) {
             p({ overrideIsUsingDefaultOverlayKeybind: e });
         },

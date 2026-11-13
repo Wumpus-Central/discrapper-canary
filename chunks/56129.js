@@ -16,8 +16,8 @@ var r = n(503698),
     I = n(267102),
     p = n(574172),
     m = n(704877),
-    g = n(222692),
-    T = n(447404),
+    T = n(222692),
+    g = n(447404),
     S = n(271195),
     N = n(693409),
     C = n(383831),
@@ -75,7 +75,7 @@ n.d(
                             idle: c,
                             title: A?.name ?? h ?? "",
                             onJumpToChannel: d,
-                            preventIdleComponent: T.A,
+                            preventIdleComponent: g.A,
                         }),
                     }),
                     (0, i.jsxs)("div", {
@@ -134,7 +134,7 @@ n.d(
                             idle: d,
                             title: V?.name ?? H ?? "",
                             onJumpToChannel: o,
-                            preventIdleComponent: T.A,
+                            preventIdleComponent: g.A,
                         }),
                     }),
                     (0, i.jsxs)("div", {
@@ -153,11 +153,11 @@ n.d(
                                         hasPermission: j,
                                         onChange: Y,
                                         onCameraUnavailable: function () {
-                                            B ? Y(!0) : (0, g.A)();
+                                            B ? Y(!0) : (0, T.A)();
                                         },
                                     }),
                                     null != t &&
-                                        (0, i.jsx)(T.A, {
+                                        (0, i.jsx)(g.A, {
                                             children: (0, i.jsx)(E.A, {
                                                 channelId: t.id,
                                                 guildId: t.getGuildId(),
@@ -238,7 +238,7 @@ n.d(
                                         idle: !s,
                                         title: I?.name ?? p ?? "",
                                         onJumpToChannel: c,
-                                        preventIdleComponent: T.A,
+                                        preventIdleComponent: g.A,
                                     }),
                                     (0, i.jsxs)("div", {
                                         className: x.QS,

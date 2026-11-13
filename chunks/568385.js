@@ -25,8 +25,8 @@ n.d(
                     labelType: p = "primary",
                     usageVariant: m = "single",
                 } = e,
-                g = (0, r.useRef)(null),
                 T = (0, r.useRef)(null),
+                g = (0, r.useRef)(null),
                 S = (0, r.useRef)(null),
                 N = r.useId(),
                 C = `${N}label`,
@@ -54,7 +54,7 @@ n.d(
                     children: [
                         (0, i.jsxs)("div", {
                             className: u.fb,
-                            ref: g,
+                            ref: T,
                             "aria-hidden": !0,
                             children: [
                                 (0, i.jsx)("svg", {
@@ -118,11 +118,11 @@ n.d(
                       children: M,
                   })
                 : (0, i.jsx)(o.vN, {
-                      focusTarget: T,
+                      focusTarget: g,
                       ringTarget: S,
                       children: (0, i.jsx)(l.Sc, {
                           ref: S,
-                          inputRef: T,
+                          inputRef: g,
                           "aria-labelledby": f ?? (D ? C : void 0),
                           "aria-describedby": D && b ? O : void 0,
                           isSelected: t,

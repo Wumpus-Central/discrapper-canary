@@ -19,9 +19,9 @@ let o = null,
         nameToEmoji: I,
         surrogateToEmoji: p,
         numDiversitySprites: m,
-        numNonDiversitySprites: g,
+        numNonDiversitySprites: T,
     } = n(13474);
-function T(e) {
+function g(e) {
     let t = I[e];
     return null == t ? null : f[t];
 }
@@ -119,7 +119,7 @@ function C(e) {
     return (d.set(e, n), n);
 }
 function O(e) {
-    let t = T(e);
+    let t = g(e);
     return null != t ? C(t) : null;
 }
 let R = new Map();
@@ -164,7 +164,7 @@ function P(e, t) {
 }
 function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    return T(e)?.surrogates ?? t;
+    return g(e)?.surrogates ?? t;
 }
 function U(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -232,7 +232,7 @@ n.d(
                 for (let t of f) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
             },
             numDiversitySprites: m,
-            numNonDiversitySprites: g,
+            numNonDiversitySprites: T,
             EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
             EMOJI_NAME_AND_DIVERSITY_RE: u,
             EMOJI_SHORTCUT_RE:

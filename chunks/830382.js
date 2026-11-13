@@ -119,8 +119,8 @@ n.d(
                 expectedCurrency: _,
                 analyticsLoadId: h,
                 isGift: m,
-                giftInfoOptions: g,
-                subscriptionPlanId: T,
+                giftInfoOptions: T,
+                subscriptionPlanId: g,
                 loadId: S,
                 countryCode: N,
                 quantity: C,
@@ -132,10 +132,10 @@ n.d(
             try {
                 let e = {
                         gift: m,
-                        sku_subscription_plan_id: T,
+                        sku_subscription_plan_id: g,
                         gateway_checkout_context: await (0, E.ob)(i),
                         load_id: S,
-                        gift_info_options: g,
+                        gift_info_options: T,
                     },
                     n = u.A.getPromotionIdOverride();
                 if ((null != n && (e.promotion_id_override = n), L)) e.test_mode = !0;

@@ -79,8 +79,8 @@ let j = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
     },
 });
 var O = n(366010),
-    R = n(775602),
-    D = n(875317),
+    D = n(775602),
+    R = n(875317),
     L = n(97469),
     P = n(413599),
     G = n(253932),
@@ -90,15 +90,15 @@ let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
         let e = (0, L.qo)();
-        return (0, s.bG)([P.A, R.Ay], () => {
+        return (0, s.bG)([P.A, D.Ay], () => {
             let t = P.A.theme,
-                n = R.Ay.useForcedColors;
+                n = D.Ay.useForcedColors;
             return e && (0, O.q)(t) && !n;
         });
     },
     usePredicate: function () {
         let e = null != G.eh.useSetting().customUserThemeSettings,
-            t = null != (0, D.Q)(),
+            t = null != (0, R.Q)(),
             n = (0, a.V)();
         return (0, s.bG)([P.A, r.A], () => {
             let i = P.A.theme,
@@ -107,9 +107,9 @@ let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
         });
     },
     useDisabled: function () {
-        return (0, s.bG)([P.A, R.Ay], () => {
+        return (0, s.bG)([P.A, D.Ay], () => {
             let e = P.A.theme,
-                t = R.Ay.useForcedColors;
+                t = D.Ay.useForcedColors;
             return e !== M.NJ.LIGHT || t;
         });
     },

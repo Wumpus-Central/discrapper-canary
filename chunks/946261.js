@@ -51,7 +51,7 @@ function m(e) {
     p("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
 }
 u.isPlatformEmbedded && (c.Ay.addChangeListener(I), I());
-let g = class {
+let T = class {
     name;
     _volume;
     _playbackRate = 1;
@@ -153,6 +153,6 @@ n.d(
             let n = new Audio((0, o.A)(e));
             ((n.volume = (0, d.A)(t)), n.play());
         },
-        WebAudioSound: g,
+        WebAudioSound: T,
     },
 );

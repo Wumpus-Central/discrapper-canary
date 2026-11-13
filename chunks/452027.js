@@ -55,8 +55,8 @@ n.d(
                     successMessage: I,
                     role: p,
                     layout: m = "vertical",
-                    layoutConfig: g,
-                    badge: T,
+                    layoutConfig: T,
+                    badge: g,
                     icon: S = null,
                     interactiveLabel: N = !1,
                     auxiliaryContentPosition: C = "under-control",
@@ -77,14 +77,14 @@ n.d(
                         I = null != n && "" !== n,
                         p = null != l && "" !== l,
                         m = (null != a && "" !== a) || (null != s && "" !== s),
-                        g = [];
-                    (p && g.push(A), m && g.push(E), o && g.push(h));
-                    let T = g.length > 0 ? g.join(" ") : void 0;
+                        T = [];
+                    (p && T.push(A), m && T.push(E), o && T.push(h));
+                    let g = T.length > 0 ? T.join(" ") : void 0;
                     return r.useMemo(
                         () => ({
                             labelId: I ? u : void 0,
                             controlId: t ?? _,
-                            describedById: T,
+                            describedById: g,
                             errorMessageId: null != i && "" !== i ? f : void 0,
                             helperTextId: m ? E : void 0,
                             descriptionId: p ? A : void 0,
@@ -92,7 +92,7 @@ n.d(
                             isLabelHovered: d,
                             setIsLabelHovered: c,
                         }),
-                        [I, u, t, _, T, i, f, m, E, p, A, o, h, d, c],
+                        [I, u, t, _, g, i, f, m, E, p, A, o, h, d, c],
                     );
                 })(e, { hasTrailingAuxiliaryContent: null != O }),
                 {
@@ -103,7 +103,7 @@ n.d(
                     helperTextId: P,
                     descriptionId: M,
                 } = L,
-                U = g?.horizontalControlColumnWidth,
+                U = T?.horizontalControlColumnWidth,
                 w = "group" === p || "radiogroup" === p,
                 G = w ? "fieldset" : "div",
                 x = w ? (0, i.jsx)("legend", { id: y, children: (0, i.jsx)(l.A, { children: t }) }) : null,
@@ -130,10 +130,10 @@ n.d(
                                       className: _.mw,
                                       children: "*",
                                   }),
-                              null != T
+                              null != g
                                   ? (0, i.jsx)("span", {
                                         className: _.fC,
-                                        children: (0, i.jsx)(s.E, { type: T, variant: "primary" }),
+                                        children: (0, i.jsx)(s.E, { type: g, variant: "primary" }),
                                     })
                                   : null,
                           ],

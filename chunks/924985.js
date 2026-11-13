@@ -33,7 +33,7 @@ function m() {
     }
     return t;
 }
-class g extends i.Ay.PersistedStore {
+class T extends i.Ay.PersistedStore {
     static displayName = "CategoryCollapseStore";
     static persistKey = "collapsedCategories";
     initialize(e) {
@@ -56,7 +56,7 @@ class g extends i.Ay.PersistedStore {
         return A;
     }
 }
-let T = new g(a.h, {
+let g = new T(a.h, {
     CONNECTION_OPEN: function (e) {
         for (let t of (e.userGuildSettings.partial || (E = {}), e.userGuildSettings.entries))
             if (null != t.channel_overrides)
@@ -104,4 +104,4 @@ let T = new g(a.h, {
         return h(t);
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

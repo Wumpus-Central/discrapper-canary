@@ -41,8 +41,8 @@ let f = E([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
         r.n.PLAY_ON_XBOX,
         r.n.ACHIEVEMENT_IN_GAME,
     ]),
-    g = E([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
-function T(e) {
+    T = E([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
+function g(e) {
     return f(e);
 }
 function S(e, t) {
@@ -157,7 +157,7 @@ n.d(
         K$: function (e) {
             return I(e) && !h(e);
         },
-        Ki: g,
+        Ki: T,
         Ov: function (e) {
             return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_ACTIVITY];
         },
@@ -250,7 +250,7 @@ n.d(
             let { quest: t } = e;
             return null != t.config.taskConfigV2.tasks[r.n.STREAM_ON_DESKTOP];
         },
-        g5: T,
+        g5: g,
         hL: function (e) {
             return new Set(Object.keys(e.config.taskConfigV2.tasks));
         },
@@ -258,7 +258,7 @@ n.d(
             return y(e.targetSeconds - e.progressSeconds);
         },
         no: function (e) {
-            return !T(e) && c({ quest: e });
+            return !g(e) && c({ quest: e });
         },
         pU: function (e) {
             return d(e, [r.n.PLAY_ON_DESKTOP]);

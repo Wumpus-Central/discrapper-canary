@@ -15,8 +15,8 @@ n.d(t, {
     zv: () => L,
     U1: () => f,
     jD: () => I,
-    vB: () => g,
-    S9: () => T,
+    vB: () => T,
+    S9: () => g,
 });
 var i,
     r,
@@ -35,12 +35,12 @@ let u = "/quests/special-events/1549285425984831508/enroll",
     I = "app_open",
     p = { theme: "system" },
     m = d.LW.DEFAULT;
-var g =
+var T =
         (((i = {}).DISPLAY_NAME_STYLE = "display_name_style"),
         (i.CLIENT_THEME = "client_theme"),
         (i.APP_ICON = "app_icon"),
         i),
-    T = (((r = {}).HIDDEN = "hidden"), (r.LOCKED = "locked"), (r.SELECTABLE = "selectable"), r);
+    g = (((r = {}).HIDDEN = "hidden"), (r.LOCKED = "locked"), (r.SELECTABLE = "selectable"), r);
 let S = Object.freeze({ client_theme: "client_theme", display_name_style: "display_name_font", app_icon: "app_icon" }),
     N = Object.freeze({
         display_name_style: o.bb.DISPLAY_NAME_STYLES,

@@ -35,8 +35,8 @@ function h(e, t, n, i) {
 var I = n(199773),
     p = n(517057),
     m = n(826673),
-    g = n(652215),
-    T = n(355097);
+    T = n(652215),
+    g = n(355097);
 let S = {};
 function N(e) {
     return "single_use" === e.kind || "single_use_guild" === e.kind;
@@ -66,7 +66,7 @@ function C(e, t, n) {
                 return t;
             }),
         ),
-        R = (0, r.bG)([l.A], () => l.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS)),
+        R = (0, r.bG)([l.A], () => l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)),
         L =
             u.find(
                 (e) =>
@@ -128,9 +128,9 @@ function C(e, t, n) {
                     if (null != e) {
                         var t;
                         return (
-                            l.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
+                            l.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS) ||
                                 ((t = N.current),
-                                d.default.track(g.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
+                                d.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
                                     content_type: a.M[e],
                                     group_name: n ?? null,
                                     latest_version: c ?? null,

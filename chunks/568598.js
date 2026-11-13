@@ -16,8 +16,8 @@ var i,
     I = n(616356),
     p = n(46653),
     m = n(470710),
-    g = n(734057),
-    T = n(754712),
+    T = n(734057),
+    g = n(754712),
     S = n(485296),
     N = n(287809),
     C = n(803301),
@@ -100,7 +100,7 @@ n.d(
                 return this.participantByIndex.values(e, !0);
             }
             rebuild() {
-                let e = g.A.getChannel(this.channelId);
+                let e = T.A.getChannel(this.channelId);
                 if (
                     null == e ||
                     e.type === D.rbe.GUILD_TEXT ||
@@ -151,7 +151,7 @@ n.d(
                 );
             }
             updateStageSpeaker(e) {
-                g.A.getChannel(this.channelId)?.isGuildStageVoice() && h.Ay.isSpeaker(e, this.channelId)
+                T.A.getChannel(this.channelId)?.isGuildStageVoice() && h.Ay.isSpeaker(e, this.channelId)
                     ? this.stageSpeakerIds.add(e)
                     : this.stageSpeakerIds.delete(e);
             }
@@ -215,7 +215,7 @@ n.d(
                         activityType: a.$.PLAYING,
                         activityUrl: e.url,
                         participants: [...(e.participants ?? [])],
-                        guildId: g.A.getChannel(this.channelId)?.getGuildId() ?? null,
+                        guildId: T.A.getChannel(this.channelId)?.getGuildId() ?? null,
                         sortKey: t.toString(),
                     })),
                     n = (0, b.ny)(E.A.getMainFrame());
@@ -231,7 +231,7 @@ n.d(
                             activityType: a.$.PLAYING,
                             activityUrl: n.data.url,
                             participants: [{ userId: p.default.getId() }],
-                            guildId: g.A.getChannel(this.channelId)?.getGuildId() ?? null,
+                            guildId: T.A.getChannel(this.channelId)?.getGuildId() ?? null,
                             sortKey: t.length.toString(),
                             frameId: n.id,
                         }),
@@ -246,7 +246,7 @@ n.d(
                 if (null == r) return i;
                 let a = O.A.getVoiceStateForChannel(this.channelId, e),
                     s = O.A.getVoicePlatformForChannel(this.channelId, e),
-                    o = g.A.getChannel(this.channelId),
+                    o = T.A.getChannel(this.channelId),
                     d = o?.getGuildId(),
                     u = this.call?.ringing?.includes(e) ?? !1;
                 (null != a || u) &&
@@ -264,12 +264,12 @@ n.d(
                         ringing: u,
                         userNick: R.Ay.getName(d, this.channelId, r),
                         userAvatarDecoration: (0, c.U)(r, d),
-                        localVideoDisabled: T.Ay.isLocalVideoDisabled(r.id),
+                        localVideoDisabled: g.Ay.isLocalVideoDisabled(r.id),
                         isPoppedOut: this.poppedOutParticipants.has(r.id),
                     }),
                     i.push(t));
                 let _ = I.A.getStreamForUser(e, d) ?? I.A.getActiveStreamForUser(e, d);
-                if (T.Ay.supports(v.O5.VIDEO) && null != _ && _.channelId === this.channelId) {
+                if (g.Ay.supports(v.O5.VIDEO) && null != _ && _.channelId === this.channelId) {
                     let t = (0, A._z)(_),
                         s = this.getParticipant(t),
                         l = _.ownerId === p.default.getId() && I.A.isSelfStreamHidden(this.channelId),

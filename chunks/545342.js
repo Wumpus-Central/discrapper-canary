@@ -27,26 +27,26 @@ function p(e) {
         } = e,
         p = (0, d.Z5)(),
         m = [(0, i.jsx)("source", { src: r, type: "video/mp4" }, "mp4"), (0, i.jsx)("img", { alt: "", src: s }, "png")],
-        g = [(0, i.jsx)("source", { src: a, type: "video/mp4" }, "mp4"), (0, i.jsx)("img", { alt: "", src: l }, "png")];
+        T = [(0, i.jsx)("source", { src: a, type: "video/mp4" }, "mp4"), (0, i.jsx)("img", { alt: "", src: l }, "png")];
     return (
         (p > 52 || -1 === p) &&
             (m.unshift((0, i.jsx)("source", { src: o, type: "video/webm" }, "webm")),
-            g.unshift((0, i.jsx)("source", { src: c, type: "video/webm" }, "webm"))),
+            T.unshift((0, i.jsx)("source", { src: c, type: "video/webm" }, "webm"))),
         (0, d.TM)() &&
             (m.unshift((0, i.jsx)("source", { src: t, type: "video/mp4" }, "hevc")),
-            g.unshift((0, i.jsx)("source", { src: n, type: "video/mp4" }, "hevc"))),
-        { [u.NJ8.DARK]: m, [u.NJ8.LIGHT]: g }
+            T.unshift((0, i.jsx)("source", { src: n, type: "video/mp4" }, "hevc"))),
+        { [u.NJ8.DARK]: m, [u.NJ8.LIGHT]: T }
     );
 }
 let m = o.A.getAppSpinnerSources(),
-    g = null != m ? p(m) : null,
-    T = p({}),
+    T = null != m ? p(m) : null,
+    g = p({}),
     S = function (e) {
         let { loop: t = !0, autoPlay: n = !0, setRef: o, className: d, onReady: _ } = e,
             { theme: E } = (0, s.wR)(),
             { reducedMotion: A } = r.useContext(l.C),
-            f = T;
-        null != g && (f = g);
+            f = g;
+        null != T && (f = T);
         let h = f[(0, a.M)(E) ? u.NJ8.DARK : u.NJ8.LIGHT] ?? f[u.NJ8.DARK];
         return (0, i.jsx)(
             c.A,

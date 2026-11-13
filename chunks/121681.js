@@ -116,10 +116,10 @@ let I = new (n(626584).A)("GuildEmojis"),
             return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
         }
     }),
-    g = function (e) {
+    T = function (e) {
         m.setParams(e);
     },
-    T = function (e) {
+    g = function (e) {
         let t = m.get();
         return void 0 !== t ? t[e] : [];
     };
@@ -473,7 +473,7 @@ class e_ {
             let { names: n, name: i } = t,
                 r = null != n && o().some(n, e),
                 a = null != i && e(i),
-                s = null != i && o().some(T(i), e);
+                s = null != i && o().some(g(i), e);
             return r || a || s;
         });
     }
@@ -509,7 +509,7 @@ function em(e) {
     let i = !!(0, L.un)() && !1;
     ea[e] = new J(e, n.id, t, i);
 }
-function eg() {
+function eT() {
     let e = D.A.settings,
         t = e.textAndImages?.diversitySurrogate?.value;
     (null != t && H.Ay.setDefaultDiversitySurrogate(t), e_.reset());
@@ -560,7 +560,7 @@ function eg() {
         ])
             ef.track(e);
 }
-function eT(e) {
+function eg(e) {
     if (null == e) return !1;
     for (let t of e) {
         let e = t.id ?? t.uniqueName ?? t.name;
@@ -589,7 +589,7 @@ class eN extends _.Ay.PersistedStore {
                 null != e.expandedSectionsByGuildIds &&
                     (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))),
             (Q = j.A.getIndexablePackEmojis()),
-            this.syncWith([D.A], eg),
+            this.syncWith([D.A], eT),
             this.syncWith([j.A], eE));
     }
     getState() {
@@ -791,18 +791,18 @@ let eC = new eN(E.h, {
                 e.length > 0 && 2 === ei && ef.compute();
             }
         })([t]),
-            eT([t]));
+            eg([t]));
     },
     EMOJI_TRACK_USAGE: function (e) {
         let { emojiUsed: t } = e;
-        eT(t);
+        eg(t);
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if ((g(y.default.locale), t !== X.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+        if ((T(y.default.locale), t !== X.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
         ((q.pendingUsages = []), (q.emojiReactionPendingUsages = []));
     },
     GUILD_ROLE_CREATE: eS,

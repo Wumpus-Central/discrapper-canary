@@ -25,11 +25,11 @@ function p(e, t, n) {
 function m(e, t) {
     return null != t && e.launchRequestId !== t;
 }
-function g(e) {
+function T(e) {
     for (let t of _.values()) if ((0, d.x1)(t) && t.data.iframeId === e) return t;
 }
-function T(e, t) {
-    let n = g(e);
+function g(e, t) {
+    let n = T(e);
     return null != n && I(n.id, t);
 }
 class S extends i.Ay.Store {
@@ -46,7 +46,7 @@ class S extends i.Ay.Store {
         return !(0, d.x1)(t) || "hidden" !== t.data.poolVisibility;
     }
     getFrameByIframeId(e) {
-        return g(e);
+        return T(e);
     }
     isDeviceMuted() {
         return f;
@@ -108,11 +108,11 @@ let N = new S(r.h, {
             (_.delete(t), A === t && (A = null));
             return;
         }
-        let { id: p, applicationId: g, intent: T, surface: S } = u;
+        let { id: p, applicationId: T, intent: g, surface: S } = u;
         _.set(t, {
             id: p,
-            applicationId: g,
-            intent: T,
+            applicationId: T,
+            intent: g,
             surface: S,
             launchRequestId: u.launchRequestId,
             state: "launched",
@@ -211,11 +211,11 @@ let N = new S(r.h, {
     },
     EMBEDDED_APP_SHIM_STATE_UPDATE: function (e) {
         let { iframeId: t, state: n } = e;
-        return T(t, (e) => ({ ...e, audible: n.audible }));
+        return g(t, (e) => ({ ...e, audible: n.audible }));
     },
     EMBEDDED_APP_SHIM_DISCONNECT: function (e) {
         let { iframeId: t } = e;
-        return T(t, (e) => ({ ...e, ...E }));
+        return g(t, (e) => ({ ...e, ...E }));
     },
     FRAME_IFRAME_MOUNT: function (e) {
         let { frameId: t, iframeId: n } = e;

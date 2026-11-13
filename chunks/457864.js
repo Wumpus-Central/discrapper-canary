@@ -153,11 +153,11 @@ let I = { top: 80, bottom: 132, left: 80, right: 80 },
         [_.CUs.BOTTOM_LEFT]: o.R.HORIZONTAL_RIGHT,
         [_.CUs.BOTTOM_RIGHT]: o.R.HORIZONTAL_LEFT,
     };
-function g(e, t) {
+function T(e, t) {
     let n = 40 * Math.round(e / 40);
     return (0, l.clamp)(n, t.minWidth, t.maxWidth);
 }
-function T(e) {
+function g(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a, resizeConfig: l, position: d } = e,
         c = (0, o.A)({
             minDimension: l.minWidth,
@@ -269,7 +269,7 @@ class S extends r.PureComponent {
     ensureWidth = () => {
         let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: i, resizeConfig: r } = this.props;
         if (null == r) return;
-        let a = g(i - (t + n), r);
+        let a = T(i - (t + n), r);
         this.getWidth() > a && ((this._width = a), e?.(a));
     };
     calculateDecayingPosition(e, t, n, i) {
@@ -325,7 +325,7 @@ class S extends r.PureComponent {
     handleResizeEnd = (e) => {
         let { onResize: t, resizeConfig: n } = this.props;
         if (null == n) return;
-        let i = g(e, n);
+        let i = T(e, n);
         ((this._width = i), t?.(i), this.setState({ isResizing: !1 }), this.ensureWidth());
     };
     handleDragStart = (e, t) => {
@@ -411,7 +411,7 @@ class S extends r.PureComponent {
                 children: [
                     (0, i.jsx)("div", { ref: this.handleSetInnerDivRef, style: _, children: this.props.children }),
                     null != c
-                        ? (0, i.jsx)(T, {
+                        ? (0, i.jsx)(g, {
                               onResize: this.handleResize,
                               onResizeEnd: this.handleResizeEnd,
                               resizableNode: this._innerDivRef,
@@ -438,8 +438,8 @@ let N = r.memo(function (e) {
             pictureInPictureComponents: f,
             appContext: p,
             roundCorners: m,
-            resizeConfig: g,
-            className: T,
+            resizeConfig: T,
+            className: g,
             getDockedRectPositionY: N,
         } = e,
         [C, O] = r.useState(!1),
@@ -473,7 +473,7 @@ let N = r.memo(function (e) {
         ? (0, i.jsx)(A.Ay, { children: (0, i.jsx)("div", { className: h._I }) })
         : (0, i.jsx)(A.Ay, {
               children: (0, i.jsx)("div", {
-                  className: s()(h._I, { [h.cB]: C }, T),
+                  className: s()(h._I, { [h.cB]: C }, g),
                   children: (0, i.jsx)(S, {
                       appContext: p,
                       position: t.position,
@@ -494,7 +494,7 @@ let N = r.memo(function (e) {
                       edgeOffsetLeft: I.left,
                       edgeOffsetRight: I.right,
                       roundCorners: m,
-                      resizeConfig: b || v ? void 0 : g,
+                      resizeConfig: b || v ? void 0 : T,
                       children: R,
                   }),
               }),

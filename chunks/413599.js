@@ -16,14 +16,14 @@ var i = n(956759),
     I = n(646514),
     p = n(353835),
     m = n(723702);
-function g(e) {
+function T(e) {
     if (!__OVERLAY__ && m.isPlatformEmbedded)
         try {
             let t = I.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: c.Ay.saturation }).hex();
             p.A.setApplicationBackgroundColor(t);
         } catch {}
 }
-var T = n(594061),
+var g = n(594061),
     S = n(355097);
 let N = 0,
     C = new Set(Object.values(f.NJ8)),
@@ -74,7 +74,7 @@ function w() {
                   })(b, D, U),
               )
             : L(P);
-    return e !== v && (g((v = e)), !0);
+    return e !== v && (T((v = e)), !0);
 }
 class G extends a.Ay.PersistedStore {
     static displayName = "ThemeStore";
@@ -95,7 +95,7 @@ class G extends a.Ay.PersistedStore {
         (e?.theme != null &&
             ((N = 1),
             null != e.preferences && (D = y(e.preferences)),
-            g((v = L(e.theme, D[h.Fc.DARK]))),
+            T((v = L(e.theme, D[h.Fc.DARK]))),
             null != e.syncedClientThemes && (M = e.syncedClientThemes),
             null != e.syncedThemesEnabled && (U = e.syncedThemesEnabled),
             (0, s.M)(v) && (D = { ...D, [h.Fc.DARK]: v })),
@@ -127,7 +127,7 @@ let x = new G(l.h, {
             0 === N && ((D = { ...D, [h.Fc.DARK]: f.NJ8.DARK }), (N = 1)),
             E.Ay.darkSidebar &&
                 (A.A.settings.appearance?.darkSidebar ||
-                    T.wc.updateAsync(
+                    g.wc.updateAsync(
                         "appearance",
                         (e) => {
                             e.darkSidebar = !0;
@@ -140,7 +140,7 @@ let x = new G(l.h, {
     },
     LOGOUT: function (e) {
         return (
-            (P = null), (M = {}), (U = !1), !e.isSwitchingAccount && v !== f.NJ8.DARK && (g((v = f.NJ8.DARK)), w())
+            (P = null), (M = {}), (U = !1), !e.isSwitchingAccount && v !== f.NJ8.DARK && (T((v = f.NJ8.DARK)), w())
         );
     },
     OVERLAY_INITIALIZE: w,

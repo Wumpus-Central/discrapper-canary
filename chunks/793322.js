@@ -15,8 +15,8 @@ var i = n(192308),
     I = n(409626),
     p = n(362280),
     m = n(378570),
-    g = n(345942),
-    T = n(114129),
+    T = n(345942),
+    g = n(114129),
     S = n(931519),
     N = n(254838),
     C = n(718446),
@@ -118,7 +118,7 @@ function j(e) {
         y = { page: M.liQ.QUICK_SWITCHER };
     switch (N) {
         case _.rD.GUILD:
-            (0, g.u)(O.id, { navigationReplace: !0 });
+            (0, T.u)(O.id, { navigationReplace: !0 });
             break;
         case _.rD.TEXT_CHANNEL:
             null != (t = R.A.getChannel(O.id)) &&
@@ -126,7 +126,7 @@ function j(e) {
             break;
         case _.rD.VOICE_CHANNEL:
             if (null == (t = R.A.getChannel(O.id))) break;
-            (S ? s.A.updateChatOpen(O.id, !0) : (c.default.selectVoiceChannel(O.id), (0, T.oZ)(O.id)),
+            (S ? s.A.updateChatOpen(O.id, !0) : (c.default.selectVoiceChannel(O.id), (0, g.oZ)(O.id)),
                 (0, m.iN)(t.id, { state: { analyticsSource: y }, navigationReplace: !0 }));
             break;
         case _.rD.USER:
@@ -196,7 +196,7 @@ n.d(
             }
             function s(t) {
                 S.A.isEnabled()
-                    ? (n(), (0, N.H)() && (0 === S.A.getTabs().length || null != (0, T.Qo)("quick_switcher")) && t())
+                    ? (n(), (0, N.H)() && (0 === S.A.getTabs().length || null != (0, g.Qo)("quick_switcher")) && t())
                     : j(e);
             }
             switch (t) {
@@ -207,7 +207,7 @@ n.d(
                     var l, o;
                     let t = R.A.getChannel(e.record.id);
                     if (null == t) return void j(e);
-                    ((l = t.id), (o = t.getGuildId() ?? null), n(), (0, N.H)() && (0, T.D5)(l, o, "quick_switcher"));
+                    ((l = t.id), (o = t.getGuildId() ?? null), n(), (0, N.H)() && (0, g.D5)(l, o, "quick_switcher"));
                     return;
                 }
                 case _.rD.USER: {
@@ -219,12 +219,12 @@ n.d(
                             location: "Quickswitcher",
                             navigateToChannel: !1,
                         });
-                        (0, T.D5)(n, null, "quick_switcher", t);
+                        (0, g.D5)(n, null, "quick_switcher", t);
                     })().catch(() => {});
                     return;
                 }
                 case _.rD.GUILD:
-                    s(() => (0, g.u)(e.record.id, { navigationReplace: !0 }));
+                    s(() => (0, T.u)(e.record.id, { navigationReplace: !0 }));
                     return;
                 case _.rD.LINK: {
                     let t = e.record;

@@ -16,8 +16,8 @@ let c = null,
     I = null,
     p = U(),
     m = !1,
-    g = !1,
     T = !1,
+    g = !1,
     S = null,
     N = null,
     C = [],
@@ -129,14 +129,14 @@ function j(e) {
     v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function W() {
-    ((g = !0), (T = !1));
+    ((T = !0), (g = !1));
 }
 function Y() {
-    if (!g) return !1;
-    ((g = !1), (T = !0));
+    if (!T) return !1;
+    ((T = !1), (g = !0));
 }
 function K() {
-    g = !1;
+    T = !1;
 }
 function $(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -170,8 +170,8 @@ function $(e) {
         (y = h ?? null),
         (D = I ?? null),
         (P = i ?? null),
-        (g = !1),
         (T = !1),
+        (g = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (m = !0));
 }
@@ -210,7 +210,7 @@ function q(e) {
         null != f && j(f),
         (C = o),
         (O = d),
-        (g = !1),
+        (T = !1),
         (S = l.default.fromTimestamp(Date.now())),
         (R = _),
         (L = E),
@@ -264,8 +264,8 @@ function ea() {
         (h = null),
         (I = null),
         (M = {}),
-        (g = !1),
         (T = !1),
+        (g = !1),
         (S = null),
         (p = U()),
         (E = !1),
@@ -378,10 +378,10 @@ class es extends r.A {
         return N;
     }
     isLoading() {
-        return g;
+        return T;
     }
     hasInitialLoadFailed() {
-        return T;
+        return g;
     }
     getTopUserActivities() {
         return C;

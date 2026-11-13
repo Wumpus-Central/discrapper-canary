@@ -16,8 +16,8 @@ var i = n(582128),
     I = n(594061),
     p = n(46653),
     m = n(734057),
-    g = n(696451),
-    T = n(71393),
+    T = n(696451),
+    g = n(71393),
     S = n(287809),
     N = n(129230),
     C = n(12115),
@@ -177,7 +177,7 @@ class J extends d.Ay.Store {
     collator = new Intl.Collator(h.default.locale, H);
     initialize() {
         (this.waitFor(h.default),
-            this.waitFor(R.Ay, E.A, p.default, m.A, g.Ay, T.A, S.default),
+            this.waitFor(R.Ay, E.A, p.default, m.A, T.Ay, g.A, S.default),
             this.syncWith([h.default], () => {
                 let e;
                 (e = h.default.locale) !== Z.oldLocale &&
@@ -464,8 +464,8 @@ function er(e) {
         { commandTypes: h } = t,
         p = a?.toLowerCase(),
         m = p?.split(" "),
-        g = s === y.n.ONLY_TEXT,
-        S = s !== y.n.DENY ? (0, C.Ez)(h, !0, g) : [],
+        T = s === y.n.ONLY_TEXT,
+        S = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
         N = [],
         O = {
             permissionContext: t,
@@ -547,7 +547,7 @@ function er(e) {
     let P = N.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (_ === y.M.COMMAND_ONLY || _ === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = T.A.getGuild(t?.context?.guild_id),
+            n = g.A.getGuild(t?.context?.guild_id),
             i = N.some((e) => e.section.id !== M.Ik.BUILT_IN && e.data.length > 0);
         u && A.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;

@@ -44,7 +44,7 @@ function h() {
             null == (e = t) && (e = null != r && l.includes(r) ? r : l[0]);
         }
     }
-    r !== e && ((r = e), t && g.emitChange());
+    r !== e && ((r = e), t && T.emitChange());
 }
 let I = s().throttle(h, 300, { trailing: !0 });
 function p() {
@@ -59,5 +59,5 @@ class m extends l.Ay.Store {
         return (i !== e && ((i = e), (r = null), h(!1)), r ?? u.default.getId());
     }
 }
-let g = new m(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p });
-n.d(t, {}, { A: g });
+let T = new m(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p });
+n.d(t, {}, { A: T });

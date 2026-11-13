@@ -16,7 +16,7 @@ var i = n(435558),
     I = n(652215),
     p = n(355097),
     m = n(792996);
-function g(e) {
+function T(e) {
     return _.A.totalUnavailableGuilds > 0 || !d.A.isConnected() ? e : e.filter((e) => null != f.A.getStickerById(e));
 }
 n.d(
@@ -92,7 +92,7 @@ n.d(
             u.bW.updateAsync(
                 "favoriteStickers",
                 (t) =>
-                    ((t.stickerIds = g(t.stickerIds)), r().size(t.stickerIds) >= 250)
+                    ((t.stickerIds = T(t.stickerIds)), r().size(t.stickerIds) >= 250)
                         ? (l.A.show({
                               title: m.intl.string(m.t["+XYXtZ"]),
                               body: m.intl.formatToPlainString(m.t.JaIyFi, { count: 250 }),
@@ -106,7 +106,7 @@ n.d(
             u.bW.updateAsync(
                 "favoriteStickers",
                 (t) => {
-                    ((t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = g(t.stickerIds)));
+                    ((t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = T(t.stickerIds)));
                 },
                 p.Sb.INFREQUENT_USER_ACTION,
             );

@@ -16,8 +16,8 @@ var r = n(855986),
 let I = u.A.Millis.DAY,
     p = new l.A(),
     m = new Map(),
-    g = new Map(),
-    T = "",
+    T = new Map(),
+    g = "",
     S = null,
     N = !1,
     C = null,
@@ -51,7 +51,7 @@ function F(e, t) {
 function B(e) {
     let t = e instanceof o.xg ? G(e) : e;
     for (let n of (p.set(e.id, t), F(t.id, k(t.name)), e.aliases)) F(t.id, k(n));
-    if ((0, E.xl)()) for (let n of e.executables) g.set(n.name, t.id);
+    if ((0, E.xl)()) for (let n of e.executables) T.set(n.name, t.id);
 }
 class V extends r.Ay.PersistedStore {
     static displayName = "GameStore";
@@ -75,7 +75,7 @@ class V extends r.Ay.PersistedStore {
     ];
     initialize(e) {
         null != e &&
-            (null != e.detectableGamesEtag && (T = e.detectableGamesEtag),
+            (null != e.detectableGamesEtag && (g = e.detectableGamesEtag),
             null != e.blocklistEtag && (R = e.blocklistEtag),
             null != e.blocklistExecutables && (L = e.blocklistExecutables),
             null != e.blocklistPatterns && (y = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
@@ -84,7 +84,7 @@ class V extends r.Ay.PersistedStore {
     getState() {
         return (0, E.xl)()
             ? {
-                  detectableGamesEtag: T,
+                  detectableGamesEtag: g,
                   detectableGames: p.values(),
                   blocklistEtag: R,
                   blocklistExecutables: L,
@@ -176,7 +176,7 @@ class V extends r.Ay.PersistedStore {
         return !0 === i;
     }
     get detectableGamesEtag() {
-        return T;
+        return g;
     }
     get blocklistEtag() {
         return R;
@@ -198,7 +198,7 @@ class V extends r.Ay.PersistedStore {
     }
     getGameByExecutable(e) {
         if (null == e) return;
-        let t = g.get(e);
+        let t = T.get(e);
         return this.getDetectableGame(t);
     }
     shouldBlock(e) {
@@ -262,7 +262,7 @@ class V extends r.Ay.PersistedStore {
 let H = new V(a.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (p.clear(), m.clear(), g.clear(), t)) B(e);
+        for (let e of (p.clear(), m.clear(), T.clear(), t)) B(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -272,7 +272,7 @@ let H = new V(a.h, {
     },
     GAMES_DATABASE_UPDATE: function (e) {
         let { games: t, etag: n } = e;
-        for (let e of (null != n && T !== n && (p.clear(), m.clear(), g.clear(), (T = n)), t))
+        for (let e of (null != n && g !== n && (p.clear(), m.clear(), T.clear(), (g = n)), t))
             B(
                 (function (e) {
                     let { executables: t, aliases: n, third_party_skus: i } = e;

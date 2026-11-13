@@ -27,8 +27,8 @@ n.d(
                     icon: I,
                     name: p,
                     ariaLabel: m,
-                    className: g,
-                    style: T,
+                    className: T,
+                    style: g,
                     to: S,
                     onClick: N,
                     selected: C = !1,
@@ -52,8 +52,8 @@ n.d(
             return (0, i.jsxs)(o.D, {
                 ...O,
                 onClick: L,
-                className: s()(g, E.iE, { [E.wH]: C }),
-                style: { ...T, fontSize: n },
+                className: s()(T, E.iE, { [E.wH]: C }),
+                style: { ...g, fontSize: n },
                 focusProps: { enabled: !1 },
                 children: [
                     (0, i.jsx)(d.A, { children: null != m && "" !== m ? m : (p ?? "") }),

@@ -16,7 +16,7 @@
     dQ: () => eN,
     jh: () => es,
     r8: () => eI,
-    qY: () => eT,
+    qY: () => eg,
     CV: () => J,
     vD: () => Q,
     zh: () => ey,
@@ -30,7 +30,7 @@
     lx: () => eE,
     R2: () => et,
     Gn: () => ef,
-    uI: () => eg,
+    uI: () => eT,
 }),
     n(323874),
     n(14289),
@@ -52,8 +52,8 @@ var i,
     I = n(69114),
     p = n(633965),
     m = n(669700),
-    g = n(463347),
-    T = n(310829),
+    T = n(463347),
+    g = n(310829),
     S = n(383394),
     N = n(544180),
     C = n(711014),
@@ -395,7 +395,7 @@ async function ei(e, t) {
             questContentRowIndex: t.questContentRowIndex,
         });
     }
-    if ((e === X.Fw && (0, T.u)(), F.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
+    if ((e === X.Fw && (0, g.u)(), F.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
     o.h.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
     try {
         let n = (0, K.L4)(t.questContent),
@@ -554,11 +554,11 @@ async function eI(e, t) {
             u = await (0, f.sN)(),
             _ = (0, p.pc)(),
             m = null != _ ? _() : [],
-            T = C.Ay.getGuildsTree(),
+            g = C.Ay.getGuildsTree(),
             R = m
                 .filter((e) => {
-                    if ((0, g.tZ)(e)) return !1;
-                    let t = T.getNode(e);
+                    if ((0, T.tZ)(e)) return !1;
+                    let t = g.getNode(e);
                     return t?.parentId == null || S.A.isFolderExpanded(t.parentId);
                 })
                 .slice(0, 50),
@@ -715,7 +715,7 @@ async function em(e, t, n) {
             o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: new d.A(e), content: t }));
     }
 }
-async function eg(e, t) {
+async function eT(e, t) {
     await y.A.post({
         url: v.Rsh.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
@@ -726,7 +726,7 @@ async function eg(e, t) {
         rejectWithError: !1,
     });
 }
-async function eT(e) {
+async function eg(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, x.tW)(e, x.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
     if (null == n) return void V.Ay.getState().setTranscriptAsset({ questId: e.id, fetchStatus: V.Lx.FAILURE });

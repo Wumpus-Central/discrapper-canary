@@ -15,8 +15,8 @@ let d = {},
     I = !1,
     p = [],
     m = !1,
-    g = !1,
     T = !1,
+    g = !1,
     S = !1,
     N = !1,
     C = null,
@@ -48,8 +48,8 @@ function G() {
         (O = o.Iv.DIDNT_VIOLATE_POLICY),
         (R = ""),
         (p = []),
-        (g = !1),
         (T = !1),
+        (g = !1),
         (P = o.qN.NONE),
         (D = 0),
         (M = null));
@@ -93,10 +93,10 @@ class x extends a.Ay.Store {
         return m;
     }
     getShowExpressiveModalSubtitleAlt() {
-        return g;
+        return T;
     }
     getIsManualReviewFallbackEnabled() {
-        return T;
+        return g;
     }
     getIsManualReviewDecidedUnderage() {
         return S;
@@ -162,8 +162,8 @@ let k = new x(s.h, {
             (L = s),
             (p = l),
             (m = o),
-            (g = c),
-            (T = f),
+            (T = c),
+            (g = f),
             (S = N));
     },
     SAFETY_HUB_FETCH_FAILURE: function (e) {

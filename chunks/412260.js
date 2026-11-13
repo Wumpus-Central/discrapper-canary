@@ -22,7 +22,7 @@ function p() {
     };
 }
 let m = p();
-function g() {
+function T() {
     return {
         [h.pt.THIRD_PARTY]: {},
         [h.pt.BOGO]: {},
@@ -34,10 +34,10 @@ function g() {
         [h.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
     };
 }
-let T = !1,
+let g = !1,
     S = null,
     N = null,
-    C = g(),
+    C = T(),
     O = null,
     R = new Map(),
     L = null,
@@ -97,7 +97,7 @@ class x extends s.Ay.PersistedStore {
         return N;
     }
     get isFetchingActivePromotions() {
-        return T;
+        return g;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return m.hasFetchedConsumedInboundPromotionId;
@@ -196,7 +196,7 @@ let k = new x(l.h, {
     },
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: function (e) {
         let { promotions: t, consumedInboundPromotionId: n } = e;
-        ((C = g()),
+        ((C = T()),
             (R = new Map()),
             (P = null),
             t.forEach((e) => {
@@ -212,19 +212,19 @@ let k = new x(l.h, {
                     }));
             }),
             (S = Date.now()),
-            (T = !1),
+            (g = !1),
             m.hasFetchedConsumedInboundPromotionId ||
                 ((m.hasFetchedConsumedInboundPromotionId = !0), (m.consumedInboundPromotionId = n)));
     },
     ACTIVE_PROMOTIONS_FETCH: function (e) {
         let { locale: t } = e;
-        ((T = !0), (N = t));
+        ((g = !0), (N = t));
     },
     ACTIVE_PROMOTIONS_FETCH_FAIL: function () {
-        ((C = g()), (R = new Map()), (P = null), (T = !1));
+        ((C = T()), (R = new Map()), (P = null), (g = !1));
     },
     ACTIVE_PROMOTIONS_CLEAR: function () {
-        ((C = g()), (R = new Map()), (P = null), (T = !1), (S = Date.now()));
+        ((C = T()), (R = new Map()), (P = null), (g = !1), (S = Date.now()));
     },
     OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
         if (0 === Object.values(C[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
@@ -255,7 +255,7 @@ let k = new x(l.h, {
         M = [...M, t];
     },
     LOGOUT: function () {
-        ((L = null), (y = []), (m = p()), (T = !1), (S = null), (C = g()), R.clear(), (P = null), (M = []), (U = !1));
+        ((L = null), (y = []), (m = p()), (g = !1), (S = null), (C = T()), R.clear(), (P = null), (M = []), (U = !1));
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,

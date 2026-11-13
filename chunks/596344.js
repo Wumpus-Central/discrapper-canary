@@ -19,9 +19,9 @@ function h(e) {
 var I = n(164956),
     p = n(931480),
     m = n(432005),
-    g = n(697470);
+    T = n(697470);
 n(763754);
-var T = n(491001),
+var g = n(491001),
     S = n(815807),
     N = n(773669),
     C = n(811091),
@@ -183,7 +183,7 @@ class Q extends l.Ay.Store {
         let t = w.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, g.A)(e, t?.id));
+            .find((e) => (0, T.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
         let t = w.default.getCurrentUser();
@@ -368,7 +368,7 @@ let J = new Q(o.h, {
                 s = c.A.getOrCreate(t),
                 l = n(225123).A.isConnected();
             return a
-                ? (0, T.K)()
+                ? (0, g.K)()
                     ? (!(async function (e, t, n) {
                           let i = _.A.database(),
                               r = R.A.getBasicChannel(e);

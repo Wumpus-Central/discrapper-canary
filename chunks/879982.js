@@ -68,8 +68,8 @@ let h = new f(r.h, {
 var I = n(246338),
     p = n(181079),
     m = n(5180),
-    g = n(713125),
-    T = n(473529),
+    T = n(713125),
+    g = n(473529),
     S = n(313627),
     N = n(871123),
     C = n(734057),
@@ -84,7 +84,7 @@ function D(e) {
     if (null != t && b(e)) return [a.VV.CONJURE, t];
     let n = L.Ay.getChannelId(e),
         i = O.A.getDefaultChannel(e)?.id ?? void 0;
-    if ((n === a.VV.GUILD_ONBOARDING && !g.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, T.K)(e)))
+    if ((n === a.VV.GUILD_ONBOARDING && !T.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, g.K)(e)))
         return [i, null];
     if (n === a.VV.GUILD_SPACE)
         return (0, S.tT)(R.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [i, null];

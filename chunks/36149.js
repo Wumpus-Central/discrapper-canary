@@ -28,10 +28,10 @@ function p(e) {
 function m(e) {
     return e === s.Tk.VERIFIED_ADULT || e === s.Tk.INFERRED_ADULT;
 }
-function g() {
+function T() {
     return m(c.default.getCurrentUser()?.ageVerificationStatus);
 }
-function T() {
+function g() {
     let e = (0, a.bG)([c.default], () => c.default.getCurrentUser());
     return m(e?.ageVerificationStatus);
 }
@@ -39,7 +39,7 @@ n.d(
     t,
     {},
     {
-        $8: g,
+        $8: T,
         Lb: m,
         NI: function () {
             return p(c.default.getCurrentUser()?.ageVerificationStatus);
@@ -108,12 +108,12 @@ n.d(
                         : f.intl.string(f.t.HxS3oQ);
         },
         n2: function () {
-            return !T();
-        },
-        u5: function () {
             return !g();
         },
-        uE: T,
+        u5: function () {
+            return !T();
+        },
+        uE: g,
         yM: function () {
             return (0, a.bG)([c.default], () => p(c.default.getCurrentUser()?.ageVerificationStatus));
         },

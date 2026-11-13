@@ -16,8 +16,8 @@ var i = n(582128),
     I = n(945886),
     p = n(71393),
     m = n(576705),
-    g = n(218461),
-    T = n(309010),
+    T = n(218461),
+    g = n(309010),
     S = n(543465),
     N = n(403362),
     C = n(181079),
@@ -27,7 +27,7 @@ var i = n(582128),
 n(349828);
 var y = n(281405),
     D = n(818348);
-let b = [l.Ay, C.A, o.A, p.A, d.Ay, u.A, _.A, f.A, h.A, m.A, g.Ay, T.Ay, S.Ay];
+let b = [l.Ay, C.A, o.A, p.A, d.Ay, u.A, _.A, f.A, h.A, m.A, T.Ay, g.Ay, S.Ay];
 function v(e) {
     let { limit: t, includeLoading: n } = e,
         i = C.A.getFavoriteChannels(),
@@ -52,9 +52,9 @@ function P(e) {
         n = e ?? C.A.getFavoriteChannels(),
         i = new Set((0, O.PG)(n)),
         r = S.Ay.isGuildCollapsed("373"),
-        l = T.Ay.getChannelId(),
+        l = g.Ay.getChannelId(),
         o = h.A.getChannel(l),
-        d = T.Ay.getVoiceChannelId(),
+        d = g.Ay.getVoiceChannelId(),
         E = [],
         p = {};
     for (let e in n) {
@@ -82,7 +82,7 @@ function P(e) {
                             : u.A.getActiveJoinedUnreadThreadsForParent(e.guild_id, e.id)) ?? {},
                     h = (0, c.wF)(e, f, o, d, r),
                     p = I.A.isCollapsed(e.id),
-                    T = e.isThread() ? _.A.isMuted(e.id) : S.Ay.isChannelMuted(e.guild_id, e.id),
+                    g = e.isThread() ? _.A.isMuted(e.id) : S.Ay.isChannelMuted(e.guild_id, e.id),
                     N = {
                         id: e.id,
                         record: e,
@@ -91,14 +91,14 @@ function P(e) {
                         threadIds: h,
                         threadCount: a().size(h),
                         isCollapsed: p,
-                        isMuted: T,
+                        isMuted: g,
                         isFirstVoiceChannel: !1,
                         subtitle: (0, c.go)(e, p, !1),
                     };
-                return l || E || !a().isEmpty(f) || g.Ay.getMentionCount(e.id) > 0
+                return l || E || !a().isEmpty(f) || T.Ay.getMentionCount(e.id) > 0
                     ? N
-                    : (r && T) ||
-                        (i && (T || s || (0, A.gV)(e.type) || ((0, A.ig)(e.type) && !1 === g.Ay.hasUnread(e.id))))
+                    : (r && g) ||
+                        (i && (g || s || (0, A.gV)(e.type) || ((0, A.ig)(e.type) && !1 === T.Ay.hasUnread(e.id))))
                       ? null
                       : N;
             })

@@ -82,7 +82,7 @@ function m(e) {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-function g() {
+function T() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
@@ -105,7 +105,7 @@ n.d(
                     (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
                 );
             },
-            getUserIsStaff: g,
+            getUserIsStaff: T,
             getFormattedName: function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null == e) return "???";
@@ -120,7 +120,7 @@ n.d(
         G2: function (e) {
             return !h(e, { minDaysOld: 0, maxDaysOld: 30 });
         },
-        Gn: g,
+        Gn: T,
         MU: f,
         QV: p,
         R1: m,

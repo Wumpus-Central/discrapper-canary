@@ -16,9 +16,9 @@ n.d(
         J: function (e) {
             let { value: t, onSelect: n, dateFormat: A = "ll", minDate: f, maxDate: h, disabled: I = !1, ...p } = e,
                 { required: m } = p,
-                g = r.useRef(null);
+                T = r.useRef(null);
             return (0, i.jsx)(_.Y, {
-                targetElementRef: g,
+                targetElementRef: T,
                 renderPopout: function (e) {
                     let { closePopout: r } = e;
                     return (0, i.jsx)(u.l, {
@@ -44,7 +44,7 @@ n.d(
                             (0, i.jsxs)(s.F, {
                                 as: l.D,
                                 tag: "div",
-                                innerRef: g,
+                                innerRef: T,
                                 disabled: I,
                                 "aria-disabled": I,
                                 ...r,

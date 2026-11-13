@@ -28,7 +28,7 @@ n.d(
                 o = p((e) => e.inboxLastOpenedAt),
                 E = (0, l.bG)([A.A], () => A.A.getOverdueMessageReminderCount()),
                 I = (0, l.bG)([A.A], () => A.A.getMostRecentOverdueDueAt()),
-                g = E > 0 && I > o;
+                T = E > 0 && I > o;
             (r.useEffect(() => {
                 if (null == n) return;
                 let e = setTimeout(() => p.setState({ isPulsing: !1 }), 600),
@@ -39,7 +39,7 @@ n.d(
             }, [n]),
                 (0, s.l0)(() => p.setState({ toast: null, isVisible: !1, isPulsing: !1 })),
                 r.useEffect(() => {
-                    if (g)
+                    if (T)
                         return (
                             document.addEventListener("keydown", e),
                             () => {
@@ -49,22 +49,22 @@ n.d(
                     function e(e) {
                         e.key === f.dh.ESCAPE && m();
                     }
-                }, [g]));
-            let T = null != n && (a || !g) ? n : null,
-                S = null != T ? T.message : h.intl.formatToPlainString(h.t.yBmFPA, { count: E }),
-                N = null != T ? ("clock" === T.icon ? d.ClockIcon : c.BookmarkIcon) : d.ClockIcon;
+                }, [T]));
+            let g = null != n && (a || !T) ? n : null,
+                S = null != g ? g.message : h.intl.formatToPlainString(h.t.yBmFPA, { count: E }),
+                N = null != g ? ("clock" === g.icon ? d.ClockIcon : c.BookmarkIcon) : d.ClockIcon;
             return (0, i.jsx)(u.u, {
                 anchorRef: t,
                 asContainer: !0,
-                forceOpen: (null != n && a) || g,
-                onTooltipHide: g ? m : void 0,
+                forceOpen: (null != n && a) || T,
+                onTooltipHide: T ? m : void 0,
                 hideOnClick: !1,
                 position: "bottom",
                 align: "right",
                 caretConfig: { align: "end" },
                 asset: (0, i.jsx)(N, {
                     size: "sm",
-                    color: null != T ? _.A.colors.STATUS_POSITIVE : _.A.colors.TEXT_STRONG,
+                    color: null != g ? _.A.colors.STATUS_POSITIVE : _.A.colors.TEXT_STRONG,
                 }),
                 assetSize: 20,
                 body: S,

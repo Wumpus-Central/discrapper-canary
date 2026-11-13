@@ -27,12 +27,12 @@ var i = n(477900),
     v = n(543767),
     j = n(160946),
     O = n(295405),
-    R = n(793574),
-    D = n(166532),
+    D = n(793574),
+    R = n(166532),
     L = n(778705);
 function P(e) {
     let { dropdownProps: t, subscription: n, openInvoice: l } = e,
-        { analyticsLocations: s } = (0, x.Ay)(R.A.SUBSCRIPTION_DETAILS);
+        { analyticsLocations: s } = (0, x.Ay)(D.A.SUBSCRIPTION_DETAILS);
     return null == l
         ? (0, i.jsx)(p.Ay, { ...t, disabled: !0 })
         : (0, i.jsx)(p.Ay, {
@@ -51,7 +51,7 @@ function P(e) {
                       initialPlanId: n.planIdFromItems,
                       openInvoiceId: l.id,
                       analyticsLocations: s,
-                      startingStepOverride: D.pn.ADD_PAYMENT_STEPS,
+                      startingStepOverride: R.pn.ADD_PAYMENT_STEPS,
                   });
               },
           });
@@ -65,8 +65,8 @@ function k(e) {
             subscription: t,
             onPaymentSourceAdded: s,
             highlightAddPaymentMethodButton: a,
-            analyticsLocation: R,
-            currentInvoicePreview: D,
+            analyticsLocation: D,
+            currentInvoicePreview: R,
             disabled: L = !1,
             openInvoice: k,
             isBrandRefresh: w = !1,
@@ -100,13 +100,13 @@ function k(e) {
                 hasFetchedSubscriptionPlans: r,
                 canManagePayment: !o && !(s && 0 === a.length),
             };
-        })(t, D),
+        })(t, R),
         { analyticsLocations: W } = (0, x.Ay)(),
         [K, Z] = l.useState(!1),
         [q, Q] = l.useState(t.currency);
     async function J(e, n, i) {
         if (null == t) throw Error("missing subscription and paymentSource");
-        (null == e ? await S.r6(t, n, i, W, R) : await S.uK(t, e, i, W, R), Z(!1), Q(n));
+        (null == e ? await S.r6(t, n, i, W, D) : await S.uK(t, e, i, W, D), Z(!1), Q(n));
     }
     async function $(e, l, s) {
         Z(!0);
@@ -116,10 +116,10 @@ function k(e) {
                 renewal: !0,
                 currency: null != e ? void 0 : l,
                 analyticsLocations: W,
-                analyticsLocation: R,
+                analyticsLocation: D,
             }),
             a = { amount: r.subtotal, currency: r.currency };
-        D.currency !== r.currency || (D.currency === r.currency && D.total !== r.total)
+        R.currency !== r.currency || (R.currency === r.currency && R.total !== r.total)
             ? await (async function (e, t, l) {
                   let s = await (0, d.mM)(
                       async () => {
@@ -151,7 +151,7 @@ function k(e) {
     }
     let et = () => {
             (0, d.mM)(
-                async () => (e) => (0, i.jsx)(T.default, { ...e, onAddPaymentSource: ee, analyticsLocation: R }),
+                async () => (e) => (0, i.jsx)(T.default, { ...e, onAddPaymentSource: ee, analyticsLocation: D }),
                 {
                     onCloseCallback: () => {
                         (0, h.ET)();
@@ -193,7 +193,7 @@ function k(e) {
             n,
             l = N.A.get(t.planIdForCurrencies);
         o()(null != l, "Unable to fetch plan");
-        let s = null != D.checkoutContext ? D.checkoutContext.allowed_currencies : null,
+        let s = null != R.checkoutContext ? R.checkoutContext.allowed_currencies : null,
             a = null != s && s.length > 0 ? s : (0, C._w)(l, t.paymentSourceId, !1),
             u = null != t.paymentSourceId ? X.find((e) => e.id === t.paymentSourceId) : null,
             d = u?.type === G.hes.TDS_WALLET,

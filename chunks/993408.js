@@ -17,8 +17,8 @@ n(623373);
 var I = n(758836),
     p = n(652215),
     m = n(818348),
-    g = n(792996),
-    T = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
+    T = n(792996),
+    g = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
 let S = { nitro: "nitro", thirdparty: "xbox" };
 function N(e, t, n) {
     return R(e, n ? (t ? p.lid.MOBILE_PREMIUM_TIER_2 : p.lid.MOBILE) : t ? p.lid.PREMIUM_TIER_2 : p.lid.DEFAULT);
@@ -138,17 +138,17 @@ function x(e) {
                 return 3.8 * e;
             },
             Br: N,
-            D0: T,
+            D0: g,
             Dm: function (e) {
                 switch (e) {
                     case a.R.AVATAR_DECORATION:
-                        return g.intl.string(g.t["7v0T9P"]);
+                        return T.intl.string(T.t["7v0T9P"]);
                     case a.R.PROFILE_EFFECT:
-                        return g.intl.string(g.t.wR5wOo);
+                        return T.intl.string(T.t.wR5wOo);
                     case a.R.NAMEPLATE:
-                        return g.intl.string(g.t.x5CoXR);
+                        return T.intl.string(T.t.x5CoXR);
                     case a.R.PROFILE_FRAME:
-                        return g.intl.string(g.t.GWrZOd);
+                        return T.intl.string(T.t.GWrZOd);
                     default:
                         return null;
                 }

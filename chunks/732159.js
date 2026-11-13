@@ -23,17 +23,17 @@ n.d(
                 h = f.CANCEL,
                 I = f.INLINE_NOTICE_GENERIC_ERROR,
                 [p, m] = r.useState(!1),
-                g = r.useRef(u);
+                T = r.useRef(u);
             (r.useLayoutEffect(() => {
-                g.current = u;
+                T.current = u;
             }),
                 r.useLayoutEffect(
                     () => () => {
-                        g.current?.();
+                        T.current?.();
                     },
                     [],
                 ));
-            let [T, S] = r.useState(void 0);
+            let [g, S] = r.useState(void 0);
             function N(e) {
                 S(e);
             }
@@ -63,7 +63,7 @@ n.d(
                 ],
                 actionBarInput: null != o ? (0, i.jsx)(l.e, { ...o }) : void 0,
                 role: "alertdialog",
-                notice: null != T ? { message: T, type: "critical", role: "alert" } : void 0,
+                notice: null != g ? { message: g, type: "critical", role: "alert" } : void 0,
                 ...A,
                 children: E,
             });

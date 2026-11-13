@@ -35,8 +35,8 @@ n.d(
                 p.current = d;
             }, [d]);
             let {
-                    refs: g,
-                    floatingStyles: T,
+                    refs: T,
+                    floatingStyles: g,
                     context: S,
                 } = (0, r.we)({
                     open: E,
@@ -72,8 +72,8 @@ n.d(
             return {
                 isOpen: E,
                 setIsOpen: A,
-                refs: g,
-                floatingStyles: T,
+                refs: T,
+                floatingStyles: g,
                 context: S,
                 getReferenceProps: C,
                 getFloatingProps: O,

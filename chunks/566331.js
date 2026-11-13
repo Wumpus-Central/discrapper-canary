@@ -10,8 +10,8 @@ var r = n(503698),
     d = n(964486),
     m = n(652896),
     h = n(734057),
-    g = n(818348),
-    f = n(792996),
+    f = n(818348),
+    g = n(792996),
     A = n(2753);
 n.d(
     t,
@@ -26,7 +26,7 @@ n.d(
             let p = n < 550 ? "small" : n < 1e3 ? "medium" : "large";
             return (0, i.jsx)(a.N, {
                 disableAdaptiveTheme: !0,
-                theme: g.NJ.ONYX,
+                theme: f.NJ.ONYX,
                 children: (e) =>
                     (0, i.jsx)("div", {
                         className: l()(A.container, e),
@@ -44,7 +44,7 @@ n.d(
                                             color: "none",
                                             variant: "small" === p ? "heading-sm/medium" : "heading-lg/medium",
                                             className: A.header,
-                                            children: f.intl.formatToMarkdownString(f.t.Kb4Ukp, {}),
+                                            children: g.intl.formatToMarkdownString(g.t.Kb4Ukp, {}),
                                         }),
                                         (0, i.jsx)(u.$, {
                                             variant: "secondary",
@@ -52,7 +52,7 @@ n.d(
                                             onClick: (e) => {
                                                 (e.stopPropagation(), (0, c.Xi)((0, m._z)(t)));
                                             },
-                                            text: f.intl.string(f.t["4EGMWL"]),
+                                            text: g.intl.string(g.t["4EGMWL"]),
                                         }),
                                     ],
                                 }),

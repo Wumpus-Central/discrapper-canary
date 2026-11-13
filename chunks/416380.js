@@ -17,8 +17,8 @@ var i = n(435558),
 n(705751);
 let p = 10 + Math.random() * (10 * E.A.Millis.SECOND),
     m = 2 * E.A.Millis.HOUR + Math.floor(Math.random() * (10 * E.A.Millis.MINUTE)),
-    g = null,
-    T = !1;
+    T = null,
+    g = !1;
 class S extends s.A {
     actions = { POST_CONNECTION_OPEN: N, CONNECTION_RESUMED: N, CONNECTION_CLOSED: R, APP_STATE_UPDATE: O, LOGOUT: C };
     _initialize() {
@@ -108,19 +108,19 @@ class S extends s.A {
     }
 }
 function N() {
-    ((T = !0), y(p, !0));
+    ((g = !0), y(p, !0));
 }
 function C() {
-    ((T = !1), clearTimeout(g), (g = null));
+    ((g = !1), clearTimeout(T), (T = null));
 }
 function O(e) {
-    T && "active" !== e.state && (clearTimeout(g), (g = null), L(!1));
+    g && "active" !== e.state && (clearTimeout(T), (T = null), L(!1));
 }
 function R() {
-    T && (clearTimeout(g), (g = null), L(!1));
+    g && (clearTimeout(T), (T = null), L(!1));
 }
 async function L(e) {
-    if (T) {
+    if (g) {
         if (
             (y(m, !1),
             !f.A.hasLoaded(I.oD.FRECENCY_AND_FAVORITES_SETTINGS) &&
@@ -144,7 +144,7 @@ async function L(e) {
     }
 }
 function y(e, t) {
-    (null != g && clearTimeout(g), (g = setTimeout(() => L(t), e)));
+    (null != T && clearTimeout(T), (T = setTimeout(() => L(t), e)));
 }
 let D = new S();
 n.d(t, {}, { A: D });

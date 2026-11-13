@@ -65,18 +65,18 @@ function m(e) {
             ? null
             : { status: "capture_failed", reason: "snapshots stopped" };
 }
-function g() {
+function T() {
     let e = null != u ? m(u) : null;
     null != e && S(e);
 }
-function T(e, t) {
+function g(e, t) {
     for (let n of new Set([r.A, s.A, l.A, ...(e.gate?.stores ?? [])]))
-        t ? n.addChangeListener(g) : n.removeChangeListener(g);
+        t ? n.addChangeListener(T) : n.removeChangeListener(T);
 }
 function S(e) {
     null != u &&
         (c.info(`capture stopped: ${e.reason}`, { applicationId: u.applicationId }),
-        T(u, !1),
+        g(u, !1),
         (u = null),
         (_ = null),
         null != f && clearTimeout(f),
@@ -117,7 +117,7 @@ n.d(
                 i = N(e.maxHeight);
             if (null == u || u.frameId !== e.frameId || u.maxWidth !== n || u.maxHeight !== i) {
                 if (
-                    (null != u && T(u, !1),
+                    (null != u && g(u, !1),
                     (u = {
                         frameId: e.frameId,
                         applicationId: t,
@@ -135,7 +135,7 @@ n.d(
                         S({ status: "unsupported", reason: "snapshots did not start" }),
                         C(t, { status: "unsupported", reason: "snapshots did not start" })
                     );
-                T(u, !0);
+                g(u, !0);
             }
             (null != f && clearTimeout(f),
                 (f = setTimeout(() => S({ status: "capture_failed", reason: "idle" }), 3e4)));

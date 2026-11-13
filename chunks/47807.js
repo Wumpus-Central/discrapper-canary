@@ -321,7 +321,7 @@ class p extends o.G {
     }
 }
 let m = new p();
-class g extends o.G {
+class T extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.CollectionPageMarketingBlock", [
             { no: 1, name: "title_localized", kind: "message", T: () => d.X },
@@ -375,7 +375,7 @@ class g extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let T = new g();
+let g = new T();
 var S =
     (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
     (i[(i.MARKETING_PAGE = 1)] = "MARKETING_PAGE"),
@@ -1798,7 +1798,7 @@ class ep extends o.G {
     }
 }
 let em = new ep();
-class eg extends o.G {
+class eT extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PaymentModalBanner", [
             { no: 1, name: "asset_url", kind: "scalar", T: 9 },
@@ -1859,7 +1859,7 @@ class eg extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eT = new eg();
+let eg = new eT();
 var eS = n(670474);
 class eN extends o.G {
     constructor() {
@@ -1945,7 +1945,7 @@ class eR extends o.G {
             { no: 2, name: "announcement_modal_variant_1", kind: "message", oneof: "properties", T: () => eO.ih },
             { no: 4, name: "premium_tab", kind: "message", oneof: "properties", T: () => eC },
             { no: 5, name: "marketing_page_banner", kind: "message", oneof: "properties", T: () => eS.C },
-            { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => eT },
+            { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => eg },
             { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => em },
             { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => eh },
             { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => eA.l },
@@ -1972,7 +1972,7 @@ class eR extends o.G {
             { no: 31, name: "outbound_promotion_claim_modal_card", kind: "message", oneof: "properties", T: () => L },
             { no: 32, name: "shop_coachmark", kind: "message", oneof: "properties", T: () => O.I },
             { no: 33, name: "nitro_perk_card", kind: "message", oneof: "properties", T: () => C },
-            { no: 34, name: "collection_page_marketing_block", kind: "message", oneof: "properties", T: () => T },
+            { no: 34, name: "collection_page_marketing_block", kind: "message", oneof: "properties", T: () => g },
             { no: 35, name: "game_exit_panel", kind: "message", oneof: "properties", T: () => m },
             { no: 36, name: "announcement_modal_video_led", kind: "message", oneof: "properties", T: () => I },
             { no: 37, name: "announcement_modal_panel", kind: "message", oneof: "properties", T: () => f },
@@ -2028,7 +2028,7 @@ class eR extends o.G {
                 case 6:
                     r.properties = {
                         oneofKind: "paymentModalBanner",
-                        paymentModalBanner: eT.internalBinaryRead(e, e.uint32(), n, r.properties.paymentModalBanner),
+                        paymentModalBanner: eg.internalBinaryRead(e, e.uint32(), n, r.properties.paymentModalBanner),
                     };
                     break;
                 case 7:
@@ -2255,7 +2255,7 @@ class eR extends o.G {
                 case 34:
                     r.properties = {
                         oneofKind: "collectionPageMarketingBlock",
-                        collectionPageMarketingBlock: T.internalBinaryRead(
+                        collectionPageMarketingBlock: g.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -2326,7 +2326,7 @@ class eR extends o.G {
                     n,
                 ).join(),
             "paymentModalBanner" === e.properties.oneofKind &&
-                eT
+                eg
                     .internalBinaryWrite(e.properties.paymentModalBanner, t.tag(6, a.O0.LengthDelimited).fork(), n)
                     .join(),
             "mobileBottomSheet" === e.properties.oneofKind &&
@@ -2448,11 +2448,13 @@ class eR extends o.G {
             "nitroPerkCard" === e.properties.oneofKind &&
                 C.internalBinaryWrite(e.properties.nitroPerkCard, t.tag(33, a.O0.LengthDelimited).fork(), n).join(),
             "collectionPageMarketingBlock" === e.properties.oneofKind &&
-                T.internalBinaryWrite(
-                    e.properties.collectionPageMarketingBlock,
-                    t.tag(34, a.O0.LengthDelimited).fork(),
-                    n,
-                ).join(),
+                g
+                    .internalBinaryWrite(
+                        e.properties.collectionPageMarketingBlock,
+                        t.tag(34, a.O0.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join(),
             "gameExitPanel" === e.properties.oneofKind &&
                 m.internalBinaryWrite(e.properties.gameExitPanel, t.tag(35, a.O0.LengthDelimited).fork(), n).join(),
             "announcementModalVideoLed" === e.properties.oneofKind &&

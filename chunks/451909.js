@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(863005),
     p = n(253932),
     m = n(734057),
-    g = n(808728),
-    T = n(696451),
+    T = n(808728),
+    g = n(696451),
     S = n(317525),
     N = n(71393),
     C = n(576705),
@@ -347,7 +347,7 @@ function J(e, t) {
     } else
         n =
             null != i
-                ? T.Ay.getMembers(i).map((e) => {
+                ? g.Ay.getMembers(i).map((e) => {
                       let { userId: t, nick: n } = e;
                       return { userId: t, nick: n };
                   })
@@ -368,16 +368,16 @@ function J(e, t) {
                 let { id: t, name: n } = e;
                 return { id: t, text: n };
             }),
-        u = r()(g.A.getTextChannelNameDisambiguations(i)).map((e) => {
+        u = r()(T.A.getTextChannelNameDisambiguations(i)).map((e) => {
             let { id: t, name: n } = e;
             return { id: t, text: n };
         }),
         _ =
             null != i
                 ? r()(y.L3)
-                      .filter((e) => e !== g.I)
+                      .filter((e) => e !== T.I)
                       .flatMap((e) =>
-                          g.A.getChannels(i)[e].map((e) =>
+                          T.A.getChannels(i)[e].map((e) =>
                               e.channel.isCategory() && !C.A.can(M.xBc.VIEW_CHANNEL, e.channel)
                                   ? null
                                   : { id: e.channel.id, text: (0, o.m1)(e.channel, L.default, O.A) },

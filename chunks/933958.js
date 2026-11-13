@@ -16,8 +16,8 @@ var r = n(855986),
     I = n(956518),
     p = n(878549),
     m = n(969151),
-    g = n(847381),
-    T = n(108959),
+    T = n(847381),
+    g = n(108959),
     S = n(487887),
     N = n(5867),
     C = n(652215);
@@ -106,8 +106,8 @@ function z(e) {
             participants: e.participants.map(X),
             contentClassification: e.content_classification,
         },
-        g = (0, I.Ay)(r);
-    if (null == g) return;
+        T = (0, I.Ay)(r);
+    if (null == T) return;
     let S = (0, m.H)(o),
         O = 0 === (null != S ? (v.get(S)?.getItems("all") ?? R) : R).length,
         L = (P.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
@@ -124,7 +124,7 @@ function z(e) {
             location: o,
             launchId: s,
             compositeInstanceId: l,
-            url: g,
+            url: T,
             userIds: new Set(y),
             participants: A,
             contentClassification: h,
@@ -152,7 +152,7 @@ function z(e) {
                               isStart: A,
                               referrerId: h,
                               customId: p,
-                              inviterUserId: g,
+                              inviterUserId: T,
                               proxyTicket: S,
                               renderInFramePool: O,
                           } = e,
@@ -186,14 +186,14 @@ function z(e) {
                               isStart: A,
                               participants: l,
                               embeddedActivity: P,
-                              inviterUserId: g,
+                              inviterUserId: T,
                           }));
                       let M = (0, f.f)();
                       (!0 === O
                           ? (j = N.Gd.DISCONNECTED)
                           : M
                             ? ((j = N.Gd.ACTIVITY_POPOUT_WINDOW), a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }))
-                            : (j = y !== u.Ay.getChannelId() || (0, T.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
+                            : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
                                   return `${e}:${t}`;
@@ -486,7 +486,7 @@ let ee = new Z(a.h, {
         let r = Date.now();
         (!(function (e) {
             let { activities: t, now: n } = e,
-                i = (0, g.A)((0, A.R0)()),
+                i = (0, T.A)((0, A.R0)()),
                 r = t.reduce((e, t) => {
                     let r = t.client_platform_config[i];
                     if (null == r.label_from || null == r.label_until) return e;

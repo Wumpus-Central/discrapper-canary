@@ -20,7 +20,7 @@ function p() {
 function m() {
     p();
 }
-class g extends s.Ay.Store {
+class T extends s.Ay.Store {
     static displayName = "BrowserHandoffStore";
     initialize() {
         !1 !== l.w.get(A) && (f = _.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL);
@@ -32,7 +32,7 @@ class g extends s.Ay.Store {
         return r;
     }
 }
-let T = new g(d.h, {
+let g = new T(d.h, {
     RPC_SERVER_READY: function (e) {
         ((i = `${location.protocol}//${location.host}/handoff?rpc=${e.port}`), I());
     },
@@ -51,4 +51,4 @@ let T = new g(d.h, {
     LOGOUT: m,
     REGISTER: m,
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

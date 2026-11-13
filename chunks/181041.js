@@ -15,14 +15,14 @@ var i = n(635377),
     I = n(575279);
 let p = new (r())({ max: 10, dispose: D }),
     m = new Map();
-function g(e, t) {
+function T(e, t) {
     let n = m.get(e);
     return null != n && !!n.has(t) && (n.delete(t), 0 === n.size && m.delete(e), !0);
 }
-let T = new Map();
+let g = new Map();
 function S(e, t) {
-    let n = T.get(e);
-    null != n && (n.delete(t), 0 === n.size && T.delete(e));
+    let n = g.get(e);
+    null != n && (n.delete(t), 0 === n.size && g.delete(e));
 }
 function N(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
@@ -140,7 +140,7 @@ class v extends a.Ay.Store {
         return p.peek(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
     }
     isConversationFetchPending(e, t) {
-        let n = T.get(e);
+        let n = g.get(e);
         return null != n && 0 !== n.size && (!0 !== t || n.has("full"));
     }
     getConversationFeedbackRating(e, t) {
@@ -153,7 +153,7 @@ let P = new v(s.h, {
         let n,
             { conversationId: i, full: r, cacheType: a } = e;
         if ("channel" !== a) return !1;
-        ((t = r ? "full" : "preview"), null != (n = T.get(i)) ? n.add(t) : T.set(i, new Set([t])));
+        ((t = r ? "full" : "preview"), null != (n = g.get(i)) ? n.add(t) : g.set(i, new Set([t])));
     },
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, messages: i, messageReferences: r, fullyHydrated: a, cacheType: s } = e;
@@ -182,7 +182,7 @@ let P = new v(s.h, {
                 fullyHydrated: c,
                 selectedConversationId: u,
             } = e;
-        if (!g(n, o)) return !1;
+        if (!T(n, o)) return !1;
         let _ = i.map(h.a).filter(E.Vq),
             f = p.peek(n);
         if (l) {
@@ -191,9 +191,9 @@ let P = new v(s.h, {
         } else t = f?.conversations ?? [];
         let I = l ? null : (f?.reachedOldest ?? null),
             m = l ? null : (f?.reachedNewest ?? null),
-            T = new Set(t.map((e) => e.id));
+            g = new Set(t.map((e) => e.id));
         if (
-            (_.some((e) => !T.has(e.id)) ||
+            (_.some((e) => !g.has(e.id)) ||
                 null == s ||
                 ("before" === a ? (I = Date.now()) : "after" === a && (m = Date.now())),
             "before" === a && null == s && (m = Date.now()),
@@ -250,7 +250,7 @@ let P = new v(s.h, {
     },
     CHANNEL_CONVERSATIONS_FETCH_FAILURE: function (e) {
         let { channelId: t, requestKey: n } = e;
-        return g(t, n);
+        return T(t, n);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -312,7 +312,7 @@ let P = new v(s.h, {
     RELATIONSHIP_UPDATE: L,
     RELATIONSHIP_REMOVE: L,
     LOGOUT: function () {
-        (p.reset(), m.clear(), T.clear());
+        (p.reset(), m.clear(), g.clear());
     },
 });
 n.d(t, {}, { A: P });

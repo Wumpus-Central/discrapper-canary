@@ -59,13 +59,13 @@ n.d(
                 showChevronButton: I = !0,
                 children: p,
                 handleToggle: m,
-                handleClear: g,
-                variant: T = "default",
+                handleClear: T,
+                variant: g = "default",
             } = e;
             return (0, i.jsxs)(d.F, {
                 ref: t,
                 containerClassName: a()(u.cQ, { [u.Ij]: o }),
-                className: a()(u.Bd, { [u.ar]: c, [u.ND]: A, [u.O_]: "unsupported_payment_modal_card" === T }),
+                className: a()(u.Bd, { [u.ar]: c, [u.ND]: A, [u.O_]: "unsupported_payment_modal_card" === g }),
                 "data-mana-component": "select-input-field",
                 disabled: n,
                 readOnly: r,
@@ -74,7 +74,7 @@ n.d(
                 "aria-busy": s,
                 children: [
                     (0, i.jsx)("div", { className: u.gt, children: p }),
-                    (0, i.jsx)(_, { show: !0 === l && !A && !0 === f, iconSize: I ? "xs" : "sm", onClick: g }),
+                    (0, i.jsx)(_, { show: !0 === l && !A && !0 === f, iconSize: I ? "xs" : "sm", onClick: T }),
                     (0, i.jsx)(E, { show: I, isOpen: c, onClick: m }),
                 ],
             });

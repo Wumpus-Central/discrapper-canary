@@ -23,8 +23,8 @@ n.d(
                     position: I = "top",
                     align: p = "center",
                     spacing: m,
-                    targetElementRef: g,
-                    anchorRef: T,
+                    targetElementRef: T,
+                    anchorRef: g,
                     caretConfig: S,
                     positionKey: N,
                     ariaHidden: C = !1,
@@ -32,13 +32,13 @@ n.d(
                 } = e,
                 [R, L] = r.useState(null);
             r.useLayoutEffect(() => {
-                null != T && L(T.current);
-            }, [T]);
+                null != g && L(g.current);
+            }, [g]);
             let y = r.useCallback(
                     (e) => {
-                        (null == T && L(e), (0, d.cZ)(g, e));
+                        (null == g && L(e), (0, d.cZ)(T, e));
                     },
-                    [g, T],
+                    [T, g],
                 ),
                 {
                     tooltipId: D,
@@ -90,7 +90,7 @@ n.d(
                               isRendered: x,
                               targetElementRef: v,
                               targetElement: R,
-                              anchorRef: T,
+                              anchorRef: g,
                               id: D,
                               content: w,
                               position: I,

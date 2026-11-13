@@ -16,8 +16,8 @@ var i = n(991690),
     I = n(292702),
     p = n(173912),
     m = n(617297),
-    g = n(366430),
-    T = n(165610),
+    T = n(366430),
+    g = n(165610),
     S = n(652215),
     N = n(917550),
     C = n(792996);
@@ -37,7 +37,7 @@ async function O(e) {
                       }
                   })(v, n)
                 : void 0,
-        M = (0, g.It)(_.A.getApplication(b)),
+        M = (0, T.It)(_.A.getApplication(b)),
         U = !M.has(i.U.MAIN) && M.has(i.U.APP_CHANNEL),
         w = null != P ? await (0, m.A)(b, { preferredChannelId: P, fallback: U }) : null,
         G =
@@ -71,7 +71,7 @@ async function O(e) {
         }
     let { frameId: F, launched: B } =
         null != G
-            ? { frameId: (0, T.VA)(b, (0, A.e)(G)), launched: Promise.resolve() }
+            ? { frameId: (0, g.VA)(b, (0, A.e)(G)), launched: Promise.resolve() }
             : (0, p.A)({
                   applicationId: b,
                   channel: w,
