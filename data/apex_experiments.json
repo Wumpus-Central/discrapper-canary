@@ -5990,6 +5990,18 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-11-cti-desktop-viewer",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "name": "2026-11-game-exit-promo-bloons",
     "kind": "user",
     "defaultConfig": {
