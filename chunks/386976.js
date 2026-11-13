@@ -3,7 +3,7 @@ var i = n(582128),
     a = n(637450),
     s = n(102609),
     l = n(620233),
-    o = n(50258),
+    o = n(340344),
     d = n(375441);
 function c(e) {
     return { id: e, label: `Variant ${e}`, shortLabel: `Variant ${e}`, type: a.FZ.UNSPECIFIED };

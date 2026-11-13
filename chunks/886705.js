@@ -2,7 +2,7 @@ n.d(t, { A: () => o });
 var i = n(723702);
 n(855986);
 var r = n(945810);
-n(50258);
+n(340344);
 let a = { preferSystemEffects: !1 },
     s = (0, r.mj)({
         name: "2025-12-windows-audio-effects",

@@ -1,6 +1,6 @@
 var n = l(855986),
     i = l(945810),
-    a = l(50258),
+    a = l(340344),
     r = l(46653);
 let s = (0, i.mj)({
     name: "2026-11-wishlist-countdown",

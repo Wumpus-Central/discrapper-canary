@@ -1,6 +1,6 @@
 var i = a(855986),
     l = a(945810),
-    d = a(50258);
+    d = a(340344);
 let t = (0, l.mj)({
         name: "2026-10-pinot-admin",
         kind: "guild",

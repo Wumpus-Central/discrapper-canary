@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672902, Version Hash: 4ff44adf9eca8ebdbdc497bea78876cd711cc2de`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 672910, Version Hash: 1d4b298c2c7f58342d68831c218e6dcdc078aa3e`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672902";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "672910";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -13987,7 +13987,7 @@ var hn = n(914313),
     ha = n(683760),
     hs = n(236056),
     hl = n(881489),
-    ho = n(50258);
+    ho = n(340344);
 let hd = (0, V.mj)({
     name: "2026-10-nitro-tab-remove-account-age-restriction",
     kind: "user",
@@ -15999,7 +15999,7 @@ let pm = "isHideDevBanner",
                     className: td()(pp.Wz, pp.mr),
                     children: [
                         (0, v.jsx)(pI, { className: pp.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672902" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "672910" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })

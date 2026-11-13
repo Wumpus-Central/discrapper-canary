@@ -1,12 +1,13 @@
-n.d(t, { Ay: () => c });
+n.d(t, { Ay: () => u });
 var i = n(582128),
     r = n(855986);
 let a = new (n(611599).Vy)("ApexExperiment");
 var s = n(80703),
     l = n(46653),
     o = n(403362),
-    d = n(50258);
-function c(e) {
+    d = n(340344),
+    c = n(319771);
+function u(e) {
     return (function (e, t, n, s) {
         let l,
             { name: o, kind: d, variations: c, defaultConfig: u } = e;
@@ -34,7 +35,7 @@ function c(e) {
             useConfig: function (e, n) {
                 let a = s(d, e),
                     l = s("user", e),
-                    [c, _] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(d, a, o, l), [a, l]),
+                    [c, _] = (0, r.yK)([t], () => t.getConfigEvaluationAndAssignment(d, a, o, l), [a, l]),
                     A = _?.variantId,
                     f = _?.trackedVariantId ?? A,
                     h = _?.revision,
@@ -45,15 +46,16 @@ function c(e) {
                     g = null == T,
                     S = n?.autoTrackExposure !== !1;
                 return ((0, i.useEffect)(() => {
-                    S &&
-                        null != c &&
-                        null != f &&
-                        null != h &&
-                        !1 === I &&
-                        !0 === p &&
-                        !0 !== m &&
-                        !g &&
-                        t.trackExperimentExposure(c, o, e.location, d, h, f, a);
+                    (g || !0 === m || t.onConfigApplied(d, a, o),
+                        S &&
+                            null != c &&
+                            null != f &&
+                            null != h &&
+                            !1 === I &&
+                            !0 === p &&
+                            !0 !== m &&
+                            !g &&
+                            t.trackExperimentExposure(c, o, e.location, d, h, f, a));
                 }, [S, a, c, f, h, e.location, I, p, m, g]),
                 null == A || !0 === m || null == T)
                     ? u
@@ -62,7 +64,7 @@ function c(e) {
             getConfig: function (e, i) {
                 let r = n(d, e),
                     a = "guild" === d ? n("user", { location: e.location }) : void 0,
-                    [s, l] = t.getEvaluationAndAssignment(d, r, o, a),
+                    [s, l] = t.getConfigEvaluationAndAssignment(d, r, o, a),
                     c = l?.variantId,
                     _ = l?.trackedVariantId ?? c,
                     A = l?.revision,
@@ -70,7 +72,8 @@ function c(e) {
                     h = l?.exposureTrackingEnabled,
                     I = l?.useAsEligibility,
                     p = E(l);
-                return (i?.autoTrackExposure !== !1 &&
+                return (null != p && !0 !== I && t.onConfigApplied(d, r, o),
+                i?.autoTrackExposure !== !1 &&
                     null != s &&
                     null != _ &&
                     null != A &&
@@ -84,19 +87,7 @@ function c(e) {
                     : p;
             },
         };
-    })(e, d.A, u, _);
-}
-function u(e, t) {
-    switch (e) {
-        case "guild":
-            return t.guildId;
-        case "user":
-            return l.default.getId();
-        case "installation":
-            return (0, s.v)(l.default.getInstallationForTracking()) ?? "";
-        default:
-            (0, o.xb)(e);
-    }
+    })(e, d.A, c.c, _);
 }
 function _(e, t) {
     let [n, i] = (0, r.yK)([l.default], () => [l.default.getId(), l.default.getInstallationForTracking()]);
