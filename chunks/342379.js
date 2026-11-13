@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     a$: "categoryPill_ufks4w",
     ZG: "categoryItemGuildCategory_ufks4w categoryItem_ufks4w",
     td: "categoryItemPackCategory_ufks4w categoryItem_ufks4w",

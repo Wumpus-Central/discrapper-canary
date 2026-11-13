@@ -1,54 +1,54 @@
-let l = new Set();
+let i = new Set();
 t.d(
-    e,
+    n,
     {},
     {
-        n0: function (n) {
-            let { getImpressionId: e, onEmit: t, initialWatchedSeconds: o = 0, thresholdSeconds: i = 5 } = n,
-                r = Math.max(0, o),
-                a = null,
+        n0: function (e) {
+            let { getImpressionId: n, onEmit: t, initialWatchedSeconds: l = 0, thresholdSeconds: a = 5 } = e,
+                o = Math.max(0, l),
+                r = null,
                 s = null,
-                u = !1;
-            function d() {
-                let n = e();
-                return null != n && n.length > 0 ? n : null;
+                d = !1;
+            function u() {
+                let e = n();
+                return null != e && e.length > 0 ? e : null;
             }
             function c() {
-                a = null;
+                r = null;
             }
             return {
-                onProgress(n) {
-                    let { positionSeconds: e, durationSeconds: o, isPlaying: x } = n,
-                        h = d();
+                onProgress(e) {
+                    let { positionSeconds: n, durationSeconds: l, isPlaying: x } = e,
+                        h = u();
                     if (null == h) return void c();
-                    if ((null != s && s !== h && ((r = 0), c()), (s = h), !l.has(h) && !u)) {
+                    if ((null != s && s !== h && ((o = 0), c()), (s = h), !i.has(h) && !d)) {
                         if (!x) return void c();
-                        if (null != a) {
-                            let n = e - a;
-                            n > 0 && n <= 1.5 && (r += n);
+                        if (null != r) {
+                            let e = n - r;
+                            e > 0 && e <= 1.5 && (o += e);
                         }
-                        ((a = e),
-                            r < i ||
-                                l.has(h) ||
-                                u ||
-                                ((u = !0),
+                        ((r = n),
+                            o < a ||
+                                i.has(h) ||
+                                d ||
+                                ((d = !0),
                                 Promise.resolve(
-                                    t({ video_watch_seconds: r, video_position_seconds: e, video_duration_seconds: o }),
+                                    t({ video_watch_seconds: o, video_position_seconds: n, video_duration_seconds: l }),
                                 )
                                     .then(() => {
-                                        l.add(h);
+                                        i.add(h);
                                     })
                                     .catch(() => {})
                                     .finally(() => {
-                                        u = !1;
+                                        d = !1;
                                     })));
                     }
                 },
                 pause: c,
-                getWatchedSeconds: () => r,
+                getWatchedSeconds: () => o,
                 hasEmitted: () => {
-                    let n = d();
-                    return u || (null != n && l.has(n));
+                    let e = u();
+                    return d || (null != e && i.has(e));
                 },
             };
         },

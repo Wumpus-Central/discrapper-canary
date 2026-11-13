@@ -1,20 +1,20 @@
-var l = t(477900);
+var i = t(477900);
 t(582128);
-var o = t(408278),
-    i = t(789645),
-    r = t(792996);
+var l = t(408278),
+    a = t(789645),
+    o = t(792996);
 t.d(
-    e,
+    n,
     {},
     {
-        A: function (n) {
-            let { onClose: e } = n;
-            return (0, l.jsx)(o.K, {
+        A: function (e) {
+            let { onClose: n } = e;
+            return (0, i.jsx)(l.K, {
                 "data-testid": "ad-video-modal-close-btn",
                 variant: "overlay-secondary",
-                icon: i.XSmallIcon,
-                "aria-label": r.intl.string(r.t.cpT0Cq),
-                onClick: e,
+                icon: a.XSmallIcon,
+                "aria-label": o.intl.string(o.t.cpT0Cq),
+                onClick: n,
             });
         },
     },

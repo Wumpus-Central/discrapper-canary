@@ -1,15 +1,15 @@
-var l = t(876230),
-    o = t(931853),
-    i = t(792996);
+var i = t(876230),
+    l = t(931853),
+    a = t(792996);
 t.d(
-    e,
+    n,
     {},
     {
-        b: function (n) {
-            let { playerState: e, pauseReason: t } = n;
-            return e === l.Q6.PAUSED && (t === l.KB.FOCUS || t === l.KB.PICTURE_IN_PICTURE)
-                ? i.intl.string(i.t.w6PeBF)
-                : (0, o.u)(n);
+        b: function (e) {
+            let { playerState: n, pauseReason: t } = e;
+            return n === i.Q6.PAUSED && (t === i.KB.FOCUS || t === i.KB.PICTURE_IN_PICTURE)
+                ? a.intl.string(a.t.w6PeBF)
+                : (0, l.u)(e);
         },
     },
 );
