@@ -3283,8 +3283,9 @@ function aW(e) {
             "aria-describedby": n,
             "aria-label": tf.intl.string(tf.t["R3BPH+"]),
             children: [
-                (0, i.jsx)(td, {
+                (0, i.jsx)(ts.E, {
                     variant: "mono-md/normal",
+                    color: "none",
                     className: aP.Pf,
                     children: tf.intl.string(tf.t["R3BPH+"]),
                 }),
