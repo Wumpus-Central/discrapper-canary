@@ -120,6 +120,7 @@ let p = new I(l.h, {
             ...n,
             progress: n.progress ?? a?.progress,
             info_label: n.info_label ?? a?.info_label,
+            stats: n.stats ?? a?.stats,
         }),
             A.set(t, r));
     },
