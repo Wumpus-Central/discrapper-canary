@@ -99,15 +99,15 @@ function v(e) {
                 gap: 24,
                 align: "center",
                 children: [
-                    (0, t.jsx)(y, { linkedGuild: l.linkedGuild }),
                     (0, t.jsx)(x.D, {
-                        variant: "heading-xl/semibold",
-                        color: "text-strong",
+                        variant: "heading-md/semibold",
+                        color: "text-subtle",
                         className: N.G3,
                         children: b.intl.formatToPlainString(h.default.WmxMAI, {
                             displayNoun: l.displayNoun ?? "other",
                         }),
                     }),
+                    (0, t.jsx)(y, { linkedGuild: l.linkedGuild }),
                 ],
             }),
             (0, t.jsxs)(m.B, {
