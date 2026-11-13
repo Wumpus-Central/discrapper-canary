@@ -701,7 +701,7 @@ function ec(e) {
                                 getAvailableDefaultPlanId: s,
                             } = e(),
                             { initialPlanId: l, continueSessionToInitialStep: o } = a;
-                        if (null == n || null == o) return l;
+                        if (null == n || null == o) return l === D.gD.PREMIUM_GROUP_MONTH ? void 0 : l;
                         let d = t ?? i;
                         return s({ skuId: d }) ?? (0, en.x)(d, r);
                     },

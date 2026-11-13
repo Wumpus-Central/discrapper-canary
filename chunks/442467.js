@@ -23,12 +23,17 @@ n.d(
                 purchaseTokenHash: null,
                 expiresAt: null,
                 handlePaymentFailureForPurchaseTokenAuth: (e) => {
-                    let { error: t } = e;
-                    n(t instanceof r.Ay ? t : new r.Ay(t));
+                    let { error: i, loadId: a } = e;
+                    a === t().contextMetadata.loadId && n(i instanceof r.Ay ? i : new r.Ay(i));
                 },
                 handleBillingErrorForPurchaseTokenAuth: n,
-                handlePurchaseTokenAuth: (t) => {
-                    e({ purchaseTokenAuthState: 2, purchaseTokenHash: t.purchaseTokenHash, expiresAt: t.expiresAt });
+                handlePurchaseTokenAuth: (n) => {
+                    1 === t().purchaseTokenAuthState &&
+                        e({
+                            purchaseTokenAuthState: 2,
+                            purchaseTokenHash: n.purchaseTokenHash,
+                            expiresAt: n.expiresAt,
+                        });
                 },
                 resetPurchaseTokenState: () => {
                     e({ purchaseTokenAuthState: 0, purchaseTokenHash: null, expiresAt: null });
