@@ -1,5 +1,5 @@
 var l = n(922590),
-    i = n(652215);
+    r = n(652215);
 n.d(
     t,
     {},
@@ -9,8 +9,8 @@ n.d(
                 n = (0, l.f1)(t);
             return {
                 gameFriends: n,
-                hasOutgoingPendingGameFriends: (0, l.KL)(t, i.eA$.PENDING_OUTGOING),
-                hasIncomingPendingGameFriends: (0, l.KL)(t, i.eA$.PENDING_INCOMING),
+                hasOutgoingPendingGameFriends: (0, l.KL)(t, r.eA$.PENDING_OUTGOING),
+                hasIncomingPendingGameFriends: (0, l.KL)(t, r.eA$.PENDING_INCOMING),
             };
         },
     },

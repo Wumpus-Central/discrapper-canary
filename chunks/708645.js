@@ -1,26 +1,26 @@
-var l = n(477900),
-    r = n(582128),
-    i = n(855986),
-    a = n(46653),
-    s = n(609425),
-    d = n(245175);
+var l = t(477900),
+    r = t(582128),
+    i = t(855986),
+    a = t(46653),
+    s = t(609425),
+    d = t(245175);
 let c = r.createContext(d.yw.OFF);
 function u() {
     return r.useContext(c);
 }
 function o(e) {
-    let { location: t, children: n } = e,
-        { placement: r } = d.fM.useConfig({ location: t });
-    return (0, l.jsx)(c.Provider, { value: r, children: n });
+    let { location: n, children: t } = e,
+        { placement: r } = d.fM.useConfig({ location: n });
+    return (0, l.jsx)(c.Provider, { value: r, children: t });
 }
-n.d(
-    t,
+t.d(
+    n,
     {},
     {
         ZQ: function (e) {
-            let { user: t, guildId: n, location: r, children: d } = e,
-                c = (0, i.bG)([a.default], () => a.default.getId() === t.id),
-                u = (0, s.A)({ userId: t.id, guildId: n });
+            let { user: n, guildId: t, location: r, children: d } = e,
+                c = (0, i.bG)([a.default], () => a.default.getId() === n.id),
+                u = (0, s.A)({ userId: n.id, guildId: t });
             return c || null == u ? d : (0, l.jsx)(o, { location: r, children: d });
         },
         sn: function () {

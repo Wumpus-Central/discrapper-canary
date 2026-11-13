@@ -1,25 +1,25 @@
-var r = n(688954),
-    l = n(785389);
+var l = n(688954),
+    r = n(785389);
 n.d(
-    e,
+    t,
     {},
     {
-        JI: async function (t, e) {
+        JI: async function (e, t) {
             let n, i;
             try {
-                n = await (0, r.h)(t, "/agent/external-auth/authorize-url", {
+                n = await (0, l.h)(e, "/agent/external-auth/authorize-url", {
                     method: "POST",
-                    json: { connection_type: e },
+                    json: { connection_type: t },
                 });
             } catch {
                 return { type: "error", error: "unavailable" };
             }
             if (!n.ok) {
-                let t = null;
+                let e = null;
                 try {
-                    t = (0, l.rG)((await n.json())?.error);
+                    e = (0, r.rG)((await n.json())?.error);
                 } catch {}
-                return { type: "error", error: (0, l.ls)(n.status, t) };
+                return { type: "error", error: (0, r.ls)(n.status, e) };
             }
             try {
                 i = (await n.json())?.url;
@@ -30,16 +30,16 @@ n.d(
                 ? { type: "url", url: i }
                 : { type: "error", error: "unavailable" };
         },
-        ho: function (t) {
-            return new Date(t.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
+        ho: function (e) {
+            return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
         },
-        y_: async function (t) {
-            let { regenerate: e = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                n = await (0, r.h)(t, "/agent/mcp-token", { method: "POST", query: e ? { regenerate: "1" } : void 0 });
+        y_: async function (e) {
+            let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                n = await (0, l.h)(e, "/agent/mcp-token", { method: "POST", query: t ? { regenerate: "1" } : void 0 });
             if (!n.ok) throw Error(`mcp token failed (${n.status})`);
-            let l = await n.json(),
-                i = "number" == typeof l.expires_in ? Date.now() + 1e3 * l.expires_in : Date.parse(l.expires_at);
-            return { url: l.url, expiresAtMs: i };
+            let r = await n.json(),
+                i = "number" == typeof r.expires_in ? Date.now() + 1e3 * r.expires_in : Date.parse(r.expires_at);
+            return { url: r.url, expiresAtMs: i };
         },
     },
 );

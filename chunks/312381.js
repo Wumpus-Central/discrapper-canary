@@ -1,8 +1,8 @@
 var l = n(477900),
-    i = n(503698),
-    r = n.n(i),
-    a = n(194261),
-    o = n(834730),
+    r = n(503698),
+    i = n.n(r),
+    o = n(194261),
+    a = n(834730),
     s = n(792996),
     u = n(169655);
 n.d(
@@ -12,10 +12,10 @@ n.d(
         A: function (e) {
             let { className: t } = e;
             return (0, l.jsxs)("div", {
-                className: r()(u.v, t),
+                className: i()(u.v, t),
                 children: [
-                    (0, l.jsx)(a.LockIcon, { size: "xs", color: "currentColor" }),
-                    (0, l.jsx)(o.E, {
+                    (0, l.jsx)(o.LockIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsx)(a.E, {
                         variant: "body-sm/semibold",
                         className: u.Q,
                         children: s.intl.string(s.t.KPnd2O),

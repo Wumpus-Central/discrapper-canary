@@ -1,78 +1,78 @@
-var r = n(582128);
+var l = n(582128);
 n(71637);
-let l = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
+let r = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
     i = new Map(),
     a = new Set();
-function o(t) {
-    return i.get(t) ?? l;
+function o(e) {
+    return i.get(e) ?? r;
 }
-function u(t, e) {
-    for (let n of (e.active || 0 !== e.annotations.length ? i.set(t, e) : i.delete(t), [...a]))
+function u(e, t) {
+    for (let n of (t.active || 0 !== t.annotations.length ? i.set(e, t) : i.delete(e), [...a]))
         try {
             n();
-        } catch (t) {
-            console.error("[conjure] design feedback subscriber threw", t);
+        } catch (e) {
+            console.error("[conjure] design feedback subscriber threw", e);
         }
 }
-function s(t, e) {
-    return null != e && t.authorId === e;
+function s(e, t) {
+    return null != t && e.authorId === t;
 }
-function c(t) {
+function c(e) {
     return (
-        a.add(t),
+        a.add(e),
         () => {
-            a.delete(t);
+            a.delete(e);
         }
     );
 }
 n.d(
-    e,
+    t,
     {},
     {
-        AW: function (t, e) {
-            let n = o(t);
+        AW: function (e, t) {
+            let n = o(e);
             n.active &&
-                0 !== e.size &&
-                u(t, {
+                0 !== t.size &&
+                u(e, {
                     ...n,
-                    annotations: n.annotations.map((t) => {
-                        let n = e.get(t.id);
-                        return null == n ? t : { ...t, target: n };
+                    annotations: n.annotations.map((e) => {
+                        let n = t.get(e.id);
+                        return null == n ? e : { ...e, target: n };
                     }),
                 });
         },
-        F5: function (t, e) {
-            let n = o(t);
-            n.active && u(t, { ...n, context: e });
+        F5: function (e, t) {
+            let n = o(e);
+            n.active && u(e, { ...n, context: t });
         },
         It: s,
         _c: o,
-        aC: function (t, e, n) {
-            let r = o(t),
-                l = r.annotations.find((t) => t.id === n);
-            null != l && s(l, e) && u(t, { ...r, annotations: r.annotations.filter((t) => t.id !== n) });
+        aC: function (e, t, n) {
+            let l = o(e),
+                r = l.annotations.find((e) => e.id === n);
+            null != r && s(r, t) && u(e, { ...l, annotations: l.annotations.filter((e) => e.id !== n) });
         },
-        mB: function (t) {
-            i.has(t) && u(t, l);
+        mB: function (e) {
+            i.has(e) && u(e, r);
         },
-        pV: function (t, e, n, r) {
-            let l = o(t),
-                i = l.annotations.find((t) => t.id === n);
+        pV: function (e, t, n, l) {
+            let r = o(e),
+                i = r.annotations.find((e) => e.id === n);
             null != i &&
-                s(i, e) &&
-                u(t, { ...l, annotations: l.annotations.map((t) => (t.id === n ? { ...t, comment: r } : t)) });
+                s(i, t) &&
+                u(e, { ...r, annotations: r.annotations.map((e) => (e.id === n ? { ...e, comment: l } : e)) });
         },
-        qX: function (t) {
-            let e = o(t);
-            e.active && u(t, { ...e, active: !1 });
+        qX: function (e) {
+            let t = o(e);
+            t.active && u(e, { ...t, active: !1 });
         },
-        rt: function (t) {
-            let e = r.useCallback(() => (null == t ? l : o(t)), [t]);
-            return r.useSyncExternalStore(c, e, e);
+        rt: function (e) {
+            let t = l.useCallback(() => (null == e ? r : o(e)), [e]);
+            return l.useSyncExternalStore(c, t, t);
         },
-        w4: function (t) {
-            let e = o(t);
-            e.active || u(t, { ...e, active: !0 });
+        w4: function (e) {
+            let t = o(e);
+            t.active || u(e, { ...t, active: !0 });
         },
     },
 );

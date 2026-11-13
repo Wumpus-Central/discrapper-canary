@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Ay: () => e4, Es: () => eB, hw: () => eK, Xr: () => e$, Zh: () => eM, xU: () => eq }), n(321073), n(667532));
+(n.d(t, { Ay: () => e8, Es: () => eB, hw: () => eK, Xr: () => e$, Zh: () => eM, xU: () => eq }), n(321073), n(667532));
 var r = n(435558),
     a = n.n(r),
     s = n(536637),
@@ -970,4 +970,4 @@ let e7 = new e5(E.h, {
             return (ec.setCanonicalGameIds(t), ek());
         },
     }),
-    e4 = e7;
+    e8 = e7;

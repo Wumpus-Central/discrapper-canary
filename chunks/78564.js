@@ -1,32 +1,32 @@
-var r = n(46676);
+var l = n(46676);
 n.d(
-    e,
+    t,
     {},
     {
-        B: function (t) {
-            let e = 0,
+        B: function (e) {
+            let t = 0,
                 n = null,
-                r = null,
                 l = null,
+                r = null,
                 i = !1,
                 a = !1,
                 o = !1;
             function u() {
                 (async function () {
                     if (!(i || a || o)) {
-                        ((i = !0), t.update("uploading", r));
+                        ((i = !0), e.update("uploading", l));
                         try {
-                            if (((n ??= await t.capture(e++)), null == n)) throw Error("capture failed");
-                            if (((r ??= await t.composite(n)), null == r)) throw Error("composite failed");
+                            if (((n ??= await e.capture(t++)), null == n)) throw Error("capture failed");
+                            if (((l ??= await e.composite(n)), null == l)) throw Error("composite failed");
                             if (
-                                (null == l || (await t.isStaged(l)) || (l = null),
-                                o || (t.update("uploading", r), (l ??= await t.upload(r)), o))
+                                (null == r || (await e.isStaged(r)) || (r = null),
+                                o || (e.update("uploading", l), (r ??= await e.upload(l)), o))
                             )
                                 return;
-                            if (!t.send(l)) throw Error("send failed");
-                            ((a = !0), t.update("sent", r));
+                            if (!e.send(r)) throw Error("send failed");
+                            ((a = !0), e.update("sent", l));
                         } catch {
-                            o || t.update("failed", r);
+                            o || e.update("failed", l);
                         } finally {
                             i = !1;
                         }
@@ -43,8 +43,8 @@ n.d(
                 }
             );
         },
-        C: function (t) {
-            return (0, r.jG)(t.history.present) && t.sketchDismissedFor !== t.history.present;
+        C: function (e) {
+            return (0, l.jG)(e.history.present) && e.sketchDismissedFor !== e.history.present;
         },
     },
 );

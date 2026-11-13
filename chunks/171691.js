@@ -1,11 +1,11 @@
-var r = n(839214),
-    l = n(57570),
+var l = n(839214),
+    r = n(57570),
     i = n(46676),
     a = n(78564);
 let o = [3, 6, 12],
     u = [10, 20, 40],
     s = new Map(),
-    c = (0, r.D)(() => ({ byProject: {} })),
+    c = (0, l.D)(() => ({ byProject: {} })),
     d = {
         active: !0,
         tool: "pick",
@@ -18,101 +18,101 @@ let o = [3, 6, 12],
         chatFocusRequest: 0,
         keptStill: null,
     };
-function f(t) {
-    return c.getState().byProject[t] ?? null;
+function f(e) {
+    return c.getState().byProject[e] ?? null;
 }
-function p(t, e) {
-    let n = f(t);
+function p(e, t) {
+    let n = f(e);
     if (null == n) return;
-    let r = e(n);
-    if (r === n) return;
-    let { byProject: l } = c.getState();
-    c.setState({ byProject: { ...l, [t]: r } });
+    let l = t(n);
+    if (l === n) return;
+    let { byProject: r } = c.getState();
+    c.setState({ byProject: { ...r, [e]: l } });
 }
-function h(t) {
-    return s.get(t)?.() ?? Promise.resolve(null);
+function h(e) {
+    return s.get(e)?.() ?? Promise.resolve(null);
 }
-function g(t) {
-    if (null == f(t)) return;
-    let { [t]: e, ...n } = c.getState().byProject;
-    (c.setState({ byProject: n }), (0, l.mB)(t));
+function g(e) {
+    if (null == f(e)) return;
+    let { [e]: t, ...n } = c.getState().byProject;
+    (c.setState({ byProject: n }), (0, r.mB)(e));
 }
 n.d(
-    e,
+    t,
     {},
     {
         C: h,
         Cw: u,
         It: g,
         K7: f,
-        KZ: function (t, e) {
-            (p(t, (t) => ({ ...t, markerSize: e, tool: "marker" })), (0, l.qX)(t));
+        KZ: function (e, t) {
+            (p(e, (e) => ({ ...e, markerSize: t, tool: "marker" })), (0, r.qX)(e));
         },
-        My: function (t) {
-            f(t)?.active === !1 ? g(t) : p(t, (t) => ({ ...t, history: i.vd, sketchDismissedFor: null }));
+        My: function (e) {
+            f(e)?.active === !1 ? g(e) : p(e, (e) => ({ ...e, history: i.vd, sketchDismissedFor: null }));
         },
-        QP: function (t) {
-            p(t, (t) => ({ ...t, chatFocusRequest: t.chatFocusRequest + 1 }));
+        QP: function (e) {
+            p(e, (e) => ({ ...e, chatFocusRequest: e.chatFocusRequest + 1 }));
         },
-        Qq: function (t) {
-            return "marker" === t.tool ? o[t.markerSize] : "eraser" === t.tool ? u[t.eraserSize] : null;
+        Qq: function (e) {
+            return "marker" === e.tool ? o[e.markerSize] : "eraser" === e.tool ? u[e.eraserSize] : null;
         },
-        V9: function (t) {
-            let e = f(t);
-            if (null != e) {
-                if (!(0, a.C)(e)) return void g(t);
-                (e.active && p(t, (e) => ({ ...e, active: !1, keptStill: h(t) })), (0, l.mB)(t));
+        V9: function (e) {
+            let t = f(e);
+            if (null != t) {
+                if (!(0, a.C)(t)) return void g(e);
+                (t.active && p(e, (t) => ({ ...t, active: !1, keptStill: h(e) })), (0, r.mB)(e));
             }
         },
-        Yx: function (t, e) {
-            p(t, (t) => (t.colorId === e ? t : { ...t, colorId: e }));
+        Yx: function (e, t) {
+            p(e, (e) => (e.colorId === t ? e : { ...e, colorId: t }));
         },
-        _A: function (t, e) {
-            (p(t, (t) => ({ ...t, eraserSize: e, tool: "eraser" })), (0, l.qX)(t));
+        _A: function (e, t) {
+            (p(e, (e) => ({ ...e, eraserSize: t, tool: "eraser" })), (0, r.qX)(e));
         },
-        bE: function (t) {
-            return c.useState((e) => (null == t ? null : (e.byProject[t]?.chatFocusRequest ?? null)));
+        bE: function (e) {
+            return c.useState((t) => (null == e ? null : (t.byProject[e]?.chatFocusRequest ?? null)));
         },
-        c$: function (t) {
-            let e = f(t);
-            if (null != e) {
-                e.active || p(t, (t) => ({ ...t, active: !0, keptStill: null }));
+        c$: function (e) {
+            let t = f(e);
+            if (null != t) {
+                t.active || p(e, (e) => ({ ...e, active: !0, keptStill: null }));
                 return;
             }
             let { byProject: n } = c.getState();
-            c.setState({ byProject: { ...n, [t]: d } });
+            c.setState({ byProject: { ...n, [e]: d } });
         },
         ck: o,
-        d5: function (t) {
-            return c.useState((e) => (null == t ? null : (e.byProject[t] ?? null)));
+        d5: function (e) {
+            return c.useState((t) => (null == e ? null : (t.byProject[e] ?? null)));
         },
-        fc: function (t) {
-            return c.useState((e) => {
-                let n = null == t ? null : e.byProject[t];
+        fc: function (e) {
+            return c.useState((t) => {
+                let n = null == e ? null : t.byProject[e];
                 return null != n && (0, a.C)(n);
             });
         },
-        j5: function (t, e) {
-            null == e ? s.delete(t) : s.set(t, e);
+        j5: function (e, t) {
+            null == t ? s.delete(e) : s.set(e, t);
         },
-        lQ: function (t) {
-            return c.useState((e) => null != t && e.byProject[t]?.active === !0);
+        lQ: function (e) {
+            return c.useState((t) => null != e && t.byProject[e]?.active === !0);
         },
-        rC: function (t, e) {
-            null != f(t) &&
-                (p(t, (t) =>
-                    t.tool === e ? t : { ...t, tool: e, lastShape: "circle" === e || "square" === e ? e : t.lastShape },
+        rC: function (e, t) {
+            null != f(e) &&
+                (p(e, (e) =>
+                    e.tool === t ? e : { ...e, tool: t, lastShape: "circle" === t || "square" === t ? t : e.lastShape },
                 ),
-                "pick" === e ? (0, l.w4)(t) : (0, l.qX)(t));
+                "pick" === t ? (0, r.w4)(e) : (0, r.qX)(e));
         },
-        tD: function (t, e) {
-            p(t, (t) => {
-                let n = (0, i.Vp)(t.history, e);
-                return n === t.history ? t : { ...t, history: n };
+        tD: function (e, t) {
+            p(e, (e) => {
+                let n = (0, i.Vp)(e.history, t);
+                return n === e.history ? e : { ...e, history: n };
             });
         },
-        xU: function (t) {
-            f(t)?.active === !1 ? g(t) : p(t, (t) => ({ ...t, sketchDismissedFor: t.history.present }));
+        xU: function (e) {
+            f(e)?.active === !1 ? g(e) : p(e, (e) => ({ ...e, sketchDismissedFor: e.history.present }));
         },
     },
 );

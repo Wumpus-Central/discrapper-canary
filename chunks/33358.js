@@ -1,8 +1,8 @@
 var l = n(582128),
     s = n(855986),
     i = n(617617),
-    a = n(734057),
-    r = n(994500),
+    r = n(734057),
+    a = n(994500),
     o = n(287809),
     u = n(811602),
     c = n(282108),
@@ -17,11 +17,11 @@ n.d(
                 m,
                 h,
                 x,
-                { channelId: g, authorId: p } = null == e ? {} : (0, c.nx)(e);
+                { channelId: C, authorId: p } = null == e ? {} : (0, c.nx)(e);
             return (
                 (t = (0, c.ku)()),
                 (n = (0, s.bG)([o.default], () => o.default.getCurrentUser())),
-                (m = (0, s.bG)([a.A, r.A], () => (0, c.c2)(g, p, [a.A, r.A]))),
+                (m = (0, s.bG)([r.A, a.A], () => (0, c.c2)(C, p, [r.A, a.A]))),
                 (h = (0, s.bG)(
                     [i.A],
                     () => t.reduce((e, t) => ({ ...e, [t.harmType]: t.getProtoUserSettings(i.A.settings) }), {}),
