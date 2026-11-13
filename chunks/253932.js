@@ -212,12 +212,18 @@ let v = (0, _.c$)(
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: e }),
     );
-(0, _.c$)(
+((0, _.c$)(
     "notifications",
-    "notificationCenterAckedBeforeId",
-    (e) => e ?? "0",
-    (e) => e,
-);
+    "notifyFriendsOnCustomStatusUpdate",
+    (e) => e?.value ?? !0,
+    (e) => l._t.create({ value: e }),
+),
+    (0, _.c$)(
+        "notifications",
+        "notificationCenterAckedBeforeId",
+        (e) => e ?? "0",
+        (e) => e,
+    ));
 let K = (0, _.c$)(
         "gameLibrary",
         "installShortcutDesktop",
