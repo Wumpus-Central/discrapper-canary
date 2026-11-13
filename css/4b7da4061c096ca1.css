@@ -301,7 +301,12 @@
 .promotionProgressLabel_80OD1- {
     align-items: center;
     display: flex;
+    flex: 1;
     gap: var(--space-6)
+}
+
+.promotionProgressCountdown_80OD1- {
+    white-space: nowrap
 }
 
 .promotionProgressIcon_80OD1- {
@@ -498,4 +503,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=65dd2f7f6829ecef.css.map*/
+/*# sourceMappingURL=4b7da4061c096ca1.css.map*/

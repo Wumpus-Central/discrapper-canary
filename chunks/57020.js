@@ -35,10 +35,12 @@ function c(e) {
           ? l.push(n)
           : null != r && l.push(r);
     let I = l.length > 0 && l[0]?.currency === o.Yri.DISCORD_ORB,
-        v = l.map((e) => (e.currency === o.Yri.DISCORD_ORB ? null : s));
+        v = l.map((e) => (e.currency === o.Yri.DISCORD_ORB ? null : s)),
+        f = null != v[0];
     return {
         checkoutEligiblePrices: l,
         checkoutEligibleFormerPrices: v,
+        isShowingPromoPrice: f,
         isOrbExclusive: i,
         hasSufficientOrbs: t,
         shouldCheckoutWithOrbs: I,

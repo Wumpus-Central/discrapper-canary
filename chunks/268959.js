@@ -56,35 +56,34 @@ function S(e) {
         T = null != O ? (0, g.WU)(O) : null,
         N = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
         P = f.Ay.canUseShopDiscounts(N),
-        { isOrbExclusive: V, checkoutEligibleFormerPrices: L } = (0, C.F)({
+        { isOrbExclusive: V, isShowingPromoPrice: L } = (0, C.F)({
             product: t,
             hasShopDiscount: P,
             prioritizedCurrency: u,
         }),
-        D = null != L[0],
-        M = (0, x.g)(t),
-        w = (0, _.S)(M),
-        B = n;
+        D = (0, x.g)(t),
+        M = (0, _.S)(D),
+        w = n;
     if (
-        (null == B &&
+        (null == w &&
             (null != i
-                ? (B = E.AW.BADGE_OVERRIDE)
-                : D && null != w
-                  ? (B = E.AW.PROMO_DISCOUNT)
+                ? (w = E.AW.BADGE_OVERRIDE)
+                : L && null != M
+                  ? (w = E.AW.PROMO_DISCOUNT)
                   : (0, A.JQ)(t)
-                    ? (B = E.AW.DYNAMIC)
+                    ? (w = E.AW.DYNAMIC)
                     : (0, g.HF)(O)
-                      ? (B = E.AW.LIMITED_TIME)
+                      ? (w = E.AW.LIMITED_TIME)
                       : !k && !m && (0, g.aT)(t.skuId)
-                        ? (B = E.AW.NEW)
+                        ? (w = E.AW.NEW)
                         : V
-                          ? (B = E.AW.ORBS_EXCLUSIVE)
-                          : S && (B = E.AW.NITRO_EXCLUSIVE)),
-        null == B || B === E.AW.NONE)
+                          ? (w = E.AW.ORBS_EXCLUSIVE)
+                          : S && (w = E.AW.NITRO_EXCLUSIVE)),
+        null == w || w === E.AW.NONE)
     )
         return null;
-    if (B === E.AW.DYNAMIC) return (0, r.jsx)(y, { className: l, tabIndex: d });
-    if (B === E.AW.ORBS_EXCLUSIVE)
+    if (w === E.AW.DYNAMIC) return (0, r.jsx)(y, { className: l, tabIndex: d });
+    if (w === E.AW.ORBS_EXCLUSIVE)
         return (0, r.jsx)("div", {
             className: s()(l, R.$),
             children: (0, r.jsx)(o.E, {
@@ -93,33 +92,33 @@ function S(e) {
                 icon: c.OrbsIcon,
             }),
         });
-    if (B === E.AW.PROMO_DISCOUNT && null != w)
+    if (w === E.AW.PROMO_DISCOUNT && null != M)
         return (0, r.jsx)("div", {
             className: s()(l, R.$),
             children: (0, r.jsx)(o.E, {
-                type: { text: b.intl.formatToPlainString(b.t.nH5DSU, { percentage: w }) },
+                type: { text: b.intl.formatToPlainString(b.t.nH5DSU, { percentage: M }) },
                 variant: "inverted",
                 icon: I.TagIcon,
             }),
         });
-    let H = null;
-    switch (B) {
+    let B = null;
+    switch (w) {
         case E.AW.LIMITED_TIME:
             if (null != T) {
                 let e = T > 1 ? b.intl.formatToPlainString(b.t.Io7ozn, { days: T }) : b.intl.string(b.t.Bc13HF);
-                H = (0, r.jsx)(o.E, { type: { text: e }, variant: "inverted" });
-            } else H = (0, r.jsx)(o.E, { type: { text: b.intl.string(b.t["h/uBCR"]) }, variant: "inverted" });
+                B = (0, r.jsx)(o.E, { type: { text: e }, variant: "inverted" });
+            } else B = (0, r.jsx)(o.E, { type: { text: b.intl.string(b.t["h/uBCR"]) }, variant: "inverted" });
             break;
         case E.AW.NEW:
-            H = (0, r.jsx)(o.E, { type: "new", variant: "inverted" });
+            B = (0, r.jsx)(o.E, { type: "new", variant: "inverted" });
             break;
         case E.AW.NITRO_EXCLUSIVE:
-            H = (0, r.jsx)(o.E, { type: { text: b.intl.string(b.t.X3Ekj8) }, variant: "inverted" });
+            B = (0, r.jsx)(o.E, { type: { text: b.intl.string(b.t.X3Ekj8) }, variant: "inverted" });
             break;
         case E.AW.BADGE_OVERRIDE:
-            null != i && "" !== i && (H = (0, r.jsx)(o.E, { type: { text: i }, variant: "inverted" }));
+            null != i && "" !== i && (B = (0, r.jsx)(o.E, { type: { text: i }, variant: "inverted" }));
     }
-    return null == H ? null : (0, r.jsx)("div", { className: s()(l, R.$), children: H });
+    return null == B ? null : (0, r.jsx)("div", { className: s()(l, R.$), children: B });
 }
 n.d(
     t,
