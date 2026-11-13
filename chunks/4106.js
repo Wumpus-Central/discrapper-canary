@@ -15,46 +15,48 @@ var i = n(620632),
 let h = Promise.resolve(),
     I = null,
     p = 0,
-    m = new Set(),
-    T = {},
-    g = null,
-    S = o.default.isAuthenticated() ? (o.default.getId() ?? null) : null,
-    N = null != S ? (o.default.getAuthSessionIdHash() ?? null) : null,
-    C = {};
-function O() {
-    for (let e of m) e();
+    m = 0,
+    T = 0,
+    g = new Set(),
+    S = {},
+    N = null,
+    C = o.default.isAuthenticated() ? (o.default.getId() ?? null) : null,
+    O = null != C ? (o.default.getAuthSessionIdHash() ?? null) : null,
+    R = {};
+function L() {
+    for (let e of g) e();
 }
-function R() {
-    ((g = null), (T = {}), I?.abort(), (C = {}), _.C2.resetSession());
+function y() {
+    ((N = null), (S = {}), (m = 0), (T = 0), I?.abort(), (R = {}), _.C2.resetSession());
 }
-function L(e) {
-    S !== e && (R(), (S = e), (N = null));
+function D(e) {
+    C !== e && (y(), (C = e), (O = null));
 }
-function y(e) {
-    null != e && (null != N && N !== e && R(), (N = e));
+function b(e) {
+    null != e && (null != O && O !== e && y(), (O = e));
 }
-function D() {
-    (R(), (S = null), (N = null));
+function v() {
+    (y(), (C = null), (O = null));
 }
-(r.h.subscribe("LOGOUT", D),
-    r.h.subscribe("LOGIN_SUCCESS", D),
+(r.h.subscribe("LOGOUT", v),
+    r.h.subscribe("LOGIN_SUCCESS", v),
     r.h.subscribe("LOGIN_RESET", (e) => {
         let { isMultiAccount: t } = e;
-        t || D();
+        t || v();
     }),
-    r.h.subscribe("AGE_GATE_LOGOUT_UNDERAGE_NEW_USER", D),
-    r.h.subscribe("CLOSE_SUSPENDED_USER", D),
+    r.h.subscribe("AGE_GATE_LOGOUT_UNDERAGE_NEW_USER", v),
+    r.h.subscribe("CLOSE_SUSPENDED_USER", v),
     r.h.subscribe("CONNECTION_CLOSED", (e) => {
         let { code: t } = e;
-        4004 === t && D();
+        4004 === t && v();
     }),
     r.h.subscribe("CONNECTION_OPEN", (e) => {
         let { user: t, authSessionIdHash: n } = e;
-        (L(t.id), y(n));
+        (D(t.id), b(n));
     }),
     r.h.subscribe("AUTH_SESSION_CHANGE", (e) => {
         let { authSessionIdHash: t } = e;
-        y(t);
+        b(t);
     }),
     n.d(
         t,
@@ -80,9 +82,9 @@ function D() {
                     return !1;
                 },
                 subscribeDiscoverRequests: (e) => (
-                    m.add(e),
+                    g.add(e),
                     () => {
-                        m.delete(e);
+                        g.delete(e);
                     }
                 ),
                 hasDiscoverRequestInFlight: () => p > 0,
@@ -90,13 +92,13 @@ function D() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { isInitialLoad: t, isReloading: n, forceRefresh: a } = e;
                     if (
-                        (L(d.default.getCurrentUser()?.id ?? null),
-                        y(o.default.getAuthSessionIdHash()),
+                        (D(d.default.getCurrentUser()?.id ?? null),
+                        b(o.default.getAuthSessionIdHash()),
                         e.isDiscoverPickerCommit &&
-                            null != S &&
+                            null != C &&
                             (I?.abort(),
-                            (T = {}),
-                            (g = { picks: l.A.getPicks() }),
+                            (S = {}),
+                            (N = { picks: l.A.getPicks() }),
                             _.C2.observeGate((0, s.SL)("fetchDehydrated")),
                             _.C2.commitPicker(),
                             !(async function (e) {
@@ -105,72 +107,82 @@ function D() {
                                 } catch (e) {
                                     c.A.captureException(e);
                                 }
-                            })(_.C2.capture(S, o.default.getAuthSessionIdHash() ?? null))),
+                            })(_.C2.capture(C, o.default.getAuthSessionIdHash() ?? null))),
                         (0, E.Lg)("fetchDehydrated"))
                     ) {
-                        if ((0, s.SL)("fetchDehydrated"))
+                        if ((0, s.SL)("fetchDehydrated")) {
+                            if (e.isDiscoverBackground && (p > 0 || Math.max(0, m + 6e4 - Date.now()) > 0)) return;
                             return (function (e) {
                                 let { isInitialLoad: t, isReloading: n, isDiscoverPickerCommit: a } = e,
                                     E = d.default.getCurrentUser()?.id,
-                                    A = a ? g : null,
-                                    m = T,
-                                    S = C;
+                                    A = a ? N : null,
+                                    g = S,
+                                    C = R;
                                 _.C2.observeGate((0, s.SL)("fetchDehydrated"));
-                                let N = _.C2.capture(E ?? null, o.default.getAuthSessionIdHash() ?? null),
-                                    R = !1,
-                                    L = null;
-                                function y() {
+                                let O = _.C2.capture(E ?? null, o.default.getAuthSessionIdHash() ?? null),
+                                    y = !1,
+                                    D = null,
+                                    b = null;
+                                function v() {
                                     return (
-                                        S === C &&
+                                        C === R &&
                                         null != E &&
                                         o.default.isAuthenticated() &&
                                         o.default.getId() === E &&
                                         d.default.getCurrentUser()?.id === E &&
-                                        (o.default.getAuthSessionIdHash() ?? null) === N.authSessionIdHash
+                                        (o.default.getAuthSessionIdHash() ?? null) === O.authSessionIdHash
                                     );
                                 }
-                                function D() {
-                                    return y() && _.C2.canRun(N, (0, s.SL)("fetchDehydrated"));
+                                function P() {
+                                    return v() && _.C2.canRun(O, (0, s.SL)("fetchDehydrated"));
                                 }
-                                function b() {
-                                    return D() && m === T && _.C2.matches(N);
+                                function M() {
+                                    return P() && g === S && _.C2.matches(O);
                                 }
-                                let v = h;
+                                let U = h;
                                 p++;
-                                let P = (async function () {
+                                let w = (async function () {
                                     try {
                                         await (async function () {
-                                            if ((await v, !D() || (!a && m !== T))) return;
-                                            let e = A ?? g;
+                                            if ((await U, !P() || (!a && g !== S))) return;
+                                            let e = A ?? N;
                                             if (
-                                                (b() &&
+                                                (M() &&
                                                     (await r.h.dispatch({
                                                         type: "DISCOVER_REQUEST_STARTED",
-                                                        identity: N,
+                                                        identity: O,
                                                     }),
-                                                    (R = !0)),
-                                                D() && (a || m === T))
+                                                    (y = !0)),
+                                                P() && (a || g === S))
                                             ) {
                                                 n && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
                                                 try {
+                                                    if (Date.now() < T)
+                                                        throw ((D = T), Error("Discover is rate limited"));
                                                     let a = new URLSearchParams();
                                                     for (let t of e?.picks ?? l.A.getPicks()) a.append("game_ids", t);
                                                     null != e && a.append("refresh", "true");
                                                     let s = Date.now();
-                                                    I = L = new AbortController();
-                                                    let o = L.signal,
-                                                        d = await (0, u.D)(L, () =>
+                                                    ((m = s), (I = b = new AbortController()));
+                                                    let o = b.signal,
+                                                        d = await (0, u.D)(b, () =>
                                                             i.Bo.get({
                                                                 url: f.Rsh.GRAVITY_ITEMS_DEHYDRATED,
                                                                 query: a.toString(),
                                                                 rejectWithError: !1,
+                                                                failImmediatelyWhenRateLimited: !0,
                                                                 signal: o,
                                                                 timeout: { deadline: 3e4 },
                                                             }),
                                                         );
-                                                    if (!b()) return;
-                                                    if (null != e && null != d.body.error_code)
-                                                        throw Error("Discover refresh failed");
+                                                    if (!M()) return;
+                                                    if (
+                                                        ("broker_error" === d.body.error_code ||
+                                                            "broker_timeout" === d.body.error_code ||
+                                                            "persist_error" === d.body.error_code) &&
+                                                        0 === d.body.items.length
+                                                    )
+                                                        throw Error("Discover feed failed");
                                                     (await r.h.dispatch({
                                                         type: "LOAD_ICYMI_DEHYDRATED",
                                                         items: d.body.items,
@@ -178,13 +190,13 @@ function D() {
                                                         startTime: s,
                                                         isReloading: n,
                                                         isInitialLoad: null != e || t,
-                                                        discoverRequest: N,
+                                                        discoverRequest: O,
                                                     }),
-                                                        b() && g === e && (g = null));
+                                                        M() && N === e && (N = null));
                                                 } finally {
-                                                    (I === L && (I = null),
+                                                    (I === b && (I = null),
                                                         n &&
-                                                            y() &&
+                                                            v() &&
                                                             r.h.dispatch({
                                                                 type: "ICYMI_SET_REFRESHING",
                                                                 refreshing: !1,
@@ -193,18 +205,37 @@ function D() {
                                             }
                                         })();
                                     } catch (e) {
-                                        if (R && b())
+                                        if (y && M()) {
+                                            if (
+                                                null != e &&
+                                                "object" == typeof e &&
+                                                "status" in e &&
+                                                429 === e.status
+                                            ) {
+                                                let t = e.retryAfter ?? e.body?.retry_after,
+                                                    n =
+                                                        "number" == typeof t && Number.isFinite(t) && t >= 0
+                                                            ? Math.max(1, t)
+                                                            : 5;
+                                                D = T = Math.max(T, Date.now() + 1e3 * n);
+                                            }
                                             try {
-                                                await r.h.dispatch({ type: "DISCOVER_REQUEST_FAILED", identity: N });
+                                                await r.h.dispatch({
+                                                    type: "DISCOVER_REQUEST_FAILED",
+                                                    identity: O,
+                                                    retryAfterAt: D,
+                                                });
                                             } catch (e) {
                                                 c.A.captureException(e);
                                             }
+                                        }
                                     } finally {
-                                        (p--, O());
+                                        (p--, L());
                                     }
                                 })();
-                                return ((h = P), O(), P);
+                                return ((h = w), L(), w);
                             })(e);
+                        }
                         if (!e.isDiscoverPickerCommit) {
                             n && r.h.dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: !0 });
                             try {

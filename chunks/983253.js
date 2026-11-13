@@ -39,13 +39,18 @@ n.d(
                 case "reset":
                     return r;
                 case "commit":
-                    return t.enabled ? { ...r, status: "loading" } : r;
+                    return t.enabled ? { ...e, status: "loading" } : r;
                 case "start":
                     return { ...e, status: "loading" };
                 case "success":
-                    return { status: "success", items: t.items, hasSnapshot: !0, loadId: t.loadId };
+                    return {
+                        status: "success",
+                        items: t.items,
+                        hasSnapshot: !0,
+                        loadId: "none" === t.loadId && 0 === t.items.length ? null : t.loadId,
+                    };
                 case "error":
-                    return { ...e, status: "error" };
+                    return { ...e, status: "error", retryAfterAt: t.retryAfterAt ?? null };
             }
         },
         lo: r,

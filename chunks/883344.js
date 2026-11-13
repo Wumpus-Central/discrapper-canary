@@ -510,9 +510,9 @@ let eF = new ek(a.h, {
         ((null != ep && R.C2.matches(ep)) || em(), (eI = (0, R.Sw)(eI, { type: "start" })), (ep = t));
     },
     DISCOVER_REQUEST_FAILED: function (e) {
-        let { identity: t } = e;
+        let { identity: t, retryAfterAt: n } = e;
         if (!eN(t)) return !1;
-        ((eI = (0, R.Sw)(eI, { type: "error" })), (ep = t));
+        ((eI = (0, R.Sw)(eI, { type: "error", retryAfterAt: n })), (ep = t));
     },
     LOAD_ICYMI_FROM_NOTIFICATION: function (e) {
         let { messageItem: t, customStatusItem: n } = e;
@@ -589,7 +589,7 @@ let eF = new ek(a.h, {
             null != d && ((eI = (0, R.Sw)(eI, { type: "success", items: c.discoverItems, loadId: a })), (ep = d)),
             ey(),
             (K = {
-                load_id: a,
+                load_id: null != d && "none" === a && 0 === r.length ? null : a,
                 load_time_millis: Date.now() - s,
                 feed_item_ids: W.flatMap((e) => {
                     let t = (0, L.v)(e);
