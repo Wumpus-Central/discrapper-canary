@@ -39,7 +39,7 @@ function D(e) {
     let { accessory: t, inputSize: n, disabled: r } = e;
     if ("string" == typeof t)
         return (0, i.jsx)(S.E, {
-            variant: "body-md/normal",
+            variant: "sm" === n ? "body-sm/normal" : "body-md/normal",
             color: "input-placeholder-text-default",
             className: L.leadingText,
             children: t,
@@ -207,6 +207,7 @@ n.d(
                     readOnly: $,
                     className: s()(L.container, L[C], {
                         [L.hasLeading]: null != et,
+                        [L.hasLeadingText]: "string" == typeof g,
                         [L.hasTrailing]: null != Z,
                         [L.hasTags]: j,
                     }),

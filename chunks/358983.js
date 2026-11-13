@@ -10,6 +10,7 @@ var n = {
     hasLeading: "hasLeading_0PLWhS",
     input: "input_0PLWhS",
     hasTrailing: "hasTrailing_0PLWhS",
+    hasLeadingText: "hasLeadingText_0PLWhS",
     hasTags: "hasTags_0PLWhS",
 };
 e.r((o.exports = n));
