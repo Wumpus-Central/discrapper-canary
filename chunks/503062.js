@@ -21,11 +21,11 @@ var n = l(477900),
     y = l(253400),
     M = l(854627),
     C = l(939496),
-    S = l(652215),
-    I = l(996988),
-    w = l(792996),
+    I = l(652215),
+    S = l(996988),
+    N = l(792996),
     T = l(135650);
-let N = u._3.SIZE_40,
+let w = u._3.SIZE_40,
     _ = y.Ay.getEnableHardwareAcceleration();
 l.d(
     t,
@@ -33,39 +33,39 @@ l.d(
     {
         A: function (e) {
             let { user: t, status: a, guildId: u, channelId: y, onSelect: k } = e,
-                { theme: F, themeType: L } = (0, C.E)(),
-                R = i.useMemo(() => t.isNonUserBot() || (0, p.c)(t, y), [t, y]),
-                { activities: P, isMobileOnline: U } = (0, s.cf)([E.A], () => ({
+                { theme: L, themeType: R } = (0, C.E)(),
+                P = i.useMemo(() => t.isNonUserBot() || (0, p.c)(t, y), [t, y]),
+                { activities: U, isMobileOnline: D } = (0, s.cf)([E.A], () => ({
                     activities: E.A.getActivities(t.id),
                     isMobileOnline: E.A.isMobileOnline(t.id),
                 })),
-                D = (0, g.A)(t.id),
-                { voiceChannel: O } = (0, h.Ay)({ userId: t.id, guildId: u }),
-                [G, z] = i.useState(!1),
+                F = (0, g.A)(t.id),
+                { voiceChannel: G } = (0, h.Ay)({ userId: t.id, guildId: u }),
+                [O, z] = i.useState(!1),
                 {
                     avatarSrc: W,
                     avatarDecorationSrc: Z,
                     eventHandlers: H,
-                } = (0, M.A)({ userId: t.id, guildId: u, size: N, animateOnHover: !G }),
+                } = (0, M.A)({ userId: t.id, guildId: u, size: w, animateOnHover: !O }),
                 B = _ ? o.Js : o.eu,
                 K = i.useRef(null),
-                X = i.useId(),
-                Y = (0, v.r)({ user: t, guildId: u }),
+                Y = i.useId(),
+                $ = (0, v.r)({ user: t, guildId: u }),
                 q = (0, j.tx)(t),
-                $ = R ? null : (0, j.MU)(a, { isMobile: U }),
-                J =
-                    null != $
-                        ? w.intl.formatToPlainString(w.t["9Gofqp"], { name: q, presence: $ })
-                        : w.intl.formatToPlainString(w.t.fGlxFS, { name: q }),
-                Q = i.useCallback(() => z(!0), []),
-                V = i.useCallback(() => z(!1), []);
+                J = P ? null : (0, j.MU)(a, { isMobile: D }),
+                Q =
+                    null != J
+                        ? N.intl.formatToPlainString(N.t["9Gofqp"], { name: q, presence: J })
+                        : N.intl.formatToPlainString(N.t.fGlxFS, { name: q }),
+                V = i.useCallback(() => z(!0), []),
+                X = i.useCallback(() => z(!1), []);
             return (0, n.jsxs)(d.D, {
-                onMouseEnter: Q,
-                onMouseLeave: V,
-                focusProps: L === I.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-                className: r()(T.nM, { [T.EY]: null != Y }),
-                "aria-label": J,
-                "aria-describedby": X,
+                onMouseEnter: V,
+                onMouseLeave: X,
+                focusProps: R === S.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+                className: r()(T.nM, { [T.EY]: null != $ }),
+                "aria-label": Q,
+                "aria-describedby": Y,
                 onClick: k,
                 onContextMenu: function (e) {
                     (0, f.L3)(e, async () => {
@@ -88,8 +88,8 @@ l.d(
                 },
                 children: [
                     (0, n.jsx)(x.A, {
-                        nameplate: G ? Y : null,
-                        hovered: G,
+                        nameplate: O ? $ : null,
+                        hovered: O,
                         content: K,
                         placement: b.u.MUTUAL_FRIENDS_LIST,
                     }),
@@ -102,10 +102,10 @@ l.d(
                                 src: W,
                                 avatarDecoration: Z,
                                 "aria-hidden": !0,
-                                size: N,
-                                status: R ? S.clD.UNKNOWN : a,
-                                statusBackdropColor: R ? void 0 : (0, c.C$)(F),
-                                isMobile: U,
+                                size: w,
+                                status: P ? I.clD.UNKNOWN : a,
+                                statusBackdropColor: P ? void 0 : (0, c.C$)(L),
+                                isMobile: D,
                                 className: T.my,
                             }),
                             (0, n.jsxs)("div", {
@@ -119,12 +119,12 @@ l.d(
                                         showGuildTag: !0,
                                     }),
                                     (0, n.jsx)("div", {
-                                        id: X,
+                                        id: Y,
                                         children: (0, n.jsx)(A.A, {
                                             user: t,
-                                            activities: P,
-                                            applicationStream: D,
-                                            voiceChannel: O,
+                                            activities: U,
+                                            applicationStream: F,
+                                            voiceChannel: G,
                                         }),
                                     }),
                                 ],

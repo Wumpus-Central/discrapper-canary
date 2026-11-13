@@ -20,15 +20,15 @@ let d = s.memo(function (t) {
             offsetYPercentageMin: g,
             customConfettiCanvas: A,
             speedValues: R = o,
-            dragCoefficientValue: x = 1.66,
-            onAnimationEnd: y,
+            dragCoefficientValue: S = 1.66,
+            onAnimationEnd: x,
         } = t,
-        [S, C] = s.useState(null),
+        [y, C] = s.useState(null),
         { confettiCanvas: I } = s.useContext(l.x),
-        E = (0, r.f9)(A ?? I, S),
-        [b, T] = s.useState(!1);
+        b = (0, r.f9)(A ?? I, y),
+        [E, T] = s.useState(!1);
     s.useEffect(() => {
-        b && y?.();
+        E && x?.();
     });
     let v = s.useMemo(() => {
         if (null != d) return [{ src: d, colorize: !1 }];
@@ -40,7 +40,7 @@ let d = s.memo(function (t) {
             return (
                 (t = t.map((i, n) =>
                     setTimeout(() => {
-                        (E.createMultipleConfetti(
+                        (b.createMultipleConfetti(
                             (function (t, e, i, n, s) {
                                 let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                     l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
@@ -64,17 +64,17 @@ let d = s.memo(function (t) {
                                     size: { type: "static-random", minValue: 28, maxValue: 28 },
                                     dragCoefficient: { type: "static", value: l },
                                 };
-                            })(e.getBoundingClientRect(), p, h, m, g, R, x),
+                            })(e.getBoundingClientRect(), p, h, m, g, R, S),
                             f ?? 50,
                         ),
-                            n === t.length - 1 && null != y && T(!0));
+                            n === t.length - 1 && null != x && T(!0));
                     }, 60 * n),
                 )),
                 () => {
                     for (let e of t) clearTimeout(e);
                 }
             );
-        }, [E, e, c, f, p, h, m, g, R, x, y]),
+        }, [b, e, c, f, p, h, m, g, R, S, x]),
         (0, n.jsx)(r.K_, { ref: C, sprites: v ?? a.uI, colors: i ?? a._t, spriteWidth: 28, spriteHeight: 28 })
     );
 });

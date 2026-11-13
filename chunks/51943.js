@@ -24,14 +24,14 @@ l.d(
         A: function (e) {
             let { user: t, guild: E, nick: j, onSelect: y } = e,
                 { theme: M, themeType: C } = (0, p.E)(),
-                S = t.hasAvatarForGuild(E.id),
-                I = i.useId(),
-                w = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: E.name });
+                I = t.hasAvatarForGuild(E.id),
+                S = i.useId(),
+                N = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: E.name });
             return (0, n.jsxs)(o.D, {
                 focusProps: C === g.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: b.nM,
-                "aria-label": w,
-                "aria-describedby": S || null != j ? I : void 0,
+                "aria-label": N,
+                "aria-describedby": I || null != j ? S : void 0,
                 onClick: y,
                 onContextMenu: function (e) {
                     (0, m.L3)(e, async () => {
@@ -654,9 +654,9 @@ l.d(
                         className: b.zH,
                         children: [
                             (0, n.jsx)("div", { className: b.UU, children: E.name }),
-                            S &&
+                            I &&
                                 (0, n.jsxs)("div", {
-                                    id: I,
+                                    id: S,
                                     className: b.C9,
                                     children: [
                                         (0, n.jsx)(c.eu, {
@@ -674,10 +674,10 @@ l.d(
                                         }),
                                     ],
                                 }),
-                            !S &&
+                            !I &&
                                 null != j &&
                                 (0, n.jsx)(f.E, {
-                                    id: I,
+                                    id: S,
                                     variant: "body-xs/medium",
                                     children: (0, n.jsx)(r.A, { delay: 300, children: j }),
                                 }),
