@@ -24,12 +24,12 @@ async function f(e) {
             appContext: I,
             customStatusPrompt: p,
             onModalOpen: m,
-            onModalClose: T,
-            ...g
+            onModalClose: g,
+            ...T
         } = e,
         S = d.default.getUser(t),
         N = d.default.getCurrentUser();
-    if (null == S || null == N) return void T?.();
+    if (null == S || null == N) return void g?.();
     let C = A(t, _),
         O = a()();
     try {
@@ -954,7 +954,7 @@ async function f(e) {
                                 channelId: h,
                                 customStatusPrompt: p,
                                 ...t,
-                                ...g,
+                                ...T,
                             },
                             O,
                         );
@@ -968,14 +968,14 @@ async function f(e) {
                         });
                     },
                     onCloseCallback: () => {
-                        (E.delete(C), T?.());
+                        (E.delete(C), g?.());
                     },
                 },
             ),
         ),
             m?.());
     } catch (e) {
-        throw (T?.(), e);
+        throw (g?.(), e);
     }
 }
 function h() {

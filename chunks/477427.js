@@ -140,7 +140,7 @@ n.d(
                 A = h(d, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
                 I = A("guild_flags") ?? 0,
                 m = (_.guild_flags ?? 0) ^ I,
-                T = 0 === (0, r.iE)(m, E.n3.OPT_IN_CHANNELS_OFF, E.n3.OPT_IN_CHANNELS_ON);
+                g = 0 === (0, r.iE)(m, E.n3.OPT_IN_CHANNELS_OFF, E.n3.OPT_IN_CHANNELS_ON);
             a.Ay.trackWithMetadata(c.HAw.NOTIFICATION_SETTINGS_UPDATED, {
                 ..._,
                 ...s.A.getStats(e),
@@ -156,7 +156,7 @@ n.d(
                 guild_receive_mobile_push_old: A("guild_receive_mobile_push"),
                 guild_scheduled_events_muted_old: A("guild_scheduled_events_muted"),
                 guild_message_notification_settings_old: A("guild_message_notification_settings"),
-                is_opt_in_only_change: T,
+                is_opt_in_only_change: g,
             });
         },
         Xh: function (e, t) {
@@ -172,9 +172,9 @@ n.d(
                 change: _,
                 previous: A,
                 label: p,
-                location: T,
+                location: g,
             } = e;
-            function g(e) {
+            function T(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     i = t.muted ?? e?.channel_is_muted,
                     r =
@@ -190,8 +190,8 @@ n.d(
                     channel_muted_until: I(t.mute_config),
                 };
             }
-            let S = g(A),
-                N = g(m(n, i), _),
+            let S = T(A),
+                N = T(m(n, i), _),
                 C = h(S, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
                 O = l.A.getChannel(i),
                 R = C("channel_flags") ?? 0,
@@ -201,7 +201,7 @@ n.d(
             a.Ay.trackWithMetadata(c.HAw.NOTIFICATION_SETTINGS_UPDATED, {
                 ...N,
                 ...s.A.getStats(n),
-                location: T,
+                location: g,
                 guild_id: n,
                 channel_id: i,
                 update_type: t,

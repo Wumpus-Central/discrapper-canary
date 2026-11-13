@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(534409),
     p = n(711014),
     m = n(240248),
-    T = n(263715),
-    g = n(941971),
+    g = n(263715),
+    T = n(941971),
     S = n(855986),
     N = n(695366),
     C = n(678708),
@@ -88,8 +88,8 @@ function k(e) {
             onHoverChange: h,
             onKeyDown: I,
             treeItemProps: { onFocus: p, ...m },
-            "aria-setsize": T,
-            "aria-posinset": g,
+            "aria-setsize": g,
+            "aria-posinset": T,
         } = e,
         [S, N] = r.useState(!1),
         C = r.useCallback(() => {
@@ -121,8 +121,8 @@ function k(e) {
                 focusProps: { enabled: !1 },
                 ...m,
                 role: "treeitem",
-                "aria-setsize": T,
-                "aria-posinset": g,
+                "aria-setsize": g,
+                "aria-posinset": T,
                 "aria-expanded": n,
                 "aria-owns": u,
                 children: [
@@ -194,8 +194,8 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             b && en(!1);
         }, [b]);
         let [{ dragging: el }, eo] = (0, l.i)({
-                type: T.PJ.FOLDER,
-                item: () => (v?.(), { type: T.PJ.FOLDER, nodeId: E.id }),
+                type: g.PJ.FOLDER,
+                item: () => (v?.(), { type: g.PJ.FOLDER, nodeId: E.id }),
                 end() {
                     (P?.(), (0, f.um)(p.Ay.getCompatibleGuildFolders()));
                 },
@@ -227,7 +227,7 @@ let Y = (0, m.xI)(c.A.FOLDER_ITEM_ANIMATION_DURATION),
             eh = r.useCallback((e) => h?.(J, e), [h, J]),
             eI = (0, i.jsxs)(V.c, {
                 children: [
-                    (0, i.jsx)(g.A, {
+                    (0, i.jsx)(T.A, {
                         overlay: !0,
                         disabled: el || (S && null == G),
                         hovered: et,

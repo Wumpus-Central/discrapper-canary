@@ -1,6 +1,6 @@
 n.d(t, { A: () => u });
-var l = n(582128),
-    s = n(855986),
+var s = n(582128),
+    l = n(855986),
     a = n(157695),
     r = n(122760);
 let i = (0, n(945810).mj)({
@@ -12,11 +12,11 @@ let i = (0, n(945810).mj)({
 var o = n(971276);
 function u(e, t) {
     let { enableNoFill: n } = i.useConfig({ location: t }),
-        u = (0, s.bG)([a.A], () => a.A.getNoFillForPlacement(e), [e]),
-        c = (0, s.bG)([r.A], () => null != r.A.questEnrollmentBlockedUntil),
-        [d, m] = l.useState(null);
+        u = (0, l.bG)([a.A], () => a.A.getNoFillForPlacement(e), [e]),
+        c = (0, l.bG)([r.A], () => null != r.A.questEnrollmentBlockedUntil),
+        [d, m] = s.useState(null);
     return (
-        l.useEffect(() => {
+        s.useEffect(() => {
             if (null == u) return;
             let e = setTimeout(() => m(u.decisionId), Math.max(u.fetchedAt + u.ttlMillis - Date.now(), 0));
             return () => clearTimeout(e);

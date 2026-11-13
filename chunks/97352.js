@@ -49,8 +49,8 @@ function m() {
     ((0, s.LP)(c), (0, s.LP)(u), _.clear(), E.clear(), (0, s.LP)(A), (0, s.LP)(f), I());
 }
 I();
-let T = [d.WT.DAY, d.WT.MONTH, d.WT.YEAR];
-class g extends i.Ay.Store {
+let g = [d.WT.DAY, d.WT.MONTH, d.WT.YEAR];
+class T extends i.Ay.Store {
     static displayName = "SubscriptionPlanStore";
     getPlanIdsForSkus(e) {
         let t = [];
@@ -59,7 +59,7 @@ class g extends i.Ay.Store {
             (e.sort((e, t) => {
                 let n = c[e],
                     i = c[t];
-                return T.indexOf(n.interval) - T.indexOf(i.interval) || n.intervalCount - i.intervalCount;
+                return g.indexOf(n.interval) - g.indexOf(i.interval) || n.intervalCount - i.intervalCount;
             }),
                 t.push(...e));
         }
@@ -115,7 +115,7 @@ class g extends i.Ay.Store {
         return t.every((t) => this.hasPaymentSourceForSKUId(e, t));
     }
 }
-let S = new g(r.h, {
+let S = new T(r.h, {
     SUBSCRIPTION_PLANS_FETCH: function (e) {
         let { skuId: t } = e;
         _.add(t);

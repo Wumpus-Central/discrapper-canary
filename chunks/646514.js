@@ -6490,7 +6490,7 @@ let { Themes: c } = d.zv,
     },
     { Themes: p } = d.zv,
     { SemanticColors: m } = { SemanticColors: E },
-    { RawColors: T } = {
+    { RawColors: g } = {
         RawColors: {
             APPLICATION_SUBSCRIPTION_END: "#0177a4",
             APPLICATION_SUBSCRIPTION_START: "#3442d9",
@@ -8214,7 +8214,7 @@ let { Themes: c } = d.zv,
             YELLOW_NEW_99: "#240000",
         },
     },
-    { SemanticColorExperiments: g } = { SemanticColorExperiments: u },
+    { SemanticColorExperiments: T } = { SemanticColorExperiments: u },
     { SemanticColorHighContrast: S } = { SemanticColorHighContrast: f },
     { Shadows: N } = { Shadows: I },
     { Spacing: C } = {
@@ -9785,7 +9785,7 @@ function b(e) {
 function v(e) {
     return b(e) ? e : p.DARK;
 }
-let P = o()(T, (e) => r()(e)),
+let P = o()(g, (e) => r()(e)),
     M = {
         themes: d.NJ,
         modules: O,
@@ -9796,9 +9796,9 @@ let P = o()(T, (e) => r()(e)),
                     r = e[i],
                     a = r.raw,
                     s = r.opacity;
-                if (t in g && null != n.enabledExperiments && n.enabledExperiments.length > 0)
+                if (t in T && null != n.enabledExperiments && n.enabledExperiments.length > 0)
                     for (let e of n.enabledExperiments) {
-                        let n = g[t]?.[e]?.[i];
+                        let n = T[t]?.[e]?.[i];
                         null != n && ((a = n.raw ?? a), (s = n.opacity ?? s));
                     }
                 if (!0 === n.highContrastModeEnabled) {
@@ -9812,7 +9812,7 @@ let P = o()(T, (e) => r()(e)),
                 }
             },
         })),
-        unsafe_rawColors: o()(T, (e, t) => {
+        unsafe_rawColors: o()(g, (e, t) => {
             let n = P[t];
             return { css: x(t), resolve: (e) => U(n, e?.saturation ?? 1) };
         }),

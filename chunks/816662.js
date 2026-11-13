@@ -15,7 +15,7 @@ var i = n(435558),
     I = n(652215),
     p = n(355097),
     m = n(792996);
-let T = (0, i.debounce)(
+let g = (0, i.debounce)(
     (e, t) =>
         (async function (e, t) {
             null == e ||
@@ -25,7 +25,7 @@ let T = (0, i.debounce)(
         })(e, t),
     1e3,
 );
-function g(e) {
+function T(e) {
     (0, _.TG)(
         e,
         (e) =>
@@ -51,7 +51,7 @@ n.d(
             (u.A.saveUserGuildSettingsBulk({ [e]: { channel_overrides: { [t]: _ } } }),
                 s.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: e, channelId: t, settings: _ }),
                 (0, h.ct)({ guildId: e, channelId: t, change: _, previous: l, label: h.G_.optedIn(n), location: i }),
-                g(e),
+                T(e),
                 f.default.track(I.HAw.CHANNEL_LIST_UPDATED, {
                     ...(0, o.H$)(e),
                     ...(0, o.dI)(E.A.getChannel(t)),
@@ -107,7 +107,7 @@ n.d(
                     location: n,
                 }));
         },
-        hp: T,
+        hp: g,
         jA: function (e, t, n, i) {
             if (null == e || c.A.isFullServerPreview(e)) return;
             let a = A.Ay.getChannelIdFlags(e, t);
@@ -158,7 +158,7 @@ n.d(
             }
             (s.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: e, channelId: t, settings: _ }),
                 (0, h.ct)({ guildId: e, channelId: t, change: _, previous: l, label: h.G_.optedIn(n), location: i }),
-                g(e),
+                T(e),
                 f.default.track(I.HAw.CHANNEL_LIST_UPDATED, {
                     ...(0, o.H$)(e),
                     ...(0, o.dI)(E.A.getChannel(t)),

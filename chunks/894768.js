@@ -16,8 +16,8 @@ var i = n(812729),
     I = n(253932),
     p = n(617617),
     m = n(674378),
-    T = n(760751),
-    g = n(885576),
+    g = n(760751),
+    T = n(885576),
     S = n(189081),
     N = n(491009),
     C = n(290863),
@@ -67,7 +67,7 @@ function V(e) {
             let n;
             return null != e.application_id
                 ? B(e.application_id)
-                : ((t = e.name), 1 === (n = T.A.searchGamesByName(t)).length ? B(n[0]) : I.tz.getSetting());
+                : ((t = e.name), 1 === (n = g.A.searchGamesByName(t)).length ? B(n[0]) : I.tz.getSetting());
         case l.$.STREAMING:
         case l.$.WATCHING:
         default:
@@ -75,7 +75,7 @@ function V(e) {
     }
 }
 function H() {
-    if (((b = g.A.getIdleSince() ?? 0), (M = g.A.isAFK()), U)) y = D;
+    if (((b = T.A.getIdleSince() ?? 0), (M = T.A.isAFK()), U)) y = D;
     else if (L) y = R.clD.INVISIBLE;
     else {
         let e = I.jP.getSetting();
@@ -102,7 +102,7 @@ function j() {
 class W extends o.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
-        (this.waitFor(E.A, T.A, c.Ay, g.A, S.A, N.A, C.A, O.A, h.A, p.A), this.syncWith([N.A], H));
+        (this.waitFor(E.A, g.A, c.Ay, T.A, S.A, N.A, C.A, O.A, h.A, p.A), this.syncWith([N.A], H));
     }
     getLocalPresence() {
         return { status: y, since: b, activities: P, afk: M };

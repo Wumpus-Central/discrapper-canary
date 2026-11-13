@@ -31,7 +31,7 @@ function m(e, t) {
         i = n?.discounts.find((e) => e.type === s.iS.SUBSCRIPTION_PLAN);
     return i?.amount ?? null;
 }
-function T(e, t, n, i) {
+function g(e, t, n, i) {
     let r = (0, l.L)(),
         a = null != e ? h.hd[e] : void 0,
         s = (0, c.mH)(a?.skuId ?? h.pe.TIER_2),
@@ -54,7 +54,7 @@ n.d(
     {
         N1: function (e) {
             let t = (0, f.O)(),
-                { priceOptions: n, discountAmountOff: i } = T(e, t),
+                { priceOptions: n, discountAmountOff: i } = g(e, t),
                 a = (0, r.bG)([d.A], () => null != e && d.A.isLoadedForSKU((0, c.mH)(h.hd[e].skuId)), [e]);
             if (null == e || null == t) return null;
             try {
@@ -112,7 +112,7 @@ n.d(
         },
         iU: function (e, t, n) {
             let i = (0, r.bG)([d.A], () => d.A.get(e), [e]),
-                { priceOptions: a, discountAmountOff: s } = T(e, t, n, null == i);
+                { priceOptions: a, discountAmountOff: s } = g(e, t, n, null == i);
             if (null == i || null == s) return null;
             try {
                 let t = (0, c.y8)(e, !1, !1, a);
@@ -126,7 +126,7 @@ n.d(
         },
         pg: m,
         tQ: function (e, t, n) {
-            let { priceOptions: i, discountAmountOff: r } = T(t, n, e),
+            let { priceOptions: i, discountAmountOff: r } = g(t, n, e),
                 a = (0, c.y8)(t, !1, !1, i);
             return (0, u.$g)(a.amount - (r ?? 0), a.currency);
         },

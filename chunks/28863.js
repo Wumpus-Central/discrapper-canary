@@ -24,8 +24,8 @@ n.d(
                 title: I,
                 style: p,
                 focusProps: m,
-                ref: T,
-                role: g,
+                ref: g,
+                role: T,
                 ...S
             } = e;
             null != t && null == n && (n = o.V.getDefaultLinkInterceptor(t));
@@ -48,11 +48,11 @@ n.d(
                       ...C,
                       onClick: n,
                       focusProps: m,
-                      innerRef: T,
+                      innerRef: g,
                       role: "link",
                       children: E,
                   })
-                : (0, i.jsx)(u.vN, { ...m, children: (0, i.jsx)("a", { ...S, ...C, ref: T, children: E }) });
+                : (0, i.jsx)(u.vN, { ...m, children: (0, i.jsx)("a", { ...S, ...C, ref: g, children: E }) });
         },
     },
 );

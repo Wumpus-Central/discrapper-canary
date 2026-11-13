@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Ay: () => e8, Es: () => eB, hw: () => eK, Xr: () => e$, Zh: () => eM, xU: () => eq }), n(321073), n(667532));
+(n.d(t, { Ay: () => e4, Es: () => eB, hw: () => eK, Xr: () => e$, Zh: () => eM, xU: () => eq }), n(321073), n(667532));
 var r = n(435558),
     a = n.n(r),
     s = n(536637),
@@ -16,8 +16,8 @@ var r = n(435558),
     I = n(626584),
     p = n(343446),
     m = n(148883),
-    T = n(945810),
-    g = n(311043),
+    g = n(945810),
+    T = n(311043),
     S = n(830012),
     N = n(211753),
     C = n(206885),
@@ -48,13 +48,13 @@ var v = n(977556),
     H = n(953384),
     j = n(973522),
     W = n(863160);
-let Y = (0, T.mj)({
+let Y = (0, g.mj)({
         name: "2026-11-linux-steam-sku-detection",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    K = (0, T.mj)({
+    K = (0, g.mj)({
         name: "2026-11-mac-steam-sku-detection",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -134,8 +134,8 @@ let X = new I.A("RunningGameStore"),
     eI = function () {},
     ep = null,
     em = null,
-    eT = 0,
-    eg = null,
+    eg = 0,
+    eT = null,
     eS = null,
     eN = {},
     eC = {},
@@ -215,7 +215,7 @@ function eH(e) {
 function ej(e) {
     var t;
     let n,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.A;
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.A;
     if (null == e) return;
     let r = i.getGame(e);
     return null != r
@@ -233,14 +233,14 @@ function ej(e) {
 }
 let eW = new Set();
 function eY() {
-    let e = new Set(ea.map((e) => (0, W.Un)(e).id).filter((e) => null != e && null != g.A.getGame(e))),
+    let e = new Set(ea.map((e) => (0, W.Un)(e).id).filter((e) => null != e && null != T.A.getGame(e))),
         t = e.size !== eW.size || [...e].some((e) => !eW.has(e));
     return ((eW = e), t);
 }
 function eK(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        [i, r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [P.A, M.A, g.A],
+        [i, r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [P.A, M.A, T.A],
         s = (0, W.Un)(e);
     if (s.isLauncher)
         return {
@@ -319,7 +319,7 @@ function ez() {
     _.w.set(z, eh);
 }
 function eq(e, t, n, i) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : g.A,
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : T.A,
         a = {
             ...e,
             played:
@@ -563,8 +563,8 @@ if (q) {
                     }
                     ((eD = { timestamp: Date.now(), totalFromNative: l, entries: s }), (e = o));
                     let d = n.filter(eG).length;
-                    for (let t of (d !== eT &&
-                        ((eT = d), E.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: eT })),
+                    for (let t of (d !== eg &&
+                        ((eg = d), E.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: eg })),
                     (ea = null != es ? [es, ...e] : e))) {
                         let e = eh.gameOverrides[eB(t)];
                         e?.add === !0 && t.hidden && ((ef[eB(t)] = !0), (t.hidden = !1));
@@ -667,12 +667,12 @@ class e5 extends u.Ay.Store {
         )
             for (let n of e.gamesSeen)
                 "number" == typeof n.id && ((n.nativeProcessObserverId = n.id), delete n.id, (t = !0));
-        (this.waitFor(T.Bt, P.A, H.A, w.A, p.A, m.A, g.A, M.A, U.default),
+        (this.waitFor(g.Bt, P.A, H.A, w.A, p.A, m.A, T.A, M.A, U.default),
             (Q = e.gamesSeen.filter((e) => !(0, v.n1)(e))),
             this.syncWith([m.A], e6),
-            this.syncWith([T.Bt], e3),
+            this.syncWith([g.Bt], e3),
             this.syncWith([M.A, P.A, w.A], a().throttle(eQ, 1e3)),
-            this.syncWith([g.A], eY),
+            this.syncWith([T.A], eY),
             t && ez());
     }
     getVisibleGame() {
@@ -739,7 +739,7 @@ class e5 extends u.Ay.Store {
         return null != i ? { ...i } : null;
     }
     shouldElevateProcessForPID(e) {
-        return null != eg && eg === e;
+        return null != eT && eT === e;
     }
     shouldContinueWithoutElevatedProcessForPID(e) {
         return null != eS && eS === e;
@@ -826,14 +826,14 @@ let e7 = new e5(E.h, {
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
-            ((eg = t), (eS = null));
+            ((eT = t), (eS = null));
         },
         PERMISSION_CLEAR_ELEVATED_PROCESS: function () {
-            eg = null;
+            eT = null;
         },
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
-            ((eS = t), (eg = null));
+            ((eS = t), (eT = null));
         },
         RUNNING_GAME_ADD_OVERRIDE: function (e) {
             let t,
@@ -970,4 +970,4 @@ let e7 = new e5(E.h, {
             return (ec.setCanonicalGameIds(t), ek());
         },
     }),
-    e8 = e7;
+    e4 = e7;

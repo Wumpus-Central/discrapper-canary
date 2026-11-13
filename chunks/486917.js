@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => T });
 var i = n(620632),
     r = n(73153),
     a = n(439372),
@@ -36,7 +36,7 @@ let p = 5 * o.A.Millis.MINUTE;
 function m(e) {
     return [I.cl.ONLINE, I.cl.STREAMING].includes(e);
 }
-class T extends a.A {
+class g extends a.A {
     timerId = null;
     actions = {
         POST_CONNECTION_OPEN: () => this.start(),
@@ -73,4 +73,4 @@ class T extends a.A {
         null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
     };
 }
-let g = new T();
+let T = new g();

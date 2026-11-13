@@ -1,4 +1,4 @@
-n.d(t, { m: () => y });
+n.d(t, { m: () => D });
 var i = n(477900);
 n(582128);
 var r = n(855986),
@@ -83,8 +83,8 @@ function j(e) {
         ],
     });
 }
-var D = n(316632);
-function y(e) {
+var y = n(316632);
+function D(e) {
     var t;
     let { onClose: n, markAsDismissed: m } = e,
         T = g.H.useConfig({ location: "entrance_sound_picker_upsell" }),
@@ -104,21 +104,21 @@ function y(e) {
         : (0, i.jsxs)(C.A, {
               isShown: !0,
               type: C.i.PREMIUM,
-              className: D.ne,
-              backgroundClassName: D.u4,
+              className: y.ne,
+              backgroundClassName: y.u4,
               children: [
                   null != m
                       ? (0, i.jsx)(l.D, {
-                            className: D.VN,
+                            className: y.VN,
                             onClick: () => m?.(v.i.DISMISS),
                             "aria-label": L.intl.string(L.t.cpT0Cq),
-                            children: (0, i.jsx)(a.XSmallIcon, { size: "xs", color: "currentColor", className: D.ut }),
+                            children: (0, i.jsx)(a.XSmallIcon, { size: "xs", color: "currentColor", className: y.ut }),
                         })
                       : null,
                   (0, i.jsxs)("div", {
-                      className: D.ex,
+                      className: y.ex,
                       children: [
-                          (0, i.jsx)(o.NitroWheelIcon, { size: "sm", color: "currentColor", className: D.ax }),
+                          (0, i.jsx)(o.NitroWheelIcon, { size: "sm", color: "currentColor", className: y.ax }),
                           (0, i.jsx)(c.D, { variant: "heading-xs/semibold", children: L.intl.string(L.t.dTbAxx) }),
                       ],
                   }),

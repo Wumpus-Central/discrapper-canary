@@ -34,7 +34,7 @@ n.d(
                     channelId: I,
                     integrationType: p,
                     connectedAccountProvider: m,
-                    nonce: T,
+                    nonce: g,
                 } = e;
             return (
                 await r.Bo.post({
@@ -47,7 +47,7 @@ n.d(
                         code_challenge_method: E,
                         scope: d.join(" "),
                         state: A,
-                        nonce: T,
+                        nonce: g,
                     },
                     body: {
                         guild_id: h,

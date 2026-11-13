@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(231723),
     p = n(652215),
     m = n(409325);
-let T = [_.Ay, E.Ay];
-class g extends r.PureComponent {
+let g = [_.Ay, E.Ay];
+class T extends r.PureComponent {
     state = { transitionState: null };
     componentWillAppear = (e) => {
         this.componentWillEnter(e);
@@ -113,11 +113,11 @@ n.d(
                     },
                     [e],
                 ),
-                A = T.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
+                A = g.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
             return (0, i.jsxs)(u.F, {
                 component: r.Fragment,
                 children: [
-                    T.map((e, n) => {
+                    g.map((e, n) => {
                         let r = o().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === _.Ay)),
                             a = r?.backdropStyle ?? d.F.DARK;
                         return (0, i.jsx)(
@@ -141,7 +141,7 @@ n.d(
                     n.map((e, t) => {
                         let { key: r, Layer: a, render: s, instant: l, isVisible: o, dismissable: d } = e;
                         return (0, i.jsx)(
-                            g,
+                            T,
                             {
                                 modalKey: r,
                                 LayerComponent: a ?? _.Ay,

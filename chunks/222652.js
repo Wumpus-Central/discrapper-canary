@@ -20,8 +20,8 @@ s.d(
             let e,
                 t = (0, u.$)(),
                 { status: s, requestInProgress: i, redirect: g } = (0, d.L)(),
-                h = (0, o.A)(g),
-                p = (0, r.M)("xbox");
+                p = (0, o.A)(g),
+                h = (0, r.M)("xbox");
             if (t === u.C.NO_ACCESS) return { kind: "subscribe", text: x.intl.string(x.t.sEAnVH) };
             let f = (function (e) {
                 switch (e) {
@@ -51,12 +51,12 @@ s.d(
                 };
             if (s === c.P.NOT_CLAIMED || s === c.P.CLAIM_IN_PROGRESS)
                 e = () => {
-                    h();
+                    p();
                 };
             else if (s === c.P.CLAIMED) {
                 let t = (0, l.uF)() ? "msxbox://" : "https://xbox.com/play";
                 e = () => {
-                    ((0, a.A)(t), p(r.H.PARTNER_PAGE_REDIRECT, t));
+                    ((0, a.A)(t), h(r.H.PARTNER_PAGE_REDIRECT, t));
                 };
             }
             return {

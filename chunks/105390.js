@@ -13,10 +13,10 @@ var r = i(477900),
     h = i(872725),
     T = i(77528),
     f = i(99462),
-    x = i(682901),
-    b = i(792996),
-    v = i(432458);
-function y(t) {
+    b = i(682901),
+    x = i(792996),
+    y = i(432458);
+function v(t) {
     let {
             isTabSelected: e,
             expiresAt: i,
@@ -29,19 +29,19 @@ function y(t) {
         T = n.useMemo(() => Date.parse(i), [i]),
         f = (0, c.A)(T, 6e4);
     if (Object.values(f).every((t) => 0 === t)) return null;
-    let x = (0, r.jsxs)("div", {
-        className: l()(v.Fg, v.C8, d, { [v.WO]: e }),
+    let b = (0, r.jsxs)("div", {
+        className: l()(y.Fg, y.C8, d, { [y.WO]: e }),
         children: [
             (0, r.jsx)(a.ClockIcon, { size: "custom", width: 12, height: 12, color: "currentColor" }),
-            (0, r.jsx)(s.E, { variant: "body-xs/semibold", color: "text-strong", className: v.a7, children: o }),
+            (0, r.jsx)(s.E, { variant: "body-xs/semibold", color: "text-strong", className: y.a7, children: o }),
         ],
     });
     return h
-        ? x
+        ? b
         : (0, r.jsx)(u.m, {
-              text: null != m ? m : (0, p.uN)(f, { days: b.t.qVGNkU, hours: b.t.wyg9a9, minutes: b.t.IzmIlV }),
+              text: null != m ? m : (0, p.uN)(f, { days: x.t.qVGNkU, hours: x.t.wyg9a9, minutes: x.t.IzmIlV }),
               position: null != g ? g : "top",
-              children: x,
+              children: b,
           });
 }
 function S(t) {
@@ -55,7 +55,7 @@ function S(t) {
         badgeStyle: c,
     } = t;
     return null != n
-        ? (0, r.jsx)(y, {
+        ? (0, r.jsx)(v, {
               expiresAt: n,
               isTabSelected: e,
               badgeCopy: i,
@@ -74,8 +74,8 @@ function S(t) {
                 children: (0, r.jsx)(d.E, { type: { text: i }, variant: "expressive" }),
             })
           : (0, r.jsx)("div", {
-                className: l()(v.Fg, v.AT),
-                children: (0, r.jsx)(s.E, { variant: "body-xs/semibold", className: v.md, children: i }),
+                className: l()(y.Fg, y.AT),
+                children: (0, r.jsx)(s.E, { variant: "body-xs/semibold", className: y.md, children: i }),
             });
 }
 i.d(
@@ -86,7 +86,7 @@ i.d(
             let { isTabSelected: e, trialOffer: i, badgeStyle: n } = t,
                 o = (0, T.V)()?.subscriptionTrial,
                 l = (0, m.tS)({ intervalType: o?.interval, intervalCount: o?.intervalCount }),
-                a = i.trialId === x.Tt,
+                a = i.trialId === b.Tt,
                 s = (0, f.Fu)(i);
             return (0, r.jsx)(S, {
                 isTabSelected: e,
@@ -101,8 +101,8 @@ i.d(
         MA: S,
         fY: function (t) {
             let { isTabSelected: e, userDiscount: i, includesAmountOff: n, badgeStyle: o } = t,
-                l = b.intl.formatToPlainString(b.t.iiLbvu, { percent: i.discount.amount }),
-                a = n ? l : b.intl.string(b.t["/DTtr6"]),
+                l = x.intl.formatToPlainString(x.t.iiLbvu, { percent: i.discount.amount }),
+                a = n ? l : x.intl.string(x.t["/DTtr6"]),
                 s = i.expiresAt?.toISOString() ?? null,
                 u = (0, f.__)(i);
             return (0, r.jsx)(S, {

@@ -15,8 +15,8 @@ var i,
     I = n(652215);
 let p = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null },
     m = p,
-    T = {},
-    g = null,
+    g = {},
+    T = null,
     S = !1,
     N = null,
     C = u.A.Millis.DAY,
@@ -75,7 +75,7 @@ function b(e) {
                 d = o?.id === l.ownerId,
                 c = A.A.can(I.xBc.ADMINISTRATOR, l);
             if ((t.includes("is_owner") && !d) || (t.includes("is_admin") && !c)) continue;
-            null == (T = T ?? {})[e.key] && (T[e.key] = e);
+            null == (g = g ?? {})[e.key] && (g[e.key] = e);
             let u = f.A.getGuildId(),
                 E = null != u && u === l.id;
             if ((!t.includes("is_viewing") || E) && !r) return !0;
@@ -93,14 +93,14 @@ function v(e) {
     let r = null != n,
         s = r && null == m.hiddenSurveys[n.key],
         l = r && b(n);
-    (null == (t = o.w.get(I.gT8)) || a()().diff(t, "day"), (g = s && l && 1 ? n : null));
+    (null == (t = o.w.get(I.gT8)) || a()().diff(t, "day"), (T = s && l && 1 ? n : null));
 }
 function P() {
     let e;
-    if (null != g && (b(g) || ((g = null), 0))) return !1;
-    null != (e = Object.values((T = T ?? {}))[0]) && b(e)
+    if (null != T && (b(T) || ((T = null), 0))) return !1;
+    null != (e = Object.values((g = g ?? {}))[0]) && b(e)
         ? v({ type: "SURVEY_FETCHED", survey: e })
-        : null == g || (g = null);
+        : null == T || (T = null);
 }
 class M extends l.Ay.PersistedStore {
     static displayName = "SurveyStore";
@@ -127,7 +127,7 @@ class M extends l.Ay.PersistedStore {
         return m;
     }
     getCurrentSurvey() {
-        return y() ? null : g;
+        return y() ? null : T;
     }
     getSurveyOverride() {
         return m.surveyOverride;
@@ -148,7 +148,7 @@ let U = new M(d.h, {
     SURVEY_FETCHED: v,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        ((m.hiddenSurveys[t] = !0), (g = null), (T = T ?? {}), delete T[t]);
+        ((m.hiddenSurveys[t] = !0), (T = null), (g = g ?? {}), delete g[t]);
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t, isActionTriggered: n } = e;

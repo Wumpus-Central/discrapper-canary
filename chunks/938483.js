@@ -535,8 +535,8 @@ n.d(
                     onClose: u,
                     children: p,
                     popoutPosition: m,
-                    popoutAlign: T,
-                    targetElementRef: g,
+                    popoutAlign: g,
+                    targetElementRef: T,
                     spacing: S,
                     dialogClassName: N,
                 } = e,
@@ -598,10 +598,10 @@ n.d(
             return (0, i.jsx)(d.f5, {
                 value: C,
                 children: (0, i.jsx)(l.Y, {
-                    targetElementRef: g,
+                    targetElementRef: T,
                     animation: l.Y.Animation.NONE,
                     position: m,
-                    align: T,
+                    align: g,
                     autoInvert: !1,
                     shouldShow: O,
                     onRequestClose: v,

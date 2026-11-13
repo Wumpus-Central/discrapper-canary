@@ -361,13 +361,13 @@ let m = s().debounce((e, t) => {
                 : void 0;
     null != i && e.detectLanguage(i);
 }, 250);
-var T = n(507263),
-    g = n(723702);
+var g = n(507263),
+    T = n(723702);
 function S() {
     return i.A?.spellCheck != null;
 }
 function N() {
-    return (0, g.xl)() && S();
+    return (0, T.xl)() && S();
 }
 function C() {
     return N() && i.A?.features.supports("spellcheck_popout_windows") === !0;
@@ -375,7 +375,7 @@ function C() {
 let O = N()
         ? new Promise((e) => {
               Promise.resolve().then(() =>
-                  (0, T.B)(() =>
+                  (0, g.B)(() =>
                       e(
                           (async function () {
                               let e = new p((await h.getAvailableDictionaries()) ?? []);

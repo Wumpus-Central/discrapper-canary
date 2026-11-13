@@ -16,8 +16,8 @@ var i = n(477900),
 n(190460);
 var p = n(778712),
     m = n(792996),
-    T = n(185864);
-let g = { tension: 1200, friction: 70 };
+    g = n(185864);
+let T = { tension: 1200, friction: 70 };
 function S() {
     return document.hasFocus();
 }
@@ -88,7 +88,7 @@ function L(e) {
             onMouseLeave: u,
             className: _,
             tabIndex: E,
-            ariaLabel: g,
+            ariaLabel: T,
             ariaHidden: S,
             status: N,
             isMobile: C = !1,
@@ -100,7 +100,7 @@ function L(e) {
         } = e,
         b = { width: (0, p.FT)(n), height: (0, p.FT)(n) },
         v =
-            null == g || S
+            null == T || S
                 ? void 0
                 : (function (e, t) {
                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -111,7 +111,7 @@ function L(e) {
                                 status: (0, h.MU)(t, { isMobile: n, isVR: i }),
                             })
                           : e;
-                  })(g, N, C, O),
+                  })(T, N, C, O),
         P = 1.2 * D.size,
         M = (function (e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -232,7 +232,7 @@ function L(e) {
             width: P + y,
             height: P,
             viewBox: `0 0 ${P + y} ${P}`,
-            className: T.DX,
+            className: g.DX,
             "aria-hidden": !0,
             children: (0, i.jsx)("foreignObject", {
                 x: 0,
@@ -240,12 +240,12 @@ function L(e) {
                 width: P,
                 height: P,
                 mask: null != M ? `url(#${M})` : void 0,
-                children: (0, i.jsx)("img", { className: T.M, src: L, alt: " ", "aria-hidden": !0 }),
+                children: (0, i.jsx)("img", { className: g.M, src: L, alt: " ", "aria-hidden": !0 }),
             }),
         });
     return null != r || null != a
         ? (0, i.jsxs)(o.D, {
-              className: s()(T.iE, T.Wn, _),
+              className: s()(g.iE, g.Wn, _),
               style: b,
               onClick: r,
               tabIndex: E,
@@ -259,7 +259,7 @@ function L(e) {
               children: [t, U],
           })
         : (0, i.jsxs)("div", {
-              className: s()(T.iE, _),
+              className: s()(g.iE, _),
               style: b,
               onContextMenu: d ?? void 0,
               onMouseEnter: c ?? void 0,
@@ -277,10 +277,10 @@ function y(e) {
         "div",
         {
             ref: o,
-            className: s()(T.yA, r),
+            className: s()(g.yA, r),
             children: [
-                (0, i.jsx)("img", { src: t ?? void 0, alt: " ", className: T.my, "aria-hidden": !0 }),
-                null != n && (0, i.jsx)("div", { className: T.uh, style: d }),
+                (0, i.jsx)("img", { src: t ?? void 0, alt: " ", className: g.my, "aria-hidden": !0 }),
+                null != n && (0, i.jsx)("div", { className: g.uh, style: d }),
             ],
         },
         t,
@@ -297,7 +297,7 @@ function D(e) {
             isTyping: c = !1,
             typingIndicatorRef: E,
             avatarContentRef: m,
-            voiceStatus: g,
+            voiceStatus: T,
             voiceDb: S,
             speakingStylesConfig: N,
             statusTooltip: R = !1,
@@ -441,7 +441,7 @@ function D(e) {
                 width: k,
                 height: k,
                 viewBox: `0 0 ${k} ${k}`,
-                className: s()(T.dK, T.JW),
+                className: s()(g.dK, g.JW),
                 "aria-hidden": !0,
                 children: [
                     (0, i.jsx)("foreignObject", {
@@ -453,7 +453,7 @@ function D(e) {
                         children: (0, i.jsx)(y, {
                             ref: m,
                             src: t,
-                            voiceStatus: g,
+                            voiceStatus: T,
                             voiceDb: S,
                             speakingStylesConfig: N,
                             className: M,
@@ -473,7 +473,7 @@ function D(e) {
                                           ...C(G, w, { isMobile: l, isTyping: c, isVR: o }),
                                           fill: F,
                                           mask: `url(#${(0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o })})`,
-                                          className: T.Hs,
+                                          className: g.Hs,
                                       }),
                                       c
                                           ? (0, i.jsx)(u.C, {
@@ -529,7 +529,7 @@ function b(e) {
             avatarCutoutRadius: X,
             fill: z,
             ...q
-        } = (0, c.z)({ config: g, from: H, to: j }, S() ? "animate-always" : "animate-never"),
+        } = (0, c.z)({ config: T, from: H, to: j }, S() ? "animate-always" : "animate-never"),
         Q = (0, p.FT)(C),
         J = (0, p.Kj)(C),
         Z = 2.5 * J.status,
@@ -555,7 +555,7 @@ function b(e) {
             width: en,
             height: en,
             viewBox: `0 0 ${en} ${en}`,
-            className: s()(T.dK, T.JW),
+            className: s()(g.dK, g.JW),
             "aria-hidden": !0,
             children: [
                 (0, i.jsxs)("mask", {
@@ -568,7 +568,7 @@ function b(e) {
                     ],
                 }),
                 (0, i.jsx)("foreignObject", {
-                    className: T.__invalid_foreignObject,
+                    className: g.__invalid_foreignObject,
                     x: 0,
                     y: 0,
                     width: Q,
@@ -602,7 +602,7 @@ function b(e) {
                                 width: Z,
                                 height: ee,
                                 viewBox: `0 0 ${Z} ${ee}`,
-                                className: P ? T.Oi : void 0,
+                                className: P ? g.Oi : void 0,
                                 children: [
                                     (0, _.pF)(q, J.status, V),
                                     (0, i.jsx)(l.animated.rect, { fill: z, width: Z, height: ee, mask: `url(#${V})` }),
@@ -616,7 +616,7 @@ function b(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(N, { size: C, isMobile: o, isTyping: E, className: T.Hs }),
+                            (0, i.jsx)(N, { size: C, isMobile: o, isTyping: E, className: g.Hs }),
                         ],
                     }),
                 }),

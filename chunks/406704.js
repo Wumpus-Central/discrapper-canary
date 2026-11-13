@@ -18,14 +18,14 @@ var l = n(323073),
     p = n(863005);
 n(219065);
 var m = n(652215);
-let T = (0, d.A)({
+let g = (0, d.A)({
     id: "2022-07_voice_in_threads",
     label: "Voice in Threads",
     kind: "guild",
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "On", config: { enabled: !0 } }],
 });
-function g(e, t) {
+function T(e, t) {
     return C(
         (0, s.bG)(
             [h.A],
@@ -108,7 +108,7 @@ n.d(
     {},
     {
         AI: function (e) {
-            let t = g(e),
+            let t = T(e),
                 n = S(e);
             return t || n;
         },
@@ -157,13 +157,13 @@ n.d(
         _M: function (e) {
             let t = (0, c.A)(),
                 n = P(e),
-                i = T.useExperiment({ guildId: e.guild_id, location: "e791ea_1" }, { autoTrackExposure: !1 }).enabled,
+                i = g.useExperiment({ guildId: e.guild_id, location: "e791ea_1" }, { autoTrackExposure: !1 }).enabled,
                 r = (0, u.YG)(e),
                 a = (0, o.a)() && (0, l.UK)(e.id);
             return !t && e.isVocalThread() && (i || r) && n && !a;
         },
         gZ: P,
-        io: T,
+        io: g,
         jr: function (e) {
             return (
                 null != e &&
@@ -173,7 +173,7 @@ n.d(
             );
         },
         lK: L,
-        n: g,
+        n: T,
         qi: function (e) {
             return (0, s.bG)([f.A, h.A, A.default], () => {
                 let t = f.A.getChannel(e);

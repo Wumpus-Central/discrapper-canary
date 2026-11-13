@@ -15,10 +15,10 @@ let h = { ProtoClass: d.nT, proto: d.nT.create(), lazyLoaded: !1, editInfo: (0, 
     I = { ProtoClass: o.aw, proto: o.aw.create(), lazyLoaded: !0, editInfo: (0, f.O9)() },
     p = { [f.oD.PRELOADED_USER_SETTINGS]: h, [f.oD.FRECENCY_AND_FAVORITES_SETTINGS]: I },
     m = !1;
-function T() {
-    g();
-}
 function g() {
+    T();
+}
+function T() {
     Object.values(p).forEach((e) => {
         null != e.editInfo.timeout &&
             (clearTimeout(e.editInfo.timeout),
@@ -169,16 +169,16 @@ let R = new O(u.h, {
             Object.values(p).forEach((e) => {
                 e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
             }),
-            g());
+            T());
     },
-    CONNECTION_CLOSED: T,
-    CONNECTION_RESUMED: T,
+    CONNECTION_CLOSED: g,
+    CONNECTION_RESUMED: g,
     OVERLAY_INITIALIZE: function (e) {
         let { userSettingsProto: t } = e;
         ((h.proto = (0, A.Gd)(t)), r()("string" != typeof h.proto, "UserSettingsProto cannot be a string"));
     },
     LOGOUT: function () {
-        (g(),
+        (T(),
             Object.values(p).forEach((e) => {
                 ((e.proto = e.ProtoClass.create()), (e.editInfo = (0, f.O9)()));
             }));

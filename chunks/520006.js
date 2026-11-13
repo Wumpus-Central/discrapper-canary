@@ -16,8 +16,8 @@ var r = n(284009),
     I = n(576705),
     p = n(693409),
     m = n(652215),
-    T = n(792996);
-function g(e) {
+    g = n(792996);
+function T(e) {
     let {
         guild: t,
         channel: r,
@@ -91,9 +91,9 @@ n.d(
                 w = (0, s.bG)([f.A], () => (null != U ? f.A.getGuild(U) : null), [U]),
                 G = (0, s.bG)([h.A], () => (null != t ? h.A.getApplicationActivity(t) : void 0)),
                 x = null == t || C ? c.GroupPlusIcon : d.ActivitiesPlusIcon,
-                k = T.intl.string(T.t["6F9ivu"]);
-            return (null != t && (k = T.intl.string(T.t["OzOM/q"])),
-            null != n && (k = T.intl.string(T.t["6VQaqd"])),
+                k = g.intl.string(g.t["6F9ivu"]);
+            return (null != t && (k = g.intl.string(g.t["OzOM/q"])),
+            null != n && (k = g.intl.string(g.t["6VQaqd"])),
             null != G && O)
                 ? (0, i.jsx)(p.A, {
                       onClick: function () {
@@ -113,7 +113,7 @@ n.d(
                             (a()(null != w, "guild cannot be null"),
                                 a()(null != r, "channel cannot be null"),
                                 null != M && (0, E.XJ)(M, E.OP.INVITE),
-                                g({
+                                T({
                                     guild: w,
                                     channel: r,
                                     streamUserId: n?.ownerId,
@@ -136,6 +136,6 @@ n.d(
                     })
                   : null;
         },
-        X: g,
+        X: T,
     },
 );

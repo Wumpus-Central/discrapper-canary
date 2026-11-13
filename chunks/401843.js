@@ -15,8 +15,8 @@ var i = n(284009),
     I = n(71393),
     p = n(309010),
     m = n(977997),
-    T = n(147036),
-    g = n(927813),
+    g = n(147036),
+    T = n(927813),
     S = n(650338),
     N = n(499785);
 (n(387755), n(308528));
@@ -26,7 +26,7 @@ var O = n(652215),
     R = n(55010);
 function L(e, t) {
     let n = h.A.getChannel(t);
-    return (r()(null != n, "Cannot join a null voice channel"), !m.A.isInChannel(t) && (0, T.Pd)(n, m.A, I.A));
+    return (r()(null != n, "Cannot join a null voice channel"), !m.A.isInChannel(t) && (0, g.Pd)(n, m.A, I.A));
 }
 function y(e, t) {
     if (null != o.default.getRemoteSessionId()) return;
@@ -87,7 +87,7 @@ n.d(
                 l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: i, previewURL: e.body.url });
             } catch (t) {
                 let e;
-                (429 === t.status && (e = t.body.retry_after * g.A.Millis.SECOND),
+                (429 === t.status && (e = t.body.retry_after * T.A.Millis.SECOND),
                     l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: i, retryAfter: e }));
             }
         },

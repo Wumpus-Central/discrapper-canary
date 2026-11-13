@@ -16,7 +16,7 @@ var i = n(665260),
     I = n(652215),
     p = n(340837);
 let m = new Date(16824888e5);
-function T(e, t, n) {
+function g(e, t, n) {
     let i = new Set();
     (e.forEach((e) => {
         e.options.forEach((e) => {
@@ -32,7 +32,7 @@ function T(e, t, n) {
         r.filter((e) => !i.has(e.id) && !(null != e.parent_id && i.has(e.parent_id))),
     ];
 }
-function g(e) {
+function T(e) {
     return (
         null != e &&
         !!(0, f.S)(e.guild_id, e.id) &&
@@ -128,7 +128,7 @@ n.d(
             );
         },
         Lx: function (e, t, n) {
-            return T(
+            return g(
                 t,
                 n,
                 (0, r.bG)([d.A], () => d.A.getChannels(e))[d.I].map((e) => {
@@ -154,10 +154,10 @@ n.d(
             );
         },
         VU: function (e) {
-            return g(l.A.getChannel(e));
+            return T(l.A.getChannel(e));
         },
         _N: function (e, t, n) {
-            return T(
+            return g(
                 t,
                 n,
                 d.A.getChannels(e)[d.I].map((e) => {
@@ -181,7 +181,7 @@ n.d(
                 r = u.A.can(I.xBc.MANAGE_ROLES, t);
             return n && i && r;
         },
-        sZ: g,
+        sZ: T,
         tb: function (e, t) {
             return (0, r.bG)(
                 [d.A],
@@ -194,7 +194,7 @@ n.d(
                         (0, f.S)(e.channel.guild_id, e.channel.id) &&
                             ((t.has(e.channel.id) && !e.channel.isCategory()) ||
                                 (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) &&
-                            ((a[e.channel.id] = e), i.push(e.channel), g(e.channel) && r.push(e.channel.id));
+                            ((a[e.channel.id] = e), i.push(e.channel), T(e.channel) && r.push(e.channel.id));
                     return [r, i];
                 },
                 [e, t],
@@ -212,7 +212,7 @@ n.d(
                     let { id: t } = e;
                     return t;
                 })),
-                n.filter((e) => g(a[e]?.channel))),
+                n.filter((e) => T(a[e]?.channel))),
                 i,
             ];
         },

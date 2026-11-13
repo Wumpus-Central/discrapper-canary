@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(268218);
 (n(667532), n(321073));
 var r = n(284009),
@@ -17,7 +17,7 @@ var r = n(284009),
     I = n(652215);
 let p = "RPC_STORE_WAIT",
     m = [],
-    T = new (class {
+    g = new (class {
         getCurrentUser = () => null;
         onConnect = () => {};
         onDisconnect = () => {};

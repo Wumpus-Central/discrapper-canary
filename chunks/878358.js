@@ -10,8 +10,8 @@ var r = a(477900),
     h = a(534890),
     f = a(664121),
     b = a(460905),
-    _ = a(687966),
-    p = a(554830),
+    p = a(687966),
+    _ = a(554830),
     m = a(866665),
     x = a(939249),
     g = a(565645),
@@ -78,7 +78,7 @@ function U(e) {
                     : void 0,
             [d],
         ),
-        p = i.useMemo(() => (null != l ? (0, r.jsx)(k, { src: l }) : (0, r.jsx)(D, { character: s })), [l, s]);
+        _ = i.useMemo(() => (null != l ? (0, r.jsx)(k, { src: l }) : (0, r.jsx)(D, { character: s })), [l, s]);
     return (0, r.jsxs)("ul", {
         className: O.M1,
         children: [
@@ -90,7 +90,7 @@ function U(e) {
                 icon: (0, r.jsx)(h.ChatIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.messages,
             }),
-            null != t.topGuildName ? (0, r.jsx)(P, { icon: p, stat: t.topGuildName }) : null,
+            null != t.topGuildName ? (0, r.jsx)(P, { icon: _, stat: t.topGuildName }) : null,
             (0, r.jsx)(P, {
                 icon: (0, r.jsx)(f.ServerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.topGuildDaysInteracted,
@@ -106,7 +106,7 @@ function U(e) {
                   })
                 : null,
             (0, r.jsx)(P, {
-                icon: (0, r.jsx)(_.GameControllerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
+                icon: (0, r.jsx)(p.GameControllerIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" }),
                 stat: t.daysPlayed,
             }),
             null != t.topGameName
@@ -132,7 +132,7 @@ function H(e) {
                 ? (0, r.jsx)("div", {
                       className: O.wC,
                       "aria-hidden": !0,
-                      children: (0, r.jsx)(p.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
+                      children: (0, r.jsx)(_.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
                   })
                 : null,
         ],

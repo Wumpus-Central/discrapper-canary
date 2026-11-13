@@ -15,8 +15,8 @@ var i = n(435558),
     I = n(953384),
     p = n(644727),
     m = n(765741),
-    T = n(863160);
-class g extends o.A {
+    g = n(863160);
+class T extends o.A {
     intervalId;
     nonGameIntervalId;
     canonicalGameIdByPid = {};
@@ -47,7 +47,7 @@ class g extends o.A {
     }
     fetchRunningGameRecords(e) {
         let t = e.games
-            .flatMap((e) => (null != e.processGame ? [e, (0, T.Un)(e)] : [e]))
+            .flatMap((e) => (null != e.processGame ? [e, (0, g.Un)(e)] : [e]))
             .map((e) => e.id ?? _.A.findGame(e)?.id)
             .filter(f.Vq);
         0 !== t.length && u.I.fetchMany(...t.map((e) => [e]));
@@ -85,5 +85,5 @@ class g extends o.A {
                 (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0)));
     }
 }
-let S = new g();
+let S = new T();
 n.d(t, {}, { A: S });

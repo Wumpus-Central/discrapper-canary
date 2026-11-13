@@ -34,11 +34,11 @@ function m() {
         i = [..._, ...[...E, ...I()].filter((e) => !t.has(e.application_id) && n.has(e.application_id))];
     p(i, u) || (u = 0 === i.length ? c : i);
 }
-function T() {
+function g() {
     let e = u;
     return (m(), u !== e);
 }
-function g(e) {
+function T(e) {
     let { guildId: t } = e;
     if (![...E, ...I()].some((e) => e.guild_id === t)) return !1;
     h++;
@@ -50,7 +50,7 @@ class S extends i.Ay.Store {
             a.A.initializeIfNeeded(),
             m(),
             this.syncWith([s.Ay], () => (m(), !0)),
-            this.syncWith([a.A], T));
+            this.syncWith([a.A], g));
     }
     getProjects() {
         return u;
@@ -89,8 +89,8 @@ let N = new S(r.h, {
     CONJURE_SERVER_OVERLAY_WIDGETS_FETCH_FAIL: function () {
         f++;
     },
-    INTEGRATION_DELETE: g,
-    GUILD_INTEGRATIONS_UPDATE: g,
+    INTEGRATION_DELETE: T,
+    GUILD_INTEGRATIONS_UPDATE: T,
     CONJURE_SERVER_OVERLAY_WIDGETS_GUILD_REMOVE: function (e) {
         let { guildId: t } = e,
             n = E.filter((e) => e.guild_id !== t);

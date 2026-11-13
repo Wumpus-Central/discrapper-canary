@@ -10,8 +10,8 @@ var c = n(855986),
     I = n(613235),
     p = n(830012),
     m = n(927813),
-    T = n(46653),
-    g = n(734057),
+    g = n(46653),
+    T = n(734057),
     S = n(71393),
     N = n(754712),
     C = n(576705),
@@ -46,12 +46,12 @@ function x(e) {
         (a[n] = { streamKey: n, region: r, viewerIds: s }));
 }
 function k(e, t) {
-    let n = g.A.getBasicChannel(t);
+    let n = T.A.getBasicChannel(t);
     return e === D.U4.CALL || (null != n && C.A.canBasicChannel(y.hVb.VIEW_CHANNEL, n));
 }
 function F(e) {
     if (k(e.streamType, e.channelId)) return !0;
-    let t = g.A.getBasicChannel(e.channelId);
+    let t = T.A.getBasicChannel(e.channelId);
     return null != t && (0, f.eo)(t, L.A, S.A, C.A, _.default)[0];
 }
 U();
@@ -60,7 +60,7 @@ class B extends c.Ay.PersistedStore {
     static persistKey = "ApplicationStreamingStore";
     initialize(e) {
         (this.syncWith([C.A], () => !0),
-            this.waitFor(T.default, g.A, C.A, O.A, E.Ay, R.Ay),
+            this.waitFor(g.default, T.A, C.A, O.A, E.Ay, R.Ay),
             e?.selfStreamParticipantsHidden !== void 0 && Object.assign(v, e?.selfStreamParticipantsHidden));
     }
     getState() {
@@ -88,8 +88,8 @@ class B extends c.Ay.PersistedStore {
     }
     getCurrentUserActiveStream() {
         let e = R.Ay.getVoiceChannelId(),
-            t = g.A.getChannel(e);
-        return null == t ? null : this.getActiveStreamForUser(T.default.getId(), t.getGuildId());
+            t = T.A.getChannel(e);
+        return null == t ? null : this.getActiveStreamForUser(g.default.getId(), t.getGuildId());
     }
     isStreamMarkedFull(e) {
         return l.has(e);
@@ -102,9 +102,9 @@ class B extends c.Ay.PersistedStore {
     }
     getStreamerActiveStreamMetadata() {
         let e = R.Ay.getVoiceChannelId(),
-            t = g.A.getChannel(e);
+            t = T.A.getChannel(e);
         if (null == t) return null;
-        let n = this.getActiveStreamForUser(T.default.getId(), t.getGuildId());
+        let n = this.getActiveStreamForUser(g.default.getId(), t.getGuildId());
         return null == n ? null : (s[(0, A._z)(n)] ?? null);
     }
     getStreamerActiveStreamMetadataForStream(e) {
@@ -226,8 +226,8 @@ let V = new B(u.h, {
             {
                 let t,
                     n,
-                    s = T.default.getId(),
-                    d = T.default.getSessionId();
+                    s = g.default.getId(),
+                    d = g.default.getSessionId();
                 if (i === s && o !== d && null != O.A.getChannelId()) return e;
                 let c =
                     ((t = !1),
@@ -245,7 +245,7 @@ let V = new B(u.h, {
             n = (0, A.Iy)(t);
         (i.delete(t),
             i.set(t, { ...n, state: y.XYD.CONNECTING }),
-            n.ownerId === T.default.getId() && (v[n.channelId] = !1));
+            n.ownerId === g.default.getId() && (v[n.channelId] = !1));
     },
     STREAM_START: function (e) {
         let {
@@ -258,7 +258,7 @@ let V = new B(u.h, {
                 sourceIcon: u,
                 previewDisabled: _,
             } = e,
-            f = (0, A._z)({ streamType: t, guildId: n, channelId: r, ownerId: T.default.getId() });
+            f = (0, A._z)({ streamType: t, guildId: n, channelId: r, ownerId: g.default.getId() });
         c?.startsWith("prepicked:") && null == a && (a = o);
         let h =
             (c?.startsWith("prepicked:") && null != d
@@ -270,7 +270,7 @@ let V = new B(u.h, {
                     : null) ?? null;
         ((s[f] = { id: h?.id, pid: a, sourceName: l, previewDisabled: _, sourceIcon: u, sourceId: c }),
             i.delete(f),
-            i.set(f, { streamType: t, guildId: n, channelId: r, ownerId: T.default.getId(), state: y.XYD.CONNECTING }));
+            i.set(f, { streamType: t, guildId: n, channelId: r, ownerId: g.default.getId(), state: y.XYD.CONNECTING }));
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
@@ -314,7 +314,7 @@ let V = new B(u.h, {
     },
     STREAM_UPDATE_SELF_HIDDEN: function (e) {
         let { channelId: t, selfStreamHidden: n } = e;
-        ((0, A.wL)(b) && b?.includes(T.default.getId()) && !1 === v[t] && !0 === n && (b = null), (v[t] = n));
+        ((0, A.wL)(b) && b?.includes(g.default.getId()) && !1 === v[t] && !0 === n && (b = null), (v[t] = n));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -335,7 +335,7 @@ let V = new B(u.h, {
         let { streamKey: t, state: n } = e;
         if (null == t) return !1;
         let r = i.get(t);
-        if (null == r || r.state === y.XYD.ENDED || (r.state === y.XYD.FAILED && r.ownerId === T.default.getId()))
+        if (null == r || r.state === y.XYD.ENDED || (r.state === y.XYD.FAILED && r.ownerId === g.default.getId()))
             return !1;
         let a = r.state;
         switch (n) {
@@ -354,7 +354,7 @@ let V = new B(u.h, {
             Array.from(i.values()).forEach((e) => {
                 (0, A._z)(e) !== b && e.state === y.XYD.ENDED && w((0, A._z)(e));
             }),
-            null == t || ((0, A.wL)(t) && t.includes(T.default.getId()) && (v[n] = !1)));
+            null == t || ((0, A.wL)(t) && t.includes(g.default.getId()) && (v[n] = !1)));
     },
     CONNECTION_OPEN: U,
     CONNECTION_CLOSED: U,

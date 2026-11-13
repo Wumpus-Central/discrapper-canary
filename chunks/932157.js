@@ -63,7 +63,7 @@ let I = { source: a.NO_CLASSIFICATION, status: s.Y.EVERYONE };
 function p(e) {
     return (function (e) {
         var t, n, i, r, E;
-        let A, f, h, p, T, g;
+        let A, f, h, p, g, T;
         if (null == e) return I;
         let S = [],
             { type: N, data: C } = e;
@@ -103,14 +103,14 @@ function p(e) {
                 null != C.agency_ratings.apple &&
                     S.push(
                         ((r = C.agency_ratings.apple),
-                        (T = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: T }),
+                        (g = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: g }),
                     ),
                 null != C.agency_ratings.roblox &&
                     S.push(
                         ((E = C.agency_ratings.roblox),
-                        (g = _.IS_ADULT_ONLY.has(E.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_ROBLOX, status: g }),
+                        (T = _.IS_ADULT_ONLY.has(E.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_ROBLOX, status: T }),
                     )),
             (function (e) {
                 let t = null;

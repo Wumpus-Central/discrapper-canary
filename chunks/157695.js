@@ -10,8 +10,8 @@ let h = [],
     I = 30 * A.A.Millis.SECOND,
     p = 10 * A.A.Millis.MINUTE,
     m = null,
-    T = !1;
-function g() {
+    g = !1;
+function T() {
     ((i = new Map()),
         (r = 0),
         (a = new Map()),
@@ -19,12 +19,12 @@ function g() {
         (l = new Map()),
         (o = new Map()),
         (m = null),
-        (T = !1));
+        (g = !1));
 }
 function S(e, t) {
     (i = new Map(i)).set(e, t);
 }
-g();
+T();
 class N extends _.Ay.Store {
     static displayName = "AdDeliveryStore";
     get lastFetchedQuestToDeliver() {
@@ -48,7 +48,7 @@ class N extends _.Ay.Store {
         return null == t ? null : t.fetchedAt + t.ttlMillis >= Date.now() ? t : null;
     }
     isFetchingQuestHomeHero() {
-        return T;
+        return g;
     }
     getLastFetchedQuestHomeHero() {
         return m;
@@ -60,7 +60,7 @@ class N extends _.Ay.Store {
 }
 let C = new N(E.h, {
     LOGOUT: function () {
-        g();
+        T();
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function (e) {
         let { placement: t } = e;
@@ -122,10 +122,10 @@ let C = new N(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;
-        ((T = !0), S(t, !0));
+        ((g = !0), S(t, !0));
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        ((T = !1), (m = Date.now()), S(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
+        ((g = !1), (m = Date.now()), S(e.placement, !1), l.get(e.placement)?.succeed(), o.delete(e.placement));
         let t = {
             creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
@@ -140,7 +140,7 @@ let C = new N(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
-        ((T = !1), S(t, !1));
+        ((g = !1), S(t, !1));
         let n = l.get(t);
         (null == n && ((n = new d.A(I, p)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },

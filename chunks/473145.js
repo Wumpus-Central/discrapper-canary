@@ -21,12 +21,12 @@ var A = n(682901),
 Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
 let p = [E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3],
     m = p.slice().reverse();
-function T(e, t) {
+function g(e, t) {
     return null != t && t.features.has(E.GuildFeatures.MORE_STICKERS) && e === E.TVA.TIER_3
         ? a.K.MAX_STICKER_SLOTS
         : A.d8[e];
 }
-function g(e) {
+function T(e) {
     return A.nk[e];
 }
 function S(e, t) {
@@ -60,7 +60,7 @@ function L(e) {
         t,
         {},
         {
-            Cp: g,
+            Cp: T,
             D$: C,
             I5: L,
             Nc: function (e) {
@@ -119,7 +119,7 @@ function L(e) {
                 return A.y7[e] - A.y7[t];
             },
             Ys: N,
-            aG: T,
+            aG: g,
             ax: function (e) {
                 return e === E.TVA.NONE ? E.TVA.TIER_1 : O.find((t) => t.tier === e)?.nextTier;
             },
@@ -169,12 +169,12 @@ function L(e) {
                 return -1 === p.indexOf(n) ? 0 : Math.max(0, R(e) - t.length);
             },
             yA: function (e, t) {
-                let n = g(t),
+                let n = T(t),
                     i = p.indexOf(t);
                 if (-1 === i) return 0;
                 let r = p[i - 1],
-                    a = null != r ? T(r) : 0,
-                    s = T(t);
+                    a = null != r ? g(r) : 0,
+                    s = g(t);
                 return Math.max(0, n - e.slice(a, s).length);
             },
             yS: function (e, t) {

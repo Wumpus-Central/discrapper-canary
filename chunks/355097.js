@@ -30,12 +30,12 @@ var i,
         (o[(o.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
         (o[(o.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),
         o),
-    T =
+    g =
         (((d = {}).USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
         (d.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
         (d.SERVER_PRIVACY_MODAL = "server_privacy_modal"),
         d),
-    g =
+    T =
         (((c = {})[(c.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
         (c[(c.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
         (c[(c.SLOW_USER_ACTION = 20)] = "SLOW_USER_ACTION"),
@@ -113,13 +113,13 @@ n.d(
             };
         },
         PZ: "APPLICATION_SUBSCRIPTION_SUBSECTION",
-        Sb: g,
+        Sb: T,
         W: C,
         Xx: A,
         YP: h,
         _A: f,
         _F: p,
-        bf: T,
+        bf: g,
         ko: N,
         n3: {
             OPT_IN_CHANNELS_ON: 16384,

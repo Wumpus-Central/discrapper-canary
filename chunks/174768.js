@@ -16,8 +16,8 @@ var r = n(435558),
     I = n(799704),
     p = n(734057),
     m = n(31717),
-    T = n(808728),
-    g = n(696451),
+    g = n(808728),
+    T = n(696451),
     S = n(71393),
     N = n(576705),
     C = n(218461),
@@ -182,7 +182,7 @@ function q(e, t) {
                               E))
                                   (a.add(t.record.id), a.add(e), r.push(t));
                           if (null != n) {
-                              let e = T.A.getSelectableChannelIds(n)
+                              let e = g.A.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.A.getChannel(e);
                                       return (
@@ -272,7 +272,7 @@ class Z extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        (this.waitFor(A.A, h.default, I.Ay, p.A, m.A, u.A, T.A, g.Ay, S.A, N.A, C.Ay, O.Ay, R.A, f.A, L.Ay),
+        (this.waitFor(A.A, h.default, I.Ay, p.A, m.A, u.A, g.A, T.Ay, S.A, N.A, C.Ay, O.Ay, R.A, f.A, L.Ay),
             this.syncWith([f.A], () => !0),
             (G = l.w.get(P) || !1),
             (j = e?.channelHistory ?? []));

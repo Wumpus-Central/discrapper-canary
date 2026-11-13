@@ -29,7 +29,7 @@ let m = new Set([
         I.rbe.DM,
         I.rbe.GROUP_DM,
     ]),
-    T = new Set([
+    g = new Set([
         I.rbe.DM,
         I.rbe.GROUP_DM,
         I.rbe.GUILD_TEXT,
@@ -48,7 +48,7 @@ let m = new Set([
         I.rbe.MEDIA_THREAD,
         I.rbe.GUILD_APP,
     ]),
-    g = new Set([
+    T = new Set([
         I.rbe.GUILD_TEXT,
         I.rbe.GUILD_ANNOUNCEMENT,
         I.rbe.ANNOUNCEMENT_THREAD,
@@ -973,7 +973,7 @@ class em extends ed {
         return (0, _.pp)(n, em);
     }
 }
-let eT = {
+let eg = {
         [I.rbe.DM]: ep.fromServer,
         [I.rbe.GROUP_DM]: ep.fromServer,
         [I.rbe.GUILD_TEXT]: e_.fromServer,
@@ -992,7 +992,7 @@ let eT = {
         [I.rbe.GUILD_SPACE]: e_.fromServer,
         [I.rbe.GUILD_APP]: e_.fromServer,
     },
-    eg = {
+    eT = {
         [I.rbe.DM]: class extends ep {},
         [I.rbe.GROUP_DM]: class extends ep {},
         [I.rbe.GUILD_TEXT]: eE,
@@ -1012,17 +1012,17 @@ let eT = {
         [I.rbe.GUILD_APP]: class extends e_ {},
     };
 function eS(e) {
-    let t = eg[e.type ?? I.rbe.GUILD_TEXT] ?? ec;
+    let t = eT[e.type ?? I.rbe.GUILD_TEXT] ?? ec;
     return (0, _.pp)(e, t);
 }
 function eN(e) {
-    return new (eg[e.type ?? I.rbe.GUILD_TEXT] ?? ec)(el(e));
+    return new (eT[e.type ?? I.rbe.GUILD_TEXT] ?? ec)(el(e));
 }
 n.d(
     t,
     {},
     {
-        A_: T,
+        A_: g,
         B4: z,
         Do: L,
         Gw: D,
@@ -1042,7 +1042,7 @@ n.d(
         },
         TA: ea,
         UE: function (e, t) {
-            return (eT[e.type ?? I.rbe.GUILD_TEXT] ?? ec.fromServer)(e, t);
+            return (eg[e.type ?? I.rbe.GUILD_TEXT] ?? ec.fromServer)(e, t);
         },
         XD: N,
         YB: ed,
@@ -1065,7 +1065,7 @@ n.d(
         k: $,
         k3: P,
         ke: function (e) {
-            return g.has(e);
+            return T.has(e);
         },
         nA: eE,
         nO: function (e) {

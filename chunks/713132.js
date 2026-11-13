@@ -59,7 +59,7 @@ function m() {
     if (!t) return !1;
     E = e;
 }
-class T extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "GuildOfficialMessagesStore";
     initialize() {
         this.waitFor(s.A, l.Ay, o.A, d.A, c.default);
@@ -84,7 +84,7 @@ class T extends r.Ay.Store {
         return E[e]?.hasMore ?? !1;
     }
 }
-let g = new T(a.h, {
+let T = new g(a.h, {
     CONNECTION_OPEN: function () {
         E = {};
     },
@@ -208,4 +208,4 @@ let g = new T(a.h, {
     RELATIONSHIP_REMOVE: m,
     RELATIONSHIP_UPDATE: m,
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

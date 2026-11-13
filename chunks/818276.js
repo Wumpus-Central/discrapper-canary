@@ -1,5 +1,5 @@
-var l = n(477900),
-    s = n(582128),
+var s = n(477900),
+    l = n(582128),
     a = n(503698),
     r = n.n(a),
     i = n(120692),
@@ -13,16 +13,16 @@ n.d(
     {
         A: function (e) {
             let { children: t, layoutVariant: n, backgroundImage: a, onMouseEnter: m, onMouseLeave: p } = e,
-                { expansionSpring: x, collapsedContentRef: f } = s.useContext(u.PW),
+                { expansionSpring: x, collapsedContentRef: f } = l.useContext(u.PW),
                 { isExpanded: h } = (0, c.H)();
-            return (0, l.jsx)(i.animated.div, {
+            return (0, s.jsx)(i.animated.div, {
                 ref: f,
                 "aria-hidden": h,
                 className: r()(d.hR, { [d.Ag]: h, [d.MN]: "inset" === n }),
                 style: { opacity: (0, o.a)(x.to({ range: [0, 1], output: [1, 0] })), backgroundImage: a },
                 onMouseEnter: m,
                 onMouseLeave: p,
-                children: (0, l.jsx)("div", { className: d.o8, children: t }),
+                children: (0, s.jsx)("div", { className: d.o8, children: t }),
             });
         },
     },

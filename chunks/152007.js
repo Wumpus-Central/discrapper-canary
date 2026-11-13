@@ -37,7 +37,7 @@ function h(e) {
         !0 === t.muted
             ? ((_ = new Set(_)).add(e),
               u.setTimer(e, t.muteConfig, () => {
-                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), T.emitChange());
+                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), g.emitChange());
               }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
             : (_ = new Set(_)).delete(e));
 }
@@ -102,7 +102,7 @@ class m extends a.Ay.Store {
         return _.has(e);
     }
 }
-let T = new m(s.h, {
+let g = new m(s.h, {
     CONNECTION_OPEN: function (e) {
         (u.reset(),
             (_ = new Set()),
@@ -187,4 +187,4 @@ let T = new m(s.h, {
         );
     },
 });
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

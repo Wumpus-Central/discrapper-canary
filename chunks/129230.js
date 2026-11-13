@@ -42,8 +42,8 @@ var _ = n(111162),
     I = n(705751),
     p = n(792996);
 let m = i.createContext({ location: {} }),
-    T = {},
-    g = performance.now(),
+    g = {},
+    T = performance.now(),
     S = (0, l.xd)() ? (0, l.xy)((0, s.V)()) : null;
 a.extendSuperProperties({ launch_signature: S });
 let N = [];
@@ -200,10 +200,10 @@ function D(e) {
         (t.cpu_core_count = E.A.getCPUCoreCount()),
         (t.accessibility_features = R()),
         (t.rendered_locale = p.intl.currentLocale),
-        (t.uptime_app = Math.floor((performance.now() - g) / 1e3)));
+        (t.uptime_app = Math.floor((performance.now() - T) / 1e3)));
     let n = E.A.getProcessUptime();
     null != n && (t.uptime_process_renderer = Math.floor(n));
-    let { utmSource: i, utmMedium: r, utmCampaign: a, utmContent: s } = T;
+    let { utmSource: i, utmMedium: r, utmCampaign: a, utmContent: s } = g;
     return (
         (t.utm_source = t.utm_source ?? i),
         (t.utm_medium = t.utm_medium ?? r),

@@ -15,8 +15,8 @@ var i = n(582128),
     I = n(949192),
     p = n(448645),
     m = n(652215),
-    T = n(682901);
-function g(e) {
+    g = n(682901);
+function T(e) {
     let {
             isFetching: t = !1,
             entitlements: n,
@@ -28,7 +28,7 @@ function g(e) {
         } = e,
         u = {
             isFractionalPremiumActive: !1,
-            fractionalState: T.xc.NONE,
+            fractionalState: g.xc.NONE,
             startsAt: o()(0),
             endsAt: o()(0),
             currentEntitlementId: "",
@@ -51,8 +51,8 @@ function g(e) {
         throw ((0, I.hD)(t, { extra: { entitlementIds: e } }), Error(t));
     }
     let E = _[0] ?? null,
-        A = T.xc.NONE;
-    null != E && (A = null != s && s.status === m.Dmq.PAUSED ? T.xc.FP_SUB_PAUSED : T.xc.FP_ONLY);
+        A = g.xc.NONE;
+    null != E && (A = null != s && s.status === m.Dmq.PAUSED ? g.xc.FP_SUB_PAUSED : g.xc.FP_ONLY);
     let f = c && E?.sourceType === d.G.REVERSE_TRIAL;
     return {
         isFractionalPremiumActive: null != E,
@@ -69,7 +69,7 @@ function S(e, t) {
     return null != t && !h.A.fetchingAllEntitlements && (!h.A.fetchedAllEntitlements || e);
 }
 function N(e) {
-    return null != e && !h.A.applicationIdsFetching.has(T.tv) && !h.A.applicationIdsFetched.has(T.tv);
+    return null != e && !h.A.applicationIdsFetching.has(g.tv) && !h.A.applicationIdsFetched.has(g.tv);
 }
 n.d(
     t,
@@ -89,9 +89,9 @@ n.d(
                 o = (0, u.yK)([h.A], () => h.A.getUnactivatedFractionalPremiumUnits()),
                 d = (0, u.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
                 [I, p] = i.useState(
-                    g({
+                    T({
                         isFetching:
-                            S(e, r) || h.A.fetchingAllEntitlements || N(r) || h.A.applicationIdsFetching.has(T.tv),
+                            S(e, r) || h.A.fetchingAllEntitlements || N(r) || h.A.applicationIdsFetching.has(g.tv),
                         entitlements: a,
                         unactivatedFractionalPremiumUnits: o,
                         currentUser: r,
@@ -102,10 +102,10 @@ n.d(
                 );
             return (
                 (0, E.Ay)(() => {
-                    (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(T.tv));
+                    (S(e, r) && (0, _.qw)({ entitlementType: c.z.FRACTIONAL_REDEMPTION }), N(r) && (0, _.LM)(g.tv));
                 }),
                 i.useEffect(() => {
-                    let e = g({
+                    let e = T({
                         entitlements: a,
                         unactivatedFractionalPremiumUnits: o,
                         currentUser: r,

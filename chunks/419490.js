@@ -21,8 +21,8 @@ var E = n(458977),
 let I = "default",
     p = "Discord Clips",
     m = {},
-    T = {},
-    g = [],
+    g = {},
+    T = [],
     S = 0,
     N = null,
     C = null,
@@ -228,14 +228,14 @@ class H extends r.Ay.DeviceSettingsStore {
         return m[e];
     }
     getClipByRemoteId(e) {
-        let t = T[e];
+        let t = g[e];
         if (null != t) return m[t];
     }
     getClipCandidates() {
         return k().flatMap((e) => e.candidates);
     }
     getPendingMontageClips() {
-        return g;
+        return T;
     }
     getUserAgnosticState() {
         return x;
@@ -333,7 +333,7 @@ let j = new H(a.h, {
                 t.isCandidate ||
                     ((x = { ...x, newClipIds: [...(x.newClipIds ?? []), t.id] }),
                     (m[t.id] = t),
-                    null != t.remoteClipId && (T[t.remoteClipId] = t.id),
+                    null != t.remoteClipId && (g[t.remoteClipId] = t.id),
                     (x.hasClips = !0)));
         },
         CLIPS_PROMOTE_CLIP_CANDIDATE: function (e) {
@@ -375,20 +375,20 @@ let j = new H(a.h, {
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
             for (let t of ((m = {}), e.clips))
-                t.isCandidate || ((m[t.id] = t), null != t.remoteClipId && (T[t.remoteClipId] = t.id));
+                t.isCandidate || ((m[t.id] = t), null != t.remoteClipId && (g[t.remoteClipId] = t.id));
             x.hasClips = Object.keys(m).length > 0;
         },
         CLIPS_DELETE_CLIP: function (e) {
             let t = m[e.id];
             for (let t of k()) t.removeCandidate(e.id);
             (delete m[e.id],
-                t?.remoteClipId != null && delete T[t.remoteClipId],
+                t?.remoteClipId != null && delete g[t.remoteClipId],
                 (x.hasClips = Object.keys(m).length > 0));
         },
         CLIPS_UPDATE_METADATA: function (e) {
             let { clip: t } = e;
             if (t.isCandidate) return !1;
-            ((m[t.id] = t), null != t.remoteClipId && (T[t.remoteClipId] = t.id));
+            ((m[t.id] = t), null != t.remoteClipId && (g[t.remoteClipId] = t.id));
         },
         RTC_CONNECTION_FLAGS: function (e) {
             R[e.userId] = {
@@ -483,9 +483,9 @@ let j = new H(a.h, {
         },
         CLIPS_MONTAGE_RENDER_START: function (e) {
             let { clip: t } = e;
-            g = [
+            T = [
                 t,
-                ...g.filter((e) => {
+                ...T.filter((e) => {
                     let { id: n } = e;
                     return n !== t.id;
                 }),
@@ -493,7 +493,7 @@ let j = new H(a.h, {
         },
         CLIPS_MONTAGE_RENDER_DONE: function (e) {
             let { clip: t, session: n } = e;
-            ((g = g.filter((e) => {
+            ((T = T.filter((e) => {
                 let { id: n } = e;
                 return n !== t.id;
             })),
@@ -503,7 +503,7 @@ let j = new H(a.h, {
         },
         CLIPS_MONTAGE_RENDER_ERROR: function (e) {
             let { clipId: t } = e;
-            g = g.filter((e) => {
+            T = T.filter((e) => {
                 let { id: n } = e;
                 return n !== t;
             });

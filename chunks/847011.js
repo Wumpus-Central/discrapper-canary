@@ -1,7 +1,7 @@
 a.d(t, { SK: () => h, bL: () => l, $_: () => f, p5: () => u, E1: () => o });
 var r = a(201779),
     i = a(407905);
-let n = [
+let s = [
         r.gr.HOME,
         r.gr.CHARACTER_UNAVAILABLE,
         r.gr.INTRODUCTION,
@@ -21,7 +21,7 @@ let n = [
         r.gr.SUMMARY,
         r.gr.SHARE,
     ],
-    s = [
+    n = [
         r.gr.HOME,
         r.gr.CHARACTER_UNAVAILABLE,
         r.gr.INTRODUCTION,
@@ -74,21 +74,21 @@ function o(e) {
 }
 function u(e) {
     let { flow: t, stats: a, character: i, isCharacterCreatorEnabled: l = !0 } = e;
-    return (t === r.Np.SHARED_DATA ? s : n).filter((e) => {
+    return (t === r.Np.SHARED_DATA ? n : s).filter((e) => {
         if (e === r.gr.CHARACTER_UNAVAILABLE) return !l;
         if (!l && (e === r.gr.INTRODUCTION || (0, r.Rq)(e))) return !1;
         if (e === r.gr.SUMMARY) return o({ stats: a, character: i, isCharacterCreatorEnabled: l });
         let t = c[e];
         if (null != t) return null != a && t(a);
-        let n = d[e];
-        return null == n || void 0 === a || n(a);
+        let s = d[e];
+        return null == s || void 0 === a || s(a);
     });
 }
 function h(e) {
     let { currentRoute: t, direction: a, ...r } = e,
         i = u(r),
-        n = i.indexOf(t);
-    return -1 === n ? (i[0] ?? null) : (i[n + a] ?? null);
+        s = i.indexOf(t);
+    return -1 === s ? (i[0] ?? null) : (i[s + a] ?? null);
 }
 function f(e) {
     return (e.isCharacterCreatorEnabled ?? !0)

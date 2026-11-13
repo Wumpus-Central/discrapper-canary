@@ -16,8 +16,8 @@ var i = n(812729),
     I = n(300649),
     p = n(405473),
     m = n(406318);
-let T = new c.A("MemberSafetySearchManager");
-function g(e) {
+let g = new c.A("MemberSafetySearchManager");
+function T(e) {
     return `guild_${e}`;
 }
 function S(e) {
@@ -56,7 +56,7 @@ async function L(e) {
 }
 function y(e) {
     var t;
-    ((t = g(e)),
+    ((t = T(e)),
         (0, l.r)(() => {
             N.setState((e) => {
                 let n = { ...e };
@@ -73,7 +73,7 @@ async function b(e) {
         i,
         s = m.A.getSearchStateByGuildId(e),
         l = m.A.getPaginationStateByGuildId(e),
-        o = g(e),
+        o = T(e),
         d = R(o),
         [c, S] = (function (e, t, n) {
             let i = (function (e, t) {
@@ -94,7 +94,7 @@ async function b(e) {
                             currentPageChunkNumber: D(r, n),
                             nextPageChunkNumber: D(a, n),
                         }),
-                        { previousPagination: d } = R(g(e)),
+                        { previousPagination: d } = R(T(e)),
                         c = t.currentPage,
                         u = d?.currentPage ?? 0,
                         _ = m.A.getElasticSearchPaginationByGuildId(e);
@@ -189,7 +189,7 @@ async function b(e) {
             sort: y,
         }));
     try {
-        if ((T.info("Making member search request", { query: b.query, guildId: e }), null == b.query))
+        if ((g.info("Making member search request", { query: b.query, guildId: e }), null == b.query))
             throw Error("Query is null");
         await (async function (e, t, n) {
             let i = await (0, I.y)(e, t, n);
@@ -212,13 +212,13 @@ async function b(e) {
 }
 function v(e) {
     return N((t) => {
-        let n = g(e);
+        let n = T(e);
         return t[n]?.requestState === 2;
     });
 }
 function P(e) {
     return N((t) => {
-        let n = g(e);
+        let n = T(e);
         return t[n]?.requestState === 4;
     });
 }
@@ -250,11 +250,11 @@ class M extends d.A {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return L(g(t));
+        return L(T(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        C(g(t), { requestState: 4, abortController: null, lastUpdated: Date.now() });
+        C(T(t), { requestState: 4, abortController: null, lastUpdated: Date.now() });
     }
     handleNewMemberTimestampRefresh(e) {
         let { guildId: t } = e;

@@ -15,7 +15,7 @@ let l = /\n{2,}$/,
     I = /^\n/,
     p = /\n *$/,
     m = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    T = {
+    g = {
         ...s().defaultRules.list,
         requiredFirstCharacters: "\n *-0123456789".split(""),
         match: (e, t) => {
@@ -40,18 +40,18 @@ let l = /\n{2,}$/,
                 h = ` {${f},${f + 1}}`,
                 p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", h), "gm"),
                 m = RegExp("^ {1," + A + "}", "gm"),
-                T = d.match(p);
-            r()(null != T, "markup list items can not be parsed.");
-            let g = !1;
+                g = d.match(p);
+            r()(null != g, "markup list items can not be parsed.");
+            let T = !1;
             return {
                 ordered: a,
                 start: s,
-                items: T.map((e, i) => {
+                items: g.map((e, i) => {
                     let r,
                         a = e.replace(u, "").replace(m, ""),
-                        s = i === T.length - 1,
-                        l = -1 !== a.indexOf("\n\n") || (s && g);
-                    g = l;
+                        s = i === g.length - 1,
+                        l = -1 !== a.indexOf("\n\n") || (s && T);
+                    T = l;
                     let o = n.inline,
                         d = n._list,
                         c = n._listLevel;
@@ -70,4 +70,4 @@ let l = /\n{2,}$/,
             };
         },
     };
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: g });

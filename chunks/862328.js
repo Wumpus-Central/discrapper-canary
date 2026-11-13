@@ -22,9 +22,9 @@ function u(e) {
             lowerBadge: I,
             rounded: p = !1,
             "aria-hidden": m,
-            maskShape: T = !0,
+            maskShape: g = !0,
         } = e,
-        [g, S] = r.useState(!1),
+        [T, S] = r.useState(!1),
         N = null != h,
         C = null != I,
         O = r.useId(),
@@ -124,7 +124,7 @@ function u(e) {
                                 height: n,
                                 children: [
                                     E && (0, i.jsx)("use", { href: `#${b}`, fill: "black" }),
-                                    T
+                                    g
                                         ? (0, i.jsx)("use", {
                                               href: `#${y}`,
                                               fill: "white",
@@ -151,7 +151,7 @@ function u(e) {
                                       ],
                                   })
                                 : null,
-                            g
+                            T
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)("g", {

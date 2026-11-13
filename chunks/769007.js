@@ -33,8 +33,8 @@ var _ = n(815390),
     I = n(726249),
     p = n(310419),
     m = n(976860),
-    T = n(345942),
-    g = n(734057),
+    g = n(345942),
+    T = n(734057),
     S = n(576705),
     N = n(309010),
     C = n(129230),
@@ -76,7 +76,7 @@ function U(e) {
         { onClose: s } = a,
         l = r.useCallback(() => {
             t?.id != null &&
-                ((0, T.u)(t?.id),
+                ((0, g.u)(t?.id),
                 s?.(),
                 C.default.track(D.HAw.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                     application_id: n?.id,
@@ -97,7 +97,7 @@ function U(e) {
                         C.default.track(D.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [n?.id, s, o]),
-        E = (0, d.bG)([N.Ay, g.A], () => g.A.getChannel(N.Ay.getChannelId())),
+        E = (0, d.bG)([N.Ay, T.A], () => T.A.getChannel(N.Ay.getChannelId())),
         A = (0, d.bG)([S.A], () => S.A.can(D.xBc.SEND_MESSAGES, E)),
         f = null != t,
         h = null == t && A && (!u || null != o),

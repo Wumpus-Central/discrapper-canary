@@ -18,11 +18,11 @@ function m(e) {
     let t = (0, u.p3)(e, I.qd);
     return (null == t && (t = (0, u.wB)(e, f.IP)), t ?? null);
 }
-function T(e) {
+function g(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
-function g(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     switch (e) {
         case "top":
             return (
@@ -197,7 +197,7 @@ class C extends r.Component {
         let r = (0, h.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
-            o = g(e, a, i, r, n),
+            o = T(e, a, i, r, n),
             c = o,
             u = null,
             _ = 0;
@@ -205,7 +205,7 @@ class C extends r.Component {
             let t = S(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
-            let s = g(t, u, i, r, n);
+            let s = T(t, u, i, r, n);
             if ((s > o && ((l = { position: t, style: u, nudge: _ }), (c = s)), o < 0 && s < 0)) {
                 let a,
                     s = l.position;
@@ -219,7 +219,7 @@ class C extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = g(S(s), e.style, i, r, n);
+                        t = T(S(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }
@@ -270,7 +270,7 @@ class C extends r.Component {
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        ((T(e) !== T(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((g(e) !== g(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }

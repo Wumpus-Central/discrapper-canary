@@ -15,8 +15,8 @@ var i = n(412703),
     I = n(403362),
     p = n(153229),
     m = n(122760),
-    T = n(506988),
-    g = n(759366),
+    g = n(506988),
+    T = n(759366),
     S = n(590202),
     N = n(851936),
     C = n(977416),
@@ -32,14 +32,14 @@ function M(e) {
     return !(0, C.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 function U(e) {
-    let t = g.A.getState().autoEnroll,
+    let t = T.A.getState().autoEnroll,
         n = m.A.quests;
     for (let i of (0, O.jm)(n, e))
         if (t && 1)
             return (0, p.Oy)(i.id, {
-                questContent: T.uF.RUNNING_ACTIVITY,
+                questContent: g.uF.RUNNING_ACTIVITY,
                 questContentCTA: S.Cy.START_QUEST,
-                sourceQuestContent: T.uF.RUNNING_ACTIVITY,
+                sourceQuestContent: g.uF.RUNNING_ACTIVITY,
             });
 }
 function w(e) {

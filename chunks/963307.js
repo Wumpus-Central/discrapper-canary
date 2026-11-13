@@ -16,8 +16,8 @@ var i,
     I = n(696451),
     p = n(317525),
     m = n(71393),
-    T = n(290863),
-    g = n(894768),
+    g = n(290863),
+    T = n(894768),
     S = n(287809),
     N = n(652215),
     C = n(792996);
@@ -60,10 +60,10 @@ function L(e, t, n, i) {
 }
 function y(e, t, n) {
     let i = n === A.default.getId(),
-        r = T.A.isMobileOnline(n),
-        a = T.A.isVROnline(n),
-        s = i ? g.A.getStatus() : T.A.getStatus(n, e),
-        l = i ? g.A.getActivities() : T.A.getActivities(n, e),
+        r = g.A.isMobileOnline(n),
+        a = g.A.isVROnline(n),
+        s = i ? T.A.getStatus() : g.A.getStatus(n, e),
+        l = i ? T.A.getActivities() : g.A.getActivities(n, e),
         o = E.A.getStreamForUser(n, e),
         d = S.default.getUser(n);
     return null == d
@@ -233,8 +233,8 @@ function w() {
 class G extends d.Ay.Store {
     static displayName = "ChannelMemberStore";
     initialize() {
-        (this.waitFor(S.default, m.A, p.A, f.A, I.Ay, T.A, g.A, A.default, h.A, E.A, u.A),
-            this.syncWith([g.A], w),
+        (this.waitFor(S.default, m.A, p.A, f.A, I.Ay, g.A, T.A, A.default, h.A, E.A, u.A),
+            this.syncWith([T.A], w),
             this.syncWith([E.A], U));
     }
     getProps(e, t) {

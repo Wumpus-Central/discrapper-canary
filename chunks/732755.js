@@ -15,8 +15,8 @@ var i = n(812729),
     I = n(597886),
     p = n(82149),
     m = n(446600),
-    T = n(96566),
-    g = n(516607),
+    g = n(96566),
+    T = n(516607),
     S = n(652215);
 let N = null;
 function C() {
@@ -37,9 +37,9 @@ function C() {
             O = h.A.getParticipantCount(e) - u,
             R = s?.party?.size != null ? s.party.size[1] : 0;
         return {
-            application_id: g.SS,
+            application_id: T.SS,
             name: t.topic ?? n.topic ?? (0, o.m1)(n, A.default, _.A),
-            type: (0, T.xn)(n.id) ? a.$.WATCHING : a.$.LISTENING,
+            type: (0, g.xn)(n.id) ? a.$.WATCHING : a.$.LISTENING,
             timestamps: { start: s?.timestamps?.start ?? new Date().getTime() },
             assets: { small_image: i.icon ?? void 0, small_text: i.name },
             party: { id: r, size: [C, Math.max(O, R)] },

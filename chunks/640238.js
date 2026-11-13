@@ -21,8 +21,8 @@ function _(e) {
             onClose: I,
             onCloseCallback: p,
             bodyClassName: m,
-            transitionState: T,
-            loading: g = !1,
+            transitionState: g,
+            loading: T = !1,
             confirmButtonColor: S = o.$n.Colors.RED,
             focusCancel: N = !1,
             impression: C,
@@ -41,7 +41,7 @@ function _(e) {
                 color: o.$n.Colors.PRIMARY,
                 className: u.x,
                 size: o.$n.Sizes.MEDIUM,
-                disabled: g,
+                disabled: T,
                 onClick: () => {
                     (h?.(), I());
                 },
@@ -55,7 +55,7 @@ function _(e) {
                 type: "submit",
                 size: o.$n.Sizes.MEDIUM,
                 color: S,
-                submitting: g,
+                submitting: T,
                 onClick: async () => {
                     try {
                         (await f?.(), I());
@@ -69,7 +69,7 @@ function _(e) {
         (0, i.jsxs)(d.EO, {
             "data-migration-pending": !0,
             className: A,
-            transitionState: T,
+            transitionState: g,
             impression: C,
             parentComponent: "ConfirmModal",
             children: [

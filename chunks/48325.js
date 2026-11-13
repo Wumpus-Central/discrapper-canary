@@ -25,8 +25,8 @@ var h = n(964404),
     I = n(544180),
     p = n(129230),
     m = n(509929),
-    T = n(927813),
-    g = n(209489),
+    g = n(927813),
+    T = n(209489),
     S = n(856383),
     N = n(292348),
     C = n(565150),
@@ -184,17 +184,17 @@ class U extends C.Ay {
     retryOpts() {
         return this.item.platform === A.x.REACT_NATIVE
             ? {
-                  timeout: +T.A.Millis.HOUR,
-                  backoff: new l.A(0.5 * T.A.Millis.SECOND, 30 * T.A.Millis.MINUTE),
+                  timeout: +g.A.Millis.HOUR,
+                  backoff: new l.A(0.5 * g.A.Millis.SECOND, 30 * g.A.Millis.MINUTE),
                   retries: 12,
               }
-            : { timeout: +T.A.Millis.HOUR, retries: 12, backoff: new l.A() };
+            : { timeout: +g.A.Millis.HOUR, retries: 12, backoff: new l.A() };
     }
     createAttachmentUrlRetryOpts() {
         return this.item.platform === A.x.REACT_NATIVE
             ? {
-                  timeout: { response: 30 * T.A.Millis.SECOND, deadline: 30 * T.A.Millis.MINUTE },
-                  backoff: new l.A(0.5 * T.A.Millis.SECOND, 60 * T.A.Millis.SECOND),
+                  timeout: { response: 30 * g.A.Millis.SECOND, deadline: 30 * g.A.Millis.MINUTE },
+                  backoff: new l.A(0.5 * g.A.Millis.SECOND, 60 * g.A.Millis.SECOND),
                   retries: 8,
               }
             : this.retryOpts();
@@ -235,7 +235,7 @@ class U extends C.Ay {
             headers: { "Content-Range": "bytes */*" },
             rejectWithError: !0,
             retries: 0,
-            timeout: { deadline: 30 * T.A.Millis.SECOND },
+            timeout: { deadline: 30 * g.A.Millis.SECOND },
             signal: this._abortController.signal,
         };
         return await this._uploadHttpClient
@@ -305,7 +305,7 @@ class U extends C.Ay {
                 if (e instanceof v && e.canRetry()) {
                     (D.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
-                        await g.A.awaitOnline());
+                        await T.A.awaitOnline());
                     let t = r.fail();
                     (D.log(`Waiting ${t}ms before attachment upload attempt ${this.uploadAttempts + 1}`),
                         await new Promise((e) => setTimeout(e, t)));
@@ -654,7 +654,7 @@ class U extends C.Ay {
     }
     static isResponseUrlStale(e) {
         if (null == e) return !0;
-        let t = 12 * T.A.Millis.HOUR;
+        let t = 12 * g.A.Millis.HOUR;
         return Date.now() - e > t;
     }
     async ensureFreshResponseUrl() {

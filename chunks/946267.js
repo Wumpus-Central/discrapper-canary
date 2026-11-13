@@ -77,8 +77,8 @@ class I extends d.A {
 }
 var p = n(165610),
     m = n(392164),
-    T = n(792996);
-let g = !1,
+    g = n(792996);
+let T = !1,
     S = !1,
     N = new (class extends I {
         static displayName = "FramesWebManager";
@@ -103,9 +103,9 @@ let g = !1,
             t === h.MLl.ACTIVITY_POPOUT && (S = !1);
         };
         handlePopoutWindowUpdate = () => {
-            let e = g,
+            let e = T,
                 t = s.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT);
-            if ((!e || t || S || l.A.clearMainFrameSlot(), (g = t), !s.A.getWindowOpen(m.f)))
+            if ((!e || t || S || l.A.clearMainFrameSlot(), (T = t), !s.A.getWindowOpen(m.f)))
                 for (let e of A.A.getFramesForSurface(p.ZN)) (0, p.zB)(e) === m.f && (0, f.r)(e.id);
         };
         handleLogout = () => {
@@ -122,7 +122,7 @@ let g = !1,
         };
         showRPCDisconnectErrorUI(e) {
             let { code: t, message: n } = e,
-                r = `${T.intl.formatToPlainString(T.t.hbiAO6, { code: t })}: ${n}`;
+                r = `${g.intl.formatToPlainString(g.t.hbiAO6, { code: t })}: ${n}`;
             (0, i.P0)({ text: r, variant: "critical" });
         }
     })();

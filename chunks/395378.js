@@ -1,4 +1,4 @@
-(n.d(t, { Q4: () => f, tA: () => I, Tv: () => m, GC: () => h, lq: () => T, Ly: () => p }), n(321073));
+(n.d(t, { Q4: () => f, tA: () => I, Tv: () => m, GC: () => h, lq: () => g, Ly: () => p }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(997649),
@@ -32,7 +32,7 @@ function p(e, t, n, i) {
         { requestedCount: o = 3, preTrimmedSignalsByFilepath: d, debug: A = !1 } = l,
         h = { ...(0, c.A)(), ...l.config },
         p = [],
-        g = Object.keys(t.audioModelDataPerUser).length,
+        T = Object.keys(t.audioModelDataPerUser).length,
         S = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
         N = f(i, S),
         C = null != N ? S : [],
@@ -101,9 +101,9 @@ function p(e, t, n, i) {
                     for (let n in e) {
                         let r = e[n];
                         a[n] = {
-                            laughterData: T(r.laughterData, t, i),
-                            shoutingData: T(r.shoutingData, t, i),
-                            rmsData: T(r.rmsData, t, i),
+                            laughterData: g(r.laughterData, t, i),
+                            shoutingData: g(r.shoutingData, t, i),
+                            rmsData: g(r.rmsData, t, i),
                         };
                     }
                     return a;
@@ -167,10 +167,10 @@ function p(e, t, n, i) {
                     {
                         mainEventScore: p,
                         anchors: m,
-                        events: T,
+                        events: g,
                     } = (0, u.aT)({ laughter: E, shouting: A }, { laughter: h, shouting: I }, s, t),
-                    g = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
-                    S = (0, u.Mf)([...m, ...g], t.eventChainGapChunks),
+                    T = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
+                    S = (0, u.Mf)([...m, ...T], t.eventChainGapChunks),
                     N = (0, u.tf)(S, h, I, s, t),
                     { laughter: C, shouting: O } = (0, u.Lj)(d, c, a, t),
                     { coOccurrenceScore: R, coContribPerChunk: L } = (0, u.k0)(C, O, t),
@@ -195,12 +195,12 @@ function p(e, t, n, i) {
                         intensityLaughter: h,
                         intensityShouting: I,
                         rmsWeighted: f,
-                        mainEvents: T,
+                        mainEvents: g,
                         reactionAnchors: S,
                         coContribPerChunk: L,
                     },
                 };
-            })({ pLaughter: f, pShouting: S, rms: N, main: v, gameEventChunks: e, participantCount: g }, h),
+            })({ pLaughter: f, pShouting: S, rms: N, main: v, gameEventChunks: e, participantCount: T }, h),
             w = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
@@ -318,7 +318,7 @@ function p(e, t, n, i) {
 function m(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-function T(e, t, n) {
+function g(e, t, n) {
     let i = [],
         a = 0;
     for (let s = 0; s < n; s++) {

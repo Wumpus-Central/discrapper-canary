@@ -23,7 +23,7 @@ function I(e, t) {
 }
 let p = [a.kc.CHAT],
     m = { id: "placeholder-section", type: u.Hf.APPLICATION, name: "" };
-function T(e, t) {
+function g(e, t) {
     let n = [];
     for (let r = 0; r < e; r++) {
         var i;
@@ -150,8 +150,8 @@ n.d(
                     loading: I,
                 } = (0, d.XC)(t, u, n, { ...a, allowFetch: l }),
                 [p, m] = i.useState(null),
-                g = i.useMemo(
-                    () => T(a.placeholderCount ?? 0, n.commandTypes[0]),
+                T = i.useMemo(
+                    () => g(a.placeholderCount ?? 0, n.commandTypes[0]),
                     [n.commandTypes, a.placeholderCount],
                 );
             return i.useMemo(() => {
@@ -162,7 +162,7 @@ n.d(
                     commandsByActiveSection: A,
                     filteredSectionId: p,
                     hasMoreAfter: !1,
-                    placeholders: I ? g : [],
+                    placeholders: I ? T : [],
                     sectionDescriptors: _,
                     filterSection: (e) => {
                         m(e);
@@ -177,19 +177,19 @@ n.d(
                 if (I) {
                     let t = A[0];
                     if (null != t)
-                        e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...g] }, ...A.slice(1)];
+                        e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...T] }, ...A.slice(1)];
                     else {
                         let t = o.gZ[f.Ik.BUILT_IN];
-                        ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: g }]));
+                        ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: T }]));
                     }
-                    e.commands = [...E, ...g];
+                    e.commands = [...E, ...T];
                 }
                 return e;
-            }, [I, E, _, A, p, g]);
+            }, [I, E, _, A, p, T]);
         },
         eW: function (e, t, n) {
             let { descriptors: i, commands: r, loading: a } = d.Ay.query(e, t, n),
-                s = T(a ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
+                s = g(a ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
             return { commands: a ? [...r, ...s] : r, sections: a && 0 === i.length ? [o.gZ[f.Ik.BUILT_IN]] : i };
         },
         j8: function (e) {

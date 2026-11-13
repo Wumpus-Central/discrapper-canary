@@ -20,7 +20,7 @@ n.d(
                 [h, I] = r.useState(!1),
                 [p] = (0, d.A)([t]),
                 m = p?.name ?? "This Activity";
-            async function T() {
+            async function g() {
                 let e = "temporary";
                 (h &&
                     ((e = "permanent"),
@@ -35,7 +35,7 @@ n.d(
                 (0, i.jsx)(a.a, {
                     size: "md",
                     transitionState: n,
-                    onClose: T,
+                    onClose: g,
                     "aria-label": E.intl.string(E.t.NQkK4l),
                     title: E.intl.string(E.t.NQkK4l),
                     actionBarInput: (0, i.jsx)(s.S, {
@@ -45,14 +45,14 @@ n.d(
                         labelType: "secondary",
                     }),
                     actions: [
-                        { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: T },
+                        { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: g },
                         {
                             variant: "primary",
                             text: E.intl.string(E.t["/wlDqi"]),
                             onClick: async function () {
                                 (c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
                                     u.Ay.setEnableHardwareAcceleration(!0),
-                                    await T());
+                                    await g());
                             },
                         },
                     ],

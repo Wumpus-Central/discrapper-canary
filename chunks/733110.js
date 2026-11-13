@@ -49,7 +49,7 @@ class m extends r.Ay.Store {
         return h;
     }
 }
-let T = new m(a.h, {
+let g = new m(a.h, {
     USER_AUTHORIZED_APPS_REQUEST: function (e) {
         "full" === e.request.type ? p("FETCHING") : p("FETCHING", e.request.applicationIds);
     },
@@ -83,4 +83,4 @@ let T = new m(a.h, {
         ((u = new Map()), (_ = []), (E = []), (A = "NOT_FETCHED"), f.clear(), (h += 1));
     },
 });
-n.d(t, {}, { A: T, FetchState: c });
+n.d(t, {}, { A: g, FetchState: c });

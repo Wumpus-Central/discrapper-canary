@@ -16,23 +16,23 @@ var i = n(812729),
     I = n(765741),
     p = n(863160),
     m = n(671389);
-let T = [n(732755).A, m.Ay],
-    g = [];
+let g = [n(732755).A, m.Ay],
+    T = [];
 function S() {
     let e = [];
-    for (let t of T) {
+    for (let t of g) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !r()(e, g) && ((g = e), !0);
+    return !r()(e, T) && ((T = e), !0);
 }
 class N extends c.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(T, S);
+        this.syncWith(g, S);
     }
     getActivities() {
-        return g;
+        return T;
     }
 }
 let C = new N(u.h);
@@ -120,8 +120,8 @@ function V() {
             ...(0, R.CO)(d),
         });
     }
-    let T = L.A.getActivity();
-    return (null != T && e.push({ type: o.$.LISTENING, ...T }), !r()(x, e) && ((x = e), !0));
+    let g = L.A.getActivity();
+    return (null != g && e.push({ type: o.$.LISTENING, ...g }), !r()(x, e) && ((x = e), !0));
 }
 function H(e) {
     return e.platform === l.y.EMBEDDED && !(0, E.e)(e);

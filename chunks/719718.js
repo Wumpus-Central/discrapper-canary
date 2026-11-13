@@ -1,7 +1,7 @@
 var r,
     i = a(402102),
-    n = a(127639),
-    s = a(855986),
+    s = a(127639),
+    n = a(855986),
     c = a(73153),
     d = a(287809),
     l = a(474090),
@@ -25,7 +25,7 @@ let b = { volume: 1, isMuted: !1, progress: null },
     w = 0,
     I = null,
     E = !1;
-class j extends s.Ay.PersistedStore {
+class j extends n.Ay.PersistedStore {
     static displayName = "Checkpoint2026Store";
     static persistKey = "Checkpoint2026Store";
     static migrations = [
@@ -109,7 +109,7 @@ let S = new j(c.h, {
             ((I = (function (e) {
                 let t = (0, l.ki)(d.default.getCurrentUser()),
                     a = {};
-                for (let r of Object.values(n.V)) {
+                for (let r of Object.values(s.V)) {
                     let i = e[r];
                     null == i || (0, o.tS)(r, i, { stats: m, hasNitro: t, savedCharacter: g }) || (a[r] = i);
                 }
@@ -143,9 +143,9 @@ let S = new j(c.h, {
         if (!(0, u.E1)({ stats: m, character: g, isCharacterCreatorEnabled: a })) return !1;
         let { progress: r } = _;
         if (r?.stage === h.s9.SUMMARY) return !1;
-        let n = I ?? g ?? p;
-        if (r?.stage === t && r.selectedCharacterTraits === n) return !1;
-        _.progress = { stage: t, selectedCharacterTraits: n, availability: v };
+        let s = I ?? g ?? p;
+        if (r?.stage === t && r.selectedCharacterTraits === s) return !1;
+        _.progress = { stage: t, selectedCharacterTraits: s, availability: v };
     },
     LOGOUT: function () {
         ((_ = { ...b }), (m = null), (x = null), (g = null), (A = !1), (v = null), (w = 0), (I = null), (E = !1));

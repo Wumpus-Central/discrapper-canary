@@ -20,8 +20,8 @@ function p(e) {
     return null != t && !(0, d.qR)(t) && !(0, _.BV)(t);
 }
 var m = n(45645),
-    T = n(448741),
-    g = n(357566),
+    g = n(448741),
+    T = n(357566),
     S = n(879408),
     N = n(568185),
     C = n(362280),
@@ -62,7 +62,7 @@ let Y = {
             { source: i, loadId: r, lurkLocation: l, autoNavigate: d = !0 } = t,
             c = t.lurker ?? !1,
             u = w.default.getCurrentUser();
-        if (u?.hasFlag(f.nhx.QUARANTINED)) throw ((0, L.default)(), new T.w());
+        if (u?.hasFlag(f.nhx.QUARANTINED)) throw ((0, L.default)(), new g.w());
         s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: c, source: i, loadId: r });
         try {
             let t = U.A.getGuildId(),
@@ -86,7 +86,7 @@ let Y = {
                     s.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: u.body.join_request }),
                 null == A.A.getGuild(e) && u.body.show_verification_form && d)
             )
-                return ((0, g.q)(e), u);
+                return ((0, T.q)(e), u);
             if (
                 (null != u.body.welcome_screen &&
                     s.h.dispatch({
@@ -108,19 +108,19 @@ let Y = {
             return u;
         } catch (t) {
             if (t.body?.code === f.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED)
-                throw ((0, o.yO)(B.w_.JOIN_LARGE_GUILD_UNDERAGE), new T.w({ cause: t }));
+                throw ((0, o.yO)(B.w_.JOIN_LARGE_GUILD_UNDERAGE), new g.w({ cause: t }));
             if (t.body?.code === f.t02.TOO_MANY_USER_GUILDS)
-                throw ((0, R.Om)(w.default.getCurrentUser()) ? H(200) : H(100), new T.w({ cause: t }));
+                throw ((0, R.Om)(w.default.getCurrentUser()) ? H(200) : H(100), new g.w({ cause: t }));
             if (t.body?.code === f.t02.GUILD_AT_CAPACITY)
                 throw (
                     F.A.show({ title: V.intl.string(V.t.ZZlox4), body: V.intl.string(V.t.ZUEGFn) }),
-                    new T.w({ cause: t })
+                    new g.w({ cause: t })
                 );
             if (
                 (c && t.body?.code === f.t02.UNKNOWN_GUILD && j(e),
                 t.body?.code === f.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED)
             )
-                throw (c && j(e), (0, m.e)(e), new T.w({ cause: t }));
+                throw (c && j(e), (0, m.e)(e), new g.w({ cause: t }));
             throw t;
         }
     },

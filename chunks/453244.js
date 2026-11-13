@@ -17,8 +17,8 @@ var o = n(503698),
     I = n(935462),
     p = n(534514),
     m = n(834730),
-    T = n(475358),
-    g = n(707554),
+    g = n(475358),
+    T = n(707554),
     S = n(516521),
     N = n(939249),
     C = n(426819),
@@ -256,7 +256,7 @@ function H() {
                                                       (0, i.jsx)("div", {
                                                           className: "keybind-shortcuts",
                                                           children: e.binds.map((e) =>
-                                                              (0, i.jsx)(T.e, { className: x.Me, shortcut: e }, e),
+                                                              (0, i.jsx)(g.e, { className: x.Me, shortcut: e }, e),
                                                           ),
                                                       }),
                                                   ],
@@ -366,11 +366,11 @@ class j extends r.PureComponent {
             className: x.UV,
             style: this.getStyles(),
             children: [
-                (0, i.jsxs)(g.H, {
+                (0, i.jsxs)(T.H, {
                     className: x.GK,
                     children: [
                         (0, i.jsx)("div", { className: x.Qs, children: G.intl.string(G.t["1BdUtx"]) }),
-                        (0, i.jsx)(T.e, { shortcut: "mod+/" }),
+                        (0, i.jsx)(g.e, { shortcut: "mod+/" }),
                     ],
                 }),
                 (0, i.jsx)("div", { className: x.KV, children: G.intl.string(G.t["2t19lU"]) }),
@@ -386,7 +386,7 @@ class j extends r.PureComponent {
                 (0, i.jsx)(S.Gt, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, i.jsx)(g.F, { children: (0, i.jsx)(H, {}) }),
+                    children: (0, i.jsx)(T.F, { children: (0, i.jsx)(H, {}) }),
                 }),
             ],
         });

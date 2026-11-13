@@ -76,7 +76,7 @@ function m(e, t, n) {
                 }));
         })(e));
 }
-function T(e, t, n) {
+function g(e, t, n) {
     let i;
     for (let r of e.tracked.values())
         if (t !== r.canvas && t.contains(r.canvas)) {
@@ -84,7 +84,7 @@ function T(e, t, n) {
             m(e, r, i);
         }
 }
-function g(e) {
+function T(e) {
     return e?.nodeType === Node.ELEMENT_NODE;
 }
 var S = n(781013);
@@ -171,12 +171,12 @@ function U(e, t, n, i, a) {
                                 frameRequest: null,
                                 resizeObserver: null,
                                 onTransitionRun: (e) => {
-                                    if ("color" !== e.propertyName || !g(e.target)) return;
+                                    if ("color" !== e.propertyName || !T(e.target)) return;
                                     let t = e.target,
                                         i = n.tracked.get(t);
                                     null != i
                                         ? m(n, i, null)
-                                        : T(
+                                        : g(
                                               n,
                                               t,
                                               () =>
@@ -186,9 +186,9 @@ function U(e, t, n, i, a) {
                                           );
                                 },
                                 onAnimationStart: (e) => {
-                                    if (!g(e.target)) return;
+                                    if (!T(e.target)) return;
                                     let t = e.target;
-                                    T(
+                                    g(
                                         n,
                                         t,
                                         () =>

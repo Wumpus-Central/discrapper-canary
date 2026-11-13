@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(734057),
     p = n(754712),
     m = n(495867),
-    T = n(873985),
-    g = n(309010),
+    g = n(873985),
+    T = n(309010),
     S = n(894768),
     N = n(753181),
     C = n(723702),
@@ -163,8 +163,8 @@ let B = new c.A("ConnectionStore"),
                 selfMute: p.Ay.isSelfMute(),
                 selfDeaf: p.Ay.isSelfDeaf(),
                 selfVideo: p.Ay.isVideoEnabled(),
-                preferredRegion: T.A.getPreferredRegion(),
-                preferredRegions: T.A.getPreferredRegions(),
+                preferredRegion: g.A.getPreferredRegion(),
+                preferredRegions: g.A.getPreferredRegions(),
                 videoStreamParameters: p.Ay.getVideoStreamParameters(),
                 flags: this.computeVoiceFlags(t, n),
             };
@@ -285,8 +285,8 @@ var ea = n(159993),
     eI = n(166403),
     ep = n(107351),
     em = n(284009),
-    eT = n.n(em),
-    eg = n(723176),
+    eg = n.n(em),
+    eT = n(723176),
     eS = n(766034),
     eN = n(958824),
     eC = n(531743),
@@ -305,7 +305,7 @@ function eb(e, t) {
         t?.forEach((t) => {
             if (null == t) return;
             let i = t.user_id;
-            (null != i && (eT()(null != e[i], `Missing user[${i}] in compressed ready payload`), (t.user = e[i])),
+            (null != i && (eg()(null != e[i], `Missing user[${i}] in compressed ready payload`), (t.user = e[i])),
                 delete t.user_id,
                 n.push(t));
         }),
@@ -554,7 +554,7 @@ function eK(e, t, n) {
         I = eE.Ay.getMember(e, t.id),
         p = (0, z.t)(A),
         m = (0, Q.mT)(f),
-        T = (0, Z.Rt)(h);
+        g = (0, Z.Rt)(h);
     (null != I &&
         I.nick === a &&
         I.avatar === s &&
@@ -568,7 +568,7 @@ function eK(e, t, n) {
         (I.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(I.collectibles ?? null, p ?? null) &&
         r().isEqual(I.displayNameStyles ?? null, m ?? null) &&
-        r().isEqual(I.gamingLeaderboardData ?? null, T ?? null)) ||
+        r().isEqual(I.gamingLeaderboardData ?? null, g ?? null)) ||
         eY({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -585,7 +585,7 @@ function eK(e, t, n) {
             flags: o,
             collectibles: p,
             displayNameStyles: m,
-            gamingLeaderboardData: T,
+            gamingLeaderboardData: g,
         });
 }
 function e$(e) {
@@ -734,7 +734,7 @@ function eQ(e) {
             let t,
                 n,
                 i =
-                    ((t = eg.A.database()),
+                    ((t = eT.A.database()),
                     (n = (0, eR.O)() ? eS.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
@@ -768,7 +768,7 @@ function eQ(e) {
                           let i = (e = eo.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
-                                      (null != eg.A.database() &&
+                                      (null != eT.A.database() &&
                                           !1 === n.databaseOk &&
                                           eO.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
                                           (ey = r().keyBy(i, (e) => e.id)),
@@ -777,7 +777,7 @@ function eQ(e) {
                                               (null != t &&
                                                   (e.recipients = t.map(
                                                       (e) => (
-                                                          eT()(
+                                                          eg()(
                                                               null != ey[e],
                                                               "Missing user in compressed ready payload",
                                                           ),
@@ -2051,10 +2051,10 @@ let e0 = new c.A("ConnectionStore"),
 function e7() {
     j.update();
 }
-function e8() {
+function e4() {
     return (j.update(), !1);
 }
-function e4() {
+function e8() {
     return (H.update(), !1);
 }
 function e9(e) {
@@ -2063,9 +2063,9 @@ function e9(e) {
 class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(f.default, h.A, I.A, p.Ay, _.A, m.A, T.A, g.Ay, S.A, N.A, A.A),
-            this.syncWith([p.Ay], e8),
-            this.syncWith([S.A], e4));
+        (this.waitFor(f.default, h.A, I.A, p.Ay, _.A, m.A, g.A, T.Ay, S.A, N.A, A.A),
+            this.syncWith([p.Ay], e4),
+            this.syncWith([S.A], e8));
     }
     getSocket() {
         return V;
@@ -2114,7 +2114,7 @@ let tt = new te(l.h, {
                 n = s.w.get("discord_update_restart_timestamp"),
                 i = null != n && Date.now() - parseInt(n, 10) < 3e5;
             s.w.remove("discord_update_restart_timestamp");
-            let r = g.Ay.getVoiceChannelId();
+            let r = T.Ay.getVoiceChannelId();
             if (null != r) {
                 let e = s.w.get("discord_watchdog_restart_timestamp"),
                     n = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -2242,7 +2242,7 @@ let tt = new te(l.h, {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (V.isSessionEstablished()) {
             let e = null != n ? I.A.getChannel(i)?.rtcRegion : h.A.getCall(i)?.region;
-            V.streamCreate(t, n, i, e ?? T.A.getPreferredRegion());
+            V.streamCreate(t, n, i, e ?? g.A.getPreferredRegion());
         }
         return (e7(), !1);
     },

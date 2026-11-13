@@ -29,8 +29,8 @@ var A = n(292572),
     I = n(73153),
     p = n(167189),
     m = n(254160),
-    T = n(67480),
-    g = n(733391),
+    g = n(67480),
+    T = n(733391),
     S = n(945810);
 ((0, S.mj)({
     name: "2026-08-social-layer-storefront-mobile-embed",
@@ -143,21 +143,21 @@ function U(e, t) {
                             if (!(0, N.x)("resolveStorefrontCodedLink")) return;
                             R(`${e}:${n.scopeId}`, async () => {
                                 "application" === i.type
-                                    ? await (0, g.ap)(i.applicationId, { eager: !1 })
-                                    : await (0, g.Rw)(i.guildId, { eager: !1 });
+                                    ? await (0, T.ap)(i.applicationId, { eager: !1 })
+                                    : await (0, T.Rw)(i.guildId, { eager: !1 });
                             });
                             return;
                         }
                         let [r] = n.skuIds;
-                        null != T.A.get(r) ||
-                            T.A.isFetching(r) ||
-                            T.A.didFetchingSkuFail(r) ||
+                        null != g.A.get(r) ||
+                            g.A.isFetching(r) ||
+                            g.A.didFetchingSkuFail(r) ||
                             (I.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
                             R((0, C.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
-                                    ? await (0, g.Pp)(i.applicationId, r, e)
-                                    : await (0, g.qf)(i.guildId, r, e);
+                                    ? await (0, T.Pp)(i.applicationId, r, e)
+                                    : await (0, T.qf)(i.guildId, r, e);
                             }));
                     })(n, i);
                     break;

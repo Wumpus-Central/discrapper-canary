@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(448645),
     p = n(652215),
     m = n(682901),
-    T = n(792996),
-    g = n(644242),
+    g = n(792996),
+    T = n(644242),
     S = n(309427);
 n.d(
     t,
@@ -24,7 +24,7 @@ n.d(
     {
         default: function (e) {
             let { onClose: t, analyticsLocations: n, ...a } = e,
-                N = (0, h.TM)() ? g.A : S.A,
+                N = (0, h.TM)() ? T.A : S.A,
                 { analyticsLocations: C } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
             (0, s.Ay)(() => {
                 (f.default.track(p.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -51,11 +51,11 @@ n.d(
             return (0, i.jsx)(o.f5, {
                 value: C,
                 children: (0, i.jsx)(_.A, {
-                    title: T.intl.string(T.t.jGDYF0),
-                    subtitle: T.intl.string(T.t["grL/hg"]),
+                    title: g.intl.string(g.t.jGDYF0),
+                    subtitle: g.intl.string(g.t["grL/hg"]),
                     graphic: { type: "video", src: N, loop: !0, loopAt: 5 },
                     gradientColor: "nitro-green",
-                    secondaryCTA: T.intl.string(T.t.ZnqyZ2),
+                    secondaryCTA: g.intl.string(g.t.ZnqyZ2),
                     onSecondaryClick: O,
                     onClose: t,
                     ...a,

@@ -1,5 +1,5 @@
 n.d(t, {
-    Lr: () => g,
+    Lr: () => T,
     j2: () => L,
     p4: () => S,
     kC: () => N,
@@ -7,7 +7,7 @@ n.d(t, {
     We: () => C,
     zv: () => m,
     wT: () => O,
-    c7: () => T,
+    c7: () => g,
     so: () => R,
     ZV: () => D,
 });
@@ -64,10 +64,10 @@ function m(e, t, n) {
             })(e)
         );
 }
-function T(e) {
+function g(e) {
     return e.placeholder ?? l.intl.string(l.t.Otr6W2);
 }
-function g(e, t) {
+function T(e, t) {
     let { minValues: n, required: i } = e;
     return "modal" === t ? !i : 0 === n;
 }

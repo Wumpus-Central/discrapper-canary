@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(793574),
     p = n(688810),
     m = n(139286),
-    T = n(915089),
-    g = n(465794),
+    g = n(915089),
+    T = n(465794),
     S = n(594061),
     N = n(120246),
     C = n(495867),
@@ -61,7 +61,7 @@ function V(e) {
               className: B.Sp,
               children: [
                   (0, i.jsx)(_.E, { variant: "body-sm/medium", color: "text-default", children: o }),
-                  (0, i.jsx)(g.A, {
+                  (0, i.jsx)(T.A, {
                       size: "sm",
                       subscriptionTier: k.pe.TIER_2,
                       buttonTextOverride: F.intl.string(F.t.pj0XBN),
@@ -81,7 +81,7 @@ function H() {
 }
 function j(e) {
     let { channel: t, guildId: n, analyticsLocations: r, sounds: a } = e,
-        s = (0, T.GV)(),
+        s = (0, g.GV)(),
         l = (0, h.A)(s),
         d = (0, c.bG)([O.default], () => O.default.getCurrentUser()),
         u = (0, c.bG)([R.A], () => R.A.getVoiceState(n, d?.id ?? "")),
@@ -120,7 +120,7 @@ n.d(
         A: function (e) {
             let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o, showEchoes: d = !1 } = e,
                 { analyticsLocations: h } = (0, p.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
-                { sounds: T, hasLockedSound: g, isFetching: O } = (0, P.A)({ channel: t, currentGuildId: n }),
+                { sounds: g, hasLockedSound: T, isFetching: O } = (0, P.A)({ channel: t, currentGuildId: n }),
                 R = (0, c.bG)([C.A], () => C.A.getMediaSessionId()),
                 L = (0, c.bG)([b.A], () => b.A.getFavorites().size);
             return (
@@ -143,7 +143,7 @@ n.d(
                     children: (0, i.jsxs)(u.lG, {
                         children: [
                             (0, i.jsxs)("div", {
-                                className: s()(B.kL, g && B.Dx),
+                                className: s()(B.kL, T && B.Dx),
                                 children: [
                                     d && null != n ? (0, i.jsx)(N.A, { guildId: n, channelId: t.id }) : null,
                                     (0, i.jsxs)("div", {
@@ -174,10 +174,10 @@ n.d(
                                     }),
                                     O
                                         ? (0, i.jsx)(H, {})
-                                        : (0, i.jsx)(j, { sounds: T, channel: t, guildId: n, analyticsLocations: h }),
+                                        : (0, i.jsx)(j, { sounds: g, channel: t, guildId: n, analyticsLocations: h }),
                                 ],
                             }),
-                            g && (0, i.jsx)(V, { analyticsLocations: h, voiceGuildId: n }),
+                            T && (0, i.jsx)(V, { analyticsLocations: h, voiceGuildId: n }),
                         ],
                     }),
                 })

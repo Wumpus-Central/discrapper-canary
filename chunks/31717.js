@@ -56,7 +56,7 @@ function m() {
     let t = h(e);
     for (let e in t) null == _.A.getChannel(e) && delete t[e];
 }
-function T(e) {
+function g(e) {
     let {
             channel: { id: t },
         } = e,
@@ -65,7 +65,7 @@ function T(e) {
     let i = h(n);
     return (delete i[t], !1);
 }
-class g extends s.Ay.PersistedStore {
+class T extends s.Ay.PersistedStore {
     static displayName = "DraftStore";
     static persistKey = "DraftStore";
     static migrations = [
@@ -147,7 +147,7 @@ class g extends s.Ay.PersistedStore {
         if (null != t) return h(t)[e]?.[8];
     }
 }
-let S = new g(l.h, {
+let S = new T(l.h, {
     CONNECTION_OPEN: function () {
         let e = u.default.getId();
         return (e in f || (f[e] = {}), m(), !1);
@@ -161,8 +161,8 @@ let S = new g(l.h, {
     GUILD_DELETE: function () {
         return (m(), !1);
     },
-    CHANNEL_DELETE: T,
-    THREAD_DELETE: T,
+    CHANNEL_DELETE: g,
+    THREAD_DELETE: g,
     THREAD_CREATE: function (e) {
         let { channel: t } = e,
             n = u.default.getId();

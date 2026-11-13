@@ -59,8 +59,8 @@ n.d(
                 h = a.useRef(null),
                 p = a.useRef(!1),
                 m = (0, o.bG)([u.A], () => u.A.isLoading),
-                T = (0, l.A)(m),
-                g = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+                g = (0, l.A)(m),
+                T = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
                 { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
             ((0, d.Ay)(() => {
                 (!(function (e) {
@@ -112,21 +112,21 @@ n.d(
                     }
                 }, [i, r, s, N, S, f]),
                 a.useEffect(() => {
-                    let e = g?.loadingTrigger === E.VA.AUTO_LOAD;
-                    null == g ||
-                        !0 !== T ||
+                    let e = T?.loadingTrigger === E.VA.AUTO_LOAD;
+                    null == T ||
+                        !0 !== g ||
                         !1 !== m ||
                         e ||
                         I({
-                            timeToLoad: g?.timeToLoad,
+                            timeToLoad: T?.timeToLoad,
                             messagesCount: i.length,
                             unreadMessagesCount: r.length,
-                            loadingTrigger: g?.loadingTrigger ?? E.VA.UNKNOWN,
-                            viewId: g?.viewId,
-                            channelsFetched: g?.channelsFetched,
-                            mentionsFetched: g?.mentionsFetched,
+                            loadingTrigger: T?.loadingTrigger ?? E.VA.UNKNOWN,
+                            viewId: T?.viewId,
+                            channelsFetched: T?.channelsFetched,
+                            mentionsFetched: T?.mentionsFetched,
                         });
-                }, [m, i, r, s, T, g]),
+                }, [m, i, r, s, g, T]),
                 (0, d.l0)(() => {
                     !(function (e) {
                         let {

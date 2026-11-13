@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(164956),
     p = n(403362),
     m = n(7864),
-    T = n(811091),
-    g = n(46653),
+    g = n(811091),
+    T = n(46653),
     S = n(734057),
     N = n(317525),
     C = n(71393),
@@ -49,7 +49,7 @@ function B(e) {
     ((M += 1), (w[e] = M));
 }
 function V(e) {
-    (j(e) === g.default.getId() && (0, f.G)(W(e)), delete v[e]);
+    (j(e) === T.default.getId() && (0, f.G)(W(e)), delete v[e]);
 }
 function H(e, t) {
     let n = [];
@@ -139,10 +139,10 @@ function K(e) {
         null == L[i])
     )
         return v;
-    if (t === g.default.getId())
+    if (t === T.default.getId())
         if (I.A.isViewingRoles(i) || I.A.isFullServerPreview(i)) {
             let e = I.A.getViewingRoles(i);
-            D[i] = { ...v, ...I.A.getMemberOptions(i), roles: null != e ? T.default.keys(e) : [] };
+            D[i] = { ...v, ...I.A.getMemberOptions(i), roles: null != e ? g.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
     return v;
 }
@@ -280,8 +280,8 @@ function ee(e) {
     if (null == t) return !1;
     let n = C.A.getGuild(e.guildId);
     if (null == n) return (R.warn(`Guild ${e.guildId} not found during ${e.type}.`), !1);
-    let i = g.default.getId();
-    for (let r of T.default.keys(t)) {
+    let i = T.default.getId();
+    for (let r of g.default.keys(t)) {
         let a = t[r];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = r === i && "GUILD_ROLE_DELETE" === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
@@ -312,7 +312,7 @@ function et(e) {
     if (null == n) return !1;
     let i = C.A.getGuild(t);
     if (null == i) return (R.warn(`Guild ${t} not found during IMPERSONATE_UPDATE.`), !1);
-    let r = g.default.getId(),
+    let r = T.default.getId(),
         a = n[r];
     n[r] = K({
         userId: r,
@@ -386,7 +386,7 @@ function el(e) {
 class eo extends s.Ay.Store {
     static displayName = "GuildMemberStore";
     initialize() {
-        this.waitFor(g.default, S.A, N.A, C.A, I.A);
+        this.waitFor(T.default, S.A, N.A, C.A, I.A);
     }
     getMutableAllGuildsAndMembers() {
         return L;
@@ -428,7 +428,7 @@ class eo extends s.Ay.Store {
     }
     isCurrentUserGuest(e) {
         if (null == e) return !1;
-        let t = g.default.getId(),
+        let t = T.default.getId(),
             n = L[e];
         if (null == n || null == n[t]) return !1;
         let i = n[t].flags;
@@ -437,7 +437,7 @@ class eo extends s.Ay.Store {
     getMemberIds(e) {
         if (null == e) return [];
         let t = L[e];
-        return null == t ? [] : T.default.keys(t);
+        return null == t ? [] : g.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];
@@ -450,12 +450,12 @@ class eo extends s.Ay.Store {
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
-        return null != n && t === g.default.getId() && (I.A.isViewingRoles(e) || I.A.isFullServerPreview(e))
+        return null != n && t === T.default.getId() && (I.A.isViewingRoles(e) || I.A.isFullServerPreview(e))
             ? (D[e] ?? n)
             : n;
     }
     getSelfMember(e) {
-        return this.getMember(e, g.default.getId());
+        return this.getMember(e, T.default.getId());
     }
     getSelfMemberJoinedAt(e) {
         let t = y[e];
@@ -533,7 +533,7 @@ let ed = new eo(l.h, {
     GUILD_MEMBER_UPDATE: X,
     GUILD_MEMBER_UPDATE_LOCAL: function (e) {
         let { guildId: t, roles: n, addedRoleIds: i, removedRoleIds: a, flags: s } = e,
-            l = g.default.getId(),
+            l = T.default.getId(),
             o = L[t],
             d = null != o ? o[l] : null;
         if (null == d) return !1;

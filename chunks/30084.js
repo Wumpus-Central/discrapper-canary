@@ -1,6 +1,6 @@
 var a = n(477900),
-    r = n(192308),
-    l = n(129230),
+    l = n(192308),
+    r = n(129230),
     s = n(652215);
 n.d(
     t,
@@ -9,13 +9,13 @@ n.d(
         D: function (e) {
             let { analyticsLocations: t, displayProfile: i, location: o } = e;
             (null == o && (o = t[t.length - 1]),
-                l.default.track(s.HAw.OPEN_MODAL, {
+                r.default.track(s.HAw.OPEN_MODAL, {
                     type: "Tiered Tenure Badge Details",
                     location_stack: t,
                     location: o,
                     source: o,
                 }),
-                (0, r.mM)(async () => {
+                (0, l.mM)(async () => {
                     let { default: e } = await Promise.all([
                         n.e(463143),
                         n.e(101801),

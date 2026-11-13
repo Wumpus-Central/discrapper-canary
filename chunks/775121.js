@@ -37,10 +37,10 @@ function m(e) {
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace("mod", c.Mu));
 }
-function T(e, t) {
+function g(e, t) {
     return (n, i) => (o.default.track(u.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: i }), t(n, i));
 }
-function g(e) {
+function T(e) {
     let t = I();
     return (
         d.isPlatformEmbedded || (t = t.concat(h)),
@@ -50,12 +50,12 @@ function g(e) {
 function S(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
-        let e = g(n);
+        let e = T(n);
         if (0 === e.length) continue;
         let i = n.comboKeysBindGlobal ? f.bindGlobal : f.bind;
         if (
-            (null != n.action && i.call(f, e, T(t, n.action)),
-            null != n.keyup && i.call(f, e, T(t, n.keyup), "keyup"),
+            (null != n.action && i.call(f, e, g(t, n.action)),
+            null != n.keyup && i.call(f, e, g(t, n.keyup), "keyup"),
             null != n.keydown)
         ) {
             let r = e.indexOf("any-character");
@@ -67,9 +67,9 @@ function S(e) {
                     (document.addEventListener(e, n), p.push(() => document.removeEventListener(e, n)));
                 })("keydown", n.keydown),
                 e.splice(r, 1)),
-                e.length > 0 && i.call(f, e, T(t, n.keydown), "keydown"));
+                e.length > 0 && i.call(f, e, g(t, n.keydown), "keydown"));
         }
-        null != n.keypress && i.call(f, e, T(t, n.keypress), "keypress");
+        null != n.keypress && i.call(f, e, g(t, n.keypress), "keypress");
     }
 }
 (0, d.xl)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
@@ -78,7 +78,7 @@ let N = {
     modKey: c.Mu,
     altKey: c.Pe,
     returnKey: c.wY,
-    getRegistrableBinds: g,
+    getRegistrableBinds: T,
     setGetKeybindList(e) {
         I = e;
     },

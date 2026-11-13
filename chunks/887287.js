@@ -16,9 +16,9 @@ var A = n(661886),
     I = n(777334),
     p = n(861862),
     m = n(515183),
-    T = n(244055);
+    g = n(244055);
 n(672396);
-var g = n(652215);
+var T = n(652215);
 let S = {};
 function N(e) {
     return p.default.getTrackedGameByPid(e)?.overlayMethod ?? null;
@@ -38,7 +38,7 @@ function R(e, t) {
 class L extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Analytics-Store";
     initialize() {
-        this.waitFor(p.default, T.A, l.Ay);
+        this.waitFor(p.default, g.A, l.Ay);
     }
     getData(e) {
         return C(e);
@@ -73,7 +73,7 @@ let y = new L(
               },
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function (e) {
                   let { lastAssociatedPID: t } = e;
-                  if (-1 !== t) return (h.default.track(g.HAw.OVERLAY_HOOK_RESULT, C(t)), (S = {}), !0);
+                  if (-1 !== t) return (h.default.track(T.HAw.OVERLAY_HOOK_RESULT, C(t)), (S = {}), !0);
               },
               OVERLAY_SUCCESSFULLY_SHOWN: function (e) {
                   let t,
@@ -181,7 +181,7 @@ function j(e, t, n, i) {
 class W extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
     initialize() {
-        this.waitFor(T.A, P.A);
+        this.waitFor(g.A, P.A);
     }
     getClickZones() {
         return x;
@@ -196,7 +196,7 @@ let Y = new W(
         ? {}
         : {
               OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
-                  return null == (G = T.A.getNativeModule()) || !!B || ((B = !0), G.setCaptureZoneCallback(j), !0);
+                  return null == (G = g.A.getNativeModule()) || !!B || ((B = !0), G.setCaptureZoneCallback(j), !0);
               },
               OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
                   return ((G = null), !0);
@@ -205,7 +205,7 @@ let Y = new W(
                   let { zones: t } = e;
                   return (
                       !(function (e, t) {
-                          if (!T.A.isOverlayEnabled) {
+                          if (!g.A.isOverlayEnabled) {
                               if (0 === x.length) return;
                               H("overlay_disabled");
                               return;
@@ -329,11 +329,11 @@ function ep(e) {
     }
 }
 async function em() {
-    (T.A.isModuleLoaded || T.A.isModuleLoading || (await (0, f.P_)()),
+    (g.A.isModuleLoaded || g.A.isModuleLoading || (await (0, f.P_)()),
         (ee = await (async function () {
             let e,
-                t = T.A.isModuleLoaded,
-                n = T.A.getNativeModule();
+                t = g.A.isModuleLoaded,
+                n = g.A.getNativeModule();
             if (t && null != n) return (await (0, X.yy)(1e3), n);
             if (t && null == n) throw Error("Native module loaded but not found in store");
             let i = new Promise((e) => {
@@ -355,10 +355,10 @@ async function em() {
                 (r.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", a),
                     r.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", a));
             }
-            return T.A.getNativeModule();
+            return g.A.getNativeModule();
         })()));
 }
-function eT(e) {
+function eg(e) {
     let { pid: t, windowHandle: n } = e;
     return (
         null != n && null != t && eu(t, (0, M.Oy)(n)),
@@ -369,10 +369,10 @@ function eT(e) {
         !0
     );
 }
-class eg extends i.Ay.Store {
+class eT extends i.Ay.Store {
     static displayName = "Overlay-V3-Store";
     initialize() {
-        this.waitFor(o.default, d.A, y, Y, K.A, $.A, T.A, A.A, l.Ay);
+        this.waitFor(o.default, d.A, y, Y, K.A, $.A, g.A, A.A, l.Ay);
     }
     isOverlayV3EnabledForPID(e) {
         return J.has(e);
@@ -427,10 +427,10 @@ class eg extends i.Ay.Store {
         return ed[e] ?? null;
     }
 }
-let eS = new eg(
+let eS = new eT(
         r.h,
         __OVERLAY__ || !u.O
-            ? { OVERLAY_FOCUSED: eT }
+            ? { OVERLAY_FOCUSED: eg }
             : {
                   OVERLAY_UPDATE_OVERLAY_METHOD: function (e) {
                       (Q.verbose("Updating OverlayMethod", e),
@@ -445,7 +445,7 @@ let eS = new eg(
                   OVERLAY_UPDATE_OVERLAY_STATE: function (e) {
                       eo[e.pid] = e.overlayState;
                   },
-                  OVERLAY_FOCUSED: eT,
+                  OVERLAY_FOCUSED: eg,
                   OVERLAY_OOP_UI_INITIALIZED: function () {
                       J.forEach((e) => {
                           ep(e);
@@ -487,9 +487,9 @@ let eS = new eg(
                           }));
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
-                      ((ee = T.A.getNativeModule()),
+                      ((ee = g.A.getNativeModule()),
                           (async function () {
-                              if (!T.A.isOverlayEnabled)
+                              if (!g.A.isOverlayEnabled)
                                   return void (function () {
                                       try {
                                           for (let e of J) ee?.untrackGame(e);

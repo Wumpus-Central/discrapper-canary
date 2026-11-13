@@ -20,12 +20,12 @@ function m(e) {
     let t = new Date(e);
     return Number.isNaN(t.getTime()) ? void 0 : t;
 }
-function T(e) {
+function g(e) {
     let t = null != e && "" !== e.lightUrl ? e.lightUrl : void 0,
         n = null != e && "" !== e.darkUrl ? e.darkUrl : void 0;
     if (null != t || null != n) return { srcLightHovered: t, srcDarkHovered: n };
 }
-let g = {
+let T = {
     [h.s.UNSPECIFIED]: void 0,
     [h.s.SM_TILE]: f.l.SM_TILE,
     [h.s.MD_TILE]: f.l.MD_TILE,
@@ -58,8 +58,8 @@ let C = function () {
                                       badgeText: "" !== e.badgeText ? e.badgeText : void 0,
                                       badgeCountdownEndsAt: m(e.badgeCountdownEndsAt),
                                       showHoverGradient: e.showHoverGradient,
-                                      displayType: g[e.displayType],
-                                      entryPointBackgroundAssets: T(e.hoverBackground),
+                                      displayType: T[e.displayType],
+                                      entryPointBackgroundAssets: g(e.hoverBackground),
                                       version: e.version,
                                   },
                         [n, e],
@@ -81,7 +81,7 @@ let C = function () {
                                       badgeText: "" !== t.badgeText ? t.badgeText : void 0,
                                       badgeCountdownEndsAt: m(t.badgeCountdownEndsAt),
                                       showHoverGradient: t.showHoverGradient,
-                                      entryPointBackgroundAssets: T(t.hoverBackground),
+                                      entryPointBackgroundAssets: g(t.hoverBackground),
                                   },
                         [r, t],
                     )),
