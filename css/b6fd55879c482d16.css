@@ -45,11 +45,6 @@
     position: absolute
 }
 
-.hintAsset_i9BE2q {
-    -o-object-fit: contain;
-    object-fit: contain
-}
-
 .dayNumber_i9BE2q {
     --custom-day-number-fill: #0c4785;
     --custom-day-number-sheen: hsla(0, 0%, 100%, .4);
@@ -358,4 +353,4 @@
     grid-gap: var(--space-24)
 }
 
-/*# sourceMappingURL=40d8595be4bd12be.css.map*/
+/*# sourceMappingURL=b6fd55879c482d16.css.map*/
