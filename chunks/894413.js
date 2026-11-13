@@ -536,7 +536,7 @@ function P(e) {
             : (0, r.jsx)(d.E, {
                   className: y.Hz,
                   variant: "body-xs/normal",
-                  color: "text-default",
+                  color: "text-overlay-light",
                   tabularNumbers: !0,
                   style: { left: `${n}px` },
                   children: a,

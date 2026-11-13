@@ -51,7 +51,7 @@ n.d(
                     (0, r.jsx)(i.E, {
                         className: s.Sp,
                         variant: "body-xs/normal",
-                        color: "text-default",
+                        color: "text-overlay-light",
                         tabularNumbers: !0,
                         children: (0, a.rB)(n),
                     }),
