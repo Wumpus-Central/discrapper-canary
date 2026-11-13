@@ -39,10 +39,12 @@ a.d(
                 ...s.A.getAnalyticsProperties(),
             });
         },
-        dw: function (e, t) {
+        dw: function (e, t, a, r) {
             i.default.track(n.HAw.CHECKPOINT_2026_CHARACTER_CHOICE_SELECTED, {
                 trait_type: e,
                 option_id: t,
+                option_lock_status: a,
+                option_rarity: r,
                 step_name: s.A.getStepName(),
                 ...s.A.getAnalyticsProperties(),
             });
