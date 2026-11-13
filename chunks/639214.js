@@ -34,10 +34,40 @@ function A(e, t) {
     let n = (0, o._3)(t);
     return null != n && n.some((t) => t === e);
 }
+function f(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return null == t
+        ? []
+        : Array.from(e.values()).filter((e) => {
+              let i = (0, o.TP)(e);
+              return (
+                  null != e &&
+                  (0, d.vA)(e) &&
+                  !(0, l.Ic)(e) &&
+                  i === t &&
+                  i !== c.ej &&
+                  (e.userStatus?.completedAt == null || n) &&
+                  (e.userStatus?.enrolledAt == null || n)
+              );
+          });
+}
 n.d(
     t,
     {},
     {
+        Ag: function (e, t) {
+            return f(e, t, !0).sort((e, t) => {
+                let n = e.userStatus?.enrolledAt,
+                    i = t.userStatus?.enrolledAt;
+                return null == n && null == i
+                    ? 0
+                    : null == n
+                      ? 1
+                      : null == i
+                        ? -1
+                        : new Date(n).getTime() - new Date(i).getTime();
+            })[0];
+        },
         BM: function (e, t) {
             if (null == t || null == e) return null;
             for (let n of t) {
@@ -61,23 +91,7 @@ n.d(
             if (null != i) for (let e of (0, s.A)(i)) n.add(e);
             return n;
         },
-        jm: function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            return null == t
-                ? []
-                : Array.from(e.values()).filter((e) => {
-                      let i = (0, o.TP)(e);
-                      return (
-                          null != e &&
-                          (0, d.vA)(e) &&
-                          !(0, l.Ic)(e) &&
-                          i === t &&
-                          i !== c.ej &&
-                          (e.userStatus?.completedAt == null || n) &&
-                          (e.userStatus?.enrolledAt == null || n)
-                      );
-                  });
-        },
+        jm: f,
         nq: E,
         zS: _,
     },

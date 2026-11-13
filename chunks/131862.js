@@ -12,14 +12,14 @@ var n = s(477900),
     I = s(263775),
     C = s(625180),
     T = s(413599),
-    N = s(153229),
-    A = s(122760),
+    A = s(153229),
+    N = s(122760),
     E = s(506988),
     x = s(759366),
     p = s(870273),
     h = s(61387),
-    j = s(590202),
-    f = s(639214),
+    f = s(590202),
+    j = s(639214),
     _ = s(43105),
     R = s(792996);
 function v(e) {
@@ -39,8 +39,8 @@ function v(e) {
         title: R.intl.string(R.t.y0cRrO),
     });
 }
-var y = s(323889),
-    g = s(305866),
+var g = s(323889),
+    y = s(305866),
     b = s(939249),
     q = s(789645),
     S = s(438457),
@@ -59,9 +59,9 @@ function z(e) {
         m = i.useCallback(() => {
             ((0, S.r)({
                 type: U.F.CLICK_INTERNAL,
-                adCreativeType: y.p.QUEST,
+                adCreativeType: g.p.QUEST,
                 adCreativeId: t.id,
-                questContentCTA: j.Cy.LEARN_MORE,
+                questContentCTA: f.Cy.LEARN_MORE,
                 surfaceId: E.uF.RUNNING_ACTIVITY,
                 sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                 impressionId: d(),
@@ -70,7 +70,7 @@ function z(e) {
                 l(),
                 r());
         }, [t.id, d, l, r]);
-    return (0, n.jsxs)(g.l, {
+    return (0, n.jsxs)(y.l, {
         className: D.kL,
         "aria-labelledby": o,
         children: [
@@ -137,18 +137,18 @@ function O(e) {
             sourceQuestContent: E.uF.RUNNING_ACTIVITY,
         }),
         [m, T] = i.useState(!1),
-        A = i.useRef(null),
+        N = i.useRef(null),
         x = i.useRef(null),
-        [f, _] = (0, I.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], { bypassAutoDismiss: !0 }),
-        { completedRatio: y, completedRatioDisplay: g, percentComplete: b } = (0, h.O9)(t, !0),
+        [j, _] = (0, I.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], { bypassAutoDismiss: !0 }),
+        { completedRatio: g, completedRatioDisplay: y, percentComplete: b } = (0, h.O9)(t, !0),
         q = i.useCallback(() => {
             "frame" === s.type && C.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: P.y0.PIP });
         }, [s]),
         S = t.userStatus?.enrolledAt != null,
         U = i.useCallback(() => {
-            (0, N.Oy)(t.id, {
+            (0, A.Oy)(t.id, {
                 questContent: E.uF.QUEST_ACTIVITY_HEADER,
-                questContentCTA: j.Cy.ACCEPT_QUEST,
+                questContentCTA: f.Cy.ACCEPT_QUEST,
                 sourceQuestContent: E.uF.RUNNING_ACTIVITY,
             });
         }, [t.id]);
@@ -167,7 +167,7 @@ function O(e) {
                         children: [
                             (0, n.jsx)("div", {
                                 className: L.v0,
-                                ref: A,
+                                ref: N,
                                 children: (0, n.jsx)(Q.A, {
                                     quest: t,
                                     location: G.rE.QUEST_ACTIVITY_HEADER,
@@ -184,7 +184,7 @@ function O(e) {
                                     return (0, n.jsx)(z, {
                                         quest: t,
                                         questDescription: d,
-                                        completedRatio: y,
+                                        completedRatio: g,
                                         minimizeFrame: q,
                                         onClose: s,
                                     });
@@ -214,7 +214,7 @@ function O(e) {
                             (0, n.jsxs)("div", {
                                 className: L.L$,
                                 children: [
-                                    (0, n.jsx)(c.E, { variant: "body-sm/semibold", color: "text-strong", children: g }),
+                                    (0, n.jsx)(c.E, { variant: "body-sm/semibold", color: "text-strong", children: y }),
                                     (0, n.jsxs)("div", {
                                         className: L.hr,
                                         children: [
@@ -249,7 +249,7 @@ function O(e) {
                     }),
                 ],
             }),
-            null != f &&
+            null != j &&
                 S &&
                 (0, n.jsx)(v, {
                     onDismiss: function () {
@@ -258,15 +258,15 @@ function O(e) {
                     onCTAClick: function () {
                         return _(H.i.TAKE_ACTION);
                     },
-                    targetElementRef: A,
+                    targetElementRef: N,
                 }),
         ],
     });
 }
 function $(e) {
-    let t = (0, a.bG)([A.A], () => A.A.quests),
+    let t = (0, a.bG)([N.A], () => N.A.quests),
         l = (0, a.bG)([T.A], () => T.A.theme),
-        r = i.useMemo(() => (0, f.jm)(t, e.applicationId, !0)[0], [t, e.applicationId]),
+        r = i.useMemo(() => (0, j.Ag)(t, e.applicationId), [t, e.applicationId]),
         o = (0, a.bG)([x.A], () => x.A.getState().autoEnroll),
         u = r?.id,
         c = (0, a.bG)([x.A], () => x.A.isDismissed(u), [u]);

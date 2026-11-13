@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673569, Version Hash: 7dbec88849b4dbbbd3e1b37133eff85cf2db0d83`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673593, Version Hash: 6fe1dec82260aff2f1c8b4837e847872ce947bf0`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673569";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673593";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15912,7 +15912,7 @@ let p_ = "isHideDevBanner",
                     className: td()(pu.Wz, pu.mr),
                     children: [
                         (0, v.jsx)(pc, { className: pu.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673569" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673593" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -35087,24 +35087,14 @@ let yk = new Set([yy.AM, yy.eK]),
                 let { socket: t } = e;
                 (0, RB.lG)(t.transport);
                 let n = (0, RB.D2)(t.application),
-                    i = (0, uU.jm)(cr.A.quests, n, !0);
-                if (0 === i.length) throw new RR.A({ errorCode: H.Lw6.INVALID_COMMAND }, "No eligible quests found");
-                return i
-                    .map((e) => ({
-                        quest_id: e.id,
-                        enrolled_at: e.userStatus?.enrolledAt ?? null,
-                        completed_at: e.userStatus?.completedAt ?? null,
-                        external_cta_url: e.config.ctaConfig.link,
-                    }))
-                    .sort((e, t) =>
-                        null == e.enrolled_at && null == t.enrolled_at
-                            ? 0
-                            : null == e.enrolled_at
-                              ? 1
-                              : null == t.enrolled_at
-                                ? -1
-                                : new Date(e.enrolled_at).getTime() - new Date(t.enrolled_at).getTime(),
-                    )[0];
+                    i = (0, uU.Ag)(cr.A.quests, n);
+                if (null == i) throw new RR.A({ errorCode: H.Lw6.INVALID_COMMAND }, "No eligible quests found");
+                return {
+                    quest_id: i.id,
+                    enrolled_at: i.userStatus?.enrolledAt ?? null,
+                    completed_at: i.userStatus?.completedAt ?? null,
+                    external_cta_url: i.config.ctaConfig.link,
+                };
             },
         }),
     },
