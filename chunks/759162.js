@@ -54,8 +54,8 @@ function U() {
         });
     });
 }
-var H = a(964486),
-    G = a(920495),
+var G = a(964486),
+    H = a(920495),
     F = a(407905),
     K = a(532294),
     B = a(739187);
@@ -1630,8 +1630,8 @@ let eM = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"
     },
     eP = { ...eD.MobilePortrait, gradientTopPosition: 25, gradientBottomPosition: 90 };
 var eU = a(722872),
-    eH = a(574381);
-let eG = new Set([1]),
+    eG = a(574381);
+let eH = new Set([1]),
     eF = Object.keys(eo).map((e) => ({
         name: e,
         role: (function (e) {
@@ -1644,7 +1644,7 @@ let eG = new Set([1]),
                 i = null != r ? eE[r[1].toLowerCase()] : void 0;
             return null != i ? { type: "trait", path: "faceID", riveId: i } : { type: "always" };
         })(e),
-        swapKey: (0, eH.un)() ? `${e}-${eo[e].riveId}` : e,
+        swapKey: (0, eG.un)() ? `${e}-${eo[e].riveId}` : e,
     }));
 function eK(e) {
     let { faceID: t, headwearID: a, shoesID: r, wearableID: i, chapterID: s, device: n } = e;
@@ -1666,7 +1666,7 @@ function eK(e) {
                         r.layouts.includes(n) && c.add(a);
                         break;
                     case eg.ALWAYS:
-                        ("tex_wireframe_spritesheet" !== a || eG.has(s)) && c.add(a);
+                        ("tex_wireframe_spritesheet" !== a || eH.has(s)) && c.add(a);
                 }
             }),
             c
@@ -2241,8 +2241,8 @@ function tP(e) {
     });
 }
 var tU = a(509063),
-    tH = a(974862),
-    tG = a(142389),
+    tG = a(974862),
+    tH = a(142389),
     tF = a(211235),
     tK = a(230532),
     tB = a(110601),
@@ -2263,8 +2263,8 @@ function tz(e) {
             "https://cdn.discordapp.com/assets/content/fc5527a1a369d8982c6e6fa588f732c7c5364ff00ddd0cf51646f05ad423af36.mp3",
         ),
         h = tI(tv);
-    ((0, H.Ay)(() => {
-        [tH, tV, tG, tF, tB, tK].forEach((e) => (0, tw.N)(e));
+    ((0, G.Ay)(() => {
+        [tG, tV, tH, tF, tB, tK].forEach((e) => (0, tw.N)(e));
     }),
         b.useEffect(() => () => eW({ hoveredOption: void 0 }), [t]));
     let f = b.useCallback(
@@ -2679,14 +2679,14 @@ function aa(e) {
         L = b.useId(),
         D = null != o ? L : void 0,
         U = null != v ? (0, I.cq)(v) : null;
-    function H(e) {
+    function G(e) {
         null != o ? V(o) : h || (c(e), S());
     }
-    function G(e) {
-        "more" !== e ? H(e) : null != v && H(v);
+    function H(e) {
+        "more" !== e ? G(e) : null != v && G(v);
     }
     function F(e) {
-        "more" === e && (A || null == v) ? j() : G(e);
+        "more" === e && (A || null == v) ? j() : H(e);
     }
     function K(e) {
         let t = e === y;
@@ -2721,7 +2721,7 @@ function aa(e) {
                         case "ArrowRight":
                         case "Home":
                         case "End":
-                            (e.preventDefault(), e.stopPropagation(), S(), G(M(t, e.key)));
+                            (e.preventDefault(), e.stopPropagation(), S(), H(M(t, e.key)));
                     }
                 })(t, e),
             onKeyUp: (t) => {
@@ -2965,7 +2965,7 @@ function aI() {
     (b.useLayoutEffect(() => {
         null != r.current && (r.current.volume = e);
     }, [e]),
-        (0, H.l0)(() => {
+        (0, G.l0)(() => {
             null != _.current && clearTimeout(_.current);
         }));
     let w = b.useCallback((e) => {
@@ -3124,7 +3124,7 @@ function aU(e) {
         })
     );
 }
-function aH(e) {
+function aG(e) {
     let {
             "aria-label": t,
             "aria-describedby": a,
@@ -3161,7 +3161,7 @@ function aH(e) {
         })
     );
 }
-function aG(e) {
+function aH(e) {
     let { "aria-describedby": t, onClick: a, disabled: r } = e;
     return (0, i.jsx)(aU, {
         "aria-label": tf.intl.string(tf.t["13/7kX"]),
@@ -3190,7 +3190,7 @@ function aF(e) {
 }
 function aK(e) {
     let { "aria-describedby": t, onClick: a, disabled: r } = e;
-    return (0, i.jsx)(aH, {
+    return (0, i.jsx)(aG, {
         size: "md",
         "aria-label": tf.intl.string(tf.t.PDTjLN),
         "aria-describedby": t,
@@ -3201,7 +3201,7 @@ function aK(e) {
 }
 function aB(e) {
     let { onClick: t, disabled: a } = e;
-    return (0, i.jsxs)(aH, {
+    return (0, i.jsxs)(aG, {
         size: "custom",
         className: aP.GA,
         "aria-label": tf.intl.string(tf.t.i4jeWR),
@@ -3215,7 +3215,7 @@ function aB(e) {
 }
 function aV(e) {
     let { onClick: t, disabled: a } = e;
-    return (0, i.jsxs)(aH, {
+    return (0, i.jsxs)(aG, {
         size: "custom",
         className: _()(aP.GA, aP.Bq),
         "aria-label": tf.intl.string(tf.t.RDE0Sc),
@@ -3235,7 +3235,7 @@ function aV(e) {
 function az(e) {
     let { onBack: t, isRouteBlocked: a, blockedTraitDescriptionId: r } = e,
         s = (0, m.bG)([u.A], () => u.A.isSaving);
-    return (0, i.jsx)(aG, {
+    return (0, i.jsx)(aH, {
         "aria-describedby": r,
         onClick: function () {
             s || t();
@@ -3316,19 +3316,19 @@ function aq(e) {
         case j.gr.SUMMARY:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(aG, { onClick: () => l(s) }),
+                    (0, i.jsx)(aH, { onClick: () => l(s) }),
                     (0, i.jsx)(aF, { onClick: () => l(c) }),
                     (0, i.jsx)(aV, { onClick: () => l(n) }),
                 ],
             });
         case j.gr.SHARE:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(aG, { onClick: () => l(s) }), (0, i.jsx)(aB, { onClick: () => l(n) })],
+                children: [(0, i.jsx)(aH, { onClick: () => l(s) }), (0, i.jsx)(aB, { onClick: () => l(n) })],
             });
         default:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(aG, { "aria-describedby": r, onClick: () => o(s), disabled: d }),
+                    (0, i.jsx)(aH, { "aria-describedby": r, onClick: () => o(s), disabled: d }),
                     (0, i.jsx)(aK, { "aria-describedby": r, onClick: () => o(n), disabled: d }),
                 ],
             });
@@ -3822,7 +3822,7 @@ void main() {
   gl_FragColor = vec4(texelColor.rgb * v_lighting, texelColor.a);
 }
 `,
-    rH = [
+    rG = [
         -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5,
         -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5,
         0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5,
@@ -3830,7 +3830,7 @@ void main() {
         -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5,
         -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5,
     ],
-    rG = [
+    rH = [
         0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,
         1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0,
     ],
@@ -3910,10 +3910,10 @@ function rK(e) {
                 i.enableVertexAttribArray(f));
             let _ = i.createBuffer();
             (i.bindBuffer(i.ARRAY_BUFFER, _),
-                (e = new Float32Array(rH)),
+                (e = new Float32Array(rG)),
                 i.bufferData(i.ARRAY_BUFFER, e, i.STATIC_DRAW));
             let m = i.createBuffer();
-            (i.bindBuffer(i.ARRAY_BUFFER, m), i.bufferData(i.ARRAY_BUFFER, new Float32Array(rG), i.STATIC_DRAW));
+            (i.bindBuffer(i.ARRAY_BUFFER, m), i.bufferData(i.ARRAY_BUFFER, new Float32Array(rH), i.STATIC_DRAW));
             let A = rR.DF(60);
             return (
                 (a = requestAnimationFrame(function e() {
@@ -4778,24 +4778,24 @@ function iU() {
         }),
     });
 }
-var iH = a(682163),
-    iG = a(224865);
-let iF = iH.iu[iH.Ay.Sizes.XLARGE];
+var iG = a(682163),
+    iH = a(224865);
+let iF = iG.iu[iG.Ay.Sizes.XLARGE];
 function iK(e) {
     let { guild: t, size: a } = e;
     return null == t.icon && a < 48
         ? (0, i.jsx)("div", {
-              className: _()(iG.K, iG.J),
+              className: _()(iH.K, iH.J),
               style: { width: a, height: a },
               "aria-hidden": !0,
               children: (0, i.jsx)(ts.E, { variant: "body-md/medium", children: (0, F.oW)(t.name) }),
           })
-        : (0, i.jsx)(iH.Ay, {
+        : (0, i.jsx)(iG.Ay, {
               guild: t,
-              size: iH.Ay.Sizes.XLARGE,
+              size: iG.Ay.Sizes.XLARGE,
               iconSize: a,
               textScale: a / iF,
-              className: iG.K,
+              className: iH.K,
               style: { width: a, height: a, borderRadius: 0 },
               "aria-hidden": !0,
           });
@@ -5346,29 +5346,36 @@ let sb = {
 function sp(e) {
     let {
             step: { icon: t, label: a, route: r },
-            disabled: s,
-            blockedTraitDescriptionId: n,
-            sound: c,
-            onRouteClick: d,
+            state: s,
+            disabled: n,
+            blockedTraitDescriptionId: c,
+            sound: d,
+            onRouteClick: l,
         } = e,
-        l = tf.intl.string(a),
-        { onPointerDown: o, onKeyDown: u, onClickWithSound: h } = aD({ source: c, onClick: () => d(r), disabled: s });
+        o = tf.intl.string(a),
+        u = "unlocked" === s,
+        {
+            onPointerDown: h,
+            onKeyDown: f,
+            onClickWithSound: b,
+        } = aD({ source: d, onClick: () => l(r), disabled: n || !u });
     return (0, i.jsx)(aN.m, {
-        text: l,
+        text: "locked" === s ? null : o,
         ariaHidden: !0,
         children: (0, i.jsxs)(rZ.D, {
-            onPointerDown: o,
-            onKeyDown: u,
-            onClick: h,
+            onPointerDown: u ? h : void 0,
+            onKeyDown: u ? f : void 0,
+            onClick: u ? b : void 0,
+            tabIndex: u ? 0 : -1,
             role: "tab",
-            "aria-selected": !1,
-            className: _()(sf.PM, sf.CD, { [sf.vk]: !s }),
-            "aria-label": l,
-            "aria-disabled": s,
-            "aria-describedby": n,
+            "aria-selected": "active" === s,
+            className: _()(sf.PM, { [sf.Xj]: "active" === s, [sf.CD]: u, [sf.vk]: u && !n }),
+            "aria-label": o,
+            "aria-disabled": "locked" === s || (u && n),
+            "aria-describedby": u ? c : void 0,
             children: [
-                (0, i.jsx)("div", { className: _()(sf.Om, sf.hZ) }),
-                (0, i.jsx)(t, { size: "xs", color: "currentColor", className: sf.RQ }),
+                (0, i.jsx)("div", { className: _()(sf.Om, { [sf.hZ]: "locked" !== s }) }),
+                (0, i.jsx)(t, { size: "xs", color: "currentColor", className: sf.Kk }),
             ],
         }),
     });
@@ -5398,49 +5405,20 @@ function s_(e) {
               className: sf.qB,
               role: "tablist",
               "aria-label": tf.intl.string(th.default.DyMw85),
-              children: d.map((e, t) => {
-                  let { icon: a } = e;
-                  return t === o
-                      ? (0, i.jsx)(
-                            aN.m,
-                            {
-                                text: tf.intl.string(e.label),
-                                ariaHidden: !0,
-                                children: (0, i.jsx)("div", {
-                                    className: sf.PM,
-                                    role: "tab",
-                                    "aria-selected": !0,
-                                    "aria-label": tf.intl.string(e.label),
-                                    children: (0, i.jsx)(a, { size: "xs", color: "currentColor" }),
-                                }),
-                            },
-                            e.stage,
-                        )
-                      : t <= h
-                        ? (0, i.jsx)(
-                              sp,
-                              {
-                                  step: e,
-                                  disabled: p || s,
-                                  blockedTraitDescriptionId: n,
-                                  sound: t < o ? aE : aj,
-                                  onRouteClick: c,
-                              },
-                              e.stage,
-                          )
-                        : (0, i.jsx)(
-                              "div",
-                              {
-                                  className: sf.PM,
-                                  role: "tab",
-                                  "aria-selected": !1,
-                                  "aria-disabled": !0,
-                                  "aria-label": tf.intl.string(e.label),
-                                  children: (0, i.jsx)("div", { className: sf.Om }),
-                              },
-                              e.stage,
-                          );
-              }),
+              children: d.map((e, t) =>
+                  (0, i.jsx)(
+                      sp,
+                      {
+                          step: e,
+                          state: t === o ? "active" : t <= h ? "unlocked" : "locked",
+                          disabled: p || s,
+                          blockedTraitDescriptionId: n,
+                          sound: t < o ? aE : aj,
+                          onRouteClick: c,
+                      },
+                      e.stage,
+                  ),
+              ),
           });
 }
 var sm = a(517782);
@@ -5479,7 +5457,7 @@ function sg(e) {
             (e === u.T.INIT || e === u.T.ERROR) && (0, o.nX)();
         }, []),
         b.useEffect(() => {
-            (0, G.E)(t);
+            (0, H.E)(t);
         }, [t]));
     let n = (0, E.bL)(r),
         [c, l] = (function (e) {
@@ -5505,7 +5483,7 @@ function sg(e) {
     (b.useEffect(() => {
         (h.A.setStepName(c), (0, f.if)(c));
     }, [c]),
-        (0, H.l0)(() => {
+        (0, G.l0)(() => {
             (h.A.stop(), (0, f.i)(h.A.getStepName()));
         }),
         (a = (0, m.bG)([d.A], () => d.A.isFocused() && d.A.isVisible())),
