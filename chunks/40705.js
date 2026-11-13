@@ -38,9 +38,9 @@ var r = n(477900),
     U = n(862649);
 let _ = "-:--",
     K = {
-        [c.Q6.PLAYING]: { icon: j.PauseIcon, label: $.intl.string($.t.ZcgDJX) },
-        [c.Q6.PAUSED]: { icon: D.PlayIcon, label: $.intl.string($.t.RscU7I) },
-        [c.Q6.ENDED]: { icon: I.RetryIcon, label: $.intl.string($.t.hsvh0i) },
+        [c.Q6.PLAYING]: { icon: j.PauseIcon, label: $.t.ZcgDJX },
+        [c.Q6.PAUSED]: { icon: D.PlayIcon, label: $.t.RscU7I },
+        [c.Q6.ENDED]: { icon: I.RetryIcon, label: $.t.hsvh0i },
     },
     O = { [c.oA.SM]: c.n4.SM, [c.oA.MD]: c.n4.MD, [c.oA.LG]: c.n4.LG };
 function Q(e) {
@@ -385,7 +385,8 @@ function er(e) {
         ));
     let e2 = $.intl.string(0 === ey ? $.t.YqAjXy : $.t.w4m945),
         { icon: e6, label: e4 } = K[t],
-        e8 = (0, r.jsx)(G, {
+        e8 = $.intl.string(e4),
+        e9 = (0, r.jsx)(G, {
             iconComponent: Y,
             visible: a,
             onClick: eY,
@@ -411,7 +412,7 @@ function er(e) {
             },
             "data-testid": "discord-web-video-player-volume-btn",
         }),
-        e9 = (0, r.jsx)(m.G, {
+        e3 = (0, r.jsx)(m.G, {
             mini: !0,
             className: U.nA,
             barClassName: U.i1,
@@ -439,8 +440,8 @@ function er(e) {
                     (0, r.jsx)(G, {
                         iconComponent: e6,
                         visible: a,
-                        ariaLabel: e4,
-                        tooltipLabel: e4,
+                        ariaLabel: e8,
+                        tooltipLabel: e8,
                         shortcut: c.TJ.PLAYBACK,
                         onClick: X,
                         ref: eF,
@@ -499,7 +500,7 @@ function er(e) {
                                       "data-testid": "discord-web-video-player-volume-popout",
                                       children: (0, r.jsx)("div", {
                                           "data-testid": "discord-web-video-player-volume-slider",
-                                          children: e9,
+                                          children: e3,
                                       }),
                                   }),
                               children: () =>
@@ -512,7 +513,7 @@ function er(e) {
                                       onKeyDown: eJ,
                                       className: U.RD,
                                       "data-testid": "discord-web-video-player-volume-control",
-                                      children: e8,
+                                      children: e9,
                                   }),
                           })
                         : (0, r.jsxs)("div", {
@@ -523,7 +524,7 @@ function er(e) {
                               className: i()(U.RD, U.u3),
                               "data-testid": "discord-web-video-player-volume-control",
                               children: [
-                                  e8,
+                                  e9,
                                   (0, r.jsx)(u.animated.div, {
                                       className: U.MQ,
                                       "data-testid": "discord-web-video-player-volume-slider",
@@ -534,7 +535,7 @@ function er(e) {
                                               (e) => `${e}px`,
                                           ),
                                       },
-                                      children: e9,
+                                      children: e3,
                                   }),
                               ],
                           }),
