@@ -99,9 +99,9 @@ function J(e) {
                 adCreativeType: s.p.BOUNTY,
                 questContent: p.uF.VIDEO_MODAL_END_CARD,
                 sourceQuestContent: n,
-                children: (n) =>
+                children: (t) =>
                     (0, r.jsx)(Q.D, {
-                        innerRef: n,
+                        innerRef: t,
                         className: E()(e, b.hn),
                         focusProps: X,
                         onClick: u,
@@ -117,7 +117,7 @@ function J(e) {
                                             variant: "heading-sm/semibold",
                                             color: "text-strong",
                                             lineClamp: 1,
-                                            children: o.label ?? t.advertiserName,
+                                            children: o.label,
                                         }),
                                         (0, r.jsx)(Y.E, {
                                             tag: "div",
@@ -737,7 +737,7 @@ function eA(e) {
                 : { url: t.url, orientation: t.aspectRatio === i.x.PORTRAIT ? "portrait" : "landscape" };
         }, [s]),
         T = _(s),
-        b = T.label ?? s.advertiserName,
+        b = T.label,
         S = K({ bounty: s, onClose: n, sourceQuestContent: o });
     return (0, r.jsx)(f.A, {
         transitionState: t,
