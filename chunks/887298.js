@@ -14,16 +14,14 @@ t.d(
     {
         A: function (e) {
             let { closePopout: n } = e,
-                t = o.Q$.useSetting(),
-                g = x.intl.string(d.default.JMVuvY);
+                t = o.Q$.useSetting();
             return (0, l.jsxs)(s.W, {
                 navId: "clips-in-call-voice",
-                "aria-label": g,
+                "aria-label": x.intl.string(d.default["IxZyA+"]),
                 onClose: n,
                 onSelect: void 0,
                 children: [
                     (0, l.jsx)(i.rX, {
-                        label: g,
                         children: (0, l.jsx)(i.fP, {
                             id: "clips-in-call-voice-recording",
                             label: x.intl.string(d.default["IxZyA+"]),

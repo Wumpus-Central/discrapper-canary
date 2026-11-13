@@ -22,7 +22,8 @@ t.d(
                     targetElementRef: n,
                     shouldShow: t,
                     position: "bottom",
-                    caretConfig: { align: "center" },
+                    alignmentStrategy: "trigger-center",
+                    caretConfig: { align: "end" },
                     onRequestClose: g,
                     children: [
                         (0, l.jsxs)("div", {

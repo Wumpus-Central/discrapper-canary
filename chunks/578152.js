@@ -88,7 +88,7 @@ class p extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "4c7ec8468ddf3d658223bb4777c55d9ee09f700b" === e.body.hash)
+                    if (null == e.body || "cd5f9c6631cb5bc1369f9ca56755de11b5516ea5" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : A;
