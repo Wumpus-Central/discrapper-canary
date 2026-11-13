@@ -21,6 +21,13 @@ n.d(
         IU: function (e) {
             return null != e.flags;
         },
+        Jr: function (e) {
+            return null != e.guild_ids
+                ? e.guild_ids
+                : "guild" === e.install_scope && null != e.guild_id
+                  ? [e.guild_id]
+                  : [];
+        },
         RX: function (e) {
             return null != e.collaborator_role_ids;
         },

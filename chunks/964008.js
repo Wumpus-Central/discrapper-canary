@@ -1,13 +1,13 @@
 (t.r(l), t.d(l, { default: () => eh }));
 var n = t(477900),
     s = t(582128),
-    a = t(806163),
-    r = t(499466),
+    r = t(806163),
+    a = t(499466),
     i = t(16619),
-    d = t(751841),
-    c = t(381991),
-    o = t(503698),
-    u = t.n(o),
+    c = t(751841),
+    o = t(381991),
+    d = t(503698),
+    u = t.n(d),
     j = t(855986),
     p = t(534514),
     h = t(866665),
@@ -15,8 +15,8 @@ var n = t(477900),
     x = t(366605),
     g = t(95362),
     f = t(683438),
-    y = t(939249),
-    C = t(152367),
+    C = t(939249),
+    y = t(152367),
     b = t(834730),
     A = t(525113),
     v = t(441935),
@@ -29,13 +29,13 @@ var k = t(711014),
     w = t(260498),
     I = t(996485),
     _ = t(313537);
-function G() {
+function O() {
     let e = w.Ay.getRailProjects(),
         l = new Set(e.map((e) => e.id));
     for (let t of w.Ay.getSharedWithMeProjects()) l.has(t.id) || e.push(t);
     return e;
 }
-var O = t(434279),
+var G = t(434279),
     K = t(972013),
     U = t(927731),
     D = t(140735),
@@ -43,61 +43,61 @@ var O = t(434279),
     J = t(847374),
     R = t(821609),
     W = t(289873),
-    F = t(682163),
-    M = t(71393),
+    M = t(682163),
+    F = t(976860),
+    X = t(71393),
     B = t(685105),
     L = t(919485);
 let T = "collaborating";
-var X = t(738601),
-    q = t(73153);
-let V = { collapsedByKey: {} },
-    Z = V;
-class $ extends j.Ay.PersistedStore {
+var q = t(738601),
+    V = t(73153);
+let Z = { collapsedByKey: {} },
+    $ = Z;
+class H extends j.Ay.PersistedStore {
     static displayName = "ConjureProjectGroupsCollapseStore";
     static persistKey = "ConjureProjectGroupsCollapse";
     initialize(e) {
-        Z = e ?? V;
+        $ = e ?? Z;
     }
     getState() {
-        return Z;
+        return $;
     }
     isCollapsed(e) {
-        return Z.collapsedByKey[e] ?? e === T;
+        return $.collapsedByKey[e] ?? e === T;
     }
 }
-let H = new $(q.h, {
+let Y = new H(V.h, {
     CONJURE_PROJECT_GROUP_COLLAPSE_SET: function (e) {
         let { key: l, collapsed: t } = e;
-        return Z.collapsedByKey[l] !== t && ((Z = { collapsedByKey: { ...Z.collapsedByKey, [l]: t } }), !0);
+        return $.collapsedByKey[l] !== t && (($ = { collapsedByKey: { ...$.collapsedByKey, [l]: t } }), !0);
     },
 });
-var Y = t(233470),
-    Q = t(976860),
+var Q = t(233470),
     ee = t(652215),
     el = t(746080),
     et = t(97101),
     en = t(191850),
     es = t(792996),
-    ea = t(5127);
-let er = { working: en.default["Y8pS+n"], unread: en.default["N+3Pzk"] };
+    er = t(5127);
+let ea = { working: en.default["Y8pS+n"], unread: en.default["N+3Pzk"] };
 function ei(e) {
-    let { groupKey: l, title: t, guild: a, onOpen: r, projects: i, forceExpanded: d, className: c, children: o } = e,
+    let { groupKey: l, title: t, guild: r, onOpen: a, projects: i, forceExpanded: c, className: o, children: d } = e,
         { collapsed: p, toggle: h } = (function (e, l) {
-            let t = (0, j.bG)([H], () => H.isCollapsed(e)),
-                [n, a] = s.useState(!1);
-            n && !l && a(!1);
-            let r = t && (!l || n),
+            let t = (0, j.bG)([Y], () => Y.isCollapsed(e)),
+                [n, r] = s.useState(!1);
+            n && !l && r(!1);
+            let a = t && (!l || n),
                 i = s.useCallback(() => {
-                    (q.h.dispatch({ type: "CONJURE_PROJECT_GROUP_COLLAPSE_SET", key: e, collapsed: !r }), l && a(!0));
-                }, [e, r, l]);
-            return { collapsed: r, toggle: i };
-        })(l, d),
+                    (V.h.dispatch({ type: "CONJURE_PROJECT_GROUP_COLLAPSE_SET", key: e, collapsed: !a }), l && r(!0));
+                }, [e, a, l]);
+            return { collapsed: a, toggle: i };
+        })(l, c),
         x = (0, j.bG)(
-            X.Nl,
+            q.Nl,
             () => {
                 let e = null;
                 for (let l of i) {
-                    let t = (0, X.AK)(l.id);
+                    let t = (0, q.AK)(l.id);
                     if ("working" === t) return "working";
                     "unread" === t && (e = "unread");
                 }
@@ -108,12 +108,12 @@ function ei(e) {
         g = s.useId(),
         f = (0, n.jsxs)(n.Fragment, {
             children: [
-                null != a
-                    ? (0, n.jsx)(F.Ay, {
-                          guild: a,
-                          size: F.Ay.Sizes.SMOL,
+                null != r
+                    ? (0, n.jsx)(M.Ay, {
+                          guild: r,
+                          size: M.Ay.Sizes.SMOL,
                           active: !0,
-                          className: ea.$t,
+                          className: er.$t,
                           "aria-hidden": !0,
                       })
                     : null,
@@ -121,29 +121,29 @@ function ei(e) {
                     variant: "body-sm/medium",
                     color: "none",
                     lineClamp: 1,
-                    className: ea.hv,
+                    className: er.hv,
                     children: t,
                 }),
             ],
         }),
-        C = p && null != x;
+        y = p && null != x;
     return (0, n.jsxs)("section", {
         "aria-label": t,
-        className: c,
+        className: o,
         children: [
             (0, n.jsxs)("div", {
                 role: "heading",
                 "aria-level": 3,
-                className: ea.x_,
+                className: er.x_,
                 children: [
-                    null != r
-                        ? (0, n.jsx)(y.D, { className: u()(ea.SZ, ea.ab), onClick: r, children: f })
-                        : (0, n.jsx)("span", { className: ea.SZ, children: f }),
-                    C
+                    null != a
+                        ? (0, n.jsx)(C.D, { className: u()(er.SZ, er.ab), onClick: a, children: f })
+                        : (0, n.jsx)("span", { className: er.SZ, children: f }),
+                    y
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsx)(et.A, { activity: x, className: ea.XJ }),
-                                  (0, n.jsx)(D.A, { children: es.intl.string(er[x]) }),
+                                  (0, n.jsx)(et.A, { activity: x, className: er.XJ }),
+                                  (0, n.jsx)(D.A, { children: es.intl.string(ea[x]) }),
                               ],
                           })
                         : null,
@@ -160,43 +160,54 @@ function ei(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)("div", { id: g, hidden: p, children: p ? null : o }),
+            (0, n.jsx)("div", { id: g, hidden: p, children: p ? null : d }),
         ],
     });
 }
-function ed(e) {
-    let { guildId: l, projects: t, forceExpanded: a, ...r } = e,
-        i = (0, j.bG)([M.A], () => M.A.getGuild(l)),
-        d = s.useCallback(() => {
-            (0, Q.pX)(ee.BVt.CHANNEL(l, el.VV.CONJURE));
-        }, [l]);
+function ec(e) {
+    let { guildId: l, projects: t, forceExpanded: r, ...a } = e,
+        i = (0, j.bG)([X.A], () => X.A.getGuild(l)),
+        o = s.useCallback(() => {
+            (0, F.pX)(ee.BVt.CHANNEL(l, el.VV.CONJURE));
+        }, [l]),
+        d = s.useCallback((e) => (0, F.pX)((0, c.Oj)(l, e.id), { state: { conjureEntryPoint: "project_list" } }), [l]),
+        { renderProjectActions: u, onProjectContextMenu: p } = a,
+        h = s.useCallback((e) => u(e, l), [u, l]),
+        m = s.useCallback((e, t) => p(e, t, l), [p, l]);
     return (0, n.jsx)(ei, {
         groupKey: l,
         title: i?.name ?? es.intl.string(en.default["6bhivN"]),
         guild: i,
-        onOpen: null != i ? d : void 0,
+        onOpen: null != i ? o : void 0,
         projects: t,
-        forceExpanded: a || t.some((e) => e.id === r.selectedProjectId),
-        className: ea.uW,
-        children: (0, n.jsx)(B.A, { projects: t, ...r, hideServer: !0 }),
+        forceExpanded: r || t.some((e) => e.id === a.selectedProjectId),
+        className: er.uW,
+        children: (0, n.jsx)(B.A, {
+            projects: t,
+            ...a,
+            onSelect: d,
+            renderProjectActions: h,
+            onProjectContextMenu: m,
+            hideServer: !0,
+        }),
     });
 }
-function ec(e) {
+function eo(e) {
     let { groups: l, query: t, ...s } = e,
-        a = (0, j.bG)([w.Ay], () => w.Ay.getOwnedProjectsFetchState()),
-        r = "" !== t.trim(),
-        { personal: i, collaborating: d, servers: c, hasProjects: o } = l;
-    return 0 === i.length && 0 === d.length && 0 === c.length
-        ? o
+        r = (0, j.bG)([w.Ay], () => w.Ay.getOwnedProjectsFetchState()),
+        a = "" !== t.trim(),
+        { personal: i, collaborating: c, servers: o, hasProjects: d } = l;
+    return 0 === i.length && 0 === c.length && 0 === o.length
+        ? d
             ? (0, n.jsx)(b.E, {
                   variant: "body-sm/normal",
                   color: "text-subtle",
-                  className: ea.WD,
+                  className: er.WD,
                   children: es.intl.string(en.default.X37fkR),
               })
-            : "error" === a
+            : "error" === r
               ? (0, n.jsxs)("div", {
-                    className: ea.E8,
+                    className: er.E8,
                     children: [
                         (0, n.jsx)(b.E, {
                             variant: "body-sm/normal",
@@ -207,133 +218,136 @@ function ec(e) {
                             variant: "secondary",
                             size: "sm",
                             text: es.intl.string(en.default["WFJ/vb"]),
-                            onClick: () => (0, Y.listProjects)(),
+                            onClick: () => (0, Q.listProjects)(),
                         }),
                     ],
                 })
-              : "success" !== a
-                ? (0, n.jsx)("div", { className: ea.E8, children: (0, n.jsx)(W.y, {}) })
+              : "success" !== r
+                ? (0, n.jsx)("div", { className: er.E8, children: (0, n.jsx)(W.y, {}) })
                 : null
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  i.length > 0 || d.length > 0
+                  i.length > 0 || c.length > 0
                       ? (0, n.jsxs)(L.A, {
                             title: es.intl.string(en.default.w9wAEy),
-                            className: ea.uW,
+                            className: er.uW,
                             children: [
                                 (0, n.jsx)(B.A, { projects: i, ...s }),
-                                d.length > 0
+                                c.length > 0
                                     ? (0, n.jsx)(ei, {
                                           groupKey: T,
                                           title: es.intl.string(en.default.dOfCq0),
-                                          projects: d,
-                                          forceExpanded: r || d.some((e) => e.id === s.selectedProjectId),
-                                          className: ea.mK,
-                                          children: (0, n.jsx)(B.A, { projects: d, ...s, showServer: !0 }),
+                                          projects: c,
+                                          forceExpanded: a || c.some((e) => e.id === s.selectedProjectId),
+                                          className: er.mK,
+                                          children: (0, n.jsx)(B.A, { projects: c, ...s, showServer: !0 }),
                                       })
                                     : null,
                             ],
                         })
                       : null,
-                  c.map((e) =>
-                      (0, n.jsx)(ed, { guildId: e.guildId, projects: e.projects, forceExpanded: r, ...s }, e.guildId),
+                  o.map((e) =>
+                      (0, n.jsx)(ec, { guildId: e.guildId, projects: e.projects, forceExpanded: a, ...s }, e.guildId),
                   ),
               ],
           });
 }
-var eo = t(111582),
+var ed = t(111582),
     eu = t(101766);
 function ej(e) {
     let l,
         t,
-        a,
-        { selectedProjectId: r, workspaceGuildId: i, onNavigate: d } = e,
-        [c, o] = s.useState(""),
+        r,
+        { selectedProjectId: a, workspaceGuildId: i, onNavigate: c } = e,
+        [o, d] = s.useState(""),
         D = (0, eu.A)("sidebar"),
         z =
-            ((l = (0, E.U)(G)),
+            ((l = (0, E.U)(O)),
             (t = (0, j.yK)([k.Ay], () => k.Ay.getFlattenedGuildIds())),
-            (a = (0, j.bG)([S.default], () => S.default.getCurrentUser()?.id)),
+            (r = (0, j.bG)([S.default], () => S.default.getCurrentUser()?.id)),
             s.useMemo(
                 () => ({
                     ...(function (e, l, t) {
                         let n = [],
                             s = [],
-                            a = new Map();
+                            r = new Map(),
+                            a = new Map(l.map((e, l) => [e, l]));
                         for (let l of e) {
                             let e = (0, _.DC)(l);
                             if (null == e) {
                                 (l.owner_user_id === t ? n : s).push(l);
                                 continue;
                             }
-                            let r = a.get(e);
-                            null != r ? r.push(l) : a.set(e, [l]);
+                            let i = l.owner_user_id === t ? (l.guild_ids ?? []).filter((l) => l !== e && a.has(l)) : [];
+                            for (let t of [e, ...i]) {
+                                let e = r.get(t);
+                                null != e ? e.push(l) : r.set(t, [l]);
+                            }
                         }
-                        let r = new Map(l.map((e, l) => [e, l]));
                         function i(e) {
-                            return r.get(e) ?? l.length;
+                            return a.get(e) ?? l.length;
                         }
-                        let d = Array.from(a, (e) => {
+                        let c = Array.from(r, (e) => {
                             let [l, t] = e;
                             return { guildId: l, projects: t };
                         });
                         return (
-                            d.sort((e, l) => i(e.guildId) - i(l.guildId)), { personal: n, collaborating: s, servers: d }
+                            c.sort((e, l) => i(e.guildId) - i(l.guildId)), { personal: n, collaborating: s, servers: c }
                         );
-                    })((0, I.Z)(l, c), t, a),
+                    })((0, I.Z)(l, o), t, r),
                     hasProjects: l.length > 0,
                 }),
-                [l, t, a, c],
+                [l, t, r, o],
             )),
         J = (0, j.bG)([w.Ay], () => "success" === w.Ay.getOwnedProjectsFetchState()) && !z.hasProjects,
-        R = s.useCallback((e) => d(e.id, "project_list"), [d]),
+        R = s.useCallback((e) => c(e.id, "project_list"), [c]),
         W = s.useCallback(
-            (e) => {
-                let l = (0, O.wu)(e) ?? i;
-                return null != l ? (0, n.jsx)(N.S, { project: e, guildId: l }) : null;
-            },
-            [i],
-        ),
-        F = s.useCallback(
             (e, l) => {
-                let t = (0, O.wu)(l) ?? i;
-                null != t && (0, N.V)(e, l, t);
+                let t = l ?? (0, G.wu)(e) ?? i;
+                return null != t ? (0, n.jsx)(N.S, { project: e, guildId: t }) : null;
             },
             [i],
         ),
-        M = s.useCallback((e) => d(e, "create"), [d]),
-        B = (0, eo.A)(i, M),
-        L = (0, j.bG)([K.A], () => K.A.isPinned()),
-        T = es.intl.string(en.default["DE7U+m"]),
-        X = null == r;
+        M = s.useCallback(
+            (e, l, t) => {
+                let n = t ?? (0, G.wu)(l) ?? i;
+                null != n && (0, N.V)(e, l, n);
+            },
+            [i],
+        ),
+        F = s.useCallback((e) => c(e, "create"), [c]),
+        X = (0, ed.A)(i, F),
+        B = (0, j.bG)([K.A], () => K.A.isPinned()),
+        L = es.intl.string(en.default["DE7U+m"]),
+        T = null == a;
     return (0, n.jsxs)("nav", {
-        className: ea.pz,
+        className: er.pz,
         "aria-label": es.intl.string(en.default.uk6jhJ),
         children: [
             (0, n.jsxs)("header", {
-                className: ea.wx,
+                className: er.wx,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: ea.DD,
+                        className: er.DD,
                         children: [
                             (0, n.jsx)(p.D, {
                                 variant: "body-md/semibold",
                                 color: "text-strong",
                                 lineClamp: 1,
-                                className: ea.UU,
+                                className: er.UU,
                                 children: es.intl.string(en.default.uk6jhJ),
                             }),
-                            (0, n.jsx)(A.A, { className: ea.vr }),
+                            (0, n.jsx)(A.A, { className: er.vr }),
                         ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: ea.$s,
+                        className: er.$s,
                         children: [
-                            (0, n.jsx)(v.A, { importing: B.importing, disabled: null == i, onClick: B.open }),
-                            L
+                            (0, n.jsx)(v.A, { importing: X.importing, disabled: null == i, onClick: X.open }),
+                            B
                                 ? null
                                 : (0, n.jsx)(h.m, {
-                                      text: T,
+                                      text: L,
                                       position: "bottom",
                                       asContainer: !0,
                                       ariaHidden: !0,
@@ -341,39 +355,39 @@ function ej(e) {
                                           icon: x.PinIcon,
                                           variant: "icon-only",
                                           size: "sm",
-                                          "aria-label": T,
+                                          "aria-label": L,
                                           onClick: U._,
                                       }),
                                   }),
-                            B.input,
+                            X.input,
                         ],
                     }),
                 ],
             }),
             (0, n.jsxs)(g.Ip, {
                 ref: D,
-                className: ea.XG,
+                className: er.XG,
                 fade: !0,
                 children: [
                     (0, n.jsx)("div", {
-                        className: ea.$P,
+                        className: er.$P,
                         children: (0, n.jsx)(f.I, {
-                            query: c,
-                            onChange: o,
-                            onClear: () => o(""),
+                            query: o,
+                            onChange: d,
+                            onClear: () => d(""),
                             size: "sm",
                             placeholder: es.intl.string(en.default["2y8sUh"]),
                             "aria-label": es.intl.string(en.default.u0kEN9),
                         }),
                     }),
-                    (0, n.jsxs)(y.D, {
-                        className: u()(ea.ap, ea.QI, { [ea.Xw]: X }),
-                        "aria-current": X ? "page" : void 0,
-                        onClick: () => d(null),
+                    (0, n.jsxs)(C.D, {
+                        className: u()(er.ap, er.QI, { [er.Xw]: T }),
+                        "aria-current": T ? "page" : void 0,
+                        onClick: () => c(null),
                         children: [
                             (0, n.jsx)("span", {
-                                className: ea.DW,
-                                children: (0, n.jsx)(C.MagicWandIcon, { size: "md", color: "currentColor" }),
+                                className: er.DW,
+                                children: (0, n.jsx)(y.MagicWandIcon, { size: "md", color: "currentColor" }),
                             }),
                             (0, n.jsx)(b.E, {
                                 variant: "body-md/medium",
@@ -382,13 +396,13 @@ function ej(e) {
                             }),
                         ],
                     }),
-                    (0, n.jsx)(ec, {
+                    (0, n.jsx)(eo, {
                         groups: z,
-                        query: c,
-                        selectedProjectId: r,
+                        query: o,
+                        selectedProjectId: a,
                         onSelect: R,
                         renderProjectActions: W,
-                        onProjectContextMenu: F,
+                        onProjectContextMenu: M,
                     }),
                 ],
             }),
@@ -397,10 +411,10 @@ function ej(e) {
     });
 }
 function ep() {
-    let e = (0, a.W5)({ path: d._g, exact: !0 }),
+    let e = (0, r.W5)({ path: c._g, exact: !0 }),
         l = (0, i.rX)("ConjureAppSidebar");
-    return (0, n.jsx)(ej, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: l, onNavigate: c.A });
+    return (0, n.jsx)(ej, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: l, onNavigate: o.A });
 }
 function eh() {
-    return (0, r.TW)("ConjureAppSidebar") ? (0, n.jsx)(ep, {}) : null;
+    return (0, a.TW)("ConjureAppSidebar") ? (0, n.jsx)(ep, {}) : null;
 }

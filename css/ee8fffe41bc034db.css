@@ -92,6 +92,16 @@
     display: inline-flex
 }
 
+.loading_rqE2lZ {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-16)
+}
+
+.projectTab_rqE2lZ {
+    padding-top: var(--space-12)
+}
+
 .header_-KMphV {
     display: flex;
     font-weight: var(--font-weight-medium);
@@ -497,4 +507,4 @@
     margin-bottom: var(--space-16)
 }
 
-/*# sourceMappingURL=97cc230de44713ed.css.map*/
+/*# sourceMappingURL=ee8fffe41bc034db.css.map*/

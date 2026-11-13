@@ -404,7 +404,7 @@ var em = s(996485),
     eh = s(260498),
     ef = s(615890);
 function ex(e, t) {
-    return e.guild_id === t || e.preview_guild_id === t;
+    return e.guild_id === t || e.preview_guild_id === t || e.guild_ids?.includes(t) === !0;
 }
 var eg = s(602991),
     ev = s(685105),
