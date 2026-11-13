@@ -419,7 +419,7 @@ function ex(e) {
                         (0, C.jsx)("path", { d: em, fill: "var(--background-feedback-mod-info)" }),
                         (0, C.jsx)("path", {
                             d: "M0.0546875 10L6.06543 3.1543C7.06567 1.9321 8.93433 1.9321 9.93457 3.1543L15.9453 10",
-                            stroke: "var(--border-subtle)",
+                            stroke: "var(--inlinenotice-border-info)",
                         }),
                     ],
                 }),

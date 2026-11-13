@@ -117,6 +117,7 @@ let r = (0, n(945810).mj)({
         i.M.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
         i.M.HEXAGON_CAMPAIGN_PERKS_EXPIRED_PROMO_SHEET,
         i.M.AUTOCLIPPING_EARLY_ACCESS_FIRST_AUTO_CLIPS_RECAP,
+        i.M.VOICE_PANEL_STREAM_VOLUME_MOVED_NOTICE,
     ]);
 function s(e) {
     return (
@@ -412,6 +413,7 @@ let l = {
     903: { is_server_arbitrated: !1 },
     904: { is_server_arbitrated: !1 },
     905: { is_server_arbitrated: !1 },
+    907: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
