@@ -2637,6 +2637,7 @@ class eF extends O.G {
             { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 },
             { no: 21, name: "vad_colors", kind: "message", T: () => tc },
             { no: 22, name: "hidden_flags", kind: "scalar", T: 4 },
+            { no: 23, name: "play_install_ids", kind: "scalar", repeat: 2, T: 9 },
         ]);
     }
     create(e) {
@@ -2647,6 +2648,7 @@ class eF extends O.G {
             isPendingRequiredAction: !1,
             disableStaffDiscount: !1,
             hiddenFlags: "0",
+            playInstallIds: [],
         };
         return (
             globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
@@ -2725,6 +2727,9 @@ class eF extends O.G {
                     break;
                 case 22:
                     r.hiddenFlags = e.uint64().toString();
+                    break;
+                case 23:
+                    r.playInstallIds.push(e.string());
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -2843,6 +2848,7 @@ class eF extends O.G {
             !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount),
             e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.hiddenFlags && t.tag(22, S.O0.Varint).uint64(e.hiddenFlags));
+        for (let n = 0; n < e.playInstallIds.length; n++) t.tag(23, S.O0.LengthDelimited).string(e.playInstallIds[n]);
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
