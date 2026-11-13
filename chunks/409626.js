@@ -100,6 +100,7 @@ var i,
         (r.GlobalDiscoveryGamesTrendingShelf = "global_discovery_games_trending_shelf"),
         (r.GlobalDiscoveryGamesTrendingTab = "global_discovery_games_trending_tab"),
         (r.GlobalDiscoveryGamesSearch = "global_discovery_games_search"),
+        (r.GuildActionSheet = "guild_action_sheet"),
         r),
     E = (((a = {}).FullProfile = "full_profile"), (a.MiniProfile = "mini_profile"), a);
 n.d(

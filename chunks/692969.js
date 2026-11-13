@@ -13,7 +13,7 @@ t.d(
                       (p?.stopPropagation(),
                           p?.preventDefault(),
                           a.default.openGameProfileModal({ ...e, gameId: i, gameProfileModalChecks: t }),
-                          o?.());
+                          o?.(i));
                   }
                 : void 0;
         },
