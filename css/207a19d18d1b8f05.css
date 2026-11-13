@@ -101,7 +101,7 @@
     gap: var(--space-16)
 }
 
-.container_oX1O9t {
+.container_RouGOX {
     align-items: stretch;
     -webkit-backdrop-filter: var(--custom-countdown-banner-backdrop-filter);
     backdrop-filter: var(--custom-countdown-banner-backdrop-filter);
@@ -119,7 +119,7 @@
     width: min-content
 }
 
-.light_oX1O9t {
+.light_RouGOX {
     --custom-countdown-banner-border: 2px solid var(--opacity-black-8);
     --custom-countdown-banner-background: hsla(0, 0%, 100%, .5);
     --custom-countdown-banner-backdrop-filter: blur(2px);
@@ -138,8 +138,8 @@
     --control-overlay-primary-text-active: var(--text-overlay-light)
 }
 
-.dark_oX1O9t,
-.gradientV1_oX1O9t {
+.dark_RouGOX,
+.gradientV1_RouGOX {
     --custom-countdown-banner-border: 2px solid var(--border-subtle);
     --custom-countdown-banner-background: rgba(0, 0, 0, .5);
     --custom-countdown-banner-backdrop-filter: blur(4px);
@@ -152,20 +152,20 @@
     --custom-countdown-copy-shadow: 0 1px 8px var(--opacity-black-60)
 }
 
-.gradientV1_oX1O9t {
+.gradientV1_RouGOX {
     isolation: isolate;
     overflow: clip
 }
 
-.gradientV1_oX1O9t:after,
-.gradientV1_oX1O9t:before {
+.gradientV1_RouGOX:after,
+.gradientV1_RouGOX:before {
     content: "";
     pointer-events: none;
     position: absolute;
     z-index: -1
 }
 
-.gradientV1_oX1O9t:before {
+.gradientV1_RouGOX:before {
     background: radial-gradient(closest-side, rgba(60, 80, 229, .5), rgba(60, 80, 229, 0));
     height: 270px;
     inset-inline-start: -366px;
@@ -174,7 +174,7 @@
     width: 742px
 }
 
-.gradientV1_oX1O9t:after {
+.gradientV1_RouGOX:after {
     background: radial-gradient(closest-side, rgba(128, 55, 170, .8), rgba(128, 55, 170, 0));
     height: 260px;
     inset-inline-start: 28px;
@@ -183,7 +183,7 @@
     width: 480px
 }
 
-.countdown_oX1O9t {
+.countdown_RouGOX {
     align-items: center;
     align-self: center;
     display: flex;
@@ -191,7 +191,7 @@
     gap: var(--space-6)
 }
 
-.digitGroup_oX1O9t {
+.digitGroup_RouGOX {
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     color: var(--custom-countdown-numeral-color);
@@ -199,7 +199,7 @@
     gap: 2px
 }
 
-.digitTile_oX1O9t {
+.digitTile_RouGOX {
     background-color: var(--custom-countdown-tile-background);
     border-radius: 6px;
     box-sizing: border-box;
@@ -209,21 +209,21 @@
     width: 22px
 }
 
-.colon_oX1O9t,
-.digitTile_oX1O9t {
+.colon_RouGOX,
+.digitTile_RouGOX {
     align-items: center;
     display: flex
 }
 
-.colon_oX1O9t {
+.colon_RouGOX {
     flex-direction: column;
     height: var(--size-16);
     justify-content: space-between;
     width: 6px
 }
 
-.colon_oX1O9t:after,
-.colon_oX1O9t:before {
+.colon_RouGOX:after,
+.colon_RouGOX:before {
     background-color: var(--custom-countdown-colon-color);
     border-radius: 50%;
     content: "";
@@ -231,13 +231,13 @@
     width: 6px
 }
 
-.discountText_oX1O9t {
+.discountText_RouGOX {
     overflow-wrap: anywhere;
     text-align: center;
     text-shadow: var(--custom-countdown-copy-shadow)
 }
 
-.cta_oX1O9t {
+.cta_RouGOX {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-button-overlay)
 }
@@ -426,4 +426,4 @@
     background: #a8a9aa
 }
 
-/*# sourceMappingURL=29d9bdcd9f2f58ba.css.map*/
+/*# sourceMappingURL=207a19d18d1b8f05.css.map*/

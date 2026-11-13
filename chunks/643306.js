@@ -1,6 +1,6 @@
 var l = n(582128),
     r = n(223311),
-    s = n(212137),
+    s = n(568631),
     a = n(652215);
 n.d(
     t,
@@ -14,7 +14,7 @@ n.d(
                 c = l.useCallback(() => {
                     i(u);
                 }, [u]);
-            return { collectionSale: u !== n ? o : null, handleSaleEnd: c };
+            return { collectionPromotion: u !== n ? o : null, handlePromotionEnd: c };
         },
     },
 );

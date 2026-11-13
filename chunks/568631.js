@@ -5,7 +5,7 @@ n.d(
     t,
     {},
     {
-        RJ: function (e) {
+        Ty: function (e) {
             return (0, r.Tf)(Date.now(), e);
         },
         lF: function (e) {

@@ -20,10 +20,10 @@ var l = n(477900),
     _ = n(172218),
     y = n(140735),
     b = n(598047),
-    S = n(396583),
-    A = n(212137),
-    I = n(792996),
-    k = n(270823);
+    A = n(396583),
+    I = n(568631),
+    S = n(792996),
+    k = n(821675);
 let j = r.memo((e) => {
         let { endsAt: t, onCountdownEnd: n } = e,
             s = (0, b.A)(),
@@ -34,10 +34,10 @@ let j = r.memo((e) => {
                 i(e);
             }, []),
             m = (0, _.K)(d, 0),
-            g = (0, A.RJ)(t),
-            h = (0, A.lF)(g);
+            g = (0, I.Ty)(t),
+            h = (0, I.lF)(g);
         return (
-            (0, S.A)(o, h || !(s && a) ? null : 1e3),
+            (0, A.A)(o, h || !(s && a) ? null : 1e3),
             r.useEffect(() => {
                 h && !u.current && ((u.current = !0), n());
             }, [h, n]),
@@ -46,7 +46,7 @@ let j = r.memo((e) => {
                 className: k.qW,
                 role: "timer",
                 children: [
-                    (0, A.z0)(g).map((e, t) =>
+                    (0, I.z0)(g).map((e, t) =>
                         (0, l.jsxs)(
                             r.Fragment,
                             {
@@ -76,7 +76,7 @@ let j = r.memo((e) => {
                             t,
                         ),
                     ),
-                    (0, l.jsx)(y.A, { children: I.intl.format(I.t.j6IyVe, g) }),
+                    (0, l.jsx)(y.A, { children: S.intl.format(S.t.j6IyVe, g) }),
                 ],
             })
         );
@@ -113,7 +113,7 @@ let j = r.memo((e) => {
                     variant: "body-md/semibold",
                     color: "currentColor",
                     className: k.Rc,
-                    children: I.intl.format(I.t["97Qza2"], { percent: n, collectionName: t }),
+                    children: S.intl.format(S.t["97Qza2"], { percent: n, collectionName: t }),
                 }),
                 !i &&
                     (0, l.jsx)("div", {
@@ -122,7 +122,7 @@ let j = r.memo((e) => {
                             variant: "overlay-primary",
                             fullWidth: !0,
                             onClick: o,
-                            text: I.intl.string(I.t["5GoOlx"]),
+                            text: S.intl.string(S.t["5GoOlx"]),
                         }),
                     }),
             ],
@@ -135,16 +135,16 @@ var N = n(60140),
 let M = (e) => {
     let {
             heroBlock: t,
-            collectionSale: n,
+            collectionPromotion: n,
             handleTransition: s,
             tab: v,
-            onSaleEnd: C,
+            onPromotionEnd: C,
             hideCards: _ = !1,
             hideCountdownCTA: y = !1,
         } = e,
         b = (0, i.bG)([g.default], () => g.default.getCurrentUser()),
-        S = (0, p.uM)(),
-        { analyticsLocations: A } = (0, m.Ay)(d.A.COLLECTIBLES_SHOP_HERO),
+        A = (0, p.uM)(),
+        { analyticsLocations: I } = (0, m.Ay)(d.A.COLLECTIBLES_SHOP_HERO),
         {
             bannerDisplayConfig: k,
             logoDisplayConfig: j,
@@ -161,18 +161,18 @@ let M = (e) => {
                 isInternalShopDeeplink: !0,
             }),
                 h.default.track(R.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: S?.sessionId,
+                    collectibles_shop_session_id: A?.sessionId,
                     sku_id: t.categorySkuId,
                     page_type: v,
-                    page_section: S?.pageSection,
-                    page_category: S?.pageCategory,
+                    page_section: A?.pageSection,
+                    page_category: A?.pageCategory,
                     cta_name: "shop collection sale hero button",
                 }));
-        }, [s, t.categorySkuId, S, v]);
+        }, [s, t.categorySkuId, A, v]);
     return null == b
         ? null
         : (0, l.jsx)(m.f5, {
-              value: A,
+              value: I,
               children: (0, l.jsxs)("div", {
                   className: T.os,
                   children: [
@@ -195,7 +195,7 @@ let M = (e) => {
                                                   (0, l.jsx)("div", {
                                                       className: T.v0,
                                                       children: (0, l.jsx)(o.E, {
-                                                          type: { text: I.intl.string(I.t["h/uBCR"]) },
+                                                          type: { text: S.intl.string(S.t["h/uBCR"]) },
                                                           variant: "inverted",
                                                       }),
                                                   }),

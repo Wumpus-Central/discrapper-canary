@@ -24,9 +24,9 @@ var I = t(611924),
     N = t(95362),
     _ = t(516521),
     k = t(688810),
-    S = t(354328),
-    O = t(12678),
-    R = t(706113),
+    O = t(354328),
+    R = t(12678),
+    S = t(706113),
     v = t(841702),
     T = t(983545),
     y = t(685491),
@@ -176,7 +176,7 @@ function ek(e) {
         s = r.useCallback(() => t(e), [e]);
     return [e !== l ? e : null, s];
 }
-let eS = (e) => {
+let eO = (e) => {
         let { day: l } = e;
         return (0, a.jsx)("span", {
             className: e_.U$,
@@ -190,12 +190,12 @@ let eS = (e) => {
             }),
         });
     },
-    eO = (e) => {
+    eR = (e) => {
         let { skuId: l, tilePosition: t } = e,
             s = r.useMemo(() => ({ tilePosition: t }), [t]);
         return null == l ? null : (0, a.jsx)(A.R9, { newValue: s, children: (0, a.jsx)(eg.A, { skuId: l }) });
     },
-    eR = (e) => {
+    eS = (e) => {
         let { day: l, lockedAssetUrl: t, onLockedAssetError: s, onReveal: n } = e;
         return (0, a.jsxs)(a.Fragment, {
             children: [
@@ -203,7 +203,7 @@ let eS = (e) => {
                     className: e_.vj,
                     children: [
                         null != t && (0, a.jsx)("img", { className: o()(e_.LY, e_.nu), src: t, alt: "", onError: s }),
-                        (0, a.jsx)(eS, { day: l }),
+                        (0, a.jsx)(eO, { day: l }),
                     ],
                 }),
                 (0, a.jsx)("div", {
@@ -228,7 +228,7 @@ let eS = (e) => {
             children: [
                 null != t && (0, a.jsx)("img", { className: e_.LY, src: t, alt: "", onError: n }),
                 null != s && (0, a.jsx)("img", { className: o()(e_.LY, e_.qC), src: s, alt: "", onError: r }),
-                (0, a.jsx)(eS, { day: l }),
+                (0, a.jsx)(eO, { day: l }),
             ],
         });
     },
@@ -263,10 +263,10 @@ let eS = (e) => {
             s)
         ) {
             case eb.REVEALED:
-                l = (0, a.jsx)(eO, { skuId: n, tilePosition: u });
+                l = (0, a.jsx)(eR, { skuId: n, tilePosition: u });
                 break;
             case eb.OPENABLE:
-                l = (0, a.jsx)(eR, { day: t, lockedAssetUrl: L, onLockedAssetError: I, onReveal: g });
+                l = (0, a.jsx)(eS, { day: t, lockedAssetUrl: L, onLockedAssetError: I, onReveal: g });
                 break;
             case eb.HINT:
             case eb.LOCKED:
@@ -297,18 +297,18 @@ var ey = t(517352),
     eM = t(223311),
     eV = t(196231),
     eH = t(64018),
-    ew = t(215894),
-    eK = t(785941);
+    ew = t(643306),
+    eK = t(265351);
 let eW = (e) => {
     let { heroBlock: l, handleTransition: t } = e,
-        { collectionSale: s, handleSaleEnd: n } = (0, ew.A)(l.categorySkuId);
+        { collectionPromotion: s, handlePromotionEnd: n } = (0, ew.A)(l.categorySkuId);
     return null != s
         ? (0, a.jsx)(eK.A, {
               heroBlock: l,
-              collectionSale: s,
+              collectionPromotion: s,
               handleTransition: t,
               tab: em.G2.COLLECTION_INDEX,
-              onSaleEnd: n,
+              onPromotionEnd: n,
               hideCards: !0,
               hideCountdownCTA: !0,
           })
@@ -319,8 +319,8 @@ function eY(e) {
     return e.skuId;
 }
 function e$(e) {
-    let l = (0, S.A)("shop_include_unpublished"),
-        { category: t } = (0, R.A)(e, { includeUnpublished: l, includePricing: !0 });
+    let l = (0, O.A)("shop_include_unpublished"),
+        { category: t } = (0, S.A)(e, { includeUnpublished: l, includePricing: !0 });
     return t ?? void 0;
 }
 let eQ = { aspectRatio: "1 / 1" },
@@ -555,14 +555,14 @@ function e2(e) {
                           items: i,
                           getItemKey: eY,
                           renderItem: (e, l, s) =>
-                              (0, a.jsx)(e8, { category: e, index: s, handleTransition: t, listItemProps: l }, e.skuId),
+                              (0, a.jsx)(e6, { category: e, index: s, handleTransition: t, listItemProps: l }, e.skuId),
                       },
                       l,
                   ),
               ],
           });
 }
-function e8(e) {
+function e6(e) {
     let { category: l, index: t, handleTransition: s, listItemProps: n } = e;
     return (0, a.jsx)(A.R9, {
         newValue: { categoryPosition: t, pageCategory: l.name, pageSection: "related_drops", tilePosition: t },
@@ -575,14 +575,14 @@ function e8(e) {
         }),
     });
 }
-let e4 = [
+let e8 = [
     { tab: em.G2.AVATAR_DECORATIONS, label: () => eN.intl.string(eN.t.dRZYNE) },
     { tab: em.G2.PROFILE_EFFECTS, label: () => eN.intl.string(eN.t["1cNjtx"]) },
     { tab: em.G2.NAMEPLATES, label: () => eN.intl.string(eN.t.V68Fqz) },
     { tab: em.G2.PROFILE_FRAMES, label: () => eN.intl.string(eN.t.ecTJkR) },
     { tab: em.G2.BUNDLES, label: () => eN.intl.string(eN.t.FYFpps) },
 ];
-function e6() {
+function e4() {
     let e = (0, b.W6)();
     return (0, a.jsxs)("div", {
         className: eX.nb,
@@ -590,7 +590,7 @@ function e6() {
             (0, a.jsx)(F.D, { variant: "heading-sm/semibold", children: eN.intl.string(eN.t.Yr70c4) }),
             (0, a.jsx)("div", {
                 className: eX.J2,
-                children: e4.map((l) => {
+                children: e8.map((l) => {
                     let { tab: t, label: s } = l;
                     return (0, a.jsx)(
                         M.$,
@@ -779,7 +779,7 @@ let e9 = function (e) {
                                   : (0, a.jsx)(e2, { currentCategorySkuId: E.skuId, handleTransition: m }, E.skuId),
                           ],
                       }),
-                (0, a.jsx)(e6, {}),
+                (0, a.jsx)(e4, {}),
             ],
         }),
     });
@@ -795,11 +795,11 @@ let ll = function (e) {
         s = r.useRef(null),
         { selectedTab: n, transitionToTab: i, transitionState: o } = (0, T.oI)(em.G2.COLLECTION_INDEX);
     (0, v.Wg)(!0);
-    let c = (0, S.A)("shop_include_unpublished"),
-        { category: u, state: d } = (0, R.A)(l, { includeUnpublished: c, includePricing: !0 }),
+    let c = (0, O.A)("shop_include_unpublished"),
+        { category: u, state: d } = (0, S.A)(l, { includeUnpublished: c, includePricing: !0 }),
         E = u ?? void 0,
-        { analyticsLocations: h } = (0, O.lC)(em.G2.COLLECTION_INDEX);
-    return ((0, O.uS)(t, n, E?.name, o, { enabled: null != E }),
+        { analyticsLocations: h } = (0, R.lC)(em.G2.COLLECTION_INDEX);
+    return ((0, R.uS)(t, n, E?.name, o, { enabled: null != E }),
     r.useEffect(() => {
         s.current?.scrollTo({ to: 0 });
     }, [l]),

@@ -24,9 +24,9 @@ var C = n(304210),
     _ = n(208930),
     y = n(100057),
     b = n(599062),
-    S = n(998694),
-    A = n(415926),
-    I = n(120692),
+    A = n(998694),
+    I = n(415926),
+    S = n(120692),
     k = n(607399),
     j = n(946015),
     L = n(717421),
@@ -91,7 +91,7 @@ let P = a.memo(function (e) {
             opacity: +!!n,
             config: { tension: 120, friction: 12 },
         });
-    return (0, s.jsxs)(I.animated.div, {
+    return (0, s.jsxs)(S.animated.div, {
         className: o()([B.lP, k.Fr && B.yJ]),
         role: "status",
         style: {
@@ -310,11 +310,11 @@ let e_ = function (e) {
                 };
             })({ sortedSkuIds: l }),
             b = p === X.RANDOM,
-            [S, A] = a.useState(0),
-            I = `${p}:${!0 === c}:${S}`,
-            [k, j] = a.useState({ key: I, extra: 0 }),
-            L = k.key === I ? k.extra : 0;
-        k.key !== I && j({ key: I, extra: 0 });
+            [A, I] = a.useState(0),
+            S = `${p}:${!0 === c}:${A}`,
+            [k, j] = a.useState({ key: S, extra: 0 }),
+            L = k.key === S ? k.extra : 0;
+        k.key !== S && j({ key: S, extra: 0 });
         let {
                 skuIds: R,
                 isLoading: M,
@@ -372,7 +372,7 @@ let e_ = function (e) {
                     return { skuIds: null, isLoading: !1, hasMore: !1 };
                 let m = null != c && c.sortIdentityKey === o ? c : null;
                 return { skuIds: m?.skuIds ?? null, isLoading: c?.key !== u, hasMore: m?.hasMore ?? !1 };
-            })({ sortType: p, orbsSupportedOnly: c, numVisibleItems: r + L, shuffleNonce: S }),
+            })({ sortType: p, orbsSupportedOnly: c, numVisibleItems: r + L, shuffleNonce: A }),
             B = R ?? (M ? ey : v),
             P = a.useMemo(() => B.slice(0, r + L + (b ? 32 : 8)), [B, r, L, b]),
             w = (0, en.hv)(P, { needsCategory: !1 }),
@@ -409,7 +409,7 @@ let e_ = function (e) {
             eo = r - V.length;
         if (K && eo > 0 && W) {
             let e = Math.min(16, L + eo + 8);
-            e !== L && j({ key: I, extra: e });
+            e !== L && j({ key: S, extra: e });
         }
         let eu = (0, Y.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
             ep = (0, Y.bG)([Q.A], () => Q.A.isFocused()),
@@ -491,14 +491,14 @@ let e_ = function (e) {
         }, [K, ev]);
         let eC = (0, x.uM)(),
             eb = eC?.sessionId ?? "",
-            { analyticsLocations: eS } = (0, U.Ay)(H.A.COLLECTIBLES_SHOP_POPULAR_PICKS),
-            eA = a.useRef(null),
+            { analyticsLocations: eA } = (0, U.Ay)(H.A.COLLECTIBLES_SHOP_POPULAR_PICKS),
             eI = a.useRef(null),
+            eS = a.useRef(null),
             [ek, ej] = a.useState(!1),
             eL = a.useCallback(
                 (e) => {
                     (ej(!1),
-                        eE({ isShuffling: !1, onOutroComplete: () => E(e), returnRef: eI }),
+                        eE({ isShuffling: !1, onOutroComplete: () => E(e), returnRef: eS }),
                         f.default.track(eg.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                             page_session_id: eb,
                             sort_type: e,
@@ -509,7 +509,7 @@ let e_ = function (e) {
         return null == d
             ? null
             : (0, s.jsx)(U.f5, {
-                  value: eS,
+                  value: eA,
                   children: (0, s.jsxs)("div", {
                       className: o()(F.lD, F.YB),
                       children: [
@@ -529,7 +529,7 @@ let e_ = function (e) {
                                                   }),
                                                   (0, s.jsx)("div", {
                                                       className: o()(u, F.pI),
-                                                      ref: eI,
+                                                      ref: eS,
                                                       children: (0, s.jsx)(q.l, {
                                                           label: T.intl.string(T.t.uaX705),
                                                           hideLabel: !0,
@@ -551,15 +551,15 @@ let e_ = function (e) {
                                               children: (0, s.jsx)(g.$, {
                                                   variant: "secondary",
                                                   text: T.intl.string(T.t.X3tnc4),
-                                                  buttonRef: eA,
+                                                  buttonRef: eI,
                                                   onClick: function () {
                                                       (ej(!0),
                                                           eE({
                                                               isShuffling: !0,
                                                               onOutroComplete: () => {
-                                                                  (_(), A((e) => e + 1));
+                                                                  (_(), I((e) => e + 1));
                                                               },
-                                                              returnRef: eA,
+                                                              returnRef: eI,
                                                               holdIntroUntilReady: !0,
                                                           }),
                                                           f.default.track(
@@ -632,9 +632,9 @@ let e_ = function (e) {
                   }),
               });
     };
-var eS = n(831259),
-    eA = n(43990),
-    eI = n(890856),
+var eA = n(831259),
+    eI = n(43990),
+    eS = n(890856),
     ek = n(408278),
     ej = n(789645),
     eL = n(976860),
@@ -711,17 +711,17 @@ function eB(e) {
     ),
     d)
         ? null
-        : (0, s.jsx)(eA.N, {
+        : (0, s.jsx)(eI.N, {
               theme: eR.NJ.DARK,
               children: (e) =>
-                  (0, s.jsx)(eS.L, {
+                  (0, s.jsx)(eA.L, {
                       innerRef: r,
                       onChange: _,
                       threshold: 0,
                       children: (0, s.jsx)("div", {
                           ref: r,
                           className: o()(eM.YB, e),
-                          children: (0, s.jsxs)(eI.s, {
+                          children: (0, s.jsxs)(eS.s, {
                               className: eM.kL,
                               onClick: v,
                               "aria-label": T.intl.string(eT.default["34GMP9"]),
@@ -936,12 +936,12 @@ var eJ = n(918467),
     eQ = n(604913),
     e0 = n(223311),
     e1 = n(65238),
-    e2 = n(215894),
+    e2 = n(643306),
     e5 = n(39196),
     e8 = n(808598),
-    e6 = n(785941),
-    e9 = n(331322),
-    e3 = n(773669),
+    e6 = n(265351),
+    e3 = n(331322),
+    e9 = n(773669),
     e4 = n(480750),
     e7 = n(93955),
     te = n(442036),
@@ -968,7 +968,7 @@ function tr(e) {
                               }),
                           null != n.summary &&
                               "" !== n.summary &&
-                              (0, s.jsx)(e9.B, {
+                              (0, s.jsx)(e3.B, {
                                   onClick: (e) => (0, e4.h)(e, t, tn.S.HOME),
                                   children: (0, s.jsx)(N.E, {
                                       variant: "body-sm/normal",
@@ -986,7 +986,7 @@ function tr(e) {
 let ts = function (e) {
         let { promotion: t, heroBlock: n, isLoading: l, handleTransition: r, tab: i } = e,
             u = (0, Y.bG)([J.default], () => J.default.getCurrentUser()),
-            c = (0, Y.bG)([e3.default], () => e3.default.locale),
+            c = (0, Y.bG)([e9.default], () => e9.default.locale),
             d = (0, x.uM)(),
             { analyticsLocations: m } = (0, U.Ay)(H.A.COLLECTIBLES_SHOP_HERO),
             g = a.useMemo(() => (0, e5.HF)(t, n), [t, n]),
@@ -1000,7 +1000,7 @@ let ts = function (e) {
             } = (0, eU.Kk)(h),
             y = p?.responsive ?? !1,
             b = p?.backgroundStyle;
-        function S() {
+        function A() {
             (r?.({
                 sourceButton: "shop latest category hero",
                 categorySkuId: h.categorySkuId,
@@ -1041,7 +1041,7 @@ let ts = function (e) {
                                   (0, s.jsxs)("div", {
                                       className: tl.mz,
                                       children: [
-                                          (0, s.jsx)(eA.N, {
+                                          (0, s.jsx)(eI.N, {
                                               theme: eg.NJ8.DARK,
                                               children: (e) =>
                                                   (0, s.jsxs)("div", {
@@ -1059,7 +1059,7 @@ let ts = function (e) {
                                                               }),
                                                           }),
                                                           (0, s.jsx)(te.A, {
-                                                              onShopCollectionClick: S,
+                                                              onShopCollectionClick: A,
                                                               className: tl.ti,
                                                           }),
                                                       ],
@@ -1086,10 +1086,10 @@ let ts = function (e) {
                 let e = eJ.A.getFetchState(eg.FYj);
                 return null == e || "loading" === e;
             }),
-            { collectionSale: i, handleSaleEnd: o } = (0, e2.A)(l === eN.G2.HOME ? t.categorySkuId : void 0),
+            { collectionPromotion: i, handlePromotionEnd: o } = (0, e2.A)(l === eN.G2.HOME ? t.categorySkuId : void 0),
             u = (function (e, t, n) {
                 return null != t
-                    ? { type: "COLLECTION_SALE", collectionSale: t }
+                    ? { type: "COLLECTION_SALE", collectionPromotion: t }
                     : null != e &&
                         null != (0, e1.XF)(e) &&
                         null != e.rewardStatus &&
@@ -1102,10 +1102,10 @@ let ts = function (e) {
             case "COLLECTION_SALE":
                 return (0, s.jsx)(e6.A, {
                     heroBlock: t,
-                    collectionSale: u.collectionSale,
+                    collectionPromotion: u.collectionPromotion,
                     handleTransition: n,
                     tab: l,
-                    onSaleEnd: o,
+                    onPromotionEnd: o,
                 });
             case "COLLECT_AND_CLAIM_TAKEOVER":
                 return (0, s.jsx)(ts, {
@@ -1180,17 +1180,17 @@ function tb(e, t, n) {
         transitionDuration: e.transitionDuration,
     };
 }
-function tS(e, t) {
+function tA(e, t) {
     let n = (0, tp.Mk)()?.tab,
         { handleCardVisibilityChange: l } = (0, tx.Z)(e, n, "jumble product");
     a.useEffect(() => {
         l(t);
     }, [t, l]);
 }
-function tA(e) {
+function tI(e) {
     let { config: t, baseLeft: n, peaking: l, transitioning: r, product: a, item: i } = e;
     return (
-        tS(a.skuId, l),
+        tA(a.skuId, l),
         (0, s.jsx)("div", {
             className: tC.LY,
             style: tb(t, n, r),
@@ -1198,12 +1198,12 @@ function tA(e) {
         })
     );
 }
-function tI(e) {
+function tS(e) {
     let { config: t, baseLeft: n, peaking: l, transitioning: r, product: i, item: o } = e,
         u = (0, Y.bG)([J.default], () => J.default.getCurrentUser()),
         c = a.useRef(null),
         { isHoveringOrFocusing: d } = (0, th.A)(c);
-    tS(i.skuId, l);
+    tA(i.skuId, l);
     let m = (0, tp.Mk)()?.tab,
         g = (0, x.uM)(),
         h = a.useCallback(() => {
@@ -1278,7 +1278,7 @@ function tk(e) {
                         x.R9,
                         {
                             newValue: { pageSection: "transition_jumble", tilePosition: l },
-                            children: u ? (0, s.jsx)(tI, { ...g }) : (0, s.jsx)(tA, { ...g }),
+                            children: u ? (0, s.jsx)(tS, { ...g }) : (0, s.jsx)(tI, { ...g }),
                         },
                         m,
                     );
@@ -1329,9 +1329,9 @@ let tR = function (e) {
             _ = (0, x.uM)(),
             { bannerURL: y } = (0, eU.w$)(t),
             b = n === eN.G2.ORBS,
-            S = null != t.ctaRoute && "" !== t.ctaRoute,
-            A = !0 !== t.disableCta && ((null != t.ctaText && "" !== t.ctaText) || S),
-            I = null != t.logoURL && "" !== t.logoURL,
+            A = null != t.ctaRoute && "" !== t.ctaRoute,
+            I = !0 !== t.disableCta && ((null != t.ctaText && "" !== t.ctaText) || A),
+            S = null != t.logoURL && "" !== t.logoURL,
             k = a.useCallback(() => {
                 if ((E(!0), t.isDismissible)) {
                     let e = t.dismissibleContentVersion ?? 0;
@@ -1371,7 +1371,7 @@ let tR = function (e) {
                 [t.ctaRoute, j],
             );
         if (null == y || p) return null;
-        let O = o()(F.nM, F.Tq, F.TS, F.YB, { [F._1]: b, [F.vb]: S }),
+        let O = o()(F.nM, F.Tq, F.TS, F.YB, { [F._1]: b, [F.vb]: A }),
             R = (0, s.jsxs)(s.Fragment, {
                 children: [
                     t.isDismissible &&
@@ -1396,7 +1396,7 @@ let tR = function (e) {
                         }),
                     }),
                     (0, s.jsx)("div", {
-                        className: o()(F.Ep, { [F.Qq]: A }),
+                        className: o()(F.Ep, { [F.Qq]: I }),
                         style: { maxHeight: null != u ? `${u}px` : "auto" },
                         children: (0, s.jsxs)("div", {
                             className: F.E8,
@@ -1417,7 +1417,7 @@ let tR = function (e) {
                                           })
                                         : t.body,
                                 }),
-                                A &&
+                                I &&
                                     (0, s.jsxs)("div", {
                                         className: F.nP,
                                         children: [
@@ -1434,7 +1434,7 @@ let tR = function (e) {
                                                           })
                                                         : void 0,
                                             }),
-                                            I && (0, s.jsx)("img", { src: t.logoURL, alt: "", className: F.bU }),
+                                            S && (0, s.jsx)("img", { src: t.logoURL, alt: "", className: F.bU }),
                                         ],
                                     }),
                             ],
@@ -1442,14 +1442,14 @@ let tR = function (e) {
                     }),
                 ],
             });
-        return (0, s.jsx)(eA.N, {
+        return (0, s.jsx)(eI.N, {
             theme: b ? void 0 : eR.NJ.DARK,
             children: (e) =>
-                (0, s.jsx)(eS.L, {
+                (0, s.jsx)(eA.L, {
                     innerRef: r,
                     onChange: C,
                     threshold: 0,
-                    children: S
+                    children: A
                         ? (0, s.jsx)(ef.D, { innerRef: r, onClick: () => L(null), className: o()(e, O), children: R })
                         : (0, s.jsx)("div", { ref: r, className: o()(e, O), children: R }),
                 }),
@@ -1457,12 +1457,12 @@ let tR = function (e) {
     },
     tT = (e) => {
         let { handleTransition: t, numVisibleItems: n, tab: l } = e,
-            { noCache: r, includeUnpublished: i } = (0, S.A)(),
+            { noCache: r, includeUnpublished: i } = (0, A.A)(),
             [d, m] = a.useState(!1),
             g = (0, x.uM)(),
             f = g?.sessionId ?? "",
             E = (0, p.H)({ location: "collectibles_shop_feed" }),
-            { isFetchingPromotion: A } = (0, C.TI)();
+            { isFetchingPromotion: I } = (0, C.TI)();
         a.useEffect(() => {
             (0, y.z)({
                 sessionId: f,
@@ -1473,7 +1473,7 @@ let tR = function (e) {
             });
         }, [l]);
         let {
-                isFetchingShopHome: I,
+                isFetchingShopHome: S,
                 fetchShopHomeError: k,
                 shopBlocks: j,
                 refreshShopHome: L,
@@ -1483,7 +1483,7 @@ let tR = function (e) {
             }, [L]);
         return (a.useEffect(() => {
             null != k ||
-                I ||
+                S ||
                 0 === j.length ||
                 (0, y.z)({
                     sessionId: f,
@@ -1492,17 +1492,17 @@ let tR = function (e) {
                     unpublishedCategoriesShown: i,
                     cacheDisabled: r,
                 });
-        }, [k, I, j.length, i, r, f, l]),
+        }, [k, S, j.length, i, r, f, l]),
         null != k)
             ? (0, s.jsx)(b.h, { onRetry: N, errorOrigin: b.A.SHOP_PAGE, errorMessage: k.message })
-            : I || 0 === j.length
+            : S || 0 === j.length
               ? (0, s.jsxs)("div", {
                     className: o()(F.g4, F.Of),
                     children: [
-                        (0, s.jsx)(eP.A, { isLoading: I || A, handleTransition: t, tab: l }),
-                        (0, s.jsx)(W, { isLoading: I, handleTransition: t, categories: [] }),
+                        (0, s.jsx)(eP.A, { isLoading: S || I, handleTransition: t, tab: l }),
+                        (0, s.jsx)(W, { isLoading: S, handleTransition: t, categories: [] }),
                         (0, s.jsx)(eb, {
-                            isLoading: I,
+                            isLoading: S,
                             title: l === eN.G2.ORBS ? T.intl.string(T.t.dFgeuZ) : T.intl.string(T.t.NSv5KV),
                             numVisibleItems: n,
                             tab: l,
@@ -1623,7 +1623,7 @@ let tR = function (e) {
     tM = function (e) {
         let { handleTransition: t, tab: n, transitionState: l } = e,
             r = a.useRef(null),
-            { handleScroll: i } = (0, A.r)(r, n),
+            { handleScroll: i } = (0, I.r)(r, n),
             [o, u] = a.useState(!1),
             c = (0, x.uM)(),
             [h, p] = a.useState(12);
