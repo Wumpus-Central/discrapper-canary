@@ -41,19 +41,20 @@ function N(e) {
             marks: M,
             snapToMarks: U = !1,
             defaultMark: w,
-            "aria-label": G,
-            passThroughVerticalArrowKeys: x = !1,
-            inputRef: k,
-            tabIndex: F,
+            hideTooltip: G = !1,
+            "aria-label": x,
+            passThroughVerticalArrowKeys: k = !1,
+            inputRef: F,
+            tabIndex: B,
         } = e,
-        B = r.useRef(null),
         V = r.useRef(null),
         H = r.useRef(null),
         j = r.useRef(null),
-        W = k ?? j,
-        [Y, K] = r.useState(!1),
-        { keyboardModeEnabled: $ } = r.useContext(h.C),
-        X = r.useMemo(
+        W = r.useRef(null),
+        Y = F ?? W,
+        [K, $] = r.useState(!1),
+        { keyboardModeEnabled: X } = r.useContext(h.C),
+        z = r.useMemo(
             () =>
                 (M ?? [])
                     .map((e) =>
@@ -64,37 +65,37 @@ function N(e) {
                     .sort((e, t) => e.value - t.value),
             [M],
         ),
-        z = r.useMemo(() => X.map((e) => e.value), [X]),
-        q = U && z.length > 1;
-    function Q(e) {
-        return null != e && q ? S(z, e) : e;
-    }
+        q = r.useMemo(() => z.map((e) => e.value), [z]),
+        Q = U && q.length > 1;
     function J(e) {
+        return null != e && Q ? S(q, e) : e;
+    }
+    function Z(e) {
         return Math.min(Math.max(((e - L) / (y - L)) * 100, 0), 100);
     }
-    let Z = (0, l.J)();
-    function ee(e) {
-        return null != P ? P(e) : Z.format(e);
+    let ee = (0, l.J)();
+    function et(e) {
+        return null != P ? P(e) : ee.format(e);
     }
-    let et = (0, A.S)({
-            value: Q(O),
-            defaultValue: Q(R),
-            minValue: q ? 0 : L,
-            maxValue: q ? z.length - 1 : y,
-            step: q ? 1 : D,
+    let en = (0, A.S)({
+            value: J(O),
+            defaultValue: J(R),
+            minValue: Q ? 0 : L,
+            maxValue: Q ? q.length - 1 : y,
+            step: Q ? 1 : D,
             isDisabled: a,
-            numberFormatter: Z,
-            onChange: (e) => b?.(q ? z[e] : e),
-            onChangeEnd: (e) => v?.(q ? z[e] : e),
+            numberFormatter: ee,
+            onChange: (e) => b?.(Q ? q[e] : e),
+            onChangeEnd: (e) => v?.(Q ? q[e] : e),
         }),
-        { groupProps: en, trackProps: ei } = (0, o.P)({ "aria-label": G, "aria-labelledby": p, isDisabled: a }, et, V),
+        { groupProps: ei, trackProps: er } = (0, o.P)({ "aria-label": x, "aria-labelledby": p, isDisabled: a }, en, H),
         {
-            thumbProps: er,
-            inputProps: ea,
-            isDragging: es,
-            isFocused: el,
-        } = (0, d.x)({ index: 0, trackRef: V, inputRef: W, isDisabled: a, "aria-label": G }, et),
-        eo = (function (e) {
+            thumbProps: ea,
+            inputProps: es,
+            isDragging: el,
+            isFocused: eo,
+        } = (0, d.x)({ index: 0, trackRef: H, inputRef: Y, isDisabled: a, "aria-label": x }, en),
+        ed = (function (e) {
             let { state: t, trackRef: n, inputRef: i, sortedMarks: r, minValue: a, maxValue: s, disabled: l } = e,
                 { direction: o } = (0, _.Y)();
             function d(e) {
@@ -126,45 +127,45 @@ function N(e) {
                     t.isThumbDragging(0) && t.setThumbDragging(0, !1);
                 },
             };
-        })({ state: et, trackRef: V, inputRef: W, sortedMarks: z, minValue: L, maxValue: y, disabled: a }),
-        ed = ((t = et.getThumbValue(0)), q ? z[t] : t),
-        ec = ee(ed),
-        eu = `${J(ed)}%`,
-        e_ = el && $,
-        eE = !a && (e_ || es || Y);
-    function eA(e) {
+        })({ state: en, trackRef: H, inputRef: Y, sortedMarks: q, minValue: L, maxValue: y, disabled: a }),
+        ec = ((t = en.getThumbValue(0)), Q ? q[t] : t),
+        eu = et(ec),
+        e_ = `${Z(ec)}%`,
+        eE = eo && X,
+        eA = !a && (eE || el || K);
+    function ef(e) {
         return (t) => {
-            x && g.has(t.key) ? t.preventDefault() : e?.(t);
+            k && g.has(t.key) ? t.preventDefault() : e?.(t);
         };
     }
-    let ef = (0, c.v)(en, q ? eo : ei),
-        eh = (0, f.z)({
-            "--grabber-size": eE ? "20px" : "16px",
-            "--bar-size": eE ? "6px" : "4px",
+    let eh = (0, c.v)(ei, Q ? ed : er),
+        eI = (0, f.z)({
+            "--grabber-size": eA ? "20px" : "16px",
+            "--bar-size": eA ? "6px" : "4px",
             config: { ...E.config.stiff, duration: 100 },
         });
     return (0, i.jsx)(I.vN, {
-        focusTarget: W,
-        ringTarget: H,
+        focusTarget: Y,
+        ringTarget: j,
         children: (0, i.jsxs)(E.animated.div, {
-            ...ef,
-            onKeyDown: eA(ef.onKeyDown),
-            ref: B,
-            className: s()(T.aw, { [T.ZF]: z.length > 0, [T.r9]: a }),
-            style: { ...eh, touchAction: "none" },
-            onMouseEnter: () => K(!0),
-            onMouseLeave: () => K(!1),
+            ...eh,
+            onKeyDown: ef(eh.onKeyDown),
+            ref: V,
+            className: s()(T.aw, { [T.ZF]: q.length > 0, [T.r9]: a }),
+            style: { ...eI, touchAction: "none" },
+            onMouseEnter: () => $(!0),
+            onMouseLeave: () => $(!1),
             children: [
                 (0, i.jsx)("div", {
                     className: T.u4,
-                    children: X.map((e) => {
-                        let t = e.usesFormatValue ? ee(e.value) : e.label;
+                    children: z.map((e) => {
+                        let t = e.usesFormatValue ? et(e.value) : e.label;
                         return (0, i.jsxs)(
                             "div",
                             {
                                 "aria-hidden": !0,
                                 className: s()(T.Gy, T.zt, { [T.Jh]: e.value === w }),
-                                style: { insetInlineStart: `${J(e.value)}%` },
+                                style: { insetInlineStart: `${Z(e.value)}%` },
                                 children: [
                                     (0, i.jsx)("div", { className: T.nj, children: t }),
                                     null != t ? (0, i.jsx)("div", { className: T.gf }) : null,
@@ -176,37 +177,37 @@ function N(e) {
                 }),
                 (0, i.jsx)("div", {
                     className: T.M0,
-                    children: (0, i.jsx)("div", { className: T.pP, style: { width: eu } }),
+                    children: (0, i.jsx)("div", { className: T.pP, style: { width: e_ } }),
                 }),
                 (0, i.jsx)("div", {
                     className: T.u4,
-                    ref: V,
+                    ref: H,
                     children: (0, i.jsx)(m.m, {
-                        text: q ? null : ec,
-                        forceOpen: es || e_,
-                        positionKey: eu,
+                        text: Q || G ? null : eu,
+                        forceOpen: el || eE,
+                        positionKey: e_,
                         ariaHidden: !0,
                         children: (0, i.jsx)("div", {
-                            ...er,
-                            ...(q ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
-                            onKeyDown: eA(er.onKeyDown),
-                            ref: H,
+                            ...ea,
+                            ...(Q ? { onPointerDown: void 0, onMouseDown: void 0, onTouchStart: void 0 } : null),
+                            onKeyDown: ef(ea.onKeyDown),
+                            ref: j,
                             className: T.Ub,
-                            style: { insetInlineStart: eu, touchAction: "none" },
+                            style: { insetInlineStart: e_, touchAction: "none" },
                             children: (0, i.jsx)(u.s, {
                                 children: (0, i.jsx)("input", {
-                                    ref: W,
-                                    ...ea,
-                                    tabIndex: F ?? ea.tabIndex,
+                                    ref: Y,
+                                    ...es,
+                                    tabIndex: B ?? es.tabIndex,
                                     id: n,
                                     "aria-labelledby": p,
                                     "aria-describedby": N,
                                     "aria-errormessage": C,
                                     "aria-invalid": null != C,
-                                    "aria-valuetext": ec,
-                                    "aria-valuemin": q ? z[0] : L,
-                                    "aria-valuemax": q ? z[z.length - 1] : y,
-                                    "aria-valuenow": ed,
+                                    "aria-valuetext": eu,
+                                    "aria-valuemin": Q ? q[0] : L,
+                                    "aria-valuemax": Q ? q[q.length - 1] : y,
+                                    "aria-valuenow": ec,
                                 }),
                             }),
                         }),

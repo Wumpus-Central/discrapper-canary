@@ -49,8 +49,8 @@ var c = a(812993),
     x = a(403581),
     v = a(331322),
     h = a(534514);
-let g = Object.keys(c.EG),
-    f = [
+let f = Object.keys(c.EG),
+    g = [
         { label: "Round", value: "ROUND" },
         { label: "Round Left", value: "ROUND_LEFT" },
         { label: "Round Right", value: "ROUND_RIGHT" },
@@ -67,7 +67,7 @@ function j(e) {
     return null != e && "" !== e ? e : void 0;
 }
 let C = {
-        shape: { label: "Shape", type: "select", defaultValue: "ROUND", options: f },
+        shape: { label: "Shape", type: "select", defaultValue: "ROUND", options: g },
         color: { label: "Background color", type: "color", defaultValue: void 0 },
         disableColor: { label: "Disable background color", type: "boolean", defaultValue: !1 },
     },
@@ -292,8 +292,8 @@ var $ = a(22231),
     F = a(366605),
     q = a(624479),
     _ = a(625903),
-    U = a(509434),
-    H = a(241326),
+    H = a(509434),
+    U = a(241326),
     W = a(265872),
     X = a(165862),
     Z = a(477782),
@@ -322,8 +322,8 @@ let Y = {
                         showTrailingIndicator: x,
                         dangerItemColor: v,
                     } = e,
-                    [h, g] = o.useState(!0),
-                    [f, V] = o.useState(!1),
+                    [h, f] = o.useState(!0),
+                    [g, V] = o.useState(!1),
                     [j, C] = o.useState("text"),
                     [S, k] = o.useState("cozy"),
                     [w, I] = o.useState(!0),
@@ -388,7 +388,7 @@ let Y = {
                                                         label: "Brand Item",
                                                         color: "brand",
                                                         trailingIndicator: x
-                                                            ? { type: "icon", icon: U.LinkExternalSmallIcon }
+                                                            ? { type: "icon", icon: H.LinkExternalSmallIcon }
                                                             : void 0,
                                                         action: () => {},
                                                     }),
@@ -450,13 +450,13 @@ let Y = {
                                                         id: "notifications",
                                                         label: "Enable Notifications Enable Notifications Enable Notifications",
                                                         checked: h,
-                                                        action: () => g(!h),
+                                                        action: () => f(!h),
                                                     }),
                                                     (0, t.jsx)(Z.sL, {
                                                         id: "mute",
                                                         label: "Mute Channel",
-                                                        checked: f,
-                                                        action: () => V(!f),
+                                                        checked: g,
+                                                        action: () => V(!g),
                                                     }),
                                                 ],
                                             }),
@@ -468,7 +468,7 @@ let Y = {
                                                         id: "switch-notifications",
                                                         label: "Push Notifications",
                                                         checked: h,
-                                                        action: () => g(!h),
+                                                        action: () => f(!h),
                                                     }),
                                                 ],
                                             }),
@@ -548,7 +548,7 @@ let Y = {
                                             id: "delete",
                                             label: "Delete Message",
                                             color: v,
-                                            icon: u ? H.TrashIcon : void 0,
+                                            icon: u ? U.TrashIcon : void 0,
                                             action: () => {},
                                         }),
                                     ],
@@ -988,8 +988,8 @@ let ex = [
             filter: { type: "boolean", label: "Filter", defaultValue: !0 },
         },
     };
-var eg = a(95477),
-    ef = a(582306),
+var ef = a(95477),
+    eg = a(582306),
     eV = a(201895);
 let ej = [
         { value: "red", label: "Red" },
@@ -1021,9 +1021,9 @@ let ej = [
                         component: function () {
                             return (0, t.jsx)(v.B, {
                                 gap: 16,
-                                children: g.map((e) => {
+                                children: f.map((e) => {
                                     let l = c.EG[e],
-                                        a = f.find((l) => l.value === e)?.label ?? e;
+                                        a = g.find((l) => l.value === e)?.label ?? e;
                                     return (0, t.jsxs)(
                                         v.B,
                                         {
@@ -1130,7 +1130,7 @@ let ej = [
                                         placeholder: a,
                                         isDisabled: l,
                                     }),
-                                    (0, t.jsx)(eg.k, { placeholder: a, disabled: l }),
+                                    (0, t.jsx)(ef.k, { placeholder: a, disabled: l }),
                                     (0, t.jsx)(em.p, {
                                         value: n,
                                         onChange: i,
@@ -1138,7 +1138,7 @@ let ej = [
                                         placeholder: a,
                                         isDisabled: l,
                                     }),
-                                    (0, t.jsx)(ef.J, { onSelect: r, value: s, disabled: l }),
+                                    (0, t.jsx)(eg.J, { onSelect: r, value: s, disabled: l }),
                                     (0, t.jsx)(eV.c, { onChange: u, value: d, disabled: l }),
                                 ],
                             });
@@ -1320,7 +1320,7 @@ function e_(e) {
         variant: "togglebutton",
     });
 }
-let eU = {
+let eH = {
     title: "Buttons",
     stories: [
         {
@@ -1513,7 +1513,7 @@ let eU = {
         },
     ],
 };
-var eH = a(148149),
+var eU = a(148149),
     eW = a(771871),
     eX = a(143129);
 function eZ() {
@@ -1521,8 +1521,8 @@ function eZ() {
         gap: 16,
         padding: { top: 16 },
         children: [
-            (0, t.jsx)(eg.k, { label: "Display Name", placeholder: "Jane Doe" }),
-            (0, t.jsx)(eg.k, { label: "Email", type: "email", placeholder: "jane@example.com" }),
+            (0, t.jsx)(ef.k, { label: "Display Name", placeholder: "Jane Doe" }),
+            (0, t.jsx)(ef.k, { label: "Email", type: "email", placeholder: "jane@example.com" }),
             (0, t.jsx)(v.B, {
                 direction: "horizontal",
                 children: (0, t.jsx)(E.$, { text: "Save Changes", variant: "secondary", size: "sm" }),
@@ -1584,7 +1584,7 @@ let eQ = [
                     let { variant: l, showCounts: a, disabled: n, keyboardActivation: i, panelAnimation: s } = e,
                         [r, d] = o.useState("account"),
                         u = a ? eQ : eQ.map((e) => ({ ...e, count: void 0 }));
-                    return (0, t.jsx)(eH.t, {
+                    return (0, t.jsx)(eU.t, {
                         "aria-label": "User settings",
                         items: u,
                         selectedId: r,
@@ -2048,8 +2048,8 @@ var li = a(912295),
     lx = a(862301),
     lv = a(116711),
     lh = a(221174),
-    lg = a(376887),
-    lf = a(668953),
+    lf = a(376887),
+    lg = a(668953),
     lV = a(881636),
     lj = a(859962);
 function lC(e) {
@@ -2093,7 +2093,7 @@ function lC(e) {
                                 (0, t.jsx)(eB.K, {
                                     variant: "icon-only",
                                     size: "sm",
-                                    icon: lf.ChevronLargeLeftIcon,
+                                    icon: lg.ChevronLargeLeftIcon,
                                     "aria-label": b.CALENDAR_PREVIOUS_MONTH_LABEL,
                                     onClick: () => e.state.focusPreviousPage(),
                                     slot: "previous",
@@ -2130,7 +2130,7 @@ function lC(e) {
                         (0, t.jsx)("div", {
                             className: lj.US,
                             children: Array.from({ length: d }, (e, l) =>
-                                (0, t.jsx)(lg.N, { offset: { months: l }, isRangeSelection: !0 }, l),
+                                (0, t.jsx)(lf.N, { offset: { months: l }, isRangeSelection: !0 }, l),
                             ),
                         }),
                     ],
@@ -2158,8 +2158,8 @@ function lk(e) {
         v = { hasError: null != y && "" !== y },
         {
             refs: h,
-            floatingStyles: g,
-            isOpen: f,
+            floatingStyles: f,
+            isOpen: g,
             setIsOpen: V,
             context: j,
             getFloatingProps: C,
@@ -2225,18 +2225,18 @@ function lk(e) {
                                 }),
                                 (0, t.jsx)(lu.$, {
                                     className: lS.B7,
-                                    onClick: () => V(!f),
+                                    onClick: () => V(!g),
                                     "aria-label": b.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                     children: (0, t.jsx)(ly.CalendarIcon, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        f &&
+                        g &&
                             k &&
                             (0, t.jsx)("div", {
                                 ...C(),
                                 ref: h.setFloating,
-                                style: g,
+                                style: f,
                                 className: lS.oO,
                                 children: (0, t.jsx)(li.n1, {
                                     contain: !0,
@@ -2463,7 +2463,7 @@ function lR(e) {
             (0, t.jsx)(lN, {
                 title: "TextInput",
                 auxiliaryContentPosition: l,
-                children: (0, t.jsx)(eg.k, {
+                children: (0, t.jsx)(ef.k, {
                     label: "Username",
                     hideLabel: !0,
                     value: "disabled-user",
@@ -2486,9 +2486,9 @@ let lB = {
                     children: (0, t.jsxs)(lI.n, {
                         label: "" === l ? void 0 : l,
                         children: [
-                            (0, t.jsx)(eg.k, { label: "First Name" }),
-                            (0, t.jsx)(eg.k, { label: "Last Name" }),
-                            (0, t.jsx)(eg.k, { label: "Address" }),
+                            (0, t.jsx)(ef.k, { label: "First Name" }),
+                            (0, t.jsx)(ef.k, { label: "Last Name" }),
+                            (0, t.jsx)(ef.k, { label: "Address" }),
                         ],
                     }),
                 });
@@ -2590,10 +2590,10 @@ function lq(e) {
 function l_(e) {
     return lF(e) && "connected" === e.type;
 }
-function lU(e) {
+function lH(e) {
     return "" !== e.primaryAction;
 }
-function lH(e) {
+function lU(e) {
     let { config: l } = e,
         a = null != (0, lG.XP)(),
         o = (0, lG.dR)();
@@ -2724,9 +2724,9 @@ let lY = [
             type: "text",
             defaultValue: "Learn more",
         },
-        primaryActionIcon: { label: "Primary button icon", type: "boolean", defaultValue: !1, isVisible: lU },
-        secondaryAction: { label: "Secondary button", type: "text", defaultValue: "", isVisible: lU },
-        actionLoading: { label: "Primary button loading", type: "boolean", defaultValue: !1, isVisible: lU },
+        primaryActionIcon: { label: "Primary button icon", type: "boolean", defaultValue: !1, isVisible: lH },
+        secondaryAction: { label: "Secondary button", type: "text", defaultValue: "", isVisible: lH },
+        actionLoading: { label: "Primary button loading", type: "boolean", defaultValue: !1, isVisible: lH },
     };
 var l2 = a(329921),
     l4 = a(43990),
@@ -2898,7 +2898,7 @@ let ad = [
                     return (0, t.jsxs)(v.B, {
                         gap: 16,
                         children: [
-                            (0, t.jsx)(eg.k, {
+                            (0, t.jsx)(ef.k, {
                                 ...n,
                                 value: i,
                                 onChange: s,
@@ -3217,20 +3217,20 @@ let ad = [
                             (0, t.jsxs)(lI.n, {
                                 label: "Text Input",
                                 children: [
-                                    (0, t.jsx)(eg.k, { ...y }),
-                                    (0, t.jsx)(eg.k, { ...y, clearable: !0 }),
-                                    (0, t.jsx)(eg.k, {
+                                    (0, t.jsx)(ef.k, { ...y }),
+                                    (0, t.jsx)(ef.k, { ...y, clearable: !0 }),
+                                    (0, t.jsx)(ef.k, {
                                         ...y,
                                         leading: { icon: ae.AtIcon, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eg.k, { ...y, leading: ae.AtIcon }),
-                                    (0, t.jsx)(eg.k, { ...y, leading: "https://discord.gg/" }),
-                                    (0, t.jsx)(eg.k, {
+                                    (0, t.jsx)(ef.k, { ...y, leading: ae.AtIcon }),
+                                    (0, t.jsx)(ef.k, { ...y, leading: "https://discord.gg/" }),
+                                    (0, t.jsx)(ef.k, {
                                         ...y,
                                         trailing: { icon: ae.AtIcon, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(eg.k, { ...y, trailing: ae.AtIcon }),
-                                    (0, t.jsx)(eg.k, {
+                                    (0, t.jsx)(ef.k, { ...y, trailing: ae.AtIcon }),
+                                    (0, t.jsx)(ef.k, {
                                         ...y,
                                         leading: { type: "tags", label: "Tags", items: ad.slice(0, 3) },
                                     }),
@@ -3281,8 +3281,8 @@ var ac = a(3265),
     ax = a(890497),
     av = a(772707),
     ah = a(347704),
-    ag = a(192308),
-    af = a(116833),
+    af = a(192308),
+    ag = a(116833),
     aV = a(521489),
     aj = a(314116);
 let aC = "/assets/f66ae7bb8510ab4f.svg";
@@ -3311,7 +3311,7 @@ function ak(e) {
 function aw(e) {
     let { setIsPasscodeValid: l } = e,
         [a, n] = o.useState("");
-    return (0, t.jsx)(eg.k, {
+    return (0, t.jsx)(ef.k, {
         placeholder: "Enter your passcode...",
         value: a,
         onChange: function (e) {
@@ -3334,30 +3334,30 @@ function aI(e) {
         [p, m] = o.useState(!1),
         [y, x] = o.useState(!1),
         [v, h] = o.useState(!1),
-        [g, f] = o.useState(null),
+        [f, g] = o.useState(null),
         V = o.useCallback(async () => {
             if (
-                (f(null),
+                (g(null),
                 l > 0 && (await new Promise((e) => setTimeout(e, 1e3 * l))),
                 s && alert("onNext callback fired"),
                 a)
             ) {
                 if ("" !== r.trim())
-                    return (f({ message: r, type: d, role: "critical" === d ? "alert" : "status" }), !1);
+                    return (g({ message: r, type: d, role: "critical" === d ? "alert" : "status" }), !1);
                 throw Error("onNext failed");
             }
             return !0;
         }, [l, a, s, r, d]),
         j = o.useCallback(async () => {
             if (
-                (f(null),
+                (g(null),
                 l > 0 && (await new Promise((e) => setTimeout(e, 1e3 * l))),
                 i && alert("onComplete callback fired"),
                 n)
             ) {
                 if ("" !== r.trim())
                     throw (
-                        f({ message: r, type: d, role: "critical" === d ? "alert" : "status" }), Error("Custom error")
+                        g({ message: r, type: d, role: "critical" === d ? "alert" : "status" }), Error("Custom error")
                     );
                 throw Error("onComplete failed");
             }
@@ -3368,7 +3368,7 @@ function aI(e) {
                 modalProps: {
                     title: "Verify radness",
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
-                    notice: g ?? void 0,
+                    notice: f ?? void 0,
                 },
                 body: (0, t.jsx)(aS, {}),
                 nextButtonProps: { text: "Verify" },
@@ -3381,8 +3381,8 @@ function aI(e) {
                     subtitle:
                         "Before we get started verifying your radness, we need to make sure you're safe and sound.",
                     notice:
-                        null != g
-                            ? g
+                        null != f
+                            ? f
                             : v
                               ? {
                                     message: "Great job, helmets are important for protecting your brain!",
@@ -3400,7 +3400,7 @@ function aI(e) {
                 modalProps: {
                     title: "Enter passcode",
                     subtitle: "Enter your passcode to complete the radness verification process.",
-                    notice: g ?? void 0,
+                    notice: f ?? void 0,
                 },
                 body: (0, t.jsx)(aw, { setIsPasscodeValid: x }),
                 nextButtonProps: { text: "Verify passcode" },
@@ -3432,7 +3432,7 @@ let aT = {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
-                                (0, ag.qf)(
+                                (0, af.qf)(
                                     (e) =>
                                         (0, t.jsx)(ay.a, {
                                             ...e,
@@ -3486,7 +3486,7 @@ let aT = {
                                                         ],
                                                         onSelectionChange: () => {},
                                                     }),
-                                                    (0, t.jsx)(eg.k, {
+                                                    (0, t.jsx)(ef.k, {
                                                         label: "Example Input",
                                                         placeholder: "Enter some text...",
                                                     }),
@@ -3630,7 +3630,7 @@ let aT = {
                             case 4:
                                 return {
                                     type: "dynamic",
-                                    component: af.DynamicGraphicComponent.DEMO,
+                                    component: ag.DynamicGraphicComponent.DEMO,
                                     aspectRatio: "6/4",
                                     props: { text: "Dynamic Content" },
                                 };
@@ -3650,7 +3650,7 @@ let aT = {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
-                                (0, ag.qf)(
+                                (0, af.qf)(
                                     (e) =>
                                         (0, t.jsx)(av.k, {
                                             ...e,
@@ -3724,7 +3724,7 @@ let aT = {
                 let { dynamicText: l, ...o } = e,
                     n = {
                         type: "dynamic",
-                        component: af.DynamicGraphicComponent.DEMO,
+                        component: ag.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
                         props: { text: l },
                     };
@@ -3741,7 +3741,7 @@ let aT = {
                             variant: "primary",
                             text: "Open Dynamic Graphic Modal",
                             onClick: () =>
-                                (0, ag.mM)(
+                                (0, af.mM)(
                                     async () => {
                                         let { ExpressiveModal: e } = await a.e(304823).then(a.bind(a, 158954));
                                         return (l) =>
@@ -3820,7 +3820,7 @@ let aT = {
                             variant: "primary",
                             text: "Open Layer Modal",
                             onClick: () =>
-                                (0, ag.qf)((e) =>
+                                (0, af.qf)((e) =>
                                     (0, t.jsx)(aV.N, {
                                         ...e,
                                         ...l,
@@ -3863,7 +3863,7 @@ let aT = {
                             variant: "primary",
                             text: "Open MultiStepModal",
                             onClick: () =>
-                                (0, ag.qf)((e) =>
+                                (0, af.qf)((e) =>
                                     (0, t.jsx)(aI, {
                                         ...e,
                                         callbackDelay: l,
@@ -3916,7 +3916,7 @@ let aT = {
                             variant: "primary",
                             text: "Open BaseModal",
                             onClick: () =>
-                                (0, ag.qf)(
+                                (0, af.qf)(
                                     (e) =>
                                         (0, t.jsx)(ab.d, {
                                             ...e,
@@ -4058,13 +4058,13 @@ function az(e) {
             s?.();
         }, [s]);
     if (!d || null == m) return null;
-    let g = {
+    let f = {
             text: m.action?.text ?? (y ? l$.intl.string(l$.t.i4jeWR) : l$.intl.string(l$.t.PDTjLN)),
             variant: m.action?.variant ?? "primary",
             onClick: x,
             ...m.action,
         },
-        f = {
+        g = {
             targetElementRef: c.targetElementRef,
             hasVideo: c.hasVideo,
             scrollBehavior: c.scrollBehavior,
@@ -4078,7 +4078,7 @@ function az(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, t.jsx)(aN.x, {
-        ...f,
+        ...g,
         children: (0, t.jsxs)("div", {
             ref: r,
             children: [
@@ -4105,7 +4105,7 @@ function az(e) {
                                     totalSteps: l.length,
                                 }),
                             }),
-                            (0, t.jsx)(E.$, { size: "sm", ...g }),
+                            (0, t.jsx)(E.$, { size: "sm", ...f }),
                         ],
                     }),
                 }),
@@ -4550,7 +4550,7 @@ let aq = {
             },
         ],
     },
-    aU = {
+    aH = {
         title: "RangeCalendar",
         stories: [
             {
@@ -4643,10 +4643,10 @@ let aq = {
             },
         ],
     };
-var aH = a(970905),
+var aU = a(970905),
     aW = a(844222),
     aX = a(272318);
-let aZ = Object.entries(aH)
+let aZ = Object.entries(aU)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -4832,10 +4832,10 @@ let a0 = [
                         } = e,
                         { required: y, disabled: x } = m,
                         v = a5(c, m.asyncOptions, b),
-                        [h, g] = o.useState(null);
+                        [h, f] = o.useState(null);
                     return (0, t.jsxs)(aQ.iS, {
                         selectionMode: l,
-                        onSelectionChange: g,
+                        onSelectionChange: f,
                         options: v,
                         value: h,
                         ...m,
@@ -4978,9 +4978,9 @@ let a8 = [0.5, 0.75, 1, 1.25, 1.5, 2],
                 id: "slider",
                 name: "Slider",
                 component: function (e) {
-                    let { label: l, description: a, disabled: n, step: i } = e,
-                        [s, r] = o.useState(50),
-                        [d, u] = o.useState(50);
+                    let { label: l, description: a, disabled: n, step: i, hideTooltip: s } = e,
+                        [r, d] = o.useState(50),
+                        [u, c] = o.useState(50);
                     return (0, t.jsxs)(v.B, {
                         gap: 8,
                         children: [
@@ -4989,15 +4989,16 @@ let a8 = [0.5, 0.75, 1, 1.25, 1.5, 2],
                                 description: a,
                                 disabled: n,
                                 step: i,
-                                value: s,
-                                onChange: r,
-                                onChangeEnd: u,
+                                hideTooltip: s,
+                                value: r,
+                                onChange: d,
+                                onChangeEnd: c,
                                 formatValue: (e) => `${e}%`,
                             }),
                             (0, t.jsxs)(e5.E, {
                                 variant: "body-sm/normal",
                                 color: "text-muted",
-                                children: ["Saved on release: ", d, "%"],
+                                children: ["Saved on release: ", u, "%"],
                             }),
                         ],
                     });
@@ -5007,6 +5008,7 @@ let a8 = [0.5, 0.75, 1, 1.25, 1.5, 2],
                     description: { type: "text", label: "Description", defaultValue: "" },
                     disabled: { type: "boolean", label: "Disabled", defaultValue: !1 },
                     step: { type: "number", label: "Step", defaultValue: 1, minValue: 1 },
+                    hideTooltip: { type: "boolean", label: "Hide tooltip", defaultValue: !1 },
                 },
             },
             {
@@ -5297,8 +5299,8 @@ let tv = Object.assign(
     },
 );
 var th = a(866665),
-    tg = a(683063),
-    tf = a(557464);
+    tf = a(683063),
+    tg = a(557464);
 let tV = {
     title: "Tooltip",
     stories: [
@@ -5401,8 +5403,8 @@ let tV = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    v = o.useMemo(() => (n ? { type: "image", src: tf.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(tg.u, {
+                    v = o.useMemo(() => (n ? { type: "image", src: tg.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(tf.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5529,7 +5531,7 @@ let tS = {
                 },
                 eR,
                 l7,
-                eU,
+                eH,
                 {
                     title: "Toolbar",
                     stories: [
@@ -5591,7 +5593,7 @@ let tS = {
                 ln,
                 lw,
                 a_,
-                aU,
+                aH,
                 a9,
                 aT,
                 {
@@ -5660,7 +5662,7 @@ let tS = {
                                             children:
                                                 "Work in progress: GlobalBanner isn't ready for product code yet.",
                                         }),
-                                        (0, t.jsx)(lH, { config: a }),
+                                        (0, t.jsx)(lU, { config: a }),
                                         n
                                             ? (0, t.jsx)(v.B, {
                                                   direction: "horizontal",

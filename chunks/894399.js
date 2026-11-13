@@ -14,8 +14,8 @@ var n = l(477900),
     f = l(408278),
     j = l(454743),
     x = l(452027),
-    b = l(821609),
-    N = l(157559),
+    N = l(821609),
+    b = l(157559),
     I = l(554375),
     v = l(964486),
     E = l(724165),
@@ -23,16 +23,16 @@ var n = l(477900),
     A = l(626584),
     p = l(693623),
     y = l(288224),
-    O = l(626523),
-    M = l(71393),
+    M = l(626523),
+    O = l(71393),
     _ = l(576705),
     C = l(967198),
     k = l(129230),
     w = l(690521),
-    R = l(339143),
-    D = l(80569),
-    G = l(858899),
-    T = l(792996),
+    D = l(339143),
+    R = l(80569),
+    T = l(858899),
+    G = l(792996),
     L = l(95477);
 function z(e) {
     let { name: t, onNameChange: l, label: r } = e,
@@ -61,7 +61,7 @@ function z(e) {
         minLength: 2,
         value: t,
         onChange: o,
-        placeholder: T.intl.string(T.t.U2JFHZ),
+        placeholder: G.intl.string(G.t.U2JFHZ),
         name: "emoji_name",
         onBlur: d,
         onFocus: m,
@@ -81,28 +81,28 @@ function U(e) {
     switch (e) {
         case H.t02.TOO_MANY_EMOJI:
         case H.t02.TOO_MANY_ANIMATED_EMOJI:
-            return T.intl.string(T.t.FtKH49);
-        case D.j.TOO_BIG:
+            return G.intl.string(G.t.FtKH49);
+        case R.j.TOO_BIG:
         case H.t02.INVALID_FILE_ASSET_SIZE:
         case H.t02.INVALID_FORM_BODY:
-            return T.intl.formatToPlainString(T.t.kIO9jy, { maxSize: 256 });
+            return G.intl.formatToPlainString(G.t.kIO9jy, { maxSize: 256 });
         case H.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED:
-            return T.intl.string(T.t["6WN/qk"]);
-        case D.j.MISSING_IMAGE_DATA:
-            return T.intl.string(T.t["41/Kbh"]);
-        case D.j.MISSING_GUILD:
-            return T.intl.string(T.t["8RCtpD"]);
-        case D.j.ANIMATED_CROPPING:
-            return T.intl.string(T.t.yoVkHN);
-        case D.j.IMAGE_LOAD:
-            return T.intl.format(T.t.xZLPcF, {});
-        case D.j.NO_PERMISSIONS:
-            return T.intl.string(T.t.QY7ZFZ);
+            return G.intl.string(G.t["6WN/qk"]);
+        case R.j.MISSING_IMAGE_DATA:
+            return G.intl.string(G.t["41/Kbh"]);
+        case R.j.MISSING_GUILD:
+            return G.intl.string(G.t["8RCtpD"]);
+        case R.j.ANIMATED_CROPPING:
+            return G.intl.string(G.t.yoVkHN);
+        case R.j.IMAGE_LOAD:
+            return G.intl.format(G.t.xZLPcF, {});
+        case R.j.NO_PERMISSIONS:
+            return G.intl.string(G.t.QY7ZFZ);
         case 429:
-            return T.intl.string(T.t["4rjikl"]);
-        case D.j.UNKNOWN:
+            return G.intl.string(G.t["4rjikl"]);
+        case R.j.UNKNOWN:
         default:
-            return T.intl.string(T.t.iufib1);
+            return G.intl.string(G.t.iufib1);
     }
 }
 function W(e) {
@@ -118,7 +118,7 @@ function W(e) {
                 if (!Number.isNaN(e)) return e;
             }
         } catch (e) {}
-    return D.j.UNKNOWN;
+    return R.j.UNKNOWN;
 }
 l(307731);
 var Y = l(691885),
@@ -127,8 +127,8 @@ var Y = l(691885),
     J = l(492494),
     Q = l(711014),
     V = l(403362),
-    q = l(473145);
-function X(e) {
+    X = l(473145);
+function q(e) {
     return { label: e.name, value: e.id };
 }
 function Z(e) {
@@ -145,10 +145,10 @@ function ee(e) {
             required: o,
             errorMessage: d,
         } = e,
-        m = (0, u.cf)([M.A, Q.Ay], () =>
+        m = (0, u.cf)([O.A, Q.Ay], () =>
             Object.fromEntries(
                 Q.Ay.getFlattenedGuildIds()
-                    .map((e) => M.A.getGuild(e))
+                    .map((e) => O.A.getGuild(e))
                     .filter(V.Vq)
                     .map((e) => [e.id, e]),
             ),
@@ -166,14 +166,14 @@ function ee(e) {
                                     i =
                                         l.filter((e) => e.animated === n && !e.managed && !(0, J.Eg)(e, t.id)).length ??
                                         0;
-                                return (0, q.sN)(t) - i;
+                                return (0, X.sN)(t) - i;
                             })({ guild: l, emojis: $.Ay.getGuildEmoji(t), isEmojiAnimated: s }),
                         ];
                     }),
                 ),
             [m, s],
         ),
-        h = i.useMemo(() => Object.values(m).filter(Z).map(X), [m]),
+        h = i.useMemo(() => Object.values(m).filter(Z).map(q), [m]),
         f = i.useCallback(
             (e) => {
                 let { value: t, label: l, disabled: i } = e;
@@ -187,14 +187,14 @@ function ee(e) {
                         let t = m[e.value];
                         return null == t ? null : (0, n.jsx)(B.Ay, { guild: t, size: B.Ay.Sizes.SMALLER, active: !0 });
                     })(e),
-                    trailing: null == e.value ? null : T.intl.formatToPlainString(T.t.WkK72v, { count: g[e.value] }),
+                    trailing: null == e.value ? null : G.intl.formatToPlainString(G.t.WkK72v, { count: g[e.value] }),
                 };
             },
             [g, m],
         );
     return (
         i.useEffect(() => {
-            h.length < 1 ? r(D.j.NO_PERMISSIONS) : null != l && (g?.[l] ?? 0) < 1 ? r(H.t02.TOO_MANY_EMOJI) : r(null);
+            h.length < 1 ? r(R.j.NO_PERMISSIONS) : null != l && (g?.[l] ?? 0) < 1 ? r(H.t02.TOO_MANY_EMOJI) : r(null);
         }, [h, t, r, l, g]),
         (0, n.jsx)(Y.l, {
             label: c,
@@ -206,7 +206,7 @@ function ee(e) {
             formatOption: f,
             value: l,
             "aria-labelledby": a,
-            placeholder: h.length < 1 ? T.intl.string(T.t.jHpxwo) : T.intl.string(T.t["4mqeQO"]),
+            placeholder: h.length < 1 ? G.intl.string(G.t.jHpxwo) : G.intl.string(G.t["4mqeQO"]),
             disabled: h.length < 1,
         })
     );
@@ -216,7 +216,7 @@ var et = l(830917),
     en = l(831453),
     ei = l(725441),
     er = l(92259),
-    ea = l(205513),
+    ea = l(893007),
     es = l(218429),
     eu = l(59520),
     ec = l(424632),
@@ -232,19 +232,17 @@ function eh(e) {
         [m, g] = i.useState({ x: 0, y: 0 }),
         h = i.useRef(null),
         [j, x] = i.useState(1),
-        [b, N] = i.useState(null),
+        [N, b] = i.useState(null),
         [I, v] = i.useState(!1),
         [E, S] = i.useState({ top: 0, bottom: 0, left: 0, right: 0 }),
         [A, p] = i.useState(0),
-        [y, M] = i.useState({ x: 0, y: 0 }),
+        [y, O] = i.useState({ x: 0, y: 0 }),
         [_, C] = i.useState(!1),
-        { isGIF: k, isWebP: w, isCheckingAnimation: R, isEditableAnimatedImage: G } = (0, O._)(a),
+        { isGIF: k, isWebP: w, isCheckingAnimation: D, isEditableAnimatedImage: T } = (0, M._)(a),
         L = ("image/gif" === (t = a.type) || "image/webp" === t || "image/avif" === t) && !k && !w,
         [z, F] = i.useState(null),
         H = (0, eu.I)(o ?? eo.tE, 500),
-        K = i.useRef(null),
-        U = i.useRef(0),
-        W = i.useCallback(
+        K = i.useCallback(
             function () {
                 let e =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { x: d.current.x, y: d.current.y };
@@ -257,46 +255,48 @@ function eh(e) {
             [h, A, E, I],
         );
     i.useEffect(() => {
-        null == b || R || S(ej(b, j, G));
-    }, [b, j, G, R]);
-    let Y = i.useCallback(
+        null == N || D || S(ej(N, j, T));
+    }, [N, j, T, D]);
+    let U = i.useCallback(
             (e) => {
-                if (null == b) return;
-                let t = ej(b, e, G);
-                (x(e), S(t), W(), H?.());
+                if (null == N) return;
+                let t = ej(N, e, T);
+                (x(e), S(t), K(), H?.());
             },
-            [b, W, G, H],
+            [N, K, T, H],
         ),
-        $ = i.useCallback(() => {
-            if (null == h.current || null == b) return;
+        W = i.useCallback(() => {
+            if (null == h.current || null == N) return;
             let e = (A + 90) % 360,
-                t = b.height,
-                l = b.width,
-                n = ej({ width: t, height: l }, j, G);
-            (p(e), N({ width: t, height: l }), S(n), W(), H?.());
-        }, [b, A, W, j, G, H]),
-        B = i.useCallback(() => {
-            null != h.current && (v((e) => !e), W(), H?.());
-        }, [h, W, H]),
-        J = i.useCallback(() => {
-            if (null == b) return {};
+                t = N.height,
+                l = N.width,
+                n = ej({ width: t, height: l }, j, T);
+            (p(e), b({ width: t, height: l }), S(n), K(), H?.());
+        }, [N, A, K, j, T, H]),
+        Y = i.useCallback(() => {
+            null != h.current && (v((e) => !e), K(), H?.());
+        }, [h, K, H]),
+        $ = i.useCallback(() => {
+            if (null == N) return {};
             let { height: e, width: t } = ef(
                 (function (e, t) {
                     let { width: l, height: n } = e;
                     return t % 180 != 0 ? { width: n, height: l } : { width: l, height: n };
-                })(b, A),
+                })(N, A),
                 j,
             );
             return { height: e, width: t, minHeight: e, minWidth: t };
-        }, [b, A, j]),
-        Q = i.useCallback(() => {
-            K.current?.moveGrabber(-0.025);
-        }, []),
-        V = i.useCallback(() => {
-            K.current?.moveGrabber(0.025);
-        }, []),
-        q = i.useCallback((e) => {
-            (M({ x: e.clientX - d.current.x, y: e.clientY - d.current.y }), C(!0));
+        }, [N, A, j]),
+        B = i.useCallback(() => {
+            let e = Math.max(j - 0.025, 1);
+            e !== j && U(e);
+        }, [j, U]),
+        J = i.useCallback(() => {
+            let e = Math.min(j + 0.025, 4);
+            e !== j && U(e);
+        }, [j, U]),
+        Q = i.useCallback((e) => {
+            (O({ x: e.clientX - d.current.x, y: e.clientY - d.current.y }), C(!0));
         }, []);
     i.useEffect(() => {
         function e() {
@@ -304,31 +304,31 @@ function eh(e) {
         }
         return (window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e));
     }, []);
-    let X = i.useCallback(
+    let V = i.useCallback(
         (e) => {
             let { x: t, y: l } = d.current;
             _ &&
                 (e.clientX !== t || e.clientY !== l) &&
-                (W({ x: (t = e.clientX - y.x), y: (l = e.clientY - y.y) }), H?.());
+                (K({ x: (t = e.clientX - y.x), y: (l = e.clientY - y.y) }), H?.());
         },
-        [_, y, W, H],
+        [_, y, K, H],
     );
     i.useEffect(() => {
-        if (_) return (window.addEventListener("mousemove", X), () => window.removeEventListener("mousemove", X));
-    }, [X, _]);
-    let Z = i.useRef(null),
-        ee = i.useCallback(async () => {
+        if (_) return (window.addEventListener("mousemove", V), () => window.removeEventListener("mousemove", V));
+    }, [V, _]);
+    let X = i.useRef(null),
+        q = i.useCallback(async () => {
             let e;
-            if (null == h.current || null == b || R) return;
+            if (null == h.current || null == N || D) return;
             let t = Date.now(),
                 l = h.current,
-                n = Math.min(128, Math.max(b.height, b.width)),
+                n = Math.min(128, Math.max(N.height, N.width)),
                 i = { height: n, width: n },
                 r = null;
-            null != Z.current && (Z.current(), (Z.current = null));
+            null != X.current && (X.current(), (X.current = null));
             let { x: s, y: o } = d.current;
-            if (0 === A && !I && 1 === j && 0 === s && 0 === o && b.width === b.height && a.size <= 262144) e = u;
-            else if (G)
+            if (0 === A && !I && 1 === j && 0 === s && 0 === o && N.width === N.height && a.size <= 262144) e = u;
+            else if (T)
                 try {
                     let t = (function (e, t, l) {
                             let { height: n, width: i } = ef(t, l),
@@ -349,15 +349,15 @@ function eh(e) {
                                 resizeWidth: n,
                                 resizeHeight: n,
                             },
-                            b,
+                            N,
                             j,
                         ),
                         { result: r, cancelFn: s } = await (0, ec.ny)(t);
-                    ((Z.current = s), (e = (await r).imageUri));
+                    ((X.current = s), (e = (await r).imageUri));
                 } catch (e) {
-                    (em.error("Error cropping animated image", e), (r = D.j.ANIMATED_CROPPING));
+                    (em.error("Error cropping animated image", e), (r = R.j.ANIMATED_CROPPING));
                 } finally {
-                    (Z.current?.(), (Z.current = null));
+                    (X.current?.(), (X.current = null));
                 }
             else
                 e = L
@@ -373,26 +373,26 @@ function eh(e) {
             return (
                 c({ imageData: e, imageDataTimestamp: t, error: r, loading: !1 }),
                 () => {
-                    (Z.current?.(), (Z.current = null));
+                    (X.current?.(), (X.current = null));
                 }
             );
-        }, [a, A, G, L, R, c, b, j, u, I]);
+        }, [a, A, T, L, D, c, N, j, u, I]);
     i.useEffect(() => {
-        _ || ee();
-    }, [ee, m, A, b, _, j, z, I]);
-    let eh = i.useCallback(() => {
+        _ || q();
+    }, [q, m, A, N, _, j, z, I]);
+    let Z = i.useCallback(() => {
             if (null == h.current) return;
             let e = h.current.naturalWidth,
                 t = h.current.naturalHeight;
-            (N({ width: e, height: t }), p(0), v(!1));
+            (b({ width: e, height: t }), p(0), v(!1));
             let l = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-            (x(l), F(l), (U.current += 1), S(ej({ width: e, height: t }, l, G)), W({ x: 0, y: 0 }));
-        }, [h, G, W]),
-        ex = i.useCallback(() => {
-            eh();
-        }, [eh]);
+            (x(l), F(l), S(ej({ width: e, height: t }, l, T)), K({ x: 0, y: 0 }));
+        }, [h, T, K]),
+        ee = i.useCallback(() => {
+            Z();
+        }, [Z]);
     return (
-        i.useImperativeHandle(l, () => ({ reset: eh })),
+        i.useImperativeHandle(l, () => ({ reset: Z })),
         (0, n.jsxs)("div", {
             className: s()(ed.j0, { [ed.Id]: _ }),
             style: { "--custom-image-editor-size": "288px" },
@@ -401,33 +401,33 @@ function eh(e) {
                     className: ed.oW,
                     children: [
                         (0, n.jsx)("img", {
-                            onLoad: ex,
+                            onLoad: ee,
                             onError: () => {
-                                c({ error: D.j.IMAGE_LOAD, loading: !1 });
+                                c({ error: R.j.IMAGE_LOAD, loading: !1 });
                             },
                             style: {
-                                opacity: +(null != b),
+                                opacity: +(null != N),
                                 transform: `translate3d(${d.current.x}px, ${d.current.y}px, 0) rotate(${A}deg) scaleX(${I ? "-1" : "1"})`,
-                                ...J(),
+                                ...$(),
                             },
                             className: ed.Sl,
                             src: u,
                             crossOrigin: "anonymous",
-                            alt: T.intl.string(T.t.EYR1Fa),
+                            alt: G.intl.string(G.t.EYR1Fa),
                             ref: h,
-                            onMouseDown: q,
+                            onMouseDown: Q,
                             draggable: !1,
                         }),
                         !L &&
-                            !R &&
+                            !D &&
                             (0, n.jsx)("div", {
                                 className: ed.Lw,
-                                style: { opacity: +(null != b), width: eg.width, height: eg.height },
+                                style: { opacity: +(null != N), width: eg.width, height: eg.height },
                                 children: (0, n.jsx)(P.E, {
                                     className: ed.TB,
                                     variant: "body-xs/normal",
                                     color: "text-strong",
-                                    children: T.intl.string(T.t.oBPhdN),
+                                    children: G.intl.string(G.t.oBPhdN),
                                 }),
                             }),
                     ],
@@ -438,7 +438,7 @@ function eh(e) {
                           children: (0, n.jsx)(P.E, {
                               variant: "body-sm/normal",
                               color: "text-muted",
-                              children: T.intl.string(T.t.AjdEvM),
+                              children: G.intl.string(G.t.AjdEvM),
                           }),
                       })
                     : (0, n.jsxs)("div", {
@@ -448,30 +448,30 @@ function eh(e) {
                                   className: ed.R5,
                                   children: [
                                       (0, n.jsx)(el.m, {
-                                          text: T.intl.string(T.t.FEIIO9),
-                                          "aria-label": T.intl.string(T.t.FEIIO9),
+                                          text: G.intl.string(G.t.FEIIO9),
+                                          "aria-label": G.intl.string(G.t.FEIIO9),
                                           children: (0, n.jsx)("div", {
                                               className: ed.Q$,
                                               children: (0, n.jsx)(f.K, {
                                                   size: "sm",
                                                   variant: "icon-only",
                                                   icon: en.RotateIcon,
-                                                  onClick: $,
-                                                  "aria-label": T.intl.string(T.t.FEIIO9),
+                                                  onClick: W,
+                                                  "aria-label": G.intl.string(G.t.FEIIO9),
                                               }),
                                           }),
                                       }),
                                       (0, n.jsx)(el.m, {
-                                          text: T.intl.string(T.t["4LRS2p"]),
-                                          "aria-label": T.intl.string(T.t["4LRS2p"]),
+                                          text: G.intl.string(G.t["4LRS2p"]),
+                                          "aria-label": G.intl.string(G.t["4LRS2p"]),
                                           children: (0, n.jsx)("div", {
                                               className: ed.Q$,
                                               children: (0, n.jsx)(f.K, {
                                                   size: "sm",
                                                   variant: "icon-only",
                                                   icon: ei.FlipHorizontalIcon,
-                                                  onClick: B,
-                                                  "aria-label": T.intl.string(T.t["4LRS2p"]),
+                                                  onClick: Y,
+                                                  "aria-label": G.intl.string(G.t["4LRS2p"]),
                                               }),
                                           }),
                                       }),
@@ -481,47 +481,47 @@ function eh(e) {
                                   className: s()(ed.mu, ed.R5),
                                   children: [
                                       (0, n.jsx)(el.m, {
-                                          text: T.intl.string(T.t.QlArhK),
-                                          "aria-label": T.intl.string(T.t.QlArhK),
+                                          text: G.intl.string(G.t.QlArhK),
+                                          "aria-label": G.intl.string(G.t.QlArhK),
                                           children: (0, n.jsx)("div", {
                                               className: ed.Q$,
                                               children: (0, n.jsx)(f.K, {
                                                   size: "sm",
                                                   variant: "icon-only",
                                                   icon: er.MagnifyingGlassMinusIcon,
-                                                  onClick: Q,
-                                                  "aria-label": T.intl.string(T.t.QlArhK),
+                                                  onClick: B,
+                                                  "aria-label": G.intl.string(G.t.QlArhK),
                                               }),
                                           }),
                                       }),
                                       null != z &&
-                                          (0, n.jsx)(
-                                              ea.G,
-                                              {
-                                                  ref: K,
-                                                  className: ed.aw,
-                                                  initialValue: z,
+                                          (0, n.jsx)("div", {
+                                              className: ed.aw,
+                                              children: (0, n.jsx)(ea.A, {
+                                                  value: j,
                                                   minValue: 1,
                                                   maxValue: 4,
-                                                  keyboardStep: 0.025,
-                                                  asValueChanges: Y,
-                                                  equidistant: !0,
-                                                  hideBubble: !0,
-                                                  "aria-label": T.intl.string(T.t["2hPcVJ"]),
-                                              },
-                                              U.current,
-                                          ),
+                                                  step: 0.025,
+                                                  onChange: U,
+                                                  hideTooltip: !0,
+                                                  "aria-label": G.intl.string(G.t["2hPcVJ"]),
+                                                  formatValue: (e) =>
+                                                      G.intl.formatToPlainString(G.t.GHwBy5, {
+                                                          percent: Math.round(100 * e),
+                                                      }),
+                                              }),
+                                          }),
                                       (0, n.jsx)(el.m, {
-                                          text: T.intl.string(T.t.Ch32tT),
-                                          "aria-label": T.intl.string(T.t.Ch32tT),
+                                          text: G.intl.string(G.t.Ch32tT),
+                                          "aria-label": G.intl.string(G.t.Ch32tT),
                                           children: (0, n.jsx)("div", {
                                               className: ed.Q$,
                                               children: (0, n.jsx)(f.K, {
                                                   size: "sm",
                                                   variant: "icon-only",
                                                   icon: es.MagnifyingGlassPlusIcon,
-                                                  onClick: V,
-                                                  "aria-label": T.intl.string(T.t.Ch32tT),
+                                                  onClick: J,
+                                                  "aria-label": G.intl.string(G.t.Ch32tT),
                                               }),
                                           }),
                                       }),
@@ -548,8 +548,8 @@ function ej(e, t, l) {
         : { top: a, bottom: -a, left: -r, right: r };
 }
 var ex = l(740243);
-let eb = new A.A("EmojiStudio"),
-    eN = (e) => {
+let eN = new A.A("EmojiStudio"),
+    eb = (e) => {
         var t;
         let l,
             { guildId: r } = e,
@@ -558,13 +558,13 @@ let eb = new A.A("EmojiStudio"),
             L = !!A,
             [P, Y] = i.useState(a ?? null),
             [$, B] = i.useState(!1),
-            J = (0, u.bG)([M.A, C.A, _.A], () => {
+            J = (0, u.bG)([O.A, C.A, _.A], () => {
                 let e = C.A.getGuildId(),
-                    t = M.A.getGuild(e);
+                    t = O.A.getGuild(e);
                 return _.A.can(H.xBc.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
             [Q, V] = i.useState(r ?? J),
-            [q, X] = i.useState(!1),
+            [X, q] = i.useState(!1),
             [Z, et] = i.useState(null),
             [el, en] = i.useState(null),
             [ei, er] = i.useState(
@@ -584,7 +584,7 @@ let eb = new A.A("EmojiStudio"),
             em = i.useRef(null),
             [eg, ef] = i.useState(!1),
             ej = i.useRef(null),
-            eN =
+            eb =
                 ((t = P?.file),
                 (l = i.useRef(null)),
                 i.useEffect(() => {
@@ -595,13 +595,13 @@ let eb = new A.A("EmojiStudio"),
                     l.current = E.A.fromBlob(S.f.EMOJI, t);
                 }, [t]),
                 l),
-            { isEditableAnimatedImage: ev } = (0, O._)(P?.file),
+            { isEditableAnimatedImage: ev } = (0, M._)(P?.file),
             eE = ev || P?.file?.type === "image/avif";
         (i.useEffect(
             () => (
-                (0, R.O)(!1),
+                (0, D.O)(!1),
                 () => {
-                    (0, R.O)(!1);
+                    (0, D.O)(!1);
                 }
             ),
             [],
@@ -619,7 +619,7 @@ let eb = new A.A("EmojiStudio"),
                             (Y(e), es(e.data), er(A.name), B(!1));
                         })
                         .catch((e) => {
-                            (eb.error("Failed to fetch emoji image", e), et(D.j.MISSING_IMAGE_DATA), B(!1));
+                            (eN.error("Failed to fetch emoji image", e), et(R.j.MISSING_IMAGE_DATA), B(!1));
                         }));
             }, [A]));
         let eS = i.useCallback(
@@ -642,10 +642,10 @@ let eb = new A.A("EmojiStudio"),
             ed.current || eS({ reason: "closed" });
         });
         let eA = i.useCallback(async () => {
-                if ((et(null), null == Q)) return void et(D.j.MISSING_GUILD);
-                if (null == P || P?.file == null || null == ea) return void et(D.j.MISSING_IMAGE_DATA);
-                X(!0);
-                let e = (await eN.current?.getOriginalMd5()) ?? null,
+                if ((et(null), null == Q)) return void et(R.j.MISSING_GUILD);
+                if (null == P || P?.file == null || null == ea) return void et(R.j.MISSING_IMAGE_DATA);
+                q(!0);
+                let e = (await eb.current?.getOriginalMd5()) ?? null,
                     t = null;
                 try {
                     ((t = await (0, I.Gf)({
@@ -657,7 +657,7 @@ let eb = new A.A("EmojiStudio"),
                     })),
                         y.X({ emojiId: t.id, userImage: { ...P } }));
                 } catch (e) {
-                    (X(!1), et(W(e)), eb.error("Failed to upload emoji.", e));
+                    (q(!1), et(W(e)), eN.error("Failed to upload emoji.", e));
                     return;
                 }
                 if (null != A)
@@ -665,47 +665,47 @@ let eb = new A.A("EmojiStudio"),
                         await (0, I.ak)(Q, A.id, t.id);
                     } catch (e) {
                         if (429 === e.status)
-                            N.A.show({ title: T.intl.string(T.t.iufib1), body: T.intl.string(T.t.Whhv4w) });
+                            b.A.show({ title: G.intl.string(G.t.iufib1), body: G.intl.string(G.t.Whhv4w) });
                         else {
-                            (X(!1), et(W(e)), eb.error("Failed to delete emoji.", e));
+                            (q(!1), et(W(e)), eN.error("Failed to delete emoji.", e));
                             return;
                         }
                     }
-                ((0, R.O)(!1),
-                    (0, c.Oo)(D.y),
+                ((0, D.O)(!1),
+                    (0, c.Oo)(R.y),
                     eS({ reason: "uploaded" }),
                     (ed.current = !0),
                     (function (e) {
                         let { emoji: t, guildId: l } = e;
-                        (0, G.P0)({
-                            text: T.intl.formatToPlainString(T.t.BaxFf8, {
+                        (0, T.P0)({
+                            text: G.intl.formatToPlainString(G.t.BaxFf8, {
                                 emojiName: t.name,
                                 emojiNameHook: (e) => e,
-                                guildName: M.A.getGuild(l)?.name,
+                                guildName: O.A.getGuild(l)?.name,
                                 guildNameHook: (e) => e,
                             }),
                             icon: { type: "emoji", src: (0, w.Ez)(t), alt: t.name },
                         });
                     })({ emoji: t, guildId: Q }),
-                    X(!1));
-            }, [Q, P, A, ea, eS, ei, eN]),
+                    q(!1));
+            }, [Q, P, A, ea, eS, ei, eb]),
             ep = i.useCallback(() => {
-                (et(null), null != P && es(P.data), (eo.current = 0), (0, R.O)(!1), em.current?.reset());
+                (et(null), null != P && es(P.data), (eo.current = 0), (0, D.O)(!1), em.current?.reset());
             }, [em, P]),
             ey = i.useCallback(() => {
                 (0, F.p)({ onClose: ep });
             }, [ep]),
-            eO = i.useCallback((e) => {
+            eM = i.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: l = 0, error: n } = e,
                     i = null;
-                (null != t && w.Ay.isDataTooBig(t) && (i = D.j.TOO_BIG),
+                (null != t && w.Ay.isDataTooBig(t) && (i = R.j.TOO_BIG),
                     et(n ?? i),
                     l < ec.current || (null != t && (es(t), (ec.current = l))));
             }, []),
-            eM = i.useCallback(() => {
-                (eo.current++, (0, R.O)(!0));
+            eO = i.useCallback(() => {
+                (eo.current++, (0, D.O)(!0));
             }, []),
-            e_ = L ? T.intl.string(T.t.FOYn8U) : T.intl.string(T.t.iMJO37);
+            e_ = L ? G.intl.string(G.t.FOYn8U) : G.intl.string(G.t.iMJO37);
         return $ || null == P
             ? (0, n.jsx)("main", {
                   className: ex.iW,
@@ -738,8 +738,8 @@ let eb = new A.A("EmojiStudio"),
                                   ref: em,
                                   file: P.file,
                                   imageUri: P.data,
-                                  onUpdate: eO,
-                                  onThrottledEdit: eM,
+                                  onUpdate: eM,
+                                  onThrottledEdit: eO,
                               }),
                               (0, n.jsx)("div", {
                                   className: ex.uv,
@@ -758,7 +758,7 @@ let eb = new A.A("EmojiStudio"),
                                   className: ex.WA,
                                   children: (0, n.jsx)(m.Y, {
                                       targetElementRef: ej,
-                                      "aria-label": T.intl.string(T.t.vznjTl),
+                                      "aria-label": G.intl.string(G.t.vznjTl),
                                       position: "bottom",
                                       align: "right",
                                       renderPopout: (e) => {
@@ -768,11 +768,11 @@ let eb = new A.A("EmojiStudio"),
                                               navId: "emoji-studio-context-menu",
                                               onClose: t,
                                               onSelect: t,
-                                              "aria-label": T.intl.string(T.t.vznjTl),
+                                              "aria-label": G.intl.string(G.t.vznjTl),
                                               children: (0, n.jsx)(h.Dr, {
                                                   id: "emoji-studio-reset",
                                                   color: "danger",
-                                                  label: T.intl.string(T.t.ka3Yhm),
+                                                  label: G.intl.string(G.t.ka3Yhm),
                                                   action: ep,
                                               }),
                                           });
@@ -785,7 +785,7 @@ let eb = new A.A("EmojiStudio"),
                                               variant: "icon-only",
                                               icon: j.UnsendIcon,
                                               onClick: () => ef(!0),
-                                              "aria-label": T.intl.string(T.t.u8IcM0),
+                                              "aria-label": G.intl.string(G.t.u8IcM0),
                                           }),
                                   }),
                               }),
@@ -797,7 +797,7 @@ let eb = new A.A("EmojiStudio"),
                               (0, n.jsx)("div", {
                                   className: ex.ey,
                                   children: (0, n.jsx)(x.D, {
-                                      label: T.intl.string(T.t.JmuIb5),
+                                      label: G.intl.string(G.t.JmuIb5),
                                       children: (0, n.jsxs)("ul", {
                                           children: [
                                               (0, n.jsx)("li", {
@@ -806,7 +806,7 @@ let eb = new A.A("EmojiStudio"),
                                                       children: [
                                                           (0, n.jsx)(eI, {
                                                               src: ea,
-                                                              alt: T.intl.string(T.t["zS0K+s"]),
+                                                              alt: G.intl.string(G.t["zS0K+s"]),
                                                           }),
                                                           (0, n.jsx)("span", { children: "6" }),
                                                       ],
@@ -817,7 +817,7 @@ let eb = new A.A("EmojiStudio"),
                                                       className: ex.SA,
                                                       children: (0, n.jsx)(eI, {
                                                           src: ea,
-                                                          alt: T.intl.string(T.t["tE41+d"]),
+                                                          alt: G.intl.string(G.t["tE41+d"]),
                                                       }),
                                                   }),
                                               }),
@@ -827,7 +827,7 @@ let eb = new A.A("EmojiStudio"),
                               }),
                               (0, n.jsx)("div", {
                                   children: (0, n.jsx)(z, {
-                                      label: T.intl.string(T.t.m0YV7M),
+                                      label: G.intl.string(G.t.m0YV7M),
                                       name: ei,
                                       onNameChange: er,
                                   }),
@@ -836,7 +836,7 @@ let eb = new A.A("EmojiStudio"),
                                   ? null
                                   : (0, n.jsx)("div", {
                                         children: (0, n.jsx)(ee, {
-                                            label: T.intl.string(T.t["9uKafS"]),
+                                            label: G.intl.string(G.t["9uKafS"]),
                                             required: !0,
                                             onChange: V,
                                             selected: Q,
@@ -855,11 +855,11 @@ let eb = new A.A("EmojiStudio"),
                                               variant: "body-sm/normal",
                                               color: "text-feedback-critical",
                                           }),
-                                      (0, n.jsx)(b.$, {
-                                          text: T.intl.string(T.t.Q7UP6F),
+                                      (0, n.jsx)(N.$, {
+                                          text: G.intl.string(G.t.Q7UP6F),
                                           onClick: eA,
-                                          loading: q,
-                                          disabled: q || null == P || null == Q || ei.length < 2 || null != el,
+                                          loading: X,
+                                          disabled: X || null == P || null == Q || ei.length < 2 || null != el,
                                           fullWidth: !0,
                                       }),
                                   ],
@@ -890,7 +890,7 @@ function eE(e) {
             "data-migration-pending": !0,
             scrollbarType: "none",
             className: ev.jE,
-            children: (0, n.jsx)(eN, { ...s }),
+            children: (0, n.jsx)(eb, { ...s }),
         }),
     });
 }

@@ -15,11 +15,9 @@ n.d(
                     async () => {
                         let { EmojiStudioModal: e } = await Promise.all([
                             n.e(476662),
-                            n.e(985768),
                             n.e(19631),
                             n.e(508702),
                             n.e(912875),
-                            n.e(791154),
                             n.e(324761),
                             n.e(507406),
                             n.e(50342),

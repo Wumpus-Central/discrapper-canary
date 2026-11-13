@@ -16,26 +16,26 @@ var r = i(477900),
     A = i(834730),
     p = i(475358),
     T = i(191023),
-    x = i(205513),
+    x = i(893007),
     C = i(866665),
     D = i(939249),
-    y = i(831453),
-    w = i(775602),
+    w = i(831453),
+    y = i(775602),
     I = i(793574),
     _ = i(688810),
-    b = i(58767),
-    G = i(702211),
-    S = i(699576),
-    N = i(469054),
+    G = i(58767),
+    S = i(702211),
+    N = i(699576),
+    b = i(469054),
     L = i(129230),
     O = i(453771),
     H = i(403362),
     v = i(424632),
     M = i(626523),
     j = i(339984),
-    B = i(652215),
-    k = i(577718),
-    z = i(792996),
+    z = i(652215),
+    B = i(577718),
+    k = i(792996),
     P = i(43850);
 let V = { x: 0, y: 0 };
 function F(e, t) {
@@ -44,7 +44,7 @@ function F(e, t) {
             case j.HL.BANNER:
                 return { height: 848, width: 2400 };
             case j.HL.VIDEO_BACKGROUND:
-                return k.Im;
+                return B.Im;
             case j.HL.AVATAR:
             case j.HL.AVATAR_DECORATION:
             case j.HL.GUILD_ICON:
@@ -171,7 +171,7 @@ i.d(
                     imageUri: i,
                     originalAsset: n,
                     transitionState: H,
-                    onCrop: k,
+                    onCrop: B,
                     onClose: U,
                     uploadType: Q = j.HL.AVATAR,
                     showUpsellHeader: W = !1,
@@ -203,21 +203,21 @@ i.d(
                 } = el,
                 [ep, eT] = a.useState(!1),
                 [ex, eC] = a.useState(!1),
-                [eD, ey] = a.useState(0),
-                [ew, eI] = a.useState(J?.zoomRatio ?? 1),
-                [e_, eb] = a.useState(!1),
-                [eG, eS] = a.useState("x"),
-                eN = (0, u.bG)([w.Ay], () => w.Ay.keyboardModeEnabled),
+                [eD, ew] = a.useState(0),
+                [ey, eI] = a.useState(J?.zoomRatio ?? 1),
+                [e_, eG] = a.useState(!1),
+                [eS, eN] = a.useState("x"),
+                eb = (0, u.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
                 { analyticsLocations: eL } = (0, _.Ay)(I.A.IMAGE_CROPPING_MODAL),
                 { isGIF: eO, isCheckingAnimation: eH, isEditableAnimatedImage: ev } = (0, M._)(t),
                 eM = ex || ep || eH,
                 ej = null != em && ec.right > 0,
-                eB = null != em && ec.top > 0,
-                ek = ej || eB;
+                ez = null != em && ec.top > 0,
+                eB = ej || ez;
             a.useEffect(() => {
-                "x" === eG && !ej && eB ? eS("y") : "y" === eG && !eB && ej && eS("x");
-            }, [eG, ej, eB]);
-            let ez = ec.right > 0 ? Math.round(50 + (eh.x / ec.right) * 50) : 50,
+                "x" === eS && !ej && ez ? eN("y") : "y" === eS && !ez && ej && eN("x");
+            }, [eS, ej, ez]);
+            let ek = ec.right > 0 ? Math.round(50 + (eh.x / ec.right) * 50) : 50,
                 eP = ec.top > 0 ? Math.round(50 - (eh.y / ec.top) * 50) : 50,
                 eV = 2 * ec.right + ed.width,
                 eF = 2 * ec.top + ed.height,
@@ -228,8 +228,8 @@ i.d(
             a.useEffect(() => {
                 eO &&
                     W &&
-                    L.default.track(B.HAw.OPEN_MODAL, {
-                        type: B.JJy.CROP_GIF_MODAL,
+                    L.default.track(z.HAw.OPEN_MODAL, {
+                        type: z.JJy.CROP_GIF_MODAL,
                         location: { page: X },
                         location_stack: eL,
                         upload_type: Q,
@@ -342,7 +342,7 @@ i.d(
                     var e;
                     if (null == et.current || null == em) return;
                     let t = (eg + 90) % 360;
-                    c.O.announce(z.intl.formatToPlainString(z.t.uYhsHT, { degrees: t }));
+                    c.O.announce(k.intl.formatToPlainString(k.t.uYhsHT, { degrees: t }));
                     let { x: i, y: r } = ((e = ee.current.x), { x: -ee.current.y, y: e });
                     if (em.width !== em.height) {
                         let { newImageDimensions: e, newCropDimensions: a, newDragBoundaries: n } = e0(em, ef);
@@ -369,7 +369,7 @@ i.d(
                             let e = (0, v.l$)(+em.width, +em.height, ed);
                             (eu({ type: "RESET", dragBoundaries: e }), eW(0, 0, e, 0));
                         }
-                        (eI(1), ey((e) => e + 1));
+                        (eI(1), ew((e) => e + 1));
                     }
                 }, [ed, e0, em, eg, eW]),
                 e3 = a.useCallback(() => {
@@ -398,15 +398,15 @@ i.d(
                             n = "ArrowUp" === t ? -r : "ArrowDown" === t ? r : 0,
                             o = 0 !== a,
                             s = o ? er : ea;
-                        if (o ? ej : eB) {
+                        if (o ? ej : ez) {
                             let { x: e, y: t } = ee.current;
                             (eW(e + a, t + n, ec, eg),
                                 eu({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: ee.current }),
-                                eS(o ? "x" : "y"),
+                                eN(o ? "x" : "y"),
                                 s.current?.focus({ preventScroll: !0 }));
                         }
                     },
-                    [ej, eB, eM, ec, eg, eW],
+                    [ej, ez, eM, ec, eg, eW],
                 ),
                 e6 = a.useCallback(
                     (e) => {
@@ -424,12 +424,12 @@ i.d(
                 ),
                 e9 = a.useCallback(
                     (e) => {
-                        if (eM || !eB) return;
+                        if (eM || !ez) return;
                         let t = ec.top > 0 ? ((50 - Number(e.target.value)) * ec.top) / 50 : 0;
                         (eW(ee.current.x, t, ec, eg),
                             eu({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: ee.current }));
                     },
-                    [eB, eM, ec, eg, eW],
+                    [ez, eM, ec, eg, eW],
                 ),
                 e8 = a.useCallback(async () => {
                     var e;
@@ -456,7 +456,7 @@ i.d(
                                 l &&
                                     null != q &&
                                     (0, m.P0)({
-                                        text: z.intl.formatToPlainString(z.t.AXCEeG, { maxSize: (0, O.Hb)(q) }),
+                                        text: k.intl.formatToPlainString(k.t.AXCEeG, { maxSize: (0, O.Hb)(q) }),
                                     }),
                                 (r = await (0, v.MS)(i).catch(() => void 0)));
                         } catch (e) {
@@ -474,10 +474,10 @@ i.d(
                             maxDimensions: o,
                             imageRotation: eg,
                         });
-                    (await k({
+                    (await B({
                         assetOrigin: (function (e) {
                             let { hasImageEdits: t, hasOriginalAsset: i } = e;
-                            return i ? (t ? N.E.EDITED_ARCHIVED_ASSET : N.E.ARCHIVED_ASSET) : N.E.NEW_ASSET;
+                            return i ? (t ? b.E.EDITED_ARCHIVED_ASSET : b.E.ARCHIVED_ASSET) : b.E.NEW_ASSET;
                         })({ hasImageEdits: eA, hasOriginalAsset: null != n }),
                         imageUri: i,
                         staticImageUri: r,
@@ -493,7 +493,7 @@ i.d(
                     }),
                         eC(!1),
                         await U());
-                }, [q, Z, ed, ec, t, eA, eg, ev, U, k, n, Q, ef]),
+                }, [q, Z, ed, ec, t, eA, eg, ev, U, B, n, Q, ef]),
                 e7 = a.useCallback(async () => {
                     if (null != eo.current) {
                         (eo.current(), (eo.current = null), eC(!1));
@@ -521,22 +521,22 @@ i.d(
                     if (null != eo.current) return () => eo.current?.();
                 }, []));
             let te = Q === j.HL.AVATAR || Q === j.HL.BANNER,
-                tt = (0, G.b)(!te);
+                tt = (0, S.b)(!te);
             return (0, r.jsx)(_.f5, {
                 value: eL,
                 children: (0, r.jsxs)(d.a, {
-                    title: z.intl.string(z.t.DxAYCF),
+                    title: k.intl.string(k.t.DxAYCF),
                     size: "md",
                     actionBarInput: (0, r.jsx)(g.Q, {
-                        text: z.intl.string(z.t.yBZMsQ),
+                        text: k.intl.string(k.t.yBZMsQ),
                         textVariant: "body-md/medium",
                         onClick: e5,
                         disabled: !eA,
                     }),
                     actions: [
-                        { text: z.intl.string(z.t["9TG40l"]), onClick: e7, variant: "secondary" },
+                        { text: k.intl.string(k.t["9TG40l"]), onClick: e7, variant: "secondary" },
                         {
-                            text: z.intl.string(z.t.ZSHmKD),
+                            text: k.intl.string(k.t.ZSHmKD),
                             onClick: e8,
                             variant: "primary",
                             autoFocus: !1,
@@ -550,10 +550,10 @@ i.d(
                     children: [
                         W &&
                             !tt &&
-                            (0, r.jsx)(b.A, {
+                            (0, r.jsx)(G.A, {
                                 type: Q,
                                 analyticsPage: X,
-                                analyticsSection: B.JJy.CROP_GIF_MODAL,
+                                analyticsSection: z.JJy.CROP_GIF_MODAL,
                                 isGIF: eO,
                                 banner: i,
                             }),
@@ -562,7 +562,7 @@ i.d(
                             children: [
                                 (0, r.jsxs)("div", {
                                     role: "group",
-                                    "aria-label": z.intl.formatToPlainString(z.t["40CNiu"], { filename: t.name }),
+                                    "aria-label": k.intl.formatToPlainString(k.t["40CNiu"], { filename: t.name }),
                                     children: [
                                         (0, r.jsx)(h.vN, {
                                             within: !0,
@@ -570,9 +570,9 @@ i.d(
                                             children: (0, r.jsxs)("div", {
                                                 className: P.oW,
                                                 ref: ei,
-                                                onFocus: () => eb(!0),
+                                                onFocus: () => eG(!0),
                                                 onBlur: (e) => {
-                                                    e.currentTarget.contains(e.relatedTarget) || eb(!1);
+                                                    e.currentTarget.contains(e.relatedTarget) || eG(!1);
                                                 },
                                                 children: [
                                                     !ep &&
@@ -582,39 +582,39 @@ i.d(
                                                                 (0, r.jsx)("input", {
                                                                     ref: er,
                                                                     type: "range",
-                                                                    tabIndex: "x" !== eG ? -1 : 0,
-                                                                    "aria-label": z.intl.string(z.t.IBQxkI),
-                                                                    "aria-describedby": ek ? void 0 : en,
+                                                                    tabIndex: "x" !== eS ? -1 : 0,
+                                                                    "aria-label": k.intl.string(k.t.IBQxkI),
+                                                                    "aria-describedby": eB ? void 0 : en,
                                                                     "aria-orientation": "horizontal",
-                                                                    value: ez,
+                                                                    value: ek,
                                                                     min: 0,
                                                                     max: 100,
                                                                     step: 1,
-                                                                    "aria-valuetext": z.intl.formatToPlainString(
-                                                                        z.t["8drK3z"],
+                                                                    "aria-valuetext": k.intl.formatToPlainString(
+                                                                        k.t["8drK3z"],
                                                                         { leftValue: eU, rightValue: e$ },
                                                                     ),
                                                                     disabled: eM,
-                                                                    onFocus: () => eS("x"),
+                                                                    onFocus: () => eN("x"),
                                                                     onChange: e6,
                                                                 }),
                                                                 (0, r.jsx)("input", {
                                                                     ref: ea,
                                                                     type: "range",
-                                                                    tabIndex: "y" !== eG ? -1 : 0,
-                                                                    "aria-label": z.intl.string(z.t.SXIgR9),
-                                                                    "aria-describedby": ek ? void 0 : en,
+                                                                    tabIndex: "y" !== eS ? -1 : 0,
+                                                                    "aria-label": k.intl.string(k.t.SXIgR9),
+                                                                    "aria-describedby": eB ? void 0 : en,
                                                                     "aria-orientation": "vertical",
                                                                     value: eP,
                                                                     min: 0,
                                                                     max: 100,
                                                                     step: 1,
-                                                                    "aria-valuetext": z.intl.formatToPlainString(
-                                                                        z.t.Mrgs5G,
+                                                                    "aria-valuetext": k.intl.formatToPlainString(
+                                                                        k.t.Mrgs5G,
                                                                         { topValue: eK, bottomValue: eQ },
                                                                     ),
                                                                     disabled: eM,
-                                                                    onFocus: () => eS("y"),
+                                                                    onFocus: () => eN("y"),
                                                                     onChange: e9,
                                                                 }),
                                                             ],
@@ -630,7 +630,7 @@ i.d(
                                                                   (0, r.jsx)(A.E, {
                                                                       variant: "body-md/normal",
                                                                       color: "text-feedback-critical",
-                                                                      children: z.intl.string(z.t["+ITMYX"]),
+                                                                      children: k.intl.string(k.t["+ITMYX"]),
                                                                   }),
                                                               ],
                                                           })
@@ -685,17 +685,17 @@ i.d(
                                         }),
                                         (0, r.jsx)(f.A, {
                                             id: en,
-                                            children: ek || ep ? null : z.intl.string(z.t.jUze6F),
+                                            children: eB || ep ? null : k.intl.string(k.t.jUze6F),
                                         }),
-                                        eN &&
+                                        eb &&
                                             !ep &&
                                             (0, r.jsx)(A.E, {
                                                 variant: "body-xs/normal",
                                                 color: "text-muted",
-                                                className: o()(P.xi, { [P.p0]: !e_ && ek }),
+                                                className: o()(P.xi, { [P.p0]: !e_ && eB }),
                                                 "aria-hidden": !0,
-                                                children: ek
-                                                    ? z.intl.format(z.t.YIfE3a, {
+                                                children: eB
+                                                    ? k.intl.format(k.t.YIfE3a, {
                                                           arrowKeys: "Arrow keys",
                                                           arrowKeysHook: (e, t) =>
                                                               (0, r.jsx)(p.e, { shortcut: "up+down+left+right" }, t),
@@ -703,7 +703,7 @@ i.d(
                                                           shiftKeyHook: (e, t) =>
                                                               (0, r.jsx)(p.e, { shortcut: "shift" }, t),
                                                       })
-                                                    : z.intl.string(z.t.jUze6F),
+                                                    : k.intl.string(k.t.jUze6F),
                                             }),
                                         (0, r.jsxs)("div", {
                                             className: P.bK,
@@ -716,26 +716,27 @@ i.d(
                                                             color: "currentColor",
                                                             className: P.HQ,
                                                         }),
-                                                        (0, r.jsx)(
-                                                            x.G,
-                                                            {
-                                                                className: P.aw,
-                                                                initialValue: ew,
-                                                                minValue: 1,
-                                                                maxValue: 2,
-                                                                keyboardStep: 0.025,
-                                                                asValueChanges: eq,
-                                                                disabled: eM,
-                                                                equidistant: !0,
-                                                                hideBubble: !0,
-                                                                "aria-label": z.intl.string(z.t.EqiCcq),
-                                                                getAriaValueText: (e) =>
-                                                                    z.intl.formatToPlainString(z.t.GHwBy5, {
-                                                                        percent: Math.round(100 * e),
-                                                                    }),
-                                                            },
-                                                            eD,
-                                                        ),
+                                                        (0, r.jsx)("div", {
+                                                            className: P.aw,
+                                                            children: (0, r.jsx)(
+                                                                x.A,
+                                                                {
+                                                                    defaultValue: ey,
+                                                                    minValue: 1,
+                                                                    maxValue: 2,
+                                                                    step: 0.025,
+                                                                    onChange: eq,
+                                                                    disabled: eM,
+                                                                    hideTooltip: !0,
+                                                                    "aria-label": k.intl.string(k.t.EqiCcq),
+                                                                    formatValue: (e) =>
+                                                                        k.intl.formatToPlainString(k.t.GHwBy5, {
+                                                                            percent: Math.round(100 * e),
+                                                                        }),
+                                                                },
+                                                                eD,
+                                                            ),
+                                                        }),
                                                         (0, r.jsx)(T.ImageIcon, {
                                                             size: "md",
                                                             color: "currentColor",
@@ -744,14 +745,14 @@ i.d(
                                                     ],
                                                 }),
                                                 (0, r.jsx)(C.m, {
-                                                    text: z.intl.string(z.t.E36Wd4),
+                                                    text: k.intl.string(k.t.E36Wd4),
                                                     ariaHidden: !0,
                                                     children: (0, r.jsx)(D.D, {
                                                         className: o()(P.On, { [P.r9]: eM }),
                                                         onClick: eM ? void 0 : e1,
-                                                        "aria-label": z.intl.string(z.t.LzFiKG),
+                                                        "aria-label": k.intl.string(k.t.LzFiKG),
                                                         "aria-disabled": eM,
-                                                        children: (0, r.jsx)(y.RotateIcon, {
+                                                        children: (0, r.jsx)(w.RotateIcon, {
                                                             size: "md",
                                                             color: "currentColor",
                                                         }),
@@ -763,7 +764,7 @@ i.d(
                                 }),
                                 W &&
                                     tt &&
-                                    (0, r.jsx)(S.A, {
+                                    (0, r.jsx)(N.A, {
                                         uploadType: Q,
                                         showUpsell: !0,
                                         position: "inline",
