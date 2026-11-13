@@ -374,11 +374,11 @@ let Y = {
                     }
                 } else if (!p(l)) continue;
                 let o = i.match(I)?.[1];
-                if (null == o || p(o)) return `${i}${r}${a}`;
+                if (null == o || p(o)) return { path: `${i}${r}${a}`, opensChannel: !0 };
             }
             return null;
         })();
-        if (null != t) return void (0, D.pX)(t);
+        if (null != t) return void (t.opensChannel ? (0, D.pX)(t.path) : (0, D.pX)(t.path, { navigationReplace: !0 }));
         if (null == e) return void (0, D.pX)(f.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
         let n = P.A.getDefaultChannel(e);
         null == n || (0, d.qR)(n) || (0, _.BV)(n)
