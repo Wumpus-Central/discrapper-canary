@@ -610,6 +610,7 @@ function et(e) {
         cardShape: i,
         assets: {
             locked: n.locked,
+            calendarLocked: n.calendar_locked,
             hint: n.hint,
             idleAnimation: n.idle_animation,
             revealAnimation: n.reveal_animation,

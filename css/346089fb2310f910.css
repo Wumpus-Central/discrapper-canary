@@ -153,6 +153,121 @@
     pointer-events: none
 }
 
+.tile_IxwVgM {
+    background: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    isolation: isolate;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.tile_IxwVgM.productTile_IxwVgM>* {
+    min-height: 0;
+    min-width: 0
+}
+
+@container (max-width: 480px) {
+    .tile_IxwVgM {
+        aspect-ratio: var(--custom-calendar-tile-aspect-ratio)
+    }
+}
+
+.assetTile_IxwVgM {
+    border-radius: inherit;
+    container-type: inline-size;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.assetTile_IxwVgM:focus-visible {
+    outline: none
+}
+
+.assetTile_IxwVgM:focus-visible:after {
+    border: 2px solid var(--border-focus);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2
+}
+
+.asset_IxwVgM {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.dayNumber_IxwVgM {
+    --custom-day-number-fill: #0c4785;
+    --custom-day-number-sheen: hsla(0, 0%, 100%, .4);
+    --custom-day-number-sheen-end: hsla(0, 0%, 100%, 0);
+    --custom-day-number-unit: min(1px, 100cqi/246);
+    align-items: center;
+    bottom: calc(var(--custom-day-number-unit)*9.5);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: calc(var(--custom-day-number-unit)*85);
+    inset-inline-start: calc(var(--custom-day-number-unit)*8);
+    min-width: calc(var(--custom-day-number-unit)*72);
+    opacity: .5;
+    padding-bottom: calc(var(--custom-day-number-unit)*5);
+    padding-inline-start: calc(var(--custom-day-number-unit)*.66);
+    pointer-events: none;
+    position: absolute;
+    width: -moz-max-content;
+    width: max-content;
+    z-index: 1
+}
+
+.raisedDoor_IxwVgM .dayNumber_IxwVgM {
+    opacity: 1
+}
+
+.dayNumberText_IxwVgM[data-text-variant] {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(180deg, var(--custom-day-number-sheen) 12.549%, var(--custom-day-number-sheen-end) 55.674%), linear-gradient(90deg, var(--custom-day-number-fill) 0, var(--custom-day-number-fill) 100%);
+    color: transparent;
+    font-family: var(--font-nitro);
+    font-size: calc(var(--custom-day-number-unit)*80);
+    font-style: normal;
+    font-weight: var(--font-weight-bold, 700);
+    line-height: 1;
+    text-align: center
+}
+
+.openableTile_IxwVgM {
+    display: flex;
+    flex-direction: column
+}
+
+.raisedDoor_IxwVgM {
+    container-type: inline-size;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.raisedDoorAsset_IxwVgM {
+    -o-object-position: bottom;
+    object-position: bottom
+}
+
+.revealStrip_IxwVgM {
+    background: var(--background-brand);
+    padding: var(--space-12)
+}
+
 .smallCardItem_-T_N-w {
     border-radius: var(--radius-sm);
     flex-shrink: 0;
@@ -160,4 +275,4 @@
     width: 246px
 }
 
-/*# sourceMappingURL=96e4f8107d010ccb.css.map*/
+/*# sourceMappingURL=346089fb2310f910.css.map*/

@@ -544,6 +544,11 @@
     grid-gap: var(--space-xl)
 }
 
+.sequencedOfferItem_XBXDcd {
+    min-height: 246px;
+    min-width: var(--custom-product-card-min-width, 246px)
+}
+
 @keyframes sortChangedIntro_XBXDcd {
     0% {
         opacity: 0;
@@ -883,4 +888,4 @@
     max-width: 393px
 }
 
-/*# sourceMappingURL=a58a8af00fe9d8bd.css.map*/
+/*# sourceMappingURL=d257543a50bddfd4.css.map*/

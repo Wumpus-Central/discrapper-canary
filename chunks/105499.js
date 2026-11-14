@@ -42,6 +42,7 @@ e.exports = {
     pv: "heroHeaderButtonContainer_XBXDcd",
     v0: "limitedTimeBadge_XBXDcd",
     hm: "feed_XBXDcd",
+    xo: "sequencedOfferItem_XBXDcd",
     F7: "sortChangedIntro_XBXDcd",
     tz: "sortChangedOutro_XBXDcd",
     aS: "shuffleIntro_XBXDcd",
