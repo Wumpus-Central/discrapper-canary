@@ -31,17 +31,17 @@ n.d(
                     termsUrl: I,
                     backgroundImageUrl: S,
                 } = e,
-                k = (0, c.ur)(y) ?? void 0,
-                j = (0, o.W8)(),
-                L = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
+                L = (0, c.ur)(y) ?? void 0,
+                k = (0, o.W8)(),
+                j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 N = r.useMemo(() => {
                     if ("none" !== b)
-                        return "nitro" !== b || j
+                        return "nitro" !== b || k
                             ? {
                                   kind: "button",
                                   text:
-                                      null != L
-                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: L })
+                                      null != j
+                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: j })
                                           : g.intl.string(g.t.apFNLU),
                                   onClick: () => (0, u.default)({ applicationId: t }),
                                   onMouseDown: () => (0, u.G)({ applicationId: t }),
@@ -55,7 +55,7 @@ n.d(
                                       buttonTextOverride: g.intl.string(g.t.pj0XBN),
                                   }),
                               };
-                }, [b, t, L, j]);
+                }, [b, t, j, k]);
             return (0, l.jsx)(d.A, {
                 skuIds: E,
                 resolvedSkuIds: v,
@@ -66,7 +66,7 @@ n.d(
                 subheaderText: p,
                 logoUrl: A,
                 cta: N,
-                timeLeftText: k,
+                timeLeftText: L,
                 termsUrl: I,
                 backgroundImageUrl: S,
                 analyticsSection: "slayer-storefront-promotional-banner",

@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => L });
 var l = n(477900),
     r = n(582128),
     s = n(503698),
@@ -66,26 +66,26 @@ function y(e) {
         _ = r.useRef(null),
         y = r.useRef(null),
         b = r.useRef(!1),
-        { isHovered: A, setIsHovered: I, onMouseEnter: S, onMouseLeave: k, cancelTimers: j } = (0, x.A)(100, 100),
-        L = r.useCallback(() => {
+        { isHovered: A, setIsHovered: I, onMouseEnter: S, onMouseLeave: L, cancelTimers: k } = (0, x.A)(100, 100),
+        j = r.useCallback(() => {
             ((b.current = f.Ay.keyboardModeEnabled), S());
         }, [S]),
         N = r.useCallback(() => {
-            (j(), I(!0), (b.current = f.Ay.keyboardModeEnabled));
-        }, [j, I]),
+            (k(), I(!0), (b.current = f.Ay.keyboardModeEnabled));
+        }, [k, I]),
         O = r.useCallback(
             (e) => {
-                (j(),
+                (k(),
                     b.current && !f.Ay.keyboardModeEnabled && (0, p.uS)(),
                     I(!1),
                     e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : _.current?.focus())));
             },
-            [j, I],
+            [k, I],
         ),
-        R = r.useCallback(() => {
+        T = r.useCallback(() => {
             A ? O(!1) : N();
         }, [A, N, O]),
-        T = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
             },
@@ -99,7 +99,7 @@ function y(e) {
             [A, N, O],
         ),
         D = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
-        B = (0, l.jsx)(m.ChevronSmallDownIcon, {
+        P = (0, l.jsx)(m.ChevronSmallDownIcon, {
             size: "sm",
             color: "currentColor",
             className: a()(E.OW, { [E.g3]: A }),
@@ -118,7 +118,7 @@ function y(e) {
             renderPopout: () =>
                 (0, l.jsx)("div", {
                     onMouseEnter: S,
-                    onMouseLeave: k,
+                    onMouseLeave: L,
                     children: (0, l.jsx)(h.W, {
                         navId: o,
                         "aria-label": n.expandLabel,
@@ -159,9 +159,9 @@ function y(e) {
                                   tag: "a",
                                   role: "link",
                                   href: i,
-                                  onClick: T,
-                                  onMouseEnter: L,
-                                  onMouseLeave: k,
+                                  onClick: R,
+                                  onMouseEnter: j,
+                                  onMouseLeave: L,
                                   "aria-current": n.key === s ? "page" : void 0,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
                                   className: a()(E.LA, E.tH),
@@ -173,13 +173,13 @@ function y(e) {
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
-                                  onClick: R,
+                                  onClick: T,
                                   onKeyDown: M,
-                                  onMouseEnter: L,
-                                  onMouseLeave: k,
+                                  onMouseEnter: j,
+                                  onMouseLeave: L,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
                                   className: a()(E.LA, E.nE),
-                                  children: B,
+                                  children: P,
                               }),
                           ],
                       })
@@ -188,12 +188,12 @@ function y(e) {
                           innerRef: _,
                           role: "button",
                           "aria-haspopup": "true",
-                          onClick: R,
+                          onClick: T,
                           onKeyDown: M,
-                          onMouseEnter: L,
-                          onMouseLeave: k,
+                          onMouseEnter: j,
+                          onMouseLeave: L,
                           className: a()(E.ie, E.LA, { [E.wH]: C }),
-                          children: [D, B],
+                          children: [D, P],
                       }),
         }),
     });
@@ -223,7 +223,7 @@ function S(e) {
         }
     }
 }
-function k(e) {
+function L(e) {
     let { options: t, selectedKey: n, overflowLabel: s, overflowExpandLabel: o, className: u, ...c } = e,
         d = r.useId(),
         m = `collectibles-shop-navigation-menu-${d}`,
@@ -257,7 +257,7 @@ function k(e) {
         className: a()(E.C$, u),
         ref: g,
         children: [
-            (0, l.jsx)(j, {
+            (0, l.jsx)(k, {
                 navId: m,
                 options: t,
                 overflowLabel: s,
@@ -274,7 +274,7 @@ function k(e) {
         ],
     });
 }
-function j(e) {
+function k(e) {
     let { options: t, navId: n, overflowLabel: r, overflowExpandLabel: s, onItemLayout: a, overflowItemsRef: o } = e,
         u = `${n}-measure`;
     return (0, l.jsxs)("div", {

@@ -46,14 +46,14 @@ n.d(
                 { handleCardVisibilityChange: A } = (0, m.Z)(b, d, "marketing featured block"),
                 I = (0, f.s4)(n, a, c),
                 S = r.useRef(null),
-                k = a?.bodyText,
-                j = n?.isOrbsExclusive,
-                L = a?.name ?? n?.name,
-                N = null != L ? v.intl.formatToPlainString(v.t.frSHlf, { destination: L }) : void 0,
+                L = a?.bodyText,
+                k = n?.isOrbsExclusive,
+                j = a?.name ?? n?.name,
+                N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
                 O = (0, o.uM)(),
-                R = r.useCallback(
+                T = r.useCallback(
                     (e, t) => {
-                        (g({ sourceButton: e, categorySkuId: b, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
+                        (g({ sourceButton: e, categorySkuId: b, isInternalShopDeeplink: !0, isOrbsExclusive: k }),
                             i.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: O?.sessionId,
                                 sku_id: b,
@@ -65,14 +65,14 @@ n.d(
                                 cta_name: t,
                             }));
                     },
-                    [g, b, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [g, b, k, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
-                T = r.useCallback(() => {
-                    R("shop marketing take me there button", "Take me there button");
-                }, [R]),
+                R = r.useCallback(() => {
+                    T("shop marketing take me there button", "Take me there button");
+                }, [T]),
                 M = r.useCallback(() => {
-                    R("shop marketing tile", null);
-                }, [R]);
+                    T("shop marketing tile", null);
+                }, [T]);
             return (0, l.jsx)(s.L, {
                 innerRef: S,
                 onChange: A,
@@ -82,13 +82,13 @@ n.d(
                     innerRef: S,
                     backgroundImageUrl: I,
                     title:
-                        null != k
-                            ? { text: k, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
+                        null != L
+                            ? { text: L, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
                             : void 0,
                     badge: (0, l.jsx)(_, { skuId: b, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: v.intl.string(v.t.jVcuVY),
                     "aria-label": N,
-                    onButtonClick: T,
+                    onButtonClick: R,
                     onBlockClick: M,
                     listItemProps: p,
                 }),
