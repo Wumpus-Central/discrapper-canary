@@ -11,9 +11,9 @@ var i = n(477900),
     m = n(331322),
     p = n(683071),
     h = n(95477),
-    f = n(103557),
-    v = n(890497),
-    g = n(150934),
+    v = n(103557),
+    g = n(890497),
+    f = n(150934),
     x = n(691885),
     b = n(821609),
     j = n(452027),
@@ -65,7 +65,7 @@ function G(e) {
         [eu, ed] = a.useState(),
         [ec, em] = a.useState(!1),
         [ep, eh] = a.useState(""),
-        [ef, ev] = a.useState(
+        [ev, eg] = a.useState(
             (function (e) {
                 switch (e) {
                     case "windows":
@@ -78,7 +78,7 @@ function G(e) {
                 return "";
             })((0, M.R0)()),
         ),
-        [eg, ex] = a.useState(""),
+        [ef, ex] = a.useState(""),
         [eb, ej] = a.useState(""),
         [ey, eS] = a.useState(""),
         [ek, ew] = a.useState(""),
@@ -93,8 +93,8 @@ function G(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "7b58d7fd408ff8f3d3ffa0c21a9cf4f62f8cbba8" !== e.body.hash) {
-                let e = new Date("1794617174466"),
+            if (null != e.body && "29a6fbeb3e3ebd469a57cb5fd9cb0672d8c48b11" !== e.body.hash) {
+                let e = new Date("1794617257139"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eR(n.hours);
@@ -229,8 +229,8 @@ function G(e) {
                                     ? {
                                           overridePlatformInformation: ec,
                                           device: ep,
-                                          operatingSystem: ef,
-                                          operatingSystemVersion: eg,
+                                          operatingSystem: ev,
+                                          operatingSystemVersion: ef,
                                           clientVersion: eb,
                                           clientBuildNumber: ey,
                                           locale: ek,
@@ -300,7 +300,7 @@ function G(e) {
                                 onChange: Q,
                                 autoFocus: !0,
                             }),
-                            (0, i.jsx)(f.f, {
+                            (0, i.jsx)(v.f, {
                                 label: z.intl.string(z.t["1SplH2"]),
                                 error: eC && "" === K ? z.intl.string(z.t.EkokLy) : null,
                                 placeholder: "What did you expect to see?",
@@ -381,7 +381,7 @@ function G(e) {
                                 "data-migration-pending": !0,
                             }),
                             eB &&
-                                (0, i.jsx)(v.Z, {
+                                (0, i.jsx)(g.Z, {
                                     selectionMode: "single",
                                     label: z.intl.string(z.t["77VVd8"]),
                                     value: eu,
@@ -422,7 +422,7 @@ function G(e) {
                                 maxLength: 5e3,
                                 onChange: ea,
                             }),
-                            (0, i.jsx)(g.S, { checked: ec, onChange: (e) => em(e), label: z.intl.string(z.t.ayhqiH) }),
+                            (0, i.jsx)(f.S, { checked: ec, onChange: (e) => em(e), label: z.intl.string(z.t.ayhqiH) }),
                             ec
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
@@ -434,16 +434,16 @@ function G(e) {
                                           }),
                                           (0, i.jsx)(x.l, {
                                               label: z.intl.string(z.t.kcHxi6),
-                                              value: ef,
+                                              value: ev,
                                               options: U,
-                                              onSelectionChange: ev,
+                                              onSelectionChange: eg,
                                               selectionMode: "single",
                                               fullWidth: !0,
                                           }),
                                           (0, i.jsx)(h.k, {
                                               label: z.intl.string(z.t.rEtxdg),
                                               placeholder: "Operating System Version",
-                                              value: eg,
+                                              value: ef,
                                               onChange: (e) => ex(e),
                                           }),
                                           (0, i.jsx)(h.k, {
