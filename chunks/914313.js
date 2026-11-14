@@ -154,6 +154,7 @@ let h = (0, a.mj)({
         compactReward: !1,
         shorterHeight: !1,
         gameIconReward: !1,
+        underlinedMultiplier: !1,
     },
     v = (0, a.mj)({
         name: "2026-11-quest-home-tile-single-elements",
@@ -172,5 +173,6 @@ let h = (0, a.mj)({
             9: { ...N, newLayoutWithSearch: !0, shorterHeight: !0 },
             10: { ...N, newLayoutWithSearch: !0, gameIconReward: !0 },
             11: { ...N, newLayoutWithSearch: !0, badge: { duration: !0, new: !0, countdown: !1 } },
+            12: { ...N, newLayoutWithSearch: !0, underlinedMultiplier: !0 },
         },
     });

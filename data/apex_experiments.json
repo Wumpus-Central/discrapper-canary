@@ -6204,6 +6204,10 @@
           "new": true,
           "countdown": false
         }
+      },
+      "12": {
+        "newLayoutWithSearch": true,
+        "underlinedMultiplier": true
       }
     }
   },
