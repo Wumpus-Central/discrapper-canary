@@ -6,7 +6,7 @@ var s,
     l = n(221596),
     c = n(792996),
     u =
-        221552 == n.j
+        588245 != n.j
             ? (((s = {})[(s.PLAY = 0)] = "PLAY"),
               (s[(s.WATCH = 1)] = "WATCH"),
               (s[(s.ACTIVITY = 2)] = "ACTIVITY"),
@@ -25,10 +25,16 @@ function C(t) {
                 : 2
             : 0;
 }
+function d(t) {
+    let e = new Date(t.startsAt).getTime(),
+        n = Date.now();
+    return e <= n && n - e < 2 * i.A.Millis.DAY;
+}
 n.d(
     e,
     {},
     {
+        Bq: d,
         C0: function (t) {
             switch (C(t)) {
                 case 0:
@@ -60,13 +66,11 @@ n.d(
             }
         },
         Dd: function (t, e, n) {
-            let s = new Date(t.startsAt).getTime(),
-                o = Date.now(),
-                r = s <= o && o - s < 2 * i.A.Millis.DAY;
+            let s = d(t);
             if (n) return null;
             switch (e) {
                 case a.UA.UNENROLLED:
-                    if (r) return c.intl.string(c.t.X6ziWN);
+                    if (s) return c.intl.string(c.t.X6ziWN);
                     return null;
                 case a.UA.COMPLETED:
                 case a.UA.EXPIRED_CLAIMABLE:

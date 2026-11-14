@@ -18,14 +18,20 @@ function o(e, t) {
         : l.intl.formatToPlainString(o ? l.t["spl/XS"] : l.t.rUfeQx, { count: a });
 }
 function a(e, t) {
-    let { truncateMoreThanSeconds: n } = t;
-    return e.percentComplete > 0
-        ? l.intl.formatToPlainString(l.t["pF/deA"], { durationShort: o(e) })
-        : l.intl.formatToPlainString(l.t.CHrvqg, { durationShort: o(e, { truncate: n }) });
+    let { truncateMoreThanSeconds: n, hideDuration: r = !1 } = t,
+        u = e.percentComplete > 0;
+    return r
+        ? u
+            ? l.intl.string(l.t.pk9XKF)
+            : l.intl.string(l.t.kfks9Y)
+        : u
+          ? l.intl.formatToPlainString(l.t["pF/deA"], { durationShort: o(e) })
+          : l.intl.formatToPlainString(l.t.CHrvqg, { durationShort: o(e, { truncate: n }) });
 }
 function s(e) {
-    let { truncateMoreThanSeconds: t } = r.getConfig({ location: i.rE.QUESTS_CARD });
-    return a(e, { truncateMoreThanSeconds: t });
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { truncateMoreThanSeconds: n } = r.getConfig({ location: i.rE.QUESTS_CARD });
+    return a(e, { truncateMoreThanSeconds: n, hideDuration: t });
 }
 function c(e) {
     return a(e, { truncateMoreThanSeconds: null });

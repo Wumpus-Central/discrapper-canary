@@ -89,6 +89,59 @@
     border-radius: 8px
 }
 
+.badgeContainer_L4PiGG {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    transition: opacity .2s ease
+}
+
+.hidden_L4PiGG {
+    opacity: 0;
+    pointer-events: none
+}
+
+.badge_L4PiGG {
+    align-items: center;
+    -webkit-backdrop-filter: blur(22px);
+    backdrop-filter: blur(22px);
+    background-color: var(--control-overlay-secondary-background-default);
+    border: 1px solid color-mix(in oklab, var(--border-muted) 80%, transparent);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-6);
+    padding: var(--space-4) var(--space-8);
+    text-transform: uppercase
+}
+
+.leadingText_L4PiGG {
+    font-variant-numeric: tabular-nums
+}
+
+.bulletSeparator_L4PiGG {
+    font-size: 10px;
+    opacity: .4
+}
+
+.badgeTask_L4PiGG {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.badgeIcon_L4PiGG {
+    color: #fff;
+    display: inline-block;
+    margin-inline-end: 2px
+}
+
+.previewBadge_L4PiGG {
+    background-color: #fff;
+    color: var(--text-overlay-dark)
+}
+
 .container_oZk0Pt {
     align-items: center;
     color: #dcdcdf;
@@ -251,59 +304,6 @@
 
 .lift_pq5qUF:has([data-quest-tile-hovered]) {
     transform: translateY(calc(var(--custom-quest-tile-lift)*-1)) translateZ(0)
-}
-
-.badgeContainer_L4PiGG {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-4);
-    transition: opacity .2s ease
-}
-
-.hidden_L4PiGG {
-    opacity: 0;
-    pointer-events: none
-}
-
-.badge_L4PiGG {
-    align-items: center;
-    -webkit-backdrop-filter: blur(22px);
-    backdrop-filter: blur(22px);
-    background-color: var(--control-overlay-secondary-background-default);
-    border: 1px solid color-mix(in oklab, var(--border-muted) 80%, transparent);
-    border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-6);
-    padding: var(--space-4) var(--space-8);
-    text-transform: uppercase
-}
-
-.leadingText_L4PiGG {
-    font-variant-numeric: tabular-nums
-}
-
-.bulletSeparator_L4PiGG {
-    font-size: 10px;
-    opacity: .4
-}
-
-.badgeTask_L4PiGG {
-    align-items: center;
-    display: flex;
-    flex-direction: row
-}
-
-.badgeIcon_L4PiGG {
-    color: #fff;
-    display: inline-block;
-    margin-inline-end: 2px
-}
-
-.previewBadge_L4PiGG {
-    background-color: #fff;
-    color: var(--text-overlay-dark)
 }
 
 .cta_EaQw3u {
@@ -910,4 +910,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=8b42ec5b30b495f0.css.map*/
+/*# sourceMappingURL=56cbeb9267c0ce9b.css.map*/
