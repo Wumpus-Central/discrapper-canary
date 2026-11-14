@@ -1,8 +1,8 @@
-r.d(t, { A: () => R });
+r.d(t, { A: () => p });
 var l = r(477900),
     n = r(582128),
-    i = r(503698),
-    c = r.n(i),
+    c = r(503698),
+    i = r.n(c),
     u = r(837381),
     s = r(612324),
     a = r(408278),
@@ -17,9 +17,9 @@ var v = r(770178),
     b = r(116903),
     x = r(741918),
     L = r(855986),
-    g = r(59520),
-    k = r(775602);
-function y(e, t, r) {
+    M = r(59520),
+    y = r(775602);
+function g(e, t, r) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     return "left" === e
         ? (function (e, t, r) {
@@ -27,8 +27,8 @@ function y(e, t, r) {
                   n = t + e.clientWidth - r;
               for (let t = 0; t < e.children.length; t++) {
                   let r = e.children[t],
-                      i = r.offsetLeft;
-                  if (r.offsetLeft + r.offsetWidth > l && i < n) return { index: t, isPartiallyHidden: i < l - 1 };
+                      c = r.offsetLeft;
+                  if (r.offsetLeft + r.offsetWidth > l && c < n) return { index: t, isPartiallyHidden: c < l - 1 };
               }
               return { index: 0, isPartiallyHidden: !1 };
           })(t, r, l)
@@ -37,22 +37,22 @@ function y(e, t, r) {
                   n = t + e.clientWidth - r;
               for (let t = e.children.length - 1; t >= 0; t--) {
                   let r = e.children[t],
-                      i = r.offsetLeft,
-                      c = r.offsetLeft + r.offsetWidth;
-                  if (c > l && i < n) return { index: t, isPartiallyHidden: c > n + 1 };
+                      c = r.offsetLeft,
+                      i = r.offsetLeft + r.offsetWidth;
+                  if (i > l && c < n) return { index: t, isPartiallyHidden: i > n + 1 };
               }
               return { index: Math.max(0, e.children.length - 1), isPartiallyHidden: !1 };
           })(t, r, l);
 }
-var C = r(602034),
-    M = r(66455),
-    W = r(792996),
-    p = r(513226);
-let R = function (e) {
+var k = r(602034),
+    W = r(66455),
+    C = r(792996),
+    R = r(513226);
+let p = function (e) {
     let t,
         r,
-        i,
-        R,
+        c,
+        p,
         E,
         A,
         S,
@@ -79,42 +79,43 @@ let R = function (e) {
             "aria-label": Y,
             maintainFocusOnReorder: Z = !1,
             disableFocusRingScope: J = !1,
+            initialScrollIndex: U,
         } = e,
-        U = `${n.useId()}hscroll`,
-        V = n.useRef(0),
-        ee = n.useRef(null),
+        V = `${n.useId()}hscroll`,
+        ee = n.useRef(0),
         et = n.useRef(null),
         er = n.useRef(null),
         el = n.useRef(null),
-        en = n.useCallback((e, t, r) => {
-            el.current = null;
+        en = n.useRef(null),
+        ec = n.useCallback((e, t, r) => {
+            en.current = null;
             let l = document.activeElement,
-                n = l === et.current,
-                i = l === er.current;
-            if ((n && (!e || !t)) || (i && (!e || !r))) {
-                let l = n ? er.current : et.current;
-                el.current = e && (n ? r : t) ? l : ee.current;
+                n = l === er.current,
+                c = l === el.current;
+            if ((n && (!e || !t)) || (c && (!e || !r))) {
+                let l = n ? el.current : er.current;
+                en.current = e && (n ? r : t) ? l : et.current;
             }
         }, []),
         {
             containerRef: ei,
-            showActions: ec,
-            canScrollLeft: eu,
-            canScrollRight: es,
-            updateActionState: ea,
+            showActions: eu,
+            canScrollLeft: es,
+            canScrollRight: ea,
+            updateActionState: eo,
         } = (function (e, t, r) {
             let l = n.useRef(0),
-                i = n.useRef(0),
-                [c, u] = n.useState(!1),
+                c = n.useRef(0),
+                [i, u] = n.useState(!1),
                 [s, a] = n.useState(!1),
                 [o, d] = n.useState(!0),
                 f = n.useCallback(() => {
                     let n = e.current;
                     if (null == n) return;
-                    let c = i.current > l.current,
+                    let i = c.current > l.current,
                         s = t.current > 0,
                         o = t.current < n.scrollWidth - n.clientWidth - 1;
-                    (r(c, s, o), u(c), a(s), d(o));
+                    (r(i, s, o), u(i), a(s), d(o));
                 }, [e, t, r]),
                 h = (0, v.w)((r) => {
                     let { contentRect: n } = r;
@@ -125,7 +126,7 @@ let R = function (e) {
                     let r = e.current;
                     if (null == r) return;
                     let l = new ResizeObserver(() => {
-                        ((i.current = r.scrollWidth), r.scrollLeft !== t.current && (r.scrollLeft = t.current), f());
+                        ((c.current = r.scrollWidth), r.scrollLeft !== t.current && (r.scrollLeft = t.current), f());
                     });
                     Array.from(r.children).forEach((e) => {
                         l.observe(e);
@@ -136,82 +137,82 @@ let R = function (e) {
                                 l.observe(e);
                             }));
                     });
-                    function c() {
+                    function i() {
                         f();
                     }
                     return (
                         n.observe(r, { childList: !0 }),
-                        r.addEventListener("scrollend", c),
+                        r.addEventListener("scrollend", i),
                         () => {
-                            (l.disconnect(), n.disconnect(), r.removeEventListener("scrollend", c));
+                            (l.disconnect(), n.disconnect(), r.removeEventListener("scrollend", i));
                         }
                     );
                 }, [e, t, f]),
-                { containerRef: h, showActions: c, canScrollLeft: s, canScrollRight: o, updateActionState: f }
+                { containerRef: h, showActions: i, canScrollLeft: s, canScrollRight: o, updateActionState: f }
             );
-        })(ee, V, en);
+        })(et, ee, ec);
     n.useLayoutEffect(() => {
-        (el.current?.focus({ preventScroll: !0 }), (el.current = null));
-    }, [ec, eu, es]);
+        (en.current?.focus({ preventScroll: !0 }), (en.current = null));
+    }, [eu, es, ea]);
     let {
-            onClickScrollLeft: eo,
-            onClickScrollRight: ed,
-            onScroll: ef,
-            listNavigator: eh,
-        } = ((t = (0, L.bG)([k.Ay], () => k.Ay.useReducedMotion) ? "auto" : "smooth"),
-        (r = (0, L.bG)([k.Ay], () => k.Ay.keyboardModeEnabled)),
-        (i = n.useRef(!1)),
-        (R = n.useRef(0)),
+            onClickScrollLeft: ed,
+            onClickScrollRight: ef,
+            onScroll: eh,
+            listNavigator: em,
+        } = ((t = (0, L.bG)([y.Ay], () => y.Ay.useReducedMotion) ? "auto" : "smooth"),
+        (r = (0, L.bG)([y.Ay], () => y.Ay.keyboardModeEnabled)),
+        (c = n.useRef(!1)),
+        (p = n.useRef(0)),
         (E = n.useCallback(
             (e) => {
-                let r = ee.current;
+                let r = et.current;
                 return null == r || r.scrollLeft === e
                     ? Promise.resolve()
-                    : ((V.current = e),
-                      (i.current = !0),
+                    : ((ee.current = e),
+                      (c.current = !0),
                       new Promise((l) => {
                           let n = !1;
-                          function c() {
+                          function i() {
                               n ||
                                   ((n = !0),
                                   clearTimeout(u),
-                                  ee.current?.removeEventListener("scrollend", c),
-                                  (i.current = !1),
+                                  et.current?.removeEventListener("scrollend", i),
+                                  (c.current = !1),
                                   l());
                           }
-                          let u = setTimeout(c, 1e3);
-                          (r.addEventListener("scrollend", c, { once: !0 }),
+                          let u = setTimeout(i, 1e3);
+                          (r.addEventListener("scrollend", i, { once: !0 }),
                               r.scrollTo({ left: e, behavior: t }),
-                              ea());
+                              eo());
                       }));
             },
-            [t, ea, ee, V],
+            [t, eo, et, ee],
         )),
         (A = n.useCallback(() => E(0), [E])),
         (S = n.useCallback(() => {
-            let e = ee.current;
+            let e = et.current;
             return E(null == e ? 0 : Math.max(0, e.scrollWidth - e.clientWidth));
-        }, [E, ee])),
+        }, [E, et])),
         (j = n.useCallback(
             (e) => {
-                i.current || ((V.current = e.target.scrollLeft), ea());
+                c.current || ((ee.current = e.target.scrollLeft), eo());
             },
-            [ea, V],
+            [eo, ee],
         )),
         (w = n.useCallback(
             (e, t) => {
-                let r = ee.current,
+                let r = et.current,
                     l = document.querySelector(e);
                 if (null == r || null == l) return;
-                let n = ++R.current,
-                    i = Number(t),
-                    c = r.children[i];
-                if (null == c) return void l.focus({ preventScroll: !0 });
+                let n = ++p.current,
+                    c = Number(t),
+                    i = r.children[c];
+                if (null == i) return void l.focus({ preventScroll: !0 });
                 let u = Math.max(0, r.scrollWidth - r.clientWidth),
-                    s = V.current,
+                    s = ee.current,
                     a = s + r.clientWidth,
-                    o = c.offsetLeft,
-                    d = o + c.offsetWidth,
+                    o = i.offsetLeft,
+                    d = o + i.offsetWidth,
                     f = o < s;
                 f || d > a
                     ? E(
@@ -229,14 +230,14 @@ let R = function (e) {
                               ),
                           ),
                       ).then(() => {
-                          R.current === n && l.focus({ preventScroll: !0 });
+                          p.current === n && l.focus({ preventScroll: !0 });
                       })
                     : l.focus({ preventScroll: !0 });
             },
-            [E, q, ee, V],
+            [E, q, et, ee],
         )),
         (N = (0, b.Ay)({
-            id: U,
+            id: V,
             isEnabled: r,
             orientation: x.Gl.HORIZONTAL,
             defaultFocused: "0",
@@ -248,81 +249,91 @@ let R = function (e) {
             (e, t, r, l) => {
                 let n = e.children[t];
                 if (null == n) return;
-                function i(t) {
+                function c(t) {
                     let l = "start" === r ? t.offsetLeft - 16 : t.offsetLeft + t.offsetWidth - e.clientWidth + 16;
                     return Math.max(0, Math.min(Math.max(0, e.scrollWidth - e.clientWidth), l));
                 }
-                let c = i(n);
-                if (c !== e.scrollLeft) (E(c), N.setFocus(m(t)));
+                let i = c(n);
+                if (i !== e.scrollLeft) (E(i), N.setFocus(m(t)));
                 else {
                     let r = Math.max(0, Math.min(e.childElementCount - 1, t + l)),
                         n = e.children[r];
                     if (null == n || r === t) return;
-                    (E(i(n)), N.setFocus(m(r)));
+                    (E(c(n)), N.setFocus(m(r)));
                 }
             },
             [E, N],
         )),
         (F = n.useCallback(
             (e) => {
-                let t = ee.current;
+                let t = et.current;
                 if (null == t) return;
                 let r = "left" === e ? -1 : 1;
                 if ("item" === q) {
-                    let { index: l, isPartiallyHidden: n } = y("left", t, V.current, 16),
-                        i = "left" === e && n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
-                    I(t, i, "start", r);
+                    let { index: l, isPartiallyHidden: n } = g("left", t, ee.current, 16),
+                        c = "left" === e && n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
+                    I(t, c, "start", r);
                 } else {
-                    let { index: l, isPartiallyHidden: n } = y(e, t, V.current, 16),
-                        i = n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
-                    I(t, i, "left" === e ? "end" : "start", r);
+                    let { index: l, isPartiallyHidden: n } = g(e, t, ee.current, 16),
+                        c = n ? l : Math.max(0, Math.min(t.childElementCount - 1, l + r));
+                    I(t, c, "left" === e ? "end" : "start", r);
                 }
             },
-            [q, I, ee, V],
+            [q, I, et, ee],
         )),
         (H = n.useCallback(() => F("left"), [F])),
         (P = n.useCallback(() => F("right"), [F])),
         {
-            onClickScrollLeft: (0, g.I)(H, 200, [H]),
-            onClickScrollRight: (0, g.I)(P, 200, [P]),
+            onClickScrollLeft: (0, M.I)(H, 200, [H]),
+            onClickScrollRight: (0, M.I)(P, 200, [P]),
             onScroll: j,
             listNavigator: N,
         }),
-        { ref: em, ...ev } = (0, u.LT)(eh),
-        eb = (0, s.A)(ee, em);
+        ev = n.useRef(!1);
+    n.useLayoutEffect(() => {
+        let e = et.current;
+        if (ev.current || null == U || null == e) return;
+        let t = e.children[U];
+        if (null == t) return;
+        ev.current = !0;
+        let r = Math.max(0, Math.min(Math.max(0, e.scrollWidth - e.clientWidth), t.offsetLeft - 16));
+        ((ee.current = r), (e.scrollLeft = r), eo(), em.setFocus(m(U)));
+    }, [U, G, eo, em]);
+    let { ref: eb, ...ex } = (0, u.LT)(em),
+        eL = (0, s.A)(et, eb);
     !(function (e) {
         let {
                 items: t,
                 scrollerRef: r,
                 expectedScrollEndRef: l,
-                listNavigator: i,
-                listId: c,
+                listNavigator: c,
+                listId: i,
                 containerRef: u,
                 enabled: s,
             } = e,
-            a = (0, M.A)(i);
+            a = (0, W.A)(c);
         n.useLayoutEffect(() => {
             if (!s) return;
             let e = r.current,
                 n = a.current,
-                i = n.focusedItemId();
-            if (null == e || 0 === t.length || null == i) return;
+                c = n.focusedItemId();
+            if (null == e || 0 === t.length || null == c) return;
             e.scrollLeft = l.current;
-            let o = m(Math.min(Number(i), t.length - 1));
+            let o = m(Math.min(Number(c), t.length - 1));
             if ((n.setFocus(o), !e.contains(document.activeElement))) return;
-            let d = u.current?.querySelector((0, C.Mz)((0, C.t$)(c, o)));
+            let d = u.current?.querySelector((0, k.Mz)((0, k.t$)(i, o)));
             d?.focus({ preventScroll: !0 });
-        }, [t, c, u, r, l, a, s]);
+        }, [t, i, u, r, l, a, s]);
     })({
         items: G,
-        scrollerRef: ee,
-        expectedScrollEndRef: V,
-        listNavigator: eh,
-        listId: U,
+        scrollerRef: et,
+        expectedScrollEndRef: ee,
+        listNavigator: em,
+        listId: V,
         containerRef: ei,
         enabled: Z,
     });
-    let ex = n.useMemo(
+    let eM = n.useMemo(
             () =>
                 G.map((e, t) =>
                     (0, l.jsx)(
@@ -330,11 +341,11 @@ let R = function (e) {
                         {
                             id: m(t),
                             children: (r) => {
-                                let { role: n, ...i } = r;
+                                let { role: n, ...c } = r;
                                 return (0, l.jsx)("div", {
                                     role: "listitem",
-                                    className: c()(p.Aw, D),
-                                    children: O(e, i, t),
+                                    className: i()(R.Aw, D),
+                                    children: O(e, c, t),
                                 });
                             },
                         },
@@ -343,62 +354,62 @@ let R = function (e) {
                 ),
             [G, T, O, D],
         ),
-        eL = { "--custom-edge-fade-width": `var(--space-${_})` };
+        ey = { "--custom-edge-fade-width": `var(--space-${_})` };
     return (0, l.jsxs)("div", {
         ref: ei,
         role: null != Y ? "region" : void 0,
         "aria-label": Y,
-        style: eL,
-        className: c()(p.kL, K),
+        style: ey,
+        className: i()(R.kL, K),
         children: [
-            ec &&
+            eu &&
                 (0, l.jsxs)("div", {
-                    className: c()(p.o1, Q),
+                    className: i()(R.o1, Q),
                     role: "group",
                     children: [
                         (0, l.jsx)("div", {
-                            className: c()(p.x6, { [p.r9]: !eu }),
+                            className: i()(R.x6, { [R.r9]: !es }),
                             children: (0, l.jsx)(a.K, {
                                 icon: o.ArrowLargeLeftIcon,
-                                buttonRef: et,
-                                size: X,
-                                variant: "overlay-secondary",
-                                onClick: eo,
-                                disabled: !eu,
-                                "aria-label": W.intl.string(W.t.FQx1Ru),
-                                "aria-hidden": !eu,
-                                "aria-controls": U,
-                            }),
-                        }),
-                        (0, l.jsx)("div", {
-                            className: c()(p.x6, { [p.r9]: !es }),
-                            children: (0, l.jsx)(a.K, {
-                                icon: d.ArrowLargeRightIcon,
                                 buttonRef: er,
                                 size: X,
                                 variant: "overlay-secondary",
                                 onClick: ed,
                                 disabled: !es,
-                                "aria-label": W.intl.string(W.t.H4hwjn),
+                                "aria-label": C.intl.string(C.t.FQx1Ru),
                                 "aria-hidden": !es,
-                                "aria-controls": U,
+                                "aria-controls": V,
+                            }),
+                        }),
+                        (0, l.jsx)("div", {
+                            className: i()(R.x6, { [R.r9]: !ea }),
+                            children: (0, l.jsx)(a.K, {
+                                icon: d.ArrowLargeRightIcon,
+                                buttonRef: el,
+                                size: X,
+                                variant: "overlay-secondary",
+                                onClick: ef,
+                                disabled: !ea,
+                                "aria-label": C.intl.string(C.t.H4hwjn),
+                                "aria-hidden": !ea,
+                                "aria-controls": V,
                             }),
                         }),
                     ],
                 }),
             (0, l.jsx)(u.hD, {
-                navigator: eh,
+                navigator: em,
                 children:
                     ((z = (0, l.jsx)(f.B, {
                         direction: "horizontal",
                         gap: $,
-                        id: U,
+                        id: V,
                         "aria-label": Y,
-                        ref: eb,
-                        className: c()(p.Y_, B, { [p.jL]: eu, [p.w6]: es, [p.XG]: eu && es }),
-                        ...ev,
-                        onScroll: ef,
-                        children: ex,
+                        ref: eL,
+                        className: i()(R.Y_, B, { [R.jL]: es, [R.w6]: ea, [R.XG]: es && ea }),
+                        ...ex,
+                        onScroll: eh,
+                        children: eM,
                     })),
                     J ? z : (0, l.jsx)(h.xp, { containerRef: ei, children: z })),
             }),

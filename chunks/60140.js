@@ -25,7 +25,7 @@ function b(e) {
 function S(e) {
     return e.skuId;
 }
-function L(e) {
+function I(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, f.Mk)(r);
     return t
@@ -41,7 +41,7 @@ function L(e) {
               }),
           });
 }
-function I(e) {
+function L(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, f.Mk)(r),
         i = A.intl.string(A.t.HP8LNG);
@@ -80,7 +80,11 @@ function N(e) {
     let { collectionId: t, sequencedOffers: n } = e,
         r = (0, s.bG)([o.A], () => o.A.getCategory(t)?.products),
         u = (0, m.A)(t),
-        c = (0, v.A)(n, r, u);
+        c = (0, v.A)(n, r, u),
+        d = c.findIndex((e) => {
+            let { tileProps: t } = e;
+            return t.day === u;
+        });
     return (0, l.jsx)(i.R9, {
         newValue: { pageSection: "top 4", categoryPosition: 0 },
         children: (0, l.jsx)(f.v3.Provider, {
@@ -92,6 +96,7 @@ function N(e) {
                 getItemKey: k,
                 itemClassName: y.xo,
                 renderItem: j,
+                initialScrollIndex: d >= 0 ? d : null,
             }),
         }),
     });
@@ -133,10 +138,10 @@ n.d(
                 S = (0, c.t)("shop_home_carousel", { autoTrackExposure: b }).enabled;
             switch (m) {
                 case "feed":
-                    return (0, l.jsx)(L, { isLoading: y, products: _, tab: p });
+                    return (0, l.jsx)(I, { isLoading: y, products: _, tab: p });
                 case "hscroll":
                     if (b && S) return (0, l.jsx)(N, { collectionId: x, sequencedOffers: v });
-                    return (0, l.jsx)(I, { isLoading: y, products: _, tab: p });
+                    return (0, l.jsx)(L, { isLoading: y, products: _, tab: p });
             }
         },
     },
