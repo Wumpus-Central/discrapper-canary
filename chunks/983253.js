@@ -48,6 +48,7 @@ n.d(
                         items: t.items,
                         hasSnapshot: !0,
                         loadId: "none" === t.loadId && 0 === t.items.length ? null : t.loadId,
+                        loadedAt: Date.now(),
                     };
                 case "error":
                     return { ...e, status: "error", retryAfterAt: t.retryAfterAt ?? null };
