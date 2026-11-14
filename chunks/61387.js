@@ -24,14 +24,14 @@
     O9: () => eV,
     YW: () => eQ,
     S5: () => eP,
-    Nb: () => e6,
+    Nb: () => e9,
     t9: () => e4,
-    XD: () => e9,
+    XD: () => e6,
     $P: () => e7,
     UX: () => eW,
     ZP: () => eN,
     j$: () => eG,
-    fc: () => eU,
+    fc: () => ek,
     aC: () => eY,
     mL: () => es,
     pT: () => e5,
@@ -41,7 +41,7 @@
     Ns: () => e8,
     sb: () => e2,
     Qo: () => ex,
-    I3: () => ek,
+    I3: () => eU,
     RR: () => eK,
 }),
     n(321073),
@@ -78,8 +78,8 @@ var E = n(517846),
     w = n(927813),
     y = n(403362),
     M = n(975571),
-    U = n(723702),
-    k = n(448645);
+    k = n(723702),
+    U = n(448645);
 (n(845890), n(265704));
 var D = n(178540),
     Q = n(153229),
@@ -149,7 +149,7 @@ function es() {
                     e.fetchPolicy;
                     return;
             }
-            if (r && a && !t && !i && (n(!0), (0, Q.N1)(), (0, U.cX)() && "focused" !== m.A.getState())) return;
+            if (r && a && !t && !i && (n(!0), (0, Q.N1)(), (0, k.cX)() && "focused" !== m.A.getState())) return;
         }, [e.fetchPolicy, a, t, i, o, e.callerSource]),
         { quests: r, excludedQuests: u, isFetchingCurrentQuests: i, hasFetched: t }
     );
@@ -499,7 +499,7 @@ function eM(e) {
             l.useMemo(() => (0, er.J$)(e), [e, t]));
     return n || r || u;
 }
-let eU = (e) => {
+let ek = (e) => {
     let t = l.useCallback(() => (0, et.Yh)(e), [e]),
         [n, r] = l.useState(t()),
         u = l.useCallback(() => r(t()), [t]),
@@ -523,7 +523,7 @@ let eU = (e) => {
         n
     );
 };
-function ek(e) {
+function eU(e) {
     return l.useMemo(() => (0, et.JC)(e), [e]);
 }
 function eD(e) {
@@ -630,14 +630,14 @@ function eB(e) {
     let t = e.userStatus?.enrolledAt != null,
         n = e.userStatus?.completedAt != null,
         r = e.userStatus?.claimedAt != null,
-        u = eU(e).percentComplete > 0;
+        u = ek(e).percentComplete > 0;
     return r ? 4 : n ? 3 : u && t ? 2 : 1 * !!t;
 }
 function eV(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, I.bG)([N.default], () => N.default.locale),
-        { percentComplete: r } = eU(e),
-        u = ek(e),
+        { percentComplete: r } = ek(e),
+        u = eU(e),
         i = null != u ? u.percentComplete : r,
         l = 100 * i,
         o = null == u || t ? (0, T.l9)(n, i, { roundingMode: "floor" }) : `${u?.progress}/${u?.target}`;
@@ -706,8 +706,8 @@ function ex(e, t) {
     ];
 }
 function eY(e) {
-    let t = ek(e),
-        n = eU(e),
+    let t = eU(e),
+        n = ek(e),
         [r] = ex(e, n),
         u = ev(e),
         i = e.userStatus?.enrolledAt != null,
@@ -715,8 +715,8 @@ function eY(e) {
         o = f.o.DESKTOP.has(n.taskType) && n.percentComplete > 0,
         a = 0 === n.percentComplete,
         s = i && !l && !u && null == t && (o || (a && r === q.X0.DESKTOP)),
-        c = (0, U.HZ)() && s && !(0, Z.W1)(e),
-        d = (0, U.cX)() && n.taskType === f.n.STREAM_ON_DESKTOP && s,
+        c = (0, k.HZ)() && s && !(0, Z.W1)(e),
+        d = (0, k.cX)() && n.taskType === f.n.STREAM_ON_DESKTOP && s,
         A = [];
     return (d && A.push(eo.intl.string(eo.t.MFGxFM)), c && A.push(eo.intl.string(eo.t.BV6xDm)), A);
 }
@@ -774,7 +774,7 @@ function ez(e) {
         u = (0, ee.$5)(e),
         i = (0, ee.Y7)(e),
         l = (0, ee.JX)(e),
-        o = (0, k.TW)(t, el.PremiumTypes.TIER_2);
+        o = (0, U.TW)(t, el.PremiumTypes.TIER_2);
     if (null == r) return eo.intl.formatToPlainString(eo.t.l9uXL8, { decorationName: n });
     let a = eo.intl.formatToPlainString(eo.t.o97tNn, { rewardName: n }),
         s = eo.intl.formatToPlainString(eo.t.PkyRZo, { rewardName: n, expirationDate: u }),
@@ -811,7 +811,7 @@ function e5() {
     let e = (0, I.yK)([G.A], () => [...G.A.quests.values()]);
     return l.useMemo(() => e.filter((e) => e.preview), [e]);
 }
-function e6() {
+function e9() {
     let e = eu.pc;
     return l.useMemo(
         () =>
@@ -822,7 +822,7 @@ function e6() {
         [e],
     );
 }
-function e9() {
+function e6() {
     return l.useMemo(() => Object.keys(eu.kL).map((e) => ({ label: (0, Y.Js)(eu.kL[e]), value: eu.kL[e] })), []);
 }
 function e7(e) {

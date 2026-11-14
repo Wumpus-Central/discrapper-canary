@@ -12,11 +12,11 @@ var l = n(477900),
     h = n(454688),
     p = n(325802),
     f = n(212407),
-    x = n(758836),
-    E = n(652215),
+    E = n(758836),
+    x = n(652215),
     v = n(792996),
     C = n(762917);
-function _(e) {
+function A(e) {
     let { skuId: t, unpublishedAt: n } = e,
         r = (0, d.ty)(t),
         s = (0, g.$)(r) ? r : null;
@@ -36,27 +36,27 @@ n.d(
                     category: n,
                     subblock: a,
                     enablePreview: c,
-                    pageType: d = x.G2.HOME,
+                    pageType: d = E.G2.HOME,
                     handleTransition: g,
                     listItemProps: p,
                 } = e,
                 y = a?.categorySkuId;
             null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
-            let b = y ?? n?.skuId ?? "",
-                { handleCardVisibilityChange: A } = (0, m.Z)(b, d, "marketing featured block"),
-                I = (0, f.s4)(n, a, c),
-                S = r.useRef(null),
-                L = a?.bodyText,
+            let _ = y ?? n?.skuId ?? "",
+                { handleCardVisibilityChange: b } = (0, m.Z)(_, d, "marketing featured block"),
+                S = (0, f.s4)(n, a, c),
+                L = r.useRef(null),
+                I = a?.bodyText,
                 k = n?.isOrbsExclusive,
                 j = a?.name ?? n?.name,
                 N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
                 O = (0, o.uM)(),
-                T = r.useCallback(
+                R = r.useCallback(
                     (e, t) => {
-                        (g({ sourceButton: e, categorySkuId: b, isInternalShopDeeplink: !0, isOrbsExclusive: k }),
-                            i.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        (g({ sourceButton: e, categorySkuId: _, isInternalShopDeeplink: !0, isOrbsExclusive: k }),
+                            i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: O?.sessionId,
-                                sku_id: b,
+                                sku_id: _,
                                 page_type: d,
                                 page_section: O?.pageSection,
                                 page_category: O?.pageCategory,
@@ -65,31 +65,31 @@ n.d(
                                 cta_name: t,
                             }));
                     },
-                    [g, b, k, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [g, _, k, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
-                R = r.useCallback(() => {
-                    T("shop marketing take me there button", "Take me there button");
-                }, [T]),
-                M = r.useCallback(() => {
-                    T("shop marketing tile", null);
-                }, [T]);
+                T = r.useCallback(() => {
+                    R("shop marketing take me there button", "Take me there button");
+                }, [R]),
+                D = r.useCallback(() => {
+                    R("shop marketing tile", null);
+                }, [R]);
             return (0, l.jsx)(s.L, {
-                innerRef: S,
-                onChange: A,
+                innerRef: L,
+                onChange: b,
                 threshold: 0,
                 children: (0, l.jsx)(h.Ay, {
                     layout: t,
-                    innerRef: S,
-                    backgroundImageUrl: I,
+                    innerRef: L,
+                    backgroundImageUrl: S,
                     title:
-                        null != L
-                            ? { text: L, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
+                        null != I
+                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
                             : void 0,
-                    badge: (0, l.jsx)(_, { skuId: b, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
+                    badge: (0, l.jsx)(A, { skuId: _, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: v.intl.string(v.t.jVcuVY),
                     "aria-label": N,
-                    onButtonClick: R,
-                    onBlockClick: M,
+                    onButtonClick: T,
+                    onBlockClick: D,
                     listItemProps: p,
                 }),
             });

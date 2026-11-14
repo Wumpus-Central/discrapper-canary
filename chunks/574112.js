@@ -6,7 +6,7 @@
     se: () => G,
     v0: () => b,
     b6: () => Q,
-    pu: () => k,
+    pu: () => U,
     Ps: () => q,
     bg: () => L,
     UR: () => v,
@@ -127,7 +127,7 @@ function M(e) {
     }
     return null;
 }
-function U(e) {
+function k(e) {
     let {
         link: t,
         directLink: n,
@@ -140,7 +140,7 @@ function U(e) {
     } = e;
     return (_.OO.getConfig({ location: "quest_open_game_link" }).enabled, s && (0, o.A)(t), Promise.resolve(!1));
 }
-function k(e, t) {
+function U(e, t) {
     let n,
         i,
         l,
@@ -165,7 +165,7 @@ function k(e, t) {
     let { impressionId: A } = t,
         T = null != A ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     (E._.dispatch(h.jej.QUEST_GAME_LINK_OPENED),
-        U({
+        k({
             link: o,
             directLink: f,
             inlineStoreParams:
@@ -263,7 +263,7 @@ function D(e, t) {
             ((0, o.A)(f), g(!1));
             return;
         }
-        U({
+        k({
             link: f,
             directLink: A,
             inlineStoreParams: m,

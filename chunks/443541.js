@@ -5,8 +5,8 @@ var i = n(939249),
     r = n(834730),
     a = n(61387),
     o = n(576761),
-    c = n(321538),
-    u = n(792996),
+    u = n(321538),
+    c = n(792996),
     d = n(41327);
 n.d(
     t,
@@ -15,14 +15,14 @@ n.d(
         f: function (e) {
             let { onClick: t, questId: n, orbMultiplierEligibility: x } = e,
                 m = (0, a.ZP)(n),
-                C = (0, o.B9)(x);
+                E = (0, o.B9)(x);
             if (null == m) return null;
-            let h = C
-                ? u.intl.formatToPlainString(u.t.l2UfLG, { bonusOrbMultiplier: m })
-                : u.intl.formatToPlainString(u.t["G+mKoo"], { bonusOrbMultiplier: m });
+            let h = E
+                ? c.intl.formatToPlainString(c.t.l2UfLG, { bonusOrbMultiplier: m })
+                : c.intl.formatToPlainString(c.t["G+mKoo"], { bonusOrbMultiplier: m });
             return (0, s.jsx)(i.D, {
                 onClick: function (e) {
-                    null != m && (e.stopPropagation(), (0, c.gC)(m, x), t?.());
+                    null != m && (e.stopPropagation(), (0, u.gC)(m, x), t?.());
                 },
                 "aria-label": h,
                 children: (0, s.jsxs)("div", {

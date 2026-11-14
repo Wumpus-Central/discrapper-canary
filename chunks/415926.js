@@ -33,7 +33,7 @@ n.d(
                 h = (0, r.I)(d, 5e3, [], { trailing: !0 }),
                 p = (0, a.uM)(),
                 f = p?.sessionId,
-                x =
+                E =
                     ((n = l.useRef(0)),
                     (s = l.useRef(!1)),
                     (u = l.useRef(!1)),
@@ -84,7 +84,7 @@ n.d(
                     ));
             return {
                 handleScroll: l.useCallback(() => {
-                    if (x() && null != e.current) {
+                    if (E() && null != e.current) {
                         let t = e.current.getScrollerNode();
                         null != t &&
                             h(o.HAw.COLLECTIBLES_SHOP_SCROLLED, null != f ? f : "", g, {
@@ -94,7 +94,7 @@ n.d(
                                 scrollWidth: t.scrollWidth,
                             });
                     }
-                }, [h, g, f, e, x]),
+                }, [h, g, f, e, E]),
             };
         },
     },

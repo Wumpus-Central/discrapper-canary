@@ -25,9 +25,9 @@ n.d(
                     redemptionEndsAt: e.redemptionEndsAt,
                     helpCenterId: h.shared.helpCenter?.id,
                 },
-                x = p?.title != null && "" !== p.title ? (0, l.U)((0, a.wJ)(p.title, f)) : t.title,
-                E = p?.description != null && "" !== p.description ? (0, l.U)((0, a.wJ)(p.description, f)) : t.summary;
-            if (h.subtype === r.h5.BASIC) return { ...t, title: x, summary: E };
+                E = p?.title != null && "" !== p.title ? (0, l.U)((0, a.wJ)(p.title, f)) : t.title,
+                x = p?.description != null && "" !== p.description ? (0, l.U)((0, a.wJ)(p.description, f)) : t.summary;
+            if (h.subtype === r.h5.BASIC) return { ...t, title: E, summary: x };
             let v =
                 p?.rewardStates != null
                     ? ((c = p.rewardStates),
@@ -37,8 +37,8 @@ n.d(
                     : void 0;
             return {
                 ...t,
-                title: x,
-                summary: E,
+                title: E,
+                summary: x,
                 heroBannerUrl: v ?? t.heroBannerUrl,
                 heroBannerAnimatedUrl: void 0,
                 heroRiveUrl: void 0,

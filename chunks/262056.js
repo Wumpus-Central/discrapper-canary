@@ -19,9 +19,9 @@ n.d(
     {
         A: function (e) {
             let { current: t, target: n, progressColor: r = d, segmentGap: p = 4, children: f } = e,
-                x = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
-                E = Math.round(n);
-            if (E > 1 && E <= 12) {
+                E = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+                x = Math.round(n);
+            if (x > 1 && x <= 12) {
                 let e, n, i;
                 return (0, l.jsxs)("div", {
                     className: u.iE,
@@ -31,12 +31,12 @@ n.d(
                             className: u.hN,
                             viewBox: "0 0 120 120",
                             children: ((e = p / 60),
-                            (n = (0, a.clamp)(Math.floor(t), 0, E)),
-                            (i = (2 * Math.PI) / E),
-                            Array.from({ length: E }, (t, l) => {
+                            (n = (0, a.clamp)(Math.floor(t), 0, x)),
+                            (i = (2 * Math.PI) / x),
+                            Array.from({ length: x }, (t, l) => {
                                 let r = g + l * i + e / 2;
                                 return {
-                                    key: `${E}-${l}`,
+                                    key: `${x}-${l}`,
                                     d: `M ${h(r)} A 57 57 0 0 1 ${h(r + i - e)}`,
                                     isFilled: l < n,
                                 };
@@ -47,7 +47,7 @@ n.d(
                                         children: [
                                             (0, l.jsx)("path", { className: u.u4, d: e.d, strokeWidth: 6, stroke: m }),
                                             (0, l.jsx)("path", {
-                                                className: s()(u.mX, { [u.Vr]: !x }),
+                                                className: s()(u.mX, { [u.Vr]: !E }),
                                                 d: e.d,
                                                 strokeWidth: 6,
                                                 stroke: r,
@@ -75,7 +75,7 @@ n.d(
                         children: [
                             (0, l.jsx)("circle", { className: u.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: m }),
                             (0, l.jsx)("circle", {
-                                className: s()(u.M0, { [u.Vr]: !x }),
+                                className: s()(u.M0, { [u.Vr]: !E }),
                                 cx: 60,
                                 cy: 60,
                                 r: 57,

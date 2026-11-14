@@ -46,12 +46,12 @@ n.d(
                     { title: a?.title ?? c.title, description: a?.description ?? c.description }),
                 p = { locale: g, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
                 f = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
-                x = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
+                E = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
             return {
                 title: u(h.title, p),
                 description: ((l = h.description), null != l && "" !== l ? u(l, p) : null),
                 progressText: f,
-                timeLeftText: x,
+                timeLeftText: E,
             };
         },
         wJ: u,

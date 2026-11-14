@@ -1,26 +1,26 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => C });
 var i = n(435558),
     r = n.n(i),
-    a = n(855986),
-    s = n(73153),
-    l = n(619019),
+    l = n(855986),
+    a = n(73153),
+    s = n(619019),
     o = n(287809),
     u = n(38910);
 let d = {},
     c = 0,
     S = !1,
-    _ = !1;
-function h(e) {
+    E = !1;
+function _(e) {
     let t = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
         name: r().first(e.reasons)?.name,
-        user: new l.A(e.suggested_user),
+        user: new s.A(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: t,
     };
 }
-class E extends a.Ay.Store {
+class h extends l.Ay.Store {
     static displayName = "FriendSuggestionStore";
     initialize() {
         this.waitFor(o.default);
@@ -38,17 +38,17 @@ class E extends a.Ay.Store {
         return d[e];
     }
 }
-let p = new E(s.h, {
+let C = new h(a.h, {
     CONNECTION_OPEN: function (e) {
         ((d = {}),
             (c = e.friendSuggestionCount) > 0
-                ? ((_ = !0), !S && _ && ((S = !0), (_ = !1), u.A.fetch()))
+                ? ((E = !0), !S && E && ((S = !0), (E = !1), u.A.fetch()))
                 : (function () {
                       arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                   })());
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
-        let t = h(e.suggestion);
+        let t = _(e.suggestion);
         if (null != d[t.key]) return !1;
         (c++, (d = { ...d, [t.key]: t }));
     },
@@ -61,7 +61,7 @@ let p = new E(s.h, {
             (t = e.suggestions),
             (d = r()
                 .chain(t)
-                .map((e) => h(e))
+                .map((e) => _(e))
                 .keyBy((e) => e.key)
                 .value()),
             (c = r().keys(d).length));

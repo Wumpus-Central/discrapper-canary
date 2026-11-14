@@ -1,4 +1,4 @@
-_.exports = {
+t.exports = {
     nM: "row_rAadqU",
     DD: "title_rAadqU",
     UU: "name_rAadqU",

@@ -23,8 +23,8 @@ n.d(
                     onButtonClick: h,
                     onBlockClick: p,
                     badge: f,
-                    innerRef: x,
-                    listItemProps: E,
+                    innerRef: E,
+                    listItemProps: x,
                 } = e,
                 v = s.useId(),
                 C = s.useCallback(
@@ -34,9 +34,9 @@ n.d(
                     [h],
                 );
             return (0, r.jsxs)(o.D, {
-                ...E,
+                ...x,
                 className: i()(d.iC, g[t]),
-                innerRef: x,
+                innerRef: E,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
                 "aria-describedby": null != l ? v : void 0,

@@ -18,7 +18,7 @@ n.d(
                 h = (0, c.o)(),
                 p = a.Ay.canUseShopDiscounts(h),
                 f = l.useRef(null),
-                x = l.useCallback(() => {
+                E = l.useCallback(() => {
                     let l = null != g ? (0, u.Br)(g, p, !1) : null,
                         r = null != g ? (0, u.c7)(g, p, !1) : void 0;
                     s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
@@ -46,16 +46,16 @@ n.d(
                     e,
                     n,
                 ]),
-                E = l.useCallback(
+                x = l.useCallback(
                     (e) => {
                         e
                             ? null === f.current &&
                               (f.current = setTimeout(() => {
-                                  (x(), (f.current = null));
+                                  (E(), (f.current = null));
                               }, 1e3))
                             : null !== f.current && (clearTimeout(f.current), (f.current = null));
                     },
-                    [x],
+                    [E],
                 );
             return (
                 l.useEffect(
@@ -64,7 +64,7 @@ n.d(
                     },
                     [e],
                 ),
-                { handleCardVisibilityChange: E }
+                { handleCardVisibilityChange: x }
             );
         },
     },

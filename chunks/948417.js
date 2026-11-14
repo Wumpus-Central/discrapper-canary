@@ -57,20 +57,20 @@ n.d(
                         } = e,
                         { userStatus: f, preview: g } = i.A.getQuest(t.id) ?? {},
                         A = [],
-                        j = null != f && null != f.enrolledAt && null != f.completedAt && null == f.claimedAt;
-                    if ((0, l.kd)(t) && !j) return x ? [u.gi.EXPIRED] : null;
+                        v = null != f && null != f.enrolledAt && null != f.completedAt && null == f.claimedAt;
+                    if ((0, l.kd)(t) && !v) return x ? [u.gi.EXPIRED] : null;
                     if (
                         (s.has(t.id) && A.push(u.gi.DISCOVERED),
                         m && !0 === g && A.push(u.gi.PREVIEW),
                         null != f && null != f.enrolledAt && null == f.claimedAt)
                     )
                         return [...A, u.gi.IN_PROGRESS];
-                    let S = !E(t);
-                    return S && null != n && (0, a.I0)(n, t.id) && h(u.gi.FEATURED, o)
+                    let j = !E(t);
+                    return j && null != n && (0, a.I0)(n, t.id) && h(u.gi.FEATURED, o)
                         ? [...A, u.gi.FEATURED]
                         : new Date(t.expiresAt).valueOf() <= Date.now() + (C ? d : c)
                           ? [...A, u.gi.ENDING_SOON]
-                          : S && h(u.gi.FEATURED, o)
+                          : j && h(u.gi.FEATURED, o)
                             ? [...A, u.gi.FEATURED]
                             : (0, r.ks)(t)
                               ? [...A, u.gi.ORB]

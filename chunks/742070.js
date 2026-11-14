@@ -15,35 +15,35 @@ var s = n(477900),
     f = n(79545),
     g = n(662940),
     A = n(535618),
-    j = n(792996),
-    S = n(853978);
+    v = n(792996),
+    j = n(853978);
 n.d(
     t,
     {},
     {
         Q: function (e) {
             let { quest: t, isHovering: n = !1, content: l } = e,
-                v = (0, f.Pd)(t),
-                I = (0, a.bG)([h.A], () => v === f.UA.UNENROLLED && null != h.A.questEnrollmentBlockedUntil, [v]),
+                S = (0, f.Pd)(t),
+                I = (0, a.bG)([h.A], () => S === f.UA.UNENROLLED && null != h.A.questEnrollmentBlockedUntil, [S]),
                 N = (0, C.fc)(t),
                 p = (0, C.I3)(t),
-                O = i.useMemo(() => (0, g.Dd)(t.config, v, I), [t.config, v, I]),
-                y = i.useMemo(() => (0, g.CK)(v, N, p, I), [v, N, p, I]),
+                O = i.useMemo(() => (0, g.Dd)(t.config, S, I), [t.config, S, I]),
+                y = i.useMemo(() => (0, g.CK)(S, N, p, I), [S, N, p, I]),
                 T = (0, A.A)(t, null == l),
                 q = null != l ? l.leadingText : (T ?? O),
                 w = null == l || l.showTask ? y : null;
             return null != l && null == q && null == w
                 ? null
                 : (0, s.jsxs)("div", {
-                      className: r()(S.fC, { [S.R]: n }),
+                      className: r()(j.fC, { [j.R]: n }),
                       children: [
                           (0, s.jsxs)("div", {
-                              className: S.qS,
+                              className: j.qS,
                               children: [
                                   null != q &&
                                       (0, s.jsx)(E.E, {
                                           variant: "body-xs/semibold",
-                                          className: S.SJ,
+                                          className: j.SJ,
                                           color: "text-overlay-light",
                                           children: q,
                                       }),
@@ -52,15 +52,15 @@ n.d(
                                       (0, s.jsx)(E.E, {
                                           variant: "body-xs/semibold",
                                           color: "text-overlay-light",
-                                          className: S.If,
+                                          className: j.If,
                                           children: "\u2022",
                                       }),
                                   null != w &&
                                       (0, s.jsxs)("span", {
-                                          className: S.BA,
+                                          className: j.BA,
                                           children: [
                                               (function (e, t) {
-                                                  let n = { size: "xxs", className: S.rF, color: "currentColor" };
+                                                  let n = { size: "xxs", className: j.rF, color: "currentColor" };
                                                   if (t) return (0, s.jsx)(o.HourglassIcon, { ...n });
                                                   switch ((0, g.pv)(e)) {
                                                       case g.UK.PLAY:
@@ -88,11 +88,11 @@ n.d(
                           t.preview &&
                               null == l &&
                               (0, s.jsx)("div", {
-                                  className: r()(S.qS, S.WZ),
+                                  className: r()(j.qS, j.WZ),
                                   children: (0, s.jsx)(E.E, {
                                       variant: "body-xs/semibold",
                                       color: "currentColor",
-                                      children: j.intl.string(j.t.SKNnqq),
+                                      children: v.intl.string(v.t.SKNnqq),
                                   }),
                               }),
                       ],
