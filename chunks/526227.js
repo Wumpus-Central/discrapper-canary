@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673657, Version Hash: f5718cc740f262c5762966ae7f2c106601595e84`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673661, Version Hash: fc0ac4c29033262b03383999d7b104ade2bd4514`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673657";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673661";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15914,7 +15914,7 @@ let p_ = "isHideDevBanner",
                     className: td()(pu.Wz, pu.mr),
                     children: [
                         (0, v.jsx)(pc, { className: pu.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673657" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673661" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -16407,51 +16407,51 @@ function mr() {
         }, [n, r]);
     })();
     let e = !(0, e_.bG)([pm.Ay], () => pm.Ay.getSettings().showPovClipsInGallery),
-        { isOpen: t, applicationId: n } = (0, pR.sY)(),
-        { isQuestBarEmpty: i } = (0, pF.c9)(),
-        r = (0, e_.yK)([pm.Ay], () => pm.Ay.getLastClipsSession()?.clipIds ?? mn),
-        a = eh.useMemo(() => {
-            if (null == n || 0 === r.length) return mi;
-            let t = r
+        { isOpen: t, openedAt: n, applicationId: i } = (0, pR.sY)(),
+        { isQuestBarEmpty: r } = (0, pF.c9)(),
+        a = (0, e_.yK)([pm.Ay], () => pm.Ay.getLastClipsSession()?.clipIds ?? mn),
+        s = eh.useMemo(() => {
+            if (null == i || 0 === a.length) return mi;
+            let t = a
                 .map((e) => pm.Ay.getClipById(e))
-                .filter((e) => null != e && e.applicationId === n)
+                .filter((e) => null != e && e.applicationId === i)
                 .filter((t) => !e || !(0, pN.kD)(t));
             return (0, pN.uu)(t, pS.mu.MOST_RECENT);
-        }, [n, r, e]),
-        { gameRecord: s } = (0, pD.Ay)(n),
-        [l, o] = eh.useState(!1),
-        d = eh.useCallback(() => o(!0), []),
-        c = eh.useCallback(() => o(!1), []),
-        u = (0, _l.A)({
-            applicationId: n ?? void 0,
+        }, [i, a, e]),
+        { gameRecord: l } = (0, pD.Ay)(i),
+        [o, d] = eh.useState(!1),
+        c = eh.useCallback(() => d(!0), []),
+        u = eh.useCallback(() => d(!1), []),
+        _ = (0, _l.A)({
+            applicationId: i ?? void 0,
             location: "ClipsReminder",
             source: _s.GameProfileSources.ClipsReminder,
         }),
-        _ = eh.useCallback(() => {
+        E = eh.useCallback(() => {
             ((0, pC.p)(), (0, pR.kF)());
         }, []),
-        E = i && t && null != n && a.length > 0;
+        A = r && t && null != i && s.length > 0;
     return (0, v.jsxs)(v.Fragment, {
         children: [
             (0, v.jsx)(pk, {
-                shouldShow: E,
+                shouldShow: A,
                 duration: mt,
                 onDismiss: pR.kF,
                 dismissAriaLabel: tN.intl.string(tN.t["9CE7R5"]),
                 wrapperClassName: me.nd,
                 renderBody: (e) => {
-                    let t = a.slice(0, 3),
-                        n = s?.name ?? "",
-                        i = a.length,
-                        r = a.some((e) => "auto" === e.clipMethod),
-                        o = t[0]?.thumbnail,
-                        E = null != o ? { backgroundImage: `url(${o})` } : void 0;
+                    let t = s.slice(0, 3),
+                        i = l?.name ?? "",
+                        r = s.length,
+                        a = s.some((e) => "auto" === e.clipMethod),
+                        d = t[0]?.thumbnail,
+                        A = null != d ? { backgroundImage: `url(${d})` } : void 0;
                     return (0, v.jsxs)("div", {
                         className: me.rf,
-                        onMouseEnter: d,
-                        onMouseLeave: c,
+                        onMouseEnter: c,
+                        onMouseLeave: u,
                         children: [
-                            null != E && (0, v.jsx)("div", { className: me.tB, style: E, "aria-hidden": "true" }),
+                            null != A && (0, v.jsx)("div", { className: me.tB, style: A, "aria-hidden": "true" }),
                             (0, v.jsx)("div", {
                                 className: me.l$,
                                 children: (0, v.jsxs)("div", {
@@ -16459,14 +16459,14 @@ function mr() {
                                     children: [
                                         (0, v.jsx)(tc.D, {
                                             className: me.JS,
-                                            onClick: _,
+                                            onClick: E,
                                             "aria-label": tN.intl.string(Io.default.V472rn),
                                             children: (0, v.jsx)(p5, {
                                                 className: me.c3,
                                                 clips: t,
                                                 withShadow: !0,
                                                 playTopOnHover: !0,
-                                                hovered: l,
+                                                hovered: o,
                                                 animateIn: !0,
                                                 exiting: e === pw.EXITING,
                                             }),
@@ -16482,28 +16482,28 @@ function mr() {
                                     (0, v.jsxs)("div", {
                                         className: me.IL,
                                         children: [
-                                            (0, v.jsx)(_a.A, { className: me.Gt, game: s, size: _a.M.SMALL }),
-                                            null != u
+                                            (0, v.jsx)(_a.A, { className: me.Gt, game: l, size: _a.M.SMALL }),
+                                            null != _
                                                 ? (0, v.jsx)(tc.D, {
                                                       tag: "span",
                                                       className: me.gH,
-                                                      onClick: u,
+                                                      onClick: _,
                                                       children: (0, v.jsx)(rB.E, {
                                                           variant: "body-sm/semibold",
                                                           color: "text-strong",
                                                           className: me.mO,
-                                                          children: n,
+                                                          children: i,
                                                       }),
                                                   })
                                                 : (0, v.jsx)(rB.E, {
                                                       variant: "body-sm/semibold",
                                                       color: "text-strong",
                                                       className: me.mO,
-                                                      children: n,
+                                                      children: i,
                                                   }),
                                         ],
                                     }),
-                                    r ? (0, v.jsx)(pZ, { count: i }) : (0, v.jsx)(pJ, { count: i }),
+                                    a ? (0, v.jsx)(pZ, { count: r }, n ?? void 0) : (0, v.jsx)(pJ, { count: r }),
                                 ],
                             }),
                             (0, v.jsx)(ts.$, {
@@ -16511,13 +16511,13 @@ function mr() {
                                 size: "sm",
                                 fullWidth: !0,
                                 text: tN.intl.string(Io.default.V472rn),
-                                onClick: _,
+                                onClick: E,
                             }),
                         ],
                     });
                 },
             }),
-            (0, v.jsx)(pQ, { suppressed: !i || E }),
+            (0, v.jsx)(pQ, { suppressed: !r || A }),
         ],
     });
 }
