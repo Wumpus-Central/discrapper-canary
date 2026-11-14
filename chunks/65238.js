@@ -1,6 +1,7 @@
-var i = n(315069),
-    r = n(604913);
-class a extends i.A {
+var i = n(619953),
+    r = n(315069),
+    a = n(604913);
+class s extends r.A {
     id;
     applicationId;
     name;
@@ -17,8 +18,8 @@ class a extends i.A {
     progress;
     tenantMetadata;
     static createFromServer(e) {
-        var t, n, i;
-        return new a({
+        var t, n, r;
+        return new s({
             id: e.id,
             applicationId: e.application_id,
             name: e.name ?? null,
@@ -66,23 +67,23 @@ class a extends i.A {
                 null != e.tenant_metadata
                     ? {
                           collectibles:
-                              null != (i = e.tenant_metadata).collectibles
+                              null != (r = e.tenant_metadata).collectibles
                                   ? (function (e) {
-                                        var t, n, i, a;
+                                        var t, n, r, s;
                                         switch (e.type) {
-                                            case r.hE.COLLECT_AND_CLAIM:
+                                            case a.hE.COLLECT_AND_CLAIM:
                                                 switch (e.subtype) {
-                                                    case r.h5.TAKEOVER:
+                                                    case a.h5.TAKEOVER:
                                                         return (
                                                             (t = e),
                                                             {
-                                                                type: r.hE.COLLECT_AND_CLAIM,
-                                                                subtype: r.h5.TAKEOVER,
+                                                                type: a.hE.COLLECT_AND_CLAIM,
+                                                                subtype: a.h5.TAKEOVER,
                                                                 collectionId: t.collection_id,
                                                                 shopHome: {
                                                                     title: t.shop_home.title,
                                                                     description: t.shop_home.description,
-                                                                    rewardStates: s(t.shop_home.reward_states),
+                                                                    rewardStates: l(t.shop_home.reward_states),
                                                                     style:
                                                                         null != t.shop_home.style
                                                                             ? {
@@ -93,7 +94,7 @@ class a extends i.A {
                                                                 },
                                                                 indexPage: {
                                                                     description: t.index_page.description,
-                                                                    rewardStates: s(t.index_page.reward_states),
+                                                                    rewardStates: l(t.index_page.reward_states),
                                                                     style:
                                                                         null != t.index_page.style
                                                                             ? {
@@ -102,15 +103,15 @@ class a extends i.A {
                                                                               }
                                                                             : void 0,
                                                                 },
-                                                                shared: l(t.shared),
+                                                                shared: o(t.shared),
                                                             }
                                                         );
-                                                    case r.h5.BASIC:
+                                                    case a.h5.BASIC:
                                                         return (
                                                             (n = e),
                                                             {
-                                                                type: r.hE.COLLECT_AND_CLAIM,
-                                                                subtype: r.h5.BASIC,
+                                                                type: a.hE.COLLECT_AND_CLAIM,
+                                                                subtype: a.h5.BASIC,
                                                                 collectionId: n.collection_id,
                                                                 shopHome: {
                                                                     title: n.shop_home.title,
@@ -133,67 +134,69 @@ class a extends i.A {
                                                                               }
                                                                             : void 0,
                                                                 },
-                                                                shared: l(n.shared),
+                                                                shared: o(n.shared),
                                                             }
                                                         );
                                                 }
                                                 break;
-                                            case r.hE.TARGETED_OFFER:
-                                                let o, d, c, u, _;
+                                            case a.hE.TARGETED_OFFER:
+                                                let d, c, u, _, E;
                                                 return (
-                                                    (i = e.reward),
-                                                    (o = i?.storefront?.nagbar),
-                                                    (d = i?.checkout?.offer_notice),
-                                                    (u =
-                                                        null == (c = i?.collected?.override_title) || "" === c
+                                                    (r = e.reward),
+                                                    (d = r?.storefront?.nagbar),
+                                                    (c = r?.checkout?.offer_notice),
+                                                    (_ =
+                                                        null == (u = r?.collected?.override_title) || "" === u
                                                             ? void 0
-                                                            : c),
-                                                    (_ = i?.flavor),
-                                                    null == o && null == d && null == u && null == _
-                                                        ? { type: r.hE.TARGETED_OFFER }
+                                                            : u),
+                                                    (E = r?.flavor),
+                                                    null == d && null == c && null == _ && null == E
+                                                        ? { type: a.hE.TARGETED_OFFER }
                                                         : {
-                                                              type: r.hE.TARGETED_OFFER,
+                                                              type: a.hE.TARGETED_OFFER,
                                                               reward: {
                                                                   storefront:
-                                                                      null != o
+                                                                      null != d
                                                                           ? {
                                                                                 nagbar: {
-                                                                                    headerText: o.header_text ?? void 0,
+                                                                                    headerText: d.header_text ?? void 0,
                                                                                     cta:
-                                                                                        null != o.cta
+                                                                                        null != d.cta
                                                                                             ? {
                                                                                                   text:
-                                                                                                      o.cta.text ??
+                                                                                                      d.cta.text ??
                                                                                                       void 0,
                                                                                               }
                                                                                             : void 0,
                                                                                     helpCenterId:
-                                                                                        o.help_center_id ?? void 0,
-                                                                                    icon: o.icon ?? void 0,
+                                                                                        d.help_center_id ?? void 0,
+                                                                                    icon: d.icon ?? void 0,
                                                                                 },
                                                                             }
                                                                           : void 0,
                                                                   checkout:
-                                                                      null != d
+                                                                      null != c
                                                                           ? {
                                                                                 offerNotice: {
-                                                                                    icon: d.icon ?? void 0,
-                                                                                    text: d.text ?? void 0,
+                                                                                    icon: c.icon ?? void 0,
+                                                                                    text: c.text ?? void 0,
                                                                                 },
                                                                             }
                                                                           : void 0,
-                                                                  collected: null != u ? { overrideTitle: u } : void 0,
-                                                                  flavor: _ ?? void 0,
+                                                                  collected: null != _ ? { overrideTitle: _ } : void 0,
+                                                                  flavor: E ?? void 0,
                                                               },
                                                           }
                                                 );
-                                            case r.hE.COLLECTION_SALE:
+                                            case a.hE.COLLECTION_SALE:
                                                 return (function (e) {
                                                     let { navigation: t } = e;
                                                     return {
-                                                        type: r.hE.COLLECTION_SALE,
+                                                        type: a.hE.COLLECTION_SALE,
                                                         collectionId: e.collection_id,
                                                         countdownStyle: e.countdown_style,
+                                                        showCountdownCta: e.show_countdown_cta ?? !0,
+                                                        countdownPosition: e.countdown_position ?? i.l.RIGHT,
                                                         showUpsellBlocks: e.show_upsell_blocks ?? !1,
                                                         navigation:
                                                             t?.tab != null
@@ -201,17 +204,17 @@ class a extends i.A {
                                                                 : void 0,
                                                     };
                                                 })(e);
-                                            case r.hE.COLLECTION_SEQUENCED_OFFER:
+                                            case a.hE.COLLECTION_SEQUENCED_OFFER:
                                                 return (
-                                                    (a = e),
+                                                    (s = e),
                                                     {
-                                                        type: r.hE.COLLECTION_SEQUENCED_OFFER,
-                                                        collectionId: a.collection_id,
-                                                        position: a.position,
+                                                        type: a.hE.COLLECTION_SEQUENCED_OFFER,
+                                                        collectionId: s.collection_id,
+                                                        position: s.position,
                                                     }
                                                 );
                                         }
-                                    })(i.collectibles)
+                                    })(r.collectibles)
                                   : void 0,
                       }
                     : null,
@@ -236,14 +239,14 @@ class a extends i.A {
             (this.tenantMetadata = e.tenantMetadata));
     }
 }
-function s(e) {
+function l(e) {
     return {
         inProgress: { progressSteps: e.in_progress.progress_steps.map((e) => ({ heroUrl: e.hero_url })) },
         earned: { heroUrl: e.earned.hero_url },
         consumed: { heroUrl: e.consumed.hero_url },
     };
 }
-function l(e) {
+function o(e) {
     var t;
     let { progress_indicator: n, navigation: i, help_center: r } = e;
     return {
@@ -255,10 +258,10 @@ function l(e) {
                     ? {
                           inProgress:
                               null != (t = n.indicator_reward_states).in_progress
-                                  ? { progressSteps: t.in_progress.progress_steps.map(o) }
+                                  ? { progressSteps: t.in_progress.progress_steps.map(d) }
                                   : void 0,
-                          earned: null != t.earned ? o(t.earned) : void 0,
-                          consumed: null != t.consumed ? o(t.consumed) : void 0,
+                          earned: null != t.earned ? d(t.earned) : void 0,
+                          consumed: null != t.consumed ? d(t.consumed) : void 0,
                       }
                     : void 0,
             assets: {
@@ -277,29 +280,29 @@ function l(e) {
         helpCenter: null != r ? { text: r.text, id: r.id } : void 0,
     };
 }
-function o(e) {
+function d(e) {
     return { title: e.title, description: e.description };
 }
 n.d(
     t,
     {},
     {
-        Ay: a,
+        Ay: s,
         NN: function (e) {
             let t = e?.tenantMetadata?.collectibles;
-            return t?.type === r.hE.COLLECTION_SALE ? t : void 0;
+            return t?.type === a.hE.COLLECTION_SALE ? t : void 0;
         },
         XF: function (e) {
             let t = e?.tenantMetadata?.collectibles;
-            return t?.type === r.hE.COLLECT_AND_CLAIM ? t : void 0;
+            return t?.type === a.hE.COLLECT_AND_CLAIM ? t : void 0;
         },
         d3: function (e) {
             let t = e?.tenantMetadata?.collectibles;
-            return t?.type === r.hE.COLLECTION_SEQUENCED_OFFER ? t : void 0;
+            return t?.type === a.hE.COLLECTION_SEQUENCED_OFFER ? t : void 0;
         },
         ml: function (e) {
             let t = e?.tenantMetadata?.collectibles;
-            return t?.type === r.hE.TARGETED_OFFER ? t : void 0;
+            return t?.type === a.hE.TARGETED_OFFER ? t : void 0;
         },
     },
 );

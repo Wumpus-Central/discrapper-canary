@@ -13,8 +13,8 @@ var n,
     h = t(688151);
 let p = new E.E([], h.$G.COLLECTIBLES_SHOP_OPEN, { location: "collectibles shop open" });
 var L = t(611924),
-    A = t(744082),
-    f = t(634110),
+    f = t(744082),
+    A = t(634110),
     x = t(371794),
     C = t(857512),
     I = t(662829),
@@ -105,7 +105,7 @@ var el = t(511265),
 function eL(e) {
     return e.id;
 }
-function eA(e) {
+function ef(e) {
     let { block: l, listItemProps: t } = e,
         n = (0, C.uM)(),
         { onCtaClick: s } = l,
@@ -140,7 +140,7 @@ function eA(e) {
         listItemProps: t,
     });
 }
-function ef(e) {
+function eA(e) {
     let { block: l, index: t, listItemProps: n } = e,
         s = a.useMemo(
             () => ({
@@ -151,10 +151,10 @@ function ef(e) {
             }),
             [l.id, t],
         );
-    return (0, r.jsx)(C.R9, { newValue: s, children: (0, r.jsx)(eA, { block: l, listItemProps: n }) });
+    return (0, r.jsx)(C.R9, { newValue: s, children: (0, r.jsx)(ef, { block: l, listItemProps: n }) });
 }
 function ex(e, l, t) {
-    return (0, r.jsx)(ef, { block: e, index: t, listItemProps: l });
+    return (0, r.jsx)(eA, { block: e, index: t, listItemProps: l });
 }
 function eC(e) {
     let { section: l } = e;
@@ -263,8 +263,8 @@ let eO = (e) => {
                 onReveal: h,
             } = e,
             p = a.useMemo(() => ({ ...E, "--custom-calendar-tile-aspect-ratio": d }), [E, d]),
-            [L, A] = ev(i),
-            [f, x] = ev(c),
+            [L, f] = ev(i),
+            [A, x] = ev(c),
             C = a.useRef(null),
             I = a.useRef(!1),
             g = a.useCallback(() => {
@@ -286,8 +286,8 @@ let eO = (e) => {
                 l = (0, r.jsx)(ey, {
                     day: t,
                     lockedAssetUrl: L,
-                    hintAssetUrl: f,
-                    onLockedAssetError: A,
+                    hintAssetUrl: A,
+                    onLockedAssetError: f,
                     onHintAssetError: x,
                     onReveal: g,
                 });
@@ -297,8 +297,8 @@ let eO = (e) => {
                 l = (0, r.jsx)(eP, {
                     day: t,
                     lockedAssetUrl: L,
-                    hintAssetUrl: n === eN.HINT ? f : null,
-                    onLockedAssetError: A,
+                    hintAssetUrl: n === eN.HINT ? A : null,
+                    onLockedAssetError: f,
                     onHintAssetError: x,
                 });
         }
@@ -322,7 +322,7 @@ var eB = t(517352),
     eK = t(196231),
     eW = t(64018),
     e$ = t(643306),
-    eQ = t(265351);
+    eQ = t(945152);
 let eX = (e) => {
     let { heroBlock: l, handleTransition: t } = e,
         { collectionPromotion: n, handlePromotionEnd: s } = (0, e$.A)(l.categorySkuId);
@@ -334,7 +334,7 @@ let eX = (e) => {
               tab: eh.G2.COLLECTION_INDEX,
               onPromotionEnd: s,
               hideCards: !0,
-              hideCountdownCTA: !0,
+              forceHideCountdownCta: !0,
           })
         : (0, r.jsx)(eW.A, { heroBlock: l, isLoading: !1, tab: eh.G2.COLLECTION_INDEX, hideButton: !0, hideCards: !0 });
 };
@@ -470,7 +470,7 @@ let e2 = [4, 3, 2],
             }, [s, n]),
             p = new Date(),
             L = null != c && c <= p,
-            A = (function (e) {
+            f = (function (e) {
                 let { positions: l, openPosition: t } = e,
                     n = t ?? 0,
                     s = l.filter((e) => e > n);
@@ -518,7 +518,7 @@ let e2 = [4, 3, 2],
                             })({
                                 position: s,
                                 openPosition: n,
-                                hintPosition: A,
+                                hintPosition: f,
                                 isOpenPositionRevealed: E,
                                 hasCampaignEnded: L,
                             }),
@@ -537,13 +537,13 @@ let e2 = [4, 3, 2],
             }),
         });
     },
-    e8 = (e) => {
+    e4 = (e) => {
         let { sequencedOffers: l, products: t, filteredProducts: n, openPosition: s } = e;
         return ee.useConfig({ location: "collection_index_page" }).enabled
             ? (0, r.jsx)(e6, { sequencedOffers: l, products: t, openPosition: s })
             : (0, r.jsx)(e1, { products: n });
     };
-function e3(e) {
+function e8(e) {
     var l;
     let t,
         { category: n } = e,
@@ -572,7 +572,7 @@ function e3(e) {
               children: [
                   c && (0, r.jsx)(em.A, { className: eY.aQ }),
                   null != s
-                      ? (0, r.jsx)(e8, {
+                      ? (0, r.jsx)(e4, {
                             sequencedOffers: s,
                             products: n.products,
                             filteredProducts: u,
@@ -582,7 +582,7 @@ function e3(e) {
               ],
           });
 }
-function e4(e) {
+function e3(e) {
     let { currentCategorySkuId: l, handleTransition: t } = e,
         { categories: n } = (function (e) {
             let { anchorCollectionId: l, limit: t } = e,
@@ -863,10 +863,10 @@ let lt = function (e) {
                                       (0, r.jsx)(eX, { heroBlock: p, handleTransition: h }),
                                   ],
                               }),
-                              (0, r.jsx)(e3, { category: m }),
+                              (0, r.jsx)(e8, { category: m }),
                               null != E
                                   ? (0, r.jsx)("div", { className: eY.t3, children: (0, r.jsx)(eC, { section: E }) })
-                                  : (0, r.jsx)(e4, { currentCategorySkuId: m.skuId, handleTransition: h }, m.skuId),
+                                  : (0, r.jsx)(e3, { currentCategorySkuId: m.skuId, handleTransition: h }, m.skuId),
                           ],
                       })
                     : (0, r.jsxs)("div", {
@@ -874,10 +874,10 @@ let lt = function (e) {
                           children: [
                               (0, r.jsx)("div", { className: eY.zn, children: (0, r.jsx)(le, { collectionId: u }) }),
                               (0, r.jsx)("div", { className: eY.$T, children: (0, r.jsx)(ed.A, { category: m }) }),
-                              (0, r.jsx)(e3, { category: m }),
+                              (0, r.jsx)(e8, { category: m }),
                               null != E
                                   ? (0, r.jsx)("div", { className: eY.t3, children: (0, r.jsx)(eC, { section: E }) })
-                                  : (0, r.jsx)(e4, { currentCategorySkuId: m.skuId, handleTransition: h }, m.skuId),
+                                  : (0, r.jsx)(e3, { currentCategorySkuId: m.skuId, handleTransition: h }, m.skuId),
                           ],
                       }),
                 (0, r.jsx)(e7, {}),
@@ -931,9 +931,9 @@ let lo = (e) => {
     let n = (0, m.A)(() => (0, c.A)()),
         s = (0, la.yB)("CollectiblesShop");
     ((0, la.gB)(s),
-        (0, f.pE)(),
+        (0, A.pE)(),
         (0, I.X_)(),
-        (0, A.A)(ea.FYj),
+        (0, f.A)(ea.FYj),
         a.useEffect(() => {
             (0, x.rW)();
         }, []),

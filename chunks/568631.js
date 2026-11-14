@@ -1,37 +1,44 @@
-var l = n(65238),
-    r = n(5377),
-    s = n(248180);
+var l = n(604913),
+    r = n(65238),
+    s = n(5377),
+    a = n(181170),
+    i = n(248180);
 n.d(
     t,
     {},
     {
         Ty: function (e) {
-            return (0, r.Tf)(Date.now(), e);
+            return (0, s.Tf)(Date.now(), e);
         },
         lF: function (e) {
             let { days: t, hours: n, minutes: l, seconds: r } = e;
             return 0 === t && 0 === n && 0 === l && 0 === r;
         },
         rX: function (e, t) {
-            let n = Date.now(),
-                r = (0, l.NN)(e),
-                a = (0, s.S)(e),
-                i = e?.endsAt;
+            let n = (0, r.NN)(e),
+                s = (0, i.S)(e),
+                o = e?.endsAt;
             return null == e ||
                 null == t ||
-                null == r ||
-                r.collectionId !== t ||
-                null == a ||
-                a <= 0 ||
-                null == i ||
-                i.getTime() <= n ||
-                (null != e.startsAt && e.startsAt.getTime() > n)
+                null == n ||
+                n.collectionId !== t ||
+                null == s ||
+                s <= 0 ||
+                null == o ||
+                !(0, a.us)(e, Date.now())
                 ? null
-                : { percentOff: a, endsAt: i, countdownStyle: r.countdownStyle };
+                : {
+                      type: l.hE.COLLECTION_SALE,
+                      percentOff: s,
+                      endsAt: o,
+                      countdownStyle: n.countdownStyle,
+                      showCountdownCta: n.showCountdownCta,
+                      countdownPosition: n.countdownPosition,
+                  };
         },
         z0: function (e) {
             let { days: t, hours: n, minutes: l, seconds: r } = e;
-            return [t, n, l, r].map((e) => e.toString().padStart(2, "0"));
+            return (t > 0 ? [t, n, l, r] : [n, l, r]).map((e) => e.toString().padStart(2, "0"));
         },
     },
 );
