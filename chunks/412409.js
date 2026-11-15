@@ -12,38 +12,38 @@ var l = a(477900),
     v = a(821609),
     N = a(815021),
     A = a(350972),
-    x = a(644235),
-    E = a(871162),
+    E = a(644235),
+    x = a(871162),
     h = a(16371),
-    g = a(262560),
-    j = a(855986),
-    p = a(778712),
-    y = a(97808),
+    j = a(262560),
+    y = a(855986),
+    g = a(778712),
+    p = a(97808),
     S = a(432005),
     P = a(963852),
     f = a(763754),
     I = a(20851),
     b = a(527212),
-    L = a(915614),
-    _ = a(290863),
-    C = a(652215),
-    T = a(236814),
+    _ = a(915614),
+    L = a(290863),
+    T = a(652215),
+    C = a(236814),
     B = a(996988),
     k = a(701256),
     M = a(792996),
     D = a(880068);
-let O = p._3.SIZE_80;
+let O = g._3.SIZE_80;
 function G(e) {
     let { user: s, displayNameStyles: a, appIconId: i } = e,
         r = (0, b.Ay)(s.id, null),
-        n = (0, j.bG)([_.A], () => _.A.getStatus(s.id)),
+        n = (0, y.bG)([L.A], () => L.A.getStatus(s.id)),
         c = s.globalName ?? s.username,
-        u = (0, T.gG)(i),
+        u = (0, C.gG)(i),
         o = t.useMemo(
             () =>
                 (0, S.rh)({
                     ...(0, P.Ay)({ channelId: "1337", content: M.intl.string(k.default["U/irIt"]) }),
-                    state: C.cmJ.SENT,
+                    state: T.cmJ.SENT,
                     id: "0",
                 }),
             [],
@@ -56,10 +56,10 @@ function G(e) {
             (0, l.jsxs)("div", {
                 className: D.Kq,
                 children: [
-                    (0, l.jsx)(L.A, { user: s, displayProfile: r, themeType: B.d.POPOUT, className: D.vK }),
-                    (0, l.jsx)(y.eu, {
+                    (0, l.jsx)(_.A, { user: s, displayProfile: r, themeType: B.d.POPOUT, className: D.vK }),
+                    (0, l.jsx)(p.eu, {
                         className: D.my,
-                        src: s.getAvatarURL(void 0, (0, p.FT)(O)),
+                        src: s.getAvatarURL(void 0, (0, g.FT)(O)),
                         size: O,
                         status: n,
                         "aria-hidden": !0,
@@ -113,31 +113,31 @@ var H = a(455207),
     et = a(385803);
 let ei = { fontId: Y.x.DEFAULT, effectId: U.z.SOLID, colors: [] };
 function er(e) {
-    return (0, X.Lz)(e, "HexagonCampaignPerksModal") === el.S9.SELECTABLE;
+    return (0, X.N$)(e) === el.S9.SELECTABLE;
 }
 var en = a(617605),
     ed = a(218064);
 let ec = { overrideSettings: !0 },
-    eu = (0, x.FK)(et.eJ),
-    eo = (0, x.FK)({ ...et.eJ, angle: 127 });
+    eu = (0, E.FK)(et.eJ),
+    eo = (0, E.FK)({ ...et.eJ, angle: 127 });
 function em(e) {
-    let { transitionState: s, onClose: a, returnRef: i, sourceQuestContent: x, savingRef: p } = e,
+    let { transitionState: s, onClose: a, returnRef: i, sourceQuestContent: E, savingRef: g } = e,
         {
-            user: y,
+            user: p,
             selection: S,
             selectablePerks: P,
             setPerkSelected: f,
             isReentry: I,
             isSaving: b,
-            previewDisplayNameStyles: L,
-            previewAppIconId: _,
-            apply: C,
+            previewDisplayNameStyles: _,
+            previewAppIconId: L,
+            apply: T,
         } = (function (e) {
             let { sourceQuestContent: s, savingRef: a } = e,
-                l = (0, j.bG)([K.default], () => K.default.getCurrentUser()),
-                i = (0, j.bG)([z.A], () => z.A.getCurrentDesktopIcon()),
-                r = (0, j.bG)([Z.A], () => Z.A.hasAppliedPerk),
-                n = (0, j.bG)([Z.A], () => Z.A.previousPerkValues),
+                l = (0, y.bG)([K.default], () => K.default.getCurrentUser()),
+                i = (0, y.bG)([z.A], () => z.A.getCurrentDesktopIcon()),
+                r = (0, y.bG)([Z.A], () => Z.A.hasAppliedPerk),
+                n = (0, y.bG)([Z.A], () => Z.A.previousPerkValues),
                 { analyticsLocations: d } = (0, w.Ay)(F.A.QUEST_HOME_PAGE),
                 c = er(el.vB.CLIENT_THEME),
                 u = er(el.vB.DISPLAY_NAME_STYLE),
@@ -147,31 +147,31 @@ function em(e) {
                     [c, u, o],
                 ),
                 [v] = t.useState(r),
-                [N, x] = t.useState({}),
-                E = t.useMemo(() => ({ ...m, ...N }), [m, N]),
-                [h, g] = t.useState(!1),
-                p = t.useCallback((e, s) => {
-                    x((a) => ({ ...a, [e]: s }));
+                [N, E] = t.useState({}),
+                x = t.useMemo(() => ({ ...m, ...N }), [m, N]),
+                [h, j] = t.useState(!1),
+                g = t.useCallback((e, s) => {
+                    E((a) => ({ ...a, [e]: s }));
                 }, []),
-                y = l?.displayNameStyles ?? ei,
+                p = l?.displayNameStyles ?? ei,
                 S = R.Ay.canUsePremiumProfileCustomization(l),
-                P = t.useMemo(() => (S ? { ...y, fontId: el.vl } : { ...ei, fontId: el.vl }), [S, y]),
+                P = t.useMemo(() => (S ? { ...p, fontId: el.vl } : { ...ei, fontId: el.vl }), [S, p]),
                 f = (0, Q.Jy)(l?.displayNameStyles)
                     ? ((0, Q.Qv)({
                           currentDisplayNameStyles: l?.displayNameStyles,
                           previousDisplayNameStyles: n.displayNameStyles,
                           canUsePremiumProfileCustomization: S,
                       }) ?? ei)
-                    : y,
-                I = E[el.vB.DISPLAY_NAME_STYLE] ? P : f,
+                    : p,
+                I = x[el.vB.DISPLAY_NAME_STYLE] ? P : f,
                 b = (0, Q.z9)(i) ? (n.appIconId ?? A.LW.DEFAULT) : i,
-                L = E[el.vB.APP_ICON] ? A.aS.HEXAGON : b;
+                _ = x[el.vB.APP_ICON] ? A.aS.HEXAGON : b;
             t.useEffect(() => {
                 (0, W.TW)({ content: J.uF.AD_PERK_MODAL, sourceQuestContent: s });
             }, [s]);
-            let _ = t.useCallback(async () => {
+            let L = t.useCallback(async () => {
                 if (null == l || a.current) return null;
-                ((a.current = !0), g(!0));
+                ((a.current = !0), j(!0));
                 let e = !1;
                 try {
                     e = await (async function (e) {
@@ -205,46 +205,46 @@ function em(e) {
                                 ...d.map((e) => (0, ea.ZG)(e, u)),
                             ])
                         ).every(Boolean);
-                    })({ selection: E, displayNameStyles: P, analyticsLocations: d });
+                    })({ selection: x, displayNameStyles: P, analyticsLocations: d });
                 } catch {
                     e = !1;
                 }
                 return (
                     (a.current = !1),
-                    g(!1),
+                    j(!1),
                     e &&
                         (0, W.Cy)({
-                            perks: Object.values(el.vB).filter((e) => E[e]),
+                            perks: Object.values(el.vB).filter((e) => x[e]),
                             content: J.uF.AD_PERK_MODAL,
                             sourceQuestContent: s,
                         }),
                     e
                 );
-            }, [l, E, P, d, s, a]);
+            }, [l, x, P, d, s, a]);
             return {
                 user: l,
-                selection: E,
+                selection: x,
                 selectablePerks: m,
-                setPerkSelected: p,
+                setPerkSelected: g,
                 isReentry: v,
                 isSaving: h,
                 previewDisplayNameStyles: I,
-                previewAppIconId: L,
-                apply: _,
+                previewAppIconId: _,
+                apply: L,
             };
-        })({ sourceQuestContent: x, savingRef: p }),
+        })({ sourceQuestContent: E, savingRef: g }),
         B = t.useCallback(async () => {
-            let e = await C();
+            let e = await T();
             if (null != e) {
                 if (!e) return void (0, n.P0)({ text: M.intl.string(M.t.F8FvUy), variant: "critical" });
                 (a(),
                     Object.values(S).some(Boolean) &&
                         (0, n.P0)({ text: M.intl.string(k.default.fX2UkH), variant: "success" }));
             }
-        }, [C, a, S]);
-    if (null == y) return null;
+        }, [T, a, S]);
+    if (null == p) return null;
     let D = M.intl.string(k.default.rZmLDm),
-        O = (0, T.gG)(A.aS.HEXAGON),
+        O = (0, C.gG)(A.aS.HEXAGON),
         U = [
             {
                 perk: el.vB.CLIENT_THEME,
@@ -272,7 +272,7 @@ function em(e) {
                         : (0, l.jsx)("div", { className: en.aL }),
             },
         ];
-    return (0, l.jsx)(E.l.Provider, {
+    return (0, l.jsx)(x.l.Provider, {
         value: ec,
         children: (0, l.jsx)(c.d, {
             transitionState: s,
@@ -299,7 +299,7 @@ function em(e) {
                             (0, l.jsxs)("div", {
                                 className: en.wx,
                                 children: [
-                                    (0, l.jsx)("div", { children: (0, l.jsx)(g.A, {}) }),
+                                    (0, l.jsx)("div", { children: (0, l.jsx)(j.A, {}) }),
                                     (0, l.jsx)(u.D, {
                                         variant: "heading-lg/semibold",
                                         color: "text-strong",
@@ -362,7 +362,7 @@ function em(e) {
                                 className: en.b,
                                 children: (0, l.jsx)(N.J, { variant: "overlay-secondary", onClick: a, disabled: b }),
                             }),
-                            (0, l.jsx)(G, { user: y, displayNameStyles: L, appIconId: _ }),
+                            (0, l.jsx)(G, { user: p, displayNameStyles: _, appIconId: L }),
                         ],
                     }),
                 ],

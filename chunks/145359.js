@@ -9,17 +9,14 @@ n.d(
         $X: function (e, t) {
             return (0, s.YY)(e, r.default.getCurrentUser()?.premiumType, t);
         },
-        FL: function (e, t) {
-            return (0, s.U5)({
-                perk: e,
-                premiumType: r.default.getCurrentUser()?.premiumType,
-                isCampaignEnabled: (0, a.iA)(t),
-            });
-        },
         Lz: function (e, t) {
             let n = (0, a.dp)(t),
                 l = (0, i.bG)([r.default], () => r.default.getCurrentUser()?.premiumType);
             return (0, s.U5)({ perk: e, premiumType: l, isCampaignEnabled: n });
+        },
+        N$: function (e) {
+            let t = (0, i.bG)([r.default], () => r.default.getCurrentUser()?.premiumType);
+            return (0, s.U5)({ perk: e, premiumType: t, isCampaignEnabled: !0 });
         },
     },
 );

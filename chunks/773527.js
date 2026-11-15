@@ -1,17 +1,18 @@
 n.d(t, {
-    U5: () => C,
+    U5: () => O,
     cC: () => A,
-    Qv: () => N,
-    Jy: () => g,
-    Rd: () => O,
-    z9: () => T,
-    oB: () => p,
-    n2: () => S,
-    Tn: () => R,
-    YY: () => h,
-    sD: () => m,
+    Qv: () => C,
+    Jy: () => S,
+    Rd: () => R,
+    z9: () => g,
+    oB: () => m,
+    n2: () => N,
+    Tn: () => L,
+    iB: () => h,
+    YY: () => I,
+    sD: () => T,
     Aq: () => f,
-    VX: () => I,
+    VX: () => p,
 });
 var i,
     r = n(508425),
@@ -34,53 +35,49 @@ function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
     return e >= _.DD;
 }
-function h(e, t) {
+function h() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+    return e >= _.zv;
+}
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
     return n >= A(e, t);
 }
-function I(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
     return t >= e - E && t < e;
 }
-function p(e) {
+function m(e) {
     return null != e && _.xG.has(e);
 }
-function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-    return h(e, null, t);
-}
 function T(e) {
-    return e === o.aS.HEXAGON;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+    return I(e, null, t);
 }
 function g(e) {
-    return e?.fontId === _.vl;
+    return e === o.aS.HEXAGON;
 }
 function S(e) {
+    return e?.fontId === _.vl;
+}
+function N(e) {
     let { fontId: t, effectId: n, colors: i } = e;
     return t === _.vl && n === r.z.SOLID && 0 === i.length;
 }
-function N(e) {
+function C(e) {
     let { currentDisplayNameStyles: t, previousDisplayNameStyles: n, canUsePremiumProfileCustomization: i } = e;
     if (!i || null == t) return null;
     let s = { ...t, fontId: n?.fontId ?? a.x.DEFAULT };
     return s.fontId === a.x.DEFAULT && s.effectId === r.z.SOLID && 0 === s.colors.length ? null : s;
 }
-function C(e) {
+function O(e) {
     let { perk: t, premiumType: n, isCampaignEnabled: i, now: r = Date.now() } = e;
-    return !i ||
-        (function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-            return e >= _.zv;
-        })(r)
-        ? _.S9.HIDDEN
-        : h(t, n, r)
-          ? _.S9.LOCKED
-          : _.S9.SELECTABLE;
+    return !i || h(r) ? _.S9.HIDDEN : I(t, n, r) ? _.S9.LOCKED : _.S9.SELECTABLE;
 }
-function O(e, t) {
+function R(e, t) {
     let n = (0, d.kQ)(e?.perks, _.Sp[t]);
     return null != n && n.includes(l.g$.SOURCE_HEXAGON_CAMPAIGN);
 }
-function R(e) {
+function L(e) {
     return null != e && e.id === _.U1 && e.features.includes(s.CUSTOM_INTRO_CARD);
 }

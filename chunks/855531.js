@@ -1,7 +1,6 @@
 var i = n(945810),
-    r = n(773527),
-    a = n(221596);
-let s = (0, i.mj)({
+    r = n(773527);
+let a = (0, i.mj)({
     kind: "user",
     name: "2026-09-hexagon-campaign-client",
     defaultConfig: { enabled: !1, questHomeRedirect: !1 },
@@ -17,22 +16,14 @@ n.d(
     {
         dc: function (e) {
             if ((0, r.Aq)()) return !1;
-            let t = s.getConfig({ location: e });
+            let t = a.getConfig({ location: e });
             return t.enabled && t.questHomeRedirect;
         },
         dp: function (e) {
-            return s.useConfig({ location: e }).enabled;
-        },
-        iA: function (e) {
-            return s.getConfig({ location: e }).enabled;
+            return a.useConfig({ location: e }).enabled;
         },
         kV: function (e) {
-            let t = (0, r.Tn)(e),
-                { enabled: n } = s.useConfig(
-                    { location: a.rE.QUEST_HOME_HERO_SHELF_DESKTOP },
-                    { autoTrackExposure: t },
-                );
-            return t && n && !(0, r.Aq)();
+            return (0, r.Tn)(e) && !(0, r.Aq)();
         },
     },
 );
