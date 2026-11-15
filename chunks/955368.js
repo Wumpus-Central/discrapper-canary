@@ -27,8 +27,8 @@ var r = n(477900),
     S = n(775602),
     C = n(475815),
     w = n(614269),
-    N = n(53200),
-    P = n(23590),
+    P = n(53200),
+    N = n(23590),
     A = n(683574),
     R = n(40705),
     L = n(530567);
@@ -88,8 +88,8 @@ function Z(e) {
             onBufferingStart: eS,
             onBufferingEnd: eC,
             onFocusChange: ew,
-            onVisibilityChange: eN,
-            onSeek: eP,
+            onVisibilityChange: eP,
+            onSeek: eN,
             onTimelineDragStateChange: eA,
             renderOverlay: eR,
             renderPersistentOverlay: eL,
@@ -146,7 +146,7 @@ function Z(e) {
             (tS(null), tb(e));
         }, []),
         tw = l.useRef(null),
-        [tN, tP] = l.useState(!1),
+        [tP, tN] = l.useState(!1),
         tA = l.useRef(null),
         [tR, tL] = l.useState(d.h$.LOADING),
         tT = l.useRef(!1),
@@ -257,7 +257,7 @@ function Z(e) {
                     p.current = i;
                 }, [i]));
             let [v, x] = l.useState(!1),
-                g = !v && w.u.isHlsUrl(n) && (0, N.Ap)();
+                g = !v && w.u.isHlsUrl(n) && (0, P.Ap)();
             return (
                 l.useEffect(() => {
                     if (!g || null == n || null == e.current) return;
@@ -266,7 +266,7 @@ function Z(e) {
                         l = null,
                         a = null;
                     return (
-                        (0, N.E)().then((e) => {
+                        (0, P.E)().then((e) => {
                             if (r) return;
                             if (!e.isSupported()) return void x(!0);
                             let i = (l = new e({
@@ -358,10 +358,10 @@ function Z(e) {
                 { isHlsActive: g, hlsRef: o, hls: s }
             );
         })(nh, { src: tl, initialTimeSec: en, onError: nE, onHlsInstance: ek, crossOrigin: e8 }),
-        { isReady: nS } = (0, P.A)({ videoRef: nh, hls: ny, contentMetadata: te, isHls: nb }),
+        { isReady: nS } = (0, N.A)({ videoRef: nh, hls: ny, contentMetadata: te, isHls: nb }),
         nC = tt && !nS && !nb,
-        [nw, nN] = l.useState(null),
-        [nP, nA] = l.useState(0),
+        [nw, nP] = l.useState(null),
+        [nN, nA] = l.useState(0),
         [nR, nL] = l.useState(0),
         [nT, nk] = l.useState(!1),
         nM = ei ?? na.current?.duration ?? 0,
@@ -458,8 +458,8 @@ function Z(e) {
             tu && ew?.(ti, td);
         }, [ti, tu, td, ew]),
         l.useEffect(() => {
-            ts && eN?.(to, td);
-        }, [to, ts, td, eN]));
+            ts && eP?.(to, td);
+        }, [to, ts, td, eP]));
     let [nz, nW] = l.useState(!1),
         nZ = l.useRef(null),
         nq = l.useRef(0);
@@ -546,16 +546,16 @@ function Z(e) {
             let n = na.current.currentTime;
             ((tk.current = e),
                 tS((e / (na.current.duration ?? 1)) * 100),
-                tP(!0),
+                tN(!0),
                 null != tA.current && clearTimeout(tA.current),
                 (tA.current = setTimeout(() => {
-                    (tP(!1), (tA.current = null));
+                    (tN(!1), (tA.current = null));
                 }, 100)),
                 (tT.current = !0),
                 (na.current.currentTime = e),
-                t && eP?.(n, e));
+                t && eN?.(n, e));
         },
-        [eP],
+        [eN],
     );
     function rr() {
         if (null != na.current)
@@ -591,11 +591,11 @@ function Z(e) {
                 (0, $.C)(n) &&
                     ((n.id = `cue-${t}`),
                     (n.onenter = () => {
-                        nN(n);
+                        nP(n);
                     }),
                     (n.onexit = () =>
                         (function (e) {
-                            nN((t) => (t?.id === e.id ? null : t));
+                            nP((t) => (t?.id === e.id ? null : t));
                         })(n)));
             }
     }, []);
@@ -821,6 +821,11 @@ function Z(e) {
                     },
                     "aria-label": tH ? void 0 : V.intl.string(V.t.RscU7I),
                     onClick: tH ? void 0 : rl,
+                    onKeyDown: function (e) {
+                        e.key !== d.TJ.SPACE ||
+                            (e.target !== e.currentTarget && e.target !== ni.current) ||
+                            (e.preventDefault(), tH || e.repeat || (n0(), tX(!0), rr()));
+                    },
                     onPointerDown: n1,
                     onMouseMove: n1,
                     children: (0, r.jsxs)("div", {
@@ -992,7 +997,7 @@ function Z(e) {
                                                 percent: null != ty ? ty : tE,
                                                 animate:
                                                     !0 !== ns.current &&
-                                                    !tN &&
+                                                    !tP &&
                                                     td === d.Q6.PLAYING &&
                                                     nT &&
                                                     tR === d.h$.READY,
@@ -1000,7 +1005,7 @@ function Z(e) {
                                                 backgroundColor: n4 || eW ? void 0 : "rgba(0, 0, 0, 0.0)",
                                                 playerState: td,
                                                 preloadedBuffers: n4 ? tM : void 0,
-                                                durationSec: nP > 0 ? nP : +!nT,
+                                                durationSec: nN > 0 ? nN : +!nT,
                                                 isFullyVisible: n4 && t_,
                                                 maxSeekableTime: null != ei && nM > 0 ? nM : void 0,
                                                 progressClassName: eY,
