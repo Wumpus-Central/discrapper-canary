@@ -460,176 +460,180 @@ function e3() {
     return (null != ep && e2(), !1);
 }
 if (q) {
-    let e = function () {
-        let e = [],
-            t = new Set();
-        i = {};
-        let n = P.A.games,
-            r = H.A.nonGames,
-            a = new Set();
-        (J.forEach((e) => {
-            (e.executables ?? []).forEach((e) => {
-                a.add(e.name.toLowerCase());
-            });
-        }),
-            [
-                ...[...n, ...r].filter((e) => !(e.executables ?? []).some((e) => eb.has(e.name.toLowerCase()))),
-                ...J,
-            ].forEach((n) => {
-                let i = null != n.executables ? n.executables : [],
-                    r = {};
-                if (
-                    (i.forEach((e) => {
-                        let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : "null";
-                        (null == r[n] && (r[n] = []), r[n].push(e.name), e.isLauncher && t.add(e.name));
-                    }),
-                    Object.keys(r).length > 0)
-                )
-                    Object.keys(r).forEach((t) =>
-                        e.push({
-                            name: n.name,
-                            id: n.id,
-                            executables: r[t],
-                            cmdLine: "null" !== t ? t : null,
-                            thirdPartySkus: n.thirdPartySkus ?? [],
-                        }),
-                    );
-                else {
-                    let t = n.thirdPartySkus ?? [];
-                    t.length > 0 &&
-                        e.push({ name: n.name, id: n.id, executables: [], cmdLine: null, thirdPartySkus: t });
-                }
+    let e,
+        t,
+        n = function () {
+            let e = [],
+                t = new Set();
+            i = {};
+            let n = P.A.games,
+                r = H.A.nonGames,
+                a = new Set();
+            (J.forEach((e) => {
+                (e.executables ?? []).forEach((e) => {
+                    a.add(e.name.toLowerCase());
+                });
             }),
-            (e = e.filter(
-                (e) =>
-                    (null != e.executables && e.executables.length > 0) ||
-                    (null != e.thirdPartySkus && e.thirdPartySkus.length > 0),
-            )),
-            e2(),
-            y.Ay.setObservedGamesCallback(
-                e,
-                !0,
-                (e) => {
-                    let n = [],
-                        r = {},
-                        a = [],
-                        s = [],
-                        l = e.length,
-                        o = [];
-                    for (let i of e) {
-                        if (null != i.id && null != H.A.getById(i.id)) {
-                            (a.push(i), s.push({ game: i, outcome: { kind: "non_game" } }));
-                            continue;
-                        }
-                        ((i.isLauncher = i.isLauncher || t.has(i.exeName)),
-                            i.isLauncher && null != i.id && (r[i.id] = i),
-                            (i.windowHandle = (function (e, t) {
-                                if (void 0 === t) {
-                                    let t = y.Ay.getDiscordUtils();
-                                    if (null != t && null != t.getWindowHandleFromPid) {
-                                        let n = t.getWindowHandleFromPid(e);
-                                        return null != n && "0" !== n ? n : null;
+                [
+                    ...[...n, ...r].filter((e) => !(e.executables ?? []).some((e) => eb.has(e.name.toLowerCase()))),
+                    ...J,
+                ].forEach((n) => {
+                    let i = null != n.executables ? n.executables : [],
+                        r = {};
+                    if (
+                        (i.forEach((e) => {
+                            let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : "null";
+                            (null == r[n] && (r[n] = []), r[n].push(e.name), e.isLauncher && t.add(e.name));
+                        }),
+                        Object.keys(r).length > 0)
+                    )
+                        Object.keys(r).forEach((t) =>
+                            e.push({
+                                name: n.name,
+                                id: n.id,
+                                executables: r[t],
+                                cmdLine: "null" !== t ? t : null,
+                                thirdPartySkus: n.thirdPartySkus ?? [],
+                            }),
+                        );
+                    else {
+                        let t = n.thirdPartySkus ?? [];
+                        t.length > 0 &&
+                            e.push({ name: n.name, id: n.id, executables: [], cmdLine: null, thirdPartySkus: t });
+                    }
+                }),
+                (e = e.filter(
+                    (e) =>
+                        (null != e.executables && e.executables.length > 0) ||
+                        (null != e.thirdPartySkus && e.thirdPartySkus.length > 0),
+                )),
+                e2(),
+                y.Ay.setObservedGamesCallback(
+                    e,
+                    !0,
+                    (e) => {
+                        let n = [],
+                            r = {},
+                            a = [],
+                            s = [],
+                            l = e.length,
+                            o = [];
+                        for (let i of e) {
+                            if (null != i.id && null != H.A.getById(i.id)) {
+                                (a.push(i), s.push({ game: i, outcome: { kind: "non_game" } }));
+                                continue;
+                            }
+                            ((i.isLauncher = i.isLauncher || t.has(i.exeName)),
+                                i.isLauncher && null != i.id && (r[i.id] = i),
+                                (i.windowHandle = (function (e, t) {
+                                    if (void 0 === t) {
+                                        let t = y.Ay.getDiscordUtils();
+                                        if (null != t && null != t.getWindowHandleFromPid) {
+                                            let n = t.getWindowHandleFromPid(e);
+                                            return null != n && "0" !== n ? n : null;
+                                        }
+                                        return null;
                                     }
-                                    return null;
-                                }
-                                return "0" === t ? null : t;
-                            })(i.pid, i.windowHandle)));
-                        let e = ew(i);
-                        if (null != e) {
-                            (n.push(i),
+                                    return "0" === t ? null : t;
+                                })(i.pid, i.windowHandle)));
+                            let e = ew(i);
+                            if (null != e) {
+                                (n.push(i),
+                                    s.push({
+                                        game: i,
+                                        outcome: {
+                                            kind: "observed_app",
+                                            appName: e.name,
+                                            streamerTool: e.streamerTool ?? !1,
+                                        },
+                                    }));
+                                continue;
+                            }
+                            if (P.A.shouldBlock(i)) {
+                                let e = P.A.getBlockReason(i);
                                 s.push({
                                     game: i,
                                     outcome: {
-                                        kind: "observed_app",
-                                        appName: e.name,
-                                        streamerTool: e.streamerTool ?? !1,
+                                        kind: "blocked",
+                                        matchedExe: e?.matchedExe ?? null,
+                                        matchedPattern: e?.matchedPattern ?? null,
                                     },
-                                }));
-                            continue;
+                                });
+                                continue;
+                            }
+                            (o.push(i), s.push({ game: i, outcome: { kind: "passed" } }));
                         }
-                        if (P.A.shouldBlock(i)) {
-                            let e = P.A.getBlockReason(i);
-                            s.push({
-                                game: i,
-                                outcome: {
-                                    kind: "blocked",
-                                    matchedExe: e?.matchedExe ?? null,
-                                    matchedPattern: e?.matchedPattern ?? null,
-                                },
+                        ((eD = { timestamp: Date.now(), totalFromNative: l, entries: s }), (e = o));
+                        let d = n.filter(eG).length;
+                        for (let t of (d !== eT &&
+                            ((eT = d), E.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: eT })),
+                        (ea = null != es ? [es, ...e] : e))) {
+                            let e = eh.gameOverrides[eB(t)];
+                            e?.add === !0 && t.hidden && ((ef[eB(t)] = !0), (t.hidden = !1));
+                        }
+                        ((el = a), (eE = n), (i = r), eF(), (e_ = el.length > 0 ? el[0] : null));
+                        let c = [];
+                        for (let e of el) e.pid in eC || ((eC[e.pid] = e), c.push(e));
+                        let u = [];
+                        for (let e of Object.values(eC))
+                            el.some((t) => t.pid === e.pid) || (u.push(e), delete eC[e.pid]);
+                        (X.info("Running Non-Games Changed", {
+                            runningNonGames: el,
+                            added: c,
+                            removed: u,
+                            previousNonGames: eC,
+                        }),
+                            E.h.dispatch({ type: "RUNNING_NON_GAMES_CHANGE", nonGames: el, added: c, removed: u }));
+                    },
+                    U.default.getCurrentUser()?.id,
+                ),
+                eJ(),
+                y.Ay.setGameDetectionCallback((e, t) => {
+                    if (e.length === t.length)
+                        for (let [n, i] of e.entries()) {
+                            let e = t[n],
+                                r = P.A.findGame(i),
+                                a = P.A.findGame(e),
+                                s = (e?.id !== "4294967293" ? e?.id : a?.id) ?? "";
+                            G.default.track($.HAw.GAME_DETECTION_COMPARISON, {
+                                game_platform: o.y.DESKTOP,
+                                detection_method: "process_observer_v2",
+                                game_v1: i.name,
+                                orig_game_name_v1: i.origGameName,
+                                game_id_v1: r?.id,
+                                distributor_v1: i.distributor,
+                                verified_v1: (0, j.PQ)(i.exePath, r?.executables ?? []),
+                                is_launcher_v1: i.isLauncher,
+                                game_detection_enabled_v1: e$(i),
+                                executable_path_v1: (0, j.Ic)(i.exePath),
+                                distributor_game_id_v1: i.sku,
+                                hidden_by_distributor_v1: i.hidden,
+                                game_metadata_v1: (0, v.MT)(i),
+                                game_v2: e.name,
+                                orig_game_name_v2: e.origGameName,
+                                game_id_v2: s,
+                                distributor_v2: e.distributor,
+                                verified_v2: (0, j.PQ)(e.exePath, a?.executables ?? []),
+                                is_launcher_v2: e.isLauncher,
+                                game_detection_enabled_v2: e$(e),
+                                executable_path_v2: (0, j.Ic)(e.exePath),
+                                distributor_game_id_v2: e.sku,
+                                hidden_by_distributor_v2: e.hidden,
+                                game_metadata_v2: (0, v.MT)(e),
                             });
-                            continue;
                         }
-                        (o.push(i), s.push({ game: i, outcome: { kind: "passed" } }));
-                    }
-                    ((eD = { timestamp: Date.now(), totalFromNative: l, entries: s }), (e = o));
-                    let d = n.filter(eG).length;
-                    for (let t of (d !== eT &&
-                        ((eT = d), E.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: eT })),
-                    (ea = null != es ? [es, ...e] : e))) {
-                        let e = eh.gameOverrides[eB(t)];
-                        e?.add === !0 && t.hidden && ((ef[eB(t)] = !0), (t.hidden = !1));
-                    }
-                    ((el = a), (eE = n), (i = r), eF(), (e_ = el.length > 0 ? el[0] : null));
-                    let c = [];
-                    for (let e of el) e.pid in eC || ((eC[e.pid] = e), c.push(e));
-                    let u = [];
-                    for (let e of Object.values(eC)) el.some((t) => t.pid === e.pid) || (u.push(e), delete eC[e.pid]);
-                    (X.info("Running Non-Games Changed", {
-                        runningNonGames: el,
-                        added: c,
-                        removed: u,
-                        previousNonGames: eC,
-                    }),
-                        E.h.dispatch({ type: "RUNNING_NON_GAMES_CHANGE", nonGames: el, added: c, removed: u }));
-                },
-                U.default.getCurrentUser()?.id,
-            ),
-            eJ(),
-            y.Ay.setGameDetectionCallback((e, t) => {
-                if (e.length === t.length)
-                    for (let [n, i] of e.entries()) {
-                        let e = t[n],
-                            r = P.A.findGame(i),
-                            a = P.A.findGame(e),
-                            s = (e?.id !== "4294967293" ? e?.id : a?.id) ?? "";
-                        G.default.track($.HAw.GAME_DETECTION_COMPARISON, {
-                            game_platform: o.y.DESKTOP,
-                            detection_method: "process_observer_v2",
-                            game_v1: i.name,
-                            orig_game_name_v1: i.origGameName,
-                            game_id_v1: r?.id,
-                            distributor_v1: i.distributor,
-                            verified_v1: (0, j.PQ)(i.exePath, r?.executables ?? []),
-                            is_launcher_v1: i.isLauncher,
-                            game_detection_enabled_v1: e$(i),
-                            executable_path_v1: (0, j.Ic)(i.exePath),
-                            distributor_game_id_v1: i.sku,
-                            hidden_by_distributor_v1: i.hidden,
-                            game_metadata_v1: (0, v.MT)(i),
-                            game_v2: e.name,
-                            orig_game_name_v2: e.origGameName,
-                            game_id_v2: s,
-                            distributor_v2: e.distributor,
-                            verified_v2: (0, j.PQ)(e.exePath, a?.executables ?? []),
-                            is_launcher_v2: e.isLauncher,
-                            game_detection_enabled_v2: e$(e),
-                            executable_path_v2: (0, j.Ic)(e.exePath),
-                            distributor_game_id_v2: e.sku,
-                            hidden_by_distributor_v2: e.hidden,
-                            game_metadata_v2: (0, v.MT)(e),
-                        });
-                    }
-            }),
-            y.Ay.setGameDetectionErrorCallback((e, t, n, i, r) => {}));
-    };
+                }),
+                y.Ay.setGameDetectionErrorCallback((e, t, n, i, r) => {}));
+        };
     eI = function () {
         return (
             !!P.A.hasAttemptedFetch &&
             !!H.A.hasAttemptedFetch &&
+            (e !== P.A.games || t !== H.A.nonGames) &&
             (null != em && em(),
             (em = (0, c.O)(
                 () => {
-                    ((em = null), e(), e7.emitChange());
+                    ((em = null), n(), (e = P.A.games), (t = H.A.nonGames), e7.emitChange());
                 },
                 { timeout: 2e3 },
             )),
