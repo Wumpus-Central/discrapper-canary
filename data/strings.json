@@ -7560,6 +7560,8 @@
   "WQdkbb": "Terms apply.",
   "nb5PC/": "Promo",
   "cNtuKF": "Item is eligible for offer: {offerName}",
+  "ti90Eh": "+{orbCount, number} Orbs",
+  "4CTm1R": "You earned {orbCount, plural,one {# Orb}other {# Orbs} back",
   "nH5DSU": "{percentage, number}% off",
   "cNSL/j": "Buy for {price}",
   "Amdf8X": "**Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the “Virtual Goods” section [here](here)**. This purchase is non-refundable. Item will be available immediately in User Profile settings.",
