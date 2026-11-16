@@ -106,11 +106,8 @@ function e_(e, t) {
         return (
             null == r ||
             null == a ||
-            (!(
-                (r.nsfw && !a.nsfwAllowed) ||
-                (r.isGuildVocalOrThread() && (0, S.Tv)(e)) ||
-                (r.isGuildVocalOrThread() && 0)
-            ) &&
+            (!(r.isGuildVocalOrThread() && (0, S.Tv)(e)) &&
+                (!r.nsfw || !!a.nsfwAllowed) &&
                 (t?.guildScheduledEvent != null
                     ? !(function (e) {
                           let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
