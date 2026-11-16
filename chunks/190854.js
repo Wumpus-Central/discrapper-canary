@@ -7916,64 +7916,67 @@ class cU extends r.Component {
     renderAttachments(e) {
         var t;
         let n,
+            i,
             {
-                channel: i,
-                gifAutoPlay: l,
-                canDeleteAttachments: r,
-                inlineAttachmentMedia: a,
-                onMediaItemContextMenu: o,
-                enabledContentHarmTypeFlags: d,
-                shouldHideMediaOptions: u,
+                channel: l,
+                gifAutoPlay: r,
+                canDeleteAttachments: a,
+                inlineAttachmentMedia: o,
+                onMediaItemContextMenu: d,
+                enabledContentHarmTypeFlags: u,
+                shouldHideMediaOptions: m,
             } = this.props,
-            { attachments: m, flags: h } = e;
-        if (0 === m.length || e.isPoll() || (0, aI._c)(e)) return null;
-        let g = m.filter((e) => null == e.flags || !(0, c.Lt)(e.flags, er.sbO.IS_THUMBNAIL));
-        if (0 === g.length) return null;
+            { attachments: h, flags: g } = e;
+        if (0 === h.length || e.isPoll() || (0, aI._c)(e)) return null;
+        let p = h.filter((e) => null == e.flags || !(0, c.Lt)(e.flags, er.sbO.IS_THUMBNAIL));
+        if (0 === p.length) return null;
         let {
-                srcToOnClickOverride: p,
-                srcToHandlePreloadImage: A,
-                srcToSeekOverride: x,
-            } = ((t = { enabledContentHarmTypeFlags: d, shouldHideMediaOptions: u }),
-            (n = g
+                srcToOnClickOverride: A,
+                srcToHandlePreloadImage: x,
+                srcToSeekOverride: f,
+                srcToOpenAtTime: I,
+            } = ((t = { enabledContentHarmTypeFlags: u, shouldHideMediaOptions: m }),
+            (n = p
                 .map((t) => ({
                     ...(0, lJ.Rr)(t, e),
                     original: t.url,
                     srcIsAnimated: (0, c.Lt)(t.flags ?? 0, er.sbO.IS_ANIMATED),
                 }))
                 .filter((e) => "INVALID" !== e.type)),
-            (0, cT.o)(n.length > 1 ? n : [], t, "Media Mosaic")),
-            f = (0, c.Lt)(h, er.pr7.IS_VOICE_MESSAGE);
-        function I(e, t) {
-            let n = (0, c.Lt)(e.originalItem.flags ?? 0, er.sbO.IS_SPOILER) || (0, rc.BV)(i);
+            (i = (0, cT.o)(n, t, "Media Mosaic")),
+            { ...(n.length > 1 ? i : (0, cT.o)([], t, "Media Mosaic")), srcToOpenAtTime: i.srcToSeekOverride }),
+            E = (0, c.Lt)(g, er.pr7.IS_VOICE_MESSAGE);
+        function v(e, t) {
+            let n = (0, c.Lt)(e.originalItem.flags ?? 0, er.sbO.IS_SPOILER) || (0, rc.BV)(l);
             return (0, aN.iW)(e.originalItem, t, n);
         }
-        let E = g.map((t) => {
+        let C = p.map((t) => {
             let n = (0, lJ.aG)(t),
-                s = {
+                i = {
                     message: e,
-                    item: (0, cC.rC)(t, a),
-                    autoPlayGif: l,
-                    canRemoveItem: r && (g.length > 1 || "" !== e.content),
+                    item: (0, cC.rC)(t, o),
+                    autoPlayGif: r,
+                    canRemoveItem: a && (p.length > 1 || "" !== e.content),
                     onRemoveItem: this.handleRemoveAttachment,
-                    canEditItem: r,
+                    canEditItem: a,
                     onEditItem: this.handleEditAttachment,
-                    getObscureReason: I,
+                    getObscureReason: v,
                     onContextMenu:
-                        null != o
+                        null != d
                             ? (e) => {
-                                  (e.stopPropagation(), e.preventDefault(), o(e, n));
+                                  (e.stopPropagation(), e.preventDefault(), d(e, n));
                               }
                             : void 0,
-                    renderAudioComponent: f ? ch.SX : ch.Nj,
+                    renderAudioComponent: E ? ch.SX : ch.Nj,
                     renderImageComponent: ch.Cr,
                     renderVideoComponent: ch.I1,
                     renderPlaintextFilePreview: ch.R6,
                     renderGenericFileComponent: ch.UB,
-                    onPlay: function (n, l, s) {
+                    onPlay: function (n, i, s) {
                         eV.default.track(er.HAw.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
-                            guild_id: i.guild_id,
-                            channel_id: i.id,
-                            channel_type: i.type,
+                            guild_id: l.guild_id,
+                            channel_id: l.id,
+                            channel_type: l.type,
                             type: t.content_type,
                             flags: t.flags,
                             size: t.size,
@@ -7985,10 +7988,14 @@ class cU extends r.Component {
                     gifFavoriteButton: cO(n),
                     allowFullScreen: this.props.allowFullScreen ?? !this.props.disableComponentInteractivity,
                 },
-                d = (0, av.E)({ proxyURL: t.proxy_url, url: t.url });
-            return (d in p && ((s.onClick = p[d]), (s.handlePreloadImage = A[d]), (s.onSeekRequest = x[d])), s);
+                s = (0, av.E)({ proxyURL: t.proxy_url, url: t.url });
+            return (
+                (i.onOpenInMediaViewer = I[s]),
+                s in A && ((i.onClick = A[s]), (i.handlePreloadImage = x[s]), (i.onSeekRequest = f[s])),
+                i
+            );
         });
-        return (0, s.jsx)(cv.A, { items: E });
+        return (0, s.jsx)(cv.A, { items: C });
     }
     renderEmbed = (e, t, n, i) => {
         let {

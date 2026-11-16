@@ -26,8 +26,8 @@ var r = n(477900),
     A = n(775602),
     R = n(129230),
     L = n(683574),
-    T = n(530567),
-    k = n(646514),
+    k = n(530567),
+    T = n(646514),
     M = n(61491),
     j = n(113494),
     D = n(782134),
@@ -49,7 +49,7 @@ function Q(e) {
         [u, o] = l.useState(null),
         [s, d] = l.useState(!1),
         { videoRef: m, controlBarConfig: f, isControlBarExpanded: p } = (0, L.X$)(),
-        h = (f ?? T.X4[c.oA.MD]).timeTextVariant;
+        h = (f ?? k.X4[c.oA.MD]).timeTextVariant;
     l.useEffect(() => {
         let e = m.current;
         function t() {
@@ -107,7 +107,7 @@ function G(e) {
             ref: E,
         } = e,
         { controlBarConfig: b } = (0, L.X$)(),
-        y = b ?? T.X4[h],
+        y = b ?? k.X4[h],
         S = y.iconSize,
         C = "" !== (f ?? "").trim();
     return (0, r.jsx)(F.m, {
@@ -137,7 +137,7 @@ function G(e) {
                               children: [
                                   (0, r.jsx)(t, {
                                       size: S,
-                                      color: !0 !== u ? k.A.colors.WHITE : k.A.colors.TEXT_MUTED,
+                                      color: !0 !== u ? T.A.colors.WHITE : T.A.colors.TEXT_MUTED,
                                       className: i()(U.jk, { [U.x2]: a, [U.Wr]: !u }),
                                   }),
                                   o,
@@ -145,7 +145,7 @@ function G(e) {
                           })
                         : (0, r.jsx)(t, {
                               size: S,
-                              color: !0 !== u ? k.A.colors.WHITE : k.A.colors.TEXT_MUTED,
+                              color: !0 !== u ? T.A.colors.WHITE : T.A.colors.TEXT_MUTED,
                               className: i()(U.jk, { [U.x2]: a, [U.Wr]: !u }),
                           }),
             }),
@@ -156,7 +156,7 @@ var H = n(636537),
     X = n(260612),
     V = n(953727);
 function Y(e) {
-    let { size: t = "md", width: n, height: l, color: a = k.A.colors.WHITE, ...i } = e,
+    let { size: t = "md", width: n, height: l, color: a = T.A.colors.WHITE, ...i } = e,
         u = (0, X.J)(t);
     return (0, r.jsxs)("svg", {
         ...(0, V.A)(i),
@@ -224,206 +224,207 @@ function er(e) {
             hidePlaybackSpeedBtn: C = !1,
             size: w,
             downloadUrl: P,
-            downloadContentType: k,
+            downloadContentType: T,
             extraButtons: M,
-            autoFocus: j = !1,
-            keyDownHandlerRef: D,
-            volume: I,
-            muted: B,
-            transcriptEnabled: F,
-            captionEnabled: _,
-            handlePlaybackBtnClick: X,
-            handleTranscriptBtnClick: V,
-            handleCaptionBtnClick: ee,
-            handleFullScreenBtnClick: et,
-            handleSeekBackBtnClick: en,
-            handleSeekForwardBtnClick: er,
-            autoHideVolumeSlider: ea = !1,
-            floatingVolumeSlider: eu = !1,
-            compactTimeDisplay: eo = !1,
-            handleControlBarPendingInteraction: es,
-            onVolumeChange: ec,
-            onMutedChange: ed,
-            onVolumeExpandedChange: em,
+            expandButton: j,
+            autoFocus: D = !1,
+            keyDownHandlerRef: I,
+            volume: B,
+            muted: F,
+            transcriptEnabled: _,
+            captionEnabled: X,
+            handlePlaybackBtnClick: V,
+            handleTranscriptBtnClick: ee,
+            handleCaptionBtnClick: et,
+            handleFullScreenBtnClick: en,
+            handleSeekBackBtnClick: er,
+            handleSeekForwardBtnClick: ea,
+            autoHideVolumeSlider: eu = !1,
+            floatingVolumeSlider: eo = !1,
+            compactTimeDisplay: es = !1,
+            handleControlBarPendingInteraction: ec,
+            onVolumeChange: ed,
+            onMutedChange: em,
+            onVolumeExpandedChange: ef,
         } = e,
-        ef = (0, s.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        ep = (0, s.bG)([A.Ay], () => A.Ay.keyboardModeEnabled),
-        { isFullscreen: eh, videoRef: ev, activeLayer: ex, controlBarConfig: eg } = (0, L.X$)(),
-        eE = eg ?? T.X4[w],
-        eb = eu && !eh,
-        [ey, eS] = l.useState(B ? 0 : I),
-        [eC, ew] = l.useState(!1),
-        [eP, eN] = l.useState(!1),
-        [eA, eR] = l.useState(!1),
-        eL = l.useRef(null),
+        ep = (0, s.bG)([A.Ay], () => A.Ay.useReducedMotion),
+        eh = (0, s.bG)([A.Ay], () => A.Ay.keyboardModeEnabled),
+        { isFullscreen: ev, videoRef: ex, activeLayer: eg, controlBarConfig: eE } = (0, L.X$)(),
+        eb = eE ?? k.X4[w],
+        ey = eo && !ev,
+        [eS, eC] = l.useState(F ? 0 : B),
+        [ew, eP] = l.useState(!1),
+        [eN, eA] = l.useState(!1),
+        [eR, eL] = l.useState(!1),
+        ek = l.useRef(null),
         eT = l.useId(),
-        ek = l.useRef(void 0),
-        [eM, ej] = l.useState(eb);
-    eb !== eM && (ej(eb), ew(!1), eR(!1), eN(!1));
-    let eD = eb && (eC || eA || eP),
-        [{ volumeAnimSpring: eI }, eB] = (0, d.z)(() => ({
+        eM = l.useRef(void 0),
+        [ej, eD] = l.useState(ey);
+    ey !== ej && (eD(ey), eP(!1), eL(!1), eA(!1));
+    let eI = ey && (ew || eR || eN),
+        [{ volumeAnimSpring: eB }, eF] = (0, d.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
-        eF = l.useRef(null),
-        [e$, eU] = l.useState(1),
-        [e_, eK] = l.useState(I),
-        [eO, eQ] = l.useState(B);
-    (I !== e_ || B !== eO) && (eK(I), eQ(B), eS(B ? 0 : I));
-    let eG = l.useCallback(
+        e$ = l.useRef(null),
+        [eU, e_] = l.useState(1),
+        [eK, eO] = l.useState(B),
+        [eQ, eG] = l.useState(F);
+    (B !== eK || F !== eQ) && (eO(B), eG(F), eC(F ? 0 : B));
+    let eH = l.useCallback(
             (e) => {
-                (eU(e), null != ev.current && (ev.current.playbackRate = e));
+                (e_(e), null != ex.current && (ex.current.playbackRate = e));
             },
-            [ev],
+            [ex],
         ),
-        eH = l.useCallback(() => {
+        eX = l.useCallback(() => {
             if (null == P) return;
-            let e = k?.split("/");
+            let e = T?.split("/");
             (R.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
                 window.open(P, "_blank"));
-        }, [P, k]),
-        eX = l.useCallback(
+        }, [P, T]),
+        eV = l.useCallback(
             (e) => {
-                null != ev.current && (e !== ev.current.volume && (ev.current.volume = e), e !== ey && eS(e));
+                null != ex.current && (e !== ex.current.volume && (ex.current.volume = e), e !== eS && eC(e));
             },
-            [ev, ey],
+            [ex, eS],
         );
-    function eV(e) {
-        (eX(e), ec(e), eP && (eN(!1), eb || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
+    function eY(e) {
+        (eV(e), ed(e), eN && (eA(!1), ey || ec(!1)), F && e > 0 ? em(!1) : F || 0 !== e || em(!0));
     }
-    let eY = l.useCallback(() => {
-        if (null != ev.current)
-            if (0 === ey) {
-                let e = 0 === I ? 0.3 : I;
-                (eX(e), ed(!1), ec(e));
-            } else (ec(ey), eX(0), ed(!0));
-    }, [ev, ey, eX, I, ed, ec]);
-    function ez() {
-        (ew(!0), em(!0));
-    }
+    let ez = l.useCallback(() => {
+        if (null != ex.current)
+            if (0 === eS) {
+                let e = 0 === B ? 0.3 : B;
+                (eV(e), em(!1), ed(e));
+            } else (ed(eS), eV(0), em(!0));
+    }, [ex, eS, eV, B, em, ed]);
     function eW() {
-        (ew(!1), em(!1));
+        (eP(!0), ef(!0));
     }
     function eZ() {
-        (window.clearTimeout(ek.current), ew(!0));
+        (eP(!1), ef(!1));
     }
     function eq() {
-        (window.clearTimeout(ek.current), (ek.current = window.setTimeout(() => ew(!1), 150)));
+        (window.clearTimeout(eM.current), eP(!0));
     }
-    function eJ(e) {
+    function eJ() {
+        (window.clearTimeout(eM.current), (eM.current = window.setTimeout(() => eP(!1), 150)));
+    }
+    function e0(e) {
         if ("ArrowUp" !== e.key && "ArrowDown" !== e.key) return;
         (e.preventDefault(), e.stopPropagation());
-        let t = Math.round(100 * ey),
+        let t = Math.round(100 * eS),
             n = Math.min(1, Math.max(0, ("ArrowUp" === e.key ? Math.floor(t / 10) + 1 : Math.ceil(t / 10) - 1) / 10));
-        n !== ey && eV(n);
+        n !== eS && eY(n);
     }
-    l.useEffect(() => () => window.clearTimeout(ek.current), []);
-    let e0 = (0, N.A)(em);
+    l.useEffect(() => () => window.clearTimeout(eM.current), []);
+    let e1 = (0, N.A)(ef);
     l.useEffect(() => {
-        if (eD)
+        if (eI)
             return (
-                es(!0),
-                e0(!0),
+                ec(!0),
+                e1(!0),
                 () => {
-                    (es(!1), e0(!1));
+                    (ec(!1), e1(!1));
                 }
             );
-    }, [eD, es, e0]);
-    let e1 = l.useCallback(
+    }, [eI, ec, e1]);
+    let e2 = l.useCallback(
         (e) => {
             if (!(e.metaKey || ((0, o.vq)(e.target) && (0, o.Cw)(e.target))))
                 switch (e.key) {
                     case c.TJ.PLAYBACK:
-                        (e.stopPropagation(), X());
+                        (e.stopPropagation(), V());
                         break;
                     case c.TJ.SPACE:
-                        (e.stopPropagation(), ep || (e.preventDefault(), X()));
+                        (e.stopPropagation(), eh || (e.preventDefault(), V()));
                         break;
                     case c.TJ.SEEK_BACK:
                     case c.TJ.SEEK_BACK_ALT:
-                        (e.stopPropagation(), en());
+                        (e.stopPropagation(), er());
                         break;
                     case c.TJ.SEEK_FORWARD:
                     case c.TJ.SEEK_FORWARD_ALT:
-                        (e.stopPropagation(), er());
+                        (e.stopPropagation(), ea());
                         break;
                     case c.TJ.CAPTION:
-                        (e.stopPropagation(), E || ee());
+                        (e.stopPropagation(), E || et());
                         break;
                     case c.TJ.FULLSCREEN:
-                        (e.stopPropagation(), S || et());
+                        (e.stopPropagation(), S || en());
                         break;
                     case c.TJ.MUTE:
-                        (e.stopPropagation(), eY());
+                        (e.stopPropagation(), ez());
                 }
         },
-        [ee, et, X, en, er, eY, E, S, ep],
+        [et, en, V, er, ea, ez, E, S, eh],
     );
     (l.useEffect(() => {
-        j && null != eF.current && eF.current.focus();
-    }, [j]),
+        D && null != e$.current && e$.current.focus();
+    }, [D]),
         l.useEffect(
             () => (
-                null != D && (D.current = e1),
+                null != I && (I.current = e2),
                 () => {
-                    null != D && (D.current = null);
+                    null != I && (I.current = null);
                 }
             ),
-            [e1, D],
+            [e2, I],
         ),
         l.useEffect(
             () => (
-                eB({ volumeAnimSpring: !ea || eP || eC ? 1 : 0, immediate: ef }),
+                eF({ volumeAnimSpring: !eu || eN || ew ? 1 : 0, immediate: ep }),
                 () => {
-                    eI.stop();
+                    eB.stop();
                 }
             ),
-            [ea, eP, eC, eB, ef, eI],
+            [eu, eN, ew, eF, ep, eB],
         ));
-    let e2 = $.intl.string(0 === ey ? $.t.YqAjXy : $.t.w4m945),
-        { icon: e6, label: e4 } = K[t],
-        e8 = $.intl.string(e4),
-        e9 = (0, r.jsx)(G, {
+    let e6 = $.intl.string(0 === eS ? $.t.YqAjXy : $.t.w4m945),
+        { icon: e4, label: e8 } = K[t],
+        e9 = $.intl.string(e8),
+        e3 = (0, r.jsx)(G, {
             iconComponent: Y,
             visible: a,
-            onClick: eY,
-            ariaLabel: e2,
-            tooltipLabel: e2,
-            hideTooltip: eD,
+            onClick: ez,
+            ariaLabel: e6,
+            tooltipLabel: e6,
+            hideTooltip: eI,
             shortcut: c.TJ.MUTE,
             buttonSize: O[w],
             clickableProps: {
                 style: {
-                    "--custom-volume-wave-1": Math.min(1, Math.max(0, 3 * ey)),
-                    "--custom-volume-wave-2": Math.min(1, Math.max(0, 3 * ey - 1)),
-                    "--custom-volume-wave-3": Math.min(1, Math.max(0, 3 * ey - 2)),
-                    "--custom-volume-muted": +(0 === ey),
+                    "--custom-volume-wave-1": Math.min(1, Math.max(0, 3 * eS)),
+                    "--custom-volume-wave-2": Math.min(1, Math.max(0, 3 * eS - 1)),
+                    "--custom-volume-wave-3": Math.min(1, Math.max(0, 3 * eS - 2)),
+                    "--custom-volume-muted": +(0 === eS),
                 },
-                ...(eb
+                ...(ey
                     ? {
-                          "aria-expanded": eD,
-                          "aria-controls": eD ? eT : void 0,
+                          "aria-expanded": eI,
+                          "aria-controls": eI ? eT : void 0,
                           "aria-keyshortcuts": `${c.TJ.MUTE} ArrowUp ArrowDown`,
                       }
                     : void 0),
             },
             "data-testid": "discord-web-video-player-volume-btn",
         }),
-        e3 = (0, r.jsx)(m.G, {
+        e7 = (0, r.jsx)(m.G, {
             mini: !0,
             className: U.nA,
             barClassName: U.i1,
             grabberClassName: U.VA,
-            value: ey,
+            value: eS,
             keyboardStep: 0.1,
             minValue: 0,
             maxValue: 1,
-            onValueChange: eV,
+            onValueChange: eY,
             asValueChanges: function (e) {
-                (eX(e), !eP && (eN(!0), eb || es(!0)));
+                (eV(e), !eN && (eA(!0), ey || ec(!0)));
             },
             fillStyles: { background: "var(--custom-dvp-slider-fill)" },
             orientation: "horizontal",
@@ -438,13 +439,13 @@ function er(e) {
                 className: U.X3,
                 children: [
                     (0, r.jsx)(G, {
-                        iconComponent: e6,
+                        iconComponent: e4,
                         visible: a,
-                        ariaLabel: e8,
-                        tooltipLabel: e8,
+                        ariaLabel: e9,
+                        tooltipLabel: e9,
                         shortcut: c.TJ.PLAYBACK,
-                        onClick: X,
-                        ref: eF,
+                        onClick: V,
+                        ref: e$,
                         buttonSize: O[w],
                         "data-testid": "discord-web-video-player-play-pause-btn",
                     }),
@@ -454,7 +455,7 @@ function er(e) {
                                 (0, r.jsx)(G, {
                                     iconComponent: W.q,
                                     visible: a,
-                                    onClick: en,
+                                    onClick: er,
                                     ariaLabel: $.intl.string(J.default["dRVF+Z"]),
                                     tooltipLabel: $.intl.string(J.default["dRVF+Z"]),
                                     shortcut: c.TJ.SEEK_BACK,
@@ -464,7 +465,7 @@ function er(e) {
                                 (0, r.jsx)(G, {
                                     iconComponent: Z.i,
                                     visible: a,
-                                    onClick: er,
+                                    onClick: ea,
                                     disabled: !g,
                                     ariaLabel: g ? $.intl.string(J.default.yV2FLL) : $.intl.string(J.default.YWbiPw),
                                     tooltipLabel: g ? $.intl.string(J.default.yV2FLL) : $.intl.string(J.default.YWbiPw),
@@ -480,66 +481,66 @@ function er(e) {
             (0, r.jsxs)("div", {
                 className: i()(U.X3, U.L1),
                 children: [
-                    eb
+                    ey
                         ? (0, r.jsx)(f.Y, {
-                              targetElementRef: eL,
-                              shouldShow: eD,
+                              targetElementRef: ek,
+                              shouldShow: eI,
                               scrollBehavior: "close",
                               onRequestClose: () => {
-                                  (window.clearTimeout(ek.current), ew(!1), eR(!1), eN(!1));
+                                  (window.clearTimeout(eM.current), eP(!1), eL(!1), eA(!1));
                               },
-                              layerContext: ex,
+                              layerContext: eg,
                               position: "top",
                               align: "center",
                               renderPopout: () =>
                                   (0, r.jsx)("div", {
                                       id: eT,
                                       className: i()(H.i.blurple, U.p8, U.Gl),
-                                      onMouseEnter: eZ,
-                                      onMouseLeave: eq,
+                                      onMouseEnter: eq,
+                                      onMouseLeave: eJ,
                                       "data-testid": "discord-web-video-player-volume-popout",
                                       children: (0, r.jsx)("div", {
                                           "data-testid": "discord-web-video-player-volume-slider",
-                                          children: e3,
+                                          children: e7,
                                       }),
                                   }),
                               children: () =>
                                   (0, r.jsx)("div", {
-                                      ref: eL,
-                                      onMouseEnter: eZ,
-                                      onMouseLeave: eq,
-                                      onFocus: () => eR(A.Ay.keyboardModeEnabled),
-                                      onBlur: () => eR(!1),
-                                      onKeyDown: eJ,
+                                      ref: ek,
+                                      onMouseEnter: eq,
+                                      onMouseLeave: eJ,
+                                      onFocus: () => eL(A.Ay.keyboardModeEnabled),
+                                      onBlur: () => eL(!1),
+                                      onKeyDown: e0,
                                       className: U.RD,
                                       "data-testid": "discord-web-video-player-volume-control",
-                                      children: e9,
+                                      children: e3,
                                   }),
                           })
                         : (0, r.jsxs)("div", {
-                              onMouseEnter: ez,
-                              onMouseLeave: eW,
-                              onFocus: ez,
-                              onBlur: eW,
+                              onMouseEnter: eW,
+                              onMouseLeave: eZ,
+                              onFocus: eW,
+                              onBlur: eZ,
                               className: i()(U.RD, U.u3),
                               "data-testid": "discord-web-video-player-volume-control",
                               children: [
-                                  e9,
+                                  e3,
                                   (0, r.jsx)(u.animated.div, {
                                       className: U.MQ,
                                       "data-testid": "discord-web-video-player-volume-slider",
                                       style: {
-                                          opacity: (0, u.to)([eI], (e) => `${e}`),
+                                          opacity: (0, u.to)([eB], (e) => `${e}`),
                                           width: (0, u.to)(
-                                              [eI.to({ range: [0, 1], output: [0, eE.volumeSliderWidthPx] })],
+                                              [eB.to({ range: [0, 1], output: [0, eb.volumeSliderWidthPx] })],
                                               (e) => `${e}px`,
                                           ),
                                       },
-                                      children: e3,
+                                      children: e7,
                                   }),
                               ],
                           }),
-                    (0, r.jsx)(Q, { compact: eo && !eh }),
+                    (0, r.jsx)(Q, { compact: es && !ev }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -596,31 +597,45 @@ function er(e) {
                         })({
                             hideTranscriptBtn: b,
                             hideCaptionBtn: E,
-                            transcriptEnabled: F,
-                            captionEnabled: _,
+                            transcriptEnabled: _,
+                            captionEnabled: X,
                             playerState: t,
-                            handleTranscriptBtnClick: V,
-                            handleCaptionBtnClick: ee,
+                            handleTranscriptBtnClick: ee,
+                            handleCaptionBtnClick: et,
                             downloadUrl: P,
-                            handleDownloadButtonClick: eH,
+                            handleDownloadButtonClick: eX,
                             extraButtons: M,
                         }),
                         visible: a,
                         size: w,
                     }),
-                    !(!0 === C || ("inline" === C && !eh)) &&
+                    !(!0 === C || ("inline" === C && !ev)) &&
                         (0, r.jsx)(ei, {
-                            playbackRate: e$,
-                            onPlaybackRateChange: eG,
+                            playbackRate: eU,
+                            onPlaybackRateChange: eH,
                             visible: a,
                             size: w,
-                            handleControlBarPendingInteraction: es,
+                            handleControlBarPendingInteraction: ec,
+                        }),
+                    null != j &&
+                        !ev &&
+                        (0, r.jsx)(G, {
+                            iconComponent: j.iconComponent,
+                            visible: a,
+                            onClick: j.onClick,
+                            disabled: j.disabled,
+                            ariaLabel: j.label,
+                            tooltipLabel: j.label,
+                            tooltipDelayMs: j.tooltipDelayMs,
+                            shortcut: j.shortcut,
+                            buttonSize: O[w],
+                            "data-testid": j["data-testid"],
                         }),
                     !S &&
                         (0, r.jsx)(G, {
-                            iconComponent: eh ? p.FullscreenExitIcon : h.FullscreenEnterIcon,
+                            iconComponent: ev ? p.FullscreenExitIcon : h.FullscreenEnterIcon,
                             visible: a,
-                            onClick: et,
+                            onClick: en,
                             ariaLabel: $.intl.string(J.default.z9Cnzv),
                             tooltipLabel: $.intl.string(J.default.z9Cnzv),
                             shortcut: c.TJ.FULLSCREEN,
@@ -636,7 +651,7 @@ function el(e) {
     let { buttons: t, canCollapse: n, visible: l, size: a } = e;
     return 0 === t.length
         ? null
-        : (0, T.Kj)(t.length, n)
+        : (0, k.Kj)(t.length, n)
           ? (0, r.jsx)(ea, { buttons: t, visible: l, size: a })
           : (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>

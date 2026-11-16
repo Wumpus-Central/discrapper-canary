@@ -1,117 +1,151 @@
 var r = n(477900),
     l = n(582128),
     i = n(876230),
-    a = n(268218),
+    a = n(625657),
+    u = n(268218),
     o = n(584307),
-    u = n(530567);
-let s = l.lazy(() =>
-        (0, a.sq)({
+    s = n(530567),
+    d = n(792996),
+    c = n(302034);
+let f = l.lazy(() =>
+        (0, u.sq)({
             createPromise: () =>
                 Promise.all([n.e(985768), n.e(936090), n.e(791154), n.e(133179), n.e(555793)]).then(n.bind(n, 955368)),
             webpackId: 955368,
             name: "DiscordVideoPlayer",
         }),
     ),
-    d = { width: "100%", height: "100%", objectFit: "contain" };
+    m = { width: "100%", height: "100%", objectFit: "contain" };
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { onPlay: t, autoplay: n, playable: a = !0, mimeType: c, attachmentLayout: f, ...m } = e,
-                p = "single" === f,
-                g = "portrait" === m.orientation,
-                h =
-                    null == f
+            let {
+                    onPlay: t,
+                    autoplay: n,
+                    playable: u = !0,
+                    mimeType: p,
+                    attachmentLayout: g,
+                    onOpenInMediaViewer: h,
+                    ...b
+                } = e,
+                y = "single" === g,
+                C = "portrait" === b.orientation,
+                v =
+                    null == g
                         ? {}
                         : {
                               minWidth: 0,
                               minHeight: 0,
                               autoFitControls: !0,
-                              hideSkipButtons: !p,
+                              hideSkipButtons: !y,
                               autoCompactTimeDisplay: !0,
-                              autoHideVolumeSlider: !p || g,
-                              floatingVolumeSlider: p && g,
-                              hidePlaybackSpeedBtn: !!p && !!g && "inline",
-                              controlBarConfig: u.Xq,
+                              autoHideVolumeSlider: !y || C,
+                              floatingVolumeSlider: y && C,
+                              hidePlaybackSpeedBtn: !!y && !!C && "inline",
+                              controlBarConfig: s.Xq,
                               objectFit: "contain",
                           },
-                b = l.useRef(!1),
-                C = l.useRef(!1),
-                y = l.useCallback(
+                x = l.useRef(!1),
+                S = l.useRef(!1),
+                E = l.useCallback(
                     (e, n) => {
-                        b.current && ((b.current = !1), t?.(C.current, e, n));
+                        x.current && ((x.current = !1), t?.(S.current, e, n));
                     },
                     [t],
                 ),
-                S = l.useCallback(
+                k = l.useCallback(
                     (e, t) => {
                         e === i.Q6.PLAYING
-                            ? t !== i.KB.BUFFERING_RECOVERY && ((b.current = !0), (C.current = t !== i.KB.USER))
-                            : y(0, 0);
+                            ? t !== i.KB.BUFFERING_RECOVERY && ((x.current = !0), (S.current = t !== i.KB.USER))
+                            : E(0, 0);
                     },
-                    [y],
+                    [E],
                 ),
-                x = l.useCallback(
-                    (e, t) => {
-                        y(1e3 * e, Number.isFinite(t) ? 1e3 * t : 0);
-                    },
-                    [y],
-                ),
-                [k] = l.useState(() => new o.A({ src: m.src ?? "", mimeType: c, fileSize: m.fileSizeBytes })),
-                v = l.useRef(null),
-                E = l.useRef(!1),
                 _ = l.useCallback(
-                    (e) => {
-                        ((E.current = e), e ? k.onDragStart(v.current?.currentTime ?? null) : k.onDragEnd());
+                    (e, t) => {
+                        E(1e3 * e, Number.isFinite(t) ? 1e3 * t : 0);
                     },
-                    [k],
+                    [E],
                 ),
-                j = l.useRef(null),
-                P = l.useCallback(
+                [j] = l.useState(() => new o.A({ src: b.src ?? "", mimeType: p, fileSize: b.fileSizeBytes })),
+                w = l.useRef(null),
+                I = l.useRef(!1),
+                M = l.useCallback(
                     (e) => {
-                        if ((j.current?.(), (j.current = null), (v.current = e), null == e)) return;
+                        ((I.current = e), e ? j.onDragStart(w.current?.currentTime ?? null) : j.onDragEnd());
+                    },
+                    [j],
+                ),
+                P = l.useRef(null),
+                T = l.useCallback(
+                    (e) => {
+                        if ((P.current?.(), (P.current = null), (w.current = e), null == e)) return;
                         let t = { currentTarget: e },
                             n = {
-                                waiting: () => k.onWaiting(t),
-                                seeking: () => k.onSeeking(t),
-                                seeked: () => k.onSeeked(t),
-                                timeupdate: () => k.onTimeUpdate(t),
-                                loadedmetadata: () => k.onLoadedMetadata(t),
+                                waiting: () => j.onWaiting(t),
+                                seeking: () => j.onSeeking(t),
+                                seeked: () => j.onSeeked(t),
+                                timeupdate: () => j.onTimeUpdate(t),
+                                loadedmetadata: () => j.onLoadedMetadata(t),
                                 playing: () => {
-                                    (k.onPlaying(t), k.checkVideoDecodability(e, !0));
+                                    (j.onPlaying(t), j.checkVideoDecodability(e, !0));
                                 },
                                 pause: () => {
-                                    E.current || k.onPause(t);
+                                    I.current || j.onPause(t);
                                 },
                                 error: () => {
-                                    ((k.errorCode = e.error?.code ?? null),
-                                        (k.errorMessage = e.error?.message ?? null),
-                                        k.onError(t));
+                                    ((j.errorCode = e.error?.code ?? null),
+                                        (j.errorMessage = e.error?.message ?? null),
+                                        j.onError(t));
                                 },
                             };
                         for (let [t, r] of Object.entries(n)) e.addEventListener(t, r);
-                        j.current = () => {
+                        P.current = () => {
                             for (let [t, r] of Object.entries(n)) e.removeEventListener(t, r);
                         };
                     },
-                    [k],
+                    [j],
                 ),
-                I = null != m.poster ? (0, r.jsx)("img", { src: m.poster, alt: "", style: d }) : null;
-            return a
+                B = l.useRef(null),
+                R = l.useRef(h);
+            l.useLayoutEffect(() => {
+                R.current = h;
+            }, [h]);
+            let F = null != h,
+                A = l.useMemo(() => {
+                    if (F)
+                        return {
+                            id: "open-in-media-viewer",
+                            iconComponent: a.WindowTopOutlineIcon,
+                            label: d.intl.string(c.default.EyuFlE),
+                            onClick: () => {
+                                B.current?.pause();
+                                let e = w.current,
+                                    t = null == e || e.ended ? 0 : e.currentTime;
+                                R.current?.(Math.round(1e3 * t));
+                            },
+                            "data-testid": "discord-web-video-player-open-in-media-viewer-btn",
+                        };
+                }, [F]),
+                D = null != b.poster ? (0, r.jsx)("img", { src: b.poster, alt: "", style: m }) : null;
+            return u
                 ? (0, r.jsx)(l.Suspense, {
-                      fallback: I,
-                      children: (0, r.jsx)(s, {
-                          ...m,
-                          ...h,
+                      fallback: D,
+                      children: (0, r.jsx)(f, {
+                          ...b,
+                          ...v,
                           autoplay: n,
-                          onPlayerStateChange: S,
-                          onProgressUpdate: x,
-                          onTimelineDragStateChange: _,
-                          ref: P,
+                          onPlayerStateChange: k,
+                          onProgressUpdate: _,
+                          onTimelineDragStateChange: M,
+                          expandButton: A,
+                          playerRef: B,
+                          ref: T,
                       }),
                   })
-                : I;
+                : D;
         },
     },
 );

@@ -1,4 +1,4 @@
-(i.d(t, { Nj: () => z, UB: () => L, Cr: () => T, R6: () => b, I1: () => E, SX: () => P }), i(938796));
+(i.d(t, { Nj: () => z, UB: () => b, Cr: () => T, R6: () => P, I1: () => w, SX: () => O }), i(938796));
 var n = i(477900),
     a = i(582128),
     l = i(448761),
@@ -43,7 +43,7 @@ function T(e) {
         analyticsSource: "ImageComponentForMessageAttachment",
     });
 }
-function E(e) {
+function w(e) {
     let t = e.item.originalItem,
         i = (0, r.Lt)(t.flags ?? 0, p.sbO.IS_CLIP),
         a = f.A.toURLSafe(t.proxy_url);
@@ -78,29 +78,30 @@ function E(e) {
                 ],
             })
           : (0, C.T)(e.naturalWidth, e.naturalHeight)
-            ? (0, n.jsx)(w, { attachmentProps: e, posterUrl: a.toString() })
-            : k(e, a.toString());
+            ? (0, n.jsx)(k, { attachmentProps: e, posterUrl: a.toString() })
+            : E(e, a.toString());
 }
-function k(e, t) {
-    let i = e.item.originalItem;
+function E(e, t) {
+    let { onOpenInMediaViewer: i, ...n } = e,
+        a = n.item.originalItem;
     return (0, v.$o)({
-        ...e,
+        ...n,
         showPlaybackSpeedControl: !0,
-        alt: i.description,
+        alt: a.description,
         poster: t,
-        fileSize: i.size,
-        fileName: (0, y.A)(i),
-        src: i.url,
-        placeholder: i.placeholder,
-        placeholderVersion: i.placeholder_version,
-        srcIsAnimated: (0, r.Lt)(i.flags ?? 0, p.sbO.IS_ANIMATED),
+        fileSize: a.size,
+        fileName: (0, y.A)(a),
+        src: a.url,
+        placeholder: a.placeholder,
+        placeholderVersion: a.placeholder_version,
+        srcIsAnimated: (0, r.Lt)(a.flags ?? 0, p.sbO.IS_ANIMATED),
         sourceMetadata: {
-            message: e.message,
-            identifier: { type: "attachment", attachmentId: i.id, filename: i.filename, size: i.size },
+            message: n.message,
+            identifier: { type: "attachment", attachmentId: a.id, filename: a.filename, size: a.size },
         },
     });
 }
-function w(e) {
+function k(e) {
     let { attachmentProps: t, posterUrl: i } = e,
         a = t.item.originalItem,
         { useDiscordVideoPlayer: l } = (0, h.r)({ location: "VideoComponentForMessageAttachment" });
@@ -181,7 +182,7 @@ function w(e) {
                             fileSizeBytes: a.size,
                             mimeType: t.mimeType?.join("/"),
                             initialActive: !1,
-                            preloadOnHover: null == t.onClick,
+                            preloadOnHover: !0,
                             playable: t.playable,
                             autoplay: t.autoPlay,
                             initialVolume: (0, S.v1)(),
@@ -193,7 +194,7 @@ function w(e) {
                             onPlay: t.onPlay ?? void 0,
                             onVolumeChange: S.ls,
                             onMutedChange: S.y5,
-                            onClick: t.onClick ?? void 0,
+                            onOpenInMediaViewer: t.onOpenInMediaViewer,
                             renderOverlay: t.renderOverlayContent ?? void 0,
                             hideFullScreenBtn: !(t.allowFullScreen ?? !0),
                             renderTopStartOverlay: (0, m.PR)((0, u.o)(a, t.message), c.u.MOSAIC),
@@ -210,13 +211,13 @@ function w(e) {
             ],
         });
     }
-    return k(t, i);
+    return E(t, i);
 }
 function z(e) {
     let t = e.item.originalItem;
     return (0, v.gL)({ ...e, fileSize: t.size, fileName: (0, y.A)(t), src: t.url });
 }
-function P(e) {
+function O(e) {
     let { message: t, item: i } = e,
         n = i.originalItem,
         l = (0, d.dx)(d.k0.VOICE_MESSAGE, n.id),
@@ -273,7 +274,7 @@ function P(e) {
         playbackCacheKey: l,
     });
 }
-function b(e) {
+function P(e) {
     let t = e.item.originalItem,
         { message: i } = e;
     return (0, v._d)({
@@ -293,7 +294,7 @@ function b(e) {
             i.type !== l.l.INTERACTION_PREMIUM_UPSELL,
     });
 }
-function L(e) {
+function b(e) {
     let t = e.item.originalItem;
     return (0, v.Dk)({ ...e, url: t.url, fileName: (0, y.A)(t), fileSize: t.size });
 }
