@@ -1,4 +1,5 @@
-var i = n(531685);
+var i = n(855986),
+    r = n(531685);
 n.d(
     t,
     {},
@@ -8,7 +9,10 @@ n.d(
                 return !0;
             },
             getState: function () {
-                return i.A.isAppFocused() ? "focused" : "unfocused";
+                return r.A.isAppFocused() ? "focused" : "unfocused";
+            },
+            useState: function () {
+                return (0, i.bG)([r.A], () => (r.A.isAppFocused() ? "focused" : "unfocused"));
             },
             useCanUIRequestGatewaySocket: function () {
                 return !0;

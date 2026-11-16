@@ -115,10 +115,8 @@ let C = new N(E.h, {
         (null == n && ((n = new d.A(I, p)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },
     QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function (e) {
-        let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e;
-        S(t, !1);
-        let r = { creative: null, fetchedAt: i, ttlMillis: (0, f.Ce)(n) };
-        (a = new Map(a)).set(t, [r]);
+        let { placement: t, responseTtlSeconds: n, fetchedAt: i, refetchOnFocus: r } = e;
+        (a = new Map(a)).set(t, r ? [] : [{ creative: null, fetchedAt: i, ttlMillis: (0, f.Ce)(n) }]);
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;

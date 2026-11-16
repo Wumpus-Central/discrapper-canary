@@ -3,12 +3,13 @@ n.d(
     t,
     {},
     {
-        F: function (e, t) {
+        F: function (e, t, n) {
             i.h.dispatch({
                 type: "QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER",
                 placement: e,
-                fetchedAt: Date.now(),
                 responseTtlSeconds: t / 1e3,
+                fetchedAt: Date.now(),
+                refetchOnFocus: n,
             });
         },
     },
