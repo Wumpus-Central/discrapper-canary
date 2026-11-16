@@ -1430,22 +1430,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-04-hide-view-full-profile-button",
-    "defaultConfig": {
-      "showButton": true
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "showButton": false
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-04-http-request-sample",
     "defaultConfig": {
       "sampleRate": 0
