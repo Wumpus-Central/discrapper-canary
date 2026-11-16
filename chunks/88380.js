@@ -90,12 +90,12 @@ var j = l(503698),
     v = l(62617),
     S = l(559106),
     I = l(516521),
-    E = l(939249),
-    P = l(752222);
+    P = l(939249),
+    E = l(752222);
 let T = [
-    { key: "auto-sync", message: P.default.WUVzdk },
-    { key: "linked-channel", message: P.default.MEQJ1m },
-    { key: "guild-invite", message: P.default["hn+Lsg"] },
+    { key: "auto-sync", message: E.default.WUVzdk },
+    { key: "linked-channel", message: E.default.MEQJ1m },
+    { key: "guild-invite", message: E.default["hn+Lsg"] },
 ];
 var M = l(561193);
 let C = {
@@ -191,7 +191,7 @@ function k() {
                         orientation: "horizontal",
                         className: y()(M.XG, { [M.cB]: "dragging" === c, [M.Ni]: "settling" === c }),
                         role: "region",
-                        "aria-label": x.intl.string(P.default.yFqGy8),
+                        "aria-label": x.intl.string(E.default.yFqGy8),
                         tabIndex: 0,
                         onScroll: function () {
                             let t = e.current?.getScrollerNode();
@@ -269,7 +269,7 @@ function k() {
                     children: z.map((t, l) => {
                         let { key: r } = t;
                         return (0, n.jsx)(
-                            E.D,
+                            P.D,
                             {
                                 className: y()(M.Om, { [M.o]: l === s }),
                                 "aria-label": x.intl.formatToPlainString(x.t["2SXOrM"], { pageNumber: l + 1 }),
@@ -304,7 +304,7 @@ function A(e) {
                         variant: "heading-md/semibold",
                         color: "text-subtle",
                         className: w.G,
-                        children: x.intl.formatToPlainString(P.default.WmxMAI, {
+                        children: x.intl.formatToPlainString(E.default.WmxMAI, {
                             displayNoun: t.displayNoun ?? "other",
                         }),
                     }),
@@ -317,7 +317,7 @@ function A(e) {
                     (0, n.jsx)(f.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: x.intl.string(P.default.yFqGy8),
+                        children: x.intl.string(E.default.yFqGy8),
                     }),
                     (0, n.jsx)(k, {}),
                 ],
@@ -352,7 +352,7 @@ let U = r.memo(function (e) {
         a = r.useId(),
         s = r.useRef(null),
         o = !t.eligible,
-        c = t.eligible ? t.description : (t.description ?? x.intl.formatToPlainString(P.default.VNY3C1, { noun: l }));
+        c = t.eligible ? t.description : (t.description ?? x.intl.formatToPlainString(E.default.VNY3C1, { noun: l }));
     return (0, n.jsx)(D.A1, {
         value: t.id,
         isDisabled: o,
@@ -400,7 +400,7 @@ function V(e) {
                 variant: "body-md/medium",
                 color: "text-subtle",
                 className: X.DD,
-                children: x.intl.formatToPlainString(P.default["Xm+emB"], { noun: a }),
+                children: x.intl.formatToPlainString(E.default["Xm+emB"], { noun: a }),
             }),
             (0, n.jsx)(D.z6, {
                 "aria-labelledby": s,
@@ -413,7 +413,7 @@ function V(e) {
                 ? (0, n.jsx)(g.E, {
                       variant: "body-sm/medium",
                       color: "text-subtle",
-                      children: x.intl.formatToPlainString(P.default.ybJIQJ, { noun: a }),
+                      children: x.intl.formatToPlainString(E.default.ybJIQJ, { noun: a }),
                   })
                 : null,
         ],
@@ -436,7 +436,7 @@ function K(e) {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
                         className: O.G,
-                        children: x.intl.formatToPlainString(P.default["bfJ/sO"], {
+                        children: x.intl.formatToPlainString(E.default["bfJ/sO"], {
                             noun: l,
                             orgName: o.name,
                             gameName: c.name,
@@ -453,7 +453,7 @@ function K(e) {
                                   (0, n.jsx)(g.E, {
                                       variant: "body-md/medium",
                                       color: "text-default",
-                                      children: x.intl.formatToPlainString(P.default.VuENGl, { count: d, max: u }),
+                                      children: x.intl.formatToPlainString(E.default.VuENGl, { count: d, max: u }),
                                   }),
                               ],
                           })
@@ -476,11 +476,11 @@ function Z(e) {
         [v, S] = r.useState(!1);
     if (null == f) return null;
     let I = (0, s.A)({ displayNoun: f.displayNoun, lowercase: !0 }),
-        E = x.intl.formatToPlainString(P.default["jKi+kc"], { noun: (0, s.A)({ displayNoun: f.displayNoun }) }),
+        P = x.intl.formatToPlainString(E.default["jKi+kc"], { noun: (0, s.A)({ displayNoun: f.displayNoun }) }),
         T = [
             {
                 stepKey: "VIEW",
-                modalProps: { title: E },
+                modalProps: { title: P },
                 body: (0, n.jsx)(K, {
                     invite: f,
                     noun: I,
@@ -494,9 +494,9 @@ function Z(e) {
             },
             {
                 stepKey: "ACCEPT",
-                modalProps: { title: E },
+                modalProps: { title: P },
                 body: (0, n.jsx)(A, { invite: f }),
-                nextButtonProps: { text: x.intl.string(P.default.BaZ6nt) },
+                nextButtonProps: { text: x.intl.string(E.default.BaZ6nt) },
                 onNext: async function () {
                     let e = p ? N : null;
                     S(!0);
@@ -510,7 +510,9 @@ function Z(e) {
                         ((r = { joinStatus: i, failureReason: s, guildJoinStatus: o, character: e }),
                             (0, d.mM)(
                                 async () => {
-                                    let { default: e } = await l.e(172470).then(l.bind(l, 543637));
+                                    let { default: e } = await Promise.all([l.e(525189), l.e(490279)]).then(
+                                        l.bind(l, 253914),
+                                    );
                                     return (l) => (0, n.jsx)(e, { code: t, result: r, ...l });
                                 },
                                 { modalKey: u.Vi },
