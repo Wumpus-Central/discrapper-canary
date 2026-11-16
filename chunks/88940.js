@@ -1,7 +1,6 @@
 var n = l(582128),
-    i = l(174947),
-    a = l(652215);
-function r(e) {
+    i = l(174947);
+function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [, l] = n.useReducer((e) => e + 1, 0),
         a = e?.getTime();
@@ -27,13 +26,9 @@ l.d(
     t,
     {},
     {
-        Ay: r,
-        NI: function (e) {
-            return null != r((0, i.fH)(e), !1);
-        },
-        xZ: function (e) {
-            let t = e.sku?.productLine;
-            return t === a.EZt.SOCIAL_LAYER_GAME_ITEM || t === a.EZt.COLLECTIBLES || t === a.EZt.PREMIUM;
+        A: a,
+        N: function (e) {
+            return null != a((0, i.fH)(e), !1);
         },
     },
 );

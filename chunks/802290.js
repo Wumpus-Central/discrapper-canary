@@ -3,7 +3,7 @@ var n = l(477900),
     a = l.n(i),
     r = l(805251),
     s = l(834730),
-    u = l(792996),
+    u = l(174947),
     o = l(453310);
 l.d(
     t,
@@ -11,14 +11,7 @@ l.d(
     {
         A: function (e) {
             let { countdown: t, variant: l, className: i, id: d } = e,
-                c =
-                    "sidebar" === l
-                        ? "hours" === t.unit
-                            ? u.intl.formatToPlainString(u.t.WJieZ2, { hours: t.hours })
-                            : u.intl.formatToPlainString(u.t.DkxLY0, { days: t.days })
-                        : "hours" === t.unit
-                          ? u.intl.string(u.t.Bc13HF)
-                          : u.intl.formatToPlainString(u.t.Io7ozn, { days: t.days });
+                c = (0, u.Fu)(t, "sidebar" === l ? "compact" : "expanded");
             return "profile" === l
                 ? (0, n.jsx)("span", {
                       id: d,
