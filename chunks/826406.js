@@ -152,8 +152,7 @@ let I = new h("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
     new _(
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
-    ),
-    new h("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
+    ));
 let p = !1;
 function m() {
     return p;
