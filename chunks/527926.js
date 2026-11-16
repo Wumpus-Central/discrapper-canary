@@ -1,7 +1,7 @@
 var r = a(115560),
     i = a(201779),
-    s = a(719718);
-function n() {
+    n = a(719718);
+function s() {
     return { completedMs: 0, startedAt: null };
 }
 function c(e) {
@@ -19,8 +19,8 @@ let l = new (class {
     stepName = null;
     isForeground = !0;
     isStopped = !0;
-    sessionTimer = n();
-    customizationTimer = n();
+    sessionTimer = s();
+    customizationTimer = s();
     initialize(e) {
         let { didPlayerShareDataWithDiscord: t, isForeground: a } = e;
         ((this.sessionId = (0, r.A)()),
@@ -28,8 +28,8 @@ let l = new (class {
             (this.stepName = null),
             (this.isForeground = a),
             (this.isStopped = !1),
-            (this.sessionTimer = n()),
-            (this.customizationTimer = n()),
+            (this.sessionTimer = s()),
+            (this.customizationTimer = s()),
             this.updateTimers());
     }
     setStepName(e) {
@@ -47,9 +47,9 @@ let l = new (class {
     getAnalyticsProperties() {
         return {
             checkpoint_session_id: this.sessionId,
-            has_personalized_data: this.didPlayerShareDataWithDiscord && null != s.A.stats,
-            checkpoint_availability: s.A.availability,
-            checkpoint_compact_assets: s.A.compactAssets,
+            has_personalized_data: this.didPlayerShareDataWithDiscord && null != n.A.stats,
+            checkpoint_availability: n.A.availability,
+            checkpoint_compact_assets: n.A.compactAssets,
             time_spent_ms: d(this.sessionTimer),
             customization_time_spent_ms: d(this.customizationTimer),
         };

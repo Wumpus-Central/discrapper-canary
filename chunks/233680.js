@@ -1,4 +1,4 @@
-o.exports = {
+t.exports = {
     YL: "tooltip_3_v8qp",
     Cy: "tooltipDisablePointerEvents_3_v8qp",
     xQ: "tooltipPointer_3_v8qp",

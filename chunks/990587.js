@@ -1,4 +1,4 @@
-o.exports = {
+t.exports = {
     b: "closeButton_yu1aEm",
     h_: "description_yu1aEm",
     fe: "conflictButton_yu1aEm",

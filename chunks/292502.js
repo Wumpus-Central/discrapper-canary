@@ -1,4 +1,4 @@
-o.exports = {
+t.exports = {
     Gq: "authorize_2Zx6d1",
     g4: "loadingContainer_2Zx6d1",
     u1: "spinner_2Zx6d1",

@@ -1,4 +1,4 @@
-o.exports = {
+t.exports = {
     b9: "applicationEducation_uvIpB5",
     a9: "sectionLabel_uvIpB5",
     f_: "entry_uvIpB5",

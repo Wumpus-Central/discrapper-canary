@@ -1,5 +1,5 @@
-a.r(
-    (i.exports = {
+o.r(
+    (t.exports = {
         indicatorDot: "indicatorDot_SUIihK",
         xs: "xs_SUIihK",
         sm: "sm_SUIihK",

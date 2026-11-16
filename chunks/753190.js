@@ -1,4 +1,4 @@
-(n.d(t, { YW: () => e4, NE: () => th, Ay: () => tc, Jz: () => td }), n(321073));
+(n.d(t, { YW: () => e6, NE: () => th, Ay: () => tc, Jz: () => td }), n(321073));
 var i = n(477900),
     r = n(582128),
     l = n(435558),
@@ -427,7 +427,7 @@ var ev = n(279208),
     eQ = n(640708),
     e0 = n(290863),
     e1 = n(294910);
-function e2(e) {
+function e9(e) {
     let {
             user: t,
             row: n,
@@ -525,7 +525,7 @@ function e2(e) {
     });
 }
 if (221552 != n.j) var Z = n(43105);
-function e9(e) {
+function e2(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
         l = r.useCallback(() => {
             n(er.i.USER_DISMISS);
@@ -543,11 +543,11 @@ function e9(e) {
     });
 }
 var e5 = n(650583),
-    e7 = n(872330);
-let e8 = (0, z.Ld)(),
+    e8 = n(872330);
+let e7 = (0, z.Ld)(),
     e3 = "PrivateChannelRecipientsInvite",
-    e4 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
-function e6(e) {
+    e6 = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
+function e4(e) {
     if (eF.A.isFriend(e)) return !0;
     let t = eN.default.getCurrentUser(),
         n = eN.default.getUser(e);
@@ -556,7 +556,7 @@ function e6(e) {
 function te(e) {
     let t = [],
         n = [];
-    for (let i of e) e6(i) ? t.push(i) : n.push(i);
+    for (let i of e) e4(i) ? t.push(i) : n.push(i);
     return { channelRecipientIds: t, inviteLinkOnlyUserIds: n };
 }
 function tt(e) {
@@ -577,17 +577,17 @@ function ti(e) {
             ((0, eD.uh)(ei.ME, t.id), n());
         },
         children: (0, i.jsxs)("div", {
-            className: e7.us,
+            className: e8.us,
             children: [
                 (0, i.jsx)(g.eu, { src: (0, W.Y)(t), size: A._3.SIZE_24, "aria-label": r }),
                 (0, i.jsx)(p.E, {
                     variant: "body-sm/medium",
                     color: "text-strong",
                     tag: "span",
-                    className: e7.J2,
+                    className: e8.J2,
                     children: r,
                 }),
-                (0, i.jsx)("span", { className: e7.Pd, children: a()(eW.default.extractTimestamp(l)).fromNow() }),
+                (0, i.jsx)("span", { className: e8.Pd, children: a()(eW.default.extractTimestamp(l)).fromNow() }),
             ],
         }),
     });
@@ -608,7 +608,7 @@ function tr(e) {
                 },
             },
         ],
-        input: (0, i.jsx)(p.E, { variant: "body-md/normal", className: e7.Jv, children: es.intl.string(es.t.cjE7wH) }),
+        input: (0, i.jsx)(p.E, { variant: "body-md/normal", className: e8.Jv, children: es.intl.string(es.t.cjE7wH) }),
         ...r,
         children: l
             .filter(eB.Vq)
@@ -625,7 +625,7 @@ function tl(e) {
         [n, r] = (0, J.kn)([u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);
     return n !== u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK
         ? null
-        : (0, i.jsx)(e9, { targetElementRef: t, markAsDismissed: r });
+        : (0, i.jsx)(e2, { targetElementRef: t, markAsDismissed: r });
 }
 class ts extends r.PureComponent {
     state = { separator: !1, copied: !1, newChannelName: "", previewIcon: void 0, collapsedSections: new Set() };
@@ -643,8 +643,8 @@ class ts extends r.PureComponent {
             i = "";
         return (
             null != e
-                ? ((n = t ?? e4.ADD_FRIENDS_TO_DM), (i = e.isDM() ? "DM" : "Group DM"))
-                : ((n = e4.NEW_GROUP_DM), (i = "Friends List")),
+                ? ((n = t ?? e6.ADD_FRIENDS_TO_DM), (i = e.isDM() ? "DM" : "Group DM"))
+                : ((n = e6.NEW_GROUP_DM), (i = "Friends List")),
             { entryPointType: n, entryPointSource: i }
         );
     }
@@ -859,7 +859,7 @@ class ts extends r.PureComponent {
             }
         }
         return (0, i.jsxs)("div", {
-            className: e7.ON,
+            className: e8.ON,
             children: [
                 (0, i.jsx)(I.k, {
                     inputRef: this.searchBarRef,
@@ -880,7 +880,7 @@ class ts extends r.PureComponent {
                     role: "combobox",
                     "aria-autocomplete": "list",
                     "aria-haspopup": "listbox",
-                    "aria-controls": e8,
+                    "aria-controls": e7,
                     "aria-expanded": o,
                     "aria-activedescendant": o ? `user-row-${s}` : void 0,
                 }),
@@ -893,7 +893,7 @@ class ts extends r.PureComponent {
         let { isInNitroCapTreatment: e, nitroAudience: t } = this.props;
         return e && (0, en.yh)(t)
             ? (0, i.jsx)("div", {
-                  className: e7.qu,
+                  className: e8.qu,
                   children: (0, i.jsx)(em, {
                       ref: this.nitroUpsellBannerRef,
                       location: e3,
@@ -920,12 +920,12 @@ class ts extends r.PureComponent {
     }
     renderMobileCloseButton = () =>
         (0, i.jsx)("div", {
-            className: e7.Lh,
+            className: e8.Lh,
             ref: this._mobileCloseRef,
             children: (0, i.jsx)(E.xp, {
                 containerRef: this._mobileCloseRef,
                 children: (0, i.jsx)("div", {
-                    children: (0, i.jsx)(F.A, { className: e7.RR, closeAction: this.props.onClose, keybind: "ESC" }),
+                    children: (0, i.jsx)(F.A, { className: e8.RR, closeAction: this.props.onClose, keybind: "ESC" }),
                 }),
             }),
         });
@@ -952,8 +952,8 @@ class ts extends r.PureComponent {
               : {
                     ref: this.scrollerRef,
                     sections: [t.length],
-                    className: e7.XG,
-                    innerClassName: e7.bv,
+                    className: e8.XG,
+                    innerClassName: e8.bv,
                     renderRow: this.renderFlatRow,
                     rowHeight: this.getFlatRowHeight,
                     renderSection: this.renderEmptySection,
@@ -964,7 +964,7 @@ class ts extends r.PureComponent {
                     fade: !0,
                     role: void 0,
                     innerRole: "group",
-                    innerId: e8,
+                    innerId: e7,
                 };
     }
     getEmptyStateListProps() {
@@ -977,7 +977,7 @@ class ts extends r.PureComponent {
             renderRow: () => {
                 let t = null != e && e.isMultiUserDM();
                 return (0, i.jsxs)("div", {
-                    className: e7.wV,
+                    className: e8.wV,
                     children: [
                         (0, i.jsx)(p.E, {
                             variant: "body-md/normal",
@@ -1003,16 +1003,16 @@ class ts extends r.PureComponent {
         return {
             ref: this.scrollerRef,
             sections: e.map((e) => e.results.length + +!!e.showSpinner),
-            className: e7.XG,
-            innerClassName: e7.bv,
+            className: e8.XG,
+            innerClassName: e8.bv,
             renderRow: (r) => {
                 let { section: s, row: a } = r,
                     o = e[s];
                 if (null == o || t.has(o.type)) return null;
                 if (a >= o.results.length)
                     return (0, i.jsx)("div", {
-                        className: e7.Q_,
-                        children: (0, i.jsx)(S.y, { type: S.t.SPINNING_CIRCLE, className: e7.u1 }),
+                        className: e8.Q_,
+                        children: (0, i.jsx)(S.y, { type: S.t.SPINNING_CIRCLE, className: e8.u1 }),
                     });
                 let u = o.results[a];
                 if (null == u) return null;
@@ -1031,7 +1031,7 @@ class ts extends r.PureComponent {
                     a = "friends" === l.type ? es.intl.string(es.t.TdEu5X) : es.intl.string(es.t.y29JXs),
                     o = s ? C.ChevronSmallRightIcon : _.ChevronSmallDownIcon;
                 return (0, i.jsxs)(f.D, {
-                    className: e7.bV,
+                    className: e8.bV,
                     onClick: () => this.handleSectionToggle(l.type),
                     "aria-expanded": !s,
                     "aria-label": a,
@@ -1048,7 +1048,7 @@ class ts extends r.PureComponent {
             fade: !0,
             role: void 0,
             innerRole: "group",
-            innerId: e8,
+            innerId: e7,
         };
     }
     handleSectionToggle = (e) => {
@@ -1070,7 +1070,7 @@ class ts extends r.PureComponent {
             c = r.has(o.id) || a?.recipients.includes(o.id),
             h = (!c && 0 >= this.getRemaining() && !this.shouldShowNitroCapRoadblock()) || a?.recipients.includes(o.id);
         return (0, i.jsx)(
-            e2,
+            e9,
             {
                 row: t,
                 user: o,
@@ -1426,7 +1426,7 @@ class ts extends r.PureComponent {
     };
     _promoteDMToGroupDM = (e, t, n, i) => {
         let r = eb.A.getChannelId() === e,
-            l = e6(t),
+            l = e4(t),
             s = l ? [...n, t] : n,
             a = l ? i : [...i, t];
         (l && n.length > 0
@@ -1493,10 +1493,10 @@ function ta(e) {
         { analyticsLocations: o } = (0, B.Ay)(V.A.NEW_GROUP_DM_INVITE_MODAL),
         u = (0, Y.Jo)(Array.from(t), eN.default, eF.A);
     return (0, i.jsxs)("div", {
-        className: e7.zj,
+        className: e8.zj,
         children: [
             (0, i.jsx)(q.X, {
-                className: e7.r9,
+                className: e8.r9,
                 channel: null,
                 previewIcon: r,
                 onIconChange: l,
@@ -1506,7 +1506,7 @@ function ta(e) {
                 allowRemovingIcon: !1,
             }),
             (0, i.jsx)(p.E, {
-                className: e7.hL,
+                className: e8.hL,
                 variant: "body-sm/medium",
                 color: "text-muted",
                 children: es.intl.string(es.t.YynaLK),
@@ -1661,7 +1661,7 @@ function th(e) {
                 icon: s,
                 fullWidth: n,
             }),
-            A === u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e9, { targetElementRef: h, markAsDismissed: p }),
+            A === u.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e2, { targetElementRef: h, markAsDismissed: p }),
         ],
     });
 }

@@ -1,8 +1,8 @@
 a.d(t, { A: () => f });
 var r = a(477900),
     i = a(503698),
-    s = a.n(i),
-    n = a(140735),
+    n = a.n(i),
+    s = a(140735),
     c = a(834730),
     d = a(343053);
 a(532294);
@@ -19,9 +19,9 @@ function f(e) {
         { size: i } = (0, d.Z)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(n.A, { children: o.intl.formatToPlainString(l.default["/nxqc2"], { powerLevel: t }) }),
+            (0, r.jsx)(s.A, { children: o.intl.formatToPlainString(l.default["/nxqc2"], { powerLevel: t }) }),
             (0, r.jsxs)("div", {
-                className: s()(u.powerBar, u[i]),
+                className: n()(u.powerBar, u[i]),
                 "aria-hidden": !0,
                 children: [
                     (0, r.jsx)(c.E, {
@@ -33,7 +33,7 @@ function f(e) {
                     (0, r.jsx)(c.E, {
                         variant: "mono-md/bold",
                         color: "text-overlay-dark",
-                        className: s()(u.text, u.level),
+                        className: n()(u.text, u.level),
                         children: t,
                     }),
                     (0, r.jsx)("div", {
@@ -41,7 +41,7 @@ function f(e) {
                         children: h.map((e, t) =>
                             (0, r.jsx)(
                                 "img",
-                                { src: e, alt: "", className: s()(u.unit, { [u.unitUnfilled]: t >= a }) },
+                                { src: e, alt: "", className: n()(u.unit, { [u.unitUnfilled]: t >= a }) },
                                 t,
                             ),
                         ),

@@ -1,4 +1,4 @@
-o.exports = {
+t.exports = {
     iE: "wrapper_XpIUHy",
     Wn: "pointer_XpIUHy",
     dK: "mask_XpIUHy",

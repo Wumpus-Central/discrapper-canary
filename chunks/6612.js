@@ -1,4 +1,4 @@
-o.exports = {
+t.exports = {
     iE: "wrapper_Vs-TKU",
     wx: "header_Vs-TKU",
     Qq: "text_Vs-TKU",

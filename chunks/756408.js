@@ -2,8 +2,8 @@ a.r(t);
 var r = a(477900);
 a(582128);
 var i = a(646514),
-    s = a(996682),
-    n = a(27989);
+    n = a(996682),
+    s = a(27989);
 a.d(
     t,
     {},
@@ -17,11 +17,11 @@ a.d(
                     colorClass: l = "",
                     ...o
                 } = e,
-                u = (0, n.J)(t),
+                u = (0, s.J)(t),
                 h = u?.width ?? a,
                 f = u?.height ?? c;
             return (0, r.jsx)("svg", {
-                ...(0, s.A)(o),
+                ...(0, n.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: h,
                 height: f,

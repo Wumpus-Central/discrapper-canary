@@ -6,8 +6,8 @@ var l = n(477900),
     a = n(933832),
     u = n(173936),
     c = n(782603),
-    d = n(408278),
-    o = n(365199),
+    o = n(408278),
+    d = n(365199),
     m = n(964486),
     h = n(625142),
     g = n(988794),
@@ -21,25 +21,25 @@ n.d(
                     isActive: e,
                     isUserLurking: n,
                     rsvped: l,
-                    canInvite: d,
-                    isChannelPublic: o = !0,
-                    entityType: p,
-                    onJoinClick: f,
+                    canInvite: o,
+                    isChannelPublic: d = !0,
+                    entityType: f,
+                    onJoinClick: p,
                     onRsvpClick: C,
                     onStartClick: y,
                     onInviteClick: E,
                     onEndClick: A,
                     onJoinGuildClick: _,
-                    isJoined: x = !1,
-                    channel: k,
+                    isJoined: k = !1,
+                    channel: x,
                 } = t,
-                b = void 0 !== f,
+                b = void 0 !== p,
                 I = (function (t) {
                     let { onInviteClick: e, canInvite: n, isChannelPublic: l, channel: c } = t,
-                        d = new r.Ep(),
-                        [o, g] = i.useState(!1);
+                        o = new r.Ep(),
+                        [d, g] = i.useState(!1);
                     return ((0, m.Ay)(() => () => {
-                        d.stop();
+                        o.stop();
                     }),
                     null == e)
                         ? null
@@ -53,26 +53,26 @@ n.d(
                             }
                           : {
                                 variant: "secondary",
-                                icon: o ? a.CheckmarkLargeIcon : u.LinkIcon,
+                                icon: d ? a.CheckmarkLargeIcon : u.LinkIcon,
                                 onClick: function (t) {
                                     e?.(t, () => {
-                                        (g(!0), d.start(1e3, () => g(!1)));
+                                        (g(!0), o.start(1e3, () => g(!1)));
                                     });
                                 },
-                                disabled: o,
-                                text: o ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
-                                "aria-label": o ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
+                                disabled: d,
+                                text: d ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
+                                "aria-label": d ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.WqhZss),
                             };
-                })({ onInviteClick: E, canInvite: d, isChannelPublic: o, channel: k }),
+                })({ onInviteClick: E, canInvite: o, isChannelPublic: d, channel: x }),
                 D = [];
             if (
                 (null != I && D.push(I),
                 e &&
-                    p !== g.Ps.EXTERNAL &&
+                    f !== g.Ps.EXTERNAL &&
                     D.push({
                         variant: "active",
                         size: "sm",
-                        onClick: f,
+                        onClick: p,
                         text: (function (t) {
                             let { isJoined: e, canJoin: n, isVoiceChannel: l } = t;
                             return n
@@ -82,7 +82,7 @@ n.d(
                                       ? v.intl.string(v.t.nxUtoQ)
                                       : v.intl.string(v.t.ZYO5OK)
                                 : v.intl.string(v.t.TVBCKZ);
-                        })({ isJoined: x, canJoin: b, isVoiceChannel: p === g.Ps.VOICE }),
+                        })({ isJoined: k, canJoin: b, isVoiceChannel: f === g.Ps.VOICE }),
                         disabled: !b,
                     }),
                 n &&
@@ -113,8 +113,8 @@ n.d(
         },
         jD: function (t) {
             let { onClick: e } = t;
-            return (0, l.jsx)(d.K, {
-                icon: o.MoreHorizontalIcon,
+            return (0, l.jsx)(o.K, {
+                icon: d.MoreHorizontalIcon,
                 variant: "secondary",
                 "aria-label": v.intl.string(v.t.bt75uw),
                 onClick: e,
