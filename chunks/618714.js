@@ -1,5 +1,6 @@
 var n;
 ((n = function () {
+    "use strict";
     var e,
         t,
         n,

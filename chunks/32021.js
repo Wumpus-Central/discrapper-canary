@@ -1,4 +1,5 @@
 !(function (e) {
+    "use strict";
     function n(e, n, a, t) {
         var i = {
             m: ["eine Minute", "einer Minute"],

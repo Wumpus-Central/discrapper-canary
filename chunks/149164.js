@@ -1,4 +1,4 @@
-n.d(t, { A: () => O, s: () => N });
+n.d(t, { A: () => m, s: () => N });
 var a = n(855986),
     i = n(927813),
     r = n(664947),
@@ -47,6 +47,6 @@ let N = (0, a.UT)(f, {
         await r.A.fetchInvitableGameOrganizations(e);
     },
 });
-function O(e) {
+function m(e) {
     return N((0, G.A)(e));
 }

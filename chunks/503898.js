@@ -16,12 +16,12 @@ var a = n(477900),
 let G = [];
 function N(e) {
     let { user: t, location: N } = e,
-        O = (0, c.A)(N),
-        _ = (0, i.bG)([o.default, u.A], () => (0, d.A)(t, o.default.getCurrentUser()?.id, u.A), [t]),
-        m = (0, i.bG)([A.A], () => null != A.A.getDMFromUserId(t.id), [t.id]),
+        m = (0, c.A)(N),
+        O = (0, i.bG)([o.default, u.A], () => (0, d.A)(t, o.default.getCurrentUser()?.id, u.A), [t]),
+        _ = (0, i.bG)([A.A], () => null != A.A.getDMFromUserId(t.id), [t.id]),
         y = (0, l.A)(t.id),
-        E = O.length > 0 && _ && (m || y),
-        { data: b } = (0, I.s)(E ? O : G);
+        E = m.length > 0 && O && (_ || y),
+        { data: b } = (0, I.s)(E ? m : G);
     if (!E) return null;
     let S = (0, s.m$)((0, s.Ay)(b));
     return (0, a.jsx)(r.Dr, {
