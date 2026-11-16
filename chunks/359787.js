@@ -15,7 +15,7 @@ n.d(t, {
                         break;
                     case "spoiler":
                     case "heading":
-                    case "small":
+                    case "subtext":
                         yield* e(n.value.content);
                         break;
                     case "list":
@@ -28,10 +28,10 @@ n.d(t, {
     qg: () => l,
     IS: () => f,
 });
-var i = n(124499),
-    o = n(553731),
-    a = n(712982);
-n(87391);
+var i = n(378448),
+    o = n(975370),
+    a = n(905779);
+n(593034);
 let _ = !1,
     s = null;
 function c() {

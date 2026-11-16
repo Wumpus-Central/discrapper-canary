@@ -1,5 +1,5 @@
 (n(321073), n(134528), n(947204));
-var l = n(714414),
+var l = n(359787),
     i = n(152959),
     r = n(677413),
     s = n(339200);
@@ -159,7 +159,7 @@ n.d(
                                                 case "link":
                                                     s = [...i, "link"];
                                                     break;
-                                                case "small":
+                                                case "subtext":
                                                     s = [...i, "subtext"];
                                             }
                                             let a = !1,
@@ -189,7 +189,7 @@ n.d(
                                                     case "code_content":
                                                         n(o, "code_block" === r.type ? ["codeBlockText"] : s);
                                                         break;
-                                                    case "small_marker":
+                                                    case "subtext_marker":
                                                         (l(o, "open", s), (u = !0));
                                                         break;
                                                     case "link_open":

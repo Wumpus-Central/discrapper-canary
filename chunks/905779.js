@@ -140,7 +140,7 @@ n.d(
                     : console.warn(
                           "using deprecated parameters for the initialization function; pass a single object instead",
                       )),
-                void 0 === e && (e = new URL(n(445181), n.b)));
+                void 0 === e && (e = new URL(n(775702), n.b)));
             let t = i();
             ("string" == typeof e ||
                 ("function" == typeof Request && e instanceof Request) ||
