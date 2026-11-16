@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673949, Version Hash: 1de2fe08605a98078a8edf00f180691852ee3179`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 673956, Version Hash: 4d73505d8eb54043ce8ab5696090bf473e1ffd51`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eg.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673949";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "673956";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15915,7 +15915,7 @@ let p_ = "isHideDevBanner",
                     className: td()(pu.Wz, pu.mr),
                     children: [
                         (0, v.jsx)(pc, { className: pu.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673949" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "673956" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -22318,7 +22318,7 @@ let g6 = (0, tW.Fe)({
                 n.e(972638),
                 n.e(95241),
                 n.e(866475),
-                n.e(335930),
+                n.e(112477),
                 n.e(183715),
                 n.e(921528),
                 n.e(102247),
@@ -36358,7 +36358,7 @@ let DH = {
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e(866475),
-                                n.e(335930),
+                                n.e(112477),
                                 n.e(58243),
                                 n.e(844780),
                                 n.e(236946),
@@ -39442,7 +39442,7 @@ let b2 = [82, 73, 70, 70],
                               (0, tY.mM)(
                                   async () => {
                                       let { default: e } = await Promise.all([
-                                          n.e(335930),
+                                          n.e(112477),
                                           n.e(921611),
                                           n.e(592e3),
                                           n.e(524434),
@@ -45042,7 +45042,7 @@ let wY = (0, tW.Fe)({
             n.e(970760),
             n.e(306695),
             n.e(40799),
-            n.e(335930),
+            n.e(112477),
             n.e(477235),
             n.e(553829),
             n.e(508233),
@@ -46424,7 +46424,7 @@ let wY = (0, tW.Fe)({
             n.e(808979),
             n.e(664430),
             n.e(655602),
-            n.e(31452),
+            n.e(452622),
             n.e(18272),
             n.e(375234),
             n.e(841157),
@@ -48207,7 +48207,7 @@ let xe = (0, re.Fe)({
                 n.e(972638),
                 n.e(95241),
                 n.e(866475),
-                n.e(335930),
+                n.e(112477),
                 n.e(183715),
                 n.e(185830),
                 n.e(237403),

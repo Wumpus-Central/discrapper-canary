@@ -3,7 +3,7 @@ t.exports = {
     Ku: "globalGame_M5fVqw",
     zH: "details_M5fVqw",
     Tn: "visual_M5fVqw",
-    vf: "shell_M5fVqw",
+    LG: "artBox_M5fVqw",
     Qw: "art_M5fVqw",
     uj: "unknownArt_M5fVqw",
     Tm: "rank_M5fVqw",
