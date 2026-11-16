@@ -53,7 +53,7 @@ function N(e) {
         null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(n) : E.delete(n));
 }
 function C(e) {
-    for (let t of (c.clear(), T.clear(), m.clear(), A.clear(), e)) A.add(t);
+    for (let t of (c.clear(), E.clear(), T.clear(), m.clear(), A.clear(), e)) A.add(t);
     ((f = null), (p = null), (I = !1), (h = A.size > 0 ? o.Z7.LOADED_HAS_MORE : o.Z7.LOADED_FINISHED));
 }
 function O(e) {
