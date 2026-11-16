@@ -242,13 +242,14 @@ class C extends a.Ay.PersistedStore {
                     ),
                 );
     }
-    trackCommonTriggerPointExposures(e) {
-        for (let { evaluationId: t } of this.evaluationsWithUnitIds("user")) {
-            let n = N(`${t}|${e}`);
-            this.withExposureTracking(n, () =>
+    trackCommonTriggerPointExposures(e, t) {
+        let n = this.getEvaluation("user", t);
+        if (null != n) {
+            let t = N(`${n}|${e}`);
+            this.withExposureTracking(t, () =>
                 this.track(
                     d.sE.EXPERIMENT_USER_EVALUATION_EXPOSED,
-                    { evaluation_id: t, exposure_location: e, unit_type: "user" },
+                    { evaluation_id: n, exposure_location: e, unit_type: "user" },
                     { flush: !0 },
                 ),
             );
@@ -768,6 +769,9 @@ let V = new (class extends C {
             this.loadStoredState(e, (0, R.DI)()),
             this.initializeLaunchLatch(),
             this.updateLaunchLatchUnits());
+    }
+    trackCommonTriggerPointExposures(e) {
+        super.trackCommonTriggerPointExposures(e, L.default.getId());
     }
     maybeEmitDebugExperimentEvent() {
         let e = L.default.getId(),
