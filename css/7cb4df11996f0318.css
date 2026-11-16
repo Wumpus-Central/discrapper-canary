@@ -446,11 +446,10 @@
 .tableContainer_Yg_nqe {
     background-color: var(--card-background-default);
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    overflow-x: auto
+    border-radius: var(--radius-lg)
 }
 
-.tableContainer_Yg_nqe:focus-visible {
+.tableScroller_Yg_nqe:focus-visible {
     outline: 2px solid var(--border-focus);
     outline-offset: -2px
 }
@@ -528,6 +527,7 @@
     aspect-ratio: 3/4;
     border-radius: var(--radius-xs);
     flex-shrink: 0;
+    overflow: hidden;
     width: calc(var(--space-32) + var(--space-4))
 }
 
@@ -639,4 +639,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=9da4928588698444.css.map*/
+/*# sourceMappingURL=7cb4df11996f0318.css.map*/

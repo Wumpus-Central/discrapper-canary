@@ -2285,7 +2285,8 @@ let ac = n.memo(function (e) {
                         children: [
                             (0, s.jsx)("div", {
                                 "aria-hidden": !0,
-                                children: (0, s.jsx)(tq.Ay, { game: l, size: tq.wu.COMPACT, className: an.xn }),
+                                className: an.xn,
+                                children: (0, s.jsx)(tq.Ay, { game: l, size: tq.wu.COMPACT }),
                             }),
                             (0, s.jsx)("div", { className: an.t1, children: (0, s.jsx)(al, { game: l }) }),
                         ],
@@ -2439,52 +2440,60 @@ function ag() {
             }),
             (0, s.jsx)("div", {
                 className: an.CZ,
-                role: "region",
-                tabIndex: 0,
-                "aria-labelledby": i,
-                children: (0, s.jsxs)("table", {
-                    className: an.tp,
-                    "aria-busy": l,
-                    children: [
-                        (0, s.jsxs)("colgroup", {
-                            children: [
-                                (0, s.jsx)("col", { className: an.PX }),
-                                (0, s.jsx)("col", { className: an.hK }),
-                                (0, s.jsx)("col", { className: an.iH }),
-                                (0, s.jsx)("col", { className: an.dv }),
-                                (0, s.jsx)("col", {}),
-                            ],
-                        }),
-                        (0, s.jsx)("thead", {
-                            children: (0, s.jsxs)("tr", {
+                children: (0, s.jsx)(lw.Ch, {
+                    className: an.B,
+                    orientation: "horizontal",
+                    overflow: "auto",
+                    scrollbarGutter: !1,
+                    role: "region",
+                    tabIndex: 0,
+                    "aria-labelledby": i,
+                    children: (0, s.jsxs)("table", {
+                        className: an.tp,
+                        "aria-busy": l,
+                        children: [
+                            (0, s.jsxs)("colgroup", {
                                 children: [
-                                    (0, s.jsx)(ad, { label: "#", ariaLabel: E.intl.string(E.t.fi04zk) }),
-                                    (0, s.jsx)(ad, { label: E.intl.string(E.t.SVexhg) }),
-                                    (0, s.jsx)(ad, { label: E.intl.string(E.t["9BIezJ"]) }),
-                                    (0, s.jsx)(ad, { label: E.intl.string(E.t.vHCZwr) }),
-                                    (0, s.jsx)(ad, { label: E.intl.string(E.t.fBsbex) }),
+                                    (0, s.jsx)("col", { className: an.PX }),
+                                    (0, s.jsx)("col", { className: an.hK }),
+                                    (0, s.jsx)("col", { className: an.iH }),
+                                    (0, s.jsx)("col", { className: an.dv }),
+                                    (0, s.jsx)("col", {}),
                                 ],
                             }),
-                        }),
-                        l
-                            ? (0, s.jsx)(am, {})
-                            : (0, s.jsxs)("tbody", {
-                                  children: [
-                                      a.map((e) => {
-                                          let { entry: t, game: l, isNewRelease: a } = e;
-                                          return (0, s.jsx)(
-                                              ac,
-                                              { entry: t, game: l, isNewRelease: a, percentFormatter: o },
-                                              l.id,
-                                          );
-                                      }),
-                                      0 === a.length &&
-                                          (0, s.jsx)(au, {
-                                              message: E.intl.string(null != t ? lS.default.xuDHiG : lS.default.HxbFsz),
+                            (0, s.jsx)("thead", {
+                                children: (0, s.jsxs)("tr", {
+                                    children: [
+                                        (0, s.jsx)(ad, { label: "#", ariaLabel: E.intl.string(E.t.fi04zk) }),
+                                        (0, s.jsx)(ad, { label: E.intl.string(E.t.SVexhg) }),
+                                        (0, s.jsx)(ad, { label: E.intl.string(E.t["9BIezJ"]) }),
+                                        (0, s.jsx)(ad, { label: E.intl.string(E.t.vHCZwr) }),
+                                        (0, s.jsx)(ad, { label: E.intl.string(E.t.fBsbex) }),
+                                    ],
+                                }),
+                            }),
+                            l
+                                ? (0, s.jsx)(am, {})
+                                : (0, s.jsxs)("tbody", {
+                                      children: [
+                                          a.map((e) => {
+                                              let { entry: t, game: l, isNewRelease: a } = e;
+                                              return (0, s.jsx)(
+                                                  ac,
+                                                  { entry: t, game: l, isNewRelease: a, percentFormatter: o },
+                                                  l.id,
+                                              );
                                           }),
-                                  ],
-                              }),
-                    ],
+                                          0 === a.length &&
+                                              (0, s.jsx)(au, {
+                                                  message: E.intl.string(
+                                                      null != t ? lS.default.xuDHiG : lS.default.HxbFsz,
+                                                  ),
+                                              }),
+                                      ],
+                                  }),
+                        ],
+                    }),
                 }),
             }),
         ],

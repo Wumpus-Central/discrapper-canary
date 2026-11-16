@@ -1,6 +1,7 @@
 e.exports = {
     wx: "header_Yg_nqe",
     CZ: "tableContainer_Yg_nqe",
+    B: "tableScroller_Yg_nqe",
     tp: "table_Yg_nqe",
     PX: "rankColumn_Yg_nqe",
     hK: "gameColumn_Yg_nqe",
