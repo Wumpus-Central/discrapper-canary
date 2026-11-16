@@ -1,21 +1,21 @@
-r.d(t, { W0: () => n.W, rQ: () => d, Qr: () => s.Q });
+r.d(t, { W0: () => n.W, rQ: () => c, Qr: () => s.Q });
 var n = r(309954),
-    l = r(582128),
-    a = r(855986),
+    a = r(582128),
+    l = r(855986),
     i = r(786953),
-    c = r(505274);
-function d(e) {
+    d = r(505274);
+function c(e) {
     let {
         totalRedeemed: t,
         isFetching: r,
         error: n,
-    } = (0, a.cf)([c.A], () => ({
-        totalRedeemed: c.A.totalRedeemed,
-        isFetching: c.A.isFetchingTotalRedeemed,
-        error: c.A.fetchTotalRedeemedError,
+    } = (0, l.cf)([d.A], () => ({
+        totalRedeemed: d.A.totalRedeemed,
+        isFetching: d.A.isFetchingTotalRedeemed,
+        error: d.A.fetchTotalRedeemedError,
     }));
     return (
-        (0, l.useEffect)(() => {
+        (0, a.useEffect)(() => {
             e?.disableFetch === !0 || r || null != t || null != n || (0, i.Ce)();
         }, [t, r, n, e?.disableFetch]),
         { totalRedeemed: t, isFetching: r, error: n }

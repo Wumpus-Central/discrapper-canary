@@ -9,8 +9,8 @@ var i = e(477900),
     d = e(735164),
     m = e(24659),
     f = e(916974),
-    p = e(792996),
-    C = e(95068);
+    y = e(792996),
+    p = e(95068);
 e.d(
     n,
     {},
@@ -21,21 +21,21 @@ e.d(
                     planId: n,
                     renewalInvoice: e,
                     onClose: l,
-                    handleCancellation: g,
-                    renewalInvoiceDetails: y,
+                    handleCancellation: C,
+                    renewalInvoiceDetails: g,
                     fullPrice: h,
                 } = (0, f.X)(),
                 [P, x] = r.useState(!1),
                 [v, E] = r.useState(!1);
             if (null == e) return null;
             let D = [
-                { text: p.intl.string(p.t.rzVN6j), onClick: () => l(), variant: "secondary" },
+                { text: y.intl.string(y.t.rzVN6j), onClick: () => l(), variant: "secondary" },
                 {
-                    text: `${p.intl.format(p.t.yxFzdO, { planPremiumType: u.Ay.getTierDisplayNameByPlanId(`${n}`) })}`,
+                    text: `${y.intl.format(y.t.yxFzdO, { planPremiumType: u.Ay.getTierDisplayNameByPlanId(`${n}`) })}`,
                     onClick: async function () {
                         (x(!0), E(!1));
                         try {
-                            (await g(), l());
+                            (await C(), l());
                         } catch (t) {
                             (E(!0), x(!1));
                         }
@@ -45,41 +45,41 @@ e.d(
                     loading: P,
                 },
             ];
-            if (null == y) return null;
-            let { intervalType: j, intervalCount: b } = y,
-                N = null != h ? (0, c.CE)(`${h}`, j, b) : "";
+            if (null == g) return null;
+            let { intervalType: b, intervalCount: A } = g,
+                N = null != h ? (0, c.CE)(`${h}`, b, A) : "";
             return (0, i.jsxs)(s.a, {
                 size: "md",
                 transitionState: t,
-                title: `${p.intl.format(p.t.LZunzZ, { planPremiumType: u.Ay.getTierDisplayNameByPlanId(`${n}`) })}`,
+                title: `${y.intl.format(y.t.LZunzZ, { planPremiumType: u.Ay.getTierDisplayNameByPlanId(`${n}`) })}`,
                 subtitle:
                     0 !== e.total
-                        ? p.intl.format(p.t.ycyeBx, {
+                        ? y.intl.format(y.t.ycyeBx, {
                               renewalDate: e.subscriptionPeriodStart,
-                              rate: (0, c.CE)((0, c.$g)(e.total, e.currency), j, b),
+                              rate: (0, c.CE)((0, c.$g)(e.total, e.currency), b, A),
                           })
-                        : p.intl.format(p.t["+y0Tjy"], { renewalDate: e.subscriptionPeriodStart }),
+                        : y.intl.format(y.t["+y0Tjy"], { renewalDate: e.subscriptionPeriodStart }),
                 actions: D,
                 onClose: async () => l(),
                 children: [
                     (0, i.jsxs)(d.Yx, {
                         isPremiumRebrand: !0,
-                        className: a()({ [C.JD]: v }),
+                        className: a()({ [p.JD]: v }),
                         children: [
-                            (0, i.jsx)(d.Xd, { children: p.intl.string(p.t.iqhIp4) }),
+                            (0, i.jsx)(d.Xd, { children: y.intl.string(y.t.iqhIp4) }),
                             (0, i.jsx)(d.oR, {
-                                label: p.intl.formatToPlainString(p.t.r3jVZq, {
+                                label: y.intl.formatToPlainString(y.t.r3jVZq, {
                                     planName: u.Ay.getDisplayName(`${n}`),
                                 }),
                                 value: `${N}`,
-                                className: C.aD,
+                                className: p.aD,
                             }),
                             (0, i.jsx)(d.pK, {}),
                             (0, i.jsx)(m.Hc, { renewalInvoice: e, isUpdate: !0 }),
                         ],
                     }),
                     v
-                        ? (0, i.jsx)(o.w, { type: "critical", message: p.intl.string(p.t["5mlOCW"]), role: "alert" })
+                        ? (0, i.jsx)(o.w, { type: "critical", message: y.intl.string(y.t["5mlOCW"]), role: "alert" })
                         : null,
                 ],
             });

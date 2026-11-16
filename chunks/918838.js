@@ -24,7 +24,7 @@ n.d(
             r.useEffect(() => {
                 x.current = v;
             }, [v]);
-            let h = r.useCallback(() => {
+            let E = r.useCallback(() => {
                     let r = (0, c.B1)(e);
                     (0, l.x)(
                         {
@@ -44,12 +44,12 @@ n.d(
                         !0,
                     );
                 }, [e, t?.cardId, t?.sessionId, t?.tilePosition, n, p]),
-                A = (0, s.K)((e) => {
+                _ = (0, s.K)((e) => {
                     e
                         ? g.current ||
                           (null === m.current &&
                               (m.current = setTimeout(() => {
-                                  (h(), (g.current = !0), (m.current = null));
+                                  (E(), (g.current = !0), (m.current = null));
                               }, 1e3)))
                         : ((g.current = !1), null !== m.current && (clearTimeout(m.current), (m.current = null)));
                 }, 0.5);
@@ -60,7 +60,7 @@ n.d(
                     },
                     [],
                 ),
-                A
+                _
             );
         },
     },

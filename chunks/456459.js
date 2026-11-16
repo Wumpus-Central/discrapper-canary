@@ -9,8 +9,8 @@ var i = e(477900),
     d = e(682901),
     m = e(792996),
     f = e(871710),
-    p = e(303930),
-    C = e(977544);
+    y = e(303930),
+    p = e(977544);
 e.d(
     n,
     {},
@@ -20,8 +20,8 @@ e.d(
                     transitionState: t,
                     onClose: n,
                     premiumType: e,
-                    confettiCanvas: g,
-                    churnUserDiscountOffer: y,
+                    confettiCanvas: C,
+                    churnUserDiscountOffer: g,
                     discountedPrice: h,
                 } = (0, c.X)(),
                 P = (0, r.useRef)(null),
@@ -31,7 +31,7 @@ e.d(
                 ((0, r.useEffect)(() => {
                     null !== P.current && null !== h && v(!0);
                 }, [P, h]),
-                null === y)
+                null === g)
             )
                 return null;
             let D = e === d.PremiumTypes.TIER_2;
@@ -39,21 +39,21 @@ e.d(
                 ref: P,
                 children: [
                     (0, i.jsx)(a.k, {
-                        graphic: { type: "image", src: D ? C.A : p },
+                        graphic: { type: "image", src: D ? p.A : y },
                         gradientColor: D ? "nitro-pink" : "nitro-green",
                         transitionState: t,
                         title: m.intl.string(m.t.PZSyRk),
                         onClose: async () => n(),
                         children: (0, i.jsx)("div", {
                             className: f.TA,
-                            children: (0, i.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: y }),
+                            children: (0, i.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: g }),
                         }),
                     }),
                     !E &&
                         x &&
                         (0, i.jsx)(o.A, {
                             confettiTarget: P.current,
-                            confettiCanvas: g,
+                            confettiCanvas: C,
                             confettiVelocityMultiplier: 0.75,
                         }),
                 ],

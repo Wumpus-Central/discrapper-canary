@@ -14,8 +14,8 @@ var r = n(477900),
     m = n(766172),
     g = n(758836),
     x = n(652215),
-    h = n(682901),
-    A = n(792996);
+    E = n(682901),
+    _ = n(792996);
 n.d(
     t,
     {},
@@ -24,14 +24,14 @@ n.d(
             let {
                     product: t,
                     primary: n,
-                    selectedVariantIndex: _,
-                    returnRef: E,
+                    selectedVariantIndex: A,
+                    returnRef: h,
                     onSuccess: C,
                     tooltipDelay: b,
                     fullWidth: R = !1,
                     fullWidthLabel: k,
                     giftRecipient: y,
-                    giftingOrigin: S = h.vQ.SHOP_PAGE,
+                    giftingOrigin: S = E.vQ.SHOP_PAGE,
                     onTrackClick: j,
                     tabIndex: O,
                 } = e,
@@ -53,13 +53,13 @@ n.d(
                     }),
                     j?.(g.sH.SEND_AS_GIFT),
                     (0, c.A)({
-                        skuId: (0, m.Y)({ product: t, selectedVariantIndex: _ }),
+                        skuId: (0, m.Y)({ product: t, selectedVariantIndex: A }),
                         isGift: !0,
                         giftRecipient: y,
                         giftingOrigin: S,
                         analyticsLocations: T,
                         discoverySessionId: P?.sessionId,
-                        returnRef: E,
+                        returnRef: h,
                         onClose:
                             null != C
                                 ? (e) => {
@@ -73,16 +73,16 @@ n.d(
                     variant: n ? "primary" : "secondary",
                     icon: l.GiftIcon,
                     onClick: L,
-                    text: k ?? A.intl.string(A.t.gmnzqM),
+                    text: k ?? _.intl.string(_.t.gmnzqM),
                     fullWidth: !0,
                     tabIndex: O,
                 });
-            let D = A.intl.string(A.t["JCFN/y"]);
+            let D = _.intl.string(_.t["JCFN/y"]);
             return (0, r.jsx)(u.m, {
                 text: D,
                 delay: b,
                 children: (0, r.jsx)(o.K, {
-                    "aria-label": A.intl.formatToPlainString(A.t["5UYoSr"], {
+                    "aria-label": _.intl.formatToPlainString(_.t["5UYoSr"], {
                         ctaLabel: D,
                         productLabel: (0, p.s7)(t),
                     }),

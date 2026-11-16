@@ -14,15 +14,15 @@ var n = l(477900),
     p = l(178418),
     g = l(87664),
     v = l(449582),
-    b = l(88686),
-    x = l(214881),
+    x = l(88686),
+    b = l(214881),
     E = l(290863),
     j = l(427262),
     y = l(253400),
     M = l(854627),
     C = l(939496),
-    I = l(652215),
-    S = l(996988),
+    S = l(652215),
+    I = l(996988),
     N = l(792996),
     T = l(135650);
 let w = u._3.SIZE_40,
@@ -33,13 +33,13 @@ l.d(
     {
         A: function (e) {
             let { user: t, status: a, guildId: u, channelId: y, onSelect: k } = e,
-                { theme: L, themeType: R } = (0, C.E)(),
-                P = i.useMemo(() => t.isNonUserBot() || (0, p.c)(t, y), [t, y]),
-                { activities: U, isMobileOnline: D } = (0, s.cf)([E.A], () => ({
+                { theme: L, themeType: F } = (0, C.E)(),
+                R = i.useMemo(() => t.isNonUserBot() || (0, p.c)(t, y), [t, y]),
+                { activities: P, isMobileOnline: U } = (0, s.cf)([E.A], () => ({
                     activities: E.A.getActivities(t.id),
                     isMobileOnline: E.A.isMobileOnline(t.id),
                 })),
-                F = (0, g.A)(t.id),
+                D = (0, g.A)(t.id),
                 { voiceChannel: G } = (0, h.Ay)({ userId: t.id, guildId: u }),
                 [O, z] = i.useState(!1),
                 {
@@ -52,7 +52,7 @@ l.d(
                 Y = i.useId(),
                 $ = (0, v.r)({ user: t, guildId: u }),
                 q = (0, j.tx)(t),
-                J = P ? null : (0, j.MU)(a, { isMobile: D }),
+                J = R ? null : (0, j.MU)(a, { isMobile: U }),
                 Q =
                     null != J
                         ? N.intl.formatToPlainString(N.t["9Gofqp"], { name: q, presence: J })
@@ -62,7 +62,7 @@ l.d(
             return (0, n.jsxs)(d.D, {
                 onMouseEnter: V,
                 onMouseLeave: X,
-                focusProps: R === S.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+                focusProps: F === I.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: r()(T.nM, { [T.EY]: null != $ }),
                 "aria-label": Q,
                 "aria-describedby": Y,
@@ -87,11 +87,11 @@ l.d(
                     });
                 },
                 children: [
-                    (0, n.jsx)(x.A, {
+                    (0, n.jsx)(b.A, {
                         nameplate: O ? $ : null,
                         hovered: O,
                         content: K,
-                        placement: b.u.MUTUAL_FRIENDS_LIST,
+                        placement: x.u.MUTUAL_FRIENDS_LIST,
                     }),
                     (0, n.jsxs)("div", {
                         ref: K,
@@ -103,9 +103,9 @@ l.d(
                                 avatarDecoration: Z,
                                 "aria-hidden": !0,
                                 size: w,
-                                status: P ? I.clD.UNKNOWN : a,
-                                statusBackdropColor: P ? void 0 : (0, c.C$)(L),
-                                isMobile: D,
+                                status: R ? S.clD.UNKNOWN : a,
+                                statusBackdropColor: R ? void 0 : (0, c.C$)(L),
+                                isMobile: U,
                                 className: T.my,
                             }),
                             (0, n.jsxs)("div", {
@@ -122,8 +122,8 @@ l.d(
                                         id: Y,
                                         children: (0, n.jsx)(A.A, {
                                             user: t,
-                                            activities: U,
-                                            applicationStream: F,
+                                            activities: P,
+                                            applicationStream: D,
                                             voiceChannel: G,
                                         }),
                                     }),

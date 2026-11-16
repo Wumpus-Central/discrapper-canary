@@ -44,46 +44,46 @@ n.d(
             null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
             let _ = y ?? n?.skuId ?? "",
                 { handleCardVisibilityChange: b } = (0, m.Z)(_, d, "marketing featured block"),
-                S = (0, f.s4)(n, a, c),
-                I = r.useRef(null),
-                L = a?.bodyText,
+                L = (0, f.s4)(n, a, c),
+                S = r.useRef(null),
+                I = a?.bodyText,
                 k = n?.isOrbsExclusive,
                 j = a?.name ?? n?.name,
                 N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
-                O = (0, o.uM)(),
-                R = r.useCallback(
+                R = (0, o.uM)(),
+                O = r.useCallback(
                     (e, t) => {
                         (g({ sourceButton: e, categorySkuId: _, isInternalShopDeeplink: !0, isOrbsExclusive: k }),
                             i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                collectibles_shop_session_id: O?.sessionId,
+                                collectibles_shop_session_id: R?.sessionId,
                                 sku_id: _,
                                 page_type: d,
-                                page_section: O?.pageSection,
-                                page_category: O?.pageCategory,
+                                page_section: R?.pageSection,
+                                page_category: R?.pageCategory,
                                 tile_type: "FEATURED_BLOCK",
-                                tile_position: String(O?.tilePosition),
+                                tile_position: String(R?.tilePosition),
                                 cta_name: t,
                             }));
                     },
-                    [g, _, k, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [g, _, k, d, R?.sessionId, R?.pageSection, R?.pageCategory, R?.tilePosition],
                 ),
                 T = r.useCallback(() => {
-                    R("shop marketing take me there button", "Take me there button");
-                }, [R]),
+                    O("shop marketing take me there button", "Take me there button");
+                }, [O]),
                 D = r.useCallback(() => {
-                    R("shop marketing tile", null);
-                }, [R]);
+                    O("shop marketing tile", null);
+                }, [O]);
             return (0, l.jsx)(s.L, {
-                innerRef: I,
+                innerRef: S,
                 onChange: b,
                 threshold: 0,
                 children: (0, l.jsx)(h.Ay, {
                     layout: t,
-                    innerRef: I,
-                    backgroundImageUrl: S,
+                    innerRef: S,
+                    backgroundImageUrl: L,
                     title:
-                        null != L
-                            ? { text: L, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
+                        null != I
+                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
                             : void 0,
                     badge: (0, l.jsx)(A, { skuId: _, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: v.intl.string(v.t.jVcuVY),

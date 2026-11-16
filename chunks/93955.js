@@ -21,16 +21,16 @@ var l = n(477900),
     y = n(975571),
     _ = n(304210),
     b = n(324157),
-    S = n(480750),
-    I = n(727142);
-let L = function (e) {
+    L = n(480750),
+    S = n(727142);
+let I = function (e) {
     let { text: t, icon: n, indicatorColor: r } = e;
     return (0, l.jsxs)("span", {
-        className: I.I,
+        className: S.I,
         children: [
             null != r &&
                 (0, l.jsx)("svg", {
-                    className: I.q,
+                    className: S.q,
                     viewBox: "0 0 8 8",
                     "aria-hidden": !0,
                     children: (0, l.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: r }),
@@ -43,7 +43,7 @@ let L = function (e) {
 var k = n(262056),
     j = n(775602),
     N = n(295986);
-function O(e) {
+function R(e) {
     let { assetPath: t } = e,
         n = r.useRef(null);
     return (
@@ -66,10 +66,10 @@ function O(e) {
         (0, l.jsx)("canvas", { ref: n, className: N.C, width: 120, height: 120, "aria-hidden": "true" })
     );
 }
-let R = function (e) {
+let O = function (e) {
     let { assetPath: t, progress: n, progressText: r, progressColor: s } = e,
         a = (0, i.bG)([j.Ay], () => j.Ay.useReducedMotion)
-            ? (0, l.jsx)(O, { assetPath: t })
+            ? (0, l.jsx)(R, { assetPath: t })
             : (0, l.jsx)("img", { src: t, alt: "", className: N.C, width: 120, height: 120 });
     return null == n
         ? a
@@ -140,14 +140,14 @@ let V = { [v.RB.LIGHT]: "theme-light", [v.RB.DARK]: "theme-dark" },
     K = { [v.RB.LIGHT]: "overlay-secondary", [v.RB.DARK]: "overlay-primary" },
     W = v.RB.DARK;
 function z(e, t, n) {
-    let l = r.useCallback((n) => (0, S.h)(n, e, t), [e, t]);
+    let l = r.useCallback((n) => (0, L.h)(n, e, t), [e, t]);
     return {
         handleInlineHelpTextClick: l,
         handleClaim: r.useCallback(() => {
-            ((0, S.l)(e, t, $.Z.CLAIM_BUTTON_CLICKED), n());
+            ((0, L.l)(e, t, $.Z.CLAIM_BUTTON_CLICKED), n());
         }, [e, t, n]),
         handleUseNowClick: r.useCallback(() => {
-            (0, S.l)(e, t, $.Z.USE_NOW_BUTTON_CLICKED);
+            (0, L.l)(e, t, $.Z.USE_NOW_BUTTON_CLICKED);
         }, [e, t]),
     };
 }
@@ -175,7 +175,7 @@ function Y(e) {
         align: "center",
         className: g,
         children: [
-            (0, l.jsx)(R, { assetPath: r, progress: s, progressText: d, progressColor: a }),
+            (0, l.jsx)(O, { assetPath: r, progress: s, progressText: d, progressColor: a }),
             (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
@@ -185,7 +185,7 @@ function Y(e) {
                 children: [
                     null != v &&
                         (0, l.jsx)(u.E, { variant: "body-md/semibold", color: "text-strong", children: (0, E.U)(v) }),
-                    null != m && (0, l.jsx)(L, { icon: c.ClockIcon, text: m }),
+                    null != m && (0, l.jsx)(I, { icon: c.ClockIcon, text: m }),
                     (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: h,
@@ -212,17 +212,17 @@ function X(e) {
             description: A,
             progressText: _,
             timeLeftText: b,
-            contentThemeClassName: I,
+            contentThemeClassName: S,
             rewardProduct: j,
             claimRewardButtonVariant: N,
-            helpCenterId: O,
+            helpCenterId: R,
             isClaiming: T,
             onClaim: D,
         } = e,
-        M = null != O && "" !== O ? y.A.getArticleURL(O) : null,
+        M = null != R && "" !== R ? y.A.getArticleURL(R) : null,
         { handleInlineHelpTextClick: B, handleClaim: H, handleUseNowClick: G } = z(t, n, D),
         U = r.useCallback(() => {
-            null != M && ((0, S.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(M));
+            null != M && ((0, L.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(M));
         }, [t, n, M]);
     return (0, l.jsxs)(o.B, {
         direction: "horizontal",
@@ -230,10 +230,10 @@ function X(e) {
         padding: { top: 16, bottom: 16, left: 24, right: 24 },
         align: "center",
         justify: "space-between",
-        className: a()(F.N, I),
+        className: a()(F.N, S),
         style: { backgroundImage: `url(${v})` },
         children: [
-            (0, l.jsx)(R, { assetPath: s, progress: i, progressText: _, progressColor: f }),
+            (0, l.jsx)(O, { assetPath: s, progress: i, progressText: _, progressColor: f }),
             (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 10,
@@ -265,8 +265,8 @@ function X(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != _ && (0, l.jsx)(L, { text: _, indicatorColor: f ?? k.W }),
-                            null != b && (0, l.jsx)(L, { icon: c.ClockIcon, text: b }),
+                            null != _ && (0, l.jsx)(I, { text: _, indicatorColor: f ?? k.W }),
+                            null != b && (0, l.jsx)(I, { icon: c.ClockIcon, text: b }),
                         ],
                     }),
                 ],
@@ -307,7 +307,7 @@ function q(e) {
     let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: o, isClaiming: u, onClaim: c } = e,
         d = (0, i.bG)([A.default], () => A.default.locale);
     r.useEffect(() => {
-        (0, S.l)(s, n, $.Z.PROMO_VIEWED);
+        (0, L.l)(s, n, $.Z.PROMO_VIEWED);
     }, [s.id, n]);
     let { shared: m } = a,
         { assets: g, style: h } = m.progressIndicator,
@@ -339,8 +339,8 @@ function q(e) {
     let y = E.showProgressRing && null != C,
         {
             title: _,
-            description: I,
-            progressText: L,
+            description: S,
+            progressText: I,
             timeLeftText: k,
         } = (0, b.MZ)({
             promotion: s,
@@ -358,8 +358,8 @@ function q(e) {
             progressColor: h?.progressColor,
             backgroundUrl: g.backgroundUrl,
             title: _,
-            description: I,
-            progressText: L,
+            description: S,
+            progressText: I,
             timeLeftText: k,
             contentThemeClassName: V[f],
             rewardProduct: o,

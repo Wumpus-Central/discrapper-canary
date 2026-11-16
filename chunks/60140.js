@@ -22,10 +22,10 @@ let _ = { flattenProductVariants: !1 };
 function b(e) {
     return String(e);
 }
-function S(e) {
+function L(e) {
     return e.skuId;
 }
-function I(e) {
+function S(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, f.Mk)(r);
     return t
@@ -37,11 +37,11 @@ function I(e) {
               className: y.hm,
               children: (0, l.jsx)(f.v3.Provider, {
                   value: _,
-                  children: n.map((e, t) => (0, l.jsx)(O, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  children: n.map((e, t) => (0, l.jsx)(R, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
-function L(e) {
+function I(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, f.Mk)(r),
         i = A.intl.string(A.t.HP8LNG);
@@ -61,10 +61,10 @@ function L(e) {
             gap: "xl",
             "aria-label": i,
             items: n,
-            getItemKey: S,
+            getItemKey: L,
             maintainFocusOnReorder: !0,
             renderItem: (e, t, n) =>
-                (0, l.jsx)(O, { item: e, index: n, prioritizedCurrency: s, listItemProps: t }, e.skuId),
+                (0, l.jsx)(R, { item: e, index: n, prioritizedCurrency: s, listItemProps: t }, e.skuId),
         }),
     });
 }
@@ -101,7 +101,7 @@ function N(e) {
         }),
     });
 }
-function O(e) {
+function R(e) {
     let { item: t, index: n, prioritizedCurrency: r, listItemProps: s } = e;
     return (0, l.jsx)(i.R9, {
         newValue: { tilePosition: n, pageSection: "top 4", categoryPosition: 0 },
@@ -135,13 +135,13 @@ n.d(
                 y = f || A,
                 _ = r.useMemo(() => E.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [E]),
                 b = "hscroll" === m && p === C.G2.HOME && !y && null != x && null != v && v.promotions.length > 0,
-                S = (0, c.t)("shop_home_carousel", { autoTrackExposure: b }).enabled;
+                L = (0, c.t)("shop_home_carousel", { autoTrackExposure: b }).enabled;
             switch (m) {
                 case "feed":
-                    return (0, l.jsx)(I, { isLoading: y, products: _, tab: p });
+                    return (0, l.jsx)(S, { isLoading: y, products: _, tab: p });
                 case "hscroll":
-                    if (b && S) return (0, l.jsx)(N, { collectionId: x, sequencedOffers: v });
-                    return (0, l.jsx)(L, { isLoading: y, products: _, tab: p });
+                    if (b && L) return (0, l.jsx)(N, { collectionId: x, sequencedOffers: v });
+                    return (0, l.jsx)(I, { isLoading: y, products: _, tab: p });
             }
         },
     },

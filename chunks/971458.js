@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => I });
 var l = n(477900),
     r = n(582128),
     s = n(503698),
@@ -66,37 +66,37 @@ function y(e) {
         A = r.useRef(null),
         y = r.useRef(null),
         _ = r.useRef(!1),
-        { isHovered: b, setIsHovered: S, onMouseEnter: I, onMouseLeave: L, cancelTimers: k } = (0, E.A)(100, 100),
+        { isHovered: b, setIsHovered: L, onMouseEnter: S, onMouseLeave: I, cancelTimers: k } = (0, E.A)(100, 100),
         j = r.useCallback(() => {
-            ((_.current = f.Ay.keyboardModeEnabled), I());
-        }, [I]),
+            ((_.current = f.Ay.keyboardModeEnabled), S());
+        }, [S]),
         N = r.useCallback(() => {
-            (k(), S(!0), (_.current = f.Ay.keyboardModeEnabled));
-        }, [k, S]),
-        O = r.useCallback(
+            (k(), L(!0), (_.current = f.Ay.keyboardModeEnabled));
+        }, [k, L]),
+        R = r.useCallback(
             (e) => {
                 (k(),
                     _.current && !f.Ay.keyboardModeEnabled && (0, p.uS)(),
-                    S(!1),
+                    L(!1),
                     e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : A.current?.focus())));
             },
-            [k, S],
+            [k, L],
         ),
-        R = r.useCallback(() => {
-            b ? O(!1) : N();
-        }, [b, N, O]),
+        O = r.useCallback(() => {
+            b ? R(!1) : N();
+        }, [b, N, R]),
         T = r.useCallback(
             (e) => {
-                (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
+                (R(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
             },
-            [n, O],
+            [n, R],
         ),
         D = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), b ? (O(!1), requestAnimationFrame(N)) : N());
+                    (e.preventDefault(), e.stopPropagation(), b ? (R(!1), requestAnimationFrame(N)) : N());
             },
-            [b, N, O],
+            [b, N, R],
         ),
         P = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
         M = (0, l.jsx)(m.ChevronSmallDownIcon, {
@@ -113,16 +113,16 @@ function y(e) {
             align: "left",
             spacing: 4,
             onRequestOpen: N,
-            onRequestClose: () => O(!0),
+            onRequestClose: () => R(!0),
             animation: g.Y.Animation.NONE,
             renderPopout: () =>
                 (0, l.jsx)("div", {
-                    onMouseEnter: I,
-                    onMouseLeave: L,
+                    onMouseEnter: S,
+                    onMouseLeave: I,
                     children: (0, l.jsx)(h.W, {
                         navId: o,
                         "aria-label": n.expandLabel,
-                        onClose: () => O(!0),
+                        onClose: () => R(!0),
                         onSelect: void 0,
                         children: (function e(t) {
                             return t.map((t) =>
@@ -161,7 +161,7 @@ function y(e) {
                                   href: i,
                                   onClick: T,
                                   onMouseEnter: j,
-                                  onMouseLeave: L,
+                                  onMouseLeave: I,
                                   "aria-current": n.key === s ? "page" : void 0,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
                                   className: a()(x.LA, x.tH),
@@ -173,10 +173,10 @@ function y(e) {
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
-                                  onClick: R,
+                                  onClick: O,
                                   onKeyDown: D,
                                   onMouseEnter: j,
-                                  onMouseLeave: L,
+                                  onMouseLeave: I,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
                                   className: a()(x.LA, x.nE),
                                   children: M,
@@ -188,10 +188,10 @@ function y(e) {
                           innerRef: A,
                           role: "button",
                           "aria-haspopup": "true",
-                          onClick: R,
+                          onClick: O,
                           onKeyDown: D,
                           onMouseEnter: j,
-                          onMouseLeave: L,
+                          onMouseLeave: I,
                           className: a()(x.ie, x.LA, { [x.wH]: C }),
                           children: [P, M],
                       }),
@@ -200,18 +200,18 @@ function y(e) {
 }
 var _ = n(765671);
 let b = 'a[href], [role="button"]';
-function S(e, t) {
+function L(e, t) {
     let n = Array.from(e.querySelectorAll(b)),
         l = n.indexOf(document.activeElement);
     -1 !== l && n[l + t]?.focus();
 }
-function I(e) {
+function S(e) {
     switch (e.key) {
         case "ArrowRight":
-            (e.preventDefault(), S(e.currentTarget, 1));
+            (e.preventDefault(), L(e.currentTarget, 1));
             return;
         case "ArrowLeft":
-            (e.preventDefault(), S(e.currentTarget, -1));
+            (e.preventDefault(), L(e.currentTarget, -1));
             return;
         case "Home":
             (e.preventDefault(), e.currentTarget.querySelector(b)?.focus());
@@ -223,7 +223,7 @@ function I(e) {
         }
     }
 }
-function L(e) {
+function I(e) {
     let { options: t, selectedKey: n, overflowLabel: s, overflowExpandLabel: o, className: u, ...c } = e,
         d = r.useId(),
         m = `collectibles-shop-navigation-menu-${d}`,
@@ -267,7 +267,7 @@ function L(e) {
             }),
             h &&
                 (0, l.jsx)("ul", {
-                    onKeyDown: I,
+                    onKeyDown: S,
                     className: x.P_,
                     children: p.map((e) => (0, l.jsx)(C, { navId: m, option: e, selectedKey: n }, e.key)),
                 }),

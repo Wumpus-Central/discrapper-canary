@@ -15,10 +15,10 @@ var r = n(477900),
     m = n(623373),
     g = n(561769),
     x = n(846957),
-    h = n(929283),
-    A = n(842385),
-    _ = n(761365),
-    E = n(844266);
+    E = n(929283),
+    _ = n(842385),
+    A = n(761365),
+    h = n(844266);
 function C(e) {
     let { responsive: t } = e;
     return !0 !== t;
@@ -31,7 +31,7 @@ function b(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: s()(E.mA, { [E.zj]: (l || u) && !n, [E.Ge]: o }),
+                className: s()(h.mA, { [h.zj]: (l || u) && !n, [h.Ge]: o }),
                 children: (0, r.jsx)(R, { product: t, isCardHovered: n }),
             }),
             l && (0, r.jsx)(k, { hidden: n }),
@@ -52,13 +52,13 @@ function R(e) {
         case a.R.PROFILE_EFFECT:
             return (0, r.jsx)(f.A, { skuId: d.skuId, isHighlighted: i, removeSetHeight: !0, hideBackground: !0 });
         case a.R.PROFILE_FRAME:
-            return (0, r.jsx)("div", { className: E.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
+            return (0, r.jsx)("div", { className: h.pI, children: (0, r.jsx)(p.A, { frame: d, filterLayer: C }) });
         case a.R.AVATAR_DECORATION:
-            return (0, r.jsx)(h.i, { item: d, user: s, isHighlighted: i, avatarSize: u._3.SIZE_120 });
+            return (0, r.jsx)(E.i, { item: d, user: s, isHighlighted: i, avatarSize: u._3.SIZE_120 });
         case a.R.NAMEPLATE:
-            return (0, r.jsx)(_.A, { nameplate: d, user: s, isHighlighted: i });
+            return (0, r.jsx)(A.A, { nameplate: d, user: s, isHighlighted: i });
         case a.R.BUNDLE:
-            return (0, r.jsx)(A.X, { product: n, user: s, isHighlighted: i });
+            return (0, r.jsx)(_.X, { product: n, user: s, isHighlighted: i });
         case a.R.EXTERNAL_SKU:
             return (0, r.jsx)(x.B, { product: n, animationState: i ? "on" : "off" });
         default:
@@ -72,7 +72,7 @@ function k(e) {
         color: d.A.colors.INTERACTIVE_TEXT_ACTIVE,
         width: 40,
         height: 40,
-        className: s()(E.zo, { [E.R]: t }),
+        className: s()(h.zo, { [h.R]: t }),
     });
 }
 let y = function (e) {

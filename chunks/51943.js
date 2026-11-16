@@ -15,8 +15,8 @@ var n = l(477900),
 l(518477);
 var g = l(996988),
     v = l(792996),
-    b = l(247261);
-let x = (0, u.FT)(u._3.SIZE_16);
+    x = l(247261);
+let b = (0, u.FT)(u._3.SIZE_16);
 l.d(
     t,
     {},
@@ -24,14 +24,14 @@ l.d(
         A: function (e) {
             let { user: t, guild: E, nick: j, onSelect: y } = e,
                 { theme: M, themeType: C } = (0, p.E)(),
-                I = t.hasAvatarForGuild(E.id),
-                S = i.useId(),
+                S = t.hasAvatarForGuild(E.id),
+                I = i.useId(),
                 N = v.intl.formatToPlainString(v.t.Ce2iXp, { guildName: E.name });
             return (0, n.jsxs)(o.D, {
                 focusProps: C === g.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-                className: b.nM,
+                className: x.nM,
                 "aria-label": N,
-                "aria-describedby": I || null != j ? S : void 0,
+                "aria-describedby": S || null != j ? I : void 0,
                 onClick: y,
                 onContextMenu: function (e) {
                     (0, m.L3)(e, async () => {
@@ -641,7 +641,7 @@ l.d(
                         tabIndex: -1,
                         guild: E,
                         showBadge: !0,
-                        className: null != E.icon ? b.Kk : b.lN,
+                        className: null != E.icon ? x.Kk : x.lN,
                         badgeStrokeColor: (0, s.M)(M)
                             ? a.A.unsafe_rawColors.PRIMARY_600.css
                             : a.A.unsafe_rawColors.WHITE.css,
@@ -651,18 +651,18 @@ l.d(
                         active: !0,
                     }),
                     (0, n.jsxs)("div", {
-                        className: b.zH,
+                        className: x.zH,
                         children: [
-                            (0, n.jsx)("div", { className: b.UU, children: E.name }),
-                            I &&
+                            (0, n.jsx)("div", { className: x.UU, children: E.name }),
+                            S &&
                                 (0, n.jsxs)("div", {
-                                    id: S,
-                                    className: b.C9,
+                                    id: I,
+                                    className: x.C9,
                                     children: [
                                         (0, n.jsx)(c.eu, {
-                                            src: t.getAvatarURL(E.id, x),
+                                            src: t.getAvatarURL(E.id, b),
                                             size: u._3.SIZE_16,
-                                            className: b.my,
+                                            className: x.my,
                                             "aria-hidden": !0,
                                         }),
                                         (0, n.jsx)(f.E, {
@@ -674,10 +674,10 @@ l.d(
                                         }),
                                     ],
                                 }),
-                            !I &&
+                            !S &&
                                 null != j &&
                                 (0, n.jsx)(f.E, {
-                                    id: S,
+                                    id: I,
                                     variant: "body-xs/medium",
                                     children: (0, n.jsx)(r.A, { delay: 300, children: j }),
                                 }),

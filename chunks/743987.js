@@ -19,11 +19,11 @@ l.d(
         A: function (e) {
             let { userId: t, guildId: l, textClassName: p, tooltipDelay: g } = e,
                 v = (0, i.bG)([d.default], () => d.default.locale),
-                b = (0, i.bG)([f.A], () => (null != l ? f.A.getGuild(l) : null)),
-                x = (0, i.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t) : null)),
+                x = (0, i.bG)([f.A], () => (null != l ? f.A.getGuild(l) : null)),
+                b = (0, i.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t) : null)),
                 E = (0, u.An)(m.default.extractTimestamp(t), v),
-                j = (0, u.An)(x?.joinedAt, v);
-            return null == b || null == x
+                j = (0, u.An)(b?.joinedAt, v);
+            return null == x || null == b
                 ? (0, n.jsx)(a.E, { variant: "body-sm/normal", className: p, children: E })
                 : (0, n.jsxs)("div", {
                       className: A.y9,
@@ -50,9 +50,9 @@ l.d(
                               className: A.R1,
                               children: [
                                   (0, n.jsx)(r.m, {
-                                      text: b.name,
+                                      text: x.name,
                                       delay: g,
-                                      children: (0, n.jsx)(o.Ay, { guild: b, size: o.Ay.Sizes.SMOL, className: A.$f }),
+                                      children: (0, n.jsx)(o.Ay, { guild: x, size: o.Ay.Sizes.SMOL, className: A.$f }),
                                   }),
                                   (0, n.jsx)(a.E, { variant: "body-sm/normal", className: p, children: j }),
                               ],

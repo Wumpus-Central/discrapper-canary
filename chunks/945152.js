@@ -26,14 +26,14 @@ var l,
     y = n(821609),
     _ = n(172218),
     b = n(140735),
-    S = n(598047),
-    I = n(396583),
-    L = n(568631),
+    L = n(598047),
+    S = n(396583),
+    I = n(568631),
     k = n(792996),
     j = n(868102);
 let N = s.memo((e) => {
         let { endsAt: t, onCountdownEnd: n } = e,
-            l = (0, S.A)(),
+            l = (0, L.A)(),
             [a, i] = s.useState(!0),
             [, o] = s.useReducer((e) => e + 1, 0),
             u = s.useRef(!1),
@@ -41,10 +41,10 @@ let N = s.memo((e) => {
                 i(e);
             }, []),
             d = (0, _.K)(c, 0),
-            g = (0, L.Ty)(t),
-            h = (0, L.lF)(g);
+            g = (0, I.Ty)(t),
+            h = (0, I.lF)(g);
         return (
-            (0, I.A)(o, h || !(l && a) ? null : 1e3),
+            (0, S.A)(o, h || !(l && a) ? null : 1e3),
             s.useEffect(() => {
                 h && !u.current && ((u.current = !0), n());
             }, [h, n]),
@@ -53,7 +53,7 @@ let N = s.memo((e) => {
                 className: j.qW,
                 role: "timer",
                 children: [
-                    (0, L.z0)(g).map((e, t) =>
+                    (0, I.z0)(g).map((e, t) =>
                         (0, r.jsxs)(
                             s.Fragment,
                             {
@@ -88,7 +88,7 @@ let N = s.memo((e) => {
             })
         );
     }),
-    O = s.memo((e) => {
+    R = s.memo((e) => {
         let {
             collectionName: t,
             collectionPromotion: n,
@@ -137,7 +137,7 @@ let N = s.memo((e) => {
             ],
         });
     });
-var R = n(60140),
+var O = n(60140),
     T = n(758836),
     D = n(652215),
     P = n(105499);
@@ -152,17 +152,17 @@ let M = (e) => {
             forceHideCountdownCta: _ = !1,
         } = e,
         b = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
-        S = (0, E.uM)(),
-        { analyticsLocations: I } = (0, h.Ay)(g.A.COLLECTIBLES_SHOP_HERO),
+        L = (0, E.uM)(),
+        { analyticsLocations: S } = (0, h.Ay)(g.A.COLLECTIBLES_SHOP_HERO),
         {
-            bannerDisplayConfig: L,
+            bannerDisplayConfig: I,
             logoDisplayConfig: j,
             heroLogo: N,
             heroBannerStatic: M,
             heroBannerAnimated: B,
         } = (0, v.Kk)(t),
-        w = L?.responsive ?? !1,
-        H = L?.backgroundStyle,
+        w = I?.responsive ?? !1,
+        H = I?.backgroundStyle,
         G = s.useCallback(() => {
             (l({
                 sourceButton: "shop collection sale hero",
@@ -170,17 +170,17 @@ let M = (e) => {
                 isInternalShopDeeplink: !0,
             }),
                 f.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: S?.sessionId,
+                    collectibles_shop_session_id: L?.sessionId,
                     sku_id: t.categorySkuId,
                     page_type: a,
-                    page_section: S?.pageSection,
-                    page_category: S?.pageCategory,
+                    page_section: L?.pageSection,
+                    page_category: L?.pageCategory,
                     cta_name: "shop collection sale hero button",
                 }));
-        }, [l, t.categorySkuId, S, a]);
+        }, [l, t.categorySkuId, L, a]);
     if (null == b) return null;
     let U = n.countdownPosition === o.l.LEFT,
-        $ = (0, r.jsx)(O, {
+        $ = (0, r.jsx)(R, {
             collectionName: t.name,
             collectionPromotion: n,
             forceHideCountdownCta: _,
@@ -188,7 +188,7 @@ let M = (e) => {
             onCountdownEnd: A,
         });
     return (0, r.jsx)(h.f5, {
-        value: I,
+        value: S,
         children: (0, r.jsxs)("div", {
             className: P.os,
             children: [
@@ -247,7 +247,7 @@ let M = (e) => {
                             ],
                         }),
                         !y &&
-                            (0, r.jsx)(R.A, {
+                            (0, r.jsx)(O.A, {
                                 heroBlockRecord: t,
                                 tab: a,
                                 isBlockLoading: !1,
