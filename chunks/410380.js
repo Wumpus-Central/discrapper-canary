@@ -43,20 +43,20 @@ var i,
     W = n(778858),
     X = n(485967),
     Y = n(73153);
-let z = {};
-class Z extends g.Ay.Store {
+let Z = {};
+class z extends g.Ay.Store {
     static displayName = "ApplicationBranchStore";
     getBranches(e) {
-        return z[e] ?? [];
+        return Z[e] ?? [];
     }
 }
-let Q = new Z(Y.h, {
+let Q = new z(Y.h, {
     OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branches: n } = e;
-        z[t] = n;
+        Z[t] = n;
     },
     LOGOUT: function () {
-        z = {};
+        Z = {};
     },
 });
 var K = n(792996);
@@ -213,7 +213,7 @@ function eB(e) {
         description: K.intl.format(ef.default["o3+MNm"], {
             learnMoreURL: ex.A.getArticleURL(ek.MVz.SERVER_WEB_PAGES_ADMIN),
         }),
-        layout: "horizontal",
+        layout: "vertical",
         fullWidth: !0,
         readOnly: i,
         selectionMode: "single",
@@ -278,8 +278,8 @@ function eX(e) {
     return eD.lo.has(i) ? (0, l.jsx)(eW, { ...s, isPrivate: a || r }) : null;
 }
 var eY = n(976860),
-    ez = n(233993),
-    eZ = n(284738),
+    eZ = n(233993),
+    ez = n(284738),
     eQ = n(841811),
     eK = n(95701),
     eJ = n(696451),
@@ -360,7 +360,7 @@ function tr(e) {
         b = a.useRef(null),
         N = (0, g.bG)([eR.A], () => eR.A.getGuild(d)),
         S = s === ek.rbe.GUILD_STAGE_VOICE,
-        { roles: f, members: _, getRichTag: O } = (0, ec.K)(N, null, S ? ez.QY : (0, eK.TA)(s), m, S),
+        { roles: f, members: _, getRichTag: O } = (0, ec.K)(N, null, S ? eZ.QY : (0, eK.TA)(s), m, S),
         L = ed.A.useSections({ roles: f, members: _ });
     return (a.useEffect(() => {
         p(I);
@@ -1134,7 +1134,7 @@ function td(e) {
         ),
         c = new Set(o.memberRoles),
         { canManageRoles: p, canManageChannels: A } = o,
-        m = (0, eZ.R)(s) && p && A,
+        m = (0, ez.R)(s) && p && A,
         E = (0, eN.V)(o?.guild),
         I = eI.useConfig({ guildId: s, location: "CreateChannel" }).enabled,
         C = es.useConfig({ guildId: s, location: "CreateChannel web" }).enabled,
