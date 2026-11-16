@@ -384,23 +384,21 @@ let Y = {
         openWaylandPortalShortcutSettings() {
             I.isPlatformEmbedded && this.getDiscordUtils().openWaylandPortalShortcutSettings?.();
         },
-        setObservedGamesCallback(e, t, n, i) {
+        setObservedGamesCallback(e, t, n) {
             try {
                 y = {};
-                let a = 0,
-                    s = this.getDiscordUtils(),
-                    l = e.map((e) => {
-                        let t = ++a;
+                let i = 0,
+                    r = this.getDiscordUtils(),
+                    a = e.map((e) => {
+                        let t = ++i;
                         return (null != e.id && (y[t] = e.id), { ...e, cmdline: e.cmdLine, id: t });
                     }),
-                    o = y;
-                function r(e) {
-                    return n(e.map((e) => j(e, o)));
-                }
-                (null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
-                    t && null != s.setObservedGamesCallback2
-                        ? s.setObservedGamesCallback2(l, r)
-                        : s.setObservedGamesCallback(l, r));
+                    s = y;
+                (null != n && null != r.setProcessObserverUserId && r.setProcessObserverUserId(n),
+                    r.setObservedGamesCallback2(a, function (e) {
+                        return t(e.map((e) => j(e, s)));
+                    }),
+                    r.setGameDetectionCallback?.(() => {}));
             } catch (e) {}
         },
         setProcessObserverCollectExecutableFingerprint(e) {
@@ -414,14 +412,6 @@ let Y = {
                 let n = this.getDiscordUtils()?.getExecutableFingerprintForProcess;
                 null != n ? n(e, (e) => t(null != e && "" !== e ? e : null)) : t(null);
             });
-        },
-        setGameDetectionCallback(e) {
-            this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
-                e(
-                    t.map((e) => j(e)),
-                    n.map((e) => j(e)),
-                ),
-            );
         },
         setGameDetectionErrorCallback(e) {
             this.getDiscordUtils().setGameDetectionErrorCallback?.(e);
