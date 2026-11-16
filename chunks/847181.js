@@ -186,8 +186,8 @@ var tK = i(941971),
     t2 = i(451909),
     t9 = i(135621),
     t4 = i(381941),
-    t7 = i(158602);
-function t5(t) {
+    t5 = i(158602);
+function t7(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
         a = (0, t9.A)(),
         { placeholder: r, accessibilityLabel: o } = (0, tQ.A)({ channel: n }),
@@ -226,9 +226,9 @@ function t5(t) {
             [d, a, n, e, l],
         );
     return (0, $.jsx)("div", {
-        className: t7.k,
+        className: t5.k,
         children: (0, $.jsx)(t8.Ay, {
-            innerClassName: t7.T,
+            innerClassName: t5.T,
             onChange: g,
             placeholder: r,
             accessibilityLabel: o,
@@ -265,7 +265,7 @@ var en = i(554146),
     ea = i(429913),
     er = i(263577),
     eo = i(826673),
-    es = i(754712),
+    es = i(988468),
     eu = i(907357),
     ec = i(487887),
     ed = i(731854),
@@ -936,7 +936,7 @@ let ew = new ej(s.h, {
                         l || (0, tW.$)()
                             ? null
                             : i && !a
-                              ? (0, $.jsx)(t5, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
+                              ? (0, $.jsx)(t7, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
                               : null,
                     onNotificationShow: () => {
                         (et(n), s());

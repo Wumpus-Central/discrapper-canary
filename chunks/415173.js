@@ -146,7 +146,7 @@ var z = n(119173),
     ef = n(259264),
     ex = n(555148),
     eA = n(110234),
-    eE = n(754712),
+    eE = n(988468),
     eS = n(287809),
     eI = n(562153),
     ev = n(761661),
@@ -927,13 +927,13 @@ function e2(e) {
 var e3 = n(143129),
     e5 = n(821609),
     e6 = n(706712),
-    e4 = n(225123),
-    e8 = n(321090),
+    e8 = n(225123),
+    e4 = n(321090),
     e9 = n(189953);
 function e7(e) {
     let { locked: t, pinned: n, anchorLeft: i } = e,
-        r = (0, P.bG)([e4.A], () => e4.A.getSocket()),
-        s = (0, P.bG)([e8.A], () => e8.A.isGPUBoosted());
+        r = (0, P.bG)([e8.A], () => e8.A.getSocket()),
+        s = (0, P.bG)([e4.A], () => e4.A.isGPUBoosted());
     (0, e6.ZX)();
     let a = (0, P.bG)([Y.A], () => Y.A.getWindow(e0.f)),
         [o, d] = (0, e6.DQ)(r),
@@ -1482,7 +1482,7 @@ function t6(e) {
         },
     });
 }
-function t4(e) {
+function t8(e) {
     let { voiceChannel: t, locked: n } = e,
         i = v.useRef(null),
         r = (0, P.bG)([eE.Ay], () => eE.Ay.isVideoEnabled()),
@@ -1547,7 +1547,7 @@ function t4(e) {
         },
     });
 }
-function t8(e) {
+function t4(e) {
     let t,
         { voiceChannel: n, locked: i } = e,
         r = v.useRef(null),
@@ -1935,13 +1935,13 @@ function ns(e) {
                         children: [
                             (0, l.jsx)(t5, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t6, { voiceChannel: s, locked: t }),
-                            (0, l.jsx)(t4, { voiceChannel: s, locked: t }),
+                            (0, l.jsx)(t8, { voiceChannel: s, locked: t }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
                         className: nr.qi,
                         children: [
-                            (0, l.jsx)(t8, { voiceChannel: s, locked: t }),
+                            (0, l.jsx)(t4, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t9, { voiceChannel: s, locked: t }),
                             i && r && (0, l.jsx)(ni, { voiceChannel: s, locked: t }),
                         ],
@@ -2476,8 +2476,8 @@ async function n5(e) {
     }
 }
 var n6 = n(835078),
-    n4 = (((r = {}).DEFAULT = "DEFAULT"), (r.CHANNEL_TYPE = "CHANNEL_TYPE"), r);
-let n8 = v.memo(function (e) {
+    n8 = (((r = {}).DEFAULT = "DEFAULT"), (r.CHANNEL_TYPE = "CHANNEL_TYPE"), r);
+let n4 = v.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: i, iconVariant: r = "DEFAULT" } = e,
         s = null != i && t === i,
         a = (0, P.bG)([E.A], () => E.A.getSelectedChannelId() === t, [t]),
@@ -2864,11 +2864,11 @@ function id(e) {
                                   ? (0, l.jsxs)(l.Fragment, {
                                         children: [
                                             (0, l.jsx)(
-                                                n8,
+                                                n4,
                                                 {
                                                     channelId: u,
                                                     selectedVoiceChannelId: u,
-                                                    iconVariant: n4.CHANNEL_TYPE,
+                                                    iconVariant: n8.CHANNEL_TYPE,
                                                 },
                                                 `tiv-${u}`,
                                             ),
@@ -2877,7 +2877,7 @@ function id(e) {
                                     })
                                   : null,
                               c.map((e) =>
-                                  (0, l.jsx)(n8, { channelId: e.channelId, selectedVoiceChannelId: u }, e.channelId),
+                                  (0, l.jsx)(n4, { channelId: e.channelId, selectedVoiceChannelId: u }, e.channelId),
                               ),
                           ],
                       }),
@@ -3287,8 +3287,8 @@ let i3 = new i2(n1.h, {
 });
 var i5 = n(743082),
     i6 = n(395771),
-    i4 = n(207228),
-    i8 = n(760751),
+    i8 = n(207228),
+    i4 = n(760751),
     i9 = n(365010);
 let i7 = {
         loading: [iw.default.Byq40w, iw.default["1G9dze"]],
@@ -3325,7 +3325,7 @@ function rn(e) {
             gameName: r,
             targetedGames: s,
         } = (0, P.bG)(
-            [iU.Ay, tQ.A, i3, p.A, iz.A, iQ.A, i6.A, iG.A, i8.A],
+            [iU.Ay, tQ.A, i3, p.A, iz.A, iQ.A, i6.A, iG.A, i4.A],
             () => {
                 let e = (0, iL.V)(iU.Ay, tQ.A),
                     n = iQ.A.getDecision(t, "screen_capture"),
@@ -3363,7 +3363,7 @@ function rn(e) {
                     })({
                         frameState: i3.getState(t),
                         usesCapture: null != n || null != i || i6.A.hasRequested(t),
-                        captureSupported: (0, i$.yG)("screen_capture") && (0, i4.y8)(),
+                        captureSupported: (0, i$.yG)("screen_capture") && (0, i8.y8)(),
                         permission: n,
                         targeting: r,
                         game: e,
@@ -3378,7 +3378,7 @@ function rn(e) {
                                   let r = i.length > 3 ? [...i.slice(0, 3), t(i.length - 3)] : i;
                                   return new Intl.ListFormat(n, { type: "conjunction" }).format(r);
                               })(
-                                  r.application_ids.map((e) => i8.A.getDetectableGame(e)?.name),
+                                  r.application_ids.map((e) => i4.A.getDetectableGame(e)?.name),
                                   (e) => eC.intl.formatToPlainString(iw.default["VFY/kC"], { count: e }),
                                   eC.intl.currentLocale,
                               )

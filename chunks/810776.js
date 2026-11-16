@@ -41,7 +41,7 @@ var b = n(503698),
     W = n(616356),
     B = n(734057),
     F = n(71393),
-    V = n(754712),
+    V = n(988468),
     H = n(532624),
     Y = n(373954),
     z = n(188567),
@@ -382,28 +382,28 @@ var eq = n(934058),
     e3 = n(897720),
     e8 = n(312130),
     e5 = n(856988),
-    e7 = n(155037),
-    e4 = n(73153),
-    e6 = n(46653);
+    e4 = n(155037),
+    e6 = n(73153),
+    e7 = n(46653);
 let e9 = { users: {} };
 class te extends l.Ay.DeviceSettingsStore {
     static displayName = "ConjureServerOverlayWidgetNoticeStore";
     static persistKey = "ConjureServerOverlayWidgetNoticeStore";
     initialize(e) {
-        (this.waitFor(e6.default), (e9 = { users: e?.users ?? {} }));
+        (this.waitFor(e7.default), (e9 = { users: e?.users ?? {} }));
     }
     isDismissed(e) {
-        let t = e6.default.getId();
+        let t = e7.default.getId();
         return null != t && (e9.users[t]?.includes(e) ?? !1);
     }
     getUserAgnosticState() {
         return e9;
     }
 }
-let tt = new te(e4.h, {
+let tt = new te(e6.h, {
     CONJURE_SERVER_OVERLAY_WIDGET_NOTICE_DISMISS: function (e) {
         let { applicationId: t } = e,
-            n = e6.default.getId();
+            n = e7.default.getId();
         if (null == n) return !1;
         let r = e9.users[n] ?? [];
         if (r.includes(t)) return !1;
@@ -811,7 +811,7 @@ function tE() {
                 if (O.current.size >= 3) return;
                 let t = e.application_id;
                 O.current.has(t) ||
-                    (O.current.add(t), e4.h.dispatch({ type: "CONJURE_SERVER_OVERLAY_WIDGET_NOTIFY", project: e }));
+                    (O.current.add(t), e6.h.dispatch({ type: "CONJURE_SERVER_OVERLAY_WIDGET_NOTIFY", project: e }));
             }
         }, [C, N]),
         (_ = (0, l.bG)([eq.A], () => eq.A.hasOwnedFetchSucceeded())),
@@ -849,7 +849,7 @@ function tE() {
                     let e = new Set();
                     for (let t of h.A.getWidgetsByTypeAndLayout(ew.uss.CONJURE, eD.GJ))
                         (0, e3.Du)(t) && e.add(t.meta.applicationId);
-                    (0, e7.A)(e);
+                    (0, e4.A)(e);
                 }
             }
         }, [j, D, T, I, L]),
@@ -876,7 +876,7 @@ var tx = n(661886),
     tw = n(682763);
 function tb(e, t) {
     tx.A.getPopoutInitializationStages()[e] !== t &&
-        e4.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
+        e6.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
 }
 n(96175);
 var tC = n(366032);

@@ -383,7 +383,7 @@ var eV = n(844222),
     eZ = n(977997),
     e0 = n(312006),
     e1 = n(175203),
-    e4 = n(754712),
+    e4 = n(988468),
     e2 = n(756872);
 function e6(e) {
     let { aspectRatio: t, className: n, children: s, width: i, ...a } = e,
@@ -399,18 +399,18 @@ function e6(e) {
     });
 }
 var e5 = n(866665),
-    e3 = n(786889),
-    e8 = n(90075);
-let e7 = function () {
+    e8 = n(786889),
+    e3 = n(90075);
+let e9 = function () {
     return (0, l.jsx)(e5.m, {
         text: es.intl.string(es.t.GMZqSi),
         children: (0, l.jsx)("div", {
-            className: e8.k,
-            children: (0, l.jsx)(e3.A, { color: F.A.unsafe_rawColors.WHITE.css }),
+            className: e3.k,
+            children: (0, l.jsx)(e8.A, { color: F.A.unsafe_rawColors.WHITE.css }),
         }),
     });
 };
-var e9 = n(145131);
+var e7 = n(145131);
 let te = 16 / 9;
 function tt(e) {
     let {
@@ -446,13 +446,13 @@ function tt(e) {
                         blocked: A,
                         ignored: m,
                         channel: i,
-                        className: e9.V,
+                        className: e7.V,
                         inCall: !0,
                         popoutType: u,
                         pulseSpeakingIndicator: !h.enabled,
                         width: o,
                         onContextMenu: d,
-                        children: c && (0, l.jsx)(e7, {}),
+                        children: c && (0, l.jsx)(e9, {}),
                     },
                     x,
                 ),
@@ -502,14 +502,14 @@ function tn(e) {
             blocked: A,
             ignored: x,
             channel: i,
-            className: e9.V,
+            className: e7.V,
             inCall: !0,
             popoutType: u,
             onClick: f,
             onContextMenu: c,
             pulseSpeakingIndicator: !p.enabled,
             width: a,
-            children: r && n.type === ew.lp.USER && (0, l.jsx)(e7, {}),
+            children: r && n.type === ew.lp.USER && (0, l.jsx)(e9, {}),
         },
         h,
     );
