@@ -511,8 +511,8 @@ var ez = n(633965),
     e6 = n(757780),
     e5 = n(263715),
     e7 = n(967198),
-    e4 = n(173860),
-    e8 = n(383394),
+    e8 = n(173860),
+    e4 = n(383394),
     e9 = n(131677),
     te = n(73153);
 let tt = {};
@@ -559,8 +559,8 @@ function tu(e) {
             tc(e2.Ay.getGuildFolders(), e9.A.getUnreadPrivateChannelIds(), ed.default.getStoreChangeSentinel()),
         ),
         a = (0, _.bG)([tr.A], () => tr.A.isFocused()),
-        s = (0, _.bG)([e8.A], () => e8.A.getExpandedFolders());
-    return (0, i.jsx)(e4.A, {
+        s = (0, _.bG)([e4.A], () => e4.A.getExpandedFolders());
+    return (0, i.jsx)(e8.A, {
         ...n,
         ref: t,
         items: r,
@@ -1131,7 +1131,7 @@ function t7(e) {
         r = (0, tz.P)("guild_list_add_server");
     return (0, i.jsx)(tW, { ...n, onClick: () => t(r), tooltip: ey.intl.string(r ? ey.t.riOUtB : ey.t.l5WIbf) });
 }
-function t4(e) {
+function t8(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, _.yK)([e1.A], () => e1.A.getGuildsArray()),
         s = (0, _.bG)([eC.default], () => eC.default.getCurrentUser()),
@@ -1171,7 +1171,7 @@ function t4(e) {
         }),
     });
 }
-var t8 = n(565787),
+var t4 = n(565787),
     t9 = n(791606),
     ne = n(486020),
     nt = n(183588);
@@ -1184,7 +1184,7 @@ function nn(e) {
             children: (0, i.jsx)(W.Q, {
                 className: nt.o,
                 selected: t,
-                lowerBadge: (0, i.jsx)(tf.fk, { icon: (0, t8.k)(t9.A), disableColor: !0, className: nt._ }),
+                lowerBadge: (0, i.jsx)(tf.fk, { icon: (0, t4.k)(t9.A), disableColor: !0, className: nt._ }),
                 children: (0, i.jsx)(Y.j, {
                     name: e.name,
                     onMouseEnter: function () {
@@ -1488,7 +1488,7 @@ let n0 = r.memo(function (e) {
         { id: p, name: m, color: T, children: g } = h,
         S = r.useMemo(() => g.map((e) => e.id), [g]),
         N = (0, Z.A)((e) => e.guildId),
-        C = (0, _.bG)([e8.A], () => e8.A.isFolderExpanded(p)),
+        C = (0, _.bG)([e4.A], () => e4.A.isFolderExpanded(p)),
         O = (0, nQ.y)(h),
         R =
             ((t = (0, _.bG)([tE.A], () => tE.A.getGuildId())),
@@ -1566,9 +1566,9 @@ function n5(e) {
     return t ? n : void 0;
 }
 var n7 = n(347951),
-    n4 = n(34162);
-function n8(e) {
-    return (0, _.bG)([n4.A], () => n4.A.getGuildMediaState(e), [e]);
+    n8 = n(34162);
+function n4(e) {
+    return (0, _.bG)([n8.A], () => n8.A.getGuildMediaState(e), [e]);
 }
 var n9 = n(126600),
     ie = n(607399),
@@ -1991,7 +1991,7 @@ function iP(e, t) {
             n.e(860350),
             n.e(774550),
             n.e(923981),
-            n.e(317446),
+            n.e(578667),
             n.e(71866),
             n.e(891473),
             n.e(412117),
@@ -2906,7 +2906,7 @@ let iw = r.memo(function (e) {
         o = (0, _.bG)([tr.A], () => tr.A.isFocused()),
         d = (0, _.bG)([nB.A], () => nB.A.isUnavailable(a)),
         c = (0, Z.A)((e) => e.guildId),
-        u = n8(a),
+        u = n4(a),
         {
             badge: E,
             unread: A,
@@ -3120,7 +3120,7 @@ function iq(e) {
                 let { guildId: t } = e;
                 return t;
             }),
-        o = n8(t);
+        o = n4(t);
     return null == a
         ? null
         : (0, i.jsx)(iM, { guildNode: n, guild: a, animatable: s, selected: l, draggable: !1, mediaState: o });
@@ -3343,7 +3343,7 @@ function i6(e) {
             }),
             d,
             (0, i.jsx)(nj, {}),
-            r ? null : (0, i.jsx)(t4, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
+            r ? null : (0, i.jsx)(t8, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
             r ? null : t,
             n ? null : (0, i.jsx)(t$, {}),
         ],
