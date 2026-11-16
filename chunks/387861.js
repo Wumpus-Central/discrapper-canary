@@ -1057,6 +1057,7 @@ function nC(e) {
               ],
               action: {
                   text: J.intl.string(J.t.RzWDqY),
+                  variant: "secondary",
                   onClick: function () {
                       (s(eo.i.TAKE_ACTION), (0, np.p)());
                   },
@@ -1090,35 +1091,36 @@ function nG() {
     let e = a.useRef(null),
         [t, i] = a.useState(!1),
         { value: s } = (0, nm.U)(),
-        o = (0, nA.Y)(),
-        d = (0, nA.T)(),
-        c = "off" === s ? nT.default.RfYFQu : "manual" === s ? nT.default.iHA2eT : null,
-        [u, _] = (0, eL.kn)(__OVERLAY__ || null == c ? nw : nU, { bypassAutoDismiss: !0 }),
-        E = u === A.M.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT && null != c ? J.intl.string(c) : null;
-    function f() {
-        return (0, r.jsx)(nr.e, { shortcut: d, className: l()(nM.oH, nM.m8), keyClassName: nM.Bj }, "shortcut");
+        o = (0, E.bG)([ts.default], () => (0, n_.qj)(ts.default.getCurrentUser())),
+        d = (0, nA.Y)(),
+        c = (0, nA.T)(),
+        u = o ? ("off" === s ? nT.default.RfYFQu : "manual" === s ? nT.default.iHA2eT : null) : null,
+        [_, f] = (0, eL.kn)(__OVERLAY__ || null == u ? nw : nU, { bypassAutoDismiss: !0 }),
+        h = _ === A.M.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT && null != u ? J.intl.string(u) : null;
+    function p() {
+        return (0, r.jsx)(nr.e, { shortcut: c, className: l()(nM.oH, nM.m8), keyClassName: nM.Bj }, "shortcut");
     }
-    let h = o;
-    d.length > 0 && "auto" === s
-        ? (h = (0, r.jsxs)(r.Fragment, {
+    let m = d;
+    c.length > 0 && "auto" === s
+        ? (m = (0, r.jsxs)(r.Fragment, {
               children: [
                   J.intl.string(nT.default["6ZXEjB"]),
                   (0, r.jsx)("span", { className: nM.YW, "aria-hidden": !0, children: "\xb7" }),
-                  f(),
+                  p(),
               ],
           }))
-        : d.length > 0 &&
+        : c.length > 0 &&
           "manual" === s &&
-          (h = (0, r.jsxs)(r.Fragment, {
+          (m = (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("span", {
                       className: nM.zV,
-                      children: J.intl.format(nT.default.Dd1dUI, { shortcut: d, shortcutHook: f }),
+                      children: J.intl.format(nT.default.Dd1dUI, { shortcut: c, shortcutHook: p }),
                   }),
                   (0, r.jsx)("span", { className: nM.hl, children: J.intl.string(nT.default.ms4ibY) }),
               ],
           }));
-    let p = t ? na.ChevronSmallUpIcon : ns.ChevronSmallDownIcon;
+    let T = t ? na.ChevronSmallUpIcon : ns.ChevronSmallDownIcon;
     return (0, r.jsxs)("div", {
         className: nM.ON,
         children: [
@@ -1128,7 +1130,7 @@ function nG() {
                 children: (0, r.jsx)(I.D, {
                     innerRef: e,
                     onClick: function (e) {
-                        (null != E && _(eo.i.TAKE_ACTION),
+                        (null != h && f(eo.i.TAKE_ACTION),
                             i(!0),
                             (0, ty.L3)(
                                 e,
@@ -1139,18 +1141,18 @@ function nG() {
                                 { position: "top", align: "left", onClose: () => i(!1) },
                             ));
                     },
-                    "aria-label": E ?? o,
+                    "aria-label": h ?? d,
                     "aria-haspopup": "menu",
                     "aria-expanded": t,
                     className: l()(nM.d4, { [nM.pS]: t }),
                     children:
-                        null != E
+                        null != h
                             ? (0, r.jsx)(V.E, {
                                   variant: "body-xs/medium",
                                   color: "text-link",
                                   className: nM.UX,
                                   tag: "div",
-                                  children: E,
+                                  children: h,
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [
@@ -1159,9 +1161,9 @@ function nG() {
                                           color: "none",
                                           className: nM.UX,
                                           tag: "div",
-                                          children: h,
+                                          children: m,
                                       }),
-                                      (0, r.jsx)(p, {
+                                      (0, r.jsx)(T, {
                                           size: "xxs",
                                           color: "currentColor",
                                           className: nM.ql,

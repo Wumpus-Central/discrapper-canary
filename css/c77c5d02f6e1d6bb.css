@@ -59,6 +59,21 @@
     text-align: center
 }
 
+.title__vwHFq {
+    white-space: pre-line
+}
+
+.picker__vwHFq,
+.pickerHeading__vwHFq {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.pickerHeading__vwHFq {
+    margin-bottom: var(--space-4)
+}
+
 .cards__vwHFq {
     display: grid;
     gap: var(--space-16);
@@ -110,4 +125,4 @@
     }
 }
 
-/*# sourceMappingURL=148781e776f40bde.css.map*/
+/*# sourceMappingURL=c77c5d02f6e1d6bb.css.map*/
