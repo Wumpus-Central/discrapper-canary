@@ -2375,8 +2375,10 @@ function ls(e) {
         l = t6(),
         a = (0, c.bG)([t$.Ay], () => t$.Ay.useReducedMotion),
         r = (0, tX.A)((e) => e.isOpen),
-        s = (0, ll.G)();
-    return a || null == l || r || s
+        s = (0, ll.G)(),
+        o = !a && null != l && !r && !s,
+        u = (0, eP.e)({ location: "TenureLevelUpPopover", hasUnread: o });
+    return !o || u
         ? null
         : (0, i.jsx)(iK.zJ, {
               contentType: d.M.NITRO_TENURE_BADGE_LEVEL_UP,
@@ -3064,7 +3066,7 @@ function l7(e) {
         }, [r]),
         g = ed.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, l5.A)("1794853661800", !0);
+        let e = (0, l5.A)("1794853924410", !0);
         t =
             null != e
                 ? eV.intl.formatToPlainString(eV.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
