@@ -58,24 +58,25 @@ let T = u.ej.create(),
     S = 0,
     N = !1,
     C = !1,
-    O = 0,
-    R = !1;
-function L() {
-    ((N = !0), (s = void 0), (C = !1));
-}
+    O = !1,
+    R = 0,
+    L = !1;
 function y() {
+    ((O = !1), (N = !0), (s = void 0), (C = !1));
+}
+function D() {
     return (
         null != i &&
         !N &&
         null != l &&
         a === l &&
-        i.arm === (R ? "treatment" : "control") &&
+        i.arm === (L ? "treatment" : "control") &&
         i.account_id === f.default.getId() &&
         (null != o || i.declarative_data_version >= (T.versions?.dataVersion ?? 0)) &&
         r === m(i, E.A.settings)
     );
 }
-function D(e) {
+function b(e) {
     if (
         e.account_id !== f.default.getId() ||
         e.declarative_data_version < (T.versions?.dataVersion ?? 0) ||
@@ -85,13 +86,13 @@ function D(e) {
         return !1;
     ((i = e), (S = Date.now()), (r = m(e, E.A.settings)), (a = l), (N = !1), (s = void 0), (C = !1));
 }
-function b() {
+function v() {
     d?.timeout != null && (clearTimeout(d.timeout), (d.timeout = void 0));
 }
-function v() {
-    (b(), (d = void 0));
+function P() {
+    (v(), (d = void 0));
 }
-function P(e) {
+function M(e) {
     let t = T.versions?.dataVersion ?? 0;
     return "proto" === e.versionSource
         ? t
@@ -99,11 +100,11 @@ function P(e) {
           ? Math.max(t, i.declarative_data_version)
           : void 0;
 }
-function M(e, t) {
+function U(e, t) {
     let n = u.ej.clone(e.partialSettings);
     return (u.ej.mergePartial(n, t.partialSettings), n);
 }
-class U extends c.Ay.PersistedStore {
+class w extends c.Ay.PersistedStore {
     static displayName = "NotifSettingsProtoStore";
     static persistKey = "NotifSettingsProtoStore-Cache";
     static migrations = [
@@ -156,7 +157,7 @@ class U extends c.Ay.PersistedStore {
             },
             t = o ?? d;
         if (null != t) {
-            let n = null != o && null != d ? M(o, d) : t.partialSettings;
+            let n = null != o && null != d ? U(o, d) : t.partialSettings;
             ((e.protoToSave = (0, A.ob)(u.ej, n)),
                 (e.offlineEditDataVersion = t.offlineEditDataVersion),
                 (e.offlineEditVersionSource = t.versionSource));
@@ -176,22 +177,25 @@ class U extends c.Ay.PersistedStore {
         return null != this.applyingEdit;
     }
     get hasValidEffectiveSettings() {
-        return y();
+        return D();
     }
     get isEffectiveSettingsStale() {
-        return !y() || Date.now() - S > 3e5;
+        return !D() || Date.now() - S > 3e5;
+    }
+    get hasCompletedEffectiveSettingsFetch() {
+        return O;
     }
     get isEffectiveSettingsLoading() {
         return C;
     }
     get isEffectiveSettingsScreenOpen() {
-        return O > 0;
+        return R > 0;
     }
     get effectiveSettingsScreenCount() {
-        return O;
+        return R;
     }
     get isEffectiveTreatment() {
-        return R;
+        return L;
     }
     get effectiveAssignment() {
         return l;
@@ -200,7 +204,7 @@ class U extends c.Ay.PersistedStore {
         return s === e;
     }
     getEffectiveSetting(e) {
-        if (y()) return Object.values(i.preferences).find((t) => t.setting_id === e);
+        if (D()) return Object.values(i.preferences).find((t) => t.setting_id === e);
     }
     getOptimisticSetting(e) {
         return d?.partialSettings.values[e] ?? o?.partialSettings.values[e];
@@ -215,7 +219,7 @@ class U extends c.Ay.PersistedStore {
         );
     }
     get effectiveDataVersion() {
-        return y() ? i?.declarative_data_version : void 0;
+        return D() ? i?.declarative_data_version : void 0;
     }
     get dataVersion() {
         return T.versions?.dataVersion ?? 0;
@@ -224,19 +228,19 @@ class U extends c.Ay.PersistedStore {
         return d?.partialSettings?.values[e] ?? o?.partialSettings?.values[e] ?? T.values[e];
     }
 }
-new U(_.h, {
+new w(_.h, {
     CONNECTION_OPEN: function (e) {
         let { notificationSettings: t } = e;
         ((s = void 0),
             (C = !1),
             null != t.declarativeSettings && (T = t.declarativeSettings),
-            null != d && d.offlineEditDataVersion !== P(d) && v(),
-            null != o && o.offlineEditDataVersion !== P(o) && (o = void 0),
+            null != d && d.offlineEditDataVersion !== M(d) && P(),
+            null != o && o.offlineEditDataVersion !== M(o) && (o = void 0),
             (g = !0));
     },
     CONNECTION_CLOSED: function () {
         if (d?.timeout == null) return !1;
-        b();
+        v();
     },
     NOTIFICATION_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e,
@@ -257,7 +261,7 @@ new U(_.h, {
             o = void 0;
             return;
         }
-        (null != t && (T = t), (o = void 0), null != r && null != a && a === l && D(r), i && v());
+        (null != t && (T = t), (o = void 0), null != r && null != a && a === l && b(r), i && P());
     },
     DECLARATIVE_NOTIFICATION_SETTINGS_EDIT: function (e) {
         let { edit: t, isApplying: n } = e;
@@ -274,11 +278,11 @@ new U(_.h, {
     DECLARATIVE_NOTIFICATION_SETTINGS_EDIT_APPLY_FAILED: function (e) {
         let { edit: t, shouldAbandonEdit: n } = e;
         if (t !== o) return !1;
-        (n ? v() : (d = null == d ? t : { ...d, partialSettings: M(t, d) }), (o = void 0));
+        (n ? P() : (d = null == d ? t : { ...d, partialSettings: U(t, d) }), (o = void 0));
     },
     LOGOUT: function () {
         ((T = u.ej.create()),
-            v(),
+            P(),
             (o = void 0),
             (g = !1),
             (i = void 0),
@@ -288,13 +292,14 @@ new U(_.h, {
             (N = !1),
             (s = void 0),
             (C = !1),
-            (O = 0),
-            (R = !1),
+            (O = !1),
+            (R = 0),
+            (L = !1),
             (l = void 0));
     },
     USER_SETTINGS_PROTO_UPDATE: () => {
         if (null == i || r === m(i, E.A.settings)) return !1;
-        L();
+        y();
     },
     EFFECTIVE_NOTIFICATION_SETTINGS_FETCH_START: (e) => {
         let { requestId: t } = e;
@@ -303,24 +308,24 @@ new U(_.h, {
     EFFECTIVE_NOTIFICATION_SETTINGS_FETCH_SUCCESS: (e) => {
         let { requestId: t, snapshot: n } = e;
         if (t !== s) return !1;
-        ((C = !1), (s = void 0), D(n));
+        ((O = !0), (C = !1), (s = void 0), b(n));
     },
     EFFECTIVE_NOTIFICATION_SETTINGS_FETCH_FAILURE: (e) => {
         let { requestId: t } = e;
         if (t !== s) return !1;
-        ((s = void 0), (C = !1));
+        ((s = void 0), (C = !1), (O = !0));
     },
     EFFECTIVE_NOTIFICATION_SETTINGS_SCREEN_OPEN: () => {
-        O++;
+        R++;
     },
     EFFECTIVE_NOTIFICATION_SETTINGS_SCREEN_CLOSE: () => {
-        O = Math.max(0, O - 1);
+        R = Math.max(0, R - 1);
     },
     EFFECTIVE_NOTIFICATION_SETTINGS_ARM_CHANGE: (e) => {
         let { enabled: t, assignment: n } = e,
             r = null != l && l !== n,
             s = null == n || a !== n,
             o = i?.arm !== (t ? "treatment" : "control");
-        ((R = t), (l = n), (r || s || o) && L());
+        ((L = t), (l = n), (r || s || o) && y());
     },
 });

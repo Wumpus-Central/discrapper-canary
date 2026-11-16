@@ -1,22 +1,32 @@
 var i = n(855986),
     r = n(73153);
 let s = {},
-    l = null;
-function a() {
-    ((s = {}), (l = null));
+    l = null,
+    a = !1;
+function o() {
+    ((s = {}), (l = null), (a = !1));
 }
-class o extends i.Ay.Store {
+class c extends i.Ay.Store {
     static displayName = "EmailSettingsStore";
+    get isFetching() {
+        return a;
+    }
     getEmailSettings() {
         return { categories: s, initialized: l };
     }
 }
-let c = new o(r.h, {
-    CONNECTION_OPEN: a,
-    LOGOUT: a,
+let d = new c(r.h, {
+    CONNECTION_OPEN: o,
+    LOGOUT: o,
+    EMAIL_SETTINGS_FETCH_START: () => {
+        a = !0;
+    },
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        ((s = t.categories), (l = t.initialized));
+        ((s = t.categories), (l = t.initialized), (a = !1));
+    },
+    EMAIL_SETTINGS_FETCH_FAILURE: () => {
+        a = !1;
     },
     EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
         let { settings: t } = e;
@@ -31,4 +41,4 @@ let c = new o(r.h, {
         s = { ...s, ...t };
     },
 });
-n.d(t, {}, { A: c });
+n.d(t, {}, { A: d });

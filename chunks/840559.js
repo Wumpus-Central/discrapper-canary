@@ -54,21 +54,24 @@ n.d(
             }
         },
         cR: async function () {
-            try {
-                let e = await s.A.get({
-                    url: o.Rsh.EMAIL_SETTINGS,
-                    trackedActionData: {
-                        event: l.NetworkActionNames.EMAIL_SETTINGS_FETCH,
-                        properties: (e) => {
-                            let t = e?.body?.initialized;
-                            return (0, i.e0)({ initialized: t });
+            if (!a.A.isFetching) {
+                r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_START" });
+                try {
+                    let e = await s.A.get({
+                        url: o.Rsh.EMAIL_SETTINGS,
+                        trackedActionData: {
+                            event: l.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+                            properties: (e) => {
+                                let t = e?.body?.initialized;
+                                return (0, i.e0)({ initialized: t });
+                            },
                         },
-                    },
-                    rejectWithError: !0,
-                });
-                return (r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_SUCCESS", settings: e.body }), e.body);
-            } catch {
-                r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
+                        rejectWithError: !0,
+                    });
+                    return (r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_SUCCESS", settings: e.body }), e.body);
+                } catch {
+                    r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
+                }
             }
         },
     },
