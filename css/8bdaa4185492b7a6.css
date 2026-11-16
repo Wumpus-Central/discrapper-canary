@@ -206,7 +206,7 @@
 
 .emojiRow_XTvD56 .emojiAliasInputContainer_XTvD56 {
     display: flex;
-    max-width: 100%;
+    max-width: calc(100% - var(--space-16));
     position: relative;
     width: -moz-fit-content;
     width: fit-content
@@ -328,4 +328,4 @@
     border-bottom: none
 }
 
-/*# sourceMappingURL=c2a15a0d3c48536d.css.map*/
+/*# sourceMappingURL=8bdaa4185492b7a6.css.map*/
