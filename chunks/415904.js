@@ -4265,7 +4265,7 @@ let aC = () => {
         E(!0);
     }, []);
     let { shouldShowBonusOrbsUX: P } = (0, s9.lk)(il.rE.NITRO_HOME_MARKETING),
-        S = P ? nZ.N.COMBINED_ORBS : nZ.N.ORB_REWARDS,
+        S = P ? nZ.N.ORB_MULTIPLIER : null,
         D = o.useMemo(() => {
             let t = new URLSearchParams(e.search).get(ni.x);
             return "orbs" === t
