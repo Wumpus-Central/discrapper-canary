@@ -1,4 +1,4 @@
-n.d(t, { default: () => rd });
+n.d(t, { default: () => ru });
 var l,
     i,
     a,
@@ -3234,16 +3234,15 @@ var ir = n(969935),
     io = n(987421),
     ic = n(561769),
     iu = n(484469),
-    id = n(57020),
-    im = n(682301);
-let ih = [];
-var ig = n(758836),
-    ix = n(399872);
-let ip = [0, 1, 2, 3, 4];
-function ij(e) {
+    id = n(682301);
+let im = [];
+var ih = n(758836),
+    ig = n(399872);
+let ix = [0, 1, 2, 3, 4];
+function ip(e) {
     return e.skuId;
 }
-function iv(e) {
+function ij(e) {
     let { product: t, aspectRatio: n, listItemProps: l } = e,
         { skuId: i } = t,
         { flattenProductVariants: a, prioritizedCurrency: o, standalonePreview: c } = s.useContext(ic.v3),
@@ -3257,11 +3256,10 @@ function iv(e) {
                         skuId: i,
                         analyticsLocations: [f.A.GAME_PROFILE],
                         analyticsSource: f.A.GAME_PROFILE,
-                        shouldCheckoutWithOrbs: (0, id.A)({ product: t }),
                         returnRef: d,
                     }));
             },
-            [u, i, t],
+            [u, i],
         ),
         h = s.useMemo(
             () => ({
@@ -3277,7 +3275,7 @@ function iv(e) {
         children: (0, r.jsx)(io.A, {
             skuId: i,
             aspectRatio: n,
-            cardClassName: ix.N,
+            cardClassName: ig.N,
             onClickCard: m,
             hideWishlistButton: !0,
             hidePrice: !0,
@@ -3287,10 +3285,10 @@ function iv(e) {
         }),
     });
 }
-function ib() {
+function iv() {
     return (0, r.jsx)(iu.A, {});
 }
-function iI() {
+function ib() {
     let { game: e, closeModal: t, trackAction: n } = W(),
         { products: l, isLoading: i } = (function (e) {
             let {
@@ -3311,10 +3309,10 @@ function iI() {
                         (0, s.useEffect)(() => {
                             null == e || t || L.A.isShopCollectionFetching(e) || (0, nO.hd)(e);
                         }, [e, t]),
-                        { skuIds: l ?? ih, hasFetched: t, isFetching: n }
+                        { skuIds: l ?? im, hasFetched: t, isFetching: n }
                     );
                 })(e),
-                i = (0, im.hv)(t, { flattenVariants: !0 }),
+                i = (0, id.hv)(t, { flattenVariants: !0 }),
                 a = (0, s.useMemo)(() => t.map((e) => i[e]?.product).filter((e) => null != e), [t, i]),
                 r = t.some((e) => i[e]?.state === "loading");
             return { products: a, isLoading: null != e && (!n || l || (t.length > 0 && r)) };
@@ -3325,14 +3323,14 @@ function iI() {
                 (0, ir.Cz)({
                     analyticsLocations: [f.A.GAME_PROFILE],
                     analyticsSource: f.A.GAME_PROFILE,
-                    tab: ig.G2.CATALOG,
+                    tab: ih.G2.CATALOG,
                 }));
         }, [n, t]);
     return i
         ? (0, r.jsx)(ty, {
               showViewAllSkeleton: !0,
               skeletonTitleWidth: 118,
-              children: (0, r.jsx)(nm.A, { children: ip.map((e) => (0, r.jsx)(ib, {}, e)) }),
+              children: (0, r.jsx)(nm.A, { children: ix.map((e) => (0, r.jsx)(iv, {}, e)) }),
           })
         : 0 === l.length
           ? null
@@ -3342,22 +3340,22 @@ function iI() {
                 children: (0, r.jsx)(ns.A, {
                     gap: "md",
                     items: l,
-                    getItemKey: ij,
-                    renderItem: (e, t) => (0, r.jsx)(iv, { product: e, listItemProps: t }, e.skuId),
+                    getItemKey: ip,
+                    renderItem: (e, t) => (0, r.jsx)(ij, { product: e, listItemProps: t }, e.skuId),
                 }),
             });
 }
-var iN = n(459778),
-    iE = n(281018),
-    iy = n(987070);
-let iA = { "--custom-similar-games-per-page": 8, "--custom-cover-min-width": "60px" };
-function iC(e) {
+var iI = n(459778),
+    iN = n(281018),
+    iE = n(987070);
+let iy = { "--custom-similar-games-per-page": 8, "--custom-cover-min-width": "60px" };
+function iA(e) {
     return e.id;
 }
-function ik(e) {
+function iC(e) {
     let { game: t, listItemProps: n } = e,
         { navigateToGame: l, trackAction: i } = W(),
-        { shouldOpenGameProfile: a, gameId: o } = (0, iN.Ay)({
+        { shouldOpenGameProfile: a, gameId: o } = (0, iI.Ay)({
             gameId: t.id,
             source: k.GameProfileSources.SimilarGames,
         }),
@@ -3370,34 +3368,34 @@ function ik(e) {
         ariaHidden: !0,
         children: (0, r.jsx)(tV.D, {
             ...n,
-            className: iy.Nr,
+            className: iE.Nr,
             onClick: c,
             "aria-label": es.intl.formatToPlainString(es.t["8QLQB+"], { gameName: t.name }),
             children: (0, r.jsx)(t0.Ay, {
                 game: t,
-                className: iy.xe,
+                className: iE.xe,
                 size: t0.wu.SMALL,
                 imageSize: 256,
-                loadingPlaceholder: (0, r.jsx)(t0.gr, { className: iy.uz }),
+                loadingPlaceholder: (0, r.jsx)(t0.gr, { className: iE.uz }),
             }),
         }),
     });
 }
-function iS() {
+function ik() {
     let { game: e } = W(),
         t = e.id,
-        { isFetching: n, similarGames: l } = (0, iE.A)(t);
+        { isFetching: n, similarGames: l } = (0, iN.A)(t);
     return n
         ? (0, r.jsx)(ty, {
               showViewAllSkeleton: !1,
               skeletonTitleWidth: 124,
               children: (0, r.jsx)("div", {
-                  className: iy.XG,
-                  style: iA,
+                  className: iE.XG,
+                  style: iy,
                   children: (0, r.jsx)(nm.A, {
                       children: eX()
                           .range(0, 8)
-                          .map((e) => (0, r.jsx)(t0.gr, { className: iy.aZ }, e)),
+                          .map((e) => (0, r.jsx)(t0.gr, { className: iE.aZ }, e)),
                   }),
               }),
           })
@@ -3406,30 +3404,30 @@ function iS() {
           : (0, r.jsx)(tA, {
                 title: es.intl.string(es.t["6rLyQB"]),
                 children: (0, r.jsx)("div", {
-                    className: iy.XG,
-                    style: iA,
+                    className: iE.XG,
+                    style: iy,
                     children: (0, r.jsx)(ns.A, {
                         gap: "md",
                         items: l,
-                        getItemKey: iC,
-                        itemClassName: iy.cW,
-                        renderItem: (e, t) => (0, r.jsx)(ik, { game: e, listItemProps: t }, e.id),
+                        getItemKey: iA,
+                        itemClassName: iE.cW,
+                        renderItem: (e, t) => (0, r.jsx)(iC, { game: e, listItemProps: t }, e.id),
                     }),
                 }),
             });
 }
 n(667532);
-var iL = n(853022);
-let iR = new Set(["1402418703554842694", "356877880938070016"]),
-    iT = [nZ.V1.EPICGAMES, nZ.V1.STEAM, nZ.V1.ROBLOX, nZ.V1.BATTLENET, nZ.V1.RIOT, nZ.V1.MINECRAFT];
-function iM(e) {
+var iS = n(853022);
+let iL = new Set(["1402418703554842694", "356877880938070016"]),
+    iR = [nZ.V1.EPICGAMES, nZ.V1.STEAM, nZ.V1.ROBLOX, nZ.V1.BATTLENET, nZ.V1.RIOT, nZ.V1.MINECRAFT];
+function iT(e) {
     return (0, r.jsx)(K.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
-var iO = n(349361),
-    iw = n(422688),
-    iP = n(505200),
-    iD = n(695250);
-let iV = function (e) {
+var iM = n(349361),
+    iO = n(422688),
+    iw = n(505200),
+    iP = n(695250);
+let iD = function (e) {
     switch (e.category) {
         case nZ.V1.STEAM:
             return {
@@ -3441,7 +3439,7 @@ let iV = function (e) {
             };
         case nZ.V1.EPICGAMES:
             return {
-                icon: iO.EpicGamesNeutralIcon,
+                icon: iM.EpicGamesNeutralIcon,
                 text: es.intl.string(es.t.ZbBMHa),
                 ariaLabel: es.intl.string(es.t.BwX0UW),
                 action: k.Ws.EpicStoreLink,
@@ -3457,7 +3455,7 @@ let iV = function (e) {
             };
         case nZ.V1.BATTLENET:
             return {
-                icon: iw.BattlenetNeutralIcon,
+                icon: iO.BattlenetNeutralIcon,
                 text: es.intl.string(es.t["A7grp+"]),
                 ariaLabel: es.intl.string(es.t.x9at20),
                 action: k.Ws.BattlenetStoreLink,
@@ -3465,7 +3463,7 @@ let iV = function (e) {
             };
         case nZ.V1.RIOT:
             return {
-                icon: iP.RiotGamesNeutralIcon,
+                icon: iw.RiotGamesNeutralIcon,
                 text: es.intl.string(es.t.h6MapL),
                 ariaLabel: es.intl.string(es.t["528nvc"]),
                 action: k.Ws.RiotStoreLink,
@@ -3473,7 +3471,7 @@ let iV = function (e) {
             };
         case nZ.V1.MINECRAFT:
             return {
-                icon: iD.MinecraftNeutralIcon,
+                icon: iP.MinecraftNeutralIcon,
                 text: es.intl.string(es.t["HZbmO+"]),
                 ariaLabel: es.intl.string(es.t.WWTqYn),
                 action: k.Ws.MinecraftStoreLink,
@@ -3490,8 +3488,8 @@ let iV = function (e) {
     }
     return null;
 };
-var iG = n(242216);
-function i_(e) {
+var iV = n(242216);
+function iG(e) {
     let t,
         n,
         l,
@@ -3502,7 +3500,7 @@ function i_(e) {
             (n = (function (e) {
                 if (null == e) return null;
                 let t = e.thirdPartySkus.find((e) => e.distributor === e6.d3x.XBOX_GAME_PASS && !(0, tc.uJ)(e.id));
-                return t?.id == null ? null : (0, iL.jA)(t.id);
+                return t?.id == null ? null : (0, iS.jA)(t.id);
             })(e)),
             (l = e?.id),
             (i = e?.websites),
@@ -3512,9 +3510,9 @@ function i_(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== nZ.V1.EPICGAMES || !!iR.has(l)) &&
+                            (e.category !== nZ.V1.EPICGAMES || !!iL.has(l)) &&
                             (e.category !== nZ.V1.STEAM || a !== l1.Y.RETIRED_ABANDONED) &&
-                            iT.includes(e.category),
+                            iR.includes(e.category),
                     ) ?? [];
                 null == t ||
                     a === l1.Y.RETIRED_ABANDONED ||
@@ -3525,11 +3523,11 @@ function i_(e) {
             }, [t, i, l, a, n]));
     return { storeWebsites: r, showsStoreLinks: r.length > 0 && null != e };
 }
-function iW(e) {
+function i_(e) {
     let { data: t } = e,
         { trackAction: n } = W(),
         l = (0, lh.A)();
-    return (0, r.jsx)(iM, {
+    return (0, r.jsx)(iT, {
         icon: t.icon,
         text: t.text,
         "aria-label": t.ariaLabel,
@@ -3538,21 +3536,21 @@ function iW(e) {
         },
     });
 }
-let iF = function () {
+let iW = function () {
     let { game: e, trackAction: t } = W(),
-        { showsStoreLinks: l, storeWebsites: i } = i_(e),
-        a = s.useMemo(() => i.map(iV).filter((e) => null != e), [i]);
+        { showsStoreLinks: l, storeWebsites: i } = iG(e),
+        a = s.useMemo(() => i.map(iD).filter((e) => null != e), [i]);
     if (!l) return null;
     if (1 === a.length) {
         let [e] = a;
-        return (0, r.jsx)(iW, { data: e });
+        return (0, r.jsx)(i_, { data: e });
     }
     if (2 === a.length)
         return (0, r.jsxs)("div", {
-            className: iG.G,
-            children: [(0, r.jsx)(iW, { data: a[0] }), (0, r.jsx)(iW, { data: a[1] })],
+            className: iV.G,
+            children: [(0, r.jsx)(i_, { data: a[0] }), (0, r.jsx)(i_, { data: a[1] })],
         });
-    let o = (0, r.jsx)(iM, {
+    let o = (0, r.jsx)(iT, {
         text: es.intl.string(es.t["/hMurx"]),
         "aria-label": es.intl.string(es.t.nK60cc),
         onClick: () =>
@@ -3565,18 +3563,18 @@ let iF = function () {
             })({ game: e, websiteButtons: a, trackAction: t }),
     });
     return i.some((e) => "XBOX_GAME_PASS" === e.category)
-        ? (0, r.jsxs)("div", { className: iG.G, children: [(0, r.jsx)(iW, { data: a[0] }), o] })
+        ? (0, r.jsxs)("div", { className: iV.G, children: [(0, r.jsx)(i_, { data: a[0] }), o] })
         : o;
 };
-var iU = n(123292),
-    iY = n(30772),
-    iB = n(478676),
-    iz = n.n(iB),
-    iH = n(486889),
-    iX = n(694403),
-    iK = n(417964),
-    i$ = n(998218);
-function iJ(e, t, n) {
+var iF = n(123292),
+    iU = n(30772),
+    iY = n(478676),
+    iB = n.n(iY),
+    iz = n(486889),
+    iH = n(694403),
+    iX = n(417964),
+    iK = n(998218);
+function i$(e, t, n) {
     let l = e[e.length - 1];
     null != l &&
     l.bold === n.bold &&
@@ -3587,20 +3585,20 @@ function iJ(e, t, n) {
         ? (l.text += t)
         : e.push({ ...n, text: t });
 }
-let iq = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/,
-    iQ = RegExp(iq.source, "g"),
-    iZ = /[\n\r\u001c-\u001e\u0085\u2029]/,
-    i0 = RegExp(`(${iZ.source})`),
-    i1 = RegExp(`${/[\u0000-\u001f\u007f]/.source}|${iZ.source}`),
-    i2 = /[\p{M}\p{Default_Ignorable_Code_Point}]/gu,
-    i8 = new Set(["subject", "body"]),
-    i4 = /https?:\/\//i,
-    i3 = /\b(https?)(?::[/\\]+|[/\\]{2,})/gi,
-    i6 = String.raw`https?:\/\/[^\s<]+[^<.,:;"'\]\s]`,
-    i9 = RegExp(`^(${i6})`, "i"),
-    i5 = RegExp(i6, "gi"),
-    i7 = /(?:^|[^a-z0-9.!#$%&'*+\/=?^_`{|}~-])([a-z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-z0-9.-]+\.[a-z]{2,})/gi,
-    ae = new Map(
+let iJ = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/,
+    iq = RegExp(iJ.source, "g"),
+    iQ = /[\n\r\u001c-\u001e\u0085\u2029]/,
+    iZ = RegExp(`(${iQ.source})`),
+    i0 = RegExp(`${/[\u0000-\u001f\u007f]/.source}|${iQ.source}`),
+    i1 = /[\p{M}\p{Default_Ignorable_Code_Point}]/gu,
+    i2 = new Set(["subject", "body"]),
+    i8 = /https?:\/\//i,
+    i4 = /\b(https?)(?::[/\\]+|[/\\]{2,})/gi,
+    i3 = String.raw`https?:\/\/[^\s<]+[^<.,:;"'\]\s]`,
+    i6 = RegExp(`^(${i3})`, "i"),
+    i9 = RegExp(i3, "gi"),
+    i5 = /(?:^|[^a-z0-9.!#$%&'*+\/=?^_`{|}~-])([a-z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-z0-9.-]+\.[a-z]{2,})/gi,
+    i7 = new Map(
         Object.entries({
             b: { style: "bold" },
             strong: { style: "bold" },
@@ -3627,13 +3625,13 @@ let iq = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/,
             style: { hidden: !0 },
         }),
     ),
-    at = { bold: !1, italic: !1, underline: !1 },
-    an = /[\uD800-\uDBFF]/,
-    al = /^[a-z][a-z0-9:-]*$/,
-    ai = /^<[a-z][a-z0-9:-]*\s*(?:\/+\s*)?>$/i,
-    aa = /^<[a-z][a-z0-9:-]*(?:\s+[a-z0-9:+-]+)*(?:\s*\/+\s*[a-z0-9:+-]+(?:\s+[a-z0-9:+-]+)*)+\s*>$/i,
-    ar = /^<\/{2,}[\s/a-z0-9:+-]*>$/i,
-    as = new Set([
+    ae = { bold: !1, italic: !1, underline: !1 },
+    at = /[\uD800-\uDBFF]/,
+    an = /^[a-z][a-z0-9:-]*$/,
+    al = /^<[a-z][a-z0-9:-]*\s*(?:\/+\s*)?>$/i,
+    ai = /^<[a-z][a-z0-9:-]*(?:\s+[a-z0-9:+-]+)*(?:\s*\/+\s*[a-z0-9:+-]+(?:\s+[a-z0-9:+-]+)*)+\s*>$/i,
+    aa = /^<\/{2,}[\s/a-z0-9:+-]*>$/i,
+    ar = new Set([
         "area",
         "base",
         "basefont",
@@ -3654,7 +3652,7 @@ let iq = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/,
         "track",
         "wbr",
     ]),
-    ao = new Set([
+    as = new Set([
         "abbr",
         "address",
         "article",
@@ -3736,7 +3734,7 @@ let iq = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/,
         "var",
         "video",
     ]);
-function ac(e, t) {
+function ao(e, t) {
     let n;
     try {
         n = new URL(e);
@@ -3747,51 +3745,51 @@ function ac(e, t) {
         ? n
         : t || "mailto:" !== n.protocol
           ? void 0
-          : Array.from(n.searchParams.keys()).every((e) => i8.has(e.toLowerCase()))
+          : Array.from(n.searchParams.keys()).every((e) => i2.has(e.toLowerCase()))
             ? n
             : void 0;
 }
-function au(e) {
+function ac(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e ? ac(e, t)?.href : void 0;
+    return null != e ? ao(e, t)?.href : void 0;
+}
+function au(e) {
+    return (0, iX.El)(e.replace(i1, "").normalize("NFKC"));
 }
 function ad(e) {
-    return (0, iK.El)(e.replace(i2, "").normalize("NFKC"));
+    return au((0, iX.Fd)(e));
 }
 function am(e) {
-    return ad((0, iK.Fd)(e));
+    return e.replace(i4, "$1://");
 }
-function ah(e) {
-    return e.replace(i3, "$1://");
-}
-function ag(e, t) {
+function ah(e, t) {
     if (
         0 === e.trim().length ||
-        (0, iH.Ay)(e).some((n) => {
+        (0, iz.Ay)(e).some((n) => {
             let { url: l } = n;
             return (
-                au(l, !0) !== t &&
-                (!!(!l.startsWith("http://") || e.includes(l)) || au(`https://${l.slice(7)}`, !0) !== t)
+                ac(l, !0) !== t &&
+                (!!(!l.startsWith("http://") || e.includes(l)) || ac(`https://${l.slice(7)}`, !0) !== t)
             );
         })
     )
         return !0;
-    let n = ah(e),
-        l = Array.from(n.matchAll(i5), (e) => {
+    let n = am(e),
+        l = Array.from(n.matchAll(i9), (e) => {
             let [t] = e;
             return t;
         });
-    if ((ah(ad(n.normalize("NFKD"))).match(i5) ?? []).length > l.length || l.some((e) => au(e, !0) !== t)) return !0;
-    let i = Array.from(e.replace(i5, " ").matchAll(i7), (e) => {
+    if ((am(au(n.normalize("NFKD"))).match(i9) ?? []).length > l.length || l.some((e) => ac(e, !0) !== t)) return !0;
+    let i = Array.from(e.replace(i9, " ").matchAll(i5), (e) => {
         let [, t] = e;
         return t;
     });
     if (0 === i.length) return !1;
     if (!t.startsWith("mailto:")) return !0;
-    let a = i$.A.safeDecodeURIComponent(new URL(t).pathname)?.toLowerCase();
+    let a = iK.A.safeDecodeURIComponent(new URL(t).pathname)?.toLowerCase();
     return null == a || i.some((e) => e.toLowerCase() !== a);
 }
-function ax(e) {
+function ag(e) {
     let t = 0;
     for (let n = e.length - 1; n >= 0 && ")" === e[n]; n--) {
         let n = e.indexOf("(", t);
@@ -3800,36 +3798,36 @@ function ax(e) {
     }
     return e;
 }
-function af(e) {
-    return au(iz().unescapeUrl(e[2]));
+function ax(e) {
+    return ac(iB().unescapeUrl(e[2]));
 }
-let ap = {
-        text: iz().defaultRules.text,
+let af = {
+        text: iB().defaultRules.text,
         link: {
-            ...iX.Ay,
+            ...iH.Ay,
             match(e, t, n) {
-                let l = iX.Ay.match(e, t, n);
-                return null == l || iZ.test(l[0]) ? null : null != af(l) ? l : null;
+                let l = iH.Ay.match(e, t, n);
+                return null == l || iQ.test(l[0]) ? null : null != ax(l) ? l : null;
             },
             parse(e, t, n) {
-                let l = af(e);
-                return null == l || ag(am(e[1]), l) ? { type: "text", content: e[0] } : iX.Ay.parse(e, t, n);
+                let l = ax(e);
+                return null == l || ah(ad(e[1]), l) ? { type: "text", content: e[0] } : iH.Ay.parse(e, t, n);
             },
         },
         url: {
-            order: iz().defaultRules.url.order,
+            order: iB().defaultRules.url.order,
             requiredFirstCharacters: ["h", "H"],
             match(e) {
-                let t = i9.exec(e);
-                return (null != t && (t[0] = t[1] = ax(t[1])), t);
+                let t = i6.exec(e);
+                return (null != t && (t[0] = t[1] = ag(t[1])), t);
             },
             parse(e) {
                 let t = e[1],
-                    n = t.search(i1),
+                    n = t.search(i0),
                     l = -1 === n ? t : t.slice(0, n),
-                    i = ac(l, !0);
+                    i = ao(l, !0);
                 if (null == i) return { type: "text", content: t };
-                let a = (0, iX.W1)(l)?.displayTarget;
+                let a = (0, iH.W1)(l)?.displayTarget;
                 if (null == a) return { type: "text", content: t };
                 let r = new URL(a).host,
                     s = {
@@ -3850,12 +3848,12 @@ let ap = {
             },
         },
     },
-    aj = iz().parserFor(ap);
-function av(e) {
+    ap = iB().parserFor(af);
+function aj(e) {
     let { link: t, ...n } = e;
     return n;
 }
-function ab(e) {
+function av(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { marked: n, rawURLsOnly: l } = (function (e) {
             let t = [...e],
@@ -3870,11 +3868,11 @@ function ab(e) {
                 for (; a < e.length && e[a].link === i.link;) a++;
                 let r = "";
                 for (let t = l; t < a; t++) r += e[t].text;
-                let s = am(r).trim(),
-                    o = 0 === s.length ? "" : ag(s, i.link) ? void 0 : i.link;
+                let s = ad(r).trim(),
+                    o = 0 === s.length ? "" : ah(s, i.link) ? void 0 : i.link;
                 if (o !== i.link)
                     for (let i = l; i < a; i++) {
-                        let l = av(e[i]);
+                        let l = aj(e[i]);
                         ((t[i] = null != o ? { ...l, link: o } : l), null == o && n.add(i));
                     }
                 l = a;
@@ -3882,12 +3880,12 @@ function ab(e) {
             return { marked: t, rawURLsOnly: n };
         })(
             (function (e, t) {
-                if (!e.some((e) => iq.test(e.text))) return e;
+                if (!e.some((e) => iJ.test(e.text))) return e;
                 let n = 0,
                     l = e.map((e) =>
-                        e.text.split(i0).map((e) => {
+                        e.text.split(iZ).map((e) => {
                             let t = { text: e, paragraph: n };
-                            return (iZ.test(e) && n++, t);
+                            return (iQ.test(e) && n++, t);
                         }),
                     ),
                     i = new Set();
@@ -3895,9 +3893,9 @@ function ab(e) {
                     l.forEach((n, l) => {
                         for (let { text: r, paragraph: s } of n) {
                             var a;
-                            let n = r.replace(iQ, "");
+                            let n = r.replace(iq, "");
                             "" !== n &&
-                                ((a = e[l]), null != a.link ? "" !== a.link : t && (i4.test(n) || n.includes("]("))) &&
+                                ((a = e[l]), null != a.link ? "" !== a.link : t && (i8.test(n) || n.includes("]("))) &&
                                 i.add(s);
                         }
                     }),
@@ -3906,7 +3904,7 @@ function ab(e) {
                         text: l[t]
                             .map((e) => {
                                 let { text: t, paragraph: n } = e;
-                                return i.has(n) ? t.replace(iQ, "") : t;
+                                return i.has(n) ? t.replace(iq, "") : t;
                             })
                             .join(""),
                     }))
@@ -3917,12 +3915,12 @@ function ab(e) {
     for (let e = 0; e < n.length; e++) {
         let a = n[e];
         "" === a.link
-            ? i.push(av(a))
+            ? i.push(aj(a))
             : null == a.link && t
               ? (function (e, t, n) {
                     let l = t.text.includes("["),
                         i = n && t.text.includes("](");
-                    (!i || l) && (i || i4.test(t.text))
+                    (!i || l) && (i || i8.test(t.text))
                         ? (function e(t, n, l) {
                               if (Array.isArray(n)) for (let i of n) e(t, i, l);
                               else
@@ -3930,7 +3928,7 @@ function ab(e) {
                                       ? t.push({ ...l, text: n.content })
                                       : ("link" === n.type || "url" === n.type) &&
                                         e(t, n.content, { ...l, link: n.target, rawURL: "url" === n.type });
-                          })(e, aj(t.text, { inline: !0, allowLinks: n }), t)
+                          })(e, ap(t.text, { inline: !0, allowLinks: n }), t)
                         : e.push(t);
                 })(i, a, !l.has(e))
               : i.push(a);
@@ -3939,7 +3937,7 @@ function ab(e) {
     for (let { rawURL: e, ...t } of (function (e) {
         if (!e.some((e) => null != e.link)) return e;
         let t = (function (e) {
-                let t = e.map((e) => e.text.split(i1).map(am).join(" "));
+                let t = e.map((e) => e.text.split(i0).map(ad).join(" "));
                 for (let n = 0; n < e.length;) {
                     let l = e[n];
                     if (null == l.link || !0 === l.rawURL) {
@@ -3948,9 +3946,9 @@ function ab(e) {
                     }
                     let i = n + 1;
                     for (; i < e.length && !0 !== e[i].rawURL && e[i].link === l.link;) i++;
-                    (Array.from(t.slice(n, i).join("").matchAll(i5)).some((e) => {
+                    (Array.from(t.slice(n, i).join("").matchAll(i9)).some((e) => {
                         let [t] = e;
-                        return au(ax(t), !0) === l.link;
+                        return ac(ag(t), !0) === l.link;
                     }) && (t[i - 1] += " "),
                         (n = i));
                 }
@@ -3960,41 +3958,41 @@ function ab(e) {
             l = t.map((e) => (n += e.length)),
             i = [...e],
             a = 0;
-        for (let e of t.join("").matchAll(i5)) {
-            let t = ax(e[0]);
+        for (let e of t.join("").matchAll(i9)) {
+            let t = ag(e[0]);
             for (; l[a] <= e.index;) a++;
             let n = e.index + t.length,
                 r = a;
             for (; l[r] < n;) r++;
             if (a === r) continue;
-            let s = au(t, !0);
-            for (let e = a; e <= r; e++) (null == s || i[e].link !== s) && (i[e] = av(i[e]));
+            let s = ac(t, !0);
+            for (let e = a; e <= r; e++) (null == s || i[e].link !== s) && (i[e] = aj(i[e]));
         }
         return i;
     })(i))
-        iJ(a, t.text, t);
+        i$(a, t.text, t);
     return a;
 }
-function aI(e, t) {
+function ab(e, t) {
     let n = e.charCodeAt(t);
     return 32 === n || 10 === n || 9 === n || 13 === n || 12 === n;
 }
-function aN(e, t) {
+function aI(e, t) {
     let n = e.charCodeAt(t);
     return 32 === n || 9 === n || 12 === n;
 }
-function aE(e) {
+function aN(e) {
     let t = 0;
-    for (; t < e.length && aI(e, t);) t++;
+    for (; t < e.length && ab(e, t);) t++;
     return t;
 }
-function ay(e) {
+function aE(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = e.length;
-    for (; n > t && aI(e, n - 1);) n--;
+    for (; n > t && ab(e, n - 1);) n--;
     return n;
 }
-function aA(e, t) {
+function ay(e, t) {
     let n = "",
         l = 0,
         i = t,
@@ -4003,7 +4001,7 @@ function aA(e, t) {
         let r = a + 1,
             s = !0;
         for (let n = r; n < t; n++)
-            if (!aN(e, n)) {
+            if (!aI(e, n)) {
                 s = !1;
                 break;
             }
@@ -4011,11 +4009,11 @@ function aA(e, t) {
     }
     return 0 === l ? e : n + e.slice(l);
 }
-function aC(e) {
+function aA(e) {
     for (; e.length > 0;) {
         let t = e[e.length - 1],
             n = t.text.length;
-        for (; n > 0 && aN(t.text, n - 1);) n--;
+        for (; n > 0 && aI(t.text, n - 1);) n--;
         if (n === t.text.length) break;
         if (0 === n) e.pop();
         else {
@@ -4024,28 +4022,28 @@ function aC(e) {
         }
     }
 }
-function ak(e) {
+function aC(e) {
     return e.includes("\r") ? e.replace(/\r\n?/g, "\n") : e;
 }
-function aS(e) {
-    let t = aA(ak(e), 0),
-        n = aE(t),
-        l = ay(t, n);
-    return l > n ? [{ text: t.slice(n, l), ...at }] : [];
+function ak(e) {
+    let t = ay(aC(e), 0),
+        n = aN(t),
+        l = aE(t, n);
+    return l > n ? [{ text: t.slice(n, l), ...ae }] : [];
 }
-function aL(e, t) {
+function aS(e, t) {
     let n = Math.max(0, Math.floor(t)),
-        l = an.test(e.charAt(n - 1)) ? n - 1 : n;
-    return ak(e.slice(0, l));
+        l = at.test(e.charAt(n - 1)) ? n - 1 : n;
+    return aC(e.slice(0, l));
 }
-function aR(e) {
+function aL(e) {
     return e.links[e.links.length - 1];
 }
-function aT(e) {
-    return null != e ? { ...at, link: e } : at;
+function aR(e) {
+    return null != e ? { ...ae, link: e } : ae;
 }
-function aM(e) {
-    let t = aR(e);
+function aT(e) {
+    let t = aL(e);
     return {
         bold: e.styles.bold > 0 || null != e.heading,
         italic: e.styles.italic > 0,
@@ -4054,54 +4052,54 @@ function aM(e) {
         ...(null != t ? { link: t } : {}),
     };
 }
-function aO(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : at,
+function aM(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ae,
         l = t.indexOf("\n");
     if (e.trailingNewlines > 0 && -1 !== l) {
         let n = !0;
         for (let e = 0; e < l; e++)
-            if (!aN(t, e)) {
+            if (!aI(t, e)) {
                 n = !1;
                 break;
             }
-        n && aC(e.runs);
+        n && aA(e.runs);
     }
     let i = e.trailingNewlines,
-        a = aA(t, e.trailingNewlines);
-    if ((0 === e.runs.length && (a = a.slice(aE(a))), 0 === a.length)) return;
-    iJ(e.runs, a, n);
+        a = ay(t, e.trailingNewlines);
+    if ((0 === e.runs.length && (a = a.slice(aN(a))), 0 === a.length)) return;
+    i$(e.runs, a, n);
     let r = (function (e) {
         let t = 0;
         for (let n = e.length - 1; n >= 0; n--)
             if (10 === e.charCodeAt(n)) t++;
-            else if (!aN(e, n)) break;
+            else if (!aI(e, n)) break;
         return t;
     })(a);
-    e.trailingNewlines = aE(a) === a.length ? Math.min(2, i + r) : r;
+    e.trailingNewlines = aN(a) === a.length ? Math.min(2, i + r) : r;
 }
-function aw(e) {
-    if (0 === e.pendingBreaks) for (let t of e.held) aO(e, t.text, t);
+function aO(e) {
+    if (0 === e.pendingBreaks) for (let t of e.held) aM(e, t.text, t);
     else
         e.runs.length > 0 &&
-            (e.trailingNewlines > 0 && aC(e.runs),
-            aO(e, "\n".repeat(Math.max(0, e.pendingBreaks - e.trailingNewlines)), aT(e.spacingLink)));
+            (e.trailingNewlines > 0 && aA(e.runs),
+            aM(e, "\n".repeat(Math.max(0, e.pendingBreaks - e.trailingNewlines)), aR(e.spacingLink)));
     ((e.held = []), (e.pendingBreaks = 0));
 }
-function aP(e, t) {
-    let n = e.atBoundary ? aE(t) : 0,
-        l = ay(t, n),
-        i = aM(e);
-    (l > n && (aw(e), aO(e, t.slice(n, l), i), (e.spacingLink = i.link), (e.atBoundary = e.afterMarker = !1)),
+function aw(e, t) {
+    let n = e.atBoundary ? aN(t) : 0,
+        l = aE(t, n),
+        i = aT(e);
+    (l > n && (aO(e), aM(e, t.slice(n, l), i), (e.spacingLink = i.link), (e.atBoundary = e.afterMarker = !1)),
         l < t.length && e.held.push({ ...i, text: t.slice(l) }));
 }
-function aD(e, t) {
+function aP(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null != t &&
         ((n && e.afterMarker) || (e.pendingBreaks = Math.max(e.pendingBreaks, e.itemDepth > 0 ? 1 : t)),
         (e.atBoundary = !0),
         n || (e.afterMarker = !1));
 }
-function aV(e, t) {
+function aD(e, t) {
     let n,
         l = {
             markup: e,
@@ -4121,15 +4119,15 @@ function aV(e, t) {
         },
         i = (function (e) {
             let t;
-            class n extends iY.i {
+            class n extends iU.i {
                 onclosetag(n, l) {
                     let i = this.startIndex,
                         a = e.markup.slice(n, l).toLowerCase();
                     ((t = void 0), super.onclosetag(n, l));
                     let r = a.replace(/\/+$/, "");
-                    if (e.hiddenDepth > 0 || t === a || ae.has(r) || as.has(r) || ao.has(r)) return;
+                    if (e.hiddenDepth > 0 || t === a || i7.has(r) || ar.has(r) || as.has(r)) return;
                     let s = e.markup.indexOf(">", l);
-                    -1 !== s && aP(e, e.markup.slice(i, s + 1));
+                    -1 !== s && aw(e, e.markup.slice(i, s + 1));
                 }
             }
             let l = new n(
@@ -4142,21 +4140,21 @@ function aV(e, t) {
                             var i, a;
                             let r;
                             e.unfinishedTag = void 0;
-                            let s = ae.get(t);
+                            let s = i7.get(t);
                             if (e.hiddenDepth > 0 || s?.hidden === !0) return void e.hiddenDepth++;
                             if (null == s) {
                                 let n,
                                     r,
                                     s = e.markup.slice(l.startIndex, l.endIndex + 1);
-                                (!al.test(t) ||
-                                    ((ai.test(s) || aa.test(s)) &&
+                                (!an.test(t) ||
+                                    ((al.test(s) || ai.test(s)) &&
+                                        !ar.has(t) &&
                                         !as.has(t) &&
-                                        !ao.has(t) &&
                                         ((i = l.endIndex),
                                         (e.closingTags ??= e.markup.includes("</")
                                             ? ((a = e.markup),
                                               (n = new Map()),
-                                              (r = new iY.i(
+                                              (r = new iU.i(
                                                   {
                                                       onclosetag(e) {
                                                           let t = r.startIndex;
@@ -4169,25 +4167,25 @@ function aV(e, t) {
                                               n)
                                             : new Map()),
                                         !((e.closingTags.get(t) ?? -1) > i)))) &&
-                                    aP(e, s);
+                                    aw(e, s);
                                 return;
                             }
-                            (aD(e, s.breaks, !0),
+                            (aP(e, s.breaks, !0),
                                 null != s.style && e.styles[s.style]++,
                                 !0 === s.link &&
-                                    (e.links.push(au(n.href) ?? (e.keepInvalidAnchors ? "" : void 0)),
+                                    (e.links.push(ac(n.href) ?? (e.keepInvalidAnchors ? "" : void 0)),
                                     (e.spacingLink = void 0)),
                                 null != s.heading && (e.heading = s.heading),
                                 null != s.list && e.lists.push({ ordered: "ordered" === s.list, index: 0 }),
                                 !0 === s.lineBreak &&
-                                    (aw(e),
-                                    aO(e, "\n", null != e.heading ? aM(e) : aT(aR(e))),
+                                    (aO(e),
+                                    aM(e, "\n", null != e.heading ? aT(e) : aR(aL(e))),
                                     (e.atBoundary = !0),
                                     (e.afterMarker = !1)),
                                 !0 === s.item &&
-                                    (aw(e),
+                                    (aO(e),
                                     (r = e.lists[e.lists.length - 1]),
-                                    aO(e, r?.ordered === !0 ? `${++r.index}. ` : "\u2022 "),
+                                    aM(e, r?.ordered === !0 ? `${++r.index}. ` : "\u2022 "),
                                     e.itemDepth++,
                                     (e.afterMarker = !0)));
                         })(e, t, n, l),
@@ -4196,9 +4194,9 @@ function aV(e, t) {
                             (function (e, t) {
                                 if (e.ending) return;
                                 if (e.hiddenDepth > 0) return e.hiddenDepth--;
-                                let n = ae.get(t);
+                                let n = i7.get(t);
                                 null != n &&
-                                    (aD(e, n.breaks),
+                                    (aP(e, n.breaks),
                                     null != n.style && e.styles[n.style]--,
                                     !0 === n.link && (e.links.pop(), (e.spacingLink = void 0)),
                                     null != n.heading && (e.heading = void 0),
@@ -4208,10 +4206,10 @@ function aV(e, t) {
                     },
                     oncomment() {
                         let t = e.markup.slice(l.startIndex, l.endIndex + 1);
-                        0 === e.hiddenDepth && ar.test(t) && aP(e, t);
+                        0 === e.hiddenDepth && aa.test(t) && aw(e, t);
                     },
                     ontext(t) {
-                        0 === e.hiddenDepth && aP(e, t);
+                        0 === e.hiddenDepth && aw(e, t);
                     },
                 },
                 { decodeEntities: !0, recognizeSelfClosing: !0 },
@@ -4223,66 +4221,66 @@ function aV(e, t) {
         i.end(),
         "" === (n = l.markup.slice(l.unfinishedTag ?? i.startIndex)) ||
             /^<\/?br\/?$/i.test(n) ||
-            new iY.i({ ontext: (e) => aP(l, e) }, { decodeEntities: !0 }).end(n.replace(/</g, "&lt;")));
+            new iU.i({ ontext: (e) => aw(l, e) }, { decodeEntities: !0 }).end(n.replace(/</g, "&lt;")));
     for (var a = l.runs; a.length > 0;) {
         let e = a[a.length - 1];
-        if (((e.text = e.text.slice(0, ay(e.text))), e.text.length > 0)) break;
+        if (((e.text = e.text.slice(0, aE(e.text))), e.text.length > 0)) break;
         a.pop();
     }
     return a;
 }
-var aG = n(9578);
-let a_ = { h1: "heading-lg/semibold", h2: "heading-sm/semibold", h3: "heading-xs/semibold", h4: "heading-xs/semibold" },
-    aW = { h1: 2, h2: 3, h3: 4, h4: 5 };
-var aF = n(407355);
-function aU(e) {
+var aV = n(9578);
+let aG = { h1: "heading-lg/semibold", h2: "heading-sm/semibold", h3: "heading-xs/semibold", h4: "heading-xs/semibold" },
+    a_ = { h1: 2, h2: 3, h3: 4, h4: 5 };
+var aW = n(407355);
+function aF(e) {
     let { italic: t, underline: n } = e;
-    return u()({ [aF.T]: t, [aF.V]: n });
+    return u()({ [aW.T]: t, [aW.V]: n });
 }
-function aY(e) {
+function aU(e) {
     let { run: t, textVariant: n, boldTextVariant: l } = e;
-    if (null != t.heading) return (0, r.jsx)(aB, { run: t });
+    if (null != t.heading) return (0, r.jsx)(aY, { run: t });
     let { text: i, bold: a, italic: s, underline: o } = t;
     return a || s || o
         ? (0, r.jsx)(Y.E, {
               tag: a ? "strong" : "span",
               variant: a ? l : n,
               color: "none",
-              className: aU(t),
+              className: aF(t),
               children: s ? (0, r.jsx)("em", { children: i }) : i,
           })
         : i;
 }
-function aB(e) {
+function aY(e) {
     let { run: t } = e,
         { text: n, italic: l, underline: i } = t;
     if (!l && !i) return n;
-    let a = aU(t);
+    let a = aF(t);
     return l && i
         ? (0, r.jsx)("u", { className: a, children: (0, r.jsx)("em", { children: n }) })
         : l
           ? (0, r.jsx)("em", { className: a, children: n })
           : (0, r.jsx)("u", { className: a, children: n });
 }
-function az(e) {
+function aB(e) {
     let { segment: t, textVariant: n, boldTextVariant: l, onLinkPress: i } = e,
-        a = t.runs.map((e, t) => (0, r.jsx)(aY, { run: e, textVariant: n, boldTextVariant: l }, t)),
+        a = t.runs.map((e, t) => (0, r.jsx)(aU, { run: e, textVariant: n, boldTextVariant: l }, t)),
         { link: s } = t;
     return null == s
         ? a
-        : (0, r.jsx)(aG.A, {
+        : (0, r.jsx)(aV.A, {
               href: s,
               title: t.runs.map((e) => e.text).join(""),
               onClick: () => (i?.(s), !1),
               children: a,
           });
 }
-function aH(e) {
+function az(e) {
     let { group: t, ...n } = e,
         { heading: l, segments: i } = t,
         a = i.map((e, t) =>
             (0, r.jsx)(
-                az,
+                aB,
                 {
                     segment: e,
                     textVariant: n.textVariant,
@@ -4299,14 +4297,14 @@ function aH(e) {
               children: (0, r.jsx)(tr.D, { variant: n.headingVariants[l], color: n.headingColor, children: a }),
           });
 }
-function aX(e) {
+function aH(e) {
     let {
             runs: t,
             textVariant: n = "body-md/normal",
             boldTextVariant: l = "body-md/semibold",
-            headingVariants: i = a_,
+            headingVariants: i = aG,
             headingColor: a = "text-strong",
-            headingLevels: o = aW,
+            headingLevels: o = a_,
             onLinkPress: c,
         } = e,
         u = s.useMemo(
@@ -4332,11 +4330,11 @@ function aX(e) {
             headingLevels: o,
             onLinkPress: c,
         };
-    return u.map((e, t) => (0, r.jsx)(aH, { group: e, ...d }, t));
+    return u.map((e, t) => (0, r.jsx)(az, { group: e, ...d }, t));
 }
-var aK = n(672572),
-    a$ = n(94936);
-function aJ() {
+var aX = n(672572),
+    aK = n(94936);
+function a$() {
     let e = s.useRef(null),
         { game: t, isTwoColumn: n, trackAction: l } = W(),
         i = s.useMemo(
@@ -4346,9 +4344,9 @@ function aJ() {
                           let { maxLength: t = 1e4, parseTextLinks: n = !1 } =
                                   arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                               l = e.includes("<") || e.includes("&");
-                          if (!n) return l ? ab(aV(aL(e, t)), !1) : aS(e);
-                          let i = aL(e, t);
-                          return ab(l ? aV(i, { keepInvalidAnchors: !0 }) : aS(i));
+                          if (!n) return l ? av(aD(aS(e, t)), !1) : ak(e);
+                          let i = aS(e, t);
+                          return av(l ? aD(i, { keepInvalidAnchors: !0 }) : ak(i));
                       })(t.description, { parseTextLinks: !0 })
                     : [],
             [t.description],
@@ -4439,73 +4437,73 @@ function aJ() {
     if (0 === i.length) return null;
     let g = o ? es.intl.string(es.t["6MwJo/"]) : es.intl.string(es.t.lBeKY2);
     return (0, r.jsxs)("div", {
-        className: u()(aK.fi, a$.k),
+        className: u()(aX.fi, aK.k),
         onFocusCapture: m,
         children: [
             (0, r.jsx)(Y.E, {
                 ref: e,
-                className: a$.Q,
+                className: aK.Q,
                 lineClamp: o ? void 0 : a,
                 variant: "body-md/medium",
-                children: (0, r.jsx)(aX, { runs: i, textVariant: "body-md/medium", onLinkPress: h }),
+                children: (0, r.jsx)(aH, { runs: i, textVariant: "body-md/medium", onLinkPress: h }),
             }),
-            c && (0, r.jsx)(iU.Q, { onClick: d, text: g, "aria-expanded": o }),
+            c && (0, r.jsx)(iF.Q, { onClick: d, text: g, "aria-expanded": o }),
         ],
     });
 }
-var aq = n(40478),
-    aQ = n(764948);
-let aZ = s.memo(function (e) {
+var aJ = n(40478),
+    aq = n(764948);
+let aQ = s.memo(function (e) {
     let { analyticsLocations: t, selectTab: n, getScrollOffset: l } = e;
     return (0, r.jsxs)("div", {
-        className: aQ.V,
+        className: aq.V,
         children: [
             (0, r.jsx)(lq, {}),
             (0, r.jsxs)("div", {
-                className: aq.h,
+                className: aJ.h,
                 children: [
                     (0, r.jsx)(t9, {}),
-                    (0, r.jsxs)("div", { className: aq.X, children: [(0, r.jsx)(iF, {}), (0, r.jsx)(aJ, {})] }),
+                    (0, r.jsxs)("div", { className: aJ.X, children: [(0, r.jsx)(iW, {}), (0, r.jsx)(a$, {})] }),
                 ],
             }),
             (0, r.jsx)(lM, { analyticsLocations: t }),
             (0, r.jsx)(tI, {}),
             (0, r.jsx)(nq, { getScrollOffset: l }),
             (0, r.jsx)(ny, { selectTab: n }),
-            (0, r.jsx)(iI, {}),
-            (0, r.jsx)(iS, {}),
+            (0, r.jsx)(ib, {}),
+            (0, r.jsx)(ik, {}),
             (0, r.jsx)(ia, {}),
             (0, r.jsx)(lk, {}),
         ],
     });
 });
-var a0 = n(164135);
-let a1 = s.memo(function (e) {
+var aZ = n(164135);
+let a0 = s.memo(function (e) {
     let { selectTab: t, getScrollOffset: n } = e;
     return (0, r.jsxs)("div", {
-        className: a0.V,
+        className: aZ.V,
         children: [
-            (0, r.jsxs)("div", { className: a0.B, children: [(0, r.jsx)(lq, {}), (0, r.jsx)(aJ, {})] }),
+            (0, r.jsxs)("div", { className: aZ.B, children: [(0, r.jsx)(lq, {}), (0, r.jsx)(a$, {})] }),
             (0, r.jsx)(nq, { getScrollOffset: n }),
             (0, r.jsx)(ny, { selectTab: t }),
-            (0, r.jsx)(iI, {}),
-            (0, r.jsx)(iS, {}),
+            (0, r.jsx)(ib, {}),
+            (0, r.jsx)(ik, {}),
         ],
     });
 });
-var a2 = n(881698),
-    a8 = n(928550),
-    a4 = n(613412),
-    a3 = n(414499),
-    a6 = n(359549),
-    a9 = n(139286),
-    a5 = n(873516);
-function a7(e) {
+var a1 = n(881698),
+    a2 = n(928550),
+    a8 = n(613412),
+    a4 = n(414499),
+    a3 = n(359549),
+    a6 = n(139286),
+    a9 = n(873516);
+function a5(e) {
     let { onCloudPlayClick: t, analyticsLocations: n } = e,
         { closeModal: l, trackAction: i } = W();
-    (0, a9.A)({
-        name: a4.ImpressionNames.CLOUD_PLAY_CTA,
-        type: a4.ImpressionTypes.VIEW,
+    (0, a6.A)({
+        name: a8.ImpressionNames.CLOUD_PLAY_CTA,
+        type: a8.ImpressionTypes.VIEW,
         properties: { location_stack: n },
     });
     let a = s.useCallback(() => {
@@ -4515,7 +4513,7 @@ function a7(e) {
         text: es.intl.string(es.t.JVwWva),
         position: "top",
         children: (0, r.jsx)(K.$, {
-            icon: a3.CloudIcon,
+            icon: a4.CloudIcon,
             text: es.intl.string(es.t["jaYS/h"]),
             variant: "overlay-secondary",
             onClick: a,
@@ -4523,33 +4521,33 @@ function a7(e) {
         }),
     });
 }
-function re(e) {
+function a7(e) {
     let { cloudPlayAppId: t, analyticsLocations: n } = e,
         { game: l } = W(),
-        i = (0, a6.rC)({ applicationId: t, sourceApplicationId: l.id, analyticsLocations: n });
+        i = (0, a3.rC)({ applicationId: t, sourceApplicationId: l.id, analyticsLocations: n });
     return null == i
         ? null
         : (0, r.jsx)("div", {
-              className: a5.k,
-              children: (0, r.jsx)(a7, { onCloudPlayClick: i, analyticsLocations: n }),
+              className: a9.k,
+              children: (0, r.jsx)(a5, { onCloudPlayClick: i, analyticsLocations: n }),
           });
 }
-var rt = n(768626);
-function rn(e) {
+var re = n(768626);
+function rt(e) {
     let { analyticsLocations: t } = e,
         { game: n } = W(),
-        l = (0, a2.A)(n.linkedApplications)?.id,
-        [i] = (0, a8.L_)(n.getOfficialApplicationId()),
-        [a] = (0, a8.L_)(n.id),
-        { showsStoreLinks: s } = i_(n);
+        l = (0, a1.A)(n.linkedApplications)?.id,
+        [i] = (0, a2.L_)(n.getOfficialApplicationId()),
+        [a] = (0, a2.L_)(n.id),
+        { showsStoreLinks: s } = iG(n);
     return (0, r.jsxs)("div", {
-        className: u()(rt.pz, aK.fi, s ? rt.FJ : rt.dg),
+        className: u()(re.pz, aX.fi, s ? re.FJ : re.dg),
         children: [
-            null == l || i || a ? null : (0, r.jsx)(re, { cloudPlayAppId: l, analyticsLocations: t }),
+            null == l || i || a ? null : (0, r.jsx)(a7, { cloudPlayAppId: l, analyticsLocations: t }),
             (0, r.jsxs)("div", {
-                className: aQ.V,
+                className: aq.V,
                 children: [
-                    (0, r.jsx)(iF, {}),
+                    (0, r.jsx)(iW, {}),
                     (0, r.jsx)(lM, { analyticsLocations: t }),
                     (0, r.jsx)(tI, {}),
                     (0, r.jsx)(ia, {}),
@@ -4559,8 +4557,8 @@ function rn(e) {
         ],
     });
 }
-var rl = n(105865);
-function ri(e) {
+var rn = n(105865);
+function rl(e) {
     let { isTwoColumn: t, selectTab: n, selectionVersion: l, initialScrollOffset: i, analyticsLocations: a } = e,
         o = s.useRef(null),
         c = s.useRef(null),
@@ -4584,23 +4582,23 @@ function ri(e) {
             (0, r.jsx)(t4, { ref: o }),
             (0, r.jsxs)(eK.Ch, {
                 ref: c,
-                className: rl.XG,
+                className: rn.XG,
                 onScroll: m,
                 children: [
-                    (0, r.jsx)("div", { className: rl.xY, "aria-hidden": !0 }),
+                    (0, r.jsx)("div", { className: rn.xY, "aria-hidden": !0 }),
                     (0, r.jsx)(ne, {}),
                     (0, r.jsx)(tK.F, {
                         children: t
                             ? (0, r.jsxs)("div", {
-                                  className: rl.jC,
+                                  className: rn.jC,
                                   children: [
-                                      (0, r.jsx)(a1, { selectTab: n, getScrollOffset: d }),
-                                      (0, r.jsx)(rn, { analyticsLocations: a }),
+                                      (0, r.jsx)(a0, { selectTab: n, getScrollOffset: d }),
+                                      (0, r.jsx)(rt, { analyticsLocations: a }),
                                   ],
                               })
                             : (0, r.jsx)("div", {
-                                  className: rl.b9,
-                                  children: (0, r.jsx)(aZ, { analyticsLocations: a, selectTab: n, getScrollOffset: d }),
+                                  className: rn.b9,
+                                  children: (0, r.jsx)(aQ, { analyticsLocations: a, selectTab: n, getScrollOffset: d }),
                               }),
                     }),
                 ],
@@ -4608,23 +4606,23 @@ function ri(e) {
         ],
     });
 }
-var ra = n(953331),
-    rr = n(787188);
-function rs(e) {
+var ri = n(953331),
+    ra = n(787188);
+function rr(e) {
     let { applicationId: t, selectedPageIndex: n } = e;
-    return (0, r.jsx)(ra.SocialLayerStorefrontInnerWrapper, {
+    return (0, r.jsx)(ri.SocialLayerStorefrontInnerWrapper, {
         applicationId: t,
         pageIndex: n,
         analyticsLocation: f.A.GAME_PROFILE_GAME_SHOP,
         analyticsPlacement: nl.Ye.GAME_PROFILE_GAME_SHOP,
-        className: rr.kL,
-        scrollerClassName: rr.XG,
-        promotionBannerClassName: rr.Rv,
+        className: ra.kL,
+        scrollerClassName: ra.XG,
+        promotionBannerClassName: ra.Rv,
     });
 }
-var ro = n(733391),
-    rc = n(171616);
-function ru(e) {
+var rs = n(733391),
+    ro = n(171616);
+function rc(e) {
     let {
             gameId: t,
             source: n,
@@ -4775,7 +4773,7 @@ function ru(e) {
                 a = t?.id,
                 r = t?.getOfficialApplicationId();
             s.useEffect(() => {
-                (0, ro.Xw)();
+                (0, rs.Xw)();
             }, []);
             let o = (0, m.bG)(
                     [P.A],
@@ -4785,7 +4783,7 @@ function ru(e) {
                     [a, r],
                 ),
                 c = null != o,
-                { storefront: u } = (0, rc.A)({ applicationId: c ? o : null }),
+                { storefront: u } = (0, ro.A)({ applicationId: c ? o : null }),
                 [d, h] = s.useState({ storefrontId: u?.id, index: 0 }),
                 [g, x] = s.useState(l);
             l !== g && (x(l), l !== S.COMMERCE && h({ storefrontId: u?.id, index: 0 }));
@@ -4845,18 +4843,18 @@ function ru(e) {
                   children: (0, r.jsx)(_.Provider, {
                       value: eS,
                       children: (0, r.jsx)("div", {
-                          className: u()(z, aK.kL),
+                          className: u()(z, aX.kL),
                           ref: ef,
                           children: (0, r.jsxs)(y.A, {
                               obscured: en,
                               onClose: ej,
                               children: [
                                   (0, r.jsx)("div", {
-                                      className: u()(aK.sx, { [aK.Tk]: eI !== S.COMMERCE }),
+                                      className: u()(aX.sx, { [aX.Tk]: eI !== S.COMMERCE }),
                                       children: (0, r.jsx)(ez, { navigation: ev, socialLayerStorefront: eN }),
                                   }),
                                   eI === S.OVERVIEW &&
-                                      (0, r.jsx)(ri, {
+                                      (0, r.jsx)(rl, {
                                           selectTab: ev.selectTab,
                                           selectionVersion: eb,
                                           initialScrollOffset: o,
@@ -4864,7 +4862,7 @@ function ru(e) {
                                           analyticsLocations: K,
                                       }),
                                   eI === S.COMMUNITIES && (0, r.jsx)(tX, {}),
-                                  eI === S.COMMERCE && (0, r.jsx)(rs, { applicationId: ey, selectedPageIndex: eC }),
+                                  eI === S.COMMERCE && (0, r.jsx)(rr, { applicationId: ey, selectedPageIndex: eC }),
                               ],
                           }),
                       }),
@@ -4872,7 +4870,7 @@ function ru(e) {
               }),
           });
 }
-let rd = function (e) {
+let ru = function (e) {
     let { gameId: t, source: n, sourceUserId: l, initialScrollOffset: i, initialTab: a, ...o } = e,
         [c, u] = s.useState({ gameId: t, source: n, sourceUserId: l, initialScrollOffset: i, initialTab: a }),
         d = c.gameId,
@@ -4883,7 +4881,7 @@ let rd = function (e) {
             [d],
         );
     return (0, r.jsx)(
-        ru,
+        rc,
         {
             gameId: c.gameId,
             source: c.source,

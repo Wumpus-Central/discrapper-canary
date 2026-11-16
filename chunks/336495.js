@@ -1,22 +1,22 @@
 var n = r(477900),
     i = r(582128),
-    s = r(855986),
-    a = r(935462),
+    a = r(855986),
+    s = r(935462),
     l = r(289873),
     u = r(354328),
     d = r(744082),
     o = r(634110),
     c = r(4227),
-    h = r(298072),
-    p = r(682301),
-    f = r(841702),
+    p = r(298072),
+    f = r(682301),
+    h = r(841702),
     y = r(466459),
     C = r(623373),
     g = r(599062),
     I = r(496779),
-    b = r(652215),
-    j = r(850186);
-let x = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsGroup: !1 };
+    j = r(652215),
+    x = r(850186);
+let A = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsGroup: !1 };
 r.d(
     t,
     {},
@@ -25,69 +25,67 @@ r.d(
             let {
                     skuId: t,
                     flattenVariants: r = !1,
-                    transitionState: A,
-                    onClose: O,
-                    returnRef: R,
-                    analyticsLocations: S,
-                    analyticsSource: k,
-                    shouldCheckoutWithOrbs: P,
+                    transitionState: R,
+                    onClose: S,
+                    returnRef: b,
+                    analyticsLocations: O,
+                    analyticsSource: P,
                     tab: _,
-                    giftRecipient: w,
-                    giftingOrigin: E,
-                    initialVariantSkuId: N,
+                    giftRecipient: k,
+                    giftingOrigin: w,
+                    initialVariantSkuId: E,
                 } = e,
-                m = (0, u.A)("shop_include_unpublished"),
+                N = (0, u.A)("shop_include_unpublished"),
                 {
-                    product: v,
-                    category: D,
-                    state: G,
-                    retry: L,
-                } = (0, p.IK)(t, {
+                    product: m,
+                    category: v,
+                    state: D,
+                    retry: G,
+                } = (0, f.IK)(t, {
                     needsCategory: !0,
                     seedCategoryStore: !0,
-                    includeUnpublished: m,
+                    includeUnpublished: N,
                     flattenVariants: r,
                 }),
-                { hasPreviouslyFetched: M, fetchPurchasesError: B } = (0, f.b5)(),
-                F = M || null != B;
-            ((0, d.A)(b.FYj), (0, o.pE)());
-            let Y = (0, s.cf)([c.A], () => (null != v ? (0, y.o)(c.A, v) : x), [v]),
-                z = v?.isCategoryReward === !0 && !Y.isPurchased;
+                { hasPreviouslyFetched: L, fetchPurchasesError: M } = (0, h.b5)(),
+                B = L || null != M;
+            ((0, d.A)(j.FYj), (0, o.pE)());
+            let F = (0, a.cf)([c.A], () => (null != m ? (0, y.o)(c.A, m) : A), [m]),
+                Y = m?.isCategoryReward === !0 && !F.isPurchased;
             i.useEffect(() => {
-                "ready" === G && F && z && O();
-            }, [G, F, z, O]);
-            let K = i.useRef(!1);
+                "ready" === D && B && Y && S();
+            }, [D, B, Y, S]);
+            let z = i.useRef(!1);
             return (i.useEffect(() => {
-                if (K.current || null == v || !(0, C.B1)(v)) return;
-                let e = N ?? t,
-                    r = v.variants.findIndex((t) => t.skuId === e);
-                (r > -1 && (0, h.n)(v, r), (K.current = !0));
-            }, [v, t, N]),
-            "ready" === G && F && !z && null != v && null != D)
+                if (z.current || null == m || !(0, C.B1)(m)) return;
+                let e = E ?? t,
+                    r = m.variants.findIndex((t) => t.skuId === e);
+                (r > -1 && (0, p.n)(m, r), (z.current = !0));
+            }, [m, t, E]),
+            "ready" === D && B && !Y && null != m && null != v)
                 ? (0, n.jsx)(I.default, {
-                      transitionState: A,
-                      onClose: O,
-                      returnRef: R,
-                      product: v,
-                      category: D,
-                      analyticsLocations: S,
-                      analyticsSource: k,
-                      shouldCheckoutWithOrbs: P,
+                      transitionState: R,
+                      onClose: S,
+                      returnRef: b,
+                      product: m,
+                      category: v,
+                      analyticsLocations: O,
+                      analyticsSource: P,
                       tab: _,
-                      giftRecipient: w,
-                      giftingOrigin: E,
+                      giftRecipient: k,
+                      giftingOrigin: w,
                   })
-                : (0, n.jsx)(a.EO, {
-                      returnRef: R,
-                      transitionState: A,
-                      size: a.rI.DYNAMIC,
+                : (0, n.jsx)(s.EO, {
+                      returnRef: b,
+                      transitionState: R,
+                      size: s.rI.DYNAMIC,
                       parentComponent: "CollectiblesShopStandaloneProductDetailsModal",
-                      children: (0, n.jsx)(a.$m, {
+                      children: (0, n.jsx)(s.$m, {
                           children:
-                              "error" === G
-                                  ? (0, n.jsx)(g.h, { onRetry: L, errorOrigin: g.A.GIFT_MODAL })
+                              "error" === D
+                                  ? (0, n.jsx)(g.h, { onRetry: G, errorOrigin: g.A.GIFT_MODAL })
                                   : (0, n.jsx)("div", {
-                                        className: j.g,
+                                        className: x.g,
                                         children: (0, n.jsx)(l.y, { type: l.t.SPINNING_CIRCLE }),
                                     }),
                       }),

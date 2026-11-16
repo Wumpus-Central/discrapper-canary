@@ -14,16 +14,15 @@ var r,
     m = n(623373),
     g = n(572595),
     x = n(722258),
-    h = n(57020),
-    A = n(758836),
+    E = n(758836),
     _ = n(652215);
-let E = i.createContext({
+let A = i.createContext({
     flattenProductVariants: void 0,
     productOverride: void 0,
     prioritizedCurrency: void 0,
     standalonePreview: void 0,
 });
-var C =
+var h =
     (((r = {}).NONE = "none"),
     (r.NEW = "new"),
     (r.ORBS_EXCLUSIVE = "orbs_exclusive"),
@@ -37,9 +36,9 @@ n.d(
     t,
     {},
     {
-        AW: C,
+        AW: h,
         Mk: function (e) {
-            return e === A.G2.ORBS ? A.Hi.ORBS : void 0;
+            return e === E.G2.ORBS ? E.Hi.ORBS : void 0;
         },
         UU: function (e, t, n) {
             return (r) => {
@@ -48,9 +47,9 @@ n.d(
                     sku_id: e.skuId,
                     page_type: t,
                     page_section: n?.pageSection,
-                    page_category: t === A.G2.HOME ? void 0 : n?.pageCategory,
-                    page_index: t === A.G2.CATALOG ? n?.pageIndex : void 0,
-                    page_size: t === A.G2.CATALOG ? n?.pageSize : void 0,
+                    page_category: t === E.G2.HOME ? void 0 : n?.pageCategory,
+                    page_index: t === E.G2.CATALOG ? n?.pageIndex : void 0,
+                    page_size: t === E.G2.CATALOG ? n?.pageSize : void 0,
                     tile_type: s.R[e.type],
                     tile_position: String(n?.tilePosition),
                     cta_name: r,
@@ -58,7 +57,7 @@ n.d(
             };
         },
         Vm: function (e) {
-            let { flattenProductVariants: t, productOverride: n } = i.useContext(E),
+            let { flattenProductVariants: t, productOverride: n } = i.useContext(A),
                 { legacyProduct: r, storefrontProduct: s } = (0, a.cf)(
                     [c.A, u.A],
                     () => {
@@ -88,52 +87,49 @@ n.d(
             return n ?? r ?? o;
         },
         gZ: function () {
-            return i.useContext(E).prioritizedCurrency;
+            return i.useContext(A).prioritizedCurrency;
         },
         ql: function (e, t, n) {
             let r = (0, I.Mk)(),
                 s = r?.tab,
                 u = (0, d.uM)(),
-                { standalonePreview: o, flattenProductVariants: v } = i.useContext(E),
+                { standalonePreview: o, flattenProductVariants: v } = i.useContext(A),
                 { analyticsLocations: p } = (0, l.Ay)(t),
-                A = (0, a.bG)([c.A], () => c.A.getCategoryForProduct(e.skuId)),
+                E = (0, a.bG)([c.A], () => c.A.getCategoryForProduct(e.skuId)),
                 _ = (0, f.Q)(e),
-                C = (0, m.rb)(e, _).skuId,
-                b = i.useRef(null);
+                h = (0, m.rb)(e, _).skuId,
+                C = i.useRef(null);
             return i.useCallback(
                 (r) => {
-                    let i = (0, h.A)({ product: e });
-                    ((b.current = r.currentTarget), n?.(), o)
+                    ((C.current = r.currentTarget), n?.(), o)
                         ? (0, x.B)({
                               skuId: e.skuId,
                               flattenVariants: v,
                               analyticsLocations: p,
                               analyticsSource: t,
-                              shouldCheckoutWithOrbs: i,
                               tab: s,
-                              returnRef: b,
-                              initialVariantSkuId: C,
+                              returnRef: C,
+                              initialVariantSkuId: h,
                               cardId: u?.cardId,
                               sessionId: u?.sessionId,
                               tilePosition: u?.tilePosition,
                           })
-                        : null != A &&
+                        : null != E &&
                           (0, g.t)({
                               product: e,
-                              category: A,
-                              shouldCheckoutWithOrbs: i,
+                              category: E,
                               analyticsLocations: p,
                               analyticsSource: t,
-                              returnRef: b,
+                              returnRef: C,
                               tab: s,
                               cardId: u?.cardId,
                               sessionId: u?.sessionId,
                               tilePosition: u?.tilePosition,
                           });
                 },
-                [e, C, s, A, o, v, t, p, n, u?.cardId, u?.sessionId, u?.tilePosition],
+                [e, h, s, E, o, v, t, p, n, u?.cardId, u?.sessionId, u?.tilePosition],
             );
         },
-        v3: E,
+        v3: A,
     },
 );

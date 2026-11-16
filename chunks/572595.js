@@ -16,16 +16,15 @@ n.d(
             let {
                 product: t,
                 category: o,
-                shouldCheckoutWithOrbs: d,
-                analyticsSource: c,
-                analyticsLocations: I,
-                returnRef: v,
-                tab: f,
-                giftRecipient: p,
-                giftingOrigin: m,
-                cardId: g,
-                sessionId: x,
-                tilePosition: h,
+                analyticsSource: d,
+                analyticsLocations: c,
+                returnRef: I,
+                tab: v,
+                giftRecipient: f,
+                giftingOrigin: p,
+                cardId: m,
+                sessionId: g,
+                tilePosition: x,
             } = e;
             if (t.isCategoryReward) {
                 let { isPurchased: e } = (0, l.o)(a.A, t);
@@ -467,18 +466,17 @@ n.d(
                     ]).then(n.bind(n, 496779));
                     return (n) =>
                         (0, r.jsx)(s.R9, {
-                            newValue: { cardId: g, sessionId: x, tilePosition: h },
+                            newValue: { cardId: m, sessionId: g, tilePosition: x },
                             children: (0, r.jsx)(e, {
                                 ...n,
                                 product: t,
                                 category: o,
-                                shouldCheckoutWithOrbs: d,
-                                analyticsSource: c,
-                                analyticsLocations: I,
-                                returnRef: v,
-                                tab: f,
-                                giftRecipient: p,
-                                giftingOrigin: m,
+                                analyticsSource: d,
+                                analyticsLocations: c,
+                                returnRef: I,
+                                tab: v,
+                                giftRecipient: f,
+                                giftingOrigin: p,
                             }),
                         });
                 },

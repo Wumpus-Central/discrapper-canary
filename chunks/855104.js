@@ -10,8 +10,5 @@ n.d(
         kj: function (e) {
             return (0, l.bG)([i.A], () => null != e && (i.A.balance ?? 0) >= e);
         },
-        r_: function () {
-            return i.A.getCurrentBalance();
-        },
     },
 );
