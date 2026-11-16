@@ -47,7 +47,6 @@ n.d(
                         assetSize: 16,
                         delay: 150,
                         shouldShow: T,
-                        asContainer: !0,
                         children: (0, e.jsxs)("div", {
                             className: o()(u.kL, u.O1, E),
                             "aria-label": p,
