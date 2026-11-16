@@ -77,22 +77,39 @@ let f = (e) => {
     },
     v = (e) => {
         let {
-            day: t,
-            lockedAssetUrl: n,
-            hintAssetUrl: r,
-            onLockedAssetError: s,
-            onHintAssetError: i,
-            listItemProps: o,
-        } = e;
+                day: t,
+                revealDate: n,
+                lockedAssetUrl: r,
+                hintAssetUrl: s,
+                onLockedAssetError: i,
+                onHintAssetError: u,
+                listItemProps: c,
+            } = e,
+            d = null != n ? (0, m.Hm)(n, g.intl.currentLocale) : null;
         return (0, l.jsxs)("div", {
-            ...o,
+            ...c,
             className: h.TW,
             role: "img",
-            "aria-label": g.intl.formatToPlainString(g.t.EeYnVZ, { day: t }),
+            "aria-label":
+                null != d
+                    ? g.intl.formatToPlainString(g.t.jz3aVY, { day: t, date: d })
+                    : g.intl.formatToPlainString(g.t.EeYnVZ, { day: t }),
             children: [
-                null != n && (0, l.jsx)("img", { className: h.LY, src: n, alt: "", onError: s }),
-                null != r && (0, l.jsx)("img", { className: a()(h.LY, h.qC), src: r, alt: "", onError: i }),
+                null != r && (0, l.jsx)("img", { className: h.LY, src: r, alt: "", onError: i }),
+                null != s && (0, l.jsx)("img", { className: a()(h.LY, h.qC), src: s, alt: "", onError: u }),
                 (0, l.jsx)(f, { day: t }),
+                null != d &&
+                    (0, l.jsx)("span", {
+                        className: h._J,
+                        "aria-hidden": "true",
+                        children: (0, l.jsx)(o.E, {
+                            variant: "body-md/medium",
+                            color: "none",
+                            tag: "span",
+                            lineClamp: 2,
+                            children: g.intl.formatToPlainString(g.t.GwQvTT, { date: d }),
+                        }),
+                    }),
             ],
         });
     };
@@ -111,61 +128,63 @@ n.d(
                     lockedAssetUrl: d,
                     hintAssetUrl: g,
                     tilePosition: f,
-                    aspectRatio: C,
-                    className: A,
-                    style: y,
-                    tag: _ = "li",
-                    listItemProps: b,
-                    onReveal: L,
+                    revealDate: C = null,
+                    aspectRatio: A,
+                    className: y,
+                    style: _,
+                    tag: b = "li",
+                    listItemProps: L,
+                    onReveal: S,
                 } = e,
-                S = r.useMemo(() => ({ ...y, "--custom-calendar-tile-aspect-ratio": C }), [y, C]),
-                [I, k] = p(d),
-                [j, N] = p(g),
+                I = r.useMemo(() => ({ ..._, "--custom-calendar-tile-aspect-ratio": A }), [_, A]),
+                [j, k] = p(d),
+                [N, O] = p(g),
                 R = r.useRef(null),
-                O = r.useRef(!1),
-                T = r.useCallback(() => {
-                    ((O.current = !0), L());
-                }, [L]);
+                T = r.useRef(!1),
+                D = r.useCallback(() => {
+                    ((T.current = !0), S());
+                }, [S]);
             r.useEffect(() => {
-                if (s !== m.k$.REVEALED || !O.current) return;
-                O.current = !1;
+                if (s !== m.k$.REVEALED || !T.current) return;
+                T.current = !1;
                 let e = R.current;
                 (e?.querySelector('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])') ?? e)?.focus();
             }, [s]);
-            let D = o === i.G.LARGE_SQUARE;
+            let P = o === i.G.LARGE_SQUARE;
             switch (s) {
                 case m.k$.REVEALED:
-                    t = (0, l.jsx)(E, { skuId: c, tilePosition: f, listItemProps: b });
+                    t = (0, l.jsx)(E, { skuId: c, tilePosition: f, listItemProps: L });
                     break;
                 case m.k$.OPENABLE:
                     t = (0, l.jsx)(x, {
                         day: n,
-                        lockedAssetUrl: I,
-                        hintAssetUrl: j,
+                        lockedAssetUrl: j,
+                        hintAssetUrl: N,
                         onLockedAssetError: k,
-                        onHintAssetError: N,
-                        onReveal: T,
-                        listItemProps: b,
-                        isNumberAboveButton: D,
+                        onHintAssetError: O,
+                        onReveal: D,
+                        listItemProps: L,
+                        isNumberAboveButton: P,
                     });
                     break;
                 case m.k$.HINT:
                 case m.k$.LOCKED:
                     t = (0, l.jsx)(v, {
                         day: n,
-                        lockedAssetUrl: I,
-                        hintAssetUrl: s === m.k$.HINT ? j : null,
+                        revealDate: C,
+                        lockedAssetUrl: j,
+                        hintAssetUrl: s === m.k$.HINT ? N : null,
                         onLockedAssetError: k,
-                        onHintAssetError: N,
-                        listItemProps: b,
+                        onHintAssetError: O,
+                        listItemProps: L,
                     });
             }
-            let P = s === m.k$.REVEALED;
-            return (0, l.jsx)(_, {
+            let M = s === m.k$.REVEALED;
+            return (0, l.jsx)(b, {
                 ref: R,
-                className: a()(h.Vs, { [h.Ml]: P, [h.Zk]: s === m.k$.OPENABLE, [h.Jl]: D, [h.W_]: u }, A),
-                style: S,
-                tabIndex: P ? -1 : void 0,
+                className: a()(h.Vs, { [h.Ml]: M, [h.Zk]: s === m.k$.OPENABLE, [h.Jl]: P, [h.W_]: u }, y),
+                style: I,
+                tabIndex: M ? -1 : void 0,
                 children: t,
             });
         },

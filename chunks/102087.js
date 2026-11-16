@@ -12,4 +12,5 @@ e.exports = {
     Jl: "largeSquareTile_IxwVgM",
     W_: "centeredHintTile_IxwVgM",
     qC: "hintAsset_IxwVgM",
+    _J: "revealDateLabel_IxwVgM",
 };

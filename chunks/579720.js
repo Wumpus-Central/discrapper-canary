@@ -37,14 +37,14 @@ let m = new d(o.h, {
 var g = n(198329);
 function h(e, t, n) {
     let o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        { collectionId: u, promotions: c, endsAt: d } = e,
-        h = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
-        p = (0, s.bG)([m], () => null != h && null != u && null != n && m.isDayRevealed(h, u, n)),
-        f = l.useCallback(() => {
+        { collectionId: u, promotions: c, startsAt: d, endsAt: h } = e,
+        p = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
+        f = (0, s.bG)([m], () => null != p && null != u && null != n && m.isDayRevealed(p, u, n)),
+        E = l.useCallback(() => {
             null != u && null != n && (0, i.cb)(u, n);
         }, [u, n]),
-        E = new Date(),
-        x = null != d && d <= E;
+        x = new Date(),
+        v = null != h && h <= x;
     return l.useMemo(() => {
         let e = (0, g.d)({
             positions: c.map((e) => {
@@ -67,16 +67,17 @@ function h(e, t, n) {
                             position: s,
                             openPosition: n,
                             hintPosition: e,
-                            isOpenPositionRevealed: p,
-                            hasCampaignEnded: x,
+                            isOpenPositionRevealed: f,
+                            hasCampaignEnded: v,
                         }),
                         skuId: t?.[s - 1]?.skuId ?? null,
                         lockedAssetUrl: o ? (i.calendarLocked ?? i.locked) : i.locked,
                         hintAssetUrl: i.hint,
                         tilePosition: s - 1,
-                        onReveal: f,
+                        revealDate: (0, g.KH)(d, s),
+                        onReveal: E,
                     },
                 };
             });
-    }, [c, t, n, p, x, f, o]);
+    }, [c, t, n, f, v, E, o, d]);
 }

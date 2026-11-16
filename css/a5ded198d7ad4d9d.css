@@ -299,6 +299,48 @@
     object-position: center
 }
 
+.revealDateLabel_IxwVgM {
+    --custom-reveal-date-label-opacity: 0.5;
+    align-items: center;
+    background-color: var(--control-overlay-primary-background-default);
+    border: 1px solid var(--control-overlay-primary-border-default);
+    border-radius: var(--radius-sm);
+    inset-inline: var(--space-12);
+    bottom: var(--space-12);
+    box-sizing: border-box;
+    color: var(--control-overlay-primary-text-default);
+    display: flex;
+    justify-content: center;
+    min-height: 40px;
+    opacity: 0;
+    padding: calc(var(--space-8) - 1px) calc(var(--space-16) - 1px);
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    transition: opacity .2s ease-out;
+    z-index: 2
+}
+
+.largeSquareTile_IxwVgM .revealDateLabel_IxwVgM {
+    inset-inline: var(--space-8);
+    bottom: var(--space-8)
+}
+
+.full-motion .revealDateLabel_IxwVgM {
+    transform: translateY(calc(100% + var(--space-12)));
+    transition: opacity .2s ease-out, transform .2s ease-out
+}
+
+.full-motion .largeSquareTile_IxwVgM .revealDateLabel_IxwVgM {
+    transform: translateY(calc(100% + var(--space-8)))
+}
+
+.assetTile_IxwVgM:focus-visible .revealDateLabel_IxwVgM,
+.assetTile_IxwVgM:hover .revealDateLabel_IxwVgM {
+    opacity: var(--custom-reveal-date-label-opacity);
+    transform: none
+}
+
 .smallCardItem_-T_N-w {
     border-radius: var(--radius-sm);
     flex-shrink: 0;
@@ -306,4 +348,4 @@
     width: 246px
 }
 
-/*# sourceMappingURL=8fff5694f90b0f93.css.map*/
+/*# sourceMappingURL=a5ded198d7ad4d9d.css.map*/
