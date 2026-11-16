@@ -4,25 +4,27 @@ var i = n(35039),
     a = n(499979),
     s = n(155718),
     l = n(7584),
-    o = n(811091);
-n(835517);
-var d = n(989238),
-    c = n(373955);
+    o = n(811091),
+    d = n(835517),
+    c = n(989238),
+    u = n(373955);
 n(399667);
-var u = n(817379);
+var _ = n(817379);
 n(142617);
-var _ = n(407905),
-    E = n(532294),
-    A = n(350363),
-    f = n(852717),
-    h = n(792996);
-let I = [a.pJ.HOURS, a.pJ.MINUTES],
-    p = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
-    m = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]);
-function T(e) {
-    return new Intl.NumberFormat(h.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
+var E = n(407905),
+    A = n(532294),
+    f = n(350363),
+    h = n(852717),
+    I = n(792996);
+let p = [a.pJ.HOURS, a.pJ.MINUTES],
+    m = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
+    T = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]),
+    g = [128, 256, 512, 768, 1024],
+    S = Math.max(...g);
+function N(e) {
+    return new Intl.NumberFormat(I.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
 }
-function g(e) {
+function C(e) {
     return Math.min(Math.max(Math.round((e / 100) * 6), 1), 5);
 }
 n.d(
@@ -32,10 +34,10 @@ n.d(
         Go: function (e, t, n) {
             let i, r, a;
             return {
-                version: E.wk.V2026,
-                character: p.has(e) ? (t ?? void 0) : void 0,
+                version: A.wk.V2026,
+                character: m.has(e) ? (t ?? void 0) : void 0,
                 stats:
-                    m.has(e) && null != n
+                    T.has(e) && null != n
                         ? ((i = n.guilds?.guilds[0]),
                           (r = n.emojis?.emojis[0]),
                           (a = n.games?.games[0]?.game),
@@ -62,43 +64,43 @@ n.d(
                               powerLevelPercentile: n.power?.powerLevelPercentile ?? 0,
                           })
                         : void 0,
-                cardColorPalette: (0, c.o)(t),
+                cardColorPalette: (0, u.o)(t),
             };
         },
-        Le: T,
+        Le: N,
         R8: function (e) {
             let t;
             return {
-                powerLevel: T(e.powerLevel),
-                powerLevelUnits: g(e.powerLevelPercentile),
+                powerLevel: N(e.powerLevel),
+                powerLevelUnits: C(e.powerLevelPercentile),
                 voice: {
                     text:
                         (t = Math.round(e.totalVoiceMinutes)) > 0
                             ? (function (e) {
-                                  let { unit: t, time: n } = (0, a.$l)(e, I),
+                                  let { unit: t, time: n } = (0, a.$l)(e, p),
                                       i = Math.round(n ?? 0);
                                   return t === a.pJ.HOURS
-                                      ? h.intl.formatToPlainString(f.default.CQfBsB, { hours: i })
-                                      : h.intl.formatToPlainString(f.default.yRfTht, { minutes: i });
+                                      ? I.intl.formatToPlainString(h.default.CQfBsB, { hours: i })
+                                      : I.intl.formatToPlainString(h.default.yRfTht, { minutes: i });
                               })(t)
-                            : h.intl.formatToPlainString(f.default.x7PkHm, { minutes: t }),
-                    accessibilityLabel: h.intl.formatToPlainString(f.default.lw35aH, { duration: (0, d.GM)(t) }),
+                            : I.intl.formatToPlainString(h.default.x7PkHm, { minutes: t }),
+                    accessibilityLabel: I.intl.formatToPlainString(h.default.lw35aH, { duration: (0, c.GM)(t) }),
                 },
                 messages: {
                     text:
                         e.numMessagesSent > 0
-                            ? e.numMessagesSent.toLocaleString(h.intl.currentLocale)
-                            : h.intl.formatToPlainString(f.default.foKBCN, { count: e.numMessagesSent }),
-                    accessibilityLabel: h.intl.formatToPlainString(f.default.IdRUAC, { count: e.numMessagesSent }),
+                            ? e.numMessagesSent.toLocaleString(I.intl.currentLocale)
+                            : I.intl.formatToPlainString(h.default.foKBCN, { count: e.numMessagesSent }),
+                    accessibilityLabel: I.intl.formatToPlainString(h.default.IdRUAC, { count: e.numMessagesSent }),
                 },
                 topGuildDaysInteracted: (function (e) {
                     if (null == e.topGuild) {
                         var t;
-                        return { text: (t = h.intl.string(f.default.GultYJ)), accessibilityLabel: t };
+                        return { text: (t = I.intl.string(h.default.GultYJ)), accessibilityLabel: t };
                     }
                     return {
-                        text: h.intl.formatToPlainString(f.default.cQXIkj, { days: e.topGuildNumDaysInteracted }),
-                        accessibilityLabel: h.intl.formatToPlainString(f.default.MpSH8v, {
+                        text: I.intl.formatToPlainString(h.default.cQXIkj, { days: e.topGuildNumDaysInteracted }),
+                        accessibilityLabel: I.intl.formatToPlainString(h.default.MpSH8v, {
                             days: e.topGuildNumDaysInteracted,
                         }),
                     };
@@ -107,7 +109,7 @@ n.d(
                     if (null != e.topGuild)
                         return {
                             text: e.topGuild.guildName,
-                            accessibilityLabel: h.intl.formatToPlainString(f.default["9UTJ+t"], {
+                            accessibilityLabel: I.intl.formatToPlainString(h.default["9UTJ+t"], {
                                 guildName: e.topGuild.guildName,
                             }),
                         };
@@ -115,9 +117,9 @@ n.d(
                 reactions: {
                     text:
                         e.numEmojisSent > 0
-                            ? e.numEmojisSent.toLocaleString(h.intl.currentLocale)
-                            : h.intl.formatToPlainString(f.default.RHYx1k, { count: e.numEmojisSent }),
-                    accessibilityLabel: h.intl.formatToPlainString(f.default["36qpUG"], { count: e.numEmojisSent }),
+                            ? e.numEmojisSent.toLocaleString(I.intl.currentLocale)
+                            : I.intl.formatToPlainString(h.default.RHYx1k, { count: e.numEmojisSent }),
+                    accessibilityLabel: I.intl.formatToPlainString(h.default["36qpUG"], { count: e.numEmojisSent }),
                 },
                 topEmojiName: (function (e) {
                     if (!(e.numEmojisSent <= 0) && null != e.topEmoji)
@@ -126,7 +128,7 @@ n.d(
                                 null == e.topEmoji.emojiId
                                     ? l.Ay.convertSurrogateToName(e.topEmoji.emojiName)
                                     : `:${e.topEmoji.emojiName}:`,
-                            accessibilityLabel: h.intl.formatToPlainString(f.default.CcBo8C, {
+                            accessibilityLabel: I.intl.formatToPlainString(h.default.CcBo8C, {
                                 emojiName: e.topEmoji.emojiName,
                             }),
                         };
@@ -134,22 +136,22 @@ n.d(
                 daysPlayed: {
                     text:
                         e.totalDaysPlayed > 0
-                            ? h.intl.formatToPlainString(f.default.cQXIkj, { days: e.totalDaysPlayed })
-                            : h.intl.string(f.default.mg1NPe),
-                    accessibilityLabel: h.intl.formatToPlainString(f.default.LYcKX7, { days: e.totalDaysPlayed }),
+                            ? I.intl.formatToPlainString(h.default.cQXIkj, { days: e.totalDaysPlayed })
+                            : I.intl.string(h.default.mg1NPe),
+                    accessibilityLabel: I.intl.formatToPlainString(h.default.LYcKX7, { days: e.totalDaysPlayed }),
                 },
                 topGameName: (function (e) {
                     if (!(e.totalDaysPlayed <= 0) && null != e.topGame)
                         return {
                             text: e.topGame.applicationName,
-                            accessibilityLabel: h.intl.formatToPlainString(f.default.kLqpNC, {
+                            accessibilityLabel: I.intl.formatToPlainString(h.default.kLqpNC, {
                                 gameName: e.topGame.applicationName,
                             }),
                         };
                 })(e),
                 topEmoji: e.topEmoji,
                 topGuild: e.topGuild,
-                topGuildAcronymCharacter: null != e.topGuild ? (0, _.oW)(e.topGuild.guildName) : void 0,
+                topGuildAcronymCharacter: null != e.topGuild ? (0, E.oW)(e.topGuild.guildName) : void 0,
                 topGame: e.topGame,
             };
         },
@@ -159,9 +161,9 @@ n.d(
         },
         b5: function (e) {
             switch (e.version) {
-                case E.wk.V2025:
-                    return h.intl.string(A.default.goiR2u);
-                case E.wk.V2026:
+                case A.wk.V2025:
+                    return I.intl.string(f.default.goiR2u);
+                case A.wk.V2026:
                 default:
                     return null;
             }
@@ -224,16 +226,18 @@ n.d(
                       cardColorPalette: e.card_color_palette ?? i.h.NONE,
                   };
         },
-        sX: g,
+        sX: C,
         vF: function (e, t) {
-            let n = [];
+            let n,
+                i = ((n = t * (0, d.A)()), g.find((e) => e >= n) ?? S),
+                r = [];
             return (
-                (0, u.fA)(e.wearable).forEach((i) => {
-                    let r = e[i],
-                        a = u.qM[i][r]?.layer;
-                    null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}&format=webp`);
+                (0, _.fA)(e.wearable).forEach((t) => {
+                    let n = e[t],
+                        a = _.qM[t][n]?.layer;
+                    null != a && "" !== a && r.push(`${a}?height=${i}&width=${i}&format=webp`);
                 }),
-                n
+                r
             );
         },
     },
