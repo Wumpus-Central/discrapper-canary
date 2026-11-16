@@ -72,6 +72,7 @@ let s = {
             MAXIMUM_LENGTH_ERROR: (e) => `Must be ${e} characters or fewer in length.`,
             MINIMUM_VALUE_ERROR: (e) => `Must be ${e} or more.`,
             MAXIMUM_VALUE_ERROR: (e) => `Must be ${e} or less.`,
+            GLOBAL_BANNER_COUNTDOWN_TIME_LEFT: (e) => `${e} left`,
         },
         theme: n(505124).NJ.LIGHT,
         locale: "en-US",

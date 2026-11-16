@@ -3801,6 +3801,11 @@
     --expressive-gradient-tenure-badge-ruby-start: rgba(222, 69, 74, .3);
     --expressive-gradient-tenure-badge-silver-end: rgba(66, 66, 77, .3);
     --expressive-gradient-tenure-badge-silver-start: hsla(210, 6%, 84%, .3);
+    --global-banner-nitro-end: #006;
+    --global-banner-nitro-icon: #fff;
+    --global-banner-nitro-middle: #263378;
+    --global-banner-nitro-start: #851c6b;
+    --global-banner-nitro-text: #fff;
     --gradient-progress-pill-background: #5c5c66;
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
@@ -4547,6 +4552,11 @@
     --expressive-gradient-tenure-badge-ruby-start: rgba(222, 69, 74, .3);
     --expressive-gradient-tenure-badge-silver-end: rgba(66, 66, 77, .3);
     --expressive-gradient-tenure-badge-silver-start: hsla(210, 6%, 84%, .3);
+    --global-banner-nitro-end: #a1a8fa;
+    --global-banner-nitro-icon: #000;
+    --global-banner-nitro-middle: #96abff;
+    --global-banner-nitro-start: #ffa3e8;
+    --global-banner-nitro-text: #000;
     --gradient-progress-pill-background: #bfbfc2;
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #fff;
@@ -5293,6 +5303,11 @@
     --expressive-gradient-tenure-badge-ruby-start: rgba(222, 69, 74, .3);
     --expressive-gradient-tenure-badge-silver-end: rgba(66, 66, 77, .3);
     --expressive-gradient-tenure-badge-silver-start: hsla(210, 6%, 84%, .3);
+    --global-banner-nitro-end: #006;
+    --global-banner-nitro-icon: #fff;
+    --global-banner-nitro-middle: #263378;
+    --global-banner-nitro-start: #851c6b;
+    --global-banner-nitro-text: #fff;
     --gradient-progress-pill-background: #36383d;
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
@@ -6039,6 +6054,11 @@
     --expressive-gradient-tenure-badge-ruby-start: rgba(222, 69, 74, .3);
     --expressive-gradient-tenure-badge-silver-end: rgba(66, 66, 77, .3);
     --expressive-gradient-tenure-badge-silver-start: hsla(210, 6%, 84%, .3);
+    --global-banner-nitro-end: #006;
+    --global-banner-nitro-icon: #fff;
+    --global-banner-nitro-middle: #263378;
+    --global-banner-nitro-start: #851c6b;
+    --global-banner-nitro-text: #fff;
     --gradient-progress-pill-background: #45474f;
     --guild-folder-background: hsla(240, 4%, 61%, .12);
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
@@ -6425,4 +6445,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=d11f2d984edcb345.css.map*/
+/*# sourceMappingURL=38148a46ac0c9715.css.map*/

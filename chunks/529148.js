@@ -392,6 +392,8 @@ function $(e) {
                             MAXIMUM_LENGTH_ERROR: (e) => Y.intl.formatToPlainString(Y.t.ICT5S6, { maxLength: e }),
                             MINIMUM_VALUE_ERROR: (e) => Y.intl.formatToPlainString(Y.t.ykmNSo, { min: e }),
                             MAXIMUM_VALUE_ERROR: (e) => Y.intl.formatToPlainString(Y.t.KiDDCk, { max: e }),
+                            GLOBAL_BANNER_COUNTDOWN_TIME_LEFT: (e) =>
+                                Y.intl.formatToPlainString(W.default.ody6zm, { time: e }),
                         },
                         locale: l,
                         theme: t,

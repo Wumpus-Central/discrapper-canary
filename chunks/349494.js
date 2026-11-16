@@ -1,13 +1,18 @@
-var r = n(477900);
-n(582128);
-var a = n(520923),
-    i = n(403581),
-    t = n(792996),
-    c = n(217838);
-function o() {
+var r = t(477900),
+    s = t(582128),
+    a = t(520923),
+    i = t(28863),
+    o = t(403581),
+    c = t(217838);
+function l() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 189958e3,
+        [n] = s.useState(() => new Date(Date.now() + e));
+    return n;
+}
+function u() {
     return (0, r.jsx)("img", { src: c.A, alt: "" });
 }
-function l() {
+function d() {
     return (0, r.jsxs)("svg", {
         width: "200",
         height: "20",
@@ -20,32 +25,42 @@ function l() {
         ],
     });
 }
-n.d(
-    s,
+function m(e) {
+    return [e, (0, r.jsx)(i.Anchor, { href: "https://discordstatus.com", children: "Discord Status" }, "link"), "."];
+}
+function f(e) {
+    return "promotion" === e.variant || "critical" !== e.type || e.dismissible;
+}
+t.d(
+    n,
     {},
     {
+        A8: l,
         CF: function (e) {
-            let { config: s, onDismiss: n, actionLoading: c = !1 } = e,
-                d = {
-                    title: "" === s.title ? void 0 : s.title,
-                    message: s.sampleLink
-                        ? t.intl.format(t.t.MOIaNd, { keyboardNavArticle: "https://support.discord.com" })
-                        : s.message,
+            let { ref: n, config: t, onDismiss: s, actionLoading: i = !1 } = e,
+                c = l(),
+                p = {
+                    title: "" === t.title ? void 0 : t.title,
+                    message: t.sampleLink
+                        ? m(
+                              "Discord will be down for maintenance tonight from 10pm to 11pm, and you can follow along on ",
+                          )
+                        : t.message,
                 },
-                u =
-                    "" === s.primaryAction
+                v =
+                    "" === t.primaryAction
                         ? {}
                         : {
                               primaryAction: {
-                                  text: s.primaryAction,
-                                  icon: s.primaryActionIcon ? i.NitroWheelIcon : void 0,
+                                  text: t.primaryAction,
+                                  icon: t.primaryActionIcon ? o.NitroWheelIcon : void 0,
                                   onClick: () => {},
-                                  loading: c,
+                                  loading: i,
                               },
                               secondaryAction:
-                                  "" === s.secondaryAction ? void 0 : { text: s.secondaryAction, onClick: () => {} },
+                                  "" === t.secondaryAction ? void 0 : { text: t.secondaryAction, onClick: () => {} },
                           },
-                m = (function (e) {
+                h = (function (e) {
                     switch (e) {
                         case "none":
                         case "voice":
@@ -53,70 +68,87 @@ n.d(
                         case "stage":
                             return;
                         case "icon":
-                            return (0, r.jsx)(i.NitroWheelIcon, { size: "md", color: "currentColor" });
+                            return (0, r.jsx)(o.NitroWheelIcon, { size: "md", color: "currentColor" });
                         case "image":
-                            return (0, r.jsx)(o, {});
+                            return (0, r.jsx)(u, {});
                         case "wide-image":
-                            return (0, r.jsx)(l, {});
+                            return (0, r.jsx)(d, {});
                     }
-                })(s.leadingAccessory);
-            if ("promotion" === s.variant)
+                })(t.leadingAccessory);
+            if ("promotion" === t.variant)
                 return (0, r.jsx)(a.q, {
+                    ref: n,
                     variant: "promotion",
-                    type: "nitro" === s.type || "brand" === s.type ? s.type : "expressive",
-                    ...d,
-                    ...u,
-                    leadingAccessory: m,
-                    onDismiss: n,
+                    type: "nitro" === t.type ? "nitro" : "expressive",
+                    ...p,
+                    ...v,
+                    leadingAccessory: h,
+                    countdown: t.countdown
+                        ? "days-left" === t.countdownAppearance
+                            ? { endsAt: c, appearance: "days-left" }
+                            : {
+                                  endsAt: c,
+                                  appearance: "timer",
+                                  showDays: t.countdownShowDays,
+                                  showSeconds: t.countdownShowSeconds,
+                              }
+                        : void 0,
+                    onDismiss: s,
                 });
-            switch (s.type) {
+            switch (t.type) {
                 case "critical":
                     return (0, r.jsx)(a.q, {
+                        ref: n,
                         variant: "status",
                         type: "critical",
-                        role: s.role,
-                        ...d,
-                        ...u,
-                        onDismiss: s.dismissible ? n : void 0,
+                        role: t.role,
+                        ...p,
+                        ...v,
+                        onDismiss: f(t) ? s : void 0,
                     });
                 case "connected":
                     return (0, r.jsx)(a.q, {
+                        ref: n,
                         variant: "status",
                         type: "connected",
                         leadingAccessory:
-                            "video" === s.leadingAccessory || "stage" === s.leadingAccessory
-                                ? s.leadingAccessory
+                            "video" === t.leadingAccessory || "stage" === t.leadingAccessory
+                                ? t.leadingAccessory
                                 : "voice",
-                        role: s.role,
-                        ...d,
-                        ...u,
-                        onDismiss: n,
+                        role: t.role,
+                        ...p,
+                        ...v,
+                        onDismiss: s,
                     });
                 case "warning":
                     return (0, r.jsx)(a.q, {
+                        ref: n,
                         variant: "status",
                         type: "warning",
-                        role: s.role,
-                        ...d,
-                        ...u,
-                        onDismiss: n,
+                        role: t.role,
+                        ...p,
+                        ...v,
+                        onDismiss: s,
                     });
                 case "expressive":
                 case "nitro":
-                case "brand":
                 case "info":
                     return (0, r.jsx)(a.q, {
+                        ref: n,
                         variant: "status",
-                        type: "info" === s.type ? "info" : "brand",
-                        role: s.role,
-                        ...d,
-                        ...u,
-                        leadingAccessory: m,
-                        onDismiss: n,
+                        type: "info",
+                        role: t.role,
+                        ...p,
+                        ...v,
+                        leadingAccessory: h,
+                        onDismiss: s,
                     });
             }
         },
-        lv: l,
-        vy: o,
+        S0: f,
+        St: m,
+        lv: d,
+        s8: 17158e3,
+        vy: u,
     },
 );
