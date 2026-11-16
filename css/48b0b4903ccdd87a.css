@@ -212,6 +212,10 @@
     width: fit-content
 }
 
+.emojiRow_XTvD56 .emojiAliasInputContainer_XTvD56 input {
+    font-weight: inherit
+}
+
 .emojiRow_XTvD56 .emojiAliasInputContainer_XTvD56:after,
 .emojiRow_XTvD56 .emojiAliasInputContainer_XTvD56:before {
     align-items: center;
@@ -328,4 +332,4 @@
     border-bottom: none
 }
 
-/*# sourceMappingURL=8bdaa4185492b7a6.css.map*/
+/*# sourceMappingURL=48b0b4903ccdd87a.css.map*/
