@@ -26,6 +26,7 @@ n.d(
         CD: {
             steelseries: { id: "steelseries", label: "SteelSeries" },
             logitech: { id: "logitech", label: "Logitech" },
+            voicemod: { id: "voicemod", label: "Voicemod" },
         },
         KS: l,
         NC: d,
