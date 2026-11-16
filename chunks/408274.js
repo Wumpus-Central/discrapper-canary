@@ -2,9 +2,9 @@ n.d(t, { A: () => ej });
 var l = n(477900),
     s = n(582128),
     i = n(503698),
-    r = n.n(i),
-    a = n(435558),
-    o = n.n(a),
+    a = n.n(i),
+    r = n(435558),
+    o = n.n(r),
     u = n(554146),
     c = n(263775),
     d = n(409617),
@@ -55,28 +55,28 @@ var _ = n(38021),
     L = n(204915);
 function O(e) {
     let { markAsDismissed: t, onMenuOpenChange: i } = e,
-        r = s.useRef(null),
-        { theme: a } = (0, _.wR)(),
+        a = s.useRef(null),
+        { theme: r } = (0, _.wR)(),
         o = (0, b.Us)(),
         u = s.useCallback(async () => {
             let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
             return (t) => {
                 let { closePopout: n, position: s, updatePosition: i } = t;
-                return null != r.current
+                return null != a.current
                     ? (0, l.jsx)(e, {
                           onClose: n,
                           onSelect: n,
                           position: s,
                           onHeightUpdate: i,
-                          target: r.current,
-                          theme: a,
+                          target: a.current,
+                          theme: r,
                           context: o,
                       })
                     : null;
             };
-        }, [a, o]);
+        }, [r, o]);
     return (0, l.jsxs)("div", {
-        ref: r,
+        ref: a,
         className: L.G0,
         children: [
             (0, l.jsxs)("div", {
@@ -92,7 +92,7 @@ function O(e) {
                                 children: I.intl.string(j.default.y080Rd),
                             }),
                             (0, l.jsx)(v.Q, {
-                                targetElementRef: r,
+                                targetElementRef: a,
                                 renderPopout: u,
                                 position: "top",
                                 align: "center",
@@ -137,28 +137,28 @@ var w = n(650684),
     k = n(419490);
 function D(e) {
     let { markAsDismissed: t, onMenuOpenChange: i } = e,
-        r = s.useRef(null),
-        { theme: a } = (0, _.wR)(),
+        a = s.useRef(null),
+        { theme: r } = (0, _.wR)(),
         o = (0, b.Us)(),
         u = s.useCallback(async () => {
             let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
             return (t) => {
                 let { closePopout: n, position: s, updatePosition: i } = t;
-                return null != r.current
+                return null != a.current
                     ? (0, l.jsx)(e, {
                           onClose: n,
                           onSelect: n,
                           position: s,
                           onHeightUpdate: i,
-                          target: r.current,
-                          theme: a,
+                          target: a.current,
+                          theme: r,
                           context: o,
                       })
                     : null;
             };
-        }, [a, o]);
+        }, [r, o]);
     return (0, l.jsxs)("div", {
-        ref: r,
+        ref: a,
         className: L.G0,
         children: [
             (0, l.jsxs)("div", {
@@ -174,7 +174,7 @@ function D(e) {
                                 children: I.intl.string(j.default.Lym9gZ),
                             }),
                             (0, l.jsx)(v.Q, {
-                                targetElementRef: r,
+                                targetElementRef: a,
                                 renderPopout: u,
                                 position: "top",
                                 align: "center",
@@ -218,30 +218,30 @@ function D(e) {
     });
 }
 var W = n(176781);
-function G(e) {
+function H(e) {
     let { markAsDismissed: t, onMenuOpenChange: i } = e,
-        r = s.useRef(null),
-        { theme: a } = (0, _.wR)(),
+        a = s.useRef(null),
+        { theme: r } = (0, _.wR)(),
         o = (0, b.Us)(),
         u = s.useCallback(async () => {
             let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
             return (t) => {
                 let { closePopout: n, position: s, updatePosition: i } = t;
-                return null != r.current
+                return null != a.current
                     ? (0, l.jsx)(e, {
                           onClose: n,
                           onSelect: n,
                           position: s,
                           onHeightUpdate: i,
-                          target: r.current,
-                          theme: a,
+                          target: a.current,
+                          theme: r,
                           context: o,
                       })
                     : null;
             };
-        }, [a, o]);
+        }, [r, o]);
     return (0, l.jsxs)("div", {
-        ref: r,
+        ref: a,
         className: L.G0,
         children: [
             (0, l.jsxs)("div", {
@@ -257,7 +257,7 @@ function G(e) {
                                 children: I.intl.string(j.default["G+P4p/"]),
                             }),
                             (0, l.jsx)(v.Q, {
-                                targetElementRef: r,
+                                targetElementRef: a,
                                 renderPopout: u,
                                 position: "top",
                                 align: "center",
@@ -297,12 +297,12 @@ function G(e) {
         ],
     });
 }
-var F = n(607399),
-    H = n(855986),
+var G = n(607399),
+    F = n(855986),
     V = n(596344),
     q = n(287809),
-    z = n(448645),
-    X = n(898105);
+    z = n(734066),
+    X = n(849993);
 n(938796);
 var B = n(665260),
     Q = n(33358),
@@ -327,7 +327,7 @@ function el(e, t) {
 function es(e) {
     let t = (0, Q.P)(e),
         n = e.channel_id,
-        l = (0, H.bG)([$.A], () => $.A.getChannel(n), [n]);
+        l = (0, F.bG)([$.A], () => $.A.getChannel(n), [n]);
     return e.attachments.some(
         (e) => ee(e) && null == (0, K.iW)(e, t, (0, B.Lt)(e.flags ?? 0, J.sbO.IS_SPOILER) || (0, Y.BV)(l)),
     );
@@ -346,160 +346,192 @@ let ei = [
         claim: "voice_inclusion",
     },
 ];
-function er(e) {
+function ea(e) {
     let { message: t } = e,
         {
             notice: n,
             markAsDismissed: i,
-            onMenuOpenChange: r,
+            onMenuOpenChange: a,
         } = (function (e) {
-            let t = s.useId(),
-                [n, l] = s.useState(null),
-                i = {
-                    received: (function (e, t, n) {
-                        let l = (0, b.Us)(),
-                            s = "off" === (0, Z.U)().value,
-                            i = es(e),
-                            r = e.channel_id,
-                            a = e.id,
-                            o = (0, H.bG)([q.default], () => q.default.getCurrentUser()?.id),
-                            u = e.author.id !== o && et(e) && (s || n) && !F.Fr && l === J.BRT.APP,
-                            c = (0, d._C)("received"),
-                            m = null == c ? "none" : c === t ? "self" : "other",
-                            h = (0, H.bG)([V.A], () => u && "none" === m && el(V.A.getMessages(r), o) === a, [
-                                u,
-                                m,
-                                r,
-                                a,
-                                o,
-                            ]),
-                            x = u && (h || "self" === m) && i,
-                            { enabled: C } = (0, X.r)("useReceivedClipNudge");
-                        return x && C;
-                    })(e, t, "received" === n),
-                    manual_sent: (function (e, t, n) {
-                        let l = (0, b.Us)(),
-                            s = "auto" === (0, Z.U)().value,
-                            i = (0, d._C)("manual_sent") === e.id,
-                            r = (0, d._C)("manual_sent_instance"),
-                            a = (0, H.bG)([q.default], () => q.default.getCurrentUser()?.id),
-                            o =
-                                i &&
-                                (null == r || r === t) &&
-                                e.author.id === a &&
-                                (!s || n) &&
-                                !F.Fr &&
-                                l === J.BRT.APP,
-                            { enabled: u } = (0, X.r)("useManualClipSentNudge");
-                        return o && u;
-                    })(e, t, "manual_sent" === n),
-                    chat_upsell: (function (e, t) {
-                        let n = (0, b.Us)(),
-                            l = es(e),
-                            s = (0, d._C)("chat_upsell"),
-                            i = (0, H.bG)([q.default], () => q.default.getCurrentUser()?.id),
-                            r = (0, z.nK)(),
-                            a = e.author.id !== i && !r && !F.Fr && n === J.BRT.APP && et(e),
-                            o = e.channel_id,
-                            u = e.id,
-                            c = (0, H.bG)([V.A], () => a && null == s && el(V.A.getMessages(o), i) === u, [
-                                a,
-                                s,
-                                o,
-                                u,
-                                i,
-                            ]),
-                            m = a && (c || s === t) && l,
-                            { enabled: h } = (0, X.r)("useClipsChatUpsell");
-                        return m && h;
-                    })(e, t),
-                    voice_inclusion: (function (e, t, n) {
-                        let l = (0, b.Us)(),
-                            s = M.Q$.useSetting(),
-                            i = (0, d._C)("voice_inclusion"),
-                            r = (0, H.bG)([q.default], () => q.default.getCurrentUser()?.id),
-                            a = e.author.id !== r && (!s || n) && !F.Fr && l === J.BRT.APP && et(e),
-                            o = e.channel_id,
-                            u = e.id,
-                            c = (0, H.bG)([V.A], () => a && null == i && el(V.A.getMessages(o), r) === u, [
-                                a,
-                                i,
-                                o,
-                                u,
-                                r,
-                            ]),
-                            m = a && (c || i === t),
-                            { enabled: h } = (0, X.r)("useClipsVoiceInclusionNudge");
-                        return m && h;
-                    })(e, t, "voice_inclusion" === n),
+            var t, n, l;
+            let i,
+                a,
+                r,
+                o,
+                u,
+                m,
+                h,
+                x,
+                C,
+                p,
+                g,
+                f,
+                j,
+                I,
+                A,
+                N,
+                S,
+                _,
+                E,
+                v,
+                y,
+                P,
+                R,
+                T,
+                L,
+                O,
+                w,
+                U,
+                k,
+                D,
+                W,
+                H,
+                B,
+                Q,
+                K,
+                Y,
+                $,
+                ee,
+                en,
+                ea = s.useId(),
+                [er, eo] = s.useState(null),
+                eu = {
+                    received:
+                        ((t = "received" === er),
+                        (i = (0, b.Us)()),
+                        (a = "off" === (0, Z.U)().value),
+                        (r = es(e)),
+                        (o = e.channel_id),
+                        (u = e.id),
+                        (m = (0, F.bG)([q.default], () => q.default.getCurrentUser()?.id)),
+                        (h = e.author.id !== m && et(e) && (a || t) && !G.Fr && i === J.BRT.APP),
+                        (C = null == (x = (0, d._C)("received")) ? "none" : x === ea ? "self" : "other"),
+                        (p = (0, F.bG)([V.A], () => h && "none" === C && el(V.A.getMessages(o), m) === u, [
+                            h,
+                            C,
+                            o,
+                            u,
+                            m,
+                        ])),
+                        (g = h && (p || "self" === C) && r),
+                        (f = (0, X.H)("useReceivedClipNudge")),
+                        g && f),
+                    manual_sent:
+                        ((n = "manual_sent" === er),
+                        (j = (0, b.Us)()),
+                        (I = "auto" === (0, Z.U)().value),
+                        (A = (0, d._C)("manual_sent") === e.id),
+                        (N = (0, d._C)("manual_sent_instance")),
+                        (S = (0, F.bG)([q.default], () => q.default.getCurrentUser()?.id)),
+                        (_ =
+                            A && (null == N || N === ea) && e.author.id === S && (!I || n) && !G.Fr && j === J.BRT.APP),
+                        (E = (0, X.H)("useManualClipSentNudge")),
+                        _ && E),
+                    chat_upsell:
+                        ((v = (0, b.Us)()),
+                        (y = es(e)),
+                        (P = (0, d._C)("chat_upsell")),
+                        (R = (0, F.bG)([q.default], () => q.default.getCurrentUser()?.id)),
+                        (T = (0, z.Vl)()),
+                        (L = e.author.id !== R && !T && !G.Fr && v === J.BRT.APP && et(e)),
+                        (O = e.channel_id),
+                        (w = e.id),
+                        (U = (0, F.bG)([V.A], () => L && null == P && el(V.A.getMessages(O), R) === w, [
+                            L,
+                            P,
+                            O,
+                            w,
+                            R,
+                        ])),
+                        (k = L && (U || P === ea) && y),
+                        (0, X.H)("useClipsChatUpsell", k)),
+                    voice_inclusion:
+                        ((l = "voice_inclusion" === er),
+                        (D = (0, b.Us)()),
+                        (W = M.Q$.useSetting()),
+                        (H = (0, d._C)("voice_inclusion")),
+                        (B = (0, F.bG)([q.default], () => q.default.getCurrentUser()?.id)),
+                        (Q = e.author.id !== B && (!W || l) && !G.Fr && D === J.BRT.APP && et(e)),
+                        (K = e.channel_id),
+                        (Y = e.id),
+                        ($ = (0, F.bG)([V.A], () => Q && null == H && el(V.A.getMessages(K), B) === Y, [
+                            Q,
+                            H,
+                            K,
+                            Y,
+                            B,
+                        ])),
+                        (ee = Q && ($ || H === ea)),
+                        (en = (0, X.H)("useClipsVoiceInclusionNudge")),
+                        ee && en),
                 },
-                r = (0, d.wc)(e.id),
-                a = ei.filter((e) => {
+                ec = (0, d.wc)(e.id),
+                ed = ei.filter((e) => {
                     let { id: t } = e;
-                    return i[t] && (null == r || r === t);
+                    return eu[t] && (null == ec || ec === t);
                 }),
-                o = (0, d.Jk)(),
-                u = a
+                em = (0, d.Jk)(),
+                eh = ed
                     .map((e) => {
                         let { claim: t } = e;
                         return t;
                     })
                     .join(" ");
             (s.useLayoutEffect(() => {
-                let e = u.split(" ");
-                for (let { claim: n } of ei) e.includes(n) ? (0, d.K)(n, t) : (0, d.Rx)(n, t);
-            }, [u, o, t]),
+                let e = eh.split(" ");
+                for (let { claim: t } of ei) e.includes(t) ? (0, d.K)(t, ea) : (0, d.Rx)(t, ea);
+            }, [eh, em, ea]),
                 s.useLayoutEffect(
                     () => () =>
                         ei.forEach((e) => {
-                            let { claim: n } = e;
-                            return (0, d.Rx)(n, t);
+                            let { claim: t } = e;
+                            return (0, d.Rx)(t, ea);
                         }),
-                    [t],
+                    [ea],
                 ));
-            let m = a.filter((e) => {
-                    let { claim: n } = e;
-                    return o[n] === t;
+            let ex = ed.filter((e) => {
+                    let { claim: t } = e;
+                    return em[t] === ea;
                 }),
-                [h, x] = (0, c.kn)(
-                    m.map((e) => {
+                [eC, ep] = (0, c.kn)(
+                    ex.map((e) => {
                         let { content: t } = e;
                         return t;
                     }),
                 ),
-                C =
+                eg =
                     ei.find((e) => {
                         let { content: t } = e;
-                        return t === h;
+                        return t === eC;
                     })?.id ?? null,
-                p = e.id;
+                ef = e.id;
             return (
                 s.useEffect(() => {
-                    null != C && (0, d.Mi)(p, C);
-                }, [p, C]),
+                    null != eg && (0, d.Mi)(ef, eg);
+                }, [ef, eg]),
                 {
-                    notice: C,
-                    markAsDismissed: x,
+                    notice: eg,
+                    markAsDismissed: ep,
                     onMenuOpenChange: function (e) {
-                        l(e ? C : null);
+                        eo(e ? eg : null);
                     },
                 }
             );
         })(t);
     switch (n) {
         case "received":
-            return (0, l.jsx)(G, { markAsDismissed: i, onMenuOpenChange: r });
+            return (0, l.jsx)(H, { markAsDismissed: i, onMenuOpenChange: a });
         case "manual_sent":
-            return (0, l.jsx)(D, { markAsDismissed: i, onMenuOpenChange: r });
+            return (0, l.jsx)(D, { markAsDismissed: i, onMenuOpenChange: a });
         case "chat_upsell":
             return (0, l.jsx)(S, { markAsDismissed: i });
         case "voice_inclusion":
-            return (0, l.jsx)(O, { markAsDismissed: i, onMenuOpenChange: r });
+            return (0, l.jsx)(O, { markAsDismissed: i, onMenuOpenChange: a });
         case null:
             return null;
     }
 }
-var ea = n(643612),
+var er = n(643612),
     eo = n(448381),
     eu = n(96782),
     ec = n(838541),
@@ -526,7 +558,7 @@ function eh(e) {
     let { itemsForLayout: t, maxWidth: n, isSingleImage: s } = e,
         i = t[0];
     return (0, l.jsx)("div", {
-        className: r()(ed.EO, { [ed.Gj]: s, [ed.Kv]: !s }),
+        className: a()(ed.EO, { [ed.Gj]: s, [ed.Kv]: !s }),
         children: (0, l.jsx)(ef, { props: i, useFullWidth: !s, isSingleItem: !0, maxWidth: n }),
     });
 }
@@ -549,7 +581,7 @@ function eC(e) {
         s = Math.round((2 * (n - 4)) / 3),
         i = s / 2;
     return (0, l.jsxs)("div", {
-        className: r()(ed.SQ, ed.o_),
+        className: a()(ed.SQ, ed.o_),
         children: [
             (0, l.jsx)("div", { className: ed.es, children: (0, l.jsx)(ef, { props: t[0], maxWidth: s }) }),
             (0, l.jsx)("div", {
@@ -598,7 +630,7 @@ function ef(e) {
     let {
             props: s,
             maxWidth: i = 550,
-            maxHeight: a = 350,
+            maxHeight: r = 350,
             useFullWidth: o = !0,
             isSingleItem: u = !1,
             displayGridItem: c,
@@ -607,21 +639,21 @@ function ef(e) {
         m = {
             ...s,
             ...("IMAGE" === d &&
-                ((t = s.className), { className: r()(t, ed.s_), imgContainerClassName: ed.nh, imgClassName: ed.g2 })),
-            ...(("VIDEO" === d || "CLIP" === d) && ((n = s.className), { className: r()(n, ed.g2) })),
+                ((t = s.className), { className: a()(t, ed.s_), imgContainerClassName: ed.nh, imgClassName: ed.g2 })),
+            ...(("VIDEO" === d || "CLIP" === d) && ((n = s.className), { className: a()(n, ed.g2) })),
             displayGridItem: c,
             mediaLayoutType: ec.d.MOSAIC,
             maxWidth: i,
-            maxHeight: a,
+            maxHeight: r,
             useFullWidth: o,
             isSingleMosaicItem: u,
         };
-    return (0, l.jsx)(ea.G.Provider, { value: s.gifFavoriteButton, children: (0, l.jsx)(eu.Ay, { ...m }) });
+    return (0, l.jsx)(er.G.Provider, { value: s.gifFavoriteButton, children: (0, l.jsx)(eu.Ay, { ...m }) });
 }
 let ej = function (e) {
     var t;
     let { items: n, isInAppComponentsV2: i = !1 } = e,
-        { visualMediaItems: a, nonVisualMediaItems: u } =
+        { visualMediaItems: r, nonVisualMediaItems: u } =
             ((t = n),
             s.useMemo(() => {
                 let [e, n] = o().partition(t, (e) => (0, eo.Xg)(e.item.type));
@@ -630,10 +662,10 @@ let ej = function (e) {
         c = n[0]?.message;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            a.length > 0 &&
+            r.length > 0 &&
                 (0, l.jsx)("div", {
-                    className: r()(ed.XU, { [ed.dM]: i, [ed.eO]: 1 === a.length && "CLIP" === a[0].item.type }),
-                    children: (0, l.jsx)(em, { visualMediaItems: a, maxWidth: i ? 600 : 550 }),
+                    className: a()(ed.XU, { [ed.dM]: i, [ed.eO]: 1 === r.length && "CLIP" === r[0].item.type }),
+                    children: (0, l.jsx)(em, { visualMediaItems: r, maxWidth: i ? 600 : 550 }),
                 }),
             u.length > 0 &&
                 (0, l.jsx)("div", {
@@ -646,7 +678,7 @@ let ej = function (e) {
                         ),
                     ),
                 }),
-            !i && null != c && et(c) ? (0, l.jsx)(er, { message: c }) : null,
+            !i && null != c && et(c) ? (0, l.jsx)(ea, { message: c }) : null,
         ],
     });
 };

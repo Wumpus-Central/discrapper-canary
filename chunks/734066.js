@@ -8,14 +8,17 @@ var i = n(855986),
     c = n(682901),
     u = n(731854);
 function _() {
-    let e = A(s.Ay),
+    let e = f(s.Ay),
         t = (0, i.bG)([r.Ay, a.A], () => a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement"));
     return e || t;
 }
-function E(e) {
-    return d.Ay.isPremiumAtLeast(e?.premiumType, c.PremiumTypes.TIER_2);
+function E() {
+    return a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement");
 }
 function A(e) {
+    return d.Ay.isPremiumAtLeast(e?.premiumType, c.PremiumTypes.TIER_2);
+}
+function f(e) {
     let t = e.getMediaEngine();
     return o.xl() && t.supports(u.O5.CLIPS) && t.hasClipsV3Support();
 }
@@ -27,20 +30,21 @@ n.d(
             return !1;
         },
         Pm: function () {
-            return (
-                (!!A(s.Ay) || !!(a.A.isDeveloper && r.Ay.get("clips_ignore_platform_requirement"))) &&
-                E(l.default.getCurrentUser())
-            );
+            return (!!f(s.Ay) || !!E()) && A(l.default.getCurrentUser());
+        },
+        Vl: function () {
+            return (0, i.bG)([l.default], () => A(l.default.getCurrentUser()));
         },
         W1: _,
+        cB: E,
         cx: function () {
             return !1;
         },
-        qj: E,
-        ri: A,
+        qj: A,
+        ri: f,
         sw: function () {
             let e = _();
-            return (0, i.bG)([l.default], () => E(l.default.getCurrentUser())) && e;
+            return (0, i.bG)([l.default], () => A(l.default.getCurrentUser())) && e;
         },
     },
 );

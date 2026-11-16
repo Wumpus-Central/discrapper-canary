@@ -3,26 +3,23 @@ var i = n(477900),
     a = n(855986),
     o = n(192308),
     r = n(945810),
-    s = n(287809),
-    u = n(474090),
-    c = n(734066),
-    d = n(898105),
-    f = n(682901);
-function g() {
+    s = n(734066),
+    u = n(849993);
+function c() {
     (0, o.mM)(async () => {
-        let { default: e } = await Promise.all([n.e(669779), n.e(614146)]).then(n.bind(n, 503257));
-        return (t) => (0, i.jsx)(e, { ...t });
+        let { default: t } = await Promise.all([n.e(669779), n.e(614146)]).then(n.bind(n, 503257));
+        return (e) => (0, i.jsx)(t, { ...e });
     });
 }
 n.d(
-    t,
+    e,
     {},
     {
-        B: function (e) {
-            let t = (0, a.bG)([s.default], () => !(0, u.YE)(s.default.getCurrentUser(), f.PremiumTypes.TIER_2)),
-                n = (0, c.W1)() && t,
-                i = (0, a.bG)([r.Bt], () => n && (0, d.C)(e).enabled, [n, e]);
-            return { isLocked: l.useCallback((e) => i && "off" !== e, [i]), openRoadblock: g };
+        B: function (t) {
+            let e = !(0, s.Vl)(),
+                n = (0, s.W1)() && e,
+                i = (0, a.bG)([r.Bt], () => n && (0, u.o)(t), [n, t]);
+            return { isLocked: l.useCallback((t) => i && "off" !== t, [i]), openRoadblock: c };
         },
     },
 );

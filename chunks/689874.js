@@ -7,16 +7,17 @@ var l = t(477900),
     c = t(644727),
     u = t(616356),
     d = t(419490),
-    x = t(898105),
+    x = t(849993),
     g = t(572164),
     h = t(88519),
     p = t(806931),
     f = t(792996),
     j = t(874566);
 function m(e) {
-    let { channelId: n } = e,
-        { enabled: t } = (0, x.r)("ClipsEnabledIndicator");
-    return t ? (0, l.jsx)(h.A, { channelId: n }, `clips-in-call-chip-${n}`) : (0, l.jsx)(A, {});
+    let { channelId: n } = e;
+    return (0, x.H)("ClipsEnabledIndicator")
+        ? (0, l.jsx)(h.A, { channelId: n }, `clips-in-call-chip-${n}`)
+        : (0, l.jsx)(A, {});
 }
 function A() {
     return (0, l.jsx)(i.m, {

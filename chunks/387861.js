@@ -1012,7 +1012,7 @@ function nu(e) {
     });
 }
 var n_ = n(734066),
-    nE = n(898105),
+    nE = n(849993),
     nA = n(707116),
     nf = n(28863),
     nh = n(780964),
@@ -1031,7 +1031,7 @@ function nN(e) {
 }
 function nC(e) {
     let { targetElementRef: t, isOff: n } = e,
-        { enabled: i } = (0, nE.r)("ClipsFirstCallEducationPopover"),
+        i = (0, nE.H)("ClipsFirstCallEducationPopover"),
         [a, s] = (0, eL.kn)(i ? ng : nS, { bypassAutoDismiss: !0 });
     if (null == a) return null;
     function l() {
@@ -1176,9 +1176,8 @@ function nG() {
     });
 }
 function nx(e) {
-    let { legacyHint: t } = e,
-        { enabled: n } = (0, nE.r)("RunningGameStatus");
-    return n ? (0, r.jsx)(nG, {}) : t;
+    let { legacyHint: t } = e;
+    return (0, nE.H)("RunningGameStatus") ? (0, r.jsx)(nG, {}) : t;
 }
 function nk(e) {
     let { isCurrentlyRunningGame: t, gamePid: n, onClickNotSharing: i, isSharingPopoutOpen: a } = e,

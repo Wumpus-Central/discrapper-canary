@@ -3452,7 +3452,8 @@
     "kind": "user",
     "name": "2026-09-autoclips",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "marketingEnabled": false
     },
     "variations": {
       "0": {
@@ -3460,10 +3461,12 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "marketingEnabled": false
       },
       "2": {
-        "enabled": true
+        "enabled": true,
+        "marketingEnabled": true
       }
     }
   },
