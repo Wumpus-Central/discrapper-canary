@@ -3285,16 +3285,19 @@ function lW(e) {
             e1.current ? F() : e3();
         }, [e3, F]);
     (i.useEffect(() => {
-        function e(e) {
-            "Escape" === e.key && "editing" === eP.current && eI && (e.stopPropagation(), e2());
-        }
-        return (
-            document.addEventListener("keydown", e),
-            () => {
-                document.removeEventListener("keydown", e);
+        "editing" === eC && null == eE && e2();
+    }, [eC, eE, e2]),
+        i.useEffect(() => {
+            function e(e) {
+                "Escape" === e.key && "editing" === eP.current && eI && (e.stopPropagation(), e2());
             }
-        );
-    }, [e2, F, eI]),
+            return (
+                document.addEventListener("keydown", e),
+                () => {
+                    document.removeEventListener("keydown", e);
+                }
+            );
+        }, [e2, F, eI]),
         i.useEffect(() => {
             function e(e) {
                 if (

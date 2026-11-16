@@ -380,7 +380,7 @@ let j = new H(a.h, {
         },
         CLIPS_DELETE_CLIP: function (e) {
             let t = m[e.id];
-            for (let t of k()) t.removeCandidate(e.id);
+            for (let t of k()) t.removeClip(e.id);
             (delete m[e.id],
                 t?.remoteClipId != null && delete T[t.remoteClipId],
                 (x.hasClips = Object.keys(m).length > 0));

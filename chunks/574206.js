@@ -66,6 +66,9 @@ n.d(
             removeCandidate(e) {
                 this.candidateClipsById.delete(e);
             }
+            removeClip(e) {
+                (this.removeCandidate(e), (this.savedClipIds = this.savedClipIds.filter((t) => t !== e)));
+            }
             getCandidate(e) {
                 return this.candidateClipsById.get(e);
             }
