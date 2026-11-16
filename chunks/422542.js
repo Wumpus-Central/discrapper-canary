@@ -161,11 +161,13 @@ function ea(e) {
                 children: [
                     null != n && (0, i.jsx)(O.A, { user: n, size: x._3.SIZE_24, className: ei.my }),
                     (0, i.jsxs)("div", {
+                        className: ei.SP,
                         children: [
-                            null != n && (0, i.jsx)(S.A, { discriminatorClass: ei.D2, user: n }),
+                            null != n && (0, i.jsx)(S.A, { discriminatorClass: ei.D2, usernameClass: ei.Yo, user: n }),
                             l &&
                                 null != s &&
                                 (0, i.jsx)(p.E, {
+                                    className: ei.po,
                                     variant: "body-xs/normal",
                                     color: "text-default",
                                     children: (0, L.m1)(s, Z.default, Q.A, !0),

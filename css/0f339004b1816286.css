@@ -156,6 +156,20 @@
     margin-inline-end: 12px
 }
 
+.inviterInfo_k0kUi1 {
+    min-width: 0
+}
+
+.inviterUsername_k0kUi1 {
+    min-width: 0
+}
+
+.inviterChannel_k0kUi1,
+.inviterUsername_k0kUi1 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
 .bypass_k0kUi1 {
     align-items: center;
     display: flex;
@@ -170,4 +184,4 @@
     margin-bottom: 20px
 }
 
-/*# sourceMappingURL=81b1ea0dff3b8b38.css.map*/
+/*# sourceMappingURL=0f339004b1816286.css.map*/

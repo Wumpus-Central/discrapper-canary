@@ -18,6 +18,9 @@ i.exports = {
     r9: "uses_k0kUi1",
     D2: "discriminator_k0kUi1",
     my: "avatar_k0kUi1",
+    SP: "inviterInfo_k0kUi1",
+    Yo: "inviterUsername_k0kUi1",
+    po: "inviterChannel_k0kUi1",
     XH: "bypass_k0kUi1",
     G: "infoIcon_k0kUi1",
 };
