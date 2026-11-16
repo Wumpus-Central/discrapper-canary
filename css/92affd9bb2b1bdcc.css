@@ -133,7 +133,10 @@
 }
 
 .showScroller_CtY5AU {
-    height: 140px
+    height: calc(140px + var(--space-4)*2);
+    margin: calc(var(--space-4)*-1);
+    padding: var(--space-4);
+    scroll-padding-block: var(--space-4)
 }
 
 .buttonContainer_CtY5AU {
@@ -142,4 +145,4 @@
     padding-top: var(--space-8)
 }
 
-/*# sourceMappingURL=50bc423cbed29d0f.css.map*/
+/*# sourceMappingURL=92affd9bb2b1bdcc.css.map*/

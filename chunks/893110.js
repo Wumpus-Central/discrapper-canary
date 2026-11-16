@@ -6,21 +6,21 @@ var l = n(477900),
     a = n(95362),
     u = n(534514),
     c = n(123292),
-    d = n(811091),
-    o = n(435558),
-    m = n.n(o),
+    o = n(811091),
+    d = n(435558),
+    m = n.n(d),
     h = n(819169),
     g = n(855986),
     v = n(927813),
-    p = n(285059),
-    f = n(698441),
+    f = n(285059),
+    p = n(698441),
     C = n(974930),
     y = n(890856),
     E = n(834730),
     A = n(408278),
     _ = n(365199),
-    x = n(442433),
-    k = n(734057),
+    k = n(442433),
+    x = n(734057),
     b = n(71393),
     I = n(722260),
     D = n(492260),
@@ -29,25 +29,26 @@ var l = n(477900),
     N = n(792996),
     G = n(214040);
 function T(t) {
-    let { recurrenceId: e, originalScheduledStartTime: i, guildEventId: r, onClick: a, isActive: u } = t,
-        c = (0, g.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(r)),
-        d = (0, I.A)(e, c?.id),
-        o = (0, g.bG)([b.A], () => b.A.getGuild(c?.guild_id)),
-        m = (0, g.bG)([k.A], () => k.A.getChannel(c?.channel_id)),
-        { is_canceled: h = !1 } = d ?? {},
-        v = d?.scheduled_start_time != null ? new Date(d?.scheduled_start_time) : i,
-        p = (0, D.A)(v.toISOString(), void 0, null != c),
-        { startDateTimeString: T } = p;
-    if (null == c) return null;
-    let w = (0, C.G3)(c),
-        L = h ? j.XG.CANCELED : j.XG.SCHEDULED;
-    w === e && (L = c.status);
-    let z = c?.scheduled_start_time != null ? (0, C.j)(d, v, new Date(c?.scheduled_start_time)) : null;
-    function P(t) {
-        null == c ||
+    let { recurrenceId: e, originalScheduledStartTime: r, guildEventId: a, onClick: u, isActive: c } = t,
+        o = (0, g.bG)([p.Ay], () => p.Ay.getGuildScheduledEvent(a)),
+        d = (0, I.A)(e, o?.id),
+        m = (0, g.bG)([b.A], () => b.A.getGuild(o?.guild_id)),
+        h = (0, g.bG)([x.A], () => x.A.getChannel(o?.channel_id)),
+        { is_canceled: v = !1 } = d ?? {},
+        f = d?.scheduled_start_time != null ? new Date(d?.scheduled_start_time) : r,
+        T = (0, D.A)(f.toISOString(), void 0, null != o),
+        { startDateTimeString: w } = T,
+        L = i.useRef(null);
+    if (null == o) return null;
+    let z = (0, C.G3)(o),
+        P = v ? j.XG.CANCELED : j.XG.SCHEDULED;
+    z === e && (P = o.status);
+    let X = o?.scheduled_start_time != null ? (0, C.j)(d, f, new Date(o?.scheduled_start_time)) : null;
+    function q(t) {
+        null == o ||
             (t.stopPropagation(),
-            null != o &&
-                (0, x.L3)(t, async () => {
+            null != m &&
+                (0, k.L3)(t, async () => {
                     let { default: t } = await Promise.all([
                         n.e(476662),
                         n.e(253044),
@@ -69,33 +70,35 @@ function T(t) {
                     ]).then(n.bind(n, 924037));
                     return (n) =>
                         (0, l.jsx)(t, {
-                            guildEventId: c.id,
+                            guildEventId: o.id,
                             recurrenceId: e,
-                            channel: m,
-                            guild: o,
+                            channel: h,
+                            guild: m,
                             isRecurrenceItem: !0,
                             ...n,
                         });
                 }));
     }
     return (0, l.jsxs)(y.s, {
-        className: s()(G.kL, { [G.aD]: h, [G.vk]: null != a, [G.vu]: u }),
+        className: s()(G.kL, { [G.aD]: v, [G.vk]: null != u, [G.vu]: c }),
+        ref: L,
         onClick: function (t) {
-            (t.stopPropagation(), h || a?.(e));
+            (t.stopPropagation(), v || u?.(e));
         },
-        onContextMenu: P,
-        "aria-label": (0, S.o)({ timeData: p, status: z ?? L, eventType: c.entity_type, isCanceled: h }),
+        onContextMenu: q,
+        onFocus: () => L.current?.scrollIntoView({ block: "nearest" }),
+        "aria-label": (0, S.o)({ timeData: T, status: X ?? P, eventType: o.entity_type, isCanceled: v }),
         children: [
             (0, l.jsx)(S.L, {
-                startTime: v.toISOString(),
-                status: z ?? L,
-                eventType: c.entity_type,
-                guildEventId: c.id,
+                startTime: f.toISOString(),
+                status: X ?? P,
+                eventType: o.entity_type,
+                guildEventId: o.id,
                 recurrenceId: e,
-                timeData: p,
+                timeData: T,
                 className: G.q$,
             }),
-            h &&
+            v &&
                 (0, l.jsx)(E.E, {
                     variant: "body-sm/semibold",
                     color: "text-feedback-critical",
@@ -106,8 +109,8 @@ function T(t) {
                 icon: _.MoreHorizontalIcon,
                 variant: "icon-only",
                 size: "sm",
-                "aria-label": N.intl.formatToPlainString(N.t.aNAh3u, { eventTime: T }),
-                onClick: P,
+                "aria-label": N.intl.formatToPlainString(N.t.aNAh3u, { eventTime: w }),
+                onClick: q,
             }),
         ],
     });
@@ -118,16 +121,16 @@ function L(t) {
             guildId: e,
             recurrenceRule: n,
             guildEventId: r,
-            onRecurrenceClick: o,
+            onRecurrenceClick: d,
             hideScroller: y = !1,
             activeRecurrenceId: E,
         } = t,
         {
             recurrenceStartTimes: A,
             canViewMoreRecurrences: _,
-            updateRecurrenceStartTimes: x,
+            updateRecurrenceStartTimes: k,
         } = (function (t, e, n) {
-            let l = (0, g.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(t)),
+            let l = (0, g.bG)([p.Ay], () => p.Ay.getGuildScheduledEvent(t)),
                 r = (0, h.A)(n),
                 [s, a] = i.useState(
                     null != n && null != l ? (0, C.er)(4, (0, C.X7)(n), new Date(l.scheduled_start_time)) : [],
@@ -140,9 +143,9 @@ function L(t) {
                 i.useEffect(() => {
                     if (null == e) return;
                     let n = s.map((t) =>
-                        d.default.fromTimestamp(Math.floor(t.getTime() / v.A.Millis.SECOND) * v.A.Millis.SECOND),
+                        o.default.fromTimestamp(Math.floor(t.getTime() / v.A.Millis.SECOND) * v.A.Millis.SECOND),
                     );
-                    p.A.getGuildEventUserCounts(e, t, n);
+                    f.A.getGuildEventUserCounts(e, t, n);
                 }, [t, e, s]));
             let u = i.useMemo(() => {
                 if (null == n || 0 === s.length || l?.scheduled_start_time == null) return !1;
@@ -163,23 +166,23 @@ function L(t) {
                 },
             };
         })(r, e, n),
-        k = y ? "div" : a.Ip;
+        x = y ? "div" : a.Ip;
     return (0, l.jsxs)("div", {
         className: w.w5,
         children: [
             (0, l.jsx)(u.D, { variant: "heading-xs/medium", className: w.R_, children: N.intl.string(N.t["D/jjoa"]) }),
-            (0, l.jsxs)(k, {
+            (0, l.jsxs)(x, {
                 className: s()(w.XG, { [w.cq]: !y }),
                 children: [
                     A.map((t) => {
-                        let e = d.default.fromTimestamp(t.getTime());
+                        let e = o.default.fromTimestamp(t.getTime());
                         return (0, l.jsx)(
                             T,
                             {
                                 recurrenceId: e,
                                 originalScheduledStartTime: t,
                                 guildEventId: r,
-                                onClick: o,
+                                onClick: d,
                                 isActive: e === E,
                             },
                             e,
@@ -190,7 +193,7 @@ function L(t) {
                             className: w.UD,
                             children: (0, l.jsx)(c.Q, {
                                 onClick: function (t) {
-                                    (t.stopPropagation(), x());
+                                    (t.stopPropagation(), k());
                                 },
                                 text: N.intl.string(N.t["8O7Hpy"]),
                                 size: "sm",
