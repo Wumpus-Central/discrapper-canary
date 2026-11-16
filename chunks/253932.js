@@ -774,13 +774,13 @@ let e7 = (0, _.c$)("textAndImages", "goreContentSettings", e6, e5);
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ));
-let e4 = (0, _.c$)(
+let e8 = (0, _.c$)(
         "appearance",
         "timestampHourCycle",
         (e) => e ?? s.PZ.AUTO,
         (e) => e,
     ),
-    e8 = (0, _.c$)("appearance", "defaultGuildThemePreference", u.v, (e) => e);
+    e4 = (0, _.c$)("appearance", "defaultGuildThemePreference", u.v, (e) => e);
 ((0, _.c$)(
     "appearance",
     "launchPadMode",
@@ -859,7 +859,7 @@ n.d(
         NF: e6,
         NO: P,
         NR: L,
-        PZ: e4,
+        PZ: e8,
         Pf: X,
         Pw: eK,
         Q$: eb,
@@ -934,6 +934,6 @@ n.d(
         vf: eE,
         wv: H,
         zS: v,
-        zY: e8,
+        zY: e4,
     },
 );

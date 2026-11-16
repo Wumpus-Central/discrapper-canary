@@ -1,12 +1,12 @@
-var l = t(582128);
-let r = l.createContext(null);
+var r = t(582128);
+let l = r.createContext(null);
 t.d(
     n,
     {},
     {
-        O: r,
+        O: l,
         p: function () {
-            return l.useContext(r);
+            return r.useContext(l);
         },
     },
 );
