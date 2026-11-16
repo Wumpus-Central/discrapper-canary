@@ -10,6 +10,7 @@ n.d(
     {
         $9: function (e, t) {
             if (null == e) return null;
+            if (e.code === i.tG.BILLING_PURCHASE_BLOCKED_BY_RESTRICTION) return e.message;
             if (e instanceof r.FY && null != t)
                 switch (t) {
                     case s.j.INSUFFICIENT_ORB_BALANCE:

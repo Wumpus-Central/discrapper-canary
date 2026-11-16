@@ -49,6 +49,7 @@ var i,
         (i[(i.BILLING_ORDER_NOT_SIGNABLE = 100152)] = "BILLING_ORDER_NOT_SIGNABLE"),
         (i[(i.BILLING_APPLE_STORE_COUNTRY_MISMATCH = 100153)] = "BILLING_APPLE_STORE_COUNTRY_MISMATCH"),
         (i[(i.BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE = 100155)] = "BILLING_CLAIM_IN_GAME_BEFORE_REPURCHASE"),
+        (i[(i.BILLING_PURCHASE_BLOCKED_BY_RESTRICTION = 100166)] = "BILLING_PURCHASE_BLOCKED_BY_RESTRICTION"),
         (i[(i.BILLING_WALLET_BALANCE_CHANGED = 100167)] = "BILLING_WALLET_BALANCE_CHANGED"),
         (i[(i.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE = 590001)] = "VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE"),
         i),
@@ -90,39 +91,41 @@ class h extends l.A {
     static ADDRESS_ERRORS = f;
     constructor(e, t) {
         for (let n in (super(e, t),
-        100027 === this.code
-            ? (this.message = o.intl.string(o.t["+4Empk"]))
-            : 50048 === this.code
-              ? (this.message = o.intl.string(o.t.DtFqEI))
-              : 100002 === this.code
-                ? (this.message = o.intl.string(o.t.yNYvK1))
-                : 100042 === this.code
-                  ? (this.message = o.intl.string(o.t["3jprCb"]))
-                  : 100078 === this.code
-                    ? (this.message = o.intl.string(o.t.MHlpoJ))
-                    : 100096 === this.code
-                      ? (this.message = o.intl.string(o.t.Hiwqua))
-                      : 100097 === this.code
-                        ? (this.message = o.intl.string(o.t.c5zDr3))
-                        : 100107 === this.code
-                          ? (this.message = o.intl.string(o.t.yX8s2v))
-                          : 100054 === this.code
-                            ? (this.message = o.intl.string(o.t.p0UBvU))
-                            : 100111 === this.code
-                              ? (this.message = o.intl.string(o.t.uhPY5p))
-                              : 100144 === this.code
-                                ? (this.message = o.intl.string(o.t.ckFebQ))
-                                : 100011 === this.code
-                                  ? (this.message = o.intl.string(o.t["3RT0Iu"]))
-                                  : 100155 === this.code
-                                    ? (this.message = o.intl.string(o.t.Zr0Z4K))
-                                    : 429 === this.status
-                                      ? (this.message = o.intl.string(o.t.sUWxgR))
-                                      : 0 === this.code
-                                        ? (this.message = o.intl.string(o.t["5mlOCW"]))
-                                        : 400 === this.status &&
-                                          null != this.fields.captcha_key &&
-                                          (this.message = o.intl.string(o.t["3s/vDN"])),
+        100166 === this.code
+            ? (this.message = o.intl.string(o.t.ngZimk))
+            : 100027 === this.code
+              ? (this.message = o.intl.string(o.t["+4Empk"]))
+              : 50048 === this.code
+                ? (this.message = o.intl.string(o.t.DtFqEI))
+                : 100002 === this.code
+                  ? (this.message = o.intl.string(o.t.yNYvK1))
+                  : 100042 === this.code
+                    ? (this.message = o.intl.string(o.t["3jprCb"]))
+                    : 100078 === this.code
+                      ? (this.message = o.intl.string(o.t.MHlpoJ))
+                      : 100096 === this.code
+                        ? (this.message = o.intl.string(o.t.Hiwqua))
+                        : 100097 === this.code
+                          ? (this.message = o.intl.string(o.t.c5zDr3))
+                          : 100107 === this.code
+                            ? (this.message = o.intl.string(o.t.yX8s2v))
+                            : 100054 === this.code
+                              ? (this.message = o.intl.string(o.t.p0UBvU))
+                              : 100111 === this.code
+                                ? (this.message = o.intl.string(o.t.uhPY5p))
+                                : 100144 === this.code
+                                  ? (this.message = o.intl.string(o.t.ckFebQ))
+                                  : 100011 === this.code
+                                    ? (this.message = o.intl.string(o.t["3RT0Iu"]))
+                                    : 100155 === this.code
+                                      ? (this.message = o.intl.string(o.t.Zr0Z4K))
+                                      : 429 === this.status
+                                        ? (this.message = o.intl.string(o.t.sUWxgR))
+                                        : 0 === this.code
+                                          ? (this.message = o.intl.string(o.t["5mlOCW"]))
+                                          : 400 === this.status &&
+                                            null != this.fields.captcha_key &&
+                                            (this.message = o.intl.string(o.t["3s/vDN"])),
         this.fields)) {
             let e = u[n] || _[n];
             if (null != e) {

@@ -1,15 +1,15 @@
 var n = r(582128),
-    l = r(158317),
-    a = r(184684),
+    a = r(158317),
+    l = r(313125),
     i = r(786953),
-    c = r(792996);
+    d = r(792996);
 r.d(
     t,
     {},
     {
         Q: function (e) {
             let [t, r] = (0, n.useState)(""),
-                [d, s] = (0, n.useState)([]),
+                [c, s] = (0, n.useState)([]),
                 [o, u] = (0, n.useState)(null),
                 [h, _] = (0, n.useState)(!1),
                 E = e.useOrdersAPI,
@@ -19,7 +19,7 @@ r.d(
                     error: m,
                     signOrder: y,
                     reportError: f,
-                } = (0, a.f)({ order: R, errorSource: "orb_redeem_orders_api", onSignFailure: C }),
+                } = (0, l.f)({ order: R, errorSource: "orb_redeem_orders_api", onSignFailure: C }),
                 g = E ? m : o,
                 A = e.onSetIsSubmitting,
                 p = (0, n.useCallback)(
@@ -34,8 +34,8 @@ r.d(
                         let n = await y({ loadId: t, errorExtra: { skuId: e, loadId: t } });
                         if ("signed" !== n.type) return void p(!1);
                         try {
-                            let t = await (0, l.Vw)(n.order.id);
-                            if (0 === t.length) throw new l.j2();
+                            let t = await (0, a.Vw)(n.order.id);
+                            if (0 === t.length) throw new a.j2();
                             (s(t), (0, i.sn)({ skuId: e, entitlements: t }), r?.(t));
                         } catch (r) {
                             f(r, { skuId: e, loadId: t, orderId: n.order.id });
@@ -71,20 +71,20 @@ r.d(
             return (
                 (0, n.useEffect)(() => {
                     if (null != g)
-                        return void r(c.intl.format(c.t["7gHWrd"], { amount: "1 orb", errorMessage: g.message }));
-                    if (null != d && d.length > 0) {
-                        let e = d.map((e) => e.sku?.name);
+                        return void r(d.intl.format(d.t["7gHWrd"], { amount: "1 orb", errorMessage: g.message }));
+                    if (null != c && c.length > 0) {
+                        let e = c.map((e) => e.sku?.name);
                         r(
-                            c.intl.format(c.t.JxNFav, {
+                            d.intl.format(d.t.JxNFav, {
                                 amountDescription: "1 orb",
-                                redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === d.length ? "ID" : "IDs"}: ${d.map((e) => e.id).join(", ")}`,
+                                redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === c.length ? "ID" : "IDs"}: ${c.map((e) => e.id).join(", ")}`,
                             }),
                         );
                         return;
                     }
                     r("");
-                }, [d, g]),
-                { entitlements: d, error: g, isSubmitting: h, responseMessage: t, redeemVirtualCurrency: S }
+                }, [c, g]),
+                { entitlements: c, error: g, isSubmitting: h, responseMessage: t, redeemVirtualCurrency: S }
             );
         },
     },

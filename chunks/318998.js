@@ -6,15 +6,16 @@ var e = n(477900),
     l = n(539267),
     u = n(189213),
     c = n(785007),
-    o = n(683071),
-    d = n(964486),
-    m = n(669815),
-    p = n(448645),
-    S = n(615396),
-    C = n(473702),
-    D = n(916974),
-    g = n(652215),
-    y = n(792996),
+    o = n(834730),
+    d = n(136857),
+    m = n(964486),
+    p = n(669815),
+    S = n(448645),
+    y = n(615396),
+    D = n(473702),
+    C = n(916974),
+    f = n(652215),
+    g = n(792996),
     h = n(203450);
 n.d(
     a,
@@ -28,23 +29,23 @@ n.d(
                     setPauseDuration: r,
                     pauseDuration: s,
                     premiumSubscription: o,
-                } = (0, D.X)(),
-                m = i.useCallback(
+                } = (0, C.X)(),
+                d = i.useCallback(
                     (t) => {
                         let { value: a } = t;
                         r(a);
                     },
                     [r],
                 ),
-                p = o.status === g.Dmq.PAUSED ? y.intl.string(y.t.Lp9WoG) : y.intl.string(y.t.eSR83U),
-                f = (function (t) {
-                    let a = t.status === g.Dmq.PAUSED ? y.t.o3upfT : y.t.dBXZEm,
-                        { durations: n, currentDaysPaused: e } = (0, S.Vy)(t),
+                p = o.status === f.Dmq.PAUSED ? g.intl.string(g.t.Lp9WoG) : g.intl.string(g.t.eSR83U),
+                S = (function (t) {
+                    let a = t.status === f.Dmq.PAUSED ? g.t.o3upfT : g.t.dBXZEm,
+                        { durations: n, currentDaysPaused: e } = (0, y.Vy)(t),
                         i = [];
                     for (let t of n) {
                         let n = l.V[t];
                         i.push({
-                            name: y.intl.formatToPlainString(a, { days: n - e }),
+                            name: g.intl.formatToPlainString(a, { days: n - e }),
                             value: n,
                             radioItemIconClassName: h.hO,
                         });
@@ -52,7 +53,7 @@ n.d(
                     return (
                         i.sort((t, a) => t.value - a.value),
                         i.push({
-                            name: y.intl.string(y.t.OCPUM6),
+                            name: g.intl.string(g.t.OCPUM6),
                             value: 0,
                             radioBarClassName: h.CK,
                             radioItemIconClassName: h.CK,
@@ -61,28 +62,28 @@ n.d(
                     );
                 })(o);
             return (
-                (0, d.Ay)(() => {
-                    f.length < 1 || r(f[0].value);
+                (0, m.Ay)(() => {
+                    S.length < 1 || r(S[0].value);
                 }),
                 (0, e.jsx)(u.a, {
                     transitionState: t,
-                    title: y.intl.string(y.t["f3nnB/"]),
+                    title: g.intl.string(g.t["f3nnB/"]),
                     subtitle: p,
                     onClose: async () => {
                         await a();
                     },
                     actions: [
-                        { variant: "secondary", text: y.intl.string(y.t.rzVN6j), onClick: a },
+                        { variant: "secondary", text: g.intl.string(g.t.rzVN6j), onClick: a },
                         {
                             variant: "primary",
                             disabled: null === s,
-                            text: y.intl.string(y.t["3PatSz"]),
+                            text: g.intl.string(g.t["3PatSz"]),
                             onClick: () => {
-                                0 === s ? n(C.g.WHAT_YOU_LOSE) : n(C.g.PAUSE_CONFIRM);
+                                0 === s ? n(D.g.WHAT_YOU_LOSE) : n(D.g.PAUSE_CONFIRM);
                             },
                         },
                     ],
-                    children: (0, e.jsx)(c.$d, { "data-migration-pending": !0, options: f, onChange: m, value: s }),
+                    children: (0, e.jsx)(c.$d, { "data-migration-pending": !0, options: S, onChange: d, value: s }),
                 })
             );
         },
@@ -94,33 +95,33 @@ n.d(
                     premiumSubscription: r,
                     analyticsLocation: l,
                     setStep: c,
-                    analyticsLocations: d,
-                } = (0, D.X)(),
-                [S, f] = i.useState(!1),
-                [v, P] = i.useState(!1);
-            if (null == n) return void c(C.g.PAUSE_SELECT);
+                    analyticsLocations: m,
+                } = (0, C.X)(),
+                [y, v] = i.useState(null),
+                [P, A] = i.useState(!1);
+            if (null == n) return void c(D.g.PAUSE_SELECT);
             let E = null,
-                x = [g.Dmq.PAST_DUE, g.Dmq.PAUSED].includes(r.status) ? r.currentPeriodStart : r.currentPeriodEnd,
-                A = s()(x).add(n, "days").toDate();
+                x = [f.Dmq.PAST_DUE, f.Dmq.PAUSED].includes(r.status) ? r.currentPeriodStart : r.currentPeriodEnd,
+                b = s()(x).add(n, "days").toDate();
             switch (r.status) {
-                case g.Dmq.PAST_DUE:
-                    E = y.intl.format(y.t["xaS18/"], { pauseDuration: n, resumeDate: A });
+                case f.Dmq.PAST_DUE:
+                    E = g.intl.format(g.t["xaS18/"], { pauseDuration: n, resumeDate: b });
                     break;
-                case g.Dmq.PAUSED:
-                    E = y.intl.format(y.t.Vur3Fc, { resumeDate: A });
+                case f.Dmq.PAUSED:
+                    E = g.intl.format(g.t.Vur3Fc, { resumeDate: b });
                     break;
                 default:
-                    E = y.intl.format(y.t.W85vFA, { pauseDate: x, resumeDate: A, pauseDuration: n });
+                    E = g.intl.format(g.t.W85vFA, { pauseDate: x, resumeDate: b, pauseDuration: n });
             }
             return (0, e.jsxs)(u.a, {
-                title: y.intl.string(y.t.AnMG5x),
+                title: g.intl.string(g.t.AnMG5x),
                 transitionState: t,
                 actions: [
-                    { text: y.intl.string(y.t.rzVN6j), variant: "primary", onClick: a },
+                    { text: g.intl.string(g.t.rzVN6j), variant: "primary", onClick: a },
                     {
-                        text: y.intl.string(y.t["cY+Oob"]),
+                        text: g.intl.string(g.t["cY+Oob"]),
                         variant: "critical-primary",
-                        disabled: v || null == n,
+                        disabled: P || null == n,
                         onClick: async () => {
                             await (async function (t) {
                                 let {
@@ -134,26 +135,28 @@ n.d(
                                 } = t;
                                 try {
                                     (r(!0),
-                                        i(!1),
-                                        await (0, m.nV)(
+                                        i(null),
+                                        await (0, p.nV)(
                                             a,
                                             { pauseDuration: n },
                                             { amount: 0, currency: a.currency },
-                                            (0, p.UC)(a.items, a.currency, a.paymentSourceId),
+                                            (0, S.UC)(a.items, a.currency, a.paymentSourceId),
                                             s,
                                             l,
                                         ),
                                         e());
-                                } catch {
-                                    (i(!0), r(!1));
+                                } catch (t) {
+                                    i(t instanceof d.Ay ? t : new d.Ay(t));
+                                } finally {
+                                    r(!1);
                                 }
                             })({
                                 premiumSubscription: r,
                                 pauseDuration: n,
-                                setIsCancelling: P,
-                                setHasError: f,
+                                setIsCancelling: A,
+                                setHasError: v,
                                 onClose: a,
-                                analyticsLocations: d,
+                                analyticsLocations: m,
                                 analyticsLocation: l,
                             });
                         },
@@ -163,13 +166,14 @@ n.d(
                     await a();
                 },
                 children: [
-                    S
+                    null != y
                         ? (0, e.jsx)("div", {
                               className: h.QK,
-                              children: (0, e.jsx)(o.w, {
-                                  type: "critical",
-                                  message: y.intl.string(y.t["5mlOCW"]),
+                              children: (0, e.jsx)(o.E, {
+                                  variant: "body-sm/normal",
+                                  color: "text-feedback-critical",
                                   role: "alert",
+                                  children: y.message,
                               }),
                           })
                         : null,

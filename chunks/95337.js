@@ -2,14 +2,15 @@ e(321073);
 var i = e(477900),
     r = e(582128),
     l = e(189213),
-    a = e(683071),
-    s = e(975571),
-    o = e(448645),
-    u = e(473702),
-    c = e(916974),
-    d = e(682901),
-    m = e(88001),
-    f = e(652215),
+    a = e(834730),
+    s = e(136857),
+    o = e(975571),
+    u = e(448645),
+    c = e(473702),
+    d = e(916974),
+    m = e(682901),
+    f = e(88001),
+    y = e(652215),
     p = e(107198),
     C = e(792996);
 e.d(
@@ -22,49 +23,51 @@ e.d(
                     onClose: n,
                     premiumType: e,
                     setStep: g,
-                    premiumSubscription: y,
-                    paymentsBlocked: h,
-                    planId: P,
-                    handleCancellation: x,
-                } = (0, c.X)(),
-                [v, E] = (0, r.useState)(!1),
-                [D, j] = (0, r.useState)(!1),
-                b =
-                    (y.items.some((t) => {
+                    premiumSubscription: h,
+                    paymentsBlocked: P,
+                    planId: x,
+                    handleCancellation: v,
+                } = (0, d.X)(),
+                [E, D] = (0, r.useState)(!1),
+                [b, A] = (0, r.useState)(null),
+                N =
+                    (h.items.some((t) => {
                         let { planId: n } = t;
-                        return !d.JM.has(n);
+                        return !m.JM.has(n);
                     }) &&
-                        null == y.renewalMutations) ||
-                    y.renewalMutations?.items.find((t) => {
+                        null == h.renewalMutations) ||
+                    h.renewalMutations?.items.find((t) => {
                         let { planId: n } = t;
-                        return !d.JM.has(n);
+                        return !m.JM.has(n);
                     }) != null,
-                N = [];
-            (N.push({ text: C.intl.string(C.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
-                b
-                    ? N.push({
+                j = [];
+            (j.push({ text: C.intl.string(C.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
+                N
+                    ? j.push({
                           text: C.intl.string(C.t.PDTjLN),
-                          onClick: () => g(u.g.PREVIEW),
-                          disabled: v,
+                          onClick: () => g(c.g.PREVIEW),
+                          disabled: E,
                           variant: "critical-primary",
-                          loading: v,
+                          loading: E,
                       })
-                    : N.push({
+                    : j.push({
                           text: C.intl.string(C.t["cY+Oob"]),
                           onClick: () =>
                               (async function () {
-                                  (E(!0), j(!1));
+                                  (D(!0), A(null));
                                   try {
-                                      (await x(), n());
+                                      (await v(), n());
                                   } catch (t) {
-                                      (j(!0), E(!1));
+                                      A(t instanceof s.Ay ? t : new s.Ay(t));
+                                  } finally {
+                                      D(!1);
                                   }
                               })(),
-                          disabled: v,
+                          disabled: E,
                           variant: "critical-primary",
-                          loading: v,
+                          loading: E,
                       }));
-            let S = (0, o.Zb)(P),
+            let S = (0, u.Zb)(x),
                 T = S ? C.intl.string(p.default.qbDPGM) : C.intl.string(C.t.LZunzZ);
             return (0, i.jsx)(l.a, {
                 size: "md",
@@ -72,46 +75,52 @@ e.d(
                 title: T,
                 subtitle: (function (t, n, e, i) {
                     switch (e.status) {
-                        case f.Dmq.PAST_DUE:
-                        case f.Dmq.PAUSED:
-                        case f.Dmq.BILLING_RETRY:
+                        case y.Dmq.PAST_DUE:
+                        case y.Dmq.PAUSED:
+                        case y.Dmq.BILLING_RETRY:
                             return C.intl.string(C.t.FClXh9);
                         default:
                             if (i)
                                 return C.intl.formatToPlainString(p.default.MI8Rml, {
                                     endDate: e.currentPeriodEnd,
-                                    premiumGroupProductName: (0, m.DP)(),
+                                    premiumGroupProductName: (0, f.DP)(),
                                 });
                             switch (n) {
-                                case d.PremiumTypes.TIER_0:
+                                case m.PremiumTypes.TIER_0:
                                     return t
                                         ? C.intl.format(C.t["l+A50F"], {
                                               date: e.currentPeriodEnd,
-                                              helpdeskArticle: s.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
+                                              helpdeskArticle: o.A.getArticleURL(y.MVz.BLOCKED_PAYMENTS),
                                           })
                                         : C.intl.format(C.t.Y6Wfaw, { date: e.currentPeriodEnd });
-                                case d.PremiumTypes.TIER_1:
+                                case m.PremiumTypes.TIER_1:
                                     return t
                                         ? C.intl.format(C.t.QN7eIt, {
                                               date: e.currentPeriodEnd,
-                                              helpdeskArticle: s.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
+                                              helpdeskArticle: o.A.getArticleURL(y.MVz.BLOCKED_PAYMENTS),
                                           })
                                         : C.intl.format(C.t.X7i9D8, { date: e.currentPeriodEnd });
                                 default:
                                     return t
                                         ? C.intl.format(C.t.vuSNhj, {
                                               date: e.currentPeriodEnd,
-                                              helpdeskArticle: s.A.getArticleURL(f.MVz.BLOCKED_PAYMENTS),
+                                              helpdeskArticle: o.A.getArticleURL(y.MVz.BLOCKED_PAYMENTS),
                                           })
                                         : C.intl.format(C.t.fCdmNs, { date: e.currentPeriodEnd });
                             }
                     }
-                })(h, e, y, S),
-                actions: N,
+                })(P, e, h, S),
+                actions: j,
                 onClose: async () => n(),
-                children: D
-                    ? (0, i.jsx)(a.w, { type: "critical", message: C.intl.string(C.t["5mlOCW"]), role: "alert" })
-                    : null,
+                children:
+                    null != b
+                        ? (0, i.jsx)(a.E, {
+                              variant: "body-sm/normal",
+                              color: "text-feedback-critical",
+                              role: "alert",
+                              children: b.message,
+                          })
+                        : null,
             });
         },
     },

@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => F });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -10,36 +10,38 @@ var i = n(477900),
     c = n(821609),
     g = n(28863),
     m = n(289873),
-    A = n(331322),
-    E = n(683071),
-    h = n(391048),
-    S = n(158032),
-    T = n(362111),
-    f = n(506426),
-    p = n(637141),
-    x = n(688810),
-    I = n(669815),
-    _ = n(351906),
-    N = n(97352),
-    b = n(448645),
-    C = n(83617),
-    y = n(615396),
-    v = n(543767),
-    j = n(160946),
-    O = n(295405),
-    D = n(793574),
-    R = n(166532),
-    L = n(778705);
-function P(e) {
+    A = n(834730),
+    E = n(331322),
+    h = n(683071),
+    S = n(391048),
+    T = n(158032),
+    f = n(362111),
+    p = n(506426),
+    x = n(637141),
+    I = n(136857),
+    _ = n(688810),
+    b = n(669815),
+    N = n(351906),
+    C = n(97352),
+    y = n(448645),
+    v = n(83617),
+    j = n(615396),
+    O = n(543767),
+    D = n(160946),
+    R = n(295405),
+    L = n(793574),
+    P = n(166532),
+    G = n(778705);
+function M(e) {
     let { dropdownProps: t, subscription: n, openInvoice: l } = e,
-        { analyticsLocations: s } = (0, x.Ay)(D.A.SUBSCRIPTION_DETAILS);
+        { analyticsLocations: s } = (0, _.Ay)(L.A.SUBSCRIPTION_DETAILS);
     return null == l
-        ? (0, i.jsx)(p.Ay, { ...t, disabled: !0 })
-        : (0, i.jsx)(p.Ay, {
+        ? (0, i.jsx)(x.Ay, { ...t, disabled: !0 })
+        : (0, i.jsx)(x.Ay, {
               ...t,
               onChange: (e) => {
                   null != e &&
-                      (0, L.A)({
+                      (0, G.A)({
                           initialPlanId: n.planIdFromItems,
                           openInvoiceId: l.id,
                           analyticsLocations: s,
@@ -47,44 +49,44 @@ function P(e) {
                       });
               },
               onPaymentSourceAdd: () => {
-                  (0, L.A)({
+                  (0, G.A)({
                       initialPlanId: n.planIdFromItems,
                       openInvoiceId: l.id,
                       analyticsLocations: s,
-                      startingStepOverride: R.pn.ADD_PAYMENT_STEPS,
+                      startingStepOverride: P.pn.ADD_PAYMENT_STEPS,
                   });
               },
           });
 }
-var G = n(652215),
-    M = n(792996),
-    U = n(153345),
-    V = n(938442);
-function k(e) {
+var U = n(652215),
+    V = n(792996),
+    k = n(153345),
+    w = n(938442);
+function F(e) {
     let {
             subscription: t,
             onPaymentSourceAdded: s,
             highlightAddPaymentMethodButton: a,
-            analyticsLocation: D,
-            currentInvoicePreview: R,
-            disabled: L = !1,
-            openInvoice: k,
-            isBrandRefresh: w = !1,
-            ref: F,
+            analyticsLocation: L,
+            currentInvoicePreview: P,
+            disabled: G = !1,
+            openInvoice: F,
+            isBrandRefresh: B = !1,
+            ref: X,
         } = e,
-        B = (0, u.bG)([_.A], () => _.A.hidePersonalInformation),
+        z = (0, u.bG)([N.A], () => N.A.hidePersonalInformation),
         {
-            validPaymentSources: X,
-            hasFetchedPaymentSources: z,
-            hasFetchedSubscriptionPlans: H,
-            hasFetchError: Y,
+            validPaymentSources: H,
+            hasFetchedPaymentSources: Y,
+            hasFetchedSubscriptionPlans: W,
+            hasFetchError: K,
         } = (function (e, t) {
-            let [n, i, s] = (0, u.yK)([O.A], () => [
-                    O.A.paymentSources,
-                    O.A.hasFetchedPaymentSources,
-                    O.A.paymentSourceFetchError,
+            let [n, i, s] = (0, u.yK)([R.A], () => [
+                    R.A.paymentSources,
+                    R.A.hasFetchedPaymentSources,
+                    R.A.paymentSourceFetchError,
                 ]),
-                r = (0, j.Y)((0, y.MP)(e)),
+                r = (0, D.Y)((0, j.MP)(e)),
                 a = l.useMemo(() => {
                     let e = t.checkoutContext;
                     if (null == e) return Object.values(n).filter((e) => !e.invalid);
@@ -100,73 +102,104 @@ function k(e) {
                 hasFetchedSubscriptionPlans: r,
                 canManagePayment: !o && !(s && 0 === a.length),
             };
-        })(t, R),
-        { analyticsLocations: W } = (0, x.Ay)(),
-        [K, Z] = l.useState(!1),
-        [q, Q] = l.useState(t.currency);
-    async function J(e, n, i) {
-        if (null == t) throw Error("missing subscription and paymentSource");
-        (null == e ? await S.r6(t, n, i, W, D) : await S.uK(t, e, i, W, D), Z(!1), Q(n));
+        })(t, P),
+        { analyticsLocations: Z } = (0, _.Ay)(),
+        [q, Q] = l.useState(!1),
+        [J, $] = l.useState(null),
+        [ee, et] = l.useState(t.currency);
+    async function en(e, n, i) {
+        (Q(!0), $(null));
+        try {
+            (null == e ? await T.r6(t, n, i, Z, L) : await T.uK(t, e, i, Z, L), et(n));
+        } catch (e) {
+            $(e instanceof I.Ay ? e : new I.Ay(e));
+        } finally {
+            Q(!1);
+        }
     }
-    async function $(e, l, s) {
-        Z(!0);
-        let r = await (0, v.OQ)({
-                subscriptionId: t.id,
-                paymentSourceId: e?.id,
-                renewal: !0,
-                currency: null != e ? void 0 : l,
-                analyticsLocations: W,
-                analyticsLocation: D,
-            }),
-            a = { amount: r.subtotal, currency: r.currency };
-        R.currency !== r.currency || (R.currency === r.currency && R.total !== r.total)
-            ? await (async function (e, t, l) {
-                  let s = await (0, d.mM)(
-                      async () => {
-                          let { default: s } = await n.e(771678).then(n.bind(n, 760941));
-                          return (n) => (0, i.jsx)(s, { newInvoice: e, onConfirm: t, onCancel: l, modalProps: n });
-                      },
-                      {
-                          onCloseRequest: () => {
-                              (null != s && (0, d.Oo)(s), l());
-                          },
-                      },
-                  );
-              })(
-                  r,
-                  () => {
-                      s(e, r.currency, a);
-                  },
-                  () => {
-                      Z(!1);
-                  },
-              )
-            : s(e, r.currency, a);
+    async function ei(e, l, s) {
+        (Q(!0), $(null));
+        try {
+            var r, a;
+            let o = await (0, O.OQ)({
+                    subscriptionId: t.id,
+                    paymentSourceId: e?.id,
+                    renewal: !0,
+                    currency: null != e ? void 0 : l,
+                    analyticsLocations: Z,
+                    analyticsLocation: L,
+                }),
+                u = { amount: o.subtotal, currency: o.currency };
+            P.currency !== o.currency || P.total !== o.total
+                ? await ((r = o),
+                  (a = () => s(e, o.currency, u)),
+                  new Promise((e, t) => {
+                      let l = !1;
+                      function s() {
+                          l || e();
+                      }
+                      !(async function () {
+                          try {
+                              await (0, d.mM)(
+                                  async () => {
+                                      let { default: o } = await n.e(771678).then(n.bind(n, 760941));
+                                      return (n) =>
+                                          (0, i.jsx)(o, {
+                                              newInvoice: r,
+                                              onConfirm: async () => {
+                                                  l = !0;
+                                                  try {
+                                                      (await a(), e());
+                                                  } catch (e) {
+                                                      t(e);
+                                                  }
+                                              },
+                                              onCancel: s,
+                                              modalProps: n,
+                                          });
+                                  },
+                                  { onCloseCallback: s },
+                              );
+                          } catch (e) {
+                              t(e);
+                          }
+                      })();
+                  }))
+                : await s(e, o.currency, u);
+        } catch (e) {
+            $(e instanceof I.Ay ? e : new I.Ay(e));
+        } finally {
+            Q(!1);
+        }
     }
-    function ee(e) {
-        ((0, C.c_)(e.id, (0, y.MP)(t)).then(() => {
-            $(e, void 0, J);
-        }),
-            "function" == typeof s && s(e.id));
+    async function el(e) {
+        (Q(!0), $(null));
+        let n = (0, v.c_)(e.id, (0, j.MP)(t));
+        s?.(e.id);
+        try {
+            (await n, await ei(e, void 0, en));
+        } catch (e) {
+            ($(e instanceof I.Ay ? e : new I.Ay(e)), Q(!1));
+        }
     }
-    let et = () => {
+    let es = () => {
             (0, d.mM)(
-                async () => (e) => (0, i.jsx)(T.default, { ...e, onAddPaymentSource: ee, analyticsLocation: D }),
+                async () => (e) => (0, i.jsx)(f.default, { ...e, onAddPaymentSource: el, analyticsLocation: L }),
                 {
                     onCloseCallback: () => {
-                        (0, h.ET)();
+                        (0, S.ET)();
                     },
-                    onCloseRequest: G.tEg,
+                    onCloseRequest: U.tEg,
                 },
             );
         },
-        en = l.useRef(null);
+        er = l.useRef(null);
     if (
-        (l.useImperativeHandle(F, () => ({
+        (l.useImperativeHandle(X, () => ({
             openManagePayment() {
                 if (t.isPurchasedExternally) return;
-                if (0 === X.length) return void et();
-                let e = en.current;
+                if (0 === H.length) return void es();
+                let e = er.current;
                 if (null == e) return;
                 e.scrollIntoView({ block: "center" });
                 let n = e.querySelector('[role="combobox"]');
@@ -178,94 +211,102 @@ function k(e) {
         let e;
         return (
             o()(null != t.paymentGateway, "Expected payment gateway when managed externally"),
-            (e = (0, b.tW)(t.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")),
+            (e = (0, y.tW)(t.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")),
             (0, i.jsx)(g.Anchor, {
                 href: e,
                 useDefaultUnderlineStyles: !1,
-                className: U.uZ,
-                children: (0, i.jsx)(c.$, { variant: "secondary", text: M.intl.string(M.t.SgX7Ra), fullWidth: !0 }),
+                className: k.uZ,
+                children: (0, i.jsx)(c.$, { variant: "secondary", text: V.intl.string(V.t.SgX7Ra), fullWidth: !0 }),
             })
         );
     }
-    if ((!z && !Y) || !H) return (0, i.jsx)(m.y, {});
-    if (X.length > 0) {
+    if ((!Y && !K) || !W) return (0, i.jsx)(m.y, {});
+    if (H.length > 0) {
         let e,
             n,
-            l = N.A.get(t.planIdForCurrencies);
+            l = C.A.get(t.planIdForCurrencies);
         o()(null != l, "Unable to fetch plan");
-        let s = null != R.checkoutContext ? R.checkoutContext.allowed_currencies : null,
-            a = null != s && s.length > 0 ? s : (0, C._w)(l, t.paymentSourceId, !1),
-            u = null != t.paymentSourceId ? X.find((e) => e.id === t.paymentSourceId) : null,
-            d = u?.type === G.hes.TDS_WALLET,
-            c = (0, i.jsx)(f.A, {
-                label: M.intl.string(M.t["0YjaXf"]),
-                selectedCurrency: q,
+        let s = null != P.checkoutContext ? P.checkoutContext.allowed_currencies : null,
+            a = null != s && s.length > 0 ? s : (0, v._w)(l, t.paymentSourceId, !1),
+            u = null != t.paymentSourceId ? H.find((e) => e.id === t.paymentSourceId) : null,
+            d = u?.type === U.hes.TDS_WALLET,
+            c = (0, i.jsx)(p.A, {
+                label: V.intl.string(V.t["0YjaXf"]),
+                selectedCurrency: ee,
                 currencies: a,
                 onChange: (e) => {
-                    $(void 0, e, J);
+                    ei(void 0, e, en);
                 },
             });
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", {
-                    ref: en,
+                    ref: er,
                     children:
                         ((n = {
                             prependOption:
                                 null == (e = t.paymentSourceId)
-                                    ? { label: M.intl.string(M.t.iA5vA1), value: null }
+                                    ? { label: V.intl.string(V.t.iA5vA1), value: null }
                                     : null,
-                            paymentSources: X,
-                            hidePersonalInformation: B,
+                            paymentSources: H,
+                            hidePersonalInformation: z,
                             selectedPaymentSourceId: e,
-                            onChange: function (e) {
-                                null != e && $(e, void 0, J);
+                            onChange: async function (e) {
+                                null != e && (await ei(e, void 0, en));
                             },
-                            onPaymentSourceAdd: et,
-                            dropdownLoading: K,
-                            disabled: L,
+                            onPaymentSourceAdd: es,
+                            dropdownLoading: q,
+                            disabled: G,
                             paymentGatewayRestrictions: t.eligiblePaymentGateways,
                         }),
-                        t.status === G.Dmq.PAST_DUE && t.isPremium
-                            ? (0, i.jsx)(P, { dropdownProps: n, subscription: t, openInvoice: k ?? null })
-                            : (0, i.jsx)(p.Ay, { ...n })),
+                        t.status === U.Dmq.PAST_DUE && t.isPremium
+                            ? (0, i.jsx)(M, { dropdownProps: n, subscription: t, openInvoice: F ?? null })
+                            : (0, i.jsx)(x.Ay, { ...n })),
                 }),
+                null != J
+                    ? (0, i.jsx)(A.E, {
+                          variant: "body-sm/normal",
+                          color: "text-feedback-critical",
+                          role: "alert",
+                          children: J.message,
+                      })
+                    : null,
                 null == t.paymentSourceId || d
                     ? null
-                    : (0, i.jsx)(f.f, {
+                    : (0, i.jsx)(p.f, {
                           currencies: a,
-                          children: w
-                              ? (0, i.jsx)(A.B, {
+                          children: B
+                              ? (0, i.jsx)(E.B, {
                                     direction: "horizontal",
                                     align: "center",
                                     gap: 0,
-                                    className: U.Gl,
+                                    className: k.Gl,
                                     children: c,
                                 })
-                              : (0, i.jsx)("div", { className: r()(U.Gl, V.Uu, V.Hu), children: c }),
+                              : (0, i.jsx)("div", { className: r()(k.Gl, w.Uu, w.Hu), children: c }),
                       }),
             ],
         });
     }
-    if (!Y)
+    if (!K)
         return (0, i.jsx)(c.$, {
             fullWidth: !0,
             variant: a ? "primary" : "secondary",
-            onClick: et,
-            text: M.intl.string(M.t.CpOiEO),
+            onClick: es,
+            text: V.intl.string(V.t.CpOiEO),
         });
-    return w
+    return B
         ? null
-        : (0, i.jsxs)(A.B, {
+        : (0, i.jsxs)(E.B, {
               direction: "vertical",
               align: "start",
               gap: 8,
               children: [
-                  (0, i.jsx)(E.w, { type: "critical", message: M.intl.string(M.t["5mlOCW"]), role: "alert" }),
+                  (0, i.jsx)(h.w, { type: "critical", message: V.intl.string(V.t["5mlOCW"]), role: "alert" }),
                   (0, i.jsx)(c.$, {
                       variant: "secondary",
-                      onClick: () => (0, I.$o)(),
-                      text: M.intl.string(M.t["5911Lb"]),
+                      onClick: () => (0, b.$o)(),
+                      text: V.intl.string(V.t["5911Lb"]),
                   }),
               ],
           });
