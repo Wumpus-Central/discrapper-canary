@@ -914,13 +914,13 @@ var eM = n(46653),
 function eJ() {
     let e = (0, eW.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "674614",
-        r = "380b250adc290a45bcb410676b89a266ee8e39e3".substring(0, 7),
+        n = "674615",
+        r = "36a0644e92359e3c928db06035612a3b1a59bfea".substring(0, 7),
         i = e$.A?.app.getVersion(),
         s = e$.A?.app.getBuildNumber(),
         o = e$.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eQ.A)("1794866079818", !1) : null,
+        u = null != c ? (0, eQ.A)("1794866104823", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         h = (function () {
             let e = eV()?.os?.toString();
@@ -1088,8 +1088,8 @@ function e5() {
 var e2 = n(402651),
     e3 = n(669067),
     e6 = n(830543),
-    e8 = n(953056);
-let e4 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
+    e4 = n(953056);
+let e8 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
     e9 = new Map([[eB.X.SESSIONS_PANEL, i.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e7(e) {
     let { target: t, ...n } = e,
@@ -1117,7 +1117,7 @@ function e7(e) {
               emptyState: tt,
               sidebarFooter: e5,
               onViewChange: function (e) {
-                  e4.has(e) || (0, e3._)(e);
+                  e8.has(e) || (0, e3._)(e);
                   let t = e9.get(e);
                   (null != t &&
                       (0, c.x)({
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, l.jsx)("div", {
-            className: e8.P,
+            className: e4.P,
             children: (0, l.jsx)(s.I, { size: "md", query: e, onFocus: n, onBlur: i, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, l.jsxs)("div", {
-        className: e8.t,
+        className: e4.t,
         children: [
             (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: F.intl.string(F.t.zihbmv) }),
             (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: F.intl.string(F.t.XclvsB) }),
