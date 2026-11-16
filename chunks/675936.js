@@ -1,5 +1,4 @@
 !(function (a) {
-    "use strict";
     var e = {
         1: "'inci",
         5: "'inci",
