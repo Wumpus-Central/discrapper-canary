@@ -17,5 +17,6 @@ var i,
         (i[(i.PURCHASE_RESTRICTED = 1030)] = "PURCHASE_RESTRICTED"),
         (i[(i.SPENDING_LIMIT_REACHED = 1035)] = "SPENDING_LIMIT_REACHED"),
         (i[(i.SPENDING_LIMIT_WILL_EXCEED = 1036)] = "SPENDING_LIMIT_WILL_EXCEED"),
+        (i[(i.GIFT_CARDS_NOT_ENABLED = 1039)] = "GIFT_CARDS_NOT_ENABLED"),
         i);
 n.d(t, {}, { j: r });
