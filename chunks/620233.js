@@ -10,24 +10,29 @@ n.d(
     {},
     {
         fetchInstallationExperiments: async function (e) {
-            if (!(null != e && l.A.hasLoaded(e)) && !(l.A.isFetching(o.sz) || l.A.hasLoaded(o.sz))) {
-                s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_START", unitId: o.sz });
-                try {
-                    let e = await r.Bo.get({
-                        url: d.Rsh.APEX_EXPERIMENTS,
-                        query: { surface: a.Um.APP },
-                        rejectWithError: !1,
+            if ((null != e && l.A.hasLoaded(e)) || l.A.isFetching(o.sz) || l.A.hasLoaded(o.sz)) return;
+            let t = l.A.createFetchRequest();
+            s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_START", unitId: o.sz, request: t });
+            try {
+                let e = await r.Bo.get({
+                    url: d.Rsh.APEX_EXPERIMENTS,
+                    query: { surface: a.Um.APP },
+                    rejectWithError: !1,
+                });
+                if (e?.body != null) {
+                    let { installation: n, ...r } = e.body;
+                    i.Ay.Emitter.batched(() => {
+                        (n && s.h.dispatch({ type: "INSTALLATION_ID", installation: n }),
+                            s.h.dispatch({
+                                type: "APEX_EXPERIMENTS_FETCH_SUCCESS",
+                                unitId: o.sz,
+                                request: t,
+                                experiments: r,
+                            }));
                     });
-                    if (e?.body != null) {
-                        let { installation: t, ...n } = e.body;
-                        i.Ay.Emitter.batched(() => {
-                            (t && s.h.dispatch({ type: "INSTALLATION_ID", installation: t }),
-                                s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: o.sz, experiments: n }));
-                        });
-                    } else s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: o.sz });
-                } catch (e) {
-                    s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: o.sz });
-                }
+                } else s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: o.sz, request: t });
+            } catch (e) {
+                s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: o.sz, request: t });
             }
         },
         s: async function (e) {

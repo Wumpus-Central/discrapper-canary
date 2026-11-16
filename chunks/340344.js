@@ -32,6 +32,27 @@ class C extends a.Ay.PersistedStore {
     onAssignmentsIngested(e, t, n) {}
     resolveConfigAssignment(e, t, n) {}
     onConfigApplied(e, t, n) {}
+    nextFetchRequestId = 0;
+    fetchOwners = new Map();
+    gatewayGenerations = { user: {}, guild: {}, installation: {} };
+    createFetchRequest() {
+        return {
+            id: ++this.nextFetchRequestId,
+            gatewayGenerations: {
+                user: { ...this.gatewayGenerations.user },
+                guild: { ...this.gatewayGenerations.guild },
+                installation: { ...this.gatewayGenerations.installation },
+            },
+        };
+    }
+    setGatewayExperimentAssignments(e, t, n) {
+        for (let t of u) {
+            let n = o.ag[t];
+            for (let i of Object.keys(e?.assignments[t] ?? {}))
+                this.gatewayGenerations[n][i] = (this.gatewayGenerations[n][i] ?? 0) + 1;
+        }
+        return this.setExperimentAssignments(e, t, n);
+    }
     loadStoredState(e, t) {
         for (let n in (null != e && 3 === e.version
             ? ((A = e.clientOverrides), (_ = e.evaluatedExperiments))
@@ -57,28 +78,29 @@ class C extends a.Ay.PersistedStore {
         return { version: 3, evaluatedExperiments: _, clientOverrides: A };
     }
     setExperimentAssignments(e, t, n) {
+        let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (null == e && null == t) return !1;
         if ((null != n && e?.assignments[o.ni.User]?.[n] != null && this.clearSessionOverrides(), null != e))
             for (let t of u) {
                 let n = o.ag[t],
-                    i = e.assignments[t];
-                if (null == i || null == n) continue;
-                let r = _[n];
-                for (let e in i) {
-                    m.add(e);
-                    let { evaluation_id: t, assignments: n } = i[e],
-                        a = { evaluationId: t ?? void 0, assignments: {} };
-                    for (let [t, i, s, l, d, c] of ((r[e] = a), n))
-                        ((s ??= 0),
-                            (a.assignments[t] = {
+                    r = e.assignments[t];
+                if (null == r || null == n) continue;
+                let a = _[n];
+                for (let e in r) {
+                    i && m.add(e);
+                    let { evaluation_id: t, assignments: n } = r[e],
+                        s = { evaluationId: t ?? void 0, assignments: {} };
+                    for (let [t, i, r, l, d, c] of ((a[e] = s), n))
+                        ((r ??= 0),
+                            (s.assignments[t] = {
                                 hashedName: t,
                                 variantId: i,
                                 trackedVariantId: d,
-                                isOverride: (s & o.fd.IsOverride) != 0,
-                                isAppLaunch: (s & o.fd.IsAppLaunch) != 0,
+                                isOverride: (r & o.fd.IsOverride) != 0,
+                                isAppLaunch: (r & o.fd.IsAppLaunch) != 0,
                                 revision: l,
-                                exposureTrackingEnabled: (s & o.fd.ExposureTrackingEnabled) != 0,
-                                useAsEligibility: (s & o.fd.UseAsEligibility) != 0,
+                                exposureTrackingEnabled: (r & o.fd.ExposureTrackingEnabled) != 0,
+                                useAsEligibility: (r & o.fd.UseAsEligibility) != 0,
                                 config: c,
                             }));
                 }
@@ -151,6 +173,8 @@ class C extends a.Ay.PersistedStore {
         return f[e];
     }
     handleLogout(e) {
+        let t = new Set([o.sz, ...Object.keys(_.installation)]);
+        for (let e of [p, m]) for (let n of e) t.has(n) || (e.delete(n), this.fetchOwners.delete(n));
         (e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
             l.w.remove(T),
             this.clearAllTrackedExposures());
@@ -342,7 +366,9 @@ class C extends a.Ay.PersistedStore {
             this.clearAllOverrides(),
             this.clearAllTrackedExposures(),
             p.clear(),
-            m.clear());
+            m.clear(),
+            this.fetchOwners.clear(),
+            (this.gatewayGenerations = { user: {}, guild: {}, installation: {} }));
     }
     clearAllServerAssignments() {
         _ = { user: {}, guild: {}, installation: {} };
@@ -362,14 +388,29 @@ class C extends a.Ay.PersistedStore {
     getHash(e) {
         return N(e);
     }
-    handleFetchStart(e) {
-        p.add(e);
+    handleFetchStart(e, t) {
+        (p.add(e), null != t ? this.fetchOwners.set(e, t.id) : this.fetchOwners.delete(e));
     }
-    handleFetchSuccess(e, t) {
-        (p.delete(e), m.add(e), this.setExperimentAssignments(t));
+    handleFetchSuccess(e, t, n) {
+        if (null != n && this.fetchOwners.get(e) !== n.id) return !1;
+        if ((this.handleFetchFailure(e, n), null == n || null == t)) return void this.setExperimentAssignments(t);
+        let i = {};
+        for (let e of u) {
+            let r = o.ag[e],
+                a = t.assignments[e];
+            null != a &&
+                (i[e] = Object.fromEntries(
+                    Object.entries(a).filter((e) => {
+                        let [t] = e;
+                        return (n.gatewayGenerations[r][t] ?? 0) === (this.gatewayGenerations[r][t] ?? 0);
+                    }),
+                ));
+        }
+        this.setExperimentAssignments({ ...t, assignments: i }, void 0, void 0, !1);
     }
-    handleFetchFailure(e) {
-        (p.delete(e), m.add(e));
+    handleFetchFailure(e, t) {
+        if (null != t && this.fetchOwners.get(e) !== t.id) return !1;
+        (this.fetchOwners.delete(e), p.delete(e), m.add(e));
     }
     isFetching(e) {
         return p.has(e);
@@ -733,7 +774,7 @@ let V = new (class extends C {
                 CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => {
                     this.updateLaunchLatchUnits();
-                    let t = this.setExperimentAssignments(e.apexExperiments, void 0, L.default.getId());
+                    let t = this.setGatewayExperimentAssignments(e.apexExperiments, void 0, L.default.getId());
                     return (null != e.apexExperiments && this.drainLaunchLatchReceipts(), t);
                 },
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
@@ -745,13 +786,13 @@ let V = new (class extends C {
                 APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE: (e) => this.deleteSessionOverride(e.experimentName),
                 APEX_EXPERIMENT_CLEAR_FOR_TESTS: () => this.clearForTests(),
                 APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS: (e) => this.setExperimentsMetadata(e.experiments),
-                APEX_EXPERIMENTS_FETCH_START: (e) => this.handleFetchStart(e.unitId),
+                APEX_EXPERIMENTS_FETCH_START: (e) => this.handleFetchStart(e.unitId, e.request),
                 APEX_EXPERIMENTS_FETCH_SUCCESS: (e) => {
-                    (this.updateLaunchLatchUnits(),
-                        this.handleFetchSuccess(e.unitId, e.experiments),
-                        null != e.experiments && this.drainLaunchLatchReceipts());
+                    this.updateLaunchLatchUnits();
+                    let t = this.handleFetchSuccess(e.unitId, e.experiments, e.request);
+                    return (!1 !== t && null != e.experiments && this.drainLaunchLatchReceipts(), t);
                 },
-                APEX_EXPERIMENTS_FETCH_FAILURE: (e) => this.handleFetchFailure(e.unitId),
+                APEX_EXPERIMENTS_FETCH_FAILURE: (e) => this.handleFetchFailure(e.unitId, e.request),
                 LOGOUT: (e) => this.handleLogout(e.isSwitchingAccount),
             },
             O.A.Early,
@@ -816,7 +857,7 @@ let V = new (class extends C {
     handleConnectionOpen(e) {
         this.updateLaunchLatchUnits();
         let t = e.guilds.reduce((e, t) => (null != t.experiments && (e[t.id] = t.experiments), e), {}),
-            n = this.setExperimentAssignments(e.apexExperiments, t, e.user.id);
+            n = this.setGatewayExperimentAssignments(e.apexExperiments, t, e.user.id);
         return (null != e.apexExperiments && this.drainLaunchLatchReceipts(), n);
     }
     handleGuildCreate(e) {
