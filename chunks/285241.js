@@ -1,5 +1,4 @@
 !(function (e) {
-    "use strict";
     var r = "vas\xe1rnap h\xe9tf\u0151n kedden szerd\xe1n cs\xfct\xf6rt\xf6k\xf6n p\xe9nteken szombaton".split(" ");
     function s(e, r, s, a) {
         switch (s) {

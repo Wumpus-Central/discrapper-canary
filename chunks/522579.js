@@ -1,7 +1,6 @@
 var e =
     e ||
     (function (t) {
-        "use strict";
         if (!("u" > typeof navigator && /MSIE [1-9]\./.test(navigator.userAgent))) {
             var e = t.document,
                 n = function () {

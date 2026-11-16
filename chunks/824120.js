@@ -1,6 +1,5 @@
 e = r.nmd(e);
 var n = (function () {
-    "use strict";
     var e = u(0x20000000000000),
         t = "0123456789abcdefghijklmnopqrstuvwxyz",
         r = "function" == typeof BigInt;

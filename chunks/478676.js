@@ -1,5 +1,4 @@
 e.exports = (function () {
-    "use strict";
     var e,
         t,
         r,
