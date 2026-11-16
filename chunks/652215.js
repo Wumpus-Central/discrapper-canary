@@ -6327,7 +6327,6 @@ n.d(
         eAD: nG,
         elq: t6,
         ewM: n4,
-        f34: "cdn.discordapp.com",
         f5z: nc,
         fAW: t5,
         fg2: n6,
