@@ -1,27 +1,26 @@
 (n.d(t, {
     WM: () => en,
     Oq: () => ea,
-    Fr: () => ep,
     Yb: () => ed,
     lk: () => eo,
-    Zb: () => eL,
+    Zb: () => eR,
     g5: () => el,
     Oy: () => ei,
     HA: () => eA,
     N1: () => ee,
-    yO: () => em,
-    xB: () => eS,
-    Yf: () => eO,
-    IV: () => eR,
-    dQ: () => eN,
+    yO: () => ep,
+    xB: () => eg,
+    Yf: () => eC,
+    IV: () => eO,
+    dQ: () => eS,
     jh: () => es,
     r8: () => eI,
-    qY: () => eg,
+    qY: () => eT,
     CV: () => J,
     vD: () => Q,
-    zh: () => ey,
-    qV: () => eD,
-    sB: () => eb,
+    zh: () => eL,
+    qV: () => ey,
+    sB: () => eD,
     L4: () => e_,
     QG: () => eh,
     Gt: () => eu,
@@ -30,7 +29,7 @@
     lx: () => eE,
     R2: () => et,
     Gn: () => ef,
-    uI: () => eT,
+    uI: () => em,
 }),
     n(323874),
     n(14289),
@@ -255,6 +254,7 @@ var K = n(710969),
     $ = n(247512),
     X = n(221596),
     z = n(792996);
+n(887947);
 let q = new Set([B.uF.QUEST_BAR, B.uF.QUEST_BAR_V2, B.uF.QUEST_BAR_MOBILE]);
 async function Q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -667,15 +667,7 @@ async function eI(e, t) {
             o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", error: new d.A(n), placement: e }));
     }
 }
-function ep(e, t) {
-    o.h.dispatch({
-        type: "QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER",
-        placement: e,
-        fetchedAt: Date.now(),
-        responseTtlSeconds: t / 1e3,
-    });
-}
-async function em(e, t, n) {
+async function ep(e, t, n) {
     if (F.A.isFetchingEarnedQuestToDeliverByPlacement(t)) return;
     let i = F.A.earnedQuestForPlacement.get(t)?.earnedDecisionByQuestId,
         r = e.filter((e) => {
@@ -715,7 +707,7 @@ async function em(e, t, n) {
             o.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: new d.A(e), content: t }));
     }
 }
-async function eT(e, t) {
+async function em(e, t) {
     await y.A.post({
         url: v.Rsh.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
@@ -726,7 +718,7 @@ async function eT(e, t) {
         rejectWithError: !1,
     });
 }
-async function eg(e) {
+async function eT(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, x.tW)(e, x.fY.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
     if (null == n) return void V.Ay.getState().setTranscriptAsset({ questId: e.id, fetchStatus: V.Lx.FAILURE });
@@ -738,11 +730,11 @@ async function eg(e) {
         V.Ay.getState().setTranscriptAsset({ questId: e.id, fetchStatus: V.Lx.FAILURE });
     }
 }
-async function eS(e) {
+async function eg(e) {
     let t = await l.Bo.get({ url: v.Rsh.QUEST(e), rejectWithError: !1 });
     return (0, $.Yn)(t.body);
 }
-async function eN(e) {
+async function eS(e) {
     if (!F.A.isFetchingQuestPreview(e)) {
         o.h.dispatch({ type: "QUESTS_FETCH_PREVIEW_BEGIN", questId: e });
         try {
@@ -753,12 +745,12 @@ async function eN(e) {
         }
     }
 }
-let eC = 5 * R.A.Millis.MINUTE;
-async function eO() {
+let eN = 5 * R.A.Millis.MINUTE;
+async function eC() {
     let e = B.p9.QUEST_HOME_BANNER_DESKTOP;
     if (c.A.isFetchingAdToDeliverByPlacement(e) || !c.A.canRefreshAd(e)) return;
     let t = c.A.getLastFetchedQuestHomeHero();
-    if (null != t && Date.now() - t <= eC) return;
+    if (null != t && Date.now() - t <= eN) return;
     let n = Date.now();
     o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: e });
     try {
@@ -802,7 +794,7 @@ async function eO() {
         throw (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new d.A(t), placement: e }), t);
     }
 }
-async function eR(e) {
+async function eO(e) {
     let t = B.p9.QUEST_HOME_BANNER_DESKTOP,
         n = Date.now();
     o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: t });
@@ -840,15 +832,15 @@ async function eR(e) {
         throw (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new d.A(e), placement: t }), e);
     }
 }
-function eL(e) {
+function eR(e) {
     o.h.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: e });
 }
-function ey(e, t) {
+function eL(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_SEEN", adCreativeType: e, contentIds: t });
 }
-function eD(e, t) {
+function ey(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: e, contentIds: t });
 }
-function eb(e) {
+function eD(e) {
     o.h.dispatch({ type: "QUESTS_MARK_DISCOVERED", questId: e });
 }
