@@ -19,8 +19,8 @@ var E = n(120692),
     A = n(646514),
     v = n(834730),
     j = n(123292),
-    S = n(331322),
-    I = n(805251),
+    I = n(331322),
+    S = n(805251),
     N = n(866665),
     p = n(939249),
     O = n(782134),
@@ -59,7 +59,7 @@ function ee(e) {
         { ref: c, height: x = 0 } = (0, q.Ay)([u]),
         m = t.userStatus?.completedAt != null,
         h = (0, d.Vn)(t),
-        { type: S, hints: I } = i.useMemo(
+        { type: I, hints: S } = i.useMemo(
             () =>
                 m || h
                     ? { type: 2, hints: [] }
@@ -70,12 +70,13 @@ function ee(e) {
                         : { type: 2, hints: [] },
             [u, m, h, n],
         ),
-        N = 2 !== S,
+        N = 2 !== I,
         p = (0, C.z)({ opacity: +!!N, height: N ? x : 0, config: Y.N }),
-        O = 0 === S ? f.CircleErrorIcon : g.CircleInformationIcon,
-        y = A.A.unsafe_rawColors.RED_345.css,
-        T = 0 === S ? y : o ? A.A.colors.WHITE : A.A.colors.TEXT_DEFAULT;
+        O = 0 === I ? f.CircleErrorIcon : g.CircleInformationIcon,
+        y = a ? A.A.colors.ICON_FEEDBACK_CRITICAL : A.A.unsafe_rawColors.RED_345.css,
+        T = 0 === I ? y : o ? A.A.colors.WHITE : A.A.colors.TEXT_DEFAULT;
     return (0, s.jsx)(E.animated.div, {
+        className: Z.EV,
         style: { height: p.height, opacity: (0, F.a)(p.opacity) },
         children: (0, s.jsxs)("div", {
             ref: c,
@@ -88,11 +89,11 @@ function ee(e) {
                         (0, s.jsx)(v.E, {
                             variant: "body-xs/medium",
                             color: o ? "text-overlay-light" : "text-muted",
-                            children: I.at(0),
+                            children: S.at(0),
                         }),
                     ],
                 }),
-                0 === S &&
+                0 === I &&
                     (0, s.jsx)(j.Q, {
                         text: J.intl.string(J.t["yKJi+/"]),
                         onClick: () => (0, R.i)({ quest: t, sourceQuestContent: r }),
@@ -179,7 +180,7 @@ function et(e) {
                                 className: Z.mY,
                                 children: [
                                     (ea || t.preview || ec.new || ec.countdown || ec.duration) &&
-                                        (0, s.jsxs)(S.B, {
+                                        (0, s.jsxs)(I.B, {
                                             className: Z.Bv,
                                             direction: "horizontal",
                                             fullWidth: !1,
@@ -187,12 +188,12 @@ function et(e) {
                                             children: [
                                                 ea &&
                                                     !(0, U.Ic)(t) &&
-                                                    (0, s.jsx)(I.E, {
+                                                    (0, s.jsx)(S.E, {
                                                         type: { text: J.intl.string(J.t.Jt6u7B) },
                                                         variant: "expressive",
                                                     }),
                                                 t.preview &&
-                                                    (0, s.jsx)(I.E, {
+                                                    (0, s.jsx)(S.E, {
                                                         type: { text: J.intl.string(J.t.SKNnqq) },
                                                         variant: "primary",
                                                     }),
@@ -339,8 +340,8 @@ var en = n(604121),
     eA = n(687966),
     ev = n(825484),
     ej = n(821609),
-    eS = n(414499),
-    eI = n(408278),
+    eI = n(414499),
+    eS = n(408278),
     eN = n(743368),
     ep = n(971649),
     eO = n(651892),
@@ -415,7 +416,7 @@ function eb(e) {
                 (0, s.jsx)(ej.$, {
                     variant: "secondary",
                     icon: t.config.features.includes(eL.Li.CLOUD_GAMING_ACTIVITY)
-                        ? eS.CloudIcon
+                        ? eI.CloudIcon
                         : eA.GameControllerIcon,
                     text: o,
                     onClick: a,
@@ -454,7 +455,7 @@ function eR(e) {
         ? (0, s.jsx)(N.m, {
               text: a,
               ariaHidden: !0,
-              children: (0, s.jsx)(eI.K, {
+              children: (0, s.jsx)(eS.K, {
                   variant: "secondary",
                   icon: eN.LinkExternalMediumIcon,
                   "aria-label": a,
@@ -703,10 +704,10 @@ function eG(e) {
             compactReward: g,
             gameIconReward: A,
             underlinedMultiplier: j,
-            shorterHeight: S,
+            shorterHeight: I,
         } = i.useContext(G.f),
-        I = S ? 58 : 80,
-        N = I + 24,
+        S = I ? 58 : 80,
+        N = S + 24,
         p = i.useRef(null),
         O = (0, ec.z)(),
         y = (0, d.SD)(t, O),
@@ -721,10 +722,10 @@ function eG(e) {
         k = i.useRef(null),
         [H, K] = i.useState(0),
         V = H > 0,
-        X = S ? N + H : (M ?? 0) + 12,
+        X = I ? N + H : (M ?? 0) + 12,
         W = null != M && M > N,
         { onAssetLoadComplete: $ } = i.useContext(z.M),
-        Z = l && (!S || (null != R && V)),
+        Z = l && (!I || (null != R && V)),
         { expansionSpring: ee } = (0, C.z)({ expansionSpring: +!!Z, config: { ...Y.N, clamp: !0 } }),
         et = ee.to([0, 1], [N, X]),
         ef = t.userStatus?.completedAt != null,
@@ -732,8 +733,8 @@ function eG(e) {
         eA = (0, ex.ks)(t.config),
         ev = t.userStatus?.orbQuantityClaimed ?? (0, ex._Z)(t.config),
         ej = (0, ex.wo)(t.config, L),
-        eS = (0, b.I6)(t),
-        { completedRatio: eI, completedRatioDisplay: eN } = (0, d.O9)(t, eS),
+        eI = (0, b.I6)(t),
+        { completedRatio: eS, completedRatioDisplay: eN } = (0, d.O9)(t, eI),
         ep = (function (e, t) {
             let { variant: n } = c.Mk.useConfig({ location: t });
             return n === c.d.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER
@@ -807,32 +808,33 @@ function eG(e) {
         }, [R]),
         eq = i.useCallback(() => {
             let e = k.current;
-            S && !Z && null != e && K(e.scrollHeight > e.clientHeight ? e.scrollHeight - e.clientHeight : 0);
-        }, [S, Z]);
-    ((0, ei.g)(k, eq, [R, ep, ey], { enabled: S, fireOnMount: !0, fireOnDepsChange: !0 }),
+            I && !Z && null != e && K(e.scrollHeight > e.clientHeight ? e.scrollHeight - e.clientHeight : 0);
+        }, [I, Z]);
+    ((0, ei.g)(k, eq, [R, ep, ey], { enabled: I, fireOnMount: !0, fireOnDepsChange: !0 }),
         i.useEffect(() => {
-            if (S)
+            if (I)
                 return (
                     document.fonts.addEventListener("loadingdone", eq),
                     () => document.fonts.removeEventListener("loadingdone", eq)
                 );
-        }, [S, eq]));
+        }, [I, eq]));
     let ew = (0, a.bG)([el.Ay], () => el.Ay.useReducedMotion);
     return (0, s.jsxs)("div", {
-        className: r()(ez.kL, { [ez.A8]: S, [ez.wF]: S && !V, [ez.Bt]: S && Z }),
+        "data-description-expanded": (!!I && !!Z) || void 0,
+        className: r()(ez.kL, { [ez.A8]: I, [ez.wF]: I && !V, [ez.Bt]: I && Z }),
         ref: p,
         children: [
             (0, s.jsx)(em.A, { visible: w, glow: !0 }),
             (0, s.jsxs)(E.animated.div, {
-                style: { maxHeight: et, height: S ? et : void 0 },
+                style: { maxHeight: et, height: I ? et : void 0 },
                 className: ez.z,
                 children: [
                     (0, s.jsx)("div", {
                         className: ez.c6,
                         children: (0, s.jsxs)(B.A, {
                             showPlaceholder: !x,
-                            width: I,
-                            height: I,
+                            width: S,
+                            height: S,
                             children: [
                                 !eg && ef && (0, s.jsx)("div", { className: ez.Nz }),
                                 _
@@ -848,8 +850,8 @@ function eG(e) {
                                                       shouldAnimate: !ew,
                                                   }),
                                               (0, s.jsx)(eE.A, {
-                                                  size: I - 4,
-                                                  percentComplete: eI,
+                                                  size: S - 4,
+                                                  percentComplete: eS,
                                                   overlayText: l && !(0, U.Ic)(t) ? eN : void 0,
                                                   children: (0, s.jsx)(eC.A, {
                                                       quest: t,
@@ -918,7 +920,7 @@ function eG(e) {
                                 }),
                         ],
                     }),
-                    (S ? V : W) &&
+                    (I ? V : W) &&
                         (0, s.jsx)(E.animated.div, {
                             style: { opacity: (0, F.a)(ee.to([0, 1], [1, 0])) },
                             className: ez.hS,
@@ -964,8 +966,8 @@ function eZ(e) {
         v = (0, d.aC)(t),
         {
             handleHoverStart: j,
-            handleHoverEnd: S,
-            isEventWithinParent: I,
+            handleHoverEnd: I,
+            isEventWithinParent: S,
         } = (0, eW.B)({ quest: t, questContent: o, contentPosition: u, rowIndex: x, sourceQuestContent: C }),
         N = i.useContext(m.X),
         { visibilityElementRef: p, almostVisibleInViewport: O } = (0, eY.I)(
@@ -987,13 +989,13 @@ function eZ(e) {
                 (A(!0), j());
             },
             onMouseLeave: () => {
-                (A(!1), S());
+                (A(!1), I());
             },
             onFocus: (e) => {
-                I(e) || (A(!0), j());
+                S(e) || (A(!0), j());
             },
             onBlur: (e) => {
-                I(e) || (A(!1), S());
+                S(e) || (A(!1), I());
             },
             children: [
                 (0, s.jsx)(et, {
