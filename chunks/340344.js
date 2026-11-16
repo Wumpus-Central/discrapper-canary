@@ -56,9 +56,9 @@ class C extends a.Ay.PersistedStore {
     getState() {
         return { version: 3, evaluatedExperiments: _, clientOverrides: A };
     }
-    setExperimentAssignments(e, t) {
+    setExperimentAssignments(e, t, n) {
         if (null == e && null == t) return !1;
-        if ((this.clearSessionOverrides(), null != e))
+        if ((null != n && e?.assignments[o.ni.User]?.[n] != null && this.clearSessionOverrides(), null != e))
             for (let t of u) {
                 let n = o.ag[t],
                     i = e.assignments[t];
@@ -733,7 +733,7 @@ let V = new (class extends C {
                 CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => {
                     this.updateLaunchLatchUnits();
-                    let t = this.setExperimentAssignments(e.apexExperiments);
+                    let t = this.setExperimentAssignments(e.apexExperiments, void 0, L.default.getId());
                     return (null != e.apexExperiments && this.drainLaunchLatchReceipts(), t);
                 },
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
@@ -816,7 +816,7 @@ let V = new (class extends C {
     handleConnectionOpen(e) {
         this.updateLaunchLatchUnits();
         let t = e.guilds.reduce((e, t) => (null != t.experiments && (e[t.id] = t.experiments), e), {}),
-            n = this.setExperimentAssignments(e.apexExperiments, t);
+            n = this.setExperimentAssignments(e.apexExperiments, t, e.user.id);
         return (null != e.apexExperiments && this.drainLaunchLatchReceipts(), n);
     }
     handleGuildCreate(e) {
