@@ -1,6 +1,6 @@
-var n,
-    l = (((n = {}).MOSAIC = "mosaic"), (n.MEDIA_VIEWER = "media_viewer"), n);
-r.d(
+var r,
+    l = (((r = {}).MOSAIC = "mosaic"), (r.MEDIA_VIEWER = "media_viewer"), r);
+n.d(
     t,
     {},
     {

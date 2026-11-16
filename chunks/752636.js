@@ -19,10 +19,10 @@ i.d(
                 roleIcon: u,
                 hideTimestamp: m,
                 hideGuildTag: h,
-                preview: p,
-                avatarDecorationOverride: g,
-                avatarOverride: S,
-                usernameClassName: A,
+                preview: g,
+                avatarDecorationOverride: p,
+                avatarOverride: A,
+                usernameClassName: _,
             } = e;
             return !(0, l.A)(t) && (c || r)
                 ? (0, n.jsx)(o, {
@@ -35,10 +35,10 @@ i.d(
                       roleIcon: u,
                       hideTimestamp: m,
                       hideGuildTag: h,
-                      preview: p,
-                      avatarDecorationOverride: g,
-                      avatarOverride: S,
-                      usernameClassName: A,
+                      preview: g,
+                      avatarDecorationOverride: p,
+                      avatarOverride: A,
+                      usernameClassName: _,
                   })
                 : void 0;
         },

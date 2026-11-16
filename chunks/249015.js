@@ -24,8 +24,8 @@ function S(e) {
             shouldStopPropagation: N = !0,
             className: T,
         } = e,
-        [x] = (0, r.bG)([g.A], () => g.A.isFavorite(t, n), [t, n], d.D),
-        y = (function (e) {
+        [y] = (0, r.bG)([g.A], () => g.A.isFavorite(t, n), [t, n], d.D),
+        x = (function (e) {
             let { tab: t, targetId: n, shouldStopPropagation: l, widgetType: r } = e;
             return i.useCallback(
                 (e) => {
@@ -42,22 +42,22 @@ function S(e) {
                 [l, t, n, r],
             );
         })({ tab: t, targetId: n, shouldStopPropagation: N, widgetType: S }),
-        _ = x ? s.StarIcon : a.StarOutlineIcon,
+        _ = y ? s.StarIcon : a.StarOutlineIcon,
         C = (0, o.r)(u.A.colors.ICON_FEEDBACK_WARNING),
         v = (0, o.r)(u.A.colors.ICON_DEFAULT),
         R =
             t === c.x.FRIENDS
-                ? x
+                ? y
                     ? f.intl.string(A.default.Xr8XHk)
                     : f.intl.string(A.default.w1MU8Y)
-                : x
+                : y
                   ? f.intl.string(A.default.dvUElD)
                   : f.intl.string(A.default.iK1QsY);
     return (0, l.jsx)(h.S, {
         tooltipText: R,
         showTooltip: p,
         className: T,
-        onClick: y,
-        children: (0, l.jsx)(_, { size: "sm", color: x ? C.hex() : v.hex() }),
+        onClick: x,
+        children: (0, l.jsx)(_, { size: "sm", color: y ? C.hex() : v.hex() }),
     });
 }

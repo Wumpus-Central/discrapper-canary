@@ -45,8 +45,8 @@ n.d(
             let _ = y ?? n?.skuId ?? "",
                 { handleCardVisibilityChange: b } = (0, m.Z)(_, d, "marketing featured block"),
                 S = (0, f.s4)(n, a, c),
-                L = r.useRef(null),
-                I = a?.bodyText,
+                I = r.useRef(null),
+                L = a?.bodyText,
                 k = n?.isOrbsExclusive,
                 j = a?.name ?? n?.name,
                 N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
@@ -74,16 +74,16 @@ n.d(
                     R("shop marketing tile", null);
                 }, [R]);
             return (0, l.jsx)(s.L, {
-                innerRef: L,
+                innerRef: I,
                 onChange: b,
                 threshold: 0,
                 children: (0, l.jsx)(h.Ay, {
                     layout: t,
-                    innerRef: L,
+                    innerRef: I,
                     backgroundImageUrl: S,
                     title:
-                        null != I
-                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
+                        null != L
+                            ? { text: L, variant: "heading-sm/medium", color: a?.bannerTextColor, className: C.D }
                             : void 0,
                     badge: (0, l.jsx)(A, { skuId: _, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: v.intl.string(v.t.jVcuVY),

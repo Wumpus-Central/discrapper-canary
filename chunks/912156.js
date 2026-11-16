@@ -38,18 +38,18 @@ n.d(
                     iconClassName: r,
                     size: m,
                     channel: T,
-                    guild: x,
-                    isTyping: y = !1,
+                    guild: y,
+                    isTyping: x = !1,
                     typingFillColor: _,
                 } = e,
                 C = (0, u.Ay)(T),
                 v = (0, a.S3)(h.clD.ONLINE, null);
-            if (null == x) return null;
+            if (null == y) return null;
             let R = A[m],
                 D = E[m],
                 b = I[m],
-                j = (0, c.Iv)(x, 48),
-                k = p[m],
+                k = (0, c.Iv)(y, 48),
+                j = p[m],
                 M =
                     0 ===
                     (n =
@@ -62,7 +62,7 @@ n.d(
                             : "").length
                         ? "?"
                         : n.slice(0, 3),
-                O = (0, c.Rb)(x);
+                O = (0, c.Rb)(y);
             return (0, i.jsxs)("div", {
                 className: s()(g.zr, l),
                 role: "img",
@@ -73,10 +73,10 @@ n.d(
                         width: D,
                         height: D,
                         children:
-                            null != j
+                            null != k
                                 ? (0, i.jsx)("img", {
-                                      alt: x.name,
-                                      src: j,
+                                      alt: y.name,
+                                      src: k,
                                       className: g.es,
                                       draggable: !1,
                                       style: { width: D, height: D },
@@ -92,13 +92,13 @@ n.d(
                         "aria-hidden": !0,
                         children: (0, i.jsx)(d.Ay, {
                             mask: d.hW.SQUIRCLE,
-                            width: k,
-                            height: k,
-                            children: y
+                            width: j,
+                            height: j,
+                            children: x
                                 ? (0, i.jsx)("div", {
                                       className: s()(S[m], g.WQ),
                                       style: { backgroundColor: _ ?? v },
-                                      children: (0, i.jsx)(o.n, { dotRadius: k / 10 }),
+                                      children: (0, i.jsx)(o.n, { dotRadius: j / 10 }),
                                   })
                                 : (0, i.jsx)("div", {
                                       className: s()(S[m], g.q9),

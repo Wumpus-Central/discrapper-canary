@@ -21,8 +21,8 @@ var r = n(477900),
     S = n(834730),
     C = n(315710),
     w = n(534514),
-    N = n(893007),
-    P = n(765548),
+    P = n(893007),
+    N = n(765548),
     A = n(775602),
     R = n(129230),
     L = n(683574),
@@ -223,7 +223,7 @@ function er(e) {
             hideFullScreenBtn: S = !1,
             hidePlaybackSpeedBtn: C = !1,
             size: w,
-            downloadUrl: N,
+            downloadUrl: P,
             downloadContentType: k,
             extraButtons: M,
             autoFocus: j = !1,
@@ -253,14 +253,14 @@ function er(e) {
         eb = eu && !eh,
         [ey, eS] = l.useState(B ? 0 : I),
         [eC, ew] = l.useState(!1),
-        [eN, eP] = l.useState(!1),
+        [eP, eN] = l.useState(!1),
         [eA, eR] = l.useState(!1),
         eL = l.useRef(null),
         eT = l.useId(),
         ek = l.useRef(void 0),
         [eM, ej] = l.useState(eb);
-    eb !== eM && (ej(eb), ew(!1), eR(!1), eP(!1));
-    let eD = eb && (eC || eA || eN),
+    eb !== eM && (ej(eb), ew(!1), eR(!1), eN(!1));
+    let eD = eb && (eC || eA || eP),
         [{ volumeAnimSpring: eI }, eB] = (0, d.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
@@ -277,14 +277,14 @@ function er(e) {
             [ev],
         ),
         eH = l.useCallback(() => {
-            if (null == N) return;
+            if (null == P) return;
             let e = k?.split("/");
             (R.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
-                window.open(N, "_blank"));
-        }, [N, k]),
+                window.open(P, "_blank"));
+        }, [P, k]),
         eX = l.useCallback(
             (e) => {
                 null != ev.current && (e !== ev.current.volume && (ev.current.volume = e), e !== ey && eS(e));
@@ -292,7 +292,7 @@ function er(e) {
             [ev, ey],
         );
     function eV(e) {
-        (eX(e), ec(e), eN && (eP(!1), eb || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
+        (eX(e), ec(e), eP && (eN(!1), eb || es(!1)), B && e > 0 ? ed(!1) : B || 0 !== e || ed(!0));
     }
     let eY = l.useCallback(() => {
         if (null != ev.current)
@@ -321,7 +321,7 @@ function er(e) {
         n !== ey && eV(n);
     }
     l.useEffect(() => () => window.clearTimeout(ek.current), []);
-    let e0 = (0, P.A)(em);
+    let e0 = (0, N.A)(em);
     l.useEffect(() => {
         if (eD)
             return (
@@ -376,12 +376,12 @@ function er(e) {
         ),
         l.useEffect(
             () => (
-                eB({ volumeAnimSpring: !ea || eN || eC ? 1 : 0, immediate: ef }),
+                eB({ volumeAnimSpring: !ea || eP || eC ? 1 : 0, immediate: ef }),
                 () => {
                     eI.stop();
                 }
             ),
-            [ea, eN, eC, eB, ef, eI],
+            [ea, eP, eC, eB, ef, eI],
         ));
     let e2 = $.intl.string(0 === ey ? $.t.YqAjXy : $.t.w4m945),
         { icon: e6, label: e4 } = K[t],
@@ -423,7 +423,7 @@ function er(e) {
             maxValue: 1,
             onValueChange: eV,
             asValueChanges: function (e) {
-                (eX(e), !eN && (eP(!0), eb || es(!0)));
+                (eX(e), !eP && (eN(!0), eb || es(!0)));
             },
             fillStyles: { background: "var(--custom-dvp-slider-fill)" },
             orientation: "horizontal",
@@ -486,7 +486,7 @@ function er(e) {
                               shouldShow: eD,
                               scrollBehavior: "close",
                               onRequestClose: () => {
-                                  (window.clearTimeout(ek.current), ew(!1), eR(!1), eP(!1));
+                                  (window.clearTimeout(ek.current), ew(!1), eR(!1), eN(!1));
                               },
                               layerContext: ex,
                               position: "top",
@@ -601,7 +601,7 @@ function er(e) {
                             playerState: t,
                             handleTranscriptBtnClick: V,
                             handleCaptionBtnClick: ee,
-                            downloadUrl: N,
+                            downloadUrl: P,
                             handleDownloadButtonClick: eH,
                             extraButtons: M,
                         }),
@@ -782,7 +782,7 @@ function eu(e) {
                     className: U.xl,
                     children: a,
                 }),
-                (0, r.jsx)(N.A, {
+                (0, r.jsx)(P.A, {
                     value: t,
                     minValue: et,
                     maxValue: en,

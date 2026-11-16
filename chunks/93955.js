@@ -22,15 +22,15 @@ var l = n(477900),
     _ = n(304210),
     b = n(324157),
     S = n(480750),
-    L = n(727142);
-let I = function (e) {
+    I = n(727142);
+let L = function (e) {
     let { text: t, icon: n, indicatorColor: r } = e;
     return (0, l.jsxs)("span", {
-        className: L.I,
+        className: I.I,
         children: [
             null != r &&
                 (0, l.jsx)("svg", {
-                    className: L.q,
+                    className: I.q,
                     viewBox: "0 0 8 8",
                     "aria-hidden": !0,
                     children: (0, l.jsx)("circle", { cx: "4", cy: "4", r: "3.5", fill: r }),
@@ -185,7 +185,7 @@ function Y(e) {
                 children: [
                     null != v &&
                         (0, l.jsx)(u.E, { variant: "body-md/semibold", color: "text-strong", children: (0, E.U)(v) }),
-                    null != m && (0, l.jsx)(I, { icon: c.ClockIcon, text: m }),
+                    null != m && (0, l.jsx)(L, { icon: c.ClockIcon, text: m }),
                     (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
                         rewardProduct: h,
@@ -212,7 +212,7 @@ function X(e) {
             description: A,
             progressText: _,
             timeLeftText: b,
-            contentThemeClassName: L,
+            contentThemeClassName: I,
             rewardProduct: j,
             claimRewardButtonVariant: N,
             helpCenterId: O,
@@ -230,7 +230,7 @@ function X(e) {
         padding: { top: 16, bottom: 16, left: 24, right: 24 },
         align: "center",
         justify: "space-between",
-        className: a()(F.N, L),
+        className: a()(F.N, I),
         style: { backgroundImage: `url(${v})` },
         children: [
             (0, l.jsx)(R, { assetPath: s, progress: i, progressText: _, progressColor: f }),
@@ -265,8 +265,8 @@ function X(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != _ && (0, l.jsx)(I, { text: _, indicatorColor: f ?? k.W }),
-                            null != b && (0, l.jsx)(I, { icon: c.ClockIcon, text: b }),
+                            null != _ && (0, l.jsx)(L, { text: _, indicatorColor: f ?? k.W }),
+                            null != b && (0, l.jsx)(L, { icon: c.ClockIcon, text: b }),
                         ],
                     }),
                 ],
@@ -339,8 +339,8 @@ function q(e) {
     let y = E.showProgressRing && null != C,
         {
             title: _,
-            description: L,
-            progressText: I,
+            description: I,
+            progressText: L,
             timeLeftText: k,
         } = (0, b.MZ)({
             promotion: s,
@@ -358,8 +358,8 @@ function q(e) {
             progressColor: h?.progressColor,
             backgroundUrl: g.backgroundUrl,
             title: _,
-            description: L,
-            progressText: I,
+            description: I,
+            progressText: L,
             timeLeftText: k,
             contentThemeClassName: V[f],
             rewardProduct: o,

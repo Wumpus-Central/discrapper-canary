@@ -1,51 +1,51 @@
-v.d(h, { J: () => v7 });
-var l = v(477900),
-    H = v(582128),
-    M = v(996682),
-    V = v(310784),
-    Z = v.n(V);
-function t(A, h, v) {
-    if (!Z().valid(h)) return A.map(() => "#000000");
-    let l = Z()(h),
+A.d(v, { J: () => A7 });
+var l = A(477900),
+    H = A(582128),
+    M = A(996682),
+    V = A(310784),
+    Z = A.n(V);
+function t(h, v, A) {
+    if (!Z().valid(v)) return h.map(() => "#000000");
+    let l = Z()(v),
         H = l.luminance();
-    return A.map((A, h) => l.luminance((A * v[h].base + H * v[h].tint) / (v[h].base + v[h].tint)).hex());
+    return h.map((h, v) => l.luminance((h * A[v].base + H * A[v].tint) / (A[v].base + A[v].tint)).hex());
 }
-function i(A) {
+function a(h) {
     let {
-            primaryBaseColors: h,
-            primaryTintColor: v,
+            primaryBaseColors: v,
+            primaryTintColor: A,
             primaryTintLuminances: l,
             primaryLuminanceWeights: H,
             secondaryBaseColors: M,
             secondaryTintColor: V,
             secondaryTintLuminances: Z,
-            secondaryLuminanceWeights: i,
-        } = A,
-        s = null != v ? t(l, v, H) : h,
-        a = [];
+            secondaryLuminanceWeights: a,
+        } = h,
+        s = null != A ? t(l, A, H) : v,
+        i = [];
     return (
-        null != M && null != Z && null != i && (a = null != V ? t(Z, V, i) : M),
-        { primaryColorsTransformed: s, secondaryColorsTransformed: a }
+        null != M && null != Z && null != a && (i = null != V ? t(Z, V, a) : M),
+        { primaryColorsTransformed: s, secondaryColorsTransformed: i }
     );
 }
 let s = ["#E79418", "#FAE330"],
-    a = [0.5, 0.75],
+    i = [0.5, 0.75],
     f = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function e(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
+function e(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
             primaryBaseColors: s,
             primaryTintColor: H,
-            primaryTintLuminances: a,
+            primaryTintLuminances: i,
             primaryLuminanceWeights: f,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -85,9 +85,9 @@ let n = ["#B3269C", "#FF4CD2", "#FF7CDE", "#FD99E9"],
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function g(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
+function r(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
             primaryBaseColors: n,
             primaryTintColor: H,
             primaryTintLuminances: d,
@@ -95,8 +95,8 @@ function g(A) {
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -131,24 +131,24 @@ function g(A) {
         ],
     });
 }
-let r = ["#847D8B", "#D1CDD5"],
-    x = [0.2, 0.65],
-    B = [
+let x = ["#847D8B", "#D1CDD5"],
+    g = [0.2, 0.65],
+    j = [
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function C(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: r,
+function B(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: x,
             primaryTintColor: H,
-            primaryTintLuminances: x,
-            primaryLuminanceWeights: B,
+            primaryTintLuminances: g,
+            primaryLuminanceWeights: j,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -208,31 +208,31 @@ function C(A) {
         ],
     });
 }
-let j = ["#0DA9FE", "#9AF2FF"],
-    w = [0.45, 0.7],
-    c = [
+let w = ["#0DA9FE", "#9AF2FF"],
+    c = [0.45, 0.7],
+    o = [
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    Q = ["#5C0084"],
-    o = [0.2],
-    b = [{ base: 3, tint: 1 }];
-function D(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: j,
+    C = ["#5C0084"],
+    b = [0.2],
+    D = [{ base: 3, tint: 1 }];
+function Q(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: w,
             primaryTintColor: H,
-            primaryTintLuminances: w,
-            primaryLuminanceWeights: c,
-            secondaryBaseColors: Q,
+            primaryTintLuminances: c,
+            primaryLuminanceWeights: o,
+            secondaryBaseColors: C,
             secondaryTintColor: V,
-            secondaryTintLuminances: o,
-            secondaryLuminanceWeights: b,
+            secondaryTintLuminances: b,
+            secondaryLuminanceWeights: D,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -248,7 +248,7 @@ function D(A) {
             }),
             (0, l.jsx)("path", {
                 d: "M4 15H2v-1h2v1ZM14 14v1h-2v-1h2ZM2 14H1v-1h1v1ZM15 14h-1v-1h1v1ZM7 10h-1v-1h1v1ZM10 10h-1v-1h1v1ZM6 9H3v-1h3v1ZM13 9H10v-1h3v1ZM3 2h1v1H2v2H1V1h2v1ZM15 5h-1v-2h-2V2h1V1h2v4Z",
-                fill: s?.[0] ?? Q[0],
+                fill: s?.[0] ?? C[0],
             }),
             (0, l.jsx)("path", {
                 d: "M4 16H2v-1h2v1ZM14 16h-2v-1h2v1ZM2 15H1v-1h1v1ZM5 15h-1v-1h1v1ZM12 15h-1v-1h1v1ZM15 15h-1v-1h1v1ZM1 14H0V10h1v4ZM6 14h-1v-1h1v1Z",
@@ -266,25 +266,25 @@ function D(A) {
         ],
     });
 }
-let E = ["#353639", "#74767F", "#D1CDD5"],
+let y = ["#353639", "#74767F", "#D1CDD5"],
     L = [0.1, 0.4, 0.7],
-    u = [
+    m = [
         { base: 10, tint: 1 },
         { base: 4, tint: 1 },
         { base: 6, tint: 1 },
     ];
-function P(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: E,
+function u(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: y,
             primaryTintColor: H,
             primaryTintLuminances: L,
-            primaryLuminanceWeights: u,
+            primaryLuminanceWeights: m,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -339,30 +339,30 @@ function P(A) {
     });
 }
 let I = ["#05562C", "#1DAA5A"],
-    y = [0.25, 0.45],
-    m = [
+    P = [0.25, 0.45],
+    k = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    F = ["#E6CF1E"],
-    k = [0.7],
-    X = [{ base: 3, tint: 1 }];
-function T(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
+    E = ["#E6CF1E"],
+    F = [0.7],
+    G = [{ base: 3, tint: 1 }];
+function T(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
             primaryBaseColors: I,
             primaryTintColor: H,
-            primaryTintLuminances: y,
-            primaryLuminanceWeights: m,
-            secondaryBaseColors: F,
+            primaryTintLuminances: P,
+            primaryLuminanceWeights: k,
+            secondaryBaseColors: E,
             secondaryTintColor: V,
-            secondaryTintLuminances: k,
-            secondaryLuminanceWeights: X,
+            secondaryTintLuminances: F,
+            secondaryLuminanceWeights: G,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -381,7 +381,7 @@ function T(A) {
             }),
             (0, l.jsx)("path", {
                 d: "M10 12h1v1h3v-1h1v2h-1v1H11v-1h-1v-1h-1V5h-1v5h-1v3h-1v1h-1v1H2v-1h2v-1h1v-1h1V8h1V4h3v8ZM2 14H1v-1h1v1Z",
-                fill: s?.[0] ?? F[0],
+                fill: s?.[0] ?? E[0],
             }),
             (0, l.jsx)("path", {
                 d: "M5 16H2v-1h3v1ZM14 15v1H11v-1h3ZM2 15H1v-1h1v1ZM6 15h-1v-1h1v1ZM11 15h-1v-1h1v1ZM15 15h-1v-1h1v1ZM1 14H0v-2h1v2ZM7 14h-1v-1h1v1ZM10 14h-1v-1h1v1ZM16 14h-1V10h1v4ZM9 13h-2V10h1V5h1v8ZM14 13h-1v-2h1v2ZM2 12H1v-1h1v1ZM4 11H2v-1h1V3h1v8ZM15 10h-1v-1h1v1ZM13 8h1v1h-2V4h1v4ZM16 9h-1v-2h1v2ZM15 7h-1v-1h1v1ZM12 4h-1v-1h1v1ZM5 3h-1V2h1v1ZM11 3h-1V2h1v1ZM6 2h-1V1h1v1ZM10 2h-1V1h1v1ZM9 1H6V0h3v1Z",
@@ -390,25 +390,25 @@ function T(A) {
         ],
     });
 }
-let J = ["#006638", "#29BB21", "#35ED3B"],
-    G = [0.2, 0.43, 0.57],
+let Y = ["#006638", "#29BB21", "#35ED3B"],
+    X = [0.2, 0.43, 0.57],
     W = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function Y(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: J,
+function z(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: Y,
             primaryTintColor: H,
-            primaryTintLuminances: G,
+            primaryTintLuminances: X,
             primaryLuminanceWeights: W,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -440,36 +440,36 @@ function Y(A) {
         ],
     });
 }
-let N = ["#be0351", "#ff2c52", "#f0f0f0"],
-    O = ["#4282d8", "#47baff", "#f0f0f0"],
-    z = [0.1, 0.25, 1],
+let O = ["#be0351", "#ff2c52", "#f0f0f0"],
+    N = ["#4282d8", "#47baff", "#f0f0f0"],
+    U = [0.1, 0.25, 1],
     K = [
         { base: 3, tint: 1 },
         { base: 2, tint: 1 },
         { base: 2, tint: 1 },
     ],
     S = [0.1, 0.25, 1],
-    R = [
+    J = [
         { base: 3, tint: 1 },
         { base: 2, tint: 1 },
         { base: 2, tint: 1 },
     ];
-function U(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: N,
+function R(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: O,
             primaryTintColor: H,
-            primaryTintLuminances: z,
+            primaryTintLuminances: U,
             primaryLuminanceWeights: K,
-            secondaryBaseColors: O,
+            secondaryBaseColors: N,
             secondaryTintColor: V,
             secondaryTintLuminances: S,
-            secondaryLuminanceWeights: R,
+            secondaryLuminanceWeights: J,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -513,34 +513,34 @@ function U(A) {
 let q = ["#3f581a", "#7fb134", "#bcef42", "#f0f0f0"],
     _ = ["#008456", "#6be473", "#f0f0f0"],
     $ = [0.05, 0.35, 0.7, 1],
-    AA = [
+    hh = [
         { base: 8, tint: 1 },
         { base: 4, tint: 1 },
         { base: 2, tint: 1 },
         { base: 4, tint: 1 },
     ],
-    Ah = [0.15, 0.6, 1],
-    Av = [
+    hv = [0.15, 0.6, 1],
+    hA = [
         { base: 3, tint: 1 },
         { base: 2, tint: 1 },
         { base: 4, tint: 1 },
     ];
-function Al(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
+function hl(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
             primaryBaseColors: q,
             primaryTintColor: H,
             primaryTintLuminances: $,
-            primaryLuminanceWeights: AA,
+            primaryLuminanceWeights: hh,
             secondaryBaseColors: _,
             secondaryTintColor: V,
-            secondaryTintLuminances: Ah,
-            secondaryLuminanceWeights: Av,
+            secondaryTintLuminances: hv,
+            secondaryLuminanceWeights: hA,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -597,34 +597,34 @@ function Al(A) {
         ],
     });
 }
-let AH = ["#FFB84B", "#FFE361"],
-    AM = [0.56, 0.77],
-    AV = [
+let hH = ["#FFB84B", "#FFE361"],
+    hM = [0.56, 0.77],
+    hV = [
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    AZ = ["#FF1C90", "#FF7FC0"],
-    At = [0.2, 0.4],
-    Ai = [
+    hZ = ["#FF1C90", "#FF7FC0"],
+    ht = [0.2, 0.4],
+    ha = [
         { base: 7, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function As(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: AH,
+function hs(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: hH,
             primaryTintColor: H,
-            primaryTintLuminances: AM,
-            primaryLuminanceWeights: AV,
-            secondaryBaseColors: AZ,
+            primaryTintLuminances: hM,
+            primaryLuminanceWeights: hV,
+            secondaryBaseColors: hZ,
             secondaryTintColor: V,
-            secondaryTintLuminances: At,
-            secondaryLuminanceWeights: Ai,
+            secondaryTintLuminances: ht,
+            secondaryLuminanceWeights: ha,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -674,24 +674,24 @@ function As(A) {
         ],
     });
 }
-let Aa = ["#4282D8", "#00BBFF"],
-    Af = [0.15, 0.42],
-    Ae = [
+let hi = ["#4282D8", "#00BBFF"],
+    hf = [0.15, 0.42],
+    he = [
         { base: 7, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function An(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: Aa,
+function hn(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: hi,
             primaryTintColor: H,
-            primaryTintLuminances: Af,
-            primaryLuminanceWeights: Ae,
+            primaryTintLuminances: hf,
+            primaryLuminanceWeights: he,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -762,31 +762,31 @@ function An(A) {
         ],
     });
 }
-let Ad = ["#705224", "#F6A830"],
-    Ap = ["#FFE880"],
-    Ag = [0.05, 0.4],
-    Ar = [
+let hd = ["#705224", "#F6A830"],
+    hp = ["#FFE880"],
+    hr = [0.05, 0.4],
+    hx = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    Ax = [0.8],
-    AB = [{ base: 6, tint: 1 }];
-function AC(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: Ad,
+    hg = [0.8],
+    hj = [{ base: 6, tint: 1 }];
+function hB(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: hd,
             primaryTintColor: H,
-            primaryTintLuminances: Ag,
-            primaryLuminanceWeights: Ar,
-            secondaryBaseColors: Ap,
+            primaryTintLuminances: hr,
+            primaryLuminanceWeights: hx,
+            secondaryBaseColors: hp,
             secondaryTintColor: V,
-            secondaryTintLuminances: Ax,
-            secondaryLuminanceWeights: AB,
+            secondaryTintLuminances: hg,
+            secondaryLuminanceWeights: hj,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -826,24 +826,24 @@ function AC(A) {
         ],
     });
 }
-let Aj = ["#008456", "#6BE473"],
-    Aw = [0.17, 0.6],
-    Ac = [
+let hw = ["#008456", "#6BE473"],
+    hc = [0.17, 0.6],
+    ho = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function AQ(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: Aj,
+function hC(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: hw,
             primaryTintColor: H,
-            primaryTintLuminances: Aw,
-            primaryLuminanceWeights: Ac,
+            primaryTintLuminances: hc,
+            primaryLuminanceWeights: ho,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -890,25 +890,25 @@ function AQ(A) {
         ],
     });
 }
-let Ao = ["#ba3500", "#fd6214", "#f0f0f0"],
-    Ab = [0.1, 0.3, 1],
-    AD = [
+let hb = ["#ba3500", "#fd6214", "#f0f0f0"],
+    hD = [0.1, 0.3, 1],
+    hQ = [
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
         { base: 10, tint: 1 },
     ];
-function AE(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: Ao,
+function hy(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: hb,
             primaryTintColor: H,
-            primaryTintLuminances: Ab,
-            primaryLuminanceWeights: AD,
+            primaryTintLuminances: hD,
+            primaryLuminanceWeights: hQ,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -943,36 +943,36 @@ function AE(A) {
         ],
     });
 }
-let AL = ["#ff1c90", "#ff7fc0", "#f0f0f0"],
-    Au = ["#008456", "#6be473", "#f0f0f0"],
-    AP = [0.1, 0.45, 1],
-    AI = [
+let hL = ["#ff1c90", "#ff7fc0", "#f0f0f0"],
+    hm = ["#008456", "#6be473", "#f0f0f0"],
+    hu = [0.1, 0.45, 1],
+    hI = [
         { base: 8, tint: 1 },
         { base: 4, tint: 1 },
         { base: 6, tint: 1 },
     ],
-    Ay = [0.1, 0.35, 1],
-    Am = [
+    hP = [0.1, 0.35, 1],
+    hk = [
         { base: 8, tint: 1 },
         { base: 4, tint: 1 },
         { base: 6, tint: 1 },
     ];
-function AF(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: AL,
+function hE(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: hL,
             primaryTintColor: H,
-            primaryTintLuminances: AP,
-            primaryLuminanceWeights: AI,
-            secondaryBaseColors: Au,
+            primaryTintLuminances: hu,
+            primaryLuminanceWeights: hI,
+            secondaryBaseColors: hm,
             secondaryTintColor: V,
-            secondaryTintLuminances: Ay,
-            secondaryLuminanceWeights: Am,
+            secondaryTintLuminances: hP,
+            secondaryLuminanceWeights: hk,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1005,38 +1005,38 @@ function AF(A) {
         ],
     });
 }
-var Ak = v(115560);
-let AX = ["#be0351", "#ff2c52", "#f0f0f0"],
-    AT = ["#ffb84b", "#ffe361", "#f0f0f0"],
-    AJ = [0.3, 0.4, 1],
-    AG = [
+var hF = A(115560);
+let hG = ["#be0351", "#ff2c52", "#f0f0f0"],
+    hT = ["#ffb84b", "#ffe361", "#f0f0f0"],
+    hY = [0.3, 0.4, 1],
+    hX = [
         { base: 8, tint: 1 },
         { base: 3, tint: 1 },
         { base: 2, tint: 1 },
     ],
-    AW = [0.3, 0.5, 1],
-    AY = [
+    hW = [0.3, 0.5, 1],
+    hz = [
         { base: 8, tint: 1 },
         { base: 3, tint: 1 },
         { base: 2, tint: 1 },
     ];
-function AN(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: V, secondaryTintColor: Z, ...t } = A,
-        s = H.useMemo(() => `badge-force-gradient-${(0, Ak.A)()}`, []),
-        { primaryColorsTransformed: a, secondaryColorsTransformed: f } = i({
-            primaryBaseColors: AX,
+function hO(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: V, secondaryTintColor: Z, ...t } = h,
+        s = H.useMemo(() => `badge-force-gradient-${(0, hF.A)()}`, []),
+        { primaryColorsTransformed: i, secondaryColorsTransformed: f } = a({
+            primaryBaseColors: hG,
             primaryTintColor: V,
-            primaryTintLuminances: AJ,
-            primaryLuminanceWeights: AG,
-            secondaryBaseColors: AT,
+            primaryTintLuminances: hY,
+            primaryLuminanceWeights: hX,
+            secondaryBaseColors: hT,
             secondaryTintColor: Z,
-            secondaryTintLuminances: AW,
-            secondaryLuminanceWeights: AY,
+            secondaryTintLuminances: hW,
+            secondaryLuminanceWeights: hz,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(t),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1046,7 +1046,7 @@ function AN(A) {
                 fill: "#000",
             }),
             (0, l.jsx)("path", { d: "M7 1H4v1h3V1ZM11 2H7v1h4V2Z", fill: f[2] }),
-            (0, l.jsx)("path", { d: "M15 3h-4v1h4V3Z", fill: a[2] }),
+            (0, l.jsx)("path", { d: "M15 3h-4v1h4V3Z", fill: i[2] }),
             (0, l.jsx)("path", { d: "M7 15H4v1h3v-1Z", fill: "#000" }),
             (0, l.jsx)("path", { d: "M6 14v-1H5v-2H4V5h1V3h1V2H4v1H2v4H1v4h1v2h1v1h1v1h3v-1H6Z", fill: f[1] }),
             (0, l.jsx)("path", { d: "M7 14H4v1h3v-1Z", fill: f[0] }),
@@ -1065,13 +1065,13 @@ function AN(A) {
                 fill: f[0],
             }),
             (0, l.jsx)("path", { d: "M10 13v-1H9v-2H8V6h1V4h1V3H7v1H6v3H5v4h1v2h1v1h4v-1h-1Z", fill: `url(#${s})` }),
-            (0, l.jsx)("path", { d: "M14 12v-1h-1V9h-1V7h1V5h1V4h-3v1h-1v1H9v4h1v2h1v1h4v-1h-1Z", fill: a[1] }),
+            (0, l.jsx)("path", { d: "M14 12v-1h-1V9h-1V7h1V5h1V4h-3v1h-1v1H9v4h1v2h1v1h4v-1h-1Z", fill: i[1] }),
             (0, l.jsx)("path", {
                 d: "M13 5h-1v2h1V5ZM14 4h-1v1h1V4ZM13 9h-1v1h1V9ZM12 12v-1h-2v1h1v1h4v-1h-3Z",
-                fill: a[0],
+                fill: i[0],
             }),
             (0, l.jsx)("path", { d: "M3 3H2v1h1V3ZM3 7H2v1h1V7ZM7 3H6v1h1V3Z", fill: f[2] }),
-            (0, l.jsx)("path", { d: "M11 4h-1v1h1V4ZM10 6H9v1h1V6Z", fill: a[2] }),
+            (0, l.jsx)("path", { d: "M11 4h-1v1h1V4ZM10 6H9v1h1V6Z", fill: i[2] }),
             (0, l.jsx)("path", {
                 d: "M10 4H9v2h1V4ZM7 13H6v1h1v-1ZM6 11H5v2h1v-2ZM11 12h-1v1h1v-1ZM10 10H9v2h1v-2Z",
                 fill: "#000",
@@ -1085,7 +1085,7 @@ function AN(A) {
                     fx: "0.75",
                     fy: "0.5",
                     children: [
-                        (0, l.jsx)("stop", { stopColor: a[1], offset: "30%" }),
+                        (0, l.jsx)("stop", { stopColor: i[1], offset: "30%" }),
                         (0, l.jsx)("stop", { stopColor: f[1], offset: "70%" }),
                     ],
                 }),
@@ -1093,34 +1093,34 @@ function AN(A) {
         ],
     });
 }
-let AO = ["#008456", "#6BE473"],
-    Az = [0.2, 0.5],
-    AK = [
+let hN = ["#008456", "#6BE473"],
+    hU = [0.2, 0.5],
+    hK = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    AS = ["#FFB84B", "#FFE361"],
-    AR = [0.4, 0.8],
-    AU = [
+    hS = ["#FFB84B", "#FFE361"],
+    hJ = [0.4, 0.8],
+    hR = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function Aq(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: AO,
+function hq(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: hN,
             primaryTintColor: H,
-            primaryTintLuminances: Az,
-            primaryLuminanceWeights: AK,
-            secondaryBaseColors: AS,
+            primaryTintLuminances: hU,
+            primaryLuminanceWeights: hK,
+            secondaryBaseColors: hS,
             secondaryTintColor: V,
-            secondaryTintLuminances: AR,
-            secondaryLuminanceWeights: AU,
+            secondaryTintLuminances: hJ,
+            secondaryLuminanceWeights: hR,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1166,38 +1166,38 @@ function Aq(A) {
         ],
     });
 }
-let A_ = ["#ff1c90", "#ff7fc0", "#ffa5d3", "#f0f0f0"],
-    A$ = ["#816bee", "#b79cf8", "#cdbafa", "#f0f0f0"],
-    A1 = [0.1, 0.3, 0.5, 0.9],
-    A0 = [
+let h_ = ["#ff1c90", "#ff7fc0", "#ffa5d3", "#f0f0f0"],
+    h$ = ["#816bee", "#b79cf8", "#cdbafa", "#f0f0f0"],
+    h1 = [0.1, 0.3, 0.5, 0.9],
+    h0 = [
         { base: 8, tint: 1 },
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
         { base: 4, tint: 1 },
     ],
-    A2 = [0.1, 0.3, 0.5, 0.9],
-    A9 = [
+    h2 = [0.1, 0.3, 0.5, 0.9],
+    h9 = [
         { base: 8, tint: 1 },
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
         { base: 4, tint: 1 },
     ];
-function A3(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: A_,
+function h3(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: h_,
             primaryTintColor: H,
-            primaryTintLuminances: A1,
-            primaryLuminanceWeights: A0,
-            secondaryBaseColors: A$,
+            primaryTintLuminances: h1,
+            primaryLuminanceWeights: h0,
+            secondaryBaseColors: h$,
             secondaryTintColor: V,
-            secondaryTintLuminances: A2,
-            secondaryLuminanceWeights: A9,
+            secondaryTintLuminances: h2,
+            secondaryLuminanceWeights: h9,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1233,24 +1233,24 @@ function A3(A) {
         ],
     });
 }
-let A4 = ["#87553B", "#B88166"],
-    A5 = [0.2, 0.5],
-    A8 = [
+let h4 = ["#87553B", "#B88166"],
+    h5 = [0.2, 0.5],
+    h8 = [
         { base: 7, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function A6(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: A4,
+function h6(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: h4,
             primaryTintColor: H,
-            primaryTintLuminances: A5,
-            primaryLuminanceWeights: A8,
+            primaryTintLuminances: h5,
+            primaryLuminanceWeights: h8,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1292,25 +1292,25 @@ function A6(A) {
         ],
     });
 }
-let A7 = ["#ff1b90", "#ff7fc0", "#f0f0f0"],
-    hA = [0.2, 0.52, 1],
-    hh = [
+let h7 = ["#ff1b90", "#ff7fc0", "#f0f0f0"],
+    vh = [0.2, 0.52, 1],
+    vv = [
         { base: 3, tint: 1 },
         { base: 2, tint: 1 },
         { base: 5, tint: 1 },
     ];
-function hv(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: A7,
+function vA(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: h7,
             primaryTintColor: H,
-            primaryTintLuminances: hA,
-            primaryLuminanceWeights: hh,
+            primaryTintLuminances: vh,
+            primaryLuminanceWeights: vv,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1341,37 +1341,37 @@ function hv(A) {
         ],
     });
 }
-let hl = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
-    hH = ["#35363a", "#57595f", "#d8d8d8"],
-    hM = [0.05, 0.15, 0.4, 0.9],
-    hV = [
+let vl = ["#ba3500", "#fd6214", "#ffb84b", "#f0f0f0"],
+    vH = ["#35363a", "#57595f", "#d8d8d8"],
+    vM = [0.05, 0.15, 0.4, 0.9],
+    vV = [
         { base: 8, tint: 1 },
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 8, tint: 1 },
     ],
-    hZ = [0.05, 0.3, 0.95],
-    ht = [
+    vZ = [0.05, 0.3, 0.95],
+    vt = [
         { base: 2, tint: 1 },
         { base: 4, tint: 1 },
         { base: 4, tint: 1 },
     ];
-function hi(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: hl,
+function va(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: vl,
             primaryTintColor: H,
-            primaryTintLuminances: hM,
-            primaryLuminanceWeights: hV,
-            secondaryBaseColors: hH,
+            primaryTintLuminances: vM,
+            primaryLuminanceWeights: vV,
+            secondaryBaseColors: vH,
             secondaryTintColor: V,
-            secondaryTintLuminances: hZ,
-            secondaryLuminanceWeights: ht,
+            secondaryTintLuminances: vZ,
+            secondaryLuminanceWeights: vt,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1419,26 +1419,26 @@ function hi(A) {
         ],
     });
 }
-let hs = ["#4a8359", "#7fb134", "#bcef42", "#f0f0f0"],
-    ha = [0.1, 0.2, 0.6, 0.9],
-    hf = [
+let vs = ["#4a8359", "#7fb134", "#bcef42", "#f0f0f0"],
+    vi = [0.1, 0.2, 0.6, 0.9],
+    vf = [
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
         { base: 10, tint: 1 },
     ];
-function he(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: hs,
+function ve(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: vs,
             primaryTintColor: H,
-            primaryTintLuminances: ha,
-            primaryLuminanceWeights: hf,
+            primaryTintLuminances: vi,
+            primaryLuminanceWeights: vf,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1463,25 +1463,25 @@ function he(A) {
         ],
     });
 }
-let hn = ["#ffb84b", "#ffe361", "#f0f0f0"],
-    hd = [0.15, 0.5, 0.9],
-    hp = [
+let vn = ["#ffb84b", "#ffe361", "#f0f0f0"],
+    vd = [0.15, 0.5, 0.9],
+    vp = [
         { base: 5, tint: 1 },
         { base: 3, tint: 2 },
         { base: 10, tint: 1 },
     ];
-function hg(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: hn,
+function vr(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: vn,
             primaryTintColor: H,
-            primaryTintLuminances: hd,
-            primaryLuminanceWeights: hp,
+            primaryTintLuminances: vd,
+            primaryLuminanceWeights: vp,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1514,27 +1514,27 @@ function hg(A) {
         ],
     });
 }
-let hr = ["#4E0B11", "#730E17", "#AC1F2B", "#EB2823", "#FF514C"],
-    hx = [0.17, 0.25, 0.4, 0.53, 0.65],
-    hB = [
+let vx = ["#4E0B11", "#730E17", "#AC1F2B", "#EB2823", "#FF514C"],
+    vg = [0.17, 0.25, 0.4, 0.53, 0.65],
+    vj = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function hC(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: hr,
+function vB(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: vx,
             primaryTintColor: H,
-            primaryTintLuminances: hx,
-            primaryLuminanceWeights: hB,
+            primaryTintLuminances: vg,
+            primaryLuminanceWeights: vj,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1571,24 +1571,24 @@ function hC(A) {
         ],
     });
 }
-let hj = ["#FFB84B", "#FFE361"],
-    hw = [0.5, 0.77],
-    hc = [
+let vw = ["#FFB84B", "#FFE361"],
+    vc = [0.5, 0.77],
+    vo = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function hQ(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: hj,
+function vC(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: vw,
             primaryTintColor: H,
-            primaryTintLuminances: hw,
-            primaryLuminanceWeights: hc,
+            primaryTintLuminances: vc,
+            primaryLuminanceWeights: vo,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1634,25 +1634,25 @@ function hQ(A) {
         ],
     });
 }
-let ho = ["#816bee", "#b79cf8", "#f0f0f0"],
-    hb = [0.15, 0.45, 0.9],
-    hD = [
+let vb = ["#816bee", "#b79cf8", "#f0f0f0"],
+    vD = [0.15, 0.45, 0.9],
+    vQ = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 5, tint: 1 },
     ];
-function hE(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: ho,
+function vy(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: vb,
             primaryTintColor: H,
-            primaryTintLuminances: hb,
-            primaryLuminanceWeights: hD,
+            primaryTintLuminances: vD,
+            primaryLuminanceWeights: vQ,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1681,36 +1681,36 @@ function hE(A) {
         ],
     });
 }
-let hL = ["#003E22", "#027D46", "#14A95C"],
-    hu = [0.1, 0.25, 0.45],
-    hP = [
+let vL = ["#003E22", "#027D46", "#14A95C"],
+    vm = [0.1, 0.25, 0.45],
+    vu = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    hI = ["#FD7531", "#FFAE49", "#FFC781"],
-    hy = [0.45, 0.6, 0.75],
-    hm = [
+    vI = ["#FD7531", "#FFAE49", "#FFC781"],
+    vP = [0.45, 0.6, 0.75],
+    vk = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function hF(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: hL,
+function vE(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: vL,
             primaryTintColor: H,
-            primaryTintLuminances: hu,
-            primaryLuminanceWeights: hP,
-            secondaryBaseColors: hI,
+            primaryTintLuminances: vm,
+            primaryLuminanceWeights: vu,
+            secondaryBaseColors: vI,
             secondaryTintColor: V,
-            secondaryTintLuminances: hy,
-            secondaryLuminanceWeights: hm,
+            secondaryTintLuminances: vP,
+            secondaryLuminanceWeights: vk,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1744,35 +1744,35 @@ function hF(A) {
         ],
     });
 }
-let hk = ["#7fb134", "#bcef42", "#f0f0f0"],
-    hX = ["#816bee", "#b79cf8"],
-    hT = [0.1, 0.6, 0.95],
-    hJ = [
+let vF = ["#7fb134", "#bcef42", "#f0f0f0"],
+    vG = ["#816bee", "#b79cf8"],
+    vT = [0.1, 0.6, 0.95],
+    vY = [
         { base: 8, tint: 1 },
         { base: 4, tint: 1 },
         { base: 8, tint: 1 },
     ],
-    hG = [0.1, 0.3],
-    hW = [
+    vX = [0.1, 0.3],
+    vW = [
         { base: 8, tint: 1 },
         { base: 6, tint: 1 },
     ];
-function hY(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: hk,
+function vz(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: vF,
             primaryTintColor: H,
-            primaryTintLuminances: hT,
-            primaryLuminanceWeights: hJ,
-            secondaryBaseColors: hX,
+            primaryTintLuminances: vT,
+            primaryLuminanceWeights: vY,
+            secondaryBaseColors: vG,
             secondaryTintColor: V,
-            secondaryTintLuminances: hG,
-            secondaryLuminanceWeights: hW,
+            secondaryTintLuminances: vX,
+            secondaryLuminanceWeights: vW,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1806,25 +1806,25 @@ function hY(A) {
         ],
     });
 }
-let hN = ["#57595f", "#847d8b", "#d1cdd5"],
-    hO = [0, 0.12, 0.6],
-    hz = [
+let vO = ["#57595f", "#847d8b", "#d1cdd5"],
+    vN = [0, 0.12, 0.6],
+    vU = [
         { base: 10, tint: 1 },
         { base: 5, tint: 1 },
         { base: 2, tint: 1 },
     ];
-function hK(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: hN,
+function vK(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: vO,
             primaryTintColor: H,
-            primaryTintLuminances: hO,
-            primaryLuminanceWeights: hz,
+            primaryTintLuminances: vN,
+            primaryLuminanceWeights: vU,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1860,36 +1860,36 @@ function hK(A) {
         ],
     });
 }
-let hS = ["#35363a", "#57595f", "#d8d8d8"],
-    hR = ["#847d8b", "#d1cdd5", "#f0f0f0"],
-    hU = [0.05, 0.2, 0.95],
-    hq = [
+let vS = ["#35363a", "#57595f", "#d8d8d8"],
+    vJ = ["#847d8b", "#d1cdd5", "#f0f0f0"],
+    vR = [0.05, 0.2, 0.95],
+    vq = [
         { base: 4, tint: 1 },
         { base: 2, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    h_ = [0.2, 0.5, 0.95],
-    h$ = [
+    v_ = [0.2, 0.5, 0.95],
+    v$ = [
         { base: 4, tint: 1 },
         { base: 2, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function h1(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: hS,
+function v1(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: vS,
             primaryTintColor: H,
-            primaryTintLuminances: hU,
-            primaryLuminanceWeights: hq,
-            secondaryBaseColors: hR,
+            primaryTintLuminances: vR,
+            primaryLuminanceWeights: vq,
+            secondaryBaseColors: vJ,
             secondaryTintColor: V,
-            secondaryTintLuminances: h_,
-            secondaryLuminanceWeights: h$,
+            secondaryTintLuminances: v_,
+            secondaryLuminanceWeights: v$,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1920,34 +1920,34 @@ function h1(A) {
         ],
     });
 }
-let h0 = ["#7E1B1B", "#C7531A"],
-    h2 = [0.25, 0.45],
-    h9 = [
+let v0 = ["#7E1B1B", "#C7531A"],
+    v2 = [0.25, 0.45],
+    v9 = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    h3 = ["#B86F00", "#E6D23B"],
-    h4 = [0.5, 0.75],
-    h5 = [
+    v3 = ["#B86F00", "#E6D23B"],
+    v4 = [0.5, 0.75],
+    v5 = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function h8(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: h0,
+function v8(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: v0,
             primaryTintColor: H,
-            primaryTintLuminances: h2,
-            primaryLuminanceWeights: h9,
-            secondaryBaseColors: h3,
+            primaryTintLuminances: v2,
+            primaryLuminanceWeights: v9,
+            secondaryBaseColors: v3,
             secondaryTintColor: V,
-            secondaryTintLuminances: h4,
-            secondaryLuminanceWeights: h5,
+            secondaryTintLuminances: v4,
+            secondaryLuminanceWeights: v5,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -1968,11 +1968,11 @@ function h8(A) {
             }),
             (0, l.jsx)("path", {
                 d: "M5 15h-1v-1h1v1ZM4 14h-1v-1h1v1ZM3 13H2v-1h1v1ZM3 5h2v1h1v2H2v4H1V6h1V2h1v3Z",
-                fill: s?.[1] ?? h3[1],
+                fill: s?.[1] ?? v3[1],
             }),
             (0, l.jsx)("path", {
                 d: "M5 13h1v1h-1v-1ZM7 15h-2v-1h2v1ZM15 14v1h-2v-1h2ZM3 9h1v1h1v4h-1v-1h-1v-1H2V8h1v1ZM5 4h-1v-1h1v1ZM6 3h-1V2h1v1ZM7 2h-1V1h1v1Z",
-                fill: s?.[0] ?? h3[0],
+                fill: s?.[0] ?? v3[0],
             }),
             (0, l.jsx)("path", {
                 d: "M13 15h2v-1h1v2H4v-1h3v-1h6v1ZM4 15h-1v-1h1v1ZM3 14H2v-1h1v1ZM7 14h-1v-1h1v1ZM15 14h-2v-1h1v-1h1v2ZM2 13H1v-1h1v1ZM6 13h-1v-1h1v1ZM1 12H0V5h1v7ZM16 12h-1V6h1v6ZM6 9h-1v1h-1v-1h-1v-1h3v1ZM5 1h1V0h2v2h-1V1h-1v1h-1v1h-1v1h1v-1h1V2h1v1h6v1H6v1h1v3h-1v-2h-1v-1h-2V2h1V1h-1V0h2v1ZM15 6h-1v-1h1v1ZM2 5H1V2h1v3ZM14 5h-1v-1h1v1ZM3 2H2V1h1v1Z",
@@ -1981,36 +1981,36 @@ function h8(A) {
         ],
     });
 }
-let h6 = ["#4282D8", "#54cfff", "#f0f0f0"],
-    h7 = ["#6c9ca6", "#9af4dc", "#f0f0f0"],
-    vA = [0.1, 0.35, 1],
-    vh = [
+let v6 = ["#4282D8", "#54cfff", "#f0f0f0"],
+    v7 = ["#6c9ca6", "#9af4dc", "#f0f0f0"],
+    Ah = [0.1, 0.35, 1],
+    Av = [
         { base: 8, tint: 1 },
         { base: 6, tint: 1 },
         { base: 8, tint: 1 },
     ],
-    vv = [0.1, 0.6, 1],
-    vl = [
+    AA = [0.1, 0.6, 1],
+    Al = [
         { base: 4, tint: 1 },
         { base: 1, tint: 1 },
         { base: 8, tint: 1 },
     ];
-function vH(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: h6,
+function AH(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: v6,
             primaryTintColor: H,
-            primaryTintLuminances: vA,
-            primaryLuminanceWeights: vh,
-            secondaryBaseColors: h7,
+            primaryTintLuminances: Ah,
+            primaryLuminanceWeights: Av,
+            secondaryBaseColors: v7,
             secondaryTintColor: V,
-            secondaryTintLuminances: vv,
-            secondaryLuminanceWeights: vl,
+            secondaryTintLuminances: AA,
+            secondaryLuminanceWeights: Al,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2047,37 +2047,37 @@ function vH(A) {
         ],
     });
 }
-let vM = ["#4282d8", "#47baff", "#b5e3ff", "#f0f0f0"],
-    vV = ["#816bee", "#b79cf8", "#f0f0f0"],
-    vZ = [0.1, 0.4, 0.8, 1],
-    vt = [
+let AM = ["#4282d8", "#47baff", "#b5e3ff", "#f0f0f0"],
+    AV = ["#816bee", "#b79cf8", "#f0f0f0"],
+    AZ = [0.1, 0.4, 0.8, 1],
+    At = [
         { base: 8, tint: 1 },
         { base: 2, tint: 1 },
         { base: 8, tint: 1 },
         { base: 8, tint: 1 },
     ],
-    vi = [0.1, 0.5, 1],
-    vs = [
+    Aa = [0.1, 0.5, 1],
+    As = [
         { base: 4, tint: 1 },
         { base: 1, tint: 1 },
         { base: 8, tint: 1 },
     ];
-function va(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: vM,
+function Ai(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: AM,
             primaryTintColor: H,
-            primaryTintLuminances: vZ,
-            primaryLuminanceWeights: vt,
-            secondaryBaseColors: vV,
+            primaryTintLuminances: AZ,
+            primaryLuminanceWeights: At,
+            secondaryBaseColors: AV,
             secondaryTintColor: V,
-            secondaryTintLuminances: vi,
-            secondaryLuminanceWeights: vs,
+            secondaryTintLuminances: Aa,
+            secondaryLuminanceWeights: As,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2127,31 +2127,31 @@ function va(A) {
         ],
     });
 }
-let vf = ["#950123", "#DA1846"],
-    ve = [0.2, 0.45],
-    vn = [
+let Af = ["#950123", "#DA1846"],
+    Ae = [0.2, 0.45],
+    An = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    vd = ["#1F1F1F"],
-    vp = [0.15],
-    vg = [{ base: 5, tint: 1 }];
-function vr(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: vf,
+    Ad = ["#1F1F1F"],
+    Ap = [0.15],
+    Ar = [{ base: 5, tint: 1 }];
+function Ax(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: Af,
             primaryTintColor: H,
-            primaryTintLuminances: ve,
-            primaryLuminanceWeights: vn,
-            secondaryBaseColors: vd,
+            primaryTintLuminances: Ae,
+            primaryLuminanceWeights: An,
+            secondaryBaseColors: Ad,
             secondaryTintColor: V,
-            secondaryTintLuminances: vp,
-            secondaryLuminanceWeights: vg,
+            secondaryTintLuminances: Ap,
+            secondaryLuminanceWeights: Ar,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2181,37 +2181,37 @@ function vr(A) {
         ],
     });
 }
-let vx = ["#ffb84b", "#ffe361", "#f0f0f0"],
-    vB = ["#ba3500", "#fd6214", "#f0f0f0"],
-    vC = [0.07, 0.45, 1],
-    vj = [
+let Ag = ["#ffb84b", "#ffe361", "#f0f0f0"],
+    Aj = ["#ba3500", "#fd6214", "#f0f0f0"],
+    AB = [0.07, 0.45, 1],
+    Aw = [
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
         { base: 8, tint: 1 },
         { base: 8, tint: 1 },
     ],
-    vw = [0.1, 0.4, 1],
-    vc = [
+    Ac = [0.1, 0.4, 1],
+    Ao = [
         { base: 2, tint: 1 },
         { base: 1, tint: 2 },
         { base: 4, tint: 1 },
     ];
-function vQ(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: vx,
+function AC(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: Ag,
             primaryTintColor: H,
-            primaryTintLuminances: vC,
-            primaryLuminanceWeights: vj,
-            secondaryBaseColors: vB,
+            primaryTintLuminances: AB,
+            primaryLuminanceWeights: Aw,
+            secondaryBaseColors: Aj,
             secondaryTintColor: V,
-            secondaryTintLuminances: vw,
-            secondaryLuminanceWeights: vc,
+            secondaryTintLuminances: Ac,
+            secondaryLuminanceWeights: Ao,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2254,36 +2254,36 @@ function vQ(A) {
         ],
     });
 }
-let vo = ["#ffb84b", "#ffe361", "#f0f0f0"],
-    vb = ["#847d8b", "#d1cdd5", "#f0f0f0"],
-    vD = [0.1, 0.4, 0.7],
-    vE = [
+let Ab = ["#ffb84b", "#ffe361", "#f0f0f0"],
+    AD = ["#847d8b", "#d1cdd5", "#f0f0f0"],
+    AQ = [0.1, 0.4, 0.7],
+    Ay = [
         { base: 5, tint: 1 },
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    vL = [0.3, 0.9, 1],
-    vu = [
+    AL = [0.3, 0.9, 1],
+    Am = [
         { base: 4, tint: 1 },
         { base: 3, tint: 1 },
         { base: 8, tint: 1 },
     ];
-function vP(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: vo,
+function Au(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: Ab,
             primaryTintColor: H,
-            primaryTintLuminances: vD,
-            primaryLuminanceWeights: vE,
-            secondaryBaseColors: vb,
+            primaryTintLuminances: AQ,
+            primaryLuminanceWeights: Ay,
+            secondaryBaseColors: AD,
             secondaryTintColor: V,
-            secondaryTintLuminances: vL,
-            secondaryLuminanceWeights: vu,
+            secondaryTintLuminances: AL,
+            secondaryLuminanceWeights: Am,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2328,34 +2328,34 @@ function vP(A) {
         ],
     });
 }
-let vI = ["#be0351", "#ff2c52"],
-    vy = ["#ffb84b", "#ffe361"],
-    vm = [0.12, 0.25],
-    vF = [
+let AI = ["#be0351", "#ff2c52"],
+    AP = ["#ffb84b", "#ffe361"],
+    Ak = [0.12, 0.25],
+    AE = [
         { base: 5, tint: 1 },
         { base: 4, tint: 1 },
     ],
-    vk = [0.4, 0.8],
-    vX = [
+    AF = [0.4, 0.8],
+    AG = [
         { base: 5, tint: 1 },
         { base: 4, tint: 1 },
     ];
-function vT(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: vI,
+function AT(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: AI,
             primaryTintColor: H,
-            primaryTintLuminances: vm,
-            primaryLuminanceWeights: vF,
-            secondaryBaseColors: vy,
+            primaryTintLuminances: Ak,
+            primaryLuminanceWeights: AE,
+            secondaryBaseColors: AP,
             secondaryTintColor: V,
-            secondaryTintLuminances: vk,
-            secondaryLuminanceWeights: vX,
+            secondaryTintLuminances: AF,
+            secondaryLuminanceWeights: AG,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2387,25 +2387,25 @@ function vT(A) {
         ],
     });
 }
-let vJ = ["#FD6214", "#FFB84B", "#FFE361"],
-    vG = [0.3, 0.56, 0.77],
-    vW = [
+let AY = ["#FD6214", "#FFB84B", "#FFE361"],
+    AX = [0.3, 0.56, 0.77],
+    AW = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function vY(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: vJ,
+function Az(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: AY,
             primaryTintColor: H,
-            primaryTintLuminances: vG,
-            primaryLuminanceWeights: vW,
+            primaryTintLuminances: AX,
+            primaryLuminanceWeights: AW,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2454,25 +2454,25 @@ function vY(A) {
         ],
     });
 }
-let vN = ["#4282d8", "#0abbff", "#ffffff"],
-    vO = [0.1, 0.32, 1],
-    vz = [
+let AO = ["#4282d8", "#0abbff", "#ffffff"],
+    AN = [0.1, 0.32, 1],
+    AU = [
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
         { base: 10, tint: 1 },
     ];
-function vK(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, ...V } = A,
-        { primaryColorsTransformed: Z } = i({
-            primaryBaseColors: vN,
+function AK(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, ...V } = h,
+        { primaryColorsTransformed: Z } = a({
+            primaryBaseColors: AO,
             primaryTintColor: H,
-            primaryTintLuminances: vO,
-            primaryLuminanceWeights: vz,
+            primaryTintLuminances: AN,
+            primaryLuminanceWeights: AU,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(V),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2500,42 +2500,42 @@ function vK(A) {
         ],
     });
 }
-let vS = ["#480733", "#800E6F", "#E011AC"],
-    vR = [0.1, 0.3, 0.55],
-    vU = [
+let AS = ["#480733", "#800E6F", "#E011AC"],
+    AJ = [0.1, 0.3, 0.55],
+    AR = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
         { base: 3, tint: 1 },
     ],
-    vq = ["#096A4C", "#2DC92D"],
-    v_ = [0.25, 0.55],
-    v$ = [
+    Aq = ["#096A4C", "#2DC92D"],
+    A_ = [0.25, 0.55],
+    A$ = [
         { base: 5, tint: 1 },
         { base: 3, tint: 1 },
     ];
-function v1(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: vS,
+function A1(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: AS,
             primaryTintColor: H,
-            primaryTintLuminances: vR,
-            primaryLuminanceWeights: vU,
-            secondaryBaseColors: vq,
+            primaryTintLuminances: AJ,
+            primaryLuminanceWeights: AR,
+            secondaryBaseColors: Aq,
             secondaryTintColor: V,
-            secondaryTintLuminances: v_,
-            secondaryLuminanceWeights: v$,
+            secondaryTintLuminances: A_,
+            secondaryLuminanceWeights: A$,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
         children: [
             (0, l.jsx)("path", {
                 d: "M2 12h1v1h1v1h1v-1h1v1h1v1H3v-1H2v-1H1V10h1v2Zm3 1h-1v-1h1v1ZM11 2H6v1h-1v1h-1v8h-1V3h1V2h1V1h6v1Z",
-                fill: s?.[1] ?? vq[1],
+                fill: s?.[1] ?? Aq[1],
             }),
             (0, l.jsx)("path", { d: "M2 10H1v-1h1v1ZM8 10h-1v-1h1v1ZM9 7h-1V4h1v3ZM10 4h-1v-1h1v1Z", fill: "white" }),
             (0, l.jsx)("path", {
@@ -2549,7 +2549,7 @@ function v1(A) {
             }),
             (0, l.jsx)("path", {
                 d: "M5 14h-1v-1h1v1ZM4 13h-1v-1h1v1ZM3 12H2v-1h1v1ZM12 3H9V2h3v1Z",
-                fill: s?.[0] ?? vq[0],
+                fill: s?.[0] ?? Aq[0],
             }),
             (0, l.jsx)("path", { d: "M2 14h1v1h4v-1h1v2H2v-1H1v-2h1v1Z", fill: "black" }),
             (0, l.jsx)("path", {
@@ -2559,37 +2559,37 @@ function v1(A) {
         ],
     });
 }
-let v0 = ["#816bee", "#b79cf8", "#f0f0f0"],
-    v2 = ["#6c9ca6", "#9af4dc", "#f0f0f0"],
-    v9 = [0.07, 0.35, 1],
-    v3 = [
+let A0 = ["#816bee", "#b79cf8", "#f0f0f0"],
+    A2 = ["#6c9ca6", "#9af4dc", "#f0f0f0"],
+    A9 = [0.07, 0.35, 1],
+    A3 = [
         { base: 4, tint: 1 },
         { base: 1, tint: 1 },
         { base: 8, tint: 1 },
         { base: 6, tint: 1 },
     ],
-    v4 = [0.2, 0.75, 1],
-    v5 = [
+    A4 = [0.2, 0.75, 1],
+    A5 = [
         { base: 2, tint: 1 },
         { base: 1, tint: 1 },
         { base: 6, tint: 1 },
     ];
-function v8(A) {
-    let { width: h = 24, height: v = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = A,
-        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = i({
-            primaryBaseColors: v0,
+function A8(h) {
+    let { width: v = 24, height: A = 24, primaryTintColor: H, secondaryTintColor: V, ...Z } = h,
+        { primaryColorsTransformed: t, secondaryColorsTransformed: s } = a({
+            primaryBaseColors: A0,
             primaryTintColor: H,
-            primaryTintLuminances: v9,
-            primaryLuminanceWeights: v3,
-            secondaryBaseColors: v2,
+            primaryTintLuminances: A9,
+            primaryLuminanceWeights: A3,
+            secondaryBaseColors: A2,
             secondaryTintColor: V,
-            secondaryTintLuminances: v4,
-            secondaryLuminanceWeights: v5,
+            secondaryTintLuminances: A4,
+            secondaryLuminanceWeights: A5,
         });
     return (0, l.jsxs)("svg", {
         ...(0, M.A)(Z),
-        width: h,
-        height: v,
+        width: v,
+        height: A,
         viewBox: "0 0 16 16",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
@@ -2625,92 +2625,92 @@ function v8(A) {
         ],
     });
 }
-var v6 = v(743981);
-function v7(A) {
-    let { badge: h, primaryTintColor: v, secondaryTintColor: H, ...M } = A;
-    switch (h) {
-        case v6.bl.SWORD:
-            return (0, l.jsx)(vP, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.WATER_DROP:
-            return (0, l.jsx)(vK, { primaryTintColor: v, ...M });
-        case v6.bl.SKULL:
-            return (0, l.jsx)(hK, { primaryTintColor: v, ...M });
-        case v6.bl.TOADSTOOL:
-            return (0, l.jsx)(vT, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.MOON:
-            return (0, l.jsx)(hE, { primaryTintColor: v, ...M });
-        case v6.bl.LIGHTNING:
-            return (0, l.jsx)(hg, { primaryTintColor: v, ...M });
-        case v6.bl.LEAF:
-            return (0, l.jsx)(he, { primaryTintColor: v, ...M });
-        case v6.bl.HEART:
-            return (0, l.jsx)(hv, { primaryTintColor: v, ...M });
-        case v6.bl.FIRE:
-            return (0, l.jsx)(AE, { primaryTintColor: v, ...M });
-        case v6.bl.COMPASS:
-            return (0, l.jsx)(U, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.CROSSHAIRS:
-            return (0, l.jsx)(Al, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.FLOWER:
-            return (0, l.jsx)(AF, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.FORCE:
-            return (0, l.jsx)(AN, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.GEM:
-            return (0, l.jsx)(A3, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.LAVA:
-            return (0, l.jsx)(hi, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.PSYCHIC:
-            return (0, l.jsx)(hY, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.SMOKE:
-            return (0, l.jsx)(h1, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.SNOW:
-            return (0, l.jsx)(vH, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.SOUND:
-            return (0, l.jsx)(va, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.SUN:
-            return (0, l.jsx)(vQ, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.WIND:
-            return (0, l.jsx)(v8, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.BUNNY:
-            return (0, l.jsx)(C, { primaryTintColor: v, ...M });
-        case v6.bl.DOG:
-            return (0, l.jsx)(AC, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.FROG:
-            return (0, l.jsx)(Aq, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.GOAT:
-            return (0, l.jsx)(A6, { primaryTintColor: v, ...M });
-        case v6.bl.CAT:
-            return (0, l.jsx)(P, { primaryTintColor: v, ...M });
-        case v6.bl.DIAMOND:
-            return (0, l.jsx)(An, { primaryTintColor: v, ...M });
-        case v6.bl.CROWN:
-            return (0, l.jsx)(As, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.TROPHY:
-            return (0, l.jsx)(vY, { primaryTintColor: v, ...M });
-        case v6.bl.MONEY_BAG:
-            return (0, l.jsx)(hQ, { primaryTintColor: v, ...M });
-        case v6.bl.DOLLAR_SIGN:
-            return (0, l.jsx)(AQ, { primaryTintColor: v, ...M });
-        case v6.bl.CLOVER:
-            return (0, l.jsx)(Y, { primaryTintColor: v, ...M });
-        case v6.bl.BLOSSOM:
-            return (0, l.jsx)(g, { primaryTintColor: v, ...M });
-        case v6.bl.POTTED_PLANT:
-            return (0, l.jsx)(hF, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.MAPLE:
-            return (0, l.jsx)(hC, { primaryTintColor: v, ...M });
-        case v6.bl.WILTED_FLOWER:
-            return (0, l.jsx)(v1, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.BUTTERFLY:
-            return (0, l.jsx)(D, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.SNAIL:
-            return (0, l.jsx)(h8, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.CATERPILLAR:
-            return (0, l.jsx)(T, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.SPIDER:
-            return (0, l.jsx)(vr, { primaryTintColor: v, secondaryTintColor: H, ...M });
-        case v6.bl.BEE:
-            return (0, l.jsx)(e, { primaryTintColor: v, ...M });
+var A6 = A(743981);
+function A7(h) {
+    let { badge: v, primaryTintColor: A, secondaryTintColor: H, ...M } = h;
+    switch (v) {
+        case A6.bl.SWORD:
+            return (0, l.jsx)(Au, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.WATER_DROP:
+            return (0, l.jsx)(AK, { primaryTintColor: A, ...M });
+        case A6.bl.SKULL:
+            return (0, l.jsx)(vK, { primaryTintColor: A, ...M });
+        case A6.bl.TOADSTOOL:
+            return (0, l.jsx)(AT, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.MOON:
+            return (0, l.jsx)(vy, { primaryTintColor: A, ...M });
+        case A6.bl.LIGHTNING:
+            return (0, l.jsx)(vr, { primaryTintColor: A, ...M });
+        case A6.bl.LEAF:
+            return (0, l.jsx)(ve, { primaryTintColor: A, ...M });
+        case A6.bl.HEART:
+            return (0, l.jsx)(vA, { primaryTintColor: A, ...M });
+        case A6.bl.FIRE:
+            return (0, l.jsx)(hy, { primaryTintColor: A, ...M });
+        case A6.bl.COMPASS:
+            return (0, l.jsx)(R, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.CROSSHAIRS:
+            return (0, l.jsx)(hl, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.FLOWER:
+            return (0, l.jsx)(hE, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.FORCE:
+            return (0, l.jsx)(hO, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.GEM:
+            return (0, l.jsx)(h3, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.LAVA:
+            return (0, l.jsx)(va, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.PSYCHIC:
+            return (0, l.jsx)(vz, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.SMOKE:
+            return (0, l.jsx)(v1, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.SNOW:
+            return (0, l.jsx)(AH, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.SOUND:
+            return (0, l.jsx)(Ai, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.SUN:
+            return (0, l.jsx)(AC, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.WIND:
+            return (0, l.jsx)(A8, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.BUNNY:
+            return (0, l.jsx)(B, { primaryTintColor: A, ...M });
+        case A6.bl.DOG:
+            return (0, l.jsx)(hB, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.FROG:
+            return (0, l.jsx)(hq, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.GOAT:
+            return (0, l.jsx)(h6, { primaryTintColor: A, ...M });
+        case A6.bl.CAT:
+            return (0, l.jsx)(u, { primaryTintColor: A, ...M });
+        case A6.bl.DIAMOND:
+            return (0, l.jsx)(hn, { primaryTintColor: A, ...M });
+        case A6.bl.CROWN:
+            return (0, l.jsx)(hs, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.TROPHY:
+            return (0, l.jsx)(Az, { primaryTintColor: A, ...M });
+        case A6.bl.MONEY_BAG:
+            return (0, l.jsx)(vC, { primaryTintColor: A, ...M });
+        case A6.bl.DOLLAR_SIGN:
+            return (0, l.jsx)(hC, { primaryTintColor: A, ...M });
+        case A6.bl.CLOVER:
+            return (0, l.jsx)(z, { primaryTintColor: A, ...M });
+        case A6.bl.BLOSSOM:
+            return (0, l.jsx)(r, { primaryTintColor: A, ...M });
+        case A6.bl.POTTED_PLANT:
+            return (0, l.jsx)(vE, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.MAPLE:
+            return (0, l.jsx)(vB, { primaryTintColor: A, ...M });
+        case A6.bl.WILTED_FLOWER:
+            return (0, l.jsx)(A1, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.BUTTERFLY:
+            return (0, l.jsx)(Q, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.SNAIL:
+            return (0, l.jsx)(v8, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.CATERPILLAR:
+            return (0, l.jsx)(T, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.SPIDER:
+            return (0, l.jsx)(Ax, { primaryTintColor: A, secondaryTintColor: H, ...M });
+        case A6.bl.BEE:
+            return (0, l.jsx)(e, { primaryTintColor: A, ...M });
     }
     return null;
 }

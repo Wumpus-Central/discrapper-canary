@@ -1,13 +1,13 @@
-r.d(t, { o: () => m });
-var n = r(427930),
-    l = r(734057),
-    a = r(71393);
-r(938796);
-var i = r(665260),
-    u = r(409481),
-    o = r(811091),
-    s = r(682901),
-    d = r(652215);
+n.d(t, { o: () => m });
+var r = n(427930),
+    l = n(734057),
+    i = n(71393);
+n(938796);
+var a = n(665260),
+    o = n(409481),
+    u = n(811091),
+    s = n(682901),
+    d = n(652215);
 let c = Date.UTC(2026, 7, 10),
     f = [
         [d.GuildFeatures.MAX_FILE_SIZE_250_MB, s.q9],
@@ -15,30 +15,30 @@ let c = Date.UTC(2026, 7, 10),
         [d.GuildFeatures.MAX_FILE_SIZE_50_MB, s.eZ],
     ];
 function m(e, t) {
-    if (null == t || (0, n.A)(t) || !t.attachments.some((t) => t.id === e.id)) return null;
-    let r = l.A.getChannel(t.channel_id);
-    if (null == r) return null;
-    let m = r.getGuildId(),
-        p = null != m ? a.A.getGuild(m) : null;
+    if (null == t || (0, r.A)(t) || !t.attachments.some((t) => t.id === e.id)) return null;
+    let n = l.A.getChannel(t.channel_id);
+    if (null == n) return null;
+    let m = n.getGuildId(),
+        p = null != m ? i.A.getGuild(m) : null;
     return null != m && null == p
         ? null
         : (function (e, t) {
-              var r;
-              let { sentByApplication: n, guildMaxFileSize: l } = t;
-              if (n) return null;
-              let { size: a, content_type: f } = e;
+              var n;
+              let { sentByApplication: r, guildMaxFileSize: l } = t;
+              if (r) return null;
+              let { size: i, content_type: f } = e;
               if (null == f || !f.startsWith("video/")) return null;
-              let m = (0, i.Lt)(e.flags ?? 0, d.sbO.IS_CLIP);
-              return a <=
+              let m = (0, a.Lt)(e.flags ?? 0, d.sbO.IS_CLIP);
+              return i <=
                   Math.max(
-                      ((r = e.id), o.default.extractTimestamp(r) >= c ? u.t : Math.max(u.t, 0x1900000)),
+                      ((n = e.id), u.default.extractTimestamp(n) >= c ? o.t : Math.max(o.t, 0x1900000)),
                       l,
                       0x6400000 * !!m,
                   )
                   ? null
-                  : a <= s.DC
+                  : i <= s.DC
                     ? s.PremiumTypes.TIER_0
-                    : a <= s.gb
+                    : i <= s.gb
                       ? s.PremiumTypes.TIER_2
                       : null;
           })(e, {
@@ -46,8 +46,8 @@ function m(e, t) {
               guildMaxFileSize:
                   null != p
                       ? f.reduce((e, t) => {
-                            let [r, n] = t;
-                            return p.features.has(r) && n > e ? n : e;
+                            let [n, r] = t;
+                            return p.features.has(n) && r > e ? r : e;
                         }, 0)
                       : 0,
           });

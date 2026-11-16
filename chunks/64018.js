@@ -22,13 +22,13 @@ var l = n(477900),
     _ = n(129230),
     b = n(857512),
     S = n(993408);
-let L = (0, n(945810).mj)({
+let I = (0, n(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var I = n(304210),
+var L = n(304210),
     k = n(39196),
     j = n(480750),
     N = n(808598),
@@ -73,7 +73,7 @@ let W = {
 };
 function z(e) {
     let { heroBlockRecord: t, isBlockLoading: n } = e,
-        r = L.useConfig({ location: "orbs_hero_block_cards" }).enabled;
+        r = I.useConfig({ location: "orbs_hero_block_cards" }).enabled;
     return (0, l.jsx)(M.A, { heroBlockRecord: t, tab: $.G2.ORBS, isBlockLoading: n, layout: r ? "hscroll" : "feed" });
 }
 let Y = (e) => {
@@ -81,7 +81,7 @@ let Y = (e) => {
                 isLoading: t,
                 handleTransition: n,
                 category: s,
-                heroBlock: L,
+                heroBlock: I,
                 tab: B,
                 onVisibilityChange: w,
                 badge: H,
@@ -102,11 +102,11 @@ let Y = (e) => {
             ee = (0, c.bG)([C.default], () => C.default.locale),
             et = (0, b.uM)(),
             { analyticsLocations: en } = (0, E.Ay)(f.A.COLLECTIBLES_SHOP_HERO),
-            el = (0, I.ST)(),
+            el = (0, L.ST)(),
             er = r.useMemo(
                 () =>
-                    null != L
-                        ? L
+                    null != I
+                        ? I
                         : null == s
                           ? W
                           : {
@@ -123,7 +123,7 @@ let Y = (e) => {
                                 heroBannerUrl: s.heroBannerUrl,
                                 heroBannerAnimatedUrl: s.heroBannerAnimatedUrl,
                             },
-                [L, s],
+                [I, s],
             ),
             es = r.useMemo(() => (0, k.HF)(el, er), [el, er]),
             ea = es?.subtype === v.h5.TAKEOVER,
@@ -174,7 +174,7 @@ let Y = (e) => {
                   }));
         }
         if (null == Q || (!t && ed === W)) return null;
-        function eL() {
+        function eI() {
             return t || G ? null : (0, l.jsx)(p.$, { variant: "overlay-primary", onClick: eS, text: eb });
         }
         return (0, l.jsx)(E.f5, {
@@ -209,7 +209,7 @@ let Y = (e) => {
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
                                     eC
-                                        ? (0, l.jsx)("div", { className: K.fy, children: eL() })
+                                        ? (0, l.jsx)("div", { className: K.fy, children: eI() })
                                         : (0, l.jsxs)("div", {
                                               className: a()(K.uZ, { [K.no]: ex, [K.RD]: ec }),
                                               children: [
@@ -286,7 +286,7 @@ let Y = (e) => {
                                                                     }),
                                                             ],
                                                         }),
-                                                  !G && !t && (0, l.jsx)("div", { className: K.pv, children: eL() }),
+                                                  !G && !t && (0, l.jsx)("div", { className: K.pv, children: eI() }),
                                               ],
                                           }),
                                     !Y &&

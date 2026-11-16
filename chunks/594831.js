@@ -19,16 +19,16 @@ var l = n(477900),
     p = n(166444),
     N = n(565860),
     T = n(648427),
-    x = n(379078),
-    y = n(704554),
+    y = n(379078),
+    x = n(704554),
     _ = n(812020),
     C = n(95701),
     v = n(734057),
     R = n(808728),
     D = n(71393),
     b = n(576705),
-    j = n(994500),
-    k = n(287809),
+    k = n(994500),
+    j = n(287809),
     M = n(977997),
     O = n(403362),
     w = n(996439),
@@ -38,7 +38,7 @@ var l = n(477900),
 let U = (e) => [
         e.userId,
         ...(function (e) {
-            let t = k.default.getUser(e.userId);
+            let t = j.default.getUser(e.userId);
             if (null == t) return [];
             let n = t.username,
                 l = (0, N.jP)(t);
@@ -46,12 +46,12 @@ let U = (e) => [
         })(e),
     ],
     P = {
-        searchType: x.n.FUZZY,
-        sortType: x.r.JARO_WINKLER,
+        searchType: y.n.FUZZY,
+        sortType: y.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
             let { channel: t, voiceStates: n } = e;
             return [
-                (0, E.m1)(t, k.default, j.A),
+                (0, E.m1)(t, j.default, k.A),
                 t.id,
                 t.guild_id,
                 D.A.getGuild(t.guild_id)?.name ?? "",
@@ -60,26 +60,26 @@ let U = (e) => [
         },
         throttleMs: 100,
     },
-    V = { searchType: x.n.FUZZY, sortType: x.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
+    V = { searchType: y.n.FUZZY, sortType: y.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
     H = i.memo(function (e) {
         let { channel: t, query: n } = e,
             [r] = (0, a.bG)([M.A], () => [M.A.getVoiceStatesForChannel(t.id), M.A.getVoiceStateVersion()], [t.id], w.D),
             [s, o] = i.useState([]);
-        (0, y.RT)(n, Object.values(r), o, V);
+        (0, x.RT)(n, Object.values(r), o, V);
         let c = (0, a.yK)(
-                [M.A, k.default, _.A, j.A],
+                [M.A, j.default, _.A, k.A],
                 () =>
                     Object.values(M.A.getVoiceStatesForChannel(t.id))
-                        .map((e) => k.default.getUser(e.userId))
+                        .map((e) => j.default.getUser(e.userId))
                         .filter(O.Vq)
                         .sort((e, t) => {
                             if (s.length > 0 && "" !== n.trim()) {
                                 if (s.some((t) => t.userId === e.id)) return -1;
                                 if (s.some((e) => e.userId === t.id)) return 1;
                             }
-                            return j.A.isFriend(e.id) && !j.A.isFriend(t.id)
+                            return k.A.isFriend(e.id) && !k.A.isFriend(t.id)
                                 ? -1
-                                : !j.A.isFriend(e.id) && j.A.isFriend(t.id)
+                                : !k.A.isFriend(e.id) && k.A.isFriend(t.id)
                                   ? 1
                                   : (_.A.getUserAffinity(t.id)?.vcProbability ?? 0) -
                                     (_.A.getUserAffinity(e.id)?.vcProbability ?? 0);
@@ -105,9 +105,9 @@ function Y() {
     let e,
         t =
             ((e = (0, a.yK)(
-                [k.default, j.A, _.A],
+                [j.default, k.A, _.A],
                 () =>
-                    j.A.getFriendIDs()
+                    k.A.getFriendIDs()
                         .sort((e, t) =>
                             null == e && null == t
                                 ? 0
@@ -119,7 +119,7 @@ function Y() {
                                       (_.A.getUserAffinity(e)?.communicationProbability ?? 0),
                         )
                         .reduce((e, t) => {
-                            let n = k.default.getUser(t);
+                            let n = j.default.getUser(t);
                             return (null != n && e.push(n), e);
                         }, []),
                 [],
@@ -204,7 +204,7 @@ let X = i.memo(function (e) {
             }),
         });
     }),
-    z = i.memo(function (e) {
+    B = i.memo(function (e) {
         let {
                 channelId: t,
                 isHighlighted: n,
@@ -221,8 +221,8 @@ let X = i.memo(function (e) {
             p = (0, a.bG)([D.A], () => D.A.getGuild(S), [S]),
             N = (0, A.gU)(I, p),
             T = i?.id === t,
-            x = T ? "text-feedback-positive" : n ? "interactive-text-active" : "text-muted",
-            y = T ? c.A.colors.TEXT_FEEDBACK_POSITIVE : n ? c.A.colors.INTERACTIVE_TEXT_ACTIVE : c.A.colors.ICON_MUTED;
+            y = T ? "text-feedback-positive" : n ? "interactive-text-active" : "text-muted",
+            x = T ? c.A.colors.TEXT_FEEDBACK_POSITIVE : n ? c.A.colors.INTERACTIVE_TEXT_ACTIVE : c.A.colors.ICON_MUTED;
         return null == I
             ? null
             : (0, l.jsxs)(h.s, {
@@ -240,18 +240,18 @@ let X = i.memo(function (e) {
                               (0, l.jsxs)("div", {
                                   className: L.Ks,
                                   children: [
-                                      null != N ? (0, l.jsx)(N, { color: y, size: "xs", className: L.p }) : void 0,
+                                      null != N ? (0, l.jsx)(N, { color: x, size: "xs", className: L.p }) : void 0,
                                       (0, l.jsx)(g.E, {
                                           variant: T ? "body-sm/semibold" : "body-sm/medium",
-                                          color: x,
+                                          color: y,
                                           className: L.rU,
-                                          children: (0, E.m1)(I, k.default, j.A),
+                                          children: (0, E.m1)(I, j.default, k.A),
                                       }),
                                   ],
                               }),
                               (0, l.jsx)(g.E, {
                                   variant: T ? "body-xs/semibold" : "body-xs/medium",
-                                  color: x,
+                                  color: y,
                                   children: p?.name ?? f,
                               }),
                           ],
@@ -263,7 +263,7 @@ let X = i.memo(function (e) {
                   ],
               });
     }),
-    B = i.memo(function (e) {
+    z = i.memo(function (e) {
         let { emptyText: t } = e;
         return (0, l.jsx)("div", {
             className: L.KJ,
@@ -298,10 +298,10 @@ let X = i.memo(function (e) {
                 (0, l.jsxs)(A, {
                     className: L.o5,
                     children: [
-                        a && 0 === n.length && (0, l.jsx)(B, { emptyText: G.intl.string(G.t.nxSS03) }),
+                        a && 0 === n.length && (0, l.jsx)(z, { emptyText: G.intl.string(G.t.nxSS03) }),
                         n.map((e) =>
                             (0, l.jsx)(
-                                z,
+                                B,
                                 {
                                     channelId: e,
                                     isHighlighted: e === c,
@@ -351,7 +351,7 @@ function W(e) {
                       }),
               ],
           })
-        : (0, l.jsx)(B, { emptyText: G.intl.string(G.t["3ET7Ay"]) });
+        : (0, l.jsx)(z, { emptyText: G.intl.string(G.t["3ET7Ay"]) });
 }
 function $(e) {
     e.stopPropagation();
@@ -364,7 +364,7 @@ n.d(
             let { currentVoiceChannel: t, onClose: n, onSelect: r, allAvailableChannelRows: s } = e,
                 [a, o] = i.useState(""),
                 [u, d] = i.useState([]);
-            (0, y.RT)(a, s, d, P);
+            (0, x.RT)(a, s, d, P);
             let c = i.useCallback(
                     (e) => {
                         "Escape" === e.key && n();
@@ -455,7 +455,7 @@ n.d(
         S4: Y,
         qZ: function () {
             return (0, a.bG)(
-                [D.A, R.A, M.A, j.A, b.A],
+                [D.A, R.A, M.A, k.A, b.A],
                 () =>
                     D.A.getGuildsArray()
                         .reduce((e, t) => {
@@ -472,7 +472,7 @@ n.d(
                         .map((e) => ({
                             channel: e,
                             voiceStates: Object.values(M.A.getVoiceStatesForChannel(e.id)).filter((e) =>
-                                j.A.isFriend(e.userId),
+                                k.A.isFriend(e.userId),
                             ),
                         })),
                 [],

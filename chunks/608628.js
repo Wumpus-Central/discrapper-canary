@@ -1,92 +1,92 @@
-r.d(t, { PR: () => j });
-var n = r(477900),
-    l = r(582128),
-    a = r(503698),
-    i = r.n(a),
-    u = r(120692),
-    o = r(855986),
-    s = r(876230),
-    d = r(403581),
-    c = r(834730),
-    f = r(866665),
-    m = r(939249),
-    p = r(287809),
-    g = r(448645);
-let h = (0, r(945810).mj)({
+n.d(t, { PR: () => j });
+var r = n(477900),
+    l = n(582128),
+    i = n(503698),
+    a = n.n(i),
+    o = n(120692),
+    u = n(855986),
+    s = n(876230),
+    d = n(403581),
+    c = n(834730),
+    f = n(866665),
+    m = n(939249),
+    p = n(287809),
+    g = n(448645);
+let h = (0, n(945810).mj)({
     name: "2026-11-nitro-upload-badge",
     kind: "user",
     defaultConfig: { showNitroUploadBadge: !1 },
     variations: { 0: { showNitroUploadBadge: !1 }, 1: { showNitroUploadBadge: !0 } },
 });
-var b = r(925056),
-    C = r(192308),
-    x = r(621488),
-    y = r(792996),
-    v = r(600502);
-let E = "nitro-upload-badge";
-function S(e) {
-    let { visible: t, animSpring: l, size: a, requiredPremiumType: h } = e,
-        b = (0, o.bG)([p.default], () => {
+var b = n(925056),
+    C = n(192308),
+    y = n(621488),
+    S = n(792996),
+    x = n(600502);
+let k = "nitro-upload-badge";
+function v(e) {
+    let { visible: t, animSpring: l, size: i, requiredPremiumType: h } = e,
+        b = (0, u.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
             return (0, g.TW)(e) ? (e?.premiumType ?? null) : null;
         }),
-        S = (0, g.CC)(b, h),
-        _ = y.intl.string(x.default.BokMhV),
-        k = y.intl.string(x.default.lCx19K),
-        j = i()(v.qS, { [v.EX]: a === s.oA.SM, [v.bG]: !S }),
-        I = (0, n.jsxs)(n.Fragment, {
+        v = (0, g.CC)(b, h),
+        E = S.intl.string(y.default.BokMhV),
+        _ = S.intl.string(y.default.lCx19K),
+        j = a()(x.qS, { [x.EX]: i === s.oA.SM, [x.bG]: !v }),
+        P = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, n.jsx)(d.NitroWheelIcon, { size: "xs", color: "currentColor" }),
-                (0, n.jsx)(c.E, {
-                    variant: a === s.oA.SM ? "footnote/semibold" : "body-xs/semibold",
+                (0, r.jsx)(d.NitroWheelIcon, { size: "xs", color: "currentColor" }),
+                (0, r.jsx)(c.E, {
+                    variant: i === s.oA.SM ? "footnote/semibold" : "body-xs/semibold",
                     color: "none",
-                    children: _,
+                    children: E,
                 }),
             ],
         });
-    return (0, n.jsx)(u.animated.div, {
+    return (0, r.jsx)(o.animated.div, {
         style: {
-            opacity: (0, u.to)([l.to({ range: [0, 1], output: [0, 1] })], (e) => `${t ? e : Math.pow(e, 8)}`),
+            opacity: (0, o.to)([l.to({ range: [0, 1], output: [0, 1] })], (e) => `${t ? e : Math.pow(e, 8)}`),
             display: "flex",
             pointerEvents: t ? "auto" : "none",
         },
-        children: (0, n.jsx)(f.m, {
-            text: k,
+        children: (0, r.jsx)(f.m, {
+            text: _,
             shouldShow: t,
             position: "bottom",
-            children: S
-                ? (0, n.jsx)("div", { className: j, "data-testid": E, children: I })
-                : (0, n.jsx)(m.D, {
+            children: v
+                ? (0, r.jsx)("div", { className: j, "data-testid": k, children: P })
+                : (0, r.jsx)(m.D, {
                       className: j,
-                      "aria-label": k,
-                      "data-testid": E,
+                      "aria-label": _,
+                      "data-testid": k,
                       onClick: (e) => {
                           (e.stopPropagation(),
                               (function (e) {
                                   let { viewerPremiumType: t } = e;
                                   (0, C.mM)(async () => {
-                                      let { default: e } = await r.e(320699).then(r.bind(r, 232118));
-                                      return (r) => (0, n.jsx)(e, { ...r, viewerPremiumType: t });
+                                      let { default: e } = await n.e(320699).then(n.bind(n, 232118));
+                                      return (n) => (0, r.jsx)(e, { ...n, viewerPremiumType: t });
                                   });
                               })({ viewerPremiumType: b }));
                       },
-                      children: I,
+                      children: P,
                   }),
         }),
     });
 }
-function _(e) {
-    let { surface: t, ...r } = e,
+function E(e) {
+    let { surface: t, ...n } = e,
         { showNitroUploadBadge: l } = (function (e) {
             let { location: t } = e;
             return h.useConfig({ location: t });
         })({ location: (0, b.b)(t) });
-    return l ? (0, n.jsx)(S, { ...r }) : null;
+    return l ? (0, r.jsx)(v, { ...n }) : null;
 }
-function k(e) {
-    let [t, r] = l.useState(e.visible);
-    return (e.visible && !t && r(!0), t) ? (0, n.jsx)(_, { ...e }) : null;
+function _(e) {
+    let [t, n] = l.useState(e.visible);
+    return (e.visible && !t && n(!0), t) ? (0, r.jsx)(E, { ...e }) : null;
 }
 function j(e, t) {
-    if (null != e) return (r) => (0, n.jsx)(k, { ...r, surface: t, requiredPremiumType: e });
+    if (null != e) return (n) => (0, r.jsx)(_, { ...n, surface: t, requiredPremiumType: e });
 }

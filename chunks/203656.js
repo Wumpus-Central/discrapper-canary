@@ -1,31 +1,31 @@
-var l = v(477900);
-v(582128);
-var H = v(534400),
-    M = v(803484),
-    V = v(743981),
-    Z = v(557682);
-v.d(
-    h,
+var l = A(477900);
+A(582128);
+var H = A(534400),
+    M = A(803484),
+    V = A(743981),
+    Z = A(557682);
+A.d(
+    v,
     {},
     {
-        M: function (A) {
-            let h = null === A.tag || 0 === A.tag.length ? "WUMP" : A.tag;
+        M: function (h) {
+            let v = null === h.tag || 0 === h.tag.length ? "WUMP" : h.tag;
             return (0, l.jsx)("div", {
                 className: Z.fC,
                 children: (0, l.jsx)(H.o9, {
-                    guildId: A.guildId,
+                    guildId: h.guildId,
                     textClassName: Z.em,
-                    guildTag: h,
+                    guildTag: v,
                     guildBadge:
-                        "string" == typeof A.badge
-                            ? A.badge
+                        "string" == typeof h.badge
+                            ? h.badge
                             : (0, l.jsx)(M.J, {
                                   className: Z.i6,
-                                  badge: A.badge,
+                                  badge: h.badge,
                                   width: V.Sl.SIZE_12,
                                   height: V.Sl.SIZE_12,
-                                  primaryTintColor: A.primaryColor ?? void 0,
-                                  secondaryTintColor: A.secondaryColor ?? void 0,
+                                  primaryTintColor: h.primaryColor ?? void 0,
+                                  secondaryTintColor: h.secondaryColor ?? void 0,
                               }),
                 }),
             });

@@ -112,7 +112,7 @@ n.d(
                 } = e,
                 _ = r.useMemo(() => ({ ...v, "--custom-calendar-tile-aspect-ratio": m }), [v, m]),
                 [b, S] = h(o),
-                [L, I] = h(u),
+                [I, L] = h(u),
                 k = r.useRef(null),
                 j = r.useRef(!1),
                 N = r.useCallback(() => {
@@ -136,9 +136,9 @@ n.d(
                     t = (0, l.jsx)(E, {
                         day: n,
                         lockedAssetUrl: b,
-                        hintAssetUrl: L,
+                        hintAssetUrl: I,
                         onLockedAssetError: S,
-                        onHintAssetError: I,
+                        onHintAssetError: L,
                         onReveal: N,
                         listItemProps: A,
                     });
@@ -148,9 +148,9 @@ n.d(
                     t = (0, l.jsx)(x, {
                         day: n,
                         lockedAssetUrl: b,
-                        hintAssetUrl: s === d.k$.HINT ? L : null,
+                        hintAssetUrl: s === d.k$.HINT ? I : null,
                         onLockedAssetError: S,
-                        onHintAssetError: I,
+                        onHintAssetError: L,
                         listItemProps: A,
                     });
             }
