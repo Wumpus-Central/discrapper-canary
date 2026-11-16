@@ -31,9 +31,6 @@ class A extends c.Ay.Store {
     isClaimingBountyReward(e) {
         return s.has(e);
     }
-    areAllBountiesCompleted() {
-        return r.every((e) => a.has(e.id));
-    }
     getAdDecisionByPlacementAndAdCreativeId(e, t) {
         return l.get(e)?.get(t) ?? null;
     }
