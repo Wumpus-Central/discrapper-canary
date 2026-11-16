@@ -1169,13 +1169,13 @@ var e1 = n(4511),
     e6 = n(811091),
     e5 = n(590087);
 let e7 = { any: 100 },
-    e4 = { any: 0 },
-    e8 = 30 * eW.A.Millis.SECOND,
+    e8 = { any: 0 },
+    e4 = 30 * eW.A.Millis.SECOND,
     e9 = 120 * eW.A.Millis.SECOND,
     te = -1 !== (0, e3.EL)();
 var tt = (((o = {}).UserSSRCUpdate = "user-ssrc-update"), (o.Update = "update"), o);
 function tn(e) {
-    return (0, ey.HZ)() ? { ...e4 } : { any: e };
+    return (0, ey.HZ)() ? { ...e8 } : { any: e };
 }
 class ti extends S.A {
     userId;
@@ -1432,7 +1432,7 @@ class ti extends S.A {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? e9 : e8;
+        return this.isStageChannel ? e9 : e4;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : z.r8.NO_OVERRIDE;
@@ -2261,6 +2261,7 @@ class tT {
     deafened;
     noiseCancellation;
     spatialAudio;
+    spatialAudioActive;
     timesUntilSpeakingDurationMilestonesMs = new Map();
     speakingMinimumChunks = new Map();
     speakingMinimumChunkCounts = new Map();
@@ -2276,7 +2277,8 @@ class tT {
             (this.muted = new C.W0(this.timestampProducer)),
             (this.deafened = new C.W0(this.timestampProducer)),
             (this.noiseCancellation = new C.w6(t.getNoiseCancellation(), this.timestampProducer)),
-            (this.spatialAudio = new C.w6(t.getSpatialAudioEnabled(), this.timestampProducer)));
+            (this.spatialAudio = new C.w6(t.getSpatialAudioEnabled(), this.timestampProducer)),
+            (this.spatialAudioActive = new C.w6(t.getSpatialAudioActive(), this.timestampProducer)));
     }
     start() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -2290,6 +2292,7 @@ class tT {
             this.connected.reset(),
             this.noiseCancellation.reset(),
             this.spatialAudio.reset(),
+            this.spatialAudioActive.reset(),
             this.timesUntilSpeakingDurationMilestonesMs.clear(),
             this.speakingMinimumChunks.clear(),
             this.speakingMinimumChunkCounts.clear(),
@@ -2358,7 +2361,8 @@ class tT {
             n = this.muted.isRunning(),
             i = this.deafened.isRunning(),
             r = this.noiseCancellation.value,
-            a = this.spatialAudio.value;
+            a = this.spatialAudio.value,
+            s = this.spatialAudioActive.value;
         (this.listening.reset(),
             this.speaking.reset(),
             this.participation.reset(),
@@ -2367,6 +2371,7 @@ class tT {
             this.deafened.reset(),
             this.noiseCancellation.reset(),
             this.spatialAudio.reset(),
+            this.spatialAudioActive.reset(),
             this.timesUntilSpeakingDurationMilestonesMs.clear(),
             this.speakingMinimumChunks.clear(),
             this.speakingMinimumChunkCounts.clear(),
@@ -2378,13 +2383,17 @@ class tT {
             n && this.muted.start(),
             i && this.deafened.start(),
             (this.noiseCancellation.value = r),
-            (this.spatialAudio.value = a));
+            (this.spatialAudio.value = a),
+            (this.spatialAudioActive.value = s));
     }
     setNoiseCancellationEnabled(e) {
         this.noiseCancellation.value = e;
     }
     setSpatialAudioEnabled(e) {
         this.spatialAudio.value = e;
+    }
+    setSpatialAudioActive(e) {
+        this.spatialAudioActive.value = e;
     }
     stop() {
         this.addSpeechChunk();
@@ -2398,6 +2407,7 @@ class tT {
             this.muted.stop(),
             (this.noiseCancellation.value = !1),
             (this.spatialAudio.value = !1),
+            (this.spatialAudioActive.value = !1),
             this.computeSpeakingDurationMilestones(e, t, n));
     }
     getDeprecatedDurationStats() {
@@ -2427,6 +2437,7 @@ class tT {
                 duration_deafened_ms: this.deafened.elapsed().asMilliseconds(),
                 duration_noise_cancellation_enabled_ms: this.noiseCancellation.totalDuration(),
                 duration_spatial_ms: this.spatialAudio.totalDuration(),
+                duration_spatial_active_ms: this.spatialAudioActive.totalDuration(),
                 speech_event_count: this.speechEventCount,
                 ...tp
                     .filter((e) => this.timesUntilSpeakingDurationMilestonesMs.has(e))
@@ -3671,6 +3682,9 @@ class tZ extends S.A {
     }
     setSpatialAudioEnabled(e) {
         this._voiceDuration?.setSpatialAudioEnabled(e);
+    }
+    setSpatialAudioActive(e) {
+        this._voiceDuration?.setSpatialAudioActive(e);
     }
     setAvSyncEnabled(e, t) {
         this._connection?.setAvSyncEnabled(e, t);

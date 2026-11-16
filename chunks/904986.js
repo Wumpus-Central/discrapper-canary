@@ -25,6 +25,7 @@ class _ extends l.A {
     videoSupported = !1;
     useElectronVideo = !1;
     spatialAudioEnabled = !1;
+    spatialAudioActive = !1;
     voiceBitrate = 64e3;
     remoteSinkWantsMaxFramerate = 30;
     videoQualityManager;
@@ -174,6 +175,12 @@ class _ extends l.A {
     }
     setSpatialAudioEnabled(e) {
         this.spatialAudioEnabled = e && this.context === c.x.DEFAULT;
+    }
+    getSpatialAudioActive() {
+        return this.spatialAudioActive;
+    }
+    setSpatialAudioActive(e) {
+        this.spatialAudioActive = e && this.context === c.x.DEFAULT;
     }
     setCalcMaxBitrateFunc(e) {
         this.calcMaxBitrateFunc = e;
