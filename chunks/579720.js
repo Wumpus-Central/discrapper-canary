@@ -1,79 +1,82 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => h });
 var l = n(582128),
-    r = n(855986),
-    s = n(287809),
-    a = n(969935),
-    i = n(73153);
-let o = [];
-function u(e, t, n) {
+    r = n(690352),
+    s = n(855986),
+    a = n(287809),
+    i = n(969935),
+    o = n(73153);
+let u = [];
+function c(e, t, n) {
     return `${e}:${t}:${n}`;
 }
-class c extends r.Ay.PersistedStore {
+class d extends s.Ay.PersistedStore {
     static displayName = "CollectiblesSequencedOfferRevealStore";
     static persistKey = "CollectiblesSequencedOfferRevealStore";
     initialize(e) {
-        o = e?.revealedDayKeys ?? [];
+        u = e?.revealedDayKeys ?? [];
     }
     getState() {
-        return { revealedDayKeys: o };
+        return { revealedDayKeys: u };
     }
     isDayRevealed(e, t, n) {
-        return o.includes(u(e, t, n));
+        return u.includes(c(e, t, n));
     }
 }
-let d = new c(i.h, {
+let m = new d(o.h, {
     COLLECTIBLES_SEQUENCED_OFFER_REVEAL: function (e) {
         let { userId: t, collectionId: n, position: l } = e,
-            r = u(t, n, l);
-        if (o.includes(r)) return !1;
+            r = c(t, n, l);
+        if (u.includes(r)) return !1;
         let s = `${t}:${n}:`;
-        o = [...o.filter((e) => e.startsWith(s)), r];
+        u = [...u.filter((e) => e.startsWith(s)), r];
     },
     LOGOUT: function () {
-        o = [];
+        u = [];
     },
 });
-var m = n(198329);
-function g(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        { collectionId: o, promotions: u, endsAt: c } = e,
-        g = (0, r.bG)([s.default], () => s.default.getCurrentUser()?.id),
-        h = (0, r.bG)([d], () => null != g && null != o && null != n && d.isDayRevealed(g, o, n)),
-        p = l.useCallback(() => {
-            null != o && null != n && (0, a.cb)(o, n);
-        }, [o, n]),
-        f = new Date(),
-        E = null != c && c <= f;
+var g = n(198329);
+function h(e, t, n) {
+    let o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        { collectionId: u, promotions: c, endsAt: d } = e,
+        h = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
+        p = (0, s.bG)([m], () => null != h && null != u && null != n && m.isDayRevealed(h, u, n)),
+        f = l.useCallback(() => {
+            null != u && null != n && (0, i.cb)(u, n);
+        }, [u, n]),
+        E = new Date(),
+        x = null != d && d <= E;
     return l.useMemo(() => {
-        let e = (0, m.d)({
-            positions: u.map((e) => {
+        let e = (0, g.d)({
+            positions: c.map((e) => {
                 let { position: t } = e;
                 return t;
             }),
             openPosition: n,
         });
-        return [...u]
+        return [...c]
             .sort((e, t) => e.position - t.position)
             .map((l) => {
-                let { position: r, cardShape: s, assets: a } = l;
+                let { position: s, cardShape: a, assets: i } = l;
                 return {
-                    cardShape: s,
+                    cardShape: a,
                     tileProps: {
-                        day: r,
-                        state: (0, m.q9)({
-                            position: r,
+                        day: s,
+                        cardShape: a,
+                        isHintCentered: o && (a === r.G.TALL || a === r.G.WIDE),
+                        state: (0, g.q9)({
+                            position: s,
                             openPosition: n,
                             hintPosition: e,
-                            isOpenPositionRevealed: h,
-                            hasCampaignEnded: E,
+                            isOpenPositionRevealed: p,
+                            hasCampaignEnded: x,
                         }),
-                        skuId: t?.[r - 1]?.skuId ?? null,
-                        lockedAssetUrl: i ? (a.calendarLocked ?? a.locked) : a.locked,
-                        hintAssetUrl: a.hint,
-                        tilePosition: r - 1,
-                        onReveal: p,
+                        skuId: t?.[s - 1]?.skuId ?? null,
+                        lockedAssetUrl: o ? (i.calendarLocked ?? i.locked) : i.locked,
+                        hintAssetUrl: i.hint,
+                        tilePosition: s - 1,
+                        onReveal: f,
                     },
                 };
             });
-    }, [u, t, n, h, E, p, i]);
+    }, [c, t, n, p, x, f, o]);
 }

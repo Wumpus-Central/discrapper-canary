@@ -9,4 +9,7 @@ e.exports = {
     Zk: "openableTile_IxwVgM",
     nu: "raisedDoorAsset_IxwVgM",
     a7: "revealStrip_IxwVgM",
+    Jl: "largeSquareTile_IxwVgM",
+    W_: "centeredHintTile_IxwVgM",
+    qC: "hintAsset_IxwVgM",
 };
