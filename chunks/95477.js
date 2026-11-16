@@ -83,6 +83,17 @@ function b(e) {
     });
 }
 function v(e) {
+    let { accessory: t, disabled: n } = e;
+    return (0, i.jsx)(u.D, {
+        className: L.pressableLeadingText,
+        onClick: n ? void 0 : t.onClick,
+        "aria-label": t["aria-label"],
+        "aria-disabled": n,
+        tabIndex: n ? -1 : 0,
+        children: (0, i.jsx)(S.E, { variant: "body-md/normal", color: "input-text-default", children: t.text }),
+    });
+}
+function P(e) {
     let { inputSize: t, isRevealed: n, disabled: r, onClick: a } = e,
         { i18n: s } = (0, T.G9)();
     return (0, i.jsx)(D, {
@@ -98,7 +109,7 @@ function v(e) {
         disabled: r,
     });
 }
-function P(e) {
+function M(e) {
     let {
             value: t,
             defaultValue: n,
@@ -146,112 +157,116 @@ n.d(
                     trailing: S,
                     validateOn: N = "change",
                     size: C = "md",
-                    fullWidth: M = !1,
-                    clearable: U = !1,
-                    revealable: w = !1,
-                    showCharacterCount: G = !1,
-                    ...x
+                    fullWidth: U = !1,
+                    clearable: w = !1,
+                    revealable: G = !1,
+                    showCharacterCount: x = !1,
+                    ...k
                 } = e,
-                { fieldProps: k, props: F } = (0, E.n)(x),
-                B = (0, R.Y)({
+                { fieldProps: F, props: B } = (0, E.n)(k),
+                V = (0, R.Y)({
                     validateOn: N,
                     error: p,
                     value: f,
                     minLength: I,
                     maxLength: A,
-                    min: null != x.min ? Number(x.min) : void 0,
-                    max: null != x.max ? Number(x.max) : void 0,
+                    min: null != k.min ? Number(k.min) : void 0,
+                    max: null != k.max ? Number(k.max) : void 0,
                     defaultDirty: T,
                 }),
-                { setShouldValidate: V } = B,
-                H = y(f, h),
-                j = "object" == typeof g && "type" in g && "tags" === g.type,
-                W = r.useRef(null),
-                Y = (0, l.A)(W, a),
-                K = r.useRef(null),
-                $ = x.readOnly;
-            null == $ && !1 === n && ($ = !0);
-            let [X, z] = r.useState(!1),
-                q = "password" === c;
-            X && (t || !w || !q) && z(!1);
-            let Q = w && q,
-                J = Q && X ? "text" : c,
-                Z = null,
-                ee = !$ && ("boolean" == typeof U ? U && null != f && "" !== f : U.show);
-            Q
-                ? (Z = (0, i.jsx)(v, { inputSize: C, isRevealed: X, disabled: t, onClick: () => z((e) => !e) }))
-                : ee
-                  ? (Z = (0, i.jsx)(b, {
+                { setShouldValidate: H } = V,
+                j = y(f, h),
+                W = "object" == typeof g && "type" in g && "tags" === g.type,
+                Y = r.useRef(null),
+                K = (0, l.A)(Y, a),
+                $ = r.useRef(null),
+                X = k.readOnly;
+            null == X && !1 === n && (X = !0);
+            let [z, q] = r.useState(!1),
+                Q = "password" === c;
+            z && (t || !G || !Q) && q(!1);
+            let J = G && Q,
+                Z = J && z ? "text" : c,
+                ee = null,
+                et = !X && ("boolean" == typeof w ? w && null != f && "" !== f : w.show);
+            J
+                ? (ee = (0, i.jsx)(P, { inputSize: C, isRevealed: z, disabled: t, onClick: () => q((e) => !e) }))
+                : et
+                  ? (ee = (0, i.jsx)(b, {
                         inputSize: C,
                         onClick: function (e) {
-                            (null != x.onClear ? x.onClear(e) : x.onChange?.("", d),
+                            (null != k.onClear ? k.onClear(e) : k.onChange?.("", d),
                                 requestAnimationFrame(() => {
-                                    W.current?.focus();
+                                    Y.current?.focus();
                                 }));
                         },
                         disabled: t,
                     }))
-                  : null != S && (Z = (0, i.jsx)(D, { accessory: S, inputSize: C }));
-            let et = null;
-            null != g && (et = (0, i.jsx)(D, { accessory: g, inputSize: C }));
-            let en = G ? (0, i.jsx)(O.n, { value: f, maxLength: A }) : null;
+                  : null != S && (ee = (0, i.jsx)(D, { accessory: S, inputSize: C }));
+            let en = "object" == typeof g && "text" in g,
+                ei = null;
+            en
+                ? (ei = (0, i.jsx)(v, { accessory: g, disabled: t }))
+                : null != g && (ei = (0, i.jsx)(D, { accessory: g, inputSize: C }));
+            let er = x ? (0, i.jsx)(O.n, { value: f, maxLength: A }) : null;
             return (0, i.jsx)(E.D, {
-                ...k,
-                errorMessage: B.hasError ? (B.errorMessage ?? void 0) : void 0,
-                trailingAuxiliaryContent: en,
+                ...F,
+                errorMessage: V.hasError ? (V.errorMessage ?? void 0) : void 0,
+                trailingAuxiliaryContent: er,
                 children: (0, i.jsxs)(m.F, {
-                    ref: K,
+                    ref: $,
                     disabled: t,
-                    validation: B,
-                    fullWidth: M,
-                    readOnly: $,
+                    validation: V,
+                    fullWidth: U,
+                    readOnly: X,
                     className: s()(L.container, L[C], {
-                        [L.hasLeading]: null != et,
+                        [L.hasLeading]: null != ei,
                         [L.hasLeadingText]: "string" == typeof g,
-                        [L.hasTrailing]: null != Z,
-                        [L.hasTags]: j,
+                        [L.hasPressableLeadingText]: en,
+                        [L.hasTrailing]: null != ee,
+                        [L.hasTags]: W,
                     }),
                     children: [
-                        et,
+                        ei,
                         (0, i.jsx)(_.vN, {
-                            ringTarget: K,
+                            ringTarget: $,
                             ...o,
-                            children: (0, i.jsx)(P, {
+                            children: (0, i.jsx)(M, {
                                 name: d,
                                 className: L.input,
                                 disabled: t,
-                                readOnly: $,
-                                required: k.required,
-                                "aria-required": k.required,
-                                type: J,
+                                readOnly: X,
+                                required: F.required,
+                                "aria-required": F.required,
+                                type: Z,
                                 placeholder: u,
                                 maxLength: A,
                                 minLength: I,
                                 value: f,
                                 defaultValue: h,
                                 "data-mana-component": "text-input",
-                                ...F,
-                                spellCheck: !q && F.spellCheck,
-                                autoCorrect: F.autoCorrect ?? (q ? "off" : void 0),
-                                autoCapitalize: F.autoCapitalize ?? (q ? "off" : void 0),
+                                ...B,
+                                spellCheck: !Q && B.spellCheck,
+                                autoCorrect: B.autoCorrect ?? (Q ? "off" : void 0),
+                                autoCapitalize: B.autoCapitalize ?? (Q ? "off" : void 0),
                                 onChange: function (e) {
                                     let t = e.currentTarget.value;
-                                    (x.onChange?.(t, d), V(!0), H.setHasValue?.("" !== t));
+                                    (k.onChange?.(t, d), H(!0), j.setHasValue?.("" !== t));
                                 },
                                 onBlur: (e) => {
-                                    (x.onBlur?.(e), H.setIsFocused?.(!1));
+                                    (k.onBlur?.(e), j.setIsFocused?.(!1));
                                 },
                                 onFocus: (e) => {
-                                    (x.onFocus?.(e), H.setIsFocused?.(!0));
+                                    (k.onFocus?.(e), j.setIsFocused?.(!0));
                                 },
-                                ref: Y,
+                                ref: K,
                             }),
                         }),
-                        Z,
+                        ee,
                     ],
                 }),
             });
         },
-        p: P,
+        p: M,
     },
 );
