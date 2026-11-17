@@ -417,7 +417,7 @@ function e_(e) {
         (0, n.useEffect)(() => {
             null == f ||
                 null == a ||
-                a.ctaAction !== T.d.OPEN_SOCIAL_LAYER_STOREFRONT ||
+                a.ctaAction !== T.dz.OPEN_SOCIAL_LAYER_STOREFRONT ||
                 a.navigableStorefrontApplicationId?.value == null ||
                 a.navigableStorefrontApplicationId.value !== l ||
                 (0, O.u$)(C.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, f).isDismissed ||

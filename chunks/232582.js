@@ -352,7 +352,7 @@ class p extends s.G {
             { no: 3, name: "video_link", kind: "scalar", T: 9 },
             { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
             { no: 5, name: "feature_cards", kind: "message", repeat: 1, T: () => u },
-            { no: 6, name: "button", kind: "message", T: () => l.$ },
+            { no: 6, name: "button", kind: "message", T: () => l.$J },
             { no: 8, name: "hero_art_video_link_light_theme", kind: "scalar", T: 9 },
             { no: 9, name: "hero_art_image_link_dark_theme", kind: "scalar", T: 9 },
             { no: 10, name: "hero_art_image_link_light_theme", kind: "scalar", T: 9 },
@@ -411,7 +411,7 @@ class p extends s.G {
                     a.featureCards.push(u.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 6:
-                    a.button = l.$.internalBinaryRead(e, e.uint32(), n, a.button);
+                    a.button = l.$J.internalBinaryRead(e, e.uint32(), n, a.button);
                     break;
                 case 8:
                     a.heroArtVideoLinkLightTheme = e.string();
@@ -469,7 +469,7 @@ class p extends s.G {
             "" !== e.helpArticleId && t.tag(4, i.O0.LengthDelimited).string(e.helpArticleId));
         for (let r = 0; r < e.featureCards.length; r++)
             u.internalBinaryWrite(e.featureCards[r], t.tag(5, i.O0.LengthDelimited).fork(), n).join();
-        (e.button && l.$.internalBinaryWrite(e.button, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
+        (e.button && l.$J.internalBinaryWrite(e.button, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
             "" !== e.heroArtVideoLinkLightTheme && t.tag(8, i.O0.LengthDelimited).string(e.heroArtVideoLinkLightTheme),
             "" !== e.heroArtImageLinkDarkTheme && t.tag(9, i.O0.LengthDelimited).string(e.heroArtImageLinkDarkTheme),
             "" !== e.heroArtImageLinkLightTheme && t.tag(10, i.O0.LengthDelimited).string(e.heroArtImageLinkLightTheme),

@@ -1,5 +1,5 @@
-var o = n(477900),
-    l = n(582128),
+var l = n(477900),
+    o = n(582128),
     a = n(517352),
     r = n(554146),
     i = n(28863),
@@ -22,31 +22,31 @@ n.d(
             let e = (0, u.u)(a.oW.NAGBAR),
                 t = e?.surface,
                 n = e?.id,
-                N = e?.promotionId,
-                T = l.useCallback(
+                E = e?.promotionId,
+                N = o.useCallback(
                     (e) => {
-                        null != N &&
-                            (0, d.qr)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, N, {
+                        null != E &&
+                            (0, d.qr)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, E, {
                                 dismissAction: e,
                                 forceTrack: !0,
                             });
                     },
-                    [N],
+                    [E],
                 ),
-                E = l.useCallback(() => {
+                T = o.useCallback(() => {
                     (s.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR }),
-                        T(I.i.USER_DISMISS));
-                }, [T]),
-                g = l.useRef(null);
+                        N(I.i.USER_DISMISS));
+                }, [N]),
+                g = o.useRef(null);
             if (
-                (l.useEffect(() => {
+                (o.useEffect(() => {
                     null == t ||
-                        null == N ||
-                        (g.current !== N &&
-                            ((g.current = N),
-                            (0, d.Wx)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: N })));
-                }, [t, N]),
-                null == e || null == t || null == n || null == N)
+                        null == E ||
+                        (g.current !== E &&
+                            ((g.current = E),
+                            (0, d.Wx)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: E })));
+                }, [t, E]),
+                null == e || null == t || null == n || null == E)
             )
                 return null;
             let S = (0, p.h)({
@@ -54,43 +54,44 @@ n.d(
                     deeplinkSection: t.deeplinkSection,
                     applicationId: t.navigableStorefrontApplicationId?.value,
                     shopCollectionId: t.shopCollectionId?.value,
+                    giftModalDestination: t.giftModalDestination,
                     onClose: () => {
-                        T(I.i.TAKE_ACTION);
+                        N(I.i.TAKE_ACTION);
                     },
                 }),
                 y = (0, b.C)(t.helpArticle, ""),
-                { icon: O, iconPosition: R } = (0, p.x)({ buttonAction: t.ctaAction }),
-                h = e.getFormatVariableValues(f.intl.currentLocale),
-                C = (0, c.d)(t.body, h);
+                { icon: O, iconPosition: M } = (0, p.x)({ buttonAction: t.ctaAction }),
+                R = e.getFormatVariableValues(f.intl.currentLocale),
+                C = (0, c.d)(t.body, R);
             if (!C.ok) return null;
-            let v = (0, c.n)(t.ctaLabel, h);
-            return v.ok
-                ? (0, o.jsxs)(o.Fragment, {
+            let h = (0, c.n)(t.ctaLabel, R);
+            return h.ok
+                ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, o.jsx)(m.A, {
+                          (0, l.jsx)(m.A, {
                               componentType: e.componentType,
                               componentId: n,
-                              promotionId: N,
+                              promotionId: E,
                               dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
                           }),
-                          (0, o.jsxs)(_.T0, {
-                              onClick: E,
+                          (0, l.jsxs)(_.T0, {
+                              onClick: T,
                               children: [
-                                  (0, o.jsxs)(_.In, {
+                                  (0, l.jsxs)(_.In, {
                                       children: [
                                           C.content,
                                           null != y &&
-                                              (0, o.jsxs)(o.Fragment, {
+                                              (0, l.jsxs)(l.Fragment, {
                                                   children: [
                                                       "\xa0",
-                                                      (0, o.jsx)(i.Anchor, { href: y.url, children: y.linkText }),
+                                                      (0, l.jsx)(i.Anchor, { href: y.url, children: y.linkText }),
                                                   ],
                                               }),
                                       ],
                                   }),
-                                  "" !== v.content &&
-                                      (0, o.jsx)(_.fY, {
-                                          text: v.content,
+                                  "" !== h.content &&
+                                      (0, l.jsx)(_.fY, {
+                                          text: h.content,
                                           onClick: function () {
                                               (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                                                   notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,
@@ -98,7 +99,7 @@ n.d(
                                                   S());
                                           },
                                           icon: O,
-                                          iconPosition: R,
+                                          iconPosition: M,
                                       }),
                               ],
                           }),

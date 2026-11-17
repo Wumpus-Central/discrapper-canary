@@ -1,109 +1,128 @@
-var c = n(308588),
-    _ = n(509434),
-    o = n(403581),
-    O = n(34188),
-    i = n(104510),
-    a = n(793574),
-    T = n(969935),
-    s = n(987144),
-    E = n(778705),
-    l = n(976860),
-    r = n(44724),
-    I = n(71393),
-    N = n(682901),
-    P = n(92737),
-    u = n(652215);
-n.d(
+var n = c(308588),
+    _ = c(509434),
+    T = c(403581),
+    i = c(34188),
+    o = c(104510),
+    a = c(793574),
+    O = c(969935),
+    s = c(987144),
+    E = c(778705),
+    l = c(976860),
+    r = c(44724),
+    I = c(71393),
+    A = c(990820),
+    N = c(682901),
+    u = c(92737),
+    P = c(652215);
+c.d(
     e,
     {},
     {
         h: function (t) {
             let {
                 buttonAction: e,
-                deeplinkSection: n,
+                deeplinkSection: c,
                 applicationId: _,
-                shopCollectionId: o,
-                guildId: O,
-                analyticsLocations: i = [],
-                analyticsLocation: A,
-                onClose: R,
+                shopCollectionId: T,
+                giftModalDestination: i,
+                guildId: o,
+                analyticsLocations: R = [],
+                analyticsLocation: d,
+                onClose: b,
             } = t;
             switch (e) {
-                case c.d.OPEN_GUILD_BOOST_CHECKOUT:
+                case n.dz.OPEN_GUILD_BOOST_CHECKOUT:
                     return () => {
-                        let t = null != O ? I.A.getGuild(O) : null;
+                        let t = null != o ? I.A.getGuild(o) : null;
                         null != t &&
-                            (0, s.g)({ guild: t, analyticsLocations: i, analyticsLocation: A ?? {}, onClose: R });
+                            (0, s.g)({ guild: t, analyticsLocations: R, analyticsLocation: d ?? {}, onClose: b });
                     };
-                case c.d.OPEN_SOCIAL_LAYER_STOREFRONT:
+                case n.dz.OPEN_SOCIAL_LAYER_STOREFRONT:
                     return () => {
-                        (null != _ && (0, r.default)({ applicationId: _ }), R?.());
+                        (null != _ && (0, r.default)({ applicationId: _ }), b?.());
                     };
-                case c.d.OPEN_SHOP:
+                case n.dz.OPEN_SHOP:
                     return () => {
-                        ((0, T.Cz)({
-                            initialCollectionId: o,
-                            analyticsLocations: i,
+                        ((0, O.Cz)({
+                            initialCollectionId: T,
+                            analyticsLocations: R,
                             analyticsSource: a.A.PREMIUM_MARKETING,
                         }),
-                            R?.());
+                            b?.());
                     };
-                case c.d.OPEN_MARKETING_PAGE:
+                case n.dz.OPEN_MARKETING_PAGE:
                     return () => {
                         let t =
-                            null != n && "" !== n
-                                ? `${u.BVt.APPLICATION_STORE}?${P.x}=${encodeURIComponent(n)}`
-                                : u.BVt.APPLICATION_STORE;
-                        ((0, l.pX)(t), R?.());
+                            null != c && "" !== c
+                                ? `${P.BVt.APPLICATION_STORE}?${u.x}=${encodeURIComponent(c)}`
+                                : P.BVt.APPLICATION_STORE;
+                        ((0, l.pX)(t), b?.());
                     };
-                case c.d.OPEN_TIER_1_PAYMENT_MODAL:
+                case n.dz.OPEN_GIFT_MODAL:
+                    if (i === n.We.TIER_2)
+                        return () =>
+                            (0, E.A)({
+                                isGift: !0,
+                                subscriptionTier: N.pe.TIER_2,
+                                analyticsLocations: R,
+                                analyticsObject: { ...d, object: P.ZSU.BUTTON_CTA, objectType: P.btD.TIER_2 },
+                                onClose: (t) => {
+                                    t && b?.();
+                                },
+                            });
+                    return () =>
+                        (0, A.A)({
+                            analyticsLocations: R,
+                            analyticsObject: { ...d, object: P.ZSU.BUTTON_CTA, objectType: P.btD.BUY },
+                        });
+                case n.dz.OPEN_TIER_1_PAYMENT_MODAL:
                     return () =>
                         (0, E.A)({
                             subscriptionTier: N.pe.TIER_1,
-                            analyticsLocations: i,
-                            analyticsObject: { ...A, object: u.ZSU.BUTTON_CTA, objectType: u.btD.TIER_1 },
+                            analyticsLocations: R,
+                            analyticsObject: { ...d, object: P.ZSU.BUTTON_CTA, objectType: P.btD.TIER_1 },
                             onClose: (t) => {
-                                t && R?.();
+                                t && b?.();
                             },
                         });
-                case c.d.OPEN_PLAN_SELECTION_MODAL:
-                    return () => (0, E.A)({ analyticsLocations: i });
-                case c.d.OPEN_PREMIUM_GROUP_PAYMENT_MODAL:
+                case n.dz.OPEN_PLAN_SELECTION_MODAL:
+                    return () => (0, E.A)({ analyticsLocations: R });
+                case n.dz.OPEN_PREMIUM_GROUP_PAYMENT_MODAL:
                     return () =>
                         (0, E.A)({
                             subscriptionTier: N.pe.TIER_2,
                             initialPlanId: N.gD.PREMIUM_GROUP_MONTH,
-                            analyticsLocations: i,
-                            analyticsObject: { ...A, object: u.ZSU.BUTTON_CTA, objectType: u.btD.TIER_2 },
+                            analyticsLocations: R,
+                            analyticsObject: { ...d, object: P.ZSU.BUTTON_CTA, objectType: P.btD.TIER_2 },
                             onClose: (t) => {
-                                t && R?.();
+                                t && b?.();
                             },
                         });
-                case c.d.OPEN_TIER_2_PAYMENT_MODAL:
-                case c.d.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
+                case n.dz.OPEN_TIER_2_PAYMENT_MODAL:
+                case n.dz.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
                 default:
                     return () =>
                         (0, E.A)({
                             subscriptionTier: N.pe.TIER_2,
-                            analyticsLocations: i,
-                            analyticsObject: { ...A, object: u.ZSU.BUTTON_CTA, objectType: u.btD.TIER_2 },
+                            analyticsLocations: R,
+                            analyticsObject: { ...d, object: P.ZSU.BUTTON_CTA, objectType: P.btD.TIER_2 },
                             onClose: (t) => {
-                                t && R?.();
+                                t && b?.();
                             },
                         });
             }
         },
         x: function (t) {
             let { buttonAction: e } = t;
-            switch (e ?? c.d.UNSPECIFIED) {
-                case c.d.OPEN_SOCIAL_LAYER_STOREFRONT:
+            switch (e ?? n.dz.UNSPECIFIED) {
+                case n.dz.OPEN_SOCIAL_LAYER_STOREFRONT:
                     return { icon: _.LinkExternalSmallIcon, iconPosition: "end" };
-                case c.d.OPEN_SHOP:
-                    return { icon: O.ShopIcon };
-                case c.d.OPEN_GUILD_BOOST_CHECKOUT:
-                    return { icon: i.BoostGemIcon };
+                case n.dz.OPEN_SHOP:
+                    return { icon: i.ShopIcon };
+                case n.dz.OPEN_GUILD_BOOST_CHECKOUT:
+                    return { icon: o.BoostGemIcon };
                 default:
-                    return { icon: o.NitroWheelIcon };
+                    return { icon: T.NitroWheelIcon };
             }
         },
     },

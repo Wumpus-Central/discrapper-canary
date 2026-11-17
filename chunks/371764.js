@@ -2,8 +2,8 @@ var i = n(477900);
 n(582128);
 var o = n(613412),
     l = n(517352),
-    s = n(308588),
-    a = n(670474),
+    a = n(308588),
+    s = n(670474),
     r = n(821609),
     c = n(534514),
     d = n(834730),
@@ -33,16 +33,17 @@ n.d(
                 properties: { component_type: n, component_id: e, promotion_id: A },
             });
             let y = (0, x.h)({
-                    buttonAction: N.button?.buttonAction ?? s.d.OPEN_TIER_2_PAYMENT_MODAL,
+                    buttonAction: N.button?.buttonAction ?? a.dz.OPEN_TIER_2_PAYMENT_MODAL,
                     deeplinkSection: N.button?.deeplinkSection,
                     applicationId: N.button?.navigableStorefrontApplicationId?.value,
                     shopCollectionId: N.button?.shopCollectionId?.value,
+                    giftModalDestination: N.button?.giftModalDestination,
                     analyticsLocations: j,
                     analyticsLocation: v.location,
                 }),
                 I = (0, b.a)(N.body),
                 T = (0, b.C)(N.helpArticle, N.helpArticleId),
-                { icon: C, iconPosition: _ } = (0, x.x)({ buttonAction: N.button?.buttonAction });
+                { icon: C, iconPosition: f } = (0, x.x)({ buttonAction: N.button?.buttonAction });
             return (0, i.jsxs)("div", {
                 className: g.kL,
                 children: [
@@ -83,12 +84,12 @@ n.d(
                         (0, i.jsx)("div", {
                             className: g.UD,
                             children: (0, i.jsx)(r.$, {
-                                variant: N.buttonVariant === a.F.PRIMARY ? "primary" : "expressive",
+                                variant: N.buttonVariant === s.F.PRIMARY ? "primary" : "expressive",
                                 size: "md",
                                 onClick: y,
                                 text: N.button.copy,
                                 icon: C,
-                                iconPosition: _,
+                                iconPosition: f,
                             }),
                         }),
                 ],

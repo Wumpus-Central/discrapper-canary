@@ -1,4 +1,4 @@
-n.d(t, { A: () => i7 });
+n.d(t, { A: () => i8 });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -510,8 +510,8 @@ var ez = n(633965),
     e3 = n(723702),
     e6 = n(757780),
     e5 = n(263715),
-    e7 = n(967198),
-    e8 = n(173860),
+    e8 = n(967198),
+    e7 = n(173860),
     e4 = n(383394),
     e9 = n(131677),
     te = n(73153);
@@ -560,7 +560,7 @@ function tu(e) {
         ),
         a = (0, _.bG)([tr.A], () => tr.A.isFocused()),
         s = (0, _.bG)([e4.A], () => e4.A.getExpandedFolders());
-    return (0, i.jsx)(e8.A, {
+    return (0, i.jsx)(e7.A, {
         ...n,
         ref: t,
         items: r,
@@ -1126,12 +1126,12 @@ function t5(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function t7(e) {
+function t8(e) {
     let { onClick: t, ...n } = e,
         r = (0, tz.P)("guild_list_add_server");
     return (0, i.jsx)(tW, { ...n, onClick: () => t(r), tooltip: ey.intl.string(r ? ey.t.riOUtB : ey.t.l5WIbf) });
 }
-function t8(e) {
+function t7(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, _.yK)([e1.A], () => e1.A.getGuildsArray()),
         s = (0, _.bG)([eC.default], () => eC.default.getCurrentUser()),
@@ -1159,7 +1159,7 @@ function t8(e) {
             children: [
                 c
                     ? (0, i.jsx)(tW, { ...E, onClick: () => u(!1), tooltip: ey.intl.string(ey.t.l5WIbf) })
-                    : (0, i.jsx)(t7, { ...E, onClick: u }),
+                    : (0, i.jsx)(t8, { ...E, onClick: u }),
                 null != n &&
                     (0, i.jsx)(t1.Ay, {
                         name: ey.intl.string(ey.t["45xjM5"]),
@@ -1565,10 +1565,10 @@ function n5(e) {
         );
     return t ? n : void 0;
 }
-var n7 = n(347951),
-    n8 = n(34162);
+var n8 = n(347951),
+    n7 = n(34162);
 function n4(e) {
-    return (0, _.bG)([n8.A], () => n8.A.getGuildMediaState(e), [e]);
+    return (0, _.bG)([n7.A], () => n7.A.getGuildMediaState(e), [e]);
 }
 var n9 = n(126600),
     ie = n(607399),
@@ -1892,7 +1892,7 @@ function iR(e) {
         o = null != l ? (0, i.jsx)(iO, { guildJoinRequestStatus: l }) : null,
         d = (0, i.jsx)(iC, { guild: t }),
         c = (0, _.bG)([ih.A], () => ih.A.isViewingRoles(t.id)),
-        u = (0, n7.Ig)(t),
+        u = (0, n8.Ig)(t),
         E =
             n && r
                 ? (function () {
@@ -2278,7 +2278,7 @@ function iP(e, t) {
             n.e(755936),
             n.e(147662),
             n.e(316344),
-            n.e(973973),
+            n.e(801012),
             n.e(274501),
             n.e(544571),
             n.e(714496),
@@ -2472,7 +2472,6 @@ function iP(e, t) {
             n.e(178048),
             n.e(556868),
             n.e(250129),
-            n.e(67422),
             n.e(726511),
             n.e(531741),
             n.e(390213),
@@ -2920,7 +2919,7 @@ let iw = r.memo(function (e) {
         h = nq(nz(r.useMemo(() => [a], [a]))),
         I = E + h.unreadCount,
         p = 0 === E && h.unreadCount > 0,
-        m = (0, n7.Ig)(s) && 0 === I,
+        m = (0, n8.Ig)(s) && 0 === I,
         T = r.useMemo(
             () =>
                 null != n
@@ -2977,7 +2976,7 @@ function iK(e) {
         r = (0, _.bG)([n6.A], () => n6.A.getRequest(n)),
         a = (0, _.bG)([n6.A], () => n6.A.getJoinRequestGuild(n), [n]),
         s = (0, _.bG)([tr.A], () => tr.A.isFocused()),
-        l = (0, _.bG)([e7.A], () => e7.A.getGuildId());
+        l = (0, _.bG)([e8.A], () => e8.A.getGuildId());
     return null == a
         ? null
         : (0, i.jsx)(iM, {
@@ -3063,7 +3062,7 @@ function iX(e) {
 function iz(e) {
     let { onActivate: t } = e,
         [n, a] = r.useState(!1),
-        s = (0, _.bG)([e7.A], () => e7.A.getGuildId()),
+        s = (0, _.bG)([e8.A], () => e8.A.getGuildId()),
         l = (0, _.bG)([n6.A], () => n6.A.hasFetchedRequestToJoinGuilds),
         o = (0, iW.A)(),
         d = (0, iB.Ay)(s),
@@ -3344,7 +3343,7 @@ function i6(e) {
             }),
             d,
             (0, i.jsx)(nj, {}),
-            r ? null : (0, i.jsx)(t8, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
+            r ? null : (0, i.jsx)(t7, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
             r ? null : t,
             n ? null : (0, i.jsx)(t$, {}),
         ],
@@ -3469,13 +3468,13 @@ function i5(e) {
         r.useEffect(() => {
             let e = null;
             function n() {
-                let n = e7.A.getGuildId();
+                let n = e8.A.getGuildId();
                 n !== e && ((e = n ?? null), t(n ?? null, !1));
             }
             return (
-                e7.A.addChangeListener(n),
+                e8.A.addChangeListener(n),
                 () => {
-                    e7.A.removeChangeListener(n);
+                    e8.A.removeChangeListener(n);
                 }
             );
         }, [t]));
@@ -3595,7 +3594,7 @@ function i5(e) {
         }),
     });
 }
-let i7 = r.memo(
+let i8 = r.memo(
     function (e) {
         let t = (0, N.A)("guildsnav");
         return (0, i.jsx)(c.hD, { navigator: t, children: (0, i.jsx)(i5, { ...e }) });

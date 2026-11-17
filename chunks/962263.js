@@ -18,19 +18,19 @@ var r = n(477900),
     M = n(129230),
     T = n(637706),
     f = n(498470),
-    O = n(652215),
-    g = n(49999),
+    g = n(652215),
+    O = n(49999),
     b = n(792996),
-    x = n(696918),
-    I = n(693369);
+    I = n(696918),
+    x = n(693369);
 (n(323874), n(14289), n(35956));
 var L = n(503698),
     y = n.n(L),
-    R = n(613412),
-    v = n(855986),
-    C = n(815021),
+    D = n(613412),
+    R = n(855986),
+    v = n(815021),
     k = n(935462),
-    D = n(805251),
+    C = n(805251),
     P = n(534514),
     j = n(834730),
     S = n(315629),
@@ -41,29 +41,29 @@ var L = n(503698),
     K = n(265705),
     V = n(915089),
     F = n(607470),
-    $ = n(383055),
-    Y = n(186111),
-    W = n(774774),
-    z = n(209012);
+    z = n(383055),
+    $ = n(186111),
+    Y = n(774774),
+    W = n(209012);
 let B = [];
 function q(e) {
     let { tagText: t, className: n } = e;
     return (0, r.jsx)("div", {
-        className: y()(z.Gr, n),
-        children: (0, r.jsx)(D.E, { type: { text: t }, variant: "premium" }),
+        className: y()(W.Gr, n),
+        children: (0, r.jsx)(C.E, { type: { text: t }, variant: "premium" }),
     });
 }
 function Q(e) {
     let { header: t, subHeader: n, subHeaderExtra: a, imageSrc: o, tagText: i, wideStyle: l } = e;
     return (0, r.jsxs)("div", {
-        className: y()(z.Vr, { [z.tF]: l }),
+        className: y()(W.Vr, { [W.tF]: l }),
         children: [
-            null != i ? (0, r.jsx)(q, { tagText: i, className: z.bX }) : null,
-            (0, r.jsx)("img", { alt: "", className: y()(z._n, { [z.tF]: l }), src: o }),
+            null != i ? (0, r.jsx)(q, { tagText: i, className: W.bX }) : null,
+            (0, r.jsx)("img", { alt: "", className: y()(W._n, { [W.tF]: l }), src: o }),
             (0, r.jsxs)("div", {
-                className: y()(z.Zz, { [z.tF]: l }),
+                className: y()(W.Zz, { [W.tF]: l }),
                 children: [
-                    (0, r.jsx)(P.D, { variant: "heading-sm/semibold", className: z.Hf, children: t }),
+                    (0, r.jsx)(P.D, { variant: "heading-sm/semibold", className: W.Hf, children: t }),
                     (0, r.jsxs)(j.E, { variant: "body-md/medium", color: "text-subtle", children: [n, a?.()] }),
                 ],
             }),
@@ -86,16 +86,16 @@ function Z(e) {
             subHeader: h,
             subHeaderExtra: T,
             featureCards: f,
-            changeLogId: x,
-            button: I,
+            changeLogId: I,
+            button: x,
             body: L,
-            disclaimer: D,
+            disclaimer: C,
             disclaimerExtra: q,
         } = e,
         { onClose: Z, transitionState: J } = d,
         X = (0, V.GV)(),
         ee = f.length % 2 == 0,
-        et = (0, v.bG)([G.Ay], () => G.Ay.useReducedMotion),
+        et = (0, R.bG)([G.Ay], () => G.Ay.useReducedMotion),
         [en, er] = a.useState(Date.now()),
         [ea, eo] = a.useState(0),
         [ei, el] = a.useState(0),
@@ -110,13 +110,13 @@ function Z(e) {
         eM = a.useRef(!1),
         { promotionKey: eT } = null != s ? s : {};
     (0, U.A)({
-        type: R.ImpressionTypes.MODAL,
-        name: R.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        type: D.ImpressionTypes.MODAL,
+        name: D.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_id: t, component_type: n, promotion_id: l },
     });
     let ef = a.useRef(null),
-        eO = a.useRef(!1);
-    function eg() {
+        eg = a.useRef(!1);
+    function eO() {
         let e = Date.now(),
             t = e - em.current,
             n = e_.current,
@@ -128,10 +128,10 @@ function Z(e) {
             let e = ef.current?.getScrollerNode();
             if (null == e) return;
             function r() {
-                eO.current ||
+                eg.current ||
                     ef.current?.isScrolledToBottom() !== !0 ||
-                    ((eO.current = !0),
-                    M.default.track(O.HAw.PREMIUM_MARKETING_COMPONENT_BOTTOM_VIEWED, {
+                    ((eg.current = !0),
+                    M.default.track(g.HAw.PREMIUM_MARKETING_COMPONENT_BOTTOM_VIEWED, {
                         component_id: t,
                         component_type: n,
                         visible_on_mount: ef.current?.isScrolledToTop() ?? !1,
@@ -183,32 +183,32 @@ function Z(e) {
         a.useEffect(
             () => () => {
                 if ("video" === u.type || "embed" === u.type) {
-                    let [e, t] = eg();
-                    (M.default.track(O.HAw.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: x,
+                    let [e, t] = eO();
+                    (M.default.track(g.HAw.CHANGE_LOG_VIDEO_PLAYED, {
+                        change_log_id: I,
                         seconds_played: Math.round(e / 1e3),
                     }),
-                        M.default.track(O.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: x,
+                        M.default.track(g.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
+                            change_log_id: I,
                             seconds_unmuted: Math.round(t / 1e3),
                         }));
                 }
             },
-            [x, u.type],
+            [I, u.type],
         ),
         a.useEffect(() => {
-            if (Y.A.getLayers().includes(O.zgK.COMPONENT_PLAYGROUND)) return;
+            if ($.A.getLayers().includes(g.zgK.COMPONENT_PLAYGROUND)) return;
             (0, A.Vh)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, { snowflakeId: l });
             let e = Date.now();
             return (
-                M.default.track(O.HAw.CHANGE_LOG_OPENED, { change_log_id: x }),
+                M.default.track(g.HAw.CHANGE_LOG_OPENED, { change_log_id: I }),
                 () => {
-                    (M.default.track(O.HAw.CHANGE_LOG_CLOSED, {
-                        change_log_id: x,
+                    (M.default.track(g.HAw.CHANGE_LOG_CLOSED, {
+                        change_log_id: I,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
                         (0, A.qr)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, l, {
-                            dismissAction: g.i.DISMISS,
+                            dismissAction: O.i.DISMISS,
                         }),
                         w.h.dispatch({
                             type: "PREMIUM_MARKETING_ANNOUNCEMENT_MODAL_DISMISSED",
@@ -217,24 +217,24 @@ function Z(e) {
                         }));
                 }
             );
-        }, [x, l, eT]),
+        }, [I, l, eT]),
         (0, r.jsx)(k.EO, {
             "data-migration-pending": !0,
-            className: y()(z.zr, z.kv, c),
+            className: y()(W.zr, W.kv, c),
             transitionState: J,
             "aria-labelledby": X,
             parentComponent: "PremiumAnnouncementModalVariant1",
             children: (0, r.jsxs)(S.h, {
                 color: "nitro-pink",
-                className: z.YV,
+                className: W.YV,
                 children: [
                     (0, r.jsx)("div", {
-                        className: z.cG,
-                        children: (0, r.jsx)(C.J, { "data-migration-pending": !0, onClick: async () => await Z() }),
+                        className: W.cG,
+                        children: (0, r.jsx)(v.J, { "data-migration-pending": !0, onClick: async () => await Z() }),
                     }),
                     (0, r.jsxs)(k.$m, {
                         "data-migration-pending": !0,
-                        className: z.Qs,
+                        className: W.Qs,
                         scrollbarType: "auto",
                         overflow: "auto",
                         scrollerRef: ef,
@@ -243,7 +243,7 @@ function Z(e) {
                                 switch (u.type) {
                                     case "video":
                                         return (0, r.jsx)(F.A, {
-                                            className: y()(z.Ki, m),
+                                            className: y()(W.Ki, m),
                                             autoPlay: !et,
                                             loop: !0,
                                             muted: !0,
@@ -252,21 +252,21 @@ function Z(e) {
                                             src: u.src,
                                             poster: u.poster,
                                             onPlay: (e) => {
-                                                (M.default.track(O.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: x,
+                                                (M.default.track(g.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                    change_log_id: I,
                                                 }),
                                                     er(Date.now()),
                                                     ec(!0),
                                                     eu(e.currentTarget.muted));
                                             },
                                             onEnded: (e) => {
-                                                (eg(), eu(e.currentTarget.muted), ec(!1));
+                                                (eO(), eu(e.currentTarget.muted), ec(!1));
                                             },
                                             onVolumeChange: (e) => {
-                                                (eg(), eu(e.currentTarget.muted));
+                                                (eO(), eu(e.currentTarget.muted));
                                             },
                                             onPause: (e) => {
-                                                (eg(), eu(e.currentTarget.muted), ec(!1));
+                                                (eO(), eu(e.currentTarget.muted), ec(!1));
                                             },
                                             disablePictureInPicture: !0,
                                             children: eh?.map((e) => {
@@ -288,7 +288,7 @@ function Z(e) {
                                         });
                                     case "embed":
                                         return (0, r.jsx)(K.rr, {
-                                            className: y()(z.Ki, m),
+                                            className: y()(W.Ki, m),
                                             allowFullScreen: !1,
                                             href: u.href,
                                             thumbnail: u.thumbnail,
@@ -296,46 +296,46 @@ function Z(e) {
                                             provider: H.mt.YOUTUBE,
                                             maxWidth: u.embed.width,
                                             maxHeight: u.embed.height,
-                                            renderVideoComponent: $.$o,
-                                            renderImageComponent: $.LL,
-                                            renderLinkComponent: $.bU,
+                                            renderVideoComponent: z.$o,
+                                            renderImageComponent: z.LL,
+                                            renderLinkComponent: z.bU,
                                             onPlay: () => {
-                                                M.default.track(O.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
-                                                    change_log_id: x,
+                                                M.default.track(g.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                    change_log_id: I,
                                                 });
                                             },
                                         });
                                     case "image":
-                                        return (0, r.jsx)("img", { alt: "", className: y()(z.Ki, m), src: u.src });
+                                        return (0, r.jsx)("img", { alt: "", className: y()(W.Ki, m), src: u.src });
                                     default:
                                         return null;
                                 }
                             })(),
                             null != N && "" !== N
-                                ? (0, r.jsx)(W.e4, {
+                                ? (0, r.jsx)(Y.e4, {
                                       text: N,
-                                      colorOptions: W.at.PREMIUM_TIER_2_WHITE_FILL,
-                                      className: z.ON,
+                                      colorOptions: Y.at.PREMIUM_TIER_2_WHITE_FILL,
+                                      className: W.ON,
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: z.Z,
+                                className: W.Z,
                                 children: [
-                                    (0, r.jsx)(P.D, { variant: "nitro-md", className: y()(z.TK, E), children: _ }),
+                                    (0, r.jsx)(P.D, { variant: "nitro-md", className: y()(W.TK, E), children: _ }),
                                     (0, r.jsxs)(j.E, {
                                         variant: "body-md/medium",
                                         color: "text-subtle",
-                                        className: z.uI,
+                                        className: W.uI,
                                         children: [h, T?.()],
                                     }),
                                 ],
                             }),
                             null != L &&
                                 "" !== L &&
-                                (0, r.jsx)(P.D, { variant: "heading-lg/semibold", className: z.G3, children: L }),
+                                (0, r.jsx)(P.D, { variant: "heading-lg/semibold", className: W.G3, children: L }),
                             f.length > 0 &&
                                 (0, r.jsx)("div", {
-                                    className: z.IS,
+                                    className: W.IS,
                                     children: f.map((e, t) =>
                                         (0, r.jsx)(Q, { ...e, wideStyle: ee }, `${e.header}_${t}`),
                                     ),
@@ -343,16 +343,16 @@ function Z(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: z.xQ,
+                        className: W.xQ,
                         children: [
-                            I(),
-                            null != D &&
-                                "" !== D &&
+                            x(),
+                            null != C &&
+                                "" !== C &&
                                 (0, r.jsxs)(j.E, {
                                     variant: "body-xs/medium",
                                     color: "text-subtle",
-                                    className: z.ed,
-                                    children: [D, q?.()],
+                                    className: W.ed,
+                                    children: [C, q?.()],
                                 }),
                         ],
                     }),
@@ -364,7 +364,7 @@ function Z(e) {
 function J(e) {
     let { promotionId: t, properties: n, isPreview: r } = e,
         a = l.m.clone(n);
-    if (!(0, I.lp)(a, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) return null;
+    if (!(0, x.lp)(a, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) return null;
     {
         let { isDismissed: e } = (0, _.u$)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, t);
         return !r && e ? null : (r && (a.properties.announcementModalVariant1.dismissKey = ""), a);
@@ -373,10 +373,10 @@ function J(e) {
 function X(e) {
     let { componentId: t, componentType: n, promotionId: a, promotion: l, renderModalProps: _, properties: L } = e,
         { location: y } = (0, c.p)(),
-        { analyticsLocations: R } = (0, m.Ay)(u.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        v = (0, d.Ay)(),
-        C = (0, s.q)(v);
-    if ((0, I.lp)(L, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) {
+        { analyticsLocations: D } = (0, m.Ay)(u.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        R = (0, d.Ay)(),
+        v = (0, s.q)(R);
+    if ((0, x.lp)(L, o.oW.ANNOUNCEMENT_MODAL_VARIANT_1)) {
         let e = (function (e) {
             let t,
                 {
@@ -391,50 +391,54 @@ function X(e) {
                     isLightTheme: m,
                 } = e,
                 _ = `AnnouncementModalVariant1_${n}`,
-                { onClose: I } = c,
+                { onClose: x } = c,
                 L = s.button?.copy ?? b.intl.string(b.t.YScQSF),
                 y = s.button?.buttonAction;
             switch (y) {
-                case E.d.OPEN_MARKETING_PAGE:
+                case E.dz.OPEN_MARKETING_PAGE:
                     t = "jump_to_mkt_button";
                     break;
-                case E.d.OPEN_SOCIAL_LAYER_STOREFRONT:
+                case E.dz.OPEN_SOCIAL_LAYER_STOREFRONT:
                     t = "jump_to_slayer_storefront_button";
                     break;
-                case E.d.OPEN_SHOP:
+                case E.dz.OPEN_SHOP:
                     t = "jump_to_shop_button";
+                    break;
+                case E.dz.OPEN_GIFT_MODAL:
+                    t = "gifting_button";
                     break;
                 default:
                     t = "get_nitro_button";
             }
-            let R = (0, f.h)({
+            let D = (0, f.h)({
                     buttonAction: s.button?.buttonAction,
                     deeplinkSection: s.button?.deeplinkSection,
                     applicationId: s.button?.navigableStorefrontApplicationId?.value,
                     shopCollectionId: s.button?.shopCollectionId?.value,
+                    giftModalDestination: s.button?.giftModalDestination,
                     analyticsLocations: d,
                     analyticsLocation: u,
-                    onClose: I,
+                    onClose: x,
                 }),
-                v = (0, T.C)(s.helpArticle, s.helpArticleId),
-                C =
-                    null != v
+                R = (0, T.C)(s.helpArticle, s.helpArticleId),
+                v =
+                    null != R
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: v.url, children: v.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: I.$T, href: R.url, children: R.linkText }),
                                   ],
                               })
                         : void 0,
                 k = (0, T.C)(s.disclaimer?.disclaimerHelpArticle, ""),
-                D =
+                C =
                     null != k
                         ? () =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, r.jsx)(h.Anchor, { className: x.$T, href: k.url, children: k.linkText }),
+                                      (0, r.jsx)(h.Anchor, { className: I.$T, href: k.url, children: k.linkText }),
                                   ],
                               })
                         : void 0,
@@ -457,7 +461,7 @@ function X(e) {
                     header: s.header,
                     modalTopPill: s.modalTopPill,
                     subHeader: s.subheader,
-                    subHeaderExtra: C,
+                    subHeaderExtra: v,
                     body: s.body,
                     heroArt: P,
                     featureCards: s.featureCards.map((e) => {
@@ -469,7 +473,7 @@ function X(e) {
                                               children: [
                                                   "\xa0",
                                                   (0, r.jsx)(h.Anchor, {
-                                                      className: x.$T,
+                                                      className: I.$T,
                                                       href: t.url,
                                                       children: t.linkText,
                                                   }),
@@ -492,23 +496,23 @@ function X(e) {
                             variant: "expressive",
                             size: "md",
                             onClick: async function () {
-                                M.default.track(O.HAw.CHANGE_LOG_CTA_CLICKED, {
+                                M.default.track(g.HAw.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: _,
                                     cta_type: t,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: _,
                                 });
                                 try {
-                                    (y === E.d.OPEN_MARKETING_PAGE ||
-                                        y === E.d.OPEN_SOCIAL_LAYER_STOREFRONT ||
-                                        y === E.d.OPEN_SHOP) &&
+                                    (y === E.dz.OPEN_MARKETING_PAGE ||
+                                        y === E.dz.OPEN_SOCIAL_LAYER_STOREFRONT ||
+                                        y === E.dz.OPEN_SHOP) &&
                                         (await (0, A.qr)(i.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, o, {
-                                            dismissAction: g.i.TAKE_ACTION,
+                                            dismissAction: O.i.TAKE_ACTION,
                                         }));
                                 } catch (e) {
                                     p.A.captureException(e);
                                 } finally {
-                                    R();
+                                    D();
                                 }
                             },
                             text: L,
@@ -517,7 +521,7 @@ function X(e) {
                         });
                     },
                     disclaimer: s.disclaimer?.disclaimerText !== "" ? s.disclaimer?.disclaimerText : void 0,
-                    disclaimerExtra: D,
+                    disclaimerExtra: C,
                 }
             );
         })({
@@ -527,9 +531,9 @@ function X(e) {
             promotion: l,
             content: L.properties.announcementModalVariant1,
             renderModalProps: _,
-            analyticsLocations: R,
+            analyticsLocations: D,
             analyticsLocation: y,
-            isLightTheme: C,
+            isLightTheme: v,
         });
         return (0, r.jsx)(Z, { ...e });
     }

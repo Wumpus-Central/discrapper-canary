@@ -34,6 +34,7 @@ l.d(
                     deeplinkSection: t.deeplinkSection,
                     applicationId: t.navigableStorefrontApplicationId?.value,
                     shopCollectionId: t.shopCollectionId?.value,
+                    giftModalDestination: t.giftModalDestination,
                     onClose: () => A(d.i.TAKE_ACTION),
                 }),
                 { icon: m } = (0, s.x)({ buttonAction: t.ctaAction });

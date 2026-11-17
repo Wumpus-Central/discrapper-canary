@@ -18,7 +18,7 @@ class _ extends l.G {
             { no: 2, name: "header", kind: "scalar", T: 9 },
             { no: 3, name: "body", kind: "scalar", T: 9 },
             { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
-            { no: 5, name: "button", kind: "message", T: () => c.$ },
+            { no: 5, name: "button", kind: "message", T: () => c.$J },
             { no: 6, name: "help_article", kind: "message", T: () => d.O },
             { no: 7, name: "header_localized", kind: "message", T: () => o.X },
             { no: 8, name: "body_localized", kind: "message", T: () => o.X },
@@ -61,7 +61,7 @@ class _ extends l.G {
                     a.helpArticleId = e.string();
                     break;
                 case 5:
-                    a.button = c.$.internalBinaryRead(e, e.uint32(), n, a.button);
+                    a.button = c.$J.internalBinaryRead(e, e.uint32(), n, a.button);
                     break;
                 case 6:
                     a.helpArticle = d.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
@@ -90,7 +90,7 @@ class _ extends l.G {
             "" !== e.header && t.tag(2, r.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(3, r.O0.LengthDelimited).string(e.body),
             "" !== e.helpArticleId && t.tag(4, r.O0.LengthDelimited).string(e.helpArticleId),
-            e.button && c.$.internalBinaryWrite(e.button, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
+            e.button && c.$J.internalBinaryWrite(e.button, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
             e.helpArticle && d.O.internalBinaryWrite(e.helpArticle, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
                 o.X.internalBinaryWrite(e.headerLocalized, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),

@@ -12,7 +12,7 @@ class u extends s.G {
             { no: 1, name: "header", kind: "scalar", T: 9 },
             { no: 2, name: "body", kind: "scalar", T: 9 },
             { no: 3, name: "asset", kind: "message", T: () => c.i },
-            { no: 4, name: "button", kind: "message", T: () => d.$ },
+            { no: 4, name: "button", kind: "message", T: () => d.$J },
             { no: 5, name: "header_localized", kind: "message", T: () => o.X },
             { no: 6, name: "body_localized", kind: "message", T: () => o.X },
             { no: 7, name: "help_article", kind: "message", T: () => l.O },
@@ -42,7 +42,7 @@ class u extends s.G {
                     a.asset = c.i.internalBinaryRead(e, e.uint32(), n, a.asset);
                     break;
                 case 4:
-                    a.button = d.$.internalBinaryRead(e, e.uint32(), n, a.button);
+                    a.button = d.$J.internalBinaryRead(e, e.uint32(), n, a.button);
                     break;
                 case 5:
                     a.headerLocalized = o.X.internalBinaryRead(e, e.uint32(), n, a.headerLocalized);
@@ -67,7 +67,7 @@ class u extends s.G {
         ("" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(2, i.O0.LengthDelimited).string(e.body),
             e.asset && c.i.internalBinaryWrite(e.asset, t.tag(3, i.O0.LengthDelimited).fork(), n).join(),
-            e.button && d.$.internalBinaryWrite(e.button, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
+            e.button && d.$J.internalBinaryWrite(e.button, t.tag(4, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
                 o.X.internalBinaryWrite(e.headerLocalized, t.tag(5, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
