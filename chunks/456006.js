@@ -60,7 +60,7 @@ async function I(e) {
         launchRequestId: N,
     });
     try {
-        let [e] = await Promise.all([(0, r.D2)(t, (0, u.A)(n), n.type, I), (0, c.A)(t)]);
+        let [e] = await Promise.all([(0, r.D2)(t, (0, u.V)(n), n.type, I), (0, c.A)(t)]);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
@@ -149,7 +149,7 @@ async function P(e) {
         l = (0, A.x1)(t) ? t.data.invite : t.invite;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D2)(n, (0, u.A)(s), s.type, l);
+        let t = await (0, r.D2)(n, (0, u.V)(s), s.type, l);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (t) {
         let e = await (0, a.f)(t, n);

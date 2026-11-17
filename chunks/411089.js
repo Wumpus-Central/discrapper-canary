@@ -15552,7 +15552,7 @@ function fv(e) {
                             "--custom-conjure-overlay-widget-end": `${m.end}px`,
                             "--custom-conjure-overlay-widget-scale": String(m.scale),
                         },
-                        children: (0, a.jsx)(m9, { applicationId: t, surface: eb.ZN, frameOverlay: r }),
+                        children: (0, a.jsx)(m9, { applicationId: t, surface: eD.p$, frameOverlay: r }),
                     }),
                 }),
                 null != n ? (0, a.jsx)(fp, { projectId: n }) : null,

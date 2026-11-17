@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675657, Version Hash: 2f41c5717c7fe57a03edd97499a1b62a65921ba8`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675669, Version Hash: 59bd9013f9c221c73f98ce2ceeb18c1c8e5bc905`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675657";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675669";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15911,7 +15911,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675657" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675669" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -33834,7 +33834,9 @@ let LQ = {
             try {
                 return {
                     ticket:
-                        i?.source.type === Lz.f.FRAME ? await (0, L$.D2)(n, r, i.surface.type) : await (0, L$.D2)(n, r),
+                        i?.source.type === Lz.f.FRAME
+                            ? await (0, L$.D2)(n, (0, sy.V)(i.surface), i.surface.type)
+                            : await (0, L$.D2)(n, r),
                 };
             } catch (e) {
                 throw new RN.A({ errorCode: H.Lw6.UNKNOWN_ERROR }, "Failed to create proxy ticket");
@@ -40319,7 +40321,7 @@ class vR extends er.EventEmitter {
                         postClose: vO,
                     });
                     if ((await this.validateSocketClient(e, t.origin, a.applicationId), !E())) return;
-                    let n = await (0, L$.D2)(a.applicationId, (0, sy.A)(s.surface), s.surface.type);
+                    let n = await (0, L$.D2)(a.applicationId, (0, sy.V)(s.surface), s.surface.type);
                     E() &&
                         i(
                             [
