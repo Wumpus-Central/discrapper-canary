@@ -132,7 +132,9 @@ let D = new y(l.h, {
     GIFT_CODE_RESOLVE: C,
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
-        return ((f = f.filter((e) => e !== t.code)), I.includes(t.code) || (I = [...I, t.code]), S(t));
+        return (
+            (f = f.filter((e) => e !== t.code)), I.includes(t.code) || (I = [...I, t.code]), delete g[t.code], S(t)
+        );
     },
     GIFT_CODE_RESOLVE_FAILURE: function (e) {
         let { code: t, error: n } = e;

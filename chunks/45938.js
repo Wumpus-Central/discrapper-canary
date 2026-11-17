@@ -48,6 +48,7 @@ function D(e, t, n, i, r) {
 function b(e, t) {
     switch (e.code) {
         case h.t02.INVALID_GIFT_SELF_REDEMPTION:
+        case h.t02.INVALID_GIFT_SUBSCRIPTION_SELF_REDEMPTION:
             return p.intl.string(p.t.wa9h7F);
         case h.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
             return p.intl.string(p.t.Iw2TUW);
