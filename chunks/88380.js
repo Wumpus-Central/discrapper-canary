@@ -1,7 +1,7 @@
-l.d(t, { default: () => Z });
+l.d(t, { default: () => q });
 var n = l(477900),
-    i = l(582128),
-    r = l(347704),
+    r = l(582128),
+    i = l(347704),
     a = l(664947),
     s = l(124077),
     o = l(674008),
@@ -9,15 +9,15 @@ var n = l(477900),
     d = l(192308),
     u = l(673383),
     m = l(331322),
-    f = l(534514),
-    g = l(834730),
+    g = l(534514),
+    f = l(834730),
     h = l(682163),
     x = l(792996),
     p = l(393612);
 function b(e) {
     let { linkedGuild: t } = e,
-        { id: l, name: r, icon: a, presenceCount: s, memberCount: o } = t,
-        c = i.useMemo(() => ({ id: l, name: r, icon: a, features: [] }), [l, r, a]);
+        { id: l, name: i, icon: a, presenceCount: s, memberCount: o } = t,
+        c = r.useMemo(() => ({ id: l, name: i, icon: a, features: [] }), [l, i, a]);
     return (0, n.jsx)("div", {
         className: p.Nr,
         children: (0, n.jsxs)(m.B, {
@@ -30,11 +30,11 @@ function b(e) {
                     gap: 4,
                     className: p.pq,
                     children: [
-                        (0, n.jsx)(g.E, {
+                        (0, n.jsx)(f.E, {
                             variant: "body-lg/semibold",
                             color: "text-strong",
                             lineClamp: 1,
-                            children: r,
+                            children: i,
                         }),
                         (0, n.jsxs)(m.B, {
                             direction: "horizontal",
@@ -50,7 +50,7 @@ function b(e) {
                                           fullWidth: !1,
                                           children: [
                                               (0, n.jsx)("span", { className: p.RS }),
-                                              (0, n.jsx)(g.E, {
+                                              (0, n.jsx)(f.E, {
                                                   variant: "body-md/medium",
                                                   color: "text-muted",
                                                   children: x.intl.formatToPlainString(x.t["LC+S+m"], {
@@ -68,7 +68,7 @@ function b(e) {
                                           fullWidth: !1,
                                           children: [
                                               (0, n.jsx)("span", { className: p.Ps }),
-                                              (0, n.jsx)(g.E, {
+                                              (0, n.jsx)(f.E, {
                                                   variant: "body-md/medium",
                                                   color: "text-muted",
                                                   children: x.intl.formatToPlainString(x.t.zRl6XR, { count: o }),
@@ -91,17 +91,17 @@ var j = l(503698),
     S = l(559106),
     T = l(516521),
     I = l(939249),
-    P = l(752222);
-let E = [
-    { key: "auto-sync", getText: () => x.intl.string(P.default.WUVzdk) },
-    { key: "linked-channel", getText: () => x.intl.string(P.default.MEQJ1m) },
-    { key: "guild-invite", getText: (e) => x.intl.formatToPlainString(P.default["hn+Lsg"], { noun: e }) },
+    E = l(752222);
+let P = [
+    { key: "auto-sync", getText: () => x.intl.string(E.default.WUVzdk) },
+    { key: "linked-channel", getText: () => x.intl.string(E.default.MEQJ1m) },
+    { key: "guild-invite", getText: (e) => x.intl.formatToPlainString(E.default["hn+Lsg"], { noun: e }) },
 ];
-var M = l(561193);
-let k = {
+var k = l(561193);
+let M = {
         "auto-sync": function (e) {
-            let { alt: t, ariaLabel: l, ariaHidden: r, role: a, width: s, height: o, className: c, style: d } = e,
-                u = i.useMemo(
+            let { alt: t, ariaLabel: l, ariaHidden: i, role: a, width: s, height: o, className: c, style: d } = e,
+                u = r.useMemo(
                     () => (0, v.H)({ width: s, height: o, intrinsicWidth: 288, intrinsicHeight: 192, style: d }),
                     [s, o, d],
                 );
@@ -111,13 +111,13 @@ let k = {
                 className: (0, v.Z)(c),
                 alt: t,
                 "aria-label": l,
-                "aria-hidden": r,
+                "aria-hidden": i,
                 role: a ?? "img",
             });
         },
         "linked-channel": function (e) {
-            let { alt: t, ariaLabel: l, ariaHidden: r, role: a, width: s, height: o, className: c, style: d } = e,
-                u = i.useMemo(
+            let { alt: t, ariaLabel: l, ariaHidden: i, role: a, width: s, height: o, className: c, style: d } = e,
+                u = r.useMemo(
                     () => (0, v.H)({ width: s, height: o, intrinsicWidth: 288, intrinsicHeight: 192, style: d }),
                     [s, o, d],
                 );
@@ -127,13 +127,13 @@ let k = {
                 className: (0, v.Z)(c),
                 alt: t,
                 "aria-label": l,
-                "aria-hidden": r,
+                "aria-hidden": i,
                 role: a ?? "img",
             });
         },
         "guild-invite": function (e) {
-            let { alt: t, ariaLabel: l, ariaHidden: r, role: a, width: s, height: o, className: c, style: d } = e,
-                u = i.useMemo(
+            let { alt: t, ariaLabel: l, ariaHidden: i, role: a, width: s, height: o, className: c, style: d } = e,
+                u = r.useMemo(
                     () => (0, v.H)({ width: s, height: o, intrinsicWidth: 288, intrinsicHeight: 192, style: d }),
                     [s, o, d],
                 );
@@ -143,56 +143,56 @@ let k = {
                 className: (0, v.Z)(c),
                 alt: t,
                 "aria-label": l,
-                "aria-hidden": r,
+                "aria-hidden": i,
                 role: a ?? "img",
             });
         },
     },
-    C = E.map((e) => ({ ...e, Asset: k[e.key] })),
-    z = { top: -4, right: 4, bottom: -4, left: 20 };
-function B(e) {
+    B = P.map((e) => ({ ...e, Asset: M[e.key] })),
+    C = { top: -4, right: 4, bottom: -4, left: 20 };
+function z(e) {
     let { noun: t } = e,
-        l = i.useRef(null),
-        r = i.useRef([]),
-        a = i.useRef(null),
-        s = i.useRef(null),
-        o = i.useRef(void 0),
-        [c, d] = i.useState(0),
-        [u, f] = i.useState("idle");
+        l = r.useRef(null),
+        i = r.useRef([]),
+        a = r.useRef(null),
+        s = r.useRef(null),
+        o = r.useRef(void 0),
+        [c, d] = r.useState(0),
+        [u, g] = r.useState("idle");
     function h(e, t) {
-        let l = r.current[0],
-            n = r.current[t];
+        let l = i.current[0],
+            n = i.current[t];
         return null == l || null == n ? null : Math.min(n.offsetLeft - l.offsetLeft, e.scrollWidth - e.clientWidth);
     }
     function p(e) {
         let t = 0,
             l = 1 / 0;
         return (
-            C.forEach((n, i) => {
-                let r = h(e, i);
-                if (null == r) return;
-                let a = Math.abs(r - e.scrollLeft);
-                a <= l && ((t = i), (l = a));
+            B.forEach((n, r) => {
+                let i = h(e, r);
+                if (null == i) return;
+                let a = Math.abs(i - e.scrollLeft);
+                a <= l && ((t = r), (l = a));
             }),
             t
         );
     }
     function b() {
-        (window.clearTimeout(o.current), (s.current = null), f("idle"));
+        (window.clearTimeout(o.current), (s.current = null), g("idle"));
     }
     return (
-        i.useEffect(() => () => window.clearTimeout(o.current), []),
+        r.useEffect(() => () => window.clearTimeout(o.current), []),
         (0, n.jsxs)(m.B, {
             gap: 16,
             children: [
                 (0, n.jsx)(S.vN, {
-                    offset: z,
+                    offset: C,
                     children: (0, n.jsx)(T.zC, {
                         ref: l,
                         orientation: "horizontal",
-                        className: y()(M.XG, { [M.cB]: "dragging" === u, [M.Ni]: "settling" === u }),
+                        className: y()(k.XG, { [k.cB]: "dragging" === u, [k.Ni]: "settling" === u }),
                         role: "region",
-                        "aria-label": x.intl.string(P.default.yFqGy8),
+                        "aria-label": x.intl.string(E.default.yFqGy8),
                         tabIndex: 0,
                         onScroll: function () {
                             let e = l.current?.getScrollerNode();
@@ -211,7 +211,7 @@ function B(e) {
                                     startIndex: p(t),
                                 }),
                                 b(),
-                                f("dragging"));
+                                g("dragging"));
                         },
                         onPointerMove: function (e) {
                             let t = a.current,
@@ -225,54 +225,54 @@ function B(e) {
                                 n = l.current?.getScrollerNode();
                             if (t?.pointerId !== e.pointerId || null == n) return;
                             a.current = null;
-                            let i = p(n),
-                                r = n.scrollLeft - t.startScrollLeft;
-                            i === t.startIndex &&
-                                Math.abs(r) > 40 &&
-                                (i = Math.min(Math.max(i + Math.sign(r), 0), C.length - 1));
-                            let c = h(n, i);
+                            let r = p(n),
+                                i = n.scrollLeft - t.startScrollLeft;
+                            r === t.startIndex &&
+                                Math.abs(i) > 40 &&
+                                (r = Math.min(Math.max(r + Math.sign(i), 0), B.length - 1));
+                            let c = h(n, r);
                             null == c || 1 > Math.abs(n.scrollLeft - c)
-                                ? f("idle")
-                                : ((0, N.flushSync)(() => f("settling")),
+                                ? g("idle")
+                                : ((0, N.flushSync)(() => g("settling")),
                                   (s.current = c),
                                   (o.current = window.setTimeout(b, 1e3)),
                                   n.scrollTo({ left: c }));
                         },
                         onDragStart: (e) => e.preventDefault(),
                         children: (0, n.jsx)("ul", {
-                            className: M.kR,
-                            children: C.map((e, l) => {
-                                let { key: i, getText: a, Asset: s } = e;
+                            className: k.kR,
+                            children: B.map((e, l) => {
+                                let { key: r, getText: a, Asset: s } = e;
                                 return (0, n.jsxs)(
                                     "li",
                                     {
                                         ref: (e) => {
-                                            r.current[l] = e;
+                                            i.current[l] = e;
                                         },
-                                        className: M.Nr,
+                                        className: k.Nr,
                                         children: [
                                             (0, n.jsx)(s, { alt: "", ariaHidden: !0, width: "100%" }),
-                                            (0, n.jsx)(g.E, {
+                                            (0, n.jsx)(f.E, {
                                                 variant: "body-sm/medium",
                                                 color: "text-subtle",
                                                 children: a(t),
                                             }),
                                         ],
                                     },
-                                    i,
+                                    r,
                                 );
                             }),
                         }),
                     }),
                 }),
                 (0, n.jsx)("div", {
-                    className: M.r$,
-                    children: C.map((e, t) => {
-                        let { key: i } = e;
+                    className: k.r$,
+                    children: B.map((e, t) => {
+                        let { key: r } = e;
                         return (0, n.jsx)(
                             I.D,
                             {
-                                className: y()(M.Om, { [M.o]: t === c }),
+                                className: y()(k.Om, { [k.o]: t === c }),
                                 "aria-label": x.intl.formatToPlainString(x.t["2SXOrM"], { pageNumber: t + 1 }),
                                 "aria-current": t === c || void 0,
                                 onClick: () =>
@@ -283,7 +283,7 @@ function B(e) {
                                         null != n && t.scrollTo({ left: n });
                                     })(t),
                             },
-                            i,
+                            r,
                         );
                     }),
                 }),
@@ -301,11 +301,11 @@ function w(e) {
                 gap: 24,
                 align: "center",
                 children: [
-                    (0, n.jsx)(f.D, {
+                    (0, n.jsx)(g.D, {
                         variant: "heading-md/semibold",
                         color: "text-subtle",
                         className: A.G,
-                        children: x.intl.formatToPlainString(P.default.WmxMAI, {
+                        children: x.intl.formatToPlainString(E.default.WmxMAI, {
                             displayNoun: t.displayNoun ?? "other",
                         }),
                     }),
@@ -315,12 +315,12 @@ function w(e) {
             (0, n.jsxs)(m.B, {
                 gap: 16,
                 children: [
-                    (0, n.jsx)(f.D, {
+                    (0, n.jsx)(g.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: x.intl.string(P.default.yFqGy8),
+                        children: x.intl.string(E.default.yFqGy8),
                     }),
-                    (0, n.jsx)(B, { noun: (0, s.A)({ displayNoun: t.displayNoun, lowercase: !0 }) }),
+                    (0, n.jsx)(z, { noun: (0, s.A)({ displayNoun: t.displayNoun, lowercase: !0 }) }),
                 ],
             }),
         ],
@@ -333,31 +333,31 @@ var L = l(646514),
     _ = l(289873),
     G = l(892672),
     X = l(532049);
-function U(e) {
-    let { id: t, text: l, eligible: i } = e;
-    return i
-        ? (0, n.jsx)(g.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-subtle", children: l })
+function H(e) {
+    let { id: t, text: l, eligible: r } = e;
+    return r
+        ? (0, n.jsx)(f.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-subtle", children: l })
         : (0, n.jsxs)(m.B, {
               direction: "horizontal",
               align: "center",
               gap: 4,
               children: [
                   (0, n.jsx)(R.CircleErrorIcon, { size: "xs", color: L.A.colors.ICON_MUTED, "aria-hidden": !0 }),
-                  (0, n.jsx)(g.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-muted", children: l }),
+                  (0, n.jsx)(f.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-muted", children: l }),
               ],
           });
 }
-let H = i.memo(function (e) {
+let U = r.memo(function (e) {
     let { character: t, noun: l } = e,
-        r = i.useId(),
-        a = i.useId(),
-        s = i.useRef(null),
+        i = r.useId(),
+        a = r.useId(),
+        s = r.useRef(null),
         o = !t.eligible,
-        c = t.eligible ? t.description : (t.description ?? x.intl.formatToPlainString(P.default.VNY3C1, { noun: l }));
+        c = t.eligible ? t.description : (t.description ?? x.intl.formatToPlainString(E.default.VNY3C1, { noun: l }));
     return (0, n.jsx)(D.A1, {
         value: t.id,
         isDisabled: o,
-        "aria-labelledby": r,
+        "aria-labelledby": i,
         "aria-describedby": null != c ? a : void 0,
         children: (0, n.jsx)(S.vN, {
             focusTarget: s,
@@ -372,14 +372,14 @@ let H = i.memo(function (e) {
                         gap: 4,
                         className: X.WD,
                         children: [
-                            (0, n.jsx)(g.E, {
-                                id: r,
+                            (0, n.jsx)(f.E, {
+                                id: i,
                                 tag: "span",
                                 variant: "body-md/semibold",
                                 color: o ? "text-muted" : "text-strong",
                                 children: t.name,
                             }),
-                            null != c ? (0, n.jsx)(U, { id: a, text: c, eligible: t.eligible }) : null,
+                            null != c ? (0, n.jsx)(H, { id: a, text: c, eligible: t.eligible }) : null,
                         ],
                     }),
                 ],
@@ -387,42 +387,42 @@ let H = i.memo(function (e) {
         }),
     });
 });
-function O(e) {
-    let { characters: t, selectedCharacterId: l, onSelect: r, noun: a } = e,
-        s = i.useId(),
-        o = i.useMemo(() => (null != t ? [...t].sort((e, t) => Number(t.eligible) - Number(e.eligible)) : null), [t]);
+function V(e) {
+    let { characters: t, selectedCharacterId: l, onSelect: i, noun: a } = e,
+        s = r.useId(),
+        o = r.useMemo(() => (null != t ? [...t].sort((e, t) => Number(t.eligible) - Number(e.eligible)) : null), [t]);
     if (null == o) return (0, n.jsx)(_.y, {});
     let c = o.some((e) => !e.eligible);
     return (0, n.jsxs)(m.B, {
         gap: 12,
         children: [
-            (0, n.jsx)(g.E, {
+            (0, n.jsx)(f.E, {
                 id: s,
                 variant: "body-md/medium",
                 color: "text-subtle",
                 className: X.DD,
-                children: x.intl.formatToPlainString(P.default["Xm+emB"], { noun: a }),
+                children: x.intl.formatToPlainString(E.default["Xm+emB"], { noun: a }),
             }),
             (0, n.jsx)(D.z6, {
                 "aria-labelledby": s,
                 value: l,
-                onChange: r,
+                onChange: i,
                 className: X.kR,
-                children: o.map((e) => (0, n.jsx)(H, { character: e, noun: a }, e.id)),
+                children: o.map((e) => (0, n.jsx)(U, { character: e, noun: a }, e.id)),
             }),
             c
-                ? (0, n.jsx)(g.E, {
+                ? (0, n.jsx)(f.E, {
                       variant: "body-sm/medium",
                       color: "text-subtle",
-                      children: x.intl.formatToPlainString(P.default.ybJIQJ, { noun: a }),
+                      children: x.intl.formatToPlainString(E.default.ybJIQJ, { noun: a }),
                   })
                 : null,
         ],
     });
 }
-var V = l(171153);
-function K(e) {
-    let { invite: t, noun: l, isMultiCharacter: i, characters: r, selectedCharacterId: a, onSelectCharacter: s } = e,
+var K = l(171153);
+function O(e) {
+    let { invite: t, noun: l, isMultiCharacter: r, characters: i, selectedCharacterId: a, onSelectCharacter: s } = e,
         { organization: o, application: c } = t,
         { memberCount: d, maxMembers: u } = o;
     return (0, n.jsxs)(m.B, {
@@ -433,57 +433,77 @@ function K(e) {
                 align: "center",
                 children: [
                     (0, n.jsx)(G.A, { iconUrl: o.iconUrl, size: 64, fallback: "guild" }),
-                    (0, n.jsx)(f.D, {
-                        variant: "heading-xl/semibold",
-                        color: "text-strong",
-                        className: V.G,
-                        children: x.intl.formatToPlainString(P.default["bfJ/sO"], {
-                            noun: l,
-                            orgName: o.name,
-                            gameName: c.name,
-                        }),
+                    (0, n.jsxs)(m.B, {
+                        gap: 8,
+                        align: "center",
+                        children: [
+                            (0, n.jsx)(g.D, {
+                                variant: "heading-xl/semibold",
+                                color: "text-subtle",
+                                className: K.G,
+                                children: x.intl.format(E.default.gptW7Y, {
+                                    noun: l,
+                                    orgName: o.name,
+                                    gameName: c.name,
+                                    orgNameHook: (e, t) =>
+                                        (0, n.jsx)(
+                                            f.E,
+                                            {
+                                                tag: "span",
+                                                variant: "heading-xl/semibold",
+                                                color: "text-strong",
+                                                children: e,
+                                            },
+                                            t,
+                                        ),
+                                }),
+                            }),
+                            null != d && null != u
+                                ? (0, n.jsxs)(m.B, {
+                                      direction: "horizontal",
+                                      align: "center",
+                                      gap: 4,
+                                      fullWidth: !1,
+                                      children: [
+                                          (0, n.jsx)(W.GroupIcon, { size: "xs", color: L.A.colors.ICON_MUTED }),
+                                          (0, n.jsx)(f.E, {
+                                              variant: "body-md/medium",
+                                              color: "text-subtle",
+                                              children: x.intl.formatToPlainString(E.default.VuENGl, {
+                                                  count: d,
+                                                  max: u,
+                                              }),
+                                          }),
+                                      ],
+                                  })
+                                : null,
+                        ],
                     }),
-                    null != d && null != u
-                        ? (0, n.jsxs)(m.B, {
-                              direction: "horizontal",
-                              align: "center",
-                              gap: 4,
-                              fullWidth: !1,
-                              children: [
-                                  (0, n.jsx)(W.GroupIcon, { size: "xs", color: L.A.colors.ICON_MUTED }),
-                                  (0, n.jsx)(g.E, {
-                                      variant: "body-md/medium",
-                                      color: "text-default",
-                                      children: x.intl.formatToPlainString(P.default.VuENGl, { count: d, max: u }),
-                                  }),
-                              ],
-                          })
-                        : null,
                 ],
             }),
-            i ? (0, n.jsx)(O, { characters: r, selectedCharacterId: a, onSelect: s, noun: l }) : null,
+            r ? (0, n.jsx)(V, { characters: i, selectedCharacterId: a, onSelect: s, noun: l }) : null,
         ],
     });
 }
-let J = ["VIEW", "ACCEPT"];
-function Z(e) {
+let Z = ["VIEW", "ACCEPT"];
+function q(e) {
     let { code: t, ...m } = e,
-        f = (0, c.A)(t),
-        [g, h] = i.useState("VIEW"),
-        p = f?.characterMode === u.Wy.MULTI,
+        g = (0, c.A)(t),
+        [f, h] = r.useState("VIEW"),
+        p = g?.characterMode === u.Wy.MULTI,
         { data: b } = (0, o.P)(p ? t : null),
-        [j, y] = i.useState(null),
+        [j, y] = r.useState(null),
         N = b?.find((e) => e.id === j) ?? null,
-        [v, S] = i.useState(!1);
-    if (null == f) return null;
-    let T = (0, s.A)({ displayNoun: f.displayNoun, lowercase: !0 }),
-        I = x.intl.formatToPlainString(P.default["jKi+kc"], { noun: (0, s.A)({ displayNoun: f.displayNoun }) }),
-        E = [
+        [v, S] = r.useState(!1);
+    if (null == g) return null;
+    let T = (0, s.A)({ displayNoun: g.displayNoun, lowercase: !0 }),
+        I = x.intl.formatToPlainString(E.default["jKi+kc"], { noun: (0, s.A)({ displayNoun: g.displayNoun }) }),
+        P = [
             {
                 stepKey: "VIEW",
                 modalProps: { title: I },
-                body: (0, n.jsx)(K, {
-                    invite: f,
+                body: (0, n.jsx)(O, {
+                    invite: g,
                     noun: T,
                     isMultiCharacter: p,
                     characters: b,
@@ -496,25 +516,25 @@ function Z(e) {
             {
                 stepKey: "ACCEPT",
                 modalProps: { title: I },
-                body: (0, n.jsx)(w, { invite: f }),
-                nextButtonProps: { text: x.intl.string(P.default.BaZ6nt) },
+                body: (0, n.jsx)(w, { invite: g }),
+                nextButtonProps: { text: x.intl.string(E.default.BaZ6nt) },
                 onNext: async function () {
                     let e = p ? N : null;
                     S(!0);
                     try {
-                        var i;
+                        var r;
                         let {
-                            game_organization_join_status: r,
+                            game_organization_join_status: i,
                             game_organization_join_failure_reason: s,
                             guild_join_status: o,
                         } = await a.A.acceptGameOrganizationInvite(t, e?.id);
-                        ((i = { joinStatus: r, failureReason: s, guildJoinStatus: o, character: e }),
+                        ((r = { joinStatus: i, failureReason: s, guildJoinStatus: o, character: e }),
                             (0, d.mM)(
                                 async () => {
                                     let { default: e } = await Promise.all([l.e(525189), l.e(490279)]).then(
                                         l.bind(l, 253914),
                                     );
-                                    return (l) => (0, n.jsx)(e, { code: t, result: i, ...l });
+                                    return (l) => (0, n.jsx)(e, { code: t, result: r, ...l });
                                 },
                                 { modalKey: u.Vi },
                             ));
@@ -526,5 +546,5 @@ function Z(e) {
                 backButtonProps: { text: x.intl.string(x.t["13/7kX"]), disabled: v },
             },
         ];
-    return (0, n.jsx)(r.t, { ...m, dismissable: !v, steps: E, currentStepKey: g, numberedSteps: J, onStepChange: h });
+    return (0, n.jsx)(i.t, { ...m, dismissable: !v, steps: P, currentStepKey: f, numberedSteps: Z, onStepChange: h });
 }
