@@ -33,6 +33,7 @@ var i,
         (i[(i.GAME_EXIT_PANEL = 35)] = "GAME_EXIT_PANEL"),
         (i[(i.ANNOUNCEMENT_MODAL_VIDEO_LED = 36)] = "ANNOUNCEMENT_MODAL_VIDEO_LED"),
         (i[(i.ANNOUNCEMENT_MODAL_PANEL = 37)] = "ANNOUNCEMENT_MODAL_PANEL"),
+        (i[(i.NITRO_HOME_SECTION_HEADER = 38)] = "NITRO_HOME_SECTION_HEADER"),
         i);
 n.d(
     t,
@@ -72,6 +73,7 @@ n.d(
             35: "gameExitPanel",
             36: "announcementModalVideoLed",
             37: "announcementModalPanel",
+            38: "nitroHomeSectionHeader",
         },
         oW: r,
     },
