@@ -145,4 +145,14 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=3391ee90d9d4b5e4.css.map*/
+.aside_HbUF2J {
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    isolation: isolate;
+    justify-content: center;
+    padding: 8px
+}
+
+/*# sourceMappingURL=0a40e3bdc4a2557a.css.map*/

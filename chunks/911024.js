@@ -608,8 +608,8 @@ var eq = n(644727),
     e1 = n(905552),
     e5 = n(453244),
     e6 = n(910839),
-    e2 = n(616356),
-    e3 = n(734057),
+    e3 = n(616356),
+    e2 = n(734057),
     e8 = n(71393),
     e7 = n(83880),
     e9 = n(988468),
@@ -729,12 +729,12 @@ function t6(e, t) {
         l = (t$ = [...t$]).findIndex((e) => e.priority <= n.priority);
     return (-1 === l ? t$.push(s) : t$.splice(l, 0, s), t$.length > 10 && clearTimeout(t$.pop().timerId), i);
 }
-function t2(e) {
+function t3(e) {
     let { channelId: t, ongoingRings: n } = e,
         i = t5(t);
     if (!Object.keys(n).includes(tH.default.getId())) return t0(i);
     if (null != i) return !1;
-    let s = e3.A.getChannel(t);
+    let s = e2.A.getChannel(t);
     if (null == s || !s.isRingable() || tB.A.getStatus() === ey.clD.DND || tz.NO.getSetting()) return !1;
     let l = t$.find((e) => 1 === e.type && e.channelId === t && e.messageType === ey.lAJ.CALL);
     (null != l && t0(l.id),
@@ -788,12 +788,12 @@ function t2(e) {
             { priority: 1, expirationExternallyManaged: !0, type: 2, channelId: s.id },
         ));
 }
-class t3 extends r.Ay.Store {
+class t2 extends r.Ay.Store {
     static displayName = "OverlayNotificationsStore";
     initialize() {
         this.waitFor(
             tH.default,
-            e3.A,
+            e2.A,
             tM.Ay,
             tW.A,
             es.default,
@@ -812,7 +812,7 @@ class t3 extends r.Ay.Store {
         return t$;
     }
 }
-let t8 = new t3(
+let t8 = new t2(
     tg.h,
     !__OVERLAY__
         ? {}
@@ -1007,7 +1007,7 @@ let t8 = new t3(
               },
               MESSAGE_CREATE: function (e) {
                   let { channelId: t, message: n } = e,
-                      i = e3.A.getChannel(t),
+                      i = e2.A.getChannel(t),
                       s = tx.default.getUser(n.author?.id);
                   if (null == i || null == s) return !1;
                   if (n.activity?.type === ey.xL.JOIN || n.activity?.type === ey.xL.JOIN_REQUEST) {
@@ -1202,8 +1202,8 @@ let t8 = new t3(
                   let { channelId: t } = e;
                   return t1(t);
               },
-              CALL_CREATE: t2,
-              CALL_UPDATE: t2,
+              CALL_CREATE: t3,
+              CALL_UPDATE: t3,
               CALL_DELETE: function (e) {
                   let { channelId: t } = e;
                   t0(t5(t));
@@ -1818,7 +1818,7 @@ function n5(e) {
     }
 }
 let n6 = [ey.G6Q.DISABLED, ey.G6Q.TOP_LEFT, ey.G6Q.TOP_RIGHT, ey.G6Q.BOTTOM_LEFT, ey.G6Q.BOTTOM_RIGHT];
-function n2(e) {
+function n3(e) {
     let { position: t, onChange: n } = e,
         [i] = a.useState(() => `notification-position-selector-${n1++}`),
         s =
@@ -1871,8 +1871,8 @@ function n2(e) {
         ],
     });
 }
-n2.Positions = ey.G6Q;
-var n3 = n(540999),
+n3.Positions = ey.G6Q;
+var n2 = n(540999),
     n8 = n(93465),
     n7 = n(222407),
     n9 = n(55979);
@@ -1957,7 +1957,7 @@ class ie extends a.PureComponent {
     }
     renderTabBar() {
         let { selectedSection: e } = this.state,
-            t = n3.A.isDeveloper
+            t = n2.A.isDeveloper
                 ? (0, l.jsx)(nz.V.Item, { id: "DEVELOPER", className: n9.YU, children: "Developer" })
                 : null;
         return (0, l.jsxs)(nz.V, {
@@ -2006,7 +2006,7 @@ class ie extends a.PureComponent {
             children: [
                 (0, l.jsx)(nB.D, {
                     label: U.intl.string(U.t.IQv8Eo),
-                    children: (0, l.jsx)(n2, { position: e, onChange: this.handleChangeNotificationPositionMode }),
+                    children: (0, l.jsx)(n3, { position: e, onChange: this.handleChangeNotificationPositionMode }),
                 }),
                 (0, l.jsx)(nF.d, {
                     label: U.intl.string(U.t.Fy5kPp),
@@ -2379,7 +2379,7 @@ var iE = n(465532),
     iS = n(414798),
     ix = n(134357),
     iv = n(480870),
-    iC = n(933428),
+    iC = n(903137),
     iI = n(626977),
     i_ = n(544990),
     iN = n(678655),
@@ -2425,8 +2425,8 @@ function i1(e) {
 }
 var i5 = n(620505);
 let i6 = Object.values(eD.Li).map((e) => 100 * e),
-    i2 = i6.map((e, t) => ({ value: t }));
-class i3 extends a.PureComponent {
+    i3 = i6.map((e, t) => ({ value: t }));
+class i2 extends a.PureComponent {
     initialIndex = (function (e) {
         let t = 0;
         return (
@@ -2452,10 +2452,10 @@ class i3 extends a.PureComponent {
                     label: U.intl.string(U.t.OVovCb),
                     defaultValue: this.initialIndex,
                     minValue: 0,
-                    maxValue: i2.length - 1,
+                    maxValue: i3.length - 1,
                     onChangeEnd: (e) => this.handleUpdateBackgroundOpacity(i6[e]),
                     onChange: (e) => this.handlePreviewBackgroundOpacity(i6[e]),
-                    marks: i2,
+                    marks: i3,
                     snapToMarks: !0,
                     formatValue: (e) => `${i6[e]}%`,
                 }),
@@ -2463,7 +2463,7 @@ class i3 extends a.PureComponent {
         });
     }
 }
-let i8 = r.Ay.connectStores([ts.default], () => ({ opacity: ts.default.getTextWidgetOpacity() }))(i3);
+let i8 = r.Ay.connectStores([ts.default], () => ({ opacity: ts.default.getTextWidgetOpacity() }))(i2);
 var i7 = n(431052);
 class i9 extends a.Component {
     state = { showOpacitySlider: !1 };
@@ -2588,9 +2588,9 @@ class i9 extends a.Component {
 }
 function i4(e) {
     let { channel: t, ...n } = e,
-        i = (0, r.bG)([e4.Ay, e3.A], () => {
+        i = (0, r.bG)([e4.Ay, e2.A], () => {
             let e = e4.Ay.getVoiceChannelId();
-            return e3.A.getChannel(e);
+            return e2.A.getChannel(e);
         }),
         s = (0, r.bG)([e8.A], () => e8.A.getGuild(t.guild_id)),
         a = (0, r.bG)([iq.A], () => iq.A.isCallActive(t.id)),
@@ -2982,7 +2982,7 @@ function so(e) {
     let { contained: t = !1, ...n } = e,
         i = (0, r.bG)([ng.A], () => ng.A.getGuildId()),
         s = (0, r.bG)([e4.Ay], () => e4.Ay.getChannelId(i)),
-        a = (0, r.bG)([e3.A], () => e3.A.getChannel(s)),
+        a = (0, r.bG)([e2.A], () => e2.A.getChannel(s)),
         o = (0, r.bG)([ti.Ay], () => ti.Ay.getOverlayChatKeybind()),
         d = null != o ? (0, tr.dI)(o.shortcut, !0) : "]",
         [c, u, h] = (0, r.yK)([ts.default], () => [
@@ -3204,13 +3204,13 @@ function sQ(e) {
             voiceState: A,
         } = e,
         m = (0, r.bG)([e9.Ay], () => e9.Ay.isLocalMute(i.id)),
-        f = (0, r.bG)([e2.A], () => e2.A.getCurrentUserActiveStream()),
-        E = (0, r.yK)([e2.A], () => (null != f ? e2.A.getViewerIds(f) : [])),
+        f = (0, r.bG)([e3.A], () => e3.A.getCurrentUserActiveStream()),
+        E = (0, r.yK)([e3.A], () => (null != f ? e3.A.getViewerIds(f) : [])),
         y = (0, sA.A)({ userId: i.id, context: p }),
         S = (0, r.bG)([sC.A], () => sC.A.isUserPlayingSounds(i.id)),
         x = y || S,
         C = (0, r.bG)([sD.A], () => sD.A.isPrioritySpeaker(i.id, p)),
-        I = (0, r.bG)([e2.A], () => null != e2.A.getStreamForUser(i.id, g)),
+        I = (0, r.bG)([e3.A], () => null != e3.A.getStreamForUser(i.id, g)),
         _ = a.useMemo(() => null != f && f.ownerId !== i.id && E.includes(i.id), [f, i.id, E]);
     if (d === ey.f5z.ONLY_WHILE_SPEAKING && n && !x) return null;
     let { mute: N, selfMute: T, suppress: O, deaf: j, selfDeaf: D } = A;
@@ -3498,13 +3498,13 @@ class s$ extends a.PureComponent {
     }
 }
 function sq(e) {
-    let t = (0, r.bG)([e4.Ay, e3.A], () => e3.A.getChannel(e4.Ay.getVoiceChannelId())),
+    let t = (0, r.bG)([e4.Ay, e2.A], () => e2.A.getChannel(e4.Ay.getVoiceChannelId())),
         n = (0, tT.Ay)(t),
         i = (function () {
             let [e] = (0, r.bG)(
-                [nV.Ay, sI.A, e4.Ay, e3.A],
+                [nV.Ay, sI.A, e4.Ay, e2.A],
                 () => {
-                    let e = e3.A.getChannel(e4.Ay.getVoiceChannelId());
+                    let e = e2.A.getChannel(e4.Ay.getVoiceChannelId());
                     return null == e
                         ? [[], -1]
                         : e.isGuildStageVoice()
@@ -3516,15 +3516,15 @@ function sq(e) {
             );
             return e;
         })(),
-        s = (0, r.bG)([e2.A], () => e2.A.getStreamerActiveStreamMetadata()),
+        s = (0, r.bG)([e3.A], () => e3.A.getStreamerActiveStreamMetadata()),
         a = (0, r.bG)([eq.Ay, tt.A, sj.A], () => {
             let e = (0, e1.A)(eq.Ay, tt.A);
             return null != e ? sj.A.findGame(e)?.id : null;
         }),
         o = (0, sm.h)(a),
-        d = (0, r.cf)([eq.Ay, tt.A, e2.A, ts.default], () => {
+        d = (0, r.cf)([eq.Ay, tt.A, e3.A, ts.default], () => {
             let e = (0, e1.A)(eq.Ay, tt.A),
-                t = e2.A.getCurrentUserActiveStream();
+                t = e3.A.getCurrentUserActiveStream();
             return {
                 displayUserMode: ts.default.getDisplayUserMode(),
                 displayNameMode: ts.default.getDisplayNameMode(),
@@ -3682,12 +3682,12 @@ let s5 = r.Ay.connectStores([e7.A, ts.default], (e) => {
 function s6(e, t) {
     return (0, l.jsx)(s5, { widgetId: e, layoutSize: t }, e);
 }
-let s2 = r.Ay.connectStores([e7.A, tl.A], () => ({
+let s3 = r.Ay.connectStores([e7.A, tl.A], () => ({
     layout: e7.A.getLayout(Q.YU) ?? void 0,
     layoutSize: tl.A.windowSize(),
     renderWidget: s6,
 }))(nn);
-var s3 = n(806163),
+var s2 = n(806163),
     s8 = n(778858),
     s7 = n(549711),
     s9 = n(463347);
@@ -3716,7 +3716,7 @@ class s4 extends a.Component {
     }
 }
 let le = function () {
-    return (0, l.jsxs)(s3.dO, {
+    return (0, l.jsxs)(s2.dO, {
         children: [
             (0, l.jsx)(s7.A, {
                 path: ey.BVt.CHANNEL(s9.pv.guildId(), s9.pv.channelId({ optional: !0 }), ":messageId?"),
@@ -3735,7 +3735,7 @@ var lt = n(528772),
 function lo() {
     let [e, t] = (0, r.yK)([lt.A], () => [lt.A.enabled, lt.A.keepOpen]),
         n = (0, r.bG)([e4.Ay], () => e4.Ay.getVoiceChannelId()),
-        i = (0, r.bG)([e3.A], () => e3.A.getChannel(n), [n]),
+        i = (0, r.bG)([e2.A], () => e2.A.getChannel(n), [n]),
         s = i?.getGuildId();
     return e && null != i
         ? (0, l.jsx)("div", {
@@ -3956,7 +3956,7 @@ class lg extends a.Component {
                         isPreviewingInGame: a,
                     }),
                 (0, Q.db)(r)
-                    ? (0, l.jsx)(s2, { className: v()({ [lr.ZK]: e, [lr.al]: !e }) })
+                    ? (0, l.jsx)(s3, { className: v()({ [lr.ZK]: e, [lr.al]: !e }) })
                     : e
                       ? null
                       : this.renderInvalidSizeMessage(),
@@ -3985,11 +3985,11 @@ function lA() {
         o = (0, r.bG)([tl.A], () => tl.A.windowSize()),
         d = (0, r.bG)([ti.Ay], () => ti.Ay.getOverlayKeybind()),
         c = (0, r.bG)([e4.Ay], () => e4.Ay.getVoiceChannelId()),
-        u = (0, r.bG)([e3.A], () => e3.A.getChannel(c)),
+        u = (0, r.bG)([e2.A], () => e2.A.getChannel(c)),
         h = (0, r.bG)([e8.A], () => (null != u ? e8.A.getGuild(u.guild_id) : null)),
         p = (0, r.bG)([eq.Ay, tt.A], () => (0, e1.A)(eq.Ay, tt.A)),
         g = (0, r.bG)([e9.Ay], () => (0, e0.A)(e9.Ay)),
-        A = (0, r.bG)([e2.A], () => null != e2.A.getCurrentUserActiveStream()),
+        A = (0, r.bG)([e3.A], () => null != e3.A.getCurrentUserActiveStream()),
         { analyticsLocations: m } = (0, eQ.Ay)(eJ.A.OVERLAY);
     return (
         a.useEffect(() => {
