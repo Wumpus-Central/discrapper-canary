@@ -3811,6 +3811,7 @@ var ih =
         (eP.CHANNEL_OPENED = "channel_opened"),
         (eP.CHANNEL_OPENED_CLICKSTREAM = "channel_opened_clickstream"),
         (eP.NUO_TRANSITION = "nuo_transition"),
+        (eP.INTEREST_GUILDS_FETCHED = "interest_guilds_fetched"),
         (eP.WATERWHEELS_INTEREST_COVER_LOADED = "waterwheels_interest_cover_loaded"),
         (eP.WATERWHEELS_INTEREST_PICKER_READY = "waterwheels_interest_picker_ready"),
         (eP.WATERWHEELS_INTEREST_PICKER_EXPOSURE = "waterwheels_interest_picker_exposure"),

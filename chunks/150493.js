@@ -35,7 +35,7 @@ class f extends s.Ay.PersistedStore {
         return p.seenBadgeIndicatorIds;
     }
 }
-let E = new f(j.h, {
+let A = new f(j.h, {
     BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN: function (e) {
         let { badgeId: l } = e;
         return N(l);
@@ -45,7 +45,7 @@ let E = new f(j.h, {
         return !!(0, y.HW)(l) && N(l);
     },
 });
-var A = t(982240);
+var E = t(982240);
 let I = (0, t(945810).mj)({
     name: "2026-10-badge-directory-updates",
     kind: "user",
@@ -66,9 +66,9 @@ function C(e) {
             surface: r,
         } = e,
         d = b.default.getCurrentUser()?.id,
-        o = null != t && null != d ? A.Ay.getBadgeById(t.badge_id, d) : void 0,
-        c = null != t && null != d ? A.Ay.getRemainingToNextTier(t.badge_id, d) : void 0,
-        u = null != a ? A.Ay.getBadges(a).filter((e) => e.owned).length : void 0;
+        o = null != t && null != d ? E.Ay.getBadgeById(t.badge_id, d) : void 0,
+        c = null != t && null != d ? E.Ay.getRemainingToNextTier(t.badge_id, d) : void 0,
+        u = null != a ? E.Ay.getBadges(a).filter((e) => e.owned).length : void 0;
     w.default.track(T.HAw.BADGE_DIRECTORY_ACTION, {
         badge_action: l,
         badge_id: t?.badge_id,
@@ -266,12 +266,12 @@ function ey(e) {
             onCustomizeBadges: c,
             showBadgeIndicators: x,
         } = e,
-        h = (0, s.yK)([A.Ay], () => (null != i ? A.Ay.getBadges(i) : []), [i]),
+        h = (0, s.yK)([E.Ay], () => (null != i ? E.Ay.getBadges(i) : []), [i]),
         { earnable: _, owned: b } = n.useMemo(() => (0, y.in)(h), [h]),
         v = n.useMemo(() => [...b, ..._], [b, _]),
         { badgeIndicatorIds: j } = (function (e) {
             let { badges: l, enabled: t } = e,
-                a = (0, s.bG)([E], () => E.getSeenBadgeIndicators());
+                a = (0, s.bG)([A], () => A.getSeenBadgeIndicators());
             return {
                 badgeIndicatorIds: n.useMemo(
                     () =>
@@ -380,8 +380,8 @@ function ey(e) {
 var ep = t(911608),
     eN = t(847374),
     ef = t(770178),
-    eE = t(194261),
-    eA = t(140735),
+    eA = t(194261),
+    eE = t(140735),
     eI = t(836825);
 function eS(e) {
     let { badge: l, isViewingOtherUser: t, targetUsername: i, isViewerOnUpgradeableNitro: s = !1 } = e,
@@ -434,7 +434,7 @@ function eS(e) {
                                                 className: eI.nU,
                                                 children: [
                                                     !n &&
-                                                        (0, a.jsx)(eE.LockIcon, {
+                                                        (0, a.jsx)(eA.LockIcon, {
                                                             size: "xxs",
                                                             color: "currentColor",
                                                             className: eI.Ks,
@@ -446,7 +446,7 @@ function eS(e) {
                                         "" !== o && (0, a.jsx)("span", { className: eI.nU, children: o }),
                                     ],
                                 }),
-                                (0, a.jsx)(eA.A, { children: eu.intl.string(n ? eu.t.sTFApF : eu.t.uHtDcT) }),
+                                (0, a.jsx)(eE.A, { children: eu.intl.string(n ? eu.t.sTFApF : eu.t.uHtDcT) }),
                             ],
                         },
                         e.key,
@@ -482,10 +482,10 @@ function eT(e) {
     let p = t ?? l,
         N = (0, s.bG)([q.A], () => q.A.hasConsented(T.YAq.PERSONALIZATION)),
         f = !i && (0, y.Jn)(l.badge_id) && !N,
-        E = i ? void 0 : p.next_tier,
-        A = i ? void 0 : p.current_tier,
-        I = null != E ? p.tiers.find((e) => e.key === E) : void 0,
-        S = null != A ? p.tiers.find((e) => e.key === A) : void 0,
+        A = i ? void 0 : p.next_tier,
+        E = i ? void 0 : p.current_tier,
+        I = null != A ? p.tiers.find((e) => e.key === A) : void 0,
+        S = null != E ? p.tiers.find((e) => e.key === E) : void 0,
         w = i ? void 0 : p.progress?.[0],
         C = w?.threshold ?? I?.requirements[0]?.threshold ?? null,
         B = !i && p.owned && null != I,
@@ -785,7 +785,7 @@ function ez(e) {
             isViewingOtherUser: p,
             targetUsername: N,
             displayedUserId: f,
-            targetOwnsBadge: E,
+            targetOwnsBadge: A,
             viewerOwnsBadge: I,
             onToggleViewedUser: S,
             onViewOwnCatalog: w,
@@ -806,7 +806,7 @@ function ez(e) {
     W ? (r = null != X ? `${ee} ${X}` : ee) : null != X ? ((i = ee), (r = X)) : (r = ee);
     let el = (0, K.ie)(h.badge_id) && !h.is_earnable && h.badge_id !== R.$.STAFF,
         et = (h.tiers?.length ?? 0) > 0,
-        en = (0, A.H5)(h),
+        en = (0, E.H5)(h),
         ei = (function (e) {
             let [l, t] = n.useState(eF),
                 [a, i] = n.useState(e);
@@ -922,7 +922,7 @@ function ez(e) {
                                             isViewingOtherUser: p,
                                             targetUsername: N,
                                             viewedAvatarSrc: B,
-                                            targetOwnsBadge: E,
+                                            targetOwnsBadge: A,
                                             viewerOwnsBadge: I,
                                             unlockedStatusText: c,
                                             onToggleViewedUser: S,
@@ -1137,9 +1137,9 @@ function e7(e) {
         [j, y] = n.useState(!1),
         p = _ >= (x ? 2 : 1),
         N = d && (p || j),
-        [f, E] = n.useState(!1);
-    !N || p || f || E(!0);
-    let A = N && !c && !f;
+        [f, A] = n.useState(!1);
+    !N || p || f || A(!0);
+    let E = N && !c && !f;
     (n.useEffect(() => {
         if (!d) return;
         let e = setTimeout(() => y(!0), 3e3);
@@ -1150,7 +1150,7 @@ function e7(e) {
         }, [N]));
     let I = n.useMemo(() => ({ "--custom-badge-unlock-swap": `${h}ms` }), [h]);
     return (0, a.jsxs)("div", {
-        className: k()(e2.Os, "large" === i ? e2.as : e2.EX, A && (g ? e2.xH : e2.YC)),
+        className: k()(e2.Os, "large" === i ? e2.as : e2.EX, E && (g ? e2.xH : e2.YC)),
         style: I,
         children: [
             x &&
@@ -1161,16 +1161,16 @@ function e7(e) {
                     isStarted: N,
                     isPreviousTier: !0,
                     onLoad: v,
-                    className: k()(A && e2.rH),
-                    fillClassName: k()(e2.Nl, A && e2.Rt),
+                    className: k()(E && e2.rH),
+                    fillClassName: k()(e2.Nl, E && e2.Rt),
                 }),
             (0, a.jsx)(e9, {
                 badge: l,
                 tier: m,
                 isStarted: N,
                 onLoad: v,
-                className: k()(A && e2.CN),
-                fillClassName: k()(A && e2.Eq),
+                className: k()(E && e2.CN),
+                fillClassName: k()(E && e2.Eq),
             }),
         ],
     });
@@ -1344,7 +1344,7 @@ function la(e) {
                                                 className: lt.nU,
                                                 children: [
                                                     !n &&
-                                                        (0, a.jsx)(eE.LockIcon, {
+                                                        (0, a.jsx)(eA.LockIcon, {
                                                             size: "xxs",
                                                             color: "currentColor",
                                                             className: lt.Ks,
@@ -1355,7 +1355,7 @@ function la(e) {
                                             }),
                                     ],
                                 }),
-                                (0, a.jsx)(eA.A, { children: eu.intl.string(n ? eu.t.sTFApF : eu.t.uHtDcT) }),
+                                (0, a.jsx)(eE.A, { children: eu.intl.string(n ? eu.t.sTFApF : eu.t.uHtDcT) }),
                             ],
                         },
                         e.key,
@@ -1397,7 +1397,7 @@ function lr(e) {
             onViewOwnCatalog: p,
             isUnread: N = !1,
             unlock: f,
-            showNewTag: E = !1,
+            showNewTag: A = !1,
         } = e,
         I = f ?? d,
         S = f ?? c,
@@ -1449,7 +1449,7 @@ function lr(e) {
             return (e !== a && (i(e), t(eJ())), l);
         })(I.badge_id),
         eo =
-            ((r = (0, A.H5)(I)),
+            ((r = (0, E.H5)(I)),
             I.owned
                 ? I.badge_id === R.$.APRIL_FOOLS_2026
                     ? eu.intl.string(eu.t["5LcHT0"])
@@ -1521,7 +1521,7 @@ function lr(e) {
                 a = (0, s.bG)([q.A], () => q.A.hasConsented(T.YAq.PERSONALIZATION));
             return (0, y.Jn)(l.badge_id) && !t && !a;
         })({ badge: I, isViewingOtherUser: h }),
-        eE = (function (e) {
+        eA = (function (e) {
             let { badge: l, viewerBadge: t, isViewingOtherUser: a } = e,
                 n = (0, s.bG)([q.A], () => q.A.hasConsented(T.YAq.PERSONALIZATION)),
                 i = t ?? l,
@@ -1529,8 +1529,8 @@ function lr(e) {
                 d = (0, y.Jn)(l.badge_id) && !n;
             return !a && i.owned && r && !d;
         })({ badge: I, viewerBadge: S, isViewingOtherUser: h }),
-        eA = !(0, J.uJ)(ey),
-        eI = eE || eA || er,
+        eE = !(0, J.uJ)(ey),
+        eI = eA || eE || er,
         eS = h ? I : (S ?? I);
     return (0, a.jsx)(M.F, {
         forceLevel: 2,
@@ -1547,7 +1547,7 @@ function lr(e) {
                     children: [
                         (0, a.jsx)("div", {
                             className: ln.Rm,
-                            children: E && (0, a.jsx)(D.E, { type: "new", variant: "primary" }),
+                            children: A && (0, a.jsx)(D.E, { type: "new", variant: "primary" }),
                         }),
                         null != f
                             ? (0, a.jsx)(
@@ -1619,14 +1619,14 @@ function lr(e) {
                                             (0, a.jsxs)("div", {
                                                 className: ln.d9,
                                                 children: [
-                                                    eE &&
+                                                    eA &&
                                                         (0, a.jsxs)(a.Fragment, {
                                                             children: [
                                                                 (0, a.jsx)(ll, { badge: I, viewerBadge: S }),
                                                                 (0, a.jsx)(P.c, {}),
                                                             ],
                                                         }),
-                                                    eA &&
+                                                    eE &&
                                                         (0, a.jsxs)("div", {
                                                             className: k()(ln.E4, !er && ln.H),
                                                             children: [
@@ -1723,16 +1723,16 @@ function lo(e) {
         R = k ? p : w,
         D = null != R ? `viewed_user:${k ? "other" : "self"}` : void 0,
         [F, L] = n.useState(j ?? null),
-        G = (0, s.yK)([A.Ay], () => (null != R ? A.Ay.getBadges(R) : []), [R]),
-        M = (0, s.bG)([A.Ay], () => null != R && A.Ay.hasCatalogFor(R), [R]),
-        $ = (0, s.bG)([A.Ay], () => A.Ay.hasCatalogFetchErrorFor(R), [R]),
-        P = (0, s.bG)([A.Ay], () => null != R && !A.Ay.isCatalogStaleFor(R), [R]),
+        G = (0, s.yK)([E.Ay], () => (null != R ? E.Ay.getBadges(R) : []), [R]),
+        M = (0, s.bG)([E.Ay], () => null != R && E.Ay.hasCatalogFor(R), [R]),
+        $ = (0, s.bG)([E.Ay], () => E.Ay.hasCatalogFetchErrorFor(R), [R]),
+        P = (0, s.bG)([E.Ay], () => null != R && !E.Ay.isCatalogStaleFor(R), [R]),
         z = !k && G.some((e) => e.owned && !0 === e.has_updates),
         V = (0, S.e)({ location: "BadgeDirectoryModal", hasUnread: z });
     (n.useEffect(() => {
-        null != R && (A.Ay.hasCatalogFor(R) ? A.Ay.isCatalogStaleFor(R) && (0, v.RS)(R) : (0, v.RS)(R));
+        null != R && (!E.Ay.hasCatalogFor(R) || E.Ay.isCatalogStaleFor(R)) && (0, v.RS)(R, { isAutomatic: !0 });
         let e = k ? w : p;
-        T || null == e || A.Ay.hasCatalogFor(e) || (0, v.RS)(e);
+        !T && null != e && (!E.Ay.hasCatalogFor(e) || E.Ay.isCatalogStaleFor(e)) && (0, v.RS)(e, { isAutomatic: !0 });
     }, [R, T, k, w, p]),
         n.useEffect(() => {
             null != D && x.A.increment({ name: i.K.BADGE_DIRECTORY_MODAL_OPEN, tags: [D] });
@@ -1743,8 +1743,8 @@ function lo(e) {
             let t = V ? l.find((e) => !0 === e.has_updates) : void 0;
             return t?.badge_id ?? l[0]?.badge_id ?? e[0]?.badge_id ?? null;
         }, [G, V, k]),
-        Y = null != F && null != R ? A.Ay.getBadgeById(F, R) : void 0,
-        Z = null != H && null != R ? A.Ay.getBadgeById(H, R) : void 0,
+        Y = null != F && null != R ? E.Ay.getBadgeById(F, R) : void 0,
+        Z = null != H && null != R ? E.Ay.getBadgeById(H, R) : void 0,
         q = Y ?? Z,
         J = !M && !$,
         K = !M && $,
@@ -1752,8 +1752,8 @@ function lo(e) {
     n.useEffect(() => {
         K && null != D && x.A.increment({ name: i.K.BADGE_DIRECTORY_ERROR_STATE_VIEWED, tags: [D] });
     }, [K, D]);
-    let W = (0, s.bG)([A.Ay], () => null != p && null != q && (A.Ay.getBadgeById(q.badge_id, p)?.owned ?? !1), [q, p]),
-        X = (0, s.bG)([A.Ay], () => (null != w && null != q ? A.Ay.getBadgeById(q.badge_id, w) : void 0), [q, w]),
+    let W = (0, s.bG)([E.Ay], () => null != p && null != q && (E.Ay.getBadgeById(q.badge_id, p)?.owned ?? !1), [q, p]),
+        X = (0, s.bG)([E.Ay], () => (null != w && null != q ? E.Ay.getBadgeById(q.badge_id, w) : void 0), [q, w]),
         ee = X?.owned ?? !1,
         el = n.useCallback(
             function () {
@@ -1808,7 +1808,7 @@ function lo(e) {
         }, [l, t]);
     })({ badgeId: er, enabled: Q });
     let ed = V && !k && q?.has_updates === !0,
-        eo = (0, s.bG)([E], () => Q && null != er && U.has(er) && !E.getSeenBadgeIndicators().has(er), [er, Q]),
+        eo = (0, s.bG)([A], () => Q && null != er && U.has(er) && !A.getSeenBadgeIndicators().has(er), [er, Q]),
         [ec, em] = n.useState(null);
     ec?.badgeId !== er && em({ badgeId: er, hadNewIndicator: eo });
     let eg = null != ec && ec.badgeId === er && ec.hadNewIndicator,
