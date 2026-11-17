@@ -148,15 +148,12 @@
 }
 
 .cardItem_YuplL1 {
+    min-width: 0;
     position: relative
 }
 
 .cardItem_YuplL1:is(:hover, :has(:focus-visible)) {
     z-index: 1
-}
-
-.cardItem_YuplL1 .bannerCard_YuplL1 {
-    border: none
 }
 
 .cardItem_YuplL1 .bannerCard_YuplL1:is(:hover, :has(:focus-visible)) {
@@ -190,4 +187,4 @@
     margin-top: -12px
 }
 
-/*# sourceMappingURL=898645e0b07ca768.css.map*/
+/*# sourceMappingURL=6a1c234e2fe92b5e.css.map*/
