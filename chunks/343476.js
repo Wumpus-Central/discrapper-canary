@@ -7,10 +7,12 @@ e.exports = {
     $_: "media_z264eY",
     Sl: "image_z264eY",
     HU: "imageFill_z264eY",
+    py: "mainImage_z264eY",
     Rv: "sideCopy_z264eY",
     Pb: "gameRow_z264eY",
     Gt: "gameIcon_z264eY",
     rf: "body_z264eY",
     zH: "details_z264eY",
     E1: "ctaReveal_z264eY",
+    Nj: "logoImage_z264eY",
 };

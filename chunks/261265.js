@@ -6,7 +6,7 @@ var i = n(439372),
     o = n(153488),
     d = n(832163),
     c = n(716761),
-    u = n(636116),
+    u = n(301270),
     _ = n(437614),
     E = n(13981),
     A = n(652215);
@@ -35,7 +35,7 @@ class f extends i.A {
                     (0, c.X)(A.HAw.SLAYER_STOREFRONT_GAME_EXIT_PROMO_SKIPPED, n, { type: i });
                     continue;
                 }
-                ((0, l.N)(n.imageUrl), (0, E.sC)(n.id));
+                ((0, l.N)(n.imageUrl), null != n.logoUrl && (0, l.N)(n.logoUrl), (0, E.sC)(n.id));
                 return;
             }
     };

@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675244, Version Hash: fe421433743a44f6d12a85dd38768f8758212fd0`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675247, Version Hash: ce072d3cd8564a17070cd846b826b5cebe60c13c`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675244";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675247";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15892,7 +15892,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675244" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675247" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -18375,7 +18375,7 @@ function Tw() {
 }
 var TG = n(199773),
     Tx = n(590209),
-    Tk = n(636116),
+    Tk = n(301270),
     TF = n(437614),
     TB = n(13981),
     TV = n(44724),
@@ -18386,23 +18386,24 @@ function TW(e) {
             shouldShow: t,
             applicationId: n,
             imageUrl: i,
-            body: r,
-            ctaText: a,
-            dismissAriaLabel: s,
-            onCtaClick: l,
-            onDismiss: o,
-            onHidden: d,
+            logoUrl: r,
+            body: a,
+            ctaText: s,
+            dismissAriaLabel: l,
+            onCtaClick: o,
+            onDismiss: d,
+            onHidden: c,
         } = e,
-        { gameRecord: c } = (0, py.Ay)(n),
-        u = (0, v.jsxs)("div", {
+        { gameRecord: u } = (0, py.Ay)(n),
+        _ = (0, v.jsxs)("div", {
             className: TH.Pb,
             children: [
-                (0, v.jsx)(_r.A, { className: TH.Gt, game: c, size: _r.M.XXSMALL }),
+                (0, v.jsx)(_r.A, { className: TH.Gt, game: u, size: _r.M.XXSMALL }),
                 (0, v.jsx)(rB.E, {
                     variant: "body-xs/semibold",
                     color: "text-muted",
                     lineClamp: 1,
-                    children: c?.name ?? "",
+                    children: u?.name ?? "",
                 }),
             ],
         });
@@ -18414,9 +18415,9 @@ function TW(e) {
                 shouldShow: t,
                 duration: Tj,
                 controlsPlacement: "overlay",
-                onDismiss: o,
-                onHidden: d,
-                dismissAriaLabel: s,
+                onDismiss: d,
+                onHidden: c,
+                dismissAriaLabel: l,
                 wrapperClassName: TH.nd,
                 renderHeader: function () {
                     return (0, v.jsx)("div", {
@@ -18424,19 +18425,28 @@ function TW(e) {
                         children: (0, v.jsxs)("div", {
                             className: TH.$_,
                             children: [
-                                (0, v.jsx)("div", {
+                                (0, v.jsxs)("div", {
                                     className: TH.Sl,
-                                    children: (0, v.jsx)("img", { className: TH.HU, src: i, alt: "" }),
+                                    children: [
+                                        (0, v.jsx)("img", {
+                                            className: td()(TH.HU, { [TH.py]: null != r }),
+                                            src: i,
+                                            alt: "",
+                                        }),
+                                        null != r
+                                            ? (0, v.jsx)("img", { className: td()(TH.HU, TH.Nj), src: r, alt: "" })
+                                            : null,
+                                    ],
                                 }),
                                 (0, v.jsxs)("div", {
                                     className: TH.Rv,
                                     children: [
-                                        u,
+                                        _,
                                         (0, v.jsx)(rB.E, {
                                             variant: "body-sm/semibold",
                                             color: "text-default",
                                             lineClamp: 2,
-                                            children: r,
+                                            children: a,
                                         }),
                                     ],
                                 }),
@@ -18452,11 +18462,11 @@ function TW(e) {
                                 className: TH.zH,
                                 "aria-hidden": !0,
                                 children: [
-                                    u,
+                                    _,
                                     (0, v.jsx)(rB.E, {
                                         variant: "body-sm/semibold",
                                         color: "text-default",
-                                        children: r,
+                                        children: a,
                                     }),
                                 ],
                             }),
@@ -18466,8 +18476,8 @@ function TW(e) {
                                     variant: "primary",
                                     size: "sm",
                                     fullWidth: !0,
-                                    text: a,
-                                    onClick: l,
+                                    text: s,
+                                    onClick: o,
                                 }),
                             }),
                         ],
@@ -18556,6 +18566,7 @@ function T$(e) {
             shouldShow: T,
             applicationId: t.applicationId,
             imageUrl: t.imageUrl,
+            logoUrl: t.logoUrl,
             body: I.body,
             ctaText: O,
             dismissAriaLabel: tN.intl.string(TY.default.tR2B53),
@@ -46175,8 +46186,8 @@ let wj = (0, tW.Fe)({
             n.e(434691),
             n.e(848625),
             n.e(458273),
-            n.e(439480),
             n.e(208018),
+            n.e(439480),
             n.e(255302),
             n.e(968763),
             n.e(814742),
@@ -46612,10 +46623,10 @@ let wj = (0, tW.Fe)({
             n.e(499240),
             n.e(237946),
             n.e(483102),
-            n.e(246882),
             n.e(273084),
             n.e(295841),
             n.e(704457),
+            n.e(719394),
             n.e(637479),
             n.e(87109),
             n.e(580890),
