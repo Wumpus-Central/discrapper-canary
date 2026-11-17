@@ -531,9 +531,11 @@ function q(e) {
                         ((r = { joinStatus: i, failureReason: s, guildJoinStatus: o, character: e }),
                             (0, d.mM)(
                                 async () => {
-                                    let { default: e } = await Promise.all([l.e(525189), l.e(490279)]).then(
-                                        l.bind(l, 253914),
-                                    );
+                                    let { default: e } = await Promise.all([
+                                        l.e(525189),
+                                        l.e(981004),
+                                        l.e(490279),
+                                    ]).then(l.bind(l, 253914));
                                     return (l) => (0, n.jsx)(e, { code: t, result: r, ...l });
                                 },
                                 { modalKey: u.Vi },

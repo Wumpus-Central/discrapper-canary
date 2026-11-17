@@ -310,7 +310,7 @@ let j = "playground-announcement-modal",
                                     n.e(375724),
                                     n.e(999272),
                                     n.e(77413),
-                                    n.e(474750),
+                                    n.e(521332),
                                     n.e(267526),
                                     n.e(441674),
                                     n.e(669174),
@@ -973,8 +973,8 @@ var e2 = n(796878);
 let e1 = "playground-premium-tab-tooltip";
 n(321073);
 var e6 = n(896170),
-    e7 = n(890497),
-    e3 = n(620632);
+    e3 = n(890497),
+    e7 = n(620632);
 let e8 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
@@ -1839,7 +1839,7 @@ let tl = {
                     return (
                         (async function () {
                             return (
-                                await e3.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })
+                                await e7.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })
                             ).body.map((e) => {
                                 let { id: t, name: n, type: l, end_date: o } = e;
                                 return { id: t, name: n, type: l, endDate: null != o ? new Date(o) : void 0 };
@@ -1860,7 +1860,7 @@ let tl = {
                     ? null
                     : (0, d.jsx)("div", {
                           className: W.$K,
-                          children: (0, d.jsx)(e7.Z, {
+                          children: (0, d.jsx)(e3.Z, {
                               clearable: !0,
                               selectionMode: "single",
                               placeholder: "Load Promo Data",
@@ -1879,7 +1879,7 @@ let tl = {
                                   let n = t.find((t) => t.id === e);
                                   null != n &&
                                       (async function (e) {
-                                          let t = await e3.Bo.get({
+                                          let t = await e7.Bo.get({
                                                   url: `/premium-marketing/promotions/${e}/components`,
                                                   rejectWithError: !0,
                                               }),
