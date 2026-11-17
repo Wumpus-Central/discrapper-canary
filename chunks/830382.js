@@ -18,30 +18,29 @@ n.d(
     t,
     {},
     {
-        Aj: async function (e, t, n, i, l) {
+        Aj: async function (e, t, n, i) {
             a.h.dispatch({ type: "ORDER_CREATE_START" });
             try {
                 let s = {
                     order_line_items: [{ sku_id: e, quantity: 1, purchase_type: 1 }],
                     billing_facet: { payment_source_id: t },
-                    location_facet: { request_gateway_country_code: n },
                 };
-                i &&
+                n &&
                     (s.gifting_facet = {
                         is_gift: !0,
                         gift_customization: {
-                            recipient_id: l.recipient_id,
-                            gift_style: l.gift_style,
-                            emoji_id: l.emoji_id,
-                            emoji_name: l.emoji_name,
-                            sound_id: l.sound_id,
-                            reward_sku_ids: l.reward_sku_ids,
-                            custom_message_contents: l.custom_message,
+                            recipient_id: i.recipient_id,
+                            gift_style: i.gift_style,
+                            emoji_id: i.emoji_id,
+                            emoji_name: i.emoji_name,
+                            sound_id: i.sound_id,
+                            reward_sku_ids: i.reward_sku_ids,
+                            custom_message_contents: i.custom_message,
                         },
                     });
-                let o = (await r.Bo.post({ url: I.Rsh.ORDER_CREATE, body: s, rejectWithError: (0, r.fT)() })).body,
-                    d = o.id;
-                return (a.h.dispatch({ type: "ORDER_CREATE_SUCCESS", orderId: d, order: o }), d);
+                let l = (await r.Bo.post({ url: I.Rsh.ORDER_CREATE, body: s, rejectWithError: (0, r.fT)() })).body,
+                    o = l.id;
+                return (a.h.dispatch({ type: "ORDER_CREATE_SUCCESS", orderId: o, order: l }), o);
             } catch (e) {
                 throw (a.h.dispatch({ type: "ORDER_CREATE_FAIL" }), new s.Ey(e));
             }
