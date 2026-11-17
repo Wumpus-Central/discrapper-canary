@@ -38,13 +38,13 @@ var h = n(198329);
 function g(e, t, n) {
     let o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         { collectionId: u, promotions: c, startsAt: d, endsAt: g } = e,
-        p = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
-        E = (0, s.bG)([m], () => null != p && null != u && null != n && m.isDayRevealed(p, u, n)),
+        E = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
+        p = (0, s.bG)([m], () => null != E && null != u && null != n && m.isDayRevealed(E, u, n)),
         f = l.useCallback(() => {
             null != u && null != n && (0, i.cb)(u, n);
         }, [u, n]),
         x = new Date(),
-        C = null != g && g <= x;
+        v = null != g && g <= x;
     return l.useMemo(() => {
         let e = (0, h.d)({
             positions: c.map((e) => {
@@ -61,23 +61,25 @@ function g(e, t, n) {
                     cardShape: a,
                     tileProps: {
                         day: s,
-                        cardShape: a,
+                        cardShape: o || a === r.G.LARGE_SQUARE ? a : r.G.SMALL_SQUARE,
                         isHintCentered: o && (a === r.G.TALL || a === r.G.WIDE),
                         state: (0, h.q9)({
                             position: s,
                             openPosition: n,
                             hintPosition: e,
-                            isOpenPositionRevealed: E,
-                            hasCampaignEnded: C,
+                            isOpenPositionRevealed: p,
+                            hasCampaignEnded: v,
                         }),
                         skuId: t?.[s - 1]?.skuId ?? null,
                         lockedAssetUrl: o ? (i.calendarLocked ?? i.locked) : i.locked,
-                        hintAssetUrl: i.hint,
+                        hintAssetUrl: o ? (i.calendarHint ?? i.hint) : i.hint,
+                        idleAnimationUrl: o ? (i.calendarIdleAnimation ?? i.idleAnimation) : i.idleAnimation,
+                        revealAnimationUrl: o ? (i.calendarRevealAnimation ?? i.revealAnimation) : i.revealAnimation,
                         tilePosition: s - 1,
                         revealDate: (0, h.KH)(d, s),
                         onReveal: f,
                     },
                 };
             });
-    }, [c, t, n, E, C, f, o, d]);
+    }, [c, t, n, p, v, f, o, d]);
 }
