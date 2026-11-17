@@ -1,7 +1,6 @@
 var l = n(604913),
     i = n(306396),
-    r = n(669470),
-    a = n(518865);
+    r = n(518865);
 n.d(
     t,
     {},
@@ -13,9 +12,7 @@ n.d(
                 case l.hE.COLLECT_AND_CLAIM:
                     return (0, i.av)(e, t);
                 case l.hE.TARGETED_OFFER:
-                    return (0, a.PY)(e, t);
-                case l.hE.COLLECTION_SEQUENCED_OFFER:
-                    return (0, r.yH)(e, t);
+                    return (0, r.PY)(e, t);
                 default:
                     return null;
             }

@@ -2364,51 +2364,49 @@ function nX(e) {
             collectedModalOverrideDescription: i,
             collectedModalGradientColor: a,
             completesCollectAndClaimPromotion: s,
-            orbsBack: o,
         } = e,
         {
-            selectedSkuId: u,
-            purchaseError: d,
-            purchasePreviewError: m,
-            appliedUserDiscounts: p,
+            selectedSkuId: o,
+            purchaseError: u,
+            purchasePreviewError: d,
+            appliedUserDiscounts: m,
         } = (0, S.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
             appliedUserDiscounts: e.appliedUserDiscounts,
         })),
-        { paymentError: C } = (0, er.o)(),
-        { application: h } = (0, nV.V)(),
-        f = (0, nY.gU)(),
-        E = (0, nH.bG)([nK.A], () => nK.A.getProduct(u)),
-        g = c.useRef(!1);
-    (eV()(null != u, "Expected selectedSkuId"), eV()(null != h, "Expected application"));
-    let I = f[u];
-    eV()(null != I, "Expected sku");
-    let y = null != C || null != d || null != m,
-        A =
+        { paymentError: p } = (0, er.o)(),
+        { application: C } = (0, nV.V)(),
+        h = (0, nY.gU)(),
+        f = (0, nH.bG)([nK.A], () => nK.A.getProduct(o)),
+        E = c.useRef(!1);
+    (eV()(null != o, "Expected selectedSkuId"), eV()(null != C, "Expected application"));
+    let g = h[o];
+    eV()(null != g, "Expected sku");
+    let I = null != p || null != u || null != d,
+        y =
             l ??
-            (p.length > 0
-                ? H.intl.formatToPlainString(H.t.VuV3Td, { discountOfferAmount: p[0].discount.amount })
+            (m.length > 0
+                ? H.intl.formatToPlainString(H.t.VuV3Td, { discountOfferAmount: m[0].discount.amount })
                 : void 0);
     return (c.useEffect(() => {
-        null == E ||
-            y ||
-            g.current ||
-            ((g.current = !0),
+        null == f ||
+            I ||
+            E.current ||
+            ((E.current = !0),
             (0, n$.A)({
-                product: E,
-                overrideTitle: A,
+                product: f,
+                overrideTitle: y,
                 overrideDescription: i,
                 overrideGradientColor: a,
                 analyticsLocations: n,
                 onCloseCallback: t,
                 purchaseType: nU.gs.FIAT,
                 completesCollectAndClaimPromotion: s,
-                orbsBack: o,
             }));
-    }, [E, n, t, y, A, i, a, s, o]),
-    y)
+    }, [f, n, t, I, y, i, a, s]),
+    I)
         ? (0, r.jsx)(eH.dZ, { children: (0, r.jsx)(nJ.A, {}) })
         : null;
 }
@@ -2425,12 +2423,9 @@ function n0(e) {
         } = (0, nO.Pv)(),
         d = (0, nH.bG)([nW.Ay], () => nW.Ay.useReducedMotion),
         m = c.useRef(null),
-        { selectedSkuId: p, orbsBack: C } = (0, S.t4)((e) => ({
-            selectedSkuId: e.selectedSkuId,
-            orbsBack: e.checkoutInvoicePreview?.orbsReward ?? null,
-        })),
-        h = (0, nH.bG)([nK.A], () => nK.A.getProduct(p)),
-        { confettiColors: f } = (0, nZ.A)(h?.styles);
+        p = (0, S.t4)((e) => e.selectedSkuId),
+        C = (0, nH.bG)([nK.A], () => nK.A.getProduct(p)),
+        { confettiColors: h } = (0, nZ.A)(C?.styles);
     return (
         c.useEffect(() => {
             t &&
@@ -2451,19 +2446,18 @@ function n0(e) {
                           giftRecipient: a,
                           giftMessageError: s,
                           isSendingMessage: o,
-                          orbsBack: C,
                       }),
                       !e.hideConfetti &&
                           !d &&
                           (0, r.jsx)(nq.A, {
                               confettiTarget: m.current,
                               confettiCanvas: e.confettiCanvas,
-                              sprites: (0, nz.rA)(h?.categorySkuId),
-                              colors: f?.map((e) => e.toHexString()),
+                              sprites: (0, nz.rA)(C?.categorySkuId),
+                              colors: h?.map((e) => e.toHexString()),
                           }),
                   ],
               })
-            : (0, r.jsx)(nX, { ...e, orbsBack: C })
+            : (0, r.jsx)(nX, { ...e })
     );
 }
 var n2 = n(70283),
