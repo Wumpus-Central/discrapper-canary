@@ -84,7 +84,7 @@ a.d(
                             a.e(889880),
                             a.e(375724),
                             a.e(999272),
-                            a.e(701406),
+                            a.e(677625),
                             a.e(216112),
                             a.e(490514),
                             a.e(962953),
@@ -403,7 +403,7 @@ a.d(
             let { message: n, failedDestinations: i, forwardOptions: _ } = e;
             (0, s.mM)(async () => {
                 let { ForwardFailedAlertModal: e } = await Promise.all([
-                    a.e(701406),
+                    a.e(677625),
                     a.e(866475),
                     a.e(187127),
                     a.e(543039),

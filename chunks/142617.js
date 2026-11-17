@@ -16,6 +16,12 @@ let r = (0, i.mj)({
         kind: "user",
         defaultConfig: { mode: "off" },
         variations: { 0: { mode: "off" }, 1: { mode: "all" }, 2: { mode: "reset_only" } },
+    }),
+    l = (0, i.mj)({
+        name: "2026-11-checkpoint-intro",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 n.d(
     t,
@@ -27,6 +33,10 @@ n.d(
         },
         Hd: function (e) {
             let { enabled: t } = a.useConfig({ location: e });
+            return t;
+        },
+        Pr: function (e) {
+            let { enabled: t } = l.useConfig({ location: e });
             return t;
         },
         hF: function (e) {

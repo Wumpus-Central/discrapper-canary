@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => g });
 var i = n(277057),
     r = n.n(i),
     a = n(192308),
@@ -17,12 +17,12 @@ n(327113);
 var I = n(652215),
     p = n(758836),
     m = n(682901);
-function T(e) {
+function g(e) {
     let {
             initialPlanId: t,
             followupSKUInfo: i,
-            onClose: T,
-            onComplete: g,
+            onClose: g,
+            onComplete: T,
             onSubscriptionConfirmation: S,
             analyticsLocations: N,
             analyticsObject: C,
@@ -223,7 +223,7 @@ function T(e) {
         n.e(881717),
         n.e(375724),
         n.e(999272),
-        n.e(701406),
+        n.e(677625),
         n.e(216112),
         n.e(490514),
         n.e(962953),
@@ -711,7 +711,7 @@ function T(e) {
                         })(e, Z),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: R, analyticsLocations: N },
-                checkoutHandlers: { onClose: T, onComplete: g },
+                checkoutHandlers: { onClose: g, onComplete: T },
                 giftContextProps: { isGift: y, giftMessage: D, giftStyle: b, giftingOrigin: v, giftRecipient: k },
                 tenantParams: {
                     confirmationFooter: L,

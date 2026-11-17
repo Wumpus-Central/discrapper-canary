@@ -1,4 +1,4 @@
-a.d(t, { D: () => nz });
+a.d(t, { D: () => nV });
 var i,
     r,
     n = a(477900),
@@ -5849,25 +5849,27 @@ function nK(e) {
             }),
     });
 }
-function nB() {
+var nB = a(359527);
+function nz() {
     if (o._.hasSubscribers(aJ.jej.MODAL_CLOSE)) return (o._.dispatch(aJ.jej.MODAL_CLOSE), !0);
     let e = (0, d.mU)(document.activeElement ?? document.body);
     return !!e?.hasSubscribers(aJ.jej.POPOUT_CLOSE) && (e.dispatch(aJ.jej.POPOUT_CLOSE), !0);
 }
-async function nz(e) {
+async function nV(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { didPlayerShareDataWithDiscord: a = !0, ...i } = t,
         r = await (0, u.nX)(i);
-    r === h.T.ERROR
-        ? (0, s.P0)({ text: tp.intl.string(tp.t.fEptJP), variant: "critical" })
+    return r === h.T.ERROR
+        ? ((0, s.P0)({ text: tp.intl.string(tp.t.fEptJP), variant: "critical" }), !1)
         : r !== h.T.FETCHING &&
-          (f.A.initialize({ didPlayerShareDataWithDiscord: a, isForeground: l.A.isFocused() && l.A.isVisible() }),
-          (0, b.lw)(e),
-          (0, c.B8)(
-              (e) => {
-                  let { closeLayer: t } = e;
-                  return (0, n.jsx)(nK, { didPlayerShareDataWithDiscord: a, onClose: t });
-              },
-              { onEscape: nB },
-          ));
+              (f.A.initialize({ didPlayerShareDataWithDiscord: a, isForeground: l.A.isFocused() && l.A.isVisible() }),
+              (0, b.lw)(e),
+              (0, c.B8)(
+                  (e) => {
+                      let { closeLayer: t } = e;
+                      return (0, n.jsx)(nK, { didPlayerShareDataWithDiscord: a, onClose: t });
+                  },
+                  { layerKey: nB.p, onEscape: nz },
+              ),
+              !0);
 }

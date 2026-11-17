@@ -24,12 +24,12 @@ async function f(e) {
             appContext: I,
             customStatusPrompt: p,
             onModalOpen: m,
-            onModalClose: T,
-            ...g
+            onModalClose: g,
+            ...T
         } = e,
         S = d.default.getUser(t),
         N = d.default.getCurrentUser();
-    if (null == S || null == N) return void T?.();
+    if (null == S || null == N) return void g?.();
     let C = A(t, _),
         O = a()();
     try {
@@ -138,7 +138,7 @@ async function f(e) {
                             n.e(889880),
                             n.e(375724),
                             n.e(999272),
-                            n.e(701406),
+                            n.e(677625),
                             n.e(216112),
                             n.e(490514),
                             n.e(962953),
@@ -330,7 +330,7 @@ async function f(e) {
                             n.e(892937),
                             n.e(420446),
                             n.e(490449),
-                            n.e(788938),
+                            n.e(878504),
                             n.e(104864),
                             n.e(148758),
                             n.e(36026),
@@ -956,7 +956,7 @@ async function f(e) {
                                 channelId: h,
                                 customStatusPrompt: p,
                                 ...t,
-                                ...g,
+                                ...T,
                             },
                             O,
                         );
@@ -970,14 +970,14 @@ async function f(e) {
                         });
                     },
                     onCloseCallback: () => {
-                        (E.delete(C), T?.());
+                        (E.delete(C), g?.());
                     },
                 },
             ),
         ),
             m?.());
     } catch (e) {
-        throw (T?.(), e);
+        throw (g?.(), e);
     }
 }
 function h() {
