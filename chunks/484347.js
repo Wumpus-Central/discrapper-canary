@@ -4510,8 +4510,9 @@ function iC(e) {
         [c, d] = b.useState(!1),
         [l, u] = b.useState(!1),
         h = (0, ib.A)(t.id),
-        p = r.length > 0 && r.length <= 250 && !c && !l,
-        m = c ? tA.intl.string(tA.t.fjcCk5) : tA.intl.formatToPlainString(tA.t["0ZQw/X"], { name: a });
+        p = r.trim(),
+        m = p.length > 0 && p.length <= 250 && !c && !l,
+        x = c ? tA.intl.string(tA.t.fjcCk5) : tA.intl.formatToPlainString(tA.t["0ZQw/X"], { name: a });
     return h
         ? (0, i.jsxs)("div", {
               className: im.OG,
@@ -4522,8 +4523,8 @@ function iC(e) {
                       onChange: (e) => s(e.target.value),
                       maxLength: 250,
                       disabled: c || l,
-                      placeholder: m,
-                      "aria-label": m,
+                      placeholder: x,
+                      "aria-label": x,
                   }),
                   (0, i.jsxs)("div", {
                       className: im.n,
@@ -4541,12 +4542,12 @@ function iC(e) {
                               children: (0, i.jsx)(io.GiftIcon, { size: "refresh_sm", color: "currentColor" }),
                           }),
                           (0, i.jsx)(il.D, {
-                              className: _()(im.KD, { [im.r9]: !p }),
+                              className: _()(im.KD, { [im.r9]: !m }),
                               onClick: async function () {
-                                  if (p) {
+                                  if (m) {
                                       u(!0);
                                       try {
-                                          (await (0, o.fr)(r, t.id),
+                                          (await (0, o.fr)(p, t.id),
                                               s(""),
                                               d(!0),
                                               g.O.announce(tA.intl.string(tA.t.fjcCk5), "polite"));
@@ -4557,7 +4558,7 @@ function iC(e) {
                                       }
                                   }
                               },
-                              "aria-disabled": !p,
+                              "aria-disabled": !m,
                               "aria-label": tA.intl.string(tA.t.oeb1vg),
                               children: (0, i.jsx)(iu.SendMessageIcon, { size: "refresh_sm", color: "currentColor" }),
                           }),
