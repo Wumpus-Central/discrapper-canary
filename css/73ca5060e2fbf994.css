@@ -153,6 +153,17 @@
     pointer-events: none
 }
 
+.title_tQQC_c {
+    align-items: center;
+    display: flex
+}
+
+.helpArticle_tQQC_c {
+    display: flex;
+    margin-block: calc((var(--space-24) - var(--space-30))/2);
+    margin-inline-start: calc(var(--space-4) - var(--space-6))
+}
+
 .tile_IxwVgM {
     background: var(--background-base-low);
     border-radius: var(--radius-sm);
@@ -408,4 +419,4 @@
     width: 246px
 }
 
-/*# sourceMappingURL=617877b11b7e6b80.css.map*/
+/*# sourceMappingURL=73ca5060e2fbf994.css.map*/

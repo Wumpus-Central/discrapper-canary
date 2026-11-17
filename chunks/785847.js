@@ -51,7 +51,7 @@ var y = t(690352),
     q = t(436912),
     Z = t(654512),
     J = t(812760),
-    ee = t(442036),
+    ee = t(28875),
     el = t(454688),
     et = t(758836),
     es = t(521420);
@@ -254,7 +254,7 @@ function eM(e) {
         : (0, s.jsxs)("div", {
               className: eT.hd,
               children: [
-                  d && (0, s.jsx)(ee.A, { className: eT.aQ }),
+                  d && (0, s.jsx)(ee.A, { title: e_.intl.string(e_.t.Pla5Vk), className: eT.aQ }),
                   null != a && i
                       ? (0, s.jsx)(eD, { sequencedOffers: a, products: n.products, openPosition: r })
                       : (0, s.jsx)(eP, { products: u }),

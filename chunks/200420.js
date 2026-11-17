@@ -11,16 +11,16 @@ var l = n(477900),
     m = n(793574),
     h = n(688810),
     g = n(604913),
-    p = n(287809),
-    E = n(129230),
+    E = n(287809),
+    p = n(129230),
     f = n(857512),
     x = n(993408),
-    C = n(212407),
-    v = n(815280),
-    y = n(665414),
-    A = n(821609),
-    _ = n(172218),
-    L = n(140735),
+    v = n(212407),
+    A = n(815280),
+    C = n(665414),
+    y = n(821609),
+    L = n(172218),
+    _ = n(140735),
     b = n(598047),
     S = n(396583),
     I = n(568631),
@@ -35,7 +35,7 @@ let N = r.memo((e) => {
             c = r.useCallback((e) => {
                 i(e);
             }, []),
-            m = (0, _.K)(c, 0),
+            m = (0, L.K)(c, 0),
             h = (0, I.Ty)(t),
             g = (0, I.lF)(h);
         return (
@@ -78,7 +78,7 @@ let N = r.memo((e) => {
                             t,
                         ),
                     ),
-                    (0, l.jsx)(L.A, { children: j.intl.format(j.t.j6IyVe, h) }),
+                    (0, l.jsx)(_.A, { children: j.intl.format(j.t.j6IyVe, h) }),
                 ],
             })
         );
@@ -109,13 +109,13 @@ let N = r.memo((e) => {
                 k.kL,
                 (function (e) {
                     switch (e) {
-                        case y.i.LIGHT:
+                        case C.i.LIGHT:
                             return k.BB;
-                        case y.i.DARK:
+                        case C.i.DARK:
                             return k.XT;
-                        case y.i.GRADIENT_V1:
+                        case C.i.GRADIENT_V1:
                             return k.eg;
-                        case y.i.TRANSPARENT:
+                        case C.i.TRANSPARENT:
                             return k.JO;
                         default:
                             return k.XT;
@@ -130,7 +130,7 @@ let N = r.memo((e) => {
                     !r &&
                     (0, l.jsx)("div", {
                         className: k.lO,
-                        children: (0, l.jsx)(A.$, { variant: "overlay-primary", fullWidth: !0, onClick: s, text: c }),
+                        children: (0, l.jsx)(y.$, { variant: "overlay-primary", fullWidth: !0, onClick: s, text: c }),
                     }),
             ],
         });
@@ -144,12 +144,12 @@ let M = (e) => {
             heroBlock: t,
             collectionPromotion: n,
             handleTransition: s,
-            tab: y,
-            onPromotionEnd: A,
-            hideCards: _ = !1,
-            forceHideCountdownCta: L = !1,
+            tab: C,
+            onPromotionEnd: y,
+            hideCards: L = !1,
+            forceHideCountdownCta: _ = !1,
         } = e,
-        b = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        b = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
         S = (0, f.uM)(),
         { analyticsLocations: I } = (0, h.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
         {
@@ -158,7 +158,7 @@ let M = (e) => {
             heroLogo: M,
             heroBannerStatic: w,
             heroBannerAnimated: B,
-        } = (0, C.Kk)(t),
+        } = (0, v.Kk)(t),
         H = k?.responsive ?? !1,
         U = k?.backgroundStyle,
         { sourceButton: G, ctaName: $ } = (function (e) {
@@ -176,23 +176,23 @@ let M = (e) => {
         })(n),
         F = r.useCallback(() => {
             (s({ sourceButton: G, categorySkuId: t.categorySkuId, isInternalShopDeeplink: !0 }),
-                E.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                p.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: S?.sessionId,
                     sku_id: t.categorySkuId,
-                    page_type: y,
+                    page_type: C,
                     page_section: S?.pageSection,
                     page_category: S?.pageCategory,
                     cta_name: $,
                 }));
-        }, [s, G, t.categorySkuId, S, y, $]);
+        }, [s, G, t.categorySkuId, S, C, $]);
     if (null == b) return null;
     let V = n.countdownPosition === i.l.LEFT,
         K = (0, l.jsx)(O, {
             collectionName: t.name,
             collectionPromotion: n,
-            forceHideCountdownCta: L,
+            forceHideCountdownCta: _,
             onShopSale: F,
-            onCountdownEnd: A,
+            onCountdownEnd: y,
         });
     return (0, l.jsx)(h.f5, {
         value: I,
@@ -202,7 +202,7 @@ let M = (e) => {
                 (0, l.jsx)("div", {
                     className: a()(P.vK, { [P.no]: H }),
                     style: null != U ? { background: U } : void 0,
-                    children: null != w && (0, l.jsx)(v.A, { bannerStatic: w, bannerAnimated: B, isResponsive: H }),
+                    children: null != w && (0, l.jsx)(A.A, { bannerStatic: w, bannerAnimated: B, isResponsive: H }),
                 }),
                 (0, l.jsxs)("div", {
                     className: P.xX,
@@ -253,12 +253,13 @@ let M = (e) => {
                                 !V && (0, l.jsx)("div", { className: P.pv, children: K }),
                             ],
                         }),
-                        !_ &&
+                        !L &&
                             (0, l.jsx)(R.A, {
                                 heroBlockRecord: t,
-                                tab: y,
+                                tab: C,
                                 isBlockLoading: !1,
-                                layout: y === T.G2.HOME ? "hscroll" : "feed",
+                                layout: C === T.G2.HOME ? "hscroll" : "feed",
+                                onViewAll: F,
                             }),
                     ],
                 }),
