@@ -246,7 +246,7 @@ async function eA(e) {
                 )
             ).filter(er.Vq);
         })(),
-        u = r.includes(d.fS.WINDOW) && (0, ej.n5)("fetchSources") ? (0, ej.YX)() : null,
+        u = r.includes(d.fS.WINDOW) && (0, ej.sV)() ? (0, ej.YX)() : null,
         f = null != u ? (0, ej.uO)(u, { width: l, height: i }) : null,
         h = await c,
         x = await o,
