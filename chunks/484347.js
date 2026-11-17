@@ -4032,10 +4032,16 @@ function r9(e) {
             let A = rZ.DF(60);
             return (
                 (a = requestAnimationFrame(function e() {
+                    let t, n;
                     if (null == i || null == r) return;
-                    (i.viewport(0, 0, i.canvas.width, i.canvas.height), i.enable(i.CULL_FACE), i.enable(i.DEPTH_TEST));
-                    let t = rZ.DF(x.current),
-                        n = rZ.DF(g.current);
+                    ((t = Math.round(r.clientWidth * window.devicePixelRatio)),
+                        (n = Math.round(r.clientHeight * window.devicePixelRatio)),
+                        t > 0 && n > 0 && (r.width !== t || r.height !== n) && ((r.width = t), (r.height = n)),
+                        i.viewport(0, 0, i.canvas.width, i.canvas.height),
+                        i.enable(i.CULL_FACE),
+                        i.enable(i.DEPTH_TEST));
+                    let s = rZ.DF(x.current),
+                        c = rZ.DF(g.current);
                     (i.clear(i.COLOR_BUFFER_BIT | i.DEPTH_BUFFER_BIT),
                         i.useProgram(d),
                         i.enableVertexAttribArray(l),
@@ -4044,18 +4050,18 @@ function r9(e) {
                         i.enableVertexAttribArray(o),
                         i.bindBuffer(i.ARRAY_BUFFER, m),
                         i.vertexAttribPointer(o, 2, i.FLOAT, !1, 0, 0));
-                    let s = r.clientWidth / r.clientHeight,
-                        c = rQ.fN(rQ.vt(), A, s, 1, 2e3),
-                        f = rQ.t5(rQ.vt(), r0, r2, r1),
-                        p = rQ.lw(rQ.vt(), c, f),
-                        v = rQ.vt();
-                    (rQ.eL(v, v, t), rQ.Z8(v, v, n));
-                    let w = rQ.lw(rQ.vt(), p, v),
+                    let f = r.clientWidth / r.clientHeight,
+                        p = rQ.fN(rQ.vt(), A, f, 1, 2e3),
+                        v = rQ.t5(rQ.vt(), r0, r2, r1),
+                        w = rQ.lw(rQ.vt(), p, v),
                         I = rQ.vt();
-                    (rQ.B8(I, v),
-                        rQ.mg(I, I),
-                        i.uniformMatrix4fv(b, !1, I),
-                        i.uniformMatrix4fv(u, !1, w),
+                    (rQ.eL(I, I, s), rQ.Z8(I, I, c));
+                    let E = rQ.lw(rQ.vt(), w, I),
+                        j = rQ.vt();
+                    (rQ.B8(j, I),
+                        rQ.mg(j, j),
+                        i.uniformMatrix4fv(b, !1, j),
+                        i.uniformMatrix4fv(u, !1, E),
                         i.uniform1i(h, 0),
                         i.drawArrays(i.TRIANGLES, 0, 36),
                         (a = requestAnimationFrame(e)));
@@ -4071,16 +4077,16 @@ function r9(e) {
             e.fillRect(0, 0, s.width, s.height),
             e.drawImage(d.current, 0, 0, s.width, s.height),
             (e.fillStyle = V.Kr),
-            e.fillRect(0, 0, s.width, 1),
-            e.fillRect(0, 0, 1, s.height),
-            e.fillRect(0, s.height - 1, s.width, 1),
-            e.fillRect(s.width - 1, 0, 1, s.height),
+            e.fillRect(0, 0, s.width, 2),
+            e.fillRect(0, 0, 2, s.height),
+            e.fillRect(0, s.height - 2, s.width, 2),
+            e.fillRect(s.width - 2, 0, 2, s.height),
             o(a),
             h(!0));
     }, [a, d, s]);
     (b.useEffect(() => {
         null != s &&
-            ((d.current.crossOrigin = "anonymous"), (d.current.src = (0, rJ.Ez)(a, 256)), (d.current.onload = N));
+            ((d.current.crossOrigin = "anonymous"), (d.current.src = (0, rJ.Ez)(a, 512)), (d.current.onload = N));
     }, [a, N, d, s]),
         b.useEffect(
             () => (
@@ -4138,7 +4144,7 @@ function r9(e) {
                     width: 512,
                     onMouseDown: T,
                 }),
-                (0, i.jsx)("canvas", { className: r$.R, ref: c, height: 256, width: 256 }),
+                (0, i.jsx)("canvas", { className: r$.R, ref: c, height: 512, width: 512 }),
             ],
         })
     );

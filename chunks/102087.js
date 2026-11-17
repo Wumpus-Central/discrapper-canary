@@ -13,4 +13,11 @@ e.exports = {
     W_: "centeredHintTile_IxwVgM",
     qC: "hintAsset_IxwVgM",
     _J: "revealDateLabel_IxwVgM",
+    Jn: "idleAnimation_IxwVgM",
+    u0: "revealStripOverIdleAnimation_IxwVgM",
+    qx: "revealAnimation_IxwVgM",
+    QH: "revealIdleAnimation_IxwVgM",
+    Dx: "slidingDoor_IxwVgM",
+    Vd: "slideUp_IxwVgM",
+    z4: "slideLeft_IxwVgM",
 };

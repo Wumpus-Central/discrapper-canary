@@ -612,8 +612,11 @@ function et(e) {
             locked: n.locked,
             calendarLocked: n.calendar_locked,
             hint: n.hint,
+            calendarHint: n.calendar_hint,
             idleAnimation: n.idle_animation,
+            calendarIdleAnimation: n.calendar_idle_animation,
             revealAnimation: n.reveal_animation,
+            calendarRevealAnimation: n.calendar_reveal_animation,
         },
     };
 }
