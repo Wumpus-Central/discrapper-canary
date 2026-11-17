@@ -1,25 +1,25 @@
-var n = o(666810),
-    e = o(662349);
-o.d(
-    i,
+var r = n(698253),
+    i = n(662349);
+n.d(
+    e,
     {},
     {
         P: function (t) {
-            let { wishlistOwner: i, isOwned: o, shortText: u, onDetailsClick: r, onPurchaseClick: c } = t,
-                { clickRoutesToGift: s, showGiftButton: a } = (0, n.X)(),
+            let { wishlistOwner: e, isOwned: n, shortText: o, onDetailsClick: u, onPurchaseClick: a } = t,
+                c = (0, r.b)(),
                 {
-                    label: l,
-                    icon: d,
-                    isPromptingPurchase: f,
-                } = (0, e.h)({ wishlistOwner: i, isOwned: o, shortText: u }),
-                h = s && f;
+                    label: d,
+                    icon: s,
+                    isPromptingPurchase: l,
+                } = (0, i.h)({ wishlistOwner: e, isOwned: n, shortText: o }),
+                v = c && l;
             return {
-                onBodyClick: h ? c : r,
-                onOverlayClick: f ? c : r,
-                showOverlayButton: !f || a,
-                routesToGift: h,
-                label: l,
-                icon: d,
+                onBodyClick: v ? a : u,
+                onOverlayClick: l ? a : u,
+                showOverlayButton: !l || !c,
+                routesToGift: v,
+                label: d,
+                icon: s,
             };
         },
     },

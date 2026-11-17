@@ -4140,16 +4140,16 @@ var aS = t(433380),
     aB = t(243166),
     aW = t(805251),
     aY = t(123292),
-    az = t(174947),
-    aX = t(840411);
-let aq = (0, rd.mj)({
+    az = t(698253),
+    aX = t(174947),
+    aq = t(840411);
+let aK = (0, rd.mj)({
     name: "2026-07-smag-dm-sidebar-nitro-recommendation",
     kind: "user",
     defaultConfig: { isEnabled: !1 },
     variations: { 0: { isEnabled: !1 }, 1: { isEnabled: !0 } },
 });
-var aK = t(387325),
-    a$ = t(666810),
+var a$ = t(387325),
     aZ = t(416415),
     aQ = t(88940),
     aJ = t(394300),
@@ -4381,7 +4381,7 @@ var ou = t(448645),
 function oI(e) {
     let { unownedWishlistItems: n, profileOwner: t, onClick: i, wishlistId: s, isNitroRecEnabled: a } = e,
         { analyticsLocations: o } = (0, P.Ay)(),
-        { labelsEnabled: d, reorderEnabled: c } = (0, aK.Zf)("UserProfileSidebarWishlistBreadcrumb"),
+        { labelsEnabled: d, reorderEnabled: c } = (0, a$.Zf)("UserProfileSidebarWishlistBreadcrumb"),
         u = ee.default.getCurrentUser(),
         { trackUserProfileAction: h, trackUserProfileWishlistAction: m } = (0, sV.NJ)(),
         p = (0, r.useId)(),
@@ -4434,7 +4434,7 @@ function oI(e) {
             if (a && e.length < 3) {
                 let n = T.some((e) => ou.Ay.isPremiumSku(e.skuId));
                 if (!ou.Ay.isPremiumAtLeast(t.premiumType, oi.PremiumTypes.TIER_2) && !n) {
-                    let n = aJ.A.fromSKU((0, aX.rI)());
+                    let n = aJ.A.fromSKU((0, aq.rI)());
                     null != n && e.push({ item: n, source: aL.uS.POPULAR });
                 }
             }
@@ -4444,7 +4444,7 @@ function oI(e) {
             () =>
                 j
                     .slice(0, 3)
-                    .filter(az.xZ)
+                    .filter(aX.xZ)
                     .map((e) => e.shopUnpublishedAt),
             [j],
         ),
@@ -4490,13 +4490,13 @@ function oI(e) {
     (0, r.useEffect)(() => {
         w && !U.current && ((U.current = !0), h({ action: "VIEW_NEW_CONTENT_SIDEBAR" }));
     }, [w, h]);
-    let G = N ? (0, l.jsx)(aK.m4, { location: "UserProfileSidebarWishlistReorderOpportunity" }) : null;
+    let G = N ? (0, l.jsx)(a$.m4, { location: "UserProfileSidebarWishlistReorderOpportunity" }) : null;
     return 0 === k.length
         ? G
         : (0, l.jsxs)("section", {
               "aria-labelledby": p,
               children: [
-                  O && (0, l.jsx)(aK.m4, { location: "UserProfileSidebarWishlistBreadcrumb" }),
+                  O && (0, l.jsx)(a$.m4, { location: "UserProfileSidebarWishlistBreadcrumb" }),
                   G,
                   (0, l.jsxs)(sq.A.Overlay, {
                       ref: D,
@@ -4538,13 +4538,12 @@ function oI(e) {
 }
 function oE(e) {
     let { isLoading: n, unownedWishlistItems: t, canSeeWishlist: i = !1, ...r } = e,
-        s = aq.useConfig({ location: "UserProfileSidebarWishlistBreadcrumb" }).isEnabled && i;
+        s = aK.useConfig({ location: "UserProfileSidebarWishlistBreadcrumb" }).isEnabled && i;
     if (n || r.profileOwner.bot || ((null == t || 0 === t.length) && !s)) return null;
     let a = ee.default.getCurrentUser()?.id,
         o = null != a && a !== r.profileOwner.id;
-    return (0, l.jsx)(a$.h, {
+    return (0, l.jsx)(az.P, {
         isGifting: o,
-        location: "UserProfileSidebarWishlistBreadcrumb",
         children: (0, l.jsx)(oI, { ...r, unownedWishlistItems: t, isNitroRecEnabled: s }, r.profileOwner.id),
     });
 }

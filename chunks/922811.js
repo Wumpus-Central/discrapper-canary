@@ -33,12 +33,12 @@ var n = t(477900),
     E = t(991988),
     M = t(702476),
     W = t(299679),
-    G = t(820847),
-    P = t(666810),
+    P = t(820847),
+    G = t(698253),
     D = t(634110),
     H = t(802494),
-    B = t(310209),
-    F = t(73138),
+    F = t(310209),
+    B = t(73138),
     U = t(734057),
     Q = t(309010),
     V = t(129230),
@@ -81,7 +81,7 @@ function q(i) {
             (0, n.jsx)(C.A, { children: X.intl.string(X.t.pfChQr) }),
             (0, n.jsx)("div", {
                 className: j()(K.Md, K.e6),
-                children: Array.from({ length: e }, (i, e) => (0, n.jsx)(F.O, {}, `placeholder-${e}`)),
+                children: Array.from({ length: e }, (i, e) => (0, n.jsx)(B.O, {}, `placeholder-${e}`)),
             }),
         ],
     });
@@ -117,7 +117,7 @@ function ii(i) {
                                   itemSource: r === D.uS.WISHLIST ? "organic" : "recommendation",
                                   productLine: s.productLine,
                               },
-                              children: (0, n.jsx)(F.A, {
+                              children: (0, n.jsx)(B.A, {
                                   sku: s,
                                   wishlistId: l,
                                   source: r,
@@ -200,7 +200,7 @@ function ie(i) {
         y = a > 5,
         C = s.useMemo(() => (y ? r.slice(0, 5) : r), [r, y]),
         [O, w] = s.useState(!1),
-        G = s.useCallback(
+        P = s.useCallback(
             (i) => {
                 if (i && !S && r.length > 0) {
                     let i = r.map((i) => {
@@ -225,8 +225,8 @@ function ie(i) {
             },
             [S, r, e.id, u],
         ),
-        H = (0, A.K)(G, void 0, !S && !O),
-        B = s.useMemo(
+        H = (0, A.K)(P, void 0, !S && !O),
+        F = s.useMemo(
             () =>
                 new Set(
                     r.map((i) => {
@@ -270,9 +270,8 @@ function ie(i) {
                                                         wishlistId: o,
                                                         analyticsLocations: u,
                                                     },
-                                                    children: (0, n.jsx)(P.h, {
+                                                    children: (0, n.jsx)(G.P, {
                                                         isGifting: !0,
-                                                        location: "WishlistBanner",
                                                         children: (0, n.jsx)(ii, {
                                                             items: C,
                                                             giftRecipient: e,
@@ -280,7 +279,7 @@ function ie(i) {
                                                             onOpenWishlist: f,
                                                             onWishlistItemClick: t,
                                                             analyticsLocations: u,
-                                                            includedSources: B,
+                                                            includedSources: F,
                                                         }),
                                                     }),
                                                 }),
@@ -304,12 +303,12 @@ function it(i) {
             skusToUserAndReason: c,
             status: o,
             defaultWishlistId: d,
-        } = (0, H.rg)({ userId: e.id, numItems: 5, source: G.B.USER_PROFILE }),
+        } = (0, H.rg)({ userId: e.id, numItems: 5, source: P.B.USER_PROFILE }),
         u = s.useMemo(
             () =>
                 N()(
                     a.map((i) => {
-                        let t = null != c[i.id] && c[i.id][e.id] === B.j.WISHLIST ? D.uS.WISHLIST : D.uS.POPULAR;
+                        let t = null != c[i.id] && c[i.id][e.id] === F.j.WISHLIST ? D.uS.WISHLIST : D.uS.POPULAR;
                         return null != i ? { sku: i, source: t } : null;
                     }),
                 ),
