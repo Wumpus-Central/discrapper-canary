@@ -7,7 +7,7 @@ var i,
     d,
     c = (((i = {}).NO_CHARACTERS = "NO_CHARACTERS"), (i.ERROR = "ERROR"), i),
     u = (((r = {}).RESOLVING = "RESOLVING"), (r.RESOLVED = "RESOLVED"), (r.ERROR = "ERROR"), r),
-    _ = (((a = {}).GUILD = "GUILD"), a),
+    _ = (((a = {}).GUILD = "GUILD"), (a.ALLIANCE = "ALLIANCE"), (a.CLAN = "CLAN"), a),
     E =
         (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (s[(s.SINGLE = 1)] = "SINGLE"),

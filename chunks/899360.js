@@ -1,41 +1,45 @@
-var e = t(839516),
-    i = t(124077),
-    a = t(752222),
-    r = t(792996);
-let u = { kind: "available" },
-    o = { kind: "all_full" };
+var l = e(839516),
+    r = e(124077),
+    u = e(752222),
+    i = e(792996);
+let a = { kind: "available" },
+    s = { kind: "all_full" };
 function d(n) {
-    let { name: l } = n,
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    return r.intl.formatToPlainString(a.default.xuM052, {
-        orgName: l,
-        noun: (0, i.A)({ displayNoun: t, lowercase: !0 }),
+    let { name: t } = n,
+        e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    return i.intl.formatToPlainString(u.default.xuM052, {
+        orgName: t,
+        noun: (0, r.A)({ displayNoun: e, lowercase: !0 }),
     });
 }
-t.d(
-    l,
+e.d(
+    t,
     {},
     {
         Ay: function (n) {
-            return null != n &&
-                0 !== n.length &&
-                n.every((n) => {
-                    let { organization: l } = n;
-                    return (0, e.A)(l);
+            if (
+                null == n ||
+                0 === n.length ||
+                !n.every((n) => {
+                    let { organization: t } = n;
+                    return (0, l.A)(t);
                 })
-                ? 1 === n.length
-                    ? { kind: "single_full", organization: n[0].organization }
-                    : o
-                : u;
+            )
+                return a;
+            if (1 === n.length) {
+                let [{ organization: t, displayNoun: e }] = n;
+                return { kind: "single_full", organization: t, displayNoun: e };
+            }
+            return s;
         },
         m$: function (n) {
             switch (n.kind) {
                 case "available":
                     return;
                 case "single_full":
-                    return d(n.organization);
+                    return d(n.organization, n.displayNoun);
                 case "all_full":
-                    return r.intl.string(a.default.bY80Jh);
+                    return i.intl.string(u.default.bY80Jh);
             }
         },
         zA: d,
