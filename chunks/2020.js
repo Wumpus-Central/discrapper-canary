@@ -1634,15 +1634,15 @@ var e0 = a(70254),
     e2 = a(184705),
     e4 = a(720341),
     e3 = a(683071),
-    e5 = a(834730);
-let e8 = (0, a(400845).Ay)({
+    e8 = a(834730);
+let e5 = (0, a(400845).Ay)({
     kind: "user",
     name: "2025-10-mana-date-inputs",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
 function e6(e) {
-    return e8.useConfig({ location: e }).enabled;
+    return e5.useConfig({ location: e }).enabled;
 }
 let e7 = {
     title: "Calendar",
@@ -1679,7 +1679,7 @@ let e7 = {
                                   maxValue: n ? (0, e1._U)("2024-12-31") : void 0,
                                   "aria-label": "Select a date",
                               }),
-                              (0, t.jsxs)(e5.E, {
+                              (0, t.jsxs)(e8.E, {
                                   variant: "body-sm/normal",
                                   children: [
                                       "Selected date: ",
@@ -1764,7 +1764,7 @@ let ll = {
                             labelType: i,
                             leadingIcon: s ? e9.CircleInformationIcon : void 0,
                         }),
-                        (0, t.jsxs)(e5.E, {
+                        (0, t.jsxs)(e8.E, {
                             variant: "body-sm/normal",
                             children: ["Current state: ", r ? "Checked" : "Unchecked"],
                         }),
@@ -1892,7 +1892,7 @@ let lt = {
                     gap: "md",
                     children: [
                         (0, t.jsx)(la.$, { selectedValues: u, label: n, onChange: p, options: b, disabled: l }),
-                        (0, t.jsxs)(e5.E, {
+                        (0, t.jsxs)(e8.E, {
                             variant: "body-sm/normal",
                             children: ["Current selection: ", u.length > 0 ? u.join(", ") : "None"],
                         }),
@@ -2018,7 +2018,7 @@ function lb(e) {
                     ...a,
                 }),
             }),
-            (0, t.jsx)(e5.E, {
+            (0, t.jsx)(e8.E, {
                 variant: "body-xs/normal",
                 color: "text-muted",
                 children: 0 === i.length ? "onEnd: not called yet" : `onEnd called at ${i.join(", ")}`,
@@ -2028,7 +2028,7 @@ function lb(e) {
 }
 function lp(e) {
     let { children: l, onBackdrop: a = !1 } = e;
-    return (0, t.jsx)(e5.E, {
+    return (0, t.jsx)(e8.E, {
         variant: "body-xs/normal",
         color: a ? "none" : "text-muted",
         className: a ? li.P : void 0,
@@ -2230,7 +2230,7 @@ function lN(e) {
                                                 timeZone: e.state.timeZone,
                                             });
                                         return (0, t.jsx)(
-                                            e5.E,
+                                            e8.E,
                                             { variant: "body-md/medium", color: "text-strong", children: o },
                                             a,
                                         );
@@ -2536,7 +2536,7 @@ function lU(e) {
                 auxiliaryContentPosition: l,
                 children: (0, t.jsx)(lI.F, {
                     disabled: !0,
-                    children: (0, t.jsx)(e5.E, {
+                    children: (0, t.jsx)(e8.E, {
                         variant: "body-md/normal",
                         color: "text-subtle",
                         children: "Inner InputField content",
@@ -2626,7 +2626,7 @@ let lW = {
                         icon: a.showIcon ? y.LockIcon : void 0,
                         children: (0, t.jsx)("div", {
                             className: lF.q,
-                            children: (0, t.jsx)(e5.E, {
+                            children: (0, t.jsx)(e8.E, {
                                 color: "text-subtle",
                                 variant: "body-md/medium",
                                 children: "Field",
@@ -2729,7 +2729,7 @@ function l3(e) {
                 gap: 8,
                 align: "center",
                 children: [
-                    (0, t.jsx)(e5.E, {
+                    (0, t.jsx)(e8.E, {
                         variant: "body-sm/semibold",
                         color: "text-subtle",
                         children: a
@@ -2750,7 +2750,7 @@ function l3(e) {
                 gap: 8,
                 align: "center",
                 children: [
-                    (0, t.jsx)(e5.E, {
+                    (0, t.jsx)(e8.E, {
                         variant: "body-sm/semibold",
                         color: "text-subtle",
                         children: "Closes the playground, then plays in the app:",
@@ -2774,7 +2774,7 @@ function l3(e) {
                 ],
             }),
             a && o
-                ? (0, t.jsx)(e5.E, {
+                ? (0, t.jsx)(e8.E, {
                       variant: "body-xs/normal",
                       color: "text-muted",
                       children: "Hidden in the app while a more important notice is showing.",
@@ -2783,11 +2783,11 @@ function l3(e) {
         ],
     });
 }
-function l5(e) {
+function l8(e) {
     let { children: l } = e;
-    return (0, t.jsx)(e5.E, { variant: "body-sm/semibold", color: "text-subtle", children: l });
+    return (0, t.jsx)(e8.E, { variant: "body-sm/semibold", color: "text-subtle", children: l });
 }
-let l8 = {
+let l5 = {
         title: "Spend your Orbs for less in the Shop",
         message: "until the sale ends, with 30% off avatar decorations and profile effects.",
         primaryAction: { text: "Visit the Shop", onClick: () => {} },
@@ -2818,7 +2818,7 @@ function l9() {
     return (0, t.jsxs)(h.B, {
         gap: 12,
         children: [
-            (0, t.jsx)(l5, { children: "Countdowns on time-limited promotions" }),
+            (0, t.jsx)(l8, { children: "Countdowns on time-limited promotions" }),
             l7.map((l) => {
                 let { label: a, render: o, leadingAccessory: n } = l;
                 return (0, t.jsxs)(
@@ -2826,13 +2826,13 @@ function l9() {
                     {
                         gap: 8,
                         children: [
-                            (0, t.jsx)(e5.E, { variant: "body-xs/normal", color: "text-muted", children: a }),
+                            (0, t.jsx)(e8.E, { variant: "body-xs/normal", color: "text-muted", children: a }),
                             (0, t.jsx)(lX.q, {
                                 variant: "promotion",
                                 type: "expressive",
                                 leadingAccessory: n ?? (0, t.jsx)(lZ.OrbsIcon, { size: "sm", color: "currentColor" }),
                                 countdown: o(e),
-                                ...l8,
+                                ...l5,
                             }),
                             (0, t.jsx)(lX.q, {
                                 variant: "promotion",
@@ -2850,7 +2850,7 @@ function l9() {
             (0, t.jsxs)(h.B, {
                 gap: 8,
                 children: [
-                    (0, t.jsx)(e5.E, {
+                    (0, t.jsx)(e8.E, {
                         variant: "body-xs/normal",
                         color: "text-muted",
                         children: "Timer and days left on the last day",
@@ -2864,7 +2864,7 @@ function l9() {
                                 type: "expressive",
                                 leadingAccessory: (0, t.jsx)(lZ.OrbsIcon, { size: "sm", color: "currentColor" }),
                                 countdown: o(l),
-                                ...l8,
+                                ...l5,
                             },
                             a,
                         );
@@ -2990,13 +2990,13 @@ function au() {
         className: as.Vg,
         children: [
             (0, t.jsx)("span", {}),
-            ad.map((e) => (0, t.jsx)(e5.E, { variant: "body-xs/semibold", color: "text-subtle", children: e }, e)),
+            ad.map((e) => (0, t.jsx)(e8.E, { variant: "body-xs/semibold", color: "text-subtle", children: e }, e)),
             ar.map((e) =>
                 (0, t.jsxs)(
                     o.Fragment,
                     {
                         children: [
-                            (0, t.jsx)(e5.E, { variant: "body-xs/semibold", color: "text-subtle", children: e }),
+                            (0, t.jsx)(e8.E, { variant: "body-xs/semibold", color: "text-subtle", children: e }),
                             ad.map((l) =>
                                 (0, t.jsx)(
                                     "span",
@@ -3305,11 +3305,11 @@ let aC = [
                                 : void 0,
                             value: u,
                         }),
-                        x = (0, t.jsx)(e5.E, { variant: "body-sm/normal", children: "Neighbor" });
+                        x = (0, t.jsx)(e8.E, { variant: "body-sm/normal", children: "Neighbor" });
                     return (0, t.jsxs)(h.B, {
                         gap: 16,
                         children: [
-                            (0, t.jsx)(e5.E, {
+                            (0, t.jsx)(e8.E, {
                                 variant: "body-sm/normal",
                                 color: "text-subtle",
                                 children:
@@ -3354,13 +3354,13 @@ let aC = [
                                       align: "row" === a ? "start" : "stretch",
                                       children: [v, x],
                                   }),
-                            (0, t.jsx)(e5.E, {
+                            (0, t.jsx)(e8.E, {
                                 variant: "body-sm/normal",
                                 role: "status",
                                 children: null == b ? "No commits" : `Last committed value: ${JSON.stringify(b)}`,
                             }),
                             s
-                                ? (0, t.jsxs)(e5.E, { variant: "body-sm/normal", children: ["Accessory clicks: ", m] })
+                                ? (0, t.jsxs)(e8.E, { variant: "body-sm/normal", children: ["Accessory clicks: ", m] })
                                 : null,
                         ],
                     });
@@ -3540,7 +3540,7 @@ var ak = a(3265),
     aR = a(314116);
 let aO = "/assets/f66ae7bb8510ab4f.svg";
 function aP() {
-    return (0, t.jsx)(e5.E, {
+    return (0, t.jsx)(e8.E, {
         variant: "body-sm/normal",
         color: "text-subtle",
         children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
@@ -3677,7 +3677,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children: "Click the button below to open the modal",
                         }),
@@ -3703,11 +3703,11 @@ let aF = {
                                                 ? (0, t.jsxs)(h.B, {
                                                       gap: 8,
                                                       children: [
-                                                          (0, t.jsx)(e5.E, {
+                                                          (0, t.jsx)(e8.E, {
                                                               variant: "body-lg/semibold",
                                                               children: "Preview Content",
                                                           }),
-                                                          (0, t.jsx)(e5.E, {
+                                                          (0, t.jsx)(e8.E, {
                                                               variant: "body-md/normal",
                                                               color: "text-subtle",
                                                               children:
@@ -3743,7 +3743,7 @@ let aF = {
                                                         label: "Example Input",
                                                         placeholder: "Enter some text...",
                                                     }),
-                                                    (0, t.jsx)(e5.E, {
+                                                    (0, t.jsx)(e8.E, {
                                                         variant: "body-md/normal",
                                                         children:
                                                             "This is the main content area of the modal. You can place any content here.",
@@ -3802,7 +3802,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children: "Click the button below to open the confirm modal",
                         }),
@@ -3895,7 +3895,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children: "Click the button below to open the expressive modal",
                         }),
@@ -3917,7 +3917,7 @@ let aF = {
                                             ],
                                             children: (0, t.jsx)(h.B, {
                                                 gap: 16,
-                                                children: (0, t.jsx)(e5.E, {
+                                                children: (0, t.jsx)(e8.E, {
                                                     variant: "body-md/normal",
                                                     children:
                                                         "This is an expressive modal with a gradient background and optional badge.",
@@ -3985,7 +3985,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children:
                                 "This example demonstrates the DynamicGraphic component rendering a React component inside the modal header.",
@@ -4010,7 +4010,7 @@ let aF = {
                                                 ],
                                                 children: (0, t.jsx)(h.B, {
                                                     gap: 16,
-                                                    children: (0, t.jsx)(e5.E, {
+                                                    children: (0, t.jsx)(e8.E, {
                                                         variant: "body-md/normal",
                                                         children:
                                                             "The header above is rendered using a React component via DynamicGraphic, allowing for dynamic, interactive content in the modal header.",
@@ -4065,7 +4065,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children: "Click the button below to open the layer modal",
                         }),
@@ -4079,7 +4079,7 @@ let aF = {
                                         ...l,
                                         children: (0, t.jsx)(h.B, {
                                             gap: 16,
-                                            children: (0, t.jsx)(e5.E, {
+                                            children: (0, t.jsx)(e8.E, {
                                                 variant: "body-md/normal",
                                                 children: "This is the layer modal content",
                                             }),
@@ -4108,7 +4108,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children: "Click the button below to open the multi-step modal",
                         }),
@@ -4161,7 +4161,7 @@ let aF = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e5.E, {
+                        (0, t.jsx)(e8.E, {
                             variant: "body-md/normal",
                             children: "Click the button below to open the base modal",
                         }),
@@ -4179,11 +4179,11 @@ let aF = {
                                                 children: (0, t.jsxs)(h.B, {
                                                     gap: 16,
                                                     children: [
-                                                        (0, t.jsx)(e5.E, {
+                                                        (0, t.jsx)(e8.E, {
                                                             variant: "body-lg/semibold",
                                                             children: "BaseModal Content",
                                                         }),
-                                                        (0, t.jsx)(e5.E, {
+                                                        (0, t.jsx)(e8.E, {
                                                             variant: "body-md/normal",
                                                             children:
                                                                 "This is the raw BaseModal container. It provides the modal chrome (animation, sizing, padding, focus management) without any opinionated header, body, or action bar layout.",
@@ -4191,7 +4191,7 @@ let aF = {
                                                         a
                                                             ? Array.from({ length: 20 }, (e, l) =>
                                                                   (0, t.jsxs)(
-                                                                      e5.E,
+                                                                      e8.E,
                                                                       {
                                                                           variant: "body-md/normal",
                                                                           children: [
@@ -4350,7 +4350,7 @@ function aJ(e) {
                     children: (0, t.jsxs)("div", {
                         className: aQ.multistepActionLayout,
                         children: [
-                            (0, t.jsx)(e5.E, {
+                            (0, t.jsx)(e8.E, {
                                 variant: "body-xs/normal",
                                 className: aQ.multistepIndicator,
                                 children: ab.intl.formatToPlainString(ab.t.rO31eY, {
@@ -4746,7 +4746,7 @@ let a4 = {
                         gap: "md",
                         children: [
                             (0, t.jsx)(eW.z, { value: u, label: n, onChange: p, options: b, disabled: l }),
-                            (0, t.jsxs)(e5.E, {
+                            (0, t.jsxs)(e8.E, {
                                 variant: "body-sm/normal",
                                 children: ["Current selection: ", "string" == typeof u && "" !== u ? u : "None"],
                             }),
@@ -4803,7 +4803,7 @@ let a4 = {
             },
         ],
     },
-    a5 = {
+    a8 = {
         title: "RangeCalendar",
         stories: [
             {
@@ -4851,7 +4851,7 @@ let a4 = {
                                 maxValue: n ? (0, e1._U)("2024-12-31") : void 0,
                                 "aria-label": "Select a date range",
                             }),
-                            (0, t.jsxs)(e5.E, {
+                            (0, t.jsxs)(e8.E, {
                                 variant: "body-sm/normal",
                                 children: [
                                     "Selected range: ",
@@ -4896,10 +4896,10 @@ let a4 = {
             },
         ],
     };
-var a8 = a(970905),
+var a5 = a(788984),
     a6 = a(844222),
     a7 = a(272318);
-let a9 = Object.entries(a8)
+let a9 = Object.entries(a5)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -5248,7 +5248,7 @@ let tc = [0.5, 0.75, 1, 1.25, 1.5, 2],
                                 onChangeEnd: c,
                                 formatValue: (e) => `${e}%`,
                             }),
-                            (0, t.jsxs)(e5.E, {
+                            (0, t.jsxs)(e8.E, {
                                 variant: "body-sm/normal",
                                 color: "text-muted",
                                 children: ["Saved on release: ", u, "%"],
@@ -5481,7 +5481,7 @@ var tf = a(95362),
 let tj = {
     name: "Text",
     id: "text",
-    component: e5.E,
+    component: e8.E,
     controls: {
         variant: {
             label: "Variant",
@@ -5765,8 +5765,8 @@ let tP = {
                                             {
                                                 className: tV.N,
                                                 children: [
-                                                    (0, t.jsx)(e5.E, { ...e, variant: l, children: e.children }),
-                                                    (0, t.jsx)(e5.E, {
+                                                    (0, t.jsx)(e8.E, { ...e, variant: l, children: e.children }),
+                                                    (0, t.jsx)(e8.E, {
                                                         variant: "body-xs/normal",
                                                         color: "text-subtle",
                                                         children: l,
@@ -5846,7 +5846,7 @@ let tP = {
                 lv,
                 lO,
                 a3,
-                a5,
+                a8,
                 tp,
                 aF,
                 {
@@ -5913,7 +5913,7 @@ let tP = {
                                 return (0, t.jsxs)(h.B, {
                                     gap: 16,
                                     children: [
-                                        (0, t.jsx)(e5.E, {
+                                        (0, t.jsx)(e8.E, {
                                             variant: "body-sm/semibold",
                                             color: "text-feedback-warning",
                                             children:
@@ -5960,7 +5960,7 @@ let tP = {
                                 return (0, t.jsxs)(h.B, {
                                     gap: 24,
                                     children: [
-                                        (0, t.jsx)(e5.E, {
+                                        (0, t.jsx)(e8.E, {
                                             variant: "body-sm/semibold",
                                             color: "text-feedback-warning",
                                             children:
@@ -5969,7 +5969,7 @@ let tP = {
                                         (0, t.jsxs)(h.B, {
                                             gap: 12,
                                             children: [
-                                                (0, t.jsx)(l5, {
+                                                (0, t.jsx)(l8, {
                                                     children:
                                                         "Every type with a title, as in the Figma R2 frames, and an inline link",
                                                 }),
@@ -6051,7 +6051,7 @@ let tP = {
                                         (0, t.jsxs)(h.B, {
                                             gap: 12,
                                             children: [
-                                                (0, t.jsx)(l5, { children: "Status banners" }),
+                                                (0, t.jsx)(l8, { children: "Status banners" }),
                                                 (0, t.jsx)(lX.q, {
                                                     variant: "status",
                                                     type: "critical",
@@ -6123,7 +6123,7 @@ let tP = {
                                         (0, t.jsxs)(h.B, {
                                             gap: 12,
                                             children: [
-                                                (0, t.jsx)(l5, { children: "Promotions" }),
+                                                (0, t.jsx)(l8, { children: "Promotions" }),
                                                 (0, t.jsx)(lX.q, {
                                                     variant: "promotion",
                                                     type: "expressive",
@@ -6205,7 +6205,7 @@ let tP = {
                                 return (0, t.jsxs)(h.B, {
                                     gap: 16,
                                     children: [
-                                        (0, t.jsx)(e5.E, {
+                                        (0, t.jsx)(e8.E, {
                                             variant: "body-sm/semibold",
                                             color: "text-feedback-warning",
                                             children: "Work in progress: Countdown isn't ready for product code yet.",
@@ -6224,7 +6224,7 @@ let tP = {
                                 return (0, t.jsxs)(h.B, {
                                     gap: 24,
                                     children: [
-                                        (0, t.jsx)(e5.E, {
+                                        (0, t.jsx)(e8.E, {
                                             variant: "body-sm/semibold",
                                             color: "text-feedback-warning",
                                             children: "Work in progress: Countdown isn't ready for product code yet.",
@@ -6312,7 +6312,7 @@ let tP = {
                                                             gap: 8,
                                                             align: "center",
                                                             children: [
-                                                                (0, t.jsx)(e5.E, {
+                                                                (0, t.jsx)(e8.E, {
                                                                     variant: "body-md/semibold",
                                                                     color: "text-strong",
                                                                     children: "Winter Bundle",
@@ -6470,7 +6470,7 @@ let tP = {
                                     renderLayer: () =>
                                         (0, t.jsx)("div", {
                                             className: tO.q,
-                                            children: (0, t.jsx)(e5.E, {
+                                            children: (0, t.jsx)(e8.E, {
                                                 variant: "body-sm/medium",
                                                 children: "FloatingLayer Content",
                                             }),
@@ -6580,7 +6580,7 @@ let tP = {
                                                                         style: { width: "100%", height: "100%" },
                                                                     }),
                                                                 }),
-                                                                (0, t.jsx)(e5.E, {
+                                                                (0, t.jsx)(e8.E, {
                                                                     variant: "body-xs/normal",
                                                                     color: "text-subtle",
                                                                     className: a7.Pf,
