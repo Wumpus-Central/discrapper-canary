@@ -2,8 +2,8 @@
 var t = o(501661),
     n = o(774099),
     i = o(201264),
-    l = o(883950),
-    a = o(871186),
+    a = o(883950),
+    l = o(871186),
     s = o(240745);
 let d = ["oppobrowser", "realmebrowser", "heytapbrowser"],
     u = (function (e) {
@@ -13,10 +13,10 @@ let d = ["oppobrowser", "realmebrowser", "heytapbrowser"],
         return () => {
             let e = Date.now(),
                 i = Math.round(e / 1e3 / 60),
-                l = Math.round(e / 1e3 / 60 / 60);
+                a = Math.round(e / 1e3 / 60 / 60);
             return (
                 t.slot !== i && ((t.slot = i), (t.budgetUsed = 0)),
-                n.slot !== l && ((n.slot = l), (n.budgetUsed = 0)),
+                n.slot !== a && ((n.slot = a), (n.budgetUsed = 0)),
                 !!(t.budgetUsed < r) && (t.budgetUsed++, !!(n.budgetUsed < o)) && (n.budgetUsed++, !0)
             );
         };
@@ -27,7 +27,7 @@ window.DiscordSentry = (function () {
         dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: "discord_web-1c866d27913ec1472be9bb70974fcdbc46d1c923",
+        release: "discord_web-77ab88a1159a853619449eaa1c2ac37b61e03aa3",
         beforeSend: function (e) {
             var r;
             let o;
@@ -66,7 +66,7 @@ window.DiscordSentry = (function () {
         integrations: [
             n.L({ onerror: !0, onunhandledrejection: !0 }),
             i.F({ console: !0, dom: !0, fetch: !0, history: !0, sentry: !0, xhr: !0 }),
-            l.S(),
+            a.S(),
         ],
         ignoreErrors: [
             "EADDRINUSE",
@@ -99,9 +99,9 @@ window.DiscordSentry = (function () {
         ],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
     }),
-        a.NA("buildNumber", "675752"),
-        a.NA("builtAt", String("1794948729026")));
+        l.NA("buildNumber", "675755"),
+        l.NA("builtAt", String("1794948791289")));
     let e = window.GLOBAL_ENV.SENTRY_TAGS;
-    if (null != e && "object" == typeof e) for (let r in e) a.NA(r, e[r]);
+    if (null != e && "object" == typeof e) for (let r in e) l.NA(r, e[r]);
     return s;
 })();

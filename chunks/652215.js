@@ -3946,6 +3946,7 @@ var ih =
         (eP.QUEST_VIDEO_TIME_TO_FIRST_FRAME = "quest_video_time_to_first_frame"),
         (eP.QUEST_VIDEO_VOLUME_CHANGED = "quest_video_volume_changed"),
         (eP.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED = "quest_video_enrollment_retry_attempted"),
+        (eP.ATT_PROMPT_REQUESTED = "att_prompt_requested"),
         (eP.ATT_PROMPT_RESULT = "att_prompt_result"),
         (eP.AD_VIDEO_MODAL_CLOSED = "ad_video_modal_closed"),
         (eP.AD_VIDEO_SEGMENT_WATCHED = "ad_video_segment_watched"),
