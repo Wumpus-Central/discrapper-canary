@@ -327,108 +327,108 @@ let eu = {
         widthAt1x: 2560,
     },
     tex_base_01_icy: {
-        url: "https://cdn.discordapp.com/assets/content/175380cce0f63d36fa2d3fe2794a42bef264584529df6313a90fffd9f444642f.webp",
+        url: "https://cdn.discordapp.com/assets/content/214c4c8cd843cc9b7db38584271af549e503c30d2affabad5e6d84c323e45179.webp",
         riveId: 6945448,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_02_crimson: {
-        url: "https://cdn.discordapp.com/assets/content/096971854f9e84ca6d397d763d7a2df3e9a540419d68de1683e6264cf9771402.webp",
+        url: "https://cdn.discordapp.com/assets/content/7a6fa404d1ae0d9e719adb9a9041ec6109bf8f1789ab1357d9ca027212929c8a.webp",
         riveId: 6945450,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_03_chrome: {
-        url: "https://cdn.discordapp.com/assets/content/0f3f41debc5f0a2a7ff3a90a98e80d10e384b5e8680ece83caf0af3c2e941697.webp",
+        url: "https://cdn.discordapp.com/assets/content/4271d26712fde40e2578d6492c5c253dc1b147da9e574974d047a5bc8861852c.webp",
         riveId: 6945451,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_04_galactic: {
-        url: "https://cdn.discordapp.com/assets/content/b827dc2a60147f1fa3e33073a48ad7bc120ea6f7d0770eba06971e3a81c58239.webp",
+        url: "https://cdn.discordapp.com/assets/content/0cb313653524f0ab1f32ae15dd5ff500820a295f54b9877b519a9a8360720c74.webp",
         riveId: 6945452,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_05_forrest: {
-        url: "https://cdn.discordapp.com/assets/content/0996433f3f8486f168b8eab8841d099ad736c5c166e2ccf669f5e18536a1cd78.webp",
+        url: "https://cdn.discordapp.com/assets/content/453d50df90b3dfd068fc0f0c35a81a4b04b183207005fb7a8a0b0c84ec91a5f8.webp",
         riveId: 6945454,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_06_mighnight: {
-        url: "https://cdn.discordapp.com/assets/content/b5437c9682f5c273d412a0d5700d18b01ce4fd8dd41b5a2eb94f1ac70def0493.webp",
+        url: "https://cdn.discordapp.com/assets/content/47310f91aeacf2740fcaa93ec5909d4712a57fc8f74d25b2d386fedaf5165421.webp",
         riveId: 6945456,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_07_glacier: {
-        url: "https://cdn.discordapp.com/assets/content/fbba0d8f4b2ead815afb45bfa3e3bc529b87f0eb9fe6f116ead8617e99f73edb.webp",
+        url: "https://cdn.discordapp.com/assets/content/6feb0011773e7103a7db28dd22764155386f5135dc7f80592823deb6d515401b.webp",
         riveId: 7026923,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_08_orange: {
-        url: "https://cdn.discordapp.com/assets/content/861c67a712d842a269cf386d076d73c5b82bccf22f122e2ca58eb7b2f9f4910a.webp",
+        url: "https://cdn.discordapp.com/assets/content/e2bc9c46c3154b45b23488c9caa201eb5715b0d35a25847ae90aa0611649801a.webp",
         riveId: 6945457,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_09_pink: {
-        url: "https://cdn.discordapp.com/assets/content/fd2c2ca2b95d8332e0c6b71fcd09c01a433a3bb82e6007cde3a34f8eaf78118b.webp",
+        url: "https://cdn.discordapp.com/assets/content/0c217d3822a9a28b0f1c482d028b5764af541e03a044c9c755d689066944f59e.webp",
         riveId: 6945459,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_10_red: {
-        url: "https://cdn.discordapp.com/assets/content/6bbde6588b826c49df896ece1b5521ea3deb7693a0ab6a96414889f3cf86d214.webp",
+        url: "https://cdn.discordapp.com/assets/content/c7eb150801b9cfdea20e22cec192e39f308d3ce26c076043545eed04ff9dd632.webp",
         riveId: 6945460,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_11_cobalt: {
-        url: "https://cdn.discordapp.com/assets/content/54c48557922ef25abf2ae44ac30bb89fc18cf3e817a0dbb8cb999e7d4e88a25e.webp",
+        url: "https://cdn.discordapp.com/assets/content/be1e1c86c9ae36cb1e5d255f38ed2438a332666f35407c3fb9259b0912d23ace.webp",
         riveId: 6945462,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     "tex_base_12_x-ray": {
-        url: "https://cdn.discordapp.com/assets/content/0610ec83c1a63ee5d35bf3f33ef84e26123565100b1ebc2f7e553569f6389e21.webp",
+        url: "https://cdn.discordapp.com/assets/content/c5041017ae775909a614ca864fe8b0f4932ec57c3acbb9e1c57360ff3222fee6.webp",
         riveId: 6945463,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_13_liquid: {
-        url: "https://cdn.discordapp.com/assets/content/4a87c2dea61d07d6e560866b618d1a16741e1377cd50545e8aca5a5250657d40.webp",
+        url: "https://cdn.discordapp.com/assets/content/de6b6adb1348e91b928d53193179d797838ac425c1bea23e592208c60bec2584.webp",
         riveId: 6945465,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_14_butter: {
-        url: "https://cdn.discordapp.com/assets/content/56a1b0472868f73c93350c8a73127eda64771bd884c7f4b9fc7055527b07a1d4.webp",
+        url: "https://cdn.discordapp.com/assets/content/b9b76c830a1966450017238c2a506857bff49ee9e6684995f7461bd873e4d8f4.webp",
         riveId: 6945464,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_15_iridescent: {
-        url: "https://cdn.discordapp.com/assets/content/4ddd69337f5f51635742e70a344805df71109ba652ce467fa01582b99cb15ca4.webp",
+        url: "https://cdn.discordapp.com/assets/content/2eeb344ad5589f09df27ed729e5212ec9da26fc0517c424066038db963734ef9.webp",
         riveId: 6945468,
-        width: 833,
-        height: 1316,
+        width: 1309,
+        height: 2068,
         widthAt1x: 273,
     },
     tex_base_shadow: {
@@ -557,101 +557,101 @@ let eu = {
         height: 236,
     },
     tex_headwear_01_elvenHeadpiece: {
-        url: "https://cdn.discordapp.com/assets/content/41903840a79ad543f21fa9f40f1b7c076ac16a8f4a193f6951ce1bc8da21dbe4.webp",
+        url: "https://cdn.discordapp.com/assets/content/28b536f7927d3342a56e98def8d772fad9caf50a3e84c4b395b69311996fa1bc.webp",
         riveId: 6878398,
-        width: 546,
-        height: 231,
+        width: 884,
+        height: 374,
         widthAt1x: 182,
     },
     tex_headwear_02_headphones: {
-        url: "https://cdn.discordapp.com/assets/content/71d94c94a82c5357529c52d33facf7361cd733be7bb1908632aa1fd375bc8678.webp",
+        url: "https://cdn.discordapp.com/assets/content/eaddbf168d9c3299571d82b97821798842d31c12f9cd41f40ea41d3c16137428.webp",
         riveId: 7012013,
-        width: 880,
-        height: 495,
+        width: 1472,
+        height: 828,
         widthAt1x: 288,
     },
     tex_headwear_03_bananaPeel: {
-        url: "https://cdn.discordapp.com/assets/content/fe15e02141e24b2e0b3cc54e4ca967545e8737345d35f24fc843487b2f07d52f.webp",
+        url: "https://cdn.discordapp.com/assets/content/f7927f8ad1872abbfb8f446df5d70c2374465a17ee7ddb8f696f048fceb00ea9.webp",
         riveId: 6944187,
-        width: 952,
-        height: 567,
+        width: 1496,
+        height: 891,
         widthAt1x: 312,
     },
     tex_headwear_04_piercings: {
-        url: "https://cdn.discordapp.com/assets/content/cab0de0a14c34a595a7773cb81c56af3e90603b2b9760723cde97f61a161922a.webp",
+        url: "https://cdn.discordapp.com/assets/content/798f9fa0977bad98ba128edf786dac742e3e524ee42db1e2ccdc2badefb01be1.webp",
         riveId: 6945559,
-        width: 322,
-        height: 280,
+        width: 529,
+        height: 460,
         widthAt1x: 106,
     },
     tex_headwear_05_headband: {
-        url: "https://cdn.discordapp.com/assets/content/c9167315bc86f8ac43ae9777d38e8daed9a7beff8390e2b664ebf738a6982404.webp",
+        url: "https://cdn.discordapp.com/assets/content/f17a9b3a038ff91e1227e415d533aa842b76be37ce631cd29bd435030543bc2c.webp",
         riveId: 6943812,
-        width: 1022,
-        height: 742,
+        width: 1679,
+        height: 1219,
         widthAt1x: 335,
     },
     tex_headwear_06_sunGlasses: {
-        url: "https://cdn.discordapp.com/assets/content/0a1c73f81e29ad53e8889ae38ba6b3a5a16e4d7dda9eb4b0e070f6dc562e593f.webp",
+        url: "https://cdn.discordapp.com/assets/content/68df4258904c28d5690db05450566aa72ee50b8014200022ece682608e34edb1.webp",
         riveId: 6878347,
-        width: 819,
-        height: 350,
+        width: 1287,
+        height: 550,
         widthAt1x: 269,
     },
     tex_headwear_07_backwardHat: {
-        url: "https://cdn.discordapp.com/assets/content/0f6576c50446353959d6063ce87a702b12e6983e4e2d4abbe1382e4e7d79dd9b.webp",
+        url: "https://cdn.discordapp.com/assets/content/b14d1db9b5c859095e0ad401e0446c41c33302ecb43781ce0b370c7bf4d74b3f.webp",
         riveId: 6878399,
-        width: 861,
-        height: 420,
+        width: 1394,
+        height: 680,
         widthAt1x: 287,
     },
     tex_headwear_08_leaf: {
-        url: "https://cdn.discordapp.com/assets/content/ab8aa59e898f3a281f81a8d6703355c32debba8a5879719121141baa3dc8aca9.webp",
+        url: "https://cdn.discordapp.com/assets/content/0126e4fc4942fd87a5d7324105a6a1aa21a343a78388539d088ec73ad7364e45.webp",
         riveId: 6943794,
-        width: 681,
-        height: 227,
+        width: 1137,
+        height: 379,
         widthAt1x: 228,
     },
     tex_headwear_09_fire: {
-        url: "https://cdn.discordapp.com/assets/content/52c3472e9e5c5d0923e77b50358d3e71ab1e40aab8df78dba73163d2c3dea572.webp",
+        url: "https://cdn.discordapp.com/assets/content/d377f8a7de8828800cd314e34dc0941508d4cf3f549532a90d0996ce58963937.webp",
         riveId: 6878288,
-        width: 910,
-        height: 574,
+        width: 1495,
+        height: 943,
         widthAt1x: 298,
     },
     tex_headwear_10_halo: {
-        url: "https://cdn.discordapp.com/assets/content/d7a51adc59b09eb652d8dd473804dd9e369966eeeb694abae3d801215d8d4f93.webp",
+        url: "https://cdn.discordapp.com/assets/content/b6f7eb1bc7855139e3f66c67529fd90d0a1a4fe995f24cb14b1b2e2623e4436d.webp",
         riveId: 6878456,
-        width: 714,
-        height: 322,
+        width: 1173,
+        height: 529,
         widthAt1x: 234,
     },
     tex_headwear_11_brain: {
-        url: "https://cdn.discordapp.com/assets/content/cf6a8c75cfbaa0bf81ea0cce2a932dbc265916d6f0f572b3e8c63b4093778bf4.webp",
+        url: "https://cdn.discordapp.com/assets/content/9e0e9f921f755f35bef890502dc0cf9038d39db1f0d3d620b16ece52b930dd87.webp",
         riveId: 6878244,
-        width: 414,
-        height: 276,
+        width: 690,
+        height: 460,
         widthAt1x: 138,
     },
     tex_headwear_12_trafficCone: {
-        url: "https://cdn.discordapp.com/assets/content/9d7f0fa78ba9217409be309c1b7fddd20503251292aaa58c06fecc3b68741abb.webp",
+        url: "https://cdn.discordapp.com/assets/content/903cce4ef4e1c6ad24851478bf625a36a906bb82882707616879e958edb531f2.webp",
         riveId: 6878330,
-        width: 420,
-        height: 399,
+        width: 680,
+        height: 646,
         widthAt1x: 140,
     },
     tex_headwear_13_teddyBeanie: {
-        url: "https://cdn.discordapp.com/assets/content/2bc458cf90e244a2f272b41461945fde86846111276a505f56016ee058022c7d.webp",
+        url: "https://cdn.discordapp.com/assets/content/43d66a791794137f8c58f316695969c80475667f166c8a5400a72bb9a42594bc.webp",
         riveId: 6878395,
-        width: 910,
-        height: 532,
+        width: 1495,
+        height: 874,
         widthAt1x: 298,
     },
     tex_headwear_14_crown: {
-        url: "https://cdn.discordapp.com/assets/content/48d7f40db34c7c16aafa68a525df464c88a847ba757c4e720943d1de33efe210.webp",
+        url: "https://cdn.discordapp.com/assets/content/dd5b74e9f06b4b6ed8297ddb20b171f72266ed3984ea3a183345320a568cc80e.webp",
         riveId: 6878327,
-        width: 602,
-        height: 455,
+        width: 946,
+        height: 715,
         widthAt1x: 197,
     },
     tex_none: {
@@ -661,703 +661,703 @@ let eu = {
         height: 1,
     },
     tex_outfit_01_baddie: {
-        url: "https://cdn.discordapp.com/assets/content/a638356d8b217bb4c38954a53b644478006a329bf7cfbf9fb7019685e281ebab.webp",
-        riveId: 6942551,
-        width: 707,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/20f8d8a630fb70c6fb0cb8daea1e3a2ecb1a2d8633610fa6ea472924638dcbda.webp",
+        riveId: 7373394,
+        width: 1111,
+        height: 836,
         widthAt1x: 232,
     },
     tex_outfit_01_baddie_monochrome: {
-        url: "https://cdn.discordapp.com/assets/content/181b04511ce9a18af59375d77ae1a971c1d78d7739ad38fc9ba82b644d80bc45.webp",
-        riveId: 6942552,
-        width: 707,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/6d472ee3a9dfa1df1ad56ff76d2c01809de28ddc1a57f7e70e3e5ecdefdd34c5.webp",
+        riveId: 7373045,
+        width: 1111,
+        height: 836,
         widthAt1x: 232,
     },
     tex_outfit_01_baddie_pastel: {
-        url: "https://cdn.discordapp.com/assets/content/cb13824a08fd2eb0115bf56399c4ba1ef9aaa4aaa44a3dc551270ed5e7885250.webp",
-        riveId: 6942562,
-        width: 707,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/20928b435b0ce3f20fa899e27eec24efa6126112de3536ffd5a7bfba3cb513e0.webp",
+        riveId: 7373052,
+        width: 1111,
+        height: 836,
         widthAt1x: 232,
     },
     tex_outfit_01_baddie_sunset: {
-        url: "https://cdn.discordapp.com/assets/content/ec0e423280609f7f963a3ce34d8962971f4a6adee53cd95f8412d11c4f2d8603.webp",
-        riveId: 6942559,
-        width: 707,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/4991a68749638a165645df2325636ef0cf900c84f384b711dc9169a202dbf458.webp",
+        riveId: 7373057,
+        width: 1111,
+        height: 836,
         widthAt1x: 232,
     },
     tex_outfit_01_baddie_violet: {
-        url: "https://cdn.discordapp.com/assets/content/0f09a73bb81b7dbc72de42f2bb6e0c8a80d48cd00426636cfe55be210a87cfe1.webp",
-        riveId: 6942557,
-        width: 707,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/0d7c10a84fe50348366c82a3dd2abdbcc278f821580ed07bf62430ebb4a7f164.webp",
+        riveId: 7373035,
+        width: 1111,
+        height: 836,
         widthAt1x: 232,
     },
     tex_outfit_02_trash: {
-        url: "https://cdn.discordapp.com/assets/content/bfaacc2bc71388a8030b9b93dbf1aff45321010c2fcd35c89a79db4aa85cafde.webp",
-        riveId: 6923673,
-        width: 938,
-        height: 644,
+        url: "https://cdn.discordapp.com/assets/content/dd2dd4c0bd3ac506189e11e973b0a7a6b6c08bdcafaf6d0dbc439620e2863bad.webp",
+        riveId: 7373757,
+        width: 1541,
+        height: 1058,
         widthAt1x: 308,
     },
     tex_outfit_02_trash_blackout: {
-        url: "https://cdn.discordapp.com/assets/content/67c8fd9a93a09b7b1d3161d24bb84914ef8536c7525cdd5bbd70748e61c6fae6.webp",
-        riveId: 6923652,
-        width: 938,
-        height: 644,
+        url: "https://cdn.discordapp.com/assets/content/212f4651cd2d18fa928ea3bf93210331b35609c397e62b80623920ad6d756f58.webp",
+        riveId: 7373082,
+        width: 1541,
+        height: 1058,
         widthAt1x: 308,
     },
     tex_outfit_02_trash_bubblegum: {
-        url: "https://cdn.discordapp.com/assets/content/75e4d1da85059643f20d2c00b8e0166b1277aa6d507b3009b357f2879dba9f1c.webp",
-        riveId: 6923653,
-        width: 938,
-        height: 644,
+        url: "https://cdn.discordapp.com/assets/content/457b66bdf129645e59f57604f8393ea0074134eba40847805e3fdcdb47da1761.webp",
+        riveId: 7373086,
+        width: 1541,
+        height: 1058,
         widthAt1x: 308,
     },
     tex_outfit_02_trash_caution: {
-        url: "https://cdn.discordapp.com/assets/content/8cb44780aa8185c4aa6d36c21c0708fda1f686e97a397d66e26dd3433f9f1d45.webp",
-        riveId: 6923654,
-        width: 938,
-        height: 644,
+        url: "https://cdn.discordapp.com/assets/content/0fa277da73c958cfc728a114552844dce98ed9a6caa564940fc6119c8228e5cf.webp",
+        riveId: 7373096,
+        width: 1541,
+        height: 1058,
         widthAt1x: 308,
     },
     tex_outfit_02_trash_toxic: {
-        url: "https://cdn.discordapp.com/assets/content/f3818ad8b69a62ff626171cc359651545d0706bb460195cc4989ab38e42dc777.webp",
-        riveId: 6923655,
-        width: 938,
-        height: 644,
+        url: "https://cdn.discordapp.com/assets/content/1229e33632a8d762467c7f84937ccf706fd2c1e3534f348da2837623e714d609.webp",
+        riveId: 7373119,
+        width: 1541,
+        height: 1058,
         widthAt1x: 308,
     },
     tex_outfit_03_streamer: {
-        url: "https://cdn.discordapp.com/assets/content/b240e82978b8b05a1d2d6f52a5357e15c06d1b47f8a3d3aa02e9a906ebabd553.webp",
-        riveId: 7084204,
-        width: 609,
-        height: 588,
+        url: "https://cdn.discordapp.com/assets/content/cc2068e79715b583b34b773978af15d7d010d01882fc7c126145643c47a0f903.webp",
+        riveId: 7373758,
+        width: 986,
+        height: 952,
         widthAt1x: 203,
     },
     tex_outfit_03_streamer_flames: {
-        url: "https://cdn.discordapp.com/assets/content/38523b655ee3b79ed747a764e14a70d9d446130a1bb5185f8010ecbe6bf4ea4a.webp",
-        riveId: 7026918,
-        width: 609,
-        height: 588,
+        url: "https://cdn.discordapp.com/assets/content/fb878dec02847447bc56cab636f0dc7c884b63ba8d38d400aaebe20a5155a4c1.webp",
+        riveId: 7373207,
+        width: 986,
+        height: 952,
         widthAt1x: 203,
     },
     tex_outfit_03_streamer_smiley: {
-        url: "https://cdn.discordapp.com/assets/content/ed21145fc06784143b6bba1470226b087ed720b49565abf6f25fc3d90055a6db.webp",
-        riveId: 7026919,
-        width: 609,
-        height: 588,
+        url: "https://cdn.discordapp.com/assets/content/6fcd7ec5df2282eab668a72dca12267101c0df4eabc997c75f4c9c82f00e8e60.webp",
+        riveId: 7373229,
+        width: 986,
+        height: 952,
         widthAt1x: 203,
     },
     tex_outfit_03_streamer_stripes: {
-        url: "https://cdn.discordapp.com/assets/content/debe13ae8d3734021e6a2945d61e131ea3375f8d479611616ae71b59f2beb577.webp",
-        riveId: 7026920,
-        width: 609,
-        height: 588,
+        url: "https://cdn.discordapp.com/assets/content/9c037133af3a11e12c363d4c2cab916ac40830cea2a8f32e8a8f068b5e541fa1.webp",
+        riveId: 7373237,
+        width: 986,
+        height: 952,
         widthAt1x: 203,
     },
     tex_outfit_03_streamer_vintage: {
-        url: "https://cdn.discordapp.com/assets/content/2c2bb5198cba26001c893681dd90280ea80a6a425b493073477cba643b9ace92.webp",
-        riveId: 7026922,
-        width: 609,
-        height: 588,
+        url: "https://cdn.discordapp.com/assets/content/5066ee834b18f4abe6b06c3737342a44618c29c65646c8363c404db8bb7b274e.webp",
+        riveId: 7373246,
+        width: 986,
+        height: 952,
         widthAt1x: 203,
     },
     tex_outfit_04_camper: {
-        url: "https://cdn.discordapp.com/assets/content/f768da4bac88bb093b186306433d7e6b3db833612d0453a9fb68a55cfc419077.webp",
-        riveId: 6879281,
-        width: 588,
-        height: 511,
+        url: "https://cdn.discordapp.com/assets/content/1fff16ebfeab6fafd6db836f5188a9dcefa1aa43f295e6b3ab9c093bb7b62fb0.webp",
+        riveId: 7373760,
+        width: 924,
+        height: 803,
         widthAt1x: 193,
     },
     tex_outfit_04_camper_amber: {
-        url: "https://cdn.discordapp.com/assets/content/a9744591939d82efb6d53435ad0af0d93fd0bcc38db8691ae69ed7b3780d3e77.webp",
-        riveId: 6945578,
-        width: 588,
-        height: 511,
+        url: "https://cdn.discordapp.com/assets/content/96c1393dd14d030e54e97b5411994a5d407868bf441d64c6ec386d230379e7e0.webp",
+        riveId: 7373265,
+        width: 924,
+        height: 803,
         widthAt1x: 193,
     },
     tex_outfit_04_camper_glamp: {
-        url: "https://cdn.discordapp.com/assets/content/1c63db3e687f68960444f30aa5c2bddd7a6ba467e197063e1b7506ba701ec0c7.webp",
-        riveId: 6945579,
-        width: 588,
-        height: 511,
+        url: "https://cdn.discordapp.com/assets/content/df1d8b139641b52ace6730d6b7be75d328ee698c48e3103e5e07e49c26889f49.webp",
+        riveId: 7373268,
+        width: 924,
+        height: 803,
         widthAt1x: 193,
     },
     tex_outfit_04_camper_plaid: {
-        url: "https://cdn.discordapp.com/assets/content/4c0deb2d95e0dcab1910e294456dcc62cd07be606edb90b1942b387781ee3696.webp",
-        riveId: 6945580,
-        width: 588,
-        height: 511,
+        url: "https://cdn.discordapp.com/assets/content/6f168b41a13bba2a003a0ad30a9a8ed91b9cde963e65f1673775860d01a6804c.webp",
+        riveId: 7373269,
+        width: 924,
+        height: 803,
         widthAt1x: 193,
     },
     tex_outfit_04_camper_swamp: {
-        url: "https://cdn.discordapp.com/assets/content/e25eb49b4710edffac760cf611a2c335df7db7ba8b6ff4db791b67353215b274.webp",
-        riveId: 6945581,
-        width: 588,
-        height: 511,
+        url: "https://cdn.discordapp.com/assets/content/e6c7749c841cc7a25843dad45e4e3d80e99e4b09e0b5c5864edfd4584ae93583.webp",
+        riveId: 7373270,
+        width: 924,
+        height: 803,
         widthAt1x: 193,
     },
     tex_outfit_05_athlete: {
-        url: "https://cdn.discordapp.com/assets/content/1b58451c4351d3ec6d4dfe2ecf65ab82983872d35f06642b126fa22aa8704674.webp",
-        riveId: 7000298,
-        width: 784,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/21da90497aa6b2c4ab790c0008db1f1465a5c9db4eb17055e3198b55ccd1e7f4.webp",
+        riveId: 7373767,
+        width: 1288,
+        height: 874,
         widthAt1x: 252,
     },
     tex_outfit_05_athlete_blocked: {
-        url: "https://cdn.discordapp.com/assets/content/a9210c5be3d3c0672856ac2d91b53bceaddcb4b30f7ba9e477ec0a941c0006e8.webp",
-        riveId: 7000296,
-        width: 784,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/cce0b4494599aa8920d011937b56131b85364b9b9be41712c3223ef55128a550.webp",
+        riveId: 7373272,
+        width: 1288,
+        height: 874,
         widthAt1x: 252,
     },
     tex_outfit_05_athlete_checkered: {
-        url: "https://cdn.discordapp.com/assets/content/f04c24b3330c703e0f9e012ffd4e50680c8f62e0e73df713450cf3268b60bb3d.webp",
-        riveId: 7000295,
-        width: 784,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/f02e0c0748217a994ac0b399eaae937961c78e45a8b3a0b813d0dd4decac8a12.webp",
+        riveId: 7373273,
+        width: 1288,
+        height: 874,
         widthAt1x: 252,
     },
     tex_outfit_05_athlete_faded: {
-        url: "https://cdn.discordapp.com/assets/content/b38e28b84e4e9b68d51837e09272135272e3dbb9ff54adedef5f646518a11a59.webp",
-        riveId: 7000297,
-        width: 784,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/d8c403eaca575fd81fbe357d76f288fc73c498899cac70b5d16f4aeaf5b36759.webp",
+        riveId: 7373278,
+        width: 1288,
+        height: 874,
         widthAt1x: 252,
     },
     tex_outfit_05_athlete_lined: {
-        url: "https://cdn.discordapp.com/assets/content/a6b94af15440d8554f7a1acaffbff75a38c9ad2db2eb8197b69a972562e0b8db.webp",
-        riveId: 7000294,
-        width: 784,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/f969005f0e21cc09b3c29f9867c7cdca1a406623f2669e1fdf742551068ccaf0.webp",
+        riveId: 7373295,
+        width: 1288,
+        height: 874,
         widthAt1x: 252,
     },
     tex_outfit_06_cowpoke: {
-        url: "https://cdn.discordapp.com/assets/content/5d82863d31a7e305f2fad3df4c27faf9155f851b4ca35f812c21b47a14298dda.webp",
-        riveId: 6879600,
-        width: 826,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/961bad1b5c59dd58316636ce47d5e740ce68245bc16cafcc5f2233791adaad75.webp",
+        riveId: 7373768,
+        width: 1357,
+        height: 874,
         widthAt1x: 271,
     },
     tex_outfit_06_cowpoke_blush: {
-        url: "https://cdn.discordapp.com/assets/content/6db99f429cf7bc5dd70523fa8ca891042ffafc4455065d8a7d4865edbbe25568.webp",
-        riveId: 6945584,
-        width: 826,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/b98eb8bdaa4e4d27e13b5bcea6a6d0ab181066058770ae4d6217c2d3329ae87a.webp",
+        riveId: 7373303,
+        width: 1357,
+        height: 874,
         widthAt1x: 271,
     },
     tex_outfit_06_cowpoke_denim: {
-        url: "https://cdn.discordapp.com/assets/content/23c34abef900b338b47a6072454b8e02108a9a0f40835c37e01bbf0cfb12e70f.webp",
-        riveId: 6945585,
-        width: 826,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/4391125bba3639f903db823d4a7c077d5bec530f6baa20b4905d519495805097.webp",
+        riveId: 7373324,
+        width: 1357,
+        height: 874,
         widthAt1x: 271,
     },
     tex_outfit_06_cowpoke_onyx: {
-        url: "https://cdn.discordapp.com/assets/content/e5b483670bcb7a90f7f9deba1aed475278d29f78baf3dc6ef384082e7a643f22.webp",
-        riveId: 6945586,
-        width: 826,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/dfcdf8fcab5f44c6c6333cb897894ed190d87176213b36a529a8acd2abac2517.webp",
+        riveId: 7373360,
+        width: 1357,
+        height: 874,
         widthAt1x: 271,
     },
     tex_outfit_06_cowpoke_steel: {
-        url: "https://cdn.discordapp.com/assets/content/73abc8bb1ebe0cc1eb46c4a657995cb9075331dd454f923233ea94bd3ceeeef6.webp",
-        riveId: 6945587,
-        width: 826,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/75d84bcc6314cc16dd3d5fee7c45680b6e4820db09083f84b206eea67274c957.webp",
+        riveId: 7373396,
+        width: 1357,
+        height: 874,
         widthAt1x: 271,
     },
     tex_outfit_07_goth: {
-        url: "https://cdn.discordapp.com/assets/content/5b1aec6182980ea56babc5ed3b360af43cda05c19b20c8cad00f19fb8216271d.webp",
-        riveId: 6936838,
-        width: 875,
-        height: 518,
+        url: "https://cdn.discordapp.com/assets/content/818260b14a9faa46494a1b2c72b382c62d8efef0da394f14979ddb2023145a87.webp",
+        riveId: 7373769,
+        width: 1375,
+        height: 814,
         widthAt1x: 287,
     },
     tex_outfit_07_goth_raven: {
-        url: "https://cdn.discordapp.com/assets/content/cec7dc286b8b32389c941e6bcd7f267a93dcbfe6d2dc830ec6ce1ceeba33dcb7.webp",
-        riveId: 6936841,
-        width: 875,
-        height: 518,
+        url: "https://cdn.discordapp.com/assets/content/c2327847cdbe1c4687c23a9941c6fa325eafb64b4efd904e92936d0391334d39.webp",
+        riveId: 7373444,
+        width: 1375,
+        height: 814,
         widthAt1x: 287,
     },
     tex_outfit_07_goth_serpent: {
-        url: "https://cdn.discordapp.com/assets/content/d79e9bed36e6765595541997b85cbe5ca0d274b23027a263b0eb51b494b1e942.webp",
-        riveId: 6936840,
-        width: 875,
-        height: 518,
+        url: "https://cdn.discordapp.com/assets/content/d162b30e51d8fa96779badf221acc9e7c318b062422e02746812368e584f6b1a.webp",
+        riveId: 7373483,
+        width: 1375,
+        height: 814,
         widthAt1x: 287,
     },
     tex_outfit_07_goth_siren: {
-        url: "https://cdn.discordapp.com/assets/content/d17d73be0b6ea5cb388a50a555ee4f6ccf2efc9eb9d8757225c3e28c40a82bfb.webp",
-        riveId: 6936839,
-        width: 875,
-        height: 518,
+        url: "https://cdn.discordapp.com/assets/content/5dbb885fcfdcc6f75086540e721f8b5f78687b2293c99797a19196d58c7ab929.webp",
+        riveId: 7373523,
+        width: 1375,
+        height: 814,
         widthAt1x: 287,
     },
     tex_outfit_07_goth_vamp: {
-        url: "https://cdn.discordapp.com/assets/content/78470b15e9af123335c2f084b6ec7a2992cf507628c3acff53abf0046791d2e5.webp",
-        riveId: 6936842,
-        width: 875,
-        height: 518,
+        url: "https://cdn.discordapp.com/assets/content/5b9ba9474a4d2f338080a20450344eed740c5442e6c7d86e5bb29bb3f8be3932.webp",
+        riveId: 7373540,
+        width: 1375,
+        height: 814,
         widthAt1x: 287,
     },
     tex_outfit_08_astronaut: {
-        url: "https://cdn.discordapp.com/assets/content/396996658c046202d66d9358672064ef2a2b2b71491e89fa41f0633a2715db53.webp",
-        riveId: 6879222,
-        width: 609,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/ed6b03979ec380fab042dc166ff04edffa5fc9380368a9ba43e4d11933654d03.webp",
+        riveId: 7373770,
+        width: 986,
+        height: 884,
         widthAt1x: 203,
     },
     tex_outfit_08_astronaut_cosmic: {
-        url: "https://cdn.discordapp.com/assets/content/a441fbd411bfbec0ee7cee5938ca43212d1aa3969a79c5791582b7643da077c5.webp",
-        riveId: 6945588,
-        width: 609,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/51f350adf9002746616dc3c44343e42d5e0799be48ca370e7c41d4bb515dc24b.webp",
+        riveId: 7373571,
+        width: 986,
+        height: 884,
         widthAt1x: 203,
     },
     tex_outfit_08_astronaut_martian: {
-        url: "https://cdn.discordapp.com/assets/content/cd6399f8dc97eacf112200bbd1bc96e6efa50b7f34ad8ba0aef4d5de90474626.webp",
-        riveId: 6945589,
-        width: 609,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/019a03969ed63c46a42808883e0622999cf74b88c41f8d507bc92c0288501f6a.webp",
+        riveId: 7373578,
+        width: 986,
+        height: 884,
         widthAt1x: 203,
     },
     tex_outfit_08_astronaut_solar: {
-        url: "https://cdn.discordapp.com/assets/content/f9cf559f0b9cfe1af9098661e2d6004099db00bd471e453a2087fba3448cbaa7.webp",
-        riveId: 6945590,
-        width: 609,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/c6f109186d9f124448b4c111d67d3938fa9c13cdde4e794695d8cd6f3259c301.webp",
+        riveId: 7373580,
+        width: 986,
+        height: 884,
         widthAt1x: 203,
     },
     tex_outfit_08_astronaut_stardust: {
-        url: "https://cdn.discordapp.com/assets/content/5a09ce15b42a0ae2f9e0b54a341c89acc7d1ded744b656c5c8bab3c0ed1af923.webp",
-        riveId: 6945591,
-        width: 609,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/252f5346b07056f111e37a4386407783b5891ffc622d7c387196a1825714bad7.webp",
+        riveId: 7373583,
+        width: 986,
+        height: 884,
         widthAt1x: 203,
     },
     tex_outfit_09_jester: {
-        url: "https://cdn.discordapp.com/assets/content/fe2f547f7f6ec7c45bcba23839b29024fdd6d698a548101431b966ad7940a69a.webp",
+        url: "https://cdn.discordapp.com/assets/content/17c57891f2a18f8d67656de287e73446a7884b9cb18391ebf0ee941ba23313a7.webp",
         riveId: 6998778,
-        width: 658,
-        height: 546,
+        width: 1081,
+        height: 897,
         widthAt1x: 216,
     },
     tex_outfit_09_jester_carnival: {
-        url: "https://cdn.discordapp.com/assets/content/c53941011e11c3b8724339b34432a6c60d6fccc955b4b5bd3944f26bc7e1f5fe.webp",
+        url: "https://cdn.discordapp.com/assets/content/03ca1d6fb7dd56e4dede50b26d3d9bb1b5675c64a66df2b782c325db574f6089.webp",
         riveId: 6998764,
-        width: 658,
-        height: 546,
+        width: 1081,
+        height: 897,
         widthAt1x: 216,
     },
     tex_outfit_09_jester_confetti: {
-        url: "https://cdn.discordapp.com/assets/content/e2d3ddef9dd87b3e3df01cf1c4d57e45cebdfbd93b2fba28f77b2b50612498d7.webp",
-        riveId: 6998766,
-        width: 658,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/0f1ea523a6ffbbaff905cf55c1fd8cf53ec7bb0292edd8e25a23d2fad2a4a758.webp",
+        riveId: 7373862,
+        width: 1081,
+        height: 897,
         widthAt1x: 216,
     },
     tex_outfit_09_jester_nightfall: {
-        url: "https://cdn.discordapp.com/assets/content/f303b179db0856f11658b6b3244d4175637248d757786e8d8917b8147ab53bb3.webp",
-        riveId: 6998768,
-        width: 658,
-        height: 546,
+        url: "https://cdn.discordapp.com/assets/content/ad1a5bbca04ec8809e67230269b592f3619066068e675e570569f1c94eb10d7a.webp",
+        riveId: 7373867,
+        width: 1081,
+        height: 897,
         widthAt1x: 216,
     },
     tex_outfit_09_jester_sunrise: {
-        url: "https://cdn.discordapp.com/assets/content/3c47f48bd62a43207b4ee2e94df00b917d303bb4159eeda7230e58f30894f918.webp",
+        url: "https://cdn.discordapp.com/assets/content/b307e09c753d5efaa19f2734b7afbb91578bcd014fc243b1f41b513759f7c8bb.webp",
         riveId: 6998772,
-        width: 658,
-        height: 546,
+        width: 1081,
+        height: 897,
         widthAt1x: 216,
     },
     tex_outfit_10_traveler: {
-        url: "https://cdn.discordapp.com/assets/content/65ae90f06f97ff09dda7cd3a1909388a4ad9a8b74f13f6946595026bf13c1ad1.webp",
-        riveId: 6879283,
-        width: 602,
-        height: 525,
+        url: "https://cdn.discordapp.com/assets/content/7b27c78fd92c6f5ee45744f0f2d7c6641ad60ecd58331ddbc0be926c4c1e308c.webp",
+        riveId: 7373772,
+        width: 946,
+        height: 825,
         widthAt1x: 197,
     },
     tex_outfit_10_traveler_chrono: {
-        url: "https://cdn.discordapp.com/assets/content/145beced8bfbd0fd382954f80601143eb74673bf1670c0ff6354e67c9f113e68.webp",
-        riveId: 6945598,
-        width: 602,
-        height: 525,
+        url: "https://cdn.discordapp.com/assets/content/43bd34a6e48ace56d62f288f9d4beac9dee012edbc804407c1dfeb358c35e67d.webp",
+        riveId: 7373869,
+        width: 946,
+        height: 825,
         widthAt1x: 197,
     },
     tex_outfit_10_traveler_haze: {
-        url: "https://cdn.discordapp.com/assets/content/7a8e8d172fc6c799661fb9b434b66e9003fd795f7b29d46881476e6f6a5245d5.webp",
-        riveId: 6945599,
-        width: 602,
-        height: 525,
+        url: "https://cdn.discordapp.com/assets/content/7b1f38974858e752182baf26ee2a1f89bcd28bb3566d80ba0b99f61e466f6e93.webp",
+        riveId: 7373871,
+        width: 946,
+        height: 825,
         widthAt1x: 197,
     },
     tex_outfit_10_traveler_moss: {
-        url: "https://cdn.discordapp.com/assets/content/d64d37450d7389fd3251911ac4c8e4ec073f023044cb38e8ca0811ed742c04b7.webp",
+        url: "https://cdn.discordapp.com/assets/content/1ce8ee2ec7b93ee35b3af711c33eede3ce50f07172facf6717c88f1091f5e504.webp",
         riveId: 6945600,
-        width: 602,
-        height: 525,
+        width: 946,
+        height: 825,
         widthAt1x: 197,
     },
     tex_outfit_10_traveler_umber: {
-        url: "https://cdn.discordapp.com/assets/content/bcecdc6f144b54dd85e5bd8178cb72efdd2d010743d562b126c08611344c894e.webp",
-        riveId: 6945602,
-        width: 602,
-        height: 525,
+        url: "https://cdn.discordapp.com/assets/content/c77f5b341cc51464d2078950802b3b458317ec72cb61070a7f28f447eb5147fb.webp",
+        riveId: 7373876,
+        width: 946,
+        height: 825,
         widthAt1x: 197,
     },
     tex_outfit_11_mage: {
-        url: "https://cdn.discordapp.com/assets/content/8fcdb12bd45a5543e63beebc742249eef13b38e6070c8a62f65a34ba0a3d96dd.webp",
-        riveId: 6879170,
-        width: 714,
-        height: 581,
+        url: "https://cdn.discordapp.com/assets/content/ada85d8e4f4add7e398c5b204c2a8255946766289428c2a2dd36c773831f484f.webp",
+        riveId: 7373774,
+        width: 1122,
+        height: 913,
         widthAt1x: 234,
     },
     tex_outfit_11_mage_dusk: {
-        url: "https://cdn.discordapp.com/assets/content/72a6fd56a3bb2edde462ef0aa8ed197f5e4118703d7056bc967daf94cbb855a3.webp",
-        riveId: 6945603,
-        width: 714,
-        height: 581,
+        url: "https://cdn.discordapp.com/assets/content/a87f26ba1f84a141e6f2991f47a1ef781389033ab54928ff511e5355e84ed6ad.webp",
+        riveId: 7373888,
+        width: 1122,
+        height: 913,
         widthAt1x: 234,
     },
     tex_outfit_11_mage_shadow: {
-        url: "https://cdn.discordapp.com/assets/content/739ea8b814a59fe6fb3c6db9104032d8172e45906a95e75c302f56b9e9449c98.webp",
-        riveId: 6945604,
-        width: 714,
-        height: 581,
+        url: "https://cdn.discordapp.com/assets/content/396531678d1213980197c3d4ae3da6fa4a24ce300e2c23dfda509522d768f3b7.webp",
+        riveId: 7373892,
+        width: 1122,
+        height: 913,
         widthAt1x: 234,
     },
     tex_outfit_11_mage_wildwood: {
-        url: "https://cdn.discordapp.com/assets/content/06226eed0688fb73b26f0a573f6a5238a7f97ab84cf59ed0f86e953c155a0e49.webp",
-        riveId: 6945606,
-        width: 714,
-        height: 581,
+        url: "https://cdn.discordapp.com/assets/content/8720408e9648dc12a30225c43f7331bf40bd97f2bef32efd34ad73757a8a404a.webp",
+        riveId: 7373907,
+        width: 1122,
+        height: 913,
         widthAt1x: 234,
     },
     tex_outfit_11_mage_winter: {
-        url: "https://cdn.discordapp.com/assets/content/c8ccb36e839423e9c76ecdfecf0bf7d41ac9ad06bf7f79638ebde449ef181f71.webp",
-        riveId: 6945607,
-        width: 714,
-        height: 581,
+        url: "https://cdn.discordapp.com/assets/content/3ec4b4f145367c3559af97c23f2d2cbcbdfb3d45e2533e2f9357b103871e66fe.webp",
+        riveId: 7373914,
+        width: 1122,
+        height: 913,
         widthAt1x: 234,
     },
     tex_outfit_12_mech: {
-        url: "https://cdn.discordapp.com/assets/content/285eb1fe0b9bf15ae3c9687bc769e6a53da54c14de1e59cc5c19be6e1ef5ee33.webp",
+        url: "https://cdn.discordapp.com/assets/content/374dcefa8abedf0253ab2cb7cb2c0fa0970e4404a61529875669980364acc30a.webp",
         riveId: 6879169,
-        width: 651,
-        height: 532,
+        width: 1023,
+        height: 836,
         widthAt1x: 214,
     },
     tex_outfit_12_mech_aero: {
-        url: "https://cdn.discordapp.com/assets/content/90b53362edd3a1db609acb1775a5dcc7c18db8db186881391328b217adce63e7.webp",
-        riveId: 6945608,
-        width: 651,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/0187e673dfe835f39b3e0fc5c8895bc49a41df33e532d6184549031f9df173fe.webp",
+        riveId: 7373915,
+        width: 1023,
+        height: 836,
         widthAt1x: 214,
     },
     tex_outfit_12_mech_sandstorm: {
-        url: "https://cdn.discordapp.com/assets/content/66c6c521ebe635d15c9213cc1422cbb76f9c1bb71d7359ae397d16b86ac26168.webp",
+        url: "https://cdn.discordapp.com/assets/content/dba2cf636a3929d4f6d189e877dae3ac4177d1f482b5442ed91e9561d95a7fde.webp",
         riveId: 6945609,
-        width: 651,
-        height: 532,
+        width: 1023,
+        height: 836,
         widthAt1x: 214,
     },
     tex_outfit_12_mech_ultraviolet: {
-        url: "https://cdn.discordapp.com/assets/content/cfb396306bc31b1ae6323aefd8763e0872e2172dde2b5017f63c61fe7342252c.webp",
+        url: "https://cdn.discordapp.com/assets/content/7a671dbf6449baba2ef4770e47af5c476d3dd9746da1057b98bc9cfee55dc913.webp",
         riveId: 6945612,
-        width: 651,
-        height: 532,
+        width: 1023,
+        height: 836,
         widthAt1x: 214,
     },
     tex_outfit_12_mech_viper: {
-        url: "https://cdn.discordapp.com/assets/content/e72eab13d7faad9833b1086edc90d384b9b55aa2b15a9fc48e2703d505f1c213.webp",
+        url: "https://cdn.discordapp.com/assets/content/01f331284cf426f6b54910a8b4b4af41ad130ad309ce050676fa1bc7e742ae77.webp",
         riveId: 6945613,
-        width: 651,
-        height: 532,
+        width: 1023,
+        height: 836,
         widthAt1x: 214,
     },
     tex_outfit_13_knight: {
-        url: "https://cdn.discordapp.com/assets/content/20c0f50c019c0456f521399755cc9d538d2deddeafd3af777803cee3093dec61.webp",
-        riveId: 7115126,
-        width: 630,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/fa5a6748f74956125d199ca10b6a60ea97a80cb6eac331f2aaf234c9aaa1779f.webp",
+        riveId: 7373786,
+        width: 1035,
+        height: 874,
         widthAt1x: 207,
     },
     tex_outfit_13_knight_glacier: {
-        url: "https://cdn.discordapp.com/assets/content/9fd7b1d11a9a189a75aee3b505b7232db5ef4acb0954528a1ca0e83ffbb7fe5f.webp",
-        riveId: 7115195,
-        width: 630,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/4b896a993bcc24782124d8661c74174149cffc035e5abaad20d6d7b736875c1e.webp",
+        riveId: 7373968,
+        width: 1035,
+        height: 874,
         widthAt1x: 207,
     },
     tex_outfit_13_knight_iron: {
-        url: "https://cdn.discordapp.com/assets/content/df1b4521899b76d90e43283bc31686194050053504d56017e7fcc3140426e2f8.webp",
-        riveId: 7115194,
-        width: 630,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/304e3eb4edfee15b0742caff2c69a9b175203e524429c7df8e142f341d5f343e.webp",
+        riveId: 7373976,
+        width: 1035,
+        height: 874,
         widthAt1x: 207,
     },
     tex_outfit_13_knight_petal: {
-        url: "https://cdn.discordapp.com/assets/content/4f62ac7f293b01e4735ae8b9afd539209ea8f95a9ec80477d867fc5c451931df.webp",
-        riveId: 7115193,
-        width: 630,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/d3e61696b9e561a8ff5f98951cf790306d9a7e8eb81e05ad47a7221db2c8d9fb.webp",
+        riveId: 7374038,
+        width: 1035,
+        height: 874,
         widthAt1x: 207,
     },
     tex_outfit_13_knight_rust: {
-        url: "https://cdn.discordapp.com/assets/content/8970597ae7c2a28f09498dc5883e34e490a87f8f2d1453eff165693d782cc448.webp",
-        riveId: 7115186,
-        width: 630,
-        height: 532,
+        url: "https://cdn.discordapp.com/assets/content/3b887f6dde14ae5d5203c387aa71b4841dce256c76a02897dc22fa81eb5718d6.webp",
+        riveId: 7374084,
+        width: 1035,
+        height: 874,
         widthAt1x: 207,
     },
     tex_outfit_14_magical: {
-        url: "https://cdn.discordapp.com/assets/content/76aa1e996574709c012d7ff52df93a8c2d1e42fb39add8d34a09a170672c6796.webp",
-        riveId: 6879167,
-        width: 560,
-        height: 497,
+        url: "https://cdn.discordapp.com/assets/content/11db8197785d9434c2651516d5284c1df6d21966c0c37943afe4a66eb40fa3fb.webp",
+        riveId: 7373809,
+        width: 880,
+        height: 781,
         widthAt1x: 184,
     },
     tex_outfit_14_magical_amethyst: {
-        url: "https://cdn.discordapp.com/assets/content/273bd6cbe651b7b1c7255adbdef137d5bfff6806f52540250ea894235f1be749.webp",
-        riveId: 6945731,
-        width: 560,
-        height: 497,
+        url: "https://cdn.discordapp.com/assets/content/ac4b59aa4fd6cef322507ea79bba6b786758b063b65516aa0619930815726053.webp",
+        riveId: 7374096,
+        width: 880,
+        height: 781,
         widthAt1x: 184,
     },
     tex_outfit_14_magical_citrine: {
-        url: "https://cdn.discordapp.com/assets/content/58a03fcfb57cf16e6e84490101b7ac42d59d3f943c77ebc5384767a16c3ab50c.webp",
-        riveId: 6945753,
-        width: 560,
-        height: 497,
+        url: "https://cdn.discordapp.com/assets/content/f9b6543f6f441ab9219231b26e4678734211b3cd4281b2def579a1b693645bf7.webp",
+        riveId: 7374100,
+        width: 880,
+        height: 781,
         widthAt1x: 184,
     },
     tex_outfit_14_magical_frost: {
-        url: "https://cdn.discordapp.com/assets/content/5f0dc06798554eec4c41deb31afbf5253fac077c18a7a358583fff11591ea67b.webp",
-        riveId: 6945754,
-        width: 560,
-        height: 497,
+        url: "https://cdn.discordapp.com/assets/content/d2d9225ef9bd6672ce59b64d7432af1327456310e26602f919dafbc57323dbae.webp",
+        riveId: 7374112,
+        width: 880,
+        height: 781,
         widthAt1x: 184,
     },
     tex_outfit_14_magical_sapphire: {
-        url: "https://cdn.discordapp.com/assets/content/4d0eca018f23d91c94d83a2c85b4e0a42606bff9f17e842cb0cf6b9d444bb56f.webp",
-        riveId: 6945756,
-        width: 560,
-        height: 497,
+        url: "https://cdn.discordapp.com/assets/content/76cb60e4c7cee20be9fd070e89afe76e1001d8a50cd5c71f6ab1fdb23cf197ae.webp",
+        riveId: 7374113,
+        width: 880,
+        height: 781,
         widthAt1x: 184,
     },
     tex_shoes_01_sneakers: {
-        url: "https://cdn.discordapp.com/assets/content/65eac1112a7cad9ad3119662358d747610dc3aa744e2eb94b613e5aad0922e8f.webp",
+        url: "https://cdn.discordapp.com/assets/content/722d815b75dd143e886bc2680f2acba82611c04914496e46ff0515c5d5ecc4a1.webp",
         riveId: 6880490,
-        width: 560,
-        height: 196,
+        width: 920,
+        height: 322,
         widthAt1x: 180,
     },
     tex_shoes_02_socks: {
-        url: "https://cdn.discordapp.com/assets/content/00e3887d696c3e0d5815129f2c0a4e0053ef24b68b424c07e2ec623d4eaa4379.webp",
+        url: "https://cdn.discordapp.com/assets/content/7415d631135b2153b9e588e6817db57d08061b66a7d9beaab20df69bcd4632de.webp",
         riveId: 6880573,
-        width: 550,
-        height: 165,
+        width: 920,
+        height: 276,
         widthAt1x: 180,
     },
     tex_shoes_03_wumpusSlippers: {
-        url: "https://cdn.discordapp.com/assets/content/8de8639167be0de097e03690139c0033392e1119de42158cbbdfc5778dba0a4d.webp",
+        url: "https://cdn.discordapp.com/assets/content/63a62bd85b876037b8699ca488e2f19cd6364b1202509dc40accd8494235d512.webp",
         riveId: 6880448,
-        width: 456,
-        height: 152,
+        width: 759,
+        height: 253,
         widthAt1x: 153,
     },
     tex_shoes_04_bionic: {
-        url: "https://cdn.discordapp.com/assets/content/9ba048a4df654c31c5581cac9749b8773d299af66883d5fa3bbd9da0b3dd8efc.webp",
+        url: "https://cdn.discordapp.com/assets/content/0cf3432ffb8561302933202d0fecfd3b3ee624833864220a4fe5f8f43c535562.webp",
         riveId: 6880556,
-        width: 504,
-        height: 140,
+        width: 828,
+        height: 230,
         widthAt1x: 162,
     },
     tex_shoes_05_platforms: {
-        url: "https://cdn.discordapp.com/assets/content/f4b1f3149f7d10c3beecb729985886faf43790eee4936e4d56efe820ad2a694c.webp",
+        url: "https://cdn.discordapp.com/assets/content/616a706d00110b2c5630b38f8b74e27e0815fd5c5948125e800e5e6e32147f98.webp",
         riveId: 7026898,
-        width: 504,
-        height: 196,
+        width: 828,
+        height: 322,
         widthAt1x: 162,
     },
     tex_shoes_06_westernboots: {
-        url: "https://cdn.discordapp.com/assets/content/67f4d6b777aca5cb3c0806056a449e1946183c2ef76b607e3e2b1bd2bc1aab0c.webp",
+        url: "https://cdn.discordapp.com/assets/content/6176ba60d88bb2a1beceb69c86be3f58c3c00545f2ee0d42bd7de7fc91956a20.webp",
         riveId: 7026900,
-        width: 504,
-        height: 133,
+        width: 792,
+        height: 209,
         widthAt1x: 165,
     },
     tex_shoes_07_kittyPaws: {
-        url: "https://cdn.discordapp.com/assets/content/b648ea8ac395fa010c951c8900b88e1c0c7797fde3af1881c6d5138431a24c3a.webp",
+        url: "https://cdn.discordapp.com/assets/content/2f149796ffdd9233a8565cc27b27aa17ce132bbafbd7f1ba262226cab145b5bf.webp",
         riveId: 7026901,
-        width: 550,
-        height: 165,
+        width: 920,
+        height: 276,
         widthAt1x: 180,
     },
     tex_shoes_08_rollerSkates: {
-        url: "https://cdn.discordapp.com/assets/content/c2417470196be3f00f30a55a85abce59b45343e34ae9c7fcd48c70b9ac162acd.webp",
+        url: "https://cdn.discordapp.com/assets/content/d5ee92eaad271cbf070120bf89554494a2db3cbc8efe2fee9ec55ba1adbe9ce2.webp",
         riveId: 7026902,
-        width: 483,
-        height: 175,
+        width: 759,
+        height: 275,
         widthAt1x: 158,
     },
     tex_shoes_09_snowShoes: {
-        url: "https://cdn.discordapp.com/assets/content/d42b4d283c7dd6fcd3a7bb76337b26ad98944c34ec43cce2f933a0e062c081ce.webp",
+        url: "https://cdn.discordapp.com/assets/content/1518d959e43eb3f627d3cad01f6f84283b968be784c6e6f84aacc51060af6ffe.webp",
         riveId: 6880513,
-        width: 504,
-        height: 140,
+        width: 828,
+        height: 230,
         widthAt1x: 162,
     },
     tex_shoes_10_icarusSandals: {
-        url: "https://cdn.discordapp.com/assets/content/766ae7f630db69ffa4eba764e4241f8580c1614fd2a335da5b9b1bb58744df29.webp",
+        url: "https://cdn.discordapp.com/assets/content/31b6c24725e5aa7d17efcb421c512175d97e2668bdac43358ff80295f3061b34.webp",
         riveId: 7074384,
-        width: 546,
-        height: 196,
+        width: 897,
+        height: 322,
         widthAt1x: 179,
     },
     tex_shoes_11_clownShoes: {
-        url: "https://cdn.discordapp.com/assets/content/3e3a25b167c3d501f91b0eb3fe5f0e7a8964dddee6947cd709649a2bd42fdc69.webp",
+        url: "https://cdn.discordapp.com/assets/content/fafcdac3bb0fa0f68bcfaf2a396f128f7d2657f41b13cdc8ccb773ef1afbb07b.webp",
         riveId: 7026915,
-        width: 602,
-        height: 168,
+        width: 989,
+        height: 276,
         widthAt1x: 197,
     },
     tex_shoes_12_fancyHeel: {
-        url: "https://cdn.discordapp.com/assets/content/7e67569cb0520ad297cabc5e6aa56457c23d81a6be71beac4c4bc92f5fa9a1e3.webp",
+        url: "https://cdn.discordapp.com/assets/content/33e861aaf6ed22be6b3904101304476441adade0a18eb7160e592d27acd9a5ec.webp",
         riveId: 6880487,
-        width: 550,
-        height: 165,
+        width: 920,
+        height: 276,
         widthAt1x: 180,
     },
     tex_shoes_13_ballet: {
-        url: "https://cdn.discordapp.com/assets/content/c28bad5caad1018cc4c21deba110fe8d76518c4f400101c9e76cc65377e618c2.webp",
+        url: "https://cdn.discordapp.com/assets/content/26aa887cfdf872b6856dc23fc70d1525533c5693556cdfb6f0bee64a04099633.webp",
         riveId: 7026916,
-        width: 496,
-        height: 124,
+        width: 828,
+        height: 207,
         widthAt1x: 164,
     },
     tex_shoes_14_cyberStompers: {
-        url: "https://cdn.discordapp.com/assets/content/e4e99046896383e95c1dc7a76a13654ced23cb670b12019cc0c7988fac1b096a.webp",
+        url: "https://cdn.discordapp.com/assets/content/c07e3ec373dafcc98bc878949759085344ba8ccfda3ee93d80d73e51b259a773.webp",
         riveId: 7026917,
-        width: 532,
-        height: 140,
+        width: 874,
+        height: 230,
         widthAt1x: 171,
     },
     tex_wearable_01_stickers: {
-        url: "https://cdn.discordapp.com/assets/content/e0a1a7a2429d25c4dc98167306dcc1d11982344b2f8f326d4f029860570ae8d2.webp",
+        url: "https://cdn.discordapp.com/assets/content/c99bf6e7650d4fb9433fc4c3bc79fa70dc278ec19e16d4be64a1859797679c38.webp",
         riveId: 6880478,
-        width: 805,
-        height: 728,
+        width: 1265,
+        height: 1144,
         widthAt1x: 264,
     },
     tex_wearable_02_tote: {
-        url: "https://cdn.discordapp.com/assets/content/30435369290e6fa4e20a1d077cbd903c46a47777d332cb6b2c22facfdde3acac.webp",
+        url: "https://cdn.discordapp.com/assets/content/8418825bb54bffaa5780520eba8320918a64bc0fe7162569c096208d8677c529.webp",
         riveId: 6880476,
-        width: 238,
-        height: 308,
+        width: 391,
+        height: 506,
         widthAt1x: 78,
     },
     tex_wearable_03_angelWings: {
-        url: "https://cdn.discordapp.com/assets/content/01a8ffa3c5846232c6e8758e385abdb4a1f181f337e425a82baadfc2ff59e7f4.webp",
+        url: "https://cdn.discordapp.com/assets/content/2ec0ee09a2c3094a0c09e5b075b109a5e2a2230e634756b458fa9a86cc64aac4.webp",
         riveId: 6880634,
-        width: 1210,
-        height: 385,
+        width: 2024,
+        height: 644,
         widthAt1x: 396,
     },
     tex_wearable_04_skateboard: {
-        url: "https://cdn.discordapp.com/assets/content/4415af6fe2b6749df24f13c8bea4668ba4c50eecf44e4cff7a89186f5bc51353.webp",
+        url: "https://cdn.discordapp.com/assets/content/bf87be666f5c1d04a8821e5ae2e1f5b5d3fc5d60280303df8e06a9f366ff67da.webp",
         riveId: 6880472,
-        width: 259,
-        height: 385,
+        width: 407,
+        height: 605,
         widthAt1x: 85,
     },
     tex_wearable_05_dragonWings: {
-        url: "https://cdn.discordapp.com/assets/content/ecdf7d0dc99d8a143f58b5321720b6692305e05355858b9dd237e6a5b3a53cdb.webp",
+        url: "https://cdn.discordapp.com/assets/content/1bd761593c4e49c33c0368f6d546679a9df805a79828fafc1ae57e395fab713e.webp",
         riveId: 6945412,
-        width: 1430,
-        height: 1045,
+        width: 2392,
+        height: 1748,
         widthAt1x: 468,
     },
     tex_wearable_06_takeOutBag: {
-        url: "https://cdn.discordapp.com/assets/content/07f5722786e32bde7a1fdaaf30bd728e67034808d2d54b25168bfa2bc6f07722.webp",
+        url: "https://cdn.discordapp.com/assets/content/c74b3a10976f8734a0d8ec664f4112c1b26c7f12aada1216b8317d724c1f791f.webp",
         riveId: 6880614,
-        width: 210,
-        height: 238,
+        width: 345,
+        height: 391,
         widthAt1x: 69,
     },
     tex_wearable_07_pixelWrench: {
-        url: "https://cdn.discordapp.com/assets/content/41b921fee09a12551cb671b5c8c162abff806ebbb80dc2a03e2f4068bb7732b4.webp",
+        url: "https://cdn.discordapp.com/assets/content/85d71b12477b3710167aa7f228e6bdcfd0c80d165b6314f373e839f2b2053a69.webp",
         riveId: 7058139,
-        width: 406,
-        height: 301,
+        width: 638,
+        height: 473,
         widthAt1x: 133,
     },
     tex_wearable_08_wizardStaff: {
-        url: "https://cdn.discordapp.com/assets/content/f788dccb04b2519dbe7e8b54f5946411947c97a275c85e1618505b1ea372b6ad.webp",
+        url: "https://cdn.discordapp.com/assets/content/b3a8ae715f973e23817f17955b3b1c69e206ea0cbf9fe92f6c423aa0de4fd66c.webp",
         riveId: 6978663,
-        width: 490,
-        height: 707,
+        width: 770,
+        height: 1111,
         widthAt1x: 161,
     },
     tex_wearable_09_mechWings: {
-        url: "https://cdn.discordapp.com/assets/content/b671fb212481e511e935dd760a6c18c271fe0f5cc216ba06037df67d93f11c43.webp",
+        url: "https://cdn.discordapp.com/assets/content/8ecaf8d5340231cd9a94e6e48d20fcaad58e934f67735afb9957a1ef0294dc75.webp",
         riveId: 6880609,
-        width: 1265,
-        height: 385,
+        width: 2116,
+        height: 644,
         widthAt1x: 414,
     },
     tex_wearable_10_sword_spritesheet: {
-        url: "https://cdn.discordapp.com/assets/content/37b333a6ffdbf3f0d73282d262fc1ad0542b9a869edcb47fc8d4c8634177a31c.webp",
+        url: "https://cdn.discordapp.com/assets/content/755e855227622ad212cdd19a32d5c810effb4de8570cb9595ff6551db1c15d40.webp",
         riveId: 7026804,
-        width: 2765,
-        height: 2464,
+        width: 4095,
+        height: 3652,
         widthAt1x: 905,
     },
     tex_wearable_11_deviantTail: {
-        url: "https://cdn.discordapp.com/assets/content/bc2ff8a274e216642534dd789518bc89ffbde6bd8612319ced01354bf461fe62.webp",
+        url: "https://cdn.discordapp.com/assets/content/580ff15bbade3c93e130b0213b7cf3e6ca96de6ccd387eded2462eed93c83acf.webp",
         riveId: 7000661,
-        width: 525,
-        height: 462,
+        width: 850,
+        height: 748,
         widthAt1x: 175,
     },
     tex_wearable_11_deviantTail_smoke_active_spritesheet: {
-        url: "https://cdn.discordapp.com/assets/content/4af280e7a843ff71ef8ab45b54effd3d78ba74a1fac8e08de63893e9e282ff26.webp",
+        url: "https://cdn.discordapp.com/assets/content/93a944169c9b66e43d767c6c62dc1ff5ed6779f77de78ce47b34ac5dbb6ea5b2.webp",
         riveId: 7190581,
-        width: 2550,
-        height: 3400,
+        width: 3072,
+        height: 4096,
         widthAt1x: 900,
     },
     tex_wearable_11_deviantTail_smoke_idle_spritesheet: {
-        url: "https://cdn.discordapp.com/assets/content/9d45fab964812509c67b59af7ba2037146aa9feb7b10304265e8020a7e91cf75.webp",
+        url: "https://cdn.discordapp.com/assets/content/aaabbf067145508adf0da0e898ec4434446de43808ecdd98f75f8fed2a57cfa0.webp",
         riveId: 7190582,
-        width: 2550,
-        height: 3400,
+        width: 3072,
+        height: 4096,
         widthAt1x: 900,
     },
     tex_wearable_12_magicalStaff: {
-        url: "https://cdn.discordapp.com/assets/content/3f2089245e36fa8abca99b90cfc479420e158de8b7f7d1875a09e2da33861bcb.webp",
+        url: "https://cdn.discordapp.com/assets/content/d8d4dbae472982c2ab1537504dba4aa659314eb7ccc5feffdc08e971bdee8ca2.webp",
         riveId: 6944077,
-        width: 476,
-        height: 574,
+        width: 782,
+        height: 943,
         widthAt1x: 156,
     },
     tex_wearable_13_butterflyWings: {
-        url: "https://cdn.discordapp.com/assets/content/d7af6b2723ed82a7263a988927781ccc240d6a770194c38e042dfcd37348403a.webp",
+        url: "https://cdn.discordapp.com/assets/content/0932a8b5ab920c0a086d3c3112912d0b5620bd712a924ceb90e661bcb9e56db4.webp",
         riveId: 6797765,
-        width: 1550,
-        height: 1550,
+        width: 2583,
+        height: 2583,
         widthAt1x: 517,
     },
     tex_wearable_14_catBackpack: {
-        url: "https://cdn.discordapp.com/assets/content/8c059e9d8030f6d97924cbefc6e2ac135dfbf4d01de1ea0b97db0d69ebb84cbc.webp",
+        url: "https://cdn.discordapp.com/assets/content/07f05b77f8a5eff35b91154095fdaa503c379ff5b514802d88a353e86adb3096.webp",
         riveId: 6944650,
-        width: 308,
-        height: 322,
+        width: 506,
+        height: 529,
         widthAt1x: 101,
     },
     tex_wireframe_spritesheet: {
@@ -1568,19 +1568,20 @@ let ev = /^tex_(aura|base_\d+|outfit)_/,
         tex_wearable_11_deviantTail_smoke_active_spritesheet: eT,
         tex_wearable_11_deviantTail_smoke_idle_spritesheet: eT,
     },
-    eR = [1, 1.25, 1.5, 1.75, 2, 3],
+    eR = [1, 1.25, 1.5, 1.75, 2, 3, 4, 5],
     eO = Math.min(...eR),
     eM = Math.max(...eR);
 function ey(e, t) {
     let { url: a, width: r, height: i, widthAt1x: n } = eu[e];
     if (null == n) return a;
-    let s = (t * n) / r,
-        c = t >= Math.round(r / n);
-    if (s >= 1 || c) return a;
-    let { columns: d, rows: l } = eC[e] ?? eS,
-        o = d * Math.round((r / d) * s),
-        u = l * Math.round((i / l) * s);
-    return `${a}?width=${o}&height=${u}`;
+    let s = 4096 / Math.max(r, i),
+        c = Math.min((t * n) / r, s),
+        d = s >= 1 && t >= Math.round(r / n);
+    if (c >= 1 || d) return a;
+    let { columns: l, rows: o } = eC[e] ?? eS,
+        u = l * Math.round((r / l) * c),
+        h = o * Math.round((i / o) * c);
+    return `${a}?width=${u}&height=${h}`;
 }
 let eL = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
     ek = eL.map((e) => `outfit${e}Image`),
@@ -1702,7 +1703,7 @@ function eQ(e) {
             return (function (e, t) {
                 let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 if (a) return eO;
-                let r = Math.max(e / 945, t / 532) * (0, eg.A)();
+                let r = Math.max(e / 960, t / 540) * (0, eg.A)();
                 return eR.find((e) => e >= r) ?? eM;
             })(e.width, e.height);
         }),
@@ -1955,11 +1956,11 @@ let eJ = { delay: 0, duration: 350 },
     e1 = { delay: 700, duration: 175 },
     e2 = { delay: 175, duration: 175 },
     e3 = { delay: 0, duration: 175 },
-    e5 = { delay: 0, duration: 0 },
-    e6 = { delay: eJ.delay + eJ.duration, duration: 0 },
-    e8 = e0.delay + 500;
+    e8 = { delay: 0, duration: 0 },
+    e7 = { delay: eJ.delay + eJ.duration, duration: 0 },
+    e5 = e0.delay + 500;
 var e9 = a(840527);
-function e4(e) {
+function e6(e) {
     let { stage: t, isCovered: a, className: r, children: i } = e,
         [s, c] = p.useState(a);
     !a && s && c(!1);
@@ -1970,7 +1971,7 @@ function e4(e) {
                 !e && t && a(!1),
                 p.useEffect(() => {
                     if (!t) return;
-                    let e = setTimeout(() => a(!1), e8);
+                    let e = setTimeout(() => a(!1), e5);
                     return () => clearTimeout(e);
                 }, [t]),
                 { isMountDelayed: t }
@@ -1980,8 +1981,8 @@ function e4(e) {
         u = (0, ee.p0)({ value: i, shouldUpdate: !d });
     return (0, n.jsxs)(er, {
         visible: !a,
-        enter: e5,
-        exit: e6,
+        enter: e8,
+        exit: e7,
         keepMounted: !0,
         onExitComplete: () => c(!0),
         className: r,
@@ -1991,7 +1992,7 @@ function e4(e) {
         ],
     });
 }
-function e7(e) {
+function e4(e) {
     let { animatedSrc: t, staticSrc: a, className: r } = e,
         i = (0, x.bG)([q.Ay], () => q.Ay.useReducedMotion);
     return (0, n.jsx)("img", { src: i ? a : t, alt: "", className: r });
@@ -2017,7 +2018,7 @@ function ti(e) {
             },
             [t],
         );
-    return (0, n.jsx)(e7, { animatedSrc: a, staticSrc: r, className: te.w });
+    return (0, n.jsx)(e4, { animatedSrc: a, staticSrc: r, className: te.w });
 }
 var tn = a(756408);
 function ts() {
@@ -2452,13 +2453,13 @@ function t2(e) {
     });
 }
 var t3 = a(71678);
-function t5(e) {
+function t8(e) {
     let { children: t, className: a } = e;
     return (0, n.jsx)("div", { className: m()(t3.n, a), children: t });
 }
-function t6() {
+function t7() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.emojis);
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         children: [
             (0, n.jsx)(tg, {
                 icon: tn.EmojiSlightlySmilingFaceIcon,
@@ -2470,7 +2471,7 @@ function t6() {
         ],
     });
 }
-var t8 = a(937383);
+var t5 = a(937383);
 function t9(e) {
     var t;
     let a,
@@ -2501,7 +2502,7 @@ function t9(e) {
               description: tY(s),
           });
 }
-function t4(e) {
+function t6(e) {
     let { disabled: t } = e,
         { traitOptions: a, selectedOption: r, onSelectOption: i } = t1({ customizationOption: E.v7.OUTFIT_COLOR });
     return (0, n.jsx)(tQ, {
@@ -2515,7 +2516,7 @@ function t4(e) {
         }),
     });
 }
-function t7() {
+function t4() {
     return (0, n.jsx)(tQ, {
         children: (0, n.jsx)(tq, {
             title: tp.intl.string(tb.default.zsYYN1),
@@ -2576,7 +2577,7 @@ function aa(e) {
         case E.v7.OUTFIT:
             return (0, n.jsx)(ae, { lastColorwayIdByOutfitId: a, disabled: r });
         case E.v7.OUTFIT_COLOR:
-            return (0, n.jsx)(t4, { disabled: r });
+            return (0, n.jsx)(t6, { disabled: r });
         default:
             return (0, n.jsx)(at, { customizationOption: t, disabled: r });
     }
@@ -2603,9 +2604,9 @@ function ar(e) {
         id: t,
         "aria-label": (0, E.cq)(a),
         tabIndex: s ? 0 : void 0,
-        className: t8.n,
+        className: t5.n,
         children: s
-            ? (0, n.jsx)(t7, {})
+            ? (0, n.jsx)(t4, {})
             : (0, n.jsx)(aa, { customizationOption: a, lastColorwayIdByOutfitId: i, disabled: r }),
     });
 }
@@ -2944,7 +2945,7 @@ function aw() {
         i = F().find((e) => e === E.hw[a]),
         s = (0, x.bG)([h.A], () => h.A.isSaving),
         c = ts();
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         className: av.nj,
         children: [
             (0, n.jsx)(td.D, {
@@ -2974,7 +2975,7 @@ function aw() {
 var aI = a(81466);
 function aE() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.games);
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         children: [
             (0, n.jsx)(tg, {
                 icon: aI.CalendarIcon,
@@ -2989,7 +2990,7 @@ function aE() {
 var aj = a(687966);
 function aS() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.games);
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         children: [
             (0, n.jsx)(tg, {
                 icon: aj.GameControllerIcon,
@@ -3005,7 +3006,7 @@ var aN = a(534890),
     aT = a(350363);
 function aC() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.messages);
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         children: [
             (0, n.jsx)(tg, {
                 icon: aN.ChatIcon,
@@ -3020,7 +3021,7 @@ function aC() {
 var aR = a(664121);
 function aO() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.guilds?.guilds[0]);
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         children: [
             (0, n.jsx)(tg, {
                 icon: aR.ServerIcon,
@@ -3036,7 +3037,7 @@ var aM = a(831544);
 function ay() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.voice),
         t = Math.round(e?.totalVoiceMinutes ?? 0);
-    return (0, n.jsxs)(t5, {
+    return (0, n.jsxs)(t8, {
         children: [
             (0, n.jsx)(tg, {
                 icon: aM.MicrophoneIcon,
@@ -3058,7 +3059,7 @@ function aL(e) {
         case S.gr.SERVERS_HEADWEAR:
             return (0, n.jsx)(aO, {});
         case S.gr.EMOJI_SHOES:
-            return (0, n.jsx)(t6, {});
+            return (0, n.jsx)(t7, {});
         case S.gr.GAMES_WEARABLE:
             return (0, n.jsx)(aS, {});
         case S.gr.GAME_TIME_AURA:
@@ -3289,7 +3290,7 @@ function a3(e) {
         })
     );
 }
-function a5(e) {
+function a8(e) {
     let { "aria-describedby": t, onClick: a, disabled: r } = e;
     return (0, n.jsx)(a2, {
         "aria-label": tp.intl.string(tp.t["13/7kX"]),
@@ -3299,7 +3300,7 @@ function a5(e) {
         disabled: r,
     });
 }
-function a6(e) {
+function a7(e) {
     let { onClick: t } = e,
         { onPointerDown: a, onKeyDown: r, onClickWithSound: i } = a0({ source: aB, onClick: t });
     return (0, n.jsx)(aV.m, {
@@ -3316,7 +3317,7 @@ function a6(e) {
         }),
     });
 }
-function a8(e) {
+function a5(e) {
     let { "aria-describedby": t, onClick: a, disabled: r } = e;
     return (0, n.jsx)(a3, {
         size: "md",
@@ -3341,7 +3342,7 @@ function a9(e) {
         ],
     });
 }
-function a4(e) {
+function a6(e) {
     let { onClick: t, disabled: a } = e;
     return (0, n.jsxs)(a3, {
         size: "custom",
@@ -3360,10 +3361,10 @@ function a4(e) {
         ],
     });
 }
-function a7(e) {
+function a4(e) {
     let { onBack: t, isRouteBlocked: a, blockedTraitDescriptionId: r } = e,
         i = (0, x.bG)([h.A], () => h.A.isSaving);
-    return (0, n.jsx)(a5, {
+    return (0, n.jsx)(a8, {
         "aria-describedby": r,
         onClick: function () {
             i || t();
@@ -3437,34 +3438,34 @@ function rt(e) {
         case S.gr.FINALIZE_CHARACTER:
             return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(a7, { onBack: () => o(i), isRouteBlocked: d, blockedTraitDescriptionId: r }),
+                    (0, n.jsx)(a4, { onBack: () => o(i), isRouteBlocked: d, blockedTraitDescriptionId: r }),
                     (0, n.jsx)(re, { onNext: s, navigate: o, isRouteBlocked: d, blockedTraitDescriptionId: r }),
                 ],
             });
         case S.gr.SUMMARY:
             return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(a5, { onClick: () => l(i) }),
-                    (0, n.jsx)(a6, { onClick: () => l(c) }),
-                    (0, n.jsx)(a4, { onClick: () => l(s) }),
+                    (0, n.jsx)(a8, { onClick: () => l(i) }),
+                    (0, n.jsx)(a7, { onClick: () => l(c) }),
+                    (0, n.jsx)(a6, { onClick: () => l(s) }),
                 ],
             });
         case S.gr.SHARE:
             return (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(a5, { onClick: () => l(i) }), (0, n.jsx)(a9, { onClick: () => l(s) })],
+                children: [(0, n.jsx)(a8, { onClick: () => l(i) }), (0, n.jsx)(a9, { onClick: () => l(s) })],
             });
         default:
             return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(a5, { "aria-describedby": r, onClick: () => o(i), disabled: d }),
-                    (0, n.jsx)(a8, { "aria-describedby": r, onClick: () => o(s), disabled: d }),
+                    (0, n.jsx)(a8, { "aria-describedby": r, onClick: () => o(i), disabled: d }),
+                    (0, n.jsx)(a5, { "aria-describedby": r, onClick: () => o(s), disabled: d }),
                 ],
             });
     }
 }
 function ra(e) {
     let { className: t } = e;
-    return (0, n.jsx)(e7, {
+    return (0, n.jsx)(e4, {
         animatedSrc:
             "https://cdn.discordapp.com/assets/content/02e9ae4cdbec0b2adef22c9a5659f5c7340e399cc8932e8af6d41e62a37644ae.png",
         staticSrc:
@@ -3958,17 +3959,17 @@ void main() {
         -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5,
         -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5,
     ],
-    r5 = [
+    r8 = [
         0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,
         1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0,
     ],
-    r6 = [
+    r7 = [
         0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0,
         -1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 0,
     ];
-function r8(e) {
+function r5(e) {
     let t,
         { emoji: a } = e,
         [r, i] = p.useState(null),
@@ -4033,7 +4034,7 @@ function r8(e) {
                 b = i.getUniformLocation(d, "u_normalMatrix"),
                 p = i.createBuffer();
             (i.bindBuffer(i.ARRAY_BUFFER, p),
-                i.bufferData(i.ARRAY_BUFFER, new Float32Array(r6), i.STATIC_DRAW),
+                i.bufferData(i.ARRAY_BUFFER, new Float32Array(r7), i.STATIC_DRAW),
                 i.vertexAttribPointer(f, 3, i.FLOAT, !1, 0, 0),
                 i.enableVertexAttribArray(f));
             let m = i.createBuffer();
@@ -4041,7 +4042,7 @@ function r8(e) {
                 (e = new Float32Array(r3)),
                 i.bufferData(i.ARRAY_BUFFER, e, i.STATIC_DRAW));
             let x = i.createBuffer();
-            (i.bindBuffer(i.ARRAY_BUFFER, x), i.bufferData(i.ARRAY_BUFFER, new Float32Array(r5), i.STATIC_DRAW));
+            (i.bindBuffer(i.ARRAY_BUFFER, x), i.bufferData(i.ARRAY_BUFFER, new Float32Array(r8), i.STATIC_DRAW));
             let A = rY.DF(60);
             return (
                 (a = requestAnimationFrame(function e() {
@@ -4157,8 +4158,8 @@ function r8(e) {
     );
 }
 var r9 = a(826820);
-let r4 = [];
-function r7(e) {
+let r6 = [];
+function r4(e) {
     let { emojiStats: t } = e,
         a = Math.round(t?.numEmojisSent ?? 0),
         r = (0, K.bD)(t?.numEmojisSentPercentile);
@@ -4209,7 +4210,7 @@ function it() {
         t = (0, x.bG)([h.A], () => (0, K.y7)(h.A.stats)),
         a = (0, x.bG)([h.A], () => h.A.globalStats?.emojis),
         r = !t && null != a,
-        i = (r ? a.emojis : e?.emojis) ?? r4,
+        i = (r ? a.emojis : e?.emojis) ?? r6,
         [s, c] = p.useState(0),
         d = i[s],
         l = tj(tI);
@@ -4217,11 +4218,11 @@ function it() {
         children: (0, n.jsxs)("div", {
             className: r9.kL,
             children: [
-                (0, n.jsx)("div", { className: r9.KY, children: null != d && (0, n.jsx)(r8, { emoji: d }) }),
+                (0, n.jsx)("div", { className: r9.KY, children: null != d && (0, n.jsx)(r5, { emoji: d }) }),
                 (0, n.jsxs)("div", {
                     className: r9.C,
                     children: [
-                        r ? (0, n.jsx)(ie, { numEmojisSent: a.numEmojisSent }) : (0, n.jsx)(r7, { emojiStats: e }),
+                        r ? (0, n.jsx)(ie, { numEmojisSent: a.numEmojisSent }) : (0, n.jsx)(r4, { emojiStats: e }),
                         (0, n.jsx)("div", {
                             className: r9.gm,
                             children: i.map((e, t) =>
@@ -4414,7 +4415,7 @@ function iA(e) {
                 (0, n.jsxs)(er, {
                     visible: f !== ih.TRANSITION,
                     enter: e1,
-                    exit: e5,
+                    exit: e8,
                     mountAfterDelay: !0,
                     className: m()(ib.Qs, ib.yG),
                     children: [
@@ -4605,7 +4606,7 @@ function iT() {
         children: (0, n.jsxs)("div", {
             className: ij.kL,
             children: [
-                (0, n.jsx)(e7, {
+                (0, n.jsx)(e4, {
                     animatedSrc:
                         "https://cdn.discordapp.com/assets/content/e3289e9a0a7faf4db23c3fefa390126fc64a09120fdb701f9dea833dddf671ef.png",
                     staticSrc:
@@ -4877,7 +4878,7 @@ function i3(e) {
         ],
     });
 }
-function i5() {
+function i8() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.games),
         t = (0, x.bG)([h.A], () => (0, K.IH)(h.A.stats)),
         a = (0, x.bG)([h.A], () => h.A.globalStats?.games),
@@ -4889,15 +4890,15 @@ function i5() {
         }),
     });
 }
-var i6 = a(167662);
-function i8(e) {
+var i7 = a(167662);
+function i5(e) {
     let { messages: t } = e,
         a = Math.round(t?.numMessagesSent ?? 0),
         r = (0, K.bD)(t?.numMessagesSentPercentile);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)("div", {
-                className: i6.dJ,
+                className: i7.dJ,
                 children: [
                     (0, n.jsx)(rE, { icon: aN.ChatIcon, children: tp.intl.string(aT.default.wWKySP) }),
                     (0, n.jsx)(rz, { value: a }),
@@ -4920,7 +4921,7 @@ function i9(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)("div", {
-                className: i6.dJ,
+                className: i7.dJ,
                 children: [
                     (0, n.jsx)(rE, { icon: aN.ChatIcon, children: tp.intl.string(tb.default["2BuyVC"]) }),
                     (0, n.jsx)(rq, { value: t }),
@@ -4935,33 +4936,33 @@ function i9(e) {
         ],
     });
 }
-function i4() {
+function i6() {
     let e = (0, x.bG)([h.A], () => h.A.stats?.messages),
         t = (0, x.bG)([h.A], () => (0, K.nb)(h.A.stats)),
         a = (0, x.bG)([h.A], () => h.A.globalStats?.messages?.numWordsSent),
         r = !t && null != a;
     return (0, n.jsx)(rn, {
         children: (0, n.jsxs)("div", {
-            className: i6.kL,
+            className: i7.kL,
             children: [
-                (0, n.jsx)(e7, {
+                (0, n.jsx)(e4, {
                     animatedSrc:
                         "https://cdn.discordapp.com/assets/content/d2d8036bb6a32967893421f9956b9e8ed30abde474f68c1a34e824205549c5a1.png",
                     staticSrc:
                         "https://cdn.discordapp.com/assets/content/1dfd8684180df4216b23f0a61617250be8fcc12bc1970ac259892f34fbdb836d.png",
-                    className: i6.HW,
+                    className: i7.HW,
                 }),
                 (0, n.jsx)("div", {
-                    className: i6.C,
-                    children: r ? (0, n.jsx)(i9, { numWordsSent: a }) : (0, n.jsx)(i8, { messages: e }),
+                    className: i7.C,
+                    children: r ? (0, n.jsx)(i9, { numWordsSent: a }) : (0, n.jsx)(i5, { messages: e }),
                 }),
             ],
         }),
     });
 }
-var i7 = a(682163),
+var i4 = a(682163),
     ne = a(224865);
-let nt = i7.iu[i7.Ay.Sizes.XLARGE];
+let nt = i4.iu[i4.Ay.Sizes.XLARGE];
 function na(e) {
     let { guild: t, size: a } = e;
     return null == t.icon && a < 48
@@ -4971,9 +4972,9 @@ function na(e) {
               "aria-hidden": !0,
               children: (0, n.jsx)(tc.E, { variant: "body-md/medium", children: (0, K.oW)(t.name) }),
           })
-        : (0, n.jsx)(i7.Ay, {
+        : (0, n.jsx)(i4.Ay, {
               guild: t,
-              size: i7.Ay.Sizes.XLARGE,
+              size: i4.Ay.Sizes.XLARGE,
               iconSize: a,
               textScale: a / nt,
               className: ne.K,
@@ -5436,7 +5437,7 @@ function nL() {
         i = !t && null != r;
     return (0, n.jsxs)(rn, {
         children: [
-            (0, n.jsx)(e7, {
+            (0, n.jsx)(e4, {
                 animatedSrc:
                     "https://cdn.discordapp.com/assets/content/04746dc04eab575d0168935af2b1b3f97e2e00439f84bd0f0474276e0c5a81dc.png",
                 staticSrc:
@@ -5471,7 +5472,7 @@ function nk(e) {
                 description: tp.intl.string(tb.default["kF+Y3a"]),
             });
         case S.oI.MESSAGES:
-            return (0, n.jsx)(i4, {});
+            return (0, n.jsx)(i6, {});
         case S.oI.SERVERS_INTRO:
             return (0, n.jsx)(nf, {
                 icon: aR.ServerIcon,
@@ -5497,7 +5498,7 @@ function nk(e) {
                 description: tp.intl.string(tb.default.LQiFqJ),
             });
         case S.oI.GAMES:
-            return (0, n.jsx)(i5, {});
+            return (0, n.jsx)(i8, {});
         case S.oI.GAME_TIME:
             return (0, n.jsx)(iT, {});
         case S.oI.SQUAD:
@@ -5804,7 +5805,7 @@ function nB(e) {
                             }),
                         ],
                     }),
-                    (0, n.jsx)(e4, {
+                    (0, n.jsx)(e6, {
                         stage: o,
                         isCovered: g,
                         className: nH.qd,
