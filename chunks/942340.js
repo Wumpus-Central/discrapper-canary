@@ -4,13 +4,13 @@ var l = n(582128),
     i = n(646514),
     a = n(964486),
     s = n(626584),
-    u = n(949192),
-    c = n(558740),
+    u = n(558740),
+    c = n(708146),
     o = n(648335),
     d = n(908166),
     h = n(818348);
-let f = new s.A("useStripePaymentElementOptions"),
-    p = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" },
+let p = new s.A("useStripePaymentElementOptions"),
+    f = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" },
     m = { spacingUnit: "3px", fontSizeSm: "13px" };
 function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -23,7 +23,7 @@ function C() {
         o = e.colorBackground ?? t.hex(),
         d = e.inputBackgroundColor ?? a.hex(),
         h = s.hex(),
-        f = e.tabBackgroundColor ?? a.hex(),
+        p = e.tabBackgroundColor ?? a.hex(),
         C = e.tabSelectedBackgroundColor ?? null,
         y = e.compact ?? !1;
     return {
@@ -32,23 +32,23 @@ function C() {
                 theme: u,
                 variables: { colorText: c, colorBackground: o, ...(y ? m : {}) },
                 rules: {
-                    ".Label": { ...p, color: c, marginBottom: "8px" },
+                    ".Label": { ...f, color: c, marginBottom: "8px" },
                     ".Input": { backgroundColor: d, borderColor: h, borderWidth: "1px", borderStyle: "solid" },
-                    ".Error": { ...p },
+                    ".Error": { ...f },
                     ".CheckboxInput": { border: `1px solid ${h}` },
-                    ".Tab": { backgroundColor: f },
+                    ".Tab": { backgroundColor: p },
                     ...(null != C ? { ".Tab--selected": { backgroundColor: C } } : {}),
                     ".AccordionItem": { backgroundColor: o, borderColor: h },
                 },
             }),
-            [u, c, o, d, h, f, C, y],
+            [u, c, o, d, h, p, C, y],
         ),
         elementsAppearanceOptions: {
             theme: u,
             colorText: c,
             colorBackground: o,
             inputBackgroundColor: d,
-            tabBackgroundColor: f,
+            tabBackgroundColor: p,
         },
     };
 }
@@ -60,7 +60,7 @@ n.d(
         p: function (e) {
             let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
                 [r, i] = l.useState(void 0),
-                [s, p] = l.useState(null),
+                [s, f] = l.useState(null),
                 [m, y] = l.useState(!0),
                 [E, _] = l.useState([]),
                 { createSetupIntentDeduped: g } = (0, d.x)(),
@@ -80,6 +80,10 @@ n.d(
                         let e,
                             t,
                             { client_secret: n, custom_payment_methods: l, payment_method_order: r } = await g();
+                        if (!Array.isArray(l)) {
+                            let e = Error("Setup intent response is missing custom_payment_methods");
+                            throw ((e.name = "MalformedSetupIntentResponse"), e);
+                        }
                         (_(l),
                             i(n),
                             I(
@@ -91,10 +95,10 @@ n.d(
                                       e),
                             ));
                     } catch (e) {
-                        (p(e),
+                        (f(e),
                             null != t && t(e),
-                            f.error("there was an error on setup for Payment Elements: ", e),
-                            (0, u.pM)(e, { tags: { source: "payment_elements" } }));
+                            p.error("there was an error on setup for Payment Elements: ", e),
+                            c.r.report({ site: "payment_element_setup" }, e));
                     }
                     y(!1);
                 }, [t, g]);
@@ -102,7 +106,7 @@ n.d(
                 x();
             });
             let { elementsAppearance: v, elementsAppearanceOptions: R } = C(n),
-                T = (0, c.PU)(),
+                T = (0, u.PU)(),
                 M = l.useMemo(
                     () =>
                         m

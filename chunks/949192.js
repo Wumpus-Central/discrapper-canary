@@ -1,4 +1,4 @@
-n.d(t, { pM: () => u, hD: () => h, ob: () => c, eS: () => d, gr: () => _, Lt: () => E, Sz: () => f });
+n.d(t, { pM: () => u, hD: () => A, ob: () => c, eS: () => d, gr: () => _, Lt: () => E });
 var i = n(620632),
     r = n(136857),
     a = n(184015),
@@ -38,10 +38,6 @@ function _(e) {
 function E(e) {
     return null != e && l.includes(e.type);
 }
-let A = new Set(["card_error", "api_connection_error", "validation_error"]);
-function f(e) {
-    return e instanceof r.Ay ? e.code !== r.Ay.ErrorCodes.INVALID_PAYMENT_SOURCE && !_(e) : !E(e) || !A.has(e.type);
-}
-function h(e, t) {
+function A(e, t) {
     s.A.captureMessage(e, { ...t, tags: { ...t?.tags, app_context: "billing" } });
 }

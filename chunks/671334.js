@@ -8,13 +8,13 @@ var l,
     u = n(73153),
     c = n(620632),
     d = n(669815),
-    m = n(70142),
-    p = n(949192),
+    m = n(708146),
+    p = n(70142),
     C = n(184015),
     h = n(723702),
     f = n(652215);
 function E() {
-    let e = m.A.getClient();
+    let e = p.A.getClient();
     null != e &&
         (0, C.j)().then((t) => {
             t.venmo
@@ -28,7 +28,7 @@ function E() {
         });
 }
 function S() {
-    let e = m.A.getClient();
+    let e = p.A.getClient();
     null != e &&
         (0, C.j)().then((t) => {
             t.paypal
@@ -72,7 +72,7 @@ function S() {
         });
 }
 function g() {
-    let e = m.A.getPayPalClient();
+    let e = p.A.getPayPalClient();
     if (null == e) throw Error("braintree paypal client must be initialized before calling this");
     u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" });
     let t = Promise.resolve("");
@@ -97,15 +97,15 @@ function g() {
                 });
             })
             .catch((e) => {
-                let { message: t, code: n, details: l } = e;
+                let { message: t, code: n } = e;
                 n === f.Q7O.PAYPAL_POPUP_CLOSED || null == n
                     ? u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED" })
                     : (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL", message: t, code: n }),
-                      p.pM(Error(`Braintree Paypal Error: ${t} ${n} ${l}`)));
+                      m.r.report({ site: "braintree_tokenize", tags: { braintree_method: "PAYPAL" } }, e));
             }));
 }
 function I() {
-    let e = m.A.getVenmoClient();
+    let e = p.A.getVenmoClient();
     if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
     (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_START" }),
         e
@@ -115,11 +115,11 @@ function I() {
                 u.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_SUCCESS", nonce: e.nonce, username: t });
             })
             .catch((e) => {
-                let { message: t, code: n, details: l } = e;
+                let { message: t, code: n } = e;
                 [f.Q7O.VENMO_APP_CANCELED, f.Q7O.VENMO_DESKTOP_CANCELED, f.Q7O.VENMO_CANCELED].includes(n)
                     ? u.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_FAIL_CANCELED" })
                     : (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_FAIL", message: t, code: n }),
-                      p.pM(Error(`Braintree Venmo Error: ${t} ${n} ${l}`)));
+                      m.r.report({ site: "braintree_tokenize", tags: { braintree_method: "VENMO" } }, e));
             }));
 }
 function y(e, t) {
@@ -707,8 +707,8 @@ class ek extends a.PureComponent {
         null == e.paypalClient && null != this.props.paypalClient && g();
     }
     componentWillUnmount() {
-        y(m.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
-            null != m.A.getClient() && S();
+        y(p.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
+            null != p.A.getClient() && S();
         });
     }
     render() {
@@ -722,9 +722,9 @@ class ek extends a.PureComponent {
         });
     }
 }
-let ew = s.Ay.connectStores([m.A, R.A], () => ({
+let ew = s.Ay.connectStores([p.A, R.A], () => ({
     braintreeEmail: R.A.braintreeEmail,
-    paypalClient: m.A.getPayPalClient(),
+    paypalClient: p.A.getPayPalClient(),
 }))(ek);
 var eD = n(534514),
     eU = n(834730),
@@ -737,8 +737,8 @@ class eF extends a.PureComponent {
         null == e.venmoClient && null != this.props.venmoClient && I();
     }
     componentWillUnmount() {
-        y(m.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
-            null != m.A.getClient() && E();
+        y(p.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
+            null != p.A.getClient() && E();
         });
     }
     render() {
@@ -772,9 +772,9 @@ class eF extends a.PureComponent {
         });
     }
 }
-let eB = s.Ay.connectStores([m.A, R.A], () => ({
+let eB = s.Ay.connectStores([p.A, R.A], () => ({
     venmoUsername: R.A.venmoUsername,
-    venmoClient: m.A.getVenmoClient(),
+    venmoClient: p.A.getVenmoClient(),
 }))(eF);
 var eH = n(891197),
     eW = n(462887),
@@ -1066,7 +1066,7 @@ function td(e) {
         {
             paymentElementSelectedType: c,
             returnToPaymentElementStep: d,
-            stripeElementsRef: m,
+            stripeElementsRef: p,
             lastConfirmedSetupIntentRef: C,
         } = a,
         h = (0, j.S)(),
@@ -1111,7 +1111,7 @@ function td(e) {
         onPrimary: async function () {
             I(!0);
             let e = s ? c : i.methodType,
-                n = m.current,
+                n = p.current,
                 r = null != e && (0, tu.i)(e) ? tu.F[e] : null;
             if (null == r)
                 throw new to.v({
@@ -1132,35 +1132,17 @@ function td(e) {
                 });
                 ("redirect-url" === e.responseType ? A(e.hasRedirectURL) : l(e.paymentSource), y || I(!1));
             } catch (e) {
-                if (
-                    e instanceof ta.Ey &&
-                    e.code !== ta.Ey.ErrorCodes.INVALID_PAYMENT_SOURCE &&
-                    (Object.keys(e.fields).length > 0 || !(0, p.gr)(e))
-                ) {
-                    let t = Object.keys(e.fields).sort(),
-                        n = null != e.status ? { status: String(e.status) } : {},
-                        l = t.length > 0,
-                        i = Error(l ? `${e.message} (${t.join(", ")})` : e.message);
-                    ((i.name = l ? `SubmitAddressStepFieldError[${t.join(",")}]` : `SubmitAddressStepError[${e.code}]`),
-                        (0, p.pM)(i, {
-                            tags: {
-                                ...(s ? { source: "payment_elements" } : {}),
-                                error_location: "submit_address_step",
-                                has_field_error: l ? "true" : "false",
-                                error_code: String(e.code),
-                                ...n,
-                            },
-                            extra: {
-                                country: g.info.country,
-                                loadId: E.loadId,
-                                message: e.message,
-                                errorCode: e.code,
-                                errorStatus: e.status,
-                                fields: e.fields,
-                            },
-                        }));
-                }
-                (I(!1), tc.warn(`Error confirming submitting Address Step for Payment Source Type: ${v}`, e));
+                (e instanceof ta.Ey &&
+                    m.r.report(
+                        {
+                            site: "submit_address_step",
+                            tags: { uses_payment_element: String(s), country: g.info.country },
+                            extra: { country: g.info.country, loadId: E.loadId },
+                        },
+                        e,
+                    ),
+                    I(!1),
+                    tc.warn(`Error confirming submitting Address Step for Payment Source Type: ${v}`, e));
             }
         },
     });
@@ -1332,7 +1314,7 @@ function tx(e) {
             let e;
             return a
                 ? n()
-                : void (null == (e = m.A.getLastURL())
+                : void (null == (e = p.A.getLastURL())
                       ? g()
                       : (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" }), window.open(e)));
         },
@@ -1771,7 +1753,7 @@ function tD(e) {
                         function l() {
                             Date.now() - n >= 5e3
                                 ? t(Error("Timeout waiting for Braintree client to be initialized in store"))
-                                : null != m.A.getClient()
+                                : null != p.A.getClient()
                                   ? e()
                                   : setTimeout(l, 1e3);
                         }
@@ -1783,7 +1765,7 @@ function tD(e) {
                             (S(), E());
                         })
                         .catch((e) => {
-                            p.pM(e);
+                            m.r.report({ site: "gateway_sdk_init", tags: { gateway: "braintree" } }, e);
                         }),
                         u.h.dispatch({ type: "BRAINTREE_CREATE_CLIENT_SUCCESS", client: e }));
                 })
@@ -1817,39 +1799,42 @@ function tD(e) {
                                     (V(), W());
                                     return;
                                 }
-                                let t = e
-                                    .create("cashapp", {
-                                        showPayButton: !1,
-                                        enableStoreDetails: !1,
-                                        storePaymentMethod: !0,
-                                        setStatusAutomatically: !1,
-                                        onSubmit: (e) => {
-                                            let { data: t, isValid: n } = e;
-                                            if (n) u.h.dispatch({ type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS", data: t });
-                                            else throw (0, d.i0)("Cash App Pay setup attempt is not valid.");
-                                        },
-                                        onError: (e) => {
-                                            let t,
-                                                n = !0;
-                                            if ("CANCEL" !== e.name) {
-                                                switch (e.message) {
-                                                    case "Payment declined by CashAppPay":
-                                                        n = !1;
-                                                        break;
-                                                    case "Something went wrong during customerRequest creation":
-                                                    case "Error during initialization":
-                                                    case "Error rendering CashAppPay button":
-                                                        ((n = !1), (t = H.intl.string(H.t.TJ8dDB)));
-                                                }
-                                                (0, d.i0)(e.message, { captureException: n, defaultErrorMessage: t });
+                                let t = e.create("cashapp", {
+                                    showPayButton: !1,
+                                    enableStoreDetails: !1,
+                                    storePaymentMethod: !0,
+                                    setStatusAutomatically: !1,
+                                    onSubmit: (e) => {
+                                        let { data: t, isValid: n } = e;
+                                        if (n) u.h.dispatch({ type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS", data: t });
+                                        else throw (0, d.i0)("Cash App Pay setup attempt is not valid.");
+                                    },
+                                    onError: (e) => {
+                                        let t,
+                                            n = !0;
+                                        if ("CANCEL" !== e.name) {
+                                            switch (e.message) {
+                                                case "Payment declined by CashAppPay":
+                                                    n = !1;
+                                                    break;
+                                                case "Something went wrong during customerRequest creation":
+                                                case "Error during initialization":
+                                                case "Error rendering CashAppPay button":
+                                                    ((n = !1), (t = H.intl.string(H.t.TJ8dDB)));
                                             }
-                                        },
-                                    })
-                                    .mount(`#${D.h}`);
-                                u.h.dispatch({ type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS", component: t });
+                                            (0, d.i0)(e.message, { captureException: n, defaultErrorMessage: t });
+                                        }
+                                    },
+                                });
+                                (null != document.getElementById(D.h) && t.mount(`#${D.h}`),
+                                    u.h.dispatch({
+                                        type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS",
+                                        component: t,
+                                    }));
                             })(l));
                     } catch (e) {
-                        ((0, p.pM)(e), u.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" }));
+                        (m.r.report({ site: "gateway_sdk_init", tags: { gateway: "adyen" } }, e),
+                            u.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" }));
                     }
                 })();
         }, [o, r]));

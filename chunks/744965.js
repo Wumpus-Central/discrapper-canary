@@ -3943,16 +3943,25 @@ let an = (0, h.zD)(S.X.VOICE_PUSH_TO_TALK_SETTING, {
 });
 var ai = n(484599);
 function al(e) {
-    let { shortcut: t } = e,
-        n = (0, I.bG)([lg.Ay], () => lg.Ay.isWaylandPortalActive()),
-        i = (0, I.bG)([lg.Ay], () => {
+    let t,
+        { shortcut: n } = e,
+        i = (0, I.bG)([lg.Ay], () => lg.Ay.isWaylandPortalActive()),
+        l = (0, I.bG)([lg.Ay], () => {
             let e = lg.Ay.getKeybindForAction(_.hCu.PUSH_TO_TALK, !0);
             return null != e ? lg.Ay.getWaylandPortalShortcutState(e.id) : null;
         });
-    return n && 0 !== t.length
-        ? lg.Ay.isWaylandPortalEligibleShortcut(t)
-            ? null == i || i.bound
-                ? null
+    return i && 0 !== n.length
+        ? lg.Ay.isWaylandPortalEligibleShortcut(n)
+            ? null == l || l.bound
+                ? null != (t = si.Ay.getCrashReporterMetadata()?.wm) && /\bKDE\b/i.test(t)
+                    ? (0, p.jsx)(iJ.w, {
+                          type: "info",
+                          message: V.intl.format(V.t.e8TotY, {
+                              kdeFixUrl: "https://invent.kde.org/plasma/kglobalacceld/-/merge_requests/130",
+                          }),
+                          role: "none",
+                      })
+                    : null
                 : (0, p.jsx)(iJ.w, { type: "warning", message: V.intl.string(V.t.PTCrUP), role: "status" })
             : (0, p.jsx)(iJ.w, { type: "warning", message: V.intl.string(V.t.J0m3aK), role: "status" })
         : null;

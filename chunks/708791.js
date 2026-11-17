@@ -10,48 +10,49 @@ var l = t(477900),
     d = t(627784),
     m = t(793574),
     p = t(669815),
-    A = t(942340),
-    E = t(626584),
-    y = t(97352),
-    C = t(67480),
-    P = t(949192),
+    A = t(708146),
+    E = t(942340),
+    y = t(626584),
+    C = t(97352),
+    P = t(67480),
+    x = t(949192),
     g = t(448645),
-    x = t(580630),
-    f = t(558740),
-    T = t(120700),
-    _ = t(822764),
-    M = t(56763),
-    v = t(316363),
+    f = t(580630),
+    T = t(558740),
+    v = t(120700),
+    M = t(822764),
+    _ = t(56763),
+    I = t(316363),
     S = t(783327),
-    I = t(705822),
-    N = t(652215),
-    R = t(682901),
-    j = t(818348),
-    L = t(379912),
+    N = t(705822),
+    R = t(652215),
+    j = t(682901),
+    L = t(818348),
+    b = t(379912),
     k = t(792996),
-    b = t(969933);
-let O = new E.A("StripeExpressCheckout.tsx"),
-    H = { [R.WT.DAY]: "day", [R.WT.MONTH]: "month", [R.WT.YEAR]: "year" };
-function D(e) {
-    let { type: a, makePurchase: t, isSubmitting: s, setIsSubmitting: c, className: A } = e,
-        E = (0, r.useElements)(),
-        x = (0, S.S)(),
-        N = n.useRef(a),
-        R = n.useRef(null),
-        [D, w] = n.useState(null),
-        U = n.useRef(null),
+    O = t(969933);
+let D = new y.A("StripeExpressCheckout.tsx"),
+    H = { [j.WT.DAY]: "day", [j.WT.MONTH]: "month", [j.WT.YEAR]: "year" };
+function w(e) {
+    let { type: a, makePurchase: t, isSubmitting: s, setIsSubmitting: c, className: E } = e,
+        y = (0, r.useElements)(),
+        f = (0, S.S)(),
+        R = n.useRef(a),
+        j = n.useRef(null),
+        [w, U] = n.useState(null),
         G = n.useRef(null),
+        Z = n.useRef(null),
         {
-            checkoutInvoicePreview: Z,
-            checkoutPaymentSources: Y,
-            expressCheckoutLoading: F,
-            setExpressCheckoutStatus: B,
-            markExpressCheckoutReady: K,
-            shouldMountExpressCheckoutElement: W,
-            setPurchaseError: V,
-            contextMetadata: X,
+            checkoutInvoicePreview: Y,
+            checkoutPaymentSources: F,
+            expressCheckoutLoading: B,
+            setExpressCheckoutStatus: K,
+            markExpressCheckoutReady: W,
+            shouldMountExpressCheckoutElement: V,
+            setPurchaseError: X,
+            contextMetadata: J,
             unifiedCheckoutFlow: z,
-        } = (0, v.t4)((e) => {
+        } = (0, I.t4)((e) => {
             let a = e.getExpressCheckoutVisibilityState();
             return {
                 checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -65,78 +66,69 @@ function D(e) {
                 unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             };
         }),
-        J = X.loadId,
-        $ = n.useCallback(
+        $ = J.loadId,
+        q = n.useCallback(
             (e) => {
                 let { availablePaymentMethods: t } = e,
                     l = null != t && Object.values(t).some(Boolean);
-                ((0, _.FY)(
-                    { loadId: J, checkoutFlow: z, expressCheckoutType: a, availablePaymentMethods: t },
+                ((0, M.FY)(
+                    { loadId: $, checkoutFlow: z, expressCheckoutType: a, availablePaymentMethods: t },
                     m.A.EXPRESS_CHECKOUT,
                 ),
-                    K(l));
+                    W(l));
             },
-            [K, J, z, a],
+            [W, $, z, a],
         ),
-        q = n.useCallback(
+        Q = n.useCallback(
             (e) => {
                 let { error: a } = e;
-                O.error("ExpressCheckoutElement failed to load: ", a);
-                let t = (0, _.PD)(
+                D.error("ExpressCheckoutElement failed to load: ", a);
+                let t = (0, M.PD)(
                     {
-                        loadId: J,
+                        loadId: $,
                         checkoutFlow: z,
                         error: a,
                         errorMessage: a.message ?? "Express Checkout Element failed to load",
                     },
                     m.A.EXPRESS_CHECKOUT,
                 );
-                if ((0, P.Sz)(a)) {
-                    let e = Error(t.error_message);
-                    ((e.name = `ExpressCheckoutLoadError[${a.type}]`),
-                        (0, P.pM)(e, {
-                            tags: { source: "express_checkout", stripe_error_type: a.type },
-                            extra: t,
-                            fingerprint: ["express_checkout_load_error", a.type],
-                        }));
-                }
-                B(I.i.UNAVAILABLE);
+                (A.r.report({ site: "express_checkout_load", extra: t }, a), K(N.i.UNAVAILABLE));
             },
-            [J, z, B],
+            [$, z, K],
         ),
-        Q = null != x && null != E && null != Z && W;
+        ee = null != f && null != y && null != Y && V;
     n.useEffect(() => {
-        if (Q) return () => B(I.i.INITIALIZING);
-    }, [Q, B]);
-    let ee = n.useCallback(
+        if (ee) return () => K(N.i.INITIALIZING);
+    }, [ee, K]);
+    let ea = n.useCallback(
             (e) => {
-                (c(e), B(e ? I.i.SUBMITTING : I.i.READY));
+                (c(e), K(e ? N.i.SUBMITTING : N.i.READY));
             },
-            [c, B],
+            [c, K],
         ),
-        ea = n.useCallback(() => {
-            (w(null), (U.current = null), ee(!1));
-        }, [ee]),
-        et = n.useCallback(
+        et = n.useCallback(() => {
+            (U(null), (G.current = null), ea(!1));
+        }, [ea]),
+        el = n.useCallback(
             async (e) => {
                 try {
-                    (null != t && (await t(e)), ee(!1));
+                    (null != t && (await t(e)), ea(!1));
                 } catch (e) {
-                    ee(!1);
+                    ea(!1);
                 }
             },
-            [t, ee],
+            [t, ea],
         ),
-        el = n.useCallback(() => {
-            let e = N.current;
-            if (null == D || null == Y || null == Z) return;
-            let a = Y.find((e) => e.id === D.id);
+        en = n.useCallback(() => {
+            let e = R.current;
+            if (null == w || null == F || null == Y) return;
+            let a = F.find((e) => e.id === w.id);
             if (null != a) {
-                if (U.current === D.id) return;
-                U.current = D.id;
+                if (G.current === w.id) return;
+                G.current = w.id;
                 let t = null != a.relocationCountry,
-                    l = Z.getAmountDue(),
-                    n = G.current !== l,
+                    l = Y.getAmountDue(),
+                    n = Z.current !== l,
                     { autoPurchaseSkipReason: r, shouldSkipAutoPurchase: s } = (function (e) {
                         let { willRelocateStoreCountry: a, isVaultOnlyMode: t, amountHasChanged: l } = e;
                         return t
@@ -147,117 +139,97 @@ function D(e) {
                                 ? { autoPurchaseSkipReason: "amount_changed", shouldSkipAutoPurchase: !0 }
                                 : { shouldSkipAutoPurchase: !1, autoPurchaseSkipReason: null };
                     })({ willRelocateStoreCountry: t, amountHasChanged: n, isVaultOnlyMode: "vault_only" === e }),
-                    i = { loadId: J, checkoutFlow: z, expressCheckoutType: e, expressPaymentType: R.current };
+                    i = { loadId: $, checkoutFlow: z, expressCheckoutType: e, expressPaymentType: j.current };
                 (n &&
-                    (0, _.ik)(
-                        { ...i, displayedAmount: G.current, updatedAmount: l, currency: Z.currency },
+                    (0, M.ik)(
+                        { ...i, displayedAmount: Z.current, updatedAmount: l, currency: Y.currency },
                         m.A.EXPRESS_CHECKOUT,
                     ),
-                    (0, _.Y2)({ ...i, paymentSource: D, autoPurchaseSkipReason: r }, m.A.EXPRESS_CHECKOUT),
+                    (0, M.Y2)({ ...i, paymentSource: w, autoPurchaseSkipReason: r }, m.A.EXPRESS_CHECKOUT),
                     s
                         ? ((0, o.P0)({
-                              text: n ? k.intl.string(L.default.cxwOJN) : k.intl.string(L.default["302Ck/"]),
+                              text: n ? k.intl.string(b.default.cxwOJN) : k.intl.string(b.default["302Ck/"]),
                               variant: "success",
                           }),
-                          ee(!1))
-                        : et(D));
+                          ea(!1))
+                        : el(w));
             }
-        }, [D, Y, Z, et, ee, J, z]),
-        en = n.useCallback(
+        }, [w, F, Y, el, ea, $, z]),
+        er = n.useCallback(
             async (e, a) => {
                 let { stripe: t, elements: l, currentAmountDue: n } = a;
                 function r(a) {
-                    let t = a instanceof d.Ey || (0, P.Lt)(a) ? a : void 0,
+                    let t = a instanceof d.Ey || (0, x.Lt)(a) ? a : void 0,
                         l = (function (e) {
-                            if (null == e) return k.intl.string(L.default["6zCzw1"]);
+                            if (null == e) return k.intl.string(b.default["6zCzw1"]);
                             let a = e.message;
-                            return null != a && "" !== a ? a : k.intl.string(L.default["6zCzw1"]);
+                            return null != a && "" !== a ? a : k.intl.string(b.default["6zCzw1"]);
                         })(t),
                         n = t instanceof d.Ey ? t : null,
-                        r = (0, _.c)(
+                        r = (0, M.c)(
                             {
-                                loadId: J,
-                                paymentSourceType: j.he.CARD,
+                                loadId: $,
+                                paymentSourceType: L.he.CARD,
                                 error: t,
                                 errorMessage: l,
                                 expressPaymentType: e.expressPaymentType,
                             },
                             m.A.EXPRESS_CHECKOUT,
-                        );
-                    if ((0, P.Sz)(a)) {
-                        let e = (0, P.Lt)(a) ? a.type : null,
-                            t =
-                                null != e
-                                    ? e
-                                    : null == n
-                                      ? "unknown"
-                                      : n.code > 0
-                                        ? String(n.code)
-                                        : Object.keys(n.fields).length > 0
-                                          ? "field_error"
-                                          : null != n.status
-                                            ? `http_${n.status}`
-                                            : "unknown",
-                            l = Error(r.error_message);
-                        ((l.name = `ExpressCheckoutAddPaymentMethodError[${t}]`),
-                            (0, P.pM)(l, {
-                                tags: {
-                                    source: "express_checkout",
-                                    error_key: t,
-                                    ...(null != n && null != n.status ? { http_status: String(n.status) } : {}),
-                                },
-                                extra: { ...r, raw_error: a },
-                                fingerprint: ["express_checkout_add_payment_method_error", t],
-                            }));
-                    }
-                    (ea(), V(n ?? new d.Ey(l)), e.paymentFailed({ reason: "invalid_payment_data", message: l }));
+                        ),
+                        s = {};
+                    (null != e.expressPaymentType && (s.express_payment_type = e.expressPaymentType),
+                        null != e.billingDetails && (s.country = e.billingDetails.address.country),
+                        A.r.report({ site: "express_checkout_vault", tags: s, extra: { ...r, ...s } }, a),
+                        et(),
+                        X(n ?? new d.Ey(l)),
+                        e.paymentFailed({ reason: "invalid_payment_data", message: l }));
                 }
                 try {
-                    (ee(!0), V(null), (0, h.ET)(), (G.current = n));
+                    (ea(!0), X(null), (0, h.ET)(), (Z.current = n));
                     let { error: a } = await l.submit();
                     if (null != a) {
-                        (O.error("elements.submit failed: ", a), r(a));
+                        (D.error("elements.submit failed: ", a), r(a));
                         return;
                     }
                     let { paymentMethod: s, error: i } = await t.createPaymentMethod({ elements: l });
                     if (null == s) {
-                        (O.error("createPaymentMethod failed to return payment method: ", {
+                        (D.error("createPaymentMethod failed to return payment method: ", {
                             paymentMethod: s,
                             error: i,
                         }),
                             r(i));
                         return;
                     }
-                    let { billingAddressInfo: u } = (0, f.uK)(s),
+                    let { billingAddressInfo: u } = (0, T.uK)(s),
                         o = s.id,
                         c = await (0, p.IC)({ stripePaymentMethodId: o, billingAddress: u });
-                    ((0, _.lO)(
-                        { loadId: J, paymentSource: c, expressPaymentType: e.expressPaymentType },
+                    ((0, M.lO)(
+                        { loadId: $, paymentSource: c, expressPaymentType: e.expressPaymentType },
                         m.A.EXPRESS_CHECKOUT,
                     ),
-                        w(c));
+                        U(c));
                 } catch (e) {
-                    (O.error("handleExpressCheckoutConfirm failed: ", e), r(e));
+                    (D.error("handleExpressCheckoutConfirm failed: ", e), r(e));
                 }
             },
-            [ee, w, ea, V, J],
+            [ea, U, et, X, $],
         ),
-        er = (function (e) {
+        es = (function (e) {
             let {
                     checkoutInvoicePreview: a,
                     renewalInvoicePreview: t,
                     selectedSkuId: l,
                     unifiedCheckoutFlow: r,
-                } = (0, v.t4)((e) => ({
+                } = (0, I.t4)((e) => ({
                     checkoutInvoicePreview: e.checkoutInvoicePreview,
                     renewalInvoicePreview: e.renewalInvoicePreview,
                     selectedSkuId: e.selectedSkuId,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
                 })),
                 s = (0, u.bG)(
-                    [C.A],
+                    [P.A],
                     () => {
-                        let e = null != l ? C.A.get(l) : null;
+                        let e = null != l ? P.A.get(l) : null;
                         return null != e ? e.name : null;
                     },
                     [l],
@@ -269,16 +241,16 @@ function D(e) {
                     o = u ? i - n : l,
                     c = a.getWalletAmount(),
                     h = a.getAmountDue(),
-                    d = a.hasGiftCardBalanceApplied ? [{ name: k.intl.string(L.default.bdF0KJ), amount: -c }] : [],
+                    d = a.hasGiftCardBalanceApplied ? [{ name: k.intl.string(b.default.bdF0KJ), amount: -c }] : [],
                     m = n > 0 ? [{ name: k.intl.string(k.t.jiRvC7), amount: n }] : [];
                 function p(e) {
                     return h > 0 ? [{ name: e, amount: o }, ...d, ...m] : [];
                 }
-                if (r === T.C.PREMIUM_CHECKOUT || r === T.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) {
+                if (r === v.C.PREMIUM_CHECKOUT || r === v.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) {
                     let e = (function (e) {
                         let a = e.invoiceItems.find((e) => null != e.subscriptionPlanId);
                         if (null == a) return null;
-                        let t = y.A.get(a.subscriptionPlanId);
+                        let t = C.A.get(a.subscriptionPlanId);
                         if (null == t) return null;
                         let l = H[t.interval],
                             n = t.intervalCount;
@@ -310,36 +282,36 @@ function D(e) {
                 return { lineItems: null != s ? p(s) : [] };
             }, [a, t, s, e, r]);
         })(a),
-        es = n.useCallback(
+        ei = n.useCallback(
             (e) => {
-                ((N.current = a),
-                    (R.current = e.expressPaymentType),
-                    (0, _.dE)(
+                ((R.current = a),
+                    (j.current = e.expressPaymentType),
+                    (0, M.dE)(
                         {
-                            loadId: J,
+                            loadId: $,
                             checkoutFlow: z,
                             expressCheckoutType: a,
                             expressPaymentType: e.expressPaymentType,
                         },
                         m.A.EXPRESS_CHECKOUT,
                     ),
-                    e.resolve(er ?? void 0));
+                    e.resolve(es ?? void 0));
             },
-            [a, er, J, z],
+            [a, es, $, z],
         ),
-        ei = n.useCallback(() => {
-            ((0, _.dJ)(
-                { loadId: J, checkoutFlow: z, expressCheckoutType: N.current, expressPaymentType: R.current },
+        eu = n.useCallback(() => {
+            ((0, M.dJ)(
+                { loadId: $, checkoutFlow: z, expressCheckoutType: R.current, expressPaymentType: j.current },
                 m.A.EXPRESS_CHECKOUT,
             ),
-                ea());
-        }, [ea, J, z]);
+                et());
+        }, [et, $, z]);
     n.useEffect(() => {
-        null != D && el();
-    }, [D, el]);
-    let eu = n.useMemo(() => {
-        if (null == Z || null == er) return {};
-        let { lineItems: e, applePay: a } = er;
+        null != w && en();
+    }, [w, en]);
+    let eo = n.useMemo(() => {
+        if (null == Y || null == es) return {};
+        let { lineItems: e, applePay: a } = es;
         return {
             paymentMethodOrder: ["applePay", "googlePay", "card"],
             billingAddressRequired: !0,
@@ -349,38 +321,38 @@ function D(e) {
             lineItems: e,
             applePay: a,
         };
-    }, [Z, er]);
-    if (null == x || null == E || null == Z || !Q) return null;
-    let eo = s || F;
+    }, [Y, es]);
+    if (null == f || null == y || null == Y || !ee) return null;
+    let ec = s || B;
     return (0, l.jsxs)("div", {
-        className: i()(b.Pr, A),
+        className: i()(O.Pr, E),
         children: [
-            eo && (0, l.jsx)(M.I, {}),
+            ec && (0, l.jsx)(_.I, {}),
             (0, l.jsx)("div", {
-                className: i()({ [b.lX]: eo }),
+                className: i()({ [O.lX]: ec }),
                 children: (0, l.jsx)(r.ExpressCheckoutElement, {
-                    onLoadError: q,
-                    onReady: $,
-                    onClick: es,
-                    onConfirm: (e) => en(e, { stripe: x, elements: E, currentAmountDue: Z.getAmountDue() }),
-                    onCancel: ei,
-                    options: eu,
+                    onLoadError: Q,
+                    onReady: q,
+                    onClick: ei,
+                    onConfirm: (e) => er(e, { stripe: f, elements: y, currentAmountDue: Y.getAmountDue() }),
+                    onCancel: eu,
+                    options: eo,
                 }),
             }),
         ],
     });
 }
-function w() {
+function U() {
     return (0, l.jsxs)("div", {
-        className: b.ps,
+        className: O.ps,
         children: [
-            (0, l.jsx)("span", { className: b.ao, "aria-hidden": "true" }),
+            (0, l.jsx)("span", { className: O.ao, "aria-hidden": "true" }),
             (0, l.jsx)(c.E, {
                 variant: "body-sm/normal",
                 color: "text-muted",
-                children: k.intl.string(L.default.N4EAHm),
+                children: k.intl.string(b.default.N4EAHm),
             }),
-            (0, l.jsx)("span", { className: b.ao, "aria-hidden": "true" }),
+            (0, l.jsx)("span", { className: O.ao, "aria-hidden": "true" }),
         ],
     });
 }
@@ -390,15 +362,15 @@ t.d(
     {
         E1: function (e) {
             let a = (0, S.S)(),
-                { elementsAppearance: t } = (0, A.E)(),
-                s = (0, f.PU)(),
-                { checkoutInvoicePreview: i, isPurchaseDisabled: u } = (0, v.t4)((e) => ({
+                { elementsAppearance: t } = (0, E.E)(),
+                s = (0, T.PU)(),
+                { checkoutInvoicePreview: i, isPurchaseDisabled: u } = (0, I.t4)((e) => ({
                     checkoutInvoicePreview: e.checkoutInvoicePreview,
                     isPurchaseDisabled: e.getIsPurchaseDisabled(),
                 })),
                 o = e.disablePurchase || u,
                 { expressCheckoutType: c, makePurchase: h } = n.useMemo(
-                    () => ({ expressCheckoutType: o ? "vault_only" : e.type, makePurchase: e.makePurchase ?? N.tEg }),
+                    () => ({ expressCheckoutType: o ? "vault_only" : e.type, makePurchase: e.makePurchase ?? R.tEg }),
                     [e.makePurchase, e.type, o],
                 ),
                 d = n.useMemo(() => {
@@ -417,35 +389,35 @@ t.d(
                 : (0, l.jsx)(r.Elements, {
                       stripe: a,
                       options: d,
-                      children: (0, l.jsx)(D, { ...e, type: c, makePurchase: h, disablePurchase: o }),
+                      children: (0, l.jsx)(w, { ...e, type: c, makePurchase: h, disablePurchase: o }),
                   });
         },
         Zr: function (e) {
             let { stripeExpressCheckoutComponent: a, fallbackComponent: t, showDividerBelow: n = !1 } = e,
-                { shouldExpressCheckoutBeVisible: r } = (0, v.t4)((e) => ({
+                { shouldExpressCheckoutBeVisible: r } = (0, I.t4)((e) => ({
                     shouldExpressCheckoutBeVisible:
                         e.getExpressCheckoutVisibilityState().shouldExpressCheckoutBeVisible,
                 }));
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsxs)("div", {
-                        className: i()(b.n2, { [b.lX]: !r }),
-                        children: [a, n ? (0, l.jsx)(w, {}) : null],
+                        className: i()(O.n2, { [O.lX]: !r }),
+                        children: [a, n ? (0, l.jsx)(U, {}) : null],
                     }),
                     !r && t,
                 ],
             });
         },
         rI: function () {
-            let e = (0, v.t4)((e) => e.checkoutInvoicePreview),
+            let e = (0, I.t4)((e) => e.checkoutInvoicePreview),
                 a = n.useMemo(
                     () =>
                         null != e && e.hasGiftCardBalanceApplied
-                            ? k.intl.format(L.default.BMVyQO, { amount: (0, x.$g)(e.getAmountDue(), e.currency) })
-                            : k.intl.string(L.default.gVM8va),
+                            ? k.intl.format(b.default.BMVyQO, { amount: (0, f.$g)(e.getAmountDue(), e.currency) })
+                            : k.intl.string(b.default.gVM8va),
                     [e],
                 );
-            return (0, l.jsx)(c.E, { variant: "body-sm/normal", color: "text-muted", className: b.OJ, children: a });
+            return (0, l.jsx)(c.E, { variant: "body-sm/normal", color: "text-muted", className: O.OJ, children: a });
         },
     },
 );

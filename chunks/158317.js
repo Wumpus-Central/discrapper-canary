@@ -100,7 +100,8 @@ n.d(
             } catch (t) {
                 return (
                     c.error("failed to fetch order", { error: t, orderId: e }),
-                    (0, s.pM)(t, { tags: { source: "OrderActionCreators_getOrder" }, extra: { orderId: e } }),
+                    (0, s.gr)(t) ||
+                        (0, s.pM)(t, { tags: { source: "OrderActionCreators_getOrder" }, extra: { orderId: e } }),
                     null
                 );
             }
