@@ -53,12 +53,13 @@ let w = 0,
     V = 0,
     H = [],
     j = [],
-    W = null,
-    Y = null;
-function K() {
+    W = !1,
+    Y = null,
+    K = null;
+function $() {
     ((x = S.A.getGuildCount() >= 3 || a().size(p.A.getMutablePrivateChannels()) >= 20), (H = []));
 }
-function $(e) {
+function X(e) {
     let t = (0, c.A)(e);
     if (null == t) return null;
     if (M(k)) {
@@ -66,25 +67,26 @@ function $(e) {
     } else if (null != k && k !== t.type) return null;
     return t;
 }
-function X(e) {
-    let { query: t, queryMode: n } = e,
-        r = t.trim(),
+function z(e) {
+    let { query: t, queryMode: n } = e;
+    (W = "QUICKSWITCHER_SHOW" === e.type && !0 === e.isTabPicker) && (F = []);
+    let r = t.trim(),
         a = R.A.getGuildId() ?? void 0,
         s = new Set([`user:${h.default.getId()}`]);
     (null != a && s.add(`guild:${a}`),
-        (Y = Date.now()),
+        (K = Date.now()),
         (i =
             i ??
-            new d.Ay(q, U(), null != n ? 100 : 5, { frecencyBoosters: !0, blacklist: s, allowSnowflake: !0 }, 100)),
+            new d.Ay(Q, U(), null != n ? 100 : 5, { frecencyBoosters: !0, blacklist: s, allowSnowflake: !0 }, 100)),
         (B = null),
         (V = r.length),
         (k = n),
         i.search(r));
 }
-function z(e) {
+function q(e) {
     ((j = j.filter((t) => t !== e)).unshift(e), j.length > 8 && (j.length = 8));
 }
-function q(e, t) {
+function Q(e, t) {
     if (
         !(function (e, t) {
             if (e.length !== t.length) return !1;
@@ -143,7 +145,7 @@ function q(e, t) {
                               o = I.Ay.getCurrentSidebarChannelId(l);
                           for (let e = 0; e < j.length; e += 1) {
                               if (j[e] === l || j[e] === o) continue;
-                              let t = $(j[e]);
+                              let t = X(j[e]);
                               null != t &&
                                   ((t.type !== d.rD.TEXT_CHANNEL && t.type !== d.rD.VOICE_CHANNEL) ||
                                       N.A.can(b.xBc.VIEW_CHANNEL, t.record)) &&
@@ -155,7 +157,7 @@ function q(e, t) {
                               m.A.getRecentlyEditedDrafts(m.C.ChannelMessage).forEach((n) => {
                                   let { channelId: i } = n;
                                   if (e(i)) return;
-                                  let r = $(i);
+                                  let r = X(i);
                                   if (null != r) {
                                       if (
                                           (r.type === d.rD.TEXT_CHANNEL || r.type === d.rD.VOICE_CHANNEL) &&
@@ -174,7 +176,7 @@ function q(e, t) {
                           for (let e = u.length - 1; e >= 0; e--) {
                               let t = u[e];
                               if (null == t) continue;
-                              let n = $(t);
+                              let n = X(t);
                               null != n && E.push({ channelId: t, result: n });
                           }
                           if (E.length > 0)
@@ -195,11 +197,11 @@ function q(e, t) {
                                           ) && (0, _.Y)(t)
                                       );
                                   })
-                                  .map((e) => $(e))
+                                  .map((e) => X(e))
                                   .filter(D.Vq);
                               (Object.values(A.A.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
                                   for (let n in t) {
-                                      let t = $(n);
+                                      let t = X(n);
                                       null == t || a.has(t.record.id) || e.push(t);
                                   }
                               }),
@@ -258,17 +260,17 @@ function q(e, t) {
             let e = F[w];
             null != e && e.type === d.rD.HEADER && (w = (0, d.Vv)(d.vB.DOWN, w, F));
         }
-        ee.emitChange();
+        et.emitChange();
     }
 }
-function Q() {
-    ((B = null), (V = 0), (H = []), null != i && (i.destroy(), (i = null)));
-}
 function J() {
+    ((W = !1), (B = null), (V = 0), (H = []), null != i && (i.destroy(), (i = null)));
+}
+function Z() {
     if (null == i) return !1;
     i.refreshGameProfiles();
 }
-class Z extends s.Ay.PersistedStore {
+class ee extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
@@ -282,6 +284,9 @@ class Z extends s.Ay.PersistedStore {
     }
     isOpen() {
         return null != i;
+    }
+    isTabPicker() {
+        return null != i && W;
     }
     getResultTotals(e) {
         return null == i
@@ -304,7 +309,7 @@ class Z extends s.Ay.PersistedStore {
         return j;
     }
     getLastShowTimestamp() {
-        return Y;
+        return K;
     }
     getProps() {
         return {
@@ -318,14 +323,14 @@ class Z extends s.Ay.PersistedStore {
         };
     }
 }
-let ee = new Z(o.h, {
-    CONNECTION_OPEN: K,
-    CONNECTION_OPEN_SUPPLEMENTAL: K,
-    QUICKSWITCHER_SHOW: X,
-    SHOW_ACTION_SHEET_QUICK_SWITCHER: X,
-    QUICKSWITCHER_HIDE: Q,
-    OVERLAY_SET_INPUT_LOCKED: Q,
-    HIDE_ACTION_SHEET_QUICK_SWITCHER: Q,
+let et = new ee(o.h, {
+    CONNECTION_OPEN: $,
+    CONNECTION_OPEN_SUPPLEMENTAL: $,
+    QUICKSWITCHER_SHOW: z,
+    SHOW_ACTION_SHEET_QUICK_SWITCHER: z,
+    QUICKSWITCHER_HIDE: J,
+    OVERLAY_SET_INPUT_LOCKED: J,
+    HIDE_ACTION_SHEET_QUICK_SWITCHER: J,
     QUICKSWITCHER_SEARCH: function (e) {
         let { query: t, queryMode: n } = e,
             r = t.trim();
@@ -354,8 +359,8 @@ let ee = new Z(o.h, {
     },
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
-        if (((W = null), null == n)) return !1;
-        z(n);
+        if (((Y = null), null == n)) return !1;
+        q(n);
         let i = I.Ay.getSidebarState(n);
         if (
             i?.type !== E.PE.VIEW_CHANNEL ||
@@ -365,25 +370,25 @@ let ee = new Z(o.h, {
         )
             return;
         let r = j;
-        z(i.channelId);
+        q(i.channelId);
         let a = { parentId: n, channelId: i.channelId, historyBeforeRestore: r };
-        ((W = a),
+        ((Y = a),
             queueMicrotask(() => {
-                W === a && (W = null);
+                Y === a && (Y = null);
             }));
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
-        let t = W;
-        if (((W = null), e.sidebarType !== E.PE.VIEW_CHANNEL)) return !1;
+        let t = Y;
+        if (((Y = null), e.sidebarType !== E.PE.VIEW_CHANNEL)) return !1;
         (null != t && t.parentId === e.baseChannelId && t.channelId !== e.channelId && (j = t.historyBeforeRestore),
-            z(e.channelId));
+            q(e.channelId));
     },
     CHANNEL_RTC_UPDATE_CHAT_OPEN: function (e) {
         let { channelId: t, chatOpen: n } = e;
         if (!n || j[0] === t) return !1;
-        z(t);
+        q(t);
     },
-    GAME_AUTOCOMPLETE_FETCH_SUCCESS: J,
-    GAME_AUTOCOMPLETE_FETCH_FAILURE: J,
+    GAME_AUTOCOMPLETE_FETCH_SUCCESS: Z,
+    GAME_AUTOCOMPLETE_FETCH_FAILURE: Z,
 });
-n.d(t, {}, { A: ee });
+n.d(t, {}, { A: et });

@@ -1,42 +1,44 @@
 n.d(t, {
-    lg: () => z,
+    lg: () => B,
     c3: () => F,
-    IH: () => B,
+    IH: () => z,
     nG: () => Y,
     OS: () => G,
     Y9: () => K,
-    vw: () => W,
+    vw: () => q,
     N_: () => Z,
+    Q7: () => V,
     KJ: () => H,
+    TT: () => W,
 });
 var i = n(477900),
     r = n(582128),
-    s = n(939249),
-    l = n(97808),
-    a = n(778712),
-    o = n(685761),
-    c = n(173936),
-    d = n(99677),
-    u = n(194261),
-    h = n(34188),
-    C = n(577473),
-    E = n(403581),
-    A = n(323384),
-    _ = n(625903),
-    p = n(659421),
-    g = n(329308),
-    m = n(571694),
-    T = n(47167),
-    N = n(713654),
-    f = n(503698),
-    I = n.n(f),
-    x = n(62986);
-let S = function (e) {
-    let { value: t = 0, text: n, className: r, lowImportance: s, ...l } = e;
+    s = n(503698),
+    l = n.n(s),
+    a = n(939249),
+    o = n(97808),
+    c = n(778712),
+    d = n(685761),
+    u = n(173936),
+    h = n(99677),
+    C = n(194261),
+    E = n(34188),
+    A = n(577473),
+    _ = n(403581),
+    p = n(323384),
+    g = n(625903),
+    T = n(659421),
+    m = n(329308),
+    N = n(571694),
+    f = n(47167),
+    I = n(713654),
+    S = n(62986);
+let x = function (e) {
+    let { value: t = 0, text: n, className: r, lowImportance: s, ...a } = e;
     return null != n
-        ? (0, i.jsx)("div", { className: I()(x.i, r, s && x.H), ...l, children: n })
+        ? (0, i.jsx)("div", { className: l()(S.i, r, s && S.H), ...a, children: n })
         : t > 0
-          ? (0, i.jsx)("div", { className: I()(x.i, r, s && x.H), ...l, children: t })
+          ? (0, i.jsx)("div", { className: l()(S.i, r, s && S.H), ...a, children: t })
           : null;
 };
 var O = n(769015),
@@ -44,8 +46,8 @@ var O = n(769015),
     v = n(106191),
     L = n(682163),
     R = n(376943),
-    j = n(636585),
-    D = n(71393),
+    D = n(636585),
+    j = n(71393),
     y = n(994500),
     b = n(287809),
     k = n(147036),
@@ -79,16 +81,16 @@ class V extends r.PureComponent {
         this.node = e;
     };
     render() {
-        let { focused: e, children: t, score: n, onContextMenu: r, id: l, "aria-label": a } = this.props;
-        return (0, i.jsxs)(s.D, {
+        let { focused: e, children: t, score: n, onContextMenu: r, id: s, "aria-label": o, className: c } = this.props;
+        return (0, i.jsxs)(a.D, {
             role: "option",
-            id: l,
-            "aria-label": a,
+            id: s,
+            "aria-label": o,
             "aria-selected": e,
             focusProps: { enabled: !1 },
             tabIndex: -1,
             innerRef: this.setRef,
-            className: w.Ke,
+            className: l()(w.Ke, c),
             onClick: this.handleClick,
             onMouseEnter: this.handleMouseEnter,
             onContextMenu: r,
@@ -144,7 +146,7 @@ class F extends r.Component {
     static defaultProps = { unread: !1 };
     renderIcon() {
         let { channel: e } = this.props,
-            t = (0, N.gU)(e);
+            t = (0, I.gU)(e);
         if (null == t) return null;
         let n = (0, k.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
@@ -159,12 +161,12 @@ class F extends r.Component {
             t,
             { mentions: n, category: r, channel: s, isMentionLowImportance: l } = this.props;
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: n, lowImportance: l })),
-            null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, T.m1)(r, b.default, y.A) })),
+            null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n, lowImportance: l })),
+            null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, f.m1)(r, b.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
-                    (0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(s, b.default, y.A) }),
+                    (0, i.jsx)("span", { className: w.YW, children: (0, f.m1)(s, b.default, y.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -176,7 +178,7 @@ class F extends r.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(j.A, {
+            : (0, i.jsx)(D.A, {
                   className: w.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -196,8 +198,8 @@ class F extends r.Component {
     }
     getAccessibilityLabel() {
         let { channel: e } = this.props,
-            t = D.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, T.m1)(e, b.default, y.A),
+            t = j.A.getGuild(this.props.channel.guild_id)?.name,
+            n = (0, f.m1)(e, b.default, y.A),
             i = (0, k.Jg)(e);
         return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });
     }
@@ -221,17 +223,17 @@ class Y extends r.Component {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
             className: w.IU,
-            children: (0, i.jsx)(l.eu, { src: (0, m.Y)(e), size: a._3.SIZE_20, "aria-hidden": !0, status: t }),
+            children: (0, i.jsx)(o.eu, { src: (0, N.Y)(e), size: c._3.SIZE_20, "aria-hidden": !0, status: t }),
         });
     }
     renderName() {
         let e,
             { mentions: t, channel: n } = this.props;
         return (
-            null != t && t > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: t })),
+            null != t && t > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: w.UU,
-                children: [(0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(n, b.default, y.A) }), e],
+                children: [(0, i.jsx)("span", { className: w.YW, children: (0, f.m1)(n, b.default, y.A) }), e],
             })
         );
     }
@@ -244,7 +246,7 @@ class Y extends r.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, T.m1)(e, b.default, y.A);
+            n = (0, f.m1)(e, b.default, y.A);
         return null != t && t > 0
             ? P.intl.formatToPlainString(P.t.LYdVfN, { name: n, mentions: t })
             : P.intl.formatToPlainString(P.t.lLSbno, { name: n });
@@ -269,10 +271,10 @@ class H extends r.Component {
         let { user: e, status: t, isMobile: n } = this.props;
         return (0, i.jsx)("div", {
             className: w.zc,
-            children: (0, i.jsx)(l.eu, {
+            children: (0, i.jsx)(o.eu, {
                 src: e.getAvatarURL(void 0, 20),
                 "aria-hidden": !0,
-                size: a._3.SIZE_20,
+                size: c._3.SIZE_20,
                 status: t,
                 isMobile: n,
             }),
@@ -293,7 +295,7 @@ class H extends r.Component {
             { user: t, mentions: n } = this.props,
             r = this.getDisplayNickname();
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: n })),
+            null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
@@ -334,7 +336,7 @@ class H extends r.Component {
         });
     }
 }
-class z extends r.Component {
+class B extends r.Component {
     renderContent() {
         let { children: e, application: t } = this.props;
         return (0, i.jsxs)("div", {
@@ -361,7 +363,7 @@ class z extends r.Component {
         });
     }
 }
-function B(e) {
+function z(e) {
     let { game: t, onMouseEnter: n, onClick: r, onFocus: s, focused: l, id: a, inlineLabel: o, children: c } = e,
         { extraChromeEnabled: d } = U.A.useConfig({ location: "quickswitcher" });
     return (0, i.jsx)(V, {
@@ -406,16 +408,16 @@ class Z extends r.Component {
             t,
             { link: n, children: r } = this.props;
         if (null != n.inviteCode)
-            ((e = P.intl.string(P.t.w6QG3F)), (t = (0, i.jsx)(o.MagicDoorIcon, { size: "xs", color: "currentColor" })));
+            ((e = P.intl.string(P.t.w6QG3F)), (t = (0, i.jsx)(d.MagicDoorIcon, { size: "xs", color: "currentColor" })));
         else {
             let r = (0, R.vu)(n.path);
             null == r || void 0 === r.messageId
-                ? ((e = P.intl.string(P.t.qbSCqj)), (t = (0, i.jsx)(c.LinkIcon, { size: "xs", color: "currentColor" })))
+                ? ((e = P.intl.string(P.t.qbSCqj)), (t = (0, i.jsx)(u.LinkIcon, { size: "xs", color: "currentColor" })))
                 : (0, R.r9)(r)
                   ? ((e = P.intl.string(P.t["6Fd/j1"])),
-                    (t = (0, i.jsx)(d.ChatArrowRightIcon, { size: "xs", color: "currentColor" })))
+                    (t = (0, i.jsx)(h.ChatArrowRightIcon, { size: "xs", color: "currentColor" })))
                   : ((e = P.intl.string(P.t.jQRwp4)),
-                    (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));
+                    (t = (0, i.jsx)(C.LockIcon, { size: "xs", color: "currentColor" })));
         }
         return (0, i.jsxs)("div", {
             className: w.xr,
@@ -440,52 +442,39 @@ class Z extends r.Component {
         });
     }
 }
-class W extends r.Component {
+function W(e) {
+    switch (e.type) {
+        case m.t1.SHOP:
+            return { label: P.intl.string(P.t.pWG4ze), Icon: E.ShopIcon };
+        case m.t1.SHOP_ORBS_TAB:
+            return { label: P.intl.string(P.t.fG3RIg), Icon: E.ShopIcon };
+        case m.t1.QUEST_ORBS:
+            return { label: `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`, Icon: A.QuestsIcon };
+        case m.t1.NITRO_HOME:
+            return { label: P.intl.string(P.t.Ipxkog), Icon: _.NitroWheelIcon };
+        case m.t1.QUEST_HOME:
+            return { label: P.intl.string(P.t.JALI2K), Icon: A.QuestsIcon };
+        case m.t1.APPS_HOME:
+            return { label: P.intl.string(P.t.PHjkRE), Icon: p.AppsIcon };
+        case m.t1.SETTINGS:
+            return { label: e.label ?? P.intl.string(P.t["3D5yo/"]), Icon: g.SettingsIcon };
+        case m.t1.PLAYGROUND:
+            return { label: e.label ?? `${e.collectionId} Playground`, Icon: e.IconComponent ?? T.PotionIcon };
+        default:
+            return { label: e.id, Icon: u.LinkIcon };
+    }
+}
+class q extends r.Component {
     renderContent() {
-        let e,
-            t,
-            { navigationRecord: n, children: r } = this.props;
-        switch (n.type) {
-            case g.t1.SHOP:
-                ((e = P.intl.string(P.t.pWG4ze)), (t = (0, i.jsx)(h.ShopIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.SHOP_ORBS_TAB:
-                ((e = P.intl.string(P.t.fG3RIg)), (t = (0, i.jsx)(h.ShopIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.QUEST_ORBS:
-                ((e = `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`),
-                    (t = (0, i.jsx)(C.QuestsIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.NITRO_HOME:
-                ((e = P.intl.string(P.t.Ipxkog)),
-                    (t = (0, i.jsx)(E.NitroWheelIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.QUEST_HOME:
-                ((e = P.intl.string(P.t.JALI2K)),
-                    (t = (0, i.jsx)(C.QuestsIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.APPS_HOME:
-                ((e = P.intl.string(P.t.PHjkRE)), (t = (0, i.jsx)(A.AppsIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.SETTINGS:
-                ((e = n.label ?? P.intl.string(P.t["3D5yo/"])),
-                    (t = (0, i.jsx)(_.SettingsIcon, { size: "xs", color: "currentColor" })));
-                break;
-            case g.t1.PLAYGROUND:
-                if (((e = n.label ?? `${n.collectionId} Playground`), null != n.IconComponent)) {
-                    let e = n.IconComponent;
-                    t = (0, i.jsx)(e, { size: "xs", color: "currentColor" });
-                } else t = (0, i.jsx)(p.PotionIcon, { size: "xs", color: "currentColor" });
-                break;
-            default:
-                ((e = n.id), (t = (0, i.jsx)(c.LinkIcon, { size: "xs", color: "currentColor" })));
-        }
+        let { navigationRecord: e, children: t } = this.props,
+            { label: n, Icon: r } = W(e),
+            s = (0, i.jsx)(r, { size: "xs", color: "currentColor" });
         return (0, i.jsxs)("div", {
             className: w.xr,
             children: [
-                (0, i.jsx)("div", { className: w.zc, children: t }),
-                (0, i.jsx)("div", { className: w.UU, children: e }),
-                (0, i.jsx)("div", { className: w.Lr, children: r }),
+                (0, i.jsx)("div", { className: w.zc, children: s }),
+                (0, i.jsx)("div", { className: w.UU, children: n }),
+                (0, i.jsx)("div", { className: w.Lr, children: t }),
             ],
         });
     }

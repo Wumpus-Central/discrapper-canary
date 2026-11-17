@@ -1,27 +1,42 @@
-var i = n(463347),
-    r = n(334465),
-    a = n(652215),
-    s = n(746080),
-    l = n(792996),
-    o = n(191850);
-let d = a.BVt.CHANNEL(i.pv.guildId(), s.VV.CONJURE, ":projectId?");
+var i = n(830845),
+    r = n(463347),
+    a = n(334465),
+    s = n(652215),
+    l = n(746080),
+    o = n(792996),
+    d = n(191850);
+let c = s.BVt.CHANNEL(r.pv.guildId(), l.VV.CONJURE, ":projectId?"),
+    u = s.BVt.CHANNEL(r.pv.guildId(), r.pv.channelId(), ":messageId?");
+function _(e) {
+    let { pathname: t, search: n = "", hash: i = "" } = e;
+    return t === s.BVt.FRIENDS
+        ? { routePath: t, routeLabel: o.intl.string(o.t.TdEu5X) }
+        : t.startsWith(s.BVt.COLLECTIBLES_SHOP)
+          ? { routePath: s.BVt.COLLECTIBLES_SHOP, routeLabel: o.intl.string(o.t.pWG4ze) }
+          : t.startsWith(s.BVt.QUEST_HOME)
+            ? { routePath: s.BVt.QUEST_HOME, routeLabel: o.intl.string(o.t.JALI2K) }
+            : t.startsWith(s.BVt.APPLICATION_STORE)
+              ? { routePath: s.BVt.APPLICATION_STORE, routeLabel: o.intl.string(o.t.Ipxkog) }
+              : null != (0, a.B)(t, { path: c, exact: !0 })
+                ? { routePath: `${t}${n}${i}`, routeLabel: o.intl.string(d.default.uk6jhJ) }
+                : null;
+}
 n.d(
     t,
     {},
     {
-        r: function (e) {
-            let { pathname: t, search: n = "", hash: i = "" } = e;
-            return t === a.BVt.FRIENDS
-                ? { routePath: t, routeLabel: l.intl.string(l.t.TdEu5X) }
-                : t.startsWith(a.BVt.COLLECTIBLES_SHOP)
-                  ? { routePath: a.BVt.COLLECTIBLES_SHOP, routeLabel: l.intl.string(l.t.pWG4ze) }
-                  : t.startsWith(a.BVt.QUEST_HOME)
-                    ? { routePath: a.BVt.QUEST_HOME, routeLabel: l.intl.string(l.t.JALI2K) }
-                    : t.startsWith(a.BVt.APPLICATION_STORE)
-                      ? { routePath: a.BVt.APPLICATION_STORE, routeLabel: l.intl.string(l.t.Ipxkog) }
-                      : null != (0, r.B)(t, { path: d, exact: !0 })
-                        ? { routePath: `${t}${n}${i}`, routeLabel: l.intl.string(o.default.uk6jhJ) }
-                        : null;
+        C2: function () {
+            return { kind: "route", routePath: s.BVt.FRIENDS, routeLabel: o.intl.string(o.t.TdEu5X) };
         },
+        dR: function (e) {
+            let { pathname: t, search: n, hash: r } = (0, i.Rr)(e),
+                o = _({ pathname: t, search: n, hash: r });
+            if (null != o) return { kind: "route", ...o };
+            let d = (0, a.B)(t, { path: u, exact: !0 });
+            if (null == d || (0, l.jq)(d.params.channelId)) return null;
+            let { guildId: c, channelId: E } = d.params;
+            return { kind: "channel", channelId: E, guildId: c === s.ME ? null : c };
+        },
+        rv: _,
     },
 );

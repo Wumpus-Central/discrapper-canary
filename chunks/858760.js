@@ -1,7 +1,7 @@
 let i = (0, n(945810).mj)({
     name: "2026-07-desktop-channel-tabs",
     kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
+    defaultConfig: { enabled: !1, newTabExperience: "popout" },
+    variations: { 1: { enabled: !0, newTabExperience: "popout" }, 2: { enabled: !0, newTabExperience: "friends" } },
 });
 n.d(t, {}, { A: i });

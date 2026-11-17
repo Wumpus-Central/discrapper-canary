@@ -22,7 +22,7 @@ n.d(
             binds: ["mod+t"],
             comboKeysBindGlobal: !0,
             action: () =>
-                !a.A.isOpen() &&
+                (!a.A.isOpen() || !!a.A.isTabPicker()) &&
                 (o.A.isEnabled() ? !(0, d.k)("keyboard_shortcut") && void 0 : (s.A.hasLayers() || (0, r.WU)(), !1)),
         },
         nK: {
