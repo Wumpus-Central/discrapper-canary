@@ -68,16 +68,19 @@ n.d(
                 });
             } catch (e) {
                 var c;
-                if (
-                    e instanceof i.oh &&
+                throw (
+                    (null != e &&
+                    "object" == typeof e &&
+                    "status" in e &&
                     400 === e.status &&
+                    "body" in e &&
                     null != (c = e.body) &&
                     "object" == typeof c &&
                     "id" in c &&
                     "status" in c
-                )
-                    throw new _(e.body);
-                throw e;
+                        ? new _(e.body)
+                        : null) ?? e
+                );
             }
             if (null == t.body) throw Error("Invalid sign order response");
             return t.body;
