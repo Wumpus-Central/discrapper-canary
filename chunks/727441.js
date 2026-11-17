@@ -1841,14 +1841,8 @@ let tl = {
                             return (
                                 await e7.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })
                             ).body.map((e) => {
-                                let { id: t, name: n, type: l, source: o, end_date: a } = e;
-                                return {
-                                    id: t,
-                                    name: n,
-                                    type: l,
-                                    source: o,
-                                    endDate: null != a ? new Date(a) : void 0,
-                                };
+                                let { id: t, name: n, type: l, end_date: o } = e;
+                                return { id: t, name: n, type: l, endDate: null != o ? new Date(o) : void 0 };
                             });
                         })()
                             .then((t) => {
