@@ -64,7 +64,8 @@ n.d(
                 i,
                 a,
                 d,
-                u =
+                u,
+                A =
                     ((t = f(e)),
                     (n = (0, r.bG)(
                         [s.A, o.default],
@@ -84,24 +85,38 @@ n.d(
                         [e],
                     )),
                     t && n),
-                A =
-                    ((i = c.A.useConfig({ guildId: e, location: "Members page bulk actions" }).enabled),
-                    (a = f(e)),
-                    (d = (0, r.bG)(
-                        [s.A, o.default],
-                        () =>
-                            (function (e) {
-                                let t =
-                                        arguments.length > 1 && void 0 !== arguments[1]
-                                            ? arguments[1]
-                                            : [s.A, o.default],
-                                    n = E(e, t);
-                                return null != n && l.A.can(_.xBc.MANAGE_ROLES, n.guild);
-                            })(e, [s.A, o.default]),
-                        [e],
-                    )),
-                    i && a && d);
-            return { canAccessBulkActions: u || A, canAccessBulkBan: u, canAccessBulkRole: A };
+                {
+                    canAccessBulkRole: h,
+                    canAccessBulkKick: I,
+                    canAccessBulkTimeout: p,
+                } = ((i = c.A.useConfig({ guildId: e, location: "Members page bulk actions" }).enabled),
+                (a = f(e)),
+                (d = (0, r.cf)(
+                    [s.A, l.A, o.default],
+                    () => {
+                        let t = E(e, [s.A, o.default])?.guild;
+                        return {
+                            role: l.A.can(_.xBc.MANAGE_ROLES, t),
+                            kick: l.A.can(_.xBc.KICK_MEMBERS, t),
+                            timeout: l.A.can(_.xBc.MODERATE_MEMBERS, t),
+                        };
+                    },
+                    [e],
+                )),
+                {
+                    canAccessBulkRole: (u = i && a) && d.role,
+                    canAccessBulkKick: u && d.kick,
+                    canAccessBulkTimeout: u && d.timeout,
+                }),
+                m = h || I || p;
+            return {
+                canAccessBulkActions: A || m,
+                canAccessBulkBan: A,
+                canAccessBulkRole: h,
+                canAccessBulkKick: I,
+                canAccessBulkTimeout: p,
+                canSelectAnyMember: m,
+            };
         },
     },
 );

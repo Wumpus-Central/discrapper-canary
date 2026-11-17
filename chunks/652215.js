@@ -1627,6 +1627,8 @@ let nL = Object.freeze({
         EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE: "/attachments/sender-report-false-positive",
         BULK_GUILD_BAN_V2: (e) => `/guilds/${e}/bulk-ban/v2`,
         BULK_GUILD_ROLE: (e) => `/guilds/${e}/bulk/role`,
+        BULK_GUILD_KICK: (e) => `/guilds/${e}/bulk/kick`,
+        BULK_GUILD_TIMEOUT: (e) => `/guilds/${e}/bulk/timeout`,
         EXPLICIT_MEDIA_SCAN_MESSAGES: (e) => `/channels/${e}/explicit-media`,
         EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES: "/messages/explicit-media",
         POLL_ANSWERS: (e, t) => `/channels/${e}/polls/${t}/answers/@me`,

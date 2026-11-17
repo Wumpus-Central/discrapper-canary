@@ -49,14 +49,16 @@ r.d(
                             });
                             if (i.status === d.Re.SIGNED) return { type: "signed", order: i };
                             if (i.status === d.Re.SIGNING_IN_PROGRESS) {
-                                let e = i.billing_facet;
-                                try {
-                                    await (0, o.yu)(null != e ? e.order_signing_deferral_context : null);
-                                } catch (e) {
-                                    return (
-                                        p(e, { ...a, orderId: t.id }, s.intl.string(s.t.khEaRI)), { type: "failed" }
-                                    );
-                                }
+                                let e = i.billing_facet,
+                                    r = null != e ? e.order_signing_deferral_context : null;
+                                if (null != r)
+                                    try {
+                                        await (0, o.yu)(r);
+                                    } catch (e) {
+                                        return (
+                                            p(e, { ...a, orderId: t.id }, s.intl.string(s.t.khEaRI)), { type: "failed" }
+                                        );
+                                    }
                                 return { type: "pending", order: i };
                             }
                             let c = (0, u.i)(i);
