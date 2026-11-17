@@ -1,7 +1,7 @@
 r(321073);
 var i = r(575593),
-    l = r(898461),
-    s = r(474012),
+    s = r(898461),
+    l = r(474012),
     n = r(837015),
     u = r(203632),
     o = r(892118),
@@ -11,7 +11,7 @@ var i = r(575593),
 function S(t) {
     switch (t.type) {
         case i.R.AVATAR_DECORATION:
-            return l.A.fromServer(t);
+            return s.A.fromServer(t);
         case i.R.PROFILE_EFFECT:
             return u.Ay.fromServer(t);
         case i.R.NAMEPLATE:
@@ -22,7 +22,7 @@ function S(t) {
             return null;
     }
 }
-class I extends d.A {
+class _ extends d.A {
     collectiblesItem;
     bundleItems;
     constructor(t) {
@@ -42,12 +42,12 @@ class I extends d.A {
             throw Error("Collectibles wishlist item missing both collectibles_item and bundle_items");
     }
     static fromServer(t) {
-        return new I({ ...t, sku: null != t.sku ? a.A.createFromServer(t.sku) : void 0 });
+        return new _({ ...t, sku: null != t.sku ? a.A.createFromServer(t.sku) : void 0 });
     }
     static fromSKU(t) {
-        let e = (0, s.T7)(t);
+        let e = (0, l.T7)(t);
         if (null == e) return null;
-        let r = new I({
+        let r = new _({
             sku_id: t.id,
             sku_product_line: c.EZt.COLLECTIBLES,
             sku_name: t.name,
@@ -61,4 +61,4 @@ class I extends d.A {
         );
     }
 }
-r.d(e, {}, { A: I });
+r.d(e, {}, { A: _ });

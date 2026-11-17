@@ -4,9 +4,9 @@ var i = n(477900),
     s = n(826745),
     a = n(629403),
     o = n(612630),
-    u = n(351906);
+    d = n(351906);
 n(652215);
-var d = n(650583),
+var u = n(650583),
     c = n(792996),
     g = n(759847);
 n.d(
@@ -15,7 +15,7 @@ n.d(
     {
         A: function (e) {
             let { autoFocus: t = !1, className: n, userId: f, onUpdate: m } = e,
-                p = (0, r.bG)([u.A], () => u.A.hidePersonalInformation),
+                p = (0, r.bG)([d.A], () => d.A.hidePersonalInformation),
                 { loading: h, note: x } = (0, o.A)(f),
                 A = l.useRef(null);
             return (l.useEffect(() => {
@@ -38,11 +38,11 @@ n.d(
                               (x ?? "") !== t && (m?.(), a.A.updateNote(f, t));
                           },
                           onKeyPress: function (e) {
-                              e.key === d.dh.ENTER
+                              e.key === u.dh.ENTER
                                   ? e.shiftKey
                                       ? (e.currentTarget.value.match(/\n/g) ?? []).length >= 5 && e.preventDefault()
                                       : (e.preventDefault(), e.currentTarget.blur())
-                                  : e.key === d.dh.SPACE && e.stopPropagation();
+                                  : e.key === u.dh.SPACE && e.stopPropagation();
                           },
                           defaultValue: x ?? void 0,
                           maxLength: 256,

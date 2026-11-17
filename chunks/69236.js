@@ -1,35 +1,35 @@
-var r = l(855986),
-    n = l(288106),
-    u = l(309954),
-    o = l(287809),
-    a = l(760716);
-function i(t) {
-    let { orbPriceAmount: e, spendOrbsOffer: l } = t,
-        r = l?.rewardStatus === n.GM.EARNED,
-        { balance: o, isFetching: a, error: i } = (0, u.W)({ disableFetch: !r || null == e });
-    if (null == l || null == e) return { state: "HIDDEN", isReady: !0 };
-    if (!r) return { state: "NEEDS_NITRO", isReady: !0 };
-    let c = !a && (null != o || null != i);
-    return null == o || o < e ? { state: "NOT_ENOUGH_ORBS", isReady: c } : { state: "CAN_CHECKOUT", isReady: c };
+var i = n(855986),
+    r = n(288106),
+    a = n(309954),
+    s = n(287809),
+    l = n(760716);
+function o(e) {
+    let { orbPriceAmount: t, spendOrbsOffer: n } = e,
+        i = n?.rewardStatus === r.GM.EARNED,
+        { balance: s, isFetching: l, error: o } = (0, a.W)({ disableFetch: !i || null == t });
+    if (null == n || null == t) return { state: "HIDDEN", isReady: !0 };
+    if (!i) return { state: "NEEDS_NITRO", isReady: !0 };
+    let d = !l && (null != s || null != o);
+    return null == s || s < t ? { state: "NOT_ENOUGH_ORBS", isReady: d } : { state: "CAN_CHECKOUT", isReady: d };
 }
-l.d(
-    e,
+n.d(
+    t,
     {},
     {
         W8: function () {
-            let t = (0, a.i)((t) =>
-                    t.overrideNitroEligibilityForSocialLayerStorefront
-                        ? t.isNitroEligibleForSocialLayerStorefront
+            let e = (0, l.i)((e) =>
+                    e.overrideNitroEligibilityForSocialLayerStorefront
+                        ? e.isNitroEligibleForSocialLayerStorefront
                         : void 0,
                 ),
-                e = (0, r.bG)([o.default], () => o.default.getCurrentUser()?.hasPaidTier2Subscription() ?? !1),
-                l = (0, r.bG)([o.default], () => o.default.getCurrentUser()?.isPremiumGroupMember() ?? !1);
-            return null != t ? t : e || l;
+                t = (0, i.bG)([s.default], () => s.default.getCurrentUser()?.hasPaidTier2Subscription() ?? !1),
+                n = (0, i.bG)([s.default], () => s.default.getCurrentUser()?.isPremiumGroupMember() ?? !1);
+            return null != e ? e : t || n;
         },
-        oG: function (t) {
-            let { orbPriceAmount: e, spendOrbsOffer: l } = t;
-            return i({ orbPriceAmount: e, spendOrbsOffer: l }).state;
+        oG: function (e) {
+            let { orbPriceAmount: t, spendOrbsOffer: n } = e;
+            return o({ orbPriceAmount: t, spendOrbsOffer: n }).state;
         },
-        we: i,
+        we: o,
     },
 );

@@ -4,20 +4,20 @@ r.d(
     {},
     {
         $: async function (e, t) {
-            let { client_secret: r, payment_method_id: a } = e;
+            let { client_secret: r, payment_method_id: i } = e;
             if (null == r) throw Error("Stripe 3DS context has no client secret");
-            let l = await (async function (e) {
+            let a = await (async function (e) {
                     let t = await (0, n.Cv)(e);
                     if (null == t) throw Error("Stripe is not loaded");
                     return t;
                 })(t),
-                i = await (async function (e, t) {
+                l = await (async function (e, t) {
                     let { error: r, paymentIntent: n } = await e.retrievePaymentIntent(t);
                     if (null != r) throw Error(`Could not retrieve the payment intent: ${r.message}`);
                     if (null == n) throw Error("Payment intent does not exist");
                     return n;
-                })(l, r);
-            switch (i.status) {
+                })(a, r);
+            switch (l.status) {
                 case "succeeded":
                 case "processing":
                     return;
@@ -28,14 +28,14 @@ r.d(
                         let { error: n } = await e.confirmCardPayment(t, r);
                         if (null != n) throw Error(`Card authentication failed: ${n.message}`);
                     })(
-                        l,
+                        a,
                         r,
                         (function (e, t) {
                             if ("requires_payment_method" === e.status && null != t) return { payment_method: t };
-                        })(i, a),
+                        })(l, i),
                     );
                 default:
-                    throw Error(`Unexpected payment intent status: ${i.status}`);
+                    throw Error(`Unexpected payment intent status: ${l.status}`);
             }
         },
     },

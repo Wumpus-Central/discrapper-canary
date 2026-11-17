@@ -28,13 +28,13 @@ var i = n(477900),
     j = n(615396),
     O = n(543767),
     D = n(160946),
-    R = n(295405),
-    L = n(793574),
+    L = n(295405),
+    R = n(793574),
     P = n(166532),
     G = n(778705);
 function M(e) {
     let { dropdownProps: t, subscription: n, openInvoice: l } = e,
-        { analyticsLocations: s } = (0, _.Ay)(L.A.SUBSCRIPTION_DETAILS);
+        { analyticsLocations: s } = (0, _.Ay)(R.A.SUBSCRIPTION_DETAILS);
     return null == l
         ? (0, i.jsx)(x.Ay, { ...t, disabled: !0 })
         : (0, i.jsx)(x.Ay, {
@@ -67,7 +67,7 @@ function F(e) {
             subscription: t,
             onPaymentSourceAdded: s,
             highlightAddPaymentMethodButton: a,
-            analyticsLocation: L,
+            analyticsLocation: R,
             currentInvoicePreview: P,
             disabled: G = !1,
             openInvoice: F,
@@ -81,10 +81,10 @@ function F(e) {
             hasFetchedSubscriptionPlans: W,
             hasFetchError: K,
         } = (function (e, t) {
-            let [n, i, s] = (0, u.yK)([R.A], () => [
-                    R.A.paymentSources,
-                    R.A.hasFetchedPaymentSources,
-                    R.A.paymentSourceFetchError,
+            let [n, i, s] = (0, u.yK)([L.A], () => [
+                    L.A.paymentSources,
+                    L.A.hasFetchedPaymentSources,
+                    L.A.paymentSourceFetchError,
                 ]),
                 r = (0, D.Y)((0, j.MP)(e)),
                 a = l.useMemo(() => {
@@ -110,7 +110,7 @@ function F(e) {
     async function en(e, n, i) {
         (Q(!0), $(null));
         try {
-            (null == e ? await T.r6(t, n, i, Z, L) : await T.uK(t, e, i, Z, L), et(n));
+            (null == e ? await T.r6(t, n, i, Z, R) : await T.uK(t, e, i, Z, R), et(n));
         } catch (e) {
             $(e instanceof I.Ay ? e : new I.Ay(e));
         } finally {
@@ -127,7 +127,7 @@ function F(e) {
                     renewal: !0,
                     currency: null != e ? void 0 : l,
                     analyticsLocations: Z,
-                    analyticsLocation: L,
+                    analyticsLocation: R,
                 }),
                 u = { amount: o.subtotal, currency: o.currency };
             P.currency !== o.currency || P.total !== o.total
@@ -184,7 +184,7 @@ function F(e) {
     }
     let es = () => {
             (0, d.mM)(
-                async () => (e) => (0, i.jsx)(f.default, { ...e, onAddPaymentSource: el, analyticsLocation: L }),
+                async () => (e) => (0, i.jsx)(f.default, { ...e, onAddPaymentSource: el, analyticsLocation: R }),
                 {
                     onCloseCallback: () => {
                         (0, S.ET)();

@@ -1,7 +1,7 @@
 r(321073);
 var i = r(582128),
-    l = r(855986),
-    s = r(517164),
+    s = r(855986),
+    l = r(517164),
     n = r(20805),
     u = r(644727),
     o = r(851767),
@@ -15,12 +15,12 @@ r.d(
     {
         mn: function (t) {
             let { userIds: e } = t;
-            return (0, l.yK)(
-                [s.A, c.A],
+            return (0, s.yK)(
+                [l.A, c.A],
                 () => {
                     let t = [];
                     for (let r of e)
-                        for (let e of s.A.getUserOutbox(r)?.entries ?? [])
+                        for (let e of l.A.getUserOutbox(r)?.entries ?? [])
                             if (null != e && (0, n.zD)(e)) {
                                 let r = c.A.getApplicationIdFromDetectableId(e.extra.application_id);
                                 null != r && t.push(r);
@@ -31,8 +31,8 @@ r.d(
             );
         },
         px: function () {
-            let t = (0, l.bG)([a.A], () => a.A.getGuildIds());
-            return (0, l.yK)(
+            let t = (0, s.bG)([a.A], () => a.A.getGuildIds());
+            return (0, s.yK)(
                 [c.A],
                 () => {
                     let e = [];
@@ -46,7 +46,7 @@ r.d(
             );
         },
         qx: function () {
-            return (0, l.yK)([u.Ay, c.A], () => {
+            return (0, s.yK)([u.Ay, c.A], () => {
                 let t = [];
                 for (let e of u.Ay.getGamesSeen(!1, !1))
                     if (null != e.id) {
@@ -57,7 +57,7 @@ r.d(
             });
         },
         rY: function () {
-            return (0, l.yK)(
+            return (0, s.yK)(
                 [u.Ay, c.A],
                 () => {
                     let t = [];
@@ -72,7 +72,7 @@ r.d(
             );
         },
         tR: function (t) {
-            return (0, l.yK)(
+            return (0, s.yK)(
                 [o.A, c.A],
                 () => {
                     let e = [];
@@ -93,7 +93,7 @@ r.d(
         },
         w: function (t) {
             let { userIds: e } = t,
-                r = (0, l.yK)(
+                r = (0, s.yK)(
                     [d.A, c.A],
                     () => {
                         let t = [];
@@ -107,8 +107,8 @@ r.d(
                     },
                     [e],
                 ),
-                s = (0, S.W)();
-            return i.useMemo(() => (null != s ? [...r, s] : r), [r, s]);
+                l = (0, S.W)();
+            return i.useMemo(() => (null != l ? [...r, l] : r), [r, l]);
         },
     },
 );

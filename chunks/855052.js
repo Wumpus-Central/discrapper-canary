@@ -1,6 +1,6 @@
 var i = r(315069),
-    l = r(327891),
-    s = r(520606),
+    s = r(327891),
+    l = r(520606),
     n = r(872472),
     u = r(394300),
     o = r(721932),
@@ -28,14 +28,14 @@ class d extends i.A {
                     case a.EZt.PREMIUM:
                         return u.A.fromServer(t);
                     default:
-                        return s.A.fromServer(t);
+                        return l.A.fromServer(t);
                 }
             });
         return new d({
             ...i,
             userId: e,
             items: c,
-            applications: i.applications?.map((t) => l.Ay.createFromServer(t)) ?? void 0,
+            applications: i.applications?.map((t) => s.Ay.createFromServer(t)) ?? void 0,
         });
     }
 }

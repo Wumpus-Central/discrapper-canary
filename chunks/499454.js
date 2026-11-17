@@ -16,8 +16,8 @@ n.d(
             let { processedCode: t, channelContext: E, customGiftMessage: _, giftInfo: C } = e,
                 f = !1,
                 T = null,
-                g = a.default.getCurrentUser(),
-                m = (0, o.CC)(g?.premiumType, c.PremiumTypes.TIER_0);
+                p = a.default.getCurrentUser(),
+                g = (0, o.CC)(p?.premiumType, c.PremiumTypes.TIER_0);
             (0, s.mM)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -60,7 +60,7 @@ n.d(
                     onCloseCallback: () => {
                         f &&
                             null != T &&
-                            !m &&
+                            !g &&
                             T.isSubscription &&
                             T?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
                             l._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);

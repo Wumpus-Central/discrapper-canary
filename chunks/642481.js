@@ -36,8 +36,8 @@ function E(e) {
             caretConfig: x,
             scrollBehavior: A,
             showCloseButton: _ = !0,
-            isCaretHoverable: R = !1,
-            shouldTrapFocus: N = !1,
+            isCaretHoverable: N = !1,
+            shouldTrapFocus: R = !1,
             returnRef: v,
             onNudgeChange: j,
             ...y
@@ -59,8 +59,8 @@ function E(e) {
         O = l.useCallback((e) => {
             T(e);
         }, []),
-        P = R ? g.caretHoverable : void 0,
-        M = {
+        M = N ? g.caretHoverable : void 0,
+        P = {
             targetElementRef: y.targetElementRef,
             shouldShow: y.shouldShow,
             hasVideo: y.hasVideo,
@@ -71,7 +71,7 @@ function E(e) {
             onPositionChange: O,
             onNudgeChange: j,
             scrollBehavior: A,
-            modal: N,
+            modal: R,
             returnRef: v,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
@@ -80,7 +80,7 @@ function E(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...M,
+        ...P,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
@@ -95,7 +95,7 @@ function E(e) {
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: P }),
+                null != C && (0, a.jsx)(d.F, { className: M }),
             ],
         }),
     });

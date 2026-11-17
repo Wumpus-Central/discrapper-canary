@@ -13,7 +13,7 @@ let r = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    u = "enable_native_markdown";
+    d = "enable_native_markdown";
 t.d(
     n,
     {},
@@ -21,15 +21,15 @@ t.d(
         I2: function (e) {
             let { location: n } = e,
                 t = o.useConfig({ location: n }).enabled,
-                a = (0, l.A)(u),
+                a = (0, l.A)(d),
                 i = r.useConfig({ location: n }).enabled;
             return { enabled: t ? a : i };
         },
-        XQ: u,
+        XQ: d,
         wG: o,
         wr: function (e, n) {
             let { location: t } = e;
-            return o.getConfig({ location: t }, n).enabled ? i.A.get(u) : r.getConfig({ location: t }, n).enabled;
+            return o.getConfig({ location: t }, n).enabled ? i.A.get(d) : r.getConfig({ location: t }, n).enabled;
         },
     },
 );

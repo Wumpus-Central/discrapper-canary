@@ -1,18 +1,18 @@
-let i = (0, r(196765).v)()((t) => ({
+let i = (0, n(196765).v)()((e) => ({
     overrideApplicationId: null,
-    setOverrideApplicationId: (e) => t({ overrideApplicationId: e }),
+    setOverrideApplicationId: (t) => e({ overrideApplicationId: t }),
     showSelfActivity: !1,
-    setShowSelfActivity: (e) => t({ showSelfActivity: e }),
+    setShowSelfActivity: (t) => e({ showSelfActivity: t }),
     recommendationApplicationIds: null,
-    setRecommendationApplicationIds: (e) => t({ recommendationApplicationIds: null != e ? e.split(",") : null }),
+    setRecommendationApplicationIds: (t) => e({ recommendationApplicationIds: null != t ? t.split(",") : null }),
     overrideNitroEligibilityForSocialLayerStorefront: !1,
-    setOverrideNitroEligibilityForSocialLayerStorefront: (e) =>
-        t({ overrideNitroEligibilityForSocialLayerStorefront: e }),
+    setOverrideNitroEligibilityForSocialLayerStorefront: (t) =>
+        e({ overrideNitroEligibilityForSocialLayerStorefront: t }),
     isNitroEligibleForSocialLayerStorefront: !1,
-    setIsNitroEligibleForSocialLayerStorefront: (e) => t({ isNitroEligibleForSocialLayerStorefront: e }),
+    setIsNitroEligibleForSocialLayerStorefront: (t) => e({ isNitroEligibleForSocialLayerStorefront: t }),
     overrideCurrentPremiumPlanId: !1,
-    setOverrideCurrentPremiumPlanId: (e) => t({ overrideCurrentPremiumPlanId: e }),
+    setOverrideCurrentPremiumPlanId: (t) => e({ overrideCurrentPremiumPlanId: t }),
     currentPremiumPlanId: null,
-    setCurrentPremiumPlanId: (e) => t({ currentPremiumPlanId: e }),
+    setCurrentPremiumPlanId: (t) => e({ currentPremiumPlanId: t }),
 }));
-r.d(e, {}, { i: i });
+n.d(t, {}, { i: i });

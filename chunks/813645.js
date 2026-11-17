@@ -1,4 +1,4 @@
-t.d(n, { A: () => d });
+t.d(n, { A: () => s });
 var a = t(855986),
     i = t(73153);
 let l = {
@@ -10,7 +10,7 @@ function r(e) {
     return l[e].defaultValue ?? !1;
 }
 let o = {};
-class u extends a.Ay.DeviceSettingsStore {
+class d extends a.Ay.DeviceSettingsStore {
     static displayName = "LabFeatureStore";
     static persistKey = "LabFeatureStore";
     getUserAgnosticState() {
@@ -26,7 +26,7 @@ class u extends a.Ay.DeviceSettingsStore {
         return ((o[e] = n), n);
     }
 }
-let d = new u(i.h, {
+let s = new d(i.h, {
     LAB_FEATURE_TOGGLE: function (e) {
         let { labFeature: n, enabled: t } = e;
         o[n] = t;

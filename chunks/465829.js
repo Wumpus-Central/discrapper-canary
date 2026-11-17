@@ -77,7 +77,7 @@ function _(e) {
         ],
     });
 }
-function R(e) {
+function N(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
         className: r()(b.hI, n),
@@ -89,7 +89,7 @@ function R(e) {
         ],
     });
 }
-function N() {
+function R() {
     return (0, a.jsx)("div", { "aria-hidden": "true", className: b.SC });
 }
 function v(e) {
@@ -124,12 +124,12 @@ function v(e) {
             x &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(N, {}),
+                        (0, a.jsx)(R, {}),
                         (0, a.jsx)(d.m, {
                             text: h.intl.string(h.t.GI2A8C),
                             delay: 300,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: b.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: b.Ez, children: (0, a.jsx)(N, { pronouns: s }) }),
                         }),
                     ],
                 }),
@@ -194,9 +194,9 @@ n.d(
                 ],
             });
         },
-        Ce: N,
+        Ce: R,
         c$: A,
         gU: x,
-        n2: R,
+        n2: N,
     },
 );

@@ -12,17 +12,17 @@ var s = n(477900),
     m = n(854378),
     N = n(701273),
     E = n(397404),
-    g = n(976860),
-    f = n(210714),
-    y = n(46653),
-    A = n(188567),
-    w = n(652215),
-    I = n(792996),
+    f = n(976860),
+    g = n(210714),
+    A = n(46653),
+    y = n(188567),
+    I = n(652215),
+    w = n(792996),
     x = n(498206),
     C = n(221851);
 l.Ay.initialize();
-class v extends r.PureComponent {
-    static defaultProps = { transitionTo: g.pX, replaceWith: g.bG };
+class S extends r.PureComponent {
+    static defaultProps = { transitionTo: f.pX, replaceWith: f.bG };
     constructor(e) {
         super(e);
         let t =
@@ -41,13 +41,13 @@ class v extends r.PureComponent {
         };
     }
     componentDidMount() {
-        (0, f.d0)("reset_password");
+        (0, g.d0)("reset_password");
     }
     handleSubmit = async (e) => {
         let { location: t, source: n, resetToken: s } = this.props,
             { password: r, error: a } = this.state;
         if ((e.preventDefault(), 0 === r.length)) {
-            (this.setState({ error: I.intl.string(I.t.R98xD5) }), A._.dispatch(w.jej.WAVE_EMPHASIZE));
+            (this.setState({ error: w.intl.string(w.t.R98xD5) }), y._.dispatch(I.jej.WAVE_EMPHASIZE));
             return;
         }
         null != a && this.setState({ error: null });
@@ -103,15 +103,15 @@ class v extends r.PureComponent {
             (u.A.loginReset(), this.setState({ success: !0 }));
             return;
         }
-        (u.A.loginReset(), t(w.BVt.LOGIN, { source: "reset_password", state: { passwordReset: !0 } }));
+        (u.A.loginReset(), t(I.BVt.LOGIN, { source: "reset_password", state: { passwordReset: !0 } }));
     };
     handlePasswordChangeSuccess = () => {
         let { replaceWith: e } = this.props;
-        i.v1 || i.Fr ? this.setState({ success: !0 }) : e(w.BVt.APP);
+        i.v1 || i.Fr ? this.setState({ success: !0 }) : e(I.BVt.APP);
     };
     handleGoToLogin = () => {
         let { transitionTo: e } = this.props;
-        (u.A.loginReset(), e(w.BVt.LOGIN, { source: "reset_password" }));
+        (u.A.loginReset(), e(I.BVt.LOGIN, { source: "reset_password" }));
     };
     handleOpenApp = () => {
         (0, N.A)("password_reset");
@@ -136,12 +136,12 @@ class v extends r.PureComponent {
             className: l,
             children: [
                 (0, s.jsx)("img", { alt: "", src: null == d ? n(79418) : n(579656), className: C.SX }),
-                (0, s.jsx)(m.hE, { children: I.intl.string(I.t["1LV6Kq"]) }),
+                (0, s.jsx)(m.hE, { children: w.intl.string(w.t["1LV6Kq"]) }),
                 (0, s.jsxs)(m.eB, {
                     className: C.QX,
                     children: [
                         (0, s.jsx)(m.pd, {
-                            label: I.intl.string(I.t["8dM4FO"]),
+                            label: w.intl.string(w.t["8dM4FO"]),
                             className: C.SX,
                             name: "password",
                             value: e,
@@ -156,10 +156,10 @@ class v extends r.PureComponent {
                             direction: "vertical",
                             fullWidth: !0,
                             children: [
-                                (0, s.jsx)(c.$, { text: I.intl.string(I.t["FRep5/"]), type: "submit", loading: a }),
+                                (0, s.jsx)(c.$, { text: w.intl.string(w.t["FRep5/"]), type: "submit", loading: a }),
                                 r &&
                                     (0, s.jsx)(c.$, {
-                                        text: I.intl.string(I.t["ETE/oC"]),
+                                        text: w.intl.string(w.t["ETE/oC"]),
                                         variant: "secondary",
                                         onClick: this.handleGoToLogin,
                                         loading: a,
@@ -197,8 +197,8 @@ class v extends r.PureComponent {
             className: t,
             contentClassName: x.oe,
             children: [
-                (0, s.jsx)(m.hE, { className: C.C2, children: I.intl.string(I.t.WAUOoK) }),
-                (0, s.jsx)(c.$, { text: I.intl.string(I.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
+                (0, s.jsx)(m.hE, { className: C.C2, children: w.intl.string(w.t.WAUOoK) }),
+                (0, s.jsx)(c.$, { text: w.intl.string(w.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
             ],
         });
     }
@@ -215,11 +215,11 @@ n.d(
     {},
     {
         A: function (e) {
-            let t = (0, l.cf)([y.default], () => ({
-                mfaTicket: y.default.getMFATicket(),
-                mfaMethods: y.default.getMFAMethods(),
+            let t = (0, l.cf)([A.default], () => ({
+                mfaTicket: A.default.getMFATicket(),
+                mfaMethods: A.default.getMFAMethods(),
             }));
-            return (0, s.jsx)(v, { ...e, ...t });
+            return (0, s.jsx)(S, { ...e, ...t });
         },
     },
 );

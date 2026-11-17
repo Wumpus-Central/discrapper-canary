@@ -16,19 +16,19 @@ let d = s.memo(function (t) {
             particlesPerBurst: f,
             offsetXPercentageMax: p,
             offsetXPercentageMin: h,
-            offsetYPercentageMax: m,
-            offsetYPercentageMin: g,
+            offsetYPercentageMax: g,
+            offsetYPercentageMin: m,
             customConfettiCanvas: A,
-            speedValues: R = o,
-            dragCoefficientValue: S = 1.66,
-            onAnimationEnd: x,
+            speedValues: S = o,
+            dragCoefficientValue: R = 1.66,
+            onAnimationEnd: y,
         } = t,
-        [y, C] = s.useState(null),
-        { confettiCanvas: I } = s.useContext(l.x),
-        b = (0, r.f9)(A ?? I, y),
+        [x, C] = s.useState(null),
+        { confettiCanvas: b } = s.useContext(l.x),
+        I = (0, r.f9)(A ?? b, x),
         [E, T] = s.useState(!1);
     s.useEffect(() => {
-        E && x?.();
+        E && y?.();
     });
     let v = s.useMemo(() => {
         if (null != d) return [{ src: d, colorize: !1 }];
@@ -40,7 +40,7 @@ let d = s.memo(function (t) {
             return (
                 (t = t.map((i, n) =>
                     setTimeout(() => {
-                        (b.createMultipleConfetti(
+                        (I.createMultipleConfetti(
                             (function (t, e, i, n, s) {
                                 let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                     l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
@@ -48,7 +48,7 @@ let d = s.memo(function (t) {
                                     c = u(t.height, 75, s),
                                     f = u(t.width, 350, e),
                                     p = u(t.height, 75, n),
-                                    { xMin: h, xMax: m, yMin: g, yMax: A } = r;
+                                    { xMin: h, xMax: g, yMin: m, yMax: A } = r;
                                 return {
                                     ...a.Mw,
                                     position: {
@@ -58,23 +58,23 @@ let d = s.memo(function (t) {
                                     },
                                     velocity: {
                                         type: "static-random",
-                                        minValue: { x: h, y: g },
-                                        maxValue: { x: m, y: A },
+                                        minValue: { x: h, y: m },
+                                        maxValue: { x: g, y: A },
                                     },
                                     size: { type: "static-random", minValue: 28, maxValue: 28 },
                                     dragCoefficient: { type: "static", value: l },
                                 };
-                            })(e.getBoundingClientRect(), p, h, m, g, R, S),
+                            })(e.getBoundingClientRect(), p, h, g, m, S, R),
                             f ?? 50,
                         ),
-                            n === t.length - 1 && null != x && T(!0));
+                            n === t.length - 1 && null != y && T(!0));
                     }, 60 * n),
                 )),
                 () => {
                     for (let e of t) clearTimeout(e);
                 }
             );
-        }, [b, e, c, f, p, h, m, g, R, S, x]),
+        }, [I, e, c, f, p, h, g, m, S, R, y]),
         (0, n.jsx)(r.K_, { ref: C, sprites: v ?? a.uI, colors: i ?? a._t, spriteWidth: 28, spriteHeight: 28 })
     );
 });

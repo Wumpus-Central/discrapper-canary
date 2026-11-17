@@ -1,34 +1,34 @@
-var n = l(582128),
-    i = l(174947);
-function a(e) {
+var l = n(582128),
+    i = n(174947);
+function r(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [, l] = n.useReducer((e) => e + 1, 0),
-        a = e?.getTime();
+        [, n] = l.useReducer((e) => e + 1, 0),
+        r = e?.getTime();
     return (
-        n.useEffect(() => {
+        l.useEffect(() => {
             let e;
-            if (null == a) return;
-            let n = a - i.G3,
-                r = () => {
+            if (null == r) return;
+            let l = r - i.G3,
+                u = () => {
                     let i = Date.now();
-                    if (i < n) {
-                        e = setTimeout(r, Math.min(n - i, 0x7fffffff));
+                    if (i < l) {
+                        e = setTimeout(u, Math.min(l - i, 0x7fffffff));
                         return;
                     }
-                    (l(), i < a && (e = setTimeout(r, Math.min(t ? 6e4 : 0x7fffffff, a - i))));
+                    (n(), i < r && (e = setTimeout(u, Math.min(t ? 6e4 : 0x7fffffff, r - i))));
                 };
-            return (r(), () => clearTimeout(e));
-        }, [a, t]),
+            return (u(), () => clearTimeout(e));
+        }, [r, t]),
         (0, i._z)(e)
     );
 }
-l.d(
+n.d(
     t,
     {},
     {
-        A: a,
+        A: r,
         N: function (e) {
-            return null != a((0, i.fH)(e), !1);
+            return null != r((0, i.fH)(e), !1);
         },
     },
 );

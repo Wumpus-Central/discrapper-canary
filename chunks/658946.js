@@ -1,46 +1,46 @@
-l.d(t, { U: () => p, Y: () => A });
-var n = l(342442),
-    i = l(620632),
-    a = l(73153),
-    r = l(626584),
-    s = l(107563),
-    u = l(287809);
+n.d(t, { U: () => A, Y: () => h });
+var l = n(342442),
+    i = n(620632),
+    r = n(73153),
+    u = n(626584),
+    a = n(107563),
+    s = n(287809);
 let o = Object.freeze({ PROFILE_READ_STATE: (e) => `/users/@me/profile-read-states/${e}` });
-var d = l(419731),
-    c = l(851767),
-    f = l(695904);
-let m = new r.A("ProfileReadStateActionCreators"),
-    h = new Map();
-function A(e, t) {
-    if (null == t || null == s.A.getWishlist(t) || s.A.isFetching(t) || null != s.A.getError(t)) return !1;
-    let l = c.A.getWishlistSettings(e, t),
-        n = l?.updated_at;
-    return (null == n || s.A.getUpdatedAt(t) === n) && (0, d.uM)(l, c.A.getProfileReadState(e));
+var d = n(419731),
+    f = n(851767),
+    c = n(695904);
+let m = new u.A("ProfileReadStateActionCreators"),
+    p = new Map();
+function h(e, t) {
+    if (null == t || null == a.A.getWishlist(t) || a.A.isFetching(t) || null != a.A.getError(t)) return !1;
+    let n = f.A.getWishlistSettings(e, t),
+        l = n?.updated_at;
+    return (null == l || a.A.getUpdatedAt(t) === l) && (0, d.uM)(n, f.A.getProfileReadState(e));
 }
-async function p(e) {
-    let t = u.default.getCurrentUser()?.id;
-    if (null == t || e === u.default.getCurrentUser()?.id || null == (0, f.aS)()) return;
-    let l = `${t}:${e}`,
-        r = h.get(l);
-    if (null != r) return r;
-    if (!A(e, c.A.getFirstWishlistId(e))) return;
-    let s = (async function (e, t) {
+async function A(e) {
+    let t = s.default.getCurrentUser()?.id;
+    if (null == t || e === s.default.getCurrentUser()?.id || null == (0, c.aS)()) return;
+    let n = `${t}:${e}`,
+        u = p.get(n);
+    if (null != u) return u;
+    if (!h(e, f.A.getFirstWishlistId(e))) return;
+    let a = (async function (e, t) {
         try {
-            let l = await i.Bo.put({
+            let n = await i.Bo.put({
                 url: o.PROFILE_READ_STATE(e),
-                body: { sections: [n.o.WISHLIST] },
+                body: { sections: [l.o.WISHLIST] },
                 rejectWithError: !0,
             });
-            if (u.default.getCurrentUser()?.id !== t) return;
-            await a.h.dispatch({ type: "PROFILE_READ_STATE_ACK", ownerId: e, ackedAt: (0, d.CJ)(l.body) ?? {} });
+            if (s.default.getCurrentUser()?.id !== t) return;
+            await r.h.dispatch({ type: "PROFILE_READ_STATE_ACK", ownerId: e, ackedAt: (0, d.CJ)(n.body) ?? {} });
         } catch (e) {
             m.warn("Failed to ack profile wishlist", e);
         }
     })(e, t);
-    h.set(l, s);
+    p.set(n, a);
     try {
-        await s;
+        await a;
     } finally {
-        h.delete(l);
+        p.delete(n);
     }
 }

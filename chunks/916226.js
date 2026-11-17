@@ -13,28 +13,28 @@ var s = n(477900),
     m = n(939249),
     N = n(557722),
     E = n(91871),
-    g = n.n(E),
-    f = n(435558),
-    y = n.n(f),
-    A = n(96337),
-    w = n(404778),
-    I = n(683438),
+    f = n.n(E),
+    g = n(435558),
+    A = n.n(g),
+    y = n(96337),
+    I = n(404778),
+    w = n(683438),
     x = n(305866),
     C = n(317097),
-    v = n(559106),
+    S = n(559106),
     b = n(933832),
-    j = n(646514),
+    v = n(646514),
     _ = n(235986),
-    S = n(650583),
+    j = n(650583),
     T = n(858918),
     k = n(221851);
-let P = y().memoize((e) => {
+let P = A().memoize((e) => {
     let t = !1;
     if (null != e && (0, C.qt)(e)) {
         let n = (0, C.LX)(e);
         null != n && (t = 0.2 > (0, C.OK)(n));
     }
-    return t ? j.A.unsafe_rawColors.BLACK.css : j.A.unsafe_rawColors.WHITE.css;
+    return t ? v.A.unsafe_rawColors.BLACK.css : v.A.unsafe_rawColors.WHITE.css;
 });
 class L extends r.PureComponent {
     state = { color: P(this.props.color) };
@@ -44,9 +44,9 @@ class L extends r.PureComponent {
             l = P(n);
         return (
             t
-                ? (e = { color: l, background: n ?? j.A.unsafe_rawColors.BRAND_500.css })
+                ? (e = { color: l, background: n ?? v.A.unsafe_rawColors.BRAND_500.css })
                 : null != n && (e = { color: n }),
-            (0, s.jsx)(v.vN, {
+            (0, s.jsx)(S.vN, {
                 offset: { left: 4 },
                 children: (0, s.jsxs)(_.A, {
                     className: i()(T.OR, r, { [T.wH]: t }),
@@ -72,7 +72,7 @@ class L extends r.PureComponent {
         );
     }
     handleKeyUp = (e) => {
-        if (e.key === S.dh.ENTER || e.key === S.dh.SPACE) {
+        if (e.key === j.dh.ENTER || e.key === j.dh.SPACE) {
             let { onClick: e, ...t } = this.props;
             e(t);
         }
@@ -82,28 +82,28 @@ class L extends r.PureComponent {
         e(t);
     };
 }
-var O = n(968788);
-function R() {
-    return (0, s.jsx)(w.c, { className: O.yF });
+var R = n(968788);
+function O() {
+    return (0, s.jsx)(I.c, { className: R.yF });
 }
 function G(e) {
     let { children: t } = e;
-    return (0, s.jsx)("div", { className: O.Fm, children: t });
+    return (0, s.jsx)("div", { className: R.Fm, children: t });
 }
 class D extends r.PureComponent {
     static defaultProps = { autoFocus: !0 };
     render() {
-        return (0, s.jsx)(I.I, { ...this.props, size: "sm" });
+        return (0, s.jsx)(w.I, { ...this.props, size: "sm" });
     }
 }
 class F extends r.PureComponent {
     static SearchBar = D;
     static Item = L;
-    static Divider = R;
+    static Divider = O;
     static Empty = G;
     render() {
         let { className: e, children: t } = this.props;
-        return (0, s.jsx)(x.l, { className: i()(O.qE, e), "aria-label": this.props["aria-label"], children: t });
+        return (0, s.jsx)(x.l, { className: i()(R.qE, e), "aria-label": this.props["aria-label"], children: t });
     }
 }
 var M = n(95362),
@@ -117,7 +117,7 @@ class $ extends r.PureComponent {
     }
     renderItems() {
         let { query: e } = this.state,
-            t = A.A.flatMap((e, t) => {
+            t = y.A.flatMap((e, t) => {
                 let { alpha2: n, phoneCountryCodes: r, name: a } = e,
                     i = (0, K.Gw)(n);
                 return r.map((e) => ({
@@ -136,12 +136,12 @@ class $ extends r.PureComponent {
                     }),
                 }));
             }),
-            n = y()(t)
+            n = A()(t)
                 .filter(
                     (t) =>
                         0 === e.length ||
-                        g()(e.toLowerCase(), t.name.toLowerCase()) ||
-                        g()(e.toLowerCase(), t.translatedName.toLowerCase()),
+                        f()(e.toLowerCase(), t.name.toLowerCase()) ||
+                        f()(e.toLowerCase(), t.translatedName.toLowerCase()),
                 )
                 .map((e) =>
                     (0, r.createElement)(F.Item, { ...e, key: e.key, onClick: () => this.onClick(e.countryData) }),
@@ -184,20 +184,20 @@ function z(e) {
         l = r.useRef(null),
         o = r.useRef(null),
         [c, d] = r.useState(0),
-        [E, g] = r.useState(!1);
+        [E, f] = r.useState(!1);
     r.useEffect(() => {
         function e() {
             d(t ? (o.current?.getBoundingClientRect().width ?? 0) : 0);
         }
         return (e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
     }, [t, n, a]);
-    let f = (0, h.z)({
+    let g = (0, h.z)({
         width: `${c}px`,
         onStart: () => {
-            g(!0);
+            f(!0);
         },
         onRest: () => {
-            g(!1);
+            f(!1);
         },
     });
     return (0, s.jsx)(p.Y, {
@@ -216,7 +216,7 @@ function z(e) {
                 ref: l,
                 children: (0, s.jsx)(u.animated.div, {
                     className: H.kL,
-                    style: f,
+                    style: g,
                     children: (0, s.jsxs)("div", {
                         className: H.WH,
                         ref: o,
@@ -242,19 +242,19 @@ function Z(e) {
             required: m,
             value: N,
             setRef: E,
-            placeholder: g,
-            autoFocus: f,
-            maxLength: y,
-            spellCheck: A,
-            autoComplete: w,
-            autoCapitalize: I,
+            placeholder: f,
+            autoFocus: g,
+            maxLength: A,
+            spellCheck: y,
+            autoComplete: I,
+            autoCapitalize: w,
             autoCorrect: x,
             onChange: C,
-            inputClassName: v,
+            inputClassName: S,
         } = e,
         b = (0, c.GV)(),
-        [j, _] = r.useState(!1),
-        S = (0, d.Vl)(a, N);
+        [v, _] = r.useState(!1),
+        j = (0, d.Vl)(a, N);
     return (0, s.jsx)("div", {
         className: p ?? void 0,
         children: (0, s.jsx)(o.D, {
@@ -263,28 +263,28 @@ function Z(e) {
             required: m,
             id: b,
             children: (0, s.jsxs)("div", {
-                className: i()(q.hF, V.hF, v, { [q.z3]: null != h, [q.in]: j }),
+                className: i()(q.hF, V.hF, S, { [q.z3]: null != h, [q.in]: v }),
                 children: [
-                    (0, s.jsx)(z, { show: S, alpha2: t, countryCode: n }),
+                    (0, s.jsx)(z, { show: j, alpha2: t, countryCode: n }),
                     (0, s.jsx)(l.p, {
                         id: b,
                         name: "email",
                         type: a === d.Pd.EMAIL ? "email" : "text",
                         value: N,
                         inputRef: E,
-                        placeholder: g,
+                        placeholder: f,
                         "aria-label": u,
                         required: m,
                         onChange: function (e) {
                             let t = (0, d.Vl)(a, e) ? n : "";
                             C(e, t);
                         },
-                        autoComplete: w,
-                        autoCapitalize: I,
+                        autoComplete: I,
+                        autoCapitalize: w,
                         autoCorrect: x,
-                        autoFocus: f,
-                        maxLength: y,
-                        spellCheck: A,
+                        autoFocus: g,
+                        maxLength: A,
+                        spellCheck: y,
                         className: V.I6,
                         inputClassName: V.LF,
                         onFocus: () => _(!0),

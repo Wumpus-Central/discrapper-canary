@@ -1,24 +1,24 @@
-r.d(t, { W0: () => n.W, rQ: () => c, Qr: () => s.Q });
+r.d(t, { W0: () => n.W, rQ: () => u, Qr: () => d.Q });
 var n = r(309954),
-    a = r(582128),
-    l = r(855986),
-    i = r(786953),
-    d = r(505274);
-function c(e) {
+    i = r(582128),
+    a = r(855986),
+    l = r(786953),
+    o = r(505274);
+function u(e) {
     let {
         totalRedeemed: t,
         isFetching: r,
         error: n,
-    } = (0, l.cf)([d.A], () => ({
-        totalRedeemed: d.A.totalRedeemed,
-        isFetching: d.A.isFetchingTotalRedeemed,
-        error: d.A.fetchTotalRedeemedError,
+    } = (0, a.cf)([o.A], () => ({
+        totalRedeemed: o.A.totalRedeemed,
+        isFetching: o.A.isFetchingTotalRedeemed,
+        error: o.A.fetchTotalRedeemedError,
     }));
     return (
-        (0, a.useEffect)(() => {
-            e?.disableFetch === !0 || r || null != t || null != n || (0, i.Ce)();
+        (0, i.useEffect)(() => {
+            e?.disableFetch === !0 || r || null != t || null != n || (0, l.Ce)();
         }, [t, r, n, e?.disableFetch]),
         { totalRedeemed: t, isFetching: r, error: n }
     );
 }
-var s = r(715054);
+var d = r(715054);

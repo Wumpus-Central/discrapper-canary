@@ -80,8 +80,8 @@ let j = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
 });
 var O = n(366010),
     D = n(775602),
-    R = n(875317),
-    L = n(97469),
+    L = n(875317),
+    R = n(97469),
     P = n(413599),
     G = n(253932),
     M = n(818348);
@@ -89,7 +89,7 @@ let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
-        let e = (0, L.qo)();
+        let e = (0, R.qo)();
         return (0, s.bG)([P.A, D.Ay], () => {
             let t = P.A.theme,
                 n = D.Ay.useForcedColors;
@@ -98,7 +98,7 @@ let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     },
     usePredicate: function () {
         let e = null != G.eh.useSetting().customUserThemeSettings,
-            t = null != (0, R.Q)(),
+            t = null != (0, L.Q)(),
             n = (0, a.V)();
         return (0, s.bG)([P.A, r.A], () => {
             let i = P.A.theme,

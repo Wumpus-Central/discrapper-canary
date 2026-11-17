@@ -1,7 +1,7 @@
-var n,
-    o = (((n = {}).RPC = "rpc"), (n.WEB = "web"), n);
+var i,
+    o = (((i = {}).RPC = "rpc"), (i.WEB = "web"), i);
 let l =
-    221552 == i.j
+    221552 == n.j
         ? {
               ACTIVISION_APPLICATION_ID: "1526711602038968440",
               CALL_OF_DUTY_APPLICATION_ID: "1554868854029811803",
@@ -9,4 +9,4 @@ let l =
               BLOONS_TD_BATTLES_2_APPLICATION_ID: "939116807078420520",
           }
         : null;
-i.d(t, {}, { Tr: l, _M: o });
+n.d(e, {}, { Tr: l, _M: o });

@@ -1,10 +1,10 @@
 var i = r(431955),
-    l = r(520606),
-    s = r(652215);
-class n extends l.A {
+    s = r(520606),
+    l = r(652215);
+class n extends s.A {
     sku;
     constructor(t) {
-        (super(t), (this.skuProductLine = s.EZt.PREMIUM), (this.sku = t.sku));
+        (super(t), (this.skuProductLine = l.EZt.PREMIUM), (this.sku = t.sku));
     }
     static fromServer(t) {
         let e = i.A.createFromServer(t.sku);
@@ -12,7 +12,7 @@ class n extends l.A {
         return new n({ ...t, sku: e });
     }
     static fromSKU(t) {
-        return null == t ? null : new n({ sku_id: t.id, sku_product_line: s.EZt.PREMIUM, sku_name: t.name, sku: t });
+        return null == t ? null : new n({ sku_id: t.id, sku_product_line: l.EZt.PREMIUM, sku_name: t.name, sku: t });
     }
 }
 r.d(

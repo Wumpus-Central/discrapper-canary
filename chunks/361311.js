@@ -1,36 +1,36 @@
-var n = l(477900);
-l(582128);
-var i = l(834730),
-    a = l(429913),
-    r = l(102876),
-    s = l(792996);
-l.d(
+var l = n(477900);
+n(582128);
+var i = n(834730),
+    r = n(429913),
+    u = n(102876),
+    a = n(792996);
+n.d(
     t,
     {},
     {
         A: function (e) {
             let { applicationIds: t } = e,
-                l = (0, a.A)(t).filter((e) => null != e);
-            if (0 === l.length) return null;
-            let u = null;
-            if (1 === l.length)
-                u = s.intl.format(s.t.wQ6urw, {
-                    applicationName: () => (0, n.jsx)(r.A, { application: l[0] }, l[0].id),
+                n = (0, r.A)(t).filter((e) => null != e);
+            if (0 === n.length) return null;
+            let s = null;
+            if (1 === n.length)
+                s = a.intl.format(a.t.wQ6urw, {
+                    applicationName: () => (0, l.jsx)(u.A, { application: n[0] }, n[0].id),
                 });
-            else if (2 === l.length)
-                u = s.intl.format(s.t.C98CSN, {
-                    applicationName: () => (0, n.jsx)(r.A, { application: l[0] }, l[0].id),
-                    applicationName2: () => (0, n.jsx)(r.A, { application: l[1] }, l[1].id),
+            else if (2 === n.length)
+                s = a.intl.format(a.t.C98CSN, {
+                    applicationName: () => (0, l.jsx)(u.A, { application: n[0] }, n[0].id),
+                    applicationName2: () => (0, l.jsx)(u.A, { application: n[1] }, n[1].id),
                 });
             else {
-                let e = l[l.length - 1],
-                    t = l.slice(0, -1);
-                u = s.intl.format(s.t.UxpwAh, {
-                    applications: () => t.map((e) => (0, n.jsx)(r.A, { application: e, useComma: !0 }, e.id)),
-                    applicationNameLast: () => (0, n.jsx)(r.A, { application: e }, e.id),
+                let e = n[n.length - 1],
+                    t = n.slice(0, -1);
+                s = a.intl.format(a.t.UxpwAh, {
+                    applications: () => t.map((e) => (0, l.jsx)(u.A, { application: e, useComma: !0 }, e.id)),
+                    applicationNameLast: () => (0, l.jsx)(u.A, { application: e }, e.id),
                 });
             }
-            return (0, n.jsx)(i.E, { variant: "body-sm/normal", children: u });
+            return (0, l.jsx)(i.E, { variant: "body-sm/normal", children: s });
         },
     },
 );

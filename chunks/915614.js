@@ -17,14 +17,14 @@ var a = n(477900),
     x = n(714719),
     A = n(859161),
     _ = n(207634),
-    R = n(565890);
-function N(e) {
+    N = n(565890);
+function R(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: r,
             pendingBanner: _,
-            overlay: N,
+            overlay: R,
             className: v,
             avatarSize: j,
             avatarOffsetX: y,
@@ -35,7 +35,7 @@ function N(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: O = !1,
         } = e,
-        [P, M] = l.useState(!1),
+        [M, P] = l.useState(!1),
         U = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
@@ -43,7 +43,7 @@ function N(e) {
             displayProfile: n,
             pendingBanner: _,
             size: T,
-            canAnimate: O || !B ? P : U,
+            canAnimate: O || !B ? M : U,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
@@ -52,15 +52,15 @@ function N(e) {
         F = (0, f.A)(D ?? n?.primaryColor ?? $).hex,
         z = { align: "start", insetStart: y - S, insetBottom: I + S, radius: (0, A.A)(j) };
     return (0, a.jsx)(x.A, {
-        fillClassName: s()(R.v, v),
+        fillClassName: s()(N.v, v),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, E.o4)(L),
         height: C,
         cutout: z,
-        overlay: N,
-        onInteractionStart: () => M(!0),
-        onInteractionEnd: () => M(!1),
+        overlay: R,
+        onInteractionStart: () => P(!0),
+        onInteractionEnd: () => P(!1),
     });
 }
 n.d(
@@ -79,8 +79,8 @@ n.d(
                 o = _.T[t],
                 d = null != s ? { ...o, ...s } : o,
                 c = !(0, h.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
-            return (0, a.jsx)(N, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
+            return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
         },
-        o: N,
+        o: R,
     },
 );

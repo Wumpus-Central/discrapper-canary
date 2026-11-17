@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(562153),
     a = n(183555),
     o = n(591179),
-    u = n(702476),
-    d = n(527212),
+    d = n(702476),
+    u = n(527212),
     c = n(487409),
     g = n(792996);
 n.d(
@@ -16,7 +16,7 @@ n.d(
             let { user: t, guildId: n, channelId: f, displayProfile: m, onClose: p } = e,
                 { analyticsLocations: h, sourceAnalyticsLocations: x } = (0, r.Ay)(),
                 { context: A, trackUserProfileAction: I } = (0, a.NJ)(),
-                v = (0, d.Ay)(t.id, n),
+                v = (0, u.Ay)(t.id, n),
                 b = (0, o.X)("useViewUserProfileModalItem");
             return ((0, c.A)(t.id) && b) || v?.guildId == null
                 ? null
@@ -29,7 +29,7 @@ n.d(
                         }),
                         action: () => {
                             (p?.(),
-                                (0, u.openUserProfileModal)({
+                                (0, d.openUserProfileModal)({
                                     userId: t.id,
                                     ...A,
                                     guildId: void 0,
@@ -47,7 +47,7 @@ n.d(
                           subtext: g.intl.formatToPlainString(g.t["mn/nW2"], { displayName: s.Ay.getName(n, f, t) }),
                           action: () => {
                               (p?.(),
-                                  (0, u.openUserProfileModal)({
+                                  (0, d.openUserProfileModal)({
                                       userId: t.id,
                                       ...A,
                                       guildId: n,

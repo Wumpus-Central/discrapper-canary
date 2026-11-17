@@ -1,5 +1,5 @@
 var n = r(752266);
-function a(e) {
+function i(e) {
     let { redirect_url: t } = e;
     if (null == t) throw Error("Payment redirect context has no redirect url");
     window.open(t);
@@ -8,7 +8,7 @@ r.d(
     t,
     {},
     {
-        DL: a,
+        DL: i,
         qn: function (e) {
             let t = null != e ? e.billing_facet : null,
                 r = null != t ? t.order_signing_deferral_context : null;
@@ -17,7 +17,7 @@ r.d(
         yu: async function (e) {
             if (null == e) throw Error("Order signing was deferred without a deferral context");
             let { payment_redirect_context: t, stripe_3ds_context: r } = e;
-            if (null != t) return void a(t);
+            if (null != t) return void i(t);
             if (null != r) return void (await (0, n.$)(r, e.payment_gateway_merchant_account_id));
             throw Error("Order signing deferral context has no action the client can complete");
         },

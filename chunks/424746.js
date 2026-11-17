@@ -22,8 +22,8 @@ function c(e) {
         } = e,
         x = l.useContext(r.C),
         [A, _] = l.useState("closed"),
-        R = l.useRef(null),
-        N = l.useRef(!1),
+        N = l.useRef(null),
+        R = l.useRef(!1),
         v = "opening-mouse" === A || "open-mouse" === A,
         j = "opening-keyboard" === A || "open-keyboard" === A,
         y = "open-mouse" === A || "open-keyboard" === A,
@@ -48,24 +48,24 @@ function c(e) {
             );
         })(n, c, A),
         D = l.useCallback(() => {
-            null != R.current && (clearTimeout(R.current), (R.current = null));
+            null != N.current && (clearTimeout(N.current), (N.current = null));
         }, []),
         O = l.useCallback(
             (e) => {
-                (e && (N.current = !0), D(), _("closing"));
+                (e && (R.current = !0), D(), _("closing"));
             },
             [D],
         );
     l.useEffect(() => D, [D]);
-    let P = l.useCallback(() => {
+    let M = l.useCallback(() => {
             ("closed" === A || "closing" === A) && (D(), _("opening-mouse"));
         }, [D, A]),
-        M = l.useCallback(() => {
+        P = l.useCallback(() => {
             v && O(!1);
         }, [O, v]),
         U = l.useCallback(() => {
-            if (N.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
-                N.current = !1;
+            if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
+                R.current = !1;
                 return;
             }
             (D(), _("opening-keyboard"));
@@ -76,8 +76,8 @@ function c(e) {
     (l.useEffect(() => {
         if ("opening-mouse" === A)
             return (
-                (R.current = window.setTimeout(() => {
-                    ((R.current = null), _("open-mouse"), m?.());
+                (N.current = window.setTimeout(() => {
+                    ((N.current = null), _("open-mouse"), m?.());
                 }, u)),
                 D
             );
@@ -85,8 +85,8 @@ function c(e) {
         l.useEffect(() => {
             if ("opening-keyboard" === A)
                 return (
-                    (R.current = window.setTimeout(() => {
-                        ((R.current = null), _("open-keyboard"), m?.());
+                    (N.current = window.setTimeout(() => {
+                        ((N.current = null), _("open-keyboard"), m?.());
                     }, u)),
                     D
                 );
@@ -94,8 +94,8 @@ function c(e) {
         l.useEffect(() => {
             if ("closing" === A)
                 return (
-                    (R.current = window.setTimeout(() => {
-                        ((R.current = null), _("closed"));
+                    (N.current = window.setTimeout(() => {
+                        ((N.current = null), _("closed"));
                     }, 200)),
                     D
                 );
@@ -128,8 +128,8 @@ function c(e) {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: P,
-        onMouseLeave: M,
+        onMouseEnter: M,
+        onMouseLeave: P,
         onFocus: U,
         onBlur: B,
         children: [

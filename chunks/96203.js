@@ -1,6 +1,6 @@
 var i = r(582128),
-    l = r(435558),
-    s = r(855986),
+    s = r(435558),
+    l = r(855986),
     n = r(633075),
     u = r(289173),
     o = r(527212),
@@ -15,9 +15,9 @@ r.d(
                 r = (0, o.Ay)(e),
                 c = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
                 S = (0, d.w)({ userIds: c }),
-                I = (0, d.mn)({ userIds: c }),
-                A = (0, d.tR)(c),
-                _ = (0, s.yK)(
+                _ = (0, d.mn)({ userIds: c }),
+                h = (0, d.tR)(c),
+                I = (0, l.yK)(
                     [a.A],
                     () => {
                         if (r?.widgets == null) return [];
@@ -37,8 +37,8 @@ r.d(
                     [r],
                 );
             return i.useMemo(
-                () => (r?.application != null ? [] : (0, l.uniq)([...S, ...I, ...A, ..._])),
-                [r?.application, S, I, A, _],
+                () => (r?.application != null ? [] : (0, s.uniq)([...S, ..._, ...h, ...I])),
+                [r?.application, S, _, h, I],
             );
         },
     },

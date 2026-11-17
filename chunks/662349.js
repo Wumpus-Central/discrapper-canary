@@ -1,50 +1,50 @@
-var n = t(477900),
-    s = t(582128),
-    l = t(503698),
-    r = t.n(l),
-    a = t(855986),
-    c = t(597770),
-    o = t(821609),
-    u = t(287809),
-    d = t(792996),
-    h = t(164463);
-function p(i) {
-    let { spec: e, label: t, icon: l, onClick: a, isHoveringOrFocusing: c, fullWidth: u = !1 } = i,
-        d = s.useCallback(
+var s = n(477900),
+    e = n(582128),
+    l = n(503698),
+    r = n.n(l),
+    o = n(855986),
+    a = n(597770),
+    c = n(821609),
+    u = n(287809),
+    d = n(792996),
+    p = n(164463);
+function h(i) {
+    let { spec: t, label: n, icon: l, onClick: o, isHoveringOrFocusing: a, fullWidth: u = !1 } = i,
+        d = e.useCallback(
             (i) => {
-                (i.stopPropagation(), a());
+                (i.stopPropagation(), o());
             },
-            [a],
+            [o],
         );
-    return (0, n.jsx)("div", {
-        className: r()(h.L, { [h.K]: c }),
-        style: { margin: e.buttonInset },
-        children: (0, n.jsx)(o.$, {
+    return (0, s.jsx)("div", {
+        className: r()(p.L, { [p.K]: a }),
+        style: { margin: t.buttonInset },
+        children: (0, s.jsx)(c.$, {
             variant: "primary",
             size: "sm",
             iconPosition: "start",
-            text: t,
+            text: n,
             icon: l,
             onClick: d,
             fullWidth: u,
         }),
     });
 }
-t.d(
-    e,
+n.d(
+    t,
     {},
     {
         A: function (i) {
-            let { spec: e, onClick: t, isHoveringOrFocusing: s, label: l, icon: r } = i;
-            return (0, n.jsx)(p, { spec: e, label: l, icon: r, onClick: t, isHoveringOrFocusing: s, fullWidth: !0 });
+            let { spec: t, onClick: n, isHoveringOrFocusing: e, label: l, icon: r } = i;
+            return (0, s.jsx)(h, { spec: t, label: l, icon: r, onClick: n, isHoveringOrFocusing: e, fullWidth: !0 });
         },
         h: function (i) {
-            let { wishlistOwner: e, isOwned: t, hideIcon: n, shortText: l } = i,
-                r = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-                o = null == e || e.id === r?.id || t;
-            return s.useMemo(
+            let { wishlistOwner: t, isOwned: n, hideIcon: s, shortText: l } = i,
+                r = (0, o.bG)([u.default], () => u.default.getCurrentUser()),
+                c = null == t || t.id === r?.id || n;
+            return e.useMemo(
                 () =>
-                    o
+                    c
                         ? {
                               label: l ? d.intl.string(d.t["99GFiS"]) : d.intl.string(d.t.FdGl5A),
                               icon: void 0,
@@ -52,10 +52,10 @@ t.d(
                           }
                         : {
                               label: l ? d.intl.string(d.t["3wFtNJ"]) : d.intl.string(d.t.ilhtIa),
-                              icon: n ? void 0 : c.GiftIcon,
+                              icon: s ? void 0 : a.GiftIcon,
                               isPromptingPurchase: !0,
                           },
-                [o, l, n],
+                [c, l, s],
             );
         },
     },

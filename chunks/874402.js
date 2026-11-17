@@ -27,28 +27,28 @@ n.d(
                     a11yAnnounceOnShow: A,
                     a11yAnnounceOnHide: _,
                 } = e,
-                R = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
-                N = l.useRef(null);
+                N = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
+                R = l.useRef(null);
             return (
                 l.useEffect(
                     () => () => {
-                        null != N.current && clearTimeout(N.current);
+                        null != R.current && clearTimeout(R.current);
                     },
                     [],
                 ),
                 (0, d.p)(n, {
-                    from: { opacity: 0, y: 80 * !R },
+                    from: { opacity: 0, y: 80 * !N },
                     enter: { opacity: 1, y: 0 },
-                    leave: { opacity: 0, y: 80 * !R },
+                    leave: { opacity: 0, y: 80 * !N },
                     onRest: (e, t) => {
                         if (!e.finished) return;
                         let n = t.item ? A : _;
-                        (null != N.current && clearTimeout(N.current),
+                        (null != R.current && clearTimeout(R.current),
                             null != n
-                                ? (N.current = setTimeout(() => {
-                                      ((N.current = null), c.O.announce(n));
+                                ? (R.current = setTimeout(() => {
+                                      ((R.current = null), c.O.announce(n));
                                   }, 300))
-                                : (N.current = null));
+                                : (R.current = null));
                     },
                 })((e, n) =>
                     n

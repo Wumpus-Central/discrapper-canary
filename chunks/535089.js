@@ -1,21 +1,21 @@
-var n = l(582128),
-    i = l(172218);
-l.d(
+var l = n(582128),
+    i = n(172218);
+n.d(
     t,
     {},
     {
         A: function (e) {
-            let { wishlistId: t, onAction: l, productLines: a } = e,
-                [r, s] = (0, n.useState)(!1),
-                u = (0, n.useCallback)(
+            let { wishlistId: t, onAction: n, productLines: r } = e,
+                [u, a] = (0, l.useState)(!1),
+                s = (0, l.useCallback)(
                     (e) => {
                         e &&
                             null != t &&
-                            (l({ action: "VIEW_WISHLIST", wishlistId: t, productLines: a ?? void 0 }), s(!0));
+                            (n({ action: "VIEW_WISHLIST", wishlistId: t, productLines: r ?? void 0 }), a(!0));
                     },
-                    [t, l, a],
+                    [t, n, r],
                 );
-            return (0, i.K)(u, void 0, null != t && !r);
+            return (0, i.K)(s, void 0, null != t && !u);
         },
     },
 );

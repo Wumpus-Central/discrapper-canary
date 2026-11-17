@@ -1,25 +1,25 @@
-var i = n(855986),
-    r = n(945810),
-    a = n(207913),
-    s = n(393033);
-let l = (0, r.mj)({
+var a = A(855986),
+    E = A(945810),
+    _ = A(207913),
+    i = A(393033);
+let n = (0, E.mj)({
     kind: "user",
     name: "2026-07-expressive-modal-v2",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 }, 2: { enabled: !0 } },
 });
-n.d(
+A.d(
     t,
     {},
     {
         M: function (e) {
-            let t = (0, s.W$)(),
-                n = (0, i.bG)([a.A], () => a.A.getIsExpressiveModalV2Enabled()),
-                r = l.useConfig({ location: e }).enabled;
-            return t ? n : r;
+            let t = (0, i.W$)(),
+                A = (0, a.bG)([_.A], () => _.A.getIsExpressiveModalV2Enabled()),
+                E = n.useConfig({ location: e }).enabled;
+            return t ? A : E;
         },
         d: function (e) {
-            return (0, s.qn)() ? a.A.getIsExpressiveModalV2Enabled() : l.getConfig({ location: e }).enabled;
+            return (0, i.qn)() ? _.A.getIsExpressiveModalV2Enabled() : n.getConfig({ location: e }).enabled;
         },
     },
 );

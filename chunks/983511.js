@@ -27,8 +27,8 @@ var i = n(477900),
     j = n(473145),
     O = n(448645),
     D = n(580630),
-    R = n(682502),
-    L = n(816571),
+    L = n(682502),
+    R = n(816571),
     P = n(682901),
     G = n(818348),
     M = n(792996),
@@ -75,9 +75,9 @@ function k(e) {
             transitionState: o,
             onBack: f,
             onNext: v,
-            onClose: R,
+            onClose: L,
         } = e,
-        [L, G] = l.useState(!1),
+        [R, G] = l.useState(!1),
         [V, k] = l.useState(null),
         [w, F] = l.useMemo(() => {
             try {
@@ -86,9 +86,9 @@ function k(e) {
                 return [[], !0];
             }
         }, [t]),
-        B = l.useRef(R);
+        B = l.useRef(L);
     (l.useEffect(() => {
-        B.current = R;
+        B.current = L;
     }),
         l.useEffect(() => {
             F && B.current();
@@ -121,7 +121,7 @@ function k(e) {
     if (null == K || null == X || null == z || null == Y)
         return (0, i.jsxs)(u.d, {
             transitionState: o,
-            onClose: R,
+            onClose: L,
             "aria-label": M.intl.string(M.t.CRwE7n),
             children: [
                 (0, i.jsx)(p.e0, { children: (0, i.jsx)(x.s3, { title: M.intl.string(M.t.CRwE7n) }) }),
@@ -151,7 +151,7 @@ function k(e) {
             (ee = M.intl.format(M.t.eb0xgS, { expirationDate: s.endsAt.toDate() })),
         (0, i.jsxs)(u.d, {
             transitionState: o,
-            onClose: R,
+            onClose: L,
             "aria-label": M.intl.string(M.t.CRwE7n),
             children: [
                 (0, i.jsx)(p.e0, { children: (0, i.jsx)(x.s3, { title: M.intl.string(M.t.CRwE7n) }) }),
@@ -193,8 +193,8 @@ function k(e) {
                         {
                             variant: "critical-primary",
                             text: M.intl.string(M.t["/AS/gM"]),
-                            disabled: L,
-                            loading: L,
+                            disabled: R,
+                            loading: R,
                             onClick: async function () {
                                 try {
                                     (G(!0),
@@ -258,7 +258,7 @@ function w(e) {
 }
 function F(e) {
     let { step: t } = e;
-    throw new R.f({ message: `Unexpected step: ${t}`, extraSentryInformation: { step: t } });
+    throw new L.f({ message: `Unexpected step: ${t}`, extraSentryInformation: { step: t } });
 }
 n.d(
     t,
@@ -322,7 +322,7 @@ n.d(
                 }
             return (0, i.jsx)(S.f5, {
                 value: E,
-                children: (0, i.jsx)(L.d, { errorHandlingBehavior: "close-and-alert", guildBoostSlot: n, children: t }),
+                children: (0, i.jsx)(R.d, { errorHandlingBehavior: "close-and-alert", guildBoostSlot: n, children: t }),
             });
         },
     },

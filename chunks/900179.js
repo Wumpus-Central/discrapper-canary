@@ -33,8 +33,8 @@ n.d(
                     headingColor: o = "text-default",
                     headingIcon: c,
                     hideHeading: _ = !1,
-                    introText: R,
-                    className: N,
+                    introText: N,
+                    className: R,
                     scrollTargetId: v,
                 } = e,
                 j = (0, p.GV)(),
@@ -45,7 +45,7 @@ n.d(
             let C = "function" == typeof c ? { icon: c } : c;
             return (0, a.jsxs)("section", {
                 ref: T ? y : void 0,
-                className: s()(b.uW, N),
+                className: s()(b.uW, R),
                 "aria-labelledby": j,
                 children: [
                     _
@@ -67,7 +67,7 @@ n.d(
                                           null != C && (0, a.jsx)(A, { ...C }),
                                       ],
                                   }),
-                                  null != R && (0, a.jsx)(g.E, { variant: "body-xs/normal", children: R }),
+                                  null != N && (0, a.jsx)(g.E, { variant: "body-xs/normal", children: N }),
                               ],
                           }),
                     (0, a.jsx)(m.F, { children: t }),

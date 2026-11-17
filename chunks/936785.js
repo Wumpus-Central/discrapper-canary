@@ -1,8 +1,8 @@
 l(582128);
-var r = l(318254),
-    n = l(278416),
+var n = l(318254),
+    r = l(278416),
     u = l(403581);
-let o = { ORBS: r.OrbsIcon, TAG: n.TagIcon, NITRO: u.NitroWheelIcon },
+let o = { ORBS: n.OrbsIcon, TAG: r.TagIcon, NITRO: u.NitroWheelIcon },
     a = "{value}";
 l.d(
     e,

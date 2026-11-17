@@ -1,6 +1,6 @@
 var i = r(315069),
-    l = r(431955);
-class s extends i.A {
+    s = r(431955);
+class l extends i.A {
     skuId;
     skuProductLine;
     skuName;
@@ -22,15 +22,15 @@ class s extends i.A {
     }
     static fromServer(t) {
         let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: n, gifter_user_id: u, sku: o, ...a } = t;
-        return new s({
+        return new l({
             ...a,
             sku_id: e,
             sku_product_line: r,
             sku_name: i,
             is_owned: n,
             gifter_user_id: u,
-            sku: null != o ? l.A.createFromServer(o) : void 0,
+            sku: null != o ? s.A.createFromServer(o) : void 0,
         });
     }
 }
-r.d(e, {}, { A: s });
+r.d(e, {}, { A: l });

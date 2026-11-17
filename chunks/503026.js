@@ -5,8 +5,8 @@ var l = n(855986),
     s = n(317525),
     a = n(71393),
     o = n(576705),
-    u = n(183555),
-    d = n(1659),
+    d = n(183555),
+    u = n(1659),
     c = n(166005),
     g = n(900179),
     f = n(518477),
@@ -18,11 +18,11 @@ n.d(
     {
         A: function (e) {
             let { userId: t, guildId: n, ...h } = e,
-                { trackUserProfileAction: x } = (0, u.NJ)(),
+                { trackUserProfileAction: x } = (0, d.NJ)(),
                 A = (0, l.bG)([a.A], () => a.A.getGuild(n)),
                 I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
                 v = I?.roles,
-                b = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
+                b = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(u.m), [v, n]),
                 [j] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
             if (null == A) return null;
             let y = j && null != I;

@@ -3,11 +3,11 @@ var a = t(582128),
     l = t(856383);
 let r = !1,
     o = null,
-    u = null,
-    d = new Set();
-function s() {
+    d = null,
+    s = new Set();
+function u() {
     return (o ??= (async () => {
-        (await (0, i.Ts)(), (r = !0), d.forEach((e) => e()));
+        (await (0, i.Ts)(), (r = !0), s.forEach((e) => e()));
     })());
 }
 function c() {
@@ -19,23 +19,23 @@ t.d(
     {
         YK: c,
         bf: function (e) {
-            e && !r && a.use(s());
+            e && !r && a.use(u());
         },
-        initNativeMarkdown: s,
+        initNativeMarkdown: u,
         n9: function (e) {
             let n = a.useCallback(
                 (n) => (
-                    d.add(n),
+                    s.add(n),
                     e &&
-                        (u ??= (async () => {
+                        (d ??= (async () => {
                             try {
-                                await s();
+                                await u();
                             } catch (e) {
                                 l.A.captureException(e);
                             }
                         })()),
                     () => {
-                        d.delete(n);
+                        s.delete(n);
                     }
                 ),
                 [e],

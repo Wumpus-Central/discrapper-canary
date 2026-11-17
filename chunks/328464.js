@@ -19,7 +19,7 @@ var l = n(503698),
     x = n(179820),
     A = n(792996),
     _ = n(381134);
-function R(e) {
+function N(e) {
     let { rarity: t, className: n } = e,
         l = (function (e) {
             switch (e) {
@@ -44,7 +44,7 @@ function R(e) {
         children: (0, a.jsx)(i, { size: "xxs", color: "currentColor" }),
     });
 }
-var N = n(460969);
+var R = n(460969);
 n(518477);
 var v = n(881518);
 function j(e) {
@@ -68,8 +68,8 @@ function j(e) {
         D = y && null == _,
         {
             tooltipId: O,
-            isVisible: P,
-            targetElementRef: M,
+            isVisible: M,
+            targetElementRef: P,
             trigger: U,
         } = (0, i.D)({ children: t, targetElementRef: I, delay: 300, onTooltipShow: T, shouldShow: S }),
         B = null != j && j !== s.x.COMMON,
@@ -77,11 +77,11 @@ function j(e) {
             className: v.Qs,
             "data-mana-component": "mini-premium-tooltip",
             children: [
-                B && (0, a.jsx)("div", { className: v.xV, children: (0, a.jsx)(R, { rarity: j }) }),
+                B && (0, a.jsx)("div", { className: v.xV, children: (0, a.jsx)(N, { rarity: j }) }),
                 (0, a.jsx)("div", {
                     className: r()(v.fA, { [v.qJ]: D }),
                     "aria-hidden": !0,
-                    children: (0, a.jsx)(N.BadgeImageWithProgressCircle, {
+                    children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
                         src: x,
                         alt: A,
                         progressCircleText: _?.text,
@@ -120,14 +120,14 @@ function j(e) {
             ],
         }),
         w = null != h ? `${A}. ${h}` : A,
-        k = (0, u.j)({ shouldShow: P })((e, t) =>
+        k = (0, u.j)({ shouldShow: M })((e, t) =>
             t
                 ? (0, a.jsx)(m.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(f.R, {
-                          isVisible: P,
+                          isVisible: M,
                           isRendered: !0,
-                          targetElementRef: M,
+                          targetElementRef: P,
                           content: G,
                           position: C,
                           align: "center",

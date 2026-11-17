@@ -1,3 +1,3 @@
-var i,
-    r = (((i = {}).SM = "sm"), (i.LG = "lg"), i);
-a.d(t, {}, { W: r });
+var r,
+    i = (((r = {}).SM = "sm"), (r.LG = "lg"), r);
+a.d(t, {}, { W: i });
