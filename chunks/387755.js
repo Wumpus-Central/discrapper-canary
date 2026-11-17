@@ -55,13 +55,15 @@ n.d(
                       })
                     : d && r.h.dispatch({ type: "CALL_ENQUEUE_RING", channelId: e, recipients: t });
             },
-            stopRinging: (e, t) =>
+            stopRinging: (e, t) => (
+                null == t && r.h.dispatch({ type: "CALL_STOP_RINGING_SELF", channelId: e }),
                 i.Bo.post({
                     url: E.Rsh.CALL_STOP_RINGING(e),
                     body: { recipients: t },
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                }),
+                })
+            ),
         },
     },
 );
