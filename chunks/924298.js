@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675702, Version Hash: f7f7782efe84e38ff369569e57fc7f0679ff0399`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675704, Version Hash: b085378d683838b403ebad6cddb6c1b8d53862b8`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675702";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675704";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15911,7 +15911,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675702" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675704" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -45081,7 +45081,7 @@ let wW = (0, tW.Fe)({
     createPromise: () =>
         Promise.all([
             n.e(860350),
-            n.e(728053),
+            n.e(251400),
             n.e(505866),
             n.e(249169),
             n.e(880150),
@@ -45797,7 +45797,6 @@ let wW = (0, tW.Fe)({
             n.e(761597),
             n.e(373122),
             n.e(649408),
-            n.e(188941),
             n.e(221856),
             n.e(686367),
             n.e(186212),
@@ -45812,6 +45811,7 @@ let wW = (0, tW.Fe)({
             n.e(305834),
             n.e(745959),
             n.e(858529),
+            n.e(188941),
             n.e(481987),
             n.e(595653),
             n.e(958038),
@@ -45997,7 +45997,6 @@ let wW = (0, tW.Fe)({
             n.e(918024),
             n.e(720590),
             n.e(53374),
-            n.e(482815),
             n.e(56021),
             n.e(147626),
             n.e(613867),
@@ -46022,6 +46021,7 @@ let wW = (0, tW.Fe)({
             n.e(377766),
             n.e(709640),
             n.e(545587),
+            n.e(482815),
             n.e(376883),
             n.e(696123),
             n.e(382465),
@@ -47620,7 +47620,7 @@ let GV = (0, re.Fe)({
                 n.e(144909),
                 n.e(872859),
                 n.e(912261),
-                n.e(728053),
+                n.e(251400),
                 n.e(44141),
                 n.e(959880),
                 n.e(188941),
@@ -48007,7 +48007,7 @@ let G9 = (0, re.Fe)({
                 n.e(560338),
                 n.e(144909),
                 n.e(25300),
-                n.e(728053),
+                n.e(251400),
                 n.e(355059),
                 n.e(226589),
                 n.e(611137),
@@ -48154,12 +48154,12 @@ let G9 = (0, re.Fe)({
                 n.e(121435),
                 n.e(88599),
                 n.e(317225),
-                n.e(482815),
                 n.e(147626),
                 n.e(124060),
                 n.e(146566),
                 n.e(32661),
                 n.e(709640),
+                n.e(482815),
                 n.e(696123),
                 n.e(459414),
                 n.e(538887),
