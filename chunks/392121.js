@@ -60,6 +60,7 @@ let r = (0, n(945810).mj)({
         i.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE,
         i.M.COLLECTIBLES_SHOP_ENTRY_MARKETING,
         i.M.NAGBAR_NOTICE_OFFER_EXPIRING,
+        i.M.GIFTED_NITRO_EXPIRATION_WINBACK_NAGBAR,
         i.M.CLOUD_PLAY_NEW_BADGE,
         i.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE,
         i.M.WISHLIST_NUX_TOOLTIP_AND_MODAL,
@@ -416,6 +417,7 @@ let l = {
     905: { is_server_arbitrated: !1 },
     907: { is_server_arbitrated: !1 },
     910: { is_server_arbitrated: !0 },
+    911: { is_server_arbitrated: !1 },
 };
 function o(e) {
     return l[e]?.is_server_arbitrated === !0;
