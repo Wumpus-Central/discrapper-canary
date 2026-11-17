@@ -1,0 +1,37 @@
+.card_R97S5z {
+    cursor: pointer
+}
+
+.card_R97S5z:hover .inner_R97S5z {
+    background: var(--user-profile-overlay-background-hover)
+}
+
+.inner_R97S5z {
+    color: var(--text-strong);
+    flex-direction: row;
+    gap: var(--space-8);
+    padding: var(--space-8)
+}
+
+.icon_R97S5z,
+.inner_R97S5z {
+    align-items: center;
+    display: flex
+}
+
+.icon_R97S5z {
+    flex-shrink: 0;
+    justify-content: center
+}
+
+.icon_R97S5z,
+.spinner_R97S5z {
+    height: 16px;
+    width: 16px
+}
+
+.spinnerItem_R97S5z {
+    stroke: currentColor
+}
+
+/*# sourceMappingURL=4fd9c7518893cdec.css.map*/
