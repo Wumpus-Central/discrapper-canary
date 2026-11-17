@@ -3768,6 +3768,7 @@
   "uaRDmS": "Members can send one message every {seconds, plural,one {# second}other {# seconds}.",
   "YiNO8W": "Members can send one message every {hours, plural,one {# hour}other {# hours} {minutes, plural,=0 {}one {# minute}other {# minutes} {seconds, plural,=0 {}one {# second}other {# seconds}",
   "oSzkf2": "Members can send one message every {minutes, plural,one {# minute}other {# minutes} {seconds, plural,=0 {}one {# second}other {# seconds}",
+  "ibsiKg": "Get {percent, number}% off {collectionName} items, applied at checkout",
   "aDZysP": "Item Type",
   "Vfebhe": "Show Only",
   "YieJl5": "Theme",
