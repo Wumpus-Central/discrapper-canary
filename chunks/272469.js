@@ -1,49 +1,49 @@
-var i = s(780755),
-    n = s(978862);
-let r = ["debug", "info", "warn", "error", "log", "assert", "trace"],
-    o = {};
-function a(t) {
-    if (!("console" in n.O)) return t();
-    let e = n.O.console,
-        s = {},
-        i = Object.keys(o);
-    i.forEach((t) => {
-        let i = o[t];
-        ((s[t] = e[t]), (e[t] = i));
+var r = n(780755),
+    i = n(978862);
+let o = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+    a = {};
+function s(e) {
+    if (!("console" in i.O)) return e();
+    let t = i.O.console,
+        n = {},
+        r = Object.keys(a);
+    r.forEach((e) => {
+        let r = a[e];
+        ((n[e] = t[e]), (t[e] = r));
     });
     try {
-        return t();
+        return e();
     } finally {
-        i.forEach((t) => {
-            e[t] = s[t];
+        r.forEach((e) => {
+            t[e] = n[e];
         });
     }
 }
-let c = (0, n.B)("logger", function () {
-    let t = !1,
-        e = {
+let l = (0, i.B)("logger", function () {
+    let e = !1,
+        t = {
             enable: () => {
-                t = !0;
+                e = !0;
             },
             disable: () => {
-                t = !1;
+                e = !1;
             },
-            isEnabled: () => t,
+            isEnabled: () => e,
         };
     return (
-        i.T
-            ? r.forEach((s) => {
-                  e[s] = (...e) => {
-                      t &&
-                          a(() => {
-                              n.O.console[s](`Sentry Logger [${s}]:`, ...e);
+        r.T
+            ? o.forEach((n) => {
+                  t[n] = (...t) => {
+                      e &&
+                          s(() => {
+                              i.O.console[n](`Sentry Logger [${n}]:`, ...t);
                           });
                   };
               })
-            : r.forEach((t) => {
-                  e[t] = () => void 0;
+            : o.forEach((e) => {
+                  t[e] = () => void 0;
               }),
-        e
+        t
     );
 });
-s.d(e, {}, { pq: a, vF: c });
+n.d(t, {}, { Ow: o, Z9: a, pq: s, vF: l });

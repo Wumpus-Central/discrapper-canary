@@ -1,4 +1,4 @@
-t.d(n, { GZ: () => g, Se: () => A, Ig: () => m, Hv: () => b, F5: () => C });
+t.d(n, { GZ: () => f, Se: () => g, Hv: () => C });
 var i = t(582128),
     l = t(70283),
     a = t(855986),
@@ -13,8 +13,7 @@ let d = (0, t(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var f = t(998370);
-function g(e, n, t) {
+function f(e, n, t) {
     let i = (0, s.rL)(n),
         l = (0, s.rL)(t);
     return Math.min(
@@ -22,33 +21,26 @@ function g(e, n, t) {
         100,
     );
 }
-function C(e) {
-    return f.J.useConfig({ location: e }).enabled;
-}
-function m(e) {
-    return f.J.getConfig({ location: e }).enabled;
-}
-function A(e) {
+function g(e) {
     return e?.complex_icon_static_url ?? e?.simple_icon_url;
 }
-function b(e) {
+function C(e) {
     let { location: n, enabled: t = !0 } = e,
-        { enabled: g } = f.J.useConfig({ location: n }),
-        { enabled: C } = d.useConfig({ location: `${n}${g ? "" : "-DISABLED"}` }),
-        m = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
-        A = (0, u.HX)(r.M.NEW_GIFTING_BADGES_COACHMARK),
-        b = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
-        p = g && !A && t,
-        I = p && !C && m,
-        h = p && C && null == b;
+        { enabled: f } = d.useConfig({ location: n }),
+        g = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
+        C = (0, u.HX)(r.M.NEW_GIFTING_BADGES_COACHMARK),
+        m = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
+        A = !C && t,
+        b = A && !f && g,
+        h = A && f && null == m;
     return (i.useEffect(() => {
-        h ? (0, o.Ay)(l.$.GIFTING) : I && (0, o.o0)(l.$.GIFTING);
-    }, [I, h]),
-    C)
-        ? p && null != b && !b.hidden && (m || b.owned)
+        h ? (0, o.Ay)(l.$.GIFTING) : b && (0, o.o0)(l.$.GIFTING);
+    }, [b, h]),
+    f)
+        ? A && null != m && !m.hidden && (g || m.owned)
             ? "noCount"
             : null
-        : p && m && null != b
+        : A && g && null != m
           ? "count"
           : null;
 }

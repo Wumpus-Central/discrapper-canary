@@ -1,6 +1,6 @@
 n.d(t, { A: () => a });
-var i = n(984083),
-    r = n(225123),
+var i = n(225123),
+    r = n(668279),
     s = n(366811),
     l = n(976860);
 n(652215);
@@ -17,10 +17,10 @@ let a = new (class {
         let { pathname: e } = (0, l.JK)().location;
         (s.A.getState().resetPath(e),
             (this.unlistenKeyboardChange = s.A.subscribe(this.handleKeybindRouteChange)),
-            r.A.addChangeListener(this.handleConnectionChange));
+            i.A.addChangeListener(this.handleConnectionChange));
     }
     handleConnectionChange = () => {
-        let e = r.A.isConnected(),
+        let e = i.A.isConnected(),
             t = e && !this.connected;
         ((this.connected = e),
             t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, l.JK)().location, "REPLACE")));
@@ -39,13 +39,13 @@ let a = new (class {
     executeRouteRewrites(e, t) {
         if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
             for (let n of this.rewrites) {
-                let r = (0, l.JK)().location.pathname,
+                let i = (0, l.JK)().location.pathname,
                     s = n(e, t);
                 if (null != s)
                     return (
-                        (0, i.Z)({
+                        (0, r.A)({
                             message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
-                            data: { replacePath: s.path, previousPath: r },
+                            data: { replacePath: s.path, previousPath: i },
                         }),
                         (0, l.bG)(s.path, s.state),
                         !0
@@ -68,7 +68,7 @@ let a = new (class {
             (this.unlistenHistory = void 0),
             this.unlistenKeyboardChange?.(),
             (this.unlistenKeyboardChange = void 0),
-            r.A.removeChangeListener(this.handleConnectionChange));
+            i.A.removeChangeListener(this.handleConnectionChange));
     }
     addRouteChangeListener(e) {
         return (
