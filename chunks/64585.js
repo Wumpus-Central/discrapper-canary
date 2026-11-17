@@ -80,5 +80,5 @@ class I extends r.A {
             })("poggermode_achievement_unlock");
     }
 }
-let S = new I();
-n.d(t, {}, { A: S });
+let x = new I();
+n.d(t, {}, { A: x });

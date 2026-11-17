@@ -5,8 +5,8 @@ n.d(t, {
     nG: () => Y,
     OS: () => G,
     Y9: () => K,
-    vw: () => Z,
-    N_: () => W,
+    vw: () => W,
+    N_: () => Z,
     KJ: () => H,
 });
 var i = n(477900),
@@ -30,23 +30,23 @@ var i = n(477900),
     N = n(713654),
     f = n(503698),
     I = n.n(f),
-    S = n(62986);
-let x = function (e) {
+    x = n(62986);
+let S = function (e) {
     let { value: t = 0, text: n, className: r, lowImportance: s, ...l } = e;
     return null != n
-        ? (0, i.jsx)("div", { className: I()(S.i, r, s && S.H), ...l, children: n })
+        ? (0, i.jsx)("div", { className: I()(x.i, r, s && x.H), ...l, children: n })
         : t > 0
-          ? (0, i.jsx)("div", { className: I()(S.i, r, s && S.H), ...l, children: t })
+          ? (0, i.jsx)("div", { className: I()(x.i, r, s && x.H), ...l, children: t })
           : null;
 };
 var O = n(769015),
-    v = n(168017),
-    U = n(106191),
+    U = n(168017),
+    v = n(106191),
     L = n(682163),
     R = n(376943),
     j = n(636585),
-    y = n(71393),
-    D = n(994500),
+    D = n(71393),
+    y = n(994500),
     b = n(287809),
     k = n(147036),
     M = n(427262),
@@ -159,12 +159,12 @@ class F extends r.Component {
             t,
             { mentions: n, category: r, channel: s, isMentionLowImportance: l } = this.props;
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n, lowImportance: l })),
-            null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, T.m1)(r, b.default, D.A) })),
+            null != n && n > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: n, lowImportance: l })),
+            null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, T.m1)(r, b.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
-                    (0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(s, b.default, D.A) }),
+                    (0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(s, b.default, y.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -196,8 +196,8 @@ class F extends r.Component {
     }
     getAccessibilityLabel() {
         let { channel: e } = this.props,
-            t = y.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, T.m1)(e, b.default, D.A),
+            t = D.A.getGuild(this.props.channel.guild_id)?.name,
+            n = (0, T.m1)(e, b.default, y.A),
             i = (0, k.Jg)(e);
         return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });
     }
@@ -228,10 +228,10 @@ class Y extends r.Component {
         let e,
             { mentions: t, channel: n } = this.props;
         return (
-            null != t && t > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: t })),
+            null != t && t > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: w.UU,
-                children: [(0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(n, b.default, D.A) }), e],
+                children: [(0, i.jsx)("span", { className: w.YW, children: (0, T.m1)(n, b.default, y.A) }), e],
             })
         );
     }
@@ -244,7 +244,7 @@ class Y extends r.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, T.m1)(e, b.default, D.A);
+            n = (0, T.m1)(e, b.default, y.A);
         return null != t && t > 0
             ? P.intl.formatToPlainString(P.t.LYdVfN, { name: n, mentions: t })
             : P.intl.formatToPlainString(P.t.lLSbno, { name: n });
@@ -281,7 +281,7 @@ class H extends r.Component {
     getDisplayNickname() {
         let e,
             { user: t, comparator: n } = this.props,
-            i = D.A.getNickname(t.id);
+            i = y.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
                 (e = i ?? M.Ay.getName(t)),
@@ -293,7 +293,7 @@ class H extends r.Component {
             { user: t, mentions: n } = this.props,
             r = this.getDisplayNickname();
         return (
-            null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n })),
+            null != n && n > 0 && (e = (0, i.jsx)(S, { className: w.qS, value: n })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
@@ -363,7 +363,7 @@ class z extends r.Component {
 }
 function B(e) {
     let { game: t, onMouseEnter: n, onClick: r, onFocus: s, focused: l, id: a, inlineLabel: o, children: c } = e,
-        { extraChromeEnabled: d } = v.A.useConfig({ location: "quickswitcher" });
+        { extraChromeEnabled: d } = U.A.useConfig({ location: "quickswitcher" });
     return (0, i.jsx)(V, {
         id: a,
         onMouseEnter: n,
@@ -375,7 +375,7 @@ function B(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: w.zc,
-                    children: (0, i.jsx)(U.A, { game: t, iconClassName: w.bN, withBackground: d }),
+                    children: (0, i.jsx)(v.A, { game: t, iconClassName: w.bN, withBackground: d }),
                 }),
                 (0, i.jsxs)("div", {
                     className: w.UU,
@@ -400,7 +400,7 @@ class K extends r.Component {
         });
     }
 }
-class W extends r.Component {
+class Z extends r.Component {
     renderContent() {
         let e,
             t,
@@ -440,7 +440,7 @@ class W extends r.Component {
         });
     }
 }
-class Z extends r.Component {
+class W extends r.Component {
     renderContent() {
         let e,
             t,

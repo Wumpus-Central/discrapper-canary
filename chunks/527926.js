@@ -1,5 +1,5 @@
-var r = a(115560),
-    i = a(201779),
+var i = a(115560),
+    r = a(201779),
     n = a(719718);
 function s() {
     return { completedMs: 0, startedAt: null };
@@ -23,7 +23,7 @@ let l = new (class {
     customizationTimer = s();
     initialize(e) {
         let { didPlayerShareDataWithDiscord: t, isForeground: a } = e;
-        ((this.sessionId = (0, r.A)()),
+        ((this.sessionId = (0, i.A)()),
             (this.didPlayerShareDataWithDiscord = t),
             (this.stepName = null),
             (this.isForeground = a),
@@ -57,7 +57,7 @@ let l = new (class {
     updateTimers() {
         let e = !this.isStopped && this.isForeground;
         (c({ timer: this.sessionTimer, isRunning: e }),
-            c({ timer: this.customizationTimer, isRunning: e && null != this.stepName && (0, i.Rq)(this.stepName) }));
+            c({ timer: this.customizationTimer, isRunning: e && null != this.stepName && (0, r.Rq)(this.stepName) }));
     }
 })();
 a.d(t, {}, { A: l });

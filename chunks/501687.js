@@ -1,8 +1,8 @@
 n.d(t, { A: () => R });
 var i = n(477900),
     l = n(582128),
-    a = n(503698),
-    r = n.n(a),
+    r = n(503698),
+    a = n.n(r),
     s = n(404144),
     o = n.n(s),
     u = n(494012),
@@ -33,52 +33,52 @@ function v(e, t) {
     return t >= n ? n - t : 0;
 }
 var _ = n(683825),
-    b = n(792996),
-    y = n(243189);
+    y = n(792996),
+    b = n(243189);
 let T = l.memo(function (e) {
     let t,
-        { source: n, masterSec: a, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: x } = e,
+        { source: n, masterSec: r, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: x } = e,
         T = l.useRef(null),
         [S, I] = l.useState(!1),
-        N = E(n, a),
-        j = a - n.startSec,
-        R = a < n.startSec,
-        M = Math.ceil(v(n, a)),
-        O = (0, p.rB)(M),
-        P = n.owner?.name ?? n.label ?? b.intl.string(_.default["6XuC8e"]),
-        { ref: k, width: L, height: D } = (0, u.Ay)();
+        j = E(n, r),
+        N = r - n.startSec,
+        R = r < n.startSec,
+        O = Math.ceil(v(n, r)),
+        M = (0, p.rB)(O),
+        P = n.owner?.name ?? n.label ?? y.intl.string(_.default["6XuC8e"]),
+        { ref: k, width: L, height: w } = (0, u.Ay)();
     (l.useEffect(() => {
         let e = T.current;
         if (null != e) {
-            if (!N) return void e.pause();
-            if (Math.abs(e.currentTime - j) > 0.35)
+            if (!j) return void e.pause();
+            if (Math.abs(e.currentTime - N) > 0.35)
                 try {
-                    e.currentTime = j;
+                    e.currentTime = N;
                 } catch {}
             ((e.playbackRate = o), s ? e.play().catch(() => {}) : e.pause());
         }
-    }, [N, j, s, o, S]),
+    }, [j, N, s, o, S]),
         l.useEffect(() => (d?.(n.id, T.current), () => d?.(n.id, null)), [d, n.id]));
-    let w = c && !N && 0 !== M;
+    let D = c && !j && 0 !== O;
     return (
-        c && N
-            ? (t = b.intl.formatToPlainString(_.default.zc1itm, { name: P }))
-            : c && (t = b.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: P, time: O })),
+        c && j
+            ? (t = y.intl.formatToPlainString(_.default.zc1itm, { name: P }))
+            : c && (t = y.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: P, time: M })),
         (0, i.jsxs)("div", {
-            className: y.Vs,
+            className: b.Vs,
             role: c ? "group" : void 0,
             "aria-label": t,
             "data-testid": "discord-web-multi-video-player-grid-tile",
             children: [
                 (0, i.jsxs)("div", {
                     ref: k,
-                    className: r()(y.iH, { [y.om]: c }),
+                    className: a()(b.iH, { [b.om]: c }),
                     children: [
                         x ??
                             (0, i.jsx)(m.A, {
                                 ref: T,
-                                className: r()(y.cr, { [y.qb]: w }),
-                                poster: (0, f.s)(n.poster, n, L, D),
+                                className: a()(b.cr, { [b.qb]: D }),
+                                poster: (0, f.s)(n.poster, n, L, w),
                                 preload: "auto",
                                 playsInline: !0,
                                 muted: !0,
@@ -92,7 +92,7 @@ let T = l.memo(function (e) {
                         c &&
                             null != n.owner &&
                             (0, i.jsx)("div", {
-                                className: y.cL,
+                                className: b.cL,
                                 children: (0, i.jsx)(h.eu, {
                                     src: n.owner.avatarUrl,
                                     size: (L ?? 0) > 300 ? g._3.SIZE_32 : g._3.SIZE_20,
@@ -101,13 +101,13 @@ let T = l.memo(function (e) {
                             }),
                     ],
                 }),
-                w &&
+                D &&
                     (0, i.jsxs)("div", {
-                        className: y.rm,
+                        className: b.rm,
                         "aria-hidden": !0,
                         children: [
                             (0, i.jsx)(A.HourglassIcon, { size: "xs", color: "currentColor" }),
-                            (0, i.jsx)(C.E, { variant: "body-xs/medium", color: "none", children: O }),
+                            (0, i.jsx)(C.E, { variant: "body-xs/medium", color: "none", children: M }),
                         ],
                     }),
             ],
@@ -116,12 +116,12 @@ let T = l.memo(function (e) {
 });
 var S = n(683063),
     I = n(599507);
-let N = l.memo(function (e) {
-    let { source: t, label: n, isActive: l, isOriginal: a, currentMasterTimeSec: s, onSelect: o } = e,
-        d = t.owner?.name ?? n ?? b.intl.string(_.default["6XuC8e"]),
+let j = l.memo(function (e) {
+    let { source: t, label: n, isActive: l, isOriginal: r, currentMasterTimeSec: s, onSelect: o } = e,
+        d = t.owner?.name ?? n ?? y.intl.string(_.default["6XuC8e"]),
         m = E(t, s),
-        { ref: C, width: x, height: y } = (0, u.Ay)(m, l, a);
-    if (!m && !l && !a) {
+        { ref: C, width: x, height: b } = (0, u.Ay)(m, l, r);
+    if (!m && !l && !r) {
         let e = (0, p.rB)(v(t, s));
         return (0, i.jsx)(S.u, {
             asset: (0, i.jsx)(A.HourglassIcon, { size: "xs" }),
@@ -131,17 +131,17 @@ let N = l.memo(function (e) {
             ariaHidden: !0,
             children: (0, i.jsx)("div", {
                 className: I.RG,
-                "aria-label": b.intl.formatToPlainString(_.default.JFaxs2, { name: d, time: e }),
+                "aria-label": y.intl.formatToPlainString(_.default.JFaxs2, { name: d, time: e }),
                 "data-testid": "discord-web-multi-video-player-pov-out-of-range",
                 children: (0, i.jsx)(h.eu, { src: t.owner?.avatarUrl, size: g._3.SIZE_32, "aria-hidden": !0 }),
             }),
         });
     }
     return (0, i.jsxs)(c.D, {
-        className: r()(I.uF, { [I._]: l }),
+        className: a()(I.uF, { [I._]: l }),
         "aria-label": l
-            ? b.intl.formatToPlainString(_.default["RSMzC/"], { name: d })
-            : b.intl.formatToPlainString(_.default["4AH1Vb"], { name: d }),
+            ? y.intl.formatToPlainString(_.default["RSMzC/"], { name: d })
+            : y.intl.formatToPlainString(_.default["4AH1Vb"], { name: d }),
         "aria-current": l,
         onClick: function (e) {
             (e.stopPropagation(), o(t));
@@ -149,13 +149,13 @@ let N = l.memo(function (e) {
         "data-testid": "discord-web-multi-video-player-pov",
         children: [
             (0, i.jsx)("div", {
-                className: r()(I.U8, { [I.ED]: l }),
+                className: a()(I.U8, { [I.ED]: l }),
                 children:
                     null != t.poster &&
                     (0, i.jsx)("img", {
                         ref: C,
                         className: I.a1,
-                        src: (0, f.s)(t.poster, t, x, y),
+                        src: (0, f.s)(t.poster, t, x, b),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -168,12 +168,12 @@ let N = l.memo(function (e) {
         ],
     });
 });
-var j = n(340710);
+var N = n(340710);
 function R(e) {
     let {
             ref: t,
             src: n,
-            poster: a,
+            poster: r,
             className: s,
             onSourceError: p,
             isScrubbing: h,
@@ -181,27 +181,27 @@ function R(e) {
             onEnded: A,
             onLoadedMetadata: C,
             onError: v,
-            onPlay: y,
+            onPlay: b,
             onPause: S,
             children: I,
             original: R,
-            subSources: M,
-            isGridView: O,
+            subSources: O,
+            isGridView: M,
             setIsGridView: P,
             suppressSourceSelection: k = !1,
             ...L
         } = e,
-        D = l.useRef(null),
-        { ref: w, width: U, height: G } = (0, u.Ay)(),
+        w = l.useRef(null),
+        { ref: D, width: U, height: G } = (0, u.Ay)(),
         F = l.useCallback(
             (e) => {
-                ((D.current = e), (w.current = e));
+                ((w.current = e), (D.current = e));
             },
-            [w],
+            [D],
         ),
         [B, V] = l.useState(R.durationSec ?? 0),
         [H, W] = l.useState(R.id),
-        [K, z] = l.useState(0),
+        [z, K] = l.useState(0),
         [Y, q] = l.useState(!1),
         [Q, $] = l.useState(1),
         {
@@ -212,11 +212,11 @@ function R(e) {
             releaseFreezeFrame: et,
         } = (function (e) {
             let [t, n] = l.useState("hidden"),
-                [i, a] = l.useState("contain"),
-                r = l.useRef(null),
+                [i, r] = l.useState("contain"),
+                a = l.useRef(null),
                 s = l.useCallback(() => {
                     let t = e.current,
-                        i = r.current;
+                        i = a.current;
                     if (null == t || null == i || 0 === t.videoWidth) return;
                     let l = i.getContext("2d");
                     if (null != l) {
@@ -226,7 +226,7 @@ function R(e) {
                         } catch {
                             return;
                         }
-                        (a(window.getComputedStyle(t).objectFit), n("holding"));
+                        (r(window.getComputedStyle(t).objectFit), n("holding"));
                     }
                 }, [e]),
                 o = l.useCallback(() => {
@@ -237,48 +237,48 @@ function R(e) {
                     if ("releasing" !== t) return;
                     let i = e.current,
                         l = !1;
-                    function a() {
+                    function r() {
                         l || ((l = !0), n("hidden"));
                     }
-                    let r = setTimeout(a, 1500 * (null != i));
+                    let a = setTimeout(r, 1500 * (null != i));
                     if (null == i)
                         return () => {
-                            ((l = !0), clearTimeout(r));
+                            ((l = !0), clearTimeout(a));
                         };
                     if ("function" == typeof i.requestVideoFrameCallback) {
-                        let e = i.requestVideoFrameCallback(a);
+                        let e = i.requestVideoFrameCallback(r);
                         return () => {
-                            ((l = !0), clearTimeout(r), i.cancelVideoFrameCallback(e));
+                            ((l = !0), clearTimeout(a), i.cancelVideoFrameCallback(e));
                         };
                     }
                     return (
-                        i.addEventListener("seeked", a),
+                        i.addEventListener("seeked", r),
                         () => {
-                            ((l = !0), clearTimeout(r), i.removeEventListener("seeked", a));
+                            ((l = !0), clearTimeout(a), i.removeEventListener("seeked", r));
                         }
                     );
                 }, [t, e]),
                 {
-                    freezeCanvasRef: r,
+                    freezeCanvasRef: a,
                     freezeObjectFit: i,
                     isFreezeFrameHidden: "hidden" === t,
                     captureFreezeFrame: s,
                     releaseFreezeFrame: o,
                 }
             );
-        })(D),
-        en = l.useMemo(() => [{ ...R, startSec: 0, durationSec: B }, ...M], [R, M, B]),
+        })(w),
+        en = l.useMemo(() => [{ ...R, startSec: 0, durationSec: B }, ...O], [R, O, B]),
         ei = en.find((e) => e.id === H) ?? en[0],
         {
             registerFollowerElement: el,
-            isGateRaised: ea,
-            raiseSyncGate: er,
+            isGateRaised: er,
+            raiseSyncGate: ea,
             clearSyncGate: es,
             handleDriverPlay: eo,
             handleDriverPause: eu,
         } = (function (e) {
-            let { elementRef: t, sources: n, activeSourceId: i, isGridView: a } = e,
-                [r, s] = l.useState(null),
+            let { elementRef: t, sources: n, activeSourceId: i, isGridView: r } = e,
+                [a, s] = l.useState(null),
                 o = l.useRef(null),
                 u = l.useRef(new Map()),
                 c = l.useRef(!1),
@@ -286,9 +286,9 @@ function R(e) {
                     null == t ? u.current.delete(e) : u.current.set(e, t);
                 }, []),
                 m = l.useCallback((e) => (e.id === i ? t.current : (u.current.get(e.id) ?? null)), [i, t]),
-                f = l.useRef({ sources: n, isGridView: a, getSourceElement: m });
+                f = l.useRef({ sources: n, isGridView: r, getSourceElement: m });
             l.useLayoutEffect(() => {
-                f.current = { sources: n, isGridView: a, getSourceElement: m };
+                f.current = { sources: n, isGridView: r, getSourceElement: m };
             });
             let p = l.useCallback(() => null != o.current, []),
                 h = l.useCallback(
@@ -296,8 +296,8 @@ function R(e) {
                         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.current.isGridView,
                             i = t.current;
                         if (null == i || i.paused || !n) return;
-                        let { sources: l, getSourceElement: a } = f.current;
-                        l.every((t) => x(a(t), t, e)) ||
+                        let { sources: l, getSourceElement: r } = f.current;
+                        l.every((t) => x(r(t), t, e)) ||
                             ((c.current = !0), (o.current = e), i.pause(), i.dispatchEvent(new Event("waiting")), s(e));
                     },
                     [t],
@@ -335,10 +335,10 @@ function R(e) {
                 }, [g]);
             return (
                 l.useEffect(() => {
-                    if (null == r) return;
+                    if (null == a) return;
                     let e = n.map(m).filter((e) => null != e);
                     function t() {
-                        n.every((e) => x(m(e), e, r)) && g(!0);
+                        n.every((e) => x(m(e), e, a)) && g(!0);
                     }
                     let i = setTimeout(() => g(!0), 2500);
                     return (
@@ -357,7 +357,7 @@ function R(e) {
                                 }));
                         }
                     );
-                }, [r, n, m, g]),
+                }, [a, n, m, g]),
                 {
                     registerFollowerElement: d,
                     isGateRaised: p,
@@ -367,7 +367,7 @@ function R(e) {
                     handleDriverPause: C,
                 }
             );
-        })({ elementRef: D, sources: en, activeSourceId: ei.id, isGridView: O }),
+        })({ elementRef: w, sources: en, activeSourceId: ei.id, isGridView: M }),
         ec = l.useRef(null),
         ed = l.useRef(null),
         em = l.useRef(R.id),
@@ -376,7 +376,7 @@ function R(e) {
         eh = l.useRef(null);
     function eg() {
         null != eh.current &&
-            (clearTimeout(eh.current), (eh.current = null), D.current?.dispatchEvent(new Event("canplay")));
+            (clearTimeout(eh.current), (eh.current = null), w.current?.dispatchEvent(new Event("canplay")));
     }
     function eA() {
         let e = ep.current;
@@ -390,7 +390,7 @@ function R(e) {
             let e;
             ((ep.current = { sourceId: n.id, masterSec: t }),
                 null == eh.current &&
-                    null != (e = D.current) &&
+                    null != (e = w.current) &&
                     (e.dispatchEvent(new Event("waiting")),
                     (e.preload = "metadata"),
                     e.load(),
@@ -400,7 +400,7 @@ function R(e) {
             return;
         }
         let i = o()(t, 0, ex.current.masterDurationSec),
-            l = D.current;
+            l = w.current;
         if (n.id === ex.current.activeSource.id) {
             ((ed.current = null), null != l && (l.currentTime = i - n.startSec));
             return;
@@ -414,7 +414,7 @@ function R(e) {
             (ed.current = i),
             (ex.current = { ...ex.current, activeSource: n }),
             W(n.id),
-            z(i));
+            K(i));
     }
     function eE(e) {
         eC(R.id, e);
@@ -458,14 +458,14 @@ function R(e) {
                                 case "duration":
                                     return e.getDurationSec();
                                 case "buffered":
-                                    var a, r;
+                                    var r, a;
                                     return (
-                                        (a = l?.buffered),
-                                        (r = e.getActiveStartSec()),
+                                        (r = l?.buffered),
+                                        (a = e.getActiveStartSec()),
                                         {
-                                            length: a?.length ?? 0,
-                                            start: (e) => (a?.start(e) ?? 0) + r,
-                                            end: (e) => (a?.end(e) ?? 0) + r,
+                                            length: r?.length ?? 0,
+                                            start: (e) => (r?.start(e) ?? 0) + a,
+                                            end: (e) => (r?.end(e) ?? 0) + a,
                                         }
                                     );
                             }
@@ -475,8 +475,8 @@ function R(e) {
                         },
                         set(t, i, l) {
                             if ("currentTime" === i) return (e.seekTo(l), !0);
-                            let a = n();
-                            return (null != a && Reflect.set(a, i, l), !0);
+                            let r = n();
+                            return (null != r && Reflect.set(r, i, l), !0);
                         },
                         has(e, t) {
                             let i = n();
@@ -485,22 +485,22 @@ function R(e) {
                     },
                 );
             })({
-                getElement: () => D.current,
+                getElement: () => w.current,
                 getDurationSec: () => ex.current.masterDurationSec,
                 getActiveStartSec: () => ex.current.activeSource.startSec,
                 getCurrentTimeSec: () => {
                     let e = ed.current;
                     return null != e
                         ? e
-                        : Math.max(0, ex.current.activeSource.startSec + (D.current?.currentTime ?? 0));
+                        : Math.max(0, ex.current.activeSource.startSec + (w.current?.currentTime ?? 0));
                 },
                 seekTo: (e) => {
                     let t = o()(e, 0, ex.current.masterDurationSec);
-                    if ((z(t), E(ex.current.activeSource, t))) {
+                    if ((K(t), E(ex.current.activeSource, t))) {
                         ed.current = null;
-                        let e = D.current;
+                        let e = w.current;
                         (null != e && (e.currentTime = t - ex.current.activeSource.startSec),
-                            ex.current.isScrubbing || er(t));
+                            ex.current.isScrubbing || ea(t));
                         return;
                     }
                     ((ed.current = t), ex.current.isScrubbing || ex.current.revertToOriginal(t));
@@ -511,7 +511,7 @@ function R(e) {
                 t(null);
             }
         ),
-        [t, er],
+        [t, ea],
     ),
         l.useEffect(
             () => () => {
@@ -520,47 +520,47 @@ function R(e) {
             [],
         ));
     let e_ = l.useRef(H);
-    function eb(e) {
-        e.id !== ei.id && eC(e.id, K);
-    }
     function ey(e) {
-        ea() || L.onCanPlay?.(e);
+        e.id !== ei.id && eC(e.id, z);
+    }
+    function eb(e) {
+        er() || L.onCanPlay?.(e);
     }
     (l.useEffect(() => {
-        e_.current !== H && ((e_.current = H), D.current?.load());
+        e_.current !== H && ((e_.current = H), w.current?.load());
     }, [H]),
         l.useEffect(() => {
             if (h) return;
             let e = ed.current;
             null == e || null != ec.current || E(ex.current.activeSource, e) || ex.current.revertToOriginal(e);
         }, [h]));
-    let eT = !E(ei, K);
+    let eT = !E(ei, z);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(c.D, {
                 onClick: L.onClick ?? void 0,
-                className: r()(j.dw, { [j.x2]: O }),
+                className: a()(N.dw, { [N.x2]: M }),
                 children: [
                     (0, i.jsxs)(T, {
                         source: ei,
-                        masterSec: K,
+                        masterSec: z,
                         isPlaying: Y,
                         playbackRate: Q,
-                        isGridView: O,
+                        isGridView: M,
                         children: [
                             (0, i.jsxs)(m.A, {
                                 ...L,
                                 ref: F,
-                                className: r()(s, { [j._b]: eT, [j.l3]: O }),
-                                poster: (0, f.s)(ei.poster ?? a, ei, U, G),
-                                onCanPlay: ey,
-                                onCanPlayThrough: ey,
+                                className: a()(s, { [N._b]: eT, [N.l3]: M }),
+                                poster: (0, f.s)(ei.poster ?? r, ei, U, G),
+                                onCanPlay: eb,
+                                onCanPlayThrough: eb,
                                 onTimeUpdate: function (e) {
-                                    let t = D.current;
+                                    let t = w.current;
                                     if (null != t && null == ec.current && null == ed.current) {
                                         $(t.playbackRate);
                                         let e = Math.max(0, ei.startSec + t.currentTime);
-                                        (z(e), ei.id !== R.id && e >= ei.startSec + ei.durationSec - 0.12 && eE(e));
+                                        (K(e), ei.id !== R.id && e >= ei.startSec + ei.durationSec - 0.12 && eE(e));
                                     }
                                     g?.(e);
                                 },
@@ -568,7 +568,7 @@ function R(e) {
                                     ei.id !== R.id ? eE(ei.startSec + ei.durationSec) : A?.(e);
                                 },
                                 onLoadedMetadata: function (e) {
-                                    let t = D.current,
+                                    let t = w.current,
                                         n = ec.current;
                                     if (
                                         (H === R.id &&
@@ -592,10 +592,10 @@ function R(e) {
                                     ((ed.current = null), et());
                                 },
                                 onError: function (e) {
-                                    ei.id !== R.id ? eE(ei.startSec + (D.current?.currentTime ?? 0)) : v?.(e);
+                                    ei.id !== R.id ? eE(ei.startSec + (w.current?.currentTime ?? 0)) : v?.(e);
                                 },
                                 onPlay: function (e) {
-                                    (q(!0), eo(K), y?.(e));
+                                    (q(!0), eo(z), b?.(e));
                                 },
                                 onPause: function (e) {
                                     (q(!1), eu(), S?.(e));
@@ -604,20 +604,20 @@ function R(e) {
                             }),
                             (0, i.jsx)("canvas", {
                                 ref: X,
-                                className: j.bQ,
+                                className: N.bQ,
                                 style: { objectFit: Z },
                                 hidden: J,
                                 "aria-hidden": !0,
                             }),
                         ],
                     }),
-                    O &&
-                        M.map((e) =>
+                    M &&
+                        O.map((e) =>
                             (0, i.jsx)(
                                 T,
                                 {
                                     source: e,
-                                    masterSec: K,
+                                    masterSec: z,
                                     isPlaying: Y,
                                     playbackRate: Q,
                                     isGridView: !0,
@@ -631,37 +631,37 @@ function R(e) {
             en.length > 1 &&
                 !k &&
                 (0, i.jsxs)("div", {
-                    className: j.c2,
+                    className: N.c2,
                     "data-testid": "discord-web-multi-video-player-povs",
                     children: [
-                        !O &&
+                        !M &&
                             en.map((e) =>
                                 (0, i.jsx)(
-                                    N,
+                                    j,
                                     {
                                         source: e,
                                         label:
-                                            e.id === R.id ? (e.label ?? b.intl.string(_.default["9tdsDk"])) : e.label,
+                                            e.id === R.id ? (e.label ?? y.intl.string(_.default["9tdsDk"])) : e.label,
                                         isActive: e.id === ei.id,
                                         isOriginal: e.id === R.id,
-                                        currentMasterTimeSec: K,
-                                        onSelect: eb,
+                                        currentMasterTimeSec: z,
+                                        onSelect: ey,
                                     },
                                     e.id,
                                 ),
                             ),
                         (0, i.jsx)(c.D, {
-                            className: j.LI,
-                            "aria-label": b.intl.string(_.default.lykjkX),
+                            className: N.LI,
+                            "aria-label": y.intl.string(_.default.lykjkX),
                             "aria-pressed": !1,
                             onClick: function (e) {
-                                if ((e.stopPropagation(), O)) {
-                                    (ea() && es(!0), P(!1));
+                                if ((e.stopPropagation(), M)) {
+                                    (er() && es(!0), P(!1));
                                     let e = en.find((e) => e.id === em.current);
-                                    eC(null != e && E(e, K) ? e.id : R.id, K);
+                                    eC(null != e && E(e, z) ? e.id : R.id, z);
                                     return;
                                 }
-                                ((em.current = ei.id), P(!0), er(K, !0), eC(R.id, K));
+                                ((em.current = ei.id), P(!0), ea(z, !0), eC(R.id, z));
                             },
                             "data-testid": "discord-web-multi-video-player-grid-toggle",
                             children: (0, i.jsx)(d.GridSquareIcon, { size: "xs", color: "currentColor" }),

@@ -34,7 +34,7 @@ function m(e) {
         I = i
             ? { text: g.intl.string(p.default.ZzcLhc), onClick: r, external: !1 }
             : { text: g.intl.string(p.default["Bp/1dq"]), link: E.M1, external: !0 },
-        S = i
+        x = i
             ? { text: g.intl.string(p.default["+7NlgO"]), variant: "primary", onClick: m }
             : { text: g.intl.string(p.default.jjpcno), variant: "primary", onClick: T };
     return (0, s.jsx)(a.A, {
@@ -48,6 +48,6 @@ function m(e) {
         title: g.intl.string(p.default.GdTVPF),
         body: f,
         textLink: I,
-        actions: [S],
+        actions: [x],
     });
 }

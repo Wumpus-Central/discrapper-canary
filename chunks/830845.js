@@ -213,10 +213,10 @@ r.d(
                 t.go(e);
             }
             var D = 0;
-            function M(e) {
+            function F(e) {
                 1 === (D += e) && 1 === e ? window.addEventListener(v, O) : 0 === D && window.removeEventListener(v, O);
             }
-            var F = !1,
+            var M = !1,
                 j = {
                     length: t.length,
                     action: "POP",
@@ -266,18 +266,18 @@ r.d(
                         void 0 === e && (e = !1);
                         var t = k.setPrompt(e);
                         return (
-                            F || (M(1), (F = !0)),
+                            M || (F(1), (M = !0)),
                             function () {
-                                return (F && ((F = !1), M(-1)), t());
+                                return (M && ((M = !1), F(-1)), t());
                             }
                         );
                     },
                     listen: function (e) {
                         var t = k.appendListener(e);
                         return (
-                            M(1),
+                            F(1),
                             function () {
-                                (M(-1), t());
+                                (F(-1), t());
                             }
                         );
                     },
@@ -412,7 +412,7 @@ r.d(
                                 (i = N.location),
                                 -1 === (n = C.indexOf(i.key)) && (n = 0),
                                 -1 === (o = C.indexOf(r.key)) && (o = 0),
-                                (s = n - o) && ((S = !0), M(s)));
+                                (s = n - o) && ((S = !0), F(s)));
                       });
             }
             var U = k(b()),
@@ -420,14 +420,14 @@ r.d(
             function D(e) {
                 return E + l(e);
             }
-            function M(e) {
+            function F(e) {
                 r.go(e);
             }
-            var F = 0;
+            var M = 0;
             function j(e) {
-                1 === (F += e) && 1 === e
+                1 === (M += e) && 1 === e
                     ? (window.addEventListener(g, O), o && window.addEventListener(_, I))
-                    : 0 === F && (window.removeEventListener(g, O), o && window.removeEventListener(_, I));
+                    : 0 === M && (window.removeEventListener(g, O), o && window.removeEventListener(_, I));
             }
             var B = !1,
                 N = {
@@ -472,12 +472,12 @@ r.d(
                             }
                         });
                     },
-                    go: M,
+                    go: F,
                     goBack: function () {
-                        M(-1);
+                        F(-1);
                     },
                     goForward: function () {
-                        M(1);
+                        F(1);
                     },
                     block: function (e) {
                         void 0 === e && (e = !1);

@@ -30,8 +30,8 @@ function A(e) {
         N = (0, s.M)(A) ? C : E,
         f = (p.size - p.offset - 2 * p.stroke) * 0.8,
         I = p.size - p.stroke,
-        S = { width: 0.4 * f, height: 0.4 * f },
-        x = { width: S.width + 1, height: S.height + 1, right: p.stroke + 1, bottom: p.stroke + 1, padding: 0 };
+        x = { width: 0.4 * f, height: 0.4 * f },
+        S = { width: x.width + 1, height: x.height + 1, right: p.stroke + 1, bottom: p.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: h.kL,
         style: { width: I, height: I, padding: p.stroke },
@@ -44,12 +44,12 @@ function A(e) {
             !n &&
                 (0, i.jsx)("div", {
                     className: h.dq,
-                    style: x,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...S }),
+                    style: S,
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...x }),
                 }),
             n &&
                 m === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: h.dq, style: x, children: (0, i.jsx)(d.A, { className: h.ox, ...S }) }),
+                (0, i.jsx)("div", { className: h.dq, style: S, children: (0, i.jsx)(d.A, { className: h.ox, ...x }) }),
         ],
     });
 }

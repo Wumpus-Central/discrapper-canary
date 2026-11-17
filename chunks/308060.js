@@ -1,5 +1,6 @@
 var n = r(72290);
 !(function (e) {
+    "use strict";
     if (!e.setImmediate) {
         var t,
             r,

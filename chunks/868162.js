@@ -25,14 +25,14 @@ function I(e) {
     }
     return e.name;
 }
-function S(e, t, n) {
+function x(e, t, n) {
     return null == e || e.displayName !== t
         ? { displayName: t, type: n }
         : (e.type === h.E.INPUT && n === h.E.OUTPUT) || (e.type === h.E.OUTPUT && n === h.E.INPUT)
           ? { displayName: t, type: h.E.INPUT_AND_OUTPUT }
           : e;
 }
-function x() {
+function S() {
     let e = !r().isEmpty(m);
     return (e && (m = {}), e);
 }
@@ -65,7 +65,7 @@ class O extends s.Ay.DeviceSettingsStore {
         return N;
     }
 }
-let v = new O(l.h, {
+let U = new O(l.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
@@ -106,10 +106,10 @@ let v = new O(l.h, {
             (u.length > 0 || E.length > 0) && (m = {}),
             d.A.isConnected() &&
                 (A.forEach((e) => {
-                    m[e] = S(m[e], e, h.E.INPUT);
+                    m[e] = x(m[e], e, h.E.INPUT);
                 }),
                 f.forEach((e) => {
-                    m[e] = S(m[e], e, h.E.OUTPUT);
+                    m[e] = x(m[e], e, h.E.OUTPUT);
                 })),
             !(r().isEqual(l, a) && r().isEqual(o, c)) && ((p = i), (g = s), !0)
         );
@@ -118,8 +118,8 @@ let v = new O(l.h, {
         let e = d.A.isDisconnected() && !r().isEmpty(m);
         return (e && (m = {}), e);
     },
-    AUDIO_SET_INPUT_DEVICE: x,
-    AUDIO_SET_OUTPUT_DEVICE: x,
+    AUDIO_SET_INPUT_DEVICE: S,
+    AUDIO_SET_OUTPUT_DEVICE: S,
     CONNECTED_DEVICE_SWITCH: function (e) {
         let { displayName: t, connectedDevicePreference: n, location: i } = e;
         if (n === h.f.INPUT || n === h.f.INPUT_AND_OUTPUT) {
@@ -144,4 +144,4 @@ let v = new O(l.h, {
         (t && (m = {}), (A.neverShowModal = t));
     },
 });
-n.d(t, {}, { A: v, x: I });
+n.d(t, {}, { A: U, x: I });
