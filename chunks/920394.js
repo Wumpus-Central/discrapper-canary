@@ -9,10 +9,10 @@ var t = o(477900),
     p = o(381991),
     b = o(260498),
     a = o(174865),
-    A = o(960335),
+    A = o(139388),
     h = o(826058),
-    C = o(719593),
-    j = o(536468),
+    C = o(50181),
+    j = o(719593),
     f = o(95264),
     v = o(465080);
 o.d(
@@ -28,8 +28,8 @@ o.d(
                 k && (0, u.ensureConnection)(n);
             }, [k, n]);
             let P = (0, r.f)("ConjureServerProjectContextMenu"),
-                { publishOptions: g, publish: w, label: D } = (0, C.A)(n, o, !m),
-                E = (0, j.A)(n, w, g);
+                { publishOptions: g, publish: w, label: D } = (0, j.A)(n, o, !m),
+                E = (0, C.A)(n, w, g);
             return null == _
                 ? null
                 : (0, t.jsx)(h.bI.Provider, {

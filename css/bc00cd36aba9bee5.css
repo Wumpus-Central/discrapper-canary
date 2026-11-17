@@ -1,0 +1,134 @@
+.details__Ue-J1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+    min-width: 0
+}
+
+.header__Ue-J1 {
+    align-items: center;
+    display: flex
+}
+
+.iconButton__Ue-J1 {
+    border-radius: calc(var(--space-48)/4);
+    cursor: pointer;
+    display: flex;
+    position: relative
+}
+
+.uploadTile__Ue-J1 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    color: var(--icon-default);
+    height: var(--space-48);
+    justify-content: center;
+    width: var(--space-48)
+}
+
+.uploadTile__Ue-J1:focus-visible,
+.uploadTile__Ue-J1:hover {
+    background: var(--background-mod-strong);
+    color: var(--icon-strong)
+}
+
+.iconImage__Ue-J1 {
+    border-radius: inherit;
+    height: var(--space-48);
+    width: var(--space-48)
+}
+
+.iconOverlay__Ue-J1 {
+    align-items: center;
+    background: var(--background-scrim);
+    border-radius: inherit;
+    color: var(--icon-overlay-light);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .15s ease-out
+}
+
+.iconButton__Ue-J1:focus-visible .iconOverlay__Ue-J1,
+.iconButton__Ue-J1:hover .iconOverlay__Ue-J1 {
+    opacity: 1
+}
+
+.fileInput__Ue-J1 {
+    display: none
+}
+
+.field__Ue-J1 {
+    gap: var(--space-8)
+}
+
+.field__Ue-J1,
+.includes__Ue-J1 {
+    display: flex;
+    flex-direction: column;
+    min-width: 0
+}
+
+.includes__Ue-J1 {
+    gap: var(--space-4)
+}
+
+.contentRow__Ue-J1 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    min-height: var(--space-40);
+    min-width: 0
+}
+
+.contentIcon__Ue-J1 {
+    color: var(--icon-muted);
+    flex: 0 0 auto
+}
+
+.contentTrailing__Ue-J1 {
+    margin-inline-start: auto
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .iconOverlay__Ue-J1 {
+        transition: none
+    }
+}
+
+.row_6FCE-u {
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-between
+}
+
+.row_6FCE-u,
+.trigger_6FCE-u {
+    align-items: center
+}
+
+.trigger_6FCE-u {
+    background: none;
+    border: none;
+    color: var(--text-strong);
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: var(--space-4);
+    padding: var(--space-4) 0
+}
+
+.trigger_6FCE-u:disabled {
+    color: var(--text-muted);
+    cursor: default
+}
+
+.panel_gt-3li {
+    width: 400px
+}
+
+/*# sourceMappingURL=bc00cd36aba9bee5.css.map*/

@@ -12,8 +12,8 @@ var l = r(503698),
     m = r(742589),
     p = r(465006),
     h = r(845079),
-    g = r(191850),
-    x = r(792996),
+    x = r(191850),
+    g = r(792996),
     j = r(631417);
 r.d(
     t,
@@ -27,13 +27,14 @@ r.d(
                     project: b,
                     onOpenProjectSettings: v,
                     transparent: C = !1,
-                    onBack: y,
-                    hideShareTarget: w = !1,
+                    onBack: w,
+                    hideShareTarget: y = !1,
                     preview: N = !1,
+                    draft: k = !1,
                 } = e,
-                R = x.intl.string(g.default.FzfmQ8),
-                k = x.intl.string(g.default["/Tl7an"]),
-                S = (0, p.Ay)(w ? null : (b ?? null));
+                R = g.intl.string(x.default.FzfmQ8),
+                S = g.intl.string(x.default["/Tl7an"]),
+                A = (0, p.Ay)(y ? null : (b ?? null));
             return (0, n.jsx)(m.A, {
                 hideSearch: !0,
                 transparent: C,
@@ -43,15 +44,15 @@ r.d(
                 children: (0, n.jsxs)("div", {
                     className: j.QF,
                     children: [
-                        null != y
+                        null != w
                             ? (0, n.jsx)(i.m, {
                                   asContainer: !0,
-                                  text: k,
+                                  text: S,
                                   position: "bottom",
                                   children: (0, n.jsx)(s.D, {
                                       className: j.Gv,
-                                      onClick: y,
-                                      "aria-label": k,
+                                      onClick: w,
+                                      "aria-label": S,
                                       children: (0, n.jsx)(o.ArrowLargeLeftIcon, {
                                           size: "refresh_sm",
                                           color: "currentColor",
@@ -90,16 +91,16 @@ r.d(
                               })
                             : null,
                         (0, n.jsx)(m.A.Title, { className: j.Qw, wrapperClassName: j.DD, children: t }),
-                        N
+                        k
                             ? (0, n.jsx)("span", {
-                                  className: j.x4,
+                                  className: j.kK,
                                   children: (0, n.jsx)(d.v, {
-                                      text: x.intl.string(g.default.gVlSJg),
+                                      text: g.intl.string(x.default["2+GiMw"]),
                                       variant: "orangeLight",
                                   }),
                               })
                             : null,
-                        null != S
+                        null != A
                             ? (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(m.A.Divider, { className: j.uN }),
@@ -109,7 +110,7 @@ r.d(
                                           color: "text-muted",
                                           lineClamp: 1,
                                           className: j.l0,
-                                          children: S,
+                                          children: A,
                                       }),
                                   ],
                               })

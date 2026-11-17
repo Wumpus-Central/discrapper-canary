@@ -2,6 +2,9 @@
     flex: 0 0 auto;
     padding-inline-end: var(--space-xs);
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
     width: 100%;
     z-index: 100
 }
@@ -61,7 +64,7 @@
     text-overflow: ellipsis
 }
 
-.previewChip_krOYhC {
+.draftChip_krOYhC {
     display: inline-flex;
     flex: 0 0 auto;
     margin-inline-start: var(--space-8)
@@ -83,4 +86,4 @@
     --background-gradient-lowest: var(--background-gradient-chat)
 }
 
-/*# sourceMappingURL=3dd44b8e442d7c64.css.map*/
+/*# sourceMappingURL=3d8d2ea36a634f93.css.map*/

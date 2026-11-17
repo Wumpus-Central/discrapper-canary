@@ -1,4 +1,4 @@
-n.d(e, { A: () => x });
+n.d(e, { A: () => k });
 var l = n(858899),
     i = n(582128),
     a = n(826058),
@@ -52,11 +52,11 @@ function b(t) {
     });
 }
 var m = n(962998),
-    y = n(855986),
-    h = n(722701);
+    h = n(855986),
+    y = n(722701);
 function v(t) {
     let { projectId: e, ...n } = t,
-        l = (0, y.bG)([h.A], () => h.A.getSafetyRecheck(e), [e]),
+        l = (0, h.bG)([y.A], () => y.A.getSafetyRecheck(e), [e]),
         i = (function (t) {
             switch (t?.status) {
                 case void 0:
@@ -126,7 +126,7 @@ let C = {
     },
     showError: (t) => (0, l.P0)({ text: t, variant: "critical" }),
 };
-function x(t, e, n) {
+function k(t, e, n) {
     return (function (t, e, n, l) {
         let [r, u] = i.useState(null),
             c = i.useRef(null),
@@ -163,6 +163,7 @@ function x(t, e, n) {
             text: o(g, m),
             label: o(g, null),
             indicator: null == g ? null : g.publishing ? "publishing" : s(g) ? null : "unpublished",
+            pendingChanges: null != g && (g.isUpdate || g.status?.publishState === "not_live"),
         };
     })(t, e, n, C);
 }

@@ -7,7 +7,7 @@ r.exports = {
     FF: "projectIconButton_krOYhC",
     DD: "title_krOYhC",
     Qw: "titleText_krOYhC",
-    x4: "previewChip_krOYhC",
+    kK: "draftChip_krOYhC",
     l0: "shareTarget_krOYhC",
     uN: "shareTargetDivider_krOYhC",
 };

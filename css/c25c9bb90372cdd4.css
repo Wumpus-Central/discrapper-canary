@@ -460,22 +460,30 @@
     width: 1280px
 }
 
-.channelView_ajKoHp {
+.builder_ajKoHp {
     flex: 1;
-    flex-direction: row;
+    flex-direction: column
+}
+
+.builder_ajKoHp,
+.channelView_ajKoHp {
+    display: flex;
+    min-height: 0;
+    min-width: 0;
     position: relative
 }
 
-.channelView_ajKoHp,
-.channelViewMain_ajKoHp {
-    display: flex;
-    min-height: 0;
-    min-width: 0
+.channelView_ajKoHp {
+    flex: 1;
+    flex-direction: row
 }
 
 .channelViewMain_ajKoHp {
+    display: flex;
     flex: 1;
-    flex-direction: column
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0
 }
 
 .channelViewMainPanel_ajKoHp {
@@ -541,4 +549,4 @@
     display: none
 }
 
-/*# sourceMappingURL=56f0361ab3415c75.css.map*/
+/*# sourceMappingURL=c25c9bb90372cdd4.css.map*/
