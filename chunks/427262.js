@@ -77,12 +77,19 @@ function p(e, t) {
         i = "auto" !== n.identifiable || r.A.hidePersonalInformation;
     return I(e, n, i);
 }
-function m(e) {
+function m(e, t) {
+    return I(
+        e,
+        { ...d, ...t },
+        (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
+    );
+}
+function g(e) {
     return (0, i.bG)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-function g() {
+function T() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
@@ -98,14 +105,8 @@ n.d(
                 return 2 === e.length && e.endsWith("\u2026");
             },
             getUserTag: p,
-            useUserTag: function (e, t) {
-                return I(
-                    e,
-                    { ...d, ...t },
-                    (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
-                );
-            },
-            getUserIsStaff: g,
+            useUserTag: m,
+            getUserIsStaff: T,
             getFormattedName: function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null == e) return "???";
@@ -115,19 +116,20 @@ n.d(
             },
             getGlobalName: A,
             humanizeStatus: f,
-            useDirectMessageRecipient: m,
+            useDirectMessageRecipient: g,
         },
         G2: function (e) {
             return !h(e, { minDaysOld: 0, maxDaysOld: 30 });
         },
-        Gn: g,
+        Gn: T,
         MU: f,
         QV: p,
-        R1: m,
+        R1: g,
         mG: _,
         mv: function (e) {
             return h(e, { minDaysOld: 0, maxDaysOld: 7 });
         },
         tx: E,
+        xG: m,
     },
 );
