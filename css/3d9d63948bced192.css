@@ -503,4 +503,10 @@
     padding: 0
 }
 
-/*# sourceMappingURL=4b7da4061c096ca1.css.map*/
+.modalRoot_fEFP8r[data-has-footer=true]>.modalContent_fEFP8r {
+    isolation: isolate;
+    overflow: clip;
+    position: relative
+}
+
+/*# sourceMappingURL=3d9d63948bced192.css.map*/

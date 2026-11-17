@@ -1,15 +1,16 @@
 (n.d(t, {
-    Bo: () => L,
-    oh: () => f,
+    Bo: () => y,
+    oh: () => h,
     bG: () => 50035,
     Wl: () => c,
     $F: () => l.LG,
     ni: () => d,
-    TP: () => y,
-    fT: () => w,
-    Cu: () => P,
-    tr: () => U,
-    IA: () => b,
+    TP: () => D,
+    RU: () => f,
+    fT: () => G,
+    Cu: () => M,
+    tr: () => w,
+    IA: () => v,
 }),
     n(321073));
 var i = n(333405),
@@ -79,7 +80,10 @@ var u = n(264572).hp;
 let _ = new s.Vy("HTTPUtils"),
     E = new Set([502, 504, 507, 598, 599, 522, 523, 524]),
     A = new Set([429, 503]);
-class f extends Error {
+function f(e) {
+    return A.has(e);
+}
+class h extends Error {
     method;
     url;
     ok;
@@ -102,7 +106,7 @@ class f extends Error {
             (this.retryAfter = s));
     }
 }
-function h(e, t) {
+function I(e, t) {
     let n = e?.["retry-after"] ?? e?.["Retry-After"];
     if ("string" == typeof n) {
         let e = parseInt(n, 10);
@@ -113,10 +117,10 @@ function h(e, t) {
         if ("number" == typeof e && Number.isFinite(e) && e > 0) return e;
     }
 }
-function I(e, t, n, i, s, l) {
+function p(e, t, n, i, s, l) {
     if (t.signal?.aborted) {
         let e = Object.assign(Error("Request aborted", { cause: l }), { code: "ABORTED" });
-        (g(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
+        (T(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
         return;
     }
     let o = r()[e](t.url);
@@ -163,9 +167,9 @@ function I(e, t, n, i, s, l) {
     let c = () => {
             ((t.backoff = null != t.backoff ? t.backoff : new a.A()),
                 (t.retried = (null != t.retried ? t.retried : 0) + 1),
-                t.backoff.fail(() => v(t.url).then(() => I(e, t, n, i, s, l))));
+                t.backoff.fail(() => P(t.url).then(() => p(e, t, n, i, s, l))));
         },
-        _ = D?.prepareRequest?.(o);
+        _ = b?.prepareRequest?.(o);
     (o.ok((e) => null != e.status),
         o.then(
             (r) => {
@@ -176,18 +180,18 @@ function I(e, t, n, i, s, l) {
                     body: r.body,
                     text: r.text,
                     status: r.status,
-                    retryAfter: h(r.headers, r.body),
+                    retryAfter: I(r.headers, r.body),
                 };
-                g(t, a);
+                T(t, a);
                 let o = !1,
                     u = (r, a) => {
                         let d = { ...t, headers: { ...t.headers, ...r }, interceptResponse: a };
-                        ((o = !0), I(e, d, n, i, s, l));
+                        ((o = !0), p(e, d, n, i, s, l));
                     },
                     A = (e) => {
                         o || (i(e), s?.({ ok: !1, hasErr: !0, err: e }));
                     };
-                if (t?.interceptResponse?.(r, u, A) !== !0 && D?.interceptResponse?.(r, u, A, _) !== !0) {
+                if (t?.interceptResponse?.(r, u, A) !== !0 && b?.interceptResponse?.(r, u, A, _) !== !0) {
                     if (r.ok) n(a);
                     else {
                         if (t.oldFormErrors && a?.body?.code === 50035) {
@@ -195,7 +199,7 @@ function I(e, t, n, i, s, l) {
                             null != e && (a.body = d(e));
                         }
                         if (t.rejectWithError) {
-                            let n = new f({
+                            let n = new h({
                                 method: e,
                                 url: t.url,
                                 status: a.status,
@@ -213,7 +217,7 @@ function I(e, t, n, i, s, l) {
             (e) => {
                 null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code
                     ? c()
-                    : (g(t),
+                    : (T(t),
                       null != l && null == e.cause && (e.cause = l),
                       i(e),
                       null != s && s({ ok: !1, hasErr: !0, err: e }));
@@ -221,9 +225,9 @@ function I(e, t, n, i, s, l) {
         ),
         t.signal?.aborted ? o.abort() : t.signal?.addEventListener("abort", () => o.abort(), { once: !0 }));
 }
-let p = new Map();
-function m(e) {
-    let t = p.get(e);
+let m = new Map();
+function g(e) {
+    let t = m.get(e);
     if (null == t)
         return void _.verbose(
             "rateLimitExpirationHandler: rate limit for",
@@ -232,42 +236,41 @@ function m(e) {
         );
     let n = t.queue.shift();
     if (null == n) {
-        (_.verbose("rateLimitExpirationHandler: removing key for", e), p.delete(e));
+        (_.verbose("rateLimitExpirationHandler: removing key for", e), m.delete(e));
         return;
     }
     (_.verbose("rateLimitExpirationHandler: moving to next record for ", e), n());
 }
-function g(e, t) {
-    var n;
-    let i = p.get(e.url);
-    if (null != t && ((n = t.status), A.has(n))) {
-        let n = i?.backoff ?? new a.A(1e3, 6e4),
-            r = 1e3 * (h(t.headers, t.body) ?? 5),
-            s = n.fail(void 0, r),
+function T(e, t) {
+    let n = m.get(e.url);
+    if (null != t && f(t.status)) {
+        let i = n?.backoff ?? new a.A(1e3, 6e4),
+            r = 1e3 * (I(t.headers, t.body) ?? 5),
+            s = i.fail(void 0, r),
             l = Date.now() + s;
-        if (null != i && i.retryAfterTimestamp >= l)
+        if (null != n && n.retryAfterTimestamp >= l)
             return void _.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
-        (null != i && (_.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(i.timeoutId)),
+        (null != n && (_.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(n.timeoutId)),
             _.verbose(`cleanupRequestEntry: rate limit for ${e.url} retry after ${s}ms`));
-        let o = setTimeout(() => m(e.url), s);
-        p.set(e.url, {
-            queue: i?.queue ?? [],
+        let o = setTimeout(() => g(e.url), s);
+        m.set(e.url, {
+            queue: n?.queue ?? [],
             retryAfterTimestamp: l,
             latestErrorMessage: String(t.body?.message),
             status: t.status,
             timeoutId: o,
-            backoff: n,
+            backoff: i,
         });
     } else
-        null != i &&
-            i.retryAfterTimestamp < Date.now() &&
-            (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), m(e.url));
+        null != n &&
+            n.retryAfterTimestamp < Date.now() &&
+            (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), g(e.url));
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let i = Error(`HTTP ${e.toUpperCase()} initiated here`);
     return new Promise((r, a) => {
         "string" == typeof t && (t = { url: t, rejectWithError: !1 });
-        let s = p.get(t.url);
+        let s = m.get(t.url);
         if (null != s && t.failImmediatelyWhenRateLimited) {
             let e, t;
             return (
@@ -277,36 +280,36 @@ function T(e, t, n) {
             );
         }
         null != s
-            ? (_.verbose("makeRequest: queueing request for ", t.url), s.queue.push(I.bind(null, e, t, r, a, n, i)))
-            : I(e, t, r, a, n, i);
+            ? (_.verbose("makeRequest: queueing request for ", t.url), s.queue.push(p.bind(null, e, t, r, a, n, i)))
+            : p(e, t, r, a, n, i);
     });
 }
-let S = T.bind(null, "get"),
-    N = T.bind(null, "post"),
-    C = T.bind(null, "put"),
-    O = T.bind(null, "patch"),
-    R = T.bind(null, "del"),
-    L = { get: S, post: N, put: C, patch: O, del: R };
+let N = S.bind(null, "get"),
+    C = S.bind(null, "post"),
+    O = S.bind(null, "put"),
+    R = S.bind(null, "patch"),
+    L = S.bind(null, "del"),
+    y = { get: N, post: C, put: O, patch: R, del: L };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });
-    ((S = e), (N = e), (C = e), (O = e), (R = e));
+    ((N = e), (C = e), (O = e), (R = e), (L = e));
 }
-function y() {
+function D() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? `/v${window.GLOBAL_ENV.API_VERSION}` : "");
 }
-let D = null;
-function b(e) {
-    D = e;
+let b = null;
+function v(e) {
+    b = e;
 }
-let v = () => Promise.resolve();
-function P(e) {
-    v = e;
+let P = () => Promise.resolve();
+function M(e) {
+    P = e;
 }
-let M = () => !0;
-function U(e) {
-    M = e;
+let U = () => !0;
+function w(e) {
+    U = e;
 }
-function w() {
-    return M();
+function G() {
+    return U();
 }

@@ -1,0 +1,13 @@
+e.exports = {
+    qr: "footer_Tek8Yo",
+    L$: "toggle_Tek8Yo",
+    OG: "trayReveal_Tek8Yo",
+    Fm: "tray_Tek8Yo",
+    ld: "items_Tek8Yo",
+    AS: "item_Tek8Yo",
+    Nr: "card_Tek8Yo",
+    qV: "skeleton_Tek8Yo",
+    Zl: "skeletonBar_Tek8Yo",
+    _0: "detail_Tek8Yo",
+    JW: "detailContent_Tek8Yo",
+};
