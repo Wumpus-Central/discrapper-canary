@@ -1,5 +1,5 @@
-i.r(p);
-let r = JSON.parse(
-    '{"rblVTR":["rblVTR"],"sv43VQ":["sv43VQ"],"JsnZTi":["JsnZTi"],"9IpDKy":["9IpDKy"],"zgcnBs":["zgcnBs"],"eZa6K/":["eZa6K/"],"zFqLyY":["zFqLyY"],"hoCbfL":["hoCbfL"],"bu24P7":["bu24P7"],"iWZqyl":["iWZqyl"],"j1KrK1":["j1KrK1"]}',
+o.r(r);
+let t = JSON.parse(
+    '{"rblVTR":["You\u2019re all set"],"sv43VQ":[[1,"premiumGroupProductName"]," Beta is wrapping up, and your plan has been canceled. All members will lose access to ",[1,"premiumGroupProductName"]," perks on ",[3,"endDate","long"],"."],"JsnZTi":["Cancel and get ",[2,"percent"],"% Off"],"9IpDKy":["Your first month of Nitro after your ",[1,"premiumGroupProductName"]," plan ends is ",[1,"discountedPrice"],". After that, it\u2019s ",[1,"regularPrice"]," a month."],"zgcnBs":["You\u2019ll get ",[2,"percent"],"% off your first month of Nitro after your ",[1,"premiumGroupProductName"]," plan ends. After that, it\u2019s ",[1,"regularPrice"]," a month."],"eZa6K/":["Get ",[2,"percent"],"% off Nitro"],"zFqLyY":["Get ",[2,"percent"],"% off 1 month of Nitro"],"hoCbfL":["The plan owner has canceled this plan. You have access to your perks until ",[3,"endDate","long"],". You can leave the plan to get ",[2,"percent"],"% off 1 month of Nitro. ",[8,"$link",["Learn more"],[[1,"helpCenterLink"]]],"."],"bu24P7":["Sign up for ",[2,"percent"],"% off Nitro"],"iWZqyl":["Thanks for being a part of ",[1,"premiumGroupProductName"],". Enjoy Nitro for ",[1,"discountedPrice"],"/month for 1 month. After that you\u2019ll be charged ",[1,"regularPrice"],"/month."],"j1KrK1":["Thanks for being part of ",[1,"premiumGroupProductName"],". Offer ends ",[3,"endDate","medium"],"."]}',
 );
-i.d(p, {}, { default: r });
+o.d(r, {}, { default: t });
