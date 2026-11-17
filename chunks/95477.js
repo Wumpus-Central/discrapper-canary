@@ -63,23 +63,19 @@ function D(e) {
         }
     return (0, i.jsx)("div", {
         className: L.icon,
-        children: (0, i.jsx)(t, { size: "md" === n ? "xs" : "xxs", color: o.A.colors.INPUT_ICON_DEFAULT }),
+        children: (0, i.jsx)(t, { size: "xs", color: o.A.colors.INPUT_ICON_DEFAULT }),
     });
 }
 function b(e) {
-    let { inputSize: t, onClick: n, disabled: r } = e,
-        { i18n: a } = (0, g.G9)();
+    let { onClick: t, disabled: n } = e,
+        { i18n: r } = (0, g.G9)();
     return (0, i.jsx)(u.D, {
         className: L.clearButton,
-        onClick: r ? void 0 : n,
-        "aria-label": a.TEXT_INPUT_CLEAR,
-        "aria-disabled": r,
-        tabIndex: r ? -1 : 0,
-        children: (0, i.jsx)(h.CircleXIcon, {
-            size: "md" === t ? "xs" : "xxs",
-            color: "currentColor",
-            "aria-hidden": !0,
-        }),
+        onClick: n ? void 0 : t,
+        "aria-label": r.TEXT_INPUT_CLEAR,
+        "aria-disabled": n,
+        tabIndex: n ? -1 : 0,
+        children: (0, i.jsx)(h.CircleXIcon, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
     });
 }
 function v(e) {
@@ -193,7 +189,6 @@ n.d(
                 ? (ee = (0, i.jsx)(P, { inputSize: C, isRevealed: z, disabled: t, onClick: () => q((e) => !e) }))
                 : et
                   ? (ee = (0, i.jsx)(b, {
-                        inputSize: C,
                         onClick: function (e) {
                             (null != k.onClear ? k.onClear(e) : k.onChange?.("", d),
                                 requestAnimationFrame(() => {

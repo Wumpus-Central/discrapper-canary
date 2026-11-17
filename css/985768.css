@@ -121,7 +121,7 @@
 }
 
 .defaultValue_p3RiOL .markValue_p3RiOL {
-    color: var(--text-feedback-positive)
+    color: var(--text-default)
 }
 
 .mini_p3RiOL,
@@ -156,7 +156,7 @@
 
 .mini_p3RiOL .defaultValue_p3RiOL .markValue_p3RiOL,
 .slider_p3RiOL .defaultValue_p3RiOL .markValue_p3RiOL {
-    color: var(--text-feedback-positive)
+    color: var(--text-default)
 }
 
 .mini_p3RiOL .markDash_p3RiOL,
@@ -240,4 +240,4 @@
     border-color: GrayText
 }
 
-/*# sourceMappingURL=985768.48a5dd2d2791f68e.css.map*/
+/*# sourceMappingURL=985768.511523e3c5f8b153.css.map*/

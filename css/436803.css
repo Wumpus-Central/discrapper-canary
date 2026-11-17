@@ -502,7 +502,7 @@
 }
 
 .defaultValue_OnqacX .markValue_OnqacX {
-    color: var(--text-feedback-positive)
+    color: var(--text-default)
 }
 
 .slider_OnqacX {
@@ -532,7 +532,7 @@
 }
 
 .slider_OnqacX .defaultValue_OnqacX .markValue_OnqacX {
-    color: var(--text-feedback-positive)
+    color: var(--text-default)
 }
 
 .slider_OnqacX .markDash_OnqacX {
@@ -1799,4 +1799,4 @@
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=436803.1392cc870c164675.css.map*/
+/*# sourceMappingURL=436803.b5384d3fc2544af0.css.map*/
