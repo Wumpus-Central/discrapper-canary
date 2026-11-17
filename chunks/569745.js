@@ -26,6 +26,7 @@ let s = new Set([
     a.BV.GUILD_DISCOVERY,
     a.BV.QUEST_HOME_DEPRECATED,
     a.BV.QUEST_HOME,
+    a.BV.QUEST_BAR_PREVIEW,
     a.BV.CONJURE,
     a.BV.CONJURE_PROJECT(":projectId"),
     a.BV.ICYMI,

@@ -1,19 +1,19 @@
 let n, r, i, o, _, s, l, I, a, A;
 var S,
     T,
-    O,
     R,
+    O,
     N,
     u,
     c,
     L,
     d,
     C,
-    g,
     p,
+    g,
     D = E(214958),
-    M = E.n(D);
-function P() {
+    P = E.n(D);
+function M() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -81,11 +81,11 @@ if (null != H) {
             os_arch: r,
             app_arch: o,
             system_locale: s,
-            has_client_mods: P(),
+            has_client_mods: M(),
             client_launch_id: U,
         }),
-        M().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = M().ua || ""), (i.browser_version = M().version || "")),
+        P().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = P().ua || ""), (i.browser_version = P().version || "")),
         "linux" === E)
     ) {
         let e = H.crashReporter.getMetadata();
@@ -216,7 +216,7 @@ if (null == i)
                     })()),
                     (t.device_model_name = ""),
                     (t.system_locale = m()),
-                    (t.has_client_mods = P()),
+                    (t.has_client_mods = M()),
                     (e = t),
                     n.set(w, e),
                     n.set($, 1));
@@ -234,7 +234,7 @@ if (null == i)
                 ...(function () {
                     let e = {
                             browser_user_agent: window.navigator.userAgent || "",
-                            browser_version: M().version || "",
+                            browser_version: P().version || "",
                         },
                         t = v();
                     if (null != t) {
@@ -248,7 +248,7 @@ if (null == i)
                             },
                         };
                     }
-                    return { ...e, os_version: M()?.os?.version ?? "" };
+                    return { ...e, os_version: P()?.os?.version ?? "" };
                 })(),
                 ...t,
                 ...E,
@@ -261,7 +261,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
         (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("675669", 10))) || (s.client_build_number = I),
+    isNaN((I = parseInt("675671", 10))) || (s.client_build_number = I),
     null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
@@ -269,7 +269,7 @@ if (null == i)
         } catch (e) {}
         return null;
     })()),
-    (s.has_client_mods = P()),
+    (s.has_client_mods = M()),
     (s.client_launch_id = U),
     null != (A = v()?.installSource) && (s.install_source = A),
     (function (e) {
@@ -700,51 +700,51 @@ function eI(e) {
           : { decryptedToken: e, wasEncrypted: !1 };
 }
 var ea =
-        (((O = {})[(O.DISPATCH = 0)] = "DISPATCH"),
-        (O[(O.HEARTBEAT = 1)] = "HEARTBEAT"),
-        (O[(O.IDENTIFY = 2)] = "IDENTIFY"),
-        (O[(O.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
-        (O[(O.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
-        (O[(O.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
-        (O[(O.RESUME = 6)] = "RESUME"),
-        (O[(O.RECONNECT = 7)] = "RECONNECT"),
-        (O[(O.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
-        (O[(O.INVALID_SESSION = 9)] = "INVALID_SESSION"),
-        (O[(O.HELLO = 10)] = "HELLO"),
-        (O[(O.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
-        (O[(O.CALL_CONNECT = 13)] = "CALL_CONNECT"),
-        (O[(O.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
-        (O[(O.STREAM_CREATE = 18)] = "STREAM_CREATE"),
-        (O[(O.STREAM_DELETE = 19)] = "STREAM_DELETE"),
-        (O[(O.STREAM_WATCH = 20)] = "STREAM_WATCH"),
-        (O[(O.STREAM_PING = 21)] = "STREAM_PING"),
-        (O[(O.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
-        (O[(O.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
-        (O[(O.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
-        (O[(O.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
-        (O[(O.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
-        (O[(O.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
-        (O[(O.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
-        (O[(O.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
-        (O[(O.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
-        (O[(O.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
-        (O[(O.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
-        (O[(O.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
-        (O[(O.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
-        (O[(O.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
-        O),
+        (((R = {})[(R.DISPATCH = 0)] = "DISPATCH"),
+        (R[(R.HEARTBEAT = 1)] = "HEARTBEAT"),
+        (R[(R.IDENTIFY = 2)] = "IDENTIFY"),
+        (R[(R.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
+        (R[(R.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
+        (R[(R.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
+        (R[(R.RESUME = 6)] = "RESUME"),
+        (R[(R.RECONNECT = 7)] = "RECONNECT"),
+        (R[(R.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
+        (R[(R.INVALID_SESSION = 9)] = "INVALID_SESSION"),
+        (R[(R.HELLO = 10)] = "HELLO"),
+        (R[(R.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
+        (R[(R.CALL_CONNECT = 13)] = "CALL_CONNECT"),
+        (R[(R.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
+        (R[(R.STREAM_CREATE = 18)] = "STREAM_CREATE"),
+        (R[(R.STREAM_DELETE = 19)] = "STREAM_DELETE"),
+        (R[(R.STREAM_WATCH = 20)] = "STREAM_WATCH"),
+        (R[(R.STREAM_PING = 21)] = "STREAM_PING"),
+        (R[(R.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
+        (R[(R.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
+        (R[(R.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
+        (R[(R.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
+        (R[(R.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
+        (R[(R.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
+        (R[(R.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
+        (R[(R.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
+        (R[(R.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
+        (R[(R.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
+        (R[(R.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
+        (R[(R.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
+        (R[(R.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
+        (R[(R.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
+        R),
     eA = E(377941),
     eS = E.n(eA),
     eT =
-        (((R = {}).ALL = "ALL"),
-        (R.AVATAR_DECORATION = "AVATAR_DECORATION"),
-        (R.PROFILE_EFFECT = "PROFILE_EFFECT"),
-        (R.NAMEPLATE = "NAMEPLATE"),
-        (R.PROFILE_FRAME = "PROFILE_FRAME"),
-        (R.BUNDLE = "BUNDLE"),
-        R),
-    eO = (((N = {}).ASC = "asc"), (N.DESC = "desc"), N),
-    eR =
+        (((O = {}).ALL = "ALL"),
+        (O.AVATAR_DECORATION = "AVATAR_DECORATION"),
+        (O.PROFILE_EFFECT = "PROFILE_EFFECT"),
+        (O.NAMEPLATE = "NAMEPLATE"),
+        (O.PROFILE_FRAME = "PROFILE_FRAME"),
+        (O.BUNDLE = "BUNDLE"),
+        O),
+    eR = (((N = {}).ASC = "asc"), (N.DESC = "desc"), N),
+    eO =
         (((u = {}).PRICE = "price"),
         (u.ALPHABETICAL = "alphabetical"),
         (u.RECENCY = "recency"),
@@ -784,16 +784,16 @@ var ea =
     eT.PROFILE_EFFECT,
     eT.PROFILE_FRAME,
     eT.BUNDLE,
-    eR.RELEVANCE,
-    eO.DESC,
-    eR.RECENCY,
-    eO.DESC,
-    eR.PRICE,
-    eO.ASC,
-    eR.PRICE,
-    eO.DESC,
-    eR.POPULARITY,
-    eO.DESC);
+    eO.RELEVANCE,
+    eR.DESC,
+    eO.RECENCY,
+    eR.DESC,
+    eO.PRICE,
+    eR.ASC,
+    eO.PRICE,
+    eR.DESC,
+    eO.POPULARITY,
+    eR.DESC);
 var ec = (((d = {}).ABOUT = "about"), (d.STORE = "store"), d),
     eL =
         (((C = {}).GENERAL = "general"),
@@ -903,6 +903,7 @@ let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             GLOBAL_DISCOVERY: "/discovery",
             QUEST_HOME_DEPRECATED: "/discovery/quests",
             QUEST_HOME: "/quest-home",
+            QUEST_BAR_PREVIEW: "/quest-bar-preview",
             CONJURE: "/conjure",
             CONJURE_PROJECT: (e) => `/conjure/${e}`,
             GLOBAL_DISCOVERY_SERVERS: "/discovery/servers",
@@ -993,29 +994,29 @@ let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
         }),
         [":", "?", "@"],
     ),
-    eg = new Set(
+    ep = new Set(
         Object.values(
-            (((g = {}).CONJURE = "conjuring"),
-            (g.CONJURE_PROJECT = "conjure"),
-            (g.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
-            (g.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
-            (g.GAME_SHOP = "game-shop"),
-            (g.GUILD_SHOP = "shop"),
-            (g.MEMBER_APPLICATIONS = "member-applications"),
-            (g.GUILD_HOME = "@home"),
-            (g.CHANNEL_BROWSER = "channel-browser"),
-            (g.GUILD_ONBOARDING = "onboarding"),
-            (g.CUSTOMIZE_COMMUNITY = "customize-community"),
-            (g.MEMBER_SAFETY = "member-safety"),
-            (g.GUILD_BOOSTS = "boosts"),
-            (g.GAME_SERVERS = "game-servers"),
-            (g.REPORT_TO_MOD = "report-to-mod"),
-            (g.GUILD_OFFICIAL_MESSAGES = "official-messages"),
-            (g.GUILD_SPACE = "guild-space"),
-            g),
+            (((p = {}).CONJURE = "conjuring"),
+            (p.CONJURE_PROJECT = "conjure"),
+            (p.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
+            (p.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
+            (p.GAME_SHOP = "game-shop"),
+            (p.GUILD_SHOP = "shop"),
+            (p.MEMBER_APPLICATIONS = "member-applications"),
+            (p.GUILD_HOME = "@home"),
+            (p.CHANNEL_BROWSER = "channel-browser"),
+            (p.GUILD_ONBOARDING = "onboarding"),
+            (p.CUSTOMIZE_COMMUNITY = "customize-community"),
+            (p.MEMBER_SAFETY = "member-safety"),
+            (p.GUILD_BOOSTS = "boosts"),
+            (p.GAME_SERVERS = "game-servers"),
+            (p.REPORT_TO_MOD = "report-to-mod"),
+            (p.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+            (p.GUILD_SPACE = "guild-space"),
+            p),
         ),
     );
-function ep(e, t) {
+function eg(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return new X(`:${eS()(e)}(${t})${E ? "?" : ""}`);
 }
@@ -1043,12 +1044,12 @@ function ep(e, t) {
 }),
     new Set(
         Object.values(
-            (((p = {}).GUILD_HOME = "home"),
-            (p.SERVER_GUIDE = "guide"),
-            (p.CHANNEL_BROWSER = "browse"),
-            (p.CUSTOMIZE_COMMUNITY = "customize"),
-            (p.LINKED_ROLES = "linked-roles"),
-            p),
+            (((g = {}).GUILD_HOME = "home"),
+            (g.SERVER_GUIDE = "guide"),
+            (g.CHANNEL_BROWSER = "browse"),
+            (g.CUSTOMIZE_COMMUNITY = "customize"),
+            (g.LINKED_ROLES = "linked-roles"),
+            g),
         ),
     ));
 let eD = {
@@ -1056,17 +1057,17 @@ let eD = {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             E = ed.map(eS()).join("|");
-        return ep(e, `${E}|\\d+`, { optional: t });
+        return eg(e, `${E}|\\d+`, { optional: t });
     },
     channelId() {
         let { name: e = "channelId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            E = [...eg].map(eS()).join("|");
-        return ep(e, `${E}|\\d+`, { optional: t });
+            E = [...ep].map(eS()).join("|");
+        return eg(e, `${E}|\\d+`, { optional: t });
     },
 };
-var eM = E(806163);
-let eP = new Set([
+var eP = E(806163);
+let eM = new Set([
     eC.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
     eC.APP_WITH_GIFT_CODE(":giftCode"),
     eC.APP,
@@ -1091,6 +1092,7 @@ let eP = new Set([
     eC.GUILD_DISCOVERY,
     eC.QUEST_HOME_DEPRECATED,
     eC.QUEST_HOME,
+    eC.QUEST_BAR_PREVIEW,
     eC.CONJURE,
     eC.CONJURE_PROJECT(":projectId"),
     eC.ICYMI,
@@ -1141,7 +1143,7 @@ let eP = new Set([
             (performance.mark("FastConnect-identify-handler-running"),
             (E.open = !0),
             !(function (e) {
-                for (let t of eP) if (null != (0, eM.B6)(e, { path: t })) return !0;
+                for (let t of eM) if (null != (0, eP.B6)(e, { path: t })) return !0;
                 return !1;
             })(window.location.pathname))
         )
