@@ -5,7 +5,7 @@ var i,
     l = n(107198),
     o = n(792996);
 let d = a.A.getArticleURL(s.MVz.PREMIUM_GROUP_ABOUT),
-    c = [s.Dmq.CANCELED, s.Dmq.PAUSED, s.Dmq.PAST_DUE, s.Dmq.ACCOUNT_HOLD, s.Dmq.BILLING_RETRY];
+    c = [s.Dmq.PAUSED, s.Dmq.PAST_DUE, s.Dmq.ACCOUNT_HOLD, s.Dmq.BILLING_RETRY];
 var u =
         (((i = {}).UNKNOWN = "UNKNOWN"),
         (i.FETCHING = "FETCHING"),
