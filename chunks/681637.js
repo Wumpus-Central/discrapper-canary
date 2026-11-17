@@ -10,10 +10,9 @@ var i = n(607399),
     _ = n(645619),
     E = n(772788),
     A = n(383272),
-    f = n(414133),
-    h = n(363487),
-    I = n(342220);
-class p extends a.A {
+    f = n(363487),
+    h = n(342220);
+class I extends a.A {
     handleSelectedGuildChange() {
         let e = c.A.getGuildId();
         if (null == e || (0, s.ai)(e)) return;
@@ -23,17 +22,11 @@ class p extends a.A {
                 (l.x1.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
                 A.g$.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
                 E.K.getConfig({ guildId: t.id, location: "GuildPowerupsManager" }),
-                !(0, h.G)(d.A, t))
+                !(0, f.G)(d.A, t))
             ) {
-                let t = (0, I.X)(),
-                    n =
-                        i.Fr &&
-                        (0, A.Qs)(e, "GuildPowerupsManager") &&
-                        !(0, A.Ov)(e, "GuildPowerupsManager") &&
-                        (0, I.X)() &&
-                        (0, f.ht)("GuildPowerupsManager"),
-                    r = i.Fr && (0, I.X)();
-                if (!(i.Fr ? n || r : t)) return;
+                let e = (0, h.X)(),
+                    t = i.Fr && (0, h.X)();
+                if (!(i.Fr ? t : e)) return;
             }
             (_.A.shouldFetchCatalogForGuild(e) && (0, u.AK)(e), _.A.shouldFetchPowerupsForGuild(e) && (0, u.Xd)(e));
         }
@@ -47,7 +40,7 @@ class p extends a.A {
         this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
-        !0 === (0, h.G)(d.A, o.A.getGuild(e)) && ((0, u.Xd)(e), (0, r.VU)(e, { includeEnded: !0 }));
+        !0 === (0, f.G)(d.A, o.A.getGuild(e)) && ((0, u.Xd)(e), (0, r.VU)(e, { includeEnded: !0 }));
     }
     stores = new Map().set(c.A, this.handleSelectedGuildChange);
     actions = {
@@ -56,5 +49,5 @@ class p extends a.A {
         GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this),
     };
 }
-let m = new p();
-n.d(t, {}, { A: m });
+let p = new I();
+n.d(t, {}, { A: p });

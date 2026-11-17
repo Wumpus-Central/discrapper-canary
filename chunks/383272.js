@@ -41,13 +41,6 @@ n.d(
                 null != e,
             ).rollbackEnabled;
         },
-        Qs: function (e, t) {
-            return s(
-                a.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }),
-                null != e ? r.K.getConfig({ guildId: e, location: t }) : r.K.definition.defaultConfig,
-                null != e,
-            ).enabled;
-        },
         g$: a,
         lY: function (e, t) {
             return s(

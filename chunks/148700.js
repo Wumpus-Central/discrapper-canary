@@ -1,15 +1,14 @@
 n.d(t, {
-    K8: () => q,
-    YX: () => Q,
-    Gw: () => ee,
-    Mr: () => et,
-    jz: () => J,
+    K8: () => J,
+    YX: () => q,
+    Gw: () => Z,
+    Mr: () => Q,
+    jz: () => X,
     mn: () => $,
-    HW: () => K,
-    bo: () => X,
+    HW: () => W,
+    bo: () => Y,
     UB: () => z,
-    lw: () => Y,
-    Gz: () => Z,
+    lw: () => K,
 });
 var l = n(477900),
     i = n(582128),
@@ -65,11 +64,9 @@ var L = n(742534),
     k = n(792996),
     B = n(105518),
     F = n(120336);
-let W =
-    "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png";
-function K(e) {
+function W(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: s } = e;
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         asset: (0, l.jsx)(G.b, { className: r()(F.Sl, F.SV) }),
         title: k.intl.formatToPlainString(H.default["Zg/m9K"], { perkName: n.title }),
         body: k.intl.formatToPlainString(H.default["1EGXSK"], { perkName: n.title }),
@@ -108,7 +105,7 @@ function z(e) {
         onRequestClose: () => n?.(w.i.USER_DISMISS),
     });
 }
-function Y(e) {
+function K(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         a = (0, o.bG)([N.A], () => N.A.getGuild(t)?.name),
         { onActivate: d, isLoading: c, error: u } = (0, L.A)(t, n[0]),
@@ -125,7 +122,7 @@ function Y(e) {
                   ? k.intl.formatToPlainString(H.default.wcQOqC, { perks: `${n[0].title} & ${n[1].title}` })
                   : k.intl.formatToPlainString(H.default.ZF8NT6, { perk: n[0].title }),
         A = 1 === n.length;
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         size: 1 === n.length ? "video" : "lg",
         asset:
             n.length > 1
@@ -147,13 +144,15 @@ function Y(e) {
         markAsDismissed: s,
     });
 }
-function X(e) {
+function Y(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         r = n.find((e) => e.skuId === a.d0),
-        o = (0, S.A)(r, !0) ?? W,
+        o =
+            (0, S.A)(r, !0) ??
+            "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png",
         d = n.find((e) => e.skuId === a.FB);
     if (null != r)
-        return (0, l.jsx)(en, {
+        return (0, l.jsx)(ee, {
             targetElementRef: i,
             title: r.title,
             body: "string" == typeof r.description ? r.description : "",
@@ -171,7 +170,7 @@ function X(e) {
             markAsDismissed: s,
         });
     if (null != d)
-        return (0, l.jsx)(en, {
+        return (0, l.jsx)(ee, {
             targetElementRef: i,
             title: k.intl.string(H.default.Ygpx4Q),
             body: k.intl.string(H.default.mmNkUA),
@@ -190,7 +189,7 @@ function X(e) {
         });
     let c = n.find((e) => D.m_.has(e.skuId));
     if (null != c)
-        return (0, l.jsx)(en, {
+        return (0, l.jsx)(ee, {
             targetElementRef: i,
             title: k.intl.string(H.default["kA2c+n"]),
             body: k.intl.string(H.default.TUilLj),
@@ -212,7 +211,7 @@ function X(e) {
         });
     let u = n.find((e) => D.aH.has(e.skuId));
     if (null != u)
-        return (0, l.jsx)(en, {
+        return (0, l.jsx)(ee, {
             targetElementRef: i,
             title: k.intl.string(H.default["kA2c+n"]),
             body: k.intl.string(H.default.TUilLj),
@@ -234,7 +233,7 @@ function X(e) {
         });
     let h = n.find((e) => e.skuId === a.zY);
     return null != h
-        ? (0, l.jsx)(en, {
+        ? (0, l.jsx)(ee, {
               targetElementRef: i,
               title: k.intl.string(H.default.rp0Ff1),
               body: k.intl.string(H.default["3L/DZq"]),
@@ -257,12 +256,12 @@ function X(e) {
           })
         : null;
 }
-function J(e) {
+function X(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: s } = e,
         { available: r } = (0, b.A)(t),
         { gameName: a, gameName2: d } = (0, f.A)(),
         c = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         size: "video",
         targetElementRef: s,
         asset: (0, l.jsx)(h.E, {
@@ -289,7 +288,7 @@ function J(e) {
 function $(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         s = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         size: "video",
         targetElementRef: i,
         asset: (0, l.jsx)(h.E, {
@@ -312,11 +311,11 @@ function $(e) {
         markAsDismissed: n,
     });
 }
-function q(e) {
+function J(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         { gameName: s, gameName2: r } = (0, f.A)(),
         a = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         size: "video",
         targetElementRef: i,
         position: "bottom",
@@ -348,49 +347,10 @@ function q(e) {
         markAsDismissed: n,
     });
 }
-function Z(e) {
-    let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
-        s = (0, o.bG)([I.A], () => I.A.getStateForGuild(t)?.allPowerups[a.d0]),
-        r = (0, S.A)(s, !0) ?? W,
-        { available: d } = (0, b.A)(t),
-        c = 3 - d,
-        { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER);
-    return (0, l.jsx)(en, {
-        size: "video",
-        targetElementRef: i,
-        position: "bottom",
-        align: "center",
-        alignmentStrategy: "edge",
-        caretConfig: { align: "center" },
-        asset: (0, l.jsx)("img", { alt: "", src: r, className: F.Sl }),
-        title: k.intl.string(H.default.RK6NbY),
-        body: k.intl.string(H.default.xlAqGk),
-        actions: [
-            {
-                text: k.intl.string(k.t.oPAx73),
-                variant: "primary",
-                onClick: async () => {
-                    let e = N.A.getGuild(t);
-                    if (null == e) return;
-                    let l = { page: O.liQ.GUILD_CHANNEL, section: O.JJy.GUILD_HEADER };
-                    (await (0, E.g)({
-                        guild: e,
-                        numberOfBoostsToAdd: c,
-                        analyticsLocation: l,
-                        analyticsLocations: u,
-                        intent: D.Pn.PERK,
-                    }),
-                        n(w.i.TAKE_ACTION));
-                },
-            },
-        ],
-        markAsDismissed: n,
-    });
-}
-function Q(e) {
+function q(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e,
         r = (0, j.A)(t);
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         targetElementRef: i,
         ...s,
         asset: (0, l.jsx)(p.default, { gameId: V.Yh.FEATURED_GAME_ID }),
@@ -420,7 +380,7 @@ function Q(e) {
         markAsDismissed: n,
     });
 }
-function ee(e) {
+function Z(e) {
     let { guildId: t, powerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
         { available: o } = (0, b.A)(t),
         d = n.cost - o,
@@ -428,7 +388,7 @@ function ee(e) {
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
         h = (0, j.A)(t),
         m = i.useRef(null);
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         asset:
             n.type === D.o9.LEVEL
                 ? (0, l.jsx)(T, { powerup: n, eventTargetRef: m, className: F.Lj })
@@ -462,7 +422,7 @@ function ee(e) {
         ...a,
     });
 }
-function et(e) {
+function Q(e) {
     let { guildId: t, featuredExpiringPowerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
         d = (0, o.bG)([I.A], () => I.A.getStateForGuild(t)),
         { analyticsLocations: c } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
@@ -476,7 +436,7 @@ function et(e) {
             : k.intl.formatToPlainString(H.default.gG8bI8, { perkName: n.name }),
         _ = 0 === n.daysUntilExpiry ? H.default.BNS5zl : H.default["Xla/TL"],
         b = k.intl.formatToPlainString(_, { boostCount: n.numExpiringBoosts, days: n.daysUntilExpiry });
-    return (0, l.jsx)(en, {
+    return (0, l.jsx)(ee, {
         size: n.isGameServer ? "video" : void 0,
         asset: n.isGameServer
             ? (0, l.jsx)(h.E, {
@@ -514,7 +474,7 @@ function et(e) {
         ...a,
     });
 }
-function en(e) {
+function ee(e) {
     let {
         caretConfig: t = { align: "start" },
         position: n = "right",
