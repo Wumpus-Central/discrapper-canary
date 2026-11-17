@@ -9,8 +9,8 @@ var n = l(477900),
     d = l(192308),
     u = l(673383),
     m = l(331322),
-    g = l(534514),
-    f = l(834730),
+    f = l(534514),
+    g = l(834730),
     h = l(682163),
     x = l(792996),
     p = l(393612);
@@ -30,7 +30,7 @@ function b(e) {
                     gap: 4,
                     className: p.pq,
                     children: [
-                        (0, n.jsx)(f.E, {
+                        (0, n.jsx)(g.E, {
                             variant: "body-lg/semibold",
                             color: "text-strong",
                             lineClamp: 1,
@@ -50,7 +50,7 @@ function b(e) {
                                           fullWidth: !1,
                                           children: [
                                               (0, n.jsx)("span", { className: p.RS }),
-                                              (0, n.jsx)(f.E, {
+                                              (0, n.jsx)(g.E, {
                                                   variant: "body-md/medium",
                                                   color: "text-muted",
                                                   children: x.intl.formatToPlainString(x.t["LC+S+m"], {
@@ -68,7 +68,7 @@ function b(e) {
                                           fullWidth: !1,
                                           children: [
                                               (0, n.jsx)("span", { className: p.Ps }),
-                                              (0, n.jsx)(f.E, {
+                                              (0, n.jsx)(g.E, {
                                                   variant: "body-md/medium",
                                                   color: "text-muted",
                                                   children: x.intl.formatToPlainString(x.t.zRl6XR, { count: o }),
@@ -98,7 +98,7 @@ let E = [
     { key: "guild-invite", getText: (e) => x.intl.formatToPlainString(P.default["hn+Lsg"], { noun: e }) },
 ];
 var M = l(561193);
-let C = {
+let k = {
         "auto-sync": function (e) {
             let { alt: t, ariaLabel: l, ariaHidden: r, role: a, width: s, height: o, className: c, style: d } = e,
                 u = i.useMemo(
@@ -148,9 +148,9 @@ let C = {
             });
         },
     },
-    z = E.map((e) => ({ ...e, Asset: C[e.key] })),
-    B = { top: -4, right: 4, bottom: -4, left: 20 };
-function k(e) {
+    C = E.map((e) => ({ ...e, Asset: k[e.key] })),
+    z = { top: -4, right: 4, bottom: -4, left: 20 };
+function B(e) {
     let { noun: t } = e,
         l = i.useRef(null),
         r = i.useRef([]),
@@ -158,7 +158,7 @@ function k(e) {
         s = i.useRef(null),
         o = i.useRef(void 0),
         [c, d] = i.useState(0),
-        [u, g] = i.useState("idle");
+        [u, f] = i.useState("idle");
     function h(e, t) {
         let l = r.current[0],
             n = r.current[t];
@@ -168,7 +168,7 @@ function k(e) {
         let t = 0,
             l = 1 / 0;
         return (
-            z.forEach((n, i) => {
+            C.forEach((n, i) => {
                 let r = h(e, i);
                 if (null == r) return;
                 let a = Math.abs(r - e.scrollLeft);
@@ -178,7 +178,7 @@ function k(e) {
         );
     }
     function b() {
-        (window.clearTimeout(o.current), (s.current = null), g("idle"));
+        (window.clearTimeout(o.current), (s.current = null), f("idle"));
     }
     return (
         i.useEffect(() => () => window.clearTimeout(o.current), []),
@@ -186,7 +186,7 @@ function k(e) {
             gap: 16,
             children: [
                 (0, n.jsx)(S.vN, {
-                    offset: B,
+                    offset: z,
                     children: (0, n.jsx)(T.zC, {
                         ref: l,
                         orientation: "horizontal",
@@ -211,7 +211,7 @@ function k(e) {
                                     startIndex: p(t),
                                 }),
                                 b(),
-                                g("dragging"));
+                                f("dragging"));
                         },
                         onPointerMove: function (e) {
                             let t = a.current,
@@ -229,11 +229,11 @@ function k(e) {
                                 r = n.scrollLeft - t.startScrollLeft;
                             i === t.startIndex &&
                                 Math.abs(r) > 40 &&
-                                (i = Math.min(Math.max(i + Math.sign(r), 0), z.length - 1));
+                                (i = Math.min(Math.max(i + Math.sign(r), 0), C.length - 1));
                             let c = h(n, i);
                             null == c || 1 > Math.abs(n.scrollLeft - c)
-                                ? g("idle")
-                                : ((0, N.flushSync)(() => g("settling")),
+                                ? f("idle")
+                                : ((0, N.flushSync)(() => f("settling")),
                                   (s.current = c),
                                   (o.current = window.setTimeout(b, 1e3)),
                                   n.scrollTo({ left: c }));
@@ -241,7 +241,7 @@ function k(e) {
                         onDragStart: (e) => e.preventDefault(),
                         children: (0, n.jsx)("ul", {
                             className: M.kR,
-                            children: z.map((e, l) => {
+                            children: C.map((e, l) => {
                                 let { key: i, getText: a, Asset: s } = e;
                                 return (0, n.jsxs)(
                                     "li",
@@ -252,7 +252,7 @@ function k(e) {
                                         className: M.Nr,
                                         children: [
                                             (0, n.jsx)(s, { alt: "", ariaHidden: !0, width: "100%" }),
-                                            (0, n.jsx)(f.E, {
+                                            (0, n.jsx)(g.E, {
                                                 variant: "body-sm/medium",
                                                 color: "text-subtle",
                                                 children: a(t),
@@ -267,7 +267,7 @@ function k(e) {
                 }),
                 (0, n.jsx)("div", {
                     className: M.r$,
-                    children: z.map((e, t) => {
+                    children: C.map((e, t) => {
                         let { key: i } = e;
                         return (0, n.jsx)(
                             I.D,
@@ -291,8 +291,8 @@ function k(e) {
         })
     );
 }
-var w = l(785952);
-function A(e) {
+var A = l(785952);
+function w(e) {
     let { invite: t } = e;
     return (0, n.jsxs)(m.B, {
         gap: 32,
@@ -301,10 +301,10 @@ function A(e) {
                 gap: 24,
                 align: "center",
                 children: [
-                    (0, n.jsx)(g.D, {
+                    (0, n.jsx)(f.D, {
                         variant: "heading-md/semibold",
                         color: "text-subtle",
-                        className: w.G,
+                        className: A.G,
                         children: x.intl.formatToPlainString(P.default.WmxMAI, {
                             displayNoun: t.displayNoun ?? "other",
                         }),
@@ -315,12 +315,12 @@ function A(e) {
             (0, n.jsxs)(m.B, {
                 gap: 16,
                 children: [
-                    (0, n.jsx)(g.D, {
+                    (0, n.jsx)(f.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
                         children: x.intl.string(P.default.yFqGy8),
                     }),
-                    (0, n.jsx)(k, { noun: (0, s.A)({ displayNoun: t.displayNoun, lowercase: !0 }) }),
+                    (0, n.jsx)(B, { noun: (0, s.A)({ displayNoun: t.displayNoun, lowercase: !0 }) }),
                 ],
             }),
         ],
@@ -331,23 +331,23 @@ var L = l(646514),
     D = l(189367),
     R = l(695366),
     _ = l(289873),
-    G = l(378763),
+    G = l(892672),
     X = l(532049);
-function H(e) {
+function U(e) {
     let { id: t, text: l, eligible: i } = e;
     return i
-        ? (0, n.jsx)(f.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-subtle", children: l })
+        ? (0, n.jsx)(g.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-subtle", children: l })
         : (0, n.jsxs)(m.B, {
               direction: "horizontal",
               align: "center",
               gap: 4,
               children: [
                   (0, n.jsx)(R.CircleErrorIcon, { size: "xs", color: L.A.colors.ICON_MUTED, "aria-hidden": !0 }),
-                  (0, n.jsx)(f.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-muted", children: l }),
+                  (0, n.jsx)(g.E, { id: t, tag: "span", variant: "body-sm/medium", color: "text-muted", children: l }),
               ],
           });
 }
-let U = i.memo(function (e) {
+let H = i.memo(function (e) {
     let { character: t, noun: l } = e,
         r = i.useId(),
         a = i.useId(),
@@ -367,19 +367,19 @@ let U = i.memo(function (e) {
                 ref: s,
                 className: X.Nr,
                 children: [
-                    (0, n.jsx)(G.A, { iconUrl: t.iconUrl, size: 48, className: X.Vw }),
+                    (0, n.jsx)(G.A, { iconUrl: t.iconUrl, size: 48, fallback: "character" }),
                     (0, n.jsxs)(m.B, {
                         gap: 4,
                         className: X.WD,
                         children: [
-                            (0, n.jsx)(f.E, {
+                            (0, n.jsx)(g.E, {
                                 id: r,
                                 tag: "span",
                                 variant: "body-md/semibold",
                                 color: o ? "text-muted" : "text-strong",
                                 children: t.name,
                             }),
-                            null != c ? (0, n.jsx)(H, { id: a, text: c, eligible: t.eligible }) : null,
+                            null != c ? (0, n.jsx)(U, { id: a, text: c, eligible: t.eligible }) : null,
                         ],
                     }),
                 ],
@@ -387,7 +387,7 @@ let U = i.memo(function (e) {
         }),
     });
 });
-function V(e) {
+function O(e) {
     let { characters: t, selectedCharacterId: l, onSelect: r, noun: a } = e,
         s = i.useId(),
         o = i.useMemo(() => (null != t ? [...t].sort((e, t) => Number(t.eligible) - Number(e.eligible)) : null), [t]);
@@ -396,7 +396,7 @@ function V(e) {
     return (0, n.jsxs)(m.B, {
         gap: 12,
         children: [
-            (0, n.jsx)(f.E, {
+            (0, n.jsx)(g.E, {
                 id: s,
                 variant: "body-md/medium",
                 color: "text-subtle",
@@ -408,10 +408,10 @@ function V(e) {
                 value: l,
                 onChange: r,
                 className: X.kR,
-                children: o.map((e) => (0, n.jsx)(U, { character: e, noun: a }, e.id)),
+                children: o.map((e) => (0, n.jsx)(H, { character: e, noun: a }, e.id)),
             }),
             c
-                ? (0, n.jsx)(f.E, {
+                ? (0, n.jsx)(g.E, {
                       variant: "body-sm/medium",
                       color: "text-subtle",
                       children: x.intl.formatToPlainString(P.default.ybJIQJ, { noun: a }),
@@ -420,7 +420,7 @@ function V(e) {
         ],
     });
 }
-var O = l(171153);
+var V = l(171153);
 function K(e) {
     let { invite: t, noun: l, isMultiCharacter: i, characters: r, selectedCharacterId: a, onSelectCharacter: s } = e,
         { organization: o, application: c } = t,
@@ -432,11 +432,11 @@ function K(e) {
                 gap: 16,
                 align: "center",
                 children: [
-                    (0, n.jsx)(G.A, { iconUrl: o.iconUrl, size: 64, className: O.H }),
-                    (0, n.jsx)(g.D, {
+                    (0, n.jsx)(G.A, { iconUrl: o.iconUrl, size: 64, fallback: "guild" }),
+                    (0, n.jsx)(f.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        className: O.G,
+                        className: V.G,
                         children: x.intl.formatToPlainString(P.default["bfJ/sO"], {
                             noun: l,
                             orgName: o.name,
@@ -451,7 +451,7 @@ function K(e) {
                               fullWidth: !1,
                               children: [
                                   (0, n.jsx)(W.GroupIcon, { size: "xs", color: L.A.colors.ICON_MUTED }),
-                                  (0, n.jsx)(f.E, {
+                                  (0, n.jsx)(g.E, {
                                       variant: "body-md/medium",
                                       color: "text-default",
                                       children: x.intl.formatToPlainString(P.default.VuENGl, { count: d, max: u }),
@@ -461,29 +461,29 @@ function K(e) {
                         : null,
                 ],
             }),
-            i ? (0, n.jsx)(V, { characters: r, selectedCharacterId: a, onSelect: s, noun: l }) : null,
+            i ? (0, n.jsx)(O, { characters: r, selectedCharacterId: a, onSelect: s, noun: l }) : null,
         ],
     });
 }
 let J = ["VIEW", "ACCEPT"];
 function Z(e) {
     let { code: t, ...m } = e,
-        g = (0, c.A)(t),
-        [f, h] = i.useState("VIEW"),
-        p = g?.characterMode === u.Wy.MULTI,
+        f = (0, c.A)(t),
+        [g, h] = i.useState("VIEW"),
+        p = f?.characterMode === u.Wy.MULTI,
         { data: b } = (0, o.P)(p ? t : null),
         [j, y] = i.useState(null),
         N = b?.find((e) => e.id === j) ?? null,
         [v, S] = i.useState(!1);
-    if (null == g) return null;
-    let T = (0, s.A)({ displayNoun: g.displayNoun, lowercase: !0 }),
-        I = x.intl.formatToPlainString(P.default["jKi+kc"], { noun: (0, s.A)({ displayNoun: g.displayNoun }) }),
+    if (null == f) return null;
+    let T = (0, s.A)({ displayNoun: f.displayNoun, lowercase: !0 }),
+        I = x.intl.formatToPlainString(P.default["jKi+kc"], { noun: (0, s.A)({ displayNoun: f.displayNoun }) }),
         E = [
             {
                 stepKey: "VIEW",
                 modalProps: { title: I },
                 body: (0, n.jsx)(K, {
-                    invite: g,
+                    invite: f,
                     noun: T,
                     isMultiCharacter: p,
                     characters: b,
@@ -496,7 +496,7 @@ function Z(e) {
             {
                 stepKey: "ACCEPT",
                 modalProps: { title: I },
-                body: (0, n.jsx)(A, { invite: g }),
+                body: (0, n.jsx)(w, { invite: f }),
                 nextButtonProps: { text: x.intl.string(P.default.BaZ6nt) },
                 onNext: async function () {
                     let e = p ? N : null;
@@ -526,5 +526,5 @@ function Z(e) {
                 backButtonProps: { text: x.intl.string(x.t["13/7kX"]), disabled: v },
             },
         ];
-    return (0, n.jsx)(r.t, { ...m, dismissable: !v, steps: E, currentStepKey: f, numberedSteps: J, onStepChange: h });
+    return (0, n.jsx)(r.t, { ...m, dismissable: !v, steps: E, currentStepKey: g, numberedSteps: J, onStepChange: h });
 }

@@ -2,11 +2,11 @@ t.d(n, { default: () => C });
 var a = t(477900),
     l = t(582128),
     i = t(189213),
-    r = t(331322),
-    s = t(534514),
+    s = t(331322),
+    r = t(534514),
     o = t(834730),
-    c = t(289873),
-    u = t(427262),
+    u = t(289873),
+    c = t(427262),
     d = t(855986),
     m = t(287809),
     g = t(145890);
@@ -16,41 +16,41 @@ var p = t(841459),
     h = t(149164),
     f = t(646514),
     j = t(177953),
-    v = t(235876),
-    b = t(855755),
+    b = t(235876),
+    v = t(855755),
+    A = t(892672),
     N = t(75095),
-    A = t(172799),
-    I = t(752222),
+    I = t(172799),
+    k = t(752222),
     y = t(792996),
-    E = t(428314),
-    k = t(598414);
-let z = l.memo(function (e) {
+    z = t(428314);
+let E = l.memo(function (e) {
     let { organization: n, userId: t, onInvite: i } = e,
-        s = l.useId(),
-        c = (0, g.A)((0, g.e)(n)),
-        u = (0, v.i)((e) => e[c]?.[t] ?? null),
+        r = l.useId(),
+        u = (0, g.A)((0, g.e)(n)),
+        c = (0, b.i)((e) => e[u]?.[t] ?? null),
         d = l.useCallback(() => i(n), [i, n]),
-        m = (0, b.A)(u === A.iu.SENT),
+        m = (0, v.A)(c === I.iu.SENT),
         { memberCount: p, maxMembers: x } = n;
     return (0, a.jsxs)("div", {
         ref: m,
         tabIndex: -1,
-        className: E.nM,
+        className: z.nM,
         children: [
-            (0, a.jsx)("img", { src: n.iconUrl ?? k, alt: "", className: E.HE }),
-            (0, a.jsxs)(r.B, {
+            (0, a.jsx)(A.A, { iconUrl: n.iconUrl, size: 40, fallback: "guild" }),
+            (0, a.jsxs)(s.B, {
                 gap: 0,
-                className: E.qg,
+                className: z.qg,
                 children: [
                     (0, a.jsx)(o.E, {
-                        id: s,
+                        id: r,
                         variant: "body-md/medium",
                         color: "text-strong",
                         lineClamp: 1,
                         children: n.name,
                     }),
                     null != p && null != x
-                        ? (0, a.jsxs)(r.B, {
+                        ? (0, a.jsxs)(s.B, {
                               direction: "horizontal",
                               gap: 4,
                               align: "center",
@@ -59,37 +59,37 @@ let z = l.memo(function (e) {
                                   (0, a.jsx)(o.E, {
                                       variant: "body-xs/normal",
                                       color: "text-subtle",
-                                      children: y.intl.formatToPlainString(I.default.VuENGl, { count: p, max: x }),
+                                      children: y.intl.formatToPlainString(k.default.VuENGl, { count: p, max: x }),
                                   }),
                               ],
                           })
                         : null,
                 ],
             }),
-            (0, a.jsx)(N.A, { sendState: u, onInvite: d, nameId: s }),
+            (0, a.jsx)(N.A, { sendState: c, onInvite: d, nameId: r }),
         ],
     });
 });
 function B(e) {
     let { group: n, userId: t, onInvite: l } = e,
         { application: i } = n;
-    return (0, a.jsxs)(r.B, {
+    return (0, a.jsxs)(s.B, {
         gap: 8,
         children: [
-            (0, a.jsxs)(r.B, {
+            (0, a.jsxs)(s.B, {
                 direction: "horizontal",
                 gap: 4,
                 align: "center",
                 children: [
-                    (0, a.jsx)("img", { src: i.iconUrl ?? k, alt: "", className: E.Gt }),
-                    (0, a.jsx)(s.D, { variant: "body-sm/medium", color: "text-subtle", children: i.name }),
+                    (0, a.jsx)("img", { src: i.iconUrl ?? "/assets/61b811529d456f5f.svg", alt: "", className: z.Gt }),
+                    (0, a.jsx)(r.D, { variant: "body-sm/medium", color: "text-subtle", children: i.name }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: E.Nr,
+                className: z.Nr,
                 children: n.gameOrganizations.map((e) => {
                     let { organization: n } = e;
-                    return (0, a.jsx)(z, { organization: n, userId: t, onInvite: l }, n.id);
+                    return (0, a.jsx)(E, { organization: n, userId: t, onInvite: l }, n.id);
                 }),
             }),
         ],
@@ -97,12 +97,12 @@ function B(e) {
 }
 function C(e) {
     let n,
-        { userId: t, ...s } = e,
+        { userId: t, ...r } = e,
         {
             user: f,
             groups: j,
-            error: v,
-            handleInvite: b,
+            error: b,
+            handleInvite: v,
         } = (function (e) {
             let n = (0, d.bG)([m.default], () => m.default.getUser(e)),
                 { data: t, error: a } = (0, h.A)("game_organization_invite_picker"),
@@ -125,7 +125,7 @@ function C(e) {
                             : null,
                     [t],
                 ),
-                r = l.useCallback(
+                s = l.useCallback(
                     (e) => {
                         if (null == n) return;
                         let t = (0, g.e)(e);
@@ -133,34 +133,34 @@ function C(e) {
                     },
                     [n],
                 );
-            return { user: n, groups: i, error: a, handleInvite: r };
+            return { user: n, groups: i, error: a, handleInvite: s };
         })(t);
     return (
         (n =
             null == j
-                ? null != v
+                ? null != b
                     ? (0, a.jsx)(o.E, {
                           variant: "body-sm/medium",
                           color: "text-muted",
-                          className: E.h5,
+                          className: z.h5,
                           children: y.intl.string(y.t.fEptJP),
                       })
-                    : (0, a.jsx)(c.y, { className: E.h5 })
+                    : (0, a.jsx)(u.y, { className: z.h5 })
                 : 0 === j.length
                   ? (0, a.jsx)(o.E, {
                         variant: "body-sm/medium",
                         color: "text-muted",
-                        className: E.h5,
-                        children: y.intl.string(I.default.v7A3HG),
+                        className: z.h5,
+                        children: y.intl.string(k.default.v7A3HG),
                     })
-                  : (0, a.jsx)(r.B, {
+                  : (0, a.jsx)(s.B, {
                         gap: 24,
-                        children: j.map((e) => (0, a.jsx)(B, { group: e, userId: t, onInvite: b }, e.application.id)),
+                        children: j.map((e) => (0, a.jsx)(B, { group: e, userId: t, onInvite: v }, e.application.id)),
                     })),
         (0, a.jsx)(i.a, {
-            ...s,
-            title: y.intl.string(I.default["wkSug+"]),
-            subtitle: y.intl.formatToPlainString(I.default.txHfjn, { username: u.Ay.getName(f) ?? "", days: 7 }),
+            ...r,
+            title: y.intl.string(k.default["wkSug+"]),
+            subtitle: y.intl.formatToPlainString(k.default.txHfjn, { username: c.Ay.getName(f) ?? "", days: 7 }),
             actions: [],
             children: n,
         })

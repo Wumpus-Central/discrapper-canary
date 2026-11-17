@@ -35,12 +35,13 @@ function N(e) {
                 (e = t.id),
                 void (0, g.mM)(async () => {
                     let { default: t } = await Promise.all([
+                        n.e(672402),
                         n.e(740775),
-                        n.e(787139),
+                        n.e(229657),
                         n.e(635864),
                         n.e(248988),
-                        n.e(611281),
-                    ]).then(n.bind(n, 53416));
+                        n.e(184761),
+                    ]).then(n.bind(n, 739103));
                     return (n) => (0, a.jsx)(t, { userId: e, ...n });
                 })
             );

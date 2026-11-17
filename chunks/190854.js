@@ -1846,11 +1846,11 @@ var iB = n(345942),
     iV = n(372058),
     iF = n(124077),
     iY = n(752222),
-    iz = n(591022),
-    iK = n(673383),
-    iW = n(222951),
-    iJ = n(276228),
-    iZ = n(598414);
+    iz = n(892672),
+    iK = n(591022),
+    iW = n(673383),
+    iJ = n(222951),
+    iZ = n(276228);
 function iX() {
     let e = r.useId();
     return (0, s.jsxs)(iU.A, {
@@ -1907,7 +1907,7 @@ function iq(e) {
         b = (0, u.bG)([iH.A], () => iH.A.isJoinFlowPending(d));
     return (0, s.jsx)(iP.h, {
         color: "purple",
-        className: iJ.Nr,
+        className: iZ.Nr,
         role: "group",
         "aria-labelledby": i,
         children: (0, s.jsxs)(iD.B, {
@@ -1924,10 +1924,10 @@ function iq(e) {
                     align: "center",
                     gap: 12,
                     children: [
-                        (0, s.jsx)("img", { src: c.iconUrl ?? iZ, alt: "", className: iJ.HE }),
+                        (0, s.jsx)(iz.A, { iconUrl: c.iconUrl, size: 64, fallback: "guild" }),
                         (0, s.jsxs)(iD.B, {
                             gap: 4,
-                            className: iJ.Ky,
+                            className: iZ.Ky,
                             children: [
                                 (0, s.jsx)(e9.D, {
                                     id: i,
@@ -1946,10 +1946,10 @@ function iq(e) {
                                             align: "center",
                                             gap: 4,
                                             fullWidth: !1,
-                                            className: iJ.Nz,
+                                            className: iZ.Nz,
                                             children: [
                                                 null != m.iconUrl
-                                                    ? (0, s.jsx)("img", { src: m.iconUrl, alt: "", className: iJ.Gt })
+                                                    ? (0, s.jsx)("img", { src: m.iconUrl, alt: "", className: iZ.Gt })
                                                     : null,
                                                 (0, s.jsx)(A.E, {
                                                     variant: "body-xs/normal",
@@ -1965,7 +1965,7 @@ function iq(e) {
                                                   align: "center",
                                                   gap: 4,
                                                   fullWidth: !1,
-                                                  className: iJ.Nz,
+                                                  className: iZ.Nz,
                                                   children: [
                                                       (0, s.jsx)(iO.GroupIcon, {
                                                           size: "xs",
@@ -1991,7 +1991,7 @@ function iq(e) {
                 j
                     ? (0, s.jsxs)(s.Fragment, {
                           children: [
-                              (0, s.jsx)("div", { className: iJ.yF }),
+                              (0, s.jsx)("div", { className: iZ.yF }),
                               (0, s.jsx)(A.E, {
                                   variant: "body-sm/normal",
                                   color: "text-default",
@@ -2015,9 +2015,9 @@ function iq(e) {
                             case "join":
                                 !(function (e) {
                                     let t = iH.A.getInvite(e);
-                                    if (t?.state === iK.Zb.RESOLVED) {
+                                    if (t?.state === iW.Zb.RESOLVED) {
                                         var i;
-                                        if ("linked" === (0, iz.n)(t.application.id)) return (0, iW.A)(e);
+                                        if ("linked" === (0, iK.n)(t.application.id)) return (0, iJ.A)(e);
                                         ((i = [f.A.INVITE_EMBED]),
                                             (0, g.mM)(
                                                 async () => {
@@ -2029,7 +2029,7 @@ function iq(e) {
                                                     return (n) =>
                                                         (0, s.jsx)(t, { code: e, analyticsLocations: i, ...n });
                                                 },
-                                                { modalKey: iK.MC },
+                                                { modalKey: iW.MC },
                                             ));
                                     }
                                 })(d);
@@ -2048,11 +2048,11 @@ function i$(e) {
     if (!n) return null;
     if (null == i) return (0, s.jsx)(iw, {});
     switch (i.state) {
-        case iK.Zb.RESOLVING:
+        case iW.Zb.RESOLVING:
             return (0, s.jsx)(iw, {});
-        case iK.Zb.ERROR:
+        case iW.Zb.ERROR:
             return (0, s.jsx)(iX, {});
-        case iK.Zb.RESOLVED:
+        case iW.Zb.RESOLVED:
             return (0, s.jsx)(iq, { invite: i });
     }
 }

@@ -1,22 +1,16 @@
-i.r(e);
-var a = i(477900);
-i(582128);
-var r = i(855986),
-    l = i(331322),
-    t = i(97808),
-    n = i(778712),
-    c = i(287809),
-    d = i(486020),
-    u = i(378763),
-    h = i(233569);
-i.d(
-    e,
+s.r(a);
+var c = s(477900);
+s(582128);
+var l = s(331322),
+    r = s(892672),
+    e = s(233569);
+s.d(
+    a,
     {},
     {
-        default: function (s) {
-            let { character: e, organizationIconUrl: i } = s,
-                o = (0, r.bG)([c.default], () => c.default.getCurrentUser());
-            return (0, a.jsxs)(l.B, {
+        default: function (i) {
+            let { character: a, organizationIconUrl: s } = i;
+            return (0, c.jsxs)(l.B, {
                 direction: "horizontal",
                 align: "center",
                 justify: "center",
@@ -24,24 +18,18 @@ i.d(
                 fullWidth: !1,
                 "aria-hidden": !0,
                 children: [
-                    null == e && null != o
-                        ? (0, a.jsx)(t.eu, {
-                              src: d.Ay.getUserAvatarURL(o, !1, 96),
-                              size: n._3.SIZE_96,
-                              "aria-hidden": !0,
-                          })
-                        : (0, a.jsx)(u.A, { iconUrl: e?.iconUrl, size: 96, className: h.K }),
-                    (0, a.jsxs)(l.B, {
+                    (0, c.jsx)(r.A, { iconUrl: a?.iconUrl, size: 96, fallback: "character" }),
+                    (0, c.jsxs)(l.B, {
                         direction: "horizontal",
                         gap: 4,
                         fullWidth: !1,
                         children: [
-                            (0, a.jsx)("div", { className: h.O }),
-                            (0, a.jsx)("div", { className: h.O }),
-                            (0, a.jsx)("div", { className: h.O }),
+                            (0, c.jsx)("div", { className: e.O }),
+                            (0, c.jsx)("div", { className: e.O }),
+                            (0, c.jsx)("div", { className: e.O }),
                         ],
                     }),
-                    (0, a.jsx)(u.A, { iconUrl: i, size: 96, className: h.K }),
+                    (0, c.jsx)(r.A, { iconUrl: s, size: 96, fallback: "guild" }),
                 ],
             });
         },

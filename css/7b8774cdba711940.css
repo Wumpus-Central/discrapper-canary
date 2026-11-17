@@ -173,15 +173,6 @@
     cursor: not-allowed
 }
 
-.characterIcon_hoUSYf {
-    border-radius: var(--radius-md);
-    flex-shrink: 0;
-    height: var(--size-48);
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: var(--size-48)
-}
-
 .labels_hoUSYf {
     flex: 1;
     min-width: 0
@@ -191,13 +182,4 @@
     text-align: center
 }
 
-.organizationIcon_YumanG {
-    border-radius: var(--radius-lg);
-    flex-shrink: 0;
-    height: var(--size-64);
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: var(--size-64)
-}
-
-/*# sourceMappingURL=a318ba3ec945568d.css.map*/
+/*# sourceMappingURL=7b8774cdba711940.css.map*/
