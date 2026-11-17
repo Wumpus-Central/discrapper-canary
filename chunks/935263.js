@@ -1,4 +1,4 @@
-i.d(e, { default: () => tI });
+i.d(e, { default: () => tb });
 var n = i(477900),
     s = i(582128),
     r = i(503698),
@@ -11,16 +11,16 @@ var n = i(477900),
     f = i(821609),
     p = i(638495),
     h = i(869038),
-    m = i(775602),
-    g = i(793574),
+    g = i(775602),
+    m = i(793574),
     A = i(688810),
-    R = i(627363),
-    S = i(587895),
-    x = i(590180),
-    y = i(993408),
+    S = i(627363),
+    R = i(587895),
+    y = i(590180),
+    x = i(993408),
     C = i(674658),
-    I = i(778712),
-    b = i(97808),
+    b = i(778712),
+    I = i(97808),
     E = i(289873),
     T = i(242874),
     v = i(446263),
@@ -30,11 +30,11 @@ var n = i(477900),
     _ = i(872200),
     P = i(139136),
     G = i(395744),
-    k = i(842385),
-    L = i(864449);
-let M = I._3.SIZE_152,
-    w = (0, N.Te)(M);
-function F(t) {
+    M = i(842385),
+    k = i(864449);
+let L = b._3.SIZE_152,
+    F = (0, N.Te)(L);
+function w(t) {
     let { responsive: e } = t;
     return !0 !== e;
 }
@@ -45,27 +45,27 @@ function U(t) {
             avatarDecorationSrc: s,
             avatarPlaceholderSrc: r,
             eventHandlers: l,
-        } = (0, O.A)({ user: i, avatarDecorationOverride: e, size: w });
+        } = (0, O.A)({ user: i, avatarDecorationOverride: e, size: F });
     return (0, n.jsx)("div", {
-        className: L._P,
-        children: (0, n.jsx)(b.eu, { ...l, "aria-label": e.label, src: r, avatarDecoration: s, size: M }),
+        className: k._P,
+        children: (0, n.jsx)(I.eu, { ...l, "aria-label": e.label, src: r, avatarDecoration: s, size: L }),
     });
 }
 function D(t) {
     let { item: e } = t;
-    return (0, n.jsx)("div", { className: L.xC, children: (0, n.jsx)(P.A, { isHighlighted: !0, skuId: e?.skuId }) });
+    return (0, n.jsx)("div", { className: k.xC, children: (0, n.jsx)(P.A, { isHighlighted: !0, skuId: e?.skuId }) });
 }
 function H(t) {
     let { item: e } = t;
-    return (0, n.jsx)("div", { className: L.pI, children: (0, n.jsx)(G.A, { frame: e, filterLayer: F }) });
+    return (0, n.jsx)("div", { className: k.pI, children: (0, n.jsx)(G.A, { frame: e, filterLayer: w }) });
 }
 function V(t) {
     let { item: e } = t;
     return (0, n.jsx)("div", {
-        className: L.M4,
+        className: k.M4,
         children: (0, n.jsx)(_.A, {
             nameplate: e,
-            className: L.qF,
+            className: k.qF,
             nameplatePreviewSize: "xlarge",
             isHighlighted: !0,
             showPlaceholderUser: !0,
@@ -74,12 +74,12 @@ function V(t) {
 }
 function z(t) {
     let { product: e } = t;
-    return (0, n.jsx)("div", { className: L.hT, children: (0, n.jsx)(k.X, { product: e, isHighlighted: !1 }) });
+    return (0, n.jsx)("div", { className: k.hT, children: (0, n.jsx)(M.X, { product: e, isHighlighted: !1 }) });
 }
 let q = function (t) {
     let { giftCode: e } = t,
         { product: i, isFetching: s } = (0, C.q)(e.skuId, !0);
-    if (s || null == i) return (0, n.jsx)("div", { className: L.dc, children: (0, n.jsx)(E.y, {}) });
+    if (s || null == i) return (0, n.jsx)("div", { className: k.dc, children: (0, n.jsx)(E.y, {}) });
     if (i.type === a.R.BUNDLE) return 0 === i.items.length ? null : (0, n.jsx)(z, { product: i });
     let r = i?.items[0];
     switch (r?.type) {
@@ -96,7 +96,7 @@ let q = function (t) {
                 ? (0, n.jsx)(v.A, {
                       defaultAnimationState: T.oA.ACTION,
                       idleAnimationState: T.oA.LOOP,
-                      className: L.l$,
+                      className: k.l$,
                       giftStyle: e.giftStyle,
                   })
                 : null;
@@ -126,11 +126,11 @@ var ti = i(946261),
     tf = i(153626),
     tp = i(518926),
     th = i(682901),
-    tm = i(758836),
-    tg = i(50302),
+    tg = i(758836),
+    tm = i(50302),
     tA = i(792996),
-    tR = i(368773);
-function tS(t) {
+    tS = i(368773);
+function tR(t) {
     let { openedGift: e } = t,
         { createMultipleConfettiAt: i } = s.useContext(W.x);
     return (
@@ -140,7 +140,7 @@ function tS(t) {
         null
     );
 }
-function tx(t) {
+function ty(t) {
     let { step: e, soundId: i } = t;
     return (
         s.useEffect(() => {
@@ -151,7 +151,7 @@ function tx(t) {
         null
     );
 }
-class ty extends s.Component {
+class tx extends s.Component {
     state = {
         error: null,
         accepted: !1,
@@ -164,9 +164,9 @@ class ty extends s.Component {
     modalRef = s.createRef();
     componentDidMount() {
         let { application: t, sku: e, customGiftMessage: i, giftCode: n, emojiName: s } = this.props;
-        null == t && null != e && R.Ay.fetchApplication(e.applicationId);
+        null == t && null != e && S.Ay.fetchApplication(e.applicationId);
         let r = null != i || null != n.giftStyle,
-            l = (0, y.hU)(n),
+            l = (0, x.hU)(n),
             a = null != s ? to.Ay.getURL(s) : void 0;
         (this.setState({ isCustomGift: r, isCollectiblesGift: l, emojiURL: a, opened: l }), this.trackStepAnalytics());
     }
@@ -187,10 +187,15 @@ class ty extends s.Component {
     get hasGiftSubscriptionAgreementError() {
         return this.needsGiftSubscriptionAgreement && this.props.giftSubscriptionAgreementFailed;
     }
+    get isConfirmingPendingGiftSubscription() {
+        return this.step === tt.frR.CONFIRM && (0, tf.m)(this.props.giftCode);
+    }
     get firstHeaderText() {
         let { isCustomGift: t, opened: e, accepted: i } = this.state,
             { giftCode: n, subscriptionPlan: s, collectiblesItemType: r } = this.props;
         if (t && this.step === tt.frR.ERROR) return tA.intl.formatToMarkdownString(tA.t.JUvC0s, {});
+        if (this.isConfirmingPendingGiftSubscription)
+            return tA.intl.formatToPlainString(tm.default.lhj054, { name: tc.Ay.getName(j.default.getUser(n.userId)) });
         if (t && !i)
             if (!e)
                 return tA.intl.formatToPlainString(tA.t.xHzRub, {
@@ -212,26 +217,22 @@ class ty extends s.Component {
                         default:
                             return tA.intl.formatToPlainString(tA.t.U4Ko2y, { sender: e });
                     }
-                return (0, tf.m)(n)
-                    ? tA.intl.formatToPlainString(tg.default.lhj054, { name: e })
-                    : s?.interval === th.WT.MONTH && s.intervalCount > 1
-                      ? tA.intl.formatToPlainString(tg.default.E7QYGI, { sender: e, intervalCount: s.intervalCount })
-                      : tA.intl.formatToPlainString(tA.t["0UR0u4"], {
-                            sender: e,
-                            timeInterval:
-                                s?.interval === th.WT.MONTH ? tA.intl.string(tA.t.FPybU7) : tA.intl.string(tA.t.tfqrhj),
-                        });
+                return s?.interval === th.WT.MONTH && s.intervalCount > 1
+                    ? tA.intl.formatToPlainString(tm.default.E7QYGI, { sender: e, intervalCount: s.intervalCount })
+                    : tA.intl.formatToPlainString(tA.t["0UR0u4"], {
+                          sender: e,
+                          timeInterval:
+                              s?.interval === th.WT.MONTH ? tA.intl.string(tA.t.FPybU7) : tA.intl.string(tA.t.tfqrhj),
+                      });
             }
         return null == this.props.sku ? null : (0, tu.n$)(this.step, this.props.giftCode, this.props.sku);
     }
     get secondHeaderText() {
         let { isCustomGift: t, opened: e, accepted: i } = this.state,
             { giftCode: n, subscriptionPlan: s } = this.props;
-        if (!t || i) return null;
-        if (e)
-            return this.step !== tt.frR.ERROR && (0, tf.m)(n) && null != s
-                ? tA.intl.string(s.interval === th.WT.MONTH ? tg.default.p3wUY4 : tg.default.RdrnRc)
-                : null;
+        if (this.isConfirmingPendingGiftSubscription && null != s)
+            return tA.intl.string(s.interval === th.WT.MONTH ? tm.default.p3wUY4 : tm.default.RdrnRc);
+        if (!t || i || e) return null;
         let r = j.default.getUser(n.userId);
         return tA.intl.formatToPlainString(tA.t.DDO4Wz, { sender: tc.Ay.getName(r) });
     }
@@ -239,18 +240,20 @@ class ty extends s.Component {
         let { sku: t, accepting: e, libraryApplication: i, subscriptionPlan: n } = this.props;
         if (null == t) return null;
         let { error: s, accepted: r, isCustomGift: l, opened: a } = this.state;
-        return !a && l
+        return (!a && l) || this.isConfirmingPendingGiftSubscription
             ? null
-            : (0, tu.e_)({
-                  step: this.step,
-                  sku: t,
-                  libraryApplication: i,
-                  error: s,
-                  accepted: r,
-                  accepting: e,
-                  onGoToLibrary: this.handleGoToLibrary,
-                  subscriptionPlan: n,
-              });
+            : this.step === tt.frR.SUCCESS && (0, tf.m)(this.props.giftCode)
+              ? tA.intl.string(tm.default.fdrOGN)
+              : (0, tu.e_)({
+                    step: this.step,
+                    sku: t,
+                    libraryApplication: i,
+                    error: s,
+                    accepted: r,
+                    accepting: e,
+                    onGoToLibrary: this.handleGoToLibrary,
+                    subscriptionPlan: n,
+                });
     }
     get errorMessage() {
         let { libraryApplication: t, accepting: e } = this.props,
@@ -330,15 +333,15 @@ class ty extends s.Component {
                 transitionState: o,
                 useReducedMotion: p,
                 onComplete: h,
-                customGiftMessage: m,
-                emojiName: g,
+                customGiftMessage: g,
+                emojiName: m,
                 soundId: A,
             } = this.props,
-            R = j.default.getUser(r.userId),
-            { isCustomGift: S, isCollectiblesGift: x, accepted: y, opened: C, emojiURL: I } = this.state,
-            b = j.default.getCurrentUser(),
+            S = j.default.getUser(r.userId),
+            { isCustomGift: R, isCollectiblesGift: y, accepted: x, opened: C, emojiURL: b } = this.state,
+            I = j.default.getCurrentUser(),
             E = this.step === tt.frR.ERROR,
-            T = r?.userId != null && null != b && b?.id != null && r.userId === b.id;
+            T = r?.userId != null && null != I && I?.id != null && r.userId === I.id;
         switch (this.step) {
             case tt.frR.ERROR:
                 h?.(r, !1);
@@ -353,90 +356,90 @@ class ty extends s.Component {
                     "data-migration-pending": !0,
                     transitionState: o,
                     size: u.rI.SMALL,
-                    className: tR.yl,
+                    className: tS.yl,
                     "aria-labelledby": a,
                     parentComponent: "GiftCodeModal",
                     children: [
                         null != r.giftStyle &&
-                            !S &&
-                            !x &&
+                            !R &&
+                            !y &&
                             (0, n.jsx)(v.A, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: r.giftStyle,
-                                className: tR.C9,
+                                className: tS.C9,
                             }),
-                        !S && (0, n.jsx)("div", { className: tR.Dv }),
-                        !x && (0, n.jsx)(u.s_, { "data-migration-pending": !0, onClick: s, className: tR.b }),
+                        !R && (0, n.jsx)("div", { className: tS.Dv }),
+                        !y && (0, n.jsx)(u.s_, { "data-migration-pending": !0, onClick: s, className: tS.b }),
                         (0, n.jsxs)(u.$m, {
                             "data-migration-pending": !0,
-                            className: l()({ [tR.Qs]: !S, [tR.Fl]: S }),
+                            className: l()({ [tS.Qs]: !R, [tS.Fl]: R }),
                             children: [
-                                !x && (null == r.giftStyle || (S && y))
+                                !y && (null == r.giftStyle || (R && x))
                                     ? (0, n.jsx)(Y.A, { size: Y.M.LARGE, game: t, skuId: r.skuId })
                                     : null,
                                 (0, n.jsxs)(d.D, {
                                     id: a,
-                                    className: l()({ [tR.Ry]: S && !y, [tR.wx]: !S || y }),
+                                    className: l()({ [tS.Ry]: R && !x, [tS.wx]: !R || x }),
                                     variant: "heading-xs/semibold",
                                     children: [
                                         (0, n.jsx)("div", {
-                                            className: l()({ [tR.Qw]: S }),
+                                            className: l()({ [tS.Qw]: R }),
                                             children: this.firstHeaderText,
                                         }),
                                         (0, n.jsx)("div", { children: this.secondHeaderText }),
                                     ],
                                 }),
-                                !(S && !y) &&
+                                !(R && !x) &&
                                     (0, n.jsx)(c.E, {
-                                        className: tR.rf,
+                                        className: tS.rf,
                                         variant: "body-sm/normal",
                                         children: this.bodyText,
                                     }),
-                                S &&
-                                    !x &&
-                                    null != r.giftStyle &&
+                                R &&
                                     !y &&
+                                    null != r.giftStyle &&
+                                    !x &&
                                     !E &&
                                     (0, n.jsx)(v.A, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
-                                        className: tR.l$,
+                                        className: tS.l$,
                                         giftStyle: r.giftStyle,
                                     }),
-                                this.state.opened && !E && x && (0, n.jsx)(q, { giftCode: r }),
+                                this.state.opened && !E && y && (0, n.jsx)(q, { giftCode: r }),
                                 E &&
                                     (0, n.jsx)(c.E, {
-                                        className: tR.rf,
+                                        className: tS.rf,
                                         variant: "body-md/normal",
                                         children: this.errorMessage,
                                     }),
                                 this.step === tt.frR.CONFIRM &&
                                     this.hasGiftSubscriptionAgreementError &&
                                     (0, n.jsx)(c.E, {
-                                        className: tR.rf,
+                                        className: tS.rf,
                                         variant: "body-md/normal",
                                         role: "alert",
                                         children: tA.intl.string(tA.t.fEptJP),
                                     }),
-                                S &&
+                                R &&
                                     this.state.opened &&
                                     !this.state.accepted &&
                                     !E &&
-                                    null != m &&
-                                    "" !== m &&
+                                    null != g &&
+                                    "" !== g &&
                                     !T &&
                                     (0, n.jsxs)(n.Fragment, {
                                         children: [
                                             (0, n.jsx)(d.D, {
                                                 id: a,
                                                 variant: "heading-sm/semibold",
-                                                children: tA.intl.format(tA.t.DDO4Wz, { sender: tc.Ay.getName(R) }),
+                                                children: tA.intl.format(tA.t.DDO4Wz, { sender: tc.Ay.getName(S) }),
                                             }),
                                             (0, n.jsx)(c.E, {
-                                                className: tR.$B,
+                                                className: tS.$B,
                                                 variant: "body-md/semibold",
-                                                children: m,
+                                                children: g,
                                             }),
                                         ],
                                     }),
@@ -460,22 +463,22 @@ class ty extends s.Component {
                 null != r.giftStyle &&
                     !p &&
                     this.step !== tt.frR.ERROR &&
-                    !y &&
+                    !x &&
                     !e &&
                     C &&
-                    (null == g || null == I
-                        ? (0, n.jsx)(tS, { openedGift: !0 })
-                        : (0, n.jsx)(tp.A, { confettiTarget: this.modalRef.current, emojiURL: I })),
-                !y && !e && C && null != A && (0, n.jsx)(tx, { soundId: A, step: this.step }),
+                    (null == m || null == b
+                        ? (0, n.jsx)(tR, { openedGift: !0 })
+                        : (0, n.jsx)(tp.A, { confettiTarget: this.modalRef.current, emojiURL: b })),
+                !x && !e && C && null != A && (0, n.jsx)(ty, { soundId: A, step: this.step }),
             ],
         });
     }
 }
-let tC = o.Ay.connectStores([tr.A, ta.A, S.A, ts.A, tl.A, m.Ay, x.A], (t) => {
+let tC = o.Ay.connectStores([tr.A, ta.A, R.A, ts.A, tl.A, g.Ay, y.A], (t) => {
         let { giftCode: e } = t,
             i = ta.A.get(e.skuId),
-            n = null != i ? S.A.getApplication(i.applicationId) : null,
-            s = m.Ay.useReducedMotion;
+            n = null != i ? R.A.getApplication(i.applicationId) : null,
+            s = g.Ay.useReducedMotion;
         return {
             sku: i,
             libraryApplication:
@@ -573,32 +576,32 @@ let tC = o.Ay.connectStores([tr.A, ta.A, S.A, ts.A, tl.A, m.Ay, x.A], (t) => {
         }, [r, h, a, o, l, u, d, c, f, e]),
         h)
             ? null
-            : (0, n.jsx)(ty, { ...t });
+            : (0, n.jsx)(tx, { ...t });
     }),
-    tI = function (t) {
+    tb = function (t) {
         let { channelContext: e, code: i, customGiftMessage: r, emojiName: l, soundId: a, onClose: u, ...d } = t,
             c = (0, K.GV)(),
             f = (0, o.bG)([ts.A], () => ts.A.get(i)),
-            { analyticsLocations: p } = (0, A.Ay)(g.A.GIFT_CODE_MODAL),
-            { product: m } = (0, C.q)(f?.skuId, !0),
-            [R, S] = s.useState(!1),
-            x = null != f && f.isSubscription && void 0 === f.giftSubscriptionAgreement,
-            I = s.useCallback(
+            { analyticsLocations: p } = (0, A.Ay)(m.A.GIFT_CODE_MODAL),
+            { product: g } = (0, C.q)(f?.skuId, !0),
+            [S, R] = s.useState(!1),
+            y = null != f && f.isSubscription && void 0 === f.giftSubscriptionAgreement,
+            b = s.useCallback(
                 () =>
                     h.Ay.resolveGiftCode(i, { withSubscriptionPlan: !0, withGiftSubscriptionAgreement: !0 }).then(
                         (t) => {
                             let { giftCode: e } = t;
-                            return S(void 0 === e.gift_subscription_agreement);
+                            return R(void 0 === e.gift_subscription_agreement);
                         },
                         (t) => {
-                            (S(!0), h.Ay.reportUnexpectedGiftCodeError(t));
+                            (R(!0), h.Ay.reportUnexpectedGiftCodeError(t));
                         },
                     ),
                 [i],
             );
         return (s.useEffect(() => {
-            x && I();
-        }, [x, I]),
+            y && b();
+        }, [y, b]),
         null == f)
             ? null
             : (0, n.jsx)(tC, {
@@ -610,16 +613,16 @@ let tC = o.Ay.connectStores([tr.A, ta.A, S.A, ts.A, tl.A, m.Ay, x.A], (t) => {
                   emojiName: l,
                   soundId: a,
                   analyticsLocations: p,
-                  giftSubscriptionAgreementFailed: R,
+                  giftSubscriptionAgreementFailed: S,
                   onResolveGiftSubscriptionAgreement: () => {
-                      (S(!1), I());
+                      (R(!1), b());
                   },
                   onClose: u,
-                  collectiblesItemType: (0, y.oj)(m),
+                  collectiblesItemType: (0, x.oj)(g),
                   onAccept:
-                      null != m
+                      null != g
                           ? () => {
-                                (u(), (0, B.A)({ product: m, analyticsLocations: p, purchaseType: tm.gs.GIFT }));
+                                (u(), (0, B.A)({ product: g, analyticsLocations: p, purchaseType: tg.gs.GIFT }));
                             }
                           : void 0,
               });
