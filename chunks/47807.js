@@ -403,10 +403,11 @@ class N extends o.G {
                     "NITRO_PERK_CARD_PLACEMENT_",
                 ],
             },
+            { no: 10, name: "position", kind: "scalar", T: 13 },
         ]);
     }
     create(e) {
-        let t = { header: "", description: "", placements: [] };
+        let t = { header: "", description: "", placements: [], position: 0 };
         return (
             globalThis.Object.defineProperty(t, l.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, s.x)(this, t, e),
@@ -448,6 +449,9 @@ class N extends o.G {
                         for (let t = e.int32() + e.pos; e.pos < t;) r.placements.push(e.int32());
                     else r.placements.push(e.int32());
                     break;
+                case 10:
+                    r.position = e.uint32();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -477,6 +481,7 @@ class N extends o.G {
             for (let n = 0; n < e.placements.length; n++) t.int32(e.placements[n]);
             t.join();
         }
+        0 !== e.position && t.tag(10, a.O0.Varint).uint32(e.position);
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
