@@ -1,78 +1,71 @@
-a.d(t, { A: () => g, q: () => P });
+a.d(t, { A: () => S, q: () => b });
 var i = a(582128),
     n = a(598748),
-    r = a(540185),
-    l = a(164636),
+    l = a(540185),
+    r = a(164636),
     s = a(793574),
-    u = a(382483),
-    c = a(385113),
-    p = a(734066),
+    p = a(382483),
+    u = a(385113),
+    c = a(734066),
     A = a(253932),
     f = a(287809),
     d = a(403362);
 let o = new Set([
-    r.x.PERSONAL,
-    r.x.CLIPS_GALLERY,
-    r.x.APPLICATION,
-    r.x.FAVORITE_GAMES,
-    r.x.PLAYED_GAMES,
-    r.x.CURRENT_GAMES,
-    r.x.WANT_TO_PLAY_GAMES,
+    l.x.CLIPS_GALLERY,
+    l.x.APPLICATION,
+    l.x.FAVORITE_GAMES,
+    l.x.PLAYED_GAMES,
+    l.x.CURRENT_GAMES,
+    l.x.WANT_TO_PLAY_GAMES,
 ]);
 var _ = a(633075),
     E = a(646976),
-    I = a(289173),
-    h = a(210598);
-let L = (0, a(945810).mj)({
+    I = a(289173);
+let h = (0, a(945810).mj)({
     name: "2026-07-clips-on-profile-setter",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var b = a(465318),
-    S = a(667049),
-    G = a(229231);
-function P(e) {
+var G = a(667049),
+    L = a(229231);
+function b(e) {
     return (
         null != e.surfaces[n.m.WIDGET_TOP] &&
         null != e.surfaces[n.m.WIDGET_BOTTOM] &&
         null != e.surfaces[n.m.ADD_WIDGET_PREVIEW]
     );
 }
-function g() {
+function S() {
     let e = A.Q_.useSetting(),
-        t = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
-        a = (0, S.A)(t?.id),
-        n = b.A.useConfig({ location: "useAddableWidgets" }).enabled,
-        g = (0, l.bG)([c.A], () => c.A.getAllConfigsByApplication()),
-        C = (0, l.bG)([c.A], () => c.A.getFeaturedApplicationIds()),
-        O = (0, l.bG)([c.A], () => c.A.getDeveloperApplicationIds()),
-        R = (0, p.sw)(),
-        T = L.useConfig({ location: s.A.USER_PROFILE_MODAL_V2 }).enabled && R;
+        t = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
+        a = (0, G.A)(t?.id),
+        n = (0, r.bG)([u.A], () => u.A.getAllConfigsByApplication()),
+        S = (0, r.bG)([u.A], () => u.A.getFeaturedApplicationIds()),
+        T = (0, r.bG)([u.A], () => u.A.getDeveloperApplicationIds()),
+        m = (0, c.sw)(),
+        w = h.useConfig({ location: s.A.USER_PROFILE_MODAL_V2 }).enabled && m;
     return (
         i.useEffect(() => {
-            ((0, u.Wq)().catch(() => {}), e && (0, u.i$)().catch(() => {}));
+            ((0, p.Wq)().catch(() => {}), e && (0, p.i$)().catch(() => {}));
         }, [e]),
         i.useMemo(() => {
             let t = new Set(a.filter((e) => e instanceof _.R).map((e) => e.applicationId)),
                 i = new Set(a.map((e) => e.type));
-            return G.Zc.filter((e) => o.has(e)).flatMap((a) => {
+            return L.Zc.filter((e) => o.has(e)).flatMap((a) => {
                 switch (a) {
-                    case r.x.APPLICATION: {
-                        let a = new Set([...C, ...(e ? O : [])]);
-                        return Object.values(g)
+                    case l.x.APPLICATION: {
+                        let a = new Set([...S, ...(e ? T : [])]);
+                        return Object.values(n)
                             .map((e) => e[0])
                             .filter(d.Vq)
                             .filter((e) => a.has(e.application_id))
                             .filter((e) => !t.has(e.application_id))
-                            .filter(P)
+                            .filter(b)
                             .map((e) => new _.R({ applicationId: e.application_id }));
                     }
-                    case r.x.PERSONAL:
-                        if (!n || i.has(a)) return [];
-                        return (0, h.g0)();
-                    case r.x.CLIPS_GALLERY:
-                        if (!T || i.has(a)) return [];
+                    case l.x.CLIPS_GALLERY:
+                        if (!w || i.has(a)) return [];
                         return new E.kM({ clips: [] });
                     default:
                         if ((0, I.hL)(a)) {
@@ -82,6 +75,6 @@ function g() {
                         return (0, d.xb)(a);
                 }
             });
-        }, [e, g, C, O, a, T, n])
+        }, [e, n, S, T, a, w])
     );
 }

@@ -4,7 +4,7 @@ var a = r(435558),
     i = r(626584),
     o = r(339984);
 let l = new i.A("ImageCroppingUtils");
-async function h(e, t) {
+async function u(e, t) {
     return {
         imageUri: await new Promise((t) => {
             let r = new FileReader();
@@ -17,7 +17,7 @@ async function h(e, t) {
         compressed: t,
     };
 }
-function u(e, t, r, a) {
+function h(e, t, r, a) {
     let n = r,
         i = a;
     return (r > 432 && ((n = 432), (i = (432 / r) * a)), r / a < e)
@@ -55,52 +55,45 @@ r.d(
                 case o.HL.AVATAR:
                 case o.HL.AVATAR_DECORATION:
                 case o.HL.GUILD_ICON:
-                case o.HL.PERSONAL_WIDGET_FIELD:
                     let i = Math.min(t, r);
                     return { width: i, height: i };
                 case o.HL.BANNER:
                     let l = Math.min(t, 432);
                     return { width: l, height: l * (1 / o.wL) };
                 case o.HL.GUILD_BANNER:
-                    let h = Math.min(t, 432);
-                    return { width: h, height: Math.min((9 / 16) * h, a) };
-                case o.HL.VIDEO_BACKGROUND:
                     let u = Math.min(t, 432);
-                    return { width: u, height: (9 / 16) * u };
+                    return { width: u, height: Math.min((9 / 16) * u, a) };
+                case o.HL.VIDEO_BACKGROUND:
+                    let h = Math.min(t, 432);
+                    return { width: h, height: (9 / 16) * h };
                 case o.HL.SCHEDULED_EVENT_IMAGE:
                     let c = Math.min(t, 432);
                     return { width: c, height: 0.4 * c };
                 case o.HL.HOME_HEADER:
                     let s = Math.min(t, 432);
                     return { width: s, height: 0.25 * s };
-                case o.HL.PERSONAL_WIDGET_COVER:
-                    let m = Math.min(t, 432);
-                    return { width: m, height: Math.min(m * (1 / o.PS), a) };
             }
         },
         Qx: function (e, t, r, a) {
-            if (null != a) return u(a, 432 / a, t, r);
+            if (null != a) return h(a, 432 / a, t, r);
             switch (e) {
                 case o.HL.AVATAR:
                 case o.HL.AVATAR_DECORATION:
                 case o.HL.GUILD_ICON:
-                case o.HL.PERSONAL_WIDGET_FIELD:
                     return { width: t, height: r };
                 case o.HL.BANNER:
                     let n = o.pj;
-                    return u(o.wL, n, t, r);
+                    return h(o.wL, n, t, r);
                 case o.HL.GUILD_BANNER:
                     let i = o.Jz;
-                    return u(o.AB, i, t, r);
+                    return h(o.AB, i, t, r);
                 case o.HL.VIDEO_BACKGROUND:
                     let l = o.yi;
-                    return u(o.G9, l, t, r);
+                    return h(o.G9, l, t, r);
                 case o.HL.SCHEDULED_EVENT_IMAGE:
-                    return u(2.5, 172.8, t, r);
+                    return h(2.5, 172.8, t, r);
                 case o.HL.HOME_HEADER:
-                    return u(4, 108, t, r);
-                case o.HL.PERSONAL_WIDGET_COVER:
-                    return u(o.PS, o.sW, t, r);
+                    return h(4, 108, t, r);
             }
         },
         l$: function (e, t, r) {
@@ -118,50 +111,50 @@ r.d(
                     file: t,
                     image: a,
                     cropDimensions: i,
-                    cropOriginCoordinates: u,
+                    cropOriginCoordinates: h,
                     maxDimensions: c,
                     imageRotation: s = 0,
                     flipHorizontal: m = !1,
                     resizeWidth: f = null,
-                    resizeHeight: A = null,
-                    compressGIFToFitBytes: d = null,
+                    resizeHeight: d = null,
+                    compressGIFToFitBytes: A = null,
                 } = e,
                 {
-                    sourceX: E,
-                    sourceY: w,
-                    sourceWidth: _,
-                    sourceHeight: p,
+                    sourceX: w,
+                    sourceY: E,
+                    sourceWidth: p,
+                    sourceHeight: _,
                 } = (0, n.R7)({
                     image: a,
                     cropDimensions: i,
-                    cropOriginCoordinates: u,
+                    cropOriginCoordinates: h,
                     maxDimensions: c,
                     imageRotation: s,
                     flipHorizontal: m,
                 }),
-                g = Math.max(0, Math.round(E)),
-                b = Math.max(0, Math.round(w)),
-                y = Math.round(_),
-                M = Math.round(p),
+                g = Math.max(0, Math.round(w)),
+                b = Math.max(0, Math.round(E)),
+                y = Math.round(p),
+                M = Math.round(_),
                 H = a.naturalWidth - g,
-                L = a.naturalHeight - b,
-                D = Math.min(y, H),
-                P = Math.min(M, L);
+                D = a.naturalHeight - b,
+                P = Math.min(y, H),
+                L = Math.min(M, D);
             if (
                 0 === g &&
                 0 === b &&
-                D === a.naturalWidth &&
-                P === a.naturalHeight &&
+                P === a.naturalWidth &&
+                L === a.naturalHeight &&
                 s % 360 == 0 &&
                 !m &&
                 null == f &&
-                null == A
+                null == d
             )
-                return { result: h(t, !1), cancelFn: () => {} };
-            let I = await t.arrayBuffer(),
-                R = new Worker(new URL("/assets/" + r.u(539885), r.b)),
-                W = new Promise((e, r) => {
-                    R.onmessage = (a) => {
+                return { result: u(t, !1), cancelFn: () => {} };
+            let U = await t.arrayBuffer(),
+                I = new Worker(new URL("/assets/" + r.u(539885), r.b)),
+                R = new Promise((e, r) => {
+                    I.onmessage = (a) => {
                         let { data: n } = a;
                         if (n.type === o.lA.CROP_ANIMATED_IMAGE_COMPLETE)
                             (null != n.compressionError &&
@@ -169,32 +162,32 @@ r.d(
                                     "Failed to compress GIF to fit, keeping the uncompressed crop",
                                     n.compressionError,
                                 ),
-                                e(h(new Blob([n.result], { type: t.type }), n.compressed)),
-                                R.terminate());
+                                e(u(new Blob([n.result], { type: t.type }), n.compressed)),
+                                I.terminate());
                         else if (n.type === o.lA.CROP_ANIMATED_IMAGE_ERROR) {
                             let e = n?.error,
                                 t = e?.message ?? "Unknown error";
-                            (r(Error(`Error cropping animated image: ${t}`)), R.terminate());
+                            (r(Error(`Error cropping animated image: ${t}`)), I.terminate());
                         }
                     };
                 }),
-                U = "image/webp" === t.type ? "webp" : "gif";
+                W = "image/webp" === t.type ? "webp" : "gif";
             return (
-                R.postMessage({
+                I.postMessage({
                     type: o.lA.CROP_ANIMATED_IMAGE_START,
-                    data: new Uint8Array(I),
+                    data: new Uint8Array(U),
                     x: g,
                     y: b,
-                    width: D,
-                    height: P,
+                    width: P,
+                    height: L,
                     imageRotation: 0 | s,
                     flipHorizontal: m,
                     resizeWidth: f,
-                    resizeHeight: A,
-                    format: U,
-                    compressGIFToFitBytes: d,
+                    resizeHeight: d,
+                    format: W,
+                    compressGIFToFitBytes: A,
                 }),
-                { result: W, cancelFn: () => R.terminate() }
+                { result: R, cancelFn: () => I.terminate() }
             );
         },
     },

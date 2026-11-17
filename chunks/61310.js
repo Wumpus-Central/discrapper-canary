@@ -28,8 +28,6 @@ n.d(
                 case r.HL.HOME_HEADER:
                 case r.HL.AVATAR_DECORATION:
                 case r.HL.GUILD_ICON:
-                case r.HL.PERSONAL_WIDGET_COVER:
-                case r.HL.PERSONAL_WIDGET_FIELD:
                     return null;
             }
         },

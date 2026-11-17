@@ -1,7 +1,6 @@
 e.exports = {
     kL: "container_IEutSJ",
     oE: "compact_IEutSJ",
-    CP: "growWidth_IEutSJ",
     VH: "preview_IEutSJ",
     LL: "editable_IEutSJ",
     JD: "hasError_IEutSJ",

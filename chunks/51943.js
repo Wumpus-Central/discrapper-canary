@@ -4,14 +4,14 @@ var i = n(477900),
     s = n(3026),
     a = n(462887),
     o = n(778712),
-    d = n(939249),
-    u = n(664343),
+    u = n(939249),
+    d = n(664343),
     c = n(97808),
     g = n(834730),
     f = n(442433),
     m = n(682163),
-    p = n(562153),
-    h = n(939496);
+    h = n(562153),
+    p = n(939496);
 n(518477);
 var x = n(996988),
     A = n(792996),
@@ -22,16 +22,16 @@ n.d(
     {},
     {
         A: function (e) {
-            let { user: t, guild: b, nick: j, onSelect: y } = e,
-                { theme: C, themeType: E } = (0, h.E)(),
-                S = t.hasAvatarForGuild(b.id),
+            let { user: t, guild: j, nick: b, onSelect: y } = e,
+                { theme: C, themeType: E } = (0, p.E)(),
+                S = t.hasAvatarForGuild(j.id),
                 N = l.useId(),
-                k = A.intl.formatToPlainString(A.t.Ce2iXp, { guildName: b.name });
-            return (0, i.jsxs)(d.D, {
+                k = A.intl.formatToPlainString(A.t.Ce2iXp, { guildName: j.name });
+            return (0, i.jsxs)(u.D, {
                 focusProps: E === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: I.nM,
                 "aria-label": k,
-                "aria-describedby": S || null != j ? N : void 0,
+                "aria-describedby": S || null != b ? N : void 0,
                 onClick: y,
                 onContextMenu: function (e) {
                     (0, f.L3)(e, async () => {
@@ -39,6 +39,7 @@ n.d(
                             n.e(203112),
                             n.e(551353),
                             n.e(876364),
+                            n.e(521332),
                             n.e(668756),
                             n.e(697395),
                             n.e(996907),
@@ -240,8 +241,6 @@ n.d(
                             n.e(676418),
                             n.e(70833),
                             n.e(897073),
-                            n.e(161275),
-                            n.e(761253),
                             n.e(844780),
                             n.e(401518),
                             n.e(571210),
@@ -254,16 +253,18 @@ n.d(
                             n.e(139970),
                             n.e(173764),
                             n.e(940258),
+                            n.e(161275),
                             n.e(830221),
-                            n.e(858164),
+                            n.e(761253),
                             n.e(357688),
                             n.e(308555),
                             n.e(857467),
-                            n.e(977547),
                             n.e(508371),
+                            n.e(858164),
                             n.e(885434),
                             n.e(88342),
                             n.e(586127),
+                            n.e(977547),
                             n.e(179049),
                             n.e(132737),
                             n.e(344502),
@@ -352,6 +353,7 @@ n.d(
                             n.e(709371),
                             n.e(330724),
                             n.e(599719),
+                            n.e(480436),
                             n.e(987478),
                             n.e(531741),
                             n.e(390213),
@@ -393,6 +395,7 @@ n.d(
                             n.e(26001),
                             n.e(493014),
                             n.e(935948),
+                            n.e(562168),
                             n.e(414591),
                             n.e(652111),
                             n.e(215920),
@@ -479,7 +482,6 @@ n.d(
                             n.e(504199),
                             n.e(150200),
                             n.e(285350),
-                            n.e(50342),
                             n.e(369501),
                             n.e(829961),
                             n.e(303710),
@@ -491,6 +493,7 @@ n.d(
                             n.e(256373),
                             n.e(655602),
                             n.e(486155),
+                            n.e(50342),
                             n.e(244645),
                             n.e(710014),
                             n.e(561622),
@@ -504,7 +507,6 @@ n.d(
                             n.e(479971),
                             n.e(995602),
                             n.e(346313),
-                            n.e(836681),
                             n.e(553203),
                             n.e(850298),
                             n.e(218489),
@@ -515,6 +517,7 @@ n.d(
                             n.e(343233),
                             n.e(475289),
                             n.e(569468),
+                            n.e(836681),
                             n.e(756684),
                             n.e(736621),
                             n.e(146149),
@@ -620,20 +623,20 @@ n.d(
                             n.e(415046),
                             n.e(935277),
                         ]).then(n.bind(n, 871638));
-                        return (t) => (0, i.jsx)(e, { ...t, guild: b });
+                        return (t) => (0, i.jsx)(e, { ...t, guild: j });
                     });
                 },
                 children: [
                     (0, i.jsx)(m.Ay, {
                         "aria-hidden": !0,
                         tabIndex: -1,
-                        guild: b,
+                        guild: j,
                         showBadge: !0,
-                        className: null != b.icon ? I.Kk : I.lN,
+                        className: null != j.icon ? I.Kk : I.lN,
                         badgeStrokeColor: (0, a.M)(C)
                             ? r.A.unsafe_rawColors.PRIMARY_600.css
                             : r.A.unsafe_rawColors.WHITE.css,
-                        badgeTooltipColor: u.oM.PRIMARY,
+                        badgeTooltipColor: d.oM.PRIMARY,
                         badgeTooltipDelay: 300,
                         size: m.Ay.Sizes.MEDIUM,
                         active: !0,
@@ -641,14 +644,14 @@ n.d(
                     (0, i.jsxs)("div", {
                         className: I.zH,
                         children: [
-                            (0, i.jsx)("div", { className: I.UU, children: b.name }),
+                            (0, i.jsx)("div", { className: I.UU, children: j.name }),
                             S &&
                                 (0, i.jsxs)("div", {
                                     id: N,
                                     className: I.C9,
                                     children: [
                                         (0, i.jsx)(c.eu, {
-                                            src: t.getAvatarURL(b.id, v),
+                                            src: t.getAvatarURL(j.id, v),
                                             size: o._3.SIZE_16,
                                             className: I.my,
                                             "aria-hidden": !0,
@@ -657,17 +660,17 @@ n.d(
                                             variant: "body-xs/medium",
                                             children: (0, i.jsx)(s.A, {
                                                 delay: 300,
-                                                children: j ?? p.Ay.getName(b.id, void 0, t),
+                                                children: b ?? h.Ay.getName(j.id, void 0, t),
                                             }),
                                         }),
                                     ],
                                 }),
                             !S &&
-                                null != j &&
+                                null != b &&
                                 (0, i.jsx)(g.E, {
                                     id: N,
                                     variant: "body-xs/medium",
-                                    children: (0, i.jsx)(s.A, { delay: 300, children: j }),
+                                    children: (0, i.jsx)(s.A, { delay: 300, children: b }),
                                 }),
                         ],
                     }),

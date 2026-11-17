@@ -33,7 +33,7 @@ var l = s(477900),
     U = s(571077),
     _ = s(587168),
     M = s(982985),
-    k = s(680581),
+    k = s(804329),
     F = s(305385),
     G = s(855986),
     B = s(761508),
@@ -462,8 +462,8 @@ function e0(e) {
                     }),
     });
 }
-var e5 = s(717877);
-function e7(e) {
+var e7 = s(717877);
+function e5(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return i === ex.RP.ACTIVITY
         ? (0, l.jsx)(eU, { user: s, currentUser: n, guildId: d, onClose: a })
@@ -507,7 +507,7 @@ function e1(e) {
     );
     return u
         ? (0, l.jsx)("div", {
-              className: e5.kL,
+              className: e7.kL,
               children: (0, l.jsxs)("div", {
                   className: eD.Ie,
                   children: [
@@ -517,10 +517,10 @@ function e1(e) {
               }),
           })
         : (0, l.jsxs)("div", {
-              className: e5.kL,
+              className: e7.kL,
               children: [
                   (0, l.jsx)(B.V, {
-                      className: e5.$H,
+                      className: e7.$H,
                       type: "top",
                       selectedItem: A,
                       onItemSelect: x,
@@ -529,7 +529,7 @@ function e1(e) {
                           return (0, l.jsx)(
                               B.V.Item,
                               {
-                                  className: e5.YU,
+                                  className: e7.YU,
                                   id: i,
                                   "aria-label": s,
                                   children: (0, l.jsx)(V.E, { variant: "body-sm/normal", children: s }),
@@ -538,7 +538,7 @@ function e1(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(e7, {
+                  (0, l.jsx)(e5, {
                       items: r,
                       section: A,
                       user: i,
@@ -551,8 +551,8 @@ function e1(e) {
           });
 }
 var e3 = s(186272),
-    e9 = s(996988),
-    e2 = s(207634),
+    e2 = s(996988),
+    e9 = s(207634),
     e6 = s(174217);
 function e8(e) {
     let {
@@ -624,14 +624,14 @@ function e8(e) {
                         children: (0, l.jsxs)(L.A, {
                             user: i,
                             displayProfile: Y,
-                            themeType: e9.d.MODAL,
+                            themeType: e2.d.MODAL,
                             children: [
                                 (0, l.jsx)(_.A, {
                                     children: (0, l.jsx)(D.A, { user: i, guildId: H, viewProfileItem: ee }),
                                 }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(T.A, { user: i, displayProfile: Y, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(T.A, { user: i, displayProfile: Y, themeType: e2.d.MODAL }),
                                         (0, l.jsxs)("div", {
                                             className: e6.El,
                                             children: [
@@ -640,14 +640,14 @@ function e8(e) {
                                                     displayProfile: Y,
                                                     guildId: H,
                                                     channelId: r,
-                                                    avatarSize: e2.T[e9.d.MODAL].avatarSize,
+                                                    avatarSize: e9.T[e2.d.MODAL].avatarSize,
                                                     onOpenAvatar: K,
                                                 }),
                                                 (0, l.jsx)(k.A, {
                                                     user: i,
                                                     guildId: H,
                                                     channelId: r,
-                                                    themeType: e9.d.MODAL,
+                                                    themeType: e2.d.MODAL,
                                                     hasEntered: B === j.ip.ENTERED,
                                                     onCloseProfile: z,
                                                     disableToolbar: !0,
@@ -692,7 +692,7 @@ function e8(e) {
                                             pronouns: Y?.pronouns,
                                             trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: Y,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e2.d.MODAL,
                                                 onClose: z,
                                             }),
                                         }),
@@ -775,13 +775,13 @@ function is(e) {
                         children: (0, l.jsxs)(L.A, {
                             user: i,
                             displayProfile: y,
-                            themeType: e9.d.MODAL,
+                            themeType: e2.d.MODAL,
                             ref: y?.profileEffect != null ? k : void 0,
                             children: [
                                 (0, l.jsx)(_.A, { children: (0, l.jsx)(ii.A, { user: i }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
-                                        (0, l.jsx)(T.A, { user: i, displayProfile: y, themeType: e9.d.MODAL }),
+                                        (0, l.jsx)(T.A, { user: i, displayProfile: y, themeType: e2.d.MODAL }),
                                         (0, l.jsx)("div", {
                                             className: e6.El,
                                             children: (0, l.jsx)(O.A, {
@@ -789,7 +789,7 @@ function is(e) {
                                                 displayProfile: y,
                                                 guildId: I,
                                                 channelId: t,
-                                                avatarSize: e2.T[e9.d.MODAL].avatarSize,
+                                                avatarSize: e9.T[e2.d.MODAL].avatarSize,
                                                 onOpenAvatar: R,
                                             }),
                                         }),
@@ -807,22 +807,22 @@ function is(e) {
                                             pronouns: y?.pronouns,
                                             trailing: (0, l.jsx)(S.A, {
                                                 displayProfile: y,
-                                                themeType: e9.d.MODAL,
+                                                themeType: e2.d.MODAL,
                                                 onClose: u,
                                             }),
                                         }),
                                         (0, l.jsxs)("div", {
-                                            className: e5.kL,
+                                            className: e7.kL,
                                             children: [
                                                 (0, l.jsx)(B.V, {
-                                                    className: e5.$H,
+                                                    className: e7.$H,
                                                     type: "top",
                                                     selectedItem: ex.RP.BOT_INFO,
                                                     onItemSelect: eg.tEg,
                                                     children: (0, l.jsx)(
                                                         B.V.Item,
                                                         {
-                                                            className: e5.YU,
+                                                            className: e7.YU,
                                                             id: ex.RP.BOT_INFO,
                                                             "aria-label": Q.intl.string(Q.t.ZzAR2Y),
                                                             children: (0, l.jsx)(V.E, {
@@ -923,7 +923,7 @@ function ip(e) {
                     className: it()(im.A7, iI.BK),
                     user: i,
                     displayProfile: y,
-                    themeType: e9.d.MODAL_V2,
+                    themeType: e2.d.MODAL_V2,
                     children: [
                         (0, l.jsx)("div", { className: im.Oo, children: (0, l.jsx)(ij.A, { onClose: c }) }),
                         (0, l.jsx)("div", { className: iI.Tp }),
@@ -998,7 +998,7 @@ function ip(e) {
         }),
     });
 }
-var ig = s(838139);
+var ig = s(874720);
 function iN(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: A } = s,

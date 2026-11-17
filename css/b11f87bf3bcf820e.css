@@ -1,3 +1,13 @@
+.button_zNz-f1 {
+    color: var(--text-subtle);
+    cursor: pointer
+}
+
+.button_zNz-f1:hover {
+    color: var(--text-strong);
+    text-decoration: underline
+}
+
 .cardList_JPOF3d {
     align-items: stretch;
     display: flex;
@@ -161,4 +171,4 @@
     margin-top: 4px
 }
 
-/*# sourceMappingURL=60c8d8c9b5a8edda.css.map*/
+/*# sourceMappingURL=b11f87bf3bcf820e.css.map*/

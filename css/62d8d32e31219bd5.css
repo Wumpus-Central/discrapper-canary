@@ -1,0 +1,49 @@
+.container_mf_FwS {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    min-width: 0;
+    overflow: hidden
+}
+
+.row_mf_FwS {
+    display: contents
+}
+
+.measure_mf_FwS {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+    width: -moz-max-content;
+    width: max-content
+}
+
+.overflowButton_mf_FwS {}
+
+.overflowPopout_mf_FwS {
+    background: var(--background-surface-highest);
+    border-radius: var(--radius-md);
+    box-shadow: var(--elevation-high);
+    max-height: 320px;
+    overflow-y: auto;
+    padding: var(--space-16);
+    width: 280px
+}
+
+.overflowList_mf_FwS {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space-4)
+}
+
+.overflowRow_mf_FwS {
+    gap: var(--space-8)
+}
+
+/*# sourceMappingURL=62d8d32e31219bd5.css.map*/

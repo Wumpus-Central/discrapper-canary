@@ -4,18 +4,18 @@ var i = n(192308),
     s = n(857512),
     a = n(4227),
     l = n(466459);
-let u = "collectibles shop product details modal";
+let o = "collectibles shop product details modal";
 n.d(
     t,
     {},
     {
         M: function () {
-            (0, i.Oo)(u);
+            (0, i.Oo)(o);
         },
         t: (e) => {
             let {
                 product: t,
-                category: o,
+                category: u,
                 analyticsSource: d,
                 analyticsLocations: c,
                 returnRef: I,
@@ -44,7 +44,7 @@ n.d(
                         n.e(411938),
                         n.e(198496),
                         n.e(77413),
-                        n.e(166171),
+                        n.e(521332),
                         n.e(267526),
                         n.e(669174),
                         n.e(967062),
@@ -190,8 +190,6 @@ n.d(
                         n.e(572963),
                         n.e(70833),
                         n.e(897073),
-                        n.e(161275),
-                        n.e(761253),
                         n.e(401518),
                         n.e(166495),
                         n.e(362274),
@@ -201,17 +199,19 @@ n.d(
                         n.e(139970),
                         n.e(173764),
                         n.e(940258),
+                        n.e(161275),
                         n.e(830221),
-                        n.e(858164),
+                        n.e(761253),
                         n.e(521930),
                         n.e(357688),
                         n.e(308555),
                         n.e(857467),
-                        n.e(977547),
                         n.e(508371),
+                        n.e(858164),
                         n.e(142867),
                         n.e(885434),
                         n.e(586127),
+                        n.e(977547),
                         n.e(96539),
                         n.e(179049),
                         n.e(495786),
@@ -346,11 +346,11 @@ n.d(
                         n.e(603808),
                         n.e(220287),
                         n.e(935948),
+                        n.e(562168),
                         n.e(349644),
                         n.e(215920),
                         n.e(118917),
                         n.e(698547),
-                        n.e(562168),
                         n.e(355949),
                         n.e(757598),
                         n.e(172883),
@@ -470,7 +470,7 @@ n.d(
                             children: (0, r.jsx)(e, {
                                 ...n,
                                 product: t,
-                                category: o,
+                                category: u,
                                 analyticsSource: d,
                                 analyticsLocations: c,
                                 returnRef: I,
@@ -480,7 +480,7 @@ n.d(
                             }),
                         });
                 },
-                { modalKey: u },
+                { modalKey: o },
             );
         },
     },

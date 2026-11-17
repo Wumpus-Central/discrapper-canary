@@ -6,29 +6,27 @@ var n = i(477900),
 function o() {
     return [{ name: r.intl.string(r.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
 }
-function p(e, t) {
+function p(e, t, i) {
     if (null != e) {
-        let i = new FileReader();
-        ((i.onload = (i) => {
-            "string" == typeof i.target?.result && t(i.target.result, e);
+        let n = new FileReader();
+        ((n.onload = (n) => {
+            "string" == typeof n.target?.result &&
+                ((n) => {
+                    if (e.type === l.a.MP4) return t(n, e);
+                    let a = new Image();
+                    ((a.src = n),
+                        (a.onload = () => {
+                            t(n, e);
+                        }),
+                        (a.onerror = () => {
+                            i();
+                        }));
+                })(n.target.result);
         }),
-            i.readAsDataURL(e));
+            n.readAsDataURL(e));
     }
 }
-function h(e, t, i) {
-    p(e, (n) => {
-        if (e.type === l.a.MP4) return t(n, e);
-        let a = new Image();
-        ((a.src = n),
-            (a.onload = () => {
-                t(n, e);
-            }),
-            (a.onerror = () => {
-                i();
-            }));
-    });
-}
-class d extends a.PureComponent {
+class h extends a.PureComponent {
     _ref = a.createRef();
     _isMounted = !1;
     static defaultProps = { multiple: !0, tabIndex: -1, maxFileSizeBytes: 1 / 0 };
@@ -44,7 +42,7 @@ class d extends a.PureComponent {
                     t?.(i, a.size);
                     continue;
                 }
-                h(a, this.handleFileRead, this.handleFileError);
+                p(a, this.handleFileRead, this.handleFileError);
             }
     };
     activateUploadDialogue() {
@@ -90,4 +88,4 @@ class d extends a.PureComponent {
         });
     }
 }
-i.d(t, {}, { AM: p, Ay: d, JF: h, gA: o });
+i.d(t, {}, { Ay: h, JF: p, gA: o });

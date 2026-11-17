@@ -9,7 +9,6 @@ v.exports = {
     As: "imageDisabled_tvT5v- image_tvT5v-",
     _h: "overlayAvatar_tvT5v- overlay_tvT5v-",
     $A: "overlayGuildIcon_tvT5v- overlay_tvT5v-",
-    j9: "overlayPersonalWidgetField_tvT5v- overlay_tvT5v-",
     rn: "overlayBanner_tvT5v- overlay_tvT5v-",
     bK: "toolsContainer_tvT5v-",
     mu: "zoomControls_tvT5v-",
