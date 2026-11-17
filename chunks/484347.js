@@ -2239,7 +2239,9 @@ function tz(e) {
             "aria-label": (0, I.cq)(t),
             className: tP.V,
             onBlur: (e) => {
-                e.currentTarget.contains(e.relatedTarget) || eX({ hoveredOption: void 0 });
+                e.currentTarget.contains(e.relatedTarget) ||
+                    e.currentTarget.matches(":hover") ||
+                    eX({ hoveredOption: void 0 });
             },
             children: a.map((e) =>
                 (0, i.jsx)(
