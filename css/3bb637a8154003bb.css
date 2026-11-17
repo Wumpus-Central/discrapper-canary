@@ -55,13 +55,13 @@
 }
 
 .page_4JoJic {
-    background-color: var(--background-surface-high);
-    box-sizing: border-box
+    background-color: var(--background-surface-high)
 }
 
 .contentWrapper_4JoJic,
 .page_4JoJic {
     align-items: center;
+    box-sizing: border-box;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -116,4 +116,4 @@
     object-fit: cover
 }
 
-/*# sourceMappingURL=7997e94c0cbbe74d.css.map*/
+/*# sourceMappingURL=3bb637a8154003bb.css.map*/
