@@ -3,7 +3,7 @@ var i = n(839214),
     a = n(523754);
 let s = Object.freeze({ searchGenres: [], searchPlatforms: [], searchPage: 1 }),
     l = Object.freeze({ searchQuery: "", submittedQuery: "", ...s }),
-    o = Object.freeze({ selectedView: a.y.FEATURED, searchBarState: r.Um.DEFAULT, ...l }),
+    o = Object.freeze({ selectedView: a.yR.FEATURED, searchBarState: r.Um.DEFAULT, ...l }),
     d = (0, i.D)(() => o);
 n.d(
     t,

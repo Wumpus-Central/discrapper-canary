@@ -1,37 +1,39 @@
 var a = t(582128),
     i = t(855986),
-    l = t(429913),
-    r = t(403362),
-    o = t(311043),
-    u = t(454908);
+    l = t(587895),
+    r = t(429913),
+    o = t(403362),
+    d = t(311043),
+    s = t(454908);
 t.d(
     n,
     {},
     {
         Ay: function (e) {
-            let n = (0, l.h)(e),
+            let n = (0, r.h)(e),
                 t = null != e && null == n,
                 a = n?.getCanonicalGameId() ?? null,
-                { data: i, isLoading: r } = (0, u.I)(a);
-            return { gameId: a, gameRecord: i ?? null, isLoading: t || r };
+                { data: i, isLoading: l } = (0, s.I)(a);
+            return { gameId: a, gameRecord: i ?? null, isLoading: t || l };
         },
         iE: function (e) {
-            let n = (0, l.A)(e),
-                t = a.useMemo(() => n.map((e) => e?.getCanonicalGameId() ?? null), [n]),
-                d = a.useMemo(() => t.filter(r.Vq), [t]);
-            (0, u.x)(d);
-            let s = (0, i.yK)([o.A], () => t.map((e) => o.A.getGame(e) ?? null), [t]),
-                c = (0, i.yK)(
-                    [o.A],
+            let n = (0, r.A)(e),
+                t = (0, i.yK)([l.A], () => e.map((e) => !l.A.isHydrated(e) && !l.A.didFetchingApplicationFail(e)), [e]),
+                u = a.useMemo(() => n.map((e) => e?.getCanonicalGameId() ?? null), [n]),
+                c = a.useMemo(() => u.filter(o.Vq), [u]);
+            (0, s.x)(c);
+            let g = (0, i.yK)([d.A], () => u.map((e) => d.A.getGame(e) ?? null), [u]),
+                f = (0, i.yK)(
+                    [d.A],
                     () =>
-                        t.map(
-                            (e) => null != e && null == o.A.getGame(e) && !o.A.hasNoData(e) && !o.A.didFetchingFail(e),
+                        u.map(
+                            (e) => null != e && null == d.A.getGame(e) && !d.A.hasNoData(e) && !d.A.didFetchingFail(e),
                         ),
-                    [t],
+                    [u],
                 );
             return a.useMemo(
-                () => n.map((e, n) => ({ gameId: t[n], gameRecord: s[n], isLoading: null == e || c[n] })),
-                [n, t, s, c],
+                () => u.map((e, n) => ({ gameId: e, gameRecord: g[n], isLoading: t[n] || f[n] })),
+                [u, g, t, f],
             );
         },
     },

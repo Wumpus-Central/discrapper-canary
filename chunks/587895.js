@@ -160,7 +160,8 @@ let N = new S(r.h, {
         return n;
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
-        let { applications: t, isHydrated: n } = e;
+        let { applications: t, isHydrated: n, unknownApplicationIds: i } = e;
+        for (let e of i ?? []) _.set(e, !1);
         for (let e of t) (!0 === n && E.add(e.id), f(a.Ay.createFromServer(e)));
     },
     APPLICATIONS_FETCH_FAIL: function (e) {
