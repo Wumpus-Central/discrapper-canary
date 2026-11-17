@@ -9681,6 +9681,7 @@ let oT = {
                         fullPrice: "$9.99",
                         discountedPrice: void 0,
                         planId: "511651880837840896",
+                        isPremiumGroupContinuation: !1,
                         paymentsBlocked: !1,
                         renewalInvoice: null,
                         renewalInvoiceDetails: null,

@@ -12,6 +12,7 @@ let a = i.createContext({
     confettiCanvas: null,
     churnUserDiscountOffer: null,
     isFetchingChurnDiscountOffer: !1,
+    isPremiumGroupContinuation: !1,
     paymentsBlocked: !1,
     renewalInvoice: null,
     renewalInvoiceDetails: null,

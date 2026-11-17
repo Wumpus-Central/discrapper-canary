@@ -6149,6 +6149,18 @@
     }
   },
   {
+    "name": "2026-11-premium-group-continuation-40",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "name": "2026-11-profile-embed-rendering-mobile",
     "kind": "user",
     "defaultConfig": {
