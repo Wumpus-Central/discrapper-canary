@@ -1,7 +1,7 @@
 var a = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
     i = n(195118),
     o = n(208756),
     d = n(31188),
@@ -27,52 +27,52 @@ function E(e) {
     let {
             title: t,
             body: n,
-            graphic: l,
+            graphic: r,
             size: u = "md",
             actions: m,
             gradientColor: E,
             onRequestClose: h,
             position: b,
             caretConfig: x,
-            scrollBehavior: A,
-            showCloseButton: _ = !0,
+            scrollBehavior: _,
+            showCloseButton: A = !0,
             isCaretHoverable: N = !1,
-            shouldTrapFocus: R = !1,
-            returnRef: v,
+            shouldTrapFocus: v = !1,
+            returnRef: R,
             onNudgeChange: j,
             ...y
         } = e,
-        [I, T] = r.useState(b ?? "top");
-    r.useEffect(() => {
+        [I, T] = l.useState(b ?? "top");
+    l.useEffect(() => {
         null != b && T(b);
     }, [b]);
-    let C = r.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
-        S = r.useCallback(() => {
+    let S = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
+        C = l.useCallback(() => {
             h?.();
         }, [h]),
-        D = r.useCallback(
+        D = l.useCallback(
             (e) => {
                 h?.(e);
             },
             [h],
         ),
-        O = r.useCallback((e) => {
+        M = l.useCallback((e) => {
             T(e);
         }, []),
-        M = N ? g.caretHoverable : void 0,
+        O = N ? g.caretHoverable : void 0,
         P = {
             targetElementRef: y.targetElementRef,
             shouldShow: y.shouldShow,
             hasVideo: y.hasVideo,
             position: I,
-            caretConfig: C,
-            onRequestClose: S,
+            caretConfig: S,
+            onRequestClose: C,
             gradientColor: E,
-            onPositionChange: O,
+            onPositionChange: M,
             onNudgeChange: j,
-            scrollBehavior: A,
-            modal: R,
-            returnRef: v,
+            scrollBehavior: _,
+            modal: v,
+            returnRef: R,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
             ...("edge" === y.alignmentStrategy
@@ -84,18 +84,18 @@ function E(e) {
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                _ && (0, a.jsx)(c.q, { onClick: D, variant: null != E ? "color-mix" : void 0 }),
-                null != l &&
+                A && (0, a.jsx)(c.q, { onClick: D, variant: null != E ? "color-mix" : void 0 }),
+                null != r &&
                     (0, a.jsx)("div", {
                         className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(f.v, {
-                            ...l,
-                            aspectRatio: l.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
+                            ...r,
+                            aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: M }),
+                null != S && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });

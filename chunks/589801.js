@@ -1,4 +1,4 @@
-e.exports = {
+l.exports = {
     Os: "group_3lradj",
     as: "large_3lradj",
     EX: "small_3lradj",

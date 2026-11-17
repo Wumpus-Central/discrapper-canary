@@ -4,9 +4,9 @@ var i = n(721207),
     a = n.n(o),
     s = n(830845),
     c = n(258635),
-    u = n(542113),
-    l = n(353719),
-    h = n.n(l);
+    l = n(542113),
+    u = n(353719),
+    h = n.n(u);
 (n(53635), n(725664), n(833871));
 var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : void 0 !== n.g ? n.g : {},
     d =
@@ -68,7 +68,7 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
                     );
                 })(r.Component);
             (((n = {})[s] = a().object.isRequired), (c.childContextTypes = n));
-            var u = (function (e) {
+            var l = (function (e) {
                 function n() {
                     for (var t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
                     return (
@@ -105,7 +105,7 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
                     n
                 );
             })(r.Component);
-            return (((o = {})[s] = a().object), (u.contextTypes = o), { Provider: c, Consumer: u });
+            return (((o = {})[s] = a().object), (l.contextTypes = o), { Provider: c, Consumer: l });
         },
     p = function (t) {
         var e = d();
@@ -113,7 +113,7 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
     },
     g = p("Router-History"),
     m = p("Router"),
-    v = (function (t) {
+    _ = (function (t) {
         function e(e) {
             var n;
             return (
@@ -164,7 +164,7 @@ var f = "u" > typeof globalThis ? globalThis : "u" > typeof window ? window : vo
         );
     })(r.Component);
 r.Component;
-var y = (function (t) {
+var v = (function (t) {
         function e() {
             return t.apply(this, arguments) || this;
         }
@@ -186,7 +186,7 @@ var y = (function (t) {
             e
         );
     })(r.Component),
-    _ = {},
+    y = {},
     w = 0;
 function b(t, e) {
     return (
@@ -195,15 +195,15 @@ function b(t, e) {
         "/" === t
             ? t
             : (function (t) {
-                  if (_[t]) return _[t];
+                  if (y[t]) return y[t];
                   var e = h().compile(t);
-                  return (w < 1e4 && ((_[t] = e), w++), e);
+                  return (w < 1e4 && ((y[t] = e), w++), e);
               })(t)(e, { pretty: !0 })
     );
 }
 var x = {},
     E = 0;
-function A(t, e) {
+function T(t, e) {
     (void 0 === e && (e = {}), ("string" == typeof e || Array.isArray(e)) && (e = { path: e }));
     var n = e,
         i = n.path,
@@ -212,7 +212,7 @@ function A(t, e) {
         a = n.strict,
         s = void 0 !== a && a,
         c = n.sensitive,
-        u = void 0 !== c && c;
+        l = void 0 !== c && c;
     return [].concat(i).reduce(function (e, n) {
         if (!n && "" !== n) return null;
         if (e) return e;
@@ -223,19 +223,19 @@ function A(t, e) {
                 var r = [],
                     o = { regexp: h()(t, r, e), keys: r };
                 return (E < 1e4 && ((i[t] = o), E++), o);
-            })(n, { end: o, strict: s, sensitive: u }),
+            })(n, { end: o, strict: s, sensitive: l }),
             r = i.regexp,
             a = i.keys,
             c = r.exec(t);
         if (!c) return null;
-        var l = c[0],
+        var u = c[0],
             f = c.slice(1),
-            d = t === l;
+            d = t === u;
         return o && !d
             ? null
             : {
                   path: n,
-                  url: "/" === n && "" === l ? "/" : l,
+                  url: "/" === n && "" === u ? "/" : u,
                   isExact: d,
                   params: a.reduce(function (t, e, n) {
                       return ((t[e.name] = f[n]), t);
@@ -243,7 +243,7 @@ function A(t, e) {
               };
     }, null);
 }
-var T = (function (t) {
+var A = (function (t) {
     function e() {
         return t.apply(this, arguments) || this;
     }
@@ -255,29 +255,29 @@ var T = (function (t) {
                 e || (0, c.A)(!1);
                 var n,
                     i = t.props.location || e.location,
-                    o = t.props.computedMatch ? t.props.computedMatch : t.props.path ? A(i.pathname, t.props) : e.match,
-                    a = (0, u.A)({}, e, { location: i, match: o }),
+                    o = t.props.computedMatch ? t.props.computedMatch : t.props.path ? T(i.pathname, t.props) : e.match,
+                    a = (0, l.A)({}, e, { location: i, match: o }),
                     s = t.props,
-                    l = s.children,
+                    u = s.children,
                     h = s.component,
                     f = s.render;
                 return (
-                    Array.isArray(l) && ((n = l), 0 === r.Children.count(n)) && (l = null),
+                    Array.isArray(u) && ((n = u), 0 === r.Children.count(n)) && (u = null),
                     r.createElement(
                         m.Provider,
                         { value: a },
                         a.match
-                            ? l
-                                ? "function" == typeof l
-                                    ? l(a)
-                                    : l
+                            ? u
+                                ? "function" == typeof u
+                                    ? u(a)
+                                    : u
                                 : h
                                   ? r.createElement(h, a)
                                   : f
                                     ? f(a)
                                     : null
-                            : "function" == typeof l
-                              ? l(a)
+                            : "function" == typeof u
+                              ? u(a)
                               : null,
                     )
                 );
@@ -305,7 +305,7 @@ var S = (function (t) {
                             if (null == i && r.isValidElement(t)) {
                                 n = t;
                                 var a = t.props.path || t.props.from;
-                                i = a ? A(o.pathname, (0, u.A)({}, t.props, { path: a })) : e.match;
+                                i = a ? T(o.pathname, (0, l.A)({}, t.props, { path: a })) : e.match;
                             }
                         }),
                         i ? r.cloneElement(n, { location: o, computedMatch: i }) : null
@@ -315,31 +315,31 @@ var S = (function (t) {
             e
         );
     })(r.Component),
-    R = r.useContext;
-function C() {
-    return R(m).location;
+    P = r.useContext;
+function R() {
+    return P(m).location;
 }
 n.d(
     e,
     {},
     {
-        B6: A,
-        Ix: v,
+        B6: T,
+        Ix: _,
         W5: function (t) {
-            var e = C(),
-                n = R(m).match;
-            return t ? A(e.pathname, t) : n;
+            var e = R(),
+                n = P(m).match;
+            return t ? T(e.pathname, t) : n;
         },
         W6: function () {
-            return R(g);
+            return P(g);
         },
         XZ: m,
         dO: S,
         g: function () {
-            var t = R(m).match;
+            var t = P(m).match;
             return t ? t.params : {};
         },
-        qh: T,
+        qh: A,
         rd: function (t) {
             var e = t.computedMatch,
                 n = t.to,
@@ -349,28 +349,28 @@ n.d(
                 t || (0, c.A)(!1);
                 var i = t.history,
                     a = t.staticContext,
-                    l = o ? i.push : i.replace,
+                    u = o ? i.push : i.replace,
                     h = (0, s.yJ)(
                         e
                             ? "string" == typeof n
                                 ? b(n, e.params)
-                                : (0, u.A)({}, n, { pathname: b(n.pathname, e.params) })
+                                : (0, l.A)({}, n, { pathname: b(n.pathname, e.params) })
                             : n,
                     );
                 return a
-                    ? (l(h), null)
-                    : r.createElement(y, {
+                    ? (u(h), null)
+                    : r.createElement(v, {
                           onMount: function () {
-                              l(h);
+                              u(h);
                           },
                           onUpdate: function (t, e) {
                               var n = (0, s.yJ)(e.to);
-                              (0, s.Fu)(n, (0, u.A)({}, h, { key: n.key })) || l(h);
+                              (0, s.Fu)(n, (0, l.A)({}, h, { key: n.key })) || u(h);
                           },
                           to: n,
                       });
             });
         },
-        zy: C,
+        zy: R,
     },
 );

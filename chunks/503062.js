@@ -10,8 +10,8 @@ var i = n(477900),
     g = n(442433),
     f = n(297413),
     m = n(714114),
-    p = n(342312),
-    h = n(178418),
+    h = n(342312),
+    p = n(178418),
     x = n(87664),
     A = n(449582),
     I = n(88686),
@@ -26,15 +26,15 @@ var i = n(477900),
     k = n(792996),
     T = n(135650);
 let P = o._3.SIZE_40,
-    O = y.Ay.getEnableHardwareAcceleration();
+    R = y.Ay.getEnableHardwareAcceleration();
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { user: t, status: r, guildId: o, channelId: y, onSelect: R } = e,
+            let { user: t, status: r, guildId: o, channelId: y, onSelect: O } = e,
                 { theme: L, themeType: _ } = (0, E.E)(),
-                w = l.useMemo(() => t.isNonUserBot() || (0, h.c)(t, y), [t, y]),
+                w = l.useMemo(() => t.isNonUserBot() || (0, p.c)(t, y), [t, y]),
                 { activities: M, isMobileOnline: D } = (0, a.cf)([j.A], () => ({
                     activities: j.A.getActivities(t.id),
                     isMobileOnline: j.A.isMobileOnline(t.id),
@@ -47,7 +47,7 @@ n.d(
                     avatarDecorationSrc: V,
                     eventHandlers: H,
                 } = (0, C.A)({ userId: t.id, guildId: o, size: P, animateOnHover: !F }),
-                z = O ? u.Js : u.eu,
+                z = R ? u.Js : u.eu,
                 Y = l.useRef(null),
                 K = l.useId(),
                 q = (0, A.r)({ user: t, guildId: o }),
@@ -66,7 +66,7 @@ n.d(
                 className: s()(T.nM, { [T.EY]: null != q }),
                 "aria-label": $,
                 "aria-describedby": K,
-                onClick: R,
+                onClick: O,
                 onContextMenu: function (e) {
                     (0, g.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -120,7 +120,7 @@ n.d(
                                     }),
                                     (0, i.jsx)("div", {
                                         id: K,
-                                        children: (0, i.jsx)(p.A, {
+                                        children: (0, i.jsx)(h.A, {
                                             user: t,
                                             activities: M,
                                             applicationStream: G,

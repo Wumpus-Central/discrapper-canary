@@ -1,7 +1,7 @@
 var a = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
     i = n(120692),
     o = n(855986),
     d = n(866323),
@@ -19,20 +19,20 @@ n.d(
             let {
                     preventsPopoutDismiss: t,
                     isVisible: n,
-                    labelId: l,
+                    labelId: r,
                     noticeText: E,
                     primaryAction: h,
                     secondaryAction: b,
                     isEmphasized: x = !1,
-                    a11yAnnounceOnShow: A,
-                    a11yAnnounceOnHide: _,
+                    a11yAnnounceOnShow: _,
+                    a11yAnnounceOnHide: A,
                 } = e,
                 N = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
-                R = r.useRef(null);
+                v = l.useRef(null);
             return (
-                r.useEffect(
+                l.useEffect(
                     () => () => {
-                        null != R.current && clearTimeout(R.current);
+                        null != v.current && clearTimeout(v.current);
                     },
                     [],
                 ),
@@ -42,13 +42,13 @@ n.d(
                     leave: { opacity: 0, y: 80 * !N },
                     onRest: (e, t) => {
                         if (!e.finished) return;
-                        let n = t.item ? A : _;
-                        (null != R.current && clearTimeout(R.current),
+                        let n = t.item ? _ : A;
+                        (null != v.current && clearTimeout(v.current),
                             null != n
-                                ? (R.current = setTimeout(() => {
-                                      ((R.current = null), c.O.announce(n));
+                                ? (v.current = setTimeout(() => {
+                                      ((v.current = null), c.O.announce(n));
                                   }, 300))
-                                : (R.current = null));
+                                : (v.current = null));
                     },
                 })((e, n) =>
                     n
@@ -57,12 +57,12 @@ n.d(
                               children: (0, a.jsxs)("footer", {
                                   ...(!0 === t ? { [p]: "" } : null),
                                   className: s()(g.Qs, { [g.hO]: x }),
-                                  "aria-labelledby": l,
+                                  "aria-labelledby": r,
                                   children: [
                                       (0, a.jsx)(u.E, {
                                           variant: "body-sm/normal",
                                           color: "none",
-                                          id: l,
+                                          id: r,
                                           className: g.ut,
                                           children: E,
                                       }),

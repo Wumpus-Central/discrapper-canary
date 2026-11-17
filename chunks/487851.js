@@ -1,13 +1,13 @@
-s.d(
-    e,
+n.d(
+    t,
     {},
     {
-        h: function t(e, s, i = 2) {
-            if (!s || "object" != typeof s || i <= 0) return s;
-            if (e && s && 0 === Object.keys(s).length) return e;
-            let n = { ...e };
-            for (let e in s) Object.prototype.hasOwnProperty.call(s, e) && (n[e] = t(n[e], s[e], i - 1));
-            return n;
+        h: function e(t, n, r = 2) {
+            if (!n || "object" != typeof n || r <= 0) return n;
+            if (t && n && 0 === Object.keys(n).length) return t;
+            let i = { ...t };
+            for (let t in n) Object.prototype.hasOwnProperty.call(n, t) && (i[t] = e(i[t], n[t], r - 1));
+            return i;
         },
     },
 );

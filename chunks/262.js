@@ -1,6 +1,6 @@
 var a = n(164636),
-    r = n(253932),
-    l = n(351906),
+    l = n(253932),
+    r = n(351906),
     s = n(287809),
     i = n(792996);
 let o = "legacy_username";
@@ -9,9 +9,9 @@ n.d(
     {},
     {
         A: function (e, t) {
-            let n = r.m$.useSetting(),
+            let n = l.m$.useSetting(),
                 d = (0, a.bG)([s.default], () => s.default.getCurrentUser()),
-                c = (0, a.bG)([l.A], () => l.A.hidePersonalInformation);
+                c = (0, a.bG)([r.A], () => r.A.hidePersonalInformation);
             if (null == e) return [];
             let u = e?.getBadges() ?? [];
             return (

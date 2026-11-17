@@ -1,15 +1,15 @@
-var i = s(978862);
-function n(t) {
-    let e = (t.__SENTRY__ = t.__SENTRY__ || {});
-    return ((e.version = e.version || "8.55.0"), (e["8.55.0"] = e["8.55.0"] || {}));
+var r = n(978862);
+function i(e) {
+    let t = (e.__SENTRY__ = e.__SENTRY__ || {});
+    return ((t.version = t.version || "8.55.0"), (t["8.55.0"] = t["8.55.0"] || {}));
 }
-s.d(
-    e,
+n.d(
+    t,
     {},
     {
         E: function () {
-            return (n(i.O), i.O);
+            return (i(r.O), r.O);
         },
-        S: n,
+        S: i,
     },
 );

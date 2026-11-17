@@ -1,6 +1,6 @@
 var a = n(582128),
-    r = n(855986),
-    l = n(287809),
+    l = n(855986),
+    r = n(287809),
     s = n(982240),
     i = n(988341),
     o = n(234e3),
@@ -11,8 +11,8 @@ n.d(
     {},
     {
         A: function () {
-            let e = l.default.getCurrentUser()?.id,
-                t = (0, r.yK)([s.Ay], () => (null == e ? [] : s.Ay.getBadges(e)), [e]),
+            let e = r.default.getCurrentUser()?.id,
+                t = (0, l.yK)([s.Ay], () => (null == e ? [] : s.Ay.getBadges(e)), [e]),
                 { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: u } = (0, c.A)(),
                 m = a.useMemo(
                     () => (0, i.Cw)((0, o.S0)(t, { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: u })),
@@ -27,8 +27,8 @@ n.d(
                         }),
                         n = new Set(t.map((e) => e.badge_id)),
                         a = m.hiddenBadges.filter((e) => !n.has(e.badge_id)),
-                        r = [...t, ...a];
-                    return { hiddenBadges: r, nextHiddenOrder: r.map((e) => e.badge_id) };
+                        l = [...t, ...a];
+                    return { hiddenBadges: l, nextHiddenOrder: l.map((e) => e.badge_id) };
                 }, [m.hiddenBadges, f]);
             return (
                 a.useEffect(() => {

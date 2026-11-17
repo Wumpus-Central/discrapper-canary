@@ -1,38 +1,38 @@
-e.r(i);
-var s = e(477900);
-e(582128);
-var r = e(646514),
-    l = e(996682),
-    h = e(27989);
-e.d(
-    i,
+i.r(t);
+var n = i(477900);
+i(582128);
+var l = i(646514),
+    r = i(996682),
+    a = i(27989);
+i.d(
+    t,
     {},
     {
-        ExperimentalCommonIcon: function (t) {
+        ExperimentalCommonIcon: function (e) {
             let {
-                    size: i = "md",
-                    width: e,
-                    height: n,
-                    color: c = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-                    colorClass: o = "",
-                    ...a
-                } = t,
-                w = (0, h.J)(i),
-                d = w?.width ?? e,
-                g = w?.height ?? n;
-            return (0, s.jsx)("svg", {
-                ...(0, l.A)(a),
+                    size: t = "md",
+                    width: i,
+                    height: s,
+                    color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    colorClass: c = "",
+                    ...d
+                } = e,
+                h = (0, a.J)(t),
+                g = h?.width ?? i,
+                f = h?.height ?? s;
+            return (0, n.jsx)("svg", {
+                ...(0, r.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: d,
-                height: g,
+                width: g,
+                height: f,
                 fill: "none",
                 viewBox: "0 0 24 24",
-                children: (0, s.jsx)("circle", {
+                children: (0, n.jsx)("circle", {
                     cx: "12",
                     cy: "12",
                     r: "10",
-                    fill: "string" == typeof c ? c : c.css,
-                    className: o,
+                    fill: "string" == typeof o ? o : o.css,
+                    className: c,
                 }),
             });
         },

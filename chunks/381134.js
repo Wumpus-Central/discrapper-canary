@@ -1,4 +1,4 @@
-i.exports = {
+t.exports = {
     Tc: "tag_J5YRE1",
     e8: "rarity-common_J5YRE1",
     mk: "rarity-epic_J5YRE1",

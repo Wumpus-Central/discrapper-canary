@@ -70,24 +70,24 @@ let m = {
                 iconClassName: d,
                 icon: A,
                 children: b,
-                onClick: p,
-                onDoubleClick: I,
-                isActive: h,
+                onClick: h,
+                onDoubleClick: p,
+                isActive: I,
                 onMouseEnter: T,
                 onMouseLeave: k,
                 onFocus: N,
-                onBlur: j,
-                pulse: _,
+                onBlur: _,
+                pulse: j,
                 sparkle: x,
                 notification: v,
                 "aria-label": R,
-                "aria-expanded": y,
-                "aria-haspopup": G,
+                "aria-expanded": G,
+                "aria-haspopup": y,
                 "aria-controls": M,
                 "aria-keyshortcuts": S,
-                noHover: O,
+                noHover: E,
             } = e,
-            E = (0, s.p)(null != b, { ...m, keys: (e) => (e ? "children" : "icon") });
+            O = (0, s.p)(null != b, { ...m, keys: (e) => (e ? "children" : "icon") });
         function D(e) {
             let { component: n } = e;
             return null != v
@@ -109,22 +109,22 @@ let m = {
         return (0, i.jsxs)(u.D, {
             innerRef: n,
             "aria-label": R,
-            "aria-expanded": y,
-            "aria-haspopup": G,
+            "aria-expanded": G,
+            "aria-haspopup": y,
             "aria-controls": M,
             "aria-keyshortcuts": S,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: r()(t, C.x6, { [C.vu]: h, [C.CK]: O, [C.s0]: _, [C.r9]: l }),
-            onClick: l ? void 0 : p,
-            onDoubleClick: l ? void 0 : I,
+            className: r()(t, C.x6, { [C.vu]: I, [C.CK]: E, [C.s0]: j, [C.r9]: l }),
+            onClick: l ? void 0 : h,
+            onDoubleClick: l ? void 0 : p,
             onMouseEnter: T,
             onMouseLeave: k,
             onFocus: N,
-            onBlur: j,
+            onBlur: _,
             focusProps: { offset: { top: 4, bottom: 4 } },
             children: [
-                E((e, n, t) => {
+                O((e, n, t) => {
                     let { key: l } = t;
                     return n
                         ? (0, i.jsx)(
@@ -140,7 +140,7 @@ let m = {
                                     className: r()(C._o, a),
                                     children: D({
                                         component: (0, i.jsx)(A, {
-                                            className: r()(C.Kk, d, { [C.d1]: _ }),
+                                            className: r()(C.Kk, d, { [C.d1]: j }),
                                             color: "currentColor",
                                         }),
                                     }),

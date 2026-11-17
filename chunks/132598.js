@@ -187,12 +187,12 @@ var k = n(866665),
     B = n(939249),
     F = n(789645),
     W = n(821609),
-    K = n(47167),
-    z = n(485947),
+    z = n(47167),
+    K = n(485947),
     Y = n(61916),
     X = n(223863),
-    J = n(994500),
-    $ = n(287809),
+    $ = n(994500),
+    J = n(287809),
     q = n(427262),
     Z = n(487470);
 function Q(e) {
@@ -209,7 +209,7 @@ function Q(e) {
                           (0, l.jsxs)("div", {
                               className: Z.wx,
                               children: [
-                                  (0, l.jsx)(z.A, { className: Z.TK, children: O.intl.string(D.default.oHWnLy) }),
+                                  (0, l.jsx)(K.A, { className: Z.TK, children: O.intl.string(D.default.oHWnLy) }),
                                   (0, l.jsx)(k.m, {
                                       text: O.intl.string(O.t.WAI6xu),
                                       children: (0, l.jsx)(B.D, {
@@ -242,7 +242,7 @@ function Q(e) {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? q.Ay.getName(e.record)
-                                                          : (0, K.m1)(e.record, $.default, J.A),
+                                                          : (0, z.m1)(e.record, J.default, $.A),
                                               }),
                                               onClick: () =>
                                                   (async function (e) {

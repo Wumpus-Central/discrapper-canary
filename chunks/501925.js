@@ -1,8 +1,8 @@
-n.d(t, { E: () => v, A: () => R });
+n.d(t, { E: () => R, A: () => v });
 var a = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
+    l = n(582128),
+    r = n(503698),
+    s = n.n(r),
     i = n(855986),
     o = n(834730),
     d = n(28863),
@@ -36,14 +36,14 @@ var E = n(311016),
     h = n(692051),
     b = n(713804),
     x = n(967198),
-    A = n(900179),
-    _ = n(165668),
+    _ = n(900179),
+    A = n(165668),
     N = n(165648);
-function R(e) {
+function v(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHoverOrFocusOnly: l = !1,
+            animateOnHoverOrFocusOnly: r = !1,
             isHoveringOrFocusing: d = !1,
             lineClamp: c = 6,
             setLineClamp: u = !0,
@@ -51,35 +51,35 @@ function R(e) {
             userId: f,
             guildId: g,
         } = e,
-        A = (0, i.bG)([x.A], () => x.A.getGuildId()),
-        R = g ?? A,
-        v = r.useMemo(
+        _ = (0, i.bG)([x.A], () => x.A.getGuildId()),
+        v = g ?? _,
+        R = l.useMemo(
             () =>
                 (0, E.A)(f)
                     ? (0, a.jsx)(p, {})
                     : null == t || "" === t
                       ? null
-                      : (0, b.parseBioReact)(t, void 0, { guildId: R }),
-            [f, t, R],
+                      : (0, b.parseBioReact)(t, void 0, { guildId: v }),
+            [f, t, v],
         ),
-        j = l && !d,
-        y = r.useMemo(() => ({ disableAnimations: j, disableInteractions: !1 }), [j]);
-    return null == v
+        j = r && !d,
+        y = l.useMemo(() => ({ disableAnimations: j, disableInteractions: !1 }), [j]);
+    return null == R
         ? null
         : (0, a.jsx)("div", {
-              className: s()(n, N.PT, _.z),
+              className: s()(n, N.PT, A.z),
               children: (0, a.jsx)(o.E, {
                   variant: "body-sm/normal",
                   lineClamp: u ? c : void 0,
                   color: void 0 !== m ? m : void 0,
-                  className: _.w,
-                  children: (0, a.jsx)(h.Y.Provider, { value: y, children: v }),
+                  className: A.w,
+                  children: (0, a.jsx)(h.Y.Provider, { value: y, children: R }),
               }),
           });
 }
-function v(e) {
+function R(e) {
     let { userBio: t, userId: n } = e;
     return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(A.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(R, { ...e }) })
+        ? (0, a.jsx)(_.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(v, { ...e }) })
         : null;
 }

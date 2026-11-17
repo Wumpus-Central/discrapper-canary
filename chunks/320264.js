@@ -6,10 +6,10 @@ n.d(t, {
     OS: () => G,
     Y9: () => K,
     vw: () => q,
-    N_: () => Z,
+    N_: () => W,
     Q7: () => V,
     KJ: () => H,
-    TT: () => W,
+    TT: () => Z,
 });
 var i = n(477900),
     r = n(582128),
@@ -402,7 +402,7 @@ class K extends r.Component {
         });
     }
 }
-class Z extends r.Component {
+class W extends r.Component {
     renderContent() {
         let e,
             t,
@@ -442,7 +442,7 @@ class Z extends r.Component {
         });
     }
 }
-function W(e) {
+function Z(e) {
     switch (e.type) {
         case m.t1.SHOP:
             return { label: P.intl.string(P.t.pWG4ze), Icon: E.ShopIcon };
@@ -467,7 +467,7 @@ function W(e) {
 class q extends r.Component {
     renderContent() {
         let { navigationRecord: e, children: t } = this.props,
-            { label: n, Icon: r } = W(e),
+            { label: n, Icon: r } = Z(e),
             s = (0, i.jsx)(r, { size: "xs", color: "currentColor" });
         return (0, i.jsxs)("div", {
             className: w.xr,

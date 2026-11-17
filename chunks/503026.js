@@ -11,13 +11,13 @@ var l = n(855986),
     g = n(900179),
     f = n(518477),
     m = n(652215),
-    p = n(792996);
+    h = n(792996);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { userId: t, guildId: n, ...h } = e,
+            let { userId: t, guildId: n, ...p } = e,
                 { trackUserProfileAction: x } = (0, u.NJ)(),
                 A = (0, l.bG)([a.A], () => a.A.getGuild(n)),
                 I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
@@ -28,9 +28,9 @@ n.d(
             let y = b && null != I;
             return 0 !== j.length || y
                 ? (0, i.jsx)(g.A, {
-                      heading: p.intl.string(p.t["LPJmL/"]),
+                      heading: h.intl.string(h.t["LPJmL/"]),
                       scrollTargetId: f.bk.ROLES,
-                      ...h,
+                      ...p,
                       children: (0, i.jsx)(c.YR, {
                           userId: t,
                           guild: A,

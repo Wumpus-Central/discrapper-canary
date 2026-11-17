@@ -1,6 +1,6 @@
-var n,
+var l,
     u,
-    r = (((n = {}).WARNING = "warning"), (n.UNREAD = "unread"), n),
+    r = (((l = {}).WARNING = "warning"), (l.UNREAD = "unread"), l),
     i =
         (((u = {})[(u.LEVEL_REACHED = 0)] = "LEVEL_REACHED"),
         (u[(u.PERKS_PURCHASABLE = 1)] = "PERKS_PURCHASABLE"),
@@ -13,4 +13,4 @@ var n,
         (u[(u.GAME_SERVER_HOSTING_ENABLED = 8)] = "GAME_SERVER_HOSTING_ENABLED"),
         (u[(u.GAME_SERVER_NEW_GAMES = 9)] = "GAME_SERVER_NEW_GAMES"),
         u);
-l.d(t, {}, { bW: 2592e6, cD: r, lE: 216e5, mD: 2592e5, o: i });
+n.d(t, {}, { bW: 2592e6, cD: r, lE: 216e5, mD: 2592e5, o: i });

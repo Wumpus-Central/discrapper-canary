@@ -1,10 +1,10 @@
-l.d(t, { A: () => A });
-var n = l(582128),
-    u = l(855986),
-    r = l(993408),
-    i = l(475669),
-    o = l(645619);
-let s = (0, l(400845).Ay)({
+n.d(t, { A: () => A });
+var l = n(582128),
+    u = n(855986),
+    r = n(993408),
+    i = n(475669),
+    o = n(645619);
+let s = (0, n(400845).Ay)({
     name: "2026-02-expiring-powerup-coachmark",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -12,13 +12,13 @@ let s = (0, l(400845).Ay)({
 });
 function A(e) {
     let t = (0, u.bG)([o.A], () => o.A.getStateForGuild(e)),
-        l = (0, u.bG)([i.A], () => i.A.getStateForGuild(e)),
+        n = (0, u.bG)([i.A], () => i.A.getStateForGuild(e)),
         A = s.useConfig({ location: "useFeaturedExpiringPowerup" }).enabled;
-    return n.useMemo(() => {
+    return l.useMemo(() => {
         if (!A) return;
         let e = Object.values(t?.unlockedPowerups ?? {}),
-            n = Object.values(l?.entitlements ?? {}),
-            u = [...e, ...n].filter((e) => null != e.ends_at && (e.metadata?.num_expiring_boosts ?? 0) > 0);
+            l = Object.values(n?.entitlements ?? {}),
+            u = [...e, ...l].filter((e) => null != e.ends_at && (e.metadata?.num_expiring_boosts ?? 0) > 0);
         if (0 === u.length) return;
         let i = u.reduce((e, t) => (t.ends_at > e.ends_at ? t : e)),
             o = t?.allPowerups[i.sku_id]?.title ?? null,
@@ -31,5 +31,5 @@ function A(e) {
                 isGameServer: s,
                 skuId: i.sku_id,
             };
-    }, [t, l, A]);
+    }, [t, n, A]);
 }

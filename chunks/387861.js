@@ -1,4 +1,4 @@
-(n.d(t, { A: () => n7 }), n(321073));
+(n.d(t, { A: () => n8 }), n(321073));
 var i,
     r = n(477900),
     a = n(582128),
@@ -465,8 +465,8 @@ function e5(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(V.E, { className: l()({ [e6.Q]: null == n }, t), color: n, ...i });
 }
-var e7 = n(976860),
-    e8 = n(95701),
+var e8 = n(976860),
+    e7 = n(95701),
     e4 = n(46653),
     e9 = n(734057),
     te = n(184989),
@@ -740,7 +740,7 @@ let t6 = a.memo(function (e) {
             let e = _?.id;
             (0, tx.pK)({ gameApplicationId: e, buttonVariant: "shop" });
             let t = B.BVt.COLLECTIBLES_SHOP_WITH_TAB(tZ.G2.GAME_SERVERS);
-            (0, e7.pX)(null != e ? `${t}&${tZ.tD}=${e}` : t);
+            (0, e8.pX)(null != e ? `${t}&${tZ.tD}=${e}` : t);
         }, [_?.id]),
         q = a.useRef(null),
         [Q, Z] = a.useState(!1);
@@ -755,7 +755,7 @@ let t6 = a.memo(function (e) {
         }, [O]));
     let ee = null == b || null == p ? null : (0, r.jsx)(t4, { applicationId: b.id }),
         et = w
-            ? (0, r.jsx)(t8, { gameName: X, runningGameId: _?.id, isGameServerHostingInShopEnabled: P, onClick: z })
+            ? (0, r.jsx)(t7, { gameName: X, runningGameId: _?.id, isGameServerHostingInShopEnabled: P, onClick: z })
             : null,
         en =
             !K || $
@@ -799,7 +799,7 @@ let t6 = a.memo(function (e) {
                       : ((e = !0),
                         (t = null),
                         (n = tI.ScreenArrowIcon),
-                        null != c && (0, e8.gV)(c.type) && (i = J.intl.string(J.t.uQn9B8))),
+                        null != c && (0, e7.gV)(c.type) && (i = J.intl.string(J.t.uQn9B8))),
                 (0, r.jsx)("div", {
                     className: t2.IF,
                     children: (0, r.jsx)(tD.A, { tooltipText: i, disabled: e, onClick: t, icon: n }),
@@ -893,7 +893,7 @@ function t5(e) {
         tooltipText: J.intl.string(J.t.sbdnpw),
     });
 }
-function t7(e) {
+function t8(e) {
     let {
             tooltipText: t,
             onClick: n,
@@ -930,13 +930,13 @@ function t7(e) {
         ],
     });
 }
-function t8(e) {
+function t7(e) {
     let { gameName: t, runningGameId: n, isGameServerHostingInShopEnabled: i, onClick: a } = e,
         s = (function (e) {
             let { location: t } = e;
             return tF.useConfig({ location: t }).enabled;
         })({ location: "activity-panel" });
-    return (0, r.jsx)(t7, {
+    return (0, r.jsx)(t8, {
         tooltipText: J.intl.formatToPlainString(tH.default.oZ4ZFn, { gameName: t }),
         coachmarkContent: A.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_COACHMARK,
         badgeContent: A.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE,
@@ -1655,12 +1655,12 @@ function n3(e) {
         (d()(null != a, "Channel cannot be null during navigation click"),
             S.A.channelListScrollTo(a.guild_id ?? B.ME, a.id),
             !E &&
-                ((0, e8.gV)(a.type) &&
+                ((0, e7.gV)(a.type) &&
                     T.A.selectParticipant(
                         a.id,
                         (0, em.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
                     ),
-                (0, e8.pQ)(a.type) && (0, L.gk)(nj.Gd.PANEL)));
+                (0, e7.pQ)(a.type) && (0, L.gk)(nj.Gd.PANEL)));
     }
     null != l && null != a
         ? ((t = B.BVt.CHANNEL(l.id, a.id)), (f = `${f} / ${l.name}`))
@@ -1682,7 +1682,7 @@ function n3(e) {
                             },
                             children: (0, r.jsx)(t_.A, { className: nX._W, children: n.name }),
                         }),
-                        null != a && (0, e8.pQ)(a.type)
+                        null != a && (0, e7.pQ)(a.type)
                             ? (0, r.jsx)(eQ.A, {
                                   href: t,
                                   onClick: h,
@@ -1716,7 +1716,7 @@ function n6(e) {
                                 if (s) return void m.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                                 if (t.intent !== t0.sV.MAIN) {
                                     let e = (0, ey.A)(t.surface);
-                                    null != e && (0, e7.pX)(B.BVt.CHANNEL((0, eD.A)(t.surface) ?? B.ME, e));
+                                    null != e && (0, e8.pX)(B.BVt.CHANNEL((0, eD.A)(t.surface) ?? B.ME, e));
                                     return;
                                 }
                                 eb.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: t0.y0.FOCUSED });
@@ -1759,7 +1759,7 @@ function n5(e) {
         ],
     });
 }
-let n7 = (0, C.A)(function (e) {
+let n8 = (0, C.A)(function (e) {
     let { analyticsContext: t, className: n } = e,
         i = a.useRef(null),
         s = a.useRef(null),

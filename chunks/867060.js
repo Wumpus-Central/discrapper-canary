@@ -1,11 +1,11 @@
-var n = l(582128),
-    u = l(858899);
-l.d(
+var l = n(582128),
+    u = n(858899);
+n.d(
     t,
     {},
     {
         A: function (e) {
-            n.useEffect(() => {
+            l.useEffect(() => {
                 null != e && (0, u.P0)({ text: e, variant: "critical" });
             }, [e]);
         },

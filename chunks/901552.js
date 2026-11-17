@@ -1310,8 +1310,8 @@ class e2 extends S.A {
 var e3 = n(4511),
     e6 = n(52133),
     e5 = n(676279),
-    e7 = n(811091),
-    e8 = n(590087);
+    e8 = n(811091),
+    e7 = n(590087);
 let e4 = { any: 100 },
     e9 = { any: 0 },
     te = 30 * eK.A.Millis.SECOND,
@@ -1352,7 +1352,7 @@ class ta extends S.A {
             (this.ladder = i),
             (this.delayedCall = new w.J_(100, this.update)),
             (this.offscreenTimeout = new w.Ep()),
-            e8.X.on(e8.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
+            e7.X.on(e7.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
     getWantsLevel() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
@@ -1377,7 +1377,7 @@ class ta extends S.A {
             (this.userVideoDisabled(e) &&
                 this.videoHealthManager?.getCurrentVideoToggleState(e) !== eB.bb8.AUTO_PROBING)
         );
-        return e8.X.isIncomingVideoEnabled() && t;
+        return e7.X.isIncomingVideoEnabled() && t;
     }
     addLru = (e, t, n) => {
         if ((n.push(e), n.length <= 3)) return;
@@ -1394,7 +1394,7 @@ class ta extends S.A {
         if (!this.connection?.getActiveOutputSinkTrackingEnabled()) return;
         let e = Date.now(),
             t = [];
-        for (let [n, i] of e7.default.entries(this.streamIds))
+        for (let [n, i] of e8.default.entries(this.streamIds))
             null != i &&
                 (this.connection?.getHasActiveVideoOutputSink(i)
                     ? (delete this.offscreenUsers[n], delete this.offscreenDisabledUsers[n])
@@ -1436,7 +1436,7 @@ class ta extends S.A {
                 r = i;
             ((0, eb.HZ)() && (e.invertWants(i, n), tn && (r = { ...i })), e.updateOffscreenUsers());
             let a = (0, eb.xl)() && e.isOneToOneCall() && !e.isStageChannel;
-            for (let [r, s] of e7.default.entries(e.videoSsrcs)) {
+            for (let [r, s] of e8.default.entries(e.videoSsrcs)) {
                 let l = [],
                     o = !1,
                     d = e.streamPixelCounts[e.streamIds[r]] ?? 0,
@@ -1537,7 +1537,7 @@ class ta extends S.A {
             (this.streamIds = {}),
             (this.streamPixelCounts = {}),
             (this.latestWants = tr(100)),
-            e8.X.off(e8.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
+            e7.X.off(e7.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged));
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
@@ -1769,7 +1769,7 @@ class tp extends S.A {
             (this.outboundStats[parseInt(n)].continueAggregationFrom(i, t),
                 i.isVideoStopped && this.outboundStats[parseInt(n)].setVideoStopped(!0, i.videoStoppedReasons));
         }
-        for (let n of e7.default.keys(e.inboundStats)) {
+        for (let n of e8.default.keys(e.inboundStats)) {
             let i = e.inboundStats[n],
                 r = this.getOrCreateInboundStats(n);
             (r.continueAggregationFrom(i, t), i.isVideoStopped && r.setVideoStopped(!0, i.videoStoppedReasons));
@@ -2016,7 +2016,7 @@ class tp extends S.A {
         delete this.inboundStats[e];
     }
     getInboundParticipants() {
-        return e7.default.keys(this.inboundStats);
+        return e8.default.keys(this.inboundStats);
     }
     updateSendState(e) {
         (null != e.paused && (this.paused.value = e.paused),
@@ -3095,7 +3095,7 @@ class tH extends S.A {
         null != t && (t.disconnectedAtMs = performance.now());
     }
     getInboundParticipants() {
-        return e7.default.keys(this.inboundStats);
+        return e8.default.keys(this.inboundStats);
     }
     sampleAudioDevice = (e, t) => {
         void 0 !== e &&
@@ -3517,8 +3517,8 @@ class t1 extends S.A {
                     }));
         }
         ((this._remoteVideoSinkWants = e4),
-            e8.X.on(e8.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
-            e8.X.on(e8.N.WindowVisibilityChanged, this.windowVisibilityChanged),
+            e7.X.on(e7.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
+            e7.X.on(e7.N.WindowVisibilityChanged, this.windowVisibilityChanged),
             eN.Ay.shouldRecordNextConnection()
                 ? ((this._recordingEnabled = !0), (0, e_.A)(!1))
                 : (this._recordingEnabled = !1),
@@ -3658,8 +3658,8 @@ class t1 extends S.A {
             eD.A.removeOfflineCallback(this._handleNetworkOffline),
             (0, eb.xl)() && this.powerMonitorListener?.(),
             this.recordEvent({ c: 1 }),
-            e8.X.off(e8.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
-            e8.X.off(e8.N.WindowVisibilityChanged, this.windowVisibilityChanged),
+            e7.X.off(e7.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
+            e7.X.off(e7.N.WindowVisibilityChanged, this.windowVisibilityChanged),
             this._cancelReconnect(),
             this._cleanupSocket(),
             this._voiceQuality?.stop(),

@@ -8,12 +8,12 @@ function s(t) {
 function c(t) {
     return "/" === t.charAt(0) ? t.substr(1) : t;
 }
-function u(t, e) {
+function l(t, e) {
     return 0 === t.toLowerCase().indexOf(e.toLowerCase()) && -1 !== "/?#".indexOf(t.charAt(e.length))
         ? t.substr(e.length)
         : t;
 }
-function l(t) {
+function u(t) {
     return "/" === t.charAt(t.length - 1) ? t.slice(0, -1) : t;
 }
 function h(t) {
@@ -113,9 +113,9 @@ var g = !!("u" > typeof window && window.document && window.document.createEleme
 function m(t, e) {
     e(window.confirm(t));
 }
-var v = "popstate",
-    y = "hashchange";
-function _() {
+var _ = "popstate",
+    v = "hashchange";
+function y() {
     try {
         return window.history.state || {};
     } catch (t) {
@@ -144,10 +144,10 @@ function E() {
         e = t.indexOf("#");
     return -1 === e ? "" : t.substring(e + 1);
 }
-function A(t) {
+function T(t) {
     window.location.replace(x(window.location.href) + "#" + t);
 }
-function T(t, e, n) {
+function A(t, e, n) {
     return Math.min(Math.max(t, e), n);
 }
 n.d(
@@ -173,94 +173,94 @@ n.d(
                 r = n.getUserConfirmation,
                 o = void 0 === r ? m : r,
                 c = n.hashType,
-                h = t.basename ? l(s(t.basename)) : "",
-                v = b[void 0 === c ? "slash" : c],
-                y = v.encodePath,
-                _ = v.decodePath;
-            function T() {
-                var t = _(E());
-                return (h && (t = u(t, h)), d(t));
+                h = t.basename ? u(s(t.basename)) : "",
+                _ = b[void 0 === c ? "slash" : c],
+                v = _.encodePath,
+                y = _.decodePath;
+            function A() {
+                var t = y(E());
+                return (h && (t = l(t, h)), d(t));
             }
             var S = p();
-            function R(t) {
-                ((0, i.A)(F, t), (F.length = e.length), S.notifyListeners(F.location, F.action));
+            function P(t) {
+                ((0, i.A)(j, t), (j.length = e.length), S.notifyListeners(j.location, j.action));
             }
-            var C = !1,
-                P = null;
-            function M() {
+            var R = !1,
+                C = null;
+            function k() {
                 var t = E(),
-                    e = y(t);
-                if (t !== e) A(e);
+                    e = v(t);
+                if (t !== e) T(e);
                 else {
                     var n,
-                        i = T(),
-                        r = F.location;
-                    if ((!C && r.pathname === i.pathname && r.search === i.search && r.hash === i.hash) || P === f(i))
+                        i = A(),
+                        r = j.location;
+                    if ((!R && r.pathname === i.pathname && r.search === i.search && r.hash === i.hash) || C === f(i))
                         return;
-                    ((P = null),
+                    ((C = null),
                         (n = i),
-                        C
-                            ? ((C = !1), R())
+                        R
+                            ? ((R = !1), P())
                             : S.confirmTransitionTo(n, "POP", o, function (t) {
                                   var e, i, r, o, a;
                                   t
-                                      ? R({ action: "POP", location: n })
+                                      ? P({ action: "POP", location: n })
                                       : ((e = n),
-                                        (i = F.location),
-                                        -1 === (r = L.lastIndexOf(f(i))) && (r = 0),
-                                        -1 === (o = L.lastIndexOf(f(e))) && (o = 0),
-                                        (a = r - o) && ((C = !0), U(a)));
+                                        (i = j.location),
+                                        -1 === (r = O.lastIndexOf(f(i))) && (r = 0),
+                                        -1 === (o = O.lastIndexOf(f(e))) && (o = 0),
+                                        (a = r - o) && ((R = !0), U(a)));
                               }));
                 }
             }
-            var O = E(),
-                k = y(O);
-            O !== k && A(k);
-            var I = T(),
-                L = [f(I)];
+            var M = E(),
+                I = v(M);
+            M !== I && T(I);
+            var L = A(),
+                O = [f(L)];
             function U(t) {
                 e.go(t);
             }
             var D = 0;
-            function j(t) {
-                1 === (D += t) && 1 === t ? window.addEventListener(w, M) : 0 === D && window.removeEventListener(w, M);
+            function V(t) {
+                1 === (D += t) && 1 === t ? window.addEventListener(w, k) : 0 === D && window.removeEventListener(w, k);
             }
-            var V = !1,
-                F = {
+            var W = !1,
+                j = {
                     length: e.length,
                     action: "POP",
-                    location: I,
+                    location: L,
                     createHref: function (t) {
                         var e = document.querySelector("base"),
                             n = "";
-                        return (e && e.getAttribute("href") && (n = x(window.location.href)), n + "#" + y(h + f(t)));
+                        return (e && e.getAttribute("href") && (n = x(window.location.href)), n + "#" + v(h + f(t)));
                     },
                     push: function (t, e) {
                         var n = "PUSH",
-                            i = d(t, void 0, void 0, F.location);
+                            i = d(t, void 0, void 0, j.location);
                         S.confirmTransitionTo(i, n, o, function (t) {
                             if (t) {
                                 var e = f(i),
-                                    r = y(h + e);
+                                    r = v(h + e);
                                 if (E() !== r) {
-                                    ((P = e), (window.location.hash = r));
-                                    var o = L.lastIndexOf(f(F.location)),
-                                        a = L.slice(0, o + 1);
-                                    (a.push(e), (L = a), R({ action: n, location: i }));
-                                } else R();
+                                    ((C = e), (window.location.hash = r));
+                                    var o = O.lastIndexOf(f(j.location)),
+                                        a = O.slice(0, o + 1);
+                                    (a.push(e), (O = a), P({ action: n, location: i }));
+                                } else P();
                             }
                         });
                     },
                     replace: function (t, e) {
                         var n = "REPLACE",
-                            i = d(t, void 0, void 0, F.location);
+                            i = d(t, void 0, void 0, j.location);
                         S.confirmTransitionTo(i, n, o, function (t) {
                             if (t) {
                                 var e = f(i),
-                                    r = y(h + e);
-                                E() !== r && ((P = e), A(r));
-                                var o = L.indexOf(f(F.location));
-                                (-1 !== o && (L[o] = e), R({ action: n, location: i }));
+                                    r = v(h + e);
+                                E() !== r && ((C = e), T(r));
+                                var o = O.indexOf(f(j.location));
+                                (-1 !== o && (O[o] = e), P({ action: n, location: i }));
                             }
                         });
                     },
@@ -275,23 +275,23 @@ n.d(
                         void 0 === t && (t = !1);
                         var e = S.setPrompt(t);
                         return (
-                            V || (j(1), (V = !0)),
+                            W || (V(1), (W = !0)),
                             function () {
-                                return (V && ((V = !1), j(-1)), e());
+                                return (W && ((W = !1), V(-1)), e());
                             }
                         );
                     },
                     listen: function (t) {
                         var e = S.appendListener(t);
                         return (
-                            j(1),
+                            V(1),
                             function () {
-                                (j(-1), e());
+                                (V(-1), e());
                             }
                         );
                     },
                 };
-            return F;
+            return j;
         },
         sC: function (t) {
             void 0 === t && (t = {});
@@ -302,25 +302,25 @@ n.d(
                 a = e.initialIndex,
                 s = e.keyLength,
                 c = void 0 === s ? 6 : s,
-                u = p();
-            function l(t) {
-                ((0, i.A)(y, t), (y.length = y.entries.length), u.notifyListeners(y.location, y.action));
+                l = p();
+            function u(t) {
+                ((0, i.A)(v, t), (v.length = v.entries.length), l.notifyListeners(v.location, v.action));
             }
             function h() {
                 return Math.random().toString(36).substr(2, c);
             }
-            var g = T(void 0 === a ? 0 : a, 0, o.length - 1),
+            var g = A(void 0 === a ? 0 : a, 0, o.length - 1),
                 m = o.map(function (t) {
                     return "string" == typeof t ? d(t, void 0, h()) : d(t, void 0, t.key || h());
                 });
-            function v(t) {
-                var e = T(y.index + t, 0, y.entries.length - 1),
-                    i = y.entries[e];
-                u.confirmTransitionTo(i, "POP", n, function (t) {
-                    t ? l({ action: "POP", location: i, index: e }) : l();
+            function _(t) {
+                var e = A(v.index + t, 0, v.entries.length - 1),
+                    i = v.entries[e];
+                l.confirmTransitionTo(i, "POP", n, function (t) {
+                    t ? u({ action: "POP", location: i, index: e }) : u();
                 });
             }
-            var y = {
+            var v = {
                 length: m.length,
                 action: "POP",
                 location: m[g],
@@ -329,42 +329,42 @@ n.d(
                 createHref: f,
                 push: function (t, e) {
                     var i = "PUSH",
-                        r = d(t, e, h(), y.location);
-                    u.confirmTransitionTo(r, i, n, function (t) {
+                        r = d(t, e, h(), v.location);
+                    l.confirmTransitionTo(r, i, n, function (t) {
                         if (t) {
-                            var e = y.index + 1,
-                                n = y.entries.slice(0);
+                            var e = v.index + 1,
+                                n = v.entries.slice(0);
                             (n.length > e ? n.splice(e, n.length - e, r) : n.push(r),
-                                l({ action: i, location: r, index: e, entries: n }));
+                                u({ action: i, location: r, index: e, entries: n }));
                         }
                     });
                 },
                 replace: function (t, e) {
                     var i = "REPLACE",
-                        r = d(t, e, h(), y.location);
-                    u.confirmTransitionTo(r, i, n, function (t) {
-                        t && ((y.entries[y.index] = r), l({ action: i, location: r }));
+                        r = d(t, e, h(), v.location);
+                    l.confirmTransitionTo(r, i, n, function (t) {
+                        t && ((v.entries[v.index] = r), u({ action: i, location: r }));
                     });
                 },
-                go: v,
+                go: _,
                 goBack: function () {
-                    v(-1);
+                    _(-1);
                 },
                 goForward: function () {
-                    v(1);
+                    _(1);
                 },
                 canGo: function (t) {
-                    var e = y.index + t;
-                    return e >= 0 && e < y.entries.length;
+                    var e = v.index + t;
+                    return e >= 0 && e < v.entries.length;
                 },
                 block: function (t) {
-                    return (void 0 === t && (t = !1), u.setPrompt(t));
+                    return (void 0 === t && (t = !1), l.setPrompt(t));
                 },
                 listen: function (t) {
-                    return u.appendListener(t);
+                    return l.appendListener(t);
                 },
             };
-            return y;
+            return v;
         },
         yJ: d,
         zR: function (t) {
@@ -386,68 +386,68 @@ n.d(
                 b = c.getUserConfirmation,
                 x = void 0 === b ? m : b,
                 E = c.keyLength,
-                A = void 0 === E ? 6 : E,
-                T = t.basename ? l(s(t.basename)) : "";
+                T = void 0 === E ? 6 : E,
+                A = t.basename ? u(s(t.basename)) : "";
             function S(t) {
                 var e = t || {},
                     n = e.key,
                     i = e.state,
                     r = window.location,
                     o = r.pathname + r.search + r.hash;
-                return (T && (o = u(o, T)), d(o, i, n));
+                return (A && (o = l(o, A)), d(o, i, n));
             }
-            function R() {
-                return Math.random().toString(36).substr(2, A);
+            function P() {
+                return Math.random().toString(36).substr(2, T);
             }
-            var C = p();
-            function P(t) {
-                ((0, i.A)(B, t), (B.length = n.length), C.notifyListeners(B.location, B.action));
+            var R = p();
+            function C(t) {
+                ((0, i.A)(F, t), (F.length = n.length), R.notifyListeners(F.location, F.action));
             }
-            function M(t) {
-                (void 0 !== t.state || -1 !== navigator.userAgent.indexOf("CriOS")) && I(S(t.state));
+            function k(t) {
+                (void 0 !== t.state || -1 !== navigator.userAgent.indexOf("CriOS")) && L(S(t.state));
             }
-            function O() {
-                I(S(_()));
+            function M() {
+                L(S(y()));
             }
-            var k = !1;
-            function I(t) {
-                k
-                    ? ((k = !1), P())
-                    : C.confirmTransitionTo(t, "POP", x, function (e) {
+            var I = !1;
+            function L(t) {
+                I
+                    ? ((I = !1), C())
+                    : R.confirmTransitionTo(t, "POP", x, function (e) {
                           var n, i, r, o, a;
                           e
-                              ? P({ action: "POP", location: t })
+                              ? C({ action: "POP", location: t })
                               : ((n = t),
-                                (i = B.location),
+                                (i = F.location),
                                 -1 === (r = U.indexOf(i.key)) && (r = 0),
                                 -1 === (o = U.indexOf(n.key)) && (o = 0),
-                                (a = r - o) && ((k = !0), j(a)));
+                                (a = r - o) && ((I = !0), V(a)));
                       });
             }
-            var L = S(_()),
-                U = [L.key];
+            var O = S(y()),
+                U = [O.key];
             function D(t) {
-                return T + f(t);
+                return A + f(t);
             }
-            function j(t) {
+            function V(t) {
                 n.go(t);
             }
-            var V = 0;
-            function F(t) {
-                1 === (V += t) && 1 === t
-                    ? (window.addEventListener(v, M), o && window.addEventListener(y, O))
-                    : 0 === V && (window.removeEventListener(v, M), o && window.removeEventListener(y, O));
+            var W = 0;
+            function j(t) {
+                1 === (W += t) && 1 === t
+                    ? (window.addEventListener(_, k), o && window.addEventListener(v, M))
+                    : 0 === W && (window.removeEventListener(_, k), o && window.removeEventListener(v, M));
             }
-            var W = !1,
-                B = {
+            var B = !1,
+                F = {
                     length: n.length,
                     action: "POP",
-                    location: L,
+                    location: O,
                     createHref: D,
                     push: function (t, e) {
                         var i = "PUSH",
-                            o = d(t, e, R(), B.location);
-                        C.confirmTransitionTo(o, i, x, function (t) {
+                            o = d(t, e, P(), F.location);
+                        R.confirmTransitionTo(o, i, x, function (t) {
                             if (t) {
                                 var e = D(o),
                                     a = o.key,
@@ -455,9 +455,9 @@ n.d(
                                 if (r)
                                     if ((n.pushState({ key: a, state: s }, null, e), w)) window.location.href = e;
                                     else {
-                                        var c = U.indexOf(B.location.key),
-                                            u = U.slice(0, c + 1);
-                                        (u.push(o.key), (U = u), P({ action: i, location: o }));
+                                        var c = U.indexOf(F.location.key),
+                                            l = U.slice(0, c + 1);
+                                        (l.push(o.key), (U = l), C({ action: i, location: o }));
                                     }
                                 else window.location.href = e;
                             }
@@ -465,8 +465,8 @@ n.d(
                     },
                     replace: function (t, e) {
                         var i = "REPLACE",
-                            o = d(t, e, R(), B.location);
-                        C.confirmTransitionTo(o, i, x, function (t) {
+                            o = d(t, e, P(), F.location);
+                        R.confirmTransitionTo(o, i, x, function (t) {
                             if (t) {
                                 var e = D(o),
                                     a = o.key,
@@ -474,41 +474,41 @@ n.d(
                                 if (r)
                                     if ((n.replaceState({ key: a, state: s }, null, e), w)) window.location.replace(e);
                                     else {
-                                        var c = U.indexOf(B.location.key);
-                                        (-1 !== c && (U[c] = o.key), P({ action: i, location: o }));
+                                        var c = U.indexOf(F.location.key);
+                                        (-1 !== c && (U[c] = o.key), C({ action: i, location: o }));
                                     }
                                 else window.location.replace(e);
                             }
                         });
                     },
-                    go: j,
+                    go: V,
                     goBack: function () {
-                        j(-1);
+                        V(-1);
                     },
                     goForward: function () {
-                        j(1);
+                        V(1);
                     },
                     block: function (t) {
                         void 0 === t && (t = !1);
-                        var e = C.setPrompt(t);
+                        var e = R.setPrompt(t);
                         return (
-                            W || (F(1), (W = !0)),
+                            B || (j(1), (B = !0)),
                             function () {
-                                return (W && ((W = !1), F(-1)), e());
+                                return (B && ((B = !1), j(-1)), e());
                             }
                         );
                     },
                     listen: function (t) {
-                        var e = C.appendListener(t);
+                        var e = R.appendListener(t);
                         return (
-                            F(1),
+                            j(1),
                             function () {
-                                (F(-1), e());
+                                (j(-1), e());
                             }
                         );
                     },
                 };
-            return B;
+            return F;
         },
     },
 );
