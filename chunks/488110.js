@@ -28,8 +28,8 @@ var i = n(477900),
     j = n(975571),
     O = n(448645),
     D = n(83617),
-    L = n(543767),
-    R = n(526292),
+    R = n(543767),
+    L = n(526292),
     P = n(155984),
     G = n(131168),
     M = n(331322),
@@ -48,8 +48,8 @@ var i = n(477900),
     Z = n(113090),
     q = n(778712),
     Q = n(97808),
-    J = n(123292),
-    $ = n(950305),
+    $ = n(123292),
+    J = n(950305),
     ee = n(854627),
     et = n(107198),
     en = n(792996),
@@ -87,7 +87,7 @@ function el(e) {
                 m &&
                 (0, i.jsx)("div", {
                     className: ei.dM,
-                    children: (0, i.jsx)(J.Q, {
+                    children: (0, i.jsx)($.Q, {
                         textVariant: "body-sm/medium",
                         variant: "secondary",
                         text: a.label,
@@ -135,7 +135,7 @@ function eu(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: r()(ei.vG, ei.my),
-                        children: (0, i.jsx)($.UserIcon, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
+                        children: (0, i.jsx)(J.UserIcon, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
                     }),
                     (0, i.jsx)(g.E, {
                         className: ei.Xh,
@@ -149,7 +149,7 @@ function eu(e) {
                 n &&
                 (0, i.jsx)("div", {
                     className: ei.dM,
-                    children: (0, i.jsx)(J.Q, {
+                    children: (0, i.jsx)($.Q, {
                         textVariant: "body-sm/medium",
                         variant: "secondary",
                         text: en.intl.string(et.default.O15JWp),
@@ -440,7 +440,7 @@ function eb(e) {
         })),
         { status: g } = t,
         m = (0, z.G)({ location: "PremiumGroupSubscriptionManageCard" }),
-        { churnUserDiscountOffer: A } = (0, R.g5)(!m),
+        { churnUserDiscountOffer: A } = (0, L.g5)(!m),
         E = A?.isApplied() === !0,
         h = (0, O.ki)(t),
         S = g === eg.Dmq.ACTIVE && null != t.renewalMutations,
@@ -725,8 +725,8 @@ let eD = function (e) {
         }),
     });
 };
-var eL = n(97352),
-    eR = n(403581),
+var eR = n(97352),
+    eL = n(403581),
     eP = n(511484),
     eG = n(811611),
     eM = n(858432),
@@ -735,7 +735,7 @@ let eV = { page: eg.liQ.USER_SETTINGS, section: eg.JJy.SETTINGS_PREMIUM, object:
 function ek(e) {
     let { premiumSubscription: t, discountInfo: n, invoicePreview: l, isDiscountActive: s } = e,
         r = O.Ay.getPlanIdFromInvoice(t, l),
-        a = eL.A.get(r);
+        a = eR.A.get(r);
     if (null == a || null == l || null == n || null == n.duration || null == n.percentage) return null;
     let o = l.invoiceItems.find((e) => {
         let { subscriptionPlanId: t } = e;
@@ -914,7 +914,7 @@ let eF = function (e) {
                                                               : en.intl.string(en.t.zrCzVB);
                                                       return (0, i.jsx)(k.$, {
                                                           variant: "expressive",
-                                                          icon: eR.NitroWheelIcon,
+                                                          icon: eL.NitroWheelIcon,
                                                           size: "md",
                                                           text: e,
                                                           loading: s,
@@ -943,8 +943,8 @@ var eB = n(284009),
     eZ = n(780964),
     eq = n(766075),
     eQ = n(327479),
-    eJ = n(601107),
-    e$ = n(583690);
+    e$ = n(601107),
+    eJ = n(583690);
 let e0 = [eg.Dmq.PAST_DUE, eg.Dmq.ACCOUNT_HOLD, eg.Dmq.BILLING_RETRY],
     e1 = (e) => {
         let { transitionState: t, onClose: n, subscription: s, analyticsLocations: r, analyticsLocation: a } = e,
@@ -1010,32 +1010,32 @@ function e2(e) {
     let { status: m } = n,
         A = (0, O.$k)(n),
         E = !A && n.isBoostOnly && e0.includes(n.status);
-    if (A) t = e$.v2;
+    if (A) t = eJ.v2;
     else
         switch (m) {
             case eg.Dmq.PAST_DUE:
             case eg.Dmq.ACCOUNT_HOLD:
             case eg.Dmq.BILLING_RETRY:
-                t = e$.P7;
+                t = eJ.P7;
                 break;
             case eg.Dmq.PAUSE_PENDING:
             case eg.Dmq.PAUSED:
-                t = n.pauseReason !== eJ.qf.FRACTIONAL_PREMIUM ? e$.C7 : e$.wG;
+                t = n.pauseReason !== e$.qf.FRACTIONAL_PREMIUM ? eJ.C7 : eJ.wG;
                 break;
             default:
-                t = e$.wG;
+                t = eJ.wG;
         }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: r()(t, e$.Qn),
+                className: r()(t, eJ.Qn),
                 children: [
-                    (0, i.jsx)("div", { className: e$.Kq }),
-                    (0, i.jsx)("div", { className: e$.OL }),
+                    (0, i.jsx)("div", { className: eJ.Kq }),
+                    (0, i.jsx)("div", { className: eJ.OL }),
                     (0, i.jsxs)("div", {
-                        className: e$.eC,
+                        className: eJ.eC,
                         children: [
-                            (0, i.jsx)("div", { className: r()(e$.Ab, { [e$.aD]: A }) }),
+                            (0, i.jsx)("div", { className: r()(eJ.Ab, { [eJ.aD]: A }) }),
                             (0, i.jsx)("div", {
                                 children: (0, O.Uf)({
                                     subscription: n,
@@ -1048,12 +1048,12 @@ function e2(e) {
                     }),
                     a &&
                         (0, i.jsxs)("div", {
-                            className: e$.BQ,
+                            className: eJ.BQ,
                             children: [
                                 E &&
                                     (0, i.jsx)("div", {
-                                        className: e$.x7,
-                                        children: (0, i.jsx)(J.Q, {
+                                        className: eJ.x7,
+                                        children: (0, i.jsx)($.Q, {
                                             variant: "always-white",
                                             onClick: function () {
                                                 e0.includes(n.status) &&
@@ -1081,7 +1081,7 @@ function e2(e) {
             }),
             !a &&
                 (0, i.jsx)(g.E, {
-                    className: e$.yW,
+                    className: eJ.yW,
                     variant: "body-sm/normal",
                     children: en.intl.format(ez.Fr ? en.t.uxYBEa : en.t.k6haR9, {
                         openAppHook: () => (0, eW.A)("app"),
@@ -1097,9 +1097,12 @@ var e3 = n(358787),
 function e8(e) {
     let { subscription: t, renewalMutations: l, className: s, analyticsLocation: a } = e,
         o = (0, I.A)(),
-        u = t.currentPeriodEnd;
+        { analyticsLocations: u } = (0, x.Ay)(),
+        d = (0, O.Zb)(t.planId),
+        g = (0, z.G)({ location: "SubscriptionRenewalMutationNotice", autoTrackExposure: d }),
+        m = t.currentPeriodEnd;
     return (
-        o.fractionalState === ed.xc.FP_SUB_PAUSED && (u = o.endsAt.toDate()),
+        o.fractionalState === ed.xc.FP_SUB_PAUSED && (m = o.endsAt.toDate()),
         (0, i.jsxs)("div", {
             className: r()(e6.zr, s),
             children: [
@@ -1114,7 +1117,7 @@ function e8(e) {
                     className: e6.Qq,
                     children: en.intl.format(en.t.ar1cPl, {
                         planName: t.hasExternalPlanChange ? (0, O.OU)(l) : O.Ay.getDisplayName(l.planId),
-                        date: u,
+                        date: m,
                     }),
                 }),
                 t.isPurchasedExternally
@@ -1122,16 +1125,37 @@ function e8(e) {
                     : (0, i.jsx)(e4.Anchor, {
                           onClick: (e) => {
                               (e.preventDefault(),
-                                  (0, V.mM)(async () => {
-                                      let { default: e } = await n.e(865975).then(n.bind(n, 702698));
-                                      return (n) =>
-                                          (0, i.jsx)(e, {
-                                              ...n,
-                                              subscription: t,
-                                              renewalMutations: l,
-                                              analyticsLocation: a,
-                                          });
-                                  }));
+                                  d && g
+                                      ? (0, V.mM)(async () => {
+                                            let { default: e } = await Promise.all([
+                                                n.e(489361),
+                                                n.e(216806),
+                                                n.e(363094),
+                                                n.e(384820),
+                                                n.e(594161),
+                                                n.e(435432),
+                                                n.e(80347),
+                                                n.e(52513),
+                                            ]).then(n.bind(n, 336888));
+                                            return (n) =>
+                                                (0, i.jsx)(e, {
+                                                    ...n,
+                                                    premiumSubscription: t,
+                                                    analyticsLocations: u,
+                                                    analyticsLocation: a,
+                                                    initialStep: H.g.CONFIRM,
+                                                });
+                                        })
+                                      : (0, V.mM)(async () => {
+                                            let { default: e } = await n.e(865975).then(n.bind(n, 702698));
+                                            return (n) =>
+                                                (0, i.jsx)(e, {
+                                                    ...n,
+                                                    subscription: t,
+                                                    renewalMutations: l,
+                                                    analyticsLocation: a,
+                                                });
+                                        }));
                           },
                           className: e6.Lu,
                           children: en.intl.string(en.t["ETE/oC"]),
@@ -1274,7 +1298,7 @@ function tl(e) {
         } = e,
         { analyticsLocations: T } = (0, x.Ay)(p.A.SUBSCRIPTION_DETAILS),
         f = null != c ? {} : { subscriptionId: n.id, renewal: !0, analyticsLocations: T, analyticsLocation: l },
-        [_] = (0, L.YV)(f);
+        [_] = (0, R.YV)(f);
     _ = c ?? _;
     let b =
             null != g
@@ -1286,14 +1310,14 @@ function tl(e) {
                       analyticsLocations: T,
                       analyticsLocation: l,
                   },
-        [N] = (0, L.YV)(b);
+        [N] = (0, R.YV)(b);
     N = g ?? N;
     let C = (0, I.A)(),
         y = (0, G.p)(),
-        v = (0, R.nf)(),
+        v = (0, L.nf)(),
         j = O.Ay.isBaseSubscriptionCanceled(n),
         P = (function (e, t) {
-            let n = eL.A.get(e.premiumPlanIdFromItems ?? "");
+            let n = eR.A.get(e.premiumPlanIdFromItems ?? "");
             if (null != n) {
                 let i = (0, D._w)(n, t?.id, !1),
                     l = i.length > 0 ? i[0] : e.currency;
@@ -1302,7 +1326,7 @@ function tl(e) {
             return !1;
         })(n, s);
     if (null == _ || null == N) return (0, i.jsx)(E.y, {});
-    let M = P ? (0, R.Bv)(N) : null,
+    let M = P ? (0, L.Bv)(N) : null,
         U = null != M || (null != v && null != v.discountId && ed.i_.includes(v.discountId)),
         V = !j && null != v && v.discountId === ed.sC,
         k = P && ((j && null != y) || (!j && U));
@@ -1455,14 +1479,14 @@ function ta(e) {
                 }
             );
         }));
-    let [v] = (0, L.YV)({
+    let [v] = (0, R.YV)({
             subscriptionId: n.id,
             renewal: !0,
             analyticsLocations: S,
             analyticsLocation: c,
             fetchKey: b,
         }),
-        [j] = (0, L.YV)({
+        [j] = (0, R.YV)({
             subscriptionId: n.id,
             renewal: !0,
             applyEntitlements: !0,
@@ -1473,13 +1497,13 @@ function ta(e) {
         }),
         O = r?.invalid,
         D = (0, u.bG)([y.default], () => y.default.getCurrentUser()?.hasFreePremium()),
-        R = o()(n.currentPeriodEnd),
+        L = o()(n.currentPeriodEnd),
         M = null != n.paymentSourceId,
         U = j?.total ?? 0,
         V =
             !M &&
             U > 0 &&
-            (7 >= R.diff(o()(), "days") || n.status === eg.Dmq.PAST_DUE) &&
+            (7 >= L.diff(o()(), "days") || n.status === eg.Dmq.PAST_DUE) &&
             !D &&
             !n.isPurchasedExternally,
         k = O && n.status === eg.Dmq.PAST_DUE && !D && !n.isPurchasedExternally,
@@ -1489,7 +1513,7 @@ function ta(e) {
         X = B ? o()().diff(o()(n.currentPeriodStart), "days") : 0,
         z = null != A && A.isPremiumGroupPrimary(),
         H = n.hasAnyPremiumGroup,
-        [Y] = (0, L.C8)({ subscriptionId: n.id, preventFetch: !(F || B) });
+        [Y] = (0, R.C8)({ subscriptionId: n.id, preventFetch: !(F || B) });
     return null == v || null == j
         ? (0, i.jsx)(E.y, {})
         : (null != n.renewalMutations &&
