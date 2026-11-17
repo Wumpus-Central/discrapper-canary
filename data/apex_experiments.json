@@ -1976,24 +1976,6 @@
   },
   {
     "kind": "user",
-    "name": "2026-06-clips-secondary-entrypoints",
-    "defaultConfig": {
-      "enableOverlayEntrypoint": false,
-      "enableGamePanelEntrypoint": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableOverlayEntrypoint": true,
-        "enableGamePanelEntrypoint": true
-      }
-    }
-  },
-  {
-    "kind": "user",
     "name": "2026-06-content-classification-embedded-activity-filter",
     "defaultConfig": {
       "enabled": false
@@ -2387,22 +2369,6 @@
       },
       "1": {
         "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-07-clips-game-events-on-player",
-    "defaultConfig": {
-      "enableGameEventsOnPlayer": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableGameEventsOnPlayer": true
       }
     }
   },
@@ -3441,22 +3407,6 @@
   {
     "name": "2026-09-build-a-bear-cards",
     "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-09-clips-editor-image-track",
     "defaultConfig": {
       "enabled": false
     },

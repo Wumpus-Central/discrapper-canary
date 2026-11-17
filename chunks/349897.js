@@ -11,14 +11,13 @@ var i = n(477900),
     m = n(713608),
     f = n(918715),
     p = n(717421),
-    h = n(271520),
-    g = n(762555),
-    A = n(443184),
-    C = n(696016),
-    E = n(683825),
-    x = n(792996),
-    v = n(328115);
-function _(e) {
+    h = n(762555),
+    g = n(443184),
+    A = n(696016),
+    C = n(683825),
+    E = n(792996),
+    x = n(328115);
+function v(e) {
     let {
         leftPx: t,
         rightPx: n,
@@ -39,14 +38,14 @@ function _(e) {
                 body: A,
                 position: "top",
                 children: (0, i.jsx)(s.animated.div, {
-                    className: a()(v.z, e),
+                    className: a()(x.z, e),
                     onMouseEnter: () => l(m),
                     onMouseLeave: () => l(null),
                     style: {
                         left: r ? p.to((e) => t - e) : t,
                         right: n,
-                        width: r ? p.to((e) => `${y + 2 * e}px`) : y,
-                        height: r ? p.to((e) => `${y + 2 * e}px`) : y,
+                        width: r ? p.to((e) => `${_ + 2 * e}px`) : _,
+                        height: r ? p.to((e) => `${_ + 2 * e}px`) : _,
                     },
                     children: (0, i.jsx)(h, {
                         size: "custom",
@@ -58,41 +57,41 @@ function _(e) {
             }),
     });
 }
-let y = 12,
-    b = { tension: 500, friction: 30, clamp: !0 };
-function T(e) {
+let _ = 12,
+    y = { tension: 500, friction: 30, clamp: !0 };
+function b(e) {
     switch (e) {
-        case g.B.LAUGHTER:
-            return C.Gy.LAUGHTER;
-        case g.B.SHOUTING:
-            return C.Gy.SHOUTING;
+        case h.B.LAUGHTER:
+            return A.Gy.LAUGHTER;
+        case h.B.SHOUTING:
+            return A.Gy.SHOUTING;
         default:
             return null;
     }
 }
-function S(e, t) {
+function T(e, t) {
     if (null != t.emotion) {
-        let n = T(t.emotion.type);
-        return null == n ? 0 : ((0, A.$b)(e, n) ?? 0);
+        let n = b(t.emotion.type);
+        return null == n ? 0 : ((0, g.$b)(e, n) ?? 0);
     }
     return null != t.game
         ? null == t.game.event_name
             ? 0
-            : ((0, A.$b)(e, C.Gy.GAME_EVENT, t.game.event_name) ?? 0)
+            : ((0, g.$b)(e, A.Gy.GAME_EVENT, t.game.event_name) ?? 0)
         : 0;
 }
-function j(e, t) {
+function S(e, t) {
     if (null != t.emotion) {
-        let n = T(t.emotion.type);
-        return null == n ? null : (0, A.u6)(e, n);
+        let n = b(t.emotion.type);
+        return null == n ? null : (0, g.u6)(e, n);
     }
     if (null != t.game) {
-        if (null != t.game.event_name) return (0, A.u6)(e, C.Gy.GAME_EVENT, t.game.event_name);
+        if (null != t.game.event_name) return (0, g.u6)(e, A.Gy.GAME_EVENT, t.game.event_name);
         switch (t.game.type) {
-            case g.Q_.MULTIKILL:
-            case g.Q_.KILL:
+            case h.Q_.MULTIKILL:
+            case h.Q_.KILL:
                 return m.ModerationIcon;
-            case g.Q_.DEATH:
+            case h.Q_.DEATH:
                 return f.SkullIcon;
         }
     }
@@ -107,7 +106,7 @@ n.d(
                 s = l.useRef(null),
                 [{ expansion: o }, u] = (0, p.z)(() => ({
                     expansion: 0,
-                    config: b,
+                    config: y,
                     onRest: () => {
                         null == s.current && a(null);
                     },
@@ -118,10 +117,9 @@ n.d(
                     },
                     [u],
                 ),
-                d = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-                m = l.useMemo(() => {
+                d = l.useMemo(() => {
                     let i = e
-                        .filter((e) => ((d && null != e.game) || null != e.emotion) && null != j(t, e))
+                        .filter((e) => (null != e.game || null != e.emotion) && null != S(t, e))
                         .map((e) => {
                             var t;
                             return {
@@ -131,53 +129,53 @@ n.d(
                         })
                         .filter((e) => null != e.position);
                     (i.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms),
-                        i.sort((e, n) => S(t, n.event) - S(t, e.event)));
+                        i.sort((e, n) => T(t, n.event) - T(t, e.event)));
                     let l = [];
                     for (let e of i) l.some((t) => 3 > Math.abs(t.position - e.position)) || l.push(e);
                     return (l.sort((e, t) => e.event.timestamp_ms - t.event.timestamp_ms), l.map((e) => e.event));
-                }, [e, d, t, n]),
-                f = l.useMemo(
-                    () => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: y, gapPx: 4 })),
-                    [m],
+                }, [e, t, n]),
+                m = l.useMemo(
+                    () => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: _, gapPx: 4 })),
+                    [d],
                 ),
-                g = l.useCallback(
+                f = l.useCallback(
                     (e, n) => {
                         let l = r === e.index,
-                            a = m[e.index];
+                            a = d[e.index];
                         if (null == a) return null;
                         let s = n > e.leftPx,
-                            u = j(t, a),
-                            d =
+                            u = S(t, a),
+                            m =
                                 null != a.emotion
-                                    ? x.intl.string(E.default["ry+jxm"])
+                                    ? E.intl.string(C.default["ry+jxm"])
                                     : null != a.game
-                                      ? x.intl.string(E.default["347DBb"])
+                                      ? E.intl.string(C.default["347DBb"])
                                       : null;
-                        return null == u || null == d
+                        return null == u || null == m
                             ? null
-                            : (0, i.jsx)(_, {
+                            : (0, i.jsx)(v, {
                                   ...e,
                                   activated: s,
                                   gapPx: 4,
                                   title: (function (e, t) {
                                       if (null != t.emotion) {
-                                          let n = T(t.emotion.type);
-                                          return null == n ? null : (0, A.PZ)(e, n);
+                                          let n = b(t.emotion.type);
+                                          return null == n ? null : (0, g.PZ)(e, n);
                                       }
                                       return null != t.game && null != t.game.event_name
-                                          ? (0, A.PZ)(e, C.Gy.GAME_EVENT, t.game.event_name)
+                                          ? (0, g.PZ)(e, A.Gy.GAME_EVENT, t.game.event_name)
                                           : null;
                                   })(t, a),
-                                  body: d,
+                                  body: m,
                                   expansionSpring: o,
                                   setHoveredIndex: c,
                                   isAnimated: l,
                                   icon: u,
                               });
                     },
-                    [r, m, c, o, t],
+                    [r, d, c, o, t],
                 );
-            return { indicators: f, animatingIndex: r, expansionSpring: o, hoverExpansionPx: 4, renderIndicator: g };
+            return { indicators: m, animatingIndex: r, expansionSpring: o, hoverExpansionPx: 4, renderIndicator: f };
         },
     },
 );
