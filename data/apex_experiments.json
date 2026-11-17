@@ -1413,22 +1413,6 @@
     }
   },
   {
-    "name": "2026-04-gifting-badge",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-04-http-request-sample",
     "defaultConfig": {

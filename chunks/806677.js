@@ -30,13 +30,13 @@ var n = t(477900),
     G = t(802494),
     v = t(310209),
     w = t(73138),
-    M = t(734057),
-    R = t(309010),
-    W = t(129230),
+    R = t(734057),
+    W = t(309010),
+    M = t(129230),
     P = t(427262),
     D = t(110862),
-    F = t(267499),
-    H = t(45052),
+    H = t(267499),
+    F = t(45052),
     B = t(163074),
     U = t(742655),
     Q = t(492275),
@@ -60,7 +60,7 @@ function Y(i) {
                     isGift: !0,
                     priceOptions: t,
                     showPromotionalGiftBanner: s,
-                    wumpusPosition: F.Rf.GIFT_SELECTION_MODAL,
+                    wumpusPosition: H.Rf.GIFT_SELECTION_MODAL,
                     className: z.giftSelectionModalContext,
                 }),
                 (0, n.jsx)(D.Ls, {
@@ -75,19 +75,18 @@ function Y(i) {
 }
 function q(i) {
     let { analyticsLocations: e } = i,
-        t = (0, H.F5)("GiftSelectionModal"),
-        { nextTier: s, giftsToNextTier: l } = (0, d.cf)([N.Ay], () => ({
+        { nextTier: t, giftsToNextTier: s } = (0, d.cf)([N.Ay], () => ({
             nextTier: N.Ay.getNextTier(r.$.GIFTING),
             giftsToNextTier: N.Ay.getRemainingToNextTier(r.$.GIFTING),
         }));
-    return t && null != s
-        ? (0, n.jsx)(Q.A, {
-              giftsToNextTier: l,
-              nextTierName: s.name ?? "",
-              nextTierIcon: (0, H.Se)(s),
+    return null == t
+        ? null
+        : (0, n.jsx)(Q.A, {
+              giftsToNextTier: s,
+              nextTierName: t.name ?? "",
+              nextTierIcon: (0, F.Se)(t),
               analyticsLocations: e,
-          })
-        : null;
+          });
 }
 function ii() {
     return (0, n.jsx)(n.Fragment, {
@@ -114,7 +113,7 @@ function ie(i) {
                 ),
             [e],
         ),
-        h = (0, d.bG)([R.Ay, M.A], () => M.A.getChannel(R.Ay.getChannelId())),
+        h = (0, d.bG)([W.Ay, R.A], () => R.A.getChannel(W.Ay.getChannelId())),
         f = c > e.length ? c - e.length + 1 : void 0,
         g = s.useCallback(() => {
             (o?.(), (0, I.s7)());
@@ -180,7 +179,7 @@ function it(i) {
                 i &&
                     !d &&
                     a.length > 0 &&
-                    (W.default.track(X.HAw.IMPRESSION_GIFT_SELECTION_WISHLIST_SECTION_VIEWED, {
+                    (M.default.track(X.HAw.IMPRESSION_GIFT_SELECTION_WISHLIST_SECTION_VIEWED, {
                         gift_recipient_id: e.id,
                         sku_ids: a.map((i) => {
                             let { sku: e } = i;
@@ -273,7 +272,7 @@ function is(i) {
                     "Nitro" === i
                         ? t?.scrollTo({ top: 0, behavior: T ? "auto" : "smooth" })
                         : x.current?.scrollIntoView({ behavior: T ? "auto" : "smooth", block: "start" }),
-                    W.default.track(X.HAw.GIFT_SELECTION_TAB_SELECTED, {
+                    M.default.track(X.HAw.GIFT_SELECTION_TAB_SELECTED, {
                         gift_recipient_id: e.id,
                         tab_name: i,
                         location_stack: a,
@@ -282,7 +281,7 @@ function is(i) {
             [e.id, a, T],
         ),
         C = s.useCallback(() => {
-            (W.default.track(X.HAw.GIFT_SELECTION_SEE_WISHLIST_CTA_CLICKED, {
+            (M.default.track(X.HAw.GIFT_SELECTION_SEE_WISHLIST_CTA_CLICKED, {
                 gift_recipient_id: e.id,
                 wishlist_item_count: c,
                 location_stack: a,
@@ -436,7 +435,7 @@ function ia(i) {
     s.useEffect(() => {
         _.current ||
             ((_.current = !0),
-            W.default.track(X.HAw.GIFT_SELECTION_MODAL_OPENED, { gift_recipient_id: e?.id, location_stack: a }));
+            M.default.track(X.HAw.GIFT_SELECTION_MODAL_OPENED, { gift_recipient_id: e?.id, location_stack: a }));
     }, [e, a]);
     let x = (0, n.jsx)(Y, { onSelectSku: S, priceOptions: u, showPromotionalGiftBanner: h });
     return (0, n.jsx)(m.d, {
