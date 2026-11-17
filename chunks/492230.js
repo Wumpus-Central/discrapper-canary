@@ -1,6 +1,6 @@
 r(582128);
-var n = r(621466),
-    l = r(644447),
+var l = r(621466),
+    n = r(644447),
     o = r(256905),
     i = r(415097);
 r.d(
@@ -11,22 +11,22 @@ r.d(
             let a = {},
                 d = {},
                 u = {};
-            for (let [c, p] of e.entries()) {
-                let s = (0, l.E)({ proxyURL: p.proxyUrl, url: p.url });
-                ((a[s] = (l) =>
+            for (let [p, c] of e.entries()) {
+                let s = (0, n.E)({ proxyURL: c.proxyUrl, url: c.url });
+                ((a[s] = (n, i) =>
                     (function (e, t, r) {
-                        let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                        let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
                             i = arguments.length > 4 ? arguments[4] : void 0;
                         (e.preventDefault(),
-                            (0, n.vq)(e.currentTarget) && e.currentTarget.blur(),
-                            (0, o.R)({ ...l, items: t, startingIndex: r, location: i ?? "zoomedMediaModalHelper" }));
-                    })(l, e, c, t, r)),
-                    (d[s] = () => (0, i.Z)(p, e.length > 1)),
-                    (u[s] = (n) =>
+                            (0, l.vq)(e.currentTarget) && e.currentTarget.blur(),
+                            (0, o.R)({ ...n, items: t, startingIndex: r, location: i ?? "zoomedMediaModalHelper" }));
+                    })(n, null == i ? e : e.map((e) => (e === c ? { ...e, ...i } : e)), p, t, r)),
+                    (d[s] = () => (0, i.Z)(c, e.length > 1)),
+                    (u[s] = (l) =>
                         (0, o.R)({
                             ...t,
-                            items: e.map((e) => (e === p ? { ...e, initialTimeSec: n / 1e3 } : e)),
-                            startingIndex: c,
+                            items: e.map((e) => (e === c ? { ...e, initialTimeSec: l / 1e3 } : e)),
+                            startingIndex: p,
                             location: r ?? "zoomedMediaModalHelper",
                         })));
             }
