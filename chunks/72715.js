@@ -1,65 +1,66 @@
-var e = a(477900);
-a(582128);
-var n = a(503698),
-    t = a.n(n),
-    l = a(224640),
-    r = a(95362),
-    d = a(534514),
-    c = a(270003),
-    x = a(696208),
-    h = a(915089),
-    j = a(584265),
-    o = a(895600),
-    p = a(792996),
-    m = a(744409);
-a.d(
-    i,
+var i = e(477900);
+e(582128);
+var t = e(503698),
+    l = e.n(t),
+    n = e(224640),
+    r = e(95362),
+    c = e(534514),
+    d = e(270003),
+    x = e(696208),
+    h = e(915089),
+    j = e(584265),
+    o = e(895600),
+    p = e(792996),
+    u = e(744409);
+e.d(
+    a,
     {},
     {
         default: function (s) {
-            let { transitionState: i, onClose: a, guildTemplate: n } = s,
-                { form: u, preview: v, handleSubmit: C } = (0, j.A)(n, !1),
-                N = (0, h.GV)();
-            return (0, e.jsxs)(l.d, {
-                transitionState: i,
-                onClose: a,
+            let { transitionState: a, onClose: e, guildTemplate: t } = s,
+                { form: m, preview: v, handleSubmit: b } = (0, j.A)(t, !1),
+                g = (0, h.GV)();
+            return (0, i.jsxs)(n.d, {
+                transitionState: a,
+                onClose: e,
                 size: "xxl",
-                "aria-labelledby": N,
+                "aria-labelledby": g,
                 children: [
-                    (0, e.jsxs)("div", {
-                        className: m.jT,
+                    (0, i.jsxs)("div", {
+                        className: u.jT,
                         children: [
-                            (0, e.jsx)("div", {
-                                className: t()(m.jx, m.Iz),
-                                children: (0, e.jsx)("div", {
-                                    className: m.OQ,
-                                    children: (0, e.jsx)(o.A, { guildTemplate: n, headerId: N }),
+                            (0, i.jsx)(r.Ip, {
+                                className: l()(u.jx, u.Iz),
+                                scrollbarGutter: "both-edges",
+                                children: (0, i.jsx)("div", {
+                                    className: u.OQ,
+                                    children: (0, i.jsx)(o.A, { guildTemplate: t, headerId: g }),
                                 }),
                             }),
-                            (0, e.jsx)("div", {
-                                className: t()(m.jx, m.gy),
-                                children: (0, e.jsxs)(r.Ip, {
-                                    className: m.KJ,
+                            (0, i.jsx)("div", {
+                                className: l()(u.jx, u.gy),
+                                children: (0, i.jsxs)(r.Ip, {
+                                    className: u.KJ,
                                     children: [
-                                        (0, e.jsx)(d.D, {
+                                        (0, i.jsx)(c.D, {
                                             variant: "heading-xl/semibold",
-                                            className: m.wx,
+                                            className: u.wx,
                                             children: p.intl.string(p.t.UNFvtM),
                                         }),
-                                        (0, e.jsxs)(c.n, { children: [u, v] }),
+                                        (0, i.jsxs)(d.n, { children: [m, v] }),
                                     ],
                                 }),
                             }),
                         ],
                     }),
-                    (0, e.jsx)(x.H, {
+                    (0, i.jsx)(x.H, {
                         actions: [
-                            { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: a },
+                            { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: e },
                             {
                                 variant: "primary",
                                 text: p.intl.string(p.t.CumH4u),
                                 onClick: () => {
-                                    C();
+                                    b();
                                 },
                             },
                         ],

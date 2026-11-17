@@ -1,6 +1,7 @@
 .modalContainer_aOuJto {
     display: flex;
-    margin-top: calc(var(--space-8)*-1)
+    margin-top: calc(var(--space-8)*-1);
+    min-height: 0
 }
 
 .modalSection_aOuJto {
@@ -11,8 +12,7 @@
 .ctaSection_aOuJto {
     background: var(--background-base-lower);
     border-start-start-radius: var(--radius-md);
-    justify-content: center;
-    min-height: 458px
+    justify-content: center
 }
 
 .ctaContainer_aOuJto {
@@ -38,4 +38,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=121f05048377c962.css.map*/
+/*# sourceMappingURL=b6b5b5e28a0d58eb.css.map*/
