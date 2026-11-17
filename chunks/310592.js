@@ -186,6 +186,7 @@ function N(e) {
                         text: Q || G ? null : eu,
                         forceOpen: el || eE,
                         positionKey: e_,
+                        spacing: 10,
                         ariaHidden: !0,
                         children: (0, i.jsx)("div", {
                             ...ea,

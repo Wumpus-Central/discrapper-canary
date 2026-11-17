@@ -219,6 +219,7 @@ class x extends s.PureComponent {
                                             __unsupportedReactNodeAsText: S || b ? null : $,
                                             forceOpen: t || (a && this.context.keyboardModeEnabled),
                                             positionKey: B,
+                                            spacing: 10,
                                             children: (0, r.jsx)("div", {
                                                 className: i()(f.grabber, j),
                                                 style: { ...A, left: B },
