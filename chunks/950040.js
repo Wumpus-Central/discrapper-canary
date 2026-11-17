@@ -1074,6 +1074,7 @@ function eT(e) {
         withTitleBar: !0,
         windowKey: t,
         title: eh.intl.string(eh.t["5I/1fl"]),
+        contentClassName: $.Bm,
         children: (0, n.jsx)(eM, {}),
     });
 }

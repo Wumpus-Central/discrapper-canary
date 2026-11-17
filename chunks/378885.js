@@ -1,4 +1,5 @@
-e.exports = {
+n.exports = {
+    Bm: "popoutContent_qvPnAz",
     HA: "channelName_qvPnAz",
     Xh: "username_qvPnAz",
     l5: "kvContainer_qvPnAz",
