@@ -21,12 +21,6 @@ let p = [a.pJ.HOURS, a.pJ.MINUTES],
     T = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]),
     g = [128, 256, 512, 768, 1024],
     S = Math.max(...g);
-function N(e) {
-    return new Intl.NumberFormat(I.intl.currentLocale, { notation: "compact", compactDisplay: "short" }).format(e);
-}
-function C(e) {
-    return Math.min(Math.max(Math.round((e / 100) * 6), 1), 5);
-}
 n.d(
     t,
     {},
@@ -67,24 +61,29 @@ n.d(
                 cardColorPalette: (0, u.o)(t),
             };
         },
-        Le: N,
         R8: function (e) {
-            let t;
+            var t;
+            let n;
             return {
-                powerLevel: N(e.powerLevel),
-                powerLevelUnits: C(e.powerLevelPercentile),
+                powerLevel:
+                    ((t = e.powerLevel),
+                    new Intl.NumberFormat(I.intl.currentLocale, {
+                        notation: "compact",
+                        compactDisplay: "short",
+                    }).format(t)),
+                powerLevelUnits: Math.min(Math.max(Math.round((e.powerLevelPercentile / 100) * 6), 1), 5),
                 voice: {
                     text:
-                        (t = Math.round(e.totalVoiceMinutes)) > 0
+                        (n = Math.round(e.totalVoiceMinutes)) > 0
                             ? (function (e) {
                                   let { unit: t, time: n } = (0, a.$l)(e, p),
                                       i = Math.round(n ?? 0);
                                   return t === a.pJ.HOURS
                                       ? I.intl.formatToPlainString(h.default.CQfBsB, { hours: i })
                                       : I.intl.formatToPlainString(h.default.yRfTht, { minutes: i });
-                              })(t)
-                            : I.intl.formatToPlainString(h.default.x7PkHm, { minutes: t }),
-                    accessibilityLabel: I.intl.formatToPlainString(h.default.lw35aH, { duration: (0, c.GM)(t) }),
+                              })(n)
+                            : I.intl.formatToPlainString(h.default.x7PkHm, { minutes: n }),
+                    accessibilityLabel: I.intl.formatToPlainString(h.default.lw35aH, { duration: (0, c.GM)(n) }),
                 },
                 messages: {
                     text:
@@ -226,7 +225,6 @@ n.d(
                       cardColorPalette: e.card_color_palette ?? i.h.NONE,
                   };
         },
-        sX: C,
         vF: function (e, t) {
             let n,
                 i = ((n = t * (0, d.A)()), g.find((e) => e >= n) ?? S),
