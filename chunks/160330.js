@@ -11,23 +11,24 @@ var i = n(115560),
     E = n(994500),
     A = n(894768),
     f = n(287809),
-    h = n(696016),
-    I = n(792996);
+    h = n(732752),
+    I = n(696016),
+    p = n(792996);
 n.d(
     t,
     {},
     {
         A: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
-                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.nQ.CLIP,
+                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I.nQ.CLIP,
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-                p = arguments.length > 3 ? arguments[3] : void 0,
-                m = arguments.length > 4 ? arguments[4] : void 0,
+                m = arguments.length > 3 ? arguments[3] : void 0,
+                g = arguments.length > 4 ? arguments[4] : void 0,
                 {
-                    sourceName: g,
-                    sourceApplicationId: T,
-                    activity: S,
-                    isVoiceOnly: N,
+                    sourceName: T,
+                    sourceApplicationId: S,
+                    activity: N,
+                    isVoiceOnly: C,
                 } = (function () {
                     let e = d.A.getStreamerActiveStreamMetadata(),
                         t = e?.pid,
@@ -71,36 +72,40 @@ n.d(
                         isVoiceOnly: I,
                     };
                 })(),
-                C = _.A.getChannelId(),
-                O = _.A.getGuildId(),
-                R = new Set([c.default.getId()]);
+                O = _.A.getChannelId(),
+                R = _.A.getGuildId();
+            n = n.flatMap((e) => {
+                let t = (0, h.A)(e.signal);
+                return null != t ? [{ ...e, signal: t }] : [];
+            });
+            let L = new Set([c.default.getId()]);
             n.forEach((e) => {
                 let { signal: t } = e;
-                "userId" in t && null != t.userId && R.add(t.userId);
+                "userId" in t && null != t.userId && L.add(t.userId);
             });
-            let L = N && t === h.nQ.CLIP ? h.nQ.VOICE_CLIP : t,
-                y = Date.now(),
-                D = a.A.ntpClock?.getSyncInfo(),
-                b = D?.synced === !0 ? y + D.offsetMs : void 0;
+            let y = C && t === I.nQ.CLIP ? I.nQ.VOICE_CLIP : t,
+                D = Date.now(),
+                b = a.A.ntpClock?.getSyncInfo(),
+                v = b?.synced === !0 ? D + b.offsetMs : void 0;
             return {
                 id: (0, i.A)(),
-                createdAt: y,
-                syncTimestamp: b,
+                createdAt: D,
+                syncTimestamp: v,
                 version: 6,
-                applicationName: g ?? I.intl.string(I.t.qtSJxb),
-                applicationId: T,
-                activity: S,
-                users: Array.from(R),
+                applicationName: T ?? p.intl.string(p.t.qtSJxb),
+                applicationId: S,
+                activity: N,
+                users: Array.from(L),
                 clipMethod: e,
-                guildId: O ?? void 0,
-                channelId: C ?? void 0,
+                guildId: R ?? void 0,
+                channelId: O ?? void 0,
                 timeline: n,
-                decision: p,
-                gameSessionId: m,
-                remoteClipId: p?.signal?.type === h.Gy.DISTRIBUTED ? p.signal.remoteTriggerClipId : void 0,
+                decision: m,
+                gameSessionId: g,
+                remoteClipId: m?.signal?.type === I.Gy.DISTRIBUTED ? m.signal.remoteTriggerClipId : void 0,
                 length: 0,
                 thumbnail: "",
-                type: L,
+                type: y,
             };
         },
     },

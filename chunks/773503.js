@@ -58,7 +58,7 @@ let f = n.memo(function (e) {
                 return (0, a.jsx)(v, { user: t, guildId: r, channelId: o }, e);
             }),
             s.map((e) => {
-                let t = u[e.userId];
+                let t = null != e.userId ? u[e.userId] : void 0;
                 return (0, a.jsx)(
                     C,
                     { soundboard: e, user: t, guildId: r, channelId: o },
