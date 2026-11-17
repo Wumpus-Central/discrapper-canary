@@ -1,0 +1,550 @@
+n.d(t, { A: () => eh });
+var l = n(477900),
+    s = n(582128),
+    i = n(503698),
+    a = n.n(i),
+    r = n(435558),
+    o = n.n(r),
+    u = n(554146),
+    d = n(263775),
+    c = n(409617),
+    m = n(403581),
+    h = n(834730),
+    x = n(28863),
+    p = n(87719),
+    g = n(49999),
+    C = n(683825),
+    f = n(792996),
+    j = n(821939);
+function I(e) {
+    let { markAsDismissed: t } = e;
+    function n() {
+        (t(g.i.TAKE_ACTION), (0, p.x)());
+    }
+    return (0, l.jsxs)("div", {
+        className: j.U,
+        children: [
+            (0, l.jsx)(m.NitroWheelIcon, { size: "xs", color: "currentColor" }),
+            (0, l.jsx)(h.E, {
+                variant: "body-sm/medium",
+                color: "text-default",
+                children: f.intl.format(C.default["0AhA1F"], {
+                    nitroHook: (e, t) => (0, l.jsx)(x.Anchor, { onClick: n, children: e }, t),
+                }),
+            }),
+        ],
+    });
+}
+var A = n(38021),
+    N = n(650684),
+    v = n(265872),
+    y = n(900797),
+    S = n(847374),
+    E = n(939249),
+    _ = n(789645),
+    P = n(267102),
+    L = n(818349),
+    M = n(419490),
+    b = n(204915);
+function O(e) {
+    let { markAsDismissed: t, onMenuOpenChange: i } = e,
+        a = s.useRef(null),
+        { theme: r } = (0, A.wR)(),
+        o = (0, P.Us)(),
+        u = s.useCallback(async () => {
+            let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
+            return (t) => {
+                let { closePopout: n, position: s, updatePosition: i } = t;
+                return null != a.current
+                    ? (0, l.jsx)(e, {
+                          onClose: n,
+                          onSelect: n,
+                          position: s,
+                          onHeightUpdate: i,
+                          target: a.current,
+                          theme: r,
+                          context: o,
+                      })
+                    : null;
+            };
+        }, [r, o]);
+    return (0, l.jsxs)("div", {
+        ref: a,
+        className: b.G0,
+        children: [
+            (0, l.jsxs)("div", {
+                className: b.R4,
+                children: [
+                    (0, l.jsx)(N.ClipsAutoIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsxs)("div", {
+                        className: b.Qs,
+                        children: [
+                            (0, l.jsx)(h.E, {
+                                variant: "body-sm/medium",
+                                color: "text-default",
+                                children: f.intl.string(C.default.Lym9gZ),
+                            }),
+                            (0, l.jsx)(v.Q, {
+                                targetElementRef: a,
+                                renderPopout: u,
+                                position: "top",
+                                align: "center",
+                                onRequestOpen: () => i(!0),
+                                onRequestClose: () => {
+                                    let { clipsSettings: e } = M.Ay.getState();
+                                    ("auto" === (0, L.r)(e.clipsEnabled, M.Ay.getEnableAutoclipping()) &&
+                                        t(g.i.TAKE_ACTION),
+                                        i(!1));
+                                },
+                                children: (e, t) => {
+                                    let { isShown: n } = t,
+                                        s = n ? y.ChevronSmallUpIcon : S.ChevronSmallDownIcon;
+                                    return (0, l.jsxs)(E.D, {
+                                        ...e,
+                                        className: b.lO,
+                                        "aria-haspopup": "menu",
+                                        children: [
+                                            (0, l.jsx)(h.E, {
+                                                variant: "body-sm/medium",
+                                                color: "none",
+                                                className: b.hk,
+                                                children: f.intl.string(C.default.iHA2eT),
+                                            }),
+                                            (0, l.jsx)(s, { size: "xs", color: "currentColor" }),
+                                        ],
+                                    });
+                                },
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, l.jsx)(E.D, {
+                className: b.VN,
+                "aria-label": f.intl.string(f.t.cpT0Cq),
+                onClick: () => t(g.i.USER_DISMISS),
+                children: (0, l.jsx)(_.XSmallIcon, { size: "xs", color: "currentColor" }),
+            }),
+        ],
+    });
+}
+var T = n(176781);
+function w(e) {
+    let { markAsDismissed: t, onMenuOpenChange: i } = e,
+        a = s.useRef(null),
+        { theme: r } = (0, A.wR)(),
+        o = (0, P.Us)(),
+        u = s.useCallback(async () => {
+            let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
+            return (t) => {
+                let { closePopout: n, position: s, updatePosition: i } = t;
+                return null != a.current
+                    ? (0, l.jsx)(e, {
+                          onClose: n,
+                          onSelect: n,
+                          position: s,
+                          onHeightUpdate: i,
+                          target: a.current,
+                          theme: r,
+                          context: o,
+                      })
+                    : null;
+            };
+        }, [r, o]);
+    return (0, l.jsxs)("div", {
+        ref: a,
+        className: b.G0,
+        children: [
+            (0, l.jsxs)("div", {
+                className: b.R4,
+                children: [
+                    (0, l.jsx)(T.ClipsIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsxs)("div", {
+                        className: b.Qs,
+                        children: [
+                            (0, l.jsx)(h.E, {
+                                variant: "body-sm/medium",
+                                color: "text-default",
+                                children: f.intl.string(C.default["G+P4p/"]),
+                            }),
+                            (0, l.jsx)(v.Q, {
+                                targetElementRef: a,
+                                renderPopout: u,
+                                position: "top",
+                                align: "center",
+                                onRequestOpen: () => i(!0),
+                                onRequestClose: () => {
+                                    (M.Ay.getState().clipsSettings.clipsEnabled && t(g.i.TAKE_ACTION), i(!1));
+                                },
+                                children: (e, t) => {
+                                    let { isShown: n } = t,
+                                        s = n ? y.ChevronSmallUpIcon : S.ChevronSmallDownIcon;
+                                    return (0, l.jsxs)(E.D, {
+                                        ...e,
+                                        className: b.lO,
+                                        "aria-haspopup": "menu",
+                                        children: [
+                                            (0, l.jsx)(h.E, {
+                                                variant: "body-sm/medium",
+                                                color: "none",
+                                                className: b.hk,
+                                                children: f.intl.string(C.default.vxs365),
+                                            }),
+                                            (0, l.jsx)(s, { size: "xs", color: "currentColor" }),
+                                        ],
+                                    });
+                                },
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, l.jsx)(E.D, {
+                className: b.VN,
+                "aria-label": f.intl.string(f.t.cpT0Cq),
+                onClick: () => t(g.i.USER_DISMISS),
+                children: (0, l.jsx)(_.XSmallIcon, { size: "xs", color: "currentColor" }),
+            }),
+        ],
+    });
+}
+var R = n(607399),
+    U = n(855986),
+    W = n(596344),
+    k = n(287809),
+    H = n(734066),
+    D = n(849993);
+n(938796);
+var F = n(665260),
+    G = n(33358),
+    V = n(294520),
+    q = n(288254),
+    z = n(734057),
+    X = n(464132),
+    B = n(652215);
+function Y(e) {
+    return (0, F.Lt)(e.flags ?? 0, B.sbO.IS_CLIP);
+}
+function K(e) {
+    return e.attachments.some(Y);
+}
+let Q = new WeakMap();
+function Z(e, t) {
+    let n = Q.get(e);
+    if (null != n && n.currentUserId === t) return n.messageId;
+    let l = e.findNewest((e) => e.author.id !== t && K(e))?.id ?? null;
+    return (Q.set(e, { currentUserId: t, messageId: l }), l);
+}
+function $(e) {
+    let t = (0, G.P)(e),
+        n = e.channel_id,
+        l = (0, U.bG)([z.A], () => z.A.getChannel(n), [n]);
+    return e.attachments.some(
+        (e) => Y(e) && null == (0, V.iW)(e, t, (0, F.Lt)(e.flags ?? 0, B.sbO.IS_SPOILER) || (0, q.BV)(l)),
+    );
+}
+let J = [
+    { id: "received", content: u.M.AUTOCLIPPING_EARLY_ACCESS_RECEIVED_CLIP_NOTICE, claim: "received" },
+    {
+        id: "manual_sent",
+        content: u.M.AUTOCLIPPING_EARLY_ACCESS_SENT_MANUAL_CLIP_NOTICE,
+        claim: "manual_sent_instance",
+    },
+    { id: "chat_upsell", content: u.M.AUTOCLIPPING_EARLY_ACCESS_FREE_USER_CHAT_UPSELL, claim: "chat_upsell" },
+];
+function ee(e) {
+    let { message: t } = e,
+        {
+            notice: n,
+            markAsDismissed: i,
+            onMenuOpenChange: a,
+        } = (function (e) {
+            var t, n;
+            let l,
+                i,
+                a,
+                r,
+                o,
+                u,
+                m,
+                h,
+                x,
+                p,
+                g,
+                C,
+                f,
+                j,
+                I,
+                A,
+                N,
+                v,
+                y,
+                S,
+                E,
+                _,
+                L,
+                M,
+                b,
+                O,
+                T,
+                w,
+                F,
+                G = s.useId(),
+                [V, q] = s.useState(null),
+                z = {
+                    received:
+                        ((t = "received" === V),
+                        (l = (0, P.Us)()),
+                        (i = "off" === (0, X.U)().value),
+                        (a = $(e)),
+                        (r = e.channel_id),
+                        (o = e.id),
+                        (u = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (m = e.author.id !== u && K(e) && (i || t) && !R.Fr && l === B.BRT.APP),
+                        (x = null == (h = (0, c._C)("received")) ? "none" : h === G ? "self" : "other"),
+                        (p = (0, U.bG)([W.A], () => m && "none" === x && Z(W.A.getMessages(r), u) === o, [
+                            m,
+                            x,
+                            r,
+                            o,
+                            u,
+                        ])),
+                        (g = m && (p || "self" === x) && a),
+                        (C = (0, D.H)("useReceivedClipNudge")),
+                        g && C),
+                    manual_sent:
+                        ((n = "manual_sent" === V),
+                        (f = (0, P.Us)()),
+                        (j = "auto" === (0, X.U)().value),
+                        (I = (0, c._C)("manual_sent") === e.id),
+                        (A = (0, c._C)("manual_sent_instance")),
+                        (N = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (v = I && (null == A || A === G) && e.author.id === N && (!j || n) && !R.Fr && f === B.BRT.APP),
+                        (y = (0, D.H)("useManualClipSentNudge")),
+                        v && y),
+                    chat_upsell:
+                        ((S = (0, P.Us)()),
+                        (E = $(e)),
+                        (_ = (0, c._C)("chat_upsell")),
+                        (L = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (M = (0, H.Vl)()),
+                        (b = e.author.id !== L && !M && !R.Fr && S === B.BRT.APP && K(e)),
+                        (O = e.channel_id),
+                        (T = e.id),
+                        (w = (0, U.bG)([W.A], () => b && null == _ && Z(W.A.getMessages(O), L) === T, [b, _, O, T, L])),
+                        (F = b && (w || _ === G) && E),
+                        (0, D.H)("useClipsChatUpsell", F)),
+                },
+                Y = (0, c.wc)(e.id),
+                Q = J.filter((e) => {
+                    let { id: t } = e;
+                    return z[t] && (null == Y || Y === t);
+                }),
+                ee = (0, c.Jk)(),
+                et = Q.map((e) => {
+                    let { claim: t } = e;
+                    return t;
+                }).join(" ");
+            (s.useLayoutEffect(() => {
+                let e = et.split(" ");
+                for (let { claim: t } of J) e.includes(t) ? (0, c.K)(t, G) : (0, c.Rx)(t, G);
+            }, [et, ee, G]),
+                s.useLayoutEffect(
+                    () => () =>
+                        J.forEach((e) => {
+                            let { claim: t } = e;
+                            return (0, c.Rx)(t, G);
+                        }),
+                    [G],
+                ));
+            let en = Q.filter((e) => {
+                    let { claim: t } = e;
+                    return ee[t] === G;
+                }),
+                [el, es] = (0, d.kn)(
+                    en.map((e) => {
+                        let { content: t } = e;
+                        return t;
+                    }),
+                ),
+                ei =
+                    J.find((e) => {
+                        let { content: t } = e;
+                        return t === el;
+                    })?.id ?? null,
+                ea = e.id;
+            return (
+                s.useEffect(() => {
+                    null != ei && (0, c.Mi)(ea, ei);
+                }, [ea, ei]),
+                {
+                    notice: ei,
+                    markAsDismissed: es,
+                    onMenuOpenChange: function (e) {
+                        q(e ? ei : null);
+                    },
+                }
+            );
+        })(t);
+    switch (n) {
+        case "received":
+            return (0, l.jsx)(w, { markAsDismissed: i, onMenuOpenChange: a });
+        case "manual_sent":
+            return (0, l.jsx)(O, { markAsDismissed: i, onMenuOpenChange: a });
+        case "chat_upsell":
+            return (0, l.jsx)(I, { markAsDismissed: i });
+        case null:
+            return null;
+    }
+}
+var et = n(643612),
+    en = n(448381),
+    el = n(96782),
+    es = n(838541),
+    ei = n(882469);
+function ea(e) {
+    let { visualMediaItems: t, maxWidth: n } = e,
+        s = t.length;
+    if (1 === s) return (0, l.jsx)(er, { itemsForLayout: t, isSingleImage: !0, maxWidth: n });
+    if (2 === s) return (0, l.jsx)(eo, { itemsForLayout: t, maxWidth: n });
+    if (3 === s) return (0, l.jsx)(eu, { itemsForLayout: t, maxWidth: n });
+    if (4 === s) return (0, l.jsx)(ed, { itemsForLayout: t, maxWidth: n });
+    let i = s % 3;
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            1 === i && (0, l.jsx)(er, { itemsForLayout: t.slice(0, i), maxWidth: n }),
+            2 === i && (0, l.jsx)(eo, { itemsForLayout: t.slice(0, i), maxWidth: n }),
+            0 === i
+                ? (0, l.jsx)(ec, { itemsForLayout: t, maxWidth: n })
+                : (0, l.jsx)(ec, { itemsForLayout: t.slice(i), maxWidth: n }),
+        ],
+    });
+}
+function er(e) {
+    let { itemsForLayout: t, maxWidth: n, isSingleImage: s } = e,
+        i = t[0];
+    return (0, l.jsx)("div", {
+        className: a()(ei.EO, { [ei.Gj]: s, [ei.Kv]: !s }),
+        children: (0, l.jsx)(em, { props: i, useFullWidth: !s, isSingleItem: !0, maxWidth: n }),
+    });
+}
+function eo(e) {
+    let { itemsForLayout: t, maxWidth: n } = e,
+        s = Math.round((n - 4) / 2);
+    return (0, l.jsx)("div", {
+        className: ei.SQ,
+        children: t.map((e) =>
+            (0, l.jsx)(
+                "div",
+                { className: ei.XE, children: (0, l.jsx)(em, { props: e, maxWidth: s, maxHeight: s }) },
+                e.item.uniqueId,
+            ),
+        ),
+    });
+}
+function eu(e) {
+    let { itemsForLayout: t, maxWidth: n } = e,
+        s = Math.round((2 * (n - 4)) / 3),
+        i = s / 2;
+    return (0, l.jsxs)("div", {
+        className: a()(ei.SQ, ei.o_),
+        children: [
+            (0, l.jsx)("div", { className: ei.es, children: (0, l.jsx)(em, { props: t[0], maxWidth: s }) }),
+            (0, l.jsx)("div", {
+                className: ei.N$,
+                children: (0, l.jsx)("div", {
+                    className: ei._i,
+                    children: t
+                        .splice(1)
+                        .map((e) =>
+                            (0, l.jsx)(
+                                "div",
+                                {
+                                    className: ei.$w,
+                                    children: (0, l.jsx)(em, { props: e, maxWidth: i, maxHeight: 173 }),
+                                },
+                                e.item.uniqueId,
+                            ),
+                        ),
+                }),
+            }),
+        ],
+    });
+}
+function ed(e) {
+    let { itemsForLayout: t, maxWidth: n } = e,
+        s = Math.round((n - 4) / 2);
+    return (0, l.jsx)("div", {
+        className: ei.av,
+        children: t.map((e) =>
+            (0, l.jsx)(em, { props: e, maxWidth: s, maxHeight: 173, displayGridItem: !0 }, e.item.uniqueId),
+        ),
+    });
+}
+function ec(e) {
+    let { itemsForLayout: t, maxWidth: n } = e,
+        s = Math.round((n - 8) / 3);
+    return (0, l.jsx)("div", {
+        className: ei._f,
+        children: t.map((e) =>
+            (0, l.jsx)(em, { props: e, maxWidth: s, maxHeight: s, displayGridItem: !0 }, e.item.uniqueId),
+        ),
+    });
+}
+function em(e) {
+    var t, n;
+    let {
+            props: s,
+            maxWidth: i = 550,
+            maxHeight: r = 350,
+            useFullWidth: o = !0,
+            isSingleItem: u = !1,
+            displayGridItem: d,
+        } = e,
+        c = s.item.type,
+        m = {
+            ...s,
+            ...("IMAGE" === c &&
+                ((t = s.className), { className: a()(t, ei.s_), imgContainerClassName: ei.nh, imgClassName: ei.g2 })),
+            ...(("VIDEO" === c || "CLIP" === c) && ((n = s.className), { className: a()(n, ei.g2) })),
+            displayGridItem: d,
+            mediaLayoutType: es.d.MOSAIC,
+            maxWidth: i,
+            maxHeight: r,
+            useFullWidth: o,
+            isSingleMosaicItem: u,
+        };
+    return (0, l.jsx)(et.G.Provider, { value: s.gifFavoriteButton, children: (0, l.jsx)(el.Ay, { ...m }) });
+}
+let eh = function (e) {
+    var t;
+    let { items: n, isInAppComponentsV2: i = !1 } = e,
+        { visualMediaItems: r, nonVisualMediaItems: u } =
+            ((t = n),
+            s.useMemo(() => {
+                let [e, n] = o().partition(t, (e) => (0, en.Xg)(e.item.type));
+                return { visualMediaItems: e, nonVisualMediaItems: n };
+            }, [t])),
+        d = n[0]?.message;
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            r.length > 0 &&
+                (0, l.jsx)("div", {
+                    className: a()(ei.XU, { [ei.dM]: i, [ei.eO]: 1 === r.length && "CLIP" === r[0].item.type }),
+                    children: (0, l.jsx)(ea, { visualMediaItems: r, maxWidth: i ? 600 : 550 }),
+                }),
+            u.length > 0 &&
+                (0, l.jsx)("div", {
+                    className: ei.s,
+                    children: u.map((e) =>
+                        (0, l.jsx)(
+                            "div",
+                            { className: ei.Br, children: (0, l.jsx)(em, { props: e }) },
+                            e.item.uniqueId,
+                        ),
+                    ),
+                }),
+            !i && null != d && K(d) ? (0, l.jsx)(ee, { message: d }) : null,
+        ],
+    });
+};
