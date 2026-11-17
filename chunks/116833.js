@@ -100,7 +100,7 @@ let o = {
         5: () => Promise.all([n.e(76928), n.e(958038), n.e(362507)]).then(n.bind(n, 839238)),
         6: () => Promise.all([n.e(735042), n.e(699250), n.e(959880), n.e(858529), n.e(488990)]).then(n.bind(n, 275256)),
         7: () => Promise.all([n.e(861494), n.e(58407)]).then(n.bind(n, 939034)),
-        8: () => Promise.all([n.e(604153), n.e(357714)]).then(n.bind(n, 460969)),
+        8: () => Promise.all([n.e(84194), n.e(357714)]).then(n.bind(n, 460969)),
         9: () =>
             Promise.all([
                 n.e(686889),

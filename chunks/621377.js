@@ -606,8 +606,9 @@ function eQ(e) {
                                                         n.e(336046),
                                                         n.e(58495),
                                                         n.e(156957),
-                                                        n.e(363189),
-                                                        n.e(604153),
+                                                        n.e(586984),
+                                                        n.e(84194),
+                                                        n.e(485480),
                                                         n.e(641877),
                                                         n.e(126301),
                                                         n.e(866212),
@@ -747,7 +748,7 @@ function eQ(e) {
                                                         n.e(830938),
                                                         n.e(356821),
                                                         n.e(993610),
-                                                        n.e(920282),
+                                                        n.e(332875),
                                                         n.e(538513),
                                                         n.e(993679),
                                                         n.e(121570),
@@ -756,10 +757,10 @@ function eQ(e) {
                                                         n.e(617823),
                                                         n.e(509856),
                                                         n.e(325047),
+                                                        n.e(32944),
                                                         n.e(359258),
                                                         n.e(357714),
                                                         n.e(226714),
-                                                        n.e(336992),
                                                         n.e(363618),
                                                         n.e(644816),
                                                         n.e(928662),
@@ -973,8 +974,8 @@ function e1(e) {
 }
 var e2 = n(34188),
     e8 = n(700623),
-    e3 = n(177953),
-    e4 = n(825484),
+    e4 = n(177953),
+    e3 = n(825484),
     e6 = n(683071),
     e7 = n(900797),
     e9 = n(847374),
@@ -1312,7 +1313,7 @@ function tb(e) {
         className: tI.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e3.GroupIcon, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e4.GroupIcon, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(b.E, {
                 variant: "body-sm/semibold",
                 color: "interactive-text-default",
@@ -1348,7 +1349,7 @@ function tT(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Z$)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e4.e, {
+            ? (0, r.jsxs)(e3.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tg, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1532,10 +1533,10 @@ var tY = n(111042),
     t1 = n(594061),
     t2 = n(811091),
     t8 = n(630248),
-    t3 = n(355097);
-function t4(e, t) {
+    t4 = n(355097);
+function t3(e, t) {
     o.useEffect(() => {
-        t1.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t1.bW.loadIfUncached(t4.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2220,8 +2221,8 @@ function n0(e) {
 var n1 = n(984516),
     n2 = n(935573),
     n8 = n(651753),
-    n3 = n(485845),
-    n4 = n(994369),
+    n4 = n(485845),
+    n3 = n(994369),
     n6 = n(240591),
     n7 = n(46477);
 function n9(e, t) {
@@ -2739,24 +2740,24 @@ function lA(e) {
                             query: n,
                             guildId: r,
                             page: c,
-                            integrationType: n3.b.USER_INSTALL,
+                            integrationType: n4.b.USER_INSTALL,
                             minUserInstallCommandCount: 1,
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
                             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                            source: n4.V.APP_LAUNCHER,
+                            source: n3.V.APP_LAUNCHER,
                         }),
                         totalPages:
                             n8.A.getSearchResults({
                                 query: n,
                                 guildId: r,
                                 page: c,
-                                integrationType: n3.b.USER_INSTALL,
+                                integrationType: n4.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n4.V.APP_LAUNCHER,
+                                source: n3.V.APP_LAUNCHER,
                             })?.totalPages ?? 0,
                     }),
                     [n, r, c, a],
@@ -2770,12 +2771,12 @@ function lA(e) {
                                     query: n,
                                     guildId: r,
                                     page: t + 1,
-                                    integrationType: n3.b.USER_INSTALL,
+                                    integrationType: n4.b.USER_INSTALL,
                                     minUserInstallCommandCount: 1,
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
                                     excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                    source: n4.V.APP_LAUNCHER,
+                                    source: n3.V.APP_LAUNCHER,
                                 })?.results ?? [],
                         ),
                     [m, r, n, c, a],
@@ -2798,12 +2799,12 @@ function lA(e) {
                             guildId: l,
                             options: {
                                 page: n,
-                                integrationType: n3.b.USER_INSTALL,
+                                integrationType: n4.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n4.V.APP_LAUNCHER,
+                                source: n3.V.APP_LAUNCHER,
                             },
                         });
                     },
@@ -3206,7 +3207,7 @@ function lb(e) {
                             let e = [];
                             return (c && e.push(nl.gq), e);
                         }, [c]),
-                        u = t4(r, a),
+                        u = t3(r, a),
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
@@ -3385,7 +3386,7 @@ function lL(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t4(
+                c = t3(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

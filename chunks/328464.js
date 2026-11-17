@@ -1,142 +1,175 @@
-n.d(t, { K: () => j, A: () => y });
+n.d(t, { K: () => y, A: () => I });
 var a = n(477900);
 n(582128);
-var r = n(503698),
-    l = n.n(r),
+var l = n(503698),
+    r = n.n(l),
     s = n(536001),
     i = n(402883),
     o = n(331322),
     d = n(834730),
     c = n(534514),
-    u = n(280336),
-    m = n(747556),
-    f = n(160733),
-    g = n(710778),
-    p = n(140735),
-    E = n(260981),
-    h = n(540418),
-    b = n(907085),
-    x = n(179820),
+    u = n(329921),
+    m = n(280336),
+    f = n(747556),
+    g = n(160733),
+    p = n(710778),
+    E = n(140735),
+    h = n(260981),
+    b = n(540418),
+    x = n(907085),
+    _ = n(179820),
     A = n(792996),
-    _ = n(381134);
-function N(e) {
+    N = n(381134);
+function v(e) {
     let { rarity: t, className: n } = e,
-        r = (function (e) {
+        l = (function (e) {
             switch (e) {
                 case s.x.COMMON:
-                    return { Icon: E.ExperimentalCommonIcon, className: _.e8, label: A.intl.string(A.t.L0K5ci) };
+                    return { Icon: h.ExperimentalCommonIcon, className: N.e8, label: A.intl.string(A.t.L0K5ci) };
                 case s.x.RARE:
-                    return { Icon: h.ExperimentalRareIcon, className: _.D3, label: A.intl.string(A.t["sTx/5z"]) };
+                    return { Icon: b.ExperimentalRareIcon, className: N.D3, label: A.intl.string(A.t["sTx/5z"]) };
                 case s.x.EPIC:
-                    return { Icon: b.ExperimentalEpicIcon, className: _.mk, label: A.intl.string(A.t.RD8RiN) };
+                    return { Icon: x.ExperimentalEpicIcon, className: N.mk, label: A.intl.string(A.t.RD8RiN) };
                 case s.x.MYTHIC:
-                    return { Icon: x.ExperimentalMythicIcon, className: _.nM, label: A.intl.string(A.t.vqc1ol) };
+                    return { Icon: _.ExperimentalMythicIcon, className: N.nM, label: A.intl.string(A.t.vqc1ol) };
                 default:
                     return null;
             }
         })(t);
-    if (null == r) return null;
-    let { Icon: i, className: o, label: d } = r;
+    if (null == l) return null;
+    let { Icon: i, className: o, label: d } = l;
     return (0, a.jsx)("div", {
         role: "img",
         "aria-label": d,
-        className: l()(_.Tc, o, n),
+        className: r()(N.Tc, o, n),
         children: (0, a.jsx)(i, { size: "xxs", color: "currentColor" }),
     });
 }
 var R = n(460969);
 n(518477);
-var v = n(881518);
-function j(e) {
+var j = n(881518);
+function y(e) {
     let {
             children: t,
             title: n,
-            eyebrow: r,
-            body: E,
-            screenReaderBody: h = E,
-            variant: b = "default",
-            badgeImage: x,
+            eyebrow: l,
+            body: h,
+            screenReaderBody: b = h,
+            variant: x = "default",
+            badgeImage: _,
             badgeName: A,
-            progressCircle: _,
-            rarity: j,
-            isAnimated: y = !1,
-            targetElementRef: I,
-            onShow: T,
-            position: C = "top",
-            shouldShow: S,
+            progressCircle: N,
+            rarity: y,
+            isAnimated: I = !1,
+            unlock: T,
+            isUnlockPending: S = !1,
+            targetElementRef: C,
+            onShow: D,
+            position: M = "top",
+            shouldShow: O,
         } = e,
-        D = y && null == _,
+        P = I && null == N && null == T,
+        U = r()({ [j.ce]: null != T || S, [j.Yb]: T?.isStarted }),
         {
-            tooltipId: O,
-            isVisible: M,
-            targetElementRef: P,
-            trigger: U,
-        } = (0, i.D)({ children: t, targetElementRef: I, delay: 300, onTooltipShow: T, shouldShow: S }),
-        B = null != j && j !== s.x.COMMON,
-        G = (0, a.jsxs)("div", {
-            className: v.Qs,
-            "data-mana-component": "mini-premium-tooltip",
-            children: [
-                B && (0, a.jsx)("div", { className: v.xV, children: (0, a.jsx)(N, { rarity: j }) }),
-                (0, a.jsx)("div", {
-                    className: l()(v.fA, { [v.qJ]: D }),
-                    "aria-hidden": !0,
-                    children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
-                        src: x,
-                        alt: A,
-                        progressCircleText: _?.text,
-                        progressCirclePercent: _?.percent,
-                        progressCircleUrgency: _?.urgency,
-                        compact: !0,
+            tooltipId: B,
+            isVisible: G,
+            targetElementRef: k,
+            trigger: w,
+        } = (0, i.D)({ children: t, targetElementRef: C, delay: 300, onTooltipShow: D, shouldShow: O }),
+        L = null != y && y !== s.x.COMMON,
+        H = (0, a.jsxs)(
+            "div",
+            {
+                className: j.Qs,
+                style: T?.timingStyle,
+                "data-mana-component": "mini-premium-tooltip",
+                children: [
+                    L && (0, a.jsx)("div", { className: j.xV, children: (0, a.jsx)(v, { rarity: y }) }),
+                    (0, a.jsx)("div", {
+                        className: r()(j.fA, { [j.qJ]: P, [j.yH]: S }),
+                        "aria-hidden": !0,
+                        children:
+                            null != T
+                                ? T.graphic
+                                : (0, a.jsx)(R.BadgeImageWithProgressCircle, {
+                                      src: _,
+                                      alt: A,
+                                      progressCircleText: N?.text,
+                                      progressCirclePercent: N?.percent,
+                                      progressCircleUrgency: N?.urgency,
+                                      compact: !0,
+                                  }),
                     }),
-                }),
-                (0, a.jsxs)(o.B, {
-                    gap: 4,
-                    align: "center",
-                    className: v.i8,
-                    children: [
-                        null != r &&
-                            (0, a.jsx)(d.E, {
-                                variant: "body-sm/medium",
-                                color: "text-subtle",
-                                className: v.UP,
-                                children: r,
+                    (0, a.jsxs)(o.B, {
+                        gap: 4,
+                        align: "center",
+                        className: j.i8,
+                        children: [
+                            null != l &&
+                                (0, a.jsx)(d.E, {
+                                    variant: "body-sm/medium",
+                                    color: "text-subtle",
+                                    className: r()(j.UP, U),
+                                    children: l,
+                                }),
+                            (0, a.jsx)(c.D, {
+                                variant: "display-sm",
+                                color: "text-strong",
+                                className: r()(j.DD, { [j.x$]: "nitro" === x }, U),
+                                children: n,
                             }),
-                        (0, a.jsx)(c.D, {
-                            variant: "display-sm",
-                            color: "text-strong",
-                            className: l()(v.DD, { [v.x$]: "nitro" === b }),
-                            children: n,
+                            null != h &&
+                                (0, a.jsx)(d.E, {
+                                    variant: "body-sm/medium",
+                                    color: "text-subtle",
+                                    className: r()(j.rf, U),
+                                    children: h,
+                                }),
+                            null != T &&
+                                (0, a.jsx)("div", {
+                                    className: r()(j.BI, { [j.Dp]: T.isStarted }),
+                                    children: (0, a.jsx)(d.E, {
+                                        variant: "body-sm/normal",
+                                        color: "text-default",
+                                        children: T.label,
+                                    }),
+                                }),
+                        ],
+                    }),
+                    null != T &&
+                        (0, a.jsxs)("div", {
+                            className: j.VU,
+                            children: [
+                                (0, a.jsx)(u.N, {}),
+                                (0, a.jsx)(d.E, {
+                                    variant: "body-xs/medium",
+                                    color: "text-default",
+                                    children: T.label,
+                                }),
+                            ],
                         }),
-                        null != E &&
-                            (0, a.jsx)(d.E, {
-                                variant: "body-sm/medium",
-                                color: "text-subtle",
-                                className: v.rf,
-                                children: E,
-                            }),
-                    ],
-                }),
-            ],
-        }),
-        w = null != h ? `${A}. ${h}` : A,
-        k = (0, u.j)({ shouldShow: M })((e, t) =>
+                ],
+            },
+            T?.id,
+        ),
+        V = null != b ? `${A}. ${b}` : A,
+        $ = (0, m.j)({ shouldShow: G })((e, t) =>
             t
-                ? (0, a.jsx)(m.Bc, {
+                ? (0, a.jsx)(f.Bc, {
                       isRichTooltip: !0,
-                      children: (0, a.jsx)(f.R, {
-                          isVisible: M,
+                      children: (0, a.jsx)(g.R, {
+                          isVisible: G,
                           isRendered: !0,
-                          targetElementRef: P,
-                          content: G,
-                          position: C,
+                          targetElementRef: k,
+                          content: H,
+                          position: M,
                           align: "center",
                           animationStyle: e,
-                          positionKey: (0, g.Xj)(n),
+                          positionKey: (0, p.Xj)(n),
                       }),
                   })
                 : null,
         );
-    return (0, a.jsxs)(a.Fragment, { children: [U, (0, a.jsx)(p.A, { id: O, children: w }), k] });
+    return (0, a.jsxs)(a.Fragment, { children: [w, (0, a.jsx)(E.A, { id: B, children: V }), $] });
 }
-let y = j;
+let I = y;

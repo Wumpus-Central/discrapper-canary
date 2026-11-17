@@ -8,4 +8,10 @@ t.exports = {
     UP: "eyebrow_2dzrtJ",
     DD: "title_2dzrtJ",
     x$: "titleNitro_2dzrtJ",
+    ce: "unlockText_2dzrtJ",
+    Yb: "unlockTextPlaying_2dzrtJ",
+    yH: "graphicPending_2dzrtJ",
+    BI: "unlockLabel_2dzrtJ",
+    Dp: "unlockLabelPlaying_2dzrtJ",
+    VU: "unlockNotice_2dzrtJ",
 };

@@ -1,0 +1,311 @@
+.tierTimelineDescription_KpnIA4 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    width: 100%
+}
+
+.tierTimelineGrid_KpnIA4 {
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.tierTimelineGrid_KpnIA4,
+.tierTimelineItem_KpnIA4 {
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.tierTimelineItem_KpnIA4 {
+    align-items: center;
+    flex: 0 0 auto;
+    flex-direction: column;
+    max-width: 120px;
+    min-width: 77px;
+    padding: var(--space-8) 0;
+    width: -moz-min-content;
+    width: min-content
+}
+
+.tierTimelineItemLocked_KpnIA4 .tierTimelineIcon_KpnIA4 {
+    opacity: .4
+}
+
+.tierTimelineIcon_KpnIA4 {
+    height: 32px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 32px
+}
+
+.tierTimelineText_KpnIA4 {
+    min-width: 48px;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 100%
+}
+
+.tierTimelineTextLine_KpnIA4 {
+    display: block
+}
+
+.tierTimelineLockIcon_KpnIA4 {
+    color: var(--text-muted);
+    height: 8px;
+    margin-inline-end: 2px;
+    vertical-align: -.25px;
+    width: 8px
+}
+
+.detailPanel_RXxYOV {
+    background: var(--background-base-lower);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    z-index: 0
+}
+
+@media (max-width:485px) {
+    .detailPanel_RXxYOV {
+        min-height: 0;
+        order: 0
+    }
+}
+
+.detailScroller_RXxYOV {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding-block-end: var(--space-24);
+    padding-block-start: var(--space-16);
+    padding-inline: var(--space-24)
+}
+
+@media (max-width:485px) {
+    .detailScroller_RXxYOV {
+        padding-inline: var(--space-16)
+    }
+}
+
+.detailHeader_RXxYOV {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    min-height: 24px;
+    width: 100%
+}
+
+.detailCloseButton_RXxYOV {
+    inset-block-start: var(--space-16);
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    z-index: 2
+}
+
+.badgeGraphic_RXxYOV {
+    flex-shrink: 0;
+    height: 120px;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.badgeGraphicAnimatedNitro_RXxYOV {
+    height: 150px;
+    margin: calc(var(--space-12)*-1)
+}
+
+.badgeInfo_RXxYOV {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    width: 100%
+}
+
+.badgeIdentity_RXxYOV {
+    position: relative;
+    z-index: 1
+}
+
+.badgeIdentity_RXxYOV,
+.badgeTitleGroup_RXxYOV {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%
+}
+
+.badgeEyebrow_RXxYOV {
+    display: block;
+    margin-block-end: var(--space-4);
+    text-align: center;
+    text-transform: none;
+    width: 100%
+}
+
+.badgeTitle_RXxYOV {
+    text-align: center;
+    text-transform: uppercase
+}
+
+.nitroTitle_RXxYOV {
+    white-space: nowrap
+}
+
+.badgeAccessoryLine_RXxYOV {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+    min-height: 16px;
+    width: 100%
+}
+
+.badgeAccessoryDot_RXxYOV {
+    color: var(--text-subtle);
+    flex-shrink: 0
+}
+
+.badgeAccessorySegment_RXxYOV {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.badgeAccessoryText_RXxYOV {
+    min-width: 0;
+    text-align: center
+}
+
+.badgeDetails_RXxYOV {
+    gap: var(--space-12)
+}
+
+.badgeDetails_RXxYOV,
+.descriptionCard_RXxYOV {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.descriptionCard_RXxYOV {
+    align-items: stretch;
+    background: var(--background-mod-muted);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    gap: var(--space-16);
+    padding: var(--space-16)
+}
+
+.descriptionCardHeader_RXxYOV {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-16);
+    justify-content: space-between;
+    width: 100%
+}
+
+.descriptionCardHeaderStacked_RXxYOV {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.descriptionTextGroup_RXxYOV {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 160px
+}
+
+.descriptionText_RXxYOV,
+.legacyLabel_RXxYOV {
+    text-align: start
+}
+
+.descriptionCardExtras_RXxYOV {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    width: 100%
+}
+
+.descriptionNotice_RXxYOV {
+    width: 100%
+}
+
+.unlockHiding_RXxYOV :is(.badgeGraphic_RXxYOV, .detailHeader_RXxYOV, .badgeTitleGroup_RXxYOV, .badgeDetails_RXxYOV>:not(.descriptionCard_RXxYOV), .descriptionCard_RXxYOV>*) {
+    visibility: hidden
+}
+
+.unlockRevealing_RXxYOV :is(.detailHeader_RXxYOV, .badgeTitleGroup_RXxYOV, .badgeDetails_RXxYOV>:not(.descriptionCard_RXxYOV), .descriptionCard_RXxYOV>*) {
+    animation: unlockFadeIn_RXxYOV .25s cubic-bezier(.33, 0, .67, 1) var(--custom-badge-unlock-reveal) both
+}
+
+.full-motion .unlockHiding_RXxYOV .badgeTitle_RXxYOV {
+    transform: scale(1.2);
+    transform-origin: bottom
+}
+
+.full-motion .unlockRevealing_RXxYOV .badgeTitle_RXxYOV {
+    animation: unlockTitleScale_RXxYOV .25s cubic-bezier(.67, 0, .28, 1) var(--custom-badge-unlock-reveal) both;
+    transform-origin: bottom
+}
+
+.unlockLabel_RXxYOV {
+    align-items: center;
+    animation: unlockFadeIn_RXxYOV .25s cubic-bezier(.33, 0, .67, 1) both;
+    display: flex;
+    inset-block: calc(var(--space-12)*-1) calc(var(--space-24)*-1);
+    inset-inline: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    text-align: center
+}
+
+.unlockLabelPlaying_RXxYOV {
+    animation: unlockFadeIn_RXxYOV .25s cubic-bezier(.33, 0, .67, 1) both, unlockFadeOut_RXxYOV .25s cubic-bezier(.33, 0, .67, 1) calc(var(--custom-badge-unlock-reveal) - .25s) forwards
+}
+
+@keyframes unlockFadeIn_RXxYOV {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes unlockFadeOut_RXxYOV {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes unlockTitleScale_RXxYOV {
+    0% {
+        transform: scale(1.2)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/*# sourceMappingURL=c0ebc4eb0bae7dc1.css.map*/
