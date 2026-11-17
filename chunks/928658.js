@@ -7,8 +7,8 @@ var i = n(149468),
     o = n(369053),
     u = n(882276),
     s = n(652215);
-function c(e, t) {
-    i.Ay.trackWithMetadata(s.HAw.IAR_MODAL_OPEN, { report_type: e, ...t });
+function c(e, t, n) {
+    i.Ay.trackWithMetadata(s.HAw.IAR_MODAL_OPEN, { report_type: e, location: n, ...t });
 }
 n.d(
     t,
@@ -68,6 +68,9 @@ n.d(
                     {},
                     { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
                 ));
+        },
+        b1: function (e, t, n) {
+            (c(l.t0.GUILD, { guild_id: e.id }, t), (0, u.T)({ name: l.t0.GUILD, record: e }, {}, { onSubmit: n }));
         },
         b8: function (e, t) {
             (c(l.t0.FIRST_DM, { message_id: e.id, channel_id: e.channel_id }),

@@ -958,15 +958,15 @@ class ei extends r.PureComponent {
                         n.e(852694),
                         n.e(483504),
                         n.e(317699),
-                        n.e(257032),
+                        n.e(204309),
                         n.e(952831),
                         n.e(845322),
                         n.e(114748),
                         n.e(426386),
-                        n.e(128219),
+                        n.e(916434),
                         n.e(29360),
                         n.e(588860),
-                    ]).then(n.bind(n, 871638));
+                    ]).then(n.bind(n, 587369));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: o.jD, hideSettings: !0 });
                 });
             case S.rD.TEXT_CHANNEL:
