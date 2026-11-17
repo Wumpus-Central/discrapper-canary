@@ -12286,6 +12286,7 @@ let uG = function (e) {
         bandcamp: { presentation: "Bandcamp", baseUrl: "https://bandcamp.com/" },
         github: { presentation: "GitHub", baseUrl: "https://github.com/" },
         etsy: { presentation: "Etsy", baseUrl: "https://etsy.com/" },
+        bsky: { presentation: "Bluesky", baseUrl: "https://bsky.app/profile/" },
     };
 var uD = n(840280),
     uO = n(839386);
