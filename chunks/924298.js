@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675427, Version Hash: b86888e0dc2c9431c31a34476d79b9fbfa3addf8`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 675444, Version Hash: aad68ccde37a9c814ab0ff447115ea973d3618f5`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675427";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "675444";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -8946,7 +8946,7 @@ function u7(e, t) {
     }
 }
 var u8 = n(359549),
-    u4 = n(724302),
+    u4 = n(660298),
     u9 = n(47167),
     _e = n(402216),
     _t = n(325158),
@@ -15893,7 +15893,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675427" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "675444" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -22724,8 +22724,8 @@ let T1 = (0, tW.Fe)({
                 n.e(505468),
                 n.e(373169),
                 n.e(914289),
-            ]).then(n.bind(n, 867540)),
-        webpackId: 867540,
+            ]).then(n.bind(n, 58454)),
+        webpackId: 58454,
         name: "GlobalDiscovery",
         renderLoader: rt.Bj,
     }),
@@ -46103,7 +46103,7 @@ let wj = (0, tW.Fe)({
             n.e(471064),
             n.e(282094),
             n.e(250478),
-            n.e(75971),
+            n.e(159127),
             n.e(465157),
             n.e(490010),
             n.e(837687),
@@ -47553,7 +47553,7 @@ let GB = (0, re.Fe)({
                 n.e(466322),
                 n.e(454625),
                 n.e(294067),
-                n.e(75971),
+                n.e(159127),
                 n.e(97210),
                 n.e(3131),
                 n.e(831445),

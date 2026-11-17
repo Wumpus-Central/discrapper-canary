@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => e2 }));
+(n.r(t), n.d(t, { default: () => e1 }));
 var l,
     i = n(477900),
     s = n(582128),
@@ -641,7 +641,7 @@ var ec = n(11023),
     eI = n(793574),
     eC = n(688810),
     eN = n(878118),
-    e_ = n(724302),
+    e_ = n(660298),
     eR = n(487431),
     eD = n(712440),
     eS = n(134861),
@@ -976,7 +976,7 @@ function e0(e) {
     r.w.set(eH, e);
 }
 let e9 = null;
-function e1(e) {
+function e6(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
         s = (0, m.A)({
             minDimension: 320,
@@ -989,7 +989,7 @@ function e1(e) {
         });
     return (0, i.jsx)("div", { onMouseDown: s, className: e$.Di, "aria-hidden": !0 });
 }
-function e2() {
+function e1() {
     let e = (0, x.fy)().metadata,
         t = (0, f.h)(e?.applicationId),
         n = s.useRef(!1),
@@ -1032,21 +1032,21 @@ function e2() {
         className: e$.nE,
         style: { width: E },
         children: [
-            (0, i.jsx)(e1, { resizableNode: r, onResize: A, onResizeEnd: e0 }),
+            (0, i.jsx)(e6, { resizableNode: r, onResize: A, onResizeEnd: e0 }),
             (0, i.jsx)(c.F, {
                 component: v,
                 children: (0, i.jsx)("div", {
                     className: e$.rf,
                     children:
                         null != t
-                            ? (0, i.jsx)(e6, { application: t }, t.id)
+                            ? (0, i.jsx)(e2, { application: t }, t.id)
                             : (0, i.jsx)("div", { className: e$.TG, children: (0, i.jsx)(u.y, { className: e$.u1 }) }),
                 }),
             }),
         ],
     });
 }
-function e6(e) {
+function e2(e) {
     let { application: t } = e,
         n = (function (e) {
             let t = e.id,
