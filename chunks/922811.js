@@ -23,8 +23,8 @@ var n = t(477900),
     L = t(834730),
     y = t(123292),
     C = t(140735),
-    _ = t(192308),
-    O = t(43990),
+    O = t(192308),
+    _ = t(43990),
     b = t(444927),
     v = t(793574),
     k = t(688810),
@@ -34,11 +34,11 @@ var n = t(477900),
     M = t(702476),
     W = t(299679),
     P = t(820847),
-    D = t(698253),
-    G = t(634110),
+    G = t(698253),
+    D = t(634110),
     H = t(802494),
-    B = t(310209),
-    F = t(73138),
+    F = t(310209),
+    B = t(73138),
     U = t(734057),
     Q = t(309010),
     V = t(129230),
@@ -81,7 +81,7 @@ function q(i) {
             (0, n.jsx)(C.A, { children: X.intl.string(X.t.pfChQr) }),
             (0, n.jsx)("div", {
                 className: j()(K.Md, K.e6),
-                children: Array.from({ length: e }, (i, e) => (0, n.jsx)(F.O, {}, `placeholder-${e}`)),
+                children: Array.from({ length: e }, (i, e) => (0, n.jsx)(B.O, {}, `placeholder-${e}`)),
             }),
         ],
     });
@@ -98,7 +98,7 @@ function ii(i) {
         } = i,
         d = (0, m.bG)([Q.Ay, U.A], () => U.A.getChannel(Q.Ay.getChannelId())),
         u = s.useCallback(() => {
-            (r?.(), (0, _.s7)());
+            (r?.(), (0, O.s7)());
         }, [r]);
     return (0, n.jsx)("ul", {
         className: j()(K.Md, K.e6),
@@ -114,10 +114,10 @@ function ii(i) {
                               newValue: {
                                   positionInSection: e,
                                   skuId: s.id,
-                                  itemSource: r === G.uS.WISHLIST ? "organic" : "recommendation",
+                                  itemSource: r === D.uS.WISHLIST ? "organic" : "recommendation",
                                   productLine: s.productLine,
                               },
-                              children: (0, n.jsx)(F.A, {
+                              children: (0, n.jsx)(B.A, {
                                   sku: s,
                                   wishlistId: l,
                                   source: r,
@@ -173,7 +173,7 @@ function ie(i) {
                                   : n.length > 0 &&
                                       n.every((i) => {
                                           let { sku: e, source: t } = i;
-                                          return t === G.uS.POPULAR && (0, z.bF)(e);
+                                          return t === D.uS.POPULAR && (0, z.bF)(e);
                                       })
                                     ? "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY"
                                     : "SHOP_ONLY";
@@ -199,7 +199,7 @@ function ie(i) {
         L = l?.getBannerURL({ canAnimate: !1, size: 713 }),
         y = a > 5,
         C = s.useMemo(() => (y ? r.slice(0, 5) : r), [r, y]),
-        [_, w] = s.useState(!1),
+        [O, w] = s.useState(!1),
         P = s.useCallback(
             (i) => {
                 if (i && !S && r.length > 0) {
@@ -225,8 +225,8 @@ function ie(i) {
             },
             [S, r, e.id, u],
         ),
-        H = (0, A.K)(P, void 0, !S && !_),
-        B = s.useMemo(
+        H = (0, A.K)(P, void 0, !S && !O),
+        F = s.useMemo(
             () =>
                 new Set(
                     r.map((i) => {
@@ -246,7 +246,7 @@ function ie(i) {
                   style: p,
                   children: [
                       null != L && (0, n.jsx)("div", { className: K.iL, style: { backgroundImage: `url(${L})` } }),
-                      (0, n.jsx)(O.N, {
+                      (0, n.jsx)(_.N, {
                           disableAdaptiveTheme: !0,
                           children: (i) =>
                               (0, n.jsxs)(n.Fragment, {
@@ -270,7 +270,7 @@ function ie(i) {
                                                         wishlistId: o,
                                                         analyticsLocations: u,
                                                     },
-                                                    children: (0, n.jsx)(D.P, {
+                                                    children: (0, n.jsx)(G.P, {
                                                         isGifting: !0,
                                                         children: (0, n.jsx)(ii, {
                                                             items: C,
@@ -279,7 +279,7 @@ function ie(i) {
                                                             onOpenWishlist: f,
                                                             onWishlistItemClick: t,
                                                             analyticsLocations: u,
-                                                            includedSources: B,
+                                                            includedSources: F,
                                                         }),
                                                     }),
                                                 }),
@@ -308,7 +308,7 @@ function it(i) {
             () =>
                 N()(
                     a.map((i) => {
-                        let t = null != c[i.id] && c[i.id][e.id] === B.j.WISHLIST ? G.uS.WISHLIST : G.uS.POPULAR;
+                        let t = null != c[i.id] && c[i.id][e.id] === F.j.WISHLIST ? D.uS.WISHLIST : D.uS.POPULAR;
                         return null != i ? { sku: i, source: t } : null;
                     }),
                 ),
@@ -330,11 +330,12 @@ let ia = function (i) {
     let { onSelectSku: e, priceOptions: t, giftRecipient: s, onWishlistItemClick: l, analyticsLocations: a } = i,
         { claimableRewards: r } = (0, d.Pv)(),
         c = null != r && r.length > 0,
-        { nextTier: o, giftsToNextTier: u } = (0, m.cf)([g.Ay], () => ({
+        o = (0, I.F5)("SelectGiftOption"),
+        { nextTier: u, giftsToNextTier: f } = (0, m.cf)([g.Ay], () => ({
             nextTier: g.Ay.getNextTier(h.$.GIFTING),
             giftsToNextTier: g.Ay.getRemainingToNextTier(h.$.GIFTING),
         })),
-        f = null != o;
+        j = o && null != u;
     return (0, n.jsxs)("div", {
         className: il.H,
         children: [
@@ -351,11 +352,11 @@ let ia = function (i) {
                 ],
             }),
             (0, n.jsx)(it, { giftRecipient: s, onWishlistItemClick: l }),
-            f &&
+            j &&
                 (0, n.jsx)(p.A, {
-                    giftsToNextTier: u,
-                    nextTierName: o.name ?? "",
-                    nextTierIcon: (0, I.Se)(o),
+                    giftsToNextTier: f,
+                    nextTierName: u.name ?? "",
+                    nextTierIcon: (0, I.Se)(u),
                     analyticsLocations: a,
                 }),
         ],
