@@ -18,8 +18,8 @@ function c(e) {
         I,
         p,
         m,
-        T,
         g,
+        T,
         {
             children: S,
             targetElementRef: N,
@@ -67,8 +67,8 @@ function c(e) {
                 ),
                 [],
             );
-            let T = null != f.current,
-                g = !1 !== n && (h || c) && T && !m.current,
+            let g = null != f.current,
+                T = !1 !== n && (h || c) && g && !m.current,
                 S = i.useCallback(() => {
                     if (m.current || (u && null == f.current)) return;
                     if (u && null != f.current) {
@@ -113,7 +113,7 @@ function c(e) {
                 );
             return (
                 i.useEffect(() => {
-                    if (!g) return;
+                    if (!T) return;
                     let e = f.current?.ownerDocument ?? document;
                     function t(e) {
                         ("Escape" === e.key || "Esc" === e.key) && ((m.current = !0), N());
@@ -124,9 +124,9 @@ function c(e) {
                             e.removeEventListener("keydown", t);
                         }
                     );
-                }, [g, N, f]),
+                }, [T, N, f]),
                 i.useEffect(() => {
-                    if (!g) return;
+                    if (!T) return;
                     let e = f.current?.ownerDocument ?? document;
                     function t() {
                         N();
@@ -137,8 +137,8 @@ function c(e) {
                             e.removeEventListener("click", t);
                         }
                     );
-                }, [g, N, f]),
-                { isVisible: g, triggerProps: y }
+                }, [T, N, f]),
+                { isVisible: T, triggerProps: y }
             );
         })({ targetElementRef: y.targetElementRef, ...L }),
         P = R ? void 0 : D,
@@ -171,13 +171,13 @@ function c(e) {
                 [I, A],
             )),
             (m = h.innerRef),
-            (T = i.useCallback(
+            (g = i.useCallback(
                 (e) => {
                     ((0, a.cZ)(m, e), A(e));
                 },
                 [m, A],
             )),
-            (g = {
+            (T = {
                 onMouseEnter: (0, a.cy)(h.onMouseEnter, v.onMouseEnter),
                 onMouseLeave: (0, a.cy)(h.onMouseLeave, v.onMouseLeave),
                 onFocus: (0, a.cy)(h.onFocus, v.onFocus),
@@ -185,16 +185,16 @@ function c(e) {
                 onContextMenu: (0, a.cy)(h.onContextMenu, v.onContextMenu),
                 onClick: (0, a.cy)(h.onClick, v.onClick),
             }),
-            null != P && "" !== P && (g["aria-describedby"] = (0, a.iO)(h["aria-describedby"], P)),
+            null != P && "" !== P && (T["aria-describedby"] = (0, a.iO)(h["aria-describedby"], P)),
             "string" == typeof t.type
-                ? (g.ref = A)
+                ? (T.ref = A)
                 : "buttonRef" in t.props
-                  ? ((g.buttonRef = p), (g.ref = A))
+                  ? ((T.buttonRef = p), (T.ref = A))
                   : "innerRef" in t.props
-                    ? ((g.innerRef = T), (g.ref = A))
-                    : ((g.ref = A),
-                      "function" == typeof t.type && t.type.prototype?.isReactComponent != null && (g.innerRef = A)),
-            i.cloneElement(t, g)),
+                    ? ((T.innerRef = g), (T.ref = A))
+                    : ((T.ref = A),
+                      "function" == typeof t.type && t.type.prototype?.isReactComponent != null && (T.innerRef = A)),
+            i.cloneElement(t, T)),
         U = (function (e, t, n, i, r, s, l) {
             if (!e) return null;
             let o = s

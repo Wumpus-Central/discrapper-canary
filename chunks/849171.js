@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(596344),
     p = n(218461),
     m = n(994500),
-    T = n(967198),
-    g = n(543465),
+    g = n(967198),
+    T = n(543465),
     S = n(287809);
 let N = "recentMentionFilterSettings",
     C = [],
@@ -50,16 +50,16 @@ function w(e) {
     if (
         null == t ||
         !E.kvI.GUILD_TEXTUAL.has(t.type) ||
-        g.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
+        T.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
         (0, d.UK)(t.id)
     )
         return !1;
-    switch (g.Ay.resolvedMessageNotifications(t)) {
+    switch (T.Ay.resolvedMessageNotifications(t)) {
         case E.orn.ALL_MESSAGES:
             return !0;
         case E.orn.ONLY_MENTIONS:
-            let n = g.Ay.isSuppressEveryoneEnabled(t.guild_id),
-                i = g.Ay.isSuppressRolesEnabled(t.guild_id),
+            let n = T.Ay.isSuppressEveryoneEnabled(t.guild_id),
+                i = T.Ay.isSuppressRolesEnabled(t.guild_id),
                 r = S.default.getCurrentUser();
             if (null == r) return !1;
             return (0, u.Ay)({ message: e, userId: r.id, suppressEveryone: n, suppressRoles: i });
@@ -77,7 +77,7 @@ function G(e) {
     if (
         null == i ||
         i.type === E.rbe.DM ||
-        (D.guildFilter === E.KE7.THIS_SERVER && i.getGuildId() !== T.A.getGuildId())
+        (D.guildFilter === E.KE7.THIS_SERVER && i.getGuildId() !== g.A.getGuildId())
     )
         return null;
     let r = f.default.getId();
@@ -95,8 +95,8 @@ function G(e) {
               (0, u.Ay)({
                   message: e,
                   userId: r,
-                  suppressEveryone: g.Ay.isSuppressEveryoneEnabled(i.getGuildId()),
-                  suppressRoles: g.Ay.isSuppressRolesEnabled(i.getGuildId()),
+                  suppressEveryone: T.Ay.isSuppressEveryoneEnabled(i.getGuildId()),
+                  suppressRoles: T.Ay.isSuppressRolesEnabled(i.getGuildId()),
               }) &&
               (P = !1),
           e)
@@ -155,7 +155,7 @@ function H(e) {
 class j extends a.Ay.Store {
     static displayName = "RecentMentionsStore";
     initialize() {
-        this.waitFor(f.default, h.A, I.A, p.Ay, m.A, T.A, g.Ay, S.default);
+        this.waitFor(f.default, h.A, I.A, p.Ay, m.A, g.A, T.Ay, S.default);
     }
     get hasLoadedEver() {
         return b;

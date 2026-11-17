@@ -7,7 +7,7 @@ n.d(t, {
     PP: () => b,
     Tr: () => y,
     eE: () => C,
-    tE: () => g,
+    tE: () => T,
 });
 var i = n(582128),
     r = n(855986),
@@ -27,11 +27,11 @@ var c = n(898660),
     I = n(652215),
     p = n(355097);
 let m = {};
-function T(e) {
+function g(e) {
     return "single_use" === e.kind || "single_use_guild" === e.kind;
 }
-function g(e, t, n) {
-    let g = e.filter((e) => "snowflake_bound_guild" !== e.kind || "" !== e.scope.snowflakeId),
+function T(e, t, n) {
+    let T = e.filter((e) => "snowflake_bound_guild" !== e.kind || "" !== e.scope.snowflakeId),
         S = (function (e) {
             let t = e.some((e) => {
                     let { kind: t } = e;
@@ -48,25 +48,25 @@ function g(e, t, n) {
                 }),
                 o = (0, r.yK)([l.A], () => i.map((e) => l.A.getGuildDismissedContentState(e)));
             return { dismissedContents: a, recurringStates: s, guildStates: new Map(i.map((e, t) => [e, o[t]])) };
-        })(g),
+        })(T),
         N = (0, f.Sg)(
-            g.filter(T).map((e) => {
+            T.filter(g).map((e) => {
                 let { content: t } = e;
                 return t;
             }),
         ),
         C = (0, r.bG)([l.A], () => l.A.hasLoaded(p.oD.PRELOADED_USER_SETTINGS)),
-        O = g.find((e) => (!T(e) || N.includes(e.content)) && (0, c.z)(e, S, C)) ?? null,
+        O = T.find((e) => (!g(e) || N.includes(e.content)) && (0, c.z)(e, S, C)) ?? null,
         { version: R, snowflakeId: L } = null != O ? (0, _.JK)(O) : m,
-        y = g.some((e) => !(0, _.vv)(e)),
+        y = T.some((e) => !(0, _.vv)(e)),
         D = (0, r.bG)([o.A], () => (y ? o.A.getGuildId() : null)),
         b = null != O && (0, _.vv)(O) ? O.scope.guildId : D,
         v = O?.content ?? null,
         P = (function (e, t, n, o) {
             let { version: c, snowflakeId: _, deduplicateImpressions: f } = o,
                 h = (0, E.Ay)((t) => null != e && t.currentlyShown.has(e)),
-                [m, T] = (0, s.eK)(),
-                g = null != e && (0, A.NZ)(e, m, T),
+                [m, g] = (0, s.eK)(),
+                T = null != e && (0, A.NZ)(e, m, g),
                 S = (0, r.bG)([u.A], () => null != e && u.A.hasUserHitDCCap(e, t)),
                 N = i.useRef(t);
             return (
@@ -94,7 +94,7 @@ function g(e, t, n) {
                                     deduplicateImpressions: f,
                                 },
                                 m,
-                                T,
+                                g,
                             ),
                             () => {
                                 if (null == e) return;
@@ -103,7 +103,7 @@ function g(e, t, n) {
                             }
                         );
                     }
-                }, [e, n, S, g, c, _, f]),
+                }, [e, n, S, T, c, _, f]),
                 h && null != e ? e : null
             );
         })(v, b, t, { version: R, snowflakeId: L, deduplicateImpressions: n }),
@@ -135,7 +135,7 @@ function g(e, t, n) {
     return { candidate: O, visibleContent: P, markAsDismissed: M };
 }
 function S(e, t) {
-    let { visibleContent: n, markAsDismissed: i } = g(e, t);
+    let { visibleContent: n, markAsDismissed: i } = T(e, t);
     return [n, i];
 }
 function N(e, t) {

@@ -59,10 +59,10 @@ let p = new Set([
         c.fg2.SKYPE,
     ]),
     m = Object.values(c.fg2).filter((e) => !p.has(e));
-function T(e) {
+function g(e) {
     return 0 === e.connection_type ? `app:${e.application_id}` : `provider:${e.provider_id}`;
 }
-function g(e) {
+function T(e) {
     let t = [];
     switch (e.connection_type) {
         case 0:
@@ -86,7 +86,7 @@ n.d(
     t,
     {},
     {
-        Ii: g,
+        Ii: T,
         Km: function (e) {
             if (e.options.length > 0) return !1;
             let { id: t, ...n } = h(),
@@ -118,7 +118,7 @@ n.d(
             };
         },
         SD: A,
-        Sq: T,
+        Sq: g,
         Uh: function (e) {
             return {
                 prompts: e.prompts.map(I),
@@ -151,9 +151,9 @@ n.d(
             let t = [],
                 n = new Set();
             for (let [i, r] of e.entries()) {
-                let e = g(r);
+                let e = T(r);
                 t.push(...e.map((e) => `Connection ${i + 1}: ${e}`));
-                let a = T(r);
+                let a = g(r);
                 (n.has(a) && t.push("Duplicate connection configuration"), n.add(a));
             }
             return t;

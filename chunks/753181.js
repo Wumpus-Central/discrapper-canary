@@ -79,8 +79,8 @@ class h {
 var I = n(419490),
     p = n(572164),
     m = n(680725),
-    T = n(973522),
-    g = n(967347),
+    g = n(973522),
+    T = n(967347),
     S = n(929921),
     N = n(616356),
     C = n(46653),
@@ -397,19 +397,19 @@ class W extends A.A {
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: b, exe: M, distributor: w } = (0, T.wH)(y),
+                            let { gameName: D, gameId: b, exe: M, distributor: w } = (0, g.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
-                            (0, g.w)().then((T) => {
-                                let g =
-                                        null != T
+                            (0, T.w)().then((g) => {
+                                let T =
+                                        null != g
                                             ? {
-                                                  cpu_brand: T.cpu_brand,
-                                                  cpu_vendor: T.cpu_vendor,
-                                                  cpu_memory: T.cpu_memory,
-                                                  gpu_brand: T.gpu_brand,
-                                                  gpu_memory: T.gpu_memory,
+                                                  cpu_brand: g.cpu_brand,
+                                                  cpu_vendor: g.cpu_vendor,
+                                                  cpu_memory: g.cpu_memory,
+                                                  gpu_brand: g.gpu_brand,
+                                                  gpu_memory: g.gpu_memory,
                                               }
                                             : null,
                                     y =
@@ -465,7 +465,7 @@ class W extends A.A {
                                     pipewire_frames: O,
                                     x11_frames: R,
                                     videohook_backend: L,
-                                    ...g,
+                                    ...T,
                                 });
                             });
                         },
@@ -653,7 +653,7 @@ class W extends A.A {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: a } = this.streamContext,
             s = b.A.getRegion(D.A.getHostname()),
-            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, T.wH)(t);
+            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, g.wH)(t);
         return {
             channel_id: this.channelId,
             rtc_connection_id: this.getRTCConnectionId(),

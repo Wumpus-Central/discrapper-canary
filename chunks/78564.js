@@ -1,10 +1,10 @@
 var l = n(46676);
 n.d(
-    t,
+    e,
     {},
     {
-        B: function (e) {
-            let t = 0,
+        B: function (t) {
+            let e = 0,
                 n = null,
                 l = null,
                 r = null,
@@ -14,19 +14,19 @@ n.d(
             function u() {
                 (async function () {
                     if (!(i || a || o)) {
-                        ((i = !0), e.update("uploading", l));
+                        ((i = !0), t.update("uploading", l));
                         try {
-                            if (((n ??= await e.capture(t++)), null == n)) throw Error("capture failed");
-                            if (((l ??= await e.composite(n)), null == l)) throw Error("composite failed");
+                            if (((n ??= await t.capture(e++)), null == n)) throw Error("capture failed");
+                            if (((l ??= await t.composite(n)), null == l)) throw Error("composite failed");
                             if (
-                                (null == r || (await e.isStaged(r)) || (r = null),
-                                o || (e.update("uploading", l), (r ??= await e.upload(l)), o))
+                                (null == r || (await t.isStaged(r)) || (r = null),
+                                o || (t.update("uploading", l), (r ??= await t.upload(l)), o))
                             )
                                 return;
-                            if (!e.send(r)) throw Error("send failed");
-                            ((a = !0), e.update("sent", l));
+                            if (!t.send(r)) throw Error("send failed");
+                            ((a = !0), t.update("sent", l));
                         } catch {
-                            o || e.update("failed", l);
+                            o || t.update("failed", l);
                         } finally {
                             i = !1;
                         }
@@ -43,8 +43,8 @@ n.d(
                 }
             );
         },
-        C: function (e) {
-            return (0, l.jG)(e.history.present) && e.sketchDismissedFor !== e.history.present;
+        C: function (t) {
+            return (0, l.jG)(t.history.present) && t.sketchDismissedFor !== t.history.present;
         },
     },
 );

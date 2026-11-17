@@ -1,5 +1,5 @@
 n.d(t, {
-    Ys: () => g,
+    Ys: () => T,
     zK: () => y,
     yF: () => D,
     HW: () => L,
@@ -9,7 +9,7 @@ n.d(t, {
     WQ: () => m,
     Xh: () => C,
     zD: () => N,
-    AQ: () => T,
+    AQ: () => g,
     c6: () => P,
     Dr: () => R,
     TJ: () => S,
@@ -39,7 +39,7 @@ function p(e, t) {
 function m(e, t) {
     s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
 }
-async function T(e, t, n) {
+async function g(e, t, n) {
     let i = _.A.getRoom(t),
         r = _.A.getRoomUsers(t),
         l = _.A.getRoomObjects(t);
@@ -103,7 +103,7 @@ async function T(e, t, n) {
         );
     }
 }
-function g() {
+function T() {
     s.h.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_CLEARED" });
 }
 function S(e, t) {

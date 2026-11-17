@@ -34,10 +34,10 @@ function m(e, t) {
     let n = (I[e.parentId] ?? 0) + 1;
     ((I[e.parentId] = n), t(e));
 }
-function T(e) {
-    (e.threads?.forEach(S), e.threadMessages?.forEach(g));
-}
 function g(e) {
+    (e.threads?.forEach(S), e.threadMessages?.forEach(T));
+}
+function T(e) {
     if (e.type === A.lAJ.THREAD_STARTER_MESSAGE) return;
     let t = u.A.getChannel(e.channel_id);
     null != t &&
@@ -119,7 +119,7 @@ class y extends a.Ay.Store {
 }
 let D = new y(s.h, {
     CONNECTION_OPEN: function (e) {
-        ((I = {}), f.clear(), e.guilds.forEach(T));
+        ((I = {}), f.clear(), e.guilds.forEach(g));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { threadMessages: t } = e;
@@ -130,7 +130,7 @@ let D = new y(s.h, {
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        T(t);
+        g(t);
     },
     GUILD_DELETE: function (e) {
         var t;

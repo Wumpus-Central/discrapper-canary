@@ -40,12 +40,12 @@ function m(e, t) {
     })(e, t, n);
     return ((I[t][e] = i), i);
 }
-function T(e) {
+function g(e) {
     let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete I[e.id];
     return t.length > 0;
 }
-function g(e) {
+function T(e) {
     let { guildId: t, user: n } = e;
     if (null == n || null == t) return !1;
     var i = n.id;
@@ -95,14 +95,14 @@ let C = new N(s.h, {
     CONNECTION_OPEN: function () {
         I = {};
     },
-    GUILD_MEMBER_REMOVE: g,
-    GUILD_MEMBER_UPDATE: g,
+    GUILD_MEMBER_REMOVE: T,
+    GUILD_MEMBER_UPDATE: T,
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
-        T(t);
+        g(t);
     },
     PASSIVE_UPDATE_V2: function (e) {
-        return T(e.guildId);
+        return g(e.guildId);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;

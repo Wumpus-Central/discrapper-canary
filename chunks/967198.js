@@ -26,7 +26,7 @@ function m(e) {
     let t = !1;
     return (delete f[e], A === e && ((A = null), (t = !0)), E === e && ((E = null), (0, o.bG)(_.BVt.ME), (t = !0)), t);
 }
-class T extends i.Ay.PersistedStore {
+class g extends i.Ay.PersistedStore {
     static displayName = "SelectedGuildStore";
     static persistKey = "SelectedGuildStore";
     initialize(e) {
@@ -52,7 +52,7 @@ class T extends i.Ay.PersistedStore {
         return E === e ? -1 : f[e];
     }
 }
-let g = new T(r.h, {
+let T = new g(r.h, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: function (e) {
         ((E = e.selectedGuildId), (A = void 0), I());
@@ -76,4 +76,4 @@ let g = new T(r.h, {
         ((E = null), (A = null));
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: T });

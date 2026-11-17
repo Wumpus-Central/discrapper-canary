@@ -15,8 +15,8 @@ var i = n(517846),
     I = n(734057),
     p = n(218461),
     m = n(129230),
-    T = n(371794),
-    g = n(387755),
+    g = n(371794),
+    T = n(387755),
     S = n(597798),
     N = n(652215),
     C = n(792996);
@@ -33,7 +33,7 @@ let O = {
             } = e,
             c = this._getRecipients(t);
         function u(e) {
-            n && g.A.call(e.id, a, !0, e.isDM() ? e.getRecipientId() : null);
+            n && T.A.call(e.id, a, !0, e.isDM() ? e.getRecipientId() : null);
         }
         if (1 === c.length) {
             let [e] = c,
@@ -279,7 +279,7 @@ let O = {
     preload: d.A,
     fetchChannelStoreListing(e, t) {
         let n = null != t ? N.Rsh.CHANNEL_STORE_LISTING_SKU(e, t) : N.Rsh.CHANNEL_STORE_LISTING(e);
-        return (0, T.aP)(n).then((t) => {
+        return (0, g.aP)(n).then((t) => {
             s.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", channelId: e, storeListing: t.body });
         });
     },

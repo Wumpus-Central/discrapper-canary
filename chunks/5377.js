@@ -5,11 +5,11 @@ n.d(t, {
     i$: () => N,
     Tf: () => b,
     m_: () => m,
-    c_: () => T,
+    c_: () => g,
     Xm: () => w,
     P6: () => U,
     N5: () => M,
-    ro: () => g,
+    ro: () => T,
     v0: () => S,
     uN: () => v,
 });
@@ -74,10 +74,10 @@ function p(e) {
 function m(e, t) {
     return Math.floor((p(e, !1) - p(t, !1)) / 864e5);
 }
-function T(e, t) {
+function g(e, t) {
     return (e.getTime() - t.getTime()) / 864e5;
 }
-function g(e, t) {
+function T(e, t) {
     return 864e5 >= Math.abs(e - t) && e.getDate() === t.getDate();
 }
 function S(e, t, n) {
@@ -485,7 +485,7 @@ function N(e, t, n) {
                                 "Date(1);\nvar _i_doy2 = Math.round((_i_d2 - _i_soy2) / 864e5) + 1;\nvar _i_week = Math.ceil(_i_doy2 / 7);\nvar _i_weekYear = _i_d2.get" +
                                 (i ? "UTC" : "") +
                                 "FullYear();\n"));
-                    let T = Function(
+                    let g = Function(
                         "d",
                         "localeData",
                         (m += `return (
@@ -493,7 +493,7 @@ function N(e, t, n) {
 ${l.join(" +\n")}
 );`),
                     );
-                    return (e) => T(e, s);
+                    return (e) => g(e, s);
                 })(t)),
         l(L(e))
     );

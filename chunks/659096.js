@@ -32,8 +32,8 @@ var _ = n(46653),
     I = n(144914),
     p = n(966846),
     m = n(775228),
-    T = n(652215);
-let g = +f.A.Millis.MINUTE,
+    g = n(652215);
+let T = +f.A.Millis.MINUTE,
     S = {},
     N = "file://",
     C = !1,
@@ -45,17 +45,17 @@ let g = +f.A.Millis.MINUTE,
     b = [],
     v = !1;
 function P(e) {
-    return e.type === T.WTw.INSTALLING || e.type === T.WTw.UPDATING || e.type === T.WTw.REPAIRING
+    return e.type === g.WTw.INSTALLING || e.type === g.WTw.UPDATING || e.type === g.WTw.REPAIRING
         ? e.networkProgress
         : null;
 }
 function M(e) {
-    return e.type === T.WTw.INSTALLING || e.type === T.WTw.UPDATING || e.type === T.WTw.REPAIRING
+    return e.type === g.WTw.INSTALLING || e.type === g.WTw.UPDATING || e.type === g.WTw.REPAIRING
         ? e.diskProgress
         : null;
 }
 function U(e) {
-    return e.type === T.WTw.INSTALLING || e.type === T.WTw.UPDATING || e.type === T.WTw.REPAIRING
+    return e.type === g.WTw.INSTALLING || e.type === g.WTw.UPDATING || e.type === g.WTw.REPAIRING
         ? e.readerProgress
         : null;
 }
@@ -64,7 +64,7 @@ let w = r().throttle(function (e) {
     }, 200),
     G = r().throttle(function (e) {
         let t = Date.now(),
-            n = t - g;
+            n = t - T;
         y = (y = [{ bytes: e, timestamp: t }, ...y]).slice(0, 200).filter((e) => {
             let { timestamp: t } = e;
             return t >= n;
@@ -88,7 +88,7 @@ class F extends a.Ay.Store {
     }
     isUpToDate(e, t) {
         let n = S[(0, h.gW)(e, t)];
-        return null != n && n.type === T.WTw.UP_TO_DATE;
+        return null != n && n.type === g.WTw.UP_TO_DATE;
     }
     shouldPatch(e, t) {
         let n = S[(0, h.gW)(e, t)];
@@ -96,7 +96,7 @@ class F extends a.Ay.Store {
     }
     isInstalled(e, t) {
         let n = S[(0, h.gW)(e, t)];
-        return null != n ? n.type !== T.WTw.UNINSTALLING : m.A.shouldBeInstalled(e, t);
+        return null != n ? n.type !== g.WTw.UNINSTALLING : m.A.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
@@ -106,7 +106,7 @@ class F extends a.Ay.Store {
     isLaunchable(e, t) {
         if (!(0, I.S)()) return !1;
         let n = S[(0, h.gW)(e, t)];
-        return null != n && n.type === T.WTw.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
+        return null != n && n.type === g.WTw.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
     getDefaultLaunchOption(e, t) {
         let n = S[(0, h.gW)(e, t)];
@@ -167,22 +167,22 @@ let B = new F(s.h, {
                         null == I && (I = !0);
                         let p = e.state.type;
                         switch (e.state.type) {
-                            case T.l6E.COMPLETE: {
+                            case g.l6E.COMPLETE: {
                                 let e,
                                     p = {},
-                                    g = null;
-                                if (h) e = T.WTw.REPAIRING;
-                                else if (null == t) e = T.WTw.INSTALL_REQUIRED;
+                                    T = null;
+                                if (h) e = g.WTw.REPAIRING;
+                                else if (null == t) e = g.WTw.INSTALL_REQUIRED;
                                 else if (I && (t !== n || (null != i && 0 !== r().difference(i, a).length)))
-                                    e = T.WTw.UPDATE_REQUIRED;
-                                else if (((e = T.WTw.UP_TO_DATE), null != E)) {
+                                    e = g.WTw.UPDATE_REQUIRED;
+                                else if (((e = g.WTw.UP_TO_DATE), null != E)) {
                                     let e = l.A.fileManager.join(E, "content"),
                                         t = (0, A.O)();
                                     if (null != u && 0 !== u.length) {
                                         var m;
-                                        for (let n of (t !== T.lM6.WIN64 ||
+                                        for (let n of (t !== g.lM6.WIN64 ||
                                             ((m = t), u.some((e) => e.platforms.includes(m))) ||
-                                            (t = T.lM6.WIN32),
+                                            (t = g.lM6.WIN32),
                                         u))
                                             if (n.platforms.includes(t)) {
                                                 let t,
@@ -194,10 +194,10 @@ let B = new F(s.h, {
                                                             ? l.A.fileManager.join(e, a)
                                                             : l.A.fileManager.dirname(s)),
                                                     (p[r] = { ...n, id: r, fullExecutablePath: s, fullWorkingDir: t }),
-                                                    null == g && (g = r));
+                                                    null == T && (T = r));
                                             }
                                     } else if (null != c) {
-                                        t === T.lM6.WIN64 && null == c[t] && (t = T.lM6.WIN32);
+                                        t === g.lM6.WIN64 && null == c[t] && (t = g.lM6.WIN32);
                                         let n = c[t];
                                         if (null != n) {
                                             let { executable: i } = n,
@@ -210,7 +210,7 @@ let B = new F(s.h, {
                                                 fullWorkingDir: e,
                                                 platforms: [t],
                                             }),
-                                                (g = r));
+                                                (T = r));
                                         }
                                     }
                                 }
@@ -225,12 +225,12 @@ let B = new F(s.h, {
                                     installPath: E,
                                     installedSize: f,
                                     launchOptions: p,
-                                    defaultLaunchOptionId: g,
+                                    defaultLaunchOptionId: T,
                                     shouldPatch: I,
                                     storage: _,
                                 };
                             }
-                            case T.l6E.TRANSITION: {
+                            case g.l6E.TRANSITION: {
                                 let {
                                         stage: r,
                                         disk_progress: l,
@@ -243,13 +243,13 @@ let B = new F(s.h, {
                                     p = r.type;
                                 return {
                                     type:
-                                        p === T.OQC.UNINSTALLING
-                                            ? T.WTw.UNINSTALLING
+                                        p === g.OQC.UNINSTALLING
+                                            ? g.WTw.UNINSTALLING
                                             : h
-                                              ? T.WTw.REPAIRING
+                                              ? g.WTw.REPAIRING
                                               : null == t
-                                                ? T.WTw.INSTALLING
-                                                : T.WTw.UPDATING,
+                                                ? g.WTw.INSTALLING
+                                                : g.WTw.UPDATING,
                                     stage: p,
                                     applicationId: s,
                                     branchId: o,
@@ -282,14 +282,14 @@ let B = new F(s.h, {
                         let e = n[c];
                         if (
                             !0 !== e.paused &&
-                            (e.type === T.WTw.UNINSTALLING || e.type === T.WTw.INSTALLING || e.type === T.WTw.UPDATING)
+                            (e.type === g.WTw.UNINSTALLING || e.type === g.WTw.INSTALLING || e.type === g.WTw.UPDATING)
                         )
                             switch (e.stage) {
-                                case T.OQC.PATCHING:
-                                case T.OQC.FINALIZING:
-                                case T.OQC.VERIFYING:
-                                case T.OQC.REPAIRING:
-                                case T.OQC.POST_INSTALL_SCRIPTS:
+                                case g.OQC.PATCHING:
+                                case g.OQC.FINALIZING:
+                                case g.OQC.VERIFYING:
+                                case g.OQC.REPAIRING:
+                                case g.OQC.POST_INSTALL_SCRIPTS:
                                     (u.setProgress(
                                         "dispatch_application_progress",
                                         (0, h.uA)(e.progress, e.total) / 100,
@@ -308,7 +308,7 @@ let B = new F(s.h, {
                             installationPath: i,
                         }),
                         -1 === p.A.getQueuePosition(e, t) &&
-                            (n[c].type === T.WTw.INSTALLING || n[c].type === T.WTw.UPDATING) &&
+                            (n[c].type === g.WTw.INSTALLING || n[c].type === g.WTw.UPDATING) &&
                             E.A.hasApplication(e, t) &&
                             m.A.shouldBeInstalled(e, t) &&
                             s.h.dispatch({

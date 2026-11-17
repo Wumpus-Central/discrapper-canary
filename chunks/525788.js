@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(778712),
     p = n(265872),
     m = n(442433),
-    T = n(820284),
-    g = n(942857),
+    g = n(820284),
+    T = n(942857),
     S = n(538451),
     N = n(616356),
     C = n(287809),
@@ -112,7 +112,7 @@ n.d(
                     maxVisibleUsers: A = 3,
                 } = e,
                 f = r.useRef(null),
-                S = (0, g.A)(),
+                S = (0, T.A)(),
                 [R, D] = r.useState(!1),
                 v = r.useRef(new c.J_(150, () => D(!1))),
                 w = (0, d.yK)(
@@ -216,7 +216,7 @@ n.d(
                         { className: b.ju, children: ["+", w.length - A + 1] },
                         "overflow",
                     )),
-                (0, i.jsx)(T.A, {
+                (0, i.jsx)(g.A, {
                     section: y.JJy.STREAM_VIEWER_POPOUT,
                     children: (0, i.jsx)("div", {
                         onMouseEnter: G,

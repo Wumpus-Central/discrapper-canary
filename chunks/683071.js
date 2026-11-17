@@ -15,11 +15,11 @@ var i = n(477900),
     I = n(116711),
     p = n(331322),
     m = n(834730),
-    T = n(278817);
-function g(e) {
+    g = n(278817);
+function T(e) {
     let { intro: t, items: n } = e,
         r = (0, i.jsx)("ul", {
-            className: T.messageList,
+            className: g.messageList,
             children: n.map((e, t) => (0, i.jsx)("li", { children: e }, t)),
         });
     return null == t ? r : (0, i.jsxs)(p.B, { gap: 4, children: [(0, i.jsx)("div", { children: t }), r] });
@@ -27,8 +27,8 @@ function g(e) {
 function S(e) {
     let { hidden: t = !1, children: n } = e;
     return (0, i.jsx)("div", {
-        className: s()(T.enterExit, { [T.enterExitHidden]: t }),
-        children: (0, i.jsx)("div", { className: T.enterExitClip, children: n }),
+        className: s()(g.enterExit, { [g.enterExitHidden]: t }),
+        children: (0, i.jsx)("div", { className: g.enterExitClip, children: n }),
     });
 }
 let N = "body-sm/semibold",
@@ -76,22 +76,22 @@ n.d(
                     hidden: y,
                     children: (0, i.jsxs)("div", {
                         role: "alert" === L ? "alert" : void 0,
-                        className: s()(T.container, T[t]),
+                        className: s()(g.container, g[t]),
                         children: [
                             (0, i.jsxs)("div", {
-                                className: T.iconAndTextContainer,
+                                className: g.iconAndTextContainer,
                                 children: [
                                     (0, i.jsx)(m.E, {
                                         variant: null != n ? N : C,
                                         color: "none",
-                                        className: T.iconContainer,
+                                        className: g.iconContainer,
                                         children: P,
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: s()(T.contentsContainer, { [T.vertical]: null != O }),
+                                        className: s()(g.contentsContainer, { [g.vertical]: null != O }),
                                         children: [
                                             (0, i.jsxs)("div", {
-                                                className: T.copyContainer,
+                                                className: g.copyContainer,
                                                 children: [
                                                     (0, i.jsxs)(_.A, { id: b, children: [M, ":"] }),
                                                     null == n
@@ -106,7 +106,7 @@ n.d(
                                                         id: null == n ? v : void 0,
                                                         variant: C,
                                                         color: "text-strong",
-                                                        children: null != p ? (0, i.jsx)(g, { intro: a, items: p }) : a,
+                                                        children: null != p ? (0, i.jsx)(T, { intro: a, items: p }) : a,
                                                     }),
                                                 ],
                                             }),
@@ -127,7 +127,7 @@ n.d(
                                 ? (0, i.jsx)(m.E, {
                                       variant: null != n ? N : C,
                                       color: "none",
-                                      className: T.iconContainer,
+                                      className: g.iconContainer,
                                       children: (0, i.jsx)(u.J, {
                                           "aria-label": D.DISMISS_BUTTON_LABEL,
                                           "aria-describedby": `${b} ${v}`,

@@ -1,4 +1,4 @@
-t.exports = {
+W.exports = {
     tJ: "contentNarrowWithMedia_KWWX2H contentWithMedia_KWWX2H content_KWWX2H",
     eV: "contentNarrowNoMedia_KWWX2H contentNoMedia_KWWX2H content_KWWX2H",
     HU: "contentWideWithMedia_KWWX2H contentWithMedia_KWWX2H content_KWWX2H",

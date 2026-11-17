@@ -5,8 +5,8 @@ var l = n(582128),
     r = n(994500),
     o = n(287809),
     u = n(811602),
-    c = n(282108),
-    d = n(975214);
+    d = n(282108),
+    c = n(975214);
 n.d(
     t,
     {},
@@ -17,33 +17,33 @@ n.d(
                 m,
                 h,
                 x,
-                { channelId: C, authorId: p } = null == e ? {} : (0, c.nx)(e);
+                { channelId: p, authorId: g } = null == e ? {} : (0, d.nx)(e);
             return (
-                (t = (0, c.ku)()),
+                (t = (0, d.ku)()),
                 (n = (0, s.bG)([o.default], () => o.default.getCurrentUser())),
-                (m = (0, s.bG)([a.A, r.A], () => (0, c.c2)(C, p, [a.A, r.A]))),
+                (m = (0, s.bG)([a.A, r.A], () => (0, d.c2)(p, g, [a.A, r.A]))),
                 (h = (0, s.bG)(
                     [i.A],
                     () => t.reduce((e, t) => ({ ...e, [t.harmType]: t.getProtoUserSettings(i.A.settings) }), {}),
                     [t],
-                    d.M,
+                    c.M,
                 )),
                 0 ===
                 (x = l.useMemo(
                     () =>
-                        null == m || p === n?.id || null == n
+                        null == m || g === n?.id || null == n
                             ? []
                             : t
                                   .map((e) => {
                                       let t = h[e.harmType],
                                           n = null == m ? null : e.getUserSettingsWithDefaults(t)[m];
-                                      return (0, c.f)(n) ? e.harmType : null;
+                                      return (0, d.f)(n) ? e.harmType : null;
                                   })
                                   .filter((e) => null != e),
-                    [m, t, h, p, n],
+                    [m, t, h, g, n],
                 )).length
                     ? u.LO.NONE
-                    : (0, c.LE)(x)
+                    : (0, d.LE)(x)
             );
         },
     },

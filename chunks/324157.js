@@ -37,21 +37,21 @@ n.d(
                     progressIndicator: c,
                     helpCenterId: d,
                     daysRemaining: m,
-                    locale: g,
+                    locale: h,
                 } = e,
-                h =
+                g =
                     ((t = i.rewardStatus),
                     (n = o?.current ?? 0),
                     (a = (0, r.x)(c.rewardStates, t, n)),
                     { title: a?.title ?? c.title, description: a?.description ?? c.description }),
-                p = { locale: g, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
-                f = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
-                E = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
+                p = { locale: h, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
+                E = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
+                f = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
             return {
-                title: u(h.title, p),
-                description: ((l = h.description), null != l && "" !== l ? u(l, p) : null),
-                progressText: f,
-                timeLeftText: E,
+                title: u(g.title, p),
+                description: ((l = g.description), null != l && "" !== l ? u(l, p) : null),
+                progressText: E,
+                timeLeftText: f,
             };
         },
         wJ: u,

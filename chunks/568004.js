@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(927813),
     p = n(674378),
     m = n(144914);
-let T = new Set(),
-    g = {},
+let g = new Set(),
+    T = {},
     S = new Set(),
     N = {},
     C = new Set(),
@@ -38,8 +38,8 @@ function v() {
     o.r(t);
 }
 function P(e, t) {
-    if (null != g[t] && h.A.shouldBeInstalled(e, t)) {
-        let n = g[t],
+    if (null != T[t] && h.A.shouldBeInstalled(e, t)) {
+        let n = T[t],
             i = n.manifestIds,
             a = f.A.getState(e, t);
         null != a &&
@@ -60,16 +60,16 @@ class U extends a.Ay.Store {
         (this.syncWith([A.A], v), this.waitFor(u.A, f.A, h.A, A.A, E.A));
     }
     getTargetBuildId(e, t) {
-        return null == g[t] ? null : g[t].id;
+        return null == T[t] ? null : T[t].id;
     }
     getTargetManifests(e, t) {
-        return null == g[t] ? null : g[t].manifestIds;
+        return null == T[t] ? null : T[t].manifestIds;
     }
     hasNoBuild(e, t) {
         return S.has(t);
     }
     isFetching(e, t) {
-        return T.has(t);
+        return g.has(t);
     }
     needsToFetchBuildSize(e) {
         return !N.hasOwnProperty(e);
@@ -91,21 +91,21 @@ let w = new U(l.h, {
     },
     APPLICATION_BUILD_FETCH_START: function (e) {
         let { branchId: t } = e;
-        T.add(t);
+        g.add(t);
     },
     APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branchId: n, locale: i, build: r } = e;
-        T.delete(n);
+        g.delete(n);
         let a = r.manifests.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
             s = r.id;
-        (S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), P(t, n));
+        (S.delete(n), (T[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), P(t, n));
     },
     APPLICATION_BUILD_NOT_FOUND: function (e) {
         let { branchId: t } = e;
-        (T.delete(t), S.add(t));
+        (g.delete(t), S.add(t));
     },
     APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
         let { buildId: t } = e;

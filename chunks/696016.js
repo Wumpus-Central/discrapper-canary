@@ -15,12 +15,12 @@ var i,
     I,
     p = n(626584),
     m = n(927813),
-    T =
+    g =
         (((i = {})[(i.SECONDS_30 = 30 * m.A.Millis.SECOND)] = "SECONDS_30"),
         (i[(i.MINUTES_1 = m.A.Millis.MINUTE)] = "MINUTES_1"),
         (i[(i.MINUTES_2 = 2 * m.A.Millis.MINUTE)] = "MINUTES_2"),
         i),
-    g = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r),
+    T = (((r = {}).DECOUPLED = "decoupled"), (r.STREAMER = "streamer"), (r.VOICE = "voice"), r),
     S = (((a = {})[(a.Error = 0)] = "Error"), (a[(a.Disabled = 1)] = "Disabled"), (a[(a.Enabled = 2)] = "Enabled"), a);
 let N = 6 * m.A.Millis.SECOND,
     C = new p.A("Clips"),
@@ -102,13 +102,13 @@ n.d(
             let t = (((15 * Math.round(e / 15)) % 360) + 360) % 360;
             return t > 180 ? t - 360 : t;
         },
-        Fv: g,
+        Fv: T,
         G$: ["png", "jpg", "jpeg", "webp"],
         GU: C,
         Gy: L,
         Hz: G,
         I4: "clip-share-watermark",
-        LX: T,
+        LX: g,
         Me: U,
         Mu: "clips_player",
         P4: S,

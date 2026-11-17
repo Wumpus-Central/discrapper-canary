@@ -18,8 +18,8 @@ let p = function () {
     return !0;
 };
 var m = n(252919),
-    T = n(129230),
-    g = n(612181),
+    g = n(129230),
+    T = n(612181),
     S = n(856383),
     N = n(115036),
     C = n(536802),
@@ -71,7 +71,7 @@ function Z() {
 function ee(e) {
     let { withGuildExperiments: t } = e,
         n = {},
-        i = T.default.getSuperPropertiesBase64();
+        i = g.default.getSuperPropertiesBase64();
     return (
         null != i && (n["X-Super-Properties"] = i),
         null != U && (n["X-Fingerprint"] = U),
@@ -211,10 +211,10 @@ class ed extends l.Ay.Store {
         return M;
     }
     getToken() {
-        return (0, g.g)();
+        return (0, T.g)();
     }
     isAuthenticated() {
-        return (0, g.w)();
+        return (0, T.w)();
     }
     getFingerprint() {
         return U;
@@ -295,7 +295,7 @@ let ec = new ed(
             let i = n(192308).kB;
             if (4004 === t) {
                 if (F || i(O.jc) || i(O.Uy)) return void el();
-                (T.default.track(h.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(D) }),
+                (g.default.track(h.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(D) }),
                     eo(),
                     setImmediate(() => (0, I.pX)(h.BVt.DEFAULT_LOGGED_OUT)));
             }
@@ -356,7 +356,7 @@ let ec = new ed(
             let t = e.fingerprint;
             null == U
                 ? null != t
-                    ? (T.default.track(h.HAw.USER_FINGERPRINT_CHANGED, {
+                    ? (g.default.track(h.HAw.USER_FINGERPRINT_CHANGED, {
                           old_fingerprint: null != w ? (0, s.d)(w) : null,
                           new_fingerprint: (0, s.d)(t),
                       }),
@@ -366,7 +366,7 @@ let ec = new ed(
                     : Z()
                 : null != t &&
                   U !== t &&
-                  T.default.track(h.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
+                  g.default.track(h.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
                       fingerprint: (0, s.d)(U),
                       dropped_fingerprint: (0, s.d)(t),
                   });

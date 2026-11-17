@@ -18,8 +18,8 @@ var _ = n(46653),
     I = n(856383),
     p = n(70298),
     m = n(973522),
-    T = n(644727),
-    g = n(321034),
+    g = n(644727),
+    T = n(321034),
     S = n(789999),
     N = n(976860),
     C = n(569745);
@@ -79,10 +79,10 @@ async function Y() {
         client_heartbeat_version: 31,
         ...{
             ...((e = {}),
-            null != (t = g.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
-            null != (n = g.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
+            null != (t = T.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
+            null != (n = T.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
                 (e.client_heartbeat_renderer_memory_used_heap = n),
-            null != (i = g.A.getMemoryUsageElectronProcessTypeDetails()) &&
+            null != (i = T.A.getMemoryUsageElectronProcessTypeDetails()) &&
                 ((e.electron_process_memory_private = [
                     i.unknown?.wss_priv_kb ?? -1,
                     i.main?.wss_priv_kb ?? -1,
@@ -103,7 +103,7 @@ async function Y() {
                 ])),
             e),
             ...((r = {}),
-            null != (a = T.Ay.getCurrentGameForAnalytics()) &&
+            null != (a = g.Ay.getCurrentGameForAnalytics()) &&
                 ((r.client_heartbeat_current_game_id = a.id),
                 (r.client_heartbeat_current_game_name = a.name),
                 (r.client_heartbeat_current_game_executable = (0, m.Ic)(a.exePath)),

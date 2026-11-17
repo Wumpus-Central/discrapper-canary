@@ -29,7 +29,7 @@ function m(e) {
     let n = f.BVt.CHANNEL(o.pv.guildId(), h.VV.CONJURE, ":projectId?");
     return null != (0, d.B)(t, { path: n, exact: !0 }) ? "conjure" : "other";
 }
-function T(e) {
+function g(e) {
     let t = A.A.getTabs();
     return {
         tab_kind: e.kind,
@@ -40,12 +40,12 @@ function T(e) {
         pinned_tab_count: t.filter((e) => e.pinned).length,
     };
 }
-function g(e, t, n, i) {
+function T(e, t, n, i) {
     let r = A.A.getTabs(),
         a = { friends: 0, shop: 0, quests: 0, nitro: 0, conjure: 0, other: 0 };
     for (let e of r) "route" === e.kind && a[m(e.routePath)]++;
     s.Ay.trackWithMetadata(f.HAw.CHANNEL_TAB_OPENED, {
-        ...T(e),
+        ...g(e),
         method: t,
         is_new_tab: n,
         focused: i,
@@ -65,7 +65,7 @@ function S(e, t) {
     let i = A.A.getTabs();
     if (i.length <= n) return null;
     let a = i[i.length - 1];
-    return (g(a, t, !0, A.A.getActiveTabId() === a.id), a);
+    return (T(a, t, !0, A.A.getActiveTabId() === a.id), a);
 }
 var N = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
 function C(e) {
@@ -98,11 +98,11 @@ function O(e, t) {
             E.Ay.getCurrentlySelectedChannelId() !== n.channelId && I(n.channelId, n.guildId);
             return;
         }
-        (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: n.id }), g(n, t, !1, !0), p(n));
+        (r.h.dispatch({ type: "CHANNEL_TABS_SET_ACTIVE", tabId: n.id }), T(n, t, !1, !0), p(n));
     }
 }
 function R(e, t) {
-    s.Ay.trackWithMetadata(f.HAw.CHANNEL_TAB_PIN_TOGGLED, { ...T(e), source: t, pinned: e.pinned });
+    s.Ay.trackWithMetadata(f.HAw.CHANNEL_TAB_PIN_TOGGLED, { ...g(e), source: t, pinned: e.pinned });
 }
 n.d(
     t,
@@ -117,7 +117,7 @@ n.d(
                 -1 !== a &&
                 a !== n &&
                 s.Ay.trackWithMetadata(f.HAw.CHANNEL_TAB_REORDERED, {
-                    ...T(i[a]),
+                    ...g(i[a]),
                     from_index: n,
                     to_index: a,
                     is_pinned: i[a].pinned,
@@ -135,7 +135,7 @@ n.d(
                   E.Ay.getCurrentlySelectedChannelId() !== e &&
                   I(e, t);
         },
-        FP: g,
+        FP: T,
         Qo: function (e) {
             let t = A.A.getActiveTab();
             return null == t ? null : (S({ ...t.entries[t.index], active: !0, fresh: !0 }, e)?.id ?? null);
@@ -159,7 +159,7 @@ n.d(
             let n = A.A.getActiveTabId();
             r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
             let i = A.A.getActiveTab();
-            null != n && null != i && i.id !== n && g(i, "page_navigation", !0, !0);
+            null != n && null != i && i.id !== n && T(i, "page_navigation", !0, !0);
         },
         a2: function () {
             return C(-1);
@@ -174,7 +174,7 @@ n.d(
             if (
                 (a &&
                     s.Ay.trackWithMetadata(f.HAw.CHANNEL_TAB_CLOSED, {
-                        ...T(n),
+                        ...g(n),
                         source: t,
                         was_active: i,
                         was_pinned: n.pinned,
@@ -183,7 +183,7 @@ n.d(
             )
                 return;
             let l = A.A.getActiveTab();
-            null != l && (a && g(l, "close", !1, !0), p(l));
+            null != l && (a && T(l, "close", !1, !0), p(l));
         },
         lj: function (e) {
             r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });

@@ -1,1 +1,1 @@
-t.exports = { Kk: "icon_ztNr4Q" };
+W.exports = { Kk: "icon_ztNr4Q" };

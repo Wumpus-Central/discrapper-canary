@@ -20,8 +20,8 @@ var h = n(611361),
     I = n(781013),
     p = n(51906),
     m = (((i = {}).Disabled = "disabled"), (i.Loading = "loading"), (i.Loaded = "loaded"), (i.Error = "error"), i);
-let T = new Map();
-function g(e) {
+let g = new Map();
+function T(e) {
     e.listeners.forEach((e) => e());
 }
 function S(e, t) {
@@ -31,7 +31,7 @@ function S(e, t) {
             return (
                 (n = e),
                 void (((i = t).removalTimer = null),
-                i.consumers > 0 || T.get(n) !== i || (T.delete(n), i.riveFile.cleanup()))
+                i.consumers > 0 || g.get(n) !== i || (g.delete(n), i.riveFile.cleanup()))
             );
         }, 3e4)));
 }
@@ -56,18 +56,18 @@ function R(e) {
             return (a.useLayoutEffect(() => {
                 if (null == e) return;
                 let t = (function (e) {
-                    let t = T.get(e);
+                    let t = g.get(e);
                     if (null != t) return t;
                     let n = new l.RiveFile({ buffer: e }),
                         i = { riveFile: n, status: "loading", consumers: 0, removalTimer: null, listeners: new Set() };
                     return (
                         n.on(l.EventType.Load, () => {
-                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && S(e, i), g(i));
+                            (n.getInstance(), (i.status = "loaded"), 0 === i.consumers && S(e, i), T(i));
                         }),
                         n.on(l.EventType.LoadError, () => {
-                            ((i.status = "error"), T.get(e) === i && T.delete(e), g(i));
+                            ((i.status = "error"), g.get(e) === i && g.delete(e), T(i));
                         }),
-                        T.set(e, i),
+                        g.set(e, i),
                         (0, p.yO)(n.init()),
                         i
                     );
@@ -111,8 +111,8 @@ function L(e) {
         p,
         {
             isRiveWebPerfEnabled: m,
-            sharedRiveFile: T,
-            buffer: g,
+            sharedRiveFile: g,
+            buffer: T,
             autoplay: S = !0,
             className: N,
             fit: C,
@@ -151,7 +151,7 @@ function L(e) {
         { rive: en, RiveComponent: ei } = (0, l.useRive)(
             {
                 eventTarget: L?.current,
-                ...(null != T ? { riveFile: T } : { buffer: g }),
+                ...(null != g ? { riveFile: g } : { buffer: T }),
                 autoplay: S,
                 stateMachines: null != B ? [B] : q ? z : $,
                 artboard: y,

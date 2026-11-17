@@ -322,8 +322,8 @@ class m extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let T = new m();
-class g extends o.G {
+let g = new m();
+class T extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.GameExitPanel", [
             { no: 6, name: "trigger_application_id", kind: "scalar", T: 9 },
@@ -383,7 +383,7 @@ class g extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let S = new g();
+let S = new T();
 class N extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.CollectionPageMarketingBlock", [
@@ -1853,8 +1853,8 @@ class em extends o.G {
         return (!1 !== i && (!0 == i ? a.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eT = new em();
-var eg = n(554146);
+let eg = new em();
+var eT = n(554146);
 class eS extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.MobileBottomSheet", [
@@ -1867,7 +1867,7 @@ class eS extends o.G {
                 no: 6,
                 name: "dismissible_content",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.DismissibleContent", eg.M],
+                T: () => ["discord_protos.discord_users.v1.DismissibleContent", eT.M],
             },
             { no: 7, name: "help_article", kind: "message", T: () => d.O },
             { no: 8, name: "header_localized", kind: "message", T: () => c.X },
@@ -2091,7 +2091,7 @@ class eb extends o.G {
             { no: 5, name: "marketing_page_banner", kind: "message", oneof: "properties", T: () => eR.C },
             { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => eO },
             { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => eN },
-            { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => eT },
+            { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => eg },
             { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => ep.l },
             { no: 10, name: "gift_plan_selection_card_banner", kind: "message", oneof: "properties", T: () => eI.s },
             { no: 11, name: "gift_customization_banner", kind: "message", oneof: "properties", T: () => eh.E },
@@ -2118,7 +2118,7 @@ class eb extends o.G {
             { no: 33, name: "nitro_perk_card", kind: "message", oneof: "properties", T: () => L },
             { no: 34, name: "collection_page_marketing_block", kind: "message", oneof: "properties", T: () => C },
             { no: 35, name: "game_exit_panel", kind: "message", oneof: "properties", T: () => S },
-            { no: 36, name: "announcement_modal_video_led", kind: "message", oneof: "properties", T: () => T },
+            { no: 36, name: "announcement_modal_video_led", kind: "message", oneof: "properties", T: () => g },
             { no: 37, name: "announcement_modal_panel", kind: "message", oneof: "properties", T: () => p },
             { no: 38, name: "nitro_home_section_header", kind: "message", oneof: "properties", T: () => _ },
             { no: 3, name: "content_identifier", kind: "scalar", T: 9 },
@@ -2185,7 +2185,7 @@ class eb extends o.G {
                 case 8:
                     r.properties = {
                         oneofKind: "giftIcon",
-                        giftIcon: eT.internalBinaryRead(e, e.uint32(), n, r.properties.giftIcon),
+                        giftIcon: eg.internalBinaryRead(e, e.uint32(), n, r.properties.giftIcon),
                     };
                     break;
                 case 9:
@@ -2417,7 +2417,7 @@ class eb extends o.G {
                 case 36:
                     r.properties = {
                         oneofKind: "announcementModalVideoLed",
-                        announcementModalVideoLed: T.internalBinaryRead(
+                        announcementModalVideoLed: g.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -2488,7 +2488,7 @@ class eb extends o.G {
             "mobileBottomSheet" === e.properties.oneofKind &&
                 eN.internalBinaryWrite(e.properties.mobileBottomSheet, t.tag(7, a.O0.LengthDelimited).fork(), n).join(),
             "giftIcon" === e.properties.oneofKind &&
-                eT.internalBinaryWrite(e.properties.giftIcon, t.tag(8, a.O0.LengthDelimited).fork(), n).join(),
+                eg.internalBinaryWrite(e.properties.giftIcon, t.tag(8, a.O0.LengthDelimited).fork(), n).join(),
             "giftIconCoachmark" === e.properties.oneofKind &&
                 ep.l
                     .internalBinaryWrite(e.properties.giftIconCoachmark, t.tag(9, a.O0.LengthDelimited).fork(), n)
@@ -2616,11 +2616,13 @@ class eb extends o.G {
             "gameExitPanel" === e.properties.oneofKind &&
                 S.internalBinaryWrite(e.properties.gameExitPanel, t.tag(35, a.O0.LengthDelimited).fork(), n).join(),
             "announcementModalVideoLed" === e.properties.oneofKind &&
-                T.internalBinaryWrite(
-                    e.properties.announcementModalVideoLed,
-                    t.tag(36, a.O0.LengthDelimited).fork(),
-                    n,
-                ).join(),
+                g
+                    .internalBinaryWrite(
+                        e.properties.announcementModalVideoLed,
+                        t.tag(36, a.O0.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join(),
             "announcementModalPanel" === e.properties.oneofKind &&
                 p
                     .internalBinaryWrite(e.properties.announcementModalPanel, t.tag(37, a.O0.LengthDelimited).fork(), n)

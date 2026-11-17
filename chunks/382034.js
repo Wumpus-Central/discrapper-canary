@@ -21,8 +21,8 @@ let m = function (e) {
     let { markAsDismissed: t, recurringDismiss: n, noticeType: a } = e,
         l = E.Tr.CALL_OF_DUTY_APPLICATION_ID,
         m = (0, u.h)(l),
-        T = m?.name,
-        { startAuthorization: g, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),
+        g = m?.name,
+        { startAuthorization: T, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),
         { analyticsLocations: O } = (0, c.Ay)(d.A.NOTICE),
         R = p(C),
         [L, y] = r.useState(!1);
@@ -41,13 +41,13 @@ let m = function (e) {
                   }),
                   (0, i.jsx)("img", {
                       src: "https://cdn.discordapp.com/assets/content/37dd378cbc52678cf98cba1b9abef1a63da6d2bdbc6535c3982aff71e6d23783.png",
-                      alt: T,
+                      alt: g,
                       className: s()(I.tV, I.Y5),
                   }),
                   h.intl.string(f.default.OleW32),
                   (0, i.jsx)(o.Z_, {
                       onClick: function () {
-                          (y(!0), g({ analyticsLocations: O }));
+                          (y(!0), T({ analyticsLocations: O }));
                       },
                       className: I.NS,
                       noticeType: a,

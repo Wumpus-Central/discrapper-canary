@@ -25,8 +25,8 @@ n.d(
                     overlay: I,
                     "aria-label": p,
                     "aria-expanded": m,
-                    "aria-haspopup": T,
-                    "data-jump-section": g,
+                    "aria-haspopup": g,
+                    "data-jump-section": T,
                     ref: S,
                 } = e,
                 N = (0, i.jsx)(t, { size: "sm", color: E ?? "currentColor", colorClass: A });
@@ -42,9 +42,9 @@ n.d(
                     className: a()(c.vk, { [c.wH]: r, [c.r9]: _ }),
                     role: "button",
                     "aria-label": null != p ? p : f,
-                    "aria-haspopup": T,
+                    "aria-haspopup": g,
                     "aria-expanded": m,
-                    "data-jump-section": g,
+                    "data-jump-section": T,
                     "aria-disabled": _,
                     children: [
                         u

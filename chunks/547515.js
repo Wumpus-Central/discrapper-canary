@@ -27,8 +27,8 @@ var i,
     I = n(811091),
     p = n(682901),
     m = n(792996),
-    T = (((i = T || {}).DRAFT = "Draft"), (i.UPCOMING = "Upcoming"), (i.ACTIVE = "Active"), (i.ENDED = "Ended"), i);
-let g = { Draft: "start_date", Upcoming: "start_date", Active: "end_date", Ended: "end_date" };
+    g = (((i = g || {}).DRAFT = "Draft"), (i.UPCOMING = "Upcoming"), (i.ACTIVE = "Active"), (i.ENDED = "Ended"), i);
+let T = { Draft: "start_date", Upcoming: "start_date", Active: "end_date", Ended: "end_date" };
 function S(e) {
     if (null == e) return null;
     let t = Date.parse(e);
@@ -50,13 +50,13 @@ function C(e, t, n) {
 }
 function O(e) {
     let t = Date.now();
-    return Object.values(T)
+    return Object.values(g)
         .map((n) => ({
             label: n,
             campaigns: e
                 .filter((e) => N(e, t) === n)
                 .sort((e, t) => {
-                    let i = g[n],
+                    let i = T[n],
                         r = "Ended" === n ? -1 / 0 : 1 / 0;
                     return (S(t[i]) ?? r) - (S(e[i]) ?? r);
                 }),

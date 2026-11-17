@@ -17,8 +17,8 @@ var c = n(780594),
     I = n(532624),
     p = n(723702),
     m = n(350535),
-    T = n(652215);
-let g = new Set([
+    g = n(652215);
+let T = new Set([
         "esc",
         "shift+esc",
         "pageup",
@@ -72,12 +72,12 @@ function R() {
                     let e = [];
                     for (let t of Object.values(E.zR))
                         if (t?.comboKeysBindGlobal === !0)
-                            for (let n of A.A.getRegistrableBinds(t)) g.has(n) || e.push(n);
+                            for (let n of A.A.getRegistrableBinds(t)) T.has(n) || e.push(n);
                     if (!p.isPlatformEmbedded)
                         for (let t of Object.values(I.Ay.getUserAgnosticState()))
                             t.enabled &&
                                 t.shortcut.length > 0 &&
-                                t.action !== T.hCu.UNASSIGNED &&
+                                t.action !== g.hCu.UNASSIGNED &&
                                 e.push((0, m.dI)(t.shortcut));
                     return e;
                 })()
@@ -207,10 +207,10 @@ class H extends r.A {
     stores = new Map().set(a.A, V);
     _unsubscribeKeybinds = null;
     _initialize() {
-        (s._.subscribe(T.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
+        (s._.subscribe(g.jej.IFRAME_UNMOUNT, F), (this._unsubscribeKeybinds = D(B)));
     }
     _terminate() {
-        for (let e of (s._.unsubscribe(T.jej.IFRAME_UNMOUNT, F),
+        for (let e of (s._.unsubscribe(g.jej.IFRAME_UNMOUNT, F),
         this._unsubscribeKeybinds?.(),
         (this._unsubscribeKeybinds = null),
         M.values()))

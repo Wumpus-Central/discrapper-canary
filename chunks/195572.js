@@ -1,1 +1,1 @@
-e.exports = { w: "favoriteIcon_850pDF" };
+o.exports = { w: "favoriteIcon_850pDF" };

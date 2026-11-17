@@ -4,14 +4,14 @@ n.d(t, {
     dangerouslyConstructGuildRecordFromUntypedObject: () => S,
     kI: () => f,
     Y1: () => h,
-    yF: () => g,
+    yF: () => T,
     xi: () => m,
     b9: () => p,
     zT: () => _,
     DY: () => I,
     $O: () => C,
     Wj: () => E,
-    Yh: () => T,
+    Yh: () => g,
     fh: () => u,
     yN: () => N,
 });
@@ -203,7 +203,7 @@ function m(e) {
         features: (0, a.y)(e.features),
     });
 }
-function T(e) {
+function g(e) {
     return O({
         id: e.id,
         name: e.name,
@@ -214,7 +214,7 @@ function T(e) {
         verificationLevel: e.verification_level ?? d.do.verificationLevel,
     });
 }
-function g(e) {
+function T(e) {
     return O({
         id: e.id,
         name: e.name,

@@ -42,11 +42,11 @@ function u(e) {
                     I = _?.isOverride,
                     p = _?.exposureTrackingEnabled,
                     m = _?.useAsEligibility,
-                    T = E(_),
-                    g = null == T,
+                    g = E(_),
+                    T = null == g,
                     S = n?.autoTrackExposure !== !1;
                 return ((0, i.useEffect)(() => {
-                    (g || !0 === m || t.onConfigApplied(d, a, o),
+                    (T || !0 === m || t.onConfigApplied(d, a, o),
                         S &&
                             null != c &&
                             null != f &&
@@ -54,12 +54,12 @@ function u(e) {
                             !1 === I &&
                             !0 === p &&
                             !0 !== m &&
-                            !g &&
+                            !T &&
                             t.trackExperimentExposure(c, o, e.location, d, h, f, a));
-                }, [S, a, c, f, h, e.location, I, p, m, g]),
-                null == A || !0 === m || null == T)
+                }, [S, a, c, f, h, e.location, I, p, m, T]),
+                null == A || !0 === m || null == g)
                     ? u
-                    : T;
+                    : g;
             },
             getConfig: function (e, i) {
                 let r = n(d, e),

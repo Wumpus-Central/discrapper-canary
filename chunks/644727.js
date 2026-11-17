@@ -16,8 +16,8 @@ var r = n(435558),
     I = n(343446),
     p = n(148883),
     m = n(945810),
-    T = n(311043),
-    g = n(830012),
+    g = n(311043),
+    T = n(830012),
     S = n(211753),
     N = n(206885),
     C = n(41984),
@@ -134,8 +134,8 @@ let K = new h.A("RunningGameStore"),
     eI = null,
     ep = 0,
     em = null,
-    eT = null,
-    eg = {},
+    eg = null,
+    eT = {},
     eS = {},
     eN = new Set(),
     eC = new Set(),
@@ -189,10 +189,10 @@ function ex() {
     } else es = null;
     ew();
     let e = [];
-    for (let t of ei) t.pid in eg || ((eg[t.pid] = t), e.push(t));
+    for (let t of ei) t.pid in eT || ((eT[t.pid] = t), e.push(t));
     let t = [];
-    for (let e of Object.values(eg)) ei.some((t) => t.pid === e.pid) || (t.push(e), delete eg[e.pid], ed.delete(e.pid));
-    (K.info("Running Games Changed", { runningGames: ei, added: e, removed: t, previousGames: eg }),
+    for (let e of Object.values(eT)) ei.some((t) => t.pid === e.pid) || (t.push(e), delete eT[e.pid], ed.delete(e.pid));
+    (K.info("Running Games Changed", { runningGames: ei, added: e, removed: t, previousGames: eT }),
         _.h.dispatch({ type: "RUNNING_GAMES_CHANGE", games: ei, added: e, removed: t }));
 }
 function ek(e) {
@@ -213,7 +213,7 @@ function eB(e) {
 function eV(e) {
     var t;
     let n,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.A;
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.A;
     if (null == e) return;
     let r = i.getGame(e);
     return null != r
@@ -231,14 +231,14 @@ function eV(e) {
 }
 let eH = new Set();
 function ej() {
-    let e = new Set(ei.map((e) => (0, H.Un)(e).id).filter((e) => null != e && null != T.A.getGame(e))),
+    let e = new Set(ei.map((e) => (0, H.Un)(e).id).filter((e) => null != e && null != g.A.getGame(e))),
         t = e.size !== eH.size || [...e].some((e) => !eH.has(e));
     return ((eH = e), t);
 }
 function eW(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        [i, r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [v.A, P.A, T.A],
+        [i, r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [v.A, P.A, g.A],
         s = (0, H.Un)(e);
     if (s.isLauncher)
         return {
@@ -317,7 +317,7 @@ function e$() {
     u.w.set($, eA);
 }
 function eX(e, t, n, i) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : T.A,
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : g.A,
         a = {
             ...e,
             played:
@@ -633,12 +633,12 @@ class e3 extends c.Ay.Store {
         )
             for (let n of e.gamesSeen)
                 "number" == typeof n.id && ((n.nativeProcessObserverId = n.id), delete n.id, (t = !0));
-        (this.waitFor(m.Bt, v.A, V.A, U.A, I.A, p.A, T.A, P.A, M.default),
+        (this.waitFor(m.Bt, v.A, V.A, U.A, I.A, p.A, g.A, P.A, M.default),
             (z = e.gamesSeen.filter((e) => !(0, b.n1)(e))),
             this.syncWith([p.A], e2),
             this.syncWith([m.Bt], e1),
             this.syncWith([P.A, v.A, U.A], a().throttle(ez, 1e3)),
-            this.syncWith([T.A], ej),
+            this.syncWith([g.A], ej),
             t && e$());
     }
     getVisibleGame() {
@@ -708,7 +708,7 @@ class e3 extends c.Ay.Store {
         return null != em && em === e;
     }
     shouldContinueWithoutElevatedProcessForPID(e) {
-        return null != eT && eT === e;
+        return null != eg && eg === e;
     }
     canCollectExecutableFingerprintsForRunningGames() {
         return X;
@@ -761,7 +761,7 @@ class e3 extends c.Ay.Store {
         return n.enabledLegacy || n.enabledOOP ? n : null;
     }
     getObservedAppNameForWindow(e) {
-        return eu.find((t) => (0, g.A)(e, t.windowHandle))?.name ?? null;
+        return eu.find((t) => (0, T.A)(e, t.windowHandle))?.name ?? null;
     }
     get canShowAdminWarning() {
         return J && !this.isSystemServiceInitialized("input-service");
@@ -792,14 +792,14 @@ let e6 = new e3(_.h, {
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
-            ((em = t), (eT = null));
+            ((em = t), (eg = null));
         },
         PERMISSION_CLEAR_ELEVATED_PROCESS: function () {
             em = null;
         },
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
-            ((eT = t), (em = null));
+            ((eg = t), (em = null));
         },
         RUNNING_GAME_ADD_OVERRIDE: function (e) {
             let t,

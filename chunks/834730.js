@@ -42,12 +42,12 @@ n.d(
                     default:
                         t = o.A.colors[u[E]]?.css;
                 }
-            let T = { color: t, ...m, ...I.style };
+            let g = { color: t, ...m, ...I.style };
             return (0, i.jsx)(r, {
                 ref: h,
                 className: a()({ [d.fT]: void 0 === E, [d.rb]: s, [d.w9]: A, [c.fontScaling]: f }, p, c[n], l),
                 ...I,
-                style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
+                style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
                 "data-text-variant": n,
             });
         },

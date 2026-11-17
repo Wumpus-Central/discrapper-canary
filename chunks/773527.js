@@ -4,13 +4,13 @@ n.d(t, {
     Qv: () => C,
     Jy: () => S,
     Rd: () => R,
-    z9: () => g,
+    z9: () => T,
     oB: () => m,
     n2: () => N,
     Tn: () => L,
     iB: () => h,
     YY: () => I,
-    sD: () => T,
+    sD: () => g,
     Aq: () => f,
     VX: () => p,
 });
@@ -50,11 +50,11 @@ function p(e) {
 function m(e) {
     return null != e && _.xG.has(e);
 }
-function T(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
     return I(e, null, t);
 }
-function g(e) {
+function T(e) {
     return e === o.aS.HEXAGON;
 }
 function S(e) {

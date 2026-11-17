@@ -16,8 +16,8 @@ var i = n(435558),
     I = n(824744),
     p = n(811091),
     m = n(125831),
-    T = n(980504),
-    g = n(652215),
+    g = n(980504),
+    T = n(652215),
     S = n(355097);
 let N = new Map(),
     C = new Map(),
@@ -60,7 +60,7 @@ let V = r().debounce((e) => {
         u.dG.updateSetting({ volume: e });
     }, 1e3),
     H = r().debounce((e, t) => {
-        f.default.track(g.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
+        f.default.track(T.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
             volume: Math.round((0, I.M)(e)),
             location_stack: t,
             voice_guild_id: E.A.getGuildId() ?? null,
@@ -135,10 +135,10 @@ class Y extends o.Ay.Store {
         return C.get(e);
     }
     getTopSoundboardSoundIds(e) {
-        if (null == e) return T.xL;
+        if (null == e) return g.xL;
         let t = C.get(e),
             n = m.A.getTopSoundboardSoundIdsByGuildId(e);
-        return t?.soundIds ?? n ?? T.xL;
+        return t?.soundIds ?? n ?? g.xL;
     }
     hasPendingUsage() {
         return x.length > 0;

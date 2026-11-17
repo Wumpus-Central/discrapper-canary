@@ -1,4 +1,4 @@
-n.d(t, { ap: () => p, yx: () => f, Cv: () => A, _Z: () => I, uK: () => h, PU: () => T, So: () => E });
+n.d(t, { ap: () => p, yx: () => f, Cv: () => A, _Z: () => I, uK: () => h, PU: () => g, So: () => E });
 var i = n(832081),
     r = n(855986),
     a = n(620632);
@@ -129,7 +129,7 @@ async function p(e) {
     }
 }
 let m = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-function T() {
+function g() {
     return (0, r.bG)([o.default], () => {
         var e;
         return m[(e = o.default.locale)] ?? e;

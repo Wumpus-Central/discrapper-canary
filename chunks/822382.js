@@ -18,8 +18,8 @@ var a = n(73153),
     p = n(224467);
 n(768570);
 var m = n(652215),
-    T = n(792996);
-function g(e) {
+    g = n(792996);
+function T(e) {
     switch (e.type) {
         case m.I4_.GUILD:
             return e.guildId;
@@ -90,7 +90,7 @@ n.d(
         },
         Jl: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.Ay;
-            return e.type === m.I4_.DMS ? (t.getChannelId(m.ME) ?? null) : g(e);
+            return e.type === m.I4_.DMS ? (t.getChannelId(m.ME) ?? null) : T(e);
         },
         L5: function (e, t) {
             if (c.A.didAgree(t)) {
@@ -142,13 +142,13 @@ n.d(
         Y7: function (e) {
             switch (e.type) {
                 case m.I4_.CHANNEL:
-                    return T.intl.string(T.t.Q0JJjv);
+                    return g.intl.string(g.t.Q0JJjv);
                 case m.I4_.DMS:
-                    return T.intl.string(T.t.Br0xJA);
+                    return g.intl.string(g.t.Br0xJA);
                 case m.I4_.GUILD_CHANNEL:
                 case m.I4_.GUILD:
                 case m.I4_.THREAD:
-                    return T.intl.string(T.t.AXPbZr);
+                    return g.intl.string(g.t.AXPbZr);
             }
         },
         Zf: function (e) {
@@ -224,7 +224,7 @@ n.d(
         av: function (e) {
             return null != e ? S[e] : null;
         },
-        bS: g,
+        bS: T,
         dX: function (e) {
             return e?.contents != null && e.contents.length > 0
                 ? e?.contents?.map((e) => e.split("|").slice(1).join("|")).join(" ")
@@ -260,27 +260,27 @@ n.d(
         sh: function (e) {
             switch (e) {
                 case m.LWr.FILTER_FROM:
-                    return T.intl.string(T.t.E466pL);
+                    return g.intl.string(g.t.E466pL);
                 case m.LWr.FILTER_MENTIONS:
-                    return T.intl.string(T.t.BYvFWl);
+                    return g.intl.string(g.t.BYvFWl);
                 case m.LWr.FILTER_HAS:
-                    return T.intl.string(T.t.bhSYbc);
+                    return g.intl.string(g.t.bhSYbc);
                 case m.LWr.FILTER_BEFORE:
                 case m.LWr.FILTER_ON:
                 case m.LWr.FILTER_AFTER:
-                    return T.intl.string(T.t.Zbbc1E);
+                    return g.intl.string(g.t.Zbbc1E);
                 case m.LWr.FILTER_IN:
-                    return T.intl.string(T.t["GpM+/7"]);
+                    return g.intl.string(g.t["GpM+/7"]);
                 case m.LWr.FILTER_LINK_FROM:
-                    return T.intl.string(T.t.FdDTni);
+                    return g.intl.string(g.t.FdDTni);
                 case m.LWr.FILTER_FILE_TYPE:
-                    return T.intl.string(T.t.FXcAFe);
+                    return g.intl.string(g.t.FXcAFe);
                 case m.LWr.FILTER_FILE_NAME:
-                    return T.intl.string(T.t.uAbFDM);
+                    return g.intl.string(g.t.uAbFDM);
                 case m.LWr.FILTER_PINNED:
-                    return T.intl.string(T.t.UJxL3V);
+                    return g.intl.string(g.t.UJxL3V);
                 case m.LWr.FILTER_AUTHOR_TYPE:
-                    return T.intl.string(T.t.qCQzBl);
+                    return g.intl.string(g.t.qCQzBl);
             }
         },
         zZ: function (e, t, n) {

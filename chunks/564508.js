@@ -16,8 +16,8 @@ var i = n(607399),
     I = n(729160),
     p = n(734057),
     m = n(366430),
-    T = n(707592),
-    g = n(698441),
+    g = n(707592),
+    T = n(698441),
     S = n(268313),
     N = n(21599),
     C = n(376943),
@@ -353,7 +353,7 @@ function $(e) {
                         }
                     }
                     if (null == e || "" === e) return void i();
-                    let r = g.Ay.getGuildScheduledEvent(t);
+                    let r = T.Ay.getGuildScheduledEvent(t);
                     if (null == r)
                         try {
                             let { default: i } = await Promise.resolve().then(n.bind(n, 496092));
@@ -371,7 +371,7 @@ function $(e) {
                             e.body?.code === W.t02.UNKNOWN_GUILD && i();
                             return;
                         }
-                    (F.A.getGuildId() !== e && (0, O.A)(W.BVt.CHANNEL(e)), (0, T.uR)({ eventId: r.id }));
+                    (F.A.getGuildId() !== e && (0, O.A)(W.BVt.CHANNEL(e)), (0, g.uR)({ eventId: r.id }));
                 })(t, i),
                 !0
             );

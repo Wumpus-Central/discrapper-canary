@@ -65,17 +65,17 @@ let I = { source: a.NO_CLASSIFICATION, status: s.Y.EVERYONE },
 function m(e) {
     return (function (e) {
         var t, n, i, r, E;
-        let A, f, h, m, g, S, N;
+        let A, f, h, m, T, S, N;
         if (null == e) return I;
         let C = [],
             { type: O, data: R } = e;
         return (
             "minimal" === O
-                ? null != R.discord_classifications && C.push(T(a.DISCORD_CLASSIFICATION, R.discord_classifications))
+                ? null != R.discord_classifications && C.push(g(a.DISCORD_CLASSIFICATION, R.discord_classifications))
                 : null != R.manual_classifications
-                  ? C.push(T(a.MANUAL_CLASSIFICATION, R.manual_classifications))
+                  ? C.push(g(a.MANUAL_CLASSIFICATION, R.manual_classifications))
                   : null != R.automated_classifications &&
-                    C.push(T(a.AUTOMATED_CLASSIFICATION, R.automated_classifications)),
+                    C.push(g(a.AUTOMATED_CLASSIFICATION, R.automated_classifications)),
             null != R.agency_ratings &&
                 (null != R.agency_ratings.esrb &&
                     C.push(
@@ -105,8 +105,8 @@ function m(e) {
                 null != R.agency_ratings.apple &&
                     C.push(
                         ((r = R.agency_ratings.apple),
-                        (g = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: g }),
+                        (T = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: T }),
                     ),
                 null != R.agency_ratings.roblox &&
                     C.push(
@@ -140,7 +140,7 @@ function m(e) {
         );
     })(e).status;
 }
-function T(e, t) {
+function g(e, t) {
     let n = E.iu(t);
     return E.zy(n, A.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
         ? { source: e, status: s.Y.ADULT }

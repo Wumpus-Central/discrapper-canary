@@ -1,4 +1,4 @@
-(n.d(t, { $: () => T }), n(321073));
+(n.d(t, { $: () => g }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -16,9 +16,9 @@ var h = n(354730),
     I = n(584648),
     p = n(751591),
     m = n(6095);
-function T(e, t, n, a) {
+function g(e, t, n, a) {
     let l = new Map(),
-        T =
+        g =
             "u" < typeof document
                 ? c.F
                 : new a((e) => {
@@ -28,7 +28,7 @@ function T(e, t, n, a) {
                       });
                   });
     return function (a) {
-        let g,
+        let T,
             S,
             {
                 className: N,
@@ -97,8 +97,8 @@ function T(e, t, n, a) {
                     p = (0, r.useRef)(f),
                     [m] = (0, r.useState)(() => new _.A()),
                     {
-                        dirty: T,
-                        chunkStart: g,
+                        dirty: g,
+                        chunkStart: T,
                         chunkEnd: S,
                         forceUpdateOnChunkChange: N,
                     } = (0, A.A)({ chunkSize: o, getScrollerState: u, forceUpdate: I }),
@@ -115,12 +115,12 @@ function T(e, t, n, a) {
                     }
                 }
                 let L = (0, r.useMemo)(() => {
-                        let e = Math.max(0, g * o);
+                        let e = Math.max(0, T * o);
                         return null != s && e < s;
-                    }, [o, g, s]),
+                    }, [o, T, s]),
                     y = (0, r.useMemo)(
                         () =>
-                            T > 0
+                            g > 0
                                 ? p.current
                                 : (m.mergeProps({
                                       sectionHeight: n,
@@ -132,8 +132,8 @@ function T(e, t, n, a) {
                                       sections: t,
                                       getAnchorId: h,
                                   }),
-                                  m.compute(Math.max(0, g * o), S * o)),
-                        [T, g, S, n, i, a, l, c, d, t, m, o, h],
+                                  m.compute(Math.max(0, T * o), S * o)),
+                        [g, T, S, n, i, a, l, c, d, t, m, o, h],
                     );
                 return (
                     (0, r.useLayoutEffect)(() => {
@@ -156,26 +156,26 @@ function T(e, t, n, a) {
             }),
             ep = (0, h.A)(eo),
             em = r.useRef(O),
-            eT = r.useRef(R);
+            eg = r.useRef(R);
         r.useLayoutEffect(() => {
-            ((em.current = O), (eT.current = R));
+            ((em.current = O), (eg.current = R));
         });
-        let eg = r.useCallback(
+        let eT = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                     (e > ed.current.dirty && (ed.current.dirty = e), 2 === e && em.current?.(), eh(e));
                 },
                 [eh, ed],
             ),
-            eS = r.useCallback(() => eg(), [eg]);
-        ((0, c.A)({ ref: eo, onUpdate: eS, key: "container", resizeObserver: T, listenerMap: l }),
-            (0, c.A)({ ref: ea, onUpdate: () => eT.current?.(), key: "content", resizeObserver: T, listenerMap: l }));
+            eS = r.useCallback(() => eT(), [eT]);
+        ((0, c.A)({ ref: eo, onUpdate: eS, key: "container", resizeObserver: g, listenerMap: l }),
+            (0, c.A)({ ref: ea, onUpdate: () => eg.current?.(), key: "content", resizeObserver: g, listenerMap: l }));
         let eN =
-                ((g = r.useRef(eE)),
+                ((T = r.useRef(eE)),
                 r.useEffect(() => {
-                    g.current = eE;
+                    T.current = eE;
                 }, [eE]),
-                r.useCallback(() => g.current, [])),
+                r.useCallback(() => T.current, [])),
             eC =
                 ((S = r.useRef(L)),
                 r.useEffect(() => {
@@ -226,14 +226,14 @@ function T(e, t, n, a) {
         );
         let eO = r.useCallback(
             (e) => {
-                (eg(1),
+                (eT(1),
                     null == er.current ? el(!0) : clearTimeout(er.current),
                     (er.current = setTimeout(() => {
                         ((er.current = null), el(!1));
                     }, 200)),
                     null != C && C(e));
             },
-            [C, eg],
+            [C, eT],
         );
         return (
             r.useLayoutEffect(() => {

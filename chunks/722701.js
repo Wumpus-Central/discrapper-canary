@@ -74,8 +74,8 @@ let h = [],
                     newUiUnpublished: p = !1,
                     safetyHold: m = !1,
                 } = e,
-                T = !f && d.delete(n),
-                g = !f && c.delete(n),
+                g = !f && d.delete(n),
+                T = !f && c.delete(n),
                 S = l.get(n),
                 N = (f || (null != S && S.publishedRevision !== _)) && u.delete(n),
                 C =
@@ -88,8 +88,8 @@ let h = [],
                         ? (S?.patchNotesSent ?? A)
                         : I;
             if (
-                !T &&
                 !g &&
+                !T &&
                 !N &&
                 S?.publishState === i &&
                 S.surface === a &&

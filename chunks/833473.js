@@ -15,8 +15,8 @@ let h = {},
     I = {},
     p = r().cloneDeep(A.X),
     m = f.D1.UNKNOWN,
-    T = new Set(),
-    g = !1;
+    g = new Set(),
+    T = !1;
 function S() {
     let e = l.w.get("MediaEngineStore"),
         t = e?.[f.x.DEFAULT];
@@ -26,7 +26,7 @@ function N() {
     return c.A.getConfig({ location: "SpatialAudioStore" });
 }
 function C() {
-    return h.enabled ?? g;
+    return h.enabled ?? T;
 }
 function O(e) {
     return u.Ay.getMediaEngine().getSpatialAudioVersion() >= 1 ? e : "";
@@ -60,7 +60,7 @@ function y() {
 }
 function D() {
     let e = C();
-    return ((g = N().defaultOn), y() || C() !== e);
+    return ((T = N().defaultOn), y() || C() !== e);
 }
 function b(e) {
     return e !== m && ((m = e), L(), !0);
@@ -78,8 +78,8 @@ class v extends a.Ay.DeviceSettingsStore {
             t.on(s.bg.SpatialAudioStatus, (e) => {
                 b(e) &&
                     (!(function (e) {
-                        if ((e !== f.D1.INIT_FAILED && e !== f.D1.HRTF_FAILED) || T.has(e)) return;
-                        T.add(e);
+                        if ((e !== f.D1.INIT_FAILED && e !== f.D1.HRTF_FAILED) || g.has(e)) return;
+                        g.add(e);
                         let t = f.D1[e];
                         E.A.captureMessage(`Spatial audio failed: ${t}`, {
                             tags: { spatialAudioStatus: t },
@@ -93,7 +93,7 @@ class v extends a.Ay.DeviceSettingsStore {
                     1) &&
                     this.emitChange();
             }),
-            (g = N().defaultOn),
+            (T = N().defaultOn),
             y(!0));
     }
     getUserAgnosticState() {

@@ -18,9 +18,9 @@ var E = n(407905),
     I = n(792996);
 let p = [a.pJ.HOURS, a.pJ.MINUTES],
     m = new Set([r.Q.DEFAULT, r.Q.CHARACTER_ONLY]),
-    T = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]),
-    g = [128, 256, 512, 768, 1024],
-    S = Math.max(...g);
+    g = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]),
+    T = [128, 256, 512, 768, 1024],
+    S = Math.max(...T);
 n.d(
     t,
     {},
@@ -31,7 +31,7 @@ n.d(
                 version: A.wk.V2026,
                 character: m.has(e) ? (t ?? void 0) : void 0,
                 stats:
-                    T.has(e) && null != n
+                    g.has(e) && null != n
                         ? ((i = n.guilds?.guilds[0]),
                           (r = n.emojis?.emojis[0]),
                           (a = n.games?.games[0]?.game),
@@ -227,7 +227,7 @@ n.d(
         },
         vF: function (e, t) {
             let n,
-                i = ((n = t * (0, d.A)()), g.find((e) => e >= n) ?? S),
+                i = ((n = t * (0, d.A)()), T.find((e) => e >= n) ?? S),
                 r = [];
             return (
                 (0, _.fA)(e.wearable).forEach((t) => {

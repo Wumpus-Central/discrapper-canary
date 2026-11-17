@@ -1,1 +1,1 @@
-e.exports = { Y: "anchor_4z_RMD" };
+o.exports = { Y: "anchor_4z_RMD" };

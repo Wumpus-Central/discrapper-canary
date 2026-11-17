@@ -16,7 +16,7 @@ var i = n(481613),
     I = n(181658),
     p = n(178253),
     m = n(811024);
-function T(e) {
+function g(e) {
     let { channelId: t, applicationId: n, intent: i, inviterUserId: r, analyticsLocations: a, commandOrigin: s } = e;
     h.h.dispatch({
         type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
@@ -28,7 +28,7 @@ function T(e) {
         commandOrigin: s,
     });
 }
-var g = n(612200),
+var T = n(612200),
     S = n(323073),
     N = n(45645),
     C = n(392054),
@@ -148,8 +148,8 @@ function e_(e, t) {
                                       : (j.A.getDefaultChannel(e, !0, er.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
                               })(t, i, r),
                               p = f === er.rbe.GUILD_STAGE_VOICE,
-                              g = r?.targetChannelId != null && I === r.targetChannelId,
-                              S = g ? r?.targetMessageId : void 0,
+                              T = r?.targetChannelId != null && I === r.targetChannelId,
+                              S = T ? r?.targetMessageId : void 0,
                               N = er.BVt.CHANNEL(t, I, S);
                           (I === i.id && (0, B.QE)(f) && r?.autoJoin !== !1
                               ? (0, R.B)(() => {
@@ -177,7 +177,7 @@ function e_(e, t) {
                                                     c === o.y.EMBEDDED_APPLICATION &&
                                                         null != u &&
                                                         ((0, k.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
-                                                        T({
+                                                        g({
                                                             channelId: I,
                                                             applicationId: u,
                                                             intent: r?.intent,
@@ -193,7 +193,7 @@ function e_(e, t) {
                                 c === o.y.EMBEDDED_APPLICATION &&
                                 null != u &&
                                 ((0, k.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
-                                T({
+                                g({
                                     channelId: I,
                                     applicationId: u,
                                     intent: r?.intent,
@@ -217,7 +217,7 @@ function e_(e, t) {
                               })(
                                   i,
                                   r,
-                                  g,
+                                  T,
                               )(N));
                       })({ guildId: r.getGuildId() ?? er.ME, channel: r, options: t, analyticsLocations: i }),
                 !1))
@@ -393,14 +393,14 @@ let eh = {
             let e = (0, U.y$)(o);
             ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
-        let T = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
+        let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
             S = Q.default.getCurrentUser();
         return S?.hasFlag(er.nhx.QUARANTINED)
             ? ((0, G.default)(), new Promise((e, t) => t(Error())))
             : (h.h.dispatch({ type: "INVITE_ACCEPT", code: o }),
               E.Bo.post({
                   url: er.Rsh.INVITE(A),
-                  context: T,
+                  context: g,
                   oldFormErrors: !0,
                   body: { session_id: f, invite_instance_id: c.invite_instance_id, received_installation_id: I },
                   rejectWithError: (0, E.fT)(),
@@ -426,7 +426,7 @@ let eh = {
                   (e) => {
                       throw (
                           e.body?.code === er.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                              (0, g.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
+                              (0, T.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           e.body?.code === er.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED &&
                               (0, N.e)(m?.guild?.id),
                           h.h.dispatch({

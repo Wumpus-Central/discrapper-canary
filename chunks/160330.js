@@ -24,8 +24,8 @@ n.d(
                 p = arguments.length > 3 ? arguments[3] : void 0,
                 m = arguments.length > 4 ? arguments[4] : void 0,
                 {
-                    sourceName: T,
-                    sourceApplicationId: g,
+                    sourceName: g,
+                    sourceApplicationId: T,
                     activity: S,
                     isVoiceOnly: N,
                 } = (function () {
@@ -87,8 +87,8 @@ n.d(
                 createdAt: y,
                 syncTimestamp: b,
                 version: 6,
-                applicationName: T ?? I.intl.string(I.t.qtSJxb),
-                applicationId: g,
+                applicationName: g ?? I.intl.string(I.t.qtSJxb),
+                applicationId: T,
                 activity: S,
                 users: Array.from(R),
                 clipMethod: e,

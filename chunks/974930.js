@@ -16,7 +16,7 @@ let A = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p
     I = [s.p3.SA.weekday, s.p3.SU.weekday],
     p = [s.p3.FR.weekday, s.p3.SA.weekday],
     m = [s.p3.SU.weekday, s.p3.MO.weekday],
-    T = [
+    g = [
         s.p3.SU.weekday,
         s.p3.MO.weekday,
         s.p3.TU.weekday,
@@ -25,12 +25,12 @@ let A = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p
         s.p3.FR.weekday,
         s.p3.SA.weekday,
     ],
-    g = new Set([0, 6]);
+    T = new Set([0, 6]);
 function S(e, t) {
     return (0, o.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
 }
 function N(e) {
-    return new s.Bw(T[e]);
+    return new s.Bw(g[e]);
 }
 function C(e, t) {
     let n;
@@ -156,7 +156,7 @@ n.d(
                     { id: "daily", value: u.z.DAILY, label: E.intl.string(E.t.JX8E1E) },
                 ];
             return (
-                g.has(t.getDay())
+                T.has(t.getDay())
                     ? l.default.getCurrentUser()?.isStaff() &&
                       r.push({ id: "weekendOnly", value: u.z.WEEKEND_ONLY, label: E.intl.string(E.t.hRpynV) })
                     : r.push({ id: "weekdayOnly", value: u.z.WEEKDAY_ONLY, label: E.intl.string(E.t["jYR/MY"]) }),

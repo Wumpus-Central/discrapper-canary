@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(321073), n(775443), n(667532));
+(n.d(t, { A: () => T }), n(321073), n(775443), n(667532));
 var i = n(435558),
     r = n.n(i),
     a = n(56562),
@@ -128,7 +128,7 @@ class m {
         return (t.forEach((e) => delete this._map[e.id]), t);
     }
 }
-class T {
+class g {
     channelId;
     ready = !1;
     cached = !1;
@@ -157,35 +157,35 @@ class T {
     _after = new m(!1);
     _map = {};
     static forEach(e) {
-        r().forEach(T._channelMessages, e);
+        r().forEach(g._channelMessages, e);
     }
     static get(e) {
-        return T._channelMessages[e];
+        return g._channelMessages[e];
     }
     static hasPresent(e) {
-        let t = T.get(e);
+        let t = g.get(e);
         return null != t && t.hasPresent();
     }
     static getOrCreate(e) {
-        let t = T._channelMessages[e];
-        return (null == t && ((t = new T(e)), (T._channelMessages[e] = t)), t);
+        let t = g._channelMessages[e];
+        return (null == t && ((t = new g(e)), (g._channelMessages[e] = t)), t);
     }
     static clear(e) {
-        delete T._channelMessages[e];
+        delete g._channelMessages[e];
     }
     static clearCache(e) {
-        let t = T._channelMessages[e];
+        let t = g._channelMessages[e];
         null != t && (t._before.clear(), t._after.clear(), this.commit(t));
     }
     static commit(e) {
-        T._channelMessages[e.channelId] = e;
+        g._channelMessages[e.channelId] = e;
     }
     constructor(e) {
         this.channelId = e;
     }
     mutate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = new T(this.channelId);
+            n = new g(this.channelId);
         return (
             (n._array = t ? [...this._array] : this._array),
             (n._map = t ? { ...this._map } : this._map),
@@ -683,4 +683,4 @@ class T {
         });
     }
 }
-let g = T;
+let T = g;

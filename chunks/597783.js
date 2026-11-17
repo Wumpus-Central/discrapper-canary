@@ -14,13 +14,13 @@ n.d(
         Z: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
                 m = (0, i.uM)(),
-                g = (0, r.bG)([o.A], () => o.A.getProduct(e)),
-                h = (0, c.o)(),
-                p = a.Ay.canUseShopDiscounts(h),
-                f = l.useRef(null),
-                E = l.useCallback(() => {
-                    let l = null != g ? (0, u.Br)(g, p, !1) : null,
-                        r = null != g ? (0, u.c7)(g, p, !1) : void 0;
+                h = (0, r.bG)([o.A], () => o.A.getProduct(e)),
+                g = (0, c.o)(),
+                p = a.Ay.canUseShopDiscounts(g),
+                E = l.useRef(null),
+                f = l.useCallback(() => {
+                    let l = null != h ? (0, u.Br)(h, p, !1) : null,
+                        r = null != h ? (0, u.c7)(h, p, !1) : void 0;
                     s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                         collectibles_shop_session_id: m?.sessionId,
                         sku_id: e,
@@ -42,25 +42,25 @@ n.d(
                     m?.tilePosition,
                     p,
                     t,
-                    g,
+                    h,
                     e,
                     n,
                 ]),
                 x = l.useCallback(
                     (e) => {
                         e
-                            ? null === f.current &&
-                              (f.current = setTimeout(() => {
-                                  (E(), (f.current = null));
+                            ? null === E.current &&
+                              (E.current = setTimeout(() => {
+                                  (f(), (E.current = null));
                               }, 1e3))
-                            : null !== f.current && (clearTimeout(f.current), (f.current = null));
+                            : null !== E.current && (clearTimeout(E.current), (E.current = null));
                     },
-                    [E],
+                    [f],
                 );
             return (
                 l.useEffect(
                     () => () => {
-                        null !== f.current && (clearTimeout(f.current), (f.current = null));
+                        null !== E.current && (clearTimeout(E.current), (E.current = null));
                     },
                     [e],
                 ),

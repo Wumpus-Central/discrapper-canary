@@ -19,7 +19,7 @@ function h(e, t, r) {
     let { draftsByProject: n } = f.getState();
     f.setState({ draftsByProject: { ...n, [e]: { ...n[e], [t]: r } } });
 }
-function g(e, t, r, n) {
+function x(e, t, r, n) {
     let l = p(e, t);
     return (
         !!l.some((e) => e.localId === r) &&
@@ -31,13 +31,13 @@ function g(e, t, r, n) {
         !0)
     );
 }
-function x(e, t) {
+function g(e, t) {
     (0, s.Vm)(e, t).catch((e) => {
         console.error("[conjure] attachment cleanup failed", e);
     });
 }
 function j(e, t) {
-    (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && x(e, t.ref.id));
+    (null != t.previewUrl && URL.revokeObjectURL(t.previewUrl), null != t.ref && g(e, t.ref.id));
 }
 function b(e, t) {
     let { deleteFromWorker: r } = t,
@@ -108,22 +108,22 @@ function C(e, t) {
                     l?.().then(
                         (n) => {
                             if ("errorText" in n)
-                                return void g(e, t, r.localId, { status: "error", errorText: n.errorText });
+                                return void x(e, t, r.localId, { status: "error", errorText: n.errorText });
                             let { converted: l, ...a } = n;
-                            g(e, t, r.localId, { ...l, status: "ready", ref: a })
+                            x(e, t, r.localId, { ...l, status: "ready", ref: a })
                                 ? setTimeout(
                                       () =>
-                                          g(e, t, r.localId, {
+                                          x(e, t, r.localId, {
                                               status: "error",
                                               errorText: c.intl.string(o.default.E7dS5n),
                                           }),
                                       i.o2 - 3e5,
                                   )
-                                : x(e, a.id);
+                                : g(e, a.id);
                         },
                         (n) => {
                             (console.error("[conjure] attachment upload failed", n),
-                                g(e, t, r.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
+                                x(e, t, r.localId, { status: "error", errorText: c.intl.string(o.default["kUw/b1"]) }));
                         },
                     );
             },

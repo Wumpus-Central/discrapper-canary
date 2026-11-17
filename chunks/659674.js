@@ -16,8 +16,8 @@ let _ = /sketchfab/i,
     I = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
     p = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/,
-    T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/[0-9]+\/?\?(?=.*skuIds=)/,
-    g =
+    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/[0-9]+\/?\?(?=.*skuIds=)/,
+    T =
         /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/,
     S = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/,
     N = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
@@ -68,7 +68,7 @@ n.d(
             return (
                 e.type === c.Auw.ARTICLE &&
                 null != e.url &&
-                (m.test(e.url) || T.test(e.url) || p.test(e.url) || g.test(e.url))
+                (m.test(e.url) || g.test(e.url) || p.test(e.url) || T.test(e.url))
             );
         },
         NV: function (e) {

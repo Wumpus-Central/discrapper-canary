@@ -1,4 +1,4 @@
-r.exports = {
+e.exports = {
     Aw: "listItem_rwEpIL",
     yk: "unavailableBadge_rwEpIL",
     bG: "iconBadge_rwEpIL",

@@ -8,7 +8,7 @@ var l,
     c = n(821609),
     d = n(692651),
     m = 221552 == n.j ? (((l = {}).FILL = "fill"), (l.CAROUSEL = "carousel"), l) : null;
-let g = { fill: d.GS, carousel: d.Dk };
+let h = { fill: d.GS, carousel: d.Dk };
 n.d(
     t,
     {},
@@ -20,35 +20,35 @@ n.d(
                     title: l,
                     ctaText: a,
                     "aria-label": m,
-                    onButtonClick: h,
+                    onButtonClick: g,
                     onBlockClick: p,
-                    badge: f,
-                    innerRef: E,
+                    badge: E,
+                    innerRef: f,
                     listItemProps: x,
                 } = e,
-                v = s.useId(),
-                C = s.useCallback(
+                C = s.useId(),
+                v = s.useCallback(
                     (e) => {
-                        (e.stopPropagation(), h());
+                        (e.stopPropagation(), g());
                     },
-                    [h],
+                    [g],
                 );
             return (0, r.jsxs)(o.D, {
                 ...x,
-                className: i()(d.iC, g[t]),
-                innerRef: E,
+                className: i()(d.iC, h[t]),
+                innerRef: f,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
-                "aria-describedby": null != l ? v : void 0,
+                "aria-describedby": null != l ? C : void 0,
                 onClick: p,
                 children: [
-                    (0, r.jsx)("div", { className: d.LI, children: f }),
+                    (0, r.jsx)("div", { className: d.LI, children: E }),
                     (0, r.jsx)("div", {
                         className: d.P4,
                         children:
                             null != l &&
                             (0, r.jsx)(u.D, {
-                                id: v,
+                                id: C,
                                 lineClamp: 4,
                                 className: l.className,
                                 color: "text-overlay-light",
@@ -62,14 +62,14 @@ n.d(
                         text: a,
                         tabIndex: -1,
                         "aria-hidden": !0,
-                        onClick: C,
+                        onClick: v,
                     }),
                 ],
             });
         },
         R3: (e) => {
             let { layout: t = "fill" } = e;
-            return (0, r.jsx)("div", { className: i()(d.qV, g[t]), children: (0, r.jsx)("div", { className: d.xA }) });
+            return (0, r.jsx)("div", { className: i()(d.qV, h[t]), children: (0, r.jsx)("div", { className: d.xA }) });
         },
         uf: m,
     },

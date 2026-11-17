@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(793574),
     p = n(149468),
     m = n(628983),
-    T = n(94247),
-    g = n(520698),
+    g = n(94247),
+    T = n(520698),
     S = n(525788),
     N = n(384059),
     C = n(47167),
@@ -274,14 +274,14 @@ n.d(
     {
         A: function (e) {
             let { channel: t, width: n } = e,
-                r = (0, d.bG)([T.A], () => T.A.getSpeaker(t.id)),
+                r = (0, d.bG)([g.A], () => g.A.getSpeaker(t.id)),
                 a = (0, d.bG)([m.A], () => m.A.getParticipant(t.id, r), [t.id, r]),
                 s = (0, d.bG)([W.Ay], () => o()(W.Ay.getVideoDevices()).values().first()),
                 l = (0, d.bG)(
                     [$.A],
                     () =>
                         null != a && a.type !== es.lp.ACTIVITY && a.type !== es.lp.HIDDEN_STREAM
-                            ? $.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
+                            ? $.A.getStreamId(a.user.id, t.getGuildId(), (0, T.A)(a.type))
                             : null,
                     [a, t],
                 ),

@@ -1,4 +1,4 @@
-t.exports = {
+W.exports = {
     q3: "indicator_hqoWiU",
     Mp: "animationContainer_hqoWiU",
     bW: "animating_hqoWiU",

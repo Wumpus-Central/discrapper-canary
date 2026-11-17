@@ -19,8 +19,8 @@ function A(e) {
         h = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
         p = r?.colorRoleId,
         m = (0, a.bG)([d.A], () => (null != i && null != p ? d.A.getRole(i, p) : void 0), [i, p]),
-        T = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
-        g = (0, s.A)({ userId: n, guildId: i });
+        g = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        T = (0, s.A)({ userId: n, guildId: i });
     return null == e
         ? null
         : I({
@@ -30,8 +30,8 @@ function A(e) {
               memberColorRole: m,
               userName: f,
               member: r,
-              friendNickname: T,
-              displayNameStyles: g,
+              friendNickname: g,
+              displayNameStyles: T,
           });
 }
 function f(e, t) {

@@ -16,8 +16,8 @@ let A = window.matchMedia("(prefers-reduced-motion: reduce)"),
     I = window.matchMedia("(prefers-color-scheme: dark)"),
     p = window.matchMedia("(prefers-color-scheme: light)"),
     m = window.matchMedia("(forced-colors: active)"),
-    T = 5;
-function g() {
+    g = 5;
+function T() {
     return "windows" === (0, d.R0)();
 }
 n.d(
@@ -47,11 +47,11 @@ n.d(
             },
             maybeShowKeyboardNavigationExplainerModal() {
                 let e;
-                ((T = Math.max(T - 1, 0)),
+                ((g = Math.max(g - 1, 0)),
                     null == (e = l.default.getCurrentUser()) ||
                         Date.now() - e.createdAt < 864e5 ||
                         u.Ay.keyboardNavigationExplainerModalSeen ||
-                        0 !== T ||
+                        0 !== g ||
                         (0, r.mM)(
                             async () => {
                                 let { default: e } = await Promise.all([n.e(65e3), n.e(898186)]).then(
@@ -68,7 +68,7 @@ n.d(
             handleSystemColorPreferencesChanged() {
                 let e = E.Fc.NO_PREFERENCE;
                 I.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
-                let t = (!d.isPlatformEmbedded || g()) && m.matches ? "active" : "none";
+                let t = (!d.isPlatformEmbedded || T()) && m.matches ? "active" : "none";
                 (s.LA(e), c.RI(t));
             },
             handleSystemPrefersContrastChanged() {
@@ -76,6 +76,6 @@ n.d(
                 (f.matches ? (e = "more") : h.matches && (e = "less"), c.Jb(e));
             },
         },
-        D: g,
+        D: T,
     },
 );

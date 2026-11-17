@@ -11,7 +11,7 @@ var n = r(477900),
     m = r(663341),
     p = r(191850),
     h = r(792996);
-let g = [
+let x = [
     {
         id: "add-images-videos",
         label: p.default["51+9lc"],
@@ -37,17 +37,17 @@ r.d(
                     buttonClassName: a,
                     iconClassName: i,
                     onAddFiles: s,
-                    onImport: x,
+                    onImport: g,
                     onSendToOtherProjects: j,
                 } = e,
                 b = l.useRef(null),
                 v = l.useRef(null),
                 C = h.intl.string(h.t.d56gCa),
-                y = l.useCallback((e) => {
+                w = l.useCallback((e) => {
                     let t = b.current;
                     null != t && ((t.accept = e), t.click());
                 }, []),
-                w = l.useCallback(
+                y = l.useCallback(
                     (e) => {
                         (s(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
                     },
@@ -60,7 +60,7 @@ r.d(
                         type: "file",
                         multiple: !0,
                         hidden: !0,
-                        onChange: w,
+                        onChange: y,
                         tabIndex: -1,
                         "aria-hidden": !0,
                     }),
@@ -79,7 +79,7 @@ r.d(
                                 onSelect: r,
                                 children: (0, n.jsxs)(u.rX, {
                                     children: [
-                                        g.map((e) =>
+                                        x.map((e) =>
                                             (0, n.jsx)(
                                                 u.Dr,
                                                 {
@@ -87,18 +87,18 @@ r.d(
                                                     label: h.intl.string(e.label),
                                                     iconLeft: e.icon,
                                                     leadingAccessory: { type: "icon", icon: e.icon },
-                                                    action: () => y(e.accept),
+                                                    action: () => w(e.accept),
                                                 },
                                                 e.id,
                                             ),
                                         ),
-                                        null != x
+                                        null != g
                                             ? (0, n.jsx)(u.Dr, {
                                                   id: "import-project",
                                                   label: h.intl.string(p.default["p/k5i7"]),
                                                   iconLeft: d.BrowserPlusIcon,
                                                   leadingAccessory: { type: "icon", icon: d.BrowserPlusIcon },
-                                                  action: x,
+                                                  action: g,
                                               })
                                             : null,
                                         null != j

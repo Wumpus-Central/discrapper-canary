@@ -92,7 +92,7 @@ n.d(
                         }),
                     [o],
                 ),
-                T = r.useMemo(
+                g = r.useMemo(
                     () =>
                         _.filter((e) => {
                             let { currentBucket: t } = e;
@@ -100,8 +100,8 @@ n.d(
                         }),
                     [_],
                 ),
-                g = r.useMemo(() => h.map(m), [h]),
-                S = r.useMemo(() => T.map(m), [T]),
+                T = r.useMemo(() => h.map(m), [h]),
+                S = r.useMemo(() => g.map(m), [g]),
                 N = (0, i.jsx)(
                     l.aK,
                     {
@@ -117,9 +117,9 @@ n.d(
                     },
                     "experiments-search",
                 );
-            return g.length > 0
+            return T.length > 0
                 ? [
-                      (0, i.jsx)(l.rX, { label: "Overridden Experiments", children: g }, "overridden-group"),
+                      (0, i.jsx)(l.rX, { label: "Overridden Experiments", children: T }, "overridden-group"),
                       (0, i.jsx)(l.bX, {}, "separator-2"),
                       (0, i.jsxs)(
                           l.Dr,

@@ -37,8 +37,8 @@ var h = n(46653),
     I = n(544180),
     p = n(927813),
     m = n(453771),
-    T = n(513391),
-    g = n(292348),
+    g = n(513391),
+    T = n(292348),
     S = n(48325),
     N = n(381941),
     C =
@@ -57,7 +57,7 @@ function L(e) {
     return O(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id;
 }
 let y = [+p.A.Millis.MINUTE, 5 * p.A.Millis.MINUTE];
-class D extends T.A {
+class D extends g.A {
     maxSize;
     requests = new Map();
     analyticsTimeouts = new Map();
@@ -231,16 +231,16 @@ class D extends T.A {
             (p.data.attachments = c.map(
                 (e, t) => (
                     a()(e.status === S.jP.COMPLETED, "Uploads must be staged before trying to send a message"),
-                    (0, g.OW)(e, t)
+                    (0, T.OW)(e, t)
                 ),
             ));
-        let T = new AbortController();
-        (this.requests.set(d, T),
+        let g = new AbortController();
+        (this.requests.set(d, g),
             l.Bo.post(
                 {
                     url: A.Rsh.INTERACTIONS,
                     body: p,
-                    signal: T.signal,
+                    signal: g.signal,
                     rejectWithError: !0,
                     onRequestCreated: (e) => {
                         e.on("progress", (e) => {

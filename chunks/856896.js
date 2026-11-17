@@ -5,8 +5,8 @@ n.d(t, {
     qC: () => O,
     Rl: () => N,
     oq: () => C,
-    xI: () => g,
-    Eg: () => T,
+    xI: () => T,
+    Eg: () => g,
     p7: () => R,
 });
 var i = n(517846),
@@ -98,10 +98,10 @@ async function m(e, t) {
             a.h.dispatch({ type: "CONVERSATION_FETCH_SUCCESS", channelId: e, rawConversation: n.body });
         } catch {}
 }
-function T() {
+function g() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function g(e, t, n) {
+function T(e, t, n) {
     let { cacheType: i, shouldJump: r = !0 } = n;
     if (
         null == t ||

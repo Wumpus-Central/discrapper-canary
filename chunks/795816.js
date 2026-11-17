@@ -28,8 +28,8 @@ var i = n(613412),
     I = n(323073),
     p = n(264322),
     m = n(545152),
-    T = n(361926),
-    g = n(587895),
+    g = n(361926),
+    T = n(587895),
     S = n(972995),
     N = n(878014),
     C = n(568598),
@@ -95,7 +95,7 @@ async function ed(e) {
         ed = k.A.getChannel(t),
         ec = ed?.getGuildId() ?? void 0;
     if (null == ec && !ed?.isPrivate()) return !1;
-    let eu = g.A.getApplication(s),
+    let eu = T.A.getApplication(s),
         e_ = null != eu && (0, P.X)(eu),
         eE = (0, U.m)();
     try {
@@ -164,7 +164,7 @@ async function ed(e) {
                 ((eA = s),
                 (ef = ed),
                 (e = ef?.type === er.rbe.GUILD_VOICE),
-                (n = g.A.getApplication(eA)),
+                (n = T.A.getApplication(eA)),
                 (i = (0, N.W)(n, a.U.MAIN)),
                 (r = (0, Y.AX)(ef)),
                 (!e || !i) && !r)
@@ -184,9 +184,9 @@ async function ed(e) {
                     } = e,
                     c = null;
                 try {
-                    c = await (0, T.Ay)(i, t);
+                    c = await (0, g.Ay)(i, t);
                 } catch (e) {
-                    if (e.message === T.c5) return { result: "failure", reason: 1 };
+                    if (e.message === g.c5) return { result: "failure", reason: 1 };
                     throw e;
                 }
                 let u = c.handler !== h.Ys.APP_HANDLER;
@@ -206,9 +206,9 @@ async function ed(e) {
                 if (null == _) return { result: "failure", reason: 3 };
                 if (u) {
                     let e,
-                        n = g.A.getApplication(t),
+                        n = T.A.getApplication(t),
                         i = K.Ay.getCurrentEmbeddedActivity();
-                    i?.applicationId != null && (e = g.A.getApplication(i?.applicationId));
+                    i?.applicationId != null && (e = T.A.getApplication(i?.applicationId));
                     let r = V.default.getCurrentUser();
                     if (
                         null != r &&
@@ -329,7 +329,7 @@ async function ed(e) {
                 }
                 let E = K.Ay.getCurrentEmbeddedActivity();
                 if (
-                    (E?.applicationId != null && (t = g.A.getApplication(E?.applicationId)),
+                    (E?.applicationId != null && (t = T.A.getApplication(E?.applicationId)),
                     !(
                         !a ||
                         (await (0, X.O)({

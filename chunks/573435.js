@@ -410,10 +410,10 @@ let _ = Object.freeze({
         [d._3.SIZE_96]: "svg-mask-avatar-decoration-call-icon-status-96",
         [d._3.SIZE_120]: "svg-mask-avatar-decoration-call-icon-status-120",
     });
-function T(e, t) {
+function g(e, t) {
     return (e - 0.5) / (t ?? 1.2) + 0.5;
 }
-function g(e) {
+function T(e) {
     let t = (0, d.Kj)(e),
         n = (t.status / 2 + t.offset) / t.size;
     return { corner: n, radius: n + 0.05 };
@@ -421,7 +421,7 @@ function g(e) {
 function S(e, t) {
     let { withBottomRightStatus: n = !1, withTopRightStatus: i = !1 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { corner: a, radius: s } = g(t);
+        { corner: a, radius: s } = T(t);
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -436,8 +436,8 @@ function S(e, t) {
 function N(e, t) {
     let { withBottomRightStatus: n = !1, withTopRightStatus: i = !1 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { corner: a, radius: s } = g(t),
-        l = T(a),
+        { corner: a, radius: s } = T(t),
+        l = g(a),
         o = s / 1.2;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -641,7 +641,7 @@ function x(e, t) {
     let n = (0, d.Kj)(t),
         i = n.status / 2,
         a = (i + n.stroke) / n.size / 1.2,
-        s = T((n.size - i - n.offset) / n.size);
+        s = g((n.size - i - n.offset) / n.size);
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -683,11 +683,11 @@ function k(e, t) {
 function F(e, t) {
     let n = (0, d.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-        a = T((n.size - n.status - n.stroke - n.offset) / n.size),
-        s = T((n.size - n.status - i - n.offset) / n.size),
+        a = g((n.size - n.status - n.stroke - n.offset) / n.size),
+        s = g((n.size - n.status - i - n.offset) / n.size),
         l = (2.5 * n.status + 2 * n.stroke) / n.size / 1.2,
         o = (n.status + 2 * n.stroke) / n.size / 1.2,
-        c = T(o / 2 / n.size);
+        c = g(o / 2 / n.size);
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -725,8 +725,8 @@ function B(e, t) {
 }
 function V(e, t) {
     let n = (0, d.Kj)(t),
-        i = T((n.size - n.status - n.stroke - n.offset) / n.size),
-        a = T((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
+        i = g((n.size - n.status - n.stroke - n.offset) / n.size),
+        a = g((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
         s = (n.status + 2 * n.stroke) / n.size / 1.2,
         l = (1.5 * n.status + 2 * n.stroke) / n.size / 1.2;
     return (0, r.jsxs)("mask", {
@@ -782,8 +782,8 @@ function j(e, t) {
         a = 1.5 * i,
         s = a + 2 * n.stroke,
         l = i + 2 * n.stroke,
-        o = T((n.size - a - n.stroke - n.offset) / n.size),
-        c = T((n.size - i - n.stroke - n.offset) / n.size),
+        o = g((n.size - a - n.stroke - n.offset) / n.size),
+        c = g((n.size - i - n.stroke - n.offset) / n.size),
         u = s / n.size / 1.2,
         _ = l / n.size / 1.2;
     return (0, r.jsxs)("mask", {

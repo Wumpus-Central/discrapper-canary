@@ -7,7 +7,7 @@ n.d(t, {
     uz: () => V,
     yr: () => B,
     ej: () => M,
-    TY: () => g,
+    TY: () => T,
     K3: () => $,
     zO: () => K,
     aJ: () => x,
@@ -53,8 +53,8 @@ var i,
     I = n(620632),
     p = n(927813),
     m = n(403362),
-    T = n(506988);
-let g = {
+    g = n(506988);
+let T = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -159,10 +159,10 @@ let G = "1333839522189938740",
     B = "1496993616537587813",
     V = "1496993616537587812",
     H = new Set([
-        T.p9.DESKTOP_ACCOUNT_PANEL_AREA,
-        T.p9.MOBILE_HOME_DOCK_AREA,
-        T.p9.QUEST_HOME_BANNER_DESKTOP,
-        T.p9.VIDEO_MODAL_MOBILE,
+        g.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+        g.p9.MOBILE_HOME_DOCK_AREA,
+        g.p9.QUEST_HOME_BANNER_DESKTOP,
+        g.p9.VIDEO_MODAL_MOBILE,
     ]),
     j = new Set([E.p.NO_FILL]),
     W = new Set([

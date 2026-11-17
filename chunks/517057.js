@@ -39,8 +39,8 @@ function p() {
     };
 }
 let m = (0, i.h)(p),
-    T = !1;
-function g(e) {
+    g = !1;
+function T(e) {
     return {
         ...e,
         candidates: new Map(e.candidates),
@@ -136,7 +136,7 @@ let R = new o.OC(
         let i = !1;
         ((0, a.r)(() => {
             m.setState((e) => {
-                let t = g(e),
+                let t = T(e),
                     r = (function (e, t) {
                         let n = t.filter((t) => {
                             let { content: n, weight: i } = t;
@@ -214,8 +214,8 @@ function M(e) {
         n = null;
     ((0, a.r)(() => {
         m.setState((i) => {
-            let r = g(i);
-            return T ? r : t ? N(r, e) : (n = L((r.candidates.set(e.content, e), r), e.content)).state;
+            let r = T(i);
+            return g ? r : t ? N(r, e) : (n = L((r.candidates.set(e.content, e), r), e.content)).state;
         });
     }),
         null != n && y(n));
@@ -226,7 +226,7 @@ function U(e, t) {
         r = !1;
     ((0, a.r)(() => {
         m.setState((a) => {
-            let s = g(a);
+            let s = T(a);
             if (((i = s.shownFatigableCandidate?.content === e.content), t)) return (n = L(S(C(s, e), e), null)).state;
             {
                 let t = S(C(s, e), e);
@@ -261,7 +261,7 @@ function F() {
 function B() {
     (0, a.r)(() => {
         m.setState((e) => {
-            let t = g(e);
+            let t = T(e);
             return ((t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t);
         });
     });
@@ -275,7 +275,7 @@ class H extends s.Ay.Store {
         (this.waitFor(E.A, c.A, u.A), this.syncWith([c.A, u.A], () => this.setHasRequiredAction()));
     }
     setHasRequiredAction() {
-        T = (function () {
+        g = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.A,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.A;
             return null != t.getAction() || Object.keys(e.getState()).length > 0;

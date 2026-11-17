@@ -15,8 +15,8 @@ var i = n(477900),
     I = n(559106),
     p = n(107361),
     m = n(573435),
-    T = n(640708),
-    g = n(267102),
+    g = n(640708),
+    T = n(267102),
     S = n(114640);
 function N(e) {
     let {
@@ -35,8 +35,8 @@ function N(e) {
             onContextMenu: I,
             tooltip: p = null,
             tooltipPosition: m = "bottom",
-            tooltipAlign: T,
-            tooltipDisabled: g,
+            tooltipAlign: g,
+            tooltipDisabled: T,
             tooltipSpacing: N,
             role: O,
             "aria-label": R,
@@ -68,8 +68,8 @@ function N(e) {
         (0, i.jsx)(_.m, {
             __unsupportedReactNodeAsText: p,
             position: m,
-            align: T,
-            shouldShow: !g,
+            align: g,
+            shouldShow: !T,
             spacing: N,
             ariaHidden: !0,
             children:
@@ -145,7 +145,7 @@ function R(e) {
             "aria-label": E,
             "aria-labelledby": A,
             role: m,
-            scrollable: T,
+            scrollable: g,
             transparent: N = !1,
             hidden: C = !1,
             disableFocusRingScope: O = !1,
@@ -153,7 +153,7 @@ function R(e) {
         } = e,
         L = r.useRef(null),
         y = r.useContext(p.A),
-        D = (0, g.Us)();
+        D = (0, T.Us)();
     (0, f.g)(h.a[D], L, R && !C && !N);
     let b = (0, i.jsxs)(i.Fragment, {
         children: [
@@ -161,7 +161,7 @@ function R(e) {
                 className: S.cM,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: s()(S.Y_, n, { [S.lE]: T }),
+                        className: s()(S.Y_, n, { [S.lE]: g }),
                         onDoubleClick: _,
                         children: [o.Fr && null != y ? (0, i.jsx)(l._, { onClick: y, className: S.cz }) : null, d],
                     }),
@@ -201,8 +201,8 @@ function R(e) {
                 muted: I = !1,
                 level: p = 1,
                 ref: m,
-                role: T,
-                tabIndex: g,
+                role: g,
+                tabIndex: T,
                 "aria-label": N,
                 "aria-selected": C,
                 "aria-controls": O,
@@ -229,8 +229,8 @@ function R(e) {
                   onFocus: A,
                   onBlur: f,
                   className: s()(n, S.oB),
-                  role: T,
-                  tabIndex: g,
+                  role: g,
+                  tabIndex: T,
                   "aria-label": N,
                   "aria-selected": C,
                   "aria-controls": O,
@@ -246,7 +246,7 @@ function R(e) {
                   onMouseLeave: E,
                   onFocus: A,
                   onBlur: f,
-                  role: T,
+                  role: g,
                   "aria-label": N,
                   "aria-selected": C,
                   "aria-controls": O,
@@ -256,7 +256,7 @@ function R(e) {
     }),
     (R.Divider = function (e) {
         let { className: t } = e;
-        return (0, i.jsx)(T.A, { className: s()(S.Om, t) });
+        return (0, i.jsx)(g.A, { className: s()(S.Om, t) });
     }),
     (R.Caret = function (e) {
         let { direction: t = "right", className: n } = e;

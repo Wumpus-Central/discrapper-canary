@@ -15,8 +15,8 @@ var i = n(435558),
     I = n(734057),
     p = n(696451),
     m = n(317525),
-    T = n(71393),
-    g = n(287809),
+    g = n(71393),
+    T = n(287809),
     S = n(7864),
     N = n(811091),
     C = n(652215),
@@ -91,7 +91,7 @@ function w(e, t, n) {
         i &&
             t.mfaLevel === C.EkJ.ELEVATED &&
             n === h.default.getId() &&
-            !g.default.getCurrentUser()?.mfaEnabled &&
+            !T.default.getCurrentUser()?.mfaEnabled &&
             (e = a.TF(e, C.Lti)),
         e
     );
@@ -152,7 +152,7 @@ function k(e) {
         if (E.Le.has(i.type)) {
             let e = I.A.getChannel(i.parent_id);
             if (null == e || e.isScheduledForDeletion()) return R;
-            let t = o === g.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
+            let t = o === T.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
             return F(
                 i,
                 k({ user: n, context: e, overwrites: r, roles: a, checkElevated: s, excludeGuildPermissions: l }),
@@ -163,10 +163,10 @@ function k(e) {
         ((d = i.computeLurkerPermissionsAllowList() ?? d),
             (r = null != r ? { ...i.permissionOverwrites, ...r } : i.permissionOverwrites));
         let e = i.getGuildId();
-        t = null != e ? T.A.getGuild(e) : null;
+        t = null != e ? g.A.getGuild(e) : null;
     } else ((r = r ?? {}), (t = i));
     if (null == t) return R;
-    if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return w(L, t, o, s);
+    if (!(o === T.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return w(L, t, o, s);
     let u = p.Ay.getMember(t.id, o);
     return x({
         userId: o,
@@ -225,7 +225,7 @@ n.d(
                     return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
-                n = null != e ? T.A.getGuild(e) : null;
+                n = null != e ? g.A.getGuild(e) : null;
             } else n = t;
             if (null == n) return !1;
             let s = m.A.getEveryoneRole(n);
@@ -239,7 +239,7 @@ n.d(
                     return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
-                n = null != e ? T.A.getGuild(e) : null;
+                n = null != e ? g.A.getGuild(e) : null;
             } else n = t;
             if (null == n) return !1;
             let r = m.A.getEveryoneRole(n).permissions,
@@ -282,7 +282,7 @@ n.d(
                 ((d = r.computeLurkerPermissionsAllowList() ?? d),
                     (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
                 let t = r.getGuildId();
-                n = null != t ? T.A.getGuild(t) : null;
+                n = null != t ? g.A.getGuild(t) : null;
             } else ((a = a ?? {}), (n = r));
             return null == n
                 ? R

@@ -16,7 +16,7 @@ var i = n(778858),
     I = n(272355),
     p = n(967198),
     m = n(403362);
-class T extends I.A {
+class g extends I.A {
     _initialize() {
         (h.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
             h.h.subscribe("LOGOUT", this.handleLogout));
@@ -41,7 +41,7 @@ class T extends I.A {
         (this.terminate(), this.handleDisconnectFromStageChannel(null));
     };
 }
-let g = new T();
+let T = new g();
 async function S(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -55,7 +55,7 @@ async function S(e, t) {
             return null == t || (e(t), !1);
         });
     }));
-    return (N(s), g.initialize(), s);
+    return (N(s), T.initialize(), s);
 }
 function N(e) {
     var t;

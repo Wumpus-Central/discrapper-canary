@@ -26,8 +26,8 @@ var f,
     getVoiceEngine: () => m.Ay.getVoiceEngine(),
     getOpenH264LibraryPath: () => m.Ay.getOpenH264LibraryPath(),
 });
-var T = n(284009),
-    g = n.n(T),
+var g = n(284009),
+    T = n.n(g),
     S = n(435558),
     N = n.n(S),
     C = n(481613),
@@ -243,10 +243,10 @@ let eh = (0, Y.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-function eT(e) {
+function eg(e) {
     return em.getConfig({ location: e });
 }
-let eg = (0, Y.mj)({
+let eT = (0, Y.mj)({
         name: "2026-01-wmf-gpu-encode-intel",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -416,8 +416,8 @@ let te = {},
     tI = !1,
     tp = e$.qe,
     tm = e$.qe,
-    tT = !1,
     tg = !1,
+    tT = !1,
     tS = new v.Ep(),
     tN = !1,
     tC = !1,
@@ -535,7 +535,7 @@ function t8() {
     ) {
         let t = t3().videoDeviceId;
         (tI && t === e$.dx && tm === e$.dx && tp !== e$.qe ? (t = tp) : (tm = t),
-            (tp = (tI = e) ? nT(tu, t) : e$.qe),
+            (tp = (tI = e) ? ng(tu, t) : e$.qe),
             e4.setVideoInputDevice(tp));
     }
     if (((a = t), null != t)) {
@@ -838,11 +838,11 @@ function nm(e, t) {
         .keyBy("id")
         .value();
 }
-function nT(e, t) {
+function ng(e, t) {
     let n = e[t] ?? e[e$.dx] ?? N()(e).values().first();
     return null != n ? n.id : t;
 }
-async function ng(e) {
+async function nT(e) {
     if (!(0, p.uF)() || !X.getConfig({ location: "MediaEngineStore.setInputDevice" }).probeAudioEffects) return;
     let t = td[e];
     if (t?.guid != null)
@@ -879,7 +879,7 @@ function nS(e) {
 }
 function nN(e) {
     (e4.setAudioInputDevice(e),
-        ng(e),
+        nT(e),
         (function (e) {
             if (!(0, p.uF)() && !(0, p.cX)() && !(0, p.j9)()) return;
             let t = nS(td[e]);
@@ -960,7 +960,7 @@ function nD(e) {
     let t = t3(),
         n = e4.getAudioSubsystem(),
         r = e4.getAudioLayer(),
-        a = nT(td, t.inputDeviceId),
+        a = ng(td, t.inputDeviceId),
         s = td[a]?.name,
         l = (0, eR.A)(t.noiseCancellation, i.getSystemMicrophoneMode());
     eL.default.track(ey.HAw.VOICE_PROCESSING, {
@@ -1099,13 +1099,13 @@ class nw extends y.Ay.Store {
                 }
                 for (let i of ((0, p.uF)() &&
                     tY?.startsWith("AMD") &&
-                    eT("MediaEngineStore").enabled &&
+                    eg("MediaEngineStore").enabled &&
                     e.setExperimentFlag(e$.fd.WMF_GPU_ENCODE, !0),
                 (0, p.uF)() &&
                     tY?.startsWith("Intel") &&
                     !0 === tK &&
                     1 === t$ &&
-                    eg.getConfig({ location: "MediaEngineStore" }).enabled &&
+                    eT.getConfig({ location: "MediaEngineStore" }).enabled &&
                     (e.setExperimentFlag(e$.fd.WMF_GPU_ENCODE, !0), e.setExperimentFlag(e$.fd.INTEL_GPU_DISABLE, !0)),
                 (0, p.uF)() &&
                     tY?.startsWith("Intel") &&
@@ -1115,7 +1115,7 @@ class nw extends y.Ay.Store {
                     e.setExperimentFlag(e$.fd.INTEL_GPU_DISABLE, !0),
                 (0, p.uF)() &&
                     tY?.startsWith("Qualcomm") &&
-                    eT("MediaEngineStore").enabled &&
+                    eg("MediaEngineStore").enabled &&
                     e.setExperimentFlag(e$.fd.WMF_GPU_ENCODE, !0),
                 e4.setHasFullbandPerformance(null === (t = (0, k.A)()) || t >= 31),
                 e.setRemoteAudioHistory(1e3),
@@ -1134,13 +1134,13 @@ class nw extends y.Ay.Store {
                     P.h.dispatch({ type: "SPEAKING", context: e.context, userId: t, speakingFlags: n, voiceDb: r });
                 }),
                     e.context === e$.x.DEFAULT &&
-                        ((tg = !1),
+                        ((tT = !1),
                         e.on(D.yq.SpeakingWhileMuted, () => {
-                            let e = !tg;
-                            ((tg = !0),
+                            let e = !tT;
+                            ((tT = !0),
                                 e && i.emitChange(),
                                 tS.start(e0, () => {
-                                    ((tg = !1), i.emitChange());
+                                    ((tT = !1), i.emitChange());
                                 }));
                         })),
                     e.on(D.yq.DesktopSourceEnd, (t, n) => {
@@ -1551,10 +1551,10 @@ class nw extends y.Ay.Store {
         );
     }
     shouldSkipMuteUnmuteSound() {
-        return tT;
+        return tg;
     }
     notifyMuteUnmuteSoundWasSkipped() {
-        tT = !1;
+        tg = !1;
     }
     isHardwareMute() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e$.x.DEFAULT;
@@ -1667,13 +1667,13 @@ class nw extends y.Ay.Store {
         );
     }
     getInputDeviceId() {
-        return nT(td, t3().inputDeviceId);
+        return ng(td, t3().inputDeviceId);
     }
     getOutputDeviceId() {
-        return nT(tc, t3().outputDeviceId);
+        return ng(tc, t3().outputDeviceId);
     }
     getVideoDeviceId() {
-        return nT(tu, t3().videoDeviceId);
+        return ng(tu, t3().videoDeviceId);
     }
     getInputDevices() {
         return td;
@@ -1858,7 +1858,7 @@ class nw extends y.Ay.Store {
         return tQ;
     }
     getSpeakingWhileMuted() {
-        return tg;
+        return tT;
     }
     getKrispModelOverride() {
         return E;
@@ -1980,7 +1980,7 @@ let nx = (i = new nw(P.h, {
                 en.getConfig({ location: "handleConnectionOpen" }).enabled &&
                 e4.updateFieldTrial("WebRTC-Audio-iOS-Holding", "Enabled"),
             (0, p.un)() && (e4.setNcModels?.(eo), i.emitChange()),
-            ng(t.inputDeviceId),
+            nT(t.inputDeviceId),
             (0, p.uF)())
         ) {
             let { windowsOutputBufferDurationMs: e } = (function (e) {
@@ -2022,7 +2022,7 @@ let nx = (i = new nw(P.h, {
                         let e = e$.x.DEFAULT,
                             { disabledLocalVideos: t } = t3(e);
                         (tV.forEach((n) => {
-                            (g()(t[n], "If you are auto-disabled, then you are also disabled."),
+                            (T()(t[n], "If you are auto-disabled, then you are also disabled."),
                                 delete t[n],
                                 e4.eachConnection((e) => e.setLocalVideoDisabled(n, !1), e));
                         }),
@@ -2040,11 +2040,11 @@ let nx = (i = new nw(P.h, {
         let { context: t, playSoundEffect: n } = e,
             { mute: i, deaf: r } = t3(t);
         if (t === e$.x.DEFAULT && (eC.A.requestPermission(eW.iL.AUDIO), tf)) return !1;
-        ((i = !r && !i) || (r = !1), n || (tT = !0), nu({ mute: i, deaf: r }, t), e4.eachConnection(t7));
+        ((i = !r && !i) || (r = !1), n || (tg = !0), nu({ mute: i, deaf: r }, t), e4.eachConnection(t7));
     },
     AUDIO_SET_SELF_MUTE: function (e) {
         let { context: t, mute: n, playSoundEffect: i } = e;
-        (nu({ mute: n }, t), i || (tT = !0), e4.eachConnection(t7));
+        (nu({ mute: n }, t), i || (tg = !0), e4.eachConnection(t7));
     },
     AUDIO_TOGGLE_SELF_DEAF: function (e) {
         let { context: t } = e;
@@ -2060,14 +2060,14 @@ let nx = (i = new nw(P.h, {
     },
     AUDIO_SET_LOCAL_VIDEO_DISABLED: function (e) {
         let { context: t, userId: n, videoToggleState: i, persist: r, isAutomatic: a } = e;
-        g()(!(r && a), "These are not allowed to both be true.");
+        T()(!(r && a), "These are not allowed to both be true.");
         let s = i === ey.bb8.DISABLED,
             { disabledLocalVideos: l } = t3(t),
             o = l[n] ?? !1,
             d = tV.has(n),
             c = i === ey.bb8.AUTO_ENABLED || i === ey.bb8.MANUAL_ENABLED;
         (ez.info(`disableVideo=${s} currentlyDisabled=${o} currentlyAutoDisabled=${d}, isVideoShown=${c}`),
-            g()(!(d && !o), "If you are auto-disabled, then you are also disabled."));
+            T()(!(d && !o), "If you are auto-disabled, then you are also disabled."));
         let u = s !== o,
             _ = t === e$.x.DEFAULT,
             E = a && u && _,
@@ -2131,7 +2131,7 @@ let nx = (i = new nw(P.h, {
     },
     AUDIO_SET_INPUT_DEVICE: function (e) {
         let { id: t } = e;
-        ((t = nT(td, t)),
+        ((t = ng(td, t)),
             (tl = performance.now()),
             nu({ inputDeviceId: t }),
             nN(t),
@@ -2144,7 +2144,7 @@ let nx = (i = new nw(P.h, {
     },
     AUDIO_SET_OUTPUT_DEVICE: function (e) {
         let { id: t } = e;
-        (nu({ outputDeviceId: (t = nT(tc, t)) }), e4.setAudioOutputDevice(t), e4.eachConnection(ns));
+        (nu({ outputDeviceId: (t = ng(tc, t)) }), e4.setAudioOutputDevice(t), e4.eachConnection(ns));
     },
     AUDIO_SET_ACTIVE_INPUT_PROFILE: function (e) {
         let { inputProfile: t } = e;
@@ -2230,7 +2230,7 @@ let nx = (i = new nw(P.h, {
             !N().isEqual(td, t))
         ) {
             let e = t3();
-            (nN(nT(td, e.inputDeviceId)), e4.eachConnection(ns));
+            (nN(ng(td, e.inputDeviceId)), e4.eachConnection(ns));
         }
         !(function (e) {
             let t = tc;
@@ -2239,7 +2239,7 @@ let nx = (i = new nw(P.h, {
                 !N().isEqual(tc, t))
             ) {
                 let e = t3(),
-                    n = nT(tc, e.outputDeviceId);
+                    n = ng(tc, e.outputDeviceId);
                 (e4.setAudioOutputDevice(n), e4.eachConnection(ns));
                 let i = nC(t),
                     r = nC(tc);
@@ -2279,7 +2279,7 @@ let nx = (i = new nw(P.h, {
     },
     AUDIO_INPUT_DEVICE_HARDWARE_MUTED_CHANGED: function (e) {
         let { deviceGuid: t, hardwareMuted: n } = e,
-            i = nT(td, t3().inputDeviceId),
+            i = ng(td, t3().inputDeviceId),
             r = td[i];
         if (t !== nS(r)) return !1;
         ((c = n), eL.default.track(ey.HAw.HARDWARE_MUTE_DETECTED, { input_device_name: r?.name, hardware_muted: n }));
@@ -2338,7 +2338,7 @@ let nx = (i = new nw(P.h, {
     },
     MEDIA_ENGINE_SET_VIDEO_DEVICE: function (e) {
         let { id: t } = e;
-        (nu({ videoDeviceId: (t = nT(tu, t)) }), t8());
+        (nu({ videoDeviceId: (t = ng(tu, t)) }), t8());
     },
     MEDIA_ENGINE_INTERACTION_REQUIRED: function (e) {
         return ti !== e.required && ((ti = e.required), e.required || e4.interact(), !0);

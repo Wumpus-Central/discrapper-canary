@@ -16,8 +16,8 @@ var i = n(574381),
     I = n(988468),
     p = n(741394),
     m = n(734066),
-    T = n(205693),
-    g = n(439372),
+    g = n(205693),
+    T = n(439372),
     S = n(967347),
     N = n(253932),
     C = n(617617),
@@ -53,7 +53,7 @@ var B = n(572164),
 function W() {
     return I.Ay.getMediaEngine().supports(j.O5.UNIFIED_CAPTURE_BROKER);
 }
-class Y extends g.A {
+class Y extends T.A {
     classifyHardwarePromise = null;
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
@@ -82,10 +82,10 @@ class Y extends g.A {
         if (!(0, m.Pm)() || n !== V.S7L.RTC_CONNECTED) return;
         let r = h.default.getId();
         switch (t) {
-            case T.x.DEFAULT:
+            case g.x.DEFAULT:
                 (this.applyUserVoiceRecording(r), this.applyUserSoundboardRecording(r));
                 break;
-            case T.x.STREAM: {
+            case g.x.STREAM: {
                 if (null == i) return;
                 let { ownerId: e } = (0, _.Iy)(i);
                 if (e !== r) return;
@@ -97,7 +97,7 @@ class Y extends g.A {
     }
     handleRTCUsersUpdate(e) {
         let { userIds: t, context: n } = e;
-        n === T.x.DEFAULT &&
+        n === g.x.DEFAULT &&
             t.forEach((e) => {
                 (this.applyUserVoiceRecording(e), this.applyUserSoundboardRecording(e));
             });
@@ -189,7 +189,7 @@ class Y extends g.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== T.x.STREAM || !(0, m.ri)(I.Ay)) return;
+        if (n !== g.x.STREAM || !(0, m.ri)(I.Ay)) return;
         let a = L.A.getRTCConnection(
             _._z({ streamType: null != r ? H.U4.GUILD : H.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );

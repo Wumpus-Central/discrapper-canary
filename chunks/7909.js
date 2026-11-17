@@ -20,8 +20,8 @@ let p = {
     },
 };
 var m = n(780057),
-    T = n(707539),
-    g = n(736130),
+    g = n(707539),
+    T = n(736130),
     S = n(652215),
     N = n(746080),
     C = n(792996);
@@ -187,7 +187,7 @@ let L = {
             null == t && (0, d.Gf)({ channelId: e.id, command: null, section: null }));
     },
     async setNotificationSettings(e, t) {
-        ((0, T.hs)(e, t), h.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")));
+        ((0, g.hs)(e, t), h.A.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")));
         try {
             return await r.Bo.patch({
                 url: S.Rsh.THREAD_MEMBER_SETTINGS(e.id),
@@ -241,7 +241,7 @@ let L = {
                               threads: r,
                               firstMessages: u,
                               mostRecentMessages: _,
-                              members: (d ?? []).map((e) => (0, g.A)(e)),
+                              members: (d ?? []).map((e) => (0, T.A)(e)),
                               owners: r.map((e) => e.owner).filter(A.Vq),
                               hasMore: c,
                           });
