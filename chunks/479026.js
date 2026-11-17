@@ -1,29 +1,29 @@
-var n = o(582128),
-    e = o(793574),
-    u = o(722258);
-o.d(
-    i,
+var r = n(582128),
+    i = n(793574),
+    o = n(722258);
+n.d(
+    e,
     {},
     {
         e: function (t) {
             let {
-                sku: i,
-                analyticsLocations: o,
-                analyticsSource: r = e.A.USER_PROFILE_WISHLIST,
-                giftRecipient: c,
-                giftingOrigin: s,
+                sku: e,
+                analyticsLocations: n,
+                analyticsSource: u = i.A.USER_PROFILE_WISHLIST,
+                giftRecipient: a,
+                giftingOrigin: c,
             } = t;
-            return n.useCallback(() => {
-                (0, u.B)({
-                    skuId: i.id,
-                    analyticsLocations: o ?? [],
-                    analyticsSource: r,
+            return r.useCallback(() => {
+                (0, o.B)({
+                    skuId: e.id,
+                    analyticsLocations: n ?? [],
+                    analyticsSource: u,
                     returnRef: void 0,
                     tab: void 0,
-                    giftRecipient: c,
-                    giftingOrigin: s,
+                    giftRecipient: a,
+                    giftingOrigin: c,
                 });
-            }, [o, r, c, s, i.id]);
+            }, [n, u, a, c, e.id]);
         },
     },
 );

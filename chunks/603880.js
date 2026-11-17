@@ -26,13 +26,13 @@ function A(e) {
             locked: p = !1,
             disabled: N = !1,
         } = e,
-        [b, S] = r.useState((0, x.gG)(t).name),
+        [S, b] = r.useState((0, x.gG)(t).name),
         C = t === g.Ic.PIRATE;
     return (0, l.jsx)(c.m, {
-        text: b,
+        text: S,
         onTooltipShow: () =>
             C &&
-            S(
+            b(
                 o().sample([
                     v.intl.string(v.t["EgWTY+"]),
                     v.intl.string(v.t.umBn5f),
@@ -47,7 +47,7 @@ function A(e) {
             children: [
                 (0, l.jsx)(u.D, {
                     role: "radio",
-                    "aria-label": b,
+                    "aria-label": S,
                     "aria-checked": m,
                     "aria-disabled": N,
                     tabIndex: A ?? (m ? 0 : -1),

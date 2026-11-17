@@ -1,7 +1,7 @@
 var a = n(477900);
 n(582128);
-var l = n(503698),
-    r = n.n(l),
+var r = n(503698),
+    l = n.n(r),
     s = n(834730),
     i = n(939249),
     o = n(140735),
@@ -21,7 +21,7 @@ function A(e) {
     let {
             user: t,
             guildId: n,
-            displayName: l,
+            displayName: r,
             size: i = "sm",
             pendingDisplayNameStyles: o,
             shouldUnderlineOnHover: d = !1,
@@ -35,7 +35,7 @@ function A(e) {
               variant: E,
               className: u,
               children: (0, a.jsx)(p.A, {
-                  userName: l,
+                  userName: r,
                   displayNameStyles: m,
                   effectDisplayType: g.G.ANIMATED,
                   textClassName: b.QC,
@@ -46,13 +46,13 @@ function A(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(s.E, { className: r()(b.QC, b.O2, u), variant: E, children: [l, " ", c] });
+        : (0, a.jsxs)(s.E, { className: l()(b.QC, b.O2, u), variant: E, children: [r, " ", c] });
 }
 function _(e) {
     let {
             user: t,
             guildId: n,
-            displayName: l,
+            displayName: r,
             trailing: s,
             size: o = "sm",
             pendingDisplayNameStyles: d,
@@ -63,14 +63,14 @@ function _(e) {
         p = (0, a.jsx)(A, {
             user: t,
             guildId: n,
-            displayName: l,
+            displayName: r,
             size: o,
             pendingDisplayNameStyles: d,
             shouldUnderlineOnHover: null != c,
             displayNameTrailing: g,
         });
     return (0, a.jsxs)("div", {
-        className: r()(b.K$, "lg" === o && b.lg),
+        className: l()(b.K$, "lg" === o && b.lg),
         children: [
             null != c ? (0, a.jsx)(i.D, { onClick: c, className: b.vk, children: p }) : p,
             null != s && !1 !== s && (0, a.jsx)("div", { className: b.MU, children: s }),
@@ -80,7 +80,7 @@ function _(e) {
 function N(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
-        className: r()(b.hI, n),
+        className: l()(b.hI, n),
         variant: "body-sm/normal",
         color: "text-strong",
         children: [
@@ -96,7 +96,7 @@ function v(e) {
     let {
             user: t,
             usernameIcon: n,
-            onClickUsername: l,
+            onClickUsername: r,
             pronouns: s,
             primaryGuild: o,
             contextGuildId: m,
@@ -118,9 +118,9 @@ function v(e) {
                   hideBotTag: !0,
               });
     return (0, a.jsxs)("div", {
-        className: r()(b.AK, { [b.j6]: x, [b.w2]: null != A }),
+        className: l()(b.AK, { [b.j6]: x, [b.w2]: null != A }),
         children: [
-            null != _ && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(b.qp, b.vk), children: _ }) : _,
+            null != _ && null != r ? (0, a.jsx)(i.D, { onClick: r, className: l()(b.qp, b.vk), children: _ }) : _,
             x &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
@@ -154,8 +154,8 @@ n.d(
             let {
                 user: t,
                 guildId: n,
-                className: l,
-                onClickName: r,
+                className: r,
+                onClickName: l,
                 displayName: s,
                 displayNameSize: i,
                 pendingDisplayNameStyles: o,
@@ -169,7 +169,7 @@ n.d(
                 onCreateTag: E,
             } = e;
             return (0, a.jsxs)("div", {
-                className: l,
+                className: r,
                 children: [
                     (0, a.jsx)(_, {
                         user: t,
@@ -177,7 +177,7 @@ n.d(
                         displayName: s,
                         size: i,
                         pendingDisplayNameStyles: o,
-                        onClickDisplayName: r,
+                        onClickDisplayName: l,
                         trailing: d,
                     }),
                     (0, a.jsx)(v, {
@@ -186,7 +186,7 @@ n.d(
                         pronouns: u,
                         primaryGuild: m,
                         contextGuildId: f,
-                        onClickUsername: r,
+                        onClickUsername: l,
                         onClose: p,
                         onCreateTag: E,
                         trailing: g,

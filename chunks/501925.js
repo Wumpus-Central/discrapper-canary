@@ -1,8 +1,8 @@
 n.d(t, { E: () => v, A: () => R });
 var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     i = n(855986),
     o = n(834730),
     d = n(28863),
@@ -43,7 +43,7 @@ function R(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHoverOrFocusOnly: r = !1,
+            animateOnHoverOrFocusOnly: l = !1,
             isHoveringOrFocusing: d = !1,
             lineClamp: c = 6,
             setLineClamp: u = !0,
@@ -53,7 +53,7 @@ function R(e) {
         } = e,
         A = (0, i.bG)([x.A], () => x.A.getGuildId()),
         R = g ?? A,
-        v = l.useMemo(
+        v = r.useMemo(
             () =>
                 (0, E.A)(f)
                     ? (0, a.jsx)(p, {})
@@ -62,8 +62,8 @@ function R(e) {
                       : (0, b.parseBioReact)(t, void 0, { guildId: R }),
             [f, t, R],
         ),
-        j = r && !d,
-        y = l.useMemo(() => ({ disableAnimations: j, disableInteractions: !1 }), [j]);
+        j = l && !d,
+        y = r.useMemo(() => ({ disableAnimations: j, disableInteractions: !1 }), [j]);
     return null == v
         ? null
         : (0, a.jsx)("div", {

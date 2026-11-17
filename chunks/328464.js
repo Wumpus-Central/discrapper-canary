@@ -1,8 +1,8 @@
 n.d(t, { K: () => j, A: () => y });
 var a = n(477900);
 n(582128);
-var l = n(503698),
-    r = n.n(l),
+var r = n(503698),
+    l = n.n(r),
     s = n(536001),
     i = n(402883),
     o = n(331322),
@@ -21,7 +21,7 @@ var l = n(503698),
     _ = n(381134);
 function N(e) {
     let { rarity: t, className: n } = e,
-        l = (function (e) {
+        r = (function (e) {
             switch (e) {
                 case s.x.COMMON:
                     return { Icon: E.ExperimentalCommonIcon, className: _.e8, label: A.intl.string(A.t.L0K5ci) };
@@ -35,12 +35,12 @@ function N(e) {
                     return null;
             }
         })(t);
-    if (null == l) return null;
-    let { Icon: i, className: o, label: d } = l;
+    if (null == r) return null;
+    let { Icon: i, className: o, label: d } = r;
     return (0, a.jsx)("div", {
         role: "img",
         "aria-label": d,
-        className: r()(_.Tc, o, n),
+        className: l()(_.Tc, o, n),
         children: (0, a.jsx)(i, { size: "xxs", color: "currentColor" }),
     });
 }
@@ -51,7 +51,7 @@ function j(e) {
     let {
             children: t,
             title: n,
-            eyebrow: l,
+            eyebrow: r,
             body: E,
             screenReaderBody: h = E,
             variant: b = "default",
@@ -79,7 +79,7 @@ function j(e) {
             children: [
                 B && (0, a.jsx)("div", { className: v.xV, children: (0, a.jsx)(N, { rarity: j }) }),
                 (0, a.jsx)("div", {
-                    className: r()(v.fA, { [v.qJ]: D }),
+                    className: l()(v.fA, { [v.qJ]: D }),
                     "aria-hidden": !0,
                     children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
                         src: x,
@@ -95,17 +95,17 @@ function j(e) {
                     align: "center",
                     className: v.i8,
                     children: [
-                        null != l &&
+                        null != r &&
                             (0, a.jsx)(d.E, {
                                 variant: "body-sm/medium",
                                 color: "text-subtle",
                                 className: v.UP,
-                                children: l,
+                                children: r,
                             }),
                         (0, a.jsx)(c.D, {
                             variant: "display-sm",
                             color: "text-strong",
-                            className: r()(v.DD, { [v.x$]: "nitro" === b }),
+                            className: l()(v.DD, { [v.x$]: "nitro" === b }),
                             children: n,
                         }),
                         null != E &&

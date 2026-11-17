@@ -1,14 +1,14 @@
 var a = n(855986),
-    l = n(836602);
+    r = n(836602);
 n.d(
     t,
     {},
     {
         A: function () {
             return (0, a.cf)(
-                [l.A],
+                [r.A],
                 () => {
-                    let e = l.A.getPendingChanges();
+                    let e = r.A.getPendingChanges();
                     return {
                         pendingBadgeDisplayOrder: e.pendingBadgeDisplayOrder,
                         pendingBadgeHiddenBadges: e.pendingBadgeHiddenBadges,

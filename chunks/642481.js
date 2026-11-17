@@ -1,7 +1,7 @@
 var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     i = n(195118),
     o = n(208756),
     d = n(31188),
@@ -27,7 +27,7 @@ function E(e) {
     let {
             title: t,
             body: n,
-            graphic: r,
+            graphic: l,
             size: u = "md",
             actions: m,
             gradientColor: E,
@@ -42,21 +42,21 @@ function E(e) {
             onNudgeChange: j,
             ...y
         } = e,
-        [I, T] = l.useState(b ?? "top");
-    l.useEffect(() => {
+        [I, T] = r.useState(b ?? "top");
+    r.useEffect(() => {
         null != b && T(b);
     }, [b]);
-    let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
-        S = l.useCallback(() => {
+    let C = r.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
+        S = r.useCallback(() => {
             h?.();
         }, [h]),
-        D = l.useCallback(
+        D = r.useCallback(
             (e) => {
                 h?.(e);
             },
             [h],
         ),
-        O = l.useCallback((e) => {
+        O = r.useCallback((e) => {
             T(e);
         }, []),
         M = N ? g.caretHoverable : void 0,
@@ -85,12 +85,12 @@ function E(e) {
             "data-mana-component": "popover",
             children: [
                 _ && (0, a.jsx)(c.q, { onClick: D, variant: null != E ? "color-mix" : void 0 }),
-                null != r &&
+                null != l &&
                     (0, a.jsx)("div", {
                         className: s()(g.graphic, { [g[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(f.v, {
-                            ...r,
-                            aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
+                            ...l,
+                            aspectRatio: l.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),

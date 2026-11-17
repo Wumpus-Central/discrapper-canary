@@ -10,8 +10,8 @@ var i = n(477900),
     g = n(442433),
     f = n(297413),
     m = n(714114),
-    h = n(342312),
-    p = n(178418),
+    p = n(342312),
+    h = n(178418),
     x = n(87664),
     A = n(449582),
     I = n(88686),
@@ -34,7 +34,7 @@ n.d(
         A: function (e) {
             let { user: t, status: r, guildId: o, channelId: y, onSelect: R } = e,
                 { theme: L, themeType: _ } = (0, E.E)(),
-                w = l.useMemo(() => t.isNonUserBot() || (0, p.c)(t, y), [t, y]),
+                w = l.useMemo(() => t.isNonUserBot() || (0, h.c)(t, y), [t, y]),
                 { activities: M, isMobileOnline: D } = (0, a.cf)([j.A], () => ({
                     activities: j.A.getActivities(t.id),
                     isMobileOnline: j.A.isMobileOnline(t.id),
@@ -120,7 +120,7 @@ n.d(
                                     }),
                                     (0, i.jsx)("div", {
                                         id: K,
-                                        children: (0, i.jsx)(h.A, {
+                                        children: (0, i.jsx)(p.A, {
                                             user: t,
                                             activities: M,
                                             applicationStream: G,

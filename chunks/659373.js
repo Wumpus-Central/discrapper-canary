@@ -15,14 +15,14 @@ n.d(
             let { pendingDisplayNameStyles: n } = (0, s.B0)(e),
                 g = (0, r.A)({ userId: e.id, pendingDisplayNameStyles: n, ignoreDisabledStylesSetting: !0 }),
                 f = null != g && (0, d.n2)(g),
-                [m, h] = i.useState(!1),
-                p = i.useRef(!1),
+                [m, p] = i.useState(!1),
+                h = i.useRef(!1),
                 x = i.useRef(!0);
             (0, l.l0)(() => {
                 x.current = !1;
             });
             let A = i.useCallback(() => {
-                if (p.current) return;
+                if (h.current) return;
                 let e = o.default.getCurrentUser()?.displayNameStyles;
                 (0, a.p)({ displayNameStyles: null == e || (0, d.n2)(e) ? null : e });
             }, []);
@@ -30,8 +30,8 @@ n.d(
                 isApplied: f,
                 isEnrolling: m,
                 applyCampaignDisplayNameStyle: i.useCallback(async () => {
-                    if (p.current) return !1;
-                    ((p.current = !0), h(!0));
+                    if (h.current) return !1;
+                    ((h.current = !0), p(!0));
                     let e = !1;
                     try {
                         e = await (0, u.Br)(c.vB.DISPLAY_NAME_STYLE);
@@ -40,7 +40,7 @@ n.d(
                     }
                     return (
                         !!x.current &&
-                        (((p.current = !1), h(!1), e)
+                        (((h.current = !1), p(!1), e)
                             ? ((0, u.WT)(),
                               (0, a.p)({ displayNameStyles: c.AA }),
                               (0, u.VN)(c.vB.DISPLAY_NAME_STYLE),

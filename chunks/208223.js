@@ -1,9 +1,9 @@
 n.d(t, { I: () => i, N: () => s });
 var a = n(682901),
-    l = n(714206);
-let r = {
+    r = n(714206);
+let l = {
     [a.Ac.PREMIUM_TENURE_1_MONTH]: {
-        standard: l,
+        standard: r,
         ambient:
             "https://cdn.discordapp.com/assets/content/a0837200c383ca7b9e9b2e91358f6871ce8c7f3dd5ba98bbbb86305a205ac6ac.png",
         ambientLarge:
@@ -60,8 +60,8 @@ let r = {
     },
 };
 function s(e) {
-    return null != e ? r[e] : null;
+    return null != e ? l[e] : null;
 }
 function i(e) {
-    return r[e];
+    return l[e];
 }

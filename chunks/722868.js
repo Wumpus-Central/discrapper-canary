@@ -13,8 +13,8 @@ n.d(
     {},
     {
         A: function (e) {
-            let { user: t, guildId: n, channelId: f, displayProfile: m, onClose: h } = e,
-                { analyticsLocations: p, sourceAnalyticsLocations: x } = (0, r.Ay)(),
+            let { user: t, guildId: n, channelId: f, displayProfile: m, onClose: p } = e,
+                { analyticsLocations: h, sourceAnalyticsLocations: x } = (0, r.Ay)(),
                 { context: A, trackUserProfileAction: I } = (0, a.NJ)(),
                 v = (0, d.Ay)(t.id, n),
                 j = (0, o.X)("useViewUserProfileModalItem");
@@ -28,7 +28,7 @@ n.d(
                             displayName: s.Ay.getName(void 0, void 0, t),
                         }),
                         action: () => {
-                            (h?.(),
+                            (p?.(),
                                 (0, u.openUserProfileModal)({
                                     userId: t.id,
                                     ...A,
@@ -36,7 +36,7 @@ n.d(
                                     originGuildId: n,
                                     sourceAnalyticsLocations: x,
                                 }),
-                                I({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: p, ...A }));
+                                I({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: h, ...A }));
                         },
                     })
                   : m?.guildId != null
@@ -46,14 +46,14 @@ n.d(
                           label: g.intl.string(g.t.DisZzB),
                           subtext: g.intl.formatToPlainString(g.t["mn/nW2"], { displayName: s.Ay.getName(n, f, t) }),
                           action: () => {
-                              (h?.(),
+                              (p?.(),
                                   (0, u.openUserProfileModal)({
                                       userId: t.id,
                                       ...A,
                                       guildId: n,
                                       sourceAnalyticsLocations: x,
                                   }),
-                                  I({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: p, ...A }));
+                                  I({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: h, ...A }));
                           },
                       });
         },

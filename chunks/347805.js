@@ -15,23 +15,23 @@ n.d(
     {
         A: function (e) {
             let { autoFocus: t = !1, className: n, userId: f, onUpdate: m } = e,
-                h = (0, r.bG)([u.A], () => u.A.hidePersonalInformation),
-                { loading: p, note: x } = (0, o.A)(f),
+                p = (0, r.bG)([u.A], () => u.A.hidePersonalInformation),
+                { loading: h, note: x } = (0, o.A)(f),
                 A = l.useRef(null);
             return (l.useEffect(() => {
-                if (!t || h) return;
+                if (!t || p) return;
                 let e = A.current;
                 e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-            }, [t, h]),
-            h)
+            }, [t, p]),
+            p)
                 ? null
                 : (0, i.jsx)("div", {
                       className: n,
                       children: (0, i.jsx)(s.y, {
                           ref: A,
                           className: g.P,
-                          disabled: p,
-                          placeholder: p ? c.intl.string(c.t["WLKx/9"]) : c.intl.string(c.t.VBhOe2),
+                          disabled: h,
+                          placeholder: h ? c.intl.string(c.t["WLKx/9"]) : c.intl.string(c.t.VBhOe2),
                           "aria-label": c.intl.string(c.t.PbMNh2),
                           onBlur: function (e) {
                               let t = e.currentTarget.value;

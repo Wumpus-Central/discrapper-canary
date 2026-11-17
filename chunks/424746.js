@@ -1,7 +1,7 @@
 n.d(t, { L: () => c, A: () => u });
 var a = n(477900),
-    l = n(582128),
-    r = n(844222),
+    r = n(582128),
+    l = n(844222),
     s = n(775602),
     i = n(350535),
     o = n(642481),
@@ -20,60 +20,60 @@ function c(e) {
             actions: h,
             gradientColor: b,
         } = e,
-        x = l.useContext(r.C),
-        [A, _] = l.useState("closed"),
-        N = l.useRef(null),
-        R = l.useRef(!1),
+        x = r.useContext(l.C),
+        [A, _] = r.useState("closed"),
+        N = r.useRef(null),
+        R = r.useRef(!1),
         v = "opening-mouse" === A || "open-mouse" === A,
         j = "opening-keyboard" === A || "open-keyboard" === A,
         y = "open-mouse" === A || "open-keyboard" === A,
         I = (x.keyboardModeEnabled || j) && null != h,
-        [T, C] = l.useState(0),
+        [T, C] = r.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
                 n = arguments.length > 2 ? arguments[2] : void 0,
-                [a, r] = l.useState("top");
+                [a, l] = r.useState("top");
             return (
-                l.useEffect(() => {
-                    if (null == e.current) return void r("top");
+                r.useEffect(() => {
+                    if (null == e.current) return void l("top");
                     let n = e.current.getBoundingClientRect(),
                         a = window.innerWidth,
-                        l = window.innerHeight,
-                        s = { top: n.top, bottom: l - n.bottom, left: n.left, right: a - n.right },
+                        r = window.innerHeight,
+                        s = { top: n.top, bottom: r - n.bottom, left: n.left, right: a - n.right },
                         i = ["top", "bottom", "right", "left"];
-                    for (let e of i) if (s[e] >= t) return void r(e);
-                    r(i.reduce((e, t) => (s[t] > s[e] ? t : e), "top"));
+                    for (let e of i) if (s[e] >= t) return void l(e);
+                    l(i.reduce((e, t) => (s[t] > s[e] ? t : e), "top"));
                 }, [e, t, n]),
                 a
             );
         })(n, c, A),
-        D = l.useCallback(() => {
+        D = r.useCallback(() => {
             null != N.current && (clearTimeout(N.current), (N.current = null));
         }, []),
-        O = l.useCallback(
+        O = r.useCallback(
             (e) => {
                 (e && (R.current = !0), D(), _("closing"));
             },
             [D],
         );
-    l.useEffect(() => D, [D]);
-    let M = l.useCallback(() => {
+    r.useEffect(() => D, [D]);
+    let M = r.useCallback(() => {
             ("closed" === A || "closing" === A) && (D(), _("opening-mouse"));
         }, [D, A]),
-        P = l.useCallback(() => {
+        P = r.useCallback(() => {
             v && O(!1);
         }, [O, v]),
-        U = l.useCallback(() => {
+        U = r.useCallback(() => {
             if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
                 R.current = !1;
                 return;
             }
             (D(), _("opening-keyboard"));
         }, [D, A]),
-        B = l.useCallback(() => {
+        B = r.useCallback(() => {
             (I && "opening-keyboard" !== A) || O(!1);
         }, [O, A, I]);
-    (l.useEffect(() => {
+    (r.useEffect(() => {
         if ("opening-mouse" === A)
             return (
                 (N.current = window.setTimeout(() => {
@@ -82,7 +82,7 @@ function c(e) {
                 D
             );
     }, [A, u, m, D]),
-        l.useEffect(() => {
+        r.useEffect(() => {
             if ("opening-keyboard" === A)
                 return (
                     (N.current = window.setTimeout(() => {
@@ -91,7 +91,7 @@ function c(e) {
                     D
                 );
         }, [A, u, m, D]),
-        l.useEffect(() => {
+        r.useEffect(() => {
             if ("closing" === A)
                 return (
                     (N.current = window.setTimeout(() => {
@@ -100,7 +100,7 @@ function c(e) {
                     D
                 );
         }, [A, D]),
-        l.useEffect(() => {
+        r.useEffect(() => {
             if (y)
                 return (
                     document.addEventListener("keydown", e, !0),
@@ -112,7 +112,7 @@ function c(e) {
                 e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), O(!0));
             }
         }, [y, O]));
-    let G = l.useMemo(
+    let G = r.useMemo(
             () =>
                 null == h
                     ? h
@@ -124,7 +124,7 @@ function c(e) {
                       })),
             [h, O],
         ),
-        w = l.useCallback((e) => {
+        w = r.useCallback((e) => {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {

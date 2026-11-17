@@ -10,8 +10,8 @@ var i = n(477900),
     g = n(834730),
     f = n(442433),
     m = n(682163),
-    h = n(562153),
-    p = n(939496);
+    p = n(562153),
+    h = n(939496);
 n(518477);
 var x = n(996988),
     A = n(792996),
@@ -23,7 +23,7 @@ n.d(
     {
         A: function (e) {
             let { user: t, guild: j, nick: b, onSelect: y } = e,
-                { theme: C, themeType: E } = (0, p.E)(),
+                { theme: C, themeType: E } = (0, h.E)(),
                 S = t.hasAvatarForGuild(j.id),
                 N = l.useId(),
                 k = A.intl.formatToPlainString(A.t.Ce2iXp, { guildName: j.name });
@@ -660,7 +660,7 @@ n.d(
                                             variant: "body-xs/medium",
                                             children: (0, i.jsx)(s.A, {
                                                 delay: 300,
-                                                children: b ?? h.Ay.getName(j.id, void 0, t),
+                                                children: b ?? p.Ay.getName(j.id, void 0, t),
                                             }),
                                         }),
                                     ],

@@ -1,7 +1,7 @@
 var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     i = n(317097),
     o = n(855986),
     d = n(646514),
@@ -22,7 +22,7 @@ function R(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: r,
+            guildId: l,
             pendingBanner: _,
             overlay: R,
             className: v,
@@ -35,7 +35,7 @@ function R(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: O = !1,
         } = e,
-        [M, P] = l.useState(!1),
+        [M, P] = r.useState(!1),
         U = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
@@ -47,7 +47,7 @@ function R(e) {
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
-        V = t.getAvatarURL(r, (0, u.FT)(j)),
+        V = t.getAvatarURL(l, (0, u.FT)(j)),
         $ = (0, i.LX)((0, m.Ay)(V, H, !1)),
         F = (0, f.A)(D ?? n?.primaryColor ?? $).hex,
         z = { align: "start", insetStart: y - S, insetBottom: I + S, radius: (0, A.A)(j) };
@@ -71,15 +71,15 @@ n.d(
             let {
                     themeType: t,
                     user: n,
-                    displayProfile: l,
-                    canUsePremiumProfileCustomization: r = !1,
+                    displayProfile: r,
+                    canUsePremiumProfileCustomization: l = !1,
                     specOverrides: s,
                     ...i
                 } = e,
                 o = _.T[t],
                 d = null != s ? { ...o, ...s } : o,
-                c = !(0, h.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
-            return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
+                c = !(0, h.Qq)() && (l || r?.canUsePremiumProfileCustomization || !1);
+            return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: r, themePadding: c ? d.themePadding : 0 });
         },
         o: R,
     },

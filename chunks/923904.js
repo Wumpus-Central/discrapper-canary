@@ -1,4 +1,4 @@
-(l.d(t, { p: () => j, T: () => y }), l(323874), l(14289), l(35956), l(321073));
+(l.d(t, { p: () => y, T: () => j }), l(323874), l(14289), l(35956), l(321073));
 var n = l(477900),
     a = l(582128),
     i = l(435558),
@@ -27,10 +27,10 @@ var h = l(635793),
     x = l(792996);
 let g = (e, t, l, n) => (n([]), () => {}),
     b = a.createContext(null);
-function j(e) {
+function y(e) {
     var t;
-    let j,
-        y,
+    let y,
+        j,
         C,
         N,
         k,
@@ -42,16 +42,16 @@ function j(e) {
             initialCropStart: S,
             initialCropEnd: D,
             initialCurrentTime: M,
-        } = ((j = A.length / 1e3),
-        (y = A.editMetadata?.start ?? 0),
+        } = ((y = A.length / 1e3),
+        (j = A.editMetadata?.start ?? 0),
         (C = A.editMetadata?.end ?? 0),
-        (N = 0 !== y || (0 !== C && C !== j)),
+        (N = 0 !== j || (0 !== C && C !== y)),
         {
-            initialDuration: j,
-            initialCropStart: y,
+            initialDuration: y,
+            initialCropStart: j,
             initialCropEnd: C,
             isCropped: N,
-            initialCurrentTime: N ? y : j / 2,
+            initialCurrentTime: N ? j : y / 2,
         }),
         P = a.useMemo(
             () =>
@@ -94,17 +94,17 @@ function j(e) {
         [ex, eg] = a.useState(() => A.tracks ?? []),
         eb = a.useRef(ex);
     eb.current = ex;
-    let ej = a.useCallback(() => {
+    let ey = a.useCallback(() => {
             let e = V.current?.videoElement?.currentTime ?? G,
                 t = (0, i.clamp)(e, G, B - 1);
             return { startSec: t, endSec: Math.min(t + 5, B) };
         }, [G, B, V]),
-        ey = a.useCallback(() => {
+        ej = a.useCallback(() => {
             let e = crypto.randomUUID(),
                 t = {
                     id: e,
                     type: p.Me.TEXT,
-                    ...ej(),
+                    ...ey(),
                     data: {
                         text: x.intl.string(v.default.v2jEIc),
                         style: { ...p.QK },
@@ -113,7 +113,7 @@ function j(e) {
                     },
                 };
             return (eg((e) => [...e, t]), U(h.Y.NONE), e);
-        }, [ej, U]),
+        }, [ey, U]),
         eC = (0, p.QY)(F) ?? (null != ep ? ep.width / ep.height : null),
         eN = a.useCallback(
             (e) => {
@@ -121,7 +121,7 @@ function j(e) {
                     l = {
                         id: t,
                         type: p.Me.IMAGE,
-                        ...ej(),
+                        ...ey(),
                         data: {
                             ...e,
                             position: { ...p._S },
@@ -133,7 +133,7 @@ function j(e) {
                     };
                 return (eg((e) => [...e, l]), U(h.Y.NONE), t);
             },
-            [ej, U, eC],
+            [ey, U, eC],
         ),
         ek = a.useCallback((e) => {
             eg((t) => t.filter((t) => t.id !== e));
@@ -539,7 +539,7 @@ function j(e) {
                 setSoundboardAudioEnabled: eH,
                 getEditedClip: eI,
                 tracks: ex,
-                addTextTrack: ey,
+                addTextTrack: ej,
                 addImageTrack: eN,
                 removeTrack: ek,
                 updateTrackRange: eE,
@@ -586,7 +586,7 @@ function j(e) {
                 eH,
                 eI,
                 ex,
-                ey,
+                ej,
                 eN,
                 ek,
                 eE,
@@ -601,7 +601,7 @@ function j(e) {
         );
     return (0, n.jsx)(b.Provider, { value: eF, children: w });
 }
-function y() {
+function j() {
     let e = a.useContext(b);
     if (null == e) throw Error("useClipContext must be used within a ClipContextProvider");
     return e;

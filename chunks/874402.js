@@ -1,7 +1,7 @@
 var a = n(477900),
-    l = n(582128),
-    r = n(503698),
-    s = n.n(r),
+    r = n(582128),
+    l = n(503698),
+    s = n.n(l),
     i = n(120692),
     o = n(855986),
     d = n(866323),
@@ -19,7 +19,7 @@ n.d(
             let {
                     preventsPopoutDismiss: t,
                     isVisible: n,
-                    labelId: r,
+                    labelId: l,
                     noticeText: E,
                     primaryAction: h,
                     secondaryAction: b,
@@ -28,9 +28,9 @@ n.d(
                     a11yAnnounceOnHide: _,
                 } = e,
                 N = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
-                R = l.useRef(null);
+                R = r.useRef(null);
             return (
-                l.useEffect(
+                r.useEffect(
                     () => () => {
                         null != R.current && clearTimeout(R.current);
                     },
@@ -57,12 +57,12 @@ n.d(
                               children: (0, a.jsxs)("footer", {
                                   ...(!0 === t ? { [p]: "" } : null),
                                   className: s()(g.Qs, { [g.hO]: x }),
-                                  "aria-labelledby": r,
+                                  "aria-labelledby": l,
                                   children: [
                                       (0, a.jsx)(u.E, {
                                           variant: "body-sm/normal",
                                           color: "none",
-                                          id: r,
+                                          id: l,
                                           className: g.ut,
                                           children: E,
                                       }),
