@@ -8,8 +8,8 @@ var n = t(477900),
     o = t(691885),
     d = t(668639),
     c = t(416052),
-    h = t(682163),
-    g = t(653036);
+    g = t(682163),
+    h = t(653036);
 function f(e, l) {
     let t,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -28,8 +28,8 @@ function f(e, l) {
     return null == n ? i : `${i}/${n}`;
 }
 var x = t(314116),
-    m = t(858899),
-    b = t(534514),
+    b = t(858899),
+    m = t(534514),
     j = t(95477),
     p = t(957565),
     v = t(233470),
@@ -41,7 +41,7 @@ var k = t(620632),
 function S(e) {
     let { project: l, isOwner: t, disabled: r = !1 } = e,
         [d, c] = i.useState(604800),
-        [h, g] = i.useState(null),
+        [g, h] = i.useState(null),
         [S, A] = i.useState(!1),
         [_, B] = i.useState(!1),
         P = i.useMemo(
@@ -69,7 +69,7 @@ function S(e) {
                     });
                     return t.ticket;
                 })(l.id, d);
-                g(f(l.application_id, l.name, e));
+                h(f(l.application_id, l.name, e));
             } catch {
                 B(!0);
             }
@@ -79,11 +79,11 @@ function S(e) {
             A(!0);
             try {
                 (await (0, v.CW)(l.id, { reset_share_links: !0 }),
-                    g(null),
+                    h(null),
                     B(!1),
-                    (0, m.P0)({ text: y.intl.string(E.default.w9w1Zh), variant: "success" }));
+                    (0, b.P0)({ text: y.intl.string(E.default.w9w1Zh), variant: "success" }));
             } catch {
-                (0, m.P0)({ text: y.intl.string(E.default["5lL390"]), variant: "critical" });
+                (0, b.P0)({ text: y.intl.string(E.default["5lL390"]), variant: "critical" });
             }
             A(!1);
         }, [l.id]),
@@ -97,20 +97,20 @@ function S(e) {
             });
         }, [I]),
         R = i.useCallback(() => {
-            null != h &&
+            null != g &&
                 (0, p.C)(
-                    h,
-                    () => (0, m.P0)({ text: y.intl.string(y.t["L/PwZf"]), variant: "success" }),
-                    () => (0, m.P0)({ text: y.intl.string(E.default["8m6QAX"]), variant: "critical" }),
+                    g,
+                    () => (0, b.P0)({ text: y.intl.string(y.t["L/PwZf"]), variant: "success" }),
+                    () => (0, b.P0)({ text: y.intl.string(E.default["8m6QAX"]), variant: "critical" }),
                 );
-        }, [h]);
+        }, [g]);
     return (0, n.jsxs)(a.B, {
         gap: 12,
         children: [
             (0, n.jsxs)(a.B, {
                 gap: 4,
                 children: [
-                    (0, n.jsx)(b.D, { variant: "heading-md/semibold", children: y.intl.string(E.default["/lZVfj"]) }),
+                    (0, n.jsx)(m.D, { variant: "heading-md/semibold", children: y.intl.string(E.default["/lZVfj"]) }),
                     (0, n.jsx)(s.E, {
                         variant: "body-sm/normal",
                         color: "text-muted",
@@ -148,7 +148,7 @@ function S(e) {
                       children: y.intl.string(E.default.KIrnzC),
                   })
                 : null,
-            null != h
+            null != g
                 ? (0, n.jsxs)(a.B, {
                       direction: "horizontal",
                       gap: 8,
@@ -156,7 +156,7 @@ function S(e) {
                       children: [
                           (0, n.jsx)(j.k, {
                               label: y.intl.string(E.default.IPmhvk),
-                              value: h,
+                              value: g,
                               readOnly: !0,
                               fullWidth: !0,
                           }),
@@ -189,11 +189,11 @@ var A = t(265872),
 function L(e) {
     let { sharing: l } = e,
         { isOwner: t, options: r, mode: u, canChange: o, changing: d, changeMode: c } = l,
-        [h, g] = i.useState(!1),
-        f = i.useCallback(() => g(!1), []),
-        x = i.useCallback(() => g((e) => !e), []),
-        m = i.useRef(null),
-        b = i.useId(),
+        [g, h] = i.useState(!1),
+        f = i.useCallback(() => h(!1), []),
+        x = i.useCallback(() => h((e) => !e), []),
+        b = i.useRef(null),
+        m = i.useId(),
         j = y.intl.string(E.default.jDBYrs),
         p = r.find((e) => e.value === u),
         v = !o || d;
@@ -203,7 +203,7 @@ function L(e) {
             (0, n.jsxs)(a.B, {
                 gap: 4,
                 children: [
-                    (0, n.jsx)(s.E, { id: b, variant: "body-md/medium", color: "text-strong", children: j }),
+                    (0, n.jsx)(s.E, { id: m, variant: "body-md/medium", color: "text-strong", children: j }),
                     t
                         ? null
                         : (0, n.jsx)(s.E, {
@@ -214,8 +214,8 @@ function L(e) {
                 ],
             }),
             (0, n.jsx)(A.Y, {
-                targetElementRef: m,
-                shouldShow: h && !v,
+                targetElementRef: b,
+                shouldShow: g && !v,
                 onRequestClose: f,
                 position: "bottom",
                 align: "right",
@@ -250,10 +250,10 @@ function L(e) {
                     return (0, n.jsx)(P.vN, {
                         children: (0, n.jsxs)("button", {
                             ...i,
-                            ref: m,
+                            ref: b,
                             type: "button",
                             className: I.h,
-                            "aria-labelledby": b,
+                            "aria-labelledby": m,
                             "aria-haspopup": "menu",
                             "aria-expanded": a,
                             disabled: v,
@@ -276,7 +276,7 @@ function L(e) {
 }
 function R(e) {
     let { project: l, sharing: t, servers: i, serversLabel: o } = e,
-        { isOwner: d, mode: c, changing: h, loadFailed: g } = t,
+        { isOwner: d, mode: c, changing: g, loadFailed: h } = t,
         f = i.candidates.length > 0 || i.current.length > 0;
     return (0, n.jsxs)(a.B, {
         gap: 16,
@@ -288,14 +288,14 @@ function R(e) {
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           "public" === c
-                              ? (0, n.jsx)(O, { project: l, disabled: h })
-                              : (0, n.jsx)(S, { project: l, isOwner: d, disabled: h }),
+                              ? (0, n.jsx)(O, { project: l, disabled: g })
+                              : (0, n.jsx)(S, { project: l, isOwner: d, disabled: g }),
                           (0, n.jsx)(r.c, {}),
                       ],
                   })
                 : null,
             (0, n.jsx)(L, { sharing: t }),
-            g && !h && "public" !== c
+            h && !g && "public" !== c
                 ? (0, n.jsxs)(a.B, {
                       direction: "horizontal",
                       gap: 8,
@@ -334,7 +334,7 @@ function N(e) {
                     id: e.id,
                     value: e.id,
                     label: e.name,
-                    leading: (0, n.jsx)(h.Ay, { guild: e, size: h.Ay.Sizes.MINI, active: !0 }),
+                    leading: (0, n.jsx)(g.Ay, { guild: e, size: g.Ay.Sizes.MINI, active: !0 }),
                 })),
             [u],
         );
@@ -347,14 +347,15 @@ function N(e) {
                       label: t,
                       placeholder: y.intl.string(E.default.I7yXEy),
                       options: c,
-                      value: d?.id,
+                      value: d?.id ?? null,
                       disabled: l.sharing,
                       onSelectionChange: l.pick,
+                      clearable: !0,
                       fullWidth: !0,
                   })
                 : (0, n.jsx)(s.E, { variant: "body-sm/medium", color: "text-default", children: t }),
             r.map((e) => (0, n.jsx)($, { guild: e }, e.id)),
-            l.changeRows.length > 0 ? (0, n.jsx)(g.A, { rows: l.changeRows }) : null,
+            l.changeRows.length > 0 ? (0, n.jsx)(h.A, { rows: l.changeRows }) : null,
         ],
     });
 }
@@ -365,7 +366,7 @@ function $(e) {
         gap: 8,
         align: "center",
         children: [
-            (0, n.jsx)(h.Ay, { guild: l, size: h.Ay.Sizes.SMALL, active: !0, "aria-hidden": !0 }),
+            (0, n.jsx)(g.Ay, { guild: l, size: g.Ay.Sizes.SMALL, active: !0, "aria-hidden": !0 }),
             (0, n.jsx)(s.E, { variant: "body-md/medium", color: "text-strong", lineClamp: 1, children: l.name }),
         ],
     });

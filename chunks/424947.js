@@ -7,18 +7,19 @@ var n = t(582128),
     o = t(680032),
     d = t(551233),
     c = t(191850),
-    h = t(792996);
+    g = t(792996);
 t.d(
     l,
     {},
     {
         A: function (e, l, t) {
-            let g = (0, i.bG)([r.Ay], () => r.Ay.getProject(e) ?? null, [e]),
-                [f] = n.useState(() => g?.install_scope === "guild"),
-                x = (0, d.A)(e, l, t, f),
-                m = (0, u.Bs)(f ? e : null),
-                b = (f ? null != g && (0, d.i)(g, m, "ConjureShareServers") : null != t && x.available) ? x.guilds : [],
-                j = (0, i.yK)(
+            let h = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                f = (0, i.bG)([r.Ay], () => r.Ay.getProject(e) ?? null, [e]),
+                [x] = n.useState(() => f?.install_scope === "guild"),
+                b = (0, d.A)(e, l, t, x),
+                m = (0, u.Bs)(x ? e : null),
+                j = (x ? null != f && (0, d.i)(f, m, "ConjureShareServers") : null != t && b.available) ? b.guilds : [],
+                p = (0, i.yK)(
                     [r.Ay, a.A],
                     () => {
                         let l = r.Ay.getProject(e);
@@ -30,59 +31,59 @@ t.d(
                     },
                     [e],
                 ),
-                [p, v] = n.useState(null),
-                y = b.find((e) => e.id === p) ?? null,
-                { pickGuild: C, share: k, publish: w } = x,
-                E = n.useCallback(
+                [v, y] = n.useState(() => (h ? (f?.guild_id ?? null) : null)),
+                C = j.find((e) => e.id === v) ?? null,
+                { pickGuild: k, share: w, publish: E } = b,
+                S = n.useCallback(
                     (e) => {
-                        (v(e), C(e));
+                        (y(e), null != e && k(e));
                     },
-                    [C],
+                    [k],
                 ),
-                S = n.useRef(!1);
+                A = n.useRef(!1);
             n.useEffect(
                 () => (
-                    (S.current = !1),
+                    (A.current = !1),
                     () => {
-                        S.current = !0;
+                        A.current = !0;
                     }
                 ),
                 [],
             );
-            let A = g?.name ?? "",
-                _ = n.useRef(!1),
-                B = n.useCallback(
+            let _ = f?.name ?? "",
+                B = n.useRef(!1),
+                P = n.useCallback(
                     async function (e, l) {
                         let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (null == y) return void e();
-                        if (_.current) return;
-                        _.current = !0;
-                        let n = await k();
+                        if (null == C) return void e();
+                        if (B.current) return;
+                        B.current = !0;
+                        let n = await w();
                         if (!n.shared) {
-                            _.current = !1;
+                            B.current = !1;
                             return;
                         }
-                        if (!S.current) {
-                            if ((e(), "publish" === n.next)) return void (await w(t));
+                        if (!A.current) {
+                            if ((e(), "publish" === n.next)) return void (await E(t));
                             l(
-                                h.intl.formatToPlainString(
+                                g.intl.formatToPlainString(
                                     "added" === n.next ? c.default["4WtS+v"] : c.default.o2xHEb,
-                                    { app: A, server: y.name },
+                                    { app: _, server: C.name },
                                 ),
                             );
                         }
                     },
-                    [y, k, w, A],
+                    [C, w, E, _],
                 );
             return {
-                current: j,
-                candidates: b,
-                picked: y,
-                pick: E,
-                changeRows: null == y ? [] : f ? (0, o._i)(g) : (0, o.dv)(g),
-                sharing: x.sharing,
-                error: x.error,
-                finish: B,
+                current: p,
+                candidates: j,
+                picked: C,
+                pick: S,
+                changeRows: null == C ? [] : x ? (0, o._i)(f) : (0, o.dv)(f),
+                sharing: b.sharing,
+                error: b.error,
+                finish: P,
             };
         },
     },
