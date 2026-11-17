@@ -115,8 +115,8 @@
     gap: var(--space-10);
     padding: var(--space-16);
     position: relative;
-    width: -moz-min-content;
-    width: min-content
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .light_arblTP {
@@ -448,4 +448,4 @@
     background: #a8a9aa
 }
 
-/*# sourceMappingURL=91045813f362e08e.css.map*/
+/*# sourceMappingURL=bb75756145e251e2.css.map*/

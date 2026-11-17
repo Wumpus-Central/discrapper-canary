@@ -136,7 +136,7 @@ var ec = t(987421),
     ef = t(196231),
     eN = t(64018),
     eb = t(643306),
-    ek = t(945152);
+    ek = t(200420);
 let eO = (e) => {
     let { heroBlock: l, handleTransition: t } = e,
         { collectionPromotion: n, handlePromotionEnd: a } = (0, eb.A)(l.categorySkuId);

@@ -9,7 +9,7 @@ n.d(
         A: function (e) {
             let t = (0, r.A)(a.FYj),
                 [n, i] = l.useState(null),
-                o = (0, s.rX)(t, e),
+                o = (0, s.rX)(t, e) ?? (0, s.Nc)(t, e),
                 u = o?.endsAt.getTime() ?? null,
                 c = l.useCallback(() => {
                     i(u);

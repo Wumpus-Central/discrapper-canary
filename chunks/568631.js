@@ -7,6 +7,23 @@ n.d(
     t,
     {},
     {
+        Nc: function (e, t) {
+            let n = (0, r.d3)(e);
+            return null != e &&
+                null != t &&
+                null != n &&
+                n.collectionId === t &&
+                null != e.endsAt &&
+                (0, a.us)(e, Date.now())
+                ? {
+                      type: l.hE.COLLECTION_SEQUENCED_OFFER,
+                      endsAt: e.endsAt,
+                      countdownStyle: n.countdownStyle,
+                      showCountdownCta: n.showCountdownCta,
+                      countdownPosition: n.countdownPosition,
+                  }
+                : null;
+        },
         Ty: function (e) {
             return (0, s.Tf)(Date.now(), e);
         },
