@@ -21,13 +21,13 @@ n.d(
                     ctaText: a,
                     "aria-label": m,
                     onButtonClick: g,
-                    onBlockClick: p,
-                    badge: E,
+                    onBlockClick: E,
+                    badge: p,
                     innerRef: f,
                     listItemProps: x,
                 } = e,
-                C = s.useId(),
-                v = s.useCallback(
+                v = s.useId(),
+                A = s.useCallback(
                     (e) => {
                         (e.stopPropagation(), g());
                     },
@@ -39,16 +39,16 @@ n.d(
                 innerRef: f,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
-                "aria-describedby": null != l ? C : void 0,
-                onClick: p,
+                "aria-describedby": null != l ? v : void 0,
+                onClick: E,
                 children: [
-                    (0, r.jsx)("div", { className: d.LI, children: E }),
+                    (0, r.jsx)("div", { className: d.LI, children: p }),
                     (0, r.jsx)("div", {
                         className: d.P4,
                         children:
                             null != l &&
                             (0, r.jsx)(u.D, {
-                                id: C,
+                                id: v,
                                 lineClamp: 4,
                                 className: l.className,
                                 color: "text-overlay-light",
@@ -62,7 +62,7 @@ n.d(
                         text: a,
                         tabIndex: -1,
                         "aria-hidden": !0,
-                        onClick: v,
+                        onClick: A,
                     }),
                 ],
             });

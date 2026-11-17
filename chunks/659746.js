@@ -289,11 +289,11 @@ class P extends r.PureComponent {
         });
     }
 }
-function g(e) {
+function x(e) {
     let { theme: a, ...t } = e,
         l = (0, d.r)(o.A.unsafe_rawColors.WHITE).hex(),
         r = (0, d.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
         s = (0, c.M)(a) ? l : r;
     return (0, n.jsx)(P, { ...t, theme: a, flashColor: s });
 }
-((g.Types = C), t.d(a, {}, { Ay: g, Or: C }));
+((x.Types = C), t.d(a, {}, { Ay: x, Or: C }));

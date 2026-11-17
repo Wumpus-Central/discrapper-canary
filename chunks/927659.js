@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(678708),
     x = n(88187),
     E = n(775602),
-    S = n(392054),
-    y = n(855986),
+    y = n(392054),
+    S = n(855986),
     C = n(834730),
     A = n(866665),
     b = n(364360);
@@ -155,7 +155,7 @@ function U(e) {
         p = null != r ? c?.[r] : null;
     t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
     let g = u && null != h ? (0, O.Rg)(h) : null,
-        x = (0, y.bG)([_.Ay], () => {
+        x = (0, S.bG)([_.Ay], () => {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
@@ -244,7 +244,7 @@ var Y = n(168017),
     ei = n(71393);
 function er(e) {
     let { sound: t } = e,
-        n = (0, y.bG)([ei.A], () => ("0" === t.guildId ? M.intl.string(M.t.Rtvk9X) : ei.A.getGuild(t.guildId)?.name));
+        n = (0, S.bG)([ei.A], () => ("0" === t.guildId ? M.intl.string(M.t.Rtvk9X) : ei.A.getGuild(t.guildId)?.name));
     return (0, l.jsxs)(I, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
@@ -359,7 +359,7 @@ function eE(e) {
         }),
     });
 }
-class eS extends ep {
+class ey extends ep {
     layoutClass = b.fF;
     selectable = !1;
     renderContent() {
@@ -367,7 +367,7 @@ class eS extends ep {
         return (0, l.jsx)("div", { className: s()(e, b.yF) });
     }
 }
-class ey extends ep {
+class eS extends ep {
     renderContent() {
         let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: r } = this.props,
             s = null == r ? eu.A.getNickname(e.id) : null;
@@ -476,13 +476,13 @@ class eI extends ep {
 }
 class ev extends ep {
     isSelectable() {
-        return this.props.command.inputType !== S.y$.PLACEHOLDER;
+        return this.props.command.inputType !== y.y$.PLACEHOLDER;
     }
     renderContent() {
         let { command: e, channel: t, showImage: n, section: i, selected: r } = this.props,
             { hovered: s } = this.state,
             a = this.isSelectable();
-        return e.inputType === S.y$.PLACEHOLDER
+        return e.inputType === y.y$.PLACEHOLDER
             ? (0, l.jsx)(V.A, {})
             : (0, l.jsx)(U, {
                   command: e,
@@ -590,8 +590,8 @@ class eM extends i.PureComponent {
     static Generic = eg;
     static Loading = ex;
     static Title = eE;
-    static Divider = eS;
-    static User = ey;
+    static Divider = ey;
+    static User = eS;
     static Role = eC;
     static Channel = eb;
     static Command = eI;

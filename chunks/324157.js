@@ -44,13 +44,13 @@ n.d(
                     (n = o?.current ?? 0),
                     (a = (0, r.x)(c.rewardStates, t, n)),
                     { title: a?.title ?? c.title, description: a?.description ?? c.description }),
-                p = { locale: h, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
-                E = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
+                E = { locale: h, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
+                p = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
                 f = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
             return {
-                title: u(g.title, p),
-                description: ((l = g.description), null != l && "" !== l ? u(l, p) : null),
-                progressText: E,
+                title: u(g.title, E),
+                description: ((l = g.description), null != l && "" !== l ? u(l, E) : null),
+                progressText: p,
                 timeLeftText: f,
             };
         },

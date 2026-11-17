@@ -8,8 +8,8 @@ var l = n(477900),
     o = n(430690),
     d = n(71804),
     h = n(883645),
-    f = n(601194),
-    p = n(316363),
+    p = n(601194),
+    f = n(316363),
     m = n(573359),
     C = n(166532),
     y = n(819252);
@@ -27,9 +27,9 @@ n.d(
                     return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
                 })(e),
                 { step: s, stepConfigs: E } = (0, h.Ay)(),
-                { setBodyNode: _, setFooterNode: g, setModalOverlayNode: S } = (0, f.Gm)(),
+                { setBodyNode: _, setFooterNode: g, setModalOverlayNode: S } = (0, p.Gm)(),
                 I = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
-                { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, p.t4)((e) => ({
+                { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, f.t4)((e) => ({
                     setReadySlideId: e.setReadySlideId,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
                 })),
@@ -102,12 +102,12 @@ n.d(
         },
         UX: function (e) {
             let { children: t } = e,
-                { footerNode: n } = (0, f.Gm)();
+                { footerNode: n } = (0, p.Gm)();
             return null == n ? null : s.createPortal(t, n);
         },
         dZ: function (e) {
             let { children: t } = e,
-                { bodyNode: n } = (0, f.Gm)();
+                { bodyNode: n } = (0, p.Gm)();
             return null == n ? null : s.createPortal(t, n);
         },
     },

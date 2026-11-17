@@ -1,4 +1,4 @@
-n.d(t, { hE: () => i.h, hm: () => m, Wt: () => r.Wt, LH: () => r.LH });
+n.d(t, { hE: () => i.h, hm: () => T, Wt: () => r.Wt, LH: () => r.LH });
 var i = n(483456),
     r = n(766586),
     s = n(477900),
@@ -15,16 +15,16 @@ var o = n(780964),
     _ = n(49999),
     p = n(124616),
     g = n(792996);
-function m(e) {
+function T(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         i = (0, C.yM)(),
         r = l.useCallback(() => {
             (t(_.i.TAKE_ACTION), u.A.showAgeVerificationGetStartedModal({ entryPoint: h.q1.AGE_NOTICE_POPOVER }));
         }, [t]),
-        m = l.useCallback(() => {
+        T = l.useCallback(() => {
             (t(_.i.TAKE_ACTION), u.A.openUrl(d.A.getArticleURL(A.MVz.AGE_VERIFICATION_LEARN_MORE)));
         }, [t]),
-        T = l.useCallback(() => {
+        m = l.useCallback(() => {
             (t(_.i.TAKE_ACTION), (0, c.openUserSettings)(o.X.ACCOUNT_STANDING_CATEGORY));
         }, [t]),
         N = l.useCallback(() => {
@@ -34,9 +34,9 @@ function m(e) {
         I = i
             ? { text: g.intl.string(p.default.ZzcLhc), onClick: r, external: !1 }
             : { text: g.intl.string(p.default["Bp/1dq"]), link: E.M1, external: !0 },
-        x = i
-            ? { text: g.intl.string(p.default["+7NlgO"]), variant: "primary", onClick: m }
-            : { text: g.intl.string(p.default.jjpcno), variant: "primary", onClick: T };
+        S = i
+            ? { text: g.intl.string(p.default["+7NlgO"]), variant: "primary", onClick: T }
+            : { text: g.intl.string(p.default.jjpcno), variant: "primary", onClick: m };
     return (0, s.jsx)(a.A, {
         targetElementRef: n,
         shouldShow: !0,
@@ -48,6 +48,6 @@ function m(e) {
         title: g.intl.string(p.default.GdTVPF),
         body: f,
         textLink: I,
-        actions: [x],
+        actions: [S],
     });
 }

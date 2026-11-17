@@ -14,8 +14,8 @@ var l = t(477900),
 let A = function (e) {
     let { type: a, text: t, buttonText: A, buttonLoading: E, hideClose: y, onClose: C } = e,
         P = (0, n.bG)([o.default], () => o.default.getCurrentUser()),
-        g = (0, n.bG)([h.A], () => h.A.nameplatePreviewOverrides),
-        x = (0, c.TM)()
+        x = (0, n.bG)([h.A], () => h.A.nameplatePreviewOverrides),
+        g = (0, c.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
         f = (function (e) {
@@ -40,7 +40,7 @@ let A = function (e) {
                             fallbackImage:
                                 "https://cdn.discordapp.com/assets/content/3ce3d676b7d77ce5184982326720c020ad6ba69d47068473e0096a62472a81d6.png",
                             className: p.d9,
-                            children: (0, l.jsx)("source", { src: x }),
+                            children: (0, l.jsx)("source", { src: g }),
                         }),
                         (0, l.jsx)(i.A, {
                             user: P,
@@ -49,8 +49,8 @@ let A = function (e) {
                             nameplateData: P.nameplate,
                             className: p.M4,
                             nameplatePreviewSize: "large",
-                            pendingDisplayNameStyles: g?.displayNameStyles,
-                            pendingAvatar: g?.avatar,
+                            pendingDisplayNameStyles: x?.displayNameStyles,
+                            pendingAvatar: x?.avatar,
                         }),
                     ],
                 }),

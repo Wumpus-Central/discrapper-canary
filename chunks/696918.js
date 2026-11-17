@@ -1,1 +1,1 @@
-e.exports = { $T: "termsApplyAnchor_xNzs0H" };
+n.exports = { $T: "termsApplyAnchor_xNzs0H" };

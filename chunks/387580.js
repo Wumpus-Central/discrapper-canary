@@ -1,9 +1,9 @@
-a.d(e, { A: () => y });
+a.d(e, { A: () => N });
 var i,
     l = a(582128),
     n = a(158390),
-    s = (((i = {}).DRAFT = "draft"), (i.PUBLISHED = "published"), i),
-    r = a(855986),
+    r = (((i = {}).DRAFT = "draft"), (i.PUBLISHED = "published"), i),
+    s = a(855986),
     c = a(620632),
     o = a(382483),
     d = a(385113),
@@ -12,29 +12,29 @@ var i,
     A = a(116281),
     f = a(667049),
     E = a(71393),
-    m = a(287809),
-    g = a(233470),
-    I = a(260498),
+    g = a(287809),
+    I = a(233470),
+    m = a(260498),
     h = a(951178),
     L = a(246338);
-let x = new n.A(3e4, 3e5);
-function N(t) {
+let y = new n.A(3e4, 3e5);
+function _(t) {
     return "guild" === t.install_scope && t.supported_surfaces?.includes(h.q7.PROFILE_WIDGET) === !0;
 }
-function y() {
+function N() {
     let t, e, a;
-    ((t = (0, r.bG)([E.A, u.Bt], () => (0, L.XF)(E.A.getGuildsArray(), "useConjureServerWidgetOffers"))),
-        (e = (0, r.bG)([I.Ay], () => I.Ay.getSharedWithMeProjectsFetchState())),
-        (a = (0, r.bG)([I.Ay], () => I.Ay.getProjectsFetchState()?.type === "loading")),
+    ((t = (0, s.bG)([E.A, u.Bt], () => (0, L.XF)(E.A.getGuildsArray(), "useConjureServerWidgetOffers"))),
+        (e = (0, s.bG)([m.Ay], () => m.Ay.getSharedWithMeProjectsFetchState())),
+        (a = (0, s.bG)([m.Ay], () => m.Ay.getProjectsFetchState()?.type === "loading")),
         l.useEffect(() => {
-            ("success" === e && x.succeed(),
+            ("success" === e && y.succeed(),
                 t &&
                     !a &&
                     ("unattempted" === e
-                        ? (0, g.listProjects)()
-                        : "error" !== e || x.pending || x.fail(() => (0, g.listProjects)())));
+                        ? (0, I.listProjects)()
+                        : "error" !== e || y.pending || y.fail(() => (0, I.listProjects)())));
         }, [t, e, a]));
-    let i = (0, r.yK)([I.Ay], () => [...I.Ay.getOwnedProjects(), ...I.Ay.getSharedWithMeProjects()].filter(N));
+    let i = (0, s.yK)([m.Ay], () => [...m.Ay.getOwnedProjects(), ...m.Ay.getSharedWithMeProjects()].filter(_));
     l.useEffect(() => {
         let t = !1;
         return (
@@ -61,26 +61,26 @@ function y() {
             }
         );
     }, [i]);
-    let n = (0, r.bG)([m.default], () => m.default.getCurrentUser()),
+    let n = (0, s.bG)([g.default], () => g.default.getCurrentUser()),
         h = (0, f.A)(n?.id),
-        y = (0, r.bG)([d.A], () => d.A.getAllConfigsByApplication()),
-        j = (0, r.bG)([E.A], () => E.A.getGuilds());
+        N = (0, s.bG)([d.A], () => d.A.getAllConfigsByApplication()),
+        P = (0, s.bG)([E.A], () => E.A.getGuilds());
     return l.useMemo(() => {
         let t = new Set(h.filter((t) => t instanceof p.R).map((t) => t.applicationId)),
             e = new Map();
         for (let { application_id: a, guild_id: l } of i) {
-            let i = y[a]?.find((t) => {
+            let i = N[a]?.find((t) => {
                 let { status: e } = t;
-                return e === s.PUBLISHED;
+                return e === r.PUBLISHED;
             });
-            !(null == l || null == j[l] || t.has(a)) &&
+            !(null == l || null == P[l] || t.has(a)) &&
                 null != i &&
                 (0, A.q)(i) &&
                 e.set(l, [...(e.get(l) ?? []), new p.R({ applicationId: a })]);
         }
         return Array.from(e, (t) => {
             let [e, a] = t;
-            return { guildId: e, guildName: j[e]?.name ?? "", widgets: a };
+            return { guildId: e, guildName: P[e]?.name ?? "", widgets: a };
         });
-    }, [i, y, j, h]);
+    }, [i, N, P, h]);
 }

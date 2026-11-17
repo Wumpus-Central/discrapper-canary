@@ -2,8 +2,8 @@ var i = n(350835),
     l = n(855986),
     a = n(73153),
     r = n(294857),
-    u = n(812020),
-    o = n(290863),
+    o = n(812020),
+    u = n(290863),
     s = n(287809);
 let d = !1,
     c = {},
@@ -57,24 +57,24 @@ function N() {
     let t,
         e = !1;
     return (
-        u.A.shouldFetch() ||
+        o.A.shouldFetch() ||
             d ||
             ((c = {}),
             (A = {}),
             (t = !1),
-            o.A.getUserIds().forEach((e) => {
+            u.A.getUserIds().forEach((e) => {
                 let n = s.default.getUser(e);
-                null != n && (t = E({ user: n, activities: o.A.getActivities(e) }) || t);
+                null != n && (t = E({ user: n, activities: u.A.getActivities(e) }) || t);
             }),
             (e = t)),
-        (d = !u.A.shouldFetch()),
+        (d = !o.A.shouldFetch()),
         e
     );
 }
 class T extends l.Ay.Store {
     static displayName = "NowPlayingStore";
     initialize() {
-        (this.waitFor(o.A, u.A, s.default), this.syncWith([u.A], N));
+        (this.waitFor(u.A, o.A, s.default), this.syncWith([o.A], N));
     }
     get games() {
         return c;

@@ -40,7 +40,7 @@ function D() {
         fullWidth: !0,
     });
 }
-function L() {
+function R() {
     let e = (0, s.bG)([d.A], () => d.A.isPreview),
         t = (0, T.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
     return !e || t
@@ -53,7 +53,7 @@ function L() {
               ],
           });
 }
-function R(e) {
+function L(e) {
     let { children: t } = e,
         n = (0, s.bG)([d.A], () => d.A.isPreview),
         { analyticsLocations: r } = (0, u.Ay)(o.A.USER_SETTINGS);
@@ -103,11 +103,11 @@ n.d(
         sB: function () {
             return (0, i.jsx)(c.Ay, {
                 type: c.v0.SETTINGS,
-                children: (0, i.jsxs)(R, {
+                children: (0, i.jsxs)(L, {
                     children: [
                         (0, i.jsx)(c.ew, {
                             isCoachmark: !1,
-                            renderCTAButtons: () => (0, i.jsx)(L, {}),
+                            renderCTAButtons: () => (0, i.jsx)(R, {}),
                             headingClassName: j.EK,
                             titleTextVariant: "body-md/semibold",
                             titleClassName: j.cI,

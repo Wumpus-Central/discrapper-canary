@@ -81,7 +81,7 @@ function S(e, t) {
             : ((0, A.$b)(e, C.Gy.GAME_EVENT, t.game.event_name) ?? 0)
         : 0;
 }
-function I(e, t) {
+function j(e, t) {
     if (null != t.emotion) {
         let n = T(t.emotion.type);
         return null == n ? null : (0, A.u6)(e, n);
@@ -121,7 +121,7 @@ n.d(
                 d = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
                 m = l.useMemo(() => {
                     let i = e
-                        .filter((e) => ((d && null != e.game) || null != e.emotion) && null != I(t, e))
+                        .filter((e) => ((d && null != e.game) || null != e.emotion) && null != j(t, e))
                         .map((e) => {
                             var t;
                             return {
@@ -146,7 +146,7 @@ n.d(
                             a = m[e.index];
                         if (null == a) return null;
                         let s = n > e.leftPx,
-                            u = I(t, a),
+                            u = j(t, a),
                             d =
                                 null != a.emotion
                                     ? x.intl.string(E.default["ry+jxm"])

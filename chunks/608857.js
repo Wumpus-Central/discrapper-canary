@@ -1,6 +1,6 @@
-var i = t(582128);
-t.d(
-    a,
+var i = a(582128);
+a.d(
+    t,
     {},
     {
         A: function (e) {

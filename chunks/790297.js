@@ -10,7 +10,7 @@ var l = n(582128),
     m = n(758836),
     h = n(652215),
     g = n(682901);
-function p(e) {
+function E(e) {
     let { analyticsSource: t, analyticsLocations: n } = (0, r.cf)([d.A], () => d.A.getAnalytics()),
         l = (function (e) {
             switch (e) {
@@ -49,7 +49,7 @@ n.d(
     {},
     {
         N0: function (e, t) {
-            let { analyticsLocations: n } = p(e);
+            let { analyticsLocations: n } = E(e);
             l.useEffect(() => {
                 null == t ||
                     c.Ay.canUseCollectibles(t) ||
@@ -57,11 +57,11 @@ n.d(
                     (0, i.sq)(h.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(g.e.COLLECTIBLES_SHOP)));
             }, [n, t]);
         },
-        lC: p,
+        lC: E,
         uS: function (e, t, n, r) {
             let { sourceButton: s, enabled: a = !0 } =
                     arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-                { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = p(t);
+                { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = E(t);
             l.useEffect(() => {
                 if (!a || r !== m.Pf.VISIBLE || d !== c) return;
                 let l = t === m.G2.CATALOG ? s : o;

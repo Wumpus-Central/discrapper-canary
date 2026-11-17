@@ -3,8 +3,8 @@ var r,
     s = n(582128),
     a = n(164636),
     l = n(834730),
-    u = n(287809),
-    o = n(448645),
+    o = n(287809),
+    u = n(448645),
     d = n(298072),
     c = n(993408),
     I = n(740076),
@@ -14,81 +14,81 @@ var r,
     m = n(219103),
     g = n(561769),
     x = n(57020),
-    E = n(792996),
-    _ = n(178287),
-    A = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
-function h(e) {
+    _ = n(792996),
+    A = n(178287),
+    E = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
+function C(e) {
     let { product: t, prioritizedCurrency: n, promoPriceLayout: r, textVariant: d, discountIconSize: f = "sm" } = e,
-        g = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-        A = o.Ay.canUseCollectibles(g),
-        h = (0, c.xM)(g),
-        C = null != h,
+        g = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+        E = u.Ay.canUseCollectibles(g),
+        C = (0, c.xM)(g),
+        h = null != C,
         { isDisabled: b } = (0, I.I)(t.skuId),
         { isPurchased: R, isPartiallyOwnedBundle: k } = (0, v.h)(t),
-        y = (0, c.G0)(t),
-        S = (0, c.tt)(t),
+        O = (0, c.G0)(t),
+        y = (0, c.tt)(t),
         {
-            checkoutEligiblePrices: j,
-            checkoutEligibleFormerPrices: O,
+            checkoutEligiblePrices: S,
+            checkoutEligibleFormerPrices: j,
             hasSufficientOrbs: T,
             shouldCheckoutWithOrbs: N,
-        } = (0, x.F)({ product: t, hasShopDiscount: C, prioritizedCurrency: n }),
-        P = j[0]?.currency,
-        V = s.useMemo(() => (0, c.fT)(t, C, P), [t, C, P]);
+        } = (0, x.F)({ product: t, hasShopDiscount: h, prioritizedCurrency: n }),
+        P = S[0]?.currency,
+        V = s.useMemo(() => (0, c.fT)(t, h, P), [t, h, P]);
     if (b)
         return (0, i.jsx)(l.E, {
             variant: d ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
-            children: E.intl.string(E.t.wu4gyV),
+            children: _.intl.string(_.t.wu4gyV),
         });
     if (k)
         return (0, i.jsx)(l.E, {
             variant: d ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
-            children: E.intl.string(E.t.BEjTij),
+            children: _.intl.string(_.t.BEjTij),
         });
-    if (R && !(y && !A))
+    if (R && !(O && !E))
         return (0, i.jsx)(l.E, {
             variant: d ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
-            children: E.intl.string(E.t["6cfuDj"]),
-        });
-    if (S)
-        return (0, i.jsx)(l.E, {
-            variant: d ?? "body-md/semibold",
-            color: "text-strong",
-            lineClamp: 1,
-            children: E.intl.string(E.t.nBtvYB),
+            children: _.intl.string(_.t["6cfuDj"]),
         });
     if (y)
         return (0, i.jsx)(l.E, {
             variant: d ?? "body-md/semibold",
             color: "text-strong",
             lineClamp: 1,
-            children: E.intl.string(E.t.rt69oo),
+            children: _.intl.string(_.t.nBtvYB),
         });
-    if (0 === j.length) return null;
-    let L = O[0],
+    if (O)
+        return (0, i.jsx)(l.E, {
+            variant: d ?? "body-md/semibold",
+            color: "text-strong",
+            lineClamp: 1,
+            children: _.intl.string(_.t.rt69oo),
+        });
+    if (0 === S.length) return null;
+    let L = j[0],
         D = null != L,
         M = D && "STACKED" === r,
-        w = N && !T ? _.cR : void 0,
-        B = (0, i.jsx)(m.x, {
-            priceAmount: j[0].amount,
-            priceCurrency: j[0].currency,
+        B = N && !T ? A.cR : void 0,
+        w = (0, i.jsx)(m.x, {
+            priceAmount: S[0].amount,
+            priceCurrency: S[0].currency,
             discount: D ? c.rr : V,
-            discountIconConfig: C ? { displayMode: "default", source: h ?? c.D0.NITRO, size: f } : void 0,
-            className: M ? _.wC : w,
+            discountIconConfig: h ? { displayMode: "default", source: C ?? c.D0.NITRO, size: f } : void 0,
+            className: M ? A.wC : B,
             variant: d ?? "body-md/semibold",
         });
     return D
         ? (0, i.jsxs)("div", {
-              className: M ? _.rV : _.KQ,
-              children: [(0, i.jsx)(p.a, { price: L, variant: "body-md/medium", className: M ? _.ug : void 0 }), B],
+              className: M ? A.rV : A.KQ,
+              children: [(0, i.jsx)(p.a, { price: L, variant: "body-md/medium", className: M ? A.ug : void 0 }), w],
           })
-        : B;
+        : w;
 }
 n.d(
     t,
@@ -103,17 +103,17 @@ n.d(
                     discountIconSize: a,
                 } = e,
                 l = (0, g.Vm)(t),
-                u = (0, d.Q)(l);
+                o = (0, d.Q)(l);
             if (null == l) return null;
-            let o = (0, f.rb)(l, u);
-            return (0, i.jsx)(h, {
-                product: o,
+            let u = (0, f.rb)(l, o);
+            return (0, i.jsx)(C, {
+                product: u,
                 prioritizedCurrency: n,
                 promoPriceLayout: r,
                 textVariant: s,
                 discountIconSize: a,
             });
         },
-        e: A,
+        e: E,
     },
 );

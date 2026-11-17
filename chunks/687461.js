@@ -19,7 +19,7 @@ function v(e) {
         l = r.useCallback(() => n(e), [e]);
     return [e !== t ? e : null, l];
 }
-let C = (e) => {
+let A = (e) => {
         let { day: t } = e;
         return (0, l.jsx)("span", {
             className: f.U$,
@@ -33,7 +33,7 @@ let C = (e) => {
             }),
         });
     },
-    A = (e) => {
+    C = (e) => {
         let { skuId: t, tilePosition: n, listItemProps: s } = e,
             a = r.useMemo(() => ({ tilePosition: n }), [n]);
         return null == t
@@ -60,13 +60,13 @@ let C = (e) => {
                         null != n && (0, l.jsx)("img", { className: a()(f.LY, f.nu), src: n, alt: "", onError: s }),
                         null != r &&
                             (0, l.jsx)("img", { className: a()(f.LY, f.nu, f.qC), src: r, alt: "", onError: i }),
-                        !d && (0, l.jsx)(C, { day: t }),
+                        !d && (0, l.jsx)(A, { day: t }),
                     ],
                 }),
                 (0, l.jsxs)("div", {
                     className: a()(f.a7, { [f.u0]: m }),
                     children: [
-                        d && (0, l.jsx)(C, { day: t }),
+                        d && (0, l.jsx)(A, { day: t }),
                         (0, l.jsx)(c.$, {
                             ...u,
                             variant: "overlay-primary",
@@ -102,7 +102,7 @@ let C = (e) => {
             children: [
                 null != r && (0, l.jsx)("img", { className: f.LY, src: r, alt: "", onError: i }),
                 null != s && (0, l.jsx)("img", { className: a()(f.LY, f.qC), src: s, alt: "", onError: o }),
-                (0, l.jsx)(C, { day: t }),
+                (0, l.jsx)(A, { day: t }),
                 null != d &&
                     (0, l.jsx)("span", {
                         className: f._J,
@@ -145,7 +145,7 @@ let C = (e) => {
                 (clearTimeout(t), null != p.current && (clearTimeout(p.current), (p.current = null)));
             };
         }, [v, g]);
-        let C = r.useCallback(
+        let A = r.useCallback(
             (e) => {
                 null == o && e.target === e.currentTarget && g();
             },
@@ -159,7 +159,7 @@ let C = (e) => {
                 null != i && (0, l.jsx)("img", { className: a()(f.LY, f.QH), src: i, alt: "" }),
                 (0, l.jsx)("div", {
                     className: a()(f.Dx, x[u]),
-                    onAnimationEnd: C,
+                    onAnimationEnd: A,
                     children: (0, l.jsx)(y, {
                         day: t,
                         lockedAssetUrl: n,
@@ -190,7 +190,7 @@ n.d(
                     lockedAssetUrl: g,
                     hintAssetUrl: p,
                     idleAnimationUrl: x,
-                    revealAnimationUrl: C,
+                    revealAnimationUrl: A,
                     tilePosition: b,
                     revealDate: S = null,
                     aspectRatio: I,
@@ -225,7 +225,7 @@ n.d(
             let z = u === i.G.LARGE_SQUARE;
             switch (s) {
                 case E.k$.REVEALED:
-                    t = (0, l.jsx)(A, { skuId: m, tilePosition: b, listItemProps: O });
+                    t = (0, l.jsx)(C, { skuId: m, tilePosition: b, listItemProps: O });
                     break;
                 case E.k$.OPENABLE:
                     t = (0, l.jsx)(y, {
@@ -254,11 +254,11 @@ n.d(
             }
             let Y = s === E.k$.REVEALED,
                 q = s === E.k$.OPENABLE,
-                X = q && !B && null != C;
+                X = q && !B && null != A;
             return (
                 r.useEffect(() => {
-                    X && null != C && (new Image().src = C);
-                }, [X, C]),
+                    X && null != A && (new Image().src = A);
+                }, [X, A]),
                 (0, l.jsxs)(N, {
                     ref: V,
                     className: a()(f.Vs, { [f.Ml]: Y, [f.Zk]: q, [f.Jl]: z, [f.W_]: c }, j),
@@ -279,7 +279,7 @@ n.d(
                                 lockedAssetUrl: D,
                                 hintAssetUrl: M,
                                 idleAnimationUrl: H,
-                                revealAnimationUrl: C,
+                                revealAnimationUrl: A,
                                 slideDirection: (0, E.BZ)(u),
                                 isNumberAboveButton: z,
                                 onLockedAssetError: P,

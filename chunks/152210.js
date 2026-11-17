@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(915089),
     x = n(462446),
     E = n(750506),
-    S = n(513609),
-    y = n(71393),
+    y = n(513609),
+    S = n(71393),
     C = n(597184),
     A = n(105330),
     b = n(265431),
@@ -43,7 +43,7 @@ function B(e) {
         { ref: r, ...B } = e,
         { channel: F, type: G, editorHeight: K, onVisibilityChange: H, editorScrollerRef: z, barsHeight: q } = B,
         $ = (0, g.GV)(),
-        Q = (0, o.bG)([y.A], () => y.A.getGuild(F.guild_id) ?? null, [F.guild_id]),
+        Q = (0, o.bG)([S.A], () => S.A.getGuild(F.guild_id) ?? null, [F.guild_id]),
         Z = i.useRef(null),
         [X, Y, J] = (function (e, t, n) {
             let { channel: l, type: r } = e,
@@ -120,14 +120,14 @@ function B(e) {
                 })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => A.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
-                S = null;
-            null != E && (S = T.VW.getSelectedParentOfType(E, w.mk)?.[0] ?? null);
-            let y = {
+                y = null;
+            null != E && (y = T.VW.getSelectedParentOfType(E, w.mk)?.[0] ?? null);
+            let S = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
                     activeCommandOption: f,
-                    activeInlineAutocompleteInput: S,
+                    activeInlineAutocompleteInput: y,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
@@ -145,10 +145,10 @@ function B(e) {
                             ? (0, I.AA)({ [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, f.name)
                             : "",
                 },
-                [A] = i.useState(() => new w.Ay(y));
+                [A] = i.useState(() => new w.Ay(S));
             return (
                 i.useEffect(() => {
-                    A.updateProps(y);
+                    A.updateProps(S);
                 }),
                 i.useImperativeHandle(t, () => A, [A]),
                 i.useEffect(() => () => A.unmount(), [A]),
@@ -179,7 +179,7 @@ function B(e) {
                 [s, A, g]
             );
         })({ ...B, guild: Q }, r, Z),
-        ee = G.autocomplete?.forceChatLayer ? S.Ay : E.Ay,
+        ee = G.autocomplete?.forceChatLayer ? y.Ay : E.Ay,
         et = i.useMemo(() => {
             if (!X.isVisible || X.query?.type !== C.DB.MENTIONS) return null;
             let e = X.query.results.users;

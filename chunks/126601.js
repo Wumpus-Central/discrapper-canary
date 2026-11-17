@@ -1,14 +1,14 @@
-var i,
-    l,
+var l,
+    i,
     a = n(761915),
     s = n(792996),
     r =
-        (((i = {}).RIBBON = "ribbon"),
-        (i.THUMBS_UP = "thumbsUp"),
-        (i.THUMBS_DOWN = "thumbsDown"),
-        (i.FRIENDS = "friends"),
-        i);
-let o = {
+        (((l = {}).RIBBON = "ribbon"),
+        (l.THUMBS_UP = "thumbsUp"),
+        (l.THUMBS_DOWN = "thumbsDown"),
+        (l.FRIENDS = "friends"),
+        l);
+let d = {
     [a.X.BETTER_THAN_YOU]: { getText: () => s.intl.string(s.t.jbIRBE), iconRole: "ribbon" },
     [a.X.CASUAL]: { getText: () => s.intl.string(s.t.xcFFv6), iconRole: "ribbon" },
     [a.X.INTERMEDIATE]: { getText: () => s.intl.string(s.t["A/mIs/"]), iconRole: "ribbon" },
@@ -24,7 +24,7 @@ let o = {
     [a.X.OPEN_TO_TEACH]: { getText: () => s.intl.string(s.t["5HhQo+"]), iconRole: "friends" },
     [a.X.LOOKING_TO_DISCUSS]: { getText: () => s.intl.string(s.t.GipOCq), iconRole: "friends" },
 };
-var d = (((l = {}).RADIO = "radio"), (l.CHECKBOX = "checkbox"), l);
+var o = (((i = {}).RADIO = "radio"), (i.CHECKBOX = "checkbox"), i);
 let c = {
     skill_level: {
         getLabel: () => s.intl.string(s.t.MKqADM),
@@ -54,9 +54,9 @@ n.d(
     {
         E: function (e) {
             let t = {};
-            for (let n of Object.keys(o)) {
-                let i = o[n];
-                null != i && (t[n] = { getText: i.getText, icon: e[i.iconRole] });
+            for (let n of Object.keys(d)) {
+                let l = d[n];
+                null != l && (t[n] = { getText: l.getText, icon: e[l.iconRole] });
             }
             return t;
         },
@@ -65,7 +65,7 @@ n.d(
             return e.filter((e) => !t.includes(e));
         },
         Pb: c,
-        me: d,
+        me: o,
         pK: function (e, t) {
             let n = Object.values(c).find((e) => {
                 let { tags: n } = e;

@@ -20,8 +20,8 @@ n.d(
                         let e = n[l],
                             a = o[l],
                             u = d[l],
-                            f = !0 === t && a?.type === r.R.BUNDLE && 0 === a.items.length;
-                        (null == a || f) &&
+                            p = !0 === t && a?.type === r.R.BUNDLE && 0 === a.items.length;
+                        (null == a || p) &&
                             (null == e || e.productLine === c.EZt.COLLECTIBLES) &&
                             u?.state !== "fetching" &&
                             !h[l] &&

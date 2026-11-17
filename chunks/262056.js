@@ -18,7 +18,7 @@ n.d(
     {},
     {
         A: function (e) {
-            let { current: t, target: n, progressColor: r = d, segmentGap: p = 4, children: E } = e,
+            let { current: t, target: n, progressColor: r = d, segmentGap: E = 4, children: p } = e,
                 f = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 x = Math.round(n);
             if (x > 1 && x <= 12) {
@@ -26,11 +26,11 @@ n.d(
                 return (0, l.jsxs)("div", {
                     className: u.iE,
                     children: [
-                        E,
+                        p,
                         (0, l.jsx)("svg", {
                             className: u.hN,
                             viewBox: "0 0 120 120",
-                            children: ((e = p / 60),
+                            children: ((e = E / 60),
                             (n = (0, a.clamp)(Math.floor(t), 0, x)),
                             (i = (2 * Math.PI) / x),
                             Array.from({ length: x }, (t, l) => {
@@ -64,11 +64,11 @@ n.d(
                     ],
                 });
             }
-            let C = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
+            let v = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
             return (0, l.jsxs)("div", {
                 className: u.iE,
                 children: [
-                    E,
+                    p,
                     (0, l.jsxs)("svg", {
                         className: u.hN,
                         viewBox: "0 0 120 120",
@@ -82,7 +82,7 @@ n.d(
                                 strokeWidth: 6,
                                 stroke: r,
                                 strokeDasharray: c,
-                                strokeDashoffset: C,
+                                strokeDashoffset: v,
                             }),
                         ],
                     }),

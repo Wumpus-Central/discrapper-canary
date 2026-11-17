@@ -24,19 +24,19 @@ var p = n(120692),
     b = n(822123),
     T = n(863576),
     S = n(73153),
-    I = n(95701),
-    j = n(596344),
+    j = n(95701),
+    I = n(596344),
     N = n(652215);
-let R = (0, u.UT)(j.A, {
+let R = (0, u.UT)(I.A, {
     getQueryId: (e, t, n, i, l) => (null != n && null != t && null != i && l ? e.id : null),
-    get: (e) => (j.A.isReady(e.id) ? j.A.getMessages(e.id) : null),
+    get: (e) => (I.A.isReady(e.id) ? I.A.getMessages(e.id) : null),
     load: async (e, t, n, i) => {
         if (null == n || null == t) return;
         let l = e.id;
         (await _.A.fetchMessages({ channelId: l, limit: 100 }),
             await S.h.dispatch({
                 type: "THREAD_CREATE",
-                channel: new I.Lt({
+                channel: new j.Lt({
                     id: l,
                     parent_id: t,
                     type: N.rbe.MEDIA_THREAD,
@@ -48,7 +48,7 @@ let R = (0, u.UT)(j.A, {
                 messageId: e.id,
             }));
     },
-    getIsLoading: (e) => j.A.isLoadingMessages(e.id),
+    getIsLoading: (e) => I.A.isLoadingMessages(e.id),
 });
 var O = n(451909),
     M = n(118517),
@@ -84,9 +84,9 @@ function z(e) {
         } = e,
         m = n.id,
         S = (0, b.QZ)(o),
-        I = null != d && d < 460,
-        z = S.slice(0, I ? 2 : 3),
-        Y = (0, u.bG)([j.A], () => j.A.getMessage(r, s), [r, s]),
+        j = null != d && d < 460,
+        z = S.slice(0, j ? 2 : 3),
+        Y = (0, u.bG)([I.A], () => I.A.getMessage(r, s), [r, s]),
         q = (0, u.bG)([L.A], () => L.A.getChannel(r), [r]),
         Q = (0, u.bG)([L.A], () => L.A.getChannel(m), [m]),
         { enableMediaComments: $ } = U.useConfig({ location: "ClipEmbedMediaMentionBar" }),
@@ -212,7 +212,7 @@ function z(e) {
                 }),
             }),
             ei > 0 &&
-                !I &&
+                !j &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(K, {}),
@@ -264,7 +264,7 @@ function el(e) {
         { enableMediaComments: d } = U.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
         m = (0, h.Lt)(n.flags ?? 0, N.sbO.HAS_TIMELINE_COMMENTS),
         { isActive: g, isControlBarExpanded: A } = (0, f.X$)(),
-        C = (0, u.bG)([j.A], () => j.A.getMessage(s, o), [s, o]),
+        C = (0, u.bG)([I.A], () => I.A.getMessage(s, o), [s, o]),
         { data: E } = R(n, s, a, C?.author.id, d && m && g);
     return (l.useEffect(() => {
         g && R.refetch(n, s, a, C?.author.id, d && m && g);
@@ -321,25 +321,25 @@ function ea(e) {
         }
     }, [t?.mediaMention?.timestamp, c]);
     let T = h || !d || C,
-        [S, I] = (0, q.z)(() => ({ ...ei(T), config: { ...Y.n } }));
+        [S, j] = (0, q.z)(() => ({ ...ei(T), config: { ...Y.n } }));
     if (
         (l.useEffect(() => {
             let e = !1;
             return (
                 !(async function () {
                     b(!0);
-                    let t = await I(ei(T));
+                    let t = await j(ei(T));
                     !e && t.finished && b(!1);
                 })(),
                 () => {
                     e = !0;
                 }
             );
-        }, [I, T]),
+        }, [j, T]),
         null == t)
     )
         return null;
-    let j = (0, i.jsx)(x.D, {
+    let I = (0, i.jsx)(x.D, {
         className: en.xL,
         style: { left: a, display: r ? "none" : "block" },
         inert: r,
@@ -374,7 +374,7 @@ function ea(e) {
         }),
     });
     return null == u
-        ? j
+        ? I
         : (0, i.jsx)(g.u, {
               positionKey: `${m}`,
               forceOpen: h && null == s && !v,
@@ -386,7 +386,7 @@ function ea(e) {
               assetSize: 16,
               lineClamp: 1,
               body: u,
-              children: j,
+              children: I,
           });
 }
 var es = n(478531),
@@ -495,13 +495,13 @@ function e_(e) {
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([k.default, j.A], () => {
-            let e = j.A.getMessage(n, r);
+        f = (0, u.bG)([k.default, I.A], () => {
+            let e = I.A.getMessage(n, r);
             return (
                 null != e &&
                 e.author?.id !== k.default.getId() &&
                 (null == e.messageReference ||
-                    j.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
+                    I.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
         p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
@@ -552,9 +552,9 @@ function eb(e) {
             durationSeconds: b,
             showTimelineComments: T,
             setIsGridView: S,
-            isGridView: I,
+            isGridView: j,
         } = e,
-        j = (0, u.bG)([m.A], () => m.A.theme),
+        I = (0, u.bG)([m.A], () => m.A.theme),
         { activeLayer: N } = (0, f.X$)(),
         { ref: R, width: O } = (0, s.Ay)();
     return (0, i.jsx)(c.N, {
@@ -575,10 +575,10 @@ function eb(e) {
                         isFullScreen: A,
                         activeLayer: N,
                         showTextContent: E,
-                        isGridView: I,
+                        isGridView: j,
                         setIsGridView: S,
                     }),
-                    !I &&
+                    !j &&
                         null != v &&
                         null != x &&
                         (0, i.jsx)(e_, {
@@ -588,7 +588,7 @@ function eb(e) {
                             messageId: v,
                             channelId: x,
                         }),
-                    !I &&
+                    !j &&
                         _ &&
                         null != h.clip_events_timeline &&
                         null != x &&
@@ -598,7 +598,7 @@ function eb(e) {
                         null != x &&
                         null != v &&
                         (0, i.jsx)(d.NA.Provider, {
-                            value: j,
+                            value: I,
                             children: (0, i.jsx)(z, {
                                 controlBarAnimationSpring: n,
                                 attachment: h,

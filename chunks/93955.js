@@ -16,8 +16,8 @@ var l = n(477900),
     f = n(812095),
     x = n(288106),
     v = n(604913),
-    C = n(65238),
-    A = n(773669),
+    A = n(65238),
+    C = n(773669),
     y = n(975571),
     L = n(304210),
     _ = n(324157),
@@ -146,7 +146,7 @@ function Y(e) {
             onClaim: x,
         } = e,
         v = null != s ? d : i,
-        { handleInlineHelpTextClick: C, handleClaim: A, handleUseNowClick: y } = z(t, n, x);
+        { handleInlineHelpTextClick: A, handleClaim: C, handleUseNowClick: y } = z(t, n, x);
     return (0, l.jsxs)(o.B, {
         direction: "horizontal",
         gap: 16,
@@ -159,7 +159,7 @@ function Y(e) {
                 gap: 8,
                 align: "start",
                 className: F._,
-                onClick: C,
+                onClick: A,
                 children: [
                     null != v &&
                         (0, l.jsx)(u.E, { variant: "body-md/semibold", color: "text-strong", children: (0, f.U)(v) }),
@@ -170,7 +170,7 @@ function Y(e) {
                         claimRewardButtonVariant: E,
                         useNowButtonVariant: E,
                         isClaiming: p,
-                        onClaim: A,
+                        onClaim: C,
                         onUseNowClick: y,
                     }),
                 ],
@@ -186,8 +186,8 @@ function q(e) {
             progress: i,
             progressColor: p,
             backgroundUrl: v,
-            title: C,
-            description: A,
+            title: A,
+            description: C,
             progressText: L,
             timeLeftText: _,
             contentThemeClassName: S,
@@ -227,13 +227,13 @@ function q(e) {
                             (0, l.jsx)(d.D, {
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
-                                children: (0, f.U)(C),
+                                children: (0, f.U)(A),
                             }),
-                            null != A &&
+                            null != C &&
                                 (0, l.jsx)(u.E, {
                                     variant: "body-sm/medium",
                                     color: "text-subtle",
-                                    children: (0, f.U)(A),
+                                    children: (0, f.U)(C),
                                 }),
                         ],
                     }),
@@ -283,7 +283,7 @@ function q(e) {
 }
 function X(e) {
     let { variant: t, surface: n, promotion: s, collectAndClaim: a, rewardProduct: o, isClaiming: u, onClaim: c } = e,
-        d = (0, i.bG)([A.default], () => A.default.locale);
+        d = (0, i.bG)([C.default], () => C.default.locale);
     r.useEffect(() => {
         (0, b.l)(s, n, $.Z.PROMO_VIEWED);
     }, [s.id, n]);
@@ -306,15 +306,15 @@ function X(e) {
         })(s, h.rewardPreview),
         v = (0, U.A)(f?.timeLeftDate);
     if (null == f) return null;
-    let { progress: C } = s;
+    let { progress: A } = s;
     if (
-        (null == C &&
+        (null == A &&
             (s.rewardStatus === x.GM.EARNED || s.rewardStatus === x.GM.CONSUMED) &&
-            (C = { current: 4, target: 4, label: "collected" }),
-        f.showProgressRing && null == C)
+            (A = { current: 4, target: 4, label: "collected" }),
+        f.showProgressRing && null == A)
     )
         return null;
-    let y = f.showProgressRing && null != C,
+    let y = f.showProgressRing && null != A,
         {
             title: L,
             description: S,
@@ -322,7 +322,7 @@ function X(e) {
             timeLeftText: j,
         } = (0, _.MZ)({
             promotion: s,
-            promotionProgress: C,
+            promotionProgress: A,
             progressIndicator: m.progressIndicator,
             helpCenterId: E,
             daysRemaining: v,
@@ -332,7 +332,7 @@ function X(e) {
             promotion: s,
             surface: n,
             assetPath: f.assetPath,
-            progress: y ? C : null,
+            progress: y ? A : null,
             progressColor: g?.progressColor,
             backgroundUrl: h.backgroundUrl,
             title: L,
@@ -359,7 +359,7 @@ let Q = function (e) {
             [i],
         ),
         { onClaim: u, isClaiming: c, rewardProduct: d } = (0, H.G)(a, o),
-        m = (0, C.XF)(a);
+        m = (0, A.XF)(a);
     return null == a || null == m || null == s || m.collectionId !== s
         ? null
         : (0, l.jsx)(X, {

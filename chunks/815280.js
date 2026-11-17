@@ -15,11 +15,11 @@ n.d(
         A: function (e) {
             let { bannerStatic: t, bannerAnimated: n, bannerRive: r, isResponsive: m = !1, eventTargetRef: h } = e,
                 g = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
-                p = (0, a.bG)([c.A], () => c.A.isFocused()),
-                E = null != n && !g && p;
+                E = (0, a.bG)([c.A], () => c.A.isFocused()),
+                p = null != n && !g && E;
             return null != r
                 ? (0, l.jsx)(i._, { src: r, fit: "fit-width", eventTargetRef: h })
-                : E
+                : p
                   ? (0, l.jsx)(u.A, { className: s()({ [d.no]: m }, d.BW, d.ud), src: n, autoPlay: !0, loop: !0 })
                   : (0, l.jsx)("div", {
                         className: s()({ [d.no]: m }, d.BW, d._e),

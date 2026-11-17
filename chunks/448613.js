@@ -1,43 +1,43 @@
 var l = t(308528),
     i = t(138399),
-    r = t(355622),
-    a = t(428249),
+    a = t(355622),
+    r = t(428249),
     s = t(451909),
     o = t(138298),
     u = t(940382),
     c = t(799704),
     d = t(734057),
     f = t(710272),
-    S = t(381941);
+    A = t(381941);
 t.d(
     n,
     {},
     {
         p: async function (e) {
-            let { userId: n, content: t, location: A, openChannel: T = !0, whenReady: h = !1, entry: m, nonce: g } = e,
-                { valid: x, failureReason: E } = await (0, f.i)({ type: r.oU.NORMAL, content: t, channel: null });
+            let { userId: n, content: t, location: S, openChannel: h = !0, whenReady: T = !1, entry: m, nonce: g } = e,
+                { valid: x, failureReason: E } = await (0, f.i)({ type: a.oU.NORMAL, content: t, channel: null });
             if (!x) throw Error(E);
-            let R = T
-                    ? await l.A.openPrivateChannel({ recipientIds: n, location: A })
+            let p = h
+                    ? await l.A.openPrivateChannel({ recipientIds: n, location: S })
                     : await l.A.getOrEnsurePrivateChannel(n),
-                p = d.A.getChannel(R);
-            if (null == p) throw Error("Failed to open private channel");
+                R = d.A.getChannel(p);
+            if (null == R) throw Error("Failed to open private channel");
             let C = c.Ay.getSidebarState(c.fe);
             if (
-                (T && C?.type === u.PE.VIEW_MESSAGE_REQUEST && C.channelId === p.id && o.A.closeChannelSidebar(c.fe),
+                (h && C?.type === u.PE.VIEW_MESSAGE_REQUEST && C.channelId === R.id && o.A.closeChannelSidebar(c.fe),
                 null != m)
             )
-                (0, a.d)({
-                    channel: p,
+                (0, r.d)({
+                    channel: R,
                     content: t,
                     entry: m,
-                    whenReady: h,
+                    whenReady: T,
                     doNotNotifyOnError: !1,
-                    location: S.Hx.USER_PROFILE,
+                    location: A.Hx.USER_PROFILE,
                 });
             else {
-                let e = s.Ay.parse(p, t);
-                return i.A.sendMessage(p.id, e, h, { location: S.Hx.USER_PROFILE, nonce: g });
+                let e = s.Ay.parse(R, t);
+                return i.A.sendMessage(R.id, e, T, { location: A.Hx.USER_PROFILE, nonce: g });
             }
         },
     },

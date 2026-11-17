@@ -14,7 +14,7 @@ n.d(
                 [i, u] = r.useState(null),
                 [c, o] = r.useState(null),
                 [d, h] = r.useState(null),
-                f = r.useMemo(
+                p = r.useMemo(
                     () => ({
                         purchaseErrorBlockRef: n,
                         bodyNode: i,
@@ -26,7 +26,7 @@ n.d(
                     }),
                     [n, i, c, d],
                 );
-            return (0, l.jsx)(s, { value: f, children: t });
+            return (0, l.jsx)(s, { value: p, children: t });
         },
     },
 );

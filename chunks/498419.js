@@ -1,5 +1,6 @@
 !(function () {
     var e = function (t) {
+        "use strict";
         t = t || {};
         var e,
             n,
@@ -9,15 +10,15 @@
             a,
             s,
             c,
-            l,
             u,
+            l,
             h,
-            p,
             f,
             d,
+            p,
             g,
-            _,
-            m = {
+            m,
+            v = {
                 bgColor: "#d00",
                 textColor: "#fff",
                 fontFamily: "sans-serif",
@@ -29,43 +30,43 @@
                 dataUrl: !1,
                 win: window,
             };
-        (((f = {}).ff = "u" > typeof InstallTrigger),
-            (f.chrome = !!window.chrome),
-            (f.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
-            (f.ie = !1),
-            (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (f.supported = f.chrome || f.ff || f.opera));
+        (((d = {}).ff = "u" > typeof InstallTrigger),
+            (d.chrome = !!window.chrome),
+            (d.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
+            (d.ie = !1),
+            (d.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
+            (d.supported = d.chrome || d.ff || d.opera));
         var y = [];
-        ((h = function () {}), (c = p = !1));
-        var b = {};
-        ((b.ready = function () {
-            ((c = !0), b.reset(), h());
+        ((h = function () {}), (c = f = !1));
+        var _ = {};
+        ((_.ready = function () {
+            ((c = !0), _.reset(), h());
         }),
-            (b.reset = function () {
+            (_.reset = function () {
                 c &&
                     ((y = []),
-                    (l = !1),
                     (u = !1),
+                    (l = !1),
                     a.clearRect(0, 0, r, i),
                     a.drawImage(s, 0, 0, r, i),
                     E.setIcon(o),
-                    window.clearTimeout(d),
+                    window.clearTimeout(p),
                     window.clearTimeout(g));
             }),
-            (b.start = function () {
-                if (c && !u) {
+            (_.start = function () {
+                if (c && !l) {
                     var t = function () {
-                        ((l = y[0]), (u = !1), y.length > 0 && (y.shift(), b.start()));
+                        ((u = y[0]), (l = !1), y.length > 0 && (y.shift(), _.start()));
                     };
                     if (y.length > 0) {
-                        u = !0;
+                        l = !0;
                         var n = function () {
                             (["type", "animation", "bgColor", "textColor", "fontFamily", "fontStyle"].forEach(
                                 function (t) {
                                     t in y[0].options && (e[t] = y[0].options[t]);
                                 },
                             ),
-                                A.run(
+                                S.run(
                                     y[0].options,
                                     function () {
                                         t();
@@ -73,9 +74,9 @@
                                     !1,
                                 ));
                         };
-                        l
-                            ? A.run(
-                                  l.options,
+                        u
+                            ? S.run(
+                                  u.options,
                                   function () {
                                       n();
                                   },
@@ -85,8 +86,8 @@
                     }
                 }
             }));
-        var v = {},
-            w = function (t) {
+        var w = {},
+            b = function (t) {
                 return (
                     (t.n = "number" == typeof t.n ? Math.abs(0 | t.n) : t.n),
                     (t.x = r * t.x),
@@ -98,17 +99,17 @@
                 );
             };
         function x(t) {
-            if (t.paused || t.ended || p) return !1;
+            if (t.paused || t.ended || f) return !1;
             try {
                 (a.clearRect(0, 0, r, i), a.drawImage(t, 0, 0, r, i));
             } catch (t) {}
             ((g = setTimeout(function () {
                 x(t);
-            }, A.duration)),
+            }, S.duration)),
                 E.setIcon(o));
         }
-        ((v.circle = function (t) {
-            t = w(t);
+        ((w.circle = function (t) {
+            t = b(t);
             var n = !1;
             (2 === t.len
                 ? ((t.x = t.x - 0.4 * t.w), (t.w = 1.4 * t.w), (n = !0))
@@ -144,8 +145,8 @@
                     : a.fillText(t.n, Math.floor(t.x + t.w / 2), Math.floor(t.y + t.h - 0.15 * t.h)),
                 a.closePath());
         }),
-            (v.rectangle = function (t) {
-                (2 === (t = w(t)).len
+            (w.rectangle = function (t) {
+                (2 === (t = b(t)).len
                     ? ((t.x = t.x - 0.4 * t.w), (t.w = 1.4 * t.w))
                     : t.len >= 3 && ((t.x = t.x - 0.65 * t.w), (t.w = 1.65 * t.w)),
                     a.clearRect(0, 0, r, i),
@@ -167,7 +168,7 @@
                     a.closePath());
             }));
         var E = {};
-        function S(t) {
+        function A(t) {
             t = t.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (t, e, n, i) {
                 return e + e + n + n + i + i;
             });
@@ -187,11 +188,11 @@
                 e.element
                     ? (t = e.element)
                     : e.elementId
-                      ? (t = _.getElementById(e.elementId)).setAttribute("href", t.getAttribute("src"))
+                      ? (t = m.getElementById(e.elementId)).setAttribute("href", t.getAttribute("src"))
                       : !1 ===
                             (t = (function () {
                                 for (
-                                    var t = _.getElementsByTagName("head")[0].getElementsByTagName("link"),
+                                    var t = m.getElementsByTagName("head")[0].getElementsByTagName("link"),
                                         e = t.length,
                                         n = e - 1;
                                     n >= 0;
@@ -200,8 +201,8 @@
                                     if (/(^|\s)icon(\s|$)/i.test(t[n].getAttribute("rel"))) return t[n];
                                 return !1;
                             })()) &&
-                        ((t = _.createElement("link")).setAttribute("rel", "icon"),
-                        _.getElementsByTagName("head")[0].appendChild(t)),
+                        ((t = m.createElement("link")).setAttribute("rel", "icon"),
+                        m.getElementsByTagName("head")[0].appendChild(t)),
                 t.setAttribute("type", "image/png"),
                 t
             );
@@ -211,23 +212,23 @@
                 if ((e.dataUrl && e.dataUrl(i), e.element))
                     (e.element.setAttribute("href", i), e.element.setAttribute("src", i));
                 else if (e.elementId) {
-                    var r = _.getElementById(e.elementId);
+                    var r = m.getElementById(e.elementId);
                     (r.setAttribute("href", i), r.setAttribute("src", i));
-                } else if (f.ff || f.opera) {
+                } else if (d.ff || d.opera) {
                     var o = n;
-                    ((n = _.createElement("link")),
-                        f.opera && n.setAttribute("rel", "icon"),
+                    ((n = m.createElement("link")),
+                        d.opera && n.setAttribute("rel", "icon"),
                         n.setAttribute("rel", "icon"),
                         n.setAttribute("type", "image/png"),
-                        _.getElementsByTagName("head")[0].appendChild(n),
+                        m.getElementsByTagName("head")[0].appendChild(n),
                         n.setAttribute("href", i),
                         o.parentNode && o.parentNode.removeChild(o));
                 } else n.setAttribute("href", i);
             }));
-        var A = {};
-        ((A.duration = 40),
-            (A.types = {}),
-            (A.types.fade = [
+        var S = {};
+        ((S.duration = 40),
+            (S.types = {}),
+            (S.types.fade = [
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.2 },
@@ -240,8 +241,8 @@
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (A.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
-            (A.types.pop = [
+            (S.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
+            (S.types.pop = [
                 { x: 1, y: 1, w: 0, h: 0, o: 1 },
                 { x: 0.9, y: 0.9, w: 0.1, h: 0.1, o: 1 },
                 { x: 0.8, y: 0.8, w: 0.2, h: 0.2, o: 1 },
@@ -250,7 +251,7 @@
                 { x: 0.5, y: 0.5, w: 0.5, h: 0.5, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (A.types.popFade = [
+            (S.types.popFade = [
                 { x: 0.75, y: 0.75, w: 0, h: 0, o: 0 },
                 { x: 0.65, y: 0.65, w: 0.1, h: 0.1, o: 0.2 },
                 { x: 0.6, y: 0.6, w: 0.2, h: 0.2, o: 0.4 },
@@ -259,7 +260,7 @@
                 { x: 0.45, y: 0.45, w: 0.5, h: 0.5, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (A.types.slide = [
+            (S.types.slide = [
                 { x: 0.4, y: 1, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
@@ -269,34 +270,34 @@
                 { x: 0.4, y: 0.5, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (A.run = function (t, n, i, r) {
-                var a = A.types[_.hidden || _.msHidden || _.webkitHidden || _.mozHidden ? "none" : e.animation];
+            (S.run = function (t, n, i, r) {
+                var a = S.types[m.hidden || m.msHidden || m.webkitHidden || m.mozHidden ? "none" : e.animation];
                 ((r = !0 === i ? (void 0 !== r ? r : a.length - 1) : void 0 !== r ? r : 0),
                 (n = n || function () {}),
                 r < a.length && r >= 0)
-                    ? (v[e.type](T(t, a[r])),
-                      (d = setTimeout(function () {
-                          (i ? (r -= 1) : (r += 1), A.run(t, n, i, r));
-                      }, A.duration)),
+                    ? (w[e.type](T(t, a[r])),
+                      (p = setTimeout(function () {
+                          (i ? (r -= 1) : (r += 1), S.run(t, n, i, r));
+                      }, S.duration)),
                       E.setIcon(o))
                     : n();
             }),
-            ((e = T(m, t)).bgColor = S(e.bgColor)),
-            (e.textColor = S(e.textColor)),
+            ((e = T(v, t)).bgColor = A(e.bgColor)),
+            (e.textColor = A(e.textColor)),
             (e.position = e.position.toLowerCase()),
-            (e.animation = A.types["" + e.animation] ? e.animation : m.animation),
-            (_ = e.win.document));
+            (e.animation = S.types["" + e.animation] ? e.animation : v.animation),
+            (m = e.win.document));
         var R = e.position.indexOf("up") > -1,
             C = e.position.indexOf("left") > -1;
         if (R || C)
-            for (var M = 0; M < A.types["" + e.animation].length; M++) {
-                var I = A.types["" + e.animation][M];
-                (R && (I.y < 0.6 ? (I.y = I.y - 0.4) : (I.y = I.y - 2 * I.y + (1 - I.w))),
-                    C && (I.x < 0.6 ? (I.x = I.x - 0.4) : (I.x = I.x - 2 * I.x + (1 - I.h))),
-                    (A.types["" + e.animation][M] = I));
+            for (var P = 0; P < S.types["" + e.animation].length; P++) {
+                var M = S.types["" + e.animation][P];
+                (R && (M.y < 0.6 ? (M.y = M.y - 0.4) : (M.y = M.y - 2 * M.y + (1 - M.w))),
+                    C && (M.x < 0.6 ? (M.x = M.x - 0.4) : (M.x = M.x - 2 * M.x + (1 - M.h))),
+                    (S.types["" + e.animation][P] = M));
             }
         return (
-            (e.type = v["" + e.type] ? e.type : m.type),
+            (e.type = w["" + e.type] ? e.type : v.type),
             (n = E.getIcon()),
             (o = document.createElement("canvas")),
             (s = document.createElement("img")),
@@ -308,7 +309,7 @@
                           (o.height = i),
                           (o.width = r),
                           (a = o.getContext("2d")),
-                          b.ready());
+                          _.ready());
                   }),
                   s.setAttribute("src", n.getAttribute("href")))
                 : ((s.onload = function () {
@@ -319,7 +320,7 @@
                           (o.height = i),
                           (o.width = r),
                           (a = o.getContext("2d")),
-                          b.ready());
+                          _.ready());
                   }),
                   s.setAttribute("src", "")),
             {
@@ -331,11 +332,11 @@
                                     var n = { type: "badge", options: { n: t } };
                                     if (
                                         ("animation" in e &&
-                                            A.types["" + e.animation] &&
+                                            S.types["" + e.animation] &&
                                             (n.options.animation = "" + e.animation),
-                                        "type" in e && v["" + e.type] && (n.options.type = "" + e.type),
+                                        "type" in e && w["" + e.type] && (n.options.type = "" + e.type),
                                         ["bgColor", "textColor"].forEach(function (t) {
-                                            t in e && (n.options[t] = S(e[t]));
+                                            t in e && (n.options[t] = A(e[t]));
                                         }),
                                         ["fontStyle", "fontFamily"].forEach(function (t) {
                                             t in e && (n.options[t] = e[t]);
@@ -344,8 +345,8 @@
                                         y.length > 100)
                                     )
                                         throw Error("Too many badges requests in queue.");
-                                    b.start();
-                                } else b.reset();
+                                    _.start();
+                                } else _.reset();
                             } catch (t) {
                                 throw Error("Error setting badge. Message: " + t.message);
                             }
@@ -356,7 +357,7 @@
                     ((h = function () {
                         try {
                             if ("stop" === t) {
-                                ((p = !0), b.reset(), (p = !1));
+                                ((f = !0), _.reset(), (f = !1));
                                 return;
                             }
                             t.addEventListener(
@@ -399,7 +400,7 @@
                             (window.URL.createObjectURL = function (t) {
                                 return t;
                             })),
-                        f.supported)
+                        d.supported)
                     ) {
                         var e = !1;
                         ((navigator.getUserMedia =
@@ -411,7 +412,7 @@
                             (h = function () {
                                 try {
                                     if ("stop" === t) {
-                                        ((p = !0), b.reset(), (p = !1));
+                                        ((f = !0), _.reset(), (f = !1));
                                         return;
                                     }
                                     (((e = document.createElement("video")).width = r),
@@ -430,8 +431,8 @@
                             c && h());
                     }
                 },
-                reset: b.reset,
-                browser: { supported: f.supported },
+                reset: _.reset,
+                browser: { supported: d.supported },
             }
         );
     };

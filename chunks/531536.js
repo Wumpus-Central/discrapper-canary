@@ -9,7 +9,7 @@ var r = n(503698),
     o = n(607123),
     d = n(287809),
     h = n(137504);
-function f(e) {
+function p(e) {
     let { title: t, body: n, image: r, badge: a, className: s, textGroupClassName: u } = e;
     return (0, l.jsxs)("div", {
         className: i()(h.kL, s),
@@ -29,14 +29,14 @@ n.d(
     t,
     {},
     {
-        W: f,
+        W: p,
         v: function (e) {
-            let { className: t, product: n, title: r, subtitle: p, badge: m } = e,
+            let { className: t, product: n, title: r, subtitle: f, badge: m } = e,
                 C = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
                 y = (0, c.tP)(n);
             return null == y
                 ? null
-                : (0, l.jsx)(f, {
+                : (0, l.jsx)(p, {
                       className: t,
                       image: (0, l.jsx)("div", {
                           className: h.yn,
@@ -61,7 +61,7 @@ n.d(
                           null != r &&
                           (0, l.jsx)(u.E, { variant: "body-md/medium", color: "text-default", children: r }),
                       body:
-                          null != p && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: p }),
+                          null != f && (0, l.jsx)(u.E, { variant: "body-sm/medium", color: "text-muted", children: f }),
                   });
         },
     },

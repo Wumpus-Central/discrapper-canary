@@ -18,19 +18,19 @@ n.d(
             let h,
                 g = u(e, t);
             if (null == e || null == g) return t;
-            let p = (0, o.Q7)(g, n),
-                E = {
+            let E = (0, o.Q7)(g, n),
+                p = {
                     locale: s,
                     endsAt: e.endsAt,
                     redemptionEndsAt: e.redemptionEndsAt,
                     helpCenterId: g.shared.helpCenter?.id,
                 },
-                f = p?.title != null && "" !== p.title ? (0, l.U)((0, a.wJ)(p.title, E)) : t.title,
-                x = p?.description != null && "" !== p.description ? (0, l.U)((0, a.wJ)(p.description, E)) : t.summary;
+                f = E?.title != null && "" !== E.title ? (0, l.U)((0, a.wJ)(E.title, p)) : t.title,
+                x = E?.description != null && "" !== E.description ? (0, l.U)((0, a.wJ)(E.description, p)) : t.summary;
             if (g.subtype === r.h5.BASIC) return { ...t, title: f, summary: x };
-            let C =
-                p?.rewardStates != null
-                    ? ((c = p.rewardStates),
+            let v =
+                E?.rewardStates != null
+                    ? ((c = E.rewardStates),
                       (d = e.rewardStatus),
                       (m = e.progress?.current ?? 0),
                       null != (h = (0, i.x)(c, d, m)?.heroUrl) && "" !== h ? h : void 0)
@@ -39,7 +39,7 @@ n.d(
                 ...t,
                 title: f,
                 summary: x,
-                heroBannerUrl: C ?? t.heroBannerUrl,
+                heroBannerUrl: v ?? t.heroBannerUrl,
                 heroBannerAnimatedUrl: void 0,
                 heroRiveUrl: void 0,
             };

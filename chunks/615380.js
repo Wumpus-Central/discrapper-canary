@@ -1,4 +1,5 @@
 e.exports = (function () {
+    "use strict";
     var e = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
     function t(e, t) {
         var r = e[0],

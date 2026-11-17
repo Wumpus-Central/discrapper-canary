@@ -2,8 +2,8 @@ a.d(e, { A: () => h });
 var i = a(858899),
     l = a(610056),
     n = a(485845),
-    s = a(179771),
-    r = a(384739),
+    r = a(179771),
+    s = a(384739),
     c = a(633075),
     o = a(958805),
     d = a(61881),
@@ -12,9 +12,9 @@ var i = a(858899),
     A = a(998218),
     f = a(361504),
     E = a(260498),
-    m = a(191850),
-    g = a(792996);
-let I = new Set();
+    g = a(191850),
+    I = a(792996);
+let m = new Set();
 function h(t, e) {
     var a;
     let h,
@@ -24,7 +24,7 @@ function h(t, e) {
                 ? null
                 : {
                       clientId: t,
-                      scopes: [s.F.IDENTIFY, s.F.APPLICATION_IDENTITIES_WRITE],
+                      scopes: [r.F.IDENTIFY, r.F.APPLICATION_IDENTITIES_WRITE],
                       responseType: "code",
                       redirectUri: "https://127.0.0.1",
                       integrationType: n.b.GUILD_INSTALL,
@@ -34,8 +34,8 @@ function h(t, e) {
                           return (
                               null != l &&
                                   (async function (t, e, a, i) {
-                                      if (!I.has(e)) {
-                                          I.add(e);
+                                      if (!m.has(e)) {
+                                          m.add(e);
                                           try {
                                               await (async function (t, e, a, i) {
                                                   let { onTurnedOn: l, showToast: n } = i;
@@ -63,7 +63,7 @@ function h(t, e) {
                                                               }
                                                           })(e));
                                                   } catch {
-                                                      n({ text: g.intl.string(m.default.to9Sp4), variant: "critical" });
+                                                      n({ text: I.intl.string(g.default.to9Sp4), variant: "critical" });
                                                       return;
                                                   }
                                                   try {
@@ -71,10 +71,10 @@ function h(t, e) {
                                                   } catch (t) {
                                                       p.A.captureException(t);
                                                   }
-                                                  await (0, r.i)(e);
+                                                  await (0, s.i)(e);
                                               })(t, e, a, i);
                                           } finally {
-                                              I.delete(e);
+                                              m.delete(e);
                                           }
                                       }
                                   })(h, t, l, a),

@@ -3,8 +3,8 @@ var r = n(582128),
     s = n(172218),
     a = n(688810),
     l = n(139286),
-    u = n(857512),
-    o = n(298072),
+    o = n(857512),
+    u = n(298072),
     d = n(993408),
     c = n(623373),
     I = n(331884);
@@ -13,9 +13,9 @@ n.d(
     {},
     {
         U: function (e) {
-            let t = (0, u.uM)(),
+            let t = (0, o.uM)(),
                 { analyticsLocations: n } = (0, a.Ay)(),
-                v = (0, o.Q)(e),
+                v = (0, u.Q)(e),
                 f = (0, I.o)(),
                 p = (0, d.xM)(f),
                 m = r.useRef(null),
@@ -24,7 +24,7 @@ n.d(
             r.useEffect(() => {
                 x.current = v;
             }, [v]);
-            let E = r.useCallback(() => {
+            let _ = r.useCallback(() => {
                     let r = (0, c.B1)(e);
                     (0, l.x)(
                         {
@@ -44,12 +44,12 @@ n.d(
                         !0,
                     );
                 }, [e, t?.cardId, t?.sessionId, t?.tilePosition, n, p]),
-                _ = (0, s.K)((e) => {
+                A = (0, s.K)((e) => {
                     e
                         ? g.current ||
                           (null === m.current &&
                               (m.current = setTimeout(() => {
-                                  (E(), (g.current = !0), (m.current = null));
+                                  (_(), (g.current = !0), (m.current = null));
                               }, 1e3)))
                         : ((g.current = !1), null !== m.current && (clearTimeout(m.current), (m.current = null)));
                 }, 0.5);
@@ -60,7 +60,7 @@ n.d(
                     },
                     [],
                 ),
-                _
+                A
             );
         },
     },

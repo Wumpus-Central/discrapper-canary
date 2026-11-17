@@ -39,8 +39,8 @@ let T = l.memo(function (e) {
     let t,
         { source: n, masterSec: r, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: x } = e,
         T = l.useRef(null),
-        [S, I] = l.useState(!1),
-        j = E(n, r),
+        [S, j] = l.useState(!1),
+        I = E(n, r),
         N = r - n.startSec,
         R = r < n.startSec,
         O = Math.ceil(v(n, r)),
@@ -50,18 +50,18 @@ let T = l.memo(function (e) {
     (l.useEffect(() => {
         let e = T.current;
         if (null != e) {
-            if (!j) return void e.pause();
+            if (!I) return void e.pause();
             if (Math.abs(e.currentTime - N) > 0.35)
                 try {
                     e.currentTime = N;
                 } catch {}
             ((e.playbackRate = o), s ? e.play().catch(() => {}) : e.pause());
         }
-    }, [j, N, s, o, S]),
+    }, [I, N, s, o, S]),
         l.useEffect(() => (d?.(n.id, T.current), () => d?.(n.id, null)), [d, n.id]));
-    let D = c && !j && 0 !== O;
+    let D = c && !I && 0 !== O;
     return (
-        c && j
+        c && I
             ? (t = y.intl.formatToPlainString(_.default.zc1itm, { name: P }))
             : c && (t = y.intl.formatToPlainString(R ? _.default.dUPcpR : _.default.q8TlkE, { name: P, time: M })),
         (0, i.jsxs)("div", {
@@ -86,7 +86,7 @@ let T = l.memo(function (e) {
                                 disablePictureInPicture: !0,
                                 src: n.url,
                                 onLoadedMetadata: function () {
-                                    I(!0);
+                                    j(!0);
                                 },
                             }),
                         c &&
@@ -115,8 +115,8 @@ let T = l.memo(function (e) {
     );
 });
 var S = n(683063),
-    I = n(599507);
-let j = l.memo(function (e) {
+    j = n(599507);
+let I = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: r, currentMasterTimeSec: s, onSelect: o } = e,
         d = t.owner?.name ?? n ?? y.intl.string(_.default["6XuC8e"]),
         m = E(t, s),
@@ -130,7 +130,7 @@ let j = l.memo(function (e) {
             position: "left",
             ariaHidden: !0,
             children: (0, i.jsx)("div", {
-                className: I.RG,
+                className: j.RG,
                 "aria-label": y.intl.formatToPlainString(_.default.JFaxs2, { name: d, time: e }),
                 "data-testid": "discord-web-multi-video-player-pov-out-of-range",
                 children: (0, i.jsx)(h.eu, { src: t.owner?.avatarUrl, size: g._3.SIZE_32, "aria-hidden": !0 }),
@@ -138,7 +138,7 @@ let j = l.memo(function (e) {
         });
     }
     return (0, i.jsxs)(c.D, {
-        className: a()(I.uF, { [I._]: l }),
+        className: a()(j.uF, { [j._]: l }),
         "aria-label": l
             ? y.intl.formatToPlainString(_.default["RSMzC/"], { name: d })
             : y.intl.formatToPlainString(_.default["4AH1Vb"], { name: d }),
@@ -149,12 +149,12 @@ let j = l.memo(function (e) {
         "data-testid": "discord-web-multi-video-player-pov",
         children: [
             (0, i.jsx)("div", {
-                className: a()(I.U8, { [I.ED]: l }),
+                className: a()(j.U8, { [j.ED]: l }),
                 children:
                     null != t.poster &&
                     (0, i.jsx)("img", {
                         ref: C,
-                        className: I.a1,
+                        className: j.a1,
                         src: (0, f.s)(t.poster, t, x, b),
                         alt: "",
                         "aria-hidden": !0,
@@ -162,7 +162,7 @@ let j = l.memo(function (e) {
             }),
             null != t.owner &&
                 (0, i.jsx)("div", {
-                    className: I.UH,
+                    className: j.UH,
                     children: (0, i.jsx)(h.eu, { src: t.owner.avatarUrl, size: g._3.SIZE_16, "aria-hidden": !0 }),
                 }),
         ],
@@ -183,7 +183,7 @@ function R(e) {
             onError: v,
             onPlay: b,
             onPause: S,
-            children: I,
+            children: j,
             original: R,
             subSources: O,
             isGridView: M,
@@ -600,7 +600,7 @@ function R(e) {
                                 onPause: function (e) {
                                     (q(!1), eu(), S?.(e));
                                 },
-                                children: [I, (0, i.jsx)("source", { onError: p, src: ei.url })],
+                                children: [j, (0, i.jsx)("source", { onError: p, src: ei.url })],
                             }),
                             (0, i.jsx)("canvas", {
                                 ref: X,
@@ -637,7 +637,7 @@ function R(e) {
                         !M &&
                             en.map((e) =>
                                 (0, i.jsx)(
-                                    j,
+                                    I,
                                     {
                                         source: e,
                                         label:

@@ -1,4 +1,4 @@
-t.exports = {
+p.exports = {
     z7: "mosaic_p87Rny",
     J0: "single_p87Rny",
     Vs: "tile_p87Rny",

@@ -17,11 +17,11 @@ n.d(
     {
         e: function (e) {
             let { label: t, labelHook: n, count: s, dismissNotice: _, className: p, noticeType: g } = e,
-                m = null != _;
+                T = null != _;
             r.useEffect(() => {
                 (0, h.N)(g, C.YX.VIEWED);
             }, [g]);
-            let T = r.useCallback(() => {
+            let m = r.useCallback(() => {
                     null != _ && (_(), (0, h.N)(g, C.YX.DISMISS));
                 }, [g, _]),
                 N = r.useCallback(() => {
@@ -44,7 +44,7 @@ n.d(
                                       hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
                                   }),
                     }),
-                    m && (0, i.jsx)(d.D, { className: A.b, onClick: T, children: (0, i.jsx)(u.XSmallIcon, {}) }),
+                    T && (0, i.jsx)(d.D, { className: A.b, onClick: m, children: (0, i.jsx)(u.XSmallIcon, {}) }),
                 ],
             });
         },

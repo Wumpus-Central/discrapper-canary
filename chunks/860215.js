@@ -14,9 +14,9 @@ let d = (0, n(945810).mj)({
     variations: { 1: { enabled: !0 } },
 });
 var h = n(949192),
-    f = n(120700),
-    p = n(818348);
-let m = new Set([f.C.COLLECTIBLES_CHECKOUT, f.C.SLAYER_STOREFRONT_CHECKOUT]);
+    p = n(120700),
+    f = n(818348);
+let m = new Set([p.C.COLLECTIBLES_CHECKOUT, p.C.SLAYER_STOREFRONT_CHECKOUT]);
 var C = n(169797),
     y = n(792996);
 let E = r.createContext({ order: null, isOrderCreationEnabled: !1 });
@@ -34,7 +34,7 @@ function S(e) {
             skuIDs: n,
             applicationId: i,
             paymentGateway: a,
-            checkoutFlow: f,
+            checkoutFlow: p,
             isGift: C,
             onOrderCreated: _,
             renderModalProps: S,
@@ -55,10 +55,10 @@ function S(e) {
                     checkoutFlow: a,
                     isGift: s,
                     loadId: u,
-                    onOrderCreated: f,
+                    onOrderCreated: p,
                 } = e,
                 C = d.useConfig({ location: "payment_modal" }).enabled,
-                y = i === p.kM.VIRTUAL_CURRENCY,
+                y = i === f.kM.VIRTUAL_CURRENCY,
                 E = null != a && m.has(a);
             t = !!y || (!!E && !0 !== s && C);
             let _ = null != n ? n[0] : void 0,
@@ -73,7 +73,7 @@ function S(e) {
                         try {
                             let e = null != l && (0, c.Fs)(l),
                                 n = await (0, o.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
-                            (S(n), null != f && f(n));
+                            (S(n), null != p && p(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, h.gr)(n) ||
@@ -86,7 +86,7 @@ function S(e) {
                             x(!1);
                         }
                     },
-                    [l, i, u, f],
+                    [l, i, u, p],
                 );
             return (
                 (0, r.useEffect)(() => {
@@ -104,7 +104,7 @@ function S(e) {
             skuIDs: n,
             applicationId: i,
             paymentGateway: a,
-            checkoutFlow: f,
+            checkoutFlow: p,
             isGift: C,
             loadId: t,
             onOrderCreated: _,

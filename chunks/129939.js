@@ -42,8 +42,8 @@ let T = {
         APP_STORE_PARENTAL_REVOCATION: "app_store_parental_revocation",
     },
     S = new Set(Object.values(T)),
-    I = new Set([10]),
-    j = new Set([11]);
+    j = new Set([10]),
+    I = new Set([11]);
 (y.intl.string(_.default["Qm6K/s"]),
     y.intl.string(_.default["dSkE/A"]),
     y.intl.string(_.default.dMMSA0),
@@ -461,9 +461,9 @@ let ev = {
                 b = x ? Object.values(E).some((e) => null != e) : g.pending_requests.length > 0,
                 T = x ? A : g.pending_requests.length,
                 S = (0, O.bG)([$.A], () => $.A.getLinkCode()),
-                I = (0, O.bG)([$.A], () => $.A.getLinkCodeExpiresAt()),
-                j = S ?? g.link_code,
-                M = I ?? Date.parse(g.link_code_expires_at),
+                j = (0, O.bG)([$.A], () => $.A.getLinkCodeExpiresAt()),
+                I = S ?? g.link_code,
+                M = j ?? Date.parse(g.link_code_expires_at),
                 P = a.useCallback(async () => {
                     try {
                         await o({ type: N.Empty });
@@ -508,7 +508,7 @@ let ev = {
                                     direction: "vertical",
                                     align: "center",
                                     gap: 16,
-                                    children: (0, r.jsx)(et.r, { linkCode: j, expiresAt: M, onRefresh: h }),
+                                    children: (0, r.jsx)(et.r, { linkCode: I, expiresAt: M, onRefresh: h }),
                                 }),
                             (0, r.jsx)("div", {
                                 hidden: B,
@@ -626,7 +626,7 @@ let eT = {
         let { task: e } = v(),
             t = e.flow_context.tasks,
             n = t.findIndex((t) => t.task_type === e.task_type),
-            i = !j.has(e.task_type);
+            i = !I.has(e.task_type);
         return (0, r.jsxs)(u.B, {
             direction: "vertical",
             justify: "space-between",
@@ -673,8 +673,8 @@ let eT = {
             ],
         });
     };
-var eI = n(450165);
-let ej = n(843020);
+var ej = n(450165);
+let eI = n(843020);
 function eN(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: l } = e,
         [s, o] = a.useState(t),
@@ -682,7 +682,7 @@ function eN(e) {
     a.useEffect(() => {
         o(t);
     }, [t]);
-    let c = I.has(s.task_type);
+    let c = j.has(s.task_type);
     return (0, r.jsxs)(x.Provider, {
         value: u,
         children: [!c && (0, r.jsx)(eS, {}), (0, r.jsx)(e_, { onSubmit: n, disabled: i, transitionState: l })],
@@ -692,7 +692,7 @@ let eR = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = a.useState(null),
         [x, v] = a.useState(!0),
-        [j, O] = a.useState(null),
+        [I, O] = a.useState(null),
         [M, P] = a.useState(!1),
         k = a.useCallback(async () => {
             (v(!0), O(null));
@@ -739,7 +739,7 @@ let eR = function (e) {
                         })(t),
                             k());
                     } catch (e) {
-                        if (I.has(i.task_type)) throw e;
+                        if (j.has(i.task_type)) throw e;
                         O(y.intl.string(_.default["+QRSxc"]));
                     } finally {
                         P(!1);
@@ -752,11 +752,11 @@ let eR = function (e) {
         k();
     });
     let w = a.useMemo(() => i?.task_type === b.AGE_VERIFICATION, [i]),
-        D = null != i && null === j && I.has(i.task_type);
+        D = null != i && null === I && j.has(i.task_type);
     return (0, r.jsxs)("div", {
-        className: eI.Tp,
+        className: ej.Tp,
         children: [
-            (0, r.jsx)("img", { className: eI.xX, src: ej, alt: "" }),
+            (0, r.jsx)("img", { className: ej.xX, src: eI, alt: "" }),
             w
                 ? (0, r.jsx)(h.default, {
                       transitionState: t ?? s.ip.ENTERED,
@@ -770,22 +770,22 @@ let eR = function (e) {
                 : D && null != i
                   ? (0, r.jsx)(eN, { task: i, handleSubmit: L, disabled: M, transitionState: t ?? s.ip.ENTERED })
                   : (0, r.jsx)("div", {
-                        className: eI.nA,
+                        className: ej.nA,
                         children: x
                             ? (0, r.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE })
                             : (0, r.jsx)("div", {
-                                  className: eI.kL,
+                                  className: ej.kL,
                                   children: (0, r.jsxs)(u.B, {
                                       direction: "horizontal",
                                       justify: "start",
-                                      className: eI.rf,
+                                      className: ej.rf,
                                       children: [
-                                          null !== j &&
+                                          null !== I &&
                                               (0, r.jsxs)(u.B, {
                                                   direction: "vertical",
                                                   justify: "space-between",
                                                   align: "center",
-                                                  className: eI.Nj,
+                                                  className: ej.Nj,
                                                   padding: 16,
                                                   children: [
                                                       (0, r.jsxs)(u.B, {
@@ -827,7 +827,7 @@ let eR = function (e) {
                                                       }),
                                                   ],
                                               }),
-                                          null === j &&
+                                          null === I &&
                                               null != i &&
                                               (0, r.jsx)(eN, { task: i, handleSubmit: L, disabled: M }),
                                       ],

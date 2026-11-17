@@ -9,8 +9,8 @@ var l = n(477900),
     o = n(364840),
     d = n(821609),
     h = n(862482),
-    f = n(109802),
-    p = n(452027),
+    p = n(109802),
+    f = n(452027),
     m = n(778712),
     C = n(534514),
     y = n(289873),
@@ -64,8 +64,8 @@ function ei(e) {
             privateGiftLink: o,
             rewardSkuIds: d,
             canShowGiftingBadgePostPurchase: h,
-            openGiftingBadgePostPurchaseModal: f,
-            onClose: p,
+            openGiftingBadgePostPurchaseModal: p,
+            onClose: f,
         } = e,
         [C, y] = r.useState([]),
         [I, A] = r.useState(!1),
@@ -179,7 +179,7 @@ function ei(e) {
                         message: en.intl.format(el.default.ZvgWUV, {
                             giftCount: i,
                             onInventoryClick: function () {
-                                (p(), (0, _.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: R }));
+                                (f(), (0, _.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: R }));
                             },
                         }),
                         role: "none",
@@ -195,7 +195,7 @@ function ei(e) {
                             text: en.intl.string(el.default["qTXpj/"]),
                             disabled: ei || I,
                             onClick: function () {
-                                (p(),
+                                (f(),
                                     (0, _.bz)(),
                                     null != es
                                         ? (0, V.A)({
@@ -204,9 +204,9 @@ function ei(e) {
                                               shouldShowPromotionalExperience: !0,
                                               analyticsLocations: R,
                                               purchaseType: et.gs.GIFT,
-                                              onCloseCallback: h ? f : void 0,
+                                              onCloseCallback: h ? p : void 0,
                                           })
-                                        : h && f());
+                                        : h && p());
                             },
                         },
                         {
@@ -237,7 +237,7 @@ function ei(e) {
                                 } finally {
                                     A(!1);
                                 }
-                                (p(),
+                                (f(),
                                     (0, _.bz)(),
                                     (e = {
                                         recipients: r.recipients,
@@ -245,7 +245,7 @@ function ei(e) {
                                         rewardSkuIds: d,
                                         purchaseQuantity: i,
                                         canShowGiftingBadgePostPurchase: h,
-                                        openGiftingBadgePostPurchaseModal: f,
+                                        openGiftingBadgePostPurchaseModal: p,
                                     }),
                                     (0, X.mM)(async () => {
                                         let { default: t } = await Promise.all([n.e(719466), n.e(692318)]).then(
@@ -292,7 +292,7 @@ function eo(e) {
             isSendingMessage: j,
             orbsBack: B,
         } = e,
-        [G, K] = r.useState(f.e.Modes.DEFAULT),
+        [G, K] = r.useState(p.e.Modes.DEFAULT),
         Z = (0, I.t4)((e) => e.getIsRecurringGiftCheckout()),
         W = (0, c.bG)([N.A], () => N.A.enabled),
         Y = M || (null != v && null != b),
@@ -329,18 +329,18 @@ function eo(e) {
         let e;
         if (null == t) return null;
         switch (G) {
-            case f.e.Modes.SUCCESS:
+            case p.e.Modes.SUCCESS:
                 e = en.intl.string(en.t.XVvPjU);
                 break;
-            case f.e.Modes.ERROR:
+            case p.e.Modes.ERROR:
                 e = en.intl.string(en.t.i4GM3L);
                 break;
             default:
                 e = en.intl.string(en.t.OpuAlK);
         }
-        return (0, l.jsx)(p.D, {
+        return (0, l.jsx)(f.D, {
             label: en.intl.string(en.t["/dG4NA"]),
-            children: (0, l.jsx)(f.e, {
+            children: (0, l.jsx)(p.e, {
                 hideMessage: W ? en.intl.string(en.t["0RLn47"]) : null,
                 value: (0, w.Zq)(t),
                 mode: G,
@@ -349,11 +349,11 @@ function eo(e) {
                     (null != g && (0, w.AK)(new L.A({ code: t, maxUses: 1 }), g),
                         (0, U.C)(
                             e,
-                            () => K(f.e.Modes.SUCCESS),
-                            () => K(f.e.Modes.ERROR),
+                            () => K(p.e.Modes.SUCCESS),
+                            () => K(p.e.Modes.ERROR),
                         ),
                         setTimeout(() => {
-                            K(f.e.Modes.DEFAULT);
+                            K(p.e.Modes.DEFAULT);
                         }, 1500));
                 },
                 supportsCopy: U.p5,
@@ -498,12 +498,12 @@ function eh(e) {
     }, []);
     let [i, a] = r.useState(),
         [s, o] = r.useState(!1),
-        [h, f] = r.useState(!1),
-        { userAffinities: p, isLoading: C } = (0, c.cf)([b.A], () => ({
+        [h, p] = r.useState(!1),
+        { userAffinities: f, isLoading: C } = (0, c.cf)([b.A], () => ({
             userAffinities: b.A.getUserAffinitiesMap(),
             isLoading: b.A.isFetching(),
         })),
-        y = Array.from(p.keys()).sort((e, t) => b.A.compare(e, t)),
+        y = Array.from(f.keys()).sort((e, t) => b.A.compare(e, t)),
         _ = (0, c.bG)([k.A], () => k.A.getFriendIDs()),
         I = u().difference(_, y),
         A = [...y, ...I],
@@ -538,13 +538,13 @@ function eh(e) {
                             disabled: null == i,
                             loading: h,
                             onClick: () => {
-                                (f(!0),
+                                (p(!0),
                                     (0, v.UN)(i, t)
                                         .then(() => {
                                             n();
                                         })
                                         .catch(() => {
-                                            (o(!0), f(!1));
+                                            (o(!0), p(!1));
                                         }));
                             },
                             text: en.intl.string(en.t["+EgwQn"]),

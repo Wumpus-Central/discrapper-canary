@@ -1,67 +1,67 @@
-var i = t(256905),
-    n = t(188567),
-    l = t(652215);
-let s = { width: 1920, height: 1080 };
-t.d(
-    a,
+var i = a(256905),
+    s = a(188567),
+    n = a(652215);
+let l = { width: 1920, height: 1080 };
+a.d(
+    t,
     {},
     {
         A: async function (e) {
-            let { clips: a, startingIndex: t } = e;
-            if (0 === a.length) return;
-            let r = a.length > 1,
-                c = await Promise.all(
-                    a.map((e) =>
-                        (async function (e, a) {
+            let { clips: t, startingIndex: a } = e;
+            if (0 === t.length) return;
+            let r = t.length > 1,
+                u = await Promise.all(
+                    t.map((e) =>
+                        (async function (e, t) {
                             let {
-                                    key: t,
+                                    key: a,
                                     gameId: i,
                                     videoURL: r,
-                                    thumbnailURL: c,
-                                    title: o,
-                                    spritesheetImageURL: d,
-                                    spritesheetVttURL: u,
-                                    clipEventsTimeline: m,
+                                    thumbnailURL: u,
+                                    title: d,
+                                    spritesheetImageURL: o,
+                                    spritesheetVttURL: c,
+                                    clipEventsTimeline: p,
                                 } = e,
-                                { width: p, height: g } = await (async function (e) {
-                                    if (null == e) return s;
+                                { width: h, height: m } = await (async function (e) {
+                                    if (null == e) return l;
                                     try {
-                                        let { width: a, height: t } = await new Promise((a, t) => {
+                                        let { width: t, height: a } = await new Promise((t, a) => {
                                             let i = new Image();
-                                            ((i.onload = () => a({ width: i.naturalWidth, height: i.naturalHeight })),
-                                                (i.onerror = () => t(Error("measureImage: the image failed to load"))),
+                                            ((i.onload = () => t({ width: i.naturalWidth, height: i.naturalHeight })),
+                                                (i.onerror = () => a(Error("measureImage: the image failed to load"))),
                                                 (i.src = e));
                                         });
-                                        return a > 0 && t > 0 ? { width: a, height: t } : s;
+                                        return t > 0 && a > 0 ? { width: t, height: a } : l;
                                     } catch {
-                                        return s;
+                                        return l;
                                     }
-                                })(c);
+                                })(u);
                             return {
                                 type: "VIDEO",
                                 url: r,
                                 proxyUrl: r,
-                                poster: c,
-                                width: p,
-                                height: g,
-                                alt: o,
+                                poster: u,
+                                width: h,
+                                height: m,
+                                alt: d,
                                 clip: {
-                                    id: t,
+                                    id: a,
                                     url: r,
-                                    width: p,
-                                    height: g,
-                                    title: o,
+                                    width: h,
+                                    height: m,
+                                    title: d,
                                     application: { id: i },
-                                    spritesheet_image_url: d,
-                                    spritesheet_vtt_url: u,
-                                    clip_events_timeline: m,
+                                    spritesheet_image_url: o,
+                                    spritesheet_vtt_url: c,
+                                    clip_events_timeline: p,
                                 },
-                                onEnded: a ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
+                                onEnded: t ? () => s._.dispatch(n.jej.MODAL_CAROUSEL_NEXT) : void 0,
                             };
                         })(e, r),
                     ),
                 );
-            (0, i.R)({ location: "user_profile_widget_clip", items: c, startingIndex: t, shouldHideMediaOptions: !0 });
+            (0, i.R)({ location: "user_profile_widget_clip", items: u, startingIndex: a, shouldHideMediaOptions: !0 });
         },
     },
 );

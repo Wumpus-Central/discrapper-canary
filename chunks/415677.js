@@ -1,4 +1,4 @@
-n.d(t, { U: () => m, _: () => g });
+n.d(t, { U: () => T, _: () => g });
 var i = n(477900),
     r = n(582128),
     s = n(858899),
@@ -79,12 +79,12 @@ function _(e) {
             clearTimeout(e);
         };
     }, []);
-    let m = null != p && n,
-        T = m ? d.D : "div";
-    return (0, i.jsxs)(T, {
-        className: c()(E.kL, m && E.b),
+    let T = null != p && n,
+        m = T ? d.D : "div";
+    return (0, i.jsxs)(m, {
+        className: c()(E.kL, T && E.b),
         onClick: function () {
-            m && p();
+            T && p();
         },
         children: [
             (0, i.jsx)("div", {
@@ -110,7 +110,7 @@ var p = n(792996);
 function g(e) {
     l.h.dispatch({ type: "POGGERMODE_ACHIEVEMENT_UNLOCK", achievementId: e });
 }
-function m(e, t) {
+function T(e, t) {
     let n = (0, a.vM)(e);
     null != n &&
         (0, s.P0)({

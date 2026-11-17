@@ -14,8 +14,8 @@ var l = n(477900),
     g = n(559106),
     x = n(750506),
     E = n(267102),
-    S = n(186306),
-    y = n(339871),
+    y = n(186306),
+    S = n(339871),
     C = n(339200),
     A = n(792996),
     b = n(9287);
@@ -94,7 +94,7 @@ function v(e) {
         r = !1;
     if (t?.selection != null) {
         let [e, l] = C.ZF.edges(t.selection);
-        r = null != (0, y.Sx)(t, e, l).before[n];
+        r = null != (0, S.Sx)(t, e, l).before[n];
     }
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
@@ -117,7 +117,7 @@ function v(e) {
             "aria-pressed": r,
             className: b.x6,
             onClick: function () {
-                null != t && S.o.withSingleEntry(t, () => (0, y.Px)(t, n));
+                null != t && y.o.withSingleEntry(t, () => (0, S.Px)(t, n));
             },
             children: i,
         }),
@@ -135,7 +135,7 @@ function N(e) {
             "aria-pressed": s,
             className: b.x6,
             onClick: function () {
-                null != n && S.o.withSingleEntry(n, () => (0, y.fO)(n, t));
+                null != n && y.o.withSingleEntry(n, () => (0, S.fO)(n, t));
             },
             children: i,
         }),
@@ -198,7 +198,7 @@ n.d(
                         }
                     );
                 }, [m, f, p, g]));
-            let { x: S, y } = i.useMemo(() => {
+            let { x: y, y: S } = i.useMemo(() => {
                     let e = t();
                     if (e?.selection == null || C.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
                     let l = a.rL.findDocumentOrShadowRoot(e),
@@ -225,11 +225,11 @@ n.d(
                 [N, T] = i.useState(0);
             if (
                 (i.useLayoutEffect(() => {
-                    if (null == S || null == y || null == u.current) return;
+                    if (null == y || null == S || null == u.current) return;
                     let e = u.current.getBoundingClientRect();
                     (T(e.width / 2), v(e.height + 12));
-                }, [S, y]),
-                null == S || null == y)
+                }, [y, S]),
+                null == y || null == S)
             )
                 return null;
             let k = t();
@@ -240,7 +240,7 @@ n.d(
                           id: "slate-toolbar",
                           ref: u,
                           className: b.KE,
-                          style: { top: y - A, left: S - N },
+                          style: { top: S - A, left: y - N },
                           onMouseDown: (e) => {
                               (e.preventDefault(), e.stopPropagation());
                           },

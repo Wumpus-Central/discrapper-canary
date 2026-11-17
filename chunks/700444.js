@@ -18,25 +18,25 @@ n.d(
             let {
                     applicationId: t,
                     headerText: n,
-                    subheaderText: p,
-                    gradientColors: E,
+                    subheaderText: E,
+                    gradientColors: p,
                     gradientAngle: f,
                     skuIds: x,
-                    resolvedSkuIds: C,
-                    isLoading: v,
-                    tab: y,
-                    endTime: A,
-                    ctaType: _ = "storefront",
-                    logoUrl: L,
+                    resolvedSkuIds: v,
+                    isLoading: A,
+                    tab: C,
+                    endTime: y,
+                    ctaType: L = "storefront",
+                    logoUrl: _,
                     termsUrl: b,
                     backgroundImageUrl: S,
                 } = e,
-                I = (0, c.ur)(A) ?? void 0,
+                I = (0, c.ur)(y) ?? void 0,
                 j = (0, o.W8)(),
                 k = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 N = r.useMemo(() => {
-                    if ("none" !== _)
-                        return "nitro" !== _ || j
+                    if ("none" !== L)
+                        return "nitro" !== L || j
                             ? {
                                   kind: "button",
                                   text:
@@ -55,16 +55,16 @@ n.d(
                                       buttonTextOverride: h.intl.string(h.t.pj0XBN),
                                   }),
                               };
-                }, [_, t, k, j]);
+                }, [L, t, k, j]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
-                resolvedSkuIds: C,
-                isLoading: v,
-                tab: y,
+                resolvedSkuIds: v,
+                isLoading: A,
+                tab: C,
                 applicationId: t,
                 headerText: n,
-                subheaderText: p,
-                logoUrl: L,
+                subheaderText: E,
+                logoUrl: _,
                 cta: N,
                 timeLeftText: I,
                 termsUrl: b,
@@ -72,7 +72,7 @@ n.d(
                 analyticsSection: "slayer-storefront-promotional-banner",
                 analyticsTileType: "SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER",
                 analyticsImpressionType: "social_layer_storefront_promotional_banner",
-                backgroundGradient: E.length > 0 ? `linear-gradient(${f}deg, ${E.join(", ")})` : void 0,
+                backgroundGradient: p.length > 0 ? `linear-gradient(${f}deg, ${p.join(", ")})` : void 0,
             });
         },
     },

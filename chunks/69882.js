@@ -27,21 +27,21 @@ function P(e) {
         ? (0, l.jsx)(u.w, { type: e.type, hidden: e.hidden, message: e.message, role: e.role }, e.key)
         : (0, l.jsx)(n.Fragment, { children: e.directContent }, e.key);
 }
-function g(e) {
+function x(e) {
     return null == e || "" === e;
 }
-function x(e) {
+function g(e) {
     let { children: a, showUpperNoticesAboveGlobalNotices: t = !1 } = e,
         { errorMessage: r, richNotices: s } = (0, c.u)(),
         i = n.useRef(null);
     return (
         n.useEffect(() => {
-            g(r) || null == i.current || i.current.scrollIntoView({ behavior: "smooth" });
+            x(r) || null == i.current || i.current.scrollIntoView({ behavior: "smooth" });
         }, [r]),
         n.useMemo(() => {
-            if (!(!g(r) || s.length > 0 || null != a)) return null;
+            if (!(!x(r) || s.length > 0 || null != a)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
-                children: [g(r) ? null : (0, l.jsx)(u.w, { type: "critical", message: r, role: "alert" }), s.map(P)],
+                children: [x(r) ? null : (0, l.jsx)(u.w, { type: "critical", message: r, role: "alert" }), s.map(P)],
             });
             return (0, l.jsx)("div", {
                 ref: i,
@@ -73,7 +73,7 @@ function T(e) {
         t = f(a);
     return null == t ? null : (0, l.jsx)("div", { className: y.Uu, children: t });
 }
-function _(e) {
+function v(e) {
     let { upperInlineNoticeProps: a, shouldShowGlobalNotices: t, showUpperNoticesAboveGlobalNotices: r } = e,
         s = f(a);
     return n.useMemo(
@@ -81,8 +81,8 @@ function _(e) {
             null != s || t
                 ? t
                     ? null != s
-                        ? (0, l.jsx)(x, { showUpperNoticesAboveGlobalNotices: r, children: s })
-                        : (0, l.jsx)(x, {})
+                        ? (0, l.jsx)(g, { showUpperNoticesAboveGlobalNotices: r, children: s })
+                        : (0, l.jsx)(g, {})
                     : (0, l.jsx)("div", { className: y.dD, children: s })
                 : null,
         [t, s, r],
@@ -108,19 +108,19 @@ t.d(
                     paymentMethodContent: d,
                     invoiceSummaryContent: p,
                     promotionalNoticeContent: P,
-                    tenantProvidesPromotionalNoticeContainer: g,
-                    legalContent: x,
+                    tenantProvidesPromotionalNoticeContainer: x,
+                    legalContent: g,
                     invoiceTotalDueLabel: f = E.intl.string(A.default.R0cZsM),
-                    invoiceTotalDueValue: v,
-                    shouldShowGlobalNotices: S,
-                    showUpperNoticesAboveGlobalNotices: I,
+                    invoiceTotalDueValue: _,
+                    shouldShowGlobalNotices: I,
+                    showUpperNoticesAboveGlobalNotices: S,
                     footerInlineNoticeProps: N,
                     footerInlineNoticeContent: R,
                     headerBadgeConfig: j,
                     className: L,
                 } = e,
-                { setCheckoutFooterLineItemNode: k } = (0, o.ck)(),
-                b = n.useMemo(() => (null == P ? null : g ? P : (0, l.jsx)(M, { children: P })), [P, g]);
+                { setCheckoutFooterLineItemNode: b } = (0, o.ck)(),
+                k = n.useMemo(() => (null == P ? null : x ? P : (0, l.jsx)(M, { children: P })), [P, x]);
             return c
                 ? (0, l.jsx)(C, { className: L, shouldShowUnifiedHeader: !0 })
                 : (0, l.jsxs)(l.Fragment, {
@@ -130,10 +130,10 @@ t.d(
                               children: [
                                   null != t
                                       ? t
-                                      : (0, l.jsx)(_, {
+                                      : (0, l.jsx)(v, {
                                             upperInlineNoticeProps: a,
-                                            shouldShowGlobalNotices: S,
-                                            showUpperNoticesAboveGlobalNotices: I,
+                                            shouldShowGlobalNotices: I,
+                                            showUpperNoticesAboveGlobalNotices: S,
                                         }),
                                   r,
                                   null != r && null != i && (0, l.jsx)("div", { className: y.ls }),
@@ -146,10 +146,10 @@ t.d(
                           (0, l.jsx)(o.UY, { children: (0, l.jsx)(h.f, { headerBadgeConfig: j }) }),
                           (0, l.jsxs)(o.bx, {
                               children: [
-                                  (0, l.jsx)("div", { ref: k }),
-                                  null != f && null != v && (0, l.jsx)(m.Qf, { className: y.NR, label: f, value: v }),
-                                  b,
-                                  x,
+                                  (0, l.jsx)("div", { ref: b }),
+                                  null != f && null != _ && (0, l.jsx)(m.Qf, { className: y.NR, label: f, value: _ }),
+                                  k,
+                                  g,
                                   null != R ? R : (0, l.jsx)(T, { footerInlineNoticeProps: N }),
                               ],
                           }),
@@ -167,6 +167,6 @@ t.d(
                 children: (0, l.jsx)(C, { shouldShowUnifiedHeader: !0 }),
             });
         },
-        zJ: _,
+        zJ: v,
     },
 );

@@ -8,8 +8,8 @@ var l = n(477900),
     o = n(224640),
     d = n(231723),
     h = n(430993),
-    f = n(632088),
-    p = n(500380),
+    p = n(632088),
+    f = n(500380),
     m = n(956956),
     C = n(820287),
     y = n(708791),
@@ -32,10 +32,10 @@ function x(e) {
             ...d
         } = e,
         h = r.useCallback(
-            () => (null == c ? null : (0, l.jsx)("img", { alt: "", className: P.bI, src: (0, p.t)(c) })),
+            () => (null == c ? null : (0, l.jsx)("img", { alt: "", className: P.bI, src: (0, f.t)(c) })),
             [c],
         ),
-        f = r.useMemo(() => {
+        p = r.useMemo(() => {
             if (null != a) return { icon: u, type: { text: a ?? "" }, variant: i };
         }, [a, u, i]),
         C = null != c && null != o,
@@ -46,7 +46,7 @@ function x(e) {
         children: [
             (0, l.jsx)(s.rQ, {
                 ...d,
-                badge: f,
+                badge: p,
                 badgePosition: "end",
                 gradientColor: t,
                 titleTextVariant: "heading-lg/semibold",
@@ -63,16 +63,16 @@ function R(e) {
     let { onBackClick: t, primaryButtonProps: n, portalClassName: i, stripeExpressCheckoutComponent: s } = e,
         { variant: o } = n,
         { setCheckoutFooterContentNode: d } = (0, _.ck)(),
-        { isExpressCheckoutEnabledForFooter: h, shouldExpressCheckoutBeVisible: f } = (0, g.t4)((e) => {
+        { isExpressCheckoutEnabledForFooter: h, shouldExpressCheckoutBeVisible: p } = (0, g.t4)((e) => {
             let t = e.getExpressCheckoutVisibilityState();
             return {
                 isExpressCheckoutEnabledForFooter: t.isExpressCheckoutEnabledForFooter,
                 shouldExpressCheckoutBeVisible: t.shouldExpressCheckoutBeVisible,
             };
         }),
-        p = (0, l.jsx)(E.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
+        f = (0, l.jsx)(E.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
         m = h && null != s,
-        S = m && f,
+        S = m && p,
         I = null != t,
         {
             direction: A,
@@ -98,7 +98,7 @@ function R(e) {
                 children: [
                     S ? null : T,
                     S ? (0, l.jsx)(y.rI, {}) : null,
-                    m ? (0, l.jsx)(y.Zr, { stripeExpressCheckoutComponent: s, fallbackComponent: p }) : p,
+                    m ? (0, l.jsx)(y.Zr, { stripeExpressCheckoutComponent: s, fallbackComponent: f }) : f,
                     S && null != T ? (0, l.jsx)("div", { className: P.aY, children: T }) : null,
                 ],
             }),
@@ -116,7 +116,7 @@ function M(e) {
             size: n,
             ...a,
             maxHeight: r,
-            contentOutsideContainer: (0, l.jsx)(f.A, {}),
+            contentOutsideContainer: (0, l.jsx)(p.A, {}),
             children: i ? (0, l.jsx)(T, {}) : t,
         }),
     });
@@ -147,11 +147,11 @@ n.d(
                 onBackClick: u,
                 primaryButtonProps: c,
                 children: d,
-                ...f
+                ...p
             } = e;
             return (0, l.jsx)(_.e0, {
                 children: (0, l.jsxs)(o.d, {
-                    ...f,
+                    ...p,
                     children: [
                         (0, l.jsx)(x, {
                             gradientColor: n,

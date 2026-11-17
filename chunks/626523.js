@@ -1,4 +1,4 @@
-(r.d(t, { _: () => u }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
+(r.d(t, { _: () => h }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
 var a = r(582128),
     n = r(626584);
 (r(323874), r(14289), r(35956), r(321073));
@@ -18,18 +18,18 @@ async function l() {
         throw ((e.cause = t), e);
     }
 }
-let h = new n.A("useAnimatedImageCheck");
-function u(e) {
+let u = new n.A("useAnimatedImageCheck");
+function h(e) {
     let t = e?.type === "image/gif",
         n = e?.type === "image/webp",
-        [i, u] = a.useState(!1),
+        [i, h] = a.useState(!1),
         [c, s] = a.useState(null),
         m = n && c !== e;
     a.useEffect(() => {
         let a = !1;
         return (
             t
-                ? (r.e(447580).then(r.bind(r, 844183)), u(!1), s(e))
+                ? (r.e(447580).then(r.bind(r, 844183)), h(!1), s(e))
                 : n && null != e
                   ? !(async function () {
                         try {
@@ -81,7 +81,7 @@ function u(e) {
                                                     n = t.HEAPU32[(e >> 2) + 4];
                                                 t._free(e);
                                                 let l = [],
-                                                    h = r * a * 4;
+                                                    u = r * a * 4;
                                                 for (; 0 !== t._WebPAnimDecoderHasMoreFrames(i);) {
                                                     let e = t._malloc(4);
                                                     if (0 === e)
@@ -101,9 +101,9 @@ function u(e) {
                                                         (t._free(e), t._free(n));
                                                         break;
                                                     }
-                                                    let u = t.HEAPU32[e >> 2],
+                                                    let h = t.HEAPU32[e >> 2],
                                                         c = t.HEAP32[n >> 2],
-                                                        s = new Uint8Array(t.HEAPU8.buffer, u, h).slice();
+                                                        s = new Uint8Array(t.HEAPU8.buffer, h, u).slice();
                                                     (l.push({ data: s, timestamp: c, width: r, height: a }),
                                                         t._free(e),
                                                         t._free(n));
@@ -118,18 +118,18 @@ function u(e) {
                                         return !1;
                                     }
                                 })(r);
-                            a || (u(n), n && l(), s(e));
+                            a || (h(n), n && l(), s(e));
                         } catch (t) {
-                            a || (h.error("Error checking WebP animation", t), u(!1), s(e));
+                            a || (u.error("Error checking WebP animation", t), h(!1), s(e));
                         }
                     })()
-                  : (u(!1), s(e)),
+                  : (h(!1), s(e)),
             () => {
                 a = !0;
             }
         );
     }, [e, t, n]);
     let f = i && c === e,
-        A = t || f;
-    return { isGIF: t, isWebP: n, isAnimatedWebPFile: f, isCheckingAnimation: m, isEditableAnimatedImage: A };
+        d = t || f;
+    return { isGIF: t, isWebP: n, isAnimatedWebPFile: f, isCheckingAnimation: m, isEditableAnimatedImage: d };
 }

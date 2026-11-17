@@ -29,8 +29,8 @@ t.d(
                     (E || e === u.e.NOT_FETCHED) && (y(!1), i.WA(a, { includeSoftDeleted: h, countryCode: d }));
                 }, [p, a, h, d, m, E]),
                 P = A === u.e.FETCHED && !E,
-                g = n.useMemo(() => ({ listingsLoaded: P, fetchGroupListingsForGuild: C }), [P, C]);
-            return (0, l.jsx)(o.Provider, { value: g, children: t });
+                x = n.useMemo(() => ({ listingsLoaded: P, fetchGroupListingsForGuild: C }), [P, C]);
+            return (0, l.jsx)(o.Provider, { value: x, children: t });
         },
         X: function (e) {
             let a = n.useContext(o);

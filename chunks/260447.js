@@ -3,8 +3,8 @@ var n = e(582128),
     s = e(192308),
     i = e(626584),
     a = e(856383),
-    h = e(794400),
-    l = e(792996);
+    l = e(794400),
+    h = e(792996);
 let u = new i.A("RevenueErrorBoundary.tsx");
 class p extends n.PureComponent {
     state = { error: null, info: null };
@@ -12,19 +12,19 @@ class p extends n.PureComponent {
         return { app_context: this.getSentryAppContext(), ...(t ? { crashed: "true" } : {}) };
     }
     getSentryExtras(r) {
-        return r instanceof h.v && null != r.extraSentryInformation ? { ...r.extraSentryInformation } : {};
+        return r instanceof l.v && null != r.extraSentryInformation ? { ...r.extraSentryInformation } : {};
     }
     onErrorCaught(r, t, e) {}
     closeAndShowAlert() {
         ((0, s.s7)(),
             (0, o.A)({
-                title: l.intl.string(l.t.iufib1),
-                subtitle: l.intl.string(l.t.ZUEGFn),
-                confirmText: l.intl.string(l.t.TyCVIq),
+                title: h.intl.string(h.t.iufib1),
+                subtitle: h.intl.string(h.t.ZUEGFn),
+                confirmText: h.intl.string(h.t.TyCVIq),
             }));
     }
     getErrorHandlingBehavior(r) {
-        return r instanceof h.v ? r.errorHandlingBehavior : this.props.errorHandlingBehavior;
+        return r instanceof l.v ? r.errorHandlingBehavior : this.props.errorHandlingBehavior;
     }
     getCrashedFlag(r) {
         return "rethrow" === this.getErrorHandlingBehavior(r);
@@ -39,7 +39,7 @@ class p extends n.PureComponent {
                 extra: { ...s, ...(n ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            (r instanceof h.v && r.skipReportingToSentry) || (e = a.A.captureException(r, i)),
+            (r instanceof l.v && r.skipReportingToSentry) || (e = a.A.captureException(r, i)),
             u.error("Revenue error occurred:", { error: r, additionalErrorContext: s }),
             { sentryErrorOptions: i, sentryEventId: e }
         );

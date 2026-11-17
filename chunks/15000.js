@@ -23,12 +23,12 @@ var i = n(477900),
     b = n(331322),
     T = n(534514),
     S = n(834730),
-    I = n(241003),
-    j = n(975571),
+    j = n(241003),
+    I = n(975571),
     N = n(652215),
     R = n(792996),
     O = n(690807);
-let M = j.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
+let M = I.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
 class P extends l.PureComponent {
     static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
     renderFields() {
@@ -36,7 +36,7 @@ class P extends l.PureComponent {
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
                 e === N.Fz7.CAPTCHA
-                    ? (0, i.jsx)(I.A, { onVerify: l, theme: n }, t)
+                    ? (0, i.jsx)(j.A, { onVerify: l, theme: n }, t)
                     : (0, i.jsx)(y.$, { onClick: () => this.handleClick(e), text: E.A.getButtonTitle(e) }, e),
             ),
         });
@@ -112,7 +112,7 @@ class P extends l.PureComponent {
                                 (0, i.jsx)(S.E, {
                                     variant: "body-sm/semibold",
                                     className: O.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: j.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: I.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: v()(O.qr, O.mf), children: "\u2022" }),
                                 (0, i.jsx)(S.E, {

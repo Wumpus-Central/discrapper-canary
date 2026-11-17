@@ -1,56 +1,56 @@
 n.d(t, { A: () => h });
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     a = n(265872),
     s = n(939249),
     r = n(307301),
-    o = n(834730),
-    d = n(126601);
+    d = n(834730),
+    o = n(126601);
 n(321073);
 var c = n(477782),
     u = n(165862),
-    m = n(394245),
-    g = n(792996),
+    g = n(394245),
+    m = n(792996),
     x = n(382701);
-let f = l.memo(function (e) {
-    let { currentTags: t, onTagSelect: n, onNoneSelect: l, onClose: a } = e;
-    return (0, i.jsx)(u.W, {
+let f = i.memo(function (e) {
+    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: a } = e;
+    return (0, l.jsx)(u.W, {
         "data-menu-migrated-auto": !0,
         navId: "widget-game-tags",
-        "aria-label": g.intl.string(g.t.r6EJOu),
+        "aria-label": m.intl.string(m.t.r6EJOu),
         onClose: a,
         onSelect: () => {},
         className: x.X2,
-        children: Object.entries(d.Pb).map((e) => {
+        children: Object.entries(o.Pb).map((e) => {
             let a,
                 [s, r] = e,
-                o =
+                d =
                     ((a = []),
-                    r.type === d.me.RADIO &&
+                    r.type === o.me.RADIO &&
                         a.push(
-                            (0, i.jsx)(
+                            (0, l.jsx)(
                                 c.iD,
                                 {
                                     id: `${s}-none`,
                                     group: s,
-                                    label: g.intl.string(g.t.PoWNfe),
+                                    label: m.intl.string(m.t.PoWNfe),
                                     checked: !r.tags.some((e) => t.includes(e)),
-                                    action: () => l(r.tags),
+                                    action: () => i(r.tags),
                                 },
                                 "none",
                             ),
                         ),
                     r.tags.forEach((e) => {
-                        let l = m.P[e];
-                        null != l &&
-                            (r.type === d.me.RADIO
+                        let i = g.P[e];
+                        null != i &&
+                            (r.type === o.me.RADIO
                                 ? a.push(
-                                      (0, i.jsx)(
+                                      (0, l.jsx)(
                                           c.iD,
                                           {
                                               id: e,
                                               group: s,
-                                              label: l.getText(),
+                                              label: i.getText(),
                                               checked: t.includes(e),
                                               action: () => n(e, !0),
                                           },
@@ -58,65 +58,65 @@ let f = l.memo(function (e) {
                                       ),
                                   )
                                 : a.push(
-                                      (0, i.jsx)(
+                                      (0, l.jsx)(
                                           c.sL,
-                                          { id: e, label: l.getText(), checked: t.includes(e), action: () => n(e, !1) },
+                                          { id: e, label: i.getText(), checked: t.includes(e), action: () => n(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     a);
-            return (0, i.jsx)(c.rX, { label: r.getLabel(), children: o }, s);
+            return (0, l.jsx)(c.rX, { label: r.getLabel(), children: d }, s);
         }),
     });
 });
 function h(e) {
-    let { tags: t, onTagsChange: n, onOpen: c, onClose: u, variant: m = "default", ref: h } = e,
-        p = "filled" === m,
-        j = (0, l.useRef)(null),
-        I = (0, l.useMemo)(() => (null != t ? t : []), [t]),
-        E = (0, l.useCallback)(
+    let { tags: t, onTagsChange: n, onOpen: c, onClose: u, variant: g = "default", ref: h } = e,
+        I = "filled" === g,
+        p = (0, i.useRef)(null),
+        j = (0, i.useMemo)(() => (null != t ? t : []), [t]),
+        E = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = !t && I.includes(e) ? "removed" : "added";
-                n((0, d.pK)(I, e), i);
+                    l = !t && j.includes(e) ? "removed" : "added";
+                n((0, o.pK)(j, e), l);
             },
-            [I, n],
+            [j, n],
         ),
-        v = (0, l.useCallback)(
+        A = (0, i.useCallback)(
             (e) => {
-                n((0, d.LQ)(I, e), "removed");
+                n((0, o.LQ)(j, e), "removed");
             },
-            [I, n],
+            [j, n],
         );
-    return (0, i.jsx)(a.Y, {
-        targetElementRef: j,
+    return (0, l.jsx)(a.Y, {
+        targetElementRef: p,
         position: "right",
         align: "top",
         onRequestOpen: c,
         onRequestClose: u,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(f, { currentTags: I, onTagSelect: E, onNoneSelect: v, onClose: t });
+            return (0, l.jsx)(f, { currentTags: j, onTagSelect: E, onNoneSelect: A, onClose: t });
         },
         children: (e) =>
-            (0, i.jsx)("div", {
+            (0, l.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((j.current = e), (h.current = e)),
+                    null != e && ((p.current = e), (h.current = e)),
                     () => {
-                        ((j.current = null), (h.current = null));
+                        ((p.current = null), (h.current = null));
                     }
                 ),
-                children: (0, i.jsxs)(s.D, {
+                children: (0, l.jsxs)(s.D, {
                     ...e,
-                    className: p ? x._m : x.c9,
-                    "aria-label": g.intl.string(g.t.r6EJOu),
+                    className: I ? x._m : x.c9,
+                    "aria-label": m.intl.string(m.t.r6EJOu),
                     children: [
-                        p && (0, i.jsx)(r.PlusSmallIcon, { size: "xxs", color: "currentColor" }),
-                        (0, i.jsx)(o.E, {
+                        I && (0, l.jsx)(r.PlusSmallIcon, { size: "xxs", color: "currentColor" }),
+                        (0, l.jsx)(d.E, {
                             variant: "footnote/medium",
                             color: "none",
-                            children: p ? g.intl.string(g.t.DccrfU) : g.intl.string(g.t.fZSejy),
+                            children: I ? m.intl.string(m.t.DccrfU) : m.intl.string(m.t.fZSejy),
                         }),
                     ],
                 }),

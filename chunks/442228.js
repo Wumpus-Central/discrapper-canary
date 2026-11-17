@@ -1,50 +1,50 @@
 var l = t(477900),
     i = t(582128),
-    r = t(503698),
-    a = t.n(r),
+    a = t(503698),
+    r = t.n(a),
     s = t(123292),
     o = t(688810),
     u = t(183555),
     c = t(702476),
     d = t(501925),
     f = t(900179),
-    S = t(792996),
-    A = t(975316);
-let T = i.memo(function (e) {
+    A = t(792996),
+    S = t(975316);
+let h = i.memo(function (e) {
     let {
             userId: n,
             userBio: t,
-            onClose: r,
-            animateOnHoverOrFocusOnly: T = !1,
-            isHoveringOrFocusing: h = !1,
+            onClose: a,
+            animateOnHoverOrFocusOnly: h = !1,
+            isHoveringOrFocusing: T = !1,
             hidePersonalInformation: m = !1,
             hideRestrictedProfile: g = !1,
             viewFullBioDisabled: x = !1,
         } = e,
         { context: E } = (0, u.NJ)(),
-        { analyticsLocations: R } = (0, o.Ay)(),
-        [p, C] = i.useState(!1),
-        [y, j] = i.useState(!1),
-        v = i.useRef(null);
+        { analyticsLocations: p } = (0, o.Ay)(),
+        [R, C] = i.useState(!1),
+        [y, v] = i.useState(!1),
+        j = i.useRef(null);
     if (m || null == t || "" === t) return null;
-    let P = p || y;
+    let P = R || y;
     return (0, l.jsxs)(f.A, {
-        heading: S.intl.string(S.t.ZzAR2Y),
+        heading: A.intl.string(A.t.ZzAR2Y),
         hideHeading: !0,
         children: [
             (0, l.jsx)("div", {
                 ref: (e) => {
-                    ((v.current = e),
+                    ((j.current = e),
                         null == e ||
                             (C(!y && e.scrollHeight - e.clientHeight > 1),
-                            e.getBoundingClientRect().height > 57.75 && j(!0)));
+                            e.getBoundingClientRect().height > 57.75 && v(!0)));
                 },
-                className: a()(A.mA, y && A.Em, P && A.ps),
+                className: r()(S.mA, y && S.Em, P && S.ps),
                 onBlur: function (e) {
-                    null == v.current ||
-                        v.current.contains(e.relatedTarget) ||
-                        (null == v.current.querySelector('[aria-expanded="true"][aria-controls]') &&
-                            (v.current.scrollTop = 0));
+                    null == j.current ||
+                        j.current.contains(e.relatedTarget) ||
+                        (null == j.current.querySelector('[aria-expanded="true"][aria-controls]') &&
+                            (j.current.scrollTop = 0));
                 },
                 children: (0, l.jsx)(d.A, {
                     userId: n,
@@ -52,25 +52,25 @@ let T = i.memo(function (e) {
                     userBio: t,
                     setLineClamp: !1,
                     textColor: "text-strong",
-                    animateOnHoverOrFocusOnly: T,
-                    isHoveringOrFocusing: h,
+                    animateOnHoverOrFocusOnly: h,
+                    isHoveringOrFocusing: T,
                 }),
             }),
             P &&
                 (0, l.jsx)("div", {
-                    className: A.HV,
+                    className: S.HV,
                     children: (0, l.jsx)(s.Q, {
                         textVariant: "body-xs/normal",
                         size: "sm",
                         variant: "secondary",
-                        text: S.intl.string(S.t.YDiPq8),
+                        text: A.intl.string(A.t.YDiPq8),
                         onClick: function () {
-                            (r?.(),
+                            (a?.(),
                                 (0, c.openUserProfileModal)({
                                     ...E,
                                     userId: n,
                                     hideRestrictedProfile: g,
-                                    sourceAnalyticsLocations: R,
+                                    sourceAnalyticsLocations: p,
                                 }));
                         },
                         disabled: x,
@@ -79,4 +79,4 @@ let T = i.memo(function (e) {
         ],
     });
 });
-t.d(n, {}, { A: T });
+t.d(n, {}, { A: h });

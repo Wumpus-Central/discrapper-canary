@@ -1,4 +1,4 @@
-e.exports = {
+p.exports = {
     QF: "breadcrumb_s6-upr",
     WH: "innerContainer_s6-upr",
     Pt: "icons_s6-upr",

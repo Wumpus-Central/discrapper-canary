@@ -1,9 +1,9 @@
-var i = n(477900),
-    l = n(582128),
+var l = n(477900),
+    i = n(582128),
     a = n(775602),
     s = n(818348);
-let r = l.createContext(null),
-    o = {
+let r = i.createContext(null),
+    d = {
         registerItemRef: () => s.tE,
         registerDragHandleRef: () => s.tE,
         manageFocusOnReorder: s.tE,
@@ -15,49 +15,49 @@ n.d(
     {
         B: function (e) {
             let { children: t, emptyListFallbackRef: n } = e,
-                s = l.useRef(new Map()),
-                o = l.useRef(new Map()),
-                d = l.useRef([]),
-                c = l.useCallback(() => {
-                    d.current = Array.from(s.current.keys()).sort((e, t) => {
+                s = i.useRef(new Map()),
+                d = i.useRef(new Map()),
+                o = i.useRef([]),
+                c = i.useCallback(() => {
+                    o.current = Array.from(s.current.keys()).sort((e, t) => {
                         let n = s.current.get(e),
-                            i = s.current.get(t);
-                        if (null == n || null == i) return 0;
-                        let l = n.compareDocumentPosition(i);
-                        return (l & Node.DOCUMENT_POSITION_FOLLOWING) != 0
+                            l = s.current.get(t);
+                        if (null == n || null == l) return 0;
+                        let i = n.compareDocumentPosition(l);
+                        return (i & Node.DOCUMENT_POSITION_FOLLOWING) != 0
                             ? -1
-                            : +((l & Node.DOCUMENT_POSITION_PRECEDING) != 0);
+                            : +((i & Node.DOCUMENT_POSITION_PRECEDING) != 0);
                     });
                 }, []),
-                u = l.useCallback(
+                u = i.useCallback(
                     (e) => (t) => {
-                        null != t ? o.current.set(e, t) : o.current.delete(e);
+                        null != t ? d.current.set(e, t) : d.current.delete(e);
                     },
                     [],
                 ),
-                m = l.useCallback(
+                g = i.useCallback(
                     (e) => (t) => {
                         null != t ? s.current.set(e, t) : s.current.delete(e);
                     },
                     [],
                 ),
-                g = l.useCallback((e) => {
+                m = i.useCallback((e) => {
                     a.Ay.keyboardModeEnabled &&
                         requestAnimationFrame(() => {
-                            let t = o.current.get(e);
+                            let t = d.current.get(e);
                             t?.focus();
                         });
                 }, []),
-                x = l.useCallback(
+                x = i.useCallback(
                     (e) => {
                         if (!a.Ay.keyboardModeEnabled) return;
                         c();
-                        let t = d.current,
-                            i = t.indexOf(e);
-                        if (-1 === i) return;
-                        let l = i + 1 < t.length ? i + 1 : i - 1;
-                        if (l >= 0) {
-                            let e = t[l];
+                        let t = o.current,
+                            l = t.indexOf(e);
+                        if (-1 === l) return;
+                        let i = l + 1 < t.length ? l + 1 : l - 1;
+                        if (i >= 0) {
+                            let e = t[i];
                             requestAnimationFrame(() => {
                                 let t = s.current.get(e);
                                 t?.focus();
@@ -69,19 +69,19 @@ n.d(
                     },
                     [n, c],
                 ),
-                f = l.useMemo(
+                f = i.useMemo(
                     () => ({
                         registerDragHandleRef: u,
-                        registerItemRef: m,
-                        manageFocusOnReorder: g,
+                        registerItemRef: g,
+                        manageFocusOnReorder: m,
                         manageFocusOnDelete: x,
                     }),
-                    [u, m, g, x],
+                    [u, g, m, x],
                 );
-            return (0, i.jsx)(r.Provider, { value: f, children: t });
+            return (0, l.jsx)(r.Provider, { value: f, children: t });
         },
         r: function () {
-            return l.useContext(r) ?? o;
+            return i.useContext(r) ?? d;
         },
     },
 );

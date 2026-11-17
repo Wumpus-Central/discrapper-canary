@@ -10,20 +10,20 @@ var l = n(477900),
     m = n(597783),
     h = n(347478),
     g = n(454688),
-    p = n(325802),
-    E = n(212407),
+    E = n(325802),
+    p = n(212407),
     f = n(758836),
     x = n(652215),
-    C = n(792996),
-    v = n(762917);
-function y(e) {
+    v = n(792996),
+    A = n(762917);
+function C(e) {
     let { skuId: t, unpublishedAt: n } = e,
         r = (0, d.ty)(t),
         s = (0, h.$)(r) ? r : null;
     return null != s
-        ? (0, l.jsx)(p.b, { promotion: s })
+        ? (0, l.jsx)(E.b, { promotion: s })
         : (0, c.HF)(n)
-          ? (0, l.jsx)(a.E, { type: { text: C.intl.string(C.t["h/uBCR"]) }, variant: "inverted" })
+          ? (0, l.jsx)(a.E, { type: { text: v.intl.string(v.t["h/uBCR"]) }, variant: "inverted" })
           : null;
 }
 n.d(
@@ -38,25 +38,25 @@ n.d(
                     enablePreview: c,
                     pageType: d = f.G2.HOME,
                     handleTransition: h,
-                    listItemProps: p,
+                    listItemProps: E,
                 } = e,
-                A = a?.categorySkuId;
-            null == A && null != a && (A = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
-            let _ = A ?? n?.skuId ?? "",
-                { handleCardVisibilityChange: L } = (0, m.Z)(_, d, "marketing featured block"),
-                b = (0, E.s4)(n, a, c),
+                y = a?.categorySkuId;
+            null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
+            let L = y ?? n?.skuId ?? "",
+                { handleCardVisibilityChange: _ } = (0, m.Z)(L, d, "marketing featured block"),
+                b = (0, p.s4)(n, a, c),
                 S = r.useRef(null),
                 I = a?.bodyText,
                 j = n?.isOrbsExclusive,
                 k = a?.name ?? n?.name,
-                N = null != k ? C.intl.formatToPlainString(C.t.frSHlf, { destination: k }) : void 0,
+                N = null != k ? v.intl.formatToPlainString(v.t.frSHlf, { destination: k }) : void 0,
                 O = (0, o.uM)(),
                 R = r.useCallback(
                     (e, t) => {
-                        (h({ sourceButton: e, categorySkuId: _, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
+                        (h({ sourceButton: e, categorySkuId: L, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
                             i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: O?.sessionId,
-                                sku_id: _,
+                                sku_id: L,
                                 page_type: d,
                                 page_section: O?.pageSection,
                                 page_category: O?.pageCategory,
@@ -65,7 +65,7 @@ n.d(
                                 cta_name: t,
                             }));
                     },
-                    [h, _, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [h, L, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
                 T = r.useCallback(() => {
                     R("shop marketing take me there button", "Take me there button");
@@ -75,7 +75,7 @@ n.d(
                 }, [R]);
             return (0, l.jsx)(s.L, {
                 innerRef: S,
-                onChange: L,
+                onChange: _,
                 threshold: 0,
                 children: (0, l.jsx)(g.Ay, {
                     layout: t,
@@ -83,14 +83,14 @@ n.d(
                     backgroundImageUrl: b,
                     title:
                         null != I
-                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: v.D }
+                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: A.D }
                             : void 0,
-                    badge: (0, l.jsx)(y, { skuId: _, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
-                    ctaText: C.intl.string(C.t.jVcuVY),
+                    badge: (0, l.jsx)(C, { skuId: L, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
+                    ctaText: v.intl.string(v.t.jVcuVY),
                     "aria-label": N,
                     onButtonClick: T,
                     onBlockClick: D,
-                    listItemProps: p,
+                    listItemProps: E,
                 }),
             });
         },

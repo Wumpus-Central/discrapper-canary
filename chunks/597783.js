@@ -16,11 +16,11 @@ n.d(
                 m = (0, i.uM)(),
                 h = (0, r.bG)([o.A], () => o.A.getProduct(e)),
                 g = (0, c.o)(),
-                p = a.Ay.canUseShopDiscounts(g),
-                E = l.useRef(null),
+                E = a.Ay.canUseShopDiscounts(g),
+                p = l.useRef(null),
                 f = l.useCallback(() => {
-                    let l = null != h ? (0, u.Br)(h, p, !1) : null,
-                        r = null != h ? (0, u.c7)(h, p, !1) : void 0;
+                    let l = null != h ? (0, u.Br)(h, E, !1) : null,
+                        r = null != h ? (0, u.c7)(h, E, !1) : void 0;
                     s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                         collectibles_shop_session_id: m?.sessionId,
                         sku_id: e,
@@ -40,7 +40,7 @@ n.d(
                     m?.pageCategory,
                     m?.pageSection,
                     m?.tilePosition,
-                    p,
+                    E,
                     t,
                     h,
                     e,
@@ -49,18 +49,18 @@ n.d(
                 x = l.useCallback(
                     (e) => {
                         e
-                            ? null === E.current &&
-                              (E.current = setTimeout(() => {
-                                  (f(), (E.current = null));
+                            ? null === p.current &&
+                              (p.current = setTimeout(() => {
+                                  (f(), (p.current = null));
                               }, 1e3))
-                            : null !== E.current && (clearTimeout(E.current), (E.current = null));
+                            : null !== p.current && (clearTimeout(p.current), (p.current = null));
                     },
                     [f],
                 );
             return (
                 l.useEffect(
                     () => () => {
-                        null !== E.current && (clearTimeout(E.current), (E.current = null));
+                        null !== p.current && (clearTimeout(p.current), (p.current = null));
                     },
                     [e],
                 ),

@@ -28,7 +28,7 @@ var a = n(635377),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     E = new d.A("MarkdownToSlate"),
-    S = {
+    y = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -72,23 +72,23 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    y = new Set(["start", "end"]),
+    S = new Set(["start", "end"]),
     C = new Map([
-        ["inlineCode", y],
-        ["spoiler", y],
-        ["s", y],
+        ["inlineCode", S],
+        ["spoiler", S],
+        ["s", S],
         ["subtext", new Set(["start"])],
-        ["u", y],
+        ["u", S],
     ]),
     A = new Set(["*", "_", "~", "|", "\\"]),
     b = {},
     I = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in S))
+    if (!(e in y))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = S[e];
+    let t = y[e];
     ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
@@ -227,7 +227,7 @@ function P(e, t, n, l, r) {
                     if ("inlineCode" === e) return { before: t[1], after: t[1] };
                     if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
                     if ("subtext" === e) return { before: k.exec(t.input)[1], after: "" };
-                    let n = S["link" === e ? "url" : e];
+                    let n = y["link" === e ? "url" : e];
                     if ("inlineStyle" === n.type) return n;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(a, u),
@@ -365,15 +365,15 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             g = o ? p : f,
             x = o ? f : p,
             E = !1;
-        function* S(n) {
+        function* y(n) {
             let [s, h] = n,
                 f = h.length,
                 p = X.isAncestor(h, c.path),
                 g = X.isAncestor(h, d.path),
                 x = p ? c.path[f] : 0,
-                y = g ? d.path[f] : s.children.length - 1,
-                C = o ? y : x,
-                A = o ? x : y;
+                S = g ? d.path[f] : s.children.length - 1,
+                C = o ? S : x,
+                A = o ? x : S;
             for (let n = C; !E && (!o ? n <= A : n >= A); n += m) {
                 let m = s.children[n],
                     f = X.child(h, n);
@@ -387,7 +387,7 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                         }
                         if (!u && e) continue;
                     }
-                    for (let e of S([m, f])) yield e;
+                    for (let e of y([m, f])) yield e;
                 } else if (Z.isText(m))
                     if ("line" === a) l = { path: f, offset: o ? 0 : m.text.length };
                     else if (0 === m.text.length) yield { path: f, offset: 0 };
@@ -402,7 +402,7 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             "line" === a && Q.isElement(s) && !t.isVoid(s) && (null != l && (yield l, (l = void 0)), (E = !0));
         }
         "line" === a && (yield o ? d : c);
-        for (let e = g; !E && (!o ? e <= x : e >= x); e += m) for (let t of S(h[e])) yield t;
+        for (let e = g; !E && (!o ? e <= x : e >= x); e += m) for (let t of y(h[e])) yield t;
     };
     let t = s.rL.findDocumentOrShadowRoot;
     ((s.rL.findDocumentOrShadowRoot = (e) => e.windowContext?.renderWindow.document ?? t(e)),

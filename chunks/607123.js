@@ -8,8 +8,8 @@ var l = n(477900),
     o = n(38021),
     d = n(844222),
     h = n(580573),
-    f = n(775602),
-    p = n(139136),
+    p = n(775602),
+    f = n(139136),
     m = n(665411),
     C = n(474012),
     y = n(929283),
@@ -43,7 +43,7 @@ function x(e) {
         case s.R.PROFILE_EFFECT:
             return (0, l.jsx)("div", {
                 className: P.xC,
-                children: (0, l.jsx)(p.A, {
+                children: (0, l.jsx)(f.A, {
                     skuId: t.item.skuId,
                     isHighlighted: n,
                     removeSetHeight: !0,
@@ -90,10 +90,10 @@ function R(e) {
 }
 function T(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: i } = e,
-        s = (0, u.bG)([f.Ay], () => f.Ay.useReducedMotion),
-        { theme: p, saturation: m } = (0, o.wR)(),
+        s = (0, u.bG)([p.Ay], () => p.Ay.useReducedMotion),
+        { theme: f, saturation: m } = (0, o.wR)(),
         { highContrastModeEnabled: C } = r.useContext(d.C),
-        [y, E, _, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: p, saturation: m, highContrastModeEnabled: C }).rgba();
+        [y, E, _, g] = c.A.colors.TEXT_DEFAULT.resolve({ theme: f, saturation: m, highContrastModeEnabled: C }).rgba();
     return (0, l.jsx)("div", {
         className: P.yv,
         children: (0, l.jsx)(h.u, {

@@ -54,16 +54,16 @@ n.d(
             let { loadId: n, paymentSourceType: s, error: u, errorMessage: c, expressPaymentType: o } = e,
                 d = u instanceof l.Ey ? u : null,
                 h = null != d ? d.code : null,
-                f = u instanceof l.Ey || null == u ? null : u,
-                p = {
+                p = u instanceof l.Ey || null == u ? null : u,
+                f = {
                     load_id: n,
                     analytics_location: t,
                     payment_source_type: s,
                     error_code: h,
-                    error_message: null != f ? a(f, c) : c,
+                    error_message: null != p ? a(p, c) : c,
                     express_payment_type: o ?? null,
                 };
-            return (r.default.track(i.HAw.PAYMENT_FLOW_ADD_SOURCE_ERROR, p), p);
+            return (r.default.track(i.HAw.PAYMENT_FLOW_ADD_SOURCE_ERROR, f), f);
         },
         dE: function (e, t) {
             let { loadId: n, checkoutFlow: l, expressCheckoutType: a, expressPaymentType: s } = e;

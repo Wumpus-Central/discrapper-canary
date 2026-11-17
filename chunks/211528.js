@@ -15,7 +15,7 @@ var l = t(477900),
     y = t(818348),
     C = t(400400);
 let P = { type: "tabs" },
-    g = n.memo(function (e) {
+    x = n.memo(function (e) {
         let {
                 paymentMethodOrder: a,
                 wallets: t = [],
@@ -25,9 +25,9 @@ let P = { type: "tabs" },
                 options: m,
                 onChange: p,
                 step: C,
-                ...g
+                ...x
             } = e,
-            x = (0, s.bG)([o.default], () => {
+            g = (0, s.bG)([o.default], () => {
                 let e = o.default.getCurrentUser();
                 return null != e ? e.email : null;
             }),
@@ -55,7 +55,7 @@ let P = { type: "tabs" },
                 },
                 [p, d, C, h],
             ),
-            _ = n.useMemo(
+            v = n.useMemo(
                 () => ({
                     applePay: t.includes("applePay") ? "auto" : "never",
                     googlePay: t.includes("googlePay") ? "auto" : "never",
@@ -64,21 +64,21 @@ let P = { type: "tabs" },
                 [t],
             ),
             M = n.useMemo(
-                () => ({ billingDetails: { ...(null != x && { email: x }), ...(null != f && { name: f }) } }),
-                [x, f],
+                () => ({ billingDetails: { ...(null != g && { email: g }), ...(null != f && { name: f }) } }),
+                [g, f],
             ),
-            v = n.useMemo(
+            _ = n.useMemo(
                 () => ({
                     id: "stripe-payment-element",
-                    options: { layout: i, wallets: _, defaultValues: M, paymentMethodOrder: a, ...m },
+                    options: { layout: i, wallets: v, defaultValues: M, paymentMethodOrder: a, ...m },
                     onChange: T,
-                    ...g,
+                    ...x,
                 }),
-                [i, _, M, m, g, T, a],
+                [i, v, M, m, x, T, a],
             );
-        return (0, l.jsx)(r.PaymentElement, { ...v });
+        return (0, l.jsx)(r.PaymentElement, { ..._ });
     });
-function x(e) {
+function g(e) {
     let { children: a } = e,
         t = (0, i.S)(),
         { elementsAppearance: n } = (0, p.E)(),
@@ -132,7 +132,7 @@ let T = n.memo(function (e) {
             [A, E, a, o, u],
         );
     return t
-        ? (0, l.jsxs)(x, {
+        ? (0, l.jsxs)(g, {
               children: [
                   (0, l.jsx)("div", {
                       className: C.R,
@@ -143,4 +143,4 @@ let T = n.memo(function (e) {
           })
         : y;
 });
-t.d(a, {}, { KS: T, Wf: g, ZB: f });
+t.d(a, {}, { KS: T, Wf: x, ZB: f });

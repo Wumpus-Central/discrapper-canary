@@ -4,14 +4,14 @@ var i = n(477900),
     s = n(534890),
     a = n(308528),
     o = n(993401),
-    d = n(518477),
-    u = n(792996);
+    u = n(518477),
+    d = n(792996);
 function c(e) {
     let { userId: t, onClose: n } = e,
         i = l.useCallback(() => {
             (a.A.openPrivateChannel({ recipientIds: t }), n?.(), (0, r.s7)());
         }, [t, n]);
-    return { action: d.pt.SEND_MESSAGE, icon: s.ChatIcon, onClick: i, text: u.intl.string(u.t.zROXEV) };
+    return { action: u.pt.SEND_MESSAGE, icon: s.ChatIcon, onClick: i, text: d.intl.string(d.t.zROXEV) };
 }
 n.d(
     t,

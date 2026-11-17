@@ -3,8 +3,8 @@ var r = n(477900),
     s = n(575593),
     a = n(821609),
     l = n(597770),
-    u = n(866665),
-    o = n(408278),
+    o = n(866665),
+    u = n(408278),
     d = n(688810),
     c = n(44120),
     I = n(129230),
@@ -14,8 +14,8 @@ var r = n(477900),
     m = n(766172),
     g = n(758836),
     x = n(652215),
-    E = n(682901),
-    _ = n(792996);
+    _ = n(682901),
+    A = n(792996);
 n.d(
     t,
     {},
@@ -24,16 +24,16 @@ n.d(
             let {
                     product: t,
                     primary: n,
-                    selectedVariantIndex: A,
-                    returnRef: h,
-                    onSuccess: C,
+                    selectedVariantIndex: E,
+                    returnRef: C,
+                    onSuccess: h,
                     tooltipDelay: b,
                     fullWidth: R = !1,
                     fullWidthLabel: k,
-                    giftRecipient: y,
-                    giftingOrigin: S = E.vQ.SHOP_PAGE,
-                    onTrackClick: j,
-                    tabIndex: O,
+                    giftRecipient: O,
+                    giftingOrigin: y = _.vQ.SHOP_PAGE,
+                    onTrackClick: S,
+                    tabIndex: j,
                 } = e,
                 { analyticsLocations: T } = (0, d.Ay)(),
                 N = i.useRef(null),
@@ -51,19 +51,19 @@ n.d(
                         cta_name: "gift button",
                         page_type: V ?? "home",
                     }),
-                    j?.(g.sH.SEND_AS_GIFT),
+                    S?.(g.sH.SEND_AS_GIFT),
                     (0, c.A)({
-                        skuId: (0, m.Y)({ product: t, selectedVariantIndex: A }),
+                        skuId: (0, m.Y)({ product: t, selectedVariantIndex: E }),
                         isGift: !0,
-                        giftRecipient: y,
-                        giftingOrigin: S,
+                        giftRecipient: O,
+                        giftingOrigin: y,
                         analyticsLocations: T,
                         discoverySessionId: P?.sessionId,
-                        returnRef: h,
+                        returnRef: C,
                         onClose:
-                            null != C
+                            null != h
                                 ? (e) => {
-                                      e && C();
+                                      e && h();
                                   }
                                 : void 0,
                     }));
@@ -73,16 +73,16 @@ n.d(
                     variant: n ? "primary" : "secondary",
                     icon: l.GiftIcon,
                     onClick: L,
-                    text: k ?? _.intl.string(_.t.gmnzqM),
+                    text: k ?? A.intl.string(A.t.gmnzqM),
                     fullWidth: !0,
-                    tabIndex: O,
+                    tabIndex: j,
                 });
-            let D = _.intl.string(_.t["JCFN/y"]);
-            return (0, r.jsx)(u.m, {
+            let D = A.intl.string(A.t["JCFN/y"]);
+            return (0, r.jsx)(o.m, {
                 text: D,
                 delay: b,
-                children: (0, r.jsx)(o.K, {
-                    "aria-label": _.intl.formatToPlainString(_.t["5UYoSr"], {
+                children: (0, r.jsx)(u.K, {
+                    "aria-label": A.intl.formatToPlainString(A.t["5UYoSr"], {
                         ctaLabel: D,
                         productLabel: (0, p.s7)(t),
                     }),
@@ -91,7 +91,7 @@ n.d(
                     icon: l.GiftIcon,
                     size: "md",
                     onClick: L,
-                    tabIndex: O,
+                    tabIndex: j,
                 }),
             });
         },

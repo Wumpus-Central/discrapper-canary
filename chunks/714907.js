@@ -80,8 +80,8 @@ let j = (0, i.E2)(l.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
 });
 var O = n(366010),
     D = n(775602),
-    L = n(875317),
-    R = n(97469),
+    R = n(875317),
+    L = n(97469),
     P = n(413599),
     G = n(253932),
     M = n(818348);
@@ -89,7 +89,7 @@ let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => u.intl.string(u.t.EpSHAQ),
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
     useValue: function () {
-        let e = (0, R.qo)();
+        let e = (0, L.qo)();
         return (0, s.bG)([P.A, D.Ay], () => {
             let t = P.A.theme,
                 n = D.Ay.useForcedColors;
@@ -98,7 +98,7 @@ let U = (0, i.zD)(l.X.APPEARANCE_DARK_SIDEBAR, {
     },
     usePredicate: function () {
         let e = null != G.eh.useSetting().customUserThemeSettings,
-            t = null != (0, L.Q)(),
+            t = null != (0, R.Q)(),
             n = (0, a.V)();
         return (0, s.bG)([P.A, r.A], () => {
             let i = P.A.theme,
@@ -151,8 +151,8 @@ var B = n(873298),
     Z = n(145359),
     q = n(773527),
     Q = n(506988),
-    J = n(287809),
-    $ = n(973654),
+    $ = n(287809),
+    J = n(973654),
     ee = n(185928),
     et = n(652215),
     en = n(211824),
@@ -170,7 +170,7 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                 r.A.isPreview,
             ]),
             d = (0, Z.Lz)(en.vB.CLIENT_THEME, "DualThemeSelector"),
-            m = (0, s.bG)([J.default], () => J.default.getCurrentUser()?.premiumType),
+            m = (0, s.bG)([$.default], () => $.default.getCurrentUser()?.premiumType),
             A = (0, q.YY)(en.vB.CLIENT_THEME, m),
             E = (0, q.oB)(a),
             h = d === en.S9.SELECTABLE || (d === en.S9.HIDDEN && E && !A),
@@ -179,7 +179,7 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
             I = g.useRef(!1);
         function _(e, n, i) {
             if (e === ee.Fc.DARK && I.current) return;
-            ((0, $.NA)({ [e]: n }), (0, $.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
+            ((0, J.NA)({ [e]: n }), (0, J.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
             let l = null != i ? `${e}-mode-${B.ju[i]}` : `${e}-mode-${n}`;
             ((0, k.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l }), (0, H.cO)(), (0, H.by)());
         }
