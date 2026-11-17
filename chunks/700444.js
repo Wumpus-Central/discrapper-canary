@@ -32,16 +32,16 @@ n.d(
                     backgroundImageUrl: S,
                 } = e,
                 I = (0, c.ur)(y) ?? void 0,
-                k = (0, o.W8)(),
-                j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
+                j = (0, o.W8)(),
+                k = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 N = r.useMemo(() => {
                     if ("none" !== _)
-                        return "nitro" !== _ || k
+                        return "nitro" !== _ || j
                             ? {
                                   kind: "button",
                                   text:
-                                      null != j
-                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: j })
+                                      null != k
+                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: k })
                                           : g.intl.string(g.t.apFNLU),
                                   onClick: () => (0, u.default)({ applicationId: t }),
                                   onMouseDown: () => (0, u.G)({ applicationId: t }),
@@ -55,7 +55,7 @@ n.d(
                                       buttonTextOverride: g.intl.string(g.t.pj0XBN),
                                   }),
                               };
-                }, [_, t, j, k]);
+                }, [_, t, k, j]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
                 resolvedSkuIds: v,

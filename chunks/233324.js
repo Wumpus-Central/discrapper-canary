@@ -21,8 +21,8 @@ var r = n(855986),
     N = n(38021),
     f = n(366010),
     I = n(866665),
-    x = n(408278),
-    S = n(465794),
+    S = n(408278),
+    x = n(465794),
     O = n(652215),
     v = n(49999),
     U = n(682901),
@@ -39,7 +39,7 @@ function j(e) {
                       className: R.VN,
                       children: (0, i.jsx)(I.m, {
                           text: L.intl.string(L.t.cpT0Cq),
-                          children: (0, i.jsx)(x.K, {
+                          children: (0, i.jsx)(S.K, {
                               icon: a.XSmallIcon,
                               "aria-label": L.intl.string(L.t.cpT0Cq),
                               size: "sm",
@@ -67,7 +67,7 @@ function j(e) {
                     ? (0, i.jsx)(u.$, { size: "sm", onClick: r, text: L.intl.string(L.t.RzWDqY) })
                     : (0, i.jsx)("div", {
                           className: R.xF,
-                          children: (0, i.jsx)(S.A, {
+                          children: (0, i.jsx)(x.A, {
                               size: "sm",
                               variantOverride: (0, f.q)(l) ? "primary" : "overlay-primary",
                               subscriptionTier: U.pe.TIER_2,
@@ -96,11 +96,11 @@ function D(e) {
                   ? L.intl.string(L.t.f2qjw5)
                   : L.intl.string(L.t.SblICW),
         I = p.Ay.canUseCustomCallSounds(N);
-    function x() {
+    function S() {
         ((0, A.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), m?.(v.i.PRIMARY));
     }
     return T
-        ? (0, i.jsx)(j, { description: f, canUseCustomCallSounds: I, onNavigateToFeature: x, markAsDismissed: m })
+        ? (0, i.jsx)(j, { description: f, canUseCustomCallSounds: I, onNavigateToFeature: S, markAsDismissed: m })
         : (0, i.jsxs)(C.A, {
               isShown: !0,
               type: C.i.PREMIUM,
@@ -124,7 +124,7 @@ function D(e) {
                   }),
                   (0, i.jsx)(d.E, { variant: "body-sm/normal", children: f }),
                   I
-                      ? (0, i.jsx)(u.$, { onClick: x, text: L.intl.string(L.t.RzWDqY), fullWidth: !0 })
+                      ? (0, i.jsx)(u.$, { onClick: S, text: L.intl.string(L.t.RzWDqY), fullWidth: !0 })
                       : (0, i.jsx)(h.A, {
                             textOptions: { textOverride: L.intl.string(L.t.pj0XBN) },
                             subscriptionTier: U.pe.TIER_2,

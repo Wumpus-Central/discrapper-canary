@@ -40,10 +40,10 @@ let I = function (e) {
         ],
     });
 };
-var k = n(262056),
-    j = n(775602),
+var j = n(262056),
+    k = n(775602),
     N = n(295986);
-function R(e) {
+function O(e) {
     let { assetPath: t } = e,
         n = r.useRef(null);
     return (
@@ -66,10 +66,10 @@ function R(e) {
         (0, l.jsx)("canvas", { ref: n, className: N.C, width: 120, height: 120, "aria-hidden": "true" })
     );
 }
-let O = function (e) {
+let R = function (e) {
     let { assetPath: t, progress: n, progressText: r, progressColor: s } = e,
-        a = (0, i.bG)([j.Ay], () => j.Ay.useReducedMotion)
-            ? (0, l.jsx)(R, { assetPath: t })
+        a = (0, i.bG)([k.Ay], () => k.Ay.useReducedMotion)
+            ? (0, l.jsx)(O, { assetPath: t })
             : (0, l.jsx)("img", { src: t, alt: "", className: N.C, width: 120, height: 120 });
     return null == n
         ? a
@@ -80,7 +80,7 @@ let O = function (e) {
               "aria-valuemin": 0,
               "aria-valuemax": n.target,
               "aria-valuetext": r ?? void 0,
-              children: (0, l.jsx)(k.A, { current: n.current, target: n.target, progressColor: s, children: a }),
+              children: (0, l.jsx)(j.A, { current: n.current, target: n.target, progressColor: s, children: a }),
           });
 };
 var T = n(821609),
@@ -175,7 +175,7 @@ function Y(e) {
         align: "center",
         className: g,
         children: [
-            (0, l.jsx)(O, { assetPath: r, progress: s, progressText: d, progressColor: a }),
+            (0, l.jsx)(R, { assetPath: r, progress: s, progressText: d, progressColor: a }),
             (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 8,
@@ -213,13 +213,13 @@ function X(e) {
             progressText: _,
             timeLeftText: b,
             contentThemeClassName: S,
-            rewardProduct: j,
+            rewardProduct: k,
             claimRewardButtonVariant: N,
-            helpCenterId: R,
+            helpCenterId: O,
             isClaiming: T,
             onClaim: D,
         } = e,
-        M = null != R && "" !== R ? y.A.getArticleURL(R) : null,
+        M = null != O && "" !== O ? y.A.getArticleURL(O) : null,
         { handleInlineHelpTextClick: B, handleClaim: H, handleUseNowClick: G } = z(t, n, D),
         U = r.useCallback(() => {
             null != M && ((0, L.l)(t, n, $.Z.INFO_BUTTON_CLICKED), (0, p.A)(M));
@@ -233,7 +233,7 @@ function X(e) {
         className: a()(F.N, S),
         style: { backgroundImage: `url(${v})` },
         children: [
-            (0, l.jsx)(O, { assetPath: s, progress: i, progressText: _, progressColor: f }),
+            (0, l.jsx)(R, { assetPath: s, progress: i, progressText: _, progressColor: f }),
             (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 10,
@@ -265,7 +265,7 @@ function X(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != _ && (0, l.jsx)(I, { text: _, indicatorColor: f ?? k.W }),
+                            null != _ && (0, l.jsx)(I, { text: _, indicatorColor: f ?? j.W }),
                             null != b && (0, l.jsx)(I, { icon: c.ClockIcon, text: b }),
                         ],
                     }),
@@ -279,7 +279,7 @@ function X(e) {
                 children: [
                     (0, l.jsx)(w, {
                         promotionRewardStatus: t.rewardStatus,
-                        rewardProduct: j,
+                        rewardProduct: k,
                         claimRewardButtonVariant: N,
                         isClaiming: T,
                         onClaim: H,
@@ -341,7 +341,7 @@ function q(e) {
             title: _,
             description: S,
             progressText: I,
-            timeLeftText: k,
+            timeLeftText: j,
         } = (0, b.MZ)({
             promotion: s,
             promotionProgress: C,
@@ -350,7 +350,7 @@ function q(e) {
             daysRemaining: v,
             locale: d,
         }),
-        j = {
+        k = {
             promotion: s,
             surface: n,
             assetPath: E.assetPath,
@@ -360,7 +360,7 @@ function q(e) {
             title: _,
             description: S,
             progressText: I,
-            timeLeftText: k,
+            timeLeftText: j,
             contentThemeClassName: V[f],
             rewardProduct: o,
             claimRewardButtonVariant: K[f],
@@ -368,7 +368,7 @@ function q(e) {
             isClaiming: u,
             onClaim: c,
         };
-    return "condensed" === t ? (0, l.jsx)(Y, { ...j }) : (0, l.jsx)(X, { ...j });
+    return "condensed" === t ? (0, l.jsx)(Y, { ...k }) : (0, l.jsx)(X, { ...k });
 }
 let Z = function (e) {
     let { variant: t, surface: n, collectionId: s } = e,

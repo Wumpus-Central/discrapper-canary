@@ -1,7 +1,7 @@
-var o = n(477900);
+var l = n(477900);
 n(582128);
-var l = n(503698),
-    a = n.n(l),
+var o = n(503698),
+    a = n.n(o),
     r = n(821609),
     i = n(534514),
     d = n(403581),
@@ -17,7 +17,7 @@ n.d(
     {
         In: function (e) {
             let { children: t } = e;
-            return (0, o.jsx)(i.D, {
+            return (0, l.jsx)(i.D, {
                 variant: "heading-xs/medium",
                 color: "text-strong",
                 className: m.ut,
@@ -25,33 +25,33 @@ n.d(
             });
         },
         T0: function (e) {
-            let { className: t, ref: n, children: l, onClick: r } = e;
-            return (0, o.jsx)(s.N, {
+            let { className: t, ref: n, children: o, onClick: r } = e;
+            return (0, l.jsx)(s.N, {
                 theme: c.NJ.DARK,
                 children: (e) =>
-                    (0, o.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         ref: n,
                         className: a()(m.lm, e, t),
                         children: [
-                            (0, o.jsx)("div", { className: m.qZ, children: l }),
-                            (0, o.jsx)(u.D, {
+                            (0, l.jsx)("div", { className: m.qZ, children: o }),
+                            (0, l.jsx)(u.D, {
                                 focusProps: { offset: 6 },
                                 className: m.b,
                                 onClick: r,
                                 "aria-label": b.intl.string(b.t.WAI6xu),
-                                children: (0, o.jsx)(p.XSmallIcon, { size: "sm" }),
+                                children: (0, l.jsx)(p.XSmallIcon, { size: "sm" }),
                             }),
                         ],
                     }),
             });
         },
         fY: function (e) {
-            let { text: t, onClick: n, icon: l = d.NitroWheelIcon, iconPosition: a } = e;
-            return (0, o.jsx)(r.$, {
+            let { text: t, onClick: n, icon: o = d.NitroWheelIcon, iconPosition: a } = e;
+            return (0, l.jsx)(r.$, {
                 onClick: n,
                 text: t,
                 size: "sm",
-                icon: l,
+                icon: o,
                 iconPosition: a,
                 variant: "overlay-primary",
             });

@@ -47,32 +47,32 @@ n.d(
                 L = (0, f.s4)(n, a, c),
                 S = r.useRef(null),
                 I = a?.bodyText,
-                k = n?.isOrbsExclusive,
-                j = a?.name ?? n?.name,
-                N = null != j ? v.intl.formatToPlainString(v.t.frSHlf, { destination: j }) : void 0,
-                R = (0, o.uM)(),
-                O = r.useCallback(
+                j = n?.isOrbsExclusive,
+                k = a?.name ?? n?.name,
+                N = null != k ? v.intl.formatToPlainString(v.t.frSHlf, { destination: k }) : void 0,
+                O = (0, o.uM)(),
+                R = r.useCallback(
                     (e, t) => {
-                        (g({ sourceButton: e, categorySkuId: _, isInternalShopDeeplink: !0, isOrbsExclusive: k }),
+                        (g({ sourceButton: e, categorySkuId: _, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
                             i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                collectibles_shop_session_id: R?.sessionId,
+                                collectibles_shop_session_id: O?.sessionId,
                                 sku_id: _,
                                 page_type: d,
-                                page_section: R?.pageSection,
-                                page_category: R?.pageCategory,
+                                page_section: O?.pageSection,
+                                page_category: O?.pageCategory,
                                 tile_type: "FEATURED_BLOCK",
-                                tile_position: String(R?.tilePosition),
+                                tile_position: String(O?.tilePosition),
                                 cta_name: t,
                             }));
                     },
-                    [g, _, k, d, R?.sessionId, R?.pageSection, R?.pageCategory, R?.tilePosition],
+                    [g, _, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
                 T = r.useCallback(() => {
-                    O("shop marketing take me there button", "Take me there button");
-                }, [O]),
+                    R("shop marketing take me there button", "Take me there button");
+                }, [R]),
                 D = r.useCallback(() => {
-                    O("shop marketing tile", null);
-                }, [O]);
+                    R("shop marketing tile", null);
+                }, [R]);
             return (0, l.jsx)(s.L, {
                 innerRef: S,
                 onChange: b,

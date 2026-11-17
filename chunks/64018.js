@@ -29,11 +29,11 @@ let S = (0, n(945810).mj)({
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var I = n(304210),
-    k = n(39196),
-    j = n(480750),
+    j = n(39196),
+    k = n(480750),
     N = n(808598),
-    R = n(93955),
-    O = n(212407),
+    O = n(93955),
+    R = n(212407),
     T = n(521e3),
     D = n(460348),
     P = n(815280),
@@ -125,14 +125,14 @@ let Y = (e) => {
                             },
                 [S, s],
             ),
-            es = r.useMemo(() => (0, k.HF)(el, er), [el, er]),
+            es = r.useMemo(() => (0, j.HF)(el, er), [el, er]),
             ea = es?.subtype === v.h5.TAKEOVER,
             ei = es?.subtype === v.h5.BASIC,
             eo = ea && el?.endsAt != null && null == (0, N.X)(el.endsAt) && B === $.G2.HOME,
             eu = ea && !eo,
             ec = (eu || ei) && B === $.G2.COLLECTION_INDEX,
             ed = r.useMemo(
-                () => (null != er.foregroundBlock || null == el || eo ? er : (0, k.O8)(el, er, B, ee)),
+                () => (null != er.foregroundBlock || null == el || eo ? er : (0, j.O8)(el, er, B, ee)),
                 [el, er, eo, B, ee],
             ),
             {
@@ -142,7 +142,7 @@ let Y = (e) => {
                 heroBannerStatic: ep,
                 heroBannerAnimated: ef,
                 heroBannerRive: eE,
-            } = (0, O.Kk)(ed),
+            } = (0, R.Kk)(ed),
             ex = em?.responsive ?? !1,
             ev = em?.backgroundStyle,
             eC = null != eE && !eu,
@@ -255,7 +255,7 @@ let Y = (e) => {
                                                                             (0, l.jsx)(g.B, {
                                                                                 onClick:
                                                                                     null != el && eu
-                                                                                        ? (e) => (0, j.h)(e, el, e_)
+                                                                                        ? (e) => (0, k.h)(e, el, e_)
                                                                                         : void 0,
                                                                                 children: (0, l.jsx)(h.E, {
                                                                                     variant: eu
@@ -278,7 +278,7 @@ let Y = (e) => {
                                                                     ec &&
                                                                     (0, l.jsx)("div", {
                                                                         className: K.Zz,
-                                                                        children: (0, l.jsx)(R.A, {
+                                                                        children: (0, l.jsx)(O.A, {
                                                                             collectionId: ed.categorySkuId,
                                                                             variant: "full",
                                                                             surface: e_,
@@ -306,7 +306,7 @@ let Y = (e) => {
                         B === $.G2.HOME &&
                         (0, l.jsx)("div", {
                             className: a()(K.xX, K.uC),
-                            children: (0, l.jsx)(R.A, { collectionId: ed.categorySkuId, variant: "full", surface: e_ }),
+                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: e_ }),
                         }),
                 ],
             }),

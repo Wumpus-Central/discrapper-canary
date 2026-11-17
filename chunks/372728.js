@@ -23,17 +23,17 @@ n.d(
         A: function (e) {
             let { enabled: t } = m.A.useConfig({ location: e }),
                 { enabled: n } = f.A.useConfig({ location: e }),
-                { assetUrl: O } = (0, g.A)(l.oW.MARKETING_PAGE_REWARDS_BENTO_BOX),
-                { analyticsLocations: T } = (0, s.Ay)(r.A.PREMIUM_MARKETING_BENTO_BOX);
+                { assetUrl: T } = (0, g.A)(l.oW.MARKETING_PAGE_REWARDS_BENTO_BOX),
+                { analyticsLocations: O } = (0, s.Ay)(r.A.PREMIUM_MARKETING_BENTO_BOX);
             return (0, a.useMemo)(
                 () =>
-                    t && n && null != O
+                    t && n && null != T
                         ? {
                               name: d.N.CODE_BLURPLE,
                               caption: (0, i.jsx)("img", { src: _.A, alt: "Call of Duty: MW4" }),
                               title: E.intl.string(P.default.E1sPHw),
                               description: E.intl.string(P.default.py5vQi),
-                              previewImage: O,
+                              previewImage: T,
                               descriptionCta: E.intl.string(p.default.WMK6Pg),
                               actions: [
                                   {
@@ -46,14 +46,14 @@ n.d(
                                               subtitle: E.intl.format(A.default.ieA3V0, {
                                                   termsUrl: o.A.getArticleURL(b.MVz.CODE_BLURPLE_PROMOTION),
                                               }),
-                                              analyticsLocations: T,
+                                              analyticsLocations: O,
                                               isLocked: !0,
                                           }),
                                   },
                               ],
                           }
                         : null,
-                [t, n, O, T],
+                [t, n, T, O],
             );
         },
     },

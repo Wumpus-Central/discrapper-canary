@@ -4,8 +4,8 @@ var r = n(427930),
     i = n(71393);
 n(938796);
 var a = n(665260),
-    o = n(409481),
-    u = n(811091),
+    u = n(409481),
+    o = n(811091),
     s = n(682901),
     d = n(652215);
 let c = Date.UTC(2026, 7, 10),
@@ -31,7 +31,7 @@ function m(e, t) {
               let m = (0, a.Lt)(e.flags ?? 0, d.sbO.IS_CLIP);
               return i <=
                   Math.max(
-                      ((n = e.id), u.default.extractTimestamp(n) >= c ? o.t : Math.max(o.t, 0x1900000)),
+                      ((n = e.id), o.default.extractTimestamp(n) >= c ? u.t : Math.max(u.t, 0x1900000)),
                       l,
                       0x6400000 * !!m,
                   )

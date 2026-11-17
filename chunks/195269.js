@@ -1,20 +1,20 @@
-var r = n(582128),
-    o = n(316363);
-n.d(
-    e,
+var n = e(582128),
+    o = e(316363);
+e.d(
+    t,
     {},
     {
         L: function () {
-            let t = r.useRef(null),
-                { purchaseError: e, setPurchaseError: n } = (0, o.t4)((t) => ({
-                    purchaseError: t.purchaseError,
-                    setPurchaseError: t.setPurchaseError,
+            let r = n.useRef(null),
+                { purchaseError: t, setPurchaseError: e } = (0, o.t4)((r) => ({
+                    purchaseError: r.purchaseError,
+                    setPurchaseError: r.setPurchaseError,
                 }));
             return (
-                r.useEffect(() => {
-                    null != e && null != t.current && t.current.scrollIntoView({ behavior: "smooth" });
-                }, [e]),
-                { purchaseError: e, setPurchaseError: n, purchaseErrorBlockRef: t }
+                n.useEffect(() => {
+                    null != t && null != r.current && r.current.scrollIntoView({ behavior: "smooth" });
+                }, [t]),
+                { purchaseError: t, setPurchaseError: e, purchaseErrorBlockRef: r }
             );
         },
     },

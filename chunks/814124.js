@@ -38,19 +38,19 @@ function b(e) {
         } = e,
         { analyticsLocations: j } = (0, _.Ay)(u.A.COLLECTIBLES_SHOP_NAGBAR),
         f = i.useMemo(() => (null == x ? null : I.A.getArticleURL(x)), [x]),
-        B = (0, k.s)(a),
-        P = v[l] ?? g.Hk,
-        H = (0, E.uM)(),
-        M = i.useCallback(() => {
+        M = (0, k.s)(a),
+        B = v[l] ?? g.Hk,
+        P = (0, E.uM)(),
+        H = i.useCallback(() => {
             m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: H?.sessionId,
+                collectibles_shop_session_id: P?.sessionId,
                 page_type: t,
-                page_section: H?.pageSection,
-                page_category: H?.pageCategory,
+                page_section: P?.pageSection,
+                page_category: P?.pageCategory,
                 tile_type: "NAGBAR",
                 cta_name: "help center article link",
             });
-        }, [t, H]);
+        }, [t, P]);
     return (0, n.jsx)(_.f5, {
         value: j,
         children: (0, n.jsx)(s.N, {
@@ -59,14 +59,14 @@ function b(e) {
                 (0, n.jsxs)("div", {
                     className: o()(g.kL, e),
                     children: [
-                        (0, n.jsx)("div", { className: o()(g.D7, P) }),
+                        (0, n.jsx)("div", { className: o()(g.D7, B) }),
                         (0, n.jsxs)("div", {
                             className: g.Qs,
                             children: [
                                 (0, n.jsxs)("div", {
                                     className: g.hu,
                                     children: [
-                                        null != B && (0, n.jsx)(B, { size: "sm", colorClass: g.d7, className: g.Kk }),
+                                        null != M && (0, n.jsx)(M, { size: "sm", colorClass: g.d7, className: g.Kk }),
                                         (0, n.jsxs)(c.E, {
                                             variant: "body-sm/normal",
                                             color: "text-overlay-light",
@@ -80,7 +80,7 @@ function b(e) {
                                                                 href: f,
                                                                 target: "_blank",
                                                                 className: g.nf,
-                                                                onClick: M,
+                                                                onClick: H,
                                                                 children: L ?? T.intl.string(T.t.WQdkbb),
                                                             }),
                                                         ],

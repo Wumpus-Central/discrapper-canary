@@ -1,6 +1,6 @@
-var o = n(477900);
+var l = n(477900);
 n(582128);
-var l = n(517352),
+var o = n(517352),
     a = n(683063),
     r = n(641436),
     i = n(807098),
@@ -12,7 +12,7 @@ n.d(
     {
         A: function (e) {
             let { children: t } = e,
-                n = (0, r.u)(l.oW.PREMIUM_TAB_TOOLTIP),
+                n = (0, r.u)(o.oW.PREMIUM_TAB_TOOLTIP),
                 u = n?.surface,
                 p = (0, i.T)(u?.asset);
             if (null == u || null == n) return t;
@@ -21,15 +21,15 @@ n.d(
             if (!b.ok) return t;
             let m = (0, d.d)(u.header, c);
             return m.ok
-                ? (0, o.jsx)(a.u, {
+                ? (0, l.jsx)(a.u, {
                       title: m.content,
                       body: b.content,
-                      asset: null != p ? (0, o.jsx)("img", { src: p, alt: "" }) : void 0,
+                      asset: null != p ? (0, l.jsx)("img", { src: p, alt: "" }) : void 0,
                       assetSize: 80,
                       padding: "lg",
                       position: "right",
                       asContainer: !0,
-                      children: (0, o.jsx)("div", { children: t }),
+                      children: (0, l.jsx)("div", { children: t }),
                   })
                 : t;
         },

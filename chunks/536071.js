@@ -1,34 +1,34 @@
-n.d(e, { p: () => m, A: () => d });
+n.d(t, { p: () => d, A: () => g });
 var r = n(477900);
 n(582128);
-var o = n(805251),
-    i = n(953727),
+var i = n(805251),
+    l = n(953727),
     a = n(503698),
     s = n.n(a),
-    l = n(771104),
+    o = n(771104),
     c = n(63517);
-function g(t) {
-    let { className: e, children: n, forceUseColor: o = !1, hideStars: i } = t;
+function u(e) {
+    let { className: t, children: n, forceUseColor: i = !1, hideStars: l } = e;
     return (0, r.jsxs)("span", {
-        className: s()(c.kL, e, { [c.cu]: o }),
+        className: s()(c.kL, t, { [c.cu]: i }),
         children: [
             n,
-            i
+            l
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(l.A, { foreground: c.yv }),
-                          (0, r.jsx)(l.A, { foreground: c.Rq }),
-                          (0, r.jsx)(l.A, { foreground: c.xh }),
+                          (0, r.jsx)(o.A, { foreground: c.yv }),
+                          (0, r.jsx)(o.A, { foreground: c.Rq }),
+                          (0, r.jsx)(o.A, { foreground: c.xh }),
                       ],
                   }),
         ],
     });
 }
-var u = n(975117);
-function m(t) {
+var m = n(975117);
+function d(e) {
     return (0, r.jsx)("svg", {
-        ...(0, i.A)({ ...t }),
+        ...(0, l.A)({ ...e }),
         width: "25",
         height: "48",
         viewBox: "0 0 25 48",
@@ -40,11 +40,11 @@ function m(t) {
         }),
     });
 }
-function d(t) {
-    let { className: e, forceUseColorForSparkles: n = !1, variant: i = "premium" } = t;
-    return (0, r.jsx)(g, {
-        className: e,
+function g(e) {
+    let { className: t, forceUseColorForSparkles: n = !1, variant: l = "premium" } = e;
+    return (0, r.jsx)(u, {
+        className: t,
         forceUseColor: n,
-        children: (0, r.jsx)("span", { className: u.Z, children: (0, r.jsx)(o.E, { type: "new", variant: i }) }),
+        children: (0, r.jsx)("span", { className: m.Z, children: (0, r.jsx)(i.E, { type: "new", variant: l }) }),
     });
 }

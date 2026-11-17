@@ -992,8 +992,8 @@ function e6(e) {
         })
     );
 }
-var e8 = n(705285),
-    e5 = n(199781),
+var e5 = n(705285),
+    e8 = n(199781),
     e7 = n(923477),
     e4 = n(269249),
     e3 = n(55766),
@@ -1021,7 +1021,7 @@ function tn(e) {
     let x = i.useCallback(() => {
             (h(), r());
         }, [h, r]),
-        C = (0, e8.VJ)(),
+        C = (0, e5.VJ)(),
         [S, p] = i.useState({ serverId: null, nonce: 0 }),
         _ = i.useCallback((e) => {
             let t = e.serverId ?? null;
@@ -1049,9 +1049,9 @@ function tn(e) {
     }, [j, I]);
     let B = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e8.cl.SHOP_CARD;
-                (C(e8.L5.OPEN_PLAN_MODAL, t),
-                    (0, e5.S)({
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e5.cl.SHOP_CARD;
+                (C(e5.L5.OPEN_PLAN_MODAL, t),
+                    (0, e8.S)({
                         gameName: e.name,
                         gameId: e.gameId,
                         coverUrl: e.coverUrl,
@@ -1069,7 +1069,7 @@ function tn(e) {
         if (!t || null == F || g || 0 === u.length) return;
         let e = u.find((e) => e.gameId === F);
         if (null == e) return;
-        B(e, e8.cl.ACTIVITY_PANEL_DEEP_LINK);
+        B(e, e5.cl.ACTIVITY_PANEL_DEEP_LINK);
         let s = new URLSearchParams(n.search);
         (s.delete(e9.tD), l.replace(`${n.pathname}?${s.toString()}`));
     }, [t, F, u, g, B, l, n.pathname, n.search]);
@@ -1089,7 +1089,7 @@ function tn(e) {
                 if (null == t) return;
                 let n = f.current.find((t) => t.gameId === e.gameId);
                 function l(t) {
-                    (0, e5.S)({
+                    (0, e8.S)({
                         gameName: e.gameName,
                         gameId: e.gameId,
                         coverUrl: e.coverUrl,
@@ -1507,8 +1507,8 @@ var tz =
     t1 = n(608599),
     t2 = n(685761),
     t6 = n(157225),
-    t8 = n(413249),
-    t5 = n(510241),
+    t5 = n(413249),
+    t8 = n(510241),
     t7 = n(601198),
     t4 = n(431527),
     t3 = n(890283),
@@ -1785,12 +1785,12 @@ function nr(e) {
                 },
                 {
                     name: Y.intl.string(Y.t.cJng7v),
-                    icon: (0, a.jsx)(t8.NatureIcon, { size: "xs", color: c(tV.NATURE) }),
+                    icon: (0, a.jsx)(t5.NatureIcon, { size: "xs", color: c(tV.NATURE) }),
                     enum: tV.NATURE,
                 },
                 {
                     name: Y.intl.string(Y.t["5mUvyM"]),
-                    icon: (0, a.jsx)(t5.ClipsGalleryIcon, { size: "xs", color: c(tV.MOVIES_TV_SHOWS) }),
+                    icon: (0, a.jsx)(t8.ClipsGalleryIcon, { size: "xs", color: c(tV.MOVIES_TV_SHOWS) }),
                     enum: tV.MOVIES_TV_SHOWS,
                 },
                 {
@@ -1840,8 +1840,8 @@ function no(e) {
                 { name: Y.intl.string(Y.t.TlhOQC), icon: t1.BurgerIcon, enum: tV.FOOD_DRINKS },
                 { name: Y.intl.string(Y.t["4IaUIM"]), icon: t2.MagicDoorIcon, enum: tV.FANTASY },
                 { name: Y.intl.string(Y.t["w0nSG/"]), icon: t6.PawPrintIcon, enum: tV.ANIMALS_PETS },
-                { name: Y.intl.string(Y.t.cJng7v), icon: t8.NatureIcon, enum: tV.NATURE },
-                { name: Y.intl.string(Y.t["5mUvyM"]), icon: t5.ClipsGalleryIcon, enum: tV.MOVIES_TV_SHOWS },
+                { name: Y.intl.string(Y.t.cJng7v), icon: t5.NatureIcon, enum: tV.NATURE },
+                { name: Y.intl.string(Y.t["5mUvyM"]), icon: t8.ClipsGalleryIcon, enum: tV.MOVIES_TV_SHOWS },
                 { name: Y.intl.string(Y.t.MB9H5Z), icon: t7.DyingRoseIcon, enum: tV.DARK_MOODY },
             ],
             [],

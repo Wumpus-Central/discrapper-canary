@@ -29,8 +29,8 @@ var l,
     L = n(598047),
     S = n(396583),
     I = n(568631),
-    k = n(792996),
-    j = n(868102);
+    j = n(792996),
+    k = n(868102);
 let N = s.memo((e) => {
         let { endsAt: t, onCountdownEnd: n } = e,
             l = (0, L.A)(),
@@ -50,7 +50,7 @@ let N = s.memo((e) => {
             }, [h, n]),
             (0, r.jsxs)("div", {
                 ref: d,
-                className: j.qW,
+                className: k.qW,
                 role: "timer",
                 children: [
                     (0, I.z0)(g).map((e, t) =>
@@ -58,9 +58,9 @@ let N = s.memo((e) => {
                             s.Fragment,
                             {
                                 children: [
-                                    t > 0 && (0, r.jsx)("div", { className: j.kx, "aria-hidden": !0 }),
+                                    t > 0 && (0, r.jsx)("div", { className: k.kx, "aria-hidden": !0 }),
                                     (0, r.jsx)("div", {
-                                        className: j.t8,
+                                        className: k.t8,
                                         "aria-hidden": !0,
                                         children: e
                                             .split("")
@@ -71,7 +71,7 @@ let N = s.memo((e) => {
                                                         tag: "span",
                                                         variant: "heading-xl/semibold",
                                                         color: "currentColor",
-                                                        className: j.m3,
+                                                        className: k.m3,
                                                         children: e,
                                                     },
                                                     t,
@@ -83,12 +83,12 @@ let N = s.memo((e) => {
                             t,
                         ),
                     ),
-                    (0, r.jsx)(b.A, { children: k.intl.format(k.t.j6IyVe, g) }),
+                    (0, r.jsx)(b.A, { children: j.intl.format(j.t.j6IyVe, g) }),
                 ],
             })
         );
     }),
-    R = s.memo((e) => {
+    O = s.memo((e) => {
         let {
             collectionName: t,
             collectionPromotion: n,
@@ -98,46 +98,46 @@ let N = s.memo((e) => {
         } = e;
         return (0, r.jsxs)("div", {
             className: i()(
-                j.kL,
+                k.kL,
                 (function (e) {
                     switch (e) {
                         case A.LIGHT:
-                            return j.BB;
+                            return k.BB;
                         case A.DARK:
-                            return j.XT;
+                            return k.XT;
                         case A.GRADIENT_V1:
-                            return j.eg;
+                            return k.eg;
                         case A.TRANSPARENT:
-                            return j.JO;
+                            return k.JO;
                         default:
-                            return j.XT;
+                            return k.XT;
                     }
                 })(n.countdownStyle),
-                { [j.CT]: n.countdownPosition === o.l.LEFT },
+                { [k.CT]: n.countdownPosition === o.l.LEFT },
             ),
             children: [
                 (0, r.jsx)(N, { endsAt: n.endsAt, onCountdownEnd: a }, n.endsAt.getTime()),
                 (0, r.jsx)(m.E, {
                     variant: "body-md/semibold",
                     color: "currentColor",
-                    className: j.fn,
-                    children: k.intl.format(k.t["97Qza2"], { percent: n.percentOff, collectionName: t }),
+                    className: k.fn,
+                    children: j.intl.format(j.t["97Qza2"], { percent: n.percentOff, collectionName: t }),
                 }),
                 n.showCountdownCta &&
                     !l &&
                     (0, r.jsx)("div", {
-                        className: j.lO,
+                        className: k.lO,
                         children: (0, r.jsx)(y.$, {
                             variant: "overlay-primary",
                             fullWidth: !0,
                             onClick: s,
-                            text: k.intl.string(k.t["5GoOlx"]),
+                            text: j.intl.string(j.t["5GoOlx"]),
                         }),
                     }),
             ],
         });
     });
-var O = n(60140),
+var R = n(60140),
     T = n(758836),
     D = n(652215),
     P = n(105499);
@@ -156,7 +156,7 @@ let M = (e) => {
         { analyticsLocations: S } = (0, h.Ay)(g.A.COLLECTIBLES_SHOP_HERO),
         {
             bannerDisplayConfig: I,
-            logoDisplayConfig: j,
+            logoDisplayConfig: k,
             heroLogo: N,
             heroBannerStatic: M,
             heroBannerAnimated: B,
@@ -180,7 +180,7 @@ let M = (e) => {
         }, [l, t.categorySkuId, L, a]);
     if (null == b) return null;
     let U = n.countdownPosition === o.l.LEFT,
-        $ = (0, r.jsx)(R, {
+        $ = (0, r.jsx)(O, {
             collectionName: t.name,
             collectionPromotion: n,
             forceHideCountdownCta: _,
@@ -210,7 +210,7 @@ let M = (e) => {
                                             (0, r.jsx)("div", {
                                                 className: P.v0,
                                                 children: (0, r.jsx)(c.E, {
-                                                    type: { text: k.intl.string(k.t["h/uBCR"]) },
+                                                    type: { text: j.intl.string(j.t["h/uBCR"]) },
                                                     variant: "inverted",
                                                 }),
                                             }),
@@ -222,7 +222,7 @@ let M = (e) => {
                                                         className: P.rm,
                                                         src: N,
                                                         alt: t.name,
-                                                        style: j?.toDesktopStyles(),
+                                                        style: k?.toDesktopStyles(),
                                                     }),
                                                 null != t.title &&
                                                     (0, r.jsx)(d.D, {
@@ -247,7 +247,7 @@ let M = (e) => {
                             ],
                         }),
                         !y &&
-                            (0, r.jsx)(O.A, {
+                            (0, r.jsx)(R.A, {
                                 heroBlockRecord: t,
                                 tab: a,
                                 isBlockLoading: !1,

@@ -84,8 +84,8 @@ let S = l.memo(function (e) {
                 fillWidthAnimated: C,
                 expansionSpring: c,
             }),
-            T = null != A ? (A <= 0 ? 0 : 1) : C.to((e) => (e <= 0 ? 0 : 1)),
-            k = a !== u.Q6.ENDED,
+            k = null != A ? (A <= 0 ? 0 : 1) : C.to((e) => (e <= 0 ? 0 : 1)),
+            T = a !== u.Q6.ENDED,
             M = Math.max(0, f ?? 0),
             j = m.filter((e) => e.endPx >= v && e.startPx <= x),
             D = { borderRadius: `${p}px` };
@@ -123,10 +123,10 @@ let S = l.memo(function (e) {
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(b.animated.div, { className: y.wx, style: { transform: R, opacity: T } }),
+                        (0, r.jsx)(b.animated.div, { className: y.wx, style: { transform: R, opacity: k } }),
                     ],
                 }),
-                k && (0, r.jsx)(b.animated.div, { className: y.fk, style: { width: L, opacity: T } }),
+                T && (0, r.jsx)(b.animated.div, { className: y.fk, style: { width: L, opacity: k } }),
             ],
         });
     };
@@ -143,8 +143,8 @@ function P(e) {
             preloadedBuffers: A,
             durationSec: R,
             maxSeekableTime: L,
-            progressClassName: T,
-            timelineHeightPx: k,
+            progressClassName: k,
+            timelineHeightPx: T,
             segmentBorderRadius: M,
             hoverTimelineHeightPx: j,
             initialTimelineHeightPx: D,
@@ -161,8 +161,8 @@ function P(e) {
         } = e,
         H = l.useContext(x.qb),
         X = H?.controlBarConfig ?? g.X4[u.oA.MD],
-        V = k ?? X.timelineHeightPx,
-        Y = j ?? (null == k ? X.hoverTimelineHeightPx : void 0),
+        V = T ?? X.timelineHeightPx,
+        Y = j ?? (null == T ? X.hoverTimelineHeightPx : void 0),
         {
             contRef: z,
             boundingRect: W,
@@ -198,7 +198,7 @@ function P(e) {
                 [P, N] = l.useState(null),
                 [A, R] = l.useState(!1),
                 { i18n: L } = (0, f.G9)(),
-                T = l.useMemo(() => {
+                k = l.useMemo(() => {
                     let e = { role: "progressbar", "aria-label": "Progress Bar" };
                     return (
                         null != s &&
@@ -210,7 +210,7 @@ function P(e) {
                         e
                     );
                 }, [s, L]),
-                k = l.useMemo(() => (null == x || null == r ? null : (0, o.DX)(r, i, x)), [x, r, i]),
+                T = l.useMemo(() => (null == x || null == r ? null : (0, o.DX)(r, i, x)), [x, r, i]),
                 M = (0, h.A)((e) => {
                     g(e.contentRect);
                 }),
@@ -299,13 +299,13 @@ function P(e) {
                     },
                     handleKeyDown: $,
                     hoveredAtX: E,
-                    maxSeekableX: k,
+                    maxSeekableX: T,
                     isHovering: y,
                     isDragging: C,
                     dragX: P,
                     isHoverBeyondMax: A,
                     handleClick: function () {},
-                    ariaProps: T,
+                    ariaProps: k,
                 }
             );
         })({
@@ -435,7 +435,7 @@ function P(e) {
             [eP, _?.animatingIndex, eA],
         );
     return (0, r.jsx)("div", {
-        className: i()(y.jD, { [y.Wd]: null != T }),
+        className: i()(y.jD, { [y.Wd]: null != k }),
         ref: z,
         "data-testid": G,
         style: {
@@ -476,7 +476,7 @@ function P(e) {
                                     bufferedRanges: eh,
                                     maxSeekableX: en,
                                     segmentBorderRadius: M,
-                                    progressClassName: T,
+                                    progressClassName: k,
                                 },
                                 t,
                             ),

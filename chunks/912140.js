@@ -1,13 +1,13 @@
-var n = t(778712),
-    l = t(486020),
-    i = t(562819);
-t.d(
-    r,
+var r = n(778712),
+    i = n(486020),
+    l = n(562819);
+n.d(
+    t,
     {},
     {
         A: function (e) {
-            let { legacyAssetId: r, skuId: t, size: s = n._3.SIZE_80, canAnimate: a } = e;
-            return (0, l.F_)({ avatarDecoration: { asset: r, skuId: t }, size: (0, i.Te)(s), canAnimate: a });
+            let { legacyAssetId: t, skuId: n, size: a = r._3.SIZE_80, canAnimate: s } = e;
+            return (0, i.F_)({ avatarDecoration: { asset: t, skuId: n }, size: (0, l.Te)(a), canAnimate: s });
         },
     },
 );

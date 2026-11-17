@@ -1,8 +1,8 @@
 var i = n(477900),
     o = n(582128),
     l = n(503698),
-    s = n.n(l),
-    a = n(534514),
+    a = n.n(l),
+    s = n(534514),
     r = n(834730),
     c = n(331322),
     d = n(821609),
@@ -32,14 +32,14 @@ n.d(
                 I = null != n.textColor && "" !== n.textColor ? { color: n.textColor } : void 0,
                 T = n.helpArticle?.id;
             return (0, i.jsxs)("div", {
-                className: s()(A.WR, e),
+                className: a()(A.WR, e),
                 style: y,
                 children: [
                     null != l && (0, i.jsx)("img", { alt: "", className: A.TB, "aria-hidden": !0, src: l }),
                     (0, i.jsxs)("div", {
                         className: A.QT,
                         children: [
-                            (0, i.jsx)(a.D, {
+                            (0, i.jsx)(s.D, {
                                 className: A.u_,
                                 style: I,
                                 color: "text-strong",

@@ -43,9 +43,9 @@ var A = n(38021),
     E = n(939249),
     y = n(789645),
     P = n(267102),
-    b = n(253932),
-    M = n(204915);
-function L(e) {
+    M = n(253932),
+    b = n(204915);
+function O(e) {
     let { markAsDismissed: t, onMenuOpenChange: i } = e,
         a = s.useRef(null),
         { theme: r } = (0, A.wR)(),
@@ -69,14 +69,14 @@ function L(e) {
         }, [r, o]);
     return (0, l.jsxs)("div", {
         ref: a,
-        className: M.G0,
+        className: b.G0,
         children: [
             (0, l.jsxs)("div", {
-                className: M.R4,
+                className: b.R4,
                 children: [
                     (0, l.jsx)(N.MicrophoneIcon, { size: "xs", color: "currentColor" }),
                     (0, l.jsxs)("div", {
-                        className: M.Qs,
+                        className: b.Qs,
                         children: [
                             (0, l.jsx)(h.E, {
                                 variant: "body-sm/medium",
@@ -90,20 +90,20 @@ function L(e) {
                                 align: "center",
                                 onRequestOpen: () => i(!0),
                                 onRequestClose: () => {
-                                    (b.Q$.getSetting() && t(p.i.TAKE_ACTION), i(!1));
+                                    (M.Q$.getSetting() && t(p.i.TAKE_ACTION), i(!1));
                                 },
                                 children: (e, t) => {
                                     let { isShown: n } = t,
                                         s = n ? S.ChevronSmallUpIcon : _.ChevronSmallDownIcon;
                                     return (0, l.jsxs)(E.D, {
                                         ...e,
-                                        className: M.lO,
+                                        className: b.lO,
                                         "aria-haspopup": "menu",
                                         children: [
                                             (0, l.jsx)(h.E, {
                                                 variant: "body-sm/medium",
                                                 color: "none",
-                                                className: M.hk,
+                                                className: b.hk,
                                                 children: f.intl.string(g.default.B2F9tM),
                                             }),
                                             (0, l.jsx)(s, { size: "xs", color: "currentColor" }),
@@ -116,7 +116,7 @@ function L(e) {
                 ],
             }),
             (0, l.jsx)(E.D, {
-                className: M.VN,
+                className: b.VN,
                 "aria-label": f.intl.string(f.t.cpT0Cq),
                 onClick: () => t(p.i.USER_DISMISS),
                 children: (0, l.jsx)(y.XSmallIcon, { size: "xs", color: "currentColor" }),
@@ -124,7 +124,7 @@ function L(e) {
         ],
     });
 }
-var O = n(650684),
+var L = n(650684),
     R = n(818349),
     T = n(419490);
 function w(e) {
@@ -151,14 +151,14 @@ function w(e) {
         }, [r, o]);
     return (0, l.jsxs)("div", {
         ref: a,
-        className: M.G0,
+        className: b.G0,
         children: [
             (0, l.jsxs)("div", {
-                className: M.R4,
+                className: b.R4,
                 children: [
-                    (0, l.jsx)(O.ClipsAutoIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsx)(L.ClipsAutoIcon, { size: "xs", color: "currentColor" }),
                     (0, l.jsxs)("div", {
-                        className: M.Qs,
+                        className: b.Qs,
                         children: [
                             (0, l.jsx)(h.E, {
                                 variant: "body-sm/medium",
@@ -182,13 +182,13 @@ function w(e) {
                                         s = n ? S.ChevronSmallUpIcon : _.ChevronSmallDownIcon;
                                     return (0, l.jsxs)(E.D, {
                                         ...e,
-                                        className: M.lO,
+                                        className: b.lO,
                                         "aria-haspopup": "menu",
                                         children: [
                                             (0, l.jsx)(h.E, {
                                                 variant: "body-sm/medium",
                                                 color: "none",
-                                                className: M.hk,
+                                                className: b.hk,
                                                 children: f.intl.string(g.default.iHA2eT),
                                             }),
                                             (0, l.jsx)(s, { size: "xs", color: "currentColor" }),
@@ -201,7 +201,7 @@ function w(e) {
                 ],
             }),
             (0, l.jsx)(E.D, {
-                className: M.VN,
+                className: b.VN,
                 "aria-label": f.intl.string(f.t.cpT0Cq),
                 onClick: () => t(p.i.USER_DISMISS),
                 children: (0, l.jsx)(y.XSmallIcon, { size: "xs", color: "currentColor" }),
@@ -234,14 +234,14 @@ function k(e) {
         }, [r, o]);
     return (0, l.jsxs)("div", {
         ref: a,
-        className: M.G0,
+        className: b.G0,
         children: [
             (0, l.jsxs)("div", {
-                className: M.R4,
+                className: b.R4,
                 children: [
                     (0, l.jsx)(U.ClipsIcon, { size: "xs", color: "currentColor" }),
                     (0, l.jsxs)("div", {
-                        className: M.Qs,
+                        className: b.Qs,
                         children: [
                             (0, l.jsx)(h.E, {
                                 variant: "body-sm/medium",
@@ -262,13 +262,13 @@ function k(e) {
                                         s = n ? S.ChevronSmallUpIcon : _.ChevronSmallDownIcon;
                                     return (0, l.jsxs)(E.D, {
                                         ...e,
-                                        className: M.lO,
+                                        className: b.lO,
                                         "aria-haspopup": "menu",
                                         children: [
                                             (0, l.jsx)(h.E, {
                                                 variant: "body-sm/medium",
                                                 color: "none",
-                                                className: M.hk,
+                                                className: b.hk,
                                                 children: f.intl.string(g.default.vxs365),
                                             }),
                                             (0, l.jsx)(s, { size: "xs", color: "currentColor" }),
@@ -281,7 +281,7 @@ function k(e) {
                 ],
             }),
             (0, l.jsx)(E.D, {
-                className: M.VN,
+                className: b.VN,
                 "aria-label": f.intl.string(f.t.cpT0Cq),
                 onClick: () => t(p.i.USER_DISMISS),
                 children: (0, l.jsx)(y.XSmallIcon, { size: "xs", color: "currentColor" }),
@@ -367,9 +367,9 @@ function el(e) {
                 _,
                 E,
                 y,
-                M,
-                L,
+                b,
                 O,
+                L,
                 R,
                 T,
                 w,
@@ -422,25 +422,25 @@ function el(e) {
                     chat_upsell:
                         ((E = (0, P.Us)()),
                         (y = et(e)),
-                        (M = (0, d._C)("chat_upsell")),
-                        (L = (0, D.bG)([F.default], () => F.default.getCurrentUser()?.id)),
-                        (O = (0, G.Vl)()),
-                        (R = e.author.id !== L && !O && !W.Fr && E === K.BRT.APP && Z(e)),
+                        (b = (0, d._C)("chat_upsell")),
+                        (O = (0, D.bG)([F.default], () => F.default.getCurrentUser()?.id)),
+                        (L = (0, G.Vl)()),
+                        (R = e.author.id !== O && !L && !W.Fr && E === K.BRT.APP && Z(e)),
                         (T = e.channel_id),
                         (w = e.id),
-                        (U = (0, D.bG)([H.A], () => R && null == M && ee(H.A.getMessages(T), L) === w, [
+                        (U = (0, D.bG)([H.A], () => R && null == b && ee(H.A.getMessages(T), O) === w, [
                             R,
-                            M,
+                            b,
                             T,
                             w,
-                            L,
+                            O,
                         ])),
-                        (k = R && (U || M === ea) && y),
+                        (k = R && (U || b === ea) && y),
                         (0, V.H)("useClipsChatUpsell", k)),
                     voice_inclusion:
                         ((l = "voice_inclusion" === er),
                         (q = (0, P.Us)()),
-                        (z = b.Q$.useSetting()),
+                        (z = M.Q$.useSetting()),
                         (X = (0, d._C)("voice_inclusion")),
                         (Q = (0, D.bG)([F.default], () => F.default.getCurrentUser()?.id)),
                         (B = e.author.id !== Q && (!z || l) && !W.Fr && q === K.BRT.APP && Z(e)),
@@ -518,7 +518,7 @@ function el(e) {
         case "chat_upsell":
             return (0, l.jsx)(I, { markAsDismissed: i });
         case "voice_inclusion":
-            return (0, l.jsx)(L, { markAsDismissed: i, onMenuOpenChange: a });
+            return (0, l.jsx)(O, { markAsDismissed: i, onMenuOpenChange: a });
         case null:
             return null;
     }

@@ -16,7 +16,7 @@ var i = n(477900),
     P = n(116716),
     E = n(770300),
     _ = n(792996),
-    O = n(635088);
+    T = n(635088);
 n.d(
     t,
     {},
@@ -25,16 +25,16 @@ n.d(
             let { enabled: e } = g.A.useConfig({ location: "useThirdPartyPartnerPerkCards" }),
                 { component: t } = (0, b.A)(l.oW.PREMIUM_HOME_REWARDS_PERK_CARD),
                 { analyticsLocations: n } = (0, s.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
-                T = (0, u.T)(null != t ? (0, c.Co)(t) : null);
+                O = (0, u.T)(null != t ? (0, c.Co)(t) : null);
             return (0, a.useMemo)(
                 () =>
-                    e && null != T
+                    e && null != O
                         ? {
                               id: d.CODE_BLURPLE_CARD_ID,
                               title: _.intl.string(E.default.E1sPHw),
                               description: _.intl.string(E.default["6AbN1y"]),
-                              caption: (0, i.jsx)("img", { src: O.A, alt: "Call of Duty: MW4" }),
-                              backgroundAssetUrl: T,
+                              caption: (0, i.jsx)("img", { src: T.A, alt: "Call of Duty: MW4" }),
+                              backgroundAssetUrl: O,
                               subscriptionRequired: !0,
                               isThirdPartyPerk: !0,
                               ctaText: _.intl.string(P.default.vlafDc),
@@ -50,7 +50,7 @@ n.d(
                               analyticsOptions: { thirdPartyPartner: f.Bt },
                           }
                         : null,
-                [T, n, e],
+                [O, n, e],
             );
         },
     },

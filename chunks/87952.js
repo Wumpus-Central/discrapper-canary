@@ -1,21 +1,21 @@
-var r = n(582128),
-    o = n(949192),
-    i = n(558740);
-n.d(
-    e,
+var n = e(582128),
+    o = e(949192),
+    s = e(558740);
+e.d(
+    t,
     {},
     {
         A: function () {
-            let [t, e] = r.useState(null);
+            let [r, t] = n.useState(null);
             return (
-                r.useEffect(() => {
-                    (0, i.Cv)()
-                        .then((t) => e(t))
-                        .catch((t) => {
-                            (0, o.pM)(t);
+                n.useEffect(() => {
+                    (0, s.Cv)()
+                        .then((r) => t(r))
+                        .catch((r) => {
+                            (0, o.pM)(r);
                         });
                 }, []),
-                t
+                r
             );
         },
     },

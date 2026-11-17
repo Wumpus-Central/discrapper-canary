@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { useMacaronBentoBox: () => T, useMacaronPerkCard: () => O }));
+(n.r(t), n.d(t, { useMacaronBentoBox: () => O, useMacaronPerkCard: () => T }));
 var i = n(477900),
     a = n(582128),
     l = n(793574),
@@ -17,23 +17,23 @@ var i = n(477900),
     P = n(792996),
     E = n(505051);
 let _ = new Date(2026, 10, 18);
-function O(e) {
+function T(e) {
     let { location: t } = e,
         { enabled: n, phase: o } = f.A.useConfig({ location: t }),
         { analyticsLocations: E } = (0, r.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
-        O = null === (0, d.N)(),
-        T = null;
+        T = null === (0, d.N)(),
+        O = null;
     return (
         o === f.H.PHASE_ONE
-            ? (T = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
-            : o === f.H.PHASE_TWO && (T = P.intl.formatToPlainString(p.default.RAQCKQ, { date: _ })),
+            ? (O = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
+            : o === f.H.PHASE_TWO && (O = P.intl.formatToPlainString(p.default.RAQCKQ, { date: _ })),
         (0, a.useMemo)(
             () =>
                 n
                     ? {
                           id: m.A,
                           title: P.intl.string(p.default["9gMXJv"]),
-                          description: T,
+                          description: O,
                           subscriptionRequired: !0,
                           isThirdPartyPerk: !0,
                           backgroundAssetUrl:
@@ -56,32 +56,32 @@ function O(e) {
                                   }),
                                   analyticsLocations: E,
                               }),
-                          ctaDisabled: O,
-                          ctaLoading: O,
+                          ctaDisabled: T,
+                          ctaLoading: T,
                           pillText: P.intl.string(P.t.y2b7CA),
                       }
                     : null,
-            [E, n, O, T, o],
+            [E, n, T, O, o],
         )
     );
 }
-function T(e) {
+function O(e) {
     let { location: t } = e,
         { enabled: n, phase: d } = f.A.useConfig({ location: t }),
         { analyticsLocations: m } = (0, r.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX),
-        O = null;
+        T = null;
     return (
         d === f.H.PHASE_ONE
-            ? (O = P.intl.format(A.default.MJep2r, {
+            ? (T = P.intl.format(A.default.MJep2r, {
                   date: _,
                   rewardPercentage: 10,
                   termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               }))
             : d === f.H.PHASE_TWO &&
-              (O = P.intl.format(p.default.DZRLe2, { date: _, termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION) })),
+              (T = P.intl.format(p.default.DZRLe2, { date: _, termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION) })),
         (0, a.useMemo)(
             () =>
-                n && null != O
+                n && null != T
                     ? {
                           name: o.N.MACARON,
                           caption: (0, i.jsx)("img", {
@@ -94,7 +94,7 @@ function T(e) {
                                   ? "https://cdn.discordapp.com/assets/content/7db5e6857b36d6ea33af3c6a57f9701f26539c29fdb613ff81ec5a51d544f23f.png"
                                   : "https://cdn.discordapp.com/assets/content/d2b00ed1d159f58e3b59d64ffb8386063ec48b58789f366785e534a1b74aea0f.png",
                           containerClassName: E.macaronGradient,
-                          description: O,
+                          description: T,
                           descriptionCta: P.intl.string(b.default.WMK6Pg),
                           onClick: () =>
                               (0, u.P)({
@@ -109,7 +109,7 @@ function T(e) {
                               }),
                       }
                     : null,
-            [m, n, O, d],
+            [m, n, T, d],
         )
     );
 }

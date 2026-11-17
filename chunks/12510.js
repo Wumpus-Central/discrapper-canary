@@ -1,7 +1,7 @@
 var n = l(620632),
     a = l(73153),
-    s = l(627784),
-    i = l(856383),
+    i = l(627784),
+    s = l(856383),
     r = l(652215);
 l.d(
     t,
@@ -17,8 +17,8 @@ l.d(
                     t.body
                 );
             } catch (t) {
-                let e = t instanceof s.LG ? t : new s.LG(t);
-                (i.A.captureException(e, { tags: { app_context: "achievements" } }),
+                let e = t instanceof i.LG ? t : new i.LG(t);
+                (s.A.captureException(e, { tags: { app_context: "achievements" } }),
                     a.h.dispatch({ type: "ORB_CHALLENGES_LIST_FETCH_FAIL", error: e }));
             }
         },
@@ -31,8 +31,8 @@ l.d(
                     t.body
                 );
             } catch (l) {
-                let t = l instanceof s.LG ? l : new s.LG(l);
-                (i.A.captureException(t, { tags: { app_context: "achievements" } }),
+                let t = l instanceof i.LG ? l : new i.LG(l);
+                (s.A.captureException(t, { tags: { app_context: "achievements" } }),
                     a.h.dispatch({ type: "ORB_CHALLENGE_CLAIM_FAIL", achievementIdentifier: e, error: t }));
             }
         },

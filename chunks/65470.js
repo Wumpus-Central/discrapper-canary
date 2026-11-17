@@ -2,8 +2,8 @@ var i = n(477900);
 n(582128);
 var o = n(821609),
     l = n(597770),
-    s = n(688810),
-    a = n(620301),
+    a = n(688810),
+    s = n(620301),
     r = n(194509),
     c = n(485140),
     d = n(652215);
@@ -20,8 +20,8 @@ n.d(
                     buttonTextOverride: m,
                     ...h
                 } = t,
-                { analyticsLocations: x } = (0, s.Ay)(),
-                { openGiftModal: b } = (0, a.$)({
+                { analyticsLocations: x } = (0, a.Ay)(),
+                { openGiftModal: b } = (0, s.$)({
                     giftRecipient: null,
                     analyticsLocations: x,
                     analyticsObject: { object: d.ZSU.BUTTON_CTA, objectType: d.btD.GIFT, ...n },

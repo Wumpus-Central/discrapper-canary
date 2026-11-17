@@ -17,8 +17,8 @@ var i,
     E = n(778705),
     _ = n(682901);
 n(92737);
-var O = n(652215),
-    T = n(49999),
+var T = n(652215),
+    O = n(49999),
     C = n(792996),
     R = n(137326),
     N =
@@ -43,23 +43,23 @@ n.d(
                     children: y,
                 } = e,
                 { analyticsLocations: L } = (0, b.Ay)(M),
-                S = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
-                j = l.useCallback(() => {
-                    (0, p.A)(O.BVt.NITRO_HOME, { search: (0, r.As)({ perk: x }) });
+                j = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
+                S = l.useCallback(() => {
+                    (0, p.A)(T.BVt.NITRO_HOME, { search: (0, r.As)({ perk: x }) });
                 }, [x]),
                 U = l.useCallback(() => {
-                    switch ((n(T.i.TAKE_ACTION), v)) {
+                    switch ((n(O.i.TAKE_ACTION), v)) {
                         case 0:
-                            j();
+                            S();
                             break;
                         case 1:
                             (0, E.A)({
                                 subscriptionTier: _.pe.TIER_2,
                                 analyticsLocations: L,
-                                onSubscriptionConfirmation: j,
+                                onSubscriptionConfirmation: S,
                             });
                     }
-                }, [L, v, n, j]),
+                }, [L, v, n, S]),
                 D =
                     0 === v
                         ? { text: null != I ? I : C.intl.string(C.t.pVBlCH), variant: "secondary", onClick: U }
@@ -75,7 +75,7 @@ n.d(
                     (0, a.jsx)("div", { children: y }),
                     (0, a.jsx)(o.x, {
                         targetElementRef: t,
-                        onRequestClose: () => n(T.i.USER_DISMISS),
+                        onRequestClose: () => n(O.i.USER_DISMISS),
                         alignmentStrategy: "edge",
                         align: "top",
                         position: "right",
@@ -83,14 +83,14 @@ n.d(
                         children: (0, a.jsxs)("div", {
                             "data-mana-component": "popover",
                             children: [
-                                (0, a.jsx)(f.p, { onClick: () => n(T.i.USER_DISMISS) }),
+                                (0, a.jsx)(f.p, { onClick: () => n(O.i.USER_DISMISS) }),
                                 null != h &&
                                     (0, a.jsx)("div", {
                                         className: R.Q,
                                         children: (0, P.r1)(h)
                                             ? (0, a.jsx)(A.A, {
                                                   src: h,
-                                                  autoPlay: !1 === S,
+                                                  autoPlay: !1 === j,
                                                   loop: !0,
                                                   muted: !0,
                                                   playsInline: !0,

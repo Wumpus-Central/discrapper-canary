@@ -1,20 +1,20 @@
-D.d(e, { F: () => a });
+D.d(e, { F: () => I });
 var R = D(855986),
     r = D(895944),
-    I = D(921894),
-    A = D(544978),
+    a = D(921894),
+    n = D(544978),
     t = D(892227);
-function a() {
+function I() {
     let {
             isReady: _,
             programReward: e,
             totalDays: D,
         } = (0, R.cf)([r.A], () => ({
             isReady: r.A.isReady(),
-            programReward: r.A.getRewardForProgram(I.W.NITRO),
-            totalDays: r.A.getTotalDaysInDuration(I.W.NITRO),
+            programReward: r.A.getRewardForProgram(a.W.NITRO),
+            totalDays: r.A.getTotalDaysInDuration(a.W.NITRO),
         })),
-        a = (0, A.q)();
+        I = (0, n.q)();
     return {
         isEligible: !0,
         isReady: _,
@@ -24,7 +24,7 @@ function a() {
                 D = _.program_current_state;
             if (null == D) return !1;
             if (null == e || "" === e) {
-                if (![I.L.PAYMENT_PROCESSING, I.L.PAYMENT_ERROR].includes(D)) return !1;
+                if (![a.L.PAYMENT_PROCESSING, a.L.PAYMENT_ERROR].includes(D)) return !1;
             } else {
                 let _ = new Date(e).getTime();
                 if (Number.isNaN(_) || _ < Date.now()) return !1;
@@ -39,7 +39,7 @@ function a() {
             return !(Number.isNaN(R) || R <= Date.now() || (0, t.default)(new Date(D), new Date()) > e);
         })(e, D),
         programReward: e,
-        shouldFetch: a,
+        shouldFetch: I,
         totalDays: D,
     };
 }

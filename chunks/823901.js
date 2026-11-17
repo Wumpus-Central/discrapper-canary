@@ -1,5 +1,5 @@
-var o = n(477900),
-    l = n(517352),
+var l = n(477900),
+    o = n(517352),
     a = n(855986),
     r = n(417098),
     i = n(597770),
@@ -25,20 +25,20 @@ n.d(
                     location: "gift-promotion-reminder-nagbar",
                 }),
                 I = (0, a.bG)([u.A], () => {
-                    let e = u.A.getMarketingComponentBySurface(l.oW.GIFT_REMINDER_NAGBAR);
+                    let e = u.A.getMarketingComponentBySurface(o.oW.GIFT_REMINDER_NAGBAR);
                     return e?.surface ?? null;
                 });
             return null == I
                 ? null
-                : (0, o.jsxs)(r.$T, {
+                : (0, l.jsxs)(r.$T, {
                       color: r.Hv.PREMIUM_TIER_2,
                       className: n,
                       children: [
-                          (0, o.jsx)(r.PM, {
+                          (0, l.jsx)(r.PM, {
                               onClick: () => t(p.i.USER_DISMISS),
                               noticeType: c.kqX.GIFTING_PROMOTION_REMINDER,
                           }),
-                          (0, o.jsx)(i.GiftIcon, {
+                          (0, l.jsx)(i.GiftIcon, {
                               size: "custom",
                               width: 20,
                               height: 20,
@@ -46,7 +46,7 @@ n.d(
                               className: m.ez,
                           }),
                           I.body,
-                          (0, o.jsx)(r.Z_, {
+                          (0, l.jsx)(r.Z_, {
                               onClick: A,
                               noticeType: c.kqX.GIFTING_PROMOTION_REMINDER,
                               children: b.intl.string(b.t.RzWDqY),

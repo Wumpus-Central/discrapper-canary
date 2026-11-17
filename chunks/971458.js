@@ -66,37 +66,37 @@ function y(e) {
         A = r.useRef(null),
         y = r.useRef(null),
         _ = r.useRef(!1),
-        { isHovered: b, setIsHovered: L, onMouseEnter: S, onMouseLeave: I, cancelTimers: k } = (0, E.A)(100, 100),
-        j = r.useCallback(() => {
+        { isHovered: b, setIsHovered: L, onMouseEnter: S, onMouseLeave: I, cancelTimers: j } = (0, E.A)(100, 100),
+        k = r.useCallback(() => {
             ((_.current = f.Ay.keyboardModeEnabled), S());
         }, [S]),
         N = r.useCallback(() => {
-            (k(), L(!0), (_.current = f.Ay.keyboardModeEnabled));
-        }, [k, L]),
-        R = r.useCallback(
+            (j(), L(!0), (_.current = f.Ay.keyboardModeEnabled));
+        }, [j, L]),
+        O = r.useCallback(
             (e) => {
-                (k(),
+                (j(),
                     _.current && !f.Ay.keyboardModeEnabled && (0, p.uS)(),
                     L(!1),
                     e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : A.current?.focus())));
             },
-            [k, L],
+            [j, L],
         ),
-        O = r.useCallback(() => {
-            b ? R(!1) : N();
-        }, [b, N, R]),
+        R = r.useCallback(() => {
+            b ? O(!1) : N();
+        }, [b, N, O]),
         T = r.useCallback(
             (e) => {
-                (R(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
+                (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
             },
-            [n, R],
+            [n, O],
         ),
         D = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), b ? (R(!1), requestAnimationFrame(N)) : N());
+                    (e.preventDefault(), e.stopPropagation(), b ? (O(!1), requestAnimationFrame(N)) : N());
             },
-            [b, N, R],
+            [b, N, O],
         ),
         P = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
         M = (0, l.jsx)(m.ChevronSmallDownIcon, {
@@ -113,7 +113,7 @@ function y(e) {
             align: "left",
             spacing: 4,
             onRequestOpen: N,
-            onRequestClose: () => R(!0),
+            onRequestClose: () => O(!0),
             animation: g.Y.Animation.NONE,
             renderPopout: () =>
                 (0, l.jsx)("div", {
@@ -122,7 +122,7 @@ function y(e) {
                     children: (0, l.jsx)(h.W, {
                         navId: o,
                         "aria-label": n.expandLabel,
-                        onClose: () => R(!0),
+                        onClose: () => O(!0),
                         onSelect: void 0,
                         children: (function e(t) {
                             return t.map((t) =>
@@ -160,7 +160,7 @@ function y(e) {
                                   role: "link",
                                   href: i,
                                   onClick: T,
-                                  onMouseEnter: j,
+                                  onMouseEnter: k,
                                   onMouseLeave: I,
                                   "aria-current": n.key === s ? "page" : void 0,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
@@ -173,9 +173,9 @@ function y(e) {
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
-                                  onClick: O,
+                                  onClick: R,
                                   onKeyDown: D,
-                                  onMouseEnter: j,
+                                  onMouseEnter: k,
                                   onMouseLeave: I,
                                   focusProps: { offset: { top: -2, bottom: -2 } },
                                   className: a()(x.LA, x.nE),
@@ -188,9 +188,9 @@ function y(e) {
                           innerRef: A,
                           role: "button",
                           "aria-haspopup": "true",
-                          onClick: O,
+                          onClick: R,
                           onKeyDown: D,
-                          onMouseEnter: j,
+                          onMouseEnter: k,
                           onMouseLeave: I,
                           className: a()(x.ie, x.LA, { [x.wH]: C }),
                           children: [P, M],
@@ -257,7 +257,7 @@ function I(e) {
         className: a()(x.C$, u),
         ref: g,
         children: [
-            (0, l.jsx)(k, {
+            (0, l.jsx)(j, {
                 navId: m,
                 options: t,
                 overflowLabel: s,
@@ -274,7 +274,7 @@ function I(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { options: t, navId: n, overflowLabel: r, overflowExpandLabel: s, onItemLayout: a, overflowItemsRef: o } = e,
         u = `${n}-measure`;
     return (0, l.jsxs)("div", {

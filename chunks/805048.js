@@ -1168,14 +1168,14 @@ var e1 = n(4511),
     e3 = n(676279),
     e6 = n(811091),
     e5 = n(590087);
-let e7 = { any: 100 },
-    e8 = { any: 0 },
+let e8 = { any: 100 },
+    e7 = { any: 0 },
     e4 = 30 * eW.A.Millis.SECOND,
     e9 = 120 * eW.A.Millis.SECOND,
     te = -1 !== (0, e3.EL)();
 var tt = (((o = {}).UserSSRCUpdate = "user-ssrc-update"), (o.Update = "update"), o);
 function tn(e) {
-    return (0, ey.HZ)() ? { ...e8 } : { any: e };
+    return (0, ey.HZ)() ? { ...e7 } : { any: e };
 }
 class ti extends S.A {
     userId;
@@ -3368,7 +3368,7 @@ class tZ extends S.A {
                             this._connection?.setLocalVideoSinkWants(e));
                     }));
         }
-        ((this._remoteVideoSinkWants = e7),
+        ((this._remoteVideoSinkWants = e8),
             e5.X.on(e5.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             e5.X.on(e5.N.WindowVisibilityChanged, this.windowVisibilityChanged),
             eS.Ay.shouldRecordNextConnection()
