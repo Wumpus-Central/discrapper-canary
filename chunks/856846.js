@@ -289,10 +289,10 @@ let eJ = [
 ];
 eZ("open-unavailable", eX.default["58TARv"], eY.UNAVAILABLE);
 let e0 = ["reset"];
-var e2 = n(852717),
-    e1 = n(641214);
+var e1 = n(852717),
+    e2 = n(641214);
 function e3() {
-    return (0, i.jsx)(eM.y, { type: eM.t.SPINNING_CIRCLE_SIMPLE, className: e1.u1, itemClassName: e1.$N });
+    return (0, i.jsx)(eM.y, { type: eM.t.SPINNING_CIRCLE_SIMPLE, className: e2.u1, itemClassName: e2.$N });
 }
 function e6(e) {
     let { onClose: t } = e,
@@ -310,8 +310,8 @@ function e6(e) {
         r = (0, c.bG)([eH.A], () => eH.A.isFetching);
     return (0, i.jsx)(eB, {
         icon: r ? e3 : eP.ExperimentalCheckpointIcon,
-        label: eU.intl.string(e2.default["8hclXY"]),
-        sublabel: (0, i.jsx)("span", { className: e1.$B, children: eU.intl.string(e2.default.BFc4lY) }),
+        label: eU.intl.string(e1.default["8hclXY"]),
+        sublabel: (0, i.jsx)("span", { className: e2.$B, children: eU.intl.string(e1.default.BFc4lY) }),
         onClick: async function () {
             (await (0, eW.D)("user_profile_account_popout"), t());
         },
@@ -322,7 +322,7 @@ function e6(e) {
                       return (0, i.jsx)(eF, {
                           navId: "checkpoint-qa-submenu",
                           "aria-label": eU.intl.string(eX.default["9dS734"]),
-                          className: e1.gn,
+                          className: e2.gn,
                           onClose: n,
                           children: l.map((e) =>
                               (0, i.jsx)(
@@ -681,7 +681,7 @@ function t0() {
     }
     return null;
 }
-let t2 = {
+let t1 = {
         [tJ.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
         [tJ.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
         [tJ.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
@@ -691,7 +691,7 @@ let t2 = {
         [tJ.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
         [tJ.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
-    t1 = {
+    t2 = {
         [tJ.Ac.PREMIUM_TENURE_1_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm",
             light: "https://cdn.discordapp.com/assets/content/f09f5aa678c2d463109f0ca84a572646c1b6b21974865e84ac92f3c3a3f50b87.webm",
@@ -734,8 +734,8 @@ function t8() {
             let e = t0(),
                 t = (0, tq.M)((0, tQ.Ay)());
             if (null == e) return null;
-            let n = t2[e],
-                i = t1[e],
+            let n = t1[e],
+                i = t2[e],
                 l = {
                     currentBadge: (0, t$.e0)(e),
                     currentBadgeTextGradient: t ? n?.dark : n?.light,
@@ -744,7 +744,7 @@ function t8() {
                 r = tJ.sp.indexOf(e);
             if (r > 0) {
                 let e = tJ.sp[r - 1],
-                    n = t2[e];
+                    n = t1[e];
                 ((l.prevBadge = (0, t$.e0)(e)), (l.prevBadgeTextGradient = t ? n?.dark : n?.light));
             }
             return l;
@@ -1026,8 +1026,8 @@ var nP = n(290863),
     nZ = n(352003),
     nJ = n(429913),
     n0 = n(334074),
-    n2 = n(633075),
-    n1 = n(667049),
+    n1 = n(633075),
+    n2 = n(667049),
     n3 = n(46653),
     n6 = n(90165),
     n8 = n(49999),
@@ -1043,8 +1043,8 @@ function n7(e) {
                     (0, n$.X)();
                 }, []));
             let t = (0, c.bG)([n3.default], () => n3.default.getId()),
-                n = (0, n1.A)(t),
-                i = l.useMemo(() => n.filter((e) => e instanceof n2.R), [n]),
+                n = (0, n2.A)(t),
+                i = l.useMemo(() => n.filter((e) => e instanceof n1.R), [n]),
                 r = (0, nJ.A)(e),
                 a = l.useMemo(() => r.filter(nL.Vq), [r]),
                 s = (0, c.cf)([n6.A], () => {
@@ -2264,14 +2264,14 @@ var iX = n(45780),
     iZ = n(696451),
     iJ = n(71393),
     i0 = n(685073),
-    i2 = n(73153);
-let i1 = { lastSeenInfos: {} },
-    i3 = i1;
+    i1 = n(73153);
+let i2 = { lastSeenInfos: {} },
+    i3 = i2;
 class i6 extends c.Ay.PersistedStore {
     static displayName = "GuildTagChangedCoachmarkStore";
     static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        i3 = e ?? i1;
+        i3 = e ?? i2;
     }
     getState() {
         return i3;
@@ -2280,13 +2280,13 @@ class i6 extends c.Ay.PersistedStore {
         return i3.lastSeenInfos[e] ?? null;
     }
 }
-let i8 = new i6(i2.h, {
+let i8 = new i6(i1.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
         i3.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        i3 = i1;
+        i3 = i2;
     },
 });
 var i5 = n(514661);
@@ -2295,7 +2295,7 @@ function i9(e) {
     let t = (0, c.bG)([iJ.A], () => iJ.A.getGuild(e.guildId));
     function n(n) {
         (t?.profile?.tag != null &&
-            i2.h.dispatch({
+            i1.h.dispatch({
                 type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
                 guildId: t.id,
                 lastSeenInfo: { tag: t.profile.tag },
@@ -2684,7 +2684,7 @@ class ly extends c.Ay.Store {
         return l_[e] ?? !1;
     }
 }
-let lb = new ly(i2.h, {
+let lb = new ly(i1.h, {
     CALL_FEEDBACK_TUTORIAL_SHOW: function (e) {
         let { tutorialKey: t } = e;
         l_[t] = !0;
@@ -3026,7 +3026,7 @@ function lJ(e) {
         }, [a]),
         g = es.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, lZ.A)("1794927622250", !0);
+        let e = (0, lZ.A)("1794928826096", !0);
         t =
             null != e
                 ? eU.intl.formatToPlainString(eU.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3074,8 +3074,8 @@ function lJ(e) {
     );
 }
 var l0 = n(358285);
-let l2 = iP.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
-    l1 = 2.5 * td.A.Millis.SECOND,
+let l1 = iP.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
+    l2 = 2.5 * td.A.Millis.SECOND,
     l3 = 2 * td.A.Millis.MINUTE,
     l6 = 5 * td.A.Millis.SECOND;
 function l8(e) {
@@ -3187,7 +3187,7 @@ function l8(e) {
                                   className: l0.$n,
                                   "data-jump-section": E,
                               }),
-                              (0, i.jsx)(l2, {
+                              (0, i.jsx)(l1, {
                                   size: p._3.SIZE_32,
                                   src: u.getAvatarURL(void 0, 28, !1),
                                   avatarDecoration: y,
@@ -4193,7 +4193,7 @@ class l5 extends l.PureComponent {
               null != r ||
               this.setState({ shouldShowSpeakingWhileMutedTooltip: !0 }, () => {
                   ((this.lastSpeakingWhileMutedNotificationTime = performance.now()),
-                      this.speakingWhileMutedTooltipTimeout.start(l1, () =>
+                      this.speakingWhileMutedTooltipTimeout.start(l2, () =>
                           this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }),
                       ));
               })
