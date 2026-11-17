@@ -2277,22 +2277,6 @@
     }
   },
   {
-    "name": "2026-06-use-new-badge-image-source",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-06-web-translate-dom-guard",
     "kind": "installation",
     "defaultConfig": {

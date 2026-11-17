@@ -23,7 +23,7 @@ var l = s(477900),
     y = s(722868),
     C = s(716804),
     O = s(718019),
-    S = s(241614),
+    S = s(571259),
     T = s(915614),
     P = s(559506),
     L = s(946356),
@@ -477,7 +477,7 @@ function e5(e) {
                 ? (0, l.jsx)(ep, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(eH, { user: s, displayProfile: t, onClose: a });
 }
-function e1(e) {
+function e3(e) {
     let {
             user: i,
             currentUser: s,
@@ -550,7 +550,7 @@ function e1(e) {
               ],
           });
 }
-var e3 = s(186272),
+var e1 = s(186272),
     e2 = s(996988),
     e9 = s(207634),
     e6 = s(174217);
@@ -595,7 +595,7 @@ function e8(e) {
                 s = i?.length;
             return [
                 { section: ex.RP.BOT_INFO, text: Q.intl.string(Q.t.ZzAR2Y) },
-                { section: ex.RP.MUTUAL_GUILDS, text: (0, e3.A)(s) },
+                { section: ex.RP.MUTUAL_GUILDS, text: (0, e1.A)(s) },
                 { section: ex.RP.BOT_DATA_ACCESS, text: Q.intl.string(Q.t.WstFb0) },
             ];
         })(i),
@@ -696,7 +696,7 @@ function e8(e) {
                                                 onClose: z,
                                             }),
                                         }),
-                                        (0, l.jsx)(e1, {
+                                        (0, l.jsx)(e3, {
                                             user: i,
                                             currentUser: s,
                                             displayProfile: Y,

@@ -12,7 +12,6 @@ t.exports = {
     Y5: "editButtonAppended_IqWmhA",
     qS: "badge_IqWmhA",
     IZ: "editIcon_IqWmhA",
-    Do: "badgeVectorSrc_IqWmhA",
     TW: "hasUnreadDot_IqWmhA",
     Zm: "unreadDot_IqWmhA",
 };
