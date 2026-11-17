@@ -109,4 +109,16 @@
     color: var(--input-placeholder-text-default)
 }
 
-/*# sourceMappingURL=388859.12ba8cf2215ec4ed.css.map*/
+.orbsBackRewardBanner_qmS-12 {
+    align-items: center;
+    background: linear-gradient(90deg, #0e3864, #068ab9);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: var(--space-6);
+    margin-inline: auto;
+    padding: var(--space-8) var(--space-16);
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+/*# sourceMappingURL=846900.00c65be996be2cc3.css.map*/

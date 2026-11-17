@@ -21,8 +21,9 @@ n.d(
                     overrideGradientColor: f,
                     rentalExpiresAt: h,
                     completesCollectAndClaimPromotion: I,
+                    orbsBack: p,
                 } = e,
-                p = null != s && s.length > 0;
+                m = null != s && s.length > 0;
             (0, r.mM)(
                 async () => {
                     if ((0, a.EZ)(t.skuId) || t.skuId === a.Dp.ORB_PROFILE_BADGE) {
@@ -80,6 +81,7 @@ n.d(
                             });
                     }
                     let { default: e } = await Promise.all([
+                        n.e(846900),
                         n.e(736663),
                         n.e(237427),
                         n.e(634225),
@@ -90,6 +92,7 @@ n.d(
                         n.e(332447),
                         n.e(364827),
                         n.e(10866),
+                        n.e(686367),
                         n.e(186212),
                         n.e(305834),
                         n.e(264236),
@@ -108,6 +111,7 @@ n.d(
                         n.e(523276),
                         n.e(446800),
                         n.e(284898),
+                        n.e(906723),
                         n.e(603808),
                         n.e(649520),
                         n.e(355949),
@@ -135,11 +139,12 @@ n.d(
                             overrideGradientColor: f,
                             rentalExpiresAt: h,
                             completesCollectAndClaimPromotion: I,
+                            orbsBack: p,
                             onCloseCallback: u,
                             ...n,
                         });
                 },
-                { onCloseCallback: p ? void 0 : u },
+                { onCloseCallback: m ? void 0 : u },
             );
         },
     },
