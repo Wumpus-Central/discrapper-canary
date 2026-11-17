@@ -34,6 +34,7 @@ var i,
         (i[(i.ANNOUNCEMENT_MODAL_VIDEO_LED = 36)] = "ANNOUNCEMENT_MODAL_VIDEO_LED"),
         (i[(i.ANNOUNCEMENT_MODAL_PANEL = 37)] = "ANNOUNCEMENT_MODAL_PANEL"),
         (i[(i.NITRO_HOME_SECTION_HEADER = 38)] = "NITRO_HOME_SECTION_HEADER"),
+        (i[(i.ORBS_CONFIRMATION_MODAL = 39)] = "ORBS_CONFIRMATION_MODAL"),
         i);
 n.d(
     t,
@@ -74,6 +75,7 @@ n.d(
             36: "announcementModalVideoLed",
             37: "announcementModalPanel",
             38: "nitroHomeSectionHeader",
+            39: "orbsConfirmationModal",
         },
         oW: r,
     },
