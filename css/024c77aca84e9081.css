@@ -22,8 +22,7 @@
 }
 
 .emojiButton_GTawiK {
-    border-radius: 0;
-    padding-inline-end: 12px
+    margin-inline-end: var(--space-12)
 }
 
 .icon_GTawiK {
@@ -61,4 +60,4 @@
     gap: 20px
 }
 
-/*# sourceMappingURL=d4a8ecd2125ee1b3.css.map*/
+/*# sourceMappingURL=024c77aca84e9081.css.map*/
