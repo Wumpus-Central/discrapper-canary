@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => es });
+n.d(t, { A: () => el });
 var r = n(284009),
     a = n.n(r),
     s = n(435558),
@@ -11,7 +11,7 @@ var r = n(284009),
 n(321073);
 var _ = n(499979),
     E = n(451988),
-    A = n(805048),
+    A = n(901552),
     f = n(507821);
 class h {
     _report;
@@ -82,22 +82,23 @@ var I = n(419490),
     T = n(973522),
     g = n(967347),
     S = n(929921),
-    N = n(46653),
-    C = n(734057),
-    O = n(877717),
-    R = n(988468),
-    L = n(544180),
-    y = n(495867),
-    D = n(873985),
-    b = n(129230),
-    v = n(353835),
-    P = n(927813),
-    M = n(652215);
-function U(e) {
+    N = n(616356),
+    C = n(46653),
+    O = n(734057),
+    R = n(877717),
+    L = n(988468),
+    y = n(544180),
+    D = n(495867),
+    b = n(873985),
+    v = n(129230),
+    P = n(353835),
+    M = n(927813),
+    U = n(652215);
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class w {
+class G {
     _statInterval;
     _isSender;
     _streamEnd;
@@ -153,13 +154,13 @@ class w {
             (e[this._lastLayout] = (e[this._lastLayout] ?? 0) + ((0, _.tB)() - this._lastLayoutChanged) / 1e3);
         let t = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: U(e[M.SO9.FULL_SCREEN]),
-            duration_layout_theatre: U(e[M.SO9.THEATRE]),
-            duration_layout_pip: U(e[M.SO9.PIP]),
-            duration_layout_popout: U(e[M.SO9.POPOUT]),
-            duration_layout_portrait: U(e[M.SO9.PORTRAIT]),
-            duration_layout_landscape: U(e[M.SO9.LANDSCAPE]),
-            duration_layout_minimized: U(e[M.SO9.MINIMIZED]),
+            duration_layout_fullscreen: w(e[U.SO9.FULL_SCREEN]),
+            duration_layout_theatre: w(e[U.SO9.THEATRE]),
+            duration_layout_pip: w(e[U.SO9.PIP]),
+            duration_layout_popout: w(e[U.SO9.POPOUT]),
+            duration_layout_portrait: w(e[U.SO9.PORTRAIT]),
+            duration_layout_landscape: w(e[U.SO9.LANDSCAPE]),
+            duration_layout_minimized: w(e[U.SO9.MINIMIZED]),
         };
         return this._isSender
             ? {
@@ -176,13 +177,13 @@ class w {
         this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS;
     };
 }
-var G = n(652896),
-    x = n(965025),
-    k = n(540305);
-let F = n(815706).p;
-var B = n(731854);
-let V = 5 * P.A.Millis.SECOND;
-class H {
+var x = n(652896),
+    k = n(965025),
+    F = n(540305);
+let B = n(815706).p;
+var V = n(731854);
+let H = 5 * M.A.Millis.SECOND;
+class j {
     streamRegion;
     streamApplication;
     streamApplicationHistory;
@@ -244,7 +245,7 @@ class H {
         return (this.endTime ?? e) - this.startTime;
     }
 }
-class j extends A.A {
+class W extends A.A {
     analyticsContext;
     videoStreamStats;
     streamContext;
@@ -264,14 +265,14 @@ class j extends A.A {
         parentMediaSessionId: a,
         channelId: s,
     }) {
-        let o = (0, G.Iy)(t),
+        let o = (0, x.Iy)(t),
             { guildId: d, channelId: u } = o;
         (super({
-            userId: N.default.getId(),
+            userId: C.default.getId(),
             sessionId: e,
             guildId: d,
             channelId: u,
-            context: B.x.STREAM,
+            context: V.x.STREAM,
             streamServerId: n,
             streamChannelId: s,
             parentMediaSessionId: a,
@@ -279,10 +280,10 @@ class j extends A.A {
         }),
             (this.streamContext = o),
             (this.streamKey = t),
-            (this.videoStreamStats = new w(i, this.isOwner)),
+            (this.videoStreamStats = new G(i, this.isOwner)),
             (this.analyticsContext = r),
             (this.updateVideoStreamId = l().debounce((e, t) => {
-                let { guildId: n, channelId: i, ownerId: r } = (0, G.Iy)(this.streamKey);
+                let { guildId: n, channelId: i, ownerId: r } = (0, x.Iy)(this.streamKey);
                 c.h.dispatch({
                     type: "RTC_CONNECTION_VIDEO",
                     guildId: n,
@@ -291,15 +292,16 @@ class j extends A.A {
                     streamId: e,
                     rtcServerId: t,
                     mediaEngineConnectionId: this.getMediaEngineConnectionId(),
-                    context: B.x.STREAM,
+                    context: V.x.STREAM,
                 });
             }, 200)),
             this.videoStreamStats.start(),
-            this.initializeEvents());
+            this.initializeEvents(),
+            N.A.addChangeListener(this._handleDaveVoiceStatesChange));
     }
     get isOwner() {
         let { ownerId: e } = this.streamContext;
-        return N.default.getId() === e;
+        return C.default.getId() === e;
     }
     destroy(e) {
         (this.videoStreamStats.stop(),
@@ -308,7 +310,14 @@ class j extends A.A {
             this.updateVideoStreamId(null, null),
             this.updateVideoStreamId.flush(),
             this.errorTimer.stop(),
+            N.A.removeChangeListener(this._handleDaveVoiceStatesChange),
             super.destroy());
+    }
+    _getDaveVoiceStateUserIds() {
+        return [this.userId, this.streamContext.ownerId, ...N.A.getViewerIds(this.streamKey).map((e) => e)];
+    }
+    _isDaveStreamOwner() {
+        return this.isOwner;
     }
     streamUpdate(e) {
         let t = this._videoQuality;
@@ -380,7 +389,7 @@ class j extends A.A {
         let e = !1;
         (this.on(f.q.State, (e, t, n) => {
             (c.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
-                e === M.S7L.RTC_CONNECTED &&
+                e === U.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         d.yq.ScreenshareFinish,
                         (e, t, n, i, r, a, s, l, o, d, c, u, _, E, A, f, h, I, p, m, S, N, C, O, R, L) => {
@@ -388,7 +397,7 @@ class j extends A.A {
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: P, exe: U, distributor: w } = (0, T.wH)(y),
+                            let { gameName: D, gameId: b, exe: M, distributor: w } = (0, T.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
@@ -415,7 +424,7 @@ class j extends A.A {
                                         (p ?? 0) +
                                         (R ?? 0) +
                                         (O ?? 0);
-                                b.default.track(M.HAw.SCREENSHARE_FINISHED, {
+                                v.default.track(U.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,
                                     hybrid_dxgi_frames: n,
@@ -439,19 +448,19 @@ class j extends A.A {
                                     desktop_capturer_type: h,
                                     media_session_id: G,
                                     rtc_connection_id: x,
-                                    context: B.x.STREAM,
+                                    context: V.x.STREAM,
                                     activity: I,
                                     soundshare_session: this.soundshareStats.getStats().soundshare_last_session,
                                     picker_type_used:
                                         null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
                                     duration: this.analyticsContext.getDuration(),
                                     share_game_name: D,
-                                    share_game_id: P,
-                                    share_game_exe: U,
+                                    share_game_id: b,
+                                    share_game_exe: M,
                                     share_game_distributor: w,
                                     hdr_frames_capable: S,
                                     hdr_frames: N,
-                                    discord_is_elevated: v.A.getDiscordIsElevated(),
+                                    discord_is_elevated: P.A.getDiscordIsElevated(),
                                     target_window_elevated: C,
                                     pipewire_frames: O,
                                     x11_frames: R,
@@ -462,33 +471,33 @@ class j extends A.A {
                         },
                     ),
                     this._connection?.on(d.yq.SoundshareAttached, () => {
-                        let e = R.Ay.getGoLiveSource();
+                        let e = L.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
-                            b.default.track(M.HAw.SOUNDSHARE_ATTACHED, {
-                                ...(0, k.A)(e?.desktopSource),
+                            v.default.track(U.HAw.SOUNDSHARE_ATTACHED, {
+                                ...(0, F.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             });
                     }),
                     this._connection?.on(d.yq.SoundshareFailed, (e) => {
                         let { failureCode: t, failureReason: n, willRetry: i } = e,
-                            r = R.Ay.getGoLiveSource();
+                            r = L.Ay.getGoLiveSource();
                         this.reportSoundshareFailure(r?.desktopSource, t, n, i);
                     }),
                     this._connection?.on(d.yq.SoundshareSpeaking, () => {
-                        let e = R.Ay.getGoLiveSource();
+                        let e = L.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
-                            (b.default.track(M.HAw.SOUNDSHARE_TRANSMITTING, {
-                                ...(0, k.A)(e?.desktopSource),
+                            (v.default.track(U.HAw.SOUNDSHARE_TRANSMITTING, {
+                                ...(0, F.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             }),
-                            null != O.A.getHookError(M.LU7.SOUND) &&
+                            null != R.A.getHookError(U.LU7.SOUND) &&
                                 c.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                     }),
                     this._connection?.on(d.yq.SoundshareTrace, (e) => {
-                        let t = R.Ay.getGoLiveSource();
+                        let t = L.Ay.getGoLiveSource();
                         switch ((this.soundshareStats.traceEvent(t?.desktopSource?.soundshareSession, e), e.type)) {
                             case "soundshare_attach_requested":
-                                this.errorTimer.start(V, () => {
+                                this.errorTimer.start(H, () => {
                                     c.h.dispatch({
                                         type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                         errorMessage: "Sound Hook Failed",
@@ -519,7 +528,7 @@ class j extends A.A {
                         if (this._firstFrameDelivered) return;
                         this._firstFrameDelivered = !0;
                         let t = this.getStreamAnalyticsProperties();
-                        b.default.track(M.HAw.RECEIVER_FIRST_FRAME_DELIVERED, {
+                        v.default.track(U.HAw.RECEIVER_FIRST_FRAME_DELIVERED, {
                             guild_id: t.guild_id,
                             channel_id: t.channel_id,
                             rtc_connection_id: t.rtc_connection_id,
@@ -565,7 +574,7 @@ class j extends A.A {
                     }),
                     this._connection?.on(d.yq.FirstFrameEncryptedStats, (e) => {
                         let t = this.getStreamAnalyticsProperties();
-                        b.default.track(M.HAw.STREAMER_FIRST_FRAME_ENCRYPTED, {
+                        v.default.track(U.HAw.STREAMER_FIRST_FRAME_ENCRYPTED, {
                             guild_id: t.guild_id,
                             channel_id: t.channel_id,
                             rtc_connection_id: t.rtc_connection_id,
@@ -600,7 +609,7 @@ class j extends A.A {
                     })));
         }),
             this.on(f.q.Video, (t, n, i, r, a) => {
-                let s = (0, G.Iy)(this.streamKey);
+                let s = (0, x.Iy)(this.streamKey);
                 s.guildId === t &&
                     s.channelId === n &&
                     s.ownerId === i &&
@@ -608,13 +617,13 @@ class j extends A.A {
                     this.updateVideoStreamId(r, a));
             }),
             this.on(f.q.VideoSourceQualityChanged, (e, t, n, i, r, a) => {
-                let s = n === N.default.getId();
+                let s = n === C.default.getId();
                 c.h.dispatch({
                     type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
                     guildId: e,
                     channelId: t,
                     senderUserId: n,
-                    maxResolution: s ? (0, x.A)("StreamRTCConnection", e, i, r) : i,
+                    maxResolution: s ? (0, k.A)("StreamRTCConnection", e, i, r) : i,
                     maxFrameRate: r,
                     context: a,
                 });
@@ -632,18 +641,18 @@ class j extends A.A {
         let a = null != t && !this.soundshareFailuresReported[r].has(t);
         (a && this.soundshareFailuresReported[r].add(t),
             (null == t || a) &&
-                b.default.track(M.HAw.SOUNDSHARE_FAILED, {
+                v.default.track(U.HAw.SOUNDSHARE_FAILED, {
                     soundshare_failure_code: t,
                     soundshare_failure_reason: n,
                     soundshare_failure_will_retry: i,
-                    ...(0, k.A)(e),
+                    ...(0, F.A)(e),
                     ...this.getSoundshareAnalyticsProperties(),
                 }));
     }
     getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: a } = this.streamContext,
-            s = D.A.getRegion(y.A.getHostname()),
+            s = b.A.getRegion(D.A.getHostname()),
             { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, T.wH)(t);
         return {
             channel_id: this.channelId,
@@ -651,7 +660,7 @@ class j extends A.A {
             media_session_id: this.getMediaSessionId(),
             parent_media_session_id: this.parentMediaSessionId,
             sender_user_id: r,
-            context: B.x.STREAM,
+            context: V.x.STREAM,
             guild_id: a,
             stream_region: e,
             stream_source_type: n,
@@ -672,24 +681,24 @@ class j extends A.A {
     getSoundshareAnalyticsProperties() {
         return {
             rtc_connection_id: this.getRTCConnectionId(),
-            soundshare_experimental: R.Ay.getExperimentalSoundshare(),
+            soundshare_experimental: L.Ay.getExperimentalSoundshare(),
         };
     }
     trackVideoStartStats() {
-        let e = this.isOwner ? F() : null;
-        b.default.track(M.HAw.VIDEO_STREAM_STARTED, {
+        let e = this.isOwner ? B() : null;
+        v.default.track(U.HAw.VIDEO_STREAM_STARTED, {
             ...this.getStreamAnalyticsProperties(),
             ...e,
-            connection_type: L.A.getType(),
-            effective_connection_speed: L.A.getEffectiveConnectionSpeed(),
-            service_provider: L.A.getServiceProvider(),
+            connection_type: y.A.getType(),
+            effective_connection_speed: y.A.getEffectiveConnectionSpeed(),
+            service_provider: y.A.getServiceProvider(),
             duration_go_live_modal: this.analyticsContext.goLiveModalDurationMs,
             source_location_stack: this.analyticsContext.analyticsLocations,
         });
     }
     _collectVideoStreamEndedEvents(e) {
         let t = { senders: [], receivers: new Map(), callEnded: null },
-            n = C.A.getChannel(this.channelId),
+            n = O.A.getChannel(this.channelId),
             i = null != n ? n.type : null,
             { ownerId: r } = this.streamContext,
             a = e.getNetworkStats(),
@@ -710,15 +719,15 @@ class j extends A.A {
                         ...this.getStreamAnalyticsProperties(),
                         ...o,
                         ...d,
-                        app_hardware_acceleration_enabled: v.A.getAppHardwareAccelerationEnabled(),
+                        app_hardware_acceleration_enabled: P.A.getAppHardwareAccelerationEnabled(),
                         channel_type: i,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: R.Ay.getHardwareEncoding(),
+                        hardware_enabled: L.Ay.getHardwareEncoding(),
                         device_performance_class: this.isOwner ? (0, m.A)() : null,
-                        soundshare_experimental: R.Ay.getExperimentalSoundshare(),
+                        soundshare_experimental: L.Ay.getExperimentalSoundshare(),
                         quality_preset: S.A.getState().preset,
-                        discord_is_elevated: v.A.getDiscordIsElevated(),
+                        discord_is_elevated: P.A.getDiscordIsElevated(),
                     });
             }),
             e.getInboundParticipants().forEach((n) => {
@@ -734,11 +743,11 @@ class j extends A.A {
                         ...this.getStreamAnalyticsProperties(),
                         ...o,
                         ...d,
-                        app_hardware_acceleration_enabled: v.A.getAppHardwareAccelerationEnabled(),
+                        app_hardware_acceleration_enabled: P.A.getAppHardwareAccelerationEnabled(),
                         channel_type: i,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: R.Ay.getHardwareEncoding(),
+                        hardware_enabled: L.Ay.getHardwareEncoding(),
                         device_performance_class: this.isOwner ? (0, m.A)() : null,
                     });
             }),
@@ -746,7 +755,7 @@ class j extends A.A {
         );
     }
     getExtraConnectionOptions() {
-        return { streamUserId: (0, G.Iy)(this.streamKey).ownerId };
+        return { streamUserId: (0, x.Iy)(this.streamKey).ownerId };
     }
     getMediaStreamKey() {
         return this.streamKey;
@@ -763,144 +772,144 @@ class j extends A.A {
                 null != e.maxResolution && null != e.maxFrameRate
                     ? {
                           ...e,
-                          maxResolution: (0, x.A)("StreamRTCConnection", this.guildId, e.maxResolution, e.maxFrameRate),
+                          maxResolution: (0, k.A)("StreamRTCConnection", this.guildId, e.maxResolution, e.maxFrameRate),
                       }
                     : e,
             ),
         );
     }
 }
-var W = n(834757),
-    Y = n(254057),
-    K = n(723702),
-    $ = n(290863),
-    X = n(55010);
-let z = {},
-    q = {},
+var Y = n(834757),
+    K = n(254057),
+    $ = n(723702),
+    X = n(290863),
+    z = n(55010);
+let q = {},
     Q = {},
     J = {},
     Z = {},
     ee = {},
-    et = M.SO9.THEATRE,
-    en = {};
-function ei() {
-    l().forEach(en, (e, t) => {
-        (e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete en[t], delete ee[t]);
+    et = {},
+    en = U.SO9.THEATRE,
+    ei = {};
+function er() {
+    l().forEach(ei, (e, t) => {
+        (e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete ei[t], delete et[t]);
     });
 }
-function er() {
+function ea() {
     return !0;
 }
-class ea extends o.Ay.Store {
+class es extends o.Ay.Store {
     initialize() {
-        this.waitFor(N.default, R.Ay, y.A, u.Ay);
+        this.waitFor(C.default, L.Ay, D.A, u.Ay);
     }
     static displayName = "StreamRTCConnectionStore";
     getRTCConnections() {
-        return en;
+        return ei;
     }
     getAllActiveStreamKeys() {
-        return Object.keys(en);
+        return Object.keys(ei);
     }
     getRTCConnection(e) {
-        return en[e];
+        return ei[e];
     }
     getQuality(e) {
-        return (0, Y.A)(R.Ay) && null != e ? (en[e]?.quality ?? M.bFR.UNKNOWN) : M.bFR.UNKNOWN;
+        return (0, K.A)(L.Ay) && null != e ? (ei[e]?.quality ?? U.bFR.UNKNOWN) : U.bFR.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
-        let t = en[e];
+        let t = ei[e];
         if (null != t) return null != t ? t.getMediaSessionId() : null;
     }
     getRtcConnectionId(e) {
         if (null == e) return null;
-        let t = en[e];
+        let t = ei[e];
         if (null != t) return null != t ? t.getRTCConnectionId() : null;
     }
     getVideoStats(e) {
         if (null == e) return null;
-        let t = en[e];
+        let t = ei[e];
         return null != t ? t.getVideoStats() : null;
     }
     getHostname(e) {
         if (null == e) return "";
-        let t = en[e];
+        let t = ei[e];
         return null != t && null != t.hostname ? t.hostname : "";
     }
     getRegion(e) {
         if (null == e) return null;
-        let t = en[e];
+        let t = ei[e];
         return null != t ? t.getRegion() : null;
     }
     getMaxViewers(e) {
         if (null == e) return null;
-        let t = en[e];
+        let t = ei[e];
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return J[e];
+        return Z[e];
     }
     getLastNonZeroRemoteVideoSinkWantsTime(e) {
-        return ee[e];
+        return et[e];
     }
     getUserIds(e) {
-        let t = en[e];
+        let t = ei[e];
         return t?.getUserIds();
     }
     isUserConnected(e, t) {
-        let n = en[e];
+        let n = ei[e];
         return n?.getIsUserConnected(t);
     }
     getSecureFramesState(e) {
-        let t = en[e];
+        let t = ei[e];
         return t?.getSecureFramesState();
     }
     getSecureFramesRosterMapEntry(e, t) {
-        let n = en[e],
+        let n = ei[e],
             i = n?.getSecureFramesRosterMap();
         return i?.get(t);
     }
     getStreamPid(e) {
-        return Q[e];
+        return J[e];
     }
 }
-let es = new ea(
+let el = new es(
     c.h,
-    !R.Ay.isSupported() || __OVERLAY__
+    !L.Ay.isSupported() || __OVERLAY__
         ? {}
         : {
               CONNECTION_OPEN: function (e) {
-                  ((i = e.sessionId), ei());
+                  ((i = e.sessionId), er());
               },
               CONNECTION_CLOSED: function () {
-                  ((i = null), ei());
+                  ((i = null), er());
               },
-              RTC_CONNECTION_STATE: er,
-              RTC_CONNECTION_PING: er,
-              RTC_CONNECTION_LOSS_RATE: er,
+              RTC_CONNECTION_STATE: ea,
+              RTC_CONNECTION_PING: ea,
+              RTC_CONNECTION_LOSS_RATE: ea,
               RTC_CONNECTION_UPDATE_ID: function (e) {
-                  return l().some(en, (t) => t === e.connection);
+                  return l().some(ei, (t) => t === e.connection);
               },
-              RTC_CONNECTION_SECURE_FRAMES_UPDATE: er,
+              RTC_CONNECTION_SECURE_FRAMES_UPDATE: ea,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function (e) {
                   let { context: t, wants: n, userId: i, guildId: r, channelId: a } = e,
-                      s = (0, G._z)({
-                          streamType: null == r ? X.U4.CALL : X.U4.GUILD,
+                      s = (0, x._z)({
+                          streamType: null == r ? z.U4.CALL : z.U4.GUILD,
                           guildId: r,
                           channelId: a,
                           ownerId: i,
                       });
                   if (
                       t !== d.x.STREAM ||
-                      null == en[s] ||
+                      null == ei[s] ||
                       !Object.entries(n).some((e) => {
                           let [t, n] = e;
                           return "any" !== t && 0 !== n;
                       })
                   )
                       return !1;
-                  ee[s] = performance.now();
+                  et[s] = performance.now();
               },
               STREAM_START: function (e) {
                   let {
@@ -915,21 +924,21 @@ let es = new ea(
                           goLiveModalDurationMs: c,
                           analyticsLocations: _,
                       } = e,
-                      E = (0, G._z)({ streamType: t, guildId: n, channelId: i, ownerId: N.default.getId() });
+                      E = (0, x._z)({ streamType: t, guildId: n, channelId: i, ownerId: C.default.getId() });
                   if (
-                      ((z[E] = { appContext: r, analyticsLocations: _ }),
-                      l().forEach(en, (e) => {
+                      ((q[E] = { appContext: r, analyticsLocations: _ }),
+                      l().forEach(ei, (e) => {
                           let { analyticsContext: t, isOwner: n } = e;
                           (t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart());
                       }),
                       null == a && (a = o),
-                      (J[E] = s),
-                      (Q[E] = a),
+                      (Z[E] = s),
+                      (J[E] = a),
                       null != a)
                   ) {
                       let e = u.Ay.getGameForPID(a);
                       (null != e &&
-                          (q[E] = {
+                          (Q[E] = {
                               name: e.name,
                               id: e.id,
                               exe: e.exeName,
@@ -937,40 +946,40 @@ let es = new ea(
                               sku: e.sku,
                               gameMetadata: e.gameMetadata,
                           }),
-                          en[E]?.analyticsContext.updateStreamApplication(q[E]));
-                  } else en[E]?.analyticsContext.updateStreamApplication(null);
-                  null != c ? (Z[E] = c) : delete Z[E];
+                          ei[E]?.analyticsContext.updateStreamApplication(Q[E]));
+                  } else ei[E]?.analyticsContext.updateStreamApplication(null);
+                  null != c ? (ee[E] = c) : delete ee[E];
               },
               STREAM_STOP: function (e) {
                   let { appContext: t, streamKey: n } = e;
-                  ((z[n] = { appContext: t, analyticsLocations: void 0 }),
-                      l().forEach(en, (e) => {
+                  ((q[n] = { appContext: t, analyticsLocations: void 0 }),
+                      l().forEach(ei, (e) => {
                           let { analyticsContext: n, isOwner: i } = e;
                           (n.setActionContext(t), i && n.trackEnd());
                       }),
+                      (Z[n] = null),
                       (J[n] = null),
-                      (Q[n] = null),
-                      delete Z[n]);
+                      delete ee[n]);
               },
               STREAM_WATCH: function (e) {
                   let { streamKey: t, analyticsLocations: n } = e;
                   return (
-                      (0, G.Iy)(t).ownerId !== N.default.getId() &&
-                      ((z[t] = { appContext: z[t]?.appContext, analyticsLocations: n }), !1)
+                      (0, x.Iy)(t).ownerId !== C.default.getId() &&
+                      ((q[t] = { appContext: q[t]?.appContext, analyticsLocations: n }), !1)
                   );
               },
               STREAM_CREATE: function (e) {
                   let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: s, viewerIds: l } = e,
-                      o = en[t],
-                      d = (0, G.Iy)(t);
+                      o = ei[t],
+                      d = (0, x.Iy)(t);
                   if (null == o && null != n) {
-                      (null == Q[t] && (q[t] = null), null == q[t] && null == J[t] && (q[t] = (0, W.Ee)(d, $.A)));
-                      let e = new H({
+                      (null == J[t] && (Q[t] = null), null == Q[t] && null == Z[t] && (Q[t] = (0, Y.Ee)(d, X.A)));
+                      let e = new j({
                           streamRegion: s,
-                          streamApplication: q[t],
+                          streamApplication: Q[t],
                           streamSourceType: (function (e) {
                               if (null == e) return "unknown";
-                              if (K.isPlatformEmbedded || platform?.name === "Chrome") {
+                              if ($.isPlatformEmbedded || platform?.name === "Chrome") {
                                   if (e.startsWith("web-contents-media-stream:")) return "tab";
                                   else if (e.startsWith("window:")) return "window";
                                   else if (e.startsWith("screen:")) return "screen";
@@ -980,59 +989,59 @@ let es = new ea(
                                   else return "screen";
                               else if (platform?.name === "Safari") return "window";
                               return "unknown";
-                          })(J[t]),
-                          actionContext: z[t]?.appContext,
+                          })(Z[t]),
+                          actionContext: q[t]?.appContext,
                           numViewers: null != l ? l.length : 0,
-                          goLiveModalDurationMs: Z[t],
-                          analyticsLocations: z[t]?.analyticsLocations,
+                          goLiveModalDurationMs: ee[t],
+                          analyticsLocations: q[t]?.analyticsLocations,
                       });
                       (a()(null != i, "Creating RTCConnection without session."),
-                          (o = new j({
+                          (o = new W({
                               sessionId: i,
                               streamKey: t,
                               serverId: n,
                               channelId: r,
-                              initialLayout: et,
+                              initialLayout: en,
                               analyticsContext: e,
-                              parentMediaSessionId: y.A.getMediaSessionId(),
+                              parentMediaSessionId: D.A.getMediaSessionId(),
                           })),
-                          (en[t] = o));
+                          (ei[t] = o));
                   }
-                  (delete ee[t],
+                  (delete et[t],
                       c.h.dispatch({
                           type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
                           mediaEngineConnectionId: o.getMediaEngineConnectionId(),
                       }));
               },
               STREAM_SERVER_UPDATE: function (e) {
-                  let t = en[e.streamKey];
+                  let t = ei[e.streamKey];
                   if (null == t) return !1;
                   t.connect(e.endpoint, e.token);
               },
               STREAM_UPDATE: function (e) {
                   let { streamKey: t, viewerIds: n, paused: i } = e,
-                      r = en[t];
+                      r = ei[t];
                   if (null == r) return !1;
                   (null != n && r.analyticsContext.trackViewerCount(n.length), r.streamUpdate(i));
               },
               STREAM_DELETE: function (e) {
                   let { streamKey: t } = e,
-                      n = en[t];
+                      n = ei[t];
                   if (null == n) return !1;
                   (c.h.dispatch({
                       type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
                       mediaEngineConnectionId: n.getMediaEngineConnectionId(),
                   }),
                       n.destroy("stream-end"),
-                      delete en[t]);
+                      delete ei[t]);
               },
               STREAM_LAYOUT_UPDATE: function (e) {
                   let { layout: t } = e;
-                  ((et = t), Object.values(en).forEach((e) => e.layoutChange(t)));
+                  ((en = t), Object.values(ei).forEach((e) => e.layoutChange(t)));
               },
               VIDEO_SIZE_UPDATE: function (e) {
                   let { streamId: t, dimensions: n, zoom: i } = e;
-                  l().forEach(en, (e) => {
+                  l().forEach(ei, (e) => {
                       e?.setVideoSize(t, n, i);
                   });
               },
