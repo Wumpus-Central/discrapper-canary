@@ -12,8 +12,8 @@ var i = n(477900),
     p = n(683071),
     h = n(95477),
     v = n(103557),
-    f = n(890497),
-    g = n(150934),
+    g = n(890497),
+    f = n(150934),
     x = n(691885),
     b = n(821609),
     j = n(452027),
@@ -65,7 +65,7 @@ function G(e) {
         [eu, ed] = a.useState(),
         [ec, em] = a.useState(!1),
         [ep, eh] = a.useState(""),
-        [ev, ef] = a.useState(
+        [ev, eg] = a.useState(
             (function (e) {
                 switch (e) {
                     case "windows":
@@ -78,7 +78,7 @@ function G(e) {
                 return "";
             })((0, M.R0)()),
         ),
-        [eg, ex] = a.useState(""),
+        [ef, ex] = a.useState(""),
         [eb, ej] = a.useState(""),
         [ey, eS] = a.useState(""),
         [ek, ew] = a.useState(""),
@@ -93,8 +93,8 @@ function G(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "6c9af6f777fa44119fe60c87ff27fe1f167ed896" !== e.body.hash) {
-                let e = new Date("1795034615812"),
+            if (null != e.body && "0c80d40084deb0be67a594e4af2c9cc11225311e" !== e.body.hash) {
+                let e = new Date("1795034795848"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eR(n.hours);
@@ -230,7 +230,7 @@ function G(e) {
                                           overridePlatformInformation: ec,
                                           device: ep,
                                           operatingSystem: ev,
-                                          operatingSystemVersion: eg,
+                                          operatingSystemVersion: ef,
                                           clientVersion: eb,
                                           clientBuildNumber: ey,
                                           locale: ek,
@@ -381,7 +381,7 @@ function G(e) {
                                 "data-migration-pending": !0,
                             }),
                             eB &&
-                                (0, i.jsx)(f.Z, {
+                                (0, i.jsx)(g.Z, {
                                     selectionMode: "single",
                                     label: z.intl.string(z.t["77VVd8"]),
                                     value: eu,
@@ -422,7 +422,7 @@ function G(e) {
                                 maxLength: 5e3,
                                 onChange: ea,
                             }),
-                            (0, i.jsx)(g.S, { checked: ec, onChange: (e) => em(e), label: z.intl.string(z.t.ayhqiH) }),
+                            (0, i.jsx)(f.S, { checked: ec, onChange: (e) => em(e), label: z.intl.string(z.t.ayhqiH) }),
                             ec
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
@@ -436,14 +436,14 @@ function G(e) {
                                               label: z.intl.string(z.t.kcHxi6),
                                               value: ev,
                                               options: U,
-                                              onSelectionChange: ef,
+                                              onSelectionChange: eg,
                                               selectionMode: "single",
                                               fullWidth: !0,
                                           }),
                                           (0, i.jsx)(h.k, {
                                               label: z.intl.string(z.t.rEtxdg),
                                               placeholder: "Operating System Version",
-                                              value: eg,
+                                              value: ef,
                                               onChange: (e) => ex(e),
                                           }),
                                           (0, i.jsx)(h.k, {

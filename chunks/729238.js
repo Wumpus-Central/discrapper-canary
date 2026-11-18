@@ -1,6 +1,6 @@
 var i = n(439372),
     r = n(114129),
-    a = n(931519),
+    a = n(442325),
     s = n(254838);
 class l extends i.A {
     knownTabs = [];
@@ -8,7 +8,6 @@ class l extends i.A {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         CHANNEL_SELECT: () => this.handleChannelSelect(),
         CHANNEL_TABS_OPEN: () => this.rememberTabs(),
-        CHANNEL_TABS_SET_PINNED: () => this.rememberTabs(),
         CHANNEL_TABS_SET_ENABLED: () => this.rememberTabs(),
         CHANNEL_TABS_NAVIGATE_ROUTE: () => this.handleNavigateRoute(),
     };

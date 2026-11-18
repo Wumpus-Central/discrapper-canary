@@ -44,7 +44,6 @@ let r = {
             "POST_CONNECTION_OPEN",
             "CHANNEL_SELECT",
             "CHANNEL_TABS_OPEN",
-            "CHANNEL_TABS_SET_PINNED",
             "CHANNEL_TABS_NAVIGATE_ROUTE",
             "CHANNEL_TABS_SET_ENABLED",
         ],

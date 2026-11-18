@@ -10,15 +10,15 @@ let c = s.BVt.CHANNEL(r.pv.guildId(), l.VV.CONJURE, ":projectId?"),
 function _(e) {
     let { pathname: t, search: n = "", hash: i = "" } = e;
     return t === s.BVt.FRIENDS
-        ? { routePath: t, routeLabel: o.intl.string(o.t.TdEu5X) }
+        ? { kind: "route", routePath: t, routeLabel: o.intl.string(o.t.TdEu5X) }
         : t.startsWith(s.BVt.COLLECTIBLES_SHOP)
-          ? { routePath: s.BVt.COLLECTIBLES_SHOP, routeLabel: o.intl.string(o.t.pWG4ze) }
+          ? { kind: "route", routePath: s.BVt.COLLECTIBLES_SHOP, routeLabel: o.intl.string(o.t.pWG4ze) }
           : t.startsWith(s.BVt.QUEST_HOME)
-            ? { routePath: s.BVt.QUEST_HOME, routeLabel: o.intl.string(o.t.JALI2K) }
+            ? { kind: "route", routePath: s.BVt.QUEST_HOME, routeLabel: o.intl.string(o.t.JALI2K) }
             : t.startsWith(s.BVt.APPLICATION_STORE)
-              ? { routePath: s.BVt.APPLICATION_STORE, routeLabel: o.intl.string(o.t.Ipxkog) }
+              ? { kind: "route", routePath: s.BVt.APPLICATION_STORE, routeLabel: o.intl.string(o.t.Ipxkog) }
               : null != (0, a.B)(t, { path: c, exact: !0 })
-                ? { routePath: `${t}${n}${i}`, routeLabel: o.intl.string(d.default.uk6jhJ) }
+                ? { kind: "route", routePath: `${t}${n}${i}`, routeLabel: o.intl.string(d.default.uk6jhJ) }
                 : null;
 }
 n.d(
@@ -28,10 +28,15 @@ n.d(
         C2: function () {
             return { kind: "route", routePath: s.BVt.FRIENDS, routeLabel: o.intl.string(o.t.TdEu5X) };
         },
+        Pp: function (e, t) {
+            return "route" === e.kind
+                ? "route" === t.kind && e.routePath === t.routePath
+                : "channel" === t.kind && e.channelId === t.channelId;
+        },
         dR: function (e) {
             let { pathname: t, search: n, hash: r } = (0, i.Rr)(e),
                 o = _({ pathname: t, search: n, hash: r });
-            if (null != o) return { kind: "route", ...o };
+            if (null != o) return o;
             let d = (0, a.B)(t, { path: u, exact: !0 });
             if (null == d || (0, l.jq)(d.params.channelId)) return null;
             let { guildId: c, channelId: E } = d.params;

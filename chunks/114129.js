@@ -8,7 +8,7 @@ var i,
     c = n(734057),
     u = n(309010),
     _ = n(20517),
-    E = n(931519),
+    E = n(442325),
     A = n(652215);
 function f(e, t) {
     let { openVoiceChat: n = !0, transitionExtras: i } =
