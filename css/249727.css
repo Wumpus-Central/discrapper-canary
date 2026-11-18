@@ -36,8 +36,10 @@
 }
 
 .speakers_wIG9Rr {
+    align-items: center;
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    gap: var(--space-xxs)
 }
 
 .form_hg1IXG {
@@ -251,4 +253,4 @@
     width: 28px
 }
 
-/*# sourceMappingURL=249727.537cce8cdfd25402.css.map*/
+/*# sourceMappingURL=249727.b91ce589016fa240.css.map*/

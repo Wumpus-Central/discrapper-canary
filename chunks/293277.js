@@ -10,8 +10,8 @@ var n,
     u = t(855986),
     m = t(866665),
     x = t(943812),
-    A = t(428689),
-    h = t(695366),
+    h = t(428689),
+    A = t(695366),
     N = t(646514),
     g = t(323384),
     E = t(39623),
@@ -22,8 +22,8 @@ var n,
     f = t(666654),
     L = t(83107),
     S = t(615675),
-    O = t(990836),
-    R = t(387755),
+    R = t(990836),
+    O = t(387755),
     T = t(440594),
     _ = t(149468),
     D = t(863089),
@@ -65,12 +65,12 @@ function Z(e) {
         d = (0, F.Ay)(a),
         { createMultipleConfettiAt: m } = i.useContext(z.x),
         x = (0, K.r)(N.A.colors.INTERACTIVE_BACKGROUND_HOVER).hex(),
-        A = (0, K.r)(N.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-        h = (0, K.r)(N.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        h = (0, K.r)(N.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+        A = (0, K.r)(N.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
         g = i.useRef(0),
         E = i.useRef(null),
         I = Math.max(0, Math.min(1, l ?? 0)),
-        p = I >= 1 ? h : A,
+        p = I >= 1 ? A : h,
         j = i.useMemo(
             () => ({ backgroundImage: `conic-gradient(${p} ${Math.round(360 * I)}deg, ${x} 0deg)` }),
             [I, p, x],
@@ -209,7 +209,7 @@ function er(e) {
                 );
             }
             if (o || l) {
-                let e = o ? S.HeadphonesDenyIcon : O.HeadphonesSlashIcon,
+                let e = o ? S.HeadphonesDenyIcon : R.HeadphonesSlashIcon,
                     t = (0, r.jsx)(e, { className: a()(es.Kk, s, { [es.DU]: o }), color: "currentColor" });
                 d.push(
                     (0, r.jsx)(
@@ -242,7 +242,7 @@ function er(e) {
                       m.m,
                       {
                           text: ee.intl.string(ee.t.FlNoSV),
-                          children: (0, r.jsx)(A.VideoIcon, {
+                          children: (0, r.jsx)(h.VideoIcon, {
                               size: "md",
                               color: "currentColor",
                               className: a()(es.Kk, v),
@@ -257,7 +257,7 @@ function er(e) {
                     m.m,
                     {
                         text: ee.intl.string(ee.t.HFwRpk),
-                        children: (0, r.jsx)(h.CircleErrorIcon, {
+                        children: (0, r.jsx)(A.CircleErrorIcon, {
                             className: a()(es.Kk, v),
                             color: N.A.colors.STATUS_WARNING_BACKGROUND,
                         }),
@@ -318,7 +318,7 @@ function er(e) {
                         text: ee.intl.string(ee.t.ygslb0),
                         children: (0, r.jsx)(I.D, {
                             onClick: (e) => {
-                                (e.stopPropagation(), R.A.stopRinging(F, [w.id]));
+                                (e.stopPropagation(), O.A.stopRinging(F, [w.id]));
                             },
                             children: (0, r.jsx)(d.PhoneHangUpIcon, {
                                 size: "sm",
@@ -360,8 +360,8 @@ let ei = function (e) {
             userNameClassName: c = es.gr,
             size: d = $.OSZ.SMALL,
             selected: x = !1,
-            disabled: A = !1,
-            isOverlay: h = !1,
+            disabled: h = !1,
+            isOverlay: A = !1,
             ref: N,
             ...g
         } = e,
@@ -372,8 +372,8 @@ let ei = function (e) {
             onContextMenu: f,
             onMouseLeave: L,
             onMouseDown: S,
-            priority: O,
-            speaking: R = !1,
+            priority: R,
+            speaking: O = !1,
             playingSoundboard: T = !1,
             collapsed: _,
             mute: b,
@@ -397,7 +397,7 @@ let ei = function (e) {
         ea = (0, V.a)({ displayNameStyles: el }),
         eo = (0, D.A)(en.id),
         ec = (0, y.v)({
-            voiceStatus: (0, p.n$)(R, T),
+            voiceStatus: (0, p.n$)(O, T),
             voiceDb: eo,
             ...(W ? { spreadDirection: y.O.INSET_ONLY, maxInnerSpreadRadius: 3 } : {}),
         }),
@@ -424,7 +424,7 @@ let ei = function (e) {
                 : e;
         })(),
         ex = (0, u.bG)([U.A], () => U.A.getProgressForUserId(en.id), [en.id]),
-        eA = (0, G.Uk)("VoiceUser") && null != ex;
+        eh = (0, G.Uk)("VoiceUser") && null != ex;
     return (0, r.jsx)(j.s, {
         ref: N,
         className: a()(Z, {
@@ -434,7 +434,7 @@ let ei = function (e) {
             [es.vk]: null != E,
             [es.L9]: d === $.OSZ.SMALL,
             [es.p8]: d === $.OSZ.LARGE,
-            [es.r9]: !x && A,
+            [es.r9]: !x && h,
             [es.jI]: Q,
         }),
         onClick: function (e) {
@@ -459,12 +459,12 @@ let ei = function (e) {
         "aria-label": em,
         focusProps: { offset: { right: 4 } },
         children: (0, r.jsxs)("div", {
-            className: a()(es.Qs, { [es.zq]: J }),
+            className: a()(es.Qs, { [es.zq]: J, [es.hR]: _ }),
             children: [
-                O && !_
+                R && !_
                     ? (0, r.jsx)(m.m, {
                           text: ee.intl.string(ee.t.BVK71i),
-                          children: (0, r.jsx)("div", { className: a()(es.G, { [es.g4]: !b && !P && R }) }),
+                          children: (0, r.jsx)("div", { className: a()(es.G, { [es.g4]: !b && !P && O }) }),
                       })
                     : null,
                 ((s = a()(es.my, { [es.Jb]: d === $.OSZ.LARGE, [es.dT]: d === $.OSZ.SMALL, [es.DF]: q })),
@@ -476,7 +476,7 @@ let ei = function (e) {
                           src: en.getAvatarURL(w, d === $.OSZ.LARGE ? 40 : 24),
                           className: a()(o, s),
                       })
-                    : eA
+                    : eh
                       ? (0, r.jsx)(B, {
                             userId: en.id,
                             wrapperClassName: o,
@@ -484,7 +484,7 @@ let ei = function (e) {
                         })
                       : (0, r.jsx)("div", { className: a()(o, s), style: t })),
                 ((n = (0, r.jsxs)("div", {
-                    className: a()(c, es.Xh, ea, { [es.Pi]: !b && !P && R, [es.DF]: q }),
+                    className: a()(c, es.Xh, ea, { [es.Pi]: !b && !P && O, [es.DF]: q }),
                     children: [
                         z ?? Y.Ay.getName(en),
                         H
@@ -499,13 +499,13 @@ let ei = function (e) {
                     primaryGuild: en.primaryGuild,
                     userId: en.id,
                     contextGuildId: w,
-                    isOverlay: h,
+                    isOverlay: A,
                     disableTooltip: !0,
-                    className: a()(es.fc, h && es.zW),
-                    profileViewedAnalytics: { source: h ? $.JJy.OVERLAY : $.ThZ.VOICE_PANEL },
+                    className: a()(es.fc, A && es.zW),
+                    profileViewedAnalytics: { source: A ? $.JJy.OVERLAY : $.ThZ.VOICE_PANEL },
                 }),
-                !_ || h ? (0, r.jsx)(et, { ...l, children: n }) : null),
-                (0, r.jsx)(er, { disabled: A, ...g, isHovered: ed }),
+                !_ || A ? (0, r.jsx)(et, { ...l, children: n }) : null),
+                (0, r.jsx)(er, { disabled: h, ...g, isHovered: ed }),
             ],
         }),
     });
@@ -513,7 +513,7 @@ let ei = function (e) {
 function el(e) {
     let { application: s, game: t, iconClassName: n, guildId: l, channelId: c, userId: d } = e,
         [u, x] = i.useState(!1),
-        A = (0, o.K)((e) => x(e));
+        h = (0, o.K)((e) => x(e));
     return (
         i.useEffect(() => {
             u &&
@@ -527,7 +527,7 @@ function el(e) {
             text: ee.intl.formatToPlainString(ee.t.Sq9xJ7, { game: s.name }),
             "aria-label": ee.intl.formatToPlainString(ee.t.Sq9xJ7, { game: s.name }),
             children: (0, r.jsx)(P.A, {
-                ref: A,
+                ref: h,
                 className: a()(es.Kk, es.Gt, n),
                 game: t ?? s,
                 size: P.M.XSMALL,
