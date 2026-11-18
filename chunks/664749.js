@@ -20,7 +20,7 @@ function c(e, t) {
                 return null != (0, a.NN)(t) &&
                     t.rewardStatus === r.GM.EARNED &&
                     (0, s.us)(t, n) &&
-                    t.skuIds?.[e.skuId] != null
+                    t.skuIds?.includes(e.skuId) === !0
                     ? t
                     : null;
             })(e, t);

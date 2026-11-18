@@ -72,8 +72,9 @@ function V() {
     if (l) {
         let e = b.A.getStreamerActiveStreamMetadata(),
             t = h.Ay.getVisibleRunningGames(),
-            n = null;
-        (e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
+            n = null,
+            i = e?.pid ?? e?.gamePid;
+        (null != i && (n = t.find((e) => e.pid === i) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
             null != n ? (null == B && (B = n.start ?? Date.now()), (d = n)) : (B = null));
     } else B = null;

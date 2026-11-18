@@ -51,12 +51,7 @@ class l extends a.A {
                                       : null,
                           }
                     : null,
-            skuIds: (function (e) {
-                if (null == e) return null;
-                let t = {};
-                for (let [n, i] of Object.entries(e)) t[n] = { priceTiers: i.price_tiers };
-                return t;
-            })(e.sku_ids),
+            skuIds: e.sku_ids ?? null,
             appliesToAllSkus: e.applies_to_all_skus,
             includeBundles: e.include_bundles,
             startsAt: null != e.starts_at ? new Date(e.starts_at) : null,
@@ -237,7 +232,7 @@ class l extends a.A {
             (this.rewardType = e.rewardType),
             (this.rewardStatus = e.rewardStatus),
             (this.rewardConfig = e.rewardConfig),
-            (this.skuIds = e.skuIds),
+            (this.skuIds = Array.isArray(e.skuIds) ? e.skuIds : null),
             (this.appliesToAllSkus = e.appliesToAllSkus),
             (this.includeBundles = e.includeBundles),
             (this.startsAt = e.startsAt),
