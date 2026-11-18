@@ -96,7 +96,7 @@ async function D(e) {
                     emoji: { id: l, name: l },
                     userId: u,
                     optimistic: !0,
-                    reactionType: p.v.VOTE,
+                    reactionType: p.v6.VOTE,
                 });
             return e;
         });

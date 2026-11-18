@@ -326,7 +326,7 @@ function eT(e) {
     } = e;
     function T() {
         d();
-        let e = r ? Y.v.BURST : Y.v.NORMAL;
+        let e = r ? Y.v6.BURST : Y.v6.NORMAL;
         (0, ej.$)(n, { emoji: t, reactionType: e });
     }
     let R = "string" == typeof s ? "" === s.trim() : null == s;
@@ -343,7 +343,7 @@ function eT(e) {
             (0, i.jsx)(eE, { emojiId: t.id, onClose: d, nonce: N, showingMoreEmojis: E, setShowingMoreEmojis: j })
         );
     }
-    if (l === Y.v.BURST)
+    if (l === Y.v6.BURST)
         return (0, i.jsxs)("div", {
             className: eI.xQ,
             onMouseEnter: u,
@@ -473,13 +473,13 @@ let eO = {
     },
 };
 function e_(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Y.v.NORMAL,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Y.v6.NORMAL,
         i = arguments.length > 3 ? arguments[3] : void 0,
         l = ex.A.getReactions(e.getChannelId(), e.id, t, 3, n),
         o = eb.A.getChannel(e.getChannelId()),
         a = null == o || o.isPrivate() ? null : o.getGuildId(),
         r = e.getReaction(t),
-        s = n === Y.v.BURST,
+        s = n === Y.v6.BURST,
         c = G()(Array.from(l?.values() ?? []))
             .reject((e) => eS.A.isBlockedOrIgnored(e.id))
             .take(3)
@@ -576,7 +576,7 @@ let e$ = l.memo(function (e) {
             type: w,
             showTooltipWhenReadOnly: D = !1,
         } = e,
-        B = w === Y.v.BURST,
+        B = w === Y.v6.BURST,
         H = (0, q.IN)(o, r, w),
         $ = T.getChannelId(),
         V = (0, k.g)(B && null != x ? x : []),
@@ -683,7 +683,7 @@ let e$ = l.memo(function (e) {
         ((eN.current = !0), clearTimeout(ek.current), ey(), ex.A.addChangeListener(ey));
     }, [ey]);
     function eM(e) {
-        let t = w === Y.v.BURST;
+        let t = w === Y.v6.BURST;
         (t && !Z && Q && (0, K.on)({ channelId: T.getChannelId(), messageId: T.id, emoji: I, key: eC.W.HOVER }),
             (eA.current = "focus" === e.type),
             clearTimeout(ek.current),

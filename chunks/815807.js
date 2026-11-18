@@ -14,7 +14,7 @@ n.d(
     {},
     {
         IN: function (e, t, n) {
-            return (n === r.v.BURST && !0 === t) || (n === r.v.NORMAL && !0 === e);
+            return (n === r.v6.BURST && !0 === t) || (n === r.v6.NORMAL && !0 === e);
         },
         b3: u,
         i6: function (e, t) {

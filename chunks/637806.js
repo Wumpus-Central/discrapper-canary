@@ -40,7 +40,7 @@ t(652215);
 var q = t(792996),
     H = t(784039);
 let z = "/assets/64a47ba893401c1c.svg",
-    B = y.v.VOTE;
+    B = y.v6.VOTE;
 function Q() {
     let e = (0, I.Ay)();
     return (0, s.jsxs)(d.pp, {
@@ -173,7 +173,7 @@ function F(e) {
                 a = (0, r.bG)(
                     [T.A],
                     () => {
-                        let e = T.A.getReactions(l, t, s.emoji, 100, y.v.VOTE);
+                        let e = T.A.getReactions(l, t, s.emoji, 100, y.v6.VOTE);
                         return Array.from(e?.values() ?? []);
                     },
                     [l, t, s.emoji],

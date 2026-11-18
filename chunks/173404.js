@@ -343,7 +343,7 @@ function eN(e) {
               burst_count: 0,
               me: !1,
               me_burst: !1,
-              type: W.v.NORMAL,
+              type: W.v6.NORMAL,
               emojiSize: "reaction",
               emojiSizeTooltip: "reaction",
           });
@@ -363,7 +363,7 @@ function eb(e) {
                   isLurking: i,
                   isPendingMember: r,
                   useChatFontScaling: !1,
-                  type: l.burst_count > 0 ? W.v.BURST : W.v.NORMAL,
+                  type: l.burst_count > 0 ? W.v6.BURST : W.v6.NORMAL,
                   emojiSize: "reaction",
                   emojiSizeTooltip: "reaction",
                   ...l,

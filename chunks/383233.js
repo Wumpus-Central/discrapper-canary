@@ -165,7 +165,7 @@ let _ = class extends c {
     addReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { colors: i = [], reactionType: r = l.v.NORMAL, isDMChannel: a = !1 } = n,
+            { colors: i = [], reactionType: r = l.v6.NORMAL, isDMChannel: a = !1 } = n,
             s = -1,
             d = this.reactions.map((n, d) => {
                 if ((0, o.i6)(n.emoji, e)) {
@@ -173,9 +173,9 @@ let _ = class extends c {
                         let e = n.count - !!n.me >= 1,
                             t = n.burst_count - !!n.me_burst >= 1,
                             i = (n.count_details?.vote ?? 0) - !!n.me_vote >= 1;
-                        if ((r === l.v.NORMAL && e) || (r === l.v.BURST && t) || (r === l.v.VOTE && i)) return n;
+                        if ((r === l.v6.NORMAL && e) || (r === l.v6.BURST && t) || (r === l.v6.VOTE && i)) return n;
                     }
-                    if (r === l.v.BURST) {
+                    if (r === l.v6.BURST) {
                         if (t && n.me_burst) return n;
                         let e = n.burst_count + 1,
                             r = null != n.burst_colors && n.burst_colors.length > 0 ? n.burst_colors : i;
@@ -186,7 +186,7 @@ let _ = class extends c {
                             count_details: { ...n.count_details, burst: e },
                             burst_colors: r,
                         };
-                    } else if (r === l.v.VOTE) {
+                    } else if (r === l.v6.VOTE) {
                         let e = n.count_details?.vote ?? 0,
                             i = t && n.me_vote ? e : e + 1;
                         n = { ...n, count_details: { ...n.count_details, vote: i }, me_vote: !!t || n.me_vote };
@@ -200,7 +200,7 @@ let _ = class extends c {
             });
         return (
             -1 === s &&
-                (r === l.v.BURST
+                (r === l.v6.BURST
                     ? d.push({
                           emoji: e,
                           me: !1,
@@ -210,7 +210,7 @@ let _ = class extends c {
                           burst_count: 1,
                           burst_colors: i,
                       })
-                    : r === l.v.VOTE
+                    : r === l.v6.VOTE
                       ? d.push({
                             emoji: e,
                             me: !1,
@@ -241,11 +241,11 @@ let _ = class extends c {
     }
     removeReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.v.NORMAL,
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.v6.NORMAL,
             i = -1,
             r = this.reactions.map((r, a) => {
                 if ((0, o.i6)(r.emoji, e)) {
-                    if (n === l.v.BURST) {
+                    if (n === l.v6.BURST) {
                         let e = t && !r.me_burst ? r.burst_count : r.burst_count - 1;
                         r = {
                             ...r,
@@ -253,7 +253,7 @@ let _ = class extends c {
                             me_burst: !t && r.me_burst,
                             count_details: { ...r.count_details, burst: e },
                         };
-                    } else if (n === l.v.VOTE) {
+                    } else if (n === l.v6.VOTE) {
                         let e = r.count_details?.vote ?? 0,
                             n = t && !r.me_vote ? e : e - 1;
                         r = { ...r, count_details: { ...r.count_details, vote: n }, me_vote: !t && r.me_vote };

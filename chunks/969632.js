@@ -35,7 +35,7 @@ n.d(
                 f = E?.count_details?.vote ?? 0,
                 I =
                     ((i = d.getChannelId()),
-                    (a = u.A.getReactions(i, d.id, { id: n, name: "", animated: !1 }, 3, o.v.VOTE)),
+                    (a = u.A.getReactions(i, d.id, { id: n, name: "", animated: !1 }, 3, o.v6.VOTE)),
                     (l = null == (s = c.A.getChannel(i)) || s.isPrivate() ? null : s.getGuildId()),
                     r()(Array.from(a?.values() ?? []))
                         .reject((e) => A.A.isBlockedOrIgnored(e.id))

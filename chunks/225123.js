@@ -1413,16 +1413,18 @@ function eQ(e) {
         eY({ type: "WEBHOOKS_UPDATE", guildId: e.guild_id, channelId: e.channel_id });
     }),
     eH(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
-        eY({
-            type: t,
-            channelId: e.channel_id,
-            messageId: e.message_id,
-            userId: e.user_id,
-            emoji: e.emoji,
-            colors: e.burst_colors,
-            reactionType: e.type,
-            messageAuthorId: e.message_author_id,
-        });
+        e.type === et.v6.SOUND ||
+            (et.H2.has(e.type) &&
+                eY({
+                    type: t,
+                    channelId: e.channel_id,
+                    messageId: e.message_id,
+                    userId: e.user_id,
+                    emoji: e.emoji,
+                    colors: e.burst_colors,
+                    reactionType: e.type,
+                    messageAuthorId: e.message_author_id,
+                }));
     }),
     eH(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
         eY({
@@ -1431,7 +1433,7 @@ function eQ(e) {
             messageId: e.message_id,
             userId: e.user_id,
             emoji: { id: e.answer_id, name: "" },
-            reactionType: et.v.VOTE,
+            reactionType: et.v6.VOTE,
         });
     }),
     eH(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
@@ -1439,7 +1441,7 @@ function eQ(e) {
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
-            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: et.v.VOTE })),
+            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: et.v6.VOTE })),
         });
     }),
     eH(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {

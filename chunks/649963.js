@@ -59,11 +59,11 @@ function N(e, t, n, i, r) {
         emoji: i,
         optimistic: !0,
         colors: r?.colors ?? [],
-        reactionType: r?.burst ? d.v.BURST : d.v.NORMAL,
+        reactionType: r?.burst ? d.v6.BURST : d.v6.NORMAL,
     });
 }
 function C(e) {
-    let { channelId: t, messageId: n, emoji: i, userId: r, useTypeEndpoint: a = !1, type: s = d.v.NORMAL } = e,
+    let { channelId: t, messageId: n, emoji: i, userId: r, useTypeEndpoint: a = !1, type: s = d.v6.NORMAL } = e,
         l = null != i.id ? `${i.name}:${i.id}` : i.name;
     return null == r
         ? m.Rsh.REACTIONS(t, n, l)
@@ -109,7 +109,7 @@ n.d(
                 await c.A.unarchiveThreadIfNecessary(t),
                 r.Bo.put({
                     url: C({ channelId: t, messageId: n, emoji: i, userId: "@me" }),
-                    query: { location: T, type: L ? d.v.BURST : d.v.NORMAL },
+                    query: { location: T, type: L ? d.v6.BURST : d.v6.NORMAL },
                     oldFormErrors: !0,
                     rejectWithError: (0, r.fT)(),
                 })
@@ -169,7 +169,7 @@ n.d(
             let t,
                 { channelId: n, messageId: i, emoji: a, limit: l, after: o, type: c } = e,
                 u =
-                    c === d.v.VOTE
+                    c === d.v6.VOTE
                         ? ((t = a.id ?? a.name), m.Rsh.POLL_ANSWER_VOTERS(n, i, t))
                         : C({ channelId: n, messageId: i, emoji: a }),
                 _ = await r.Bo.get({
@@ -178,7 +178,7 @@ n.d(
                     oldFormErrors: !0,
                     rejectWithError: (0, r.fT)(),
                 }),
-                E = c === d.v.VOTE ? _.body.users : _.body;
+                E = c === d.v6.VOTE ? _.body.users : _.body;
             return (
                 s.h.dispatch({
                     type: "MESSAGE_REACTION_ADD_USERS",
@@ -203,7 +203,7 @@ n.d(
                         messageId: i,
                         emoji: s,
                         userId: o ?? "@me",
-                        type: _ ? d.v.BURST : d.v.NORMAL,
+                        type: _ ? d.v6.BURST : d.v6.NORMAL,
                         useTypeEndpoint: !0,
                     }),
                     query: { location: l, burst: _ },

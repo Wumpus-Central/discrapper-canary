@@ -5614,7 +5614,7 @@ function rb(e) {
                                                       isLurking: v,
                                                       isPendingMember: N,
                                                       emoji: R,
-                                                      type: aJ.v.NORMAL,
+                                                      type: aJ.v6.NORMAL,
                                                       hideCount: !0,
                                                       count: 0,
                                                       me: !1,
@@ -6597,7 +6597,7 @@ function oA(e) {
                     function e(e) {
                         let { messageId: l, channelId: i, emoji: s, optimistic: a, reactionType: r } = e;
                         a ||
-                            r !== aJ.v.BURST ||
+                            r !== aJ.v6.BURST ||
                             !t ||
                             n ||
                             (0, t7.on)({ channelId: i, messageId: l, emoji: s, key: oo.W.EXTERNAL });

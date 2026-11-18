@@ -381,7 +381,7 @@ function e8(e) {
               burst_count: 0,
               me: !1,
               me_burst: !1,
-              type: e_.v.NORMAL,
+              type: e_.v6.NORMAL,
               emojiSize: "reaction",
               emojiSizeTooltip: "reaction",
           });

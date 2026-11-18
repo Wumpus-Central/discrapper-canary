@@ -9390,14 +9390,14 @@ function oG(e) {
                     messageId: l.id,
                     users: [oI],
                     emoji: e,
-                    reactionType: u9.v.NORMAL,
+                    reactionType: u9.v6.NORMAL,
                 }),
                     u7.h.dispatch({
                         type: "MESSAGE_REACTION_SET_FETCHED",
                         channelId: oN.id,
                         messageId: l.id,
                         emoji: e,
-                        reactionType: u9.v.NORMAL,
+                        reactionType: u9.v6.NORMAL,
                     }));
             }
             return (

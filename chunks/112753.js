@@ -121,7 +121,7 @@ let er = (e) => {
                         : (0, n.jsx)("span", { className: s, children: t.name })
                 );
             }, [t]),
-            h = o === w.v.BURST,
+            h = o === w.v6.BURST,
             g = h ? en.t.VmiNjd : en.t["cNfs1/"],
             f = en.intl.formatToPlainString(g, { name: u, n: s }),
             x = l.useMemo(() => {
@@ -229,7 +229,7 @@ function ed(e) {
                                 emoji: t,
                                 location: ee.qN.MESSAGE,
                                 userId: s.id,
-                                options: { burst: o === w.v.BURST },
+                                options: { burst: o === w.v6.BURST },
                             }),
                                 d?.());
                         },
@@ -303,7 +303,8 @@ class ec extends l.PureComponent {
             (0, n.jsxs)("div", {
                 className: el.Ro,
                 children: [
-                    i === w.v.BURST && (0, n.jsx)(er, { emoji: s.emoji, channelId: l.getChannelId(), messageId: l.id }),
+                    i === w.v6.BURST &&
+                        (0, n.jsx)(er, { emoji: s.emoji, channelId: l.getChannelId(), messageId: l.id }),
                     (0, n.jsx)(b.Ei, {
                         className: el.OV,
                         fade: !0,
@@ -325,7 +326,7 @@ let eu = c.Ay.connectStores([V.A], (e) => {
         l = V.A.getReactions(t.getChannelId(), t.id, s.emoji, 100, n);
     if (null == l) return { reactors: [], hasMore: !1 };
     let i = Array.from(l.values()),
-        a = (n === w.v.BURST ? s.burst_count : s.count) > i.length;
+        a = (n === w.v6.BURST ? s.burst_count : s.count) > i.length;
     return { reactors: i, hasMore: a };
 })(ec);
 s.d(
@@ -376,10 +377,10 @@ s.d(
                                     s.find((e) => {
                                         let t =
                                                 null != e.me_vote
-                                                    ? w.v.VOTE
+                                                    ? w.v6.VOTE
                                                     : e.burst_count > 0
-                                                      ? w.v.BURST
-                                                      : w.v.NORMAL,
+                                                      ? w.v6.BURST
+                                                      : w.v6.NORMAL,
                                             s = (0, et.i6)(e.emoji, n.emoji),
                                             l = t === n.reactionType;
                                         return s && l;
@@ -390,7 +391,7 @@ s.d(
                     );
                 })(
                     s,
-                    null != A ? { emoji: A.emoji, reactionType: A.burst_count > 0 ? w.v.BURST : w.v.NORMAL } : null,
+                    null != A ? { emoji: A.emoji, reactionType: A.burst_count > 0 ? w.v6.BURST : w.v6.NORMAL } : null,
                     j,
                 ),
                 b = l.useMemo(() => (null == f ? null : (p.find((e) => (0, et.i6)(e.emoji, f.emoji)) ?? null)), [p, f]),
@@ -430,10 +431,10 @@ s.d(
                                                 isSelected:
                                                     ((t = f),
                                                     (s = e),
-                                                    (l = i ? w.v.BURST : w.v.NORMAL),
+                                                    (l = i ? w.v6.BURST : w.v6.NORMAL),
                                                     o().isEqual(t.emoji, s.emoji) && t.reactionType === l),
                                                 setSelected: x,
-                                                reactionType: i ? w.v.BURST : w.v.NORMAL,
+                                                reactionType: i ? w.v6.BURST : w.v6.NORMAL,
                                                 emoji: e.emoji,
                                                 count: i ? e.burst_count : e.count,
                                                 colors:

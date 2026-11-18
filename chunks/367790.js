@@ -37,7 +37,7 @@ let _ = l.memo(function (e) {
                 type: j,
                 emojiSize: N,
             } = e,
-            y = j === u.v.BURST,
+            y = j === u.v6.BURST,
             b = (0, I.IN)(d, c, j),
             T = (0, f.g)(y && null != h ? h : []),
             S = l ? C : v,
@@ -83,7 +83,7 @@ let _ = l.memo(function (e) {
                     (0, i.jsx)(
                         h,
                         { ...s, ...e, emojiSize: "reaction" },
-                        `${e.type === u.v.BURST ? "burst:" : ""}${e.emoji.id ?? 0}:${e.emoji.name}`,
+                        `${e.type === u.v6.BURST ? "burst:" : ""}${e.emoji.id ?? 0}:${e.emoji.name}`,
                     ),
                 ),
             ],
@@ -182,8 +182,8 @@ let T = function (e) {
                 a = i.length;
             return (
                 l.forEach((t) => {
-                    (t.burst_count > 0 && e.push({ ...t, type: u.v.BURST }),
-                        t.count > 0 && e.push({ ...t, type: u.v.NORMAL }),
+                    (t.burst_count > 0 && e.push({ ...t, type: u.v6.BURST }),
+                        t.count > 0 && e.push({ ...t, type: u.v6.NORMAL }),
                         null != t.me_vote && --a);
                 }),
                 { combinedReactions: e, visibleReactionsCount: a, remainingReactions: r }

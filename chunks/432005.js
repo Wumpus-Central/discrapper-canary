@@ -1,4 +1,4 @@
-(n.d(t, { ei: () => v, rh: () => C, ec: () => P, IU: () => R, SP: () => O }), n(938796));
+(n.d(t, { ei: () => P, rh: () => C, ec: () => M, IU: () => R, SP: () => O }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(486889),
@@ -66,12 +66,12 @@ function C(e) {
         O = e.gifting_prompt,
         R = null != e.interaction ? u.createFromServer(e.interaction) : null,
         y = e.type === g.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
-        v = e.content;
+        D = e.content;
     return (
         e.type === g.lAJ.PREMIUM_REFERRAL &&
-            ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (v = "")),
+            ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (D = "")),
         e.type === g.lAJ.PREMIUM_GROUP_INVITE &&
-            ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (v = "")),
+            ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (D = "")),
         new _.Ay({
             ...e,
             ...null,
@@ -94,12 +94,12 @@ function C(e) {
                 mentionRoles: o,
             }),
             giftCodes: (0, I.pF)(e) ? (0, I.e7)(e?.embeds[0].url) : (0, I.e7)(e.content),
-            content: v,
+            content: D,
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
             call: L(e.call, a.timestamp),
-            messageSnapshots: b(e),
-            reactions: D(i ?? e.reactions, e.poll),
+            messageSnapshots: v(e),
+            reactions: b(i ?? e.reactions, e.poll),
             interaction: R,
             interactionData: r ?? e.interaction_data,
             interactionMetadata: e.interaction_metadata,
@@ -129,13 +129,13 @@ function R(e, t) {
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
         null != t.embeds && (n = n.set("embeds", y(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", b(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", v(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new c.A(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
         null != t.components && (n = n.set("components", (0, s.ZV)(t.components))),
         null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)),
-        null != t.reactions && (n = n.set("reactions", D(e.reactions ?? t.reactions))),
+        null != t.reactions && (n = n.set("reactions", b(e.reactions ?? t.reactions))),
         null != t.poll && (n = n.set("poll", l(t.poll))),
         null != t.mentions &&
             ((n = n.set(
@@ -162,7 +162,11 @@ function y(e) {
     let t = e.embeds.map((t) => (0, h.fK)(e.channel_id, e.id, t));
     return (0, h.nh)(t);
 }
-function D(e, t) {
+function D(e) {
+    let t = e.count_details;
+    return null == t || null != t.vote || (t.normal ?? 0) + (t.burst ?? 0) > 0;
+}
+function b(e, t) {
     if (null == e && t?.results == null) return [];
     let n = t?.results?.answer_counts.map((e) => ({
         count_details: { vote: e.count },
@@ -173,7 +177,7 @@ function D(e, t) {
         count: e.count,
         burst_count: 0,
     }));
-    return [...(e ?? []), ...(n ?? [])].map((e) => {
+    return [...(e ?? []).filter(D), ...(n ?? [])].map((e) => {
         let t = { ...e };
         return (
             t?.count_details != null &&
@@ -184,7 +188,7 @@ function D(e, t) {
         );
     });
 }
-function b(e) {
+function v(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
@@ -192,9 +196,9 @@ function b(e) {
               return new _.vF({ message: N(t), moderator_report: n });
           });
 }
-function v(e) {
+function P(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
-function P(e) {
+function M(e) {
     return e.hasFlag(g.pr7.EPHEMERAL) && e.type !== g.lAJ.IN_GAME_MESSAGE_NUX;
 }
