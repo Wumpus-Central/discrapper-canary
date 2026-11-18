@@ -252,7 +252,7 @@ function en(e) {
 function ei(e) {
     let { linkedUsers: t } = e;
     if (null == t) return !1;
-    k(t);
+    k(t.map((e) => ({ ...e, teen_requires_parental_consent: _[e.user_id]?.teen_requires_parental_consent ?? !1 })));
 }
 function er(e) {
     let { countryCode: t } = e;
