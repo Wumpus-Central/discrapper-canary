@@ -18,7 +18,7 @@ n.d(
                 case "friends":
                     return ((0, l.l7)(e), !0);
                 case "popout":
-                    return ((0, r.N2)("NEW_TAB_POPOUT"), !0);
+                    return ((0, r.WU)("NEW_TAB_POPOUT", "", { isTabPicker: !0 }), !0);
             }
         },
     },

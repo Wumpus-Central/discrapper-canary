@@ -37,6 +37,21 @@ n.d(
             let { guildId: c, channelId: E } = d.params;
             return { kind: "channel", channelId: E, guildId: c === s.ME ? null : c };
         },
+        nd: function (e) {
+            let t = e.split(/[?#]/)[0];
+            switch (t) {
+                case s.BVt.FRIENDS:
+                    return "friends";
+                case s.BVt.COLLECTIBLES_SHOP:
+                    return "shop";
+                case s.BVt.QUEST_HOME:
+                    return "quests";
+                case s.BVt.APPLICATION_STORE:
+                    return "nitro";
+                default:
+                    return null != (0, a.B)(t, { path: c, exact: !0 }) ? "conjure" : "other";
+            }
+        },
         rv: _,
     },
 );

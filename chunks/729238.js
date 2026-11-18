@@ -18,7 +18,9 @@ class l extends i.A {
     handleChannelSelect() {
         let e = a.A.getActiveTab(),
             t = null != e && this.knownTabs.length > 0 && !this.knownTabs.some((t) => t.id === e.id);
-        (this.rememberTabs(), null != e && t && (0, r.FP)(e, "page_navigation", !0, !0), this.handleUnpinnedAtLimit());
+        (this.rememberTabs(),
+            null != e && t && (0, r.FP)(e, { method: "page_navigation", isNewTab: !0, focused: !0 }),
+            this.handleUnpinnedAtLimit());
     }
     handleNavigateRoute() {
         (this.rememberTabs(), this.handleUnpinnedAtLimit());
@@ -27,11 +29,11 @@ class l extends i.A {
         let e = a.A.getTabUnpinnedAtLimit();
         null != e && ((0, s.l)(), (0, r.bi)(e, "tab_limit"));
     }
-    handlePostConnectionOpen = () => {
+    handlePostConnectionOpen() {
         this.rememberTabs();
         let e = a.A.getActiveTab();
-        null != e && a.A.isEnabled() && (0, r.FP)(e, "app_start", !1, !0);
-    };
+        null != e && a.A.isEnabled() && (0, r.FP)(e, { method: "app_start", isNewTab: !1, focused: !0 });
+    }
 }
 let o = new l();
 n.d(t, {}, { A: o });
