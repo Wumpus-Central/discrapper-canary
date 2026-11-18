@@ -290,6 +290,7 @@
     gap: var(--space-8);
     height: var(--custom-app-top-bar-height);
     min-width: 0;
+    padding-inline-end: var(--space-40);
     position: relative;
     -webkit-app-region: drag
 }
@@ -305,4 +306,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=a489eafa436caf88.css.map*/
+/*# sourceMappingURL=52bc814e64bbafc0.css.map*/
