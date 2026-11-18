@@ -4,15 +4,15 @@ var l = n(477900),
     r = n(284009),
     a = n.n(r),
     s = n(391048),
-    o = n(136857),
-    u = n(688810),
-    c = n(669815),
-    d = n(11939),
-    m = n(158317),
-    p = n(313125),
-    C = n(418200),
-    h = n(158032),
-    f = n(830382),
+    o = n(830382),
+    u = n(136857),
+    c = n(688810),
+    d = n(669815),
+    m = n(11939),
+    p = n(158317),
+    C = n(313125),
+    h = n(418200),
+    f = n(158032),
     E = n(191115),
     S = n(448645),
     I = n(652215),
@@ -202,7 +202,7 @@ function Q(e) {
             soundEffect: eD,
             giftRecipient: eU,
             selectedGiftingPromotionRewards: eG,
-        } = (0, C.Pv)(),
+        } = (0, h.Pv)(),
         eF = (0, v.Mq)(eR),
         eB = (0, N.lo)(eU),
         eH = {};
@@ -216,9 +216,9 @@ function Q(e) {
             (eH.emoji_name = ew?.id == null ? ew?.surrogates : void 0),
             (eH.sound_id = eD?.soundId)));
     let eW = eR?.id,
-        { analyticsLocations: eV } = (0, u.Ay)(),
+        { analyticsLocations: eV } = (0, c.Ay)(),
         eY = (0, P.W)(ej, ec),
-        { giftCardBalance: eK, giftCardCurrency: eZ } = (0, d.h)(),
+        { giftCardBalance: eK, giftCardCurrency: eZ } = (0, m.h)(),
         { balance: eq } = (0, _.W0)(),
         [ez, e$] = i.useState(!1),
         [eQ, eJ] = i.useState(!1),
@@ -274,7 +274,7 @@ function Q(e) {
             [eo, ed, n, eb, eY, eK, eZ, el, eq],
         ),
         e7 = i.useCallback((e) => q(eN, e), [eN]),
-        { signOrder: e6, reportError: e8 } = (0, p.f)({
+        { signOrder: e6, reportError: e8 } = (0, C.f)({
             order: eg,
             errorSource: "checkout_sign_order",
             onSignFailure: e7,
@@ -285,7 +285,7 @@ function Q(e) {
         e5 = i.useCallback(
             (e) =>
                 e.customerActionCancelled
-                    ? ((0, c.fE)(), eo(A.h.WAITING), { shouldReturnEarly: !0 })
+                    ? ((0, d.fE)(), eo(A.h.WAITING), { shouldReturnEarly: !0 })
                     : e.redirectConfirmation || e.pendingCustomerAction
                       ? (eJ(null != e.redirectURL), { shouldReturnEarly: !0 })
                       : (eo(A.h.COMPLETED), { shouldReturnEarly: !1 }),
@@ -347,20 +347,31 @@ function Q(e) {
                                                           !n() || null != K(e.getState(), t))
                                                       )
                                                           return;
-                                                      let i = await (0, m.r$)(t.id);
+                                                      let i = await (0, p.r$)(t.id);
                                                       null != i && n() && q(e, i);
                                                   }
                                               })(eN, e, () => eX.current));
                                           let t = await V(eN, (t) => K(t, e));
                                           return t.status !== Y.Re.SIGNED
-                                              ? (e4(new o.Ay(z.intl.string(z.t.khEaRI))), null)
+                                              ? (e4(new u.Ay(z.intl.string(z.t.khEaRI))), null)
                                               : t;
                                       })(t.order);
                             if (null != n)
                                 try {
-                                    let e = await (0, m.Vw)(n.id);
-                                    if (!eX.current) return;
-                                    if (0 === e.length) throw new m.j2();
+                                    let e = await (0, p.Vw)(n.id);
+                                    if (
+                                        (e.length > 0 &&
+                                            null != en &&
+                                            (0, o.mF)({
+                                                skuId: en,
+                                                entitlements: e,
+                                                libraryApplications: [],
+                                                loadId: eu.loadId,
+                                            }),
+                                        !eX.current)
+                                    )
+                                        return;
+                                    if (0 === e.length) throw new p.j2();
                                     (eo(A.h.COMPLETED), te(null, e));
                                 } catch (e) {
                                     e8(e, { orderId: n.id, loadId: eu.loadId });
@@ -384,12 +395,12 @@ function Q(e) {
                 onPurchaseFinalize: i,
                 hasRedirectURL: r,
                 isGift: s,
-                analyticsLocation: o,
-                analyticsLocations: u,
-                subscriptionPlan: d,
-                planGroup: m,
-                trialId: p,
-                priceOptions: C,
+                analyticsLocation: u,
+                analyticsLocations: c,
+                subscriptionPlan: m,
+                planGroup: p,
+                trialId: C,
+                priceOptions: h,
                 paymentSource: y,
                 openInvoiceId: A,
                 premiumSubscription: P,
@@ -413,7 +424,7 @@ function Q(e) {
                 if (T === I.VVm.ONE_TIME)
                     (a()(null != _, "SKU must exist and be fetched."),
                         a()(null != R, "invoicePreview must exist."),
-                        (e = await (0, f.XU)(_.applicationId, _.id, {
+                        (e = await (0, o.XU)(_.applicationId, _.id, {
                             expectedAmount: R.total,
                             expectedCurrency: R.currency,
                             isGift: s,
@@ -426,23 +437,23 @@ function Q(e) {
                         })));
                 else {
                     let t;
-                    (a()(null != d, "Missing subscriptionPlan"), a()(null != R, "Missing invoicePreview"));
+                    (a()(null != m, "Missing subscriptionPlan"), a()(null != R, "Missing invoicePreview"));
                     let n = { amount: R.total, currency: R.currency };
                     if (null != L)
                         (a()(null != O, "Missing renewalInvoicePreview"),
                             (t = { amount: O.subtotal, currency: O.currency }));
                     else {
-                        let e = (0, S.l6)(C, R.checkoutContext?.available_plans);
-                        if (((t = (0, S.$Q)((0, S.y8)(d.id, !1, !1, e))), null != P)) {
-                            let e = C.currency ?? R.currency,
-                                n = (0, S.Pg)(P, d.id, 1, new Set(m));
-                            ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), C.paymentSourceId)));
+                        let e = (0, S.l6)(h, R.checkoutContext?.available_plans);
+                        if (((t = (0, S.$Q)((0, S.y8)(m.id, !1, !1, e))), null != P)) {
+                            let e = h.currency ?? R.currency,
+                                n = (0, S.Pg)(P, m.id, 1, new Set(p));
+                            ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), h.paymentSourceId)));
                         }
                     }
                     if (null != L)
-                        e = await (0, h.B1)({
+                        e = await (0, f.B1)({
                             planId: L,
-                            currency: C.currency ?? R.currency,
+                            currency: h.currency ?? R.currency,
                             paymentSource: y,
                             loadId: N,
                             giftInfoOptions: j,
@@ -452,11 +463,11 @@ function Q(e) {
                     else if (s) {
                         let t = R.total,
                             n = R.currency;
-                        e = await (0, f.XU)(g.tv, d.skuId, {
+                        e = await (0, o.XU)(g.tv, m.skuId, {
                             expectedAmount: t,
                             expectedCurrency: n,
                             paymentSource: y,
-                            subscriptionPlanId: d.id,
+                            subscriptionPlanId: m.id,
                             isGift: !0,
                             loadId: N,
                             giftInfoOptions: j,
@@ -465,22 +476,22 @@ function Q(e) {
                             expectedPaymentLegs: D,
                         });
                     } else if (null != y && null != P && P.status === I.Dmq.PAST_DUE && null != A) {
-                        let l = C.currency ?? R.currency;
+                        let l = h.currency ?? R.currency;
                         e = I.AD1.has(y.type)
-                            ? await (0, c.LD)(P, A, y, l, N)
-                            : await (0, c.nV)(P, { paymentSource: y, currency: l }, n, t, u, o, N);
+                            ? await (0, d.LD)(P, A, y, l, N)
+                            : await (0, d.nV)(P, { paymentSource: y, currency: l }, n, t, c, u, N);
                     } else if (null != P) {
-                        let l = (0, S.Pg)(P, d.id, 1, new Set(m)),
-                            i = { paymentSource: y, currency: C.currency ?? R.currency };
+                        let l = (0, S.Pg)(P, m.id, 1, new Set(p)),
+                            i = { paymentSource: y, currency: h.currency ?? R.currency };
                         (P.status === I.Dmq.PAUSED && (i.status = I.Dmq.ACTIVE),
                             P.isPausedAllowsResumeButNotUpdates || (i.items = l),
-                            (e = await (0, c.nV)(P, i, n, t, u, o, N)));
+                            (e = await (0, d.nV)(P, i, n, t, c, u, N)));
                     } else
-                        e = await (0, h.B1)({
-                            planId: d.id,
-                            currency: C.currency ?? R.currency,
+                        e = await (0, f.B1)({
+                            planId: m.id,
+                            currency: h.currency ?? R.currency,
                             paymentSource: y,
-                            trialId: p,
+                            trialId: C,
                             metadata: x,
                             referralCode: b,
                             loadId: N,

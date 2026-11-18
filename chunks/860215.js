@@ -60,17 +60,17 @@ function I(e) {
                 } = e,
                 y = d.useConfig({ location: "payment_modal" }).enabled,
                 E = i === m.kM.VIRTUAL_CURRENCY,
-                _ = null != a && C.has(a);
-            t = !!E || (!!_ && !0 !== s && y);
-            let g = null != n ? n[0] : void 0,
-                [S, I] = (0, r.useState)(null),
-                [A, P] = (0, r.useState)(null),
-                [x, v] = (0, r.useState)(E),
-                R = (0, r.useRef)(!1),
-                T = (0, r.useCallback)(
+                _ = null != a && C.has(a),
+                g = (t = !!E || (!!_ && !0 !== s && y)),
+                S = null != n ? n[0] : void 0,
+                [I, A] = (0, r.useState)(null),
+                [P, x] = (0, r.useState)(null),
+                [v, R] = (0, r.useState)(g),
+                T = (0, r.useRef)(!1),
+                M = (0, r.useCallback)(
                     async (e) => {
                         let { skuId: t } = e;
-                        v(!0);
+                        R(!0);
                         try {
                             let e = null != l && (0, c.Fs)(l),
                                 n = await (0, o.fS)({
@@ -80,7 +80,7 @@ function I(e) {
                                     testMode: e,
                                     promotionIdOverride: h.A.getPromotionIdOverride(),
                                 });
-                            (I(n), null != f && f(n));
+                            (A(n), null != f && f(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, p.gr)(n) ||
@@ -88,22 +88,22 @@ function I(e) {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(i), loadId: u },
                                 }),
-                                P(e));
+                                x(e));
                         } finally {
-                            v(!1);
+                            R(!1);
                         }
                     },
                     [l, i, u, f],
                 );
             return (
                 (0, r.useEffect)(() => {
-                    t && null != g && (null != S || null != A || R.current || ((R.current = !0), T({ skuId: g })));
-                }, [g, t, S, T, A]),
+                    t && null != S && (null != I || null != P || T.current || ((T.current = !0), M({ skuId: S })));
+                }, [S, t, I, M, P]),
                 {
-                    order: S,
-                    isCreateOrderLoading: x,
-                    createOrderError: A,
-                    shouldBlockOnOrderCreation: E,
+                    order: I,
+                    isCreateOrderLoading: v,
+                    createOrderError: P,
+                    shouldBlockOnOrderCreation: g,
                     isOrderCreationEnabled: t,
                 }
             );

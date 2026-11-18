@@ -799,18 +799,14 @@ function ev(e) {
                     }),
                 })
             );
-        }),
-        k = r.useRef(null != o);
-    (r.useEffect(() => {
-        k.current || null == o || (L.getState().setOrder(o), (k.current = !0));
-    }, [o, L]),
-        r.useEffect(() => {
-            L.getState().setCheckoutInitParameters(i);
-        }, [L, i]));
-    let N = ((t = i.purchaseType), null != (n = i.unifiedCheckoutFlow) && t === em.VVm.SUBSCRIPTION && ex.includes(n)),
-        j = i.unifiedCheckoutFlow === m.C.GUILD_ROLE_CHECKOUT,
-        U = i.purchaseType === em.VVm.ONE_TIME && i.unifiedCheckoutFlow !== m.C.ORB_CHECKOUT,
-        w = !y && U;
+        });
+    r.useEffect(() => {
+        L.getState().setCheckoutInitParameters(i);
+    }, [L, i]);
+    let k = ((t = i.purchaseType), null != (n = i.unifiedCheckoutFlow) && t === em.VVm.SUBSCRIPTION && ex.includes(n)),
+        N = i.unifiedCheckoutFlow === m.C.GUILD_ROLE_CHECKOUT,
+        j = i.purchaseType === em.VVm.ONE_TIME && i.unifiedCheckoutFlow !== m.C.ORB_CHECKOUT,
+        U = !y && j;
     return (0, l.jsxs)(d.Ni, {
         value: L,
         children: [
@@ -834,10 +830,10 @@ function ev(e) {
                 paymentSources: M,
                 initialPaymentSourceId: i.sharedCheckoutParams.initialPaymentSourceId,
             }),
-            N && (0, l.jsx)(z, {}),
-            j && (0, l.jsx)(T, {}),
-            U && (0, l.jsx)(B, {}),
-            w && (0, l.jsx)(F, {}),
+            k && (0, l.jsx)(z, {}),
+            N && (0, l.jsx)(T, {}),
+            j && (0, l.jsx)(B, {}),
+            U && (0, l.jsx)(F, {}),
             c,
         ],
     });
