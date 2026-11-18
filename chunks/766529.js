@@ -755,7 +755,7 @@ function eW(e) {
                             n.e(216112),
                             n.e(498167),
                             n.e(553829),
-                            n.e(508233),
+                            n.e(619023),
                             n.e(865257),
                             n.e(228767),
                             n.e(323079),
@@ -769,6 +769,7 @@ function eW(e) {
                             n.e(918024),
                             n.e(124060),
                             n.e(146566),
+                            n.e(538887),
                             n.e(32661),
                             n.e(696123),
                             n.e(124006),
@@ -779,7 +780,6 @@ function eW(e) {
                             n.e(480436),
                             n.e(875842),
                             n.e(858337),
-                            n.e(97210),
                             n.e(820683),
                             n.e(781202),
                             n.e(757598),
@@ -811,8 +811,8 @@ function eW(e) {
                             n.e(626750),
                             n.e(689160),
                             n.e(520342),
-                            n.e(305744),
-                        ]).then(n.bind(n, 34515));
+                            n.e(496550),
+                        ]).then(n.bind(n, 541381));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 ...t,
@@ -945,7 +945,7 @@ function e2(e) {
         { extraChromeEnabled: n } = ez.A.useConfig({ location: "browse_games_popout" });
     return (0, l.jsx)(eB.X2, { maxVisibleItems: 7, renderListItem: n ? t : void 0 });
 }
-function e9(e) {
+function e8(e) {
     let { widgetType: t, widget: n, onAddGame: i, children: a, ...s } = e,
         r = d.useMemo(() => new Set(n.games.map((e) => e.gameId)), [n.games]),
         { trackUserProfileEditAction: o } = (0, v.NJ)(),
@@ -1084,10 +1084,10 @@ function e9(e) {
         children: (e) => a(e),
     });
 }
-function e8(e) {
+function e9(e) {
     let { disabled: t, ...n } = e,
         i = d.useRef(null);
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e8, {
         targetElementRef: i,
         position: "bottom",
         align: "center",
@@ -1111,7 +1111,7 @@ function e8(e) {
 }
 function e6(e) {
     let t = d.useRef(null);
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e8, {
         targetElementRef: t,
         position: "right",
         align: "top",
@@ -1555,7 +1555,7 @@ function tP(e) {
             u && !h
                 ? [
                       (0, l.jsx)(
-                          e8,
+                          e9,
                           { disabled: f, widgetType: t.type, widget: t, onAddGame: () => r(!0) },
                           `${t.type}-browse-games-popout`,
                       ),

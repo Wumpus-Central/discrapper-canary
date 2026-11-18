@@ -51,13 +51,13 @@
 }
 
 .railBottom_ncTrRG {
-    padding-bottom: var(--space-16)
+    flex-shrink: 0;
+    padding-bottom: var(--space-16);
+    width: 40px
 }
 
-.railBottom_ncTrRG,
-.railItem_ncTrRG {
-    flex-shrink: 0;
-    width: 40px
+.railTop_ncTrRG+.railBottom_ncTrRG {
+    margin-top: var(--space-4)
 }
 
 .railItem_ncTrRG {
@@ -66,9 +66,11 @@
     color: var(--text-muted);
     cursor: pointer;
     display: flex;
+    flex-shrink: 0;
     height: 40px;
     justify-content: center;
-    position: relative
+    position: relative;
+    width: 40px
 }
 
 .railItem_ncTrRG:hover {
@@ -129,6 +131,7 @@
     inset-inline: 0;
     justify-content: space-between;
     padding: 0 var(--space-24);
+    padding-inline-end: calc((var(--custom-clips-header-height) - 32px)/2);
     position: absolute;
     top: 0;
     z-index: 2
@@ -256,4 +259,4 @@
     transform: translateX(0)
 }
 
-/*# sourceMappingURL=aef5ec76164860f0.css.map*/
+/*# sourceMappingURL=0c9483d86d1b6039.css.map*/

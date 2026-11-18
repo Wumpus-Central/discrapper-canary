@@ -1,1 +1,1 @@
-o.exports = { O: "group_DY30Hz", m: "segment_DY30Hz" };
+o.exports = { Os: "group_DY30Hz", mX: "segment_DY30Hz", yF: "divider_DY30Hz" };

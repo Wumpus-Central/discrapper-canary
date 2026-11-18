@@ -1,3 +1,26 @@
+.valueProp_o9pNcU,
+.valueProps_o9pNcU {
+    display: flex;
+    gap: var(--space-16)
+}
+
+.valueProp_o9pNcU {
+    background: var(--background-mod-muted);
+    border-radius: var(--radius-lg);
+    color: var(--icon-default);
+    flex: 1 1 0;
+    flex-direction: column;
+    min-width: 0;
+    padding: var(--space-16);
+    text-align: start
+}
+
+.valuePropText_o9pNcU {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
 .container_qIIk0K {
     align-items: center;
     box-sizing: border-box;
@@ -23,38 +46,13 @@
     margin-top: var(--space-12)
 }
 
-.keybindHintKeys_qIIk0K {
-    display: inline-block
+.valueProps_qIIk0K {
+    width: min(833px, 100%)
 }
 
-.keybindShortcut_qIIk0K {
-    height: 20px
-}
-
-.cards_qIIk0K {
-    display: grid;
-    gap: var(--space-16);
-    grid-template-columns: repeat(3, 190px)
-}
-
-.cards_qIIk0K,
-.disabledActions_qIIk0K {
+.disabledActions_qIIk0K,
+.valueProps_qIIk0K {
     margin-top: var(--space-32)
-}
-
-.card_qIIk0K {
-    align-items: center;
-    background-color: var(--background-mod-muted);
-    border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    justify-content: center;
-    padding: var(--space-20)
-}
-
-.changeKeybindButton_qIIk0K {
-    margin-top: var(--space-10)
 }
 
 .clipThumbContainer_HCfNho {
@@ -511,4 +509,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=508233.4416390b413500f1.css.map*/
+/*# sourceMappingURL=619023.3d8ff76f869dcca2.css.map*/

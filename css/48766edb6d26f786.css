@@ -1,16 +1,16 @@
 .group_DY30Hz {
-    background-color: var(--background-base-lowest);
+    background-color: var(--input-background-default);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     flex-shrink: 0;
-    gap: var(--space-4);
     padding: var(--space-4)
 }
 
 .group_DY30Hz,
 .segment_DY30Hz {
     align-items: center;
-    display: flex
+    display: flex;
+    gap: var(--space-4)
 }
 
 .segment_DY30Hz {
@@ -20,31 +20,34 @@
     background: none;
     border: none;
     border-radius: var(--radius-sm);
-    color: var(--interactive-text-default);
+    box-sizing: border-box;
+    color: var(--interactive-icon-default);
     cursor: pointer;
-    gap: var(--space-6);
-    padding: var(--space-6) var(--space-8);
+    height: 32px;
+    justify-content: center;
+    min-width: 32px;
+    padding: 0 var(--space-8);
     position: relative;
     white-space: nowrap
 }
 
 .segment_DY30Hz:hover:not([aria-checked=true]) {
     background-color: var(--background-mod-subtle);
-    color: var(--interactive-text-hover)
+    color: var(--interactive-icon-hover)
 }
 
 .segment_DY30Hz[aria-checked=true] {
-    background-color: var(--background-surface-high);
-    color: var(--interactive-text-active);
-    cursor: default
+    background-color: var(--background-mod-normal);
+    box-shadow: inset 0 0 0 1px var(--border-muted), var(--shadow-medium);
+    color: var(--text-strong);
+    cursor: default;
+    padding-inline: var(--space-12)
 }
 
-.segment_DY30Hz:not([aria-checked=true])+.segment_DY30Hz:not([aria-checked=true]):before {
-    background-color: var(--border-subtle);
-    content: "";
-    inset-block: var(--space-8);
-    inset-inline-start: calc(var(--space-4)/-2 - .5px);
-    position: absolute;
+.divider_DY30Hz {
+    background-color: var(--border-normal);
+    flex-shrink: 0;
+    height: 20px;
     width: 1px
 }
 
@@ -261,4 +264,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=910ec9e5b8a5f1f0.css.map*/
+/*# sourceMappingURL=48766edb6d26f786.css.map*/

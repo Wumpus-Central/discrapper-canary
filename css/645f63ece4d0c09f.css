@@ -450,11 +450,20 @@
 .videoCard_MIigO5 {
     aspect-ratio: 16/9;
     background: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-sizing: border-box;
     overflow: hidden;
     position: relative
+}
+
+.traitCard_MIigO5:after,
+.videoCard_MIigO5:after {
+    border: 1px solid var(--border-subtle);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute
 }
 
 .videoPoster_MIigO5 {
@@ -500,7 +509,6 @@
     background-image: url("https://cdn.discordapp.com/assets/content/6cc055e03471551fd9f2adb7929f6dbfb04ef4acd6923662ab7797742136dd2d.webp");
     background-position: 50%;
     background-size: cover;
-    border-style: dashed;
     color: var(--text-muted)
 }
 
@@ -515,9 +523,9 @@
 
 .traitIcon_MIigO5 {
     display: flex;
-    inset-inline-start: calc(var(--space-12) - 1px);
+    inset-inline-start: var(--space-12);
     position: absolute;
-    top: calc(var(--space-12) - 1px)
+    top: var(--space-12)
 }
 
 .avatarPile_MIigO5,
@@ -551,19 +559,6 @@
 
 .traitMeta_MIigO5 {
     gap: var(--space-8)
-}
-
-.traitTag_MIigO5 {
-    align-items: center;
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    color: var(--text-overlay-light);
-    display: flex;
-    gap: var(--space-4);
-    height: 24px;
-    padding-inline: var(--space-8)
 }
 
 .avatar_MIigO5 {
@@ -607,13 +602,44 @@
     width: min(620px, 100%)
 }
 
-.radial_MIigO5 {
-    --custom-radial-radius: 3740px;
-    --custom-radial-near: 4.2deg;
-    --custom-radial-far: 12.1deg;
+.orbitClip_MIigO5 {
     inset: 0;
+    overflow: hidden;
     pointer-events: none;
     position: absolute
+}
+
+.orbitBand_MIigO5 {
+    --custom-orbit-band-height: 800px;
+    --custom-orbit-band-lead: 160px;
+    --custom-orbit-edge-fade: var(--space-80);
+    --custom-orbit-edge-tilt: 8deg;
+    --custom-orbit-edge-start: calc(var(--custom-orbit-band-height)/2*sin(var(--custom-orbit-edge-tilt)));
+    --custom-orbit-edge-end: calc(var(--custom-orbit-edge-start) + var(--custom-orbit-edge-fade)*cos(var(--custom-orbit-edge-tilt)));
+    height: var(--custom-orbit-band-height);
+    -webkit-mask-composite: source-in, xor;
+    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(calc(90deg - var(--custom-orbit-edge-tilt)), transparent var(--custom-orbit-edge-start), var(--background-base-lowest) var(--custom-orbit-edge-end)), linear-gradient(calc(270deg + var(--custom-orbit-edge-tilt)), transparent var(--custom-orbit-edge-start), var(--background-base-lowest) var(--custom-orbit-edge-end));
+    mask-image: linear-gradient(calc(90deg - var(--custom-orbit-edge-tilt)), transparent var(--custom-orbit-edge-start), var(--background-base-lowest) var(--custom-orbit-edge-end)), linear-gradient(calc(270deg + var(--custom-orbit-edge-tilt)), transparent var(--custom-orbit-edge-start), var(--background-base-lowest) var(--custom-orbit-edge-end));
+    top: calc(var(--custom-clips-header-height) + var(--space-64) - var(--custom-orbit-band-lead));
+    transform: translateY(calc(var(--custom-clips-home-scroll-top, 0px)*-1))
+}
+
+.orbitBand_MIigO5,
+.orbitStage_MIigO5 {
+    inset-inline: 0;
+    position: absolute
+}
+
+.orbitStage_MIigO5 {
+    --custom-radial-radius: 3740px;
+    --custom-orbit-step: 7.9deg;
+    --custom-orbit-count: 6;
+    --custom-orbit-duration: 90s;
+    aspect-ratio: 16/9;
+    margin-inline: auto;
+    top: var(--custom-orbit-band-lead);
+    width: min(620px, 100% - 2 * var(--space-24))
 }
 
 .radialCard_MIigO5 {
@@ -621,25 +647,58 @@
     inset-inline-start: calc(50% - 232px);
     opacity: .5;
     position: absolute;
-    top: calc(50% - 142px);
+    top: calc(50% - 142px + var(--space-8));
+    transform: rotate(calc(var(--custom-orbit-step)*(var(--custom-orbit-count)/2 - var(--custom-orbit-index) - .5)));
     transform-origin: 50% calc(50% + var(--custom-radial-radius));
     width: 464px
 }
 
-.radialFarLeft_MIigO5 {
-    transform: rotate(calc(var(--custom-radial-far)*-1))
+.full-motion .radialCard_MIigO5 {
+    animation: orbit_MIigO5 var(--custom-orbit-duration) linear infinite;
+    animation-delay: calc(var(--custom-orbit-duration)*(var(--custom-orbit-index) + .5)/var(--custom-orbit-count)*-1);
+    opacity: 0;
+    will-change: transform, opacity
 }
 
-.radialLeft_MIigO5 {
-    transform: rotate(calc(var(--custom-radial-near)*-1))
+.orbit0_MIigO5 {
+    --custom-orbit-index: 0
 }
 
-.radialRight_MIigO5 {
-    transform: rotate(var(--custom-radial-near))
+.orbit1_MIigO5 {
+    --custom-orbit-index: 1
 }
 
-.radialFarRight_MIigO5 {
-    transform: rotate(var(--custom-radial-far))
+.orbit2_MIigO5 {
+    --custom-orbit-index: 2
+}
+
+.orbit3_MIigO5 {
+    --custom-orbit-index: 3
+}
+
+.orbit4_MIigO5 {
+    --custom-orbit-index: 4
+}
+
+.orbit5_MIigO5 {
+    --custom-orbit-index: 5
+}
+
+@keyframes orbit_MIigO5 {
+    0% {
+        opacity: 0;
+        transform: rotate(calc(var(--custom-orbit-step)*var(--custom-orbit-count)/2))
+    }
+
+    15%,
+    85% {
+        opacity: .5
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(calc(var(--custom-orbit-step)*var(--custom-orbit-count)/-2))
+    }
 }
 
 .emptyInfo_MIigO5 {
@@ -650,31 +709,9 @@
     text-align: center
 }
 
-.valueProps_MIigO5 {
+.emptyValueProps_MIigO5 {
     margin-top: var(--space-80);
     width: min(833px, 100%)
-}
-
-.valueProp_MIigO5,
-.valueProps_MIigO5 {
-    display: flex;
-    gap: var(--space-16)
-}
-
-.valueProp_MIigO5 {
-    background: var(--background-base-low);
-    border-radius: var(--radius-lg);
-    color: var(--icon-default);
-    flex: 1 1 0;
-    flex-direction: column;
-    min-width: 0;
-    padding: var(--space-16)
-}
-
-.valuePropText_MIigO5 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4)
 }
 
 .session_2njDLD {
@@ -867,4 +904,4 @@
     padding: var(--space-8) 0
 }
 
-/*# sourceMappingURL=8e53f6d1b38ace79.css.map*/
+/*# sourceMappingURL=645f63ece4d0c09f.css.map*/
