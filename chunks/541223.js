@@ -22139,14 +22139,14 @@ var j0 = n(305866),
     fs = n(169358);
 function fr(e) {
     let { guild: t, numSounds: n, isOutOfSlots: i } = e,
-        l = t.premiumTier,
+        l = (0, ot.dV)(t),
         s = (0, ot.ax)(l),
         r = fl.y7[l] - 2;
     if (null == s || l === ej.TVA.TIER_3 || n < r) return null;
     let a = i ? { color: oi.XD.GREEN, look: oi.pR.FILLED, text: W.intl.string(W.t.cYzxGn) } : void 0;
     return (0, A.jsx)(oo, {
         header: W.intl.string(W.t.zT9SxY),
-        text: W.intl.formatToPlainString(W.t.OKqEAU, { level: s, numAdditional: (0, ot.Ry)(s) }),
+        text: W.intl.formatToPlainString(W.t.OKqEAU, { level: s, numAdditional: fl.y7[s] - fl.y7[l] }),
         headerColor: "text-strong",
         textColor: "text-default",
         buttonProps: a,

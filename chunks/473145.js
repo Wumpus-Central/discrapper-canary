@@ -113,15 +113,13 @@ function L(e) {
                         throw Error("Not a valid tier type");
                 }
             },
-            Ry: function (e) {
-                if (e === E.TVA.NONE) return A.y7[e];
-                let t = p[p.indexOf(e) - 1];
-                return A.y7[e] - A.y7[t];
-            },
             Ys: N,
             aG: g,
             ax: function (e) {
                 return e === E.TVA.NONE ? E.TVA.TIER_1 : O.find((t) => t.tier === e)?.nextTier;
+            },
+            dV: function (e) {
+                return e.features.has(E.GuildFeatures.MORE_SOUNDBOARD) ? E.TVA.TIER_3 : e.premiumTier;
             },
             fA: R,
             fi: m,
@@ -169,13 +167,14 @@ function L(e) {
                 return -1 === p.indexOf(n) ? 0 : Math.max(0, R(e) - t.length);
             },
             yA: function (e, t) {
-                let n = T(t),
-                    i = p.indexOf(t);
-                if (-1 === i) return 0;
-                let r = p[i - 1],
-                    a = null != r ? g(r) : 0,
-                    s = g(t);
-                return Math.max(0, n - e.slice(a, s).length);
+                return (function (e, t, n, i) {
+                    let r = n(t),
+                        a = p.indexOf(t);
+                    if (-1 === a) return 0;
+                    let s = p[a - 1],
+                        l = null != s ? i(s) : 0;
+                    return Math.max(0, r - (Math.min(e, i(t)) - Math.min(e, l)));
+                })(e.length, t, T, g);
             },
             yS: function (e, t) {
                 return null == t || (null != e && e >= t);
