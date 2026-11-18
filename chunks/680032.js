@@ -1,64 +1,79 @@
-n(321073);
-var l = n(951178),
-    r = n(191850),
-    i = n(792996);
-n.d(
-    e,
+l(321073);
+var e = l(951178),
+    i = l(191850),
+    a = l(792996);
+function u(t) {
+    if (null == t) return [];
+    let n = [
+        {
+            key: "bots",
+            text: a.intl.formatToPlainString(t.canRemoveBot ? i.default["cU/7df"] : i.default.PDLHwR, {
+                server: t.guildName,
+            }),
+        },
+    ];
+    if (t.channelNames.length > 0) {
+        let l = new Intl.ListFormat(a.intl.currentLocale, { type: "conjunction" }).format(
+            t.channelNames.map((t) => `#${t}`),
+        );
+        n.push({ key: "channels", text: a.intl.formatToPlainString(i.default.DbZ8af, { channels: l }) });
+    }
+    return n;
+}
+l.d(
+    n,
     {},
     {
         _i: function (t) {
-            let e = [{ key: "bots", text: i.intl.string(r.default.eSpjGV) }];
+            let n = [{ key: "bots", text: a.intl.string(i.default.eSpjGV) }];
             return (
-                t?.supported_surfaces?.includes(l.q7.APP_CHANNEL) === !0 &&
-                    e.push({ key: "channels", text: i.intl.string(r.default["D8IMa/"]) }),
-                t?.supported_surfaces?.includes(l.q7.AUTOMOD) === !0 &&
-                    e.push({ key: "automod", text: i.intl.string(r.default.IPtiUf) }),
+                t?.supported_surfaces?.includes(e.q7.APP_CHANNEL) === !0 &&
+                    n.push({ key: "channels", text: a.intl.string(i.default["D8IMa/"]) }),
+                t?.supported_surfaces?.includes(e.q7.AUTOMOD) === !0 &&
+                    n.push({ key: "automod", text: a.intl.string(i.default.IPtiUf) }),
+                n
+            );
+        },
+        by: function (t, n, l) {
+            let e = [
+                { key: "server", text: a.intl.formatToPlainString(i.default.YFZDXO, { server: l }) },
+                ...u(n),
+                { key: "settings", text: a.intl.string(i.default.F058cu) },
+            ];
+            return (
+                (t.collaborator_role_ids?.length ?? 0) > 0 &&
+                    e.push({ key: "collaboration", text: a.intl.string(i.default.SDpkkt) }),
                 e
             );
         },
         dv: function (t) {
-            let e = [{ key: "bots", text: i.intl.string(r.default.eSpjGV) }];
-            (t?.preview_application_id != null && (0, l._7)(t)) ||
+            let n = [{ key: "bots", text: a.intl.string(i.default.eSpjGV) }];
+            (t?.preview_application_id != null && (0, e._7)(t)) ||
                 t?.preview_app_chosen === !0 ||
-                e.push({ key: "test_app", text: i.intl.string(r.default["+5f47F"]) });
-            let n = [...(t?.supported_surfaces ?? []), ...(t?.preview_supported_surfaces ?? [])];
+                n.push({ key: "test_app", text: a.intl.string(i.default["+5f47F"]) });
+            let l = [...(t?.supported_surfaces ?? []), ...(t?.preview_supported_surfaces ?? [])];
             return (
-                n.includes(l.q7.PROFILE_WIDGET) &&
-                    e.push({ key: "profile_widget", text: i.intl.string(r.default.u6ckHo) }),
-                n.includes(l.q7.OVERLAY) && e.push({ key: "overlay", text: i.intl.string(r.default.UZHlmt) }),
-                n.includes(l.q7.AUTOMOD) && e.push({ key: "automod", text: i.intl.string(r.default.IPtiUf) }),
-                e.push({ key: "collaboration", text: i.intl.string(r.default["s3/5nF"]) }),
-                e
+                l.includes(e.q7.PROFILE_WIDGET) &&
+                    n.push({ key: "profile_widget", text: a.intl.string(i.default.u6ckHo) }),
+                l.includes(e.q7.OVERLAY) && n.push({ key: "overlay", text: a.intl.string(i.default.UZHlmt) }),
+                l.includes(e.q7.AUTOMOD) && n.push({ key: "automod", text: a.intl.string(i.default.IPtiUf) }),
+                n.push({ key: "collaboration", text: a.intl.string(i.default["s3/5nF"]) }),
+                n
             );
         },
-        wJ: function (t, e) {
-            let n = [];
-            if (
-                null != e &&
-                (n.push({
-                    key: "bots",
-                    text: i.intl.formatToPlainString(e.canRemoveBot ? r.default["cU/7df"] : r.default.PDLHwR, {
-                        server: e.guildName,
-                    }),
-                }),
-                e.channelNames.length > 0)
-            ) {
-                let t = new Intl.ListFormat(i.intl.currentLocale, { type: "conjunction" }).format(
-                    e.channelNames.map((t) => `#${t}`),
-                );
-                n.push({ key: "channels", text: i.intl.formatToPlainString(r.default.DbZ8af, { channels: t }) });
-            }
+        wJ: function (t, n) {
+            let l = u(n);
             return (
-                (0, l._7)(t) &&
+                (0, e._7)(t) &&
                     !0 !== t.preview_app_chosen &&
-                    n.push({ key: "test_app", text: i.intl.string(r.default.jKXaUH) }),
-                t.supported_surfaces?.includes(l.q7.PROFILE_WIDGET) === !0 &&
-                    n.push({ key: "profile_widget", text: i.intl.string(r.default.HHZxrL) }),
-                t.supported_surfaces?.includes(l.q7.OVERLAY) === !0 &&
-                    n.push({ key: "overlay", text: i.intl.string(r.default.rVTFDs) }),
-                (0, l.pL)(t) && n.push({ key: "collaboration", text: i.intl.string(r.default["+a1lOS"]) }),
-                n.push({ key: "only_you", text: i.intl.string(r.default.TrTx1Z) }),
-                n
+                    l.push({ key: "test_app", text: a.intl.string(i.default.jKXaUH) }),
+                t.supported_surfaces?.includes(e.q7.PROFILE_WIDGET) === !0 &&
+                    l.push({ key: "profile_widget", text: a.intl.string(i.default.HHZxrL) }),
+                t.supported_surfaces?.includes(e.q7.OVERLAY) === !0 &&
+                    l.push({ key: "overlay", text: a.intl.string(i.default.rVTFDs) }),
+                (0, e.pL)(t) && l.push({ key: "collaboration", text: a.intl.string(i.default["+a1lOS"]) }),
+                l.push({ key: "only_you", text: a.intl.string(i.default.TrTx1Z) }),
+                l
             );
         },
     },

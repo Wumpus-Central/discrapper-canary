@@ -6,221 +6,174 @@ var t = n(582128),
     a = n(587895),
     o = n(47167),
     d = n(851767),
-    p = n(808728),
-    c = n(696451),
-    m = n(71393),
-    g = n(576705),
-    f = n(994500),
-    s = n(287809),
+    c = n(808728),
+    p = n(696451),
+    f = n(71393),
+    s = n(576705),
+    g = n(994500),
+    m = n(287809),
     A = n(722701),
-    v = n(811587),
-    _ = n(260498),
+    _ = n(811587),
+    v = n(260498),
     h = n(951178),
-    N = n(426035),
-    y = n(652215),
-    b = n(191850),
-    w = n(792996);
-let k = [],
-    j = [_.Ay, m.A, p.A, c.Ay, d.A, a.A, g.A, s.default, f.A];
-function P(e) {
-    var l, n;
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.guild_id,
-        i = null == t ? null : m.A.getGuild(t);
+    y = n(426035),
+    b = n(652215),
+    w = n(191850),
+    k = n(792996);
+let N = [v.Ay, f.A, c.A, p.Ay, d.A, a.A, s.A, m.default, g.A];
+function j(l) {
+    var e, n;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.guild_id,
+        i = null == t ? null : f.A.getGuild(t);
     if (
         null == i ||
-        ((l = e),
-        (n = i.id) === l.guild_id
-            ? "in_server" !== (0, N.kF)(l)
-            : "guild" !== l.install_scope || l.guild_ids?.includes(n) !== !0)
+        ((e = l),
+        (n = i.id) === e.guild_id
+            ? "in_server" !== (0, y.kF)(e)
+            : "guild" !== e.install_scope || e.guild_ids?.includes(n) !== !0)
     )
         return null;
-    let u = (0, N.xI)(i.id, e.application_id),
-        r = u.filter((e) => g.A.can(y.xBc.MANAGE_CHANNELS, e));
+    let u = (0, y.xI)(i.id, l.application_id),
+        r = u.filter((l) => s.A.can(b.xBc.MANAGE_CHANNELS, l));
     return {
-        projectName: e.name,
-        appName: a.A.getApplication(e.application_id)?.name ?? e.name,
+        projectName: l.name,
+        appName: a.A.getApplication(l.application_id)?.name ?? l.name,
         previewAppName:
-            null == e.preview_application_id || i.id !== e.guild_id
+            null == l.preview_application_id || i.id !== l.guild_id
                 ? null
-                : (a.A.getApplication(e.preview_application_id)?.name ?? `${e.name} (Preview)`),
+                : (a.A.getApplication(l.preview_application_id)?.name ?? `${l.name} (Preview)`),
         guildId: i.id,
         guildName: i.name,
-        channelNames: r.map(C),
-        keptChannelNames: u.filter((e) => !r.includes(e)).map(C),
-        canRemoveBot: (0, N.wv)(i, (0, N.Du)(e)),
-        canRemovePreviewBot: null == e.preview_application_id || (0, N.wv)(i, (0, N.ug)(e)),
+        channelNames: r.map(P),
+        keptChannelNames: u.filter((l) => !r.includes(l)).map(P),
+        canRemoveBot: (0, y.wv)(i, (0, y.Du)(l)),
+        canRemovePreviewBot: null == l.preview_application_id || (0, y.wv)(i, (0, y.ug)(l)),
     };
 }
-function C(e) {
-    return (0, o.m1)(e, s.default, f.A);
+function P(l) {
+    return (0, o.m1)(l, m.default, g.A);
 }
-let E = [];
-function B(e) {
-    let l = (0, u.bG)(
-        [_.Ay, a.A, c.Ay, m.A],
-        () => {
-            let l = null == e ? null : _.Ay.getProject(e);
-            return null == l || null == l.guild_id
-                ? E
-                : [l.guild_id, ...(0, h.Jr)(l).filter((e) => e !== l.guild_id)]
-                      .filter((e) => null != m.A.getGuild(e))
-                      .map((e) => ({
-                          guildId: e,
-                          botUserIds: [(0, N.Du)(l), e === l.guild_id ? (0, N.ug)(l) : null].filter(
-                              (l) => null != l && null == c.Ay.getMember(e, l),
-                          ),
-                      }))
-                      .filter((e) => {
-                          let { botUserIds: l } = e;
-                          return l.length > 0;
-                      });
-        },
-        [e],
-        i.isEqual,
-    );
-    t.useEffect(() => {
-        for (let { guildId: e, botUserIds: n } of l) r.A.requestMembersById(e, n, !1);
-    }, [l]);
-}
+let C = [];
 n.d(
-    l,
+    e,
     {},
     {
-        Bs: function (e) {
+        Bs: function (l) {
+            var e;
+            let n;
             return (
-                B(e),
-                (0, u.bG)(
-                    j,
+                (e = l),
+                (n = (0, u.bG)(
+                    [v.Ay, a.A, p.Ay, f.A],
                     () => {
-                        let l = null == e ? null : _.Ay.getProject(e);
-                        return null == l ? null : P(l);
+                        let l = null == e ? null : v.Ay.getProject(e);
+                        return null == l || null == l.guild_id
+                            ? C
+                            : [l.guild_id, ...(0, h.Jr)(l).filter((e) => e !== l.guild_id)]
+                                  .filter((l) => null != f.A.getGuild(l))
+                                  .map((e) => ({
+                                      guildId: e,
+                                      botUserIds: [(0, y.Du)(l), e === l.guild_id ? (0, y.ug)(l) : null].filter(
+                                          (l) => null != l && null == p.Ay.getMember(e, l),
+                                      ),
+                                  }))
+                                  .filter((l) => {
+                                      let { botUserIds: e } = l;
+                                      return e.length > 0;
+                                  });
                     },
                     [e],
+                    i.isEqual,
+                )),
+                t.useEffect(() => {
+                    for (let { guildId: l, botUserIds: e } of n) r.A.requestMembersById(l, e, !1);
+                }, [n]),
+                (0, u.bG)(
+                    N,
+                    () => {
+                        let e = null == l ? null : v.Ay.getProject(l);
+                        return null == e ? null : j(e);
+                    },
+                    [l],
                     i.isEqual,
                 )
             );
         },
-        CU: function (e) {
+        CU: function (l) {
             return (0, u.bG)(
-                [_.Ay, A.A],
+                [v.Ay, A.A],
                 () => {
-                    var l;
-                    let n = null == e ? null : _.Ay.getProject(e);
+                    var e;
+                    let n = null == l ? null : v.Ay.getProject(l);
                     return (
                         null != n &&
-                        ((l = A.A.getPublishStatus(n.id)),
-                        "user" === n.install_scope && null != l && (0, v.lE)(l.publishState))
+                        ((e = A.A.getPublishStatus(n.id)),
+                        "user" === n.install_scope && null != e && (0, _.lE)(e.publishState))
                     );
                 },
-                [e],
+                [l],
             );
         },
-        J: function (e) {
-            let { appName: l, guildName: n } = e,
+        J: function (l) {
+            let { appName: e, guildName: n } = l,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-            return w.intl.formatToPlainString(b.default["9CvVB9"], {
-                app: l,
-                server: new Intl.ListFormat(w.intl.currentLocale, { type: "conjunction" }).format([
+            return k.intl.formatToPlainString(w.default["9CvVB9"], {
+                app: e,
+                server: new Intl.ListFormat(k.intl.currentLocale, { type: "conjunction" }).format([
                     n,
-                    ...t.map((e) => e.guildName),
+                    ...t.map((l) => l.guildName),
                 ]),
             });
         },
-        Mi: function (e) {
-            let { keptChannelNames: l } = e;
-            if (0 === l.length) return null;
-            let n = new Intl.ListFormat(w.intl.currentLocale, { type: "conjunction" }).format(l.map((e) => `#${e}`));
-            return w.intl.formatToPlainString(b.default.pE4Cec, { channels: n });
+        Mi: function (l) {
+            let { keptChannelNames: e } = l;
+            if (0 === e.length) return null;
+            let n = new Intl.ListFormat(k.intl.currentLocale, { type: "conjunction" }).format(e.map((l) => `#${l}`));
+            return k.intl.formatToPlainString(w.default.pE4Cec, { channels: n });
         },
-        WX: function (e) {
-            return e;
+        WX: function (l) {
+            return l;
         },
-        dw: function (e, l) {
+        dw: function (l, e) {
             return (0, u.bG)(
-                j,
+                N,
                 () => {
-                    let n = null == e ? null : _.Ay.getProject(e);
-                    return null == n ? null : ((null != l && l !== n.guild_id ? P(n, l) : null) ?? P(n));
+                    let n = null == l ? null : v.Ay.getProject(l);
+                    return null == n ? null : ((null != e && e !== n.guild_id ? j(n, e) : null) ?? j(n));
                 },
-                [e, l],
+                [l, e],
                 i.isEqual,
             );
         },
-        dy: function (e, l) {
-            return e.canRemoveBot || l;
+        dy: function (l, e) {
+            return l.canRemoveBot || e;
         },
-        fI: function (e) {
-            let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                n = [{ key: "project", kind: "project", label: e.projectName }];
-            [e, ...l].forEach((e, t) => {
-                let { guildName: i, channelNames: u } = e;
-                for (let e of u)
+        fI: function (l) {
+            let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+                n = [{ key: "project", kind: "project", label: l.projectName }];
+            [l, ...e].forEach((l, t) => {
+                let { guildName: i, channelNames: u } = l;
+                for (let l of u)
                     n.push({
-                        key: `channel:${t}:${e}`,
+                        key: `channel:${t}:${l}`,
                         kind: "channel",
                         label:
-                            0 === l.length
-                                ? `#${e}`
-                                : w.intl.formatToPlainString(b.default.kCC2X2, { channel: e, server: i }),
+                            0 === e.length
+                                ? `#${l}`
+                                : k.intl.formatToPlainString(w.default.kCC2X2, { channel: l, server: i }),
                     });
             });
-            let t = (function (e) {
-                let { previewAppName: l } = e;
-                return null == l ? null : { key: "preview-app", kind: "app", label: l };
-            })(e);
+            let t = (function (l) {
+                let { previewAppName: e } = l;
+                return null == e ? null : { key: "preview-app", kind: "app", label: e };
+            })(l);
             return (null != t && n.push(t), n);
         },
-        rU: function (e) {
-            return (
-                B(e),
-                (0, u.bG)(
-                    j,
-                    () => {
-                        let l = _.Ay.getProject(e);
-                        return null == l
-                            ? k
-                            : (0, h.Jr)(l).map((e) => {
-                                  var n, t, i, u;
-                                  let r;
-                                  return (
-                                      (n = l),
-                                      (t = e),
-                                      (r = m.A.getGuild(t)?.name),
-                                      {
-                                          guildId: t,
-                                          guildName: r ?? w.intl.string(b.default["6bhivN"]),
-                                          isTestServer: t === n.guild_id && (0, h._7)(n) && (0, h.Jr)(n).length > 1,
-                                          removeTarget:
-                                              P(n, t) ??
-                                              (null == r
-                                                  ? ((i = n),
-                                                    (u = t),
-                                                    {
-                                                        projectName: i.name,
-                                                        appName: a.A.getApplication(i.application_id)?.name ?? i.name,
-                                                        previewAppName: null,
-                                                        guildId: u,
-                                                        guildName: w.intl.string(b.default["6bhivN"]),
-                                                        channelNames: [],
-                                                        keptChannelNames: [],
-                                                        canRemoveBot: !1,
-                                                        canRemovePreviewBot: !1,
-                                                    })
-                                                  : null),
-                                      }
-                                  );
-                              });
-                    },
-                    [e],
-                    i.isEqual,
-                )
-            );
-        },
-        zu: function (e) {
-            return (0, h.Jr)(e)
-                .filter((l) => l !== e.guild_id)
-                .map((l) => P(e, l))
-                .filter((e) => null != e);
+        zu: function (l) {
+            return (0, h.Jr)(l)
+                .filter((e) => e !== l.guild_id)
+                .map((e) => j(l, e))
+                .filter((l) => null != l);
         },
     },
 );

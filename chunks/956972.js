@@ -2254,8 +2254,7 @@ function nO(e) {
                                 n.e(807476),
                                 n.e(967874),
                                 n.e(479971),
-                                n.e(753376),
-                                n.e(806979),
+                                n.e(376675),
                                 n.e(140243),
                             ]).then(n.bind(n, 547166));
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });

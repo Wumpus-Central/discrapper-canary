@@ -225,8 +225,7 @@ i.d(
                                                     i.e(967874),
                                                     i.e(479971),
                                                     i.e(736621),
-                                                    i.e(753376),
-                                                    i.e(806979),
+                                                    i.e(376675),
                                                     i.e(140243),
                                                 ]).then(i.bind(i, 547166));
                                                 return (i) => (0, n.jsx)(a, { ...i, location: P, guildId: t, user: e });

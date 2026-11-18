@@ -1,53 +1,57 @@
-var l = n(477900);
-n(582128);
-var r = n(430392),
-    i = n(323384),
-    a = n(127062),
-    o = n(280645),
-    u = n(687966),
-    s = n(231483),
-    c = n(177953),
-    d = n(950305),
-    f = n(331322),
-    p = n(834730),
-    h = n(191850),
-    g = n(792996),
-    m = n(32924);
-let y = {
-    bots: r.RobotIcon,
-    channels: i.AppsIcon,
-    test_app: a.BeakerIcon,
-    profile_widget: o.IdCardIcon,
-    overlay: u.GameControllerIcon,
-    automod: s.ShieldIcon,
-    collaboration: c.GroupIcon,
-    only_you: d.UserIcon,
+var e = l(477900);
+l(582128);
+var i = l(430392),
+    a = l(323384),
+    u = l(127062),
+    r = l(280645),
+    s = l(687966),
+    o = l(231483),
+    d = l(177953),
+    c = l(950305),
+    p = l(664121),
+    f = l(625903),
+    g = l(331322),
+    h = l(834730),
+    _ = l(191850),
+    m = l(792996),
+    b = l(32924);
+let A = {
+    bots: i.RobotIcon,
+    channels: a.AppsIcon,
+    test_app: u.BeakerIcon,
+    profile_widget: r.IdCardIcon,
+    overlay: s.GameControllerIcon,
+    automod: o.ShieldIcon,
+    collaboration: d.GroupIcon,
+    only_you: c.UserIcon,
+    server: p.ServerIcon,
+    settings: f.SettingsIcon,
 };
-n.d(
-    e,
+l.d(
+    n,
     {},
     {
         A: function (t) {
-            let { rows: e } = t;
-            return (0, l.jsxs)(f.B, {
+            let { rows: n } = t;
+            return (0, e.jsxs)(g.B, {
                 gap: 8,
                 children: [
-                    (0, l.jsx)(p.E, {
+                    (0, e.jsx)(h.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
-                        children: g.intl.string(h.default["kG/2e8"]),
+                        children: m.intl.string(_.default["kG/2e8"]),
                     }),
-                    (0, l.jsx)("div", {
-                        className: m.a,
-                        children: e.map((t) => {
-                            let e = y[t.key];
-                            return (0, l.jsxs)(
+                    (0, e.jsx)("div", {
+                        className: b.a,
+                        children: n.map((t) => {
+                            let n = A[t.key];
+                            return (0, e.jsxs)(
                                 "div",
                                 {
-                                    className: m.n,
+                                    className: b.n,
                                     children: [
-                                        (0, l.jsx)(e, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
-                                        (0, l.jsx)(p.E, {
+                                        (0, e.jsx)(n, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                                        (0, e.jsx)(h.E, {
                                             variant: "body-sm/medium",
                                             color: "text-subtle",
                                             children: t.text,

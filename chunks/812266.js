@@ -5410,8 +5410,7 @@ function rm(e) {
                                     n.e(967874),
                                     n.e(479971),
                                     n.e(736621),
-                                    n.e(753376),
-                                    n.e(806979),
+                                    n.e(376675),
                                     n.e(140243),
                                 ]).then(n.bind(n, 547166));
                                 return (n) => (0, a.jsx)(e, { ...n, guildId: t.guild_id, user: l, modReportId: t.id });
