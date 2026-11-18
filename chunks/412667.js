@@ -1,29 +1,42 @@
-n.d(e, { A: () => d });
+n.d(e, { A: () => f });
 var t = n(582128),
     a = n(173912),
     u = n(855986),
     r = n(734057),
-    i = n(576705),
-    s = n(693241),
-    c = n(951178);
-function o(l, e) {
-    return "guild" === l.install_scope && null != l.guild_id && null != e && l.guild_id === e;
+    i = n(71393),
+    s = n(576705),
+    c = n(693241),
+    o = n(951178);
+function d(l) {
+    let { guild_id: e } = l;
+    return "guild" !== l.install_scope || null == e ? null : null != i.A.getGuild(e) ? e : null;
 }
-function d(l, e, n) {
+function f(l, e, n) {
     let {
-            canLaunch: d,
-            launching: f,
-            failed: p,
-            launch: g,
+            canLaunch: f,
+            launching: p,
+            failed: g,
+            launch: y,
         } = (function (l, e, n) {
-            var u;
-            let { guildId: r, channelId: i } = n,
-                [s, d] = t.useState(!1),
-                [f, p] = t.useState(!1),
-                g = null != e && null != i && o((u = e), r) && (u.supported_surfaces ?? []).includes(c.q7.ACTIVITY),
-                y = t.useCallback(async () => {
-                    if (!g || null == r || null == i) return !1;
-                    (d(!0), p(!1));
+            let { guildId: r, channelId: s } = n,
+                [c, f] = t.useState(!1),
+                [p, g] = t.useState(!1),
+                y = (0, u.bG)(
+                    [i.A],
+                    () => {
+                        var l;
+                        return (
+                            null != e &&
+                            null != s &&
+                            null != d((l = e)) &&
+                            (l.supported_surfaces ?? []).includes(o.q7.ACTIVITY)
+                        );
+                    },
+                    [e, s],
+                ),
+                A = t.useCallback(async () => {
+                    if (!y || null == s) return !1;
+                    (f(!0), g(!1));
                     try {
                         return (
                             await (function (l) {
@@ -34,47 +47,47 @@ function d(l, e, n) {
                                     launch: { entry: "share", sourceChannelId: t, sourceGuildId: n },
                                     showErrorModal: !1,
                                 }).launched;
-                            })({ applicationId: l, guildId: r, channelId: i }),
+                            })({ applicationId: l, guildId: r, channelId: s }),
                             !0
                         );
                     } catch {
-                        return (p(!0), !1);
+                        return (g(!0), !1);
                     } finally {
-                        d(!1);
+                        f(!1);
                     }
-                }, [g, l, r, i]);
-            return { canLaunch: g, launching: s, failed: f, launch: y };
+                }, [y, l, r, s]);
+            return { canLaunch: y, launching: c, failed: p, launch: A };
         })(l, e, n),
-        y = (function (l, e, n) {
-            let { guildId: a, channelId: c } = n,
-                d = null != e && null != c && o(e, a) ? a : null,
+        A = (function (l, e, n) {
+            let { channelId: a } = n,
+                o = (0, u.bG)([i.A], () => (null != e && null != a ? d(e) : null), [e, a]),
                 f = (0, u.bG)(
                     [r.A],
-                    () => null == d || Object.keys(r.A.getMutableGuildChannelsForGuild(d)).length > 0,
-                    [d],
+                    () => null == o || Object.keys(r.A.getMutableGuildChannelsForGuild(o)).length > 0,
+                    [o],
                 ),
                 p = (0, u.bG)(
-                    [r.A, i.A],
-                    () => (null != d && null != c ? ((0, s.A)(d, l, c)?.channelId ?? null) : null),
-                    [d, l, c],
+                    [r.A, s.A],
+                    () => (null != o && null != a ? ((0, c.A)(o, l, a)?.channelId ?? null) : null),
+                    [o, l, a],
                 ),
                 g = t.useRef(null);
             return (
                 t.useEffect(() => {
-                    null == d || f || g.current === d || ((g.current = d), r.D.loadGuildIds([d]));
-                }, [d, f]),
-                t.useMemo(() => (null != d && null != p ? { guildId: d, channelId: p } : null), [d, p])
+                    null == o || f || g.current === o || ((g.current = o), r.D.loadGuildIds([o]));
+                }, [o, f]),
+                t.useMemo(() => (null != o && null != p ? { guildId: o, channelId: p } : null), [o, p])
             );
         })(l, e, n),
-        A = d ? "launch" : null != y ? "open" : null,
-        m = t.useCallback(
+        m = f ? "launch" : null != A ? "open" : null,
+        h = t.useCallback(
             () =>
-                "launch" === A
-                    ? g()
-                    : "open" !== A || null == y
+                "launch" === m
+                    ? y()
+                    : "open" !== m || null == A
                       ? Promise.resolve(!1)
-                      : ((0, a.A)({ applicationId: l, channel: y }), Promise.resolve(!0)),
-            [A, g, l, y],
+                      : ((0, a.A)({ applicationId: l, channel: A }), Promise.resolve(!0)),
+            [m, y, l, A],
         );
-    return { type: A, launching: f, launchFailed: p, run: m };
+    return { type: m, launching: p, launchFailed: g, run: h };
 }
