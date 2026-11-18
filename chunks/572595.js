@@ -459,14 +459,14 @@ n.d(
                         n.e(475289),
                         n.e(375966),
                         n.e(48303),
-                        n.e(125117),
+                        n.e(211349),
                         n.e(535874),
                         n.e(519125),
                         n.e(993734),
                         n.e(864316),
                         n.e(806221),
-                        n.e(411877),
-                    ]).then(n.bind(n, 959364));
+                        n.e(510424),
+                    ]).then(n.bind(n, 496779));
                     return (n) =>
                         (0, r.jsx)(l.R9, {
                             newValue: { cardId: m, sessionId: v, tilePosition: x },

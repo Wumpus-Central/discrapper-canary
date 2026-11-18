@@ -286,38 +286,6 @@
     margin-top: 0
 }
 
-.promotionProgress_80OD1- {
-    align-items: center;
-    background-color: var(--background-feedback-mod-positive);
-    border-radius: var(--radius-sm);
-    color: var(--text-feedback-positive);
-    display: flex;
-    gap: var(--space-8);
-    justify-content: space-between;
-    padding-block: var(--space-4);
-    padding-inline: var(--space-4) var(--space-8)
-}
-
-.promotionProgressBlue_80OD1- {
-    background: linear-gradient(90deg, rgba(67, 155, 249, .4) 22.321%, rgba(13, 51, 180, .4) 119.29%);
-    color: var(--text-strong)
-}
-
-.promotionProgressLabel_80OD1- {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: var(--space-6)
-}
-
-.promotionProgressCountdown_80OD1- {
-    white-space: nowrap
-}
-
-.promotionProgressIcon_80OD1- {
-    flex-shrink: 0
-}
-
 .premiumPriceTag_80OD1-,
 .priceTagContainer_80OD1- {
     display: flex;
@@ -514,4 +482,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=2b4a21a88561447b.css.map*/
+/*# sourceMappingURL=bbe5b86c51f28267.css.map*/
