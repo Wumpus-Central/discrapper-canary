@@ -1,121 +1,151 @@
-var r = n(477900),
-    l = n(582128),
-    a = n(503698),
-    i = n.n(a),
-    u = n(855986),
-    s = n(775602),
-    o = n(998304),
-    c = n(49253),
-    d = n(988341),
-    m = n(97192),
-    _ = n(589801);
-function f(e, t) {
-    return { previousTier: (0, d.YU)(e, t), currentTier: (0, d.DW)(e) };
+var n = l(477900),
+    r = l(582128),
+    a = l(503698),
+    i = l.n(a),
+    u = l(70283),
+    s = l(855986),
+    o = l(220839),
+    d = l(775602),
+    c = l(998304),
+    m = l(49253),
+    _ = l(988341),
+    f = l(97192),
+    g = l(589801);
+function b(e, t) {
+    return { previousTier: (0, _.YU)(e, t), currentTier: (0, _.DW)(e) };
 }
-function g(e, t, n) {
-    return n ? t?.simple_icon_raster_url : (t?.simple_icon_raster_url ?? e.simple_icon_raster_url);
+function p(e, t, l) {
+    return l ? t?.simple_icon_raster_url : (t?.simple_icon_raster_url ?? e.simple_icon_raster_url);
 }
-function p(e) {
+function x(e) {
     return 250 * !!e;
 }
-function b(e) {
-    let { badge: t, tier: n, isStarted: a, isPreviousTier: u = !1, onLoad: s, className: d, fillClassName: f } = e,
-        p = u ? (n?.complex_icon_static_url ?? n?.simple_icon_url) : (0, c.NC)(t, n, !0).imageUrl,
-        b = (0, m.C)(g(t, n, u)),
-        x = b ?? m.P,
-        [y, v] = l.useState(!1),
-        h = l.useCallback(() => v(!0), []),
-        T = y && null != b,
-        [S, A] = l.useState(null);
-    l.useEffect(() => {
-        T && (A(a ? "fade-in" : "with-start"), s());
-    }, [T]);
-    let E = l.useMemo(
+function v(e) {
+    let {
+            badge: t,
+            tier: l,
+            isStarted: a,
+            isAmbient: u,
+            isPreviousTier: s = !1,
+            onLoad: d,
+            className: _,
+            fillClassName: b,
+        } = e,
+        x = s ? (l?.complex_icon_static_url ?? l?.simple_icon_url) : (0, m.NC)(t, l, !0).imageUrl,
+        v = s ? l?.complex_icon_animated_url : (0, m.NC)(t, l, !1).animatedUrl,
+        [y, h] = r.useState(null),
+        A = u && "failed" !== y ? v : void 0;
+    (0, o.A)(() => h((e) => e ?? "failed"), null != A && null == y ? 2e3 : null);
+    let N = (0, f.C)(p(t, l, s)),
+        T = N ?? f.P,
+        [E, S] = r.useState(!1),
+        C = r.useCallback(() => S(!0), []),
+        k = E && null != N && (null == A || "loaded" === y),
+        [R, j] = r.useState(null);
+    r.useEffect(() => {
+        k && (j(a ? "fade-in" : "with-start"), d());
+    }, [k]);
+    let w = r.useMemo(
         () => ({
-            "--custom-badge-unlock-color": x,
-            "--custom-badge-unlock-halo": (0, o.KU)(x, 0.6),
-            "--custom-badge-unlock-art": null != p ? `url("${p}")` : "none",
+            "--custom-badge-unlock-color": T,
+            "--custom-badge-unlock-halo": (0, c.KU)(T, 0.6),
+            "--custom-badge-unlock-art": null != x ? `url("${x}")` : "none",
         }),
-        [x, p],
+        [T, x],
     );
-    return null == p
+    return null == x
         ? null
-        : (0, r.jsx)("div", {
-              className: i()(_.qd, (null == S || !a) && _.R, "fade-in" === S && _.qG),
-              style: E,
-              children: (0, r.jsxs)("div", {
-                  className: i()(_.qS, d),
+        : (0, n.jsx)("div", {
+              className: i()(g.qd, (null == R || !a) && g.R, "fade-in" === R && g.qG),
+              style: w,
+              children: (0, n.jsxs)("div", {
+                  className: i()(g.qS, _),
                   children: [
-                      (0, r.jsx)("img", {
-                          className: _.Qw,
-                          src: p,
+                      (0, n.jsx)("img", {
+                          className: i()(g.Qw, null != A && "loaded" === y && g.e0),
+                          src: x,
                           alt: "",
                           crossOrigin: "anonymous",
                           draggable: !1,
-                          onLoad: h,
-                          onError: h,
+                          onLoad: C,
+                          onError: C,
                       }),
-                      (0, r.jsx)("div", { className: i()(_.ys, f), children: (0, r.jsx)("div", { className: _.GS }) }),
+                      null != A &&
+                          (0, n.jsx)("div", {
+                              className: g.gN,
+                              children: (0, n.jsx)("img", {
+                                  className: g.G,
+                                  src: A,
+                                  alt: "",
+                                  draggable: !1,
+                                  onLoad: () => h("loaded"),
+                                  onError: () => h("failed"),
+                              }),
+                          }),
+                      (0, n.jsx)("div", { className: i()(g.ys, b), children: (0, n.jsx)("div", { className: g.GS }) }),
                   ],
               }),
           });
 }
-n.d(
+l.d(
     t,
     {},
     {
-        AO: g,
+        AO: p,
         Ay: function (e) {
-            let { badge: t, previousTierKey: n, size: a, startDelay: o, canStart: c = !0, onStart: d } = e,
-                m = (0, u.bG)([s.Ay], () => s.Ay.useReducedMotion),
-                { previousTier: g, currentTier: x } = f(t, n),
-                y = null != g,
-                v = y && !m,
-                h = o + p(y),
-                [T, S] = l.useState(0),
-                A = l.useCallback(() => S((e) => e + 1), []),
-                [E, N] = l.useState(!1),
-                C = T >= (v ? 2 : 1),
-                k = c && (C || E),
-                [w, R] = l.useState(!1);
-            !k || C || w || R(!0);
-            let j = k && !m && !w;
-            (l.useEffect(() => {
+            let { badge: t, previousTierKey: l, size: a, startDelay: o, canStart: c = !0, onStart: m } = e,
+                _ = (0, s.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                { previousTier: f, currentTier: p } = b(t, l),
+                y = null != f,
+                h = y && !_,
+                A = t.badge_id === u.$.PREMIUM_TENURE && !_,
+                N = o + x(y),
+                [T, E] = r.useState(0),
+                S = r.useCallback(() => E((e) => e + 1), []),
+                [C, k] = r.useState(!1),
+                R = T >= (h ? 2 : 1),
+                j = c && (R || C),
+                [w, U] = r.useState(!1);
+            !j || R || w || U(!0);
+            let $ = j && !_ && !w;
+            (r.useEffect(() => {
                 if (!c) return;
-                let e = setTimeout(() => N(!0), 3e3);
+                let e = setTimeout(() => k(!0), 3e3);
                 return () => clearTimeout(e);
             }, [c]),
-                l.useEffect(() => {
-                    k && d?.(w);
-                }, [k]));
-            let U = l.useMemo(() => ({ "--custom-badge-unlock-swap": `${h}ms` }), [h]);
-            return (0, r.jsxs)("div", {
-                className: i()(_.Os, "large" === a ? _.as : _.EX, j && (y ? _.xH : _.YC)),
-                style: U,
+                r.useEffect(() => {
+                    j && m?.(w);
+                }, [j]));
+            let P = r.useMemo(() => ({ "--custom-badge-unlock-swap": `${N}ms` }), [N]);
+            return (0, n.jsxs)("div", {
+                className: i()(g.Os, "large" === a ? g.as : g.EX, $ && (y ? g.xH : g.YC)),
+                style: P,
                 children: [
-                    v &&
+                    h &&
                         !w &&
-                        (0, r.jsx)(b, {
+                        (0, n.jsx)(v, {
                             badge: t,
-                            tier: g,
-                            isStarted: k,
+                            tier: f,
+                            isStarted: j,
+                            isAmbient: A,
                             isPreviousTier: !0,
-                            onLoad: A,
-                            className: i()(j && _.rH),
-                            fillClassName: i()(_.Nl, j && _.Rt),
+                            onLoad: S,
+                            className: i()($ && g.rH),
+                            fillClassName: i()(g.Nl, $ && g.Rt),
                         }),
-                    (0, r.jsx)(b, {
+                    (0, n.jsx)(v, {
                         badge: t,
-                        tier: x,
-                        isStarted: k,
-                        onLoad: A,
-                        className: i()(j && _.CN),
-                        fillClassName: i()(j && _.Eq),
+                        tier: p,
+                        isStarted: j,
+                        isAmbient: A,
+                        onLoad: S,
+                        className: i()($ && g.CN),
+                        fillClassName: i()($ && g.Eq),
                     }),
                 ],
             });
         },
-        VR: f,
-        ux: p,
+        VR: b,
+        ux: x,
     },
 );

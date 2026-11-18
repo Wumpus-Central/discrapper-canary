@@ -696,7 +696,7 @@ function eM(e) {
                                   src: X,
                                   alt: "",
                                   "aria-hidden": !0,
-                                  crossOrigin: b ? "anonymous" : void 0,
+                                  crossOrigin: b && null == Q ? "anonymous" : void 0,
                                   draggable: !1,
                               }),
                         (0, n.jsxs)("div", {

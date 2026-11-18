@@ -60,6 +60,31 @@
     width: 102.4px
 }
 
+.artUnderAmbient_3lradj {
+    visibility: hidden
+}
+
+.ambientFrame_3lradj {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.ambientArt_3lradj {
+    flex-shrink: 0
+}
+
+.large_3lradj .ambientArt_3lradj {
+    height: 171.42857px
+}
+
+.small_3lradj .ambientArt_3lradj {
+    height: 91.42857px
+}
+
 .glow_3lradj {
     inset: 0;
     opacity: 0;
@@ -215,4 +240,4 @@
     opacity: 0
 }
 
-/*# sourceMappingURL=485480.767eb1d2ada84763.css.map*/
+/*# sourceMappingURL=485480.8eb2e07dfd35fedc.css.map*/
