@@ -569,7 +569,7 @@
 }
 
 .slider_OnqacX .barFill_OnqacX {
-    background-color: var(--background-brand);
+    background-color: var(--slider-indicator-background);
     border: 1px solid hsla(0, 0%, 100%, .1)
 }
 
@@ -1799,4 +1799,4 @@
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=436803.b5384d3fc2544af0.css.map*/
+/*# sourceMappingURL=436803.250b090de62f9b39.css.map*/

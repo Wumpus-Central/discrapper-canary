@@ -4055,6 +4055,7 @@
     --scrollbar-thin-thumb: #757880;
     --scrollbar-thin-track: transparent;
     --share-chat-input-background: #36363d;
+    --slider-indicator-background: #5966f2;
     --slider-track-background: #595963;
     --spine-default: #595963;
     --spoiler-hidden-background: #7d7d87;
@@ -4806,6 +4807,7 @@
     --scrollbar-thin-thumb: #8c8c94;
     --scrollbar-thin-track: transparent;
     --share-chat-input-background: #f0f0f2;
+    --slider-indicator-background: #5966f2;
     --slider-track-background: #c4c7c9;
     --spine-default: #c4c7c9;
     --spoiler-hidden-background: #8f8f96;
@@ -5557,6 +5559,7 @@
     --scrollbar-thin-thumb: #595963;
     --scrollbar-thin-track: transparent;
     --share-chat-input-background: #101013;
+    --slider-indicator-background: #5966f2;
     --slider-track-background: #383840;
     --spine-default: #383840;
     --spoiler-hidden-background: #595963;
@@ -6308,6 +6311,7 @@
     --scrollbar-thin-thumb: #5e616b;
     --scrollbar-thin-track: transparent;
     --share-chat-input-background: #212126;
+    --slider-indicator-background: #5966f2;
     --slider-track-background: #474752;
     --spine-default: #474752;
     --spoiler-hidden-background: #666670;
@@ -6445,4 +6449,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=38148a46ac0c9715.css.map*/
+/*# sourceMappingURL=c0e3016ba060b9f3.css.map*/

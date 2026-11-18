@@ -1143,6 +1143,7 @@
     --scrollbar-auto-track: hsl(var(--transparent-hsl)/0);
     --scrollbar-thin-thumb: var(--neutral-38);
     --scrollbar-thin-track: hsl(var(--black-hsl)/0);
+    --slider-indicator-background: var(--blurple-50);
     --slider-track-background: var(--neutral-47);
     --spine-default: var(--neutral-47);
     --spoiler-hidden-background: var(--neutral-36);
@@ -2131,6 +2132,7 @@
     --scrollbar-auto-track: hsl(var(--transparent-hsl)/0);
     --scrollbar-thin-thumb: var(--neutral-32);
     --scrollbar-thin-track: hsl(var(--black-hsl)/0);
+    --slider-indicator-background: var(--blurple-50);
     --slider-track-background: var(--neutral-16);
     --spine-default: var(--neutral-16);
     --spoiler-hidden-background: var(--neutral-31);
@@ -3119,6 +3121,7 @@
     --scrollbar-auto-track: hsl(var(--transparent-hsl)/0);
     --scrollbar-thin-thumb: var(--neutral-47);
     --scrollbar-thin-track: hsl(var(--black-hsl)/0);
+    --slider-indicator-background: var(--blurple-50);
     --slider-track-background: var(--neutral-65);
     --spine-default: var(--neutral-65);
     --spoiler-hidden-background: var(--neutral-47);
@@ -4107,6 +4110,7 @@
     --scrollbar-auto-track: hsl(var(--transparent-hsl)/0);
     --scrollbar-thin-thumb: var(--neutral-45);
     --scrollbar-thin-track: hsl(var(--black-hsl)/0);
+    --slider-indicator-background: var(--blurple-50);
     --slider-track-background: var(--neutral-55);
     --spine-default: var(--neutral-55);
     --spoiler-hidden-background: var(--neutral-43);
@@ -10436,4 +10440,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.f753aaba11c9593f.css.map*/
+/*# sourceMappingURL=952007.947abfa890f2f1b4.css.map*/

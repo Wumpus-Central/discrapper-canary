@@ -3816,6 +3816,13 @@ let { Themes: c } = d.zv,
             [_.ONYX]: { raw: "BLACK", opacity: 0 },
             [_.DARK]: { raw: "BLACK", opacity: 0 },
         },
+        SLIDER_INDICATOR_BACKGROUND: {
+            category: "generic",
+            [_.ASH]: { raw: "BLURPLE_50", opacity: 1 },
+            [_.LIGHT]: { raw: "BLURPLE_50", opacity: 1 },
+            [_.ONYX]: { raw: "BLURPLE_50", opacity: 1 },
+            [_.DARK]: { raw: "BLURPLE_50", opacity: 1 },
+        },
         SLIDER_TRACK_BACKGROUND: {
             category: "generic",
             [_.ASH]: { raw: "NEUTRAL_47", opacity: 1 },
