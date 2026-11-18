@@ -10,5 +10,4 @@ e.exports = {
     mK: "includes__Ue-J1",
     CT: "contentRow__Ue-J1",
     Pw: "contentIcon__Ue-J1",
-    Mu: "contentTrailing__Ue-J1",
 };

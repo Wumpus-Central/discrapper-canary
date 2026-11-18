@@ -94,7 +94,7 @@
 }
 
 .listScroller_aUV4Th {
-    padding: 8px var(--space-4)
+    padding: var(--space-8) var(--space-4)
 }
 
 .selected_aUV4Th {
@@ -119,4 +119,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=0baa295d90159161.css.map*/
+/*# sourceMappingURL=6f8bfa84ee56ad14.css.map*/

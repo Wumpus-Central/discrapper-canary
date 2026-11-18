@@ -1,74 +1,43 @@
-var e = n(477900),
-    a = n(582128),
-    i = n(331322),
-    t = n(534514),
-    s = n(834730),
-    d = n(821609),
-    u = n(858899),
-    c = n(580342),
-    o = n(845079),
-    h = n(424947),
-    p = n(641655),
-    g = n(252753),
-    x = n(191850),
-    b = n(792996),
-    f = n(566600);
-n.d(
-    r,
+var n = i(477900);
+i(582128);
+var e = i(331322),
+    r = i(534514),
+    s = i(834730),
+    t = i(580342),
+    d = i(845079),
+    o = i(641655),
+    c = i(252753),
+    u = i(191850),
+    p = i(792996),
+    h = i(566600);
+i.d(
+    a,
     {},
     {
         default: function (l) {
-            let { projectId: r, guildId: n, publishOptions: j = null, onClose: m, busyRef: v } = l,
-                k = (0, p.A)(r),
-                A = (0, h.A)(r, n, j);
-            (0, c.A)(r);
-            let { project: y } = k;
-            a.useEffect(() => {
-                null != v && (v.current = A.sharing);
-            }, [v, A.sharing]);
-            let w = b.intl.formatToPlainString(x.default.pgxjO4, { app: y?.name ?? "" });
-            return (0, e.jsxs)("div", {
-                className: f.n,
+            let { projectId: a } = l,
+                i = (0, o.A)(a);
+            (0, t.A)(a);
+            let { project: j } = i,
+                x = p.intl.formatToPlainString(u.default.pgxjO4, { app: j?.name ?? "" });
+            return (0, n.jsxs)("div", {
+                className: h.n,
                 role: "dialog",
-                "aria-label": w,
+                "aria-label": x,
                 children: [
-                    null != y ? (0, e.jsx)(o.A, { project: y, size: "dialog" }) : null,
-                    (0, e.jsxs)(i.B, {
+                    null != j ? (0, n.jsx)(d.A, { project: j, size: "dialog" }) : null,
+                    (0, n.jsxs)(e.B, {
                         gap: 4,
                         children: [
-                            (0, e.jsx)(t.D, { variant: "heading-md/semibold", children: w }),
-                            (0, e.jsx)(s.E, {
+                            (0, n.jsx)(r.D, { variant: "heading-md/semibold", children: x }),
+                            (0, n.jsx)(s.E, {
                                 variant: "body-sm/normal",
                                 color: "text-subtle",
-                                children: b.intl.string(x.default.mbybxl),
+                                children: p.intl.string(u.default.mbybxl),
                             }),
                         ],
                     }),
-                    null == y
-                        ? null
-                        : (0, e.jsx)(g.A, {
-                              project: y,
-                              sharing: k,
-                              servers: A,
-                              serversLabel: b.intl.string(x.default.bRGLUO),
-                          }),
-                    null != A.error
-                        ? (0, e.jsx)(s.E, {
-                              variant: "body-sm/normal",
-                              color: "text-feedback-critical",
-                              role: "alert",
-                              children: A.error,
-                          })
-                        : null,
-                    null != A.picked
-                        ? (0, e.jsx)(d.$, {
-                              variant: "primary",
-                              text: b.intl.string(x.default["+uQwxA"]),
-                              loading: A.sharing,
-                              onClick: () => A.finish(m, (l) => (0, u.P0)({ text: l, variant: "success" })),
-                              fullWidth: !0,
-                          })
-                        : null,
+                    null == j ? null : (0, n.jsx)(c.A, { project: j, sharing: i }),
                 ],
             });
         },

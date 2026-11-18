@@ -4,26 +4,25 @@
     gA: () => el,
     iR: () => eo,
     gg: () => B,
-    xx: () => em,
-    K: () => eg,
-    l5: () => ep,
+    xx: () => ep,
+    K: () => em,
+    l5: () => eI,
     $N: () => e_,
     b8: () => Z,
     U1: () => ei,
-    lZ: () => eS,
+    lZ: () => eT,
     su: () => q,
     a3: () => V,
     listProjects: () => x,
     tF: () => Q,
-    kY: () => eT,
+    kY: () => eg,
     tf: () => et,
     hy: () => k,
-    GO: () => eN,
+    GO: () => eS,
     _b: () => eE,
-    xo: () => eh,
-    M7: () => eI,
-    dm: () => eC,
-    fh: () => ef,
+    xo: () => ef,
+    M7: () => eh,
+    dm: () => eN,
     CG: () => en,
     CW: () => eA,
 }),
@@ -324,25 +323,14 @@ async function eA(e, t) {
     );
 }
 async function ef(e, t) {
-    let n = O.Ay.getProject(e)?.preview_application_id,
-        { body: i } = await a.Bo.put({
-            url: `${D.Rsh.CONJURE_PROJECT(e)}/server`,
-            body: { guild_id: t, uses_preview_app: !0 },
-            rejectWithError: !0,
-        });
-    (o.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: i }),
-        eN(e),
-        null != n && n !== i.preview_application_id && N(n));
-}
-async function eh(e, t) {
     await eA(e, { guild_id: t, preview_guild_id: t });
     let n = er.get(e);
-    (null != n && (n.applied = ea(e)), eN(e));
+    (null != n && (n.applied = ea(e)), eS(e));
 }
-function eI(e, t) {
+function eh(e, t) {
     return eu(e, t);
 }
-async function ep(e) {
+async function eI(e) {
     try {
         let { body: t } = await a.Bo.get({ url: D.Rsh.CONJURE_APPLICATION_CHANNELS(e), rejectWithError: !0 });
         return t;
@@ -350,7 +338,7 @@ async function ep(e) {
         return [];
     }
 }
-async function em(e) {
+async function ep(e) {
     let t;
     o.h.dispatch({ type: "CONJURE_PROJECT_DELETE_START", projectId: e });
     try {
@@ -360,19 +348,19 @@ async function em(e) {
     }
     return (o.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: e }), t);
 }
-function eg(e, t) {
-    em(e).then(() => void 0, t);
+function em(e, t) {
+    ep(e).then(() => void 0, t);
 }
-async function eT(e) {
+async function eg(e) {
     let t = O.Ay.getProject(e)?.preview_application_id,
         { body: n } = await a.Bo.del({ url: `${D.Rsh.CONJURE_PROJECT(e)}/server`, rejectWithError: !0 });
     (es(e, n, ea(e)), null != t && t !== n.project.preview_application_id && N(t));
 }
-async function eS(e) {
+async function eT(e) {
     let { body: t } = await a.Bo.put({ url: `${D.Rsh.CONJURE_PROJECT(e)}/owner-install`, rejectWithError: !0 });
     es(e, t, ea(e));
 }
-function eN(e) {
+function eS(e) {
     let t = O.Ay.getProject(e);
     null != t &&
         (ei(e).catch((t) => v.warn("project refresh failed", { projectId: e, err: t })),
@@ -380,6 +368,6 @@ function eN(e) {
             v.warn("bot server list refresh failed", { projectId: e, err: t }),
         ));
 }
-function eC(e, t) {
+function eN(e, t) {
     o.h.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId: e, projectId: t });
 }

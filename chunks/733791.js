@@ -6,8 +6,8 @@ var t = n(582128),
     a = n(587895),
     o = n(47167),
     d = n(851767),
-    c = n(808728),
-    p = n(696451),
+    p = n(808728),
+    c = n(696451),
     f = n(71393),
     s = n(576705),
     g = n(994500),
@@ -18,9 +18,9 @@ var t = n(582128),
     h = n(951178),
     y = n(426035),
     b = n(652215),
-    w = n(191850),
-    k = n(792996);
-let N = [v.Ay, f.A, c.A, p.Ay, d.A, a.A, s.A, m.default, g.A];
+    k = n(191850),
+    w = n(792996);
+let N = [v.Ay, f.A, p.A, c.Ay, d.A, a.A, s.A, m.default, g.A];
 function j(l) {
     var e, n;
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.guild_id,
@@ -44,16 +44,16 @@ function j(l) {
                 : (a.A.getApplication(l.preview_application_id)?.name ?? `${l.name} (Preview)`),
         guildId: i.id,
         guildName: i.name,
-        channelNames: r.map(P),
-        keptChannelNames: u.filter((l) => !r.includes(l)).map(P),
+        channelNames: r.map(C),
+        keptChannelNames: u.filter((l) => !r.includes(l)).map(C),
         canRemoveBot: (0, y.wv)(i, (0, y.Du)(l)),
         canRemovePreviewBot: null == l.preview_application_id || (0, y.wv)(i, (0, y.ug)(l)),
     };
 }
-function P(l) {
+function C(l) {
     return (0, o.m1)(l, m.default, g.A);
 }
-let C = [];
+let P = [];
 n.d(
     e,
     {},
@@ -64,17 +64,17 @@ n.d(
             return (
                 (e = l),
                 (n = (0, u.bG)(
-                    [v.Ay, a.A, p.Ay, f.A],
+                    [v.Ay, a.A, c.Ay, f.A],
                     () => {
                         let l = null == e ? null : v.Ay.getProject(e);
                         return null == l || null == l.guild_id
-                            ? C
+                            ? P
                             : [l.guild_id, ...(0, h.Jr)(l).filter((e) => e !== l.guild_id)]
                                   .filter((l) => null != f.A.getGuild(l))
                                   .map((e) => ({
                                       guildId: e,
                                       botUserIds: [(0, y.Du)(l), e === l.guild_id ? (0, y.ug)(l) : null].filter(
-                                          (l) => null != l && null == p.Ay.getMember(e, l),
+                                          (l) => null != l && null == c.Ay.getMember(e, l),
                                       ),
                                   }))
                                   .filter((l) => {
@@ -117,9 +117,9 @@ n.d(
         J: function (l) {
             let { appName: e, guildName: n } = l,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-            return k.intl.formatToPlainString(w.default["9CvVB9"], {
+            return w.intl.formatToPlainString(k.default["9CvVB9"], {
                 app: e,
-                server: new Intl.ListFormat(k.intl.currentLocale, { type: "conjunction" }).format([
+                server: new Intl.ListFormat(w.intl.currentLocale, { type: "conjunction" }).format([
                     n,
                     ...t.map((l) => l.guildName),
                 ]),
@@ -128,25 +128,11 @@ n.d(
         Mi: function (l) {
             let { keptChannelNames: e } = l;
             if (0 === e.length) return null;
-            let n = new Intl.ListFormat(k.intl.currentLocale, { type: "conjunction" }).format(e.map((l) => `#${l}`));
-            return k.intl.formatToPlainString(w.default.pE4Cec, { channels: n });
+            let n = new Intl.ListFormat(w.intl.currentLocale, { type: "conjunction" }).format(e.map((l) => `#${l}`));
+            return w.intl.formatToPlainString(k.default.pE4Cec, { channels: n });
         },
         WX: function (l) {
             return l;
-        },
-        dw: function (l, e) {
-            return (0, u.bG)(
-                N,
-                () => {
-                    let n = null == l ? null : v.Ay.getProject(l);
-                    return null == n ? null : ((null != e && e !== n.guild_id ? j(n, e) : null) ?? j(n));
-                },
-                [l, e],
-                i.isEqual,
-            );
-        },
-        dy: function (l, e) {
-            return l.canRemoveBot || e;
         },
         fI: function (l) {
             let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -160,7 +146,7 @@ n.d(
                         label:
                             0 === e.length
                                 ? `#${l}`
-                                : k.intl.formatToPlainString(w.default.kCC2X2, { channel: l, server: i }),
+                                : w.intl.formatToPlainString(k.default.kCC2X2, { channel: l, server: i }),
                     });
             });
             let t = (function (l) {

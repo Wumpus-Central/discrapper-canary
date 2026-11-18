@@ -27,24 +27,6 @@
     color: var(--control-secondary-text-active)
 }
 
-.box_pqX-ln {
-    background: var(--background-mod-subtle);
-    border-radius: var(--radius-sm);
-    flex-direction: column;
-    padding: var(--space-12)
-}
-
-.box_pqX-ln,
-.row_pqX-ln {
-    display: flex;
-    gap: var(--space-8)
-}
-
-.row_pqX-ln {
-    align-items: flex-start;
-    color: var(--text-subtle)
-}
-
 .nameWithTag_tAQGQi {
     white-space: nowrap
 }
@@ -90,16 +72,6 @@
 .trigger_5C8xF6 {
     align-items: center;
     display: inline-flex
-}
-
-.loading_rqE2lZ {
-    display: flex;
-    justify-content: center;
-    padding-block: var(--space-16)
-}
-
-.projectTab_rqE2lZ {
-    padding-top: var(--space-12)
 }
 
 .header_-KMphV {
@@ -507,4 +479,4 @@
     margin-bottom: var(--space-16)
 }
 
-/*# sourceMappingURL=ee8fffe41bc034db.css.map*/
+/*# sourceMappingURL=eac9dbce6b02966e.css.map*/
