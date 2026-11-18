@@ -21,19 +21,16 @@ var n = t(477900),
     A = t(525113),
     v = t(441935),
     N = t(602991),
-    P = t(588359);
-t(321073);
-var k = t(711014),
+    k = t(588359),
+    P = t(711014),
     S = t(287809),
     E = t(615890),
     w = t(260498),
-    I = t(996485),
-    _ = t(313537);
+    I = t(996485);
+t(321073);
+var _ = t(313537);
 function O() {
-    let e = w.Ay.getRailProjects(),
-        l = new Set(e.map((e) => e.id));
-    for (let t of w.Ay.getSharedWithMeProjects()) l.has(t.id) || e.push(t);
-    return e;
+    return w.Ay.getRailProjects();
 }
 var G = t(434279),
     K = t(972013),
@@ -43,8 +40,8 @@ var G = t(434279),
     J = t(847374),
     R = t(821609),
     W = t(289873),
-    M = t(682163),
-    F = t(976860),
+    F = t(682163),
+    M = t(976860),
     X = t(71393),
     B = t(685105),
     L = t(919485);
@@ -109,9 +106,9 @@ function ei(e) {
         f = (0, n.jsxs)(n.Fragment, {
             children: [
                 null != r
-                    ? (0, n.jsx)(M.Ay, {
+                    ? (0, n.jsx)(F.Ay, {
                           guild: r,
-                          size: M.Ay.Sizes.SMOL,
+                          size: F.Ay.Sizes.SMOL,
                           active: !0,
                           className: er.$t,
                           "aria-hidden": !0,
@@ -168,9 +165,9 @@ function ec(e) {
     let { guildId: l, projects: t, forceExpanded: r, ...a } = e,
         i = (0, j.bG)([X.A], () => X.A.getGuild(l)),
         o = s.useCallback(() => {
-            (0, F.pX)(ee.BVt.CHANNEL(l, el.VV.CONJURE));
+            (0, M.pX)(ee.BVt.CHANNEL(l, el.VV.CONJURE));
         }, [l]),
-        d = s.useCallback((e) => (0, F.pX)((0, c.Oj)(l, e.id), { state: { conjureEntryPoint: "project_list" } }), [l]),
+        d = s.useCallback((e) => (0, M.pX)((0, c.Oj)(l, e.id), { state: { conjureEntryPoint: "project_list" } }), [l]),
         { renderProjectActions: u, onProjectContextMenu: p } = a,
         h = s.useCallback((e) => u(e, l), [u, l]),
         m = s.useCallback((e, t) => p(e, t, l), [p, l]);
@@ -263,7 +260,7 @@ function ej(e) {
         D = (0, eu.A)("sidebar"),
         z =
             ((l = (0, E.U)(O)),
-            (t = (0, j.yK)([k.Ay], () => k.Ay.getFlattenedGuildIds())),
+            (t = (0, j.yK)([P.Ay], () => P.Ay.getFlattenedGuildIds())),
             (r = (0, j.bG)([S.default], () => S.default.getCurrentUser()?.id)),
             s.useMemo(
                 () => ({
@@ -308,15 +305,15 @@ function ej(e) {
             },
             [i],
         ),
-        M = s.useCallback(
+        F = s.useCallback(
             (e, l, t) => {
                 let n = t ?? (0, G.wu)(l) ?? i;
                 null != n && (0, N.V)(e, l, n);
             },
             [i],
         ),
-        F = s.useCallback((e) => c(e, "create"), [c]),
-        X = (0, ed.A)(i, F),
+        M = s.useCallback((e) => c(e, "create"), [c]),
+        X = (0, ed.A)(i, M),
         B = (0, j.bG)([K.A], () => K.A.isPinned()),
         L = es.intl.string(en.default["DE7U+m"]),
         T = null == a;
@@ -402,11 +399,11 @@ function ej(e) {
                         selectedProjectId: a,
                         onSelect: R,
                         renderProjectActions: W,
-                        onProjectContextMenu: M,
+                        onProjectContextMenu: F,
                     }),
                 ],
             }),
-            J ? (0, n.jsx)(P.A, {}) : null,
+            J ? (0, n.jsx)(k.A, {}) : null,
         ],
     });
 }
