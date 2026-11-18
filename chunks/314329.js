@@ -1,5 +1,11 @@
 var i = n(984827),
     r = n(760914);
+function a(e) {
+    if (null == e) return;
+    let t = {};
+    for (let [n, a] of Object.entries(e)) Object.values(i.x).includes(n) && "" !== a && (t[n] = (0, r.dv)(a));
+    return Object.keys(t).length > 0 ? t : void 0;
+}
 n.d(
     t,
     {},
@@ -14,13 +20,8 @@ n.d(
                 videoPreview: (0, r.Zf)(e.video_preview),
                 imagePreview: (0, r.Zf)(e.image_preview),
                 videoHls: (0, r.dv)(e.video_hls),
-                videoRenditions: (function (e) {
-                    if (null == e) return;
-                    let t = {};
-                    for (let [n, a] of Object.entries(e))
-                        Object.values(i.x).includes(n) && "" !== a && (t[n] = (0, r.dv)(a));
-                    return Object.keys(t).length > 0 ? t : void 0;
-                })(e.video_renditions),
+                videoRenditions: a(e.video_renditions),
+                videoPreviewRenditions: a(e.video_preview_renditions),
                 cta: {
                     url: (t = e.cta).url,
                     buttonLabel: t.button_label,
