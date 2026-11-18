@@ -31,7 +31,7 @@ let m = "2026-11-23T17:00:00Z",
         startsAt: m,
         endsAt: C,
         title: u.default.UEMMJO,
-        body: u.default.Y3l0TS,
+        body: u.default.mPf8Wg,
         cta: u.default["72cAX3"],
         artUrl: "https://cdn.discordapp.com/assets/content/011c03cac9aa90208279e1ab95b2beb0ce5b90543ca646dc80a910ba56f8ece0.png",
     };
