@@ -35,6 +35,7 @@ n.d(
             });
         },
         TY: l,
+        ZS: "SIDEBAR",
         r_: function (e) {
             let { oldGroupingMode: t, newGroupingMode: n, analyticsLocations: i } = e;
             a.default.track(s.HAw.FRIENDS_SIDEBAR_GROUPING_MODE_CHANGED, {
