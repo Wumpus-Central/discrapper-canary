@@ -1,8 +1,8 @@
 var i = n(477900);
 n(582128);
 var l = n(503698),
-    r = n.n(l),
-    a = n(834730),
+    a = n.n(l),
+    r = n(834730),
     s = n(98950);
 n.d(
     t,
@@ -10,7 +10,7 @@ n.d(
     {
         A: function (e) {
             let { children: t, className: n } = e;
-            return (0, i.jsx)(a.E, { color: "none", className: r()(s.W, n), variant: "body-xs/medium", children: t });
+            return (0, i.jsx)(r.E, { color: "none", className: a()(s.W, n), variant: "body-xs/medium", children: t });
         },
     },
 );

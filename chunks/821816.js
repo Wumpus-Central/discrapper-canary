@@ -993,8 +993,8 @@ function e6(e) {
 }
 var e5 = n(705285),
     e8 = n(199781),
-    e7 = n(923477),
-    e3 = n(269249),
+    e3 = n(923477),
+    e7 = n(269249),
     e4 = n(55766),
     e9 = n(758836),
     te = n(111108);
@@ -1009,7 +1009,7 @@ function tn(e) {
         { servers: s, refetch: r } = (0, e4.f)(),
         o = s.length > 0,
         c = (0, _.bG)([h.default], () => M.Ay.canUseShopDiscounts(h.default.getCurrentUser())),
-        { games: u, hasError: d, isEmpty: m, isLoading: g, refetch: E } = (0, e3.Y)();
+        { games: u, hasError: d, isEmpty: m, isLoading: g, refetch: E } = (0, e7.Y)();
     i.useEffect(() => {
         o && (0, L.hP)().catch(() => {});
     }, [o]);
@@ -1038,7 +1038,7 @@ function tn(e) {
             let e = s[0];
             null != e && A({ serverId: e.id });
         }, [s, A]),
-        j = (0, e7.O)((e) => e.highlightFirstCardNonce),
+        j = (0, e3.O)((e) => e.highlightFirstCardNonce),
         D = i.useRef(j);
     i.useEffect(() => {
         if (j === D.current) return;
@@ -1522,8 +1522,8 @@ var t$ =
     t6 = n(785866),
     t5 = n(373846),
     t8 = n(308323),
-    t7 = n(608599),
-    t3 = n(685761),
+    t3 = n(608599),
+    t7 = n(685761),
     t4 = n(157225),
     t9 = n(413249),
     ne = n(510241),
@@ -1788,12 +1788,12 @@ function nm(e) {
                 },
                 {
                     name: Y.intl.string(Y.t.TlhOQC),
-                    icon: (0, a.jsx)(t7.BurgerIcon, { size: "xs", color: c(tq.FOOD_DRINKS) }),
+                    icon: (0, a.jsx)(t3.BurgerIcon, { size: "xs", color: c(tq.FOOD_DRINKS) }),
                     enum: tq.FOOD_DRINKS,
                 },
                 {
                     name: Y.intl.string(Y.t["4IaUIM"]),
-                    icon: (0, a.jsx)(t3.MagicDoorIcon, { size: "xs", color: c(tq.FANTASY) }),
+                    icon: (0, a.jsx)(t7.MagicDoorIcon, { size: "xs", color: c(tq.FANTASY) }),
                     enum: tq.FANTASY,
                 },
                 {
@@ -1855,8 +1855,8 @@ function ng(e) {
                 { name: Y.intl.string(Y.t["3WoZBc"]), icon: t6.JoystickIcon, enum: tq.GAMING },
                 { name: Y.intl.string(Y.t.yuEmLj), icon: t5.TeacupIcon, enum: tq.CUTE_COZY },
                 { name: Y.intl.string(Y.t.mMvCHo), icon: t8.ThemeMidnightIcon, enum: tq.SCI_FI },
-                { name: Y.intl.string(Y.t.TlhOQC), icon: t7.BurgerIcon, enum: tq.FOOD_DRINKS },
-                { name: Y.intl.string(Y.t["4IaUIM"]), icon: t3.MagicDoorIcon, enum: tq.FANTASY },
+                { name: Y.intl.string(Y.t.TlhOQC), icon: t3.BurgerIcon, enum: tq.FOOD_DRINKS },
+                { name: Y.intl.string(Y.t["4IaUIM"]), icon: t7.MagicDoorIcon, enum: tq.FANTASY },
                 { name: Y.intl.string(Y.t["w0nSG/"]), icon: t4.PawPrintIcon, enum: tq.ANIMALS_PETS },
                 { name: Y.intl.string(Y.t.cJng7v), icon: t9.NatureIcon, enum: tq.NATURE },
                 { name: Y.intl.string(Y.t["5mUvyM"]), icon: ne.ClipsGalleryIcon, enum: tq.MOVIES_TV_SHOWS },

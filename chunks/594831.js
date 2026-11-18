@@ -27,8 +27,8 @@ var l = n(477900),
     R = n(808728),
     D = n(71393),
     b = n(576705),
-    k = n(994500),
-    j = n(287809),
+    j = n(994500),
+    k = n(287809),
     M = n(977997),
     O = n(403362),
     w = n(996439),
@@ -38,7 +38,7 @@ var l = n(477900),
 let U = (e) => [
         e.userId,
         ...(function (e) {
-            let t = j.default.getUser(e.userId);
+            let t = k.default.getUser(e.userId);
             if (null == t) return [];
             let n = t.username,
                 l = (0, N.jP)(t);
@@ -51,7 +51,7 @@ let U = (e) => [
         searchStringGenerator: (e) => {
             let { channel: t, voiceStates: n } = e;
             return [
-                (0, E.m1)(t, j.default, k.A),
+                (0, E.m1)(t, k.default, j.A),
                 t.id,
                 t.guild_id,
                 D.A.getGuild(t.guild_id)?.name ?? "",
@@ -67,19 +67,19 @@ let U = (e) => [
             [s, o] = i.useState([]);
         (0, x.RT)(n, Object.values(r), o, V);
         let c = (0, a.yK)(
-                [M.A, j.default, _.A, k.A],
+                [M.A, k.default, _.A, j.A],
                 () =>
                     Object.values(M.A.getVoiceStatesForChannel(t.id))
-                        .map((e) => j.default.getUser(e.userId))
+                        .map((e) => k.default.getUser(e.userId))
                         .filter(O.Vq)
                         .sort((e, t) => {
                             if (s.length > 0 && "" !== n.trim()) {
                                 if (s.some((t) => t.userId === e.id)) return -1;
                                 if (s.some((e) => e.userId === t.id)) return 1;
                             }
-                            return k.A.isFriend(e.id) && !k.A.isFriend(t.id)
+                            return j.A.isFriend(e.id) && !j.A.isFriend(t.id)
                                 ? -1
-                                : !k.A.isFriend(e.id) && k.A.isFriend(t.id)
+                                : !j.A.isFriend(e.id) && j.A.isFriend(t.id)
                                   ? 1
                                   : (_.A.getUserAffinity(t.id)?.vcProbability ?? 0) -
                                     (_.A.getUserAffinity(e.id)?.vcProbability ?? 0);
@@ -105,9 +105,9 @@ function Y() {
     let e,
         t =
             ((e = (0, a.yK)(
-                [j.default, k.A, _.A],
+                [k.default, j.A, _.A],
                 () =>
-                    k.A.getFriendIDs()
+                    j.A.getFriendIDs()
                         .sort((e, t) =>
                             null == e && null == t
                                 ? 0
@@ -119,7 +119,7 @@ function Y() {
                                       (_.A.getUserAffinity(e)?.communicationProbability ?? 0),
                         )
                         .reduce((e, t) => {
-                            let n = j.default.getUser(t);
+                            let n = k.default.getUser(t);
                             return (null != n && e.push(n), e);
                         }, []),
                 [],
@@ -176,7 +176,7 @@ function K(e, t) {
         if (e[n].channel !== t[n].channel || !(0, o.v)(e[n].voiceStates ?? [], t[n].voiceStates ?? [])) return !1;
     return !0;
 }
-let X = i.memo(function (e) {
+let B = i.memo(function (e) {
         let { channel: t } = e,
             n = t.getGuildId(),
             i = (0, a.bG)([D.A], () => D.A.getGuild(n), [n]);
@@ -204,7 +204,7 @@ let X = i.memo(function (e) {
             }),
         });
     }),
-    B = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 channelId: t,
                 isHighlighted: n,
@@ -233,7 +233,7 @@ let X = i.memo(function (e) {
                   onMouseOver: () => o(t),
                   onMouseLeave: () => u(t),
                   children: [
-                      (0, l.jsx)("div", { className: L._N, children: (0, l.jsx)(X, { channel: I }) }),
+                      (0, l.jsx)("div", { className: L._N, children: (0, l.jsx)(B, { channel: I }) }),
                       (0, l.jsxs)("div", {
                           className: L.rg,
                           children: [
@@ -245,7 +245,7 @@ let X = i.memo(function (e) {
                                           variant: T ? "body-sm/semibold" : "body-sm/medium",
                                           color: y,
                                           className: L.rU,
-                                          children: (0, E.m1)(I, j.default, k.A),
+                                          children: (0, E.m1)(I, k.default, j.A),
                                       }),
                                   ],
                               }),
@@ -301,7 +301,7 @@ let X = i.memo(function (e) {
                         a && 0 === n.length && (0, l.jsx)(z, { emptyText: G.intl.string(G.t.nxSS03) }),
                         n.map((e) =>
                             (0, l.jsx)(
-                                B,
+                                X,
                                 {
                                     channelId: e,
                                     isHighlighted: e === c,
@@ -455,7 +455,7 @@ n.d(
         S4: Y,
         qZ: function () {
             return (0, a.bG)(
-                [D.A, R.A, M.A, k.A, b.A],
+                [D.A, R.A, M.A, j.A, b.A],
                 () =>
                     D.A.getGuildsArray()
                         .reduce((e, t) => {
@@ -472,7 +472,7 @@ n.d(
                         .map((e) => ({
                             channel: e,
                             voiceStates: Object.values(M.A.getVoiceStatesForChannel(e.id)).filter((e) =>
-                                k.A.isFriend(e.userId),
+                                j.A.isFriend(e.userId),
                             ),
                         })),
                 [],

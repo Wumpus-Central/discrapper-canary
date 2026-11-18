@@ -2,15 +2,15 @@ var i,
     r = e(991690),
     l = e(366430),
     u = e(723702),
-    o = e(170148),
-    a = e(454292),
+    a = e(170148),
+    o = e(454292),
     c = e(550151),
     d = e(206589),
     _ = e(125017),
     s = e(55730),
     A = e(287613),
-    C = e(874546),
-    I = e(702631),
+    I = e(874546),
+    C = e(702631),
     p = e(652215),
     f = (((i = {}).CAN_JOIN = "can_join"), (i.CANNOT_JOIN = "cannot_join"), (i.JOINED = "joined"), i);
 e.d(
@@ -40,7 +40,7 @@ e.d(
                     EmbeddedActivitiesStore: b,
                 } = n;
             if (
-                (!E && null != (t = (0, a.A)(g, D, f?.application_id)) && (0, d.w)(t, f)) ||
+                (!E && null != (t = (0, o.A)(g, D, f?.application_id)) && (0, d.w)(t, f)) ||
                 (E && null != (e = b.getCurrentEmbeddedActivity()) && e.applicationId === f?.application_id)
             )
                 return "joined";
@@ -69,7 +69,7 @@ e.d(
                     currentUser: O,
                     application: N,
                     isContentGated: h,
-                    isActivitiesEnabledForCurrentPlatform: (0, o.A)(),
+                    isActivitiesEnabledForCurrentPlatform: (0, a.A)(),
                     ChannelStore: S,
                     VoiceStateStore: P,
                     PermissionStore: V,
@@ -79,11 +79,11 @@ e.d(
                     : "cannot_join";
             if (
                 (E && null == j && !(0, s.A)(f, p.jUm.CONTEXTLESS) && !(0, l.VS)(N)) ||
-                (!E && (!(0, C.Ay)(f) || !(0, u.Ls)()))
+                (!E && (!(0, I.Ay)(f) || !(0, u.Ls)()))
             )
                 return "cannot_join";
             let G = (0, _._)(f);
-            if (!(0, A.A)(G) || (0, I.U)(G)) return "cannot_join";
+            if (!(0, A.A)(G) || (0, C.U)(G)) return "cannot_join";
             if ((0, s.A)(f, p.jUm.PARTY_PRIVACY_FRIENDS) && U.isFriend(i.id)) return "can_join";
             if ((0, s.A)(f, p.jUm.PARTY_PRIVACY_VOICE_CHANNEL)) {
                 let n = S.getChannel(T.getVoiceChannelId());

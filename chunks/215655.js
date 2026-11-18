@@ -1,6 +1,6 @@
 var i = n(582128),
     l = n(188567),
-    r = n(652215);
+    a = n(652215);
 n.d(
     t,
     {},
@@ -12,9 +12,9 @@ n.d(
                     null != n ? n(i) : null != t.current && (t.current.seek(i / 1e3), t.current.play());
                 }
                 return (
-                    l._.subscribeKeyed(r.zOV.CLIP_SEEK_VIDEO, e, i),
+                    l._.subscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, i),
                     () => {
-                        l._.unsubscribeKeyed(r.zOV.CLIP_SEEK_VIDEO, e, i);
+                        l._.unsubscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, i);
                     }
                 );
             }, [e, t, n]);

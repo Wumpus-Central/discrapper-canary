@@ -1,45 +1,45 @@
 n.d(t, { A: () => eb });
 var i = n(477900),
     l = n(582128),
-    r = n(503698),
-    a = n.n(r),
+    a = n(503698),
+    r = n.n(a),
     s = n(494012),
     o = n(505124),
     u = n(855986),
     c = n(43990),
     d = n(453903),
     m = n(413599),
-    f = n(683574);
+    p = n(683574);
 n(938796);
-var p = n(120692),
+var f = n(120692),
     h = n(665260),
     g = n(683063),
     A = n(265872),
     C = n(460905),
-    E = n(110384),
-    x = n(939249),
+    x = n(110384),
+    E = n(939249),
     v = n(834730),
     _ = n(138399),
     y = n(565645),
     b = n(822123),
     T = n(863576),
     S = n(73153),
-    j = n(95701),
-    I = n(596344),
-    N = n(652215);
-let R = (0, u.UT)(I.A, {
+    I = n(95701),
+    N = n(596344),
+    j = n(652215);
+let R = (0, u.UT)(N.A, {
     getQueryId: (e, t, n, i, l) => (null != n && null != t && null != i && l ? e.id : null),
-    get: (e) => (I.A.isReady(e.id) ? I.A.getMessages(e.id) : null),
+    get: (e) => (N.A.isReady(e.id) ? N.A.getMessages(e.id) : null),
     load: async (e, t, n, i) => {
         if (null == n || null == t) return;
         let l = e.id;
         (await _.A.fetchMessages({ channelId: l, limit: 100 }),
             await S.h.dispatch({
                 type: "THREAD_CREATE",
-                channel: new j.Lt({
+                channel: new I.Lt({
                     id: l,
                     parent_id: t,
-                    type: N.rbe.MEDIA_THREAD,
+                    type: j.rbe.MEDIA_THREAD,
                     name: e.title ?? "",
                     guild_id: n ?? "null",
                     ownerId: i,
@@ -48,7 +48,7 @@ let R = (0, u.UT)(I.A, {
                 messageId: e.id,
             }));
     },
-    getIsLoading: (e) => I.A.isLoadingMessages(e.id),
+    getIsLoading: (e) => N.A.isLoadingMessages(e.id),
 });
 var O = n(451909),
     M = n(118517),
@@ -76,7 +76,7 @@ function z(e) {
     let {
             controlBarAnimationSpring: t,
             attachment: n,
-            channelId: r,
+            channelId: a,
             messageId: s,
             guildId: o,
             hidden: c = !1,
@@ -84,15 +84,15 @@ function z(e) {
         } = e,
         m = n.id,
         S = (0, b.QZ)(o),
-        j = null != d && d < 460,
-        z = S.slice(0, j ? 2 : 3),
-        Y = (0, u.bG)([I.A], () => I.A.getMessage(r, s), [r, s]),
-        q = (0, u.bG)([L.A], () => L.A.getChannel(r), [r]),
+        I = null != d && d < 460,
+        z = S.slice(0, I ? 2 : 3),
+        Y = (0, u.bG)([N.A], () => N.A.getMessage(a, s), [a, s]),
+        q = (0, u.bG)([L.A], () => L.A.getChannel(a), [a]),
         Q = (0, u.bG)([L.A], () => L.A.getChannel(m), [m]),
         { enableMediaComments: $ } = U.useConfig({ location: "ClipEmbedMediaMentionBar" }),
-        { activeLayer: X, videoRef: Z } = (0, f.X$)(),
-        J = (0, h.Lt)(n.flags ?? 0, N.sbO.HAS_TIMELINE_COMMENTS),
-        { data: ee } = R(n, r, o, Y?.author.id, $ && J),
+        { activeLayer: X, videoRef: Z } = (0, p.X$)(),
+        J = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
+        { data: ee } = R(n, a, o, Y?.author.id, $ && J),
         et = l.useRef(null);
     function en(e, t) {
         (e?.stopPropagation(),
@@ -119,12 +119,12 @@ function z(e) {
     let ei = ee?.length ?? 0;
     if (!$ || null == q || null == s) return null;
     let el = V.intl.formatToPlainString(B.default.OYDyt2, { count: ei });
-    return (0, i.jsxs)(p.animated.div, {
-        className: a()(H.M0, { [H.pd]: c }),
+    return (0, i.jsxs)(f.animated.div, {
+        className: r()(H.M0, { [H.pd]: c }),
         inert: c,
         style: {
-            opacity: (0, p.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (c ? 0 : `${e}`)),
-            transform: (0, p.to)(
+            opacity: (0, f.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (c ? 0 : `${e}`)),
+            transform: (0, f.to)(
                 [t.to({ range: [0, 1], output: [50, 0] })],
                 (e) => `translateY(${e}px) translateX(-50%)`,
             ),
@@ -206,17 +206,17 @@ function z(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: W(m, Z),
                         }),
-                            w._.dispatch(N.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            w._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
-                    children: (0, i.jsx)(E.ArrowAngleLeftUpIcon, { size: "sm" }),
+                    children: (0, i.jsx)(x.ArrowAngleLeftUpIcon, { size: "sm" }),
                 }),
             }),
             ei > 0 &&
-                !j &&
+                !I &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(K, {}),
-                        (0, i.jsx)(x.D, {
+                        (0, i.jsx)(E.D, {
                             className: H.jC,
                             tag: "span",
                             onClick: function (e) {
@@ -255,41 +255,41 @@ function el(e) {
     let {
             controlBarAnimationSpring: t,
             attachment: n,
-            durationSeconds: r,
-            guildId: a,
+            durationSeconds: a,
+            guildId: r,
             channelId: s,
             messageId: o,
             hidden: c = !1,
         } = e,
         { enableMediaComments: d } = U.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
-        m = (0, h.Lt)(n.flags ?? 0, N.sbO.HAS_TIMELINE_COMMENTS),
-        { isActive: g, isControlBarExpanded: A } = (0, f.X$)(),
-        C = (0, u.bG)([I.A], () => I.A.getMessage(s, o), [s, o]),
-        { data: E } = R(n, s, a, C?.author.id, d && m && g);
+        m = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
+        { isActive: g, isControlBarExpanded: A } = (0, p.X$)(),
+        C = (0, u.bG)([N.A], () => N.A.getMessage(s, o), [s, o]),
+        { data: x } = R(n, s, r, C?.author.id, d && m && g);
     return (l.useEffect(() => {
-        g && R.refetch(n, s, a, C?.author.id, d && m && g);
-    }, [g, n, s, a, C?.author.id, d, m]),
-    !d || null == E || r <= 0)
+        g && R.refetch(n, s, r, C?.author.id, d && m && g);
+    }, [g, n, s, r, C?.author.id, d, m]),
+    !d || null == x || a <= 0)
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c && (!g || !A) && (0, i.jsx)("div", { className: en.s_ }),
-                  (0, i.jsx)(p.animated.div, {
+                  (0, i.jsx)(f.animated.div, {
                       className: en.IO,
                       style: {
                           transform: g
-                              ? (0, p.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
+                              ? (0, f.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
                               : "translateY(60px)",
                       },
-                      children: E.map((e) => (0, i.jsx)(ea, { hidden: c, message: e, durationSeconds: r }, e.id)),
+                      children: x.map((e) => (0, i.jsx)(er, { hidden: c, message: e, durationSeconds: a }, e.id)),
                   }),
               ],
           });
 }
-let er = { formatInline: !0 };
-function ea(e) {
-    let { message: t, durationSeconds: n, hidden: r } = e,
-        a = `${Math.min(100, ((t.mediaMention?.timestamp ?? 0) / 1e3 / n) * 100)}%`,
+let ea = { formatInline: !0 };
+function er(e) {
+    let { message: t, durationSeconds: n, hidden: a } = e,
+        r = `${Math.min(100, ((t.mediaMention?.timestamp ?? 0) / 1e3 / n) * 100)}%`,
         s = l.useMemo(
             () =>
                 (function (e) {
@@ -304,11 +304,11 @@ function ea(e) {
                 })(t?.content ?? ""),
             [t?.content],
         ),
-        { content: o } = (0, et.A)(t, er),
+        { content: o } = (0, et.A)(t, ea),
         u = "" !== t.content ? o : null,
-        { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, f.X$)(),
+        { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, p.X$)(),
         [h, A] = l.useState(!1),
-        [C, E] = l.useState(!1),
+        [C, x] = l.useState(!1),
         [v, b] = l.useState(!1);
     l.useEffect(() => {
         let e = c.current;
@@ -321,37 +321,37 @@ function ea(e) {
         }
     }, [t?.mediaMention?.timestamp, c]);
     let T = h || !d || C,
-        [S, j] = (0, q.z)(() => ({ ...ei(T), config: { ...Y.n } }));
+        [S, I] = (0, q.z)(() => ({ ...ei(T), config: { ...Y.n } }));
     if (
         (l.useEffect(() => {
             let e = !1;
             return (
                 !(async function () {
                     b(!0);
-                    let t = await j(ei(T));
+                    let t = await I(ei(T));
                     !e && t.finished && b(!1);
                 })(),
                 () => {
                     e = !0;
                 }
             );
-        }, [j, T]),
+        }, [I, T]),
         null == t)
     )
         return null;
-    let I = (0, i.jsx)(x.D, {
+    let N = (0, i.jsx)(E.D, {
         className: en.xL,
-        style: { left: a, display: r ? "none" : "block" },
-        inert: r,
-        onMouseEnter: () => E(!0),
-        onMouseLeave: () => E(!1),
+        style: { left: r, display: a ? "none" : "block" },
+        inert: a,
+        onMouseEnter: () => x(!0),
+        onMouseLeave: () => x(!1),
         onClick: function (e) {
             e.stopPropagation();
             let n = t.messageReference?.channel_id,
                 i = t.messageReference?.message_id;
             null != n && null != i && _.A.jumpToMessage({ channelId: n, messageId: i, flash: !0 });
         },
-        children: (0, i.jsx)(p.animated.div, {
+        children: (0, i.jsx)(f.animated.div, {
             className: en.BC,
             style: S,
             children:
@@ -374,7 +374,7 @@ function ea(e) {
         }),
     });
     return null == u
-        ? I
+        ? N
         : (0, i.jsx)(g.u, {
               positionKey: `${m}`,
               forceOpen: h && null == s && !v,
@@ -386,7 +386,7 @@ function ea(e) {
               assetSize: 16,
               lineClamp: 1,
               body: u,
-              children: I,
+              children: N,
           });
 }
 var es = n(478531),
@@ -395,10 +395,10 @@ var es = n(478531),
     ec = n(773503);
 let ed = [];
 function em(e) {
-    let { timeline: t, userIds: n, guildId: r, channelId: a } = e,
+    let { timeline: t, userIds: n, guildId: a, channelId: r } = e,
         s = l.useMemo(() => eu.H.fromAttachmentTimeline(t), [t]),
         [o, u] = l.useState({ speakingUserIds: [], activeSoundboards: [] }),
-        { videoRef: c } = (0, f.X$)();
+        { videoRef: c } = (0, p.X$)();
     return (
         (0, eo.A)(() => {
             let e = c.current;
@@ -410,28 +410,28 @@ function em(e) {
             speakingUserIds: o.speakingUserIds,
             activeSoundboards: ed,
             userIds: n,
-            guildId: r,
-            channelId: a,
+            guildId: a,
+            channelId: r,
         })
     );
 }
-var ef = n(419490),
-    ep = n(458977),
+var ep = n(419490),
+    ef = n(458977),
     eh = n(42502),
     eg = n(110742),
     eA = n(352527),
     eC = n(996682),
-    eE = n(27989);
-function ex(e) {
+    ex = n(27989);
+function eE(e) {
     let {
             size: t = "md",
             width: n,
             height: l,
-            color: r = $.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
+            color: a = $.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: r = "",
             ...s
         } = e,
-        o = (0, eE.J)(t),
+        o = (0, ex.J)(t),
         u = o?.width ?? n,
         c = o?.height ?? l;
     return (0, i.jsxs)("svg", {
@@ -446,41 +446,41 @@ function ex(e) {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M28.8334 13.3379C29.1092 13.3381 29.3332 13.562 29.3334 13.8379V25.3379C29.3334 27.5469 27.5423 29.3376 25.3334 29.3379H6.66738C4.45825 29.3379 2.66739 27.547 2.66738 25.3379V13.8379C2.66755 13.5619 2.89134 13.3379 3.16738 13.3379H28.8334ZM14.5853 15.7471C14.0777 15.2396 13.2551 15.2396 12.7475 15.7471L8.74746 19.7471C8.50377 19.9908 8.3666 20.3213 8.3666 20.666C8.3666 20.9676 8.47106 21.2589 8.66054 21.4902L8.74746 21.5849L12.7475 25.5849C13.2551 26.0923 14.0777 26.0924 14.5853 25.5849C15.0927 25.0773 15.0927 24.2547 14.5853 23.7471L12.8041 21.9658H16.0004C18.4117 21.9662 20.3666 23.9216 20.3666 26.333C20.3668 27.0508 20.9495 27.6328 21.6674 27.6328C22.3847 27.6322 22.967 27.0504 22.9672 26.333C22.9672 22.4857 19.8476 19.3666 16.0004 19.3662H12.8041L14.5853 17.5849C15.0927 17.0773 15.0927 16.2547 14.5853 15.7471Z",
-                fill: "string" == typeof r ? r : r.css,
-                className: a,
+                fill: "string" == typeof a ? a : a.css,
+                className: r,
             }),
             (0, i.jsx)("path", {
                 d: "M9.27675 4.02342C9.67707 3.95309 9.99001 4.3646 9.81484 4.73143L6.81191 11.0146C6.74229 11.1603 6.60667 11.2639 6.44765 11.292L3.27382 11.8515C3.00188 11.8995 2.74267 11.7172 2.69472 11.4453L2.31777 9.31248C1.93416 7.13691 3.38731 5.06133 5.56289 4.67772L9.27675 4.02342Z",
-                fill: "string" == typeof r ? r : r.css,
-                className: a,
+                fill: "string" == typeof a ? a : a.css,
+                className: r,
             }),
             (0, i.jsx)("path", {
                 d: "M19.7807 2.17088C20.1811 2.10027 20.494 2.51195 20.3187 2.87889L17.3168 9.16209C17.2472 9.30779 17.1116 9.4114 16.9525 9.43944L10.8852 10.5088C10.4848 10.5792 10.1718 10.1676 10.3471 9.80077L13.35 3.51756C13.4197 3.37203 13.5554 3.26921 13.7143 3.2412L19.7807 2.17088Z",
-                fill: "string" == typeof r ? r : r.css,
-                className: a,
+                fill: "string" == typeof a ? a : a.css,
+                className: r,
             }),
             (0, i.jsx)("path", {
                 d: "M24.2221 1.39745C26.2944 1.17734 28.2121 2.59832 28.5795 4.68163L28.9564 6.81541C29.0042 7.08724 28.822 7.34658 28.5502 7.39452L21.39 8.65721C20.9897 8.72774 20.6769 8.31607 20.8519 7.9492L23.8539 1.66698C23.9239 1.52058 24.0607 1.4146 24.2221 1.39745Z",
-                fill: "string" == typeof r ? r : r.css,
-                className: a,
+                fill: "string" == typeof a ? a : a.css,
+                className: r,
             }),
         ],
     });
 }
 var ev = n(879241);
 function e_(e) {
-    let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
-        { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
+    let { attachment: t, channelId: n, messageId: a, isControlBarExpanded: s, isPlayerActive: o } = e,
+        { enableDistributedClips: c } = ef.A.useConfig({ location: "DistributedClipShareCTA" }),
         d = (0, u.bG)(
-            [ef.Ay, k.default],
+            [ep.Ay, k.default],
             () =>
                 (function (e, t) {
                     let n,
-                        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ef.Ay,
+                        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ep.Ay,
                         l = i.getClips(),
-                        r = e.clip_remote_id,
-                        a = null != r ? i.getClipByRemoteId(r) : void 0;
-                    if (null != a) return a;
+                        a = e.clip_remote_id,
+                        r = null != a ? i.getClipByRemoteId(a) : void 0;
+                    if (null != r) return r;
                     let s = (0, eg.Vi)(e);
                     if (null == s || null == t || !e.clip_participants?.some((e) => e.id === t)) return;
                     let o = 0;
@@ -491,38 +491,38 @@ function e_(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, k.default.getId(), ef.Ay),
+                })(t, k.default.getId(), ep.Ay),
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        f = (0, u.bG)([k.default, I.A], () => {
-            let e = I.A.getMessage(n, r);
+        p = (0, u.bG)([k.default, N.A], () => {
+            let e = N.A.getMessage(n, a);
             return (
                 null != e &&
                 e.author?.id !== k.default.getId() &&
                 (null == e.messageReference ||
-                    I.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
+                    N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
-        p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
+        f = (0, u.bG)([ep.Ay], () => ep.Ay.hasRepliedWithClip(a), [a]),
         h = l.useCallback(
             (e) => {
                 null != d &&
                     (e.stopPropagation(),
                     m({
                         clips: [d],
-                        messageReference: { channel_id: n, message_id: r },
+                        messageReference: { channel_id: n, message_id: a },
                         povTargetInformation: (0, eh.A)(t),
                     }));
             },
-            [m, d, n, r, t],
+            [m, d, n, a, t],
         );
-    return c && null != d && !p && f
+    return c && null != d && !f && p
         ? (0, i.jsxs)("button", {
-              className: a()(ev.eZ, { [ev.vu]: s, [ev.jn]: !o }),
+              className: r()(ev.eZ, { [ev.vu]: s, [ev.jn]: !o }),
               onClick: h,
               children: [
-                  (0, i.jsx)(ex, { size: "refresh_sm", color: $.A.colors.WHITE }),
+                  (0, i.jsx)(eE, { size: "refresh_sm", color: $.A.colors.WHITE }),
                   (0, i.jsx)(v.E, {
                       variant: "body-xs/semibold",
                       color: "text-overlay-light",
@@ -538,31 +538,31 @@ function eb(e) {
             playerState: t,
             controlBarAnimationSpring: n,
             isControlBarExpanded: l,
-            isActive: r,
-            isVolumeExpanded: p,
+            isActive: a,
+            isVolumeExpanded: f,
             attachment: h,
             guildId: g,
             isFullScreen: A,
             showParticipants: C,
-            showTextContent: E,
-            channelId: x,
+            showTextContent: x,
+            channelId: E,
             messageId: v,
             showSpeakingIndicators: _,
             clipUserIds: y,
             durationSeconds: b,
             showTimelineComments: T,
             setIsGridView: S,
-            isGridView: j,
+            isGridView: I,
         } = e,
-        I = (0, u.bG)([m.A], () => m.A.theme),
-        { activeLayer: N } = (0, f.X$)(),
+        N = (0, u.bG)([m.A], () => m.A.theme),
+        { activeLayer: j } = (0, p.X$)(),
         { ref: R, width: O } = (0, s.Ay)();
     return (0, i.jsx)(c.N, {
         theme: o.NJ.ONYX,
         children: (e) =>
             (0, i.jsxs)("div", {
                 ref: R,
-                className: a()(ey.MU, e),
+                className: r()(ey.MU, e),
                 children: [
                     (0, i.jsx)(es.A, {
                         createdAt: null != h.clip_created_at ? Date.parse(h.clip_created_at) : void 0,
@@ -573,49 +573,49 @@ function eb(e) {
                         playerState: t,
                         isControlBarExpanded: l,
                         isFullScreen: A,
-                        activeLayer: N,
-                        showTextContent: E,
-                        isGridView: j,
+                        activeLayer: j,
+                        showTextContent: x,
+                        isGridView: I,
                         setIsGridView: S,
                     }),
-                    !j &&
+                    !I &&
                         null != v &&
-                        null != x &&
+                        null != E &&
                         (0, i.jsx)(e_, {
                             isControlBarExpanded: l,
-                            isPlayerActive: r,
+                            isPlayerActive: a,
                             attachment: h,
                             messageId: v,
-                            channelId: x,
+                            channelId: E,
                         }),
-                    !j &&
+                    !I &&
                         _ &&
                         null != h.clip_events_timeline &&
-                        null != x &&
-                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: y, channelId: x }),
-                    r &&
+                        null != E &&
+                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: y, channelId: E }),
+                    a &&
                         null != g &&
-                        null != x &&
+                        null != E &&
                         null != v &&
                         (0, i.jsx)(d.NA.Provider, {
-                            value: I,
+                            value: N,
                             children: (0, i.jsx)(z, {
                                 controlBarAnimationSpring: n,
                                 attachment: h,
-                                channelId: x,
+                                channelId: E,
                                 messageId: v,
                                 guildId: g,
                                 containerWidth: O,
-                                hidden: !l || p,
+                                hidden: !l || f,
                             }),
                         }),
                     null != g &&
-                        null != x &&
+                        null != E &&
                         null != v &&
                         (0, i.jsx)(el, {
                             controlBarAnimationSpring: n,
                             attachment: h,
-                            channelId: x,
+                            channelId: E,
                             messageId: v,
                             guildId: g,
                             durationSeconds: h.duration_secs ?? b,

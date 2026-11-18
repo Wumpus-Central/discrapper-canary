@@ -48,8 +48,8 @@ n.d(
             let R = A[m],
                 D = E[m],
                 b = I[m],
-                k = (0, c.Iv)(y, 48),
-                j = p[m],
+                j = (0, c.Iv)(y, 48),
+                k = p[m],
                 M =
                     0 ===
                     (n =
@@ -73,10 +73,10 @@ n.d(
                         width: D,
                         height: D,
                         children:
-                            null != k
+                            null != j
                                 ? (0, i.jsx)("img", {
                                       alt: y.name,
-                                      src: k,
+                                      src: j,
                                       className: g.es,
                                       draggable: !1,
                                       style: { width: D, height: D },
@@ -92,13 +92,13 @@ n.d(
                         "aria-hidden": !0,
                         children: (0, i.jsx)(d.Ay, {
                             mask: d.hW.SQUIRCLE,
-                            width: j,
-                            height: j,
+                            width: k,
+                            height: k,
                             children: x
                                 ? (0, i.jsx)("div", {
                                       className: s()(S[m], g.WQ),
                                       style: { backgroundColor: _ ?? v },
-                                      children: (0, i.jsx)(o.n, { dotRadius: j / 10 }),
+                                      children: (0, i.jsx)(o.n, { dotRadius: k / 10 }),
                                   })
                                 : (0, i.jsx)("div", {
                                       className: s()(S[m], g.q9),

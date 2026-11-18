@@ -12,12 +12,12 @@ var n = a(477900),
     p = a(61780),
     g = a(403362),
     x = a(867041),
-    v = a(786574),
-    b = a(730441);
+    b = a(786574),
+    v = a(730441);
 function j(e) {
     let { id: t, selected: a, onClick: l, children: i, ref: r } = e;
     return (0, n.jsx)(o.D, {
-        className: s()(b.V3, { [b.wH]: a }),
+        className: s()(v.V3, { [v.wH]: a }),
         "data-tab-id": t,
         innerRef: r,
         onClick: l,
@@ -30,7 +30,7 @@ function f(e) {
         [o, f] = l.useState(() => new Set()),
         { ref: y, width: E } = (0, m.Ay)(),
         C = l.useRef(null),
-        S = (0, v.N)(t, i),
+        S = (0, b.N)(t, i),
         _ = (0, h.A)();
     l.useEffect(() => {
         if (null == E) return;
@@ -56,10 +56,10 @@ function f(e) {
         [S, _],
     );
     return (0, n.jsxs)("div", {
-        className: b.Mv,
+        className: v.Mv,
         children: [
             (0, n.jsxs)("div", {
-                className: b.$H,
+                className: v.$H,
                 ref: y,
                 children: [
                     t
@@ -74,7 +74,7 @@ function f(e) {
                         })
                         .filter(g.Vq),
                     (0, n.jsx)("div", {
-                        className: b.g,
+                        className: v.g,
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
                             return (0, n.jsx)(
@@ -95,7 +95,7 @@ function f(e) {
                 ],
             }),
             (0, n.jsx)("div", {
-                className: b.MK,
+                className: v.MK,
                 children:
                     (o.size > 0 || null != _) &&
                     (0, n.jsx)(u.Y, {
@@ -110,11 +110,11 @@ function f(e) {
                             (0, n.jsx)(r.$n, {
                                 ...e,
                                 buttonRef: C,
-                                className: b.Iq,
+                                className: v.Iq,
                                 size: r.$n.Sizes.ICON,
                                 look: r.$n.Looks.BLANK,
                                 children: (0, n.jsx)(p.A, {
-                                    className: b.__invalid_overflowIcon,
+                                    className: v.__invalid_overflowIcon,
                                     width: 16,
                                     height: 16,
                                 }),

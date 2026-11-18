@@ -1,6 +1,6 @@
-var s = n(477900);
+var l = n(477900);
 n(582128);
-var l = n(140735),
+var s = n(140735),
     a = n(963713);
 n.d(
     t,
@@ -8,7 +8,7 @@ n.d(
     {
         A: function () {
             let { productName: e } = (0, a.o5)();
-            return (0, s.jsx)(l.A, { children: e });
+            return (0, l.jsx)(s.A, { children: e });
         },
     },
 );
