@@ -1127,6 +1127,7 @@ class Y extends u.G {
             { no: 6, name: "allow_text", kind: "scalar", T: 8 },
             { no: 7, name: "text_max_length", kind: "message", T: () => h.ZQ },
             { no: 8, name: "excluded_from_score", kind: "scalar", T: 8 },
+            { no: 9, name: "show_if", kind: "message", T: () => eg },
         ]);
     }
     create(e) {
@@ -1167,6 +1168,9 @@ class Y extends u.G {
                 case 8:
                     r.excludedFromScore = e.bool();
                     break;
+                case 9:
+                    r.showIf = eg.internalBinaryRead(e, e.uint32(), t, r.showIf);
+                    break;
                 default:
                     let a = t.readUnknownField;
                     if ("throw" === a)
@@ -1186,7 +1190,8 @@ class Y extends u.G {
             !1 !== e.allowText && n.tag(6, l.O0.Varint).bool(e.allowText),
             e.textMaxLength &&
                 h.ZQ.internalBinaryWrite(e.textMaxLength, n.tag(7, l.O0.LengthDelimited).fork(), t).join(),
-            !1 !== e.excludedFromScore && n.tag(8, l.O0.Varint).bool(e.excludedFromScore));
+            !1 !== e.excludedFromScore && n.tag(8, l.O0.Varint).bool(e.excludedFromScore),
+            e.showIf && eg.internalBinaryWrite(e.showIf, n.tag(9, l.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? l.f$.onWrite : i)(this.typeName, e, n), n);
     }
@@ -1355,6 +1360,7 @@ class ea extends u.G {
             { no: 1, name: "id", kind: "scalar", T: 13 },
             { no: 2, name: "text", kind: "message", T: () => m.X },
             { no: 3, name: "pinned", kind: "scalar", T: 8 },
+            { no: 4, name: "show_if", kind: "message", T: () => eg },
         ]);
     }
     create(e) {
@@ -1380,6 +1386,9 @@ class ea extends u.G {
                 case 3:
                     r.pinned = e.bool();
                     break;
+                case 4:
+                    r.showIf = eg.internalBinaryRead(e, e.uint32(), t, r.showIf);
+                    break;
                 default:
                     let a = t.readUnknownField;
                     if ("throw" === a)
@@ -1393,7 +1402,8 @@ class ea extends u.G {
     internalBinaryWrite(e, n, t) {
         (0 !== e.id && n.tag(1, l.O0.Varint).uint32(e.id),
             e.text && m.X.internalBinaryWrite(e.text, n.tag(2, l.O0.LengthDelimited).fork(), t).join(),
-            !1 !== e.pinned && n.tag(3, l.O0.Varint).bool(e.pinned));
+            !1 !== e.pinned && n.tag(3, l.O0.Varint).bool(e.pinned),
+            e.showIf && eg.internalBinaryWrite(e.showIf, n.tag(4, l.O0.LengthDelimited).fork(), t).join());
         let i = t.writeUnknownFields;
         return (!1 !== i && (!0 == i ? l.f$.onWrite : i)(this.typeName, e, n), n);
     }
@@ -2684,7 +2694,7 @@ class e4 extends u.G {
             },
             { no: 2, name: "page_id", kind: "scalar", T: 13 },
             { no: 3, name: "revision", kind: "scalar", T: 13 },
-            { no: 4, name: "progress", kind: "message", T: () => e6 },
+            { no: 4, name: "progress", kind: "message", T: () => e5 },
             { no: 5, name: "questions", kind: "message", oneof: "content", T: () => nn },
             { no: 6, name: "conjoint", kind: "message", oneof: "content", T: () => nx },
             { no: 7, name: "maxdiff", kind: "message", oneof: "content", T: () => nN },
@@ -2725,7 +2735,7 @@ class e4 extends u.G {
                     r.revision = e.uint32();
                     break;
                 case 4:
-                    r.progress = e6.internalBinaryRead(e, e.uint32(), t, r.progress);
+                    r.progress = e5.internalBinaryRead(e, e.uint32(), t, r.progress);
                     break;
                 case 5:
                     r.content = {
@@ -2768,7 +2778,7 @@ class e4 extends u.G {
         (0 !== e.status && n.tag(1, l.O0.Varint).int32(e.status),
             0 !== e.pageId && n.tag(2, l.O0.Varint).uint32(e.pageId),
             0 !== e.revision && n.tag(3, l.O0.Varint).uint32(e.revision),
-            e.progress && e6.internalBinaryWrite(e.progress, n.tag(4, l.O0.LengthDelimited).fork(), t).join(),
+            e.progress && e5.internalBinaryWrite(e.progress, n.tag(4, l.O0.LengthDelimited).fork(), t).join(),
             "questions" === e.content.oneofKind &&
                 nn.internalBinaryWrite(e.content.questions, n.tag(5, l.O0.LengthDelimited).fork(), t).join(),
             "conjoint" === e.content.oneofKind &&
@@ -2785,7 +2795,7 @@ class e4 extends u.G {
     }
 }
 let e8 = new e4();
-class e5 extends u.G {
+class e9 extends u.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.Progress", [
             { no: 1, name: "page_index", kind: "scalar", T: 13 },
@@ -2829,8 +2839,8 @@ class e5 extends u.G {
         return (!1 !== i && (!0 == i ? l.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let e6 = new e5();
-class e9 extends u.G {
+let e5 = new e9();
+class e6 extends u.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.SubmitError", [
             { no: 1, name: "page_id", kind: "scalar", T: 13 },
@@ -2899,7 +2909,7 @@ class e9 extends u.G {
         return (!1 !== i && (!0 == i ? l.f$.onWrite : i)(this.typeName, e, n), n);
     }
 }
-let e7 = new e9();
+let e7 = new e6();
 class ne extends u.G {
     constructor() {
         super("discord_protos.discord_surveys.v1.RenderedQuestionList", [
