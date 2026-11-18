@@ -1,260 +1,256 @@
-n.d(e, { default: () => _ });
-var i = n(477900),
-    l = n(582128),
-    a = n(189213),
-    r = n(289873),
-    s = n(834730),
-    o = n(683438),
-    u = n(711950),
-    d = n(136463),
-    c = n(124077),
-    m = n(855986),
-    g = n(681579),
-    f = n(535820),
-    h = n(994500),
-    x = n(287809),
-    A = n(735547),
-    b = n(242225);
-function v(t) {
-    return t.type === A.OK.FRIEND || t.type === A.OK.DM;
+i.d(e, { default: () => U });
+var n = i(477900),
+    l = i(582128),
+    a = i(855986),
+    r = i(189213),
+    s = i(289873),
+    o = i(834730),
+    u = i(683438),
+    d = i(711950),
+    c = i(988912),
+    m = i(826603),
+    g = i(681579),
+    f = i(535820),
+    h = i(994500),
+    x = i(287809),
+    y = i(735547),
+    p = i(242225);
+function b(t) {
+    return t.type === y.OK.FRIEND || t.type === y.OK.DM;
 }
-function p(t, e, n) {
+function A(t, e, i) {
     return t
-        .filter(v)
+        .filter(b)
         .map((t) => t.item)
-        .filter((t) => (0, b.A)(t, e, n));
+        .filter((t) => (0, p.A)(t, e, i));
 }
-var y = n(235876),
-    S = n(71393),
-    j = n(145890),
-    C = n(841459),
-    I = n(213374),
-    k = n(331322),
-    N = n(534514),
-    w = n(752222),
-    E = n(792996),
-    T = n(839568);
-function P() {
-    return (0, i.jsxs)(k.B, {
+var v = i(235876),
+    S = i(71393),
+    j = i(145890),
+    I = i(841459),
+    C = i(213374),
+    N = i(331322),
+    k = i(534514),
+    E = i(752222),
+    T = i(792996),
+    w = i(839568);
+function P(t) {
+    let { displayNoun: e } = t;
+    return (0, n.jsxs)(N.B, {
         gap: 8,
         align: "center",
-        className: T.HY,
+        className: w.HY,
         children: [
-            (0, i.jsx)(N.D, { variant: "heading-lg/semibold", children: E.intl.string(w.default["3qrm/9"]) }),
-            (0, i.jsx)(s.E, {
+            (0, n.jsx)(k.D, { variant: "heading-lg/semibold", children: T.intl.string(E.default["3qrm/9"]) }),
+            (0, n.jsx)(o.E, {
                 variant: "body-md/medium",
                 color: "text-muted",
-                children: E.intl.formatToPlainString(w.default["NyR+6P"], {
-                    noun: (0, c.A)({ displayNoun: null, lowercase: !0 }),
-                }),
+                children: T.intl.formatToPlainString(E.default["NyR+6P"], { displayNoun: e ?? "other" }),
             }),
         ],
     });
 }
-var R = n(778712),
-    O = n(652215),
-    B = n(966327),
-    D = n(855755),
-    F = n(290863),
-    H = n(427262),
-    K = n(75095),
-    M = n(172799);
-let U = l.memo(function (t) {
-    let { user: e, sendState: n, onInvite: a } = t,
-        r = l.useId(),
-        o = l.useCallback(() => a(e), [a, e]),
-        u = (0, D.A)(n === M.iu.SENT),
-        { status: d, isMobileOnline: c } = (0, m.cf)(
+var R = i(778712),
+    B = i(652215),
+    D = i(966327),
+    O = i(855755),
+    F = i(290863),
+    G = i(427262),
+    H = i(75095),
+    K = i(172799);
+let M = l.memo(function (t) {
+    let { user: e, sendState: i, onInvite: r } = t,
+        s = l.useId(),
+        u = l.useCallback(() => r(e), [r, e]),
+        d = (0, O.A)(i === K.iu.SENT),
+        { status: c, isMobileOnline: m } = (0, a.cf)(
             [F.A],
             () => ({ status: F.A.getStatus(e.id), isMobileOnline: F.A.isMobileOnline(e.id) }),
             [e.id],
         );
-    return (0, i.jsxs)("div", {
-        ref: u,
+    return (0, n.jsxs)("div", {
+        ref: d,
         role: "listitem",
         tabIndex: -1,
-        className: T.nM,
+        className: w.nM,
         children: [
-            (0, i.jsx)(B.A, {
+            (0, n.jsx)(D.A, {
                 user: e,
                 size: R._3.SIZE_32,
-                status: d !== O.clD.OFFLINE ? d : void 0,
-                isMobile: c,
+                status: c !== B.clD.OFFLINE ? c : void 0,
+                isMobile: m,
                 "aria-hidden": !0,
             }),
-            (0, i.jsxs)(k.B, {
+            (0, n.jsxs)(N.B, {
                 gap: 0,
-                className: T.qg,
+                className: w.qg,
                 children: [
-                    (0, i.jsx)(s.E, {
-                        id: r,
+                    (0, n.jsx)(o.E, {
+                        id: s,
                         variant: "body-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: H.Ay.getName(e),
+                        children: G.Ay.getName(e),
                     }),
-                    (0, i.jsx)(s.E, {
+                    (0, n.jsx)(o.E, {
                         variant: "body-xs/normal",
                         color: "text-subtle",
                         lineClamp: 1,
-                        children: H.Ay.getUserTag(e, { decoration: "never" }),
+                        children: G.Ay.getUserTag(e, { decoration: "never" }),
                     }),
                 ],
             }),
-            (0, i.jsx)(K.A, { sendState: n, onInvite: o, nameId: r }),
+            (0, n.jsx)(H.A, { sendState: i, onInvite: u, nameId: s }),
         ],
     });
 });
-function _(t) {
+function U(t) {
     let e,
-        n,
-        A,
-        b,
-        { guildId: v, ...k } = t,
+        i,
+        y,
+        p,
+        { guildId: b, ...N } = t,
         {
-            users: N,
+            users: k,
             isLoading: R,
-            hasNoFriends: B,
-            search: D,
+            hasNoFriends: D,
+            search: O,
         } = (function () {
-            let t = (0, m.yK)([f.A, h.A, x.default], () =>
-                    p(f.A.getInviteSuggestionRows(), x.default.getCurrentUser()?.id, h.A),
+            let t = (0, a.yK)([f.A, h.A, x.default], () =>
+                    A(f.A.getInviteSuggestionRows(), x.default.getCurrentUser()?.id, h.A),
                 ),
-                [e, n] = l.useState(!0),
-                [i, a] = l.useState(!1),
-                r = l.useRef(""),
-                s = l.useCallback((t) => {
-                    ((r.current = t), (0, g.B)(t));
+                [e, i] = l.useState(!0),
+                [n, r] = l.useState(!1),
+                s = l.useRef(""),
+                o = l.useCallback((t) => {
+                    ((s.current = t), (0, g.B)(t));
                 }, []);
             return (
                 l.useEffect(() => {
                     !(async function () {
                         try {
                             (await (0, g.t)({ omitUserIds: new Set() }),
-                                a(0 === p(f.A.getInviteSuggestionRows(), x.default.getCurrentUser()?.id, h.A).length));
+                                r(0 === A(f.A.getInviteSuggestionRows(), x.default.getCurrentUser()?.id, h.A).length));
                         } catch {
                             return;
                         } finally {
-                            n(!1);
+                            i(!1);
                         }
-                        "" !== r.current && (0, g.B)(r.current);
+                        "" !== s.current && (0, g.B)(s.current);
                     })();
                 }, []),
-                { users: t, isLoading: e, hasNoFriends: i, search: s }
+                { users: t, isLoading: e, hasNoFriends: n, search: o }
             );
         })(),
-        { getSendState: F, handleInvite: H } =
-            ((n =
-                null != (e = (0, m.bG)([S.A], () => S.A.getGuild(v)?.linkedGameOrganization ?? null))
+        { getSendState: F, handleInvite: G } =
+            ((i =
+                null != (e = (0, a.bG)([S.A], () => S.A.getGuild(b)?.linkedGameOrganization ?? null))
                     ? (0, j.A)(e)
                     : null),
-            (A = (0, y.i)((t) => (null != n ? t[n] : void 0))),
+            (y = (0, v.i)((t) => (null != i ? t[i] : void 0))),
             {
-                getSendState: l.useCallback((t) => A?.[t] ?? null, [A]),
+                getSendState: l.useCallback((t) => y?.[t] ?? null, [y]),
                 handleInvite: l.useCallback(
                     (t) => {
-                        null != e && (0, C.A)((0, j.A)(e), e, t, I.A);
+                        null != e && (0, I.A)((0, j.A)(e), e, t, C.A);
                     },
                     [e],
                 ),
             }),
-        { data: K, isLoading: M } = (0, d.c)(v),
-        [_, G] = l.useState(""),
-        q = l.useCallback(
+        { data: H, isLoading: K } = (0, m.c)(b),
+        U = (0, a.bG)([c.A], () => c.A.getDisplayNounByGuildId(b), [b]),
+        [_, q] = l.useState(""),
+        z = l.useCallback(
             (t) => {
-                (G(t), D(t));
+                (q(t), O(t));
             },
-            [D],
+            [O],
         ),
-        z = l.useCallback(() => q(""), [q]),
-        L = l.useCallback(
+        L = l.useCallback(() => z(""), [z]),
+        Q = l.useCallback(
             (t) => {
                 let { row: e } = t,
-                    n = N[e];
-                return (0, i.jsx)(U, { user: n, sendState: F(n.id), onInvite: H }, n.id);
+                    i = k[e];
+                return (0, n.jsx)(M, { user: i, sendState: F(i.id), onInvite: G }, i.id);
             },
-            [N, F, H],
+            [k, F, G],
         ),
-        Q = R || (null == K && M);
-    b =
-        Q || 0 === N.length
+        V = R || (null == H && K);
+    p =
+        V || 0 === k.length
             ? {
                   sections: [1],
                   sectionHeight: 0,
                   rowHeight: 192,
                   innerRole: "list",
                   renderRow: () =>
-                      (0, i.jsx)(
+                      (0, n.jsx)(
                           "div",
                           {
                               role: "listitem",
-                              className: T.h5,
-                              children: Q
-                                  ? (0, i.jsx)(r.y, {})
-                                  : (0, i.jsx)(s.E, {
+                              className: w.h5,
+                              children: V
+                                  ? (0, n.jsx)(s.y, {})
+                                  : (0, n.jsx)(o.E, {
                                         variant: "body-sm/medium",
                                         color: "text-muted",
-                                        children: E.intl.string(E.t.ojoWgX),
+                                        children: T.intl.string(T.t.ojoWgX),
                                     }),
                           },
                           "status",
                       ),
               }
-            : { sections: [N.length], sectionHeight: 0, rowHeight: 48, innerRole: "list", renderRow: L };
-    let V = (0, c.A)({ displayNoun: null }),
-        W = K?.name,
+            : { sections: [k.length], sectionHeight: 0, rowHeight: 48, innerRole: "list", renderRow: Q };
+    let W = H?.name,
         X =
             null != W
-                ? E.intl.formatToPlainString(w.default.UoO0dk, { orgName: W })
-                : E.intl.formatToPlainString(w.default.cRK6SQ, { noun: V }),
-        Y = E.intl.formatToPlainString(w.default.EnTIIr, { noun: V }),
+                ? T.intl.formatToPlainString(E.default.UoO0dk, { orgName: W })
+                : T.intl.formatToPlainString(E.default.cRK6SQ, { displayNoun: U ?? "other" }),
+        Y = T.intl.formatToPlainString(E.default.EnTIIr, { displayNoun: U ?? "other" }),
         Z =
             null != W
-                ? E.intl.formatToPlainString(w.default.VGOQ4v, {
-                      orgName: W,
-                      noun: (0, c.A)({ displayNoun: null, lowercase: !0 }),
-                  })
-                : E.intl.formatToPlainString(w.default.BBk7Qw, { noun: V });
-    return !Q && B
-        ? (0, i.jsx)(a.a, {
-              ...k,
+                ? T.intl.formatToPlainString(E.default.VGOQ4v, { orgName: W, displayNoun: U ?? "other" })
+                : T.intl.formatToPlainString(E.default.BBk7Qw, { displayNoun: U ?? "other" });
+    return !V && D
+        ? (0, n.jsx)(r.a, {
+              ...N,
               title: Y,
               subtitle: Z,
               actions: [
                   {
                       variant: "primary",
-                      text: E.intl.string(w.default.kdLF2T),
+                      text: T.intl.string(E.default.kdLF2T),
                       onClick: () => {
-                          (u.A.transitionToSection(O.m3P.ADD_FRIEND, { explicit: !0 }), k.onClose());
+                          (d.A.transitionToSection(B.m3P.ADD_FRIEND, { explicit: !0 }), N.onClose());
                       },
                   },
               ],
-              children: (0, i.jsx)(P, {}),
+              children: (0, n.jsx)(P, { displayNoun: U }),
           })
-        : (0, i.jsx)(a.a, {
-              ...k,
+        : (0, n.jsx)(r.a, {
+              ...N,
               title: Y,
-              subtitle: Q ? void 0 : Z,
-              input: Q
+              subtitle: V ? void 0 : Z,
+              input: V
                   ? void 0
-                  : (0, i.jsx)(o.I, {
+                  : (0, n.jsx)(u.I, {
                         size: "md",
                         query: _,
-                        onChange: q,
-                        onClear: z,
+                        onChange: z,
+                        onClear: L,
                         placeholder: X,
                         "aria-label": X,
                         autoFocus: !0,
                     }),
-              listProps: b,
-              actionBarInput: Q
+              listProps: p,
+              actionBarInput: V
                   ? void 0
-                  : (0, i.jsx)(s.E, {
+                  : (0, n.jsx)(o.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
-                        children: E.intl.formatToPlainString(w.default.yKyx41, { days: 7 }),
+                        children: T.intl.formatToPlainString(E.default.yKyx41, { days: 7 }),
                     }),
               actions: [],
           });
 }
-n(673383);
+i(673383);

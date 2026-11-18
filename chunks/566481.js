@@ -125,7 +125,7 @@ function G(e) {
     let { projects: l } = e,
         n = (0, p.tb)((0, a.zy)().pathname),
         r = (0, g.rX)("ConjureRailFolder"),
-        h = (0, x.A)(r, W),
+        h = (0, x.A)(W),
         { open: f } = h,
         m = l.length > 0,
         A = t.useMemo(() => {

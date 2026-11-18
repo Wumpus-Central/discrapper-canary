@@ -8856,7 +8856,7 @@ function r4(e) {
                     let n = new Uint8Array(e);
                     r6.$1(n, (e, n) => {
                         null != e && a(e);
-                        let l = Object.keys(n).reduce((e, t) => ({ ...e, [t]: JSON.parse(r6.strFromU8(n[t])) }), {}),
+                        let l = Object.keys(n).reduce((e, t) => ({ ...e, [t]: JSON.parse(r6.he(n[t])) }), {}),
                             i = l["manifest.json"];
                         t(l[`animations/${i.animations[0].id}.json`]);
                     });
@@ -9108,7 +9108,7 @@ let oe = {
                     a.e(347871),
                     a.e(287973),
                     a.e(806979),
-                    a.e(966308),
+                    a.e(245368),
                     a.e(314863),
                     a.e(623386),
                     a.e(375428),

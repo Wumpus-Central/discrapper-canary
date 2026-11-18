@@ -1,50 +1,48 @@
-var e = n(582128),
-    i = n(858899),
-    r = n(949757),
-    l = n(363882),
-    s = n(540665),
-    u = n(639519),
-    c = n(391712),
-    d = n(233470),
-    o = n(191850),
-    p = n(792996);
+var r = n(582128),
+    e = n(858899),
+    i = n(949757),
+    l = n(540665),
+    c = n(639519),
+    s = n(391712),
+    u = n(233470),
+    d = n(191850),
+    f = n(792996);
 n.d(
     a,
     {},
     {
-        A: function (t, a) {
-            let [n, f] = e.useState(!1),
-                h = e.useRef(!1),
-                v = e.useCallback(
-                    async (n) => {
-                        let e = (0, r.vt)(n);
-                        if (null != e) return void (0, i.P0)({ text: e, variant: "critical" });
-                        if (null == t || h.current) return;
-                        ((h.current = !0), f(!0));
-                        let v = null;
+        A: function (t) {
+            let [a, n] = r.useState(!1),
+                o = r.useRef(!1),
+                p = r.useCallback(
+                    async (a) => {
+                        let r = (0, i.vt)(a);
+                        if (null != r) return void (0, e.P0)({ text: r, variant: "critical" });
+                        if (o.current) return;
+                        ((o.current = !0), n(!0));
+                        let p = null;
                         try {
-                            let e = await (0, l.A)(n, t);
-                            ((v = await (0, d.gA)({ guild_id: t, install_scope: e ?? "user" })),
-                                (0, s.ensureConnection)(v),
-                                (0, s.r2)(v, c.A4),
-                                await (0, r.Hj)(v, n, p.intl.string(o.default["LUc7/5"])),
-                                a(v));
+                            ((p = await (0, u.gA)({})),
+                                (0, l.ensureConnection)(p),
+                                (0, l.r2)(p, s.A4),
+                                await (0, i.Hj)(p, a, f.intl.string(d.default["LUc7/5"])),
+                                t(p));
                         } catch (t) {
-                            if (null != v)
+                            if (null != p)
                                 try {
-                                    await (0, d.xx)(v);
+                                    await (0, u.xx)(p);
                                 } catch {}
-                            (0, i.P0)({
-                                text: null != v ? p.intl.string(o.default["Q+l4Hv"]) : (0, u.mG)(t),
+                            (0, e.P0)({
+                                text: null != p ? f.intl.string(d.default["Q+l4Hv"]) : (0, c.mG)(t),
                                 variant: "critical",
                             });
                         } finally {
-                            ((h.current = !1), f(!1));
+                            ((o.current = !1), n(!1));
                         }
                     },
-                    [t, a],
+                    [t],
                 );
-            return { ...(0, r.yN)(v), importing: n };
+            return { ...(0, i.yN)(p), importing: a };
         },
     },
 );

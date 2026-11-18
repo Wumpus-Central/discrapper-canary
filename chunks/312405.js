@@ -5,19 +5,19 @@ var n = l(477900),
     r = l(189213),
     u = l(331322),
     d = l(103557),
-    s = l(95477),
-    o = l(890497),
+    o = l(95477),
+    s = l(890497),
     c = l(682163),
     p = l(71393),
-    f = l(711014);
+    m = l(711014);
 l(951178);
-var m = l(246338),
+var f = l(246338),
     h = l(73153),
-    v = l(195880),
-    g = l(540665),
+    g = l(195880),
+    v = l(540665),
     k = l(382541),
-    _ = l(233470),
-    x = l(525530),
+    x = l(233470),
+    _ = l(525530),
     b = l(191850),
     C = l(792996);
 let w = " (Copy)",
@@ -28,16 +28,16 @@ h.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
 });
 var y = l(625180),
     A = l(457827),
-    S = l(373677),
-    E = l(754027),
-    I = l(939398),
+    I = l(373677),
+    S = l(754027),
+    E = l(939398),
     R = l(165610);
 function M(e) {
     let t = e.preview_application_id;
     if (null == t) return () => void 0;
-    let l = (0, S.PH)(null, (0, S.hR)(e.preview_supported_surfaces)),
-        n = (0, I.h)(null, l, e.remix_preview?.preview_app_channels ?? []),
-        i = (0, E.Op)((0, E.jS)(e), l);
+    let l = (0, I.PH)(null, (0, I.hR)(e.preview_supported_surfaces)),
+        n = (0, E.h)(null, l, e.remix_preview?.preview_app_channels ?? []),
+        i = (0, S.Op)((0, S.jS)(e), l);
     return (
         y.A.launchFrame({
             applicationId: t,
@@ -51,8 +51,8 @@ function M(e) {
 var G = l(858899),
     P = l(381991);
 function T(e) {
-    let { project: t, mode: l, currentGuildId: h, shareTicket: y, transitionState: A, onClose: S } = e,
-        [E, I] = i.useState(h),
+    let { project: t, mode: l, currentGuildId: h, shareTicket: y, transitionState: A, onClose: I } = e,
+        [S, E] = i.useState(h),
         [R, T] = i.useState(""),
         [z, B] = i.useState(() => {
             var e;
@@ -75,62 +75,65 @@ function T(e) {
                                 (e?.abandon(),
                                 (e = (function (e, t, l, n, i) {
                                     let a,
-                                        r = C.intl.string(b.default.Cn8H0Y),
-                                        u = (0, k.gA)(e.id, null != i ? { share_ticket: i } : void 0);
-                                    u.catch(() => void 0);
-                                    let d = null,
+                                        r,
+                                        u = C.intl.string(b.default.Cn8H0Y),
+                                        d = (0, k.gA)(e.id, null != i ? { share_ticket: i } : void 0);
+                                    d.catch(() => void 0);
+                                    let o = null,
                                         s = null,
-                                        o = !1,
-                                        c = !1;
-                                    function p(e) {
+                                        c = !1,
+                                        m = !1;
+                                    function h(e) {
                                         return (
-                                            (0, g.ensureConnection)(e), (d ??= (0, x.Io)(u, e).catch(() => "rejected"))
+                                            (0, v.ensureConnection)(e), (o ??= (0, _.Io)(d, e).catch(() => "rejected"))
                                         );
                                     }
-                                    let f = (0, v.m)();
-                                    j.set(f, (e, t) => {
-                                        (j.delete(f), (s = e), (0, k.vG)(e, t), p(e));
+                                    let w =
+                                            ((r = p.A.getGuild(t)),
+                                            "guild" === e.install_scope && null != r && (0, f.sM)(r, "ConjureRemix")),
+                                        y = (0, g.m)();
+                                    j.set(y, (e, t) => {
+                                        (j.delete(y), (s = e), (0, k.vG)(e, t), h(e));
                                     });
-                                    let m = (0, _.iR)({
+                                    let A = (0, x.iR)({
                                         name: l,
-                                        guild_id: t,
-                                        install_scope: e.install_scope,
+                                        ...(w ? { guild_id: t } : {}),
                                         remix_source_project_id: e.id,
                                         remix_share_ticket: i,
-                                        nonce: f,
+                                        nonce: y,
                                     }).then(
                                         (e) => (
-                                            j.delete(f),
+                                            j.delete(y),
                                             null != e.remix_preview &&
-                                                ((0, _.A5)(e.id, e.remix_preview), c || (a = n?.(e))),
-                                            p(e.id),
+                                                ((0, x.A5)(e.id, e.remix_preview), m || (a = n?.(e))),
+                                            h(e.id),
                                             e
                                         ),
-                                        () => (j.delete(f), null != s && (0, g.Bn)(s), null),
+                                        () => (j.delete(y), null != s && (0, v.Bn)(s), null),
                                     );
                                     return {
                                         guildId: t,
                                         name: l,
                                         open: async function () {
-                                            o = !0;
-                                            let e = await m;
-                                            if (null == e) return { ok: !1, message: r, kept: !1 };
-                                            let l = await p(e.id);
+                                            c = !0;
+                                            let e = await A;
+                                            if (null == e) return { ok: !1, message: u, kept: !1 };
+                                            let l = await h(e.id);
                                             return "unreachable" === l
-                                                ? ((d = null), (o = !1), { ok: !1, message: r, kept: !0 })
+                                                ? ((o = null), (c = !1), { ok: !1, message: u, kept: !0 })
                                                 : "rejected" === l
                                                   ? (a?.(),
-                                                    (0, g.Bn)(e.id),
-                                                    await (0, _.xx)(e.id).catch(() => void 0),
-                                                    { ok: !1, message: r, kept: !1 })
-                                                  : { ok: !0, projectId: e.id, guildId: t };
+                                                    (0, v.Bn)(e.id),
+                                                    await (0, x.xx)(e.id).catch(() => void 0),
+                                                    { ok: !1, message: u, kept: !1 })
+                                                  : { ok: !0, projectId: e.id, guildId: w ? t : null };
                                         },
                                         abandon: function () {
-                                            o ||
-                                                c ||
-                                                ((c = !0),
-                                                m.then((e) => {
-                                                    (a?.(), null != e && (0, g.Bn)(e.id));
+                                            c ||
+                                                m ||
+                                                ((m = !0),
+                                                A.then((e) => {
+                                                    (a?.(), null != e && (0, v.Bn)(e.id));
                                                 }));
                                         },
                                     };
@@ -138,7 +141,7 @@ function T(e) {
                             let l = await e.open();
                             return (
                                 l.ok
-                                    ? (0, g.dv)(l.projectId, r, void 0, !0 === u ? { copy: u } : { remix: !0 })
+                                    ? (0, v.dv)(l.projectId, r, void 0, !0 === u ? { copy: u } : { remix: !0 })
                                     : l.kept || (e = null),
                                 l
                             );
@@ -151,11 +154,11 @@ function T(e) {
             );
         }, [t, y]);
     i.useEffect(() => () => O.dismiss(), [O]);
-    let W = (0, a.yK)([f.Ay, p.A], () => {
+    let W = (0, a.yK)([m.Ay, p.A], () => {
             let e = [];
-            for (let t of f.Ay.getFlattenedGuildIds()) {
+            for (let t of m.Ay.getFlattenedGuildIds()) {
                 let l = p.A.getGuild(t);
-                null != l && (0, m.dd)(l, "ConjureRemixModal") && e.push(l);
+                null != l && (0, f.dd)(l, "ConjureRemixModal") && e.push(l);
             }
             return e;
         }),
@@ -169,7 +172,7 @@ function T(e) {
                 })),
             [W],
         ),
-        H = null != E && W.some((e) => e.id === E) ? E : (W[0]?.id ?? null),
+        H = null != S && W.some((e) => e.id === S) ? S : (W[0]?.id ?? null),
         J = "copy" === l,
         Q = J || z.trim().length >= 2,
         V = J ? b.default["UsUa/c"] : b.default["276ll6"],
@@ -183,18 +186,18 @@ function T(e) {
                     : (n.ok ? (0, P.A)(n.projectId, "remix") : (0, G.P0)({ text: n.message, variant: "critical" }), n);
             })(O, H, J ? { name: t.name, prompt: "", copy: !0 } : { name: z, prompt: R });
             if (null != e) {
-                if (e.ok) return void (await S());
+                if (e.ok) return void (await I());
                 N(!1);
             }
-        }, [O, H, J, t.name, z, Q, R, S]);
+        }, [O, H, J, t.name, z, Q, R, I]);
     return (0, n.jsx)(r.a, {
         transitionState: A,
-        onClose: S,
+        onClose: I,
         title: C.intl.string(V),
         subtitle: C.intl.formatToPlainString(J ? b.default.GzGb2w : b.default["QN8T+C"], { projectName: t.name }),
         size: "md",
         actions: [
-            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: S, disabled: F },
+            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: I, disabled: F },
             { text: C.intl.string(V), variant: "primary", onClick: $, loading: F, disabled: !Q || null == H },
         ],
         children: (0, n.jsxs)(u.B, {
@@ -212,7 +215,7 @@ function T(e) {
                                   autoFocus: !0,
                                   disabled: F,
                               }),
-                              (0, n.jsx)(s.k, {
+                              (0, n.jsx)(o.k, {
                                   label: C.intl.string(b.default.PuVQeX),
                                   value: z,
                                   onChange: B,
@@ -222,12 +225,12 @@ function T(e) {
                               }),
                           ],
                       }),
-                (0, n.jsx)(o.Z, {
+                (0, n.jsx)(s.Z, {
                     selectionMode: "single",
                     label: C.intl.string(b.default.cIWtCk),
                     options: U,
                     value: H,
-                    onSelectionChange: I,
+                    onSelectionChange: E,
                     disabled: F,
                     fullWidth: !0,
                 }),
