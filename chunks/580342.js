@@ -1,22 +1,22 @@
-var n = t(582128),
-    i = t(853555);
-t.d(
+var e = n(582128),
+    a = n(853555);
+n.d(
     l,
     {},
     {
-        A: function (e) {
-            n.useEffect(() => {
+        A: function (t) {
+            e.useEffect(() => {
                 let l = new Set();
-                function t() {
-                    let t = (0, i.UJ)(e);
-                    null == t || t.inert || ((t.inert = !0), l.add(t));
+                function n() {
+                    let n = (0, a.UJ)(t);
+                    null == n || n.inert || ((n.inert = !0), l.add(n));
                 }
-                t();
-                let n = setInterval(t, 250);
+                n();
+                let e = setInterval(n, 250);
                 return () => {
-                    for (let e of (clearInterval(n), l)) e.inert = !1;
+                    for (let t of (clearInterval(e), l)) t.inert = !1;
                 };
-            }, [e]);
+            }, [t]);
         },
     },
 );

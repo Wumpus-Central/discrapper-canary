@@ -534,14 +534,14 @@ function e1(e) {
 }
 var e2 = n(206248),
     e3 = n(423814),
-    e4 = n(77528),
-    e5 = n(783420),
+    e5 = n(77528),
+    e4 = n(783420),
     e8 = n(448645);
 let e6 = { object: ek.ZSU.BUTTON_CTA, section: ek.JJy.SUPER_REACTION_PICKER };
 function e9(e) {
     let { targetElementRef: t, shouldShow: n, onDismiss: i } = e,
         s = el.intl.string(el.t.eikz43),
-        r = (0, e4.V)(),
+        r = (0, e5.V)(),
         a = (0, e3.O)(),
         o = r?.subscriptionTrial,
         c = null != o || null != a,
@@ -551,7 +551,7 @@ function e9(e) {
                 ? el.intl.formatToPlainString(el.t.bkQ4bH, { percent: a.discount.amount })
                 : (0, e8.FY)({ intervalType: o?.interval, intervalCount: o?.intervalCount })
             : el.intl.string(el.t.sEAnVH);
-    return (0, l.jsx)(e5.A, {
+    return (0, l.jsx)(e4.A, {
         subscriptionTier: u,
         premiumModalAnalyticsLocation: e6,
         onSubscribeModalClose: (e) => {
@@ -990,8 +990,8 @@ let t1 = function (e) {
 };
 var t2 = n(120692),
     t3 = n(717421),
-    t4 = n(343032),
-    t5 = n(683063),
+    t5 = n(343032),
+    t4 = n(683063),
     t8 = n(748798);
 let t6 = { tension: 750, mass: 2.5, friction: 70 };
 function t9(e) {
@@ -1003,14 +1003,14 @@ function t9(e) {
         [d, E] = (0, x.kn)(u),
         [I, h] = r.useState(!1),
         [g, p] = (0, t3.z)(() => ({})),
-        A = (0, t2.animated)(t4.SuperReactionIcon);
+        A = (0, t2.animated)(t5.SuperReactionIcon);
     r.useEffect(() => {
         let e = d === f.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (E(ta.i.DISMISS), setTimeout(() => h(e), 200));
     }, [d, E]);
     let _ = I ? el.intl.string(el.t["Osi/uy"]) : t && !c ? el.intl.string(el.t["5cRA/b"]) : el.intl.string(el.t.buV4av),
         N = I ? el.intl.string(el.t.ORK94p) : void 0;
-    return (0, l.jsx)(t5.u, {
+    return (0, l.jsx)(t4.u, {
         position: "top",
         title: N,
         body: _,
@@ -1572,10 +1572,10 @@ let n3 = tt().memoize(
         (e) =>
             `${e * eQ.he.NonDiversityPerRow}px ${e * Math.ceil(tb.Ay.numNonDiversitySprites / eQ.he.NonDiversityPerRow)}px`,
     ),
-    n4 = tt().memoize(
+    n5 = tt().memoize(
         (e) => `${e * eQ.he.DiversityPerRow}px ${e * Math.ceil(tb.Ay.numDiversitySprites / eQ.he.DiversityPerRow)}px`,
     ),
-    n5 = r.memo(function (e) {
+    n4 = r.memo(function (e) {
         let { emoji: t, size: i, surrogateCodePoint: s, allowAnimatedEmoji: a, "aria-label": c, isLocked: u } = e,
             d = (() => {
                 if (!t.useSpriteSheet) {
@@ -1598,7 +1598,7 @@ let n3 = tt().memoize(
                         let a = null != e.index ? e.index : 0;
                         e.hasDiversity
                             ? ((s = n(12303)(`./spritesheet-${t}-${i}.png.js`).default),
-                              (l = n4(i)),
+                              (l = n5(i)),
                               (r = eQ.he.DiversityPerRow))
                             : ((s = n(145519)(`./spritesheet-emoji-${i}.png.js`).default),
                               (l = n3(i)),
@@ -1661,7 +1661,7 @@ function n6(e) {
             "data-surrogates": "surrogates" in n ? n.surrogates : null,
             "data-animated": n.animated ? "true" : null,
             ref: A,
-            children: (0, l.jsx)(n5, {
+            children: (0, l.jsx)(n4, {
                 "aria-label":
                     ((t = (0, eZ.N)(n)),
                     (N?.name != null &&
@@ -2646,8 +2646,8 @@ let iR = u()(eX.bo, 200),
             e2 = eG && e0;
         r.useImperativeHandle(Q, () => ({ onPickerOpen: tg }));
         let { location: e3 } = (0, p.p)(),
-            { page: e4, section: e5, object: e8, openPopoutType: e6, popoutLocation: te } = G,
-            tn = r.useMemo(() => ({ ...e3, section: e5 ?? ek.JJy.EMOJI_PICKER_POPOUT }), [e3, e5]),
+            { page: e5, section: e4, object: e8, openPopoutType: e6, popoutLocation: te } = G,
+            tn = r.useMemo(() => ({ ...e3, section: e4 ?? ek.JJy.EMOJI_PICKER_POPOUT }), [e3, e4]),
             { analyticsLocations: ti } = (0, y.Ay)(N.A.EMOJI_PICKER),
             { diversitySurrogate: ts } = (0, m.cf)([O.Ay], () => ({ diversitySurrogate: O.Ay.diversitySurrogate })),
             tl = (0, eX.sL)(eh, u, c, $),
@@ -2972,7 +2972,7 @@ let iR = u()(eX.bo, 200),
                           })
                         : (0, eX._7)({
                               emoji: e.emoji,
-                              location: { ...tn, object: e8 ?? ek.ZSU.EMOJI, ...(null != e4 && { page: e4 }) },
+                              location: { ...tn, object: e8 ?? ek.ZSU.EMOJI, ...(null != e5 && { page: e5 }) },
                               pickerIntention: c,
                               category: e.category,
                               subCategory: e.subCategory,

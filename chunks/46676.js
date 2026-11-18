@@ -1,165 +1,165 @@
-function l(t, e) {
-    return { past: [...t.past, t.present], present: e, future: [] };
+function r(e, t) {
+    return { past: [...e.past, e.present], present: t, future: [] };
 }
-function r(t, e, n) {
-    return { x: t.x + e, y: t.y + n };
+function l(e, t, n) {
+    return { x: e.x + t, y: e.y + n };
 }
-function i(t, e, n) {
-    switch (t.kind) {
+function i(e, t, n) {
+    switch (e.kind) {
         case "marker":
         case "erase":
-            return { ...t, points: t.points.map((t) => r(t, e, n)) };
+            return { ...e, points: e.points.map((e) => l(e, t, n)) };
         case "circle":
         case "square":
-            return { ...t, from: r(t.from, e, n), to: r(t.to, e, n) };
+            return { ...e, from: l(e.from, t, n), to: l(e.to, t, n) };
         case "text":
-            return { ...t, at: r(t.at, e, n) };
+            return { ...e, at: l(e.at, t, n) };
     }
 }
-function a(t, e, n) {
-    let l = n.x - e.x,
-        r = n.y - e.y,
-        i = l * l + r * r,
-        a = 0 === i ? 0 : Math.max(0, Math.min(1, ((t.x - e.x) * l + (t.y - e.y) * r) / i));
-    return Math.hypot(t.x - (e.x + a * l), t.y - (e.y + a * r));
+function a(e, t, n) {
+    let r = n.x - t.x,
+        l = n.y - t.y,
+        i = r * r + l * l,
+        a = 0 === i ? 0 : Math.max(0, Math.min(1, ((e.x - t.x) * r + (e.y - t.y) * l) / i));
+    return Math.hypot(e.x - (t.x + a * r), e.y - (t.y + a * l));
 }
-function o(t, e) {
-    return { x: t.x * e.width, y: t.y * e.height };
+function o(e, t) {
+    return { x: e.x * t.width, y: e.y * t.height };
 }
-function u(t, e) {
-    switch (t.kind) {
+function u(e, t) {
+    switch (e.kind) {
         case "marker":
         case "erase": {
-            let n = t.points.map((t) => o(t, e)),
-                l = (t.width * e.width) / 2,
-                r = n.map((t) => t.x),
-                i = n.map((t) => t.y),
-                a = Math.min(...r) - l,
-                u = Math.min(...i) - l;
-            return { x: a, y: u, width: Math.max(...r) + l - a, height: Math.max(...i) + l - u };
+            let n = e.points.map((e) => o(e, t)),
+                r = (e.width * t.width) / 2,
+                l = n.map((e) => e.x),
+                i = n.map((e) => e.y),
+                a = Math.min(...l) - r,
+                u = Math.min(...i) - r;
+            return { x: a, y: u, width: Math.max(...l) + r - a, height: Math.max(...i) + r - u };
         }
         case "circle":
         case "square": {
-            let n = o(t.from, e),
-                l = o(t.to, e),
-                r = (t.width * e.width) / 2;
+            let n = o(e.from, t),
+                r = o(e.to, t),
+                l = (e.width * t.width) / 2;
             return {
-                x: Math.min(n.x, l.x) - r,
-                y: Math.min(n.y, l.y) - r,
-                width: Math.abs(l.x - n.x) + 2 * r,
-                height: Math.abs(l.y - n.y) + 2 * r,
+                x: Math.min(n.x, r.x) - l,
+                y: Math.min(n.y, r.y) - l,
+                width: Math.abs(r.x - n.x) + 2 * l,
+                height: Math.abs(r.y - n.y) + 2 * l,
             };
         }
         case "text": {
-            let n = o(t.at, e),
-                l = t.size * e.width;
-            return { x: n.x, y: n.y, width: t.text.length * l * 0.6, height: l };
+            let n = o(e.at, t),
+                r = e.size * t.width;
+            return { x: n.x, y: n.y, width: e.text.length * r * 0.6, height: r };
         }
     }
 }
 (n(134528),
     n(947204),
     n.d(
-        e,
+        t,
         {},
         {
-            Vp: function (t, e) {
-                switch (e.type) {
+            Vp: function (e, t) {
+                switch (t.type) {
                     case "commit":
-                        return l(t, [...t.present, e.shape]);
+                        return r(e, [...e.present, t.shape]);
                     case "move":
-                        if ((0 === e.dx && 0 === e.dy) || !t.present.some((t) => t.id === e.id)) return t;
-                        return l(
-                            t,
-                            t.present.map((t) => (t.id === e.id ? i(t, e.dx, e.dy) : t)),
+                        if ((0 === t.dx && 0 === t.dy) || !e.present.some((e) => e.id === t.id)) return e;
+                        return r(
+                            e,
+                            e.present.map((e) => (e.id === t.id ? i(e, t.dx, t.dy) : e)),
                         );
                     case "remove": {
-                        let n = t.present.filter((t) => t.id !== e.id);
-                        return n.length === t.present.length ? t : l(t, n);
+                        let n = e.present.filter((e) => e.id !== t.id);
+                        return n.length === e.present.length ? e : r(e, n);
                     }
                     case "clear":
-                        return 0 === t.present.length ? t : l(t, []);
+                        return 0 === e.present.length ? e : r(e, []);
                     case "undo": {
-                        let e = t.past.at(-1);
-                        if (null == e) return t;
-                        return { past: t.past.slice(0, -1), present: e, future: [t.present, ...t.future] };
+                        let t = e.past.at(-1);
+                        if (null == t) return e;
+                        return { past: e.past.slice(0, -1), present: t, future: [e.present, ...e.future] };
                     }
                     case "redo": {
-                        let [e, ...n] = t.future;
-                        if (null == e) return t;
-                        return { past: [...t.past, t.present], present: e, future: n };
+                        let [t, ...n] = e.future;
+                        if (null == t) return e;
+                        return { past: [...e.past, e.present], present: t, future: n };
                     }
                 }
             },
-            WF: function (t, e, n, l) {
-                for (let r = t.length - 1; r >= 0; r--)
+            WF: function (e, t, n, r) {
+                for (let l = e.length - 1; l >= 0; l--)
                     if (
-                        (function (t, e, n, l) {
-                            let r = o(e, n);
-                            switch (t.kind) {
+                        (function (e, t, n, r) {
+                            let l = o(t, n);
+                            switch (e.kind) {
                                 case "erase":
                                     return !1;
                                 case "marker": {
-                                    let e = l + (t.width * n.width) / 2,
-                                        i = t.points.map((t) => o(t, n));
-                                    if (1 === i.length) return Math.hypot(r.x - i[0].x, r.y - i[0].y) <= e;
-                                    for (let t = 1; t < i.length; t++) if (a(r, i[t - 1], i[t]) <= e) return !0;
+                                    let t = r + (e.width * n.width) / 2,
+                                        i = e.points.map((e) => o(e, n));
+                                    if (1 === i.length) return Math.hypot(l.x - i[0].x, l.y - i[0].y) <= t;
+                                    for (let e = 1; e < i.length; e++) if (a(l, i[e - 1], i[e]) <= t) return !0;
                                     return !1;
                                 }
                                 case "square": {
-                                    let e = o(t.from, n),
-                                        i = o(t.to, n),
-                                        u = l + (t.width * n.width) / 2,
-                                        s = [e, { x: i.x, y: e.y }, i, { x: e.x, y: i.y }];
-                                    return s.some((t, e) => a(r, t, s[(e + 1) % 4]) <= u);
+                                    let t = o(e.from, n),
+                                        i = o(e.to, n),
+                                        u = r + (e.width * n.width) / 2,
+                                        c = [t, { x: i.x, y: t.y }, i, { x: t.x, y: i.y }];
+                                    return c.some((e, t) => a(l, e, c[(t + 1) % 4]) <= u);
                                 }
                                 case "circle": {
-                                    let e = o(t.from, n),
-                                        i = o(t.to, n),
-                                        a = Math.abs(i.x - e.x) / 2,
-                                        u = Math.abs(i.y - e.y) / 2;
+                                    let t = o(e.from, n),
+                                        i = o(e.to, n),
+                                        a = Math.abs(i.x - t.x) / 2,
+                                        u = Math.abs(i.y - t.y) / 2;
                                     if (0 === a || 0 === u) return !1;
-                                    let s = (e.x + i.x) / 2,
-                                        c = (e.y + i.y) / 2;
+                                    let c = (t.x + i.x) / 2,
+                                        s = (t.y + i.y) / 2;
                                     return (
-                                        Math.abs(Math.hypot((r.x - s) / a, (r.y - c) / u) - 1) <=
-                                        (l + (t.width * n.width) / 2) / Math.min(a, u)
+                                        Math.abs(Math.hypot((l.x - c) / a, (l.y - s) / u) - 1) <=
+                                        (r + (e.width * n.width) / 2) / Math.min(a, u)
                                     );
                                 }
                                 case "text": {
-                                    let e = u(t, n);
+                                    let t = u(e, n);
                                     return (
-                                        r.x >= e.x - l &&
-                                        r.x <= e.x + e.width + l &&
-                                        r.y >= e.y - l &&
-                                        r.y <= e.y + e.height + l
+                                        l.x >= t.x - r &&
+                                        l.x <= t.x + t.width + r &&
+                                        l.y >= t.y - r &&
+                                        l.y <= t.y + t.height + r
                                     );
                                 }
                             }
-                        })(t[r], e, n, l)
+                        })(e[l], t, n, r)
                     )
-                        return t[r];
+                        return e[l];
                 return null;
             },
-            jG: function (t) {
-                return t.some((t) => "erase" !== t.kind);
+            jG: function (e) {
+                return e.some((e) => "erase" !== e.kind);
             },
             k_: u,
-            oy: function (t, e) {
-                switch (t.kind) {
+            oy: function (e, t) {
+                switch (e.kind) {
                     case "marker":
-                        return t.points.length > 1;
+                        return e.points.length > 1;
                     case "erase":
-                        return t.points.length > 0;
+                        return e.points.length > 0;
                     case "circle":
                     case "square": {
-                        let n = t.width * e.width;
+                        let n = e.width * t.width;
                         return (
-                            Math.abs(t.to.x - t.from.x) * e.width >= n && Math.abs(t.to.y - t.from.y) * e.height >= n
+                            Math.abs(e.to.x - e.from.x) * t.width >= n && Math.abs(e.to.y - e.from.y) * t.height >= n
                         );
                     }
                     case "text":
-                        return "" !== t.text.trim();
+                        return "" !== e.text.trim();
                 }
             },
             vd: { past: [], present: [], future: [] },

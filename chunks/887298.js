@@ -1,6 +1,6 @@
 var l = t(477900),
-    s = t(165862),
-    i = t(477782),
+    i = t(165862),
+    s = t(477782),
     r = t(625903),
     o = t(253932),
     a = t(780964),
@@ -15,14 +15,14 @@ t.d(
         A: function (e) {
             let { closePopout: n } = e,
                 t = o.Q$.useSetting();
-            return (0, l.jsxs)(s.W, {
+            return (0, l.jsxs)(i.W, {
                 navId: "clips-in-call-voice",
                 "aria-label": x.intl.string(d.default["IxZyA+"]),
                 onClose: n,
                 onSelect: void 0,
                 children: [
-                    (0, l.jsx)(i.rX, {
-                        children: (0, l.jsx)(i.fP, {
+                    (0, l.jsx)(s.rX, {
+                        children: (0, l.jsx)(s.fP, {
                             id: "clips-in-call-voice-recording",
                             label: x.intl.string(d.default["IxZyA+"]),
                             subtext: x.intl.string(d.default.GjNXmw),
@@ -30,8 +30,8 @@ t.d(
                             action: (e) => (0, u.eQ)({ allowVoiceRecording: e }),
                         }),
                     }),
-                    (0, l.jsx)(i.rX, {
-                        children: (0, l.jsx)(i.Dr, {
+                    (0, l.jsx)(s.rX, {
+                        children: (0, l.jsx)(s.Dr, {
                             id: "clips-in-call-settings",
                             label: x.intl.string(x.t.J1hsY2),
                             iconLeft: r.SettingsIcon,

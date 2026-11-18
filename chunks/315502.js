@@ -1,7 +1,7 @@
 var l = t(477900);
 t(582128);
-var s = t(503698),
-    i = t.n(s),
+var i = t(503698),
+    s = t.n(i),
     r = t(834730),
     o = t(769306);
 t.d(
@@ -9,8 +9,8 @@ t.d(
     {},
     {
         A: function (e) {
-            let { hasMentions: n, truncatedCount: t, className: s } = e;
-            return (0, l.jsx)(r.E, { className: i()(o.T, s, { [o.l]: n }), variant: "body-xs/normal", children: t });
+            let { hasMentions: n, truncatedCount: t, className: i } = e;
+            return (0, l.jsx)(r.E, { className: s()(o.T, i, { [o.l]: n }), variant: "body-xs/normal", children: t });
         },
     },
 );

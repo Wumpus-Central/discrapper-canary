@@ -35,8 +35,8 @@ var r = n(158390),
     N = n(768857),
     C = n(416473),
     k = n(525530),
-    w = n(743082),
-    R = n(385081),
+    R = n(743082),
+    w = n(385081),
     A = n(519325);
 class v {
     sendPing;
@@ -195,7 +195,7 @@ let K = {
         ...N.Wh,
         ...C.Rd,
         ...k.ow,
-        ...w.WO,
+        ...R.WO,
         ...p.V5,
     },
     V = {
@@ -436,7 +436,7 @@ function Z(e) {
                                         !(function (e, t) {
                                             let { projectId: n } = t;
                                             if (("error" === e.kind && (0, b.Nc)(n), "turn_result" === e.kind)) {
-                                                ((0, R.hV)(n, e),
+                                                ((0, w.hV)(n, e),
                                                     "deployed" === e.result &&
                                                         i.h.dispatch({
                                                             type: "CONJURE_CHAT_TURN_PATCH",
@@ -491,9 +491,9 @@ function Z(e) {
                     (0, N.OB)(e, n),
                     (0, b.BC)(e, "Connection failed before the draft arrived"),
                     (0, b.Nc)(e),
-                    (0, R.Hy)(e, {
+                    (0, w.Hy)(e, {
                         location: "connection",
-                        code: R.xf.WS_OPEN_FAILED,
+                        code: w.xf.WS_OPEN_FAILED,
                         message: n instanceof Error ? n.message : "ws open failed",
                     }));
             }

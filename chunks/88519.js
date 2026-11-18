@@ -1,6 +1,6 @@
 var l = t(477900),
-    s = t(582128),
-    i = t(574381),
+    i = t(582128),
+    s = t(574381),
     r = t(855986),
     o = t(265872),
     a = t(866665),
@@ -19,8 +19,8 @@ var l = t(477900),
     b = t(887298),
     y = t(696016),
     v = t(683825),
-    E = t(792996),
-    S = t(899189);
+    S = t(792996),
+    E = t(899189);
 let I = new WeakMap();
 t.d(
     n,
@@ -28,29 +28,29 @@ t.d(
     {
         A: function (e) {
             let { channelId: n } = e,
-                t = s.useRef(null),
-                i = s.useRef(null),
+                t = i.useRef(null),
+                s = i.useRef(null),
                 f = h.Q$.useSetting(),
                 m = (0, r.bG)([A.Ay], () => A.Ay.getClipsWarningShown(n), [n]),
                 { isNoticeVisible: w, dismissNotice: N } = (function (e, n) {
                     let t = (0, r.bG)([j.A], () => j.A.getRTCConnection()),
                         l = null == t || I.get(t) !== e,
-                        [i, o] = s.useState(() => n && l),
-                        [a, c] = s.useState(n);
+                        [s, o] = i.useState(() => n && l),
+                        [a, c] = i.useState(n);
                     return (
                         n !== a && (c(n), n && l && o(!0)),
-                        s.useEffect(() => {
-                            if (!i) return;
+                        i.useEffect(() => {
+                            if (!s) return;
                             let n = j.A.getRTCConnection();
                             null != n && I.set(n, e);
                             let t = setTimeout(() => o(!1), y.Vi);
                             return () => clearTimeout(t);
-                        }, [i, e]),
-                        { isNoticeVisible: i, dismissNotice: s.useCallback(() => o(!1), []) }
+                        }, [s, e]),
+                        { isNoticeVisible: s, dismissNotice: i.useCallback(() => o(!1), []) }
                     );
                 })(n, m),
-                R = E.intl.string(f ? v.default.Q0dnKS : v.default.PaU7x6),
-                P = E.intl.string(f ? v.default.j56Eyx : v.default["1PDyrY"]);
+                R = S.intl.string(f ? v.default.Q0dnKS : v.default.PaU7x6),
+                G = S.intl.string(f ? v.default.j56Eyx : v.default["1PDyrY"]);
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(o.Y, {
@@ -64,17 +64,17 @@ t.d(
                             return (0, l.jsx)(p.A, { children: (0, l.jsx)(b.A, { closePopout: n }) });
                         },
                         children: (e, n) => {
-                            let { isShown: s } = n;
+                            let { isShown: i } = n;
                             return (0, l.jsx)(a.m, {
-                                text: E.intl.string(E.t.DJXW3G),
-                                shouldShow: !s && !w,
+                                text: S.intl.string(S.t.DJXW3G),
+                                shouldShow: !i && !w,
                                 children: (0, l.jsxs)(c.D, {
                                     ...e,
                                     onMouseEnter: () => {
                                         (e.onMouseEnter?.(), N());
                                     },
                                     innerRef: t,
-                                    className: S.jw,
+                                    className: E.jw,
                                     "aria-label": R,
                                     "aria-haspopup": "menu",
                                     children: [
@@ -82,9 +82,9 @@ t.d(
                                         (0, l.jsxs)(d.E, {
                                             variant: "body-xs/semibold",
                                             color: "none",
-                                            className: S.Pf,
+                                            className: E.Pf,
                                             children: [
-                                                E.intl.string(v.default.Q0dnKS),
+                                                S.intl.string(v.default.Q0dnKS),
                                                 !f &&
                                                     (0, l.jsxs)(l.Fragment, {
                                                         children: [
@@ -93,16 +93,16 @@ t.d(
                                                                 tag: "span",
                                                                 variant: "body-xs/semibold",
                                                                 color: "text-muted",
-                                                                children: E.intl.string(E.t.l4qZrp),
+                                                                children: S.intl.string(S.t.l4qZrp),
                                                             }),
                                                         ],
                                                     }),
                                             ],
                                         }),
                                         (0, l.jsx)("span", {
-                                            ref: i,
-                                            className: S.ai,
-                                            children: s
+                                            ref: s,
+                                            className: E.ai,
+                                            children: i
                                                 ? (0, l.jsx)(x.ChevronLargeUpIcon, {
                                                       size: "xxs",
                                                       color: "currentColor",
@@ -117,7 +117,7 @@ t.d(
                             });
                         },
                     }),
-                    (0, l.jsx)(C.A, { targetElementRef: i, shouldShow: w, text: P, onRequestClose: N }),
+                    (0, l.jsx)(C.A, { targetElementRef: s, shouldShow: w, text: G, onRequestClose: N }),
                 ],
             });
         },
@@ -125,7 +125,7 @@ t.d(
             return (0, r.bG)(
                 [j.A, f.default, m.A, A.Ay],
                 () => {
-                    if (!(0, i.xl)() || null == e || j.A.getChannelId() !== e) return !1;
+                    if (!(0, s.xl)() || null == e || j.A.getChannelId() !== e) return !1;
                     let n = f.default.getId();
                     return Object.values(m.A.getVoiceStatesForChannel(e)).some((e) => {
                         let { userId: t } = e;

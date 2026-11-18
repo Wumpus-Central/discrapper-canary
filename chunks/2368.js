@@ -28,22 +28,22 @@ let m =
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
     E = new Set(["applicationCommandOption"]);
-function y(e, t, n) {
+function S(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (x.has(i[0].type)) l ? C(e, i, !0, null) : S(e, i, t, n);
+        if (x.has(i[0].type)) l ? C(e, i, !0, null) : y(e, i, t, n);
         else {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
                 if (!h.l5.isText(a) && E.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
-                    l ? C(e, r, !0, null) : S(e, r, t, n);
+                    l ? C(e, r, !0, null) : y(e, r, t, n);
                 }
             }
         }
 }
-function S(e, t, n, l) {
+function y(e, t, n, l) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = h.cv.markdown(t[0], n);
     (C(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
@@ -276,7 +276,7 @@ n.d(
                     let l = h.VW.richValue(e);
                     ((l !== s || e.previewMarkdown !== a) &&
                         (o.o.withMergedEntry(e, () => {
-                            h.VW.withoutNormalizing(e, () => y(e, t, n));
+                            h.VW.withoutNormalizing(e, () => S(e, t, n));
                         }),
                         (s = l),
                         (a = e.previewMarkdown)),
@@ -285,7 +285,7 @@ n.d(
                 e
             );
         },
-        eF: y,
+        eF: S,
         lE: A,
     },
 );

@@ -1,8 +1,8 @@
 var u = e(582128),
     r = e(855986),
     l = e(561573),
-    o = e(918467),
-    i = e(288106),
+    i = e(918467),
+    o = e(288106),
     a = e(313217),
     s = e(652215);
 function c(n, t) {
@@ -24,18 +24,18 @@ e.d(
     {
         QV: function (n) {
             let { storefrontPrices: t, nonPromoPrice: e } = n;
-            return c(t?.[i.QK.SELF_PURCHASE]?.userPrice, e);
+            return c(t?.[o.QK.SELF_PURCHASE]?.userPrice, e);
         },
         f3: function (n) {
             let { storefrontPrices: t, premiumPrice: e } = n;
-            return c(t?.[i.QK.SELF_PURCHASE]?.prices[s.FBC.PREMIUM_TIER_2]?.[i.v8.DISCOUNTED], e);
+            return c(t?.[o.QK.SELF_PURCHASE]?.prices[s.FBC.PREMIUM_TIER_2]?.[o.v8.DISCOUNTED], e);
         },
         us: d,
         vF: function (n, t) {
             let e = (0, a.s)(t),
-                i = (0, r.bG)([l.A], () => (e ? l.A.getPricesForSkuId(n) : void 0)),
+                o = (0, r.bG)([l.A], () => (e ? l.A.getPricesForSkuId(n) : void 0)),
                 c = (0, r.bG)([l.A], () => (e ? l.A.getPromotionIdsForSkuId(n) : void 0)),
-                p = (0, r.bG)([o.A], () => (e ? o.A.getPromotionsForApplication(s.FYj) : null)),
+                p = (0, r.bG)([i.A], () => (e ? i.A.getPromotionsForApplication(s.FYj) : null)),
                 A = (function (n, t) {
                     let [e, r] = u.useState(Date.now),
                         l = (function (n) {
@@ -61,7 +61,7 @@ e.d(
                 return r.length > 0 && r.every((n) => null != n && d(n, u));
             })({ pricingPromotionIds: c, promotions: p, now: A })
                 ? void 0
-                : i;
+                : o;
         },
     },
 );

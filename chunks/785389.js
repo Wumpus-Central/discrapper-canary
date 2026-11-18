@@ -1,5 +1,5 @@
 n(321073);
-let l = new Set([
+let r = new Set([
     "bad_request",
     "bad_connection_type",
     "unknown_project",
@@ -11,35 +11,35 @@ let l = new Set([
     "child_unavailable",
 ]);
 n.d(
-    e,
+    t,
     {},
     {
-        K9: function (t, e) {
-            if (t.has(e)) return null;
-            let n = new Set(t);
-            return (n.add(e), n);
+        K9: function (e, t) {
+            if (e.has(t)) return null;
+            let n = new Set(e);
+            return (n.add(t), n);
         },
-        Q6: function (t, e) {
-            if (!t.has(e)) return t;
-            let n = new Set(t);
-            return (n.delete(e), n);
+        Q6: function (e, t) {
+            if (!e.has(t)) return e;
+            let n = new Set(e);
+            return (n.delete(t), n);
         },
-        Xl: function (t) {
-            let e = [],
+        Xl: function (e) {
+            let t = [],
                 n = new Set();
-            for (let l of t) {
-                let t =
-                    "string" != typeof l.type || "" === l.type || "string" != typeof l.label || "" === l.label.trim()
+            for (let r of e) {
+                let e =
+                    "string" != typeof r.type || "" === r.type || "string" != typeof r.label || "" === r.label.trim()
                         ? null
-                        : l.configured
+                        : r.configured
                           ? "authorize"
                           : "finish-setup";
-                null == t || n.has(l.type) || (n.add(l.type), e.push({ connection: l, offer: t }));
+                null == e || n.has(r.type) || (n.add(r.type), t.push({ connection: r, offer: e }));
             }
-            return e;
+            return t;
         },
-        ls: function (t, e) {
-            switch (e) {
+        ls: function (e, t) {
+            switch (t) {
                 case "not_configured":
                     return "not_configured";
                 case "not_deployed":
@@ -55,13 +55,13 @@ n.d(
                 case "bad_connection_type":
                     return "unknown";
             }
-            return 404 === t ? "not_declared" : t >= 500 ? "unavailable" : "unknown";
+            return 404 === e ? "not_declared" : e >= 500 ? "unavailable" : "unknown";
         },
-        rG: function (t) {
-            return "string" == typeof t && l.has(t) ? t : null;
+        rG: function (e) {
+            return "string" == typeof e && r.has(e) ? e : null;
         },
-        rq: function (t) {
-            return "not_configured" === t ? "setup" : "generic";
+        rq: function (e) {
+            return "not_configured" === e ? "setup" : "generic";
         },
     },
 );

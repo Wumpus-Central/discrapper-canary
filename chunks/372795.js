@@ -46,16 +46,16 @@ n.d(
                     [t, n],
                 ),
                 w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-                C = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-                S = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: C }),
-                A = (0, i.AV)(t, n),
-                N = r.useRef(A);
+                A = null == m ? 0 : Math.round(m * Math.min(w, 2)),
+                S = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
+                C = (0, i.AV)(t, n),
+                N = r.useRef(C);
             (r.useEffect(() => {
-                if (N.current === A) return;
-                ((N.current = A), (x.current = null), b(!1));
+                if (N.current === C) return;
+                ((N.current = C), (x.current = null), b(!1));
                 let e = p.current;
                 e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
-            }, [A]),
+            }, [C]),
                 r.useEffect(() => {
                     g?.(S, j);
                 }, [S, j, g]),

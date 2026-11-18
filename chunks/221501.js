@@ -1,6 +1,6 @@
 var l = t(477900),
-    s = t(582128),
-    i = t(195118),
+    i = t(582128),
+    s = t(195118),
     r = t(31188),
     o = t(834730),
     a = t(299871),
@@ -15,10 +15,10 @@ t.d(
             let { targetElementRef: n, shouldShow: t, text: x, onRequestClose: g } = e,
                 { preventIdle: h, allowIdle: p } = (0, c.o)("clips-in-call-notice");
             return (
-                s.useEffect(() => {
+                i.useEffect(() => {
                     if (t) return (h(), p);
                 }, [t, h, p]),
-                (0, l.jsxs)(i.x, {
+                (0, l.jsxs)(s.x, {
                     targetElementRef: n,
                     shouldShow: t,
                     position: "bottom",

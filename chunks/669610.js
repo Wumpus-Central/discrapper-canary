@@ -26,11 +26,11 @@ i.d(
                             body: { game_organization: t, application: i, application_config: r },
                         } = await n.Bo.get({ url: o.Rsh.GAME_ORGANIZATION(e), rejectWithError: !0 }),
                         u = (0, d.p)(t),
-                        g = a.Ay.createFromServer(i);
+                        A = a.Ay.createFromServer(i);
                     l.h.dispatch({
                         type: "GAME_ORGANIZATION_FETCH_SUCCESS",
                         gameOrganization: u,
-                        application: g,
+                        application: A,
                         displayNoun: r?.display_noun ?? null,
                     });
                 } catch (i) {

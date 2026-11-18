@@ -1,7 +1,7 @@
 var u = e(805974),
     r = e(278416),
     l = e(403581),
-    o = e(318254);
+    i = e(318254);
 e.d(
     t,
     {},
@@ -13,7 +13,7 @@ e.d(
                 case u._.NITRO:
                     return l.NitroWheelIcon;
                 case u._.ORBS:
-                    return o.OrbsIcon;
+                    return i.OrbsIcon;
                 default:
                     return null;
             }

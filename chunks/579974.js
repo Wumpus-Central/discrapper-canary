@@ -15,8 +15,8 @@ let f = new Map(),
     g = new Map(),
     x = new Map(),
     E = new Map(),
-    y = new Map(),
     S = new Map(),
+    y = new Map(),
     C = null,
     A = 1 / 0,
     b = 0;
@@ -42,7 +42,7 @@ function j() {
     M.delay(!1);
 }
 function _(e) {
-    (y.get(e)?.cancel(), y.delete(e));
+    (S.get(e)?.cancel(), S.delete(e));
 }
 function R(e) {
     if (null != C) {
@@ -59,7 +59,7 @@ function O() {
     let e = Date.now(),
         t = 1 / 0,
         n = !1;
-    for (let [l, i] of S) {
+    for (let [l, i] of y) {
         for (let [r, s] of i) {
             if (s > e) {
                 t = Math.min(t, s);
@@ -67,7 +67,7 @@ function O() {
             }
             (i.delete(r), null == v(l, r) && (T(l, r), (n = !0)));
         }
-        0 === i.size && S.delete(l);
+        0 === i.size && y.delete(l);
     }
     (1 / 0 !== t && R(t), n && j());
 }
@@ -84,7 +84,7 @@ let M = new r.J_(500, () => {
         o.A.isConnected())
     )
         for (let [e, t] of p) {
-            if (y.get(e)?.pending === !0) continue;
+            if (S.get(e)?.pending === !0) continue;
             p.delete(e);
             let n = Array.from(t);
             for (let t = 0; t < n.length; t += 100)
@@ -115,7 +115,7 @@ let M = new r.J_(500, () => {
                                 }
                                 if ((0 === i.size && E.delete(n), r)) {
                                     let e;
-                                    (null == (e = y.get(n)) && ((e = new l.A(1e3, 6e4)), y.set(n, e)), e.fail(j));
+                                    (null == (e = S.get(n)) && ((e = new l.A(1e3, 6e4)), S.set(n, e)), e.fail(j));
                                 } else (_(n), p.has(n) && j());
                             })(i),
                         3e4,
@@ -130,8 +130,8 @@ function L() {
     (g.clear(), x.clear());
 }
 function P() {
-    for (let e of y.values()) e.cancel();
-    y.clear();
+    for (let e of S.values()) e.cancel();
+    S.clear();
 }
 (s.h.subscribe("GUILD_MEMBERS_CHUNK_BATCH", (e) => {
     let { chunks: t } = e;
@@ -166,20 +166,20 @@ function P() {
     s.h.subscribe("GUILD_DELETE", (e) => {
         let { guild: t } = e;
         var n = t.id;
-        for (let [e, t] of (f.delete(n), p.delete(n), E.delete(n), S.delete(n), _(n), g))
+        for (let [e, t] of (f.delete(n), p.delete(n), E.delete(n), y.delete(n), _(n), g))
             t.guildId === n && (clearTimeout(t.timeout), g.delete(e));
         x.delete(n);
     }),
     s.h.subscribe("CONNECTION_OPEN", function () {
         for (let e of g.values()) for (let t of e.members.keys()) T(e.guildId, t);
-        for (let [e, t] of (L(), P(), E.clear(), f.clear(), S)) for (let n of t.keys()) T(e, n);
-        (S.clear(), w(), p.size > 0 && j());
+        for (let [e, t] of (L(), P(), E.clear(), f.clear(), y)) for (let n of t.keys()) T(e, n);
+        (y.clear(), w(), p.size > 0 && j());
     }),
     s.h.subscribe("CONNECTION_RESUMED", function () {
         p.size > 0 && j();
     }),
     s.h.subscribe("LOGOUT", function () {
-        (f.clear(), p.clear(), E.clear(), S.clear(), w(), L(), P(), M.cancel());
+        (f.clear(), p.clear(), E.clear(), y.clear(), w(), L(), P(), M.cancel());
     }),
     n.d(
         t,
@@ -195,8 +195,8 @@ function P() {
                     let t = i?.get(s);
                     if (null != t && n - t < 3e5) {
                         !(function (e, t, n) {
-                            let l = S.get(e);
-                            (null == l && ((l = new Map()), S.set(e, l)), l.set(t, n), R(n));
+                            let l = y.get(e);
+                            (null == l && ((l = new Map()), y.set(e, l)), l.set(t, n), R(n));
                         })(e, s, t + 3e5);
                         continue;
                     }

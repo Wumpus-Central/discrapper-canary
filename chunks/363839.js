@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     iE: "wrapper_hjotnx",
     VU: "withGradient_hjotnx",
     XO: "withQuestHomeHeroContent_hjotnx",
