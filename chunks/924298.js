@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 676583, Version Hash: e1aff379bdb41eac6be42e6637f810bf69bc4f6d`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 676586, Version Hash: 4faf0f9c30b478ea8026827e222f285bd10d4c5a`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676583";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676586";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15916,7 +15916,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676583" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676586" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -32583,7 +32583,7 @@ let R1 = {
         },
         [cG.e$.OPEN_USER_POPOUT]: {
             request: (e) => ({
-                user_id: e.string().max(64).required(),
+                user_id: e.string().max(64).required().meta({ className: "UserId" }),
                 x: e.number().min(0).max(65535).required(),
                 y: e.number().min(0).max(65535).required(),
             }),
@@ -35567,50 +35567,59 @@ let Ds = new WeakMap(),
     Dl = {
         [H.e$_.OPEN_USER_PROFILE]: LT(H.e$_.OPEN_USER_PROFILE, {
             scope: T1.W_,
-            async handler(e) {
+            handler(e) {
                 let {
-                        socket: t,
-                        args: { user_id: n },
-                    } = e,
-                    { frame: i, iframeId: r } = (0, RD.Ay)(t),
-                    { guildId: a, channelId: s } = Di(i),
-                    l = Ds.get(t) ?? { inFlight: !1, readyAt: 0 };
-                return l.inFlight || Date.now() < l.readyAt || (0, Dr.SQ)()
-                    ? { opened: !1 }
-                    : ((l.inFlight = !0),
-                      Ds.set(t, l),
-                      {
-                          opened: await new Promise((e) => {
-                              let t = !1;
-                              !(function (e) {
-                                  let { userId: t, iframeId: n, guildId: i, channelId: r, onOpen: a, onClose: s } = e,
-                                      l = (0, Da.LV)(n);
-                                  return (
-                                      null != l &&
-                                      ((0, _7.openUserProfileModal)({
-                                          userId: t,
-                                          guildId: i,
-                                          channelId: r,
-                                          appContext: l,
-                                          onModalOpen: a,
-                                          onModalClose: s,
-                                      }),
-                                      !0)
-                                  );
-                              })({
-                                  userId: n,
-                                  iframeId: r,
-                                  guildId: a,
-                                  channelId: s,
-                                  onOpen: function () {
-                                      t || ((l.inFlight = !1), e(!0));
-                                  },
-                                  onClose: function () {
-                                      ((t = !0), (l.inFlight = !1), (l.readyAt = Date.now() + 1e3), e(!1));
-                                  },
-                              }) && ((l.inFlight = !1), e(!1));
-                          }),
-                      });
+                    socket: t,
+                    args: { user_id: n },
+                } = e;
+                return (async function (e, t) {
+                    let { frame: n, iframeId: i } = (0, RD.Ay)(e),
+                        { guildId: r, channelId: a } = Di(n),
+                        s = Ds.get(e) ?? { inFlight: !1, readyAt: 0 };
+                    return s.inFlight || Date.now() < s.readyAt || (0, Dr.SQ)()
+                        ? { opened: !1 }
+                        : ((s.inFlight = !0),
+                          Ds.set(e, s),
+                          {
+                              opened: await new Promise((e) => {
+                                  let n = !1;
+                                  !(function (e) {
+                                      let {
+                                              userId: t,
+                                              iframeId: n,
+                                              guildId: i,
+                                              channelId: r,
+                                              onOpen: a,
+                                              onClose: s,
+                                          } = e,
+                                          l = (0, Da.LV)(n);
+                                      return (
+                                          null != l &&
+                                          ((0, _7.openUserProfileModal)({
+                                              userId: t,
+                                              guildId: i,
+                                              channelId: r,
+                                              appContext: l,
+                                              onModalOpen: a,
+                                              onModalClose: s,
+                                          }),
+                                          !0)
+                                      );
+                                  })({
+                                      userId: t,
+                                      iframeId: i,
+                                      guildId: r,
+                                      channelId: a,
+                                      onOpen: function () {
+                                          n || ((s.inFlight = !1), e(!0));
+                                      },
+                                      onClose: function () {
+                                          ((n = !0), (s.inFlight = !1), (s.readyAt = Date.now() + 1e3), e(!1));
+                                      },
+                                  }) && ((s.inFlight = !1), e(!1));
+                              }),
+                          });
+                })(t, n);
             },
         }),
     },
