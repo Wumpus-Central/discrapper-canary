@@ -13241,6 +13241,12 @@ let h7 = (0, h.E2)(S.X.SURVEY_OVERRIDE, {
     h9 = (0, h.zZ)(S.X.DEV_OVERRIDES, {
         useTitle: () => "Overrides",
         buildLayout: () => [h6, h7, hH, hZ, h$, h0, hY, h2, hJ, h1],
+        useInlineNotice: () => ({
+            type: f.lT.INLINE_NOTICE,
+            noticeType: "info",
+            role: "none",
+            text: V.intl.format(V.t.UeZJlg, { link: "https://i.dis.gd/dev-settings-changes" }),
+        }),
     }),
     Se = (0, h.zD)(S.X.ANALYTICS_LOGS, {
         useTitle: () => "Enable Logging of Analytics Events",
