@@ -388,7 +388,7 @@ function tt(t) {
                               ],
                           }),
                           trailing:
-                              d || !1 === t.restorable || null == r
+                              d || !1 === t.restorable
                                   ? null
                                   : (0, n.jsx)(m.$, {
                                         variant: "secondary",
@@ -809,7 +809,7 @@ function tr(t) {
         Q = M(y),
         W = l.useCallback(
             (t, e) => {
-                (S(), w?.(t, e));
+                (S(), w(t, e));
             },
             [S, w],
         ),
@@ -854,7 +854,7 @@ function tr(t) {
                               restoreDisabled: C || O || K,
                               showsPublishState: Q,
                               onRetry: z.retry,
-                              onRestore: null == w ? void 0 : W,
+                              onRestore: W,
                           })
                         : "publishes" === P
                           ? (0, n.jsx)(X, { projectId: y }, y)

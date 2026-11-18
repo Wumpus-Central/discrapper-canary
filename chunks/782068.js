@@ -33,7 +33,7 @@ let c = new a(s.h, {
     },
     CONJURE_DOWNSTREAM_UPDATES_SET: function (e) {
         let { projectId: t, event: n } = e;
-        l.set(t, { enabled: n.enabled, pending: !1, error: n.error ?? null });
+        (i.delete(t), o.delete(t), l.set(t, { enabled: n.enabled, pending: !1, error: n.error ?? null }));
     },
     CONJURE_DOWNSTREAM_UPDATES_REQUEST: function (e) {
         let { projectId: t, enabled: n } = e;
