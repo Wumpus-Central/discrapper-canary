@@ -409,7 +409,7 @@ function eJ(e) {
 var eX = s(163126),
     eQ = s(913453),
     eZ = s(229187),
-    eq = s(702476),
+    eq = s(100663),
     e$ = s(503062);
 function e0(e) {
     let { user: i, guildId: s, channelId: t, onClose: r } = e,
@@ -462,8 +462,8 @@ function e0(e) {
         })
     );
 }
-var e7 = s(398590),
-    e5 = s(345942),
+var e5 = s(398590),
+    e7 = s(345942),
     e3 = s(51943);
 function e1(e) {
     let { user: i, onClose: s } = e,
@@ -486,7 +486,7 @@ function e1(e) {
                                 nick: r,
                                 onSelect: () => {
                                     var e;
-                                    (n({ action: "PRESS_MUTUAL_GUILD" }), (e = t.id), (0, e5.u)(e), s(), (0, e7.jH)());
+                                    (n({ action: "PRESS_MUTUAL_GUILD" }), (e = t.id), (0, e7.u)(e), s(), (0, e5.jH)());
                                 },
                             },
                             t.id,
@@ -501,8 +501,8 @@ function e1(e) {
                     }),
     });
 }
-var e2 = s(717877);
-function e6(e) {
+var e6 = s(717877);
+function e2(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: r, channelId: d, onClose: a } = e;
     return i === ep.RP.ACTIVITY
         ? (0, l.jsx)(eF, { user: s, currentUser: n, guildId: r, onClose: a })
@@ -546,7 +546,7 @@ function e9(e) {
     );
     return u
         ? (0, l.jsx)("div", {
-              className: e2.kL,
+              className: e6.kL,
               children: (0, l.jsxs)("div", {
                   className: eM.Ie,
                   children: [
@@ -556,10 +556,10 @@ function e9(e) {
               }),
           })
         : (0, l.jsxs)("div", {
-              className: e2.kL,
+              className: e6.kL,
               children: [
                   (0, l.jsx)(G.V, {
-                      className: e2.$H,
+                      className: e6.$H,
                       type: "top",
                       selectedItem: A,
                       onItemSelect: x,
@@ -568,7 +568,7 @@ function e9(e) {
                           return (0, l.jsx)(
                               G.V.Item,
                               {
-                                  className: e2.YU,
+                                  className: e6.YU,
                                   id: i,
                                   "aria-label": s,
                                   children: (0, l.jsx)(B.E, { variant: "body-sm/normal", children: s }),
@@ -577,7 +577,7 @@ function e9(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(e6, {
+                  (0, l.jsx)(e2, {
                       items: d,
                       section: A,
                       user: i,
@@ -851,17 +851,17 @@ function id(e) {
                                             }),
                                         }),
                                         (0, l.jsxs)("div", {
-                                            className: e2.kL,
+                                            className: e6.kL,
                                             children: [
                                                 (0, l.jsx)(G.V, {
-                                                    className: e2.$H,
+                                                    className: e6.$H,
                                                     type: "top",
                                                     selectedItem: ep.RP.BOT_INFO,
                                                     onItemSelect: ej.tEg,
                                                     children: (0, l.jsx)(
                                                         G.V.Item,
                                                         {
-                                                            className: e2.YU,
+                                                            className: e6.YU,
                                                             id: ep.RP.BOT_INFO,
                                                             "aria-label": X.intl.string(X.t.ZzAR2Y),
                                                             children: (0, l.jsx)(B.E, {

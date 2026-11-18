@@ -345,11 +345,7 @@ let es = new (class extends Y {
     maybeOpenQuickBar() {
         if (!P.Ay.canShowReminders()) return;
         let e = c.Ay.getVisibleGame();
-        null == e ||
-            (P.Ay.getLastClipsSession()
-                ?.clipIds.map(P.Ay.getClipById)
-                .some((t) => t?.applicationId === e.id) &&
-                (ee.MZ.getState().isOpen || (0, ee.w9)()));
+        null == e || (0 !== P.Ay.getGameClipIds(e).length && (ee.MZ.getState().isOpen || (0, ee.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e || !P.Ay.canShowReminders()) return;

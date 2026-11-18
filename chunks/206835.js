@@ -23,7 +23,7 @@ var d = i(355097);
                     if (p) {
                         let t = r.default.getCurrentUser();
                         if (null != t) {
-                            let { openUserProfileModal: n } = i(702476);
+                            let { openUserProfileModal: n } = i(100663);
                             n({ userId: t.id, guildId: e?.id, sourceAnalyticsLocations: o });
                             return;
                         }

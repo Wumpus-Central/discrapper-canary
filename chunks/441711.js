@@ -25,7 +25,7 @@ function E(e) {
         (i.O.announce(u.intl.formatToPlainString(u.t.zH0kC7, { username: t.user.username })),
             _((a = t.user), u.intl.string(u.t["t3+Af3"]), () => {
                 {
-                    let { openUserProfileModal: e } = n(702476);
+                    let { openUserProfileModal: e } = n(100663);
                     e({ userId: a.id, sourceAnalyticsLocations: [o.A.FRIEND_REQUEST_NOTIFICATION] });
                 }
                 s.A.transitionToSection(c.m3P.PENDING, { explicit: !0 });

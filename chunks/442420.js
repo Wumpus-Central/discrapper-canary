@@ -1,5 +1,7 @@
-n.exports = {
+o.exports = {
     $j: "quickBar_y2dW7E",
+    DD: "title_y2dW7E",
+    o1: "actions_y2dW7E",
     e1: "clipContainer_y2dW7E",
     WK: "clipThumbnailWrapper_y2dW7E",
     $v: "autoClipIcon_y2dW7E",

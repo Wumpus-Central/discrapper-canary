@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 676649, Version Hash: 218675b3d7a97b970b520ed72408d2870421fb70`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 676670, Version Hash: 371d81b7894e055c1ccdf35544c17ec46dca8534`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676649";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676670";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -9987,7 +9987,7 @@ var _K = n(964486),
     _3 = n(144914),
     _6 = n(35083);
 let _5 = lk.A.get(H.fg2.XBOX).name;
-var _7 = n(702476),
+var _7 = n(100663),
     _8 = n(297413),
     _4 = n(942813);
 function _9(e) {
@@ -15916,7 +15916,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676649" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676670" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -15925,100 +15925,126 @@ let pu = "isHideDevBanner",
 var pE = n(765671),
     pA = n(890856),
     pf = n(175841),
-    ph = n(905552),
-    pI = n(157257),
-    pp = n(419490),
-    pm = n(609174),
-    pg = n(399053),
-    pT = n(111994),
-    pS = n(409067),
-    pN = n(271597),
-    pC = n(227628),
-    pO = n(468550),
-    pR = n(442420);
-function pL() {
-    let e = (0, pC.MZ)((e) => e.isOpen),
-        t = (0, pO.sY)((e) => e.isOpen),
-        n = (0, e_.bG)([pp.Ay], () => pp.Ay.canShowReminders()),
-        i = (0, e_.bG)([iS.Ay, pI.A], () => (0, ph.A)(iS.Ay, pI.A)),
-        r = !(0, e_.bG)([pp.Ay], () => pp.Ay.getSettings().showPovClipsInGallery),
-        a = (0, e_.yK)([pp.Ay], () => pp.Ay.getLastClipsSession()?.clipIds ?? []),
+    ph = n(219869),
+    pI = n(905552),
+    pp = n(157257),
+    pm = n(419490),
+    pg = n(609174),
+    pT = n(399053),
+    pS = n(111994),
+    pN = n(409067),
+    pC = n(271597),
+    pO = n(227628),
+    pR = n(468550),
+    pL = n(442420);
+function py() {
+    let e = (0, pO.MZ)((e) => e.isOpen),
+        t = (0, pR.sY)((e) => e.isOpen),
+        n = (0, e_.bG)([pm.Ay], () => pm.Ay.canShowReminders()),
+        i = (0, e_.bG)([iS.Ay, pp.A], () => (0, pI.A)(iS.Ay, pp.A)),
+        r = !(0, e_.bG)([pm.Ay], () => pm.Ay.getSettings().showPovClipsInGallery),
+        a = (0, e_.yK)([pm.Ay], () => pm.Ay.getGameClipIds(i)),
         s = eh.useMemo(
             () =>
-                (0, pS.uu)(
+                (0, pN.uu)(
                     a
-                        .map((e) => pp.Ay.getClipById(e))
+                        .map((e) => pm.Ay.getClipById(e))
                         .filter((e) => null != e)
-                        .filter((e) => e.applicationId === i?.id)
-                        .filter((e) => !r || !(0, pS.kD)(e)),
-                    pT.mu.MOST_RECENT,
+                        .filter((e) => !r || !(0, pN.kD)(e)),
+                    pS.mu.MOST_RECENT,
                 ),
-            [a, i, r],
+            [a, r],
         ),
         l = s.length > 0;
     eh.useEffect(() => {
-        !e || (n && l) || (0, pC.yj)();
+        !e || (n && l) || (0, pO.yj)();
     }, [e, n, l]);
     let o = eh.useCallback((e) => {
-            (0, pN.p)({ initialEditingClipId: e.id });
+            (0, pC.p)({ initialEditingClipId: e.id });
         }, []),
         d = eh.useCallback(() => {
-            (0, pN.p)({ selectedGameId: i?.id });
+            (0, pC.p)({ selectedGameId: i?.id });
         }, [i?.id]);
     if (t || !e || !n || 0 === s.length || null == i) return null;
     let c = 4 - s.length;
-    return (0, v.jsx)("div", {
-        className: pR.$j,
-        children: (0, v.jsx)("div", {
-            className: pR.e1,
-            children: s
-                .slice(0, 4)
-                .concat(...Array(c > 0 ? c : 0).fill(null))
-                .map((e, t) =>
-                    (function (e, t, n) {
-                        if (null == e) return (0, v.jsx)("div", { className: pR.WK }, `no-clip-${n}`);
-                        let i = "auto" === e.clipMethod,
-                            r = t && s.length > 4,
-                            a = s.length - 3;
-                        return (0, v.jsx)(
-                            pA.s,
-                            {
-                                className: pR.WK,
-                                "aria-label": tN.intl.string(tN.t.bt75uw),
-                                onClick: r ? d : o.bind(null, e),
-                                children: (0, v.jsx)(pm.Cl, {
-                                    clip: e,
-                                    children: (0, v.jsx)(pg.d, {
-                                        isStatic: !0,
-                                        children: r
-                                            ? (0, v.jsx)("div", {
-                                                  className: pR.N7,
-                                                  children: (0, v.jsxs)(rB.E, {
-                                                      variant: "body-sm/medium",
-                                                      color: "text-overlay-light",
-                                                      children: ["+", a],
+    return (0, v.jsxs)("div", {
+        className: pL.$j,
+        children: [
+            (0, v.jsxs)("div", {
+                className: pL.DD,
+                children: [
+                    (0, v.jsx)(rB.E, {
+                        variant: "body-xs/medium",
+                        color: "text-muted",
+                        lineClamp: 1,
+                        children: tN.intl.string(Il.default.zfTWDE),
+                    }),
+                    (0, v.jsx)("div", {
+                        className: pL.o1,
+                        children: (0, v.jsx)(rR.m, {
+                            text: tN.intl.string(Il.default["7qFphk"]),
+                            ariaHidden: !0,
+                            children: (0, v.jsx)(ph.T, {
+                                icon: Af.XSmallIcon,
+                                "aria-label": tN.intl.string(Il.default["7qFphk"]),
+                                onClick: () => x.h.dispatch({ type: "CLIPS_DISMISS_QUICK_BAR", pid: i.pid }),
+                                variant: "icon-only",
+                                size: "xs",
+                            }),
+                        }),
+                    }),
+                ],
+            }),
+            (0, v.jsx)("div", {
+                className: pL.e1,
+                children: s
+                    .slice(0, 4)
+                    .concat(...Array(c > 0 ? c : 0).fill(null))
+                    .map((e, t) =>
+                        (function (e, t, n) {
+                            if (null == e) return (0, v.jsx)("div", { className: pL.WK }, `no-clip-${n}`);
+                            let i = "auto" === e.clipMethod,
+                                r = t && s.length > 4,
+                                a = s.length - 3;
+                            return (0, v.jsx)(
+                                pA.s,
+                                {
+                                    className: pL.WK,
+                                    "aria-label": tN.intl.string(tN.t.bt75uw),
+                                    onClick: r ? d : o.bind(null, e),
+                                    children: (0, v.jsx)(pg.Cl, {
+                                        clip: e,
+                                        children: (0, v.jsx)(pT.d, {
+                                            isStatic: !0,
+                                            children: r
+                                                ? (0, v.jsx)("div", {
+                                                      className: pL.N7,
+                                                      children: (0, v.jsxs)(rB.E, {
+                                                          variant: "body-sm/medium",
+                                                          color: "text-overlay-light",
+                                                          children: ["+", a],
+                                                      }),
+                                                  })
+                                                : i &&
+                                                  (0, v.jsx)(pf.SparklesIcon, {
+                                                      className: pL.$v,
+                                                      size: "xs",
+                                                      color: at.A.colors.TEXT_STRONG.css,
+                                                      "aria-label": tN.intl.string(tN.t["3Y2DJ8"]),
                                                   }),
-                                              })
-                                            : i &&
-                                              (0, v.jsx)(pf.SparklesIcon, {
-                                                  className: pR.$v,
-                                                  size: "xs",
-                                                  color: at.A.colors.TEXT_STRONG.css,
-                                                  "aria-label": tN.intl.string(tN.t["3Y2DJ8"]),
-                                              }),
+                                        }),
                                     }),
-                                }),
-                            },
-                            e.id,
-                        );
-                    })(e, 3 === t, t),
-                ),
-        }),
+                                },
+                                e.id,
+                            );
+                        })(e, 3 === t, t),
+                    ),
+            }),
+        ],
     });
 }
-var py = n(202163),
-    pD = n(499979),
-    pb = n(219869),
+var pD = n(202163),
+    pb = n(499979),
     pv = n(475743),
     pP = n(299871),
     pM = n(650493),
@@ -16047,12 +16073,12 @@ function pG(e) {
             return;
         }
         if (f || !Number.isFinite(n)) return;
-        let e = (0, pD.tB)(),
+        let e = (0, pb.tB)(),
             i = new ic.Ep();
         return (
             i.start(h.current, () => r?.("timeout")),
             () => {
-                (i.stop(), (h.current -= (0, pD.tB)() - e));
+                (i.stop(), (h.current -= (0, pb.tB)() - e));
             }
         );
     }, [t, n, f, r]),
@@ -16064,7 +16090,7 @@ function pG(e) {
         children:
             null != r &&
             null != a &&
-            (0, v.jsx)(pb.T, {
+            (0, v.jsx)(ph.T, {
                 icon: Af.XSmallIcon,
                 "aria-label": a,
                 onClick: () => r?.("user"),
@@ -16160,7 +16186,7 @@ let pK = +iu.A.Millis.MINUTE,
 function pz(e) {
     let { suppressed: t } = e,
         { isOpen: n, applicationId: i } = (0, pB.o9)(),
-        { gameRecord: r } = (0, py.Ay)(i),
+        { gameRecord: r } = (0, pD.Ay)(i),
         a = (0, fJ.Vl)(),
         s = n && null != i && !a && !t,
         [l, o] = (0, rc.kn)(s ? [p$] : [], { bypassAutoDismiss: !0 }),
@@ -16352,9 +16378,9 @@ function p3(e) {
                 {
                     className: td()(pJ.xn, i.slotClass, s && pJ.$u, a && pJ.zx, r && !a && pJ.tk),
                     style: d,
-                    children: (0, v.jsx)(pm.Cl, {
+                    children: (0, v.jsx)(pg.Cl, {
                         clip: e,
-                        children: (0, v.jsx)(pg.d, {
+                        children: (0, v.jsx)(pT.d, {
                             isStatic: !c,
                             isPlaying: c && E,
                             children: l?.({ index: t, clip: e }),
@@ -16381,7 +16407,7 @@ let me = +iu.A.Millis.MINUTE,
 function mi() {
     !(function () {
         let e =
-                (0, e_.bG)([pp.Ay], () => pp.Ay.hasFinishedApplyingDefaultSettings()) &&
+                (0, e_.bG)([pm.Ay], () => pm.Ay.hasFinishedApplyingDefaultSettings()) &&
                 !(p8 ??= (0, tY.ue)()) &&
                 (0, fZ.o)("useClipsEAAnnouncementTrigger"),
             [t, n] = (0, rc.kn)(e ? [rF.M.AUTOCLIPPING_EARLY_ACCESS_LAUNCH_ANNOUNCEMENT] : [], {
@@ -16397,7 +16423,7 @@ function mi() {
                         await (0, p7.C)(
                             {
                                 variant: (0, fJ.qj)(ek.default.getCurrentUser())
-                                    ? (0, p6.s)() && (0, p5.T)() && pp.Ay.getEnableAutoclipping()
+                                    ? (0, p6.s)() && (0, p5.T)() && pm.Ay.getEnableAutoclipping()
                                         ? "expressive_nitro"
                                         : "mode_picker"
                                     : "expressive_non_nitro",
@@ -16411,19 +16437,19 @@ function mi() {
                 })());
         }, [n, i]);
     })();
-    let e = !(0, e_.bG)([pp.Ay], () => pp.Ay.getSettings().showPovClipsInGallery),
-        { isOpen: t, openedAt: n, applicationId: i } = (0, pO.sY)(),
+    let e = !(0, e_.bG)([pm.Ay], () => pm.Ay.getSettings().showPovClipsInGallery),
+        { isOpen: t, openedAt: n, applicationId: i } = (0, pR.sY)(),
         { isQuestBarEmpty: r } = (0, pk.c9)(),
-        a = (0, e_.yK)([pp.Ay], () => pp.Ay.getLastClipsSession()?.clipIds ?? mt),
+        a = (0, e_.yK)([pm.Ay], () => pm.Ay.getLastClipsSession()?.clipIds ?? mt),
         s = eh.useMemo(() => {
             if (null == i || 0 === a.length) return mn;
             let t = a
-                .map((e) => pp.Ay.getClipById(e))
+                .map((e) => pm.Ay.getClipById(e))
                 .filter((e) => null != e && e.applicationId === i)
-                .filter((t) => !e || !(0, pS.kD)(t));
-            return (0, pS.uu)(t, pT.mu.MOST_RECENT);
+                .filter((t) => !e || !(0, pN.kD)(t));
+            return (0, pN.uu)(t, pS.mu.MOST_RECENT);
         }, [i, a, e]),
-        { gameRecord: l } = (0, py.Ay)(i),
+        { gameRecord: l } = (0, pD.Ay)(i),
         [o, d] = eh.useState(!1),
         c = eh.useCallback(() => d(!0), []),
         u = eh.useCallback(() => d(!1), []),
@@ -16433,7 +16459,7 @@ function mi() {
             source: _a.GameProfileSources.ClipsReminder,
         }),
         E = eh.useCallback(() => {
-            ((0, pN.p)(), (0, pO.kF)());
+            ((0, pC.p)(), (0, pR.kF)());
         }, []),
         A = r && t && null != i && s.length > 0;
     return (0, v.jsxs)(v.Fragment, {
@@ -16441,7 +16467,7 @@ function mi() {
             (0, v.jsx)(px, {
                 shouldShow: A,
                 duration: me,
-                onDismiss: pO.kF,
+                onDismiss: pR.kF,
                 dismissAriaLabel: tN.intl.string(tN.t["9CE7R5"]),
                 wrapperClassName: p9.nd,
                 renderBody: (e) => {
@@ -18423,7 +18449,7 @@ function TK(e) {
             onDismiss: d,
             onHidden: c,
         } = e,
-        { gameRecord: u } = (0, py.Ay)(n),
+        { gameRecord: u } = (0, pD.Ay)(n),
         _ = (0, v.jsxs)("div", {
             className: TW.Pb,
             children: [
@@ -18535,7 +18561,7 @@ function Tz(e) {
         s = r !== TV.yY.PENDING,
         l = n ? t : null,
         { isQuestBarEmpty: o, hasLoadedQuestBar: d } = (0, pk.c9)(),
-        c = (0, pO.sY)((e) => e.isOpen),
+        c = (0, pR.sY)((e) => e.isOpen),
         u = (0, fF.Ay)((e) => e.shownFatigableCandidate?.content ?? null),
         _ = (0, e_.bG)([Tk.A], () => null != l && Tk.A.hasUserHitDCCap(l.dismissibleContent)),
         [E, A] = (0, TF.eK)(),
@@ -18574,7 +18600,7 @@ function Tz(e) {
     eh.useEffect(() => {
         T && (0, TH.Cp)();
     }, [T]);
-    let { gameRecord: S } = (0, py.Ay)(t.applicationId),
+    let { gameRecord: S } = (0, pD.Ay)(t.applicationId),
         N = eh.useCallback(
             (e) => {
                 e !== pw.UNMOUNT &&
@@ -18662,7 +18688,7 @@ let TZ = eh.memo(function () {
         },
         [],
     );
-    let t = (0, pC.MZ)((e) => e.isOpen),
+    let t = (0, pO.MZ)((e) => e.isOpen),
         { isSorting: n } = (0, mT.A)();
     return (0, v.jsx)("section", {
         ref: e,
@@ -18681,7 +18707,7 @@ let TZ = eh.memo(function () {
                     children: (0, v.jsx)(TJ, { className: td()(Tq.iz, { [Tq.$j]: t }) }),
                 }),
                 (0, v.jsx)(mi, {}),
-                (0, v.jsx)(pL, {}),
+                (0, v.jsx)(py, {}),
                 (0, v.jsx)(mg, {}),
                 (0, v.jsx)(um.A, { section: H.JJy.RTC_CONNECTION_PANEL, children: (0, v.jsx)(TO, {}) }),
                 (0, v.jsx)(um.A, {
@@ -28667,7 +28693,7 @@ let Op = {
                     if (ex.Ay.getUseSystemScreensharePicker())
                         (0, eF.cX)() && lL().satisfies(eg.A?.os.release, c8.WZ) ? (0, Od.a)() : (0, Od.a)("window");
                     else {
-                        let n = (0, ph.A)(iS.Ay, pI.A);
+                        let n = (0, pI.A)(iS.Ay, pp.A);
                         if (null == n || (n.isLauncher && !e)) return;
                         (0, uH.XI)(r, i.id, { pid: n.pid, analyticsLocations: t });
                     }
@@ -29286,7 +29312,7 @@ let O1 = (0, re.Fe)({
                 n.e(972638),
                 n.e(598476),
                 n.e(602023),
-                n.e(389684),
+                n.e(693744),
                 n.e(824665),
                 n.e(45646),
                 n.e(967493),
@@ -30210,7 +30236,7 @@ let O1 = (0, re.Fe)({
                 n.e(352694),
                 n.e(824665),
                 n.e(45646),
-                n.e(389684),
+                n.e(693744),
                 n.e(655910),
                 n.e(794188),
                 n.e(460582),
@@ -30900,7 +30926,7 @@ let O1 = (0, re.Fe)({
                 n.e(972638),
                 n.e(598476),
                 n.e(602023),
-                n.e(389684),
+                n.e(693744),
                 n.e(824665),
                 n.e(45646),
                 n.e(967493),
@@ -39930,7 +39956,7 @@ let vc = {
                     } = e,
                     i = cd.A.getCurrentUserActiveStream(),
                     r = cd.A.getStreamerActiveStreamMetadata(),
-                    a = (0, ph.A)(iS.Ay, pI.A),
+                    a = (0, pI.A)(iS.Ay, pp.A),
                     s = (0, yQ.A)();
                 null != s &&
                     (null != t && null != r && r.pid !== t && (0, eF.uF)()
@@ -41154,7 +41180,7 @@ let vz = new Map(),
                     try {
                         let r = {
                             soundKey: (function (e, t) {
-                                if (pp.Ay.isVoiceRecordingAllowedForUser(e)) return `${e}-${t}`;
+                                if (pm.Ay.isVoiceRecordingAllowedForUser(e)) return `${e}-${t}`;
                                 let n = vq.get(e) ?? vq.size + 1;
                                 return (vq.set(e, n), `optout_${n}-${t}`);
                             })(i, t),
@@ -45109,7 +45135,7 @@ let wK = (0, tW.Fe)({
             n.e(684068),
             n.e(477235),
             n.e(553829),
-            n.e(619023),
+            n.e(624872),
             n.e(865257),
             n.e(14335),
             n.e(291103),

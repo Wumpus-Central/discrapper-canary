@@ -1,0 +1,15 @@
+e.exports = {
+    j8: "tileBaseContainer_4cz-WN",
+    iA: "tileContainer_4cz-WN tileBaseContainer_4cz-WN",
+    FS: "textContainer_4cz-WN",
+    H: "avatarContainer_4cz-WN",
+    my: "avatar_4cz-WN",
+    zj: "faded_4cz-WN",
+    Qq: "text_4cz-WN",
+    wP: "singleIcon_4cz-WN",
+    fP: "doubleIcon_4cz-WN",
+    EH: "boost_4cz-WN",
+    Q6: "blockedIcon_4cz-WN",
+    Kk: "icon_4cz-WN",
+    MD: "invited_4cz-WN",
+};
