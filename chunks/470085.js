@@ -105,56 +105,56 @@ function T(e) {
         E = t.categoryWillUnpublishAt ?? h?.unpublishedAt,
         b = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
         R = s.Ay.canUseShopDiscounts(b),
-        {
-            isOrbExclusive: k,
-            isShowingPromoPrice: y,
-            shouldCheckoutWithOrbs: O,
-        } = (0, S.F)({ product: t, hasShopDiscount: R, prioritizedCurrency: m }),
-        T = (0, d.g)(t),
-        P = (0, p.S)(T),
-        j = (0, c.w)(T, t.skuId),
-        N = n;
+        { isOrbExclusive: k, shouldCheckoutWithOrbs: y } = (0, S.F)({
+            product: t,
+            hasShopDiscount: R,
+            prioritizedCurrency: m,
+        }),
+        O = (0, d.g)(t),
+        T = (0, p.G)(O),
+        P = (0, c.w)(O, t.skuId),
+        j = n;
     if (
-        (null == N &&
+        (null == j &&
             (null != u
-                ? (N = A.Le.BADGE_OVERRIDE)
-                : y && null != P
-                  ? (N = A.Le.PROMO_DISCOUNT)
-                  : O || null == j
-                    ? (0, f.JQ)(t)
-                        ? (N = A.Le.DYNAMIC)
-                        : (0, o.HF)(E)
-                          ? (N = A.Le.LIMITED_TIME)
-                          : !C && !x && (0, o.aT)(t.skuId)
-                            ? (N = A.Le.NEW)
-                            : k
-                              ? (N = A.Le.ORBS_EXCLUSIVE)
-                              : _ && (N = A.Le.NITRO_EXCLUSIVE)
-                    : (N = A.Le.PROMO_ORBS_BACK)),
-        null == N || N === A.Le.NONE)
+                ? (j = A.Le.BADGE_OVERRIDE)
+                : y || null == T
+                  ? y || null == P
+                      ? (0, f.JQ)(t)
+                          ? (j = A.Le.DYNAMIC)
+                          : (0, o.HF)(E)
+                            ? (j = A.Le.LIMITED_TIME)
+                            : !C && !x && (0, o.aT)(t.skuId)
+                              ? (j = A.Le.NEW)
+                              : k
+                                ? (j = A.Le.ORBS_EXCLUSIVE)
+                                : _ && (j = A.Le.NITRO_EXCLUSIVE)
+                      : (j = A.Le.PROMO_ORBS_BACK)
+                  : (j = A.Le.PROMO_DISCOUNT)),
+        null == j || j === A.Le.NONE)
     )
         return null;
-    let V = null;
-    switch (N) {
+    let N = null;
+    switch (j) {
         case A.Le.PROMO_DISCOUNT:
-            null != P && (V = { type: N, percentOff: P });
+            null != T && (N = { type: j, percentOff: T });
             break;
         case A.Le.PROMO_ORBS_BACK:
-            null != j && (V = { type: N, orbCount: j });
+            null != P && (N = { type: j, orbCount: P });
             break;
         case A.Le.LIMITED_TIME:
-            V = { type: N, unpublishedAt: E };
+            N = { type: j, unpublishedAt: E };
             break;
         case A.Le.BADGE_OVERRIDE:
-            null != u && "" !== u && (V = { type: N, text: u });
+            null != u && "" !== u && (N = { type: j, text: u });
             break;
         case A.Le.DYNAMIC:
         case A.Le.NEW:
         case A.Le.ORBS_EXCLUSIVE:
         case A.Le.NITRO_EXCLUSIVE:
-            V = { type: N };
+            N = { type: j };
     }
-    return null == V ? null : (0, r.jsx)(L, { badge: V, className: g, tabIndex: v });
+    return null == N ? null : (0, r.jsx)(L, { badge: N, className: g, tabIndex: v });
 }
 let P = function (e) {
     let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l, tabIndex: s } = e,

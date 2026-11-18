@@ -86,7 +86,7 @@ function Z(e) {
                         return;
                     }
                     case b.hE.COLLECTION_SALE: {
-                        let e = (0, L.S)(u);
+                        let e = (0, L.G)(u);
                         if (null == e || !(0, M.g5)(t, u)) break;
                         (l(U.intl.formatToPlainString(U.t.VuV3Td, { discountOfferAmount: e })),
                             r(void 0),

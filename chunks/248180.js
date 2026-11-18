@@ -3,9 +3,9 @@ e.d(
     t,
     {},
     {
-        S: function (n) {
+        G: function (n) {
             let t = n?.rewardConfig?.discount;
-            return t?.type === u.RP.PERCENT ? t.amount : null;
+            return t?.type === u.RP.PERCENT && !0 === t.fiatEnabled ? t.amount : null;
         },
     },
 );

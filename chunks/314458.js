@@ -12,7 +12,7 @@ i.d(
                 i = (0, r.s)("collectibles_discount_promotion_purchase_cta");
             return t?.rewardConfig?.discount == null || (i && !(0, s.Dj)(t))
                 ? null
-                : 100 === (0, o.S)(t)
+                : 100 === (0, o.G)(t)
                   ? a.intl.string(a.t["302tKP"])
                   : a.intl.string(a.t["7EGhnE"]);
         },
