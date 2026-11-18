@@ -46,7 +46,7 @@ function C(e) {
             id: e.id,
             name: e.name,
             thirdPartySkus: e.thirdPartySkus,
-            executables: e.executables.filter((e) => e.os === (0, p.t1)()).map((e) => e.name),
+            executables: e.executables?.filter((e) => e.os === (0, p.t1)()).map((e) => e.name),
         },
         n = e.aliases.map((e) => ({ ...t, name: e }));
     return [t, ...n];

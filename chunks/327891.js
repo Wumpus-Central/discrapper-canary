@@ -36,7 +36,6 @@ class h extends s.A {
     primarySkuId;
     bot;
     splash;
-    thirdPartySkus;
     isMonetized;
     isVerified;
     roleConnectionsVerificationUrl;
@@ -50,7 +49,6 @@ class h extends s.A {
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
             bot: null != e.bot ? new u.A(e.bot) : null,
-            thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             parentId: e.parent_id,
             _connectionEntrypointUrl: e.connection_entrypoint_url,
@@ -65,7 +63,6 @@ class h extends s.A {
             (this.icon = e.icon),
             (this.splash = e.splash),
             (this.primarySkuId = e.primarySkuId),
-            (this.thirdPartySkus = e.thirdPartySkus ?? []),
             (this.description = e.description),
             (this.bot = e.bot),
             (this.coverImage = e.coverImage),
@@ -115,7 +112,6 @@ class I extends h {
     storeListingSkuId;
     guildId;
     guild;
-    executables;
     hashes;
     eulaId;
     slug;
@@ -143,7 +139,6 @@ class I extends h {
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
             bot: null != e.bot ? new u.A(e.bot) : null,
-            thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             overlayWarn: e.overlay_warn,
             overlayCompatibilityHook: e.overlay_compatibility_hook,
@@ -198,7 +193,6 @@ class I extends h {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(f)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
@@ -249,10 +243,8 @@ class I extends h {
             developers: e.developers ?? this.developers,
             primarySkuId: e.primarySkuId ?? this.primarySkuId,
             storeListingSkuId: e.storeListingSkuId ?? this.storeListingSkuId,
-            thirdPartySkus: e.thirdPartySkus ?? this.thirdPartySkus,
             guildId: e.guildId ?? this.guildId,
             guild: e.guild ?? this.guild,
-            executables: e.executables ?? this.executables,
             hashes: e.hashes ?? this.hashes,
             description: e.description ?? this.description,
             eulaId: e.eulaId ?? this.eulaId,
