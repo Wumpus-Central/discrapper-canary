@@ -1,27 +1,27 @@
 (n.d(t, { Av: () => c, I: () => d, hs: () => o, QO: () => u }), n(321073));
 var i = n(95498),
-    r = n(427710),
-    a = n(882035),
-    s = n(855522),
-    l = n(792996);
-let o = (0, a.h)((e, t) => ({
-    isLoading: !1,
-    inProgressLocale: void 0,
-    error: void 0,
-    localeData: r.default,
-    setLoadingStarted: (t) => e({ isLoading: !0, inProgressLocale: t }),
-    setLoadingSucceeded: (n) => {
-        let { inProgressLocale: i } = t();
-        i === n && e({ isLoading: !1, inProgressLocale: void 0, error: void 0 });
-    },
-    setLoadingFailed: (n, i) => {
-        let { inProgressLocale: r } = t();
-        r === i && e({ isLoading: !1, inProgressLocale: void 0, error: n });
-    },
-    setLocaleData: (t) => {
-        e({ localeData: t });
-    },
-}));
+    r = n(882035),
+    a = n(855522),
+    s = n(792996);
+let l = n(873382).Q,
+    o = (0, r.h)((e, t) => ({
+        isLoading: !1,
+        inProgressLocale: void 0,
+        error: void 0,
+        localeData: l,
+        setLoadingStarted: (t) => e({ isLoading: !0, inProgressLocale: t }),
+        setLoadingSucceeded: (n) => {
+            let { inProgressLocale: i } = t();
+            i === n && e({ isLoading: !1, inProgressLocale: void 0, error: void 0 });
+        },
+        setLoadingFailed: (n, i) => {
+            let { inProgressLocale: r } = t();
+            r === i && e({ isLoading: !1, inProgressLocale: void 0, error: n });
+        },
+        setLocaleData: (t) => {
+            e({ localeData: t });
+        },
+    }));
 function d(e) {
     return o.subscribe((t, n) => {
         null == n.inProgressLocale || null != t.inProgressLocale || (null == t.error && e(n.inProgressLocale));
@@ -30,10 +30,10 @@ function d(e) {
 async function c(e) {
     let t = o.getState();
     t.setLoadingStarted(e);
-    let a = [];
-    (l.intl.setLocale(e),
-        a.push(),
-        a.push(
+    let r = [];
+    (s.intl.setLocale(e),
+        r.push(),
+        r.push(
             (async () => {
                 (await (async function () {
                     return Promise.all([
@@ -141,23 +141,22 @@ async function c(e) {
                     await (0, i.loadAllMessagesInLocale)(e));
             })(),
         ),
-        s.A.setLocale(e),
-        a.push(s.A.loadPromise),
-        a.push(
+        a.A.setLocale(e),
+        r.push(a.A.loadPromise),
+        r.push(
             (async function (e) {
-                let t = o.getState(),
-                    i = n(873382).v[e];
-                if (null == i) return void t.setLocaleData(r.default);
-                let a = await i();
                 {
-                    let { registerLocale: t } = n(7467);
-                    t(e, a);
+                    let t = o.getState(),
+                        i = n(873382).v[e];
+                    if (null == i) return void t.setLocaleData(l);
+                    let r = await i(),
+                        { registerLocale: a } = n(7467);
+                    (a(e, r), t.setLocaleData(r));
                 }
-                t.setLocaleData(a);
             })(e),
         ),
-        a.push((async function () {})()),
-        a.push(
+        r.push((async function () {})()),
+        r.push(
             (async function (e) {
                 let t = n(608998).W[e];
                 null != t && (await t());
@@ -167,15 +166,15 @@ async function c(e) {
                 (i.push("en-US"), n(536637).locale(i));
             })(e),
         ),
-        a.push(
+        r.push(
             (function (e) {
                 let { setTags: t } = n(856383).A;
                 return (t({ locale: e }), Promise.resolve());
             })(e),
         ),
-        await Promise.all(a).catch((n) => t.setLoadingFailed(n, e)),
+        await Promise.all(r).catch((n) => t.setLoadingFailed(n, e)),
         t.setLoadingSucceeded(e));
 }
 function u() {
-    return o((e) => e.localeData) ?? r.default;
+    return o((e) => e.localeData) ?? l;
 }
