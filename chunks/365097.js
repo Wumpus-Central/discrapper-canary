@@ -1,4 +1,4 @@
-(n.d(e, { default: () => tc }), n(321073));
+(n.d(e, { default: () => to }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
@@ -10,8 +10,8 @@ var i,
     u = n(631670),
     g = n(627784),
     p = n(130565),
-    m = n(626584),
-    b = n(837057),
+    b = n(626584),
+    m = n(837057),
     E = n(894778),
     h = n(207803),
     x = n(287809),
@@ -20,18 +20,18 @@ var i,
     N = n(723702),
     v = n(834730),
     S = n(975571),
-    y = n(652215),
-    A = n(792996);
-function f() {
-    let t = S.A.getArticleURL(y.MVz.GUILD_GETTING_STARTED);
+    f = n(652215),
+    y = n(792996);
+function A() {
+    let t = S.A.getArticleURL(f.MVz.GUILD_GETTING_STARTED);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(v.E, { variant: "body-md/normal", children: A.intl.string(A.t.crKvu5) }),
+            (0, l.jsx)(v.E, { variant: "body-md/normal", children: y.intl.string(y.t.crKvu5) }),
             (0, l.jsx)(v.E, {
                 variant: "body-sm/normal",
                 color: "text-subtle",
                 style: { marginTop: 8 },
-                children: A.intl.format(A.t.OtQkd2, { url: t }),
+                children: y.intl.format(y.t.OtQkd2, { url: t }),
             }),
         ],
     });
@@ -55,9 +55,9 @@ function k() {
         })(T.Xi.useSetting()),
         e = s.useMemo(
             () => [
-                { value: "compact", label: A.intl.string(A.t["1JNcPS"]), proto: D.NS.COMPACT },
-                { value: "default", label: A.intl.string(A.t.Jqj4cZ), proto: D.NS.DEFAULT },
-                { value: "spacious", label: A.intl.string(A.t["4cuYHx"]), proto: D.NS.COZY },
+                { value: "compact", label: y.intl.string(y.t["1JNcPS"]), proto: D.NS.COMPACT },
+                { value: "default", label: y.intl.string(y.t.Jqj4cZ), proto: D.NS.DEFAULT },
+                { value: "spacious", label: y.intl.string(y.t["4cuYHx"]), proto: D.NS.COZY },
             ],
             [],
         ),
@@ -73,11 +73,11 @@ function k() {
         children: [
             (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(P.D, { variant: "heading-sm/semibold", children: A.intl.string(A.t.Ksh3ik) }),
+                    (0, l.jsx)(P.D, { variant: "heading-sm/semibold", children: y.intl.string(y.t.Ksh3ik) }),
                     (0, l.jsx)(v.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
-                        children: A.intl.string(A.t["mz+/o+"]),
+                        children: y.intl.string(y.t["mz+/o+"]),
                     }),
                     (0, l.jsx)(R.Ay, {
                         type: R.v0.SETTINGS,
@@ -93,11 +93,11 @@ function k() {
             }),
             (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(P.D, { variant: "heading-sm/semibold", children: A.intl.string(A.t["C/5V0A"]) }),
+                    (0, l.jsx)(P.D, { variant: "heading-sm/semibold", children: y.intl.string(y.t["C/5V0A"]) }),
                     (0, l.jsx)(v.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
-                        children: A.intl.string(A.t.sBENmo),
+                        children: y.intl.string(y.t.sBENmo),
                     }),
                     (0, l.jsx)(O.B, {
                         direction: "horizontal",
@@ -152,7 +152,7 @@ function V(t) {
                         className: w.nz,
                         onClick: d,
                         role: "button",
-                        "aria-label": A.intl.string(A.t["70lEQe"]),
+                        "aria-label": y.intl.string(y.t["70lEQe"]),
                         children: [
                             null != o
                                 ? (0, l.jsx)("img", { src: o, alt: "", className: w.uV })
@@ -169,11 +169,11 @@ function V(t) {
                 }),
             }),
             (0, l.jsx)(U.D, {
-                label: A.intl.string(A.t["9AjdkD"]),
+                label: y.intl.string(y.t["9AjdkD"]),
                 children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: a?.username, maxLength: 32 }),
             }),
             (0, l.jsx)(M.f, {
-                label: A.intl.string(A.t["61W33d"]),
+                label: y.intl.string(y.t["61W33d"]),
                 value: i,
                 onChange: r,
                 maxLength: c,
@@ -223,26 +223,26 @@ function $(t) {
         children: [
             (0, l.jsx)(H, {
                 icon: z.GlobeEarthIcon,
-                title: A.intl.string(A.t.riOUtB),
-                description: A.intl.string(A.t["5u0zvP"]),
+                title: y.intl.string(y.t.riOUtB),
+                description: y.intl.string(y.t["5u0zvP"]),
                 onClick: () => e(Y.JOIN_SERVER),
             }),
             (0, l.jsx)(H, {
                 icon: J.CompassIcon,
-                title: A.intl.string(A.t.gHNiza),
-                description: A.intl.string(A.t.v7xiEA),
+                title: y.intl.string(y.t.gHNiza),
+                description: y.intl.string(y.t.v7xiEA),
                 onClick: n,
             }),
             (0, l.jsx)(H, {
                 icon: q.UserPlusIcon,
-                title: A.intl.string(A.t.w5uwoI),
-                description: A.intl.string(A.t.bgoxKS),
+                title: y.intl.string(y.t.w5uwoI),
+                description: y.intl.string(y.t.bgoxKS),
                 onClick: () => e(Y.ADD_FRIEND),
             }),
             (0, l.jsx)(H, {
                 icon: Z.ServerIcon,
-                title: A.intl.string(A.t.ZLfEo8),
-                description: A.intl.string(A.t.z7OAvN),
+                title: y.intl.string(y.t.ZLfEo8),
+                description: y.intl.string(y.t.z7OAvN),
                 onClick: i,
             }),
         ],
@@ -251,23 +251,22 @@ function $(t) {
 function tt(t) {
     let { inviteLink: e, onInviteLinkChange: n } = t;
     return (0, l.jsx)(U.D, {
-        label: A.intl.string(A.t.riOUtB),
-        children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: A.intl.string(A.t["+9XKWu"]), autoFocus: !0 }),
+        label: y.intl.string(y.t.riOUtB),
+        children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: y.intl.string(y.t["+9XKWu"]), autoFocus: !0 }),
     });
 }
 function te(t) {
     let { friendUsername: e, onFriendUsernameChange: n } = t;
     return (0, l.jsx)(U.D, {
-        label: A.intl.string(A.t.w5uwoI),
-        children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: A.intl.string(A.t.qRaqel), autoFocus: !0 }),
+        label: y.intl.string(y.t.w5uwoI),
+        children: (0, l.jsx)(F.k, { value: e, onChange: n, placeholder: y.intl.string(y.t.qRaqel), autoFocus: !0 }),
     });
 }
 var tn = n(488995),
     ti = n(324580),
-    tl = n(315290),
-    ts = n(227143);
-let tr = new m.A("NewUserOnboarding"),
-    ta = {
+    tl = n(315290);
+let ts = new b.A("NewUserOnboarding"),
+    tr = {
         [Y.WELCOME]: tl.jK.WELCOME,
         [Y.APPEARANCE]: tl.jK.APPEARANCE,
         [Y.DOWNLOAD_DESKTOP]: tl.jK.DOWNLOAD_DESKTOP,
@@ -276,51 +275,51 @@ let tr = new m.A("NewUserOnboarding"),
         [Y.JOIN_SERVER]: tl.jK.JOIN_SERVER,
         [Y.ADD_FRIEND]: tl.jK.ADD_FRIEND,
     };
-function to(t) {
+function ta(t) {
     E.A.flowStep(tl.do.ANY, t);
 }
-function tc(t) {
+function to(t) {
     let { onClose: e, ...n } = t,
-        [i, m] = s.useState(Y.WELCOME),
+        [i, b] = s.useState(Y.WELCOME),
         [E, v] = s.useState(null),
         S = x.default.getCurrentUser()?.isClaimed() === !0,
-        [y, D] = s.useState(() => x.default.getCurrentUser()?.globalName ?? ""),
+        [f, D] = s.useState(() => x.default.getCurrentUser()?.globalName ?? ""),
         [O, P] = s.useState(""),
         [R, T] = s.useState(""),
         [w, I] = s.useState("");
     s.useEffect(() => {
-        to(tl.jK.WELCOME);
+        ta(tl.jK.WELCOME);
     }, []);
     let K = s.useCallback((t) => {
-            (to(ta[t]), v(t), m(t));
+            (ta(tr[t]), v(t), b(t));
         }, []),
         _ = s.useCallback(
             (t, e) => {
                 t === Y.NEXT_STEPS && null != E && v(null);
-                let n = ta[t];
-                (null != n && to(n), m(t));
+                let n = tr[t];
+                (null != n && ta(n), b(t));
             },
             [E],
         ),
         L = s.useCallback(async () => {
             let t = x.default.getCurrentUser(),
-                e = y.trim(),
+                e = f.trim(),
                 n = t?.globalName ?? "";
             if (t?.isClaimed() === !0 && e.length > 0 && e !== n)
                 try {
                     await (0, u._L)({ globalName: e });
                 } catch (t) {
-                    tr.warn("failed to save globalName", t);
+                    ts.warn("failed to save globalName", t);
                 }
             if (O.trim().length > 0)
                 try {
                     await (0, h.gi)({ bio: O.trim() });
                 } catch (t) {
-                    tr.warn("failed to save bio", t);
+                    ts.warn("failed to save bio", t);
                 }
-        }, [y, O]),
+        }, [f, O]),
         U = s.useCallback(async () => {
-            (i === Y.NEXT_STEPS && to(tl.jK.DISMISSED), await L());
+            (i === Y.NEXT_STEPS && ta(tl.jK.DISMISSED), await L());
         }, [i, L]),
         F = s.useCallback(async () => {
             let t = R.replace(/^\s*(https?:\/\/)?([\w-]+\.)?(discord\.gg|discord(?:app)?\.com\/invite)\//i, "").trim();
@@ -335,14 +334,14 @@ function tc(t) {
                 );
             } catch (e) {
                 let t = e instanceof g.Wl || e instanceof g.LG ? e.code : void 0;
-                return (o.A.show({ title: A.intl.string(A.t.R0RpRX), body: (0, j.s)(t) }), !1);
+                return (o.A.show({ title: y.intl.string(y.t.R0RpRX), body: (0, j.s)(t) }), !1);
             }
         }, [R]),
         M = s.useCallback(async () => {
-            (to(tl.jK.EXPLORE),
+            (ta(tl.jK.EXPLORE),
                 await L(),
                 await e(),
-                (0, b.transitionToGlobalDiscovery)({ tab: tn.GlobalDiscoveryTab.SERVERS, entrypoint: ti.J8.UNKNOWN }));
+                (0, m.transitionToGlobalDiscovery)({ tab: tn.GlobalDiscoveryTab.SERVERS, entrypoint: ti.J8.UNKNOWN }));
         }, [L, e]),
         B = s.useCallback(async () => {
             let t = w.trim();
@@ -354,7 +353,7 @@ function tc(t) {
             }
         }, [w]),
         G = s.useCallback(async () => {
-            (to(tl.jK.CREATE_SERVER),
+            (ta(tl.jK.CREATE_SERVER),
                 await L(),
                 await e(),
                 (0, p.openCreateGuildModal)({ location: "New User Onboarding" }));
@@ -372,15 +371,15 @@ function tc(t) {
                             src: "https://cdn.discordapp.com/assets/content/8cee6ac1e59daf603468edf05ecc97beeeeebdba44b55f9cb6bd589a44d7a08f.svg",
                         },
                         gradientColor: "purple",
-                        title: A.intl.string(A.t.A1Q7a8),
-                        subtitle: A.intl.string(A.t.jJZohU),
+                        title: y.intl.string(y.t.A1Q7a8),
+                        subtitle: y.intl.string(y.t.jJZohU),
                     },
-                    body: (0, l.jsx)(f, {}),
-                    nextButtonProps: { text: A.intl.string(A.t.LhlgY9) },
+                    body: (0, l.jsx)(A, {}),
+                    nextButtonProps: { text: y.intl.string(y.t.LhlgY9) },
                 },
                 {
                     stepKey: Y.APPEARANCE,
-                    modalProps: { title: A.intl.string(A.t.mTkQFn), subtitle: A.intl.string(A.t["2b+0N6"]) },
+                    modalProps: { title: y.intl.string(y.t.mTkQFn), subtitle: y.intl.string(y.t["2b+0N6"]) },
                     hideBackButton: !0,
                     body: (0, l.jsx)(k, {}),
                 },
@@ -395,22 +394,22 @@ function tc(t) {
                                 src: "https://cdn.discordapp.com/assets/content/4c20dd37f47dc0ad5926db81fc09233750332e94a0fe76ee49455a24c4240a95.svg",
                             },
                             gradientColor: "purple",
-                            title: A.intl.string(A.t.qDbCbw),
-                            subtitle: A.intl.string(A.t["5Di7f2"]),
+                            title: y.intl.string(y.t.qDbCbw),
+                            subtitle: y.intl.string(y.t["5Di7f2"]),
                         },
                         secondaryActionButtonProps: {
-                            text: A.intl.format(A.t.JoS1i3, { platform: (0, C.Vf)() }),
+                            text: y.intl.format(y.t.JoS1i3, { platform: (0, C.Vf)() }),
                             icon: r.DownloadIcon,
                             onClick: W,
                         },
-                        nextButtonProps: { text: A.intl.string(A.t.L5eIZ2) },
+                        nextButtonProps: { text: y.intl.string(y.t.L5eIZ2) },
                     }),
                 S &&
                     t.push({
                         stepKey: Y.PROFILE,
-                        modalProps: { title: A.intl.string(A.t["6A8F1a"]), subtitle: A.intl.string(A.t.sqjmbr) },
+                        modalProps: { title: y.intl.string(y.t["6A8F1a"]), subtitle: y.intl.string(y.t.sqjmbr) },
                         body: (0, l.jsx)(V, {
-                            pendingGlobalName: y,
+                            pendingGlobalName: f,
                             onGlobalNameChange: D,
                             pendingBio: O,
                             onBioChange: P,
@@ -419,33 +418,36 @@ function tc(t) {
                 t.push({
                     stepKey: Y.NEXT_STEPS,
                     modalProps: {
-                        graphic: { type: "image", src: ts.A },
+                        graphic: {
+                            type: "image",
+                            src: "https://cdn.discordapp.com/assets/content/e080b25a204330f6009430ab2cb53737b9c204f09112729be927bdc06b7609dc.svg",
+                        },
                         gradientColor: "blue",
-                        title: A.intl.string(A.t["++F+ha"]),
-                        subtitle: A.intl.string(A.t.yMX0GO),
+                        title: y.intl.string(y.t["++F+ha"]),
+                        subtitle: y.intl.string(y.t.yMX0GO),
                     },
                     body: (0, l.jsx)($, { onSelectOption: K, onExplore: M, onCreateServer: G }),
-                    nextButtonProps: { text: A.intl.string(A.t.zcmBTS) },
+                    nextButtonProps: { text: y.intl.string(y.t.zcmBTS) },
                 }),
                 t
             );
-        }, [S, y, O, K, M, G, W]),
+        }, [S, f, O, K, M, G, W]),
         z = s.useMemo(() => X.map((t) => t.stepKey), [X]),
         J = s.useMemo(
             () => ({
                 [Y.JOIN_SERVER]: {
                     stepKey: Y.JOIN_SERVER,
-                    modalProps: { title: A.intl.string(A.t.riOUtB), subtitle: A.intl.string(A.t.cs48bs) },
+                    modalProps: { title: y.intl.string(y.t.riOUtB), subtitle: y.intl.string(y.t.cs48bs) },
                     body: (0, l.jsx)(tt, { inviteLink: R, onInviteLinkChange: T }),
-                    nextButtonProps: { text: A.intl.string(A.t["Ts/9Ac"]) },
+                    nextButtonProps: { text: y.intl.string(y.t["Ts/9Ac"]) },
                     nextEnabled: R.trim().length > 0,
                     onNext: F,
                 },
                 [Y.ADD_FRIEND]: {
                     stepKey: Y.ADD_FRIEND,
-                    modalProps: { title: A.intl.string(A.t.w5uwoI), subtitle: A.intl.string(A.t.jy1kln) },
+                    modalProps: { title: y.intl.string(y.t.w5uwoI), subtitle: y.intl.string(y.t.jy1kln) },
                     body: (0, l.jsx)(te, { friendUsername: w, onFriendUsernameChange: I }),
-                    nextButtonProps: { text: A.intl.string(A.t["PMsq/b"]) },
+                    nextButtonProps: { text: y.intl.string(y.t["PMsq/b"]) },
                     nextEnabled: w.trim().length > 0,
                     onNext: B,
                 },

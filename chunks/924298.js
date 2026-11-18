@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 676992, Version Hash: 8e786da8dd2788617842ddc4cbd749da4a3949f5`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677000, Version Hash: 6cb3dda86b6548ac35a89d6b6f99216ae6c0ef01`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676992";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677000";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15910,7 +15910,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676992" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677000" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -28878,9 +28878,8 @@ class Ok extends nc.A {
                                     n.e(816799),
                                     n.e(548521),
                                     n.e(695206),
-                                    n.e(981004),
-                                    n.e(791291),
-                                ]).then(n.bind(n, 195382));
+                                    n.e(220626),
+                                ]).then(n.bind(n, 365097));
                                 return (t) => (0, v.jsx)(e, { ...t });
                             },
                             { onCloseRequest: H.tEg, onCloseCallback: e, modalKey: a },
@@ -37320,7 +37319,7 @@ let D4 = { [T1.sm.ANY]: [T1.W_, T1.VH] },
     };
 var be = n(610056),
     bt = n(321987),
-    bn = n(769007),
+    bn = n(549088),
     bi = n(485845),
     br = n(898467),
     ba = n(224750),
