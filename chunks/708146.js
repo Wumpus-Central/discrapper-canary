@@ -27,34 +27,55 @@ function I(e, t) {
     let n = e[t];
     return "string" == typeof n ? n : null;
 }
-function p(e) {
-    return e.replace(/authentication/g, "verification").replace(/authoriz/g, "approv");
-}
+let p = [
+    [/authentication/gi, "verification"],
+    [/authoriz/gi, "approv"],
+    [/token/gi, "tokn"],
+    [/email/gi, "e_mail"],
+];
 function m(e) {
+    return p.reduce((e, t) => {
+        let [n, i] = t;
+        return e.replace(n, (e) => (e === e.toUpperCase() ? i.toUpperCase() : i));
+    }, e);
+}
+function g(e) {
+    return Object.fromEntries(
+        Object.entries(e).map((e) => {
+            let [t, n] = e;
+            return "string" == typeof n
+                ? [t, m(n)]
+                : Array.isArray(n)
+                  ? [t, n.map((e) => ("string" == typeof e ? m(e) : e))]
+                  : [t, n];
+        }),
+    );
+}
+function T(e) {
     return e
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "_")
         .replace(/^_+|_+$/g, "")
         .slice(0, 48);
 }
-class g extends Error {
+class S extends Error {
     classification;
     key;
     shouldReport;
     source;
     cause;
     constructor(e, t) {
-        let n = g.classify(t);
-        (super(g.getMessage(n)),
+        let n = S.classify(t);
+        (super(S.getMessage(n)),
             (this.classification = n),
             (this.source = e),
-            (this.key = this.getKey()),
+            (this.key = S.getKeyFor(this.classification)),
             (this.shouldReport = this.getShouldReport()),
             (this.cause = t instanceof Error ? t : void 0),
             (this.name = `${c[e.site]}Error[${this.key}]`));
     }
     static report(e, t, n) {
-        let i = new g(e, t),
+        let i = new S(e, t),
             r = i.getSentryOptions(n);
         return (
             o.info(i.shouldReport ? "Reporting to Sentry:" : "Skipping Sentry report:", i.name, {
@@ -88,13 +109,13 @@ class g extends Error {
     static getMessage(e) {
         if ("string" === e.shape) return e.error;
         let t = I(e.error, "message");
-        return null != t && "" !== t ? t : g.getKeyFor(e);
+        return null != t && "" !== t ? t : S.getKeyFor(e);
     }
     static getKeyFor(e) {
         switch (e.shape) {
             case "billing_error": {
                 let { error: t } = e,
-                    n = g.getBillingErrorFieldNames(t);
+                    n = S.getBillingErrorFieldNames(t);
                 if (n.length > 0) return `field_error:${n.join("+")}`;
                 if (t.code > 0) return String(t.code);
                 return null != t.status ? `http_${t.status}` : "unknown";
@@ -108,17 +129,14 @@ class g extends Error {
             case "stripe_wallet_exception":
                 return e.error.code;
             case "gateway_sdk_error":
-                return `${m(e.error.name)}:${e.error.code}`;
+                return `${T(e.error.name)}:${e.error.code}`;
             case "string":
-                return m(e.error);
+                return T(e.error);
             case "error":
                 return e.error.name;
             case "unknown":
                 return "unknown";
         }
-    }
-    getKey() {
-        return p(g.getKeyFor(this.classification));
     }
     getShouldReport() {
         let { classification: e } = this;
@@ -126,7 +144,7 @@ class g extends Error {
             case "billing_error": {
                 let { error: t } = e;
                 if (t.code === r.Ay.ErrorCodes.INVALID_PAYMENT_SOURCE) return !1;
-                if (g.getBillingErrorFieldNames(t).length > 0) return !0;
+                if (S.getBillingErrorFieldNames(t).length > 0) return !0;
                 return !(0, s.gr)(t);
             }
             case "stripe_error": {
@@ -160,7 +178,7 @@ class g extends Error {
             case "billing_error":
                 return {
                     error_code: String(e.error.code),
-                    has_field_error: String(g.getBillingErrorFieldNames(e.error).length > 0),
+                    has_field_error: String(S.getBillingErrorFieldNames(e.error).length > 0),
                     http_status: null != e.error.status ? String(e.error.status) : null,
                 };
             case "stripe_error":
@@ -189,42 +207,35 @@ class g extends Error {
         switch (e.shape) {
             case "billing_error": {
                 let { code: t, status: n, message: i } = e.error;
-                return { raw_error: { code: t, status: n, message: i, fields: g.getBillingErrorFieldNames(e.error) } };
+                return {
+                    raw_error: g({ code: t, status: n, message: i, fields: S.getBillingErrorFieldNames(e.error) }),
+                };
             }
             case "stripe_error": {
                 let { type: t, code: n, decline_code: i, param: r, doc_url: a, message: s } = e.error;
-                return {
-                    raw_error: {
-                        type: p(t),
-                        code: null != n ? p(n) : n,
-                        decline_code: null != i ? p(i) : i,
-                        param: r,
-                        doc_url: a,
-                        message: s,
-                    },
-                };
+                return { raw_error: g({ type: t, code: n, decline_code: i, param: r, doc_url: a, message: s }) };
             }
             case "http_error": {
                 let { status: t, method: n, message: i } = e.error;
-                return { raw_error: { status: t, method: n, message: i } };
+                return { raw_error: g({ status: t, method: n, message: i }) };
             }
             case "stripe_wallet_exception": {
                 let { code: t, message: n } = e.error;
-                return { raw_error: { code: t, message: n } };
+                return { raw_error: g({ code: t, message: n }) };
             }
             case "gateway_sdk_error": {
                 let { name: t, code: n, message: i } = e.error;
-                return { raw_error: { name: t, code: n, message: i } };
+                return { raw_error: g({ name: t, code: n, message: i }) };
             }
             case "error": {
                 let { name: t, message: n } = e.error;
-                return { raw_error: { name: t, message: n } };
+                return { raw_error: g({ name: t, message: n }) };
             }
             case "string":
                 return {};
             case "unknown":
                 return null != e.error
-                    ? { raw_error_keys: Object.keys(e.error), raw_error_message: I(e.error, "message") }
+                    ? g({ raw_error_keys: Object.keys(e.error), raw_error_message: I(e.error, "message") })
                     : {};
         }
     }
@@ -239,19 +250,14 @@ class g extends Error {
                     ...this.getErrorTags(),
                     selected_element_type: null != n ? l.he[n] : null,
                     ...i,
-                })
-                    .filter((e) => {
-                        let [t, n] = e;
-                        return null != n;
-                    })
-                    .map((e) => {
-                        let [t, n] = e;
-                        return [t, p(n)];
-                    }),
+                }).filter((e) => {
+                    let [t, n] = e;
+                    return null != n;
+                }),
             ),
             fingerprint: [t, this.key],
             extra: { ...r, ...e, ...this.getRawErrorExtra() },
         };
     }
 }
-n.d(t, {}, { r: g });
+n.d(t, {}, { r: S });

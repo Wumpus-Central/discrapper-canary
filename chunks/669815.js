@@ -274,60 +274,77 @@ async function H(e) {
 let j = new Set([v.he.CARD, v.he.PAYMENT_REQUEST]);
 async function W() {
     let e;
-    for (var t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-    let [a, l, { billingAddress: o, paymentSourceType: d, lastConfirmedSetupIntentRef: c, createSetupIntent: u }, _] =
-        i;
-    if (null == a) throw M("Stripe not loaded", !0);
-    if (null == l) throw M("Stripe Elements not loaded", !0);
+    for (var t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+    let [r, a, { billingAddress: l, paymentSourceType: o, lastConfirmedSetupIntentRef: d, createSetupIntent: c }, u] =
+        n;
+    if (null == r) throw M("Stripe not loaded", !0);
+    if (null == a) throw M("Stripe Elements not loaded", !0);
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-    let E = await O(o);
-    d !== v.he.PAYMENT_REQUEST && (await k(l, d));
-    let A = null;
-    if (j.has(d)) {
+    let _ = await O(l);
+    o !== v.he.PAYMENT_REQUEST && (await k(a, o));
+    let E = null;
+    if (j.has(o)) {
         let e,
-            n = c.current ?? void 0;
+            t = d.current;
+        null != t
+            ? (e = { setupIntent: t, error: void 0 })
+            : (o === v.he.CARD && F.hasCreatedPaymentMethod && (await B(r, a, o)),
+              (e = await r.confirmSetup({ redirect: "if_required", elements: a })));
+        let n = e.error;
         if (
-            (null != n && d === v.he.PAYMENT_REQUEST
-                ? (e = { setupIntent: n ?? void 0, error: void 0 })
-                : (d === v.he.CARD && F.hasCreatedPaymentMethod && (await B(a, l, d)),
-                  (e = await a.confirmSetup({ redirect: "if_required", elements: l }))),
-            null != (t = e.error) &&
-                "setup_intent_unexpected_state" === t.code &&
-                null != t.setup_intent &&
-                ("succeeded" === t.setup_intent.status || "canceled" === t.setup_intent.status) &&
-                d !== v.he.PAYMENT_REQUEST)
+            null != n &&
+            "setup_intent_unexpected_state" === n.code &&
+            null != n.setup_intent &&
+            ("succeeded" === n.setup_intent.status || "canceled" === n.setup_intent.status)
         ) {
-            let { client_secret: t } = await u();
-            (await k(l, d), (e = await a.confirmSetup({ redirect: "if_required", clientSecret: t, elements: l })));
+            P.info("Recreating SetupIntent after confirmSetup error:", {
+                code: n.code,
+                setupIntentStatus: n.setup_intent.status,
+                paymentSourceType: o,
+            });
+            let { client_secret: t } = await c();
+            (await k(a, o), (e = await r.confirmSetup({ redirect: "if_required", clientSecret: t, elements: a })));
         }
-        let { setupIntent: i } = x(e.setupIntent, e.error, (e) => M(e, !0, d));
-        ((c.current = i), (A = i.payment_method));
+        let { setupIntent: i } = x(e.setupIntent, e.error, (e) => M(e, !0, o));
+        ((d.current = i), (E = i.payment_method));
     } else {
-        let { paymentMethod: t } = await B(a, l, d);
-        if (((A = t.id), d === v.he.PIX)) {
+        let { paymentMethod: t } = await B(r, a, o);
+        if (((E = t.id), o === v.he.PIX)) {
             let n = t.billing_details;
-            if (n?.tax_id == null || "" === n.tax_id) throw M("Missing PIX tax_id from Payment Element", !0, d);
+            if (n?.tax_id == null || "" === n.tax_id) throw M("Missing PIX tax_id from Payment Element", !0, o);
             e = { taxId: n.tax_id };
         }
     }
-    return D(N.kM_.STRIPE, A, o, { billingAddressToken: E, analyticsLocation: _, pix: e });
+    return D(N.kM_.STRIPE, E, l, { billingAddressToken: _, analyticsLocation: u, pix: e });
 }
-async function Y(e, t, n, i) {
-    if (null == e || null == t) throw L("Stripe or token not loaded");
+async function Y(e) {
+    let {
+        stripe: t,
+        billingAddress: n,
+        analyticsLocation: i,
+        onCardConfirmed: r,
+        token: a,
+        confirmedPaymentMethodId: l,
+    } = e;
+    if (null == t || null == a) throw L("Stripe or token not loaded");
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-    let r = null;
-    try {
-        r = (await (0, b.r)()).client_secret;
-    } catch (e) {
-        throw L(e);
+    let o = await O(n),
+        d = l;
+    if (null == d) {
+        let e = null;
+        try {
+            e = (await (0, b.r)()).client_secret;
+        } catch (e) {
+            throw L(e);
+        }
+        let i = g._Z(n),
+            { setupIntent: s, error: l } = await t.confirmCardSetup(e, {
+                payment_method: { card: { token: a }, billing_details: i },
+            }),
+            { setupIntent: o } = x(s, l, (e) => L(e));
+        r((d = o.payment_method));
     }
-    let a = await O(n),
-        l = g._Z(n),
-        { setupIntent: o, error: d } = await e.confirmCardSetup(r, {
-            payment_method: { card: { token: t }, billing_details: l },
-        }),
-        { setupIntent: c } = x(o, d, (e) => L(e));
-    return D(N.kM_.STRIPE, c.payment_method, n, { billingAddressToken: a, analyticsLocation: i });
+    return D(N.kM_.STRIPE, d, n, { billingAddressToken: o, analyticsLocation: i });
 }
 function K(e, t, n) {
     return D(N.kM_.BRAINTREE, e, t, { analyticsLocation: n });

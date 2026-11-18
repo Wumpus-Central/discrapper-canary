@@ -46,22 +46,23 @@ async function p(e, t, n) {
         { redirectConfirmation: u, paymentSource: c } = await (0, r.$M)(i.info, t, s, l ?? void 0, o);
     return { hasRedirectURL: u, paymentSource: c };
 }
-async function C(e, t) {
+async function h(e, t) {
     let { billingAddressState: n, analyticsLocation: l } = e;
     return { paymentSource: await (0, r.A8)(n.info, t, l), responseType: "payment-source" };
 }
-let h = {
+let C = {
     [u.he.CARD]: {
         submitAddressStep: async (e) =>
             e.shouldUsePaymentElement
                 ? await c(e, u.he.CARD)
                 : {
-                      paymentSource: await (0, r.u6)(
-                          e.stripe,
-                          e.tokenState.token,
-                          e.billingAddressState.info,
-                          e.analyticsLocation,
-                      ),
+                      paymentSource: await (0, r.u6)({
+                          stripe: e.stripe,
+                          billingAddress: e.billingAddressState.info,
+                          analyticsLocation: e.analyticsLocation,
+                          onCardConfirmed: (t) => e.setTokenState((e) => ({ ...e, confirmedPaymentMethodId: t })),
+                          ...e.tokenState,
+                      }),
                       responseType: "payment-source",
                   },
     },
@@ -95,8 +96,8 @@ let h = {
     [u.he.BANCONTACT]: { submitAddressStep: async (e) => await d(e, u.he.BANCONTACT) },
     [u.he.PAYPAL]: { submitAddressStep: async (e) => await m(e) },
     [u.he.VENMO]: { submitAddressStep: async (e) => await m(e) },
-    [u.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await C(e, u.he.PAYSAFE_CARD) },
-    [u.he.GRABPAY_MY]: { submitAddressStep: async (e) => await C(e, u.he.GRABPAY_MY) },
+    [u.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await h(e, u.he.PAYSAFE_CARD) },
+    [u.he.GRABPAY_MY]: { submitAddressStep: async (e) => await h(e, u.he.GRABPAY_MY) },
     [u.he.CASH_APP]: {
         submitAddressStep: async (e) => {
             let { paymentSource: t } = await p(e, u.he.CASH_APP, {
@@ -143,9 +144,9 @@ n.d(
     t,
     {},
     {
-        F: h,
+        F: C,
         i: function (e) {
-            return e in h;
+            return e in C;
         },
     },
 );

@@ -102,7 +102,7 @@ async function p(e) {
             i = await A(n);
         if (null == i) return { error: "unable to load stripe" };
         let { error: r, paymentIntent: a } = await i.retrievePaymentIntent(t);
-        if (null != r) return { error: r.message };
+        if (null != r) return { error: r };
         if (null == a) return { error: "payment intent does not exist" };
         let s = {};
         switch (
@@ -116,7 +116,7 @@ async function p(e) {
             case "requires_confirmation":
             case "requires_action":
                 let { error: l } = await i.confirmCardPayment(t, s);
-                if (null != l) return { error: l.message };
+                if (null != l) return { error: l };
                 return {};
             case "succeeded":
             case "processing":
@@ -125,7 +125,7 @@ async function p(e) {
                 return { error: `Invalid Payment Intent status: ${a.status}` };
         }
     } catch (e) {
-        return { error: e.message };
+        return { error: e };
     }
 }
 let m = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };

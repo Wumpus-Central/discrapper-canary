@@ -285,7 +285,7 @@ var U = n(260273),
 let B = { lastOrderUpdateRevision: 0 };
 var V = n(158032),
     H = n(830382),
-    j = n(949192),
+    j = n(708146),
     W = n(558740),
     Y = n(792996);
 let K = [y.__0.COMPLETED, y.__0.FAILED, y.__0.CANCELED],
@@ -488,7 +488,7 @@ function eE(e) {
                             (async function (e) {
                                 if (null == e) return;
                                 let { error: t } = await (0, W.ap)(e);
-                                null != t && (0, j.pM)(Error(t), { extra: { authenticationError: t } });
+                                null != t && j.r.report({ site: "payment_authentication", extra: { paymentId: e } }, t);
                             })(l));
                 },
                 handlePaymentUpdate: (t) => {

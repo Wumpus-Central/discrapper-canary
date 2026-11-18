@@ -28,9 +28,9 @@ async function u(e, t, n, c, u, _) {
             r.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: e, subscriptionPlans: E.body }), E.body
         );
     } catch (n) {
-        (r.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH_FAILURE", skuId: e }), (0, o.pM)(n));
+        r.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH_FAILURE", skuId: e });
         let t = new a.A(n);
-        throw ((t.message = `Failed to fetch subscription plans for SKU ${e}`), t);
+        throw ((0, o.gr)(t) || (0, o.pM)(n), (t.message = `Failed to fetch subscription plans for SKU ${e}`), t);
     }
 }
 n.d(
