@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => D });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -30,47 +30,45 @@ var i = n(477900),
     v = n(107198),
     L = n(792996),
     P = n(237790),
-    M = n(592551),
-    D = n(644242),
-    w = n(309427);
-function k(e) {
+    M = n(592551);
+function D(e) {
     let t,
         {
             title: n,
             description: l,
-            analyticsLocationSection: k,
-            upsellViewedTrackingData: U,
-            onClose: G,
-            onDisplay: F,
-            onUpsellClicked: J,
-            isEmojiPickerOverlay: V = !1,
-            graphic: K,
-            useNitroGradient: B = !1,
+            analyticsLocationSection: D,
+            upsellViewedTrackingData: w,
+            onClose: k,
+            onDisplay: U,
+            onUpsellClicked: G,
+            isEmojiPickerOverlay: F = !1,
+            graphic: J,
+            useNitroGradient: V = !1,
         } = e;
     s.useEffect(() => {
-        (A.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, U),
-            (0, C.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, U.location_stack, () =>
-                (0, y.uq)(U.type, U.has_premium_stream_fps, U.has_premium_stream_resolution),
+        (A.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, w),
+            (0, C.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, w.location_stack, () =>
+                (0, y.uq)(w.type, w.has_premium_stream_fps, w.has_premium_stream_resolution),
             ),
-            F?.());
-    }, [F, U]);
-    let H = (0, x.V)(),
-        W = s.useCallback(() => (0, N.LE)(H, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [H]),
-        X = (0, j.A)(b.pe.TIER_2),
-        z = (0, O.O9)();
-    t = V
+            U?.());
+    }, [U, w]);
+    let K = (0, x.V)(),
+        B = s.useCallback(() => (0, N.LE)(K, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [K]),
+        H = (0, j.A)(b.pe.TIER_2),
+        W = (0, O.O9)();
+    t = F
         ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
             : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
         : (0, _.TM)()
-          ? D.A
-          : w.A;
-    let Y = V || B ? "nitro-pink" : "green";
+          ? "https://cdn.discordapp.com/assets/content/f1a56c8da8561a47006a76435c179b24321640c79e997c64a71ef7a84c960829.mov"
+          : "https://cdn.discordapp.com/assets/content/c6188b952b5f1901da6986f4f06d690db24c805dfed5df35db3537ed5efb35a5.webm";
+    let X = F || V ? "nitro-pink" : "green";
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(o.p, { onClick: G, isVisible: !0 }),
+            (0, i.jsx)(o.p, { onClick: k, isVisible: !0 }),
             (0, i.jsx)(c.h, {
-                color: Y,
+                color: X,
                 className: P.kL,
                 children: (0, i.jsxs)(u.l, {
                     "aria-label": n,
@@ -79,18 +77,18 @@ function k(e) {
                         (0, i.jsxs)("div", {
                             className: P.Qs,
                             children: [
-                                (0, i.jsx)(a.s_, { "data-migration-pending": !0, onClick: G, className: P.b }),
+                                (0, i.jsx)(a.s_, { "data-migration-pending": !0, onClick: k, className: P.b }),
                                 (0, i.jsxs)("div", {
                                     className: P.hQ,
                                     children: [
                                         (0, i.jsx)("div", {
                                             className: M.headerGraphic,
                                             children:
-                                                K ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
+                                                J ?? (0, i.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        null != X && (0, i.jsx)(m.E, { type: { text: X }, variant: "primary" }),
+                                        null != H && (0, i.jsx)(m.E, { type: { text: H }, variant: "primary" }),
                                         (0, i.jsx)(f.D, {
-                                            className: r()(P.DD, { [P.GU]: null != X }),
+                                            className: r()(P.DD, { [P.GU]: null != H }),
                                             variant: "heading-xl/semibold",
                                             color: "text-strong",
                                             children: n,
@@ -103,8 +101,8 @@ function k(e) {
                                         }),
                                     ],
                                 }),
-                                V &&
-                                    z &&
+                                F &&
+                                    W &&
                                     (0, i.jsx)("div", {
                                         className: P.Zr,
                                         children: (0, i.jsx)(T.A, { subtitle: L.intl.string(v.default.BkJYQ5) }),
@@ -120,12 +118,12 @@ function k(e) {
                                         variant: "secondary",
                                         onClick: function () {
                                             (A.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
-                                                location_section: k,
+                                                location_section: D,
                                                 location_object: R.ZSU.NAVIGATION_LINK,
                                             }),
-                                                J?.(),
+                                                G?.(),
                                                 (0, g.A)(),
-                                                G(),
+                                                k(),
                                                 (0, h.jH)(),
                                                 (0, p.pX)(R.BVt.APPLICATION_STORE));
                                         },
@@ -133,12 +131,12 @@ function k(e) {
                                         fullWidth: !0,
                                     }),
                                     (0, i.jsx)(S.A, {
-                                        premiumModalAnalyticsLocation: { section: k, object: R.ZSU.BUTTON_CTA },
+                                        premiumModalAnalyticsLocation: { section: D, object: R.ZSU.BUTTON_CTA },
                                         subscriptionTier: b.pe.TIER_2,
                                         onClick: () => {
-                                            (G(), J?.());
+                                            (k(), G?.());
                                         },
-                                        defaultTextOverride: W(),
+                                        defaultTextOverride: B(),
                                         fullWidth: !0,
                                     }),
                                 ],
