@@ -1,0 +1,66 @@
+.container_5G-eaS {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+    position: relative
+}
+
+.emoji_5G-eaS {
+    margin-inline-end: 8px
+}
+
+.list_5G-eaS,
+.menu_5G-eaS {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.list_5G-eaS {
+    position: relative
+}
+
+.list_5G-eaS>li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.preview_5G-eaS {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.profile_5G-eaS {
+    display: flex;
+    margin: 77px auto 53px;
+    position: relative;
+    width: 300px;
+    z-index: 0
+}
+
+.profile_5G-eaS>img {
+    background-color: var(--background-base-low);
+    border: 8px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    width: 100%
+}
+
+.error_5G-eaS {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    text-align: center
+}
+
+.error_5G-eaS>img {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=4952d8daa764fc51.css.map*/

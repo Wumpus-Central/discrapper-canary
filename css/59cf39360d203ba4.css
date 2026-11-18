@@ -1,3 +1,10 @@
+.smallCardItem_-T_N-w {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 246px
+}
+
 .row_PrrPPz {
     display: flex;
     gap: var(--space-md);
@@ -21,4 +28,4 @@
     gap: var(--space-16)
 }
 
-/*# sourceMappingURL=7acb5ecc92c512cd.css.map*/
+/*# sourceMappingURL=59cf39360d203ba4.css.map*/

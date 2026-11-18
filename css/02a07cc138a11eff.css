@@ -1,0 +1,85 @@
+.marketingBlock_nQ1zr7 {
+    align-items: flex-start;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    padding: var(--space-32) var(--space-24) var(--space-24);
+    position: relative
+}
+
+.marketingBlock_nQ1zr7:hover {
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .14))
+}
+
+.fill_nQ1zr7 {
+    flex: 1;
+    height: 236px
+}
+
+.carousel_nQ1zr7 {
+    aspect-ratio: 530/236;
+    flex-shrink: 0;
+    min-width: 460px
+}
+
+.marketingBlockBadge_nQ1zr7 {
+    display: flex;
+    min-height: var(--space-16)
+}
+
+.marketingBlockTitleArea_nQ1zr7 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    padding-block: var(--space-6) var(--space-8)
+}
+
+@keyframes skeletonPulse_nQ1zr7 {
+    0% {
+        background: var(--background-base-lower)
+    }
+
+    30% {
+        background: var(--background-base-low)
+    }
+
+    70% {
+        background: var(--background-base-low)
+    }
+
+    to {
+        background: var(--background-base-lower)
+    }
+}
+
+.skeleton_nQ1zr7 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border: 2px solid var(--border-muted);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    display: flex;
+    padding: var(--space-16)
+}
+
+.full-motion .skeleton_nQ1zr7 {
+    animation: skeletonPulse_nQ1zr7 2s ease-in-out infinite alternate;
+    animation-fill-mode: backwards
+}
+
+.skeletonLogo_nQ1zr7 {
+    background-color: var(--icon-muted);
+    border-radius: var(--radius-xs);
+    height: var(--space-48);
+    opacity: .1;
+    width: 50%
+}
+
+/*# sourceMappingURL=02a07cc138a11eff.css.map*/
