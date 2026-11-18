@@ -1,4 +1,4 @@
-n.d(t, { wy: () => R, MF: () => L, jo: () => T, $w: () => N, PM: () => y, CF: () => g, E8: () => S });
+n.d(t, { wy: () => D, MF: () => b, jo: () => C, $w: () => R, PM: () => v, CF: () => N, E8: () => O });
 var i = n(582128),
     r = n(855986),
     a = n(73153),
@@ -6,66 +6,87 @@ var i = n(582128),
     l = n(287809),
     o = n(513425),
     d = n(722701);
-let c = { pending: null },
-    u = c;
-class _ extends r.Ay.PersistedStore {
+let c = { submittedAt: {} };
+class u extends r.Ay.DeviceSettingsStore {
+    static displayName = "ConjurePublishEvalCooldownStore";
+    static persistKey = "ConjurePublishEvalCooldown";
+    initialize(e) {
+        c = { submittedAt: e?.submittedAt ?? {} };
+    }
+    getSubmittedAt(e, t) {
+        return c.submittedAt[`${e}:${t}`] ?? null;
+    }
+    getUserAgnosticState() {
+        return c;
+    }
+}
+let _ = new u(a.h, {
+        CONJURE_PUBLISH_EVAL_SUBMITTED: function (e) {
+            let { userId: t, projectId: n, stored: i } = e;
+            return !!i && ((c = { submittedAt: { ...c.submittedAt, [`${t}:${n}`]: Date.now() } }), !0);
+        },
+    }),
+    E = { pending: null },
+    A = E;
+class f extends r.Ay.PersistedStore {
     static displayName = "ConjurePublishEvalStore";
     static persistKey = "ConjurePublishEval";
     initialize(e) {
-        u = e ?? c;
+        A = e ?? E;
     }
     getState() {
-        return u;
+        return A;
     }
     getPending() {
-        return u.pending;
+        return A.pending;
     }
 }
-function E(e) {
+function h(e) {
     let { projectId: t } = e;
-    return u.pending?.projectId === t && ((u = { pending: null }), !0);
+    return A.pending?.projectId === t && ((A = { pending: null }), !0);
 }
-let A = new _(a.h, {
+let I = new f(a.h, {
     CONJURE_PUBLISH_EVAL_PENDING: function (e) {
         let { pending: t } = e;
-        return ((u = { pending: t }), !0);
+        return ((A = { pending: t }), !0);
     },
     CONJURE_PUBLISH_EVAL_SUBMITTED: function (e) {
         let { projectId: t, publishTurnId: n } = e,
-            { pending: i } = u;
-        return null != i && i.projectId === t && i.publishTurnId === n && ((u = { pending: null }), !0);
+            { pending: i } = A;
+        return null != i && i.projectId === t && i.publishTurnId === n && ((A = { pending: null }), !0);
     },
-    CONJURE_PROJECT_DELETE_SUCCESS: E,
-    CONJURE_PUBLISH_EVAL_PROJECT_GONE: E,
+    CONJURE_PROJECT_DELETE_SUCCESS: h,
+    CONJURE_PUBLISH_EVAL_PROJECT_GONE: h,
 });
-var f = n(786986),
-    h = n(768857),
-    I = n(191850),
-    p = n(792996);
-function m(e) {
-    return f.n.some((t) => null != e.getGuild(t));
-}
-function g() {
-    return (0, r.bG)([s.A], () => m(s.A));
-}
-function T() {
-    let e = A.getPending();
-    return null != e && e.userId === l.default.getCurrentUser()?.id && m(s.A) ? e : null;
-}
+var p = n(786986),
+    m = n(768857),
+    g = n(191850),
+    T = n(792996);
 function S(e) {
+    return p.n_.some((t) => null != e.getGuild(t));
+}
+function N() {
+    return (0, r.bG)([s.A], () => S(s.A));
+}
+function C() {
+    let e = I.getPending();
+    return null != e && e.userId === l.default.getCurrentUser()?.id && S(s.A) ? e : null;
+}
+function O(e) {
     return (0, r.bG)(
-        [A, l.default, s.A],
+        [I, l.default, s.A],
         () => {
-            let t = A.getPending();
-            return t?.projectId === e && t.userId === l.default.getCurrentUser()?.id && m(s.A) ? t : null;
+            let t = I.getPending();
+            return t?.projectId === e && t.userId === l.default.getCurrentUser()?.id && S(s.A) ? t : null;
         },
         [e],
     );
 }
-function N(e) {
+function R(e) {
     let t = l.default.getCurrentUser()?.id;
-    null != t &&
-        m(s.A) &&
+    if (null == t || !S(s.A)) return;
+    let n = _.getSubmittedAt(t, e);
+    (null != n && Date.now() - n < p.hr) ||
         a.h.dispatch({
             type: "CONJURE_PUBLISH_EVAL_PENDING",
             pending: {
@@ -83,16 +104,16 @@ function N(e) {
             },
         });
 }
-let C = { quality: null, metExpectations: null, speed: null },
-    O = { quality: I.default["N94/JU"], metExpectations: I.default["7mnit0"], speed: I.default["J/xftE"] };
-function R(e) {
-    return p.intl.string(O[e]);
+let L = { quality: null, metExpectations: null, speed: null },
+    y = { quality: g.default["N94/JU"], metExpectations: g.default["7mnit0"], speed: g.default["J/xftE"] };
+function D(e) {
+    return T.intl.string(y[e]);
 }
-function L(e, t) {
-    return p.intl.formatToPlainString(I.default.fML8aJ, { score: t, dimension: R(e) });
+function b(e, t) {
+    return T.intl.formatToPlainString(g.default.fML8aJ, { score: t, dimension: D(e) });
 }
-function y(e) {
-    let [t, n] = i.useState(C),
+function v(e) {
+    let [t, n] = i.useState(L),
         [r, s] = i.useState(""),
         [l, o] = i.useState(!1),
         [c, u] = i.useState(!1),
@@ -109,7 +130,7 @@ function y(e) {
                 try {
                     await (async function (e, t, n) {
                         let i = d.A.getPublishStatus(e.projectId)?.publishedRevision,
-                            r = await (0, h.yD)(e.projectId, {
+                            r = await (0, m.yD)(e.projectId, {
                                 publish_turn_id: e.publishTurnId,
                                 published_revision: i ?? null,
                                 quality: t.quality,
@@ -120,8 +141,10 @@ function y(e) {
                         if (!r.ok && "gone" !== r.error && "forbidden" !== r.error) throw Error(r.error);
                         a.h.dispatch({
                             type: "CONJURE_PUBLISH_EVAL_SUBMITTED",
+                            userId: e.userId,
                             projectId: e.projectId,
                             publishTurnId: e.publishTurnId,
+                            stored: r.ok,
                         });
                     })(e, _, r);
                 } catch {
@@ -130,14 +153,14 @@ function y(e) {
             }
         }, [_, r, e, l]);
     return {
-        dimensions: f.W,
+        dimensions: p.Wp,
         scores: t,
         setScore: E,
         feedback: r,
         setFeedback: s,
         canSubmit: null != _ && !l,
         submitting: l,
-        error: c ? p.intl.string(I.default.Nu6mEB) : null,
+        error: c ? T.intl.string(g.default.Nu6mEB) : null,
         submit: A,
     };
 }
