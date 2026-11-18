@@ -273,14 +273,16 @@ function Q(e) {
             },
             [eo, ed, n, eb, eY, eK, eZ, el, eq],
         ),
-        { signOrder: e7, reportError: e6 } = (0, p.f)({
+        e7 = i.useCallback((e) => q(eN, e), [eN]),
+        { signOrder: e6, reportError: e8 } = (0, p.f)({
             order: eI,
             errorSource: "checkout_sign_order",
+            onSignFailure: e7,
             onError: (e) => {
                 (e4(e), ev(e));
             },
         }),
-        e8 = i.useCallback(
+        e5 = i.useCallback(
             (e) =>
                 e.customerActionCancelled
                     ? ((0, c.fE)(), eo(A.h.WAITING), { shouldReturnEarly: !0 })
@@ -289,10 +291,10 @@ function Q(e) {
                       : (eo(A.h.COMPLETED), { shouldReturnEarly: !1 }),
             [eo],
         ),
-        e5 = i.useCallback(() => {
+        e9 = i.useCallback(() => {
             eQ || e$(!1);
         }, [eQ]),
-        e9 = i.useCallback(
+        te = i.useCallback(
             (e, t, n) => {
                 let l = e ?? null;
                 (eE(l),
@@ -302,7 +304,7 @@ function Q(e) {
             },
             [J, X, eE, eh, ef],
         );
-    async function te(e) {
+    async function tt(e) {
         if (null != eI) {
             if (e0.current) return;
             e0.current = !0;
@@ -325,7 +327,7 @@ function Q(e) {
                                         return (0, P.W)(ej, null != t ? t.payment_source_id : null);
                                     })(),
                                 ).catch(() => null),
-                                t = await e7({
+                                t = await e6({
                                     loadId: eu.loadId,
                                     purchaseToken: (0, j.r)(),
                                     gatewayCheckoutContext: e,
@@ -359,13 +361,13 @@ function Q(e) {
                                     let e = await (0, m.Vw)(n.id);
                                     if (!eX.current) return;
                                     if (0 === e.length) throw new m.j2();
-                                    (eo(A.h.COMPLETED), e9(null, e));
+                                    (eo(A.h.COMPLETED), te(null, e));
                                 } catch (e) {
-                                    e6(e, { orderId: n.id, loadId: eu.loadId });
+                                    e8(e, { orderId: n.id, loadId: eu.loadId });
                                 }
                         })();
                     } finally {
-                        (eA(!1), e5());
+                        (eA(!1), e9());
                     }
                 })();
             } finally {
@@ -505,8 +507,8 @@ function Q(e) {
         })({
             onPurchaseAttempt: e3,
             onPurchaseError: e4,
-            onPurchaseComplete: e8,
-            onPurchaseFinalize: e5,
+            onPurchaseComplete: e5,
+            onPurchaseFinalize: e9,
             hasRedirectURL: eQ,
             isGift: eM,
             analyticsLocation: L,
@@ -518,7 +520,7 @@ function Q(e) {
             paymentSource: t,
             openInvoiceId: ex,
             premiumSubscription: et ?? null,
-            onNext: e9,
+            onNext: te,
             metadata: k,
             sku: e1,
             purchaseType: ep,
@@ -532,17 +534,17 @@ function Q(e) {
             applyWalletBalance: eP ?? el?.applyWalletBalance,
         });
     }
-    let tt = null != ex || (ep === g.VVm.ONE_TIME && !eM),
-        tn = w && !tt;
+    let tn = null != ex || (ep === g.VVm.ONE_TIME && !eM),
+        tl = w && !tn;
     i.useLayoutEffect(() => {
         eS && null != r && eg(W.i.UNAVAILABLE);
     }, [eS, r, eg]);
-    let tl =
+    let ti =
         eS && null == r
             ? (0, l.jsx)(R.E1, {
                   type: "purchase_if_possible",
                   disablePurchase: U,
-                  makePurchase: te,
+                  makePurchase: tt,
                   isSubmitting: ez,
                   setIsSubmitting: e$,
               })
@@ -552,16 +554,16 @@ function Q(e) {
         : (0, l.jsx)($, {
               renderFooter: function (e) {
                   return (0, l.jsx)(H.lo, {
-                      onBackClick: tn ? t : void 0,
+                      onBackClick: tl ? t : void 0,
                       primaryButtonProps: e,
-                      stripeExpressCheckoutComponent: tl,
+                      stripeExpressCheckoutComponent: ti,
                   });
               },
               tenantProvidedReviewButtonProps: ee,
               disableSubmit: U,
               isSubmitting: ez,
               onReviewButtonClick: function () {
-                  return te();
+                  return tt();
               },
               needsPaymentSource: null == eY && !e2,
               onPaymentSourceAdd: Q,
