@@ -116,7 +116,13 @@ class Y extends T.A {
     }
     maybeShowClipsWarning(e) {
         let t = R.A.getChannelId();
-        if (null == t || P.Ay.getClipsWarningShown(t) || e === h.default.getId() || !P.Ay.isClipsEnabledForUser(e))
+        if (
+            null == t ||
+            O.A.getChannel(t)?.isGuildStageVoice() ||
+            P.Ay.getClipsWarningShown(t) ||
+            e === h.default.getId() ||
+            !P.Ay.isClipsEnabledForUser(e)
+        )
             return;
         let n = this.shouldUseClipsInUseNotice();
         (n || N.Q$.getSetting()) &&
