@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => e2 }));
+(n.r(t), n.d(t, { default: () => e6 }));
 var l,
     i = n(477900),
     s = n(582128),
@@ -281,7 +281,7 @@ function eo() {
                                                         n.e(550929),
                                                         n.e(415695),
                                                         n.e(64769),
-                                                        n.e(644013),
+                                                        n.e(86729),
                                                         n.e(971156),
                                                         n.e(60002),
                                                         n.e(260009),
@@ -978,7 +978,7 @@ function e0(e) {
     r.w.set(eH, e);
 }
 let e9 = null;
-function e6(e) {
+function e2(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: l } = e,
         s = (0, m.A)({
             minDimension: 320,
@@ -991,7 +991,7 @@ function e6(e) {
         });
     return (0, i.jsx)("div", { onMouseDown: s, className: e$.Di, "aria-hidden": !0 });
 }
-function e2() {
+function e6() {
     let e = (0, x.fy)().metadata,
         t = (0, f.h)(e?.applicationId),
         n = s.useRef(!1),
@@ -1034,7 +1034,7 @@ function e2() {
         className: e$.nE,
         style: { width: E },
         children: [
-            (0, i.jsx)(e6, { resizableNode: r, onResize: A, onResizeEnd: e0 }),
+            (0, i.jsx)(e2, { resizableNode: r, onResize: A, onResizeEnd: e0 }),
             (0, i.jsx)(c.F, {
                 component: v,
                 children: (0, i.jsx)("div", {

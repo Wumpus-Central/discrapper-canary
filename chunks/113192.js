@@ -50,7 +50,7 @@ n.d(
                             onJumpToChannel: async function () {
                                 if (t.intent !== m.sV.INLINE) return void v();
                                 let { returnToConjureFrameSurface: e } = await Promise.all([
-                                    n.e(644013),
+                                    n.e(86729),
                                     n.e(896691),
                                     n.e(971156),
                                     n.e(260009),

@@ -7,7 +7,7 @@ async function s(e) {
     let { applicationId: t, frameId: r, surface: a } = e;
     if (a.type !== i.U.MAIN) return;
     let { closeBackgroundedConjureAppFrames: s } = await Promise.all([
-        n.e(644013),
+        n.e(86729),
         n.e(896691),
         n.e(447505),
         n.e(971156),

@@ -21,7 +21,7 @@ function p(e) {
         name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: n, component_id: t, promotion_id: i },
     });
-    let s = (0, l.jsx)(u._, { src: a.assetUrl, width: 48, height: 48, zoomable: !1 });
+    let s = (0, l.jsx)(u._, { src: a.assetUrl, width: 48, height: 48, zoomable: !1, className: m.LY });
     return (0, l.jsx)(c.J, { className: m.No, customGraphic: s, text: a.body });
 }
 var h = n(418200),

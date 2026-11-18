@@ -5,7 +5,8 @@ var o = n(517352),
     r = n(641436),
     i = n(807098),
     d = n(92551),
-    s = n(792996);
+    s = n(792996),
+    u = n(472530);
 n.d(
     t,
     {},
@@ -13,18 +14,18 @@ n.d(
         A: function (e) {
             let { children: t } = e,
                 n = (0, r.uF)(o.oW.PREMIUM_TAB_TOOLTIP),
-                u = n?.surface,
-                p = (0, i.T)(u?.asset);
-            if (null == u || null == n) return t;
-            let c = n.getFormatVariableValues(s.intl.currentLocale),
-                b = (0, d.d)(u.body, c);
-            if (!b.ok) return t;
-            let m = (0, d.d)(u.header, c);
-            return m.ok
+                p = n?.surface,
+                c = (0, i.T)(p?.asset);
+            if (null == p || null == n) return t;
+            let b = n.getFormatVariableValues(s.intl.currentLocale),
+                m = (0, d.d)(p.body, b);
+            if (!m.ok) return t;
+            let _ = (0, d.d)(p.header, b);
+            return _.ok
                 ? (0, l.jsx)(a.u, {
-                      title: m.content,
-                      body: b.content,
-                      asset: null != p ? (0, l.jsx)("img", { src: p, alt: "" }) : void 0,
+                      title: _.content,
+                      body: m.content,
+                      asset: null != c ? (0, l.jsx)("img", { src: c, className: u.L, alt: "" }) : void 0,
                       assetSize: 80,
                       padding: "lg",
                       position: "right",
