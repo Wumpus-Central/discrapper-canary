@@ -64,7 +64,7 @@ n.d(
                     ],
                 });
             }
-            let v = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
+            let A = c * (1 - (n <= 0 ? 0.025 : (0, a.clamp)(t / n, 0.025, 1)));
             return (0, l.jsxs)("div", {
                 className: u.iE,
                 children: [
@@ -82,7 +82,7 @@ n.d(
                                 strokeWidth: 6,
                                 stroke: r,
                                 strokeDasharray: c,
-                                strokeDashoffset: v,
+                                strokeDashoffset: A,
                             }),
                         ],
                     }),

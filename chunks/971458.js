@@ -15,10 +15,10 @@ var l = n(477900),
     p = n(775602),
     f = n(421773),
     x = n(361779);
-function v(e) {
+function A(e) {
     return !e.defaultPrevented && 0 === e.button && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
 }
-function A(e) {
+function v(e) {
     let { navId: t, option: n, selectedKey: r } = e;
     return "page" === n.type
         ? (0, l.jsx)(C, { option: n, selectedKey: r })
@@ -30,7 +30,7 @@ function C(e) {
         i = n.key === s,
         d = r.useCallback(
             (e) => {
-                v(e) && (e.preventDefault(), n.onClick(e));
+                A(e) && (e.preventDefault(), n.onClick(e));
             },
             [n],
         ),
@@ -60,7 +60,7 @@ function y(e) {
     let { navId: t, option: n, selectedKey: s } = e,
         { route: i } = n,
         o = `${t}-${n.key}`,
-        A = (function e(t, n) {
+        v = (function e(t, n) {
             return t.key === n || ("menu" === t.type && t.options.some((t) => e(t, n)));
         })(n, s),
         C = r.useRef(null),
@@ -87,7 +87,7 @@ function y(e) {
         }, [_, N, O]),
         T = r.useCallback(
             (e) => {
-                (O(!1), null != n.route && v(e) && (e.preventDefault(), n.onClick(e)));
+                (O(!1), null != n.route && A(e) && (e.preventDefault(), n.onClick(e)));
             },
             [n, O],
         ),
@@ -153,7 +153,7 @@ function y(e) {
                 null != i
                     ? (0, l.jsxs)("span", {
                           ref: C,
-                          className: a()(x.ie, x.iL, { [x.wH]: A }),
+                          className: a()(x.ie, x.iL, { [x.wH]: v }),
                           children: [
                               (0, l.jsx)(u.D, {
                                   tag: "a",
@@ -192,7 +192,7 @@ function y(e) {
                           onKeyDown: D,
                           onMouseEnter: k,
                           onMouseLeave: I,
-                          className: a()(x.ie, x.LA, { [x.wH]: A }),
+                          className: a()(x.ie, x.LA, { [x.wH]: v }),
                           children: [P, M],
                       }),
         }),
@@ -269,7 +269,7 @@ function I(e) {
                 (0, l.jsx)("ul", {
                     onKeyDown: S,
                     className: x.P_,
-                    children: E.map((e) => (0, l.jsx)(A, { navId: m, option: e, selectedKey: n }, e.key)),
+                    children: E.map((e) => (0, l.jsx)(v, { navId: m, option: e, selectedKey: n }, e.key)),
                 }),
         ],
     });
@@ -284,13 +284,13 @@ function j(e) {
             t.map((e, t) =>
                 (0, l.jsx)(
                     i.Ae,
-                    { index: t, onItemLayout: a, children: (0, l.jsx)(A, { navId: u, option: e }) },
+                    { index: t, onItemLayout: a, children: (0, l.jsx)(v, { navId: u, option: e }) },
                     e.key,
                 ),
             ),
             (0, l.jsx)("div", {
                 ref: o,
-                children: (0, l.jsx)(A, {
+                children: (0, l.jsx)(v, {
                     navId: u,
                     option: { type: "menu", key: "more-measure", text: r, expandLabel: s, options: [] },
                 }),

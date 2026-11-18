@@ -22,8 +22,8 @@ n.d(
                     gradientColors: p,
                     gradientAngle: f,
                     skuIds: x,
-                    resolvedSkuIds: v,
-                    isLoading: A,
+                    resolvedSkuIds: A,
+                    isLoading: v,
                     tab: C,
                     endTime: y,
                     ctaType: L = "storefront",
@@ -58,8 +58,8 @@ n.d(
                 }, [L, t, k, j]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
-                resolvedSkuIds: v,
-                isLoading: A,
+                resolvedSkuIds: A,
+                isLoading: v,
                 tab: C,
                 applicationId: t,
                 headerText: n,

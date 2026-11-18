@@ -15,8 +15,8 @@ var l = n(477900),
     p = n(793574),
     f = n(688810),
     x = n(321538),
-    v = n(604913),
-    A = n(773669),
+    A = n(604913),
+    v = n(773669),
     C = n(318346),
     y = n(287809),
     L = n(129230),
@@ -58,8 +58,8 @@ function U(e) {
         : a(void 0, u);
 }
 var G = n(602051),
-    $ = n(758836),
-    F = n(652215),
+    F = n(758836),
+    $ = n(652215),
     V = n(792996),
     K = n(105499);
 let W = {
@@ -74,7 +74,7 @@ let W = {
 function z(e) {
     let { heroBlockRecord: t, isBlockLoading: n } = e,
         r = S.useConfig({ location: "orbs_hero_block_cards" }).enabled;
-    return (0, l.jsx)(M.A, { heroBlockRecord: t, tab: $.G2.ORBS, isBlockLoading: n, layout: r ? "hscroll" : "feed" });
+    return (0, l.jsx)(M.A, { heroBlockRecord: t, tab: F.G2.ORBS, isBlockLoading: n, layout: r ? "hscroll" : "feed" });
 }
 let Y = (e) => {
         let {
@@ -99,7 +99,7 @@ let Y = (e) => {
             Q = r.useRef(null),
             Z = (0, D.yB)("HeroBlock"),
             J = (0, c.bG)([y.default], () => y.default.getCurrentUser()),
-            ee = (0, c.bG)([A.default], () => A.default.locale),
+            ee = (0, c.bG)([v.default], () => v.default.locale),
             et = (0, _.uM)(),
             { analyticsLocations: en } = (0, f.Ay)(p.A.COLLECTIBLES_SHOP_HERO),
             el = (0, I.ST)(),
@@ -126,11 +126,11 @@ let Y = (e) => {
                 [S, s],
             ),
             es = r.useMemo(() => (0, j.HF)(el, er), [el, er]),
-            ea = es?.subtype === v.h5.TAKEOVER,
-            ei = es?.subtype === v.h5.BASIC,
-            eo = ea && el?.endsAt != null && null == (0, N.X)(el.endsAt) && w === $.G2.HOME,
+            ea = es?.subtype === A.h5.TAKEOVER,
+            ei = es?.subtype === A.h5.BASIC,
+            eo = ea && el?.endsAt != null && null == (0, N.X)(el.endsAt) && w === F.G2.HOME,
             eu = ea && !eo,
-            ec = (eu || ei) && w === $.G2.COLLECTION_INDEX,
+            ec = (eu || ei) && w === F.G2.COLLECTION_INDEX,
             ed = r.useMemo(
                 () => (null != er.foregroundBlock || null == el || eo ? er : (0, j.O8)(el, er, w, ee)),
                 [el, er, eo, w, ee],
@@ -144,18 +144,18 @@ let Y = (e) => {
                 heroBannerRive: ef,
             } = (0, R.Kk)(ed),
             ex = em?.responsive ?? !1,
-            ev = em?.backgroundStyle,
-            eA = null != ef && !eu,
-            eC = w === $.G2.ORBS,
+            eA = em?.backgroundStyle,
+            ev = null != ef && !eu,
+            eC = w === F.G2.ORBS,
             ey = null != s && s.isOrbsExclusive,
-            eL = w === $.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
+            eL = w === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
             e_ = eC ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
         function eb() {
             eC
                 ? ((0, C.Y)({
-                      pageType: F.liQ.SHOP_ORBS_TAB,
-                      sectionType: F.JJy.ORBS_SHOP_HERO_BLOCK,
-                      ctaObject: F.ZSU.CTA_TO_QUEST_HOME,
+                      pageType: $.liQ.SHOP_ORBS_TAB,
+                      sectionType: $.JJy.ORBS_SHOP_HERO_BLOCK,
+                      ctaObject: $.ZSU.CTA_TO_QUEST_HOME,
                   }),
                   (0, x.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
                 : (n?.({
@@ -164,7 +164,7 @@ let Y = (e) => {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: ey,
                   }),
-                  L.default.track(F.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  L.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: et?.sessionId,
                       sku_id: ed.categorySkuId,
                       page_type: w,
@@ -186,18 +186,18 @@ let Y = (e) => {
                     [K.MW]: null == q && null != ed.foregroundBlock && 0 === ed.rankedSkuIds.length,
                 }),
                 children: [
-                    eA && null == q
+                    ev && null == q
                         ? (0, T.VA)({ isCustomCursorEnabled: Z, className: K.Xt, riveEventTargetRef: Q })
                         : null,
                     (0, l.jsx)("div", {
-                        className: a()(K.vK, { [K.cN]: eA, [K.no]: ex }),
-                        style: null != ev ? { background: ev } : void 0,
+                        className: a()(K.vK, { [K.cN]: ev, [K.no]: ex }),
+                        style: null != eA ? { background: eA } : void 0,
                         children:
                             null != eE &&
                             (0, l.jsx)(P.A, {
                                 bannerStatic: eE,
                                 bannerAnimated: ep,
-                                bannerRive: eA ? ef : void 0,
+                                bannerRive: ev ? ef : void 0,
                                 isResponsive: ex,
                                 eventTargetRef: Q,
                             }),
@@ -208,7 +208,7 @@ let Y = (e) => {
                             q ??
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    eA
+                                    ev
                                         ? (0, l.jsx)("div", { className: K.fy, children: eS() })
                                         : (0, l.jsxs)("div", {
                                               className: a()(K.uZ, { [K.no]: ex, [K.RD]: ec }),
@@ -290,13 +290,13 @@ let Y = (e) => {
                                               ],
                                           }),
                                     !Y &&
-                                        (w === $.G2.ORBS
+                                        (w === F.G2.ORBS
                                             ? (0, l.jsx)(z, { heroBlockRecord: ed, isBlockLoading: t })
                                             : (0, l.jsx)(M.A, {
                                                   heroBlockRecord: ed,
                                                   tab: w,
                                                   isBlockLoading: t,
-                                                  layout: w === $.G2.HOME ? "hscroll" : "feed",
+                                                  layout: w === F.G2.HOME ? "hscroll" : "feed",
                                                   onViewAll: eb,
                                               })),
                                 ],
@@ -304,7 +304,7 @@ let Y = (e) => {
                     }),
                     !t &&
                         ei &&
-                        w === $.G2.HOME &&
+                        w === F.G2.HOME &&
                         (0, l.jsx)("div", {
                             className: a()(K.xX, K.uC),
                             children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: eL }),

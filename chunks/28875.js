@@ -59,12 +59,12 @@ n.d(
                     onButtonClick: a,
                     className: i,
                 } = e,
-                { headingVariant: d, headingColor: m, buttonVariant: E, buttonSize: f, align: x, fullWidth: v } = g[n];
+                { headingVariant: d, headingColor: m, buttonVariant: E, buttonSize: f, align: x, fullWidth: A } = g[n];
             return (0, l.jsxs)(o.B, {
                 direction: "horizontal",
                 justify: "space-between",
                 align: x,
-                fullWidth: v,
+                fullWidth: A,
                 className: i,
                 children: [
                     (0, l.jsxs)("div", {

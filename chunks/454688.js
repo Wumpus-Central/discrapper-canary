@@ -26,8 +26,8 @@ n.d(
                     innerRef: f,
                     listItemProps: x,
                 } = e,
-                v = s.useId(),
-                A = s.useCallback(
+                A = s.useId(),
+                v = s.useCallback(
                     (e) => {
                         (e.stopPropagation(), g());
                     },
@@ -39,7 +39,7 @@ n.d(
                 innerRef: f,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
-                "aria-describedby": null != l ? v : void 0,
+                "aria-describedby": null != l ? A : void 0,
                 onClick: E,
                 children: [
                     (0, r.jsx)("div", { className: d.LI, children: p }),
@@ -48,7 +48,7 @@ n.d(
                         children:
                             null != l &&
                             (0, r.jsx)(u.D, {
-                                id: v,
+                                id: A,
                                 lineClamp: 4,
                                 className: l.className,
                                 color: "text-overlay-light",
@@ -62,7 +62,7 @@ n.d(
                         text: a,
                         tabIndex: -1,
                         "aria-hidden": !0,
-                        onClick: A,
+                        onClick: v,
                     }),
                 ],
             });

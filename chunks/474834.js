@@ -1,4 +1,4 @@
-n.d(t, { A: () => $ });
+n.d(t, { A: () => P });
 var i = n(141931),
     a = n(611599),
     r = n(401843),
@@ -17,8 +17,8 @@ var o = n(674966),
     f = n(988468),
     m = n(309010),
     h = n(287809),
-    g = n(723702),
-    A = n(258585),
+    A = n(723702),
+    g = n(258585),
     I = n(676030),
     y = n(476697),
     S = n(71689),
@@ -28,34 +28,34 @@ var o = n(674966),
     C = n(765682);
 let T = new Set(["356943187589201930"]),
     R = new Set(["1402418696126992445"]),
-    b = new a.Vy("startStreamWithSource");
-async function $(e, t) {
+    $ = new a.Vy("startStreamWithSource");
+async function P(e, t) {
     let n = h.default.getCurrentUser(),
         a = m.Ay.getVoiceChannelId(),
-        $ = s.A.getChannel(a),
-        P = $?.getGuildId(),
-        _ = p.A.getGuild(P)?.premiumTier;
-    if (null == n || null == $ || null == a) return [!1, "no user or channel"];
+        P = s.A.getChannel(a),
+        _ = P?.getGuildId(),
+        b = p.A.getGuild(_)?.premiumTier;
+    if (null == n || null == P || null == a) return [!1, "no user or channel"];
     let D = null;
     if (null == (D = "number" == typeof e ? l.Ay.getGameForPID(e) : e)) return [!1, "no source"];
     let F = f.Ay.getUseSystemScreensharePicker(),
         M = "number" != typeof e && (0, w.K4)(e);
     if (!F && !M && !(await o.A.hasPermission(C.iL.SCREEN_RECORDING, { showAuthorizationError: !1 })))
         return [!1, "no permission"];
-    let { preset: O, resolution: k, fps: L, soundshareEnabled: U } = c.A.getState(),
-        V = t?.preset ?? O,
-        { allowAutoQuality: G } = (0, A.eO)({ location: "startStreamWithSource" });
-    V !== v.jQ.PRESET_AUTO || G || (V = v.jQ.PRESET_VIDEO);
-    let N = V === v.jQ.PRESET_AUTO ? v.jQ.PRESET_VIDEO : V,
-        [W, j] = (0, y.Ay)(N, n, _, P) ?? [],
-        x = W ?? t?.resolution ?? k,
-        Y = j ?? t?.fps ?? L,
+    let { preset: O, resolution: L, fps: U, soundshareEnabled: V } = c.A.getState(),
+        k = t?.preset ?? O,
+        { allowAutoQuality: G } = (0, g.eO)({ location: "startStreamWithSource" });
+    k !== v.jQ.PRESET_AUTO || G || (k = v.jQ.PRESET_VIDEO);
+    let N = k === v.jQ.PRESET_AUTO ? v.jQ.PRESET_VIDEO : k,
+        [W, x] = (0, y.Ay)(N, n, b, _) ?? [],
+        j = W ?? t?.resolution ?? L,
+        Y = x ?? t?.fps ?? U,
         H = t?.previewDisabled ?? d.uh.getSetting(),
-        Q = t?.soundshareEnabled ?? U;
+        Q = t?.soundshareEnabled ?? V;
     if (
         (null != W ||
-            (0, I.A)(N, x, Y, n, _, $) ||
-            ((V = v.jQ.PRESET_VIDEO), (x = v.on.RESOLUTION_720), (Y = v.kn.FPS_30)),
+            (0, I.A)(N, j, Y, n, b, P) ||
+            ((k = v.jQ.PRESET_VIDEO), (j = v.on.RESOLUTION_720), (Y = v.kn.FPS_30)),
         M)
     ) {
         let t = await (0, w.ys)(e, { audio: Q, maxFrameRate: Y });
@@ -63,19 +63,19 @@ async function $(e, t) {
         D = t;
     }
     return (
-        (0, r.Xd)({ preset: V, resolution: x, frameRate: Y, soundshareEnabled: Q }),
-        (0, r.XI)(P, a, {
+        (0, r.Xd)({ preset: k, resolution: j, frameRate: Y, soundshareEnabled: Q }),
+        (0, r.XI)(_, a, {
             ...(function (e) {
                 var t, n;
                 let a;
                 if (e.hasOwnProperty("pid"))
-                    return (b.info(`Starting stream for running game source pid ${e.pid}`), { pid: e.pid });
+                    return ($.info(`Starting stream for running game source pid ${e.pid}`), { pid: e.pid });
                 let r =
                         ((t = void 0),
                         (n = l.Ay.getRunningGames()),
                         null == e ? t : n.find((t) => (0, E.A)(e.id, t.windowHandle))),
                     o =
-                        !(0, g.uF)() ||
+                        !(0, A.uF)() ||
                         null == r ||
                         ((a = r.id),
                         u.getConfig({ location: "shouldCaptureGameByWindow" }).enabled
@@ -85,9 +85,9 @@ async function $(e, t) {
                     d = null != r ? r.pid : null;
                 return o || null == d
                     ? (null == d && e.id?.startsWith("prepicked:") && (d = S.Ay.getLastPickedContentPID()),
-                      b.info(`Starting stream for source id ${e.id} and name ${e.name} and pid ${d}`),
+                      $.info(`Starting stream for source id ${e.id} and name ${e.name} and pid ${d}`),
                       { sourceId: e.id, sourceName: e.name, sourceIcon: e.icon, sourcePid: d })
-                    : (b.info(
+                    : ($.info(
                           `Starting stream for source id ${e.id} and name ${e.name} converted to running game pid ${d}`,
                       ),
                       { pid: d });

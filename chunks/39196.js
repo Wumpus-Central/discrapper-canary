@@ -28,7 +28,7 @@ n.d(
                 f = E?.title != null && "" !== E.title ? (0, l.U)((0, a.wJ)(E.title, p)) : t.title,
                 x = E?.description != null && "" !== E.description ? (0, l.U)((0, a.wJ)(E.description, p)) : t.summary;
             if (g.subtype === r.h5.BASIC) return { ...t, title: f, summary: x };
-            let v =
+            let A =
                 E?.rewardStates != null
                     ? ((c = E.rewardStates),
                       (d = e.rewardStatus),
@@ -39,7 +39,7 @@ n.d(
                 ...t,
                 title: f,
                 summary: x,
-                heroBannerUrl: v ?? t.heroBannerUrl,
+                heroBannerUrl: A ?? t.heroBannerUrl,
                 heroBannerAnimatedUrl: void 0,
                 heroRiveUrl: void 0,
             };

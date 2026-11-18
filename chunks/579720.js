@@ -44,7 +44,7 @@ function g(e, t, n) {
             null != u && null != n && (0, i.cb)(u, n);
         }, [u, n]),
         x = new Date(),
-        v = null != g && g <= x;
+        A = null != g && g <= x;
     return l.useMemo(() => {
         let e = (0, h.d)({
             positions: c.map((e) => {
@@ -68,7 +68,7 @@ function g(e, t, n) {
                             openPosition: n,
                             hintPosition: e,
                             isOpenPositionRevealed: p,
-                            hasCampaignEnded: v,
+                            hasCampaignEnded: A,
                         }),
                         skuId: t?.[s - 1]?.skuId ?? null,
                         lockedAssetUrl: o ? (i.calendarLocked ?? i.locked) : i.locked,
@@ -81,5 +81,5 @@ function g(e, t, n) {
                     },
                 };
             });
-    }, [c, t, n, p, v, f, o, d]);
+    }, [c, t, n, p, A, f, o, d]);
 }

@@ -11,18 +11,18 @@ var i = s(477900),
     m = s(534514),
     x = s(403581),
     g = s(366010),
-    p = s(736653),
-    h = s(793574),
+    h = s(736653),
+    p = s(793574),
     f = s(688810),
     N = s(448645),
     A = s(580630),
-    b = s(423814),
-    j = s(77528),
+    j = s(423814),
+    b = s(77528),
     E = s(511484),
     T = s(795269);
 s(321073);
-var C = s(325499),
-    I = s(914313),
+var I = s(325499),
+    C = s(914313),
     R = s(773669),
     v = s(975571),
     _ = s(398523),
@@ -56,7 +56,7 @@ function w(e) {
               ],
           });
 }
-function B(e) {
+function H(e) {
     let { label: t, tier0ColumnData: s, tier2ColumnData: n } = e;
     return (0, i.jsxs)("tr", {
         className: l()(U.nM, U.WQ),
@@ -83,7 +83,7 @@ function B(e) {
         ],
     });
 }
-function H(e) {
+function B(e) {
     let { title: t, subtitle: s, rows: n } = e;
     return (0, i.jsxs)("tbody", {
         children: [
@@ -98,7 +98,7 @@ function H(e) {
                     ],
                 }),
             }),
-            n.map((e) => (0, i.jsx)(B, { ...e }, e.id)),
+            n.map((e) => (0, i.jsx)(H, { ...e }, e.id)),
         ],
     });
 }
@@ -167,12 +167,12 @@ let W = function (e) {
             variant: o = "default",
         } = e,
         d = "settings" === o,
-        u = (0, p.Ay)(),
+        u = (0, h.Ay)(),
         x = d && (0, g.q)(u),
-        { analyticsLocations: w } = (0, f.Ay)(h.A.PREMIUM_MARKETING_PLAN_COMPARISON),
-        B = (0, j.V)(),
-        F = B?.subscriptionTrial?.skuId,
-        W = (0, b.O)(),
+        { analyticsLocations: w } = (0, f.Ay)(p.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        H = (0, b.V)(),
+        F = H?.subscriptionTrial?.skuId,
+        W = (0, j.O)(),
         z = (0, E.YJ)(W),
         Y = null != W && (0, E.U9)(W, P.pe.TIER_2) && z === P.gD.PREMIUM_MONTH_TIER_2,
         X = (0, E.N1)(z),
@@ -180,7 +180,7 @@ let W = function (e) {
         Z = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_0),
         q = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_2),
         J = (function () {
-            let e = (0, C.b)("premium_marketing_comparison"),
+            let e = (0, I.b)("premium_marketing_comparison"),
                 t = [
                     {
                         id: 10,
@@ -209,7 +209,7 @@ let W = function (e) {
                 ],
                 s = null,
                 i = [],
-                { shouldShowBonusOrbsUX: n, multiplier: a } = (0, I.lk)(D.rE.NITRO_HOME_MARKETING),
+                { shouldShowBonusOrbsUX: n, multiplier: a } = (0, C.lk)(D.rE.NITRO_HOME_MARKETING),
                 { enabled: l } = _.A.useConfig({ location: "useGetV2PlanComparisonTableRowsApplicationHome" }),
                 { functionalityEnabled: r } = (0, y.YS)({ location: "useGetV2PlanComparisonTableRowsApplicationHome" });
             return (
@@ -370,7 +370,7 @@ let W = function (e) {
         })();
     if (r) t = null;
     else {
-        let e = null != B ? O.intl.string(O.t.IBYG5U) : O.intl.string(O.t.TR2B4T);
+        let e = null != H ? O.intl.string(O.t.IBYG5U) : O.intl.string(O.t.TR2B4T);
         t = (0, i.jsx)(T.R, { disableGradient: x, className: l()(U.Io, { [U.SP]: !x, [U.u8]: x }), text: e });
     }
     let Q = F === P.pe.TIER_0 || c === P.PremiumTypes.TIER_0;
@@ -425,7 +425,7 @@ let W = function (e) {
                                     tier2DiscountedPriceString: K,
                                     showMonthlyInterval: d,
                                 }),
-                                J.map((e) => (0, n.createElement)(H, { ...e, key: e.id })),
+                                J.map((e) => (0, n.createElement)(B, { ...e, key: e.id })),
                             ],
                         }),
                     ],

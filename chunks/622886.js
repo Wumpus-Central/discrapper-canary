@@ -2,8 +2,8 @@ D.d(e, { F: () => a });
 var R = D(855986),
     r = D(895944),
     I = D(921894),
-    A = D(544978),
-    t = D(892227);
+    t = D(544978),
+    A = D(892227);
 function a() {
     let {
             isReady: _,
@@ -14,7 +14,7 @@ function a() {
             programReward: r.A.getRewardForProgram(I.W.NITRO),
             totalDays: r.A.getTotalDaysInDuration(I.W.NITRO),
         })),
-        a = (0, A.q)();
+        a = (0, t.q)();
     return {
         isEligible: !0,
         isReady: _,
@@ -36,7 +36,7 @@ function a() {
             let D = _.next_reward_date;
             if (null == D || "" === D) return !1;
             let R = new Date(D).getTime();
-            return !(Number.isNaN(R) || R <= Date.now() || (0, t.default)(new Date(D), new Date()) > e);
+            return !(Number.isNaN(R) || R <= Date.now() || (0, A.default)(new Date(D), new Date()) > e);
         })(e, D),
         programReward: e,
         shouldFetch: a,

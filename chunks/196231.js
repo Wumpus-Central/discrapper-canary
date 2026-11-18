@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(212407),
     f = n(758836),
     x = n(652215),
-    v = n(792996),
-    A = n(762917);
+    A = n(792996),
+    v = n(762917);
 function C(e) {
     let { skuId: t, unpublishedAt: n } = e,
         r = (0, d.ty)(t),
@@ -23,7 +23,7 @@ function C(e) {
     return null != s
         ? (0, l.jsx)(E.b, { promotion: s })
         : (0, c.HF)(n)
-          ? (0, l.jsx)(a.E, { type: { text: v.intl.string(v.t["h/uBCR"]) }, variant: "inverted" })
+          ? (0, l.jsx)(a.E, { type: { text: A.intl.string(A.t["h/uBCR"]) }, variant: "inverted" })
           : null;
 }
 n.d(
@@ -49,7 +49,7 @@ n.d(
                 I = a?.bodyText,
                 j = n?.isOrbsExclusive,
                 k = a?.name ?? n?.name,
-                N = null != k ? v.intl.formatToPlainString(v.t.frSHlf, { destination: k }) : void 0,
+                N = null != k ? A.intl.formatToPlainString(A.t.frSHlf, { destination: k }) : void 0,
                 O = (0, o.uM)(),
                 R = r.useCallback(
                     (e, t) => {
@@ -83,10 +83,10 @@ n.d(
                     backgroundImageUrl: b,
                     title:
                         null != I
-                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: A.D }
+                            ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: v.D }
                             : void 0,
                     badge: (0, l.jsx)(C, { skuId: L, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
-                    ctaText: v.intl.string(v.t.jVcuVY),
+                    ctaText: A.intl.string(A.t.jVcuVY),
                     "aria-label": N,
                     onButtonClick: T,
                     onBlockClick: D,
