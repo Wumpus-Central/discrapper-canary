@@ -36,10 +36,7 @@ n.d(
                         className: d.Qq,
                         style:
                             null != E
-                                ? {
-                                      "--custom-marquee-overflow": `${E}px`,
-                                      "--custom-marquee-duration": `${Math.min(5, Math.max(2, E / 40))}s`,
-                                  }
+                                ? { "--custom-marquee-overflow": `${E}px`, "--custom-marquee-duration": `${E / 60}s` }
                                 : void 0,
                         children: t,
                     }),
