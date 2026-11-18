@@ -388,7 +388,7 @@ function eF(e) {
         x =
             m && !g
                 ? (0, r.jsxs)("div", {
-                      className: eB.cP,
+                      className: eB.c,
                       children: [
                           (0, r.jsx)("div", {
                               className: ep.Xs,
@@ -413,9 +413,8 @@ function eF(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(ec.G, {
-                background: u ? (0, r.jsx)("div", { className: eB.Zt }) : null,
                 ref: h,
-                className: eT()(eB.nM, { [ep.Ki]: m }),
+                className: eT()({ [ep.Ki]: m }),
                 id: `guild-space-tab-${t.id}`,
                 renderIcon: (e) => (0, r.jsx)(eL.HomeIcon, { size: "md", color: "currentColor", className: e }),
                 text: eA.intl.string(eA.t["04IVMq"]),
