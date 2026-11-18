@@ -59,6 +59,7 @@ var c =
         (a.AURA = "aura"),
         (a.ASSEMBLED = "assembled"),
         (a.FINALIZE = "finalize"),
+        (a.EXIT = "exit"),
         (a.SUMMARY = "summary"),
         a),
     u =
