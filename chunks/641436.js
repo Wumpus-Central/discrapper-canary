@@ -2,14 +2,16 @@ var l = n(582128),
     r = n(855986),
     i = n(19191),
     u = n(597758),
-    o = n(412260);
+    o = n(412260),
+    a = n(316511);
 n.d(
     t,
     {},
     {
-        u: function (e) {
+        Th: 864e5,
+        uF: function (e) {
             var t;
-            let n, a, s, c, d;
+            let n, c, s, d, f;
             return (
                 (t = () => o.A.getMarketingComponentBySurface(e)),
                 l.useEffect(() => {
@@ -20,20 +22,16 @@ n.d(
                     if (null == e) return null;
                     let n = e.promotionId,
                         l = o.A.getMarketingPromotionForEligibility(n);
-                    if (l?.trialId != null) {
-                        let e = i.A.getUserTrialOffer(l.trialId);
-                        if (null == e || e.hasExpired) return null;
-                    }
-                    return e;
+                    return (0, a.A)(l, i.A) ? e : null;
                 })),
-                (a = (0, r.bG)([o.A], () => o.A.getMarketingPromotionForEligibility(n?.promotionId ?? ""))),
-                (s = a?.endDate),
-                (c = l.useMemo(() => {
+                (c = (0, r.bG)([o.A], () => o.A.getMarketingPromotionForEligibility(n?.promotionId ?? ""))),
+                (s = c?.endDate),
+                (d = l.useMemo(() => {
                     let e = { endDate: s, expired: !1 },
                         t = { endDate: s, expired: !0 };
                     return () => (null != s && s.getTime() <= Date.now() ? t : e);
                 }, [s])),
-                (d = l.useCallback(
+                (f = l.useCallback(
                     (e) => {
                         let t;
                         if (null == s) return () => {};
@@ -48,7 +46,7 @@ n.d(
                     },
                     [s],
                 )),
-                l.useSyncExternalStore(d, c, c).expired ? null : n
+                l.useSyncExternalStore(f, d, d).expired ? null : n
             );
         },
     },

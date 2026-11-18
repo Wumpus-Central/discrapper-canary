@@ -27,7 +27,7 @@ function b() {
         n = (0, A.V)(),
         i = (0, M.O)(),
         d = n?.trialId === j.Dw,
-        r = (0, E.u)(t.oW.PREMIUM_TAB),
+        r = (0, E.uF)(t.oW.PREMIUM_TAB),
         a = null != r ? (0, T.z)(r) : null,
         p = (0, f.Q)(),
         O = r?.promotionId ?? "",

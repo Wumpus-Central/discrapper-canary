@@ -651,7 +651,7 @@ var eZ = n(517352),
     e0 = n(412260);
 function e1(e) {
     let t = (function () {
-            let e = (0, eY.u)(eZ.oW.GUILD_BOOST_TAB_BANNER),
+            let e = (0, eY.uF)(eZ.oW.GUILD_BOOST_TAB_BANNER),
                 [t, n] = (0, b.Cc)(null != e ? $.M.GUILD_BOOST_TAB_BANNER : null, e?.promotionId ?? "", void 0, !0),
                 l = s.useCallback(() => {
                     n(eV.i.USER_DISMISS);

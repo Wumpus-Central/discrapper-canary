@@ -13,7 +13,7 @@ n.d(
     {
         A: function (e) {
             let { tab: t, handleTransition: n } = e,
-                d = (0, r.u)(s.oW.SHOP_NAGBAR),
+                d = (0, r.uF)(s.oW.SHOP_NAGBAR),
                 m = d?.promotionId,
                 [g, h] = (0, i.Cc)(null != d ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, m ?? "", u.m.NOTICE_BAR, !0);
             if (null != d && null != g) {

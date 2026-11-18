@@ -30,7 +30,7 @@ var s = i(477900),
     y = i(7667),
     M = i(990854);
 function V() {
-    let e = (0, b.u)(x.oW.GUILD_BOOST_MARKETING_PAGE_BANNER),
+    let e = (0, b.uF)(x.oW.GUILD_BOOST_MARKETING_PAGE_BANNER),
         t = (0, j.T)(e?.surface.asset),
         { countdownText: i, terms: n } = (0, y.A)(e?.promotionId ?? "");
     if (null == e) return null;

@@ -35,18 +35,18 @@ var s = t(477900),
     P = t(641436),
     H = t(49999),
     D = t(171616),
-    w = t(317560),
-    F = t(62617);
+    F = t(317560),
+    w = t(62617);
 function $(e) {
     let { alt: l, ariaLabel: t, ariaHidden: a, role: i, width: r, height: d, className: o, style: c } = e,
         u = n.useMemo(
-            () => (0, F.H)({ width: r, height: d, intrinsicWidth: 288, intrinsicHeight: 162, style: c }),
+            () => (0, w.H)({ width: r, height: d, intrinsicWidth: 288, intrinsicHeight: 162, style: c }),
             [r, d, c],
         );
     return (0, s.jsx)("img", {
         style: u,
         src: "https://cdn.discordapp.com/assets/content/0ebc111b10e8d33bd2e363de426d3214a0efde115bc844528d489277e592c316.svg",
-        className: (0, F.Z)(o),
+        className: (0, w.Z)(o),
         alt: l,
         "aria-label": t,
         "aria-hidden": a,
@@ -324,7 +324,7 @@ function em(e) {
         n.useEffect(() => {
             if (null != _)
                 return (
-                    (0, w.R)({
+                    (0, F.R)({
                         customNavigateToSocialLayerStorefront: x,
                         skuId: _,
                         applicationId: i.applicationId,
@@ -338,7 +338,7 @@ function em(e) {
                         },
                     }),
                     () => {
-                        (0, w.j)(p);
+                        (0, F.j)(p);
                     }
                 );
         }, [r, d, _, i.applicationId, g, x, p]),
@@ -395,7 +395,7 @@ function e_(e) {
             guildId: v,
             skuId: j,
             pageIndex: N = 0,
-            analyticsLocation: F = I.A.SOCIAL_LAYER_STOREFRONT,
+            analyticsLocation: w = I.A.SOCIAL_LAYER_STOREFRONT,
             analyticsPlacement: $,
             className: W = ef.gI,
             scrollerClassName: Y,
@@ -405,13 +405,13 @@ function e_(e) {
         } = e,
         J = (0, o.k)(),
         Q = i()(ef.kL, W),
-        { analyticsLocations: X } = (0, m.Ay)(F),
+        { analyticsLocations: X } = (0, m.Ay)(w),
         { storefront: q, storefrontState: z, isTestMode: ee } = (0, D.A)({ applicationId: b, guildId: v }),
         el = (0, d.bG)([k.A], () => k.A.get(j), [j]);
     ((0, _.pE)(),
         (0, x.x)({ applicationId: q?.applicationId }),
         (l = q?.applicationId),
-        (t = (0, P.u)(R.oW.NAGBAR)),
+        (t = (0, P.uF)(R.oW.NAGBAR)),
         (a = t?.surface),
         (f = t?.promotionId),
         (0, n.useEffect)(() => {
@@ -455,7 +455,7 @@ function e_(e) {
             (e, l, t) => {
                 null != Z
                     ? (0, h.bG)(Z(ea, e, t))
-                    : (0, w.R)({
+                    : (0, F.R)({
                           skuId: e,
                           applicationId: l,
                           isStorefront: !0,

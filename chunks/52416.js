@@ -19,7 +19,7 @@ n.d(
     {
         A: function (e) {
             let { children: t, targetElementRef: n, dismissPopover: f } = e,
-                E = (0, u.u)(a.oW.PREMIUM_TAB_POPOVER),
+                E = (0, u.uF)(a.oW.PREMIUM_TAB_POPOVER),
                 N = (0, c.T)(E?.surface.asset),
                 T = o.useMemo(() => null != N && (0, s.r1)(N), [N]);
             if (null == E) return t;

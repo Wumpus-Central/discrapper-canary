@@ -784,7 +784,7 @@ var tP = n(773669),
     tR = n(7667),
     tO = n(396559);
 function tL() {
-    let e = (0, tT.u)(tv.oW.GUILD_BOOST_CHECKOUT_BANNER),
+    let e = (0, tT.uF)(tv.oW.GUILD_BOOST_CHECKOUT_BANNER),
         t = (0, tb.T)(e?.surface.asset),
         { countdownText: n, terms: l } = (0, tR.A)(e?.promotionId ?? "");
     if (null == e) return null;

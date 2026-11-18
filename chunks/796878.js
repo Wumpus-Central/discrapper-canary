@@ -12,7 +12,7 @@ n.d(
     {
         A: function (e) {
             let { children: t } = e,
-                n = (0, r.u)(o.oW.PREMIUM_TAB_TOOLTIP),
+                n = (0, r.uF)(o.oW.PREMIUM_TAB_TOOLTIP),
                 u = n?.surface,
                 p = (0, i.T)(u?.asset);
             if (null == u || null == n) return t;

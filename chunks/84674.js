@@ -30,7 +30,7 @@ function f(e) {
     let { planSkuId: t, invoice: n } = e,
         { isGift: o } = (0, C.Pv)(),
         u = (0, a.t4)((e) => e.get("selectedPlanAttributes").isPremiumGroupPurchase),
-        c = (0, s.u)(r.oW.PAYMENT_MODAL_BANNER);
+        c = (0, s.uF)(r.oW.PAYMENT_MODAL_BANNER);
     return i.useMemo(() => {
         if (
             o ||

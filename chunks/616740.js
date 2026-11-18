@@ -471,7 +471,7 @@ let te = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
         let { guildId: t, selected: l } = e,
             i = (0, e2.Ay)(t),
             { showHighlight: s, markAsDismissed: o } = (function () {
-                let e = (0, e4.u)(e9.oW.GUILD_BOOST_TAB_BANNER),
+                let e = (0, e4.uF)(e9.oW.GUILD_BOOST_TAB_BANNER),
                     t = null != e,
                     [n, l] = (0, ed.Cc)(t ? el.M.GUILD_BOOST_TAB_HIGHLIGHT : null, e?.promotionId ?? "");
                 return { showHighlight: n === el.M.GUILD_BOOST_TAB_HIGHLIGHT, markAsDismissed: l };

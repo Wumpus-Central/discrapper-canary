@@ -6,7 +6,7 @@ r.d(
     {},
     {
         Q: function () {
-            let u = (0, c.u)(t.oW.BILLING_SETTINGS_BANNER);
+            let u = (0, c.uF)(t.oW.BILLING_SETTINGS_BANNER);
             return s.Fr || s.v1 ? null : u;
         },
     },

@@ -17,7 +17,7 @@ function k(t, n) {
 }
 function m(t) {
     let { orbsAmount: n, ...a } = t,
-        o = (0, d.u)(r.oW.ORBS_CONFIRMATION_MODAL),
+        o = (0, d.uF)(r.oW.ORBS_CONFIRMATION_MODAL),
         c = (0, p.T)(o?.surface.art),
         e = C.intl.formatToPlainString(C.t["O2/Bj8"], { orbAmount: n }),
         l = C.intl.format(C.t.qiZPb6, { orbAmount: n }),

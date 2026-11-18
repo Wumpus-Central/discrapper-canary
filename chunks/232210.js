@@ -2741,7 +2741,7 @@ function is(e) {
         ]),
         e0 = (0, eR.Dq)(O) && !eJ,
         e1 = (function (e) {
-            let t = (0, es.u)(ei.oW.GUILD_HEADER_COACHMARK),
+            let t = (0, es.uF)(ei.oW.GUILD_HEADER_COACHMARK),
                 n = t?.surface,
                 i = null != e && !(0, $.ai)(e),
                 [s, l] = (0, q.Cc)(

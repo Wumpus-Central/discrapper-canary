@@ -13,7 +13,7 @@ n.d(
     {},
     {
         K: function () {
-            let e = (0, s.u)(i.oW.PLAN_SELECT_CARD_BANNER),
+            let e = (0, s.uF)(i.oW.PLAN_SELECT_CARD_BANNER),
                 t = (0, o.T)(e?.surface.asset);
             if (null == e || "" === e.surface.body) return null;
             let { surface: n, id: d, promotionId: g, componentType: I } = e,

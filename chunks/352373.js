@@ -39,7 +39,7 @@ let C = function () {
             var e, t;
             let n,
                 r,
-                a = (0, _.u)(s.oW.SHOP_COACHMARK),
+                a = (0, _.uF)(s.oW.SHOP_COACHMARK),
                 l =
                     ((e = a?.surface ?? null),
                     (n = (0, I.T)(e?.asset)),
@@ -64,7 +64,7 @@ let C = function () {
                                   },
                         [n, e],
                     )),
-                d = (0, _.u)(s.oW.SHOP_TAB_TOOLTIP),
+                d = (0, _.uF)(s.oW.SHOP_TAB_TOOLTIP),
                 c =
                     ((t = d?.surface ?? null),
                     (r = (0, I.T)(t?.asset)),

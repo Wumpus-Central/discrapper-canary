@@ -229,7 +229,7 @@ function U(e) {
         }),
     });
 }
-var G = n(482616),
+var G = n(757905),
     x = n(767589);
 function B(e, t) {
     return G.m.create({ contentIdentifier: e, properties: t });
@@ -1344,7 +1344,7 @@ let tl = {
                                 })),
                                 F(tt, s.oW.SHOP_NAGBAR, "playground-shop-nagbar-promotion", l)),
                             );
-                            let c = (0, e4.u)(s.oW.SHOP_NAGBAR),
+                            let c = (0, e4.uF)(s.oW.SHOP_NAGBAR),
                                 b =
                                     null != c
                                         ? {

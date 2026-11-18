@@ -19,7 +19,7 @@ n.d(
     {},
     {
         A: function () {
-            let e = (0, u.u)(a.oW.NAGBAR),
+            let e = (0, u.uF)(a.oW.NAGBAR),
                 t = e?.surface,
                 n = e?.id,
                 E = e?.promotionId,
