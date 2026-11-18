@@ -15119,6 +15119,7 @@ function T7(e) {
                 })),
                 (0, p.jsx)(T8, { account: u }),
                 (function (e) {
+                    if (e.revoked) return null;
                     let t = e.metadata ?? {},
                         n = null,
                         i = (0, TN.An)(t[T2.pK.CREATED_AT], c);
