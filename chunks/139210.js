@@ -1,8 +1,8 @@
 var l = n(477900),
     s = n(582128),
     a = n(503698),
-    r = n.n(a),
-    i = n(120692),
+    i = n.n(a),
+    r = n(120692),
     o = n(398025),
     u = n(568329),
     c = n(241762);
@@ -15,17 +15,17 @@ n.d(
         A: function (e) {
             let { children: t, className: n } = e,
                 { expansionSpring: a } = s.useContext(u.PW),
-                { isExpanded: o, isExpansionAnimationComplete: m } = (0, c.H)();
-            return (0, l.jsx)(i.animated.div, {
-                className: r()(d.iE, n, { [d.tT]: o && m }),
-                style: { transform: (0, i.to)([a.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
+                { isExpanded: o, isExpansionAnimationComplete: p } = (0, c.H)();
+            return (0, l.jsx)(r.animated.div, {
+                className: i()(d.iE, n, { [d.tT]: o && p }),
+                style: { transform: (0, r.to)([a.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
                 children: t,
             });
         },
         h: function (e) {
             let { children: t, className: n } = e,
                 { expansionSpring: a } = s.useContext(u.PW);
-            return (0, l.jsx)(i.animated.div, {
+            return (0, l.jsx)(r.animated.div, {
                 className: n,
                 style: { opacity: (0, o.a)(a.to({ range: [0, 1], output: [0, 1] })) },
                 children: t,

@@ -1,4 +1,4 @@
-n.exports = {
+o.exports = {
     TQ: "navBar_jHfUxk",
     nE: "nitroWheelIcon_jHfUxk",
     oG: "nitroWheelIconColor_jHfUxk",

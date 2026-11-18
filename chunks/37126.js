@@ -1,6 +1,6 @@
-var r = e(477900);
+var u = e(477900);
 e(582128);
-var u = e(192308);
+var r = e(192308);
 e.d(
     t,
     {},
@@ -8,9 +8,9 @@ e.d(
         YX: "Turbo Shop Drop",
         Ym: "1529541762920615998",
         tu: function () {
-            (0, u.mM)(async () => {
+            (0, r.mM)(async () => {
                 let { default: n } = await Promise.all([e.e(27773), e.e(393137), e.e(965510)]).then(e.bind(e, 175077));
-                return (t) => (0, r.jsx)(n, { ...t });
+                return (t) => (0, u.jsx)(n, { ...t });
             });
         },
     },

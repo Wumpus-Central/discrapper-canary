@@ -1,31 +1,31 @@
-t.d(a, { A: () => d });
-var l = t(477900);
-t(582128);
-var n = t(503698),
-    r = t.n(n),
-    s = t(646514),
-    i = t(565645),
-    u = t(855986),
-    o = t(121681),
-    c = t(35275),
-    h = t(655756);
-function d(e) {
-    let { guildId: a, emojiId: t, emojiName: n, className: d } = e,
-        m = (0, u.bG)(
-            [o.Ay],
+n.d(t, { A: () => C });
+var l = n(477900);
+n(582128);
+var i = n(503698),
+    o = n.n(i),
+    r = n(646514),
+    a = n(565645),
+    u = n(855986),
+    s = n(121681),
+    c = n(35275),
+    d = n(655756);
+function C(e) {
+    let { guildId: t, emojiId: n, emojiName: i, className: C } = e,
+        h = (0, u.bG)(
+            [s.Ay],
             () => {
-                if (null == t) return null;
-                let e = o.Ay.getDisambiguatedEmojiContext(a);
-                return e.getById(t) ?? e.getByName(t);
+                if (null == n) return null;
+                let e = s.Ay.getDisambiguatedEmojiContext(t);
+                return e.getById(n) ?? e.getByName(n);
             },
-            [a, t],
+            [t, n],
         );
-    return null != m || null != n
-        ? (0, l.jsx)(i.A, {
-              emojiId: m?.id,
-              emojiName: n ?? m?.name,
-              animated: m?.animated ?? !1,
-              className: r()(h.m, d),
+    return null != h || null != i
+        ? (0, l.jsx)(a.A, {
+              emojiId: h?.id,
+              emojiName: i ?? h?.name,
+              animated: h?.animated ?? !1,
+              className: o()(d.m, C),
           })
-        : (0, l.jsx)(c.A, { className: r()(h.m, d), color: s.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css });
+        : (0, l.jsx)(c.A, { className: o()(d.m, C), color: r.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css });
 }

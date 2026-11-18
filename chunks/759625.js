@@ -1,46 +1,46 @@
-var l = t(477900);
-t(582128);
-var n = t(939249),
-    r = t(834730),
-    s = t(147925),
-    i = t(377578),
-    u = t(898612),
-    o = t(232492),
-    c = t(80595);
-t.d(
-    a,
+var l = n(477900);
+n(582128);
+var i = n(939249),
+    o = n(834730),
+    r = n(147925),
+    a = n(377578),
+    u = n(898612),
+    s = n(232492),
+    c = n(80595);
+n.d(
+    t,
     {},
     {
         A: function (e) {
-            let { benefit: a, guildId: t, onClick: h } = e,
-                d = (0, o.A)(t, a.ref_id),
-                m = (0, l.jsx)(i.A, { guildId: t, emojiId: a.emoji_id, emojiName: a.emoji_name });
-            return (0, l.jsxs)(n.D, {
+            let { benefit: t, guildId: n, onClick: d } = e,
+                C = (0, s.A)(n, t.ref_id),
+                h = (0, l.jsx)(a.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
+            return (0, l.jsxs)(i.D, {
                 className: c.kL,
                 onClick: function () {
-                    (d?.navigateToChannel(), h());
+                    (C?.navigateToChannel(), d());
                 },
-                "aria-label": d?.ariaLabel,
+                "aria-label": C?.ariaLabel,
                 role: "link",
                 children: [
-                    (0, l.jsx)("div", { className: c.qq, children: m }),
+                    (0, l.jsx)("div", { className: c.qq, children: h }),
                     (0, l.jsxs)("div", {
                         className: c.op,
                         children: [
-                            (0, l.jsx)(r.E, {
+                            (0, l.jsx)(o.E, {
                                 variant: "body-md/medium",
                                 color: "text-strong",
                                 className: c.UU,
-                                children: (0, u.A)(a),
+                                children: (0, u.A)(t),
                             }),
-                            (0, l.jsx)(r.E, {
+                            (0, l.jsx)(o.E, {
                                 color: "interactive-text-default",
                                 variant: "body-sm/normal",
-                                children: a.description,
+                                children: t.description,
                             }),
                         ],
                     }),
-                    (0, l.jsx)(s.A, { direction: s.A.Directions.RIGHT, className: c.OW }),
+                    (0, l.jsx)(r.A, { direction: r.A.Directions.RIGHT, className: c.OW }),
                 ],
             });
         },

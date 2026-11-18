@@ -1,8 +1,8 @@
 var l = n(477900),
     s = n(582128),
     a = n(503698),
-    r = n.n(a),
-    i = n(120692),
+    i = n.n(a),
+    r = n(120692),
     o = n(568329),
     u = n(241762),
     c = n(506500);
@@ -12,18 +12,18 @@ n.d(
     {
         A: function (e) {
             let { children: t, header: n, layoutVariant: a } = e,
-                { collapsedHeight: d, isExpanded: m } = (0, u.H)(),
-                { expansionSpring: p } = s.useContext(o.PW);
-            return (0, l.jsxs)(i.animated.div, {
-                "aria-hidden": !m,
-                className: r()(c.R, { [c.w]: "inset" === a }),
+                { collapsedHeight: d, isExpanded: p } = (0, u.H)(),
+                { expansionSpring: m } = s.useContext(o.PW);
+            return (0, l.jsxs)(r.animated.div, {
+                "aria-hidden": !p,
+                className: i()(c.R, { [c.w]: "inset" === a }),
                 style: {
-                    transform: (0, i.to)(
-                        [p.to({ range: [0, 1], output: [0, -100] }), p.to({ range: [0, 1], output: [0, d] })],
+                    transform: (0, r.to)(
+                        [m.to({ range: [0, 1], output: [0, -100] }), m.to({ range: [0, 1], output: [0, d] })],
                         (e, t) => `translateY(calc(${e}% + ${t}px))`,
                     ),
                 },
-                children: [n, (0, l.jsx)(i.animated.div, { style: { opacity: 1 }, children: t })],
+                children: [n, (0, l.jsx)(r.animated.div, { style: { opacity: 1 }, children: t })],
             });
         },
     },

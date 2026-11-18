@@ -1,35 +1,35 @@
-var l = t(477900),
-    n = t(582128),
-    r = t(192308),
-    s = t(858899),
-    i = t(28863),
-    u = t(834981),
-    o = t(327919),
-    c = t(792996),
-    h = t(665956);
-t.d(
-    a,
+var l = n(477900),
+    i = n(582128),
+    o = n(192308),
+    r = n(858899),
+    a = n(28863),
+    u = n(834981),
+    s = n(327919),
+    c = n(792996),
+    d = n(665956);
+n.d(
+    t,
     {},
     {
         s: function () {
             let e = (0, u.vx)(),
-                a = n.useCallback(() => {
-                    (0, o.A)(e, r.s7, () =>
-                        (0, s.P0)({
-                            text: c.intl.formatToPlainString(h.default.D1BwNC, { count: e.length }),
+                t = i.useCallback(() => {
+                    (0, s.A)(e, o.s7, () =>
+                        (0, r.P0)({
+                            text: c.intl.formatToPlainString(d.default.D1BwNC, { count: e.length }),
                             variant: "critical",
                         }),
                     );
                 }, [e]);
-            return n.useMemo(
+            return i.useMemo(
                 () =>
                     c.intl.format(c.t["mv/fF2"], {
-                        guardianHook: (t, r) =>
+                        guardianHook: (n, o) =>
                             e.length > 0
-                                ? (0, l.jsx)(i.Anchor, { onClick: a, children: t }, r)
-                                : (0, l.jsx)(n.Fragment, { children: t }, r),
+                                ? (0, l.jsx)(a.Anchor, { onClick: t, children: n }, o)
+                                : (0, l.jsx)(i.Fragment, { children: n }, o),
                     }),
-                [e, a],
+                [e, t],
             );
         },
     },

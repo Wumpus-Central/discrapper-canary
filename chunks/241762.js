@@ -15,28 +15,28 @@ n.d(
             let {
                     children: t,
                     isExpanded: n,
-                    isExpansionAnimationComplete: r,
-                    collapsedHeight: i,
+                    isExpansionAnimationComplete: i,
+                    collapsedHeight: r,
                     onCtxMenuClose: o,
                     onCtxMenuOpen: u,
                     onCtxMenuSelect: c,
                     onGameSheetOpen: d,
-                    onGameSheetClose: m,
+                    onGameSheetClose: p,
                 } = e,
-                p = s.useMemo(
+                m = s.useMemo(
                     () => ({
                         isExpanded: n,
-                        isExpansionAnimationComplete: r,
-                        collapsedHeight: i,
+                        isExpansionAnimationComplete: i,
+                        collapsedHeight: r,
                         onCtxMenuClose: o,
                         onCtxMenuOpen: u,
                         onCtxMenuSelect: c,
                         onGameSheetOpen: d,
-                        onGameSheetClose: m,
+                        onGameSheetClose: p,
                     }),
-                    [n, r, i, o, u, c, d, m],
+                    [n, i, r, o, u, c, d, p],
                 );
-            return (0, l.jsx)(a.Provider, { value: p, children: t });
+            return (0, l.jsx)(a.Provider, { value: m, children: t });
         },
     },
 );

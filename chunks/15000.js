@@ -1,8 +1,8 @@
 n.d(t, { A: () => w });
 var i = n(477900),
     l = n(582128),
-    a = n(613412),
-    r = n(855986),
+    r = n(613412),
+    a = n(855986),
     s = n(620632),
     o = n(192308),
     u = n(830215),
@@ -19,8 +19,8 @@ var i = n(477900),
     E = n(503698),
     v = n.n(E),
     _ = n(607399),
-    y = n(821609),
-    b = n(331322),
+    b = n(821609),
+    y = n(331322),
     T = n(534514),
     S = n(834730),
     I = n(241003),
@@ -37,19 +37,19 @@ class P extends l.PureComponent {
             children: e.map((e) =>
                 e === j.Fz7.CAPTCHA
                     ? (0, i.jsx)(I.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(y.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
+                    : (0, i.jsx)(b.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, i.jsxs)(b.B, {
+        return (0, i.jsxs)(y.B, {
             gap: 16,
             className: O.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(b.B, {
+                (0, i.jsxs)(y.B, {
                     gap: 16,
                     fullWidth: !1,
                     className: v()(O.kL, { [O.Fr]: _.Fr }),
@@ -57,14 +57,14 @@ class P extends l.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(b.B, {
+                        (0, i.jsxs)(y.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
                                 (0, i.jsx)("div", { className: O.Sl }),
-                                (0, i.jsxs)(b.B, {
+                                (0, i.jsxs)(y.B, {
                                     className: O.FS,
                                     gap: 4,
                                     align: "center",
@@ -83,7 +83,7 @@ class P extends l.PureComponent {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(b.B, {
+                        (0, i.jsx)(y.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -92,7 +92,7 @@ class P extends l.PureComponent {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(b.B, {
+                (0, i.jsxs)(y.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
@@ -103,7 +103,7 @@ class P extends l.PureComponent {
                             className: O.qr,
                             children: R.intl.string(R.t.qqYun3),
                         }),
-                        (0, i.jsxs)(b.B, {
+                        (0, i.jsxs)(y.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
@@ -135,11 +135,11 @@ class P extends l.PureComponent {
 var k = n(87404),
     L = n(53516);
 function w() {
-    let { action: e, theme: t } = (0, r.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
+    let { action: e, theme: t } = (0, a.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
         E = x.A.getVerificationTypes(e),
         [v, _] = l.useState(0),
-        y = (0, m.Ay)(E);
-    function b() {
+        b = (0, m.Ay)(E);
+    function y() {
         ((0, d.Cw)(),
             (0, o.mM)(
                 async () => {
@@ -154,8 +154,8 @@ function w() {
     return (
         (0, f.A)(
             {
-                type: a.ImpressionTypes.MODAL,
-                name: a.ImpressionNames.USER_ACTION_REQUIRED,
+                type: r.ImpressionTypes.MODAL,
+                name: r.ImpressionNames.USER_ACTION_REQUIRED,
                 properties: { verification_type: E[0], verification_types: E },
             },
             {},
@@ -171,7 +171,7 @@ function w() {
             [],
         ),
         l.useEffect(() => {
-            y?.[0] === j.Fz7.PHONE &&
+            b?.[0] === j.Fz7.PHONE &&
                 E?.[0] === j.Fz7.EMAIL &&
                 (0, o.mM)(
                     async () => {
@@ -184,9 +184,9 @@ function w() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: k.Pr, Layer: h.Ay, onCloseCallback: b },
+                    { modalKey: k.Pr, Layer: h.Ay, onCloseCallback: y },
                 );
-        }, [E, y]),
+        }, [E, b]),
         (0, i.jsx)(P, {
             types: E,
             captchaKey: v,
@@ -203,7 +203,7 @@ function w() {
             theme: t,
             onClick: (e) => {
                 e === j.Fz7.EMAIL_OR_PHONE || e === j.Fz7.EMAIL || e === j.Fz7.REVERIFY_EMAIL
-                    ? b()
+                    ? y()
                     : (0, o.mM)(
                           async () => {
                               let { default: e } = await Promise.all([

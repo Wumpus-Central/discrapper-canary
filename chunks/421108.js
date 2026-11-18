@@ -4,8 +4,8 @@ var l = n(582128),
     u = n(396583),
     o = n(927813),
     a = n(25082),
-    s = n(792996);
-function c(e) {
+    c = n(792996);
+function s(e) {
     if (null == e) return null;
     let t = i()(e).diff(i()(), "seconds");
     if (t <= 0) return null;
@@ -19,20 +19,20 @@ function c(e) {
     };
 }
 function d(e) {
-    let t = c(e);
+    let t = s(e);
     if (null == t) return null;
     let { days: n, hours: l, minutes: r } = t;
     return n > 0
-        ? s.intl.formatToPlainString(s.t.BXpdIg, { days: n })
+        ? c.intl.formatToPlainString(c.t.BXpdIg, { days: n })
         : l > 0
-          ? s.intl.formatToPlainString(a.default.PPaJSw, { hours: l })
-          : s.intl.formatToPlainString(a.default["7Z+aIf"], { minutes: Math.max(r, 1) });
+          ? c.intl.formatToPlainString(a.default.PPaJSw, { hours: l })
+          : c.intl.formatToPlainString(a.default["7Z+aIf"], { minutes: Math.max(r, 1) });
 }
 n.d(
     t,
     {},
     {
-        ZH: c,
+        ZH: s,
         dA: function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 [n, r] = l.useState(() => d(e));
@@ -47,7 +47,7 @@ n.d(
             );
         },
         tm: function (e) {
-            let t = null != e && null == c(e),
+            let t = null != e && null == s(e),
                 [, n] = l.useReducer((e) => e + 1, 0);
             return ((0, u.A)(n, null == e || t ? null : o.A.Millis.SECOND), t);
         },

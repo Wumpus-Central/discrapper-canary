@@ -1,5 +1,5 @@
-var r = e(278416),
-    u = e(403581),
+var u = e(278416),
+    r = e(403581),
     l = e(604913);
 e.d(
     t,
@@ -8,9 +8,9 @@ e.d(
         s: function (n) {
             switch (n) {
                 case l.cR.TAG:
-                    return r.TagIcon;
+                    return u.TagIcon;
                 case l.cR.NITRO:
-                    return u.NitroWheelIcon;
+                    return r.NitroWheelIcon;
                 default:
                     return null;
             }
