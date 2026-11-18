@@ -538,8 +538,8 @@ function e3() {
 }
 var e6 = n(185951),
     e5 = n(533129),
-    e7 = n(837057),
-    e8 = n(488995),
+    e8 = n(837057),
+    e7 = n(488995),
     e4 = n(749519),
     e9 = n(768942);
 function te(e, t, n) {
@@ -594,8 +594,8 @@ function tt(e) {
             );
         })(t, n),
         c = r.useCallback(() => {
-            ((0, e5.WL)({ source: e8.st.GAMES_TAB_COACHMARK }),
-                (0, e7.transitionToGlobalDiscovery)({ tab: e8.GlobalDiscoveryTab.GAMES }),
+            ((0, e5.WL)({ source: e7.st.GAMES_TAB_COACHMARK }),
+                (0, e8.transitionToGlobalDiscovery)({ tab: e7.GlobalDiscoveryTab.GAMES }),
                 a());
         }, [a]);
     return (0, i.jsxs)(i.Fragment, {
@@ -1169,8 +1169,8 @@ function t5() {
             : null,
     });
 }
-var t7 = n(245604),
-    t8 = n(630685),
+var t8 = n(245604),
+    t7 = n(630685),
     t4 = n(272613),
     t9 = n(398884),
     ne = n(772366),
@@ -1188,7 +1188,7 @@ function nl(e) {
 }
 function no(e) {
     let { onClick: t, ...n } = e,
-        r = (0, t8.P)("guild_list_add_server");
+        r = (0, t7.P)("guild_list_add_server");
     return (0, i.jsx)(G, { ...n, onClick: () => t(r), tooltip: $.intl.string(r ? $.t.riOUtB : $.t.l5WIbf) });
 }
 function nd(e) {
@@ -1208,7 +1208,7 @@ function nd(e) {
               })
             : t4.A.openCreateGuildModal({ location: "Guild List", ...(e && { joinFirst: e }) });
     }
-    let E = { showPill: !1, id: "create-join-button", selected: o, onContextMenu: nl, icon: t7.CirclePlusIcon };
+    let E = { showPill: !1, id: "create-join-button", selected: o, onContextMenu: nl, icon: t8.CirclePlusIcon };
     return (0, i.jsx)("div", {
         className: na.Uq,
         children: (0, i.jsxs)(nt.A, {
@@ -1273,31 +1273,31 @@ var nf = n(696292),
 let nT = function (e) {
     let { selected: t, onClick: n, questId: a, className: s, ref: l } = e,
         o = r.useCallback(() => {
-            (0, e5.WL)({ source: e8.st.GUILDS_BAR_ICON });
-            let e = void 0 !== a ? e8.GlobalDiscoveryTab.QUESTS : nI.A.getField("selectedTab");
+            (0, e5.WL)({ source: e7.st.GUILDS_BAR_ICON });
+            let e = void 0 !== a ? e7.GlobalDiscoveryTab.QUESTS : nI.A.getField("selectedTab");
             switch (e) {
-                case e8.GlobalDiscoveryTab.QUESTS:
-                    return (0, e7.transitionToGlobalDiscovery)({
-                        tab: e8.GlobalDiscoveryTab.QUESTS,
+                case e7.GlobalDiscoveryTab.QUESTS:
+                    return (0, e8.transitionToGlobalDiscovery)({
+                        tab: e7.GlobalDiscoveryTab.QUESTS,
                         location: ng.rE.DISCOVERY_COMPASS,
                         questContent: nf.u.DISCOVERY_COMPASS,
                         questId: a,
                     });
-                case e8.GlobalDiscoveryTab.SERVERS:
-                    return (0, e7.transitionToGlobalDiscovery)({
-                        tab: e8.GlobalDiscoveryTab.SERVERS,
+                case e7.GlobalDiscoveryTab.SERVERS:
+                    return (0, e8.transitionToGlobalDiscovery)({
+                        tab: e7.GlobalDiscoveryTab.SERVERS,
                         entrypoint: nm.J8.GUILDS_BAR,
                     });
-                case e8.GlobalDiscoveryTab.APPS:
-                    return (0, e7.transitionToGlobalDiscovery)({
-                        tab: e8.GlobalDiscoveryTab.APPS,
+                case e7.GlobalDiscoveryTab.APPS:
+                    return (0, e8.transitionToGlobalDiscovery)({
+                        tab: e7.GlobalDiscoveryTab.APPS,
                         newSessionState: {
                             entrypoint: { name: np.sW.GLOBAL_DISCOVERY_BUTTON },
                             restorePreviousView: !0,
                         },
                     });
                 default:
-                    return (0, e7.transitionToGlobalDiscovery)({ tab: e });
+                    return (0, e8.transitionToGlobalDiscovery)({ tab: e });
             }
         }, [a]);
     return (0, i.jsx)(G, {
@@ -1493,8 +1493,8 @@ var n2 = n(778858),
     n3 = n(945810),
     n6 = n(404373),
     n5 = n(738601);
-let n7 = [...n5.Nl, eU.Ay];
-function n8(e) {
+let n8 = [...n5.Nl, eU.Ay];
+function n7(e) {
     return (0, _.yK)(
         [ei.Ay, n3.Bt],
         () =>
@@ -1507,7 +1507,7 @@ function n8(e) {
 }
 function n4(e) {
     return (0, _.cf)(
-        n7,
+        n8,
         () =>
             (function (e) {
                 let t = 0,
@@ -1570,7 +1570,7 @@ let ii = r.memo(function (e) {
             isMentionLowImportance: S.every((e) => ev.default.getIsMentionLowImportance(e)),
             unread: S.some((e) => ev.default.hasUnread(e)),
         })),
-        b = n4(n8(S)).unreadCount,
+        b = n4(n7(S)).unreadCount,
         v = L + b,
         P = r.useCallback(() => {
             n2.A.toggleGuildFolderExpand(p);
@@ -2974,7 +2974,7 @@ let i$ = r.memo(function (e) {
             isMentionLowImportance: ev.default.getIsMentionLowImportance(a),
             unread: ev.default.hasUnread(a),
         })),
-        h = n4(n8(r.useMemo(() => [a], [a]))),
+        h = n4(n7(r.useMemo(() => [a], [a]))),
         I = E + h.unreadCount,
         p = 0 === E && h.unreadCount > 0,
         m = (0, id.Ig)(s) && 0 === I,
@@ -3053,7 +3053,7 @@ function i6(e) {
           });
 }
 var i5 = n(943536);
-function i7(e) {
+function i8(e) {
     let { onActivate: t, children: n } = e,
         a = r.useRef(null),
         s = (0, _.bG)([il.A], () => il.A.hasJoinRequestCoackmark()),
@@ -3117,7 +3117,7 @@ function i7(e) {
         })
     );
 }
-function i8(e) {
+function i7(e) {
     let { onActivate: t } = e,
         [n, a] = r.useState(!1),
         s = (0, _.bG)([tE.A], () => tE.A.getGuildId()),
@@ -3143,7 +3143,7 @@ function i8(e) {
     }, [n, u, d, s]),
     0 === o.length)
         ? null
-        : (0, i.jsx)(i7, {
+        : (0, i.jsx)(i8, {
               onActivate: t,
               children: (0, i.jsx)(ie.A, {
                   folderNode: c,
@@ -3378,7 +3378,7 @@ function ra(e) {
             !t && (0, i.jsx)(t0, {}),
             (0, i.jsx)(q, {}),
             d.map((e) => (0, i.jsx)(i4, { guildId: e }, e)),
-            (0, i.jsx)(i8, { onActivate: n }),
+            (0, i.jsx)(i7, { onActivate: n }),
         ],
     });
 }
