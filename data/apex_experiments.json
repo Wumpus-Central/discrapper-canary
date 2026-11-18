@@ -569,22 +569,6 @@
     }
   },
   {
-    "name": "2026-01-ios-push-notif-json-fix",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-01-voice-dares-v0",
     "kind": "user",
     "defaultConfig": {
