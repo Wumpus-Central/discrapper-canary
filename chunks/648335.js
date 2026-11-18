@@ -17,8 +17,8 @@ let s = new Set([n.he.CARD, n.he.PAYMENT_REQUEST, n.he.PAYPAL]),
         n.he.EPS,
         n.he.PIX,
     ]),
-    u = new Set([...s, ...i]),
-    o = {
+    h = new Set([...s, ...i]),
+    u = {
         [n.he.PAYPAL]: {
             paymentSourceType: n.he.PAYPAL,
             subtitleTranslationKey: r.t.Djzd7L,
@@ -81,7 +81,7 @@ let s = new Set([n.he.CARD, n.he.PAYMENT_REQUEST, n.he.PAYPAL]),
             toStep: l.pn.EPS_INFORMATION,
         },
     },
-    c = {
+    o = {
         [n.he.CARD]: "card",
         [n.he.IDEAL]: "ideal",
         [n.he.BANCONTACT]: "bancontact",
@@ -98,8 +98,8 @@ let s = new Set([n.he.CARD, n.he.PAYMENT_REQUEST, n.he.PAYPAL]),
         [n.he.EPS]: "eps",
         [n.he.PIX]: "pix",
     };
-function h(e) {
-    return e in o;
+function c(e) {
+    return e in u;
 }
 t.d(
     a,
@@ -111,13 +111,13 @@ t.d(
                 options: {
                     type: "static",
                     subtitle:
-                        e.payment_source_type in o
-                            ? r.intl.string(o[e.payment_source_type].subtitleTranslationKey)
+                        e.payment_source_type in u
+                            ? r.intl.string(u[e.payment_source_type].subtitleTranslationKey)
                             : void 0,
                 },
             }));
         },
-        R8: h,
+        R8: c,
         Wn: function (e, a) {
             if ("card" === e || "link_card_brand" === e) return n.he.CARD;
             if ("ideal" === e) return n.he.IDEAL;
@@ -127,11 +127,11 @@ t.d(
             return e in a ? a[e] : null;
         },
         eI: function (e) {
-            return h(e) ? (o[e].toStep ?? null) : null;
+            return c(e) ? (u[e].toStep ?? null) : null;
         },
         eX: function (e) {
-            return u.has(e);
+            return h.has(e);
         },
-        mr: c,
+        mr: o,
     },
 );

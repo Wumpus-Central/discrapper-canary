@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     lP: "countDownWrapper_ovXudH",
     yJ: "mobileWrapper_ovXudH",
     Wx: "countdownLabel_ovXudH",

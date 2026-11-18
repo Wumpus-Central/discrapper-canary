@@ -19,9 +19,9 @@ var r = n(855986),
     A = n(332560),
     j = n(145359),
     p = n(773527),
-    N = n(336044),
-    S = n(262560),
-    b = n(455207),
+    b = n(336044),
+    N = n(262560),
+    S = n(455207),
     C = n(471865),
     E = n(211824),
     I = n(236814),
@@ -32,7 +32,7 @@ function T(e) {
         { analyticsLocations: w } = (0, u.Ay)(c.A.APP_ICON_SELECTOR),
         M = (0, j.Lz)(E.vB.APP_ICON, "HexagonCampaignAppIconSection"),
         _ = (0, r.bG)([g.A], () => (0, p.z9)(g.A.getCurrentDesktopIcon())),
-        R = (0, N.i)(),
+        R = (0, b.i)(),
         B = M === E.S9.HIDDEN,
         D = M === E.S9.LOCKED,
         L = "settings" === t,
@@ -60,10 +60,10 @@ function T(e) {
                                       color: L ? "text-default" : "text-strong",
                                       children: P.intl.string(k.default.EWenaG),
                                   }),
-                                  L && !D && (0, l.jsx)(S.A, { perk: E.vB.APP_ICON }),
+                                  L && !D && (0, l.jsx)(N.A, { perk: E.vB.APP_ICON }),
                               ],
                           }),
-                          (0, l.jsx)(b.A, {}),
+                          (0, l.jsx)(S.A, {}),
                       ],
                   }),
                   (0, l.jsx)("div", {
@@ -79,10 +79,10 @@ function T(e) {
                                   : (async function () {
                                         !1 ===
                                             (await (async function () {
-                                                if ((0, N.rs)()) return null;
+                                                if ((0, b.rs)()) return null;
                                                 let e = g.A.getCommittedDesktopIcon(),
                                                     t = (0, p.z9)(e);
-                                                (0, N.Rj)(!0);
+                                                (0, b.Rj)(!0);
                                                 try {
                                                     if (!(await (0, C.Br)(E.vB.APP_ICON))) return !1;
                                                     return (
@@ -98,7 +98,7 @@ function T(e) {
                                                         !0
                                                     );
                                                 } finally {
-                                                    (0, N.Rj)(!1);
+                                                    (0, b.Rj)(!1);
                                                 }
                                             })()) &&
                                             (0, s.P0)({ text: P.intl.string(P.t.F8FvUy), variant: "critical" });

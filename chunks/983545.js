@@ -25,8 +25,8 @@ n.d(
                     setItemTypeFilter: n,
                     setThirdPartyOnlyFilter: a,
                     setOfferEligibleFilter: g,
-                    reset: E,
-                    resetWithSearchQuery: h,
+                    reset: h,
+                    resetWithSearchQuery: E,
                     setCurrentTab: f,
                 } = (0, o.vs)(),
                 x = (0, s.W6)(),
@@ -34,24 +34,24 @@ n.d(
                     var t;
                     return (0, u.dF)(e) || (t = e) === u.G2.COLLABS || t === u.G2.OFFER_ELIGIBLE ? u.G2.CATALOG : e;
                 }, [e]),
-                [S, p] = l.useState(C),
-                [_, A] = l.useState(u.Pf.VISIBLE);
+                [p, S] = l.useState(C),
+                [A, I] = l.useState(u.Pf.VISIBLE);
             (l.useEffect(() => {
-                S !== u.G2.GAME_SERVERS && f(S);
-            }, [S, f]),
+                p !== u.G2.GAME_SERVERS && f(p);
+            }, [p, f]),
                 l.useEffect(() => {
-                    if ((p(C), e === u.G2.CATALOG)) {
+                    if ((S(C), e === u.G2.CATALOG)) {
                         let e = x.location.state?.searchQuery;
-                        null != e ? h(e) : E();
+                        null != e ? E(e) : h();
                     } else if (e === u.G2.COLLABS) a();
                     else if (e === u.G2.OFFER_ELIGIBLE) g();
                     else if ((0, u.dF)(e)) {
                         let t = m[e];
-                        null != t ? n(t) : E();
+                        null != t ? n(t) : h();
                     }
-                }, [C, e, n, a, g, E, h, x]),
+                }, [C, e, n, a, g, h, E, x]),
                 l.useEffect(() => {
-                    if (S === u.G2.CATALOG)
+                    if (p === u.G2.CATALOG)
                         return o.vs.subscribe(
                             (e) => e.searchQuery,
                             (e) =>
@@ -60,31 +60,31 @@ n.d(
                                     e.replace({ ...n, state: { ...n.state, searchQuery: "" !== t ? t : void 0 } });
                                 })(x, e),
                         );
-                }, [S, x]));
-            let { clearError: v } = (0, c.S)(),
-                I = l.useCallback(
+                }, [p, x]));
+            let { clearError: _ } = (0, c.S)(),
+                b = l.useCallback(
                     async (e, l, s) => {
-                        if ((v(), e === u.G2.CATALOG)) s?.searchQuery != null ? h(s.searchQuery) : E();
+                        if ((_(), e === u.G2.CATALOG)) s?.searchQuery != null ? E(s.searchQuery) : h();
                         else if (e === u.G2.COLLABS) a();
                         else if (e === u.G2.OFFER_ELIGIBLE) g();
-                        else if ((0, u.dF)(e) && e !== S) {
+                        else if ((0, u.dF)(e) && e !== p) {
                             let t = m[e];
-                            null != t ? n(t) : E();
+                            null != t ? n(t) : h();
                         }
-                        if (S !== e) {
+                        if (p !== e) {
                             if (l && !t) {
                                 var i;
-                                (A(u.Pf.OUT), await ((i = 800 * 1.1), new Promise((e) => setTimeout(e, i))));
+                                (I(u.Pf.OUT), await ((i = 800 * 1.1), new Promise((e) => setTimeout(e, i))));
                             }
-                            (p(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
-                                l && !t && A(u.Pf.IN),
+                            (S(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
+                                l && !t && I(u.Pf.IN),
                                 x.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { searchQuery: s?.searchQuery }),
-                                A(u.Pf.VISIBLE));
+                                I(u.Pf.VISIBLE));
                         }
                     },
-                    [x, n, a, g, E, h, S, v, t],
+                    [x, n, a, g, h, E, p, _, t],
                 );
-            return { selectedTab: S, transitionState: _, transitionToTab: I };
+            return { selectedTab: p, transitionState: A, transitionToTab: b };
         },
     },
 );

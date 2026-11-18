@@ -10,14 +10,14 @@ n.d(
         A: function (e) {
             let { skuId: t, className: n } = e,
                 l = (0, a.Vm)(t),
-                o = (0, s.fw)(l);
+                u = (0, s.fw)(l);
             return (0, r.jsx)(i.E, {
                 tag: "span",
                 variant: "heading-sm/medium",
                 color: "text-strong",
                 className: n,
                 lineClamp: 1,
-                children: o,
+                children: u,
             });
         },
     },

@@ -3,90 +3,90 @@ var r,
     s = n(582128),
     a = n(164636),
     l = n(834730),
-    o = n(287809),
-    u = n(448645),
-    d = n(298072),
-    c = n(993408),
+    u = n(287809),
+    o = n(448645),
+    c = n(298072),
+    d = n(993408),
     I = n(740076),
-    v = n(466459),
+    p = n(466459),
     f = n(623373),
-    p = n(506742),
-    m = n(219103),
+    m = n(506742),
+    v = n(219103),
     g = n(561769),
     x = n(57020),
-    _ = n(792996),
-    A = n(178287),
-    E = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
-function C(e) {
-    let { product: t, prioritizedCurrency: n, promoPriceLayout: r, textVariant: d, discountIconSize: f = "sm" } = e,
-        g = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-        E = u.Ay.canUseCollectibles(g),
-        C = (0, c.xM)(g),
-        h = null != C,
+    C = n(792996),
+    _ = n(178287),
+    h = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
+function E(e) {
+    let { product: t, prioritizedCurrency: n, promoPriceLayout: r, textVariant: c, discountIconSize: f = "sm" } = e,
+        g = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
+        h = o.Ay.canUseCollectibles(g),
+        E = (0, d.xM)(g),
+        A = null != E,
         { isDisabled: b } = (0, I.I)(t.skuId),
-        { isPurchased: R, isPartiallyOwnedBundle: k } = (0, v.h)(t),
-        O = (0, c.G0)(t),
-        y = (0, c.tt)(t),
+        { isPurchased: R, isPartiallyOwnedBundle: k } = (0, p.h)(t),
+        y = (0, d.G0)(t),
+        L = (0, d.tt)(t),
         {
-            checkoutEligiblePrices: S,
-            checkoutEligibleFormerPrices: j,
+            checkoutEligiblePrices: O,
+            checkoutEligibleFormerPrices: S,
             hasSufficientOrbs: T,
-            shouldCheckoutWithOrbs: N,
-        } = (0, x.F)({ product: t, hasShopDiscount: h, prioritizedCurrency: n }),
-        P = S[0]?.currency,
-        V = s.useMemo(() => (0, c.fT)(t, h, P), [t, h, P]);
+            shouldCheckoutWithOrbs: P,
+        } = (0, x.F)({ product: t, hasShopDiscount: A, prioritizedCurrency: n }),
+        j = O[0]?.currency,
+        N = s.useMemo(() => (0, d.fT)(t, A, j), [t, A, j]);
     if (b)
         return (0, i.jsx)(l.E, {
-            variant: d ?? "body-md/medium",
+            variant: c ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
-            children: _.intl.string(_.t.wu4gyV),
+            children: C.intl.string(C.t.wu4gyV),
         });
     if (k)
         return (0, i.jsx)(l.E, {
-            variant: d ?? "body-md/medium",
+            variant: c ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
-            children: _.intl.string(_.t.BEjTij),
+            children: C.intl.string(C.t.BEjTij),
         });
-    if (R && !(O && !E))
+    if (R && !(y && !h))
         return (0, i.jsx)(l.E, {
-            variant: d ?? "body-md/medium",
+            variant: c ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
-            children: _.intl.string(_.t["6cfuDj"]),
+            children: C.intl.string(C.t["6cfuDj"]),
+        });
+    if (L)
+        return (0, i.jsx)(l.E, {
+            variant: c ?? "body-md/semibold",
+            color: "text-strong",
+            lineClamp: 1,
+            children: C.intl.string(C.t.nBtvYB),
         });
     if (y)
         return (0, i.jsx)(l.E, {
-            variant: d ?? "body-md/semibold",
+            variant: c ?? "body-md/semibold",
             color: "text-strong",
             lineClamp: 1,
-            children: _.intl.string(_.t.nBtvYB),
+            children: C.intl.string(C.t.rt69oo),
         });
-    if (O)
-        return (0, i.jsx)(l.E, {
-            variant: d ?? "body-md/semibold",
-            color: "text-strong",
-            lineClamp: 1,
-            children: _.intl.string(_.t.rt69oo),
-        });
-    if (0 === S.length) return null;
-    let L = j[0],
-        D = null != L,
+    if (0 === O.length) return null;
+    let V = S[0],
+        D = null != V,
         M = D && "STACKED" === r,
-        B = N && !T ? A.cR : void 0,
-        w = (0, i.jsx)(m.x, {
-            priceAmount: S[0].amount,
-            priceCurrency: S[0].currency,
-            discount: D ? c.rr : V,
-            discountIconConfig: h ? { displayMode: "default", source: C ?? c.D0.NITRO, size: f } : void 0,
-            className: M ? A.wC : B,
-            variant: d ?? "body-md/semibold",
+        B = P && !T ? _.cR : void 0,
+        w = (0, i.jsx)(v.x, {
+            priceAmount: O[0].amount,
+            priceCurrency: O[0].currency,
+            discount: D ? d.rr : N,
+            discountIconConfig: A ? { displayMode: "default", source: E ?? d.D0.NITRO, size: f } : void 0,
+            className: M ? _.wC : B,
+            variant: c ?? "body-md/semibold",
         });
     return D
         ? (0, i.jsxs)("div", {
-              className: M ? A.rV : A.KQ,
-              children: [(0, i.jsx)(p.a, { price: L, variant: "body-md/medium", className: M ? A.ug : void 0 }), w],
+              className: M ? _.rV : _.KQ,
+              children: [(0, i.jsx)(m.a, { price: V, variant: "body-md/medium", className: M ? _.ug : void 0 }), w],
           })
         : w;
 }
@@ -103,17 +103,17 @@ n.d(
                     discountIconSize: a,
                 } = e,
                 l = (0, g.Vm)(t),
-                o = (0, d.Q)(l);
+                u = (0, c.Q)(l);
             if (null == l) return null;
-            let u = (0, f.rb)(l, o);
-            return (0, i.jsx)(C, {
-                product: u,
+            let o = (0, f.rb)(l, u);
+            return (0, i.jsx)(E, {
+                product: o,
                 prioritizedCurrency: n,
                 promoPriceLayout: r,
                 textVariant: s,
                 discountIconSize: a,
             });
         },
-        e: E,
+        e: h,
     },
 );

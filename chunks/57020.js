@@ -9,23 +9,23 @@ n.d(
     {},
     {
         F: function (e) {
-            let { product: t, hasShopDiscount: n, prioritizedCurrency: o } = e,
-                u = (0, s.vF)(t.skuId, "use_shop_product_prices"),
+            let { product: t, hasShopDiscount: n, prioritizedCurrency: u } = e,
+                o = (0, s.vF)(t.skuId, "use_shop_product_prices"),
                 {
-                    orbPrice: d,
-                    fiatPrice: c,
+                    orbPrice: c,
+                    fiatPrice: d,
                     isOrbExclusive: I,
-                    formerFiatPrice: v,
+                    formerFiatPrice: p,
                 } = (function (e) {
                     let { product: t, hasShopDiscount: n, storefrontPrices: r } = e,
                         a = (0, i.CW)({ product: t, hasShopDiscount: n }),
                         l = (0, i.$K)({ product: t, hasShopDiscount: n }) ?? void 0,
-                        o = (0, s.QV)({ storefrontPrices: r, nonPromoPrice: l }),
-                        u = o ?? l,
-                        d = null != o ? (l ?? null) : null;
-                    return { orbPrice: a, fiatPrice: u, isOrbExclusive: (0, i.Ab)(t), formerFiatPrice: d };
-                })({ product: t, hasShopDiscount: n, storefrontPrices: u }),
-                f = (0, r.kj)(null != d ? d.amount : null);
+                        u = (0, s.QV)({ storefrontPrices: r, nonPromoPrice: l }),
+                        o = u ?? l,
+                        c = null != u ? (l ?? null) : null;
+                    return { orbPrice: a, fiatPrice: o, isOrbExclusive: (0, i.Ab)(t), formerFiatPrice: c };
+                })({ product: t, hasShopDiscount: n, storefrontPrices: o }),
+                f = (0, r.kj)(null != c ? c.amount : null);
             return (function (e) {
                 let {
                         hasSufficientOrbs: t,
@@ -33,36 +33,36 @@ n.d(
                         fiatPrice: r,
                         isOrbExclusive: i,
                         formerFiatPrice: s,
-                        prioritizedCurrency: o = null,
+                        prioritizedCurrency: u = null,
                     } = e,
-                    u = [],
-                    d = o === a.Hi.ORBS,
-                    c = o === a.Hi.FIAT;
+                    o = [],
+                    c = u === a.Hi.ORBS,
+                    d = u === a.Hi.FIAT;
                 null != n && null != r
-                    ? d || (!c && t)
-                        ? u.push(n, r)
-                        : u.push(r, n)
+                    ? c || (!d && t)
+                        ? o.push(n, r)
+                        : o.push(r, n)
                     : null != n
-                      ? u.push(n)
-                      : null != r && u.push(r);
-                let I = u.length > 0 && u[0]?.currency === l.Yri.DISCORD_ORB,
-                    v = u.map((e) => (e.currency === l.Yri.DISCORD_ORB ? null : s)),
-                    f = null != v[0];
+                      ? o.push(n)
+                      : null != r && o.push(r);
+                let I = o.length > 0 && o[0]?.currency === l.Yri.DISCORD_ORB,
+                    p = o.map((e) => (e.currency === l.Yri.DISCORD_ORB ? null : s)),
+                    f = null != p[0];
                 return {
-                    checkoutEligiblePrices: u,
-                    checkoutEligibleFormerPrices: v,
+                    checkoutEligiblePrices: o,
+                    checkoutEligibleFormerPrices: p,
                     isShowingPromoPrice: f,
                     isOrbExclusive: i,
                     hasSufficientOrbs: t,
                     shouldCheckoutWithOrbs: I,
                 };
             })({
-                orbPrice: d,
-                fiatPrice: c,
+                orbPrice: c,
+                fiatPrice: d,
                 isOrbExclusive: I,
-                formerFiatPrice: v,
+                formerFiatPrice: p,
                 hasSufficientOrbs: f,
-                prioritizedCurrency: o,
+                prioritizedCurrency: u,
             });
         },
     },

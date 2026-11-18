@@ -15,7 +15,7 @@ n.d(
             let { tab: t, handleTransition: n } = e,
                 d = (0, r.u)(s.oW.SHOP_NAGBAR),
                 m = d?.promotionId,
-                [g, E] = (0, i.Cc)(null != d ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, m ?? "", u.m.NOTICE_BAR, !0);
+                [g, h] = (0, i.Cc)(null != d ? a.M.PREMIUM_SHOP_NAGBAR_NOTICE : null, m ?? "", u.m.NOTICE_BAR, !0);
             if (null != d && null != g) {
                 let { surface: e, id: n, promotionId: s, componentType: a } = d;
                 return (0, l.jsx)(o.A, {
@@ -24,7 +24,7 @@ n.d(
                     componentType: a,
                     promotionId: s,
                     tab: t,
-                    onDismiss: E,
+                    onDismiss: h,
                 });
             }
             return (0, l.jsx)(c.A, { tab: t, handleTransition: n });

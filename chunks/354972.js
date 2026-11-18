@@ -14,7 +14,7 @@ var l = n(477900),
     f = n(792996),
     E = n(290484);
 let S = { section: C.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    g = h.EmojiIntention.GIFT;
+    I = h.EmojiIntention.GIFT;
 n.d(
     t,
     {},
@@ -23,7 +23,7 @@ n.d(
             let { setEmojiConfetti: t, emojiConfetti: n } = e,
                 [r, C] = i.useState(!1),
                 h = i.useRef(null),
-                I = a()(E.Qq, E.Ow);
+                g = a()(E.Qq, E.Ow);
             function y(e) {
                 return (0, l.jsxs)("div", {
                     className: E.ZC,
@@ -57,7 +57,7 @@ n.d(
                             closePopout: t,
                             onSelectEmoji: A,
                             wrapper: "div",
-                            pickerIntention: g,
+                            pickerIntention: I,
                             showAddEmojiButton: !1,
                             renderHeader: y,
                             headerClassName: E.a8,
@@ -86,7 +86,7 @@ n.d(
                                               height: 14,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: I,
+                                              className: g,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: f.intl.string(f.t.Hl2Ige),
@@ -97,12 +97,12 @@ n.d(
                                       className: E.hQ,
                                       children: [
                                           (0, l.jsx)(o.E, {
-                                              className: I,
+                                              className: g,
                                               variant: "body-sm/semibold",
                                               children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: I,
+                                              className: g,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.name.replace(/_/g, " "),

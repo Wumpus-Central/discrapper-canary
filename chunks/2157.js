@@ -22,8 +22,8 @@ function m(e) {
         f = (0, u.n)({ surface: t, skuId: m }),
         E = (0, a.j)(h, "pdp.label"),
         S = (0, a.j)(h, "pdp.tooltip"),
-        g = (0, a.j)(h, "checkout.label"),
-        I = (0, a.j)(h, "checkout.tooltip");
+        I = (0, a.j)(h, "checkout.label"),
+        g = (0, a.j)(h, "checkout.tooltip");
     return (
         (0, a.P)(n, t),
         l.useMemo(() => {
@@ -32,13 +32,13 @@ function m(e) {
             switch (t) {
                 case "gift_customization": {
                     if (null == f) return null;
-                    let t = (0, r.Ew)(g, f.amount);
+                    let t = (0, r.Ew)(I, f.amount);
                     if ((0, i.uJ)(t)) return null;
                     return {
                         id: h.id,
                         Icon: (0, r.LZ)(h.checkout?.icon ?? null),
                         text: t,
-                        tooltip: (0, r.Ew)(I, f.amount),
+                        tooltip: (0, r.Ew)(g, f.amount),
                         endsAt: e,
                         flavor: h.flavor,
                         rewardRequirements: h.rewardRequirements,
@@ -63,8 +63,8 @@ function m(e) {
                 case "sku_purchase_badge":
                 case "sku_gift_badge": {
                     if (null == f) return null;
-                    let n = "sku_gift_badge" === t ? g : E,
-                        l = "sku_gift_badge" === t ? I : S,
+                    let n = "sku_gift_badge" === t ? I : E,
+                        l = "sku_gift_badge" === t ? g : S,
                         a = (0, r.Ew)(n, f.amount);
                     if ((0, i.uJ)(a)) return null;
                     return {
@@ -78,7 +78,7 @@ function m(e) {
                     };
                 }
             }
-        }, [t, h, f, E, S, g, I])
+        }, [t, h, f, E, S, I, g])
     );
 }
 n.d(

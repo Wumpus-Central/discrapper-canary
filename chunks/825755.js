@@ -14,8 +14,8 @@ let a = "",
     f = "",
     E = "",
     S = "",
-    g = !1,
-    I = null,
+    I = !1,
+    g = null,
     y = null,
     A = null,
     P = null;
@@ -33,22 +33,22 @@ function v() {
         (f = ""),
         (E = ""),
         (S = ""),
-        (g = !1),
-        (I = null),
+        (I = !1),
+        (g = null),
         (y = null),
         (A = null),
         (P = null));
 }
 function x() {
-    I = null;
+    g = null;
 }
 function _(e) {
     let { error: t } = e;
-    I = t;
+    g = t;
 }
 function T(e) {
     let { message: t } = e;
-    I = new r.Ey(t);
+    g = new r.Ey(t);
 }
 class b extends l.Ay.Store {
     static displayName = "NewPaymentSourceStore";
@@ -86,10 +86,10 @@ class b extends l.Ay.Store {
         return { name: m, email: p, country: d, line1: C, line2: h, city: f, postalCode: E, state: S };
     }
     get isBillingAddressInfoValid() {
-        return g;
+        return I;
     }
     get error() {
-        return I;
+        return g;
     }
 }
 let N = new b(i.h, {
@@ -108,7 +108,7 @@ let N = new b(i.h, {
             (E = t.postalCode),
             (S = t.state),
             (p = t.email),
-            (g = n));
+            (I = n));
     },
     BRAINTREE_TOKENIZE_PAYPAL_START: function () {
         ((a = ""), (s = null));
@@ -125,7 +125,7 @@ let N = new b(i.h, {
             (E = l.postalCode),
             (S = l.state),
             (p = l.email),
-            (g = d.length > 0));
+            (I = d.length > 0));
     },
     BRAINTREE_TOKENIZE_VENMO_START: function () {
         ((o = ""), (s = null));

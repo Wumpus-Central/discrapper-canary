@@ -10,18 +10,18 @@ var l = n(477900),
     d = n(34188),
     m = n(646514),
     g = n(770178),
-    E = n(742589),
-    h = n(321538),
+    h = n(742589),
+    E = n(321538),
     f = n(702476),
     x = n(318346),
     C = n(435775),
-    S = n(287809),
-    p = n(365491),
-    _ = n(115560),
-    A = n(834730),
-    v = n(7689),
-    I = n(683438),
-    b = n(265872),
+    p = n(287809),
+    S = n(365491),
+    A = n(115560),
+    I = n(834730),
+    _ = n(7689),
+    b = n(683438),
+    v = n(265872),
     L = n(775602),
     j = n(129230),
     N = n(857512),
@@ -34,8 +34,8 @@ let y = (0, O.mj)({
     variations: { 0: { enabled: !1, searchBarWidthPx: T.hE.DEFAULT }, 1: { enabled: !0, searchBarWidthPx: T.hE.WIDE } },
 });
 var R = n(662829),
-    M = n(724874),
-    k = n(652215),
+    k = n(724874),
+    M = n(652215),
     P = n(143461),
     G = n(792996),
     D = n(848913);
@@ -53,7 +53,7 @@ function w(e) {
             (0, l.jsx)("div", {
                 id: F,
                 className: D.Xe,
-                children: (0, l.jsx)(A.E, {
+                children: (0, l.jsx)(I.E, {
                     variant: "body-xs/semibold",
                     color: "text-subtle",
                     children: G.intl.string(G.t.eYMbUC),
@@ -76,7 +76,7 @@ function w(e) {
                             className: D.h,
                             onClick: () => s(t),
                             onMouseEnter: () => a(t),
-                            children: (0, l.jsx)(A.E, { variant: "body-sm/medium", color: "text-strong", children: e }),
+                            children: (0, l.jsx)(I.E, { variant: "body-sm/medium", color: "text-strong", children: e }),
                         },
                         e,
                     ),
@@ -90,7 +90,7 @@ let U = (e) => {
     return (0, l.jsx)("div", {
         "aria-hidden": !0,
         className: i()(D.pQ, { [D.Eo]: s }),
-        children: (0, l.jsx)(A.E, {
+        children: (0, l.jsx)(I.E, {
             tag: "span",
             variant: "body-sm/normal",
             color: "none",
@@ -109,12 +109,12 @@ let U = (e) => {
 };
 function z(e) {
     let { handleTransition: t, selectedTab: n, isNarrow: a, hasText: r } = e,
-        { searchSuggestions: u, placeholderIndex: d, setPlaceholderIndex: m } = (0, M.S)(),
-        { searchQuery: g, onSetSearchQuery: E } = (0, p.vs)(),
-        [h, f] = s.useState(""),
+        { searchSuggestions: u, placeholderIndex: d, setPlaceholderIndex: m } = (0, k.S)(),
+        { searchQuery: g, onSetSearchQuery: h } = (0, S.vs)(),
+        [E, f] = s.useState(""),
         x = s.useRef(!1),
         C = (0, N.uM)(),
-        { enabled: S, searchBarWidthPx: A } = y.useConfig({ location: "collectibles_search_bar" }),
+        { enabled: p, searchBarWidthPx: I } = y.useConfig({ location: "collectibles_search_bar" }),
         O = s.useRef(null),
         [P, F] = s.useState(!1),
         H = s.useRef(null),
@@ -122,13 +122,13 @@ function z(e) {
         [K, Y] = s.useState(!1),
         [W, $] = s.useState(-1),
         [q, Z] = s.useState(!1),
-        Q = (0, R.Ay)(),
-        X = S && z && !K && "" === h,
+        X = (0, R.Ay)(),
+        Q = p && z && !K && "" === E,
         J = (0, o.bG)([L.Ay], () => L.Ay.useReducedMotion),
-        ee = S && !J,
+        ee = p && !J,
         et = G.intl.string(G.t.arz34K),
         en = u[d],
-        el = "" === h ? (ee ? en : et) : null;
+        el = "" === E ? (ee ? en : et) : null;
     (s.useEffect(() => {
         f(g);
     }, [g]),
@@ -136,18 +136,18 @@ function z(e) {
             x.current = !1;
         }, [n]),
         s.useEffect(() => {
-            if (!ee || "" !== h || z) return;
+            if (!ee || "" !== E || z) return;
             let e = setInterval(() => {
                 (m((e) => (e + 1) % u.length), Z(!1));
             }, 7e3);
             return () => clearInterval(e);
-        }, [ee, h, z, u, m]),
+        }, [ee, E, z, u, m]),
         s.useEffect(() => {
             F(a && r);
         }, [a, r]));
     let es = s.useCallback(
             (e, t) => {
-                j.default.track(k.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                j.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: C?.sessionId,
                     page_section: C?.pageSection,
                     page_category: C?.pageCategory,
@@ -165,11 +165,11 @@ function z(e) {
                 let a = e.trim(),
                     i = n === T.G2.CATALOG,
                     r = !i && x.current;
-                (r || Q(a, l, (0, _.A)(), i, s), f(a), i)
-                    ? E(a)
+                (r || X(a, l, (0, A.A)(), i, s), f(a), i)
+                    ? h(a)
                     : r || ((x.current = !0), t(T.G2.CATALOG, !1, { searchQuery: a }));
             },
-            [n, E, t, Q],
+            [n, h, t, X],
         ),
         ei = s.useCallback(
             (e) => {
@@ -180,7 +180,7 @@ function z(e) {
         ),
         er = s.useCallback(
             (e) => {
-                if (X && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
+                if (Q && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
                     e.preventDefault();
                     let t = "ArrowDown" === e.key ? 1 : -1;
                     $((e) => {
@@ -189,16 +189,16 @@ function z(e) {
                     });
                     return;
                 }
-                if (X && "Escape" === e.key) {
+                if (Q && "Escape" === e.key) {
                     (e.preventDefault(), Y(!0), $(-1));
                     return;
                 }
                 if ("Enter" === e.key) {
-                    if (X && W >= 0) return void ei(W);
-                    ea(h, T.Vf.ENTER);
+                    if (Q && W >= 0) return void ei(W);
+                    ea(E, T.Vf.ENTER);
                 }
             },
-            [h, ea, X, W, ei, u],
+            [E, ea, Q, W, ei, u],
         ),
         eo = s.useCallback((e) => {
             (f(e), Y(!1), $(-1));
@@ -208,7 +208,7 @@ function z(e) {
                 Z(!0),
                 Y(!1),
                 $(-1),
-                j.default.track(k.HAw.COLLECTIBLES_SHOP_SEARCH_STARTED, {
+                j.default.track(M.HAw.COLLECTIBLES_SHOP_SEARCH_STARTED, {
                     collectibles_shop_session_id: C?.sessionId,
                     placeholder_text: el,
                 }));
@@ -220,39 +220,39 @@ function z(e) {
             es(T.uY.SEARCH_BAR, T.Xi.SEARCH);
         }, [es]),
         em = s.useCallback(() => {
-            (f(""), E(""), es(T.uY.SEARCH_BAR_CLEAR, T.Xi.SEARCH), a && F(!1));
-        }, [E, es, a]),
+            (f(""), h(""), es(T.uY.SEARCH_BAR_CLEAR, T.Xi.SEARCH), a && F(!1));
+        }, [h, es, a]),
         eg = s.useCallback(() => {
-            (V(!1), a && "" === h && F(!1));
-        }, [a, h]),
-        eE = a && !P,
-        eh = (0, l.jsx)(c.D, {
+            (V(!1), a && "" === E && F(!1));
+        }, [a, E]),
+        eh = a && !P,
+        eE = (0, l.jsx)(c.D, {
             className: D.qc,
             onClick: eu,
             "aria-label": et,
-            children: (0, l.jsx)(v.MagnifyingGlassIcon, { size: "xs", color: "currentColor" }),
+            children: (0, l.jsx)(_.MagnifyingGlassIcon, { size: "xs", color: "currentColor" }),
         }),
         ef = (0, l.jsxs)("div", {
             className: D.up,
             children: [
-                (0, l.jsx)(I.I, {
+                (0, l.jsx)(b.I, {
                     size: "sm",
                     ref: O,
                     onKeyDown: er,
-                    query: h,
+                    query: E,
                     onChange: eo,
                     onClear: em,
                     onFocus: ec,
                     onBlur: eg,
                     inputProps: {
                         maxLength: 256,
-                        ...(S
+                        ...(p
                             ? {
                                   role: "combobox",
-                                  "aria-expanded": X,
-                                  "aria-controls": X ? B : void 0,
+                                  "aria-expanded": Q,
+                                  "aria-controls": Q ? B : void 0,
                                   "aria-autocomplete": "list",
-                                  "aria-activedescendant": X && W >= 0 ? `${B}-${W}` : void 0,
+                                  "aria-activedescendant": Q && W >= 0 ? `${B}-${W}` : void 0,
                               }
                             : void 0),
                         onClick: ed,
@@ -260,13 +260,13 @@ function z(e) {
                     placeholder: ee ? "" : et,
                     "aria-label": et,
                 }),
-                ee && "" === h ? (0, l.jsx)(U, { option: en, optionKey: d, isFocused: z, isResumed: q }) : null,
+                ee && "" === E ? (0, l.jsx)(U, { option: en, optionKey: d, isFocused: z, isResumed: q }) : null,
             ],
         }),
-        ex = { "--custom-search-bar-width": `${A}px` };
-    return eE
-        ? (0, l.jsx)("div", { style: ex, children: eh })
-        : (0, l.jsx)(b.Y, {
+        ex = { "--custom-search-bar-width": `${I}px` };
+    return eh
+        ? (0, l.jsx)("div", { style: ex, children: eE })
+        : (0, l.jsx)(v.Y, {
               targetElementRef: H,
               renderPopout: () =>
                   (0, l.jsx)("div", {
@@ -275,8 +275,8 @@ function z(e) {
                   }),
               position: "bottom",
               align: "right",
-              animation: b.Y.Animation.NONE,
-              shouldShow: X,
+              animation: v.Y.Animation.NONE,
+              shouldShow: Q,
               autoInvert: !1,
               children: () =>
                   (0, l.jsx)("div", {
@@ -294,9 +294,9 @@ var K = n(278416),
     $ = n(288106),
     q = n(223311),
     Z = n(65238),
-    Q = n(758461),
-    X = n(812729),
-    J = n.n(X),
+    X = n(758461),
+    Q = n(812729),
+    J = n.n(Q),
     ee = n(627363),
     et = n(587895),
     en = n(733391),
@@ -321,26 +321,26 @@ var eu = n(518477),
     ed = n(835018);
 function em(e) {
     let { selectedTab: t, selectedCollectionId: n, handleTransition: a } = e,
-        _ = (0, o.bG)([S.default], () => S.default.getCurrentUser()),
-        A = (0, ec.yB)("CollectiblesShopHeaderBar"),
-        { searchQuery: v } = (0, p.vs)(),
-        I = s.useRef(null),
-        [b, L] = s.useState(!1);
+        A = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        I = (0, ec.yB)("CollectiblesShopHeaderBar"),
+        { searchQuery: _ } = (0, S.vs)(),
+        b = s.useRef(null),
+        [v, L] = s.useState(!1);
     (0, g.g)(
-        I,
+        b,
         s.useCallback((e) => {
             L(e.contentRect.width < 800);
         }, []),
     );
-    let O = t === T.G2.ORBS ? k.liQ.SHOP_ORBS_TAB : k.liQ.COLLECTIBLES_SHOP,
+    let O = t === T.G2.ORBS ? M.liQ.SHOP_ORBS_TAB : M.liQ.COLLECTIBLES_SHOP,
         y = s.useCallback(() => {
-            ((0, x.Y)({ pageType: O, sectionType: k.JJy.ORBS_BALANCE_MENU, ctaObject: k.ZSU.CTA_TO_QUEST_HOME }),
-                (0, h.mA)({ fromContent: r.u.ORBS_BALANCE_MENU }));
+            ((0, x.Y)({ pageType: O, sectionType: M.JJy.ORBS_BALANCE_MENU, ctaObject: M.ZSU.CTA_TO_QUEST_HOME }),
+                (0, E.mA)({ fromContent: r.u.ORBS_BALANCE_MENU }));
         }, [O]),
         R = s.useCallback(() => {
-            _?.id != null && (0, f.openUserProfileModal)({ userId: _.id, tabSection: eu.RP.WISHLIST });
-        }, [_?.id]),
-        M = (function (e) {
+            A?.id != null && (0, f.openUserProfileModal)({ userId: A.id, tabSection: eu.RP.WISHLIST });
+        }, [A?.id]),
+        k = (function (e) {
             let t,
                 n,
                 l,
@@ -352,18 +352,18 @@ function em(e) {
                 d,
                 m,
                 g,
-                E,
                 h,
+                E,
                 f,
                 x,
                 C,
-                S,
                 p,
-                _,
+                S,
                 A,
-                v,
-                I = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
-                { gameShops: b, hasGameShops: L } =
+                I,
+                _,
+                b = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
+                { gameShops: v, hasGameShops: L } =
                     ((t = (0, N.uM)()),
                     (n = (0, o.yK)(
                         [el.A],
@@ -382,7 +382,7 @@ function em(e) {
                     }, [n]),
                     (l = s.useCallback(
                         (e) => {
-                            (j.default.track(k.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                            (j.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: t?.sessionId,
                                 page_type: T.G2.GAME_SHOPS,
                                 page_category: t?.pageCategory,
@@ -434,33 +434,33 @@ function em(e) {
                         ),
                         hasGameShops: n.length > 0,
                     }),
-                O = null != (0, Q.HH)(),
+                O = null != (0, X.HH)(),
                 y =
-                    ((i = (0, q.A)(k.FYj)),
+                    ((i = (0, q.A)(M.FYj)),
                     (r = (0, Z.XF)(i)),
                     (c = r?.shared.navigation?.tab),
                     (u = c?.title),
                     (d = r?.collectionId),
-                    (p =
+                    (S =
                         (null == u || null == d || i?.rewardStatus === $.GM.CONSUMED
                             ? null
                             : { title: u, icon: c?.icon, collectionId: d }) ??
                         ((m = (0, Z.NN)(i)),
                         (g = m?.navigation?.tab),
-                        (E = g?.title),
-                        (h = m?.collectionId),
-                        null == E || null == h ? null : { title: E, icon: g?.icon, collectionId: h }) ??
+                        (h = g?.title),
+                        (E = m?.collectionId),
+                        null == h || null == E ? null : { title: h, icon: g?.icon, collectionId: E }) ??
                         ((f = (0, Z.d3)(i)),
                         (x = f?.navigation?.tab),
                         (C = x?.title),
-                        (S = f?.collectionId),
-                        null == C || null == S ? null : { title: C, icon: x?.icon, collectionId: S })),
-                    (_ = p?.title),
-                    (A = p?.icon),
-                    (v = p?.collectionId),
+                        (p = f?.collectionId),
+                        null == C || null == p ? null : { title: C, icon: x?.icon, collectionId: p })),
+                    (A = S?.title),
+                    (I = S?.icon),
+                    (_ = S?.collectionId),
                     s.useMemo(
-                        () => (null == _ || null == v ? null : { title: _, icon: A, collectionId: v }),
-                        [_, A, v],
+                        () => (null == A || null == _ ? null : { title: A, icon: I, collectionId: _ }),
+                        [A, I, _],
                     ));
             return s.useMemo(() => {
                 let t = (function (e) {
@@ -485,14 +485,14 @@ function em(e) {
                             type: "page",
                             key: T.G2.HOME,
                             text: G.intl.string(G.t["xNiB/O"]),
-                            route: k.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.HOME),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.HOME),
                             onClick: () => e(T.G2.HOME),
                         },
                         {
                             type: "menu",
                             key: T.G2.CATALOG,
                             text: G.intl.string(G.t.FshAeN),
-                            route: k.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.CATALOG),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.CATALOG),
                             onClick: () => e(T.G2.CATALOG),
                             expandLabel: G.intl.string(G.t["+w36yH"]),
                             options: t,
@@ -501,7 +501,7 @@ function em(e) {
                             type: "page",
                             key: T.G2.ORBS,
                             text: G.intl.string(G.t.fG3RIg),
-                            route: k.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.ORBS),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.ORBS),
                             onClick: () => e(T.G2.ORBS),
                         },
                     ];
@@ -512,20 +512,20 @@ function em(e) {
                             key: T.G2.GAME_SHOPS,
                             text: G.intl.string(G.t.FkjcWY),
                             expandLabel: G.intl.string(G.t.bf9uMH),
-                            options: b,
+                            options: v,
                         }),
-                    I &&
+                    b &&
                         n.push({
                             type: "page",
                             key: T.G2.GAME_SERVERS,
                             text: G.intl.string(er.default.vCzwM7),
-                            route: k.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.GAME_SERVERS),
+                            route: M.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.GAME_SERVERS),
                             onClick: () => e(T.G2.GAME_SERVERS),
                             badge: "beta",
                         }),
                     null != y)
                 ) {
-                    let e = k.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(y.collectionId),
+                    let e = M.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(y.collectionId),
                         t = (0, ei.s)(y.icon);
                     n.push({
                         type: "page",
@@ -537,7 +537,7 @@ function em(e) {
                     });
                 }
                 return n;
-            }, [e, O, y, I, L, b]);
+            }, [e, O, y, b, L, v]);
         })(
             s.useCallback(
                 (e) => {
@@ -548,23 +548,23 @@ function em(e) {
         ),
         P = s.useMemo(() => {
             if (null == n) return !1;
-            let e = M.find((e) => e.key === T.G2.PROMOTION);
+            let e = k.find((e) => e.key === T.G2.PROMOTION);
             if (null == e) return !1;
-            let t = k.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n);
+            let t = M.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n);
             return e.route === t;
-        }, [M, n])
+        }, [k, n])
             ? T.G2.PROMOTION
             : t;
     return (0, l.jsx)("div", {
-        ref: I,
-        children: (0, l.jsxs)(E.A, {
+        ref: b,
+        children: (0, l.jsxs)(h.A, {
             disableDoubleClick: !0,
             disableFocusRingScope: !0,
             keepToastsBelow: !0,
-            className: i()(ed.jr, { [ec.jP]: A }),
+            className: i()(ed.jr, { [ec.jP]: I }),
             toolbar: (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(z, { handleTransition: a, selectedTab: t, isNarrow: b, hasText: "" !== v }),
+                    (0, l.jsx)(z, { handleTransition: a, selectedTab: t, isNarrow: v, hasText: "" !== _ }),
                     (0, l.jsx)(c.D, {
                         className: ed.ij,
                         onClick: R,
@@ -590,7 +590,7 @@ function em(e) {
                 (0, l.jsx)(V.A, {
                     "aria-label": G.intl.string(G.t["5upuqx"]),
                     className: ed.IV,
-                    options: M,
+                    options: k,
                     selectedKey: P,
                     overflowLabel: G.intl.string(G.t["UKOtz+"]),
                     overflowExpandLabel: G.intl.string(G.t.PEtHiE),

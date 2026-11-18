@@ -43,10 +43,10 @@ n.d(
             let e = (0, a.uM)()?.sessionId;
             return l.useCallback(
                 (t, n, l, a, m) => {
-                    let E = d(t),
-                        h = a && E === d(i.vs.getState().searchQuery);
-                    "" === E ||
-                        h ||
+                    let h = d(t),
+                        E = a && h === d(i.vs.getState().searchQuery);
+                    "" === h ||
+                        E ||
                         ((c = {
                             query: t,
                             searchQueryId: l,

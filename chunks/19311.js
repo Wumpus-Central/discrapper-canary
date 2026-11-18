@@ -49,8 +49,8 @@ function S(e) {
             primaryText: h,
             primaryTooltip: f,
             primaryDisabled: S,
-            primarySubmitting: g,
-            onPrimary: I,
+            primarySubmitting: I,
+            onPrimary: g,
         } = e,
         y =
             null == t
@@ -72,12 +72,12 @@ function S(e) {
                         primaryType: s,
                         primaryText: h,
                         primaryDisabled: S,
-                        primarySubmitting: g,
-                        onPrimary: I,
+                        primarySubmitting: I,
+                        onPrimary: g,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
-                        : (0, i.jsx)(E, { ...e, onPrimary: I });
+                        : (0, i.jsx)(E, { ...e, onPrimary: g });
                 })(),
             ],
         });

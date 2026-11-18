@@ -1,4 +1,4 @@
-e.exports = {
+r.exports = {
     iC: "marketingBlock_nQ1zr7",
     GS: "fill_nQ1zr7",
     Dk: "carousel_nQ1zr7",

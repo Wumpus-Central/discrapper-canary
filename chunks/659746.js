@@ -3,42 +3,42 @@ var l,
     r = t(582128),
     s = t(503698),
     i = t.n(s),
-    u = t(615300),
-    o = t(646514),
-    c = t(462887),
-    h = t(930861),
+    h = t(615300),
+    u = t(646514),
+    o = t(462887),
+    c = t(930861),
     d = t(602853),
     m = t(404374),
     p = t(998304),
     A = t(682901),
     E = t(855310);
-let y = Object.freeze({
+let P = Object.freeze({
     DURATION: { [A.PremiumTypes.TIER_0]: 1e3, [A.PremiumTypes.TIER_1]: 1e3, [A.PremiumTypes.TIER_2]: 1500 },
     DELAY: { [A.PremiumTypes.TIER_0]: 400, [A.PremiumTypes.TIER_1]: 400, [A.PremiumTypes.TIER_2]: 2200 },
     FLASH_TIME_PERCENT: 0.72,
     FLASH_DURATION_PERCENT: 0.08,
 });
-var C =
+var y =
     (((l = {}).PREMIUM_ACTIVATED = "PREMIUM_ACTIVATED"),
     (l.PREMIUM_UPDATED = "PREMIUM_UPDATED"),
     (l.PREMIUM_UPGRADED = "PREMIUM_UPGRADED"),
     (l.GUILD_BOOST_APPLIED = "GUILD_BOOST_APPLIED"),
     (l.PREMIUM_PAYMENT_STARTED = "PREMIUM_PAYMENT_STARTED"),
     l);
-class P extends r.PureComponent {
-    animation = new u.A.Value(0);
-    static Types = C;
+class C extends r.PureComponent {
+    animation = new h.A.Value(0);
+    static Types = y;
     componentDidMount() {
         this.animate();
     }
     animate() {
         let { premiumType: e } = this.props;
-        u.A.timing(this.animation, { toValue: 1, delay: y.DELAY[e], duration: y.DURATION[e] }).start();
+        h.A.timing(this.animation, { toValue: 1, delay: P.DELAY[e], duration: P.DURATION[e] }).start();
     }
     getContainerStyle() {
         let { flashColor: e } = this.props,
-            a = y.FLASH_TIME_PERCENT,
-            t = y.FLASH_DURATION_PERCENT,
+            a = P.FLASH_TIME_PERCENT,
+            t = P.FLASH_DURATION_PERCENT,
             l = (0, p.tp)(e, 0);
         return {
             backgroundColor: this.animation.interpolate({
@@ -48,7 +48,7 @@ class P extends r.PureComponent {
         };
     }
     getShineStyle() {
-        return u.A.accelerate({
+        return h.A.accelerate({
             transform: [
                 { translateX: this.animation.interpolate({ inputRange: [0, 1], outputRange: ["20%", "160%"] }) },
             ],
@@ -273,11 +273,11 @@ class P extends r.PureComponent {
             className: i()(E.kL, e),
             children: [
                 this.renderSvgBorder(),
-                (0, n.jsxs)(u.A.div, {
+                (0, n.jsxs)(h.A.div, {
                     className: E.Mp,
                     style: this.getContainerStyle(),
                     children: [
-                        (0, n.jsx)(h.kF, {
+                        (0, n.jsx)(c.kF, {
                             "data-migration-pending": !0,
                             className: E.q2,
                             style: this.getShineStyle(),
@@ -289,11 +289,11 @@ class P extends r.PureComponent {
         });
     }
 }
-function x(e) {
+function M(e) {
     let { theme: a, ...t } = e,
-        l = (0, d.r)(o.A.unsafe_rawColors.WHITE).hex(),
-        r = (0, d.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
-        s = (0, c.M)(a) ? l : r;
-    return (0, n.jsx)(P, { ...t, theme: a, flashColor: s });
+        l = (0, d.r)(u.A.unsafe_rawColors.WHITE).hex(),
+        r = (0, d.r)(u.A.unsafe_rawColors.BRAND_500).hex(),
+        s = (0, o.M)(a) ? l : r;
+    return (0, n.jsx)(C, { ...t, theme: a, flashColor: s });
 }
-((x.Types = C), t.d(a, {}, { Ay: x, Or: C }));
+((M.Types = y), t.d(a, {}, { Ay: M, Or: y }));
