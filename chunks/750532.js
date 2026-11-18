@@ -6,7 +6,7 @@ var l = n(477900),
     o = n(883645),
     u = n(427675),
     c = n(580133),
-    d = n(316363),
+    d = n(3900),
     m = n(602787),
     p = n(242874),
     C = n(573359),
@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(742655),
     E = n(892349),
     S = n(35587),
-    g = n(446263),
-    I = n(683166),
+    I = n(446263),
+    g = n(683166),
     y = n(45938),
     A = n(448645),
     P = n(418200),
@@ -40,7 +40,7 @@ function R(e) {
             quantity: e.quantity,
         })),
         O = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, m.i)(),
+        { isPremium: L, isPremiumGroupPurchase: M, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, m.i)(),
         D = (0, u.S3)(),
         U = (0, o.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
@@ -76,7 +76,7 @@ function R(e) {
                             (0, l.jsx)("div", {
                                 "aria-hidden": !0,
                                 style: { display: "contents" },
-                                children: (0, l.jsx)(g.A, {
+                                children: (0, l.jsx)(I.A, {
                                     defaultAnimationState: p.oA.LOOP,
                                     giftStyle: F,
                                     className: N.qq,
@@ -90,7 +90,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(I.A, {
+                              ? (0, l.jsx)(g.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: S,
                                     premiumType: _.WN[n],
@@ -100,14 +100,14 @@ function R(e) {
                                     isGift: G,
                                     giftRecipient: B,
                                     isEligibleForTrial: k,
-                                    enablePremiumBrandRefresh: M,
+                                    enablePremiumBrandRefresh: L,
                                     isDisplayingWowMomentConfirmation: O,
-                                    isPremiumGroupPurchase: L,
+                                    isPremiumGroupPurchase: M,
                                 })
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, S, n, U, k, w, R, c, K, Z, H, z, G, B, M, O, L]);
+    }, [F, $, S, n, U, k, w, R, c, K, Z, H, z, G, B, L, O, M]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, d.t4)((e) => ({
@@ -132,7 +132,7 @@ function O(e) {
               : { headerBadgePreset: o };
     }, [e, l, r, a, s, t, n]);
 }
-function M() {
+function L() {
     let e = O();
     return (0, l.jsx)(c.f, { headerBadgeConfig: e });
 }
@@ -143,7 +143,7 @@ n.d(
         Fe: O,
         kc: function (e) {
             let { isGift: t } = (0, P.Pv)();
-            return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
+            return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(L, {});
         },
     },
 );

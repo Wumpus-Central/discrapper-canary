@@ -5,7 +5,7 @@ var l = t(477900),
 if (529845 == t.j) var i = t(815390);
 var u = t(683071),
     o = t(725836),
-    c = t(176702),
+    c = t(855283),
     h = t(580133),
     d = t(169797),
     m = t(744615),
@@ -32,25 +32,25 @@ function x(e) {
 }
 function g(e) {
     let { children: a, showUpperNoticesAboveGlobalNotices: t = !1 } = e,
-        { errorMessage: r, richNotices: s } = (0, c.u)(),
-        i = n.useRef(null);
+        { errorMessage: r, purchaseErrorMessage: s, richNotices: i } = (0, c.u)(),
+        o = n.useRef(null);
     return (
         n.useEffect(() => {
-            x(r) || null == i.current || i.current.scrollIntoView({ behavior: "smooth" });
-        }, [r]),
+            x(s) || null == o.current || o.current.scrollIntoView({ behavior: "smooth" });
+        }, [s]),
         n.useMemo(() => {
-            if (!(!x(r) || s.length > 0 || null != a)) return null;
+            if (!(!x(r) || i.length > 0 || null != a)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
-                children: [x(r) ? null : (0, l.jsx)(u.w, { type: "critical", message: r, role: "alert" }), s.map(P)],
+                children: [x(r) ? null : (0, l.jsx)(u.w, { type: "critical", message: r, role: "alert" }), i.map(P)],
             });
             return (0, l.jsx)("div", {
-                ref: i,
+                ref: o,
                 className: y.dD,
                 children: t
                     ? (0, l.jsxs)(l.Fragment, { children: [a, e] })
                     : (0, l.jsxs)(l.Fragment, { children: [e, a] }),
             });
-        }, [r, s, a, t])
+        }, [r, i, a, t])
     );
 }
 function f(e) {
@@ -112,8 +112,8 @@ t.d(
                     legalContent: g,
                     invoiceTotalDueLabel: f = E.intl.string(A.default.R0cZsM),
                     invoiceTotalDueValue: _,
-                    shouldShowGlobalNotices: I,
-                    showUpperNoticesAboveGlobalNotices: S,
+                    shouldShowGlobalNotices: S,
+                    showUpperNoticesAboveGlobalNotices: I,
                     footerInlineNoticeProps: N,
                     footerInlineNoticeContent: R,
                     headerBadgeConfig: j,
@@ -132,8 +132,8 @@ t.d(
                                       ? t
                                       : (0, l.jsx)(v, {
                                             upperInlineNoticeProps: a,
-                                            shouldShowGlobalNotices: I,
-                                            showUpperNoticesAboveGlobalNotices: S,
+                                            shouldShowGlobalNotices: S,
+                                            showUpperNoticesAboveGlobalNotices: I,
                                         }),
                                   r,
                                   null != r && null != i && (0, l.jsx)("div", { className: y.ls }),

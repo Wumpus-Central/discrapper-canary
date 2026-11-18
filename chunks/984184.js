@@ -13,10 +13,10 @@ var l = n(477900),
     C = n(69882),
     h = n(744615),
     f = n(241989),
-    E = n(316363),
+    E = n(3900),
     S = n(818296),
-    g = n(977445),
-    I = n(525877),
+    I = n(977445),
+    g = n(525877),
     y = n(486020),
     A = n(580630),
     P = n(403581),
@@ -29,8 +29,8 @@ var l = n(477900),
     j = n(65238),
     R = n(436912),
     O = n(306396),
-    M = n(248180),
-    L = n(151115),
+    L = n(248180),
+    M = n(151115),
     k = n(518865),
     w = n(536572),
     D = n(652215),
@@ -62,7 +62,7 @@ function Z(e) {
                 switch (e?.type) {
                     case b.hE.COLLECT_AND_CLAIM: {
                         if (null == n) break;
-                        let t = (0, L.L0)(n, u),
+                        let t = (0, M.L0)(n, u),
                             i = t?.progress;
                         if (null == i) break;
                         let s = Math.min(i.current + (0, O.oO)(n, e.collectionId), i.target);
@@ -81,13 +81,13 @@ function Z(e) {
                     }
                     case b.hE.TARGETED_OFFER: {
                         let n = e.reward,
-                            i = null != n && (0, L.g5)(t, u) ? n : null;
+                            i = null != n && (0, M.g5)(t, u) ? n : null;
                         (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, k.lG)(i.flavor) : void 0), o(!1));
                         return;
                     }
                     case b.hE.COLLECTION_SALE: {
-                        let e = (0, M.S)(u);
-                        if (null == e || !(0, L.g5)(t, u)) break;
+                        let e = (0, L.S)(u);
+                        if (null == e || !(0, M.g5)(t, u)) break;
                         (l(U.intl.formatToPlainString(U.t.VuV3Td, { discountOfferAmount: e })),
                             r(void 0),
                             a(void 0),
@@ -95,7 +95,7 @@ function Z(e) {
                         return;
                     }
                     case b.hE.COLLECTION_SEQUENCED_OFFER: {
-                        if (null == n || !(0, L.g5)(t, u)) break;
+                        if (null == n || !(0, M.g5)(t, u)) break;
                         let { position: i } = e,
                             s = d?.promotions.some((e) => e.position > i) === !0;
                         (l(U.intl.formatToPlainString(U.t.LoVrW5, { day: i })),
@@ -196,7 +196,7 @@ function eo(e) {
 }
 function eu(e) {
     let { productLine: t, application: n, isGift: r } = e,
-        a = (0, I.o)({ application: n, productLine: t, isGift: r }),
+        a = (0, g.o)({ application: n, productLine: t, isGift: r }),
         s = i.useMemo(() => {
             let e = [];
             return (null != a && e.push(a), e.length > 0 ? e : null);
@@ -212,7 +212,7 @@ function ec(e) {
 function ed(e) {
     let { application: t } = e,
         n = (0, s.bG)([c.A], () => c.A.getFetchState()),
-        r = (0, g.uS)(t.id),
+        r = (0, I.uS)(t.id),
         o = t.supportsEmbeddedSurface(a.U.MAIN) && n === c.$.ERROR,
         u = i.useMemo(() => {
             let e = [];
@@ -260,8 +260,8 @@ function ep(e) {
         { isGift: s, giftRecipient: c } = (0, q.Pv)(),
         {
             sku: f,
-            application: g,
-            eligiblePaymentGateways: I,
+            application: I,
+            eligiblePaymentGateways: g,
             disabled: y,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, E.t4)((e) => ({
@@ -294,7 +294,7 @@ function ep(e) {
                 })(n, { skuId: f.id, paymentSourceType: a, isGift: s }),
             [n, f.id, a, s],
         ),
-        x = i.useMemo(() => ({ paymentGatewayRestrictions: I, shouldUseUnifiedCheckoutUI: !0 }), [I]),
+        x = i.useMemo(() => ({ paymentGatewayRestrictions: g, shouldUseUnifiedCheckoutUI: !0 }), [g]),
         _ = (0, l.jsx)(p.N, {
             label: U.intl.string(U.t["u+Cw58"]),
             location: "OneTimePurchaseReviewStepBody",
@@ -338,11 +338,11 @@ function ep(e) {
             [f, r],
         ),
         O = i.useMemo(() => (null != j ? (0, l.jsx)(h.Vm, { ...j }) : null), [j]),
-        M = i.useMemo(() => {
+        L = i.useMemo(() => {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: R, sku: f, application: g, giftRecipient: c }),
+                (t = { priceText: R, sku: f, application: I, giftRecipient: c }),
                 e === d.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(ea, { ...t })
                     : e === d.C.GUILD_PRODUCT_CHECKOUT
@@ -351,8 +351,8 @@ function ep(e) {
                         ? (0, l.jsx)(eo, { ...t })
                         : (0, l.jsx)(er, { ...t })
             );
-        }, [n, f, g, c, R]),
-        L = i.useMemo(() => (null != r ? (0, A.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
+        }, [n, f, I, c, R]),
+        M = i.useMemo(() => (null != r ? (0, A.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         w = (0, S.g)(N ?? null),
         W = i.useMemo(
             () =>
@@ -426,15 +426,15 @@ function ep(e) {
                 (0, l.jsx)(Z, { requiredCheckoutFlow: d.C.COLLECTIBLES_CHECKOUT, invoicePreview: r, product: N }),
             (0, l.jsx)(C.T_, {
                 headerBadgeConfig: V,
-                purchaseItemContent: M,
+                purchaseItemContent: L,
                 invoiceSummaryContent: O,
                 paymentMethodContent: _,
                 legalContent: P,
                 promotionalNoticeContent: W,
-                upperInlineNoticeContent: (0, l.jsx)(em, { application: g }),
-                footerInlineNoticeContent: (0, l.jsx)(ec, { productLine: f.productLine, application: g, isGift: s }),
+                upperInlineNoticeContent: (0, l.jsx)(em, { application: I }),
+                footerInlineNoticeContent: (0, l.jsx)(ec, { productLine: f.productLine, application: I, isGift: s }),
                 invoiceTotalDueLabel: U.intl.string(Y.default.Zxav97),
-                invoiceTotalDueValue: L,
+                invoiceTotalDueValue: M,
             }),
         ],
     });

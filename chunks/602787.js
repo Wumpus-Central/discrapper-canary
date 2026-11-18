@@ -3,7 +3,7 @@ var l = n(582128),
     r = n(77528),
     a = n(563020),
     s = n(120700),
-    o = n(316363),
+    o = n(3900),
     u = n(652215),
     c = n(682901);
 n.d(
@@ -59,8 +59,8 @@ n.d(
                     null != E.discount &&
                     null != E.discount.planIds &&
                     E.discount.planIds.some((e) => c.hd[e].skuId === t),
-                g = !!(h && null != E && S),
-                I = l.useMemo(
+                I = !!(h && null != E && S),
+                g = l.useMemo(
                     () => null != E && null != E.discount && null != e && (0, a.Ro)(e, E.discount.id),
                     [E, e],
                 );
@@ -69,12 +69,12 @@ n.d(
                     isPremium: n,
                     isPremiumGroupPurchase: u,
                     isEligibleForTrial: f,
-                    isEligibleForDiscount: g,
+                    isEligibleForDiscount: I,
                     userTrialOffer: C,
                     discountOffer: E,
-                    currentInvoiceHasMatchingDiscountOffer: I,
+                    currentInvoiceHasMatchingDiscountOffer: g,
                 }),
-                [n, u, f, g, C, E, I],
+                [n, u, f, I, C, E, g],
             );
         },
     },

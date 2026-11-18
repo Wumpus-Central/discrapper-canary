@@ -1,4 +1,4 @@
-n.d(t, { Ni: () => el, y$: () => ec, t4: () => ed, Q9: () => eo });
+n.d(t, { Ni: () => ed, y$: () => e_, t4: () => eu, Q9: () => ec });
 var i = n(882035),
     r = n(136857),
     a = n(428865),
@@ -276,51 +276,53 @@ function M(e, t) {
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-var U = n(26279),
-    w = n(260273),
-    G = n(219538);
-let x = { lastOrderUpdateRevision: 0 };
-var k = n(158032),
-    F = n(830382),
-    B = n(949192),
-    V = n(558740),
-    H = n(792996);
-let j = [y.__0.COMPLETED, y.__0.FAILED, y.__0.CANCELED],
-    W = {
+var U = n(260273),
+    w = n(219538),
+    G = n(158317),
+    x = n(740286),
+    k = n(26279);
+let F = { lastOrderUpdateRevision: 0 };
+var B = n(158032),
+    V = n(830382),
+    H = n(949192),
+    j = n(558740),
+    W = n(792996);
+let Y = [y.__0.COMPLETED, y.__0.FAILED, y.__0.CANCELED],
+    K = {
         paymentAuthError: null,
         isAwaitingPaymentAuthentication: !1,
         awaitingPaymentId: null,
         paymentAuthWasCancelled: !1,
     };
-var Y = n(155718),
-    K = n(202613);
-function $(e) {
+var $ = n(155718),
+    X = n(202613);
+function z(e) {
     return null == e ? null : e.taxInclusive ? e.total : e.total - e.tax;
 }
-function X(e) {
+function q(e) {
     let { checkoutInvoicePreview: t, renewalInvoicePreview: n } = e,
-        i = $(t),
-        r = $(n);
+        i = z(t),
+        r = z(n);
     return 0 === i && null != r ? { subtotal: r, total: n?.total ?? null } : { subtotal: i, total: t?.total ?? null };
 }
-var z = n(442467),
-    q = n(371710),
-    Q = n(120700),
-    J = n(379912),
-    Z = n(705822),
-    ee = n(811315),
-    et = n.n(ee),
-    en = n(800471),
-    ei = n(529412),
-    er = n(742655),
-    ea = n(998312),
-    es = n(860841);
-let [el, eo] = (0, T.A)();
-function ed(e) {
+var Q = n(442467),
+    J = n(371710),
+    Z = n(120700),
+    ee = n(379912),
+    et = n(705822),
+    en = n(811315),
+    ei = n.n(en),
+    er = n(800471),
+    ea = n(529412),
+    es = n(742655),
+    el = n(998312),
+    eo = n(860841);
+let [ed, ec] = (0, T.A)();
+function eu(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
-    return eo()(e, t);
+    return ec()(e, t);
 }
-function ec(e) {
+function e_(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -330,11 +332,10 @@ function ec(e) {
         initialCurrency: c,
     } = e;
     return (0, i.h)((e, i) => {
-        var u;
-        let _,
-            E,
-            A =
-                ((_ = { checkoutContext: null, checkoutPaymentSources: [] }),
+        let u,
+            _,
+            E =
+                ((u = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
                     isPremiumPurchase: () => v(i().selectedPlanId).isPremiumPurchase,
                     isPremiumGroupPurchase: () => v(i().selectedPlanId).isPremiumGroupPurchase,
@@ -366,13 +367,13 @@ function ec(e) {
                     checkoutSelectedCurrency: () => i().checkoutPriceOptions.currency ?? null,
                     checkoutPaymentSources: () => {
                         let e = i().get("checkoutContext");
-                        e !== _.checkoutContext &&
-                            ((_.checkoutContext = e),
-                            (_.checkoutPaymentSources =
+                        e !== u.checkoutContext &&
+                            ((u.checkoutContext = e),
+                            (u.checkoutPaymentSources =
                                 null == e || null == e.payment_sources
                                     ? []
                                     : e.payment_sources.map(R.A.createFromCheckoutContext)));
-                        return _.checkoutPaymentSources;
+                        return u.checkoutPaymentSources;
                     },
                     checkoutSelectedPaymentSource: () => {
                         let { get: e, paymentSourceId: t } = i();
@@ -389,18 +390,9 @@ function ec(e) {
                         return null == n && null == r && (null == t || null == b(e, t));
                     },
                     primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
-                    isOrderLocked: () => {
-                        let { order: e, isOrderSyncing: t, isOrderSigning: n } = i();
-                        return null != e && (t || n);
-                    },
-                    isOrderSigningInProgress: () => {
-                        let { order: e } = i();
-                        return null != e && e.status === U.Re.SIGNING_IN_PROGRESS;
-                    },
-                    isOrderAwaitingSettlement: () => i().isOrderSigning && i().get("isOrderSigningInProgress"),
                 });
         return {
-            ...(0, w.p5)(e, i, t),
+            ...(0, U.p5)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -427,7 +419,7 @@ function ec(e) {
                         r = JSON.stringify(t),
                         { fetchSetupIntentRequestKey: a, fetchSetupIntentPromise: s, clearFetchSetupIntent: l } = i();
                     if (!n && null != s && a === r) return s;
-                    let o = (0, G.w)({ body: t });
+                    let o = (0, w.w)({ body: t });
                     return (
                         e({ fetchSetupIntentRequestKey: r, fetchSetupIntentPromise: o }),
                         o.catch(() => {
@@ -444,21 +436,39 @@ function ec(e) {
                     e({ linkWalletEnabled: t });
                 },
             },
-            ...((u = () => i().order),
-            {
-                ...x,
-                handleOrderUpdate: (t) => {
-                    let { orderId: n, revision: i } = t,
-                        r = u();
-                    null != n &&
-                        null != i &&
-                        null != r &&
-                        r.id === n &&
-                        e((e) => (i > e.lastOrderUpdateRevision ? { lastOrderUpdateRevision: i } : e));
-                },
-            }),
             ...{
-                ...W,
+                ...F,
+                handleOrderUpdate: (t) => {
+                    let { orderId: n, revision: r } = t,
+                        { order: a } = i();
+                    null != n &&
+                        null != r &&
+                        null != a &&
+                        a.id === n &&
+                        e((e) => (r > e.lastOrderUpdateRevision ? { lastOrderUpdateRevision: r } : e));
+                },
+                getIsOrderLocked: () => {
+                    let { order: e, isOrderSyncing: t, isOrderSigning: n } = i();
+                    return null != e && (t || n);
+                },
+                getIsOrderSigningInProgress: () => {
+                    let { order: e } = i();
+                    return null != e && e.status === k.Re.SIGNING_IN_PROGRESS;
+                },
+                getIsOrderAwaitingSettlement: () => i().isOrderSigning && i().getIsOrderSigningInProgress(),
+                getBlockingOrderConstraintReasonCode: () => {
+                    let { orderRecord: e, purchaseError: t } = i();
+                    if (null == e) return null;
+                    if (t instanceof G.FY) {
+                        let n = t.order;
+                        if (n.id === e.id && n.revision >= e.revision)
+                            return (0, x.GD)(n.status, n.unsatisfied_constraints ?? []);
+                    }
+                    return (0, x.GD)(e.status, e.unsatisfiedConstraints);
+                },
+            },
+            ...{
+                ...K,
                 handlePaymentFailure: (t) => {
                     let { error: n, loadId: a } = t;
                     if (a !== i().contextMetadata.loadId) return;
@@ -476,26 +486,26 @@ function ec(e) {
                         s === r.tG.AUTHENTICATION_REQUIRED &&
                             (async function (e) {
                                 if (null == e) return;
-                                let { error: t } = await (0, V.ap)(e);
-                                null != t && (0, B.pM)(Error(t), { extra: { authenticationError: t } });
+                                let { error: t } = await (0, j.ap)(e);
+                                null != t && (0, H.pM)(Error(t), { extra: { authenticationError: t } });
                             })(l));
                 },
                 handlePaymentUpdate: (t) => {
                     let { payment: n } = t;
-                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && j.includes(n.status)) {
+                    if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && Y.includes(n.status)) {
                         if (n.status === y.__0.FAILED) {
                             let t = n.metadata?.billing_error_code,
                                 i = t === r.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
                             e({
                                 isAwaitingPaymentAuthentication: !1,
                                 awaitingPaymentId: null,
-                                paymentAuthError: new r.Ay(H.intl.string(H.t.khEaRI), i),
+                                paymentAuthError: new r.Ay(W.intl.string(W.t.khEaRI), i),
                             });
                             return;
                         }
                         (e({ isAwaitingPaymentAuthentication: !1, awaitingPaymentId: null, paymentAuthError: null }),
-                            (0, k.ET)(),
-                            (0, F.T3)());
+                            (0, B.ET)(),
+                            (0, V.T3)());
                     }
                 },
                 handlePaymentAuthenticationError: (t) => {
@@ -510,26 +520,26 @@ function ec(e) {
                         paymentAuthWasCancelled: !0,
                     });
                 },
-                resetPaymentAuthentication: () => e({ ...W }),
+                resetPaymentAuthentication: () => e({ ...K }),
             },
-            ...(0, Z.e)(e, i),
-            ...((E = []),
+            ...(0, et.e)(e, i),
+            ...((_ = []),
             {
                 getPaymentSourceNotices: () => {
                     let e = i().get("checkoutContext")?.payment_notices;
-                    return null == e ? E : e.filter((e) => e.subject_type === Y.SV.PAYMENT_SOURCE);
+                    return null == e ? _ : e.filter((e) => e.subject_type === $.SV.PAYMENT_SOURCE);
                 },
                 getDropdownPaymentSources: () => i().get("checkoutPaymentSources").filter(P),
                 getGiftCardWallet: () =>
                     i()
                         .get("checkoutPaymentSources")
-                        .find((e) => e.source instanceof K.LQ) ?? null,
-                getWalletCoverageSubtotal: () => X(i()).subtotal,
-                getWalletCoverageTotal: () => X(i()).total,
+                        .find((e) => e.source instanceof X.LQ) ?? null,
+                getWalletCoverageSubtotal: () => q(i()).subtotal,
+                getWalletCoverageTotal: () => q(i()).total,
                 getIsWalletCoverageLoading: () => {
                     let e = i();
                     return (
-                        0 === $(e.checkoutInvoicePreview) &&
+                        0 === z(e.checkoutInvoicePreview) &&
                         (function (e) {
                             let {
                                 fetchRenewalInvoicePreviewRequest: t,
@@ -605,7 +615,7 @@ function ec(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, ei.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled: i && (0, ea.dW)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;
@@ -622,11 +632,11 @@ function ec(e) {
                         return null != t && null != i && null == t.findInvoiceItemByPlanId(i);
                     },
                     getShouldDisallowPlanSelection: () => {
-                        let t = e().getTenantParams(ea.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(el.C.PREMIUM_CHECKOUT);
                         return null != t && (t.shouldDisallowPlanSelection ?? !1);
                     },
                     getHasPreviousStepOutsideCheckout: () => {
-                        let t = e().getTenantParams(ea.C.PREMIUM_CHECKOUT);
+                        let t = e().getTenantParams(el.C.PREMIUM_CHECKOUT);
                         return null != t && (t.hasPreviousStepOutsideCheckout ?? !1);
                     },
                     getIsInOneStepSubscriptionCheckout: (t) => {
@@ -665,7 +675,7 @@ function ec(e) {
                                 get: i,
                                 getTenantParams: r,
                             } = e(),
-                            a = r(ea.C.PREMIUM_CHECKOUT),
+                            a = r(el.C.PREMIUM_CHECKOUT),
                             s = null != a ? a.referralTrialOfferId : void 0,
                             l = i("isPremiumPurchase"),
                             o = t ?? s ?? null,
@@ -688,7 +698,7 @@ function ec(e) {
                         let t = i(e().selectedSkuId);
                         return null == t
                             ? null
-                            : et()(t, n.premiumPlanOptions)
+                            : ei()(t, n.premiumPlanOptions)
                               ? n.premiumPlanOptions
                               : ((n.premiumPlanOptions = t), t);
                     },
@@ -703,7 +713,7 @@ function ec(e) {
                             { initialPlanId: l, continueSessionToInitialStep: o } = a;
                         if (null == n || null == o) return l === D.gD.PREMIUM_GROUP_MONTH ? void 0 : l;
                         let d = t ?? i;
-                        return s({ skuId: d }) ?? (0, en.x)(d, r);
+                        return s({ skuId: d }) ?? (0, er.x)(d, r);
                     },
                     getAvailableDefaultPlanId: function () {
                         let { skuId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -716,12 +726,12 @@ function ec(e) {
                         let { isTrial: n } = t,
                             { isGift: i, getGiftSubscriptionPlanId: r } = e();
                         return null != r()
-                            ? es.u$.SUBSCRIPTION_NEW_PURCHASE
+                            ? eo.u$.SUBSCRIPTION_NEW_PURCHASE
                             : i
-                              ? es.u$.PREMIUM_GIFT
+                              ? eo.u$.PREMIUM_GIFT
                               : n
-                                ? es.u$.PREMIUM_WITH_TRIAL
-                                : es.u$.SUBSCRIPTION_NEW_PURCHASE;
+                                ? eo.u$.PREMIUM_WITH_TRIAL
+                                : eo.u$.SUBSCRIPTION_NEW_PURCHASE;
                     },
                     getPremiumDiscriminatedInvoicePreview: (t) => {
                         let { invoiceError: n, isTrial: i } = t,
@@ -739,7 +749,7 @@ function ec(e) {
                             o = l("primaryInvoicesError");
                         return null == r
                             ? null
-                            : (0, es.Qh)({
+                            : (0, eo.Qh)({
                                   invoiceTypeDiscriminator: n,
                                   checkoutInvoicePreview: r,
                                   renewalInvoicePreview: a,
@@ -756,11 +766,11 @@ function ec(e) {
                             i = n();
                         if (null == t || null == i) return !1;
                         let { subscriptionPlanInvoiceItem: r } = (0, O.Sb)(t, i);
-                        return r?.discounts.some((e) => e.type === Y.iS.QUANTITY_DISCOUNT) ?? !1;
+                        return r?.discounts.some((e) => e.type === $.iS.QUANTITY_DISCOUNT) ?? !1;
                     },
                     getHasQuantityDiscount: () => {
                         let { isGift: t, quantity: n, getInvoiceHasQuantityDiscount: i } = e();
-                        return i() || (t && null != (0, er.t8)(n));
+                        return i() || (t && null != (0, es.t8)(n));
                     },
                 };
             })(i),
@@ -776,11 +786,11 @@ function ec(e) {
                 setHasClearedDefaultGiftMessage: (t) => e({ hasClearedDefaultGiftMessage: t }),
                 getIsRecurringGiftCheckout: () => {
                     let { isRecurringGift: e, selectedPlanId: t } = i();
-                    return e && null != t && (0, q.dI)(t);
+                    return e && null != t && (0, J.dI)(t);
                 },
                 getGiftSubscriptionPlanId: () => {
                     let { selectedPlanId: e, getIsRecurringGiftCheckout: t } = i();
-                    return null != e && t() ? (0, q.o_)(e) : null;
+                    return null != e && t() ? (0, J.o_)(e) : null;
                 },
             },
             ...{
@@ -796,10 +806,26 @@ function ec(e) {
                 getIsPurchaseDisabled: function () {
                     let { isWalletPurchaseDisabled: e } =
                             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                        { hasAcceptedTerms: t, checkoutInvoicePreview: n, customCheckoutFlow: r, get: a } = i(),
-                        s = a("isOrderLocked"),
-                        l = a("primaryInvoicesError");
-                    return r === U.uH.DEV_STORYBOOK_CHECKOUT || null == n || !!s || null != l || !t || !!e;
+                        {
+                            hasAcceptedTerms: t,
+                            checkoutInvoicePreview: n,
+                            customCheckoutFlow: r,
+                            get: a,
+                            getIsOrderLocked: s,
+                            getBlockingOrderConstraintReasonCode: l,
+                        } = i(),
+                        o = s(),
+                        d = a("primaryInvoicesError");
+                    return (
+                        r === k.uH.DEV_STORYBOOK_CHECKOUT ||
+                        null == n ||
+                        !!o ||
+                        null != d ||
+                        null != l() ||
+                        !t ||
+                        !!e ||
+                        !1
+                    );
                 },
                 getIsReviewSubmitDisabled: (e) => {
                     let { paymentSource: t, isWalletPurchaseDisabled: n, isTrial: r } = e,
@@ -829,7 +855,7 @@ function ec(e) {
                                 return !0;
                         }
                         if (
-                            ((r && !c) || a === Q.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
+                            ((r && !c) || a === Z.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) &&
                             (null == t || !t.canRedeemTrial())
                         )
                             return !0;
@@ -842,12 +868,12 @@ function ec(e) {
                         s = a("checkoutPaymentSources"),
                         l = null != r && s.some((e) => e.id === r && null != e.relocationCountry);
                     return null === r && t
-                        ? H.intl.string(H.t.CpOiEO)
+                        ? W.intl.string(W.t.CpOiEO)
                         : l
-                          ? H.intl.string(J.default["7r4HPu"])
+                          ? W.intl.string(ee.default["7r4HPu"])
                           : null != n
                             ? n
-                            : H.intl.string(J.default.BPzQj4);
+                            : W.intl.string(ee.default.BPzQj4);
                 },
                 getCheckoutReviewButtonProps: (e) => {
                     let {
@@ -862,60 +888,69 @@ function ec(e) {
                         } = e,
                         { getCheckoutReviewButtonText: c, purchaseType: u, hasAcceptedTerms: _, get: E } = i(),
                         A = !_ && !E("isCheckoutDataLoading"),
-                        f = l?.text;
-                    null == f &&
-                        (f = u === y.VVm.SUBSCRIPTION ? H.intl.string(H.t.YScQSF) : H.intl.string(J.default.BPzQj4));
-                    let h = l?.variant,
-                        I = c({ hasPaymentSources: a, tenantProvidedButtonText: f }),
-                        p = {
-                            variant: h ?? "active",
+                        f = i().getBlockingOrderConstraintReasonCode(),
+                        h = l?.text;
+                    null == h &&
+                        (h = u === y.VVm.SUBSCRIPTION ? W.intl.string(W.t.YScQSF) : W.intl.string(ee.default.BPzQj4));
+                    let I = l?.variant,
+                        p = c({ hasPaymentSources: a, tenantProvidedButtonText: h }),
+                        m = {
+                            variant: I ?? "active",
                             dataTestId: "purchase",
                             onClick: o,
                             disabled: t,
                             loading: n,
                             ...l,
-                            text: I,
+                            text: p,
                         };
-                    return r
+                    return null != f
                         ? {
-                              text: I,
-                              tooltipText: H.intl.string(H.t.L7jbQV),
-                              type: "submit",
+                              ...m,
+                              tooltipText: (0, x.f$)(f, W.intl.string(W.t["P/VP9v"])),
+                              disabled: !0,
+                              onClick: void 0,
                               dataTestId: "submitButton",
-                              loading: n,
-                              ...(null != h ? { variant: h } : { variant: a ? "primary" : "active" }),
-                              ...(a ? { onClick: s } : { disabled: !0 }),
                           }
-                        : d
+                        : r
                           ? {
-                                text: I,
-                                tooltipText: H.intl.string(H.t.cjA5tj),
-                                variant: "active",
+                                text: p,
+                                tooltipText: W.intl.string(W.t.L7jbQV),
                                 type: "submit",
                                 dataTestId: "submitButton",
-                                disabled: !0,
+                                loading: n,
+                                ...(null != I ? { variant: I } : { variant: a ? "primary" : "active" }),
+                                ...(a ? { onClick: s } : { disabled: !0 }),
                             }
-                          : t
+                          : d
                             ? {
-                                  ...p,
-                                  ...(A ? { tooltipText: H.intl.string(H.t.XdvBLS) } : {}),
-                                  disabled: !0,
-                                  onClick: void 0,
+                                  text: p,
+                                  tooltipText: W.intl.string(W.t.cjA5tj),
+                                  variant: "active",
+                                  type: "submit",
                                   dataTestId: "submitButton",
+                                  disabled: !0,
                               }
-                            : _
-                              ? p
-                              : {
-                                    ...p,
-                                    tooltipText: H.intl.string(H.t.XdvBLS),
+                            : t
+                              ? {
+                                    ...m,
+                                    ...(A ? { tooltipText: W.intl.string(W.t.XdvBLS) } : {}),
                                     disabled: !0,
                                     onClick: void 0,
                                     dataTestId: "submitButton",
-                                };
+                                }
+                              : _
+                                ? m
+                                : {
+                                      ...m,
+                                      tooltipText: W.intl.string(W.t.XdvBLS),
+                                      disabled: !0,
+                                      onClick: void 0,
+                                      dataTestId: "submitButton",
+                                  };
                 },
             },
-            ...(0, z.d)(e, i),
-            get: (e) => (null != A[e] ? A[e]() : null),
+            ...(0, Q.d)(e, i),
+            get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: s,
             order: o,
             orderRecord: null != o ? p.createFromServer(o) : null,

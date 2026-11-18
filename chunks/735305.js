@@ -5,7 +5,7 @@ var l = n(284009),
     s = n(211083),
     o = n(883645),
     u = n(601194),
-    c = n(316363),
+    c = n(3900),
     d = n(602787),
     m = n(129230),
     p = n(723702),
@@ -14,7 +14,7 @@ var l = n(284009),
     f = n(566980),
     E = n(671334),
     S = n(652215),
-    g = n(682901);
+    I = n(682901);
 n.d(
     t,
     {},
@@ -24,7 +24,7 @@ n.d(
                     analyticsData: t,
                     initialPlanId: n,
                     handleStepChange: l,
-                    onReturn: I,
+                    onReturn: g,
                     continueSessionToInitialStep: y,
                 } = e,
                 { paymentSources: A } = (0, a.j)(),
@@ -49,7 +49,7 @@ n.d(
                 })),
                 { purchaseErrorBlockRef: R } = (0, u.Gm)(),
                 { paymentAuthenticationState: O } = (0, s.o)(),
-                { isPremiumGroupPurchase: M, isEligibleForTrial: L } = (0, d.i)(),
+                { isPremiumGroupPurchase: L, isEligibleForTrial: M } = (0, d.i)(),
                 { step: k } = (0, o.Ay)(),
                 { isGift: w } = (0, C.Pv)(),
                 D = {
@@ -64,7 +64,7 @@ n.d(
                     isGift: w,
                 },
                 U =
-                    I ??
+                    g ??
                     function () {
                         l(Object.values(A).length < 1 && null == n ? h.pn.PLAN_SELECT : h.pn.REVIEW, {
                             trackedFromStep: h.pn.PAYMENT_ELEMENT,
@@ -80,7 +80,7 @@ n.d(
                 appendSteps: [h.pn.REVIEW, h.pn.CONFIRM],
                 useCheckoutStep: !0,
                 analyticsData: t,
-                onReturn: M ? void 0 : U,
+                onReturn: L ? void 0 : U,
                 onComplete: (e) => {
                     h.l_.has(e)
                         ? (v(f.h.COMPLETED), l(h.pn.CONFIRM, { trackedFromStep: e }))
@@ -97,9 +97,9 @@ n.d(
                         flow_duration_ms: i - x.startTime,
                     });
                 },
-                isEligibleForTrial: L,
+                isEligibleForTrial: M,
                 allowDesktopRedirectPurchase:
-                    (0, p.xl)() && null != P && [g.pe.TIER_0, g.pe.TIER_2].includes(P) && !w && null == j,
+                    (0, p.xl)() && null != P && [I.pe.TIER_0, I.pe.TIER_2].includes(P) && !w && null == j,
                 continueSessionToInitialStep: y,
             });
         },

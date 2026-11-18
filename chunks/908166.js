@@ -1,6 +1,6 @@
 var l = t(582128),
     n = t(655857),
-    r = t(316363);
+    r = t(3900);
 t.d(
     a,
     {},
@@ -12,7 +12,7 @@ t.d(
                     skuIds: t,
                     isGift: s,
                     isRecurringGiftCheckout: i,
-                    getOrCreateSetupIntent: u,
+                    getOrCreateSetupIntent: h,
                 } = (0, r.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     skuIds: e.skuIds,
@@ -20,11 +20,11 @@ t.d(
                     isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
                     getOrCreateSetupIntent: e.getOrCreateSetupIntent,
                 })),
-                o = a ?? (1 === t.length ? t[0] : void 0),
-                c = l.useMemo(() => ({ currency: e, sku_id: o, is_gift: s, is_recurring: i }), [e, o, s, i]);
+                u = a ?? (1 === t.length ? t[0] : void 0),
+                o = l.useMemo(() => ({ currency: e, sku_id: u, is_gift: s, is_recurring: i }), [e, u, s, i]);
             return {
-                createSetupIntent: l.useCallback(() => u(c, { forceRecreate: !0 }), [u, c]),
-                createSetupIntentDeduped: l.useCallback(() => u(c), [u, c]),
+                createSetupIntent: l.useCallback(() => h(o, { forceRecreate: !0 }), [h, o]),
+                createSetupIntentDeduped: l.useCallback(() => h(o), [h, o]),
             };
         },
     },

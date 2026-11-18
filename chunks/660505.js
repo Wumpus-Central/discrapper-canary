@@ -15,13 +15,13 @@ var l = n(477900),
     f = n(125114),
     E = n(901930),
     S = n(725836),
-    g = n(580133),
-    I = n(316363),
+    I = n(580133),
+    g = n(3900),
     y = n(379912),
     A = n(792996),
     P = n(663466);
 function v() {
-    let e = (0, I.t4)((e) => (0, f.qn)(e.order));
+    let e = (0, g.t4)((e) => (0, f.qn)(e.order));
     return null == e || null == e.redirect_url
         ? null
         : (0, l.jsx)(m.E, {
@@ -43,7 +43,7 @@ function x() {
 function _() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(S.UY, { children: (0, l.jsx)(g.f, {}) }),
+            (0, l.jsx)(S.UY, { children: (0, l.jsx)(I.f, {}) }),
             (0, l.jsx)("div", { className: P.k, role: "status", children: (0, l.jsx)(x, {}) }),
         ],
     });
@@ -64,12 +64,12 @@ function N(e) {
             paymentSourceId: f,
             purchaseError: E,
             setCheckoutCurrency: S,
-            isOrderSigningInProgress: g,
-        } = (0, I.t4)((e) => ({
+            isOrderSigningInProgress: I,
+        } = (0, g.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             purchaseError: e.purchaseError,
             setCheckoutCurrency: e.setCheckoutCurrency,
-            isOrderSigningInProgress: e.get("isOrderSigningInProgress"),
+            isOrderSigningInProgress: e.getIsOrderSigningInProgress(),
         })),
         y = (0, b.s2)();
     a()(null != y, "Step should be set");
@@ -77,7 +77,7 @@ function N(e) {
         { paymentSources: P } = (0, T.j)(),
         v = (0, c.W)(P, f),
         x = (0, s.iB)({ paymentSourceId: f, location: "CheckoutBaseReviewStep" }),
-        N = (0, I.t4)((e) =>
+        N = (0, g.t4)((e) =>
             e.getIsReviewSubmitDisabled({ paymentSource: v, isWalletPurchaseDisabled: x, isTrial: r }),
         );
     i.useEffect(() => {
@@ -88,7 +88,7 @@ function N(e) {
             (S(void 0), null != j && j());
         }, [S, j]),
         O = i.useMemo(() => t(), [t]),
-        M = (0, l.jsx)(d.U, {
+        L = (0, l.jsx)(d.U, {
             ...n,
             onBack: R,
             onPaymentSourceAdd: h,
@@ -99,6 +99,6 @@ function N(e) {
             postPurchaseStep: o.pn.CONFIRM,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: g ? (0, l.jsx)(_, {}) : O }), (0, l.jsx)(u.UX, { children: M })],
+        children: [(0, l.jsx)(u.dZ, { children: I ? (0, l.jsx)(_, {}) : O }), (0, l.jsx)(u.UX, { children: L })],
     });
 }

@@ -48,11 +48,11 @@ function S(e) {
         }),
     });
 }
-function g() {
+function I() {
     let e = i.useMemo(() => [{ variant: "primary", text: f.intl.string(f.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(h.H, { actions: e });
 }
-var I = n(636950);
+var g = n(636950);
 function y() {
     let [e, t] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
@@ -60,14 +60,14 @@ function y() {
             (0, l.jsx)(s.A, {}),
             (0, l.jsx)(o.dZ, {
                 children: (0, l.jsx)(S, {
-                    className: I.r,
+                    className: g.r,
                     isEmailResent: e,
                     resendEmail: async function () {
                         (t(!0), await (0, d.lo)());
                     },
                 }),
             }),
-            (0, l.jsx)(o.UX, { children: (0, l.jsx)(g, {}) }),
+            (0, l.jsx)(o.UX, { children: (0, l.jsx)(I, {}) }),
         ],
     });
 }
@@ -82,7 +82,7 @@ var A = n(164636),
     j = n(430993),
     R = n(969951),
     O = n(599062);
-function M() {
+function L() {
     let { refreshCategories: e } = (0, R.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -91,7 +91,7 @@ function M() {
         ],
     });
 }
-var L = n(534479),
+var M = n(534479),
     k = n(121005),
     w = n(800471),
     D = n(169801),
@@ -102,7 +102,7 @@ var L = n(534479),
     H = n(655857),
     W = n(427675),
     V = n(860215),
-    Y = n(316363),
+    Y = n(3900),
     K = n(652215),
     Z = n(682901);
 function q(e) {
@@ -137,11 +137,11 @@ function q(e) {
               : t(r.pn.REVIEW);
     }, [h, d, t, s, C, m, n, a, u]),
     h)
-        ? (0, l.jsx)(L.A, {})
+        ? (0, l.jsx)(M.A, {})
         : d
           ? (0, l.jsx)(_.oO, {})
           : null != S
-            ? (0, l.jsx)(M, {})
+            ? (0, l.jsx)(L, {})
             : null;
 }
 function z(e) {
@@ -171,10 +171,10 @@ function z(e) {
         { subscriptionTier: f } = m,
         E = (0, x.Hp)(),
         S = (0, k.A)(),
-        { hasFetchedRelatedSubscriptionPlans: g, subscriptionPriceOptionsLoading: I } = (0, H.Jn)(),
+        { hasFetchedRelatedSubscriptionPlans: I, subscriptionPriceOptionsLoading: g } = (0, H.Jn)(),
         { isGift: y } = (0, b.Pv)(),
         T = (0, D.A)({ isGift: y, skuId: s }),
-        N = !S || !g || I || !a,
+        N = !S || !I || g || !a,
         j = (0, A.bG)([U.A], () => U.A.applicationIdsFetched.has(Z.tv));
     (0, v.A)(
         "Payment Modal",
@@ -182,8 +182,8 @@ function z(e) {
         5,
         {
             hasFetchedSubscriptions: S,
-            hasFetchedSubscriptionPlans: g,
-            subscriptionPriceOptionsLoading: I,
+            hasFetchedSubscriptionPlans: I,
+            subscriptionPriceOptionsLoading: g,
             hasFetchedPaymentSources: a,
         },
         { tags: { app_context: "billing" } },
@@ -208,7 +208,7 @@ function z(e) {
                     : t(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: p })));
     }, [d, p, C, u, E, j, h, N, t, f, s, o, T, c, y, R, n]),
     N)
-        ? (0, l.jsx)(L.A, {})
+        ? (0, l.jsx)(M.A, {})
         : E
           ? (0, l.jsx)(_.oO, {})
           : null;

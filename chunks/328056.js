@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(830382),
     E = n(191115),
     S = n(448645),
-    g = n(652215),
-    I = n(682901),
+    I = n(652215),
+    g = n(682901),
     y = n(166532),
     A = n(566980),
     P = n(216641),
@@ -29,13 +29,13 @@ var l = n(477900),
     j = n(107351),
     R = n(708791),
     O = n(120700),
-    M = n(991690),
-    L = n(855986),
+    L = n(991690),
+    M = n(855986),
     k = n(10716),
     w = n(878014),
     D = n(202475),
     U = n(31823),
-    G = n(316363),
+    G = n(3900),
     F = n(558620),
     B = n(427675),
     H = n(169797),
@@ -87,8 +87,8 @@ function $(e) {
                     setCheckoutReviewButtonLabel: e.setCheckoutReviewButtonLabel,
                 })),
                 { application: c } = (0, U.V)(),
-                d = (0, L.bG)([k.A], () => k.A.getFetchState()),
-                m = (0, w.W)(c, M.U.MAIN) && d === k.$.LOADING,
+                d = (0, M.bG)([k.A], () => k.A.getFetchState()),
+                m = (0, w.W)(c, L.U.MAIN) && d === k.$.LOADING,
                 p = l ?? !1,
                 C = r ?? !1,
                 h = (0, G.t4)((e) =>
@@ -124,8 +124,8 @@ function Q(e) {
             onBack: t,
             baseAnalyticsData: n,
             trialId: r,
-            planGroup: M = [],
-            analyticsLocation: L,
+            planGroup: L = [],
+            analyticsLocation: M,
             metadata: k,
             backButtonEligible: w,
             disableSubmit: U,
@@ -153,8 +153,8 @@ function Q(e) {
             setAppliedUserDiscounts: ef,
             setUpdatedSubscription: eE,
             isExpressCheckoutEnabledForFooter: eS,
-            setExpressCheckoutStatus: eg,
-            order: eI,
+            setExpressCheckoutStatus: eI,
+            order: eg,
             isOrderAwaitingSettlement: ey,
             setIsOrderSigning: eA,
             applyWalletBalance: eP,
@@ -182,7 +182,7 @@ function Q(e) {
             isExpressCheckoutEnabledForFooter: e.getExpressCheckoutVisibilityState().isExpressCheckoutEnabledForFooter,
             setExpressCheckoutStatus: e.setExpressCheckoutStatus,
             order: e.order,
-            isOrderAwaitingSettlement: e.get("isOrderAwaitingSettlement"),
+            isOrderAwaitingSettlement: e.getIsOrderAwaitingSettlement(),
             setIsOrderSigning: e.setIsOrderSigning,
             applyWalletBalance: e.applyWalletBalance,
             handleBillingErrorForPurchaseTokenAuth: e.handleBillingErrorForPurchaseTokenAuth,
@@ -195,8 +195,8 @@ function Q(e) {
         eR = (0, F.A)(),
         eO = (0, B.gU)(),
         {
-            isGift: eM,
-            selectedGiftStyle: eL,
+            isGift: eL,
+            selectedGiftStyle: eM,
             customGiftMessage: ek,
             emojiConfetti: ew,
             soundEffect: eD,
@@ -206,7 +206,7 @@ function Q(e) {
         eF = (0, v.Mq)(eR),
         eB = (0, N.lo)(eU),
         eH = {};
-    ((eH.gift_style = eL),
+    ((eH.gift_style = eM),
         (eH.reward_sku_ids = eF && !er ? eG : []),
         eB === N.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (a()(null != eU, "Gift recipient must be set at purchase review step for these gift options."),
@@ -230,9 +230,9 @@ function Q(e) {
         },
         [],
     );
-    let { hasEntitlements: e2 } = (0, x.X)(eW, eM),
+    let { hasEntitlements: e2 } = (0, x.X)(eW, eL),
         e1 = null;
-    ep === g.VVm.ONE_TIME &&
+    ep === I.VVm.ONE_TIME &&
         (a()(null != en, "SKU must be selected for one-time purchases"),
         (e1 = eO[en] ?? null),
         a()(null != e1, "SKU must exist and be fetched."));
@@ -242,7 +242,7 @@ function Q(e) {
                 e$(!0),
                 (0, s.ET)(),
                 ed(null),
-                T.default.track(g.HAw.PAYMENT_FLOW_COMPLETED, {
+                T.default.track(I.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...n,
                     subtotal: el?.subtotal,
                     tax: el?.tax,
@@ -259,7 +259,7 @@ function Q(e) {
             (e) => {
                 (eo(A.h.FAIL),
                     ed(e),
-                    T.default.track(g.HAw.PAYMENT_FLOW_FAILED, {
+                    T.default.track(I.HAw.PAYMENT_FLOW_FAILED, {
                         ...n,
                         payment_error_code: e?.code,
                         payment_source_id: eY?.id,
@@ -275,7 +275,7 @@ function Q(e) {
         ),
         e7 = i.useCallback((e) => q(eN, e), [eN]),
         { signOrder: e6, reportError: e8 } = (0, p.f)({
-            order: eI,
+            order: eg,
             errorSource: "checkout_sign_order",
             onSignFailure: e7,
             onError: (e) => {
@@ -305,13 +305,13 @@ function Q(e) {
             [J, X, eE, eh, ef],
         );
     async function tt(e) {
-        if (null != eI) {
+        if (null != eg) {
             if (e0.current) return;
             e0.current = !0;
             try {
                 if (
                     (await (async function (e) {
-                        await V(e, (e) => !e.get("isOrderLocked") || null);
+                        await V(e, (e) => !e.getIsOrderLocked() || null);
                     })(eN),
                     !eX.current)
                 )
@@ -402,15 +402,15 @@ function Q(e) {
                 giftInfoOptions: j,
                 invoicePreview: R,
                 renewalInvoicePreview: O,
-                giftSubscriptionPlanId: M,
-                quantity: L,
+                giftSubscriptionPlanId: L,
+                quantity: M,
                 applyWalletBalance: k,
             } = e;
             try {
                 let e, n, i, w;
                 if ((t(), r)) return;
                 let D = !0 === k ? R?.paymentLegs : null;
-                if (T === g.VVm.ONE_TIME)
+                if (T === I.VVm.ONE_TIME)
                     (a()(null != _, "SKU must exist and be fetched."),
                         a()(null != R, "invoicePreview must exist."),
                         (e = await (0, f.XU)(_.applicationId, _.id, {
@@ -420,7 +420,7 @@ function Q(e) {
                             paymentSource: y,
                             loadId: N,
                             giftInfoOptions: j,
-                            quantity: L,
+                            quantity: M,
                             applyWalletBalance: k,
                             expectedPaymentLegs: D,
                         })));
@@ -428,7 +428,7 @@ function Q(e) {
                     let t;
                     (a()(null != d, "Missing subscriptionPlan"), a()(null != R, "Missing invoicePreview"));
                     let n = { amount: R.total, currency: R.currency };
-                    if (null != M)
+                    if (null != L)
                         (a()(null != O, "Missing renewalInvoicePreview"),
                             (t = { amount: O.subtotal, currency: O.currency }));
                     else {
@@ -439,9 +439,9 @@ function Q(e) {
                             ((n = (0, S.qn)(n)), (t = (0, S.UC)(n, e.toLowerCase(), C.paymentSourceId)));
                         }
                     }
-                    if (null != M)
+                    if (null != L)
                         e = await (0, h.B1)({
-                            planId: M,
+                            planId: L,
                             currency: C.currency ?? R.currency,
                             paymentSource: y,
                             loadId: N,
@@ -452,7 +452,7 @@ function Q(e) {
                     else if (s) {
                         let t = R.total,
                             n = R.currency;
-                        e = await (0, f.XU)(I.tv, d.skuId, {
+                        e = await (0, f.XU)(g.tv, d.skuId, {
                             expectedAmount: t,
                             expectedCurrency: n,
                             paymentSource: y,
@@ -460,19 +460,19 @@ function Q(e) {
                             isGift: !0,
                             loadId: N,
                             giftInfoOptions: j,
-                            quantity: L,
+                            quantity: M,
                             applyWalletBalance: k,
                             expectedPaymentLegs: D,
                         });
-                    } else if (null != y && null != P && P.status === g.Dmq.PAST_DUE && null != A) {
+                    } else if (null != y && null != P && P.status === I.Dmq.PAST_DUE && null != A) {
                         let l = C.currency ?? R.currency;
-                        e = g.AD1.has(y.type)
+                        e = I.AD1.has(y.type)
                             ? await (0, c.LD)(P, A, y, l, N)
                             : await (0, c.nV)(P, { paymentSource: y, currency: l }, n, t, u, o, N);
                     } else if (null != P) {
                         let l = (0, S.Pg)(P, d.id, 1, new Set(m)),
                             i = { paymentSource: y, currency: C.currency ?? R.currency };
-                        (P.status === g.Dmq.PAUSED && (i.status = g.Dmq.ACTIVE),
+                        (P.status === I.Dmq.PAUSED && (i.status = I.Dmq.ACTIVE),
                             P.isPausedAllowsResumeButNotUpdates || (i.items = l),
                             (e = await (0, c.nV)(P, i, n, t, u, o, N)));
                     } else
@@ -510,11 +510,11 @@ function Q(e) {
             onPurchaseComplete: e5,
             onPurchaseFinalize: e9,
             hasRedirectURL: eQ,
-            isGift: eM,
-            analyticsLocation: L,
+            isGift: eL,
+            analyticsLocation: M,
             analyticsLocations: eV,
             subscriptionPlan: eR,
-            planGroup: M,
+            planGroup: L,
             trialId: r,
             priceOptions: em,
             paymentSource: t,
@@ -534,11 +534,11 @@ function Q(e) {
             applyWalletBalance: eP ?? el?.applyWalletBalance,
         });
     }
-    let tn = null != ex || (ep === g.VVm.ONE_TIME && !eM),
+    let tn = null != ex || (ep === I.VVm.ONE_TIME && !eL),
         tl = w && !tn;
     i.useLayoutEffect(() => {
-        eS && null != r && eg(W.i.UNAVAILABLE);
-    }, [eS, r, eg]);
+        eS && null != r && eI(W.i.UNAVAILABLE);
+    }, [eS, r, eI]);
     let ti =
         eS && null == r
             ? (0, l.jsx)(R.E1, {

@@ -5,7 +5,7 @@ var l = n(477900),
     s = n(998312),
     o = n(981036),
     u = n(202475),
-    c = n(316363),
+    c = n(3900),
     d = n(792996),
     m = n(338039);
 n.d(
@@ -23,11 +23,11 @@ n.d(
                     primaryCTAButtonProps: E,
                     onBackClick: S,
                 } = e,
-                { hasPaymentSources: g } = (0, u.j)(),
-                { isExpressCheckoutEnabled: I } = (0, c.t4)((e) => ({
+                { hasPaymentSources: I } = (0, u.j)(),
+                { isExpressCheckoutEnabled: g } = (0, c.t4)((e) => ({
                     isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
                 })),
-                y = g || I ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
+                y = I || g ? r.pn.REVIEW : r.pn.ADD_PAYMENT_STEPS,
                 A = i.useCallback(() => t(y), [t, y]),
                 P = i.useMemo(
                     () =>

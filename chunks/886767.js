@@ -12,16 +12,16 @@ var l = n(477900),
     p = n(997101),
     C = n(120700),
     h = n(677959),
-    f = n(316363),
+    f = n(3900),
     E = n(652215),
     S = n(379912),
-    g = n(792996),
-    I = n(170691);
+    I = n(792996),
+    g = n(170691);
 let y = new Set([C.C.ORB_CHECKOUT]);
 function A(e) {
     let { onGiftCardRedeemed: t } = e,
         n = (0, f.t4)((e) => e.unifiedCheckoutFlow);
-    return null != n && y.has(n) ? null : (0, l.jsx)(h.Z4, { className: I.K, onComplete: t });
+    return null != n && y.has(n) ? null : (0, l.jsx)(h.Z4, { className: g.K, onComplete: t });
 }
 function P(e) {
     let { onPaymentSourceAdd: t } = e,
@@ -42,8 +42,8 @@ function P(e) {
         c = a.some((e) => e.type === E.hes.PIX);
     return o && u && !c && null != t
         ? (0, l.jsx)(h.y, {
-              className: I.K,
-              text: g.intl.string(S.default.JPRQ9L),
+              className: g.K,
+              text: I.intl.string(S.default.JPRQ9L),
               onClick: () => t({ linkWalletEnabled: !1 }),
           })
         : null;
@@ -64,12 +64,12 @@ function R(e) {
             disabled: C,
             location: h,
             onPaymentSourceAdd: E,
-            subscriptionPaymentSourceId: I,
+            subscriptionPaymentSourceId: g,
             hideCurrencySelect: y,
             resolveInternalState: T,
             renderCustomPaymentSourceSelectorContent: R,
         } = e,
-        { setPaymentSourceId: O, paymentSourceId: M } = (function (e) {
+        { setPaymentSourceId: O, paymentSourceId: L } = (function (e) {
             let { setPaymentSourceId: t, paymentSourceId: n } = (function () {
                     let {
                             paymentSourceId: e,
@@ -101,7 +101,7 @@ function R(e) {
                 );
             return { setPaymentSourceId: l, paymentSourceId: r };
         })({ setPaymentSourceId: t, paymentSourceId: n }),
-        [L, k] = i.useState(!1),
+        [M, k] = i.useState(!1),
         {
             giftCardsEnabled: w,
             giftCardCheckboxProps: D,
@@ -129,8 +129,8 @@ function R(e) {
                     giftCardsEnabled: h,
                     dropdownPaymentSourceId: E,
                     handleDropdownPaymentSourceChange: S,
-                    giftCardCheckboxProps: g,
-                    walletCoversSubtotal: I,
+                    giftCardCheckboxProps: I,
+                    walletCoversSubtotal: g,
                     walletCoversTotal: y,
                     isSubscriptionPaidByWallet: A,
                     giftCardWallet: P,
@@ -181,7 +181,7 @@ function R(e) {
             })({
                 giftCardWallet: P,
                 isWalletBalanceLoaded: x,
-                walletCoversSubtotal: I,
+                walletCoversSubtotal: g,
                 isGiftCardCreditsChecked: v,
                 subscriptionPaymentSourceId: a,
                 handleGiftCardCreditsToggle: _,
@@ -195,8 +195,8 @@ function R(e) {
                 N = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
             return {
                 giftCardsEnabled: h,
-                giftCardCheckboxProps: g,
-                walletCoversSubtotal: I,
+                giftCardCheckboxProps: I,
+                walletCoversSubtotal: g,
                 walletCoversTotal: y,
                 basePaymentSourceDropdownProps: i.useMemo(
                     () => ({
@@ -214,11 +214,11 @@ function R(e) {
                 isSplitPaymentMode: T,
             };
         })({
-            paymentSourceId: M,
+            paymentSourceId: L,
             setPaymentSourceId: O,
             location: h,
-            subscriptionPaymentSourceId: I,
-            pendingGiftCardWalletSelection: L,
+            subscriptionPaymentSourceId: g,
+            pendingGiftCardWalletSelection: M,
             setPendingGiftCardWalletSelection: k,
         }),
         {
@@ -231,7 +231,7 @@ function R(e) {
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
             expressCheckoutVisibilityState: e.getExpressCheckoutVisibilityState(),
-            isOrderLocked: e.get("isOrderLocked"),
+            isOrderLocked: e.getIsOrderLocked(),
             refetchInvoicePreviews: e.refetchInvoicePreviews,
         })),
         {
@@ -264,7 +264,7 @@ function R(e) {
         es = i.useMemo(() => {
             if (!y)
                 return {
-                    label: g.intl.string(g.t["/AAR02"]),
+                    label: I.intl.string(I.t["/AAR02"]),
                     selectedCurrency: V.currency ?? ee,
                     currencies: X,
                     onChange: Y,
@@ -287,7 +287,7 @@ function R(e) {
         ef = ep && eo.paymentSources.length > 0,
         eE = i.useMemo(() => {
             if (null != ea) return ea;
-            let e = z ? g.intl.string(S.default.BLu9EI) : void 0,
+            let e = z ? I.intl.string(S.default.BLu9EI) : void 0,
                 t = z || J;
             return (0, l.jsx)(s.Ay, {
                 ...eo,
@@ -296,7 +296,7 @@ function R(e) {
                 addPaymentSourceText: e,
             });
         }, [ea, ei, ef, ep, eo, z, J]),
-        [eS, eg] = i.useState(!1);
+        [eS, eI] = i.useState(!1);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(a.D, {
@@ -308,7 +308,7 @@ function R(e) {
                                 className: N.KV,
                                 type: "vault_only",
                                 isSubmitting: eS,
-                                setIsSubmitting: eg,
+                                setIsSubmitting: eI,
                             }),
                             fallbackComponent: null,
                             showDividerBelow: !eC,
@@ -330,7 +330,7 @@ function O(e) {
         { disableSourceChangeTooltipText: r, hasLockedPaymentSource: a } = i.useMemo(
             () =>
                 null != t
-                    ? { hasLockedPaymentSource: !0, disableSourceChangeTooltipText: g.intl.string(S.default.UdSuwf) }
+                    ? { hasLockedPaymentSource: !0, disableSourceChangeTooltipText: I.intl.string(S.default.UdSuwf) }
                     : { hasLockedPaymentSource: !1, disableSourceChangeTooltipText: void 0 },
             [t],
         ),
