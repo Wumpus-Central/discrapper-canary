@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677030, Version Hash: e93b4e6454725c1e827587f87f3c10af74ebdc9e`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677039, Version Hash: 1185115ee71fe52c377916132b9ae3d8f78bfb0a`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677030";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677039";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15910,7 +15910,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677030" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677039" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -45727,7 +45727,7 @@ let w$ = (0, tW.Fe)({
             n.e(324469),
             n.e(70379),
             n.e(417333),
-            n.e(756256),
+            n.e(232731),
             n.e(587618),
             n.e(424199),
             n.e(342551),
@@ -45746,8 +45746,8 @@ let w$ = (0, tW.Fe)({
             n.e(595429),
             n.e(595948),
             n.e(62052),
+            n.e(661192),
             n.e(503376),
-            n.e(947952),
             n.e(494678),
             n.e(494822),
             n.e(169629),
@@ -45883,7 +45883,7 @@ let w$ = (0, tW.Fe)({
             n.e(763070),
             n.e(502018),
             n.e(276863),
-            n.e(955184),
+            n.e(292734),
             n.e(128796),
             n.e(676418),
             n.e(441432),
@@ -48078,11 +48078,11 @@ let xn = (0, re.Fe)({
                 n.e(562772),
                 n.e(734187),
                 n.e(437026),
-                n.e(756256),
+                n.e(232731),
                 n.e(587618),
                 n.e(595429),
                 n.e(595948),
-                n.e(947952),
+                n.e(661192),
                 n.e(731336),
                 n.e(454048),
                 n.e(993103),
@@ -48130,7 +48130,7 @@ let xn = (0, re.Fe)({
                 n.e(763070),
                 n.e(502018),
                 n.e(276863),
-                n.e(955184),
+                n.e(292734),
                 n.e(128796),
                 n.e(728633),
                 n.e(628439),
