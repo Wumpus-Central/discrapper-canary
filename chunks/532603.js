@@ -7,8 +7,8 @@ let i = "custom-cursors-styles",
     o = "custom-cursors",
     u = `
   :root {
-    --custom-cursor: url(https://cdn.discordapp.com/assets/content/a5a35112cf47613450476b245c5ded25838b11a09c30494ad05dd153120f0e33.svg) 0 0, auto;
-    --custom-cursor-pointer: url(https://cdn.discordapp.com/assets/content/99d372f82ccdb87439920e8033c22642f7cd74ecb8520c0554003b4fb4c88e49.svg) 0 0, pointer;
+    --custom-cursor: url(https://cdn.discordapp.com/assets/content/7cf4e05a49bc0c1e6f89a5d84cf69ede62a9f0ad5371791a0d5c31128c04dbaa.png) 0 0, auto;
+    --custom-cursor-pointer: url(https://cdn.discordapp.com/assets/content/14dd277c591855b8bff2a3052ce12a8f47352829550bfc946f5d5d05e535b832.png) 4 0, pointer;
   }
 
   .${o},

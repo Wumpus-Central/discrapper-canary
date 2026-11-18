@@ -70,7 +70,7 @@ let V = function (e) {
                 ],
             });
 };
-var X = s(460348),
+var X = s(532603),
     y = s(170522);
 let D = (e) => {
     let { tab: l, collectionId: s } = e;

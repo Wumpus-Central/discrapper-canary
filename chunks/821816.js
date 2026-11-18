@@ -994,8 +994,8 @@ function e6(e) {
 var e5 = n(705285),
     e8 = n(199781),
     e7 = n(923477),
-    e4 = n(269249),
-    e3 = n(55766),
+    e3 = n(269249),
+    e4 = n(55766),
     e9 = n(758836),
     te = n(111108);
 function tt(e) {
@@ -1006,10 +1006,10 @@ function tn(e) {
     let { isGameServerHostingInShopEnabled: t } = e,
         n = (0, I.zy)(),
         l = (0, I.W6)(),
-        { servers: s, refetch: r } = (0, e3.f)(),
+        { servers: s, refetch: r } = (0, e4.f)(),
         o = s.length > 0,
         c = (0, _.bG)([h.default], () => M.Ay.canUseShopDiscounts(h.default.getCurrentUser())),
-        { games: u, hasError: d, isEmpty: m, isLoading: g, refetch: E } = (0, e4.Y)();
+        { games: u, hasError: d, isEmpty: m, isLoading: g, refetch: E } = (0, e3.Y)();
     i.useEffect(() => {
         o && (0, L.hP)().catch(() => {});
     }, [o]);
@@ -1427,7 +1427,7 @@ var tw = n(177366),
     tU = n(401864),
     tz = n(124987),
     tV = n(691885),
-    tK = n(460348),
+    tK = n(532603),
     tY = n(878278);
 let tW = function () {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, A.vs)(),
@@ -1523,8 +1523,8 @@ var t$ =
     t5 = n(373846),
     t8 = n(308323),
     t7 = n(608599),
-    t4 = n(685761),
-    t3 = n(157225),
+    t3 = n(685761),
+    t4 = n(157225),
     t9 = n(413249),
     ne = n(510241),
     nt = n(601198),
@@ -1793,12 +1793,12 @@ function nm(e) {
                 },
                 {
                     name: Y.intl.string(Y.t["4IaUIM"]),
-                    icon: (0, a.jsx)(t4.MagicDoorIcon, { size: "xs", color: c(tq.FANTASY) }),
+                    icon: (0, a.jsx)(t3.MagicDoorIcon, { size: "xs", color: c(tq.FANTASY) }),
                     enum: tq.FANTASY,
                 },
                 {
                     name: Y.intl.string(Y.t["w0nSG/"]),
-                    icon: (0, a.jsx)(t3.PawPrintIcon, { size: "xs", color: c(tq.ANIMALS_PETS) }),
+                    icon: (0, a.jsx)(t4.PawPrintIcon, { size: "xs", color: c(tq.ANIMALS_PETS) }),
                     enum: tq.ANIMALS_PETS,
                 },
                 {
@@ -1856,8 +1856,8 @@ function ng(e) {
                 { name: Y.intl.string(Y.t.yuEmLj), icon: t5.TeacupIcon, enum: tq.CUTE_COZY },
                 { name: Y.intl.string(Y.t.mMvCHo), icon: t8.ThemeMidnightIcon, enum: tq.SCI_FI },
                 { name: Y.intl.string(Y.t.TlhOQC), icon: t7.BurgerIcon, enum: tq.FOOD_DRINKS },
-                { name: Y.intl.string(Y.t["4IaUIM"]), icon: t4.MagicDoorIcon, enum: tq.FANTASY },
-                { name: Y.intl.string(Y.t["w0nSG/"]), icon: t3.PawPrintIcon, enum: tq.ANIMALS_PETS },
+                { name: Y.intl.string(Y.t["4IaUIM"]), icon: t3.MagicDoorIcon, enum: tq.FANTASY },
+                { name: Y.intl.string(Y.t["w0nSG/"]), icon: t4.PawPrintIcon, enum: tq.ANIMALS_PETS },
                 { name: Y.intl.string(Y.t.cJng7v), icon: t9.NatureIcon, enum: tq.NATURE },
                 { name: Y.intl.string(Y.t["5mUvyM"]), icon: ne.ClipsGalleryIcon, enum: tq.MOVIES_TV_SHOWS },
                 { name: Y.intl.string(Y.t.MB9H5Z), icon: nt.DyingRoseIcon, enum: tq.DARK_MOODY },

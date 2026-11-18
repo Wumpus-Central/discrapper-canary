@@ -315,7 +315,7 @@ let eo = [
     { tab: T.G2.COLLABS, labelKey: G.t["+W8gb+"] },
     { tab: T.G2.CATALOG, labelKey: G.t.xFcotU },
 ];
-var ec = n(460348);
+var ec = n(532603);
 n(801416);
 var eu = n(518477),
     ed = n(835018);

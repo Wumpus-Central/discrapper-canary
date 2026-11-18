@@ -1064,6 +1064,8 @@ function nS(e) {
         targetElementRef: t,
         shouldShow: !0,
         position: "top",
+        alignmentStrategy: "edge",
+        align: "left",
         caretConfig: { align: "start" },
         gradientColor: "nitro-pink",
         badge: { type: "early_access", variant: "inverted", icon: p.NitroWheelIcon },

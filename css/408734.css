@@ -1,7 +1,11 @@
+.notice_DI23at {
+    border-radius: var(--radius-sm);
+    margin-top: calc(var(--space-4)/4)
+}
+
 .upsell_i5m8mF {
     align-items: center;
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%);
-    border-radius: var(--radius-xs) var(--radius-xs) var(--radius-md) var(--radius-md);
     box-sizing: border-box;
     color: var(--icon-default);
     display: flex;
@@ -16,8 +20,7 @@
 
 .nudge_uCc2Ud {
     align-items: center;
-    background-color: var(--background-base-low);
-    border-radius: var(--radius-xs) var(--radius-xs) var(--radius-md) var(--radius-md);
+    background-color: var(--background-mod-muted);
     box-sizing: border-box;
     display: flex;
     gap: var(--space-8);
@@ -67,4 +70,4 @@
     color: var(--interactive-icon-hover)
 }
 
-/*# sourceMappingURL=408734.97f8c832e5ec8b77.css.map*/
+/*# sourceMappingURL=408734.1bfb7710e28a4b25.css.map*/
