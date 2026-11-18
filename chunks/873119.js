@@ -38,6 +38,21 @@ function o(e) {
 }
 function d(e) {
     return {
+        highlightToSpans(t) {
+            let n = e.createSession();
+            try {
+                n.setText(
+                    t.endsWith("\n")
+                        ? t
+                        : `${t}
+`,
+                );
+                let { spans: e, missingInjections: l } = n.highlightToSpans();
+                return { spans: e, missingInjections: l.sort() };
+            } finally {
+                n.free();
+            }
+        },
         highlightToHtml(t) {
             let n = e.createSession();
             try {

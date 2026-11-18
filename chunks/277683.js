@@ -1,4 +1,4 @@
-n(321073);
+(n.d(t, { Ay: () => I, Q9: () => M, W: () => w }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -15,12 +15,55 @@ var l = n(626551),
     g = n(35277),
     x = n(339200),
     E = n(551483),
-    y = n(891031),
-    S = n(389437);
+    S = n(891031),
+    y = n(389437);
 let C = new o.Vy("withCodeBlocks"),
     A = new Set(["line"]),
     b = /^[a-z0-9_+\-.#]+$/i;
-function I(e, t) {
+function I(e) {
+    let { onChange: t } = e,
+        n = null,
+        l = null,
+        i = !1;
+    function r(t) {
+        (0, u.W9)(t)
+            .then((t) => {
+                null != t &&
+                    (i ||
+                        ((i = !0),
+                        queueMicrotask(() => {
+                            i = !1;
+                            try {
+                                (m.o.withoutSaving(e, () => {
+                                    x.VW.withoutNormalizing(e, () => N(e, r));
+                                }),
+                                    (n = x.VW.richValue(e)));
+                            } catch (e) {
+                                C.warn("error applying arborium highlighting to editor", e);
+                            }
+                        })));
+            })
+            .catch(() => {});
+    }
+    return (
+        (e.onChange = () => {
+            let i = (0, f.Sd)(e);
+            ((x.VW.richValue(e) !== n || i !== l) &&
+                (m.o.withoutSaving(e, () => {
+                    x.VW.withoutNormalizing(e, () => {
+                        N(e, r);
+                    });
+                }),
+                (n = x.VW.richValue(e)),
+                (l = i)),
+                t());
+        }),
+        e
+    );
+}
+let v = new Map();
+for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && v.set(e, t);
+function N(e, t) {
     let n = (function (e, t) {
         let n = (0, f.p0)(e);
         if (null != n)
@@ -127,9 +170,6 @@ function I(e, t) {
         t?.codeBlockState != r && g.b.setNodes(i, { codeBlockState: r }, { at: n });
     }
 }
-let v = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
-    N = new Map();
-for (let [e, t] of Object.entries(S)) e.startsWith("a-") && null != t && N.set(e, t);
 function T(e, t) {
     let n = [],
         i = !1;
@@ -141,7 +181,7 @@ function T(e, t) {
             if (null != i && "ansi" === (0, c.py)(i)) {
                 let t = (function (e, t) {
                     let n = a()(e),
-                        i = w.get(n);
+                        i = R.get(n);
                     if (null != i && i.length === t) return i;
                     let r = [[]],
                         s = 0;
@@ -159,11 +199,11 @@ function T(e, t) {
                     }
                     let u = 0;
                     for (let t of (0, l.$M)(e)) {
-                        o(e.substring(u, t.position), [y.ansiControlSequence]);
+                        o(e.substring(u, t.position), [S.ansiControlSequence]);
                         let n = (0, c.OT)(t);
-                        (o(t.value, null != n ? [S.ansi] : [], n), (u = t.position + t.value.length));
+                        (o(t.value, null != n ? [y.ansi] : [], n), (u = t.position + t.value.length));
                     }
-                    return (o(e.substring(u), [y.ansiControlSequence]), r.length !== t) ? null : (w.set(n, r), r);
+                    return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t) ? null : (R.set(n, r), r);
                 })(e, n.length);
                 for (let e = 0; e < n.length; e++) n[e].hljsTypes = t?.[e] ?? [];
             } else
@@ -181,8 +221,8 @@ function T(e, t) {
                             if (_.has(o)) return null;
                             for (let t of e.split("\n")) if (t.length > 1e3) return null;
                             try {
-                                let t = s.highlightToHtml(e);
-                                if (((i = t.html), null != l)) for (let e of t.missingInjections) l(e);
+                                let t = s.highlightToSpans(e);
+                                if (((i = t.spans), null != l)) for (let e of t.missingInjections) l(e);
                             } catch (e) {
                                 return (
                                     _.set(o, !0),
@@ -193,39 +233,54 @@ function T(e, t) {
                                     null
                                 );
                             }
-                            let m = i.split("\n"),
-                                f = e.match(/\n*$/)?.[0].length ?? 0;
-                            for (let e = 0; e < f; e++) m.push("");
-                            if (m.length !== n) return null;
-                            let p = [];
-                            for (let e = 0; e < n; e++)
-                                p.push(
-                                    (function (e) {
-                                        let t,
-                                            n = [],
-                                            l = [],
-                                            i = 0,
-                                            r = 0;
-                                        for (v.lastIndex = 0; null != (t = v.exec(e));) {
-                                            let s = t.index + t[0].length,
-                                                a = R(e.substring(r, t.index)).length,
-                                                o = l.filter((e) => null != e);
-                                            if (
-                                                (a > 0 && o.length > 0 && n.push({ types: o, start: i, end: i + a }),
-                                                a > 0 && (i += a),
-                                                null != t[1])
-                                            ) {
-                                                let e = N.get(t[1]);
-                                                l.push(e ?? null);
-                                            } else l.pop();
-                                            r = s;
+                            let m = (function (e, t, n) {
+                                let l = e.split("\n"),
+                                    i = l.map(() => []),
+                                    r = t
+                                        .filter((e) => e.start < e.end)
+                                        .sort((e, t) => (e.start === t.start ? t.end - e.end : e.start - t.start)),
+                                    s = r
+                                        .flatMap((e, t) => [
+                                            { position: e.start, opening: !0, index: t },
+                                            { position: e.end, opening: !1, index: t },
+                                        ])
+                                        .sort((e, t) =>
+                                            e.position === t.position
+                                                ? Number(e.opening) - Number(t.opening)
+                                                : e.position - t.position,
+                                        ),
+                                    a = [],
+                                    o = 0,
+                                    u = 0,
+                                    c = 0;
+                                function d(t) {
+                                    let s = Math.min(t, e.length);
+                                    for (; o < s;) {
+                                        let e = c + l[u].length,
+                                            t = Math.min(s, e),
+                                            d = a[a.length - 1],
+                                            h = null == d ? void 0 : n.get(`a-${r[d].tag}`);
+                                        if (o < t && null != h) {
+                                            let e = i[u],
+                                                n = e[e.length - 1],
+                                                l = o - c,
+                                                r = t - c;
+                                            null != n && n.end === l && n.types[0] === h
+                                                ? (n.end = r)
+                                                : e.push({ types: [h], start: l, end: r });
                                         }
-                                        let s = R(e.substring(r)).length,
-                                            a = l.filter((e) => null != e);
-                                        return (s > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + s }), n);
-                                    })(m[e]),
-                                );
-                            return (j.set(o, p), p);
+                                        (o = t) < s && o === e && ((o += 1), (u += 1), (c = o));
+                                    }
+                                }
+                                for (let e of s)
+                                    if ((d(e.position), e.opening)) a.push(e.index);
+                                    else {
+                                        let t = a.lastIndexOf(e.index);
+                                        t >= 0 && a.splice(t, 1);
+                                    }
+                                return (d(e.length), i);
+                            })(e, i, v);
+                            return m.length !== n ? null : (j.set(o, m), m);
                         })(e, t, n.length, l);
                         if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                         else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -238,18 +293,14 @@ function T(e, t) {
 let k = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     j = new (r())(k),
     _ = new (r())(k);
-function R(e) {
-    return e
-        .replace(/&amp;/g, "&")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, '"')
-        .replace(/&#x27;/g, "'");
-}
 (0, u.Q4)(() => {
     j.reset();
 });
-let w = new (r())(k);
+let R = new (r())(k);
+function w(e, t) {
+    let n = (0, f.p0)(e);
+    return null != n ? (0, f.tA)(n, t) : O(e, t);
+}
 function O(e, t) {
     let n = 0;
     for (let l of x.VW.nodes(e, {
@@ -264,59 +315,8 @@ function O(e, t) {
     }
     return n % 2 != 0;
 }
-n.d(
-    t,
-    {},
-    {
-        Ay: function (e) {
-            let { onChange: t } = e,
-                n = null,
-                l = null,
-                i = !1;
-            function r(t) {
-                (0, u.W9)(t)
-                    .then((t) => {
-                        null != t &&
-                            (i ||
-                                ((i = !0),
-                                queueMicrotask(() => {
-                                    i = !1;
-                                    try {
-                                        (m.o.withoutSaving(e, () => {
-                                            x.VW.withoutNormalizing(e, () => I(e, r));
-                                        }),
-                                            (n = x.VW.richValue(e)));
-                                    } catch (e) {
-                                        C.warn("error applying arborium highlighting to editor", e);
-                                    }
-                                })));
-                    })
-                    .catch(() => {});
-            }
-            return (
-                (e.onChange = () => {
-                    let i = (0, f.Sd)(e);
-                    ((x.VW.richValue(e) !== n || i !== l) &&
-                        (m.o.withoutSaving(e, () => {
-                            x.VW.withoutNormalizing(e, () => {
-                                I(e, r);
-                            });
-                        }),
-                        (n = x.VW.richValue(e)),
-                        (l = i)),
-                        t());
-                }),
-                e
-            );
-        },
-        Q9: function (e) {
-            if (null == e.selection) return !1;
-            let t = x.ZF.start(e.selection);
-            return O(e, t);
-        },
-        W: function (e, t) {
-            let n = (0, f.p0)(e);
-            return null != n ? (0, f.tA)(n, t) : O(e, t);
-        },
-    },
-);
+function M(e) {
+    if (null == e.selection) return !1;
+    let t = x.ZF.start(e.selection);
+    return O(e, t);
+}
