@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677164, Version Hash: 931be662caf7456fd112b09942bd7a6a2d9411ee`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677181, Version Hash: deed709fd97963eb1112d792892af26c3ffd9ca4`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677164";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677181";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -2249,8 +2249,8 @@ let rn = (0, re.qT)({
             n.e(922606),
             n.e(690901),
             n.e(569468),
+            n.e(565621),
             n.e(501888),
-            n.e(206394),
             n.e(507127),
             n.e(384820),
             n.e(888205),
@@ -4868,12 +4868,12 @@ let ss = (0, re.Fe)({
                 n.e(576415),
                 n.e(983947),
                 n.e(944727),
+                n.e(565621),
                 n.e(774542),
                 n.e(705871),
                 n.e(527462),
                 n.e(501888),
                 n.e(186546),
-                n.e(206394),
                 n.e(168031),
                 n.e(271203),
                 n.e(547298),
@@ -15909,7 +15909,7 @@ let p_ = "isHideDevBanner",
                     className: td()(pu.Wz, pu.mr),
                     children: [
                         (0, v.jsx)(pc, { className: pu.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677164" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677181" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -46551,6 +46551,7 @@ let wX = (0, tW.Fe)({
             n.e(983947),
             n.e(944727),
             n.e(88321),
+            n.e(565621),
             n.e(774542),
             n.e(911802),
             n.e(499118),
@@ -46559,7 +46560,6 @@ let wX = (0, tW.Fe)({
             n.e(501888),
             n.e(186546),
             n.e(960816),
-            n.e(206394),
             n.e(55266),
             n.e(168031),
             n.e(694138),

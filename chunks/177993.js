@@ -1,4 +1,4 @@
-(i.d(t, { A: () => lj }), i(323874), i(14289), i(35956), i(205816));
+(i.d(t, { A: () => lb }), i(323874), i(14289), i(35956), i(205816));
 var s,
     n,
     a,
@@ -392,8 +392,8 @@ function e3(e) {
 }
 var e6 = i(164636),
     e7 = i(676279),
-    e5 = i(120692),
-    e8 = i(717421),
+    e8 = i(120692),
+    e5 = i(717421),
     e9 = i(396583),
     e4 = (((s = {}).SINE = "sine"), (s.COSINE = "cosine"), s),
     te = (((n = {}).UP = "up"), (n.DOWN = "down"), n);
@@ -408,12 +408,12 @@ let tt = (e) => {
             animationSpeedScale: r = 1,
             children: c,
         } = e,
-        o = (0, e8.z)(
+        o = (0, e5.z)(
             null != s ? { from: { y: 0 }, to: { y: 1 }, config: { duration: s.duration * r }, loop: !0 } : { y: 0 },
         ),
         m = s?.path === "sine" ? Math.sin : Math.cos,
         [x, g] = (0, u.useState)(1),
-        p = (0, e8.z)(
+        p = (0, e5.z)(
             null != i
                 ? {
                       from: { scale: x > 0 ? i.startScale : i.endScale },
@@ -424,7 +424,7 @@ let tt = (e) => {
                 : { scale: 1 },
         ),
         [h, f] = (0, u.useState)(1),
-        N = (0, e8.z)(
+        N = (0, e5.z)(
             null != t
                 ? {
                       from: { blur: h > 0 ? t.startBlurRadius : t.endBlurRadius },
@@ -437,13 +437,13 @@ let tt = (e) => {
         A = (0, u.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * r), [r]),
         [j, b] = (0, u.useState)(0),
         [E, T] = (0, u.useState)(1),
-        C = (0, e8.z)({ xOffset: j, config: { tension: 10, friction: 10, duration: A } });
+        C = (0, e5.z)({ xOffset: j, config: { tension: 10, friction: 10, duration: A } });
     return ((0, e9.A)(() => {
         (b(E * (0.5 * Math.random() * 5 + 2.5)), T((e) => -1 * e));
     }, A),
     l)
         ? c
-        : (0, d.jsx)(e5.animated.div, {
+        : (0, d.jsx)(e8.animated.div, {
               style: {
                   transform: o.y?.to((e) => {
                       if (null == s) return "translateY(0px)";
@@ -1432,8 +1432,8 @@ let t2 = function () {
 var t3 = i(325499),
     t6 = i(613412),
     t7 = i(885574),
-    t5 = i(43990),
-    t8 = i(993077),
+    t8 = i(43990),
+    t5 = i(993077),
     t9 = i(139286),
     t4 = i(872725),
     ie = i(920050),
@@ -1516,7 +1516,7 @@ function io(e) {
                 return (t) => (0, d.jsx)(e, { ...t, sourceAnalyticsLocations: s });
             });
         }, [s]);
-    return (0, d.jsx)(t5.N, {
+    return (0, d.jsx)(t8.N, {
         theme: eZ.NJ8.DARK,
         children: (e) =>
             (0, d.jsx)(b.f5, {
@@ -1524,7 +1524,7 @@ function io(e) {
                 children: (0, d.jsx)("div", {
                     className: x()(e, ir.kL),
                     children: (0, d.jsx)(t4.A, {
-                        cardType: t8.s.CUSTOM,
+                        cardType: t5.s.CUSTOM,
                         cardClassName: ir.Nr,
                         glowing: t,
                         hueRotate: 25,
@@ -1910,12 +1910,12 @@ var iB = i(313133),
 let iF = function (e) {
     let { isVisible: t, premiumSubscription: s, churnDiscountOffer: n, discountedPrice: a } = e,
         { analyticsLocations: l } = (0, b.Ay)(j.A.CHURN_DISCOUNT_PERSISTENT_CTA),
-        r = (0, e8.z)({
+        r = (0, e5.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         });
-    return (0, d.jsx)(e5.animated.div, {
+    return (0, d.jsx)(e8.animated.div, {
         className: x()(iB.iE, { [iB.q4]: !t }),
         style: r,
         children: (0, d.jsxs)("div", {
@@ -2142,7 +2142,7 @@ function i6(e) {
     });
 }
 var i7 = i(996682);
-function i5(e) {
+function i8(e) {
     let { color: t = eX.A.colors.ICON_STRONG, "aria-label": i, "aria-hidden": s, role: n, width: a, height: l } = e,
         r = u.useMemo(() => (0, iz.H)({ width: a, height: l, intrinsicWidth: 100, intrinsicHeight: 80 }), [a, l]);
     return (0, d.jsxs)("svg", {
@@ -2167,7 +2167,7 @@ function i5(e) {
         ],
     });
 }
-function i8(e) {
+function i5(e) {
     let { alt: t, ariaLabel: i, ariaHidden: s, role: n, width: a, height: l, className: r, style: c } = e,
         o = u.useMemo(
             () => (0, iz.H)({ width: a, height: l, intrinsicWidth: 288, intrinsicHeight: 162, style: c }),
@@ -2475,13 +2475,13 @@ var s1 = i(757036),
     s3 = i(70283),
     s6 = i(643056),
     s7 = i(470739);
-let s5 = (0, iE.mj)({
+let s8 = (0, iE.mj)({
     name: "2026-10-nitro-home-badge-directory",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var s8 = i(655752),
+var s5 = i(655752),
     s9 = i(764231),
     s4 = i(627380),
     ne = i(30084),
@@ -2534,7 +2534,7 @@ function nl() {
             (t = e?.isFractionalPremiumWithNoStandardSub() ?? !1),
             (i = (function (e) {
                 let { location: t } = e;
-                return s5.useConfig({ location: t }).enabled;
+                return s8.useConfig({ location: t }).enabled;
             })({ location: "useTenureBadgePerkCard" })),
             (s = (0, s6.d)({ location: "useTenureBadgePerkCard" })),
             (n = (0, sr.$F)()),
@@ -2545,7 +2545,7 @@ function nl() {
             (o = (0, sc.N)(n?.id)),
             (m = (function () {
                 let e = (0, sr.$F)(),
-                    t = (0, s8.P)(),
+                    t = (0, s5.P)(),
                     i = (0, sr.Xb)();
                 if (null == e || null == t || null == i || e.status === sr.Wo.WITHHELD) return null;
                 let s = eT()(),
@@ -2557,7 +2557,7 @@ function nl() {
             })()),
             (g = (0, p.bG)([et.Ay], () => et.Ay.useReducedMotion) && !c),
             (h = (0, s4.t)()),
-            (f = (0, s8.P)()),
+            (f = (0, s5.P)()),
             (0, u.useMemo)(() => {
                 let e,
                     l = null != f ? eI.intl.string(f.nameUnformattedNitro) : void 0;
@@ -2901,7 +2901,7 @@ function ng(e) {
                             primaryAsset:
                                 null != s
                                     ? (0, d.jsx)("img", { src: s, alt: "", width: 160, draggable: "false" })
-                                    : (0, d.jsx)(i5, { color: eX.A.colors.ICON_MUTED, "aria-hidden": !0 }),
+                                    : (0, d.jsx)(i8, { color: eX.A.colors.ICON_MUTED, "aria-hidden": !0 }),
                             categories: ["vip"],
                         },
                         {
@@ -2910,7 +2910,7 @@ function ng(e) {
                             description: eI.intl.string(eI.t.Bhs0s6),
                             ctaText: eI.intl.string(eI.t.dBJVnZ),
                             onCtaClick: o,
-                            primaryAsset: (0, d.jsx)(i8, { alt: "", ariaHidden: !0 }),
+                            primaryAsset: (0, d.jsx)(i5, { alt: "", ariaHidden: !0 }),
                             categories: ["vip"],
                         },
                         null != f ? { ...f, categories: ["vip"] } : null,
@@ -3741,16 +3741,16 @@ var n6 =
         (o.COMPARE = "compare"),
         o),
     n7 = i(352756);
-let n5 = function (e) {
+let n8 = function (e) {
     let { isVisible: t, subscriptionTier: i, isEligibleForBogoPromotion: s, variant: n = "default" } = e,
         a = "settings" === n,
-        l = (0, e8.z)({
+        l = (0, e5.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         }),
         r = { section: eZ.JJy.MARKETING_FLOATING_CTA };
-    return (0, d.jsx)(e5.animated.div, {
+    return (0, d.jsx)(e8.animated.div, {
         className: x()(n7.iE, { [n7.W0]: a }),
         "aria-hidden": a ? !t : void 0,
         inert: a ? !t : void 0,
@@ -3772,13 +3772,13 @@ let n5 = function (e) {
         }),
     });
 };
-var n8 = i(573710);
+var n5 = i(573710);
 let n9 = function () {
     let e = (0, e6.bG)([et.Ay], () => et.Ay.useReducedMotion);
     return (0, d.jsxs)(d.Fragment, {
         children: [
             (0, d.jsx)("div", {
-                className: n8.BI,
+                className: n5.BI,
                 children: (0, d.jsx)(tt, {
                     scaleAnimationData: { startScale: 0.9, endScale: 1, duration: 3e3 },
                     yAxisAnimationData: { range: 20, duration: 4e3, path: e4.SINE },
@@ -3787,22 +3787,22 @@ let n9 = function () {
                     children: (0, d.jsx)("img", {
                         src: "https://cdn.discordapp.com/assets/content/30b4235a9a15735cae3f814c3389942356e6138fe5651945028afff3b421202b.png",
                         alt: "",
-                        className: n8.Q,
+                        className: n5.Q,
                     }),
                 }),
             }),
             (0, d.jsx)(ts, {
                 isMotionReduced: e,
-                boltContainerClassName: n8.nJ,
-                carContainerClassName: n8.IN,
-                hammerContainerClassName: n8.Gj,
-                keyContainerClassName: n8.FV,
-                starContainerClassName: n8.E1,
-                boltAssetClassName: n8.j7,
-                carAssetClassName: n8.or,
-                hammerAssetClassName: n8.Wv,
-                keyAssetClassName: n8.rs,
-                starAssetClassName: n8.OY,
+                boltContainerClassName: n5.nJ,
+                carContainerClassName: n5.IN,
+                hammerContainerClassName: n5.Gj,
+                keyContainerClassName: n5.FV,
+                starContainerClassName: n5.E1,
+                boltAssetClassName: n5.j7,
+                carAssetClassName: n5.or,
+                hammerAssetClassName: n5.Wv,
+                keyAssetClassName: n5.rs,
+                starAssetClassName: n5.OY,
             }),
         ],
     });
@@ -4021,18 +4021,21 @@ function am() {
 }
 var ax = i(886205),
     ag = i(65154),
-    ap = i(382702),
-    ah = i(148289);
-function af() {}
+    ap = i(14868),
+    ah = i(382702),
+    af = i(148289);
 function aN() {
+    (0, ap.z)("ClipsEarlyAccessCard");
+}
+function aA() {
     return (0, d.jsxs)("div", {
-        className: ap.Nr,
+        className: ah.Nr,
         children: [
             (0, d.jsxs)("div", {
-                className: ap.pq,
+                className: ah.pq,
                 children: [
                     (0, d.jsxs)("div", {
-                        className: ap.Z,
+                        className: ah.Z,
                         children: [
                             (0, d.jsx)("div", {
                                 children: (0, d.jsx)(eB.E, {
@@ -4058,22 +4061,22 @@ function aN() {
                         size: "md",
                         icon: ag.CirclePlayIcon,
                         text: eI.intl.string(s$.default.wNHvBT),
-                        onClick: af,
+                        onClick: aN,
                     }),
                 ],
             }),
             (0, d.jsx)("div", {
-                className: ap.LY,
-                children: (0, d.jsx)("img", { className: ap.ot, src: ah.A, alt: "", "aria-hidden": !0 }),
+                className: ah.LY,
+                children: (0, d.jsx)("img", { className: ah.ot, src: af.A, alt: "", "aria-hidden": !0 }),
             }),
         ],
     });
 }
-var aA = i(734066),
-    aj = i(750338),
-    ab = i(382031),
-    aE = i(505051);
-function aT(e) {
+var aj = i(734066),
+    ab = i(750338),
+    aE = i(382031),
+    aT = i(505051);
+function aC(e) {
     let {
         className: t,
         boxLayout: i,
@@ -4084,32 +4087,32 @@ function aT(e) {
         highlightBento: r,
     } = e;
     return (0, d.jsxs)("div", {
-        className: x()(aE.boxBackdrop, t),
+        className: x()(aT.boxBackdrop, t),
         children: [
             (0, d.jsx)(eG.D, {
-                className: aE.bentoSectionHeader,
+                className: aT.bentoSectionHeader,
                 variant: "nitro-md",
                 color: "text-strong",
                 children: s,
             }),
-            null != r && (0, d.jsx)("div", { className: aE.highlightBento, children: r }),
+            null != r && (0, d.jsx)("div", { className: aT.highlightBento, children: r }),
             (0, d.jsx)("div", {
-                className: aE.bentoBoxesGrid,
+                className: aT.bentoBoxesGrid,
                 children: i.flatMap((e, t) => {
                     let i;
                     switch (e.length) {
                         case 3:
-                            i = ab.A0.SMALL;
+                            i = aE.A0.SMALL;
                             break;
                         case 2:
-                            i = ab.A0.MEDIUM;
+                            i = aE.A0.MEDIUM;
                             break;
                         default:
-                            i = ab.A0.LARGE;
+                            i = aE.A0.LARGE;
                     }
                     return e.map((e) =>
                         (0, d.jsx)(
-                            aj.A,
+                            ab.A,
                             { index: t + +!!l, ...e, size: i, shouldLoadVideo: n, isReducedMotion: a },
                             e.name,
                         ),
@@ -4119,53 +4122,53 @@ function aT(e) {
         ],
     });
 }
-let aC = u.memo(function (e) {
+let aI = u.memo(function (e) {
         let t,
             i = (0, t3.b)("premium_marketing_bento"),
             s = (0, iS.mh)({ location: "premium_marketing_bento" }),
             { enabled: n } = (0, ih.vc)({ location: "premium_marketing_bento" }),
             { enabled: a } = ax.A.useConfig({ location: "premium_marketing_bento" }),
             l = i && !s && !(n && a),
-            { whatsNewBoxes: r } = (0, ab.Ay)(l),
-            c = ((t = (0, aA.Vl)()), (0, sK.H)("premium_marketing_whats_new", !t));
-        return (0, d.jsx)(aT, {
+            { whatsNewBoxes: r } = (0, aE.Ay)(l),
+            c = ((t = (0, aj.Vl)()), (0, sK.H)("premium_marketing_whats_new", !t));
+        return (0, d.jsx)(aC, {
             boxLayout: r,
             title: eI.intl.string(eI.t.LRmNAl),
             startLeftAligned: !0,
             highlightBento:
                 c || l
-                    ? (0, d.jsxs)(d.Fragment, { children: [c && (0, d.jsx)(aN, {}), l && (0, d.jsx)(am, {})] })
+                    ? (0, d.jsxs)(d.Fragment, { children: [c && (0, d.jsx)(aA, {}), l && (0, d.jsx)(am, {})] })
                     : null,
             ...e,
         });
     }),
-    aI = u.memo(function (e) {
-        let { bestOfBoxes: t } = (0, ab.Ay)();
-        return (0, d.jsx)(aT, { boxLayout: t, title: eI.intl.string(eI.t.EnzW2H), startLeftAligned: !0, ...e });
+    aR = u.memo(function (e) {
+        let { bestOfBoxes: t } = (0, aE.Ay)();
+        return (0, d.jsx)(aC, { boxLayout: t, title: eI.intl.string(eI.t.EnzW2H), startLeftAligned: !0, ...e });
     }),
-    aR = (0, iE.mj)({
+    av = (0, iE.mj)({
         kind: "user",
         name: "2026-07-onyx",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-var av = i(236834),
-    a_ = i(540504);
-function ay(e) {
+var a_ = i(236834),
+    ay = i(540504);
+function aP(e) {
     let { referrer: t } = e,
         { avatarSrc: i, eventHandlers: s } = (0, eM.A)({ userId: t?.id, size: ey._3.SIZE_24, animateOnHover: !0 });
     return (0, d.jsx)("div", {
-        className: a_.$6,
+        className: ay.$6,
         children: (0, d.jsxs)("div", {
-            className: a_.sc,
+            className: ay.sc,
             children: [
                 (0, d.jsx)("div", {
-                    className: a_.kR,
+                    className: ay.kR,
                     children: (0, d.jsx)(eP.eu, { src: i, "aria-label": t.username, size: ey._3.SIZE_32, ...s }),
                 }),
                 (0, d.jsx)(eG.D, {
                     variant: "heading-xs/medium",
-                    className: a_.FS,
+                    className: ay.FS,
                     color: "text-strong",
                     children: eI.intl.format(eI.t.IqxblS, {
                         username: null != t.globalName ? t.globalName : t.username,
@@ -4175,60 +4178,60 @@ function ay(e) {
         }),
     });
 }
-var aP = i(579245),
-    aS = i(369805);
-let aD = function () {
-    let e = (0, aS.A)();
+var aS = i(579245),
+    aD = i(369805);
+let aM = function () {
+    let e = (0, aD.A)();
     return null == e ? null : (0, d.jsx)(ef, { text: e });
 };
-function aM() {
+function aO() {
     let e = (0, p.bG)([nF.A], () => nF.A.getForSkuAndInterval((0, ec.mH)(tN.pe.TIER_0), tN.WT.MONTH));
     return null != e ? (0, ec.sS)(e) : "\u2026";
 }
-var aO = i(508556);
-let ak = function (e) {
+var ak = i(508556);
+let aU = function (e) {
     let { containerVisibilityPercentage: t, variant: i = "default" } = e,
         s = "settings" === i,
         n = (0, e6.bG)([et.Ay], () => et.Ay.useReducedMotion),
         a = (0, e7.TM)();
     return (0, d.jsxs)("div", {
         "aria-hidden": !0,
-        className: x()(aO.YU, { [aO.W0]: s }),
+        className: x()(ak.YU, { [ak.W0]: s }),
         children: [
             (0, d.jsx)(tr, {
                 supportHEVCAlpha: a,
                 isMotionReduced: n,
                 containerVisibilityPercentage: t,
-                containerClassName: aO.wG,
-                assetClassName: aO.lu,
+                containerClassName: ak.wG,
+                assetClassName: ak.lu,
                 variant: i,
             }),
             (0, d.jsx)(ts, {
                 isMotionReduced: n,
                 containerVisibilityPercentage: t,
-                boltContainerClassName: aO.nJ,
-                carContainerClassName: aO.IN,
-                hammerContainerClassName: aO.Gj,
-                keyContainerClassName: aO.FV,
-                starContainerClassName: aO.E1,
-                boltAssetClassName: aO.j7,
-                carAssetClassName: aO.or,
-                hammerAssetClassName: aO.Wv,
-                keyAssetClassName: aO.rs,
-                starAssetClassName: aO.OY,
+                boltContainerClassName: ak.nJ,
+                carContainerClassName: ak.IN,
+                hammerContainerClassName: ak.Gj,
+                keyContainerClassName: ak.FV,
+                starContainerClassName: ak.E1,
+                boltAssetClassName: ak.j7,
+                carAssetClassName: ak.or,
+                hammerAssetClassName: ak.Wv,
+                keyAssetClassName: ak.rs,
+                starAssetClassName: ak.OY,
                 animateStar: !s,
             }),
         ],
     });
 };
-var aU = i(14057);
-let aL = u.memo(function (e) {
+var aL = i(14057);
+let aG = u.memo(function (e) {
     let { className: t, subscriptionTier: i, isEligibleForBogoPromotion: s, ref: n, variant: a = "default" } = e,
         l = "settings" === a,
         { analyticsLocations: r } = (0, b.Ay)(j.A.PREMIUM_MARKETING_HERO_CTA),
-        c = aM(),
-        o = aR.useConfig({ location: "PremiumBrandRefreshMarketingHeroHeading" }).enabled,
-        u = (0, av.A)(),
+        c = aO(),
+        o = av.useConfig({ location: "PremiumBrandRefreshMarketingHeroHeading" }).enabled,
+        u = (0, a_.A)(),
         m = null != u,
         { visibilityPercentageRef: g, visibilityPercentage: h } = ep(!(0, p.bG)([et.Ay], () => et.Ay.useReducedMotion)),
         f = (0, nC.b)(),
@@ -4242,41 +4245,41 @@ let aL = u.memo(function (e) {
         value: r,
         children: (0, d.jsxs)("div", {
             ref: n,
-            className: x()(aU.kL, t, { [aU.W0]: l }),
+            className: x()(aL.kL, t, { [aL.W0]: l }),
             "data-testid": "marketing-page-hero-header",
             children: [
-                l && (0, d.jsx)(n3, { className: aU.kv }),
+                l && (0, d.jsx)(n3, { className: aL.kv }),
                 (0, d.jsx)("div", {
                     ref: g,
                     children: (0, d.jsxs)("div", {
-                        className: aU.hQ,
+                        className: aL.hQ,
                         children: [
-                            (0, d.jsx)(ak, { containerVisibilityPercentage: h, variant: a }),
-                            T && (0, d.jsx)(aD, {}),
+                            (0, d.jsx)(aU, { containerVisibilityPercentage: h, variant: a }),
+                            T && (0, d.jsx)(aM, {}),
                             (0, d.jsx)("div", {
-                                className: aU.s8,
+                                className: aL.s8,
                                 children: (0, d.jsx)(eL.F, {
                                     forceLevel: 1,
                                     children: (0, d.jsx)(eG.D, {
                                         variant: "nitro-md",
                                         color: "text-strong",
-                                        className: l ? void 0 : aU.wx,
+                                        className: l ? void 0 : aL.wx,
                                         children: eI.intl.string(eI.t.YCZldK),
                                     }),
                                 }),
                             }),
                             (0, d.jsxs)("div", {
-                                className: aU.rf,
+                                className: aL.rf,
                                 children: [
                                     m &&
                                         (0, d.jsx)("div", {
-                                            className: aU.eZ,
-                                            children: (0, d.jsx)(ay, { referrer: u }),
+                                            className: aL.eZ,
+                                            children: (0, d.jsx)(aP, { referrer: u }),
                                         }),
                                     N &&
                                         (0, d.jsx)("div", {
-                                            className: aU.Qn,
-                                            children: (0, d.jsx)(aP.A, {
+                                            className: aL.Qn,
+                                            children: (0, d.jsx)(aS.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
@@ -4284,7 +4287,7 @@ let aL = u.memo(function (e) {
                                             }),
                                         }),
                                     (0, d.jsxs)("div", {
-                                        className: T ? aU.es : aU.UJ,
+                                        className: T ? aL.es : aL.UJ,
                                         children: [
                                             (0, d.jsx)(eb.A, {
                                                 enableMarketingSubscribeCopyTest: !l,
@@ -4298,7 +4301,7 @@ let aL = u.memo(function (e) {
                                         ],
                                     }),
                                     (0, d.jsx)("div", {
-                                        className: aU.iQ,
+                                        className: aL.iQ,
                                         children: (0, d.jsx)(J.E, {
                                             color: "text-muted",
                                             variant: "body-xs/medium",
@@ -4323,8 +4326,8 @@ let aL = u.memo(function (e) {
         }),
     });
 });
-var aG = i(812537);
-let aw = function (e) {
+var aw = i(812537);
+let aB = function (e) {
     let { scrollOffset: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollOffset: 60 },
         i = (0, u.useCallback)(
             (e) => {
@@ -4379,9 +4382,9 @@ let aw = function (e) {
         }
     );
 };
-var aB = i(818348),
-    aH = i(773188);
-let aF = () => {
+var aH = i(818348),
+    aF = i(773188);
+let aV = () => {
     let e = (0, g.zy)();
     (0, y.P)(_);
     let t = u.useRef(null),
@@ -4416,41 +4419,41 @@ let aF = () => {
                     : null;
         }, [e.search, S]);
     nj(D ?? "", null != D);
-    let { navBarSections: M, activeSectionId: O } = aw([n6.HOME, n6.WHATS_NEW, n6.BEST_OF_NITRO, n6.PLANS, n6.COMPARE]),
+    let { navBarSections: M, activeSectionId: O } = aB([n6.HOME, n6.WHATS_NEW, n6.BEST_OF_NITRO, n6.PLANS, n6.COMPARE]),
         { home: L, whatsNew: G, bestOfNitro: H, plans: F, compare: V } = M,
         W = (0, d.jsxs)("div", {
             ref: i,
-            className: x()(aH.kL, aH.Gd, aH.iI, { [aH.Hq]: !r }),
+            className: x()(aF.kL, aF.Gd, aF.iI, { [aF.Hq]: !r }),
             "data-cy": "tier-0-marketing-page",
             children: [
-                (0, d.jsx)(n3, { className: aH.yH }),
+                (0, d.jsx)(n3, { className: aF.yH }),
                 (0, d.jsx)(ai, { navBarSections: M, activeSectionId: O }),
                 (0, d.jsxs)("div", {
-                    className: aH.Qr,
+                    className: aF.Qr,
                     children: [
                         (0, d.jsx)("div", {
-                            className: aH.qY,
+                            className: aF.qY,
                             ref: L.ref,
                             children: (0, d.jsx)(w.L, {
                                 innerRef: n,
                                 onChange: (e) => o(e),
                                 threshold: 0,
                                 active: !0,
-                                children: (0, d.jsx)(aL, { ref: n, subscriptionTier: R }),
+                                children: (0, d.jsx)(aG, { ref: n, subscriptionTier: R }),
                             }),
                         }),
                         (0, d.jsx)("div", {
-                            className: aH.So,
+                            className: aF.So,
                             ref: G.ref,
-                            children: (0, d.jsx)(aC, { shouldLoadVideo: A, isReducedMotion: r }),
-                        }),
-                        (0, d.jsx)("div", {
-                            className: aH.KQ,
-                            ref: H.ref,
                             children: (0, d.jsx)(aI, { shouldLoadVideo: A, isReducedMotion: r }),
                         }),
                         (0, d.jsx)("div", {
-                            className: aH.qc,
+                            className: aF.KQ,
+                            ref: H.ref,
+                            children: (0, d.jsx)(aR, { shouldLoadVideo: A, isReducedMotion: r }),
+                        }),
+                        (0, d.jsx)("div", {
+                            className: aF.qc,
                             ref: F.ref,
                             children: (0, d.jsx)(w.L, {
                                 innerRef: s,
@@ -4460,7 +4463,7 @@ let aF = () => {
                                 children: (0, d.jsx)(n0, { innerRef: s }),
                             }),
                         }),
-                        (0, d.jsx)("div", { className: aH.aC, ref: V.ref, children: (0, d.jsx)(aG.A, {}) }),
+                        (0, d.jsx)("div", { className: aF.aC, ref: V.ref, children: (0, d.jsx)(aw.A, {}) }),
                     ],
                 }),
                 (0, d.jsx)(w.L, {
@@ -4471,52 +4474,52 @@ let aF = () => {
                             (U.default.track(eZ.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }),
                             N(!0));
                     },
-                    children: (0, d.jsx)("div", { ref: a, className: aH._Z }),
+                    children: (0, d.jsx)("div", { ref: a, className: aF._Z }),
                 }),
                 (0, d.jsx)(ae, { ref: l }),
-                (0, d.jsx)(n5, { isVisible: !c && !m && A, subscriptionTier: R }),
-                (0, d.jsx)(n3, { className: aH.MF }),
+                (0, d.jsx)(n8, { isVisible: !c && !m && A, subscriptionTier: R }),
+                (0, d.jsx)(n3, { className: aF.MF }),
             ],
         });
-    return (0, d.jsx)(t5.N, {
-        theme: aB.NJ.DARK,
-        children: (e) => (0, d.jsx)(B.Gt, { className: x()(aH.XG, e), ref: t, children: W }),
+    return (0, d.jsx)(t8.N, {
+        theme: aH.NJ.DARK,
+        children: (e) => (0, d.jsx)(B.Gt, { className: x()(aF.XG, e), ref: t, children: W }),
     });
 };
-var aV = i(862482),
-    aW = i(300349),
-    az = i(106512),
-    aX = i(662367),
-    aY = i(374403),
-    aK = i(396375),
-    aZ = i(900797),
-    aq = i(847374),
-    aJ = i(614268);
-function aQ(e) {
+var aW = i(862482),
+    az = i(300349),
+    aX = i(106512),
+    aY = i(662367),
+    aK = i(374403),
+    aZ = i(396375),
+    aq = i(900797),
+    aJ = i(847374),
+    aQ = i(614268);
+function a$(e) {
     let { className: t } = e;
     return (0, d.jsx)("div", {
-        className: x()(aJ.i, t),
+        className: x()(aQ.i, t),
         children: (0, d.jsx)(eB.E, { type: "early_access", variant: "premium" }),
     });
 }
-var a$ = i(536071),
-    a0 = i(729934);
-let a1 = "/assets/5b4fec8511c3676a.svg",
-    a2 = "/assets/0838bda6ecd20d91.svg";
-function a3(e, t, i) {
+var a0 = i(536071),
+    a1 = i(729934);
+let a2 = "/assets/5b4fec8511c3676a.svg",
+    a3 = "/assets/0838bda6ecd20d91.svg";
+function a6(e, t, i) {
     return (0, se.M)(e) ? t : i;
 }
-var a6 = i(872461);
-function a7(e) {
+var a7 = i(872461);
+function a8(e) {
     let { isShowingAll: t, onClick: i } = e;
     return (0, d.jsxs)(at.D, {
         onClick: i,
-        className: a6.customButton,
+        className: a7.customButton,
         children: [
             t ? eI.intl.string(eI.t.maZaN3) : eI.intl.string(eI.t["37C26f"]),
             t
-                ? (0, d.jsx)(aZ.ChevronSmallUpIcon, { size: "md", color: "currentColor", className: a6.arrow })
-                : (0, d.jsx)(aq.ChevronSmallDownIcon, { size: "md", color: "currentColor", className: a6.arrow }),
+                ? (0, d.jsx)(aq.ChevronSmallUpIcon, { size: "md", color: "currentColor", className: a7.arrow })
+                : (0, d.jsx)(aJ.ChevronSmallDownIcon, { size: "md", color: "currentColor", className: a7.arrow }),
         ],
     });
 }
@@ -4533,15 +4536,15 @@ function a5(e) {
             variant: o = "default",
         } = e,
         { analyticsLocations: u } = (0, b.Ay)(j.A.PREMIUM_MARKETING_PERK_CARD),
-        m = (0, d.jsx)("img", { src: n, alt: "", className: x()(a, a6.perksCardArt) }),
+        m = (0, d.jsx)("img", { src: n, alt: "", className: x()(a, a7.perksCardArt) }),
         g = "settings" === o;
     return (0, d.jsx)(b.f5, {
         value: u,
         children: (0, d.jsxs)("div", {
-            className: x()(a6.perkCard, s, { [a6.settingsCard]: g }),
+            className: x()(a7.perkCard, s, { [a7.settingsCard]: g }),
             children: [
-                r ? (0, d.jsx)(a$.A, { className: a6.perkCardNewBadge }) : null,
-                c ? (0, d.jsx)(aQ, { className: a6.perkCardEarlyAccessBadge }) : null,
+                r ? (0, d.jsx)(a0.A, { className: a7.perkCardNewBadge }) : null,
+                c ? (0, d.jsx)(a$, { className: a7.perkCardEarlyAccessBadge }) : null,
                 g
                     ? (0, d.jsx)(q.B, {
                           direction: "horizontal",
@@ -4549,23 +4552,23 @@ function a5(e) {
                           justify: "center",
                           gap: 0,
                           padding: 24,
-                          className: a6.settingsArt,
+                          className: a7.settingsArt,
                           children: m,
                       })
                     : m,
                 (0, d.jsxs)("div", {
-                    className: g ? a6.settingsText : void 0,
+                    className: g ? a7.settingsText : void 0,
                     children: [
                         (0, d.jsxs)(eG.D, {
                             variant: g ? "heading-sm/semibold" : "heading-lg/semibold",
-                            className: a6.perkCardHeading,
+                            className: a7.perkCardHeading,
                             children: [t, " ", l],
                         }),
                         (0, d.jsx)(J.E, {
                             variant: g ? "body-xs/normal" : "body-sm/normal",
                             color: g ? "text-muted" : void 0,
                             lineClamp: g ? 1 : void 0,
-                            className: a6.perkCardDescription,
+                            className: a7.perkCardDescription,
                             children: "function" == typeof i ? i(u) : i,
                         }),
                     ],
@@ -4574,7 +4577,7 @@ function a5(e) {
         }),
     });
 }
-let a8 = function (e) {
+let a9 = function (e) {
     let { className: t, isSubscriberNitroHome: s = !1 } = e,
         [n, a] = u.useState(!1),
         l = (function (e) {
@@ -4596,7 +4599,7 @@ let a8 = function (e) {
                 badgeAlt: {
                     title: eI.intl.string(eI.t["5cYMu0"]),
                     description: eI.intl.string(eI.t.vxk9va),
-                    imageSource: a3(s, "/assets/42e77ef3b6c4c1bb.svg", "/assets/ab48ff2bd2dce6a1.svg"),
+                    imageSource: a6(s, "/assets/42e77ef3b6c4c1bb.svg", "/assets/ab48ff2bd2dce6a1.svg"),
                     imageClassName: t.badgeNewImage,
                 },
                 clientThemes: {
@@ -4629,7 +4632,7 @@ let a8 = function (e) {
                         function t() {
                             {
                                 let { openUserSettings: t } = i(766075);
-                                (a0.A.setState({ scrollPosition: nr._F.TRY_IT_OUT }),
+                                (a1.A.setState({ scrollPosition: nr._F.TRY_IT_OUT }),
                                     t(en.X.PROFILE_PANEL, { analyticsLocations: e }));
                             }
                         }
@@ -4643,43 +4646,43 @@ let a8 = function (e) {
                 longerMessages: {
                     title: eI.intl.string(eI.t.BUScid),
                     description: eI.intl.string(eI.t.vN6XpQ),
-                    imageSource: a3(s, "/assets/dd2088e61de76ba7.svg", "/assets/62b63638a6645137.svg"),
+                    imageSource: a6(s, "/assets/dd2088e61de76ba7.svg", "/assets/62b63638a6645137.svg"),
                     imageClassName: t.longerMessagesImage,
                 },
                 moreGuilds: {
                     title: eI.intl.string(eI.t.Bv8Pfk),
                     description: eI.intl.string(eI.t.JMfaTU),
-                    imageSource: a3(s, "/assets/587c08f512a71514.png", "/assets/3308a5a697922299.svg"),
+                    imageSource: a6(s, "/assets/587c08f512a71514.png", "/assets/3308a5a697922299.svg"),
                     imageClassName: t.moreGuildsImage,
                 },
                 moreGuildsAlt: {
                     title: eI.intl.string(eI.t.Bv8Pfk),
                     description: eI.intl.string(eI.t.JMfaTU),
-                    imageSource: a3(s, "/assets/f1d357c6741d62c3.svg", "/assets/8568e72f2b535d2f.svg"),
+                    imageSource: a6(s, "/assets/f1d357c6741d62c3.svg", "/assets/8568e72f2b535d2f.svg"),
                     imageClassName: t.moreGuildsAltImage,
                 },
                 soundboard: {
                     title: eI.intl.string(eI.t["lGcW+c"]),
                     description: eI.intl.string(eI.t["/fDyO+"]),
-                    imageSource: a3(s, "/assets/bd6751720573fb38.svg", "/assets/c292e42489e70696.svg"),
+                    imageSource: a6(s, "/assets/bd6751720573fb38.svg", "/assets/c292e42489e70696.svg"),
                     imageClassName: t.soundboardImage,
                 },
                 stickers: {
                     title: eI.intl.string(eI.t["1c+xwT"]),
                     description: eI.intl.string(eI.t.hJG8ZN),
-                    imageSource: a3(s, a2, a1),
+                    imageSource: a6(s, a3, a2),
                     imageClassName: t.stickersImage,
                 },
                 stickersBurst: {
                     title: eI.intl.string(eI.t.tzdIwI),
                     description: eI.intl.string(eI.t.hJG8ZN),
-                    imageSource: a3(s, a2, a1),
+                    imageSource: a6(s, a3, a2),
                     imageClassName: t.stickersImage,
                 },
                 stickersPremiumPerk: {
                     title: eI.intl.string(eI.t.tzdIwI),
                     description: eI.intl.string(eI.t.hJG8ZN),
-                    imageSource: a3(s, a2, a1),
+                    imageSource: a6(s, a3, a2),
                     imageClassName: t.stickersImage,
                 },
                 streaming: {
@@ -4691,7 +4694,7 @@ let a8 = function (e) {
                 superReactions: {
                     title: eI.intl.string(eI.t["uZt5q/"]),
                     description: eI.intl.string(eI.t.ZK3ZoX),
-                    imageSource: a3(s, "/assets/99b308eabe7fcfd2.svg", "/assets/fa48f6b36050a179.svg"),
+                    imageSource: a6(s, "/assets/99b308eabe7fcfd2.svg", "/assets/fa48f6b36050a179.svg"),
                     imageClassName: t.superReactionsImage,
                 },
                 upload: {
@@ -4703,27 +4706,27 @@ let a8 = function (e) {
                 videoBackground: {
                     title: eI.intl.string(eI.t.NaGpTf),
                     description: eI.intl.string(eI.t["A8O/Qw"]),
-                    imageSource: a3(s, nc, no),
+                    imageSource: a6(s, nc, no),
                     imageClassName: t.videoBackgroundImage,
                 },
             };
-        })({ styles: a6 }),
+        })({ styles: a7 }),
         r = (0, e6.bG)([et.Ay], () => et.Ay.useReducedMotion),
         { analyticsLocations: c } = (0, b.Ay)();
     return (0, d.jsxs)("div", {
-        className: x()(a6.perksContainer, t, {
-            [a6.partiallyHidden]: s && !n,
-            [a6.subscriberNitroHome]: s,
-            [a6.reducedMotion]: r,
+        className: x()(a7.perksContainer, t, {
+            [a7.partiallyHidden]: s && !n,
+            [a7.subscriberNitroHome]: s,
+            [a7.reducedMotion]: r,
         }),
         children: [
             (0, d.jsx)(eG.D, {
                 variant: "heading-xxl/semibold",
-                className: a6.perksTitle,
+                className: a7.perksTitle,
                 children: s ? eI.intl.string(eI.t.QX14gI) : eI.intl.string(eI.t.RGadQR),
             }),
             (0, d.jsx)("div", {
-                className: x()(a6.perkCardContainer, { [a6.perkCardContainerExpanded]: n }),
+                className: x()(a7.perkCardContainer, { [a7.perkCardContainerExpanded]: n }),
                 children: [
                     "emoji",
                     "streaming",
@@ -4743,8 +4746,8 @@ let a8 = function (e) {
                 (0, d.jsxs)(d.Fragment, {
                     children: [
                         (0, d.jsx)("div", {
-                            className: x()({ [a6.sizeGizmo]: !n, [a6.sizeGizmoExpanded]: n }),
-                            children: (0, d.jsx)(a7, {
+                            className: x()({ [a7.sizeGizmo]: !n, [a7.sizeGizmoExpanded]: n }),
+                            children: (0, d.jsx)(a8, {
                                 onClick: function () {
                                     (U.default.track(eZ.HAw.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
                                         location_stack: c,
@@ -4755,14 +4758,14 @@ let a8 = function (e) {
                                 isShowingAll: n,
                             }),
                         }),
-                        (0, d.jsx)("div", { className: x()(a6.cover, { [a6.hidden]: n }) }),
+                        (0, d.jsx)("div", { className: x()(a7.cover, { [a7.hidden]: n }) }),
                     ],
                 }),
         ],
     });
 };
-var a9 = i(615939);
-let a4 = u.memo(function (e) {
+var a4 = i(615939);
+let le = u.memo(function (e) {
     let { className: t } = e,
         i = [
             {
@@ -4786,7 +4789,7 @@ let a4 = u.memo(function (e) {
                         maxFileSize: (0, ec.EJ)(tN.PremiumTypes.TIER_2, { useSpace: !1 }),
                     }),
                 }),
-                imageSource: a9.A,
+                imageSource: a4.A,
             },
             {
                 id: ie.PROFILES_CARD_ID,
@@ -4797,21 +4800,21 @@ let a4 = u.memo(function (e) {
         ];
     return (0, d.jsxs)(q.B, {
         gap: 16,
-        className: x()(a6.settingsPerks, t),
+        className: x()(a7.settingsPerks, t),
         children: [
             (0, d.jsx)(eG.D, { variant: "heading-xl/semibold", children: eI.intl.string(eI.t.q1u7nQ) }),
             (0, d.jsx)(eL.F, {
                 children: (0, d.jsx)("div", {
-                    className: a6.settingsGrid,
+                    className: a7.settingsGrid,
                     children: i.map((e) => (0, d.jsx)(a5, { ...e, variant: "settings" }, e.id)),
                 }),
             }),
         ],
     });
 });
-var le = i(695366),
-    lt = i(370049);
-let li = function (e) {
+var lt = i(695366),
+    li = i(370049);
+let ls = function (e) {
     let t,
         i,
         { premiumSubscription: s, className: n, textColor: a } = e,
@@ -4831,16 +4834,16 @@ let li = function (e) {
     let o = (null != r ? ec.Ay.getSkuIdForPlan(r.planId) : null) === tN.pe.TIER_1;
     return (
         (i = null != a ? a : l ? "text-overlay-light" : "text-default"),
-        (0, d.jsxs)(t8.Z, {
-            className: x()(lt.kL, n, { [lt.He]: l }),
-            type: t8.Z.Types.CUSTOM,
+        (0, d.jsxs)(t5.Z, {
+            className: x()(li.kL, n, { [li.He]: l }),
+            type: t5.Z.Types.CUSTOM,
             children: [
-                (0, d.jsx)(le.CircleErrorIcon, {
+                (0, d.jsx)(lt.CircleErrorIcon, {
                     size: "custom",
                     width: 20,
                     height: 20,
                     color: "currentColor",
-                    className: x()(lt.Kk, { [lt.Pt]: l }),
+                    className: x()(li.Kk, { [li.Pt]: l }),
                 }),
                 (0, d.jsx)(J.E, {
                     variant: "body-sm/medium",
@@ -4856,8 +4859,8 @@ let li = function (e) {
         })
     );
 };
-var ls = i(978836);
-let ln = function (e) {
+var ln = i(978836);
+let la = function (e) {
     let { lifted: t = !1 } = e;
     return (0, d.jsxs)("svg", {
         width: "100%",
@@ -4866,7 +4869,7 @@ let ln = function (e) {
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
         preserveAspectRatio: "none",
-        className: x()(ls.zr, { [ls.N]: t }),
+        className: x()(ln.zr, { [ln.N]: t }),
         children: [
             (0, d.jsx)("path", {
                 d: "M1175.02 650.847C567.943 650.847 449.538 793 0 793V0H2338V529.841C1912.54 529.841 1705.84 650.847 1175.02 650.847Z",
@@ -4881,22 +4884,22 @@ let ln = function (e) {
                     y2: "975.136",
                     gradientUnits: "userSpaceOnUse",
                     children: [
-                        (0, d.jsx)("stop", { className: ls.eq }),
-                        (0, d.jsx)("stop", { offset: "0.339235", className: ls.l_ }),
-                        (0, d.jsx)("stop", { offset: "0.492065", className: ls.sM }),
-                        (0, d.jsx)("stop", { offset: "0.823236", className: ls.zi }),
-                        (0, d.jsx)("stop", { offset: "0.899558", className: ls.s1 }),
+                        (0, d.jsx)("stop", { className: ln.eq }),
+                        (0, d.jsx)("stop", { offset: "0.339235", className: ln.l_ }),
+                        (0, d.jsx)("stop", { offset: "0.492065", className: ln.sM }),
+                        (0, d.jsx)("stop", { offset: "0.823236", className: ln.zi }),
+                        (0, d.jsx)("stop", { offset: "0.899558", className: ln.s1 }),
                     ],
                 }),
             }),
         ],
     });
 };
-var la = i(194509),
-    ll = i(317587);
-let lr = function (e) {
+var ll = i(194509),
+    lr = i(317587);
+let lc = function (e) {
     let { isVisible: t, subscriptionTier: i, isApplicationHome: s, isEligibleForBogoPromotion: n } = e,
-        a = (0, e8.z)({
+        a = (0, e5.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
@@ -4904,28 +4907,28 @@ let lr = function (e) {
         l = { section: eZ.JJy.MARKETING_FLOATING_CTA },
         r = (0, st.Ay)(),
         c = (0, n1.M)(r);
-    return (0, d.jsx)(e5.animated.div, {
-        className: x()(ll.iE, { [ll.H8]: s, [ll.q4]: !t }),
+    return (0, d.jsx)(e8.animated.div, {
+        className: x()(lr.iE, { [lr.H8]: s, [lr.q4]: !t }),
         style: a,
         children: (0, d.jsxs)("div", {
-            className: s ? ll.zW : ll.iJ,
+            className: s ? lr.zW : lr.iJ,
             children: [
-                (0, d.jsx)(aK.A, {
-                    color: c ? aV.XD.BRAND_INVERTED : void 0,
-                    className: x()(ll.x6, { [ll.Ph]: c }),
+                (0, d.jsx)(aZ.A, {
+                    color: c ? aW.XD.BRAND_INVERTED : void 0,
+                    className: x()(lr.x6, { [lr.Ph]: c }),
                     subscriptionTier: i,
                     premiumModalAnalyticsLocation: l,
                     isPersistentCTA: !0,
                     hasActivePromotion: n,
-                    shinyButtonClassName: c ? void 0 : ll.PJ,
+                    shinyButtonClassName: c ? void 0 : lr.PJ,
                 }),
-                (0, d.jsx)(la.A, { className: ll.x6, premiumModalAnalyticsLocation: l }),
+                (0, d.jsx)(ll.A, { className: lr.x6, premiumModalAnalyticsLocation: l }),
             ],
         }),
     });
 };
-var lc = i(386564);
-function lo(e) {
+var lo = i(386564);
+function ld(e) {
     let {
             inOfferExperience: t,
             subscriptionTier: i,
@@ -4936,42 +4939,42 @@ function lo(e) {
             isEligibleForBogoPromotion: r,
         } = e,
         c = r
-            ? (0, d.jsx)(aK.A, {
-                  color: l ? aV.XD.BRAND_INVERTED : void 0,
-                  className: x()(lc.x6, lc.Ph, n, { [lc.Sq]: t && a, [lc.MF]: a && !l }),
-                  shinyButtonClassName: l ? void 0 : lc.PJ,
+            ? (0, d.jsx)(aZ.A, {
+                  color: l ? aW.XD.BRAND_INVERTED : void 0,
+                  className: x()(lo.x6, lo.Ph, n, { [lo.Sq]: t && a, [lo.MF]: a && !l }),
+                  shinyButtonClassName: l ? void 0 : lo.PJ,
                   subscriptionTier: i,
                   hasActivePromotion: !0,
               })
-            : (0, d.jsx)(aK.A, {
-                  color: l || !a ? aV.XD.BRAND_INVERTED : void 0,
-                  className: x()(lc.x6, lc.Ph, n, { [lc.Sq]: t && a, [lc.MF]: a && !l }),
+            : (0, d.jsx)(aZ.A, {
+                  color: l || !a ? aW.XD.BRAND_INVERTED : void 0,
+                  className: x()(lo.x6, lo.Ph, n, { [lo.Sq]: t && a, [lo.MF]: a && !l }),
                   subscriptionTier: i,
               }),
-        o = t && a ? null : (0, d.jsx)(la.A, { className: x()(lc.x6, n), color: a ? void 0 : aV.XD.WHITE });
-    return (0, d.jsxs)("div", { className: x()(lc.UD, s), children: [c, " ", o] });
+        o = t && a ? null : (0, d.jsx)(ll.A, { className: x()(lo.x6, n), color: a ? void 0 : aW.XD.WHITE });
+    return (0, d.jsxs)("div", { className: x()(lo.UD, s), children: [c, " ", o] });
 }
-function ld() {
+function lu() {
     return (0, d.jsxs)(d.Fragment, {
         children: [
-            (0, d.jsx)(a$.p, { className: lc.zd }),
-            (0, d.jsx)(a$.p, { className: lc.G }),
-            (0, d.jsx)(a$.p, { className: lc.zy }),
-            (0, d.jsx)(a$.p, { className: lc.GX }),
+            (0, d.jsx)(a0.p, { className: lo.zd }),
+            (0, d.jsx)(a0.p, { className: lo.G }),
+            (0, d.jsx)(a0.p, { className: lo.zy }),
+            (0, d.jsx)(a0.p, { className: lo.GX }),
         ],
     });
 }
-function lu(e) {
+function lm(e) {
     let { variant: t = "body-lg/normal", withBottomMargin: i = !0, isApplicationHome: s } = e,
-        n = aM();
+        n = aO();
     return (0, d.jsx)(J.E, {
         variant: t,
         color: s ? "text-subtle" : "text-overlay-light",
-        className: x()(lc.h_, { [lc.If]: i, [lc.jn]: s }),
+        className: x()(lo.h_, { [lo.If]: i, [lo.jn]: s }),
         children: eI.intl.format(eI.t.kt9wxs, { cheapestMonthlyPrice: n }),
     });
 }
-let lm = function (e) {
+let lx = function (e) {
     let { className: t, buttonClassName: i, subscriptionTier: s, isDarkMode: n, ref: a } = e,
         { analyticsLocations: l } = (0, b.Ay)(j.A.PREMIUM_MARKETING_HERO_CTA),
         r = (0, eo.QQ)(),
@@ -4982,11 +4985,11 @@ let lm = function (e) {
         value: l,
         children: (0, d.jsxs)("div", {
             ref: a,
-            className: x()(lc.kL, t, { [lc.V1]: !c, [lc.Q4]: !c && o }),
+            className: x()(lo.kL, t, { [lo.V1]: !c, [lo.Q4]: !c && o }),
             "data-testid": "v2-marketing-page-hero-header",
             children: [
                 (0, d.jsxs)("div", {
-                    className: c ? lc.I6 : lc.G1,
+                    className: c ? lo.I6 : lo.G1,
                     children: [
                         (0, d.jsx)(eL.F, {
                             forceLevel: 1,
@@ -4998,38 +5001,38 @@ let lm = function (e) {
                         }),
                         o
                             ? (0, d.jsx)("div", {
-                                  className: lc.DF,
-                                  children: (0, d.jsx)(aP.A, { textColor: "text-overlay-light", smallerText: !c }),
+                                  className: lo.DF,
+                                  children: (0, d.jsx)(aS.A, { textColor: "text-overlay-light", smallerText: !c }),
                               })
-                            : (0, d.jsx)(lu, {}),
+                            : (0, d.jsx)(lm, {}),
                         r
                             ? (0, d.jsx)("div", {
-                                  className: lc.UD,
-                                  children: (0, d.jsx)(la.A, { className: x()(lc.x6, i), color: aV.XD.WHITE }),
+                                  className: lo.UD,
+                                  children: (0, d.jsx)(ll.A, { className: x()(lo.x6, i), color: aW.XD.WHITE }),
                               })
-                            : (0, d.jsx)(lo, {
+                            : (0, d.jsx)(ld, {
                                   subscriptionTier: s,
                                   inOfferExperience: c,
                                   buttonClassName: i,
                                   isDarkMode: n,
                               }),
-                        o && (0, d.jsx)(lu, { variant: "body-md/normal", withBottomMargin: !1 }),
+                        o && (0, d.jsx)(lm, { variant: "body-md/normal", withBottomMargin: !1 }),
                     ],
                 }),
-                !c && (0, d.jsx)(ld, {}),
+                !c && (0, d.jsx)(lu, {}),
             ],
         }),
     });
 };
-var lx = i(403227),
-    lg = i(367740),
-    lp = i(377770);
-function lh(e) {
+var lg = i(403227),
+    lp = i(367740),
+    lh = i(377770);
+function lf(e) {
     let { inOfferExperience: t } = e;
-    return t ? (0, d.jsx)(ln, { lifted: t }) : null;
+    return t ? (0, d.jsx)(la, { lifted: t }) : null;
 }
-let lf = () => {
-        let { enabled: e } = aW.A.useConfig({ location: "PremiumMarketingHomeSettingsPage" });
+let lN = () => {
+        let { enabled: e } = az.A.useConfig({ location: "PremiumMarketingHomeSettingsPage" });
         (0, y.P)(_);
         let t = u.useRef(null),
             i = u.useRef(null),
@@ -5053,14 +5056,14 @@ let lf = () => {
                 let e = tD.A.getMarketingComponentBySurface(K.oW.BILLING_SETTINGS_NITRO_GIFT_BANNER);
                 return null == e ? null : e.surface;
             }),
-            D = (0, aY.Q)(),
+            D = (0, aK.Q)(),
             { analyticsLocations: M } = (0, b.Ay)(j.A.PREMIUM_MARKETING);
         u.useEffect(() => {
             N(!0);
         }, []);
         let O = e
             ? (0, d.jsx)("div", {
-                  className: lp.OE,
+                  className: lh.OE,
                   children: (0, d.jsx)(w.L, {
                       innerRef: t,
                       onChange: o,
@@ -5070,7 +5073,7 @@ let lf = () => {
                   }),
               })
             : (0, d.jsx)("div", {
-                  className: lp.dY,
+                  className: lh.dY,
                   children: (0, d.jsx)(w.L, {
                       innerRef: t,
                       onChange: (e) => o(e),
@@ -5078,51 +5081,51 @@ let lf = () => {
                       active: !0,
                       children: (0, d.jsx)(nv.qu, {
                           innerRef: t,
-                          tier0CTAButton: (0, d.jsx)(aK.A, {
+                          tier0CTAButton: (0, d.jsx)(aZ.A, {
                               showIcon: !1,
                               subscriptionTier: tN.pe.TIER_0,
-                              className: lg.Ph,
-                              look: aV.pR.OUTLINED,
-                              color: aV.XD.WHITE,
-                              buttonShineClassName: lg.Qr,
+                              className: lp.Ph,
+                              look: aW.pR.OUTLINED,
+                              color: aW.XD.WHITE,
+                              buttonShineClassName: lp.Qr,
                           }),
                           tier2CTAButton:
                               R === tN.pe.TIER_0
-                                  ? (0, d.jsx)(aK.A, {
+                                  ? (0, d.jsx)(aZ.A, {
                                         showIcon: !1,
                                         subscriptionTier: tN.pe.TIER_2,
-                                        className: lg.Ph,
-                                        look: aV.pR.OUTLINED,
-                                        color: aV.XD.WHITE,
-                                        buttonShineClassName: lg.Qr,
+                                        className: lp.Ph,
+                                        look: aW.pR.OUTLINED,
+                                        color: aW.XD.WHITE,
+                                        buttonShineClassName: lp.Qr,
                                     })
-                                  : (0, d.jsx)(aK.A, {
-                                        color: aV.XD.BRAND_INVERTED,
+                                  : (0, d.jsx)(aZ.A, {
+                                        color: aW.XD.BRAND_INVERTED,
                                         showIcon: !1,
                                         subscriptionTier: tN.pe.TIER_2,
-                                        className: lg.Ph,
-                                        textOptions: { textClassName: lg.Ac },
-                                        buttonShineClassName: lg.Qr,
+                                        className: lp.Ph,
+                                        textOptions: { textClassName: lp.Ac },
+                                        buttonShineClassName: lp.Qr,
                                     }),
                       }),
                   }),
               });
         return (0, d.jsxs)("div", {
-            className: x()(lp.kL, { [lp.N4]: e }),
+            className: x()(lh.kL, { [lh.N4]: e }),
             "data-cy": "tier-0-marketing-page",
             children: [
-                (0, d.jsx)(li, {
+                (0, d.jsx)(ls, {
                     premiumSubscription: A,
                     textColor: e ? "text-default" : void 0,
-                    className: x()(lp.R3, { [lp.aZ]: v }),
+                    className: x()(lh.R3, { [lh.aZ]: v }),
                 }),
                 P &&
                     (0, d.jsxs)("div", {
-                        className: lp.n1,
+                        className: lh.n1,
                         children: [
-                            (0, d.jsx)(lh, { inOfferExperience: v }),
+                            (0, d.jsx)(lf, { inOfferExperience: v }),
                             (0, d.jsx)(t$.l, {
-                                className: lp.ij,
+                                className: lh.ij,
                                 size: "md",
                                 location: j.A.PREMIUM_WISHLIST_SETTINGS_HERO,
                                 forceDarkTheme: !0,
@@ -5130,15 +5133,15 @@ let lf = () => {
                         ],
                     }),
                 (0, d.jsxs)("div", {
-                    className: x()({ [lp.V1]: !P }),
+                    className: x()({ [lh.V1]: !P }),
                     children: [
-                        null != S && (0, d.jsx)(az.m, { className: lp.w$, config: S }),
+                        null != S && (0, d.jsx)(aX.m, { className: lh.w$, config: S }),
                         (0, d.jsxs)("div", {
-                            className: lp.iS,
+                            className: lh.iS,
                             children: [
                                 !P &&
                                     (0, d.jsx)(t$.l, {
-                                        className: lp.ij,
+                                        className: lh.ij,
                                         size: "md",
                                         location: j.A.PREMIUM_WISHLIST_SETTINGS_HERO,
                                         forceDarkTheme: !0,
@@ -5149,11 +5152,11 @@ let lf = () => {
                                     threshold: 0,
                                     active: !0,
                                     children: e
-                                        ? (0, d.jsx)(aL, { ref: i, subscriptionTier: C, variant: "settings" })
-                                        : (0, d.jsx)(lm, {
+                                        ? (0, d.jsx)(aG, { ref: i, subscriptionTier: C, variant: "settings" })
+                                        : (0, d.jsx)(lx, {
                                               ref: i,
                                               subscriptionTier: C,
-                                              className: x()({ [lp.p7]: v, [lp.Pw]: v, [lp.Cv]: null != A }),
+                                              className: x()({ [lh.p7]: v, [lh.Pw]: v, [lh.Cv]: null != A }),
                                               isDarkMode: a,
                                           }),
                                 }),
@@ -5161,19 +5164,19 @@ let lf = () => {
                         }),
                     ],
                 }),
-                null != D && (0, d.jsx)("div", { className: lp.Ol, children: (0, d.jsx)(aX.I, { component: D }) }),
+                null != D && (0, d.jsx)("div", { className: lh.Ol, children: (0, d.jsx)(aY.I, { component: D }) }),
                 O,
-                e ? (0, d.jsx)(a4, { className: lp.OE }) : (0, d.jsx)(a8, { className: lp.B_ }),
+                e ? (0, d.jsx)(le, { className: lh.OE }) : (0, d.jsx)(a9, { className: lh.B_ }),
                 (0, d.jsx)("div", {
-                    className: lp.aC,
+                    className: lh.aC,
                     children: e
-                        ? (0, d.jsx)(aG.A, { variant: "settings" })
-                        : (0, d.jsx)(lx.A, { className: lp.JQ, hideCTAs: !0 }),
+                        ? (0, d.jsx)(aw.A, { variant: "settings" })
+                        : (0, d.jsx)(lg.A, { className: lh.JQ, hideCTAs: !0 }),
                 }),
-                (0, d.jsx)("div", { className: lp.hz }),
+                (0, d.jsx)("div", { className: lh.hz }),
                 e
-                    ? (0, d.jsx)(n5, { isVisible: h && f, subscriptionTier: C, variant: "settings" })
-                    : (0, d.jsx)(lr, { isVisible: h && f, subscriptionTier: C, isApplicationHome: !1 }),
+                    ? (0, d.jsx)(n8, { isVisible: h && f, subscriptionTier: C, variant: "settings" })
+                    : (0, d.jsx)(lc, { isVisible: h && f, subscriptionTier: C, isApplicationHome: !1 }),
                 (0, d.jsx)(w.L, {
                     innerRef: s,
                     onChange: (e) => {
@@ -5182,11 +5185,11 @@ let lf = () => {
                             (U.default.track(eZ.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: M }),
                             g(!0));
                     },
-                    children: (0, d.jsx)("div", { ref: s, className: lp._Z }),
+                    children: (0, d.jsx)("div", { ref: s, className: lh._Z }),
                 }),
                 (0, d.jsx)("img", {
                     src: nE,
-                    className: lp.Kw,
+                    className: lh.Kw,
                     width: 112,
                     height: 85,
                     alt: eI.intl.string(eI.t.X4IxWL),
@@ -5194,7 +5197,7 @@ let lf = () => {
             ],
         });
     },
-    lN = function (e) {
+    lA = function (e) {
         let { entrypoint: t } = e,
             i = (0, em.V)(),
             s = (0, eu.O)(),
@@ -5208,15 +5211,15 @@ let lf = () => {
             t)
         ) {
             case tN.tU.UserSettings:
-                return (0, d.jsx)(lf, {});
+                return (0, d.jsx)(lN, {});
             case tN.tU.ApplicationStoreHome:
-                return (0, d.jsx)(aF, {});
+                return (0, d.jsx)(aV, {});
             default:
                 return null;
         }
     };
-var lA = i(531296);
-let lj = function (e) {
+var lj = i(531296);
+let lb = function (e) {
     let { entrypoint: t = tN.tU.UserSettings } = e;
     (0, y.P)(_);
     let i = (0, T.Hp)(),
@@ -5276,10 +5279,10 @@ let lj = function (e) {
                 ? (0, d.jsx)(b.f5, { value: n, children: (0, d.jsx)(nT, { userId: c }) })
                 : z
                   ? null
-                  : (0, d.jsx)("div", { className: x()(lA.kL, lA.Lq), children: (0, d.jsx)(h.y, {}) });
+                  : (0, d.jsx)("div", { className: x()(lj.kL, lj.Lq), children: (0, d.jsx)(h.y, {}) });
     return null != Z
         ? !Y && !i && K && H
             ? Z
             : (0, d.jsxs)(d.Fragment, { children: [K && (0, d.jsx)(A.A, {}), Z] })
-        : (0, d.jsx)(b.f5, { value: n, children: (0, d.jsx)(lN, { entrypoint: t }) });
+        : (0, d.jsx)(b.f5, { value: n, children: (0, d.jsx)(lA, { entrypoint: t }) });
 };

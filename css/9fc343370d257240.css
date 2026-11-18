@@ -22,6 +22,7 @@
 
 .art__vwHFq {
     background: var(--background-surface-higher);
+    cursor: pointer;
     height: 280px;
     position: relative
 }
@@ -39,6 +40,31 @@
     -o-object-fit: cover;
     object-fit: cover;
     width: 100%
+}
+
+.artPlay__vwHFq {
+    align-items: center;
+    background-color: var(--control-overlay-primary-background-default);
+    border-radius: 50%;
+    color: var(--control-overlay-primary-text-default);
+    display: flex;
+    height: 72px;
+    inset: 0;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    width: 72px;
+    z-index: 1
+}
+
+.art__vwHFq:hover .artPlay__vwHFq {
+    background-color: var(--control-overlay-primary-background-hover);
+    color: var(--control-overlay-primary-text-hover)
+}
+
+.art__vwHFq:active .artPlay__vwHFq {
+    background-color: var(--control-overlay-primary-background-active);
+    color: var(--control-overlay-primary-text-active)
 }
 
 .content__vwHFq {
@@ -125,4 +151,4 @@
     }
 }
 
-/*# sourceMappingURL=c77c5d02f6e1d6bb.css.map*/
+/*# sourceMappingURL=9fc343370d257240.css.map*/

@@ -4,6 +4,7 @@ _.exports = {
     VN: "close__vwHFq",
     Qw: "art__vwHFq",
     d3: "artImage__vwHFq",
+    Ow: "artPlay__vwHFq",
     Qs: "content__vwHFq",
     Lv: "intro__vwHFq",
     DD: "title__vwHFq",
