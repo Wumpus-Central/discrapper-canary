@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 676896, Version Hash: a99a331beaf95dc82e410981beb30e1978e5ca13`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 676903, Version Hash: 07e0220534d25dd80ef615d94f00612c5c5fa2c1`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676896";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "676903";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -15910,7 +15910,7 @@ let pu = "isHideDevBanner",
                     className: td()(pc.Wz, pc.mr),
                     children: [
                         (0, v.jsx)(pd, { className: pc.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676896" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "676903" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -16233,7 +16233,12 @@ function pz(e) {
                             (0, v.jsx)(rB.E, { variant: "body-sm/normal", color: "text-muted", children: a }),
                         ],
                     }),
-                    (0, v.jsx)(pF.A, { subscriptionTier: l1.pe.TIER_2, onClick: pB.eM, fullWidth: !0 }),
+                    (0, v.jsx)(pF.A, {
+                        subscriptionTier: l1.pe.TIER_2,
+                        onClick: pB.eM,
+                        defaultTextOverride: tN.intl.string(tN.t.pj0XBN),
+                        fullWidth: !0,
+                    }),
                 ],
             });
         },

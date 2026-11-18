@@ -1053,7 +1053,7 @@ function nS(e) {
                   }),
               ],
               action: {
-                  text: Q.intl.string(Q.t.RzWDqY),
+                  text: Q.intl.string(np.default.AshjCb),
                   variant: "secondary",
                   onClick: function () {
                       (s(el.i.TAKE_ACTION), (0, nh.p)());

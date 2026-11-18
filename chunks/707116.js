@@ -9,26 +9,26 @@ var i = n(477900),
     d = n(625903),
     f = n(442433),
     g = n(253932),
-    p = n(780964),
-    m = n(766075),
+    m = n(780964),
+    p = n(766075),
     b = n(532624),
     h = n(350535),
     x = n(489496),
     y = n(464132),
-    k = n(270607);
+    j = n(270607);
 n(696016);
-var I = n(652215),
-    j = n(683825),
+var k = n(652215),
+    I = n(683825),
     P = n(792996),
     S = n(97580);
 let v = [
-    { mode: "off", message: j.default["uO/2T5"] },
-    { mode: "manual", message: j.default.bBlUzK },
-    { mode: "auto", message: j.default["4gzBi+"] },
+    { mode: "off", message: I.default["uO/2T5"] },
+    { mode: "manual", message: I.default.bBlUzK },
+    { mode: "auto", message: I.default["4gzBi+"] },
 ];
 function A() {
     return (0, a.bG)([b.Ay], () =>
-        (0, h.dI)(b.Ay.getKeybindForAction(I.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, h.OH)("alt+c"), !0),
+        (0, h.dI)(b.Ay.getKeybindForAction(k.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, h.OH)("alt+c"), !0),
     );
 }
 function C(t) {
@@ -48,32 +48,32 @@ n.d(
                 e = A();
             switch (t) {
                 case "off":
-                    return P.intl.string(j.default["uO/2T5"]);
+                    return P.intl.string(I.default["uO/2T5"]);
                 case "manual":
                     return e.length > 0
-                        ? P.intl.formatToPlainString(j.default.pGVUxA, { shortcut: e })
-                        : P.intl.string(j.default.ms4ibY);
+                        ? P.intl.formatToPlainString(I.default.pGVUxA, { shortcut: e })
+                        : P.intl.string(I.default.ms4ibY);
                 case "auto":
                     return e.length > 0
-                        ? P.intl.formatToPlainString(j.default.VfytEu, { shortcut: e })
-                        : P.intl.string(j.default["6ZXEjB"]);
+                        ? P.intl.formatToPlainString(I.default.VfytEu, { shortcut: e })
+                        : P.intl.string(I.default["6ZXEjB"]);
             }
         },
         default: function (t) {
             let { onSelect: e, onClose: n = f.Z_ } = t,
                 { value: a, onChange: r } = (0, y.U)(),
-                { isLocked: s, openRoadblock: b } = (0, k.B)("ClipsCaptureModeMenu"),
+                { isLocked: s, openRoadblock: b } = (0, j.B)("ClipsCaptureModeMenu"),
                 h = g.Q$.useSetting(),
-                I = A(),
-                S = I.length > 0,
+                k = A(),
+                S = k.length > 0,
                 _ = s("manual"),
-                T = l.useMemo(
+                X = l.useMemo(
                     () =>
                         _
                             ? () => null
                             : (function (t) {
                                   function e(e) {
-                                      (e.stopPropagation(), t(), (0, m.openUserSettings)(p.X.CLIPS_MANUAL_KEYBIND));
+                                      (e.stopPropagation(), t(), (0, p.openUserSettings)(m.X.CLIPS_MANUAL_KEYBIND));
                                   }
                                   function n(t) {
                                       ("Enter" === t.key || " " === t.key) && (t.preventDefault(), e(t));
@@ -87,16 +87,16 @@ n.d(
                               })(n),
                     [_, n],
                 ),
-                X = {
+                T = {
                     off: null,
                     manual: S
-                        ? P.intl.format(j.default.QWyKXz, { keybind: I, editKeybindHook: T })
-                        : P.intl.format(j.default["Sb+V+3"], { editKeybindHook: T }),
+                        ? P.intl.format(I.default.QWyKXz, { keybind: k, editKeybindHook: X })
+                        : P.intl.format(I.default["Sb+V+3"], { editKeybindHook: X }),
                     auto: S
-                        ? P.intl.formatToPlainString(j.default.BvKcH9, { keybind: I })
-                        : P.intl.string(j.default.VWJbxP),
+                        ? P.intl.formatToPlainString(I.default.BvKcH9, { keybind: k })
+                        : P.intl.string(I.default.VWJbxP),
                 },
-                B = P.intl.string(j.default.eIX9be);
+                B = P.intl.string(I.default.eIX9be);
             return (0, i.jsxs)(c.W, {
                 navId: "clips-capture-mode",
                 "aria-label": B,
@@ -116,7 +116,7 @@ n.d(
                                     group: "clips-capture-mode",
                                     ...((e = P.intl.string(o)),
                                     c ? { void_label: (0, i.jsx)(C, { label: e }) } : { label: e }),
-                                    subtext: X[l],
+                                    subtext: T[l],
                                     checked: a === l,
                                     action: () => (c ? void (n(), b()) : r(l)),
                                 },
@@ -127,8 +127,8 @@ n.d(
                     (0, i.jsx)(u.rX, {
                         children: (0, i.jsx)(u.fP, {
                             id: "clips-capture-mode-voice",
-                            label: P.intl.string(j.default["IxZyA+"]),
-                            subtext: P.intl.string(j.default.t23RLK),
+                            label: P.intl.string(I.default["IxZyA+"]),
+                            subtext: P.intl.string(I.default.GjNXmw),
                             checked: h,
                             action: (t) => (0, x.eQ)({ allowVoiceRecording: t }),
                         }),
@@ -140,7 +140,7 @@ n.d(
                                 label: P.intl.string(P.t.J1hsY2),
                                 iconLeft: d.SettingsIcon,
                                 leadingAccessory: { type: "icon", icon: d.SettingsIcon },
-                                action: () => (0, m.openUserSettings)(p.X.CLIPS_PANEL),
+                                action: () => (0, p.openUserSettings)(m.X.CLIPS_PANEL),
                             }),
                         }),
                 ],
