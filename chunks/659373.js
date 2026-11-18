@@ -14,8 +14,8 @@ n.d(
         K: function (e, t) {
             let { pendingDisplayNameStyles: n } = (0, s.B0)(e),
                 g = (0, r.A)({ userId: e.id, pendingDisplayNameStyles: n, ignoreDisabledStylesSetting: !0 }),
-                f = null != g && (0, d.n2)(g),
-                [m, h] = i.useState(!1),
+                m = null != g && (0, d.n2)(g),
+                [f, h] = i.useState(!1),
                 p = i.useRef(!1),
                 x = i.useRef(!0);
             (0, l.l0)(() => {
@@ -27,8 +27,8 @@ n.d(
                 (0, a.p)({ displayNameStyles: null == e || (0, d.n2)(e) ? null : e });
             }, []);
             return {
-                isApplied: f,
-                isEnrolling: m,
+                isApplied: m,
+                isEnrolling: f,
                 applyCampaignDisplayNameStyle: i.useCallback(async () => {
                     if (p.current) return !1;
                     ((p.current = !0), h(!0));

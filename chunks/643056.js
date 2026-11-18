@@ -1,17 +1,17 @@
-let r = (0, n(945810).mj)({
+let n = (0, l(945810).mj)({
     name: "2026-08-badge-management",
     kind: "user",
     defaultConfig: { enabled: !1, tenureBadgeHideable: !1 },
     variations: { 1: { enabled: !0, tenureBadgeHideable: !0 }, 2: { enabled: !0, tenureBadgeHideable: !1 } },
 });
-n.d(
+l.d(
     t,
     {},
     {
-        A: r,
+        A: n,
         d: function (e) {
             let { location: t } = e;
-            return r.useConfig({ location: t }).enabled;
+            return n.useConfig({ location: t }).enabled;
         },
     },
 );

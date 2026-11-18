@@ -18,15 +18,15 @@ var l = n(477900),
     j = n(643612),
     I = n(207133),
     A = n(302031),
-    N = n(734057),
-    v = n(129230),
+    v = n(734057),
+    N = n(129230),
     y = n(515718),
     S = n(448381),
     E = n(838541),
     _ = n(652215),
-    P = n(792996),
-    L = n(645970),
-    M = n(562146);
+    M = n(792996),
+    P = n(645970),
+    L = n(562146);
 function b(e) {
     let {
             mimeType: t,
@@ -45,19 +45,19 @@ function b(e) {
         null != t && I(Math.floor((t - 8) / 32));
     });
     let A = "CLIP" === g && C,
-        N = [];
+        v = [];
     (null == r ||
         A ||
-        N.push(
+        v.push(
             (0, l.jsx)(
                 o.m,
                 {
-                    text: P.intl.string(P.t.Y8ujqr),
+                    text: M.intl.string(M.t.Y8ujqr),
                     children: (0, l.jsx)(u.D, {
-                        className: M.HF,
+                        className: L.HF,
                         focusProps: { offset: 2 },
                         onClick: r,
-                        "aria-label": P.intl.string(P.t.Y8ujqr),
+                        "aria-label": M.intl.string(M.t.Y8ujqr),
                         children: (0, l.jsx)(d.PencilIcon, {
                             size: "custom",
                             color: "currentColor",
@@ -70,16 +70,16 @@ function b(e) {
             ),
         ),
         null != i &&
-            N.push(
+            v.push(
                 (0, l.jsx)(
                     o.m,
                     {
-                        text: P.intl.string(P.t["/XT3ij"]),
+                        text: M.intl.string(M.t["/XT3ij"]),
                         children: (0, l.jsx)(u.D, {
-                            className: a()(M.HF, L.GC),
+                            className: a()(L.HF, P.GC),
                             focusProps: { offset: 2 },
                             onClick: i,
-                            "aria-label": P.intl.string(P.t["0+xZH0"]),
+                            "aria-label": M.intl.string(M.t["0+xZH0"]),
                             children: (0, l.jsx)(c.TrashIcon, {
                                 size: "custom",
                                 color: "currentColor",
@@ -93,16 +93,16 @@ function b(e) {
             ),
         m &&
             !A &&
-            N.push(
+            v.push(
                 (0, l.jsx)(
                     o.m,
                     {
-                        text: P.intl.string(P.t["1WjMbC"]),
+                        text: M.intl.string(M.t["1WjMbC"]),
                         children: (0, l.jsx)(p.A, {
                             target: "_blank",
                             rel: "noreferrer noopener",
-                            className: M.HF,
-                            iconClassName: L.qG,
+                            className: L.HF,
+                            iconClassName: P.qG,
                             focusProps: { offset: 2 },
                             href: n,
                             mimeType: t,
@@ -111,15 +111,15 @@ function b(e) {
                     "download",
                 ),
             ));
-    let v = Math.max(0, N.length - j);
+    let N = Math.max(0, v.length - j);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            j > 0 && N.length > 0 && (0, l.jsx)("div", { className: a()(M.aq, { [M.XE]: !h }), children: N.slice(v) }),
-            (0, l.jsx)("div", { ref: f, className: M.St }),
+            j > 0 && v.length > 0 && (0, l.jsx)("div", { className: a()(L.aq, { [L.XE]: !h }), children: v.slice(N) }),
+            (0, l.jsx)("div", { ref: f, className: L.St }),
         ],
     });
 }
-function O(e) {
+function T(e) {
     let {
             message: t,
             item: n,
@@ -136,9 +136,9 @@ function O(e) {
             onPlay: f,
             renderImageComponent: A,
             renderVideoComponent: S,
-            renderAudioComponent: M,
-            renderPlaintextFilePreview: O,
-            renderGenericFileComponent: T,
+            renderAudioComponent: L,
+            renderPlaintextFilePreview: T,
+            renderGenericFileComponent: O,
             renderVisualPlaceholderComponent: w,
             className: R,
             imgContainerClassName: U,
@@ -159,7 +159,7 @@ function O(e) {
         { width: Q, height: Z, spoiler: $, type: J, contentType: ee } = n,
         [et, en] = s.useState(!1),
         el = t.getChannelId(),
-        es = N.A.getChannel(el),
+        es = v.A.getChannel(el),
         ei = (0, I.A)(el),
         ea = s.useMemo(() => (null != ee && -1 !== ee.indexOf("/") ? ee.split("/") : ["unknown", "unknown"]), [ee]),
         er = !1;
@@ -175,7 +175,7 @@ function O(e) {
             d(n);
         }, [n, d]),
         ed = s.useCallback(() => {
-            v.default.track(_.HAw.IMAGE_HOVERED, {
+            N.default.track(_.HAw.IMAGE_HOVERED, {
                 guild_id: es?.guild_id,
                 channel_id: es?.id,
                 image_recommendations_shown: !1,
@@ -201,10 +201,10 @@ function O(e) {
             return (
                 a &&
                 (0, l.jsx)(u.D, {
-                    className: $ ? L.yR : L.Yg,
+                    className: $ ? P.yR : P.Yg,
                     focusProps: { offset: { bottom: 4 } },
                     onClick: () => r(n),
-                    "aria-label": P.intl.string(P.t["0+xZH0"]),
+                    "aria-label": M.intl.string(M.t["0+xZH0"]),
                     children: (0, l.jsx)(m.XSmallIcon, { size: "xs", color: "currentColor" }),
                 })
             );
@@ -294,7 +294,7 @@ function O(e) {
                 useFullWidth: V,
             });
         case "AUDIO":
-            return (0, l.jsx)(M, {
+            return (0, l.jsx)(L, {
                 item: n,
                 message: t,
                 className: R,
@@ -306,7 +306,7 @@ function O(e) {
                 onPlay: f,
             });
         case "PLAINTEXT_PREVIEW":
-            return (0, l.jsx)(O, {
+            return (0, l.jsx)(T, {
                 item: n,
                 message: t,
                 className: R,
@@ -315,7 +315,7 @@ function O(e) {
                 renderAdjacentContent: ec,
             });
         case "OTHER":
-            return (0, l.jsx)(T, {
+            return (0, l.jsx)(O, {
                 item: n,
                 message: t,
                 className: R,
@@ -345,13 +345,13 @@ n.d(
                 } = e,
                 { width: h, height: x, type: p } = n,
                 j = r(n, (0, f.P)(i)),
-                [I, N] = s.useState(j),
-                [v, _] = s.useState(null != j);
-            j !== I && (N(j), _(null != j));
-            let P = (0, g.qZ)(j),
-                M = u === E.d.MOSAIC,
-                b = !M && ((null != h && h < 200) || (null != x && x < 50)),
-                T = "IMAGE" === p || "VIDEO" === p || "CLIP" === p,
+                [I, v] = s.useState(j),
+                [N, _] = s.useState(null != j);
+            j !== I && (v(j), _(null != j));
+            let M = (0, g.qZ)(j),
+                L = u === E.d.MOSAIC,
+                b = !L && ((null != h && h < 200) || (null != x && x < 50)),
+                O = "IMAGE" === p || "VIDEO" === p || "CLIP" === p,
                 w = (0, S.Xg)(p),
                 R = d && null != j && (0, g.j8)(h, x),
                 [U, W] = s.useState(!1);
@@ -363,19 +363,19 @@ n.d(
             }
             function D() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                return (0, l.jsx)(O, {
+                return (0, l.jsx)(T, {
                     ...m,
                     item: n,
                     message: i,
                     getObscureReason: r,
                     isSingleMosaicItem: d,
                     hiddenSpoilers: e,
-                    className: a()(t, L.bq, {
-                        [L.cd]: v && !b,
-                        [L.rP]: v && j === C.Oc.SPOILER,
-                        [L.xu]: v && null != j && C._K.has(j),
-                        [L.sC]: v && e,
-                        [L.mG]: v && b,
+                    className: a()(t, P.bq, {
+                        [P.cd]: N && !b,
+                        [P.rP]: N && j === C.Oc.SPOILER,
+                        [P.xu]: N && null != j && C._K.has(j),
+                        [P.sC]: N && e,
+                        [P.mG]: N && b,
                     }),
                     focusable: !e,
                     mediaLayoutType: u,
@@ -383,12 +383,12 @@ n.d(
                     isVisualMediaType: w,
                     onVideoControlsShow: k,
                     onVideoControlsHide: H,
-                    forcePlaceholder: P && v,
+                    forcePlaceholder: M && N,
                 });
             }
             return (0, l.jsx)("div", {
                 style: c ? { minWidth: 0, width: `${m.maxWidth}px` } : void 0,
-                className: a()(L.wO, { [L.xV]: T, [L.D$]: o, [L.UI]: M, [L.JP]: M && w }),
+                className: a()(P.wO, { [P.xV]: O, [P.D$]: o, [P.UI]: L, [P.JP]: L && w }),
                 children:
                     null != j
                         ? (0, l.jsx)(A.Ay, {
@@ -396,7 +396,7 @@ n.d(
                               inline: b,
                               reason: j,
                               isSingleMosaicItem: d,
-                              obscured: v,
+                              obscured: N,
                               containerStyles: (function (e, t, n) {
                                   if (!t) return;
                                   let l = e.width;
@@ -415,8 +415,8 @@ n.d(
                                       height: "100%",
                                       justifySelf: "auto",
                                   };
-                              })(n, T, u),
-                              obscurityControlClassName: a()({ [L.yi]: "VIDEO" === p && d && !v && U }),
+                              })(n, O, u),
+                              obscurityControlClassName: a()({ [P.yi]: "VIDEO" === p && d && !N && U }),
                               onToggleObscurity: () => _((e) => !e),
                               children: (e) => D(e),
                           })

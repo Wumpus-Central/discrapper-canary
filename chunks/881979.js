@@ -1,4 +1,4 @@
-(s.d(t, { QB: () => I, _k: () => D, bh: () => x, aO: () => g }), s(582128));
+(s.d(e, { QB: () => I, _k: () => D, bh: () => x, aO: () => g }), s(582128));
 var n = s(646514),
     i = s(628284),
     r = s(695366),
@@ -61,20 +61,20 @@ function I() {
     };
 }
 function g() {
-    let e = (0, N.K)();
-    return (0, h.v)() ? u.intl.formatToPlainString(m[e.state], { hook: (e) => e }) : u.intl.string(u.t.ZTNur7);
+    let t = (0, N.K)();
+    return (0, h.v)() ? u.intl.formatToPlainString(m[t.state], { hook: (t) => t }) : u.intl.string(u.t.ZTNur7);
 }
 function x() {
-    let e = (0, N.K)();
+    let t = (0, N.K)();
     if (!(0, h.v)()) return u.intl.string(u.t["9m2Bkk"]);
-    switch (e.state) {
+    switch (t.state) {
         case d.PN.ALL_GOOD:
             return u.intl.format(u.t.pEdBD4, {
-                termsOfService: (e) => {
-                    (e.stopPropagation(), (0, o.A)(E.d$.TOS_LINK));
+                termsOfService: (t) => {
+                    (t.stopPropagation(), (0, o.A)(E.d$.TOS_LINK));
                 },
-                communityGuidelines: (e) => {
-                    (e.stopPropagation(), (0, o.A)(E.d$.COMMUNITY_GUIDELINES));
+                communityGuidelines: (t) => {
+                    (t.stopPropagation(), (0, o.A)(E.d$.COMMUNITY_GUIDELINES));
                 },
             });
         case d.PN.LIMITED:
@@ -116,6 +116,6 @@ let _ = {
     },
     A = { color: n.A.colors.ICON_MUTED, backgroundColor: n.A.colors.BACKGROUND_MOD_MUTED, Icon: c.CircleQuestionIcon };
 function D() {
-    let e = (0, N.K)();
-    return (0, h.v)() ? _[e.state] : A;
+    let t = (0, N.K)();
+    return (0, h.v)() ? _[t.state] : A;
 }

@@ -1,7 +1,7 @@
 var r,
-    i = t(998218);
+    n = t(998218);
 t(652215);
-var n = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
+var i = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
 let s = {
     YouTube: {
         params: { autoplay: "1", auto_play: "1", pageType: "2" },
@@ -35,24 +35,24 @@ t.d(
     {},
     {
         PE: "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
-        mt: n,
+        mt: i,
         x7: function (e, l, t) {
             let r = s[l],
-                n = i.A.toURLSafe(e ?? "");
-            if (null === n) return "";
-            if (null == r) return n.toString();
-            if (null != r.stripParams) for (let e of r.stripParams) n.searchParams.delete(e);
-            if (null != r.params) for (let e in r.params) n.searchParams.set(e, r.params[e]);
+                i = n.A.toURLSafe(e ?? "");
+            if (null === i) return "";
+            if (null == r) return i.toString();
+            if (null != r.stripParams) for (let e of r.stripParams) i.searchParams.delete(e);
+            if (null != r.params) for (let e in r.params) i.searchParams.set(e, r.params[e]);
             if (null != r.appendParams)
-                for (let e in r.appendParams) for (let l of r.appendParams[e]) n.searchParams.append(e, l);
+                for (let e in r.appendParams) for (let l of r.appendParams[e]) i.searchParams.append(e, l);
             if (null != r.dynamicParams) {
                 let e = r.dynamicParams(t);
                 for (let l in e) {
                     let t = e[l];
-                    null != t && n.searchParams.set(l, t);
+                    null != t && i.searchParams.set(l, t);
                 }
             }
-            return n.toString();
+            return i.toString();
         },
     },
 );

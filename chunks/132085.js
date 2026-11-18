@@ -213,11 +213,11 @@ function K(e) {
         ? (0, l.jsx)(r.D, { ...a, children: i })
         : (0, l.jsx)(r.D, { ...a, children: (0, l.jsx)(d.D, { onClick: s, className: X.sd, children: i }) });
 }
-function W(e) {
+function V(e) {
     let { user: t, guildId: n, channelId: i, id: a } = e;
     return (0, l.jsx)(o.A, { id: a, children: y.intl.format(y.t.TM0XDY, { name: p.Ay.getName(n, i, t) }) });
 }
-function V(e) {
+function W(e) {
     let { text: t, className: n } = e;
     return (0, l.jsx)(c.E, { variant: "body-sm/normal", color: "text-muted", className: n, children: t });
 }
@@ -231,8 +231,8 @@ function Y(e) {
               "aria-labelledby": s,
               children: [
                   (0, l.jsx)(u.QuoteIcon, { size: "xxs", color: g.A.colors.ICON_MUTED, className: X.Ls }),
-                  (0, l.jsx)(W, { user: n, guildId: i, channelId: a, id: s }),
-                  (0, l.jsx)(V, { text: t }),
+                  (0, l.jsx)(V, { user: n, guildId: i, channelId: a, id: s }),
+                  (0, l.jsx)(W, { text: t }),
               ],
           });
 }
@@ -254,13 +254,13 @@ function B(e) {
         p = i.useCallback(() => {
             u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: d });
         }, [d, u]),
-        A = (0, l.jsx)("div", { children: (0, l.jsx)(V, { text: h ? f : g, className: s()(X.qC, !h && X.qf) }) });
+        A = (0, l.jsx)("div", { children: (0, l.jsx)(W, { text: h ? f : g, className: s()(X.qC, !h && X.qf) }) });
     return (0, l.jsxs)("div", {
         className: s()(F.kL, X.Im),
         role: "group",
         "aria-labelledby": c,
         children: [
-            (0, l.jsx)(W, { user: n, guildId: a, channelId: r, id: c }),
+            (0, l.jsx)(V, { user: n, guildId: a, channelId: r, id: c }),
             (0, l.jsx)(m.w, {
                 value: f,
                 onCommit: I,
@@ -316,7 +316,7 @@ function z(e) {
             hideTooltip: !0,
         });
     }
-    function W() {
+    function V() {
         return (0, l.jsxs)("div", {
             ref: h,
             className: s()(X.Nr, f),
@@ -356,7 +356,7 @@ function z(e) {
               widgetType: o,
               game: d,
               getWidth: () => h.current?.offsetWidth,
-              children: W(),
+              children: V(),
           })
-        : W();
+        : V();
 }

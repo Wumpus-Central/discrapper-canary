@@ -1,36 +1,36 @@
-n.d(t, { P: () => u, C: () => s });
-var r = n(582128),
-    l = n(646514),
-    a = n(515718),
-    i = n(998304);
-let u = l.A.unsafe_rawColors.NEUTRAL_35.resolve({ saturation: 1 }).hex();
+l.d(t, { P: () => u, C: () => s });
+var n = l(582128),
+    r = l(646514),
+    a = l(515718),
+    i = l(998304);
+let u = r.A.unsafe_rawColors.NEUTRAL_35.resolve({ saturation: 1 }).hex();
 function s(e) {
-    let [t, n] = r.useState(null);
-    return (r.useEffect(() => {
+    let [t, l] = n.useState(null);
+    return (n.useEffect(() => {
         if (null == e) return;
         let t = !1;
         return (
             !(async function (e) {
                 try {
-                    let r,
-                        l,
+                    let n,
+                        r,
                         s = await (0, a.S4)(e),
                         o =
                             (null != s
-                                ? ((l =
-                                      (r = s.filter((e) => {
-                                          let [t, n, r] = e,
-                                              { lightness: l } = (0, i.IB)(t, n, r);
-                                          return l > 0.15 && l < 0.85;
+                                ? ((r =
+                                      (n = s.filter((e) => {
+                                          let [t, l, n] = e,
+                                              { lightness: r } = (0, i.IB)(t, l, n);
+                                          return r > 0.15 && r < 0.85;
                                       })).find((e) => {
-                                          let [t, n, r] = e;
-                                          return (0, i.IB)(t, n, r).saturation > 0.3;
-                                      }) ?? r[0]),
-                                  null != l ? (0, i.Ob)(l[0], l[1], l[2]) : null)
+                                          let [t, l, n] = e;
+                                          return (0, i.IB)(t, l, n).saturation > 0.3;
+                                      }) ?? n[0]),
+                                  null != r ? (0, i.Ob)(r[0], r[1], r[2]) : null)
                                 : null) ?? u;
-                    t || n({ url: e, color: o });
+                    t || l({ url: e, color: o });
                 } catch {
-                    t || n({ url: e, color: u });
+                    t || l({ url: e, color: u });
                 }
             })(e),
             () => {

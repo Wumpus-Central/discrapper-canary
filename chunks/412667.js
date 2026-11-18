@@ -66,15 +66,15 @@ function d(l, e, n) {
                 t.useMemo(() => (null != d && null != p ? { guildId: d, channelId: p } : null), [d, p])
             );
         })(l, e, n),
-        h = d ? "launch" : null != y ? "open" : null,
-        A = t.useCallback(
+        A = d ? "launch" : null != y ? "open" : null,
+        m = t.useCallback(
             () =>
-                "launch" === h
+                "launch" === A
                     ? g()
-                    : "open" !== h || null == y
+                    : "open" !== A || null == y
                       ? Promise.resolve(!1)
                       : ((0, a.A)({ applicationId: l, channel: y }), Promise.resolve(!0)),
-            [h, g, l, y],
+            [A, g, l, y],
         );
-    return { type: h, launching: f, launchFailed: p, run: A };
+    return { type: A, launching: f, launchFailed: p, run: m };
 }

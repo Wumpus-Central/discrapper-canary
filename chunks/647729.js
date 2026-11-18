@@ -1,92 +1,92 @@
-var r = n(477900),
-    l = n(582128),
-    a = n(503698),
-    i = n.n(a),
-    u = n(855986),
-    s = n(765178),
-    o = n(943654),
-    c = n(775602),
-    d = n(998304),
-    m = n(253400),
-    _ = n(988341),
-    f = n(873571),
-    g = n(97192),
-    p = n(193579);
-let b = m.Ay.getEnableHardwareAcceleration();
+var n = l(477900),
+    r = l(582128),
+    a = l(503698),
+    i = l.n(a),
+    u = l(855986),
+    s = l(765178),
+    o = l(943654),
+    d = l(775602),
+    c = l(998304),
+    m = l(253400),
+    _ = l(988341),
+    f = l(873571),
+    g = l(97192),
+    b = l(193579);
+let p = m.Ay.getEnableHardwareAcceleration();
 function x(e) {
     return (0, f.ux)(e) + 1e3;
 }
-n.d(
+l.d(
     t,
     {},
     {
         $: function (e) {
-            let { isLevelUp: t, startDelay: n = 200, isMotionSkipped: r = !1 } = e,
-                l = r ? 0 : n + x(t);
-            return { "--custom-badge-unlock-reveal": `${l}ms` };
+            let { isLevelUp: t, startDelay: l = 200, isMotionSkipped: n = !1 } = e,
+                r = n ? 0 : l + x(t);
+            return { "--custom-badge-unlock-reveal": `${r}ms` };
         },
         A: function (e) {
             let {
                     badge: t,
-                    previousTierKey: n,
+                    previousTierKey: l,
                     canStart: a,
                     size: m = "large",
-                    startDelay: y = 200,
-                    onStart: v,
+                    startDelay: v = 200,
+                    onStart: y,
                     onEnd: h,
                 } = e,
-                T = (0, u.bG)([c.Ay], () => c.Ay.useReducedMotion),
-                { previousTier: S, currentTier: A } = (0, f.VR)(t, n),
-                E = null != S,
-                N = y + x(E),
-                [C, k] = l.useState(!1),
-                [w, R] = l.useState(!1),
-                [j, U] = l.useState(!1),
-                [$, P] = l.useState(!1),
-                H = b && !T,
-                O = w && H && !$,
-                F = (0, g.C)((0, f.AO)(t, A, !1)) ?? g.P,
-                M = l.useMemo(() => ({ fill: (0, d.E2)(F) }), [F]),
-                I = l.useCallback(
+                A = (0, u.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                { previousTier: N, currentTier: T } = (0, f.VR)(t, l),
+                E = null != N,
+                S = v + x(E),
+                [C, k] = r.useState(!1),
+                [R, j] = r.useState(!1),
+                [w, U] = r.useState(!1),
+                [$, P] = r.useState(!1),
+                M = p && !A,
+                H = R && M && !$,
+                O = (0, g.C)((0, f.AO)(t, T, !1)) ?? g.P,
+                F = r.useMemo(() => ({ fill: (0, c.E2)(O) }), [O]),
+                I = r.useCallback(
                     (e) => {
-                        (k(!0), P(e), v?.(e));
+                        (k(!0), P(e), y?.(e));
                     },
-                    [v],
+                    [y],
                 );
             return (
-                l.useEffect(() => {
-                    C && s.O.announce((0, _.kD)(t, n), "polite");
+                r.useEffect(() => {
+                    C && s.O.announce((0, _.kD)(t, l), "polite");
                 }, [C]),
-                l.useEffect(() => {
+                r.useEffect(() => {
                     if (!C) return;
-                    let e = setTimeout(() => R(!0), $ ? 0 : N);
+                    let e = setTimeout(() => j(!0), $ ? 0 : S);
                     return () => clearTimeout(e);
-                }, [$, C, N]),
-                l.useEffect(() => {
+                }, [$, C, S]),
+                r.useEffect(() => {
                     if (!C) return;
-                    let e = y + (0, f.ux)(E) + 1500,
-                        t = setTimeout(() => U(!0), $ || T ? 0 : e);
+                    let e = v + (0, f.ux)(E) + 1500,
+                        t = setTimeout(() => U(!0), $ || A ? 0 : e);
                     return () => clearTimeout(t);
-                }, [E, $, T, C, y]),
-                l.useEffect(() => {
-                    j && h?.();
-                }, [j]),
-                (0, r.jsxs)("div", {
-                    className: p.Tl,
+                }, [E, $, A, C, v]),
+                r.useEffect(() => {
+                    w && h?.();
+                }, [w]),
+                (0, n.jsxs)("div", {
+                    className: b.Tl,
                     "aria-hidden": !0,
                     children: [
-                        H &&
-                            (0, r.jsx)(o.x, {
+                        M &&
+                            (0, n.jsx)(o.x, {
                                 artboard: "Web",
-                                autoplay: O,
-                                dataBinding: M,
-                                className: i()(p.U6, "small" === m && p.Pv, !O && p.qJ),
+                                autoplay: H,
+                                dataBinding: F,
+                                className: i()(b.U6, "small" === m && b.Pv, !H && b.qJ),
                             }),
-                        (0, r.jsx)(f.Ay, {
+                        (0, n.jsx)(f.Ay, {
                             badge: t,
-                            previousTierKey: n,
+                            previousTierKey: l,
                             size: m,
-                            startDelay: y,
+                            startDelay: v,
                             canStart: a,
                             onStart: I,
                         }),

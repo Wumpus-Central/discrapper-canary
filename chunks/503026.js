@@ -9,8 +9,8 @@ var l = n(855986),
     d = n(1659),
     c = n(166005),
     g = n(900179),
-    f = n(518477),
-    m = n(652215),
+    m = n(518477),
+    f = n(652215),
     h = n(792996);
 n.d(
     t,
@@ -23,13 +23,13 @@ n.d(
                 I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
                 v = I?.roles,
                 j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
-                [b] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
+                [b] = (0, l.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
             if (null == A) return null;
             let y = b && null != I;
             return 0 !== j.length || y
                 ? (0, i.jsx)(g.A, {
                       heading: h.intl.string(h.t["LPJmL/"]),
-                      scrollTargetId: f.bk.ROLES,
+                      scrollTargetId: m.bk.ROLES,
                       ...p,
                       children: (0, i.jsx)(c.YR, {
                           userId: t,

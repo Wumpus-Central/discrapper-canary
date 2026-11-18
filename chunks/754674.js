@@ -1,23 +1,23 @@
-function l(e, t) {
+function i(e, t) {
     return e.position.order - t.position.order;
 }
-function i(e) {
+function r(e) {
     return [
         e
             .filter((e) => {
                 let { position: t } = e;
                 return 1 !== t.column;
             })
-            .sort(l),
+            .sort(i),
         e
             .filter((e) => {
                 let { position: t } = e;
                 return 1 === t.column;
             })
-            .sort(l),
+            .sort(i),
     ];
 }
-function r(e) {
+function a(e) {
     return e.flatMap((e, t) =>
         e.map((e, n) =>
             e.position.column === t && e.position.order === n ? e : { ...e, position: { column: t, order: n } },
@@ -28,58 +28,58 @@ n.d(
     t,
     {},
     {
-        Gm: function (e, t, n, l) {
-            let a = e.find((e) => {
+        Gm: function (e, t, n, i) {
+            let l = e.find((e) => {
                 let { id: n } = e;
                 return n === t;
             });
-            if (null == a) return null;
-            let s = i(e),
-                o = [
-                    s[0].filter((e) => {
+            if (null == l) return null;
+            let d = r(e),
+                s = [
+                    d[0].filter((e) => {
                         let { id: n } = e;
                         return n !== t;
                     }),
-                    s[1].filter((e) => {
+                    d[1].filter((e) => {
                         let { id: n } = e;
                         return n !== t;
                     }),
                 ],
-                u = o[+(1 === n)];
-            return (u.splice(Math.max(0, Math.min(l, u.length)), 0, a), r(o));
+                u = s[+(1 === n)];
+            return (u.splice(Math.max(0, Math.min(i, u.length)), 0, l), a(s));
         },
-        O6: function (e, t, n, l) {
-            let i =
-                    null == l
+        O6: function (e, t, n, i) {
+            let r =
+                    null == i
                         ? e
                         : e.filter((e) => {
                               let { id: t } = e;
-                              return t !== l;
+                              return t !== i;
                           }),
-                r = (
-                    null == l
+                a = (
+                    null == i
                         ? t
                         : t.filter((e) => {
                               let { id: t } = e;
-                              return t !== l;
+                              return t !== i;
                           })
                 )[n];
-            if (null == r) return i.length;
-            let a = i.findIndex((e) => {
+            if (null == a) return r.length;
+            let l = r.findIndex((e) => {
                 let { id: t } = e;
-                return t === r.id;
+                return t === a.id;
             });
-            return -1 === a ? i.length : a;
+            return -1 === l ? r.length : l;
         },
         QD: function (e, t, n) {
-            let l = i(e),
-                a = l[+(n?.column === 1)],
-                s = n?.index ?? a.length;
-            return (a.splice(Math.max(0, Math.min(s, a.length)), 0, t), r(l));
+            let i = r(e),
+                l = i[+(n?.column === 1)],
+                d = n?.index ?? l.length;
+            return (l.splice(Math.max(0, Math.min(d, l.length)), 0, t), a(i));
         },
-        Rl: i,
+        Rl: r,
         W$: function (e) {
-            return r(i(e));
+            return a(r(e));
         },
     },
 );

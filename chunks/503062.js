@@ -8,8 +8,8 @@ var i = n(477900),
     d = n(939249),
     c = n(442433),
     g = n(297413),
-    f = n(714114),
-    m = n(342312),
+    m = n(714114),
+    f = n(342312),
     h = n(178418),
     p = n(87664),
     x = n(449582),
@@ -31,15 +31,15 @@ n.d(
     {},
     {
         A: function (e) {
-            let { user: t, status: r, guildId: o, channelId: b, onSelect: R } = e,
-                { themeType: O } = (0, C.E)(),
+            let { user: t, status: r, guildId: o, channelId: b, onSelect: O } = e,
+                { themeType: R } = (0, C.E)(),
                 L = l.useMemo(() => t.isNonUserBot() || (0, h.c)(t, b), [t, b]),
                 { activities: _, isMobileOnline: w } = (0, a.cf)([v.A], () => ({
                     activities: v.A.getActivities(t.id),
                     isMobileOnline: v.A.isMobileOnline(t.id),
                 })),
                 M = (0, p.A)(t.id),
-                { voiceChannel: D } = (0, f.Ay)({ userId: t.id, guildId: o }),
+                { voiceChannel: D } = (0, m.Ay)({ userId: t.id, guildId: o }),
                 [G, U] = l.useState(!1),
                 {
                     avatarSrc: F,
@@ -61,11 +61,11 @@ n.d(
             return (0, i.jsxs)(d.D, {
                 onMouseEnter: Z,
                 onMouseLeave: $,
-                focusProps: O === S.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+                focusProps: R === S.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: s()(k.nM, { [k.EY]: null != Y }),
                 "aria-label": X,
                 "aria-describedby": z,
-                onClick: R,
+                onClick: O,
                 onContextMenu: function (e) {
                     (0, c.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -118,7 +118,7 @@ n.d(
                                     }),
                                     (0, i.jsx)("div", {
                                         id: z,
-                                        children: (0, i.jsx)(m.A, {
+                                        children: (0, i.jsx)(f.A, {
                                             user: t,
                                             activities: _,
                                             applicationStream: M,

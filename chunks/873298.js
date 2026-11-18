@@ -3088,7 +3088,7 @@ class e6 extends v.G {
     }
 }
 let e5 = new e6();
-class e8 extends v.G {
+class e7 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomUserThemeSettings", [
             { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 },
@@ -3148,12 +3148,12 @@ class e8 extends v.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e8();
+let e8 = new e7();
 class e4 extends v.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [
             { no: 2, name: "background_gradient_preset_id", kind: "message", T: () => P.ZQ },
-            { no: 4, name: "custom_user_theme_settings", kind: "message", T: () => e7 },
+            { no: 4, name: "custom_user_theme_settings", kind: "message", T: () => e8 },
         ]);
     }
     create(e) {
@@ -3179,7 +3179,7 @@ class e4 extends v.G {
                     );
                     break;
                 case 4:
-                    r.customUserThemeSettings = e7.internalBinaryRead(e, e.uint32(), n, r.customUserThemeSettings);
+                    r.customUserThemeSettings = e8.internalBinaryRead(e, e.uint32(), n, r.customUserThemeSettings);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -3195,7 +3195,7 @@ class e4 extends v.G {
         (e.backgroundGradientPresetId &&
             P.ZQ.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
             e.customUserThemeSettings &&
-                e7.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, y.O0.LengthDelimited).fork(), n).join());
+                e8.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, y.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
