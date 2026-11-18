@@ -1,4 +1,4 @@
-a.d(e, { A: () => h });
+a.d(e, { A: () => R });
 var i = a(858899),
     l = a(610056),
     n = a(485845),
@@ -9,18 +9,18 @@ var i = a(858899),
     d = a(61881),
     u = a(735321),
     p = a(856383),
-    A = a(998218),
-    f = a(361504),
-    E = a(260498),
-    g = a(191850),
-    I = a(792996);
-let m = new Set();
-function h(t, e) {
+    E = a(998218),
+    A = a(361504),
+    I = a(316601),
+    f = a(191850),
+    _ = a(792996);
+let g = new Set();
+function R(t, e) {
     var a;
-    let h,
+    let R,
         L =
             ((a = { onTurnedOn: e, showToast: i.P0 }),
-            null == (h = E.Ay.findProjectByApplicationId(t)?.id)
+            null == (R = I.A.getProject(t)?.id)
                 ? null
                 : {
                       clientId: t,
@@ -30,12 +30,12 @@ function h(t, e) {
                       integrationType: n.b.GUILD_INSTALL,
                       callback: (e) => {
                           let { location: i } = e,
-                              l = A.A.toURLSafe(i ?? "")?.searchParams.get("code");
+                              l = E.A.toURLSafe(i ?? "")?.searchParams.get("code");
                           return (
                               null != l &&
                                   (async function (t, e, a, i) {
-                                      if (!m.has(e)) {
-                                          m.add(e);
+                                      if (!g.has(e)) {
+                                          g.add(e);
                                           try {
                                               await (async function (t, e, a, i) {
                                                   let { onTurnedOn: l, showToast: n } = i;
@@ -43,7 +43,7 @@ function h(t, e) {
                                                       (await (async function (t, e) {
                                                           let a,
                                                               i = await fetch(
-                                                                  `${((a = (0, f.d)()), null != a ? a : (0, f.b)() ? "http://localhost:8787" : window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") ? "https://conjure.town" : "https://conjure.city")}/agent/widget-consent`,
+                                                                  `${((a = (0, A.d)()), null != a ? a : (0, A.b)() ? "http://localhost:8787" : window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") ? "https://conjure.town" : "https://conjure.city")}/agent/widget-consent`,
                                                                   {
                                                                       method: "POST",
                                                                       headers: { "content-type": "application/json" },
@@ -63,7 +63,7 @@ function h(t, e) {
                                                               }
                                                           })(e));
                                                   } catch {
-                                                      n({ text: I.intl.string(g.default.to9Sp4), variant: "critical" });
+                                                      n({ text: _.intl.string(f.default.to9Sp4), variant: "critical" });
                                                       return;
                                                   }
                                                   try {
@@ -74,10 +74,10 @@ function h(t, e) {
                                                   await (0, s.i)(e);
                                               })(t, e, a, i);
                                           } finally {
-                                              m.delete(e);
+                                              g.delete(e);
                                           }
                                       }
-                                  })(h, t, l, a),
+                                  })(R, t, l, a),
                               !0
                           );
                       },

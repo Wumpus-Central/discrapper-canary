@@ -4266,8 +4266,8 @@ var sB = n(885574),
     sY = n(506774),
     sK = n(531913),
     sq = n(503275),
-    sX = n(260498),
-    sZ = n(387580);
+    sX = n(316601),
+    sZ = n(469958);
 let s$ = "conjureServerWidgetUpsellDismissals";
 var sJ = n(763314),
     sQ = n(191850);
@@ -4277,7 +4277,7 @@ function s0(e) {
             let { applicationId: i } = t,
                 r = (0, a.bG)([Y.A], () => Y.A.getGuild(n)),
                 s = (0, eu.h)(i),
-                o = (0, a.bG)([sX.Ay], () => sX.Ay.findProjectByApplicationId(i)?.owner_user_id, [i]),
+                o = (0, a.bG)([sX.A], () => sX.A.getProject(i)?.owner_user_id, [i]),
                 u = (0, sq.vm)(o),
                 d = (0, sK.A)(e, i),
                 c = l.useMemo(() => ({ ...d, isLoading: !1, hasIdentity: !0 }), [d]);
