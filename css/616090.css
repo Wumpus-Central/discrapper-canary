@@ -462,7 +462,7 @@
 }
 
 .sliderContainer_ma_sAl {
-    --background-brand: var(--custom-checkpoint-primary);
+    --slider-indicator-background: var(--custom-checkpoint-primary);
     align-items: center;
     border: 1px solid var(--custom-checkpoint-primary);
     border-inline-end: 0;
@@ -580,4 +580,4 @@
     gap: var(--space-32)
 }
 
-/*# sourceMappingURL=616090.e7e82d873494a22a.css.map*/
+/*# sourceMappingURL=616090.b55f70445ad69815.css.map*/
