@@ -1782,7 +1782,7 @@ function tw(e) {
                                 return await c.Bo.get({
                                     url: f.Rsh.BILLING_ADYEN_PAYMENT_METHODS,
                                     oldFormErrors: !0,
-                                    rejectWithError: !1,
+                                    rejectWithError: !0,
                                 });
                             })(),
                             { default: t } = await Promise.all([n.e(494678), n.e(667335)]).then(n.bind(n, 683450)),
