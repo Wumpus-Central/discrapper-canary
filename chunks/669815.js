@@ -715,7 +715,7 @@ async function ed() {
             url: N.Rsh.BILLING_SUBSCRIPTIONS,
             oldFormErrors: !0,
             rejectWithError: !1,
-            query: { sync_level: e },
+            query: { sync_level: e, with_gift_subscription: !0 },
         });
         if (null == n.body) throw new l.Ey(`response body is null, response: ${JSON.stringify(n)}`, n.status);
         return (

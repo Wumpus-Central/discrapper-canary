@@ -90,7 +90,9 @@ class h extends a.A {
     userId;
     eligiblePaymentGateways;
     priceChange;
+    giftSubscription;
     static createFromServer(e) {
+        var t;
         return new h({
             id: e.id,
             type: e.type,
@@ -124,6 +126,16 @@ class h extends a.A {
             ...(null != e.latest_invoice ? { latestInvoice: u.A.createInvoiceFromServer(e.latest_invoice) } : {}),
             eligiblePaymentGateways: e.eligible_payment_gateways ?? null,
             priceChange: null != e.price_change ? o.createFromServer(e.price_change) : null,
+            giftSubscription:
+                null == (t = e.gift_subscription)
+                    ? t
+                    : {
+                          id: t.id,
+                          status: t.status,
+                          recipientUserId: t.recipient_user_id,
+                          initialGiftCode: t.initial_gift_code,
+                          initialEntitlementId: t.initial_entitlement_id,
+                      },
         });
     }
     constructor(e) {
@@ -153,7 +165,8 @@ class h extends a.A {
             (this.userId = e.userId),
             (this.streakStartedAt = e.streakStartedAt),
             (this.eligiblePaymentGateways = e.eligiblePaymentGateways),
-            (this.priceChange = e.priceChange));
+            (this.priceChange = e.priceChange),
+            (this.giftSubscription = e.giftSubscription));
         let t = this.renewalMutations,
             n = e.items[0].planId,
             i = null;

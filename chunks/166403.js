@@ -144,11 +144,13 @@ let L = new R(r.h, {
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (t.user_id !== o.default.getId()) return;
-        let n = l.h.createFromServer(t);
-        ((c = { ...c, [n.id]: n }),
-            C(n) && (u = { ...u, [n.id]: n }),
-            null != E && n.type === d.rzx.GUILD && (E = S({ activeSubscriptions: E, record: n })),
-            null != A && n.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: n })));
+        let n = l.h.createFromServer(t),
+            i = c?.[n.id],
+            r = void 0 === n.giftSubscription && null != i ? n.set("giftSubscription", i.giftSubscription) : n;
+        ((c = { ...c, [r.id]: r }),
+            C(r) && (u = { ...u, [r.id]: r }),
+            null != E && r.type === d.rzx.GUILD && (E = S({ activeSubscriptions: E, record: r })),
+            null != A && r.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: r })));
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function () {
         g = !0;
