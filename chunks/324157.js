@@ -1,59 +1,83 @@
-var l = n(975571),
-    r = n(927812),
-    s = n(792996);
-let a = /\{(promotion_end_date|claim_end_date|help_center_url)\}/g,
-    i = /\[([^\]\r\n]+)\]\(\{help_center_url\}\)/g;
-function o(e, t) {
-    return null == e ? "" : e.toLocaleDateString(t, { month: "long", day: "numeric", year: "numeric" });
+var r = n(975571),
+    l = n(927812),
+    i = n(792996);
+let o =
+        /\{(promotion_end_date|claim_end_date|help_center_url|promotion_display_name|position|discount_percent|orbs_back)\}/g,
+    a = /\[([^\]\r\n]+)\]\(\{help_center_url\}\)/g;
+function u(t, e) {
+    return null == t ? null : t.toLocaleDateString(e, { month: "long", day: "numeric", year: "numeric" });
 }
-function u(e, t) {
+function c(t, e) {
     let n = null;
-    return (
-        null != t.helpCenterId && "" !== t.helpCenterId && (n = l.A.getArticleURL(t.helpCenterId)),
-        (null != n ? e : e.replace(i, "$1")).replace(a, (e, l) => {
-            switch (l) {
-                case "promotion_end_date":
-                    return o(t.endsAt, t.locale);
-                case "claim_end_date":
-                    return o(t.redemptionEndsAt, t.locale);
-                case "help_center_url":
-                    return n ?? "";
-                default:
-                    return "";
-            }
-        })
-    );
+    null != e.helpCenterId && "" !== e.helpCenterId && (n = r.A.getArticleURL(e.helpCenterId));
+    let l = null != n ? t : t.replace(a, "$1"),
+        i = /[{}]/.test(l.replace(o, ""));
+    return {
+        text: l.replace(o, (t, r) => {
+            let l = (function (t, e, n) {
+                switch (t) {
+                    case "promotion_end_date":
+                        return u(e.endsAt, e.locale);
+                    case "claim_end_date":
+                        return u(e.redemptionEndsAt, e.locale);
+                    case "help_center_url":
+                        return n;
+                    case "promotion_display_name":
+                        return null != e.promotionDisplayName && "" !== e.promotionDisplayName
+                            ? e.promotionDisplayName
+                            : null;
+                    case "position":
+                        return null != e.position ? String(e.position) : null;
+                    case "discount_percent":
+                        return null != e.discountPercent ? String(e.discountPercent) : null;
+                    case "orbs_back":
+                        return null != e.orbsBack && e.orbsBack > 0 ? String(e.orbsBack) : null;
+                    default:
+                        return null;
+                }
+            })(r, e, n);
+            return (null == l && (i = !0), l ?? "");
+        }),
+        hasMissingValue: i,
+    };
+}
+function s(t, e) {
+    return c(t, e).text;
 }
 n.d(
-    t,
+    e,
     {},
     {
-        MZ: function (e) {
-            var t, n, l;
-            let a,
+        FV: function (t, e) {
+            let { text: n, hasMissingValue: r } = c(t, e);
+            return r ? null : n;
+        },
+        MZ: function (t) {
+            var e, n, r;
+            let o,
                 {
-                    promotion: i,
-                    promotionProgress: o,
+                    promotion: a,
+                    promotionProgress: u,
                     progressIndicator: c,
                     helpCenterId: d,
-                    daysRemaining: m,
-                    locale: h,
-                } = e,
-                g =
-                    ((t = i.rewardStatus),
-                    (n = o?.current ?? 0),
-                    (a = (0, r.x)(c.rewardStates, t, n)),
-                    { title: a?.title ?? c.title, description: a?.description ?? c.description }),
-                E = { locale: h, endsAt: i.endsAt, redemptionEndsAt: i.redemptionEndsAt, helpCenterId: d },
-                p = null != o ? s.intl.formatToPlainString(s.t.lyXyiY, { current: o.current, target: o.target }) : null,
-                f = null != m && m > 0 ? s.intl.formatToPlainString(s.t.w4GEvw, { days: m }) : null;
+                    daysRemaining: p,
+                    locale: m,
+                } = t,
+                _ =
+                    ((e = a.rewardStatus),
+                    (n = u?.current ?? 0),
+                    (o = (0, l.x)(c.rewardStates, e, n)),
+                    { title: o?.title ?? c.title, description: o?.description ?? c.description }),
+                h = { locale: m, endsAt: a.endsAt, redemptionEndsAt: a.redemptionEndsAt, helpCenterId: d },
+                g = null != u ? i.intl.formatToPlainString(i.t.lyXyiY, { current: u.current, target: u.target }) : null,
+                f = null != p && p > 0 ? i.intl.formatToPlainString(i.t.w4GEvw, { days: p }) : null;
             return {
-                title: u(g.title, E),
-                description: ((l = g.description), null != l && "" !== l ? u(l, E) : null),
-                progressText: p,
+                title: s(_.title, h),
+                description: ((r = _.description), null != r && "" !== r ? s(r, h) : null),
+                progressText: g,
                 timeLeftText: f,
             };
         },
-        wJ: u,
+        wJ: s,
     },
 );

@@ -15,7 +15,8 @@
 }
 
 .roleDot_xL50-d {
-    font-size: 1.34em
+    height: var(--space-20);
+    width: var(--space-20)
 }
 
 .connectionRoleIcon_xL50-d {
@@ -162,4 +163,4 @@
     color: ButtonText
 }
 
-/*# sourceMappingURL=f24bc39f1b4ffc48.css.map*/
+/*# sourceMappingURL=d434682108a6789a.css.map*/

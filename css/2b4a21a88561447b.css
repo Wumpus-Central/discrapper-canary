@@ -298,6 +298,11 @@
     padding-inline: var(--space-4) var(--space-8)
 }
 
+.promotionProgressBlue_80OD1- {
+    background: linear-gradient(90deg, rgba(67, 155, 249, .4) 22.321%, rgba(13, 51, 180, .4) 119.29%);
+    color: var(--text-strong)
+}
+
 .promotionProgressLabel_80OD1- {
     align-items: center;
     display: flex;
@@ -509,4 +514,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=3d9d63948bced192.css.map*/
+/*# sourceMappingURL=2b4a21a88561447b.css.map*/

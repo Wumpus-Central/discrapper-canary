@@ -2,6 +2,7 @@ e.exports = {
     iw: "pricingSection_80OD1-",
     On: "priceTag_80OD1-",
     lo: "promotionProgress_80OD1-",
+    x: "promotionProgressBlue_80OD1-",
     fZ: "promotionProgressLabel_80OD1-",
     qy: "promotionProgressCountdown_80OD1-",
     CE: "promotionProgressIcon_80OD1-",

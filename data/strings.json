@@ -7561,6 +7561,7 @@
   "nb5PC/": "Promo",
   "cNtuKF": "Item is eligible for offer: {offerName}",
   "ti90Eh": "+{orbCount, number} Orbs",
+  "8nBLa0": "+{orbCount} Orbs",
   "4CTm1R": "You earned {orbCount, plural,one {# Orb}other {# Orbs} back",
   "nH5DSU": "{percentage, number}% off",
   "cNSL/j": "Buy for {price}",

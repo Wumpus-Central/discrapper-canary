@@ -1,9 +1,9 @@
 var r = n(477900);
 n(582128);
 var i = n(192308),
-    s = n(857512),
-    a = n(4227),
-    l = n(466459);
+    l = n(857512),
+    s = n(4227),
+    a = n(466459);
 let u = "collectibles shop product details modal";
 n.d(
     t,
@@ -19,15 +19,15 @@ n.d(
                 analyticsSource: c,
                 analyticsLocations: d,
                 returnRef: I,
-                tab: p,
-                giftRecipient: f,
-                giftingOrigin: m,
-                cardId: v,
-                sessionId: g,
+                tab: f,
+                giftRecipient: p,
+                giftingOrigin: g,
+                cardId: m,
+                sessionId: v,
                 tilePosition: x,
             } = e;
             if (t.isCategoryReward) {
-                let { isPurchased: e } = (0, l.o)(a.A, t);
+                let { isPurchased: e } = (0, a.o)(s.A, t);
                 if (!e) return;
             }
             (0, i.mM)(
@@ -459,17 +459,17 @@ n.d(
                         n.e(475289),
                         n.e(375966),
                         n.e(48303),
-                        n.e(211349),
+                        n.e(125117),
                         n.e(535874),
                         n.e(519125),
                         n.e(993734),
                         n.e(864316),
                         n.e(806221),
-                        n.e(510424),
-                    ]).then(n.bind(n, 496779));
+                        n.e(411877),
+                    ]).then(n.bind(n, 959364));
                     return (n) =>
-                        (0, r.jsx)(s.R9, {
-                            newValue: { cardId: v, sessionId: g, tilePosition: x },
+                        (0, r.jsx)(l.R9, {
+                            newValue: { cardId: m, sessionId: v, tilePosition: x },
                             children: (0, r.jsx)(e, {
                                 ...n,
                                 product: t,
@@ -477,9 +477,9 @@ n.d(
                                 analyticsSource: c,
                                 analyticsLocations: d,
                                 returnRef: I,
-                                tab: p,
-                                giftRecipient: f,
-                                giftingOrigin: m,
+                                tab: f,
+                                giftRecipient: p,
+                                giftingOrigin: g,
                             }),
                         });
                 },
