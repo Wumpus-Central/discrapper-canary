@@ -1,22 +1,15 @@
-var n = u(288106),
-    e = u(223311),
-    s = u(276385),
-    a = u(518865),
-    c = u(652215);
-function i() {
-    let t = (0, e.A)(c.FYj);
-    return t?.rewardStatus === n.GM.EARNED && (0, a.Dj)(t) ? t : null;
-}
-u.d(
-    r,
+var s = a(288106),
+    u = a(223311);
+a(276385);
+var p = a(518865),
+    c = a(652215);
+a.d(
+    t,
     {},
     {
-        HH: i,
-        hS: function (t) {
-            let r,
-                u,
-                n = ((r = i()), (u = (0, s.K)(t)), (0, a.PY)(t, r, u));
-            return (0, a.MX)(n);
+        HH: function () {
+            let r = (0, u.A)(c.FYj);
+            return r?.rewardStatus === s.GM.EARNED && (0, p.Dj)(r) ? r : null;
         },
     },
 );
