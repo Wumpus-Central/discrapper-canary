@@ -1225,17 +1225,25 @@ function tW(e) {
 var tz = i(477106),
     tX = i(762493);
 function tY(e) {
-    let { sectionHeader: t } = e,
-        {
-            component: i,
-            copy: { header: s, subheader: n },
-        } = t,
-        a = (0, tB.C)(i.surface.helpArticle, "");
+    let { component: t } = e,
+        i = (function (e) {
+            if ("nitroHomeSectionHeader" !== e.properties.properties.oneofKind) return null;
+            let { nitroHomeSectionHeader: t } = e.properties.properties,
+                i = e.getFormatVariableValues(eI.intl.currentLocale),
+                s = (0, tw.n)(t.header, i),
+                n = (0, tw.n)(t.subheader, i),
+                a = s.ok ? s.content.trim() : "",
+                l = n.ok ? n.content.trim() : "";
+            return "" === a && "" === l ? null : { header: a, subheader: l };
+        })(t);
+    if (null == i) return null;
+    let { header: s, subheader: n } = i,
+        a = (0, tB.C)(t.surface.helpArticle, "");
     return (0, d.jsxs)(q.B, {
         gap: 8,
         className: tV.R_,
         children: [
-            (0, d.jsx)(tH.A, { componentType: i.componentType, componentId: i.id, promotionId: i.promotionId }),
+            (0, d.jsx)(tH.A, { componentType: t.componentType, componentId: t.id, promotionId: t.promotionId }),
             "" !== s && (0, d.jsx)(eG.D, { variant: "nitro-sm", className: tF.U6, children: s }),
             ("" !== n || null != a) &&
                 (0, d.jsxs)(J.E, {
@@ -1367,27 +1375,14 @@ function tZ() {
                 })
             );
         }, [c]);
-    if (0 === o.length) return null;
-    let m = (function (e) {
-        if (null == e) return null;
-        let t = (function (e) {
-            if ("nitroHomeSectionHeader" !== e.properties.properties.oneofKind) return null;
-            let { nitroHomeSectionHeader: t } = e.properties.properties,
-                i = e.getFormatVariableValues(eI.intl.currentLocale),
-                s = (0, tw.n)(t.header, i),
-                n = (0, tw.n)(t.subheader, i),
-                a = s.ok ? s.content.trim() : "",
-                l = n.ok ? n.content.trim() : "";
-            return "" === a && "" === l ? null : { header: a, subheader: l };
-        })(e);
-        return null != t ? { component: e, copy: t } : null;
-    })(r);
-    return (0, d.jsx)(tW, {
-        sectionClassName: x()(tX.uW, tX.Uv, tX.qr),
-        heading: null != m ? (0, d.jsx)(tY, { sectionHeader: m }) : null,
-        gridClassName: tz.V,
-        grid: o.map((e) => (0, d.jsx)(tK, { component: e }, e.id)),
-    });
+    return 0 === o.length
+        ? null
+        : (0, d.jsx)(tW, {
+              sectionClassName: x()(tX.uW, tX.Uv, tX.qr),
+              heading: null != r ? (0, d.jsx)(tY, { component: r }) : null,
+              gridClassName: tz.V,
+              grid: o.map((e) => (0, d.jsx)(tK, { component: e }, e.id)),
+          });
 }
 var tq = i(820284),
     tJ = i(742589),
