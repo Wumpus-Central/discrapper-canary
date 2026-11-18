@@ -1,4 +1,4 @@
-l.d(n, { default: () => N });
+l.d(n, { default: () => I });
 var a = l(477900),
     t = l(582128),
     i = l(503698),
@@ -9,40 +9,41 @@ var a = l(477900),
     d = l(289873),
     c = l(347704),
     m = l(627363),
-    p = l(669610),
-    f = l(282831);
-function x(e) {
+    p = l(124077),
+    f = l(669610),
+    x = l(282831);
+function g(e) {
     let { gameOrganization: n, application: l } = e;
-    return (0, a.jsx)("img", { className: f.H, src: n.iconUrl ?? l?.getIconURL(96) ?? "", alt: n.name });
+    return (0, a.jsx)("img", { className: x.H, src: n.iconUrl ?? l?.getIconURL(96) ?? "", alt: n.name });
 }
-var h = l(213570),
-    S = l(792996),
-    g = l(809049);
-function b(e) {
-    let { gameOrganization: n, application: l, isSelected: i, displayNoun: d, onClick: c } = e,
+var S = l(213570),
+    h = l(792996),
+    b = l(809049);
+function j(e) {
+    let { gameOrganization: n, application: l, isSelected: i, organizationNoun: d, onClick: c } = e,
         m = (0, t.useMemo)(() => {
-            if (null != n.guildId) return h.default.fxZSL6;
-            if (n.userIsBlockedFromLink) return h.default["0kSKEH"];
+            if (null != n.guildId) return S.default.fxZSL6;
+            if (n.userIsBlockedFromLink) return S.default["0kSKEH"];
             let e = new Set(n.member.gameOrganizationRoleIds);
-            if (!n.roles.some((n) => n.canLink && e.has(n.id))) return h.default.kIqT8Y;
+            if (!n.roles.some((n) => n.canLink && e.has(n.id))) return S.default.kIqT8Y;
         }, [n]);
     return (0, a.jsxs)(r.D, {
-        className: s()(g.zJ, { [g.r9]: null != m, [g.wH]: i }),
+        className: s()(b.zJ, { [b.r9]: null != m, [b.wH]: i }),
         onClick: null == m ? c : void 0,
         children: [
-            (0, a.jsx)(x, { gameOrganization: n, application: l }),
+            (0, a.jsx)(g, { gameOrganization: n, application: l }),
             (0, a.jsxs)("div", {
-                className: g.gB,
+                className: b.gB,
                 children: [
                     (0, a.jsx)(u.E, { variant: "body-md/normal", children: n.name }),
                     (0, a.jsxs)(u.E, {
                         variant: "body-sm/normal",
                         color: "text-subtle",
-                        className: g.oQ,
+                        className: b.oQ,
                         children: [
                             null != n.memberCount
                                 ? (0, a.jsxs)("span", {
-                                      className: g.JL,
+                                      className: b.JL,
                                       children: [
                                           (0, a.jsx)(o.GroupIcon, { size: "sm" }),
                                           n.memberCount,
@@ -51,7 +52,7 @@ function b(e) {
                                   })
                                 : null,
                             null != n.memberCount && null != m ? (0, a.jsx)("span", { children: "\u2022" }) : null,
-                            null != m ? (0, a.jsx)("span", { children: S.intl.format(m, { displayNoun: d }) }) : null,
+                            null != m ? (0, a.jsx)("span", { children: h.intl.format(m, { noun: d }) }) : null,
                         ],
                     }),
                 ],
@@ -59,29 +60,35 @@ function b(e) {
         ],
     });
 }
-function j(e) {
-    let { linkableGameOrganizations: n, application: l, selectedGuild: t, setSelectedGuild: i, displayNoun: s } = e;
+function N(e) {
+    let {
+        linkableGameOrganizations: n,
+        application: l,
+        selectedGuild: t,
+        setSelectedGuild: i,
+        organizationNoun: s,
+    } = e;
     return (0, a.jsx)("div", {
-        className: g.Kb,
+        className: b.Kb,
         children: n?.map((e) =>
             (0, a.jsx)(
-                b,
+                j,
                 {
                     gameOrganization: e,
                     application: l,
                     onClick: () => i(e),
                     isSelected: t?.id === e.id,
-                    displayNoun: s,
+                    organizationNoun: s,
                 },
                 e.id,
             ),
         ),
     });
 }
-function N(e) {
+function I(e) {
     let { game: n, ...l } = e,
         i = n.getOfficialApplicationId(),
-        s = "other",
+        s = (0, p.A)({ displayNoun: null, lowercase: !1 }),
         { data: r, isLoading: u } = (function (e) {
             let [n, l] = (0, t.useState)([]),
                 [a, i] = (0, t.useState)(!0),
@@ -95,7 +102,7 @@ function N(e) {
                         }
                         try {
                             i(!0);
-                            let n = await (0, p.B)(e);
+                            let n = await (0, f.B)(e);
                             l(n);
                         } catch (e) {
                             r(e);
@@ -107,27 +114,27 @@ function N(e) {
                 { data: n, isLoading: a, error: s }
             );
         })(i),
-        { data: o, isLoading: f } = (0, m.YY)(i),
-        [x, g] = (0, t.useState)(null),
-        [b, N] = (0, t.useState)("SELECT_ORGANIZATION"),
-        I = [
+        { data: o, isLoading: x } = (0, m.YY)(i),
+        [g, b] = (0, t.useState)(null),
+        [j, I] = (0, t.useState)("SELECT_ORGANIZATION"),
+        k = [
             {
                 stepKey: "SELECT_ORGANIZATION",
-                modalProps: { title: S.intl.formatToPlainString(h.default.GdDUCS, { displayNoun: s }) },
+                modalProps: { title: h.intl.formatToPlainString(S.default.GdDUCS, { noun: s }) },
                 body:
-                    u || f
+                    u || x
                         ? (0, a.jsx)(d.y, {})
-                        : "SELECT_ORGANIZATION" === b
-                          ? (0, a.jsx)(j, {
+                        : "SELECT_ORGANIZATION" === j
+                          ? (0, a.jsx)(N, {
                                 linkableGameOrganizations: r,
                                 application: o,
-                                selectedGuild: x,
-                                displayNoun: s,
-                                setSelectedGuild: g,
+                                selectedGuild: g,
+                                organizationNoun: s,
+                                setSelectedGuild: b,
                             })
                           : null,
-                nextEnabled: null != x,
+                nextEnabled: null != g,
             },
         ];
-    return (0, a.jsx)(c.t, { ...l, steps: I, currentStepKey: b, onStepChange: N });
+    return (0, a.jsx)(c.t, { ...l, steps: k, currentStepKey: j, onStepChange: I });
 }

@@ -25,9 +25,9 @@ var l = n(477900),
     v = n(5180),
     P = n(425912),
     S = n(173936),
-    C = n(988912),
-    L = n(839516),
-    U = n(826603),
+    C = n(839516),
+    L = n(136463),
+    U = n(124077),
     T = n(899360),
     _ = n(989683),
     M = n(752222),
@@ -36,8 +36,8 @@ var l = n(477900),
     N = n.n(k),
     H = n(534890),
     O = n(970278),
-    B = n(406704),
-    F = n(323384),
+    F = n(406704),
+    B = n(323384),
     X = n(837057),
     W = n(310419),
     R = n(488995),
@@ -109,15 +109,14 @@ let eD = t.memo(function (e) {
         ew = (0, q.A)({ source: eh.PE1.GUILD_HEADER, guild: ef }),
         ek = (function (e) {
             let i = (0, _.Ay)(e, "guild_header_popout"),
-                { data: t } = (0, U.c)(i ? e.id : null),
-                a = (0, d.bG)([C.A], () => C.A.getDisplayNounByGuildId(e.id), [e.id]);
+                { data: t } = (0, L.c)(i ? e.id : null);
             if (!i) return null;
-            let o = null != t && (0, L.A)(t);
+            let a = null != t && (0, C.A)(t);
             return (0, l.jsx)(I.Dr, {
                 id: "invite-to-linked-game-organization",
-                label: w.intl.formatToPlainString(M.default.EnTIIr, { displayNoun: a ?? "other" }),
-                subtext: o ? (0, T.zA)(t, a) : void 0,
-                disabled: o,
+                label: w.intl.formatToPlainString(M.default.EnTIIr, { noun: (0, U.A)({ displayNoun: null }) }),
+                subtext: a ? (0, T.zA)(t) : void 0,
+                disabled: a,
                 icon: S.LinkIcon,
                 leadingAccessory: { type: "icon", icon: S.LinkIcon },
                 action: () => {
@@ -148,10 +147,10 @@ let eD = t.memo(function (e) {
         }),
         eH = ef.features.has(eh.GuildFeatures.HUB),
         eO = (0, v.ai)(ef.id),
-        eB = ef.id === eh.gNP,
-        eF = (0, ec.A)(ef.id, !0),
+        eF = ef.id === eh.gNP,
+        eB = (0, ec.A)(ef.id, !0),
         eX =
-            ((k = (0, B.H_)(ef)),
+            ((k = (0, F.H_)(ef)),
             (eD = (0, d.bG)([O.A], () => !N().isEmpty(O.A.getThreadsForGuild(ef.id)))),
             k && eD
                 ? (0, l.jsx)(I.Dr, {
@@ -192,8 +191,8 @@ let eD = t.memo(function (e) {
         eW = (0, l.jsx)(I.Dr, {
             id: "application-directory",
             label: w.intl.string(w.t.AKcFUj),
-            icon: F.AppsIcon,
-            leadingAccessory: { type: "icon", icon: F.AppsIcon },
+            icon: B.AppsIcon,
+            leadingAccessory: { type: "icon", icon: B.AppsIcon },
             action: function () {
                 (0, X.transitionToGlobalDiscovery)({
                     tab: R.GlobalDiscoveryTab.APPS,
@@ -328,7 +327,7 @@ let eD = t.memo(function (e) {
                             }),
                   ],
               })
-            : eB
+            : eF
               ? null
               : (0, l.jsxs)(g.W, {
                     "data-menu-needs-review": !0,
@@ -511,7 +510,7 @@ let eD = t.memo(function (e) {
                         }),
                         (0, l.jsxs)(I.rX, {
                             children: [
-                                eF,
+                                eB,
                                 (0, l.jsx)(I.Dr, {
                                     id: "notifications",
                                     label: w.intl.string(w.t.h850Ss),
