@@ -1,15 +1,14 @@
 var l = n(477900),
     r = n(582128),
-    s = n(885574),
-    a = n(866665),
-    i = n(408278),
-    o = n(331322),
-    u = n(534514),
-    c = n(821609),
-    d = n(975807),
-    m = n(975571),
-    h = n(707296);
-let g = {
+    s = n(939249),
+    a = n(885574),
+    i = n(331322),
+    o = n(534514),
+    u = n(821609),
+    c = n(975807),
+    d = n(975571),
+    m = n(707296);
+let h = {
         "eligible-items": {
             headingVariant: "heading-lg/semibold",
             headingColor: void 0,
@@ -27,23 +26,17 @@ let g = {
             fullWidth: !1,
         },
     },
-    E = (e) => {
-        let { color: t, className: n, style: r } = e;
-        return (0, l.jsx)(s.CircleInformationIcon, { size: "sm", color: t, className: n, style: r });
-    },
-    p = (e) => {
+    g = (e) => {
         let { helpArticle: t } = e,
-            { id: n, label: s } = t,
+            { id: n, label: i } = t,
             o = r.useCallback(() => {
-                (0, d.A)(m.A.getArticleURL(n));
+                (0, c.A)(d.A.getArticleURL(n));
             }, [n]);
-        return (0, l.jsx)("div", {
-            className: h.o,
-            children: (0, l.jsx)(a.m, {
-                text: s,
-                ariaHidden: !0,
-                children: (0, l.jsx)(i.K, { "aria-label": s, icon: E, variant: "color-mix", size: "sm", onClick: o }),
-            }),
+        return (0, l.jsx)(s.D, {
+            "aria-label": i,
+            onClick: o,
+            className: m.o,
+            children: (0, l.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor" }),
         });
     };
 n.d(
@@ -57,24 +50,24 @@ n.d(
                     helpArticle: r,
                     buttonText: s,
                     onButtonClick: a,
-                    className: i,
+                    className: c,
                 } = e,
-                { headingVariant: d, headingColor: m, buttonVariant: E, buttonSize: f, align: x, fullWidth: A } = g[n];
-            return (0, l.jsxs)(o.B, {
+                { headingVariant: d, headingColor: E, buttonVariant: p, buttonSize: f, align: x, fullWidth: A } = h[n];
+            return (0, l.jsxs)(i.B, {
                 direction: "horizontal",
                 justify: "space-between",
                 align: x,
                 fullWidth: A,
-                className: i,
+                className: c,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: h.D,
+                        className: m.D,
                         children: [
-                            (0, l.jsx)(u.D, { variant: d, color: m, children: t }),
-                            null != r && (0, l.jsx)(p, { helpArticle: r }),
+                            (0, l.jsx)(o.D, { variant: d, color: E, children: t }),
+                            null != r && (0, l.jsx)(g, { helpArticle: r }),
                         ],
                     }),
-                    null != s && null != a && (0, l.jsx)(c.$, { variant: E, size: f, onClick: a, text: s }),
+                    null != s && null != a && (0, l.jsx)(u.$, { variant: p, size: f, onClick: a, text: s }),
                 ],
             });
         },
