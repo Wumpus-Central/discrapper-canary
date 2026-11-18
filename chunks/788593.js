@@ -3,16 +3,15 @@ var n = a(477900),
     i = a(503698),
     c = a.n(i),
     t = a(866665),
-    o = a(559106),
-    l = a(939249),
+    l = a(559106),
+    o = a(939249),
     u = a(409626),
     d = a(692969),
     m = a(459746),
     f = a(207803),
-    x = a(591179),
-    h = a(485745),
-    p = a(792996),
-    v = a(365611);
+    x = a(485745),
+    h = a(792996),
+    p = a(365611);
 function j(e) {
     let { imageSrc: r, iconSrc: a, gameName: s } = e;
     return (0, n.jsx)(m.FQ, {
@@ -20,59 +19,58 @@ function j(e) {
         iconUrl: a,
         gameName: s,
         size: m.wu.COMPACT,
-        className: v.vu,
-        foregroundClassName: v.$_,
+        className: p.vu,
+        foregroundClassName: p.$_,
     });
 }
-function N(e) {
+function v(e) {
     let {
             imageSrc: r,
             iconSrc: a,
             gameName: i,
             gameId: m,
-            userId: N,
-            className: g,
-            hideTooltip: C = !1,
+            userId: v,
+            className: N,
+            hideTooltip: g = !1,
             coverRef: k,
         } = e,
-        P = !(0, x.X)("GameCover"),
-        b = (0, h.A)(P),
-        I = (0, d.A)({
+        C = (0, x.A)(),
+        P = (0, d.A)({
             location: "GameCover",
             gameId: m,
             source: u.GameProfileSources.UserProfile,
-            sourceUserId: N,
+            sourceUserId: v,
             trackEntryPointImpression: !0,
         }),
-        S = p.intl.formatToPlainString(p.t["8QLQB+"], { gameName: i }),
-        A = s.useCallback(
+        b = h.intl.formatToPlainString(h.t["8QLQB+"], { gameName: i }),
+        I = s.useCallback(
             (e) => {
-                if (b) {
+                if (C) {
                     (e.preventDefault(), e.stopPropagation(), (0, f.VQ)());
                     return;
                 }
-                I?.(e);
+                P?.(e);
             },
-            [b, I],
+            [C, P],
         );
-    function Q(e) {
-        return C ? e : (0, n.jsx)(t.m, { text: i, ariaHidden: !0, children: e });
+    function S(e) {
+        return g ? e : (0, n.jsx)(t.m, { text: i, ariaHidden: !0, children: e });
     }
-    return Q(
-        null == I
-            ? (0, n.jsx)(o.vN, {
+    return S(
+        null == P
+            ? (0, n.jsx)(l.vN, {
                   children: (0, n.jsx)("div", {
                       ref: k,
-                      className: g,
+                      className: N,
                       tabIndex: -1,
                       children: (0, n.jsx)(j, { imageSrc: r, iconSrc: a, gameName: i }),
                   }),
               })
-            : (0, n.jsx)(l.D, {
+            : (0, n.jsx)(o.D, {
                   innerRef: k,
-                  onClick: A,
-                  "aria-label": S,
-                  className: c()(v.vk, g),
+                  onClick: I,
+                  "aria-label": b,
+                  className: c()(p.vk, N),
                   children: (0, n.jsx)(j, { imageSrc: r, iconSrc: a, gameName: i }),
               }),
     );
@@ -88,20 +86,20 @@ a.d(
                     className: s,
                     disableInteraction: i = !1,
                     hideTooltip: t,
-                    coverRef: l,
+                    coverRef: o,
                     ...u
                 } = e,
-                d = c()(v.PY, v.Ru, s);
+                d = c()(p.PY, p.Ru, s);
             return i
-                ? (0, n.jsx)(o.vN, {
+                ? (0, n.jsx)(l.vN, {
                       children: (0, n.jsx)("div", {
-                          ref: l,
+                          ref: o,
                           className: d,
                           tabIndex: -1,
                           children: (0, n.jsx)(j, { ...u }),
                       }),
                   })
-                : (0, n.jsx)(N, { className: d, gameId: r, userId: a, hideTooltip: t, coverRef: l, ...u });
+                : (0, n.jsx)(v, { className: d, gameId: r, userId: a, hideTooltip: t, coverRef: o, ...u });
         },
         R: j,
     },

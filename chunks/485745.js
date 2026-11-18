@@ -6,14 +6,14 @@ n.d(
     t,
     {},
     {
-        A: function (e) {
+        A: function () {
             return (0, i.bG)(
                 [s.A, a.A],
-                () => s.A.hasUnsavedChanges() || (0, r.gz)(a.A.getPendingChanges()) || (!e && a.A.hasUnsavedChanges()),
+                () => s.A.hasUnsavedChanges() || (0, r.gz)(a.A.getPendingChanges()) || a.A.hasUnsavedChanges(),
             );
         },
-        b: function (e) {
-            return s.A.hasUnsavedChanges() || (0, r.gz)(a.A.getPendingChanges()) || (!e && a.A.hasUnsavedChanges());
+        b: function () {
+            return s.A.hasUnsavedChanges() || (0, r.gz)(a.A.getPendingChanges()) || a.A.hasUnsavedChanges();
         },
     },
 );

@@ -8,8 +8,8 @@ var i = n(477900),
     d = n(664343),
     c = n(97808),
     g = n(834730),
-    f = n(442433),
-    m = n(682163),
+    m = n(442433),
+    f = n(682163),
     h = n(562153),
     p = n(939496);
 n(518477);
@@ -34,7 +34,7 @@ n.d(
                 "aria-describedby": S || null != b ? N : void 0,
                 onClick: y,
                 onContextMenu: function (e) {
-                    (0, f.L3)(e, async () => {
+                    (0, m.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             n.e(203112),
                             n.e(551353),
@@ -391,6 +391,7 @@ n.d(
                             n.e(208018),
                             n.e(968763),
                             n.e(163069),
+                            n.e(649520),
                             n.e(883952),
                             n.e(26001),
                             n.e(493014),
@@ -627,7 +628,7 @@ n.d(
                     });
                 },
                 children: [
-                    (0, i.jsx)(m.Ay, {
+                    (0, i.jsx)(f.Ay, {
                         "aria-hidden": !0,
                         tabIndex: -1,
                         guild: j,
@@ -638,7 +639,7 @@ n.d(
                             : r.A.unsafe_rawColors.WHITE.css,
                         badgeTooltipColor: d.oM.PRIMARY,
                         badgeTooltipDelay: 300,
-                        size: m.Ay.Sizes.MEDIUM,
+                        size: f.Ay.Sizes.MEDIUM,
                         active: !0,
                     }),
                     (0, i.jsxs)("div", {

@@ -1,1 +1,1 @@
-t.exports = { w: "oldNote_nr7Zul", N: "note_nr7Zul" };
+e.exports = { N: "note_nr7Zul" };
