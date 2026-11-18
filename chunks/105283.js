@@ -1756,27 +1756,28 @@ function tl(e) {
         b = p.useMemo(
             () =>
                 (function (e) {
-                    let { stage: t, isHidden: a, traits: i, layout: r, textureScale: n } = e,
-                        { base: s, shoes: c, outfit: d, face: l, hat: o, wearable: u, aura: h } = (0, H.XI)(i),
-                        f = eP[d],
-                        b = {};
+                    var t;
+                    let { stage: a, isHidden: i, traits: r, layout: n, textureScale: s, compactAssets: c = !1 } = e,
+                        { base: d, shoes: l, outfit: o, face: u, hat: h, wearable: f, aura: b } = (0, H.XI)(r),
+                        p = eP[o],
+                        _ = {};
                     return (
                         e$.forEach((e) => {
-                            let t = Number(e) === f?.riveId ? f.texture : eM;
-                            b[`outfit${e}Image`] = eJ(t.name, n);
+                            let t = Number(e) === p?.riveId ? p.texture : eM;
+                            _[`outfit${e}Image`] = eJ(t.name, s);
                         }),
                         {
-                            device: r,
-                            chapterID: a && t === C.s9.FACE ? e1[C.s9.IDLE] : e1[t],
-                            faceID: l,
-                            shoesID: c,
-                            headwearID: ey[o],
-                            wearableID: eL[u],
-                            outfitID: f?.riveId ?? 0,
-                            auraImage: eJ(ek[h].name, n),
-                            baseColorImage: eJ(eD[s].name, n),
-                            ...("MobilePortrait" === r && t === C.s9.INTRODUCTION ? e3 : e2[r]),
-                            ...b,
+                            device: n,
+                            chapterID: i && a === C.s9.FACE ? e1[C.s9.IDLE] : e1[a],
+                            faceID: u,
+                            shoesID: l,
+                            headwearID: ey[h],
+                            wearableID: eL[f],
+                            outfitID: p?.riveId ?? 0,
+                            auraImage: ((t = ek[b].name), eJ(t, c ? 1 : s)),
+                            baseColorImage: eJ(eD[d].name, s),
+                            ...("MobilePortrait" === n && a === C.s9.INTRODUCTION ? e3 : e2[n]),
+                            ..._,
                         }
                     );
                 })({ stage: i, isHidden: r, traits: u, layout: "Desktop", textureScale: d }),
