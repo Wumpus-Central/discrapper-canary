@@ -52,10 +52,6 @@ class I extends s.Ay.Store {
     getUnreadBadges(e) {
         return this.getBadges(e).filter((e) => !0 === e.has_updates);
     }
-    getUnreadBadgeCount(e) {
-        let t = e ?? o.default.getCurrentUser()?.id;
-        return null != t && this.hasCatalogFor(t) ? this.getUnreadBadges(t).length : 0;
-    }
     getBadgeById(e, t) {
         let n = t ?? o.default.getCurrentUser()?.id;
         return null != n ? A.get(n)?.badges.get(e) : void 0;
