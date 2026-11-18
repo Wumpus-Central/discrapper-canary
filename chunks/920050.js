@@ -25,7 +25,6 @@
             PROFILES_CARD_ID: "profiles",
             QUEST_ORB_MULTIPLIER_CARD_ID: "orbMultiplier",
             RECURRING_3P_PROMOTIONS_CARD_ID: "3p",
-            RUST_3PP_CARD_ID: "rust3PP",
             SERVER_BOOSTS_CARD_ID: "serverBoosts",
             SPECIAL_MEMBER_PRICING_CARD_ID: "memberPricing",
             SPECIAL_STICKERS_CARD_ID: "specialStickers",
