@@ -21,6 +21,7 @@ e.exports = {
     Q1: "bountyProductIcon_BSEPzZ",
     cA: "bountyLeadingLabel_BSEPzZ",
     it: "bountyProductName_BSEPzZ",
+    Pq: "bountyClampedText_BSEPzZ",
     OO: "bountyPromotedBadgeWrapper_BSEPzZ",
     RK: "bountyPromotedBadge_BSEPzZ",
     oz: "bountyMenuTarget_BSEPzZ",

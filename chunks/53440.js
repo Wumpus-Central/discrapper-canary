@@ -13,5 +13,6 @@ p.exports = {
     Qs: "content_Vp8y6R",
     Qq: "rewardTile_Vp8y6R",
     C: "copy_Vp8y6R",
+    YW: "clampedText_Vp8y6R",
     _o: "ctaNotInteractable_Vp8y6R",
 };

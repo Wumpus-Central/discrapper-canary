@@ -229,6 +229,7 @@
 }
 
 .bountyHeader_BSEPzZ {
+    container-type: inline-size;
     min-height: 40px
 }
 
@@ -243,7 +244,7 @@
 
 .bountyLeading_BSEPzZ {
     gap: var(--space-8);
-    inset-inline-start: 16px;
+    inset-inline-start: calc(var(--space-8) + var(--space-4));
     max-width: calc(100% - var(--space-16)*2);
     min-width: 0
 }
@@ -279,21 +280,29 @@
 }
 
 .bountyProductName_BSEPzZ {
+    --custom-collapsed-illustration-width: clamp(0.8 * 124px, 0.8 * 124px + (100cqi + 16px - 246px) * 0.2 * 124/101, 124px);
     grid-area: 1/1;
-    margin-inline-end: calc(103px + var(--space-12));
+    margin-inline-end: calc(var(--custom-collapsed-illustration-width) - 21px + var(--space-8));
     margin-inline-start: var(--space-8);
     min-width: 0;
     pointer-events: none
 }
 
+.bountyClampedText_BSEPzZ {
+    overflow-wrap: anywhere
+}
+
 .bountyPromotedBadgeWrapper_BSEPzZ {
     display: flex;
     grid-area: 1/1;
-    justify-self: start
+    justify-self: start;
+    margin-inline-end: calc(var(--space-16) + var(--space-8));
+    min-width: 0
 }
 
 .bountyPromotedBadge_BSEPzZ {
-    flex: 0 0 auto
+    flex: 0 1 auto;
+    min-width: 0
 }
 
 .bountyMenuTarget_BSEPzZ {
@@ -302,4 +311,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=c4614af4a0a51567.css.map*/
+/*# sourceMappingURL=d181835032b7356b.css.map*/
