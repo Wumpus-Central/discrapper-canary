@@ -9084,7 +9084,7 @@ let { Themes: c } = d.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return "body-xs/medium";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-xs/normal";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "body-sm/normal";
                         return "body-xs/medium";
                     },
                 },
