@@ -565,17 +565,23 @@ var ts = n(734057),
     ta = n(994500),
     to = n(432888);
 function td(e) {
-    let { checked: t, onChange: n, disabled: i, className: l, tooltipProps: s } = e;
-    function r(e) {
-        (e.stopPropagation(), e.preventDefault());
+    let { label: t, checked: n, onChange: i, disabled: l, className: s, tooltipProps: r } = e;
+    function a(e) {
+        e.stopPropagation();
     }
     return (0, A.jsx)(eY.D, {
-        onClick: r,
-        onMouseDown: r,
-        onMouseUp: r,
-        className: ee()(to.ZW, l),
-        ...s,
-        children: (0, A.jsx)(es.d, { checked: t, onChange: n, disabled: i }),
+        tabIndex: -1,
+        ignoreKeyPress: !0,
+        onClick: a,
+        onMouseDown: a,
+        onMouseUp: a,
+        onKeyDown: function (e) {
+            "Enter" === e.key && (e.stopPropagation(), e.preventDefault(), l || e.repeat || i(!n));
+        },
+        onKeyPress: a,
+        className: ee()(to.ZW, s),
+        ...r,
+        children: (0, A.jsx)(es.d, { label: t, hideLabel: !0, checked: n, onChange: i, disabled: l }),
     });
 }
 function tc(e) {
@@ -618,6 +624,7 @@ function tc(e) {
                 ],
             }),
             (0, A.jsx)(td, {
+                label: K.intl.string(K.t.Qp98s9),
                 checked: r,
                 onChange: async function () {
                     try {
