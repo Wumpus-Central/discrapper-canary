@@ -1,41 +1,40 @@
 var l = n(477900),
     i = n(582128),
     r = n(403581),
-    a = n(418200),
-    s = n(166532),
-    o = n(367210),
-    u = n(810498),
-    c = n(335056),
-    d = n(448645),
-    m = n(615396),
-    p = n(120700),
-    C = n(660505),
-    h = n(558620),
-    f = n(3900),
-    E = n(602787),
-    S = n(379912),
-    I = n(792996);
+    a = n(166532),
+    s = n(367210),
+    o = n(335056),
+    u = n(448645),
+    c = n(615396),
+    d = n(120700),
+    m = n(660505),
+    p = n(558620),
+    C = n(682689),
+    h = n(602787),
+    f = n(379912),
+    E = n(792996);
 n.d(
     t,
     {},
     {
         E: function (e) {
-            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: g } = (0, E.i)(),
+            let { isEligibleForTrial: t, isPremiumGroupPurchase: n, userTrialOffer: S } = (0, h.i)(),
                 {
-                    activeSubscription: y,
-                    isPremium: A,
-                    isGift: P,
-                    checkoutPriceOptions: v,
-                    isInOneStepSubscriptionCheckout: x,
-                    shouldDisallowPlanSelection: _,
-                    verifiedTrialId: T,
-                    effectivePlanGroup: b,
-                    isRecurringGiftCheckout: N,
-                    premiumTenantParams: j,
-                    openInvoiceId: R,
-                    reviewWarningMessage: O,
-                    initialPlanId: L,
-                } = (0, f.t4)((e) => ({
+                    activeSubscription: I,
+                    isPremium: g,
+                    isGift: y,
+                    checkoutPriceOptions: A,
+                    isInOneStepSubscriptionCheckout: P,
+                    shouldDisallowPlanSelection: v,
+                    verifiedTrialId: x,
+                    effectivePlanGroup: _,
+                    isRecurringGiftCheckout: T,
+                    premiumTenantParams: b,
+                    openInvoiceId: N,
+                    reviewWarningMessage: j,
+                    initialPlanId: R,
+                    shouldShowFreeSkuSelectStep: O,
+                } = (0, C.t4)((e) => ({
                     initialPlanId: e.getInitialPlanId(),
                     activeSubscription: e.activeSubscription,
                     isPremium: e.get("isPremiumPurchase"),
@@ -48,39 +47,40 @@ n.d(
                     openInvoiceId: e.getSharedCheckoutParams().openInvoiceId,
                     reviewWarningMessage: e.getSharedCheckoutParams().reviewWarningMessage,
                     isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
-                    premiumTenantParams: e.getTenantParams(p.C.PREMIUM_CHECKOUT) ?? {},
+                    premiumTenantParams: e.getTenantParams(d.C.PREMIUM_CHECKOUT) ?? {},
+                    shouldShowFreeSkuSelectStep: e.getShouldShowSelectFreeSkuStep(),
                 })),
-                { subscriptionTier: M } = j,
-                k = (0, h.A)(),
-                w = e.handlePaymentSourceAdd,
-                D = null != R,
-                U = null == L && null == M,
-                G = i.useMemo(() => !_ && (x ? U && A : A), [x, U, A, _]),
-                F = e.handleStepChange,
-                B = (0, d.J$)(v.paymentSourceId),
-                H = (0, E.R)({ hasOpenInvoice: D ?? !1 }),
-                W = null != y && !P,
-                V = i.useCallback(
+                { subscriptionTier: L } = b,
+                M = (0, p.A)(),
+                k = e.handlePaymentSourceAdd,
+                w = null != N,
+                D = null == R && null == L,
+                U = i.useMemo(() => !v && (P ? D && g : g), [P, D, g, v]),
+                G = e.handleStepChange,
+                F = (0, u.J$)(A.paymentSourceId),
+                B = (0, h.R)({ hasOpenInvoice: w ?? !1 }),
+                H = null != I && !y,
+                W = i.useCallback(
                     () =>
-                        W
-                            ? (0, l.jsx)(c.A, {
-                                  handlePaymentSourceAdd: w,
-                                  planGroup: b,
-                                  hasOpenInvoice: D,
-                                  isInPastDueCheckout: H,
+                        H
+                            ? (0, l.jsx)(o.A, {
+                                  handlePaymentSourceAdd: k,
+                                  planGroup: _,
+                                  hasOpenInvoice: w,
+                                  isInPastDueCheckout: B,
                               })
-                            : (0, l.jsx)(o.M, {
-                                  handlePaymentSourceAdd: w,
-                                  handleStepChange: F,
-                                  planGroup: b,
-                                  verifiedTrialId: T,
-                                  reviewWarningMessage: O,
+                            : (0, l.jsx)(s.M, {
+                                  handlePaymentSourceAdd: k,
+                                  handleStepChange: G,
+                                  planGroup: _,
+                                  verifiedTrialId: x,
+                                  reviewWarningMessage: j,
                               }),
-                    [w, W, b, T, O, D, H, F],
+                    [k, H, _, x, j, w, B, G],
                 ),
-                Y = null != g ? g.id : void 0,
-                K = i.useMemo(() => ({ user_trial_offer_id: Y }), [Y]),
-                Z = i.useMemo(
+                V = null != S ? S.id : void 0,
+                Y = i.useMemo(() => ({ user_trial_offer_id: V }), [V]),
+                K = i.useMemo(
                     () =>
                         (function (e) {
                             let {
@@ -92,33 +92,33 @@ n.d(
                                 isPrepaidPaymentSource: a,
                                 isInPastDueCheckout: s,
                             } = e;
-                            if (n) return I.intl.string(I.t.YScQSF);
-                            if (t) return I.intl.string(I.t.ouo4FK);
-                            if (null != l && (0, d.ys)(l.id))
+                            if (n) return E.intl.string(E.t.YScQSF);
+                            if (t) return E.intl.string(E.t.ouo4FK);
+                            if (null != l && (0, u.ys)(l.id))
                                 return s
-                                    ? I.intl.string(S.default.LvcUx4)
+                                    ? E.intl.string(f.default.LvcUx4)
                                     : a
-                                      ? I.intl.string(I.t.cRCCJ3)
+                                      ? E.intl.string(E.t.cRCCJ3)
                                       : null != i
                                         ? i.isPausedAllowsResumeButNotUpdates
-                                            ? I.intl.string(I.t.zpi5pg)
-                                            : (0, m.Ge)(i, l.id, r)
-                                              ? I.intl.string(I.t.IJI7yk)
-                                              : I.intl.string(I.t.VPuTc5)
-                                        : (0, d.ff)(null, l);
-                            return I.intl.string(I.t.YScQSF);
+                                            ? E.intl.string(E.t.zpi5pg)
+                                            : (0, c.Ge)(i, l.id, r)
+                                              ? E.intl.string(E.t.IJI7yk)
+                                              : E.intl.string(E.t.VPuTc5)
+                                        : (0, u.ff)(null, l);
+                            return E.intl.string(E.t.YScQSF);
                         })({
-                            isGift: P,
-                            isRecurringGiftCheckout: N,
-                            selectedPlan: k,
-                            premiumSubscription: y,
-                            planGroup: b,
-                            isPrepaidPaymentSource: B,
-                            isInPastDueCheckout: H,
+                            isGift: y,
+                            isRecurringGiftCheckout: T,
+                            selectedPlan: M,
+                            premiumSubscription: I,
+                            planGroup: _,
+                            isPrepaidPaymentSource: F,
+                            isInPastDueCheckout: B,
                         }),
-                    [P, N, k, y, B, H, b],
+                    [y, T, M, I, F, B, _],
                 ),
-                q = i.useMemo(
+                Z = i.useMemo(
                     () =>
                         (function (e) {
                             let { isPremiumTrial: t, buttonLabel: n } = e;
@@ -130,34 +130,32 @@ n.d(
                                       icon: () => (0, l.jsx)(r.NitroWheelIcon, { color: "currentColor" }),
                                   }
                                 : { variant: "active", text: n, dataTestId: "purchase" };
-                        })({ isPremiumTrial: t, buttonLabel: Z }),
-                    [t, Z],
+                        })({ isPremiumTrial: t, buttonLabel: K }),
+                    [t, K],
                 ),
-                { claimableRewards: z } = (0, a.Pv)(),
-                $ = (0, u.px)(k, P && !N, z),
-                Q = i.useCallback(
+                q = i.useCallback(
                     () =>
-                        x
-                            ? void F(s.pn.SKU_SELECT)
+                        P
+                            ? void G(a.pn.SKU_SELECT)
                             : n
-                              ? void F(s.pn.ADD_PAYMENT_STEPS)
-                              : $
-                                ? void F(s.pn.SELECT_FREE_SKU)
-                                : F(s.pn.PLAN_SELECT),
-                    [F, x, $, n],
+                              ? void G(a.pn.ADD_PAYMENT_STEPS)
+                              : O
+                                ? void G(a.pn.SELECT_FREE_SKU)
+                                : G(a.pn.PLAN_SELECT),
+                    [G, P, O, n],
                 ),
-                J = i.useMemo(
+                z = i.useMemo(
                     () => ({
-                        onBack: Q,
-                        tenantProvidedReviewButtonProps: q,
-                        metadata: K,
-                        backButtonEligible: G,
-                        trialId: T,
-                        planGroup: b,
+                        onBack: q,
+                        tenantProvidedReviewButtonProps: Z,
+                        metadata: Y,
+                        backButtonEligible: U,
+                        trialId: x,
+                        planGroup: _,
                     }),
-                    [Q, q, K, G, T, b],
+                    [q, Z, Y, U, x, _],
                 );
-            return (0, l.jsx)(C.Y, { ...e, renderStepBody: V, tenantCheckoutFooterProps: J, isTrial: t });
+            return (0, l.jsx)(m.Y, { ...e, renderStepBody: W, tenantCheckoutFooterProps: z, isTrial: t });
         },
     },
 );

@@ -40,7 +40,7 @@ function C(e) {
 var h = n(660505),
     f = n(71804),
     E = n(558620),
-    S = n(3900),
+    S = n(682689),
     I = n(834730),
     g = n(860841),
     y = n(854354),
@@ -3097,7 +3097,7 @@ function l4(e) {
             startingPremiumSubscriptionPlanId: v,
             startingFractionalPremiumEndsAt: x,
             checkoutInvoicePreview: T,
-            isRecurringGiftCheckout: b,
+            shouldShowFreeSkuSelectStep: b,
         } = (0, S.t4)((e) => ({
             planGroup: e.getEffectivePlanGroup(),
             continueSessionToInitialStep: e.getSharedCheckoutParams().continueSessionToInitialStep,
@@ -3109,7 +3109,7 @@ function l4(e) {
             startingPremiumSubscriptionPlanId: e.startingPremiumSubscriptionPlanId,
             startingFractionalPremiumEndsAt: e.startingFractionalPremiumEndsAt,
             checkoutInvoicePreview: e.checkoutInvoicePreview,
-            isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
+            shouldShowFreeSkuSelectStep: e.getShouldShowSelectFreeSkuStep(),
         })),
         N = (0, E.A)(),
         j = (0, ea.s2)(),
@@ -3120,31 +3120,29 @@ function l4(e) {
             hasSentMessage: k,
             isSendingMessage: w,
             sendGiftMessage: U,
-            claimableRewards: G,
-            selectedGiftingPromotionRewards: F,
-            openGiftingBadgePostPurchaseModal: B,
-            canShowGiftingBadgePostPurchase: H,
+            selectedGiftingPromotionRewards: G,
+            openGiftingBadgePostPurchaseModal: F,
+            canShowGiftingBadgePostPurchase: B,
         } = (0, nO.Pv)(),
-        { confirmationFooter: W } = (0, u.cG)(),
-        V = (0, lV.px)(N, R && !b, G),
-        Y = (0, lV.Mq)(N),
-        { enabled: K } = lW.A.useConfig({ location: "PremiumPaymentConfirmStep" }),
-        Z = K && (0, lY.MW)({ isGift: R, giftRecipient: O, selectedPlanId: N?.id }),
-        { purchases: q } = (0, lF.Wg)(!1),
-        z = (0, D.bG)([lq.A], () => lq.A.getGiftPromotion()?.id),
-        $ = (0, D.bG)([lq.A], () => {
+        { confirmationFooter: H } = (0, u.cG)(),
+        W = (0, lV.Mq)(N),
+        { enabled: V } = lW.A.useConfig({ location: "PremiumPaymentConfirmStep" }),
+        Y = V && (0, lY.MW)({ isGift: R, giftRecipient: O, selectedPlanId: N?.id }),
+        { purchases: K } = (0, lF.Wg)(!1),
+        Z = (0, D.bG)([lq.A], () => lq.A.getGiftPromotion()?.id),
+        q = (0, D.bG)([lq.A], () => {
             let e = lq.A.getMarketingComponentBySurface(tv.oW.GIFT_REMINDER_NAGBAR);
             return e?.surface ?? null;
         }),
-        Q = (0, L.g)(p, A),
-        J = null != T ? T.orbsReward : null,
-        X = null != J && J > 0,
-        ee = R && !Z && !X && F.length > 0 && F.every((e) => null != q.get(e)) && Y,
-        el = { selectedPlan: N, selectedSkuId: g, step: j };
-    if (null == N) throw new f.v({ message: "Expected plan to be selected", extraSentryInformation: el });
-    if (null == g) throw new f.v({ message: "Expected selectedSkuId", extraSentryInformation: el });
-    if (null == j) throw new f.v({ message: "Step should be set", extraSentryInformation: el });
-    let ei = c.useCallback(() => {
+        z = (0, L.g)(p, A),
+        $ = null != T ? T.orbsReward : null,
+        Q = null != $ && $ > 0,
+        J = R && !Y && !Q && G.length > 0 && G.every((e) => null != K.get(e)) && W,
+        X = { selectedPlan: N, selectedSkuId: g, step: j };
+    if (null == N) throw new f.v({ message: "Expected plan to be selected", extraSentryInformation: X });
+    if (null == g) throw new f.v({ message: "Expected selectedSkuId", extraSentryInformation: X });
+    if (null == j) throw new f.v({ message: "Step should be set", extraSentryInformation: X });
+    let ee = c.useCallback(() => {
         (l(), s?.());
     }, [l, s]);
     (0, et.Ay)(() => {
@@ -3155,7 +3153,7 @@ function l4(e) {
                 subscription_id: y?.id,
             });
     });
-    let er = (0, lB.HH)();
+    let el = (0, lB.HH)();
     (c.useEffect(() => {
         function e() {
             if (P)
@@ -3197,9 +3195,9 @@ function l4(e) {
                     }),
                         lX._.dispatch(eU.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED));
             else
-                null != J && J > 0
-                    ? (0, lK.$)({ orbsAmount: J, openGiftingBadgePostPurchaseModal: R && H ? B : void 0 })
-                    : lQ(R, g) && (er?.id === lZ.Ym || er?.name?.includes(lZ.YX)) && (0, lZ.tu)();
+                null != $ && $ > 0
+                    ? (0, lK.$)({ orbsAmount: $, openGiftingBadgePostPurchaseModal: R && B ? F : void 0 })
+                    : lQ(R, g) && (el?.id === lZ.Ym || el?.name?.includes(lZ.YX)) && (0, lZ.tu)();
         }
         return (
             lX._.subscribe(eU.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -3207,19 +3205,19 @@ function l4(e) {
                 lX._.unsubscribe(eU.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [P, y, J, er, R, g, I, B, H]),
+    }, [P, y, $, el, R, g, I, F, B]),
         c.useEffect(() => {
             !R || null == O || null == M || k || w || (0, l0.Ik)(O) || U({ onSubscriptionConfirmation: s });
         }, [U, R, O, M, k, w, s]),
         c.useEffect(() => {
-            V &&
-                null != $ &&
-                null != z &&
-                (0, lH.qr)(lG.M.GIFTING_PROMOTION_REMINDER, z, { dismissAction: l3.i.INDIRECT_ACTION });
-        }, [$, z, V]));
-    let es = null != h ? lJ.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != m) t = m(N, ei, y);
-    else if (R) t = (0, r.jsx)(lJ.fw, { planId: N.id, onClose: ei, shouldUsePostPurchaseRecipientDelivery: Z });
+            b &&
+                null != q &&
+                null != Z &&
+                (0, lH.qr)(lG.M.GIFTING_PROMOTION_REMINDER, Z, { dismissAction: l3.i.INDIRECT_ACTION });
+        }, [q, Z, b]));
+    let ei = null != h ? lJ.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != m) t = m(N, ee, y);
+    else if (R) t = (0, r.jsx)(lJ.fw, { planId: N.id, onClose: ee, shouldUsePostPurchaseRecipientDelivery: Y });
     else {
         let e =
             v === N.id
@@ -3231,19 +3229,19 @@ function l4(e) {
                   };
         t = (0, r.jsx)(lJ.Ay, {
             planId: N.id,
-            onClose: ei,
-            paymentSourceType: Q,
-            hideClose: null != W,
+            onClose: ee,
+            paymentSourceType: z,
+            hideClose: null != H,
             startingFractionalPremiumEndsAt: x,
-            customCTAType: es,
+            customCTAType: ei,
             ...e,
         });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(eH.dZ, { children: [(0, r.jsx)(nJ.A, {}), t] }),
-            null != W && W,
-            ee && (0, r.jsx)(l1, { rewardSkuIds: F, onClose: ei, onRewardModalClose: B }),
+            null != H && H,
+            J && (0, r.jsx)(l1, { rewardSkuIds: G, onClose: ee, onRewardModalClose: F }),
         ],
     });
 }
@@ -3404,59 +3402,56 @@ function ix(e) {
         } = e,
         { paymentSources: C } = (0, _.j)(),
         h = (0, E.A)(),
-        { isGift: f, claimableRewards: I } = (0, nO.Pv)();
+        { isGift: f } = (0, nO.Pv)();
     l = l ?? C;
     let {
-            variant: g,
-            text: y,
-            onClick: A,
-            disabled: P,
+            variant: I,
+            text: g,
+            onClick: y,
+            disabled: A,
         } = (function (e) {
             let {
                     onStepChange: t,
                     selectedPlanId: n,
                     isGift: l,
-                    claimableRewards: i,
-                    paymentSources: r,
-                    shouldRenderUpdatedPaymentModal: a,
-                    isTrial: s,
-                    isNextDisabled: u = !1,
+                    paymentSources: i,
+                    shouldRenderUpdatedPaymentModal: r,
+                    isTrial: a,
+                    isNextDisabled: s = !1,
                 } = e,
-                c = (0, D.bG)([eC.A], () => eC.A.getPremiumTypeSubscription()),
-                d = (0, E.A)(),
-                m = (0, S.t4)((e) => e.getIsRecurringGiftCheckout()),
-                p = (0, ea.s2)(),
-                { hasEntitlements: C } = (0, io.X)(n, l),
-                h = (null != c && null != c.paymentSourceId) || Object.keys(r).length > 0 || (C && !s);
-            var f = a ? H.intl.string(H.t.PDTjLN) : H.intl.string(H.t.XqMe3N),
-                I = o.pn.ADD_PAYMENT_STEPS;
+                u = (0, D.bG)([eC.A], () => eC.A.getPremiumTypeSubscription()),
+                c = (0, ea.s2)(),
+                d = (0, S.t4)((e) => e.getShouldShowSelectFreeSkuStep()),
+                { hasEntitlements: m } = (0, io.X)(n, l),
+                p = (null != u && null != u.paymentSourceId) || Object.keys(i).length > 0 || (m && !a);
+            var C = r ? H.intl.string(H.t.PDTjLN) : H.intl.string(H.t.XqMe3N),
+                h = o.pn.ADD_PAYMENT_STEPS;
             return (
-                h && (I = o.pn.REVIEW),
-                (0, lV.px)(d, l && !m, i) && p !== o.pn.SELECT_FREE_SKU && (I = o.pn.SELECT_FREE_SKU),
-                { variant: "primary", text: f, onClick: () => t(I), disabled: u }
+                p && (h = o.pn.REVIEW),
+                d && c !== o.pn.SELECT_FREE_SKU && (h = o.pn.SELECT_FREE_SKU),
+                { variant: "primary", text: C, onClick: () => t(h), disabled: s }
             );
         })({
             onStepChange: t,
             selectedPlanId: (n = n ?? h?.id),
             isGift: f,
-            claimableRewards: I,
             paymentSources: l,
             shouldRenderUpdatedPaymentModal: u,
             isTrial: d,
             isNextDisabled: m,
         }),
-        v = c.useMemo(() => {
+        P = c.useMemo(() => {
             let e =
                 null != n && s.includes(n)
-                    ? { variant: g, text: y, onClick: A, disabled: P }
+                    ? { variant: I, text: g, onClick: y, disabled: A }
                     : { variant: "primary", text: H.intl.string(H.t.XqMe3N), disabled: !0 };
             return p && a && null != i
                 ? [{ variant: "secondary", text: H.intl.string(H.t["13/7kX"]), onClick: i }, e]
                 : [e];
-        }, [g, y, A, P, n, s, p, a, i]);
+        }, [I, g, y, A, n, s, p, a, i]);
     return (0, r.jsx)(iP.H, {
         leading: !p && a && null != i ? (0, r.jsx)(iv.A, { onClick: i }) : void 0,
-        actions: v,
+        actions: P,
         actionsFullWidth: p,
     });
 }

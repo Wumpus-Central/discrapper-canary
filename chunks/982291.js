@@ -4,24 +4,22 @@ var l = n(477900),
     a = n(166532),
     s = n(735305),
     o = n(169801),
-    u = n(810498),
-    c = n(295405),
-    d = n(998312),
-    m = n(558620),
-    p = n(3900),
-    C = n(818348);
-function h(e) {
+    u = n(295405),
+    c = n(998312),
+    d = n(682689),
+    m = n(818348);
+function p(e) {
     let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: r } = e,
         {
             purchaseType: o,
-            continueSessionToInitialStep: u,
-            initialPlanId: d,
-        } = (0, p.t4)((e) => ({
+            continueSessionToInitialStep: c,
+            initialPlanId: p,
+        } = (0, d.t4)((e) => ({
             purchaseType: e.purchaseType,
             continueSessionToInitialStep: e.getSharedCheckoutParams().continueSessionToInitialStep,
             initialPlanId: e.getInitialPlanId(),
         })),
-        m = i.useCallback(
+        C = i.useCallback(
             () =>
                 (function (e) {
                     let {
@@ -30,37 +28,35 @@ function h(e) {
                         returnStepIfNoPaymentSources: l,
                         purchaseType: i,
                     } = e;
-                    if (0 === Object.keys(c.A.paymentSources).length) {
+                    if (0 === Object.keys(u.A.paymentSources).length) {
                         if (null != l) return void t.handleStepChange(l);
-                        i === C.VV.SUBSCRIPTION
+                        i === m.VV.SUBSCRIPTION
                             ? t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS })
                             : t.handleClose();
                     } else t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS });
                 })({ returnStep: t, returnStepIfNoPaymentSources: n, paymentModalStepProps: r, purchaseType: o }),
             [t, n, r, o],
         );
-    return (0, l.jsx)(s.x, { ...r, onReturn: m, initialPlanId: d, continueSessionToInitialStep: u });
+    return (0, l.jsx)(s.x, { ...r, onReturn: C, initialPlanId: p, continueSessionToInitialStep: c });
 }
-function f(e) {
+function C(e) {
     let {
             selectedSkuId: t,
-            isRecurringGiftCheckout: n,
-            initialPlanId: s,
-        } = (0, p.t4)((e) => ({
+            initialPlanId: n,
+            shouldShowFreeSkuSelectStep: s,
+        } = (0, d.t4)((e) => ({
             initialPlanId: e.getInitialPlanId(),
             selectedSkuId: e.selectedSkuId,
-            isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
+            shouldShowFreeSkuSelectStep: e.getShouldShowSelectFreeSkuStep(),
         })),
-        c = (0, m.A)(),
-        { isGift: d, claimableRewards: C } = (0, r.Pv)(),
-        f = (0, o.A)({ isGift: d, skuId: t }),
-        E = (0, p.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: f })),
-        S = (0, u.px)(c, d && !n, C),
-        I = i.useMemo(() => {
-            let e = null == s ? a.pn.PLAN_SELECT : a.pn.REVIEW;
-            return (E && (e = a.pn.REVIEW), S && (e = a.pn.SELECT_FREE_SKU), e);
-        }, [E, S, s]);
-    return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: I });
+        { isGift: u } = (0, r.Pv)(),
+        c = (0, o.A)({ isGift: u, skuId: t }),
+        m = (0, d.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: c })),
+        C = i.useMemo(() => {
+            let e = null == n ? a.pn.PLAN_SELECT : a.pn.REVIEW;
+            return (m && (e = a.pn.REVIEW), s && (e = a.pn.SELECT_FREE_SKU), e);
+        }, [m, s, n]);
+    return (0, l.jsx)(p, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: C });
 }
 n.d(
     t,
@@ -73,13 +69,13 @@ n.d(
                     isGiftCustomizationEnabled: r,
                     paymentModalStepProps: s,
                 } = e,
-                { isExpressCheckoutEnabled: o } = (0, p.t4)((e) => ({
+                { isExpressCheckoutEnabled: o } = (0, d.t4)((e) => ({
                     isExpressCheckoutEnabled: e.getIsExpressCheckoutEnabled(),
                 })),
                 u = i.useMemo(() => (o ? a.pn.REVIEW : r ? a.pn.GIFT_CUSTOMIZATION : void 0), [r, o]);
-            return t === d.C.PREMIUM_CHECKOUT
-                ? (0, l.jsx)(f, { ...s })
-                : (0, l.jsx)(h, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: u });
+            return t === c.C.PREMIUM_CHECKOUT
+                ? (0, l.jsx)(C, { ...s })
+                : (0, l.jsx)(p, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: u });
         },
     },
 );

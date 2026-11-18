@@ -6,9 +6,9 @@ var i = t(582128),
     s = t(826673),
     u = t(412260),
     c = t(860300),
-    d = t(682901);
+    d = t(113457);
 function f(e) {
-    return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2, d.gD.PREMIUM_3_MONTH_TIER_2].includes(e?.id);
+    return (0, d.H)(e?.id);
 }
 t.d(
     n,
@@ -61,11 +61,6 @@ t.d(
         kz: function (e, n, t) {
             let i = f(e);
             return null != t && 1 === t.length && i && n;
-        },
-        px: function (e, n, t) {
-            let i = f(e),
-                l = null != t && t.length >= 1;
-            return n && i && l;
         },
         x: function (e, n) {
             if (null != e && null != n) {

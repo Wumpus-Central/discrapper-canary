@@ -19,7 +19,7 @@ var l = n(477900),
     d = n(834730),
     m = n(726656),
     p = n(558620),
-    C = n(3900),
+    C = n(682689),
     h = n(602787),
     f = n(773444),
     E = n(418200),
@@ -513,7 +513,7 @@ function eg(e) {
         M = (0, p.A)(),
         k = (0, C.t4)((e) => e.getIsRecurringGiftCheckout());
     (0, j.r)(k);
-    let w = (0, b.kz)(M, x && !k && (0, I.Ik)(_), O);
+    let w = (0, b.kz)(M, x && (0, I.Ik)(_), O);
     a()(void 0 !== f, "should not be undefined");
     let [D, U] = (0, s.yK)([S.A], () => [null != f ? S.A.get(f.planId) : null, null != t ? S.A.get(t) : null]),
         G = g?.subscriptionTrial,

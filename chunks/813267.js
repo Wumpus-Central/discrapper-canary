@@ -10,7 +10,7 @@ var l = n(477900),
     d = n(834730),
     m = n(150934),
     p = n(939249),
-    C = n(3900),
+    C = n(682689),
     h = n(418200),
     f = n(773669),
     E = n(97352),
@@ -37,28 +37,27 @@ function N(e) {
             children: m,
         } = e,
         {
-            setSelectedPlanId: f,
-            isRecurringGift: E,
-            setIsRecurringGift: S,
+            setSelectedPlanId: h,
+            isRecurringGift: f,
+            setIsRecurringGift: E,
         } = (0, C.t4)((e) => ({
             setSelectedPlanId: e.setSelectedPlanId,
             isRecurringGift: e.isRecurringGift,
             setIsRecurringGift: e.setIsRecurringGift,
         })),
-        { setSelectedGiftingPromotionRewards: I } = (0, h.Pv)(),
-        g = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
-        y = i.useMemo(
+        S = n.interval === v.WT.YEAR ? x.default.rstMwN : x.default.Vb8FaC,
+        I = i.useMemo(
             () => [
-                { isRecurring: !0, label: g },
+                { isRecurring: !0, label: S },
                 { isRecurring: !1, label: x.default["hs/Nr+"] },
             ],
-            [g],
+            [S],
         ),
-        A = i.useCallback(
+        g = i.useCallback(
             (e) => {
-                (f(t), S(e), e && I([]));
+                (h(t), E(e));
             },
-            [t, f, S, I],
+            [t, h, E],
         );
     return o
         ? (0, l.jsxs)("div", {
@@ -67,9 +66,9 @@ function N(e) {
                   m,
                   (0, l.jsx)("div", {
                       className: b.Hg,
-                      children: y.map((e) => {
+                      children: I.map((e) => {
                           let { isRecurring: t, label: n } = e,
-                              i = E === t;
+                              i = f === t;
                           return (0, l.jsxs)(
                               p.D,
                               {
@@ -81,7 +80,7 @@ function N(e) {
                                   }),
                                   tabIndex: i ? 0 : -1,
                                   className: b.Mg,
-                                  onClick: () => A(t),
+                                  onClick: () => g(t),
                                   children: [
                                       (0, l.jsx)(T.T, { disabled: u, checked: i }),
                                       (0, l.jsx)(d.E, { variant: "body-sm/medium", children: _.intl.string(n) }),

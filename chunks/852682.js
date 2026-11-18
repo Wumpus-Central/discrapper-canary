@@ -14,7 +14,7 @@ var i = n(477900),
     E = n(655857),
     m = n(883645),
     h = n(166532),
-    A = n(3900),
+    A = n(682689),
     T = n(442467),
     f = n(558620),
     k = n(427675),
@@ -295,8 +295,8 @@ function z(e) {
             });
         }, [ez, eX, es, eh.startTime, eJ, eK, eZ, eB]),
         e0 = a.useCallback(() => er(eE === R.h.COMPLETED, e_), [er, eE, e_]),
-        e1 = (0, s.A)(() => Date.now(), [eH]),
-        e2 = a.useCallback(
+        e2 = (0, s.A)(() => Date.now(), [eH]),
+        e1 = a.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: a, emitPaymentFlowLoadedEvent: s } = t,
@@ -316,18 +316,18 @@ function z(e) {
                           ...i,
                           from_step: o,
                           to_step: e === h.pn.ADD_PAYMENT_STEPS ? h.pn.PAYMENT_ELEMENT : e,
-                          step_duration_ms: l - e1,
+                          step_duration_ms: l - e2,
                           flow_duration_ms: l - eh.startTime,
                           gift_card_balance: eK,
                           gift_card_currency: eZ,
                       });
             },
-            [ej, eo, eT, eH, eO, ez, e1, eh.startTime, e$, el, eN, e0, ec, eK, eZ],
+            [ej, eo, eT, eH, eO, ez, e2, eh.startTime, e$, el, eN, e0, ec, eK, eZ],
         );
     ((0, _.b)({
         currentStep: eH,
         paymentAuthenticationState: eF,
-        setStep: e2,
+        setStep: e1,
         setPurchaseState: em,
         requiresSeparateAuthentication: !1,
         handlePurchase: void 0,
@@ -343,14 +343,14 @@ function z(e) {
                     ? e(h.pn.AWAITING_PURCHASE_TOKEN_AUTH)
                     : t === h.pn.AWAITING_PURCHASE_TOKEN_AUTH && n === T.C.SUCCESS && e(h.pn.REVIEW);
             }, [t, n, e]);
-        })(e2),
+        })(e1),
         (0, g.A)(e0),
         (0, _.QR)(eF, eg));
     let e6 = a.useCallback(
         (e) => {
-            (ev(e?.linkWalletEnabled ?? !0), e2(h.pn.ADD_PAYMENT_STEPS));
+            (ev(e?.linkWalletEnabled ?? !0), e1(h.pn.ADD_PAYMENT_STEPS));
         },
-        [e2, ev],
+        [e1, ev],
     );
     return (0, i.jsx)(l.b, {
         className: j.Xn,
@@ -369,7 +369,7 @@ function z(e) {
                 disableDefaultSlideTransformStyling: Q,
                 header: (0, i.jsx)(H, { handleClose: e0, renderHeader: V }),
                 ...{
-                    handleStepChange: e2,
+                    handleStepChange: e1,
                     handleClose: e0,
                     handlePaymentSourceAdd: e6,
                     analyticsData: ez,
