@@ -3513,6 +3513,7 @@ var ih =
         (eP.VOICE_CONNECTION_TTC_COLLECTED = "voice_connection_ttc_collected"),
         (eP.VOICE_CONNECTION_REMOTE_STREAMS_CREATED = "voice_connection_remote_streams_created"),
         (eP.VOICE_DISCONNECT = "voice_disconnect"),
+        (eP.SPATIAL_AUDIO_SESSION_ENDED = "spatial_audio_session_ended"),
         (eP.START_SPEAKING = "start_speaking"),
         (eP.START_LISTENING = "start_listening"),
         (eP.VOICE_WATCHDOG_TIMEOUT = "voice_watchdog_timeout"),

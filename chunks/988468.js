@@ -831,6 +831,8 @@ function nm(e, t) {
                         return "HEADSET";
                 }
             })(t, e),
+            macosTransportType: t.macosTransportType,
+            windowsEndpointFormFactor: t.windowsEndpointFormFactor,
             windowsDeviceService: t.windowsDeviceService,
             windowsDeviceDescription: t.windowsDeviceDescription,
             windowsDeviceInterfaceFriendlyName: t.windowsDeviceInterfaceFriendlyName,

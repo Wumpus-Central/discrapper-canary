@@ -19291,7 +19291,7 @@ function p7() {
                 baseline: (null != s ? i(s) : void 0) ?? p4,
                 editableName: s === p2 ? void 0 : s,
                 select(e) {
-                    (r(e), pb.default.setSpatialAudioOverrides(e6().cloneDeep(i(e))));
+                    (r(e), pb.default.setSpatialAudioOverrides(e6().cloneDeep(i(e)), pD.u.DEVTOOLS));
                 },
                 save(t) {
                     (d({ ...a, [t]: e6().cloneDeep(e) }), r(t));
@@ -19308,7 +19308,12 @@ function p7() {
                         for (; t.includes(`${n} ${l}`);) l++;
                         return `${n} ${l}`;
                     })(e.length > 0 ? e : "Imported", l);
-                    return (d({ ...a, [n]: t }), r(n), pb.default.setSpatialAudioOverrides(e6().cloneDeep(t)), n);
+                    return (
+                        d({ ...a, [n]: t }),
+                        r(n),
+                        pb.default.setSpatialAudioOverrides(e6().cloneDeep(t), pD.u.DEVTOOLS),
+                        n
+                    );
                 },
             };
         })(e, l),
@@ -19325,10 +19330,12 @@ function p7() {
                         "isSpatial" !== t || e6().has(s, t) || a !== e6().get(m, t)
                             ? e6().set(e6().cloneDeep(e), t, a)
                             : pP(e, t),
+                        pD.u.DEVTOOLS,
                     ),
                 reset: (t) =>
                     pb.default.setSpatialAudioOverrides(
                         e6().has(s, t) ? e6().set(e6().cloneDeep(e), t, e6().cloneDeep(e6().get(s, t))) : pP(e, t),
+                        pD.u.DEVTOOLS,
                     ),
             }),
             [e, s, c, m],
@@ -19343,7 +19350,7 @@ function p7() {
                     (0, r.jsx)(p9, { overrides: e, modified: h > 0, profiles: i }),
                     (0, r.jsx)(p0, {
                         overrideCount: h,
-                        onResetAll: () => pb.default.setSpatialAudioOverrides(e6().cloneDeep(s)),
+                        onResetAll: () => pb.default.setSpatialAudioOverrides(e6().cloneDeep(s), pD.u.DEVTOOLS),
                     }),
                     (0, r.jsxs)(u.n, {
                         label: "Output",

@@ -138,8 +138,8 @@ n.d(
                     i = (0, d.z)(t, n);
                 (a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), L(e, n, i));
             },
-            setSpatialAudioOverrides(e) {
-                a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides: e });
+            setSpatialAudioOverrides(e, t) {
+                a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides: e, source: t });
             },
             setSpatialAudioEnabled(e) {
                 a.h.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_ENABLED", enabled: e });
