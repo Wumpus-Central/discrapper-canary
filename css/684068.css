@@ -39,7 +39,10 @@
 .character_nk2LIv {
     aspect-ratio: 1;
     opacity: 0;
-    position: relative
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .loaded_nk2LIv {
@@ -1383,4 +1386,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=684068.cb8fff841c224937.css.map*/
+/*# sourceMappingURL=684068.e1233027a58cc174.css.map*/
