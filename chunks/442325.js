@@ -143,6 +143,7 @@ class z extends r.Ay.PersistedStore {
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
     initialize(e) {
         (this.waitFor(l.A, o.A, d.Ay, c.A, u.default),
+            this.syncWith([l.A], () => N),
             (N = e?.enabled ?? !1),
             (I = Y(
                 (e?.tabs ?? []).map((e) =>

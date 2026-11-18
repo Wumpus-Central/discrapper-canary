@@ -1,26 +1,22 @@
-var e = i(477900);
+var a = i(477900);
 i(582128);
-var a = i(855986),
-    d = i(477782),
-    s = i(945810),
-    c = i(162199),
-    l = i(114129),
-    r = i(442325),
+var e = i(477782),
+    r = i(162199),
+    s = i(114129),
     u = i(254838),
-    b = i(792996);
+    c = i(745136),
+    d = i(792996);
 i.d(
-    n,
+    t,
     {},
     {
-        A: function (t) {
-            let n = (0, a.bG)([r.A, s.Bt], () => r.A.isEnabled()),
-                i = (0, a.bG)([r.A], () => r.A.getActiveTabId());
-            return n && null != t
-                ? (0, e.jsx)(d.Dr, {
+        A: function (n) {
+            return (0, c.A)() && null != n
+                ? (0, a.jsx)(e.Dr, {
                       id: "open-in-new-tab",
-                      label: b.intl.string(b.t["5Qo0S6"]),
+                      label: d.intl.string(d.t["5Qo0S6"]),
                       action: () => {
-                          (0, u.H)() && (0, l.Bd)(t.id, (0, c.j)(t), "context_menu", i);
+                          (0, u.H)() && (0, s.Bd)(n.id, (0, r.j)(n), "context_menu");
                       },
                   })
                 : null;

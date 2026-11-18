@@ -9,7 +9,7 @@ e.exports = {
     HA: "channelName_ve0N80",
     $f: "guildIcon_ve0N80",
     ro: "dmIcon_ve0N80",
-    PA: "favoritesIcon_ve0N80",
+    NR: "locationIcon_ve0N80",
     Xe: "trailMention_ve0N80",
     Pu: "trailButton_ve0N80",
     XE: "unreadIndicator_ve0N80",

@@ -1,4 +1,4 @@
-l.d(e, { default: () => j });
+l.d(e, { default: () => p });
 var n,
     i = l(477900),
     r = l(582128),
@@ -7,61 +7,60 @@ var n,
     u = l(855986),
     o = l(345942),
     c = l(71393),
-    E = l(124077),
-    d = l(674725),
-    f = l(673383),
-    g = l(752222),
-    N = l(792996),
-    S = (((n = {}).SUCCESS = "SUCCESS"), (n.PENDING = "PENDING"), (n.ERROR = "ERROR"), n);
-function I(t, e) {
-    if (t !== f.Ti.JOINED) return !1;
+    E = l(674725),
+    d = l(673383),
+    f = l(752222),
+    g = l(792996),
+    N = (((n = {}).SUCCESS = "SUCCESS"), (n.PENDING = "PENDING"), (n.ERROR = "ERROR"), n);
+function S(t, e) {
+    if (t !== d.Ti.JOINED) return !1;
     switch (e) {
-        case f.gc.NEW_MEMBER:
-        case f.gc.ALREADY_MEMBER:
-        case f.gc.PENDING_VERIFICATION:
+        case d.gc.NEW_MEMBER:
+        case d.gc.ALREADY_MEMBER:
+        case d.gc.PENDING_VERIFICATION:
             return !0;
         default:
             return !1;
     }
 }
-function C(t, e) {
-    return null == t ? e : { type: "GO_TO_SERVER", text: N.intl.string(g.default.H1wMHV), action: t };
+function I(t, e) {
+    return null == t ? e : { type: "GO_TO_SERVER", text: g.intl.string(f.default.H1wMHV), action: t };
 }
-var m = l(646514),
-    R = l(628284),
-    A = l(406810),
+var C = l(646514),
+    m = l(628284),
+    R = l(406810),
     T = l(695366),
     h = l(331322),
-    D = l(834730),
-    O = l(404778),
-    _ = l(409700);
-function P(t) {
+    A = l(834730),
+    D = l(404778),
+    O = l(409700);
+function _(t) {
     let { status: e } = t;
     switch (e) {
-        case S.SUCCESS:
-            return (0, i.jsx)(R.CircleCheckIcon, {
+        case N.SUCCESS:
+            return (0, i.jsx)(m.CircleCheckIcon, {
                 size: "refresh_sm",
-                color: m.A.colors.ICON_FEEDBACK_POSITIVE,
+                color: C.A.colors.ICON_FEEDBACK_POSITIVE,
                 "aria-hidden": !0,
             });
-        case S.PENDING:
-            return (0, i.jsx)(A.ClockIcon, {
+        case N.PENDING:
+            return (0, i.jsx)(R.ClockIcon, {
                 size: "refresh_sm",
-                color: m.A.colors.ICON_FEEDBACK_WARNING,
+                color: C.A.colors.ICON_FEEDBACK_WARNING,
                 "aria-hidden": !0,
             });
-        case S.ERROR:
+        case N.ERROR:
             return (0, i.jsx)(T.CircleErrorIcon, {
                 size: "refresh_sm",
-                color: m.A.colors.ICON_FEEDBACK_CRITICAL,
+                color: C.A.colors.ICON_FEEDBACK_CRITICAL,
                 "aria-hidden": !0,
             });
     }
 }
-function x(t) {
+function P(t) {
     let { rows: e } = t;
     return (0, i.jsx)("ul", {
-        className: _.N,
+        className: O.N,
         children: e.map((t, l) => {
             let { key: n, status: r, title: a, subtitle: s } = t;
             return (0, i.jsxs)(
@@ -72,22 +71,22 @@ function x(t) {
                     align: "start",
                     gap: 16,
                     children: [
-                        (0, i.jsx)(P, { status: r }),
+                        (0, i.jsx)(_, { status: r }),
                         (0, i.jsxs)(h.B, {
                             gap: 16,
-                            className: _.Q,
+                            className: O.Q,
                             children: [
                                 (0, i.jsxs)(h.B, {
                                     gap: 4,
                                     children: [
-                                        (0, i.jsx)(D.E, {
+                                        (0, i.jsx)(A.E, {
                                             tag: "div",
                                             variant: "heading-sm/semibold",
                                             color: "text-strong",
                                             children: a,
                                         }),
                                         null != s
-                                            ? (0, i.jsx)(D.E, {
+                                            ? (0, i.jsx)(A.E, {
                                                   variant: "body-md/normal",
                                                   color: "text-default",
                                                   children: s,
@@ -95,7 +94,7 @@ function x(t) {
                                             : null,
                                     ],
                                 }),
-                                l < e.length - 1 ? (0, i.jsx)(O.c, {}) : null,
+                                l < e.length - 1 ? (0, i.jsx)(D.c, {}) : null,
                             ],
                         }),
                     ],
@@ -105,131 +104,134 @@ function x(t) {
         }),
     });
 }
-var p = l(380832);
-function j(t) {
-    let { code: e, result: l, transitionState: n, onClose: S } = t,
-        m = (0, d.A)(e),
+var x = l(380832);
+function p(t) {
+    let { code: e, result: l, transitionState: n, onClose: N } = t,
+        C = (0, E.A)(e),
         {
-            title: R,
-            subtitle: A,
+            title: m,
+            subtitle: R,
             rows: T,
             cta: h,
-            isWaitingForGuild: D,
+            isWaitingForGuild: A,
         } = (function (t, e, l) {
-            let n = (0, d.A)(t),
+            let n = (0, E.A)(t),
                 i = n?.guildId,
                 a = (0, u.bG)([c.A], () => null != i && null != c.A.getGuild(i)),
-                [s, S] = r.useState(!1),
-                m = e?.guildJoinStatus ?? null,
-                R = a && (null == m || m === f.gc.FAILED) ? f.gc.ALREADY_MEMBER : m,
-                A = null != e && !a && !s && I(e.joinStatus, R);
+                [s, N] = r.useState(!1),
+                C = e?.guildJoinStatus ?? null,
+                m = a && (null == C || C === d.gc.FAILED) ? d.gc.ALREADY_MEMBER : C,
+                R = null != e && !a && !s && S(e.joinStatus, m);
             return (r.useEffect(() => {
-                if (!A) return;
-                let t = setTimeout(() => S(!0), 5e3);
+                if (!R) return;
+                let t = setTimeout(() => N(!0), 5e3);
                 return () => clearTimeout(t);
-            }, [A]),
+            }, [R]),
             null == e)
                 ? null
                 : {
                       ...(function (t, e, l) {
                           let { joinStatus: n, failureReason: i, guildJoinStatus: r } = t,
                               { onClose: a, onGoToServer: s } = l;
-                          if (n === f.Ti.JOINED) {
-                              let t = { type: "CLOSE", text: N.intl.string(N.t.i4jeWR), action: a };
+                          if (n === d.Ti.JOINED) {
+                              let t = { type: "CLOSE", text: g.intl.string(g.t.i4jeWR), action: a };
                               return (function (t, e, l) {
                                   let { goToServerCta: n, doneCta: i } = l,
-                                      { noun: r, orgName: a, characterName: s } = e,
+                                      { displayNoun: r, orgName: a, characterName: s } = e,
                                       u = {
                                           key: "organization",
                                           status: "SUCCESS",
-                                          title: N.intl.formatToPlainString(g.default.qJafqt, { orgName: a, noun: r }),
+                                          title: g.intl.formatToPlainString(f.default.qJafqt, {
+                                              orgName: a,
+                                              displayNoun: r,
+                                          }),
                                           subtitle:
                                               null != s
-                                                  ? N.intl.formatToPlainString(g.default.mvLVyz, { characterName: s })
+                                                  ? g.intl.formatToPlainString(f.default.mvLVyz, { characterName: s })
                                                   : null,
                                       };
                                   return {
-                                      title: N.intl.string(g.default.i3axsB),
+                                      title: g.intl.string(f.default.i3axsB),
                                       rows: [
                                           u,
                                           (function (t, e) {
-                                              let { noun: l, guildName: n } = e,
-                                                  i = N.intl.formatToPlainString(g.default.YoJwLe, { guildName: n });
+                                              let { displayNoun: l, guildName: n } = e,
+                                                  i = g.intl.formatToPlainString(f.default.YoJwLe, { guildName: n });
                                               switch (t) {
-                                                  case f.gc.NEW_MEMBER:
-                                                  case f.gc.ALREADY_MEMBER:
+                                                  case d.gc.NEW_MEMBER:
+                                                  case d.gc.ALREADY_MEMBER:
                                                       return {
                                                           key: "server",
                                                           status: "SUCCESS",
-                                                          title: N.intl.formatToPlainString(g.default["Y2DU/l"], {
+                                                          title: g.intl.formatToPlainString(f.default["Y2DU/l"], {
                                                               guildName: n,
                                                           }),
-                                                          subtitle: N.intl.formatToPlainString(g.default["316Vsz"], {
-                                                              noun: l,
+                                                          subtitle: g.intl.formatToPlainString(f.default["316Vsz"], {
+                                                              displayNoun: l,
                                                           }),
                                                       };
-                                                  case f.gc.PENDING_VERIFICATION:
+                                                  case d.gc.PENDING_VERIFICATION:
                                                       return {
                                                           key: "server",
                                                           status: "PENDING",
                                                           title: i,
-                                                          subtitle: N.intl.string(g.default.MgcCQT),
+                                                          subtitle: g.intl.string(f.default.MgcCQT),
                                                       };
-                                                  case f.gc.APPLICATION:
+                                                  case d.gc.APPLICATION:
                                                       return {
                                                           key: "server",
                                                           status: "PENDING",
                                                           title: i,
-                                                          subtitle: N.intl.string(g.default["mZ/VKS"]),
+                                                          subtitle: g.intl.string(f.default["mZ/VKS"]),
                                                       };
-                                                  case f.gc.FAILED:
+                                                  case d.gc.FAILED:
                                                   default:
                                                       return {
                                                           key: "server",
                                                           status: "ERROR",
-                                                          title: N.intl.formatToPlainString(g.default["4XMetY"], {
+                                                          title: g.intl.formatToPlainString(f.default["4XMetY"], {
                                                               guildName: n,
                                                           }),
-                                                          subtitle: N.intl.formatToPlainString(g.default.FQoZBu, {
+                                                          subtitle: g.intl.formatToPlainString(f.default.FQoZBu, {
                                                               guildName: n,
                                                           }),
                                                       };
                                               }
                                           })(t, e),
                                       ],
-                                      cta: I(f.Ti.JOINED, t) ? n : i,
+                                      cta: S(d.Ti.JOINED, t) ? n : i,
                                   };
-                              })(r, e, { goToServerCta: C(s, t), doneCta: t });
+                              })(r, e, { goToServerCta: I(s, t), doneCta: t });
                           }
-                          let { noun: u } = e,
-                              o = { type: "CLOSE", text: N.intl.string(N.t.cpT0Cq), action: a },
-                              c = C(s, o);
+                          let { displayNoun: u } = e,
+                              o = { type: "CLOSE", text: g.intl.string(g.t.cpT0Cq), action: a },
+                              c = I(s, o);
                           switch (i) {
-                              case f.z1.ALREADY_JOINED:
+                              case d.z1.ALREADY_JOINED:
                                   return {
-                                      title: N.intl.formatToPlainString(g.default["1PMPYk"], { noun: u }),
+                                      title: g.intl.formatToPlainString(f.default["1PMPYk"], { displayNoun: u }),
                                       cta: c,
                                   };
-                              case f.z1.IN_ANOTHER_ORGANIZATION:
+                              case d.z1.IN_ANOTHER_ORGANIZATION:
                                   return {
-                                      title: N.intl.formatToPlainString(g.default.vSlR1j, { noun: u }),
-                                      subtitle: N.intl.formatToPlainString(g.default.kvDHqp, { noun: u }),
+                                      title: g.intl.formatToPlainString(f.default.vSlR1j, { displayNoun: u }),
+                                      subtitle: g.intl.formatToPlainString(f.default.kvDHqp, { displayNoun: u }),
                                       cta: o,
                                   };
-                              case f.z1.GUILD_FULL:
+                              case d.z1.GUILD_FULL:
                                   return {
-                                      title: N.intl.formatToPlainString(g.default["/7Gy4g"], { noun: u }),
-                                      subtitle: N.intl.string(g.default["8TGo9L"]),
+                                      title: g.intl.formatToPlainString(f.default["/7Gy4g"], { displayNoun: u }),
+                                      subtitle: g.intl.string(f.default["8TGo9L"]),
                                       cta: o,
                                   };
-                              case f.z1.OTHER:
+                              case d.z1.OTHER:
                               default:
-                                  return { title: N.intl.string(g.default.sXbaMb), cta: o };
+                                  return { title: g.intl.string(f.default.sXbaMb), cta: o };
                           }
                       })(
-                          { ...e, guildJoinStatus: R },
+                          { ...e, guildJoinStatus: m },
                           {
-                              noun: (0, E.A)({ displayNoun: n?.displayNoun ?? null, lowercase: !0 }),
+                              displayNoun: n?.displayNoun ?? "other",
                               orgName: n?.organization.name ?? "",
                               guildName: n?.linkedGuild.name ?? "",
                               characterName: e.character?.name ?? null,
@@ -237,26 +239,26 @@ function j(t) {
                           {
                               onClose: l,
                               onGoToServer:
-                                  a || A
+                                  a || R
                                       ? function () {
                                             null != i && a && (l(), (0, o.u)(i));
                                         }
                                       : null,
                           },
                       ),
-                      isWaitingForGuild: A,
+                      isWaitingForGuild: R,
                   };
-        })(e, l, S);
-    if (null == m) return null;
-    let O = [{ text: h.text, variant: "primary", loading: D, onClick: h.action }];
-    return l.joinStatus === f.Ti.JOINED
+        })(e, l, N);
+    if (null == C) return null;
+    let D = [{ text: h.text, variant: "primary", loading: A, onClick: h.action }];
+    return l.joinStatus === d.Ti.JOINED
         ? (0, i.jsx)(s.k, {
               transitionState: n,
-              onClose: S,
-              title: R,
-              graphic: { type: "image", src: p.A },
-              actions: O,
-              children: null != T ? (0, i.jsx)(x, { rows: T }) : null,
+              onClose: N,
+              title: m,
+              graphic: { type: "image", src: x.A },
+              actions: D,
+              children: null != T ? (0, i.jsx)(P, { rows: T }) : null,
           })
-        : (0, i.jsx)(a.a, { transitionState: n, onClose: S, title: R, subtitle: A, actions: O });
+        : (0, i.jsx)(a.a, { transitionState: n, onClose: N, title: m, subtitle: R, actions: D });
 }
