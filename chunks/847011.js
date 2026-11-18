@@ -66,7 +66,7 @@ let n = [
         [r.gr.SIDEKICK_LEAVE]: i.oL,
     };
 function l(e) {
-    return e ? r.Np.SHARED_DATA : r.Np.NO_SHARED_DATA;
+    return null != e ? r.Np.SHARED_DATA : r.Np.NO_SHARED_DATA;
 }
 function o(e) {
     let { stats: t, character: a, isCharacterCreatorEnabled: r = !0 } = e;

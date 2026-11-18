@@ -5613,7 +5613,7 @@ function nz() {
 function nV(e) {
     let t,
         a,
-        { didPlayerShareDataWithDiscord: r, onClose: n } = e;
+        { onClose: r } = e;
     ((0, x.bG)([u.A], () => u.A.fetchState),
         (t = (0, x.yK)([u.A], () => {
             let { stats: e, globalStats: t } = u.A,
@@ -5642,8 +5642,8 @@ function nV(e) {
         b.useEffect(() => {
             (0, z.E)(t);
         }, [t]));
-    let s = (0, j.bL)(r),
-        [c, l] = (function (e) {
+    let n = (0, x.bG)([u.A], () => (0, j.bL)(u.A.stats)),
+        [s, c] = (function (e) {
             let [t, a] = b.useState(() =>
                 (function (e) {
                     let { character: t, progress: a, stats: r, isCharacterCreatorEnabled: i } = u.A,
@@ -5662,10 +5662,10 @@ function nV(e) {
                 }, [t]),
                 [t, a]
             );
-        })(s);
+        })(n);
     (b.useEffect(() => {
-        (h.A.setStepName(c), (0, f.if)(c));
-    }, [c]),
+        (h.A.setStepName(s), (0, f.if)(s));
+    }, [s]),
         (0, B.l0)(() => {
             (h.A.stop(), (0, f.i)(h.A.getStepName()));
         }),
@@ -5685,13 +5685,13 @@ function nV(e) {
         b.useEffect(() => {
             h.A.setForeground(a);
         }, [a]));
-    let { characterStage: p, statsScreen: g } = (0, S.UG)(c),
-        k = c === S.gr.HOME || null != g,
-        D = c === S.gr.INTRODUCTION,
-        P = (0, S.Rq)(c),
-        U = (0, x.bG)([u.A], () => (u.A.fetchState === u.T.SUCCESS ? u.A.stats : void 0)),
-        q = (0, x.bG)([u.A], () => u.A.character),
-        X = b.useMemo(
+    let { characterStage: l, statsScreen: p } = (0, S.UG)(s),
+        g = s === S.gr.HOME || null != p,
+        k = s === S.gr.INTRODUCTION,
+        D = (0, S.Rq)(s),
+        P = (0, x.bG)([u.A], () => (u.A.fetchState === u.T.SUCCESS ? u.A.stats : void 0)),
+        U = (0, x.bG)([u.A], () => u.A.character),
+        q = b.useMemo(
             () =>
                 (function (e, t) {
                     switch (e) {
@@ -5709,10 +5709,10 @@ function nV(e) {
                         default:
                             return ax;
                     }
-                })(c, q),
-            [c, q],
+                })(s, U),
+            [s, U],
         ),
-        Z = (function () {
+        X = (function () {
             let { isMuted: e, volume: t } = (0, x.cf)([u.A], () => ({ isMuted: u.A.isMuted, volume: u.A.volume })),
                 a = b.useRef(new Map()),
                 r = b.useRef(null),
@@ -5746,11 +5746,11 @@ function nV(e) {
                 )
             );
         })(),
-        J = G(),
-        ee = (0, E.k0)(c, J),
-        ea = b.useId(),
-        er = null != ee ? ea : void 0,
-        ei = b.useCallback(
+        Z = G(),
+        J = (0, E.k0)(s, Z),
+        ee = b.useId(),
+        ea = null != J ? ee : void 0,
+        er = b.useCallback(
             (e) => {
                 let t = (function (e) {
                     let { previousRoute: t, route: a } = e;
@@ -5767,33 +5767,33 @@ function nV(e) {
                               : L(t) && y(a) && (r.push({ source: R, delayMs: 0 }), r.push({ source: O, delayMs: 0 })),
                         r
                     );
-                })({ previousRoute: c, route: e });
-                (null != t && Z(t), l(e));
+                })({ previousRoute: s, route: e });
+                (null != t && X(t), c(e));
             },
-            [c, Z, l],
+            [s, X, c],
         ),
-        en = b.useCallback(
+        ei = b.useCallback(
             (e) => {
-                let t = (0, j.SK)({ flow: s, stats: U, currentRoute: c, direction: e });
+                let t = (0, j.SK)({ flow: n, stats: P, currentRoute: s, direction: e });
                 if (null == t) {
-                    1 === e && n();
+                    1 === e && r();
                     return;
                 }
-                ei(t);
+                er(t);
             },
-            [c, s, ei, n, U],
+            [s, n, er, r, P],
         ),
-        ec = b.useCallback(() => en(-1), [en]),
-        ed = b.useCallback(() => en(1), [en]),
-        el = b.useCallback(() => ei((0, j.$_)({ flow: s, stats: U })), [s, ei, U]),
-        eo = b.useCallback(
+        en = b.useCallback(() => ei(-1), [ei]),
+        ec = b.useCallback(() => ei(1), [ei]),
+        ed = b.useCallback(() => er((0, j.$_)({ flow: n, stats: P })), [n, er, P]),
+        el = b.useCallback(
             (e) => {
                 if (!u.A.isSaving) {
-                    if (null != ee) return void Y(ee);
-                    ei(e);
+                    if (null != J) return void Y(J);
+                    er(e);
                 }
             },
-            [ee, ei],
+            [J, er],
         );
     return (0, i.jsx)(v.N, {
         theme: Q.NJ.DARK,
@@ -5801,7 +5801,7 @@ function nV(e) {
             (0, i.jsx)(m.Jh, {
                 children: (0, i.jsxs)("div", {
                     className: _()(e, nB.kL),
-                    style: X,
+                    style: q,
                     role: "dialog",
                     "aria-modal": !0,
                     "aria-label": tA.intl.string(aO.default["CdU/PF"]),
@@ -5814,63 +5814,63 @@ function nV(e) {
                                 (0, i.jsx)(et, {
                                     size: "sm",
                                     "aria-label": tA.intl.string(tA.t.cpT0Cq),
-                                    onClick: n,
+                                    onClick: r,
                                     children: (0, i.jsx)(w.XSmallIcon, { size: "xs", color: "currentColor" }),
                                 }),
                             ],
                         }),
                         (0, i.jsx)(tr, {
-                            stage: p,
-                            isCovered: k,
+                            stage: l,
+                            isCovered: g,
                             className: nB.qd,
                             children:
-                                D && (0, i.jsx)(nP, { route: S.gr.INTRODUCTION, onNextStep: ed, onPreviousStep: ec }),
+                                k && (0, i.jsx)(nP, { route: S.gr.INTRODUCTION, onNextStep: ec, onPreviousStep: en }),
                         }),
                         (0, i.jsx)(es, {
-                            visible: k,
+                            visible: g,
                             enter: e1,
                             exit: e1,
                             hiddenScale: 1.02,
                             keepMounted: !0,
                             className: nB.qd,
-                            style: X,
-                            children: (0, i.jsx)($, { isVisible: k }),
+                            style: q,
+                            children: (0, i.jsx)($, { isVisible: g }),
                         }),
                         (0, i.jsx)(es, {
-                            visible: P,
+                            visible: D,
                             enter: e6,
                             exit: e9,
                             className: nB.qd,
-                            children: (0, i.jsx)(aP, { route: c }),
+                            children: (0, i.jsx)(aP, { route: s }),
                         }),
                         (0, i.jsx)(es, {
-                            visible: k,
+                            visible: g,
                             enter: e3,
                             exit: e2,
                             hiddenScale: 1.02,
                             mountAfterDelay: !0,
                             className: nB.qd,
-                            style: X,
-                            children: (0, i.jsx)(nP, { route: c, onNextStep: ed, onPreviousStep: ec }),
+                            style: q,
+                            children: (0, i.jsx)(nP, { route: s, onNextStep: ec, onPreviousStep: en }),
                         }),
                         (0, i.jsx)(ri, {
-                            activeRoute: c,
-                            blockedTrait: ee,
-                            blockedTraitDescriptionId: er,
-                            onBack: ec,
-                            onNext: ed,
-                            onReplay: el,
+                            activeRoute: s,
+                            blockedTrait: J,
+                            blockedTraitDescriptionId: ea,
+                            onBack: en,
+                            onNext: ec,
+                            onReplay: ed,
                         }),
-                        (0, i.jsx)(tl, { activeRoute: c }),
+                        (0, i.jsx)(tl, { activeRoute: s }),
                         (0, i.jsx)(nK, {
-                            flow: s,
-                            stats: U,
-                            activeRoute: c,
-                            isRouteBlocked: null != ee,
-                            blockedTraitDescriptionId: er,
-                            onRouteClick: eo,
+                            flow: n,
+                            stats: P,
+                            activeRoute: s,
+                            isRouteBlocked: null != J,
+                            blockedTraitDescriptionId: ea,
+                            onRouteClick: el,
                         }),
-                        null != ee && (0, i.jsx)(A.A, { id: ea, children: (0, E.Cz)(ee) }),
+                        null != J && (0, i.jsx)(A.A, { id: ee, children: (0, E.Cz)(J) }),
                         (0, i.jsx)(m.P, {}),
                     ],
                 }),
@@ -5885,17 +5885,16 @@ function nq() {
 }
 async function nY(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { didPlayerShareDataWithDiscord: a = !0, ...r } = t,
-        c = await (0, o.nX)(r);
-    return c === u.T.ERROR
+        a = await (0, o.nX)(t);
+    return a === u.T.ERROR
         ? ((0, n.P0)({ text: tA.intl.string(tA.t.fEptJP), variant: "critical" }), !1)
-        : c !== u.T.FETCHING &&
-              (h.A.initialize({ didPlayerShareDataWithDiscord: a, isForeground: d.A.isFocused() && d.A.isVisible() }),
+        : a !== u.T.FETCHING &&
+              (h.A.initialize({ isForeground: d.A.isFocused() && d.A.isVisible() }),
               (0, f.lw)(e),
               (0, s.B8)(
                   (e) => {
                       let { closeLayer: t } = e;
-                      return (0, i.jsx)(nV, { didPlayerShareDataWithDiscord: a, onClose: t });
+                      return (0, i.jsx)(nV, { onClose: t });
                   },
                   { layerKey: nW.p, onEscape: nq },
               ),

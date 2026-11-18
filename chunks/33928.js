@@ -229,7 +229,7 @@ var eH = n(719718),
     eK = n(402102);
 let eY = {
         FAKE_DATA: { stats: { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }, character: null },
-        GLOBAL_STATS: { stats: null, character: null, didPlayerShareDataWithDiscord: !1 },
+        GLOBAL_STATS: { stats: null, character: null },
         ZERO_STATS: {
             stats: {
                 voice: { totalVoiceMinutes: 0, totalVoiceMinutesPercentile: 0 },
@@ -3017,7 +3017,7 @@ function lZ(e) {
         }, [a]),
         g = es.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, lX.A)("1794961036457", !0);
+        let e = (0, lX.A)("1794961622743", !0);
         t =
             null != e
                 ? eU.intl.formatToPlainString(eU.t.wve4kg, { webBuildOverride: r.id, builtAt: e })

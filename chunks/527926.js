@@ -15,18 +15,16 @@ function d(e) {
 }
 let l = new (class {
     sessionId = null;
-    didPlayerShareDataWithDiscord = !1;
     stepName = null;
     isForeground = !0;
     isStopped = !0;
     sessionTimer = s();
     customizationTimer = s();
     initialize(e) {
-        let { didPlayerShareDataWithDiscord: t, isForeground: a } = e;
+        let { isForeground: t } = e;
         ((this.sessionId = (0, r.A)()),
-            (this.didPlayerShareDataWithDiscord = t),
             (this.stepName = null),
-            (this.isForeground = a),
+            (this.isForeground = t),
             (this.isStopped = !1),
             (this.sessionTimer = s()),
             (this.customizationTimer = s()),
@@ -47,7 +45,7 @@ let l = new (class {
     getAnalyticsProperties() {
         return {
             checkpoint_session_id: this.sessionId,
-            has_personalized_data: this.didPlayerShareDataWithDiscord && null != n.A.stats,
+            has_personalized_data: null != n.A.stats,
             checkpoint_availability: n.A.availability,
             checkpoint_compact_assets: n.A.compactAssets,
             time_spent_ms: d(this.sessionTimer),
