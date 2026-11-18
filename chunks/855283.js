@@ -20,7 +20,7 @@ function m() {
                     null == t ? null : { type: "critical", message: t, role: "alert", key: "order-constraint-notice" },
                 [t],
             )),
-        C = (function () {
+        h = (function () {
             let { paymentSourceId: e, checkoutPaymentSources: t } = (0, s.t4)((e) => ({
                     paymentSourceId: e.paymentSourceId,
                     checkoutPaymentSources: e.get("checkoutPaymentSources"),
@@ -53,8 +53,8 @@ function m() {
                 [n, i, r],
             );
         })(),
-        h = (0, s.t4)((e) => (null != e.orderRecord ? e.orderRecord.revision : null)),
-        f = n instanceof r.FY && null != h && n.order.revision < h ? "" : m;
+        C = (0, s.t4)((e) => (null != e.orderRecord ? e.orderRecord.revision : null)),
+        f = n instanceof r.FY && null != C && n.order.revision < C ? "" : m;
     return {
         errorMessage:
             null != p &&
@@ -67,7 +67,7 @@ function m() {
         purchaseErrorMessage: f,
         richNotices: l.useMemo(() => {
             let e = [];
-            return (null != p && e.push(p), null != C && e.push(C), e);
-        }, [p, C]),
+            return (null != p && e.push(p), null != h && e.push(h), e);
+        }, [p, h]),
     };
 }

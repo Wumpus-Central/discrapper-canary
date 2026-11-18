@@ -9,27 +9,27 @@ var l = n(477900),
     d = n(939249),
     m = n(460905),
     p = n(863576),
-    C = n(652215),
-    h = n(307731),
+    h = n(652215),
+    C = n(307731),
     f = n(792996),
-    E = n(290484);
-let S = { section: C.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    I = h.EmojiIntention.GIFT;
+    S = n(290484);
+let E = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
+    I = C.EmojiIntention.GIFT;
 n.d(
     t,
     {},
     {
         A: function (e) {
             let { setEmojiConfetti: t, emojiConfetti: n } = e,
-                [r, C] = i.useState(!1),
-                h = i.useRef(null),
-                g = a()(E.Qq, E.Ow);
+                [r, h] = i.useState(!1),
+                C = i.useRef(null),
+                g = a()(S.Qq, S.Ow);
             function y(e) {
                 return (0, l.jsxs)("div", {
-                    className: E.ZC,
+                    className: S.ZC,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: E.Ry,
+                            className: S.Ry,
                             children: [
                                 (0, l.jsx)(o.E, { variant: "body-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
                                 (0, l.jsx)(o.E, { variant: "body-sm/normal", children: f.intl.string(f.t.stGFA3) }),
@@ -41,47 +41,47 @@ n.d(
             }
             function A(e) {
                 let { emoji: n } = e;
-                null != t && (t(n), C(!1));
+                null != t && (t(n), h(!1));
             }
             return (0, l.jsx)(u.Y, {
-                targetElementRef: h,
+                targetElementRef: C,
                 shouldShow: r,
                 position: "bottom",
                 align: "left",
-                onRequestClose: () => C(!1),
+                onRequestClose: () => h(!1),
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
                         children: (0, l.jsx)(p.A, {
-                            analyticsOverride: S,
+                            analyticsOverride: E,
                             closePopout: t,
                             onSelectEmoji: A,
                             wrapper: "div",
                             pickerIntention: I,
                             showAddEmojiButton: !1,
                             renderHeader: y,
-                            headerClassName: E.a8,
-                            className: E.vX,
-                            listHeaderClassName: E.vX,
-                            categoryListClassName: E.jv,
+                            headerClassName: S.a8,
+                            className: S.vX,
+                            listHeaderClassName: S.vX,
+                            categoryListClassName: S.jv,
                             searchProps: { accessory: (0, l.jsx)(l.Fragment, {}) },
                         }),
                     });
                 },
                 children: () =>
                     (0, l.jsx)(d.D, {
-                        className: a()(E.kL, E.Ow),
-                        onClick: () => C(!0),
-                        innerRef: h,
+                        className: a()(S.kL, S.Ow),
+                        onClick: () => h(!0),
+                        innerRef: C,
                         children:
                             n?.name == null
                                 ? (0, l.jsxs)("div", {
-                                      className: E.hQ,
+                                      className: S.hQ,
                                       children: [
                                           (0, l.jsx)(m.ReactionIcon, {
                                               size: "custom",
                                               color: s.A.colors.ICON_STRONG,
-                                              className: E.mI,
+                                              className: S.mI,
                                               width: 14,
                                               height: 14,
                                           }),
@@ -94,7 +94,7 @@ n.d(
                                       ],
                                   })
                                 : (0, l.jsxs)("div", {
-                                      className: E.hQ,
+                                      className: S.hQ,
                                       children: [
                                           (0, l.jsx)(o.E, {
                                               className: g,

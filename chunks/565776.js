@@ -6,8 +6,8 @@ var i = n(435558),
     s = n(619019),
     o = n(287809),
     u = n(38910);
-let d = {},
-    c = 0,
+let c = {},
+    d = 0,
     S = !1,
     E = !1;
 function _(e) {
@@ -26,22 +26,22 @@ class h extends l.Ay.Store {
         this.waitFor(o.default);
     }
     getSuggestionCount() {
-        return c;
+        return d;
     }
     getSuggestions() {
-        return Object.entries(d).map((e) => {
+        return Object.entries(c).map((e) => {
             let [t, n] = e;
             return n;
         });
     }
     getSuggestion(e) {
-        return d[e];
+        return c[e];
     }
 }
 let C = new h(a.h, {
     CONNECTION_OPEN: function (e) {
-        ((d = {}),
-            (c = e.friendSuggestionCount) > 0
+        ((c = {}),
+            (d = e.friendSuggestionCount) > 0
                 ? ((E = !0), !S && E && ((S = !0), (E = !1), u.A.fetch()))
                 : (function () {
                       arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -49,24 +49,24 @@ let C = new h(a.h, {
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         let t = _(e.suggestion);
-        if (null != d[t.key]) return !1;
-        (c++, (d = { ...d, [t.key]: t }));
+        if (null != c[t.key]) return !1;
+        (d++, (c = { ...c, [t.key]: t }));
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        ((c = Math.max(0, --c)), delete d[e.suggestedUserId]);
+        ((d = Math.max(0, --d)), delete c[e.suggestedUserId]);
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
         ((S = !1),
             (t = e.suggestions),
-            (d = r()
+            (c = r()
                 .chain(t)
                 .map((e) => _(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (c = r().keys(d).length));
+            (d = r().keys(c).length));
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        ((S = !1), (d = {}));
+        ((S = !1), (c = {}));
     },
 });

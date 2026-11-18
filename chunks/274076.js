@@ -19,14 +19,14 @@ n.d(
                 {
                     giftRecipient: n,
                     selectedGiftStyle: i,
-                    emojiConfetti: C,
-                    soundEffect: h,
+                    emojiConfetti: h,
+                    soundEffect: C,
                     setEmojiConfetti: f,
-                    setSoundEffect: E,
+                    setSoundEffect: S,
                 } = (0, s.Pv)(),
-                S = (0, u.lo)(n, t),
-                I = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-                g = S !== u.tB.DEFAULT;
+                E = (0, u.lo)(n, t),
+                I = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+                g = E !== u.tB.DEFAULT;
             return (0, l.jsxs)("div", {
                 children: [
                     g &&
@@ -52,14 +52,14 @@ n.d(
                                         className: r()(p.b7, p.Ow),
                                         children: [
                                             (0, l.jsx)(o.A, {
-                                                sound: h,
+                                                sound: C,
                                                 onSelect: function (e) {
-                                                    null != E && E(null == e ? void 0 : e);
+                                                    null != S && S(null == e ? void 0 : e);
                                                 },
                                             }),
                                             (0, l.jsx)(m.A, {
                                                 setEmojiConfetti: f,
-                                                emojiConfetti: null == C ? void 0 : C,
+                                                emojiConfetti: null == h ? void 0 : h,
                                             }),
                                         ],
                                     }),

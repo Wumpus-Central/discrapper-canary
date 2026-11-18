@@ -1,4 +1,4 @@
-n.d(t, { vi: () => C, uA: () => m, NQ: () => p });
+n.d(t, { vi: () => h, uA: () => m, NQ: () => p });
 var l,
     i = n(477900);
 n(582128);
@@ -55,7 +55,7 @@ function p(e) {
         s
     );
 }
-function C(e) {
+function h(e) {
     let {
             fractionalPremiumInfo: t,
             variant: n = "default",

@@ -43,15 +43,15 @@ n.d(
                 y = a?.categorySkuId;
             null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
             let L = y ?? n?.skuId ?? "",
-                { handleCardVisibilityChange: _ } = (0, m.Z)(L, d, "marketing featured block"),
-                b = (0, p.s4)(n, a, c),
+                { handleCardVisibilityChange: b } = (0, m.Z)(L, d, "marketing featured block"),
+                _ = (0, p.s4)(n, a, c),
                 S = r.useRef(null),
                 I = a?.bodyText,
                 j = n?.isOrbsExclusive,
                 k = a?.name ?? n?.name,
                 N = null != k ? A.intl.formatToPlainString(A.t.frSHlf, { destination: k }) : void 0,
                 O = (0, o.uM)(),
-                R = r.useCallback(
+                T = r.useCallback(
                     (e, t) => {
                         (h({ sourceButton: e, categorySkuId: L, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
                             i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -67,20 +67,20 @@ n.d(
                     },
                     [h, L, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
-                T = r.useCallback(() => {
-                    R("shop marketing take me there button", "Take me there button");
-                }, [R]),
+                R = r.useCallback(() => {
+                    T("shop marketing take me there button", "Take me there button");
+                }, [T]),
                 D = r.useCallback(() => {
-                    R("shop marketing tile", null);
-                }, [R]);
+                    T("shop marketing tile", null);
+                }, [T]);
             return (0, l.jsx)(s.L, {
                 innerRef: S,
-                onChange: _,
+                onChange: b,
                 threshold: 0,
                 children: (0, l.jsx)(g.Ay, {
                     layout: t,
                     innerRef: S,
-                    backgroundImageUrl: b,
+                    backgroundImageUrl: _,
                     title:
                         null != I
                             ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: v.D }
@@ -88,7 +88,7 @@ n.d(
                     badge: (0, l.jsx)(C, { skuId: L, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: A.intl.string(A.t.jVcuVY),
                     "aria-label": N,
-                    onButtonClick: T,
+                    onButtonClick: R,
                     onBlockClick: D,
                     listItemProps: E,
                 }),

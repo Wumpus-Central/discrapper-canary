@@ -39,7 +39,7 @@ function f(e) {
         ],
     });
 }
-function g(e) {
+function C(e) {
     let { width: n = 10, height: t = 10, color: l = "currentColor", foreground: a, ...r } = e;
     return (0, i.jsx)("svg", {
         ...(0, d.A)(r),
@@ -53,7 +53,7 @@ function g(e) {
         }),
     });
 }
-var C = t(257100);
+var g = t(257100);
 let m = {
         config: { friction: 26, tension: 700, mass: 1 },
         initial: { scale: 1, opacity: 1 },
@@ -73,63 +73,63 @@ let m = {
                 onClick: h,
                 onDoubleClick: p,
                 isActive: I,
-                onMouseEnter: T,
-                onMouseLeave: k,
+                onMouseEnter: k,
+                onMouseLeave: T,
                 onFocus: N,
-                onBlur: _,
-                pulse: j,
-                sparkle: x,
-                notification: v,
-                "aria-label": R,
-                "aria-expanded": G,
-                "aria-haspopup": y,
-                "aria-controls": M,
-                "aria-keyshortcuts": S,
-                noHover: E,
+                onBlur: j,
+                pulse: x,
+                sparkle: v,
+                notification: _,
+                "aria-label": G,
+                "aria-expanded": y,
+                "aria-haspopup": R,
+                "aria-controls": S,
+                "aria-keyshortcuts": M,
+                noHover: O,
             } = e,
-            O = (0, s.p)(null != b, { ...m, keys: (e) => (e ? "children" : "icon") });
+            E = (0, s.p)(null != b, { ...m, keys: (e) => (e ? "children" : "icon") });
         function D(e) {
             let { component: n } = e;
-            return null != v
+            return null != _
                 ? (0, i.jsxs)("div", {
-                      className: C.IO,
+                      className: g.IO,
                       children: [
                           (0, i.jsx)(c.Ay, {
-                              className: C.SA,
+                              className: g.SA,
                               mask: c.hW.CHAT_INPUT_BUTTON_NOTIFICATION,
                               width: 20,
                               height: 20,
                               children: n,
                           }),
-                          (0, i.jsx)("span", { className: C.T3 }),
+                          (0, i.jsx)("span", { className: g.T3 }),
                       ],
                   })
                 : n;
         }
         return (0, i.jsxs)(u.D, {
             innerRef: n,
-            "aria-label": R,
-            "aria-expanded": G,
-            "aria-haspopup": y,
-            "aria-controls": M,
-            "aria-keyshortcuts": S,
+            "aria-label": G,
+            "aria-expanded": y,
+            "aria-haspopup": R,
+            "aria-controls": S,
+            "aria-keyshortcuts": M,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: r()(t, C.x6, { [C.vu]: I, [C.CK]: E, [C.s0]: j, [C.r9]: l }),
+            className: r()(t, g.x6, { [g.vu]: I, [g.CK]: O, [g.s0]: x, [g.r9]: l }),
             onClick: l ? void 0 : h,
             onDoubleClick: l ? void 0 : p,
-            onMouseEnter: T,
-            onMouseLeave: k,
+            onMouseEnter: k,
+            onMouseLeave: T,
             onFocus: N,
-            onBlur: _,
+            onBlur: j,
             focusProps: { offset: { top: 4, bottom: 4 } },
             children: [
-                O((e, n, t) => {
+                E((e, n, t) => {
                     let { key: l } = t;
                     return n
                         ? (0, i.jsx)(
                               o.animated.div,
-                              { style: e, className: r()(C._o, a), children: D({ component: b }) },
+                              { style: e, className: r()(g._o, a), children: D({ component: b }) },
                               l,
                           )
                         : null != A
@@ -137,10 +137,10 @@ let m = {
                                 o.animated.div,
                                 {
                                     style: e,
-                                    className: r()(C._o, a),
+                                    className: r()(g._o, a),
                                     children: D({
                                         component: (0, i.jsx)(A, {
-                                            className: r()(C.Kk, d, { [C.d1]: j }),
+                                            className: r()(g.Kk, d, { [g.d1]: x }),
                                             color: "currentColor",
                                         }),
                                     }),
@@ -149,10 +149,10 @@ let m = {
                             )
                           : void 0;
                 }),
-                x &&
+                v &&
                     (0, i.jsxs)("div", {
-                        className: C.YX,
-                        children: [(0, i.jsx)(g, { className: C.XR }), (0, i.jsx)(f, { className: C.Hv })],
+                        className: g.YX,
+                        children: [(0, i.jsx)(C, { className: g.XR }), (0, i.jsx)(f, { className: g.Hv })],
                     }),
             ],
         });

@@ -1,39 +1,39 @@
-var n = e(477900);
-e(582128);
-var i = e(866665),
-    a = e(805251),
-    o = e(278416),
-    c = e(792996);
-function s(t) {
-    let { promotion: r, children: e } = t;
-    return (0, n.jsx)(i.m, {
+var r = n(477900);
+n(582128);
+var l = n(866665),
+    i = n(805251),
+    o = n(278416),
+    a = n(792996);
+function u(t) {
+    let { promotion: e, children: n } = t;
+    return (0, r.jsx)(l.m, {
         position: "top",
         asContainer: !0,
-        text: c.intl.formatToPlainString(c.t.cNtuKF, { offerName: r.displayName }),
-        children: e,
+        text: a.intl.formatToPlainString(a.t.cNtuKF, { offerName: e.displayName }),
+        children: n,
     });
 }
-e.d(
-    r,
+n.d(
+    e,
     {},
     {
         A: (t) => {
-            let { promotion: r } = t;
-            return (0, n.jsx)(s, {
-                promotion: r,
-                children: (0, n.jsx)(a.E, {
-                    type: { text: c.intl.string(c.t["nb5PC/"]) },
+            let { promotion: e } = t;
+            return (0, r.jsx)(u, {
+                promotion: e,
+                children: (0, r.jsx)(i.E, {
+                    type: { text: a.intl.string(a.t["nb5PC/"]) },
                     variant: "expressive",
                     icon: o.TagIcon,
                 }),
             });
         },
         b: function (t) {
-            let { promotion: r } = t;
-            return (0, n.jsx)(s, {
-                promotion: r,
-                children: (0, n.jsx)(a.E, {
-                    type: { text: c.intl.string(c.t["nb5PC/"]) },
+            let { promotion: e } = t;
+            return (0, r.jsx)(u, {
+                promotion: e,
+                children: (0, r.jsx)(i.E, {
+                    type: { text: a.intl.string(a.t["nb5PC/"]) },
                     variant: "inverted",
                     icon: o.TagIcon,
                 }),

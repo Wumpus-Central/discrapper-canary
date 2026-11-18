@@ -18,12 +18,12 @@ n.d(
                     discriminatedInvoicePreview: d,
                     overrideRenewalDate: m,
                     fractionalPremiumInfo: p,
-                    isInvoiceBilledImmediately: C = !0,
-                    unifiedLegalType: h,
+                    isInvoiceBilledImmediately: h = !0,
+                    unifiedLegalType: C,
                     discountOffer: f,
-                    subscriptionTrial: E,
+                    subscriptionTrial: S,
                 } = e,
-                { immediateDelivery: S } = (0, s.U)(),
+                { immediateDelivery: E } = (0, s.U)(),
                 { checkoutReviewButtonLabel: I, isExpressCheckoutVisibleInFooter: g } = (0, u.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                     isExpressCheckoutVisibleInFooter:
@@ -34,18 +34,18 @@ n.d(
                 A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? y,
                 P = (0, r.de)({
                     overrideRenewalDate: m,
-                    currentInvoice: C ? y : void 0,
+                    currentInvoice: h ? y : void 0,
                     renewalInvoice: A,
                     isSubscriptionUpdate: null != c,
                     fractionalPremiumInfo: p,
                 }),
                 { renewalPrice: v, multiPeriodDiscountAttributes: x } = (0, i.QM)(A, t, {
                     discountOffer: f,
-                    subscriptionTrial: E,
+                    subscriptionTrial: S,
                 }),
                 _ = {
                     purchaseButtonText: I,
-                    totalDue: C ? y.total : 0,
+                    totalDue: h ? y.total : 0,
                     renewalPrice: v,
                     multiPeriodDiscountAttributes: x,
                     currency: y.currency,
@@ -54,9 +54,9 @@ n.d(
                     startDate: P,
                 };
             return (0, l.jsx)(o._P, {
-                variant: { type: h, ..._ },
+                variant: { type: C, ..._ },
                 paymentSourceType: n,
-                immediateDelivery: S,
+                immediateDelivery: E,
                 isExpressCheckout: g,
             });
         },

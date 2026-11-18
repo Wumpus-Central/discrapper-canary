@@ -3102,9 +3102,9 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e7 = n(935399),
-    e8 = n(503698),
-    e4 = n.n(e8),
+var e8 = n(935399),
+    e7 = n(503698),
+    e4 = n.n(e7),
     e9 = n(51906);
 function te(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
@@ -3177,7 +3177,7 @@ function tt(e) {
             ),
             [o, a],
         ),
-        (0, e7.l0)(() => {
+        (0, e8.l0)(() => {
             o.destroy();
         }),
         f.useEffect(() => {

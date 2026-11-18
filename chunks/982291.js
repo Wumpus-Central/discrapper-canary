@@ -19,7 +19,7 @@ function p(e) {
             continueSessionToInitialStep: e.getSharedCheckoutParams().continueSessionToInitialStep,
             initialPlanId: e.getInitialPlanId(),
         })),
-        C = i.useCallback(
+        h = i.useCallback(
             () =>
                 (function (e) {
                     let {
@@ -37,9 +37,9 @@ function p(e) {
                 })({ returnStep: t, returnStepIfNoPaymentSources: n, paymentModalStepProps: r, purchaseType: o }),
             [t, n, r, o],
         );
-    return (0, l.jsx)(s.x, { ...r, onReturn: C, initialPlanId: p, continueSessionToInitialStep: c });
+    return (0, l.jsx)(s.x, { ...r, onReturn: h, initialPlanId: p, continueSessionToInitialStep: c });
 }
-function C(e) {
+function h(e) {
     let {
             selectedSkuId: t,
             initialPlanId: n,
@@ -52,11 +52,11 @@ function C(e) {
         { isGift: u } = (0, r.Pv)(),
         c = (0, o.A)({ isGift: u, skuId: t }),
         m = (0, d.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: c })),
-        C = i.useMemo(() => {
+        h = i.useMemo(() => {
             let e = null == n ? a.pn.PLAN_SELECT : a.pn.REVIEW;
             return (m && (e = a.pn.REVIEW), s && (e = a.pn.SELECT_FREE_SKU), e);
         }, [m, s, n]);
-    return (0, l.jsx)(p, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: C });
+    return (0, l.jsx)(p, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: h });
 }
 n.d(
     t,
@@ -74,7 +74,7 @@ n.d(
                 })),
                 u = i.useMemo(() => (o ? a.pn.REVIEW : r ? a.pn.GIFT_CUSTOMIZATION : void 0), [r, o]);
             return t === c.C.PREMIUM_CHECKOUT
-                ? (0, l.jsx)(C, { ...s })
+                ? (0, l.jsx)(h, { ...s })
                 : (0, l.jsx)(p, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: u });
         },
     },

@@ -1,1 +1,1 @@
-e.exports = a.p + "6bb16753a126b209.wasm";
+e.exports = p.p + "6bb16753a126b209.wasm";

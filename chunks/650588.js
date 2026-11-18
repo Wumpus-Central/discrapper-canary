@@ -9,21 +9,21 @@ var l = n(477900),
     d = n(939249),
     m = n(7807),
     p = n(807348),
-    C = n(327289),
-    h = n(792996),
+    h = n(327289),
+    C = n(792996),
     f = n(649028);
-let E = [54, 8, 8, 8];
+let S = [54, 8, 8, 8];
 n.d(
     t,
     {},
     {
         A: function (e) {
             let { onSelect: t, sound: n } = e,
-                [r, S] = i.useState(!1),
+                [r, E] = i.useState(!1),
                 I = i.useRef(null),
                 g = a()(f.Qq, f.Ow);
             function y(e) {
-                (S(!1), t?.(e));
+                (E(!1), t?.(e));
             }
             function A(e) {
                 return (0, l.jsxs)("div", {
@@ -32,8 +32,8 @@ n.d(
                         (0, l.jsxs)("div", {
                             className: f.__invalid_customGiftHeaderText,
                             children: [
-                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: h.intl.string(h.t.aThJz8) }),
-                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: h.intl.string(h.t.stGFA3) }),
+                                (0, l.jsx)(o.E, { variant: "body-md/semibold", children: C.intl.string(C.t.aThJz8) }),
+                                (0, l.jsx)(o.E, { variant: "body-sm/normal", children: C.intl.string(C.t.stGFA3) }),
                             ],
                         }),
                         (0, l.jsx)("div", { className: f.$H, children: e }),
@@ -45,11 +45,11 @@ n.d(
                 shouldShow: r,
                 position: "bottom",
                 align: "left",
-                onRequestClose: () => S(!1),
+                onRequestClose: () => E(!1),
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
-                        children: (0, l.jsx)(C.A, {
+                        children: (0, l.jsx)(h.A, {
                             suppressPlaySound: !0,
                             shouldShowLockedSounds: !1,
                             guildId: null,
@@ -58,7 +58,7 @@ n.d(
                             onSelect: y,
                             analyticsSource: "gift soundboard",
                             soundButtonOverlay: p.If.ADD,
-                            listPadding: E,
+                            listPadding: S,
                             renderHeader: A,
                             defaultSoundsOnly: !0,
                         }),
@@ -67,7 +67,7 @@ n.d(
                 children: () =>
                     (0, l.jsx)(d.D, {
                         className: a()(f.kL, f.Ow),
-                        onClick: () => S(!0),
+                        onClick: () => E(!0),
                         innerRef: I,
                         children:
                             null == n
@@ -85,7 +85,7 @@ n.d(
                                               className: g,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
-                                              children: h.intl.string(h.t.aThJz8),
+                                              children: C.intl.string(C.t.aThJz8),
                                           }),
                                       ],
                                   })

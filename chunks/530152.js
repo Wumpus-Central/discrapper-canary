@@ -1,35 +1,35 @@
-a.d(s, { gT: () => t, BW: () => r, Sx: () => n, WY: () => g, LM: () => i });
-class t extends Error {
+p.d(s, { gT: () => c, BW: () => a, Sx: () => t, WY: () => d, LM: () => r });
+class c extends Error {
     kind;
     constructor(e, s) {
         (super(s), (this.name = "ArboriumError"), (this.kind = e));
     }
 }
-function r(e, s) {
+function a(e, s) {
     if (0 === s.length) return [0, 0];
-    let a = o.encode(s),
-        t = e._malloc(a.length);
-    return (e.HEAPU8.set(a, t), [t, a.length]);
+    let p = f.encode(s),
+        c = e._malloc(p.length);
+    return (e.HEAPU8.set(p, c), [c, p.length]);
 }
-function n(e, s, a) {
-    return 0 === a ? "" : c.decode(e.HEAPU8.subarray(s, s + a));
+function t(e, s, p) {
+    return 0 === p ? "" : x.decode(e.HEAPU8.subarray(s, s + p));
 }
-async function i(e) {
-    return e instanceof URL ? p(e) : e instanceof Uint8Array ? e : new Uint8Array(e);
+async function r(e) {
+    return e instanceof URL ? o(e) : e instanceof Uint8Array ? e : new Uint8Array(e);
 }
-async function g(e) {
+async function d(e) {
     if ("string" == typeof e) return e;
-    let s = await p(e);
-    return c.decode(s);
+    let s = await o(e);
+    return x.decode(s);
 }
-async function p(e) {
+async function o(e) {
     let s = await (async function () {
         return null;
     })();
     if (s) return s;
-    let a = await fetch(e);
-    if (!a.ok) throw new t("asset-fetch-failed", `failed to fetch ${e.href}: ${a.status} ${a.statusText}`);
-    return new Uint8Array(await a.arrayBuffer());
+    let p = await fetch(e);
+    if (!p.ok) throw new c("asset-fetch-failed", `failed to fetch ${e.href}: ${p.status} ${p.statusText}`);
+    return new Uint8Array(await p.arrayBuffer());
 }
-let o = new TextEncoder(),
-    c = new TextDecoder();
+let f = new TextEncoder(),
+    x = new TextDecoder();

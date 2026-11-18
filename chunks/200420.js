@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => B });
 var l = n(477900),
     r = n(582128),
     s = n(503698),
@@ -20,8 +20,8 @@ var l = n(477900),
     C = n(665414),
     y = n(821609),
     L = n(313217),
-    _ = n(172218),
-    b = n(140735),
+    b = n(172218),
+    _ = n(140735),
     S = n(598047),
     I = n(396583),
     j = n(568631),
@@ -36,7 +36,7 @@ let O = r.memo((e) => {
             c = r.useCallback((e) => {
                 i(e);
             }, []),
-            m = (0, _.K)(c, 0),
+            m = (0, b.K)(c, 0),
             h = (0, j.Ty)(t),
             g = (0, j.lF)(h);
         return (
@@ -79,12 +79,12 @@ let O = r.memo((e) => {
                             t,
                         ),
                     ),
-                    (0, l.jsx)(b.A, { children: k.intl.format(k.t.j6IyVe, h) }),
+                    (0, l.jsx)(_.A, { children: k.intl.format(k.t.j6IyVe, h) }),
                 ],
             })
         );
     }),
-    R = r.memo((e) => {
+    T = r.memo((e) => {
         let {
                 collectionName: t,
                 collectionPromotion: n,
@@ -139,11 +139,11 @@ let O = r.memo((e) => {
             ],
         });
     });
-var T = n(60140),
+var R = n(60140),
     D = n(758836),
     P = n(652215),
     M = n(105499);
-let w = (e) => {
+let B = (e) => {
     let {
             heroBlock: t,
             collectionPromotion: n,
@@ -151,17 +151,17 @@ let w = (e) => {
             tab: C,
             onPromotionEnd: y,
             hideCards: L = !1,
-            forceHideCountdownCta: _ = !1,
+            forceHideCountdownCta: b = !1,
         } = e,
-        b = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
+        _ = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
         S = (0, f.uM)(),
         { analyticsLocations: I } = (0, h.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
         {
             bannerDisplayConfig: j,
             logoDisplayConfig: N,
             heroLogo: O,
-            heroBannerStatic: w,
-            heroBannerAnimated: B,
+            heroBannerStatic: B,
+            heroBannerAnimated: w,
         } = (0, A.Kk)(t),
         H = j?.responsive ?? !1,
         U = j?.backgroundStyle,
@@ -189,12 +189,12 @@ let w = (e) => {
                     cta_name: F,
                 }));
         }, [s, G, t.categorySkuId, S, C, F]);
-    if (null == b) return null;
+    if (null == _) return null;
     let V = n.countdownPosition === i.l.LEFT,
-        K = (0, l.jsx)(R, {
+        K = (0, l.jsx)(T, {
             collectionName: t.name,
             collectionPromotion: n,
-            forceHideCountdownCta: _,
+            forceHideCountdownCta: b,
             onShopSale: $,
             onCountdownEnd: y,
         });
@@ -206,7 +206,7 @@ let w = (e) => {
                 (0, l.jsx)("div", {
                     className: a()(M.vK, { [M.no]: H }),
                     style: null != U ? { background: U } : void 0,
-                    children: null != w && (0, l.jsx)(v.A, { bannerStatic: w, bannerAnimated: B, isResponsive: H }),
+                    children: null != B && (0, l.jsx)(v.A, { bannerStatic: B, bannerAnimated: w, isResponsive: H }),
                 }),
                 (0, l.jsxs)("div", {
                     className: M.xX,
@@ -258,7 +258,7 @@ let w = (e) => {
                             ],
                         }),
                         !L &&
-                            (0, l.jsx)(T.A, {
+                            (0, l.jsx)(R.A, {
                                 heroBlockRecord: t,
                                 tab: C,
                                 isBlockLoading: !1,

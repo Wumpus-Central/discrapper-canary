@@ -10,24 +10,24 @@ var i = n(503698),
     d = n(812095),
     m = n(421108),
     p = n(898744);
-function C(e) {
+function h(e) {
     let {
         className: t,
         Icon: n = a.TagIcon,
         iconSize: i,
         customGraphic: m,
-        gradientColor: C = "green",
-        tooltip: h,
+        gradientColor: h = "green",
+        tooltip: C,
         text: f,
-        trailing: E,
-        ...S
+        trailing: S,
+        ...E
     } = e;
     function I() {
         return (0, l.jsx)(c.A, {
             className: r()(p.Xx, t),
-            gradientColor: C,
+            gradientColor: h,
             ...(null != m ? { customGraphic: m } : { Icon: n, iconSize: i }),
-            ...S,
+            ...E,
             children: (0, l.jsxs)("div", {
                 className: p.Yu,
                 children: [
@@ -36,20 +36,20 @@ function C(e) {
                         color: "currentColor",
                         children: "string" == typeof f ? (0, d.U)(f) : f,
                     }),
-                    (0, l.jsx)("div", { className: p.HF, children: E }),
+                    (0, l.jsx)("div", { className: p.HF, children: S }),
                 ],
             }),
         });
     }
-    return null != h && "object" == typeof h
-        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: I() })
-        : null != h && "string" == typeof h
-          ? (0, l.jsx)(u.m, { text: h, asContainer: !0, tag: "div", children: I() })
+    return null != C && "object" == typeof C
+        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...C, children: I() })
+        : null != C && "string" == typeof C
+          ? (0, l.jsx)(u.m, { text: C, asContainer: !0, tag: "div", children: I() })
           : I();
 }
-function h(e) {
+function C(e) {
     let { trailingText: t, ...n } = e;
-    return (0, l.jsx)(C, {
+    return (0, l.jsx)(h, {
         trailing:
             null != t
                 ? (0, l.jsx)(s.E, {
@@ -65,13 +65,13 @@ n.d(
     t,
     {},
     {
-        Ay: C,
+        Ay: h,
         O0: function (e) {
             let { text: t, endDatetime: n, ...i } = e,
                 r = (0, m.dA)(n);
             return null != n && null == r
                 ? null
-                : (0, l.jsx)(h, { text: t, trailingText: null != r ? r : void 0, ...i });
+                : (0, l.jsx)(C, { text: t, trailingText: null != r ? r : void 0, ...i });
         },
     },
 );

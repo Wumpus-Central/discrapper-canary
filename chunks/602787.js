@@ -49,20 +49,20 @@ n.d(
                     };
                 }),
                 { referralTrialOfferId: p } = d,
-                C = (0, r.V)(p),
-                h = !u && !m && null != t,
-                f = !!(h && null != C && c.kb[C.trialId].skus.includes(t) && !u),
-                E = (0, i.O)(),
-                S =
+                h = (0, r.V)(p),
+                C = !u && !m && null != t,
+                f = !!(C && null != h && c.kb[h.trialId].skus.includes(t) && !u),
+                S = (0, i.O)(),
+                E =
                     null != t &&
-                    null != E &&
-                    null != E.discount &&
-                    null != E.discount.planIds &&
-                    E.discount.planIds.some((e) => c.hd[e].skuId === t),
-                I = !!(h && null != E && S),
+                    null != S &&
+                    null != S.discount &&
+                    null != S.discount.planIds &&
+                    S.discount.planIds.some((e) => c.hd[e].skuId === t),
+                I = !!(C && null != S && E),
                 g = l.useMemo(
-                    () => null != E && null != E.discount && null != e && (0, a.Ro)(e, E.discount.id),
-                    [E, e],
+                    () => null != S && null != S.discount && null != e && (0, a.Ro)(e, S.discount.id),
+                    [S, e],
                 );
             return l.useMemo(
                 () => ({
@@ -70,11 +70,11 @@ n.d(
                     isPremiumGroupPurchase: u,
                     isEligibleForTrial: f,
                     isEligibleForDiscount: I,
-                    userTrialOffer: C,
-                    discountOffer: E,
+                    userTrialOffer: h,
+                    discountOffer: S,
                     currentInvoiceHasMatchingDiscountOffer: g,
                 }),
-                [n, u, f, I, C, E, g],
+                [n, u, f, I, h, S, g],
             );
         },
     },

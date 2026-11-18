@@ -20,25 +20,25 @@ n.d(
                     relocationCountry: d,
                     headerBadgePreset: m,
                     headerBadgeText: p,
-                    headerBadgeIcon: C,
-                    headerBadgeVariant: h,
+                    headerBadgeIcon: h,
+                    headerBadgeVariant: C,
                 } = e,
                 f = o.intl.string(o.t.q9EGps);
             n === r.pn.ADD_PAYMENT_STEPS && (f = o.intl.string(o.t.CpOiEO));
-            let E = { headerBadgeText: p, headerBadgeIcon: C, headerBadgeVariant: h };
+            let S = { headerBadgeText: p, headerBadgeIcon: h, headerBadgeVariant: C };
             "beta" === m
-                ? ((E.headerBadgeText = o.intl.string(o.t.oW0eUd)), (E.headerBadgeVariant = "secondary"))
+                ? ((S.headerBadgeText = o.intl.string(o.t.oW0eUd)), (S.headerBadgeVariant = "secondary"))
                 : "trial" === m
-                  ? ((E.headerBadgeText = o.intl.string(s.default["mWL08+"])), (E.headerBadgeIcon = i.TagIcon))
-                  : "promo" === m && (E.headerBadgeText = o.intl.string(s.default.Fjpyfj));
-            let S = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
+                  ? ((S.headerBadgeText = o.intl.string(s.default["mWL08+"])), (S.headerBadgeIcon = i.TagIcon))
+                  : "promo" === m && (S.headerBadgeText = o.intl.string(s.default.Fjpyfj));
+            let E = null != n && u.includes(n) ? { countryCode: c(l), relocationCountryCode: c(d) } : void 0;
             return null == t
-                ? { title: f, gradientColor: void 0, ...S, ...E }
+                ? { title: f, gradientColor: void 0, ...E, ...S }
                 : t === a.pe.TIER_0 || t === a.pe.TIER_1
-                  ? { title: f, gradientColor: "nitro-green", ...S, ...E }
+                  ? { title: f, gradientColor: "nitro-green", ...E, ...S }
                   : t === a.pe.TIER_2
-                    ? { title: f, gradientColor: "nitro-pink", ...S, ...E }
-                    : { title: f, ...S, ...E };
+                    ? { title: f, gradientColor: "nitro-pink", ...E, ...S }
+                    : { title: f, ...E, ...S };
         },
     },
 );

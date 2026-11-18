@@ -118,7 +118,7 @@ let v = (e) => {
             ],
         });
     },
-    _ = (e) => {
+    b = (e) => {
         let {
                 day: t,
                 lockedAssetUrl: n,
@@ -191,28 +191,28 @@ n.d(
                     hintAssetUrl: p,
                     idleAnimationUrl: x,
                     revealAnimationUrl: v,
-                    tilePosition: b,
+                    tilePosition: _,
                     revealDate: S = null,
                     aspectRatio: I,
                     className: j,
                     style: k,
                     tag: N = "li",
                     listItemProps: O,
-                    onReveal: R,
+                    onReveal: T,
                 } = e,
-                T = r.useMemo(() => ({ ...k, "--custom-calendar-tile-aspect-ratio": I }), [k, I]),
+                R = r.useMemo(() => ({ ...k, "--custom-calendar-tile-aspect-ratio": I }), [k, I]),
                 [D, P] = A(g),
-                [M, w] = A(p),
-                B = (0, o.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                [M, B] = A(p),
+                w = (0, o.bG)([d.Ay], () => d.Ay.useReducedMotion),
                 [H, U] = A(x),
                 [G, F] = r.useState(!1),
                 $ = r.useCallback(() => F(!1), []);
-            B && G && F(!1);
+            w && G && F(!1);
             let V = r.useRef(null),
                 K = r.useRef(!1),
                 W = r.useCallback(() => {
-                    ((K.current = !0), F(!B), R());
-                }, [R, B]);
+                    ((K.current = !0), F(!w), T());
+                }, [T, w]);
             r.useEffect(() => {
                 if (s !== E.k$.REVEALED || !K.current) return;
                 K.current = !1;
@@ -225,7 +225,7 @@ n.d(
             let z = u === i.G.LARGE_SQUARE;
             switch (s) {
                 case E.k$.REVEALED:
-                    t = (0, l.jsx)(C, { skuId: m, tilePosition: b, listItemProps: O });
+                    t = (0, l.jsx)(C, { skuId: m, tilePosition: _, listItemProps: O });
                     break;
                 case E.k$.OPENABLE:
                     t = (0, l.jsx)(y, {
@@ -233,7 +233,7 @@ n.d(
                         lockedAssetUrl: D,
                         hintAssetUrl: M,
                         onLockedAssetError: P,
-                        onHintAssetError: w,
+                        onHintAssetError: B,
                         onReveal: W,
                         listItemProps: O,
                         isNumberAboveButton: z,
@@ -248,13 +248,13 @@ n.d(
                         lockedAssetUrl: D,
                         hintAssetUrl: s === E.k$.HINT ? M : null,
                         onLockedAssetError: P,
-                        onHintAssetError: w,
+                        onHintAssetError: B,
                         listItemProps: O,
                     });
             }
             let Y = s === E.k$.REVEALED,
                 q = s === E.k$.OPENABLE,
-                X = q && !B && null != v;
+                X = q && !w && null != v;
             return (
                 r.useEffect(() => {
                     X && null != v && (new Image().src = v);
@@ -262,19 +262,19 @@ n.d(
                 (0, l.jsxs)(N, {
                     ref: V,
                     className: a()(f.Vs, { [f.Ml]: Y, [f.Zk]: q, [f.Jl]: z, [f.W_]: c }, j),
-                    style: T,
+                    style: R,
                     tabIndex: Y ? -1 : void 0,
                     children: [
                         q &&
                             null != H &&
-                            (B
+                            (w
                                 ? (0, l.jsx)(h.A, { src: H, className: a()(f.LY, f.Jn), onError: U })
                                 : (0, l.jsx)("img", { className: a()(f.LY, f.Jn), src: H, alt: "", onError: U })),
                         t,
                         Y &&
                             G &&
-                            !B &&
-                            (0, l.jsx)(_, {
+                            !w &&
+                            (0, l.jsx)(b, {
                                 day: n,
                                 lockedAssetUrl: D,
                                 hintAssetUrl: M,
@@ -283,7 +283,7 @@ n.d(
                                 slideDirection: (0, E.BZ)(u),
                                 isNumberAboveButton: z,
                                 onLockedAssetError: P,
-                                onHintAssetError: w,
+                                onHintAssetError: B,
                                 onReveal: W,
                                 onComplete: $,
                             }),

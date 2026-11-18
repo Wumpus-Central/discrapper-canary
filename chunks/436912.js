@@ -5,8 +5,8 @@ var i = n(158390),
     s = n(271376);
 let o = null,
     u = s.$.NOT_FETCHED,
-    d = null,
-    c = new i.A(10 * a.A.Millis.SECOND, 30 * a.A.Millis.MINUTE),
+    c = null,
+    d = new i.A(10 * a.A.Millis.SECOND, 30 * a.A.Millis.MINUTE),
     S = null;
 class E extends r.Ay.Store {
     static displayName = "CollectiblesSequencedOffersStore";
@@ -14,7 +14,7 @@ class E extends r.Ay.Store {
         return u;
     }
     get lastFetchedAt() {
-        return d;
+        return c;
     }
     get nextFetchAllowedAt() {
         return S;
@@ -28,13 +28,13 @@ let _ = new E(l.h, {
         u = s.$.FETCHING;
     },
     COLLECTIBLES_SEQUENCED_OFFERS_FETCH_SUCCESS: function (e) {
-        ((o = e.sequencedOffers), (u = s.$.FETCHED), (d = Date.now()), c.succeed(), (S = null));
+        ((o = e.sequencedOffers), (u = s.$.FETCHED), (c = Date.now()), d.succeed(), (S = null));
     },
     COLLECTIBLES_SEQUENCED_OFFERS_FETCH_FAILURE: function () {
-        ((u = s.$.NOT_FETCHED), (S = Date.now() + c.fail()));
+        ((u = s.$.NOT_FETCHED), (S = Date.now() + d.fail()));
     },
     LOGOUT: function () {
-        ((o = null), (u = s.$.NOT_FETCHED), (d = null), c.succeed(), (S = null));
+        ((o = null), (u = s.$.NOT_FETCHED), (c = null), d.succeed(), (S = null));
     },
 });
 n.d(t, {}, { A: _ });

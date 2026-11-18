@@ -17,11 +17,11 @@ n.d(
                     paymentModalStepProps: { handleStepChange: t },
                     layout: n,
                     renderStepBody: p,
-                    renderLeftColumn: C,
-                    renderRightColumn: h,
+                    renderLeftColumn: h,
+                    renderRightColumn: C,
                     renderBottomContent: f,
-                    primaryCTAButtonProps: E,
-                    onBackClick: S,
+                    primaryCTAButtonProps: S,
+                    onBackClick: E,
                 } = e,
                 { hasPaymentSources: I } = (0, u.j)(),
                 { isExpressCheckoutEnabled: g } = (0, c.t4)((e) => ({
@@ -35,17 +35,17 @@ n.d(
                             ? p()
                             : (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      (0, l.jsxs)("div", { className: m.D, children: [C(), h()] }),
+                                      (0, l.jsxs)("div", { className: m.D, children: [h(), C()] }),
                                       null != f && f(),
                                   ],
                               }),
-                    [n, p, C, h, f],
+                    [n, p, h, C, f],
                 ),
-                v = i.useMemo(() => ({ ...E, onClick: A, text: d.intl.string(d.t.XiOHRX) }), [E, A]);
+                v = i.useMemo(() => ({ ...S, onClick: A, text: d.intl.string(d.t.XiOHRX) }), [S, A]);
             return (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(a.dZ, { children: P }),
-                    (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: S, primaryCTAButtonProps: v }) }),
+                    (0, l.jsx)(a.UX, { children: (0, l.jsx)(o.cy, { onBackClick: E, primaryCTAButtonProps: v }) }),
                 ],
             });
         },

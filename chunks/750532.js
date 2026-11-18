@@ -9,11 +9,11 @@ var l = n(477900),
     d = n(682689),
     m = n(602787),
     p = n(242874),
-    C = n(573359),
-    h = n(163074),
+    h = n(573359),
+    C = n(163074),
     f = n(742655),
-    E = n(892349),
-    S = n(35587),
+    S = n(892349),
+    E = n(35587),
     I = n(446263),
     g = n(683166),
     y = n(45938),
@@ -31,7 +31,7 @@ function R(e) {
         {
             selectedSkuId: n,
             selectedPlanId: c,
-            purchaseState: S,
+            purchaseState: E,
             quantity: R,
         } = (0, d.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
@@ -39,13 +39,13 @@ function R(e) {
             purchaseState: e.purchaseState,
             quantity: e.quantity,
         })),
-        O = (0, r.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        O = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
         { isPremium: L, isPremiumGroupPurchase: M, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, m.i)(),
         D = (0, u.S3)(),
         U = (0, o.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
-        H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
-        { enabled: W } = h.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
+        H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
+        { enabled: W } = C.A.useConfig({ location: "PremiumUnifiedCheckoutCustomHeader" }),
         V = D?.productLine === x.EZt.COLLECTIBLES,
         Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.MW)({ isGift: G, giftRecipient: B, selectedPlanId: c }),
@@ -92,7 +92,7 @@ function R(e) {
                           n in _.WN
                               ? (0, l.jsx)(g.A, {
                                     currentStep: U ?? void 0,
-                                    purchaseState: S,
+                                    purchaseState: E,
                                     premiumType: _.WN[n],
                                     onClose: $,
                                     showTrialBadge: k,
@@ -107,7 +107,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, S, n, U, k, w, R, c, K, Z, H, z, G, B, L, O, M]);
+    }, [F, $, E, n, U, k, w, R, c, K, Z, H, z, G, B, L, O, M]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, d.t4)((e) => ({
@@ -116,7 +116,7 @@ function O(e) {
             selectedPlanId: e.selectedPlanId,
         })),
         { isPremiumGroupPurchase: l, isEligibleForTrial: r, isEligibleForDiscount: a } = (0, m.i)(),
-        s = (0, S.Sq)();
+        s = (0, E.Sq)();
     return i.useMemo(() => {
         let i, o;
         return (l

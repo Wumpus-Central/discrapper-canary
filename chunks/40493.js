@@ -8,8 +8,8 @@ var i = t(477900),
     c = t(421108),
     d = t(807098),
     f = t(412260),
-    g = t(860300),
-    C = t(49999),
+    C = t(860300),
+    g = t(49999),
     m = t(792996);
 t.d(
     n,
@@ -18,27 +18,27 @@ t.d(
         A: function (e) {
             let { onComplete: n, onCheckItOutClick: t, markAsDismissed: A, coachmarkConfig: b, children: h } = e,
                 p = (0, d.T)(b?.asset),
-                { enabled: I } = g.J.useConfig({ location: "GiftPromotionPopout" }),
-                T = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
-                k = (0, c.dA)(T?.endDate),
-                N = null != k,
-                _ = (0, u.Ay)(N),
-                j = l.useRef(null);
+                { enabled: I } = C.J.useConfig({ location: "GiftPromotionPopout" }),
+                k = (0, a.bG)([f.A], () => f.A.getGiftPromotion()),
+                T = (0, c.dA)(k?.endDate),
+                N = null != T,
+                j = (0, u.Ay)(N),
+                x = l.useRef(null);
             l.useEffect(() => {
-                !0 !== _ || N || (n(), A(C.i.AUTO_DISMISS));
-            }, [_, N, n, A]);
-            let x = {
+                !0 !== j || N || (n(), A(g.i.AUTO_DISMISS));
+            }, [j, N, n, A]);
+            let v = {
                 text: m.intl.string(m.t.Ve9Ge6),
                 icon: o.GiftIcon,
                 onClick: () => {
-                    (t(), n(), A(C.i.TAKE_ACTION));
+                    (t(), n(), A(g.i.TAKE_ACTION));
                 },
             };
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { ref: j, children: h }),
+                    (0, i.jsx)("div", { ref: x, children: h }),
                     (0, i.jsx)(r.H, {
-                        targetElementRef: j,
+                        targetElementRef: x,
                         shouldShow: !0,
                         disableMediaViewer: !0,
                         position: "top",
@@ -47,13 +47,13 @@ t.d(
                         body: b?.body ?? "",
                         assetUrl: p ?? "",
                         badge:
-                            I && null != k
-                                ? { type: { text: k.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
+                            I && null != T
+                                ? { type: { text: T.toUpperCase() }, variant: "primary", icon: s.ClockIcon }
                                 : void 0,
-                        action: x,
+                        action: v,
                         caretConfig: { align: "center" },
                         onRequestClose: function () {
-                            (n(), A(C.i.USER_DISMISS));
+                            (n(), A(g.i.USER_DISMISS));
                         },
                     }),
                 ],

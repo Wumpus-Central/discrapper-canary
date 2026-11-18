@@ -1,4 +1,4 @@
-t.d(n, { GZ: () => f, Se: () => g, Hv: () => C });
+t.d(n, { GZ: () => f, Se: () => C, Hv: () => g });
 var i = t(582128),
     l = t(70283),
     a = t(855986),
@@ -21,26 +21,26 @@ function f(e, n, t) {
         100,
     );
 }
-function g(e) {
+function C(e) {
     return e?.complex_icon_static_url ?? e?.simple_icon_url;
 }
-function C(e) {
+function g(e) {
     let { location: n, enabled: t = !0 } = e,
         { enabled: f } = d.useConfig({ location: n }),
-        g = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
-        C = (0, u.HX)(r.M.NEW_GIFTING_BADGES_COACHMARK),
+        C = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.hasHadPremium() ?? !1),
+        g = (0, u.HX)(r.M.NEW_GIFTING_BADGES_COACHMARK),
         m = (0, a.bG)([s.Ay], () => s.Ay.getBadgeById(l.$.GIFTING)),
-        A = !C && t,
-        b = A && !f && g,
+        A = !g && t,
+        b = A && !f && C,
         h = A && f && null == m;
     return (i.useEffect(() => {
         h ? (0, o.Ay)(l.$.GIFTING) : b && (0, o.o0)(l.$.GIFTING);
     }, [b, h]),
     f)
-        ? A && null != m && !m.hidden && (g || m.owned)
+        ? A && null != m && !m.hidden && (C || m.owned)
             ? "noCount"
             : null
-        : A && g && null != m
+        : A && C && null != m
           ? "count"
           : null;
 }

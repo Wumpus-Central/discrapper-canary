@@ -1,7 +1,7 @@
 var n = r(582128),
     i = r(158317),
-    a = r(313125),
-    l = r(786953),
+    l = r(313125),
+    a = r(786953),
     o = r(792996);
 r.d(
     t,
@@ -9,69 +9,69 @@ r.d(
     {
         Q: function (e) {
             let [t, r] = (0, n.useState)(""),
-                [u, d] = (0, n.useState)([]),
-                [s, c] = (0, n.useState)(null),
-                [f, h] = (0, n.useState)(!1),
-                m = e.useOrdersAPI,
-                y = e.order ?? null,
+                [u, c] = (0, n.useState)([]),
+                [s, d] = (0, n.useState)(null),
+                [f, _] = (0, n.useState)(!1),
+                h = e.useOrdersAPI,
+                m = e.order ?? null,
                 p = e.onSignFailure,
                 {
                     error: w,
-                    signOrder: _,
+                    signOrder: y,
                     reportError: g,
-                } = (0, a.f)({ order: y, errorSource: "orb_redeem_orders_api", onSignFailure: p }),
-                E = m ? w : s,
+                } = (0, l.f)({ order: m, errorSource: "orb_redeem_orders_api", onSignFailure: p }),
+                x = h ? w : s,
                 S = e.onSetIsSubmitting,
-                b = (0, n.useCallback)(
+                E = (0, n.useCallback)(
                     (e) => {
-                        (h(e), null != S && S(e));
+                        (_(e), null != S && S(e));
                     },
                     [S],
                 ),
-                v = (0, n.useCallback)(
+                b = (0, n.useCallback)(
                     async (e, t, r) => {
-                        b(!0);
-                        let n = await _({ loadId: t, errorExtra: { skuId: e, loadId: t } });
-                        if ("signed" !== n.type) return void b(!1);
+                        E(!0);
+                        let n = await y({ loadId: t, errorExtra: { skuId: e, loadId: t } });
+                        if ("signed" !== n.type) return void E(!1);
                         try {
                             let t = await (0, i.Vw)(n.order.id);
                             if (0 === t.length) throw new i.j2();
-                            (d(t), (0, l.sn)({ skuId: e, entitlements: t }), r?.(t));
+                            (c(t), (0, a.sn)({ skuId: e, entitlements: t }), r?.(t));
                         } catch (r) {
                             g(r, { skuId: e, loadId: t, orderId: n.order.id });
                         } finally {
-                            b(!1);
+                            E(!1);
                         }
                     },
-                    [_, g, b],
+                    [y, g, E],
                 ),
-                x = (0, n.useCallback)(
+                v = (0, n.useCallback)(
                     (e, t, r) =>
-                        (0, l.J$)({
+                        (0, a.J$)({
                             skuId: e,
                             loadId: t,
                             onRedeemStart: function () {
-                                (b(!0), c(null));
+                                (E(!0), d(null));
                             },
                             onRedeemSucceed: function (e) {
-                                (d(e), b(!1), r?.(e));
+                                (c(e), E(!1), r?.(e));
                             },
                             onRedeemFail: function (e) {
-                                (c(e), b(!1));
+                                (d(e), E(!1));
                             },
                         }),
-                    [b],
+                    [E],
                 ),
                 I = (0, n.useCallback)(
                     (e, t, r) => {
-                        m ? v(e, t, r) : x(e, t, r);
+                        h ? b(e, t, r) : v(e, t, r);
                     },
-                    [m, v, x],
+                    [h, b, v],
                 );
             return (
                 (0, n.useEffect)(() => {
-                    if (null != E)
-                        return void r(o.intl.format(o.t["7gHWrd"], { amount: "1 orb", errorMessage: E.message }));
+                    if (null != x)
+                        return void r(o.intl.format(o.t["7gHWrd"], { amount: "1 orb", errorMessage: x.message }));
                     if (null != u && u.length > 0) {
                         let e = u.map((e) => e.sku?.name);
                         r(
@@ -83,8 +83,8 @@ r.d(
                         return;
                     }
                     r("");
-                }, [u, E]),
-                { entitlements: u, error: E, isSubmitting: f, responseMessage: t, redeemVirtualCurrency: I }
+                }, [u, x]),
+                { entitlements: u, error: x, isSubmitting: f, responseMessage: t, redeemVirtualCurrency: I }
             );
         },
     },

@@ -19,7 +19,7 @@ class u extends i.Ay.Store {
         return o[e];
     }
 }
-let d = new u(r.h, {
+let c = new u(r.h, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
         let { selectedTemplate: t, guildId: n } = e,
             i = Object.values(a.A.getMutableGuildChannelsForGuild(n));
@@ -39,4 +39,4 @@ let d = new u(r.h, {
         s[n] = t;
     },
 });
-n.d(t, {}, { A: d });
+n.d(t, {}, { A: c });

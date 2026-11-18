@@ -9,11 +9,11 @@ var l = n(477900),
     d = n(942340),
     m = n(550238),
     p = n(648335),
-    C = n(211528),
-    h = n(682689),
+    h = n(211528),
+    C = n(682689),
     f = n(783327),
-    E = n(856383),
-    S = n(240248),
+    S = n(856383),
+    E = n(240248),
     I = n(166532),
     g = n(676230),
     y = n(818348),
@@ -38,14 +38,14 @@ function _(e) {
             paymentElementSelectedType: d,
             paymentMethodOrder: m,
             addressElementKey: p,
-            analyticsContext: h,
+            analyticsContext: C,
             paymentElementFooter: f,
-            layout: E,
+            layout: S,
         } = e,
-        S = (0, r.useElements)();
+        E = (0, r.useElements)();
     i.useEffect(() => {
-        c.current = S;
-    }, [S, c]);
+        c.current = E;
+    }, [E, c]);
     let {
             shouldShowPaymentElement: x,
             shouldShowAddressElement: _,
@@ -75,20 +75,20 @@ function _(e) {
                     [A.JD]: d === y.he.PAYPAL,
                 }),
                 children: [
-                    (0, l.jsx)(C.Wf, {
+                    (0, l.jsx)(h.Wf, {
                         ...o,
                         paymentMethodOrder: m,
                         customPaymentMethodIdsToSourceTypes: a,
                         step: t,
-                        layout: E,
-                        analyticsContext: h,
+                        layout: S,
+                        analyticsContext: C,
                     }),
                     x && f,
                 ],
             }),
             (0, l.jsx)("div", {
                 className: s()(A.K_, _ ? A.RK : [A.R, A.vg]),
-                children: (0, l.jsx)(C.KS, {
+                children: (0, l.jsx)(h.KS, {
                     ...u,
                     internalKey: p,
                     renderAsStandaloneElement: b,
@@ -120,11 +120,11 @@ n.d(
                     customPaymentMethodIdsToSourceTypes: m,
                     paymentMethodOrder: p,
                 } = (0, d.p)({ onSetupError: t, elementsAppearanceOptions: { compact: a } }),
-                C = (0, f.S)();
-            return o || null != u || null == C
+                h = (0, f.S)();
+            return o || null != u || null == h
                 ? (0, l.jsx)(T, {})
                 : (0, l.jsx)(r.Elements, {
-                      stripe: C,
+                      stripe: h,
                       options: s,
                       children: (0, l.jsx)(_, {
                           ...n,
@@ -162,7 +162,7 @@ n.d(
             i.useEffect(() => {
                 t === I.pn.PAYMENT_ELEMENT && (d.current = null);
             }, [t]);
-            let k = (0, h.t4)((e) => e.linkWalletEnabled),
+            let k = (0, C.t4)((e) => e.linkWalletEnabled),
                 w = i.useMemo(() => (k ? b : b.filter((e) => "link" !== e)), [k]),
                 D = i.useMemo(
                     () => ({
@@ -186,7 +186,7 @@ n.d(
                                     ...r
                                 } = e,
                                 o = r.isNewAddress,
-                                u = (0, C.ZB)(n);
+                                u = (0, h.ZB)(n);
                             (s &&
                                 null != l &&
                                 l.log("AddressElement onChange event:", {
@@ -211,7 +211,7 @@ n.d(
                             (!t ||
                                 d ||
                                 m.im.has(n.country) ||
-                                E.A.captureMessage(
+                                S.A.captureMessage(
                                     "Unexpected AddressElement validity mismatch: Stripe complete but address was computed invalid",
                                     {
                                         tags: { app_context: "billing", billing_context: "payment_element" },
@@ -223,7 +223,7 @@ n.d(
                                             emptyFields: Object.entries(c)
                                                 .filter((e) => {
                                                     let [, t] = e;
-                                                    return (0, S.uJ)(t);
+                                                    return (0, E.uJ)(t);
                                                 })
                                                 .map((e) => {
                                                     let [t] = e;

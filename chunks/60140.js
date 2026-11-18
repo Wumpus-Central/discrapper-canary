@@ -19,8 +19,8 @@ var l = n(477900),
     C = n(579720),
     y = n(758836),
     L = n(792996),
-    _ = n(105499);
-let b = { flattenProductVariants: !1 };
+    b = n(105499);
+let _ = { flattenProductVariants: !1 };
 function S(e) {
     return String(e);
 }
@@ -32,14 +32,14 @@ function j(e) {
         s = (0, x.Mk)(r);
     return t
         ? (0, l.jsx)("div", {
-              className: _.hm,
+              className: b.hm,
               children: [void 0, void 0, void 0, void 0].map((e, t) => (0, l.jsx)(A.A, {}, t)),
           })
         : (0, l.jsx)("div", {
-              className: _.hm,
+              className: b.hm,
               children: (0, l.jsx)(x.v3.Provider, {
-                  value: b,
-                  children: n.map((e, t) => (0, l.jsx)(T, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
+                  value: _,
+                  children: n.map((e, t) => (0, l.jsx)(R, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
@@ -58,7 +58,7 @@ function k(e) {
         });
     }
     return (0, l.jsx)(x.v3.Provider, {
-        value: b,
+        value: _,
         children: (0, l.jsx)(a.A, {
             gap: "xl",
             "aria-label": i,
@@ -66,7 +66,7 @@ function k(e) {
             getItemKey: I,
             maintainFocusOnReorder: !0,
             renderItem: (e, t, n) =>
-                (0, l.jsx)(T, { item: e, index: n, prioritizedCurrency: s, listItemProps: t }, e.skuId),
+                (0, l.jsx)(R, { item: e, index: n, prioritizedCurrency: s, listItemProps: t }, e.skuId),
         }),
     });
 }
@@ -78,7 +78,7 @@ function O(e, t) {
     let { tileProps: n } = e;
     return (0, l.jsx)(v.A, { ...n, aspectRatio: "auto", tag: "div", listItemProps: t });
 }
-function R(e) {
+function T(e) {
     let { collectionId: t, sequencedOffers: n, products: s, onViewAll: o } = e,
         u = (0, h.A)(t),
         c = (0, C.A)(n, s, u),
@@ -91,7 +91,7 @@ function R(e) {
     return (0, l.jsx)(i.R9, {
         newValue: { pageSection: "top 4", categoryPosition: 0 },
         children: (0, l.jsxs)("div", {
-            className: _.yE,
+            className: b.yE,
             children: [
                 (0, l.jsx)(p.A, {
                     variant: "sequenced-offer",
@@ -99,16 +99,16 @@ function R(e) {
                     helpArticle: g,
                     buttonText: L.intl.string(L.t["kJSKt+"]),
                     onButtonClick: o,
-                    className: _.NF,
+                    className: b.NF,
                 }),
                 (0, l.jsx)(x.v3.Provider, {
-                    value: b,
+                    value: _,
                     children: (0, l.jsx)(a.A, {
                         gap: "xl",
                         "aria-label": L.intl.string(L.t.HP8LNG),
                         items: c,
                         getItemKey: N,
-                        itemClassName: _.xo,
+                        itemClassName: b.xo,
                         renderItem: O,
                         initialScrollIndex: d >= 0 ? d : null,
                     }),
@@ -117,7 +117,7 @@ function R(e) {
         }),
     });
 }
-function T(e) {
+function R(e) {
     let { item: t, index: n, prioritizedCurrency: r, listItemProps: s } = e;
     return (0, l.jsx)(i.R9, {
         newValue: { tilePosition: n, pageSection: "top 4", categoryPosition: 0 },
@@ -141,8 +141,8 @@ n.d(
                 v = i.categorySkuId,
                 C = (0, s.bG)([u.A], () => (null != v ? u.A.getSequencedOffersForCollection(v) : null)),
                 L = (0, d.A)(),
-                _ = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
-                b = r.useMemo(
+                b = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
+                _ = r.useMemo(
                     () =>
                         !f &&
                         0 !== i.rankedSkuIds.length &&
@@ -150,7 +150,7 @@ n.d(
                         i.rankedSkuIds.every((e) => o.A.getProduct(e)?.variantGroupStoreListingId != null),
                     [f, i.rankedSkuIds, A.length],
                 ),
-                S = f || b,
+                S = f || _,
                 I = r.useMemo(() => A.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [A]),
                 N =
                     "hscroll" === h &&
@@ -159,16 +159,16 @@ n.d(
                     null != v &&
                     null != C &&
                     C.promotions.length > 0 &&
-                    null != _,
+                    null != b,
                 O = (0, c.t)("shop_home_carousel", { autoTrackExposure: N }).enabled,
-                T = "hscroll" === h && p === y.G2.HOME && null != v && O && !L;
+                R = "hscroll" === h && p === y.G2.HOME && null != v && O && !L;
             switch (h) {
                 case "feed":
                     return (0, l.jsx)(j, { isLoading: S, products: I, tab: p });
                 case "hscroll":
                     if (N && O)
-                        return (0, l.jsx)(R, { collectionId: v, sequencedOffers: C, products: _, onViewAll: x });
-                    return (0, l.jsx)(k, { isLoading: S || T, products: I, tab: p });
+                        return (0, l.jsx)(T, { collectionId: v, sequencedOffers: C, products: b, onViewAll: x });
+                    return (0, l.jsx)(k, { isLoading: S || R, products: I, tab: p });
             }
         },
     },

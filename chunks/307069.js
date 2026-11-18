@@ -31,64 +31,64 @@ function f() {
         Component: o,
     };
 }
-var g = t(604121),
-    C = t(597770),
+var C = t(604121),
+    g = t(597770),
     m = t(799226),
     A = t(653887),
     b = t(866665),
     h = t(942857),
     p = t(775602),
     I = t(793574),
-    T = t(688810),
-    k = t(263775),
+    k = t(688810),
+    T = t(263775),
     N = t(810498),
-    _ = t(547902),
-    j = t(45052),
-    x = t(620301),
-    v = t(40493),
-    R = t(43105),
-    G = t(652215),
-    y = t(49999),
-    M = t(50302),
-    S = t(792996);
-function E(e) {
+    j = t(547902),
+    x = t(45052),
+    v = t(620301),
+    _ = t(40493),
+    G = t(43105),
+    y = t(652215),
+    R = t(49999),
+    S = t(50302),
+    M = t(792996);
+function O(e) {
     let { giftRecipient: n, onComplete: t, markAsDismissed: a, children: r } = e,
         o = l.useRef(null),
-        { analyticsLocations: s } = (0, T.Ay)(I.A.GIFTED_SUBSCRIPTIONS_COACHMARK),
-        { openGiftModal: u } = (0, x.$)({
+        { analyticsLocations: s } = (0, k.Ay)(I.A.GIFTED_SUBSCRIPTIONS_COACHMARK),
+        { openGiftModal: u } = (0, v.$)({
             giftRecipient: n,
             analyticsLocations: s,
-            analyticsObject: { object: G.ZSU.BUTTON_CTA, objectType: G.btD.GIFT },
+            analyticsObject: { object: y.ZSU.BUTTON_CTA, objectType: y.btD.GIFT },
             location: "GiftedSubscriptionsCoachmark",
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: o, children: r }),
-            (0, i.jsx)(R.A, {
+            (0, i.jsx)(G.A, {
                 targetElementRef: o,
                 shouldShow: !0,
                 position: "top",
-                title: S.intl.string(M.default["3NxgUL"]),
-                body: S.intl.string(M.default.IMRvdN),
+                title: M.intl.string(S.default["3NxgUL"]),
+                body: M.intl.string(S.default.IMRvdN),
                 gradientColor: "nitro-pink",
                 actions: [
                     {
-                        text: S.intl.string(S.t.Ve9Ge6),
-                        icon: C.GiftIcon,
+                        text: M.intl.string(M.t.Ve9Ge6),
+                        icon: g.GiftIcon,
                         onClick: function () {
-                            (u(), t?.(), a(y.i.TAKE_ACTION));
+                            (u(), t?.(), a(R.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (t?.(), a(y.i.USER_DISMISS));
+                    (t?.(), a(R.i.USER_DISMISS));
                 },
             }),
         ],
     });
 }
-var O = t(70283),
+var E = t(70283),
     D = t(982240),
     U = t(100663),
     P = t(287809),
@@ -98,31 +98,31 @@ function B(e) {
     let { currentTier: n, giftCount: t, variant: a, onComplete: r, markAsDismissed: o, children: u } = e,
         c = l.useRef(null),
         d = (0, s.bG)([P.default], () => P.default.getCurrentUser()),
-        f = (0, j.Se)(n);
+        f = (0, x.Se)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: c, children: u }),
-            (0, i.jsx)(R.A, {
+            (0, i.jsx)(G.A, {
                 targetElementRef: c,
                 shouldShow: !0,
                 position: "top",
-                title: S.intl.format(H.default["a+jfuy"], { tierName: n.name ?? "" }),
+                title: M.intl.format(H.default["a+jfuy"], { tierName: n.name ?? "" }),
                 body:
                     "noCount" === a
-                        ? S.intl.string(H.default["0N8fCf"])
-                        : S.intl.formatToPlainString(H.default.QxRA6w, { giftCount: t ?? 0 }),
+                        ? M.intl.string(H.default["0N8fCf"])
+                        : M.intl.formatToPlainString(H.default.QxRA6w, { giftCount: t ?? 0 }),
                 graphic: null != f ? { type: "image", src: f } : void 0,
                 actions: [
                     {
-                        text: S.intl.string(S.t.RzWDqY),
+                        text: M.intl.string(M.t.RzWDqY),
                         onClick: () => {
-                            (null != d && (0, U.openUserProfileModal)({ userId: d.id }), r?.(), o(y.i.TAKE_ACTION));
+                            (null != d && (0, U.openUserProfileModal)({ userId: d.id }), r?.(), o(R.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (r?.(), o(y.i.USER_DISMISS));
+                    (r?.(), o(R.i.USER_DISMISS));
                 },
             }),
         ],
@@ -131,39 +131,39 @@ function B(e) {
 function L(e) {
     let { channel: n, onComplete: t, markAsDismissed: a, children: r } = e,
         o = l.useRef(null),
-        { analyticsLocations: s } = (0, T.Ay)(I.A.GIFTING_BADGE_COACHMARK),
+        { analyticsLocations: s } = (0, k.Ay)(I.A.GIFTING_BADGE_COACHMARK),
         u = (0, F.R1)(n),
-        { openGiftModal: c } = (0, x.$)({
+        { openGiftModal: c } = (0, v.$)({
             giftRecipient: u,
             analyticsLocations: s,
-            analyticsObject: { object: G.ZSU.BUTTON_CTA, objectType: G.btD.GIFT },
+            analyticsObject: { object: y.ZSU.BUTTON_CTA, objectType: y.btD.GIFT },
             location: "NewBadgeCoachmark",
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: o, children: r }),
-            (0, i.jsx)(R.A, {
+            (0, i.jsx)(G.A, {
                 targetElementRef: o,
                 shouldShow: !0,
                 position: "top",
-                title: S.intl.string(H.default.Q2RQka),
-                body: S.intl.string(H.default["3EQnkg"]),
+                title: M.intl.string(H.default.Q2RQka),
+                body: M.intl.string(H.default["3EQnkg"]),
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/6c3ba62d914abaf06acb2e664bd0515aaf49ab966e671dcd013678208b3d7d58.png",
                 },
                 actions: [
                     {
-                        text: S.intl.string(H.default.DZnomS),
-                        icon: C.GiftIcon,
+                        text: M.intl.string(H.default.DZnomS),
+                        icon: g.GiftIcon,
                         onClick: () => {
-                            (c(), t?.(), a(y.i.TAKE_ACTION));
+                            (c(), t?.(), a(R.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    (t?.(), a(y.i.USER_DISMISS));
+                    (t?.(), a(R.i.USER_DISMISS));
                 },
             }),
         ],
@@ -172,8 +172,8 @@ function L(e) {
 function K(e) {
     let { channel: n, variant: t, onComplete: l, markAsDismissed: a, children: r } = e,
         { currentTier: o, giftCount: u } = (0, s.cf)([D.Ay], () => ({
-            currentTier: D.Ay.getCurrentTier(O.$.GIFTING),
-            giftCount: D.Ay.getSingleRequirementProgress(O.$.GIFTING)?.current,
+            currentTier: D.Ay.getCurrentTier(E.$.GIFTING),
+            giftCount: D.Ay.getSingleRequirementProgress(E.$.GIFTING)?.current,
         }));
     return null != o
         ? (0, i.jsx)(B, { currentTier: o, giftCount: u, variant: t, onComplete: l, markAsDismissed: a, children: r })
@@ -192,17 +192,17 @@ function q(e) {
         r = l.useCallback(() => Promise.resolve({ default: n }), [n]);
     return (0, i.jsx)(W.A, {
         className: z.x6,
-        "aria-label": S.intl.string(S.t.Z1RnTk),
+        "aria-label": M.intl.string(M.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: a,
         children: (0, i.jsx)("div", {
             className: V.zc,
-            children: t ? (0, i.jsx)(g.a, { className: V.Hl, importData: r }) : (0, i.jsx)(C.GiftIcon, {}),
+            children: t ? (0, i.jsx)(C.a, { className: V.Hl, importData: r }) : (0, i.jsx)(g.GiftIcon, {}),
         }),
     });
 }
-function Y(e) {
+function X(e) {
     let { trinketAnimationUrl: n, trinketRiveAnimationUrl: t, hovered: l } = e,
         a = (0, s.bG)([p.Ay], () => p.Ay.useReducedMotion),
         r = !(0, Z.uJ)(t);
@@ -214,12 +214,12 @@ function Y(e) {
             ? null
             : (0, i.jsx)("img", { className: V.rY, src: n, alt: "" });
 }
-function X(e) {
+function Y(e) {
     let { trinketAnimationUrl: n, trinketRiveAnimationUrl: t, hovered: l, onClick: a } = e,
         { Component: r, events: o, play: s } = f();
     return (0, i.jsxs)(W.A, {
         className: z.x6,
-        "aria-label": S.intl.string(S.t.Z1RnTk),
+        "aria-label": M.intl.string(M.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: function () {
@@ -228,7 +228,7 @@ function X(e) {
         ...o,
         children: [
             (0, i.jsx)("div", { className: V.zc, children: (0, i.jsx)(r, { className: V.is, color: "currentColor" }) }),
-            (0, i.jsx)(Y, { trinketAnimationUrl: n, trinketRiveAnimationUrl: t, hovered: l }),
+            (0, i.jsx)(X, { trinketAnimationUrl: n, trinketRiveAnimationUrl: t, hovered: l }),
         ],
     });
 }
@@ -240,11 +240,11 @@ function ee(e) {
         ? null == n || ((0, Z.uJ)(n.trinketRiveAnimationUrl) && (0, Z.uJ)(n.trinketAnimationUrl))
             ? (0, i.jsx)(b.m, {
                   ariaHidden: l,
-                  text: S.intl.string(l ? S.t.TW4JV0 : S.t.sWtWDX),
+                  text: M.intl.string(l ? M.t.TW4JV0 : M.t.sWtWDX),
                   children: (0, i.jsx)(W.A, {
                       className: z.x6,
                       isActive: !1,
-                      "aria-label": S.intl.string(l ? S.t.TW4JV0 : S.t.Z1RnTk),
+                      "aria-label": M.intl.string(l ? M.t.TW4JV0 : M.t.Z1RnTk),
                       "aria-haspopup": "dialog",
                       onClick: () => {
                           (a(), s());
@@ -253,7 +253,7 @@ function ee(e) {
                       children: (0, i.jsx)(r, { size: "refresh_sm", color: "currentColor" }),
                   }),
               })
-            : (0, i.jsx)(X, {
+            : (0, i.jsx)(Y, {
                   trinketAnimationUrl: n.trinketAnimationUrl,
                   trinketRiveAnimationUrl: n.trinketRiveAnimationUrl,
                   hovered: t,
@@ -263,11 +263,11 @@ function ee(e) {
 }
 let en = l.memo(function (e) {
     let { disabled: n, channel: t } = e,
-        { analyticsLocations: a } = (0, T.Ay)(I.A.GIFT_BUTTON),
+        { analyticsLocations: a } = (0, k.Ay)(I.A.GIFT_BUTTON),
         [c, d] = l.useState(!1),
         f = (0, h.A)(),
-        g = (0, s.bG)([P.default], () => P.default.getCurrentUser()),
-        C = null != g ? J.default.age(g.id) : 0,
+        C = (0, s.bG)([P.default], () => P.default.getCurrentUser()),
+        g = null != C ? J.default.age(C.id) : 0,
         m = (0, F.R1)(t),
         A = (0, s.bG)([w.A], () => {
             let e = w.A.getMarketingComponentBySurface(o.oW.GIFT_ICON);
@@ -278,71 +278,71 @@ let en = l.memo(function (e) {
             return null == e ? null : e.surface;
         }),
         p = A?.gradient,
-        R =
+        G =
             null != p && null != p.colors && p.colors.length >= 2
                 ? (0, N.K5)({ gradient: p.colors, angle: p.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
-        M = l.useMemo(() => {
-            if (R?.background != null) return { "--custom-promotion-gradient": R.background };
-        }, [R]),
-        S =
+        S = l.useMemo(() => {
+            if (G?.background != null) return { "--custom-promotion-gradient": G.background };
+        }, [G]),
+        M =
             !(0, Z.uJ)(A?.boxAnimationUrl) ||
             !(0, Z.uJ)(A?.trinketAnimationUrl) ||
             !(0, Z.uJ)(A?.trinketRiveAnimationUrl),
-        O = (0, s.bG)([w.A], () => w.A.getGiftPromotion()?.id),
-        D = null != b && !n && !f && C >= Q && null != O,
-        [U, H] = (0, k.Cc)(D ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, O ?? ""),
+        E = (0, s.bG)([w.A], () => w.A.getGiftPromotion()?.id),
+        D = null != b && !n && !f && g >= Q && null != E,
+        [U, H] = (0, T.Cc)(D ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, E ?? ""),
         B = null != U,
         { giftingBadgeCoachmarkVariant: L, markGiftingBadgeCoachmarkAsDismissed: $ } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, h.A)(),
-                l = (0, j.Hv)({ location: n, enabled: t }),
-                [a, r] = (0, k.kn)(null == l || i ? [] : [u.M.NEW_GIFTING_BADGES_COACHMARK]);
+                l = (0, x.Hv)({ location: n, enabled: t }),
+                [a, r] = (0, T.kn)(null == l || i ? [] : [u.M.NEW_GIFTING_BADGES_COACHMARK]);
             return { giftingBadgeCoachmarkVariant: null != a ? l : null, markGiftingBadgeCoachmarkAsDismissed: r };
         })({ location: "ChannelPremiumGiftButton", enabled: !n && !B }),
         { showGiftedSubscriptionsCoachmark: W, markGiftedSubscriptionsCoachmarkAsDismissed: z } = (function (e) {
             let { location: n, enabled: t } = e,
                 i = (0, h.A)(),
-                l = (0, _.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
-                [a, r] = (0, k.kn)(t && l && !i ? [u.M.GIFTED_SUBSCRIPTIONS_DESKTOP_COACHMARK] : []);
+                l = (0, j.u)({ location: `${n}${t ? "" : "-DISABLED"}` }),
+                [a, r] = (0, T.kn)(t && l && !i ? [u.M.GIFTED_SUBSCRIPTIONS_DESKTOP_COACHMARK] : []);
             return { showGiftedSubscriptionsCoachmark: null != a, markGiftedSubscriptionsCoachmarkAsDismissed: r };
         })({ location: "ChannelPremiumGiftButton", enabled: !n && null != m && !B && null == L }),
         q = !W && (c || B || null != L),
         {
-            openGiftModal: Y,
-            shouldShowWishlistModal: X,
+            openGiftModal: X,
+            shouldShowWishlistModal: Y,
             shouldShowGiftSelectionModal: en,
-        } = (0, x.$)({
+        } = (0, v.$)({
             giftRecipient: m,
             analyticsLocations: a,
             analyticsObject: {
-                page: t.isPrivate() ? G.liQ.DM_CHANNEL : G.liQ.GUILD_CHANNEL,
-                section: G.JJy.CHANNEL_TEXT_AREA,
-                object: S ? G.ZSU.GIFTING_PROMOTION_BUTTON : G.ZSU.BUTTON_ICON,
-                objectType: G.btD.GIFT,
+                page: t.isPrivate() ? y.liQ.DM_CHANNEL : y.liQ.GUILD_CHANNEL,
+                section: y.JJy.CHANNEL_TEXT_AREA,
+                object: M ? y.ZSU.GIFTING_PROMOTION_BUTTON : y.ZSU.BUTTON_ICON,
+                objectType: y.btD.GIFT,
             },
-            wishlistAnalyticsObject: S
+            wishlistAnalyticsObject: M
                 ? {
-                      page: t.isPrivate() ? G.liQ.DM_CHANNEL : G.liQ.GUILD_CHANNEL,
-                      section: G.JJy.CHANNEL_TEXT_AREA,
-                      object: G.ZSU.BUTTON_ICON,
-                      objectType: G.btD.GIFT,
+                      page: t.isPrivate() ? y.liQ.DM_CHANNEL : y.liQ.GUILD_CHANNEL,
+                      section: y.JJy.CHANNEL_TEXT_AREA,
+                      object: y.ZSU.BUTTON_ICON,
+                      objectType: y.btD.GIFT,
                   }
                 : void 0,
-            location: S ? "gift-promotion-button" : "gift-button",
+            location: M ? "gift-promotion-button" : "gift-button",
         });
     if (n) return null;
     let et = (0, i.jsx)(ee, {
         giftIcon: A,
         hovered: q,
-        isGenericGift: X || en,
+        isGenericGift: Y || en,
         onClick: function () {
-            (d(!1), H(y.i.TAKE_ACTION), $(y.i.TAKE_ACTION), W && z(y.i.TAKE_ACTION), Y());
+            (d(!1), H(R.i.TAKE_ACTION), $(R.i.TAKE_ACTION), W && z(R.i.TAKE_ACTION), X());
         },
     });
     return (0, i.jsx)("div", {
         className: r()(V.kL, { [V.DM]: q }),
-        style: M,
+        style: S,
         onMouseEnter: () => {
             c || d(!0);
         },
@@ -350,9 +350,9 @@ let en = l.memo(function (e) {
             d(!1);
         },
         children: B
-            ? (0, i.jsx)(v.A, {
+            ? (0, i.jsx)(_.A, {
                   onComplete: () => d(!1),
-                  onCheckItOutClick: Y,
+                  onCheckItOutClick: X,
                   markAsDismissed: H,
                   coachmarkConfig: b,
                   children: et,
@@ -360,7 +360,7 @@ let en = l.memo(function (e) {
             : null != L
               ? (0, i.jsx)(K, { channel: t, variant: L, onComplete: () => d(!1), markAsDismissed: $, children: et })
               : W
-                ? (0, i.jsx)(E, { giftRecipient: m, onComplete: () => d(!1), markAsDismissed: z, children: et })
+                ? (0, i.jsx)(O, { giftRecipient: m, onComplete: () => d(!1), markAsDismissed: z, children: et })
                 : et,
     });
 });

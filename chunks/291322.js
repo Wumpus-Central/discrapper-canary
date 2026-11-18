@@ -1,19 +1,19 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
     a = n.n(l),
     s = n(62617);
 function o(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: l, role: a, width: o, height: u, className: d, style: c } = e,
+    let { alt: t, ariaLabel: n, ariaHidden: l, role: a, width: o, height: u, className: c, style: d } = e,
         S = r.useMemo(
-            () => (0, s.H)({ width: o, height: u, intrinsicWidth: 64, intrinsicHeight: 64, style: c }),
-            [o, u, c],
+            () => (0, s.H)({ width: o, height: u, intrinsicWidth: 64, intrinsicHeight: 64, style: d }),
+            [o, u, d],
         );
     return (0, i.jsx)("img", {
         style: S,
         src: "https://cdn.discordapp.com/assets/content/1da56878f12f10b79b5ef130d0a55e5ded8c8dc5dc29723c27059772a3e42670.svg",
-        className: (0, s.Z)(d),
+        className: (0, s.Z)(c),
         alt: t,
         "aria-label": n,
         "aria-hidden": l,
@@ -21,18 +21,18 @@ function o(e) {
     });
 }
 var u = n(403581),
-    d = n(512376);
-function c(e) {
+    c = n(512376);
+function d(e) {
     let { size: t, iconSize: n, color: r, className: l } = e;
     return (0, i.jsxs)("div", {
-        className: a()(d.j, l),
+        className: a()(c.j, l),
         "aria-hidden": !0,
         children: [
             (0, i.jsx)("div", {
-                className: d.q,
+                className: c.q,
                 children: (0, i.jsx)(o, { alt: "", ariaHidden: !0, width: t, height: t }),
             }),
-            (0, i.jsx)(u.NitroWheelIcon, { size: "custom", width: n, height: n, color: r, className: d.q }),
+            (0, i.jsx)(u.NitroWheelIcon, { size: "custom", width: n, height: n, color: r, className: c.q }),
         ],
     });
 }

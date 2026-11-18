@@ -66,26 +66,26 @@ function y(e) {
         C = r.useRef(null),
         y = r.useRef(null),
         L = r.useRef(!1),
-        { isHovered: _, setIsHovered: b, onMouseEnter: S, onMouseLeave: I, cancelTimers: j } = (0, f.A)(100, 100),
+        { isHovered: b, setIsHovered: _, onMouseEnter: S, onMouseLeave: I, cancelTimers: j } = (0, f.A)(100, 100),
         k = r.useCallback(() => {
             ((L.current = p.Ay.keyboardModeEnabled), S());
         }, [S]),
         N = r.useCallback(() => {
-            (j(), b(!0), (L.current = p.Ay.keyboardModeEnabled));
-        }, [j, b]),
+            (j(), _(!0), (L.current = p.Ay.keyboardModeEnabled));
+        }, [j, _]),
         O = r.useCallback(
             (e) => {
                 (j(),
                     L.current && !p.Ay.keyboardModeEnabled && (0, E.uS)(),
-                    b(!1),
+                    _(!1),
                     e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : C.current?.focus())));
             },
-            [j, b],
+            [j, _],
         ),
-        R = r.useCallback(() => {
-            _ ? O(!1) : N();
-        }, [_, N, O]),
-        T = r.useCallback(
+        T = r.useCallback(() => {
+            b ? O(!1) : N();
+        }, [b, N, O]),
+        R = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && A(e) && (e.preventDefault(), n.onClick(e)));
             },
@@ -94,21 +94,21 @@ function y(e) {
         D = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), _ ? (O(!1), requestAnimationFrame(N)) : N());
+                    (e.preventDefault(), e.stopPropagation(), b ? (O(!1), requestAnimationFrame(N)) : N());
             },
-            [_, N, O],
+            [b, N, O],
         ),
         P = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
         M = (0, l.jsx)(m.ChevronSmallDownIcon, {
             size: "sm",
             color: "currentColor",
-            className: a()(x.OW, { [x.g3]: _ }),
+            className: a()(x.OW, { [x.g3]: b }),
         });
     return (0, l.jsx)("li", {
         className: x.I,
         children: (0, l.jsx)(h.Y, {
             targetElementRef: C,
-            shouldShow: _,
+            shouldShow: b,
             position: "bottom",
             align: "left",
             spacing: 4,
@@ -159,7 +159,7 @@ function y(e) {
                                   tag: "a",
                                   role: "link",
                                   href: i,
-                                  onClick: T,
+                                  onClick: R,
                                   onMouseEnter: k,
                                   onMouseLeave: I,
                                   "aria-current": n.key === s ? "page" : void 0,
@@ -173,7 +173,7 @@ function y(e) {
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
-                                  onClick: R,
+                                  onClick: T,
                                   onKeyDown: D,
                                   onMouseEnter: k,
                                   onMouseLeave: I,
@@ -188,7 +188,7 @@ function y(e) {
                           innerRef: C,
                           role: "button",
                           "aria-haspopup": "true",
-                          onClick: R,
+                          onClick: T,
                           onKeyDown: D,
                           onMouseEnter: k,
                           onMouseLeave: I,
@@ -199,26 +199,26 @@ function y(e) {
     });
 }
 var L = n(765671);
-let _ = 'a[href], [role="button"]';
-function b(e, t) {
-    let n = Array.from(e.querySelectorAll(_)),
+let b = 'a[href], [role="button"]';
+function _(e, t) {
+    let n = Array.from(e.querySelectorAll(b)),
         l = n.indexOf(document.activeElement);
     -1 !== l && n[l + t]?.focus();
 }
 function S(e) {
     switch (e.key) {
         case "ArrowRight":
-            (e.preventDefault(), b(e.currentTarget, 1));
+            (e.preventDefault(), _(e.currentTarget, 1));
             return;
         case "ArrowLeft":
-            (e.preventDefault(), b(e.currentTarget, -1));
+            (e.preventDefault(), _(e.currentTarget, -1));
             return;
         case "Home":
-            (e.preventDefault(), e.currentTarget.querySelector(_)?.focus());
+            (e.preventDefault(), e.currentTarget.querySelector(b)?.focus());
             return;
         case "End": {
             e.preventDefault();
-            let t = e.currentTarget.querySelectorAll(_);
+            let t = e.currentTarget.querySelectorAll(b);
             t[t.length - 1]?.focus();
         }
     }

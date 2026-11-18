@@ -24,8 +24,8 @@ function d(e) {
             analyticsObject: o,
             wishlistAnalyticsObject: d,
             premiumAnalyticsObject: f,
-            analyticsLocation: g,
-            giftMessage: C,
+            analyticsLocation: C,
+            giftMessage: g,
             subscriptionTier: m,
             location: A,
         } = e,
@@ -33,8 +33,8 @@ function d(e) {
         { enabled: h } = u.useConfig({ location: A }),
         p = (0, a.tA)({ isGift: !0, giftRecipient: n }),
         I = b && null != n,
-        T = h && null == n,
-        k = p && null != n;
+        k = h && null == n,
+        T = p && null != n;
     return {
         openGiftModal: i.useCallback(() => {
             null != m
@@ -43,27 +43,27 @@ function d(e) {
                       giftRecipient: n ?? void 0,
                       subscriptionTier: m,
                       analyticsLocations: t,
-                      analyticsLocation: g,
+                      analyticsLocation: C,
                       analyticsObject: f ?? o,
-                      giftMessage: C,
+                      giftMessage: g,
                   })
-                : k
+                : T
                   ? (0, r.A)({
                         giftRecipient: n,
                         analyticsLocations: t,
-                        analyticsLocation: g,
+                        analyticsLocation: C,
                         analyticsObject: d ?? o,
-                        giftMessage: C,
+                        giftMessage: g,
                     })
                   : (0, c.A)({
                         giftRecipient: n ?? void 0,
                         analyticsLocations: t,
-                        analyticsLocation: g,
+                        analyticsLocation: C,
                         analyticsObject: d ?? o,
-                        giftMessage: C,
+                        giftMessage: g,
                     });
-        }, [k, n, t, g, o, d, f, C, m]),
-        shouldShowWishlistModal: k,
-        shouldShowGiftSelectionModal: I || T,
+        }, [T, n, t, C, o, d, f, g, m]),
+        shouldShowWishlistModal: T,
+        shouldShowGiftSelectionModal: I || k,
     };
 }

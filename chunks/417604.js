@@ -1,4 +1,4 @@
-n.d(t, { iB: () => E, Y0: () => S, A: () => I });
+n.d(t, { iB: () => S, Y0: () => E, A: () => I });
 var l = n(582128),
     i = n(164636),
     r = n(682689),
@@ -118,8 +118,8 @@ class p {
             : { shouldSet: !1, correctedPaymentSourceId: null };
     }
 }
-var C = n(792996),
-    h = n(140624);
+var h = n(792996),
+    C = n(140624);
 function f(e) {
     let { giftCardsEnabled: t } = e,
         {
@@ -155,17 +155,17 @@ function f(e) {
               walletBalanceAmount: null,
           };
 }
-function E(e) {
+function S(e) {
     let { paymentSourceId: t, location: n } = e,
         { enabled: l } = (0, s.c)({ location: n }),
         { walletCoversTotal: i, walletId: r, isWalletBalanceLoaded: a } = f({ giftCardsEnabled: l });
     return a && null != t && t === r && !i;
 }
-function S(e) {
+function E(e) {
     let t,
         n,
-        { paymentSourceId: i, setPaymentSourceId: a, location: u, isReady: d = !0, subscriptionPaymentSourceId: E } = e,
-        { enabled: S } = (0, s.c)({ location: u }),
+        { paymentSourceId: i, setPaymentSourceId: a, location: u, isReady: d = !0, subscriptionPaymentSourceId: S } = e,
+        { enabled: E } = (0, s.c)({ location: u }),
         { enabled: I } = (0, o.U)({ location: u }),
         {
             pendingPaymentSourceId: g,
@@ -190,32 +190,32 @@ function S(e) {
             checkoutPaymentSources: e.get("checkoutPaymentSources"),
             dropdownPaymentSources: e.getDropdownPaymentSources(),
             storeGiftCardWallet: e.getGiftCardWallet(),
-            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: I, giftCardsEnabled: S }),
+            isSplitPaymentMode: e.getIsSplitPaymentMode({ splitPaymentsEnabled: I, giftCardsEnabled: E }),
         })),
-        R = S ? N : null,
+        R = E ? N : null,
         O = j ? null : R,
         [L, M] = l.useState(null),
         k = null != R && i === R.id,
         w = l.useMemo(
             () =>
-                null != L ? L : m({ giftCardWallet: null, dropdownPaymentSources: b, subscriptionPaymentSourceId: E }),
-            [b, E, L],
+                null != L ? L : m({ giftCardWallet: null, dropdownPaymentSources: b, subscriptionPaymentSourceId: S }),
+            [b, S, L],
         ),
         D = l.useMemo(() => (k ? w : (i ?? null)), [w, k, i]),
         U = l.useMemo(
             () => ({
                 checkoutPaymentSources: T,
                 dropdownPaymentSources: b,
-                subscriptionPaymentSourceId: E,
+                subscriptionPaymentSourceId: S,
                 giftCardWallet: O,
                 isReady: d,
                 pendingPaymentSourceId: g,
                 paymentSourceId: i,
-                giftCardsEnabled: S,
+                giftCardsEnabled: E,
                 hasInitialPaymentSourceSeed: y,
                 hasAddedPaymentSourceThisSession: A,
             }),
-            [T, b, E, O, d, g, i, S, y, A],
+            [T, b, S, O, d, g, i, E, y, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new p(U), [U])),
@@ -263,11 +263,11 @@ function S(e) {
             isWalletBalanceLoaded: K,
             isWalletCoverageLoading: Z,
             walletBalanceAmount: q,
-        } = f({ giftCardsEnabled: S }),
+        } = f({ giftCardsEnabled: E }),
         z = null != q && q > 0,
         $ = null != q && q <= 0,
         Q = (P ?? v) === !0,
-        J = null != E && null != R && E === R.id,
+        J = null != S && null != R && S === R.id,
         X = (0, r.t4)((e) => e.getWalletSettlesCheckoutAlone({ isSplitPaymentMode: j, walletCoversTotal: Y }));
     (l.useEffect(() => {
         if (j && null != R) {
@@ -300,12 +300,12 @@ function S(e) {
                         onChange: H,
                         loading: Z,
                         disabled: !Z && !V,
-                        disabledTooltip: Z || V ? void 0 : C.intl.string(h.default.ccWIdu),
+                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
         [R, j, Q, W, k, H, V, Z, $, z],
     );
     return {
-        giftCardsEnabled: S,
+        giftCardsEnabled: E,
         dropdownPaymentSources: b,
         dropdownPaymentSourceId: D,
         giftCardWallet: R,
