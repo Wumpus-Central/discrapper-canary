@@ -702,7 +702,7 @@ function e0(e) {
     ];
 }
 var e1 = t(347478),
-    e8 = t(999569),
+    e8 = t(985115),
     e2 = t(325802),
     e6 = t(252125);
 function e5(e) {
@@ -723,8 +723,8 @@ function e5(e) {
     );
 }
 var e4 = t(462887),
-    e9 = t(278416),
-    e3 = t(866665),
+    e3 = t(278416),
+    e9 = t(866665),
     e7 = t(821609),
     ne = t(318254),
     nn = t(825484),
@@ -744,7 +744,7 @@ var e4 = t(462887),
 function nE(e) {
     let { className: n, isPartiallyPurchased: t } = e;
     return t
-        ? (0, s.jsx)(e3.m, {
+        ? (0, s.jsx)(e9.m, {
               position: "top",
               align: "left",
               text: q.intl.string(q.t.y1VWkZ),
@@ -873,7 +873,7 @@ function nL(e) {
     return (0, s.jsxs)("div", {
         className: nO.k,
         children: [
-            (0, s.jsx)(e3.m, {
+            (0, s.jsx)(e9.m, {
                 text: q.intl.string(q.t.MPFyJ5),
                 "aria-label": q.intl.string(q.t.X3Ekj8),
                 children: (0, s.jsx)(nR.NitroWheelIcon, { size: "md", color: "currentColor", className: nO.o }),
@@ -969,7 +969,7 @@ let nH = (e) => {
             (0, s.jsxs)("div", {
                 className: nU.fZ,
                 children: [
-                    (0, s.jsx)(e9.TagIcon, { size: "xs", color: "currentColor", className: nU.CE }),
+                    (0, s.jsx)(e3.TagIcon, { size: "xs", color: "currentColor", className: nU.CE }),
                     (0, s.jsx)(G.E, { variant: "body-xs/semibold", color: "none", children: n }),
                 ],
             }),
@@ -1182,7 +1182,7 @@ function nz(e) {
                                                           orbPrice: e.amount,
                                                       })),
                                                       (c = i ? `${a}, ${t}` : a),
-                                                      (0, s.jsx)(e3.m, {
+                                                      (0, s.jsx)(e9.m, {
                                                           position: "top",
                                                           text: t,
                                                           shouldShow: i,
@@ -1432,7 +1432,7 @@ function n4(e) {
             children: [
                 (0, s.jsx)("div", {
                     className: n5.GV,
-                    children: (0, s.jsx)(e3.m, {
+                    children: (0, s.jsx)(e9.m, {
                         text: q.intl.string(q.t["Hr/q/6"]),
                         children: (0, s.jsx)(e7.$, {
                             variant: "overlay-secondary",
@@ -1488,8 +1488,8 @@ function n4(e) {
         })
     );
 }
-var n9 = t(80801);
-let n3 = (0, u.FT)(u._3.SIZE_152),
+var n3 = t(80801);
+let n9 = (0, u.FT)(u._3.SIZE_152),
     n7 = function (e) {
         let {
                 transitionState: n,
@@ -1573,8 +1573,8 @@ let n3 = (0, u.FT)(u._3.SIZE_152),
                 pendingChanges: W,
                 pendingAvatarSrc:
                     void 0 !== W.pendingAvatar
-                        ? (0, h.sv)((0, x.V7)({ userId: V.id, image: W.pendingAvatar, size: n3 }), null, V, {
-                              size: n3,
+                        ? (0, h.sv)((0, x.V7)({ userId: V.id, image: W.pendingAvatar, size: n9 }), null, V, {
+                              size: n9,
                           })
                         : void 0,
             },
@@ -1609,12 +1609,12 @@ let n3 = (0, u.FT)(u._3.SIZE_152),
                 paddingSize: "sm",
                 "aria-label": eu,
                 children: (0, s.jsxs)("div", {
-                    className: n9.C,
+                    className: n3.C,
                     "data-testid": "collectibles-shop-product-details-modal",
                     "data-has-footer": null != z,
                     children: [
                         (0, s.jsxs)("div", {
-                            className: n9.j,
+                            className: n3.j,
                             children: [
                                 (0, s.jsx)(nW, { ...em, leftPanelFooter: H }),
                                 (0, s.jsx)(n4, { ...em, isClosing: ec, isOrbCheckoutModalOpen: ea, pdpBackground: J }),
