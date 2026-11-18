@@ -5687,31 +5687,26 @@ function n$(e) {
     let t,
         a,
         { onClose: i } = e;
-    ((0, g.bG)([h.A], () => h.A.fetchState),
-        (t = (0, g.yK)([h.A], () => {
-            let { stats: e, globalStats: t } = h.A,
-                a = t?.games;
-            if ((0, ed.IH)(e) || null == a)
-                return (
-                    e?.games?.games.map((e) => {
-                        let { game: t } = e;
-                        return t.id;
-                    }) ?? []
-                );
-            let i = [];
+    ((t = (0, g.yK)([h.A], () => {
+        let { stats: e, globalStats: t } = h.A,
+            a = t?.games;
+        if ((0, ed.IH)(e) || null == a)
             return (
-                el.Jb.forEach((e) => {
-                    let { list: t } = e,
-                        r = a[t][0];
-                    null != r && i.push(r.id);
-                }),
-                i
+                e?.games?.games.map((e) => {
+                    let { game: t } = e;
+                    return t.id;
+                }) ?? []
             );
-        })),
-        p.useEffect(() => {
-            let { fetchState: e } = h.A;
-            (e === h.T.INIT || e === h.T.ERROR) && (0, u.nX)();
-        }, []),
+        let i = [];
+        return (
+            el.Jb.forEach((e) => {
+                let { list: t } = e,
+                    r = a[t][0];
+                null != r && i.push(r.id);
+            }),
+            i
+        );
+    })),
         p.useEffect(() => {
             (0, ec.E)(t);
         }, [t]));

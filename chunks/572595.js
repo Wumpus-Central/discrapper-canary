@@ -4,25 +4,25 @@ var i = n(192308),
     s = n(857512),
     a = n(4227),
     l = n(466459);
-let o = "collectibles shop product details modal";
+let u = "collectibles shop product details modal";
 n.d(
     t,
     {},
     {
         M: function () {
-            (0, i.Oo)(o);
+            (0, i.Oo)(u);
         },
         t: (e) => {
             let {
                 product: t,
-                category: u,
-                analyticsSource: d,
-                analyticsLocations: c,
+                category: o,
+                analyticsSource: c,
+                analyticsLocations: d,
                 returnRef: I,
-                tab: v,
+                tab: p,
                 giftRecipient: f,
-                giftingOrigin: p,
-                cardId: m,
+                giftingOrigin: m,
+                cardId: v,
                 sessionId: g,
                 tilePosition: x,
             } = e;
@@ -426,7 +426,7 @@ n.d(
                         n.e(662829),
                         n.e(512162),
                         n.e(866008),
-                        n.e(190986),
+                        n.e(924577),
                         n.e(531158),
                         n.e(482511),
                         n.e(101465),
@@ -469,21 +469,21 @@ n.d(
                     ]).then(n.bind(n, 496779));
                     return (n) =>
                         (0, r.jsx)(s.R9, {
-                            newValue: { cardId: m, sessionId: g, tilePosition: x },
+                            newValue: { cardId: v, sessionId: g, tilePosition: x },
                             children: (0, r.jsx)(e, {
                                 ...n,
                                 product: t,
-                                category: u,
-                                analyticsSource: d,
-                                analyticsLocations: c,
+                                category: o,
+                                analyticsSource: c,
+                                analyticsLocations: d,
                                 returnRef: I,
-                                tab: v,
+                                tab: p,
                                 giftRecipient: f,
-                                giftingOrigin: p,
+                                giftingOrigin: m,
                             }),
                         });
                 },
-                { modalKey: o },
+                { modalKey: u },
             );
         },
     },
