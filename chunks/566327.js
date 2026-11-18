@@ -30,7 +30,7 @@ var i = {
     "./AppsSpoilerIcon.web.tsx": ["91166", []],
     "./EmojiTiredFaceIcon.web.tsx": ["136143", [622244]],
     "./EmojiGrinningFaceIcon.web.tsx": ["559013", [218438]],
-    "./ClipsAutoIcon.web.tsx": ["650684", [538733]],
+    "./ClipsAutoIcon.web.tsx": ["650684", []],
     "./SignPostIcon.web.tsx": ["855473", []],
     "./FlipHorizontalIcon.web.tsx": ["725441", [922810]],
     "./BookIcon.web.tsx": ["435271", [431692]],

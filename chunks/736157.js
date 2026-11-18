@@ -1236,7 +1236,9 @@ function nw(e) {
             u = (0, nU.E)({ proxyURL: l.proxyUrl, url: l.url });
         return (u in c && ((i.onClick = c[u]), (i.handlePreloadImage = d[u]), (i.onSeekRequest = m[u])), i);
     });
-    return (0, i.jsx)("div", { children: (0, i.jsx)(nM.A, { items: x, isInAppComponentsV2: !0 }) });
+    return (0, i.jsx)("div", {
+        children: (0, i.jsx)(nM.A, { items: x, isInAppComponentsV2: !0, hideClipMessageNotice: !0 }),
+    });
 }
 var nD = t(210716);
 function nF(e) {

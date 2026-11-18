@@ -36,23 +36,25 @@ function I(e) {
     });
 }
 var A = n(38021),
-    N = n(650684),
-    v = n(265872),
+    v = n(650684),
+    N = n(265872),
     y = n(900797),
     S = n(847374),
     E = n(939249),
     _ = n(789645),
-    P = n(267102),
-    L = n(818349),
-    M = n(419490),
+    M = n(267102),
+    P = n(818349),
+    L = n(419490),
     b = n(204915);
-function O(e) {
+function T(e) {
     let { markAsDismissed: t, onMenuOpenChange: i } = e,
         a = s.useRef(null),
         { theme: r } = (0, A.wR)(),
-        o = (0, P.Us)(),
+        o = (0, M.Us)(),
         u = s.useCallback(async () => {
-            let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
+            let { default: e } = await Promise.all([n.e(144909), n.e(409495), n.e(188941), n.e(827037)]).then(
+                n.bind(n, 707116),
+            );
             return (t) => {
                 let { closePopout: n, position: s, updatePosition: i } = t;
                 return null != a.current
@@ -75,7 +77,7 @@ function O(e) {
             (0, l.jsxs)("div", {
                 className: b.R4,
                 children: [
-                    (0, l.jsx)(N.ClipsAutoIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsx)(v.ClipsAutoIcon, { size: "xs", color: "currentColor" }),
                     (0, l.jsxs)("div", {
                         className: b.Qs,
                         children: [
@@ -84,15 +86,15 @@ function O(e) {
                                 color: "text-default",
                                 children: f.intl.string(C.default.Lym9gZ),
                             }),
-                            (0, l.jsx)(v.Q, {
+                            (0, l.jsx)(N.Q, {
                                 targetElementRef: a,
                                 renderPopout: u,
                                 position: "top",
                                 align: "center",
                                 onRequestOpen: () => i(!0),
                                 onRequestClose: () => {
-                                    let { clipsSettings: e } = M.Ay.getState();
-                                    ("auto" === (0, L.r)(e.clipsEnabled, M.Ay.getEnableAutoclipping()) &&
+                                    let { clipsSettings: e } = L.Ay.getState();
+                                    ("auto" === (0, P.r)(e.clipsEnabled, L.Ay.getEnableAutoclipping()) &&
                                         t(g.i.TAKE_ACTION),
                                         i(!1));
                                 },
@@ -128,14 +130,16 @@ function O(e) {
         ],
     });
 }
-var T = n(176781);
+var O = n(176781);
 function w(e) {
     let { markAsDismissed: t, onMenuOpenChange: i } = e,
         a = s.useRef(null),
         { theme: r } = (0, A.wR)(),
-        o = (0, P.Us)(),
+        o = (0, M.Us)(),
         u = s.useCallback(async () => {
-            let { default: e } = await Promise.all([n.e(409495), n.e(827037)]).then(n.bind(n, 707116));
+            let { default: e } = await Promise.all([n.e(144909), n.e(409495), n.e(188941), n.e(827037)]).then(
+                n.bind(n, 707116),
+            );
             return (t) => {
                 let { closePopout: n, position: s, updatePosition: i } = t;
                 return null != a.current
@@ -158,7 +162,7 @@ function w(e) {
             (0, l.jsxs)("div", {
                 className: b.R4,
                 children: [
-                    (0, l.jsx)(T.ClipsIcon, { size: "xs", color: "currentColor" }),
+                    (0, l.jsx)(O.ClipsIcon, { size: "xs", color: "currentColor" }),
                     (0, l.jsxs)("div", {
                         className: b.Qs,
                         children: [
@@ -167,14 +171,14 @@ function w(e) {
                                 color: "text-default",
                                 children: f.intl.string(C.default["G+P4p/"]),
                             }),
-                            (0, l.jsx)(v.Q, {
+                            (0, l.jsx)(N.Q, {
                                 targetElementRef: a,
                                 renderPopout: u,
                                 position: "top",
                                 align: "center",
                                 onRequestOpen: () => i(!0),
                                 onRequestClose: () => {
-                                    (M.Ay.getState().clipsSettings.clipsEnabled && t(g.i.TAKE_ACTION), i(!1));
+                                    (L.Ay.getState().clipsSettings.clipsEnabled && t(g.i.TAKE_ACTION), i(!1));
                                 },
                                 children: (e, t) => {
                                     let { isShown: n } = t,
@@ -276,17 +280,17 @@ function ee(e) {
                 j,
                 I,
                 A,
-                N,
                 v,
+                N,
                 y,
                 S,
                 E,
                 _,
+                P,
                 L,
-                M,
                 b,
-                O,
                 T,
+                O,
                 w,
                 F,
                 G = s.useId(),
@@ -294,7 +298,7 @@ function ee(e) {
                 z = {
                     received:
                         ((t = "received" === V),
-                        (l = (0, P.Us)()),
+                        (l = (0, M.Us)()),
                         (i = "off" === (0, X.U)().value),
                         (a = $(e)),
                         (r = e.channel_id),
@@ -314,24 +318,24 @@ function ee(e) {
                         g && C),
                     manual_sent:
                         ((n = "manual_sent" === V),
-                        (f = (0, P.Us)()),
+                        (f = (0, M.Us)()),
                         (j = "auto" === (0, X.U)().value),
                         (I = (0, c._C)("manual_sent") === e.id),
                         (A = (0, c._C)("manual_sent_instance")),
-                        (N = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
-                        (v = I && (null == A || A === G) && e.author.id === N && (!j || n) && !R.Fr && f === B.BRT.APP),
+                        (v = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (N = I && (null == A || A === G) && e.author.id === v && (!j || n) && !R.Fr && f === B.BRT.APP),
                         (y = (0, D.H)("useManualClipSentNudge")),
-                        v && y),
+                        N && y),
                     chat_upsell:
-                        ((S = (0, P.Us)()),
+                        ((S = (0, M.Us)()),
                         (E = $(e)),
                         (_ = (0, c._C)("chat_upsell")),
-                        (L = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
-                        (M = (0, H.Vl)()),
-                        (b = e.author.id !== L && !M && !R.Fr && S === B.BRT.APP && K(e)),
-                        (O = e.channel_id),
-                        (T = e.id),
-                        (w = (0, U.bG)([W.A], () => b && null == _ && Z(W.A.getMessages(O), L) === T, [b, _, O, T, L])),
+                        (P = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (L = (0, H.Vl)()),
+                        (b = e.author.id !== P && !L && !R.Fr && S === B.BRT.APP && K(e)),
+                        (T = e.channel_id),
+                        (O = e.id),
+                        (w = (0, U.bG)([W.A], () => b && null == _ && Z(W.A.getMessages(T), P) === O, [b, _, T, O, P])),
                         (F = b && (w || _ === G) && E),
                         (0, D.H)("useClipsChatUpsell", F)),
                 },
@@ -390,7 +394,7 @@ function ee(e) {
         case "received":
             return (0, l.jsx)(w, { markAsDismissed: i, onMenuOpenChange: a });
         case "manual_sent":
-            return (0, l.jsx)(O, { markAsDismissed: i, onMenuOpenChange: a });
+            return (0, l.jsx)(T, { markAsDismissed: i, onMenuOpenChange: a });
         case "chat_upsell":
             return (0, l.jsx)(I, { markAsDismissed: i });
         case null:
@@ -518,25 +522,25 @@ function em(e) {
 }
 let eh = function (e) {
     var t;
-    let { items: n, isInAppComponentsV2: i = !1 } = e,
-        { visualMediaItems: r, nonVisualMediaItems: u } =
+    let { items: n, isInAppComponentsV2: i = !1, hideClipMessageNotice: r = !1 } = e,
+        { visualMediaItems: u, nonVisualMediaItems: d } =
             ((t = n),
             s.useMemo(() => {
                 let [e, n] = o().partition(t, (e) => (0, en.Xg)(e.item.type));
                 return { visualMediaItems: e, nonVisualMediaItems: n };
             }, [t])),
-        d = n[0]?.message;
+        c = n[0]?.message;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            r.length > 0 &&
-                (0, l.jsx)("div", {
-                    className: a()(ei.XU, { [ei.dM]: i, [ei.eO]: 1 === r.length && "CLIP" === r[0].item.type }),
-                    children: (0, l.jsx)(ea, { visualMediaItems: r, maxWidth: i ? 600 : 550 }),
-                }),
             u.length > 0 &&
                 (0, l.jsx)("div", {
+                    className: a()(ei.XU, { [ei.dM]: i, [ei.eO]: 1 === u.length && "CLIP" === u[0].item.type }),
+                    children: (0, l.jsx)(ea, { visualMediaItems: u, maxWidth: i ? 600 : 550 }),
+                }),
+            d.length > 0 &&
+                (0, l.jsx)("div", {
                     className: ei.s,
-                    children: u.map((e) =>
+                    children: d.map((e) =>
                         (0, l.jsx)(
                             "div",
                             { className: ei.Br, children: (0, l.jsx)(em, { props: e }) },
@@ -544,7 +548,7 @@ let eh = function (e) {
                         ),
                     ),
                 }),
-            !i && null != d && K(d) ? (0, l.jsx)(ee, { message: d }) : null,
+            !r && null != c && K(c) ? (0, l.jsx)(ee, { message: c }) : null,
         ],
     });
 };
