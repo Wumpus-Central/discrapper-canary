@@ -358,8 +358,12 @@ function em(e) {
                 x,
                 C,
                 S,
-                p = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
-                { gameShops: _, hasGameShops: A } =
+                p,
+                _,
+                A,
+                v,
+                I = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
+                { gameShops: b, hasGameShops: L } =
                     ((t = (0, N.uM)()),
                     (n = (0, o.yK)(
                         [el.A],
@@ -430,14 +434,14 @@ function em(e) {
                         ),
                         hasGameShops: n.length > 0,
                     }),
-                v = null != (0, Q.HH)(),
-                I =
+                O = null != (0, Q.HH)(),
+                y =
                     ((i = (0, q.A)(k.FYj)),
                     (r = (0, Z.XF)(i)),
                     (c = r?.shared.navigation?.tab),
                     (u = c?.title),
                     (d = r?.collectionId),
-                    (f =
+                    (p =
                         (null == u || null == d || i?.rewardStatus === $.GM.CONSUMED
                             ? null
                             : { title: u, icon: c?.icon, collectionId: d }) ??
@@ -445,13 +449,18 @@ function em(e) {
                         (g = m?.navigation?.tab),
                         (E = g?.title),
                         (h = m?.collectionId),
-                        null == E || null == h ? null : { title: E, icon: g?.icon, collectionId: h })),
-                    (x = f?.title),
-                    (C = f?.icon),
-                    (S = f?.collectionId),
+                        null == E || null == h ? null : { title: E, icon: g?.icon, collectionId: h }) ??
+                        ((f = (0, Z.d3)(i)),
+                        (x = f?.navigation?.tab),
+                        (C = x?.title),
+                        (S = f?.collectionId),
+                        null == C || null == S ? null : { title: C, icon: x?.icon, collectionId: S })),
+                    (_ = p?.title),
+                    (A = p?.icon),
+                    (v = p?.collectionId),
                     s.useMemo(
-                        () => (null == x || null == S ? null : { title: x, icon: C, collectionId: S }),
-                        [x, C, S],
+                        () => (null == _ || null == v ? null : { title: _, icon: A, collectionId: v }),
+                        [_, A, v],
                     ));
             return s.useMemo(() => {
                 let t = (function (e) {
@@ -460,7 +469,7 @@ function em(e) {
                             let { tab: n } = e;
                             return n !== T.G2.OFFER_ELIGIBLE || !!t;
                         });
-                    })({ hasActivePromotion: v }).map((t) => {
+                    })({ hasActivePromotion: O }).map((t) => {
                         let { tab: n, labelKey: l } = t,
                             s = n === T.G2.OFFER_ELIGIBLE ? K.TagIcon : void 0;
                         return {
@@ -497,15 +506,15 @@ function em(e) {
                         },
                     ];
                 if (
-                    (A &&
+                    (L &&
                         n.push({
                             type: "menu",
                             key: T.G2.GAME_SHOPS,
                             text: G.intl.string(G.t.FkjcWY),
                             expandLabel: G.intl.string(G.t.bf9uMH),
-                            options: _,
+                            options: b,
                         }),
-                    p &&
+                    I &&
                         n.push({
                             type: "page",
                             key: T.G2.GAME_SERVERS,
@@ -514,21 +523,21 @@ function em(e) {
                             onClick: () => e(T.G2.GAME_SERVERS),
                             badge: "beta",
                         }),
-                    null != I)
+                    null != y)
                 ) {
-                    let e = k.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(I.collectionId),
-                        t = (0, ei.s)(I.icon);
+                    let e = k.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(y.collectionId),
+                        t = (0, ei.s)(y.icon);
                     n.push({
                         type: "page",
                         key: T.G2.PROMOTION,
-                        text: I.title,
+                        text: y.title,
                         route: e,
                         icon: t ?? void 0,
                         onClick: () => (0, W.pX)(e),
                     });
                 }
                 return n;
-            }, [e, v, I, p, A, _]);
+            }, [e, O, y, I, L, b]);
         })(
             s.useCallback(
                 (e) => {
