@@ -155,20 +155,21 @@ t.d(
                 n = (0, s.ZK)(r ? t : null);
             return l.useMemo(() => {
                 if (null == n || null == e) return null;
-                let { effects: r, stillFrames: t } = n,
-                    l = null != t && Object.keys(t).length > 0;
-                if (0 === r.length && !l) return null;
+                let { stillFrames: r } = n,
+                    t = n.effects ?? [],
+                    l = null != r && Object.keys(r).length > 0;
+                if (0 === t.length && !l) return null;
                 let a = (0, o.cloneDeep)(e);
                 return (
                     (a.title = n.name),
-                    (a.effects = r.map((e) => {
+                    (a.effects = t.map((e) => {
                         let { base64: r, ...t } = e;
                         return t;
                     })),
                     l &&
-                        ((a.reducedMotionSrc = t[i.qH.REDUCED_MOTION]?.src ?? ""),
-                        (a.staticFrameSrc = t[i.qH.STATIC]?.src ?? ""),
-                        (a.thumbnailPreviewSrc = t[i.qH.THUMBNAIL]?.src ?? "")),
+                        ((a.reducedMotionSrc = r[i.qH.REDUCED_MOTION]?.src ?? ""),
+                        (a.staticFrameSrc = r[i.qH.STATIC]?.src ?? ""),
+                        (a.thumbnailPreviewSrc = r[i.qH.THUMBNAIL]?.src ?? "")),
                     a
                 );
             }, [n, e]);
