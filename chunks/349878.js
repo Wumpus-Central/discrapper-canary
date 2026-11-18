@@ -248,13 +248,13 @@ function $(e) {
     );
 }
 let J = [
+    { id: "chat_upsell", content: u.M.AUTOCLIPPING_EARLY_ACCESS_FREE_USER_CHAT_UPSELL, claim: "chat_upsell" },
     { id: "received", content: u.M.AUTOCLIPPING_EARLY_ACCESS_RECEIVED_CLIP_NOTICE, claim: "received" },
     {
         id: "manual_sent",
         content: u.M.AUTOCLIPPING_EARLY_ACCESS_SENT_MANUAL_CLIP_NOTICE,
         claim: "manual_sent_instance",
     },
-    { id: "chat_upsell", content: u.M.AUTOCLIPPING_EARLY_ACCESS_FREE_USER_CHAT_UPSELL, claim: "chat_upsell" },
 ];
 function ee(e) {
     let { message: t } = e,
@@ -293,99 +293,103 @@ function ee(e) {
                 O,
                 w,
                 F,
-                G = s.useId(),
-                [V, q] = s.useState(null),
-                z = {
+                G,
+                V = s.useId(),
+                [q, z] = s.useState(null),
+                Y = {
                     received:
-                        ((t = "received" === V),
+                        ((t = "received" === q),
                         (l = (0, M.Us)()),
-                        (i = "off" === (0, X.U)().value),
-                        (a = $(e)),
-                        (r = e.channel_id),
-                        (o = e.id),
-                        (u = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
-                        (m = e.author.id !== u && K(e) && (i || t) && !R.Fr && l === B.BRT.APP),
-                        (x = null == (h = (0, c._C)("received")) ? "none" : h === G ? "self" : "other"),
-                        (p = (0, U.bG)([W.A], () => m && "none" === x && Z(W.A.getMessages(r), u) === o, [
-                            m,
-                            x,
-                            r,
+                        (i = (0, H.Vl)()),
+                        (a = "off" === (0, X.U)().value),
+                        (r = $(e)),
+                        (o = e.channel_id),
+                        (u = e.id),
+                        (m = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (h = i && e.author.id !== m && K(e) && (a || t) && !R.Fr && l === B.BRT.APP),
+                        (p = null == (x = (0, c._C)("received")) ? "none" : x === V ? "self" : "other"),
+                        (g = (0, U.bG)([W.A], () => h && "none" === p && Z(W.A.getMessages(o), m) === u, [
+                            h,
+                            p,
                             o,
                             u,
+                            m,
                         ])),
-                        (g = m && (p || "self" === x) && a),
-                        (C = (0, D.H)("useReceivedClipNudge")),
-                        g && C),
+                        (C = h && (g || "self" === p) && r),
+                        (f = (0, D.H)("useReceivedClipNudge", i)),
+                        C && f),
                     manual_sent:
-                        ((n = "manual_sent" === V),
-                        (f = (0, M.Us)()),
-                        (j = "auto" === (0, X.U)().value),
-                        (I = (0, c._C)("manual_sent") === e.id),
-                        (A = (0, c._C)("manual_sent_instance")),
-                        (v = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
-                        (N = I && (null == A || A === G) && e.author.id === v && (!j || n) && !R.Fr && f === B.BRT.APP),
-                        (y = (0, D.H)("useManualClipSentNudge")),
-                        N && y),
+                        ((n = "manual_sent" === q),
+                        (j = (0, M.Us)()),
+                        (I = "auto" === (0, X.U)().value),
+                        (A = (0, c._C)("manual_sent") === e.id),
+                        (v = (0, c._C)("manual_sent_instance")),
+                        (N = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (y = A && (null == v || v === V) && e.author.id === N && (!I || n) && !R.Fr && j === B.BRT.APP),
+                        (S = (0, D.H)("useManualClipSentNudge")),
+                        y && S),
                     chat_upsell:
-                        ((S = (0, M.Us)()),
-                        (E = $(e)),
-                        (_ = (0, c._C)("chat_upsell")),
-                        (P = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
-                        (L = (0, H.Vl)()),
-                        (b = e.author.id !== P && !L && !R.Fr && S === B.BRT.APP && K(e)),
-                        (T = e.channel_id),
-                        (O = e.id),
-                        (w = (0, U.bG)([W.A], () => b && null == _ && Z(W.A.getMessages(T), P) === O, [b, _, T, O, P])),
-                        (F = b && (w || _ === G) && E),
-                        (0, D.H)("useClipsChatUpsell", F)),
+                        ((E = (0, M.Us)()),
+                        (_ = $(e)),
+                        (P = (0, c._C)("chat_upsell")),
+                        (L = (0, U.bG)([k.default], () => k.default.getCurrentUser()?.id)),
+                        (b = (0, H.Vl)()),
+                        (T = e.author.id !== L && !b && !R.Fr && E === B.BRT.APP && K(e)),
+                        (O = e.channel_id),
+                        (w = e.id),
+                        (F = (0, U.bG)([W.A], () => T && null == P && Z(W.A.getMessages(O), L) === w, [T, P, O, w, L])),
+                        (G = T && (F || P === V) && _),
+                        (0, D.H)("useClipsChatUpsell", G)),
                 },
-                Y = (0, c.wc)(e.id),
-                Q = J.filter((e) => {
+                Q = (0, c.wc)(e.id),
+                ee = J.filter((e) => {
                     let { id: t } = e;
-                    return z[t] && (null == Y || Y === t);
+                    return Y[t] && (null == Q || Q === t);
                 }),
-                ee = (0, c.Jk)(),
-                et = Q.map((e) => {
-                    let { claim: t } = e;
-                    return t;
-                }).join(" ");
+                et = (0, c.Jk)(),
+                en = ee
+                    .map((e) => {
+                        let { claim: t } = e;
+                        return t;
+                    })
+                    .join(" ");
             (s.useLayoutEffect(() => {
-                let e = et.split(" ");
-                for (let { claim: t } of J) e.includes(t) ? (0, c.K)(t, G) : (0, c.Rx)(t, G);
-            }, [et, ee, G]),
+                let e = en.split(" ");
+                for (let { claim: t } of J) e.includes(t) ? (0, c.K)(t, V) : (0, c.Rx)(t, V);
+            }, [en, et, V]),
                 s.useLayoutEffect(
                     () => () =>
                         J.forEach((e) => {
                             let { claim: t } = e;
-                            return (0, c.Rx)(t, G);
+                            return (0, c.Rx)(t, V);
                         }),
-                    [G],
+                    [V],
                 ));
-            let en = Q.filter((e) => {
+            let el = ee.filter((e) => {
                     let { claim: t } = e;
-                    return ee[t] === G;
+                    return et[t] === V;
                 }),
-                [el, es] = (0, d.kn)(
-                    en.map((e) => {
+                [es, ei] = (0, d.kn)(
+                    el.map((e) => {
                         let { content: t } = e;
                         return t;
                     }),
                 ),
-                ei =
+                ea =
                     J.find((e) => {
                         let { content: t } = e;
-                        return t === el;
+                        return t === es;
                     })?.id ?? null,
-                ea = e.id;
+                er = e.id;
             return (
                 s.useEffect(() => {
-                    null != ei && (0, c.Mi)(ea, ei);
-                }, [ea, ei]),
+                    null != ea && (0, c.Mi)(er, ea);
+                }, [er, ea]),
                 {
-                    notice: ei,
-                    markAsDismissed: es,
+                    notice: ea,
+                    markAsDismissed: ei,
                     onMenuOpenChange: function (e) {
-                        q(e ? ei : null);
+                        z(e ? ea : null);
                     },
                 }
             );

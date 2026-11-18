@@ -1,16 +1,16 @@
 var l = i(477900);
 i(582128);
-var s = i(855986),
-    n = i(165862),
+var n = i(855986),
+    s = i(165862),
     r = i(477782),
     a = i(442433),
-    c = i(780964),
-    o = i(766075),
-    p = i(650338),
-    u = i(419490),
-    d = i(489496),
-    g = i(226640),
-    h = i(753070),
+    o = i(780964),
+    c = i(766075),
+    p = i(419490),
+    u = i(489496),
+    d = i(226640),
+    g = i(753070),
+    h = i(683825),
     b = i(792996);
 i.d(
     e,
@@ -18,12 +18,12 @@ i.d(
     {
         default: function (t) {
             let { onSelect: e } = t,
-                i = (0, s.bG)([u.Ay], () => u.Ay.getSettings().clipsQuality),
-                x = (0, s.bG)([u.Ay], () => u.Ay.getSettings().clipsLength),
-                m = (0, g.Qu)(),
-                S = (0, g.gF)(),
-                f = (0, g.Fz)();
-            return (0, l.jsxs)(n.W, {
+                i = (0, n.bG)([p.Ay], () => p.Ay.getSettings().clipsQuality),
+                x = (0, n.bG)([p.Ay], () => p.Ay.getSettings().clipsLength),
+                f = (0, d.Qu)(),
+                m = (0, d.gF)(),
+                S = (0, d.Fz)();
+            return (0, l.jsxs)(s.W, {
                 "data-menu-migrated": !0,
                 navId: "clips-context",
                 "aria-label": b.intl.string(b.t.J1hsY2),
@@ -34,16 +34,16 @@ i.d(
                         id: "clips-length",
                         label: b.intl.string(b.t.OgfUio),
                         subtext: b.intl.formatToPlainString(b.t["bTFv/3"], { count: x / 1e3 }),
-                        children: m.map((t) => {
-                            let { id: e, value: i, label: s } = t;
+                        children: f.map((t) => {
+                            let { id: e, value: i, label: n } = t;
                             return (0, l.jsx)(
                                 r.iD,
                                 {
                                     id: e,
                                     group: "clips-length-options",
-                                    label: s,
+                                    label: n,
                                     checked: i === x,
-                                    action: () => (0, d.h$)(i),
+                                    action: () => (0, u.h$)(i),
                                 },
                                 e,
                             );
@@ -51,20 +51,20 @@ i.d(
                     }),
                     (0, l.jsx)(r.Dr, {
                         id: "clips-resolution",
-                        subtext: (0, h.zr)(i.resolution),
+                        subtext: (0, g.zr)(i.resolution),
                         label: b.intl.string(b.t.aFudZJ),
-                        children: S.map((t) => {
-                            let { id: e, value: s, label: n } = t;
+                        children: m.map((t) => {
+                            let { id: e, value: n, label: s } = t;
                             return (0, l.jsx)(
                                 r.iD,
                                 {
                                     id: e,
                                     group: "clips-resolution-options",
-                                    label: n,
-                                    checked: s === i.resolution,
+                                    label: s,
+                                    checked: n === i.resolution,
                                     action: () => {
-                                        let { clipsQuality: t } = u.Ay.getSettings();
-                                        (0, d.GS)({ ...t, resolution: s });
+                                        let { clipsQuality: t } = p.Ay.getSettings();
+                                        (0, u.GS)({ ...t, resolution: n });
                                     },
                                 },
                                 e,
@@ -73,20 +73,20 @@ i.d(
                     }),
                     (0, l.jsx)(r.Dr, {
                         id: "clips-framerate",
-                        subtext: (0, p.Bs)(i.frameRate),
+                        subtext: b.intl.formatToPlainString(h.default.eztvbI, { fps: i.frameRate }),
                         label: b.intl.string(b.t["2wScL1"]),
-                        children: f.map((t) => {
-                            let { id: e, value: s, label: n } = t;
+                        children: S.map((t) => {
+                            let { id: e, value: n, label: s } = t;
                             return (0, l.jsx)(
                                 r.iD,
                                 {
                                     id: e,
                                     group: "clips-framerate-options",
-                                    label: n,
-                                    checked: s === i.frameRate,
+                                    label: s,
+                                    checked: n === i.frameRate,
                                     action: () => {
-                                        let { clipsQuality: t } = u.Ay.getSettings();
-                                        (0, d.GS)({ ...t, frameRate: s });
+                                        let { clipsQuality: t } = p.Ay.getSettings();
+                                        (0, u.GS)({ ...t, frameRate: n });
                                     },
                                 },
                                 e,
@@ -97,7 +97,7 @@ i.d(
                         children: (0, l.jsx)(r.Dr, {
                             id: "clips-settings",
                             label: b.intl.string(b.t.J1hsY2),
-                            action: () => (0, o.openUserSettings)(c.X.CLIPS_PANEL),
+                            action: () => (0, c.openUserSettings)(o.X.CLIPS_PANEL),
                         }),
                     }),
                 ],

@@ -1,4 +1,4 @@
-e.d(n, { default: () => W });
+e.d(n, { default: () => q });
 var i = e(477900),
     l = e(582128),
     a = e(224640),
@@ -14,8 +14,8 @@ var i = e(477900),
     f = e(176781),
     h = e(650684),
     v = e(123292),
-    p = e(687966),
-    j = e(821609),
+    j = e(687966),
+    p = e(821609),
     b = e(87719),
     y = e(780964),
     C = e(766075),
@@ -51,11 +51,11 @@ function z(t) {
             (0, i.jsxs)("div", {
                 className: c()(D.Qs, { [D.SI]: g }),
                 children: [
-                    (0, i.jsx)(q, { variant: n }),
+                    (0, i.jsx)(P, { variant: n }),
                     g
-                        ? (0, i.jsx)(P, { mode: r, saving: d, saveError: x, onChange: o, onSettings: h })
-                        : (0, i.jsx)(Q, {}),
-                    (0, i.jsx)(R, {
+                        ? (0, i.jsx)(Q, { mode: r, saving: d, saveError: x, onChange: o, onSettings: h })
+                        : (0, i.jsx)(R, {}),
+                    (0, i.jsx)(W, {
                         variant: n,
                         saving: d,
                         onConfirm: async function () {
@@ -93,7 +93,7 @@ function O() {
         children: (0, i.jsx)("img", { className: D.d3, src: M.A, alt: "", loading: "lazy", decoding: "async" }),
     });
 }
-function q(t) {
+function P(t) {
     let { variant: n } = t,
         e = "mode_picker" === n ? G.default.BtyRCT : "expressive_non_nitro" === n ? G.default.kWigdu : G.default.M8rOjI;
     return (0, i.jsxs)("div", {
@@ -104,19 +104,14 @@ function q(t) {
         ],
     });
 }
-function P(t) {
+function Q(t) {
     let { mode: n, saving: e, saveError: a, onChange: s, onSettings: r } = t,
         o = (0, u.bG)([N.Ay], () =>
             (0, A.dI)(N.Ay.getKeybindForAction(V.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, A.OH)("alt+c"), !0),
         ),
         d = l.useMemo(
             () => [
-                {
-                    value: "off",
-                    title: L.intl.string(G.default["uO/2T5"]),
-                    description: L.intl.string(G.default["l/u5Cq"]),
-                    icon: g.DenyIcon,
-                },
+                { value: "off", title: L.intl.string(G.default["uO/2T5"]), icon: g.DenyIcon },
                 {
                     value: "manual",
                     title: L.intl.string(G.default["2Uh8Zr"]),
@@ -193,7 +188,7 @@ function P(t) {
         ],
     });
 }
-function Q() {
+function R() {
     return (0, i.jsxs)("div", {
         className: D.kR,
         children: [
@@ -212,7 +207,7 @@ function Q() {
             (0, i.jsxs)("div", {
                 className: D.Nr,
                 children: [
-                    (0, i.jsx)(p.GameControllerIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    (0, i.jsx)(j.GameControllerIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
                     (0, i.jsx)(m.E, { variant: "body-md/medium", children: L.intl.string(G.default.L0RzNn) }),
                     (0, i.jsx)(m.E, {
                         variant: "body-sm/normal",
@@ -224,7 +219,7 @@ function Q() {
         ],
     });
 }
-function R(t) {
+function W(t) {
     let { variant: n, saving: e, onConfirm: l, onCheckItOut: a, onSettings: s } = t,
         r = "mode_picker" === n,
         o = "expressive_non_nitro" === n;
@@ -244,7 +239,7 @@ function R(t) {
             (0, i.jsxs)("div", {
                 className: D.o1,
                 children: [
-                    (0, i.jsx)(j.$, {
+                    (0, i.jsx)(p.$, {
                         fullWidth: !0,
                         variant: o ? "expressive" : "primary",
                         text: L.intl.string(r ? G.default.liWTC0 : o ? G.default.cXDBee : G.default.n9r54F),
@@ -263,7 +258,7 @@ function R(t) {
         ],
     });
 }
-function W(t) {
+function q(t) {
     let { variant: n, source: e, preselectedMode: l, ...d } = t;
     return (0, i.jsx)(a.d, {
         ...d,

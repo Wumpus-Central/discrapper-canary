@@ -17486,12 +17486,7 @@ let xy = (0, h.E2)(S.X.CLIPS_CAPTURE_MODE, {
                         (0, lf.dI)(lu.Ay.getKeybindForAction(_.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, lf.OH)("alt+c"), !0),
                     )),
                     [
-                        {
-                            value: "off",
-                            title: V.intl.string(p6.default["uO/2T5"]),
-                            description: V.intl.string(p6.default["l/u5Cq"]),
-                            icon: xI.DenyIcon,
-                        },
+                        { value: "off", title: V.intl.string(p6.default["uO/2T5"]), icon: xI.DenyIcon },
                         {
                             value: "manual",
                             title: V.intl.string(p6.default["2Uh8Zr"]),
