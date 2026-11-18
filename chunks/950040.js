@@ -192,6 +192,8 @@ let K = {
     relativeReceptionDelay: "Relative Reception Delay",
     renderDelay: "Render Delay",
     resolution: "Resolution",
+    retransmittedBytesSent: "Retransmitted Bytes Sent",
+    retransmittedPacketsSent: "Retransmitted Packets Sent",
     routingFailures: "Routing Failures",
     sampleRateMismatchPercent: "Sample Rate Mismatch",
     screenCaptureKitFrames: "ScreenCaptureKit frames",
@@ -357,6 +359,7 @@ let er = {
             let { width: t, height: r } = e;
             return `${t}x${r}`;
         },
+        retransmittedBytesSent: Q,
         sampleRateMismatchPercent: X,
         screenshareCapturedFps: et,
         screenshareCapturedFpsUnique: et,

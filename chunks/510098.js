@@ -833,7 +833,14 @@ class e_ extends S.A {
                     packetsSent: e.packetsSent,
                     bitrateTarget: e.targetBitrate,
                 };
-                if ("audio" === e.kind) u.push({ ...i, type: "audio" });
+                if ("audio" === e.kind)
+                    u.push({
+                        ...i,
+                        type: "audio",
+                        retransmittedPacketsSent: e.retransmittedPacketsSent,
+                        retransmittedBytesSent: e.retransmittedBytesSent,
+                        nackCount: e.nackCount,
+                    });
                 else if ("video" === e.kind && r) {
                     var _;
                     let t = null !== e.frameWidth ? { width: e.frameWidth, height: e.frameHeight } : void 0;
