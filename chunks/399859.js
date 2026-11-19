@@ -750,7 +750,7 @@ function eH(e) {
                 variant: "critical-primary",
                 onClick: async function () {
                     let e = await r.submit();
-                    null != e && ((0, e_.P0)({ text: e, variant: "success" }), i());
+                    null != e && ((0, e_.P0)({ text: e, variant: "success" }), (0, ew.s7)());
                 },
                 loading: d,
                 disabled: d,
@@ -874,7 +874,7 @@ function eV(e) {
                 variant: "primary",
                 onClick: async function () {
                     let e = await s.submit();
-                    null != e && ((0, e_.P0)({ text: e, variant: "success" }), r());
+                    null != e && ((0, e_.P0)({ text: e, variant: "success" }), (0, ew.s7)());
                 },
                 loading: g,
                 disabled: null == f || g,
@@ -988,8 +988,8 @@ var eW = t(862026),
     e1 = t(641655),
     e3 = t(246338),
     e2 = t(277085),
-    e5 = t(453430);
-let e7 = {
+    e7 = t(453430);
+let e5 = {
     project: b.default.W0eQfN,
     app: b.default.lFaJYF,
     secrets: b.default.vDpCPU,
@@ -1655,7 +1655,7 @@ function e9(e) {
                                           onItemSelect: (e) => O(e),
                                           "aria-label": j.intl.string(b.default["2dtUiI"]),
                                           children: t.map((e) =>
-                                              (0, n.jsx)(d.V.Item, { id: e, children: j.intl.string(e7[e]) }, e),
+                                              (0, n.jsx)(d.V.Item, { id: e, children: j.intl.string(e5[e]) }, e),
                                           ),
                                       }),
                             children: [
@@ -1664,7 +1664,7 @@ function e9(e) {
                                     ? null
                                     : (0, n.jsxs)(c.B, {
                                           gap: 24,
-                                          className: e5.f,
+                                          className: e7.f,
                                           children: [M.fields, (0, n.jsx)(K, { projectId: l, canEdit: F }, l)],
                                       }),
                                 i || "linked" !== a
@@ -1688,7 +1688,7 @@ function e9(e) {
                                             color: "text-muted",
                                             children: j.intl.string(b.default.lJJayk),
                                         })
-                                      : (0, n.jsx)("div", { className: e5.L, children: (0, n.jsx)(p.y, {}) }),
+                                      : (0, n.jsx)("div", { className: e7.L, children: (0, n.jsx)(p.y, {}) }),
                             ],
                         }),
                         (0, n.jsx)(g.H, {
