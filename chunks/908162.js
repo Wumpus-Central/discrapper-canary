@@ -46,7 +46,7 @@ class m extends s.A {
     handleMessageLengthUpsell(e) {
         let { channel: t, content: a } = e;
         (0, r.mM)(async () => {
-            let { default: e } = await Promise.all([n.e(235257), n.e(276725)]).then(n.bind(n, 798612));
+            let { default: e } = await Promise.all([n.e(647177), n.e(235257), n.e(276725)]).then(n.bind(n, 798612));
             return (n) => (0, i.jsx)(e, { channel: t, content: a, ...n });
         });
     }

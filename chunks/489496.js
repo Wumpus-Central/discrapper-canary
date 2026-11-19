@@ -1,35 +1,35 @@
 (n.d(t, {
-    ef: () => eN,
-    TE: () => ef,
-    Su: () => eh,
-    Ts: () => ew,
-    l0: () => ex,
-    oH: () => eD,
-    $N: () => eG,
-    VO: () => eb,
-    t9: () => eC,
-    EM: () => eL,
-    _o: () => em,
-    Fb: () => eT,
-    K7: () => eS,
-    YK: () => eI,
-    yd: () => eu,
-    yT: () => e_,
-    h5: () => eR,
-    mN: () => eP,
-    jE: () => eM,
-    H1: () => ev,
-    XK: () => eA,
-    eQ: () => en,
-    Yy: () => eE,
-    yO: () => ei,
-    h$: () => ed,
-    GS: () => eo,
-    HU: () => el,
-    YP: () => er,
-    uL: () => eU,
-    Mt: () => ea,
-    Uh: () => es,
+    ef: () => eO,
+    TE: () => eI,
+    Su: () => ep,
+    Ts: () => ek,
+    l0: () => eB,
+    oH: () => ev,
+    $N: () => eF,
+    VO: () => eM,
+    t9: () => eR,
+    EM: () => eD,
+    _o: () => eT,
+    Fb: () => eN,
+    K7: () => eC,
+    YK: () => em,
+    yd: () => eE,
+    yT: () => eA,
+    h5: () => ey,
+    mN: () => ew,
+    jE: () => eG,
+    H1: () => eU,
+    XK: () => eh,
+    eQ: () => ei,
+    Yy: () => ef,
+    yO: () => er,
+    h$: () => eu,
+    GS: () => ec,
+    HU: () => ed,
+    YP: () => ea,
+    uL: () => ex,
+    Mt: () => es,
+    Uh: () => el,
 }),
     n(321073));
 var i = n(517846),
@@ -325,10 +325,11 @@ async function j(e) {
     }
 }
 var W = n(395378),
-    Y = n(31048),
-    K = n(997649),
-    $ = n(649223);
-function X(e, t, n) {
+    Y = n(538724),
+    K = n(31048),
+    $ = n(997649),
+    X = n(649223);
+function z(e, t, n) {
     return e
         .map((e) => ({
             track: e,
@@ -341,49 +342,54 @@ function X(e, t, n) {
         });
 }
 (n(323874), n(14289), n(35956), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-var z = n(284009),
-    q = n.n(z),
-    Q = n(956050),
-    J = n(160330),
-    Z = n(160759),
-    ee = n(253116),
-    et = n(652215);
-async function en(e) {
+var q = n(284009),
+    Q = n.n(q),
+    J = n(956050),
+    Z = n(160330),
+    ee = n(160759),
+    et = n(253116),
+    en = n(652215);
+async function ei(e) {
     let { allowVoiceRecording: t } = e;
     (await o.Q$.updateSetting(t),
-        T.default.track(et.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), allow_voice_recording: t }),
+        T.default.track(en.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), allow_voice_recording: t }),
         a.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" }));
 }
-async function ei(e) {
+async function er(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: r = !1, analyticsLocation: s } = e,
         l = R.Ay.getState().clipsSettings.clipsEnabled;
     (await a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsEnabled: t } }),
-        r && T.default.track(et.HAw.CLIPS_SETTINGS_UPDATED, { location: s, ...C.lc(), clips_enabled: t, guild_id: n }),
+        r && T.default.track(en.HAw.CLIPS_SETTINGS_UPDATED, { location: s, ...C.lc(), clips_enabled: t, guild_id: n }),
         l && !t && E.Ay.fireSurveyAction(i.w.CLIPS_OPT_OUT));
 }
-function er(e) {
+function ea(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { debugTooltipsEnabled: e } });
 }
-function ea(e) {
-    (a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { remindersEnabled: e } }),
-        T.default.track(et.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), reminders_enabled: e }));
-}
 function es(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { showPovClipsInGallery: e } });
+    (a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { remindersEnabled: e } }),
+        T.default.track(en.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), reminders_enabled: e }));
 }
 function el(e) {
-    (a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
-        eT(e).catch((e) => {
-            y.GU.error("Failed to load clips directory after storage location change", e);
-        }));
+    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { showPovClipsInGallery: e } });
 }
-function eo(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsQuality: e } });
+async function eo(e, t) {
+    try {
+        await eN(e);
+    } catch (e) {
+        y.GU.error(t, e);
+    }
 }
 function ed(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsLength: e } });
+    (a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
+        eo(e, "Failed to load clips directory after storage location change"));
 }
 function ec(e) {
+    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsQuality: e } });
+}
+function eu(e) {
+    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsLength: e } });
+}
+function e_(e) {
     return "string" == typeof e
         ? { errorMessage: e }
         : null != e && "object" == typeof e
@@ -398,11 +404,11 @@ function ec(e) {
             }
           : {};
 }
-async function eu(e) {
+async function eE(e) {
     let { clipMethod: t, request: n, timeline: i, decision: E, isCandidate: S, session: N, decisionSignals: O } = e;
     if (R.Ay.getIsAtMaxSaveClipOperations())
         return void a.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: y.RC.MAX_CONCURRENT_SAVES });
-    if (!(0, Z.t_)()) {
+    if (!(0, ee.t_)()) {
         (y.GU.warn("Save clip ignored: discord_clips module not loaded yet"),
             a.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: y.RC.MODULE_NOT_LOADED }));
         return;
@@ -434,7 +440,7 @@ async function eu(e) {
     a.h.dispatch({ type: "CLIPS_SAVE_CLIP_START", clipType: V, clipMethod: t, signal: E?.signal });
     let H = "manual" === t ? (0, A.Ak)("clip_save", 0.5) : null,
         j = performance.now(),
-        $ = setTimeout(() => {
+        Y = setTimeout(() => {
             (y.GU.warn(`Clip save still pending after ${y.ut}ms \u{2014} native callback may have stalled`),
                 a.h.dispatch({ type: "CLIPS_SAVE_CLIP_TIMEOUT", clipMethod: t, elapsedMs: y.ut }));
         }, y.ut);
@@ -454,9 +460,9 @@ async function eu(e) {
                 u = R.Ay.getSettings(),
                 E = b(i),
                 A = E ? v(u.storageLocation) : u.storageLocation,
-                p = (0, J.A)(i, y.nQ.CLIP, a, l, d),
+                p = (0, Z.A)(i, y.nQ.CLIP, a, l, d),
                 g = null != p.syncTimestamp ? p.syncTimestamp - p.createdAt : void 0,
-                S = (0, Y.p)(g);
+                S = (0, K.p)(g);
             p.isCandidate = o ?? !1;
             let N = `${(0, U.A)(p.applicationName.substring(0, 20))}_${p.id}.mp4`,
                 O = s.A.fileManager.join(A, N),
@@ -507,7 +513,7 @@ async function eu(e) {
                                 return (0, W.lq)((0, W.Tv)(e, s, o), s, l).map((e) => e.value);
                             }
                             let u = (0, W.Q4)(a, n.gameEventData),
-                                _ = (0, K.p)(n.gameEventData, s, o);
+                                _ = (0, $.p)(n.gameEventData, s, o);
                             return {
                                 game_events_supported: (0, W.GC)(a),
                                 created_at_ms: e.createdAt,
@@ -535,7 +541,7 @@ async function eu(e) {
                     else {
                         let e = "";
                         try {
-                            e = await (0, Q.m)(s.A.clips.getClipProtocolURLFromPath(O), 0);
+                            e = await (0, J.m)(s.A.clips.getClipProtocolURLFromPath(O), 0);
                         } catch (e) {
                             y.GU.warn("Failed to generate clip thumbnail:", e);
                         }
@@ -544,15 +550,15 @@ async function eu(e) {
                     t = p;
                 }
                 return (
-                    T.default.track(et.HAw.CLIP_SAVED, d),
+                    T.default.track(en.HAw.CLIP_SAVED, d),
                     y.GU.info(`Clip save succeeded with ${n}ms and thumbnail ${t.thumbnail.length} bytes thumbnail.`),
                     { ...t, filepath: O, sizeBytes: i.clipSizeBytes }
                 );
             } catch (e) {
-                if (!("errorMessage" in e)) throw (T.default.track(et.HAw.CLIP_SAVE_FAILURE, { ...C.lc(), ...P }), e);
+                if (!("errorMessage" in e)) throw (T.default.track(en.HAw.CLIP_SAVE_FAILURE, { ...C.lc(), ...P }), e);
                 if (e.errorAt !== y.RC.BUFFER_WARMING_UP && e.errorAt !== y.RC.BRIDGE_SHUTDOWN) {
                     let t = C.WR(P, e);
-                    T.default.track(et.HAw.CLIP_SAVE_FAILURE, t);
+                    T.default.track(en.HAw.CLIP_SAVE_FAILURE, t);
                 }
                 throw e;
             }
@@ -566,7 +572,7 @@ async function eu(e) {
             decisionSignals: O,
         });
         if (S && null != N && !N.isActive) {
-            (a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t }), eD(e));
+            (a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t }), ev(e));
             return;
         }
         (a.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e, session: N }),
@@ -593,7 +599,7 @@ async function eu(e) {
                         e,
                     ))
                         try {
-                            await eD(n, !1);
+                            await ev(n, !1);
                         } catch (e) {
                             y.GU.error("Failed to evict transient clip", e);
                         }
@@ -624,12 +630,12 @@ async function eu(e) {
                         let {
                             body: { remote_clip_id: t },
                         } = await r.Bo.post({
-                            url: et.Rsh.SEND_CLIPS_REMOTE_TRIGGER(n.id),
+                            url: en.Rsh.SEND_CLIPS_REMOTE_TRIGGER(n.id),
                             body: { application_id: e.applicationId },
                             rejectWithError: !0,
                         });
-                        (null != t && (await eE(e.id, { remoteClipId: t }, !1)),
-                            T.default.track(et.HAw.CLIP_REMOTE_TRIGGER_SENT, {
+                        (null != t && (await ef(e.id, { remoteClipId: t }, !1)),
+                            T.default.track(en.HAw.CLIP_REMOTE_TRIGGER_SENT, {
                                 ...C.lc(),
                                 remote_clip_id: t,
                                 clip_trigger_type: e.decision?.signal.type,
@@ -641,7 +647,7 @@ async function eu(e) {
                     }
             })(e));
     } catch (r) {
-        let { errorAt: e, errorMessage: n } = ec(r),
+        let { errorAt: e, errorMessage: n } = e_(r),
             i =
                 e === y.RC.BUFFER_WARMING_UP
                     ? y.RC.BUFFER_WARMING_UP
@@ -657,17 +663,17 @@ async function eu(e) {
               S || (0, A.Ak)("clip_error", 0.5),
               a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: t, errorAt: e, errorMessage: n }));
     } finally {
-        clearTimeout($);
+        clearTimeout(Y);
     }
     y.GU.info(`${R.Ay.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - j)}ms`);
 }
-async function e_(e) {
+async function eA(e) {
     let t, n;
     if (R.Ay.getIsAtMaxSaveClipOperations()) return;
-    if (!(0, Z.t_)()) return void y.GU.warn("Screenshot ignored: discord_clips module not loaded yet");
+    if (!(0, ee.t_)()) return void y.GU.warn("Screenshot ignored: discord_clips module not loaded yet");
     let i = R.Ay.getActiveClipsSession(),
         r = m.Ay.getMediaEngine(),
-        l = (0, J.A)(e, y.nQ.SCREENSHOT),
+        l = (0, Z.A)(e, y.nQ.SCREENSHOT),
         o = R.Ay.getSettings().storageLocation,
         d = `${(0, U.A)(l.applicationName.substring(0, 20))}_${l.id}.jpeg`,
         c = s.A.fileManager.join(o, d);
@@ -704,12 +710,12 @@ async function e_(e) {
             y.GU.error("Failed to save screenshot:", t),
             _?.stop(),
             (0, A.Ak)("clip_error", 0.5),
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: e ?? "manual", ...ec(t) }),
+            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", clipMethod: e ?? "manual", ...e_(t) }),
             t
         );
     }
 }
-async function eE(e, t) {
+async function ef(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = R.Ay.getClipById(e);
     if (null == i) return;
@@ -723,19 +729,19 @@ async function eE(e, t) {
     }
     (n && C.PQ(i, t), a.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: r }));
 }
-async function eA(e) {
-    await eE(e.id, { isFavorite: !e.isFavorite }, !0);
+async function eh(e) {
+    await ef(e.id, { isFavorite: !e.isFavorite }, !0);
 }
-function ef() {
+function eI() {
     a.h.dispatch({ type: "CLIPS_CLEAR_LAST_CLIPS_SESSION" });
 }
-function eh() {
+function ep() {
     a.h.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
 }
-function eI(e) {
+function em(e) {
     a.h.dispatch({ type: "CLIPS_REMOVE_SINGLE_NEW_CLIP_ID", clipId: e });
 }
-async function ep(e) {
+async function eg(e) {
     let t = await s.A.clips.loadClipsDirectory(e),
         n = [];
     for (let e of t) {
@@ -744,29 +750,31 @@ async function ep(e) {
     }
     return n;
 }
-function em() {
+function eT() {
     Object.keys(R.Ay.getClips()).length > 0 && E.Ay.fireSurveyAction(i.w.POPULATED_CLIP_GALLERY_CLOSED);
 }
-let eg = !1;
-async function eT(e) {
+let eS = !1;
+async function eN(e) {
     if (!(0, S.xl)() || s.A.clips?.loadClipsDirectory == null) return;
-    let t = await ep(e);
-    if (!eg) {
-        eg = !0;
+    let t = await eg(e);
+    if (!eS) {
+        eS = !0;
         let t = [];
         if (b("auto")) {
             let n = v(e);
-            t = (await ep(n)).filter((e) => e.isCandidate);
+            t = (await eg(n)).filter((e) => e.isCandidate);
         }
-        t.forEach((e) =>
-            ey(e).catch((t) => {
+        t.forEach(async (e) => {
+            try {
+                await eb(e);
+            } catch (t) {
                 y.GU.error(`Failed to cleanup old clip candidate ${e.id}`, t);
-            }),
-        );
+            }
+        });
     }
     a.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: t });
 }
-async function eS(e, t, n, i) {
+async function eC(e, t, n, i) {
     let r = e,
         l = { isCandidate: !1, audioEvents: i },
         { storageLocation: o } = R.Ay.getSettings();
@@ -783,19 +791,19 @@ async function eS(e, t, n, i) {
         }
     await a.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...r, ...l }, session: n });
     try {
-        await eE(r.id, { ...l, filepath: r.filepath });
+        await ef(r.id, { ...l, filepath: r.filepath });
     } catch (e) {
         y.GU.error("Clip promotion failed: failed to update clip metadata", e);
     }
     return (
-        T.default.track(et.HAw.CLIP_PROMOTED, { ...C.lc(), ...C.Zy(e), clip_uuid: e.id, clip_auto_clip_score: t }),
+        T.default.track(en.HAw.CLIP_PROMOTED, { ...C.lc(), ...C.Zy(e), clip_uuid: e.id, clip_auto_clip_score: t }),
         { ...r, ...l }
     );
 }
-function eN(e) {
+function eO(e) {
     a.h.dispatch({ type: "CLIPS_MONTAGE_RENDER_START", clip: e });
 }
-async function eC(e) {
+async function eR(e) {
     a.h.dispatch({ type: "CLIPS_MONTAGE_RENDER_ERROR", clipId: e.id });
     try {
         let t = await s.A.clips.deleteClip(e.filepath);
@@ -807,24 +815,24 @@ async function eC(e) {
         y.GU.warn(`failMontagePlaceholder: could not delete orphaned montage file ${e.filepath}`, t);
     }
 }
-function eO(e) {
+function eL(e) {
     let t = { ...e };
     return (delete t.pending, t);
 }
-function eR(e) {
-    return x(eO(e));
+function ey(e) {
+    return x(eL(e));
 }
-async function eL(e, t) {
-    let n = eO(e);
+async function eD(e, t) {
+    let n = eL(e);
     try {
-        ((n.thumbnail = await (0, Q.m)(s.A.clips.getClipProtocolURLFromPath(n.filepath), 0)),
+        ((n.thumbnail = await (0, J.m)(s.A.clips.getClipProtocolURLFromPath(n.filepath), 0)),
             await s.A.clips.updateClipMetadata(n.filepath, x(n)));
     } catch (e) {
         y.GU.warn("finalizeMontageClip: failed to generate montage thumbnail:", e);
     }
     a.h.dispatch({ type: "CLIPS_MONTAGE_RENDER_DONE", clip: n, session: t });
 }
-async function ey(e) {
+async function eb(e) {
     if (!(0, S.xl)() || s.A.clips?.deleteClip == null) return !1;
     let { filepath: t, id: n } = e,
         i = (await s.A.clips.deleteClip(t)) ?? { ok: !0 };
@@ -836,14 +844,14 @@ async function ey(e) {
     }
     return !0;
 }
-async function eD(e) {
+async function ev(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (!(0, S.xl)() || s.A.clips?.deleteClip == null) return;
     let { filepath: n, id: i } = e;
-    (await ey(e))
+    (await eb(e))
         ? (a.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n }),
           t &&
-              T.default.track(et.HAw.CLIP_DELETED, {
+              T.default.track(en.HAw.CLIP_DELETED, {
                   ...C.lc(),
                   ...C.Zy(e),
                   application_name: e.applicationName,
@@ -852,212 +860,235 @@ async function eD(e) {
               }))
         : a.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
 }
-async function eb(e, t) {
-    let { analyticsLocations: i, watermark: r, isTemporaryEdit: a = !1, skipComposition: l = !1 } = t;
-    if (!(0, O.ri)(m.Ay)) throw Error("Clips export is not supported on this platform");
-    let o = performance.now();
+let eP = Promise.resolve();
+async function eM() {
+    let e;
+    for (var t = arguments.length, i = Array(t), r = 0; r < t; r++) i[r] = arguments[r];
+    let a = eP;
+    ((eP = new Promise((t) => {
+        e = t;
+    })),
+        await a);
     try {
-        ev([e.id]);
-        let t = m.Ay.getMediaEngine();
-        if (!(0, Z.t_)() && (await (0, Z.so)(), !(0, Z.t_)())) throw Error("discord_clips module failed to load");
-        let { filepath: i, ...o } = e;
-        a || (await eE(e.id, o));
-        let d = l ? null : (0, y._1)(e.editMetadata?.crop),
-            c = e.editMetadata?.start ?? 0,
-            u = e.editMetadata?.end ?? e.length / 1e3,
-            _ = null;
-        if (r && !l && e.type === y.nQ.CLIP)
+        return await (async function (e, t) {
+            let { analyticsLocations: i, watermark: r, isTemporaryEdit: a = !1, skipComposition: l = !1 } = t;
+            if (!(0, O.ri)(m.Ay)) throw Error("Clips export is not supported on this platform");
+            let o = performance.now();
             try {
-                _ = await (0, ee.e8)();
-            } catch (e) {
-                throw (y.GU.error("Failed to load the clip share watermark; aborting export", e), e);
-            }
-        let E = {
-                ...(e.editMetadata ?? {
-                    start: 0,
-                    end: e.length / 1e3,
-                    applicationAudio: !0,
-                    voiceAudio: !0,
-                    soundboardAudio: !0,
-                }),
-                crop: d ?? void 0,
-                tracks: l
-                    ? []
-                    : await (async function (e, t, i) {
-                          let {
-                              trimStartSec: r = 0,
-                              trimEndSec: a = 1 / 0,
-                              watermark: s = null,
-                          } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-                          if (null != s && !Number.isFinite(a))
-                              throw Error("buildExportOverlayTracks: a watermark requires a finite trimEndSec");
-                          let l = X(e, r, a);
-                          if (0 === l.length && null == s) return [];
-                          let { width: o, height: d } = await (async function (e, t) {
-                              let { width: n, height: i } = await (0, $.N)(e);
-                              if (t?.width != null && t?.height != null)
-                                  return { width: Math.round(n * t.width), height: Math.round(i * t.height) };
-                              if (t?.aspectRatio != null) {
-                                  var r;
-                                  let e;
-                                  return (
-                                      (e = Math.min(n, i * (r = t.aspectRatio))),
-                                      { width: Math.round(e), height: Math.round(e / r) }
-                                  );
-                              }
-                              return { width: n, height: i };
-                          })(i, t);
-                          if (null != s) {
-                              let e,
-                                  t,
-                                  n,
-                                  i,
-                                  c =
-                                      ((e = d > o),
-                                      (t = Math.min(o, d)),
-                                      (n = (e ? y.Qh : y.Yj) * t),
-                                      (i = (e ? y.DX : y.b1) * t),
-                                      {
-                                          id: y.I4,
-                                          type: y.Me.IMAGE,
-                                          startSec: r,
-                                          endSec: a,
-                                          data: {
-                                              ...s,
-                                              position: { x: (i + n / 2) / o, y: 0.75 },
-                                              widthFraction: n / o,
-                                              rotationDeg: 0,
-                                              shadow: "small",
-                                              shadowColor: y.xv,
-                                          },
-                                      });
-                              l.push(...X([c], r, a));
-                          }
-                          let c = await (async function (e, t, i) {
-                              if (0 === e.length) return [];
-                              let r = getComputedStyle(document.body).fontFamily,
-                                  a = "" === r ? "sans-serif" : r,
-                                  s = new Worker(new URL("/assets/" + n.u(922518), n.b));
-                              try {
-                                  return await new Promise((n, r) => {
-                                      (s.addEventListener(
-                                          "message",
-                                          (e) => {
-                                              let {
-                                                  data: { results: t, error: i },
-                                              } = e;
-                                              null != i ? r(Error(i)) : n(t ?? []);
-                                          },
-                                          { once: !0 },
-                                      ),
-                                          s.addEventListener("error", (e) => r(Error(e.message)), { once: !0 }),
-                                          s.postMessage({ tracks: e, canvasWidth: t, canvasHeight: i, fontFamily: a }));
-                                  });
-                              } finally {
-                                  s.terminate();
-                              }
-                          })(
-                              l.map((e) => {
-                                  let { track: t } = e;
-                                  return t;
-                              }),
-                              o,
-                              d,
-                          );
-                          return [
-                              {
-                                  segments: l.map((e, t) => {
-                                      let { track: n, start_ms: i, end_ms: r } = e,
-                                          { pngBase64: a, x: s, y: l, width: o, height: d } = c[t];
-                                      return {
-                                          start_ms: i,
-                                          end_ms: r,
-                                          x: s,
-                                          y: l,
-                                          width: o,
-                                          height: d,
-                                          opacity: n.id === y.I4 ? 0.65 : 1,
-                                          kind: "bitmap",
-                                          png: a,
-                                      };
-                                  }),
-                              },
-                          ];
-                      })(e.tracks ?? [], d, s.A.clips.getClipProtocolURLFromPath(e.filepath), {
-                          trimStartSec: c,
-                          trimEndSec: u,
-                          watermark: _,
-                      }),
-            },
-            A = await s.A.app.getPath("temp"),
-            f = s.A.fileManager.join(A, "Discord Clips"),
-            h = `${crypto.randomUUID()}-${Date.now()}.mp4`,
-            I = s.A.fileManager.join(f, h),
-            { filepath: p, formattedForUpload: g } = await t.exportClipToFile(e.filepath, I, E);
-        try {
-            let t = await s.A.clips.loadClip(p),
-                i = new Blob([t.data], { type: "video/mp4" });
-            if (e.type === y.nQ.SCREENSHOT || g) return i;
-            return (async function (e) {
-                let t,
-                    { default: i } = await n.e(25777).then(n.t.bind(n, 293384, 19)),
-                    r = i.createFile(!1),
-                    a = new Promise((e) => {
-                        r.onReady = e;
-                    }),
-                    s = await e.arrayBuffer();
-                for (let e of ((s.fileStart = 0),
-                r.appendBuffer(s),
-                r.flush(),
-                await a,
-                q()(null != r.boxes, "mp4boxInputFile.boxes should not be null after parsing"),
-                r.boxes))
-                    "uuid" === e.type && (t = e.start);
-                let l = e.slice(0, t, e.type),
-                    o = e.slice(t + 4, t + 8 + 16, e.type);
-                return new Blob([l, new Uint8Array([0, 0, 0, 24]), o], { type: e.type });
-            })(i);
-        } finally {
-            await (async function (e) {
-                if ((0, S.xl)())
+                eU([e.id]);
+                let t = m.Ay.getMediaEngine();
+                if (!(0, ee.t_)() && (await (0, ee.so)(), !(0, ee.t_)()))
+                    throw Error("discord_clips module failed to load");
+                let { filepath: i, ...o } = e;
+                a || (await ef(e.id, o));
+                let d = l ? null : (0, y._1)(e.editMetadata?.crop),
+                    c = e.editMetadata?.start ?? 0,
+                    u = e.editMetadata?.end ?? e.length / 1e3,
+                    _ = null;
+                if (r && !l && e.type === y.nQ.CLIP)
                     try {
-                        await s.A.clips.deleteClip(e);
-                    } catch {}
-            })(p);
-        }
+                        _ = await (0, et.e8)();
+                    } catch (e) {
+                        throw (y.GU.error("Failed to load the clip share watermark; aborting export", e), e);
+                    }
+                let E = {
+                        ...(e.editMetadata ?? {
+                            start: 0,
+                            end: e.length / 1e3,
+                            applicationAudio: !0,
+                            voiceAudio: !0,
+                            soundboardAudio: !0,
+                        }),
+                        crop: d ?? void 0,
+                        tracks: l
+                            ? []
+                            : await (async function (e, t, i) {
+                                  let {
+                                      trimStartSec: r = 0,
+                                      trimEndSec: a = 1 / 0,
+                                      watermark: s = null,
+                                  } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                                  if (null != s && !Number.isFinite(a))
+                                      throw Error("buildExportOverlayTracks: a watermark requires a finite trimEndSec");
+                                  let l = z(e, r, a);
+                                  if (0 === l.length && null == s) return [];
+                                  let { width: o, height: d } = await (async function (e, t) {
+                                      let { width: n, height: i } = await (0, X.N)(e);
+                                      if (t?.width != null && t?.height != null)
+                                          return { width: Math.round(n * t.width), height: Math.round(i * t.height) };
+                                      if (t?.aspectRatio != null) {
+                                          var r;
+                                          let e;
+                                          return (
+                                              (e = Math.min(n, i * (r = t.aspectRatio))),
+                                              { width: Math.round(e), height: Math.round(e / r) }
+                                          );
+                                      }
+                                      return { width: n, height: i };
+                                  })(i, t);
+                                  if (null != s) {
+                                      let e,
+                                          t,
+                                          n,
+                                          i,
+                                          c =
+                                              ((e = d > o),
+                                              (t = Math.min(o, d)),
+                                              (n = (e ? y.Qh : y.Yj) * t),
+                                              (i = (e ? y.DX : y.b1) * t),
+                                              {
+                                                  id: y.I4,
+                                                  type: y.Me.IMAGE,
+                                                  startSec: r,
+                                                  endSec: a,
+                                                  data: {
+                                                      ...s,
+                                                      position: { x: (i + n / 2) / o, y: 0.75 },
+                                                      widthFraction: n / o,
+                                                      rotationDeg: 0,
+                                                      shadow: "small",
+                                                      shadowColor: y.xv,
+                                                  },
+                                              });
+                                      l.push(...z([c], r, a));
+                                  }
+                                  let c = await (async function (e, t, i) {
+                                      if (0 === e.length) return [];
+                                      let r = getComputedStyle(document.body).fontFamily,
+                                          a = "" === r ? "sans-serif" : r,
+                                          s = new Worker(new URL("/assets/" + n.u(922518), n.b));
+                                      try {
+                                          return await new Promise((n, r) => {
+                                              (s.addEventListener(
+                                                  "message",
+                                                  (e) => {
+                                                      let {
+                                                          data: { results: t, error: i },
+                                                      } = e;
+                                                      null != i ? r(Error(i)) : n(t ?? []);
+                                                  },
+                                                  { once: !0 },
+                                              ),
+                                                  s.addEventListener("error", (e) => r(Error(e.message)), { once: !0 }),
+                                                  s.postMessage({
+                                                      tracks: e,
+                                                      canvasWidth: t,
+                                                      canvasHeight: i,
+                                                      fontFamily: a,
+                                                  }));
+                                          });
+                                      } finally {
+                                          s.terminate();
+                                      }
+                                  })(
+                                      l.map((e) => {
+                                          let { track: t } = e;
+                                          return t;
+                                      }),
+                                      o,
+                                      d,
+                                  );
+                                  return [
+                                      {
+                                          segments: l.map((e, t) => {
+                                              let { track: n, start_ms: i, end_ms: r } = e,
+                                                  { pngBase64: a, x: s, y: l, width: o, height: d } = c[t];
+                                              return {
+                                                  start_ms: i,
+                                                  end_ms: r,
+                                                  x: s,
+                                                  y: l,
+                                                  width: o,
+                                                  height: d,
+                                                  opacity: n.id === y.I4 ? 0.65 : 1,
+                                                  kind: "bitmap",
+                                                  png: a,
+                                              };
+                                          }),
+                                      },
+                                  ];
+                              })(e.tracks ?? [], d, s.A.clips.getClipProtocolURLFromPath(e.filepath), {
+                                  trimStartSec: c,
+                                  trimEndSec: u,
+                                  watermark: _,
+                              }),
+                    },
+                    A = await s.A.app.getPath("temp"),
+                    f = s.A.fileManager.join(A, "Discord Clips"),
+                    h = `${crypto.randomUUID()}-${Date.now()}.mp4`,
+                    I = s.A.fileManager.join(f, h),
+                    { filepath: p, formattedForUpload: g } = await t.exportClipToFile(e.filepath, I, E);
+                try {
+                    let t = await s.A.clips.loadClip(p),
+                        i = new Blob([t.data], { type: "video/mp4" });
+                    if (e.type === y.nQ.SCREENSHOT || g) return i;
+                    return (async function (e) {
+                        let t,
+                            { default: i } = await n.e(25777).then(n.t.bind(n, 293384, 19)),
+                            r = i.createFile(!1),
+                            a = new Promise((e) => {
+                                r.onReady = e;
+                            }),
+                            s = await e.arrayBuffer();
+                        for (let e of ((s.fileStart = 0),
+                        r.appendBuffer(s),
+                        r.flush(),
+                        await a,
+                        Q()(null != r.boxes, "mp4boxInputFile.boxes should not be null after parsing"),
+                        r.boxes))
+                            "uuid" === e.type && (t = e.start);
+                        let l = e.slice(0, t, e.type),
+                            o = e.slice(t + 4, t + 8 + 16, e.type);
+                        return new Blob([l, new Uint8Array([0, 0, 0, 24]), o], { type: e.type });
+                    })(i);
+                } finally {
+                    await (async function (e) {
+                        if ((0, S.xl)())
+                            try {
+                                await s.A.clips.deleteClip(e);
+                            } catch {}
+                    })(p);
+                }
+            } finally {
+                eU(null);
+                let t = performance.now();
+                T.default.track(en.HAw.CLIP_EXPORTED, {
+                    ...C.lc(),
+                    ...C.Zy(e),
+                    location_stack: i,
+                    export_duration: t - o,
+                });
+            }
+        })(...i);
     } finally {
-        ev(null);
-        let t = performance.now();
-        T.default.track(et.HAw.CLIP_EXPORTED, { ...C.lc(), ...C.Zy(e), location_stack: i, export_duration: t - o });
+        e();
     }
 }
-function ev(e) {
-    a.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
+function eU(e) {
+    (0, Y.T)(e);
 }
-function eP(e) {
+function ew(e) {
     a.h.dispatch({ type: "CLIPS_SET_AUTO_STASH_ENABLED", enabled: e });
 }
-function eM(e) {
+function eG(e) {
     a.h.dispatch({ type: "CLIPS_AUTOCLIPS_STAFF_BYPASS_OVERRIDE", disabled: e });
 }
-function eU(e) {
+function ex(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = b("auto");
     if ((a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }), !i && b("auto"))) {
         let { storageLocation: e } = R.Ay.getSettings();
-        eT(e).catch((e) => {
-            y.GU.error("Failed to reload clips after enabling autoclipping", e);
-        });
+        eo(e, "Failed to reload clips after enabling autoclipping");
     }
-    t && T.default.track(et.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), autoclips_enabled: e, location: n });
+    t && T.default.track(en.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), autoclips_enabled: e, location: n });
 }
-function ew(e, t) {
+function ek(e, t) {
     a.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function eG(e) {
+function eF(e) {
     a.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function ex() {
-    ew({ type: y.Gy.MANUAL });
+function eB() {
+    ek({ type: y.Gy.MANUAL });
 }

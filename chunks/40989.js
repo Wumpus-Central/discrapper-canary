@@ -1,76 +1,76 @@
-t.d(n, { A: () => ee });
-var i = t(477900),
-    l = t(582128),
-    r = t(503698),
-    a = t.n(r),
-    s = t(707554),
-    o = t(915089),
-    d = t(183555),
-    c = t(735321),
-    u = t(94343),
-    g = t(172218),
-    m = t(704824);
-t(456647);
-var h = t(633075),
-    x = t(451395),
-    f = t(716804),
-    p = t(675816),
-    j = t(855986),
-    I = t(939249),
-    E = t(772838),
-    b = t(140735),
-    A = t(834730),
-    C = t(866665),
-    v = t(192308),
-    y = t(265872),
-    N = t(165862),
-    D = t(477782),
-    T = t(241326),
-    P = t(442433),
-    R = t(775602),
-    k = t(46653),
-    _ = t(384377),
-    w = t(518477),
-    W = t(792996),
-    O = t(347727);
-function S(e) {
-    let { widget: n, className: t, buttonRef: l, additionalMenuItems: r } = e,
-        s = (0, c.L)(n),
-        d = (0, o.GV)();
+n.d(t, { A: () => ee });
+var i = n(477900),
+    l = n(582128),
+    r = n(503698),
+    a = n.n(r),
+    s = n(707554),
+    o = n(915089),
+    c = n(183555),
+    d = n(735321),
+    u = n(94343),
+    g = n(172218),
+    f = n(704824);
+n(456647);
+var h = n(633075),
+    m = n(451395),
+    x = n(716804),
+    p = n(675816),
+    j = n(855986),
+    I = n(939249),
+    E = n(772838),
+    b = n(140735),
+    A = n(834730),
+    v = n(866665),
+    C = n(192308),
+    y = n(265872),
+    N = n(165862),
+    k = n(477782),
+    D = n(241326),
+    T = n(442433),
+    P = n(775602),
+    R = n(46653),
+    _ = n(384377),
+    w = n(518477),
+    W = n(792996),
+    S = n(347727);
+function O(e) {
+    let { widget: t, className: n, buttonRef: l, additionalMenuItems: r } = e,
+        s = (0, d.L)(t),
+        c = (0, o.GV)();
     return (0, i.jsx)(G, {
         targetRef: l,
-        widget: n,
+        widget: t,
         additionalMenuItems: r,
         children: (e) =>
             (0, i.jsx)(M, {
                 children: (0, i.jsxs)(I.D, {
                     innerRef: l,
-                    className: a()(O.x6, t),
+                    className: a()(S.x6, n),
                     "data-dnd-name": s,
                     "aria-label": W.intl.formatToPlainString(W.t.HWNJJN, { widgetTitle: s }),
-                    "aria-describedby": d,
+                    "aria-describedby": c,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
                         (0, i.jsx)(E.DragIcon, { size: "sm" }),
-                        (0, i.jsx)(b.A, { id: d, children: W.intl.string(W.t.bsuqFn) }),
+                        (0, i.jsx)(b.A, { id: c, children: W.intl.string(W.t.bsuqFn) }),
                     ],
                 }),
             }),
     });
 }
 function M(e) {
-    let { children: n } = e,
-        t = (0, j.bG)([R.Ay], () => R.Ay.keyboardModeEnabled),
+    let { children: t } = e,
+        n = (0, j.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
         { isDragging: l } = (0, p.V)((e) => ({ isDragging: e.isDragging() }));
-    return (0, i.jsx)(C.m, {
+    return (0, i.jsx)(v.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-            className: O.HE,
+            className: S.HE,
             children: [
                 (0, i.jsx)(A.E, {
                     variant: "body-sm/normal",
                     color: "none",
-                    children: W.intl.format(t ? W.t["zvln/l"] : W.t["7cdwhg"], {
+                    children: W.intl.format(n ? W.t["zvln/l"] : W.t["7cdwhg"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
@@ -86,240 +86,241 @@ function M(e) {
         position: "top",
         shouldShow: !0 !== l,
         ariaHidden: !0,
-        children: n,
+        children: t,
     });
 }
 function G(e) {
-    let { children: n, widget: l, targetRef: r, additionalMenuItems: a } = e,
-        { trackUserProfileEditAction: s } = (0, d.NJ)();
+    let { children: t, widget: l, targetRef: r, additionalMenuItems: a } = e,
+        { trackUserProfileEditAction: s } = (0, c.NJ)();
     function o(e) {
         if (e.shiftKey) {
-            ((0, c.qA)(l),
+            ((0, d.qA)(l),
                 s({ action: "WIDGET_REMOVED", ...l.getProfileEditAnalyticsOptions() }),
                 (0, _.XA)(w.jM.WIDGET_REMOVED));
             return;
         }
-        (0, v.mM)(
+        (0, C.mM)(
             async () => {
                 let { default: e } = await Promise.all([
-                    t.e(487458),
-                    t.e(938177),
-                    t.e(813057),
-                    t.e(991625),
-                    t.e(230029),
-                    t.e(891089),
-                    t.e(728925),
-                    t.e(569603),
-                    t.e(174554),
-                    t.e(196063),
-                    t.e(392028),
-                    t.e(124054),
-                    t.e(441674),
-                    t.e(152862),
-                    t.e(357900),
-                    t.e(148729),
-                    t.e(650195),
-                    t.e(401317),
-                    t.e(778082),
-                    t.e(311580),
-                    t.e(67702),
-                    t.e(662387),
-                    t.e(31544),
-                    t.e(334168),
-                    t.e(93012),
-                    t.e(715867),
-                    t.e(249938),
-                    t.e(266201),
-                    t.e(752704),
-                    t.e(56606),
-                    t.e(678749),
-                    t.e(327545),
-                    t.e(163466),
-                    t.e(520218),
-                    t.e(738015),
-                    t.e(234017),
-                    t.e(40791),
-                    t.e(358404),
-                    t.e(996907),
-                    t.e(831130),
-                    t.e(599618),
-                    t.e(377989),
-                    t.e(334733),
-                    t.e(706073),
-                    t.e(227512),
-                    t.e(806152),
-                    t.e(331249),
-                    t.e(679502),
-                    t.e(734818),
-                    t.e(245652),
-                    t.e(878504),
-                    t.e(104864),
-                    t.e(420446),
-                    t.e(614476),
-                    t.e(483754),
-                    t.e(372883),
-                    t.e(362420),
-                    t.e(887789),
-                    t.e(589154),
-                    t.e(425292),
-                    t.e(412408),
-                    t.e(888499),
-                    t.e(193457),
-                    t.e(839182),
-                    t.e(546547),
-                    t.e(102075),
-                    t.e(892937),
-                    t.e(570385),
-                    t.e(490449),
-                    t.e(934487),
-                    t.e(467506),
-                    t.e(342551),
-                    t.e(343194),
-                    t.e(84663),
-                    t.e(454048),
-                    t.e(300699),
-                    t.e(264236),
-                    t.e(976759),
-                    t.e(398125),
-                    t.e(221825),
-                    t.e(143613),
-                    t.e(901555),
-                    t.e(930758),
-                    t.e(593600),
-                    t.e(707826),
-                    t.e(890027),
-                    t.e(913823),
-                    t.e(638221),
-                    t.e(851130),
-                    t.e(417286),
-                    t.e(27773),
-                    t.e(717907),
-                    t.e(361626),
-                    t.e(646506),
-                    t.e(445421),
-                    t.e(721690),
-                    t.e(302008),
-                    t.e(761935),
-                    t.e(87306),
-                    t.e(502018),
-                    t.e(276863),
-                    t.e(128796),
-                    t.e(441432),
-                    t.e(728633),
-                    t.e(35757),
-                    t.e(570506),
-                    t.e(951811),
-                    t.e(787672),
-                    t.e(522517),
-                    t.e(909708),
-                    t.e(234236),
-                    t.e(832817),
-                    t.e(416143),
-                    t.e(401590),
-                    t.e(844695),
-                    t.e(213653),
-                    t.e(92124),
-                    t.e(123353),
-                    t.e(50015),
-                    t.e(988077),
-                    t.e(776750),
-                    t.e(232551),
-                    t.e(631644),
-                    t.e(561216),
-                    t.e(692835),
-                    t.e(588940),
-                    t.e(21219),
-                    t.e(829177),
-                    t.e(401827),
-                    t.e(106943),
-                    t.e(348674),
-                    t.e(494768),
-                    t.e(526595),
-                    t.e(482861),
-                    t.e(786751),
-                    t.e(489949),
-                    t.e(958428),
-                    t.e(422891),
-                    t.e(695881),
-                    t.e(790244),
-                    t.e(344265),
-                    t.e(637721),
-                    t.e(592731),
-                    t.e(723794),
-                    t.e(894747),
-                    t.e(170653),
-                    t.e(547646),
-                    t.e(288004),
-                    t.e(240511),
-                    t.e(718573),
-                    t.e(346102),
-                    t.e(377766),
-                    t.e(545587),
-                    t.e(482815),
-                    t.e(376883),
-                    t.e(647211),
-                    t.e(799657),
-                    t.e(810034),
-                    t.e(817852),
-                    t.e(996218),
-                    t.e(231578),
-                    t.e(784103),
-                    t.e(614784),
-                    t.e(8563),
-                    t.e(499941),
-                    t.e(509793),
-                    t.e(831145),
-                    t.e(187856),
-                    t.e(288705),
-                    t.e(960286),
-                    t.e(610449),
-                    t.e(32781),
-                    t.e(488990),
-                    t.e(332470),
-                    t.e(729599),
-                    t.e(912773),
-                    t.e(35403),
-                    t.e(662355),
-                    t.e(872648),
-                    t.e(482652),
-                    t.e(464242),
-                    t.e(220518),
-                    t.e(88160),
-                    t.e(209518),
-                    t.e(446693),
-                    t.e(338516),
-                    t.e(736926),
-                    t.e(450048),
-                    t.e(587244),
-                    t.e(896137),
-                    t.e(957506),
-                    t.e(362422),
-                    t.e(3131),
-                    t.e(789573),
-                    t.e(732272),
-                    t.e(220287),
-                    t.e(536973),
-                    t.e(914248),
-                    t.e(647177),
-                    t.e(43358),
-                    t.e(817551),
-                    t.e(546601),
-                    t.e(776793),
-                    t.e(24914),
-                    t.e(332335),
-                    t.e(134504),
-                    t.e(248985),
-                    t.e(553683),
-                    t.e(181162),
-                    t.e(720161),
-                    t.e(247290),
-                    t.e(787320),
-                    t.e(124981),
-                    t.e(608476),
-                    t.e(353600),
-                ]).then(t.bind(t, 380035));
-                return (n) =>
-                    (0, i.jsx)(e, { ...n, userId: k.default.getId(), widget: l, trackUserProfileEditAction: s });
+                    n.e(487458),
+                    n.e(938177),
+                    n.e(813057),
+                    n.e(991625),
+                    n.e(230029),
+                    n.e(891089),
+                    n.e(728925),
+                    n.e(569603),
+                    n.e(174554),
+                    n.e(196063),
+                    n.e(392028),
+                    n.e(124054),
+                    n.e(441674),
+                    n.e(152862),
+                    n.e(357900),
+                    n.e(148729),
+                    n.e(650195),
+                    n.e(401317),
+                    n.e(778082),
+                    n.e(311580),
+                    n.e(67702),
+                    n.e(662387),
+                    n.e(31544),
+                    n.e(334168),
+                    n.e(93012),
+                    n.e(715867),
+                    n.e(249938),
+                    n.e(266201),
+                    n.e(752704),
+                    n.e(56606),
+                    n.e(678749),
+                    n.e(327545),
+                    n.e(163466),
+                    n.e(520218),
+                    n.e(738015),
+                    n.e(234017),
+                    n.e(40791),
+                    n.e(358404),
+                    n.e(996907),
+                    n.e(831130),
+                    n.e(599618),
+                    n.e(377989),
+                    n.e(334733),
+                    n.e(706073),
+                    n.e(227512),
+                    n.e(806152),
+                    n.e(331249),
+                    n.e(679502),
+                    n.e(734818),
+                    n.e(245652),
+                    n.e(878504),
+                    n.e(104864),
+                    n.e(420446),
+                    n.e(614476),
+                    n.e(483754),
+                    n.e(372883),
+                    n.e(362420),
+                    n.e(887789),
+                    n.e(589154),
+                    n.e(425292),
+                    n.e(412408),
+                    n.e(888499),
+                    n.e(193457),
+                    n.e(839182),
+                    n.e(546547),
+                    n.e(102075),
+                    n.e(892937),
+                    n.e(570385),
+                    n.e(490449),
+                    n.e(934487),
+                    n.e(467506),
+                    n.e(342551),
+                    n.e(343194),
+                    n.e(84663),
+                    n.e(3952),
+                    n.e(454048),
+                    n.e(300699),
+                    n.e(264236),
+                    n.e(976759),
+                    n.e(398125),
+                    n.e(221825),
+                    n.e(143613),
+                    n.e(901555),
+                    n.e(930758),
+                    n.e(593600),
+                    n.e(707826),
+                    n.e(890027),
+                    n.e(913823),
+                    n.e(638221),
+                    n.e(851130),
+                    n.e(417286),
+                    n.e(27773),
+                    n.e(717907),
+                    n.e(361626),
+                    n.e(646506),
+                    n.e(445421),
+                    n.e(721690),
+                    n.e(302008),
+                    n.e(761935),
+                    n.e(87306),
+                    n.e(502018),
+                    n.e(276863),
+                    n.e(128796),
+                    n.e(441432),
+                    n.e(728633),
+                    n.e(35757),
+                    n.e(570506),
+                    n.e(951811),
+                    n.e(787672),
+                    n.e(522517),
+                    n.e(909708),
+                    n.e(234236),
+                    n.e(832817),
+                    n.e(416143),
+                    n.e(401590),
+                    n.e(844695),
+                    n.e(213653),
+                    n.e(92124),
+                    n.e(123353),
+                    n.e(50015),
+                    n.e(988077),
+                    n.e(776750),
+                    n.e(232551),
+                    n.e(631644),
+                    n.e(561216),
+                    n.e(692835),
+                    n.e(588940),
+                    n.e(21219),
+                    n.e(829177),
+                    n.e(401827),
+                    n.e(106943),
+                    n.e(348674),
+                    n.e(494768),
+                    n.e(526595),
+                    n.e(482861),
+                    n.e(786751),
+                    n.e(489949),
+                    n.e(958428),
+                    n.e(422891),
+                    n.e(695881),
+                    n.e(790244),
+                    n.e(344265),
+                    n.e(637721),
+                    n.e(592731),
+                    n.e(723794),
+                    n.e(894747),
+                    n.e(170653),
+                    n.e(547646),
+                    n.e(288004),
+                    n.e(240511),
+                    n.e(718573),
+                    n.e(346102),
+                    n.e(377766),
+                    n.e(545587),
+                    n.e(482815),
+                    n.e(376883),
+                    n.e(647211),
+                    n.e(799657),
+                    n.e(810034),
+                    n.e(817852),
+                    n.e(996218),
+                    n.e(231578),
+                    n.e(784103),
+                    n.e(614784),
+                    n.e(8563),
+                    n.e(499941),
+                    n.e(509793),
+                    n.e(831145),
+                    n.e(187856),
+                    n.e(288705),
+                    n.e(960286),
+                    n.e(610449),
+                    n.e(32781),
+                    n.e(488990),
+                    n.e(332470),
+                    n.e(729599),
+                    n.e(912773),
+                    n.e(35403),
+                    n.e(662355),
+                    n.e(872648),
+                    n.e(482652),
+                    n.e(464242),
+                    n.e(220518),
+                    n.e(88160),
+                    n.e(209518),
+                    n.e(446693),
+                    n.e(338516),
+                    n.e(736926),
+                    n.e(450048),
+                    n.e(587244),
+                    n.e(896137),
+                    n.e(957506),
+                    n.e(362422),
+                    n.e(3131),
+                    n.e(789573),
+                    n.e(28852),
+                    n.e(732272),
+                    n.e(220287),
+                    n.e(536973),
+                    n.e(914248),
+                    n.e(43358),
+                    n.e(443906),
+                    n.e(546601),
+                    n.e(776793),
+                    n.e(24914),
+                    n.e(332335),
+                    n.e(134504),
+                    n.e(248985),
+                    n.e(553683),
+                    n.e(181162),
+                    n.e(720161),
+                    n.e(247290),
+                    n.e(787320),
+                    n.e(124981),
+                    n.e(608476),
+                    n.e(353600),
+                ]).then(n.bind(n, 380035));
+                return (t) =>
+                    (0, i.jsx)(e, { ...t, userId: R.default.getId(), widget: l, trackUserProfileEditAction: s });
             },
             { stackingBehavior: "stack" },
         );
@@ -330,57 +331,57 @@ function G(e) {
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
-            let { closePopout: n } = e;
+            let { closePopout: t } = e;
             return (0, i.jsx)(N.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    ((0, P.Z_)(), n());
+                    ((0, T.Z_)(), t());
                 },
                 onSelect: () => {},
                 "aria-label": W.intl.string(W.t.xpSHSk),
-                className: O.MK,
-                children: (0, i.jsxs)(D.rX, {
+                className: S.MK,
+                children: (0, i.jsxs)(k.rX, {
                     children: [
                         a,
-                        (0, i.jsx)(D.Dr, {
+                        (0, i.jsx)(k.Dr, {
                             id: "remove-widget",
                             label: W.intl.string(W.t.Mm07Yc),
                             action: o,
                             color: "danger",
-                            icon: T.TrashIcon,
-                            leadingAccessory: { type: "icon", icon: T.TrashIcon },
+                            icon: D.TrashIcon,
+                            leadingAccessory: { type: "icon", icon: D.TrashIcon },
                         }),
                     ],
                 }),
             });
         },
-        children: n,
+        children: t,
     });
 }
-var L = t(534514),
-    F = t(138134),
-    U = t(365199),
-    z = t(627363),
-    H = t(587895),
-    B = t(928658);
-function q(e, n, t) {
-    t?.conjureProjectId != null ? (0, B.r3)({ application: t, entrypoint: "user_profile_widget" }) : (0, B.GJ)(e, n);
+var L = n(534514),
+    U = n(138134),
+    F = n(365199),
+    z = n(627363),
+    B = n(587895),
+    H = n(928658);
+function K(e, t, n) {
+    n?.conjureProjectId != null ? (0, H.r3)({ application: n, entrypoint: "user_profile_widget" }) : (0, H.GJ)(e, t);
 }
-var K = t(216473);
+var q = n(216473);
 function Y(e) {
-    let { widget: n, userId: t, className: r, menuItems: s } = e,
+    let { widget: t, userId: n, className: r, menuItems: s } = e,
         o = l.useRef(null);
-    function d() {
-        !(function (e, n) {
-            if (!(n instanceof h.R)) return (0, B.GJ)(e, n);
-            let { applicationId: t } = n;
-            H.A.isHydrated(t)
-                ? q(e, n, H.A.getApplication(t))
-                : z.Ay.fetchApplication(t)
-                      .then(() => q(e, n, H.A.getApplication(t)))
-                      .catch(() => (0, B.GJ)(e, n));
-        })(t, n);
+    function c() {
+        !(function (e, t) {
+            if (!(t instanceof h.R)) return (0, H.GJ)(e, t);
+            let { applicationId: n } = t;
+            B.A.isHydrated(n)
+                ? K(e, t, B.A.getApplication(n))
+                : z.Ay.fetchApplication(n)
+                      .then(() => K(e, t, B.A.getApplication(n)))
+                      .catch(() => (0, H.GJ)(e, t));
+        })(n, t);
     }
     return (0, i.jsx)(y.Y, {
         targetElementRef: o,
@@ -388,27 +389,27 @@ function Y(e) {
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
-            let { closePopout: n } = e;
+            let { closePopout: t } = e;
             return (0, i.jsx)(N.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    ((0, P.Z_)(), n());
+                    ((0, T.Z_)(), t());
                 },
                 onSelect: () => {},
                 "aria-label": W.intl.string(W.t.xpSHSk),
-                children: (0, i.jsxs)(D.rX, {
+                children: (0, i.jsxs)(k.rX, {
                     children: [
                         s,
                         (0, i.jsx)(
-                            D.Dr,
+                            k.Dr,
                             {
                                 id: "flag-widget",
                                 label: W.intl.string(W.t.D4GvHE),
-                                action: d,
+                                action: c,
                                 color: "danger",
-                                icon: F.FlagIcon,
-                                leadingAccessory: { type: "icon", icon: F.FlagIcon },
+                                icon: U.FlagIcon,
+                                leadingAccessory: { type: "icon", icon: U.FlagIcon },
                             },
                             "flag-widget",
                         ),
@@ -421,50 +422,50 @@ function Y(e) {
                 ...e,
                 innerRef: o,
                 "aria-label": W.intl.string(W.t.xpSHSk),
-                className: a()(K.x, r),
-                children: (0, i.jsx)(U.MoreHorizontalIcon, { size: "sm", color: "currentColor" }),
+                className: a()(q.x, r),
+                children: (0, i.jsx)(F.MoreHorizontalIcon, { size: "sm", color: "currentColor" }),
             }),
     });
 }
-var J = t(948939);
+var J = n(948939);
 function V(e) {
     let {
-        userId: n,
-        headingId: t,
+        userId: t,
+        headingId: n,
         widget: l,
         disableInteraction: r = !1,
         title: s,
         subtitle: o,
-        actionButtons: d = [],
-        className: c,
+        actionButtons: c = [],
+        className: d,
         additionalMenuItems: u,
     } = e;
     return (0, i.jsxs)("div", {
-        className: a()(J.U1, c),
+        className: a()(J.U1, d),
         children: [
             (0, i.jsxs)("div", {
                 className: J.DD,
                 children: [
-                    (0, i.jsx)(L.D, { variant: "heading-xs/medium", color: "text-default", id: t, children: s }),
+                    (0, i.jsx)(L.D, { variant: "heading-xs/medium", color: "text-default", id: n, children: s }),
                     null != o && (0, i.jsx)(A.E, { variant: "body-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
-            (0, i.jsx)(X, { widget: l, actionButtons: d, disabledInteraction: r, userId: n, additionalMenuItems: u }),
+            (0, i.jsx)(X, { widget: l, actionButtons: c, disabledInteraction: r, userId: t, additionalMenuItems: u }),
         ],
     });
 }
 function X(e) {
-    let { widget: n, actionButtons: t, disabledInteraction: l, userId: r, additionalMenuItems: a } = e,
-        s = (0, j.bG)([k.default], () => k.default.getId());
+    let { widget: t, actionButtons: n, disabledInteraction: l, userId: r, additionalMenuItems: a } = e,
+        s = (0, j.bG)([R.default], () => R.default.getId());
     return l
         ? null
-        : null != t && t.length > 0
-          ? (0, i.jsx)("div", { className: J.o1, children: t })
+        : null != n && n.length > 0
+          ? (0, i.jsx)("div", { className: J.o1, children: n })
           : s !== r
             ? (0, i.jsx)("div", {
                   className: J.o1,
                   children: (0, i.jsx)(Y, {
-                      widget: n,
+                      widget: t,
                       userId: r,
                       className: J.AQ,
                       menuItems: null != a ? [a] : void 0,
@@ -472,105 +473,105 @@ function X(e) {
               })
             : null;
 }
-var Z = t(192),
-    $ = t(223503);
+var Z = n(192),
+    $ = n(223503);
 function Q(e) {
-    let { index: n, widget: t, additionalManageWidgetMenuItems: r, children: s, getWidth: d } = e,
+    let { index: t, widget: n, additionalManageWidgetMenuItems: r, children: s, getWidth: c } = e,
         u = l.useRef(null),
         g = l.useRef(null),
-        { registerManageWidgetButtonRef: m, manageFocusOnReorder: h } = (0, Z.r)(),
-        f = t.getUniqueKey();
+        { registerManageWidgetButtonRef: f, manageFocusOnReorder: h } = (0, Z.r)(),
+        x = n.getUniqueKey();
     l.useLayoutEffect(() => {
-        let e = m(t.type, f);
+        let e = f(n.type, x);
         return (e(u.current), () => e(null));
-    }, [m, t.type, f]);
-    let p = l.useMemo(() => t.id ?? (0, o.Ld)(), [t.id]),
-        { isDragging: j, dragSourcePosition: I } = (0, x.gY)({
+    }, [f, n.type, x]);
+    let p = l.useMemo(() => n.id ?? (0, o.Ld)(), [n.id]),
+        { isDragging: j, dragSourcePosition: I } = (0, m.gY)({
             dragRef: u,
             dropRef: g,
-            index: n,
+            index: t,
             listType: "WIDGETS",
             itemType: "WIDGET",
             itemId: p,
-            itemPreviewProps: { widget: t, getWidth: d },
-            onReorder: c.R_,
-            onEnd: () => h(t.type),
+            itemPreviewProps: { widget: n, getWidth: c },
+            onReorder: d.R_,
+            onEnd: () => h(n.type),
         }),
         E = null != I,
-        b = E && n < I,
-        A = E && n > I;
+        b = E && t < I,
+        A = E && t > I;
     return (0, i.jsxs)("div", {
         ref: g,
         className: a()($.wX, { [$.A]: b, [$.Ze]: A, [$.Id]: j }),
-        "aria-label": W.intl.formatToPlainString(W.t.YLczh4, { positionNumber: n + 1 }),
-        children: [(0, i.jsx)(S, { buttonRef: u, widget: t, className: $.vn, additionalMenuItems: r }), s],
+        "aria-label": W.intl.formatToPlainString(W.t.YLczh4, { positionNumber: t + 1 }),
+        children: [(0, i.jsx)(O, { buttonRef: u, widget: n, className: $.vn, additionalMenuItems: r }), s],
     });
 }
 function ee(e) {
     let {
-            userId: n,
-            widget: t,
+            userId: t,
+            widget: n,
             children: r,
-            allowEditing: c,
-            disableInteraction: x,
+            allowEditing: d,
+            disableInteraction: m,
             className: p,
             index: j,
             trailingContent: I,
             headerTitle: E,
             headerSubtitle: b,
             headerActionButtons: A,
-            headerClassName: C,
-            additionalManageWidgetMenuItems: v,
+            headerClassName: v,
+            additionalManageWidgetMenuItems: C,
         } = e,
         y = (0, o.GV)(),
         N = l.useRef(null),
-        D = (0, f.g)(),
-        { trackUserProfileAction: T } = (0, d.NJ)(),
-        P = (function (e) {
-            let { widget: n, onAction: t } = e,
+        k = (0, x.g)(),
+        { trackUserProfileAction: D } = (0, c.NJ)(),
+        T = (function (e) {
+            let { widget: t, onAction: n } = e,
                 [i, r] = (0, l.useState)(!1),
-                a = n instanceof h.R ? n.applicationId : null,
-                { fetched: s } = (0, m.U)(a),
+                a = t instanceof h.R ? t.applicationId : null,
+                { fetched: s } = (0, f.U)(a),
                 o = (0, l.useCallback)(
                     (e) => {
-                        e && (t({ action: "VIEW_WIDGET", ...n.getProfileAnalyticsOptions() }), r(!0));
+                        e && (n({ action: "VIEW_WIDGET", ...t.getProfileAnalyticsOptions() }), r(!0));
                     },
-                    [t, n],
+                    [n, t],
                 );
             return (0, g.K)(o, void 0, !i && (null == a || s));
-        })({ widget: t, onAction: T }),
-        R = D === t.type;
-    (0, u.A)(P, R);
-    let k = c && null != j && !x;
+        })({ widget: n, onAction: D }),
+        P = k === n.type;
+    (0, u.A)(T, P);
+    let R = d && null != j && !m;
     function _() {
         return (0, i.jsxs)("div", {
             ref: N,
             className: a()($.kL, p),
             children: [
                 (0, i.jsx)(V, {
-                    userId: n,
+                    userId: t,
                     headingId: y,
                     title: E,
                     subtitle: b,
                     actionButtons: A,
-                    widget: t,
-                    disableInteraction: x,
-                    className: C,
-                    additionalMenuItems: v,
+                    widget: n,
+                    disableInteraction: m,
+                    className: v,
+                    additionalMenuItems: C,
                 }),
                 (0, i.jsxs)(s.F, { children: [r, I] }),
             ],
         });
     }
     return (0, i.jsx)("section", {
-        ref: P,
+        ref: T,
         "aria-labelledby": y,
-        children: k
+        children: R
             ? (0, i.jsx)(Q, {
                   index: j ?? 0,
-                  widget: t,
+                  widget: n,
                   getWidth: () => N.current?.offsetWidth,
-                  additionalManageWidgetMenuItems: v,
+                  additionalManageWidgetMenuItems: C,
                   children: _(),
               })
             : _(),

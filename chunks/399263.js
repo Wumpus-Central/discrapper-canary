@@ -1,94 +1,94 @@
 n(142703);
-var l = n(855986),
-    s = n(73153),
-    a = n(596344);
-let i = Object.freeze([]),
-    r = {},
-    o = {},
+var i = n(855986),
+    l = n(73153),
+    r = n(596344);
+let u = Object.freeze([]),
+    d = {},
     c = {},
-    u = {},
-    d = {};
-function m(e, t) {
-    let n = r[e];
-    return null != n && ((r[e] = n.filter((e) => e.id !== t)), delete o[t], delete c[t], n.length !== r[e].length);
+    o = {},
+    f = {},
+    a = {};
+function O(e, t) {
+    let n = d[e];
+    return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete c[t], delete o[t], n.length !== d[e].length);
 }
-function h(e, t) {
-    let n = r[e];
+function s(e, t) {
+    let n = d[e];
     if (null == n) return !1;
-    r[e] = n.map((e) => (e.id === t.id ? { ...e, ...t } : e));
-    let l = c[t.id];
-    null != l && null != u[l.id] && (u[l.id] = { ...u[l.id], ...t });
+    d[e] = n.map((e) => (e.id === t.id ? { ...e, ...t } : e));
+    let i = o[t.id];
+    null != i && null != f[i.id] && (f[i.id] = { ...f[i.id], ...t });
 }
-class f extends l.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "UploadStore";
     initialize() {
-        this.waitFor(a.A);
+        this.waitFor(r.A);
     }
     getFiles(e) {
-        return r[e] ?? i;
+        return d[e] ?? u;
     }
     getMessageForFile(e) {
-        return c[e];
+        return o[e];
     }
     getUploaderFileForMessageId(e) {
-        return u[e];
+        return f[e];
     }
     getUploadAttachments(e) {
-        if (null != e) return d[e];
+        if (null != e) return a[e];
     }
 }
-let p = new f(s.h, {
+let A = new _(l.h, {
     CONNECTION_OPEN: function () {
-        d = {};
+        a = {};
     },
     LOGOUT: function () {
-        d = {};
+        a = {};
     },
     UPLOAD_START: function (e) {
-        let { channelId: t, file: n, uploader: l, message: s } = e;
-        if (l._aborted || l._errored) return;
-        let a = r[t] ?? i;
-        if (((o[n.id] = l), (r[t] = [...a, n]), null == s)) return;
-        c[n.id] = s;
-        let { items: d } = n;
-        (null != d && (u[s.id] = { ...n, items: d }), s.nonce ?? s.id);
+        let { channelId: t, file: n, uploader: i, message: l } = e;
+        if (i._aborted || i._errored) return;
+        let r = d[t] ?? u;
+        if (((c[n.id] = i), (d[t] = [...r.filter((e) => e.id !== n.id), n]), null == l)) return;
+        o[n.id] = l;
+        let { items: a } = n;
+        (null != a && (f[l.id] = { ...n, items: a }), l.nonce ?? l.id);
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
-        h(t, n);
+        s(t, n);
     },
     UPLOAD_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
-        h(t, n);
+        s(t, n);
     },
     UPLOAD_COMPLETE: function (e) {
         let { channelId: t, file: n } = e;
-        return m(t, n.id);
+        return O(t, n.id);
     },
     UPLOAD_FAIL: function (e) {
         let { channelId: t, file: n } = e;
-        return m(t, n.id);
+        return O(t, n.id);
     },
     UPLOAD_CANCEL_REQUEST: function (e) {
         let { file: t } = e,
-            n = o[t.id];
+            n = c[t.id];
         if (null == n) return !1;
         setImmediate(() => n.cancel?.());
     },
     UPLOAD_ITEM_CANCEL_REQUEST: function (e) {
         let { file: t, itemId: n } = e,
-            l = o[t.id];
-        if (null == l) return !1;
-        setImmediate(() => l.cancelItem(n));
+            i = c[t.id];
+        if (null == i) return !1;
+        setImmediate(() => i.cancelItem(n));
     },
     UPLOAD_FILE_UPDATE: function (e) {
         let { channelId: t, file: n } = e,
-            l = c[n.id];
-        (null != l && (l.nonce ?? l.id), h(t, n));
+            i = o[n.id];
+        (null != i && (i.nonce ?? i.id), s(t, n));
     },
     UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
         let { file: t, messageId: n } = e;
-        u[n] = t;
+        f[n] = t;
     },
 });
-n.d(t, {}, { A: p });
+n.d(t, {}, { A: A });

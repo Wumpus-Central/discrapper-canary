@@ -45,7 +45,7 @@ var v = n(834757),
     x = n(346542),
     k = n(279208),
     F = n(917878),
-    B = n(433777),
+    B = n(425059),
     V = n(432005),
     H = n(521427),
     j = n(855986),
@@ -977,34 +977,42 @@ ${a}`),
             )
                 try {
                     let t = await (async function (e) {
-                        let { channelId: t, message: n, items: i, shouldUploadFailureSendNotification: r } = e,
-                            a = new B.A(),
-                            s = (0, V.rh)({ ...n, id: a._file.id });
-                        (a.on("start", (e) => {
-                            o.h.dispatch({ type: "UPLOAD_START", channelId: t, file: e, message: s, uploader: a });
+                        let {
+                                channelId: t,
+                                message: n,
+                                items: i,
+                                pendingUploadId: r,
+                                shouldUploadFailureSendNotification: a,
+                            } = e,
+                            s = new B.A();
+                        null != r && ((s.id = r), (s._file.id = r));
+                        let l = (0, V.rh)({ ...n, id: s._file.id });
+                        (s.on("start", (e) => {
+                            o.h.dispatch({ type: "UPLOAD_START", channelId: t, file: e, message: l, uploader: s });
                         }),
-                            a.on("progress", (e) => {
+                            s.on("progress", (e) => {
                                 o.h.dispatch({ type: "UPLOAD_PROGRESS", channelId: t, file: e });
                             }),
-                            a.on("error", (e, n, i, a) => {
+                            s.on("error", (e, n, i, r) => {
                                 o.h.dispatch({
                                     type: "UPLOAD_FAIL",
                                     channelId: t,
                                     file: e,
-                                    messageId: s.id,
-                                    shouldSendNotification: r,
+                                    messageId: l.id,
+                                    shouldSendNotification: a,
                                 });
                             }),
-                            a.on("complete", (e) => {
-                                a._aborted &&
+                            s.on("complete", (e) => {
+                                s._aborted &&
                                     o.h.dispatch({ type: "UPLOAD_COMPLETE", channelId: t, file: e, aborted: !0 });
                             }));
-                        let l = await a.uploadFiles(i);
-                        if (!a._aborted) return { attachments: l, uploader: a };
+                        let d = await s.uploadFiles(i);
+                        if (!s._aborted) return { attachments: d, uploader: s };
                     })({
                         channelId: e,
                         nonce: em,
                         items: k,
+                        pendingUploadId: n.pendingUploadId,
                         message: eg,
                         shouldUploadFailureSendNotification: !n.doNotNotifyOnError && void 0,
                     });

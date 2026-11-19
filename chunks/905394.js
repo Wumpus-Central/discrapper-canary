@@ -1,26 +1,26 @@
-n.d(t, { e: () => I, A: () => v });
+n.d(t, { e: () => v, A: () => I });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
-    i = n.n(a),
-    r = n(796873),
-    o = n.n(r),
+    r = n.n(a),
+    i = n(796873),
+    o = n.n(i),
     c = n(855986),
     u = n(911608),
     d = n(939249),
     m = n(789645),
     h = n(28863),
-    f = n(834730),
-    p = n(73153),
+    p = n(834730),
+    f = n(73153),
     g = n(31717),
-    A = n(399263);
-let C = {
+    C = n(399263);
+let A = {
     cancel(e, t) {
-        p.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
-        let n = A.A.getMessageForFile(t.id);
+        f.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
+        let n = C.A.getMessageForFile(t.id);
         null == n ||
             ("" === g.A.getDraft(n.channel_id, g.C.ChannelMessage) &&
-                p.h.dispatch({
+                f.h.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: n.channel_id,
                     draft: n.content,
@@ -30,76 +30,84 @@ let C = {
 };
 var x = n(46054),
     E = n(453771),
-    _ = n(792996),
-    N = n(745268);
-function j(e) {
+    j = n(792996),
+    _ = n(745268);
+function N(e) {
     let { filename: t } = e,
         s = (0, E.GD)(t),
         a = n(165025)(`./icon-file-${s}.svg`);
     return (0, l.jsx)("img", {
-        className: N.Kk,
+        className: _.Kk,
         src: a,
-        alt: _.intl.formatToPlainString(_.t.g6KdFv, { fileType: s }),
+        alt: j.intl.formatToPlainString(j.t.g6KdFv, { fileType: s }),
         title: s,
     });
 }
-function I(e) {
+function v(e) {
     let { channelId: t, file: n } = e,
-        a = (0, c.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
-        i = s.useMemo(() => {
+        a = (0, c.bG)([C.A], () => C.A.getMessageForFile(n.id)?.content),
+        r = s.useMemo(() => {
             let e = n.items;
             return null == e
-                ? _.intl.string(_.t.jfKTes)
+                ? j.intl.string(j.t.jfKTes)
                 : 1 === e.length && null != e[0].filename
                   ? e[0].filename
-                  : _.intl.formatToPlainString(_.t.D0noUt, { count: e.length });
+                  : j.intl.formatToPlainString(j.t.D0noUt, { count: e.length });
         }, [n.items]),
-        r = s.useCallback(() => {
-            C.cancel(t, n);
+        i = s.useCallback(() => {
+            A.cancel(t, n);
         }, [t, n]),
-        h = 100 === n.progress,
-        f = !h && n.currentSize > 0,
-        p = s.useMemo(() => (null == a || "" === a.trim() ? null : x.A.parse(a)), [a]);
+        h = !0 === n.isPreparing || 100 === n.progress,
+        p = !h && n.currentSize > 0,
+        f =
+            !0 === n.isPreparing && null != n.preparedTotal && n.preparedTotal > 1
+                ? j.intl.formatToPlainString(j.t.V9LZxW, { prepared: n.preparedCount ?? 0, total: n.preparedTotal })
+                : j.intl.string(j.t.jfKTes),
+        g = s.useMemo(() => (null == a || "" === a.trim() ? null : x.A.parse(a)), [a]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != p && (0, l.jsx)("div", { className: N.Qs, children: p }),
+            null != g && (0, l.jsx)("div", { className: _.Qs, children: g }),
             (0, l.jsx)("div", {
-                className: N.Ig,
+                className: _.Ig,
                 children: (0, l.jsxs)("div", {
-                    className: N.NJ,
+                    className: _.NJ,
                     children: [
-                        (0, l.jsx)(j, { filename: i }),
+                        (0, l.jsx)(N, { filename: r }),
                         (0, l.jsxs)("div", {
-                            className: N.Jg,
+                            className: _.Jg,
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: N.tP,
+                                    className: _.tP,
                                     children: [
-                                        (0, l.jsx)("div", { className: N.iW, children: i }),
-                                        f
+                                        (0, l.jsx)("div", { className: _.iW, children: r }),
+                                        p
                                             ? (0, l.jsx)("div", {
-                                                  className: N.Ej,
+                                                  className: _.Ej,
                                                   children: `\u{2014} ${o().filesize(n.currentSize)}`,
                                               })
                                             : null,
                                     ],
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: N.L$,
-                                    children: h
-                                        ? _.intl.string(_.t.jfKTes)
-                                        : (0, l.jsx)(u.z, { value: n.progress, "aria-label": i }),
+                                    className: _.L$,
+                                    children:
+                                        !0 === n.preparationFailed
+                                            ? j.intl.string(j.t.B3vFdU)
+                                            : h
+                                              ? f
+                                              : (0, l.jsx)(u.z, { value: n.progress, "aria-label": r }),
                                 }),
                             ],
                         }),
                         h
                             ? null
                             : (0, l.jsx)(d.D, {
-                                  onClick: r,
+                                  onClick: i,
+                                  "aria-label": j.intl.string(!0 === n.preparationFailed ? j.t.oyYWHE : j.t["ETE/oC"]),
                                   children: (0, l.jsx)(m.XSmallIcon, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: N.x7,
+                                      className: _.x7,
                                   }),
                               }),
                     ],
@@ -108,29 +116,29 @@ function I(e) {
         ],
     });
 }
-let v = function (e) {
-    let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: c, renderAdjacentContent: u } = e;
+let I = function (e) {
+    let { className: t, url: n, fileName: s, fileSize: a, onClick: i, onContextMenu: c, renderAdjacentContent: u } = e;
     return (0, l.jsxs)("div", {
-        className: i()(N.Ig, t),
+        className: r()(_.Ig, t),
         children: [
             (0, l.jsxs)("div", {
-                className: N.NJ,
+                className: _.NJ,
                 children: [
-                    (0, l.jsx)(j, { filename: s }),
+                    (0, l.jsx)(N, { filename: s }),
                     (0, l.jsxs)("div", {
-                        className: N.Jg,
+                        className: _.Jg,
                         children: [
                             (0, l.jsx)("div", {
-                                className: N.RT,
+                                className: _.RT,
                                 children: (0, l.jsx)(h.Anchor, {
-                                    className: N.AD,
+                                    className: _.AD,
                                     href: n,
-                                    onClick: r,
+                                    onClick: i,
                                     onContextMenu: c,
                                     children: s,
                                 }),
                             }),
-                            (0, l.jsx)(f.E, {
+                            (0, l.jsx)(p.E, {
                                 variant: "body-xs/normal",
                                 color: "text-muted",
                                 children: o().filesize(a),

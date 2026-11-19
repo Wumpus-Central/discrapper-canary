@@ -1,30 +1,42 @@
 var l = n(477900),
     a = n(582128),
-    r = n(821609),
-    i = n(688810),
-    u = n(609174),
-    s = n(721610),
-    c = n(686320),
-    o = n(829903);
+    r = n(855986),
+    i = n(821609),
+    s = n(688810),
+    u = n(419490),
+    c = n(609174),
+    o = n(721610),
+    d = n(686320),
+    f = n(240620);
 n.d(
     t,
     {},
     {
         e: function (e) {
             let { variant: t = "primary" } = e,
-                n = (0, u.Y_)(),
-                { analyticsLocations: d } = (0, i.Ay)(),
-                { picker: f } = a.useContext(s.$),
-                { label: p, icon: m } = (0, c.$)(f?.action),
-                v = a.useCallback(
+                n = (0, c.Y_)(),
+                p = (0, r.bG)([u.Ay], () => u.Ay.isClipExporting(n.id)),
+                { analyticsLocations: m } = (0, s.Ay)(),
+                { picker: v } = a.useContext(o.$),
+                { label: h, icon: x } = (0, d.$)(v?.action),
+                C = a.useCallback(
                     (e) => {
-                        (e.stopPropagation(), e.preventDefault(), null != f)
-                            ? f.onPick(n)
-                            : (0, o.K)([n], { analyticsLocations: d });
+                        if ((e.stopPropagation(), e.preventDefault(), !p)) {
+                            if (null != v) return void v.onPick(n);
+                            (0, f.K)([n], { analyticsLocations: m });
+                        }
                     },
-                    [n, d, f],
+                    [n, m, v, p],
                 );
-            return (0, l.jsx)(r.$, { onClick: v, icon: m, variant: t, size: "sm", text: p, fullWidth: !0 });
+            return (0, l.jsx)(i.$, {
+                disabled: p,
+                onClick: C,
+                icon: x,
+                variant: t,
+                size: "sm",
+                text: h,
+                fullWidth: !0,
+            });
         },
     },
 );

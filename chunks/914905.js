@@ -5,12 +5,12 @@ var l = n(477900),
     s = n.n(r),
     a = n(855986),
     o = n(939249),
-    u = n(192308),
-    c = n(952270),
-    d = n(39623),
-    h = n(22231),
-    m = n(241326),
-    f = n(834730),
+    u = n(834730),
+    c = n(192308),
+    d = n(952270),
+    h = n(39623),
+    m = n(22231),
+    f = n(241326),
     p = n(608299),
     g = n(478531),
     x = n(607470),
@@ -192,34 +192,36 @@ function R(e) {
 }
 function w(e) {
     let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
-        [u, c] = i.useState(!1);
-    return t.isImage && t.item.platform === E.x.WEB
-        ? (0, l.jsx)(j, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
-        : !u && t.isVideo && t.item.platform === E.x.WEB
-          ? (0, l.jsx)(R, {
-                file: t.item.file,
-                size: n,
-                alt: t.description,
-                spoiler: t.spoiler,
-                onMouseEnter: r,
-                onVideoLoadError: () => c(!0),
-                clip: a,
-                guildId: o,
-            })
-          : (0, l.jsx)("div", {
-                onMouseEnter: r,
-                className: s()(T.icon, T[t.classification ?? ""], {
-                    [T.imageSmall]: n === I.L.SMALL,
-                    [T.sizeXSmall]: n === I.L.XSMALL,
-                    [T.sizeXXSmall]: n === I.L.XXSMALL,
-                }),
-                children: (0, l.jsx)("div", {
-                    className: T.tags,
-                    children: t.spoiler
-                        ? (0, l.jsx)("span", { className: T.altTag, children: v.intl.string(v.t["F+x38C"]) })
-                        : null,
-                }),
-            });
+        [c, d] = i.useState(!1);
+    return t.isPreparing
+        ? (0, l.jsx)(u.E, { variant: "body-sm/normal", children: v.intl.string(v.t.jfKTes) })
+        : t.isImage && t.item.platform === E.x.WEB
+          ? (0, l.jsx)(j, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
+          : !c && t.isVideo && t.item.platform === E.x.WEB
+            ? (0, l.jsx)(R, {
+                  file: t.item.file,
+                  size: n,
+                  alt: t.description,
+                  spoiler: t.spoiler,
+                  onMouseEnter: r,
+                  onVideoLoadError: () => d(!0),
+                  clip: a,
+                  guildId: o,
+              })
+            : (0, l.jsx)("div", {
+                  onMouseEnter: r,
+                  className: s()(T.icon, T[t.classification ?? ""], {
+                      [T.imageSmall]: n === I.L.SMALL,
+                      [T.sizeXSmall]: n === I.L.XSMALL,
+                      [T.sizeXXSmall]: n === I.L.XXSMALL,
+                  }),
+                  children: (0, l.jsx)("div", {
+                      className: T.tags,
+                      children: t.spoiler
+                          ? (0, l.jsx)("span", { className: T.altTag, children: v.intl.string(v.t["F+x38C"]) })
+                          : null,
+                  }),
+              });
 }
 n.d(
     t,
@@ -245,7 +247,7 @@ n.d(
             }
             function O(e) {
                 (e.stopPropagation(), k)
-                    ? (0, u.mM)(async () => {
+                    ? (0, c.mM)(async () => {
                           let { default: e } = await Promise.all([
                               n.e(409495),
                               n.e(685432),
@@ -257,21 +259,22 @@ n.d(
                               n.e(201074),
                               n.e(879641),
                               n.e(498167),
+                              n.e(3952),
                               n.e(918024),
                               n.e(124006),
                               n.e(480436),
                               n.e(736926),
                               n.e(858337),
                               n.e(3131),
+                              n.e(28852),
                               n.e(220287),
                               n.e(757598),
                               n.e(838090),
                               n.e(177104),
                               n.e(203930),
                               n.e(903663),
-                              n.e(647177),
                               n.e(901922),
-                              n.e(817551),
+                              n.e(443906),
                               n.e(546601),
                               n.e(507406),
                               n.e(466147),
@@ -291,7 +294,7 @@ n.d(
                           ]).then(n.bind(n, 723028));
                           return (n) => (0, l.jsx)(e, { ...n, channelId: t, clipId: A.id, onEdit: R });
                       })
-                    : (0, u.mM)(async () => {
+                    : (0, c.mM)(async () => {
                           let { default: e } = await Promise.all([
                               n.e(142753),
                               n.e(865429),
@@ -322,12 +325,12 @@ n.d(
                                       p.A.update(t, o.id, r, { spoiler: !o.spoiler });
                                   },
                                   children: o.spoiler
-                                      ? (0, l.jsx)(c.EyeSlashIcon, {
+                                      ? (0, l.jsx)(d.EyeSlashIcon, {
                                             size: "md",
                                             color: "currentColor",
                                             className: s()({ [T.actionBarIcon]: _ }),
                                         })
-                                      : (0, l.jsx)(d.EyeIcon, {
+                                      : (0, l.jsx)(h.EyeIcon, {
                                             size: "xs",
                                             color: "currentColor",
                                             className: s()({ [T.actionBarIcon]: _ }),
@@ -339,7 +342,7 @@ n.d(
                                   className: s()({ [T.action]: _ }),
                                   tooltip: k ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
                                   onClick: O,
-                                  children: (0, l.jsx)(h.PencilIcon, {
+                                  children: (0, l.jsx)(m.PencilIcon, {
                                       size: "xs",
                                       color: "currentColor",
                                       className: s()({ [T.actionBarIcon]: _ }),
@@ -351,7 +354,7 @@ n.d(
                             tooltip: k ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
                             onClick: R,
                             dangerous: !0,
-                            children: (0, l.jsx)(m.TrashIcon, {
+                            children: (0, l.jsx)(f.TrashIcon, {
                                 size: "md",
                                 color: "currentColor",
                                 className: s()({ [T.actionBarIcon]: _ }),
@@ -372,7 +375,7 @@ n.d(
                         (0, l.jsx)("div", {
                             className: T.filenameContainer,
                             "aria-hidden": !0,
-                            children: (0, l.jsx)(f.E, {
+                            children: (0, l.jsx)(u.E, {
                                 className: T.filename,
                                 variant: "body-sm/normal",
                                 children: null != x ? x : k ? A.name : o.filename,

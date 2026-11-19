@@ -12,6 +12,7 @@ var i,
         (i[(i.IMAGE_EDITOR = 2)] = "IMAGE_EDITOR"),
         i);
 class _ extends r.EventEmitter {
+    isPreparing = !1;
     id;
     uniqueId;
     filename;

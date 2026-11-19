@@ -121,6 +121,7 @@ class U {
 }
 i = n(122924).A;
 class w extends C.Ay {
+    preparation;
     status = "NOT_STARTED";
     channelId;
     responseUrl;

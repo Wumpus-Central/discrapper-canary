@@ -44,7 +44,7 @@ var Q = n(336590),
     O = n(138298),
     V = n(799704),
     q = n(47167),
-    D = n(699344),
+    D = n(5206),
     F = n(792996),
     K = n(172039),
     L = n(612960);
@@ -248,12 +248,12 @@ var eL = n(707539),
     e7 = n(538355),
     e9 = n(302031),
     e8 = n(253932),
-    e3 = n(576705),
-    e4 = n(652215);
+    e1 = n(576705),
+    e3 = n(652215);
 n(838541);
-var e1 = n(282573),
-    e6 = n(165648);
-let e5 = { formatInline: !0, noStyleAndInteraction: !0 },
+var e4 = n(282573),
+    e5 = n(165648);
+let e6 = { formatInline: !0, noStyleAndInteraction: !0 },
     e2 = s.memo(function (e) {
         let { channel: t } = e,
             { loaded: n, error: s, message: i } = (0, eZ.I)(t),
@@ -265,14 +265,14 @@ let e5 = { formatInline: !0, noStyleAndInteraction: !0 },
                 }),
                 [i],
             ),
-            d = (0, o.bG)([e3.A], () => e3.A.can(e4.xBc.MANAGE_MESSAGES, t)),
+            d = (0, o.bG)([e1.A], () => e1.A.can(e3.xBc.MANAGE_MESSAGES, t)),
             u = e8.gs.useSetting(),
-            { content: h } = (0, e7.A)(i ?? null, e5),
+            { content: h } = (0, e7.A)(i ?? null, e6),
             g = i?.content != null && "" !== i.content ? h : null,
             A = null;
         if (s)
             A = (0, l.jsx)(m.E, {
-                className: e1.G4,
+                className: e4.G4,
                 variant: "body-sm/normal",
                 color: "text-muted",
                 children: F.intl.string(F.t.BZHld2),
@@ -280,22 +280,22 @@ let e5 = { formatInline: !0, noStyleAndInteraction: !0 },
         else if (n)
             if (null != i && r)
                 A = (0, l.jsx)(m.E, {
-                    className: e1.G4,
+                    className: e4.G4,
                     variant: "body-sm/normal",
                     color: "text-muted",
                     children: F.intl.string(F.t["WPe+xL"]),
                 });
             else if (null != i && c)
                 A = (0, l.jsx)(m.E, {
-                    className: e1.G4,
+                    className: e4.G4,
                     variant: "body-sm/normal",
                     color: "text-muted",
                     children: F.intl.string(F.t.uxrh1O),
                 });
             else if (null != i) {
-                let { contentPlaceholder: e, renderedContent: t } = (0, e0.o)(i, g, r, c, a()(e1.BK, e6.tZ), {
-                    leadingIconClass: e1.AF,
-                    trailingIconClass: e1.AF,
+                let { contentPlaceholder: e, renderedContent: t } = (0, e0.o)(i, g, r, c, a()(e4.BK, e5.tZ), {
+                    leadingIconClass: e4.AF,
+                    trailingIconClass: e4.AF,
                     iconSize: 20,
                 });
                 A =
@@ -303,26 +303,26 @@ let e5 = { formatInline: !0, noStyleAndInteraction: !0 },
                         ? (0, l.jsx)(m.E, {
                               variant: "body-sm/normal",
                               color: "text-muted",
-                              className: e1.BK,
+                              className: e4.BK,
                               children: t,
                           })
                         : (0, l.jsx)(m.E, {
                               tag: "span",
                               variant: "body-sm/normal",
                               color: "text-muted",
-                              className: e1.G4,
+                              className: e4.G4,
                               children: e,
                           });
             } else
                 A = (0, l.jsx)(m.E, {
-                    className: e1.G4,
+                    className: e4.G4,
                     variant: "body-sm/normal",
                     color: "text-muted",
                     children: F.intl.string(F.t["0KfDxM"]),
                 });
         else A = null;
         let E = (0, e$.A)(u, d);
-        return (0, l.jsx)(e9.Bs.Provider, { value: E, children: (0, l.jsx)(eJ.M, { className: e1.JY, children: A }) });
+        return (0, l.jsx)(e9.Bs.Provider, { value: E, children: (0, l.jsx)(eJ.M, { className: e4.JY, children: A }) });
     });
 var te = n(599036);
 function tt(e) {
@@ -509,13 +509,13 @@ function ta(e) {
         onClick: function (e) {
             (e.stopPropagation(),
                 O.A.openPrivateChannelAsSidebar({ channelId: s.id, baseChannelId: V.fe, hasSingleMessageRequest: a }),
-                ec.default.track(e4.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                ec.default.track(e3.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: s.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eR._.dispatch(e4.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
+                    eR._.dispatch(e3.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
                 }, 0));
         },
         children: (e) => (0, l.jsx)(ti, { active: e, user: i, channel: s, isRestricted: r }),
@@ -600,13 +600,13 @@ function th(e) {
         onClick: function (e) {
             (e.stopPropagation(),
                 O.A.openPrivateChannelAsSidebar({ channelId: s.id, baseChannelId: V.fe, hasSingleMessageRequest: a }),
-                ec.default.track(e4.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                ec.default.track(e3.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: s.id,
                     other_user_id: i.id,
                 }),
                 setTimeout(() => {
-                    eR._.dispatch(e4.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
+                    eR._.dispatch(e3.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
                 }, 0));
         },
         children: (e) => (0, l.jsx)(tu, { active: e, user: i, channel: s }),
@@ -660,7 +660,7 @@ function tg() {
             p(d.map((e) => e.channel.id));
         }, [d, p]);
     (0, b.Ay)(() => {
-        (ec.default.track(e4.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
+        (ec.default.track(e3.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
             ee.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW }));
     });
     let _ = s.useCallback(
@@ -963,9 +963,9 @@ let tb = (0, p.A)(function (e) {
     let { width: t } = e,
         n = (0, eE.W)();
     (0, b.Ay)(() => {
-        (j.I(e4.BVt.MESSAGE_REQUESTS),
+        (j.I(e3.BVt.MESSAGE_REQUESTS),
             (0, en.d0)("message-requests"),
-            ec.default.track(e4.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            ec.default.track(e3.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             ee.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW }));
     });
     let i = (0, o.bG)([el.A], () => el.A.theme),
