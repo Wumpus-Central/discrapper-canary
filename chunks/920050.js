@@ -30,6 +30,7 @@
             SUPER_REACTIONS_CARD_ID: "superReactions",
             TENURE_BADGE_CARD_ID: "tenureBadge",
             VIDEO_BACKGROUNDS_CARD_ID: "videoBackgrounds",
+            VOICEMOD_3PP_CARD_ID: "voicemod3PP",
             XBOX_PREMIUM_PERK_CARD_ID: "xgppPerk",
             XBOX_PREMIUM_PERK_HERO_ID: "xgppHero",
             YOUTUBE_3PP_CARD_ID: "youtube3PP",

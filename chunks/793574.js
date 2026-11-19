@@ -684,6 +684,7 @@ var i,
         (i.CHAT_TYPING_INDICATOR = "chat typing indicator"),
         (i.BEST_BUY_PREMIUM_TAB_POPOVER = "best buy premium tab popover"),
         (i.CODE_BLURPLE_PREMIUM_TAB_POPOVER = "call of duty blueprint premium tab popover"),
+        (i.VOICEMOD_PREMIUM_TAB_POPOVER = "voicemod premium tab popover"),
         (i.FRIENDS_SIDEBAR = "friends sidebar"),
         i);
 n.d(t, {}, { A: r });

@@ -25,6 +25,7 @@ i.r(
         xboxGradient: "xboxGradient_iPIbS8",
         youtubeGradient: "youtubeGradient_iPIbS8",
         macaronGradient: "macaronGradient_iPIbS8",
+        voicemodGradient: "voicemodGradient_iPIbS8",
         overlayTextBox: "overlayTextBox_iPIbS8",
         backgroundVideoContainer: "backgroundVideoContainer_iPIbS8",
         backgroundVideo: "backgroundVideo_iPIbS8",

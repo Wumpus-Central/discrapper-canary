@@ -4,8 +4,8 @@ var a = n(477900),
     r = n.n(i),
     l = n(435558),
     d = n(831259),
-    c = n(805251),
-    o = n(821609),
+    o = n(805251),
+    c = n(821609),
     u = n(745396),
     m = n(834730),
     b = n(534514),
@@ -13,14 +13,14 @@ var a = n(477900),
     f = n(315629),
     h = n(241524),
     N = n(303136),
-    E = n(607470),
-    g = n(129230),
+    g = n(607470),
+    E = n(129230),
     x = n(676279),
     R = n(406860),
-    A = n(542348),
+    A = n(382031),
     _ = n(652215),
-    v = n(693591),
-    P = n(505051);
+    O = n(693591),
+    v = n(505051);
 n.d(
     t,
     {},
@@ -30,8 +30,8 @@ n.d(
                     name: t,
                     title: n,
                     caption: i,
-                    description: I,
-                    descriptionCta: O,
+                    description: P,
+                    descriptionCta: I,
                     previewImage: C,
                     videoUrl: M,
                     shouldLoadVideo: T,
@@ -43,10 +43,10 @@ n.d(
                     badgeVariant: B = "gradient",
                     size: k,
                     backgroundVideoUrl: G,
-                    previewImageStyle: Y = A.Tb.CONTAINED,
-                    actions: w,
-                    mediaRef: D,
-                    boxArtContainerClassName: V,
+                    previewImageStyle: V = A.Tb.CONTAINED,
+                    actions: Y,
+                    mediaRef: w,
+                    boxArtContainerClassName: D,
                     containerClassName: H,
                 } = e,
                 X = (0, x.TM)(),
@@ -54,18 +54,18 @@ n.d(
                 F = s.useRef(0),
                 { sectionRef: z, handleVisibilityChange: K } = (0, R.A)({ boxType: t }),
                 q = (0, h.A)("(min-width: 1140px)"),
-                $ = Y === A.Tb.OVERLAY && (k !== A.A0.LARGE || !q),
-                J = k === A.A0.LARGE && q && Y === A.Tb.OVERLAY,
-                Q = null != G && q && k === A.A0.LARGE,
-                Z = s.useMemo(
+                $ = V === A.Tb.OVERLAY && (k !== A.A0.LARGE || !q),
+                J = k === A.A0.LARGE && q && V === A.Tb.OVERLAY,
+                Z = null != G && q && k === A.A0.LARGE,
+                Q = s.useMemo(
                     () =>
                         (0, l.debounce)(() => {
-                            g.default.track(_.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                            E.default.track(_.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                         }, 800),
                     [t],
                 ),
                 ee = (0, a.jsx)("div", {
-                    className: r()(P.captionWrapper, P[`${k}`]),
+                    className: r()(v.captionWrapper, v[`${k}`]),
                     children:
                         "string" == typeof i
                             ? (0, a.jsx)(m.E, { variant: "body-sm/normal", color: "text-muted", children: i })
@@ -73,29 +73,29 @@ n.d(
                 });
             function et() {
                 (null == W.current || y || ((W.current.currentTime = F.current), W.current.play()),
-                    y || D?.current?.play());
+                    y || w?.current?.play());
             }
             function en() {
                 (null == W.current || y || ((F.current = W.current.currentTime), W.current.pause()),
-                    y || D?.current?.pause());
+                    y || w?.current?.pause());
             }
             let ea = k === A.A0.LARGE ? "heading-xxl/semibold" : "heading-xl/semibold";
             function es() {
-                let e = null != O && null != S,
-                    t = null != w && w.length > 0;
+                let e = null != I && null != S,
+                    t = null != Y && Y.length > 0;
                 if (!e && !t) return null;
-                let n = e ? [{ variant: "secondary", onClick: S, text: O }] : w;
+                let n = e ? [{ variant: "secondary", onClick: S, text: I }] : Y;
                 return (0, a.jsx)("div", {
-                    className: P.bentoBoxButton,
+                    className: v.bentoBoxButton,
                     children: (0, a.jsx)(p.e, {
                         children: n?.map((e, t) => {
                             let { onClick: n, ...s } = e;
                             return (0, a.jsx)(
-                                o.$,
+                                c.$,
                                 {
                                     ...s,
                                     onClick: function (e) {
-                                        (Z(), n?.(e));
+                                        (Q(), n?.(e));
                                     },
                                 },
                                 t,
@@ -106,7 +106,7 @@ n.d(
             }
             function ei() {
                 return (0, a.jsxs)("div", {
-                    className: r()(P.textBox, P[`${k}`], J && P.overlayTextBox),
+                    className: r()(v.textBox, v[`${k}`], J && v.overlayTextBox),
                     children: [
                         (0, a.jsxs)("div", {
                             children: [
@@ -114,9 +114,9 @@ n.d(
                                     ? null
                                     : "gradient" === B
                                       ? (0, a.jsx)("div", {
-                                            className: P.badgeContainer,
+                                            className: v.badgeContainer,
                                             children: (0, a.jsx)("div", {
-                                                className: P.badge,
+                                                className: v.badge,
                                                 children: (0, a.jsx)(b.D, {
                                                     variant: "body-xs/semibold",
                                                     color: "text-overlay-light",
@@ -125,14 +125,14 @@ n.d(
                                             }),
                                         })
                                       : (0, a.jsx)("div", {
-                                            className: P.badgeContainer,
-                                            children: (0, a.jsx)(c.E, { type: { text: L }, variant: B }),
+                                            className: v.badgeContainer,
+                                            children: (0, a.jsx)(o.E, { type: { text: L }, variant: B }),
                                         }),
                                 null != i && k === A.A0.LARGE && ee,
                                 (0, a.jsx)(b.D, {
                                     variant: ea,
                                     color: "text-strong",
-                                    className: P.header,
+                                    className: v.header,
                                     children: n,
                                 }),
                             ],
@@ -140,8 +140,8 @@ n.d(
                         (0, a.jsx)(m.E, {
                             variant: "body-md/medium",
                             color: "text-strong",
-                            className: P.description,
-                            children: I,
+                            className: v.description,
+                            children: P,
                         }),
                         (0, a.jsx)(es, {}),
                     ],
@@ -149,28 +149,28 @@ n.d(
             }
             function er() {
                 return (0, a.jsxs)("div", {
-                    className: r()(P.boxArtContainer, P[`${k}`], V),
+                    className: r()(v.boxArtContainer, v[`${k}`], D),
                     children: [
                         null == M && (0, u.O)(C) && "string" != typeof C
                             ? C
                             : (0, a.jsx)(
-                                  E.A,
+                                  g.A,
                                   {
                                       playsInline: !0,
                                       preload: T ? "auto" : "none",
                                       muted: !0,
                                       poster: C,
                                       loop: !0,
-                                      className: r()(J ? P.overlayImage : P.boxVideo, { [U]: null != U }),
+                                      className: r()(J ? v.overlayImage : v.boxVideo, { [U]: null != U }),
                                       ref: W,
-                                      children: (0, a.jsx)("source", { src: M, type: X ? v.a.MP4 : v.a.WEBM }),
+                                      children: (0, a.jsx)("source", { src: M, type: X ? O.a.MP4 : O.a.WEBM }),
                                   },
                                   M,
                               ),
                         null != i &&
                             k !== A.A0.LARGE &&
                             (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)("div", { className: P.captionGradient, "aria-hidden": !0 }), ee],
+                                children: [(0, a.jsx)("div", { className: v.captionGradient, "aria-hidden": !0 }), ee],
                             }),
                     ],
                 });
@@ -184,13 +184,13 @@ n.d(
                     ref: z,
                     id: t,
                     className: r()(
-                        P.backgroundColor,
-                        P.boxContainer,
-                        P[`${k}`],
-                        P.gradientBackground,
+                        v.backgroundColor,
+                        v.boxContainer,
+                        v[`${k}`],
+                        v.gradientBackground,
                         H,
-                        $ && P.overlayImageMode,
-                        J && P.overlayMode,
+                        $ && v.overlayImageMode,
+                        J && v.overlayMode,
                     ),
                     onMouseEnter: et,
                     onFocus: et,
@@ -198,12 +198,12 @@ n.d(
                     onMouseLeave: en,
                     color: "purple",
                     children: [
-                        Q &&
+                        Z &&
                             (0, a.jsx)("div", {
-                                className: P.backgroundVideoContainer,
+                                className: v.backgroundVideoContainer,
                                 children: (0, a.jsx)(N.A, {
                                     preload: T ? "auto" : "none",
-                                    className: P.backgroundVideo,
+                                    className: v.backgroundVideo,
                                     src: G,
                                 }),
                             }),

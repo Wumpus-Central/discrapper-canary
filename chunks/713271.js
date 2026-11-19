@@ -16,5 +16,6 @@ var i,
         (i.MACARON = "macaron"),
         (i.CODE_BLURPLE = "codeBlurple"),
         (i.HEXAGON_CAMPAIGN = "hexagonCampaign"),
+        (i.VOICEMOD = "voicemod"),
         i);
 n.d(t, {}, { N: a });
