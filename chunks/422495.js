@@ -1777,7 +1777,15 @@ let ln = (e) => {
         eg = null != lt(t, "ignore_users") && ("message" === l.name || "first_dm" === l.name || "user" === l.name),
         ep = (0, A.Z)(),
         e_ = (0, j.GR)(),
-        ev = ep && e_.length > 0 && null != lt(t, "share_with_parents");
+        ev = ep && e_.length > 0 && null != lt(t, "share_with_parents"),
+        eb = lt(t, "success"),
+        ej = (0, n.jsxs)(n.Fragment, {
+            children: [
+                (0, n.jsx)(tY, { element: eb }),
+                (0, n.jsx)(te, { node: t, isModeratorReport: P, isTidaReport: B, hideTitle: !0 }),
+                (0, n.jsx)(tn, { node: t }),
+            ],
+        });
     return (0, n.jsxs)("div", {
         className: ec.kL,
         onKeyDown: em,
@@ -1790,21 +1798,19 @@ let ln = (e) => {
                         : null,
             }),
             (0, n.jsx)("div", { className: ec.b, children: (0, n.jsx)(_.J, { onClick: u }) }),
-            (0, n.jsxs)(s.rQ, {
-                "data-migration-pending": !0,
-                separator: !1,
-                direction: b.A.Direction.VERTICAL,
-                className: ec.wx,
-                children: [
-                    (0, n.jsx)(tY, { element: lt(t, "success") }),
-                    (0, n.jsx)(te, { node: t, isModeratorReport: P, isTidaReport: B, hideTitle: !0 }),
-                    (0, n.jsx)(tn, { node: t }),
-                ],
-            }),
+            null == eb &&
+                (0, n.jsx)(s.rQ, {
+                    "data-migration-pending": !0,
+                    separator: !1,
+                    direction: b.A.Direction.VERTICAL,
+                    className: ec.wx,
+                    children: ej,
+                }),
             (0, n.jsxs)(s.$m, {
                 "data-migration-pending": !0,
                 className: ec.rf,
                 children: [
+                    null != eb && (0, n.jsx)("div", { className: ec.lM, children: ej }),
                     null != T && (0, n.jsx)(t0, { element: T }),
                     null != G && (0, n.jsx)(tJ, { element: G }),
                     null != lt(t, "message_preview") &&

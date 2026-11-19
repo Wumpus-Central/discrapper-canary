@@ -39,14 +39,27 @@ screen and (max-width:485px) {
 }
 
 .body_5tvYxx {
-    display: flex;
-    flex-direction: column;
     gap: var(--space-16);
     padding: 0 var(--space-24)
 }
 
+.body_5tvYxx,
+.successHeader_5tvYxx {
+    display: flex;
+    flex-direction: column
+}
+
+.successHeader_5tvYxx {
+    align-items: flex-start;
+    margin-bottom: var(--space-8)
+}
+
 .body_5tvYxx:has(:not([aria-hidden])) {
     padding-top: var(--space-24)
+}
+
+.body_5tvYxx:has(>.successHeader_5tvYxx) {
+    padding-top: 0
 }
 
 .body_5tvYxx:last-child {
@@ -143,4 +156,4 @@ screen and (max-width:485px) {
     width: 24px
 }
 
-/*# sourceMappingURL=45907cdf05274f2e.css.map*/
+/*# sourceMappingURL=f5940e3c39b0fcf1.css.map*/

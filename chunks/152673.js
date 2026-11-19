@@ -4,6 +4,7 @@ t.exports = {
     b: "closeButton_5tvYxx",
     wx: "header_5tvYxx",
     rf: "body_5tvYxx",
+    lM: "successHeader_5tvYxx",
     qr: "footer_5tvYxx",
     qI: "listContainer_5tvYxx",
     lD: "listElement_5tvYxx",
