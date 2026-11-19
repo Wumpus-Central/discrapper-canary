@@ -14,19 +14,19 @@ var l = n(477900),
     p = n(579940),
     g = n(915089),
     x = n(462446),
-    E = n(750506),
-    S = n(513609),
-    y = n(71393),
-    C = n(597184),
-    A = n(105330),
+    S = n(750506),
+    y = n(513609),
+    E = n(71393),
+    A = n(597184),
+    C = n(105330),
     b = n(265431),
     I = n(151596),
     v = n(861382),
     N = n(355622),
     T = n(339200),
     k = n(696451),
-    _ = n(576705),
-    j = n(351906),
+    j = n(576705),
+    _ = n(351906),
     R = n(287809),
     w = n(31498),
     O = n(116903),
@@ -43,7 +43,7 @@ function B(e) {
         { ref: r, ...B } = e,
         { channel: F, type: G, editorHeight: K, onVisibilityChange: H, editorScrollerRef: z, barsHeight: q } = B,
         $ = (0, g.GV)(),
-        Q = (0, o.bG)([y.A], () => y.A.getGuild(F.guild_id) ?? null, [F.guild_id]),
+        Q = (0, o.bG)([E.A], () => E.A.getGuild(F.guild_id) ?? null, [F.guild_id]),
         Z = i.useRef(null),
         [X, Y, J] = (function (e, t, n) {
             let { channel: l, type: r } = e,
@@ -54,11 +54,11 @@ function B(e) {
                     return (null != l.guild_id && null != e ? k.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [_.A, j.A],
+                    [j.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === N.oU.RULES_INPUT || _.A.can(P.xBc.MENTION_EVERYONE, l),
-                        hidePersonalInformation: j.A.hidePersonalInformation,
+                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(P.xBc.MENTION_EVERYONE, l),
+                        hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
                 ),
@@ -80,8 +80,8 @@ function B(e) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,
                                 n =
-                                    e !== C.e.MANUAL &&
-                                    (e !== C.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
+                                    e !== A.e.MANUAL &&
+                                    (e !== A.e.AUTO_WHEN_FILTERED || 0 !== l.query.queryText.length);
                             l.isVisible && (!0 !== t || !1 !== n) && !0 !== i
                                 ? (u.setFocus("0"), r?.(0))
                                 : (u.setFocus(null), r?.(null));
@@ -117,17 +117,17 @@ function B(e) {
                         }, [l.query?.type, l.query?.queryText, l.query?.isLoading, l.isVisible, l.isInitialAfterError]),
                         u
                     );
-                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => A.setSelectedIndex(e) }),
+                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => C.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
-                E = e.editorRef.current?.getSlateEditor(),
-                S = null;
-            null != E && (S = T.VW.getSelectedParentOfType(E, w.mk)?.[0] ?? null);
-            let y = {
+                S = e.editorRef.current?.getSlateEditor(),
+                y = null;
+            null != S && (y = T.VW.getSelectedParentOfType(S, w.mk)?.[0] ?? null);
+            let E = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
                     activeCommandOption: f,
-                    activeInlineAutocompleteInput: S,
+                    activeInlineAutocompleteInput: y,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
@@ -145,43 +145,43 @@ function B(e) {
                             ? (0, I.AA)({ [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, f.name)
                             : "",
                 },
-                [A] = i.useState(() => new w.Ay(y));
+                [C] = i.useState(() => new w.Ay(E));
             return (
                 i.useEffect(() => {
-                    A.updateProps(y);
+                    C.updateProps(E);
                 }),
-                i.useImperativeHandle(t, () => A, [A]),
-                i.useEffect(() => () => A.unmount(), [A]),
+                i.useImperativeHandle(t, () => C, [C]),
+                i.useEffect(() => () => C.unmount(), [C]),
                 i.useEffect(() => {
                     function e(e) {
                         return a(e);
                     }
                     return (
-                        A.on("change", e),
-                        A.on("update", u),
+                        C.on("change", e),
+                        C.on("update", u),
                         () => {
-                            (A.off("change", e), A.off("update", u));
+                            (C.off("change", e), C.off("update", u));
                         }
                     );
-                }, [u, A]),
+                }, [u, C]),
                 i.useEffect(() => {
                     let e = s.query?.typeInfo.stores;
                     if (null != e) {
                         function t() {
-                            return A.queryResults();
+                            return C.queryResults();
                         }
                         for (let n of e) n.addChangeListener(t);
                         return () => {
                             for (let n of e) n.removeChangeListener(t);
                         };
                     }
-                }, [A, s.query?.typeInfo]),
-                [s, A, g]
+                }, [C, s.query?.typeInfo]),
+                [s, C, g]
             );
         })({ ...B, guild: Q }, r, Z),
-        ee = G.autocomplete?.forceChatLayer ? S.Ay : E.Ay,
+        ee = G.autocomplete?.forceChatLayer ? y.Ay : S.Ay,
         et = i.useMemo(() => {
-            if (!X.isVisible || X.query?.type !== C.DB.MENTIONS) return null;
+            if (!X.isVisible || X.query?.type !== A.DB.MENTIONS) return null;
             let e = X.query.results.users;
             return (
                 e?.map((e) => {
@@ -197,7 +197,7 @@ function B(e) {
         }, [et, n]));
     let en = (0, f.aI)(X.selectedIndex);
     (0, p.gf)($, X.isVisible, en);
-    let el = (0, A.l)({ editorHeight: K, type: G, state: X }),
+    let el = (0, C.l)({ editorHeight: K, type: G, state: X }),
         ei = (0, o.bG)(
             [h.Ay],
             () => {
@@ -235,7 +235,7 @@ function B(e) {
     if (null == es) return null;
     let ea = { [W.pK]: null == el, [W.YB]: null != el, [W.sQ]: null == el && "bottom" === B.position, [W.mO]: ei },
         eo = 490;
-    null != el && (eo = G.autocomplete?.small ? 200 : X.query?.type === C.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    null != el && (eo = G.autocomplete?.small ? 200 : X.query?.type === A.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let eu = Math.max(K, z?.current?.clientHeight ?? 0),
         ec = Math.min(0.5 * window.innerHeight, eu);
     eo = Math.min(window.innerHeight - 120 - ec - (q ?? 0), eo);

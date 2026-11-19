@@ -27,26 +27,26 @@ let m =
     p = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
-    E = new Set(["applicationCommandOption"]);
-function S(e, t, n) {
+    S = new Set(["applicationCommandOption"]);
+function y(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (x.has(i[0].type)) l ? C(e, i, !0, null) : y(e, i, t, n);
+        if (x.has(i[0].type)) l ? A(e, i, !0, null) : E(e, i, t, n);
         else {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
-                if (!h.l5.isText(a) && E.has(a.type)) {
+                if (!h.l5.isText(a) && S.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
-                    l ? C(e, r, !0, null) : y(e, r, t, n);
+                    l ? A(e, r, !0, null) : E(e, r, t, n);
                 }
             }
         }
 }
-function y(e, t, n, l) {
+function E(e, t, n, l) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = h.cv.markdown(t[0], n);
-    (C(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
+    (A(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
         !r &&
             ((function (e, t, n, l, r) {
                 let [s, o] = t,
@@ -57,7 +57,7 @@ function y(e, t, n, l) {
                         g = s.children[f];
                     if (!h.l5.isText(g)) continue;
                     let x = h.PW.child(o, f),
-                        E = [];
+                        S = [];
                     for (m.lastIndex = 0; null != (p = m.exec(g.text));) {
                         if (0 !== p.index && null == g.text.charAt(p.index - 1).match(/(\t|\s)/)) {
                             m.lastIndex = p.index + 1;
@@ -66,10 +66,10 @@ function y(e, t, n, l) {
                         if (v(c, { path: x, offset: p.index }, r)) continue;
                         let i = (0, a.p)(p[0], n, l);
                         null != i && N(e, l, t[0], i)
-                            ? E.push({ index: p.index, length: p[0].length, node: i })
+                            ? S.push({ index: p.index, length: p[0].length, node: i })
                             : (m.lastIndex = p.index + 1);
                     }
-                    for (let t of E.reverse())
+                    for (let t of S.reverse())
                         ((function (e, t, n, l, r) {
                             let [s, a] = t,
                                 o = { path: a, offset: n },
@@ -88,9 +88,9 @@ function y(e, t, n, l) {
                 }
                 return u;
             })(e, t, n, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
-            A(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
+            C(e, t, l, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n)))));
 }
-function C(e, t, n, l) {
+function A(e, t, n, l) {
     let [i, r] = t,
         s = !1,
         a = n || null == l ? null : I(e, r);
@@ -123,7 +123,7 @@ function C(e, t, n, l) {
     }
     return s;
 }
-function A(e, t, n, l) {
+function C(e, t, n, l) {
     let i = t[1],
         r = !1,
         s = [...l.entries].reverse(),
@@ -276,7 +276,7 @@ n.d(
                     let l = h.VW.richValue(e);
                     ((l !== s || e.previewMarkdown !== a) &&
                         (o.o.withMergedEntry(e, () => {
-                            h.VW.withoutNormalizing(e, () => S(e, t, n));
+                            h.VW.withoutNormalizing(e, () => y(e, t, n));
                         }),
                         (s = l),
                         (a = e.previewMarkdown)),
@@ -285,7 +285,7 @@ n.d(
                 e
             );
         },
-        eF: S,
-        lE: A,
+        eF: y,
+        lE: C,
     },
 );

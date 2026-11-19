@@ -1,3 +1,3 @@
-var i,
-    r = (((i = {}).FULL = "full"), (i.NO_CHARACTER = "no_character"), (i.UNAVAILABLE = "unavailable"), i);
-a.d(t, {}, { u: r });
+var r,
+    i = (((r = {}).FULL = "full"), (r.NO_CHARACTER = "no_character"), (r.UNAVAILABLE = "unavailable"), r);
+a.d(t, {}, { u: i });

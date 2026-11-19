@@ -150,7 +150,7 @@ let c = {
         disableAutoFocus: !0,
         permissions: { requireSendMessages: !0 },
     },
-    E = {
+    S = {
         analyticsName: "create_game_invite_post_description",
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         drafts: { type: s.C.FirstThreadMessage },
@@ -163,7 +163,7 @@ let c = {
         showCharacterCount: !0,
         layout: 1,
     },
-    S = {
+    y = {
         analyticsName: "create_forum_post",
         attachments: !0,
         drafts: { type: s.C.FirstThreadMessage },
@@ -179,7 +179,7 @@ let c = {
         showSlowmodeIndicator: !0,
         layout: 2,
     },
-    y = {
+    E = {
         analyticsName: "create_poll",
         attachments: !0,
         drafts: { type: s.C.ChannelMessage },
@@ -188,7 +188,7 @@ let c = {
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
     },
-    C = {
+    A = {
         analyticsName: "user_profile",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -199,7 +199,7 @@ let c = {
         toolbarType: 2,
         layout: 1,
     },
-    A = {
+    C = {
         analyticsName: "overlay_inline_reply",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -263,7 +263,7 @@ let c = {
         showCharacterCount: !0,
         toolbarType: 1,
     },
-    _ = {
+    j = {
         analyticsName: "channel_topic",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -274,7 +274,7 @@ let c = {
         markdown: { disableCodeBlocks: !0, disableBlockQuotes: !0, disableInlineCode: !0 },
         expressionPicker: { onlyEmojis: !0, emojiIntention: a.EmojiIntention.NO_CUSTOM_EMOJI },
     },
-    j = {
+    _ = {
         analyticsName: "atomic_reator_reply_input",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -344,25 +344,25 @@ n.d(
         oU: {
             NORMAL: c,
             OVERLAY: d,
-            OVERLAY_INLINE_REPLY: A,
+            OVERLAY_INLINE_REPLY: C,
             SIDEBAR: h,
             EDIT: m,
             FORM: f,
             VOICE_CHANNEL_STATUS: p,
             THREAD_CREATION: g,
-            USER_PROFILE: C,
+            USER_PROFILE: A,
             USER_PROFILE_REPLY: b,
             PROFILE_BIO_INPUT: I,
             GENERIC_RICH_TEXTAREA: v,
             CUSTOM_GIFT: N,
             RULES_INPUT: T,
-            CREATE_FORUM_POST: S,
-            CREATE_GAME_INVITE_POST_DESCRIPTION: E,
+            CREATE_FORUM_POST: y,
+            CREATE_GAME_INVITE_POST_DESCRIPTION: S,
             CREATE_ANNOUNCEMENT_POST: x,
-            CREATE_POLL: y,
+            CREATE_POLL: E,
             FORUM_CHANNEL_GUIDELINES: k,
-            CHANNEL_TOPIC: _,
-            ATOMIC_REACTOR_REPLY_INPUT: j,
+            CHANNEL_TOPIC: j,
+            ATOMIC_REACTOR_REPLY_INPUT: _,
             FORWARD_MESSAGE_INPUT: R,
             SHARE_CUSTOM_CLIENT_THEME_INPUT: w,
             CONJURE_PATCH_NOTES: O,

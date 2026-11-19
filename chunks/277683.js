@@ -14,11 +14,11 @@ var l = n(626551),
     p = n(323350),
     g = n(35277),
     x = n(339200),
-    E = n(551483),
-    S = n(891031),
-    y = n(389437);
-let C = new o.Vy("withCodeBlocks"),
-    A = new Set(["line"]),
+    S = n(551483),
+    y = n(891031),
+    E = n(389437);
+let A = new o.Vy("withCodeBlocks"),
+    C = new Set(["line"]),
     b = /^[a-z0-9_+\-.#]+$/i;
 function I(e) {
     let { onChange: t } = e,
@@ -39,7 +39,7 @@ function I(e) {
                                 }),
                                     (n = x.VW.richValue(e)));
                             } catch (e) {
-                                C.warn("error applying arborium highlighting to editor", e);
+                                A.warn("error applying arborium highlighting to editor", e);
                             }
                         })));
             })
@@ -62,7 +62,7 @@ function I(e) {
     );
 }
 let v = new Map();
-for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && v.set(e, t);
+for (let [e, t] of Object.entries(E)) e.startsWith("a-") && null != t && v.set(e, t);
 function N(e, t) {
     let n = (function (e, t) {
         let n = (0, f.p0)(e);
@@ -102,7 +102,7 @@ function N(e, t) {
                 let r = (function (e) {
                         let t,
                             [n, l] = e;
-                        if (!A.has(n.type)) return [];
+                        if (!C.has(n.type)) return [];
                         let i = [],
                             r = /\\|```/g;
                         for (let e = 0; e < n.children.length; e++) {
@@ -199,11 +199,11 @@ function T(e, t) {
                     }
                     let u = 0;
                     for (let t of (0, l.$M)(e)) {
-                        o(e.substring(u, t.position), [S.ansiControlSequence]);
+                        o(e.substring(u, t.position), [y.ansiControlSequence]);
                         let n = (0, c.OT)(t);
-                        (o(t.value, null != n ? [y.ansi] : [], n), (u = t.position + t.value.length));
+                        (o(t.value, null != n ? [E.ansi] : [], n), (u = t.position + t.value.length));
                     }
-                    return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t) ? null : (R.set(n, r), r);
+                    return (o(e.substring(u), [y.ansiControlSequence]), r.length !== t) ? null : (R.set(n, r), r);
                 })(e, n.length);
                 for (let e = 0; e < n.length; e++) n[e].hljsTypes = t?.[e] ?? [];
             } else
@@ -216,16 +216,16 @@ function T(e, t) {
                             let s = (0, u.F)(r);
                             if (null == s) return (l?.(r), null);
                             let o = a()(`${r}\0${e}`),
-                                d = _.get(o);
+                                d = j.get(o);
                             if (null != d && d.length === n) return d;
-                            if (j.has(o)) return null;
+                            if (_.has(o)) return null;
                             for (let t of e.split("\n")) if (t.length > 1e3) return null;
                             try {
                                 let t = s.highlightToSpans(e);
                                 if (((i = t.spans), null != l)) for (let e of t.missingInjections) l(e);
                             } catch (e) {
                                 return (
-                                    j.set(o, !0),
+                                    _.set(o, !0),
                                     h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                         tags: { app_context: "syntax_highlighting" },
                                         extra: { lang: r, surface: "editor" },
@@ -280,7 +280,7 @@ function T(e, t) {
                                     }
                                 return (d(e.length), i);
                             })(e, i, v);
-                            return m.length !== n ? null : (_.set(o, m), m);
+                            return m.length !== n ? null : (j.set(o, m), m);
                         })(e, t, n.length, l);
                         if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                         else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -291,10 +291,10 @@ function T(e, t) {
     }
 }
 let k = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    _ = new (r())(k),
-    j = new (r())(k);
+    j = new (r())(k),
+    _ = new (r())(k);
 (0, u.Q4)(() => {
-    _.reset();
+    j.reset();
 });
 let R = new (r())(k);
 function w(e, t) {
@@ -304,7 +304,7 @@ function w(e, t) {
 function O(e, t) {
     let n = 0;
     for (let l of x.VW.nodes(e, {
-        at: { anchor: { path: E.fP, offset: 0 }, focus: t },
+        at: { anchor: { path: S.fP, offset: 0 }, focus: t },
         mode: "lowest",
         match: (e) => x.l5.isText(e),
     })) {

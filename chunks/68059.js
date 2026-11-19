@@ -14,80 +14,80 @@ var l = n(582128),
     p = n(870748),
     g = n(186306),
     x = n(35277),
-    E = n(339200),
-    S = n(277683);
-let y = new Set(["line", "blockQuote"]);
-var C = n(155718);
-let A = ["applicationCommand"],
+    S = n(339200),
+    y = n(277683);
+let E = new Set(["line", "blockQuote"]);
+var A = n(155718);
+let C = ["applicationCommand"],
     b = ["gameMentionInput", "timestampMentionInput"];
 function I(e) {
-    let t = E.VW.getCurrentBlock(e),
-        n = E.VW.getCurrentInline(e);
-    return null != t && !A.includes(t[0].type) && !b.includes(n?.[0]?.type);
+    let t = S.VW.getCurrentBlock(e),
+        n = S.VW.getCurrentInline(e);
+    return null != t && !C.includes(t[0].type) && !b.includes(n?.[0]?.type);
 }
 function v(e) {
-    return null != e && "applicationCommandOption" === e.type && e.optionType === C.n4.STRING;
+    return null != e && "applicationCommandOption" === e.type && e.optionType === A.n4.STRING;
 }
 function N(e) {
-    return v(E.VW.getCurrentInline(e)?.[0]);
+    return v(S.VW.getCurrentInline(e)?.[0]);
 }
 function T(e, t, n) {
     let l,
         i,
         r,
-        s = E.VW.getCurrentInline(e);
+        s = S.VW.getCurrentInline(e);
     (r = n
-        ? (i = (l = E.VW.string(e, { anchor: E.Kh.start(s), focus: t })).lastIndexOf("\n")) < 0
+        ? (i = (l = S.VW.string(e, { anchor: S.Kh.start(s), focus: t })).lastIndexOf("\n")) < 0
             ? l.length
             : l.length - i - 1
-        : (i = (l = E.VW.string(e, { anchor: t, focus: E.Kh.end(s) })).indexOf("\n")) < 0
+        : (i = (l = S.VW.string(e, { anchor: t, focus: S.Kh.end(s) })).indexOf("\n")) < 0
           ? l.length
           : i) > 0 && x.b.delete(e, { distance: r, unit: "offset", reverse: n });
 }
 function k(e) {
-    return { type: "other", mergeable: !1, createdAt: Date.now(), value: E.VW.richValue(e), selection: e.selection };
+    return { type: "other", mergeable: !1, createdAt: Date.now(), value: S.VW.richValue(e), selection: e.selection };
 }
-var _ = n(113001),
-    j = n(2368);
+var j = n(113001),
+    _ = n(2368);
 function R(e, t, n) {
-    let l = E.VW.getCurrentInline(e);
+    let l = S.VW.getCurrentInline(e);
     if ("block" === t) return !0;
-    let i = E.VW.getCurrentText(e);
+    let i = S.VW.getCurrentText(e);
     if (null == i) return !0;
     let [r, s] = i,
-        [a, o] = E.VW.edges(e, s),
-        u = E.ZF.toPoint(e.selection);
+        [a, o] = S.VW.edges(e, s),
+        u = S.ZF.toPoint(e.selection);
     if (null == u) return !0;
     if (null != l) {
         let [t, n] = l;
-        if (E.VW.isEmpty(e, t) || E.VW.isVoid(e, t)) return (x.b.removeInline(e, n), !0);
+        if (S.VW.isEmpty(e, t) || S.VW.isVoid(e, t)) return (x.b.removeInline(e, n), !0);
     }
     if ("line" === t)
         if (null == l) return !1;
         else {
-            let [i, r] = E.VW.edges(e, l[1]);
+            let [i, r] = S.VW.edges(e, l[1]);
             return (x.b.delete(e, { at: u, unit: t, reverse: n, select: !0, bounds: { anchor: i, focus: r } }), !0);
         }
-    let c = E.VW.getParentBlock(e, u);
+    let c = S.VW.getParentBlock(e, u);
     if (null == c) return !0;
     let d = c[1],
         h = l;
-    if (E.Kh.equals(u, n ? a : o))
+    if (S.Kh.equals(u, n ? a : o))
         for (;;) {
-            let t = (n ? E.VW.before : E.VW.after)(e, u);
+            let t = (n ? S.VW.before : S.VW.after)(e, u);
             if (null == t) return !0;
-            if (!E.PW.isDescendant(t.path, d)) break;
-            if (((u = t), null != (h = E.VW.getParentInline(e, t)))) {
+            if (!S.PW.isDescendant(t.path, d)) break;
+            if (((u = t), null != (h = S.VW.getParentInline(e, t)))) {
                 let [t, n] = h;
-                if (E.VW.isEmpty(e, t) || E.VW.isVoid(e, t)) {
-                    let t = E.VW.before(e, n);
+                if (S.VW.isEmpty(e, t) || S.VW.isVoid(e, t)) {
+                    let t = S.VW.before(e, n);
                     return (null != t && x.b.select(e, t), x.b.removeInline(e, n), !0);
                 }
             }
-            let l = E.VW.node(e, t.path);
-            if (null == l || !E.l5.isText(l[0])) return !0;
+            let l = S.VW.node(e, t.path);
+            if (null == l || !S.l5.isText(l[0])) return !0;
             if ((([r, s] = l), 0 !== r.text.length)) {
-                [a, o] = E.VW.edges(e, s);
+                [a, o] = S.VW.edges(e, s);
                 break;
             }
         }
@@ -203,12 +203,12 @@ function D(e) {
                     (e.insertTextData = u),
                     (e.deleteBackward = (n) => {
                         if ("line" === n && !t) {
-                            let t = E.ZF.toPoint(e.selection);
+                            let t = S.ZF.toPoint(e.selection);
                             if (null != t) {
-                                let l = E.VW.before(e, t, { unit: n });
+                                let l = S.VW.before(e, t, { unit: n });
                                 if (null != l) {
-                                    let n = E.e0.getLineStart(e, t, !1);
-                                    null != n && E.Kh.isAfter(n, l)
+                                    let n = S.e0.getLineStart(e, t, !1);
+                                    null != n && S.Kh.isAfter(n, l)
                                         ? x.b.delete(e, { at: { anchor: n, focus: t } })
                                         : x.b.delete(e, { at: { anchor: l, focus: t } });
                                     return;
@@ -219,12 +219,12 @@ function D(e) {
                     }),
                     (e.deleteForward = (n) => {
                         if ("line" === n && !t) {
-                            let t = E.ZF.toPoint(e.selection);
+                            let t = S.ZF.toPoint(e.selection);
                             if (null != t) {
-                                let l = E.VW.after(e, t, { unit: n });
+                                let l = S.VW.after(e, t, { unit: n });
                                 if (null != l) {
-                                    let n = E.e0.getLineEnd(e, t, !1);
-                                    null != n && E.Kh.isBefore(n, l)
+                                    let n = S.e0.getLineEnd(e, t, !1);
+                                    null != n && S.Kh.isBefore(n, l)
                                         ? x.b.delete(e, { at: { anchor: n, focus: t } })
                                         : x.b.delete(e, { at: { anchor: l, focus: t } });
                                     return;
@@ -236,8 +236,8 @@ function D(e) {
                     e
                 );
             })(m, !0 === u)).setFragmentData = (e) => {
-            if (null != t.selection && !E.Kh.equals(t.selection.anchor, t.selection.focus)) {
-                let n = (0, O.WO)(E.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
+            if (null != t.selection && !S.Kh.equals(t.selection.anchor, t.selection.focus)) {
+                let n = (0, O.WO)(S.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
                 e.setData("text/plain", n);
             }
         }),
@@ -248,18 +248,18 @@ function D(e) {
         (t.insertTextData = (e) => {
             let n = e.getData("text/plain");
             if (0 === n.length) return !1;
-            if (null != t.selection && E.ZF.isExpanded(t.selection)) {
+            if (null != t.selection && S.ZF.isExpanded(t.selection)) {
                 let e = r.KE.string(t, t.selection),
                     l = (0, w.W1)(n),
                     i = (0, w.W1)(e);
                 if (null != l && null == i) {
-                    let [e, n] = E.ZF.edges(t.selection);
+                    let [e, n] = S.ZF.edges(t.selection);
                     return (
-                        E.VW.withoutNormalizing(t, () => {
+                        S.VW.withoutNormalizing(t, () => {
                             (x.b.select(t, e),
                                 t.insertText("["),
                                 x.b.select(t, n),
-                                0 === E.PW.compare(e.path, n.path) && x.b.move(t, { distance: 1 }),
+                                0 === S.PW.compare(e.path, n.path) && x.b.move(t, { distance: 1 }),
                                 t.insertText(`](${l.target})`));
                         }),
                         !0
@@ -277,18 +277,18 @@ function D(e) {
                     if (
                         "set_selection" === n.type &&
                         e.composition?.startedInsideInline &&
-                        E.ZF.isRange(n.properties) &&
-                        E.ZF.isRange(n.newProperties) &&
-                        E.ZF.isCollapsed(n.newProperties)
+                        S.ZF.isRange(n.properties) &&
+                        S.ZF.isRange(n.newProperties) &&
+                        S.ZF.isCollapsed(n.newProperties)
                     ) {
-                        let t = E.VW.getParentInline(e, n.properties),
-                            l = E.VW.getParentInline(e, n.newProperties);
-                        if (null != t && (null == l || !E.PW.equals(t[1], l[1]))) return;
+                        let t = S.VW.getParentInline(e, n.properties),
+                            l = S.VW.getParentInline(e, n.newProperties);
+                        if (null != t && (null == l || !S.PW.equals(t[1], l[1]))) return;
                     }
                     t(n);
                 }),
                 (e.insertText = (t) => {
-                    null != e.selection && null != E.VW.getCurrentInline(e) ? x.b.insertText(e, t) : r(t);
+                    null != e.selection && null != S.VW.getCurrentInline(e) ? x.b.insertText(e, t) : r(t);
                 }),
                 (e.deleteBackward = (t) => {
                     R(e, t, !0) || n(t);
@@ -297,26 +297,26 @@ function D(e) {
                     R(e, t, !1) || l(t);
                 }),
                 (e.deleteFragment = (t) => {
-                    if (null != e.selection && E.ZF.isExpanded(e.selection)) {
+                    if (null != e.selection && S.ZF.isExpanded(e.selection)) {
                         let n = e.selection.anchor,
                             l = e.selection.focus,
-                            r = E.VW.getParentInline(e, n),
-                            s = E.VW.getParentInline(e, l);
-                        if (null != r && null != s && E.PW.equals(r[1], s[1])) return void i(t);
-                        let a = E.ZF.isForward(e.selection);
+                            r = S.VW.getParentInline(e, n),
+                            s = S.VW.getParentInline(e, l);
+                        if (null != r && null != s && S.PW.equals(r[1], s[1])) return void i(t);
+                        let a = S.ZF.isForward(e.selection);
                         if (null != r) {
                             let [, t] = r,
-                                [l, i] = E.VW.edges(e, t);
-                            a && E.Kh.equals(n, l)
-                                ? (n = E.VW.before(e, l) ?? E.VW.start(e, []))
-                                : !a && E.Kh.equals(n, i) && (n = E.VW.after(e, i) ?? E.VW.end(e, []));
+                                [l, i] = S.VW.edges(e, t);
+                            a && S.Kh.equals(n, l)
+                                ? (n = S.VW.before(e, l) ?? S.VW.start(e, []))
+                                : !a && S.Kh.equals(n, i) && (n = S.VW.after(e, i) ?? S.VW.end(e, []));
                         }
                         if (null != s) {
                             let [, t] = s,
-                                [n, i] = E.VW.edges(e, t);
-                            !a && E.Kh.equals(l, n)
-                                ? (l = E.VW.before(e, n) ?? E.VW.start(e, []))
-                                : a && E.Kh.equals(l, i) && (l = E.VW.after(e, i) ?? E.VW.end(e, []));
+                                [n, i] = S.VW.edges(e, t);
+                            !a && S.Kh.equals(l, n)
+                                ? (l = S.VW.before(e, n) ?? S.VW.start(e, []))
+                                : a && S.Kh.equals(l, i) && (l = S.VW.after(e, i) ?? S.VW.end(e, []));
                         }
                         return void x.b.delete(e, {
                             at: { anchor: n, focus: l },
@@ -330,32 +330,32 @@ function D(e) {
             );
         })((m = t))),
         l.commands?.enabled && (m = (0, p.A)(m, s)),
-        (m = (0, j.Ay)(m, s.guild_id, s.id)),
+        (m = (0, _.Ay)(m, s.guild_id, s.id)),
         l.markdown?.disableBlockQuotes ||
             (m = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;
                 ((e.deleteBackward = (n) => {
-                    let l = E.VW.getCurrentBlock(e);
+                    let l = S.VW.getCurrentBlock(e);
                     if (l?.[0].type === "blockQuote") {
-                        let t = E.ZF.toPoint(e.selection);
-                        if (null != t && E.PW.isFirstChild(l[1], t.path) && 0 === t.offset)
+                        let t = S.ZF.toPoint(e.selection);
+                        if (null != t && S.PW.isFirstChild(l[1], t.path) && 0 === t.offset)
                             return void x.b.setNodes(e, { type: "line" }, { at: l[1] });
                     }
                     t(n);
                 }),
                     (e.deleteFragment = (t) => {
                         if (null != e.selection) {
-                            let [l, i] = E.ZF.edges(e.selection),
+                            let [l, i] = S.ZF.edges(e.selection),
                                 r = [l.path[0]],
-                                s = E.VW.node(e, r),
+                                s = S.VW.node(e, r),
                                 a = [i.path[0]],
-                                o = E.PW.equals(r, a) ? null : E.VW.node(e, a);
+                                o = S.PW.equals(r, a) ? null : S.VW.node(e, a);
                             g.o.withSingleEntry(e, () => {
                                 (s?.[0].type === "blockQuote" &&
-                                    E.Kh.isAtStart(l, s) &&
+                                    S.Kh.isAtStart(l, s) &&
                                     x.b.setNodes(e, { type: "line" }, { at: r }),
                                     o?.[0].type === "blockQuote" &&
-                                        E.Kh.isAtEnd(i, o) &&
+                                        S.Kh.isAtEnd(i, o) &&
                                         x.b.setNodes(e, { type: "line" }, { at: a }),
                                     n(t));
                             });
@@ -364,18 +364,18 @@ function D(e) {
                         n(t);
                     }),
                     (e.insertBreak = () => {
-                        let t = E.VW.getCurrentBlock(e);
+                        let t = S.VW.getCurrentBlock(e);
                         if (t?.[0].type === "blockQuote") {
-                            let n = E.ZF.toPoint(e.selection);
+                            let n = S.ZF.toPoint(e.selection);
                             if (null == n) return;
                             !(function (e, t, n) {
-                                if (!E.VW.isEmpty(e, t[0])) return !1;
-                                let l = E.VW.previous(e, { at: t[1] });
+                                if (!S.VW.isEmpty(e, t[0])) return !1;
+                                let l = S.VW.previous(e, { at: t[1] });
                                 return (
                                     null != l &&
-                                    !!E.AS.isType(l[0], "blockQuote") &&
-                                    !!E.VW.isEmpty(e, l[0]) &&
-                                    !!E.Kh.isAtStart(n, t) &&
+                                    !!S.AS.isType(l[0], "blockQuote") &&
+                                    !!S.VW.isEmpty(e, l[0]) &&
+                                    !!S.Kh.isAtStart(n, t) &&
                                     (x.b.setNodes(e, { type: "line" }, { at: t[1] }),
                                     x.b.removeNodes(e, { at: l[1] }),
                                     !0)
@@ -389,25 +389,25 @@ function D(e) {
                     s = !0;
                 return (
                     (e.onChange = () => {
-                        let t = E.VW.richValue(e);
+                        let t = S.VW.richValue(e);
                         ((t !== r || e.previewMarkdown !== s) &&
                             (g.o.withMergedEntry(e, () => {
-                                E.VW.withoutNormalizing(e, () =>
+                                S.VW.withoutNormalizing(e, () =>
                                     (function (e) {
                                         let t = !1;
-                                        for (let n of E.VW.blocks(e)) {
+                                        for (let n of S.VW.blocks(e)) {
                                             let [l, i] = n;
-                                            if (!y.has(l.type)) continue;
-                                            let r = { path: E.PW.child(i, 0), offset: 0 };
-                                            if ((0, S.W)(e, r)) {
+                                            if (!E.has(l.type)) continue;
+                                            let r = { path: S.PW.child(i, 0), offset: 0 };
+                                            if ((0, y.W)(e, r)) {
                                                 "blockQuote" === l.type &&
                                                     (x.b.setNodes(e, { type: "line" }, { at: i }),
                                                     x.b.insertText(e, "> ", { at: r }));
                                                 continue;
                                             }
-                                            if ("blockQuote" === l.type || E.VW.areStylesDisabled(e)) continue;
+                                            if ("blockQuote" === l.type || S.VW.areStylesDisabled(e)) continue;
                                             let s = l.children[0];
-                                            if (!E.l5.isText(s)) continue;
+                                            if (!S.l5.isText(s)) continue;
                                             let a = s.text.match(/^\s*>>> /),
                                                 o = s.text.match(/^\s*> /);
                                             if (
@@ -415,7 +415,7 @@ function D(e) {
                                                 (x.b.setNodes(e, { type: "blockQuote" }, { at: i }), !t)
                                             ) {
                                                 let n = o?.[0].length ?? a?.[0].length ?? 0,
-                                                    l = E.PW.child(i, 0);
+                                                    l = S.PW.child(i, 0);
                                                 (x.b.delete(e, {
                                                     at: {
                                                         anchor: { path: l, offset: 0 },
@@ -435,7 +435,7 @@ function D(e) {
                     e
                 );
             })(m)),
-        l.markdown?.disableCodeBlocks || (m = (0, S.Ay)(m)),
+        l.markdown?.disableCodeBlocks || (m = (0, y.Ay)(m)),
         u &&
             (m = (function (e) {
                 let { isInline: t, isVoid: n } = e;
@@ -483,7 +483,7 @@ function D(e) {
                 (e.apply = (t) => {
                     let { history: l } = e;
                     n(t);
-                    let i = E.VW.richValue(e);
+                    let i = S.VW.richValue(e);
                     i !== h &&
                         (0 === l.stack.length && ((l.stack = [k(e)]), (l.index = 0)),
                         g.o.isSaving(e) &&
@@ -532,7 +532,7 @@ function D(e) {
                 (e.insertText = (t) => {
                     1 === t.length && d?.type === "remove_text"
                         ? g.o.withMergedEntry(e, () => a(t))
-                        : null != e.selection && E.ZF.isExpanded(e.selection)
+                        : null != e.selection && S.ZF.isExpanded(e.selection)
                           ? g.o.withSingleEntry(e, () => a(t))
                           : a(t);
                 }),
@@ -575,16 +575,16 @@ function D(e) {
                     let { apply: t, onChange: n } = e;
                     return (
                         (e.apply = (n) => {
-                            (t(n), E.Ot.isValid(e, e.selection) && (e.lastGoodSelection = e.selection));
+                            (t(n), S.Ot.isValid(e, e.selection) && (e.lastGoodSelection = e.selection));
                         }),
                         (e.onChange = () => {
                             if (
-                                (E.Ot.isValid(e, e.selection) ||
+                                (S.Ot.isValid(e, e.selection) ||
                                     (e.selection = (function (e) {
                                         let t;
-                                        if (E.Ot.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
+                                        if (S.Ot.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
                                         else {
-                                            let n = E.VW.end(e, []);
+                                            let n = S.VW.end(e, []);
                                             t = { anchor: n, focus: n };
                                         }
                                         return t;
@@ -593,22 +593,22 @@ function D(e) {
                             ) {
                                 let t,
                                     n,
-                                    [l, i] = E.ZF.edges(e.selection),
+                                    [l, i] = S.ZF.edges(e.selection),
                                     r = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = E.VW.getParentVoid(e, l)) && !L.XR.includes(t[0].type);
+                                    null != l && null != (t = S.VW.getParentVoid(e, l)) && !L.XR.includes(t[0].type);
                                 )
-                                    ((l = E.VW.before(e, l, { unit: "offset" })), (r = !0));
+                                    ((l = S.VW.before(e, l, { unit: "offset" })), (r = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = E.VW.getParentVoid(e, i)) && !L.XR.includes(n[0].type);
+                                    null != i && null != (n = S.VW.getParentVoid(e, i)) && !L.XR.includes(n[0].type);
                                 )
-                                    ((i = E.VW.after(e, i, { unit: "offset" })), (r = !0));
+                                    ((i = S.VW.after(e, i, { unit: "offset" })), (r = !0));
                                 r &&
                                     null != l &&
                                     null != i &&
-                                    (E.ZF.isForward(e.selection)
+                                    (S.ZF.isForward(e.selection)
                                         ? x.b.select(e, { anchor: l, focus: i })
                                         : x.b.select(e, { anchor: i, focus: l }));
                             }
@@ -628,11 +628,11 @@ function D(e) {
                                 e.insertBreak();
                             }),
                             (e.deleteBackward = (n) => {
-                                let l = E.ZF.toPoint(e.selection);
+                                let l = S.ZF.toPoint(e.selection);
                                 "line" === n && null != l && N(e) ? T(e, l, !0) : t(n);
                             }),
                             (e.deleteForward = (t) => {
-                                let l = E.ZF.toPoint(e.selection);
+                                let l = S.ZF.toPoint(e.selection);
                                 "line" === t && null != l && N(e) ? T(e, l, !1) : n(t);
                             }),
                             (e.insertText = (t) => {
@@ -649,7 +649,7 @@ function D(e) {
                             }),
                             e
                         );
-                    })((m = (0, _.A)(m)))),
+                    })((m = (0, j.A)(m)))),
                 )),
                 c,
                 d,

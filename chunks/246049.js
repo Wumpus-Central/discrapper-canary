@@ -14,24 +14,24 @@ var l = n(477900),
     p = n(135621),
     g = n(287809),
     x = n(448645),
-    E = n(192308),
-    S = n(939249),
-    y = n(404374),
-    C = n(739053),
-    A = n(82498),
+    S = n(192308),
+    y = n(939249),
+    E = n(404374),
+    A = n(739053),
+    C = n(82498),
     b = n(734057),
     I = n(309010),
     v = n(129230),
     N = n(652215),
     T = n(792996),
     k = n(845210);
-function _() {
-    (0, E.mM)(async () => {
+function j() {
+    (0, S.mM)(async () => {
         let { default: e } = await Promise.all([n.e(235257), n.e(66920)]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function j(e) {
+function _(e) {
     let { className: t, iconOnly: n } = e,
         r = (0, o.bG)([I.Ay, b.A], () => {
             let e = b.A.getChannel(I.Ay.getChannelId());
@@ -45,12 +45,12 @@ function j(e) {
                 location: { location_page: r, location_section: N.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             }),
-                (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
+                (0, A.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, C.uq)("longer messages inline")));
         }, [r, a]),
         n
-            ? (0, l.jsx)(S.D, {
+            ? (0, l.jsx)(y.D, {
                   className: k.e7,
-                  onClick: () => _(),
+                  onClick: () => j(),
                   children: (0, l.jsx)(u.m, {
                       text: T.intl.string(T.t["+eFIjX"]),
                       position: "top",
@@ -60,11 +60,11 @@ function j(e) {
             : (0, l.jsxs)("div", {
                   className: s()(k.zr, t),
                   children: [
-                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: y.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: E.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
                           className: k.Qq,
                           variant: "body-sm/normal",
-                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: _ }),
+                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: j }),
                       }),
                   ],
               })
@@ -73,18 +73,18 @@ function j(e) {
 var R = n(263582),
     w = n(412028);
 function O(e) {
-    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
-        S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        y = (0, p.A)(),
-        C = i ?? y,
-        A = r ?? i ?? y / 10,
+    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: S } = e,
+        y = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        E = (0, p.A)(),
+        A = i ?? E,
+        C = r ?? i ?? E / 10,
         b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > 2e3 && S,
-        v = null != t.upsellLongMessages && !S,
-        N = C - b,
-        k = N > A;
-    (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
-    let _ =
+        I = null != t.upsellLongMessages && (b ?? 0) > 2e3 && y,
+        v = null != t.upsellLongMessages && !y,
+        N = A - b,
+        k = N > C;
+    (0, a.$)({ currentLength: b, maxLength: A, message: T.intl.string(T.t.c2Jqed) });
+    let j =
             0 === N
                 ? T.intl.string(T.t.tU6YQ7)
                 : N > 0
@@ -97,14 +97,14 @@ function O(e) {
     return (0, l.jsx)(f.f5, {
         value: O,
         children: (0, l.jsxs)("div", {
-            className: s()(E, w.Dq),
+            className: s()(S, w.Dq),
             children: [
                 (0, l.jsxs)("div", {
                     className: w.SW,
                     children: [
                         I && L
                             ? (0, l.jsx)(u.m, {
-                                  text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: C }),
+                                  text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: A }),
                                   position: "top",
                                   children: (0, l.jsx)(c.NitroWheelIcon, {
                                       size: "md",
@@ -116,7 +116,7 @@ function O(e) {
                         k
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: _,
+                                  text: j,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "body-sm/semibold",
@@ -130,7 +130,7 @@ function O(e) {
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: N }) }),
                 v && !k
-                    ? (0, l.jsx)(j, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
+                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
                     : null,
             ],
         }),

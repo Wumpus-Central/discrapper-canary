@@ -1,5 +1,5 @@
-var i,
-    r = a(402102),
+var r,
+    i = a(402102),
     n = a(127639),
     s = a(855986),
     c = a(73153),
@@ -9,11 +9,11 @@ var i,
     u = a(847011),
     h = a(201779),
     f =
-        (((i = {})[(i.INIT = 0)] = "INIT"),
-        (i[(i.FETCHING = 1)] = "FETCHING"),
-        (i[(i.SUCCESS = 2)] = "SUCCESS"),
-        (i[(i.ERROR = 3)] = "ERROR"),
-        i);
+        (((r = {})[(r.INIT = 0)] = "INIT"),
+        (r[(r.FETCHING = 1)] = "FETCHING"),
+        (r[(r.SUCCESS = 2)] = "SUCCESS"),
+        (r[(r.ERROR = 3)] = "ERROR"),
+        r);
 let b = { volume: 1, isMuted: !1, progress: null },
     p = {},
     _ = { ...b },
@@ -31,7 +31,7 @@ class j extends s.Ay.PersistedStore {
     static migrations = [
         (e) => ({ ...e, progress: null }),
         (e) => ({ volume: 1, ...e }),
-        (e) => ({ ...e, progress: null != e.progress ? { ...e.progress, availability: r.u.FULL } : null }),
+        (e) => ({ ...e, progress: null != e.progress ? { ...e.progress, availability: i.u.FULL } : null }),
     ];
     getState() {
         return _;
@@ -61,7 +61,7 @@ class j extends s.Ay.PersistedStore {
         return v;
     }
     get isCharacterCreatorEnabled() {
-        return v === r.u.FULL;
+        return v === i.u.FULL;
     }
     get fetchState() {
         return w;
@@ -100,22 +100,22 @@ let S = new j(c.h, {
             (v = e.availability),
             (w = 2),
             (_.progress =
-                ((t = _.progress), (a = v), null == t || a === r.u.UNAVAILABLE || t.availability === a ? t : null)),
+                ((t = _.progress), (a = v), null == t || a === i.u.UNAVAILABLE || t.availability === a ? t : null)),
             (I = null));
-        let { progress: i } = _;
-        v === r.u.FULL &&
+        let { progress: r } = _;
+        v === i.u.FULL &&
             null == g &&
-            null != i &&
+            null != r &&
             ((I = (function (e) {
                 let t = (0, l.ki)(d.default.getCurrentUser()),
                     a = {};
-                for (let i of Object.values(n.V)) {
-                    let r = e[i];
-                    null == r || (0, o.tS)(i, r, { stats: m, hasNitro: t, savedCharacter: g }) || (a[i] = r);
+                for (let r of Object.values(n.V)) {
+                    let i = e[r];
+                    null == i || (0, o.tS)(r, i, { stats: m, hasNitro: t, savedCharacter: g }) || (a[r] = i);
                 }
                 return a;
-            })(i.selectedCharacterTraits)),
-            (_.progress = { ...i, selectedCharacterTraits: I }));
+            })(r.selectedCharacterTraits)),
+            (_.progress = { ...r, selectedCharacterTraits: I }));
     },
     CHECKPOINT_FETCH_FAILED: function () {
         w = 3;
@@ -139,12 +139,12 @@ let S = new j(c.h, {
     CHECKPOINT_SAVE_PROGRESS: function (e) {
         let { stage: t } = e;
         if (null == v) return !1;
-        let a = v === r.u.FULL;
+        let a = v === i.u.FULL;
         if (!(0, u.E1)({ stats: m, character: g, isCharacterCreatorEnabled: a })) return !1;
-        let { progress: i } = _;
-        if (i?.stage === h.s9.SUMMARY) return !1;
+        let { progress: r } = _;
+        if (r?.stage === h.s9.SUMMARY) return !1;
         let n = I ?? g ?? p;
-        if (i?.stage === t && i.selectedCharacterTraits === n) return !1;
+        if (r?.stage === t && r.selectedCharacterTraits === n) return !1;
         _.progress = { stage: t, selectedCharacterTraits: n, availability: v };
     },
     LOGOUT: function () {

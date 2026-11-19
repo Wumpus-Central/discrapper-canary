@@ -13,11 +13,11 @@ var l = n(477900),
     p = n(39623),
     g = n(559106),
     x = n(750506),
-    E = n(267102),
-    S = n(186306),
-    y = n(339871),
-    C = n(339200),
-    A = n(792996),
+    S = n(267102),
+    y = n(186306),
+    E = n(339871),
+    A = n(339200),
+    C = n(792996),
     b = n(9287);
 function I(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: r } = e;
@@ -93,31 +93,31 @@ function v(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         r = !1;
     if (t?.selection != null) {
-        let [e, l] = C.ZF.edges(t.selection);
-        r = null != (0, y.Sx)(t, e, l).before[n];
+        let [e, l] = A.ZF.edges(t.selection);
+        r = null != (0, E.Sx)(t, e, l).before[n];
     }
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
             "aria-label": (function (e) {
                 switch (e) {
                     case "bold":
-                        return A.intl.string(A.t.XI2CUr);
+                        return C.intl.string(C.t.XI2CUr);
                     case "italics":
-                        return A.intl.string(A.t.a96YKu);
+                        return C.intl.string(C.t.a96YKu);
                     case "underline":
-                        return A.intl.string(A.t.PdIYwI);
+                        return C.intl.string(C.t.PdIYwI);
                     case "strikethrough":
-                        return A.intl.string(A.t["63uDvE"]);
+                        return C.intl.string(C.t["63uDvE"]);
                     case "inlineCode":
-                        return A.intl.string(A.t.iBerkZ);
+                        return C.intl.string(C.t.iBerkZ);
                     case "spoiler":
-                        return A.intl.string(A.t["F+x38C"]);
+                        return C.intl.string(C.t["F+x38C"]);
                 }
             })(n),
             "aria-pressed": r,
             className: b.x6,
             onClick: function () {
-                null != t && S.o.withSingleEntry(t, () => (0, y.Px)(t, n));
+                null != t && y.o.withSingleEntry(t, () => (0, E.Px)(t, n));
             },
             children: i,
         }),
@@ -125,17 +125,17 @@ function v(e) {
 }
 function N(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
-        r = null != n ? C.VW.getCurrentBlock(n) : null,
-        s = null != r && C.AS.isType(r[0], t);
+        r = null != n ? A.VW.getCurrentBlock(n) : null,
+        s = null != r && A.AS.isType(r[0], t);
     return (0, l.jsx)(g.vN, {
         children: (0, l.jsx)("button", {
             "aria-label": (function (e) {
-                if ("blockQuote" === e) return A.intl.string(A.t.svB7eY);
+                if ("blockQuote" === e) return C.intl.string(C.t.svB7eY);
             })(t),
             "aria-pressed": s,
             className: b.x6,
             onClick: function () {
-                null != n && S.o.withSingleEntry(n, () => (0, y.fO)(n, t));
+                null != n && y.o.withSingleEntry(n, () => (0, E.fO)(n, t));
             },
             children: i,
         }),
@@ -150,7 +150,7 @@ n.d(
                 u = i.useRef(null),
                 [c, d] = i.useState(!1),
                 h = i.useRef(null),
-                m = i.useContext(E.Ay),
+                m = i.useContext(S.Ay),
                 f = i.useCallback(() => {
                     (d(!1), clearTimeout(h.current));
                 }, []),
@@ -198,9 +198,9 @@ n.d(
                         }
                     );
                 }, [m, f, p, g]));
-            let { x: S, y } = i.useMemo(() => {
+            let { x: y, y: E } = i.useMemo(() => {
                     let e = t();
-                    if (e?.selection == null || C.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
+                    if (e?.selection == null || A.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
                     let l = a.rL.findDocumentOrShadowRoot(e),
                         i = l.getSelection();
                     if (null == i || null == i.focusNode || null == i.anchorNode || i.isCollapsed)
@@ -221,15 +221,15 @@ n.d(
                         y: Math.max(n.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, s.y)),
                     };
                 }, [n, c, t]),
-                [A, v] = i.useState(0),
+                [C, v] = i.useState(0),
                 [N, T] = i.useState(0);
             if (
                 (i.useLayoutEffect(() => {
-                    if (null == S || null == y || null == u.current) return;
+                    if (null == y || null == E || null == u.current) return;
                     let e = u.current.getBoundingClientRect();
                     (T(e.width / 2), v(e.height + 12));
-                }, [S, y]),
-                null == S || null == y)
+                }, [y, E]),
+                null == y || null == E)
             )
                 return null;
             let k = t();
@@ -240,7 +240,7 @@ n.d(
                           id: "slate-toolbar",
                           ref: u,
                           className: b.KE,
-                          style: { top: y - A, left: S - N },
+                          style: { top: E - C, left: y - N },
                           onMouseDown: (e) => {
                               (e.preventDefault(), e.stopPropagation());
                           },

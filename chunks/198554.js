@@ -1,4 +1,4 @@
-n.d(t, { L: () => g, A: () => E });
+n.d(t, { L: () => g, A: () => S });
 var l,
     i = n(477900),
     r = n(582128),
@@ -21,18 +21,18 @@ var l,
 function x(e) {
     e.stopPropagation();
 }
-let E = function (e) {
+let S = function (e) {
     let {
             id: t,
             channelId: n,
             className: l,
             children: s,
             actions: g,
-            handleEditModal: E,
-            keyboardModeEnabled: S,
-            onKeyDown: y,
-            draftType: C,
-            size: A = 1,
+            handleEditModal: S,
+            keyboardModeEnabled: y,
+            onKeyDown: E,
+            draftType: A,
+            size: C = 1,
             ref: b,
         } = e,
         I = r.useRef(null),
@@ -56,8 +56,8 @@ let E = function (e) {
                 isFocused: t,
             };
         })(v),
-        _ = 0 === A,
-        j = null != g;
+        j = 0 === C,
+        _ = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ...N,
@@ -70,24 +70,24 @@ let E = function (e) {
                 }
             },
             onKeyDown: function (e) {
-                if (S) {
+                if (y) {
                     switch (e.which) {
                         case m.Ks6.D:
-                            (e.preventDefault(), c.A.remove(n, t, C));
+                            (e.preventDefault(), c.A.remove(n, t, A));
                             return;
                         case m.Ks6.E:
-                            null != E && (e.preventDefault(), E(e));
+                            null != S && (e.preventDefault(), S(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
-                                ? (e.preventDefault(), c.A.clearAll(n, C))
-                                : (e.preventDefault(), c.A.remove(n, t, C));
+                                ? (e.preventDefault(), c.A.clearAll(n, A))
+                                : (e.preventDefault(), c.A.remove(n, t, A));
                             return;
                         case m.Ks6.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
-                    y?.(e);
+                    E?.(e);
                 }
             },
             className: a()(p.Se, l),
@@ -97,14 +97,14 @@ let E = function (e) {
                 ref: I,
                 children: [
                     s,
-                    j
+                    _
                         ? (0, i.jsx)("div", {
                               className: p.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(p.KY, { [p.BN]: _ }),
+                                  className: a()(p.KY, { [p.BN]: j }),
                                   onContextMenu: x,
                                   "aria-label": f.intl.string(f.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: _ }), children: g }),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: j }), children: g }),
                               }),
                           })
                         : null,

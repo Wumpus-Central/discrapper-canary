@@ -14,22 +14,22 @@ var l = n(477900),
     p = n(94221),
     g = n(626584),
     x = n(274652),
-    E = n(522602),
-    S = n(234320),
-    y = n(453771),
-    C = n(741394),
-    A = n(355622),
+    S = n(522602),
+    y = n(234320),
+    E = n(453771),
+    A = n(741394),
+    C = n(355622),
     b = n(408018),
     I = n(579940),
     v = n(734057),
     N = n(218461),
     T = n(531685),
     k = n(365971);
-function _(e) {
+function j(e) {
     let t = N.Ay.getChannelIdsForWindowId(e)[0];
     return null == t ? null : (v.A.getChannel(t) ?? null);
 }
-var j = n(826745),
+var _ = n(826745),
     R = n(442433),
     w = n(721768),
     O = n(555424),
@@ -137,8 +137,8 @@ class V extends i.PureComponent {
         } = this.props;
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
-                (0, l.jsx)(j.y, {
+                (0, l.jsx)(y.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
+                (0, l.jsx)(_.y, {
                     ref: this.handleSetRef,
                     className: s()(a, c),
                     id: o,
@@ -307,8 +307,8 @@ var ef = n(870748),
     ep = n(855986),
     eg = n(31717),
     ex = n(792996),
-    eE = n(106972);
-let eS = (e) => {
+    eS = n(106972);
+let ey = (e) => {
     let t,
         { channelId: n, element: r, attributes: a, children: o } = e,
         u = (0, el.f7)(),
@@ -322,9 +322,9 @@ let eS = (e) => {
             }),
             [n, r.optionName],
         ),
-        g = (0, ep.bG)([E.A], () => E.A.getUpload(n, r.optionName, eg.C.SlashCommand), [n, r.optionName]),
-        x = s()(eE.S0, eE.xP, { [eE.t$]: c && u, [eE.$2]: (!c || !u) && p }),
-        S = i.useCallback(() => {
+        g = (0, ep.bG)([S.A], () => S.A.getUpload(n, r.optionName, eg.C.SlashCommand), [n, r.optionName]),
+        x = s()(eS.S0, eS.xP, { [eS.t$]: c && u, [eS.$2]: (!c || !u) && p }),
+        y = i.useCallback(() => {
             Q.VW.isVoid(d, r) || $.b.selectCommandOption(d, r.optionName, !0);
         }, [d, r]);
     return (
@@ -332,24 +332,24 @@ let eS = (e) => {
             h === m.n4.ATTACHMENT
                 ? g?.filename != null
                     ? (0, l.jsxs)("span", {
-                          className: s()(eE._K, eE.dU),
+                          className: s()(eS._K, eS.dU),
                           contentEditable: !1,
                           children: [g.filename, o],
                       })
                     : (0, l.jsxs)("span", {
-                          className: s()(eE._K, eE.ZI),
+                          className: s()(eS._K, eS.ZI),
                           contentEditable: !1,
                           children: [ex.intl.string(ex.t.GRdFni), o],
                       })
-                : (0, l.jsx)("span", { className: eE._K, children: o })),
+                : (0, l.jsx)("span", { className: eS._K, children: o })),
         (0, l.jsxs)("span", {
             ...a,
             className: x,
             children: [
                 (0, l.jsxs)("span", {
-                    className: eE.gA,
+                    className: eS.gA,
                     contentEditable: !1,
-                    onClick: S,
+                    onClick: y,
                     children: [r.optionDisplayName, "\u200B"],
                 }),
                 t,
@@ -358,44 +358,44 @@ let eS = (e) => {
         })
     );
 };
-function ey(e) {
+function eE(e) {
     let { element: t, attributes: n, children: i } = e,
         r = (0, el.f7)(),
         a = (0, el.zL)(),
-        o = s()(eE.S0, eE.xP, eE.Bz, { [eE.t$]: a && r, [eE.$2]: t.error }),
-        u = (0, l.jsx)("span", { className: eE._K, children: i });
+        o = s()(eS.S0, eS.xP, eS.Bz, { [eS.t$]: a && r, [eS.$2]: t.error }),
+        u = (0, l.jsx)("span", { className: eS._K, children: i });
     return (0, l.jsxs)("span", {
         ...n,
         className: o,
         children: [
-            (0, l.jsxs)("span", { className: eE.gA, contentEditable: !1, children: ["@game", "\u200B"] }),
+            (0, l.jsxs)("span", { className: eS.gA, contentEditable: !1, children: ["@game", "\u200B"] }),
             u,
             (0, l.jsx)("span", { contentEditable: !1, children: "\u200B" }),
         ],
     });
 }
-function eC(e) {
+function eA(e) {
     let { element: t, attributes: n, children: i } = e,
         r = (0, el.f7)(),
         a = (0, el.zL)(),
-        o = s()(eE.S0, eE.xP, eE.Bz, { [eE.t$]: a && r, [eE.$2]: t.error }),
+        o = s()(eS.S0, eS.xP, eS.Bz, { [eS.t$]: a && r, [eS.$2]: t.error }),
         u = t.children[t.children.length - 1],
         c = null != u && Q.l5.isText(u) && u.text.endsWith("\n"),
         d = (0, l.jsxs)("span", {
-            className: eE._K,
-            children: [i, c ? (0, l.jsx)("span", { className: eE.Nx, contentEditable: !1 }) : null],
+            className: eS._K,
+            children: [i, c ? (0, l.jsx)("span", { className: eS.Nx, contentEditable: !1 }) : null],
         });
     return (0, l.jsxs)("span", {
         ...n,
         className: o,
         children: [
-            (0, l.jsxs)("span", { className: eE.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
+            (0, l.jsxs)("span", { className: eS.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
             d,
             (0, l.jsx)("span", { contentEditable: !1, children: "\u200B" }),
         ],
     });
 }
-var eA = n(183531);
+var eC = n(183531);
 function eb(e) {
     let t,
         n,
@@ -409,16 +409,16 @@ function eb(e) {
             type: p,
             channel: g,
             className: x,
-            id: y,
-            disabled: C,
+            id: E,
+            disabled: A,
             submitting: b,
             placeholder: I,
             required: v,
             textAreaPaddingClassName: N,
             onChange: T,
             onPaste: k,
-            onResize: _,
-            onFocus: j,
+            onResize: j,
+            onFocus: _,
             onBlur: R,
             onKeyDown: w,
             onKeyUp: M,
@@ -435,8 +435,8 @@ function eb(e) {
             disableAutoFocus: eN,
             disableEnterToSubmit: eT,
             allowNewLines: ek,
-            "aria-owns": e_,
-            "aria-expanded": ej,
+            "aria-owns": ej,
+            "aria-expanded": e_,
             "aria-haspopup": eR,
             "aria-activedescendant": ew,
             "aria-controls": eO,
@@ -449,7 +449,7 @@ function eb(e) {
         eV = i.useRef(null),
         eW = i.useRef(!0),
         eB = i.useRef(!0),
-        eF = C || b,
+        eF = A || b,
         eG = i.useCallback(
             (e, t, n) => {
                 let { value: l, selection: i } = n,
@@ -457,7 +457,7 @@ function eb(e) {
                     s = e.selection,
                     a = !1;
                 if (void 0 !== l && l !== r) {
-                    if (((e.children = l), "parent" === t && !e.previewMarkdown && e.chatInputType === A.oU.EDIT)) {
+                    if (((e.children = l), "parent" === t && !e.previewMarkdown && e.chatInputType === C.oU.EDIT)) {
                         try {
                             ((e.previewMarkdown = !0), (0, er.eF)(e, g.guild_id, g.id));
                         } finally {
@@ -712,15 +712,15 @@ function eb(e) {
             let e = n.current;
             if (null == e) return;
             let l = e.offsetHeight;
-            t.current !== l && (null != eU.current && (eU.current.style.height = `${l}px`), (t.current = l), _?.(l));
-        }, [eU, _])),
-        (0, ec.g)(n, a, [a, ez, _], eh),
+            t.current !== l && (null != eU.current && (eU.current.style.height = `${l}px`), (t.current = l), j?.(l));
+        }, [eU, j])),
+        (0, ec.g)(n, a, [a, ez, j], eh),
         i.useLayoutEffect(() => {
             let e = el.rL.findDocumentOrShadowRoot(ez).defaultView;
             if (e?.ResizeObserver == null) return;
             let n = em(ez);
-            null != n && ((t.current = n.offsetHeight), _?.(t.current));
-        }, [eU, ez, _]));
+            null != n && ((t.current = n.offsetHeight), j?.(t.current));
+        }, [eU, ez, j]));
     let { handleKeyDown: eQ, handleKeyUp: eZ } = (function (e) {
             let {
                 editor: t,
@@ -854,7 +854,7 @@ function eb(e) {
                 let e = f.A.getActiveCommand(g.id) ?? null;
                 null !== e && null != e.options && eq(e, !0);
             }
-            return (E.A.addChangeListener(e), () => E.A.removeChangeListener(e));
+            return (S.A.addChangeListener(e), () => S.A.removeChangeListener(e));
         }, [g, ez, eq]));
     let e1 = (0, B.I2)({ location: "SlateChannelTextArea" }).enabled,
         e2 = (0, F.n9)(e1),
@@ -915,9 +915,9 @@ function eb(e) {
                                         : ex.intl.formatToPlainString(ex.t.lziVC9, { count: o })),
                                     (c["data-trailing-placeholder"] = e));
                             }
-                            return (0, l.jsx)("div", { className: eE.uB, ...i, ...c, children: r });
+                            return (0, l.jsx)("div", { className: eS.uB, ...i, ...c, children: r });
                         case "applicationCommandOption":
-                            return (0, l.jsx)(eS, { attributes: i, channelId: n, element: s, children: r });
+                            return (0, l.jsx)(ey, { attributes: i, channelId: n, element: s, children: r });
                         default:
                             return null;
                     }
@@ -927,14 +927,14 @@ function eb(e) {
                         (t = (function (e) {
                             let { attributes: t, children: n, element: i } = e;
                             return "gameMentionInput" === i.type
-                                ? (0, l.jsx)(ey, { attributes: t, element: i, children: n })
+                                ? (0, l.jsx)(eE, { attributes: t, element: i, children: n })
                                 : null;
                         })(e)),
                     null == t &&
                         (t = (function (e) {
                             let { attributes: t, children: n, element: i } = e;
                             return "timestampMentionInput" === i.type
-                                ? (0, l.jsx)(eC, { attributes: t, element: i, children: n })
+                                ? (0, l.jsx)(eA, { attributes: t, element: i, children: n })
                                 : null;
                         })(e)),
                     t
@@ -947,7 +947,7 @@ function eb(e) {
                 (function (e) {
                     let { attributes: t, children: n, leaf: i, text: r } = e;
                     if (i.commandName) {
-                        let e = s()(eE.p6, { [eE.BI]: "" === r.text });
+                        let e = s()(eS.p6, { [eS.BI]: "" === r.text });
                         return (0, l.jsx)("span", { ...t, className: e, spellCheck: !1, children: n });
                     }
                     return null;
@@ -956,23 +956,23 @@ function eb(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: eY }),
+            (0, l.jsx)(y.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: eY }),
             (0, l.jsx)("div", {
                 ref: eU,
-                className: s()(x, eA.pC),
+                className: s()(x, eC.pC),
                 children: (0, l.jsx)(z.A, {
-                    id: y,
+                    id: E,
                     editor: ez,
                     channelId: g.id,
                     guildId: g.guild_id,
-                    className: s()(eA.gf, N),
+                    className: s()(eC.gf, N),
                     placeholder: I,
                     readOnly: eF,
                     spellCheck: eI,
                     autoFocus: !eN,
-                    canFocus: !C,
+                    canFocus: !A,
                     onChange: e0,
-                    onFocus: j,
+                    onFocus: _,
                     onBlur: R,
                     onClick: eJ,
                     onPaste: eX,
@@ -981,9 +981,9 @@ function eb(e) {
                     decorate: e5,
                     renderExtraElement: e3,
                     renderExtraLeaf: e6,
-                    "aria-owns": e_,
+                    "aria-owns": ej,
                     "aria-haspopup": eR,
-                    "aria-expanded": ej,
+                    "aria-expanded": e_,
                     "aria-activedescendant": ew,
                     "aria-controls": eO,
                     "aria-labelledby": eP,
@@ -1173,26 +1173,26 @@ class eN extends i.Component {
                 useNewSlashCommands: p,
                 canOnlyUseTextCommands: g,
                 className: x,
-                id: E,
-                required: y,
-                maxCharacterCount: C,
+                id: S,
+                required: E,
+                maxCharacterCount: A,
                 allowNewLines: b,
                 "aria-describedby": I,
                 "aria-labelledby": v,
                 accessibilityLabel: N,
                 showValueWhenDisabled: T,
             } = this.props,
-            { submitting: k, popup: _ } = this.state,
-            j = {
+            { submitting: k, popup: j } = this.state,
+            _ = {
                 channel: d,
                 className: s()(x, eI.Tg, { [eI.w5]: m, [eI.Rr]: n || k }),
-                id: E,
+                id: S,
                 placeholder: this.getPlaceholder(),
-                required: y,
+                required: E,
                 accessibilityLabel: N,
                 disabled: n || !1,
                 submitting: k,
-                isEdit: h === A.oU.EDIT,
+                isEdit: h === C.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -1208,20 +1208,20 @@ class eN extends i.Component {
                 onKeyDown: r,
                 onSubmit: o,
                 textAreaPaddingClassName: s()({
-                    [eI.H$]: h === A.oU.CREATE_FORUM_POST,
-                    [eI.g_]: h === A.oU.CUSTOM_GIFT,
-                    [eI.Yg]: h === A.oU.USER_PROFILE,
-                    [eI.$$]: h === A.oU.OVERLAY_INLINE_REPLY,
+                    [eI.H$]: h === C.oU.CREATE_FORUM_POST,
+                    [eI.g_]: h === C.oU.CUSTOM_GIFT,
+                    [eI.Yg]: h === C.oU.USER_PROFILE,
+                    [eI.$$]: h === C.oU.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: f,
                 useNewSlashCommands: p,
                 disableAutoFocus: u.Fr || (h.disableAutoFocus ?? !1),
                 disableEnterToSubmit: h.submit?.disableEnterToSubmit ?? !1,
-                "aria-controls": _.id ?? void 0,
+                "aria-controls": j.id ?? void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== _.id || void 0,
-                "aria-activedescendant": _.activeDescendant ?? void 0,
-                "aria-invalid": e.length > C,
+                "aria-expanded": null !== j.id || void 0,
+                "aria-activedescendant": j.activeDescendant ?? void 0,
+                "aria-invalid": e.length > A,
                 "aria-describedby": I,
                 "aria-labelledby": v,
                 "aria-autocomplete": "list",
@@ -1229,18 +1229,18 @@ class eN extends i.Component {
             R = m
                 ? (0, l.jsx)(eb, {
                       ref: this.ref,
-                      ...j,
+                      ..._,
                       type: h,
                       value: n && !T ? this._emptyRichValue : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(V, { ref: this.ref, ...j, value: n && !T ? "" : e });
+                : (0, l.jsx)(V, { ref: this.ref, ..._, value: n && !T ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(S.EG, { event: P.jej.INSERT_TEXT, handler: this.handleInsertText }),
-                (0, l.jsx)(S.EG, { event: P.jej.CLEAR_TEXT, handler: this.handleClearText }),
+                (0, l.jsx)(y.EG, { event: P.jej.INSERT_TEXT, handler: this.handleInsertText }),
+                (0, l.jsx)(y.EG, { event: P.jej.CLEAR_TEXT, handler: this.handleClearText }),
                 R,
             ],
         });
@@ -1283,10 +1283,10 @@ class eN extends i.Component {
                     ? (function (e) {
                           if (null == e) return null;
                           let t = (0, k.Q2)(e);
-                          return null == t ? null : _(t);
+                          return null == t ? null : j(t);
                       })(n)
                     : null,
-            c = null == (t = T.A.getFocusedWindowId()) ? null : _(t),
+            c = null == (t = T.A.getFocusedWindowId()) ? null : j(t),
             p = !(function (e, t) {
                 if (null == e || null == t) return !1;
                 let n = (0, k.Q2)(e);
@@ -1295,7 +1295,7 @@ class eN extends i.Component {
                 ? (u ?? c ?? l)
                 : l;
         if (null == s || (!p.isPrivate() && !i) || (p.isPrivate() && p.isManaged())) return !1;
-        let { files: g, errors: S } = (function (e, t) {
+        let { files: g, errors: y } = (function (e, t) {
             let n = [],
                 l = [],
                 i = null,
@@ -1327,12 +1327,12 @@ class eN extends i.Component {
                                     let e;
                                     try {
                                         let { pathname: n } = new URL(t.src);
-                                        null != n && n.length > 0 && (e = (0, C.kh)(n));
+                                        null != n && n.length > 0 && (e = (0, A.kh)(n));
                                     } catch {}
                                     if (null != e && e.length > 0) return `${e}.png`;
                                 }
                             })(e.getData(r.type)) ?? t.name;
-                    return { files: [(0, y.VE)(t, n, t.type)], errors: s };
+                    return { files: [(0, E.VE)(t, n, t.type)], errors: s };
                 }
                 return { files: l, errors: s };
             }
@@ -1340,7 +1340,7 @@ class eN extends i.Component {
                 let n = e.getData(i.type);
                 if (n.length > t) {
                     let e = new Blob([n], { type: "text/plain" });
-                    return { files: [(0, y.VE)(e, "message.txt", "text/plain")], convertedStringToFile: !0, errors: s };
+                    return { files: [(0, E.VE)(e, "message.txt", "text/plain")], convertedStringToFile: !0, errors: s };
                 }
             }
             return { files: [], errors: s };
@@ -1356,8 +1356,8 @@ class eN extends i.Component {
             }),
         ),
         0 === g.length)
-            ? (null != S &&
-                  S.length > 0 &&
+            ? (null != y &&
+                  y.length > 0 &&
                   (0, h.openUploadError)({ title: ex.intl.string(ex.t.azO1Pe), help: ex.intl.string(ex.t["Koklr/"]) }),
               !1)
             : (e.preventDefault(),
@@ -1375,7 +1375,7 @@ class eN extends i.Component {
                           i?.type === m.n4.ATTACHMENT
                               ? i
                               : t.options?.find((e) => {
-                                    if (e.type === m.n4.ATTACHMENT) return null == E.A.getUpload(p.id, e.name, n);
+                                    if (e.type === m.n4.ATTACHMENT) return null == S.A.getUpload(p.id, e.name, n);
                                 })) &&
                       d.A.setFile({
                           channelId: p.id,

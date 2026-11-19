@@ -14,19 +14,19 @@ var l = n(477900),
     p = n(408018),
     g = n(186306),
     x = n(654821),
-    E = n(35277),
-    S = n(339200),
-    y = n(632760),
-    C = n(855986),
-    A = n(866665),
+    S = n(35277),
+    y = n(339200),
+    E = n(632760),
+    A = n(855986),
+    C = n(866665),
     b = n(778712),
     I = n(545442),
     v = n(265872),
     N = n(565645),
     T = n(730134),
     k = n(775602),
-    _ = n(47167),
-    j = n(442247),
+    j = n(47167),
+    _ = n(442247),
     R = n(454908),
     w = n(545868),
     O = n(376943),
@@ -56,7 +56,7 @@ var H = n(342296),
     en = n(307126);
 function el(e) {
     let { emoji: t } = e;
-    return (0, l.jsx)(A.m, {
+    return (0, l.jsx)(C.m, {
         text: t.name,
         delay: 750,
         position: "top",
@@ -65,7 +65,7 @@ function el(e) {
 }
 function ei(e) {
     let { emoji: t } = e;
-    return (0, l.jsx)(A.m, {
+    return (0, l.jsx)(C.m, {
         text: t.name,
         delay: 750,
         position: "top",
@@ -93,8 +93,8 @@ function ea(e) {
 }
 function eo(e) {
     let { id: t, guildId: n, channelId: r } = e,
-        s = (0, C.bG)([Z.default], () => Z.default.getUser(t)),
-        a = (0, C.bG)([Q.A], () => Q.A.hidePersonalInformation),
+        s = (0, A.bG)([Z.default], () => Z.default.getUser(t)),
+        a = (0, A.bG)([Q.A], () => Q.A.hidePersonalInformation),
         o = i.useRef(null),
         u = (0, F.A)({ channelId: r, userId: t }),
         c = Y.Ay.useName(n, r, s),
@@ -104,7 +104,7 @@ function eo(e) {
         );
     if (null != s) {
         let e = a || s.hasUniqueUsername() ? null : `#${s.discriminator}`;
-        return (0, l.jsx)(A.m, {
+        return (0, l.jsx)(C.m, {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
                 className: en.fX,
                 children: [
@@ -132,9 +132,9 @@ function eo(e) {
 }
 function eu(e) {
     let { id: t, guildId: n, channelId: r } = e,
-        s = (0, C.bG)([q.A], () => (null != n ? q.A.getRole(n, t) : void 0)),
+        s = (0, A.bG)([q.A], () => (null != n ? q.A.getRole(n, t) : void 0)),
         a = (0, B.A)(n, t),
-        o = (0, C.bG)([k.Ay], () => k.Ay.roleStyle),
+        o = (0, A.bG)([k.Ay], () => k.Ay.roleStyle),
         u = (0, K.X_)(n, s, s?.colorStrings),
         c = i.useRef(null);
     if (null == s) return (0, l.jsxs)("span", { children: ["@", et.intl.string(et.t["YV4F/n"])] });
@@ -171,13 +171,13 @@ function eu(e) {
 }
 function ec(e) {
     let { id: t } = e,
-        n = (0, C.bG)([z.A], () => z.A.getChannel(t)),
+        n = (0, A.bG)([z.A], () => z.A.getChannel(t)),
         i = (0, W.A)({ channelId: t }),
         r = et.intl.string(et.t.zLZPmk).toLowerCase(),
         s = "text",
         a = !0;
     return (null != n &&
-        ((r = (0, O.nc)(n) ? (0, _.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
+        ((r = (0, O.nc)(n) ? (0, j.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
         (s = (0, O.nc)(n) ? ((0, X.QG)(n) ?? "text") : "locked"),
         (a = (0, M.Y)(n.type))),
     a)
@@ -187,7 +187,7 @@ function ec(e) {
 function ed(e) {
     let { id: t, itemId: n, guildId: i } = e,
         r = (0, L.Q)(t),
-        s = (0, C.bG)([q.A], () => (0, L.f)(q.A, t, n, i), [t, n, i]);
+        s = (0, A.bG)([q.A], () => (0, L.f)(q.A, t, n, i), [t, n, i]);
     return (0, l.jsxs)(U.A, { iconType: t, children: [r, null != s && (0, l.jsx)(V.A, {}), s] });
 }
 function eh(e) {
@@ -200,13 +200,13 @@ function em(e) {
 }
 function ef(e) {
     let { id: t } = e,
-        n = (0, j.K)(t);
+        n = (0, _.K)(t);
     return ((0, R.I)(null != n ? void 0 : t), (0, l.jsx)(D.A, { gameId: t, onKeyDown: es }));
 }
 var ep = n(891031),
     eg = n(106972),
     ex = n(881013);
-let eE = {
+let eS = {
         strong: ep.bold,
         em: ep.italics,
         u: ep.underline,
@@ -225,20 +225,20 @@ let eE = {
         codeBlockLang: ep.codeBlockLang,
         subtext: ep.subtext,
     },
-    eS = new Set(["link", "url", "autolink"]);
-var ey = n(165648);
-function eC(e) {
+    ey = new Set(["link", "url", "autolink"]);
+var eE = n(165648);
+function eA(e) {
     (e.preventDefault(), e.stopPropagation());
 }
-function eA(e) {
+function eC(e) {
     let { className: t, attributes: n, children: i, preventSelection: r } = e,
         a = s()(eg.S0, eg.Cj, t);
     return (0, l.jsx)("span", {
         ...n,
         className: a,
         contentEditable: !1,
-        onMouseDown: r ? eC : void 0,
-        onClick: r ? eC : void 0,
+        onMouseDown: r ? eA : void 0,
+        onClick: r ? eA : void 0,
         children: i,
     });
 }
@@ -261,9 +261,9 @@ class ev extends i.PureComponent {
             (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
-            S.VW.isEditorEmpty(e.editor)
+            y.VW.isEditorEmpty(e.editor)
                 ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
-                : (this.state = { initialValue: S.VW.richValue(e.editor), showPlaceholder: !1 }));
+                : (this.state = { initialValue: y.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
@@ -294,7 +294,7 @@ class ev extends i.PureComponent {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return !0 === n && t in eE ? eE[t] : null;
+                            return !0 === n && t in eS ? eS[t] : null;
                         })
                         .filter((e) => null != e)
                         .join(" ");
@@ -309,80 +309,80 @@ class ev extends i.PureComponent {
                             });
                         return (0, l.jsx)("div", { ...r, children: a });
                     case "blockQuote": {
-                        let e = s()(ey.h, ey.MN);
+                        let e = s()(eE.h, eE.MN);
                         return (0, l.jsxs)("div", {
                             ...r,
                             className: e,
                             children: [
-                                (0, l.jsx)("span", { contentEditable: !1, className: ey.r }),
+                                (0, l.jsx)("span", { contentEditable: !1, className: eE.r }),
                                 (0, l.jsx)("blockquote", { children: a }),
                             ],
                         });
                     }
                     case "emoji":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(el, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ei, { emoji: o.emoji }), a],
                         });
                     case "textMention":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(er, { text: o.name }), a],
                         });
                     case "userMention":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             preventSelection: !0,
                             children: [(0, l.jsx)(eo, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             preventSelection: !0,
                             children: [(0, l.jsx)(eu, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ec, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ed, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(y.LF, { soundId: o.soundId }), a],
+                            children: [(0, l.jsx)(E.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(eh, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(em, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, l.jsxs)(eA, {
+                        return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
                             preventSelection: !0,
@@ -405,8 +405,8 @@ class ev extends i.PureComponent {
                         { attributes: r, children: a, leaf: o, text: u } = t,
                         c = e.chatInputType.markdown?.disableLinks === !0,
                         d = !1,
-                        [h] = S.VW.node(e, S.PW.parent(S.VW.findPath(e, u)));
-                    switch (S.VW.isEditor(h) ? "editor" : h.type) {
+                        [h] = y.VW.node(e, y.PW.parent(y.VW.findPath(e, u)));
+                    switch (y.VW.isEditor(h) ? "editor" : h.type) {
                         case "line":
                         case "blockQuote": {
                             d = void 0;
@@ -425,8 +425,8 @@ class ev extends i.PureComponent {
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
                                             return [ep[t]];
-                                        if (c && eS.has(t)) return [];
-                                        if (t in eE) return [eE[t]];
+                                        if (c && ey.has(t)) return [];
+                                        if (t in eS) return [eS[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
                                 })
@@ -445,10 +445,10 @@ class ev extends i.PureComponent {
     }
     handleOnChange() {
         let { editor: e } = this.props,
-            t = S.VW.isEditorEmpty(e) && null == e.composition;
+            t = y.VW.isEditorEmpty(e) && null == e.composition;
         if (
             (t !== this.state.showPlaceholder && this.setState({ showPlaceholder: t }),
-            this.props.onChange?.(S.VW.richValue(e)),
+            this.props.onChange?.(y.VW.richValue(e)),
             !1 === this.props.canFocus)
         ) {
             let t = a.rL.findDocumentOrShadowRoot(e).getSelection();
@@ -480,19 +480,19 @@ class ev extends i.PureComponent {
                 ("insertText" === e.inputType || "insertReplacementText" === e.inputType) &&
                 (null == i && (i = l), null != i)
             ) {
-                let n = S.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
+                let n = y.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
                 null != n &&
                     null != e.data &&
-                    (S.ZF.isExpanded(n)
+                    (y.ZF.isExpanded(n)
                         ? g.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
             }
             if (e.inputType.startsWith("deleteContent") && null != l && !l.collapsed) {
-                let n = S.VW.toSlateRange(t, l, { exactMatch: !0, suppressThrow: !0 });
+                let n = y.VW.toSlateRange(t, l, { exactMatch: !0, suppressThrow: !0 });
                 null != n &&
-                    S.ZF.isExpanded(n) &&
+                    y.ZF.isExpanded(n) &&
                     ((t.selection = n),
                     t.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
                     e.preventDefault());
@@ -503,26 +503,26 @@ class ev extends i.PureComponent {
         let { editor: e } = this.props,
             t = { insertedPrefix: !1, startedInsideInline: !1 };
         this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
-        let n = null != e.selection && S.ZF.isCollapsed(e.selection) ? S.VW.leaf(e, e.selection.anchor.path) : null;
+        let n = null != e.selection && y.ZF.isCollapsed(e.selection) ? y.VW.leaf(e, e.selection.anchor.path) : null;
         if (null == n) {
             e.composition = t;
             return;
         }
         if (
             (null !=
-                (null != e.selection && S.ZF.isCollapsed(e.selection)
-                    ? S.VW.above(e, { at: n[1], match: (t) => S.VW.isInline(e, t), mode: "lowest" })
+                (null != e.selection && y.ZF.isCollapsed(e.selection)
+                    ? y.VW.above(e, { at: n[1], match: (t) => y.VW.isInline(e, t), mode: "lowest" })
                     : null) && (t.startedInsideInline = !0),
-            S.VW.isEditorEmpty(e))
+            y.VW.isEditorEmpty(e))
         ) {
-            (E.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t));
+            (S.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t));
             return;
         }
         let l = a.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
             i = (l?.rangeCount ?? 0) > 0 ? l?.getRangeAt(0) : null;
-        if (null == (null != i ? S.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
-            let t = S.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
-            ((e.selection = null), null != t ? E.b.select(e, t) : E.b.select(e, S.VW.end(e, [])));
+        if (null == (null != i ? y.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
+            let t = y.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
+            ((e.selection = null), null != t ? S.b.select(e, t) : S.b.select(e, y.VW.end(e, [])));
         }
         e.composition = t;
     }
@@ -530,12 +530,12 @@ class ev extends i.PureComponent {
         let { editor: t } = this.props;
         if (null == t.composition) return;
         let { insertedPrefix: n } = t.composition;
-        if (n && null != t.selection && S.ZF.isCollapsed(t.selection)) {
+        if (n && null != t.selection && y.ZF.isCollapsed(t.selection)) {
             let e = t.selection.anchor.path,
-                n = S.AS.leaf(t, e);
-            S.VW.withoutNormalizing(t, () => {
+                n = y.AS.leaf(t, e);
+            y.VW.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                (E.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), S.VW.insertText(t, e));
+                (S.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), y.VW.insertText(t, e));
             });
         }
         t.composition = null;
@@ -622,7 +622,7 @@ class ev extends i.PureComponent {
                         (0, l.jsx)(e, {
                             ...n,
                             editor: t,
-                            text: S.VW.getSelectedText(t, !0),
+                            text: y.VW.getSelectedText(t, !0),
                             clipboardHasMixedContent: i,
                         });
                 },
@@ -659,9 +659,9 @@ class ev extends i.PureComponent {
             onBlur: p,
             onKeyDown: g,
             onKeyUp: x,
-            renderExtraElement: E,
-            renderExtraLeaf: S,
-            ...y
+            renderExtraElement: S,
+            renderExtraLeaf: y,
+            ...E
         } = this.props;
         return (0, l.jsxs)("div", {
             ref: this.containerRef,
@@ -679,8 +679,8 @@ class ev extends i.PureComponent {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
-                        ...y,
-                        className: s()(ey.PT, eI.E, t),
+                        ...E,
+                        className: s()(eE.PT, eI.E, t),
                         decorate: u,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
