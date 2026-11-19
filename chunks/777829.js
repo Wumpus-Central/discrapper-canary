@@ -1,8 +1,8 @@
 var r = n(582128),
     i = n(129230),
     l = n(857512),
-    s = n(298072),
-    a = n(993408),
+    a = n(298072),
+    s = n(993408),
     u = n(623373),
     o = n(331884),
     c = n(652215);
@@ -13,9 +13,9 @@ n.d(
         f: function (e) {
             let { product: t, analyticsLocations: n } = e,
                 { cardId: d, sessionId: I, tilePosition: f } = (0, l.uM)() ?? {},
-                p = (0, s.Q)(t),
+                p = (0, a.Q)(t),
                 g = (0, o.o)(),
-                m = (0, a.xM)(g);
+                m = (0, s.xM)(g);
             return r.useCallback(
                 (e, r) => {
                     let l = (0, u.B1)(t) ? (t.variants[r ?? p]?.skuId ?? t.skuId) : t.skuId;
@@ -27,7 +27,7 @@ n.d(
                         product_sku_ids: (0, u.v8)(t),
                         location_stack: n,
                         position_in_section: f,
-                        discount_source: (0, a.b_)(m),
+                        discount_source: (0, s.b_)(m),
                     });
                 },
                 [t, p, I, d, n, f, m],

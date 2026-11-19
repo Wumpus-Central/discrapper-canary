@@ -1,7 +1,7 @@
 var l = n(477900),
     i = n(582128),
-    s = n(115560),
-    r = n(855986),
+    r = n(115560),
+    s = n(855986),
     a = n(73153),
     o = n(775602),
     u = n(149468),
@@ -15,19 +15,19 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, guildId: n, userId: g, containerDimensions: f } = e,
-                h = (0, r.bG)([o.Ay], () => o.Ay.useReducedMotion),
+                h = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 [A, x] = i.useState([]),
                 v = A.length < 50;
             i.useEffect(() => {
                 function e(e) {
-                    let { channelId: l, userId: i, emoji: r, animationType: a, animationId: o } = e;
+                    let { channelId: l, userId: i, emoji: s, animationType: a, animationId: o } = e;
                     if (null != g && g !== i) return;
-                    let d = null != r && null != a && null != o;
+                    let d = null != s && null != a && null != o;
                     if (l === t && !h && v && d) {
-                        let e = (0, c.Br)(r),
-                            l = null != r.id && !r.animated,
+                        let e = (0, c.Br)(s),
+                            l = null != s.id && !s.animated,
                             d = {
-                                id: (0, s.A)(),
+                                id: (0, r.A)(),
                                 animationType: a,
                                 animationId: o,
                                 shouldResize: l,

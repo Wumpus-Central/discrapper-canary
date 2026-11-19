@@ -11,7 +11,7 @@ n.d(
     {},
     {
         A: function (e) {
-            let { attachment: t, messageId: n, channelId: d, guildId: m, width: p, height: f } = e,
+            let { attachment: t, messageId: n, channelId: d, guildId: m, width: f, height: p } = e,
                 h = (0, l.bG)([r.A], () => (null != d && null != n ? r.A.getMessage(d, n) : void 0), [d, n]),
                 g = i.useMemo(() => (0, u.Vi)(t), [t]),
                 { enableDistributedClips: A } = o.A.useConfig({ location: "useMultiSourceConfig" }),
@@ -30,7 +30,7 @@ n.d(
                             url: t.url,
                             durationSec: t.duration_secs,
                             startSec: 0,
-                            poster: (0, c.s)(t.proxy_url ?? t.url, t, p, f, "webp"),
+                            poster: (0, c.s)(t.proxy_url ?? t.url, t, f, p, "webp"),
                             width: t.width,
                             height: t.height,
                             label: t.title,
@@ -48,7 +48,7 @@ n.d(
                                       url: n.url,
                                       durationSec: e.endTimestamp / 1e3 - e.startTimestamp / 1e3,
                                       startSec: e.startTimestamp / 1e3 - g.startTimestamp / 1e3,
-                                      poster: (0, c.s)(n.proxy_url, n, p, f, "webp"),
+                                      poster: (0, c.s)(n.proxy_url, n, f, p, "webp"),
                                       width: n.width,
                                       height: n.height,
                                       label: n.title,
@@ -57,7 +57,7 @@ n.d(
                         }),
                         activeSourceId: t.id,
                     };
-            }, [C, t, m, x, h, g, A, p, f]);
+            }, [C, t, m, x, h, g, A, f, p]);
         },
     },
 );

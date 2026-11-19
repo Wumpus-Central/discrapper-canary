@@ -2,8 +2,8 @@ var r = n(477900);
 n(582128);
 var i = n(192308),
     l = n(857512),
-    s = n(4227),
-    a = n(466459);
+    a = n(4227),
+    s = n(466459);
 let u = "collectibles shop product details modal";
 n.d(
     t,
@@ -27,7 +27,7 @@ n.d(
                 tilePosition: x,
             } = e;
             if (t.isCategoryReward) {
-                let { isPurchased: e } = (0, a.o)(s.A, t);
+                let { isPurchased: e } = (0, s.o)(a.A, t);
                 if (!e) return;
             }
             (0, i.mM)(

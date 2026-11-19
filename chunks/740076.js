@@ -1,7 +1,7 @@
 var r = n(334279),
     i = n(855986),
     l = n(166403),
-    s = n(792996);
+    a = n(792996);
 n.d(
     t,
     {},
@@ -12,7 +12,7 @@ n.d(
                 return e?.isPurchasedExternally === !0;
             });
             return r.I.ALL.has(e)
-                ? { isDisabled: t, disabledReason: t ? s.intl.string(s.t.NbveHD) : null }
+                ? { isDisabled: t, disabledReason: t ? a.intl.string(a.t.NbveHD) : null }
                 : { isDisabled: !1, disabledReason: null };
         },
     },

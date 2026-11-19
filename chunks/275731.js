@@ -1,8 +1,8 @@
 var l = n(477900);
 n(582128);
 var i = n(487329),
-    s = n(821715),
-    r = n(93067),
+    r = n(821715),
+    s = n(93067),
     a = n(792996);
 n.d(
     t,
@@ -10,7 +10,7 @@ n.d(
     {
         A: function (e) {
             let { participant: t, className: n } = e,
-                o = (0, s.A)(t);
+                o = (0, r.A)(t);
             if (null == o) return null;
             let u = (function (e) {
                 switch (e) {
@@ -28,7 +28,7 @@ n.d(
                         return;
                 }
             })(o);
-            return null != u ? (0, l.jsx)(r.A, { className: n, errorMessage: u, avError: o }) : null;
+            return null != u ? (0, l.jsx)(s.A, { className: n, errorMessage: u, avError: o }) : null;
         },
     },
 );

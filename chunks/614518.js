@@ -1,8 +1,8 @@
 let l;
 n(667532);
 var i = n(435558),
-    s = n(855986),
-    r = n(765178),
+    r = n(855986),
+    s = n(765178),
     a = n(73153),
     o = n(927813),
     u = n(716365);
@@ -14,9 +14,9 @@ let c = [],
     g = 10 * o.A.Millis.SECOND,
     f = (0, i.debounce)(() => {
         let e = (0, u.fr)(m);
-        (r.O.announce(e, "polite"), (m = []));
+        (s.O.announce(e, "polite"), (m = []));
     }, 500);
-class h extends s.Ay.Store {
+class h extends r.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
     get recentlyUsedEmojis() {
         return c;

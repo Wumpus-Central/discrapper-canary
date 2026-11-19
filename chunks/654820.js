@@ -1,8 +1,8 @@
 (n(134528), n(947204));
 var l = n(477900),
     i = n(582128),
-    s = n(520698),
-    r = n(412780),
+    r = n(520698),
+    s = n(412780),
     a = n(262012);
 n.d(
     t,
@@ -10,7 +10,7 @@ n.d(
     {
         A: function (e) {
             let { currentUserId: t, participant: n } = e,
-                o = (0, s.A)(n.type),
+                o = (0, r.A)(n.type),
                 [u, c] = i.useState(),
                 [d, m] = i.useState(),
                 [p, g] = i.useState(),
@@ -19,19 +19,19 @@ n.d(
                 x = t === A,
                 v = i.useCallback((e, t, n) => {
                     var l, i;
-                    let s = n ? r.Ay.getOutboundStats(t) : r.Ay.getInboundStats(e, t),
+                    let r = n ? s.Ay.getOutboundStats(t) : s.Ay.getInboundStats(e, t),
                         a =
-                            void 0 === (l = s?.resolution) || (0 === l.width && 0 === l.height)
+                            void 0 === (l = r?.resolution) || (0 === l.width && 0 === l.height)
                                 ? "unknown"
                                 : l.width + " x " + l.height;
-                    (c("unknown" === a ? "-" : (s?.codec ?? "unknown")),
+                    (c("unknown" === a ? "-" : (r?.codec ?? "unknown")),
                         m("unknown" === a ? "-" : a),
                         g(
-                            s?.bitrateEstimate !== void 0
-                                ? ((i = s.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
+                            r?.bitrateEstimate !== void 0
+                                ? ((i = r.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                                 : "unknown",
                         ),
-                        h("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
+                        h("unknown" === a || r?.fps === void 0 ? "-" : String(r.fps)));
                 }, []);
             return (
                 i.useEffect(() => {

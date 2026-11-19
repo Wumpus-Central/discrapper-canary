@@ -7,8 +7,8 @@ var i = n(582128),
     u = n(531685),
     c = n(365971),
     d = n(392164);
-let m = new s.A("NotificationLayoutManager");
-class h {
+let h = new s.A("NotificationLayoutManager");
+class m {
     resizeObserver;
     listeners = new Map();
     queuedCompute = !1;
@@ -85,50 +85,50 @@ class h {
         return this.listeners.get(e);
     }
 }
-let f = i.createContext(new h(!0));
-function g(e, t, n) {
+let p = i.createContext(new m(!0));
+function f(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let A = { mass: 0.8, friction: 25, tension: 320 };
+let g = { mass: 0.8, friction: 25, tension: 320 };
 n.d(
     t,
     {},
     {
-        Fn: h,
-        Gt: f,
+        Fn: m,
+        Gt: p,
         Ru: function (e, t, n) {
-            let [s, h] = (0, r.z)(
+            let [s, m] = (0, r.z)(
                     () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
                     void 0,
                     [],
                 ),
-                p = i.useRef(h),
-                E = i.useContext(f),
-                C = i.useMemo(() => {
+                A = i.useRef(m),
+                v = i.useContext(p),
+                E = i.useMemo(() => {
                     let t = !1;
                     return (n) => {
                         null == n
-                            ? E.unsubscribe(e)
-                            : E.subscribe(e, n, (n) => {
-                                  let { locked: i, matchHeight: r, height: l, top: s, index: h } = n;
+                            ? v.unsubscribe(e)
+                            : v.subscribe(e, n, (n) => {
+                                  let { locked: i, matchHeight: r, height: l, top: s, index: m } = n;
                                   if (o.default.getCurrentUser()?.isStaff()) {
                                       let t = a.A.getWindow(d.f),
                                           n = null != t ? u.A.windowSize((0, c.Q2)(t)) : void 0;
-                                      m.info(
+                                      h.info(
                                           "Notification layout update",
-                                          { id: e, locked: i, matchHeight: r, height: l, top: s, index: h },
+                                          { id: e, locked: i, matchHeight: r, height: l, top: s, index: m },
                                           n,
                                       );
                                   }
-                                  let { current: f } = p,
-                                      E = {
-                                          opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
-                                          scale: i ? Math.min(1 - h / 4, 1) : 1,
-                                          transform: g(h, i, s),
-                                          contentOpacity: i && h > 0 ? 0 : 1,
+                                  let { current: p } = A,
+                                      v = {
+                                          opacity: i && m > 4 ? 0 : i ? Math.min(1 - m / 4, 1) : 1,
+                                          scale: i ? Math.min(1 - m / 4, 1) : 1,
+                                          transform: f(m, i, s),
+                                          contentOpacity: i && m > 0 ? 0 : 1,
                                           height: i ? r : l,
                                       };
-                                  (f({
+                                  (p({
                                       from: t
                                           ? void 0
                                           : {
@@ -138,30 +138,30 @@ n.d(
                                                 contentOpacity: 1,
                                                 height: i ? r : l,
                                             },
-                                      to: E,
-                                      config: A,
+                                      to: v,
+                                      config: g,
                                   }),
                                       (t = !0));
                               });
                     };
-                }, [e, E]);
+                }, [e, v]);
             return (
                 i.useLayoutEffect(() => {
                     if (t === l.wL.YEETED) {
-                        let t = E.getLayoutSpecs(e);
+                        let t = v.getLayoutSpecs(e);
                         if (null == t) return void n();
-                        (p.current({
+                        (A.current({
                             to: {
                                 scale: 0.8,
                                 opacity: 0,
-                                transform: g(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
+                                transform: f(t.index, v.locked, t.top) + (v.locked ? 0 : t.height / 2),
                             },
-                            config: A,
+                            config: g,
                         }),
                             setTimeout(n, 300));
                     }
-                }, [t, n, e, E]),
-                { ref: C, springs: s }
+                }, [t, n, e, v]),
+                { ref: E, springs: s }
             );
         },
     },

@@ -9,8 +9,8 @@ var i,
     c = n(534514),
     d = n(834730),
     m = n(821609),
-    p = n(964486),
-    f = n(171576),
+    f = n(964486),
+    p = n(171576),
     h = n(962877),
     g = n(240248),
     A = n(613412);
@@ -114,7 +114,7 @@ function ei() {
         className: en.Q,
         children: b.intl.format(_.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                P.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
+                P.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -135,8 +135,8 @@ let em = () => ({
     days: _.default.tVHevX,
     date: _.default.q6jzya,
 });
-var ep = n(665956),
-    ef = n(838131);
+var ef = n(665956),
+    ep = n(838131);
 function eh(e) {
     var t;
     let {
@@ -148,11 +148,11 @@ function eh(e) {
             onAccept: c,
             onDecline: m,
         } = e,
-        p = (0, O.bG)([k.default], () => k.default.getUser(n.parent_id)),
-        f = p?.globalName ?? p?.username ?? n.parent_username,
-        h = p?.username ?? n.parent_username,
-        g = h !== f,
-        A = p?.avatar ?? n.parent_avatar,
+        f = (0, O.bG)([k.default], () => k.default.getUser(n.parent_id)),
+        p = f?.globalName ?? f?.username ?? n.parent_username,
+        h = f?.username ?? n.parent_username,
+        g = h !== p,
+        A = f?.avatar ?? n.parent_avatar,
         { isConnected: C, isResolved: x } = (function (e) {
             let t = (0, O.bG)([$.A], () => $.A.getLinkedUsers()[e]?.link_status),
                 [n, i] = a.useState(() =>
@@ -175,20 +175,20 @@ function eh(e) {
         E = ((t = n.created_at), (0, ed.mV)(Date.parse(t), em)),
         v = ec.Ay.getUserAvatarURL({ id: n.parent_id, avatar: A }, !1, (0, er.FT)(er._3.SIZE_40));
     return (0, r.jsxs)("div", {
-        className: ef.nM,
+        className: ep.nM,
         children: [
             (0, r.jsx)("div", {
-                className: ef.R3,
+                className: ep.R3,
                 children: (0, r.jsx)(ea.eu, { src: v, size: er._3.SIZE_40, "aria-label": h }),
             }),
             (0, r.jsxs)("div", {
-                className: ef.zH,
+                className: ep.zH,
                 children: [
                     (0, r.jsx)(d.E, {
                         variant: "body-md/normal",
                         color: "mobile-text-heading-primary",
                         lineClamp: 1,
-                        children: f,
+                        children: p,
                     }),
                     g &&
                         (0, r.jsx)(d.E, {
@@ -207,31 +207,31 @@ function eh(e) {
                       children: b.intl.string(C ? _.default.YQP5dE : _.default["2HvOvh"]),
                   })
                 : (0, r.jsxs)("div", {
-                      className: ef.o1,
+                      className: ep.o1,
                       children: [
                           !i &&
                               (0, r.jsx)(es.D, {
-                                  "aria-label": b.intl.formatToPlainString(ep.default.jc1Ip7, {
+                                  "aria-label": b.intl.formatToPlainString(ef.default.jc1Ip7, {
                                       name: n.parent_username,
                                   }),
-                                  className: D()(ef.hP, ef.xG),
+                                  className: D()(ep.hP, ep.xG),
                                   onClick: () => !u && c(n.parent_id),
                                   children: l
                                       ? (0, r.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE_SIMPLE })
                                       : (0, r.jsx)(eo.CheckmarkLargeBoldIcon, {
-                                            className: ef.gE,
+                                            className: ep.gE,
                                             color: "currentColor",
                                         }),
                               }),
                           (0, r.jsx)(es.D, {
-                              "aria-label": b.intl.formatToPlainString(ep.default["4GtllP"], {
+                              "aria-label": b.intl.formatToPlainString(ef.default["4GtllP"], {
                                   name: n.parent_username,
                               }),
-                              className: D()(ef.hP, ef.rr),
+                              className: D()(ep.hP, ep.rr),
                               onClick: () => !u && m(n.parent_id),
                               children: s
                                   ? (0, r.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE_SIMPLE })
-                                  : (0, r.jsx)(eu.XSmallIcon, { className: ef.gE, color: "currentColor" }),
+                                  : (0, r.jsx)(eu.XSmallIcon, { className: ep.gE, color: "currentColor" }),
                           }),
                       ],
                   }),
@@ -265,9 +265,9 @@ function eg(e) {
                     },
                 }),
                 m = c || d,
-                [p, f] = a.useState(() => new Set()),
+                [f, p] = a.useState(() => new Set()),
                 h = a.useCallback((e) => {
-                    f((t) => {
+                    p((t) => {
                         if (t.has(e)) return t;
                         let n = new Set(t);
                         return (n.add(e), n);
@@ -294,7 +294,7 @@ function eg(e) {
                       v(t),
                       x((e) => {
                           let n = new Map();
-                          for (let t of e) p.has(t.parent_id) && n.set(t.parent_id, t);
+                          for (let t of e) f.has(t.parent_id) && n.set(t.parent_id, t);
                           for (let e of t) n.set(e.parent_id, e);
                           return Array.from(n.values());
                       }))
@@ -320,13 +320,13 @@ function eg(e) {
             pendingRequests: t,
             linkedUsersProcessed: n,
             onActionError: () => {
-                (0, z.P0)({ text: b.intl.string(ep.default.Wu8BK2), variant: "critical" });
+                (0, z.P0)({ text: b.intl.string(ef.default.Wu8BK2), variant: "critical" });
             },
         });
     return 0 === i.length
         ? null
         : (0, r.jsx)("div", {
-              className: ef.Nr,
+              className: ep.Nr,
               children: i.map((e) =>
                   (0, r.jsx)(
                       eh,
@@ -393,7 +393,7 @@ let ev = {
                         onClick: function () {
                             n?.ageVerificationStatus === M.Tk.UNVERIFIED
                                 ? P.A.showAgeVerificationGetStartedModal({
-                                      entryPoint: f.q1.SAFETY_FLOWS,
+                                      entryPoint: p.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: j.Empty }),
                                   })
                                 : t({ type: j.Empty });
@@ -420,9 +420,9 @@ let ev = {
             var t;
             let n,
                 i,
-                { configData: l, onSubmit: o, disabled: c, transitionState: f = s.ip.ENTERED } = e,
+                { configData: l, onSubmit: o, disabled: c, transitionState: p = s.ip.ENTERED } = e,
                 { getLinkCode: h } = (0, Z.A)();
-            (0, p.Ay)(() => {
+            (0, f.Ay)(() => {
                 (0, X._z)();
             });
             let g = a.useMemo(() => {
@@ -483,7 +483,7 @@ let ev = {
                     ? b.intl.format(_.default["6GaRTu"], { link: ex })
                     : b.intl.format(_.default["Ke+kz5"], { pendingCount: T, link: ex });
             return (0, r.jsxs)(K.d, {
-                transitionState: f,
+                transitionState: p,
                 onClose: eA.tE,
                 dismissable: !1,
                 size: "md",
@@ -748,7 +748,7 @@ let eR = function (e) {
             },
             [i, k],
         );
-    (0, p.Ay)(() => {
+    (0, f.Ay)(() => {
         k();
     });
     let w = a.useMemo(() => i?.task_type === y.AGE_VERIFICATION, [i]),
@@ -760,7 +760,7 @@ let eR = function (e) {
             w
                 ? (0, r.jsx)(h.default, {
                       transitionState: t ?? s.ip.ENTERED,
-                      entryPoint: f.q1.SAFETY_FLOWS,
+                      entryPoint: p.q1.SAFETY_FLOWS,
                       onClose: eA.tE,
                       onComplete: async () => {
                           await L({ type: j.Empty });

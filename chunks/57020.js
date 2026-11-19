@@ -2,8 +2,8 @@ n(321073);
 var r = n(855104),
     i = n(623373),
     l = n(181170),
-    s = n(758836),
-    a = n(652215);
+    a = n(758836),
+    s = n(652215);
 n.d(
     t,
     {},
@@ -18,12 +18,12 @@ n.d(
                     formerFiatPrice: f,
                 } = (function (e) {
                     let { product: t, hasShopDiscount: n, storefrontPrices: r } = e,
-                        s = (0, i.CW)({ product: t, hasShopDiscount: n }),
-                        a = (0, i.$K)({ product: t, hasShopDiscount: n }) ?? void 0,
-                        u = (0, l.QV)({ storefrontPrices: r, nonPromoPrice: a }),
-                        o = u ?? a,
-                        c = null != u ? (a ?? null) : null;
-                    return { orbPrice: s, fiatPrice: o, isOrbExclusive: (0, i.Ab)(t), formerFiatPrice: c };
+                        a = (0, i.CW)({ product: t, hasShopDiscount: n }),
+                        s = (0, i.$K)({ product: t, hasShopDiscount: n }) ?? void 0,
+                        u = (0, l.QV)({ storefrontPrices: r, nonPromoPrice: s }),
+                        o = u ?? s,
+                        c = null != u ? (s ?? null) : null;
+                    return { orbPrice: a, fiatPrice: o, isOrbExclusive: (0, i.Ab)(t), formerFiatPrice: c };
                 })({ product: t, hasShopDiscount: n, storefrontPrices: o }),
                 p = (0, r.kj)(null != c ? c.amount : null);
             return (function (e) {
@@ -36,8 +36,8 @@ n.d(
                         prioritizedCurrency: u = null,
                     } = e,
                     o = [],
-                    c = u === s.Hi.ORBS,
-                    d = u === s.Hi.FIAT;
+                    c = u === a.Hi.ORBS,
+                    d = u === a.Hi.FIAT;
                 null != n && null != r
                     ? c || (!d && t)
                         ? o.push(n, r)
@@ -45,8 +45,8 @@ n.d(
                     : null != n
                       ? o.push(n)
                       : null != r && o.push(r);
-                let I = o.length > 0 && o[0]?.currency === a.Yri.DISCORD_ORB,
-                    f = o.map((e) => (e.currency === a.Yri.DISCORD_ORB ? null : l)),
+                let I = o.length > 0 && o[0]?.currency === s.Yri.DISCORD_ORB,
+                    f = o.map((e) => (e.currency === s.Yri.DISCORD_ORB ? null : l)),
                     p = null != f[0];
                 return {
                     checkoutEligiblePrices: o,

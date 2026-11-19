@@ -194,8 +194,8 @@ class f {
     }
 }
 let g = [" ", "Enter"],
-    p = ["Escape"];
-function m(e) {
+    m = ["Escape"];
+function p(e) {
     (e.preventDefault(), e.stopImmediatePropagation());
 }
 function A(e, t) {
@@ -245,7 +245,7 @@ class v {
             this.endDrag());
     }
     handleGlobalKeyDown = (e) => {
-        this.monitor.isDragging() && A(e, p) && (this.endDrag(e), this._announcer.announceCancel());
+        this.monitor.isDragging() && A(e, m) && (this.endDrag(e), this._announcer.announceCancel());
     };
     setDndMode(e) {
         this.options?.onDndModeChanged(e);
@@ -298,7 +298,7 @@ class v {
         if (!y(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
             return;
         if (this.monitor.isDragging()) return void this.actions.publishDragSource();
-        m(t);
+        p(t);
         let n = this.sourceNodes.get(e);
         null != n &&
             ((this._navigator = new f(n, this.targetNodes, this.manager, this._previewer, this._announcer)),
@@ -316,7 +316,7 @@ class v {
         A(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
-        (null != e && m(e),
+        (null != e && p(e),
             this._navigator?.disconnect(),
             this._previewer.clear(),
             this.monitor.isDragging() && this.actions.endDrag(),

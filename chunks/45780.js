@@ -11,7 +11,7 @@ function m(e, t) {
     let n = a.A.getDismissedGuildContent(t);
     return null != n && (0, o.c0)(n, e);
 }
-function p(e, t, n, i, a) {
+function f(e, t, n, i, a) {
     ((0, r.TG)(
         n,
         (i) => {
@@ -36,10 +36,10 @@ n.d(
             return (0, i.bG)([a.A], () => m(e, t));
         },
         _$: function (e, t, n, i) {
-            p(!0, e, t, n, i);
+            f(!0, e, t, n, i);
         },
         hk: function (e, t) {
-            p(!1, e, t);
+            f(!1, e, t);
         },
         zs: m,
     },

@@ -10,8 +10,8 @@ n.d(
         },
         iM: function (e) {
             let { tab: t, children: n } = e,
-                s = i.useMemo(() => ({ tab: t }), [t]);
-            return (0, r.jsx)(l.Provider, { value: s, children: n });
+                a = i.useMemo(() => ({ tab: t }), [t]);
+            return (0, r.jsx)(l.Provider, { value: a, children: n });
         },
     },
 );

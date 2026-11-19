@@ -61,8 +61,8 @@ n.d(
                         N = c(o(t, u, d)),
                         [C, y] = i.useState(!1),
                         [x, j] = i.useState(!1),
-                        [O, T] = i.useState(!1),
-                        [S] = i.useState(
+                        [O, S] = i.useState(!1),
+                        [T] = i.useState(
                             () =>
                                 new r.Lp((e) => {
                                     let [t, n] = e.split(",").map(Number);
@@ -71,7 +71,7 @@ n.d(
                                     };
                                 }),
                         );
-                    i.useEffect(() => () => S.clean(), [S]);
+                    i.useEffect(() => () => T.clean(), [T]);
                     let b = i.useCallback(
                             (e) => {
                                 if (!_.current || !p) return !1;
@@ -94,30 +94,30 @@ n.d(
                                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                                     [n, i] = null != E ? E(u, d) : [u, d];
                                 if ((n !== u || i !== d) && (I({ type: s.n.SET_FOCUSED_POSITION, x: n, y: i }), !e))
-                                    return void T(!0);
+                                    return void S(!0);
                                 let l = c(o(t, n, i));
-                                null != l && (T(!0), b(l));
+                                null != l && (S(!0), b(l));
                             },
                             [I, u, d, E, t, b],
                         ),
-                        [L, P] = i.useState(!1);
+                        [P, L] = i.useState(!1);
                     i.useEffect(() => {
-                        if (!L || !C) return;
-                        P(!1);
+                        if (!P || !C) return;
+                        L(!1);
                         let e = c(o(t, u, d));
                         if (null != e) return void b(e);
                         y(!1);
                         let n = c(o(t));
                         null != n && b(n);
-                    }, [t, L, C, b, u, d]);
+                    }, [t, P, C, b, u, d]);
                     let M = i.useCallback((e) => {
-                        _.current && null == e && P(!0);
+                        _.current && null == e && L(!0);
                     }, []);
                     (i.useEffect(() => {
                         C && x && null != N && (b(N), j(!1));
                     }, [x, N]),
                         i.useEffect(() => {
-                            C && (O || R(u, d), T(!1));
+                            C && (O || R(u, d), S(!1));
                         }, [u, d]));
                     let D = i.useCallback(
                             (e) => {
@@ -178,7 +178,7 @@ n.d(
                         w = i.useCallback(
                             (e) =>
                                 e.currentTarget !== e.target
-                                    ? (C || (y(!0), T(!0)), !1)
+                                    ? (C || (y(!0), S(!0)), !1)
                                     : C
                                       ? (v(!1), !1)
                                       : void (h && null != N ? R(u, d) : v(!0)),
@@ -212,11 +212,11 @@ n.d(
                                     "aria-colindex": e + 1,
                                     id: (0, r.Aq)(t, e, n),
                                     tabIndex: h && e === u && n === d ? 0 : -1,
-                                    onFocus: S.get(`${e},${n}`),
+                                    onFocus: T.get(`${e},${n}`),
                                 };
                                 return (e === u && n === d && (i.ref = M), i);
                             },
-                            [t, h, u, d, S, M],
+                            [t, h, u, d, T, M],
                         ),
                         J = i.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
                     return i.useMemo(

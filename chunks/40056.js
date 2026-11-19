@@ -1,7 +1,7 @@
 var l = n(477900),
     i = n(582128),
-    s = n(435558),
-    r = n(451988),
+    r = n(435558),
+    s = n(451988),
     a = n(964486),
     o = n(652896),
     u = n(834757),
@@ -31,7 +31,7 @@ let p = { x: 0, y: 0 },
         doZoom: () => {},
         wrapperRef: i.createRef(),
     }),
-    f = (0, s.debounce)((e, t, n) => {
+    f = (0, r.debounce)((e, t, n) => {
         let l = null,
             i = null;
         if (null != n && (0, o.wL)(n)) {
@@ -52,43 +52,43 @@ let p = { x: 0, y: 0 },
             [m, h] = i.useState(!1),
             [A, x] = i.useState(!1),
             [v, E] = i.useState(!1),
-            [C, I] = i.useState(!1),
-            [j, S] = i.useState(16 / 9),
-            [_, b] = i.useState({ x: 0, y: 0 }),
-            N = i.useRef(null),
-            y = i.useRef(null);
+            [C, j] = i.useState(!1),
+            [S, I] = i.useState(16 / 9),
+            [b, y] = i.useState({ x: 0, y: 0 }),
+            _ = i.useRef(null),
+            N = i.useRef(null);
         (0, a.l0)(() => {
-            y.current?.stop();
+            N.current?.stop();
         });
-        let R = i.useCallback(
+        let w = i.useCallback(
                 (e, t) => {
-                    if (null == N.current) return p;
+                    if (null == _.current) return p;
                     let n = t ?? c,
-                        l = N.current.clientWidth,
-                        i = N.current.clientHeight,
-                        r = (l * (n - 1)) / 2,
+                        l = _.current.clientWidth,
+                        i = _.current.clientHeight,
+                        s = (l * (n - 1)) / 2,
                         a = (i * (n - 1)) / 2;
-                    return { x: (0, s.clamp)(e.x, -r, r), y: (0, s.clamp)(e.y, -a, a) };
+                    return { x: (0, r.clamp)(e.x, -s, s), y: (0, r.clamp)(e.y, -a, a) };
                 },
                 [c],
             ),
-            T = i.useCallback(
+            k = i.useCallback(
                 (e, l, i) => {
-                    let a = (0, s.clamp)(e, n, o);
+                    let a = (0, r.clamp)(e, n, o);
                     if (null == l || a === c) return;
                     h(!0);
                     let u = a / c;
-                    (b((e) => R({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
+                    (y((e) => w({ x: (e.x - l.x) * u + l.x, y: (e.y - l.y) * u + l.y }, a)),
                         d(a),
                         f(a, i, t),
-                        null == y.current && (y.current = new r.Ep()),
-                        y.current.start(2e3, () => {
+                        null == N.current && (N.current = new s.Ep()),
+                        N.current.start(2e3, () => {
                             h(!1);
                         }));
                 },
-                [R, o, n, t, c],
+                [w, o, n, t, c],
             ),
-            L = i.useMemo(
+            R = i.useMemo(
                 () => ({
                     enabled: !0,
                     zoomLevel: c,
@@ -102,18 +102,18 @@ let p = { x: 0, y: 0 },
                     isWheeling: v,
                     setIsWheeling: E,
                     isSlidering: C,
-                    setIsSlidering: I,
-                    videoAspectRatio: j,
-                    setVideoAspectRatio: S,
-                    doZoom: T,
-                    panOffset: _,
-                    setPanOffset: b,
-                    wrapperRef: N,
-                    clampPanOffset: R,
+                    setIsSlidering: j,
+                    videoAspectRatio: S,
+                    setVideoAspectRatio: I,
+                    doZoom: k,
+                    panOffset: b,
+                    setPanOffset: y,
+                    wrapperRef: _,
+                    clampPanOffset: w,
                 }),
-                [R, T, A, C, v, m, o, n, _, j, c],
+                [w, k, A, C, v, m, o, n, b, S, c],
             );
-        return (0, l.jsx)(g.Provider, { value: L, children: u });
+        return (0, l.jsx)(g.Provider, { value: R, children: u });
     });
 n.d(
     t,

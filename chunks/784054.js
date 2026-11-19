@@ -2,8 +2,8 @@ n.d(t, { A: () => y });
 var r = n(477900),
     i = n(582128),
     l = n(503698),
-    s = n.n(l),
-    a = n(837381),
+    a = n.n(l),
+    s = n(837381),
     u = n(741918),
     o = n(646514),
     c = n(866665),
@@ -53,16 +53,16 @@ function A(e) {
         R = (0, p.A)(`shop-variants-group-${t.storeListingId}-${A}`, u.Gl.HORIZONTAL);
     return 0 === v.length
         ? null
-        : (0, r.jsx)(a.hD, {
+        : (0, r.jsx)(s.hD, {
               navigator: R,
-              children: (0, r.jsx)(a.PR, {
+              children: (0, r.jsx)(s.PR, {
                   children: (e) => {
-                      let { ref: i, ...a } = e;
+                      let { ref: i, ...s } = e;
                       return (0, r.jsxs)("div", {
-                          className: s()({ [E.yZ]: o, [E.sz]: !o, [E.LV]: c }, E.lO),
+                          className: a()({ [E.yZ]: o, [E.sz]: !o, [E.LV]: c }, E.lO),
                           ref: i,
-                          ...a,
-                          tabIndex: -1 === f ? -1 : a.tabIndex,
+                          ...s,
+                          tabIndex: -1 === f ? -1 : s.tabIndex,
                           children: [
                               v.map((e, t) =>
                                   (0, r.jsx)(
@@ -109,7 +109,7 @@ function b(e) {
             onTrackClick: p,
             parentTabIndex: g,
         } = e,
-        { onFocus: m, ...x } = (0, a.rm)(`shop-variants-group-${t.storeListingId}-${t.variantLabel}`),
+        { onFocus: m, ...x } = (0, s.rm)(`shop-variants-group-${t.storeListingId}-${t.variantLabel}`),
         { isPurchased: C } = (0, v.h)(t),
         A = i.useCallback(
             (e) => {
@@ -127,7 +127,7 @@ function b(e) {
             onClick: A,
             onMouseEnter: o,
             onMouseLeave: I,
-            className: s()(E.bP, { [E.wH]: l }),
+            className: a()(E.bP, { [E.wH]: l }),
             style: { backgroundColor: t.variantValue, zIndex: f },
             ...x,
             tabIndex: -1 === g ? -1 : x.tabIndex,
@@ -145,7 +145,7 @@ function R(e) {
 }
 function k(e) {
     let { zIndex: t, isSelected: n, onOverflowClick: l, storeListingId: u, onTrackClick: o, parentTabIndex: c } = e,
-        { onFocus: I, ...p } = (0, a.rm)(`shop-variants-group-${u}-overflow`),
+        { onFocus: I, ...p } = (0, s.rm)(`shop-variants-group-${u}-overflow`),
         g = i.useCallback(
             (e) => {
                 (e.stopPropagation(), o?.(_.sH.VARIANT_CLICK_MORE), l(e), I());
@@ -155,7 +155,7 @@ function k(e) {
     return (0, r.jsx)(d.D, {
         "aria-label": h.intl.string(h.t["+0zcgs"]),
         onClick: g,
-        className: s()(E.bP, E.V3, { [E.wH]: n }),
+        className: a()(E.bP, E.V3, { [E.wH]: n }),
         style: { zIndex: t },
         ...p,
         tabIndex: -1 === c ? -1 : p.tabIndex,
@@ -168,8 +168,8 @@ let y = function (e) {
             isCollapsed: n = !1,
             wrap: i = !1,
             onVariantEnter: l,
-            onVariantExit: s,
-            overflowProps: a,
+            onVariantExit: a,
+            overflowProps: s,
             onTrackClick: u,
             parentTabIndex: o,
         } = e,
@@ -178,10 +178,10 @@ let y = function (e) {
         ? (0, r.jsx)(A, {
               product: c,
               onVariantEnter: l,
-              onVariantExit: s,
+              onVariantExit: a,
               isCollapsed: n,
               wrap: i,
-              overflowProps: a,
+              overflowProps: s,
               onTrackClick: u,
               parentTabIndex: o,
           })

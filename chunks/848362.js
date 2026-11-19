@@ -7,17 +7,17 @@ var i = n(477900),
     u = n(820284),
     c = n(628983),
     d = n(74329),
-    m = n(600125),
-    h = n(338771),
-    f = n(616356),
-    g = n(287809),
-    A = n(562153),
-    p = n(652215),
-    E = n(792996);
-function C(e, t, n) {
+    h = n(600125),
+    m = n(338771),
+    p = n(616356),
+    f = n(287809),
+    g = n(562153),
+    A = n(652215),
+    v = n(792996);
+function E(e, t, n) {
     let i = (0, l.bG)([c.A], () => (null != e ? c.A.getSelectedParticipantId(e.id) : null)),
-        s = (0, l.bG)([f.A], () => (null != i ? f.A.getActiveStreamForStreamKey(i) : null), [i]),
-        a = (0, l.cf)([g.default], () => n.reduce((e, t) => ((e[t.ownerId] = g.default.getUser(t.ownerId)), e), {}), [
+        s = (0, l.bG)([p.A], () => (null != i ? p.A.getActiveStreamForStreamKey(i) : null), [i]),
+        a = (0, l.cf)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [
             n,
         ]);
     return r.useMemo(() => {
@@ -25,7 +25,7 @@ function C(e, t, n) {
         let i = n.filter((e) => e.ownerId !== t?.id);
         return 1 === i.length && i[0].ownerId === s?.ownerId
             ? []
-            : i.map((t) => ({ stream: t, username: A.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
+            : i.map((t) => ({ stream: t, username: g.Ay.getName(e.getGuildId(), e.id, a[t.ownerId]) }));
     }, [a, n, e, s, t?.id]);
 }
 n.d(
@@ -39,56 +39,56 @@ n.d(
                     activeStreams: r,
                     hideSelfOptions: l = !1,
                     showReportOption: c = !1,
-                    handleGoLive: f,
-                    onClose: g,
-                    onSelect: A,
-                    appContext: b = p.BRT.APP,
-                    disableChangeWindows: v = !1,
-                    onInteraction: I,
+                    handleGoLive: p,
+                    onClose: f,
+                    onSelect: g,
+                    appContext: y = A.BRT.APP,
+                    disableChangeWindows: I = !1,
+                    onInteraction: C,
                 } = e,
-                _ = r.find((e) => e.ownerId === n?.id) ?? null,
-                T = C(t, n, r),
-                y = (0, d.A)(_, b),
-                R = (0, m.E)({
-                    disableChangeWindows: v,
-                    stream: _,
+                b = r.find((e) => e.ownerId === n?.id) ?? null,
+                S = E(t, n, r),
+                w = (0, d.A)(b, y),
+                x = (0, h.E)({
+                    disableChangeWindows: I,
+                    stream: b,
                     showReportOption: c,
-                    handleGoLive: f,
+                    handleGoLive: p,
                     minimal: !0,
-                    appContext: b,
+                    appContext: y,
                 });
             return (0, i.jsx)(u.A, {
-                section: p.JJy.CONTEXT_MENU,
+                section: A.JJy.CONTEXT_MENU,
                 children: (0, i.jsxs)(s.W, {
                     "data-menu-migrated": !0,
-                    onSelect: A,
+                    onSelect: g,
                     navId: "manage-streams",
-                    onClose: g,
-                    onInteraction: I,
-                    "aria-label": null != _ ? E.intl.string(E.t.S5anIc) : E.intl.string(E.t.fjBNo1),
+                    onClose: f,
+                    onInteraction: C,
+                    "aria-label": null != b ? v.intl.string(v.t.S5anIc) : v.intl.string(v.t.fjBNo1),
                     children: [
                         (0, i.jsx)(a.rX, {
-                            children: T.map((e) => {
+                            children: S.map((e) => {
                                 let { stream: t, username: n } = e;
                                 return (0, i.jsx)(
                                     a.Dr,
                                     {
                                         id: t.ownerId,
-                                        label: E.intl.formatToPlainString(E.t["7rkg+/"], { username: n }),
+                                        label: v.intl.formatToPlainString(v.t["7rkg+/"], { username: n }),
                                         icon: o.ScreenXIcon,
                                         leadingAccessory: { type: "icon", icon: o.ScreenXIcon },
-                                        action: () => (0, h.A)(t),
+                                        action: () => (0, m.A)(t),
                                     },
                                     `manage-stream-menu${t.ownerId}`,
                                 );
                             }),
                         }),
-                        l ? null : R,
-                        l ? null : (0, i.jsx)(a.rX, { children: y }),
+                        l ? null : x,
+                        l ? null : (0, i.jsx)(a.rX, { children: w }),
                     ],
                 }),
             });
         },
-        T: C,
+        T: E,
     },
 );

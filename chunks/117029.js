@@ -1,7 +1,7 @@
 var l = n(477900),
     i = n(582128),
-    s = n(503698),
-    r = n.n(s),
+    r = n(503698),
+    s = n.n(r),
     a = n(435558),
     o = n(451988),
     u = n(939249),
@@ -17,149 +17,149 @@ var l = n(477900),
     v = n(792996),
     E = n(950183),
     C = n(507199);
-function I(e) {
+function j(e) {
     (e.preventDefault(), e.stopPropagation());
 }
-function j(e) {
+function S(e) {
     return (1 & e.buttons) == 1;
 }
-let S = i.memo(function (e) {
-    let { mirror: t = !1, streamId: n, paused: s } = e,
-        { onActive: S, onPreventIdle: _, onAllowIdle: b } = i.useContext(h.k3),
+let I = i.memo(function (e) {
+    let { mirror: t = !1, streamId: n, paused: r } = e,
+        { onActive: I, onPreventIdle: b, onAllowIdle: y } = i.useContext(h.k3),
         {
-            enabled: N,
-            zoomLevel: y,
-            minZoom: R,
-            maxZoom: T,
-            isDragging: L,
-            isWheeling: D,
-            isSlidering: k,
-            setIsSlidering: M,
-            doZoom: w,
+            enabled: _,
+            zoomLevel: N,
+            minZoom: w,
+            maxZoom: k,
+            isDragging: R,
+            isWheeling: L,
+            isSlidering: T,
+            setIsSlidering: D,
+            doZoom: M,
             isZooming: O,
-            videoAspectRatio: G,
-            wrapperRef: P,
+            videoAspectRatio: P,
+            wrapperRef: G,
             panOffset: V,
             setPanOffset: F,
             clampPanOffset: H,
         } = i.useContext(x.e9),
         [U, z] = i.useState(!1),
         W = i.useRef(null),
-        $ = y > R,
+        $ = N > w,
         B = i.useCallback(() => {
-            _("interact");
-        }, [_]),
-        Z = i.useCallback(() => {
-            (z(!1), b("interact"));
+            b("interact");
         }, [b]),
+        K = i.useCallback(() => {
+            (z(!1), y("interact"));
+        }, [y]),
         Y = i.useMemo(() => {
-            let e = 120 * Math.min(G, 32 / 9);
+            let e = 120 * Math.min(P, 32 / 9);
             return { "--custom-zoom-minimap-width": `${e}px`, "--custom-zoom-minimap-height": "120px" };
-        }, [G]),
-        Q = i.useCallback(
-            (e) => {
-                if (null == W.current || null == P.current) return;
-                let t = W.current.getBoundingClientRect(),
-                    n = P.current.clientWidth,
-                    l = P.current.clientHeight,
-                    i = e.x - t.left,
-                    s = e.y - t.top;
-                F(H({ x: (0.5 - i / t.width) * n * y, y: (0.5 - s / t.height) * l * y }));
-            },
-            [H, y, P, F],
-        ),
-        K = i.useCallback(
-            (e) => {
-                j(e) && (e.preventDefault(), e.stopPropagation(), z(!0), Q({ x: e.clientX, y: e.clientY }));
-            },
-            [Q],
-        ),
+        }, [P]),
         X = i.useCallback(
             (e) => {
-                U && (e.preventDefault(), e.stopPropagation(), Q({ x: e.clientX, y: e.clientY }));
+                if (null == W.current || null == G.current) return;
+                let t = W.current.getBoundingClientRect(),
+                    n = G.current.clientWidth,
+                    l = G.current.clientHeight,
+                    i = e.x - t.left,
+                    r = e.y - t.top;
+                F(H({ x: (0.5 - i / t.width) * n * N, y: (0.5 - r / t.height) * l * N }));
             },
-            [U, Q],
+            [H, N, G, F],
+        ),
+        Z = i.useCallback(
+            (e) => {
+                S(e) && (e.preventDefault(), e.stopPropagation(), z(!0), X({ x: e.clientX, y: e.clientY }));
+            },
+            [X],
+        ),
+        Q = i.useCallback(
+            (e) => {
+                U && (e.preventDefault(), e.stopPropagation(), X({ x: e.clientX, y: e.clientY }));
+            },
+            [U, X],
         ),
         q = i.useCallback(
             (e) => {
-                !U || j(e) || (e.preventDefault(), e.stopPropagation(), z(!1));
+                !U || S(e) || (e.preventDefault(), e.stopPropagation(), z(!1));
             },
             [U],
         ),
         J = A.Ay.getVideoComponent(),
         ee = i.useMemo(() => {
-            let e = null != P.current ? P.current.clientWidth : 1,
-                t = null != P.current ? P.current.clientHeight : 1,
-                n = 1 / y,
-                l = 1 / y,
-                i = 0.5 - V.x / (e * y),
-                s = 0.5 - V.y / (t * y);
+            let e = null != G.current ? G.current.clientWidth : 1,
+                t = null != G.current ? G.current.clientHeight : 1,
+                n = 1 / N,
+                l = 1 / N,
+                i = 0.5 - V.x / (e * N),
+                r = 0.5 - V.y / (t * N);
             return {
                 "--custom-zoom-indicator-left": `${100 * (0, a.clamp)(i - n / 2, 0, 1 - n)}%`,
-                "--custom-zoom-indicator-top": `${100 * (0, a.clamp)(s - l / 2, 0, 1 - l)}%`,
+                "--custom-zoom-indicator-top": `${100 * (0, a.clamp)(r - l / 2, 0, 1 - l)}%`,
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * l}%`,
                 "--custom-zoom-indicator-transition":
-                    L || U || D || k
+                    R || U || L || T
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [L, U, D, k, V, y, P]),
+        }, [R, U, L, T, V, N, G]),
         et = i.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), w(y - 0.25, x.qd, "button"));
+                (e.preventDefault(), e.stopPropagation(), M(N - 0.25, x.qd, "button"));
             },
-            [w, y],
+            [M, N],
         ),
         en = i.useCallback(
             (e) => {
-                (e.preventDefault(), e.stopPropagation(), w(y + 0.25, x.qd, "button"));
+                (e.preventDefault(), e.stopPropagation(), M(N + 0.25, x.qd, "button"));
             },
-            [w, y],
+            [M, N],
         ),
         el = i.useRef(null),
         ei = i.useCallback(
             (e) => {
-                (M(!0),
-                    w(e, x.qd, "slider"),
-                    S(),
+                (D(!0),
+                    M(e, x.qd, "slider"),
+                    I(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {
-                        M(!1);
+                        D(!1);
                     }));
             },
-            [w, S, M],
+            [M, I, D],
         );
     return ((0, f.l0)(() => {
         el.current?.stop();
     }),
-    N && null != n)
+    _ && null != n)
         ? (0, l.jsxs)("div", {
-              className: r()(C.ne, { [C.Ge]: O || $ }),
+              className: s()(C.ne, { [C.Ge]: O || $ }),
               onMouseEnter: B,
-              onMouseLeave: Z,
-              onClick: I,
+              onMouseLeave: K,
+              onClick: j,
               children: [
                   (O || $) &&
                       (0, l.jsx)(u.D, {
-                          onClick: I,
+                          onClick: j,
                           onMouseEnter: B,
-                          onMouseLeave: Z,
+                          onMouseLeave: K,
                           children: (0, l.jsxs)("div", {
                               ref: W,
                               className: C.Wc,
                               style: Y,
                               onPointerDown: function (e) {
-                                  j(e) && e.currentTarget.setPointerCapture(e.pointerId);
+                                  S(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
-                              onMouseDown: K,
-                              onMouseMove: X,
+                              onMouseDown: Z,
+                              onMouseMove: Q,
                               onMouseUp: q,
                               children: [
                                   (0, l.jsx)(J, {
-                                      className: r()(C.BZ, { [E.mirror]: t }),
+                                      className: s()(C.BZ, { [E.mirror]: t }),
                                       streamId: n,
-                                      paused: s,
+                                      paused: r,
                                       reportContainerResized: !1,
                                   }),
                                   (0, l.jsx)("div", { className: C.xq, style: ee }),
@@ -178,17 +178,17 @@ let S = i.memo(function (e) {
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.MagnifyingGlassMinusIcon,
                                               onClick: et,
-                                              disabled: y <= R,
+                                              disabled: N <= w,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
-                                          minValue: R,
-                                          maxValue: T,
+                                          minValue: w,
+                                          maxValue: k,
                                           step: 0.01,
-                                          value: y,
+                                          value: N,
                                           onChange: ei,
                                           formatValue: (e) => `${Math.round(100 * e)}%`,
                                           "aria-label": v.intl.string(v.t.grzPmr),
@@ -201,7 +201,7 @@ let S = i.memo(function (e) {
                               children: (0, l.jsx)(d.K, {
                                   icon: g.MagnifyingGlassPlusIcon,
                                   onClick: en,
-                                  disabled: y >= T,
+                                  disabled: N >= k,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),
@@ -213,4 +213,4 @@ let S = i.memo(function (e) {
           })
         : null;
 });
-n.d(t, {}, { A: S });
+n.d(t, {}, { A: I });

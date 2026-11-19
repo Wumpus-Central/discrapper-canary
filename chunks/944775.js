@@ -11,8 +11,8 @@ var i = n(73153),
     h = n(177303),
     f = n(980504),
     g = n(652215),
-    p = n(792996);
-let m = {
+    m = n(792996);
+let p = {
         width: f.ed.width,
         height: f.ed.height,
         resizable: !1,
@@ -27,8 +27,8 @@ let m = {
         titleBarStyle: null,
     },
     A = f.ed.padding,
-    y = m.width - A,
-    v = m.height - A;
+    y = p.width - A,
+    v = p.height - A;
 function E() {
     (0, o.close)(g.MLl.SOUNDBOARD);
 }
@@ -48,7 +48,7 @@ n.d(
                     (0, r.jsx)(s.A, {
                         windowKey: n,
                         withTitleBar: !1,
-                        title: p.intl.string(p.t["IiA///"]),
+                        title: m.intl.string(m.t["IiA///"]),
                         onBlur: E,
                         children: (0, r.jsx)(h.A, {
                             guildId: t,
@@ -60,7 +60,7 @@ n.d(
                             analyticsSource: "global",
                         }),
                     }),
-                { ...m, left: l - m.width / 2, top: d - m.height / 2 },
+                { ...p, left: l - p.width / 2, top: d - p.height / 2 },
             );
         },
         Lk: function (e) {

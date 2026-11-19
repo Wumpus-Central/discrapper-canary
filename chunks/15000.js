@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(398590),
     d = n(631670),
     m = n(475743),
-    p = n(775121),
-    f = n(139286),
+    f = n(775121),
+    p = n(139286),
     h = n(80556),
     g = n(557722),
     A = n(413599),
@@ -152,7 +152,7 @@ function w() {
             ));
     }
     return (
-        (0, f.A)(
+        (0, p.A)(
             {
                 type: r.ImpressionTypes.MODAL,
                 name: r.ImpressionNames.USER_ACTION_REQUIRED,
@@ -163,9 +163,9 @@ function w() {
         ),
         l.useEffect(
             () => (
-                p.A.disable(),
+                f.A.disable(),
                 () => {
-                    p.A.enable();
+                    f.A.enable();
                 }
             ),
             [],

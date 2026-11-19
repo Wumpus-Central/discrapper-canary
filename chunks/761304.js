@@ -166,8 +166,8 @@ var ez = t(110384),
     eY = t(964486),
     eQ = t(865116),
     e0 = t(263775),
-    e8 = t(928658),
-    e1 = t(400528),
+    e1 = t(928658),
+    e8 = t(400528),
     e5 = t(374710),
     e6 = t(715757),
     e7 = t(967198),
@@ -304,8 +304,8 @@ function nP(e) {
             mediaItem: nY,
             textSelection: nQ,
             favoriteableType: n0,
-            favoriteableId: n8,
-            favoriteableName: n1,
+            favoriteableId: n1,
+            favoriteableName: n8,
             itemHref: n5,
             itemSrc: n6,
             itemSafeSrc: n7,
@@ -876,7 +876,7 @@ function nP(e) {
                 ? (0, l.jsx)(r.Dr, {
                       id: "report",
                       label: nF ? x.intl.string(x.t.n5EBAJ) : x.intl.string(x.t.GwbdGe),
-                      action: () => (0, e8.V2)(nZ, "web_message_context_menu"),
+                      action: () => (0, e1.V2)(nZ, "web_message_context_menu"),
                       icon: nF ? eZ.ClydeIcon : e$.FlagIcon,
                       leadingAccessory: { type: "icon", icon: nF ? eZ.ClydeIcon : e$.FlagIcon },
                       color: "danger",
@@ -889,14 +889,14 @@ function nP(e) {
                 ? (0, l.jsx)(r.Dr, {
                       id: "staff-test-message-report",
                       label: "[STAFF] Test Message Report",
-                      action: () => (0, e8.Rj)(nZ, "web_message_context_menu"),
+                      action: () => (0, e1.Rj)(nZ, "web_message_context_menu"),
                       icon: e$.FlagIcon,
                       leadingAccessory: { type: "icon", icon: e$.FlagIcon },
                       color: "danger",
                   })
                 : null),
         tO = (function (e) {
-            let n = (0, E.bG)([e1.A], () => e1.A.hasReportedMessage(e.channel_id, e.id)),
+            let n = (0, E.bG)([e8.A], () => e8.A.hasReportedMessage(e.channel_id, e.id)),
                 t = (0, e5.KB)(e),
                 i = t ? [eW.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, o] = (0, e0.kn)(i);
@@ -908,7 +908,7 @@ function nP(e) {
                       id: "report-to-mod",
                       label: n ? x.intl.string(e4.default["8wsdng"]) : x.intl.string(e4.default["1D+vqy"]),
                       action: () => {
-                          (o(e9.i.USER_DISMISS), (0, e8.dy)(e));
+                          (o(e9.i.USER_DISMISS), (0, e1.dy)(e));
                       },
                       icon: e$.FlagIcon,
                       disabled: n,
@@ -918,7 +918,7 @@ function nP(e) {
                   })
                 : null;
         })(nZ),
-        tw = (0, eD.A)({ type: n0, id: n8, name: n1 }),
+        tw = (0, eD.A)({ type: n0, id: n1, name: n8 }),
         tk = (function (e, n) {
             let { perGuildMaxCount: t } = N.i$[H],
                 { isLoading: i, saveRule: o, errorMessage: s } = (0, O.S)(),
@@ -1156,7 +1156,7 @@ function nP(e) {
                         }),
                 ],
             });
-        })({ messageId: nZ.id, itemId: n8, type: n0, imageSrc: n6 }),
+        })({ messageId: nZ.id, itemId: n1, type: n0, imageSrc: n6 }),
         tq = (0, l.jsx)(r.rX, { children: tK ?? tH }),
         tz = (0, l.jsxs)(r.rX, { children: [tw, tk, tP, tU, tB, tF] });
     return (0, l.jsxs)(s.W, {

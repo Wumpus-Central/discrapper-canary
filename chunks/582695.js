@@ -1036,8 +1036,8 @@ function e2() {
     return (0, s.jsx)(y.E, { variant: "body-sm/normal", children: "Purchase button is disabled for this story" });
 }
 let e8 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
-    e3 = eZ(),
-    e6 = {
+    e6 = eZ(),
+    e3 = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
         component: function (e) {
@@ -1075,7 +1075,7 @@ let e8 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
                   });
         },
         controls: {
-            skuId: { label: "SKU ID", type: "select", options: e3.options, defaultValue: e3.defaultValue },
+            skuId: { label: "SKU ID", type: "select", options: e6.options, defaultValue: e6.defaultValue },
             ...e8,
         },
     },
@@ -2251,11 +2251,11 @@ let t2 = [
             body: "Show off your style with a custom nameplate, available with Nitro.",
         },
     },
-    t3 = [
+    t6 = [
         { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
         { id: "at_limit", label: "At Limit (100 guilds)", value: 100 },
     ],
-    t6 = [
+    t3 = [
         { id: "avatar", label: "Avatar", value: t1.HL.AVATAR },
         { id: "banner", label: "Banner", value: t1.HL.BANNER },
     ];
@@ -3270,8 +3270,8 @@ let l0 = {
         },
         controls: { ...l0 },
     };
-var l3 = l(786826);
-let l6 = {
+var l6 = l(786826);
+let l3 = {
     title: "RichTextArea",
     stories: [
         {
@@ -3292,7 +3292,7 @@ let l6 = {
                     [p, m] = u.useState("");
                 return (0, s.jsx)("div", {
                     style: { maxWidth: 480, padding: 24 },
-                    children: (0, s.jsx)(l3.f, {
+                    children: (0, s.jsx)(l6.f, {
                         label: t,
                         placeholder: l,
                         minLength: a,
@@ -4011,7 +4011,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                             },
                         ],
                     },
-                    { title: "Checkout Review Step", stories: [e6, e4] },
+                    { title: "Checkout Review Step", stories: [e3, e4] },
                     {
                         title: "Miscellaneous",
                         stories: [
@@ -4413,7 +4413,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                                     placeholder: "Select state",
                                                     onSelectionChange: (e) => t(e),
                                                     value: e,
-                                                    options: t3,
+                                                    options: t6,
                                                     selectionMode: "single",
                                                     fullWidth: !0,
                                                 }),
@@ -4453,7 +4453,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                                                     placeholder: "Select type",
                                                     onSelectionChange: (e) => t(e),
                                                     value: e,
-                                                    options: t6,
+                                                    options: t3,
                                                     selectionMode: "single",
                                                     fullWidth: !0,
                                                 }),
@@ -4701,7 +4701,7 @@ let aS = ["Revenue Storybook", "Revenue Playground"],
                         ],
                     },
                     { title: "Profile Banner", stories: [er] },
-                    l6,
+                    l3,
                     {
                         title: "User Profile Embeds",
                         stories: [

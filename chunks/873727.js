@@ -41,7 +41,7 @@ function d() {
     let r = n.getPropertyValue("--background-gradient-chat").trim();
     return ("" !== r && (i["--background-gradient-chat"] = r), { classNames: t, variables: i });
 }
-function m() {
+function h() {
     let e =
         "u" > typeof window && "function" == typeof window.matchMedia
             ? window.matchMedia(a.U).matches
@@ -50,7 +50,7 @@ function m() {
             : "cozy";
     return (0, a.d)(l.Xi.getSetting(), e);
 }
-function h() {
+function m() {
     let e = i.Ay.fontScale;
     return Number.isFinite(e) ? Math.round(100 * e) / 100 : o.fontScale;
 }
@@ -59,13 +59,13 @@ n.d(
     {},
     {
         Lq: d,
-        U0: h,
+        U0: m,
         _n: function () {
             return {
                 theme: c(r.A.theme),
-                ui_density: m(),
+                ui_density: h(),
                 message_display_compact: String(l.hH.getSetting()),
-                font_scale: String(h()),
+                font_scale: String(m()),
                 reduced_motion: String(i.Ay.useReducedMotion),
                 high_contrast: String(i.Ay.isHighContrastModeEnabled),
                 forced_colors: String(i.Ay.useForcedColors),
@@ -77,9 +77,9 @@ n.d(
             return {
                 baseTheme: c(r.A.theme),
                 customTheme: d(),
-                uiDensity: m(),
+                uiDensity: h(),
                 messageDisplayCompact: l.hH.getSetting(),
-                fontScale: h(),
+                fontScale: m(),
                 reducedMotion: e,
                 highContrast: i.Ay.isHighContrastModeEnabled,
                 forcedColors: i.Ay.useForcedColors,

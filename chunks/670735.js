@@ -10,8 +10,8 @@ var r = n(477900),
     h = n(143592),
     f = n(821609),
     g = n(825484),
-    p = n(148810),
-    m = n(521502),
+    m = n(148810),
+    p = n(521502),
     A = n(380610),
     y = n(913379),
     v = n(976860),
@@ -24,7 +24,7 @@ var r = n(477900),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    return null == (0, c.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null))
+    return null == (0, c.bG)([p.A], () => ((0, A.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null))
         ? null
         : (0, r.jsx)(f.$, {
               variant: "primary",
@@ -32,7 +32,7 @@ function _() {
               text: N.intl.string(N.t["/Nz9rY"]),
               onClick: async function () {
                   try {
-                      (t(!0), await (0, p.iD)(), window.location.reload(!0));
+                      (t(!0), await (0, m.iD)(), window.location.reload(!0));
                   } catch (e) {
                       t(!1);
                   }

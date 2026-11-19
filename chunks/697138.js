@@ -10,7 +10,7 @@ var r = n(477900),
     h = n(652215),
     f = n(650583),
     g = n(792996);
-function p(e) {
+function m(e) {
     if (e.ctrlKey || e.altKey || e.metaKey || e.key !== f.dh.TAB || null == e.target) return;
     let { target: t } = e,
         n = (0, s.BF)(e)?.activeElement;
@@ -35,7 +35,7 @@ n.d(
                 u = (0, o.bG)([d.Ay], () => d.Ay.isHighContrastModeEnabled),
                 h = (0, o.bG)([d.Ay], () => d.Ay.alwaysShowLinkDecorations),
                 f = (0, o.bG)([d.Ay], () => d.Ay.keyboardModeEnabled),
-                m = (0, o.bG)([d.Ay], () => d.Ay.isSwitchIconsEnabled),
+                p = (0, o.bG)([d.Ay], () => d.Ay.isSwitchIconsEnabled),
                 A = (0, o.bG)([d.Ay], () => d.Ay.minToastDurationMs),
                 y = i.useMemo(
                     () => ({
@@ -45,18 +45,18 @@ n.d(
                         alwaysShowLinkDecorations: h,
                         highContrastModeEnabled: u,
                         keyboardModeEnabled: f,
-                        switchIconsEnabled: m,
+                        switchIconsEnabled: p,
                         minToastDurationMs: A,
                     }),
-                    [n, s, h, u, f, m, A],
+                    [n, s, h, u, f, p, A],
                 );
             return (
                 i.useEffect(
                     () => (
                         (0, l.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, c.Z7)()),
                         g.intl.onLocaleChange(() => (0, c.Z7)()),
-                        window.addEventListener("keydown", p),
-                        () => window.removeEventListener("keydown", p)
+                        window.addEventListener("keydown", m),
+                        () => window.removeEventListener("keydown", m)
                     ),
                     [],
                 ),

@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     kL: "container_-hWC0t",
     Em: "mainColumn_-hWC0t",
     DD: "title_-hWC0t",

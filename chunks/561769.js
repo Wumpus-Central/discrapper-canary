@@ -1,8 +1,8 @@
 var r = n(582128),
     i = n(575593),
     l = n(164636),
-    s = n(688810),
-    a = n(821925),
+    a = n(688810),
+    s = n(821925),
     u = n(129230),
     o = n(857512),
     c = n(590180),
@@ -46,8 +46,8 @@ n.d(
         },
         Vm: function (e) {
             let { flattenProductVariants: t, productOverride: n } = r.useContext(_),
-                { legacyProduct: i, storefrontProduct: s } = (0, l.cf)(
-                    [c.A, a.A],
+                { legacyProduct: i, storefrontProduct: a } = (0, l.cf)(
+                    [c.A, s.A],
                     () => {
                         if (null != n) return { legacyProduct: void 0, storefrontProduct: void 0 };
                         let r =
@@ -56,21 +56,21 @@ n.d(
                                 : c.A.getCategoryForProduct(e)?.products.find((t) => t.skuId === e);
                         return {
                             legacyProduct: r,
-                            storefrontProduct: null == r ? a.A.getProductsForSku(e)?.[0] : void 0,
+                            storefrontProduct: null == r ? s.A.getProductsForSku(e)?.[0] : void 0,
                         };
                     },
                     [e, t, n],
                 ),
-                u = null == n && null == i && null == s;
+                u = null == n && null == i && null == a;
             r.useEffect(() => {
                 u && "" !== e && I.p.requestProducts([e]);
             }, [u, e]);
             let o = r.useMemo(
                 () =>
-                    null != s
-                        ? (p.A.fromStorefrontProductRecord(s, { flattenVariantSkuId: !0 === t ? e : void 0 }) ?? void 0)
+                    null != a
+                        ? (p.A.fromStorefrontProductRecord(a, { flattenVariantSkuId: !0 === t ? e : void 0 }) ?? void 0)
                         : void 0,
-                [s, t, e],
+                [a, t, e],
             );
             return n ?? i ?? o;
         },
@@ -79,10 +79,10 @@ n.d(
         },
         ql: function (e, t, n) {
             let i = (0, d.Mk)(),
-                a = i?.tab,
+                s = i?.tab,
                 u = (0, o.uM)(),
                 { standalonePreview: I, flattenProductVariants: p } = r.useContext(_),
-                { analyticsLocations: x } = (0, s.Ay)(t),
+                { analyticsLocations: x } = (0, a.Ay)(t),
                 C = (0, l.bG)([c.A], () => c.A.getCategoryForProduct(e.skuId)),
                 h = (0, f.Q)(e),
                 E = (0, g.rb)(e, h).skuId,
@@ -95,7 +95,7 @@ n.d(
                               flattenVariants: p,
                               analyticsLocations: x,
                               analyticsSource: t,
-                              tab: a,
+                              tab: s,
                               returnRef: A,
                               initialVariantSkuId: E,
                               cardId: u?.cardId,
@@ -109,13 +109,13 @@ n.d(
                               analyticsLocations: x,
                               analyticsSource: t,
                               returnRef: A,
-                              tab: a,
+                              tab: s,
                               cardId: u?.cardId,
                               sessionId: u?.sessionId,
                               tilePosition: u?.tilePosition,
                           });
                 },
-                [e, E, a, C, I, p, t, x, n, u?.cardId, u?.sessionId, u?.tilePosition],
+                [e, E, s, C, I, p, t, x, n, u?.cardId, u?.sessionId, u?.tilePosition],
             );
         },
         v3: _,

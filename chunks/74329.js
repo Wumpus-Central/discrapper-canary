@@ -8,30 +8,30 @@ var r = n(855986),
     u = n(834757),
     c = n(46653),
     d = n(753181),
-    m = n(792996);
+    h = n(792996);
 n.d(
     t,
     {},
     {
-        A: function (e, t, h) {
-            let f = (0, u.AO)(e),
-                g = (0, r.bG)([c.default], () => c.default.getId());
+        A: function (e, t, m) {
+            let p = (0, u.AO)(e),
+                f = (0, r.bG)([c.default], () => c.default.getId());
             if (null == e) return null;
-            let A = (0, o._z)(e),
-                p = d.A.getVideoStats(A) ?? {},
-                E = {
-                    media_session_id: d.A.getMediaSessionId(A),
-                    rtc_connection_id: d.A.getRtcConnectionId(A),
-                    stream_region: d.A.getRegion(A),
-                    max_viewers: d.A.getMaxViewers(A),
-                    ...p,
+            let g = (0, o._z)(e),
+                A = d.A.getVideoStats(g) ?? {},
+                v = {
+                    media_session_id: d.A.getMediaSessionId(g),
+                    rtc_connection_id: d.A.getRtcConnectionId(g),
+                    stream_region: d.A.getRegion(g),
+                    max_viewers: d.A.getMaxViewers(g),
+                    ...A,
                 };
             return (0, i.jsx)(s.Dr, {
                 id: "report-stream-problem",
                 color: "danger",
-                label: m.intl.string(m.t.sdnCxV),
+                label: h.intl.string(h.t.sdnCxV),
                 action: function () {
-                    (h?.(),
+                    (m?.(),
                         null != e &&
                             (0, l.mM)(async () => {
                                 let { default: t } = await Promise.all([
@@ -45,9 +45,9 @@ n.d(
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         stream: e,
-                                        streamApplication: f,
-                                        isStreamer: g === e?.ownerId,
-                                        analyticsData: E,
+                                        streamApplication: p,
+                                        isStreamer: f === e?.ownerId,
+                                        analyticsData: v,
                                         ...n,
                                     });
                             }));

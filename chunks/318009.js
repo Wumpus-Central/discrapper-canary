@@ -10,8 +10,8 @@ var r = n(477900),
     h = n(413599),
     f = n(712687),
     g = n(188567),
-    p = n(652215);
-function m() {
+    m = n(652215);
+function p() {
     window.getSelection()?.removeAllRanges();
 }
 function A(e) {
@@ -40,10 +40,10 @@ function A(e) {
         (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
     let w = (0, c.aL)(),
         b = i.useCallback(() => {
-            w.dispatch(p.jej.POPOUT_SHOW);
+            w.dispatch(m.jej.POPOUT_SHOW);
         }, [w]),
         C = i.useCallback(() => {
-            w.dispatch(p.jej.POPOUT_HIDE);
+            w.dispatch(m.jej.POPOUT_HIDE);
         }, [w]),
         N = a.ownerDocument;
     return (0, r.jsx)(s.Ow, {
@@ -53,7 +53,7 @@ function A(e) {
         open: !0,
         ownerDocument: N,
         onOpenChange: (e, t, n) => {
-            e ? b() : (C(), "outside-press" === n && setTimeout(m, 0), E.current());
+            e ? b() : (C(), "outside-press" === n && setTimeout(p, 0), E.current());
         },
         overrideTargetRect: u,
         placement: (0, s.Pv)(h ?? "right", f ?? "top"),
@@ -73,7 +73,7 @@ class y extends i.PureComponent {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            g._.subscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            g._.subscribe(m.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
@@ -91,7 +91,7 @@ class y extends i.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         (e.removeEventListener("resize", this.closeResize, !0),
-            g._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
+            g._.unsubscribe(m.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
     }
     closeResize = (e) => {
         let { renderWindow: t } = this.props;

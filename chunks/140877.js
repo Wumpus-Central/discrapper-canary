@@ -1,8 +1,8 @@
 var r,
     i = n(477900),
     l = n(582128),
-    s = n(164636),
-    a = n(834730),
+    a = n(164636),
+    s = n(834730),
     u = n(287809),
     o = n(448645),
     c = n(298072),
@@ -19,7 +19,7 @@ var r,
     h = (((r = {}).INLINE = "INLINE"), (r.STACKED = "STACKED"), r);
 function E(e) {
     let { product: t, prioritizedCurrency: n, promoPriceLayout: r, textVariant: c, discountIconSize: p = "sm" } = e,
-        v = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        v = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
         h = o.Ay.canUseCollectibles(v),
         E = (0, d.xM)(v),
         A = null != E,
@@ -36,35 +36,35 @@ function E(e) {
         j = O[0]?.currency,
         N = l.useMemo(() => (0, d.fT)(t, A, j), [t, A, j]);
     if (b)
-        return (0, i.jsx)(a.E, {
+        return (0, i.jsx)(s.E, {
             variant: c ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
             children: C.intl.string(C.t.wu4gyV),
         });
     if (k)
-        return (0, i.jsx)(a.E, {
+        return (0, i.jsx)(s.E, {
             variant: c ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
             children: C.intl.string(C.t.BEjTij),
         });
     if (R && !(y && !h))
-        return (0, i.jsx)(a.E, {
+        return (0, i.jsx)(s.E, {
             variant: c ?? "body-md/medium",
             color: "text-muted",
             lineClamp: 1,
             children: C.intl.string(C.t["6cfuDj"]),
         });
     if (L)
-        return (0, i.jsx)(a.E, {
+        return (0, i.jsx)(s.E, {
             variant: c ?? "body-md/semibold",
             color: "text-strong",
             lineClamp: 1,
             children: C.intl.string(C.t.nBtvYB),
         });
     if (y)
-        return (0, i.jsx)(a.E, {
+        return (0, i.jsx)(s.E, {
             variant: c ?? "body-md/semibold",
             color: "text-strong",
             lineClamp: 1,
@@ -100,18 +100,18 @@ n.d(
                     prioritizedCurrency: n,
                     promoPriceLayout: r = "INLINE",
                     textVariant: l,
-                    discountIconSize: s,
+                    discountIconSize: a,
                 } = e,
-                a = (0, v.Vm)(t),
-                u = (0, c.Q)(a);
-            if (null == a) return null;
-            let o = (0, p.rb)(a, u);
+                s = (0, v.Vm)(t),
+                u = (0, c.Q)(s);
+            if (null == s) return null;
+            let o = (0, p.rb)(s, u);
             return (0, i.jsx)(E, {
                 product: o,
                 prioritizedCurrency: n,
                 promoPriceLayout: r,
                 textVariant: l,
-                discountIconSize: s,
+                discountIconSize: a,
             });
         },
         e: h,

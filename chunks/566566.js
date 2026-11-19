@@ -7,24 +7,24 @@ var i = n(477900),
     u = n(200749),
     c = n(652215),
     d = n(792996);
-let m = n(745652);
+let h = n(745652);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { userId: t, width: n, avError: h, selected: f = !1, noArt: g = !1 } = e,
-                A = (0, a.B1)(h)?.errorCode;
+            let { userId: t, width: n, avError: m, selected: p = !1, noArt: f = !1 } = e,
+                g = (0, a.B1)(m)?.errorCode;
             return (0, i.jsx)(u.A, {
-                artURL: m,
+                artURL: h,
                 header: d.intl.string(d.t["z+mxvo"]),
                 size: (0, u.J)(n),
-                noArt: g,
-                selected: f,
+                noArt: f,
+                selected: p,
                 description: d.intl.format(d.t.d486Wm, {
                     helpUrl: o.A.getArticleURL(c.MVz.VOICE_VIDEO_TROUBLESHOOTING),
                 }),
-                errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: A }),
+                errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: g }),
                 onCTAClick: function () {
                     ((0, s.W)(r.x.DEFAULT, t),
                         l.default.setDisableLocalVideo(t, c.bb8.DISABLED, r.x.DEFAULT, !1),

@@ -5,9 +5,9 @@ var s = n(855986),
     u = n(806931);
 let c = new Map(),
     d = {},
-    m = o.CUs.BOTTOM_RIGHT,
-    h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
-class f extends s.Ay.PersistedStore {
+    h = o.CUs.BOTTOM_RIGHT,
+    m = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
+class p extends s.Ay.PersistedStore {
     static displayName = "PictureInPictureStore";
     static persistKey = "PictureInPictureStore";
     static migrations = [
@@ -21,11 +21,11 @@ class f extends s.Ay.PersistedStore {
     ];
     initialize(e) {
         if (null == e) {
-            ((m = o.CUs.BOTTOM_RIGHT),
-                (h = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] }));
+            ((h = o.CUs.BOTTOM_RIGHT),
+                (m = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] }));
             return;
         }
-        ((m = e.openPosition), (h = e.pipWidths));
+        ((h = e.openPosition), (m = e.pipWidths));
     }
     get pipWindow() {
         return null == i && null == r && null == l ? null : c.get(i ?? r ?? l ?? "");
@@ -43,7 +43,7 @@ class f extends s.Ay.PersistedStore {
         return c;
     }
     pipWidth(e) {
-        return h[e];
+        return m[e];
     }
     isEmbeddedActivityHidden() {
         return null == r;
@@ -58,14 +58,14 @@ class f extends s.Ay.PersistedStore {
         return null != e && c.has(e);
     }
     getState() {
-        return { openPosition: m, pipWidths: h };
+        return { openPosition: h, pipWidths: m };
     }
 }
-let g = new f(a.h, {
+let f = new p(a.h, {
     PICTURE_IN_PICTURE_OPEN: function (e) {
         let { id: t, component: n, props: s } = e;
         if (null != c.get(t)) return;
-        let a = { id: t, component: n, position: s.position ?? m, props: s, docked: s.docked ?? !1 };
+        let a = { id: t, component: n, position: s.position ?? h, props: s, docked: s.docked ?? !1 };
         switch ((c.set(t, a), n)) {
             case o.o1q.VIDEO:
                 null == i && (i = t);
@@ -109,12 +109,12 @@ let g = new f(a.h, {
                 e.set(i, { ...t, position: n });
             }),
                 (c = e),
-                (m = n));
+                (h = n));
         }
     },
     PICTURE_IN_PICTURE_RESIZE: function (e) {
         let { width: t, pipType: n } = e;
-        h[n] = t;
+        m[n] = t;
     },
     PICTURE_IN_PICTURE_HIDE: function (e) {
         let { id: t } = e;
@@ -160,4 +160,4 @@ let g = new f(a.h, {
         ((i = null), (r = null), (l = null), (c = new Map()));
     },
 });
-n.d(t, {}, { A: g });
+n.d(t, {}, { A: f });

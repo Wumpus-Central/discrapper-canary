@@ -1,8 +1,8 @@
 var r = n(477900),
     i = n(582128),
     l = n(575593),
-    s = n(821609),
-    a = n(597770),
+    a = n(821609),
+    s = n(597770),
     u = n(866665),
     o = n(408278),
     c = n(688810),
@@ -69,9 +69,9 @@ n.d(
                     }));
             }
             if (R)
-                return (0, r.jsx)(s.$, {
+                return (0, r.jsx)(a.$, {
                     variant: n ? "primary" : "secondary",
-                    icon: a.GiftIcon,
+                    icon: s.GiftIcon,
                     onClick: V,
                     text: k ?? _.intl.string(_.t.gmnzqM),
                     fullWidth: !0,
@@ -88,7 +88,7 @@ n.d(
                     }),
                     buttonRef: P,
                     variant: n ? "primary" : "secondary",
-                    icon: a.GiftIcon,
+                    icon: s.GiftIcon,
                     size: "md",
                     onClick: V,
                     tabIndex: S,

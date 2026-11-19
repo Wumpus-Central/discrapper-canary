@@ -35,17 +35,17 @@ n.d(
                     onStart: y,
                     onEnd: T,
                 } = e,
-                h = (0, u.bG)([d.Ay], () => d.Ay.useReducedMotion),
-                { previousTier: A, currentTier: N } = (0, f.VR)(t, n),
-                E = null != A,
+                A = (0, u.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                { previousTier: N, currentTier: h } = (0, f.VR)(t, n),
+                E = null != N,
                 S = v + x(E),
                 [C, k] = r.useState(!1),
                 [R, j] = r.useState(!1),
-                [w, U] = r.useState(!1),
+                [U, w] = r.useState(!1),
                 [$, O] = r.useState(!1),
-                P = p && !h,
+                P = p && !A,
                 M = R && P && !$,
-                H = (0, g.C)((0, f.AO)(t, N, !1)) ?? g.P,
+                H = (0, g.C)((0, f.AO)(t, h, !1)) ?? g.P,
                 I = r.useMemo(() => ({ fill: (0, c.E2)(H) }), [H]),
                 F = r.useCallback(
                     (e) => {
@@ -65,12 +65,12 @@ n.d(
                 r.useEffect(() => {
                     if (!C) return;
                     let e = v + (0, f.ux)(E) + 1500,
-                        t = setTimeout(() => U(!0), $ || h ? 0 : e);
+                        t = setTimeout(() => w(!0), $ || A ? 0 : e);
                     return () => clearTimeout(t);
-                }, [E, $, h, C, v]),
+                }, [E, $, A, C, v]),
                 r.useEffect(() => {
-                    w && T?.();
-                }, [w]),
+                    U && T?.();
+                }, [U]),
                 (0, l.jsxs)("div", {
                     className: b.Tl,
                     "aria-hidden": !0,

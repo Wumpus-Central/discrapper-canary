@@ -1,8 +1,8 @@
 var r = n(582128),
     i = n(66455),
     l = n(688810),
-    s = n(129230),
-    a = n(857512),
+    a = n(129230),
+    s = n(857512),
     u = n(298072),
     o = n(623373),
     c = n(652215);
@@ -11,7 +11,7 @@ n.d(
     {},
     {
         x: function (e, t) {
-            let n = (0, a.uM)(),
+            let n = (0, s.uM)(),
                 { analyticsLocations: d } = (0, l.Ay)(),
                 I = (0, u.Q)(t),
                 f = r.useRef(!1),
@@ -29,7 +29,7 @@ n.d(
                     let e = p.current,
                         t = g.current,
                         n = (0, o.B1)(t);
-                    (s.default.track(c.HAw.SHOP_CARD_HOVERED, {
+                    (a.default.track(c.HAw.SHOP_CARD_HOVERED, {
                         shop_session_id: e?.sessionId,
                         sku_id: n ? (t.variants[m.current]?.skuId ?? t.skuId) : t.skuId,
                         position_in_section: e?.tilePosition,

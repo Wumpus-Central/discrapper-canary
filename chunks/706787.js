@@ -1,7 +1,7 @@
 var l = n(477900),
     i = n(582128),
-    s = n(120692),
-    r = n(855986),
+    r = n(120692),
+    s = n(855986),
     a = n(866323),
     o = n(565645),
     u = n(775602),
@@ -21,14 +21,14 @@ n.d(
         A: function (e) {
             let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
                 { emoji: A, sentAt: x } = n,
-                v = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
+                v = (0, s.bG)([u.Ay], () => u.Ay.useReducedMotion),
                 [E, C] = i.useState(!0),
-                I = !v,
-                j = (0, a.p)(E, {
+                j = !v,
+                S = (0, a.p)(E, {
                     from: { rotate: -120 },
                     enter: { rotate: 0 },
                     leave: { rotate: -120 },
-                    config: s.config.default,
+                    config: r.config.default,
                     onRest: (e, t) => {
                         let { phase: n } = t;
                         "leave" === n && c();
@@ -41,22 +41,22 @@ n.d(
                         ? (0, d.a)(t)
                         : (e = setTimeout(
                               () => {
-                                  (C(!1), I && (0, d.a)(t));
+                                  (C(!1), j && (0, d.a)(t));
                               },
-                              I ? g : p,
+                              j ? g : p,
                           )),
                     () => {
                         null != e && clearTimeout(e);
                     }
                 );
-            }, [x, t, I]),
-            I)
+            }, [x, t, j]),
+            j)
                 ? null
-                : j((e, t) => {
+                : S((e, t) => {
                       let { rotate: n } = e;
                       return (
                           t &&
-                          (0, l.jsx)(s.animated.div, {
+                          (0, l.jsx)(r.animated.div, {
                               className: m._,
                               style: { transform: n.to(h) },
                               children: (0, l.jsx)(o.A, {

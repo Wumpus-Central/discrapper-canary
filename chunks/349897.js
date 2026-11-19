@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(43990),
     d = n(683063),
     m = n(713608),
-    p = n(918715),
-    f = n(717421),
+    f = n(918715),
+    p = n(717421),
     h = n(762555),
     g = n(443184),
     A = n(696016),
@@ -24,8 +24,8 @@ function v(e) {
         setHoveredIndex: l,
         isAnimated: r,
         index: m,
-        activated: p,
-        expansionSpring: f,
+        activated: f,
+        expansionSpring: p,
         icon: h,
         title: g,
         body: A,
@@ -42,16 +42,16 @@ function v(e) {
                     onMouseEnter: () => l(m),
                     onMouseLeave: () => l(null),
                     style: {
-                        left: r ? f.to((e) => t - e) : t,
+                        left: r ? p.to((e) => t - e) : t,
                         right: n,
-                        width: r ? f.to((e) => `${_ + 2 * e}px`) : _,
-                        height: r ? f.to((e) => `${_ + 2 * e}px`) : _,
+                        width: r ? p.to((e) => `${_ + 2 * e}px`) : _,
+                        height: r ? p.to((e) => `${_ + 2 * e}px`) : _,
                     },
                     children: (0, i.jsx)(h, {
                         size: "custom",
                         width: "100%",
                         height: "100%",
-                        color: p ? u.A.colors.INTERACTIVE_ICON_ACTIVE : u.A.colors.INTERACTIVE_ICON_DEFAULT,
+                        color: f ? u.A.colors.INTERACTIVE_ICON_ACTIVE : u.A.colors.INTERACTIVE_ICON_DEFAULT,
                     }),
                 }),
             }),
@@ -92,7 +92,7 @@ function S(e, t) {
             case h.Q_.KILL:
                 return m.ModerationIcon;
             case h.Q_.DEATH:
-                return p.SkullIcon;
+                return f.SkullIcon;
         }
     }
     return null;
@@ -104,7 +104,7 @@ n.d(
         T: function (e, t, n) {
             let [r, a] = l.useState(null),
                 s = l.useRef(null),
-                [{ expansion: o }, u] = (0, f.z)(() => ({
+                [{ expansion: o }, u] = (0, p.z)(() => ({
                     expansion: 0,
                     config: b,
                     onRest: () => {
@@ -138,7 +138,7 @@ n.d(
                     () => d.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: _, gapPx: 4 })),
                     [d],
                 ),
-                p = l.useCallback(
+                f = l.useCallback(
                     (e, n) => {
                         let l = r === e.index,
                             a = d[e.index];
@@ -175,7 +175,7 @@ n.d(
                     },
                     [r, d, c, o, t],
                 );
-            return { indicators: m, animatingIndex: r, expansionSpring: o, hoverExpansionPx: 4, renderIndicator: p };
+            return { indicators: m, animatingIndex: r, expansionSpring: o, hoverExpansionPx: 4, renderIndicator: f };
         },
     },
 );

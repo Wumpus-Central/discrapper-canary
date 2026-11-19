@@ -1,7 +1,7 @@
 var l = n(477900),
     i = n(582128),
-    s = n(620141),
-    r = n(19309),
+    r = n(620141),
+    s = n(19309),
     a = n(224964),
     o = n(31408);
 function u(e) {
@@ -11,7 +11,7 @@ function u(e) {
         i.useEffect(() => {
             let e = t.current;
             if (n && null != e) {
-                let t = (0, r.A)(e);
+                let t = (0, s.A)(e);
                 null != t && l.fire(t.x + e.clientWidth / 2, t.y + e.clientHeight / 2, { countMultiplier: 4 });
             }
         }, [t, l, n]),
@@ -23,7 +23,7 @@ n.d(
     {},
     {
         A: function (e) {
-            return (0, l.jsx)(s.A, { confettiLocation: o.k.CALL_TILE, children: (0, l.jsx)(u, { ...e }) });
+            return (0, l.jsx)(r.A, { confettiLocation: o.k.CALL_TILE, children: (0, l.jsx)(u, { ...e }) });
         },
     },
 );

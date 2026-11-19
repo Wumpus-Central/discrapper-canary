@@ -9,8 +9,8 @@ var i = n(477900),
     c = n(939249),
     d = n(481901),
     m = n(607470),
-    p = n(394039),
-    f = n(61491),
+    f = n(394039),
+    p = n(61491),
     h = n(97808),
     g = n(778712),
     A = n(339350),
@@ -44,7 +44,7 @@ let T = l.memo(function (e) {
         j = r - n.startSec,
         R = r < n.startSec,
         O = Math.ceil(v(n, r)),
-        M = (0, f.rB)(O),
+        M = (0, p.rB)(O),
         P = n.owner?.name ?? n.label ?? b.intl.string(_.default["6XuC8e"]),
         { ref: k, width: L, height: w } = (0, u.Ay)();
     (l.useEffect(() => {
@@ -78,7 +78,7 @@ let T = l.memo(function (e) {
                             (0, i.jsx)(m.A, {
                                 ref: T,
                                 className: a()(y.cr, { [y.qb]: D }),
-                                poster: (0, p.s)(n.poster, n, L, w),
+                                poster: (0, f.s)(n.poster, n, L, w),
                                 preload: "auto",
                                 playsInline: !0,
                                 muted: !0,
@@ -122,7 +122,7 @@ let N = l.memo(function (e) {
         m = x(t, s),
         { ref: C, width: E, height: y } = (0, u.Ay)(m, l, r);
     if (!m && !l && !r) {
-        let e = (0, f.rB)(v(t, s));
+        let e = (0, p.rB)(v(t, s));
         return (0, i.jsx)(S.u, {
             asset: (0, i.jsx)(A.HourglassIcon, { size: "xs" }),
             assetSize: 16,
@@ -155,7 +155,7 @@ let N = l.memo(function (e) {
                     (0, i.jsx)("img", {
                         ref: C,
                         className: I.a1,
-                        src: (0, p.s)(t.poster, t, E, y),
+                        src: (0, f.s)(t.poster, t, E, y),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -175,7 +175,7 @@ function R(e) {
             src: n,
             poster: r,
             className: s,
-            onSourceError: f,
+            onSourceError: p,
             isScrubbing: h,
             onTimeUpdate: g,
             onEnded: A,
@@ -286,17 +286,17 @@ function R(e) {
                     null == t ? u.current.delete(e) : u.current.set(e, t);
                 }, []),
                 m = l.useCallback((e) => (e.id === i ? t.current : (u.current.get(e.id) ?? null)), [i, t]),
-                p = l.useRef({ sources: n, isGridView: r, getSourceElement: m });
+                f = l.useRef({ sources: n, isGridView: r, getSourceElement: m });
             l.useLayoutEffect(() => {
-                p.current = { sources: n, isGridView: r, getSourceElement: m };
+                f.current = { sources: n, isGridView: r, getSourceElement: m };
             });
-            let f = l.useCallback(() => null != o.current, []),
+            let p = l.useCallback(() => null != o.current, []),
                 h = l.useCallback(
                     function (e) {
-                        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.current.isGridView,
+                        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.current.isGridView,
                             i = t.current;
                         if (null == i || i.paused || !n) return;
-                        let { sources: l, getSourceElement: r } = p.current;
+                        let { sources: l, getSourceElement: r } = f.current;
                         l.every((t) => E(r(t), t, e)) ||
                             ((c.current = !0), (o.current = e), i.pause(), i.dispatchEvent(new Event("waiting")), s(e));
                     },
@@ -360,7 +360,7 @@ function R(e) {
                 }, [a, n, m, g]),
                 {
                     registerFollowerElement: d,
-                    isGateRaised: f,
+                    isGateRaised: p,
                     raiseSyncGate: h,
                     clearSyncGate: g,
                     handleDriverPlay: A,
@@ -371,31 +371,31 @@ function R(e) {
         ec = l.useRef(null),
         ed = l.useRef(null),
         em = l.useRef(R.id),
-        ep = l.useRef(!1),
-        ef = l.useRef(null),
+        ef = l.useRef(!1),
+        ep = l.useRef(null),
         eh = l.useRef(null);
     function eg() {
         null != eh.current &&
             (clearTimeout(eh.current), (eh.current = null), w.current?.dispatchEvent(new Event("canplay")));
     }
     function eA() {
-        let e = ef.current;
-        null != e && ((ef.current = null), eg(), eC(e.sourceId, e.masterSec));
+        let e = ep.current;
+        null != e && ((ep.current = null), eg(), eC(e.sourceId, e.masterSec));
     }
     function eC(e, t) {
         let n = en.find((t) => t.id === e);
         if (null == n) return;
-        if (n.id === R.id) ((ef.current = null), eg());
-        else if (!ep.current) {
+        if (n.id === R.id) ((ep.current = null), eg());
+        else if (!ef.current) {
             let e;
-            ((ef.current = { sourceId: n.id, masterSec: t }),
+            ((ep.current = { sourceId: n.id, masterSec: t }),
                 null == eh.current &&
                     null != (e = w.current) &&
                     (e.dispatchEvent(new Event("waiting")),
                     (e.preload = "metadata"),
                     e.load(),
                     (eh.current = setTimeout(() => {
-                        ((ep.current = !0), eE.current.applyDeferredSwitch());
+                        ((ef.current = !0), eE.current.applyDeferredSwitch());
                     }, 5e3))));
             return;
         }
@@ -552,7 +552,7 @@ function R(e) {
                                 ...L,
                                 ref: F,
                                 className: a()(s, { [j._b]: eT, [j.l3]: M }),
-                                poster: (0, p.s)(ei.poster ?? r, ei, U, G),
+                                poster: (0, f.s)(ei.poster ?? r, ei, U, G),
                                 onCanPlay: ey,
                                 onCanPlayThrough: ey,
                                 onTimeUpdate: function (e) {
@@ -573,7 +573,7 @@ function R(e) {
                                     if (
                                         (H === R.id &&
                                             null != t &&
-                                            ((ep.current = !0),
+                                            ((ef.current = !0),
                                             Number.isFinite(t.duration) &&
                                                 (V(t.duration),
                                                 (eE.current = { ...eE.current, masterDurationSec: t.duration }))),
@@ -600,7 +600,7 @@ function R(e) {
                                 onPause: function (e) {
                                     (q(!1), eu(), S?.(e));
                                 },
-                                children: [I, (0, i.jsx)("source", { onError: f, src: ei.url })],
+                                children: [I, (0, i.jsx)("source", { onError: p, src: ei.url })],
                             }),
                             (0, i.jsx)("canvas", {
                                 ref: X,

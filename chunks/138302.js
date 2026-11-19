@@ -1,1 +1,1 @@
-t.exports = { s: "badgeUpgrade_H2sld1" };
+o.exports = { s: "badgeUpgrade_H2sld1" };

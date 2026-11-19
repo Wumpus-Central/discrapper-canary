@@ -879,13 +879,13 @@ function e5(e) {
         clip:
             (r = (function (e, t) {
                 let { x: n, y: i, width: r, height: a } = e,
-                    s = Math.ceil(n * t - e8) / t,
-                    l = Math.ceil(i * t - e8) / t;
+                    s = Math.ceil(n * t - e7) / t,
+                    l = Math.ceil(i * t - e7) / t;
                 return {
                     x: s,
                     y: l,
-                    width: Math.max(0, Math.floor((n + r) * t + e8) / t - s),
-                    height: Math.max(0, Math.floor((i + a) * t + e8) / t - l),
+                    width: Math.max(0, Math.floor((n + r) * t + e7) / t - s),
+                    height: Math.max(0, Math.floor((i + a) * t + e7) / t - l),
                 };
             })(r, i)).width > 0 && r.height > 0
                 ? r
@@ -893,8 +893,8 @@ function e5(e) {
         devicePixelRatio: i,
     };
 }
-let e8 = 1 / 64;
-function e7(e) {
+let e7 = 1 / 64;
+function e8(e) {
     for (let [t, n] of l) if (n.iframe === e) return t;
     return null;
 }
@@ -925,15 +925,15 @@ n.d(
         KQ: $,
         oe: function (e, t) {
             let n = e3(),
-                i = e7(e);
+                i = e8(e);
             return null == n || null == i ? null : n.capture(i, t);
         },
         r8: function (e) {
-            let t = e7(e);
+            let t = e8(e);
             return null != t && j === t;
         },
         t8: function (e) {
-            return null != e7(e);
+            return null != e8(e);
         },
         xW: function (e, t, n, r, d) {
             let c = e3();

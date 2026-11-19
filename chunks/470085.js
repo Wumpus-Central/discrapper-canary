@@ -3,8 +3,8 @@ var r = n(477900);
 n(582128);
 var i = n(855986),
     l = n(287809),
-    s = n(448645),
-    a = n(590180),
+    a = n(448645),
+    s = n(590180),
     u = n(298072),
     o = n(993408),
     c = n(478168),
@@ -82,10 +82,10 @@ let k = (e) => {
             }
         })(t);
         if (null == l) return null;
-        let { type: s, icon: a } = l;
+        let { type: a, icon: s } = l;
         return (0, r.jsx)("div", {
             className: m()(n, R.$),
-            children: (0, r.jsx)(C.E, { type: s, variant: "inverted", icon: a }),
+            children: (0, r.jsx)(C.E, { type: a, variant: "inverted", icon: s }),
         });
     };
 var O = n(561769),
@@ -101,10 +101,10 @@ function T(e) {
         } = e,
         { isPurchased: x, isPartiallyOwnedBundle: C } = (0, I.h)(t),
         _ = (0, o.G0)(t),
-        h = (0, i.bG)([a.A], () => a.A.getCategoryForProduct(t.skuId)),
+        h = (0, i.bG)([s.A], () => s.A.getCategoryForProduct(t.skuId)),
         E = t.categoryWillUnpublishAt ?? h?.unpublishedAt,
         b = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
-        R = s.Ay.canUseShopDiscounts(b),
+        R = a.Ay.canUseShopDiscounts(b),
         { isOrbExclusive: k, shouldCheckoutWithOrbs: y } = (0, S.F)({
             product: t,
             hasShopDiscount: R,
@@ -157,17 +157,17 @@ function T(e) {
     return null == N ? null : (0, r.jsx)(L, { badge: N, className: g, tabIndex: v });
 }
 let P = function (e) {
-    let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l, tabIndex: s } = e,
-        a = (0, O.Vm)(t),
-        o = (0, u.Q)(a);
-    if (null == a || a.hideBadge) return null;
-    let c = (0, f.rb)(a, o);
+    let { skuId: t, badgeOverride: n, className: i, prioritizedCurrency: l, tabIndex: a } = e,
+        s = (0, O.Vm)(t),
+        o = (0, u.Q)(s);
+    if (null == s || s.hideBadge) return null;
+    let c = (0, f.rb)(s, o);
     return (0, r.jsx)(T, {
         product: c,
         badgeOverride: n,
-        productBadgeOverride: a.badgeOverride,
+        productBadgeOverride: s.badgeOverride,
         className: i,
         prioritizedCurrency: l,
-        tabIndex: s,
+        tabIndex: a,
     });
 };

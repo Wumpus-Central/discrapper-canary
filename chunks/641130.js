@@ -1,1 +1,1 @@
-e.exports = { r: "settingsPage_SmOc0s" };
+t.exports = { r: "settingsPage_SmOc0s" };

@@ -1,6 +1,6 @@
-var u = e(805974),
+var l = e(805974),
     r = e(278416),
-    l = e(403581),
+    u = e(403581),
     i = e(318254);
 e.d(
     t,
@@ -8,11 +8,11 @@ e.d(
     {
         s: function (n) {
             switch (n) {
-                case u._.TAG:
+                case l._.TAG:
                     return r.TagIcon;
-                case u._.NITRO:
-                    return l.NitroWheelIcon;
-                case u._.ORBS:
+                case l._.NITRO:
+                    return u.NitroWheelIcon;
+                case l._.ORBS:
                     return i.OrbsIcon;
                 default:
                     return null;

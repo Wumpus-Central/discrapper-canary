@@ -1,8 +1,8 @@
 var r = n(582128),
     i = n(613412),
     l = n(172218),
-    s = n(688810),
-    a = n(139286),
+    a = n(688810),
+    s = n(139286),
     u = n(857512),
     o = n(298072),
     c = n(993408),
@@ -14,7 +14,7 @@ n.d(
     {
         U: function (e) {
             let t = (0, u.uM)(),
-                { analyticsLocations: n } = (0, s.Ay)(),
+                { analyticsLocations: n } = (0, a.Ay)(),
                 f = (0, o.Q)(e),
                 p = (0, I.o)(),
                 g = (0, c.xM)(p),
@@ -26,7 +26,7 @@ n.d(
             }, [f]);
             let C = r.useCallback(() => {
                     let r = (0, d.B1)(e);
-                    (0, a.x)(
+                    (0, s.x)(
                         {
                             name: i.ImpressionNames.SHOP_CARD,
                             type: i.ImpressionTypes.VIEW,

@@ -1,1 +1,1 @@
-e.exports = { WX: "spinningAvatar_dzEoas", ti: "profilePreviewContainer_dzEoas" };
+t.exports = { WX: "spinningAvatar_dzEoas", ti: "profilePreviewContainer_dzEoas" };

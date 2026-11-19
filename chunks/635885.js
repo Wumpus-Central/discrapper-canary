@@ -1,7 +1,7 @@
 var l = n(582128),
     i = n(855986),
-    s = n(290863),
-    r = n(240248),
+    r = n(290863),
+    s = n(240248),
     a = n(832163),
     o = n(533562);
 function u(e, t) {
@@ -22,14 +22,14 @@ n.d(
                     (n = (0, o.W)()),
                     (c = (0, i.bG)([a.A], () => a.A.getDetectableIdsToApplicationIds())),
                     (0, i.bG)(
-                        [s.A],
+                        [r.A],
                         () =>
                             null != n
                                 ? t.reduce((e, t) => ({ ...e, [t]: n }), {})
                                 : t.reduce((e, t) => {
-                                      for (let n of s.A.getActivities(t)) {
+                                      for (let n of r.A.getActivities(t)) {
                                           let l = n.application_id;
-                                          if (null != l && !(0, r.uJ)(c[l])) return { ...e, [t]: c[l] };
+                                          if (null != l && !(0, s.uJ)(c[l])) return { ...e, [t]: c[l] };
                                       }
                                       return e;
                                   }, {}),

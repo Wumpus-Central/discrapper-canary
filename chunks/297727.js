@@ -9,20 +9,20 @@ t.d(
                 r = null,
                 s = null,
                 d = !1;
-            function u() {
+            function c() {
                 let e = n();
                 return null != e && e.length > 0 ? e : null;
             }
-            function c() {
+            function u() {
                 r = null;
             }
             return {
                 onProgress(e) {
                     let { positionSeconds: n, durationSeconds: l, isPlaying: x } = e,
-                        h = u();
-                    if (null == h) return void c();
-                    if ((null != s && s !== h && ((o = 0), c()), (s = h), !i.has(h) && !d)) {
-                        if (!x) return void c();
+                        h = c();
+                    if (null == h) return void u();
+                    if ((null != s && s !== h && ((o = 0), u()), (s = h), !i.has(h) && !d)) {
+                        if (!x) return void u();
                         if (null != r) {
                             let e = n - r;
                             e > 0 && e <= 1.5 && (o += e);
@@ -44,10 +44,10 @@ t.d(
                                     })));
                     }
                 },
-                pause: c,
+                pause: u,
                 getWatchedSeconds: () => o,
                 hasEmitted: () => {
-                    let e = u();
+                    let e = c();
                     return d || (null != e && i.has(e));
                 },
             };
