@@ -1209,6 +1209,8 @@ class ee extends l.G {
             },
             { no: 13, name: "list_field", kind: "message", repeat: 1, T: () => ei },
             { no: 14, name: "tab_gradient_colors_field", kind: "message", T: () => Q },
+            { no: 15, name: "shown_when_checkbox_field", kind: "scalar", T: 8 },
+            { no: 16, name: "shown_when_field", kind: "message", T: () => Q },
         ]);
     }
     create(e) {
@@ -1220,6 +1222,7 @@ class ee extends l.G {
             selectField: 0,
             multiSelectField: [],
             listField: [],
+            shownWhenCheckboxField: !1,
         };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
@@ -1277,6 +1280,12 @@ class ee extends l.G {
                 case 14:
                     a.tabGradientColorsField = Q.internalBinaryRead(e, e.uint32(), n, a.tabGradientColorsField);
                     break;
+                case 15:
+                    a.shownWhenCheckboxField = e.bool();
+                    break;
+                case 16:
+                    a.shownWhenField = Q.internalBinaryRead(e, e.uint32(), n, a.shownWhenField);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -1313,8 +1322,11 @@ class ee extends l.G {
         }
         for (let i = 0; i < e.listField.length; i++)
             ei.internalBinaryWrite(e.listField[i], t.tag(13, r.O0.LengthDelimited).fork(), n).join();
-        e.tabGradientColorsField &&
-            Q.internalBinaryWrite(e.tabGradientColorsField, t.tag(14, r.O0.LengthDelimited).fork(), n).join();
+        (e.tabGradientColorsField &&
+            Q.internalBinaryWrite(e.tabGradientColorsField, t.tag(14, r.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.shownWhenCheckboxField && t.tag(15, r.O0.Varint).bool(e.shownWhenCheckboxField),
+            e.shownWhenField &&
+                Q.internalBinaryWrite(e.shownWhenField, t.tag(16, r.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
