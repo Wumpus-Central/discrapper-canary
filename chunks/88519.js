@@ -1,27 +1,26 @@
 var l = t(477900),
     i = t(582128),
-    s = t(574381),
-    r = t(855986),
-    o = t(265872),
-    a = t(866665),
-    c = t(939249),
-    u = t(176781),
-    d = t(834730),
-    x = t(138017),
-    g = t(715482),
-    h = t(253932),
-    p = t(246356),
-    f = t(46653),
-    j = t(495867),
-    m = t(977997),
-    A = t(419490),
-    C = t(221501),
-    b = t(887298),
-    y = t(696016),
-    v = t(683825),
-    S = t(792996),
-    E = t(899189);
-let I = new WeakMap();
+    s = t(855986),
+    r = t(265872),
+    o = t(866665),
+    a = t(939249),
+    c = t(176781),
+    u = t(834730),
+    d = t(138017),
+    x = t(715482),
+    g = t(253932),
+    h = t(246356),
+    p = t(46653),
+    f = t(495867),
+    A = t(977997),
+    j = t(419490),
+    m = t(221501),
+    C = t(887298),
+    b = t(696016),
+    y = t(683825),
+    v = t(792996),
+    S = t(899189);
+let E = new WeakMap();
 t.d(
     n,
     {},
@@ -29,85 +28,85 @@ t.d(
         A: function (e) {
             let { channelId: n } = e,
                 t = i.useRef(null),
-                s = i.useRef(null),
-                f = h.Q$.useSetting(),
-                m = (0, r.bG)([A.Ay], () => A.Ay.getClipsWarningShown(n), [n]),
+                p = i.useRef(null),
+                A = g.Q$.useSetting(),
+                I = (0, s.bG)([j.Ay], () => j.Ay.getClipsWarningShown(n), [n]),
                 { isNoticeVisible: w, dismissNotice: N } = (function (e, n) {
-                    let t = (0, r.bG)([j.A], () => j.A.getRTCConnection()),
-                        l = null == t || I.get(t) !== e,
-                        [s, o] = i.useState(() => n && l),
+                    let t = (0, s.bG)([f.A], () => f.A.getRTCConnection()),
+                        l = null == t || E.get(t) !== e,
+                        [r, o] = i.useState(() => n && l),
                         [a, c] = i.useState(n);
                     return (
                         n !== a && (c(n), n && l && o(!0)),
                         i.useEffect(() => {
-                            if (!s) return;
-                            let n = j.A.getRTCConnection();
-                            null != n && I.set(n, e);
-                            let t = setTimeout(() => o(!1), y.Vi);
+                            if (!r) return;
+                            let n = f.A.getRTCConnection();
+                            null != n && E.set(n, e);
+                            let t = setTimeout(() => o(!1), b.Vi);
                             return () => clearTimeout(t);
-                        }, [s, e]),
-                        { isNoticeVisible: s, dismissNotice: i.useCallback(() => o(!1), []) }
+                        }, [r, e]),
+                        { isNoticeVisible: r, dismissNotice: i.useCallback(() => o(!1), []) }
                     );
-                })(n, m),
-                R = S.intl.string(f ? v.default.Q0dnKS : v.default.PaU7x6),
-                G = S.intl.string(f ? v.default.j56Eyx : v.default["1PDyrY"]);
+                })(n, I),
+                R = v.intl.string(A ? y.default.Q0dnKS : y.default.PaU7x6),
+                G = v.intl.string(A ? y.default.j56Eyx : y.default["1PDyrY"]);
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(o.Y, {
+                    (0, l.jsx)(r.Y, {
                         targetElementRef: t,
                         position: "bottom",
                         align: "right",
-                        animation: o.Y.Animation.NONE,
+                        animation: r.Y.Animation.NONE,
                         onRequestOpen: N,
                         renderPopout: (e) => {
                             let { closePopout: n } = e;
-                            return (0, l.jsx)(p.A, { children: (0, l.jsx)(b.A, { closePopout: n }) });
+                            return (0, l.jsx)(h.A, { children: (0, l.jsx)(C.A, { closePopout: n }) });
                         },
                         children: (e, n) => {
                             let { isShown: i } = n;
-                            return (0, l.jsx)(a.m, {
-                                text: S.intl.string(S.t.DJXW3G),
+                            return (0, l.jsx)(o.m, {
+                                text: v.intl.string(v.t.DJXW3G),
                                 shouldShow: !i && !w,
-                                children: (0, l.jsxs)(c.D, {
+                                children: (0, l.jsxs)(a.D, {
                                     ...e,
                                     onMouseEnter: () => {
                                         (e.onMouseEnter?.(), N());
                                     },
                                     innerRef: t,
-                                    className: E.jw,
+                                    className: S.jw,
                                     "aria-label": R,
                                     "aria-haspopup": "menu",
                                     children: [
-                                        (0, l.jsx)(u.ClipsIcon, { size: "xxs", color: "currentColor" }),
-                                        (0, l.jsxs)(d.E, {
+                                        (0, l.jsx)(c.ClipsIcon, { size: "xxs", color: "currentColor" }),
+                                        (0, l.jsxs)(u.E, {
                                             variant: "body-xs/semibold",
                                             color: "none",
-                                            className: E.Pf,
+                                            className: S.Pf,
                                             children: [
-                                                S.intl.string(v.default.Q0dnKS),
-                                                !f &&
+                                                v.intl.string(y.default.Q0dnKS),
+                                                !A &&
                                                     (0, l.jsxs)(l.Fragment, {
                                                         children: [
                                                             " \xb7 ",
-                                                            (0, l.jsx)(d.E, {
+                                                            (0, l.jsx)(u.E, {
                                                                 tag: "span",
                                                                 variant: "body-xs/semibold",
                                                                 color: "text-muted",
-                                                                children: S.intl.string(S.t.l4qZrp),
+                                                                children: v.intl.string(v.t.l4qZrp),
                                                             }),
                                                         ],
                                                     }),
                                             ],
                                         }),
                                         (0, l.jsx)("span", {
-                                            ref: s,
-                                            className: E.ai,
+                                            ref: p,
+                                            className: S.ai,
                                             children: i
-                                                ? (0, l.jsx)(x.ChevronLargeUpIcon, {
+                                                ? (0, l.jsx)(d.ChevronLargeUpIcon, {
                                                       size: "xxs",
                                                       color: "currentColor",
                                                   })
-                                                : (0, l.jsx)(g.ChevronLargeDownIcon, {
+                                                : (0, l.jsx)(x.ChevronLargeDownIcon, {
                                                       size: "xxs",
                                                       color: "currentColor",
                                                   }),
@@ -117,19 +116,19 @@ t.d(
                             });
                         },
                     }),
-                    (0, l.jsx)(C.A, { targetElementRef: s, shouldShow: w, text: G, onRequestClose: N }),
+                    (0, l.jsx)(m.A, { targetElementRef: p, shouldShow: w, text: G, onRequestClose: N }),
                 ],
             });
         },
         y: function (e) {
-            return (0, r.bG)(
-                [j.A, f.default, m.A, A.Ay],
+            return (0, s.bG)(
+                [f.A, p.default, A.A, j.Ay],
                 () => {
-                    if (!(0, s.xl)() || null == e || j.A.getChannelId() !== e) return !1;
-                    let n = f.default.getId();
-                    return Object.values(m.A.getVoiceStatesForChannel(e)).some((e) => {
+                    if (null == e || f.A.getChannelId() !== e) return !1;
+                    let n = p.default.getId();
+                    return Object.values(A.A.getVoiceStatesForChannel(e)).some((e) => {
                         let { userId: t } = e;
-                        return t !== n && A.Ay.isClipsEnabledForUser(t);
+                        return t !== n && j.Ay.isClipsEnabledForUser(t);
                     });
                 },
                 [e],
