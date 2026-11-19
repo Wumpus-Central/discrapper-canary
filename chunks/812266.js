@@ -561,8 +561,8 @@ var eX = n(284009),
     e4 = n(9842),
     e7 = n(69282),
     e5 = n(976860),
-    e6 = n(253932),
-    e8 = n(734057),
+    e8 = n(253932),
+    e6 = n(734057),
     e9 = n(540999),
     te = n(580745),
     tt = n(521427),
@@ -663,7 +663,7 @@ let tv = function (e, t, n) {
                     r = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     o = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
                     c = eC.A.getMessage(t, e),
-                    d = e8.A.getChannel(t);
+                    d = e6.A.getChannel(t);
                 if (null == c || null == d) return;
                 let u = eh.default.getId();
                 switch (n.key.toLowerCase()) {
@@ -685,7 +685,7 @@ let tv = function (e, t, n) {
                         (i || o) &&
                             (function (e) {
                                 let t = null == e.guild_id || tx.A.canChatInGuild(e.guild_id),
-                                    n = e6.jW.getSetting(),
+                                    n = e8.jW.getSetting(),
                                     { disableReactionCreates: l } = (0, t_.A)({
                                         channel: e,
                                         canChat: t,
@@ -717,7 +717,7 @@ let tv = function (e, t, n) {
                     case "t":
                         if (i && (0, tA.D1)(d, c)) (n.preventDefault(), (0, tf.Tv)(d, c, "Message Shortcut"));
                         else if (c.hasFlag(es.pr7.HAS_THREAD)) {
-                            let e = e8.A.getChannel(ei.default.castMessageIdAsChannelId(c.id));
+                            let e = e6.A.getChannel(ei.default.castMessageIdAsChannelId(c.id));
                             null != e && (i || o) && (n.preventDefault(), (0, tf.JA)(e, o));
                         }
                         break;
@@ -765,8 +765,8 @@ var tT = n(754459),
     t4 = n(973196),
     t7 = n(649963),
     t5 = n(815807),
-    t6 = n(429433),
-    t8 = n(738125),
+    t8 = n(429433),
+    t6 = n(738125),
     t9 = n(85109),
     ne = n(71393),
     nt = n(129230),
@@ -936,8 +936,8 @@ function nf(e) {
                 m = (0, tA.Id)(t),
                 g = (0, tA.s5)(t),
                 { firstMessage: p } = (0, u.bG)([t1.A], () => t1.A.getMessage(t.id), [t.id]),
-                A = e6.jW.useSetting(),
-                f = e6.Q_.useSetting(),
+                A = e8.jW.useSetting(),
+                f = e8.Q_.useSetting(),
                 C = (0, u.bG)([tx.A], () => null == t.guild_id || tx.A.canChatInGuild(t.guild_id), [t]),
                 {
                     canManageMessages: E,
@@ -1096,7 +1096,7 @@ function nf(e) {
                                             var e;
                                             return b
                                                 ? void (0, na.x)({ channelId: t.id, messageId: n.id, displayToast: !0 })
-                                                : ((e = t8.r.MESSAGE_TOOLBAR),
+                                                : ((e = t6.r.MESSAGE_TOOLBAR),
                                                   void (0, na.Y)({
                                                       channelId: t.id,
                                                       messageId: n.id,
@@ -1316,7 +1316,7 @@ function nx(e, t, n) {
                 object: es.ZSU.EMOJI_REACTION_PICKER_POPOUT,
             }),
         };
-    return (0, a.jsx)(t6.C, {
+    return (0, a.jsx)(t8.C, {
         channel: e,
         closePopout: n,
         onSelectEmoji: (l) => {
@@ -1714,8 +1714,8 @@ function nX(e) {
         { onFocus: A, ...f } = (0, d.rm)(e.id ?? ""),
         { isFocused: C, handleFocus: E, handleBlur: x } = (0, td.G8)(A),
         { popouts: I, selected: S, setPopout: y } = (0, tT.A)(n.id, nZ.Fd),
-        b = e6.hD.useSetting(),
-        _ = e6.rs.useSetting(),
+        b = e8.hD.useSetting(),
+        _ = e8.rs.useSetting(),
         v = (0, u.bG)([e4.A], () => e4.A.getMessageByReference(p)),
         T = (0, e1.S)((n.editedTimestamp ?? n.timestamp).valueOf()),
         {
@@ -1836,8 +1836,8 @@ let nY = r.memo(function (e) {
     eY()(i.type !== es.lAJ.THREAD_STARTER_MESSAGE, "Message must not be a thread starter message");
     let I = es.sl8.has(i.type) ? i.messageReference : void 0,
         { onFocus: S, ...y } = (0, d.rm)(e.id ?? ""),
-        b = e6.hD.useSetting(),
-        _ = e6.rs.useSetting(),
+        b = e8.hD.useSetting(),
+        _ = e8.rs.useSetting(),
         v = (0, u.bG)([e4.A], () => e4.A.getMessageByReference(I)),
         { popouts: T, selected: N, setPopout: M } = (0, tT.A)(i.id, nZ.Fd),
         R = (0, td.VL)(i, o, M),
@@ -1866,8 +1866,8 @@ let nY = r.memo(function (e) {
         W = N || K || (z && G),
         $ = W || O,
         q = (0, u.bG)(
-            [e8.A],
-            () => i.hasFlag(es.pr7.HAS_THREAD) && e8.A.getChannel(ei.default.castMessageIdAsChannelId(i.id)),
+            [e6.A],
+            () => i.hasFlag(es.pr7.HAS_THREAD) && e6.A.getChannel(ei.default.castMessageIdAsChannelId(i.id)),
         ),
         Z = i.isFirstMessageInForumPost(o),
         J = (0, e1.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
@@ -2105,7 +2105,7 @@ function n5(e) {
         }),
     });
 }
-let n6 = r.memo(function (e) {
+let n8 = r.memo(function (e) {
     let { messages: t, channel: n, compact: l = !1, unreadId: i, canUncollapse: s = !0, ...o } = e,
         { hasJumpTarget: d = !1 } = t,
         [u, h] = r.useState(d && s),
@@ -2156,7 +2156,7 @@ let n6 = r.memo(function (e) {
         ],
     });
 });
-var n8 = n(114212),
+var n6 = n(114212),
     n9 = n(687966),
     le = n(696451),
     lt = n(427262),
@@ -2194,7 +2194,7 @@ let ll = r.memo(function (e) {
                 : d.length <= 2
                   ? eG.intl.format(eG.t["RjbAw/"], { a: A, aHook: g(), b: f, bHook: p() })
                   : eG.intl.format(eG.t["YDqd/d"], { a: A, aHook: g(), b: f, bHook: p(), count: d.length - 2 })),
-        (0, a.jsx)(n6, {
+        (0, a.jsx)(n8, {
             channel: n,
             messages: l,
             compact: i,
@@ -2222,9 +2222,9 @@ function lo(e) {
 }
 let lc = (0, a.jsxs)(a.Fragment, {
     children: [
-        (0, a.jsx)(n8.A, { messages: 4, groupSpacing: 16, className: lr.Xb }),
-        (0, a.jsx)(n8.A, { messages: 2, groupSpacing: 16, className: lr.Xb }),
-        (0, a.jsx)(n8.A, { messages: 3, groupSpacing: 16, className: lr.Xb }),
+        (0, a.jsx)(n6.A, { messages: 4, groupSpacing: 16, className: lr.Xb }),
+        (0, a.jsx)(n6.A, { messages: 2, groupSpacing: 16, className: lr.Xb }),
+        (0, a.jsx)(n6.A, { messages: 3, groupSpacing: 16, className: lr.Xb }),
     ],
 });
 function ld(e) {
@@ -2252,7 +2252,7 @@ function ld(e) {
                                   {
                                       isOnTopic: e.isOnTopic,
                                       isCollapsed: l,
-                                      children: (0, a.jsx)(n6, {
+                                      children: (0, a.jsx)(n8, {
                                           messages: e.group,
                                           channel: t,
                                           unreadId: "",
@@ -2795,7 +2795,7 @@ function lw(e) {
             size: lD._3.SIZE_32,
         }),
         { content: o } = (0, tN.A)(n, lU),
-        c = e6.PZ.useSetting(),
+        c = e8.PZ.useSetting(),
         d = r.useMemo(() => (0, el.mk)(n.timestamp, !0, c), [n.timestamp, c]);
     return (0, a.jsxs)("div", {
         className: lO.QS,
@@ -3076,7 +3076,7 @@ var lW = n(354328),
     l4 = n(863439),
     l7 = n(326337),
     l5 = n(125435);
-function l6(e) {
+function l8(e) {
     let { compact: t, messages: n, attachmentSpecs: l, totalHeight: i, groupSpacing: s } = e;
     return r.useMemo(() => {
         let e = Array(n.length).fill(void 0);
@@ -3085,12 +3085,12 @@ function l6(e) {
             className: l5.i,
             style: { height: i },
             children: n.map((n, l) =>
-                (0, a.jsx)(n8.A, { groupSpacing: s, compact: t, messages: n, attachmentSpecs: e[l] }, l),
+                (0, a.jsx)(n6.A, { groupSpacing: s, compact: t, messages: n, attachmentSpecs: e[l] }, l),
             ),
         });
     }, [t, n, l, i, s]);
 }
-var l8 = n(830178),
+var l6 = n(830178),
     l9 = n(116903),
     ie = n(621466),
     it = n(315710),
@@ -4114,7 +4114,7 @@ function i7(e) {
     });
 }
 var i5 = n(151582);
-function i6(e) {
+function i8(e) {
     let { channel: t } = e,
         n = (0, i2.kt)(t),
         { firstMessage: l } = (0, u.cf)([t1.A], () => t1.A.getMessage(t.id)),
@@ -4137,7 +4137,7 @@ function i6(e) {
         ],
     });
 }
-var i8 = n(289873),
+var i6 = n(289873),
     i9 = n(682163),
     se = n(513461),
     st = n(654265),
@@ -4215,7 +4215,7 @@ function ss(e) {
                       ],
                   })
                 : n
-                  ? (0, a.jsx)(i8.y, {})
+                  ? (0, a.jsx)(i6.y, {})
                   : null,
     });
 }
@@ -4643,8 +4643,8 @@ var s0 = n(260498),
     s4 = n(733110),
     s7 = n(543465),
     s5 = n(308528),
-    s6 = n(928658),
-    s8 = n(978914),
+    s8 = n(928658),
+    s6 = n(978914),
     s9 = n(977347);
 function ae(e) {
     let { channel: t, user: n } = e,
@@ -4663,7 +4663,7 @@ function ae(e) {
                 a = !0 === (0, s1.A)(n ? (s?.id ?? t) : null, n),
                 r = n ? !a : i,
                 o = (0, s9.D)(e.id, t),
-                { message: c, loaded: d, error: h } = (0, s8.I)(e, { enabled: r }),
+                { message: c, loaded: d, error: h } = (0, s6.I)(e, { enabled: r }),
                 m = o ?? (c?.author?.id === t ? c : null);
             return { message: m, isReportable: r, isLoaded: null != m || d || h };
         })(t, n.id, l),
@@ -4672,7 +4672,7 @@ function ae(e) {
         h = !nr.Fr && !d,
         m = r.useCallback(() => {
             null != i &&
-                (0, s6.b8)(i, () => {
+                (0, s8.b8)(i, () => {
                     s5.A.closePrivateChannel(t.id, h);
                 });
         }, [t.id, i, h]);
@@ -5072,7 +5072,7 @@ function aM(e) {
         l = t && (0, iO.Ae)(n),
         i = (0, u.bG)([iQ.A], () => null != n.guild_id && n === iQ.A.getDefaultChannel(n.guild_id), [n]);
     if ((0, iG.A)(n.id)) return null;
-    if (n.isForumPost()) return (0, a.jsx)(i6, { channel: n });
+    if (n.isForumPost()) return (0, a.jsx)(i8, { channel: n });
     if (n.isMediaThread()) return (0, a.jsx)(iJ, { channel: n });
     if (iY.Le.has(n.type)) return (0, a.jsx)(sK, { channel: n });
     if (i) return (0, a.jsx)(sV.A, { channel: n });
@@ -5218,8 +5218,8 @@ function a$(e) {
 var aq = n(201001);
 function aZ(e) {
     let { threadId: t } = e,
-        n = (0, aH.bG)([e8.A], () => e8.A.getChannel(t)),
-        l = (0, aH.bG)([e8.A], () => e8.A.getChannel(n?.parent_id)),
+        n = (0, aH.bG)([e6.A], () => e6.A.getChannel(t)),
+        l = (0, aH.bG)([e6.A], () => e6.A.getChannel(n?.parent_id)),
         i = r.useCallback(() => {
             null != n &&
                 null != l &&
@@ -5325,8 +5325,8 @@ let a4 = r.memo(function (e) {
 });
 var a7 = n(367790),
     a5 = n(30492),
-    a6 = n(226698),
-    a8 = n(374710),
+    a8 = n(226698),
+    a6 = n(374710),
     a9 = n(715757),
     re = n(390897),
     rt = n(862482),
@@ -5419,7 +5419,7 @@ function rp(e) {
                                     n.e(304350),
                                     n.e(253335),
                                     n.e(916758),
-                                    n.e(356664),
+                                    n.e(947802),
                                     n.e(807476),
                                     n.e(967874),
                                     n.e(202622),
@@ -5442,8 +5442,8 @@ function rp(e) {
                     s = (0, u.bG)([tI.A], () => null != n && null != l && (0, rs.Kd)(n, l, [tI.A])),
                     { messageReference: r } = t,
                     o = (0, u.bG)([eC.A], () => (null != r ? eC.A.getMessage(r.channel_id, r.message_id) : null)),
-                    c = (0, u.bG)([e8.A], () => (null != o ? e8.A.getChannel(o.channel_id) : null)),
-                    d = (0, u.bG)([e8.A], () => e8.A.getChannel(i.id)?.isArchivedThread() ?? !1);
+                    c = (0, u.bG)([e6.A], () => (null != o ? e6.A.getChannel(o.channel_id) : null)),
+                    d = (0, u.bG)([e6.A], () => e6.A.getChannel(i.id)?.isArchivedThread() ?? !1);
                 if (!s) return null;
                 let h = null == o ? eG.intl.string(ro.default["0IZbwC"]) : eG.intl.string(ro.default.Uj6oD4),
                     m = null == o,
@@ -5511,11 +5511,11 @@ var rf = n(152007),
 function r_(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
-        i = (0, a8.uW)(t),
+        i = (0, a6.uW)(t),
         [s, o] = r.useState(!1);
     function c() {
         (o(!0),
-            a6.A.resolveFlag(t.id).then(() => {
+            a8.A.resolveFlag(t.id).then(() => {
                 o(!1);
             }));
     }
@@ -5556,12 +5556,12 @@ function rj(e) {
         [p, A] = r.useState(3),
         [f, C] = r.useState(!n),
         [E, x] = (0, aw.A)(!1, 2e3),
-        I = (0, u.bG)([e8.A], () => e8.A.getChannel(t), [t]),
+        I = (0, u.bG)([e6.A], () => e6.A.getChannel(t), [t]),
         { firstMessage: S } = (0, rx.OA)(I),
         b = (0, u.bG)([rf.A], () => rf.A.hasJoined(t)),
         { disableReactionUpdates: _, disableReactionCreates: j, isLurking: v, isPendingMember: T } = (0, aX.A)(I),
         N = (0, a9.W1)(I),
-        M = (0, u.bG)([e8.A], () => e8.A.getChannel(i)),
+        M = (0, u.bG)([e6.A], () => e6.A.getChannel(i)),
         R = (0, rE.Ck)(M),
         D = (0, u.bG)([aF.A], () => aF.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         k = r.useCallback(
@@ -6220,8 +6220,8 @@ function r4(e) {
 }
 var r7 = n(383233),
     r5 = n(309010),
-    r6 = n(675171),
-    r8 = n(806621),
+    r8 = n(675171),
+    r6 = n(806621),
     r9 = n(636922),
     oe = n(857740);
 let ot = r.memo(function (e) {
@@ -6572,14 +6572,14 @@ function oC(e) {
             function N() {
                 return A.isInitialized() || o.ready;
             }
-            let M = (0, r8.r)(s),
+            let M = (0, r6.r)(s),
                 R = m.some((e) => e.type === es.TZK.FORUM_POST_ACTION_BAR),
                 D = (0, b.cI)(s),
                 k = (0, u.bG)([lX.A], () => lX.A.shouldShowTopicsBar() && !I),
                 L = (0, rq.l)(s.id),
                 P = (0, rz.j)(s.id, rW.Rx),
                 O = (0, ig.E)(s.id),
-                G = (0, r6.A)(),
+                G = (0, r8.A)(),
                 U = (function (e, t) {
                     if (e.isDM() && null != t)
                         if (t.type === ib._j.STRANGER_DANGER)
@@ -6606,7 +6606,7 @@ function oC(e) {
                         : null,
                 K = (0, iG.A)(s.id),
                 V = (0, a9.W1)(s);
-            ((t = e6.Sf.useSetting()),
+            ((t = e8.Sf.useSetting()),
                 (n = (0, aH.bG)([j.Ay], () => j.Ay.useReducedMotion)),
                 r.useEffect(() => {
                     function e(e) {
@@ -6685,7 +6685,7 @@ function oC(e) {
                                     ? ((t = eG.t.rHRovo), (n = !1))
                                     : (t = eG.t.xfkfTK),
                             (0, a.jsx)(
-                                n6,
+                                n8,
                                 {
                                     unreadId: nZ.q4,
                                     messages: e,
@@ -6759,11 +6759,11 @@ function oC(e) {
                         ),
                     W.unshift((0, a.jsx)("div", { style: { height: 16, flex: "0 0 auto" } }, "buffer")));
                 let { useReducedMotion: e } = j.Ay;
-                ((e && N()) || !e) && W.unshift((0, a.jsx)(l6, { compact: h, ...f }, "has-more"));
+                ((e && N()) || !e) && W.unshift((0, a.jsx)(l8, { compact: h, ...f }, "has-more"));
             }
             if (
                 (E || _ || W.unshift((0, a.jsx)(aR, { channel: s, showingBanner: x }, "empty-message")),
-                o.hasMoreAfter && W.push((0, a.jsx)(l6, { compact: h, ...f }, "has-more-after")),
+                o.hasMoreAfter && W.push((0, a.jsx)(l8, { compact: h, ...f }, "has-more-after")),
                 !x && M && N() && W.push((0, a.jsx)(oc, { channel: s })),
                 c > 0 && d && N())
             ) {
@@ -6963,7 +6963,7 @@ function oC(e) {
             ((Y.ref.current = e), (eu.current = t), (em.current = t));
         }),
         eA = (0, u.bG)([O.A], () => O.A.gradientPreset),
-        ef = e6.eh.useSetting().customUserThemeSettings,
+        ef = e8.eh.useSetting().customUserThemeSettings,
         eC = (0, lY.V)(),
         ex = (0, lq.Q)(),
         eI = null != eA || (null != ef && !eC) || null != ex,
@@ -7075,8 +7075,8 @@ let oE = r.memo(function (e) {
             renderSpoilers: f,
             keyboardModeEnabled: C,
         } = (function () {
-            let e = e6.hH.useSetting(),
-                t = e6.gs.useSetting(),
+            let e = e8.hH.useSetting(),
+                t = e8.gs.useSetting(),
                 {
                     messageGroupSpacing: n,
                     fontSize: l,
@@ -7377,7 +7377,7 @@ let oE = r.memo(function (e) {
         _ = (0, l4.A)(f, d);
     return (0, a.jsx)(lJ.Bs.Provider, {
         value: _,
-        children: (0, a.jsx)(l8.t, {
+        children: (0, a.jsx)(l6.t, {
             children: (0, a.jsx)(oC, {
                 ...c,
                 messageGroupSpacing: g,

@@ -75,9 +75,6 @@ n.d(
         i_: function (e) {
             return e.some((e) => !d(e));
         },
-        lb: function (e) {
-            return null != e.turn_id ? e.turn_id : e.id.startsWith("turn:") ? e.id.slice(5) : null;
-        },
         pZ: function (e) {
             return "assistant" === e.role && !o(e) && !r(e) && !0 !== e.stopRequested;
         },

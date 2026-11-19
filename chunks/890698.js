@@ -1,4 +1,4 @@
-l.d(n, { wy: () => N, MF: () => M, $w: () => I, PM: () => U, CF: () => E, E8: () => C });
+l.d(n, { wy: () => y, MF: () => N, $w: () => C, PM: () => M, E8: () => w });
 var e = l(582128),
     i = l(855986),
     u = l(73153),
@@ -59,28 +59,25 @@ let b = new h(u.h, {
     CONJURE_PUBLISH_EVAL_PROJECT_GONE: A,
 });
 var _ = l(786986),
-    P = l(991238),
-    m = l(191850),
-    S = l(792996);
-function w(t) {
+    m = l(991238),
+    S = l(191850),
+    P = l(792996);
+function E(t) {
     return _.n_.some((n) => null != t.getGuild(n));
 }
-function E() {
-    return (0, i.bG)([a.A], () => w(a.A));
-}
-function C(t) {
+function w(t) {
     return (0, i.bG)(
         [b, r.default, a.A],
         () => {
             let n = b.getPending();
-            return n?.projectId === t && n.userId === r.default.getCurrentUser()?.id && w(a.A) ? n : null;
+            return n?.projectId === t && n.userId === r.default.getCurrentUser()?.id && E(a.A) ? n : null;
         },
         [t],
     );
 }
-function I(t) {
+function C(t) {
     let n = r.default.getCurrentUser()?.id;
-    if (null == n || !w(a.A)) return;
+    if (null == n || !E(a.A)) return;
     let l = p.getSubmittedAt(n, t);
     (null != l && Date.now() - l < _.hr) ||
         u.h.dispatch({
@@ -101,14 +98,14 @@ function I(t) {
         });
 }
 let v = 221552 == l.j ? { quality: null, metExpectations: null, speed: null } : null,
-    y = { quality: m.default["N94/JU"], metExpectations: m.default["7mnit0"], speed: m.default["J/xftE"] };
-function N(t) {
-    return S.intl.string(y[t]);
+    I = { quality: S.default["N94/JU"], metExpectations: S.default["7mnit0"], speed: S.default["J/xftE"] };
+function y(t) {
+    return P.intl.string(I[t]);
 }
-function M(t, n) {
-    return S.intl.formatToPlainString(m.default.fML8aJ, { score: n, dimension: N(t) });
+function N(t, n) {
+    return P.intl.formatToPlainString(S.default.fML8aJ, { score: n, dimension: y(t) });
 }
-function U(t) {
+function M(t) {
     let [n, l] = e.useState(v),
         [i, a] = e.useState(""),
         [r, s] = e.useState(!1),
@@ -126,7 +123,7 @@ function U(t) {
                 try {
                     await (async function (t, n, l) {
                         let e = o.A.getPublishStatus(t.projectId)?.publishedRevision,
-                            i = await (0, P.yD)(t.projectId, {
+                            i = await (0, m.yD)(t.projectId, {
                                 publish_turn_id: t.publishTurnId,
                                 published_revision: e ?? null,
                                 quality: n.quality,
@@ -156,7 +153,7 @@ function U(t) {
         setFeedback: a,
         canSubmit: null != p && !r,
         submitting: r,
-        error: d ? S.intl.string(m.default.Nu6mEB) : null,
+        error: d ? P.intl.string(S.default.Nu6mEB) : null,
         submit: g,
     };
 }
