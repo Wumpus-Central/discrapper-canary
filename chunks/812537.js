@@ -23,8 +23,8 @@ var s = i(477900),
 i(321073);
 var C = i(325499),
     I = i(914313),
-    R = i(773669),
-    v = i(975571),
+    v = i(773669),
+    R = i(975571),
     _ = i(398523),
     y = i(881373),
     P = i(682901),
@@ -218,7 +218,7 @@ let W = function (e) {
                         id: 23,
                         title: O.intl.string(O.t.NG1e6l),
                         subtitle: O.intl.format(U.default.uJcbMv, {
-                            termsLink: v.A.getArticleURL(S.MVz.NITRO_2_POINT_0),
+                            termsLink: R.A.getArticleURL(S.MVz.NITRO_2_POINT_0),
                         }),
                         rows: [
                             {
@@ -327,7 +327,7 @@ let W = function (e) {
                                 id: 6,
                                 label: O.intl.formatToPlainString(O.t.nyhDpw, {
                                     numBoosts: 2,
-                                    percentageOff: (0, A.l9)(R.default.locale, 0.3),
+                                    percentageOff: (0, A.l9)(v.default.locale, 0.3),
                                 }),
                                 tier0ColumnData: { includes: !1 },
                                 tier2ColumnData: { includes: !0 },

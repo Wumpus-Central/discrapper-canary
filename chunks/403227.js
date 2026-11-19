@@ -22,8 +22,8 @@ var s = i(477900),
     T = i(805251),
     C = i(834730),
     I = i(76573),
-    R = i(728666),
-    v = i(427262),
+    v = i(728666),
+    R = i(427262),
     _ = i(622017),
     y = i(113090),
     P = i(88001),
@@ -36,7 +36,7 @@ let M = function (e, t) {
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                 { premiumGroupMembership: i } = (0, y.A)({ useCachedData: e, fetch: t }),
                 { premiumGroupMembers: s } = (0, _.A)(i?.subscriptionId ?? null, { useCachedData: e, fetch: t });
-            return s?.primary != null ? (0, v.$3)(s?.primary) : null;
+            return s?.primary != null ? (0, R.$3)(s?.primary) : null;
         })({ useCachedData: !0, fetch: e === I.qT.MEMBER }),
         n = (0, r.bG)([f.A], () => f.A.getPremiumGroupSubscription());
     return e === I.qT.UNSPECIFIED
@@ -46,7 +46,7 @@ let M = function (e, t) {
                   null ==
                   (i =
                       e === I.qT.PRIMARY
-                          ? (0, R.bV)(n, { withIntervals: !0 })
+                          ? (0, v.bV)(n, { withIntervals: !0 })
                           : null == s
                             ? null
                             : D.intl.format(S.default.Nu9LNm, { primaryName: s, premiumGroupProductName: (0, P.DP)() }))
@@ -200,8 +200,8 @@ let et = function (e) {
             className: T,
             hideCTAs: C = !1,
             headingOverride: I,
-            hidePill: R = !1,
-            selectedPlanColumnClassName: v,
+            hidePill: v = !1,
+            selectedPlanColumnClassName: R,
             selectedPlanTier: _ = z.PremiumTypes.TIER_2,
         } = e,
         { analyticsLocations: y } = (0, x.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
@@ -458,7 +458,7 @@ let et = function (e) {
               withBottomBorderRadius: !0,
               buttonsRow: null == ei,
           }),
-        (E = R
+        (E = v
             ? null
             : null != ei || null != es
               ? (0, s.jsx)(w.HU, {
@@ -492,7 +492,7 @@ let et = function (e) {
                 (0, s.jsxs)("div", {
                     className: Y.wY,
                     children: [
-                        (0, s.jsx)("div", { className: l()(v, { [Y.A9]: ex, [Y.ce]: !ex && !H }), children: !ex && E }),
+                        (0, s.jsx)("div", { className: l()(R, { [Y.A9]: ex, [Y.ce]: !ex && !H }), children: !ex && E }),
                         (0, s.jsxs)("table", {
                             className: Y.tp,
                             children: [

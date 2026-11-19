@@ -1,4 +1,4 @@
-n.d(t, { gG: () => b, j_: () => w, ZL: () => y, EG: () => j, HJ: () => k, AV: () => S, KK: () => A });
+n.d(t, { gG: () => b, j_: () => w, ZL: () => y, EG: () => j, HJ: () => k, AV: () => C, KK: () => A });
 var l = n(582128),
     r = n(158390),
     a = n(73153),
@@ -201,7 +201,7 @@ function k(e, t) {
 function w(e, t, n) {
     return d.get(`${e}:${t}`)?.lastFrame === n;
 }
-function S(e, t) {
+function C(e, t) {
     let [n, r] = l.useState(() => d.get(`${e}:${t}`)?.restarts ?? 0);
     return (
         l.useEffect(() => {

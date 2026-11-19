@@ -1,19 +1,19 @@
-(n.d(l, { F: () => i, E: () => a }), n(938796));
-var e = n(951178);
-function a(t, l) {
-    return (0, e.XE)(t) ? "public" : null == l ? null : l ? "link" : "collaborators";
+(t.d(l, { F: () => r, E: () => a }), t(938796));
+var n = t(951178);
+function a(e, l) {
+    return (0, n.XE)(e) ? "public" : null == l ? null : l ? "link" : "collaborators";
 }
-function i(t, l, n) {
-    let a = (function (t, l) {
-        let { flags: n } = t;
-        return null == n ? null : l ? n | e.Zh.PUBLIC : n & ~e.Zh.PUBLIC;
-    })(t, "public" === n);
+function r(e, l, t) {
+    let a = (function (e, l) {
+        let { flags: t } = e;
+        return null == t ? null : l ? t | n.Zh.PUBLIC : t & ~n.Zh.PUBLIC;
+    })(e, "public" === t);
     if (null == a) return null;
-    let i = {};
+    let r = {};
     return (
-        a !== t.flags && (i.flags = a),
-        "link" === n && !0 !== l && (i.share_links_enabled = !0),
-        "collaborators" === n && !1 !== l && (i.share_links_enabled = !1),
-        i
+        a !== e.flags && (r.flags = a),
+        "link" === t && !0 !== l && (r.share_links_enabled = !0),
+        "collaborators" === t && !1 !== l && (r.share_links_enabled = !1),
+        r
     );
 }

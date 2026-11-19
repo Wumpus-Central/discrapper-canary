@@ -8,12 +8,12 @@ let i = RegExp(
         "i",
     ),
     s = /(`[^`]*`|\[[^\]]*\]\([^)]*\)|<[^>\s]+>|\b[a-z][a-z0-9+.-]*:\/\/\S+)/gi,
-    o = /^[("']+/,
-    u = /[.,!?;:)"']+$/;
+    u = /^[("']+/,
+    o = /[.,!?;:)"']+$/;
 function d(e) {
-    let t = o.exec(e)?.[0] ?? "",
+    let t = u.exec(e)?.[0] ?? "",
         l = e.slice(t.length),
-        n = u.exec(l)?.[0] ?? "",
+        n = o.exec(l)?.[0] ?? "",
         a = l.slice(0, l.length - n.length);
     return i.test(a) ? `${t}[${a}](https://${a})${n}` : e;
 }
