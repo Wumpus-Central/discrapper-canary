@@ -105,6 +105,10 @@ n.d(
                 if (null != l) return l;
             }
         },
+        YB: function (e, t, n) {
+            let { endsAt: l } = e;
+            return null != l ? l.getTime() <= n : !t;
+        },
         d: function (e) {
             let { positions: t, openPosition: n } = e,
                 l = n ?? 0,
@@ -113,20 +117,18 @@ n.d(
         },
         k$: i,
         q9: function (e) {
-            let { position: t, openPosition: n, hintPosition: l, isOpenPositionRevealed: r, hasCampaignEnded: s } = e;
-            return null == n && s
-                ? "REVEALED"
-                : t === l
-                  ? "HINT"
-                  : null == n
-                    ? "LOCKED"
-                    : t < n
-                      ? "REVEALED"
-                      : t === n
-                        ? r
-                            ? "REVEALED"
-                            : "OPENABLE"
-                        : "LOCKED";
+            let { position: t, openPosition: n, hintPosition: l, isOpenPositionRevealed: r } = e;
+            return t === l
+                ? "HINT"
+                : null == n
+                  ? "LOCKED"
+                  : t < n
+                    ? "REVEALED"
+                    : t === n
+                      ? r
+                          ? "REVEALED"
+                          : "OPENABLE"
+                      : "LOCKED";
         },
         te: u,
     },

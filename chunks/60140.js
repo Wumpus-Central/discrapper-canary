@@ -4,13 +4,13 @@ var l = n(477900),
     a = n(151869),
     i = n(857512),
     o = n(590180),
-    u = n(436912),
-    c = n(195271),
-    d = n(924473),
-    m = n(511265),
-    h = n(654512),
-    g = n(313276),
-    E = n(206077),
+    u = n(195271),
+    c = n(924473),
+    d = n(511265),
+    m = n(654512),
+    h = n(313276),
+    g = n(206077),
+    E = n(695960),
     p = n(28875),
     f = n(987421),
     x = n(561769),
@@ -80,14 +80,14 @@ function O(e, t) {
 }
 function T(e) {
     let { collectionId: t, sequencedOffers: n, products: s, onViewAll: o } = e,
-        u = (0, h.A)(t),
+        u = (0, m.A)(t),
         c = (0, C.A)(n, s, u),
         d = c.findIndex((e) => {
             let { tileProps: t } = e;
             return t.day === u;
         }),
-        { helpCenterArticleId: m } = n,
-        g = r.useMemo(() => (null != m ? { id: m, label: L.intl.string(L.t.vaqebJ) } : null), [m]);
+        { helpCenterArticleId: h } = n,
+        g = r.useMemo(() => (null != h ? { id: h, label: L.intl.string(L.t.vaqebJ) } : null), [h]);
     return (0, l.jsx)(i.R9, {
         newValue: { pageSection: "top 4", categoryPosition: 0 },
         children: (0, l.jsxs)("div", {
@@ -132,15 +132,15 @@ n.d(
             let t,
                 n,
                 a,
-                { heroBlockRecord: i, layout: h, tab: p, isBlockLoading: f = !1, onViewAll: x } = e,
+                { heroBlockRecord: i, layout: m, tab: p, isBlockLoading: f = !1, onViewAll: x } = e,
                 { products: A } =
-                    ((t = (0, g.A)()),
-                    (n = (0, m.p)()),
+                    ((t = (0, h.A)()),
+                    (n = (0, d.p)()),
                     (a = r.useMemo(() => (f ? [] : n(t(i.rankedSkuIds))), [f, t, i.rankedSkuIds, n])),
-                    { products: (0, E.X)(a) }),
+                    { products: (0, g.X)(a) }),
                 v = i.categorySkuId,
-                C = (0, s.bG)([u.A], () => (null != v ? u.A.getSequencedOffersForCollection(v) : null)),
-                L = (0, d.A)(),
+                C = (0, E.A)(v),
+                L = (0, c.A)(),
                 b = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
                 _ = r.useMemo(
                     () =>
@@ -153,16 +153,16 @@ n.d(
                 S = f || _,
                 I = r.useMemo(() => A.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [A]),
                 N =
-                    "hscroll" === h &&
+                    "hscroll" === m &&
                     p === y.G2.HOME &&
                     !S &&
                     null != v &&
                     null != C &&
                     C.promotions.length > 0 &&
                     null != b,
-                O = (0, c.t)("shop_home_carousel", { autoTrackExposure: N }).enabled,
-                R = "hscroll" === h && p === y.G2.HOME && null != v && O && !L;
-            switch (h) {
+                O = (0, u.t)("shop_home_carousel", { autoTrackExposure: N }).enabled,
+                R = "hscroll" === m && p === y.G2.HOME && null != v && O && !L;
+            switch (m) {
                 case "feed":
                     return (0, l.jsx)(j, { isLoading: S, products: I, tab: p });
                 case "hscroll":
