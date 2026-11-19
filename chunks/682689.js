@@ -313,7 +313,7 @@ var J = n(442467),
     en = n(811315),
     ei = n.n(en),
     er = n(800471),
-    ea = n(529412),
+    ea = n(600534),
     es = n(113457),
     el = n(742655),
     eo = n(998312),
@@ -616,7 +616,8 @@ function eE(e) {
                             skuId: t,
                             isPremium: r("isPremiumPurchase"),
                             defaultPlanId: n,
-                            isThreeMonthGiftingEnabled: i && (0, ea.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                            isThreeMonthGiftingEnabled:
+                                i && t === D.pe.TIER_2 && (0, ea.J)({ location: "PremiumCheckoutStoreSlice" }),
                         });
                     } catch (e) {
                         return null;

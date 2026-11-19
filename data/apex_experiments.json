@@ -4064,18 +4064,6 @@
     }
   },
   {
-    "name": "2026-09-three-month-nitro-gifting",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "name": "2026-09-try-display-name-style",
     "kind": "user",
     "defaultConfig": {
@@ -6157,6 +6145,18 @@
       "1": {
         "enabled": true
       }
+    }
+  },
+  {
+    "name": "2026-11-three-month-nitro-gifting-no-copy-change",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
     }
   },
   {
