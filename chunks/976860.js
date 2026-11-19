@@ -101,14 +101,6 @@ n.d(
         m: function (e) {
             return (null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF));
         },
-        mw: function (e) {
-            return (
-                E.add(e),
-                () => {
-                    E.delete(e);
-                }
-            );
-        },
         pX: m,
         sY: function () {
             h() && ((r = null), i.goForward());
