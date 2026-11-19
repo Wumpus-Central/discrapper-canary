@@ -6,9 +6,9 @@
     --custom-dvp-fill: var(--background-brand);
     --custom-dvp-track: var(--opacity-blurple-24);
     --custom-dvp-buffer: var(--opacity-blurple-48);
-    --custom-dvp-glow: -2px 0 12px 2px var(--background-brand), 0 0 33px 2px var(--background-brand);
+    --custom-dvp-glow: none;
     --custom-dvp-glow-blend: normal;
-    --custom-dvp-track-glow: 0 0 var(--space-4) var(--background-brand);
+    --custom-dvp-track-glow: none;
     --custom-dvp-track-scale: 1;
     --custom-dvp-track-hover-scale: 1;
     --custom-dvp-playhead-bg: var(--white);
@@ -164,7 +164,7 @@
     --custom-timeline-track-background: var(--custom-dvp-track, var(--progressbar-track-background));
     --custom-timeline-buffered-background: var(--custom-dvp-buffer, var(--neutral-51));
     --custom-timeline-seekable-background: var(--custom-dvp-track, var(--neutral-22));
-    --custom-timeline-default-glow-shadow: var(--custom-dvp-glow, -2px 0 12px 2px var(--background-brand), 0 0 33px 2px var(--background-brand));
+    --custom-timeline-default-glow-shadow: var(--custom-dvp-glow);
     position: relative;
     width: 100%
 }
@@ -289,7 +289,7 @@
 
 .segmentContainer_bktSrU {
     background-color: var(--custom-timeline-track-background);
-    box-shadow: var(--custom-dvp-track-glow, 0 0 var(--space-4) var(--background-brand));
+    box-shadow: var(--custom-dvp-track-glow);
     overflow: visible
 }
 
@@ -361,4 +361,4 @@
     }
 }
 
-/*# sourceMappingURL=936090.9748b62219f9aa5c.css.map*/
+/*# sourceMappingURL=936090.cbca69708b0ff84f.css.map*/
