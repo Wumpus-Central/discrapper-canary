@@ -5,25 +5,26 @@ var i = e(503698),
     c = e(522265),
     t = e(104299),
     r = e(470613);
-let d = {
+let m = {
     header: { pixels: 20, className: r.wx },
+    title: { pixels: 24, className: r.DD },
     sidebar: { pixels: 32, className: r.pz },
     card: { pixels: 40, className: r.Nr },
     list: { pixels: 44, className: r.p_ },
     dialog: { pixels: 48, className: r.r3 },
 };
 e.d(
-    s,
+    a,
     {},
     {
-        A: function (a) {
-            let { project: s, size: e, className: i } = a,
-                { pixels: m, className: n } = d[e],
-                { url: N, glyphSize: x } = (0, c.A)(s, m);
+        A: function (s) {
+            let { project: a, size: e, className: i } = s,
+                { pixels: d, className: n } = m[e],
+                { url: N, glyphSize: x } = (0, c.A)(a, d);
             return null == N
                 ? (0, l.jsx)(t.A, {
-                      applicationId: s.application_id,
-                      name: s.name,
+                      applicationId: a.application_id,
+                      name: a.name,
                       glyphSize: x,
                       className: p()(r.Gt, n, i),
                   })

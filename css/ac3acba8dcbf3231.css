@@ -29,13 +29,28 @@
 }
 
 .projectHeaderIconActions_gxtY1y,
-.publishAction_gxtY1y {
+.syncShareGroup_gxtY1y {
     align-items: center;
     display: flex;
     gap: var(--space-xs)
 }
 
+.syncShareGroup_gxtY1y {
+    margin-inline-end: var(--space-4);
+    min-width: 0
+}
+
+.projectHeaderDivider_gxtY1y {
+    background: var(--border-subtle);
+    flex: 0 0 auto;
+    height: var(--space-16);
+    width: 1px
+}
+
 .publishAction_gxtY1y {
+    align-items: center;
+    display: flex;
+    gap: var(--space-xs);
     min-width: 0
 }
 
@@ -52,23 +67,6 @@ svg.selectModeIcon_gxtY1y {
     height: 21px;
     margin-block-start: 1px;
     width: 21px
-}
-
-.projectHeaderDivider_gxtY1y {
-    background-color: var(--border-subtle);
-    height: 20px;
-    width: 1px
-}
-
-.projectHeaderLeadingActions_gxtY1y {
-    align-items: center;
-    display: flex;
-    gap: var(--space-xs)
-}
-
-.projectHeaderLeadingActions_gxtY1y:empty,
-.projectHeaderLeadingActions_gxtY1y:empty+.projectHeaderDivider_gxtY1y {
-    display: none
 }
 
 .projectMainFallback_gxtY1y {
@@ -91,4 +89,4 @@ svg.selectModeIcon_gxtY1y {
     text-align: center
 }
 
-/*# sourceMappingURL=4cd9536aecf20c03.css.map*/
+/*# sourceMappingURL=ac3acba8dcbf3231.css.map*/

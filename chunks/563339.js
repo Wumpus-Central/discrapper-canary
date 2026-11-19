@@ -1,124 +1,112 @@
-r.d(t, { A: () => v });
+r.d(t, { A: () => x });
 var l = r(477900);
 r(582128);
-var n = r(503698),
-    a = r.n(n),
+var n = r(152367),
+    a = r(646514),
     i = r(866665),
     s = r(939249),
-    o = r(548411),
-    c = r(152367),
-    u = r(646514),
-    d = r(237528),
-    f = r(834730),
-    m = r(742589),
-    p = r(855986),
-    h = r(71393),
-    g = r(191850),
-    x = r(792996),
-    b = r(845079),
-    j = r(631417);
-function v(e) {
+    o = r(834730),
+    c = r(22231),
+    u = r(742589),
+    d = r(855986),
+    f = r(71393),
+    m = r(191850),
+    p = r(792996),
+    h = r(845079),
+    g = r(631417);
+function x(e) {
     var t;
     let r,
-        n,
+        x,
         {
-            title: v,
-            actions: C,
-            breadcrumb: w,
+            title: b,
+            actions: j,
+            breadcrumb: v,
             project: y,
-            onOpenProjectSettings: N,
-            transparent: k = !1,
-            onBack: R,
-            hideShareTarget: A = !1,
-            preview: S = !1,
-            draft: T = !1,
+            onOpenProjectSettings: C,
+            transparent: w = !1,
+            hideShareTarget: N = !1,
+            draft: k = !1,
         } = e,
-        I = x.intl.string(g.default.FzfmQ8),
-        L = x.intl.string(g.default["/Tl7an"]),
-        E =
-            ((t = A ? null : (y ?? null)),
+        R = p.intl.string(m.default.FzfmQ8),
+        S =
+            ((t = N ? null : (y ?? null)),
             ((r = t?.guild_id),
-            (n = (0, p.bG)([h.A], () => (null != r ? (h.A.getGuild(r) ?? null) : null), [r])),
+            (x = (0, d.bG)([f.A], () => (null != r ? (f.A.getGuild(r) ?? null) : null), [r])),
             null == t
                 ? null
                 : "user" === t.install_scope
-                  ? { kind: "user", label: x.intl.string(g.default.KxFFKT) }
-                  : null != n
-                    ? { kind: "guild", label: n.name, guild: n }
+                  ? { kind: "user", label: p.intl.string(m.default.KxFFKT) }
+                  : null != x
+                    ? { kind: "guild", label: x.name, guild: x }
                     : null)?.label ?? null);
-    return (0, l.jsx)(m.A, {
+    return (0, l.jsx)(u.A, {
         hideSearch: !0,
-        transparent: k,
-        toolbar: C,
-        className: a()(j.wx, { [j.VH]: S }),
-        "aria-label": v,
+        transparent: w,
+        toolbar: j,
+        className: g.wx,
+        "aria-label": b,
         children: (0, l.jsxs)("div", {
-            className: j.QF,
+            className: g.QF,
             children: [
-                null != R
-                    ? (0, l.jsx)(i.m, {
-                          asContainer: !0,
-                          text: L,
-                          position: "bottom",
-                          children: (0, l.jsx)(s.D, {
-                              className: j.Gv,
-                              onClick: R,
-                              "aria-label": L,
-                              children: (0, l.jsx)(o.ArrowLargeLeftIcon, { size: "refresh_sm", color: "currentColor" }),
-                          }),
-                      })
-                    : null,
                 null == y
-                    ? (0, l.jsx)(c.MagicWandIcon, {
+                    ? (0, l.jsx)(n.MagicWandIcon, {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: u.A.colors.ICON_STRONG,
-                          className: j.Kk,
+                          color: a.A.colors.ICON_STRONG,
+                          className: g.Kk,
                       })
                     : null,
-                null != w
+                null != v
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(m.A.Title, { onClick: w.onClick, children: w.title }),
-                              (0, l.jsx)(m.A.Caret, {}),
+                              (0, l.jsx)(u.A.Title, { onClick: v.onClick, children: v.title }),
+                              (0, l.jsx)(u.A.Caret, {}),
                           ],
                       })
                     : null,
-                null != y && null != N
+                null != y && null != C
                     ? (0, l.jsx)(i.m, {
                           asContainer: !0,
-                          text: I,
+                          text: R,
                           position: "bottom",
                           children: (0, l.jsx)(s.D, {
-                              className: j.FF,
-                              onClick: N,
-                              "aria-label": I,
-                              children: (0, l.jsx)(b.A, { project: y, size: "header" }),
+                              className: g.FF,
+                              onClick: C,
+                              "aria-label": R,
+                              children: (0, l.jsx)(h.A, { project: y, size: "title" }),
                           }),
                       })
                     : null,
-                (0, l.jsx)(m.A.Title, { className: j.Qw, wrapperClassName: j.DD, children: v }),
-                T
-                    ? (0, l.jsx)("span", {
-                          className: j.kK,
-                          children: (0, l.jsx)(d.v, {
-                              text: x.intl.string(g.default["2+GiMw"]),
-                              variant: "orangeLight",
-                          }),
+                (0, l.jsx)(u.A.Title, { className: g.Qw, wrapperClassName: g.DD, children: b }),
+                k
+                    ? (0, l.jsxs)(o.E, {
+                          tag: "span",
+                          variant: "body-xs/medium",
+                          color: "text-subtle",
+                          className: g.qY,
+                          children: [
+                              (0, l.jsx)(c.PencilIcon, {
+                                  size: "xxs",
+                                  color: a.A.colors.ICON_SUBTLE,
+                                  "aria-hidden": !0,
+                              }),
+                              p.intl.string(m.default["2+GiMw"]),
+                          ],
                       })
                     : null,
-                null != E
+                null != S
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(m.A.Divider, { className: j.uN }),
-                              (0, l.jsx)(f.E, {
+                              (0, l.jsx)(u.A.Divider, { className: g.uN }),
+                              (0, l.jsx)(o.E, {
                                   tag: "span",
                                   variant: "body-sm/medium",
                                   color: "text-muted",
                                   lineClamp: 1,
-                                  className: j.l0,
-                                  children: E,
+                                  className: g.l0,
+                                  children: S,
                               }),
                           ],
                       })

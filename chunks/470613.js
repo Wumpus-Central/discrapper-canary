@@ -1,6 +1,7 @@
 s.exports = {
     Gt: "frame_HsOb2X",
     wx: "header_HsOb2X",
+    DD: "title_HsOb2X",
     pz: "sidebar_HsOb2X",
     Nr: "card_HsOb2X",
     p_: "list_HsOb2X",
