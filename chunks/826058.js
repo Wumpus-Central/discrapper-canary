@@ -1,4 +1,4 @@
-l.d(n, { bI: () => D, Ay: () => Z, qF: () => L, KL: () => R, vL: () => O, FZ: () => F });
+l.d(n, { bI: () => D, Ay: () => W, qF: () => R, KL: () => x, vL: () => O, FZ: () => F });
 var e = l(582128),
     i = l(855986),
     u = l(73153),
@@ -15,14 +15,14 @@ var e = l(582128),
     A = l(260498),
     b = l(951178),
     _ = l(426035),
-    P = l(890698),
-    m = l(385081),
-    S = l(519325),
-    w = l(246338),
-    E = l(664619),
+    m = l(890698),
+    S = l(385081),
+    P = l(519325),
+    E = l(246338),
+    w = l(664619),
     C = l(722701),
-    I = l(811587),
-    v = l(191850),
+    v = l(811587),
+    I = l(191850),
     y = l(792996);
 function N(t) {
     let { installScope: n, integrationStatus: l } = t,
@@ -40,13 +40,13 @@ function N(t) {
             return (
                 "guild" === n &&
                 null != l &&
-                !!(0, I.lE)(l.publishState) &&
+                !!(0, v.lE)(l.publishState) &&
                 (!1 === a || ("activity" === l.surface && u && null == e && !0 !== i))
             );
         })({ ...t, status: i }),
         a = (function (t) {
             let { installScope: n, guildName: l, canManageGuild: e } = t;
-            return "guild" !== n || !1 !== e ? null : y.intl.format(v.default.N4NkyR, { server: l ?? "" });
+            return "guild" !== n || !1 !== e ? null : y.intl.format(I.default.N4NkyR, { server: l ?? "" });
         })(t),
         r = (0, g.Qg)({
             installScope: n,
@@ -64,40 +64,40 @@ function N(t) {
                     ? (function (t) {
                           let { installScope: n, guildName: l, canManageChannels: e, usesAppChannels: i } = t;
                           return "guild" === n && i && !1 === e
-                              ? y.intl.format(v.default.eHYXFg, { server: l ?? "" })
+                              ? y.intl.format(I.default.eHYXFg, { server: l ?? "" })
                               : null;
                       })(t)
                     : null,
             missingSurface: u ? ("activity" === i.surface && !1 !== t.botInGuild ? "channel" : "bot") : null,
         };
     return r && l?.bot_permissions_changed === !0
-        ? { ...s, label: y.intl.string(v.default["tUeY/h"]), action: "review_permissions" }
-        : { ...s, label: y.intl.string(v.default["120EFN"]), action: "publish" };
+        ? { ...s, label: y.intl.string(I.default["tUeY/h"]), action: "review_permissions" }
+        : { ...s, label: y.intl.string(I.default["120EFN"]), action: "publish" };
 }
 var M = l(516288),
-    U = l(962998),
-    T = l(615839);
+    T = l(962998),
+    U = l(615839);
 let G = {
-    preparing: v.default.GQeas1,
-    approval: v.default["TkHHD+"],
-    approved_by_grant: v.default["9+kNt8"],
-    setup: v.default["F+AxgM"],
-    build: v.default.oQeMIy,
-    deploy: v.default.LqZvZ2,
-    discord: v.default.LFcGAT,
-    activating: v.default.ff1Fq1,
+    preparing: I.default.GQeas1,
+    approval: I.default["TkHHD+"],
+    approved_by_grant: I.default["9+kNt8"],
+    setup: I.default["F+AxgM"],
+    build: I.default.oQeMIy,
+    deploy: I.default.LqZvZ2,
+    discord: I.default.LFcGAT,
+    activating: I.default.ff1Fq1,
 };
 var j = l(652215);
 let D = 221552 == l.j ? e.createContext(null) : null;
-function R(t, n) {
+function x(t, n) {
     return "guild" === t.install_scope ? (t.guild_id ?? n) : null;
 }
-function L(t) {
+function R(t) {
     if (!(0, b._7)(t)) return !1;
     let n = s.A.getApplication(t.application_id)?.name;
     return null != n && n !== t.name;
 }
-function x(t) {
+function L(t) {
     if (null == C.A.getPublishApprovalUrl(t)) return !1;
     let n = C.A.getPublishProgress(t)?.stage;
     return null == n || "preparing" === n || "approval" === n;
@@ -105,8 +105,8 @@ function x(t) {
 function k(t, n) {
     let l = A.Ay.getProject(t);
     if (null == l) return null;
-    let e = R(l, n),
-        i = null == e ? null : (0, w.i8)(e, l.application_id),
+    let e = x(l, n),
+        i = null == e ? null : (0, E.i8)(e, l.application_id),
         u = null == e ? null : p.A.getGuild(e);
     return {
         project: l,
@@ -135,7 +135,7 @@ function k(t, n) {
             canManageChannels: null == u ? null : f.A.can(j.xBc.MANAGE_CHANNELS, u),
             usesAppChannels: (0, b.Hv)(l),
             botInGuild: (0, _.AS)(l, e),
-            liveNameOutdated: L(l),
+            liveNameOutdated: R(l),
         },
     };
 }
@@ -146,7 +146,7 @@ async function O(t, n) {
     let i = l?.install_scope === "guild" && null != l.guild_id ? l.guild_id : n;
     (await (0, r.TA)(e).catch(() => {}),
         await new Promise((t) => {
-            S.A.openConjureAppInstallModal({
+            P.A.openConjureAppInstallModal({
                 applicationId: e,
                 application: s.A.getApplication(e) ?? null,
                 guildId: i,
@@ -168,20 +168,20 @@ async function B(t, n, l, e) {
         o = a.id;
     q.add(o);
     try {
-        let t = await (0, U.xQ)(o);
+        let t = await (0, T.xQ)(o);
         i = 1 === t.destinations.length ? t.selected_destination_id : await r.promptPublishDestination(t);
     } catch (t) {
-        r.showError(t instanceof Error ? t.message : y.intl.string(v.default.gMWZeG));
+        r.showError(t instanceof Error ? t.message : y.intl.string(I.default.gMWZeG));
         return;
     } finally {
         q.delete(o);
     }
     if (null == i) return;
     if (C.A.isProjectPublishing(o) || C.A.getPublishStatus(o)?.publishing === !0)
-        return void r.showError(y.intl.string(v.default["TD/ze/"]));
+        return void r.showError(y.intl.string(I.default["TD/ze/"]));
     let d = null != t.guildId && t.input.status?.surface === "activity" && null == t.appChannelId && !n.isUpdate;
     (d && H(o, !0),
-        (0, U.TV)(o, i, e)
+        (0, T.TV)(o, i, e)
             .then((t) => {
                 let n;
                 if (!0 === t.ok) return t;
@@ -191,17 +191,17 @@ async function B(t, n, l, e) {
                         null != (n = t.detail?.trim()) && "" !== n
                             ? n
                             : 20088 === t.code
-                              ? y.intl.string(v.default.UXEDPw)
-                              : y.intl.string(v.default.gMWZeG),
+                              ? y.intl.string(I.default.UXEDPw)
+                              : y.intl.string(I.default.gMWZeG),
                     )
                 );
             })
             .then(
                 (n) => {
-                    (r.showConfirmation(y.intl.string(v.default.S6Px3n)),
-                        (0, P.$w)(o),
+                    (r.showConfirmation(y.intl.string(I.default.S6Px3n)),
+                        (0, m.$w)(o),
                         null != t.guildId && J(a),
-                        (0, E.tZ)(o, { isPreview: !1 })
+                        (0, w.tZ)(o, { isPreview: !1 })
                             .catch((t) => {
                                 console.error("[conjure] post-publish refresh failed", o, t);
                             })
@@ -219,7 +219,7 @@ async function B(t, n, l, e) {
                 },
                 (t) => {
                     H(o, !1);
-                    let n = t instanceof Error ? t.message : y.intl.string(v.default.gMWZeG);
+                    let n = t instanceof Error ? t.message : y.intl.string(I.default.gMWZeG);
                     (u.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_FAILED", projectId: o, message: n }),
                         r.showError(n));
                 },
@@ -243,17 +243,17 @@ async function F(t, n, e) {
         try {
             await (0, h.lZ)(t);
         } catch {
-            a.showError(y.intl.string(v.default.gMWZeG));
+            a.showError(y.intl.string(I.default.gMWZeG));
             return;
         } finally {
             q.delete(t);
         }
         if ("live_current" === s || "live_auto_synced" === s)
-            return void a.showConfirmation(y.intl.string(v.default.S6Px3n));
+            return void a.showConfirmation(y.intl.string(I.default.S6Px3n));
     }
-    if (null == r || null == s || !(0, I.Uh)(s)) return;
+    if (null == r || null == s || !(0, v.Uh)(s)) return;
     if (r.input.status?.safetyHold === !0) return void a.showSafetyHold(t);
-    let o = x(t) ? C.A.getPublishApprovalUrl(t) : null;
+    let o = L(t) ? C.A.getPublishApprovalUrl(t) : null;
     if (null != o && (0, A.PV)(r.project)) {
         let { promptPublishApproval: t } = await Promise.all([l.e(241989), l.e(574246)]).then(l.bind(l, 200389));
         t(o);
@@ -261,7 +261,7 @@ async function F(t, n, e) {
     }
     if (C.A.isProjectPublishing(t) || r.input.status?.publishing === !0) return;
     let d = N(r.input);
-    ((0, m.yJ)(t, {
+    ((0, S.yJ)(t, {
         entryPoint: n,
         publishState: s,
         surface: r.input.status?.surface ?? null,
@@ -270,7 +270,7 @@ async function F(t, n, e) {
     }),
     null != d.disabledReason)
         ? a.showPublishBlocked(M.k.MISSING_MANAGE_SERVER, d.disabledReason)
-        : ((0, U.dx)(t), null != d.confirmReason)
+        : ((0, T.dx)(t), null != d.confirmReason)
           ? a.showPublishBlocked(M.k.MISSING_MANAGE_CHANNELS, d.confirmReason, () => {
                 V(t, d, e, i).catch(() => {});
             })
@@ -306,7 +306,7 @@ async function V(t, n, l, e) {
         await B(a, n, l, e);
     }
 }
-function Z(t, n) {
+function W(t, n) {
     let l = e.useContext(D),
         u = n ?? l,
         a = u?.guildId ?? null,
@@ -315,22 +315,22 @@ function Z(t, n) {
             publishOffered: h,
             ownerInstallMissing: b,
             publishing: _,
-            failure: P,
-            approvalUrl: m,
-            project: S,
-            guildId: w,
-            appChannelId: E,
+            failure: m,
+            approvalUrl: S,
+            project: P,
+            guildId: E,
+            appChannelId: w,
             installScope: M,
-            status: U,
+            status: T,
             integrationStatus: j,
-            guildName: R,
-            appChannelName: L,
+            guildName: x,
+            appChannelName: R,
             appChannelPending: O,
             canManageGuild: B,
             canManageChannels: H,
             usesAppChannels: q,
             botInGuild: V,
-            liveNameOutdated: Z,
+            liveNameOutdated: W,
         } = (0, i.cf)(
             [A.Ay, C.A, p.A, c.A, d.A, f.A, o.A, s.A],
             () => {
@@ -338,7 +338,7 @@ function Z(t, n) {
                 return {
                     viewerCanPublish: null != n && (0, A.jf)(n.project),
                     publishOffered:
-                        (n?.input.status != null && (0, I.Uh)(n.input.status.publishState)) ||
+                        (n?.input.status != null && (0, v.Uh)(n.input.status.publishState)) ||
                         n?.ownerInstallMissing === !0,
                     ownerInstallMissing: n?.ownerInstallMissing === !0,
                     project: n?.project ?? null,
@@ -346,10 +346,10 @@ function Z(t, n) {
                     appChannelId: n?.appChannelId ?? null,
                     publishing:
                         null != t &&
-                        !1 === x(t) &&
+                        !1 === L(t) &&
                         (C.A.isProjectPublishing(t) || C.A.getPublishStatus(t)?.publishing === !0),
                     failure: null == t ? null : C.A.getPublishFailure(t),
-                    approvalUrl: null != t && x(t) ? C.A.getPublishApprovalUrl(t) : null,
+                    approvalUrl: null != t && L(t) ? C.A.getPublishApprovalUrl(t) : null,
                     installScope: n?.input.installScope ?? null,
                     status: n?.input.status ?? null,
                     integrationStatus: n?.input.integrationStatus ?? null,
@@ -365,40 +365,40 @@ function Z(t, n) {
             },
             [t, a],
         ),
-        W = e.useMemo(
+        Z = e.useMemo(
             () =>
-                null == S
+                null == P
                     ? null
                     : {
                           installScope: M,
-                          status: U,
+                          status: T,
                           integrationStatus: j,
-                          guildName: R,
-                          appChannelName: L,
+                          guildName: x,
+                          appChannelName: R,
                           appChannelPending: O,
                           canManageGuild: B,
                           canManageChannels: H,
                           usesAppChannels: q,
                           botInGuild: V,
-                          liveNameOutdated: Z,
+                          liveNameOutdated: W,
                       },
-            [S, M, U, j, R, L, O, B, H, q, V, Z],
+            [P, M, T, j, x, R, O, B, H, q, V, W],
         ),
-        $ = W?.status?.publishState ?? null,
-        Q = W?.installScope === "guild" && W.status?.surface === "bot";
+        Q = Z?.status?.publishState ?? null,
+        $ = Z?.installScope === "guild" && Z.status?.surface === "bot";
     e.useEffect(() => {
-        null != S && null != w && Q && null != $ && (0, I.lE)($) && J(S);
-    }, [S?.id, w, Q, $]);
-    let z = S?.application_id ?? null,
-        K = null != $ && (0, I.lE)($);
+        null != P && null != E && $ && null != Q && (0, v.lE)(Q) && J(P);
+    }, [P?.id, E, $, Q]);
+    let K = P?.application_id ?? null,
+        z = null != Q && (0, v.lE)(Q);
     e.useEffect(() => {
-        null != z &&
-            K &&
-            null == s.A.getApplication(z) &&
-            !s.A.isFetchingApplication(z) &&
-            (0, r.TA)(z).catch(() => {});
-    }, [z, K]);
-    let X = e.useMemo(() => (null == W ? null : N(W)), [W]),
+        null != K &&
+            z &&
+            null == s.A.getApplication(K) &&
+            !s.A.isFetchingApplication(K) &&
+            (0, r.TA)(K).catch(() => {});
+    }, [K, z]);
+    let X = e.useMemo(() => (null == Z ? null : N(Z)), [Z]),
         Y = (function (t) {
             let n = (0, i.bG)([C.A], () => (null == t ? null : C.A.getPublishProgress(t))),
                 [l, u] = e.useState(() => Date.now());
@@ -410,9 +410,9 @@ function Z(t, n) {
             }, [n]),
             null == n)
                 ? null
-                : y.intl.formatToPlainString(v.default["ndkR+x"], {
+                : y.intl.formatToPlainString(I.default["ndkR+x"], {
                       action: y.intl.string(G[n.stage]),
-                      detail: (0, T.C7)(l - n.stageStartedAt),
+                      detail: (0, U.C7)(l - n.stageStartedAt),
                   });
         })(_ ? t : null),
         tt = e.useCallback(
@@ -426,18 +426,18 @@ function Z(t, n) {
             [t, u],
         );
     if (null == u || !g || null == X || null == M || (!h && !_)) return null;
-    let tn = null == m ? X.label : y.intl.string(v.default.qru9M5);
+    let tn = null == S ? X.label : y.intl.string(I.default.qru9M5);
     return {
         ...X,
         upToDate: X.upToDate && !b,
-        status: W?.status ?? null,
-        guildId: w,
-        appChannelId: E,
+        status: Z?.status ?? null,
+        guildId: E,
+        appChannelId: w,
         publishing: _,
-        failure: _ ? null : P,
+        failure: _ ? null : m,
         showsProgress: null != Y,
-        awaitingApproval: null != m,
-        label: _ ? (Y ?? y.intl.string(v.default.Rhx0rn)) : tn,
+        awaitingApproval: null != S,
+        label: _ ? (Y ?? y.intl.string(I.default.Rhx0rn)) : tn,
         disabled: _ || !0 === u.busy,
         run: tt,
     };

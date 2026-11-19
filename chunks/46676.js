@@ -26,7 +26,7 @@ function a(e, t, n) {
 function o(e, t) {
     return { x: e.x * t.width, y: e.y * t.height };
 }
-function c(e, t) {
+function u(e, t) {
     switch (e.kind) {
         case "marker":
         case "erase": {
@@ -35,8 +35,8 @@ function c(e, t) {
                 l = n.map((e) => e.x),
                 i = n.map((e) => e.y),
                 a = Math.min(...l) - r,
-                c = Math.min(...i) - r;
-            return { x: a, y: c, width: Math.max(...l) + r - a, height: Math.max(...i) + r - c };
+                u = Math.min(...i) - r;
+            return { x: a, y: u, width: Math.max(...l) + r - a, height: Math.max(...i) + r - u };
         }
         case "circle":
         case "square": {
@@ -109,25 +109,25 @@ function c(e, t) {
                                 case "square": {
                                     let t = o(e.from, n),
                                         i = o(e.to, n),
-                                        c = r + (e.width * n.width) / 2,
-                                        u = [t, { x: i.x, y: t.y }, i, { x: t.x, y: i.y }];
-                                    return u.some((e, t) => a(l, e, u[(t + 1) % 4]) <= c);
+                                        u = r + (e.width * n.width) / 2,
+                                        c = [t, { x: i.x, y: t.y }, i, { x: t.x, y: i.y }];
+                                    return c.some((e, t) => a(l, e, c[(t + 1) % 4]) <= u);
                                 }
                                 case "circle": {
                                     let t = o(e.from, n),
                                         i = o(e.to, n),
                                         a = Math.abs(i.x - t.x) / 2,
-                                        c = Math.abs(i.y - t.y) / 2;
-                                    if (0 === a || 0 === c) return !1;
-                                    let u = (t.x + i.x) / 2,
+                                        u = Math.abs(i.y - t.y) / 2;
+                                    if (0 === a || 0 === u) return !1;
+                                    let c = (t.x + i.x) / 2,
                                         s = (t.y + i.y) / 2;
                                     return (
-                                        Math.abs(Math.hypot((l.x - u) / a, (l.y - s) / c) - 1) <=
-                                        (r + (e.width * n.width) / 2) / Math.min(a, c)
+                                        Math.abs(Math.hypot((l.x - c) / a, (l.y - s) / u) - 1) <=
+                                        (r + (e.width * n.width) / 2) / Math.min(a, u)
                                     );
                                 }
                                 case "text": {
-                                    let t = c(e, n);
+                                    let t = u(e, n);
                                     return (
                                         l.x >= t.x - r &&
                                         l.x <= t.x + t.width + r &&
@@ -144,7 +144,7 @@ function c(e, t) {
             jG: function (e) {
                 return e.some((e) => "erase" !== e.kind);
             },
-            k_: c,
+            k_: u,
             oy: function (e, t) {
                 switch (e.kind) {
                     case "marker":

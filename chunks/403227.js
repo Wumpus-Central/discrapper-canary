@@ -11,8 +11,8 @@ var s = i(477900),
     m = i(793574),
     x = i(688810),
     g = i(531260),
-    p = i(160946),
-    h = i(287809),
+    h = i(160946),
+    p = i(287809),
     f = i(166403),
     N = i(448645),
     A = i(89366),
@@ -20,8 +20,8 @@ var s = i(477900),
     b = i(77528),
     E = i(331322),
     T = i(805251),
-    C = i(834730),
-    I = i(76573),
+    I = i(834730),
+    C = i(76573),
     R = i(728666),
     v = i(427262),
     _ = i(622017),
@@ -37,15 +37,15 @@ let M = function (e, t) {
                 { premiumGroupMembership: i } = (0, y.A)({ useCachedData: e, fetch: t }),
                 { premiumGroupMembers: s } = (0, _.A)(i?.subscriptionId ?? null, { useCachedData: e, fetch: t });
             return s?.primary != null ? (0, v.$3)(s?.primary) : null;
-        })({ useCachedData: !0, fetch: e === I.qT.MEMBER }),
+        })({ useCachedData: !0, fetch: e === C.qT.MEMBER }),
         n = (0, r.bG)([f.A], () => f.A.getPremiumGroupSubscription());
-    return e === I.qT.UNSPECIFIED
+    return e === C.qT.UNSPECIFIED
         ? null
         : {
               subheaderString:
                   null ==
                   (i =
-                      e === I.qT.PRIMARY
+                      e === C.qT.PRIMARY
                           ? (0, R.bV)(n, { withIntervals: !0 })
                           : null == s
                             ? null
@@ -53,7 +53,7 @@ let M = function (e, t) {
                       ? "..."
                       : i,
               bodyString:
-                  e === I.qT.PRIMARY
+                  e === C.qT.PRIMARY
                       ? D.intl.format(S.default["+R/K74"], {
                             helpCenterLink: P.TE,
                             premiumGroupProductName: (0, P.DP)(),
@@ -80,8 +80,8 @@ function k(e) {
                     (0, s.jsx)(T.E, { type: "beta", variant: "expressive" }),
                 ],
             }),
-            (0, s.jsx)(C.E, { variant: "body-md/medium", className: O.m_, color: "text-default", children: a }),
-            (0, s.jsx)(C.E, { variant: "body-md/medium", color: "text-default", children: r }),
+            (0, s.jsx)(I.E, { variant: "body-md/medium", className: O.m_, color: "text-default", children: a }),
+            (0, s.jsx)(I.E, { variant: "body-md/medium", color: "text-default", children: r }),
         ],
     });
 }
@@ -100,7 +100,7 @@ var X = i(842671),
     Y = i(45526);
 function K(e) {
     let { text: t, badge: i, variant: n } = e;
-    return (0, s.jsxs)(C.E, {
+    return (0, s.jsxs)(I.E, {
         color: "text-default",
         variant: null != n ? n : "body-sm/normal",
         children: [t, " ", i],
@@ -108,7 +108,7 @@ function K(e) {
 }
 function q(e) {
     let { text: t, variant: i } = e;
-    return (0, s.jsx)(C.E, { color: "text-strong", variant: null != i ? i : "body-md/semibold", children: t });
+    return (0, s.jsx)(I.E, { color: "text-strong", variant: null != i ? i : "body-md/semibold", children: t });
 }
 function Z(e) {
     let { includes: t } = e;
@@ -198,18 +198,18 @@ let et = function (e) {
         E,
         {
             className: T,
-            hideCTAs: C = !1,
-            headingOverride: I,
+            hideCTAs: I = !1,
+            headingOverride: C,
             hidePill: R = !1,
             selectedPlanColumnClassName: v,
             selectedPlanTier: _ = z.PremiumTypes.TIER_2,
         } = e,
         { analyticsLocations: y } = (0, x.Ay)(m.A.PREMIUM_MARKETING_PLAN_COMPARISON),
         P = (0, r.bG)([f.A], () => f.A.hasFetchedSubscriptions()),
-        S = (0, p.Y)(z.T7),
+        S = (0, h.Y)(z.T7),
         M = (0, u.Ay)(),
         O = (0, c.q)(M),
-        B = (0, r.bG)([h.default], () => h.default.getCurrentUser()),
+        B = (0, r.bG)([p.default], () => p.default.getCurrentUser()),
         H = null != B && B.isPremiumWithPremiumGroup(),
         F = (0, N.YE)(B, z.PremiumTypes.TIER_2),
         et = (0, b.V)(),
@@ -410,7 +410,7 @@ let et = function (e) {
         column1: (0, s.jsx)(Q, { premiumType: z.PremiumTypes.TIER_0, isPremiumGroup: H }),
         column2: (0, s.jsx)(Q, { premiumType: z.PremiumTypes.TIER_2, isPremiumGroup: H }),
     };
-    (C
+    (I
         ? eu.push({
               label: null,
               column1: null,
@@ -486,7 +486,7 @@ let et = function (e) {
                 (0, s.jsx)(d.D, {
                     className: l()(Y.Qw, Y.__invalid_textColor),
                     variant: "heading-xxl/semibold",
-                    children: I ?? D.intl.string(D.t.FIbMh9),
+                    children: C ?? D.intl.string(D.t.FIbMh9),
                 }),
                 H && (0, s.jsx)(k, { premiumGroupRole: B.premiumGroupRole, className: Y.vg }),
                 (0, s.jsxs)("div", {

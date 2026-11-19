@@ -162,8 +162,8 @@ function U(e) {
         $ = a.useCallback((e, t) => {
             (D(!1), I((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } })));
         }, []),
-        V = a.useMemo(() => _?.schema ?? [], [_]),
-        K = (0, C.Tj)(l, v),
+        K = a.useMemo(() => _?.schema ?? [], [_]),
+        V = (0, C.Tj)(l, v),
         { servers: Q, serverId: Y, setServerId: Z } = (0, C.v4)(l, v);
     function X(e) {
         return (0, b.$c)(e, Y);
@@ -173,10 +173,10 @@ function U(e) {
     }
     let ee = a.useMemo(
             () =>
-                (_?.secrets ?? []).map((e) => ({ ...e, def: V.find((t) => t.key === e.name && "secret" === t.type) })),
-            [V, _],
+                (_?.secrets ?? []).map((e) => ({ ...e, def: K.find((t) => t.key === e.name && "secret" === t.type) })),
+            [K, _],
         ),
-        et = V.filter((e) => "secret" !== e.type),
+        et = K.filter((e) => "secret" !== e.type),
         el = new Map(ee.map((e) => [e.name, e])),
         en = (m ?? []).filter((e) => et.some((t) => t.key === e) || el.has(e)),
         ea = en.length > 0,
@@ -184,9 +184,9 @@ function U(e) {
         ei = a.useMemo(() => {
             let e = {};
             for (let [t, l] of Object.entries(T.secrets)) "" !== l.trim() && (e[t] = l.trim());
-            return { ...(0, b.DG)(_, T.values), ...(0, b.mU)(V, e) };
-        }, [T, V, _]),
-        es = V.some((e) => "game" === e.type && !0 === R[e.key]),
+            return { ...(0, b.DG)(_, T.values), ...(0, b.mU)(K, e) };
+        }, [T, K, _]),
+        es = K.some((e) => "game" === e.type && !0 === R[e.key]),
         eu = (null != ei.values || null != ei.server_values || null != ei.secrets) && !es,
         eo = a.useCallback(async () => {
             if (es) return !1;
@@ -296,7 +296,7 @@ function U(e) {
                 ? (0, n.jsx)(
                       B,
                       {
-                          guildId: !0 === e.per_server ? Y : K,
+                          guildId: !0 === e.per_server ? Y : V,
                           def: e,
                           hint: t,
                           value: J(e),

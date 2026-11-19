@@ -6,10 +6,10 @@ var l = n(284009),
     a = n(224640),
     o = n(632088),
     u = n(199453),
-    d = n(166532),
-    c = n(671334),
-    g = n(792996),
-    m = n(998973);
+    c = n(166532),
+    d = n(671334),
+    m = n(792996),
+    g = n(998973);
 function A(e) {
     let {
             transitionState: t,
@@ -17,12 +17,12 @@ function A(e) {
             onClose: l,
             onAddPaymentSource: u,
             toastContent: A,
-            initialStep: E = d.pn.PAYMENT_ELEMENT,
+            initialStep: E = c.pn.PAYMENT_ELEMENT,
             overwriteSubscriptionPaymentSource: h = !1,
         } = e,
-        S = (0, c.p)(),
-        f = (0, c.Y)({
-            addPaymentMethodStepState: S,
+        f = (0, d.p)(),
+        p = (0, d.Y)({
+            addPaymentMethodStepState: f,
             initialStep: E,
             prependSteps: [],
             appendSteps: [],
@@ -33,7 +33,7 @@ function A(e) {
                 (s()(null != t, "paymentSource missing"), u?.(t), l());
             },
             onStepChange: () => {},
-            header: (0, i.jsx)(r.rQ, { title: g.intl.string(g.t.eQ2bLp) }),
+            header: (0, i.jsx)(r.rQ, { title: m.intl.string(m.t.eQ2bLp) }),
             analyticsLocation: n,
             toastContent: A,
             overwriteSubscriptionPaymentSource: h,
@@ -42,14 +42,14 @@ function A(e) {
         transitionState: t,
         onClose: l,
         size: "md",
-        "aria-label": g.intl.string(g.t.eQ2bLp),
+        "aria-label": m.intl.string(m.t.eQ2bLp),
         contentOutsideContainer: (0, i.jsx)(o.A, {}),
         children: (0, i.jsx)("form", {
-            className: m.Zd,
+            className: g.Zd,
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: f,
+            children: p,
         }),
     });
 }

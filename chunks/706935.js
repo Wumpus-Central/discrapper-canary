@@ -12,9 +12,9 @@ var l = a(503698),
     m = a(150934),
     h = a(709066),
     g = a(191850),
-    v = a(792996),
-    x = a(319725);
-function b(e) {
+    x = a(792996),
+    b = a(319725);
+function v(e) {
     let { kind: n } = e;
     switch (n) {
         case "channel":
@@ -28,15 +28,15 @@ function b(e) {
 function f(e) {
     let { items: n, dimmed: a = !1, children: l } = e;
     return (0, t.jsxs)("div", {
-        className: i()(x.aP, { [x.SR]: a }),
+        className: i()(b.aP, { [b.SR]: a }),
         children: [
             n.map((e) =>
                 (0, t.jsxs)(
                     "div",
                     {
-                        className: x.nM,
+                        className: b.nM,
                         children: [
-                            (0, t.jsx)(b, { kind: e.kind }),
+                            (0, t.jsx)(v, { kind: e.kind }),
                             (0, t.jsx)(d.E, { variant: "body-sm/medium", color: "text-subtle", children: e.label }),
                         ],
                     },
@@ -50,18 +50,18 @@ function f(e) {
 function j(e) {
     let { item: n, checked: a, onChange: l, disabled: r } = e;
     return (0, t.jsxs)(c.D, {
-        className: i()(x.nM, x.hn, { [x.l$]: r }),
+        className: i()(b.nM, b.hn, { [b.l$]: r }),
         role: "checkbox",
         "aria-checked": a,
         "aria-disabled": r,
         onClick: r ? void 0 : () => l(!a),
         children: [
-            (0, t.jsx)(b, { kind: n.kind }),
+            (0, t.jsx)(v, { kind: n.kind }),
             (0, t.jsx)(d.E, {
                 tag: "span",
                 variant: "body-sm/medium",
                 color: "text-subtle",
-                className: x.f1,
+                className: b.f1,
                 children: n.label,
             }),
             (0, t.jsx)(u.P, { checked: a, disabled: r }),
@@ -80,7 +80,7 @@ a.d(
                     (0, t.jsx)(d.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
-                        children: v.intl.string(g.default["+E2PqP"]),
+                        children: x.intl.string(g.default["+E2PqP"]),
                     }),
                     (0, t.jsx)(f, { items: n, children: a.map((e) => (0, t.jsx)(j, { ...e }, e.item.key)) }),
                 ],
@@ -91,18 +91,18 @@ a.d(
             return (0, t.jsxs)(p.B, {
                 gap: 8,
                 children: [
-                    (0, t.jsx)(m.S, { checked: n, onChange: a, label: v.intl.string(g.default.gKA9tU) }),
+                    (0, t.jsx)(m.S, { checked: n, onChange: a, label: x.intl.string(g.default.gKA9tU) }),
                     (0, t.jsx)(f, { items: l, dimmed: !n }),
                 ],
             });
         },
         tb: function (e, n) {
-            return v.intl.format(e, {
+            return x.intl.format(e, {
                 app: (0, t.jsxs)(
                     "span",
                     {
-                        className: x.Kh,
-                        children: [n, " ", (0, t.jsx)("span", { className: x.Tc, children: (0, t.jsx)(h.A, {}) })],
+                        className: b.Kh,
+                        children: [n, " ", (0, t.jsx)("span", { className: b.Tc, children: (0, t.jsx)(h.A, {}) })],
                     },
                     "app",
                 ),

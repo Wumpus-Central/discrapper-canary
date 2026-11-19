@@ -1,30 +1,30 @@
-var o = t(486889),
-    l = t(659674),
-    i = t(581619);
-t.d(
-    e,
+var u = r(486889),
+    e = r(659674),
+    i = r(581619);
+r.d(
+    t,
     {},
     {
-        c_: function (n, e) {
-            let { onlyLinkContent: t, stripGameServerShareLinks: l } = e;
-            return (!!t && null != (0, o.ts)(n)) || (l && null != (0, o.$9)(n));
+        c_: function (n, t) {
+            let { onlyLinkContent: r, stripGameServerShareLinks: e } = t;
+            return (!!r && null != (0, u.ts)(n)) || (e && null != (0, u.$9)(n));
         },
-        dn: function (n, e) {
-            let t = 0;
-            for (let o of n) {
-                if (!e(o)) return { linkCount: t, onlyLinks: !1 };
-                t += 1;
+        dn: function (n, t) {
+            let r = 0;
+            for (let u of n) {
+                if (!t(u)) return { linkCount: r, onlyLinks: !1 };
+                r += 1;
             }
-            return { linkCount: t, onlyLinks: !0 };
+            return { linkCount: r, onlyLinks: !0 };
         },
         iz: function (n) {
-            let { linkCount: e, onlyLinks: t } = n;
-            return t && 1 === e;
+            let { linkCount: t, onlyLinks: r } = n;
+            return r && 1 === t;
         },
         k5: function (n) {
             if (1 !== n.length) return !1;
-            let e = n[0];
-            return i.h5.has(e.type) && (0, l.NV)(e);
+            let t = n[0];
+            return i.h5.has(t.type) && (0, e.NV)(t);
         },
         tq: { linkCount: 0, onlyLinks: !1 },
     },

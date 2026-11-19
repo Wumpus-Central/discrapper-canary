@@ -6,17 +6,17 @@ var i = n(419954),
     a = n(855986),
     o = n(192308),
     u = n(890497),
-    d = n(817281),
-    c = n(773669),
-    g = n(766075),
-    m = n(941933),
+    c = n(817281),
+    d = n(773669),
+    m = n(766075),
+    g = n(941933),
     A = n(792996),
     E = n(536854),
     h = n(72290);
-function S() {
-    let e = (0, a.bG)([c.default], () => c.default.locale),
+function f() {
+    let e = (0, a.bG)([d.default], () => d.default.locale),
         [t, i] = r.useState(e),
-        S = r.useMemo(
+        f = r.useMemo(
             () =>
                 (0, A.getAvailableLocales)().map((e) => {
                     let t;
@@ -39,10 +39,10 @@ function S() {
                 }),
             [],
         ),
-        f = r.useCallback((e) => {
+        p = r.useCallback((e) => {
             (i(e),
                 h.nextTick(() => {
-                    (d.Ay.updateLocale(e), (0, o.Oo)(m.y) && (0, g.openUserSettings)(l.X.LANGUAGE_AND_TIME_PANEL));
+                    (c.Ay.updateLocale(e), (0, o.Oo)(g.y) && (0, m.openUserSettings)(l.X.LANGUAGE_AND_TIME_PANEL));
                 }));
         }, []);
     return (0, s.jsx)(u.Z, {
@@ -50,27 +50,27 @@ function S() {
         label: A.intl.string(A.t["mx+sp7"]),
         description: A.intl.string(A.t.rTPlcq),
         value: t,
-        options: S,
-        onSelectionChange: f,
+        options: f,
+        onSelectionChange: p,
     });
 }
-let f = (0, i.E2)(l.X.LANGUAGE_SELECT_SETTING, {
+let p = (0, i.E2)(l.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [A.intl.string(A.t.IHMsPn)],
-    Component: () => (0, s.jsx)(S, {}),
+    Component: () => (0, s.jsx)(f, {}),
 });
-var T = n(873298),
-    p = n(253932);
+var S = n(873298),
+    T = n(253932);
 let x = (0, i.Qx)(l.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
         useTitle: () => A.intl.string(A.t.dyamEI),
-        useValue: () => p.PZ.useSetting(),
-        setValue: (e) => p.PZ.updateSetting(e),
+        useValue: () => T.PZ.useSetting(),
+        setValue: (e) => T.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: A.intl.string(A.t.FMWYvb), value: T.PZ.AUTO },
-                { name: A.intl.string(A.t.p8NOwi), value: T.PZ.H12 },
-                { name: A.intl.string(A.t["+o/sOo"]), value: T.PZ.H23 },
+                { name: A.intl.string(A.t.FMWYvb), value: S.PZ.AUTO },
+                { name: A.intl.string(A.t.p8NOwi), value: S.PZ.H12 },
+                { name: A.intl.string(A.t["+o/sOo"]), value: S.PZ.H23 },
             ];
         },
     }),
-    I = (0, i.zZ)(l.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [f, x] });
+    I = (0, i.zZ)(l.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [p, x] });

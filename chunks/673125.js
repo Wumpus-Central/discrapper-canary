@@ -1,11 +1,11 @@
-var n,
-    a,
+var a,
+    n,
     s = l(855986),
     i = l(73153),
     r = l(287809),
     o = l(124861),
     c = l(12510);
-function h(e) {
+function d(e) {
     return {
         achievementIdentifier: e.achievement_identifier,
         achievementDefinitionId: String(e.achievement_definition_id),
@@ -14,7 +14,7 @@ function h(e) {
         achievementStatus: e.status,
     };
 }
-let d = new Set([null, o.x.NONE, o.x.IN_PROGRESS, o.x.ELIGIBLE, o.x.COMPLETED]);
+let h = new Set([null, o.x.NONE, o.x.IN_PROGRESS, o.x.ELIGIBLE, o.x.COMPLETED]);
 function u() {
     return {
         challenges: [],
@@ -32,9 +32,9 @@ function u() {
 }
 var m =
         588245 != l.j
-            ? (((n = {}).NEW_ACHIEVEMENT = "new_achievement"), (n.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), n)
+            ? (((a = {}).NEW_ACHIEVEMENT = "new_achievement"), (a.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), a)
             : null,
-    C = (((a = {}).CLAIM_CHALLENGE = "claim_challenge"), (a.FETCH_CHALLENGES = "fetch_challenges"), a);
+    C = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
 class _ extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = u();
@@ -84,7 +84,7 @@ class _ extends s.Ay.Store {
     }
     handleOrbChallengesFetchSuccess(e) {
         let { response: t } = e;
-        ((this.state.challenges = t.achievements.map(h)),
+        ((this.state.challenges = t.achievements.map(d)),
             (this.state.orbRewardMultiplier = t.orb_multiplier),
             (this.state.nitroGatedOrbMultiplier = t.nitro_gated_orb_multiplier),
             this.setAchievementUnreadState({ has_unclaimed_achievements: t.has_unclaimed_achievements }),
@@ -112,7 +112,7 @@ class _ extends s.Ay.Store {
         let { achievementIdentifier: t, response: l } = e;
         ((this.state.isClaimingChallengeMap[t] = !1),
             (this.state.claimChallengeErrorMap[t] = null),
-            (this.state.challenges = this.state.challenges.map((e) => (e.achievementIdentifier === t ? h(l) : e))));
+            (this.state.challenges = this.state.challenges.map((e) => (e.achievementIdentifier === t ? d(l) : e))));
     }
     handleOrbChallengeClaimFail(e) {
         let { achievementIdentifier: t, error: l } = e;
@@ -170,7 +170,7 @@ class _ extends s.Ay.Store {
         let { challenges: e } = this.state;
         return (
             (null == this.challengesForOrbWalletCache || this.challengesForOrbWalletCache.source !== e) &&
-                (this.challengesForOrbWalletCache = { source: e, result: e.filter((e) => d.has(e.achievementStatus)) }),
+                (this.challengesForOrbWalletCache = { source: e, result: e.filter((e) => h.has(e.achievementStatus)) }),
             this.challengesForOrbWalletCache.result
         );
     }
@@ -184,5 +184,5 @@ class _ extends s.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let A = new _();
-l.d(t, {}, { Ay: A, EB: C, Y0: m });
+let E = new _();
+l.d(t, {}, { Ay: E, EB: C, Y0: m });

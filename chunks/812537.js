@@ -11,8 +11,8 @@ var s = i(477900),
     m = i(534514),
     x = i(403581),
     g = i(366010),
-    p = i(736653),
-    h = i(793574),
+    h = i(736653),
+    p = i(793574),
     f = i(688810),
     N = i(448645),
     A = i(580630),
@@ -21,8 +21,8 @@ var s = i(477900),
     E = i(511484),
     T = i(795269);
 i(321073);
-var C = i(325499),
-    I = i(914313),
+var I = i(325499),
+    C = i(914313),
     R = i(773669),
     v = i(975571),
     _ = i(398523),
@@ -167,9 +167,9 @@ let W = function (e) {
             variant: o = "default",
         } = e,
         d = "settings" === o,
-        u = (0, p.Ay)(),
+        u = (0, h.Ay)(),
         x = d && (0, g.q)(u),
-        { analyticsLocations: w } = (0, f.Ay)(h.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        { analyticsLocations: w } = (0, f.Ay)(p.A.PREMIUM_MARKETING_PLAN_COMPARISON),
         B = (0, b.V)(),
         F = B?.subscriptionTrial?.skuId,
         W = (0, j.O)(),
@@ -180,7 +180,7 @@ let W = function (e) {
         q = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_0),
         Z = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_2),
         J = (function () {
-            let e = (0, C.b)("premium_marketing_comparison"),
+            let e = (0, I.b)("premium_marketing_comparison"),
                 t = [
                     {
                         id: 10,
@@ -209,7 +209,7 @@ let W = function (e) {
                 ],
                 i = null,
                 s = [],
-                { shouldShowBonusOrbsUX: n, multiplier: a } = (0, I.lk)(D.rE.NITRO_HOME_MARKETING),
+                { shouldShowBonusOrbsUX: n, multiplier: a } = (0, C.lk)(D.rE.NITRO_HOME_MARKETING),
                 { enabled: l } = _.A.useConfig({ location: "useGetV2PlanComparisonTableRowsApplicationHome" }),
                 { functionalityEnabled: r } = (0, y.YS)({ location: "useGetV2PlanComparisonTableRowsApplicationHome" });
             return (

@@ -1,72 +1,72 @@
-var r = t(477900),
-    l = t(582128),
-    i = t(503698),
-    a = t.n(i),
-    u = t(265431),
-    s = t(855986),
-    o = t(863610),
-    c = t(695366),
-    d = t(834730),
-    h = t(257249),
-    m = t(436283),
-    f = t(964363),
-    p = t(652215),
-    x = t(792996),
-    g = t(389760);
-function v(e) {
-    return { text: e, icon: (0, r.jsx)(o.n, { className: g.Kk, dotRadius: 3.5, themed: !0 }) };
+var r = n(477900),
+    i = n(582128),
+    o = n(503698),
+    l = n.n(o),
+    s = n(265431),
+    c = n(855986),
+    a = n(863610),
+    u = n(695366),
+    d = n(834730),
+    m = n(257249),
+    h = n(436283),
+    p = n(964363),
+    f = n(652215),
+    A = n(792996),
+    E = n(389760);
+function C(e) {
+    return { text: e, icon: (0, r.jsx)(a.n, { className: E.Kk, dotRadius: 3.5, themed: !0 }) };
 }
-function j(e) {
+function g(e) {
     return {
-        text: e ?? x.intl.string(x.t.VCsUJu),
+        text: e ?? A.intl.string(A.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, r.jsx)(c.CircleErrorIcon, { size: "xs", color: "currentColor", className: a()(g.Kk, g.ik) }),
+        icon: (0, r.jsx)(u.CircleErrorIcon, { size: "xs", color: "currentColor", className: l()(E.Kk, E.ik) }),
     };
 }
-function I(e) {
-    let { className: n, icon: t, text: l, color: i } = e;
+function x(e) {
+    let { className: t, icon: n, text: i, color: o } = e;
     return (0, r.jsxs)("div", {
-        className: a()(g.iE, n),
+        className: l()(E.iE, t),
         children: [
-            t,
-            (0, r.jsx)(d.E, { variant: "body-md/normal", color: i, scaleFontToUserSetting: !0, children: l }),
+            n,
+            (0, r.jsx)(d.E, { variant: "body-md/normal", color: o, scaleFontToUserSetting: !0, children: i }),
         ],
     });
 }
-let y = l.memo(function (e) {
-    let { message: n, className: t, component: i } = e,
-        a = (0, u.A)(),
-        o = (0, s.bG)([m.Ay], () => m.Ay.getInteraction(n), [n]);
-    l.useEffect(() => {
+let b = i.memo(function (e) {
+    let { message: t, className: n, component: o } = e,
+        l = (0, s.A)(),
+        a = (0, c.bG)([h.Ay], () => h.Ay.getInteraction(t), [t]);
+    i.useEffect(() => {
         let e = null;
-        if (n.hasFlag(p.pr7.LOADING) && null != o) {
-            let t = (0, f.I5)(n.id) - Date.now();
-            t > 0 && (e = setTimeout(() => a(), 1e3 + t));
+        if (t.hasFlag(f.pr7.LOADING) && null != a) {
+            let n = (0, p.I5)(t.id) - Date.now();
+            n > 0 && (e = setTimeout(() => l(), 1e3 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [a, o, n]);
-    let c = null;
-    if (null == i)
-        c = (function (e, n) {
-            switch ((0, f.fK)(n, e)) {
-                case f.h0.SENDING:
-                    return v(x.intl.string(x.t.RiLfBY));
-                case f.h0.CREATED:
-                    return v(x.intl.formatToPlainString(x.t["7ePV4t"], { applicationName: n.author.username }));
-                case f.h0.TIMED_OUT:
-                    return j(x.intl.string(x.t.h8hzPd));
-                case f.h0.FAILED:
-                    return j(n.interactionError);
+    }, [l, a, t]);
+    let u = null;
+    if (null == o)
+        u = (function (e, t) {
+            switch ((0, p.fK)(t, e)) {
+                case p.h0.SENDING:
+                    return C(A.intl.string(A.t.RiLfBY));
+                case p.h0.CREATED:
+                    return C(A.intl.formatToPlainString(A.t["7ePV4t"], { applicationName: t.author.username }));
+                case p.h0.TIMED_OUT:
+                    return g(A.intl.string(A.t.h8hzPd));
+                case p.h0.FAILED:
+                    return g(t.interactionError);
             }
-        })(o, n);
+        })(a, t);
     else {
-        let e = (0, h.zv)(o, n, i);
-        null != e && (c = j(e));
+        let e = (0, m.zv)(a, t, o);
+        null != e && (u = g(e));
     }
-    if (null == c) return null;
-    let { text: d, icon: g, color: y } = c;
-    return (0, r.jsx)(I, { icon: g, text: d, className: t, color: y });
+    if (null == u) return null;
+    let { text: d, icon: E, color: b } = u;
+    return (0, r.jsx)(x, { icon: E, text: d, className: n, color: b });
 });
-t.d(n, {}, { Ay: y, PS: j, S0: I });
+n.d(t, {}, { Ay: b, PS: g, S0: x });

@@ -5,14 +5,14 @@ var i = n(477900),
     a = n(683071),
     o = n(95477),
     u = n(691885),
-    d = n(271866),
-    c = n(956518),
-    g = n(235986),
-    m = n(147964),
+    c = n(271866),
+    d = n(956518),
+    m = n(235986),
+    g = n(147964),
     A = n(792996),
     E = n(479381),
     h = n(221851);
-let S = /^\d+$|^$/;
+let f = /^\d+$|^$/;
 n.d(
     t,
     {},
@@ -20,48 +20,48 @@ n.d(
         A: function (e) {
             let { onClose: t, transitionState: n } = e,
                 {
-                    authorizedApplicationId: f,
-                    authorizationError: T,
-                    authorizing: p,
-                } = (0, s.cf)([m.A], () => ({
-                    authorizedApplicationId: m.A.testModeApplicationId,
-                    authorizationError: m.A.error,
-                    authorizing: m.A.isFetchingAuthorization,
+                    authorizedApplicationId: p,
+                    authorizationError: S,
+                    authorizing: T,
+                } = (0, s.cf)([g.A], () => ({
+                    authorizedApplicationId: g.A.testModeApplicationId,
+                    authorizationError: g.A.error,
+                    authorizing: g.A.isFetchingAuthorization,
                 })),
-                [x, I] = l.useState(f ?? ""),
+                [x, I] = l.useState(p ?? ""),
                 [_, b] = l.useState("8080"),
-                [N, C] = l.useState("localhost"),
-                y = S.test(x);
-            l.useEffect(() => d.SH, []);
-            let v = null != f && f === x,
+                [C, y] = l.useState("localhost"),
+                N = f.test(x);
+            l.useEffect(() => c.SH, []);
+            let v = null != p && p === x,
                 j = v
                     ? function () {
-                          (d.cL(), I(""), C(null));
+                          (c.cL(), I(""), y(null));
                       }
                     : async function () {
-                          d.SH();
+                          c.SH();
                           let e = (function (e, t, n) {
                               if (null == e) return null;
                               switch (e) {
                                   case "localhost":
                                       return `https://localhost:${t}`;
                                   case "proxy":
-                                      return (0, c.Ay)(n);
+                                      return (0, d.Ay)(n);
                               }
-                          })(N, _, x);
-                          null != (await d.q1(x, e)) && t();
+                          })(C, _, x);
+                          null != (await c.q1(x, e)) && t();
                       },
                 O = l.useMemo(
                     () => [
                         {
-                            loading: p,
-                            disabled: !y || 0 === x.length || ("localhost" === N && 0 === _.length),
+                            loading: T,
+                            disabled: !N || 0 === x.length || ("localhost" === C && 0 === _.length),
                             variant: v ? "critical-primary" : "active",
                             text: v ? A.intl.string(A.t.d6TR3I) : A.intl.string(A.t.qwuK5I),
                             onClick: j,
                         },
                     ],
-                    [x.length, p, v, y, _.length, j, N],
+                    [x.length, T, v, N, _.length, j, C],
                 );
             return (0, i.jsxs)(r.a, {
                 title: A.intl.string(A.t.f8fzky),
@@ -70,15 +70,15 @@ n.d(
                 onClose: t,
                 transitionState: n,
                 children: [
-                    null == T
+                    null == S
                         ? null
                         : (0, i.jsx)("div", {
                               className: h.SX,
-                              children: (0, i.jsx)(a.w, { type: "critical", message: T, role: "alert" }),
+                              children: (0, i.jsx)(a.w, { type: "critical", message: S, role: "alert" }),
                           }),
-                    (0, i.jsxs)(g.A, {
-                        direction: g.A.Direction.VERTICAL,
-                        align: g.A.Align.START,
+                    (0, i.jsxs)(m.A, {
+                        direction: m.A.Direction.VERTICAL,
+                        align: m.A.Align.START,
                         children: [
                             (0, i.jsx)("div", {
                                 className: E.I,
@@ -87,11 +87,11 @@ n.d(
                                     required: !0,
                                     value: x,
                                     maxLength: 19,
-                                    error: y ? null : A.intl.string(A.t.gPNgKO),
+                                    error: N ? null : A.intl.string(A.t.gPNgKO),
                                     onChange: function (e) {
                                         I(e);
                                     },
-                                    disabled: p,
+                                    disabled: T,
                                 }),
                             }),
                             (0, i.jsx)("div", {
@@ -99,19 +99,19 @@ n.d(
                                 children: (0, i.jsx)(u.l, {
                                     selectionMode: "single",
                                     label: A.intl.string(A.t["/GTqXG"]),
-                                    disabled: !y || "" === x,
-                                    value: N,
+                                    disabled: !N || "" === x,
+                                    value: C,
                                     options: [
                                         { value: "localhost", label: A.intl.string(A.t["+Y9Y6r"]), id: "localhost" },
                                         { value: "proxy", label: A.intl.string(A.t.uaksyW), id: "proxy" },
                                     ],
                                     onSelectionChange: function (e) {
-                                        C(e);
+                                        y(e);
                                     },
                                     placeholder: "URL Origin Type",
                                 }),
                             }),
-                            "localhost" !== N
+                            "localhost" !== C
                                 ? null
                                 : (0, i.jsx)("div", {
                                       className: E.I,
@@ -121,7 +121,7 @@ n.d(
                                           value: _,
                                           maxLength: 5,
                                           onChange: (e) => b(e),
-                                          disabled: p,
+                                          disabled: T,
                                       }),
                                   }),
                         ],

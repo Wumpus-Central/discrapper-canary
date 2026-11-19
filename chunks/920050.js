@@ -1,6 +1,6 @@
-(D.r(e),
-    D.d(
-        e,
+(r.r(_),
+    r.d(
+        _,
         {},
         {
             AUTOCLIPS_CARD_ID: "autoclips",
