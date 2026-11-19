@@ -5,6 +5,7 @@ e.exports = {
     SZ: "orbWalletHeader_hSuDqh",
     ZX: "orbWalletHeaderContent_hSuDqh",
     SY: "orbWalletHeaderTagInlineText_hSuDqh",
+    tt: "orbWalletHeaderTagInfoIcon_hSuDqh",
     s: "assetContainer_hSuDqh",
     Cb: "orbAsset_hSuDqh",
     w9: "cusorPointer_hSuDqh",
