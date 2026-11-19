@@ -894,7 +894,7 @@ var eM = n(46653),
     e_ = n(287809),
     eR = n(152056),
     eB = n(780964),
-    eD = n(204354),
+    eD = n(636896),
     eL = n(165862),
     eO = n(477782),
     eF = n(28863),
@@ -914,13 +914,13 @@ var eM = n(46653),
 function eJ() {
     let e = (0, eW.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "677613",
-        r = "f1c5a40ed7e5e659cd628c24cd27c23d6d2dab90".substring(0, 7),
+        n = "677625",
+        r = "407510e8478cce5d04745c8a9871e007fd3c80da".substring(0, 7),
         i = e$.A?.app.getVersion(),
         s = e$.A?.app.getBuildNumber(),
         o = e$.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eQ.A)("1795064498633", !1) : null,
+        u = null != c ? (0, eQ.A)("1795066681853", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         h = (function () {
             let e = eV()?.os?.toString();
@@ -1088,8 +1088,8 @@ function e5() {
 var e2 = n(402651),
     e3 = n(669067),
     e6 = n(830543),
-    e4 = n(953056);
-let e8 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
+    e8 = n(953056);
+let e4 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
     e7 = new Map([[eB.X.SESSIONS_PANEL, i.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e9(e) {
     let { target: t, ...n } = e,
@@ -1117,7 +1117,7 @@ function e9(e) {
               emptyState: tt,
               sidebarFooter: e5,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e3._)(e);
+                  e4.has(e) || (0, e3._)(e);
                   let t = e7.get(e);
                   (null != t &&
                       (0, c.x)({
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, l.jsx)("div", {
-            className: e4.P,
+            className: e8.P,
             children: (0, l.jsx)(s.I, { size: "md", query: e, onFocus: n, onBlur: i, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, l.jsxs)("div", {
-        className: e4.t,
+        className: e8.t,
         children: [
             (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: F.intl.string(F.t.zihbmv) }),
             (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: F.intl.string(F.t.XclvsB) }),

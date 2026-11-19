@@ -7,8 +7,9 @@ var i = n(477900),
     d = n(46653),
     c = n(843010),
     u = n(402651),
-    _ = n(355097),
-    E = n(941933);
+    _ = n(80802),
+    E = n(355097),
+    A = n(941933);
 n.d(
     t,
     {},
@@ -16,15 +17,15 @@ n.d(
         openUserSettings: async function (e) {
             let {
                     path: t,
-                    stackingBehavior: A = "replaceAll",
-                    searchParams: f,
-                    analyticsLocations: h,
+                    stackingBehavior: f = "replaceAll",
+                    searchParams: h,
+                    analyticsLocations: I,
                 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                I = arguments.length > 2 ? arguments[2] : void 0;
+                p = arguments.length > 2 ? arguments[2] : void 0;
             if (d.default.isAuthenticated()) {
                 if (
-                    (null != t && t === _.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && l.A.setState({ subsection: _.nR }),
-                    u.A.setState({ source: f?.source, analyticsLocations: h ?? [] }),
+                    (null != t && t === E.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && l.A.setState({ subsection: E.nR }),
+                    u.A.setState({ source: h?.source, analyticsLocations: I ?? [] }),
                     s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
                     (0, c.f)())
                 ) {
@@ -1627,7 +1628,7 @@ n.d(
                                 n.e(654658),
                                 n.e(968622),
                                 n.e(352435),
-                                n.e(141357),
+                                n.e(730275),
                                 n.e(233049),
                                 n.e(171804),
                                 n.e(805834),
@@ -1689,16 +1690,14 @@ n.d(
                             return (n) => (0, i.jsx)(t, { ...n, target: e });
                         },
                         {
-                            modalKey: E.y,
-                            stackingBehavior: A,
+                            modalKey: A.y,
+                            stackingBehavior: f,
                             stackNextByDefault: !0,
                             contextKey: a.SY,
-                            onCloseRequest: () => {
-                                null != o.A.closeWithValidation ? o.A.closeWithValidation() : (0, r.Oo)(E.y, a.SY);
-                            },
+                            onCloseRequest: _.g,
                         },
                     );
-                I?.();
+                p?.();
             }
         },
     },
