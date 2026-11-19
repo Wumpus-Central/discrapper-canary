@@ -43,25 +43,27 @@ e.d(
                 isPreview: e,
             });
         },
-        R_: async function (t) {
-            let n = await A(t, {}).catch(() => null);
-            if (n?.ok !== !0) return !1;
-            let e = d.A.getPublishStatus(t);
-            null != e &&
-                l.h.dispatch({
-                    type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
-                    projectId: t,
-                    publishState: "not_live",
-                    surface: e.surface,
-                    previewAppChannels: e.previewAppChannels,
-                    previewDevicePermissions: e.previewDevicePermissions,
-                });
-            let i = r.default.getCurrentUser()?.id;
-            return (null != i && (0, _.eO)(i).catch(() => {}), !0);
-        },
         YI: A,
         _b: function (t) {
             return R(t, !0, null);
+        },
+        qt: async function (t) {
+            let n = t.id,
+                e = "guild" === t.install_scope ? { alsoRemovePreviewBot: !1 } : {},
+                i = await A(n, e).catch(() => null);
+            if (i?.ok !== !0) return !1;
+            let u = d.A.getPublishStatus(n);
+            null != u &&
+                l.h.dispatch({
+                    type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
+                    projectId: n,
+                    publishState: "not_live",
+                    surface: u.surface,
+                    previewAppChannels: u.previewAppChannels,
+                    previewDevicePermissions: u.previewDevicePermissions,
+                });
+            let o = r.default.getCurrentUser()?.id;
+            return (null != o && (0, _.eO)(o).catch(() => {}), !0);
         },
         tZ: async function (t, n) {
             let { isPreview: e, install: i } = n,

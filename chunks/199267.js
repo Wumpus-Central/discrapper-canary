@@ -15,23 +15,23 @@ a.d(
     {
         A: function (e) {
             let { target: n, ...a } = e,
-                { optionalItems: m, body: h, notes: g, pending: v, error: x, submit: b } = (0, d.Ay)(n);
+                { optionalItems: m, body: h, notes: g, pending: x, error: b, submit: v } = (0, d.Ay)(n);
             return (0, t.jsx)(l.a, {
                 ...a,
                 role: "alertdialog",
-                title: (0, o.WX)((0, c.tb)(u.default.x6FvsZ, n.appName)),
+                title: (0, o.WX)((0, c.tb)(u.default.m8KWic, n.appName)),
                 subtitle: h,
-                "aria-label": p.intl.formatToPlainString(u.default.x6FvsZ, { app: n.appName }),
-                notice: null == x ? void 0 : { message: x, type: "critical", role: "alert" },
+                "aria-label": p.intl.formatToPlainString(u.default.m8KWic, { app: n.appName }),
+                notice: null == b ? void 0 : { message: b, type: "critical", role: "alert" },
                 actions: [
                     { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: a.onClose },
                     {
-                        text: p.intl.string(u.default.BGF8VT),
+                        text: p.intl.string(u.default.GqcQyH),
                         variant: "critical-primary",
-                        loading: v,
-                        disabled: v,
+                        loading: x,
+                        disabled: x,
                         onClick: async function () {
-                            let e = await b();
+                            let e = await v();
                             null != e && ((0, i.P0)({ text: e, variant: "success" }), a.onClose());
                         },
                     },

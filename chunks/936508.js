@@ -16,18 +16,18 @@ a.d(
                 [p, m] = t.useState(null),
                 [h, g] = t.useState(null),
                 {
-                    projectId: v,
-                    guildId: x,
-                    appName: b,
+                    projectId: x,
+                    guildId: b,
+                    appName: v,
                     guildName: f,
                     channelNames: j,
                     keptChannelNames: k,
                     previewApp: N,
-                    botStays: C,
-                    inOtherServers: y,
+                    botStays: y,
+                    inOtherServers: C,
                     endsCollaboration: I,
                 } = h ?? e,
-                S = !i && N?.canRemove !== !1,
+                S = i && N?.canRemove === !0,
                 A = t.useMemo(() => {
                     let e = [];
                     return (
@@ -48,7 +48,7 @@ a.d(
                             e.push({
                                 item: { key: "preview-app", kind: "app", label: N.name },
                                 checked: S,
-                                onChange: (e) => d(!e),
+                                onChange: d,
                                 disabled: !N.canRemove,
                             }),
                         e
@@ -59,8 +59,8 @@ a.d(
                     let a = !1;
                     try {
                         a = (
-                            await (0, l.YI)(v, {
-                                guildId: x,
+                            await (0, l.YI)(x, {
+                                guildId: b,
                                 deleteChannels: j.length > 0 && n,
                                 alsoRemovePreviewBot: S,
                             })
@@ -69,19 +69,19 @@ a.d(
                         a = !1;
                     }
                     return (u(!1), a)
-                        ? o.intl.formatToPlainString(s.default.SNFGxP, { app: b, server: f })
+                        ? o.intl.formatToPlainString(s.default.SNFGxP, { app: v, server: f })
                         : (m(o.intl.string(s.default.PJ2Fkn)), g(null), null);
-                }, [S, b, j.length, n, x, f, v, e]),
+                }, [S, v, j.length, n, b, f, x, e]),
                 P = t.useMemo(() => {
                     let e = (0, r.Mi)({ keptChannelNames: k });
                     return [
                         ...(I ? [o.intl.formatToPlainString(s.default["9b3KdT"], { server: f })] : []),
-                        ...(C
-                            ? [o.intl.formatToPlainString(y ? s.default.oQ3WRg : s.default["0a7JdI"], { server: f })]
+                        ...(y
+                            ? [o.intl.formatToPlainString(C ? s.default.oQ3WRg : s.default["0a7JdI"], { server: f })]
                             : []),
                         ...(null != e ? [e] : []),
                     ];
-                }, [C, I, f, y, k]);
+                }, [y, I, f, C, k]);
             return {
                 optionalItems: A,
                 body: o.intl.formatToPlainString(s.default["8OKM1N"], { server: f }),
@@ -106,6 +106,7 @@ a.d(
             };
         },
         hJ: function (e, n) {
+            let a = (0, i.Jr)(e).some((e) => e !== n.guildId);
             return {
                 projectId: e.id,
                 guildId: n.guildId,
@@ -116,8 +117,8 @@ a.d(
                 previewApp:
                     null == n.previewAppName ? null : { name: n.previewAppName, canRemove: n.canRemovePreviewBot },
                 botStays: !n.canRemoveBot,
-                inOtherServers: (0, i.Jr)(e).some((e) => e !== n.guildId),
-                endsCollaboration: n.guildId === e.guild_id && (0, i.pL)(e),
+                inOtherServers: a,
+                endsCollaboration: n.guildId === e.guild_id && a && (0, i.pL)(e),
             };
         },
     },

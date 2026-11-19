@@ -54,7 +54,7 @@ function h(e) {
         actions: [
             { text: g.intl.string(g.t["ETE/oC"]), variant: "secondary", onClick: h, disabled: k },
             {
-                text: g.intl.string(p.default.j1NMdG),
+                text: g.intl.string(p.default.ErhKil),
                 variant: "critical-primary",
                 onClick: async function () {
                     let e = await x.submit();
