@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678419, Version Hash: c195f2ad66db1d336334679383b8a5b53f8da84a`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678423, Version Hash: 6303f48bbd8b47589d3e368abea22eb759e3df6d`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678419";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678423";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -16048,7 +16048,7 @@ let pO = "isHideDevBanner",
                     className: td()(pC.Wz, pC.mr),
                     children: [
                         (0, v.jsx)(pN, { className: pC.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678419" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678423" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -44646,7 +44646,8 @@ let wO = [
                             n.e(493118),
                             n.e(319463),
                             n.e(567843),
-                            n.e(822304),
+                            n.e(857050),
+                            n.e(99965),
                             n.e(77413),
                             n.e(216465),
                             n.e(658961),
@@ -44808,9 +44809,9 @@ let wO = [
                             n.e(769237),
                             n.e(144791),
                             n.e(851515),
-                            n.e(762922),
+                            n.e(973556),
                             n.e(714078),
-                        ]).then(n.bind(n, 581745));
+                        ]).then(n.bind(n, 916575));
                         return (t) => (0, v.jsx)(e, { gameId: i, source: _s.GameProfileSources.Deeplink, ...t });
                     });
                 }),
@@ -45366,7 +45367,7 @@ let w5 = (0, tW.Fe)({
             n.e(487458),
             n.e(938177),
             n.e(93012),
-            n.e(334733),
+            n.e(99965),
             n.e(706073),
             n.e(227512),
             n.e(806152),
@@ -45867,8 +45868,8 @@ let w5 = (0, tW.Fe)({
             n.e(695765),
             n.e(596104),
             n.e(968201),
-            n.e(127962),
             n.e(84663),
+            n.e(127962),
             n.e(60955),
             n.e(3952),
             n.e(95387),
@@ -46312,6 +46313,7 @@ let w5 = (0, tW.Fe)({
             n.e(490010),
             n.e(837687),
             n.e(858337),
+            n.e(708692),
             n.e(679211),
             n.e(28561),
             n.e(90373),
@@ -46348,6 +46350,7 @@ let w5 = (0, tW.Fe)({
             n.e(617823),
             n.e(571180),
             n.e(325047),
+            n.e(387933),
             n.e(60086),
             n.e(32944),
             n.e(359258),
@@ -46389,10 +46392,10 @@ let w5 = (0, tW.Fe)({
             n.e(205941),
             n.e(229666),
             n.e(677101),
-            n.e(789573),
             n.e(165362),
             n.e(92295),
             n.e(589916),
+            n.e(789573),
             n.e(628752),
             n.e(331203),
             n.e(460773),

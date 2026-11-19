@@ -1,0 +1,23 @@
+.banner_sBvCzX.banner_sBvCzX {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    padding: var(--space-8) var(--space-12)
+}
+
+.content_sBvCzX {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    text-align: start
+}
+
+.icon_sBvCzX {
+    flex-shrink: 0
+}
+
+.banner_kRSvVH {
+    margin-block-end: var(--space-4)
+}
+
+/*# sourceMappingURL=01ae4771417f3506.css.map*/

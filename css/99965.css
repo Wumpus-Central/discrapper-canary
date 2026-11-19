@@ -1,23 +1,59 @@
-.banner_sBvCzX.banner_sBvCzX {
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    padding: var(--space-8) var(--space-12)
-}
-
-.content_sBvCzX {
-    align-items: center;
+.infoHeader_XcVISC {
     display: flex;
-    flex-direction: row;
-    gap: var(--space-4);
-    text-align: start
-}
-
-.icon_sBvCzX {
+    flex-direction: column;
     flex-shrink: 0
 }
 
-.banner_kRSvVH {
-    margin-block-end: var(--space-4)
+.heading_XcVISC {
+    margin-bottom: 4px
+}
+
+.disabledReason_XcVISC {
+    margin-top: 8px;
+    opacity: .7
+}
+
+.learnMoreLink_XcVISC {
+    margin-top: 4px
+}
+
+.sectionLabel_XcVISC {
+    flex-shrink: 0;
+    padding-bottom: 8px;
+    padding-top: 16px
+}
+
+.variantGroupLabelValue_XcVISC {
+    color: var(--text-default);
+    font-weight: 600;
+    margin-inline-start: 4px
+}
+
+.variantScrollArea_XcVISC {
+    flex-shrink: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent);
+    mask-image: linear-gradient(180deg, #000 85%, transparent);
+    max-height: 30px;
+    overflow-y: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none
+}
+
+.variantScrollArea_XcVISC::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.no-webkit-scrollbar .variantScrollArea_XcVISC {
+    scrollbar-width: none
+}
+
+.errorMessage_Lj3xcc {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: 4px;
+    display: flex;
+    padding: 8px
 }
 
 .card_-weL8h,
@@ -325,4 +361,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=0e7d1f61de3a80fd.css.map*/
+/*# sourceMappingURL=99965.e61fdbf15dffeab5.css.map*/
