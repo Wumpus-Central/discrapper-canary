@@ -1,0 +1,277 @@
+.renewalMutationNotice_RTvmVT {
+    margin-bottom: var(--space-16)
+}
+
+.dupSubscriptionRow_RTvmVT {
+    margin-bottom: var(--space-32)
+}
+
+.dupSubscriptionRow_RTvmVT:last-child {
+    margin-bottom: 0
+}
+
+.sectionDescription_RTvmVT,
+.sectionTitle_RTvmVT {
+    margin-bottom: var(--space-16)
+}
+
+.sectionDescription_RTvmVT {
+    margin-top: 0
+}
+
+.fractionalPremiumAccountCredit_ysRrD_,
+.premiumSubscriptionAccountCredit_ysRrD_ {
+    background-color: var(--background-base-lower);
+    border-radius: 5px
+}
+
+.accountCreditRow_ysRrD_ {
+    display: flex;
+    padding: 16px
+}
+
+.accountCreditsContainer_ysRrD_ .accountCreditRow_ysRrD_:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.iconBackground_ysRrD_ {
+    align-items: center;
+    align-self: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    padding: 4px
+}
+
+.iconBackgroundTier0_ysRrD_ {
+    background-image: linear-gradient(90deg, var(--premium-tier-0-purple-for-gradients), var(--premium-tier-0-blue-for-gradients))
+}
+
+.iconBackgroundTier1_ysRrD_ {
+    background-image: linear-gradient(90deg, var(--premium-tier-1-dark-blue-for-gradients), var(--premium-tier-1-blue-for-gradients))
+}
+
+.iconBackgroundTier2_ysRrD_ {
+    background-image: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
+}
+
+.iconBackgroundFractional_ysRrD_ {
+    background-image: linear-gradient(0deg, var(--guild-boosting-blue), var(--guild-boosting-purple))
+}
+
+.iconBackgroundBoost_ysRrD_ {
+    background-image: linear-gradient(0deg, var(--guild-boosting-pink), var(--guild-boosting-purple))
+}
+
+.icon_ysRrD_ {
+    color: var(--white)
+}
+
+.icon_ysRrD_,
+.iconFractional_ysRrD_ {
+    height: 24px;
+    width: 24px
+}
+
+.iconFractional_ysRrD_ {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4))
+}
+
+.rowDetails_ysRrD_ {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 8px
+}
+
+.rowApplied_ysRrD_ {
+    font-weight: var(--font-weight-normal)
+}
+
+.rowCreditCount_ysRrD_ {
+    align-self: center;
+    color: var(--interactive-text-default)
+}
+
+.fractionalTimeRemainingRow_ysRrD_ {
+    background-color: var(--background-base-lowest);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    padding: 16px
+}
+
+.fractionalTimeRemainingRowDetails_ysRrD_ {
+    color: var(--brand-360);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0
+}
+
+.fractionalTimeRemainingRowHeader_ysRrD_ {
+    color: var(--brand-360)
+}
+
+.fractionalTimeRemainingPillWrapper_ysRrD_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.fractionalTimeRemainingPill_ysRrD_ {
+    align-items: center;
+    background-image: linear-gradient(0deg, var(--brand-560), var(--brand-460));
+    border-radius: var(--radius-md);
+    display: flex
+}
+
+.fractionalTimeRemainingPillText_ysRrD_ {
+    color: var(--white);
+    display: inline-block;
+    line-height: 18px;
+    padding: 4px 8px;
+    text-align: center
+}
+
+.tier1AccountCreditHeader_ysRrD_ {
+    padding-bottom: 16px;
+    padding-top: 32px
+}
+
+.fractionalUnactivatedPill_ysRrD_ {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-md);
+    display: flex
+}
+
+.fractionalUnactivatedPillText_ysRrD_ {
+    color: var(--brand-360);
+    display: inline-block;
+    line-height: 18px;
+    padding: 4px 8px;
+    text-align: center
+}
+
+.finePrintWithOverheadSeparator_GUBo50 {
+    border-top: 1px solid var(--border-subtle);
+    line-height: 1.4;
+    margin-top: 32px;
+    padding-top: 32px
+}
+
+.finePrint_GUBo50 {
+    line-height: 1.4
+}
+
+.container_NedsCW {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.loading_NedsCW {
+    align-items: center;
+    display: flex;
+    height: 520px;
+    justify-content: center
+}
+
+.background_NedsCW {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.content_NedsCW {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative
+}
+
+.subSectionHeader_NedsCW {
+    text-transform: none
+}
+
+.accountCredit_NedsCW {
+    margin-top: 16px
+}
+
+.accountCreditTitle_NedsCW {
+    margin-bottom: 8px
+}
+
+.accountCreditDescription_NedsCW {
+    color: var(--text-default);
+    margin-bottom: 16px;
+    margin-top: 0
+}
+
+.cardText_NedsCW {
+    padding-inline-start: 8px
+}
+
+.noItemsCard_NedsCW {
+    background-color: var(--background-base-lower);
+    border: none;
+    color: var(--interactive-text-active);
+    margin-top: 16px;
+    padding: 16px 19px
+}
+
+.theme-dark .noItemsIcon_NedsCW {
+    background: #4f545c
+}
+
+.hr_NedsCW {
+    border-color: hsl(var(--primary-300-hsl)/.3);
+    border-style: solid;
+    border-width: 1px 0 0;
+    display: block;
+    height: 0;
+    width: 100%
+}
+
+.theme-dark .hr_NedsCW {
+    border-color: hsl(var(--primary-400-hsl)/.3)
+}
+
+.row_ah9SVt {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-16);
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.row_ah9SVt>:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.fields_ah9SVt {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr)
+}
+
+@media (max-width:600px) {
+    .fields_ah9SVt {
+        grid-template-columns: minmax(0, 1fr)
+    }
+
+    .row_ah9SVt {
+        align-items: flex-start;
+        flex-direction: column
+    }
+}
+
+/*# sourceMappingURL=ccd4d071e8584981.css.map*/
