@@ -291,10 +291,10 @@ let e1 = [
 ];
 e0("open-unavailable", eJ.default["58TARv"], eQ.UNAVAILABLE);
 let e2 = ["reset"];
-var e6 = n(852717),
-    e3 = n(641214);
+var e3 = n(852717),
+    e6 = n(641214);
 function e5() {
-    return (0, i.jsx)(ek.y, { type: ek.t.SPINNING_CIRCLE_SIMPLE, className: e3.u1, itemClassName: e3.$N });
+    return (0, i.jsx)(ek.y, { type: ek.t.SPINNING_CIRCLE_SIMPLE, className: e6.u1, itemClassName: e6.$N });
 }
 function e8(e) {
     let { onClose: t } = e,
@@ -312,8 +312,8 @@ function e8(e) {
         r = (0, c.bG)([ez.A], () => ez.A.isFetching);
     return (0, i.jsx)(eH, {
         icon: r ? e5 : eL.ExperimentalCheckpointIcon,
-        label: eF.intl.string(e6.default["8hclXY"]),
-        sublabel: (0, i.jsx)("span", { className: e3.$B, children: eF.intl.string(e6.default.BFc4lY) }),
+        label: eF.intl.string(e3.default["8hclXY"]),
+        sublabel: (0, i.jsx)("span", { className: e6.$B, children: eF.intl.string(e3.default.BFc4lY) }),
         onClick: async function () {
             (await (0, eK.D)("user_profile_account_popout"), t());
         },
@@ -324,7 +324,7 @@ function e8(e) {
                       return (0, i.jsx)(eV, {
                           navId: "checkpoint-qa-submenu",
                           "aria-label": eF.intl.string(eJ.default["9dS734"]),
-                          className: e3.gn,
+                          className: e6.gn,
                           onClose: n,
                           children: l.map((e) =>
                               (0, i.jsx)(
@@ -683,7 +683,7 @@ function t2() {
     }
     return null;
 }
-let t6 = {
+let t3 = {
         [t1.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
         [t1.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
         [t1.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
@@ -693,7 +693,7 @@ let t6 = {
         [t1.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
         [t1.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
-    t3 = {
+    t6 = {
         [t1.Ac.PREMIUM_TENURE_1_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm",
             light: "https://cdn.discordapp.com/assets/content/f09f5aa678c2d463109f0ca84a572646c1b6b21974865e84ac92f3c3a3f50b87.webm",
@@ -736,8 +736,8 @@ function t7() {
             let e = t2(),
                 t = (0, t$.M)((0, tX.Ay)());
             if (null == e) return null;
-            let n = t6[e],
-                i = t3[e],
+            let n = t3[e],
+                i = t6[e],
                 l = {
                     currentBadge: (0, tZ.e0)(e),
                     currentBadgeTextGradient: t ? n?.dark : n?.light,
@@ -746,7 +746,7 @@ function t7() {
                 r = t1.sp.indexOf(e);
             if (r > 0) {
                 let e = t1.sp[r - 1],
-                    n = t6[e];
+                    n = t3[e];
                 ((l.prevBadge = (0, tZ.e0)(e)), (l.prevBadgeTextGradient = t ? n?.dark : n?.light));
             }
             return l;
@@ -1028,31 +1028,31 @@ var nk = n(290863),
     n0 = n(334074),
     n1 = n(633075),
     n2 = n(667049),
-    n6 = n(46653),
-    n3 = n(90165),
+    n3 = n(46653),
+    n6 = n(90165),
     n5 = n(403362),
     n8 = n(49999),
     n7 = n(518477);
 function n9(e) {
     let { targetElementRef: t, onClose: r } = e,
         [a, s] = l.useState(!1),
-        o = (0, c.bG)([n6.default], () => n6.default.getId()),
+        o = (0, c.bG)([n3.default], () => n3.default.getId()),
         { eligibleApplications: u, markAsDismissed: m } = (function () {
             let e = (0, c.yK)([nX.A], () => nX.A.getFeaturedApplicationIds());
             ((0, nZ.A)(e),
                 l.useEffect(() => {
                     (0, n$.X)();
                 }, []));
-            let t = (0, c.bG)([n6.default], () => n6.default.getId()),
+            let t = (0, c.bG)([n3.default], () => n3.default.getId()),
                 n = (0, n2.A)(t),
                 i = l.useMemo(() => n.filter((e) => e instanceof n1.R), [n]),
                 r = (0, nJ.A)(e),
                 a = l.useMemo(() => r.filter(n5.Vq), [r]),
-                s = (0, c.cf)([n3.A], () => {
+                s = (0, c.cf)([n6.A], () => {
                     let t = {};
                     for (let n of e) {
                         let e = a.find((e) => e.id === n)?.getCanonicalGameId();
-                        null != e && (t[n] = n3.A.getLastPlayedDateTime(e));
+                        null != e && (t[n] = n6.A.getLastPlayedDateTime(e));
                     }
                     return t;
                 }),
@@ -2267,28 +2267,28 @@ var iZ = n(45780),
     i0 = n(71393),
     i1 = n(685073),
     i2 = n(73153);
-let i6 = { lastSeenInfos: {} },
-    i3 = i6;
+let i3 = { lastSeenInfos: {} },
+    i6 = i3;
 class i5 extends c.Ay.PersistedStore {
     static displayName = "GuildTagChangedCoachmarkStore";
     static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        i3 = e ?? i6;
+        i6 = e ?? i3;
     }
     getState() {
-        return i3;
+        return i6;
     }
     getGuildLastSeenInfo(e) {
-        return i3.lastSeenInfos[e] ?? null;
+        return i6.lastSeenInfos[e] ?? null;
     }
 }
 let i8 = new i5(i2.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
-        i3.lastSeenInfos[t] = n;
+        i6.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        i3 = i6;
+        i6 = i3;
     },
 });
 var i7 = n(514661);
@@ -2924,7 +2924,7 @@ function lz(e) {
         caretConfig: { align: "end" },
         graphic: {
             type: "image",
-            src: "https://cdn.discordapp.com/assets/content/df9ae78646e66db6aa0c2286477f8e97de435683b446dc437c2276e461568783.png",
+            src: "https://cdn.discordapp.com/assets/content/82fcea9d11fed28beb0f694738f4003e5539ccb647c3d0e732397f9544cf9da3.png",
         },
         title: eF.intl.string(eF.t["6CxPoB"]),
         body: [eF.intl.format(eF.t.IVzJ8G, { settingsHook: (e) => e })],
@@ -3028,7 +3028,7 @@ function l0(e) {
         }, [a]),
         g = es.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, lJ.A)("1795123726344", !0);
+        let e = (0, lJ.A)("1795123919669", !0);
         t =
             null != e
                 ? eF.intl.formatToPlainString(eF.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3077,8 +3077,8 @@ function l0(e) {
 }
 var l1 = n(358285);
 let l2 = ik.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
-    l6 = 2.5 * tf.A.Millis.SECOND,
-    l3 = 2 * tf.A.Millis.MINUTE,
+    l3 = 2.5 * tf.A.Millis.SECOND,
+    l6 = 2 * tf.A.Millis.MINUTE,
     l5 = 5 * tf.A.Millis.SECOND;
 function l8(e) {
     let {
@@ -4181,7 +4181,7 @@ class l7 extends l.PureComponent {
             { hoveringOnMute: a } = this.state,
             s =
                 void 0 === this.lastSpeakingWhileMutedNotificationTime ||
-                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l3;
+                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l6;
         i
             ? a ||
               !e ||
@@ -4192,7 +4192,7 @@ class l7 extends l.PureComponent {
               null != r ||
               this.setState({ shouldShowSpeakingWhileMutedTooltip: !0 }, () => {
                   ((this.lastSpeakingWhileMutedNotificationTime = performance.now()),
-                      this.speakingWhileMutedTooltipTimeout.start(l6, () =>
+                      this.speakingWhileMutedTooltipTimeout.start(l3, () =>
                           this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }),
                       ));
               })
@@ -4433,7 +4433,7 @@ function l4(e) {
 }
 function re() {
     let e = (0, c.bG)([eS.default], () => eS.default.getCurrentUser()),
-        t = (0, c.bG)([n6.default], () => n6.default.getId()),
+        t = (0, c.bG)([n3.default], () => n3.default.getId()),
         {
             activities: n,
             streaming: r,
