@@ -12,7 +12,7 @@ i.exports = {
     sL: "captionMuted_hNQR4j",
     kB: "captionWithIcon_hNQR4j",
     Wy: "captionIcon_hNQR4j",
-    gk: "userIconWrapper_hNQR4j",
+    uk: "captionDot_hNQR4j",
     p8: "captionLabel_hNQR4j",
     Cp: "itemDeleting_hNQR4j",
     vX: "itemWithActions_hNQR4j",

@@ -1,45 +1,43 @@
-l.d(e, { A: () => Q });
+l.d(e, { A: () => X });
 var s = l(477900),
     i = l(582128),
-    a = l(503698),
-    r = l.n(a),
-    t = l(855986),
-    d = l(646514),
-    u = l(834730),
+    t = l(503698),
+    a = l.n(t),
+    r = l(834730),
     o = l(97808),
-    c = l(778712),
-    x = l(950305),
-    m = l(140735),
-    p = l(939249),
-    h = l(289873),
-    j = l(682163),
-    g = l(381849),
-    v = l(287809),
-    f = l(427262),
-    A = l(503275),
-    N = l(233470),
-    b = l(465006),
-    y = l(845079),
-    _ = l(617617),
-    S = l(218461),
-    C = l(513425),
-    E = l(404373),
-    I = l(260498),
-    k = l(189714),
-    L = l(722701),
-    M = l(811587);
-let w = [I.Ay, C.A, S.Ay, _.A, L.A];
-var z = l(866665),
-    T = l(22231),
-    F = l(191850),
-    G = l(792996),
+    u = l(778712),
+    d = l(140735),
+    c = l(939249),
+    p = l(289873),
+    m = l(682163),
+    x = l(381849),
+    j = l(427262),
+    h = l(503275),
+    g = l(233470),
+    v = l(465006),
+    f = l(845079),
+    A = l(855986),
+    N = l(617617),
+    y = l(218461),
+    b = l(513425),
+    _ = l(404373),
+    S = l(260498),
+    C = l(189714),
+    I = l(722701),
+    E = l(811587);
+let L = [S.Ay, b.A, y.Ay, N.A, I.A];
+var k = l(866665),
+    M = l(22231),
+    w = l(646514),
+    z = l(191850),
+    T = l(792996),
     P = l(482062);
-let U = P.w5,
-    D = { in_progress: F.default["Y8pS+n"], draft: F.default.CSAaT0 };
+let G = P.w5,
+    F = { in_progress: z.default["Y8pS+n"], draft: z.default.CSAaT0 };
 function R(n) {
     let { status: e } = n;
-    return (0, s.jsx)(z.m, {
-        text: G.intl.string(D[e]),
+    return (0, s.jsx)(k.m, {
+        text: T.intl.string(F[e]),
         position: "top",
         ariaHidden: !0,
         children: (0, s.jsx)("span", {
@@ -47,151 +45,105 @@ function R(n) {
             "aria-hidden": !0,
             children:
                 "in_progress" === e
-                    ? (0, s.jsx)(h.y, { type: h.t.SPINNING_CIRCLE_SIMPLE, className: P.u1, itemClassName: P.pu })
-                    : (0, s.jsx)(T.PencilIcon, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
+                    ? (0, s.jsx)(p.y, { type: p.t.SPINNING_CIRCLE_SIMPLE, className: P.u1, itemClassName: P.pu })
+                    : (0, s.jsx)(M.PencilIcon, { size: "xxs", color: w.A.colors.ICON_SUBTLE }),
         }),
     });
 }
-var B = l(731084),
+var D = l(731084),
     H = l(104317),
-    W = l(886540),
-    Y = l(162052),
-    Z = l(790624);
-function V(n) {
+    U = l(886540),
+    B = l(162052),
+    W = l(790624);
+function Z(n) {
     let { projectId: e } = n,
-        l = (0, t.bG)(
-            [C.A],
+        l = (0, A.bG)(
+            [b.A],
             () => {
-                let n = (0, W.Ji)(C.A.getMessages(e));
+                let n = (0, U.Ji)(b.A.getMessages(e));
                 return null == n
                     ? null
                     : ((0, H.w)(n.steps) ??
-                          (0, B.Dy)({
-                              activity: C.A.getThinkingActivity(e),
-                              compacting: C.A.isCompacting(e),
-                              saving: C.A.isSaving(e),
+                          (0, D.Dy)({
+                              activity: b.A.getThinkingActivity(e),
+                              compacting: b.A.isCompacting(e),
+                              saving: b.A.isSaving(e),
                           }));
             },
             [e],
         );
-    return (0, s.jsx)(u.E, {
+    return (0, s.jsx)(r.E, {
         variant: "body-xs/normal",
         color: "none",
-        className: r()(Z.pG, Y.Hz),
+        className: a()(W.pG, B.Hz),
         "aria-hidden": !0,
-        children: l ?? G.intl.string(F.default["Y8pS+n"]),
-    });
-}
-function X(n) {
-    let { guild: e } = n;
-    return (0, s.jsxs)(s.Fragment, {
-        children: [
-            (0, s.jsx)(j.Ay, { guild: e, size: j.Ay.Sizes.SMOL, active: !0, className: Z.Wy, "aria-hidden": !0 }),
-            (0, s.jsx)("span", { className: Z.p8, children: e.name }),
-        ],
-    });
-}
-function K(n) {
-    let { project: e, time: l, showServer: i } = n,
-        a = (0, A.vm)(e.owner_user_id),
-        t = (0, f.tx)(a),
-        d = (0, b.V)(e);
-    return (0, s.jsxs)(u.E, {
-        variant: "body-xs/normal",
-        color: "none",
-        className: r()(Z.pG, Z.sL, Z.kB),
-        children: [
-            l,
-            null != a
-                ? (0, s.jsxs)(s.Fragment, {
-                      children: [
-                          null != l ? (0, s.jsx)("span", { "aria-hidden": !0, children: "\xb7" }) : null,
-                          (0, s.jsx)(o.eu, {
-                              src: a.getAvatarURL(e.guild_id, (0, c.FT)(c._3.SIZE_16)),
-                              size: c._3.SIZE_16,
-                              className: Z.Wy,
-                              "aria-hidden": !0,
-                          }),
-                          (0, s.jsx)("span", { className: Z.p8, children: t }),
-                      ],
-                  })
-                : null,
-            i && d?.kind === "guild"
-                ? (0, s.jsxs)(s.Fragment, {
-                      children: [
-                          (0, s.jsx)("span", { "aria-hidden": !0, children: "\xb7" }),
-                          (0, s.jsx)(X, { guild: d.guild }),
-                      ],
-                  })
-                : null,
-        ],
+        children: l ?? T.intl.string(z.default["Y8pS+n"]),
     });
 }
 function O(n) {
-    let { project: e, time: l, hideServer: i } = n,
-        a = (0, b.V)(e),
-        t = i && a?.kind === "guild" ? null : a,
-        o = null == t && (0, b.ns)(e);
-    return null != l || null != t || o
-        ? (0, s.jsxs)(u.E, {
-              variant: "body-xs/normal",
-              color: "none",
-              className: r()(Z.pG, Z.sL, Z.kB),
-              children: [
-                  l,
-                  null != t
-                      ? (0, s.jsxs)(s.Fragment, {
-                            children: [
-                                null != l ? (0, s.jsx)("span", { "aria-hidden": !0, children: "\xb7" }) : null,
-                                "guild" === t.kind
-                                    ? (0, s.jsx)(X, { guild: t.guild })
-                                    : (0, s.jsxs)(s.Fragment, {
-                                          children: [
-                                              (0, s.jsx)("span", {
-                                                  className: Z.gk,
-                                                  children: (0, s.jsx)(x.UserIcon, {
-                                                      size: "xxs",
-                                                      color: d.A.colors.TEXT_MUTED,
-                                                      "aria-hidden": !0,
-                                                  }),
-                                              }),
-                                              (0, s.jsx)("span", { className: Z.p8, children: t.label }),
-                                          ],
-                                      }),
-                            ],
-                        })
-                      : o
-                        ? (0, s.jsxs)(s.Fragment, {
-                              children: [
-                                  null != l ? (0, s.jsx)("span", { "aria-hidden": !0, children: "\xb7" }) : null,
-                                  (0, s.jsx)("span", { className: Z.p8, children: G.intl.string(F.default.poYQxw) }),
-                              ],
-                          })
-                        : null,
-              ],
-          })
-        : null;
+    let { guild: e } = n;
+    return (0, s.jsxs)(s.Fragment, {
+        children: [
+            (0, s.jsx)(m.Ay, { guild: e, size: m.Ay.Sizes.SMOL, active: !0, className: W.Wy, "aria-hidden": !0 }),
+            (0, s.jsx)("span", { className: W.p8, children: e.name }),
+        ],
+    });
 }
-let q = i.memo(function (n) {
+function Y(n) {
+    let { project: e, time: l, showServer: i } = n,
+        t = (0, h.vm)(e.owner_user_id),
+        d = (0, j.tx)(t),
+        c = (0, v.V)(e),
+        p = i && c?.kind === "guild" ? c.guild : null,
+        m = (0, s.jsx)("span", { className: W.uk, "aria-hidden": !0 });
+    return (0, s.jsxs)(r.E, {
+        variant: "body-xs/normal",
+        color: "none",
+        className: a()(W.pG, W.sL, W.kB),
+        children: [
+            l,
+            null != t
+                ? (0, s.jsxs)(s.Fragment, {
+                      children: [
+                          null != l ? m : null,
+                          (0, s.jsx)(o.eu, {
+                              src: t.getAvatarURL(e.guild_id, (0, u.FT)(u._3.SIZE_16)),
+                              size: u._3.SIZE_16,
+                              className: W.Wy,
+                              "aria-hidden": !0,
+                          }),
+                          (0, s.jsx)("span", { className: W.p8, children: d }),
+                      ],
+                  })
+                : null,
+            null != p
+                ? (0, s.jsxs)(s.Fragment, {
+                      children: [null != l || null != t ? m : null, (0, s.jsx)(O, { guild: p })],
+                  })
+                : null,
+        ],
+    });
+}
+let K = i.memo(function (n) {
     let e,
         l,
         {
             project: i,
-            onSelect: a,
-            selected: d = !1,
-            renderActions: o,
-            onContextMenu: c,
-            showServer: x = !1,
-            hideServer: j = !1,
+            onSelect: t,
+            selected: o = !1,
+            renderActions: u,
+            onContextMenu: m,
+            showServer: j = !1,
+            hideOwner: h = !1,
         } = n,
         {
-            status: f,
-            unread: A,
-            deleting: b,
+            status: v,
+            unread: y,
+            deleting: k,
         } = ((e = i.id),
         (l = (i.supported_surfaces?.length ?? 0) > 0),
-        (0, t.cf)(
-            w,
+        (0, A.cf)(
+            L,
             () => ({
                 status: (function (n) {
                     let { thinking: e, publishState: l, everPublished: s } = n;
@@ -199,134 +151,139 @@ let q = i.memo(function (n) {
                         ? "in_progress"
                         : null != l && ("nothing_built" === l || "not_live" === l || "live_outdated" === l)
                           ? "draft"
-                          : (null != l && (0, M.lE)(l)) || s
+                          : (null != l && (0, E.lE)(l)) || s
                             ? "published"
                             : "draft";
                 })({
-                    thinking: C.A.isThinking(e),
-                    publishState: L.A.getPublishStatus(e)?.publishState ?? null,
+                    thinking: b.A.isThinking(e),
+                    publishState: I.A.getPublishStatus(e)?.publishState ?? null,
                     everPublished: l,
                 }),
-                unread: (0, E.tz)(e) && !(0, k.j)(_.A.settings, e),
-                deleting: I.Ay.isProjectDeleting(e),
+                unread: (0, _.tz)(e) && !(0, C.j)(N.A.settings, e),
+                deleting: S.Ay.isProjectDeleting(e),
             }),
             [e, l],
         )),
-        S = !b && "in_progress" === f,
-        z = !b && A,
-        T = b || "published" === f ? null : f,
-        P = [null != T ? G.intl.string(D[T]) : null, z ? G.intl.string(F.default["N+3Pzk"]) : null]
+        M = !k && "in_progress" === v,
+        w = !k && y,
+        P = k || "published" === v ? null : v,
+        D = [null != P ? T.intl.string(F[P]) : null, w ? T.intl.string(z.default["N+3Pzk"]) : null]
             .filter(Boolean)
             .join(", "),
-        B = (function (n) {
+        H = (function (n) {
             if (null == n.updated_at) return null;
             let e = Date.parse(n.updated_at);
             return Number.isNaN(e) ? null : e;
         })(i),
-        H = (0, t.bG)([v.default], () => v.default.getCurrentUser()?.id),
-        W = i.owner_user_id === H,
-        X = null != B ? (0, g.Ay)({ since: B, getFormatter: g.i, includeWeeks: !0 }) : null,
-        q = (0, s.jsxs)(s.Fragment, {
+        U = null != H ? (0, x.Ay)({ since: H, getFormatter: x.i, includeWeeks: !0 }) : null,
+        O = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)("span", {
-                    className: Z.Kk,
+                    className: W.Kk,
                     children: [
-                        (0, s.jsx)(y.A, { project: i, size: "sidebar", className: null != T ? U : void 0 }),
-                        null != T ? (0, s.jsx)(R, { status: T }) : null,
+                        (0, s.jsx)(f.A, { project: i, size: "sidebar", className: null != P ? G : void 0 }),
+                        null != P ? (0, s.jsx)(R, { status: P }) : null,
                     ],
                 }),
                 (0, s.jsxs)("span", {
-                    className: Z.rf,
+                    className: W.rf,
                     children: [
-                        (0, s.jsx)(u.E, {
+                        (0, s.jsx)(r.E, {
                             variant: "body-md/medium",
                             color: "none",
-                            className: r()(Z.UU, { [Y.Hz]: S }),
+                            className: a()(W.UU, { [B.Hz]: M }),
                             children: i.name,
                         }),
-                        b
-                            ? (0, s.jsx)(u.E, {
+                        k
+                            ? (0, s.jsx)(r.E, {
                                   variant: "body-xs/normal",
                                   color: "none",
-                                  className: r()(Z.pG, Z.sL),
-                                  children: G.intl.string(F.default.Yh5pAc),
+                                  className: a()(W.pG, W.sL),
+                                  children: T.intl.string(z.default.Yh5pAc),
                               })
-                            : S
-                              ? (0, s.jsx)(V, { projectId: i.id })
-                              : W
-                                ? (0, s.jsx)(O, { project: i, time: X, hideServer: j })
-                                : (0, s.jsx)(K, { project: i, time: X, showServer: x }),
+                            : M
+                              ? (0, s.jsx)(Z, { projectId: i.id })
+                              : h
+                                ? null != U
+                                    ? (0, s.jsx)(r.E, {
+                                          variant: "body-xs/normal",
+                                          color: "none",
+                                          className: a()(W.pG, W.sL),
+                                          children: U,
+                                      })
+                                    : null
+                                : (0, s.jsx)(Y, { project: i, time: U, showServer: j }),
                     ],
                 }),
-                "" !== P ? (0, s.jsx)(m.A, { children: P }) : null,
+                "" !== D ? (0, s.jsx)(d.A, { children: D }) : null,
             ],
         });
-    return null == a
+    return null == t
         ? (0, s.jsxs)("li", {
-              className: r()(Z.AS, { [Z.Cp]: b }),
-              "aria-busy": b,
+              className: a()(W.AS, { [W.Cp]: k }),
+              "aria-busy": k,
               children: [
-                  z ? (0, s.jsx)("span", { className: Z.dM, "aria-hidden": !0 }) : null,
+                  w ? (0, s.jsx)("span", { className: W.dM, "aria-hidden": !0 }) : null,
                   (0, s.jsxs)("div", {
-                      className: r()(Z.nM, Z.bl, { [Z.gy]: z }),
-                      onContextMenu: null == c || b ? void 0 : (n) => c(n, i),
-                      children: [q, null == o || b ? null : (0, s.jsx)("div", { className: Z.a7, children: o(i) })],
+                      className: a()(W.nM, W.bl, { [W.gy]: w }),
+                      onContextMenu: null == m || k ? void 0 : (n) => m(n, i),
+                      children: [O, null == u || k ? null : (0, s.jsx)("div", { className: W.a7, children: u(i) })],
                   }),
               ],
           })
         : (0, s.jsxs)("li", {
-              className: r()(Z.AS, { [Z.Cp]: b, [Z.vX]: null != o }),
-              "aria-busy": b,
+              className: a()(W.AS, { [W.Cp]: k, [W.vX]: null != u }),
+              "aria-busy": k,
               children: [
-                  z ? (0, s.jsx)("span", { className: Z.dM, "aria-hidden": !0 }) : null,
-                  (0, s.jsx)(p.D, {
-                      className: r()(Z.nM, { [Z.wH]: d, [Z.gy]: z }),
-                      "aria-current": d ? "page" : void 0,
-                      tabIndex: b ? -1 : void 0,
-                      onMouseDown: b
+                  w ? (0, s.jsx)("span", { className: W.dM, "aria-hidden": !0 }) : null,
+                  (0, s.jsx)(c.D, {
+                      className: a()(W.nM, { [W.wH]: o, [W.gy]: w }),
+                      "aria-current": o ? "page" : void 0,
+                      tabIndex: k ? -1 : void 0,
+                      onMouseDown: k
                           ? void 0
                           : (n) => {
-                                0 === n.button && (0, N.tf)(i.id);
+                                0 === n.button && (0, g.tf)(i.id);
                             },
-                      onClick: b ? void 0 : () => a(i),
-                      onContextMenu: null == c || b ? void 0 : (n) => c(n, i),
-                      children: q,
+                      onClick: k ? void 0 : () => t(i),
+                      onContextMenu: null == m || k ? void 0 : (n) => m(n, i),
+                      children: O,
                   }),
-                  null != o
+                  null != u
                       ? (0, s.jsx)("div", {
-                            className: r()(Z.XI, { [Z.Rn]: b }),
-                            children: b ? (0, s.jsx)(h.y, { type: h.t.SPINNING_CIRCLE_SIMPLE }) : o(i),
+                            className: a()(W.XI, { [W.Rn]: k }),
+                            children: k ? (0, s.jsx)(p.y, { type: p.t.SPINNING_CIRCLE_SIMPLE }) : u(i),
                         })
                       : null,
               ],
           });
 });
-var J = l(831727);
-function Q(n) {
+var V = l(831727);
+function X(n) {
     let {
         projects: e,
         onSelect: l,
         selectedProjectId: i = null,
-        renderProjectActions: a,
-        onProjectContextMenu: r,
-        listRef: t,
-        showServer: d = !1,
-        hideServer: u = !1,
+        renderProjectActions: t,
+        onProjectContextMenu: a,
+        listRef: r,
+        showServer: o = !1,
+        hideOwner: u = !1,
     } = n;
     return (0, s.jsx)("ul", {
-        ref: t,
-        className: J.p,
+        ref: r,
+        className: V.p,
         children: e.map((n) =>
             (0, s.jsx)(
-                q,
+                K,
                 {
                     project: n,
                     onSelect: l,
                     selected: n.id === i,
-                    renderActions: a,
-                    onContextMenu: r,
-                    showServer: d,
-                    hideServer: u,
+                    renderActions: t,
+                    onContextMenu: a,
+                    showServer: o,
+                    hideOwner: u,
                 },
                 n.id,
             ),

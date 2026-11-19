@@ -16,6 +16,8 @@ _.exports = {
     x_: "groupHeader__xoAVS",
     SZ: "groupTitle__xoAVS",
     ab: "groupTitleLink__xoAVS",
+    cH: "groupToggle__xoAVS",
+    j7: "groupToggleIcon__xoAVS " + e(391507).hs,
     $t: "groupIcon__xoAVS",
     hv: "groupName__xoAVS",
     XJ: "groupActivity__xoAVS",

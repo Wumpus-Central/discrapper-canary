@@ -36,7 +36,7 @@ t.d(
                         }
                         case d.o9.PERK: {
                             let { default: s } = await Promise.all([
-                                t.e(861494),
+                                t.e(677186),
                                 t.e(269714),
                                 t.e(19385),
                                 t.e(403655),

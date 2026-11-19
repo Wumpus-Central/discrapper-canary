@@ -21,8 +21,5 @@ n.d(
             return i(e)?.label ?? null;
         },
         V: i,
-        ns: function (e) {
-            return "guild" === e.install_scope && null == e.guild_id;
-        },
     },
 );
