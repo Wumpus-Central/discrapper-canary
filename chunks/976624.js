@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678337, Version Hash: 5b82e60ceb8eb7aa4b884960b2c20115607bf99d`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678345, Version Hash: 30e43b62de7e37c65758c885cd0c5478e8c1ab2e`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678337";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678345";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -6444,7 +6444,7 @@ function dg(e) {
     );
 }
 var dT = n(215978),
-    dS = n(153229),
+    dS = n(797553),
     dN = n(14594);
 function dC() {
     let [e, t] = (0, rc.Wl)(rF.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: dN.aH });
@@ -14006,7 +14006,7 @@ var fX = n(945276),
     f6 = n(47671),
     f5 = n(859034),
     f7 = n(855531),
-    f8 = n(773527),
+    f8 = n(189916),
     f4 = n(858412);
 let f9 = rF.M.HEXAGON_CAMPAIGN_PERKS_EXPIRING_PROMO_SHEET,
     he = iu.A.Millis.MINUTE;
@@ -16040,7 +16040,7 @@ let pN = "isHideDevBanner",
                     className: td()(pS.Wz, pS.mr),
                     children: [
                         (0, v.jsx)(pT, { className: pS.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678337" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678345" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
