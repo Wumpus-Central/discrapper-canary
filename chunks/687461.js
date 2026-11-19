@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(821609),
     d = n(775602),
     m = n(857512),
-    h = n(135996),
-    g = n(987421),
+    g = n(135996),
+    h = n(987421),
     E = n(198329),
     p = n(792996),
     f = n(102087);
@@ -38,9 +38,9 @@ let v = (e) => {
             a = r.useMemo(() => ({ tilePosition: n }), [n]);
         return null == t
             ? null
-            : (0, l.jsx)(m.R9, { newValue: a, children: (0, l.jsx)(g.A, { skuId: t, listItemProps: s }) });
+            : (0, l.jsx)(m.R9, { newValue: a, children: (0, l.jsx)(h.A, { skuId: t, listItemProps: s }) });
     },
-    y = (e) => {
+    b = (e) => {
         let {
             day: t,
             lockedAssetUrl: n,
@@ -57,9 +57,22 @@ let v = (e) => {
                 (0, l.jsxs)("div", {
                     className: f.vj,
                     children: [
-                        null != n && (0, l.jsx)("img", { className: a()(f.LY, f.nu), src: n, alt: "", onError: s }),
+                        null != n &&
+                            (0, l.jsx)("img", {
+                                className: a()(f.LY, f.nu),
+                                src: n,
+                                alt: "",
+                                draggable: !1,
+                                onError: s,
+                            }),
                         null != r &&
-                            (0, l.jsx)("img", { className: a()(f.LY, f.nu, f.qC), src: r, alt: "", onError: i }),
+                            (0, l.jsx)("img", {
+                                className: a()(f.LY, f.nu, f.qC),
+                                src: r,
+                                alt: "",
+                                draggable: !1,
+                                onError: i,
+                            }),
                         !d && (0, l.jsx)(v, { day: t }),
                     ],
                 }),
@@ -80,7 +93,7 @@ let v = (e) => {
             ],
         });
     },
-    L = (e) => {
+    y = (e) => {
         let {
                 day: t,
                 revealDate: n,
@@ -101,8 +114,9 @@ let v = (e) => {
                     ? p.intl.formatToPlainString(p.t.jz3aVY, { day: t, date: d })
                     : p.intl.formatToPlainString(p.t.EeYnVZ, { day: t }),
             children: [
-                null != r && (0, l.jsx)("img", { className: f.LY, src: r, alt: "", onError: i }),
-                null != s && (0, l.jsx)("img", { className: a()(f.LY, f.qC), src: s, alt: "", onError: o }),
+                null != r && (0, l.jsx)("img", { className: f.LY, src: r, alt: "", draggable: !1, onError: i }),
+                null != s &&
+                    (0, l.jsx)("img", { className: a()(f.LY, f.qC), src: s, alt: "", draggable: !1, onError: o }),
                 (0, l.jsx)(v, { day: t }),
                 null != d &&
                     (0, l.jsx)("span", {
@@ -119,7 +133,7 @@ let v = (e) => {
             ],
         });
     },
-    b = (e) => {
+    L = (e) => {
         let {
                 day: t,
                 lockedAssetUrl: n,
@@ -130,49 +144,58 @@ let v = (e) => {
                 isNumberAboveButton: c,
                 onLockedAssetError: d,
                 onHintAssetError: m,
-                onReveal: h,
-                onComplete: g,
+                onReveal: g,
+                onComplete: h,
             } = e,
             E = r.useRef(null),
             p = r.useRef(null),
             A = r.useCallback(() => {
-                null == p.current && (p.current = setTimeout(g, 4250));
-            }, [g]);
+                null == p.current && (p.current = setTimeout(h, 4250));
+            }, [h]);
         r.useEffect(() => {
             let e = E.current;
             null != e && e.complete && e.naturalWidth > 0 && A();
-            let t = setTimeout(g, 9250);
+            let t = setTimeout(h, 9250);
             return () => {
                 (clearTimeout(t), null != p.current && (clearTimeout(p.current), (p.current = null)));
             };
-        }, [A, g]);
+        }, [A, h]);
         let v = r.useCallback(
             (e) => {
-                null == o && e.target === e.currentTarget && g();
+                null == o && e.target === e.currentTarget && h();
             },
-            [o, g],
+            [o, h],
         );
         return (0, l.jsxs)("div", {
             className: f.qx,
             "aria-hidden": "true",
             inert: !0,
             children: [
-                null != i && (0, l.jsx)("img", { className: a()(f.LY, f.QH), src: i, alt: "" }),
+                null != i && (0, l.jsx)("img", { className: a()(f.LY, f.QH), src: i, alt: "", draggable: !1 }),
                 (0, l.jsx)("div", {
                     className: a()(f.Dx, x[u]),
                     onAnimationEnd: v,
-                    children: (0, l.jsx)(y, {
+                    children: (0, l.jsx)(b, {
                         day: t,
                         lockedAssetUrl: n,
                         hintAssetUrl: s,
                         onLockedAssetError: d,
                         onHintAssetError: m,
-                        onReveal: h,
+                        onReveal: g,
                         isNumberAboveButton: c,
                         hasIdleAnimation: null != i,
                     }),
                 }),
-                null != o && (0, l.jsx)("img", { ref: E, className: f.LY, src: o, alt: "", onLoad: A, onError: g }),
+                null != o &&
+                    (0, l.jsx)("img", {
+                        ref: E,
+                        className: f.LY,
+                        src: o,
+                        alt: "",
+                        draggable: !1,
+                        onLoad: A,
+                        onError: h,
+                    }),
             ],
         });
     };
@@ -188,7 +211,7 @@ n.d(
                     cardShape: u,
                     isHintCentered: c = !1,
                     skuId: m,
-                    lockedAssetUrl: g,
+                    lockedAssetUrl: h,
                     hintAssetUrl: p,
                     idleAnimationUrl: x,
                     revealAnimationUrl: v,
@@ -202,7 +225,7 @@ n.d(
                     onReveal: T,
                 } = e,
                 R = r.useMemo(() => ({ ...k, "--custom-calendar-tile-aspect-ratio": I }), [k, I]),
-                [D, P] = A(g),
+                [D, P] = A(h),
                 [M, B] = A(p),
                 w = (0, o.bG)([d.Ay], () => d.Ay.useReducedMotion),
                 [H, U] = A(x),
@@ -229,7 +252,7 @@ n.d(
                     t = (0, l.jsx)(C, { skuId: m, tilePosition: _, listItemProps: O });
                     break;
                 case E.k$.OPENABLE:
-                    t = (0, l.jsx)(y, {
+                    t = (0, l.jsx)(b, {
                         day: n,
                         lockedAssetUrl: D,
                         hintAssetUrl: M,
@@ -243,7 +266,7 @@ n.d(
                     break;
                 case E.k$.HINT:
                 case E.k$.LOCKED:
-                    t = (0, l.jsx)(L, {
+                    t = (0, l.jsx)(y, {
                         day: n,
                         revealDate: S,
                         lockedAssetUrl: D,
@@ -269,13 +292,19 @@ n.d(
                         q &&
                             null != H &&
                             (w
-                                ? (0, l.jsx)(h.A, { src: H, className: a()(f.LY, f.Jn), onError: U })
-                                : (0, l.jsx)("img", { className: a()(f.LY, f.Jn), src: H, alt: "", onError: U })),
+                                ? (0, l.jsx)(g.A, { src: H, className: a()(f.LY, f.Jn), onError: U })
+                                : (0, l.jsx)("img", {
+                                      className: a()(f.LY, f.Jn),
+                                      src: H,
+                                      alt: "",
+                                      draggable: !1,
+                                      onError: U,
+                                  })),
                         t,
                         Y &&
                             G &&
                             !w &&
-                            (0, l.jsx)(b, {
+                            (0, l.jsx)(L, {
                                 day: n,
                                 lockedAssetUrl: D,
                                 hintAssetUrl: M,

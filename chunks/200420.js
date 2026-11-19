@@ -9,8 +9,8 @@ var l = n(477900),
     c = n(534514),
     d = n(834730),
     m = n(793574),
-    h = n(688810),
-    g = n(604913),
+    g = n(688810),
+    h = n(604913),
     E = n(287809),
     p = n(129230),
     f = n(857512),
@@ -18,9 +18,9 @@ var l = n(477900),
     A = n(212407),
     v = n(815280),
     C = n(665414),
-    y = n(821609),
-    L = n(313217),
-    b = n(172218),
+    b = n(821609),
+    y = n(313217),
+    L = n(172218),
     _ = n(140735),
     S = n(598047),
     I = n(396583),
@@ -36,20 +36,20 @@ let O = r.memo((e) => {
             c = r.useCallback((e) => {
                 i(e);
             }, []),
-            m = (0, b.K)(c, 0),
-            h = (0, j.Ty)(t),
-            g = (0, j.lF)(h);
+            m = (0, L.K)(c, 0),
+            g = (0, j.Ty)(t),
+            h = (0, j.lF)(g);
         return (
-            (0, I.A)(o, g || !(s && a) ? null : 1e3),
+            (0, I.A)(o, h || !(s && a) ? null : 1e3),
             r.useEffect(() => {
-                g && !u.current && ((u.current = !0), n());
-            }, [g, n]),
+                h && !u.current && ((u.current = !0), n());
+            }, [h, n]),
             (0, l.jsxs)("div", {
                 ref: m,
                 className: N.qW,
                 role: "timer",
                 children: [
-                    (0, j.z0)(h).map((e, t) =>
+                    (0, j.z0)(g).map((e, t) =>
                         (0, l.jsxs)(
                             r.Fragment,
                             {
@@ -79,7 +79,7 @@ let O = r.memo((e) => {
                             t,
                         ),
                     ),
-                    (0, l.jsx)(_.A, { children: k.intl.format(k.t.j6IyVe, h) }),
+                    (0, l.jsx)(_.A, { children: k.intl.format(k.t.j6IyVe, g) }),
                 ],
             })
         );
@@ -94,7 +94,7 @@ let O = r.memo((e) => {
             } = e,
             { text: u, ctaText: c } = (function (e, t, n) {
                 switch (e.type) {
-                    case g.hE.COLLECTION_SALE:
+                    case h.hE.COLLECTION_SALE:
                         return {
                             text: k.intl.format(n ? k.t["97Qza2"] : k.t.ibsiKg, {
                                 percent: e.percentOff,
@@ -102,12 +102,12 @@ let O = r.memo((e) => {
                             }),
                             ctaText: k.intl.string(k.t["5GoOlx"]),
                         };
-                    case g.hE.COLLECTION_SEQUENCED_OFFER:
+                    case h.hE.COLLECTION_SEQUENCED_OFFER:
                         return { text: k.intl.string(k.t["4AE45b"]), ctaText: k.intl.string(k.t.vEZeL1) };
                     default:
                         return { text: null, ctaText: k.intl.string(k.t["5GoOlx"]) };
                 }
-            })(n, t, (0, L.s)("collection_promotion_countdown_banner"));
+            })(n, t, (0, y.s)("collection_promotion_countdown_banner"));
         return (0, l.jsxs)("div", {
             className: a()(
                 N.kL,
@@ -134,7 +134,7 @@ let O = r.memo((e) => {
                     !r &&
                     (0, l.jsx)("div", {
                         className: N.lO,
-                        children: (0, l.jsx)(y.$, { variant: "overlay-primary", fullWidth: !0, onClick: s, text: c }),
+                        children: (0, l.jsx)(b.$, { variant: "overlay-primary", fullWidth: !0, onClick: s, text: c }),
                     }),
             ],
         });
@@ -149,13 +149,13 @@ let B = (e) => {
             collectionPromotion: n,
             handleTransition: s,
             tab: C,
-            onPromotionEnd: y,
-            hideCards: L = !1,
-            forceHideCountdownCta: b = !1,
+            onPromotionEnd: b,
+            hideCards: y = !1,
+            forceHideCountdownCta: L = !1,
         } = e,
         _ = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
         S = (0, f.uM)(),
-        { analyticsLocations: I } = (0, h.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
+        { analyticsLocations: I } = (0, g.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
         {
             bannerDisplayConfig: j,
             logoDisplayConfig: N,
@@ -167,9 +167,9 @@ let B = (e) => {
         U = j?.backgroundStyle,
         { sourceButton: G, ctaName: F } = (function (e) {
             switch (e.type) {
-                case g.hE.COLLECTION_SALE:
+                case h.hE.COLLECTION_SALE:
                     return { sourceButton: "shop collection sale hero", ctaName: "shop collection sale hero button" };
-                case g.hE.COLLECTION_SEQUENCED_OFFER:
+                case h.hE.COLLECTION_SEQUENCED_OFFER:
                     return {
                         sourceButton: "shop collection sequenced offer hero",
                         ctaName: "shop collection sequenced offer hero button",
@@ -194,11 +194,11 @@ let B = (e) => {
         K = (0, l.jsx)(T, {
             collectionName: t.name,
             collectionPromotion: n,
-            forceHideCountdownCta: b,
+            forceHideCountdownCta: L,
             onShopSale: $,
-            onCountdownEnd: y,
+            onCountdownEnd: b,
         });
-    return (0, l.jsx)(h.f5, {
+    return (0, l.jsx)(g.f5, {
         value: I,
         children: (0, l.jsxs)("div", {
             className: M.os,
@@ -231,6 +231,7 @@ let B = (e) => {
                                                 null != O &&
                                                     (0, l.jsx)("img", {
                                                         className: M.rm,
+                                                        draggable: !1,
                                                         src: O,
                                                         alt: t.name,
                                                         style: N?.toDesktopStyles(),
@@ -257,7 +258,7 @@ let B = (e) => {
                                 !V && (0, l.jsx)("div", { className: M.pv, children: K }),
                             ],
                         }),
-                        !L &&
+                        !y &&
                             (0, l.jsx)(R.A, {
                                 heroBlockRecord: t,
                                 tab: C,

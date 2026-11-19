@@ -9,8 +9,8 @@ var l = n(477900),
     c = n(855986),
     d = n(805251),
     m = n(534514),
-    h = n(331322),
-    g = n(834730),
+    g = n(331322),
+    h = n(834730),
     E = n(821609),
     p = n(793574),
     f = n(688810),
@@ -18,9 +18,9 @@ var l = n(477900),
     A = n(604913),
     v = n(773669),
     C = n(318346),
-    y = n(287809),
-    L = n(129230),
-    b = n(857512),
+    b = n(287809),
+    y = n(129230),
+    L = n(857512),
     _ = n(993408);
 let S = (0, n(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
@@ -98,9 +98,9 @@ let Y = (e) => {
             ),
             Q = r.useRef(null),
             Z = (0, D.yB)("HeroBlock"),
-            J = (0, c.bG)([y.default], () => y.default.getCurrentUser()),
+            J = (0, c.bG)([b.default], () => b.default.getCurrentUser()),
             ee = (0, c.bG)([v.default], () => v.default.locale),
-            et = (0, b.uM)(),
+            et = (0, L.uM)(),
             { analyticsLocations: en } = (0, f.Ay)(p.A.COLLECTIBLES_SHOP_HERO),
             el = (0, I.ST)(),
             er = r.useMemo(
@@ -137,8 +137,8 @@ let Y = (e) => {
             ),
             {
                 bannerDisplayConfig: em,
-                logoDisplayConfig: eh,
-                heroLogo: eg,
+                logoDisplayConfig: eg,
+                heroLogo: eh,
                 heroBannerStatic: eE,
                 heroBannerAnimated: ep,
                 heroBannerRive: ef,
@@ -147,9 +147,9 @@ let Y = (e) => {
             eA = em?.backgroundStyle,
             ev = null != ef && !eu,
             eC = B === F.G2.ORBS,
-            ey = null != s && s.isOrbsExclusive,
-            eL = B === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
-            eb = eC ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
+            eb = null != s && s.isOrbsExclusive,
+            ey = B === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
+            eL = eC ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
         function e_() {
             eC
                 ? ((0, C.Y)({
@@ -162,9 +162,9 @@ let Y = (e) => {
                       sourceButton: "shop latest category hero",
                       categorySkuId: ed.categorySkuId,
                       isInternalShopDeeplink: !0,
-                      isOrbsExclusive: ey,
+                      isOrbsExclusive: eb,
                   }),
-                  L.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  y.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: et?.sessionId,
                       sku_id: ed.categorySkuId,
                       page_type: B,
@@ -175,7 +175,7 @@ let Y = (e) => {
         }
         if (null == J || (!t && ed === W)) return null;
         function eS() {
-            return t || U ? null : (0, l.jsx)(E.$, { variant: "overlay-primary", onClick: e_, text: eb });
+            return t || U ? null : (0, l.jsx)(E.$, { variant: "overlay-primary", onClick: e_, text: eL });
         }
         return (0, l.jsx)(f.f5, {
             value: en,
@@ -236,12 +236,13 @@ let Y = (e) => {
                                                                                 className: K._I,
                                                                                 children: H,
                                                                             }),
-                                                                        null != eg &&
+                                                                        null != eh &&
                                                                             (0, l.jsx)("img", {
                                                                                 className: K.rm,
-                                                                                src: eg,
+                                                                                draggable: !1,
+                                                                                src: eh,
                                                                                 alt: ed.name,
-                                                                                style: eh?.toDesktopStyles(),
+                                                                                style: eg?.toDesktopStyles(),
                                                                             }),
                                                                         null != ed.title &&
                                                                             (0, l.jsx)(m.D, {
@@ -252,12 +253,12 @@ let Y = (e) => {
                                                                             }),
                                                                         null != ed.summary &&
                                                                             "" !== ed.summary &&
-                                                                            (0, l.jsx)(h.B, {
+                                                                            (0, l.jsx)(g.B, {
                                                                                 onClick:
                                                                                     null != el && eu
-                                                                                        ? (e) => (0, k.h)(e, el, eL)
+                                                                                        ? (e) => (0, k.h)(e, el, ey)
                                                                                         : void 0,
-                                                                                children: (0, l.jsx)(g.E, {
+                                                                                children: (0, l.jsx)(h.E, {
                                                                                     variant: eu
                                                                                         ? "body-sm/normal"
                                                                                         : "body-md/normal",
@@ -281,7 +282,7 @@ let Y = (e) => {
                                                                         children: (0, l.jsx)(O.A, {
                                                                             collectionId: ed.categorySkuId,
                                                                             variant: "full",
-                                                                            surface: eL,
+                                                                            surface: ey,
                                                                         }),
                                                                     }),
                                                             ],
@@ -307,7 +308,7 @@ let Y = (e) => {
                         B === F.G2.HOME &&
                         (0, l.jsx)("div", {
                             className: a()(K.xX, K.uC),
-                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: eL }),
+                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: ey }),
                         }),
                 ],
             }),

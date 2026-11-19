@@ -19,6 +19,14 @@
     }
 }
 
+.assetTile_IxwVgM,
+.openableTile_IxwVgM,
+.revealAnimation_IxwVgM {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
 .assetTile_IxwVgM {
     border-radius: inherit;
     container-type: inline-size;
@@ -246,4 +254,4 @@
     }
 }
 
-/*# sourceMappingURL=040e08d5eac18f2a.css.map*/
+/*# sourceMappingURL=a541b6c944d860e0.css.map*/
