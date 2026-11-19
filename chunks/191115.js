@@ -133,6 +133,7 @@ class h extends a.A {
                           id: t.id,
                           status: t.status,
                           recipientUserId: t.recipient_user_id,
+                          acceptanceExpiresAt: new Date(t.acceptance_expires_at),
                           initialGiftCode: t.initial_gift_code,
                           initialEntitlementId: t.initial_entitlement_id,
                       },
