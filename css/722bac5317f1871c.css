@@ -291,4 +291,27 @@
     justify-content: space-between
 }
 
-/*# sourceMappingURL=598276aa57982bc7.css.map*/
+.leadingIconRow_QdesSd {
+    align-items: center;
+    display: flex;
+    gap: var(--space-xs)
+}
+
+.leadingIcon_QdesSd {
+    flex-shrink: 0
+}
+
+.leadingIconBody_QdesSd {
+    flex: 1;
+    min-width: 0
+}
+
+.leadingIconLabel_QdesSd {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+/*# sourceMappingURL=722bac5317f1871c.css.map*/

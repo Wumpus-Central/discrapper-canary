@@ -50,6 +50,8 @@
 }
 
 .role_qs3nO2 {
+    align-items: center;
+    display: flex;
     height: 32px;
     margin-bottom: 0 !important;
     margin-top: 0
@@ -62,7 +64,9 @@
 
 .roleContent_qs3nO2 {
     align-items: center;
-    display: flex
+    display: flex;
+    flex: 1;
+    min-width: 0
 }
 
 .roleInner_qs3nO2 {
@@ -677,4 +681,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=27219716b85a8c9b.css.map*/
+/*# sourceMappingURL=35048518826f1037.css.map*/

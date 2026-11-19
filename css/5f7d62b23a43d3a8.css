@@ -288,7 +288,7 @@
 .channelIcon_EMttMj {
     align-self: center;
     flex-shrink: 0;
-    margin-inline-end: 2px
+    margin-inline-end: var(--space-4)
 }
 
-/*# sourceMappingURL=9324e09180b3bb1c.css.map*/
+/*# sourceMappingURL=5f7d62b23a43d3a8.css.map*/
