@@ -6,14 +6,14 @@
     border: var(--custom-countdown-banner-border);
     border-radius: var(--radius-lg);
     box-shadow: var(--custom-countdown-banner-shadow);
+    box-sizing: border-box;
     color: var(--custom-countdown-copy-color);
     display: flex;
     flex-direction: column;
     gap: var(--space-10);
     padding: var(--space-16);
     position: relative;
-    width: -moz-fit-content;
-    width: fit-content
+    width: 292px
 }
 
 .light_arblTP {
@@ -161,4 +161,4 @@
     box-shadow: var(--shadow-button-overlay)
 }
 
-/*# sourceMappingURL=ad2b91f1dd1589db.css.map*/
+/*# sourceMappingURL=ad34b6e02db18a5c.css.map*/
