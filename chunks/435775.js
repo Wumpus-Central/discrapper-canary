@@ -1,187 +1,216 @@
-t.d(a, { SS: () => ee, cP: () => Z });
-var s = t(477900),
-    l = t(582128),
-    n = t(503698),
-    r = t.n(n),
-    c = t(82495),
-    o = t(793574),
-    i = t(892227),
-    d = t(492462),
-    u = t(855986),
-    _ = t(195118),
-    m = t(916845),
-    A = t(834730),
-    E = t(43990),
-    R = t(821609),
-    f = t(303136),
-    h = t(622886),
-    p = t(976860),
-    x = t(309954),
-    N = t(287809),
-    C = t(975571),
-    v = t(474090),
-    j = t(920050),
-    k = t(646514),
-    b = t(403581),
-    g = t(318254),
-    O = t(914410),
-    L = t(921894),
-    T = t(903080);
-let w = {
-        churning: { start: k.A.unsafe_rawColors.OPACITY_RED_80.css, end: k.A.unsafe_rawColors.RED_NEW_30.css },
-        active: { start: k.A.unsafe_rawColors.OPACITY_GREEN_80.css, end: k.A.unsafe_rawColors.GREEN_NEW_30.css },
+s.d(a, { SS: () => el, cP: () => et });
+var t = s(477900),
+    l = s(582128),
+    r = s(503698),
+    n = s.n(r),
+    c = s(82495),
+    o = s(793574),
+    i = s(892227),
+    d = s(492462),
+    u = s(855986),
+    _ = s(195118),
+    m = s(916845),
+    E = s(834730),
+    A = s(43990),
+    R = s(821609),
+    x = s(303136),
+    h = s(622886),
+    f = s(976860),
+    p = s(309954),
+    N = s(587244),
+    C = s(287809),
+    v = s(403362),
+    b = s(975571),
+    j = s(474090),
+    k = s(923079),
+    O = s(920050),
+    g = s(646514),
+    T = s(403581),
+    D = s(318254),
+    w = s(914410),
+    L = s(921894),
+    M = s(903080);
+let B = {
+        churning: { start: g.A.unsafe_rawColors.OPACITY_RED_80.css, end: g.A.unsafe_rawColors.RED_NEW_30.css },
+        active: { start: g.A.unsafe_rawColors.OPACITY_GREEN_80.css, end: g.A.unsafe_rawColors.GREEN_NEW_30.css },
     },
     S = function (e) {
         let { className: a } = e,
-            { passesProgressBarInvariant: t, programReward: l, totalDays: n } = (0, h.F)();
-        if (!t || null == l || null == n) return null;
+            { passesProgressBarInvariant: s, programReward: l, totalDays: r } = (0, h.F)();
+        if (!s || null == l || null == r) return null;
         let c = (0, i.default)(new Date(l.next_reward_date), new Date()),
             o = l.program_current_state === L.L.PREMIUM_CHURNING,
-            d = o ? w.churning.start : w.active.start,
-            u = o ? w.churning.end : w.active.end;
-        return (0, s.jsxs)("div", {
-            className: r()(T.k, a),
+            d = o ? B.churning.start : B.active.start,
+            u = o ? B.churning.end : B.active.end;
+        return (0, t.jsxs)("div", {
+            className: n()(M.k, a),
             children: [
-                (0, s.jsx)(O.Ay, {
-                    variant: O.qP.UNSET,
-                    progress: n - c,
-                    maximum: n,
+                (0, t.jsx)(w.Ay, {
+                    variant: w.qP.UNSET,
+                    progress: r - c,
+                    maximum: r,
                     override: { default: { gradientStart: d, gradientEnd: u } },
                 }),
                 o
-                    ? (0, s.jsx)(b.NitroWheelIcon, { size: "sm", color: "currentColor", className: T.K })
-                    : (0, s.jsx)(g.OrbsIcon, { size: "sm", color: "currentColor", className: T.K }),
+                    ? (0, t.jsx)(T.NitroWheelIcon, { size: "sm", color: "currentColor", className: M.K })
+                    : (0, t.jsx)(D.OrbsIcon, { size: "sm", color: "currentColor", className: M.K }),
             ],
         });
     };
-(t(831259), t(688810));
-var D = t(129230);
-(t(241524), t(736653), t(780964), t(766075), t(872725));
-var M = t(652215);
+(s(831259), s(688810));
+var U = s(129230);
+(s(241524), s(736653), s(780964), s(766075), s(872725));
+var y = s(652215);
 function I(e, a) {
-    D.default.track(M.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, { cta_type: e, program_state: a });
+    U.default.track(y.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, { cta_type: e, program_state: a });
 }
-t(758836);
-var y = t(901123),
-    B = t(17268),
-    U = t(792996);
-(t(46788), C.A.getArticleURL(M.MVz.ORBS_REWARDS_FAQ), t(762493));
-var W = t(682901),
-    P = t(226068),
-    F = t(268920),
-    K = t(633217);
-function z() {
-    return (0, s.jsx)("div", {
-        className: P.s,
-        children: (0, s.jsx)(f.A, { src: K.A, fallbackImage: F.A, className: P.Cb }),
+s(758836);
+var P = s(901123),
+    W = s(17268),
+    F = s(792996);
+(s(46788), b.A.getArticleURL(y.MVz.ORBS_REWARDS_FAQ), s(762493));
+var K = s(682901),
+    V = s(631502),
+    X = s(226068),
+    z = s(268920),
+    q = s(633217);
+function G() {
+    return (0, t.jsx)("div", {
+        className: X.s,
+        children: (0, t.jsx)(x.A, { src: q.A, fallbackImage: z.A, className: X.Cb }),
     });
 }
-function V() {
-    (I("balance_popover_helpdesk"), window.open(C.A.getArticleURL(M.MVz.ORBS_FAQ), "_blank"));
+function H() {
+    (I("balance_popover_helpdesk"), window.open(b.A.getArticleURL(y.MVz.ORBS_FAQ), "_blank"));
 }
-function q(e) {
-    let { targetElementRef: a, shouldShow: t, onRequestClose: n, onNavigate: c, ctaText: o, ctaOnClick: C } = e,
-        { passesGeneralUIInvariant: k, programReward: b } = (0, h.F)(),
-        g = (0, u.bG)([N.default], () => N.default.getCurrentUser()),
-        { balance: O } = (0, x.W)(),
-        L = !(0, v.ki)(g),
-        T = l.useCallback(() => {
+function Y(e) {
+    let { targetElementRef: a, shouldShow: s, onRequestClose: r, onNavigate: c, ctaText: o, ctaOnClick: b } = e,
+        { passesGeneralUIInvariant: g, programReward: T } = (0, h.F)(),
+        D = (0, k.A)({ location: "PremiumTenureRewardsOrbsBalancePopover" }),
+        w = (0, u.bG)([C.default], () => C.default.getCurrentUser()),
+        { balance: L } = (0, p.W)(),
+        M = !(0, j.ki)(w),
+        B = l.useCallback(() => {
             (I("balance_popover_next_drop"),
-                n(),
+                r(),
                 null != c && c(),
-                (0, p.pX)(y.BV.NITRO_HOME, { search: (0, d.As)({ perk: j.NITRO_ORBS_REWARDS_CARD_ID }) }));
-        }, [n, c]),
-        w = l.useCallback(() => {
+                (0, f.pX)(P.BV.NITRO_HOME, { search: (0, d.As)({ perk: O.NITRO_ORBS_REWARDS_CARD_ID }) }));
+        }, [r, c]),
+        U = l.useCallback(() => {
             (I("balance_popover_upsell"),
-                n(),
+                r(),
                 null != c && c(),
-                (0, p.pX)(y.BV.NITRO_HOME, { search: (0, d.As)({ section: "orbs" }) }));
-        }, [n, c]),
-        D = l.useMemo(() => {
-            let e = (0, v.YE)(g, W.PremiumTypes.TIER_2);
-            if (!k || L) return null;
-            if (e && null != b) {
-                let e = (0, i.default)(new Date(b.next_reward_date), new Date());
-                return (0, s.jsxs)(s.Fragment, {
-                    children: [
-                        (0, s.jsx)(A.E, {
-                            variant: "body-xs/normal",
-                            color: "text-default",
-                            children: U.intl.format(B.default["AvL/At"], {
-                                days: Math.max(1, e),
-                                deepLinkToNitroOrbs: T,
-                            }),
-                        }),
-                        (0, s.jsx)(S, {}),
-                    ],
-                });
+                (0, f.pX)(P.BV.NITRO_HOME, { search: (0, d.As)({ section: "orbs" }) }));
+        }, [r, c]),
+        z = l.useMemo(() => {
+            let e = (0, j.YE)(w, K.PremiumTypes.TIER_2);
+            if (!g || M) return null;
+            if (e && null != T) {
+                let e = (0, i.default)(new Date(T.next_reward_date), new Date());
+                switch (D) {
+                    case k.m.DEFAULT:
+                        return (0, t.jsxs)(t.Fragment, {
+                            children: [
+                                (0, t.jsx)(E.E, {
+                                    variant: "body-xs/normal",
+                                    color: "text-default",
+                                    children: F.intl.format(W.default["AvL/At"], {
+                                        days: Math.max(1, e),
+                                        deepLinkToNitroOrbs: B,
+                                    }),
+                                }),
+                                (0, t.jsx)(S, {}),
+                            ],
+                        });
+                    case k.m.DEPRECATED:
+                        return (0, t.jsxs)(t.Fragment, {
+                            children: [
+                                (0, t.jsx)("div", {
+                                    className: X.iY,
+                                    children: (0, t.jsx)(N.B$, {
+                                        text: F.intl.format(V.default.bkU5si, {
+                                            orbAmount: T.reward_amount,
+                                            days: Math.max(1, e),
+                                        }),
+                                    }),
+                                }),
+                                (0, t.jsx)(S, {}),
+                            ],
+                        });
+                    case k.m.DEPRECATED_XBOX:
+                    case k.m.REMOVED:
+                    case k.m.REMOVED_XBOX:
+                        break;
+                    default:
+                        return (0, v.xb)(D);
+                }
             }
             return null;
-        }, [g, L, b, k, T]),
-        F = (O ?? 0) >= 4100;
-    return (0, s.jsx)(_.x, {
+        }, [w, M, T, g, B, D]),
+        q = (L ?? 0) >= 4100;
+    return (0, t.jsx)(_.x, {
         targetElementRef: a,
-        shouldShow: t,
-        onRequestClose: n,
+        shouldShow: s,
+        onRequestClose: r,
         position: "bottom",
         gradientColor: "blue",
         modal: !0,
         closeOnClickOutside: !0,
-        children: (0, s.jsx)(E.N, {
-            theme: F ? M.NJ8.DARK : void 0,
+        children: (0, t.jsx)(A.N, {
+            theme: q ? y.NJ8.DARK : void 0,
             children: (e) =>
-                (0, s.jsxs)("div", {
-                    className: r()(e, P.j),
+                (0, t.jsxs)("div", {
+                    className: n()(e, X.j),
                     children: [
-                        F &&
-                            (0, s.jsx)(f.A, {
+                        q &&
+                            (0, t.jsx)(x.A, {
                                 src: "https://cdn.discordapp.com/assets/content/62447672d679c7ceb5756dc07350a3145081a671a026fe96876d8742b73f3a82.mp4",
-                                className: P.yG,
+                                className: X.yG,
                             }),
-                        (0, s.jsxs)("div", {
-                            className: P.Qs,
+                        (0, t.jsxs)("div", {
+                            className: X.Qs,
                             children: [
-                                (0, s.jsx)(m.q, { onClick: n }),
-                                (0, s.jsxs)("div", {
-                                    className: P.hQ,
+                                (0, t.jsx)(m.q, { onClick: r }),
+                                (0, t.jsxs)("div", {
+                                    className: X.hQ,
                                     children: [
-                                        (0, s.jsx)(z, {}),
-                                        (0, s.jsxs)("div", {
-                                            className: P.y$,
+                                        (0, t.jsx)(G, {}),
+                                        (0, t.jsxs)("div", {
+                                            className: X.y$,
                                             children: [
-                                                (O ?? 0) > 0 &&
-                                                    (0, s.jsxs)("div", {
-                                                        className: P.E2,
+                                                (L ?? 0) > 0 &&
+                                                    (0, t.jsxs)("div", {
+                                                        className: X.E2,
                                                         children: [
-                                                            (0, s.jsx)(A.E, {
+                                                            (0, t.jsx)(E.E, {
                                                                 variant: "display-lg",
-                                                                className: P.K,
-                                                                children: O ?? 0,
+                                                                className: X.K,
+                                                                children: L ?? 0,
                                                             }),
-                                                            (0, s.jsx)(A.E, {
+                                                            (0, t.jsx)(E.E, {
                                                                 variant: "body-xs/normal",
                                                                 color: "text-muted",
-                                                                children: U.intl.string(B.default.KclK9z),
+                                                                children: F.intl.string(W.default.KclK9z),
                                                             }),
                                                         ],
                                                     }),
-                                                D,
+                                                z,
                                             ],
                                         }),
-                                        (0, s.jsx)(R.$, {
+                                        (0, t.jsx)(R.$, {
                                             text: o,
                                             variant: "primary",
                                             size: "sm",
-                                            onClick: C,
+                                            onClick: b,
                                             fullWidth: !0,
                                         }),
-                                        (0, s.jsx)(A.E, {
+                                        (0, t.jsx)(E.E, {
                                             variant: "body-xs/normal",
-                                            color: L ? "text-default" : "text-muted",
-                                            className: P.CU,
-                                            children: L
-                                                ? U.intl.format(B.default.juvXqj, { deepLinkToNitroOrbs: w })
-                                                : U.intl.format(B.default.fhAVek, { helpdeskArticle: V }),
+                                            color: M ? "text-default" : "text-muted",
+                                            className: X.CU,
+                                            children: M
+                                                ? F.intl.format(W.default.juvXqj, { deepLinkToNitroOrbs: U })
+                                                : F.intl.format(W.default.fhAVek, { helpdeskArticle: H }),
                                         }),
                                     ],
                                 }),
@@ -192,95 +221,95 @@ function q(e) {
         }),
     });
 }
-var G = t(318346),
-    H = t(362862),
-    J = t(923138),
-    Q = t(305003),
-    Y = t(219980),
-    X = t(648808),
-    $ = t(226346);
-let Z = { START: $.Vl, END: $.Wk };
-function ee(e) {
+var J = s(318346),
+    Q = s(362862),
+    $ = s(923138),
+    Z = s(305003),
+    ee = s(219980),
+    ea = s(489422),
+    es = s(226346);
+let et = { START: es.Vl, END: es.Wk };
+function el(e) {
     let {
             showNotificationBadge: a,
-            ctaText: t,
-            ctaOnClick: n,
+            ctaText: s,
+            ctaOnClick: r,
             onNavigate: i,
             analyticsPage: d,
             className: u,
             pillVariant: _,
             themeOverride: m,
         } = e,
-        { balance: A } = (0, x.W)(),
-        [E, R] = l.useState(Q.k.DEFAULT),
-        [f, h] = l.useState(!1),
-        [p, N] = l.useState(!1),
+        { balance: E } = (0, p.W)(),
+        [A, R] = l.useState(Z.k.DEFAULT),
+        [x, h] = l.useState(!1),
+        [f, N] = l.useState(!1),
         C = l.useRef(null),
         v = l.useRef(null),
-        j = (0, H.Hy)({ location: "BalanceWidgetMenu" }),
-        k = l.useCallback(() => {
-            let e = !f;
+        b = (0, Q.Hy)({ location: "BalanceWidgetMenu" }),
+        j = l.useCallback(() => {
+            let e = !x;
             (e &&
                 null != d &&
-                (0, G.Y)({
+                (0, J.Y)({
                     pageType: d,
-                    sectionType: j ? o.A.ORB_WALLET : M.JJy.ORBS_BALANCE_MENU,
-                    ctaObject: j ? o.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : M.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    sectionType: b ? o.A.ORB_WALLET : y.JJy.ORBS_BALANCE_MENU,
+                    ctaObject: b ? o.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : y.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
-                R(e ? Q.k.SELECTED : Q.k.DEFAULT),
+                R(e ? Z.k.SELECTED : Z.k.DEFAULT),
                 h(e));
-        }, [f, d, j]),
-        b = l.useCallback(() => {
-            f && k();
-        }, [f, k]),
-        g = (0, c.A)(null, b),
-        { hasUnreadUpdate: O } = (0, J.I)({ enabled: j }),
-        L = a ?? O,
-        T = l.useMemo(
+        }, [x, d, b]),
+        k = l.useCallback(() => {
+            x && j();
+        }, [x, j]),
+        O = (0, c.A)(null, k),
+        { hasUnreadUpdate: g } = (0, $.I)({ enabled: b }),
+        T = a ?? g,
+        D = l.useMemo(
             () =>
-                (0, s.jsx)(Y.J, {
+                (0, t.jsx)(ee.J, {
                     pillRef: C,
                     clickableRef: v,
-                    ariaExpanded: f,
-                    balance: A,
-                    balanceWidgetMode: E,
+                    ariaExpanded: x,
+                    balance: E,
+                    balanceWidgetMode: A,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: k,
+                    onClick: j,
                     variant: _,
                     themeOverride: m,
-                    showNotificationBadge: L,
+                    showNotificationBadge: T,
                 }),
-            [A, E, _, m, L, k, f],
+            [E, A, _, m, T, j, x],
         ),
         w = l.useCallback(
             (e) =>
-                j
+                b
                     ? e
-                        ? (0, s.jsx)(X.EA, {
-                              cardRef: g,
+                        ? (0, t.jsx)(ea.EA, {
+                              cardRef: O,
                               returnRef: v,
                               targetElementRef: C,
                               shouldShow: e,
                               analyticsPage: d,
                               onCloseWallet: (e) => {
-                                  (k(), "navigation" === e && null != i && i());
+                                  (j(), "navigation" === e && null != i && i());
                               },
                           })
                         : null
-                    : (0, s.jsx)(q, {
+                    : (0, t.jsx)(Y, {
                           targetElementRef: C,
                           shouldShow: e,
-                          onRequestClose: k,
-                          ctaText: t,
+                          onRequestClose: j,
+                          ctaText: s,
                           onNavigate: i,
                           ctaOnClick: () => {
-                              (k(), n());
+                              (j(), r());
                           },
                       }),
-            [j, g, C, k, t, n, d, i],
+            [b, O, C, j, s, r, d, i],
         );
-    return (0, s.jsxs)("div", { className: r()($.kL, u, { [$.R]: p, [$.RK]: !p }), children: [T, w(f)] });
+    return (0, t.jsxs)("div", { className: n()(es.kL, u, { [es.R]: f, [es.RK]: !f }), children: [D, w(x)] });
 }
-ee.CardAlignment = Z;
+el.CardAlignment = et;
