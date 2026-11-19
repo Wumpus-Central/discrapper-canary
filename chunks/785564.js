@@ -1,4 +1,4 @@
-let n, r, i, o, _, s, l, I, a, A;
+let n, r, i, _, o, s, l, I, a, A;
 var S,
     T,
     R,
@@ -50,8 +50,8 @@ if (null != H) {
         E = H.process.platform,
         n = H.os.release,
         r = H.os.arch,
-        o = H.os.appArch,
-        _ = H.app.getReleaseChannel(),
+        _ = H.os.appArch,
+        o = H.app.getReleaseChannel(),
         s = m();
     switch (E) {
         case "win32":
@@ -70,7 +70,7 @@ if (null != H) {
         ((i = {
             os: e,
             browser: "Discord Client",
-            release_channel: _ || "unknown",
+            release_channel: o || "unknown",
             client_version: t,
             ...{
                 os_version: (S = H.os.systemVersion) ?? ("darwin" === E ? "" : n),
@@ -79,7 +79,7 @@ if (null != H) {
                 ...("win32" === E ? { os_sdk_version: n.split(".")[2] } : {}),
             },
             os_arch: r,
-            app_arch: o,
+            app_arch: _,
             system_locale: s,
             has_client_mods: M(),
             client_launch_id: U,
@@ -261,7 +261,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == s.release_channel || "" === s.release_channel) &&
         (s.release_channel = l.split("-")[0]),
-    isNaN((I = parseInt("678538", 10))) || (s.client_build_number = I),
+    isNaN((I = parseInt("678543", 10))) || (s.client_build_number = I),
     null == (a = H?.app.getBuildNumber()) || isNaN(a) || (s.native_build_number = a),
     (s.client_event_source = (function () {
         try {
@@ -325,8 +325,8 @@ class k {
         for (; r < e && r < 16 * E.length;) {
             let t = Math.min(e - r, 16),
                 i = (1 << t) - 1,
-                o = E.length - Math.floor(r / 16) - 1;
-            ((n |= (E[o] & i) << r), (r += t));
+                _ = E.length - Math.floor(r / 16) - 1;
+            ((n |= (E[_] & i) << r), (r += t));
         }
         return n;
     }
@@ -687,9 +687,9 @@ var en =
     }));
 let er = "dQw4w9WgXcQ:",
     ei = null,
-    eo = window.DiscordNative;
-null != eo && (ei = eo.safeStorage);
-let e_ = !1,
+    e_ = window.DiscordNative;
+null != e_ && (ei = e_.safeStorage);
+let eo = !1,
     es = {},
     el = !1;
 function eI(e) {
@@ -927,8 +927,8 @@ let ed = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
                 `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
             BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>
                 `/billing/premium/manage?flow_type=${e}${null != t ? `&load_id=${t}` : ""}`,
-            BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, E, n, r, i, o) =>
-                `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${E}${null != n ? `&payment_method_type=${n}` : ""}${null != r ? `&deep_link_type=${r}` : ""}${null != i ? `&use_preset_offer=${i}` : ""}${null != o ? `&flow_type=${o}` : ""}`,
+            BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, E, n, r, i, _) =>
+                `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${E}${null != n ? `&payment_method_type=${n}` : ""}${null != r ? `&deep_link_type=${r}` : ""}${null != i ? `&use_preset_offer=${i}` : ""}${null != _ ? `&flow_type=${_}` : ""}`,
             BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, E, n) =>
                 `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != E ? `&load_id=${E}` : ""}${null != n ? `&flow_type=${n}` : ""}`,
             GUILD_BOOSTING_MARKETING: (e) => `/guilds/${e}/premium-guild-subscriptions`,
@@ -1111,16 +1111,16 @@ let eM = new Set([
     let e =
         ((function () {
             if (el) return;
-            ((_ = n.get("token")), (es = n.get("tokens") || {}));
-            let { decryptedToken: e, wasEncrypted: t } = eI(_);
-            ((e_ = t),
-                (o = e),
+            ((o = n.get("token")), (es = n.get("tokens") || {}));
+            let { decryptedToken: e, wasEncrypted: t } = eI(o);
+            ((eo = t),
+                (_ = e),
                 [
                     ...Object.entries(es)
                         .map((e) => {
                             let [t, E] = e,
                                 { decryptedToken: n, wasEncrypted: r } = eI(E);
-                            return ((e_ = r || e_), [t, n]);
+                            return ((eo = r || eo), [t, n]);
                         })
                         .filter((e) => {
                             let [t, E] = e;
@@ -1132,7 +1132,7 @@ let eM = new Set([
                 }, {}),
                 (el = !0));
         })(),
-        o);
+        _);
     if (null == e || __OVERLAY__) return;
     let t = window._ws.ws,
         E = window._ws.state,
@@ -1162,20 +1162,17 @@ let eM = new Set([
             }
             null != e && (r = (t) => e.pack(t).buffer);
         }
-        let o = n.get("installation_id_v3") ?? n.get("analytics_installation");
-        var _ = r({
+        let _ = n.get("installation_id_v3") ?? n.get("analytics_installation");
+        var o = r({
             op: ea.IDENTIFY,
             d: {
                 token: e,
-                capabilities: (function (e) {
-                    let { useChannelObfuscation: t } = e;
-                    return t ? 1767421 : 1734653;
-                })({ useChannelObfuscation: null != n.get("private_channel_obfuscation") }),
-                properties: { ...i, is_fast_connect: !0, ...(null != o && "" !== o ? { installation_id: o } : {}) },
+                capabilities: 1767421,
+                properties: { ...i, is_fast_connect: !0, ...(null != _ && "" !== _ ? { installation_id: _ } : {}) },
                 client_state: { guild_versions: {} },
             },
         });
-        (performance.mark("FastConnect-identify-sent"), t.send(_), (E.identify = !0));
+        (performance.mark("FastConnect-identify-sent"), t.send(o), (E.identify = !0));
     };
     r ? s() : (t.onopen = s);
 })();

@@ -864,32 +864,6 @@
     }
   },
   {
-    "name": "2026-02-private-channel-hiding",
-    "kind": "user",
-    "defaultConfig": {
-      "enableObfuscation": false,
-      "enableIntegrityCheck": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableObfuscation": true,
-        "enableIntegrityCheck": false
-      },
-      "2": {
-        "enableObfuscation": true,
-        "enableIntegrityCheck": true
-      },
-      "3": {
-        "enableObfuscation": false,
-        "enableIntegrityCheck": false
-      }
-    }
-  },
-  {
     "name": "2026-02-process-boost-on-voice",
     "kind": "user",
     "defaultConfig": {
