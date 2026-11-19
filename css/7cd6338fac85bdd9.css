@@ -152,6 +152,10 @@
     text-transform: uppercase
 }
 
+.badgeTitleName_RXxYOV {
+    display: block
+}
+
 .nitroTitle_RXxYOV {
     white-space: nowrap
 }
@@ -251,12 +255,12 @@
     animation: unlockFadeIn_RXxYOV .25s cubic-bezier(.33, 0, .67, 1) var(--custom-badge-unlock-reveal) both
 }
 
-.full-motion .unlockHiding_RXxYOV .badgeTitle_RXxYOV {
+.full-motion .unlockHiding_RXxYOV .badgeTitleName_RXxYOV {
     transform: scale(1.2);
     transform-origin: bottom
 }
 
-.full-motion .unlockRevealing_RXxYOV .badgeTitle_RXxYOV {
+.full-motion .unlockRevealing_RXxYOV .badgeTitleName_RXxYOV {
     animation: unlockTitleScale_RXxYOV .25s cubic-bezier(.67, 0, .28, 1) var(--custom-badge-unlock-reveal) both;
     transform-origin: bottom
 }
@@ -308,4 +312,4 @@
     }
 }
 
-/*# sourceMappingURL=c0ebc4eb0bae7dc1.css.map*/
+/*# sourceMappingURL=7cd6338fac85bdd9.css.map*/

@@ -10,6 +10,7 @@ e.exports = {
     nj: "badgeTitleGroup_RXxYOV",
     $g: "badgeEyebrow_RXxYOV",
     _r: "badgeTitle_RXxYOV",
+    do: "badgeTitleName_RXxYOV",
     ve: "nitroTitle_RXxYOV",
     U3: "badgeAccessoryLine_RXxYOV",
     zN: "badgeAccessoryDot_RXxYOV",

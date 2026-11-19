@@ -711,7 +711,7 @@ function eM(e) {
                                                                 className: eU.$g,
                                                                 children: es,
                                                             }),
-                                                        er,
+                                                        (0, l.jsx)("span", { className: eU.do, children: er }),
                                                     ],
                                                 }),
                                                 (0, l.jsx)(eD, { segments: eh }),
