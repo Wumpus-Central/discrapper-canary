@@ -289,7 +289,7 @@ n.d(
                               n.e(698101),
                               n.e(746623),
                               n.e(306270),
-                              n.e(823077),
+                              n.e(291365),
                               n.e(29621),
                           ]).then(n.bind(n, 723028));
                           return (n) => (0, l.jsx)(e, { ...n, channelId: t, clipId: A.id, onEdit: R });

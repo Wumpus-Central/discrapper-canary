@@ -243,15 +243,20 @@
     box-shadow: inset 0 0 0 2px var(--background-brand)
 }
 
-.button_NVxEwq {
+.button_NVxEwq,
+.heading_NVxEwq {
     align-items: center;
     border-radius: var(--radius-xs);
-    cursor: pointer;
     display: flex;
     gap: var(--space-4);
     justify-content: flex-start;
     max-width: 100%;
     min-width: 0
+}
+
+.button_NVxEwq,
+.titleButton_NVxEwq {
+    cursor: pointer
 }
 
 .editIcon_NVxEwq {
@@ -264,4 +269,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=48766edb6d26f786.css.map*/
+/*# sourceMappingURL=3e510feba492050f.css.map*/

@@ -193,7 +193,7 @@ function W(e) {
     });
 }
 var Z = l(923904),
-    J = l(701266),
+    J = l(989010),
     ee = l(423699),
     et = l(1093),
     el = l(352527),
@@ -368,8 +368,8 @@ var e$ = l(549685),
     e0 = l(285072),
     e1 = l(284009),
     e3 = l.n(e1),
-    e2 = l(460905),
-    e9 = l(443184),
+    e9 = l(460905),
+    e2 = l(443184),
     e6 = l(153511);
 function e4(e) {
     let { clip: t } = e,
@@ -417,22 +417,22 @@ function e5(e) {
             return (0, n.jsx)(e4, { clip: t });
         case ey.Gy.LAUGHTER:
             return (0, n.jsx)(e7, {
-                icon: e2.ReactionIcon,
+                icon: e9.ReactionIcon,
                 text: B.intl.string($.default.bTC23D),
                 tooltipText: B.intl.string($.default.Ek6GZO),
             });
         case ey.Gy.SHOUTING:
             return (0, n.jsx)(e7, {
-                icon: e2.ReactionIcon,
+                icon: e9.ReactionIcon,
                 text: B.intl.string($.default["3gqpuo"]),
                 tooltipText: B.intl.string($.default.Ek6GZO),
             });
         case ey.Gy.GAME_EVENT: {
-            let e = (0, e9.u6)(t.applicationId, ey.Gy.GAME_EVENT, t.decision.signal.eventName);
+            let e = (0, e2.u6)(t.applicationId, ey.Gy.GAME_EVENT, t.decision.signal.eventName);
             if (null == e) return null;
             return (0, n.jsx)(e7, {
                 icon: e,
-                text: (0, e9.PZ)(t.applicationId, ey.Gy.GAME_EVENT, t.decision.signal.eventName) ?? "",
+                text: (0, e2.PZ)(t.applicationId, ey.Gy.GAME_EVENT, t.decision.signal.eventName) ?? "",
                 tooltipText: B.intl.string($.default["347DBb"]),
             });
         }
@@ -1667,22 +1667,22 @@ function t3(e) {
             }),
     });
 }
-var t2 = l(187671);
-function t9(e) {
+var t9 = l(187671);
+function t2(e) {
     let { label: t, icon: l, onRemove: a, removeAriaLabel: i } = e;
     return (0, n.jsxs)("div", {
-        className: t2.Io,
+        className: t9.Io,
         children: [
-            null != l && (0, n.jsx)("span", { className: t2.Kk, children: l }),
+            null != l && (0, n.jsx)("span", { className: t9.Kk, children: l }),
             (0, n.jsx)(g.E, {
-                className: t2.Pf,
+                className: t9.Pf,
                 variant: "body-sm/semibold",
                 color: "currentColor",
                 lineClamp: 1,
                 children: t,
             }),
             (0, n.jsx)(eM.D, {
-                className: t2.DT,
+                className: t9.DT,
                 onClick: a,
                 "aria-label": i ?? B.intl.string(B.t.N86XcP),
                 children: (0, n.jsx)(tO.XSmallIcon, { size: "xs", color: "currentColor" }),
@@ -1979,7 +1979,7 @@ function le(e) {
                     Array.from(g).map((e) => {
                         let t = _.find((t) => t.key === e);
                         return (0, n.jsx)(
-                            t9,
+                            t2,
                             {
                                 label: t?.label ?? e,
                                 icon: (0, n.jsx)(S.A, { game: D.get(e), size: S.M.XSMALL }),
@@ -1988,10 +1988,10 @@ function le(e) {
                             `game-${e}`,
                         );
                     }),
-                null != v && (0, n.jsx)(t9, { label: tY(v), onRemove: () => k(null) }, "date"),
+                null != v && (0, n.jsx)(t2, { label: tY(v), onRemove: () => k(null) }, "date"),
                 null != y &&
                     (0, n.jsx)(
-                        t9,
+                        t2,
                         {
                             label: R.find((e) => e.key === y)?.label ?? y,
                             icon:
@@ -2003,8 +2003,8 @@ function le(e) {
                         "guild",
                     ),
                 $ && Array.from(p).map((e) => (0, n.jsx)(lt, { userId: e, onRemove: () => C(e) }, `user-${e}`)),
-                null != j && (0, n.jsx)(t9, { label: j, onRemove: () => A(null) }, "activity"),
-                q && "all" !== m && (0, n.jsx)(t9, { label: Y, onRemove: () => f("all") }, "method"),
+                null != j && (0, n.jsx)(t2, { label: j, onRemove: () => A(null) }, "activity"),
+                q && "all" !== m && (0, n.jsx)(t2, { label: Y, onRemove: () => f("all") }, "method"),
             ],
         }),
         Q = (V && g.size > 0) || null != v || null != y || ($ && p.size > 0) || null != j || (q && "all" !== m);
@@ -2094,7 +2094,7 @@ function lt(e) {
         a = (0, c.bG)([w.default], () => w.default.getUser(t), [t]);
     if (null == a) return null;
     let i = a.globalName ?? a.username;
-    return (0, n.jsx)(t9, {
+    return (0, n.jsx)(t2, {
         label: i,
         icon: (0, n.jsx)(tL.eu, { src: a.getAvatarURL(null, 32), size: eT._3.SIZE_16, "aria-hidden": !0 }),
         onRemove: l,
@@ -2274,8 +2274,8 @@ function lC(e) {
 }
 function lN(e) {
     let { type: t, applicationId: l, eventName: a } = e,
-        i = (0, e9.u6)(l, t, a),
-        s = (0, e9.PZ)(l, t, a);
+        i = (0, e2.u6)(l, t, a),
+        s = (0, e2.PZ)(l, t, a);
     return null == i || null == s ? null : (0, n.jsx)(e8, { icon: i, text: s });
 }
 function lA(e) {
@@ -2901,8 +2901,8 @@ var lZ = l(837381),
     l0 = l(812993),
     l1 = l(332837),
     l3 = l(95362),
-    l2 = l(625903),
-    l9 = l(260762),
+    l9 = l(625903),
+    l2 = l(260762),
     l6 = l(599428);
 function l4(e) {
     let { itemId: t, icon: l, label: a, onClick: i, isSelected: r = !1, isDisabled: o = !1, badgeCount: c = 0 } = e,
@@ -2961,7 +2961,7 @@ function l8(e) {
         A = (0, I.A)(N),
         k = a.useMemo(() => new Map(A.map((e) => [e?.id, e])), [A]),
         E = (0, eo.GV)(),
-        w = (0, l9.A)(E),
+        w = (0, l2.A)(E),
         { setFocus: P } = w,
         L = o ?? r;
     a.useEffect(() => {
@@ -3061,7 +3061,7 @@ function l8(e) {
                     className: s()(l6.Ms, l6.A9),
                     children: (0, n.jsx)(l4, {
                         itemId: "settings",
-                        icon: (0, n.jsx)(l2.SettingsIcon, { size: "sm", color: "currentColor" }),
+                        icon: (0, n.jsx)(l9.SettingsIcon, { size: "sm", color: "currentColor" }),
                         label: B.intl.string(B.t["3D5yo/"]),
                         onClick: C,
                     }),
@@ -3281,15 +3281,15 @@ function ne(e) {
         e3 = a.useCallback(() => {
             ((e1.current = !1), N.Ay.useReducedMotion && ek(null), eC("gallery"));
         }, []),
-        e2 = a.useCallback(() => {
+        e9 = a.useCallback(() => {
             e1.current ? H() : e3();
         }, [e3, H]);
     (a.useEffect(() => {
-        "editing" === eb && null == eE && e2();
-    }, [eb, eE, e2]),
+        "editing" === eb && null == eE && e9();
+    }, [eb, eE, e9]),
         a.useEffect(() => {
             function e(e) {
-                "Escape" === e.key && "editing" === eP.current && eI && (e.stopPropagation(), e2());
+                "Escape" === e.key && "editing" === eP.current && eI && (e.stopPropagation(), e9());
             }
             return (
                 document.addEventListener("keydown", e),
@@ -3297,7 +3297,7 @@ function ne(e) {
                     document.removeEventListener("keydown", e);
                 }
             );
-        }, [e2, H, eI]),
+        }, [e9, H, eI]),
         a.useEffect(() => {
             function e(e) {
                 if (
@@ -3325,7 +3325,7 @@ function ne(e) {
                       }),
             [eb, eN],
         ));
-    let e9 = a.useCallback(() => {
+    let e2 = a.useCallback(() => {
             ei(new Set());
         }, []),
         e6 = Q.size > 0,
@@ -3339,22 +3339,22 @@ function ne(e) {
                             ...l,
                             clips: e,
                             onAfterDelete: () => {
-                                (e9(), l.onClose());
+                                (e2(), l.onClose());
                             },
                         });
                 },
                 { stackingBehavior: "stack" },
             );
-        }, [ef, Q, e9]),
+        }, [ef, Q, e2]),
         e8 = a.useCallback(async () => {
             let e = ef.filter((e) => Q.has(e.id));
-            await ep({ clips: e, onShared: e9 });
-        }, [ef, Q, ep, e9]),
+            await ep({ clips: e, onShared: e2 });
+        }, [ef, Q, ep, e2]),
         e7 = a.useCallback(
             async (e) => {
-                0 !== e.length && (ei(new Set(e.map((e) => e.id))), await ep({ clips: e }), e9());
+                0 !== e.length && (ei(new Set(e.map((e) => e.id))), await ep({ clips: e }), e2());
             },
-            [ep, e9],
+            [ep, e2],
         ),
         e5 = a.useCallback(() => {
             let e = eA.P.getState();
@@ -3371,8 +3371,8 @@ function ne(e) {
             let e = ef.filter((e) => Q.has(e.id)),
                 t = !te;
             (await Promise.all(e.filter((e) => e.isFavorite !== t).map((e) => (0, D.Yy)(e.id, { isFavorite: t }, !0))),
-                e9());
-        }, [ef, Q, te, e9]),
+                e2());
+        }, [ef, Q, te, e2]),
         tn = a.useMemo(() => {
             let e = 0,
                 t = 0,
@@ -3410,12 +3410,12 @@ function ne(e) {
         () => ({
             selectedClipIds: Q,
             toggleClipSelection: eJ,
-            clearSelection: e9,
+            clearSelection: e2,
             isMultiSelectMode: e6,
             picker: O,
             onShareSession: X ? e7 : void 0,
         }),
-        [Q, eJ, e9, e6, O, X, e7],
+        [Q, eJ, e2, e6, O, X, e7],
     );
     return (0, n.jsx)(k.f5, {
         value: V,
@@ -3572,7 +3572,7 @@ function ne(e) {
                                                   (0, n.jsx)(tC, {
                                                       selectedCount: Q.size,
                                                       allSelectedFavorited: te,
-                                                      onClear: e9,
+                                                      onClear: e2,
                                                       onFavorite: tl,
                                                       onDelete: e4,
                                                       onShare: e8,
@@ -3606,10 +3606,10 @@ function ne(e) {
                                                   children: [
                                                       (0, n.jsx)(ee.A, {
                                                           transitionState: eL,
-                                                          onClose: e2,
+                                                          onClose: e9,
                                                           onBack: e3,
                                                       }),
-                                                      (0, n.jsx)(J.A, { channelId: G, onClose: e2, onExit: H }),
+                                                      (0, n.jsx)(J.A, { channelId: G, onClose: e9, onExit: H }),
                                                   ],
                                               },
                                               eE.id,
