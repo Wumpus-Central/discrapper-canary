@@ -2342,8 +2342,8 @@ function sR() {
                 if (null == e) return null;
                 switch (t) {
                     case sT.DEFAULT:
-                    case sT.DEPRECATED_XBOX:
                         return e;
+                    case sT.DEPRECATED_XBOX:
                     case sT.REMOVED:
                     case sT.REMOVED_XBOX:
                         return null;
