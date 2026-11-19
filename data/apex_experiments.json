@@ -4149,18 +4149,6 @@
     }
   },
   {
-    "name": "2026-09-web-sticker-picker-upsell-restyle",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "name": "2026-09-windows-native-premap",
     "kind": "user",
     "defaultConfig": {

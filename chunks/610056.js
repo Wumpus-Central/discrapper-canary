@@ -1,5 +1,5 @@
 (n.d(t, {
-    OAuth2AuthorizeModal: () => e7,
+    OAuth2AuthorizeModal: () => e8,
     k: () => e5,
     getOAuth2AuthorizeProps: () => tr,
     openOAuth2Modal: () => ti,
@@ -612,7 +612,7 @@ var e2 = n(613057),
 let e6 = (0, F.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e(474750),
+            n.e(521332),
             n.e(44141),
             n.e(86729),
             n.e(896691),
@@ -634,7 +634,7 @@ let e6 = (0, F.Fe)({
             n.e(880150),
             n.e(490743),
             n.e(428643),
-            n.e(251400),
+            n.e(431510),
             n.e(630290),
             n.e(668756),
             n.e(60002),
@@ -854,7 +854,7 @@ function e5() {
     }
     return (0, i.jsx)(eZ.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(e7, {
+        children: (0, i.jsx)(e8, {
             transitionState: I.i.ENTERED,
             ...t,
             showLogout: !0,
@@ -863,7 +863,7 @@ function e5() {
         }),
     });
 }
-function e7(e) {
+function e8(e) {
     let {
             label: t,
             title: n,
@@ -905,7 +905,7 @@ function e7(e) {
         children: (0, i.jsx)(W.A, { className: e3.dx, obscured: !0 === A, children: f }),
     });
 }
-function e8(e) {
+function e7(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, f.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, f.bG)([$.default, z.default], () => (null != $.default.getId() ? z.default.getCurrentUser() : null)),
@@ -1085,7 +1085,7 @@ function te(e) {
         }, [eq?.scopes, D, e$]),
         e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Q.x3, [eq?.permissions, P, e$]),
         e5 = r.useRef(!1),
-        [e7, te] = r.useState(ed ?? []),
+        [e8, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
     ((0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
@@ -1138,7 +1138,7 @@ function te(e) {
                         guildId: eY === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                         channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
-                    if ((e && (await (0, w.Yx)(A, e7)), null != q))
+                    if ((e && (await (0, w.Yx)(A, e8)), null != q))
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eQ, canceled: t }),
                             eo?.());
                     else if (null != n.location) {
@@ -1156,7 +1156,7 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eQ, h, I, p, m, T, S, e2, ew, eb, eY, eE, eP, e7],
+            [ee, q, eI?.application, eW, eo, A, eQ, h, I, p, m, T, S, e2, ew, eb, eY, eE, eP, e8],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
@@ -1288,7 +1288,7 @@ function te(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e9, {}) };
         case "CONNECT_ACCOUNT":
-            ((t = (0, i.jsx)(e8, { clientId: A, platformType: eE, platformName: tu })),
+            ((t = (0, i.jsx)(e7, { clientId: A, platformType: eE, platformName: tu })),
                 (tA = !1),
                 (tf = !1),
                 (th = !1),
@@ -1382,7 +1382,7 @@ function te(e) {
                 (0, i.jsx)(em, {
                     application: eI.application,
                     scopes: eQ,
-                    disclosures: e7,
+                    disclosures: e8,
                     redirectUri: eI.redirect_uri ?? null,
                     approximateGuildCount: void 0 !== e ? e : null,
                     isEmbeddedFlow: W,
@@ -1462,7 +1462,7 @@ function tn(e, t) {
     (0, H._9)() ? B.A.openCreateGuildModal({ onSuccess: (n) => ti({ ...e, guildId: n }, t) }) : ti(e, t);
 }
 function ti(e, t) {
-    (0, O.qf)((t) => (0, i.jsx)(e7, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
+    (0, O.qf)((t) => (0, i.jsx)(e8, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
 }
 function tr(e) {
     let { hostname: t = "", host: n, pathname: i, search: r } = J.A.toURLSafe(e) ?? {};

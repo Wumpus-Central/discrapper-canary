@@ -26,6 +26,5 @@ e.exports = {
     LW: "topRimPill_HMJaME",
     as: "subscribeButtonWide_HMJaME",
     eg: "countdownTextInSetting_HMJaME",
-    kz: "upsellClose_HMJaME",
     Tn: "upsellImage_HMJaME",
 };

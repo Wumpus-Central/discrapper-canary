@@ -11,7 +11,6 @@ e.exports = {
     SI: "stickerNode_5z8c5P",
     ot: "stickerNodeDimmed_5z8c5P",
     Q$: "stickerNodeHidden_5z8c5P",
-    No: "stickerUnsendable_5z8c5P",
     UK: "stickerLocked_5z8c5P",
     MC: "lockIconContainer_5z8c5P",
     hz: "lockIcon_5z8c5P",
