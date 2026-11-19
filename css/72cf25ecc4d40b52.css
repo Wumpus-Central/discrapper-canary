@@ -49,7 +49,7 @@
     display: grid;
     gap: 8px;
     grid-column: 1/span 3;
-    grid-template-columns: 60px auto 200px 24px;
+    grid-template-columns: 60px minmax(0, 1fr) min(200px, 40%) 24px;
     min-height: 60px;
     padding: 4px 0;
     position: relative
@@ -84,7 +84,8 @@
 .soundName_doBhuY {
     align-items: center;
     cursor: pointer;
-    display: flex
+    display: flex;
+    min-width: 0
 }
 
 .requirements_doBhuY {
@@ -115,14 +116,14 @@
 
 .soundTable_doBhuY {
     display: grid;
-    grid-template-columns: 60px auto 200px 24px
+    grid-template-columns: 60px minmax(0, 1fr) min(200px, 40%) 24px
 }
 
 .tableHeaders_doBhuY {
     display: grid;
     gap: 8px;
     grid-column: 1/span 3;
-    grid-template-columns: 60px auto 200px 24px
+    grid-template-columns: 60px minmax(0, 1fr) min(200px, 40%) 24px
 }
 
 .tableHeader_doBhuY {
@@ -173,6 +174,7 @@
 }
 
 .soundPreviewIcon_doBhuY {
+    flex-shrink: 0;
     margin-inline-start: 8px;
     opacity: 0;
     transition: opacity .2s ease
@@ -470,4 +472,4 @@
     color: var(--white)
 }
 
-/*# sourceMappingURL=cb13dd8ea2d0aeff.css.map*/
+/*# sourceMappingURL=72cf25ecc4d40b52.css.map*/

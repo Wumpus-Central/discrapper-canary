@@ -22410,17 +22410,16 @@ function fE(e) {
             x
                 ? (0, A.jsx)(rk.A, { emojiId: d, emojiName: c, className: fo.Zg })
                 : (0, A.jsx)(j3.ImageIcon, { size: "md", color: "currentColor", className: fo.Zg }),
-            (0, A.jsx)(ez.D, {
+            (0, A.jsxs)(ez.D, {
                 onClick: () => {
                     E || l(t);
                 },
                 onContextMenu: f,
                 className: fo.TW,
-                children: (0, A.jsxs)(D.E, {
-                    variant: "body-sm/normal",
-                    className: fo.TW,
-                    children: [a, " ", (0, A.jsx)(N, { size: "md", color: "currentColor", className: fo.Ns })],
-                }),
+                children: [
+                    (0, A.jsx)(D.E, { variant: "body-sm/normal", lineClamp: 1, children: a }),
+                    (0, A.jsx)(N, { size: "md", color: "currentColor", className: fo.Ns }),
+                ],
             }),
             null != m &&
                 (0, A.jsxs)(ez.D, {
