@@ -8,8 +8,8 @@ var i = n(926675),
     g = n(289173),
     a = n(851767),
     o = n(958805),
-    _ = n(61881),
-    c = n(229231);
+    c = n(61881),
+    _ = n(229231);
 n(600253);
 var f = n(792996);
 function p(e) {
@@ -21,7 +21,7 @@ function E() {
     return t?.widgets ?? [];
 }
 function m() {
-    return _.A.hasPendingChanges() ? (_.A.getPendingWidgets() ?? []) : E();
+    return c.A.hasPendingChanges() ? (c.A.getPendingWidgets() ?? []) : E();
 }
 function h(e) {
     return (
@@ -97,7 +97,7 @@ n.d(
                 );
         },
         L: function (e) {
-            return c.Ok[e.type](e);
+            return _.Ok[e.type](e);
         },
         N5: function (e, t) {
             let n = T();
@@ -117,12 +117,17 @@ n.d(
             o.A.setPendingWidgets(I(l));
         },
         R_: function (e, t) {
-            if (e === t) return;
-            let n = m();
-            if (e < 0 || e >= n.length || t < 0 || t >= n.length) return;
-            let i = [...n],
-                [l] = i.splice(e, 1);
-            (i.splice(t, 0, l), o.A.setPendingWidgets(i));
+            !(function (e, t, n) {
+                let i = m(),
+                    l = i.flatMap((t, n) => (e(t) ? [n] : []));
+                if (t === n || t < 0 || t >= l.length || n < 0 || n >= l.length) return;
+                let s = l.map((e) => i[e]),
+                    [r] = s.splice(t, 1);
+                s.splice(n, 0, r);
+                let u = [...i];
+                for (let [e, t] of l.entries()) u[t] = s[e];
+                o.A.setPendingWidgets(u);
+            })(() => !0, e, t);
         },
         Un: function (e, t, n) {
             let i = h(e);
