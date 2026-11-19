@@ -92,6 +92,7 @@ let v = (e) => {
             } = e,
             d = null != n ? (0, E.Hm)(n, p.intl.currentLocale) : null;
         return (0, l.jsxs)("div", {
+            tabIndex: 0,
             ...c,
             className: f.TW,
             role: "img",
