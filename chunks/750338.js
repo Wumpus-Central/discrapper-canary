@@ -17,7 +17,7 @@ var a = n(477900),
     g = n(129230),
     x = n(676279),
     R = n(406860),
-    A = n(382031),
+    A = n(542348),
     _ = n(652215),
     v = n(693591),
     P = n(505051);
@@ -33,8 +33,8 @@ n.d(
                     description: I,
                     descriptionCta: O,
                     previewImage: C,
-                    videoUrl: T,
-                    shouldLoadVideo: M,
+                    videoUrl: M,
+                    shouldLoadVideo: T,
                     index: j,
                     customVideoStyle: U,
                     isReducedMotion: y,
@@ -151,21 +151,21 @@ n.d(
                 return (0, a.jsxs)("div", {
                     className: r()(P.boxArtContainer, P[`${k}`], V),
                     children: [
-                        null == T && (0, u.O)(C) && "string" != typeof C
+                        null == M && (0, u.O)(C) && "string" != typeof C
                             ? C
                             : (0, a.jsx)(
                                   E.A,
                                   {
                                       playsInline: !0,
-                                      preload: M ? "auto" : "none",
+                                      preload: T ? "auto" : "none",
                                       muted: !0,
                                       poster: C,
                                       loop: !0,
                                       className: r()(J ? P.overlayImage : P.boxVideo, { [U]: null != U }),
                                       ref: W,
-                                      children: (0, a.jsx)("source", { src: T, type: X ? v.a.MP4 : v.a.WEBM }),
+                                      children: (0, a.jsx)("source", { src: M, type: X ? v.a.MP4 : v.a.WEBM }),
                                   },
-                                  T,
+                                  M,
                               ),
                         null != i &&
                             k !== A.A0.LARGE &&
@@ -202,7 +202,7 @@ n.d(
                             (0, a.jsx)("div", {
                                 className: P.backgroundVideoContainer,
                                 children: (0, a.jsx)(N.A, {
-                                    preload: M ? "auto" : "none",
+                                    preload: T ? "auto" : "none",
                                     className: P.backgroundVideo,
                                     src: G,
                                 }),

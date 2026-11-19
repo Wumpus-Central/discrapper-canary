@@ -16,8 +16,9 @@ let l = "steelseries",
     d = "youtube",
     c = "best_buy",
     u = "call_of_duty",
-    _ = new Set([o, d, c, u]),
-    E = [o, l];
+    _ = "voicemod",
+    E = new Set([o, d, c, u]),
+    A = [o, l, _];
 n.d(
     t,
     {},
@@ -32,9 +33,10 @@ n.d(
         NC: d,
         P_: c,
         XY: o,
-        km: _,
-        mY: E,
+        km: E,
+        mY: A,
         pt: s,
         qn: a,
+        uV: _,
     },
 );

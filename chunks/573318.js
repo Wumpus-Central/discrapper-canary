@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677896, Version Hash: 560f28fdccc3f2cb764d1951504e2f224bcbba61`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677906, Version Hash: 3f96e322bb8dd2ec3a14bddd3f55a22b05e132da`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677896";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677906";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -4390,7 +4390,8 @@ let ss = (0, re.Fe)({
                 n.e(97191),
                 n.e(770720),
                 n.e(195830),
-                n.e(338218),
+                n.e(219472),
+                n.e(346170),
                 n.e(846582),
                 n.e(589752),
                 n.e(53719),
@@ -4423,7 +4424,7 @@ let ss = (0, re.Fe)({
                 n.e(494678),
                 n.e(169629),
                 n.e(115472),
-                n.e(494822),
+                n.e(751543),
                 n.e(131687),
                 n.e(834552),
                 n.e(993103),
@@ -5016,7 +5017,7 @@ let ss = (0, re.Fe)({
                 n.e(993720),
                 n.e(725246),
                 n.e(654658),
-                n.e(794962),
+                n.e(214769),
                 n.e(310099),
                 n.e(602938),
                 n.e(895099),
@@ -16016,7 +16017,7 @@ let pp = "isHideDevBanner",
                     className: td()(pI.Wz, pI.mr),
                     children: [
                         (0, v.jsx)(ph, { className: pI.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677896" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677906" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -45199,7 +45200,7 @@ let wJ = (0, tW.Fe)({
     createPromise: () =>
         Promise.all([
             n.e(860350),
-            n.e(431510),
+            n.e(251400),
             n.e(505866),
             n.e(249169),
             n.e(880150),
@@ -45819,7 +45820,8 @@ let wJ = (0, tW.Fe)({
             n.e(97191),
             n.e(770720),
             n.e(195830),
-            n.e(338218),
+            n.e(219472),
+            n.e(346170),
             n.e(846582),
             n.e(589752),
             n.e(53719),
@@ -45872,7 +45874,7 @@ let wJ = (0, tW.Fe)({
             n.e(494678),
             n.e(169629),
             n.e(115472),
-            n.e(494822),
+            n.e(751543),
             n.e(841567),
             n.e(413167),
             n.e(458790),
@@ -46878,7 +46880,7 @@ let wJ = (0, tW.Fe)({
             n.e(654658),
             n.e(968622),
             n.e(127079),
-            n.e(794962),
+            n.e(214769),
             n.e(310099),
             n.e(136017),
             n.e(602938),
@@ -46934,6 +46936,7 @@ let wJ = (0, tW.Fe)({
             n.e(528),
             n.e(143883),
             n.e(823879),
+            n.e(987408),
             n.e(870272),
             n.e(34486),
             n.e(22330),
@@ -47737,7 +47740,7 @@ let Gz = (0, re.Fe)({
                 n.e(144909),
                 n.e(872859),
                 n.e(912261),
-                n.e(431510),
+                n.e(251400),
                 n.e(44141),
                 n.e(959880),
                 n.e(188941),
@@ -48124,7 +48127,7 @@ let xl = (0, re.Fe)({
                 n.e(560338),
                 n.e(144909),
                 n.e(25300),
-                n.e(431510),
+                n.e(251400),
                 n.e(355059),
                 n.e(226589),
                 n.e(611137),
