@@ -18,11 +18,11 @@ n.d(
             let { giftSubscription: t, status: n, canceledAt: i, currentPeriodEnd: l } = e,
                 { recipientUserId: a } = t;
             return t.status === s.E.PENDING
-                ? { kind: "pending", expiresAt: t.acceptanceExpiresAt }
+                ? { kind: "pending", expiresAt: t.acceptanceExpiresAt, isCanceled: null != i }
                 : n === r.Dmq.PAST_DUE || n === r.Dmq.BILLING_RETRY
                   ? { kind: "payment_failed", recipientUserId: a }
                   : null != i || t.status === s.E.ENDED
-                    ? { kind: "canceled", recipientUserId: a }
+                    ? { kind: "canceled", recipientUserId: a, canResubscribe: t.status === s.E.ACTIVE }
                     : { kind: "active", renewsAt: l, recipientUserId: a };
         },
         Tr: function (e) {
