@@ -143,6 +143,7 @@
 .page_QQ_HWZ {
     background-color: var(--background-base-lower);
     border-top: 1px solid var(--border-subtle);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -175,4 +176,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=b023e7665772ed62.css.map*/
+/*# sourceMappingURL=d0734ad9a6421639.css.map*/
