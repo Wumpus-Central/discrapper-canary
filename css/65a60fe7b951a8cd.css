@@ -25,18 +25,6 @@
     background-color: var(--background-mod-strong)
 }
 
-.projectTileBacking_N9h0kO {
-    background-color: var(--background-base-lower);
-    height: 100%;
-    width: 100%
-}
-
-.projectTile_N9h0kO {
-    --custom-conjure-app-icon-tile-size: var(--guildbar-avatar-size);
-    height: 100%;
-    width: 100%
-}
-
 .badge_N9h0kO {
     align-items: center;
     border-radius: 50%;
@@ -621,4 +609,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=5f48ab066d72d44e.css.map*/
+/*# sourceMappingURL=65a60fe7b951a8cd.css.map*/
