@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678492, Version Hash: 3643fedc5842bdb89db4044ee3d8e0439e39a864`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678496, Version Hash: 351db3d78fa16f214d8a791899b56a6c3510825f`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678492";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678496";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -3055,6 +3055,7 @@ let rg = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -3075,7 +3076,6 @@ let rg = (0, re.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -3519,60 +3519,65 @@ function r6(e) {
 var r5 = n(845311),
     r7 = n(605117),
     r8 = n(960498);
-function r4() {
-    let e = !(0, r7.c)(),
-        t = (0, e_.bG)([r1], () => r1.getOnlineFriendCount()),
-        n = eh.useRef(null),
-        i = (0, t_.A)(),
-        [r, a] = (0, rc.kn)(i || e ? [] : [rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], { bypassAutoDismiss: !0 }),
-        s = r === rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK,
-        [l, o] = eh.useState(null);
+function r4(e) {
+    let { hidden: t } = e,
+        n = !(0, r7.c)(),
+        i = (0, e_.bG)([r1], () => r1.getOnlineFriendCount()),
+        r = eh.useRef(null),
+        a = (0, t_.A)(),
+        [s, l] = (0, rc.kn)(a || n || t ? [] : [rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], {
+            bypassAutoDismiss: !0,
+        }),
+        o = s === rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK,
+        [d, c] = eh.useState(null);
     eh.useEffect(() => {
-        if (!s) return;
-        let e = n.current?.parentElement;
+        if (!o) return;
+        let e = r.current?.parentElement;
         if (null == e) return;
         let t = new ResizeObserver((e) => {
             let [t] = e;
-            return o(t.contentRect.width);
+            return c(t.contentRect.width);
         });
         return (t.observe(e), () => t.disconnect());
-    }, [s]);
-    let { analyticsLocations: d } = (0, rH.Ay)(),
-        c = eh.useCallback(() => {
-            (a(rE.i.TAKE_ACTION),
-                (0, rW.RQ)({ open: !e, source: rW.TY.TOGGLE_BUTTON, analyticsLocations: d }),
-                rV.A.setFriendsSidebarCollapsed(e));
-        }, [e, a, d]),
-        u = eh.useCallback(() => {
+    }, [o]);
+    let { analyticsLocations: u } = (0, rH.Ay)(),
+        _ = eh.useCallback(() => {
+            (l(rE.i.TAKE_ACTION),
+                (0, rW.RQ)({ open: !n, source: rW.TY.TOGGLE_BUTTON, analyticsLocations: u }),
+                rV.A.setFriendsSidebarCollapsed(n));
+        }, [n, l, u]),
+        E = eh.useCallback(() => {
             rV.A.setFriendsSidebarCollapsed(!1);
         }, []),
-        _ = e ? tN.intl.string(r3.default.ZsAL7q) : tN.intl.string(r3.default.sgse8P);
+        A = n ? tN.intl.string(r3.default.ZsAL7q) : tN.intl.string(r3.default.sgse8P);
     return (0, v.jsxs)(v.Fragment, {
         children: [
             (0, v.jsx)(rR.m, {
                 position: "bottom",
-                text: _,
+                text: A,
                 ariaHidden: !0,
                 children: (0, v.jsxs)(tc.D, {
-                    innerRef: n,
+                    innerRef: r,
                     tag: "div",
                     role: "button",
-                    "aria-label": _,
-                    "aria-pressed": e,
-                    onClick: c,
-                    className: r8.j,
+                    "aria-label": A,
+                    "aria-pressed": n,
+                    onClick: _,
+                    className: td()(r8.j, { [r8.R]: t }),
                     children: [
-                        (0, v.jsx)(r5.A, { hasOnlineFriends: t > 0 }),
-                        (0, v.jsx)(rB.E, { variant: "body-sm/semibold", color: "text-subtle", children: t }),
+                        (0, v.jsx)(r5.A, { hasOnlineFriends: i > 0 }),
+                        (0, v.jsx)(rB.E, { variant: "body-sm/semibold", color: "text-subtle", children: i }),
                     ],
                 }),
             }),
-            s && null != l && (0, v.jsx)(r6, { targetElementRef: n, markAsDismissed: a, onShowFriendsList: u }, l),
+            o && null != d && (0, v.jsx)(r6, { targetElementRef: r, markAsDismissed: l, onShowFriendsList: E }, d),
         ],
     });
 }
 function r9() {
-    return (0, e_.bG)([rj.Ay], () => rj.Ay.isFriendsSidebarAvailable()) ? (0, v.jsx)(r4, {}) : null;
+    let e = (0, e_.bG)([rj.Ay], () => rj.Ay.isFriendsSidebarAvailable()),
+        t = (0, e_.bG)([rv.A], () => rv.A.isTabBarVisible());
+    return e || t ? (0, v.jsx)(r4, { hidden: !e }) : null;
 }
 var ae = n(76268),
     at = n(646514),
@@ -4593,6 +4598,7 @@ let ss = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(918024),
                 n.e(902564),
                 n.e(884601),
@@ -4614,7 +4620,6 @@ let ss = (0, re.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -4881,6 +4886,7 @@ let ss = (0, re.Fe)({
                 n.e(507127),
                 n.e(932011),
                 n.e(384820),
+                n.e(156132),
                 n.e(571294),
                 n.e(101851),
                 n.e(154168),
@@ -4994,7 +5000,6 @@ let ss = (0, re.Fe)({
                 n.e(562345),
                 n.e(410194),
                 n.e(87641),
-                n.e(156132),
                 n.e(488292),
                 n.e(939081),
                 n.e(836483),
@@ -5084,7 +5089,8 @@ function sd() {
     ]).then(n.bind(n, 824042));
 }
 let sc = (0, re.Fe)({
-        createPromise: () => Promise.all([n.e(972399), n.e(736926), n.e(912601), n.e(450309)]).then(n.bind(n, 996646)),
+        createPromise: () =>
+            Promise.all([n.e(972399), n.e(102698), n.e(736926), n.e(912601), n.e(450309)]).then(n.bind(n, 996646)),
         webpackId: 996646,
         name: "ChannelTabBar",
     }),
@@ -11091,6 +11097,7 @@ let EI =
                             n.e(491793),
                             n.e(889638),
                             n.e(553984),
+                            n.e(102698),
                             n.e(902564),
                             n.e(884601),
                             n.e(782969),
@@ -11111,7 +11118,6 @@ let EI =
                             n.e(676156),
                             n.e(852617),
                             n.e(256769),
-                            n.e(102698),
                             n.e(125964),
                             n.e(415266),
                             n.e(737021),
@@ -16046,7 +16052,7 @@ let pO = "isHideDevBanner",
                     className: td()(pC.Wz, pC.mr),
                     children: [
                         (0, v.jsx)(pN, { className: pC.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678492" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678496" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -19262,6 +19268,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -19281,7 +19288,6 @@ let Sl = (0, tW.Fe)({
                 n.e(225575),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -20232,6 +20238,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -20252,7 +20259,6 @@ let Sl = (0, tW.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -20900,6 +20906,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -20920,7 +20927,6 @@ let Sl = (0, tW.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -21567,6 +21573,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -21586,7 +21593,6 @@ let Sl = (0, tW.Fe)({
                 n.e(225575),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -22117,6 +22123,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -22137,7 +22144,6 @@ let Sl = (0, tW.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -22506,8 +22512,8 @@ let Sl = (0, tW.Fe)({
                 n.e(655708),
                 n.e(632756),
                 n.e(35771),
-                n.e(741678),
                 n.e(102698),
+                n.e(741678),
                 n.e(138830),
                 n.e(432209),
                 n.e(480436),
@@ -23396,6 +23402,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -23415,7 +23422,6 @@ let Sl = (0, tW.Fe)({
                 n.e(225575),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -23894,6 +23900,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -23914,7 +23921,6 @@ let Sl = (0, tW.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -24534,6 +24540,7 @@ let Sl = (0, tW.Fe)({
                     n.e(491793),
                     n.e(889638),
                     n.e(553984),
+                    n.e(102698),
                     n.e(902564),
                     n.e(884601),
                     n.e(782969),
@@ -24554,7 +24561,6 @@ let Sl = (0, tW.Fe)({
                     n.e(676156),
                     n.e(852617),
                     n.e(256769),
-                    n.e(102698),
                     n.e(125964),
                     n.e(415266),
                     n.e(737021),
@@ -25214,6 +25220,7 @@ let Sl = (0, tW.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -25233,7 +25240,6 @@ let Sl = (0, tW.Fe)({
                 n.e(225575),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -27483,6 +27489,7 @@ let N6 = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -27502,7 +27509,6 @@ let N6 = (0, re.Fe)({
                 n.e(225575),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -29566,6 +29572,7 @@ let Rt = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(918024),
                 n.e(902564),
                 n.e(884601),
@@ -29587,7 +29594,6 @@ let Rt = (0, re.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -30485,6 +30491,7 @@ let Rt = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -30505,7 +30512,6 @@ let Rt = (0, re.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -31179,6 +31185,7 @@ let Rt = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(918024),
                 n.e(902564),
                 n.e(884601),
@@ -31200,7 +31207,6 @@ let Rt = (0, re.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),
@@ -38473,6 +38479,7 @@ let bM = {
                             n.e(491793),
                             n.e(889638),
                             n.e(553984),
+                            n.e(102698),
                             n.e(902564),
                             n.e(884601),
                             n.e(782969),
@@ -38492,7 +38499,6 @@ let bM = {
                             n.e(225575),
                             n.e(852617),
                             n.e(256769),
-                            n.e(102698),
                             n.e(125964),
                             n.e(415266),
                             n.e(737021),
@@ -46197,6 +46203,7 @@ let w5 = (0, tW.Fe)({
             n.e(553984),
             n.e(454625),
             n.e(444376),
+            n.e(102698),
             n.e(918024),
             n.e(488990),
             n.e(902564),
@@ -46226,7 +46233,6 @@ let w5 = (0, tW.Fe)({
             n.e(852617),
             n.e(35403),
             n.e(256769),
-            n.e(102698),
             n.e(125964),
             n.e(415266),
             n.e(959134),
@@ -46344,6 +46350,7 @@ let w5 = (0, tW.Fe)({
             n.e(733416),
             n.e(838090),
             n.e(692484),
+            n.e(97210),
             n.e(919726),
             n.e(617823),
             n.e(571180),
@@ -46359,7 +46366,6 @@ let w5 = (0, tW.Fe)({
             n.e(305557),
             n.e(321640),
             n.e(938579),
-            n.e(97210),
             n.e(363618),
             n.e(644816),
             n.e(36227),
@@ -46704,6 +46710,7 @@ let w5 = (0, tW.Fe)({
             n.e(932011),
             n.e(384820),
             n.e(102657),
+            n.e(156132),
             n.e(695067),
             n.e(752516),
             n.e(571294),
@@ -46864,7 +46871,6 @@ let w5 = (0, tW.Fe)({
             n.e(563510),
             n.e(410194),
             n.e(87641),
-            n.e(156132),
             n.e(488292),
             n.e(939081),
             n.e(836483),
@@ -48833,6 +48839,7 @@ let xA = (0, re.Fe)({
                 n.e(491793),
                 n.e(889638),
                 n.e(553984),
+                n.e(102698),
                 n.e(902564),
                 n.e(884601),
                 n.e(782969),
@@ -48853,7 +48860,6 @@ let xA = (0, re.Fe)({
                 n.e(676156),
                 n.e(852617),
                 n.e(256769),
-                n.e(102698),
                 n.e(125964),
                 n.e(415266),
                 n.e(737021),

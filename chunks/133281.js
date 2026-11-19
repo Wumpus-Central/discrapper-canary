@@ -1,17 +1,20 @@
-e.exports = {
+t.exports = {
     Mf: "tab_ve0N80",
     yR: "tabActive_ve0N80",
     MY: "tabEntering_ve0N80",
     nE: "tabClosing_ve0N80",
     eg: "tabButton_ve0N80",
+    XH: "tabButtonContent_ve0N80",
+    Pq: "trail_ve0N80",
     j1: "channelTypeIcon_ve0N80",
     Av: "channelTypeIconConnected_ve0N80",
     HA: "channelName_ve0N80",
     $f: "guildIcon_ve0N80",
     ro: "dmIcon_ve0N80",
     NR: "locationIcon_ve0N80",
+    XE: "trailDuration_ve0N80",
     Xe: "trailMention_ve0N80",
     Pu: "trailButton_ve0N80",
-    XE: "unreadIndicator_ve0N80",
+    o2: "unreadIndicator_ve0N80",
     zL: "tabWithTrailControl_ve0N80",
 };

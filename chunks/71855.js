@@ -73,8 +73,8 @@ n.d(
             });
         },
         m2: function (e) {
-            let { isPopoutWindow: t } = e;
-            return t ? "refresh-title-bar-small" : void 0;
+            let { isPopoutWindow: t, hasChannelTabs: n } = e;
+            return t ? "refresh-title-bar-small" : n ? "refresh-title-bar-large" : void 0;
         },
         v5: function (e) {
             let { fixed: t = !1, show: n, windowKey: a, isLayerOpen: l } = e,
