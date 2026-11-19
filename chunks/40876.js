@@ -118,6 +118,7 @@ let r = {
             "CONNECTION_RESUMED",
             "CONNECTION_CLOSED",
             "CONNECTION_INTERRUPTED",
+            "LOGOUT",
             "SELF_PRESENCE_STORE_UPDATE",
         ],
         inlineRequire: () => n(486917).A,
