@@ -192,8 +192,8 @@ var k = n(866665),
     Y = n(61916),
     X = n(223863),
     $ = n(994500),
-    J = n(287809),
-    q = n(427262),
+    q = n(287809),
+    J = n(427262),
     Z = n(487470);
 function Q(e) {
     let { withDivider: t = !1 } = e,
@@ -241,8 +241,8 @@ function Q(e) {
                                               "aria-label": O.intl.formatToPlainString(D.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
-                                                          ? q.Ay.getName(e.record)
-                                                          : (0, z.m1)(e.record, J.default, $.A),
+                                                          ? J.Ay.getName(e.record)
+                                                          : (0, z.m1)(e.record, q.default, $.A),
                                               }),
                                               onClick: () =>
                                                   (async function (e) {

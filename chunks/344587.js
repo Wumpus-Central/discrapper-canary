@@ -7,12 +7,12 @@ n.d(
         Q: function (e) {
             let [t, n] = l.useState(e),
                 [r, s] = l.useState("idle"),
-                [i, u] = l.useState(e),
-                o = (0, a.j)();
+                [i, o] = l.useState(e),
+                d = (0, a.j)();
             return (
                 i !== e
-                    ? (u(e), s(o && e !== t ? "exit" : "idle"), o || n(e))
-                    : o || ("idle" === r && t === i) || (n(i), s("idle")),
+                    ? (o(e), s(d && e !== t ? "exit" : "idle"), d || n(e))
+                    : d || ("idle" === r && t === i) || (n(i), s("idle")),
                 l.useEffect(() => {
                     if ("exit" !== r) return;
                     let e = setTimeout(() => {

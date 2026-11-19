@@ -3,16 +3,16 @@ var l = n(395592),
     a = n(191850),
     i = n(792996);
 let s = { ok: !1, code: "failed", message: "" };
-async function u(e, t) {
+async function o(e, t) {
     return (await (0, l.x)(e, () => t().catch(() => s))) ?? s;
 }
 n.d(
     t,
     {},
     {
-        b: u,
+        b: o,
         c: function (e, t) {
-            return u(e, () => (0, r.$D)(e, t.id)).then((e) =>
+            return o(e, () => (0, r.$D)(e, t.id)).then((e) =>
                 e.ok ? null : i.intl.string("unconfirmed" === e.code ? a.default.iqN7YA : a.default.Npmmnp),
             );
         },

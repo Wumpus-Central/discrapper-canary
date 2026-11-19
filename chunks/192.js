@@ -1,7 +1,7 @@
-var i = t(477900),
-    l = t(582128),
-    r = t(775602),
-    a = t(818348);
+var i = n(477900),
+    l = n(582128),
+    r = n(775602),
+    a = n(818348);
 let s = l.createContext(null),
     o = {
         registerManageWidgetButtonRef: () => a.tE,
@@ -9,46 +9,46 @@ let s = l.createContext(null),
         getManageButtonForWidget: () => null,
         focusAddedWidget: a.tE,
     };
-t.d(
-    n,
+n.d(
+    t,
     {},
     {
         D: function (e) {
-            let { children: n } = e,
-                t = l.useRef(new Map()),
+            let { children: t } = e,
+                n = l.useRef(new Map()),
                 a = l.useRef(new Map()),
                 o = l.useCallback(
-                    (e, n) => (i) => {
+                    (e, t) => (i) => {
                         null != i
-                            ? (t.current.set(e, i), a.current.set(n, i))
-                            : (t.current.delete(e), a.current.delete(n));
+                            ? (n.current.set(e, i), a.current.set(t, i))
+                            : (n.current.delete(e), a.current.delete(t));
                     },
                     [],
                 ),
-                d = l.useCallback((e) => {
+                c = l.useCallback((e) => {
                     requestAnimationFrame(() => {
-                        let n = t.current.get(e);
-                        n?.focus();
+                        let t = n.current.get(e);
+                        t?.focus();
                     });
                 }, []),
-                c = l.useCallback((e) => t.current.get(e) ?? null, []),
+                d = l.useCallback((e) => n.current.get(e) ?? null, []),
                 u = l.useCallback((e) => {
                     r.Ay.keyboardModeEnabled &&
                         requestAnimationFrame(() => {
-                            let n = a.current.get(e);
-                            null != n && document.activeElement?.contains(n) && n.focus();
+                            let t = a.current.get(e);
+                            null != t && document.activeElement?.contains(t) && t.focus();
                         });
                 }, []),
                 g = l.useMemo(
                     () => ({
                         registerManageWidgetButtonRef: o,
-                        manageFocusOnReorder: d,
-                        getManageButtonForWidget: c,
+                        manageFocusOnReorder: c,
+                        getManageButtonForWidget: d,
                         focusAddedWidget: u,
                     }),
-                    [o, d, c, u],
+                    [o, c, d, u],
                 );
-            return (0, i.jsx)(s.Provider, { value: g, children: n });
+            return (0, i.jsx)(s.Provider, { value: g, children: t });
         },
         r: function () {
             return l.useContext(s) ?? o;

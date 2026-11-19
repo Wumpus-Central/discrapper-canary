@@ -1,8 +1,8 @@
 var l = n(164636),
     s = n(5180),
     a = n(260509),
-    i = n(71393),
-    r = n(652215),
+    r = n(71393),
+    i = n(652215),
     o = n(746080);
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -12,13 +12,13 @@ function c(e) {
             null == e ||
             !(function (e) {
                 if (null == e) return !1;
-                let t = i.A.getGuild(e?.guild_id ?? ""),
+                let t = r.A.getGuild(e?.guild_id ?? ""),
                     n = null != t && t.rulesChannelId === e.id,
                     l = (0, a.wh)(t);
-                return r.kvI.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !n && !l;
+                return i.kvI.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !n && !l;
             })(e) ||
             (!1 === t && e.hasFlag(o.lx.SUMMARIES_DISABLED))
-        ) && u(i.A.getGuild(e.guild_id), n)
+        ) && u(r.A.getGuild(e.guild_id), n)
     );
 }
 function u(e) {
@@ -26,9 +26,9 @@ function u(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
         null != e &&
-        !(null != (t = e.id) && (t === r.ME || (0, s.ai)(t))) &&
-        !!e.features.has(r.GuildFeatures.SUMMARIES_ENABLED_GA) &&
-        (!n || e.features.has(r.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
+        !(null != (t = e.id) && (t === i.ME || (0, s.ai)(t))) &&
+        !!e.features.has(i.GuildFeatures.SUMMARIES_ENABLED_GA) &&
+        (!n || e.features.has(i.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
     );
 }
 n.d(
@@ -47,7 +47,7 @@ n.d(
         vC: function (e) {
             return (
                 arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                (0, l.bG)([i.A], () => u(i.A.getGuild(e?.id ?? ""), !1), [e])
+                (0, l.bG)([r.A], () => u(r.A.getGuild(e?.id ?? ""), !1), [e])
             );
         },
     },

@@ -1,6 +1,6 @@
 n.d(t, {
-    K8: () => J,
-    YX: () => q,
+    K8: () => q,
+    YX: () => J,
     Gw: () => Z,
     Mr: () => Q,
     jz: () => X,
@@ -311,7 +311,7 @@ function $(e) {
         markAsDismissed: n,
     });
 }
-function J(e) {
+function q(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         { gameName: s, gameName2: r } = (0, f.A)(),
         a = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
@@ -347,7 +347,7 @@ function J(e) {
         markAsDismissed: n,
     });
 }
-function q(e) {
+function J(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e,
         r = (0, j.A)(t);
     return (0, l.jsx)(ee, {

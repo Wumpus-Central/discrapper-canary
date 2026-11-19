@@ -3,8 +3,8 @@ var r = n(839214),
     i = n(46676),
     a = n(78564);
 let o = [3, 6, 12],
-    u = [10, 20, 40],
-    c = new Map(),
+    c = [10, 20, 40],
+    u = new Map(),
     s = (0, r.D)(() => ({ byProject: {} })),
     d = {
         active: !0,
@@ -30,7 +30,7 @@ function h(e, t) {
     s.setState({ byProject: { ...l, [e]: r } });
 }
 function p(e) {
-    return c.get(e)?.() ?? Promise.resolve(null);
+    return u.get(e)?.() ?? Promise.resolve(null);
 }
 function g(e) {
     if (null == f(e)) return;
@@ -42,7 +42,7 @@ n.d(
     {},
     {
         C: p,
-        Cw: u,
+        Cw: c,
         It: g,
         K7: f,
         KZ: function (e, t) {
@@ -55,7 +55,7 @@ n.d(
             h(e, (e) => ({ ...e, chatFocusRequest: e.chatFocusRequest + 1 }));
         },
         Qq: function (e) {
-            return "marker" === e.tool ? o[e.markerSize] : "eraser" === e.tool ? u[e.eraserSize] : null;
+            return "marker" === e.tool ? o[e.markerSize] : "eraser" === e.tool ? c[e.eraserSize] : null;
         },
         V9: function (e) {
             let t = f(e);
@@ -93,7 +93,7 @@ n.d(
             });
         },
         j5: function (e, t) {
-            null == t ? c.delete(e) : c.set(e, t);
+            null == t ? u.delete(e) : u.set(e, t);
         },
         lQ: function (e) {
             return s.useState((t) => null != e && t.byProject[e]?.active === !0);

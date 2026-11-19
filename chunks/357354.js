@@ -474,8 +474,8 @@ var eZ = n(404778),
     e6 = n(631305),
     e8 = n(727419),
     e4 = n(931991),
-    e7 = n(473145),
-    e9 = n(598933),
+    e9 = n(473145),
+    e7 = n(598933),
     te = n(136123);
 let tt = function (e) {
     let { className: t, guildId: n, channel: r, shouldTrackUpsellViewed: a, setTrackedUpsellViewed: o } = e,
@@ -483,7 +483,7 @@ let tt = function (e) {
         { analyticsLocations: c } = (0, W.Ay)(),
         h = (0, d.bG)([ep.A], () => ep.A.getGuild(n)),
         { canManageAllExpressions: m } = (0, e4.nr)(h),
-        f = null != h && 0 === (0, e7.aG)(h.premiumTier) && !h.features.has(eC.GuildFeatures.MORE_STICKERS);
+        f = null != h && 0 === (0, e9.aG)(h.premiumTier) && !h.features.has(eC.GuildFeatures.MORE_STICKERS);
     return (i.useEffect(() => {
         m &&
             f &&
@@ -508,7 +508,7 @@ let tt = function (e) {
                           color: "interactive-text-default",
                           className: te.rf,
                           variant: "body-sm/normal",
-                          children: eb.intl.format(eb.t.AXWla1, { count: (0, e7.aG)(eC.TVA.TIER_1) }),
+                          children: eb.intl.format(eb.t.AXWla1, { count: (0, e9.aG)(eC.TVA.TIER_1) }),
                       }),
                       (0, l.jsx)(e3.Q, {
                           variant: "primary",
@@ -519,7 +519,7 @@ let tt = function (e) {
                                       analyticsLocations: c,
                                       analyticsSourceLocation: u,
                                       guild: h,
-                                      perks: (0, e9.q5)(),
+                                      perks: (0, e7.q5)(),
                                   });
                           },
                       }),
@@ -1606,8 +1606,8 @@ function t3(e) {
 var t6 = n(970099);
 let t8 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     t4 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    t7 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    t9 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    t9 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    t7 = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     ne = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     nt = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     nn = (0, X.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
@@ -1686,8 +1686,8 @@ function na(e) {
             collapsedStickersCategories: k,
             collapsePremiumSearchSection: u && k.has(tV),
             listWidth: N,
-            listPaddingRight: t7,
-            stickerNodeMargin: Y ? t9 : ne,
+            listPaddingRight: t9,
+            stickerNodeMargin: Y ? t7 : ne,
             stickerNodeWidth: Y ? nl : ni,
         }),
         {

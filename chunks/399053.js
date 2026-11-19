@@ -3,8 +3,8 @@ var l = n(477900),
     a = n(582128),
     r = n(66455),
     i = n(607470),
-    u = n(609174),
-    s = n(367974),
+    s = n(609174),
+    u = n(367974),
     c = n(77729),
     o = n(292490);
 function d(e) {
@@ -13,7 +13,7 @@ function d(e) {
 }
 function f(e) {
     let { children: t, ref: n } = e,
-        r = (0, u.Y_)();
+        r = (0, s.Y_)();
     return (
         a.useImperativeHandle(n, () => ({ releaseSource() {}, seek() {} }), []),
         (0, l.jsxs)("div", {
@@ -31,7 +31,7 @@ function p(e) {
             children: p,
             ref: m,
         } = e,
-        v = (0, u.Y_)(),
+        v = (0, s.Y_)(),
         h = a.useRef(null),
         x = (0, r.A)(v.editMetadata?.start ?? 0),
         C = (0, a.useMemo)(
@@ -41,8 +41,8 @@ function p(e) {
                     : c.A.clips.getClipProtocolURLFromPath(v.filepath),
             [v],
         ),
-        k = 0 === v.length,
-        y = a.useCallback(
+        y = 0 === v.length,
+        k = a.useCallback(
             (e) => {
                 let t = h.current;
                 if (null == t) return;
@@ -56,27 +56,27 @@ function p(e) {
         m,
         () => ({
             releaseSource() {
-                (0, s.A)(h.current);
+                (0, u.A)(h.current);
             },
             seek(e) {
-                y(e);
+                k(e);
             },
         }),
-        [y],
+        [k],
     );
     let g = a.useCallback(
             (e) => {
                 if (!n || null == h.current) return;
                 let t = h.current.getBoundingClientRect();
-                y(((e.clientX - t.left) / t.width) * 100);
+                k(((e.clientX - t.left) / t.width) * 100);
             },
-            [h, n, y],
+            [h, n, k],
         ),
         b = a.useRef(null),
-        j = a.useRef(t);
+        A = a.useRef(t);
     return (
         a.useEffect(() => {
-            if (((j.current = t), k)) return;
+            if (((A.current = t), y)) return;
             let e = h.current;
             if (null != e)
                 if (t) {
@@ -86,20 +86,20 @@ function p(e) {
                     ((b.current = t), t.catch(() => {}));
                 } else {
                     let t = b.current;
-                    ((b.current = null), null != t ? t.then(() => j.current || e.pause()).catch(() => {}) : e.pause());
+                    ((b.current = null), null != t ? t.then(() => A.current || e.pause()).catch(() => {}) : e.pause());
                 }
-        }, [t, h, k, x]),
+        }, [t, h, y, x]),
         a.useEffect(() => {
-            if (k || null == C) return;
+            if (y || null == C) return;
             let e = h.current;
             if (null != e)
                 return () => {
-                    (0, s.A)(e);
+                    (0, u.A)(e);
                 };
-        }, [C, h, k]),
+        }, [C, h, y]),
         a.useEffect(() => {
             let e = h?.current;
-            if (null == e || k || null == f) return;
+            if (null == e || y || null == f) return;
             let t = null;
             function n() {
                 if (null == e || null == f) return;
@@ -130,12 +130,12 @@ function p(e) {
                         e.removeEventListener("ended", a));
                 }
             );
-        }, [h, k, v.editMetadata, f]),
+        }, [h, y, v.editMetadata, f]),
         (0, l.jsxs)("div", {
             className: o.Q,
             onMouseMove: g,
             children: [
-                k
+                y
                     ? (0, l.jsx)("img", { alt: "", src: v.thumbnail, className: o.f, loading: "lazy" })
                     : null != C
                       ? (0, l.jsx)(i.A, {

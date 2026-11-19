@@ -1,5 +1,5 @@
-var n = r(477900),
-    l = r(582128),
+var l = r(477900),
+    n = r(582128),
     a = r(477262),
     i = r(432017),
     s = r(81369),
@@ -11,7 +11,7 @@ var n = r(477900),
     m = r(663341),
     p = r(191850),
     h = r(792996);
-let x = [
+let g = [
     {
         id: "add-images-videos",
         label: p.default["51+9lc"],
@@ -37,77 +37,77 @@ r.d(
                     buttonClassName: a,
                     iconClassName: i,
                     onAddFiles: s,
-                    onImport: g,
-                    onSendToOtherProjects: j,
+                    onImport: x,
+                    onSendToOtherProjects: b,
                 } = e,
-                b = l.useRef(null),
-                v = l.useRef(null),
-                C = h.intl.string(h.t.d56gCa),
-                w = l.useCallback((e) => {
-                    let t = b.current;
+                j = n.useRef(null),
+                v = n.useRef(null),
+                y = h.intl.string(h.t.d56gCa),
+                C = n.useCallback((e) => {
+                    let t = j.current;
                     null != t && ((t.accept = e), t.click());
                 }, []),
-                y = l.useCallback(
+                w = n.useCallback(
                     (e) => {
                         (s(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
                     },
                     [s],
                 );
-            return (0, n.jsxs)(n.Fragment, {
+            return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, n.jsx)("input", {
-                        ref: b,
+                    (0, l.jsx)("input", {
+                        ref: j,
                         type: "file",
                         multiple: !0,
                         hidden: !0,
-                        onChange: y,
+                        onChange: w,
                         tabIndex: -1,
                         "aria-hidden": !0,
                     }),
-                    (0, n.jsx)(o.Y, {
+                    (0, l.jsx)(o.Y, {
                         targetElementRef: v,
                         position: "top",
                         align: "left",
                         animation: o.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: r } = e;
-                            return (0, n.jsx)(c.W, {
+                            return (0, l.jsx)(c.W, {
                                 "data-menu-migrated": !0,
                                 navId: t,
-                                "aria-label": C,
+                                "aria-label": y,
                                 onClose: r,
                                 onSelect: r,
-                                children: (0, n.jsxs)(u.rX, {
+                                children: (0, l.jsxs)(u.rX, {
                                     children: [
-                                        x.map((e) =>
-                                            (0, n.jsx)(
+                                        g.map((e) =>
+                                            (0, l.jsx)(
                                                 u.Dr,
                                                 {
                                                     id: e.id,
                                                     label: h.intl.string(e.label),
                                                     iconLeft: e.icon,
                                                     leadingAccessory: { type: "icon", icon: e.icon },
-                                                    action: () => w(e.accept),
+                                                    action: () => C(e.accept),
                                                 },
                                                 e.id,
                                             ),
                                         ),
-                                        null != g
-                                            ? (0, n.jsx)(u.Dr, {
+                                        null != x
+                                            ? (0, l.jsx)(u.Dr, {
                                                   id: "import-project",
                                                   label: h.intl.string(p.default["p/k5i7"]),
                                                   iconLeft: d.BrowserPlusIcon,
                                                   leadingAccessory: { type: "icon", icon: d.BrowserPlusIcon },
-                                                  action: g,
+                                                  action: x,
                                               })
                                             : null,
-                                        null != j
-                                            ? (0, n.jsx)(u.Dr, {
+                                        null != b
+                                            ? (0, l.jsx)(u.Dr, {
                                                   id: "send-to-other-projects",
                                                   label: h.intl.string(p.default["5HmLrK"]),
                                                   iconLeft: f.ChatArrowRightIcon,
                                                   leadingAccessory: { type: "icon", icon: f.ChatArrowRightIcon },
-                                                  action: j,
+                                                  action: b,
                                               })
                                             : null,
                                     ],
@@ -115,17 +115,17 @@ r.d(
                             });
                         },
                         children: (e, t) => {
-                            let { isShown: l } = t;
-                            return (0, n.jsx)("button", {
+                            let { isShown: n } = t;
+                            return (0, l.jsx)("button", {
                                 ...e,
                                 ref: v,
                                 type: "button",
                                 className: a,
                                 disabled: r,
-                                "aria-label": C,
+                                "aria-label": y,
                                 "aria-haspopup": "menu",
-                                "aria-expanded": l,
-                                children: (0, n.jsx)(m.PlusLargeIcon, {
+                                "aria-expanded": n,
+                                children: (0, l.jsx)(m.PlusLargeIcon, {
                                     size: "refresh_sm",
                                     color: "currentColor",
                                     className: i,

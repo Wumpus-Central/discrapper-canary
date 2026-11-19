@@ -1,25 +1,25 @@
-t.d(n, { hO: () => h });
-var i = t(435558),
-    l = t.n(i),
-    r = t(826059),
-    a = t(478676),
-    s = t.n(a),
-    o = t(182490);
-let d = {
+n.d(t, { hO: () => h });
+var i = n(435558),
+    l = n.n(i),
+    r = n(826059),
+    a = n(478676),
+    s = n.n(a),
+    o = n(182490);
+let c = {
     ...s().defaultRules.image,
     order: s().defaultRules.link.order - 0.5,
     requiredFirstCharacters: ["!"],
     parse: (e) => ({ type: o.D.TEXT, content: e[0] }),
 };
-var c = t(862316),
-    u = t(605275);
-let g = (0, t(551965).A)([
+var d = n(862316),
+    u = n(605275);
+let g = (0, n(551965).A)([
         l().pick(u.Ay.RULES, ["text", "link"]),
-        { image: d },
-        (0, c.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0, enableEmojiClick: !1, emojiFocusable: !1 }),
+        { image: c },
+        (0, d.Ay)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0, enableEmojiClick: !1, emojiFocusable: !1 }),
     ]),
-    m = r.aV(g);
-function h(e, n) {
-    return m(e, !0, { allowLinks: !0, ...n });
+    f = r.aV(g);
+function h(e, t) {
+    return f(e, !0, { allowLinks: !0, ...t });
 }
 r.X(g);

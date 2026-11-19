@@ -1,24 +1,24 @@
 var l = n(582128),
     s = n(435558),
     a = n.n(s),
-    i = n(164636),
-    r = n(620632),
+    r = n(164636),
+    i = n(620632),
     o = n(73153),
     c = n(627784),
     u = n(432371),
     d = n(225123),
     m = n(734057),
     h = n(927813),
-    f = n(391820),
-    p = n(652215);
+    p = n(391820),
+    f = n(652215);
 let g = 30 * h.A.Millis.SECOND;
-async function A(e) {
+async function C(e) {
     let t, n;
-    if (!f.A.shouldFetch(e)) return;
+    if (!p.A.shouldFetch(e)) return;
     let l = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: l });
     try {
-        n = await r.Bo.get({ url: p.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
+        n = await i.Bo.get({ url: f.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
     } catch (e) {
         t = new c.LG(e);
     }
@@ -33,7 +33,7 @@ async function A(e) {
             receivedAt: Date.now(),
         }));
 }
-function C(e, t) {
+function A(e, t) {
     o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
 }
 function x(e, t) {
@@ -41,11 +41,11 @@ function x(e, t) {
         null != t &&
         (async function (e, t) {
             let n, l;
-            if (!f.A.shouldFetch(e, t)) return;
+            if (!p.A.shouldFetch(e, t)) return;
             let s = Date.now();
             o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: s });
             try {
-                let n = await r.Bo.get({ url: p.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
+                let n = await i.Bo.get({ url: f.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
                 l = n?.body;
             } catch (e) {
                 n = new c.LG(e);
@@ -64,10 +64,10 @@ function x(e, t) {
 function E(e, t) {
     o.h.dispatch({ type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: e ?? null, bottomVisibleMessage: t ?? null });
 }
-function _(e, t) {
+function j(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function N(e) {
+async function _(e) {
     let t,
         n,
         { useQuickSwitcher: l = !0, useChannelAffinities: s = !0 } =
@@ -77,14 +77,14 @@ async function N(e) {
     if (
         0 ===
         (e = e
-            .concat(f.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: s }))
+            .concat(p.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: s }))
             .filter((e) => {
                 let t = m.A.getChannel(e);
                 return (0, u.pk)(t, !1, !0);
             })
             .filter((e) => {
                 let t = Date.now(),
-                    n = f.A.status(e);
+                    n = p.A.status(e);
                 if (n?.fetching) return !1;
                 let l = n?.lastReceivedAt;
                 return null == l || t - l > g;
@@ -94,43 +94,43 @@ async function N(e) {
         return Promise.resolve(null);
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: a });
     try {
-        n = await r.Bo.post({ url: p.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
+        n = await i.Bo.post({ url: f.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
     } catch (e) {
         t = new c.LG(e);
     }
-    let i = n?.body.summaries;
+    let r = n?.body.summaries;
     o.h.dispatch({
         type: "RECEIVE_CHANNEL_SUMMARIES_BULK",
         requestedAt: a,
         receivedAt: Date.now(),
-        summaries: i,
+        summaries: r,
         requestArgs: { channelIds: e },
         error: t,
     });
 }
-async function j(e) {
+async function N(e) {
     try {
-        (await r.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
+        (await i.Bo.del({ url: f.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
         throw new c.LG(e);
     }
 }
-let I =
+let v =
         221552 == n.j
             ? {
-                  setSummaryFeedback: _,
+                  setSummaryFeedback: j,
                   updateVisibleMessages: E,
                   setSelectedSummary: x,
-                  setHighlightedSummary: C,
-                  fetchSummaries: A,
-                  fetchSummariesBulk: N,
+                  setHighlightedSummary: A,
+                  fetchSummaries: C,
+                  fetchSummariesBulk: _,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
                           !(function () {
                               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                                  t = (0, i.bG)([d.A], () => d.A.isConnected()),
+                                  t = (0, r.bG)([d.A], () => d.A.isConnected()),
                                   n = l.useMemo(() => e.join(","), [e]);
                               l.useEffect(() => {
                                   t &&
@@ -138,11 +138,11 @@ let I =
                                           try {
                                               await (async function () {
                                                   let e, t;
-                                                  if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
+                                                  if (!p.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
                                                   let n = Date.now();
                                                   o.h.dispatch({ type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: n });
                                                   try {
-                                                      t = await r.Bo.get({
+                                                      t = await i.Bo.get({
                                                           url: "/users/@me/affinities/channels",
                                                           rejectWithError: !1,
                                                       });
@@ -159,26 +159,26 @@ let I =
                                                   });
                                               })();
                                           } catch (e) {}
-                                          await N(n.split(","));
+                                          await _(n.split(","));
                                       })();
                               }, [n, t]);
                           })(t),
-                          (0, i.yK)([f.A], () => f.A.topSummaries(), [])
+                          (0, r.yK)([p.A], () => p.A.topSummaries(), [])
                       );
                   },
-                  deleteSummary: j,
+                  deleteSummary: N,
               }
             : null,
-    v = 221552 == n.j ? I : null;
+    I = 221552 == n.j ? v : null;
 n.d(
     t,
     {},
     {
-        $T: A,
-        Ay: v,
-        C6: C,
-        C7: _,
-        O$: j,
+        $T: C,
+        Ay: I,
+        C6: A,
+        C7: j,
+        O$: N,
         Oz: function () {
             o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
         },

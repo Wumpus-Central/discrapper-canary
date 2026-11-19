@@ -1,13 +1,13 @@
-let a = (0, o(196765).v)((t) => ({ toastType: null, showToast: (s) => t({ toastType: s }) }));
-o.d(
-    s,
+let n = (0, r(196765).v)((t) => ({ toastType: null, showToast: (e) => t({ toastType: e }) }));
+r.d(
+    e,
     {},
     {
         XA: function (t) {
-            a.getState().showToast(t);
+            n.getState().showToast(t);
         },
         fu: function () {
-            return a((t) => t.toastType);
+            return n((t) => t.toastType);
         },
     },
 );

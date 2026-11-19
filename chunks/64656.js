@@ -1,13 +1,13 @@
-var t = r(855986),
-    u = r(964404),
-    a = r(91242),
-    l = r(326843);
-r.d(
-    n,
+var t = s(855986),
+    a = s(964404),
+    c = s(91242),
+    e = s(326843);
+s.d(
+    r,
     {},
     {
-        A: function (e) {
-            return (0, t.bG)([a.A, u.Ay], () => (0, l.A)(a.A.getFrame(e), u.Ay), [e]);
+        A: function (p) {
+            return (0, t.bG)([c.A, a.Ay], () => (0, e.A)(c.A.getFrame(p), a.Ay), [p]);
         },
     },
 );

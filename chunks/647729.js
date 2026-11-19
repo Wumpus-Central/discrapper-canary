@@ -1,61 +1,61 @@
-var n = l(477900),
-    r = l(582128),
-    a = l(503698),
-    i = l.n(a),
-    u = l(855986),
-    s = l(765178),
-    o = l(943654),
-    d = l(775602),
-    c = l(998304),
-    m = l(253400),
-    _ = l(988341),
-    f = l(873571),
-    g = l(97192),
-    b = l(193579);
+var l = n(477900),
+    r = n(582128),
+    a = n(503698),
+    i = n.n(a),
+    u = n(855986),
+    s = n(765178),
+    o = n(943654),
+    d = n(775602),
+    c = n(998304),
+    m = n(253400),
+    _ = n(988341),
+    f = n(873571),
+    g = n(97192),
+    b = n(193579);
 let p = m.Ay.getEnableHardwareAcceleration();
 function x(e) {
     return (0, f.ux)(e) + 1e3;
 }
-l.d(
+n.d(
     t,
     {},
     {
         $: function (e) {
-            let { isLevelUp: t, startDelay: l = 200, isMotionSkipped: n = !1 } = e,
-                r = n ? 0 : l + x(t);
+            let { isLevelUp: t, startDelay: n = 200, isMotionSkipped: l = !1 } = e,
+                r = l ? 0 : n + x(t);
             return { "--custom-badge-unlock-reveal": `${r}ms` };
         },
         A: function (e) {
             let {
                     badge: t,
-                    previousTierKey: l,
+                    previousTierKey: n,
                     canStart: a,
                     size: m = "large",
                     startDelay: v = 200,
                     onStart: y,
-                    onEnd: h,
+                    onEnd: T,
                 } = e,
-                A = (0, u.bG)([d.Ay], () => d.Ay.useReducedMotion),
-                { previousTier: N, currentTier: T } = (0, f.VR)(t, l),
-                E = null != N,
+                h = (0, u.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                { previousTier: A, currentTier: N } = (0, f.VR)(t, n),
+                E = null != A,
                 S = v + x(E),
                 [C, k] = r.useState(!1),
                 [R, j] = r.useState(!1),
                 [w, U] = r.useState(!1),
-                [$, P] = r.useState(!1),
-                M = p && !A,
-                H = R && M && !$,
-                O = (0, g.C)((0, f.AO)(t, T, !1)) ?? g.P,
-                F = r.useMemo(() => ({ fill: (0, c.E2)(O) }), [O]),
-                I = r.useCallback(
+                [$, O] = r.useState(!1),
+                P = p && !h,
+                M = R && P && !$,
+                H = (0, g.C)((0, f.AO)(t, N, !1)) ?? g.P,
+                I = r.useMemo(() => ({ fill: (0, c.E2)(H) }), [H]),
+                F = r.useCallback(
                     (e) => {
-                        (k(!0), P(e), y?.(e));
+                        (k(!0), O(e), y?.(e));
                     },
                     [y],
                 );
             return (
                 r.useEffect(() => {
-                    C && s.O.announce((0, _.kD)(t, l), "polite");
+                    C && s.O.announce((0, _.kD)(t, n), "polite");
                 }, [C]),
                 r.useEffect(() => {
                     if (!C) return;
@@ -65,30 +65,30 @@ l.d(
                 r.useEffect(() => {
                     if (!C) return;
                     let e = v + (0, f.ux)(E) + 1500,
-                        t = setTimeout(() => U(!0), $ || A ? 0 : e);
+                        t = setTimeout(() => U(!0), $ || h ? 0 : e);
                     return () => clearTimeout(t);
-                }, [E, $, A, C, v]),
+                }, [E, $, h, C, v]),
                 r.useEffect(() => {
-                    w && h?.();
+                    w && T?.();
                 }, [w]),
-                (0, n.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: b.Tl,
                     "aria-hidden": !0,
                     children: [
-                        M &&
-                            (0, n.jsx)(o.x, {
+                        P &&
+                            (0, l.jsx)(o.x, {
                                 artboard: "Web",
-                                autoplay: H,
-                                dataBinding: F,
-                                className: i()(b.U6, "small" === m && b.Pv, !H && b.qJ),
+                                autoplay: M,
+                                dataBinding: I,
+                                className: i()(b.U6, "small" === m && b.Pv, !M && b.qJ),
                             }),
-                        (0, n.jsx)(f.Ay, {
+                        (0, l.jsx)(f.Ay, {
                             badge: t,
-                            previousTierKey: l,
+                            previousTierKey: n,
                             size: m,
                             startDelay: v,
                             canStart: a,
-                            onStart: I,
+                            onStart: F,
                         }),
                     ],
                 })

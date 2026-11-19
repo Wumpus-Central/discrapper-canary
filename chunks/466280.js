@@ -1,6 +1,6 @@
 r.d(t, { Ft: () => s, R9: () => o, XV: () => u, th: () => c, sm: () => d });
-var n = r(582128),
-    l = r(666476);
+var l = r(582128),
+    n = r(666476);
 (r(323874), r(14289), r(35956));
 var a = r(191850),
     i = r(792996);
@@ -8,9 +8,9 @@ function s(e) {
     return "" === e.type ? "application/octet-stream" : e.type;
 }
 function o(e, t) {
-    return (0, l.Oq)(e.size, t)
+    return (0, n.Oq)(e.size, t)
         ? "fits"
-        : "image/png" === t && e.size <= l.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
+        : "image/png" === t && e.size <= n.km && "u" > typeof Worker && "u" > typeof OffscreenCanvas
           ? "webp"
           : "too-large";
 }
@@ -41,13 +41,13 @@ async function c(e) {
     } catch {
         return null;
     }
-    return null != t && (0, l.Oq)(t.size, t.type) ? t : null;
+    return null != t && (0, n.Oq)(t.size, t.type) ? t : null;
 }
 function u() {
     return i.intl.formatToPlainString(a.default.Q0aCVZ, { count: 10 });
 }
 function d(e) {
-    return n.useCallback(
+    return l.useCallback(
         (t) => {
             if (t.defaultPrevented) return;
             let r = Array.from(t.clipboardData?.files ?? []);

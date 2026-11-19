@@ -31,8 +31,8 @@ var n = l(477900),
     S = l(769015),
     D = l(540999),
     M = l(419490),
-    P = l(489496),
-    O = l(253799),
+    O = l(489496),
+    P = l(253799),
     _ = l(721610),
     z = l(686320),
     U = l(105009),
@@ -483,7 +483,7 @@ function ej(e) {
         })
     );
 }
-let eC = O.I.difference(new Set([O.C.EXPORT_TO_SOUNDBOARD, O.C.FAVORITE, O.C.DELETE, O.C.MAIN_ACTION, O.C.EDIT]));
+let eC = P.I.difference(new Set([P.C.EXPORT_TO_SOUNDBOARD, P.C.FAVORITE, P.C.DELETE, P.C.MAIN_ACTION, P.C.EDIT]));
 function eN(e) {
     let { icon: t, label: l, count: a, enabled: i, disabled: u = !1, onToggle: d } = e;
     return (0, n.jsxs)("div", {
@@ -532,7 +532,7 @@ function ek(e) {
     }
 }
 function eE(e) {
-    let { channelId: t, onEdit: o, onClose: c, onExit: O } = e,
+    let { channelId: t, onEdit: o, onClose: c, onExit: P } = e,
         {
             getEditedClip: H,
             voiceAudioEnabled: W,
@@ -580,7 +580,7 @@ function eE(e) {
                                     ? ee.intl.string(J.default.IZsalP)
                                     : ee.intl.string(J.default.ihBfyA),
                                 children: (0, n.jsx)(s.K, {
-                                    onClick: () => (0, P.XK)(en),
+                                    onClick: () => (0, O.XK)(en),
                                     variant: "icon-only",
                                     "aria-label": en.isFavorite
                                         ? ee.intl.string(J.default.IZsalP)
@@ -669,7 +669,7 @@ function eE(e) {
                         position: "bottom",
                         text: ee.intl.string(ee.t.cpT0Cq),
                         children: (0, n.jsx)(s.K, {
-                            onClick: O ?? c,
+                            onClick: P ?? c,
                             icon: g.XLargeIcon,
                             size: "sm",
                             variant: "icon-only",

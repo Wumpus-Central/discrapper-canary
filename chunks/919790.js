@@ -3,17 +3,17 @@ var l = n(477900),
     r = n(256905),
     s = n(666476),
     i = n(989145),
-    u = n(922329),
-    o = n(191850),
-    d = n(792996),
+    o = n(922329),
+    d = n(191850),
+    u = n(792996),
     c = n(986109);
 function m(e) {
     return null != e.id && s.XB.has(e.content_type);
 }
 function f(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
-    return (0, l.jsx)(u.p, { name: a, compact: !0 });
+        a = n ? u.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
+    return (0, l.jsx)(o.p, { name: a, compact: !0 });
 }
 function h(e) {
     let { projectId: t, id: n, name: r } = e,
@@ -32,10 +32,10 @@ function h(e) {
         }, [t, n]);
     return s
         ? (0, l.jsx)(f, { name: r, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
+        : (0, l.jsx)(o.n, {
               name: r,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: r }),
+              ariaLabel: u.intl.formatToPlainString(d.default["g5+7Vs"], { name: r }),
               onClick: m,
           });
 }
@@ -77,10 +77,10 @@ function k(e) {
     }, [t, n, s, c]);
     return g
         ? (0, l.jsx)(f, { name: k, unavailable: !0 })
-        : (0, l.jsx)(u.n, {
+        : (0, l.jsx)(o.n, {
               name: k,
               thumbSrc: p,
-              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: k }),
+              ariaLabel: u.intl.formatToPlainString(d.default.GtNukg, { name: k }),
               onClick: b,
               onThumbError: () => {
                   (x(null),
@@ -101,7 +101,7 @@ n.d(
             let { projectId: t, attachments: n } = e,
                 r = n.filter(m),
                 [s, i] = a.useState(() => new Set()),
-                u = a.useCallback((e) => {
+                o = a.useCallback((e) => {
                     i((t) => (t.has(e) ? t : new Set(t).add(e)));
                 }, []);
             return (0, l.jsx)("div", {
@@ -117,7 +117,7 @@ n.d(
                                     viewableImages: r,
                                     viewerIndex: r.indexOf(e),
                                     unavailableIds: s,
-                                    markUnavailable: u,
+                                    markUnavailable: o,
                                 },
                                 n,
                             )

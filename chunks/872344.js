@@ -1,49 +1,49 @@
-n.d(e, { A: () => l });
-var r = n(582128),
-    u = n(858899),
-    i = n(84512),
+n.d(t, { A: () => c });
+var i = n(582128),
+    l = n(858899),
+    r = n(84512),
     a = n(792996);
-function c(t) {
-    let { text: e, ok: n } = (function (t) {
-        switch (t) {
+function s(e) {
+    let { text: t, ok: n } = (function (e) {
+        switch (e) {
             case "dispatched":
-                return { text: a.intl.string(i.default["um/5Kc"]), ok: !0 };
+                return { text: a.intl.string(r.default["um/5Kc"]), ok: !0 };
             case "rate_limited":
-                return { text: a.intl.string(i.default.T1n7hc), ok: !1 };
+                return { text: a.intl.string(r.default.T1n7hc), ok: !1 };
             case "unauthorized":
-                return { text: a.intl.string(i.default["30UxZU"]), ok: !1 };
+                return { text: a.intl.string(r.default["30UxZU"]), ok: !1 };
             case "no_widget_config":
-                return { text: a.intl.string(i.default["1UFWet"]), ok: !1 };
+                return { text: a.intl.string(r.default["1UFWet"]), ok: !1 };
             case "undeliverable":
-                return { text: a.intl.string(i.default.ypKX9A), ok: !1 };
+                return { text: a.intl.string(r.default.ypKX9A), ok: !1 };
             default:
-                return { text: a.intl.string(i.default.BLKD4B), ok: !1 };
+                return { text: a.intl.string(r.default.BLKD4B), ok: !1 };
         }
-    })(t);
-    (0, u.P0)({ text: e, variant: n ? "success" : "critical" });
+    })(e);
+    (0, l.P0)({ text: t, variant: n ? "success" : "critical" });
 }
-var s = n(384739);
-function l(t) {
-    let [e, n] = r.useState(!1),
-        u = r.useRef(!0);
-    r.useEffect(
+var o = n(384739);
+function c(e) {
+    let [t, n] = i.useState(!1),
+        l = i.useRef(!0);
+    i.useEffect(
         () => (
-            (u.current = !0),
+            (l.current = !0),
             () => {
-                u.current = !1;
+                l.current = !1;
             }
         ),
         [],
     );
-    let i = r.useCallback(() => {
-        e ||
-            null == t ||
+    let r = i.useCallback(() => {
+        t ||
+            null == e ||
             (n(!0),
-            (0, s.i)(t)
-                .then(c)
+            (0, o.i)(e)
+                .then(s)
                 .finally(() => {
-                    u.current && n(!1);
+                    l.current && n(!1);
                 }));
-    }, [t, e]);
-    return { pending: e, refresh: i };
+    }, [e, t]);
+    return { pending: t, refresh: r };
 }

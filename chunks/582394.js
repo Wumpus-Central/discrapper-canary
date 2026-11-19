@@ -3,7 +3,7 @@ var l = n(477900);
 n(582128);
 var s = n(646514),
     a = n(996682),
-    i = n(27989);
+    r = n(27989);
 n.d(
     t,
     {},
@@ -12,14 +12,14 @@ n.d(
             let {
                     size: t = "md",
                     width: n,
-                    height: r,
+                    height: i,
                     color: o = s.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: c = "",
                     ...u
                 } = e,
-                d = (0, i.J)(t),
+                d = (0, r.J)(t),
                 m = d?.width ?? n,
-                h = d?.height ?? r;
+                h = d?.height ?? i;
             return (0, l.jsxs)("svg", {
                 ...(0, a.A)(u),
                 xmlns: "http://www.w3.org/2000/svg",

@@ -1,9 +1,9 @@
 var l,
     s,
     a,
-    i = n(927813),
-    r = n(792996);
-let o = 5 * i.A.Millis.SECOND;
+    r = n(927813),
+    i = n(792996);
+let o = 5 * r.A.Millis.SECOND;
 var c = 221552 == n.j ? (((l = {}).TOOLBAR_BUTTON = "toolbar button"), (l.PILL = "pill"), l) : null,
     u =
         (((s = {}).SIDEBAR = "sidebar"),
@@ -28,12 +28,12 @@ n.d(
         hf: o,
         j0: function () {
             return [
-                { value: "DUPLICATED", label: r.intl.string(r.t.wwXl5h) },
-                { value: "TOO_GENERIC", label: r.intl.string(r.t["t+6knu"]) },
-                { value: "TOO_MANY", label: r.intl.string(r.t.xnKDnv) },
-                { value: "INACCURATE", label: r.intl.string(r.t.JW5VFj) },
-                { value: "NOT_USEFUL", label: r.intl.string(r.t.ZtCNiY) },
-                { value: "OTHER", label: r.intl.string(r.t.BufsKk) },
+                { value: "DUPLICATED", label: i.intl.string(i.t.wwXl5h) },
+                { value: "TOO_GENERIC", label: i.intl.string(i.t["t+6knu"]) },
+                { value: "TOO_MANY", label: i.intl.string(i.t.xnKDnv) },
+                { value: "INACCURATE", label: i.intl.string(i.t.JW5VFj) },
+                { value: "NOT_USEFUL", label: i.intl.string(i.t.ZtCNiY) },
+                { value: "OTHER", label: i.intl.string(i.t.BufsKk) },
             ];
         },
         tk: d,

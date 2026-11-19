@@ -3,7 +3,7 @@ var l = n(582128),
     a = n(191850),
     i = n(792996);
 let s = new Set();
-function u(e, t) {
+function o(e, t) {
     return { cardId: e, status: "pending" === t ? null : t };
 }
 n.d(
@@ -13,8 +13,8 @@ n.d(
         Mv: function (e, t) {
             let n = null != t ? new Set(t.filter((e) => e.set).map((e) => e.name)) : null,
                 l = new Map(),
-                u = new Set(),
-                o = !1,
+                o = new Set(),
+                u = !1,
                 c = !1;
             for (let t = e.length - 1; t >= 0; t--) {
                 let d = e[t];
@@ -42,12 +42,12 @@ n.d(
                     ? l.set(d.render_id, "pending")
                     : f && null != n && m.every((e) => n.has(e.name))
                       ? l.set(d.render_id, "received")
-                      : o
-                        ? l.set(d.render_id, m.some((e) => u.has(e.name)) ? "superseded" : "inactive")
+                      : u
+                        ? l.set(d.render_id, m.some((e) => o.has(e.name)) ? "superseded" : "inactive")
                         : l.set(d.render_id, "open"),
                 m))
-                    u.add(e.name);
-                ((o = !0), (c = !1));
+                    o.add(e.name);
+                ((u = !0), (c = !1));
             }
             return l;
         },
@@ -59,9 +59,9 @@ n.d(
             return null;
         },
         bB: function (e, t) {
-            let [n, r] = l.useState(() => u(e, t));
+            let [n, r] = l.useState(() => o(e, t));
             return n.cardId !== e || (null == n.status && "pending" !== t)
-                ? (r(u(e, t)), !1)
+                ? (r(o(e, t)), !1)
                 : null != n.status && t !== n.status;
         },
         j$: function (e) {

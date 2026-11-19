@@ -6,7 +6,7 @@ let l = Object.freeze({ active: !1, annotations: Object.freeze([]), context: nul
 function o(e) {
     return i.get(e) ?? l;
 }
-function u(e, t) {
+function c(e, t) {
     for (let n of (t.active || 0 !== t.annotations.length ? i.set(e, t) : i.delete(e), [...a]))
         try {
             n();
@@ -14,7 +14,7 @@ function u(e, t) {
             console.error("[conjure] design feedback subscriber threw", e);
         }
 }
-function c(e, t) {
+function u(e, t) {
     return null != t && e.authorId === t;
 }
 function s(e) {
@@ -33,7 +33,7 @@ n.d(
             let n = o(e);
             n.active &&
                 0 !== t.size &&
-                u(e, {
+                c(e, {
                     ...n,
                     annotations: n.annotations.map((e) => {
                         let n = t.get(e.id);
@@ -43,28 +43,28 @@ n.d(
         },
         F5: function (e, t) {
             let n = o(e);
-            n.active && u(e, { ...n, context: t });
+            n.active && c(e, { ...n, context: t });
         },
-        It: c,
+        It: u,
         _c: o,
         aC: function (e, t, n) {
             let r = o(e),
                 l = r.annotations.find((e) => e.id === n);
-            null != l && c(l, t) && u(e, { ...r, annotations: r.annotations.filter((e) => e.id !== n) });
+            null != l && u(l, t) && c(e, { ...r, annotations: r.annotations.filter((e) => e.id !== n) });
         },
         mB: function (e) {
-            i.has(e) && u(e, l);
+            i.has(e) && c(e, l);
         },
         pV: function (e, t, n, r) {
             let l = o(e),
                 i = l.annotations.find((e) => e.id === n);
             null != i &&
-                c(i, t) &&
-                u(e, { ...l, annotations: l.annotations.map((e) => (e.id === n ? { ...e, comment: r } : e)) });
+                u(i, t) &&
+                c(e, { ...l, annotations: l.annotations.map((e) => (e.id === n ? { ...e, comment: r } : e)) });
         },
         qX: function (e) {
             let t = o(e);
-            t.active && u(e, { ...t, active: !1 });
+            t.active && c(e, { ...t, active: !1 });
         },
         rt: function (e) {
             let t = r.useCallback(() => (null == e ? l : o(e)), [e]);
@@ -72,7 +72,7 @@ n.d(
         },
         w4: function (e) {
             let t = o(e);
-            t.active || u(e, { ...t, active: !0 });
+            t.active || c(e, { ...t, active: !0 });
         },
     },
 );

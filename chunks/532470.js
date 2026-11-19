@@ -1,16 +1,16 @@
-var n = a(713608),
-    t = a(918715),
-    i = a(877784),
-    o = a(144705),
-    d = a(826685),
-    c = a(683825);
-let r = {
-        [o.I.Kill]: n.ModerationIcon,
-        [o.I.MultiKill]: n.ModerationIcon,
-        [o.I.Assist]: n.ModerationIcon,
+var a = n(713608),
+    t = n(918715),
+    i = n(877784),
+    o = n(144705),
+    r = n(826685),
+    d = n(683825);
+let c = {
+        [o.I.Kill]: a.ModerationIcon,
+        [o.I.MultiKill]: a.ModerationIcon,
+        [o.I.Assist]: a.ModerationIcon,
         [o.I.Death]: t.SkullIcon,
         [o.I.RoshanKill]: i.RibbonIcon,
-        [o.I.TeamFightWin]: n.ModerationIcon,
+        [o.I.TeamFightWin]: a.ModerationIcon,
         [o.I.TeamFight]: null,
         [o.I.GameEnd]: null,
         [o.I.InMatchChange]: null,
@@ -29,29 +29,29 @@ let r = {
         [o.I.PlayStateChange]: 0,
     },
     u = {
-        [o.I.Kill]: c.default.gQErX1,
-        [o.I.MultiKill]: c.default.Y7CAoY,
-        [o.I.Assist]: c.default.CuzcRY,
-        [o.I.Death]: c.default.NEFeB0,
-        [o.I.RoshanKill]: c.default.bzNi8X,
-        [o.I.TeamFightWin]: c.default["3RgAlG"],
+        [o.I.Kill]: d.default.gQErX1,
+        [o.I.MultiKill]: d.default.Y7CAoY,
+        [o.I.Assist]: d.default.CuzcRY,
+        [o.I.Death]: d.default.NEFeB0,
+        [o.I.RoshanKill]: d.default.bzNi8X,
+        [o.I.TeamFightWin]: d.default["3RgAlG"],
         [o.I.TeamFight]: null,
         [o.I.GameEnd]: null,
         [o.I.InMatchChange]: null,
         [o.I.PlayStateChange]: null,
     };
-a.d(
+n.d(
     l,
     {},
     {
         PC: function () {
-            return { [d.b]: r };
+            return { [r.b]: c };
         },
         dP: function () {
-            return { [d.b]: s };
+            return { [r.b]: s };
         },
         kv: function () {
-            return { [d.b]: u };
+            return { [r.b]: u };
         },
     },
 );

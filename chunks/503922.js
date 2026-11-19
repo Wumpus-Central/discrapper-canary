@@ -1,4 +1,4 @@
-n.d(t, { _m: () => c, DM: () => u, ms: () => o, Du: () => i, $D: () => m, dz: () => f, oB: () => s });
+n.d(t, { _m: () => c, DM: () => o, ms: () => u, Du: () => i, $D: () => m, dz: () => f, oB: () => s });
 var l = n(688954),
     r = n(513845),
     a = n(664619);
@@ -28,13 +28,13 @@ async function s(e, t) {
         r.entry
     );
 }
-async function u(e, t) {
+async function o(e, t) {
     let n = await (0, l.h)(e, "/agent/database/restore-points", { query: { environment: t } });
     if (!n.ok) throw Error(`restore points failed (${n.status})`);
     let r = await n.json();
     return Array.isArray(r.restorePoints) ? r.restorePoints : [];
 }
-async function o(e, t) {
+async function u(e, t) {
     let n = await (0, l.h)(e, "/agent/database/restore-window", { query: { environment: t } });
     if (!n.ok) throw Error(`restore window failed (${n.status})`);
     return await n.json();

@@ -1,4 +1,4 @@
-s.exports = {
+t.exports = {
     Gt: "frame_HsOb2X",
     wx: "header_HsOb2X",
     DD: "title_HsOb2X",

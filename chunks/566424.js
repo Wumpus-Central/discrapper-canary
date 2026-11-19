@@ -3,9 +3,9 @@ var l = n(477900),
     r = n(503698),
     s = n.n(r),
     i = n(847374),
-    u = n(320448),
-    o = n(834730),
-    d = n(939249),
+    o = n(320448),
+    d = n(834730),
+    u = n(939249),
     c = n(344587),
     m = n(191850),
     f = n(792996),
@@ -34,12 +34,12 @@ n.d(
             let w = a.useId(),
                 S = a.useCallback(() => v((e) => !e), []),
                 { text: N, phase: C } = (0, c.Q)(n),
-                A = b ? i.ChevronSmallDownIcon : u.ChevronSmallRightIcon,
+                A = b ? i.ChevronSmallDownIcon : o.ChevronSmallRightIcon,
                 I = null != x,
                 E = (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)("span", { className: h.hd, children: t }),
-                        (0, l.jsx)(o.E, {
+                        (0, l.jsx)(d.E, {
                             tag: "span",
                             variant: "body-md/normal",
                             color: "currentColor",
@@ -49,7 +49,7 @@ n.d(
                         I ? (0, l.jsx)(A, { size: "xs", color: "currentColor", className: h.nD }) : null,
                     ],
                 }),
-                T = (0, l.jsxs)(l.Fragment, {
+                $ = (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)("span", { className: h.$m, children: E }),
                         r
@@ -72,16 +72,16 @@ n.d(
                 style: null != p ? { "--custom-conjure-shimmer-tint": p } : void 0,
                 children: [
                     I
-                        ? (0, l.jsx)(d.D, {
+                        ? (0, l.jsx)(u.D, {
                               tag: "div",
                               className: s()(h.ep, h.EK),
                               "aria-expanded": b,
                               "aria-controls": w,
                               "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: N }),
                               onClick: S,
-                              children: T,
+                              children: $,
                           })
-                        : (0, l.jsx)("div", { className: h.ep, children: T }),
+                        : (0, l.jsx)("div", { className: h.ep, children: $ }),
                     (0, l.jsx)("div", { id: w, hidden: !b, "data-conjure-entrance": !0, className: h.BA, children: x }),
                 ],
             });

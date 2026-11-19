@@ -1,17 +1,17 @@
-var n = a(877784),
-    t = a(712881),
-    i = a(115979),
-    o = a(433492),
-    d = a(424383),
-    c = a(713608),
-    r = a(369606),
-    s = a(918715),
-    u = a(420663),
-    h = a(190443),
-    m = a(979563),
-    I = a(683825);
-let g = {
-        [m.d.HatTrick]: n.RibbonIcon,
+var a = n(877784),
+    t = n(712881),
+    i = n(115979),
+    o = n(433492),
+    r = n(424383),
+    d = n(713608),
+    c = n(369606),
+    s = n(918715),
+    u = n(420663),
+    h = n(190443),
+    m = n(979563),
+    f = n(683825);
+let p = {
+        [m.d.HatTrick]: a.RibbonIcon,
         [m.d.AerialGoal]: t.GoalIcon,
         [m.d.BackwardsGoal]: t.GoalIcon,
         [m.d.BicycleGoal]: i.BicycleIcon,
@@ -21,15 +21,15 @@ let g = {
         [m.d.OvertimeGoal]: t.GoalIcon,
         [m.d.SwishGoal]: t.GoalIcon,
         [m.d.Goal]: t.GoalIcon,
-        [m.d.Savior]: n.RibbonIcon,
-        [m.d.EpicSave]: n.RibbonIcon,
-        [m.d.Save]: d.SaveIcon,
-        [m.d.Playmaker]: n.RibbonIcon,
-        [m.d.Assist]: c.ModerationIcon,
-        [m.d.Victory]: r.TrophyIcon,
+        [m.d.Savior]: a.RibbonIcon,
+        [m.d.EpicSave]: a.RibbonIcon,
+        [m.d.Save]: r.SaveIcon,
+        [m.d.Playmaker]: a.RibbonIcon,
+        [m.d.Assist]: d.ModerationIcon,
+        [m.d.Victory]: c.TrophyIcon,
         [m.d.FlipReset]: null,
-        [m.d.Extermination]: c.ModerationIcon,
-        [m.d.Demolition]: c.ModerationIcon,
+        [m.d.Extermination]: d.ModerationIcon,
+        [m.d.Demolition]: d.ModerationIcon,
         [m.d.Demolished]: s.SkullIcon,
         [m.d.OwnGoal]: u.EmojiUpsideDownFaceIcon,
         [m.d.Defeat]: null,
@@ -45,7 +45,7 @@ let g = {
         [m.d.MatchStart]: null,
         [m.d.MatchEnd]: null,
     },
-    f = {
+    g = {
         [m.d.HatTrick]: 20,
         [m.d.AerialGoal]: 19,
         [m.d.BackwardsGoal]: 19,
@@ -80,28 +80,28 @@ let g = {
         [m.d.MatchStart]: 0,
         [m.d.MatchEnd]: 0,
     },
-    v = {
-        [m.d.HatTrick]: I.default.VgkqMu,
-        [m.d.AerialGoal]: I.default.AwjiED,
-        [m.d.BackwardsGoal]: I.default.Jmi8xl,
-        [m.d.BicycleGoal]: I.default.XWGgyF,
-        [m.d.LongGoal]: I.default.VskybO,
-        [m.d.TurtleGoal]: I.default.JjrRc2,
-        [m.d.PoolShot]: I.default["4cFeIa"],
-        [m.d.OvertimeGoal]: I.default["6DZISR"],
-        [m.d.SwishGoal]: I.default["4//FvS"],
-        [m.d.Goal]: I.default.cOToac,
-        [m.d.Savior]: I.default.ShU4Bk,
-        [m.d.EpicSave]: I.default.OPgONO,
-        [m.d.Save]: I.default.Rt7Y2b,
-        [m.d.Playmaker]: I.default.tpVyW0,
-        [m.d.Assist]: I.default.qlCPiQ,
-        [m.d.Victory]: I.default.p65UF0,
+    I = {
+        [m.d.HatTrick]: f.default.VgkqMu,
+        [m.d.AerialGoal]: f.default.AwjiED,
+        [m.d.BackwardsGoal]: f.default.Jmi8xl,
+        [m.d.BicycleGoal]: f.default.XWGgyF,
+        [m.d.LongGoal]: f.default.VskybO,
+        [m.d.TurtleGoal]: f.default.JjrRc2,
+        [m.d.PoolShot]: f.default["4cFeIa"],
+        [m.d.OvertimeGoal]: f.default["6DZISR"],
+        [m.d.SwishGoal]: f.default["4//FvS"],
+        [m.d.Goal]: f.default.cOToac,
+        [m.d.Savior]: f.default.ShU4Bk,
+        [m.d.EpicSave]: f.default.OPgONO,
+        [m.d.Save]: f.default.Rt7Y2b,
+        [m.d.Playmaker]: f.default.tpVyW0,
+        [m.d.Assist]: f.default.qlCPiQ,
+        [m.d.Victory]: f.default.p65UF0,
         [m.d.FlipReset]: null,
-        [m.d.Extermination]: I.default.I5YSwS,
-        [m.d.Demolition]: I.default.IJqCEW,
-        [m.d.Demolished]: I.default.GdVA11,
-        [m.d.OwnGoal]: I.default.n9QpdG,
+        [m.d.Extermination]: f.default.I5YSwS,
+        [m.d.Demolition]: f.default.IJqCEW,
+        [m.d.Demolished]: f.default.GdVA11,
+        [m.d.OwnGoal]: f.default.n9QpdG,
         [m.d.Defeat]: null,
         [m.d.BicycleHit]: null,
         [m.d.HighFive]: null,
@@ -115,18 +115,18 @@ let g = {
         [m.d.MatchStart]: null,
         [m.d.MatchEnd]: null,
     };
-a.d(
+n.d(
     l,
     {},
     {
         $l: function () {
-            return { [h.e]: v };
+            return { [h.e]: I };
         },
         IR: function () {
-            return { [h.e]: g };
+            return { [h.e]: p };
         },
         _n: function () {
-            return { [h.e]: f };
+            return { [h.e]: g };
         },
     },
 );

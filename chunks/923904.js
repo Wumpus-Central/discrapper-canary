@@ -53,12 +53,12 @@ function y(e) {
             isCropped: N,
             initialCurrentTime: N ? j : y / 2,
         }),
-        P = a.useMemo(
+        O = a.useMemo(
             () =>
                 null == s.A.clips.getClipProtocolURLFromPath ? null : s.A.clips.getClipProtocolURLFromPath(A.filepath),
             [A.filepath],
         ),
-        [O, _] = a.useState({
+        [P, _] = a.useState({
             clipName: A.name,
             cropStart: S,
             cropEnd: 0 === D ? T : D,
@@ -76,7 +76,7 @@ function y(e) {
             applicationAudioEnabled: H,
             soundboardAudioEnabled: W,
             cropPreset: F,
-        } = O,
+        } = P,
         V = a.useRef(null),
         K = a.useRef(M),
         [Y, Z] = a.useState(T),
@@ -350,7 +350,7 @@ function y(e) {
         })(
             {
                 clipId: A.id,
-                clipProtocolVideoURL: P,
+                clipProtocolVideoURL: O,
                 isScreenshot: R,
                 editOnly: L,
                 pendingEdits: {
@@ -382,8 +382,8 @@ function y(e) {
         ),
         {
             setCropStart: eM,
-            setCropEnd: eP,
-            setCrop: eO,
+            setCropEnd: eO,
+            setCrop: eP,
         } = ((k = a.useCallback(
             (e) => {
                 let t = (0, i.clamp)(e, 0, B - 1);
@@ -516,8 +516,8 @@ function y(e) {
                 cropEnd: B,
                 cropDuration: eS,
                 setCropStart: eM,
-                setCropEnd: eP,
-                setCrop: eO,
+                setCropEnd: eO,
+                setCrop: eP,
                 cropPreset: F,
                 setCropPreset: eG,
                 activeTool: z,
@@ -563,8 +563,8 @@ function y(e) {
                 B,
                 eS,
                 eM,
-                eP,
                 eO,
+                eP,
                 F,
                 eG,
                 z,

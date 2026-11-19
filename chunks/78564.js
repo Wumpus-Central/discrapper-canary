@@ -11,7 +11,7 @@ n.d(
                 i = !1,
                 a = !1,
                 o = !1;
-            function u() {
+            function c() {
                 (async function () {
                     if (!(i || a || o)) {
                         ((i = !0), e.update("uploading", r));
@@ -34,9 +34,9 @@ n.d(
                 })().catch(() => {});
             }
             return (
-                u(),
+                c(),
                 {
-                    retry: u,
+                    retry: c,
                     cancel: () => {
                         o = !0;
                     },

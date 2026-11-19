@@ -2,8 +2,8 @@ var l = n(477900),
     a = n(582128),
     r = n(821609),
     i = n(975571),
-    u = n(489496),
-    s = n(652215),
+    s = n(489496),
+    u = n(652215),
     c = n(792996),
     o = n(353796);
 n.d(
@@ -13,10 +13,10 @@ n.d(
         A: function (e) {
             let { onEnableClips: t } = e,
                 n = a.useCallback(() => {
-                    window.open(i.A.getArticleURL(s.MVz.CLIPS), "_blank", "noopener,noreferrer");
+                    window.open(i.A.getArticleURL(u.MVz.CLIPS), "_blank", "noopener,noreferrer");
                 }, []),
                 d = a.useCallback(() => {
-                    null != t ? t() : u.yO({ clipsEnabled: !0, trackAnalytics: !0 });
+                    null != t ? t() : s.yO({ clipsEnabled: !0, trackAnalytics: !0 });
                 }, [t]);
             return (0, l.jsxs)("div", {
                 className: o.o,

@@ -1,13 +1,13 @@
-var n = a(439818),
-    t = a(696016);
-a.d(
+var a = n(439818),
+    t = n(696016);
+n.d(
     l,
     {},
     {
         A: function (e, l) {
-            let a = (0, n.A)((0, t.cM)(e.createdAt)),
-                i = (0, n.A)(null != e.name && "" !== e.name ? e.name : a),
-                o = "" !== i ? i : a;
+            let n = (0, a.A)((0, t.cM)(e.createdAt)),
+                i = (0, a.A)(null != e.name && "" !== e.name ? e.name : n),
+                o = "" !== i ? i : n;
             return `${o}.${l}`;
         },
     },

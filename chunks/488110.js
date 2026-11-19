@@ -1091,8 +1091,8 @@ function e2(e) {
     });
 }
 var e3 = n(358787),
-    e4 = n(590885),
-    e5 = n(28863),
+    e5 = n(590885),
+    e4 = n(28863),
     e6 = n(109681);
 function e8(e) {
     let { subscription: t, renewalMutations: l, className: s, analyticsLocation: a } = e,
@@ -1122,7 +1122,7 @@ function e8(e) {
                 }),
                 t.isPurchasedExternally
                     ? null
-                    : (0, i.jsx)(e5.Anchor, {
+                    : (0, i.jsx)(e4.Anchor, {
                           onClick: (e) => {
                               (e.preventDefault(),
                                   d && g
@@ -1397,7 +1397,7 @@ function tl(e) {
                                                       paymentGatewayName: eg.qmC[n.paymentGateway],
                                                   })
                                                 : en.intl.string(en.t.iRzXKd),
-                                        children: (0, i.jsx)(e4.A, {
+                                        children: (0, i.jsx)(e5.A, {
                                             subscription: n,
                                             onPaymentSourceAdded: D.c_,
                                             highlightAddPaymentMethodButton: d || u,

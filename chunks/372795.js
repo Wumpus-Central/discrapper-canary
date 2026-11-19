@@ -3,7 +3,7 @@ var l = n(477900),
     a = n(598047),
     i = n(504054);
 let s = ["left", "middle", "right"];
-function u(e) {
+function o(e) {
     return !!e.altKey | (2 * !!e.ctrlKey) | (4 * !!e.metaKey) | (8 * !!e.shiftKey);
 }
 n.d(
@@ -14,7 +14,7 @@ n.d(
             let {
                     projectId: t,
                     sessionId: n,
-                    fps: o,
+                    fps: u,
                     interactive: c = !1,
                     paused: d = !1,
                     drawWidth: m,
@@ -47,7 +47,7 @@ n.d(
                 ),
                 w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
                 C = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-                A = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: C }),
+                A = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: C }),
                 S = (0, i.AV)(t, n),
                 N = r.useRef(S);
             (r.useEffect(() => {
@@ -88,7 +88,7 @@ n.d(
                                     null != e &&
                                         (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                             }),
-                            (v.current = { ...e, modifiers: u(l) }));
+                            (v.current = { ...e, modifiers: o(l) }));
                         return;
                     }
                     let r = s[l.button];
@@ -102,7 +102,7 @@ n.d(
                             ...a,
                             button: r,
                             clickCount: l.detail > 0 ? l.detail : 1,
-                            modifiers: u(l),
+                            modifiers: o(l),
                         }));
                 };
             }
@@ -110,7 +110,7 @@ n.d(
                 return (l) => {
                     if (!c || "Escape" === l.key) return;
                     l.preventDefault();
-                    let r = l.getModifierState("AltGraph") ? -4 & u(l) : u(l);
+                    let r = l.getModifierState("AltGraph") ? -4 & o(l) : o(l);
                     ((0, i.ZL)(t, n, { type: "input_keyboard", eventType: e, key: l.key, code: l.code, modifiers: r }),
                         "keyDown" === e ? I.current.set(l.code, l.key) : I.current.delete(l.code));
                     let a = "Enter" === l.key ? "\r" : l.key;
@@ -143,7 +143,7 @@ n.d(
                             ...E(e),
                             deltaX: e.deltaX,
                             deltaY: e.deltaY,
-                            modifiers: u(e),
+                            modifiers: o(e),
                         });
                 },
                 onKeyDown: M("keyDown"),

@@ -109,7 +109,7 @@ function a(e) {
     );
 }
 let o = "[conjure:selected] ",
-    u = " \u2014 ";
+    c = " \u2014 ";
 n.d(
     t,
     {},
@@ -135,8 +135,8 @@ n.d(
                     o.push(`${t + 1}. ${a(e.target)}`),
                     o.push(`   Feedback: ${(n = e.comment.trim()).length <= 1e3 ? n : `${n.slice(0, 1e3)}\u{2026}`}`));
             });
-            let u = n.trim();
-            return ("" !== u && (o.push(""), o.push(`Note for the whole batch: ${u}`)), o.join("\n"));
+            let c = n.trim();
+            return ("" !== c && (o.push(""), o.push(`Note for the whole batch: ${c}`)), o.join("\n"));
         },
         Bx: function (e) {
             let { kind: t, name: n } = i(e);
@@ -146,10 +146,10 @@ n.d(
             let r = null,
                 l = 1 / 0;
             for (let i of e) {
-                let { x: e, y: a, width: o, height: u } = i.rect;
-                if (o < 1 || u < 1 || t < e || n < a || t > e + o || n > a + u) continue;
-                let c = o * u;
-                c < l && ((r = i), (l = c));
+                let { x: e, y: a, width: o, height: c } = i.rect;
+                if (o < 1 || c < 1 || t < e || n < a || t > e + o || n > a + c) continue;
+                let u = o * c;
+                u < l && ((r = i), (l = u));
             }
             return r;
         },
@@ -163,7 +163,7 @@ n.d(
         Q9: function (e, t) {
             let { kind: n, name: r } = i(e),
                 l = [n, r].filter((e) => "" !== e).join(": ");
-            return `${o}${l}${u}${a(e)}
+            return `${o}${l}${c}${a(e)}
 ${t.trim()}`;
         },
         QU: r,
@@ -174,7 +174,7 @@ ${t.trim()}`;
                 n = -1 === t ? e : e.slice(0, t),
                 r = -1 === t ? "" : e.slice(t + 1),
                 l = n.slice(o.length),
-                i = l.indexOf(u),
+                i = l.indexOf(c),
                 a = (-1 === i ? l : l.slice(0, i)).trim();
             return "" === a ? null : { label: a, body: r };
         },
