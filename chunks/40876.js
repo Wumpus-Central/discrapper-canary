@@ -318,6 +318,20 @@ let r = {
         inlineRequire: () => n(12489).A,
         loadAfterConnectionOpen: !0,
     },
+    OrbVoidManager: {
+        actions: [
+            "ORB_VOID_MODAL_OPEN",
+            "ORB_VOID_MODAL_CLOSE",
+            "ORB_VOID_STATE_FETCH_SUCCESS",
+            "ORB_VOID_STATE_FETCH_FAIL",
+            "ORB_VOID_CLICK",
+            "ORB_VOID_FLUSH",
+            "ORB_VOID_BURN_SUCCESS",
+            "ORB_VOID_BURN_FAILURE",
+            "LOGOUT",
+        ],
+        inlineRequire: () => n(294278).A,
+    },
     OverlayBridgeManager: {
         actions: __OVERLAY__
             ? ["OVERLAY_RELAY_CLICK_ZONE_CLICKED"]

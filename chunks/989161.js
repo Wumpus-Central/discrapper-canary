@@ -47,7 +47,7 @@ let j = { width: 500, height: T.$V },
             Promise.all([
                 n.e(609019),
                 n.e(237427),
-                n.e(474750),
+                n.e(521332),
                 n.e(896691),
                 n.e(779367),
                 n.e(992956),
@@ -740,8 +740,8 @@ function e8(e) {
     });
 }
 var e4 = n(709372),
-    e7 = n(984680);
-let e9 = i.memo(function (e) {
+    e9 = n(984680);
+let e7 = i.memo(function (e) {
     var t;
     let { channelId: n } = e,
         r = i.useRef(null);
@@ -815,14 +815,14 @@ let e9 = i.memo(function (e) {
         T = y ? x : f,
         _ = y && null == T;
     return (0, l.jsxs)("div", {
-        className: e7.M0,
+        className: e9.M0,
         role: "group",
         "aria-label": k.intl.string(k.t.lwy6aX),
         children: [
             null != T
                 ? (0, l.jsx)(e8, { playback: T, durationSecs: a.recordedDurationSecs ?? 0, animateWaveformEntrance: y })
                 : (0, l.jsxs)("div", {
-                      className: e7.Fg,
+                      className: e9.Fg,
                       children: [
                           o
                               ? (0, l.jsx)(Y.m, {
@@ -841,19 +841,19 @@ let e9 = i.memo(function (e) {
                               : null,
                           (0, l.jsx)(eZ, {
                               channelId: n,
-                              className: e7.ou,
+                              className: e9.ou,
                               recording: o,
                               reducedMotion: d,
                               collapsing: _,
                               onCollapseComplete: C,
                           }),
                           (0, l.jsxs)("div", {
-                              className: e7.RE,
+                              className: e9.RE,
                               children: [
-                                  (0, l.jsx)("div", { className: s()(e7.Zz, { [e7.Py]: !o }), "aria-hidden": !0 }),
+                                  (0, l.jsx)("div", { className: s()(e9.Zz, { [e9.Py]: !o }), "aria-hidden": !0 }),
                                   (0, l.jsx)(eB.E, {
                                       variant: "body-sm/normal",
-                                      className: s()(e7.O1, { [e7.w2]: h }),
+                                      className: s()(e9.O1, { [e9.w2]: h }),
                                       tabularNumbers: !0,
                                       children: (0, eH.rB)(v),
                                   }),
@@ -861,7 +861,7 @@ let e9 = i.memo(function (e) {
                           }),
                       ],
                   }),
-            (0, l.jsx)("div", { className: e7.yF, "aria-hidden": !0 }),
+            (0, l.jsx)("div", { className: e9.yF, "aria-hidden": !0 }),
             (0, l.jsx)(Y.m, {
                 text: k.intl.string(k.t.oyYWHE),
                 children: (0, l.jsx)("div", {
@@ -882,8 +882,8 @@ let e9 = i.memo(function (e) {
                     onKeyDown: I,
                     children: (0, l.jsx)(eK.A, {
                         ref: r,
-                        className: e7.jo,
-                        childClassName: s()(e7.Jp, { [e7.Tq]: !N }),
+                        className: e9.jo,
+                        childClassName: s()(e9.Jp, { [e9.Tq]: !N }),
                         onClick: N ? b : void 0,
                         disabled: !N,
                         noHover: !N,
@@ -892,7 +892,7 @@ let e9 = i.memo(function (e) {
                         children: (0, l.jsx)(eG.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: e7.AO,
+                            className: e9.AO,
                         }),
                     }),
                 }),
@@ -1377,8 +1377,8 @@ function t4(e) {
               ],
           });
 }
-var t7 = n(290153),
-    t9 = n(102077),
+var t9 = n(290153),
+    t7 = n(102077),
     ne = n(246049),
     nt = n(135261),
     nn = n(339200),
@@ -1457,7 +1457,7 @@ function nc(e, t, r, s, a) {
                                 n.e(630290),
                                 n.e(189423),
                                 n.e(77413),
-                                n.e(474750),
+                                n.e(521332),
                                 n.e(267526),
                                 n.e(669174),
                                 n.e(967062),
@@ -1874,7 +1874,7 @@ let nb = i.memo(function (e) {
             },
             [D, k.commands?.enabled, eJ],
         ),
-        { submitting: e3, submit: e8, handleSubmit: e7 } = nc(F, k, ey, eI, T.id),
+        { submitting: e3, submit: e8, handleSubmit: e9 } = nc(F, k, ey, eI, T.id),
         { autocompleteRef: tt, handleMaybeShowAutocomplete: tn, handleHideAutocomplete: tr } = ng(),
         ta = nd(e8, k, ey),
         to = nh(ey),
@@ -2053,11 +2053,11 @@ let nb = i.memo(function (e) {
         t5 =
             null != L
                 ? L()
-                : (0, l.jsx)(t7.A, {
+                : (0, l.jsx)(t9.A, {
                       type: k,
                       disabled: eF,
                       channel: T,
-                      handleSubmit: e7,
+                      handleSubmit: e9,
                       isEmpty: tG,
                       showAllButtons: !eL && !eM,
                       expressionButtonsHidden: eM,
@@ -2108,7 +2108,7 @@ let nb = i.memo(function (e) {
                                     (0, l.jsx)(tL, { channelId: T.id, chatInputType: k }),
                                     k.hideAttachmentArea
                                         ? null
-                                        : (0, l.jsx)(t9.A, { channelId: T.id, type: k, canAttachFiles: eG }),
+                                        : (0, l.jsx)(t7.A, { channelId: T.id, type: k, canAttachFiles: eG }),
                                     (0, l.jsxs)("div", {
                                         className: s()(e6.vW, {
                                             [e6.mb]: tH,
@@ -2122,7 +2122,7 @@ let nb = i.memo(function (e) {
                                         children: [
                                             t2,
                                             tH
-                                                ? (0, l.jsx)(e9, { channelId: T.id })
+                                                ? (0, l.jsx)(e7, { channelId: T.id })
                                                 : (0, l.jsxs)(l.Fragment, {
                                                       children: [
                                                           tM,
