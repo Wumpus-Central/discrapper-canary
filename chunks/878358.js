@@ -34,7 +34,7 @@ let M = {
 };
 function y(e) {
     let { src: t } = e;
-    return (0, i.jsx)("img", { src: t, alt: "", className: O.Gl });
+    return (0, i.jsx)("img", { src: t, alt: "", className: O.Gl, draggable: !1 });
 }
 function L() {
     return (0, i.jsx)(d.UnknownGameIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xs" });
