@@ -163,6 +163,7 @@ n.d(
                 case A.wk.V2025:
                     return I.intl.string(f.default.goiR2u);
                 case A.wk.V2026:
+                    return I.intl.string(h.default.M4C8At);
                 default:
                     return null;
             }
