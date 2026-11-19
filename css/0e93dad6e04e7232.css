@@ -21,6 +21,7 @@
 .cards_ODxXvY {
     --custom-clips-capture-mode-gradient-start: rgb(from var(--expressive-gradient-nitro-pink-start) r g b/calc(alpha * 1.15));
     --custom-clips-capture-mode-gradient-end: var(--expressive-gradient-nitro-pink-end);
+    container: clips-capture-mode-cards/inline-size;
     overflow: visible
 }
 
@@ -32,9 +33,15 @@
 .group_ODxXvY {
     display: grid;
     gap: var(--space-16);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--space-96)*2)), 1fr));
+    grid-template-columns: minmax(0, 1fr);
     overflow: visible;
     padding: var(--space-8) 0
+}
+
+@container clips-capture-mode-cards (min-width: 512px) {
+    .group_ODxXvY {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
 }
 
 .captureCard_ODxXvY {
@@ -102,4 +109,4 @@
     background-repeat: no-repeat
 }
 
-/*# sourceMappingURL=be7a7dcc0602821a.css.map*/
+/*# sourceMappingURL=0e93dad6e04e7232.css.map*/

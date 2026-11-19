@@ -1,7 +1,5 @@
 .frame__vwHFq {
     border-radius: inherit;
-    display: flex;
-    flex-direction: column;
     margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
     margin-top: calc(var(--custom-modal-padding-top)*-1);
     min-height: 0;
@@ -9,9 +7,10 @@
     position: relative
 }
 
+.frame__vwHFq,
 .scroll__vwHFq {
-    min-height: 0;
-    overflow-y: auto
+    display: flex;
+    flex-direction: column
 }
 
 .close__vwHFq {
@@ -23,7 +22,9 @@
 .art__vwHFq {
     background: var(--background-surface-higher);
     cursor: pointer;
+    flex-shrink: 1;
     height: 280px;
+    min-height: 160px;
     position: relative
 }
 
@@ -151,4 +152,4 @@
     }
 }
 
-/*# sourceMappingURL=9fc343370d257240.css.map*/
+/*# sourceMappingURL=deb09d2573ba0fe7.css.map*/
