@@ -50,7 +50,7 @@ function k(e) {
         children: t,
     });
 }
-function j(e) {
+function _(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(C.E, {
         className: s()(n, b.I0),
@@ -59,7 +59,7 @@ function j(e) {
         children: t,
     });
 }
-var _ = n(696451),
+var j = n(696451),
     R = n(807094);
 function w(e) {
     let { name: t, className: n, state: i, isInline: r, onClick: a } = e,
@@ -155,8 +155,8 @@ function U(e) {
         p = null != r ? c?.[r] : null;
     t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
     let g = u && null != h ? (0, O.Rg)(h) : null,
-        x = (0, y.bG)([_.Ay], () => {
-            if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
+        x = (0, y.bG)([j.Ay], () => {
+            if (null != a.guild_id && h?.botId != null) return j.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
         className: s()(L.iE, m ? null : L.r9),
@@ -178,7 +178,7 @@ function U(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(j, { className: L.sP, children: x ?? h?.name }),
+            (0, l.jsx)(_, { className: L.sP, children: x ?? h?.name }),
         ],
     });
 }
@@ -231,7 +231,7 @@ let X = function (e) {
         className: Z.UX,
         children: [
             (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: M.intl.format(M.t.uEky42, { count: t.length }) }) }),
-            (0, l.jsx)(j, { children: r }),
+            (0, l.jsx)(_, { children: r }),
         ],
     });
 };
@@ -250,7 +250,7 @@ function er(e) {
             (null != t.emojiId || null != t.emojiName) &&
                 (0, l.jsx)(N, { children: (0, l.jsx)(el.A, { emojiId: t.emojiId, emojiName: t.emojiName }) }),
             (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: t.name }) }),
-            null != n && (0, l.jsx)(j, { children: n }),
+            null != n && (0, l.jsx)(_, { children: n }),
         ],
     });
 }
@@ -329,7 +329,7 @@ class eg extends ep {
             children: [
                 null != i ? (0, l.jsx)(N, { children: i }) : null,
                 (0, l.jsx)(v, { children: null != n ? (0, l.jsxs)("div", { className: b.QN, children: [r, n] }) : r }),
-                null != t ? (0, l.jsx)(j, { children: t }) : null,
+                null != t ? (0, l.jsx)(_, { children: t }) : null,
             ],
         });
     }
@@ -382,7 +382,7 @@ class ey extends ep {
                     }),
                 }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: t ?? s ?? ed.Ay.getName(e) }) }),
-                (0, l.jsxs)(j, {
+                (0, l.jsxs)(_, {
                     children: [
                         ed.Ay.getUserTag(e, { mode: "username", identifiable: i ? "never" : "always" }),
                         i || e.hasUniqueUsername()
@@ -424,7 +424,7 @@ class eC extends ep {
                         ],
                     }),
                 }),
-                t ? null : (0, l.jsx)(j, { children: M.intl.string(M.t["/91tbr"]) }),
+                t ? null : (0, l.jsx)(_, { children: M.intl.string(M.t["/91tbr"]) }),
             ],
         });
     }
@@ -437,7 +437,7 @@ class eA extends ep {
                 (0, l.jsx)(v, {
                     children: (0, l.jsx)(T, { children: (0, l.jsx)(et.A, { node: e, showTooltip: !1 }) }),
                 }),
-                null != t ? (0, l.jsx)(j, { children: t }) : null,
+                null != t ? (0, l.jsx)(_, { children: t }) : null,
             ],
         });
     }
@@ -450,7 +450,7 @@ class eb extends ep {
             children: [
                 null != n && (0, l.jsx)(N, { children: (0, l.jsx)(n, { className: b.Kk }) }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: (0, W.m1)(e, ec.default, eu.A) }) }),
-                null != t ? (0, l.jsx)(j, { children: t.name }) : null,
+                null != t ? (0, l.jsx)(_, { children: t.name }) : null,
             ],
         });
     }
@@ -469,7 +469,7 @@ class eI extends ep {
                     }),
                 }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: e.displayName }) }),
-                (0, l.jsx)(j, { children: e.displayDescription }),
+                (0, l.jsx)(_, { children: e.displayDescription }),
             ],
         });
     }
@@ -510,7 +510,7 @@ class eN extends ep {
                                   : e.url,
                       })
                     : (0, l.jsx)("span", { className: b.nT, children: e.surrogates }),
-            s = null != n ? (0, l.jsx)(j, { children: n.name }) : null;
+            s = null != n ? (0, l.jsx)(_, { children: n.name }) : null;
         return (0, l.jsxs)(I, {
             children: [
                 (0, l.jsx)(N, { children: r }),
@@ -539,7 +539,7 @@ class eT extends ep {
                             null != t && (0, l.jsx)(k, { children: M.intl.format(M.t.PAutaQ, { queryMatch: t }) }),
                         ],
                     }),
-                    null != e && (0, l.jsx)(j, { children: e }),
+                    null != e && (0, l.jsx)(_, { children: e }),
                 ],
             })
         );
@@ -552,12 +552,12 @@ class ek extends ep {
         return (0, l.jsx)("img", { alt: "", src: n, width: e, height: t });
     }
 }
-class ej extends ep {
+class e_ extends ep {
     renderContent() {
         return (0, l.jsx)(X, { emojis: this.props.emojis });
     }
 }
-class e_ extends ep {
+class ej extends ep {
     renderContent() {
         return (0, l.jsx)(er, { ...this.props });
     }
@@ -599,8 +599,8 @@ class eM extends i.PureComponent {
     static Emoji = eN;
     static GIFIntegration = ek;
     static Sticker = eT;
-    static EmojiUpsell = ej;
-    static Soundmoji = e_;
+    static EmojiUpsell = e_;
+    static Soundmoji = ej;
     static Game = ew;
     static Timestamp = eA;
     render() {

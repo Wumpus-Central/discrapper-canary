@@ -1,11 +1,11 @@
-l.d(t, { A: () => q });
+l.d(t, { A: () => U });
 var n = l(477900),
     a = l(582128),
     r = l(855986),
     i = l(691885),
     s = l(150934),
-    u = l(103557),
-    o = l(95477),
+    o = l(103557),
+    u = l(95477),
     d = l(834730),
     c = l(821609),
     f = l(289873),
@@ -38,7 +38,7 @@ function L(e) {
     let t,
         l,
         i,
-        { value: s, onChange: u, maxOptionsVisible: o = 6, ...d } = e,
+        { value: s, onChange: o, maxOptionsVisible: u = 6, ...d } = e,
         { allOptions: c, runningIds: f } =
             (a.useEffect(() => {
                 _.A.getDetectableGames();
@@ -88,19 +88,19 @@ function L(e) {
         fullWidth: !0,
         value: [...s],
         options: v,
-        maxOptionsVisible: o,
-        customMatchSorter: G,
+        maxOptionsVisible: u,
+        customMatchSorter: H,
         onQueryChange: (e) => p(e.target.value),
         onSelectionChange: (e) => {
-            (p(""), u(e));
+            (p(""), o(e));
         },
     });
 }
-function G(e) {
+function H(e) {
     return e;
 }
-function H(e) {
-    let { def: t, hint: l, value: r, pickingEmpty: i, disabled: u, onChange: o, onPickingEmptyChange: c } = e,
+function O(e) {
+    let { def: t, hint: l, value: r, pickingEmpty: i, disabled: o, onChange: u, onPickingEmptyChange: c } = e,
         f = a.useMemo(() => (Array.isArray(r) ? r : []), [r]),
         m = Array.isArray(r) && 0 === r.length && !i,
         g = a.useId(),
@@ -115,11 +115,11 @@ function H(e) {
                 hideLabel: !0,
                 placeholder: S.intl.string(w.default["74Afoq"]),
                 value: f,
-                disabled: u,
+                disabled: o,
                 "aria-invalid": i,
                 "aria-errormessage": i ? g : void 0,
                 onChange: (e) => {
-                    (c(0 === e.length), o(e));
+                    (c(0 === e.length), u(e));
                 },
             }),
             i
@@ -134,42 +134,42 @@ function H(e) {
             (0, n.jsx)(s.S, {
                 label: S.intl.string(w.default.dbuk9m),
                 checked: m,
-                disabled: u,
+                disabled: o,
                 onChange: (e) => {
-                    (c(!e), o([]));
+                    (c(!e), u([]));
                 },
             }),
         ],
     });
 }
-var O = l(183265);
-let U = { values: {}, secrets: {} };
-function q(e) {
+var q = l(183265);
+let z = { values: {}, secrets: {} };
+function U(e) {
     var t;
     let { projectId: l, scopeKeys: m, note: g, notifyAgent: p = !1, isPreview: v = !1, onSaved: E, children: P } = e,
         T = (0, r.bG)([x.A], () => x.A.getSettings(l)),
-        [_, N] = a.useState(U),
+        [_, N] = a.useState(z),
         [I, M] = a.useState({}),
-        [L, G] = a.useState(!1),
-        [q, z] = a.useState(!1),
-        [D, R] = a.useState({}),
+        [L, H] = a.useState(!1),
+        [U, D] = a.useState(!1),
+        [G, R] = a.useState({}),
         F = a.useCallback((e, t) => {
             R((l) => (l[e] === t ? l : { ...l, [e]: t }));
         }, []),
         W = a.useCallback((e, t) => {
-            (z(!1), N((l) => ({ ...l, values: { ...l.values, [e]: t } })));
+            (D(!1), N((l) => ({ ...l, values: { ...l.values, [e]: t } })));
         }, []),
         B = a.useCallback((e, t) => {
-            (z(!1), N((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } })));
+            (D(!1), N((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } })));
         }, []),
         Q = a.useMemo(() => T?.schema ?? [], [T]),
         V = (0, C.Tj)(l, v),
-        { servers: K, serverId: J, setServerId: Y } = (0, C.v4)(l, v);
-    function Z(e) {
-        return (0, b.$c)(e, J);
+        { servers: K, serverId: Y, setServerId: Z } = (0, C.v4)(l, v);
+    function J(e) {
+        return (0, b.$c)(e, Y);
     }
     function X(e) {
-        return _.values[Z(e)] ?? (0, b.pn)(T, e, J);
+        return _.values[J(e)] ?? (0, b.pn)(T, e, Y);
     }
     let ee = a.useMemo(
             () =>
@@ -186,12 +186,12 @@ function q(e) {
             for (let [t, l] of Object.entries(_.secrets)) "" !== l.trim() && (e[t] = l.trim());
             return { ...(0, b.DG)(T, _.values), ...(0, b.mU)(Q, e) };
         }, [_, Q, T]),
-        es = Q.some((e) => "game" === e.type && !0 === D[e.key]),
-        eu = (null != ei.values || null != ei.server_values || null != ei.secrets) && !es,
-        eo = a.useCallback(async () => {
+        es = Q.some((e) => "game" === e.type && !0 === G[e.key]),
+        eo = (null != ei.values || null != ei.server_values || null != ei.secrets) && !es,
+        eu = a.useCallback(async () => {
             if (es) return !1;
-            if (!eu || L) return !0;
-            (G(!0), z(!1));
+            if (!eo || L) return !0;
+            (H(!0), D(!1));
             try {
                 let { rebuildRequired: e } = await (0, j.nU)(l, ei);
                 return (
@@ -201,17 +201,17 @@ function q(e) {
                             ? (0, k.dv)(e, S.intl.string(w.default["08bsJL"]))
                             : l && (0, j.ss)(e);
                     })(l, { rebuildRequired: e, notifyAgent: p }),
-                    N(U),
+                    N(z),
                     M({}),
                     E?.(),
                     !0
                 );
             } catch {
-                return (z(!0), !1);
+                return (D(!0), !1);
             } finally {
-                G(!1);
+                H(!1);
             }
-        }, [eu, es, p, E, l, L, ei]);
+        }, [eo, es, p, E, l, L, ei]);
     function ed(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -224,14 +224,14 @@ function q(e) {
     }
     function ec(e) {
         let t = ed(e),
-            l = Z(e);
+            l = J(e);
         if ("select" === e.type) {
             let a = X(e),
                 r = (e.options ?? []).map((e) => ({ id: e.value, label: e.label, value: e.value }));
             return (0, n.jsxs)(
                 "div",
                 {
-                    className: O._6,
+                    className: q._6,
                     children: [
                         !0 === e.multiple
                             ? (0, n.jsx)(i.l, {
@@ -263,7 +263,7 @@ function q(e) {
             ? (0, n.jsxs)(
                   "div",
                   {
-                      className: O._6,
+                      className: q._6,
                       children: [
                           (0, n.jsx)(s.S, {
                               label: e.label,
@@ -280,12 +280,12 @@ function q(e) {
               )
             : "game" === e.type
               ? (0, n.jsx)(
-                    H,
+                    O,
                     {
                         def: e,
                         hint: t,
                         value: X(e),
-                        pickingEmpty: !0 === D[e.key],
+                        pickingEmpty: !0 === G[e.key],
                         disabled: L,
                         onChange: (t) => W(e.key, t),
                         onPickingEmptyChange: (t) => F(e.key, t),
@@ -296,7 +296,7 @@ function q(e) {
                 ? (0, n.jsx)(
                       $,
                       {
-                          guildId: !0 === e.per_server ? J : V,
+                          guildId: !0 === e.per_server ? Y : V,
                           def: e,
                           hint: t,
                           value: X(e),
@@ -309,11 +309,11 @@ function q(e) {
                 : ef(e, t);
     }
     function ef(e, t) {
-        let l = Z(e),
+        let l = J(e),
             a = X(e);
         return !0 === e.multiline
             ? (0, n.jsx)(
-                  u.f,
+                  o.f,
                   {
                       label: e.label,
                       helperText: t,
@@ -330,9 +330,9 @@ function q(e) {
             : (0, n.jsxs)(
                   "div",
                   {
-                      className: O._6,
+                      className: q._6,
                       children: [
-                          (0, n.jsx)(o.k, {
+                          (0, n.jsx)(u.k, {
                               label: e.label,
                               name: e.key,
                               autoComplete: "off",
@@ -358,10 +358,10 @@ function q(e) {
             ? (0, n.jsxs)(
                   "div",
                   {
-                      className: O.tx,
+                      className: q.tx,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: O.DE,
+                              className: q.DE,
                               children: [
                                   (0, n.jsx)(d.E, { variant: "body-sm/medium", color: "text-default", children: t }),
                                   (0, n.jsx)(d.E, {
@@ -391,9 +391,9 @@ function q(e) {
             : (0, n.jsxs)(
                   "div",
                   {
-                      className: O._6,
+                      className: q._6,
                       children: [
-                          (0, n.jsx)(o.k, {
+                          (0, n.jsx)(u.k, {
                               label: t,
                               name: e.name,
                               type: "password",
@@ -418,7 +418,7 @@ function q(e) {
     let eg =
             0 === (t = (ea ? et.filter((e) => en.includes(e.key)) : et).filter((e) => !0 === e.per_server)).length
                 ? null
-                : null == J
+                : null == Y
                   ? (0, n.jsx)(d.E, {
                         variant: "body-sm/normal",
                         color: "text-muted",
@@ -428,7 +428,7 @@ function q(e) {
                         children: [
                             K.length > 1
                                 ? (0, n.jsxs)("div", {
-                                      className: O._6,
+                                      className: q._6,
                                       children: [
                                           (0, n.jsx)(i.l, {
                                               label: S.intl.string(w.default["6FmRyw"]),
@@ -437,8 +437,8 @@ function q(e) {
                                                   label: e.name,
                                                   value: e.guildId,
                                               })),
-                                              value: J,
-                                              onSelectionChange: (e) => Y(e),
+                                              value: Y,
+                                              onSelectionChange: (e) => Z(e),
                                               selectionMode: "single",
                                               disabled: L,
                                               fullWidth: !0,
@@ -454,7 +454,7 @@ function q(e) {
                             t.map(ec),
                         ],
                     }),
-        ep = q
+        ep = U
             ? (0, n.jsx)(d.E, {
                   variant: "body-xs/normal",
                   color: "text-feedback-critical",
@@ -463,13 +463,13 @@ function q(e) {
               })
             : null,
         ev = (0, n.jsxs)("div", {
-            className: O.Ek,
+            className: q.Ek,
             children: [
                 null != g && "" !== g
                     ? (0, n.jsx)(h.A, { text: g, variant: "body-sm/normal", color: "text-default" })
                     : null,
                 null == T
-                    ? (0, n.jsx)("div", { className: O.kZ, children: (0, n.jsx)(f.y, {}) })
+                    ? (0, n.jsx)("div", { className: q.kZ, children: (0, n.jsx)(f.y, {}) })
                     : 0 === et.length && 0 === ee.length
                       ? (0, n.jsx)(d.E, {
                             variant: "body-sm/normal",
@@ -506,7 +506,7 @@ function q(e) {
             ],
         }),
         eh = (0, n.jsxs)("div", {
-            className: O.Ek,
+            className: q.Ek,
             children: [
                 (0, n.jsx)(d.E, {
                     variant: "body-xs/normal",
@@ -525,15 +525,15 @@ function q(e) {
             loaded: null != T,
             valueCount: et.length,
             secretCount: ee.length,
-            canSave: eu,
+            canSave: eo,
             invalid: es,
             saving: L,
             isScoped: ea,
-            submit: eo,
+            submit: eu,
         }),
     });
 }
-function z(e) {
+function D(e) {
     let {
             def: t,
             hint: l,
@@ -541,8 +541,8 @@ function z(e) {
             disabled: r,
             onChange: i,
             options: s,
-            placeholder: u,
-            onQueryChange: o,
+            placeholder: o,
+            onQueryChange: u,
             matchSorterOptions: d,
         } = e,
         c = (0, C.TN)(a),
@@ -550,15 +550,15 @@ function z(e) {
         g = {
             label: t.label,
             options: !0 === t.multiple ? (0, C.U5)(f, c) : f,
-            placeholder: u,
-            onQueryChange: o,
+            placeholder: o,
+            onQueryChange: u,
             matchSorterOptions: d,
             disabled: r,
             fullWidth: !0,
             clearable: !0,
         };
     return (0, n.jsxs)("div", {
-        className: O._6,
+        className: q._6,
         children: [
             !0 === t.multiple
                 ? (0, n.jsx)(m.Z, {
@@ -573,26 +573,26 @@ function z(e) {
         ],
     });
 }
-function D(e) {
+function G(e) {
     let { guildId: t, fallback: l, ...a } = e,
         r = (0, g.A)(t, a.def.channel_filter);
-    return null == r ? l : (0, n.jsx)(z, { ...a, options: r, placeholder: S.intl.string(w.default.iZIF9m) });
+    return null == r ? l : (0, n.jsx)(D, { ...a, options: r, placeholder: S.intl.string(w.default.iZIF9m) });
 }
 function R(e) {
     let { guildId: t, ...l } = e;
-    return (0, n.jsx)(z, { ...l, options: (0, v.A)(t) });
+    return (0, n.jsx)(D, { ...l, options: (0, v.A)(t) });
 }
 function F(e) {
     let { guildId: t, ...l } = e,
         { options: a, onQueryChange: r, matchSorterOptions: i } = (0, p.A)(t, (0, C.TN)(l.value));
-    return (0, n.jsx)(z, { ...l, options: a, onQueryChange: r, matchSorterOptions: i });
+    return (0, n.jsx)(D, { ...l, options: a, onQueryChange: r, matchSorterOptions: i });
 }
 function $(e) {
     let { guildId: t, fallback: l, ...a } = e;
     if (null == t) return l;
     switch (a.def.type) {
         case "channel":
-            return (0, n.jsx)(D, { ...a, guildId: t, fallback: l });
+            return (0, n.jsx)(G, { ...a, guildId: t, fallback: l });
         case "role":
             return (0, n.jsx)(R, { ...a, guildId: t });
         default:

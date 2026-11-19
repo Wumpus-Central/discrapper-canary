@@ -52,29 +52,29 @@ n.d(
                 h = (0, r.V)(p),
                 C = !u && !m && null != t,
                 f = !!(C && null != h && c.kb[h.trialId].skus.includes(t) && !u),
-                S = (0, i.O)(),
-                E =
+                E = (0, i.O)(),
+                S =
                     null != t &&
-                    null != S &&
-                    null != S.discount &&
-                    null != S.discount.planIds &&
-                    S.discount.planIds.some((e) => c.hd[e].skuId === t),
-                I = !!(C && null != S && E),
-                g = l.useMemo(
-                    () => null != S && null != S.discount && null != e && (0, a.Ro)(e, S.discount.id),
-                    [S, e],
+                    null != E &&
+                    null != E.discount &&
+                    null != E.discount.planIds &&
+                    E.discount.planIds.some((e) => c.hd[e].skuId === t),
+                g = !!(C && null != E && S),
+                I = l.useMemo(
+                    () => null != E && null != E.discount && null != e && (0, a.Ro)(e, E.discount.id),
+                    [E, e],
                 );
             return l.useMemo(
                 () => ({
                     isPremium: n,
                     isPremiumGroupPurchase: u,
                     isEligibleForTrial: f,
-                    isEligibleForDiscount: I,
+                    isEligibleForDiscount: g,
                     userTrialOffer: h,
-                    discountOffer: S,
-                    currentInvoiceHasMatchingDiscountOffer: g,
+                    discountOffer: E,
+                    currentInvoiceHasMatchingDiscountOffer: I,
                 }),
-                [n, u, f, I, h, S, g],
+                [n, u, f, g, h, E, I],
             );
         },
     },

@@ -15,7 +15,7 @@ n.d(
                 h = (0, a.YJ)(p),
                 C = !0 === n.loaded,
                 f = null != d,
-                [S, E] = (0, i.YV)({
+                [E, S] = (0, i.YV)({
                     items: null != h ? [{ planId: h, quantity: 1 }] : [],
                     renewal: !1,
                     preventFetch: f || !m || null == h || !C,
@@ -24,17 +24,17 @@ n.d(
                     currency: n.currency,
                     metadata: c,
                 }),
-                I = f ? d : S,
-                g = l.useMemo(() => {
-                    let e = m ? (I ?? null) : null;
+                g = f ? d : E,
+                I = l.useMemo(() => {
+                    let e = m ? (g ?? null) : null;
                     return {
                         discountOffer: p,
                         applicablePlan: h,
                         discountInvoicePreview: e,
                         discountAmountOff: null != h ? (0, a.pg)(e, h) : null,
-                        discountInvoiceError: E,
+                        discountInvoiceError: S,
                     };
-                }, [p, h, I, E, m]);
+                }, [p, h, g, S, m]);
             return (
                 (t = (0, s.t4)((e) => {
                     let { setPremiumDiscountInfo: t } = e;
@@ -42,14 +42,14 @@ n.d(
                 })),
                 l.useEffect(
                     () => (
-                        t(g),
+                        t(I),
                         () => {
                             t(r.T);
                         }
                     ),
-                    [g, t],
+                    [I, t],
                 ),
-                g
+                I
             );
         },
     },

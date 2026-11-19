@@ -21,14 +21,14 @@ n.d(
         h: function (e) {
             let { onRetry: t, errorOrigin: n, errorMessage: l } = e,
                 f = (0, c.Ay)(),
-                S = (0, r.bG)([d.default], () => {
+                E = (0, r.bG)([d.default], () => {
                     let e = d.default.getCurrentUser();
                     return e?.isStaff() || e?.isStaffPersonal();
                 }),
-                E = 1 === n ? p.tV : p.Df,
-                I = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
+                S = 1 === n ? p.tV : p.Df,
+                g = 1 === n ? m.intl.string(m.t["+2QBZX"]) : m.intl.string(m.t.LuhKs2);
             return (0, i.jsxs)("div", {
-                className: E,
+                className: S,
                 children: [
                     (0, i.jsx)("img", { className: p.__invalid_loadIssueImg, src: (0, a.M)(f) ? h : C, alt: "" }),
                     (0, i.jsx)(s.D, {
@@ -36,8 +36,8 @@ n.d(
                         variant: "heading-xl/semibold",
                         children: m.intl.string(m.t.i5SQ74),
                     }),
-                    (0, i.jsx)(o.E, { className: p.h_, variant: "body-md/normal", children: I }),
-                    S &&
+                    (0, i.jsx)(o.E, { className: p.h_, variant: "body-md/normal", children: g }),
+                    E &&
                         null != l &&
                         (0, i.jsx)(o.E, { variant: "body-md/normal", children: "staff-only debug: " + l }),
                     (0, i.jsx)("div", {

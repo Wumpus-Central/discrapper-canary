@@ -60,12 +60,12 @@ n.d(
                     },
                 }),
                 y = (0, b.C)(t.helpArticle, ""),
-                { icon: O, iconPosition: M } = (0, p.x)({ buttonAction: t.ctaAction }),
-                R = e.getFormatVariableValues(f.intl.currentLocale),
-                C = (0, c.d)(t.body, R);
+                { icon: O, iconPosition: R } = (0, p.x)({ buttonAction: t.ctaAction }),
+                M = e.getFormatVariableValues(f.intl.currentLocale),
+                C = (0, c.d)(t.body, M);
             if (!C.ok) return null;
-            let h = (0, c.n)(t.ctaLabel, R);
-            return h.ok
+            let P = (0, c.n)(t.ctaLabel, M);
+            return P.ok
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.A, {
@@ -89,9 +89,9 @@ n.d(
                                               }),
                                       ],
                                   }),
-                                  "" !== h.content &&
+                                  "" !== P.content &&
                                       (0, l.jsx)(_.fY, {
-                                          text: h.content,
+                                          text: P.content,
                                           onClick: function () {
                                               (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                                                   notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,
@@ -99,7 +99,7 @@ n.d(
                                                   S());
                                           },
                                           icon: O,
-                                          iconPosition: M,
+                                          iconPosition: R,
                                       }),
                               ],
                           }),

@@ -12,10 +12,10 @@ let a = "",
     h = "",
     C = "",
     f = "",
-    S = "",
     E = "",
-    I = !1,
-    g = null,
+    S = "",
+    g = !1,
+    I = null,
     y = null,
     A = null,
     P = null;
@@ -31,24 +31,24 @@ function v() {
         (h = ""),
         (C = ""),
         (f = ""),
-        (S = ""),
         (E = ""),
-        (I = !1),
-        (g = null),
+        (S = ""),
+        (g = !1),
+        (I = null),
         (y = null),
         (A = null),
         (P = null));
 }
 function x() {
-    g = null;
+    I = null;
 }
 function _(e) {
     let { error: t } = e;
-    g = t;
+    I = t;
 }
 function T(e) {
     let { message: t } = e;
-    g = new r.Ey(t);
+    I = new r.Ey(t);
 }
 class b extends l.Ay.Store {
     static displayName = "NewPaymentSourceStore";
@@ -83,13 +83,13 @@ class b extends l.Ay.Store {
         return u;
     }
     getBillingAddressInfo() {
-        return { name: m, email: p, country: d, line1: h, line2: C, city: f, postalCode: S, state: E };
+        return { name: m, email: p, country: d, line1: h, line2: C, city: f, postalCode: E, state: S };
     }
     get isBillingAddressInfoValid() {
-        return I;
+        return g;
     }
     get error() {
-        return g;
+        return I;
     }
 }
 let N = new b(i.h, {
@@ -105,10 +105,10 @@ let N = new b(i.h, {
             (h = t.line1),
             (C = t.line2),
             (f = t.city),
-            (S = t.postalCode),
-            (E = t.state),
+            (E = t.postalCode),
+            (S = t.state),
             (p = t.email),
-            (I = n));
+            (g = n));
     },
     BRAINTREE_TOKENIZE_PAYPAL_START: function () {
         ((a = ""), (s = null));
@@ -122,10 +122,10 @@ let N = new b(i.h, {
             (h = l.line1),
             (C = l.line2),
             (f = l.city),
-            (S = l.postalCode),
-            (E = l.state),
+            (E = l.postalCode),
+            (S = l.state),
             (p = l.email),
-            (I = d.length > 0));
+            (g = d.length > 0));
     },
     BRAINTREE_TOKENIZE_VENMO_START: function () {
         ((o = ""), (s = null));

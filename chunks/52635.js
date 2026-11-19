@@ -41,13 +41,13 @@ n.d(
                             () => (p === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(C) : null),
                             [C, p],
                         ),
-                        { fetched: S, hasAlreadyLinked: E } = (0, a.RD)(f);
+                        { fetched: E, hasAlreadyLinked: S } = (0, a.RD)(f);
                     return {
                         type: l,
                         purchaseButtonText: n ?? o,
                         applicationName: f?.name,
                         applicationId: C,
-                        shouldAppendDisclaimer: i || (S && E),
+                        shouldAppendDisclaimer: i || (E && S),
                     };
                 })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: p });
             return (0, l.jsx)(c._P, { variant: f, paymentSourceType: n, immediateDelivery: C });

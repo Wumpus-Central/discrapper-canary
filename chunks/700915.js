@@ -4,8 +4,8 @@ var n = l(477900),
     r = l(323384),
     i = l(646514),
     s = l(834730),
-    u = l(845079),
-    o = l(762026),
+    o = l(845079),
+    u = l(762026),
     d = l(921853),
     c = l(320448),
     f = l(377626);
@@ -39,7 +39,7 @@ function p(e) {
         className: g.yA,
         children: [
             null != l
-                ? (0, n.jsx)(u.A, { project: l, size: "header" })
+                ? (0, n.jsx)(o.A, { project: l, size: "header" })
                 : (0, n.jsx)("div", {
                       className: g.Pz,
                       children: (0, n.jsx)(r.AppsIcon, { size: "xxs", color: i.A.colors.INTERACTIVE_ICON_DEFAULT }),
@@ -50,15 +50,15 @@ function p(e) {
 }
 function v(e) {
     let { caller: t, target: l, callerProject: r, targetProject: i, flow: s } = e,
-        [u, d] = a.useState(0);
+        [o, d] = a.useState(0);
     return (0, n.jsxs)("div", {
         className: g.wx,
         role: "img",
-        "aria-label": (0, o.XK)({ caller: t, target: l }, s),
+        "aria-label": (0, u.XK)({ caller: t, target: l }, s),
         onMouseEnter: () => d((e) => e + 1),
         children: [
             (0, n.jsx)(p, { name: t, project: r }),
-            (0, n.jsx)(m, { flow: s, play: u }),
+            (0, n.jsx)(m, { flow: s, play: o }),
             (0, n.jsx)(p, { name: l, project: i }),
         ],
     });

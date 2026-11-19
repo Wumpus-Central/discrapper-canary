@@ -13,10 +13,10 @@ var l = n(477900),
     h = n(683071),
     C = n(891197),
     f = n(125114),
-    S = n(901112),
-    E = n(901930),
-    I = n(725836),
-    g = n(580133),
+    E = n(901112),
+    S = n(901930),
+    g = n(725836),
+    I = n(580133),
     y = n(682689),
     A = n(379912),
     P = n(792996),
@@ -38,7 +38,7 @@ function _() {
             merchantAccountId: (0, f.rH)(e.order),
         })),
         n = i.useCallback(() => {
-            null != e && (0, S.A)(e, t);
+            null != e && (0, E.A)(e, t);
         }, [e, t]),
         r = i.useCallback((e, t) => (0, l.jsx)(p.Anchor, { onClick: n, children: e }, t), [n]);
     return null == e
@@ -46,7 +46,7 @@ function _() {
         : (0, l.jsx)(m.E, { variant: "body-md/normal", children: P.intl.format(A.default.Ap5au4, { reopenHook: r }) });
 }
 function T() {
-    let { error: e, errorMessage: t } = (0, E.j)({});
+    let { error: e, errorMessage: t } = (0, S.j)({});
     return null != e
         ? (0, l.jsx)("div", {
               className: v.l,
@@ -57,7 +57,7 @@ function T() {
 function b() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(I.UY, { children: (0, l.jsx)(g.f, {}) }),
+            (0, l.jsx)(g.UY, { children: (0, l.jsx)(I.f, {}) }),
             (0, l.jsx)("div", { className: v.k, role: "status", children: (0, l.jsx)(T, {}) }),
         ],
     });
@@ -76,17 +76,17 @@ function R(e) {
         } = e,
         {
             paymentSourceId: f,
-            purchaseError: S,
-            setCheckoutCurrency: E,
-            isOrderSigningInProgress: I,
+            purchaseError: E,
+            setCheckoutCurrency: S,
+            isOrderSigningInProgress: g,
         } = (0, y.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             purchaseError: e.purchaseError,
             setCheckoutCurrency: e.setCheckoutCurrency,
             isOrderSigningInProgress: e.getIsOrderSigningInProgress(),
         })),
-        g = (0, j.s2)();
-    a()(null != g, "Step should be set");
+        I = (0, j.s2)();
+    a()(null != I, "Step should be set");
     let A = i.useRef(null),
         { paymentSources: P } = (0, N.j)(),
         v = (0, c.W)(P, f),
@@ -95,12 +95,12 @@ function R(e) {
             e.getIsReviewSubmitDisabled({ paymentSource: v, isWalletPurchaseDisabled: x, isTrial: r }),
         );
     i.useEffect(() => {
-        null != S && null != A.current && A.current.scrollIntoView({ behavior: "smooth" });
-    }, [S]);
+        null != E && null != A.current && A.current.scrollIntoView({ behavior: "smooth" });
+    }, [E]);
     let T = n.onBack,
         R = i.useCallback(() => {
-            (E(void 0), null != T && T());
-        }, [E, T]),
+            (S(void 0), null != T && T());
+        }, [S, T]),
         O = i.useMemo(() => t(), [t]),
         L = (0, l.jsx)(d.U, {
             ...n,
@@ -113,6 +113,6 @@ function R(e) {
             postPurchaseStep: o.pn.CONFIRM,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: I ? (0, l.jsx)(b, {}) : O }), (0, l.jsx)(u.UX, { children: L })],
+        children: [(0, l.jsx)(u.dZ, { children: g ? (0, l.jsx)(b, {}) : O }), (0, l.jsx)(u.UX, { children: L })],
     });
 }

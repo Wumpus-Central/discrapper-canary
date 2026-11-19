@@ -25,7 +25,7 @@ var l = n(477900),
     N = n(650583),
     T = n(792996),
     k = n(40974);
-function j(e) {
+function _(e) {
     let { channelId: t, option: n, keyboardModeEnabled: r } = e,
         a = i.useRef(null),
         [o, u] = i.useState(!1),
@@ -35,8 +35,8 @@ function j(e) {
         {
             allowedExtensions: p,
             typesFormattedString: x,
-            validateFilenames: j,
-            showInvalidFileTypeAlert: _,
+            validateFilenames: _,
+            showInvalidFileTypeAlert: j,
         } = (0, A.M1)(f),
         R = i.useCallback(() => {
             u(!0);
@@ -46,11 +46,11 @@ function j(e) {
         }, []),
         O = i.useCallback(
             (e, l) => {
-                if (p.length > 0 && !j([e.name])) return _();
+                if (p.length > 0 && !_([e.name])) return j();
                 let i = { id: n.name, file: e, platform: b.x.WEB, origin: l };
                 d.A.setFile({ channelId: t, id: n.name, file: i, draftType: I.C.SlashCommand, allowOptimization: !1 });
             },
-            [p.length, j, n.name, t, _],
+            [p.length, _, n.name, t, j],
         ),
         M = i.useCallback(
             (e) => {
@@ -136,7 +136,7 @@ function j(e) {
               ],
           });
 }
-var _ = n(652215),
+var j = n(652215),
     R = n(714731),
     w = n(969490);
 let O = [];
@@ -169,7 +169,7 @@ function M(e) {
     let L = i.useCallback(() => {
         C.focusFirstVisibleItem();
     }, [C]);
-    (0, x.Vo)({ event: _.jej.FOCUS_ATTACHMENT_AREA, handler: L });
+    (0, x.Vo)({ event: j.jej.FOCUS_ATTACHMENT_AREA, handler: L });
     let P = { isApplicationCommand: b, previousUploadOptions: k, uploadOptions: T },
         D = i.useRef(P);
     (i.useEffect(() => {
@@ -201,7 +201,7 @@ function M(e) {
                           ...r,
                           className: s()(R.I, w.KK),
                           children: b
-                              ? T.map((e) => (0, l.jsx)(j, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
+                              ? T.map((e) => (0, l.jsx)(_, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
                                         v.A,

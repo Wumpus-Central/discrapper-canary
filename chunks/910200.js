@@ -19,15 +19,15 @@ function h(e) {
         gradientColor: h = "green",
         tooltip: C,
         text: f,
-        trailing: S,
-        ...E
+        trailing: E,
+        ...S
     } = e;
-    function I() {
+    function g() {
         return (0, l.jsx)(c.A, {
             className: r()(p.Xx, t),
             gradientColor: h,
             ...(null != m ? { customGraphic: m } : { Icon: n, iconSize: i }),
-            ...E,
+            ...S,
             children: (0, l.jsxs)("div", {
                 className: p.Yu,
                 children: [
@@ -36,16 +36,16 @@ function h(e) {
                         color: "currentColor",
                         children: "string" == typeof f ? (0, d.U)(f) : f,
                     }),
-                    (0, l.jsx)("div", { className: p.HF, children: S }),
+                    (0, l.jsx)("div", { className: p.HF, children: E }),
                 ],
             }),
         });
     }
     return null != C && "object" == typeof C
-        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...C, children: I() })
+        ? (0, l.jsx)(o.u, { assetSize: 48, asContainer: !0, element: "div", ...C, children: g() })
         : null != C && "string" == typeof C
-          ? (0, l.jsx)(u.m, { text: C, asContainer: !0, tag: "div", children: I() })
-          : I();
+          ? (0, l.jsx)(u.m, { text: C, asContainer: !0, tag: "div", children: g() })
+          : g();
 }
 function C(e) {
     let { trailingText: t, ...n } = e;

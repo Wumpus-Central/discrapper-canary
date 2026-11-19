@@ -12,18 +12,18 @@ var l = n(477900),
     h = n(327289),
     C = n(792996),
     f = n(649028);
-let S = [54, 8, 8, 8];
+let E = [54, 8, 8, 8];
 n.d(
     t,
     {},
     {
         A: function (e) {
             let { onSelect: t, sound: n } = e,
-                [r, E] = i.useState(!1),
-                I = i.useRef(null),
-                g = a()(f.Qq, f.Ow);
+                [r, S] = i.useState(!1),
+                g = i.useRef(null),
+                I = a()(f.Qq, f.Ow);
             function y(e) {
-                (E(!1), t?.(e));
+                (S(!1), t?.(e));
             }
             function A(e) {
                 return (0, l.jsxs)("div", {
@@ -41,11 +41,11 @@ n.d(
                 });
             }
             return (0, l.jsx)(u.Y, {
-                targetElementRef: I,
+                targetElementRef: g,
                 shouldShow: r,
                 position: "bottom",
                 align: "left",
-                onRequestClose: () => E(!1),
+                onRequestClose: () => S(!1),
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
@@ -58,7 +58,7 @@ n.d(
                             onSelect: y,
                             analyticsSource: "gift soundboard",
                             soundButtonOverlay: p.If.ADD,
-                            listPadding: S,
+                            listPadding: E,
                             renderHeader: A,
                             defaultSoundsOnly: !0,
                         }),
@@ -67,8 +67,8 @@ n.d(
                 children: () =>
                     (0, l.jsx)(d.D, {
                         className: a()(f.kL, f.Ow),
-                        onClick: () => E(!0),
-                        innerRef: I,
+                        onClick: () => S(!0),
+                        innerRef: g,
                         children:
                             null == n
                                 ? (0, l.jsxs)("div", {
@@ -82,7 +82,7 @@ n.d(
                                               height: 14,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: C.intl.string(C.t.aThJz8),
@@ -93,13 +93,13 @@ n.d(
                                       className: f.hQ,
                                       children: [
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.emojiName,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.name,

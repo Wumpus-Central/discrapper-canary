@@ -46,8 +46,8 @@ n.d(
                     [t, n],
                 ),
                 w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-                A = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-                S = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
+                S = null == m ? 0 : Math.round(m * Math.min(w, 2)),
+                A = (0, i.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: S }),
                 C = (0, i.AV)(t, n),
                 N = r.useRef(C);
             (r.useEffect(() => {
@@ -57,8 +57,8 @@ n.d(
                 e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
             }, [C]),
                 r.useEffect(() => {
-                    g?.(S, j);
-                }, [S, j, g]),
+                    g?.(A, j);
+                }, [A, j, g]),
                 r.useEffect(() => {
                     c && p.current?.focus();
                 }, [c]));

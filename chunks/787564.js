@@ -25,8 +25,8 @@ var l = n(477900),
     N = n(565645),
     T = n(730134),
     k = n(775602),
-    j = n(47167),
-    _ = n(442247),
+    _ = n(47167),
+    j = n(442247),
     R = n(454908),
     w = n(545868),
     O = n(376943),
@@ -177,7 +177,7 @@ function ec(e) {
         s = "text",
         a = !0;
     return (null != n &&
-        ((r = (0, O.nc)(n) ? (0, j.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
+        ((r = (0, O.nc)(n) ? (0, _.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
         (s = (0, O.nc)(n) ? ((0, X.QG)(n) ?? "text") : "locked"),
         (a = (0, M.Y)(n.type))),
     a)
@@ -200,7 +200,7 @@ function em(e) {
 }
 function ef(e) {
     let { id: t } = e,
-        n = (0, _.K)(t);
+        n = (0, j.K)(t);
     return ((0, R.I)(null != n ? void 0 : t), (0, l.jsx)(D.A, { gameId: t, onKeyDown: es }));
 }
 var ep = n(891031),

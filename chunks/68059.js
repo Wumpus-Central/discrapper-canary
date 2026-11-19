@@ -47,8 +47,8 @@ function T(e, t, n) {
 function k(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: E.VW.richValue(e), selection: e.selection };
 }
-var j = n(113001),
-    _ = n(2368);
+var _ = n(113001),
+    j = n(2368);
 function R(e, t, n) {
     let l = E.VW.getCurrentInline(e);
     if ("block" === t) return !0;
@@ -330,7 +330,7 @@ function D(e) {
             );
         })((m = t))),
         l.commands?.enabled && (m = (0, p.A)(m, s)),
-        (m = (0, _.Ay)(m, s.guild_id, s.id)),
+        (m = (0, j.Ay)(m, s.guild_id, s.id)),
         l.markdown?.disableBlockQuotes ||
             (m = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;
@@ -649,7 +649,7 @@ function D(e) {
                             }),
                             e
                         );
-                    })((m = (0, j.A)(m)))),
+                    })((m = (0, _.A)(m)))),
                 )),
                 c,
                 d,

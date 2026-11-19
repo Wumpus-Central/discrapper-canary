@@ -1,21 +1,21 @@
-var r = n(435558),
-    l = n(288106);
+var l = n(435558),
+    i = n(288106);
 n.d(
-    e,
+    t,
     {},
     {
-        x: function (t, e, n) {
-            if (null != t)
-                switch (e) {
-                    case l.GM.IN_PROGRESS: {
-                        let e = t.inProgress?.progressSteps;
-                        if (null == e || 0 === e.length) return;
-                        return e[(0, r.clamp)(n, 0, e.length - 1)];
+        x: function (e, t, n) {
+            if (null != e)
+                switch (t) {
+                    case i.GM.IN_PROGRESS: {
+                        let t = e.inProgress?.progressSteps;
+                        if (null == t || 0 === t.length) return;
+                        return t[(0, l.clamp)(n, 0, t.length - 1)];
                     }
-                    case l.GM.EARNED:
-                        return t.earned;
-                    case l.GM.CONSUMED:
-                        return t.consumed;
+                    case i.GM.EARNED:
+                        return e.earned;
+                    case i.GM.CONSUMED:
+                        return e.consumed;
                     default:
                         return;
                 }

@@ -1,4 +1,4 @@
-n.d(t, { iH: () => g, $K: () => y, Mx: () => I, ri: () => E, kj: () => S, KF: () => f });
+n.d(t, { iH: () => I, $K: () => y, Mx: () => g, ri: () => S, kj: () => E, KF: () => f });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -89,14 +89,14 @@ function f(e) {
     let { application: t, asset: n, className: i, ...r } = e;
     return (0, l.jsx)(s.A, { application: t, size: s.V.MEDIUM, asset: n, className: i, ...r });
 }
-function S(e) {
+function E(e) {
     let { children: t, className: n, id: i, ...s } = e;
     return (0, l.jsx)(a.D, { className: r()(C.wx, n), variant: "heading-xl/semibold", id: i, ...s, children: t });
 }
-function E() {
+function S() {
     return (0, l.jsx)("hr", { className: C.yF });
 }
-function I(e) {
+function g(e) {
     let { className: t, title: n, description: i, ...r } = e;
     return (0, l.jsxs)("div", {
         className: t,
@@ -107,7 +107,7 @@ function I(e) {
         ],
     });
 }
-function g(e) {
+function I(e) {
     let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: a, ...s } = e;
     return (0, l.jsx)("div", {
         className: r()(C.iq, a),

@@ -33,11 +33,11 @@ function k(e, t) {
         "data-format-type": t.format_type,
     });
 }
-function j(e) {
+function _(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
     return b.intl.formatToPlainString(b.t.rk6pOw, { stickerName: t });
 }
-function _(e) {
+function j(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: r, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
@@ -129,9 +129,9 @@ function R(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": C ? b.intl.string(b.t.yEvsK9) : j(s),
+              "aria-label": C ? b.intl.string(b.t.yEvsK9) : _(s),
               ref: m,
-              children: (0, l.jsx)(_, {
+              children: (0, l.jsx)(j, {
                   hasError: C,
                   isLoading: S,
                   maskAsset: h,
@@ -184,7 +184,7 @@ let w = (e) => {
                   children: (0, l.jsx)("div", {
                       className: s()(o, I.__invalid_pngImageWrapper),
                       ref: c,
-                      children: (0, l.jsx)(_, {
+                      children: (0, l.jsx)(j, {
                           hasError: E,
                           isLoading: g,
                           maskAsset: u,
@@ -193,7 +193,7 @@ let w = (e) => {
                           children: k(
                               (0, l.jsx)("img", {
                                   className: I.r3,
-                                  alt: j(n),
+                                  alt: _(n),
                                   src: b,
                                   draggable: !1,
                                   onError: T,
@@ -324,4 +324,4 @@ function M(e) {
         `${c.id},${u}`,
     );
 }
-n.d(t, {}, { A: M, h: j });
+n.d(t, {}, { A: M, h: _ });

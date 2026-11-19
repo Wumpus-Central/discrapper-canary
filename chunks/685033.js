@@ -1,38 +1,38 @@
-var n = t(582128),
-    a = t(233470);
-async function i(e, l) {
+var e = n(582128),
+    a = n(233470);
+async function i(t, l) {
     try {
-        let t = await (0, a.U1)(e, l, (0, a.gg)());
-        return t.ok ? !0 === t.body.share_links_enabled : null;
+        let n = await (0, a.U1)(t, l, (0, a.gg)());
+        return n.ok ? !0 === n.body.share_links_enabled : null;
     } catch {
         return null;
     }
 }
-t.d(
+n.d(
     l,
     {},
     {
-        A: function (e) {
-            let [l, t] = n.useState(null),
-                [a, r] = n.useState(!1),
-                s = n.useCallback((e) => {
-                    (t(e), r(!1));
+        A: function (t) {
+            let [l, n] = e.useState(null),
+                [a, r] = e.useState(!1),
+                s = e.useCallback((t) => {
+                    (n(t), r(!1));
                 }, []);
-            n.useEffect(() => {
+            e.useEffect(() => {
                 let l = new AbortController();
                 return (
                     !(async function () {
-                        let t = await i(e, l.signal);
-                        l.signal.aborted || (null == t ? r(!0) : s(t));
+                        let n = await i(t, l.signal);
+                        l.signal.aborted || (null == n ? r(!0) : s(n));
                     })(),
                     () => l.abort()
                 );
-            }, [e, s]);
-            let u = n.useCallback(async () => {
-                let l = await i(e);
+            }, [t, s]);
+            let o = e.useCallback(async () => {
+                let l = await i(t);
                 null == l ? r(!0) : s(l);
-            }, [e, s]);
-            return { shareLinksEnabled: l, loadFailed: a, setShareLinksEnabled: s, reload: u };
+            }, [t, s]);
+            return { shareLinksEnabled: l, loadFailed: a, setShareLinksEnabled: s, reload: o };
         },
     },
 );

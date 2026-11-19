@@ -38,10 +38,10 @@ function k(e, t) {
     let n = E.get(e);
     null != n && (n.delete(t), 0 === n.size && E.delete(e));
 }
-function j() {
+function _() {
     M.delay(!1);
 }
-function _(e) {
+function j(e) {
     (S.get(e)?.cancel(), S.delete(e));
 }
 function R(e) {
@@ -69,7 +69,7 @@ function O() {
         }
         0 === i.size && y.delete(l);
     }
-    (1 / 0 !== t && R(t), n && j());
+    (1 / 0 !== t && R(t), n && _());
 }
 let M = new r.J_(500, () => {
     var e;
@@ -115,8 +115,8 @@ let M = new r.J_(500, () => {
                                 }
                                 if ((0 === i.size && E.delete(n), r)) {
                                     let e;
-                                    (null == (e = S.get(n)) && ((e = new l.A(1e3, 6e4)), S.set(n, e)), e.fail(j));
-                                } else (_(n), p.has(n) && j());
+                                    (null == (e = S.get(n)) && ((e = new l.A(1e3, 6e4)), S.set(n, e)), e.fail(_));
+                                } else (j(n), p.has(n) && _());
                             })(i),
                         3e4,
                     );
@@ -140,7 +140,7 @@ function P() {
         let t = e.nonce,
             n = g.get(t);
         if (null == n || n.guildId !== e.guildId) continue;
-        (clearTimeout(n.timeout), g.delete(t), _(e.guildId), p.has(e.guildId) && j());
+        (clearTimeout(n.timeout), g.delete(t), j(e.guildId), p.has(e.guildId) && _());
         let l = new Set(e.members.map((e) => e.user.id)),
             i = new Set(e.notFound ?? []),
             r = Date.now();
@@ -166,17 +166,17 @@ function P() {
     s.h.subscribe("GUILD_DELETE", (e) => {
         let { guild: t } = e;
         var n = t.id;
-        for (let [e, t] of (f.delete(n), p.delete(n), E.delete(n), y.delete(n), _(n), g))
+        for (let [e, t] of (f.delete(n), p.delete(n), E.delete(n), y.delete(n), j(n), g))
             t.guildId === n && (clearTimeout(t.timeout), g.delete(e));
         x.delete(n);
     }),
     s.h.subscribe("CONNECTION_OPEN", function () {
         for (let e of g.values()) for (let t of e.members.keys()) T(e.guildId, t);
         for (let [e, t] of (L(), P(), E.clear(), f.clear(), y)) for (let n of t.keys()) T(e, n);
-        (y.clear(), w(), p.size > 0 && j());
+        (y.clear(), w(), p.size > 0 && _());
     }),
     s.h.subscribe("CONNECTION_RESUMED", function () {
-        p.size > 0 && j();
+        p.size > 0 && _();
     }),
     s.h.subscribe("LOGOUT", function () {
         (f.clear(), p.clear(), E.clear(), y.clear(), w(), L(), P(), M.cancel());
@@ -202,7 +202,7 @@ function P() {
                     }
                     (T(e, s), (r = !0));
                 }
-                r && j();
+                r && _();
             },
         },
     ));

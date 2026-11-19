@@ -20,10 +20,10 @@ function m(e) {
             return null;
         }, [p, h]),
         f = (0, u.n)({ surface: t, skuId: m }),
-        S = (0, a.j)(C, "pdp.label"),
-        E = (0, a.j)(C, "pdp.tooltip"),
-        I = (0, a.j)(C, "checkout.label"),
-        g = (0, a.j)(C, "checkout.tooltip");
+        E = (0, a.j)(C, "pdp.label"),
+        S = (0, a.j)(C, "pdp.tooltip"),
+        g = (0, a.j)(C, "checkout.label"),
+        I = (0, a.j)(C, "checkout.tooltip");
     return (
         (0, a.P)(n, t),
         l.useMemo(() => {
@@ -32,13 +32,13 @@ function m(e) {
             switch (t) {
                 case "gift_customization": {
                     if (null == f) return null;
-                    let t = (0, r.Ew)(I, f.amount);
+                    let t = (0, r.Ew)(g, f.amount);
                     if ((0, i.uJ)(t)) return null;
                     return {
                         id: C.id,
                         Icon: (0, r.LZ)(C.checkout?.icon ?? null),
                         text: t,
-                        tooltip: (0, r.Ew)(g, f.amount),
+                        tooltip: (0, r.Ew)(I, f.amount),
                         endsAt: e,
                         flavor: C.flavor,
                         rewardRequirements: C.rewardRequirements,
@@ -47,13 +47,13 @@ function m(e) {
                 case "pdp":
                 case "card": {
                     let t = C.pdp,
-                        n = (0, r.Ew)(S, f?.amount ?? null);
+                        n = (0, r.Ew)(E, f?.amount ?? null);
                     if ((0, i.uJ)(n)) return null;
                     return {
                         id: C.id,
                         Icon: (0, r.LZ)(t?.icon ?? null),
                         text: n,
-                        tooltip: (0, r.Ew)(E, f?.amount ?? null),
+                        tooltip: (0, r.Ew)(S, f?.amount ?? null),
                         endsAt: e,
                         flavor: C.flavor,
                         rewardRequirements: C.rewardRequirements,
@@ -63,8 +63,8 @@ function m(e) {
                 case "sku_purchase_badge":
                 case "sku_gift_badge": {
                     if (null == f) return null;
-                    let n = "sku_gift_badge" === t ? I : S,
-                        l = "sku_gift_badge" === t ? g : E,
+                    let n = "sku_gift_badge" === t ? g : E,
+                        l = "sku_gift_badge" === t ? I : S,
                         a = (0, r.Ew)(n, f.amount);
                     if ((0, i.uJ)(a)) return null;
                     return {
@@ -78,7 +78,7 @@ function m(e) {
                     };
                 }
             }
-        }, [t, C, f, S, E, I, g])
+        }, [t, C, f, E, S, g, I])
     );
 }
 n.d(

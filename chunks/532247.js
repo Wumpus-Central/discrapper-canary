@@ -18,13 +18,13 @@ let r = {
 function s(e) {
     return "starting" === e ? "enable" : "stopping" === e || "building" === e ? "disable" : null;
 }
-function u(e, t) {
+function o(e, t) {
     let l,
-        u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        o = s(e),
-        d = o ?? u;
+        o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        u = s(e),
+        d = u ?? o;
     if (null == d) return null;
-    l = null == o ? "reload" : "starting" === e ? t : "stopping" === e ? "stopping" : "snapshot";
+    l = null == u ? "reload" : "starting" === e ? t : "stopping" === e ? "stopping" : "snapshot";
     let c = r[d];
     return {
         direction: d,
@@ -42,14 +42,14 @@ l.d(
             return "live" === e ? "enable" : "idle" === e || ("error" === e && "disable" === t) ? "disable" : null;
         },
         dv: s,
-        h_: u,
+        h_: o,
         oV: function (e) {
             let t = a.intl.string(n.default.xjblZt);
             if ("error" === e.phase || (null == e.phase && null != e.error))
                 return a.intl.formatToPlainString(e.enabled ? n.default["9YJAIN"] : n.default.JUqlqE, {
                     error: e.error ?? "",
                 });
-            let l = u(e.phase, e.step);
+            let l = o(e.phase, e.step);
             return null != l
                 ? null == l.stepLabel
                     ? l.title

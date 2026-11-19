@@ -19,7 +19,7 @@ var r = n(503698),
 function f(e) {
     return 2 === e ? "expressive" : 0 === e ? "primary" : "active";
 }
-function S(e) {
+function E(e) {
     let {
             primaryIcon: t,
             primaryCTA: n,
@@ -39,7 +39,7 @@ function S(e) {
         };
     return 2 === n ? (0, i.jsx)(s.$, { variant: f(n), ...c }) : (0, i.jsx)(s.$, { ...c, variant: f(n) });
 }
-function E(e) {
+function S(e) {
     let {
             onBack: t,
             backText: n,
@@ -48,9 +48,9 @@ function E(e) {
             primaryType: s,
             primaryText: C,
             primaryTooltip: f,
-            primaryDisabled: E,
-            primarySubmitting: I,
-            onPrimary: g,
+            primaryDisabled: S,
+            primarySubmitting: g,
+            onPrimary: I,
         } = e,
         y =
             null == t
@@ -71,13 +71,13 @@ function E(e) {
                         primaryCTA: r,
                         primaryType: s,
                         primaryText: C,
-                        primaryDisabled: E,
-                        primarySubmitting: I,
-                        onPrimary: g,
+                        primaryDisabled: S,
+                        primarySubmitting: g,
+                        onPrimary: I,
                     };
                     return null != f
-                        ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(S, { ...e }) })
-                        : (0, i.jsx)(S, { ...e, onPrimary: g });
+                        ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(E, { ...e }) })
+                        : (0, i.jsx)(E, { ...e, onPrimary: I });
                 })(),
             ],
         });
@@ -85,4 +85,4 @@ function E(e) {
         children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == y }), children: [y, A] }),
     });
 }
-((E.CTAType = C), n.d(t, {}, { Ay: E, CY: f, ti: C }));
+((S.CTAType = C), n.d(t, {}, { Ay: S, CY: f, ti: C }));

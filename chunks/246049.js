@@ -25,13 +25,13 @@ var l = n(477900),
     N = n(652215),
     T = n(792996),
     k = n(845210);
-function j() {
+function _() {
     (0, E.mM)(async () => {
         let { default: e } = await Promise.all([n.e(235257), n.e(66920)]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function _(e) {
+function j(e) {
     let { className: t, iconOnly: n } = e,
         r = (0, o.bG)([I.Ay, b.A], () => {
             let e = b.A.getChannel(I.Ay.getChannelId());
@@ -50,7 +50,7 @@ function _(e) {
         n
             ? (0, l.jsx)(S.D, {
                   className: k.e7,
-                  onClick: () => j(),
+                  onClick: () => _(),
                   children: (0, l.jsx)(u.m, {
                       text: T.intl.string(T.t["+eFIjX"]),
                       position: "top",
@@ -64,7 +64,7 @@ function _(e) {
                       (0, l.jsx)(d.E, {
                           className: k.Qq,
                           variant: "body-sm/normal",
-                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: j }),
+                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: _ }),
                       }),
                   ],
               })
@@ -84,7 +84,7 @@ function O(e) {
         N = C - b,
         k = N > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
-    let j =
+    let _ =
             0 === N
                 ? T.intl.string(T.t.tU6YQ7)
                 : N > 0
@@ -116,7 +116,7 @@ function O(e) {
                         k
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: j,
+                                  text: _,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "body-sm/semibold",
@@ -130,7 +130,7 @@ function O(e) {
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: N }) }),
                 v && !k
-                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
+                    ? (0, l.jsx)(j, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
                     : null,
             ],
         }),

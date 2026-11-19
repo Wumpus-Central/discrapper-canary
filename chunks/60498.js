@@ -1,21 +1,21 @@
-var n = l(855986),
-    a = l(782068);
-function r(e) {
-    return (0, n.bG)([a.A], () => (null == e ? null : a.A.getCopy(e)), [e]);
+var l = e(855986),
+    r = e(782068);
+function i(t) {
+    return (0, l.bG)([r.A], () => (null == t ? null : r.A.getCopy(t)), [t]);
 }
-l.d(
-    t,
+e.d(
+    n,
     {},
     {
-        AJ: function (e) {
-            return null != r(e);
+        AJ: function (t) {
+            return null != i(t);
         },
-        Ay: r,
-        GB: function (e) {
-            return (0, n.bG)([a.A], () => a.A.getDownstreamUpdates(e), [e]);
+        Ay: i,
+        GB: function (t) {
+            return (0, l.bG)([r.A], () => r.A.getDownstreamUpdates(t), [t]);
         },
-        cg: function (e) {
-            return (0, n.bG)([a.A], () => a.A.getLastSync(e), [e]);
+        cg: function (t) {
+            return (0, l.bG)([r.A], () => r.A.getLastSync(t), [t]);
         },
     },
 );

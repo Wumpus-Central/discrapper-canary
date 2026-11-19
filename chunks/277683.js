@@ -216,16 +216,16 @@ function T(e, t) {
                             let s = (0, u.F)(r);
                             if (null == s) return (l?.(r), null);
                             let o = a()(`${r}\0${e}`),
-                                d = j.get(o);
+                                d = _.get(o);
                             if (null != d && d.length === n) return d;
-                            if (_.has(o)) return null;
+                            if (j.has(o)) return null;
                             for (let t of e.split("\n")) if (t.length > 1e3) return null;
                             try {
                                 let t = s.highlightToSpans(e);
                                 if (((i = t.spans), null != l)) for (let e of t.missingInjections) l(e);
                             } catch (e) {
                                 return (
-                                    _.set(o, !0),
+                                    j.set(o, !0),
                                     h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                         tags: { app_context: "syntax_highlighting" },
                                         extra: { lang: r, surface: "editor" },
@@ -280,7 +280,7 @@ function T(e, t) {
                                     }
                                 return (d(e.length), i);
                             })(e, i, v);
-                            return m.length !== n ? null : (j.set(o, m), m);
+                            return m.length !== n ? null : (_.set(o, m), m);
                         })(e, t, n.length, l);
                         if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                         else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -291,10 +291,10 @@ function T(e, t) {
     }
 }
 let k = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    j = new (r())(k),
-    _ = new (r())(k);
+    _ = new (r())(k),
+    j = new (r())(k);
 (0, u.Q4)(() => {
-    j.reset();
+    _.reset();
 });
 let R = new (r())(k);
 function w(e, t) {

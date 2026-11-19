@@ -19,25 +19,25 @@ function C(e) {
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        S = null;
-    null != f ? (S = f) : null != l && (0, d.h5)(l, n) ? (S = l) : null != C ? (S = C) : null != t && (S = t);
-    let E = (0, m.s)(),
-        I = i.length > 1,
-        g = null != S ? S.message : "";
+        E = null;
+    null != f ? (E = f) : null != l && (0, d.h5)(l, n) ? (E = l) : null != C ? (E = C) : null != t && (E = t);
+    let S = (0, m.s)(),
+        g = i.length > 1,
+        I = null != E ? E.message : "";
     return (
-        null != S &&
-            S instanceof r.Ey &&
-            (S.code === a.tG.CARD_DECLINED && I && (g = `${S.message} ${h.intl.string(h.t.iWvwQS)}`),
-            S.code === a.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (g = h.intl.string(h.t.ypuSd8)),
-            S.code === p.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (g = h.intl.string(h.t.mXMmWE)),
-            S.code === a.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (g = h.intl.string(h.t.mC1Fjz)),
-            (S.code === a.tG.BILLING_SPENDING_LIMIT_REACHED || S.code === a.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-                (g = E),
-            S.code === a.tG.INVALID_BILLING_ADDRESS &&
-                (g = h.intl.format(h.t.KXodvL, {
+        null != E &&
+            E instanceof r.Ey &&
+            (E.code === a.tG.CARD_DECLINED && g && (I = `${E.message} ${h.intl.string(h.t.iWvwQS)}`),
+            E.code === a.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (I = h.intl.string(h.t.ypuSd8)),
+            E.code === p.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (I = h.intl.string(h.t.mXMmWE)),
+            E.code === a.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (I = h.intl.string(h.t.mC1Fjz)),
+            (E.code === a.tG.BILLING_SPENDING_LIMIT_REACHED || E.code === a.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+                (I = S),
+            E.code === a.tG.INVALID_BILLING_ADDRESS &&
+                (I = h.intl.format(h.t.KXodvL, {
                     helpdeskArticle: c.A.getArticleURL(p.MVz.BILLING).concat(p.bNI.INVALID_BILLING_ADDRESS),
                 }))),
-        { error: S, errorMessage: g }
+        { error: E, errorMessage: I }
     );
 }
 n.d(

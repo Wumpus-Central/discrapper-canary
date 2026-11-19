@@ -25,7 +25,7 @@ var l = n(477900),
     N = n(60809),
     T = n(792996),
     k = n(215837);
-let j = function (e) {
+let _ = function (e) {
         let { type: t, channelId: n, ref: r } = e,
             a = (0, s.bG)(
                 [b.A],
@@ -64,9 +64,9 @@ let j = function (e) {
             }),
         });
     },
-    _ = i.memo(function (e) {
+    j = i.memo(function (e) {
         let { type: t, channelId: n } = e;
-        return (0, l.jsx)(j, { type: t, channelId: n });
+        return (0, l.jsx)(_, { type: t, channelId: n });
     });
 var R = n(931664),
     w = n(951260),
@@ -318,7 +318,7 @@ let eh = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            j = k.isSubmitButtonEnabled,
+            _ = k.isSubmitButtonEnabled,
             V = !T || k.isAppsButtonEnabled,
             W = !T || k.isEmojiButtonEnabled,
             B = !T || k.isGifButtonEnabled,
@@ -367,7 +367,7 @@ let eh = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return l && i && null == r;
             })({ channel: A, chatInputType: y }),
-            X = y.submit?.button != null && (y.submit?.ignorePreference || j),
+            X = y.submit?.button != null && (y.submit?.ignorePreference || _),
             et = (0, O.A)(A, y);
         ((t = A.id),
             (S = (0, L.wX)()),
@@ -408,7 +408,7 @@ let eh = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             (v || N
                 ? W && q.push((0, l.jsx)(J, { disabled: C, type: y, channelId: A.id }, "emoji"))
                 : q.push((0, l.jsx)(ee.A, { disabled: C, type: y, channel: A }, "expression"))),
-        Z && V && q.push((0, l.jsx)(_, { channelId: A.id, type: y }, "appLauncher")),
+        Z && V && q.push((0, l.jsx)(j, { channelId: A.id, type: y }, "appLauncher")),
         X && q.push((0, l.jsx)(ec, { onClick: b, disabled: C || G }, "submit")),
         0 === q.length)
             ? null

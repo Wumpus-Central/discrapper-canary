@@ -33,7 +33,7 @@ n.d(
                             : (0, l.jsx)(a.RL, { handlePaymentSourceAdd: h }),
                     [d, h],
                 ),
-                S = i.useMemo(
+                E = i.useMemo(
                     () =>
                         (function (e) {
                             let { isGift: t, isFree: n } = e,
@@ -45,11 +45,11 @@ n.d(
                         })({ isGift: t, isFree: m }),
                     [t, m],
                 ),
-                E = i.useMemo(
-                    () => ({ tenantProvidedReviewButtonProps: S, onBack: C, backButtonEligible: t }),
-                    [C, S, t],
+                S = i.useMemo(
+                    () => ({ tenantProvidedReviewButtonProps: E, onBack: C, backButtonEligible: t }),
+                    [C, E, t],
                 );
-            return (0, l.jsx)(s.Y, { ...e, renderStepBody: f, tenantCheckoutFooterProps: E });
+            return (0, l.jsx)(s.Y, { ...e, renderStepBody: f, tenantCheckoutFooterProps: S });
         },
     },
 );

@@ -13,8 +13,8 @@ n(682901);
 var h = n(652215),
     C = n(792996),
     f = n(540796);
-let S = (0, p.createChannelRecord)({ id: "1", type: h.rbe.DM }),
-    E = (0, m.Ld)();
+let E = (0, p.createChannelRecord)({ id: "1", type: h.rbe.DM }),
+    S = (0, m.Ld)();
 n.d(
     t,
     {},
@@ -27,13 +27,13 @@ n.d(
                     currentText: m,
                     className: p,
                     innerClassName: h,
-                    disableThemedBackground: I = !1,
+                    disableThemedBackground: g = !1,
                 } = e,
-                [g, y] = i.useState(r ?? m),
-                [A, P] = i.useState((0, c.x7)(g)),
+                [I, y] = i.useState(r ?? m),
+                [A, P] = i.useState((0, c.x7)(I)),
                 v = i.useRef(!1);
             function x(e, t, l) {
-                t !== g && (y(t), P(l), n(t));
+                t !== I && (y(t), P(l), n(t));
             }
             function _() {
                 return new Promise((e) => {
@@ -58,14 +58,14 @@ n.d(
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
                                     (0, l.jsx)(d.Ay, {
-                                        "aria-describedby": `${e.describedById} ${E}`,
+                                        "aria-describedby": `${e.describedById} ${S}`,
                                         "aria-labelledby": e.labelId,
                                         innerClassName: a()(f.Tg, h),
                                         editorClassName: f.OT,
                                         maxCharacterCount: 190,
                                         onChange: x,
-                                        channel: S,
-                                        textValue: g,
+                                        channel: E,
+                                        textValue: I,
                                         richValue: A,
                                         type: u.oU.CUSTOM_GIFT,
                                         onBlur: () => {
@@ -76,10 +76,10 @@ n.d(
                                         },
                                         focused: v.current,
                                         onSubmit: _,
-                                        disableThemedBackground: I,
+                                        disableThemedBackground: g,
                                     }),
                                     (0, l.jsx)(o.A, {
-                                        id: E,
+                                        id: S,
                                         children: C.intl.format(C.t["+DFxLc"], { maxLength: 190 }),
                                     }),
                                 ],

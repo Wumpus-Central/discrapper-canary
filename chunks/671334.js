@@ -13,7 +13,7 @@ var l,
     h = n(184015),
     C = n(723702),
     f = n(652215);
-function S() {
+function E() {
     let e = p.A.getClient();
     null != e &&
         (0, h.j)().then((t) => {
@@ -27,7 +27,7 @@ function S() {
                 });
         });
 }
-function E() {
+function S() {
     let e = p.A.getClient();
     null != e &&
         (0, h.j)().then((t) => {
@@ -71,7 +71,7 @@ function E() {
                 .catch(() => u.h.dispatch({ type: "BRAINTREE_CREATE_PAYPAL_CLIENT_FAIL" }));
         });
 }
-function I() {
+function g() {
     let e = p.A.getPayPalClient();
     if (null == e) throw Error("braintree paypal client must be initialized before calling this");
     u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" });
@@ -104,7 +104,7 @@ function I() {
                       m.r.report({ site: "braintree_tokenize", tags: { braintree_method: "PAYPAL" } }, e));
             }));
 }
-function g() {
+function I() {
     let e = p.A.getVenmoClient();
     if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
     (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_START" }),
@@ -270,38 +270,38 @@ var ei = n(683071),
     eh = n(602853),
     eC = n(281595),
     ef = n(513098),
-    eS = n(151167);
-let eE = function (e) {
+    eE = n(151167);
+let eS = function (e) {
     let t = a.useRef(null),
         { stripeType: n, flipped: l, updateCompleted: i, onFocus: s, onBlur: o } = e,
         [u, c] = a.useState(eu.Be.UNKNOWN),
         [d, m] = a.useState(!1),
         [p, h] = a.useState(!1),
         [C, f] = a.useState(null),
-        [S, E] = a.useState({}),
-        I = (0, em.useElements)(),
-        g = a.useCallback(() => {
-            if (null != I)
+        [E, S] = a.useState({}),
+        g = (0, em.useElements)(),
+        I = a.useCallback(() => {
+            if (null != g)
                 switch (n) {
                     case "cardNumber": {
-                        let e = I.getElement(em.CardNumberElement);
+                        let e = g.getElement(em.CardNumberElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardExpiry": {
-                        let e = I.getElement(em.CardExpiryElement);
+                        let e = g.getElement(em.CardExpiryElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardCvc": {
-                        let e = I.getElement(em.CardCvcElement);
+                        let e = g.getElement(em.CardCvcElement);
                         if (null == e) return;
                         (e.off("change"), e.off("focus"), e.off("blur"));
                     }
                 }
-        }, [I, n]),
+        }, [g, n]),
         y = a.useCallback(
             (e) => {
                 (p || e.empty || h(!0), null != i && i(e.complete), null != e.error && m(!1));
@@ -315,10 +315,10 @@ let eE = function (e) {
             (m(!1), o?.());
         }, [o]),
         v = a.useCallback(() => {
-            if (null != I)
+            if (null != g)
                 switch (n) {
                     case "cardNumber": {
-                        let e = I.getElement(em.CardNumberElement);
+                        let e = g.getElement(em.CardNumberElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (u !== e.brand && c(e.brand),
@@ -334,7 +334,7 @@ let eE = function (e) {
                         break;
                     }
                     case "cardExpiry": {
-                        let e = I.getElement(em.CardExpiryElement);
+                        let e = g.getElement(em.CardExpiryElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (null != e.error || (e.empty && p) ? f(H.intl.string(H.t["9/zZdl"])) : f(null), y(e));
@@ -344,7 +344,7 @@ let eE = function (e) {
                         break;
                     }
                     case "cardCvc": {
-                        let e = I.getElement(em.CardCvcElement);
+                        let e = g.getElement(em.CardCvcElement);
                         if (null == e) return;
                         (e.on("change", (e) => {
                             (null != e.error || (e.empty && p) ? f(H.intl.string(H.t.ro4isZ)) : f(null), y(e));
@@ -353,15 +353,15 @@ let eE = function (e) {
                             e.on("blur", P));
                     }
                 }
-        }, [P, y, A, u, I, p, n]);
+        }, [P, y, A, u, g, p, n]);
     a.useEffect(
         () => (
             v(),
             () => {
-                g();
+                I();
             }
         ),
-        [v, g],
+        [v, I],
     );
     let x = (0, eh.r)(ep.A.colors.TEXT_SUBTLE).hex(),
         _ = (0, eh.r)(ep.A.colors.TEXT_STRONG).hex();
@@ -374,7 +374,7 @@ let eE = function (e) {
             if (null == e) return;
             let n = window.getComputedStyle(e),
                 l = n.getPropertyValue("font-family");
-            E({
+            S({
                 base: {
                     fontFamily: l,
                     fontWeight: n.getPropertyValue("font-weight"),
@@ -388,7 +388,7 @@ let eE = function (e) {
             className: ef.Zm,
             "data-stripe-type": n,
             children: [
-                (0, r.jsx)("div", { ref: t, className: ea()(ef.iw, eS.hF) }),
+                (0, r.jsx)("div", { ref: t, className: ea()(ef.iw, eE.hF) }),
                 (function () {
                     switch (n) {
                         case "cardNumber":
@@ -396,19 +396,19 @@ let eE = function (e) {
                                 children: [
                                     (0, r.jsx)(eu.Ay, { className: ef.Ie, type: u, flipped: l }),
                                     (0, r.jsx)(em.CardNumberElement, {
-                                        options: { style: S, placeholder: H.intl.string(H.t.gPRHfw), disableLink: !1 },
+                                        options: { style: E, placeholder: H.intl.string(H.t.gPRHfw), disableLink: !1 },
                                         className: T(),
                                     }),
                                 ],
                             });
                         case "cardExpiry":
                             return (0, r.jsx)(em.CardExpiryElement, {
-                                options: { style: S, placeholder: H.intl.string(H.t.xeEWQ6) },
+                                options: { style: E, placeholder: H.intl.string(H.t.xeEWQ6) },
                                 className: T(),
                             });
                         case "cardCvc":
                             return (0, r.jsx)(em.CardCvcElement, {
-                                options: { style: S, placeholder: H.intl.string(H.t.wZz04F) },
+                                options: { style: E, placeholder: H.intl.string(H.t.wZz04F) },
                                 className: T(),
                             });
                     }
@@ -418,8 +418,8 @@ let eE = function (e) {
         })
     );
 };
-var eI = n(719941),
-    eg = n(782328);
+var eg = n(719941),
+    eI = n(782328);
 let ey = function (e) {
     let { onCardInfoChange: t, error: n } = e,
         l = a.useRef(t),
@@ -432,13 +432,13 @@ let ey = function (e) {
     a.useEffect(() => () => {
         void 0 !== f && f(!1);
     });
-    let S = a.useCallback(() => {
+    let E = a.useCallback(() => {
         void 0 !== f && f(!0);
     }, [f]);
-    function E(e, t) {
+    function S(e, t) {
         t !== !!o[e] && u((n) => ({ ...n, [e]: t }));
     }
-    let I = a.useCallback(
+    let g = a.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
@@ -448,34 +448,34 @@ let ey = function (e) {
     );
     return (
         a.useEffect(() => {
-            let e = o.cardNumber && o.cardExpiry && o.cardCvc && 0 === Object.keys(I(!0)).length;
+            let e = o.cardNumber && o.cardExpiry && o.cardCvc && 0 === Object.keys(g(!0)).length;
             l.current({ name: c.name }, !!e);
-        }, [o, c, I]),
+        }, [o, c, g]),
         (0, r.jsxs)("div", {
             children: [
                 ec.default.getCurrentUser()?.nsfwAllowed
                     ? (0, r.jsxs)("div", {
-                          className: eI.Rm,
+                          className: eg.Rm,
                           children: [
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.eo, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.DR, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.k4, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.a3, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.CY, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.Q5, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.YA, eI.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.eo, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.DR, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.k4, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.a3, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.CY, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.Q5, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.YA, eg.Ud) }),
                           ],
                       })
                     : (0, r.jsxs)("div", {
-                          className: eI.Rm,
+                          className: eg.Rm,
                           children: [
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.aq, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.VX, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.Yi, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.qR, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.m2, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI.Ij, eI.Ud) }),
-                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eI._V, eI.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.aq, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.VX, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.Yi, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.qR, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.m2, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg.Ij, eg.Ud) }),
+                              (0, r.jsx)("div", { className: ea()(eu.y3.SMALL, eg._V, eg.Ud) }),
                           ],
                       }),
                 (0, r.jsx)(ed.A, {
@@ -486,13 +486,13 @@ let ey = function (e) {
                                     id: "card-number",
                                     name: "cardNumber",
                                     title: () => H.intl.string(H.t.cVyJ3o),
-                                    getClassNameForLayout: () => eg.c6,
+                                    getClassNameForLayout: () => eI.c6,
                                     renderInput: () =>
-                                        (0, r.jsx)(eE, {
+                                        (0, r.jsx)(eS, {
                                             stripeType: "cardNumber",
                                             flipped: i,
-                                            updateCompleted: (e) => E("cardNumber", e),
-                                            onFocus: S,
+                                            updateCompleted: (e) => S("cardNumber", e),
+                                            onFocus: E,
                                         }),
                                 },
                             ],
@@ -503,25 +503,25 @@ let ey = function (e) {
                                     id: "card-expiration-date",
                                     name: "cardExpiry",
                                     title: () => H.intl.string(H.t["CeBa/4"]),
-                                    getClassNameForLayout: () => eg.ep,
+                                    getClassNameForLayout: () => eI.ep,
                                     renderInput: () =>
-                                        (0, r.jsx)(eE, {
+                                        (0, r.jsx)(eS, {
                                             stripeType: "cardExpiry",
-                                            updateCompleted: (e) => E("cardExpiry", e),
-                                            onFocus: S,
+                                            updateCompleted: (e) => S("cardExpiry", e),
+                                            onFocus: E,
                                         }),
                                 },
                                 {
                                     id: "card-cvc",
                                     name: "cardCvc",
                                     title: () => H.intl.string(H.t.Fd3rOz),
-                                    getClassNameForLayout: () => eg.ep,
+                                    getClassNameForLayout: () => eI.ep,
                                     renderInput: () =>
-                                        (0, r.jsx)(eE, {
+                                        (0, r.jsx)(eS, {
                                             stripeType: "cardCvc",
-                                            updateCompleted: (e) => E("cardCvc", e),
+                                            updateCompleted: (e) => S("cardCvc", e),
                                             onFocus: () => {
-                                                (S(), s(!0));
+                                                (E(), s(!0));
                                             },
                                             onBlur: () => {
                                                 s(!1);
@@ -538,7 +538,7 @@ let ey = function (e) {
                                     title: () => H.intl.string(H.t.VUlFdU),
                                     autoComplete: "cc-name",
                                     placeholder: () => H.intl.string(H.t["yf7ms+"]),
-                                    getClassNameForLayout: () => eg.c6,
+                                    getClassNameForLayout: () => eI.c6,
                                     renderInput: (e) => (0, r.jsx)(eo.k, { ...e }),
                                 },
                             ],
@@ -560,7 +560,7 @@ let ey = function (e) {
                             C(i));
                     },
                     onFieldBlur: function () {
-                        C(I());
+                        C(g());
                     },
                 }),
             ],
@@ -701,14 +701,14 @@ let eL = {
 var eM = n(685094);
 class ek extends a.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && I();
+        null != this.props.paypalClient && g();
     }
     componentDidUpdate(e) {
-        null == e.paypalClient && null != this.props.paypalClient && I();
+        null == e.paypalClient && null != this.props.paypalClient && g();
     }
     componentWillUnmount() {
         y(p.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
-            null != p.A.getClient() && E();
+            null != p.A.getClient() && S();
         });
     }
     render() {
@@ -731,14 +731,14 @@ var eD = n(534514),
     eG = n(351665);
 class eF extends a.PureComponent {
     componentDidMount() {
-        null != this.props.venmoClient && g();
+        null != this.props.venmoClient && I();
     }
     componentDidUpdate(e) {
-        null == e.venmoClient && null != this.props.venmoClient && g();
+        null == e.venmoClient && null != this.props.venmoClient && I();
     }
     componentWillUnmount() {
         y(p.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
-            null != p.A.getClient() && S();
+            null != p.A.getClient() && E();
         });
     }
     render() {
@@ -950,9 +950,9 @@ function tn(e) {
             browserCheckoutStateSkuId: e9.skuId,
             browserCheckoutStatePlanId: e9.planId,
         })),
-        S = (0, eX.A)(),
-        { isGift: E } = (0, e2.Pv)(),
-        [I, g] = a.useState(!1);
+        E = (0, eX.A)(),
+        { isGift: S } = (0, e2.Pv)(),
+        [g, I] = a.useState(!1);
     switch (n) {
         case M.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
             t = f.do8.GOOGLE_PAY;
@@ -963,13 +963,13 @@ function tn(e) {
     return (
         a.useEffect(() => {
             let e = setTimeout(() => {
-                I ||
-                    (g(!0),
+                g ||
+                    (I(!0),
                     (0, d.Ze)(c.loadId),
                     (0, e0.my)(
                         {
-                            planId: S?.id ?? te.gD.PREMIUM_MONTH_TIER_2,
-                            isGift: E,
+                            planId: E?.id ?? te.gD.PREMIUM_MONTH_TIER_2,
+                            isGift: S,
                             loadId: c.loadId,
                             paymentMethodType: t,
                         },
@@ -977,7 +977,7 @@ function tn(e) {
                     ));
             }, 1e3);
             return () => clearTimeout(e);
-        }, [S, E, c, i, g, I, t]),
+        }, [E, S, c, i, I, g, t]),
         a.useEffect(() => {
             (null !== h && (te.oz.includes(h) && ((0, eJ.ur)(h), (0, d.hP)()), o(h)),
                 null !== C && u(C),
@@ -1070,11 +1070,11 @@ function tc(e) {
         } = a,
         C = (0, j.S)(),
         { createSetupIntent: f } = (0, ta.x)(),
-        { contextMetadata: S } = (0, N.t4)((e) => ({ contextMetadata: e.contextMetadata })),
+        { contextMetadata: E } = (0, N.t4)((e) => ({ contextMetadata: e.contextMetadata })),
         {
-            isSubmittingCurrentStep: E,
-            billingAddressState: I,
-            setIsSubmittingCurrentStep: g,
+            isSubmittingCurrentStep: S,
+            billingAddressState: g,
+            setIsSubmittingCurrentStep: I,
             hasRedirectURL: y,
             setHasRedirectURL: A,
             isAuthenticating: P,
@@ -1105,10 +1105,10 @@ function tc(e) {
         onBack: _,
         primaryCTA: Z.Ay.CTAType.CONTINUE,
         primaryText: H.intl.string(H.t.PDTjLN),
-        primarySubmitting: E,
-        primaryDisabled: !I.isValid || P,
+        primarySubmitting: S,
+        primaryDisabled: !g.isValid || P,
         onPrimary: async function () {
-            g(!0);
+            I(!0);
             let e = s ? c : i.methodType,
                 n = p.current,
                 r = null != e && (0, to.i)(e) ? to.F[e] : null;
@@ -1129,18 +1129,18 @@ function tc(e) {
                     createSetupIntent: f,
                     overwriteSubscriptionPaymentSource: u,
                 });
-                ("redirect-url" === e.responseType ? A(e.hasRedirectURL) : l(e.paymentSource), y || g(!1));
+                ("redirect-url" === e.responseType ? A(e.hasRedirectURL) : l(e.paymentSource), y || I(!1));
             } catch (e) {
                 (e instanceof m.r ||
                     m.r.report(
                         {
                             site: "submit_address_step",
-                            tags: { uses_payment_element: String(s), country: I.info.country },
-                            extra: { country: I.info.country, loadId: S.loadId },
+                            tags: { uses_payment_element: String(s), country: g.info.country },
+                            extra: { country: g.info.country, loadId: E.loadId },
                         },
                         e,
                     ),
-                    g(!1),
+                    I(!1),
                     tu.warn(`Error confirming submitting Address Step for Payment Source Type: ${v}`, e));
             }
         },
@@ -1158,9 +1158,9 @@ function tp(e) {
             stripeElementsRef: h,
             remountAddressElement: C,
             onBackFromPaymentElement: f,
-            paymentElementReady: S,
+            paymentElementReady: E,
         } = c,
-        E = a.useCallback(async () => {
+        S = a.useCallback(async () => {
             n(!0);
             try {
                 if (null == p || !(0, td.eX)(p)) throw (0, d.ne)("Valid Payment Element source type not found", !0);
@@ -1185,23 +1185,23 @@ function tp(e) {
                 n(!1);
             }
         }, [o, p, h, C, u, s, n, l]),
-        I = a.useCallback(() => {
+        g = a.useCallback(() => {
             (f(), null != m && m());
         }, [f, m]);
     return (0, r.jsx)(en, {
-        onBack: null != m ? I : void 0,
+        onBack: null != m ? g : void 0,
         primaryCTA: Z.Ay.CTAType.CONTINUE,
         primaryType: "submit",
         primaryText: H.intl.string(H.t.PDTjLN),
         primarySubmitting: i,
-        primaryDisabled: !S,
-        onPrimary: E,
+        primaryDisabled: !E,
+        onPrimary: S,
     });
 }
 var th = n(814935),
     tC = n(24404);
 let tf = new q.A("AddPaymentMethodSubstepRegistry.tsx");
-function tS(e) {
+function tE(e) {
     let { setCreditCardState: t, setBillingAddressState: n } = e,
         l = a.useCallback(
             (e, l) => {
@@ -1212,7 +1212,7 @@ function tS(e) {
         i = (0, s.bG)([R.A], () => R.A.error);
     return (0, r.jsx)(ej, { billingError: i, onCardInfoChange: l });
 }
-function tE(e) {
+function tS(e) {
     let { setIsSubmittingCurrentStep: t, setTokenState: n, isSubmittingCurrentStep: l, creditCardState: i } = e,
         { handleStepChange: a, onReturn: s } = ee(),
         o = (0, j.S)(),
@@ -1243,11 +1243,11 @@ function tE(e) {
         },
     });
 }
-function tI() {
+function tg() {
     let { currentStep: e, redirectToCardInput: t, onComplete: n } = ee();
     return (0, r.jsx)(tn, { step: e, onPurchaseComplete: () => n(e), onHandoffFailure: t });
 }
-function tg() {
+function tI() {
     let { redirectToCardInput: e, onReturn: t, stripePaymentElementState: n } = ee(),
         { onBackFromPaymentElement: l } = n;
     return (0, r.jsx)(tl, {
@@ -1314,7 +1314,7 @@ function tv(e) {
             return a
                 ? n()
                 : void (null == (e = p.A.getLastURL())
-                      ? I()
+                      ? g()
                       : (u.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" }), window.open(e)));
         },
     });
@@ -1327,25 +1327,25 @@ function tx(e) {
         onBack: () => i(eb.he.VENMO),
         primaryCTA: Z.Ay.CTAType.CONTINUE,
         primaryText: l ? H.intl.string(H.t.PDTjLN) : H.intl.string(H.t["4KoTLM"]),
-        onPrimary: () => (l ? a() : void g()),
+        onPrimary: () => (l ? a() : void I()),
     });
 }
 let t_ = {
     [M.pn.CREDIT_CARD_INFORMATION]: {
-        renderStepBody: (e) => (0, r.jsx)(tS, { ...e }),
-        renderStepFooter: (e) => (0, r.jsx)(tE, { ...e }),
+        renderStepBody: (e) => (0, r.jsx)(tE, { ...e }),
+        renderStepFooter: (e) => (0, r.jsx)(tS, { ...e }),
     },
     [M.pn.AWAITING_BROWSER_CHECKOUT]: {
-        renderStepBody: () => (0, r.jsx)(tI, {}),
-        renderStepFooter: () => (0, r.jsx)(tg, {}),
+        renderStepBody: () => (0, r.jsx)(tg, {}),
+        renderStepFooter: () => (0, r.jsx)(tI, {}),
     },
     [M.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY]: {
-        renderStepBody: () => (0, r.jsx)(tI, {}),
-        renderStepFooter: () => (0, r.jsx)(tg, {}),
+        renderStepBody: () => (0, r.jsx)(tg, {}),
+        renderStepFooter: () => (0, r.jsx)(tI, {}),
     },
     [M.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY]: {
-        renderStepBody: () => (0, r.jsx)(tI, {}),
-        renderStepFooter: () => (0, r.jsx)(tg, {}),
+        renderStepBody: () => (0, r.jsx)(tg, {}),
+        renderStepFooter: () => (0, r.jsx)(tI, {}),
     },
     [M.pn.PAYMENT_ELEMENT]: {
         renderStepBody: () => null,
@@ -1422,8 +1422,8 @@ function tT(e) {
             paymentElementSelectedType: h,
             stripeElementsRef: C,
             stripePaymentElementProps: f,
-            stripeAddressElementProps: S,
-            addressElementKey: E,
+            stripeAddressElementProps: E,
+            addressElementKey: S,
         } = i;
     return (0, r.jsx)($._i, {
         step: s,
@@ -1431,8 +1431,8 @@ function tT(e) {
         paymentElementSelectedType: h,
         stripeElementsRef: C,
         stripePaymentElementProps: f,
-        stripeAddressElementProps: S,
-        addressElementKey: E,
+        stripeAddressElementProps: E,
+        addressElementKey: S,
         billingAddressInfo: t.info,
         onSetupError: () => {
             (m(), a(), l(M.pn.CREDIT_CARD_INFORMATION));
@@ -1514,10 +1514,10 @@ function tk(e) {
             header: p,
             analyticsLocation: h,
             analyticsData: C,
-            overwriteSubscriptionPaymentSource: S = !1,
-            useCheckoutStep: E = !1,
-            isEligibleForTrial: I = !1,
-            allowDesktopRedirectPurchase: g = !1,
+            overwriteSubscriptionPaymentSource: E = !1,
+            useCheckoutStep: S = !1,
+            isEligibleForTrial: g = !1,
+            allowDesktopRedirectPurchase: I = !1,
             toastContent: y,
             continueSessionToInitialStep: A,
         } = e,
@@ -1528,8 +1528,8 @@ function tk(e) {
         }));
     (0, P.l0)(b);
     let D = a.useMemo(
-            () => (n === M.pn.PAYMENT_ELEMENT ? (g ? M.pn.AWAITING_BROWSER_CHECKOUT : M.pn.PAYMENT_ELEMENT) : n),
-            [n, g],
+            () => (n === M.pn.PAYMENT_ELEMENT ? (I ? M.pn.AWAITING_BROWSER_CHECKOUT : M.pn.PAYMENT_ELEMENT) : n),
+            [n, I],
         ),
         {
             CREDIT_CARD_STEPS: U,
@@ -1692,19 +1692,19 @@ function tk(e) {
                 completeSteps: ee,
                 analyticsLocation: h,
                 analyticsData: C,
-                overwriteSubscriptionPaymentSource: S,
+                overwriteSubscriptionPaymentSource: E,
             }),
-            [K, A, B, V, J, er, ea, es, h, c, u, ee, C, S],
+            [K, A, B, V, J, er, ea, es, h, c, u, ee, C, E],
         );
     if (!(B in t_))
         throw new T.v({ message: `Unexpected Add Payment sub-step: ${B}`, extraSentryInformation: { currentStep: B } });
     let { renderStepBody: eu, renderStepFooter: ec } = t_[B],
         ed = eu(t),
         em = ec(t);
-    return E
+    return S
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  I && (0, r.jsx)(k.A, { className: th.At, isEligibleForTrial: I }),
+                  g && (0, r.jsx)(k.A, { className: th.At, isEligibleForTrial: g }),
                   (0, r.jsxs)(X, {
                       ...eo,
                       children: [
@@ -1761,7 +1761,7 @@ function tw(e) {
                         });
                     })
                         .then(() => {
-                            (E(), S());
+                            (S(), E());
                         })
                         .catch((e) => {
                             m.r.report({ site: "gateway_sdk_init", tags: { gateway: "braintree" } }, e);
@@ -1837,9 +1837,9 @@ function tw(e) {
                     }
                 })();
         }, [o, r]));
-    let [C, I] = a.useState(t),
-        g = (0, v.Ay)(t);
-    t !== g && null != t && null == C && I(t);
+    let [C, g] = a.useState(t),
+        I = (0, v.Ay)(t);
+    t !== I && null != t && null == C && g(t);
     let [y, _] = a.useState(() => ({ info: tL, isValid: !1 })),
         [T, j] = a.useState(() => ({ info: tM, isValid: !1 })),
         [L, M] = a.useState(""),
@@ -1889,7 +1889,7 @@ function tw(e) {
             paymentSources: l,
             paymentSourceId: C,
             hasFetchedPaymentSources: i,
-            setPaymentSourceId: I,
+            setPaymentSourceId: g,
             creditCardState: y,
             setCreditCardState: _,
             tokenState: U,

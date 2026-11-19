@@ -108,8 +108,8 @@ n.d(
                     invoiceSummaryContent: _,
                     promotionalNoticeContent: g,
                     tenantProvidesPromotionalNoticeContainer: A,
-                    legalContent: k,
-                    invoiceTotalDueLabel: N = p.intl.string(h.default.R0cZsM),
+                    legalContent: N,
+                    invoiceTotalDueLabel: k = p.intl.string(h.default.R0cZsM),
                     invoiceTotalDueValue: x,
                     shouldShowGlobalNotices: O,
                     showUpperNoticesAboveGlobalNotices: I,
@@ -146,9 +146,9 @@ n.d(
                           (0, l.jsxs)(u.bx, {
                               children: [
                                   (0, l.jsx)("div", { ref: F }),
-                                  null != N && null != x && (0, l.jsx)(C.Qf, { className: m.NR, label: N, value: x }),
+                                  null != k && null != x && (0, l.jsx)(C.Qf, { className: m.NR, label: k, value: x }),
                                   b,
-                                  k,
+                                  N,
                                   null != w ? w : (0, l.jsx)(y, { footerInlineNoticeProps: v }),
                               ],
                           }),

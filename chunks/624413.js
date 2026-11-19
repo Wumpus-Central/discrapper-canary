@@ -41,11 +41,11 @@ n.d(
                 } = e,
                 { unifiedCheckoutFlow: C } = (0, m.t4)((e) => ({ unifiedCheckoutFlow: e.unifiedCheckoutFlow })),
                 f = (0, h.A)(),
-                S = (0, p.S1)(),
-                E = u.pn.REVIEW;
+                E = (0, p.S1)(),
+                S = u.pn.REVIEW;
             (C === d.C.PREMIUM_CHECKOUT &&
                 null == f &&
-                (E = S.find((e) => e === u.pn.SKU_SELECT || e === u.pn.PLAN_SELECT)),
+                (S = E.find((e) => e === u.pn.SKU_SELECT || e === u.pn.PLAN_SELECT)),
                 i.useEffect(() => {
                     o ||
                         null == t ||
@@ -53,10 +53,10 @@ n.d(
                             ? l(u.pn.AWAITING_AUTHENTICATION)
                             : t === u.pn.AWAITING_AUTHENTICATION &&
                               (2 === n || 4 === n
-                                  ? null != E && l(E)
+                                  ? null != S && l(S)
                                   : 3 === n &&
                                     (a ? (null != s ? s() : l(u.pn.REVIEW)) : (r(c.h.COMPLETED), l(u.pn.CONFIRM)))));
-                }, [E, t, n, l, r, a, s, o]));
+                }, [S, t, n, l, r, a, s, o]));
         },
         oc: C,
     },

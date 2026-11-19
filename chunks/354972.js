@@ -12,9 +12,9 @@ var l = n(477900),
     h = n(652215),
     C = n(307731),
     f = n(792996),
-    S = n(290484);
-let E = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    I = C.EmojiIntention.GIFT;
+    E = n(290484);
+let S = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
+    g = C.EmojiIntention.GIFT;
 n.d(
     t,
     {},
@@ -23,13 +23,13 @@ n.d(
             let { setEmojiConfetti: t, emojiConfetti: n } = e,
                 [r, h] = i.useState(!1),
                 C = i.useRef(null),
-                g = a()(S.Qq, S.Ow);
+                I = a()(E.Qq, E.Ow);
             function y(e) {
                 return (0, l.jsxs)("div", {
-                    className: S.ZC,
+                    className: E.ZC,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: S.Ry,
+                            className: E.Ry,
                             children: [
                                 (0, l.jsx)(o.E, { variant: "body-md/semibold", children: f.intl.string(f.t.Hl2Ige) }),
                                 (0, l.jsx)(o.E, { variant: "body-sm/normal", children: f.intl.string(f.t.stGFA3) }),
@@ -53,40 +53,40 @@ n.d(
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
                         children: (0, l.jsx)(p.A, {
-                            analyticsOverride: E,
+                            analyticsOverride: S,
                             closePopout: t,
                             onSelectEmoji: A,
                             wrapper: "div",
-                            pickerIntention: I,
+                            pickerIntention: g,
                             showAddEmojiButton: !1,
                             renderHeader: y,
-                            headerClassName: S.a8,
-                            className: S.vX,
-                            listHeaderClassName: S.vX,
-                            categoryListClassName: S.jv,
+                            headerClassName: E.a8,
+                            className: E.vX,
+                            listHeaderClassName: E.vX,
+                            categoryListClassName: E.jv,
                             searchProps: { accessory: (0, l.jsx)(l.Fragment, {}) },
                         }),
                     });
                 },
                 children: () =>
                     (0, l.jsx)(d.D, {
-                        className: a()(S.kL, S.Ow),
+                        className: a()(E.kL, E.Ow),
                         onClick: () => h(!0),
                         innerRef: C,
                         children:
                             n?.name == null
                                 ? (0, l.jsxs)("div", {
-                                      className: S.hQ,
+                                      className: E.hQ,
                                       children: [
                                           (0, l.jsx)(m.ReactionIcon, {
                                               size: "custom",
                                               color: s.A.colors.ICON_STRONG,
-                                              className: S.mI,
+                                              className: E.mI,
                                               width: 14,
                                               height: 14,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: f.intl.string(f.t.Hl2Ige),
@@ -94,15 +94,15 @@ n.d(
                                       ],
                                   })
                                 : (0, l.jsxs)("div", {
-                                      className: S.hQ,
+                                      className: E.hQ,
                                       children: [
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                           }),
                                           (0, l.jsx)(o.E, {
-                                              className: g,
+                                              className: I,
                                               variant: "body-sm/semibold",
                                               lineClamp: 1,
                                               children: n.name.replace(/_/g, " "),

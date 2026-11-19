@@ -21,10 +21,10 @@ n.d(
                     isInvoiceBilledImmediately: h = !0,
                     unifiedLegalType: C,
                     discountOffer: f,
-                    subscriptionTrial: S,
+                    subscriptionTrial: E,
                 } = e,
-                { immediateDelivery: E } = (0, s.U)(),
-                { checkoutReviewButtonLabel: I, isExpressCheckoutVisibleInFooter: g } = (0, u.t4)((e) => ({
+                { immediateDelivery: S } = (0, s.U)(),
+                { checkoutReviewButtonLabel: g, isExpressCheckoutVisibleInFooter: I } = (0, u.t4)((e) => ({
                     checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
                     isExpressCheckoutVisibleInFooter:
                         e.getExpressCheckoutVisibilityState().isExpressCheckoutVisibleInFooter,
@@ -41,10 +41,10 @@ n.d(
                 }),
                 { renewalPrice: v, multiPeriodDiscountAttributes: x } = (0, i.QM)(A, t, {
                     discountOffer: f,
-                    subscriptionTrial: S,
+                    subscriptionTrial: E,
                 }),
                 _ = {
-                    purchaseButtonText: I,
+                    purchaseButtonText: g,
                     totalDue: h ? y.total : 0,
                     renewalPrice: v,
                     multiPeriodDiscountAttributes: x,
@@ -56,8 +56,8 @@ n.d(
             return (0, l.jsx)(o._P, {
                 variant: { type: C, ..._ },
                 paymentSourceType: n,
-                immediateDelivery: E,
-                isExpressCheckout: g,
+                immediateDelivery: S,
+                isExpressCheckout: I,
             });
         },
     },

@@ -36,8 +36,8 @@ var l = n(477900),
     N = n(821609),
     T = n(559106),
     k = n(939249),
-    j = n(834730),
-    _ = n(47167),
+    _ = n(834730),
+    j = n(47167),
     R = n(713654),
     w = n(598104),
     O = n(145497),
@@ -72,7 +72,7 @@ function G(e) {
                           return {
                               icon: (0, l.jsx)(O.Ay, { guild: n, iconSize: 32, className: W.sm }),
                               primary: n.name,
-                              secondary: (0, _.m1)(t, P.default, L.A),
+                              secondary: (0, j.m1)(t, P.default, L.A),
                           };
                       let i = (e.recipients ?? []).map((e) => P.default.getUser(e)).filter(Boolean);
                       if (e.type === U.rbe.GROUP_DM)
@@ -83,7 +83,7 @@ function G(e) {
                                   className: W.sm,
                                   "aria-hidden": !0,
                               }),
-                              primary: (0, _.m1)(e, P.default, L.A),
+                              primary: (0, j.m1)(e, P.default, L.A),
                               secondary: i.map((e) => D.Ay.getUserTag(e)).join(", "),
                           };
                       let r = i[0];
@@ -97,7 +97,7 @@ function G(e) {
                                         "aria-hidden": !0,
                                     })
                                   : null,
-                          primary: D.Ay.getName(r) ?? (0, _.m1)(e, P.default, L.A),
+                          primary: D.Ay.getName(r) ?? (0, j.m1)(e, P.default, L.A),
                           secondary: null != r ? D.Ay.getUserTag(r) : void 0,
                       };
                   })(t)
@@ -117,12 +117,12 @@ function G(e) {
                 n = 1 === t.length ? P.default.getUser(t[0]) : null;
             if (e.type === U.rbe.DM)
                 return V.intl.format(V.t.UlsYSN, {
-                    recipientName: D.Ay.getName(n) ?? (0, _.m1)(e, P.default, L.A),
+                    recipientName: D.Ay.getName(n) ?? (0, j.m1)(e, P.default, L.A),
                     recipientHook: (e) => (0, l.jsx)("strong", { children: e }),
                 });
             let i = B(e),
                 r = M.A.getGuild(e.getGuildId()),
-                s = (0, _.m1)(i, P.default, L.A),
+                s = (0, j.m1)(i, P.default, L.A),
                 a = null != r ? s : (D.Ay.getName(n) ?? s);
             return V.intl.format(V.t.hjBbhU, {
                 destinationName: a,
@@ -159,7 +159,7 @@ function G(e) {
                               (0, l.jsxs)("div", {
                                   className: W.Yr,
                                   children: [
-                                      (0, l.jsx)(j.E, {
+                                      (0, l.jsx)(_.E, {
                                           className: W.ed,
                                           variant: "body-md/semibold",
                                           color: "text-default",
@@ -171,7 +171,7 @@ function G(e) {
                                                 className: W.lj,
                                                 children: [
                                                     null != t.getGuildId() ? F(o, 12) : null,
-                                                    (0, l.jsx)(j.E, {
+                                                    (0, l.jsx)(_.E, {
                                                         className: W.ed,
                                                         variant: "body-xs/medium",
                                                         color: "text-muted",

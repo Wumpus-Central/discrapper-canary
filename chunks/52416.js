@@ -24,14 +24,14 @@ n.d(
                 T = o.useMemo(() => null != N && (0, s.r1)(N), [N]);
             if (null == E) return t;
             let { surface: g, id: S, promotionId: y, componentType: O } = E,
-                M = E.getFormatVariableValues(I.intl.currentLocale),
-                R = (0, b.n)(g.header, M);
-            if (!R.ok) return t;
-            let C = (0, b.d)(g.body, M);
+                R = E.getFormatVariableValues(I.intl.currentLocale),
+                M = (0, b.n)(g.header, R);
+            if (!M.ok) return t;
+            let C = (0, b.d)(g.body, R);
             if (!C.ok) return t;
-            let h = (0, b.n)(g.button?.copy ?? "", M);
-            if (!h.ok) return t;
-            let P = (0, l.jsx)(_.A, {
+            let P = (0, b.n)(g.button?.copy ?? "", R);
+            if (!P.ok) return t;
+            let h = (0, l.jsx)(_.A, {
                     componentType: O,
                     componentId: S,
                     promotionId: y,
@@ -44,7 +44,7 @@ n.d(
             let U =
                     null != g.button
                         ? {
-                              text: h.content,
+                              text: P.content,
                               variant: "expressive",
                               onClick: (0, p.h)({
                                   buttonAction: g.button.buttonAction,
@@ -62,7 +62,7 @@ n.d(
                 x = null != G ? { text: G.linkText, link: G.url } : void 0,
                 B = {
                     targetElementRef: n,
-                    title: R.content,
+                    title: M.content,
                     body: C.content,
                     textLink: x,
                     position: "right",
@@ -74,7 +74,7 @@ n.d(
             if (T) {
                 let e = { ...B, assetUrl: N ?? "", action: U, disableMediaViewer: !0 };
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [P, (0, l.jsx)("div", { children: t }), (0, l.jsx)(i.H, { ...e })],
+                    children: [h, (0, l.jsx)("div", { children: t }), (0, l.jsx)(i.H, { ...e })],
                 });
             }
             let F = {
@@ -85,7 +85,7 @@ n.d(
                 gradientColor: "nitro-pink",
             };
             return (0, l.jsxs)(l.Fragment, {
-                children: [P, (0, l.jsx)("div", { children: t }), (0, l.jsx)(d.A, { ...F })],
+                children: [h, (0, l.jsx)("div", { children: t }), (0, l.jsx)(d.A, { ...F })],
             });
         },
     },

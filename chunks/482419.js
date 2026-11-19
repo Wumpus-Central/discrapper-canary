@@ -33,15 +33,15 @@ n.d(
                           subscriptionTrial: d,
                           invoicePlanId: C ?? void 0,
                       }).lineItems;
-            let S = (0, a.lp)(h, { manualLineItems: f, includeTaxLineItem: !0 }),
-                E = (0, a.Dn)(h);
+            let E = (0, a.lp)(h, { manualLineItems: f, includeTaxLineItem: !0 }),
+                S = (0, a.Dn)(h);
             return (
-                null != E && S.push(E),
+                null != S && E.push(S),
                 (0, l.jsx)(s.Vm, {
                     label: c.intl.string(u.default.eoXh7B),
-                    lineItems: S,
+                    lineItems: E,
                     currency: h.currency,
-                    defaultExpanded: null != E,
+                    defaultExpanded: null != S,
                 })
             );
         },

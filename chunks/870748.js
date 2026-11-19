@@ -26,7 +26,7 @@ var l = n(485845),
 let N = new Set(["applicationCommandOption"]),
     T = new Set([r.n4.ATTACHMENT]),
     k = new Set(["line", "applicationCommand"]);
-function j(e, t, n, l) {
+function _(e, t, n, l) {
     let [i] = I.VW.blocks(e)[0],
         r = (l ? (0, A.IQ)(i, { mode: "plain" }).trimEnd() : "")
             .split("\n")
@@ -36,7 +36,7 @@ function j(e, t, n, l) {
         I.PW.isAfter(t, a) && b.b.removeNodes(e, { at: t, voids: !0 });
     null != n && s.Gf({ channelId: t, command: null, section: null });
 }
-function _(e, t) {
+function j(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||
@@ -234,12 +234,12 @@ n.d(
                                     )
                                         return (
                                             null != h
-                                                ? j(t, a.id, E, !0)
+                                                ? _(t, a.id, E, !0)
                                                 : null != E && s.Gf({ channelId: a.id, command: null, section: null }),
                                             null
                                         );
                                     if (null != h) {
-                                        if (I.VW.isEditorEmpty(t) || null == E) return (j(t, a.id, E, !1), null);
+                                        if (I.VW.isEditorEmpty(t) || null == E) return (_(t, a.id, E, !1), null);
                                         let e = `/${h.displayName}`;
                                         if (
                                             null == g ||
@@ -247,7 +247,7 @@ n.d(
                                             (0 === y.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
                                         )
                                             return (
-                                                i.A.clearDraftCommand(a.id, x.C.ChannelMessage), j(t, a.id, E, !0), null
+                                                i.A.clearDraftCommand(a.id, x.C.ChannelMessage), _(t, a.id, E, !0), null
                                             );
                                     } else {
                                         if (null != E && u) {
@@ -338,7 +338,7 @@ n.d(
                                                               ? (b.b.selectCommandOption(e, f.optionName, !1),
                                                                 (g = f.optionName))
                                                               : b.b.resetSelectionToEditorEnd(e),
-                                                        null == f && _(e, r),
+                                                        null == f && j(e, r),
                                                         g
                                                     );
                                                 })(t, a, n),
@@ -427,7 +427,7 @@ n.d(
                                                 }),
                                                 !0)
                                             );
-                                        })(t, E) && _(t, E);
+                                        })(t, E) && j(t, E);
                                         let e = y.SQ(t, E, a.id),
                                             n = I.VW.above(t, {
                                                 match: (e) =>
@@ -470,6 +470,6 @@ n.d(
                 e
             );
         },
-        t: j,
+        t: _,
     },
 );

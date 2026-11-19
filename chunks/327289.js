@@ -660,8 +660,8 @@ var e0 = n(554146),
     e6 = n(834730),
     e8 = n(789645),
     e4 = n(565645),
-    e9 = n(775602),
-    e7 = n(826673),
+    e7 = n(775602),
+    e9 = n(826673),
     te = n(371680),
     tt = n(532624),
     tn = n(531685),
@@ -673,7 +673,7 @@ function ts(e) {
         r = (0, d.RQ)((e) => e.searchQuery),
         s = (0, m.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
         a = (0, m.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
-        o = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion, []),
+        o = (0, m.bG)([e7.Ay], () => e7.Ay.useReducedMotion, []),
         u = (0, m.bG)([tn.A], () => tn.A.isFocused()),
         c = (0, m.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(ev.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
@@ -696,7 +696,7 @@ function ts(e) {
                 return (t) => (0, l.jsx)(e, { ...t });
             }));
     }
-    let f = (0, e7.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
+    let f = (0, e9.k8)(e0.M.SOUNDBOARD_KEYBIND_TIP),
         p =
             null != c && (0, tl.uF)() && !f
                 ? eG.intl.format(eG.t.udMTth, {
@@ -720,7 +720,7 @@ function ts(e) {
                   (0, l.jsx)(I.D, {
                       className: tr.b,
                       onClick: function () {
-                          return (0, e7.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
+                          return (0, e9.Dr)(e0.M.SOUNDBOARD_KEYBIND_TIP);
                       },
                       children: (0, l.jsx)(e8.XSmallIcon, { size: "xs", color: "currentColor" }),
                   }),
@@ -1318,8 +1318,8 @@ function tb(e) {
             let e = (0, W.Dd)(e_.PremiumTypes.TIER_2);
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
         }, [e8]),
-        e9 = i.useCallback((e) => (e6(e, t) ? 65 : 32), [t, e6]),
-        e7 = i.useCallback(
+        e7 = i.useCallback((e) => (e6(e, t) ? 65 : 32), [t, e6]),
+        e9 = i.useCallback(
             (e) => {
                 let t = e === eK.length - 1;
                 return eq && t ? 70 : ez && e === eH ? 20 : 0;
@@ -1419,9 +1419,9 @@ function tb(e) {
                     inExpressionPicker: v,
                     newSoundCountByGuildId: eD ? eo : void 0,
                     isNewSound: Z,
-                    getSectionHeaderHeight: e9,
+                    getSectionHeaderHeight: e7,
                 }),
-            [q, C, ez, t, v, eD, eo, Z, e9],
+            [q, C, ez, t, v, eD, eo, Z, e7],
         ),
         tc = i.useCallback(() => {
             let e = (0, Y.qD)();
@@ -1513,8 +1513,8 @@ function tb(e) {
                     renderCategoryList: tu,
                     renderHeaderAccessories: to,
                     rowHeight: 48,
-                    sectionHeaderHeight: e9,
-                    sectionFooterHeight: e7,
+                    sectionHeaderHeight: e7,
+                    sectionFooterHeight: e9,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,
                     renderEmptySearchState: tC,

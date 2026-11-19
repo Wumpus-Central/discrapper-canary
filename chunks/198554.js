@@ -56,8 +56,8 @@ let E = function (e) {
                 isFocused: t,
             };
         })(v),
-        j = 0 === A,
-        _ = null != g;
+        _ = 0 === A,
+        j = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ...N,
@@ -97,14 +97,14 @@ let E = function (e) {
                 ref: I,
                 children: [
                     s,
-                    _
+                    j
                         ? (0, i.jsx)("div", {
                               className: p.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(p.KY, { [p.BN]: j }),
+                                  className: a()(p.KY, { [p.BN]: _ }),
                                   onContextMenu: x,
                                   "aria-label": f.intl.string(f.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: j }), children: g }),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: _ }), children: g }),
                               }),
                           })
                         : null,

@@ -22,14 +22,14 @@ n.d(
                     emojiConfetti: h,
                     soundEffect: C,
                     setEmojiConfetti: f,
-                    setSoundEffect: S,
+                    setSoundEffect: E,
                 } = (0, s.Pv)(),
-                E = (0, u.lo)(n, t),
-                I = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-                g = E !== u.tB.DEFAULT;
+                S = (0, u.lo)(n, t),
+                g = S === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+                I = S !== u.tB.DEFAULT;
             return (0, l.jsxs)("div", {
                 children: [
-                    g &&
+                    I &&
                         (0, l.jsxs)("div", {
                             className: p.Os,
                             children: [
@@ -47,14 +47,14 @@ n.d(
                                               })
                                             : (0, l.jsx)(a.y, { className: p.u1 }),
                                 }),
-                                I &&
+                                g &&
                                     (0, l.jsxs)("div", {
                                         className: r()(p.b7, p.Ow),
                                         children: [
                                             (0, l.jsx)(o.A, {
                                                 sound: C,
                                                 onSelect: function (e) {
-                                                    null != S && S(null == e ? void 0 : e);
+                                                    null != E && E(null == e ? void 0 : e);
                                                 },
                                             }),
                                             (0, l.jsx)(m.A, {

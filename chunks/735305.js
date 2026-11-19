@@ -12,9 +12,9 @@ var l = n(284009),
     h = n(418200),
     C = n(166532),
     f = n(566980),
-    S = n(671334),
-    E = n(652215),
-    I = n(682901);
+    E = n(671334),
+    S = n(652215),
+    g = n(682901);
 n.d(
     t,
     {},
@@ -24,7 +24,7 @@ n.d(
                     analyticsData: t,
                     initialPlanId: n,
                     handleStepChange: l,
-                    onReturn: g,
+                    onReturn: I,
                     continueSessionToInitialStep: y,
                 } = e,
                 { paymentSources: A } = (0, a.j)(),
@@ -53,7 +53,7 @@ n.d(
                 { step: k } = (0, o.Ay)(),
                 { isGift: w } = (0, h.Pv)(),
                 D = {
-                    ...(0, S.p)(),
+                    ...(0, E.p)(),
                     paymentSources: A,
                     paymentSourceId: _,
                     setPaymentSourceId: T,
@@ -64,7 +64,7 @@ n.d(
                     isGift: w,
                 },
                 U =
-                    g ??
+                    I ??
                     function () {
                         l(Object.values(A).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
                             trackedFromStep: C.pn.PAYMENT_ELEMENT,
@@ -73,7 +73,7 @@ n.d(
             i()(null != k, "Step should be set here");
             let G = (0, r.A)(() => Date.now(), [k]),
                 F = C.pn.PAYMENT_ELEMENT;
-            return (0, S.Y)({
+            return (0, E.Y)({
                 addPaymentMethodStepState: D,
                 initialStep: F,
                 prependSteps: [C.pn.PROMOTION_INFO],
@@ -89,7 +89,7 @@ n.d(
                 onStepChange: (e) => {
                     let { currentStep: n, toStep: l } = e,
                         i = Date.now();
-                    m.default.track(E.HAw.PAYMENT_FLOW_STEP, {
+                    m.default.track(S.HAw.PAYMENT_FLOW_STEP, {
                         ...t,
                         from_step: n,
                         to_step: l,
@@ -99,7 +99,7 @@ n.d(
                 },
                 isEligibleForTrial: M,
                 allowDesktopRedirectPurchase:
-                    (0, p.xl)() && null != P && [I.pe.TIER_0, I.pe.TIER_2].includes(P) && !w && null == j,
+                    (0, p.xl)() && null != P && [g.pe.TIER_0, g.pe.TIER_2].includes(P) && !w && null == j,
                 continueSessionToInitialStep: y,
             });
         },

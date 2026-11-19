@@ -3,8 +3,8 @@ var n = l(477900),
     r = l(503698),
     i = l.n(r),
     s = l(939249),
-    u = l(256905),
-    o = l(666476),
+    o = l(256905),
+    u = l(666476),
     d = l(989145),
     c = l(932111),
     f = l(161431),
@@ -24,7 +24,7 @@ l.d(
                 x = (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: v.xn }), h],
                 });
-            return null != l && null != r && o.XB.has(r.content_type)
+            return null != l && null != r && u.XB.has(r.content_type)
                 ? (0, n.jsx)(s.D, {
                       tag: "span",
                       className: i()(v.Pq, v.Td),
@@ -35,7 +35,7 @@ l.d(
                           } catch {
                               return;
                           }
-                          (0, u.R)({
+                          (0, o.R)({
                               items: [{ type: "IMAGE", url: e, alt: r.name }],
                               startingIndex: 0,
                               shouldHideMediaOptions: !0,

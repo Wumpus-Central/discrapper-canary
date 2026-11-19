@@ -1,14 +1,14 @@
-var e = i(855986),
-    l = i(627363),
-    u = i(260498);
-i.d(
-    t,
+var l = e(855986),
+    r = e(627363),
+    i = e(260498);
+e.d(
+    n,
     {},
     {
-        Ay: function (n) {
-            let t = (0, e.bG)([u.Ay], () => u.Ay.getProject(n)?.preview_application_id, [n]),
-                { data: i } = (0, l.YY)(t);
-            return { iconURL: i?.getIconURL(160) ?? null, description: i?.description ?? "" };
+        Ay: function (t) {
+            let n = (0, l.bG)([i.Ay], () => i.Ay.getProject(t)?.preview_application_id, [t]),
+                { data: e } = (0, r.YY)(n);
+            return { iconURL: e?.getIconURL(160) ?? null, description: e?.description ?? "" };
         },
         En: ["png", "jpg", "jpeg", "gif", "webp"],
         Q0: 2097152,

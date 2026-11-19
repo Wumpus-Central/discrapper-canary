@@ -263,7 +263,7 @@ let c = {
         showCharacterCount: !0,
         toolbarType: 1,
     },
-    j = {
+    _ = {
         analyticsName: "channel_topic",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -274,7 +274,7 @@ let c = {
         markdown: { disableCodeBlocks: !0, disableBlockQuotes: !0, disableInlineCode: !0 },
         expressionPicker: { onlyEmojis: !0, emojiIntention: a.EmojiIntention.NO_CUSTOM_EMOJI },
     },
-    _ = {
+    j = {
         analyticsName: "atomic_reator_reply_input",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -361,8 +361,8 @@ n.d(
             CREATE_ANNOUNCEMENT_POST: x,
             CREATE_POLL: y,
             FORUM_CHANNEL_GUIDELINES: k,
-            CHANNEL_TOPIC: j,
-            ATOMIC_REACTOR_REPLY_INPUT: _,
+            CHANNEL_TOPIC: _,
+            ATOMIC_REACTOR_REPLY_INPUT: j,
             FORWARD_MESSAGE_INPUT: R,
             SHARE_CUSTOM_CLIENT_THEME_INPUT: w,
             CONJURE_PATCH_NOTES: O,

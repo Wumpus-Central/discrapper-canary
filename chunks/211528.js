@@ -55,7 +55,7 @@ let g = { type: "tabs" },
                 },
                 [p, C, _, d],
             ),
-            k = i.useMemo(
+            N = i.useMemo(
                 () => ({
                     applePay: n.includes("applePay") ? "auto" : "never",
                     googlePay: n.includes("googlePay") ? "auto" : "never",
@@ -63,18 +63,18 @@ let g = { type: "tabs" },
                 }),
                 [n],
             ),
-            N = i.useMemo(
+            k = i.useMemo(
                 () => ({ billingDetails: { ...(null != y && { email: y }), ...(null != S && { name: S }) } }),
                 [y, S],
             ),
             x = i.useMemo(
                 () => ({
                     id: "stripe-payment-element",
-                    options: { layout: a, wallets: k, defaultValues: N, paymentMethodOrder: t, ...h },
+                    options: { layout: a, wallets: N, defaultValues: k, paymentMethodOrder: t, ...h },
                     onChange: T,
                     ...A,
                 }),
-                [a, k, N, h, A, T, t],
+                [a, N, k, h, A, T, t],
             );
         return (0, l.jsx)(o.PaymentElement, { ...x });
     });
