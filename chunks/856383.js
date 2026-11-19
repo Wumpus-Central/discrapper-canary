@@ -92,6 +92,7 @@ let c = {
     crash() {
         throw Error("crash");
     },
+    hangMainThread() {},
     triggerMemoryWarning() {},
     markCrashHandled(e) {},
     getLastCrashReport: () => Promise.resolve(null),
