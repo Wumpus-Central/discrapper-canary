@@ -36,8 +36,8 @@ var r = n(158390),
     C = n(416473),
     k = n(525530),
     R = n(743082),
-    w = n(385081),
-    A = n(519325);
+    A = n(385081),
+    w = n(519325);
 class v {
     sendPing;
     onDead;
@@ -129,6 +129,7 @@ let I = {
     safety_recheck: !0,
     saving: !0,
     segment_settled: !0,
+    server_change: !0,
     spend_limit: !0,
     terminal_error: !0,
     thinking: !0,
@@ -140,8 +141,8 @@ let I = {
 var J = n(649121),
     D = n(975189),
     M = n(77729),
-    L = n(209489),
-    H = n(723702);
+    H = n(209489),
+    L = n(723702);
 let x = !1;
 (n(643210),
     n(285411),
@@ -305,8 +306,8 @@ function Z(e) {
             (s = ee),
             !x &&
                 ((x = !0),
-                (0, H.xl)() && M.A.powerMonitor.on("resume", s),
-                L.A.addOnlineCallback(s),
+                (0, L.xl)() && M.A.powerMonitor.on("resume", s),
+                H.A.addOnlineCallback(s),
                 "u" > typeof document &&
                     document.addEventListener("visibilitychange", () => {
                         "visible" === document.visibilityState && s();
@@ -436,7 +437,7 @@ function Z(e) {
                                         !(function (e, t) {
                                             let { projectId: n } = t;
                                             if (("error" === e.kind && (0, b.Nc)(n), "turn_result" === e.kind)) {
-                                                ((0, w.hV)(n, e),
+                                                ((0, A.hV)(n, e),
                                                     "deployed" === e.result &&
                                                         i.h.dispatch({
                                                             type: "CONJURE_CHAT_TURN_PATCH",
@@ -491,9 +492,9 @@ function Z(e) {
                     (0, N.OB)(e, n),
                     (0, b.BC)(e, "Connection failed before the draft arrived"),
                     (0, b.Nc)(e),
-                    (0, w.Hy)(e, {
+                    (0, A.Hy)(e, {
                         location: "connection",
-                        code: w.xf.WS_OPEN_FAILED,
+                        code: A.xf.WS_OPEN_FAILED,
                         message: n instanceof Error ? n.message : "ws open failed",
                     }));
             }
@@ -537,7 +538,7 @@ function es(e) {
         (0, D.ng)(e),
         (t = e),
         eu.delete(t),
-        A.A.releasePreviewControl(e),
+        w.A.releasePreviewControl(e),
         (0, m.RP)(e),
         B(e, "closed"),
         !0)

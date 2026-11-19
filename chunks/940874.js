@@ -200,6 +200,16 @@ n.d(
                         patch: { restoreProposal: e.restore_proposal },
                     });
             },
+            server_change(e, t) {
+                let { projectId: n } = t;
+                null != e.server_change &&
+                    r.h.dispatch({
+                        type: "CONJURE_CHAT_TURN_PATCH",
+                        projectId: n,
+                        turnId: e.turn_id,
+                        patch: { serverChange: e.server_change },
+                    });
+            },
             publish_schedule_proposal(e, t) {
                 let { projectId: n } = t;
                 null != e.publish_schedule_proposal &&

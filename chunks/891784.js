@@ -51,6 +51,7 @@ function s(e) {
     null != e.restore_proposal && (s.restoreProposal = e.restore_proposal),
     null != e.publish_schedule_proposal && (s.publishScheduleProposal = e.publish_schedule_proposal),
     null != e.app_build_request && (s.appBuildRequest = e.app_build_request),
+    null != e.server_change && (s.serverChange = e.server_change),
     null != e.source_sha && (s.sourceSha = e.source_sha),
     null == e.steps && null == e.events && null != e.todos && e.todos.length > 0 && (s.todos = e.todos),
     null != e.steps

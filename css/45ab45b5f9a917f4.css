@@ -109,6 +109,94 @@
     flex-shrink: 0
 }
 
+.awaitingSurface_3HZf4Z {
+    border-color: var(--background-brand);
+    position: relative
+}
+
+.awaitingSurface_3HZf4Z:after {
+    border-radius: inherit;
+    box-shadow: 0 0 0 var(--space-4) var(--background-brand);
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .awaitingSurface_3HZf4Z:after {
+    animation: conjureAwaitingPulse_3HZf4Z 2s ease-in-out infinite
+}
+
+@keyframes conjureAwaitingPulse_3HZf4Z {
+
+    0%,
+    to {
+        opacity: 0
+    }
+
+    50% {
+        opacity: .35
+    }
+}
+
+.host_KW3BaC {
+    display: inline-block;
+    font-kerning: none;
+    font-variant-ligatures: none;
+    height: 1lh;
+    line-height: inherit;
+    position: relative;
+    white-space: pre
+}
+
+.textLayer_KW3BaC {
+    display: block;
+    white-space: pre
+}
+
+.textLayer_KW3BaC.hidden_KW3BaC {
+    opacity: 0
+}
+
+.char_KW3BaC {
+    display: inline-block;
+    text-align: start;
+    transition: opacity 90ms linear
+}
+
+.char_KW3BaC.shifted_KW3BaC {
+    opacity: .55
+}
+
+.char_KW3BaC.scrambled_KW3BaC {
+    opacity: 0
+}
+
+.glyphLayer_KW3BaC {
+    color: var(--custom-ai-shimmer-glyph-color);
+    display: block;
+    font-family: AI Visual Identity Glyphs, monospace;
+    font-size: .76em;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    line-height: 1;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(-50%);
+    white-space: pre
+}
+
+.glyphCell_KW3BaC {
+    display: inline-block;
+    text-align: center;
+    width: 1em
+}
+
+.reduce-motion .char_KW3BaC {
+    transition: none
+}
+
 .loading_rqE2lZ {
     display: flex;
     justify-content: center;
@@ -119,4 +207,4 @@
     padding-top: var(--space-12)
 }
 
-/*# sourceMappingURL=f4419a032501a86c.css.map*/
+/*# sourceMappingURL=45ab45b5f9a917f4.css.map*/

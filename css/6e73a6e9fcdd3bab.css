@@ -417,35 +417,4 @@
     color: var(--text-muted)
 }
 
-.awaitingSurface_3HZf4Z {
-    border-color: var(--background-brand);
-    position: relative
-}
-
-.awaitingSurface_3HZf4Z:after {
-    border-radius: inherit;
-    box-shadow: 0 0 0 var(--space-4) var(--background-brand);
-    content: "";
-    inset: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute
-}
-
-.full-motion .awaitingSurface_3HZf4Z:after {
-    animation: conjureAwaitingPulse_3HZf4Z 2s ease-in-out infinite
-}
-
-@keyframes conjureAwaitingPulse_3HZf4Z {
-
-    0%,
-    to {
-        opacity: 0
-    }
-
-    50% {
-        opacity: .35
-    }
-}
-
-/*# sourceMappingURL=e347c3875bc5fcd7.css.map*/
+/*# sourceMappingURL=6e73a6e9fcdd3bab.css.map*/
