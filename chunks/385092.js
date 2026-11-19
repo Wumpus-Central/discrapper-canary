@@ -1,7 +1,7 @@
 var i, r, n, s, o, d;
 (Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0));
-let l = a(896230);
+let l = a(679487);
 (((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = "CHAIR"),
     (s.REQ = "REQ-PARTICIPANT"),
     (s.OPT = "OPT-PARTICIPANT"),

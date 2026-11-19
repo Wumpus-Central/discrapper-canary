@@ -6,10 +6,10 @@ var i,
             return t && t.__esModule ? t : { default: t };
         };
 (Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalCalendarMethod = void 0));
-let s = a(896230),
-    o = n(a(51561)),
-    d = a(675833),
-    l = a(675833);
+let s = a(679487),
+    o = n(a(366040)),
+    d = a(963500),
+    l = a(963500);
 (((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = "PUBLISH"),
     (i.REQUEST = "REQUEST"),
     (i.REPLY = "REPLY"),
