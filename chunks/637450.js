@@ -2860,6 +2860,8 @@ class tM extends L.G {
             { no: 49, name: "is_feature_flag", kind: "scalar", T: 8 },
             { no: 50, name: "is_official_holdout", kind: "scalar", T: 8 },
             { no: 52, name: "holdout_scope", kind: "message", T: () => tF },
+            { no: 54, name: "opt_out_of_official_holdout", kind: "scalar", T: 8 },
+            { no: 55, name: "official_holdout_opt_out_reason", kind: "scalar", T: 9 },
             { no: 51, name: "change_source", kind: "message", T: () => tx },
         ]);
     }
@@ -2901,6 +2903,8 @@ class tM extends L.G {
             eligibilityPersistence: 0,
             isFeatureFlag: !1,
             isOfficialHoldout: !1,
+            optOutOfOfficialHoldout: !1,
+            officialHoldoutOptOutReason: "",
         };
         return (
             globalThis.Object.defineProperty(t, R.$, { enumerable: !1, value: this }),
@@ -3077,6 +3081,12 @@ class tM extends L.G {
                 case 52:
                     r.holdoutScope = tF.internalBinaryRead(e, e.uint32(), n, r.holdoutScope);
                     break;
+                case 54:
+                    r.optOutOfOfficialHoldout = e.bool();
+                    break;
+                case 55:
+                    r.officialHoldoutOptOutReason = e.string();
+                    break;
                 case 51:
                     r.changeSource = tx.internalBinaryRead(e, e.uint32(), n, r.changeSource);
                     break;
@@ -3169,6 +3179,9 @@ class tM extends L.G {
             !1 !== e.isFeatureFlag && t.tag(49, C.O0.Varint).bool(e.isFeatureFlag),
             !1 !== e.isOfficialHoldout && t.tag(50, C.O0.Varint).bool(e.isOfficialHoldout),
             e.holdoutScope && tF.internalBinaryWrite(e.holdoutScope, t.tag(52, C.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.optOutOfOfficialHoldout && t.tag(54, C.O0.Varint).bool(e.optOutOfOfficialHoldout),
+            "" !== e.officialHoldoutOptOutReason &&
+                t.tag(55, C.O0.LengthDelimited).string(e.officialHoldoutOptOutReason),
             e.changeSource && tx.internalBinaryWrite(e.changeSource, t.tag(51, C.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
