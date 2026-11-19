@@ -10,13 +10,14 @@ n.d(
             return (0, i.b4)(e, "retry remix", (e) => e.sendRetryRemix());
         },
         Io: async function (e, t) {
-            let [n, r] = await Promise.all([e, (0, s.dv)(t)]),
-                i = new URLSearchParams({ ticket: n.ticket });
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                [r, i] = await Promise.all([e, (0, s.dv)(t)]),
+                o = new URLSearchParams({ ticket: r.ticket });
             for (let e = 1; ; e++) {
-                let t = await fetch(`${n.baseUrl}/agent/fork?${i}`, {
+                let t = await fetch(`${r.baseUrl}/agent/fork?${o}`, {
                     method: "POST",
                     headers: { "content-type": "application/json" },
-                    body: JSON.stringify({ dest_ticket: r.ticket }),
+                    body: JSON.stringify({ dest_ticket: i.ticket, ...(n ? { copy: !0 } : {}) }),
                 }).then(
                     (e) => e.status,
                     () => null,

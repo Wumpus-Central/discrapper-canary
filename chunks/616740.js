@@ -452,8 +452,8 @@ var eW = n(581007),
     e2 = n(828162),
     e9 = n(517352),
     e4 = n(641436),
-    e7 = n(586428),
-    e5 = n(247806);
+    e5 = n(586428),
+    e7 = n(247806);
 function e8(e) {
     let { indicator: t } = e;
     if (null == t) return null;
@@ -531,16 +531,16 @@ let te = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
             children: [
                 (0, r.jsx)(ec.G, {
                     ref: A,
-                    className: e5.kL,
+                    className: e7.kL,
                     id: `skill-trees-${t}`,
                     renderIcon: (e) => (0, r.jsx)(eZ.BoostGemIcon, { size: "md", className: e, color: "currentColor" }),
                     background:
                         N &&
                         (0, r.jsx)("div", {
-                            className: e5.Fi,
+                            className: e7.Fi,
                             children: (0, r.jsx)(eQ.t, {
                                 nextScene: null == I ? "animation" : "LOOP",
-                                className: e5.UU,
+                                className: e7.UU,
                                 sceneSegments: te,
                                 importData: () => n.e(867807).then(n.t.bind(n, 217762, 19)),
                                 onScenePlay: b,
@@ -548,8 +548,8 @@ let te = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                             }),
                         }),
                     text: (0, r.jsx)("span", {
-                        className: eT()({ [e5.A7]: i?.showUnread === !0 }),
-                        children: eA.intl.string(e7.default.yv3DJJ),
+                        className: eT()({ [e7.A7]: i?.showUnread === !0 }),
+                        children: eA.intl.string(e5.default.yv3DJJ),
                     }),
                     selected: l,
                     onClick: u,
@@ -638,7 +638,7 @@ let tf = (e) => {
                                 (0, r.jsx)(ti.E, {
                                     className: tA.Qq,
                                     variant: "body-xs/semibold",
-                                    children: eA.intl.string(e7.default.NI6Ihe),
+                                    children: eA.intl.string(e5.default.NI6Ihe),
                                 }),
                                 l >= n &&
                                     (0, r.jsx)(ti.E, {
@@ -655,8 +655,8 @@ let tf = (e) => {
                                     className: eT()(tA.Qq, tA.ue),
                                     variant: "body-xs/semibold",
                                     children: o
-                                        ? eA.intl.formatToPlainString(e7.default["Ehpq+7"], { appliedBoostCount: t })
-                                        : eA.intl.formatToPlainString(e7.default["/rbPDs"], {
+                                        ? eA.intl.formatToPlainString(e5.default["Ehpq+7"], { appliedBoostCount: t })
+                                        : eA.intl.formatToPlainString(e5.default["/rbPDs"], {
                                               appliedBoostCount: t,
                                               maxBoostCount: n,
                                           }),
@@ -761,8 +761,8 @@ var tG = n(787541),
     t2 = n(559106),
     t9 = n(847374),
     t4 = n(285796),
-    t7 = n(983851),
-    t5 = n(914430),
+    t5 = n(983851),
+    t7 = n(914430),
     t8 = n(47167),
     ne = n(485947),
     nt = n(970853),
@@ -807,7 +807,7 @@ let nd = F(
                 C = (0, t8.Ay)(l);
             t = null != u ? (d > u ? nr.mU : nr.TR) : nr.fx;
             let E = a.useCallback(() => {
-                    f ? (0, t5.fh)(l.id) : (0, t5.Gv)(l.id);
+                    f ? (0, t7.fh)(l.id) : (0, t7.Gv)(l.id);
                 }, [l.id, f]),
                 x = a.useCallback(
                     (e) => {
@@ -1002,7 +1002,7 @@ let nd = F(
                 variant: "secondary",
                 fullWidth: !0,
                 onClick: l,
-                icon: t7.VoiceNormalIcon,
+                icon: t5.VoiceNormalIcon,
                 text: n ? eA.intl.string(eA.t["/eB9Bg"]) : eA.intl.string(eA.t.Q2gPWl),
             }),
         });
@@ -1231,7 +1231,7 @@ function nz(e) {
                     onClick: s,
                     tabIndex: n,
                     "aria-label": eA.intl.string(eA.t["96ANUN"]),
-                    children: (0, r.jsx)(t7.VoiceNormalIcon, { size: "xs", color: "currentColor", className: ep.gE }),
+                    children: (0, r.jsx)(t5.VoiceNormalIcon, { size: "xs", color: "currentColor", className: ep.gE }),
                 }),
             }),
             (0, r.jsx)(ei.m, {
@@ -1309,7 +1309,7 @@ function n6(e) {
 var n2 = n(588224),
     n9 = n(672812),
     n4 = n(447199);
-function n7(e) {
+function n5(e) {
     let { thread: t, countInVoice: n, hasVideo: l, mentionCount: i, isMentionLowImportance: s } = e,
         a = n > 0 && t.userLimit > 0,
         o = n$(i);
@@ -1323,7 +1323,7 @@ function n7(e) {
           })
         : null;
 }
-function n5(e) {
+function n7(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         i = { className: eT()(n4.GI, { [n4.a7]: n }, { [n4.BJ]: l }), style: t },
         { density: s } = (0, E.wR)();
@@ -1459,10 +1459,10 @@ let n8 = a.memo(function (e) {
         role: _,
         className: eT()(ep.fx, { [ep.wH]: l }),
         children: [
-            (0, r.jsx)(n5, { withGuildIcon: o }),
+            (0, r.jsx)(n7, { withGuildIcon: o }),
             s
                 ? null
-                : (0, r.jsx)(n5, {
+                : (0, r.jsx)(n7, {
                       withGuildIcon: o,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
@@ -1504,7 +1504,7 @@ let n8 = a.memo(function (e) {
                                         onClick: nq.dG,
                                         onKeyDown: nq.dG,
                                         children: [
-                                            (0, r.jsx)(n7, {
+                                            (0, r.jsx)(n5, {
                                                 thread: t,
                                                 countInVoice: I,
                                                 hasVideo: u,
@@ -1635,7 +1635,8 @@ let lr = a.memo(function (e) {
                                 n.e(753376),
                                 n.e(916519),
                                 n.e(46233),
-                                n.e(603064),
+                                n.e(36509),
+                                n.e(659089),
                                 n.e(900957),
                                 n.e(241989),
                                 n.e(385442),
@@ -1656,8 +1657,8 @@ let lr = a.memo(function (e) {
         role: m,
         className: eT()(ep.fx, lt.nM, { [ep.wH]: s }),
         children: [
-            (0, r.jsx)(n5, {}),
-            i ? null : (0, r.jsx)(n5, { inverted: !0, style: ll }),
+            (0, r.jsx)(n7, {}),
+            i ? null : (0, r.jsx)(n7, { inverted: !0, style: ll }),
             h ? (0, r.jsx)("div", { className: eT()(n9.gy, n9.WS, lt.gy) }) : null,
             (0, r.jsx)(t2.vN, {
                 focusTarget: A,
@@ -2208,8 +2209,8 @@ var l0 = n(34188),
     l2 = n(831024),
     l9 = n(44724),
     l4 = n(849134),
-    l7 = n(770178),
-    l5 = n(307076);
+    l5 = n(770178),
+    l7 = n(307076);
 let l8 = 50;
 function ie(e) {
     let { children: t, ref: n } = e,
@@ -2217,7 +2218,7 @@ function ie(e) {
         s = a.useCallback((e) => {
             i(e.contentRect.width);
         }, []),
-        o = (0, l7.w)(s, [], { fireOnMount: !0 }),
+        o = (0, l5.w)(s, [], { fireOnMount: !0 }),
         [{ shineSpring: d }, c] = (0, tl.z)(() => ({
             from: { shineSpring: 0 },
             config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
@@ -2235,7 +2236,7 @@ function ie(e) {
             () =>
                 t(
                     (0, r.jsx)(tn.animated.div, {
-                        className: l5.q,
+                        className: l7.q,
                         style: {
                             transform: d.to(
                                 (e) => `translateX(calc(${e * l}px + ${340 * e}px)) translateY(-50%) rotate(45deg)`,
@@ -2248,7 +2249,7 @@ function ie(e) {
     return (
         a.useImperativeHandle(n, () => ({ onMouseEnter: u, onMouseLeave: h }), [u, h]),
         (0, r.jsx)("div", {
-            className: l5.i,
+            className: l7.i,
             onMouseEnter: u,
             onMouseLeave: h,
             onFocus: u,
@@ -2837,8 +2838,8 @@ var i3 = n(824865),
     i2 = n(129095),
     i9 = n(113783),
     i4 = n(96566),
-    i7 = n(312006),
-    i5 = n(505543),
+    i5 = n(312006),
+    i7 = n(505543),
     i8 = n(994500),
     se = n(685399),
     st = n(475889),
@@ -3194,14 +3195,14 @@ function sf(e) {
         A = (0, h.bG)([L.A], () => L.A.isCollapsed(s.parent_id)),
         f =
             ((t = s.id),
-            (n = (0, i5.A)(t)),
+            (n = (0, i7.A)(t)),
             (l = (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return (0, h.cf)(
-                    [i7.Ay, lE.default],
+                    [i5.Ay, lE.default],
                     () => {
                         let n = lE.default.getId();
-                        return i7.Ay.getPermissionsForUser(n, e, t);
+                        return i5.Ay.getPermissionsForUser(n, e, t);
                     },
                     [e, t],
                 );
@@ -3661,18 +3662,18 @@ function s4(e) {
               ],
           });
 }
-var s7 = n(220650);
-function s5(e) {
+var s5 = n(220650);
+function s7(e) {
     let { channel: t, onAction: n } = e,
         l = (0, se.Ay)(t),
         i = Array.from((0, se.Rz)(l).values());
     return 0 === i.length
         ? null
         : (0, r.jsxs)(sY.Ip, {
-              className: s7.kL,
+              className: s5.kL,
               children: [
-                  (0, r.jsx)("div", { className: s7.oT, children: (0, r.jsx)(s4, { channel: t }) }),
-                  (0, r.jsx)("div", { className: s7.zN }),
+                  (0, r.jsx)("div", { className: s5.oT, children: (0, r.jsx)(s4, { channel: t }) }),
+                  (0, r.jsx)("div", { className: s5.zN }),
                   i.map((e, l) =>
                       (0, r.jsx)(
                           s6,
@@ -3744,7 +3745,7 @@ let s8 = F(
             return t.isModeratorReportChannel() || i
                 ? null
                 : null != l && l.length > 0 && s && !n
-                  ? (0, r.jsx)(s5, { onAction: this.handleActivitiesPopoutClose, channel: t })
+                  ? (0, r.jsx)(s7, { onAction: this.handleActivitiesPopoutClose, channel: t })
                   : (0, r.jsx)(sH, { ...e, channel: this.props.channel });
         };
         componentWillUnmount() {
@@ -4315,7 +4316,7 @@ function r_(e) {
         className: eT()(rN.M0, rN.OF),
         onClick: s,
         children: [
-            (0, r.jsx)(t7.VoiceNormalIcon, {
+            (0, r.jsx)(t5.VoiceNormalIcon, {
                 size: "custom",
                 className: rN.Gs,
                 width: 14,
@@ -4985,7 +4986,7 @@ let r4 = F(
         },
     ),
 );
-function r7(e) {
+function r5(e) {
     let {
             guild: t,
             channel: n,
@@ -5078,7 +5079,7 @@ function r7(e) {
     });
 }
 n(131955);
-let r5 = [];
+let r7 = [];
 function r8(e) {
     return (
         m.A.modules.channels.NAME_LINE_HEIGHT.resolve({ density: e }) +
@@ -5471,7 +5472,7 @@ class ae extends a.PureComponent {
                         {
                             children: [
                                 (0, r.jsx)(lD, { guild: l, selected: s === eh.VV.CONJURE }),
-                                (0, r.jsx)(la, { guildId: l.id, projects: this.props.conjureProjects ?? r5 }),
+                                (0, r.jsx)(la, { guildId: l.id, projects: this.props.conjureProjects ?? r7 }),
                             ],
                         },
                         t0.n.GUILD_CONJURE,
@@ -5580,7 +5581,7 @@ class ae extends a.PureComponent {
                 );
             case H.rbe.GUILD_VOICE:
                 return (0, r.jsx)(
-                    r7,
+                    r5,
                     {
                         channel: x,
                         guild: l,

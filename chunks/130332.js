@@ -51,7 +51,7 @@ e.d(
                                         id: "conjure-remix",
                                         icon: r.PaperPlusIcon,
                                         leadingAccessory: { type: "icon", icon: r.PaperPlusIcon },
-                                        label: G.intl.string(P.default["276ll6"]),
+                                        label: G.intl.string(P.default.XWgAfc),
                                         action: () => (0, v.A)(k, F),
                                     },
                                     "remix",

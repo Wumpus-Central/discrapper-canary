@@ -59,7 +59,7 @@ l.d(
                                           null != j
                                               ? (0, t.jsx)(u.$, {
                                                     variant: "secondary",
-                                                    text: g.intl.string(m.default["276ll6"]),
+                                                    text: g.intl.string(m.default.XWgAfc),
                                                     onClick: function () {
                                                         null != j && null != C && (h(), (0, c.A)(j, C));
                                                     },

@@ -26,8 +26,8 @@ var r = n(477900),
     M = n(785389),
     _ = n(889558),
     P = n(860402),
-    $ = n(191850),
-    A = n(792996);
+    A = n(191850),
+    $ = n(792996);
 let D = new Set();
 var q = n(91242),
     z = n(156548),
@@ -35,8 +35,8 @@ var q = n(91242),
     T = n(475815),
     E = n(573083),
     F = n(652215),
-    B = n(165610),
-    W = n(826058),
+    W = n(165610),
+    B = n(738604),
     X = n(442331),
     L = n(616334),
     R = n(260498);
@@ -61,13 +61,13 @@ function et(e) {
     return (0, r.jsx)(V.a, {
         ...a,
         role: "alertdialog",
-        title: A.intl.formatToPlainString($.default.CJBhb2, { name: n.projectName }),
+        title: $.intl.formatToPlainString(A.default.CJBhb2, { name: n.projectName }),
         subtitle: (0, H.J)(n, i),
         notice: null == c ? void 0 : { message: c, type: "critical", role: "alert" },
         actions: [
-            { text: A.intl.string(A.t["ETE/oC"]), variant: "secondary", onClick: a.onClose },
+            { text: $.intl.string($.t["ETE/oC"]), variant: "secondary", onClick: a.onClose },
             {
-                text: A.intl.string($.default.aC42bN),
+                text: $.intl.string(A.default.aC42bN),
                 variant: "critical-primary",
                 loading: o,
                 disabled: o,
@@ -75,7 +75,7 @@ function et(e) {
                     (async function () {
                         (u(!0), s(null));
                         let e = await (0, U.xx)(t.id).catch(() => null);
-                        (u(!1), e?.ok !== !0) ? s(A.intl.string($.default["0XDHob"])) : a.onClose();
+                        (u(!1), e?.ok !== !0) ? s($.intl.string(A.default["0XDHob"])) : a.onClose();
                     })().catch(() => {});
                 },
             },
@@ -132,11 +132,11 @@ function eo(e) {
                     () => null != e && O.A.getWindowOpen(F.MLl.ACTIVITY_POPOUT) && q.A.getMainFrame()?.id === e.id,
                     [e],
                 );
-            if (!(0, B.x1)(e) || l || r) return null;
+            if (!(0, W.x1)(e) || l || r) return null;
             let a = (0, z.fl)(e.id);
             return null != a && (0, T.Ub)(a) ? { active: n, toggle: () => (0, z.U8)(e.id) } : null;
         })(ed, t),
-        ej = l.useContext(W.bI),
+        ej = l.useContext(B.bI),
         { pending: ev, connect: ek } = (function (e, t) {
             let [n, r] = l.useState(D),
                 i = l.useRef(D),
@@ -158,8 +158,8 @@ function eo(e) {
                                     ? (0, _.h)({ href: r.url, trusted: !1 })
                                     : t(
                                           "setup" === (0, M.rq)(r.error)
-                                              ? A.intl.string($.default["jCQ/1B"])
-                                              : A.intl.string($.default.POxkSh),
+                                              ? $.intl.string(A.default["jCQ/1B"])
+                                              : $.intl.string(A.default.POxkSh),
                                       );
                             })().catch(() => a(n.type)));
                     },
@@ -180,13 +180,13 @@ function eo(e) {
             [t],
         ),
         eP = !Q && (j || e_),
-        e$ = (function (e) {
+        eA = (function (e) {
             let { canRefresh: t, refreshPending: n, offers: r, connectPending: l } = e,
                 i = [];
             for (let { connection: e, offer: a } of (t &&
                 i.push({
                     id: "preview-refresh",
-                    label: A.intl.string($.default["/nOi5n"]),
+                    label: $.intl.string(A.default["/nOi5n"]),
                     kind: "refresh",
                     disabled: n,
                 }),
@@ -195,14 +195,14 @@ function eo(e) {
                     "authorize" === a
                         ? {
                               id: `preview-connect-${e.type}`,
-                              label: A.intl.formatToPlainString($.default.DEwmI5, { label: e.label }),
+                              label: $.intl.formatToPlainString(A.default.DEwmI5, { label: e.label }),
                               kind: "connect",
                               connectionType: e.type,
                               disabled: l.has(e.type),
                           }
                         : {
                               id: `preview-connect-${e.type}`,
-                              label: A.intl.formatToPlainString($.default.GnHcWc, { label: e.label }),
+                              label: $.intl.formatToPlainString(A.default.GnHcWc, { label: e.label }),
                               kind: "connect",
                               connectionType: e.type,
                               disabled: !0,
@@ -210,18 +210,18 @@ function eo(e) {
                 );
             return i;
         })({ canRefresh: !1, refreshPending: !1, offers: eI, connectPending: ev }),
-        eA = l.useMemo(() => new Map(eS.map((e) => [e.type, e])), [eS]),
+        e$ = l.useMemo(() => new Map(eS.map((e) => [e.type, e])), [eS]),
         eD = null != eo && v,
         eq = j && null != el,
         ez = I.p5 && null != b,
-        eO = null != ee || eq || null != eu || e$.length > 0 || null != ec,
+        eO = null != ee || eq || null != eu || eA.length > 0 || null != ec,
         eT = ex ? o.BellIcon : u.BellSlashIcon,
         eE = ef ? c.WindowReturnIcon : s.WindowLaunchIcon,
         eF = ew?.active === !0 ? d.FullscreenExitIcon : h.FullscreenEnterIcon;
     return (0, r.jsxs)(f.W, {
         "data-menu-migrated": !0,
         navId: `conjure-project-actions-${t}`,
-        "aria-label": A.intl.string(A.t.ogxXGq),
+        "aria-label": $.intl.string($.t.ogxXGq),
         onClose: ey,
         onSelect: ey,
         children: [
@@ -229,7 +229,7 @@ function eo(e) {
                 ? (0, r.jsx)(p.rX, {
                       children: (0, r.jsx)(p.Dr, {
                           id: "publish",
-                          label: V ?? A.intl.string($.default["120EFN"]),
+                          label: V ?? $.intl.string(A.default["120EFN"]),
                           disabled: K,
                           action: k,
                       }),
@@ -239,12 +239,12 @@ function eo(e) {
                 ? (0, r.jsxs)(p.rX, {
                       children: [
                           eD
-                              ? (0, r.jsx)(p.Dr, { id: "remix", label: A.intl.string($.default["276ll6"]), action: eo })
+                              ? (0, r.jsx)(p.Dr, { id: "remix", label: $.intl.string(A.default.XWgAfc), action: eo })
                               : null,
                           eP
                               ? (0, r.jsx)(p.Dr, {
                                     id: "settings",
-                                    label: A.intl.string($.default.FzfmQ8),
+                                    label: $.intl.string(A.default.FzfmQ8),
                                     icon: g.SettingsIcon,
                                     leadingAccessory: { type: "icon", icon: g.SettingsIcon },
                                     action: () =>
@@ -267,7 +267,7 @@ function eo(e) {
                                     id: "toggle-fullscreen",
                                     icon: eF,
                                     leadingAccessory: { type: "icon", icon: eF },
-                                    label: A.intl.string(ew.active ? A.t.Z7MyNB : A.t.OIDkcp),
+                                    label: $.intl.string(ew.active ? $.t.Z7MyNB : $.t.OIDkcp),
                                     action: ew.toggle,
                                 })
                               : null,
@@ -276,8 +276,8 @@ function eo(e) {
                                     id: "toggle-popout",
                                     icon: eE,
                                     leadingAccessory: { type: "icon", icon: eE },
-                                    label: A.intl.string(ef ? A.t["NKV/MO"] : A.t["3Zypbv"]),
-                                    subtext: eb && !ef ? A.intl.string($.default.WjdaFw) : void 0,
+                                    label: $.intl.string(ef ? $.t["NKV/MO"] : $.t["3Zypbv"]),
+                                    subtext: eb && !ef ? $.intl.string(A.default.WjdaFw) : void 0,
                                     disabled: eb && !ef,
                                     action: eh,
                                 })
@@ -285,12 +285,12 @@ function eo(e) {
                           ez
                               ? (0, r.jsx)(p.Dr, {
                                     id: "copy-link",
-                                    label: A.intl.string(A.t.WqhZss),
+                                    label: $.intl.string($.t.WqhZss),
                                     icon: m.LinkIcon,
                                     leadingAccessory: { type: "icon", icon: m.LinkIcon },
                                     action: () =>
                                         (0, I.C)((0, S.n)(b, er.VV.CONJURE, t), () =>
-                                            (0, a.P0)({ text: A.intl.string(A.t["L/PwZf"]), variant: "success" }),
+                                            (0, a.P0)({ text: $.intl.string($.t["L/PwZf"]), variant: "success" }),
                                         ),
                                 })
                               : null,
@@ -301,13 +301,13 @@ function eo(e) {
                 children: [
                     (0, r.jsx)(p.Dr, {
                         id: "mute",
-                        label: A.intl.string(ex ? $.default.s9rCuH : $.default["a+i/As"]),
+                        label: $.intl.string(ex ? A.default.s9rCuH : A.default["a+i/As"]),
                         icon: eT,
                         leadingAccessory: { type: "icon", icon: eT },
                         action: () => (0, G.$L)(t, !ex),
                     }),
                     null != es
-                        ? (0, r.jsx)(p.Dr, { id: "dismiss", label: A.intl.string($.default.bWzWw9), action: es })
+                        ? (0, r.jsx)(p.Dr, { id: "dismiss", label: $.intl.string(A.default.bWzWw9), action: es })
                         : null,
                 ],
             }),
@@ -315,19 +315,19 @@ function eo(e) {
                 ? (0, r.jsxs)(p.rX, {
                       children: [
                           null != ee
-                              ? (0, r.jsx)(p.Dr, { id: "export", label: A.intl.string($.default.WsEEP7), action: ee })
+                              ? (0, r.jsx)(p.Dr, { id: "export", label: $.intl.string(A.default.WsEEP7), action: ee })
                               : null,
                           eq
-                              ? (0, r.jsx)(p.Dr, { id: "import", label: A.intl.string($.default.rWGY3e), action: el })
+                              ? (0, r.jsx)(p.Dr, { id: "import", label: $.intl.string(A.default.rWGY3e), action: el })
                               : null,
                           null != eu
                               ? (0, r.jsx)(p.Dr, {
                                     id: "connect-tool",
-                                    label: A.intl.string($.default.yOIql5),
+                                    label: $.intl.string(A.default.yOIql5),
                                     action: eu,
                                 })
                               : null,
-                          e$.map((e) =>
+                          eA.map((e) =>
                               (0, r.jsx)(
                                   p.Dr,
                                   {
@@ -336,7 +336,7 @@ function eo(e) {
                                       disabled: e.disabled,
                                       dontCloseOnAction: !0,
                                       action: () => {
-                                          let t = null == e.connectionType ? null : eA.get(e.connectionType);
+                                          let t = null == e.connectionType ? null : e$.get(e.connectionType);
                                           null != t && ek(t);
                                       },
                                   },
@@ -346,7 +346,7 @@ function eo(e) {
                           null != ec
                               ? (0, r.jsx)(p.Dr, {
                                     id: "history",
-                                    label: A.intl.string($.default["3hIVou"]),
+                                    label: $.intl.string(A.default["3hIVou"]),
                                     action: ec,
                                 })
                               : null,
@@ -359,7 +359,7 @@ function eo(e) {
                           eM
                               ? (0, r.jsx)(p.Dr, {
                                     id: "unpublish",
-                                    label: A.intl.string($.default.jYAR58),
+                                    label: $.intl.string(A.default.jYAR58),
                                     color: "danger",
                                     action: () => {
                                         let e = R.Ay.getProject(t);
@@ -370,7 +370,7 @@ function eo(e) {
                           j
                               ? (0, r.jsx)(p.Dr, {
                                     id: "delete",
-                                    label: A.intl.string(A.t.oyYWHE),
+                                    label: $.intl.string($.t.oyYWHE),
                                     color: "danger",
                                     action: () => {
                                         let e = R.Ay.getProject(t);
@@ -394,14 +394,14 @@ function eo(e) {
                                             })({ project: e, target: eC, action: "delete" });
                                         else
                                             (0, N.A)({
-                                                title: A.intl.formatToPlainString($.default.CJBhb2, { name: n }),
-                                                subtitle: A.intl.string($.default["0OmrVn"]),
-                                                confirmText: A.intl.string(A.t.oyYWHE),
+                                                title: $.intl.formatToPlainString(A.default.CJBhb2, { name: n }),
+                                                subtitle: $.intl.string(A.default["0OmrVn"]),
+                                                confirmText: $.intl.string($.t.oyYWHE),
                                                 variant: "critical",
                                                 onConfirm: () => {
                                                     (0, U.K)(t, () =>
                                                         (0, a.P0)({
-                                                            text: A.intl.string($.default["0XDHob"]),
+                                                            text: $.intl.string(A.default["0XDHob"]),
                                                             variant: "critical",
                                                         }),
                                                     );
@@ -413,19 +413,19 @@ function eo(e) {
                           I.p5
                               ? (0, r.jsx)(p.Dr, {
                                     id: "copy-project-id",
-                                    label: A.intl.string($.default["nm/zuU"]),
+                                    label: $.intl.string(A.default["nm/zuU"]),
                                     icon: y.IdIcon,
                                     leadingAccessory: { type: "icon", icon: y.IdIcon },
                                     action: () =>
                                         (0, I.C)(t, () =>
-                                            (0, a.P0)({ text: A.intl.string($.default.CmfaZG), variant: "success" }),
+                                            (0, a.P0)({ text: $.intl.string(A.default.CmfaZG), variant: "success" }),
                                         ),
                                 })
                               : null,
                           null != ep
                               ? (0, r.jsx)(p.sL, {
                                     id: "debug",
-                                    label: A.intl.string($.default.Mt5k9d),
+                                    label: $.intl.string(A.default.Mt5k9d),
                                     leftIcon: x.BugIcon,
                                     leadingAccessory: { type: "icon", icon: x.BugIcon },
                                     checked: eg,
@@ -459,12 +459,12 @@ function eu(e) {
                 children:
                     "iconButton" === t
                         ? (0, r.jsx)(w.m, {
-                              text: A.intl.string(A.t["UKOtz+"]),
+                              text: $.intl.string($.t["UKOtz+"]),
                               children: (0, r.jsx)(j.K, {
                                   icon: v.MoreHorizontalIcon,
                                   size: "sm",
                                   variant: "icon-only",
-                                  "aria-label": A.intl.string(A.t["UKOtz+"]),
+                                  "aria-label": $.intl.string($.t["UKOtz+"]),
                                   "aria-haspopup": "menu",
                                   "aria-expanded": a,
                                   onClick: l,
@@ -472,8 +472,8 @@ function eu(e) {
                           })
                         : (0, r.jsx)(k.A.Icon, {
                               icon: v.MoreHorizontalIcon,
-                              tooltip: A.intl.string(A.t["UKOtz+"]),
-                              "aria-label": A.intl.string(A.t["UKOtz+"]),
+                              tooltip: $.intl.string($.t["UKOtz+"]),
+                              "aria-label": $.intl.string($.t["UKOtz+"]),
                               "aria-haspopup": "menu",
                               "aria-expanded": a,
                               selected: a,

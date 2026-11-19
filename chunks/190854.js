@@ -1504,21 +1504,14 @@ function n3(e) {
 function n5(e) {
     let { project: t, guildId: n, ticket: i } = e,
         l = i ?? void 0;
-    return (0, s.jsxs)(tH.e, {
+    return (0, s.jsx)(tH.e, {
         size: "sm",
         className: n$.o1,
-        children: [
-            (0, s.jsx)(eg.$, {
-                variant: "primary",
-                text: K.intl.string(nq.default["UsUa/c"]),
-                onClick: () => (0, nz.A)(t, n, "copy", l),
-            }),
-            (0, s.jsx)(eg.$, {
-                variant: "secondary",
-                text: K.intl.string(nq.default["6RGR3m"]),
-                onClick: () => (0, nz.A)(t, n, "remix", l),
-            }),
-        ],
+        children: (0, s.jsx)(eg.$, {
+            variant: "primary",
+            text: K.intl.string(nq.default.XWgAfc),
+            onClick: () => (0, nz.A)(t, n, "copy", l),
+        }),
     });
 }
 var n6 = n(646514),
