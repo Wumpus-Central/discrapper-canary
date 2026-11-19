@@ -404,14 +404,48 @@
 }
 
 .previewContainer_w2vPtx {
-    background-position: 50%;
-    background-size: cover;
     position: relative;
     --custom-bundle-arrows-opacity: 0
 }
 
 .previewContainer_w2vPtx:hover {
     --custom-bundle-arrows-opacity: 1
+}
+
+.background_w2vPtx {
+    background-position: 50%;
+    background-size: cover;
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.backgroundFadingIn_w2vPtx {
+    animation: backgroundFadeIn_w2vPtx .4s ease-in-out
+}
+
+.backgroundFadingOut_w2vPtx {
+    animation: backgroundFadeOut_w2vPtx .4s ease-in-out forwards
+}
+
+@keyframes backgroundFadeIn_w2vPtx {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes backgroundFadeOut_w2vPtx {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
 }
 
 .previewSurface_w2vPtx {
@@ -476,10 +510,18 @@
     padding: 0
 }
 
+.full-motion .modalContent_fEFP8r {
+    transition: opacity .15s ease
+}
+
+.modalContent_fEFP8r[data-swapping=true] {
+    opacity: .6
+}
+
 .modalRoot_fEFP8r[data-has-footer=true]>.modalContent_fEFP8r {
     isolation: isolate;
     overflow: clip;
     position: relative
 }
 
-/*# sourceMappingURL=bbe5b86c51f28267.css.map*/
+/*# sourceMappingURL=694dddf63aba3e95.css.map*/
