@@ -2094,6 +2094,21 @@ class ei extends d.A {
     getSpatialAudioVersion() {
         return (0, v.lE)().getSpatialAudioVersion?.() ?? 0;
     }
+    getSpatialAudioStats() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+        return new Promise((t) => {
+            let n = (0, v.lE)();
+            (0, v.$b)(F.SPATIAL_AUDIO) && null != n.getSpatialAudioStats
+                ? n.getSpatialAudioStats((e) => {
+                      try {
+                          t(JSON.parse(e));
+                      } catch {
+                          t(null);
+                      }
+                  }, e)
+                : t(null);
+        });
+    }
     setAudioInputBypassSystemProcessing(e) {
         (0, v.lE)().setTransportOptions({ bypassSystemProcessing: e });
     }

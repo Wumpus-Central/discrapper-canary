@@ -3363,6 +3363,9 @@ class ti extends p.A {
     getSpatialAudioHrtfFiles() {
         return { directory: null, files: [] };
     }
+    getSpatialAudioStats(e) {
+        return Promise.resolve(null);
+    }
     setInputVolume(e) {}
     setOutputVolume(e) {
         ((this.outputVolume = e), this.connections.forEach((t) => t.setOutputVolume(e)));

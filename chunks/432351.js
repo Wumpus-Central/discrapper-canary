@@ -34,6 +34,9 @@ class o extends i.A {
     getSpatialAudioHrtfFiles() {
         return { directory: null, files: [] };
     }
+    getSpatialAudioStats(e) {
+        return Promise.resolve(null);
+    }
     setInputVolume(e) {}
     setOutputVolume(e) {}
     getAudioInputDevices() {
