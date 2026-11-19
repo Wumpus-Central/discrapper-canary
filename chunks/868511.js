@@ -20,20 +20,20 @@ n.d(
         A: function (e) {
             let { onClose: t, transitionState: n } = e,
                 {
-                    authorizedApplicationId: T,
-                    authorizationError: f,
+                    authorizedApplicationId: f,
+                    authorizationError: T,
                     authorizing: p,
                 } = (0, s.cf)([m.A], () => ({
                     authorizedApplicationId: m.A.testModeApplicationId,
                     authorizationError: m.A.error,
                     authorizing: m.A.isFetchingAuthorization,
                 })),
-                [x, I] = l.useState(T ?? ""),
+                [x, I] = l.useState(f ?? ""),
                 [_, b] = l.useState("8080"),
                 [N, C] = l.useState("localhost"),
                 y = S.test(x);
             l.useEffect(() => d.SH, []);
-            let v = null != T && T === x,
+            let v = null != f && f === x,
                 j = v
                     ? function () {
                           (d.cL(), I(""), C(null));
@@ -70,11 +70,11 @@ n.d(
                 onClose: t,
                 transitionState: n,
                 children: [
-                    null == f
+                    null == T
                         ? null
                         : (0, i.jsx)("div", {
                               className: h.SX,
-                              children: (0, i.jsx)(a.w, { type: "critical", message: f, role: "alert" }),
+                              children: (0, i.jsx)(a.w, { type: "critical", message: T, role: "alert" }),
                           }),
                     (0, i.jsxs)(g.A, {
                         direction: g.A.Direction.VERTICAL,

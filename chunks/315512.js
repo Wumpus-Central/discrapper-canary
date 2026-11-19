@@ -2,8 +2,8 @@ var i = n(477900),
     a = n(582128),
     l = n(517352),
     r = n(793574),
-    s = n(688810),
-    o = n(975571),
+    o = n(688810),
+    s = n(975571),
     d = n(920050),
     c = n(721157),
     u = n(807098),
@@ -24,17 +24,17 @@ n.d(
         A: function () {
             let { enabled: e } = g.A.useConfig({ location: "useThirdPartyPartnerPerkCards" }),
                 { component: t } = (0, b.A)(l.oW.PREMIUM_HOME_REWARDS_PERK_CARD),
-                { analyticsLocations: n } = (0, s.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
-                O = (0, u.T)(null != t ? (0, c.Co)(t) : null);
+                { analyticsLocations: n } = (0, o.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
+                C = (0, u.T)(null != t ? (0, c.Co)(t) : null);
             return (0, a.useMemo)(
                 () =>
-                    e && null != O
+                    e && null != C
                         ? {
                               id: d.CODE_BLURPLE_CARD_ID,
                               title: _.intl.string(E.default.E1sPHw),
                               description: _.intl.string(E.default["6AbN1y"]),
                               caption: (0, i.jsx)("img", { src: T.A, alt: "Call of Duty: MW4" }),
-                              backgroundAssetUrl: O,
+                              backgroundAssetUrl: C,
                               subscriptionRequired: !0,
                               isThirdPartyPerk: !0,
                               ctaText: _.intl.string(P.default.vlafDc),
@@ -43,14 +43,14 @@ n.d(
                                       partnerIds: [f.Bt],
                                       title: _.intl.string(E.default.PFtZV6),
                                       subtitle: _.intl.format(p.default.ieA3V0, {
-                                          termsUrl: o.A.getArticleURL(A.MVz.CODE_BLURPLE_PROMOTION),
+                                          termsUrl: s.A.getArticleURL(A.MVz.CODE_BLURPLE_PROMOTION),
                                       }),
                                       analyticsLocations: n,
                                   }),
                               analyticsOptions: { thirdPartyPartner: f.Bt },
                           }
                         : null,
-                [O, n, e],
+                [C, n, e],
             );
         },
     },

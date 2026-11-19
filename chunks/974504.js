@@ -61,15 +61,15 @@ function E() {
             }
             (l && (0, A.x8)(), E(!1));
         }, [e]),
-        T = l.useCallback(() => {
+        f = l.useCallback(() => {
             (0, A.IM)();
         }, []);
-    return (0, i.jsx)(r.A, { submitting: m, onSave: S, onReset: T, disabled: !t, errorMessage: h ?? void 0 });
+    return (0, i.jsx)(r.A, { submitting: m, onSave: S, onReset: f, disabled: !t, errorMessage: h ?? void 0 });
 }
 var h = n(631670),
     S = n(933725),
-    T = n(253932),
-    f = n(774914);
+    f = n(253932),
+    T = n(774914);
 function p() {
     let { canSubmit: e, errors: t } = (0, s.cf)([u.A], () => ({ canSubmit: u.A.canSubmit(), errors: u.A.getErrors() })),
         [n, c] = l.useState(!1),
@@ -92,7 +92,7 @@ function p() {
                             avatarAssetOrigin: e.pendingAvatar?.assetOrigin,
                         }),
                         (0, h.pZ)());
-                } else n?.body?.username != null && (0, f.E)();
+                } else n?.body?.username != null && (0, T.E)();
             }
             if (Object.keys(n).length > 0) {
                 let { bannerOriginalMd5: e, ...t } = n,
@@ -101,7 +101,7 @@ function p() {
             }
             if (void 0 !== e.pendingLegacyUsernameDisabled)
                 try {
-                    (await T.m$.updateSetting(e.pendingLegacyUsernameDisabled), (0, h._e)());
+                    (await f.m$.updateSetting(e.pendingLegacyUsernameDisabled), (0, h._e)());
                 } catch {
                     (m(), (l = !1));
                 }

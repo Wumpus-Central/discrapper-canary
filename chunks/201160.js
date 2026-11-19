@@ -1,10 +1,10 @@
-(n.r(t), n.d(t, { useMacaronBentoBox: () => O, useMacaronPerkCard: () => T }));
+(n.r(t), n.d(t, { useMacaronBentoBox: () => C, useMacaronPerkCard: () => T }));
 var i = n(477900),
     a = n(582128),
     l = n(793574),
     r = n(688810),
-    s = n(975571),
-    o = n(713271),
+    o = n(975571),
+    s = n(713271),
     d = n(555393),
     c = n(852218),
     u = n(670328),
@@ -19,25 +19,25 @@ var i = n(477900),
 let _ = new Date(2026, 10, 18);
 function T(e) {
     let { location: t } = e,
-        { enabled: n, phase: o } = f.A.useConfig({ location: t }),
+        { enabled: n, phase: s } = f.A.useConfig({ location: t }),
         { analyticsLocations: E } = (0, r.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
         T = null === (0, d.N)(),
-        O = null;
+        C = null;
     return (
-        o === f.H.PHASE_ONE
-            ? (O = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
-            : o === f.H.PHASE_TWO && (O = P.intl.formatToPlainString(p.default.RAQCKQ, { date: _ })),
+        s === f.H.PHASE_ONE
+            ? (C = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
+            : s === f.H.PHASE_TWO && (C = P.intl.formatToPlainString(p.default.RAQCKQ, { date: _ })),
         (0, a.useMemo)(
             () =>
                 n
                     ? {
                           id: m.A,
                           title: P.intl.string(p.default["9gMXJv"]),
-                          description: O,
+                          description: C,
                           subscriptionRequired: !0,
                           isThirdPartyPerk: !0,
                           backgroundAssetUrl:
-                              o === f.H.PHASE_ONE
+                              s === f.H.PHASE_ONE
                                   ? "https://cdn.discordapp.com/assets/content/0554c6feeb235cbea5142d41756c5d612802f6effb87d3dc7bad5b67f5a403b3.png"
                                   : "https://cdn.discordapp.com/assets/content/c7ddb9ec959be5a1d1f4ed600cdaae2e0bdddebd93724483bbbe4584b2e75583.png",
                           blurTint: "#001E73",
@@ -52,7 +52,7 @@ function T(e) {
                                   title: P.intl.string(p.default["0RERAa"]),
                                   subtitle: P.intl.format(b.default.uytDvV, {
                                       expirationDate: _,
-                                      termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                                      termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
                                   }),
                                   analyticsLocations: E,
                               }),
@@ -61,11 +61,11 @@ function T(e) {
                           pillText: P.intl.string(P.t.y2b7CA),
                       }
                     : null,
-            [E, n, T, O, o],
+            [E, n, T, C, s],
         )
     );
 }
-function O(e) {
+function C(e) {
     let { location: t } = e,
         { enabled: n, phase: d } = f.A.useConfig({ location: t }),
         { analyticsLocations: m } = (0, r.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX),
@@ -75,15 +75,15 @@ function O(e) {
             ? (T = P.intl.format(A.default.MJep2r, {
                   date: _,
                   rewardPercentage: 10,
-                  termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                  termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               }))
             : d === f.H.PHASE_TWO &&
-              (T = P.intl.format(p.default.DZRLe2, { date: _, termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION) })),
+              (T = P.intl.format(p.default.DZRLe2, { date: _, termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION) })),
         (0, a.useMemo)(
             () =>
                 n && null != T
                     ? {
-                          name: o.N.MACARON,
+                          name: s.N.MACARON,
                           caption: (0, i.jsx)("img", {
                               src: "https://cdn.discordapp.com/assets/content/1f431ddb5bf6a9d72a9b80820551561bfce12d601c7fe17275ec2c0cc1ecd048.svg",
                               alt: "My Best Buy Plus",
@@ -102,7 +102,7 @@ function O(e) {
                                   title: P.intl.string(p.default["0RERAa"]),
                                   subtitle: P.intl.format(b.default.uytDvV, {
                                       expirationDate: _,
-                                      termsUrl: s.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
+                                      termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
                                   }),
                                   analyticsLocations: m,
                                   isLocked: !0,

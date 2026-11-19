@@ -65,21 +65,21 @@ for (
             } else for (t = new o(a), f = 0; f < a; ++f) r[f] && (t[f] = m[u[r[f] - 1]++] >> (15 - r[f]));
             return t;
         },
-        k = new f(288),
+        M = new f(288),
         y = 0;
     y < 144;
     ++y
 )
-    k[y] = 8;
-for (var y = 144; y < 256; ++y) k[y] = 9;
-for (var y = 256; y < 280; ++y) k[y] = 7;
-for (var y = 280; y < 288; ++y) k[y] = 8;
-for (var M = new f(32), y = 0; y < 32; ++y) M[y] = 5;
-var C = x(k, 9, 0),
-    S = 588245 != e.j ? x(k, 9, 1) : null,
-    A = x(M, 5, 0),
-    z = 588245 != e.j ? x(M, 5, 1) : null,
-    T = function (r) {
+    M[y] = 8;
+for (var y = 144; y < 256; ++y) M[y] = 9;
+for (var y = 256; y < 280; ++y) M[y] = 7;
+for (var y = 280; y < 288; ++y) M[y] = 8;
+for (var k = new f(32), y = 0; y < 32; ++y) k[y] = 5;
+var C = x(M, 9, 0),
+    A = 588245 != e.j ? x(M, 9, 1) : null,
+    S = x(k, 5, 0),
+    T = 588245 != e.j ? x(k, 5, 1) : null,
+    z = function (r) {
         for (var n = r[0], e = 1; e < r.length; ++e) r[e] > n && (n = r[e]);
         return n;
     },
@@ -140,22 +140,22 @@ var C = x(k, 9, 0),
             m = n.l,
             y = n.d,
             b = n.m,
-            k = n.n,
-            M = 8 * a;
+            M = n.n,
+            k = 8 * a;
         do {
             if (!m) {
                 g = E(r, d, 1);
                 var C = E(r, d + 1, 3);
                 if (((d += 3), C))
-                    if (1 == C) ((m = S), (y = z), (b = 9), (k = 5));
+                    if (1 == C) ((m = A), (y = T), (b = 9), (M = 5));
                     else if (2 == C) {
-                        var A = E(r, d, 31) + 257,
+                        var S = E(r, d, 31) + 257,
                             D = E(r, d + 10, 15) + 4,
-                            F = A + E(r, d + 5, 31) + 1;
+                            F = S + E(r, d + 5, 31) + 1;
                         d += 14;
                         for (var I = new f(F), L = new f(19), _ = 0; _ < D; ++_) L[c[_]] = E(r, d + 3 * _, 7);
                         d += 3 * D;
-                        for (var q = T(L), R = (1 << q) - 1, B = x(L, q, 1), _ = 0; _ < F;) {
+                        for (var q = z(L), R = (1 << q) - 1, B = x(L, q, 1), _ = 0; _ < F;) {
                             var H = B[E(r, d, R)];
                             d += 15 & H;
                             var W = H >> 4;
@@ -174,9 +174,9 @@ var C = x(k, 9, 0),
                                     I[_++] = Y;
                             }
                         }
-                        var J = I.subarray(0, A),
-                            K = I.subarray(A);
-                        ((b = T(J)), (k = T(K)), (m = x(J, b, 1)), (y = x(K, k, 1)));
+                        var J = I.subarray(0, S),
+                            K = I.subarray(S);
+                        ((b = z(J)), (M = z(K)), (m = x(J, b, 1)), (y = x(K, M, 1)));
                     } else $(1);
                 else {
                     var W = U(d) + 4,
@@ -189,16 +189,16 @@ var C = x(k, 9, 0),
                     (i && s(w + N), e.set(r.subarray(W, P), w), (n.b = w += N), (n.p = d = 8 * P), (n.f = g));
                     continue;
                 }
-                if (d > M) {
+                if (d > k) {
                     v && $(0);
                     break;
                 }
             }
             i && s(w + 131072);
-            for (var Q = (1 << b) - 1, V = (1 << k) - 1, X = d; ; X = d) {
+            for (var Q = (1 << b) - 1, V = (1 << M) - 1, X = d; ; X = d) {
                 var Y = m[O(r, d) & Q],
                     Z = Y >> 4;
-                if ((d += 15 & Y) > M) {
+                if ((d += 15 & Y) > k) {
                     v && $(0);
                     break;
                 }
@@ -221,7 +221,7 @@ var C = x(k, 9, 0),
                         var rn = l[rt];
                         ((K += O(r, d) & ((1 << rn) - 1)), (d += rn));
                     }
-                    if (d > M) {
+                    if (d > k) {
                         v && $(0);
                         break;
                     }
@@ -240,7 +240,7 @@ var C = x(k, 9, 0),
                     w = ra;
                 }
             }
-            ((n.l = m), (n.p = X), (n.b = w), (n.f = g), m && ((g = 1), (n.m = b), (n.d = y), (n.n = k)));
+            ((n.l = m), (n.p = X), (n.b = w), (n.f = g), m && ((g = 1), (n.m = b), (n.d = y), (n.n = M)));
         } while (!g);
         return w == e.length ? e : j(e, 0, w);
     },
@@ -300,8 +300,8 @@ var C = x(k, 9, 0),
                 d[x] < n ? (w -= 1 << (n - d[x]++ - 1)) : ++t;
             }
             for (; t >= 0 && w; --t) {
-                var k = i[t].s;
-                d[k] == n && (--d[k], ++w);
+                var M = i[t].s;
+                d[M] == n && (--d[M], ++w);
             }
             p = n;
         }
@@ -358,14 +358,14 @@ var C = x(k, 9, 0),
                 m,
                 y = _(a, 15),
                 b = y.t,
-                S = y.l,
-                z = _(f, 15),
-                T = z.t,
-                E = z.l,
+                A = y.l,
+                T = _(f, 15),
+                z = T.t,
+                E = T.l,
                 O = R(b),
                 U = O.c,
                 j = O.n,
-                D = R(T),
+                D = R(z),
                 $ = D.c,
                 F = D.n,
                 q = new o(19),
@@ -377,11 +377,11 @@ var C = x(k, 9, 0),
         for (var W = 0; W < $.length; ++W) ++q[31 & $[W]];
         for (var Y = _(q, 7), G = Y.t, J = Y.l, K = 19; K > 4 && !G[c[K - 1]]; --K);
         var N = (h + 5) << 3,
-            P = B(a, k) + B(f, M) + i,
-            Q = B(a, b) + B(f, T) + i + 14 + 3 * K + B(q, G) + 2 * q[16] + 3 * q[17] + 7 * q[18];
+            P = B(a, M) + B(f, k) + i,
+            Q = B(a, b) + B(f, z) + i + 14 + 3 * K + B(q, G) + 2 * q[16] + 3 * q[17] + 7 * q[18];
         if (s >= 0 && N <= P && N <= Q) return H(n, g, r.subarray(s, s + h));
         if ((I(n, g, 1 + (Q < P)), (g += 2), Q < P)) {
-            ((d = x(b, S, 0)), (p = b), (w = x(T, E, 0)), (m = T));
+            ((d = x(b, A, 0)), (p = b), (w = x(z, E, 0)), (m = z));
             var V = x(G, J, 0);
             (I(n, g, j - 257), I(n, g + 5, F - 1), I(n, g + 10, K - 4), (g += 14));
             for (var W = 0; W < K; ++W) I(n, g + 3 * W, G[c[W]]);
@@ -391,7 +391,7 @@ var C = x(k, 9, 0),
                     var rn = 31 & rr[W];
                     (I(n, g, V[rn]), (g += G[rn]), rn > 15 && (I(n, g, (rr[W] >> 5) & 127), (g += rr[W] >> 12)));
                 }
-        } else ((d = C), (p = k), (w = A), (m = M));
+        } else ((d = C), (p = M), (w = S), (m = k));
         for (var W = 0; W < v; ++W) {
             var re = t[W];
             if (re > 255) {
@@ -418,15 +418,15 @@ var C = x(k, 9, 0),
                     y = m >> 13,
                     b = 8191 & m,
                     x = (1 << e) - 1,
-                    k = c.p || new o(32768),
-                    M = c.h || new o(x + 1),
+                    M = c.p || new o(32768),
+                    k = c.h || new o(x + 1),
                     C = Math.ceil(e / 3),
-                    S = 2 * C,
-                    A = function (n) {
-                        return (r[n] ^ (r[n + 1] << C) ^ (r[n + 2] << S)) & x;
+                    A = 2 * C,
+                    S = function (n) {
+                        return (r[n] ^ (r[n + 1] << C) ^ (r[n + 2] << A)) & x;
                     },
-                    z = new i(25e3),
-                    T = new o(288),
+                    T = new i(25e3),
+                    z = new o(288),
                     E = new o(32),
                     O = 0,
                     D = 0,
@@ -437,21 +437,21 @@ var C = x(k, 9, 0),
                 $ + 2 < v;
                 ++$
             ) {
-                var _ = A($),
+                var _ = S($),
                     q = 32767 & $,
-                    R = M[_];
-                if (((k[q] = R), (M[_] = q), I <= $)) {
+                    R = k[_];
+                if (((M[q] = R), (k[_] = q), I <= $)) {
                     var B = v - $;
                     if ((O > 7e3 || F > 24576) && (B > 423 || !d)) {
-                        ((p = W(r, h, 0, z, T, E, D, F, L, $ - L, p)), (F = O = D = 0), (L = $));
-                        for (var G = 0; G < 286; ++G) T[G] = 0;
+                        ((p = W(r, h, 0, T, z, E, D, F, L, $ - L, p)), (F = O = D = 0), (L = $));
+                        for (var G = 0; G < 286; ++G) z[G] = 0;
                         for (var G = 0; G < 30; ++G) E[G] = 0;
                     }
                     var J = 2,
                         K = 0,
                         N = b,
                         P = (q - R) & 32767;
-                    if (B > 2 && _ == A($ - P))
+                    if (B > 2 && _ == S($ - P))
                         for (
                             var Q = Math.min(y, B) - 1, V = Math.min(32767, $), X = Math.min(258, B);
                             P <= V && --N && q != R;
@@ -462,25 +462,25 @@ var C = x(k, 9, 0),
                                     if (((J = Z), (K = P), Z > Q)) break;
                                     for (var rr = Math.min(P, Z - 2), rn = 0, G = 0; G < rr; ++G) {
                                         var re = ($ - P + G) & 32767,
-                                            rt = k[re],
+                                            rt = M[re],
                                             ra = (re - rt) & 32767;
                                         ra > rn && ((rn = ra), (R = re));
                                     }
                                 }
                             }
-                            ((R = k[(q = R)]), (P += (q - R) & 32767));
+                            ((R = M[(q = R)]), (P += (q - R) & 32767));
                         }
                     if (K) {
-                        z[F++] = 0x10000000 | (g[J] << 18) | w[K];
+                        T[F++] = 0x10000000 | (g[J] << 18) | w[K];
                         var rf = 31 & g[J],
                             ro = 31 & w[K];
-                        ((D += u[rf] + l[ro]), ++T[257 + rf], ++E[ro], (I = $ + J), ++O);
-                    } else ((z[F++] = r[$]), ++T[r[$]]);
+                        ((D += u[rf] + l[ro]), ++z[257 + rf], ++E[ro], (I = $ + J), ++O);
+                    } else ((T[F++] = r[$]), ++z[r[$]]);
                 }
             }
-            for ($ = Math.max($, I); $ < v; ++$) ((z[F++] = r[$]), ++T[r[$]]);
-            ((p = W(r, h, d, z, T, E, D, F, L, $ - L, p)),
-                d || ((c.r = (7 & p) | (h[(p / 8) | 0] << 3)), (p -= 7), (c.h = M), (c.p = k), (c.i = $), (c.w = I)));
+            for ($ = Math.max($, I); $ < v; ++$) ((T[F++] = r[$]), ++z[r[$]]);
+            ((p = W(r, h, d, T, z, E, D, F, L, $ - L, p)),
+                d || ((c.r = (7 & p) | (h[(p / 8) | 0] << 3)), (p -= 7), (c.h = k), (c.p = M), (c.i = $), (c.w = I)));
         } else {
             for (var $ = c.w || 0; $ < v + d; $ += 65535) {
                 var ri = $ + 65535;
@@ -580,10 +580,10 @@ var C = x(k, 9, 0),
         );
     },
     rn = function () {
-        return [f, o, i, u, l, c, h, p, S, z, m, D, x, T, E, O, U, j, $, F, rv, rt, ra];
+        return [f, o, i, u, l, c, h, p, A, T, m, D, x, z, E, O, U, j, $, F, rv, rt, ra];
     },
     re = function () {
-        return [f, o, i, u, l, c, g, w, C, k, A, M, m, Y, G, x, I, L, _, q, R, B, H, W, U, j, J, P, rc, rt];
+        return [f, o, i, u, l, c, g, w, C, M, S, k, m, Y, G, x, I, L, _, q, R, B, H, W, U, j, J, P, rc, rt];
     },
     rt = function (r) {
         return postMessage(r, [r.buffer]);
@@ -771,10 +771,10 @@ var rm = function (r, n, e) {
             }
         return (c && (r.set(i, n), (n += c)), n);
     },
-    rk = function (r, n, e, t, a) {
+    rM = function (r, n, e, t, a) {
         (rl(r, n, 0x6054b50), rl(r, n + 8, e), rl(r, n + 10, e), rl(r, n + 12, t), rl(r, n + 16, a));
     },
-    rM =
+    rk =
         "function" == typeof queueMicrotask
             ? queueMicrotask
             : "function" == typeof setTimeout
@@ -794,11 +794,11 @@ e.d(
                 },
                 o = {},
                 i = function (r, n) {
-                    rM(function () {
+                    rk(function () {
                         e(r, n);
                     });
                 };
-            rM(function () {
+            rk(function () {
                 i = e;
             });
             for (var u = r.length - 22; 0x6054b50 != ri(r, u); --u)
@@ -878,11 +878,11 @@ e.d(
                     for (var r = 0; r < v.length; ++r) v[r]();
                 },
                 h = function (r, n) {
-                    rM(function () {
+                    rk(function () {
                         e(r, n);
                     });
                 };
-            rM(function () {
+            rk(function () {
                 h = e;
             });
             var g = function () {
@@ -905,7 +905,7 @@ e.d(
                         return h(r, null);
                     }
                 }
-                (rk(r, i, c.length, e, n), h(null, r));
+                (rM(r, i, c.length, e, n), h(null, r));
             };
             o || g();
             for (
@@ -922,11 +922,11 @@ e.d(
                         var y = rp(f),
                             b = y.length,
                             x = p.comment,
-                            k = x && rp(x),
-                            M = k && k.length,
+                            M = x && rp(x),
+                            k = M && M.length,
                             C = rb(p.extra),
-                            S = 8 * (0 != p.level),
-                            A = function (n, e) {
+                            A = 8 * (0 != p.level),
+                            S = function (n, e) {
                                 if (n) (s(), h(n, null));
                                 else {
                                     var t = e.length;
@@ -935,26 +935,26 @@ e.d(
                                         crc: w.d(),
                                         c: e,
                                         f: y,
-                                        m: k,
-                                        u: b != f.length || (k && x.length != M),
-                                        compression: S,
+                                        m: M,
+                                        u: b != f.length || (M && x.length != k),
+                                        compression: A,
                                     })),
                                         (i += 30 + b + C + t),
-                                        (u += 76 + 2 * (b + C) + (M || 0) + t),
+                                        (u += 76 + 2 * (b + C) + (k || 0) + t),
                                         --o || g());
                                 }
                             };
-                        if ((b > 65535 && A($(11, 0, 1), null), S))
+                        if ((b > 65535 && S($(11, 0, 1), null), A))
                             if (m < 16e4)
                                 try {
-                                    A(null, rc(d, p));
+                                    S(null, rc(d, p));
                                 } catch (r) {
-                                    A(r, null);
+                                    S(r, null);
                                 }
                             else
                                 v.push(
                                     ((n = p),
-                                    (e = A) || ((e = n), (n = {})),
+                                    (e = S) || ((e = n), (n = {})),
                                     "function" != typeof e && $(7),
                                     rf(
                                         d,
@@ -967,7 +967,7 @@ e.d(
                                         e,
                                     )),
                                 );
-                        else A(null, d);
+                        else S(null, d);
                     },
                     p = 0;
                 p < l;

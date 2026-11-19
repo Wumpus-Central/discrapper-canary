@@ -13,8 +13,8 @@ var i = n(477900),
     E = n(688810),
     h = n(669815),
     S = n(253390),
-    T = n(166403),
-    f = n(448645),
+    f = n(166403),
+    T = n(448645),
     p = n(682502),
     x = n(816571),
     I = n(792996),
@@ -59,9 +59,9 @@ n.d(
             let { guildBoostSlotId: t, transitionState: n, onClose: s } = e,
                 { analyticsLocations: u } = (0, E.Ay)(A.A.GUILD_BOOST_UNCANCELLATION_MODAL);
             l.useEffect(() => {
-                T.A.hasFetchedSubscriptions() || (0, h.hP)();
+                f.A.hasFetchedSubscriptions() || (0, h.hP)();
             }, []);
-            let d = (0, a.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
+            let d = (0, a.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
                 [p, _] = l.useState(1),
                 [b, N] = l.useState(!1),
                 [y, v] = l.useState(null),
@@ -71,17 +71,17 @@ n.d(
                             (N(!0), v(null));
                             let e = (0, S.v)(d, 1);
                             (r()(
-                                (0, f.bx)(e) <= (0, f.bx)(d.additionalPlans),
+                                (0, T.bx)(e) <= (0, T.bx)(d.additionalPlans),
                                 "Uncanceling should not increase the number of guild subscriptions",
                             ),
                                 await (async function (e, t, n, i) {
-                                    let l = (0, f.aE)(e, t);
+                                    let l = (0, T.aE)(e, t);
                                     (await (0, c.Ey)(n),
                                         await (0, h.nV)(
                                             e,
                                             { items: l },
                                             { amount: 0, currency: e.currency },
-                                            (0, f.UC)(l, e.currency, e.paymentSourceId),
+                                            (0, T.UC)(l, e.currency, e.paymentSourceId),
                                             i,
                                         ));
                                 })(d, e, t, u),

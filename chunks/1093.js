@@ -22,16 +22,16 @@ function f(e) {
             updateImageTrackData: v,
         } = (0, o.T)(),
         [x, g] = a.useState(null),
-        [b, y] = a.useState(null),
-        j = a.useCallback(
+        [b, j] = a.useState(null),
+        y = a.useCallback(
             (e) => {
-                (i(s.Y.NONE), g(e), y(null));
+                (i(s.Y.NONE), g(e), j(null));
             },
             [i],
         ),
         C = a.useCallback(() => {
             let e = c();
-            (g(e), y(e));
+            (g(e), j(e));
         }, [c]),
         N = a.useCallback(async () => {
             let e = await h();
@@ -56,7 +56,7 @@ function f(e) {
                 tracks: r,
                 selectedTrackId: x,
                 textTrackIdToFocus: b,
-                setSelectedTrackId: j,
+                setSelectedTrackId: y,
                 addTextTrack: C,
                 pickAndAddImageTrack: N,
                 pickAndReplaceImage: k,
@@ -66,7 +66,7 @@ function f(e) {
                 updateImageTrackData: v,
                 editorFeatures: w,
             }),
-            [r, x, b, j, C, N, k, E, f, p, v, w],
+            [r, x, b, y, C, N, k, E, f, p, v, w],
         );
     return (0, n.jsx)(m.Provider, { value: A, children: t });
 }

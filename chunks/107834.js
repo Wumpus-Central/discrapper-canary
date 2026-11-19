@@ -11,8 +11,8 @@ var n = i(855986),
     m = i(521440),
     x = i(46653),
     g = i(652215),
-    p = i(792996),
-    h = i(906367);
+    h = i(792996),
+    p = i(906367);
 i.d(
     t,
     {},
@@ -29,7 +29,7 @@ i.d(
                             isAuthenticated: e,
                             className: t,
                             toolbar: (0, s.jsxs)("div", {
-                                className: h.fI,
+                                className: p.fI,
                                 children: [
                                     (0, s.jsx)(m.l, {
                                         size: "sm",
@@ -42,7 +42,7 @@ i.d(
                             role: "navigation",
                             children: [
                                 (0, s.jsx)(d.A.Icon, { icon: l.NitroWheelIcon, "aria-hidden": !0 }),
-                                (0, s.jsx)(d.A.Title, { children: p.intl.string(p.t.Ipxkog) }),
+                                (0, s.jsx)(d.A.Title, { children: h.intl.string(h.t.Ipxkog) }),
                             ],
                         }),
                 }),

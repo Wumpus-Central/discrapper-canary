@@ -22,8 +22,8 @@ var c = n(477900),
     E = n(613412),
     h = n(821609),
     S = n(534514),
-    T = n(834730),
-    f = n(688810),
+    f = n(834730),
+    T = n(688810),
     p = n(139286),
     x = n(793943),
     I = n(996254),
@@ -34,7 +34,7 @@ var c = n(477900),
     y = n(114149);
 function v(e) {
     let { className: t } = e,
-        { analyticsLocations: n } = (0, f.Ay)();
+        { analyticsLocations: n } = (0, T.Ay)();
     (0, p.A)({
         name: E.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: E.ImpressionTypes.VIEW,
@@ -49,7 +49,7 @@ function v(e) {
                 className: C.P_,
                 children: [
                     (0, c.jsx)(S.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
-                    (0, c.jsx)(T.E, { variant: "body-sm/normal", children: u.intl.string(N.default.nla4RG) }),
+                    (0, c.jsx)(f.E, { variant: "body-sm/normal", children: u.intl.string(N.default.nla4RG) }),
                 ],
             }),
             (0, c.jsx)("div", {
@@ -151,8 +151,8 @@ var B = n(873298),
     Z = n(145359),
     q = n(773527),
     Q = n(506988),
-    $ = n(287809),
-    J = n(973654),
+    J = n(287809),
+    $ = n(973654),
     ee = n(185928),
     et = n(652215),
     en = n(211824),
@@ -161,7 +161,7 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
-        let { analyticsLocations: t } = (0, f.Ay)(z.A.CLIENT_THEMES_THEME_SELECTOR),
+        let { analyticsLocations: t } = (0, T.Ay)(z.A.CLIENT_THEMES_THEME_SELECTOR),
             [n, i, l, a, o] = (0, s.yK)([P.A, r.A], () => [
                 P.A.themePreferenceForSystemTheme(ee.Fc.LIGHT),
                 P.A.themePreferenceForSystemTheme(ee.Fc.DARK),
@@ -170,16 +170,16 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                 r.A.isPreview,
             ]),
             d = (0, Z.Lz)(en.vB.CLIENT_THEME, "DualThemeSelector"),
-            m = (0, s.bG)([$.default], () => $.default.getCurrentUser()?.premiumType),
+            m = (0, s.bG)([J.default], () => J.default.getCurrentUser()?.premiumType),
             A = (0, q.YY)(en.vB.CLIENT_THEME, m),
             E = (0, q.oB)(a),
             h = d === en.S9.SELECTABLE || (d === en.S9.HIDDEN && E && !A),
-            T = h && E,
+            f = h && E,
             [p, x] = g.useState(!1),
             I = g.useRef(!1);
         function _(e, n, i) {
             if (e === ee.Fc.DARK && I.current) return;
-            ((0, J.NA)({ [e]: n }), (0, J.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
+            ((0, $.NA)({ [e]: n }), (0, $.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
             let l = null != i ? `${e}-mode-${B.ju[i]}` : `${e}-mode-${n}`;
             ((0, k.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l }), (0, H.cO)(), (0, H.by)());
         }
@@ -245,7 +245,7 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                                         {
                                             theme: e,
                                             size: w.ni.SIZE_48,
-                                            isSelected: ((o && !T) || null == a || (E && A)) && i === e,
+                                            isSelected: ((o && !f) || null == a || (E && A)) && i === e,
                                             onSelect: () => _(ee.Fc.DARK, e, void 0),
                                         },
                                         e,
@@ -255,9 +255,9 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                                     (0, c.jsx)(Y.MX, {
                                         preset: w.eJ,
                                         size: w.ni.SIZE_48,
-                                        isSelected: T,
+                                        isSelected: f,
                                         onSelect: async function () {
-                                            if (T || I.current) return;
+                                            if (f || I.current) return;
                                             ((I.current = !0), x(!0));
                                             let e = await (0, W.Br)(en.vB.CLIENT_THEME);
                                             ((I.current = !1), x(!1), e)

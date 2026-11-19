@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     wx: "header_eQKtAK",
     Z2: "appIcon_eQKtAK",
     p4: "subInfo_eQKtAK",

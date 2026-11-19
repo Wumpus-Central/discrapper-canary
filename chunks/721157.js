@@ -2,8 +2,8 @@ var i,
     a,
     l = n(517352),
     r = n(462887),
-    s = n(448645),
-    o = n(693369),
+    o = n(448645),
+    s = n(693369),
     d = n(550099),
     c = n(682901),
     u = n(652215);
@@ -23,7 +23,7 @@ var g =
         i),
     b = (((a = {}).CAN_CLAIM = "CAN_CLAIM"), (a.BLOCK_CLAIM = "BLOCKED"), (a.UPSELL = "UPSELL"), a);
 function A(e) {
-    if ((0, o.a9)(e, f)) return e.surface.asset;
+    if ((0, s.a9)(e, f)) return e.surface.asset;
 }
 n.d(
     t,
@@ -53,7 +53,7 @@ n.d(
                 return e?.isPremiumGroupMember() === !0
                     ? { isEligible: !0, reason: null }
                     : { isEligible: !1, reason: "no_subscription" };
-            let n = (0, s.EL)(t);
+            let n = (0, o.EL)(t);
             if (null == n || c.hd[n.planId]?.premiumType !== c.PremiumTypes.TIER_2)
                 return { isEligible: !1, reason: "not_tier_2_subscription" };
             let i = t.status === u.Dmq.PAUSED && e?.isFractionalPremium() === !0;

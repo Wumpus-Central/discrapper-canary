@@ -13,8 +13,8 @@ var i = n(477900),
     E = n(739053),
     h = n(82498),
     S = n(423814),
-    T = n(77528),
-    f = n(792656),
+    f = n(77528),
+    T = n(792656),
     p = n(511484),
     x = n(811611),
     I = n(129230),
@@ -33,7 +33,7 @@ function D() {
         t = (0, p.U9)(e, y.pe.TIER_2)
             ? v.intl.formatToPlainString(v.t.bkQ4bH, { percent: e?.discount.amount })
             : v.intl.string(v.t.mr4K7D);
-    return (0, i.jsx)(f.A, {
+    return (0, i.jsx)(T.A, {
         subscriptionTier: y.pe.TIER_2,
         defaultTextOverride: t,
         premiumModalAnalyticsLocation: { object: b.ZSU.BUTTON_CTA, objectType: b.btD.BUY },
@@ -42,7 +42,7 @@ function D() {
 }
 function R() {
     let e = (0, s.bG)([d.A], () => d.A.isPreview),
-        t = (0, T.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
+        t = (0, f.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
@@ -71,7 +71,7 @@ function L(e) {
 }
 function P() {
     let e = (0, s.bG)([d.A], () => d.A.isPreview),
-        t = (0, T.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
+        t = (0, f.V)()?.subscriptionTrial?.skuId === y.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
               children: [

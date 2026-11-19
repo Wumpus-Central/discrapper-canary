@@ -16,7 +16,7 @@ function S(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)(s.E, { variant: "body-xs/semibold", color: "none", className: n, children: t });
 }
-class T extends l.PureComponent {
+class f extends l.PureComponent {
     static defaultProps = {
         isForSubscription: !1,
         isDefault: !1,
@@ -165,4 +165,4 @@ class T extends l.PureComponent {
         });
     }
 }
-n.d(t, {}, { A: T });
+n.d(t, {}, { A: f });

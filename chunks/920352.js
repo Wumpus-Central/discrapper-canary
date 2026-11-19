@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     iE: "wrapper_8tYO_1",
     qd: "headerTitle_8tYO_1",
     rW: "subscriptionImg_8tYO_1",

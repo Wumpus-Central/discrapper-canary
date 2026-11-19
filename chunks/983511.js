@@ -13,8 +13,8 @@ var i = n(477900),
     E = n(559201),
     h = n(793574),
     S = n(688810),
-    T = n(669815),
-    f = n(531260),
+    f = n(669815),
+    T = n(531260),
     p = n(725836),
     x = n(169797),
     I = n(543767),
@@ -73,7 +73,7 @@ function k(e) {
             guildBoostSlotId: n,
             fractionalPremiumInfo: s,
             transitionState: o,
-            onBack: f,
+            onBack: T,
             onNext: v,
             onClose: R,
         } = e,
@@ -143,7 +143,7 @@ function k(e) {
             return P.pW.has(t);
         }),
         Q = Z || q ? K.total - Y.total : -Y.total,
-        { interval: $, intervalCount: J } = X,
+        { interval: J, intervalCount: $ } = X,
         ee = M.intl.format(M.t["0W23cu"], { endDate: K.subscriptionPeriodStart });
     return (
         t.isPausedForFractionalPremium &&
@@ -171,7 +171,7 @@ function k(e) {
                                     (0, i.jsx)(b.Xd, { children: M.intl.string(M.t.iqhIp4) }),
                                     (0, i.jsx)(b.oR, {
                                         label: M.intl.format(M.t["Vg+LRr"], { subscriptionCount: 1 }),
-                                        value: (0, D.CE)((0, D.$g)(Q, t.currency), $, J),
+                                        value: (0, D.CE)((0, D.$g)(Q, t.currency), J, $),
                                         className: U.Au,
                                     }),
                                     null != W && W.length > 0
@@ -188,7 +188,7 @@ function k(e) {
                     }),
                 }),
                 (0, i.jsx)(c.H, {
-                    leading: (0, i.jsx)(g.Q, { text: M.intl.string(M.t["13/7kX"]), onClick: f, variant: "secondary" }),
+                    leading: (0, i.jsx)(g.Q, { text: M.intl.string(M.t["13/7kX"]), onClick: T, variant: "secondary" }),
                     actions: [
                         {
                             variant: "critical-primary",
@@ -219,7 +219,7 @@ function k(e) {
                                             if (null == a) throw Error("No slot to cancel");
                                             let o = (0, O.aE)(e, t);
                                             (await (0, E.HJ)(a),
-                                                await (0, T.nV)(
+                                                await (0, f.nV)(
                                                     e,
                                                     { items: o },
                                                     { amount: 0, currency: e.currency },
@@ -268,10 +268,10 @@ n.d(
             let t,
                 { guildBoostSlot: n, transitionState: s, onClose: r } = e;
             l.useEffect(() => {
-                v.A.hasFetchedSubscriptions() || (0, T.hP)();
+                v.A.hasFetchedSubscriptions() || (0, f.hP)();
             }, []);
             let o = (0, a.bG)([v.A], () => v.A.getPremiumTypeSubscription()),
-                c = (0, f.A)(),
+                c = (0, T.A)(),
                 [g, A] = l.useState(1),
                 { analyticsLocations: E } = (0, S.Ay)(h.A.GUILD_BOOST_CANCELLATION_MODAL);
             if (null == o)

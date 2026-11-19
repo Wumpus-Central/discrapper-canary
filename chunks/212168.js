@@ -3,12 +3,12 @@ var i,
 n(582128);
 var l = n(503698),
     r = n.n(l),
-    s = n(489088),
-    o = (((i = {}).PREMIUM = "premium"), (i.LIMITED = "limited"), (i.NEW_UPSELL = "newUpsell"), i);
+    o = n(489088),
+    s = (((i = {}).PREMIUM = "premium"), (i.LIMITED = "limited"), (i.NEW_UPSELL = "newUpsell"), i);
 let d = {
-    premium: { border: s.wU, background: s.gI },
-    limited: { border: s.rY, background: s.pm },
-    newUpsell: { border: s.Ef, background: s.st },
+    premium: { border: o.wU, background: o.gI },
+    limited: { border: o.rY, background: o.pm },
+    newUpsell: { border: o.Ef, background: o.st },
 };
 n.d(
     t,
@@ -20,7 +20,7 @@ n.d(
                 type: n = "premium",
                 isShown: i,
                 hasBackground: l = !1,
-                className: o,
+                className: s,
                 backgroundClassName: c,
                 ref: u,
             } = e;
@@ -28,10 +28,10 @@ n.d(
             let { border: f, background: m } = d[n];
             return (0, a.jsx)("div", {
                 ref: u,
-                className: r()(f, o),
-                children: (0, a.jsx)("div", { className: r()(l ? m : s.Tp, c), children: t }),
+                className: r()(f, s),
+                children: (0, a.jsx)("div", { className: r()(l ? m : o.Tp, c), children: t }),
             });
         },
-        i: o,
+        i: s,
     },
 );

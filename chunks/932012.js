@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     yV: "sectionDescription_MGYftn",
     Nr: "card_MGYftn",
     _e: "bannerImage_MGYftn",

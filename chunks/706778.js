@@ -25,8 +25,8 @@ var a = n(477900),
     I = n(555393),
     O = n(51965),
     C = n(140735),
-    T = n(496431),
-    M = n(116716),
+    M = n(496431),
+    T = n(116716),
     j = n(792996),
     U = n(191740);
 function y(e) {
@@ -67,7 +67,7 @@ function B(e) {
 }
 function k(e) {
     let { endsAt: t } = e,
-        { days: n, hours: s, minutes: i } = (0, T.A)(t, 6e4);
+        { days: n, hours: s, minutes: i } = (0, M.A)(t, 6e4);
     return (0, a.jsxs)("div", {
         role: "timer",
         children: [
@@ -78,9 +78,9 @@ function k(e) {
                     (0, a.jsx)(L, { value: n, hasColon: !0 }),
                     (0, a.jsx)(L, { value: s, hasColon: !0 }),
                     (0, a.jsx)(L, { value: i, hasColon: !1 }),
-                    (0, a.jsx)(B, { label: j.intl.string(M.default["7TxNKE"]) }),
-                    (0, a.jsx)(B, { label: j.intl.string(M.default["7pATiR"]) }),
-                    (0, a.jsx)(B, { label: j.intl.string(M.default.dXR9qI) }),
+                    (0, a.jsx)(B, { label: j.intl.string(T.default["7TxNKE"]) }),
+                    (0, a.jsx)(B, { label: j.intl.string(T.default["7pATiR"]) }),
+                    (0, a.jsx)(B, { label: j.intl.string(T.default.dXR9qI) }),
                 ],
             }),
             (0, a.jsx)(C.A, { children: j.intl.format(j.t.j6IyVe, { days: n, hours: s, minutes: i }) }),
@@ -97,8 +97,8 @@ function V(e) {
             title: n,
             description: i,
             descriptionNote: C,
-            caption: T,
-            pillText: M,
+            caption: M,
+            pillText: T,
             primaryAsset: U,
             primaryAssetClassName: y,
             backgroundAssetUrl: S,
@@ -205,12 +205,12 @@ function V(e) {
                     backgroundClip: "padding-box",
                 },
                 children: [
-                    !(0, l.isEmpty)(M) &&
+                    !(0, l.isEmpty)(T) &&
                         (0, a.jsx)(h.E, {
                             variant: "body-xs/semibold",
                             color: et === Y.L.EXPIRED ? "badge-secondary-text" : "badge-expressive-text",
                             className: D.Io,
-                            children: M,
+                            children: T,
                         }),
                     (0, a.jsxs)("div", {
                         className: D.qh,
@@ -258,17 +258,17 @@ function V(e) {
                                                 }),
                                             ],
                                         }),
-                                    !(0, l.isEmpty)(T) &&
+                                    !(0, l.isEmpty)(M) &&
                                         (0, a.jsx)("div", {
                                             className: D.OU,
                                             children:
-                                                "string" == typeof T
+                                                "string" == typeof M
                                                     ? (0, a.jsx)(h.E, {
                                                           variant: "body-sm/normal",
                                                           color: "text-muted",
-                                                          children: T,
+                                                          children: M,
                                                       })
-                                                    : T,
+                                                    : M,
                                         }),
                                     (0, a.jsx)(E.D, {
                                         variant: ee ? "display-md" : "heading-lg/semibold",

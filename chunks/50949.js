@@ -2,8 +2,8 @@ var i = n(975571),
     a = n(852218),
     l = n(670328),
     r = n(652215),
-    s = n(524698),
-    o = n(792996);
+    o = n(524698),
+    s = n(792996);
 n.d(
     t,
     {},
@@ -13,8 +13,8 @@ n.d(
                 analyticsLocations: e,
                 partnerIds: [a.NC],
                 isLocked: !0,
-                title: o.intl.string(s.default.TDZUui),
-                subtitle: o.intl.format(s.default.dueYf1, {
+                title: s.intl.string(o.default.TDZUui),
+                subtitle: s.intl.format(o.default.dueYf1, {
                     helpCenterUrl: i.A.getArticleURL(r.MVz.YOUTUBE_PROMOTION),
                 }),
             });

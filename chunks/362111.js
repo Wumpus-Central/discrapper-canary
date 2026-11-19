@@ -21,7 +21,7 @@ function A(e) {
             overwriteSubscriptionPaymentSource: h = !1,
         } = e,
         S = (0, c.p)(),
-        T = (0, c.Y)({
+        f = (0, c.Y)({
             addPaymentMethodStepState: S,
             initialStep: E,
             prependSteps: [],
@@ -49,7 +49,7 @@ function A(e) {
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: T,
+            children: f,
         }),
     });
 }
