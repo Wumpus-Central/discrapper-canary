@@ -2309,22 +2309,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-07-call-of-duty-3pp-expired",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-clips-on-profile-setter",
     "kind": "user",
     "defaultConfig": {

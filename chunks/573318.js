@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677886, Version Hash: 8a60a8dcffbb2cdb470110dd3d2ef31aa8aa6559`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677894, Version Hash: eabfdb363e0a9fe860255ec0fd842b09e601f2c7`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677886";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677894";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -2266,7 +2266,7 @@ let rn = (0, re.qT)({
             n.e(313052),
             n.e(334624),
             n.e(971508),
-            n.e(539606),
+            n.e(637588),
             n.e(439518),
             n.e(706687),
             n.e(503177),
@@ -4969,7 +4969,7 @@ let ss = (0, re.Fe)({
                 n.e(971508),
                 n.e(816799),
                 n.e(492618),
-                n.e(539606),
+                n.e(637588),
                 n.e(352351),
                 n.e(293285),
                 n.e(46071),
@@ -16016,7 +16016,7 @@ let pp = "isHideDevBanner",
                     className: td()(pI.Wz, pI.mr),
                     children: [
                         (0, v.jsx)(ph, { className: pI.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677886" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677894" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -46811,7 +46811,7 @@ let wJ = (0, tW.Fe)({
             n.e(492618),
             n.e(375966),
             n.e(124981),
-            n.e(539606),
+            n.e(637588),
             n.e(352351),
             n.e(293285),
             n.e(46071),

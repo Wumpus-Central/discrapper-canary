@@ -5,7 +5,6 @@
         {
             AUTOCLIPS_CARD_ID: "autoclips",
             BADGE_CARD_ID: "badge",
-            CALL_OF_DUTY_3PP_EXPIRED_CARD_ID: "callOfDuty3PPExpired",
             CLIENT_THEMES_CARD_ID: "clientThemes",
             CODE_BLURPLE_CARD_ID: "callOfDutyBlueprint",
             CUSTOM_APP_ICONS_CARD_ID: "customAppIcons",
