@@ -28,19 +28,19 @@ var n = t(477900),
     G = t(977997),
     O = t(772800);
 t(281405);
-var V = t(544105),
-    P = t(55010),
+var P = t(544105),
+    V = t(55010),
     w = t(792996),
     k = t(321313);
-let U = (0, h.J)(function (e) {
+let R = (0, h.J)(function (e) {
     let {
             collapsed: i,
             user: s,
             channel: r,
             mute: d,
             localMute: h,
-            localVideoDisabled: U,
-            deaf: R,
+            localVideoDisabled: R,
+            deaf: U,
             video: M,
             embeddedApplication: D,
             serverMute: L,
@@ -92,7 +92,7 @@ let U = (0, h.J)(function (e) {
           };
     function eS() {
         if (!Z || !(0, x.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
-        let e = { streamType: P.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
+        let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
         (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
             J ? ((0, y.A)(e), c.A.selectParticipant(e.channelId, (0, _._z)(e))) : (0, g.Nl)(e),
             ei?.(s.id));
@@ -191,7 +191,7 @@ let U = (0, h.J)(function (e) {
             children: (e) => {
                 let t, l;
                 return (
-                    (t = V.hv.has(en ?? "")),
+                    (t = P.hv.has(en ?? "")),
                     (l = {
                         user: s,
                         speaking: K,
@@ -200,13 +200,13 @@ let U = (0, h.J)(function (e) {
                         connecting: H,
                         mute: d,
                         localMute: h,
-                        localVideoDisabled: U,
+                        localVideoDisabled: R,
                         isStreaming: Z,
                         isGuest: X,
                         video: M,
                         priority: Q,
                         ringing: B,
-                        deaf: R,
+                        deaf: U,
                         nick: z,
                         collapsed: i,
                         overlap: i,
@@ -268,7 +268,7 @@ t.d(
     i,
     {},
     {
-        Ay: U,
+        Ay: R,
         LR: function (e) {
             let { numUsers: i } = e;
             return (0, n.jsx)("div", {

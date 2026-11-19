@@ -27,12 +27,12 @@ var n = t(477900),
     T = t(793574),
     G = t(688810),
     O = t(139286),
-    V = t(47167),
-    P = t(713517),
+    P = t(47167),
+    V = t(713517),
     w = t(854627),
     k = t(10862),
-    U = t(696451),
-    R = t(71393),
+    R = t(696451),
+    U = t(71393),
     M = t(958590),
     D = t(576705),
     L = t(290863),
@@ -45,8 +45,8 @@ function q(e) {
     let { channel: i, user: t } = e,
         s = i.guild_id,
         r = l.useRef(null),
-        d = (0, c.bG)([U.Ay], () => U.Ay.getMember(s, t.id), [s, t.id]),
-        { isHoveringOrFocusing: o } = (0, P.A)(r),
+        d = (0, c.bG)([R.Ay], () => R.Ay.getMember(s, t.id), [s, t.id]),
+        { isHoveringOrFocusing: o } = (0, V.A)(r),
         [A, m] = l.useState(null),
         {
             status: h,
@@ -61,12 +61,12 @@ function q(e) {
             }),
             [t.id, s],
         ),
-        { activityStatusText: O, activityStatusIcon: R } = l.useMemo(() => {
+        { activityStatusText: O, activityStatusIcon: U } = l.useMemo(() => {
             let e = G.find((e) => e.type !== u.$.CUSTOM_STATUS && e.type !== u.$.HANG_STATUS);
             return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
         }, [G]),
         { voiceChannel: z } = (0, C.Ay)({ userId: t.id }),
-        q = (0, V.Ay)(z),
+        q = (0, P.Ay)(z),
         H = (0, p.S3)(I.clD.ONLINE),
         $ = "success" === A || "sending" === A,
         W = l.useCallback(async () => {
@@ -139,8 +139,8 @@ function q(e) {
                             children: [
                                 en
                                     ? (0, n.jsx)(k.A, { size: "custom", color: H, channel: z, className: K.RI })
-                                    : null != R
-                                      ? (0, n.jsx)(b.A, { icon: R, className: K.RI })
+                                    : null != U
+                                      ? (0, n.jsx)(b.A, { icon: U, className: K.RI })
                                       : null,
                                 (0, n.jsx)(f.E, {
                                     variant: "body-xs/medium",
@@ -177,7 +177,7 @@ t.d(
         w: function (e) {
             let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: c } = e,
                 p = l.useRef(null),
-                v = (0, P.M)(p),
+                v = (0, V.M)(p),
                 S = (0, z.kt)({ channel: i }),
                 { analyticsLocations: _ } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
             (l.useEffect(() => {
@@ -195,7 +195,7 @@ t.d(
                     r?.(v);
                 }, [r, v]));
             let x = l.useCallback(() => {
-                let e = R.A.getGuild(i.guild_id);
+                let e = U.A.getGuild(i.guild_id);
                 (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
                     (0, A.mM)(async () => {
                         let { default: l } = await Promise.all([

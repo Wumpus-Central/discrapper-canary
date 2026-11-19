@@ -28,7 +28,7 @@ t(281405);
 var T = t(792996),
     G = t(811041),
     O = t(254849);
-function V(e) {
+function P(e) {
     return 1 - Math.pow(1 - e, 4);
 }
 t.d(
@@ -37,10 +37,10 @@ t.d(
     {
         p: function (e) {
             let { channel: i, onClose: s } = e,
-                P = l.useRef(null),
+                V = l.useRef(null),
                 w = l.useRef(null),
-                [k, U] = l.useState(!1),
-                [R, M] = l.useState(0),
+                [k, R] = l.useState(!1),
+                [U, M] = l.useState(0),
                 { analyticsLocations: D } = (0, _.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
             (0, x.A)({
                 name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
@@ -52,7 +52,7 @@ t.d(
                 z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
                 [B, K] = l.useState(!1),
                 Y = l.useRef(null),
-                q = (0, y.M)(L ? P : Y),
+                q = (0, y.M)(L ? V : Y),
                 [H, $] = l.useState(!1),
                 { isFocusing: W } = (0, y.A)(w),
                 [Z, J] = l.useState(!1),
@@ -66,7 +66,7 @@ t.d(
                             guild_id: i.guild_id,
                             location_stack: D,
                         }),
-                            U(!1),
+                            R(!1),
                             s?.());
                     },
                     [i.id, i.guild_id, s, D],
@@ -92,7 +92,7 @@ t.d(
                 [ei, et] = (0, c.z)(() => ({
                     from: { height: "0px" },
                     to: { height: "32px" },
-                    config: { duration: 200, easing: V, clamp: !0 },
+                    config: { duration: 200, easing: P, clamp: !0 },
                 })),
                 en = l.useCallback(
                     (e) => {
@@ -101,9 +101,9 @@ t.d(
                     [et, Q],
                 );
             l.useEffect(() => {
-                if (X) return void U(!0);
+                if (X) return void R(!0);
                 let e = setTimeout(() => {
-                    U(!1);
+                    R(!1);
                 }, 150);
                 return () => {
                     clearTimeout(e);
@@ -127,14 +127,14 @@ t.d(
                 );
             }, [X, z, en]);
             let es = l.useCallback(() => {
-                    U(!0);
+                    R(!0);
                 }, []),
                 ea = l.useCallback(() => {
-                    (U(!1), $(!1), Z && (J(!1), P.current?.focus()));
+                    (R(!1), $(!1), Z && (J(!1), V.current?.focus()));
                 }, [Z]);
             return L
                 ? (0, n.jsx)(A.Y, {
-                      targetElementRef: P,
+                      targetElementRef: V,
                       shouldShow: k,
                       position: "right",
                       align: "top",
@@ -149,7 +149,7 @@ t.d(
                               className: G.lY,
                               style: ei,
                               children: (0, n.jsx)(m.D, {
-                                  innerRef: P,
+                                  innerRef: V,
                                   className: a()({ [G.vk]: !B }, O.q7, O.L9, O.vk),
                                   focusProps: { offset: { right: 4 } },
                                   "aria-disabled": B,
@@ -179,7 +179,7 @@ t.d(
                                                                     (0, n.jsx)("circle", { className: G.hN }),
                                                                 ],
                                                             },
-                                                            `voice-invite-suggestions-timer-${R}`,
+                                                            `voice-invite-suggestions-timer-${U}`,
                                                         ),
                                                   (0, n.jsx)(g.UserPlusIcon, {
                                                       size: "custom",

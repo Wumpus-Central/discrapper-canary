@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(421108),
     d = n(873297),
     m = n(682901),
-    h = n(792996),
-    g = n(25082);
+    g = n(792996),
+    h = n(25082);
 n.d(
     t,
     {},
@@ -25,24 +25,24 @@ n.d(
                     resolvedSkuIds: A,
                     isLoading: v,
                     tab: C,
-                    endTime: y,
-                    ctaType: L = "storefront",
-                    logoUrl: b,
+                    endTime: b,
+                    ctaType: y = "storefront",
+                    logoUrl: L,
                     termsUrl: _,
                     backgroundImageUrl: S,
                 } = e,
-                I = (0, c.ur)(y) ?? void 0,
+                I = (0, c.ur)(b) ?? void 0,
                 j = (0, o.W8)(),
                 k = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 N = r.useMemo(() => {
-                    if ("none" !== L)
-                        return "nitro" !== L || j
+                    if ("none" !== y)
+                        return "nitro" !== y || j
                             ? {
                                   kind: "button",
                                   text:
                                       null != k
-                                          ? h.intl.formatToPlainString(g.default["8OFeFD"], { applicationName: k })
-                                          : h.intl.string(h.t.apFNLU),
+                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: k })
+                                          : g.intl.string(g.t.apFNLU),
                                   onClick: () => (0, u.default)({ applicationId: t }),
                                   onMouseDown: () => (0, u.G)({ applicationId: t }),
                               }
@@ -52,10 +52,10 @@ n.d(
                                       size: "sm",
                                       applicationId: t,
                                       subscriptionTier: m.pe.TIER_2,
-                                      buttonTextOverride: h.intl.string(h.t.pj0XBN),
+                                      buttonTextOverride: g.intl.string(g.t.pj0XBN),
                                   }),
                               };
-                }, [L, t, k, j]);
+                }, [y, t, k, j]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
                 resolvedSkuIds: A,
@@ -64,7 +64,7 @@ n.d(
                 applicationId: t,
                 headerText: n,
                 subheaderText: E,
-                logoUrl: b,
+                logoUrl: L,
                 cta: N,
                 timeLeftText: I,
                 termsUrl: _,

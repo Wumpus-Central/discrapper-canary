@@ -9,8 +9,8 @@ var r = n(503698),
 let c = 2 * Math.PI * 57,
     d = "var(--status-positive)",
     m = "var(--background-mod-strong)",
-    h = -Math.PI / 2;
-function g(e) {
+    g = -Math.PI / 2;
+function h(e) {
     return `${60 + 57 * Math.cos(e)} ${60 + 57 * Math.sin(e)}`;
 }
 n.d(
@@ -34,10 +34,10 @@ n.d(
                             (n = (0, a.clamp)(Math.floor(t), 0, x)),
                             (i = (2 * Math.PI) / x),
                             Array.from({ length: x }, (t, l) => {
-                                let r = h + l * i + e / 2;
+                                let r = g + l * i + e / 2;
                                 return {
                                     key: `${x}-${l}`,
-                                    d: `M ${g(r)} A 57 57 0 0 1 ${g(r + i - e)}`,
+                                    d: `M ${h(r)} A 57 57 0 0 1 ${h(r + i - e)}`,
                                     isFilled: l < n,
                                 };
                             })).map((e) =>

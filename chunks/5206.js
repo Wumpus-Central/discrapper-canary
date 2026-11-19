@@ -24,8 +24,8 @@ var l = n(477900),
     _ = n(775602),
     j = n(149468),
     v = n(211401),
-    N = n(989837),
-    T = n(500049),
+    T = n(989837),
+    N = n(500049),
     M = n(721768),
     R = n(151596),
     D = n(842209),
@@ -89,8 +89,8 @@ var eo = n(598071),
     e_ = n(719442),
     ej = n(267102),
     ev = n(787564),
-    eN = n(323350),
-    eT = n(339200),
+    eT = n(323350),
+    eN = n(339200),
     eM = n(68059),
     eR = n(551483);
 let eD = {
@@ -133,9 +133,9 @@ function ek(e) {
                         (e.insertSoftBreak = () => {}),
                         (e.insertText = (n) => {
                             let l = n.replace(/\r\n|\r|\n/g, " ");
-                            (0, eN.WO)(eT.VW.richValue(e), { mode: "raw" }).length -
+                            (0, eT.WO)(eN.VW.richValue(e), { mode: "raw" }).length -
                                 (null != e.selection && e_.Q6.isExpanded(e.selection)
-                                    ? (0, eN.WO)(eT.VW.richValue(e), { mode: "raw", range: e.selection }).length
+                                    ? (0, eT.WO)(eN.VW.richValue(e), { mode: "raw", range: e.selection }).length
                                     : 0) +
                                 l.length <=
                                 140 && t(l);
@@ -156,8 +156,8 @@ function ek(e) {
         }, [g, o]));
     let p = i.useCallback(
             (e) => {
-                let t = (0, eN.WO)(e, { mode: "raw" }),
-                    n = (0, eN.WO)(e, { mode: "plain" }),
+                let t = (0, eT.WO)(e, { mode: "raw" }),
+                    n = (0, eT.WO)(e, { mode: "plain" }),
                     l = t !== m.current;
                 ((m.current = t), d(n), l && c(t));
             },
@@ -220,8 +220,8 @@ let ez = i.memo(function (e) {
             onBlur: b,
             onFocus: j,
             onKeyDown: v,
-            onSubmit: N,
-            promptToUpload: T,
+            onSubmit: T,
+            promptToUpload: N,
             canMentionRoles: M,
             canMentionChannels: R,
             maxCharacterCount: D,
@@ -250,9 +250,9 @@ let ez = i.memo(function (e) {
         e_ = (0, eO.Wh)(em, ey),
         ej = i.useRef(null),
         ev = i.useRef(null),
-        eN = i.useRef(X);
+        eT = i.useRef(X);
     G?.(ey.current);
-    let { activeCommand: eT } = (0, h.cf)([k.A], () => ({
+    let { activeCommand: eN } = (0, h.cf)([k.A], () => ({
             activeCommand: E.commands?.enabled ? k.A.getActiveCommand(C.id) : null,
             activeCommandSection: E.commands?.enabled ? k.A.getActiveCommandSection(C.id) : null,
         })),
@@ -262,7 +262,7 @@ let ez = i.memo(function (e) {
             disabled: eD,
             canAttachFiles: eG,
             canEveryoneSendMessages: ew,
-        } = (0, eO.Sk)(C, E, eT, A),
+        } = (0, eO.Sk)(C, E, eN, A),
         eF = !ef.D_.useSetting() && !(0, eS.Ct)() && null != window.ResizeObserver,
         ez = !eF || !E.commands?.enabled || !x || "/" !== c,
         eJ = (0, ep.A)(),
@@ -272,11 +272,11 @@ let ez = i.memo(function (e) {
         })),
         eY = (0, h.bG)([eE.A], () => eE.A.isEnabled());
     i.useEffect(() => {
-        eF || (eN.current = X);
+        eF || (eT.current = X);
     }, [X, eF]);
     let eQ = i.useCallback((e) => er(C.id, { title: e }), [C.id]),
         e0 = i.useCallback((e) => {
-            eN.current = e;
+            eT.current = e;
         }, []),
         e1 = i.useCallback(() => ey.current?.focus(), []),
         e2 = (0, eA.n)(C);
@@ -287,7 +287,7 @@ let ez = i.memo(function (e) {
                 function t(e) {
                     return (
                         e.shouldClear &&
-                            (er(C.id, { title: "", heroUploadId: null }), (eN.current = ""), ey.current?.blur()),
+                            (er(C.id, { title: "", heroUploadId: null }), (eT.current = ""), ey.current?.blur()),
                         e
                     );
                 }
@@ -299,8 +299,8 @@ let ez = i.memo(function (e) {
                             : ""
                     }${e.value}`,
                     i = (
-                        eN.current.length > 0
-                            ? eN.current
+                        eT.current.length > 0
+                            ? eT.current
                             : e.value.length > 0
                               ? e.value
                               : eH.intl.string(eH.t["7Xm5QI"])
@@ -308,7 +308,7 @@ let ez = i.memo(function (e) {
                     s = ex.A.getUploads(C.id, eC.C.ChannelMessage),
                     a = s.find((e) => e.id === Y);
                 if (null == a)
-                    return N({
+                    return T({
                         ...e,
                         value: l,
                         announcementSendOptions: { createThread: e2 && eu, threadName: i, publish: ec },
@@ -353,7 +353,7 @@ let ez = i.memo(function (e) {
                             size: null,
                         });
                     }),
-                    N({
+                    T({
                         ...e,
                         value: l,
                         components: n,
@@ -361,7 +361,7 @@ let ez = i.memo(function (e) {
                     }).then(t)
                 );
             },
-            [N, X, Y, C.id, eu, ec, e2],
+            [T, X, Y, C.id, eu, ec, e2],
         ),
         { submit: e5, handleSubmit: e8 } = (0, eO.Zx)(e7, E, ey, ev, C.id),
         { autocompleteRef: e6, handleMaybeShowAutocomplete: e9, handleHideAutocomplete: te } = (0, eO.v7)(),
@@ -518,7 +518,7 @@ let ez = i.memo(function (e) {
                                                         onSelectionChanged: e4,
                                                         onMaybeShowAutocomplete: e9,
                                                         onHideAutocomplete: te,
-                                                        promptToUpload: T,
+                                                        promptToUpload: N,
                                                         fontSize: eX,
                                                         spellcheckEnabled: eY,
                                                         canOnlyUseTextCommands: !1,
@@ -1033,7 +1033,7 @@ var tS = n(885071),
     t_ = n(176781),
     tj = n(683825),
     tv = n(273692);
-function tN() {
+function tT() {
     return (0, l.jsx)(e6, {
         textStyles: tv.U,
         bannerIcon: (0, l.jsx)(t_.ClipsIcon, { size: "lg" }),
@@ -1041,7 +1041,7 @@ function tN() {
         bannerSubtext: eH.intl.string(tj.default["7mR8Bv"]),
     });
 }
-var tT = n(982024),
+var tN = n(982024),
     tM = n(458914),
     tR = n(382287),
     tD = n(959698),
@@ -1285,8 +1285,8 @@ function nj() {
     });
 }
 var nv = n(374846),
-    nN = n(544990),
-    nT = n(678655),
+    nT = n(544990),
+    nN = n(678655),
     nM = n(858899),
     nR = n(336590),
     nD = n(190857),
@@ -1529,7 +1529,7 @@ class nz extends i.PureComponent {
                 if (!e) return Promise.resolve({ shouldClear: !1, shouldRefocus: !0 });
             } else if (e === L.iw.APPLICATION_LAUNCHER || e === L.iw.IMAGE_RECS_MENU || e === L.iw.IMAGE_RECS_SUBMENU) {
                 let { location: t, sectionName: n } = (0, nS.bV)(i) ?? {},
-                    l = e === L.iw.APPLICATION_LAUNCHER ? N.A.lastShownEntrypoint() : T.s4.TEXT,
+                    l = e === L.iw.APPLICATION_LAUNCHER ? T.A.lastShownEntrypoint() : N.s4.TEXT,
                     { isAuthorized: s } = await (0, G.q)({
                         applicationId: i.applicationId,
                         channel: h,
@@ -1606,7 +1606,7 @@ class nz extends i.PureComponent {
                     }),
                     n.some((e) => e.isPreparing) &&
                         ((b = !0),
-                        (0, tT.bH)({
+                        (0, tN.bH)({
                             message: {
                                 channelId: h.id,
                                 content: x.content,
@@ -1620,7 +1620,7 @@ class nz extends i.PureComponent {
                                     let { channel: t, message: n, options: l, nonce: i, pendingUploadId: s } = e,
                                         a = (0, tR.LJ)(l.attachmentsToUpload ?? []);
                                     if ((0, tR.fJ)({ files: a, guildId: t.getGuildId() }))
-                                        throw ((0, ey.V)(t, a), new tT.MV("Prepared attachments exceed upload limits"));
+                                        throw ((0, ey.V)(t, a), new tN.MV("Prepared attachments exceed upload limits"));
                                     let r = { failed: !1, explained: !1 };
                                     if (
                                         (await E.A.sendMessage(t.id, n, void 0, {
@@ -1640,7 +1640,7 @@ class nz extends i.PureComponent {
                                         }),
                                         r.explained)
                                     )
-                                        throw new tT.MV("Attachment upload failed");
+                                        throw new tN.MV("Attachment upload failed");
                                     if (r.failed) throw Error("Attachment upload failed");
                                 })({ channel: h, message: x, options: S, nonce: t, pendingUploadId: n.id });
                             },
@@ -1834,7 +1834,7 @@ class nW extends i.PureComponent {
     };
     handleOpenAppLauncher = (e) => {
         let { applicationId: t } = e;
-        return v.R(T.s4.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
+        return v.R(N.s4.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
     };
     handleChatInteract = () => {
         this.dispatchGroupRef.current?.bumpDispatchPriority();
@@ -1848,7 +1848,7 @@ class nW extends i.PureComponent {
             showAutomodUserProfileChatBlocker: a,
         } = e;
         return t.isMediaThread()
-            ? (0, l.jsx)(tN, {})
+            ? (0, l.jsx)(tT, {})
             : this.props.restrictedPreview && t.type === ew.rbe.DM
               ? (0, l.jsx)(nO, { channel: t })
               : t.type === ew.rbe.DM && n
@@ -1887,16 +1887,16 @@ class nW extends i.PureComponent {
                 announcementComposerEnabled: _,
             } = this.props,
             { textAreaFocused: j, textAreaHighlighted: v } = this.state,
-            N = o === U.oU.SIDEBAR;
+            T = o === U.oU.SIDEBAR;
         e =
-            N && t.type === ew.rbe.GUILD_VOICE
+            T && t.type === ew.rbe.GUILD_VOICE
                 ? eH.t.pnnyFZ
-                : N && t.type === ew.rbe.GUILD_STAGE_VOICE
+                : T && t.type === ew.rbe.GUILD_STAGE_VOICE
                   ? eH.t.YInSkq
                   : d.k.THREADS.has(t.type)
                     ? eH.t["OkzL+Q"]
                     : eH.t.UbNmGc;
-        let T = (0, l.jsx)("div", { className: nF.li, children: (0, l.jsx)(nj, {}) }),
+        let N = (0, l.jsx)("div", { className: nF.li, children: (0, l.jsx)(nj, {}) }),
             M = (0, l.jsx)("div", {
                 className: nF.li,
                 children: (0, l.jsx)(na.A, {
@@ -1928,7 +1928,7 @@ class nW extends i.PureComponent {
                     }),
                 }),
             }),
-            R = b ? T : M,
+            R = b ? N : M,
             D = (0, nx.m1)(t, nh.default, nd.A);
         return (0, l.jsx)(
             y.A,
@@ -1950,7 +1950,7 @@ class nW extends i.PureComponent {
                                     handler: this.handleOpenAppLauncher,
                                 }),
                                 (0, l.jsxs)(nK, {
-                                    isSidebar: N,
+                                    isSidebar: T,
                                     className: nF.q2,
                                     "aria-label": eH.intl.formatToPlainString(e, { channelName: D }),
                                     onMouseDown: this.handleChatInteract,
@@ -1958,7 +1958,7 @@ class nW extends i.PureComponent {
                                     onFocus: this.handleChatInteract,
                                     style: this.props.guildOfficialMessageStyle,
                                     children: [
-                                        (0, l.jsx)(nb.A, { channel: t, guild: n, narrow: N }),
+                                        (0, l.jsx)(nb.A, { channel: t, guild: n, narrow: T }),
                                         (0, l.jsxs)(p.F, {
                                             component: (0, l.jsx)(A.A, {
                                                 children: (0, l.jsx)(p.H, {
@@ -1996,11 +1996,11 @@ class nW extends i.PureComponent {
                                                                   children: [
                                                                       C && (0, l.jsx)(t0, { channelId: t.id }),
                                                                       t.isPrivate()
-                                                                          ? (0, l.jsx)(nN.A, {
+                                                                          ? (0, l.jsx)(nT.A, {
                                                                                 channel: t,
                                                                                 children: R,
                                                                             })
-                                                                          : (0, l.jsx)(nT.A, {
+                                                                          : (0, l.jsx)(nN.A, {
                                                                                 channel: t,
                                                                                 children: R,
                                                                             }),
@@ -2054,9 +2054,9 @@ let nq = i.memo(function (e) {
         b = ((n = a.id), (0, h.bG)([eC.A], () => eC.A.getScheduledMessage(n))),
         j = (0, h.bG)([tz.Ay, te.default], () => tz.Ay.getUserCombo(te.default.getId(), a.id)),
         v = (0, S.rj)(a),
-        N = (0, S.aW)(a),
-        T = (0, e4.L)(a.id),
-        M = v.length > 0 || a.rateLimitPerUser > 0 || null != j || null != N || T,
+        T = (0, S.aW)(a),
+        N = (0, e4.L)(a.id),
+        M = v.length > 0 || a.rateLimitPerUser > 0 || null != j || null != T || N,
         { showLinkedLobbyApplicationLoadingIndicator: R } = (0, nE.A)(a.linkedLobby),
         D = e1.useConfig({ location: "ChannelChat" }).announcementComposer,
         k = (0, tU.A)((0, tk.GP)(r, "ChannelChat") ? (r?.officialMessageColor ?? nU.aj) : null),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => h });
 var l = n(582128),
     r = n(690352),
     s = n(855986),
@@ -34,17 +34,17 @@ let m = new d(o.h, {
         u = [];
     },
 });
-var h = n(198329);
-function g(e, t, n) {
+var g = n(198329);
+function h(e, t, n) {
     let o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         { collectionId: u, promotions: c, startsAt: d } = e,
-        g = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
-        E = (0, s.bG)([m], () => null != g && null != u && null != n && m.isDayRevealed(g, u, n)),
+        h = (0, s.bG)([a.default], () => a.default.getCurrentUser()?.id),
+        E = (0, s.bG)([m], () => null != h && null != u && null != n && m.isDayRevealed(h, u, n)),
         p = l.useCallback(() => {
             null != u && null != n && (0, i.cb)(u, n);
         }, [u, n]);
     return l.useMemo(() => {
-        let e = (0, h.d)({
+        let e = (0, g.d)({
             positions: c.map((e) => {
                 let { position: t } = e;
                 return t;
@@ -61,14 +61,14 @@ function g(e, t, n) {
                         day: s,
                         cardShape: o || a === r.G.LARGE_SQUARE ? a : r.G.SMALL_SQUARE,
                         isHintCentered: o && (a === r.G.TALL || a === r.G.WIDE),
-                        state: (0, h.q9)({ position: s, openPosition: n, hintPosition: e, isOpenPositionRevealed: E }),
+                        state: (0, g.q9)({ position: s, openPosition: n, hintPosition: e, isOpenPositionRevealed: E }),
                         skuId: t?.[s - 1]?.skuId ?? null,
                         lockedAssetUrl: o ? (i.calendarLocked ?? i.locked) : i.locked,
                         hintAssetUrl: o ? (i.calendarHint ?? i.hint) : i.hint,
                         idleAnimationUrl: o ? (i.calendarIdleAnimation ?? i.idleAnimation) : i.idleAnimation,
                         revealAnimationUrl: o ? (i.calendarRevealAnimation ?? i.revealAnimation) : i.revealAnimation,
                         tilePosition: s - 1,
-                        revealDate: (0, h.KH)(d, s),
+                        revealDate: (0, g.KH)(d, s),
                         onReveal: p,
                     },
                 };

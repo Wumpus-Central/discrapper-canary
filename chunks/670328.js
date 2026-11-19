@@ -76,8 +76,8 @@ var y = n(947641),
     w = n(975571),
     H = n(856383),
     G = n(652215),
-    Y = n(691450),
-    V = n(792996);
+    V = n(691450),
+    Y = n(792996);
 function W() {
     let e = (0, k.N5)(),
         t = (0, k.P6)();
@@ -88,7 +88,7 @@ function W() {
                 variant: "body-sm/normal",
                 color: "text-muted",
                 className: I.kT,
-                children: V.intl.format(Y.default["65EEvD"], { days: t }),
+                children: Y.intl.format(V.default["65EEvD"], { days: t }),
             }),
             (0, a.jsx)(B.Ay, {
                 progress: e,
@@ -146,7 +146,7 @@ let F = (e) => {
                         size: "sm",
                         text:
                             t.redeemCtaText ??
-                            V.intl.formatToPlainString(V.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            Y.intl.formatToPlainString(Y.t.DF68t7, { redemptionURL: t.redemptionURL }),
                         onClick: () => {
                             (window.open(t.redemptionURL, "_blank"),
                                 E.default.track(G.HAw.RECURRING_PROMOTION_CLAIMED),
@@ -186,7 +186,7 @@ function X(e) {
                       variant: "critical-secondary",
                       size: "sm",
                       disabled: !0,
-                      text: V.intl.string(V.t["8LKchl"]),
+                      text: Y.intl.string(Y.t["8LKchl"]),
                   }),
               })
             : (0, a.jsx)("div", {
@@ -195,7 +195,7 @@ function X(e) {
                       icon: N.LockIcon,
                       variant: "secondary",
                       size: "sm",
-                      text: t.claimCtaText ?? V.intl.string(V.t.vwASIl),
+                      text: t.claimCtaText ?? Y.intl.string(Y.t.vwASIl),
                       loading: u,
                       onClick: () => {
                           (null != d
@@ -264,20 +264,20 @@ function q(e) {
                                                 variant: "heading-xs/medium",
                                                 color: "text-subtle",
                                                 children: E
-                                                    ? V.intl.format(V.t.i2EuFO, {
+                                                    ? Y.intl.format(Y.t.i2EuFO, {
                                                           helpdeskArticle: w.A.getArticleURL(G.MVz.RECURRING_PROMOTION),
                                                       })
                                                     : T
                                                       ? t.body
                                                       : null != t.bodyClaimed
-                                                        ? V.intl.format(t.bodyClaimed, { date: t.endDate })
+                                                        ? Y.intl.format(t.bodyClaimed, { date: t.endDate })
                                                         : t.body,
                                             }),
                                             null != t.bodyNote &&
                                                 (0, a.jsx)(v.D, {
                                                     variant: "heading-xs/medium",
                                                     color: "text-subtle",
-                                                    children: V.intl.format(t.bodyNote, {
+                                                    children: Y.intl.format(t.bodyNote, {
                                                         partnerName: h.CD[t.partnerId].label,
                                                         helpdeskArticle: w.A.getArticleURL(G.MVz.RECURRING_PROMOTION),
                                                     }),
@@ -371,10 +371,10 @@ function ec(e, t) {
     if (null != e) return "single_promo" === e.type ? e.config : e.configsByOutboundTitle[t];
 }
 function eu() {
-    return V.intl.formatToPlainString(V.t.p7BkHh, { discountPercentage: 20 });
+    return Y.intl.formatToPlainString(Y.t.p7BkHh, { discountPercentage: 20 });
 }
 function ef() {
-    return (0, $.i)("ThirdPartyPromotionPartnerConfigs") ? V.intl.string(V.t.nmvvaN) : V.intl.string(V.t.igiSKe);
+    return (0, $.i)("ThirdPartyPromotionPartnerConfigs") ? Y.intl.string(Y.t.nmvvaN) : Y.intl.string(Y.t.igiSKe);
 }
 let em = {
     [h.KS]: {
@@ -383,17 +383,17 @@ let em = {
         recurringCardAsset: es,
         outboundConfigs: {
             type: "single_promo",
-            config: { getTitle: eu, getBody: ef, getBodyClaimed: () => V.t.w8CXUl },
+            config: { getTitle: eu, getBody: ef, getBodyClaimed: () => Y.t.w8CXUl },
         },
     },
     [h.XY]: {
         getLockedPreview: () => ({
             title: (0, $.i)("ThirdPartyPromotionPartnerConfigs")
-                ? V.intl.formatToPlainString(Y.default.PF1aT5, { discountPercentage: 30 })
-                : V.intl.formatToPlainString(Y.default.LsJ9hj, { discountPercent: 30 }),
+                ? Y.intl.formatToPlainString(V.default.PF1aT5, { discountPercentage: 30 })
+                : Y.intl.formatToPlainString(V.default.LsJ9hj, { discountPercent: 30 }),
             body: (0, $.i)("ThirdPartyPromotionPartnerConfigs")
-                ? V.intl.formatToPlainString(Y.default.KoKwMn, {})
-                : V.intl.formatToPlainString(Y.default.Yl5ww1, {}),
+                ? Y.intl.formatToPlainString(V.default.KoKwMn, {})
+                : Y.intl.formatToPlainString(V.default.Yl5ww1, {}),
             asset: eo,
         }),
         landingUrl: "https://www.logitech.com/",
@@ -402,40 +402,40 @@ let em = {
             type: "multiple_promo",
             configsByOutboundTitle: {
                 "Logitech G": {
-                    getTitle: () => V.intl.formatToPlainString(Y.default.jkdhZq, { discountPercent: 30 }),
-                    getBody: () => V.intl.formatToPlainString(Y.default.mH30Yx, {}),
+                    getTitle: () => Y.intl.formatToPlainString(V.default.jkdhZq, { discountPercent: 30 }),
+                    getBody: () => Y.intl.formatToPlainString(V.default.mH30Yx, {}),
                 },
                 "Logitech 5%": {
-                    getTitle: () => V.intl.formatToPlainString(Y.default.zeBjoX, { discountPercent: 5 }),
-                    getBody: () => V.intl.formatToPlainString(Y.default.fC4abC, { months: 6 }),
+                    getTitle: () => Y.intl.formatToPlainString(V.default.zeBjoX, { discountPercent: 5 }),
+                    getBody: () => Y.intl.formatToPlainString(V.default.fC4abC, { months: 6 }),
                 },
                 "Logitech PRO Series Sim": {
-                    getTitle: () => V.intl.formatToPlainString(Y.default.pSBCjv, { discountPercent: 5 }),
-                    getBody: () => V.intl.formatToPlainString(Y.default.lsRjfl, {}),
+                    getTitle: () => Y.intl.formatToPlainString(V.default.pSBCjv, { discountPercent: 5 }),
+                    getBody: () => Y.intl.formatToPlainString(V.default.lsRjfl, {}),
                 },
             },
         },
     },
     [h.uV]: {
         getLockedPreview: () => ({
-            title: V.intl.string(el.default["qyXYB/"]),
-            body: V.intl.string(el.default.tvS3wV),
+            title: Y.intl.string(el.default["qyXYB/"]),
+            body: Y.intl.string(el.default.tvS3wV),
         }),
         showSectionHeaders: !1,
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => V.intl.string(el.default["qyXYB/"]),
-                getBody: () => V.intl.string(el.default.tvS3wV),
-                getClaimCtaText: () => V.intl.string(V.t.zA9d1J),
-                getRedeemCtaText: () => V.intl.string(V.t["+zx47d"]),
+                getTitle: () => Y.intl.string(el.default["qyXYB/"]),
+                getBody: () => Y.intl.string(el.default.tvS3wV),
+                getClaimCtaText: () => Y.intl.string(Y.t.zA9d1J),
+                getRedeemCtaText: () => Y.intl.string(Y.t["+zx47d"]),
             },
         },
     },
     [h.NC]: {
         getLockedPreview: () => ({
-            title: V.intl.string(en.default.CwMGMb),
-            body: V.intl.formatToPlainString(en.default["7b+4f6"], { discountPercentage: 20, months: 6 }),
+            title: Y.intl.string(en.default.CwMGMb),
+            body: Y.intl.formatToPlainString(en.default["7b+4f6"], { discountPercentage: 20, months: 6 }),
             asset: ed,
         }),
         landingUrl: "https://www.youtube.com/redeem",
@@ -443,9 +443,9 @@ let em = {
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => V.intl.string(en.default.CwMGMb),
-                getBody: () => V.intl.formatToPlainString(en.default["7b+4f6"], { discountPercentage: 20, months: 6 }),
-                getRedeemCtaText: () => V.intl.string(en.default.KfOPbQ),
+                getTitle: () => Y.intl.string(en.default.CwMGMb),
+                getBody: () => Y.intl.formatToPlainString(en.default["7b+4f6"], { discountPercentage: 20, months: 6 }),
+                getRedeemCtaText: () => Y.intl.string(en.default.KfOPbQ),
                 claimButtonPlacement: z.FOOTER,
             },
         },
@@ -453,16 +453,16 @@ let em = {
     },
     [h.P_]: {
         getLockedPreview: () => ({
-            title: V.intl.string(ea.default.ecPCdG),
-            body: V.intl.string(ea.default["2370GD"]),
+            title: Y.intl.string(ea.default.ecPCdG),
+            body: Y.intl.string(ea.default["2370GD"]),
             asset: er,
         }),
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => V.intl.string(ea.default.ecPCdG),
+                getTitle: () => Y.intl.string(ea.default.ecPCdG),
                 getAsset: () => er,
-                getBody: () => V.intl.string(ea.default["2370GD"]),
+                getBody: () => Y.intl.string(ea.default["2370GD"]),
                 claimButtonPlacement: z.FOOTER,
             },
         },
@@ -470,19 +470,19 @@ let em = {
     },
     [h.Bt]: {
         getLockedPreview: () => ({
-            title: V.intl.string(ei.default.xDMrVa),
-            body: V.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
+            title: Y.intl.string(ei.default.xDMrVa),
+            body: Y.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
             asset: (0, Z.VO)(h.Bt, Q.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, G.NJ8.DARK),
         }),
         showSectionHeaders: !1,
         outboundConfigs: {
             type: "single_promo",
             config: {
-                getTitle: () => V.intl.string(ei.default.xDMrVa),
-                getBody: () => V.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
+                getTitle: () => Y.intl.string(ei.default.xDMrVa),
+                getBody: () => Y.intl.formatToPlainString(ei.default.LUOF3v, { date: ee.AQ }),
                 getAsset: (e, t) => (0, Z.VO)(h.Bt, Q.oW.OUTBOUND_PROMOTION_CLAIM_MODAL_CARD, t),
-                getClaimCtaText: () => V.intl.string(et.default["lbyFG+"]),
-                getRedeemCtaText: () => V.intl.string(et.default["6rwUm2"]),
+                getClaimCtaText: () => Y.intl.string(et.default["lbyFG+"]),
+                getRedeemCtaText: () => Y.intl.string(et.default["6rwUm2"]),
                 claimButtonPlacement: z.FOOTER,
             },
         },
@@ -491,8 +491,8 @@ let em = {
 var eg = n(831768);
 function eb() {
     return (0, a.jsx)(M, {
-        title: V.intl.string(eg.default.oDfh3O),
-        body: V.intl.string(eg.default.nDEuO1),
+        title: Y.intl.string(eg.default.oDfh3O),
+        body: Y.intl.string(eg.default.nDEuO1),
         asset: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
     });
 }
@@ -579,7 +579,7 @@ function eE(e) {
                     children: (0, a.jsx)(f.E, {
                         variant: "body-sm/medium",
                         color: "text-subtle",
-                        children: V.intl.string(V.t.rjjZxV),
+                        children: Y.intl.string(Y.t.rjjZxV),
                     }),
                 }),
         ],
@@ -685,7 +685,7 @@ function eO(e) {
             .map((e) => em[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
-        T = _ ? { recurring: V.intl.string(Y.default["9Y2p6p"]), oneTime: V.intl.string(Y.default.Wm58LR) } : void 0,
+        T = _ ? { recurring: Y.intl.string(V.default["9Y2p6p"]), oneTime: Y.intl.string(V.default.Wm58LR) } : void 0,
         C = (0, a.jsx)(c.B, {
             direction: "vertical",
             gap: 12,

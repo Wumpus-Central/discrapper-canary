@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(924473),
     d = n(511265),
     m = n(654512),
-    h = n(313276),
-    g = n(206077),
+    g = n(313276),
+    h = n(206077),
     E = n(695960),
     p = n(28875),
     f = n(987421),
@@ -17,9 +17,9 @@ var l = n(477900),
     A = n(484469),
     v = n(687461),
     C = n(579720),
-    y = n(758836),
-    L = n(792996),
-    b = n(105499);
+    b = n(758836),
+    y = n(792996),
+    L = n(105499);
 let _ = { flattenProductVariants: !1 };
 function S(e) {
     return String(e);
@@ -32,11 +32,11 @@ function j(e) {
         s = (0, x.Mk)(r);
     return t
         ? (0, l.jsx)("div", {
-              className: b.hm,
+              className: L.hm,
               children: [void 0, void 0, void 0, void 0].map((e, t) => (0, l.jsx)(A.A, {}, t)),
           })
         : (0, l.jsx)("div", {
-              className: b.hm,
+              className: L.hm,
               children: (0, l.jsx)(x.v3.Provider, {
                   value: _,
                   children: n.map((e, t) => (0, l.jsx)(R, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
@@ -46,7 +46,7 @@ function j(e) {
 function k(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, x.Mk)(r),
-        i = L.intl.string(L.t.HP8LNG);
+        i = y.intl.string(y.t.HP8LNG);
     if (t) {
         let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
         return (0, l.jsx)(a.A, {
@@ -86,29 +86,29 @@ function T(e) {
             let { tileProps: t } = e;
             return t.day === u;
         }),
-        { helpCenterArticleId: h } = n,
-        g = r.useMemo(() => (null != h ? { id: h, label: L.intl.string(L.t.vaqebJ) } : null), [h]);
+        { helpCenterArticleId: g } = n,
+        h = r.useMemo(() => (null != g ? { id: g, label: y.intl.string(y.t.vaqebJ) } : null), [g]);
     return (0, l.jsx)(i.R9, {
         newValue: { pageSection: "top 4", categoryPosition: 0 },
         children: (0, l.jsxs)("div", {
-            className: b.yE,
+            className: L.yE,
             children: [
                 (0, l.jsx)(p.A, {
                     variant: "sequenced-offer",
-                    title: L.intl.string(L.t.a05zGh),
-                    helpArticle: g,
-                    buttonText: L.intl.string(L.t["kJSKt+"]),
+                    title: y.intl.string(y.t.a05zGh),
+                    helpArticle: h,
+                    buttonText: y.intl.string(y.t["kJSKt+"]),
                     onButtonClick: o,
-                    className: b.NF,
+                    className: L.NF,
                 }),
                 (0, l.jsx)(x.v3.Provider, {
                     value: _,
                     children: (0, l.jsx)(a.A, {
                         gap: "xl",
-                        "aria-label": L.intl.string(L.t.HP8LNG),
+                        "aria-label": y.intl.string(y.t.HP8LNG),
                         items: c,
                         getItemKey: N,
-                        itemClassName: b.xo,
+                        itemClassName: L.xo,
                         renderItem: O,
                         initialScrollIndex: d >= 0 ? Math.max(d - 1, 0) : null,
                     }),
@@ -134,14 +134,14 @@ n.d(
                 a,
                 { heroBlockRecord: i, layout: m, tab: p, isBlockLoading: f = !1, onViewAll: x } = e,
                 { products: A } =
-                    ((t = (0, h.A)()),
+                    ((t = (0, g.A)()),
                     (n = (0, d.p)()),
                     (a = r.useMemo(() => (f ? [] : n(t(i.rankedSkuIds))), [f, t, i.rankedSkuIds, n])),
-                    { products: (0, g.X)(a) }),
+                    { products: (0, h.X)(a) }),
                 v = i.categorySkuId,
                 C = (0, E.A)(v),
-                L = (0, c.A)(),
-                b = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
+                y = (0, c.A)(),
+                L = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
                 _ = r.useMemo(
                     () =>
                         !f &&
@@ -154,20 +154,20 @@ n.d(
                 I = r.useMemo(() => A.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [A]),
                 N =
                     "hscroll" === m &&
-                    p === y.G2.HOME &&
+                    p === b.G2.HOME &&
                     !S &&
                     null != v &&
                     null != C &&
                     C.promotions.length > 0 &&
-                    null != b,
+                    null != L,
                 O = (0, u.t)("shop_home_carousel", { autoTrackExposure: N }).enabled,
-                R = "hscroll" === m && p === y.G2.HOME && null != v && O && !L;
+                R = "hscroll" === m && p === b.G2.HOME && null != v && O && !y;
             switch (m) {
                 case "feed":
                     return (0, l.jsx)(j, { isLoading: S, products: I, tab: p });
                 case "hscroll":
                     if (N && O)
-                        return (0, l.jsx)(T, { collectionId: v, sequencedOffers: C, products: b, onViewAll: x });
+                        return (0, l.jsx)(T, { collectionId: v, sequencedOffers: C, products: L, onViewAll: x });
                     return (0, l.jsx)(k, { isLoading: S || R, products: I, tab: p });
             }
         },

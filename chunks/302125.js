@@ -54,8 +54,8 @@ var S = n(51906),
     _ = n(383669),
     j = n(793574),
     v = n(149468),
-    N = n(435558),
-    T = n.n(N),
+    T = n(435558),
+    N = n.n(T),
     M = n(855687),
     R = n(143413),
     D = n(734057),
@@ -89,7 +89,7 @@ function ee(e) {
         E = (0, o.bG)([h.default], () => C?.ownerId === h.default.getId(), [C]),
         {
             steps: S,
-            shouldAnimate: N,
+            shouldAnimate: T,
             isOldGuild: ee,
         } = (function (e, t) {
             var s;
@@ -121,7 +121,7 @@ function ee(e) {
                     }),
                     [t, e],
                 ),
-                N = (0, o.bG)(
+                T = (0, o.bG)(
                     [$.default],
                     () => $.default.getCurrentUser()?.desktop === !0 || $.default.getCurrentUser()?.mobile === !0,
                 ),
@@ -146,12 +146,12 @@ function ee(e) {
                         ((c = (0, o.bG)([D.A], () =>
                             null != t ? D.A.getMutableBasicGuildChannelsForGuild(t.id) : null,
                         )),
-                        (s = i.useMemo(() => (null == c ? [] : T().values(c)), [c])),
+                        (s = i.useMemo(() => (null == c ? [] : N().values(c)), [c])),
                         (d = (0, o.bG)([h.default], () => h.default.getId())),
                         (0, o.bG)([O.A], () =>
-                            T().some(s, (e) => {
+                            N().some(s, (e) => {
                                 let t = O.A.getMessages(e.id).toArray();
-                                return T().some(t, (e) => e.author.id === d && !(0, R.A)(e));
+                                return N().some(t, (e) => e.author.id === d && !(0, R.A)(e));
                             }),
                         )),
                     guildPersonalized:
@@ -287,7 +287,7 @@ function ee(e) {
                     }
                 );
             }, [em, I]);
-            let ep = !(N || ee || et || en || el),
+            let ep = !(T || ee || et || en || el),
                 eA = [];
             if (!E) {
                 (x &&
@@ -319,7 +319,7 @@ function ee(e) {
                             key: "download",
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             title: Y.intl.string(Y.t.pGVNI9),
-                            completed: N,
+                            completed: T,
                             onClick: eo,
                         }));
                 let e = I
@@ -363,7 +363,7 @@ function ee(e) {
                 ]).start();
             }, [s, t, A]),
             {
-                titleAnimatedStyle: N
+                titleAnimatedStyle: T
                     ? {
                           transform: [
                               { translateY: t.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
@@ -379,7 +379,7 @@ function ee(e) {
                 r.A.div,
                 {
                     className: x.cW,
-                    style: N ? { opacity: en[t] } : {},
+                    style: T ? { opacity: en[t] } : {},
                     children: (0, l.jsx)(I, {
                         iconUrl: e.iconUrl,
                         header: e.title,

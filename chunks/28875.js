@@ -8,7 +8,7 @@ var l = n(477900),
     c = n(975807),
     d = n(975571),
     m = n(707296);
-let h = {
+let g = {
         "eligible-items": {
             headingVariant: "heading-lg/semibold",
             headingColor: void 0,
@@ -26,7 +26,7 @@ let h = {
             fullWidth: !1,
         },
     },
-    g = (e) => {
+    h = (e) => {
         let { helpArticle: t } = e,
             { id: n, label: i } = t,
             o = r.useCallback(() => {
@@ -52,7 +52,7 @@ n.d(
                     onButtonClick: a,
                     className: c,
                 } = e,
-                { headingVariant: d, headingColor: E, buttonVariant: p, buttonSize: f, align: x, fullWidth: A } = h[n];
+                { headingVariant: d, headingColor: E, buttonVariant: p, buttonSize: f, align: x, fullWidth: A } = g[n];
             return (0, l.jsxs)(i.B, {
                 direction: "horizontal",
                 justify: "space-between",
@@ -64,7 +64,7 @@ n.d(
                         className: m.D,
                         children: [
                             (0, l.jsx)(o.D, { variant: d, color: E, children: t }),
-                            null != r && (0, l.jsx)(g, { helpArticle: r }),
+                            null != r && (0, l.jsx)(h, { helpArticle: r }),
                         ],
                     }),
                     null != s && null != a && (0, l.jsx)(u.$, { variant: p, size: f, onClick: a, text: s }),

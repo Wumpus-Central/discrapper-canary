@@ -14,13 +14,13 @@ n.d(
         Z: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
                 m = (0, i.uM)(),
-                h = (0, r.bG)([o.A], () => o.A.getProduct(e)),
-                g = (0, c.o)(),
-                E = a.Ay.canUseShopDiscounts(g),
+                g = (0, r.bG)([o.A], () => o.A.getProduct(e)),
+                h = (0, c.o)(),
+                E = a.Ay.canUseShopDiscounts(h),
                 p = l.useRef(null),
                 f = l.useCallback(() => {
-                    let l = null != h ? (0, u.Br)(h, E, !1) : null,
-                        r = null != h ? (0, u.c7)(h, E, !1) : void 0;
+                    let l = null != g ? (0, u.Br)(g, E, !1) : null,
+                        r = null != g ? (0, u.c7)(g, E, !1) : void 0;
                     s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                         collectibles_shop_session_id: m?.sessionId,
                         sku_id: e,
@@ -42,7 +42,7 @@ n.d(
                     m?.tilePosition,
                     E,
                     t,
-                    h,
+                    g,
                     e,
                     n,
                 ]),

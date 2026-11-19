@@ -27,12 +27,12 @@ var n = t(477900),
     T = t(696451),
     G = t(290863),
     O = t(977997),
-    V = t(129230),
-    P = t(927813),
+    P = t(129230),
+    V = t(927813),
     w = t(427262),
     k = t(329554),
-    U = t(402313),
-    R = t(699976),
+    R = t(402313),
+    U = t(699976),
     M = t(8936);
 let D = (0, I.Fe)({
     createPromise: () =>
@@ -217,7 +217,7 @@ function L(e) {
                       guildId: t.guild_id,
                       channelId: t.id,
                       numWishlistItems: 2,
-                      cardSpec: R.Z.SIZE_110,
+                      cardSpec: U.Z.SIZE_110,
                   }),
               ],
           })
@@ -239,7 +239,7 @@ function F(e) {
             activities: G.A.getActivities(i.id, t),
         })),
         S = (0, s.bG)([O.A], () => O.A.getVoiceStateForChannel(l, i.id)?.connectedAt),
-        _ = null != S ? new Date(S * P.A.Millis.SECOND).getTime() : null;
+        _ = null != S ? new Date(S * V.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
         className: M.aq,
         children: [
@@ -272,29 +272,29 @@ t.d(
                 { channel: a, user: r, onAction: o, excludeActivity: g, onWatchStream: p, setPopoutRef: I } = e,
                 b = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
             (0, c.Eq)(b, "VoiceUserActivities");
-            let { enabled: T } = U.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
+            let { enabled: T } = R.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
                 O = (0, s.bG)([j.A], () => j.A.getStreamForUser(r.id, a.getGuildId()), [a, r.id]),
-                P = (0, s.bG)([G.A], () => (0, v.nr)(O, G.A), [O]),
+                V = (0, s.bG)([G.A], () => (0, v.nr)(O, G.A), [O]),
                 w = (0, f.r)() && (0, h.UK)(a.id),
-                R =
+                U =
                     ((i = (0, m.Ay)(a)),
                     (t = l.useMemo(() => i.filter((e) => e.embeddedActivity.userIds.has(r.id)), [i, r.id])),
                     [...(0, m.Rz)(t).values()]),
                 D = (0, C.W)(),
                 z = (0, s.bG)([N.A], () => N.A.getDetectableIdsToApplicationIds()),
-                B = g ?? P,
+                B = g ?? V,
                 K = (0, A.m)(r, B),
                 { enabled: Y } = _.A.useConfig({ guildId: a.guild_id, location: "VoiceUserPopout" }),
                 q = (0, x.u)(r.id, a),
                 H = (0, y.Ay)(r.id, a.guild_id),
                 $ = Y && null != q && 0 === H.length,
                 W = null != O && null != p && !w,
-                Z = W || K.length > 0 || R.length > 0 || null != q,
+                Z = W || K.length > 0 || U.length > 0 || null != q,
                 J = Z || T;
             if (
                 (l.useEffect(() => {
                     J &&
-                        V.default.track(d.HAw.OPEN_POPOUT, {
+                        P.default.track(d.HAw.OPEN_POPOUT, {
                             type: "Voice User Activities",
                             channel_id: a.id,
                             other_user_id: r.id,
@@ -308,13 +308,13 @@ t.d(
                     W &&
                         (0, n.jsx)(S.P, {
                             stream: O,
-                            streamActivity: P,
+                            streamActivity: V,
                             user: r,
                             onWatchStream: p,
                             onAction: o,
                             showHeader: !0,
                         }),
-                    R.map((e) =>
+                    U.map((e) =>
                         (0, n.jsx)(
                             k.A,
                             {

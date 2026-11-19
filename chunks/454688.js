@@ -8,7 +8,7 @@ var l,
     c = n(821609),
     d = n(692651),
     m = 221552 == n.j ? (((l = {}).FILL = "fill"), (l.CAROUSEL = "carousel"), l) : null;
-let h = { fill: d.GS, carousel: d.Dk };
+let g = { fill: d.GS, carousel: d.Dk };
 n.d(
     t,
     {},
@@ -20,7 +20,7 @@ n.d(
                     title: l,
                     ctaText: a,
                     "aria-label": m,
-                    onButtonClick: g,
+                    onButtonClick: h,
                     onBlockClick: E,
                     badge: p,
                     innerRef: f,
@@ -29,13 +29,13 @@ n.d(
                 A = s.useId(),
                 v = s.useCallback(
                     (e) => {
-                        (e.stopPropagation(), g());
+                        (e.stopPropagation(), h());
                     },
-                    [g],
+                    [h],
                 );
             return (0, r.jsxs)(o.D, {
                 ...x,
-                className: i()(d.iC, h[t]),
+                className: i()(d.iC, g[t]),
                 innerRef: f,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
@@ -69,7 +69,7 @@ n.d(
         },
         R3: (e) => {
             let { layout: t = "fill" } = e;
-            return (0, r.jsx)("div", { className: i()(d.qV, h[t]), children: (0, r.jsx)("div", { className: d.xA }) });
+            return (0, r.jsx)("div", { className: i()(d.qV, g[t]), children: (0, r.jsx)("div", { className: d.xA }) });
         },
         uf: m,
     },

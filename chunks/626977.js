@@ -63,9 +63,9 @@ function _(e) {
 }
 var j = n(228098),
     v = n(157259),
-    N = n(941504),
-    T = n(503698),
-    M = n.n(T),
+    T = n(941504),
+    N = n(503698),
+    M = n.n(N),
     R = n(149468),
     D = n(129230),
     k = n(7909),
@@ -169,7 +169,7 @@ let w = i.memo(function (e) {
             let d = i.useCallback(() => l(""), []);
             return { showUnreadsNotice: n === e.id, clearUnreadsNotice: d };
         })(t),
-        g = (0, N.GH)(t, "channel_chat_notice");
+        g = (0, T.GH)(t, "channel_chat_notice");
     return t.isMediaThread()
         ? null
         : t.isArchivedLockedThread()
@@ -179,7 +179,7 @@ let w = i.memo(function (e) {
             : h
               ? (0, l.jsx)(_, { channel: t, clearUnreadsNotice: m })
               : g.visible
-                ? (0, l.jsx)(N.KT, { channel: t, onDismiss: g.dismiss })
+                ? (0, l.jsx)(T.KT, { channel: t, onDismiss: g.dismiss })
                 : d && u.includes(U.i.OPT_IN_CHANNEL)
                   ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                   : null;

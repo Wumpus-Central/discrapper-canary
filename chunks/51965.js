@@ -4,7 +4,7 @@ var a = n(477900),
     r = n(821609),
     l = n(721157),
     d = n(555393),
-    c = n(792996);
+    o = n(792996);
 n.d(
     t,
     {},
@@ -13,20 +13,20 @@ n.d(
             let t = (0, d.N)(),
                 n =
                     (t?.reason ?? null) === l.ON.TRIAL_USER_NOT_ELIGIBLE
-                        ? c.intl.string(c.t["2S/5mX"])
-                        : c.intl.string(c.t.GcPSts),
-                o = s.useRef(null);
+                        ? o.intl.string(o.t["2S/5mX"])
+                        : o.intl.string(o.t.GcPSts),
+                c = s.useRef(null);
             return t?.state === l.zE.BLOCK_CLAIM
                 ? (0, a.jsx)(i.m, {
                       text: n,
                       asContainer: !0,
-                      anchorRef: o,
+                      anchorRef: c,
                       children: (0, a.jsx)(r.$, {
-                          buttonRef: o,
+                          buttonRef: c,
                           fullWidth: e.fullWidth,
                           variant: "overlay-primary",
                           size: e.size,
-                          text: c.intl.string(c.t.rJbFM3),
+                          text: o.intl.string(o.t.rJbFM3),
                           disabled: !0,
                       }),
                   })

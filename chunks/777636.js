@@ -870,7 +870,7 @@ let e2 = (0, B.mj)({
 var e3 = n(111162),
     e6 = n(927813);
 function e5() {}
-var e8 =
+var e7 =
     (((l = {})[(l.AUTHENTICATION_FAILED = 4004)] = "AUTHENTICATION_FAILED"),
     (l[(l.INVALID_SESSION = 4006)] = "INVALID_SESSION"),
     (l[(l.SERVER_NOT_FOUND = 4011)] = "SERVER_NOT_FOUND"),
@@ -883,7 +883,7 @@ var e8 =
     (l[(l.DAVE_DOWNGRADE_REFUSED = 4804)] = "DAVE_DOWNGRADE_REFUSED"),
     (l[(l.DAVE_INVALID_MESSAGE = 4805)] = "DAVE_INVALID_MESSAGE"),
     l);
-let e7 = 20 * e6.A.Millis.SECOND,
+let e8 = 20 * e6.A.Millis.SECOND,
     e4 = +e6.A.Millis.MINUTE,
     e9 = 5 * e6.A.Millis.SECOND;
 function te(e) {
@@ -1033,7 +1033,7 @@ class tr extends N.A {
             (this.helloTimeout = setTimeout(() => {
                 let e = (0, O.tB)() - this.connectionStartTime;
                 this.handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`);
-            }, e7)));
+            }, e8)));
         let e = (function (e) {
                 let { location: t, supportsSfuUpdate: n } = e;
                 return n && e2.getConfig({ location: t }).enabled ? 10 : 9;
@@ -3483,8 +3483,8 @@ var t2 = n(753070),
     t3 = n(396574),
     t6 = n(792996);
 let t5 = /^https/.test("https:") ? "wss:" : "ws:",
-    t8 = null;
-function t7() {
+    t7 = null;
+function t8() {
     return new T.A(1e3, 1e4);
 }
 function t4(e) {
@@ -3655,8 +3655,8 @@ class ni extends N.A {
             (this.state = eJ.S7L.AWAITING_ENDPOINT),
             (this.stateHistory = new eZ(this.state, this._createdTime)),
             (this._socket = null),
-            (this._backoff = t7()),
-            (this._mlsFailureReconnectBackoff = t7()),
+            (this._backoff = t8()),
+            (this._mlsFailureReconnectBackoff = t8()),
             (this._destroyed = !1),
             (this._pings = []),
             (this._pingBadCount = 0),
@@ -4207,9 +4207,9 @@ class ni extends N.A {
         let r = "Force Close" !== i;
         if (r) {
             let e =
-                n === e8.REPEATED_MLS_INVALID_MESSAGES ||
-                n === e8.DAVE_DOWNGRADE_REFUSED ||
-                n === e8.DAVE_INVALID_MESSAGE
+                n === e7.REPEATED_MLS_INVALID_MESSAGES ||
+                n === e7.DAVE_DOWNGRADE_REFUSED ||
+                n === e7.DAVE_INVALID_MESSAGE
                     ? this._scheduleMLSFailureReconnect()
                     : this._scheduleReconnect();
             this.logger.warn(`Disconnect was not clean! reason=${i}. Reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
@@ -4669,7 +4669,7 @@ class ni extends N.A {
         (this._connection?.fastUdpReconnect(), this._connection?.clearAllSpeaking());
     }
     async _setAvx512EntropyHistogramIfSupported(e) {
-        (await (t8 ??= (async function () {
+        (await (t7 ??= (async function () {
             let e = await (0, eL.w)();
             return e?.cpu_features?.includes(ey.Avx512icl) === !0;
         })())) &&

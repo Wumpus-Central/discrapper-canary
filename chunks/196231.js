@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(993408),
     d = n(304210),
     m = n(597783),
-    h = n(347478),
-    g = n(454688),
+    g = n(347478),
+    h = n(454688),
     E = n(325802),
     p = n(212407),
     f = n(758836),
@@ -19,7 +19,7 @@ var l = n(477900),
 function C(e) {
     let { skuId: t, unpublishedAt: n } = e,
         r = (0, d.ty)(t),
-        s = (0, h.$)(r) ? r : null;
+        s = (0, g.$)(r) ? r : null;
     return null != s
         ? (0, l.jsx)(E.b, { promotion: s })
         : (0, c.HF)(n)
@@ -37,13 +37,13 @@ n.d(
                     subblock: a,
                     enablePreview: c,
                     pageType: d = f.G2.HOME,
-                    handleTransition: h,
+                    handleTransition: g,
                     listItemProps: E,
                 } = e,
-                y = a?.categorySkuId;
-            null == y && null != a && (y = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
-            let L = y ?? n?.skuId ?? "",
-                { handleCardVisibilityChange: b } = (0, m.Z)(L, d, "marketing featured block"),
+                b = a?.categorySkuId;
+            null == b && null != a && (b = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
+            let y = b ?? n?.skuId ?? "",
+                { handleCardVisibilityChange: L } = (0, m.Z)(y, d, "marketing featured block"),
                 _ = (0, p.s4)(n, a, c),
                 S = r.useRef(null),
                 I = a?.bodyText,
@@ -53,10 +53,10 @@ n.d(
                 O = (0, o.uM)(),
                 T = r.useCallback(
                     (e, t) => {
-                        (h({ sourceButton: e, categorySkuId: L, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
+                        (g({ sourceButton: e, categorySkuId: y, isInternalShopDeeplink: !0, isOrbsExclusive: j }),
                             i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: O?.sessionId,
-                                sku_id: L,
+                                sku_id: y,
                                 page_type: d,
                                 page_section: O?.pageSection,
                                 page_category: O?.pageCategory,
@@ -65,7 +65,7 @@ n.d(
                                 cta_name: t,
                             }));
                     },
-                    [h, L, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [g, y, j, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
                 R = r.useCallback(() => {
                     T("shop marketing take me there button", "Take me there button");
@@ -75,9 +75,9 @@ n.d(
                 }, [T]);
             return (0, l.jsx)(s.L, {
                 innerRef: S,
-                onChange: b,
+                onChange: L,
                 threshold: 0,
-                children: (0, l.jsx)(g.Ay, {
+                children: (0, l.jsx)(h.Ay, {
                     layout: t,
                     innerRef: S,
                     backgroundImageUrl: _,
@@ -85,7 +85,7 @@ n.d(
                         null != I
                             ? { text: I, variant: "heading-sm/medium", color: a?.bannerTextColor, className: v.D }
                             : void 0,
-                    badge: (0, l.jsx)(C, { skuId: L, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
+                    badge: (0, l.jsx)(C, { skuId: y, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: A.intl.string(A.t.jVcuVY),
                     "aria-label": N,
                     onButtonClick: R,

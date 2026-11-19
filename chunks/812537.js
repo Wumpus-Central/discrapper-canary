@@ -11,8 +11,8 @@ var s = i(477900),
     m = i(534514),
     x = i(403581),
     g = i(366010),
-    h = i(736653),
-    p = i(793574),
+    p = i(736653),
+    h = i(793574),
     f = i(688810),
     N = i(448645),
     A = i(580630),
@@ -23,8 +23,8 @@ var s = i(477900),
 i(321073);
 var C = i(325499),
     I = i(914313),
-    v = i(773669),
-    R = i(975571),
+    R = i(773669),
+    v = i(975571),
     _ = i(398523),
     y = i(881373),
     P = i(682901),
@@ -167,9 +167,9 @@ let W = function (e) {
             variant: o = "default",
         } = e,
         d = "settings" === o,
-        u = (0, h.Ay)(),
+        u = (0, p.Ay)(),
         x = d && (0, g.q)(u),
-        { analyticsLocations: w } = (0, f.Ay)(p.A.PREMIUM_MARKETING_PLAN_COMPARISON),
+        { analyticsLocations: w } = (0, f.Ay)(h.A.PREMIUM_MARKETING_PLAN_COMPARISON),
         B = (0, b.V)(),
         F = B?.subscriptionTrial?.skuId,
         W = (0, j.O)(),
@@ -177,8 +177,8 @@ let W = function (e) {
         X = null != W && (0, E.U9)(W, P.pe.TIER_2) && z === P.gD.PREMIUM_MONTH_TIER_2,
         Y = (0, E.N1)(z),
         K = null != Y ? `${Y}/${(0, N.FJ)(P.WT.MONTH)}` : "",
-        Z = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_0),
-        q = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_2),
+        q = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_0),
+        Z = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_2),
         J = (function () {
             let e = (0, C.b)("premium_marketing_comparison"),
                 t = [
@@ -218,7 +218,7 @@ let W = function (e) {
                         id: 23,
                         title: O.intl.string(O.t.NG1e6l),
                         subtitle: O.intl.format(U.default.uJcbMv, {
-                            termsLink: R.A.getArticleURL(S.MVz.NITRO_2_POINT_0),
+                            termsLink: v.A.getArticleURL(S.MVz.NITRO_2_POINT_0),
                         }),
                         rows: [
                             {
@@ -327,7 +327,7 @@ let W = function (e) {
                                 id: 6,
                                 label: O.intl.formatToPlainString(O.t.nyhDpw, {
                                     numBoosts: 2,
-                                    percentageOff: (0, A.l9)(v.default.locale, 0.3),
+                                    percentageOff: (0, A.l9)(R.default.locale, 0.3),
                                 }),
                                 tier0ColumnData: { includes: !1 },
                                 tier2ColumnData: { includes: !0 },
@@ -419,8 +419,8 @@ let W = function (e) {
                             className: L.tp,
                             children: [
                                 (0, s.jsx)(V, {
-                                    tier0Price: Z,
-                                    tier2Price: q,
+                                    tier0Price: q,
+                                    tier2Price: Z,
                                     shouldUseDiscountPrice: X,
                                     tier2DiscountedPriceString: K,
                                     showMonthlyInterval: d,

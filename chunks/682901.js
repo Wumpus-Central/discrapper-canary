@@ -85,8 +85,8 @@ n.d(t, {
     lA: () => eH,
     OO: () => ej,
     Bu: () => ee,
-    uP: () => e8,
-    Kq: () => e7,
+    uP: () => e7,
+    Kq: () => e8,
     WT: () => z,
     hd: () => J,
     gD: () => F,
@@ -669,11 +669,11 @@ let e5 = {
     "944037208325619722": 8,
     "642251038925127690": 5,
 };
-var e8 =
+var e7 =
     (((f = {}).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
     (f.MID_STREAMING_QUALITY = "mid_streaming_quality"),
     f);
-let e7 = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
+let e8 = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
 var e4 =
         (((h = {})[(h.UserSettings = 0)] = "UserSettings"),
         (h[(h.ApplicationStoreHome = 1)] = "ApplicationStoreHome"),

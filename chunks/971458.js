@@ -9,8 +9,8 @@ var l = n(477900),
     c = n(834730),
     d = n(477782),
     m = n(847374),
-    h = n(265872),
-    g = n(165862),
+    g = n(265872),
+    h = n(165862),
     E = n(955572),
     p = n(775602),
     f = n(421773),
@@ -22,7 +22,7 @@ function v(e) {
     let { navId: t, option: n, selectedKey: r } = e;
     return "page" === n.type
         ? (0, l.jsx)(C, { option: n, selectedKey: r })
-        : (0, l.jsx)(y, { navId: t, option: n, selectedKey: r });
+        : (0, l.jsx)(b, { navId: t, option: n, selectedKey: r });
 }
 function C(e) {
     var t;
@@ -56,7 +56,7 @@ function C(e) {
         }),
     });
 }
-function y(e) {
+function b(e) {
     let { navId: t, option: n, selectedKey: s } = e,
         { route: i } = n,
         o = `${t}-${n.key}`,
@@ -64,27 +64,27 @@ function y(e) {
             return t.key === n || ("menu" === t.type && t.options.some((t) => e(t, n)));
         })(n, s),
         C = r.useRef(null),
-        y = r.useRef(null),
-        L = r.useRef(!1),
-        { isHovered: b, setIsHovered: _, onMouseEnter: S, onMouseLeave: I, cancelTimers: j } = (0, f.A)(100, 100),
+        b = r.useRef(null),
+        y = r.useRef(!1),
+        { isHovered: L, setIsHovered: _, onMouseEnter: S, onMouseLeave: I, cancelTimers: j } = (0, f.A)(100, 100),
         k = r.useCallback(() => {
-            ((L.current = p.Ay.keyboardModeEnabled), S());
+            ((y.current = p.Ay.keyboardModeEnabled), S());
         }, [S]),
         N = r.useCallback(() => {
-            (j(), _(!0), (L.current = p.Ay.keyboardModeEnabled));
+            (j(), _(!0), (y.current = p.Ay.keyboardModeEnabled));
         }, [j, _]),
         O = r.useCallback(
             (e) => {
                 (j(),
-                    L.current && !p.Ay.keyboardModeEnabled && (0, E.uS)(),
+                    y.current && !p.Ay.keyboardModeEnabled && (0, E.uS)(),
                     _(!1),
-                    e && requestAnimationFrame(() => (null != y.current ? y.current.focus() : C.current?.focus())));
+                    e && requestAnimationFrame(() => (null != b.current ? b.current.focus() : C.current?.focus())));
             },
             [j, _],
         ),
         T = r.useCallback(() => {
-            b ? O(!1) : N();
-        }, [b, N, O]),
+            L ? O(!1) : N();
+        }, [L, N, O]),
         R = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && A(e) && (e.preventDefault(), n.onClick(e)));
@@ -94,32 +94,32 @@ function y(e) {
         D = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), b ? (O(!1), requestAnimationFrame(N)) : N());
+                    (e.preventDefault(), e.stopPropagation(), L ? (O(!1), requestAnimationFrame(N)) : N());
             },
-            [b, N, O],
+            [L, N, O],
         ),
         P = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
         M = (0, l.jsx)(m.ChevronSmallDownIcon, {
             size: "sm",
             color: "currentColor",
-            className: a()(x.OW, { [x.g3]: b }),
+            className: a()(x.OW, { [x.g3]: L }),
         });
     return (0, l.jsx)("li", {
         className: x.I,
-        children: (0, l.jsx)(h.Y, {
+        children: (0, l.jsx)(g.Y, {
             targetElementRef: C,
-            shouldShow: b,
+            shouldShow: L,
             position: "bottom",
             align: "left",
             spacing: 4,
             onRequestOpen: N,
             onRequestClose: () => O(!0),
-            animation: h.Y.Animation.NONE,
+            animation: g.Y.Animation.NONE,
             renderPopout: () =>
                 (0, l.jsx)("div", {
                     onMouseEnter: S,
                     onMouseLeave: I,
-                    children: (0, l.jsx)(g.W, {
+                    children: (0, l.jsx)(h.W, {
                         navId: o,
                         "aria-label": n.expandLabel,
                         onClose: () => O(!0),
@@ -169,7 +169,7 @@ function y(e) {
                               }),
                               (0, l.jsx)(u.D, {
                                   ...e,
-                                  innerRef: y,
+                                  innerRef: b,
                                   role: "button",
                                   "aria-haspopup": "true",
                                   "aria-label": n.expandLabel,
@@ -198,10 +198,10 @@ function y(e) {
         }),
     });
 }
-var L = n(765671);
-let b = 'a[href], [role="button"]';
+var y = n(765671);
+let L = 'a[href], [role="button"]';
 function _(e, t) {
-    let n = Array.from(e.querySelectorAll(b)),
+    let n = Array.from(e.querySelectorAll(L)),
         l = n.indexOf(document.activeElement);
     -1 !== l && n[l + t]?.focus();
 }
@@ -214,11 +214,11 @@ function S(e) {
             (e.preventDefault(), _(e.currentTarget, -1));
             return;
         case "Home":
-            (e.preventDefault(), e.currentTarget.querySelector(b)?.focus());
+            (e.preventDefault(), e.currentTarget.querySelector(L)?.focus());
             return;
         case "End": {
             e.preventDefault();
-            let t = e.currentTarget.querySelectorAll(b);
+            let t = e.currentTarget.querySelectorAll(L);
             t[t.length - 1]?.focus();
         }
     }
@@ -228,13 +228,13 @@ function I(e) {
         d = r.useId(),
         m = `collectibles-shop-navigation-menu-${d}`,
         {
-            containerRef: h,
-            isMeasured: g,
+            containerRef: g,
+            isMeasured: h,
             visibleOptions: E,
             onItemLayout: p,
             overflowItemsRef: f,
         } = (function (e, t, n, l) {
-            let { ref: s, width: a } = (0, L.Ay)(),
+            let { ref: s, width: a } = (0, y.Ay)(),
                 {
                     lastVisibleIndex: o,
                     onItemLayout: u,
@@ -255,7 +255,7 @@ function I(e) {
     return (0, l.jsxs)("nav", {
         "aria-label": c["aria-label"],
         className: a()(x.C$, u),
-        ref: h,
+        ref: g,
         children: [
             (0, l.jsx)(j, {
                 navId: m,
@@ -265,7 +265,7 @@ function I(e) {
                 onItemLayout: p,
                 overflowItemsRef: f,
             }),
-            g &&
+            h &&
                 (0, l.jsx)("ul", {
                     onKeyDown: S,
                     className: x.P_,
