@@ -5,9 +5,9 @@ var s = t(477900),
     r = t(499466),
     i = t(16619),
     c = t(751841),
-    o = t(381991),
-    d = t(503698),
-    u = t.n(d),
+    d = t(381991),
+    o = t(503698),
+    u = t.n(o),
     j = t(855986),
     p = t(534514),
     m = t(866665),
@@ -19,8 +19,8 @@ var s = t(477900),
     y = t(152367),
     b = t(834730),
     N = t(525113),
-    v = t(441935),
-    A = t(602991),
+    A = t(441935),
+    v = t(602991),
     k = t(588359),
     P = t(711014),
     E = t(287809),
@@ -98,7 +98,7 @@ var ee = t(233470),
     er = t(5127);
 let ei = { working: en.default["Y8pS+n"], unread: en.default["N+3Pzk"] };
 function ec(e) {
-    let { groupKey: l, title: t, guild: a, onOpen: r, projects: i, forceExpanded: c, className: o, children: d } = e,
+    let { groupKey: l, title: t, guild: a, onOpen: r, projects: i, forceExpanded: c, className: d, children: o } = e,
         { collapsed: p, toggle: m } = (function (e, l) {
             let t = (0, j.bG)([Q], () => Q.isCollapsed(e)),
                 [s, a] = n.useState(!1);
@@ -147,7 +147,7 @@ function ec(e) {
         y = p ? U.ChevronSmallRightIcon : z.ChevronSmallDownIcon;
     return (0, s.jsxs)("section", {
         "aria-label": t,
-        className: o,
+        className: d,
         children: [
             (0, s.jsxs)("div", {
                 role: "heading",
@@ -177,17 +177,17 @@ function ec(e) {
                     }),
                 ],
             }),
-            (0, s.jsx)("div", { id: x, hidden: p, children: p ? null : d }),
+            (0, s.jsx)("div", { id: x, hidden: p, children: p ? null : o }),
         ],
     });
 }
-function eo(e) {
+function ed(e) {
     let { guildId: l, projects: t, forceExpanded: a, ...r } = e,
         i = (0, j.bG)([L.A], () => L.A.getGuild(l)),
-        o = n.useCallback(() => {
+        d = n.useCallback(() => {
             (0, M.pX)(el.BVt.CHANNEL(l, et.VV.CONJURE));
         }, [l]),
-        d = n.useCallback((e) => (0, M.pX)((0, c.Oj)(l, e.id), { state: { conjureEntryPoint: "project_list" } }), [l]),
+        o = n.useCallback((e) => (0, M.pX)((0, c.Oj)(l, e.id), { state: { conjureEntryPoint: "project_list" } }), [l]),
         { renderProjectActions: u, onProjectContextMenu: p } = r,
         m = n.useCallback((e) => u(e, l), [u, l]),
         h = n.useCallback((e, t) => p(e, t, l), [p, l]);
@@ -195,20 +195,20 @@ function eo(e) {
         groupKey: l,
         title: i?.name ?? ea.intl.string(en.default["6bhivN"]),
         guild: i,
-        onOpen: null != i ? o : void 0,
+        onOpen: null != i ? d : void 0,
         projects: t,
         forceExpanded: a || t.some((e) => e.id === r.selectedProjectId),
         className: er.uW,
-        children: (0, s.jsx)(X.A, { projects: t, ...r, onSelect: d, renderProjectActions: m, onProjectContextMenu: h }),
+        children: (0, s.jsx)(X.A, { projects: t, ...r, onSelect: o, renderProjectActions: m, onProjectContextMenu: h }),
     });
 }
-function ed(e) {
+function eo(e) {
     let { groups: l, query: t, ...n } = e,
         a = (0, j.bG)([I.Ay], () => I.Ay.getOwnedProjectsFetchState()),
         r = "" !== t.trim(),
-        { personal: i, collaborating: c, servers: o, hasProjects: d } = l;
-    return 0 === i.length && 0 === c.length && 0 === o.length
-        ? d
+        { personal: i, collaborating: c, servers: d, hasProjects: o } = l;
+    return 0 === i.length && 0 === c.length && 0 === d.length
+        ? o
             ? (0, s.jsx)(b.E, {
                   variant: "body-sm/normal",
                   color: "text-subtle",
@@ -250,14 +250,14 @@ function ed(e) {
                                           projects: c,
                                           forceExpanded: r || c.some((e) => e.id === n.selectedProjectId),
                                           className: er.mK,
-                                          children: (0, s.jsx)(X.A, { projects: c, ...n, showServer: !0 }),
+                                          children: (0, s.jsx)(X.A, { projects: c, ...n }),
                                       })
                                     : null,
                             ],
                         })
                       : null,
-                  o.map((e) =>
-                      (0, s.jsx)(eo, { guildId: e.guildId, projects: e.projects, forceExpanded: r, ...n }, e.guildId),
+                  d.map((e) =>
+                      (0, s.jsx)(ed, { guildId: e.guildId, projects: e.projects, forceExpanded: r, ...n }, e.guildId),
                   ),
               ],
           });
@@ -269,7 +269,7 @@ function ep(e) {
         t,
         a,
         { selectedProjectId: r, workspaceGuildId: i, onNavigate: c } = e,
-        [o, d] = n.useState(""),
+        [d, o] = n.useState(""),
         U = (0, ej.A)("sidebar"),
         z =
             ((l = (0, S.U)(_)),
@@ -301,24 +301,24 @@ function ep(e) {
                         return (
                             c.sort((e, l) => i(e.guildId) - i(l.guildId)), { personal: s, collaborating: n, servers: c }
                         );
-                    })((0, w.Z)(l, o), t, a),
+                    })((0, w.Z)(l, d), t, a),
                     hasProjects: l.length > 0,
                 }),
-                [l, t, a, o],
+                [l, t, a, d],
             )),
         J = (0, j.bG)([I.Ay], () => "success" === I.Ay.getOwnedProjectsFetchState()) && !z.hasProjects,
         R = n.useCallback((e) => c(e.id, "project_list"), [c]),
         W = n.useCallback(
             (e, l) => {
                 let t = l ?? (0, G.wu)(e) ?? i;
-                return null != t ? (0, s.jsx)(A.S, { project: e, guildId: t }) : null;
+                return null != t ? (0, s.jsx)(v.S, { project: e, guildId: t }) : null;
             },
             [i],
         ),
         F = n.useCallback(
             (e, l, t) => {
                 let s = t ?? (0, G.wu)(l) ?? i;
-                null != s && (0, A.V)(e, l, s);
+                null != s && (0, v.V)(e, l, s);
             },
             [i],
         ),
@@ -350,7 +350,7 @@ function ep(e) {
                     (0, s.jsxs)("div", {
                         className: er.$s,
                         children: [
-                            (0, s.jsx)(v.A, { importing: L.importing, disabled: null == i, onClick: L.open }),
+                            (0, s.jsx)(A.A, { importing: L.importing, disabled: null == i, onClick: L.open }),
                             X
                                 ? null
                                 : (0, s.jsx)(m.m, {
@@ -379,9 +379,9 @@ function ep(e) {
                     (0, s.jsx)("div", {
                         className: er.$P,
                         children: (0, s.jsx)(f.I, {
-                            query: o,
-                            onChange: d,
-                            onClear: () => d(""),
+                            query: d,
+                            onChange: o,
+                            onClear: () => o(""),
                             size: "sm",
                             placeholder: ea.intl.string(en.default["2y8sUh"]),
                             "aria-label": ea.intl.string(en.default.u0kEN9),
@@ -403,9 +403,9 @@ function ep(e) {
                             }),
                         ],
                     }),
-                    (0, s.jsx)(ed, {
+                    (0, s.jsx)(eo, {
                         groups: z,
-                        query: o,
+                        query: d,
                         selectedProjectId: r,
                         onSelect: R,
                         renderProjectActions: W,
@@ -420,7 +420,7 @@ function ep(e) {
 function em() {
     let e = (0, a.W5)({ path: c._g, exact: !0 }),
         l = (0, i.rX)("ConjureAppSidebar");
-    return (0, s.jsx)(ep, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: l, onNavigate: o.A });
+    return (0, s.jsx)(ep, { selectedProjectId: e?.params.projectId ?? null, workspaceGuildId: l, onNavigate: d.A });
 }
 function eh() {
     return (0, r.TW)("ConjureAppSidebar") ? (0, s.jsx)(em, {}) : null;
