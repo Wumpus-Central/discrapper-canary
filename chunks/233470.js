@@ -4,27 +4,26 @@
     gA: () => el,
     iR: () => eo,
     gg: () => B,
-    xx: () => ep,
-    K: () => em,
-    l5: () => eI,
-    $N: () => e_,
+    xx: () => eh,
+    K: () => eI,
+    l5: () => ef,
+    $N: () => eu,
     b8: () => Z,
     U1: () => ei,
-    lZ: () => eT,
+    lZ: () => em,
     su: () => q,
     a3: () => V,
     listProjects: () => x,
     tF: () => Q,
-    kY: () => eg,
+    kY: () => ep,
     tf: () => et,
     hy: () => k,
-    GO: () => eS,
-    _b: () => eE,
-    xo: () => ef,
-    M7: () => eh,
-    dm: () => eN,
+    GO: () => eg,
+    _b: () => e_,
+    xo: () => eA,
+    dm: () => eT,
     CG: () => en,
-    CW: () => eA,
+    CW: () => eE,
 }),
     n(321073),
     n(134528),
@@ -294,21 +293,20 @@ async function ec(e) {
         throw new I.DS((0, I.hj)(e), (0, I.$k)(e));
     }
 }
-async function eu(e, t) {
-    let n = await a.Bo.patch({ url: D.Rsh.CONJURE_PROJECT(e), body: t, rejectWithError: !1 });
-    return (o.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
-}
-async function e_(e) {
+async function eu(e) {
     let { bot: t } = await (0, u.TA)(e);
     null != t && o.h.dispatch({ type: "USER_UPDATE", user: t });
 }
-async function eE(e) {
+async function e_(e) {
     let t = O.Ay.getProject(e)?.preview_application_id;
-    null != t && (await e_(t));
+    null != t && (await eu(t));
 }
-async function eA(e, t) {
+async function eE(e, t) {
     let n = O.Ay.getProject(e)?.preview_application_id,
-        i = await eu(e, t),
+        i = await (async function (e, t) {
+            let n = await a.Bo.patch({ url: D.Rsh.CONJURE_PROJECT(e), body: t, rejectWithError: !1 });
+            return (o.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
+        })(e, t),
         r = i.body.preview_application_id;
     return (
         null != n && n !== r && N(n),
@@ -318,19 +316,16 @@ async function eA(e, t) {
                 null != t.description ||
                 "cover_image" in t ||
                 null != t.uses_preview_app) &&
-            e_(r).catch(() => {}),
+            eu(r).catch(() => {}),
         i
     );
 }
-async function ef(e, t) {
-    await eA(e, { guild_id: t, preview_guild_id: t });
+async function eA(e, t) {
+    await eE(e, { guild_id: t, preview_guild_id: t });
     let n = er.get(e);
-    (null != n && (n.applied = ea(e)), eS(e));
+    (null != n && (n.applied = ea(e)), eg(e));
 }
-function eh(e, t) {
-    return eu(e, t);
-}
-async function eI(e) {
+async function ef(e) {
     try {
         let { body: t } = await a.Bo.get({ url: D.Rsh.CONJURE_APPLICATION_CHANNELS(e), rejectWithError: !0 });
         return t;
@@ -338,7 +333,7 @@ async function eI(e) {
         return [];
     }
 }
-async function ep(e) {
+async function eh(e) {
     let t;
     o.h.dispatch({ type: "CONJURE_PROJECT_DELETE_START", projectId: e });
     try {
@@ -348,19 +343,19 @@ async function ep(e) {
     }
     return (o.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: e }), t);
 }
-function em(e, t) {
-    ep(e).then(() => void 0, t);
+function eI(e, t) {
+    eh(e).then(() => void 0, t);
 }
-async function eg(e) {
+async function ep(e) {
     let t = O.Ay.getProject(e)?.preview_application_id,
         { body: n } = await a.Bo.del({ url: `${D.Rsh.CONJURE_PROJECT(e)}/server`, rejectWithError: !0 });
     (es(e, n, ea(e)), null != t && t !== n.project.preview_application_id && N(t));
 }
-async function eT(e) {
+async function em(e) {
     let { body: t } = await a.Bo.put({ url: `${D.Rsh.CONJURE_PROJECT(e)}/owner-install`, rejectWithError: !0 });
     es(e, t, ea(e));
 }
-function eS(e) {
+function eg(e) {
     let t = O.Ay.getProject(e);
     null != t &&
         (ei(e).catch((t) => v.warn("project refresh failed", { projectId: e, err: t })),
@@ -368,6 +363,6 @@ function eS(e) {
             v.warn("bot server list refresh failed", { projectId: e, err: t }),
         ));
 }
-function eN(e, t) {
+function eT(e, t) {
     o.h.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId: e, projectId: t });
 }

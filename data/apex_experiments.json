@@ -5682,20 +5682,6 @@
     }
   },
   {
-    "name": "2026-11-autoclips-ea-upsell",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-11-checkpoint-intro",
     "kind": "user",
     "defaultConfig": {

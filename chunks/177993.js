@@ -392,8 +392,8 @@ function e3(e) {
 }
 var e6 = i(164636),
     e7 = i(676279),
-    e8 = i(120692),
-    e5 = i(717421),
+    e5 = i(120692),
+    e8 = i(717421),
     e9 = i(396583),
     e4 = (((s = {}).SINE = "sine"), (s.COSINE = "cosine"), s),
     te = (((n = {}).UP = "up"), (n.DOWN = "down"), n);
@@ -408,12 +408,12 @@ let tt = (e) => {
             animationSpeedScale: r = 1,
             children: c,
         } = e,
-        o = (0, e5.z)(
+        o = (0, e8.z)(
             null != s ? { from: { y: 0 }, to: { y: 1 }, config: { duration: s.duration * r }, loop: !0 } : { y: 0 },
         ),
         m = s?.path === "sine" ? Math.sin : Math.cos,
         [x, g] = (0, u.useState)(1),
-        p = (0, e5.z)(
+        p = (0, e8.z)(
             null != i
                 ? {
                       from: { scale: x > 0 ? i.startScale : i.endScale },
@@ -424,7 +424,7 @@ let tt = (e) => {
                 : { scale: 1 },
         ),
         [h, f] = (0, u.useState)(1),
-        N = (0, e5.z)(
+        N = (0, e8.z)(
             null != t
                 ? {
                       from: { blur: h > 0 ? t.startBlurRadius : t.endBlurRadius },
@@ -437,13 +437,13 @@ let tt = (e) => {
         A = (0, u.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * r), [r]),
         [j, b] = (0, u.useState)(0),
         [E, T] = (0, u.useState)(1),
-        C = (0, e5.z)({ xOffset: j, config: { tension: 10, friction: 10, duration: A } });
+        C = (0, e8.z)({ xOffset: j, config: { tension: 10, friction: 10, duration: A } });
     return ((0, e9.A)(() => {
         (b(E * (0.5 * Math.random() * 5 + 2.5)), T((e) => -1 * e));
     }, A),
     l)
         ? c
-        : (0, d.jsx)(e8.animated.div, {
+        : (0, d.jsx)(e5.animated.div, {
               style: {
                   transform: o.y?.to((e) => {
                       if (null == s) return "translateY(0px)";
@@ -1427,8 +1427,8 @@ let t2 = function () {
 var t3 = i(325499),
     t6 = i(613412),
     t7 = i(885574),
-    t8 = i(43990),
-    t5 = i(993077),
+    t5 = i(43990),
+    t8 = i(993077),
     t9 = i(139286),
     t4 = i(872725),
     ie = i(920050),
@@ -1511,7 +1511,7 @@ function io(e) {
                 return (t) => (0, d.jsx)(e, { ...t, sourceAnalyticsLocations: s });
             });
         }, [s]);
-    return (0, d.jsx)(t8.N, {
+    return (0, d.jsx)(t5.N, {
         theme: eZ.NJ8.DARK,
         children: (e) =>
             (0, d.jsx)(b.f5, {
@@ -1519,7 +1519,7 @@ function io(e) {
                 children: (0, d.jsx)("div", {
                     className: x()(e, ir.kL),
                     children: (0, d.jsx)(t4.A, {
-                        cardType: t5.s.CUSTOM,
+                        cardType: t8.s.CUSTOM,
                         cardClassName: ir.Nr,
                         glowing: t,
                         hueRotate: 25,
@@ -1905,12 +1905,12 @@ var iB = i(313133),
 let iF = function (e) {
     let { isVisible: t, premiumSubscription: s, churnDiscountOffer: n, discountedPrice: a } = e,
         { analyticsLocations: l } = (0, b.Ay)(j.A.CHURN_DISCOUNT_PERSISTENT_CTA),
-        r = (0, e5.z)({
+        r = (0, e8.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         });
-    return (0, d.jsx)(e8.animated.div, {
+    return (0, d.jsx)(e5.animated.div, {
         className: x()(iB.iE, { [iB.q4]: !t }),
         style: r,
         children: (0, d.jsxs)("div", {
@@ -2137,7 +2137,7 @@ function i6(e) {
     });
 }
 var i7 = i(996682);
-function i8(e) {
+function i5(e) {
     let { color: t = eX.A.colors.ICON_STRONG, "aria-label": i, "aria-hidden": s, role: n, width: a, height: l } = e,
         r = u.useMemo(() => (0, iz.H)({ width: a, height: l, intrinsicWidth: 100, intrinsicHeight: 80 }), [a, l]);
     return (0, d.jsxs)("svg", {
@@ -2162,7 +2162,7 @@ function i8(e) {
         ],
     });
 }
-function i5(e) {
+function i8(e) {
     let { alt: t, ariaLabel: i, ariaHidden: s, role: n, width: a, height: l, className: r, style: c } = e,
         o = u.useMemo(
             () => (0, iz.H)({ width: a, height: l, intrinsicWidth: 288, intrinsicHeight: 162, style: c }),
@@ -2454,7 +2454,7 @@ var sU = i(562819),
     sz = i(804564),
     sX = i(818349),
     sY = i(419490),
-    sK = i(849993),
+    sK = i(424739),
     sZ = i(572164),
     sq = i(271597),
     sJ = i(815460),
@@ -2470,13 +2470,13 @@ var s1 = i(757036),
     s3 = i(70283),
     s6 = i(643056),
     s7 = i(470739);
-let s8 = (0, iE.mj)({
+let s5 = (0, iE.mj)({
     name: "2026-10-nitro-home-badge-directory",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var s5 = i(655752),
+var s8 = i(655752),
     s9 = i(764231),
     s4 = i(627380),
     ne = i(30084),
@@ -2529,7 +2529,7 @@ function nl() {
             (t = e?.isFractionalPremiumWithNoStandardSub() ?? !1),
             (i = (function (e) {
                 let { location: t } = e;
-                return s8.useConfig({ location: t }).enabled;
+                return s5.useConfig({ location: t }).enabled;
             })({ location: "useTenureBadgePerkCard" })),
             (s = (0, s6.d)({ location: "useTenureBadgePerkCard" })),
             (n = (0, sr.$F)()),
@@ -2540,7 +2540,7 @@ function nl() {
             (o = (0, sc.N)(n?.id)),
             (m = (function () {
                 let e = (0, sr.$F)(),
-                    t = (0, s5.P)(),
+                    t = (0, s8.P)(),
                     i = (0, sr.Xb)();
                 if (null == e || null == t || null == i || e.status === sr.Wo.WITHHELD) return null;
                 let s = eT()(),
@@ -2552,7 +2552,7 @@ function nl() {
             })()),
             (g = (0, p.bG)([et.Ay], () => et.Ay.useReducedMotion) && !c),
             (h = (0, s4.t)()),
-            (f = (0, s5.P)()),
+            (f = (0, s8.P)()),
             (0, u.useMemo)(() => {
                 let e,
                     l = null != f ? eI.intl.string(f.nameUnformattedNitro) : void 0;
@@ -2896,7 +2896,7 @@ function ng(e) {
                             primaryAsset:
                                 null != s
                                     ? (0, d.jsx)("img", { src: s, alt: "", width: 160, draggable: "false" })
-                                    : (0, d.jsx)(i8, { color: eX.A.colors.ICON_MUTED, "aria-hidden": !0 }),
+                                    : (0, d.jsx)(i5, { color: eX.A.colors.ICON_MUTED, "aria-hidden": !0 }),
                             categories: ["vip"],
                         },
                         {
@@ -2905,7 +2905,7 @@ function ng(e) {
                             description: eI.intl.string(eI.t.Bhs0s6),
                             ctaText: eI.intl.string(eI.t.dBJVnZ),
                             onCtaClick: o,
-                            primaryAsset: (0, d.jsx)(i5, { alt: "", ariaHidden: !0 }),
+                            primaryAsset: (0, d.jsx)(i8, { alt: "", ariaHidden: !0 }),
                             categories: ["vip"],
                         },
                         null != f ? { ...f, categories: ["vip"] } : null,
@@ -3736,16 +3736,16 @@ var n6 =
         (o.COMPARE = "compare"),
         o),
     n7 = i(352756);
-let n8 = function (e) {
+let n5 = function (e) {
     let { isVisible: t, subscriptionTier: i, isEligibleForBogoPromotion: s, variant: n = "default" } = e,
         a = "settings" === n,
-        l = (0, e5.z)({
+        l = (0, e8.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         }),
         r = { section: eZ.JJy.MARKETING_FLOATING_CTA };
-    return (0, d.jsx)(e8.animated.div, {
+    return (0, d.jsx)(e5.animated.div, {
         className: x()(n7.iE, { [n7.W0]: a }),
         "aria-hidden": a ? !t : void 0,
         inert: a ? !t : void 0,
@@ -3767,13 +3767,13 @@ let n8 = function (e) {
         }),
     });
 };
-var n5 = i(573710);
+var n8 = i(573710);
 let n9 = function () {
     let e = (0, e6.bG)([et.Ay], () => et.Ay.useReducedMotion);
     return (0, d.jsxs)(d.Fragment, {
         children: [
             (0, d.jsx)("div", {
-                className: n5.BI,
+                className: n8.BI,
                 children: (0, d.jsx)(tt, {
                     scaleAnimationData: { startScale: 0.9, endScale: 1, duration: 3e3 },
                     yAxisAnimationData: { range: 20, duration: 4e3, path: e4.SINE },
@@ -3782,22 +3782,22 @@ let n9 = function () {
                     children: (0, d.jsx)("img", {
                         src: "https://cdn.discordapp.com/assets/content/30b4235a9a15735cae3f814c3389942356e6138fe5651945028afff3b421202b.png",
                         alt: "",
-                        className: n5.Q,
+                        className: n8.Q,
                     }),
                 }),
             }),
             (0, d.jsx)(ts, {
                 isMotionReduced: e,
-                boltContainerClassName: n5.nJ,
-                carContainerClassName: n5.IN,
-                hammerContainerClassName: n5.Gj,
-                keyContainerClassName: n5.FV,
-                starContainerClassName: n5.E1,
-                boltAssetClassName: n5.j7,
-                carAssetClassName: n5.or,
-                hammerAssetClassName: n5.Wv,
-                keyAssetClassName: n5.rs,
-                starAssetClassName: n5.OY,
+                boltContainerClassName: n8.nJ,
+                carContainerClassName: n8.IN,
+                hammerContainerClassName: n8.Gj,
+                keyContainerClassName: n8.FV,
+                starContainerClassName: n8.E1,
+                boltAssetClassName: n8.j7,
+                carAssetClassName: n8.or,
+                hammerAssetClassName: n8.Wv,
+                keyAssetClassName: n8.rs,
+                starAssetClassName: n8.OY,
             }),
         ],
     });
@@ -4472,11 +4472,11 @@ let aV = () => {
                     children: (0, d.jsx)("div", { ref: a, className: aF._Z }),
                 }),
                 (0, d.jsx)(ae, { ref: l }),
-                (0, d.jsx)(n8, { isVisible: !c && !m && A, subscriptionTier: R }),
+                (0, d.jsx)(n5, { isVisible: !c && !m && A, subscriptionTier: R }),
                 (0, d.jsx)(n3, { className: aF.MF }),
             ],
         });
-    return (0, d.jsx)(t8.N, {
+    return (0, d.jsx)(t5.N, {
         theme: aH.NJ.DARK,
         children: (e) => (0, d.jsx)(B.Gt, { className: x()(aF.XG, e), ref: t, children: W }),
     });
@@ -4505,7 +4505,7 @@ function a6(e, t, i) {
     return (0, se.M)(e) ? t : i;
 }
 var a7 = i(872461);
-function a8(e) {
+function a5(e) {
     let { isShowingAll: t, onClick: i } = e;
     return (0, d.jsxs)(at.D, {
         onClick: i,
@@ -4518,7 +4518,7 @@ function a8(e) {
         ],
     });
 }
-function a5(e) {
+function a8(e) {
     let {
             title: t,
             description: i,
@@ -4734,7 +4734,7 @@ let a9 = function (e) {
                     "badgeAlt",
                 ].map((e) => {
                     let t = l[e];
-                    return null != t && (0, d.jsx)(a5, { ...t }, e);
+                    return null != t && (0, d.jsx)(a8, { ...t }, e);
                 }),
             }),
             s &&
@@ -4742,7 +4742,7 @@ let a9 = function (e) {
                     children: [
                         (0, d.jsx)("div", {
                             className: x()({ [a7.sizeGizmo]: !n, [a7.sizeGizmoExpanded]: n }),
-                            children: (0, d.jsx)(a8, {
+                            children: (0, d.jsx)(a5, {
                                 onClick: function () {
                                     (U.default.track(eZ.HAw.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
                                         location_stack: c,
@@ -4801,7 +4801,7 @@ let le = u.memo(function (e) {
             (0, d.jsx)(eL.F, {
                 children: (0, d.jsx)("div", {
                     className: a7.settingsGrid,
-                    children: i.map((e) => (0, d.jsx)(a5, { ...e, variant: "settings" }, e.id)),
+                    children: i.map((e) => (0, d.jsx)(a8, { ...e, variant: "settings" }, e.id)),
                 }),
             }),
         ],
@@ -4829,9 +4829,9 @@ let ls = function (e) {
     let o = (null != r ? ec.Ay.getSkuIdForPlan(r.planId) : null) === tN.pe.TIER_1;
     return (
         (i = null != a ? a : l ? "text-overlay-light" : "text-default"),
-        (0, d.jsxs)(t5.Z, {
+        (0, d.jsxs)(t8.Z, {
             className: x()(li.kL, n, { [li.He]: l }),
-            type: t5.Z.Types.CUSTOM,
+            type: t8.Z.Types.CUSTOM,
             children: [
                 (0, d.jsx)(lt.CircleErrorIcon, {
                     size: "custom",
@@ -4894,7 +4894,7 @@ var ll = i(194509),
     lr = i(317587);
 let lc = function (e) {
     let { isVisible: t, subscriptionTier: i, isApplicationHome: s, isEligibleForBogoPromotion: n } = e,
-        a = (0, e5.z)({
+        a = (0, e8.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
@@ -4902,7 +4902,7 @@ let lc = function (e) {
         l = { section: eZ.JJy.MARKETING_FLOATING_CTA },
         r = (0, st.Ay)(),
         c = (0, n1.M)(r);
-    return (0, d.jsx)(e8.animated.div, {
+    return (0, d.jsx)(e5.animated.div, {
         className: x()(lr.iE, { [lr.H8]: s, [lr.q4]: !t }),
         style: a,
         children: (0, d.jsxs)("div", {
@@ -5170,7 +5170,7 @@ let lN = () => {
                 }),
                 (0, d.jsx)("div", { className: lh.hz }),
                 e
-                    ? (0, d.jsx)(n8, { isVisible: h && f, subscriptionTier: C, variant: "settings" })
+                    ? (0, d.jsx)(n5, { isVisible: h && f, subscriptionTier: C, variant: "settings" })
                     : (0, d.jsx)(lc, { isVisible: h && f, subscriptionTier: C, isApplicationHome: !1 }),
                 (0, d.jsx)(w.L, {
                     innerRef: s,

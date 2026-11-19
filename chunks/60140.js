@@ -110,7 +110,7 @@ function T(e) {
                         getItemKey: N,
                         itemClassName: b.xo,
                         renderItem: O,
-                        initialScrollIndex: d >= 0 ? d : null,
+                        initialScrollIndex: d >= 0 ? Math.max(d - 1, 0) : null,
                     }),
                 }),
             ],
