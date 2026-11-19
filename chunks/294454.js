@@ -25,7 +25,7 @@ a.d(
                     async () => {
                         let { ForwardModal: e } = await Promise.all([
                             a.e(506933),
-                            a.e(505866),
+                            a.e(545666),
                             a.e(985768),
                             a.e(325522),
                             a.e(401317),

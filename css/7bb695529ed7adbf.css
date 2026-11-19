@@ -1,3 +1,35 @@
+.container_83l3AO {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px
+}
+
+.title_83l3AO {
+    margin: 0 0 8px
+}
+
+.subtitle_83l3AO {
+    margin: 0 0 16px
+}
+
+.methodSelectSlot_83l3AO {
+    display: flex;
+    flex: 0 0 auto;
+    margin-bottom: 8px;
+    width: 100%
+}
+
+.methodSelectSlot_83l3AO>* {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.leftCtaSlot_83l3AO {
+    margin-top: auto
+}
+
 .wrapper_g2YoxE {
     background-color: var(--message-background-hover);
     border: 1px solid var(--interactive-background-hover);
@@ -117,4 +149,8 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=3bf1eea7185a504b.css.map*/
+.checklistSlot_X21L4R>div {
+    margin: 0
+}
+
+/*# sourceMappingURL=7bb695529ed7adbf.css.map*/
