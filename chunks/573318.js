@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677580, Version Hash: 04eaafd9a5f0dd2f7bc07f1dd07a4058fc4a592d`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677583, Version Hash: 19d4ee1a27cacb3c0d6085cb7b619f2b11cbfe6c`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677580";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677583";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -16000,7 +16000,7 @@ let pp = "isHideDevBanner",
                     className: td()(pI.Wz, pI.mr),
                     children: [
                         (0, v.jsx)(ph, { className: pI.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677580" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677583" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -33132,18 +33132,18 @@ let R8 = {
                 client_id: e.string().allow("").optional(),
                 scope: e
                     .alternatives()
-                    .try(e.string().allow(""), e.array().items(e.string().allow("")))
+                    .try(e.string().allow("", null), e.array().items(e.string().allow("")))
                     .optional(),
                 scopes: e
                     .alternatives()
-                    .try(e.string().allow(""), e.array().items(e.string().allow("")))
+                    .try(e.string().allow("", null), e.array().items(e.string().allow("")))
                     .optional(),
-                response_type: e.string().allow("").optional(),
-                code_challenge: e.string().allow("").optional(),
-                code_challenge_method: e.string().allow("").optional(),
-                state: e.string().allow("").optional(),
-                prompt: e.string().allow("").optional(),
-                nonce: e.string().allow("").optional(),
+                response_type: e.string().allow("", null).optional(),
+                code_challenge: e.string().allow("", null).optional(),
+                code_challenge_method: e.string().allow("", null).optional(),
+                state: e.string().allow("", null).optional(),
+                prompt: e.string().allow("", null).optional(),
+                nonce: e.string().allow("", null).optional(),
             }),
             response: (e) => ({ code: e.string().required() }),
         },

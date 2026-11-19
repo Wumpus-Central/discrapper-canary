@@ -22,7 +22,7 @@ n.d(
                 c = (function (e) {
                     if (![u.ME, u.YYv, u.c$g].includes(e)) return e ?? void 0;
                 })(t.guild_id ?? s.A.getChannel(r)?.guild_id ?? l.A.getGuildId()),
-                _ = ((0, d.p)(t.scope) ?? "")
+                _ = ((0, d.p)(t.scope ?? void 0) ?? "")
                     .replace(/\+/g, " ")
                     .split(" ")
                     .filter((e) => e.length > 0);
