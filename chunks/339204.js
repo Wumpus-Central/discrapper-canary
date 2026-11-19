@@ -118,7 +118,7 @@ l.d(
                 { nitroGatedOrbMultiplier: C } = (0, r.cf)([T.Ay], () => ({
                     nitroGatedOrbMultiplier: T.Ay.nitroGatedOrbMultiplier,
                 })),
-                _ = a.useMemo(() => j.intl.format(N.default["Ba/7wO"], { multiplier: C }), [C]);
+                _ = a.useMemo(() => j.intl.format(N.default.BzzCNE, { multiplier: C }), [C]);
             return null == C || d
                 ? null
                 : (0, n.jsx)(U, {
