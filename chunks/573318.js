@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677625, Version Hash: 407510e8478cce5d04745c8a9871e007fd3c80da`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 677642, Version Hash: b476cd0e4a7c2c244343e7f0cb48afa2ed264dd3`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677625";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677642";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -16002,7 +16002,7 @@ let pp = "isHideDevBanner",
                     className: td()(pI.Wz, pI.mr),
                     children: [
                         (0, v.jsx)(ph, { className: pI.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677625" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677642" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -41164,6 +41164,7 @@ class v$ extends nc.A {
         __OVERLAY__ ||
             (x.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived),
             x.h.subscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally),
+            x.h.subscribe("GUILD_SOUNDBOARD_SOUND_STOP_LOCALLY", this._handleSoundboardSoundStopLocally),
             x.h.subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect),
             x.h.subscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened));
     }
@@ -41171,6 +41172,7 @@ class v$ extends nc.A {
         __OVERLAY__ ||
             (x.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived),
             x.h.unsubscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally),
+            x.h.unsubscribe("GUILD_SOUNDBOARD_SOUND_STOP_LOCALLY", this._handleSoundboardSoundStopLocally),
             x.h.unsubscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect),
             x.h.unsubscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened));
     }
@@ -41180,6 +41182,7 @@ class v$ extends nc.A {
             arguments.length > 3 && arguments[3]);
     };
     _stopAndClearSounds = () => {};
+    _stopSound = (e, t) => {};
     _handleToggleSelfDeafened = () => {
         ex.Ay.isDeaf() && this._stopAndClearSounds();
     };
@@ -41191,6 +41194,10 @@ class v$ extends nc.A {
         let { sound: t, channelId: n } = e,
             i = en.default.getId();
         return this._playSound(t.soundId, t.volume, i, n);
+    };
+    _handleSoundboardSoundStopLocally = (e) => {
+        let { soundId: t } = e;
+        this._stopSound(t, en.default.getId());
     };
     _handleVoiceChannelSelect = () => {
         this._stopAndClearSounds();
