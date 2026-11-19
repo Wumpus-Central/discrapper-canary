@@ -238,7 +238,7 @@ class F extends L.G {
             { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => eJ },
             { no: 15, name: "unit_id_in_range_by_hash", kind: "message", oneof: "filter", T: () => e0 },
             { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e2 },
-            { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e7 },
+            { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e8 },
             { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => J },
             { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => e4 },
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => te },
@@ -356,7 +356,7 @@ class F extends L.G {
                 case 17:
                     r.filter = {
                         oneofKind: "always",
-                        always: e7.internalBinaryRead(e, e.uint32(), n, r.filter.always),
+                        always: e8.internalBinaryRead(e, e.uint32(), n, r.filter.always),
                     };
                     break;
                 case 18:
@@ -487,7 +487,7 @@ class F extends L.G {
             "clientReleaseChannel" === e.filter.oneofKind &&
                 e2.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, C.O0.LengthDelimited).fork(), n).join(),
             "always" === e.filter.oneofKind &&
-                e7.internalBinaryWrite(e.filter.always, t.tag(17, C.O0.LengthDelimited).fork(), n).join(),
+                e8.internalBinaryWrite(e.filter.always, t.tag(17, C.O0.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
                 J.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, C.O0.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
@@ -2239,8 +2239,8 @@ class e5 extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e7 = new e5();
-class e8 extends L.G {
+let e8 = new e5();
+class e7 extends L.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UnitIdInExperiment",
@@ -2296,7 +2296,7 @@ class e8 extends L.G {
         return (!1 !== i && (!0 == i ? C.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e8();
+let e4 = new e7();
 class e9 extends L.G {
     constructor() {
         super(
@@ -2673,6 +2673,7 @@ var tE = n(335871),
         (o[(o.MARKETING = 8)] = "MARKETING"),
         (o[(o.DESIGN_DOCS = 9)] = "DESIGN_DOCS"),
         (o[(o.APP_LAUNCH = 10)] = "APP_LAUNCH"),
+        (o[(o.CAP = 11)] = "CAP"),
         o),
     tp = (((d = {})[(d.ENABLED = 0)] = "ENABLED"), (d[(d.DISABLED = 1)] = "DISABLED"), d),
     tm =
@@ -2689,6 +2690,7 @@ var tE = n(335871),
     tT =
         (((_ = {})[(_.CUSTOM_UNIT_PREFIX_UNSPECIFIED = 0)] = "CUSTOM_UNIT_PREFIX_UNSPECIFIED"),
         (_[(_.SEO_URL_SLUG = 1)] = "SEO_URL_SLUG"),
+        (_[(_.CAP_CONVERSATION = 2)] = "CAP_CONVERSATION"),
         _),
     tS =
         (((E = {})[(E.EXPOSURE_POINT_ID_UNSPECIFIED = 0)] = "EXPOSURE_POINT_ID_UNSPECIFIED"),
