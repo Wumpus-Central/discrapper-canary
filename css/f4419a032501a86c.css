@@ -105,6 +105,10 @@
     color: var(--text-subtle)
 }
 
+.icon_pqX-ln {
+    flex-shrink: 0
+}
+
 .loading_rqE2lZ {
     display: flex;
     justify-content: center;
@@ -115,4 +119,4 @@
     padding-top: var(--space-12)
 }
 
-/*# sourceMappingURL=ddf4c3e3f392016a.css.map*/
+/*# sourceMappingURL=f4419a032501a86c.css.map*/
