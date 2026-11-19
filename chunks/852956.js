@@ -419,13 +419,13 @@ function e5(e) {
             return (0, n.jsx)(e7, {
                 icon: e2.ReactionIcon,
                 text: B.intl.string($.default.bTC23D),
-                tooltipText: B.intl.string($.default["ry+jxm"]),
+                tooltipText: B.intl.string($.default.Ek6GZO),
             });
         case ej.Gy.SHOUTING:
             return (0, n.jsx)(e7, {
                 icon: e2.ReactionIcon,
                 text: B.intl.string($.default["3gqpuo"]),
-                tooltipText: B.intl.string($.default["ry+jxm"]),
+                tooltipText: B.intl.string($.default.Ek6GZO),
             });
         case ej.Gy.GAME_EVENT: {
             let e = (0, e9.u6)(t.applicationId, ej.Gy.GAME_EVENT, t.decision.signal.eventName);

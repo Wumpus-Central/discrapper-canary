@@ -147,7 +147,7 @@ n.d(
                             u = S(t, a),
                             m =
                                 null != a.emotion
-                                    ? x.intl.string(C.default["ry+jxm"])
+                                    ? x.intl.string(C.default.Ek6GZO)
                                     : null != a.game
                                       ? x.intl.string(C.default["347DBb"])
                                       : null;

@@ -117,7 +117,7 @@ function M(e) {
         onLoadedMetadata: o,
     });
 }
-function P(e) {
+function O(e) {
     let { overlay: t, cropFraming: l, frameAspectRatio: i, loop: r = !0, ref: s } = e,
         {
             cropStart: o,
@@ -134,7 +134,7 @@ function P(e) {
         k = a.useRef(null),
         E = a.useRef(!1),
         [A, I] = a.useState([]),
-        P = a.useCallback(() => {
+        O = a.useCallback(() => {
             let e = j.current.main;
             if (null == e) return;
             let t = (0, v.round)(e.currentTime, 3),
@@ -144,7 +144,7 @@ function P(e) {
                 return !0;
             }
         }, [o, c]),
-        O = a.useCallback((e) => {
+        P = a.useCallback((e) => {
             let t = [];
             for (let l of Object.values(e.currentTarget.audioTracks))
                 l.label.includes(R.gC.APPLICATION)
@@ -155,8 +155,8 @@ function P(e) {
             I(t);
         }, []),
         _ = a.useCallback(() => {
-            for (let e of ((E.current = !0), P(), Object.values(j.current))) null != e && e.play();
-        }, [P]),
+            for (let e of ((E.current = !0), O(), Object.values(j.current))) null != e && e.play();
+        }, [O]),
         z = a.useCallback(() => {
             for (let e of Object.values(j.current)) null != e && e.pause();
         }, []);
@@ -172,7 +172,7 @@ function P(e) {
                     }
                 }
             }
-            P() && _();
+            O() && _();
         }
     });
     let U = a.useCallback((e) => {
@@ -268,7 +268,7 @@ function P(e) {
                       className: S.R,
                       preload: "auto",
                       ref: (e) => B(e, "main:application"),
-                      onLoadedMetadata: O,
+                      onLoadedMetadata: P,
                   }),
                   A.map((e) =>
                       (0, n.jsx)(
@@ -290,7 +290,7 @@ function P(e) {
               ],
           });
 }
-function O(e, t) {
+function P(e, t) {
     let l = e / 30;
     return (t && (l /= 10), l);
 }
@@ -792,8 +792,8 @@ var eR = l(646514),
     eS = l(602674),
     eD = l(335416),
     eM = l(556250);
-let eP = new Map(),
-    eO = a.memo(function (e) {
+let eO = new Map(),
+    eP = a.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: r, className: s, alwaysRenderContainer: o = !1 } = e,
             c = a.useRef(null),
             { ref: u, width: d, height: m } = (0, eI.Ay)(),
@@ -811,14 +811,14 @@ let eP = new Map(),
         a.useEffect(() => {
             if (0 === d || 0 === i.length || null == c.current) return;
             let e = `${t}-${i.map((e) => e.trackName).join(",")}-${d}`,
-                l = eP.get(e);
+                l = eO.get(e);
             if (null != l) return void h(l.waveform);
             let n = c.current,
                 a = !1;
             function r(t) {
                 if (a) return;
                 let { waveform: l, error: n } = t.data;
-                null != n ? R.GU.error("Failed to load waveform:", n) : (eP.set(e, { waveform: l }), h(l));
+                null != n ? R.GU.error("Failed to load waveform:", n) : (eO.set(e, { waveform: l }), h(l));
             }
             return (
                 n.addEventListener("message", r),
@@ -982,7 +982,7 @@ let eV = a.memo(function (e) {
                     {
                         icon: o,
                         title: ea.intl.string(eW[e.signal.type]),
-                        body: ea.intl.string(ex.default["ry+jxm"]),
+                        body: ea.intl.string(ex.default.Ek6GZO),
                         position: r,
                         compact: i,
                     },
@@ -1285,7 +1285,7 @@ function e3(e) {
         T = a.useRef(null),
         S = a.useRef(null),
         [D, M] = a.useState(!1),
-        [P, _] = a.useState(null);
+        [O, _] = a.useState(null);
     a.useEffect(
         () =>
             x({
@@ -1311,19 +1311,19 @@ function e3(e) {
         }, [W]));
     let F = a.useCallback(
             (e, t) => {
-                if (null == r || null == P) return;
-                let l = (((0, v.clamp)(e, P.left, P.right) - P.left) / P.width) * r,
+                if (null == r || null == O) return;
+                let l = (((0, v.clamp)(e, O.left, O.right) - O.left) / O.width) * r,
                     n = (0, v.clamp)(l, 0, r),
                     a = I;
                 (null == a && t && ((a = "playhead"), s && (h(), M(!0)), L(a)),
                     "start" === a ? d(n) : "end" === a ? m(n) : "playhead" === a && g((0, v.clamp)(n, o, c)));
             },
-            [r, P, I, o, c, s, h, d, m, g],
+            [r, O, I, o, c, s, h, d, m, g],
         ),
         V = a.useCallback(
             (e) => {
                 if (null == r) return;
-                let t = O(r, e.shiftKey),
+                let t = P(r, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -1339,7 +1339,7 @@ function e3(e) {
         K = a.useCallback(
             (e) => {
                 if (null == r) return;
-                let t = O(r, e.shiftKey),
+                let t = P(r, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -1474,7 +1474,7 @@ function e3(e) {
                 ref: H,
                 children: [
                     (0, n.jsx)(eY, { onMouseDown: Y, videoLength: r, clip: b, noBottomMargin: !0, compact: !0 }),
-                    (0, n.jsx)(eO, {
+                    (0, n.jsx)(eP, {
                         onMouseDown: Y,
                         voiceAudioTracks: t,
                         clipId: b.id,
@@ -1663,7 +1663,7 @@ function e9(e) {
             if (null == t) return;
             let l = p.current?.videoElement;
             if (null == l) return;
-            let n = O(l.duration, e.shiftKey),
+            let n = P(l.duration, e.shiftKey),
                 a = !1;
             switch (e.key) {
                 case " ":
@@ -1762,7 +1762,7 @@ function e9(e) {
                                       (0, n.jsx)(es, { onBack: l }),
                                       (0, n.jsx)("div", {
                                           className: eo.x3,
-                                          children: (0, n.jsx)(P, {
+                                          children: (0, n.jsx)(O, {
                                               ref: p,
                                               cropFraming: !M,
                                               frameAspectRatio: $,
