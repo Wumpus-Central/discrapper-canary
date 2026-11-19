@@ -51,6 +51,7 @@ class g extends s.A {
     restrictedSchedule;
     appTransactionIds;
     storeCountry;
+    labs;
     hasFlag = (e) => !1;
     isStaff = () => !1;
     isStaffPersonal = () => !1;
@@ -100,6 +101,7 @@ class g extends s.A {
                           setAt: t.set_at ?? t.setAt ?? null,
                           isLocked: t.is_locked ?? t.isLocked ?? !1,
                       }),
+            (this.labs = e.labs),
             Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,
