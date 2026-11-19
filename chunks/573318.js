@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 677993, Version Hash: 85ddb763cab5521cbb0f79f97ab2e0f6713fb2a6`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 678014, Version Hash: 7ccb7d883d44d7f616dadacc9d8e04b7f3948da8`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "677993";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678014";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -16017,7 +16017,7 @@ let pp = "isHideDevBanner",
                     className: td()(pI.Wz, pI.mr),
                     children: [
                         (0, v.jsx)(ph, { className: pI.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "677993" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678014" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -35391,12 +35391,25 @@ let yQ = ["1402418171662569542"],
                     status_display_type: _.status_display_type,
                     details: _.details ?? "",
                     state: _.state ?? "",
+                    large_text: p?.large_text,
+                    small_text: p?.small_text,
+                    button_1_label: c?.[0]?.label,
+                    button_2_label: c?.[1]?.label,
+                    party_privacy: null != m ? (h ?? H.KIY.PRIVATE) : void 0,
+                    instance: f,
                     has_urls:
                         null != _.state_url ||
                         null != _.details_url ||
                         _.assets?.large_url != null ||
                         _.assets?.small_url != null,
                 };
+                for (let e of ["start", "end"]) {
+                    let t = T?.[e];
+                    if (null != t) {
+                        let n = new Date(t);
+                        Number.isNaN(n.getTime()) || (S[e] = n.toISOString());
+                    }
+                }
                 return (
                     null != g && ((S.has_match_secret = null != g.match), (S.has_join_secret = null != g.join)),
                     null != p &&
