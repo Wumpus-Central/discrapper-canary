@@ -58,13 +58,16 @@ let h = new f(r.h, {
     SKUS_PRICING_FETCH_SUCCESS: function (e) {
         let { priceId: t, data: n } = e,
             i = Date.now();
-        (E(t, { type: "success", fetchedAt: i }),
+        if (
+            (E(t, { type: "success", fetchedAt: i }),
             "application" === t.type &&
                 E({ type: "skus", skuIds: Object.keys(n.skuPriceMap) }, { type: "success", fetchedAt: i }),
             (o = { ...o, ...n.pricingResultIdMap }),
             (c = { ...c, ...n.skuPriceMap }),
-            (d = { ...d, ...n.rewardResultIdMap }),
-            (u = { ...u, ...n.offerResultIdMap }));
+            "skus" === t.type)
+        )
+            for (let e of t.skuIds) null == n.skuPriceMap[e] && delete c[e];
+        ((d = { ...d, ...n.rewardResultIdMap }), (u = { ...u, ...n.offerResultIdMap }));
     },
     SKUS_PRICING_FETCH_FAIL: function (e) {
         let { priceId: t } = e;

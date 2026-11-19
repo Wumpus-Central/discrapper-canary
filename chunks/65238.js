@@ -327,6 +327,9 @@ n.d(
             let t = e?.tenantMetadata?.collectibles;
             return t?.type === c.hE.COLLECTION_SALE ? t : void 0;
         },
+        TX: function (e, t) {
+            return e.appliesToAllSkus || (null != t && e.skuIds?.includes(t) === !0);
+        },
         XF: function (e) {
             let t = e?.tenantMetadata?.collectibles;
             return t?.type === c.hE.COLLECT_AND_CLAIM ? t : void 0;
