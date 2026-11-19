@@ -31,6 +31,7 @@ t.exports = {
     G$: "decorator_zln_tS",
     dm: "dm_zln_tS",
     xx: "avatarWithText_zln_tS",
+    hS: "tabBackgroundImage_zln_tS",
     Zi: "channelNameFade_zln_tS",
     KQ: "waveButton_zln_tS",
     a1: "tabHoverGradient_zln_tS",
