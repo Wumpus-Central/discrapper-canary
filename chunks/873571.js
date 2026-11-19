@@ -34,35 +34,35 @@ function v(e) {
         x = s ? (n?.complex_icon_static_url ?? n?.simple_icon_url) : (0, m.NC)(t, n, !0).imageUrl,
         v = s ? n?.complex_icon_animated_url : (0, m.NC)(t, n, !1).animatedUrl,
         [y, T] = r.useState(null),
-        h = u && "failed" !== y ? v : void 0;
-    (0, o.A)(() => T((e) => e ?? "failed"), null != h && null == y ? 2e3 : null);
-    let A = (0, f.C)(p(t, n, s)),
-        N = A ?? f.P,
+        A = u && "failed" !== y ? v : void 0;
+    (0, o.A)(() => T((e) => e ?? "failed"), null != A && null == y ? 2e3 : null);
+    let N = (0, f.C)(p(t, n, s)),
+        h = N ?? f.P,
         [E, S] = r.useState(!1),
         C = r.useCallback(() => S(!0), []),
-        k = E && null != A && (null == h || "loaded" === y),
-        [R, j] = r.useState(null);
+        k = E && null != N && (null == A || "loaded" === y),
+        [R, j] = r.useState(!1);
     r.useEffect(() => {
-        k && (j(a ? "fade-in" : "with-start"), d());
+        k && (j(!0), d());
     }, [k]);
-    let w = r.useMemo(
+    let U = r.useMemo(
         () => ({
-            "--custom-badge-unlock-color": N,
-            "--custom-badge-unlock-halo": (0, c.KU)(N, 0.6),
+            "--custom-badge-unlock-color": h,
+            "--custom-badge-unlock-halo": (0, c.KU)(h, 0.6),
             "--custom-badge-unlock-art": null != x ? `url("${x}")` : "none",
         }),
-        [N, x],
+        [h, x],
     );
     return null == x
         ? null
         : (0, l.jsx)("div", {
-              className: i()(g.qd, (null == R || !a) && g.R, "fade-in" === R && g.qG),
-              style: w,
+              className: i()(g.qd, R && a ? g.qG : g.R),
+              style: U,
               children: (0, l.jsxs)("div", {
                   className: i()(g.qS, _),
                   children: [
                       (0, l.jsx)("img", {
-                          className: i()(g.Qw, null != h && "loaded" === y && g.e0),
+                          className: i()(g.Qw, null != A && "loaded" === y && g.e0),
                           src: x,
                           alt: "",
                           crossOrigin: "anonymous",
@@ -70,12 +70,12 @@ function v(e) {
                           onLoad: C,
                           onError: C,
                       }),
-                      null != h &&
+                      null != A &&
                           (0, l.jsx)("div", {
                               className: g.gN,
                               children: (0, l.jsx)("img", {
                                   className: g.G,
-                                  src: h,
+                                  src: A,
                                   alt: "",
                                   draggable: !1,
                                   onLoad: () => T("loaded"),
@@ -98,36 +98,36 @@ n.d(
                 { previousTier: f, currentTier: p } = b(t, n),
                 y = null != f,
                 T = y && !_,
-                h = t.badge_id === u.$.PREMIUM_TENURE && !_,
-                A = o + x(y),
-                [N, E] = r.useState(0),
+                A = t.badge_id === u.$.PREMIUM_TENURE && !_,
+                N = o + x(y),
+                [h, E] = r.useState(0),
                 S = r.useCallback(() => E((e) => e + 1), []),
                 [C, k] = r.useState(!1),
-                R = N >= (T ? 2 : 1),
+                R = h >= (T ? 2 : 1),
                 j = c && (R || C),
-                [w, U] = r.useState(!1);
-            !j || R || w || U(!0);
-            let $ = j && !_ && !w;
+                [U, w] = r.useState(!1);
+            !j || R || U || w(!0);
+            let $ = j && !_ && !U;
             (r.useEffect(() => {
                 if (!c) return;
                 let e = setTimeout(() => k(!0), 3e3);
                 return () => clearTimeout(e);
             }, [c]),
                 r.useEffect(() => {
-                    j && m?.(w);
+                    j && m?.(U);
                 }, [j]));
-            let O = r.useMemo(() => ({ "--custom-badge-unlock-swap": `${A}ms` }), [A]);
+            let O = r.useMemo(() => ({ "--custom-badge-unlock-swap": `${N}ms` }), [N]);
             return (0, l.jsxs)("div", {
                 className: i()(g.Os, "large" === a ? g.as : g.EX, $ && (y ? g.xH : g.YC)),
                 style: O,
                 children: [
                     T &&
-                        !w &&
+                        !U &&
                         (0, l.jsx)(v, {
                             badge: t,
                             tier: f,
                             isStarted: j,
-                            isAmbient: h,
+                            isAmbient: A,
                             isPreviousTier: !0,
                             onLoad: S,
                             className: i()($ && g.rH),
@@ -137,7 +137,7 @@ n.d(
                         badge: t,
                         tier: p,
                         isStarted: j,
-                        isAmbient: h,
+                        isAmbient: A,
                         onLoad: S,
                         className: i()($ && g.CN),
                         fillClassName: i()($ && g.Eq),
