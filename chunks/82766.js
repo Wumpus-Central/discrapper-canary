@@ -197,7 +197,7 @@ let h = new f();
 var I = n(308588);
 class p extends l.G {
     constructor() {
-        super("discord_protos.premium_marketing.v1.AnnouncementModalPanel", [
+        super("discord_protos.premium_marketing.v1.AnnouncementModalTwoPanel", [
             { no: 1, name: "asset", kind: "message", T: () => d.i },
             { no: 2, name: "title_localized", kind: "message", T: () => o.X },
             { no: 3, name: "body_localized", kind: "message", T: () => o.X },
@@ -2189,7 +2189,7 @@ class eU extends l.G {
             { no: 34, name: "collection_page_marketing_block", kind: "message", oneof: "properties", T: () => O },
             { no: 35, name: "game_exit_panel", kind: "message", oneof: "properties", T: () => N },
             { no: 36, name: "announcement_modal_video_led", kind: "message", oneof: "properties", T: () => T },
-            { no: 37, name: "announcement_modal_panel", kind: "message", oneof: "properties", T: () => m },
+            { no: 37, name: "announcement_modal_two_panel", kind: "message", oneof: "properties", T: () => m },
             { no: 38, name: "nitro_home_section_header", kind: "message", oneof: "properties", T: () => A },
             { no: 39, name: "orbs_confirmation_modal", kind: "message", oneof: "properties", T: () => u },
             { no: 3, name: "content_identifier", kind: "scalar", T: 9 },
@@ -2498,12 +2498,12 @@ class eU extends l.G {
                     break;
                 case 37:
                     a.properties = {
-                        oneofKind: "announcementModalPanel",
-                        announcementModalPanel: m.internalBinaryRead(
+                        oneofKind: "announcementModalTwoPanel",
+                        announcementModalTwoPanel: m.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
-                            a.properties.announcementModalPanel,
+                            a.properties.announcementModalTwoPanel,
                         ),
                     };
                     break;
@@ -2709,9 +2709,13 @@ class eU extends l.G {
                     t.tag(36, r.O0.LengthDelimited).fork(),
                     n,
                 ).join(),
-            "announcementModalPanel" === e.properties.oneofKind &&
+            "announcementModalTwoPanel" === e.properties.oneofKind &&
                 m
-                    .internalBinaryWrite(e.properties.announcementModalPanel, t.tag(37, r.O0.LengthDelimited).fork(), n)
+                    .internalBinaryWrite(
+                        e.properties.announcementModalTwoPanel,
+                        t.tag(37, r.O0.LengthDelimited).fork(),
+                        n,
+                    )
                     .join(),
             "nitroHomeSectionHeader" === e.properties.oneofKind &&
                 A.internalBinaryWrite(

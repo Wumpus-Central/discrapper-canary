@@ -229,7 +229,7 @@ function U(e) {
         }),
     });
 }
-var G = n(590344),
+var G = n(82766),
     x = n(767589);
 function B(e, t) {
     return G.m.create({ contentIdentifier: e, properties: t });
