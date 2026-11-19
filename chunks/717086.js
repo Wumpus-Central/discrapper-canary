@@ -126,26 +126,35 @@ function eB(e) {
         m = (0, eR.V)({ currentUserId: g, enabled: u }),
         f = eM(),
         { reducedMotion: h } = l.useContext(eT.C),
-        [p, x] = (0, eG.kn)(c && u && !m.isPending && !f ? [eN.M.BADGE_CUSTOMIZATION_WEB_COACHMARK] : []);
-    return p !== eN.M.BADGE_CUSTOMIZATION_WEB_COACHMARK
-        ? null
-        : (0, i.jsx)(ek.A, {
+        p = (0, y.A)((e) => e.isOpen),
+        x = c && u && !m.isPending && !f,
+        [A, I] = (0, eG.kn)(x && !p ? [eN.M.BADGE_CUSTOMIZATION_WEB_COACHMARK] : []),
+        v = A === eN.M.BADGE_CUSTOMIZATION_WEB_COACHMARK;
+    return (l.useLayoutEffect(() => {
+        if (v)
+            return () => {
+                y.A.getState().isOpen && I(eU.i.TAKE_ACTION);
+            };
+    }, [v, I]),
+    v)
+        ? (0, i.jsx)(ek.A, {
               targetElementRef: o,
               position: "right",
               gradientColor: "blue",
               graphic: { type: "rive", rive: eP.U, props: { dataBinding: { on: !0, reducedMotion: h.enabled } } },
               title: eF.intl.string(eF.t["9JoKQb"]),
               body: eF.intl.string(d ? eF.t.p82vky : eF.t.IDh31t),
-              onRequestClose: () => x(eU.i.USER_DISMISS),
+              onRequestClose: () => I(eU.i.USER_DISMISS),
               actions: [
                   {
                       text: eF.intl.string(eF.t["4P5I8V"]),
                       onClick: function () {
-                          (x(eU.i.TAKE_ACTION), y.A.setState({ isOpen: !0 }));
+                          y.A.setState({ isOpen: !0 });
                       },
                   },
               ],
-          });
+          })
+        : null;
 }
 var eW = n(975571);
 function eV(e) {
