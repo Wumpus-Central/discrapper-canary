@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { Cr: () => eM, Ay: () => e7, Wm: () => ey }), n(321073), n(938796));
+(n.d(t, { Cr: () => eM, Ay: () => e8, Wm: () => ey }), n(321073), n(938796));
 var r = n(435558),
     a = n(536637),
     s = n.n(a),
@@ -52,7 +52,7 @@ var U = n(970278),
     B = n(799422),
     V = n(927813),
     H = n(403362),
-    j = n(811091),
+    j = n(661191),
     W = n(799704),
     Y = n(734057),
     K = n(72314),
@@ -661,7 +661,7 @@ class eM {
                     U.A.hasLoaded(n.guild_id) &&
                         j.default
                             .keys(U.A.getThreadsForParent(n.guild_id, i))
-                            .every((e) => e8.hasOpenedThread(e) || 0 > j.default.compare(e, r.ackMessageId)) &&
+                            .every((e) => e7.hasOpenedThread(e) || 0 > j.default.compare(e, r.ackMessageId)) &&
                         r.ack({
                             trackAnalytics: !0,
                             location: {
@@ -1307,7 +1307,7 @@ class e5 extends o.Ay.Store {
         return eg.getAllChannelIdsForWindowId(e);
     }
 }
-let e8 = new e5(_.h, {
+let e7 = new e5(_.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -1737,7 +1737,7 @@ let e8 = new e5(_.h, {
             ((t = n.filter(
                 (e) =>
                     Y.A.getChannel(e.channelId)?.isForumLikeChannel() === !0 ||
-                    (null != e.messageId && e8.hasUnreadOrMentions(e.channelId, e.readStateType)),
+                    (null != e.messageId && e7.hasUnreadOrMentions(e.channelId, e.readStateType)),
             )),
                 t.forEach((e) => {
                     let { channelId: t, messageId: n, readStateType: i } = e;
@@ -1968,4 +1968,4 @@ let e8 = new e5(_.h, {
             );
         },
     }),
-    e7 = e8;
+    e8 = e7;

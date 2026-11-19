@@ -18,7 +18,7 @@ var i = n(385244),
     m = n(994500),
     g = n(287809),
     T = n(562153),
-    S = n(811091);
+    S = n(661191);
 let N = {
     "234395307759108106": "https://groovy.bot/commands",
     "365975655608745985": "https://www.pokecord.com/getting-started",

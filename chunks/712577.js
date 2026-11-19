@@ -23,13 +23,20 @@ class o extends r.PureComponent {
         return null;
     }
     renderVideo(e, t) {
-        let { children: n, mirror: a, paused: s, component: o } = this.props;
+        let { children: n, mirror: a, paused: s, component: o, onResize: d, onVideoElement: c } = this.props;
         if (null == e) {
             if (null == n) return null;
             let e = r.Children.only(n);
             return r.cloneElement(e, { style: { display: t && !a ? void 0 : "none" }, ...e.props });
         }
-        return (0, i.jsx)(o, { paused: s, className: l.$_, streamId: e, onReady: t ? null : this.handleReady });
+        return (0, i.jsx)(o, {
+            paused: s,
+            onResize: d,
+            onVideoElement: c,
+            className: l.$_,
+            streamId: e,
+            onReady: t ? null : this.handleReady,
+        });
     }
     render() {
         let { mirror: e, className: t } = this.props;

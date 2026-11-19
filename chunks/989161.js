@@ -1410,7 +1410,7 @@ function no(e) {
                       targetElementRef: o,
                       renderPopout: function (e) {
                           let { closePopout: t } = e;
-                          return (0, l.jsx)(nr.A, {
+                          return (0, l.jsx)(nr.default, {
                               persistSearch: !0,
                               channel: s,
                               closePopout: t,

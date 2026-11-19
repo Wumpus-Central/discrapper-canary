@@ -2,7 +2,7 @@ n(284009);
 var i = n(317097),
     r = n(176201),
     a = n(9865),
-    s = n(811091);
+    s = n(661191);
 function l(e, t) {
     let n = e.guildId;
     return e.id === n

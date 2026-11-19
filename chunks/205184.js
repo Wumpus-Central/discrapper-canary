@@ -3,7 +3,7 @@ var r = n(582128),
     u = n.n(i),
     a = n(681154),
     l = n(214693),
-    s = n(811091),
+    s = n(661191),
     o = n(424994);
 let d = new Set([a.ContentInventoryEntryType.PLAYED_GAME, a.ContentInventoryEntryType.LAUNCHED_ACTIVITY]);
 function c(e) {

@@ -1,6 +1,6 @@
 var i = n(488428),
     r = n(372250),
-    a = n(811091);
+    a = n(661191);
 let s = "event",
     l = "channel",
     o = "message";

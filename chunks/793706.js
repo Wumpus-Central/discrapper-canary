@@ -128,7 +128,7 @@ function em() {
 var eg = n(467840),
     eA = n(957283),
     eE = n(411976),
-    ex = n(811091);
+    ex = n(661191);
 function eS(e) {
     return e.sort((e, t) => ex.default.compare(e.lastMessageId, t.lastMessageId)).reverse();
 }
@@ -252,8 +252,8 @@ var eL = n(707539),
     e3 = n(652215);
 n(838541);
 var e4 = n(282573),
-    e5 = n(165648);
-let e6 = { formatInline: !0, noStyleAndInteraction: !0 },
+    e6 = n(165648);
+let e5 = { formatInline: !0, noStyleAndInteraction: !0 },
     e2 = s.memo(function (e) {
         let { channel: t } = e,
             { loaded: n, error: s, message: i } = (0, eZ.I)(t),
@@ -267,7 +267,7 @@ let e6 = { formatInline: !0, noStyleAndInteraction: !0 },
             ),
             d = (0, o.bG)([e1.A], () => e1.A.can(e3.xBc.MANAGE_MESSAGES, t)),
             u = e8.gs.useSetting(),
-            { content: h } = (0, e7.A)(i ?? null, e6),
+            { content: h } = (0, e7.A)(i ?? null, e5),
             g = i?.content != null && "" !== i.content ? h : null,
             A = null;
         if (s)
@@ -293,7 +293,7 @@ let e6 = { formatInline: !0, noStyleAndInteraction: !0 },
                     children: F.intl.string(F.t.uxrh1O),
                 });
             else if (null != i) {
-                let { contentPlaceholder: e, renderedContent: t } = (0, e0.o)(i, g, r, c, a()(e4.BK, e5.tZ), {
+                let { contentPlaceholder: e, renderedContent: t } = (0, e0.o)(i, g, r, c, a()(e4.BK, e6.tZ), {
                     leadingIconClass: e4.AF,
                     trailingIconClass: e4.AF,
                     iconSize: 20,

@@ -2051,7 +2051,7 @@ let nn = 498 + t7.as.MEDIUM,
                                                     })
                                                   : null,
                                               Q === ep.kx.EMOJI || P.expressionPicker?.onlyEmojis === !0
-                                                  ? (0, l.jsx)(C.A, {
+                                                  ? (0, l.jsx)(C.default, {
                                                         hasTabWrapper: !0,
                                                         persistSearch: !0,
                                                         channel: L,

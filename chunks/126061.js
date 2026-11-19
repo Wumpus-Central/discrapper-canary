@@ -14,11 +14,11 @@ var s = t(477900),
     h = t(486020),
     j = t(515718),
     x = t(652215),
-    b = t(307731),
-    f = t(792996),
+    f = t(307731),
+    b = t(792996),
     N = t(347570);
 function C() {
-    return [{ name: f.intl.string(f.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];
+    return [{ name: b.intl.string(b.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "png"] }];
 }
 let y = function (e) {
     let { guildId: i, onUploadIcon: t, onSelectUnicodeEmoji: y, onClose: I, transitionState: v } = e,
@@ -46,16 +46,16 @@ let y = function (e) {
                         onItemSelect: E,
                         type: "top",
                         look: "grey",
-                        "aria-label": f.intl.string(f.t.Utlwvi),
+                        "aria-label": b.intl.string(b.t.Utlwvi),
                         className: N.C$,
                         children: [
                             (0, s.jsx)(n.V.Item, {
                                 id: "tab-id-role-icon-file-upload",
-                                children: f.intl.string(f.t.royWSB),
+                                children: b.intl.string(b.t.royWSB),
                             }),
                             (0, s.jsx)(n.V.Item, {
                                 id: "tab-id-role-icon-emoji",
-                                children: f.intl.string(f.t["/Ny2wZ"]),
+                                children: b.intl.string(b.t["/Ny2wZ"]),
                             }),
                         ],
                     }),
@@ -82,7 +82,7 @@ let y = function (e) {
                                               }),
                                           ],
                                       }),
-                                      (0, s.jsx)("div", { className: N.WG, children: f.intl.string(f.t["mz++Qq"]) }),
+                                      (0, s.jsx)("div", { className: N.WG, children: b.intl.string(b.t["mz++Qq"]) }),
                                       (0, s.jsx)(p.A, {
                                           onChange: (e) => {
                                               (O(!1), t(e), I());
@@ -92,7 +92,7 @@ let y = function (e) {
                                           },
                                           maxFileSizeBytes: 256e3,
                                           filters: P,
-                                          text: f.intl.string(f.t.sdCQY4),
+                                          text: b.intl.string(b.t.sdCQY4),
                                           size: "md",
                                           variant: "primary",
                                       }),
@@ -101,7 +101,7 @@ let y = function (e) {
                                                 className: N.Qw,
                                                 color: "text-feedback-critical",
                                                 variant: "body-sm/normal",
-                                                children: f.intl.string(f.t.HFyKsa),
+                                                children: b.intl.string(b.t.HFyKsa),
                                             })
                                           : null,
                                   ],
@@ -109,7 +109,7 @@ let y = function (e) {
                           })
                         : null,
                     "tab-id-role-icon-emoji" === S
-                        ? (0, s.jsx)(m.A, {
+                        ? (0, s.jsx)(m.default, {
                               hasTabWrapper: !0,
                               closePopout: () => I(),
                               onSelectEmoji: async (e) => {
@@ -136,7 +136,7 @@ let y = function (e) {
                                   else i?.surrogates != null && y(i.defaultDiversityChild?.surrogates ?? i.surrogates);
                                   I();
                               },
-                              pickerIntention: b.EmojiIntention.COMMUNITY_CONTENT,
+                              pickerIntention: f.EmojiIntention.COMMUNITY_CONTENT,
                               channel: k,
                           })
                         : null,

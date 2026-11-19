@@ -84,7 +84,7 @@ function x(e) {
     );
 }
 var k = n(115560),
-    F = n(811091);
+    F = n(661191);
 function B(e) {
     e?.type === "yelling" && (e.type = y.Gy.SHOUTING);
 }

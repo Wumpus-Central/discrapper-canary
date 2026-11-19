@@ -52,7 +52,7 @@ n.d(
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, l.jsx)(c.l, {
-                        children: (0, l.jsx)(p.A, {
+                        children: (0, l.jsx)(p.default, {
                             analyticsOverride: S,
                             closePopout: t,
                             onSelectEmoji: A,

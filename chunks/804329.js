@@ -181,7 +181,7 @@ function en(e) {
                 }
             );
         }, [d, f]),
-        (0, l.jsx)(M.A, {
+        (0, l.jsx)(M.default, {
             headerClassName: T ? ee.X : void 0,
             guildId: t ?? void 0,
             closePopout: J.tE,

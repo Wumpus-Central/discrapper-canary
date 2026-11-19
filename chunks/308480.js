@@ -19527,7 +19527,7 @@ var ge = a(803306),
     ga = a(189213),
     gn = a(543767),
     gl = a(371710),
-    gi = a(811091),
+    gi = a(661191),
     gs = a(105909);
 let gr = [
     { id: "1week", label: "1 Week", value: 0 },

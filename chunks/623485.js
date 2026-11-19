@@ -1,4 +1,4 @@
-(n.d(t, { A: () => q }), n(938796));
+(n.d(t, { A: () => J }), n(938796));
 var i,
     r,
     a = n(665260),
@@ -9,11 +9,13 @@ var i,
     c = n(652896),
     u = n(46653),
     _ = n(495867),
-    E = n(753181),
-    A = n(972347),
-    f = n(507821),
-    h = n(626584),
-    I =
+    E = n(753181);
+n(321073);
+var A = n(972347),
+    f = n(626584),
+    h = n(654186),
+    I = n(182667),
+    p =
         (((i = {}).Connect = "connect"),
         (i.Disconnect = "disconnect"),
         (i.Key = "key"),
@@ -29,7 +31,7 @@ var i,
         (i.Drop = "drop"),
         (i.Log = "log"),
         i),
-    p =
+    m =
         (((r = {}).Connect = "connect"),
         (r.SendKey = "sendKey"),
         (r.SendMouseMove = "sendMouseMove"),
@@ -45,107 +47,98 @@ var i,
         (r.SetHosting = "setHosting"),
         (r.Close = "close"),
         r);
-(n(323874), n(14289), n(35956));
-class m extends A.A {
-    worker;
-    userId;
-    rtc;
-    logger;
-    webTransportAck;
-    state = 0;
+class g extends A.A {
+    lease;
+    transport;
+    detach = [];
+    logger = new f.A("InputConnection");
+    hosting = !1;
+    closed = !1;
     constructor(e, t) {
-        (super(),
-            (this.userId = t),
-            (this.logger = new h.A("InputConnection")),
-            (this.rtc = e),
-            (this.webTransportAck = this.onWebTransportAck.bind(this)),
-            this.on(I.Connect, () => {
-                this.state = 2;
-            }),
-            this.on(I.Disconnect, this.onDisconnect.bind(this)),
-            this.on(I.Log, this.onLogMessage.bind(this)),
-            (this.worker = new Worker(
-                new URL("/assets/" + n.u(126501), n.b),
-                Object.assign({}, { name: "input-worker" }, { type: void 0 }),
-            )),
-            null != this.worker &&
-                (this.worker.onmessage = (e) => {
-                    this.emit(e.data[0], ...e.data.slice(1));
-                }));
+        var n;
+        (super(), (n = this), (this.lease = (0, I.i)(e, t)), (this.transport = this.lease.connection));
+        let i = () => this.setHosting(this.hosting);
+        for (let e of (this.transport.on(h.I.Connect, i),
+        this.detach.push(() => this.transport.off(h.I.Connect, i)),
+        this.on(p.Log, (e) => this.logger.log(e)),
+        Object.values(p)))
+            this.forward(e);
+        let r = () => this.logger.info("Failed to get SFU address"),
+            a = (e, t) => this.logger.info(`Starting WebTransport connection to ${e}:${t}`),
+            s = function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e;
+                return n.logger.log(t);
+            },
+            l = () => this.logger.info("Timed out connecting"),
+            o = (e) => this.emit(p.Log, `awaiting read with size ${e}`);
+        (this.transport.on(h.I.Failure, s),
+            this.transport.on(h.I.Timeout, l),
+            this.transport.on(h.I.ReadStarted, o),
+            this.detach.push(() => this.transport.off(h.I.Failure, s)),
+            this.detach.push(() => this.transport.off(h.I.Timeout, l)),
+            this.detach.push(() => this.transport.off(h.I.ReadStarted, o)),
+            this.transport.on(h.I.MissingAddress, r),
+            this.transport.on(h.I.Starting, a),
+            this.detach.push(() => this.transport.off(h.I.MissingAddress, r)),
+            this.detach.push(() => this.transport.off(h.I.Starting, a)));
+    }
+    forward(e) {
+        var t = this;
+        let n = function () {
+            for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
+            return t.emit(e, ...i);
+        };
+        (this.transport.on(e, n), this.detach.push(() => this.transport.off(e, n)));
     }
     get isConnected() {
-        return 2 === this.state;
+        return this.transport.isConnected;
     }
     connect() {
-        ((this.state = 1),
-            this.rtc.on(f.q.WebTransportAck, this.webTransportAck),
-            this.rtc.startWebTransport(),
-            setTimeout(() => {
-                1 === this.state &&
-                    (this.logger.info("Timed out connecting"),
-                    this.rtc.off(f.q.WebTransportAck, this.webTransportAck),
-                    this.emit(I.Disconnect));
-            }, 1e4));
-    }
-    onWebTransportAck(e, t) {
-        this.rtc.off(f.q.WebTransportAck, this.webTransportAck);
-        let n = this.rtc.getVoiceAddress();
-        if (null == n) {
-            (this.logger.info("Failed to get SFU address"), this.emit(I.Disconnect));
-            return;
-        }
-        let i = `https://${n.address}:${n.port}/?token=${e}`;
-        (this.logger.info(`Starting WebTransport connection to ${n.address}:${n.port}`),
-            this.worker?.postMessage([p.Connect, i, t, this.userId]));
-    }
-    onLogMessage(e) {
-        this.logger.log(e);
-    }
-    onDisconnect() {
-        ((this.state = 0), this.worker?.terminate());
+        this.transport.connect();
     }
     setHosting(e) {
-        this.worker?.postMessage([p.SetHosting, e]);
+        this.closed || ((this.hosting = e), this.transport.send(m.SetHosting, e));
     }
     sendKey(e, t, n) {
-        this.worker?.postMessage([p.SendKey, e, t, n]);
+        this.transport.send(m.SendKey, e, t, n);
     }
     sendMouseWheel(e, t) {
-        this.worker?.postMessage([p.SendMouseWheel, e, t]);
+        this.transport.send(m.SendMouseWheel, e, t);
     }
     sendMouseMove(e, t, n) {
-        this.worker?.postMessage([p.SendMouseMove, e, t, n]);
+        this.transport.send(m.SendMouseMove, e, t, n);
     }
     sendMouseButton(e, t, n) {
-        this.worker?.postMessage([p.SendMouseButton, e, t, n]);
+        this.transport.send(m.SendMouseButton, e, t, n);
     }
     sendControllerButton(e, t, n) {
-        this.worker?.postMessage([p.SendControllerButton, e, t, n]);
+        this.transport.send(m.SendControllerButton, e, t, n);
     }
     sendControllerStick(e, t, n, i) {
-        this.worker?.postMessage([p.SendControllerStick, e, t, n, i]);
+        this.transport.send(m.SendControllerStick, e, t, n, i);
     }
     sendControllerTrigger(e, t, n) {
-        this.worker?.postMessage([p.SendControllerTrigger, e, t, n]);
+        this.transport.send(m.SendControllerTrigger, e, t, n);
     }
     sendControllerPlug(e, t) {
-        this.worker?.postMessage([p.SendControllerPlug, e, t]);
+        this.transport.send(m.SendControllerPlug, e, t);
     }
     sendGrab(e, t) {
-        this.worker?.postMessage([p.SendGrab, e, t]);
+        this.transport.send(m.SendGrab, e, t);
     }
     sendGrabAllow(e) {
-        this.worker?.postMessage([p.SendGrabAllow, e]);
+        this.transport.send(m.SendGrabAllow, e);
     }
     sendDrop(e) {
-        this.worker?.postMessage([p.SendDrop, e]);
+        this.transport.send(m.SendDrop, e);
     }
     close() {
-        this.worker?.postMessage([p.Close]);
+        for (let e of ((this.closed = !0), this.detach.splice(0))) e();
+        this.lease.release();
     }
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
-let g = {
+let T = {
         Escape: 27,
         Digit0: 48,
         Digit1: 49,
@@ -222,15 +215,15 @@ let g = {
         ArrowLeft: 37,
         ArrowRight: 39,
     },
-    T = [12, 13, 14, 15, 8, 9, null, null, 5, 4, 6, 7, 0, 1, 2, 3],
-    S = 1e3 / 120;
-function N(e) {
+    S = [12, 13, 14, 15, 8, 9, null, null, 5, 4, 6, 7, 0, 1, 2, 3],
+    N = 1e3 / 120;
+function C(e) {
     return Math.max(-32768, Math.min(32767, Math.round((e ?? 0) * 32767)));
 }
-function C(e) {
+function O(e) {
     return Math.max(0, Math.min(255, Math.round((e?.value ?? 0) * 255)));
 }
-class O {
+class R {
     connection;
     keyHandler;
     mouseHandler;
@@ -273,11 +266,11 @@ class O {
             (this.gamepadConnectedHandler = this._handleGamepadConnected.bind(this)),
             (this.gamepadDisconnectedHandler = this._handleGamepadDisconnected.bind(this)),
             (this.gamepadPollHandler = this._pollGamepad.bind(this)),
-            (this.logger = new h.A(`InputGuest(${t})`)),
-            e.on(I.Connect, this.connectHandler),
-            e.on(I.GrabAllow, this.grabAllowHandler),
-            e.on(I.Drop, this.releaseHandler),
-            e.on(I.Disconnect, this.disconnectHandler),
+            (this.logger = new f.A(`InputGuest(${t})`)),
+            e.on(p.Connect, this.connectHandler),
+            e.on(p.GrabAllow, this.grabAllowHandler),
+            e.on(p.Drop, this.releaseHandler),
+            e.on(p.Disconnect, this.disconnectHandler),
             e.isConnected && this._handleConnect());
     }
     get host() {
@@ -296,9 +289,9 @@ class O {
     _handleKeyEvent(e) {
         (e.preventDefault(), this.isMouseCaptured && "Escape" === e.code)
             ? this._dropController()
-            : null == g[e.code]
+            : null == T[e.code]
               ? this.logger.log(`Unhandled key code ${e.code}`)
-              : this.connection.sendKey(this.sessionId, g[e.code], "keydown" === e.type);
+              : this.connection.sendKey(this.sessionId, T[e.code], "keydown" === e.type);
     }
     _handleMouseEvent(e) {
         (e.preventDefault(),
@@ -376,13 +369,13 @@ class O {
         (this.logger.log(`Forwarding gamepad ${e.id}`),
             (this.gamepadIndex = e.index),
             (this.lastGamepadTimestamp = -1),
-            (this.lastButtons = T.map(() => !1)),
+            (this.lastButtons = S.map(() => !1)),
             (this.lastLeftStick = [0, 0]),
             (this.lastRightStick = [0, 0]),
             (this.lastLeftTrigger = 0),
             (this.lastRightTrigger = 0),
             this.connection.sendControllerPlug(this.sessionId, !0),
-            (this.gamepadPollInterval = setInterval(this.gamepadPollHandler, S)),
+            (this.gamepadPollInterval = setInterval(this.gamepadPollHandler, N)),
             this._pollGamepad());
     }
     _unplugGamepad() {
@@ -396,24 +389,24 @@ class O {
         let e = navigator.getGamepads()[this.gamepadIndex];
         if (null == e || e.timestamp === this.lastGamepadTimestamp) return;
         ((this.lastGamepadTimestamp = e.timestamp),
-            T.forEach((t, n) => {
+            S.forEach((t, n) => {
                 if (null == t) return;
                 let i = e.buttons[n]?.pressed ?? !1;
                 i !== this.lastButtons[n] &&
                     ((this.lastButtons[n] = i), this.connection.sendControllerButton(this.sessionId, t, i));
             }));
-        let t = C(e.buttons[6]);
+        let t = O(e.buttons[6]);
         t !== this.lastLeftTrigger &&
             ((this.lastLeftTrigger = t), this.connection.sendControllerTrigger(this.sessionId, !0, t));
-        let n = C(e.buttons[7]);
+        let n = O(e.buttons[7]);
         n !== this.lastRightTrigger &&
             ((this.lastRightTrigger = n), this.connection.sendControllerTrigger(this.sessionId, !1, n));
-        let i = N(e.axes[0]),
-            r = N(-(e.axes[1] ?? 0));
+        let i = C(e.axes[0]),
+            r = C(-(e.axes[1] ?? 0));
         (i !== this.lastLeftStick[0] || r !== this.lastLeftStick[1]) &&
             ((this.lastLeftStick = [i, r]), this.connection.sendControllerStick(this.sessionId, !0, i, r));
-        let a = N(e.axes[2]),
-            s = N(-(e.axes[3] ?? 0));
+        let a = C(e.axes[2]),
+            s = C(-(e.axes[3] ?? 0));
         (a !== this.lastRightStick[0] || s !== this.lastRightStick[1]) &&
             ((this.lastRightStick = [a, s]), this.connection.sendControllerStick(this.sessionId, !1, a, s));
     }
@@ -432,16 +425,16 @@ class O {
             this._releaseMouse(),
             document.removeEventListener("keydown", this.keyHandler, !0),
             document.removeEventListener("keyup", this.keyHandler, !0),
-            this.connection.off(I.Connect, this.connectHandler),
-            this.connection.off(I.GrabAllow, this.grabAllowHandler),
-            this.connection.off(I.Drop, this.releaseHandler),
-            this.connection.off(I.Disconnect, this.disconnectHandler));
+            this.connection.off(p.Connect, this.connectHandler),
+            this.connection.off(p.GrabAllow, this.grabAllowHandler),
+            this.connection.off(p.Drop, this.releaseHandler),
+            this.connection.off(p.Disconnect, this.disconnectHandler));
     }
 }
-var R = n(777636),
-    L = n(719129),
-    y = n(775456);
-class D {
+var L = n(777636),
+    y = n(719129),
+    D = n(775456);
+class b {
     pid;
     connection;
     guildId;
@@ -479,21 +472,21 @@ class D {
             (this.gamepadTriggerHandler = this._handleGamepadTrigger.bind(this)),
             (this.grabHandler = this._handleGrab.bind(this)),
             (this.dropHandler = this._handleDrop.bind(this)),
-            (this.logger = new h.A("InputHost")),
-            e.on(I.Key, this.keyHandler),
-            e.on(I.MouseButton, this.mouseButtonHandler),
-            e.on(I.MouseMove, this.mouseMoveHandler),
-            e.on(I.MouseWheel, this.mouseWheelHandler),
-            e.on(I.ControllerPlug, this.gamepadPlugHandler),
-            e.on(I.ControllerButton, this.gamepadButtonHandler),
-            e.on(I.ControllerStick, this.gamepadStickHandler),
-            e.on(I.ControllerTrigger, this.gamepadTriggerHandler),
-            e.on(I.Grab, this.grabHandler),
-            e.on(I.Drop, this.dropHandler),
+            (this.logger = new f.A("InputHost")),
+            e.on(p.Key, this.keyHandler),
+            e.on(p.MouseButton, this.mouseButtonHandler),
+            e.on(p.MouseMove, this.mouseMoveHandler),
+            e.on(p.MouseWheel, this.mouseWheelHandler),
+            e.on(p.ControllerPlug, this.gamepadPlugHandler),
+            e.on(p.ControllerButton, this.gamepadButtonHandler),
+            e.on(p.ControllerStick, this.gamepadStickHandler),
+            e.on(p.ControllerTrigger, this.gamepadTriggerHandler),
+            e.on(p.Grab, this.grabHandler),
+            e.on(p.Drop, this.dropHandler),
             e.setHosting(!0));
     }
     async _connectHook(e) {
-        this.hook = await (0, L.Vz)(e, this._handleHookConnect.bind(this), () => {});
+        this.hook = await (0, y.Vz)(e, this._handleHookConnect.bind(this), () => {});
     }
     _handleHookConnect() {
         null != this.hook && this.hook.sendCommand(JSON.stringify({ message: "inject_input", inject: !0 }));
@@ -508,7 +501,7 @@ class D {
             if (
                 !(
                     null != this.guildId &&
-                    y.A.getConfig({ guildId: this.guildId, location: "_handleGrab" }).allowWrestling
+                    D.A.getConfig({ guildId: this.guildId, location: "_handleGrab" }).allowWrestling
                 )
             )
                 return void this.connection.sendDrop(t);
@@ -517,7 +510,7 @@ class D {
         ((this.holderSessionId = t),
             (this.holderUserId = e),
             this.connection.sendGrabAllow(t),
-            this.onGrab((0, R.C)(e.toString())));
+            this.onGrab((0, L.C)(e.toString())));
     }
     _handleDrop(e) {
         (this.logger.log(`Received drop for session ${e}`),
@@ -578,186 +571,188 @@ class D {
     shutdown() {
         (null != this.holderSessionId && this.connection.sendDrop(this.holderSessionId),
             this.connection.setHosting(!1),
-            this.connection.off(I.Key, this.keyHandler),
-            this.connection.off(I.MouseButton, this.mouseButtonHandler),
-            this.connection.off(I.MouseMove, this.mouseMoveHandler),
-            this.connection.off(I.MouseWheel, this.mouseWheelHandler),
-            this.connection.off(I.ControllerPlug, this.gamepadPlugHandler),
-            this.connection.off(I.ControllerButton, this.gamepadButtonHandler),
-            this.connection.off(I.ControllerStick, this.gamepadStickHandler),
-            this.connection.off(I.ControllerTrigger, this.gamepadTriggerHandler),
-            this.connection.off(I.Grab, this.grabHandler),
-            this.connection.off(I.Drop, this.dropHandler),
+            this.connection.off(p.Key, this.keyHandler),
+            this.connection.off(p.MouseButton, this.mouseButtonHandler),
+            this.connection.off(p.MouseMove, this.mouseMoveHandler),
+            this.connection.off(p.MouseWheel, this.mouseWheelHandler),
+            this.connection.off(p.ControllerPlug, this.gamepadPlugHandler),
+            this.connection.off(p.ControllerButton, this.gamepadButtonHandler),
+            this.connection.off(p.ControllerStick, this.gamepadStickHandler),
+            this.connection.off(p.ControllerTrigger, this.gamepadTriggerHandler),
+            this.connection.off(p.Grab, this.grabHandler),
+            this.connection.off(p.Drop, this.dropHandler),
             null != this.hook &&
                 (this.hook.sendCommand(JSON.stringify({ message: "inject_input", inject: !1 })),
                 this.hook.destroy(),
                 (this.hook = null)));
     }
 }
-var b = n(565886),
-    v = n(652215),
-    P = n(55010);
-let M = null,
-    U = null,
+var v = n(565886),
+    P = n(652215),
+    M = n(55010);
+let U = null,
     w = null,
     G = null,
-    x = new Set();
-function k(e, t, n) {
-    return (0, c._z)({ streamType: null != t ? P.U4.GUILD : P.U4.CALL, guildId: t, channelId: n, ownerId: e });
+    x = null,
+    k = null,
+    F = new Set();
+function B(e, t, n) {
+    return (0, c._z)({ streamType: null != t ? M.U4.GUILD : M.U4.CALL, guildId: t, channelId: n, ownerId: e });
 }
-function F(e) {
-    e !== G && ((G = e), z.emitChange());
+function V(e) {
+    e !== k && ((k = e), Q.emitChange());
 }
-function B() {
-    null != G && ((G = null), z.emitChange());
+function H() {
+    null != k && ((k = null), Q.emitChange());
 }
-function V() {
-    if (null != M) return M;
+function j() {
+    if (null != U) return U;
     let e = _.A.getRTCConnection();
     if (null == e) return null;
-    let t = new m(e, u.default.getId());
+    let t = new g(e, u.default.getId());
     return (
-        t.on(I.Disconnect, () => {
-            M === t &&
-                (null != U &&
+        (w = () => {
+            U === t &&
+                (null != G &&
                     o.h.dispatch({
                         type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: U.streamKey,
+                        streamKey: G.streamKey,
                         isHost: !0,
                         host: u.default.getId(),
                         active: !1,
                     }),
-                null != w &&
+                null != x &&
                     o.h.dispatch({
                         type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: w.streamKey,
+                        streamKey: x.streamKey,
                         isHost: !1,
-                        host: w.inputGuest.host,
+                        host: x.inputGuest.host,
                         active: !1,
                     }));
         }),
+        t.on(p.Disconnect, w),
         t.connect(),
-        (M = t)
+        (U = t)
     );
 }
-function H() {
-    null != M && null == U && null == w && (M.close(), (M = null));
-}
-function j(e) {
-    return U?.streamKey === e && (U.inputHost.shutdown(), (U = null), (G = null), H(), !0);
-}
 function W() {
-    null != w &&
-        (E.A.getRTCConnection(w.streamKey)?.setAvSyncEnabled(w.inputGuest.host, !0),
-        w.inputGuest.shutdown(),
-        (w = null));
+    null != U && null == G && null == x && (null != w && U.off(p.Disconnect, w), U.close(), (w = null), (U = null));
 }
 function Y(e) {
-    return w?.streamKey === e && (W(), H(), !0);
+    return G?.streamKey === e && (G.inputHost.shutdown(), (G = null), (k = null), W(), !0);
 }
-function K(e) {
-    let t = j(e),
-        n = Y(e);
-    return t || n;
+function K() {
+    null != x &&
+        (E.A.getRTCConnection(x.streamKey)?.setAvSyncEnabled(x.inputGuest.host, !0),
+        x.inputGuest.shutdown(),
+        (x = null));
 }
 function $(e) {
-    let t = x.delete(e),
-        n = Y(e);
+    return x?.streamKey === e && (K(), W(), !0);
+}
+function X(e) {
+    let t = Y(e),
+        n = $(e);
     return t || n;
 }
-class X extends s.Ay.Store {
+function z(e) {
+    let t = F.delete(e),
+        n = $(e);
+    return t || n;
+}
+class q extends s.Ay.Store {
     initialize() {
         this.waitFor(u.default, _.A, d.Ay, E.A);
     }
     static displayName = "PassTheControllerStore";
     isSelfPassingController(e) {
-        return U?.streamKey === e;
+        return G?.streamKey === e;
     }
     isStreamPassingController(e) {
-        return x.has(e);
+        return F.has(e);
     }
     isSelfHoldingController(e) {
-        return w?.streamKey === e;
+        return x?.streamKey === e;
     }
     getInputGuest(e) {
-        return w?.streamKey === e ? w.inputGuest : null;
+        return x?.streamKey === e ? x.inputGuest : null;
     }
     getControllerHolderId(e) {
-        return U?.streamKey === e ? G : null;
+        return G?.streamKey === e ? k : null;
     }
     getGuestStreamKey() {
-        return w?.streamKey ?? null;
+        return x?.streamKey ?? null;
     }
     getGuestHostId(e) {
-        return w?.streamKey === e ? w.inputGuest.host : null;
+        return x?.streamKey === e ? x.inputGuest.host : null;
     }
     getHostStreamKeys() {
-        return x;
+        return F;
     }
 }
-let z = new X(o.h, {
+let Q = new q(o.h, {
         CONNECTION_OPEN: function () {
-            (x.clear(), (G = null));
+            (F.clear(), (k = null));
         },
         PASS_THE_CONTROLLER_UPDATE: function (e) {
             let { streamKey: t, isHost: n, host: i, active: r } = e;
             return n
                 ? r
                     ? (function (e) {
-                          if (U?.streamKey === e) return !1;
+                          if (G?.streamKey === e) return !1;
                           let t = E.A.getStreamPid(e);
-                          if (null == t || (0, b.X)(e)) return !1;
-                          let n = V();
+                          if (null == t || (0, v.X)(e)) return !1;
+                          let n = j();
                           return (
                               null != n &&
-                              (U?.inputHost.shutdown(),
-                              (G = null),
-                              (U = { streamKey: e, inputHost: new D(n, t, (0, c.Iy)(e).guildId ?? null, F, B) }),
+                              (G?.inputHost.shutdown(),
+                              (k = null),
+                              (G = { streamKey: e, inputHost: new b(n, t, (0, c.Iy)(e).guildId ?? null, V, H) }),
                               !0)
                           );
                       })(t)
-                    : j(t)
+                    : Y(t)
                 : r
                   ? (function (e, t) {
-                        if (w?.streamKey === e) return !1;
-                        let n = V();
+                        if (x?.streamKey === e) return !1;
+                        let n = j();
                         return (
                             null != n &&
-                            (W(),
+                            (K(),
                             E.A.getRTCConnection(e)?.setAvSyncEnabled(t, !1),
-                            (w = { streamKey: e, inputGuest: new O(n, t, e) }),
+                            (x = { streamKey: e, inputGuest: new R(n, t, e) }),
                             !0)
                         );
                     })(t, i)
-                  : Y(t);
+                  : $(t);
         },
         PASS_THE_CONTROLLER_TAKE_BACK: function (e) {
-            if (U?.streamKey !== e.streamKey || null == G) return !1;
-            U.inputHost.takeBackController();
+            if (G?.streamKey !== e.streamKey || null == k) return !1;
+            G.inputHost.takeBackController();
         },
         STREAM_DELETE: function (e) {
-            return w?.streamKey === e.streamKey && e.reason === v.H2B.USER_REQUESTED ? $(e.streamKey) : K(e.streamKey);
+            return x?.streamKey === e.streamKey && e.reason === P.H2B.USER_REQUESTED ? z(e.streamKey) : X(e.streamKey);
         },
         STREAM_START: function (e) {
             let { streamType: t, guildId: n, channelId: i } = e,
                 r = (0, c._z)({ streamType: t, guildId: n, channelId: i, ownerId: u.default.getId() });
-            return U?.streamKey === r && E.A.getStreamPid(r) !== U.inputHost.pid && j(r);
+            return G?.streamKey === r && E.A.getStreamPid(r) !== G.inputHost.pid && Y(r);
         },
         STREAM_STOP: function (e) {
-            return K(e.streamKey);
+            return X(e.streamKey);
         },
         RTC_CONNECTION_FLAGS: function (e) {
             let { flags: t, userId: n, guildId: i, channelId: r } = e,
-                s = k(n, i, r);
-            (0, a.Lt)(t, v.Ajs.PASS_THE_CONTROLLER_HOST) ? x.add(s) : $(s);
+                s = B(n, i, r);
+            (0, a.Lt)(t, P.Ajs.PASS_THE_CONTROLLER_HOST) ? F.add(s) : z(s);
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, guildId: n, channelId: i, context: r } = e;
-            return r === l.x.DEFAULT && (null != U && t === G && U.inputHost.takeBackController(), $(k(t, n, i)));
+            return r === l.x.DEFAULT && (null != G && t === k && G.inputHost.takeBackController(), z(B(t, n, i)));
         },
         RTC_CONNECTION_STATE: function (e) {
-            if (e.context !== l.x.DEFAULT || e.state !== v.S7L.DISCONNECTED || 0 === x.size) return !1;
-            x.clear();
+            if (e.context !== l.x.DEFAULT || e.state !== P.S7L.DISCONNECTED || 0 === F.size) return !1;
+            F.clear();
         },
     }),
-    q = z;
+    J = Q;

@@ -1768,23 +1768,24 @@ function Z(e) {
                 onReady: r,
                 onResize: a,
                 reportContainerResized: s = !0,
-                className: l,
-                ...o
+                onVideoElement: l,
+                className: o,
+                ...d
             } = e,
-            d = X.useRef(null),
             c = X.useRef(null),
-            u = X.useRef({ width: 0, height: 0 }),
-            _ = X.useRef({ streamId: n, paused: i, onReady: r, onResize: a, onContainerResized: t });
+            u = X.useRef(null),
+            _ = X.useRef({ width: 0, height: 0 }),
+            E = X.useRef({ streamId: n, paused: i, onReady: r, onResize: a, onContainerResized: t });
         return (
             X.useLayoutEffect(() => {
-                let { current: e } = d,
+                let { current: e } = c,
                     t = new (e?.ownerDocument?.defaultView ?? window).ResizeObserver((e) => {
                         if (s)
                             for (let t of e) {
-                                if (t.target !== c.current) continue;
+                                if (t.target !== u.current) continue;
                                 let e = window.devicePixelRatio * t.target.clientWidth,
                                     n = window.devicePixelRatio * t.target.clientHeight;
-                                _.current.onContainerResized?.(_.current.streamId, e, n);
+                                E.current.onContainerResized?.(E.current.streamId, e, n);
                             }
                     });
                 if (null != e) {
@@ -1795,37 +1796,38 @@ function Z(e) {
                         (n.autoplay = !0),
                         (n.muted = !0),
                         n.addEventListener("pause", function () {
-                            _.current.paused || c.current?.play();
+                            E.current.paused || u.current?.play();
                         }),
                         n.addEventListener("resize", function () {
-                            let { width: e, height: t } = u.current,
-                                n = c.current?.videoWidth ?? 0,
-                                i = c.current?.videoHeight ?? 0;
+                            let { width: e, height: t } = _.current,
+                                n = u.current?.videoWidth ?? 0,
+                                i = u.current?.videoHeight ?? 0;
                             if (e !== n || t !== i) {
                                 let e = { width: n, height: i };
-                                (_.current.onResize?.(e), (u.current = e));
+                                (E.current.onResize?.(e), (_.current = e));
                             }
                         }),
                         n.addEventListener("canplaythrough", function () {
                             (J.info(
-                                `handleReady for ${_.current.streamId}, have onReady callback = ${null != _.current.onReady}`,
+                                `handleReady for ${E.current.streamId}, have onReady callback = ${null != E.current.onReady}`,
                             ),
-                                _.current.onReady?.());
+                                E.current.onReady?.());
                         }),
-                        J.info(`create video element for ${_.current.streamId}, readyState=${n.readyState}`),
+                        J.info(`create video element for ${E.current.streamId}, readyState=${n.readyState}`),
                         n.readyState > 3 &&
-                            J.error(`video element for ${_.current.streamId} was ready before attached`),
+                            J.error(`video element for ${E.current.streamId} was ready before attached`),
                         e.appendChild(n),
                         t.disconnect(),
                         t.observe(n),
-                        (c.current = n));
+                        (u.current = n));
                 }
             }, [s]),
+            X.useLayoutEffect(() => (l?.(u.current), () => l?.(null)), [l]),
             X.useEffect(() => {
-                ((_.current.streamId = n), (_.current.paused = i), (_.current.onReady = r), (_.current.onResize = a));
+                ((E.current.streamId = n), (E.current.paused = i), (E.current.onReady = r), (E.current.onResize = a));
             }),
             X.useEffect(() => {
-                let e = c.current;
+                let e = u.current;
                 if (null != e)
                     if (i) null != e.srcObject && (e.srcObject = null);
                     else {
@@ -1839,7 +1841,7 @@ function Z(e) {
                         );
                     }
             }, [i, n]),
-            (0, $.jsx)("div", { className: q()("media-engine-video", l), ref: d, ...o })
+            (0, $.jsx)("div", { className: q()("media-engine-video", o), ref: c, ...d })
         );
     })(e, Z.onContainerResized);
 }

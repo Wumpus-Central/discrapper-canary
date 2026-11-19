@@ -444,7 +444,7 @@ l.d(
                                         renderPopout: (e) => {
                                             var n;
                                             let { closePopout: l } = e;
-                                            return (0, t.jsx)(T.A, {
+                                            return (0, t.jsx)(T.default, {
                                                 closePopout: () => {
                                                     l();
                                                 },

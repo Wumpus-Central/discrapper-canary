@@ -2021,7 +2021,7 @@ function nX(e) {
         r = i.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(t4.A, {
+                return (0, l.jsx)(t4.default, {
                     channel: n,
                     guildId: s,
                     pickerIntention: nB.EmojiIntention.NO_CUSTOM_EMOJI,
@@ -2646,7 +2646,7 @@ class nQ extends i.PureComponent {
     renderEmojiPicker = (e) => {
         let { closePopout: t } = e,
             { channel: n } = this.props;
-        return (0, l.jsx)(t4.A, {
+        return (0, l.jsx)(t4.default, {
             guildId: n?.guild_id,
             closePopout: t,
             onSelectEmoji: (e) => {

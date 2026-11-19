@@ -6322,7 +6322,7 @@ function r0(e) {
         a = G.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, A.jsx)(rU.A, {
+                return (0, A.jsx)(rU.default, {
                     pickerIntention: rQ.EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI,
                     channel: r,
                     closePopout: t,
@@ -11883,7 +11883,7 @@ var up = n(834720),
         (g.ABOUT = "about"),
         (g.REASONS_TO_JOIN = "reasons_to_join"),
         g),
-    uI = n(811091),
+    uI = n(661191),
     ub = n(980546);
 function uS(e) {
     let {
@@ -12197,7 +12197,7 @@ function uv(e) {
             animation: rM.Y.Animation.NONE,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, A.jsx)(rU.A, {
+                return (0, A.jsx)(rU.default, {
                     pickerIntention: rQ.EmojiIntention.COMMUNITY_CONTENT,
                     closePopout: t,
                     onSelectEmoji: (e) => {
@@ -27760,7 +27760,7 @@ function I0(e) {
               position: "bottom",
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, A.jsx)(rU.A, {
+                  return (0, A.jsx)(rU.default, {
                       closePopout: t,
                       onSelectEmoji: l(t),
                       pickerIntention: rQ.EmojiIntention.GUILD_PROFILE,

@@ -64,7 +64,7 @@ n.d(
                                 targetElementRef: y,
                                 renderPopout: function (t) {
                                     let { closePopout: n } = t;
-                                    return (0, e.jsx)(d.A, {
+                                    return (0, e.jsx)(d.default, {
                                         guildId: i?.guild_id,
                                         closePopout: n,
                                         onSelectEmoji: (t) => {

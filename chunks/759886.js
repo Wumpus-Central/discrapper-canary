@@ -2,19 +2,19 @@ t.d(n, { A: () => C });
 var i = t(477900),
     l = t(582128),
     o = t(855986),
-    s = t(452027),
-    a = t(265872),
-    r = t(862301),
-    u = t(834730),
+    a = t(452027),
+    s = t(265872),
+    u = t(862301),
+    r = t(834730),
     d = t(565645),
     m = t(414079),
     c = t(713517),
     j = t(375499),
     p = t(863576),
-    h = t(808728),
-    f = t(284009),
-    A = t.n(f),
-    N = t(121681),
+    f = t(808728),
+    h = t(284009),
+    N = t.n(h),
+    A = t(121681),
     x = t(7584),
     E = t(307731),
     g = t(792996),
@@ -23,7 +23,7 @@ function C(e) {
     let {
             className: n,
             guildId: t,
-            error: f,
+            error: h,
             emojiId: C,
             emojiName: b,
             isRequiredField: I = !0,
@@ -33,16 +33,16 @@ function C(e) {
         } = e,
         B = (function (e) {
             let { emojiId: n, emojiName: t } = e,
-                i = (0, o.bG)([N.Ay], () => (null != n ? N.Ay.getCustomEmojiById(n) : null));
+                i = (0, o.bG)([A.Ay], () => (null != n ? A.Ay.getCustomEmojiById(n) : null));
             if (null != i || null != t)
                 if (null == n)
                     return (
-                        A()(null != t, "emojiName must be defined if emojiId is not defined"),
+                        N()(null != t, "emojiName must be defined if emojiId is not defined"),
                         x.Ay.convertSurrogateToName(t, !1)
                     );
                 else return i?.name;
         })({ emojiId: C, emojiName: b }),
-        S = (0, o.bG)([h.A], () => (null != t ? h.A.getDefaultChannel(t) : null)),
+        S = (0, o.bG)([f.A], () => (null != t ? f.A.getDefaultChannel(t) : null)),
         w = l.useRef(null),
         { isHoveringOrFocusing: M } = (0, c.A)(w);
     function O() {
@@ -61,17 +61,17 @@ function C(e) {
         T = !R.isDeletedCustomEmoji && R.hasEmojiDisplayName;
     return (0, i.jsx)("div", {
         className: n,
-        children: (0, i.jsx)(s.D, {
+        children: (0, i.jsx)(a.D, {
             required: I,
             label: g.intl.string(g.t["3BQmiC"]),
-            errorMessage: f ?? void 0,
-            children: (0, i.jsx)(a.Y, {
+            errorMessage: h ?? void 0,
+            children: (0, i.jsx)(s.Y, {
                 targetElementRef: w,
-                animation: a.Y.Animation.NONE,
+                animation: s.Y.Animation.NONE,
                 position: "top",
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, i.jsx)(p.A, {
+                    return (0, i.jsx)(p.default, {
                         closePopout: n,
                         pickerIntention: E.EmojiIntention.SOUNDBOARD,
                         onNavigateAway: n,
@@ -86,7 +86,7 @@ function C(e) {
                 },
                 children: (e, n) => {
                     let { isShown: t } = n;
-                    return (0, i.jsxs)(r.F, {
+                    return (0, i.jsxs)(u.F, {
                         ...e,
                         className: v.LM,
                         ref: w,
@@ -99,7 +99,7 @@ function C(e) {
                                         ? () => (0, i.jsx)(d.A, { emojiName: b, emojiId: C })
                                         : null,
                             }),
-                            (0, i.jsx)(u.E, {
+                            (0, i.jsx)(r.E, {
                                 variant: "body-md/normal",
                                 lineClamp: 1,
                                 color: T ? "text-default" : "text-muted",

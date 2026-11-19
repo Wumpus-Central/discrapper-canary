@@ -52,7 +52,7 @@ var J = n(138399),
     q = n(596344),
     ee = n(994500),
     et = n(5377),
-    en = n(811091),
+    en = n(661191),
     ei = n(746080),
     el = n(652215);
 let es = 588245 != n.j ? 18144e5 : null;
@@ -331,10 +331,10 @@ function eW(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, s, n));
     }
-    function e3() {
+    function e6() {
         M.A.preload(el.ME, t.id);
     }
-    function e6(e) {
+    function e3(e) {
         e.stopPropagation();
     }
     function e7(e) {
@@ -614,7 +614,7 @@ function eW(e) {
                 ref: ep,
                 onMouseEnter: e8,
                 onMouseLeave: e1,
-                onMouseDown: e3,
+                onMouseDown: e6,
                 onFocus: e5,
                 onBlur: e4,
                 onContextMenu: te,
@@ -749,7 +749,7 @@ function eW(e) {
                                                   ? er.intl.string(er.t["26C4oi"])
                                                   : er.intl.string(er.t.jsvgc3),
                                               onClick: eM ? tt : e9,
-                                              onMouseDown: e6,
+                                              onMouseDown: e3,
                                               nameplate: x,
                                               visibleElementRef: eq,
                                           }),

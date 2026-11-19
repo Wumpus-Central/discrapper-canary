@@ -248,7 +248,7 @@ let E = new (class extends _ {
             t && this.renderLatestMessages.record());
     }
     recordMessageRender(e, t, i, r) {
-        let { default: a } = n(811091);
+        let { default: a } = n(661191);
         if (!this.renderLatestMessages.hasData())
             if ((this.renderMessages.record(), t.length > 0 && this.renderMessagesWithCache.record(), i)) {
                 if ((this.renderLatestMessages.record(), null == this.cachedChannelId)) {

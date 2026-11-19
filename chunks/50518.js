@@ -171,7 +171,7 @@ function ec(e) {
                 let { closePopout: t } = e;
                 return (0, a.jsx)("div", {
                     className: er.Fb,
-                    children: (0, a.jsx)(ee.A, {
+                    children: (0, a.jsx)(ee.default, {
                         channel: f,
                         pickerIntention: ea.EmojiIntention.POLLS,
                         closePopout: t,

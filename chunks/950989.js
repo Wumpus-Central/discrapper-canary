@@ -3,8 +3,8 @@ var i = t(477900),
     a = t(855986),
     o = t(189213),
     u = t(821609),
-    r = t(95477),
-    d = t(265872),
+    d = t(95477),
+    r = t(265872),
     s = t(285796),
     c = t(696986),
     m = t(150934),
@@ -81,7 +81,7 @@ t.d(
                     children: [
                         (0, i.jsx)("div", {
                             className: b.Kf,
-                            children: (0, i.jsx)(r.k, {
+                            children: (0, i.jsx)(d.k, {
                                 inputRef: P,
                                 maxLength: 20,
                                 value: T,
@@ -92,12 +92,12 @@ t.d(
                                     type: "emoji",
                                     button: (0, i.jsx)("div", {
                                         className: b.S0,
-                                        children: (0, i.jsx)(d.Y, {
+                                        children: (0, i.jsx)(r.Y, {
                                             targetElementRef: E,
                                             renderPopout: function (e) {
                                                 let { closePopout: n } = e,
                                                     l = C.A.getDefaultChannel(I);
-                                                return (0, i.jsx)(p.A, {
+                                                return (0, i.jsx)(p.default, {
                                                     guildId: I,
                                                     closePopout: n,
                                                     onSelectEmoji: (e) => {
@@ -116,7 +116,7 @@ t.d(
                                                 });
                                             },
                                             position: "left",
-                                            animation: d.Y.Animation.NONE,
+                                            animation: r.Y.Animation.NONE,
                                             align: "bottom",
                                             children: (e, n) => {
                                                 let { isShown: t } = n;

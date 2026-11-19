@@ -25,7 +25,7 @@ var s = t(477900),
     b = t(71393),
     M = t(596344),
     T = t(218461),
-    v = t(811091),
+    v = t(661191),
     U = t(851109),
     C = t(706341),
     k = t(932883),
@@ -893,8 +893,8 @@ var e1 = t(435558),
     e3 = t.n(e1),
     e4 = t(837381),
     e2 = t(847374),
-    e8 = t(912592),
-    e6 = t(821609),
+    e6 = t(912592),
+    e8 = t(821609),
     e7 = t(475825),
     e9 = t(928039),
     e5 = t(188567);
@@ -958,7 +958,7 @@ function no() {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, s.jsx)(e8.InboxIcon, {
+                        (0, s.jsx)(e6.InboxIcon, {
                             size: "custom",
                             height: 40,
                             width: 40,
@@ -972,7 +972,7 @@ function no() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e6.$, {
+                (0, s.jsx)(e8.$, {
                     variant: "secondary",
                     onClick: () => (0, L.tZ)(e),
                     text: eD.intl.string(ns.default.klSpfs),

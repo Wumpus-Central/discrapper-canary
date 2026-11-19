@@ -8,7 +8,7 @@ var i = n(435558),
     d = n(183636),
     c = n(626584),
     u = n(652896),
-    _ = n(712766),
+    _ = n(623485),
     E = n(308877),
     A = n(617617),
     f = n(46653),
@@ -2050,10 +2050,10 @@ let e0 = new c.A("ConnectionStore"),
     e3 = !0,
     e6 = null,
     e5 = null;
-function e8() {
+function e7() {
     j.update();
 }
-function e7() {
+function e8() {
     return (j.update(), !1);
 }
 function e4() {
@@ -2066,7 +2066,7 @@ class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         (this.waitFor(f.default, h.A, I.A, p.Ay, _.A, m.A, g.A, T.Ay, S.A, N.A, A.A),
-            this.syncWith([p.Ay], e7),
+            this.syncWith([p.Ay], e8),
             this.syncWith([S.A], e4));
     }
     getSocket() {
@@ -2239,14 +2239,14 @@ let tt = new te(l.h, {
             !1
         );
     },
-    STREAM_CREATE: e8,
+    STREAM_CREATE: e7,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (V.isSessionEstablished()) {
             let e = null != n ? I.A.getChannel(i)?.rtcRegion : h.A.getCall(i)?.region;
             V.streamCreate(t, n, i, e ?? g.A.getPreferredRegion());
         }
-        return (e8(), !1);
+        return (e7(), !1);
     },
     STREAM_WATCH: function (e) {
         let { streamKey: t, allowMultiple: n } = e;
@@ -2265,7 +2265,7 @@ let tt = new te(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return (e9(t), e8(), !1);
+        return (e9(t), e7(), !1);
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -2289,12 +2289,12 @@ let tt = new te(l.h, {
     RESET_SOCKET: function (e) {
         V.connectionState !== O.A.WILL_RECONNECT && V.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: e8,
-    RUNNING_GAMES_CHANGE: e8,
+    CLIPS_SETTINGS_UPDATE: e7,
+    RUNNING_GAMES_CHANGE: e7,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         e.settings.type === eJ.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            e8();
+            e7();
     },
-    PASS_THE_CONTROLLER_UPDATE: e8,
+    PASS_THE_CONTROLLER_UPDATE: e7,
 });

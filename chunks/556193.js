@@ -4,7 +4,7 @@ var i = n(73153),
     a = n(439372),
     s = n(773669),
     l = n(403362),
-    o = n(811091),
+    o = n(661191),
     d = n(883600),
     c = n(856383),
     u = n(212031);
@@ -17,9 +17,9 @@ class _ extends a.A {
             let t = await r.A.fetchChangelogConfig(),
                 n = t.body,
                 a =
-                    ((e = parseInt("678212")),
+                    ((e = parseInt("678214")),
                     Number.isNaN(e) &&
-                        (c.A.captureMessage("Trying to open a changelog for an invalid build number 678212"), (e = 0)),
+                        (c.A.captureMessage("Trying to open a changelog for an invalid build number 678214"), (e = 0)),
                     e),
                 _ = (function (e, t) {
                     let n = 0,

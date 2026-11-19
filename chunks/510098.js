@@ -3102,64 +3102,65 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e8 = n(935399),
-    e7 = n(503698),
-    e4 = n.n(e7),
+var e7 = n(935399),
+    e8 = n(503698),
+    e4 = n.n(e8),
     e9 = n(51906);
 function te(e) {
-    let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
-        l = f.useRef(null),
-        o = f.useRef({ width: 0, height: 0 });
-    (f.useLayoutEffect(() => {
-        let e = l.current;
-        if (null != e)
-            return (
-                (0, O.NM)(t),
-                (e.srcObject = (0, z.yL)(t)),
-                () => {
-                    ((0, O.gm)(t), (e.srcObject = null), e.load());
-                }
-            );
-    }, [t]),
+    let { streamId: t, paused: n = !1, onReady: i, onResize: r, onVideoElement: a, className: s, ...l } = e,
+        o = f.useRef(null),
+        d = f.useRef({ width: 0, height: 0 });
+    (f.useLayoutEffect(() => (a?.(o.current), () => a?.(null)), [a]),
+        f.useLayoutEffect(() => {
+            let e = o.current;
+            if (null != e)
+                return (
+                    (0, O.NM)(t),
+                    (e.srcObject = (0, z.yL)(t)),
+                    () => {
+                        ((0, O.gm)(t), (e.srcObject = null), e.load());
+                    }
+                );
+        }, [t]),
         f.useEffect(
             () => (
-                n ? (l.current?.pause(), (0, O.gm)(t)) : (0, e9.yO)(l.current?.play()),
+                n ? (o.current?.pause(), (0, O.gm)(t)) : (0, e9.yO)(o.current?.play()),
                 () => {
                     n && (0, O.NM)(t);
                 }
             ),
             [n],
         ));
-    let d = f.useCallback(() => {
-        let { width: e, height: t } = o.current,
-            n = l.current?.videoWidth ?? 0,
-            i = l.current?.videoHeight ?? 0;
+    let c = f.useCallback(() => {
+        let { width: e, height: t } = d.current,
+            n = o.current?.videoWidth ?? 0,
+            i = o.current?.videoHeight ?? 0;
         if (e !== n || t !== i) {
             let e = { width: n, height: i };
-            (r?.(e), (o.current = e));
+            (r?.(e), (d.current = e));
         }
     }, [r]);
     f.useLayoutEffect(() => {
-        let e = l.current;
-        if (null != e) return (e.addEventListener("resize", d), () => e.removeEventListener("resize", d));
-    }, [d]);
-    let c = f.useCallback(() => {
+        let e = o.current;
+        if (null != e) return (e.addEventListener("resize", c), () => e.removeEventListener("resize", c));
+    }, [c]);
+    let u = f.useCallback(() => {
             i?.();
         }, [i]),
-        u = f.useCallback(
+        E = f.useCallback(
             (e) => {
                 n || e.currentTarget.play();
             },
             [n],
         );
     return (0, _.jsx)("video", {
-        className: e4()("media-engine-video", a),
-        ref: l,
+        className: e4()("media-engine-video", s),
+        ref: o,
         autoPlay: !0,
-        onPause: u,
-        onCanPlayThrough: c,
+        onPause: E,
+        onCanPlayThrough: u,
         muted: !0,
-        ...s,
+        ...l,
     });
 }
 function tt(e) {
@@ -3177,7 +3178,7 @@ function tt(e) {
             ),
             [o, a],
         ),
-        (0, e8.l0)(() => {
+        (0, e7.l0)(() => {
             o.destroy();
         }),
         f.useEffect(() => {

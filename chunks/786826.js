@@ -67,7 +67,7 @@ function z(e) {
                     children: (e) =>
                         (0, t.jsx)("div", {
                             className: e,
-                            children: (0, t.jsx)(E.A, {
+                            children: (0, t.jsx)(E.default, {
                                 persistSearch: !0,
                                 closePopout: n,
                                 onSelectEmoji: (e) => {

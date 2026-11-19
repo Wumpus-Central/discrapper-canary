@@ -2,7 +2,7 @@
 var i = n(46653),
     r = n(495867),
     a = n(129230),
-    s = n(811091),
+    s = n(661191),
     l = n(652215);
 let o = (0, n(945810).mj)({
         name: "2026-06-clickstream-analytics",

@@ -9,9 +9,9 @@ var i = n(477900),
     c = n(43990),
     d = n(453903),
     m = n(413599),
-    p = n(683574);
+    f = n(683574);
 n(938796);
-var f = n(120692),
+var p = n(120692),
     h = n(665260),
     g = n(683063),
     A = n(265872),
@@ -90,7 +90,7 @@ function z(e) {
         q = (0, u.bG)([L.A], () => L.A.getChannel(r), [r]),
         Q = (0, u.bG)([L.A], () => L.A.getChannel(m), [m]),
         { enableMediaComments: $ } = U.useConfig({ location: "ClipEmbedMediaMentionBar" }),
-        { activeLayer: X, videoRef: Z } = (0, p.X$)(),
+        { activeLayer: X, videoRef: Z } = (0, f.X$)(),
         J = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
         { data: ee } = R(n, r, o, Y?.author.id, $ && J),
         et = l.useRef(null);
@@ -119,12 +119,12 @@ function z(e) {
     let ei = ee?.length ?? 0;
     if (!$ || null == q || null == s) return null;
     let el = V.intl.formatToPlainString(B.default.OYDyt2, { count: ei });
-    return (0, i.jsxs)(f.animated.div, {
+    return (0, i.jsxs)(p.animated.div, {
         className: a()(H.M0, { [H.pd]: c }),
         inert: c,
         style: {
-            opacity: (0, f.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (c ? 0 : `${e}`)),
-            transform: (0, f.to)(
+            opacity: (0, p.to)(t.to({ range: [0, 1], output: [0, 1] }), (e) => (c ? 0 : `${e}`)),
+            transform: (0, p.to)(
                 [t.to({ range: [0, 1], output: [50, 0] })],
                 (e) => `translateY(${e}px) translateX(-50%)`,
             ),
@@ -161,7 +161,7 @@ function z(e) {
                 targetElementRef: et,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(T.A, {
+                    return (0, i.jsx)(T.default, {
                         channel: q,
                         closePopout: t,
                         messageId: s,
@@ -263,7 +263,7 @@ function el(e) {
         } = e,
         { enableMediaComments: d } = U.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
         m = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
-        { isActive: g, isControlBarExpanded: A } = (0, p.X$)(),
+        { isActive: g, isControlBarExpanded: A } = (0, f.X$)(),
         C = (0, u.bG)([N.A], () => N.A.getMessage(s, o), [s, o]),
         { data: x } = R(n, s, a, C?.author.id, d && m && g);
     return (l.useEffect(() => {
@@ -274,11 +274,11 @@ function el(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c && (!g || !A) && (0, i.jsx)("div", { className: en.s_ }),
-                  (0, i.jsx)(f.animated.div, {
+                  (0, i.jsx)(p.animated.div, {
                       className: en.IO,
                       style: {
                           transform: g
-                              ? (0, f.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
+                              ? (0, p.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
                               : "translateY(60px)",
                       },
                       children: x.map((e) => (0, i.jsx)(ea, { hidden: c, message: e, durationSeconds: r }, e.id)),
@@ -306,7 +306,7 @@ function ea(e) {
         ),
         { content: o } = (0, et.A)(t, er),
         u = "" !== t.content ? o : null,
-        { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, p.X$)(),
+        { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, f.X$)(),
         [h, A] = l.useState(!1),
         [C, x] = l.useState(!1),
         [v, y] = l.useState(!1);
@@ -351,7 +351,7 @@ function ea(e) {
                 i = t.messageReference?.message_id;
             null != n && null != i && _.A.jumpToMessage({ channelId: n, messageId: i, flash: !0 });
         },
-        children: (0, i.jsx)(f.animated.div, {
+        children: (0, i.jsx)(p.animated.div, {
             className: en.BC,
             style: S,
             children:
@@ -398,7 +398,7 @@ function em(e) {
     let { timeline: t, userIds: n, guildId: r, channelId: a } = e,
         s = l.useMemo(() => eu.H.fromAttachmentTimeline(t), [t]),
         [o, u] = l.useState({ speakingUserIds: [], activeSoundboards: [] }),
-        { videoRef: c } = (0, p.X$)();
+        { videoRef: c } = (0, f.X$)();
     return (
         (0, eo.A)(() => {
             let e = c.current;
@@ -415,8 +415,8 @@ function em(e) {
         })
     );
 }
-var ep = n(419490),
-    ef = n(458977),
+var ef = n(419490),
+    ep = n(458977),
     eh = n(42502),
     eg = n(110742),
     eA = n(352527),
@@ -470,13 +470,13 @@ function eE(e) {
 var ev = n(879241);
 function e_(e) {
     let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
-        { enableDistributedClips: c } = ef.A.useConfig({ location: "DistributedClipShareCTA" }),
+        { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
         d = (0, u.bG)(
-            [ep.Ay, k.default],
+            [ef.Ay, k.default],
             () =>
                 (function (e, t) {
                     let n,
-                        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ep.Ay,
+                        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ef.Ay,
                         l = i.getClips(),
                         r = e.clip_remote_id,
                         a = null != r ? i.getClipByRemoteId(r) : void 0;
@@ -491,11 +491,11 @@ function e_(e) {
                         null != i && i > o && ((o = i), (n = e));
                     }
                     return n;
-                })(t, k.default.getId(), ep.Ay),
+                })(t, k.default.getId(), ef.Ay),
             [t],
         ),
         { onShareClick: m } = (0, eA.A)(n),
-        p = (0, u.bG)([k.default, N.A], () => {
+        f = (0, u.bG)([k.default, N.A], () => {
             let e = N.A.getMessage(n, r);
             return (
                 null != e &&
@@ -504,7 +504,7 @@ function e_(e) {
                     N.A.getMessage(n, e.messageReference.message_id)?.author?.id !== k.default.getId())
             );
         }),
-        f = (0, u.bG)([ep.Ay], () => ep.Ay.hasRepliedWithClip(r), [r]),
+        p = (0, u.bG)([ef.Ay], () => ef.Ay.hasRepliedWithClip(r), [r]),
         h = l.useCallback(
             (e) => {
                 null != d &&
@@ -517,7 +517,7 @@ function e_(e) {
             },
             [m, d, n, r, t],
         );
-    return c && null != d && !f && p
+    return c && null != d && !p && f
         ? (0, i.jsxs)("button", {
               className: a()(ev.eZ, { [ev.vu]: s, [ev.jn]: !o }),
               onClick: h,
@@ -539,7 +539,7 @@ function ey(e) {
             controlBarAnimationSpring: n,
             isControlBarExpanded: l,
             isActive: r,
-            isVolumeExpanded: f,
+            isVolumeExpanded: p,
             attachment: h,
             guildId: g,
             isFullScreen: A,
@@ -555,7 +555,7 @@ function ey(e) {
             isGridView: I,
         } = e,
         N = (0, u.bG)([m.A], () => m.A.theme),
-        { activeLayer: j } = (0, p.X$)(),
+        { activeLayer: j } = (0, f.X$)(),
         { ref: R, width: O } = (0, s.Ay)();
     return (0, i.jsx)(c.N, {
         theme: o.NJ.ONYX,
@@ -606,7 +606,7 @@ function ey(e) {
                                 messageId: v,
                                 guildId: g,
                                 containerWidth: O,
-                                hidden: !l || f,
+                                hidden: !l || p,
                             }),
                         }),
                     null != g &&

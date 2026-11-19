@@ -438,7 +438,7 @@ function to(e) {
         r = a.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(ep.A, {
+                return (0, l.jsx)(ep.default, {
                     channel: null,
                     guildId: n,
                     pickerIntention: te.EmojiIntention.NO_CUSTOM_EMOJI,

@@ -10,7 +10,7 @@ var i = n(448761),
     u = n(287809),
     _ = n(233993),
     E = n(73153),
-    A = n(811091),
+    A = n(661191),
     f = n(652215);
 class h extends a.A {
     actions = { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates };

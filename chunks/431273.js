@@ -501,7 +501,7 @@ function tx(t) {
                                     targetElementRef: F,
                                     renderPopout: function (t) {
                                         let { closePopout: e } = t;
-                                        return (0, l.jsx)(M.A, {
+                                        return (0, l.jsx)(M.default, {
                                             closePopout: e,
                                             onSelectEmoji: (t) => {
                                                 let { emoji: n, willClose: l } = t;

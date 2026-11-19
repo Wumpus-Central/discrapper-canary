@@ -8,7 +8,7 @@ n.d(
     {
         C: function (e) {
             let { channel: t, closePopout: n, analyticsOverride: r, onSelectEmoji: a, messageId: o } = e;
-            return (0, i.jsx)(l.A, {
+            return (0, i.jsx)(l.default, {
                 closePopout: n,
                 channel: t,
                 onSelectEmoji: a,

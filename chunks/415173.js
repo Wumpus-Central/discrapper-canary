@@ -144,7 +144,7 @@ var z = n(119173),
     eg = n(534400),
     ep = n(267102),
     ef = n(259264),
-    ex = n(555148),
+    ex = n(440545),
     eA = n(110234),
     eE = n(988468),
     eS = n(287809),
@@ -927,13 +927,13 @@ function e2(e) {
 var e3 = n(143129),
     e5 = n(821609),
     e6 = n(706712),
-    e8 = n(225123),
-    e4 = n(321090),
+    e4 = n(225123),
+    e8 = n(321090),
     e9 = n(189953);
 function e7(e) {
     let { locked: t, pinned: n, anchorLeft: i } = e,
-        r = (0, P.bG)([e8.A], () => e8.A.getSocket()),
-        s = (0, P.bG)([e4.A], () => e4.A.isGPUBoosted());
+        r = (0, P.bG)([e4.A], () => e4.A.getSocket()),
+        s = (0, P.bG)([e8.A], () => e8.A.isGPUBoosted());
     (0, e6.ZX)();
     let a = (0, P.bG)([Y.A], () => Y.A.getWindow(e0.f)),
         [o, d] = (0, e6.DQ)(r),
@@ -1633,7 +1633,7 @@ function t6(e) {
         },
     });
 }
-function t8(e) {
+function t4(e) {
     let { voiceChannel: t, locked: i } = e,
         r = v.useRef(null),
         s = t?.getGuildId() ?? null,
@@ -1701,7 +1701,7 @@ function t8(e) {
         },
     });
 }
-function t4(e) {
+function t8(e) {
     let { voiceChannel: t, locked: n } = e,
         i = v.useRef(null),
         r = (0, P.bG)([B.Ay], () => B.Ay.getVoiceChannelId() === t?.id);
@@ -1939,13 +1939,13 @@ function nr(e) {
                         className: nn.qi,
                         children: [
                             (0, l.jsx)(t6, { voiceChannel: r, locked: t }),
-                            (0, l.jsx)(t8, { voiceChannel: r, locked: t }),
+                            (0, l.jsx)(t4, { voiceChannel: r, locked: t }),
                             i && (0, l.jsx)(nt, { voiceChannel: r, locked: t }),
                         ],
                     }),
                     (0, l.jsx)("div", {
                         className: C()(nn.qi, s && nn.SV),
-                        children: (0, l.jsx)(t4, { voiceChannel: r, locked: t }),
+                        children: (0, l.jsx)(t8, { voiceChannel: r, locked: t }),
                     }),
                 ],
             }),
@@ -2720,8 +2720,8 @@ let n6 = v.memo(function (e) {
               }),
           });
 });
-var n8 = n(138399),
-    n4 = n(5206),
+var n4 = n(138399),
+    n8 = n(5206),
     n9 = n(355622),
     n7 = n(596344),
     ie = n(576705),
@@ -2756,7 +2756,7 @@ function il(e) {
     (s = i?.first() ?? null),
     (a = null != d && null == s && null != i && !i.loadingMore && !i.ready && !i.hasFetched && r),
     v.useEffect(() => {
-        null == t || (!n.current.has(t) && a && (n.current.add(t), n8.A.fetchMessages({ channelId: t, limit: 50 })));
+        null == t || (!n.current.has(t) && a && (n.current.add(t), n4.A.fetchMessages({ channelId: t, limit: 50 })));
     }, [t, a]),
     v.useEffect(() => {
         if (null == o || h) return;
@@ -2770,7 +2770,7 @@ function il(e) {
               className: ir.Q,
               children: (0, l.jsx)("div", {
                   className: ir.T,
-                  children: (0, l.jsx)(n4.A, { channel: d, guild: c, chatInputType: n9.oU.OVERLAY }, d.id),
+                  children: (0, l.jsx)(n8.A, { channel: d, guild: c, chatInputType: n9.oU.OVERLAY }, d.id),
               }),
           })
         : null;
@@ -3286,8 +3286,8 @@ var i2 = n(743082),
     i3 = n(395771),
     i5 = n(207228),
     i6 = n(760751),
-    i8 = n(365010);
-let i4 = {
+    i4 = n(365010);
+let i8 = {
         loading: [i_.default.Byq40w, i_.default["1G9dze"]],
         widget_error: [i_.default["r/q2ZV"], i_.default["+zyAZG"]],
         settings_failed: [i_.default["r/q2ZV"], i_.default.sruCpA],
@@ -3388,7 +3388,7 @@ function re(e) {
         a = (0, P.bG)([p.A], () => p.A.getProject(t)?.name, [t]),
         o = (0, P.bG)([p.A], () => p.A.getProject(t)?.id, [t]);
     if (n || null == i) return null;
-    let [d, u] = i4[i],
+    let [d, u] = i8[i],
         c = {
             appName: null != a && "" !== a ? a : eC.intl.string(i_.default.nXsF71),
             gameName: r ?? eC.intl.string(i_.default.RkGT9E),
@@ -3446,7 +3446,7 @@ function re(e) {
                       }
                     : null;
     return (0, l.jsxs)("div", {
-        className: C()(i8.M0, "game_not_targeted" === i || "loading" === i ? i8.pq : i8.$e),
+        className: C()(i4.M0, "game_not_targeted" === i || "loading" === i ? i4.pq : i4.$e),
         role: "status",
         "data-conjure-overlay-status": i,
         children: [
@@ -3456,7 +3456,7 @@ function re(e) {
                 "aria-label": m,
                 asContainer: !0,
                 children: (0, l.jsx)("div", {
-                    className: i8.iU,
+                    className: i4.iU,
                     children: (0, l.jsx)(w.E, { variant: "body-xs/medium", color: "none", lineClamp: 1, children: h }),
                 }),
             }),
