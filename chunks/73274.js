@@ -279,7 +279,7 @@ function Q(e) {
         ),
         ee = null != E && Y.some((e) => e.id === E) ? E : (Y[0]?.id ?? null),
         et = "copy" === R,
-        el = et || M.trim().length >= 2,
+        el = M.trim().length >= 2,
         en = i.useCallback(async () => {
             if (!el || null == ee) return;
             B(!0);
@@ -325,12 +325,12 @@ function Q(e) {
                     }
                 }
                 return ((0, F.A)(i.projectId, "remix"), i);
-            })(Q, ee, et ? { name: t.name, copy: !0 } : { name: M }, (e) => Z(p.A.getGuild(e)?.name ?? ""));
+            })(Q, ee, et ? { name: M, copy: !0 } : { name: M }, (e) => Z(p.A.getGuild(e)?.name ?? ""));
             if (null != e) {
                 if (e.ok) return void (await A());
                 B(!1);
             }
-        }, [Q, ee, et, t.name, M, el, A]),
+        }, [Q, ee, et, M, el, A]),
         ei = _.intl.string(w.default.XWgAfc);
     return (0, n.jsx)(r.a, {
         transitionState: C,
@@ -347,10 +347,10 @@ function Q(e) {
             children: [
                 (0, n.jsx)(u.k, {
                     label: _.intl.string(w.default["7gI+sw"]),
-                    value: et ? t.name : M,
+                    value: M,
                     onChange: T,
                     maxLength: 128,
-                    disabled: G || et,
+                    disabled: G,
                     fullWidth: !0,
                 }),
                 (0, n.jsx)(o.Z, {
@@ -370,7 +370,7 @@ function Q(e) {
                               variant: "body-sm/normal",
                               color: "text-muted",
                               children: _.intl.formatToPlainString(w.default.O25g5n, {
-                                  projectName: t.name,
+                                  projectName: M.trim(),
                                   server: L,
                               }),
                           }),

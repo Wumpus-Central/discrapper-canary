@@ -1015,18 +1015,17 @@ function eH(e) {
                                   children: b.intl.string(j.default.s7VnVF),
                               })
                             : null,
-                        $
-                            ? (0, n.jsx)(ev.A, { projectId: e })
-                            : (0, n.jsx)(em, {
-                                  iconURL: u,
-                                  onIconChange: M,
-                                  name: h,
-                                  nameError: x,
-                                  onNameChange: U,
-                                  description: d,
-                                  onDescriptionChange: G,
-                                  disabled: X,
-                              }),
+                        $ ? (0, n.jsx)(ev.A, { projectId: e }) : null,
+                        (0, n.jsx)(em, {
+                            iconURL: u,
+                            onIconChange: M,
+                            name: h,
+                            nameError: x,
+                            onNameChange: U,
+                            description: d,
+                            onDescriptionChange: G,
+                            disabled: X,
+                        }),
                         w && !$
                             ? (0, n.jsx)(N.l, {
                                   selectionMode: "single",

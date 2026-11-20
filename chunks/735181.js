@@ -188,79 +188,78 @@ function ej(e) {
     return (0, i.jsxs)("div", {
         className: em.zH,
         children: [
-            n.managedCopy
-                ? (0, i.jsx)(es.A, { projectId: n.projectId })
-                : n.editable
-                  ? (0, i.jsxs)(i.Fragment, {
-                        children: [
-                            (0, i.jsxs)("div", {
-                                className: em.ZZ,
-                                children: [
-                                    (0, i.jsx)(h.E, {
-                                        variant: "body-sm/medium",
+            n.managedCopy ? (0, i.jsx)(es.A, { projectId: n.projectId }) : null,
+            n.editable
+                ? (0, i.jsxs)(i.Fragment, {
+                      children: [
+                          (0, i.jsxs)("div", {
+                              className: em.ZZ,
+                              children: [
+                                  (0, i.jsx)(h.E, {
+                                      variant: "body-sm/medium",
+                                      color: "text-subtle",
+                                      "aria-hidden": !0,
+                                      children: b.intl.string(v.default.knevPu),
+                                  }),
+                                  (0, i.jsx)(B.k, {
+                                      label: b.intl.string(v.default.knevPu),
+                                      hideLabel: !0,
+                                      value: n.name,
+                                      onChange: n.setName,
+                                      error: n.nameError,
+                                      maxLength: 128,
+                                      disabled: n.saving,
+                                      fullWidth: !0,
+                                  }),
+                              ],
+                          }),
+                          (0, i.jsxs)("div", {
+                              className: em.ZZ,
+                              children: [
+                                  (0, i.jsx)(h.E, {
+                                      variant: "body-sm/medium",
+                                      color: "text-subtle",
+                                      "aria-hidden": !0,
+                                      children: b.intl.string(v.default.ynaGa1),
+                                  }),
+                                  (0, i.jsx)(V.f, {
+                                      label: b.intl.string(v.default.ynaGa1),
+                                      hideLabel: !0,
+                                      placeholder: b.intl.string(v.default["I+3UTL"]),
+                                      value: l.description,
+                                      onChange: l.setDescription,
+                                      maxLength: 400,
+                                      disabled: n.saving,
+                                      rows: 4,
+                                      maxRows: 6,
+                                      autosize: !0,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  })
+                : (0, i.jsx)("div", {
+                      className: em.Xp,
+                      children: (0, i.jsxs)("div", {
+                          className: em.ZZ,
+                          children: [
+                              (0, i.jsx)(h.E, {
+                                  variant: "body-md/semibold",
+                                  color: "text-strong",
+                                  lineClamp: 1,
+                                  children: n.name,
+                              }),
+                              "" !== l.description
+                                  ? (0, i.jsx)(h.E, {
+                                        variant: "body-sm/normal",
                                         color: "text-subtle",
-                                        "aria-hidden": !0,
-                                        children: b.intl.string(v.default.knevPu),
-                                    }),
-                                    (0, i.jsx)(B.k, {
-                                        label: b.intl.string(v.default.knevPu),
-                                        hideLabel: !0,
-                                        value: n.name,
-                                        onChange: n.setName,
-                                        error: n.nameError,
-                                        maxLength: 128,
-                                        disabled: n.saving,
-                                        fullWidth: !0,
-                                    }),
-                                ],
-                            }),
-                            (0, i.jsxs)("div", {
-                                className: em.ZZ,
-                                children: [
-                                    (0, i.jsx)(h.E, {
-                                        variant: "body-sm/medium",
-                                        color: "text-subtle",
-                                        "aria-hidden": !0,
-                                        children: b.intl.string(v.default.ynaGa1),
-                                    }),
-                                    (0, i.jsx)(V.f, {
-                                        label: b.intl.string(v.default.ynaGa1),
-                                        hideLabel: !0,
-                                        placeholder: b.intl.string(v.default["I+3UTL"]),
-                                        value: l.description,
-                                        onChange: l.setDescription,
-                                        maxLength: 400,
-                                        disabled: n.saving,
-                                        rows: 4,
-                                        maxRows: 6,
-                                        autosize: !0,
-                                    }),
-                                ],
-                            }),
-                        ],
-                    })
-                  : (0, i.jsx)("div", {
-                        className: em.Xp,
-                        children: (0, i.jsxs)("div", {
-                            className: em.ZZ,
-                            children: [
-                                (0, i.jsx)(h.E, {
-                                    variant: "body-md/semibold",
-                                    color: "text-strong",
-                                    lineClamp: 1,
-                                    children: n.name,
-                                }),
-                                "" !== l.description
-                                    ? (0, i.jsx)(h.E, {
-                                          variant: "body-sm/normal",
-                                          color: "text-subtle",
-                                          lineClamp: 3,
-                                          children: l.description,
-                                      })
-                                    : null,
-                            ],
-                        }),
-                    }),
+                                        lineClamp: 3,
+                                        children: l.description,
+                                    })
+                                  : null,
+                          ],
+                      }),
+                  }),
             (0, i.jsx)(ef, { title: b.intl.string(v.default.BqNMms), rows: t }),
             a?.shared === !0
                 ? (0, i.jsx)(H.S, {
@@ -283,33 +282,30 @@ function eg(e) {
         { identity: s } = n,
         t = a.useRef(null),
         r = a.useCallback(() => t.current?.activateUploadDialogue(), []);
-    return n.managedCopy
-        ? null
-        : n.editable
-          ? (0, i.jsxs)("div", {
-                className: em.wx,
-                children: [
-                    (0, i.jsx)(eb, {
-                        onUpload: r,
-                        onConjure: l,
-                        children: (e) => (0, i.jsx)(ev, { iconURL: s.iconURL, onClick: e }),
-                    }),
-                    (0, i.jsx)(ei.Ay, {
-                        ref: t,
-                        className: em.Fg,
-                        multiple: !1,
-                        filters: [{ name: b.intl.string(b.t["Sp2NF+"]), extensions: ea.En }],
-                        maxFileSizeBytes: ea.Q0,
-                        onChange: s.setIcon,
-                        onFileSizeError: () =>
-                            (0, c.P0)({ text: b.intl.string(v.default.ZTAAMc), variant: "critical" }),
-                        "aria-hidden": !0,
-                    }),
-                ],
-            })
-          : null != s.iconURL
-            ? (0, i.jsx)("img", { className: em.Dp, src: s.iconURL, alt: "" })
-            : null;
+    return n.editable
+        ? (0, i.jsxs)("div", {
+              className: em.wx,
+              children: [
+                  (0, i.jsx)(eb, {
+                      onUpload: r,
+                      onConjure: l,
+                      children: (e) => (0, i.jsx)(ev, { iconURL: s.iconURL, onClick: e }),
+                  }),
+                  (0, i.jsx)(ei.Ay, {
+                      ref: t,
+                      className: em.Fg,
+                      multiple: !1,
+                      filters: [{ name: b.intl.string(b.t["Sp2NF+"]), extensions: ea.En }],
+                      maxFileSizeBytes: ea.Q0,
+                      onChange: s.setIcon,
+                      onFileSizeError: () => (0, c.P0)({ text: b.intl.string(v.default.ZTAAMc), variant: "critical" }),
+                      "aria-hidden": !0,
+                  }),
+              ],
+          })
+        : null != s.iconURL
+          ? (0, i.jsx)("img", { className: em.Dp, src: s.iconURL, alt: "" })
+          : null;
 }
 function ep(e) {
     let { appChannelsPrivate: n, disabled: l } = e;
@@ -444,7 +440,7 @@ function eI(e) {
                 [h, j] = a.useState(!1),
                 g = (0, f.PV)(e),
                 p = d.trim(),
-                v = g && !t ? (0, w.p)(p) : null,
+                v = g ? (0, w.p)(p) : null,
                 b = (0, L.a1)(e, o),
                 C = a.useMemo(() => (0, L.Dy)(e, o, b), [e, o, b]),
                 U = C.filter((e) => e.creates).length,
@@ -490,10 +486,7 @@ function eI(e) {
                     x(!0);
                     try {
                         if (
-                            (g &&
-                                !t &&
-                                (p !== e.name || i.changed) &&
-                                (await (0, S.CW)(e.id, { ...i.changes, name: p })),
+                            (g && (p !== e.name || i.changed) && (await (0, S.CW)(e.id, { ...i.changes, name: p })),
                             !(await c.save()))
                         )
                             throw Error("Saving who can remix failed");
