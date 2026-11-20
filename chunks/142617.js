@@ -22,6 +22,12 @@ let r = (0, i.mj)({
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    }),
+    o = (0, i.mj)({
+        name: "2026-11-build-a-bear-images",
+        kind: "user",
+        defaultConfig: { canSaveCharacter: !1 },
+        variations: { 0: { canSaveCharacter: !1 }, 1: { canSaveCharacter: !0 } },
     });
 n.d(
     t,
@@ -33,6 +39,17 @@ n.d(
         },
         Hd: function (e) {
             let { enabled: t } = a.useConfig({ location: e });
+            return t;
+        },
+        Mt: function (e) {
+            if (
+                !(function (e) {
+                    let { enabled: t } = a.getConfig({ location: e });
+                    return t;
+                })(e)
+            )
+                return !1;
+            let { canSaveCharacter: t } = o.getConfig({ location: e });
             return t;
         },
         Pr: function (e) {

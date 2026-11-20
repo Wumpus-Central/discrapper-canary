@@ -5622,6 +5622,22 @@
     }
   },
   {
+    "name": "2026-11-build-a-bear-images",
+    "kind": "user",
+    "defaultConfig": {
+      "canSaveCharacter": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "canSaveCharacter": true
+      }
+    }
+  },
+  {
     "name": "2026-11-checkpoint-intro",
     "kind": "user",
     "defaultConfig": {

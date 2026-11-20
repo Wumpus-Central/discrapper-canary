@@ -21,6 +21,17 @@ let p = [a.pJ.HOURS, a.pJ.MINUTES],
     g = new Set([r.Q.DEFAULT, r.Q.STATS_ONLY]),
     T = [128, 256, 512, 768, 1024],
     S = Math.max(...T);
+function N(e, t) {
+    let n = [];
+    return (
+        (0, _.fA)(e.wearable).forEach((i) => {
+            let r = e[i],
+                a = _.qM[i][r]?.layer;
+            null != a && "" !== a && n.push(`${a}?height=${t}&width=${t}&format=webp`);
+        }),
+        n
+    );
+}
 n.d(
     t,
     {},
@@ -168,6 +179,9 @@ n.d(
                     return null;
             }
         },
+        dC: function (e) {
+            return N(e, S);
+        },
         q6: function (e) {
             var t, n;
             return null == e.character && null == e.stats
@@ -227,17 +241,8 @@ n.d(
                   };
         },
         vF: function (e, t) {
-            let n,
-                i = ((n = t * (0, d.A)()), T.find((e) => e >= n) ?? S),
-                r = [];
-            return (
-                (0, _.fA)(e.wearable).forEach((t) => {
-                    let n = e[t],
-                        a = _.qM[t][n]?.layer;
-                    null != a && "" !== a && r.push(`${a}?height=${i}&width=${i}&format=webp`);
-                }),
-                r
-            );
+            let n;
+            return N(e, ((n = t * (0, d.A)()), T.find((e) => e >= n) ?? S));
         },
     },
 );

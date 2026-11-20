@@ -12129,7 +12129,7 @@ var cV = n(761508),
     cX = n(209695),
     cY = n(207438),
     cQ = n(683438),
-    cZ = n(721507);
+    cZ = n(564218);
 function cJ(e, t) {
     return String(e).padStart(t, "0");
 }
@@ -12855,7 +12855,7 @@ function dN(e) {
                 exported_at: new Date().toISOString(),
                 traces: n,
             });
-            (0, cZ.o)(new Blob([e], { type: "application/json" }), `conjure-traces-${t}.json`).catch((e) => {
+            (0, cZ.H)(new Blob([e], { type: "application/json" }), `conjure-traces-${t}.json`).catch((e) => {
                 console.error("[conjure] trace export failed", t, e);
             });
         }, [t, n]);
