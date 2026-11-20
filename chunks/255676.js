@@ -546,7 +546,7 @@ function e8(e, t, n) {
         ((e.style.top = `${i.top - t}px`), (e.style.bottom = "auto"));
     } else (e.style.removeProperty("top"), e.style.removeProperty("bottom"));
 }
-function e4(e) {
+function e7(e) {
     let { discoverButtonRef: t, scrollerRef: n, onClick: a, onRequestClose: s } = e,
         {
             anchorRef: l,
@@ -617,7 +617,7 @@ function e4(e) {
         ],
     });
 }
-var e7 = n(633965),
+var e4 = n(633965),
     e9 = n(857071),
     te = n(851109),
     tt = n(72314),
@@ -1170,8 +1170,8 @@ var t2 = n(245604),
     t6 = n(272613),
     t5 = n(398884),
     t8 = n(772366),
-    t4 = n(728321),
-    t7 = n(260509),
+    t7 = n(728321),
+    t4 = n(260509),
     t9 = n(531053),
     ne = n(819638),
     nt = n(260727);
@@ -1191,7 +1191,7 @@ function na(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, _.yK)([tr.A], () => tr.A.getGuildsArray()),
         s = (0, _.bG)([eH.default], () => eH.default.getCurrentUser()),
-        l = r.useMemo(() => a.some((e) => (0, t7.bM)(e, s)), [a, s]),
+        l = r.useMemo(() => a.some((e) => (0, t4.bM)(e, s)), [a, s]),
         o = (0, y.re)((e) => (0, y.fD)(e, ne.fc)),
         { analyticsLocations: d } = (0, O.Ay)(),
         c = a.length >= 100 && !(0, t5.Om)(s);
@@ -1207,7 +1207,7 @@ function na(e) {
     let E = { showPill: !1, id: "create-join-button", selected: o, onContextMenu: ni, icon: t2.CirclePlusIcon };
     return (0, i.jsx)("div", {
         className: nt.Uq,
-        children: (0, i.jsxs)(t4.A, {
+        children: (0, i.jsxs)(t7.A, {
             tutorialId: l ? "create-more-servers" : "create-first-server",
             inlineSpecs: nn,
             position: "right",
@@ -1402,7 +1402,7 @@ function nH(e) {
     return (0, i.jsx)("div", {
         className: nB.Uq,
         "data-guilds-bar-home": !0,
-        children: (0, i.jsx)(t4.A, {
+        children: (0, i.jsx)(t7.A, {
             inlineSpecs: nV,
             tutorialId: "friends-list",
             position: "right",
@@ -1522,8 +1522,8 @@ function n5(e) {
     );
 }
 var n8 = n(36412),
-    n4 = n(283001),
-    n7 = n(354583);
+    n7 = n(283001),
+    n4 = n(354583);
 let n9 = r.memo(function (e) {
     let t,
         a,
@@ -1550,7 +1550,7 @@ let n9 = r.memo(function (e) {
             (o = !1),
             (d = !1),
             (c = (0, _.bG)([tR.A], () => tR.A.getChannelId())),
-            (E = null != (u = (0, n7.A)()?.guild_id) && a.includes(u)),
+            (E = null != (u = (0, n4.A)()?.guild_id) && a.includes(u)),
             (A = (0, _.bG)([eT.A], () => null != c && eT.A.hasVideo(c), [c])),
             (f = (0, _.bG)([ep.A], () => ep.A.getCurrentUserActiveStream())),
             s && ((l = !A), (o = A), (d = null != f && null != f.guildId && a.includes(f.guildId))),
@@ -1582,7 +1582,7 @@ let n9 = r.memo(function (e) {
             },
             [p, m, g, D, v],
         );
-    return (0, i.jsx)(n4.A, {
+    return (0, i.jsx)(n7.A, {
         ...I,
         folderNode: h,
         expanded: C,
@@ -2714,12 +2714,12 @@ function iV(e, t) {
             n.e(632607),
             n.e(229030),
             n.e(700201),
+            n.e(96961),
             n.e(161309),
             n.e(694529),
             n.e(303807),
             n.e(143330),
             n.e(995210),
-            n.e(96961),
             n.e(114751),
             n.e(852694),
             n.e(979605),
@@ -2872,7 +2872,7 @@ let iH = r.memo(function (e) {
                   onMouseDown: J,
                   onContextMenu: ee,
                   onKeyDown: et,
-                  icon: (0, t7.Iv)(d, 2 * el, j && u, !0),
+                  icon: (0, t4.Iv)(d, 2 * el, j && u, !0),
                   selected: _ || j,
                   ...B,
                   "aria-setsize": y,
@@ -2898,7 +2898,7 @@ let iH = r.memo(function (e) {
                           onMouseDown: J,
                           onContextMenu: ee,
                           onKeyDown: et,
-                          icon: (0, t7.Iv)(d, 2 * el, j && u, !0),
+                          icon: (0, t4.Iv)(d, 2 * el, j && u, !0),
                           selected: _ || j,
                           ...B,
                           "aria-setsize": y,
@@ -3146,7 +3146,7 @@ function i6(e) {
         ? null
         : (0, i.jsx)(i3, {
               onActivate: t,
-              children: (0, i.jsx)(n4.A, {
+              children: (0, i.jsx)(n7.A, {
                   folderNode: c,
                   expanded: n,
                   selected: u,
@@ -3185,7 +3185,7 @@ function i5(e) {
         : (0, i.jsx)(iH, { guildNode: n, guild: a, animatable: s, selected: l, draggable: !1, mediaState: o });
 }
 var i8 = n(987566);
-let i4 = (0, el.Fe)({
+let i7 = (0, el.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e(185830),
@@ -3234,7 +3234,7 @@ let i4 = (0, el.Fe)({
         webpackId: 489555,
         name: "NotificationsInboxButton",
     }),
-    i7 = (0, ts.uF)() ? 4 : 12 * !(0, ts.cX)();
+    i4 = (0, ts.uF)() ? 4 : 12 * !(0, ts.cX)();
 function i9(e, t, n) {
     let i = e + t,
         r = 2 + t;
@@ -3243,7 +3243,7 @@ function i9(e, t, n) {
         iconTotalSize: i,
         badgeVisibleBuffer: i - 16,
         separatorSize: r,
-        heightBeforeGuilds: i7 + r + n * i,
+        heightBeforeGuilds: i4 + r + n * i,
         bottomInset: 16,
     };
 }
@@ -3266,7 +3266,7 @@ class rt {
             (this.setIsScrolledToBottom = n),
             (this.onScroll = i),
             (this.sizes = r),
-            (0, e7.u9)(this.getVisibleGuildIds));
+            (0, e4.u9)(this.getVisibleGuildIds));
     }
     setResizeObserver = () => {
         let e = this.scrollerRef.current?.getScrollerNode();
@@ -3373,7 +3373,7 @@ function rn(e) {
         children: [
             (0, i.jsx)(nj, {}),
             s ? null : l,
-            c === te.RK.SERVER_RAIL_TOP && (0, i.jsx)(i4, {}),
+            c === te.RK.SERVER_RAIL_TOP && (0, i.jsx)(i7, {}),
             s ? (0, i.jsx)(eZ, {}) : null,
             s ? l : null,
             !t && (0, i.jsx)(tq, {}),
@@ -3624,13 +3624,13 @@ function rr(e) {
                                     (0, i.jsxs)("div", {
                                         children: [
                                             (0, i.jsx)(nY, { fullWidth: !0 }),
-                                            (0, i.jsx)("div", { className: i8.JU, children: (0, i.jsx)(i4, {}) }),
+                                            (0, i.jsx)("div", { className: i8.JU, children: (0, i.jsx)(i7, {}) }),
                                         ],
                                     }),
                             ],
                         }),
                         eo && !D
-                            ? (0, i.jsx)(e4, {
+                            ? (0, i.jsx)(e7, {
                                   discoverButtonRef: el,
                                   scrollerRef: er.scrollerRef,
                                   onClick: ed,
