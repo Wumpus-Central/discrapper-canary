@@ -32,15 +32,16 @@ function u(e) {
     }
 }
 function _(e) {
-    let { guild_id: t, icon_url: n, online: i, members: r, description: a, partnered: s, ...l } = e;
+    let { guild_id: t, icon_url: n, banner_url: i, online: r, members: a, description: s, partnered: l, ...o } = e;
     return {
-        ...l,
+        ...o,
         guildId: t,
         iconUrl: n,
-        description: "string" == typeof a ? a : null,
-        partnered: !0 === s,
-        online: Number(i),
-        members: Number(r),
+        bannerUrl: "string" == typeof i ? i : null,
+        description: "string" == typeof s ? s : null,
+        partnered: !0 === l,
+        online: Number(r),
+        members: Number(a),
     };
 }
 function E(e) {
