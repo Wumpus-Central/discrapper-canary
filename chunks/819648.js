@@ -32,6 +32,10 @@ function N(e, t) {
         n
     );
 }
+function C(e) {
+    let t = e.components[0];
+    return null == t || t.type !== s.I5.CHECKPOINT_CARD ? null : t.checkpointData;
+}
 n.d(
     t,
     {},
@@ -165,10 +169,7 @@ n.d(
                 topGame: e.topGame,
             };
         },
-        _S: function (e) {
-            let t = e.components[0];
-            return null == t || t.type !== s.I5.CHECKPOINT_CARD ? null : t.checkpointData;
-        },
+        _S: C,
         b5: function (e) {
             switch (e.version) {
                 case A.wk.V2025:
@@ -181,6 +182,10 @@ n.d(
         },
         dC: function (e) {
             return N(e, S);
+        },
+        lw: function (e) {
+            let t = C(e);
+            return t?.version === A.wk.V2026 ? (t.character ?? null) : null;
         },
         q6: function (e) {
             var t, n;
