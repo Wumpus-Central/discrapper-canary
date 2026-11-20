@@ -2,7 +2,7 @@ a.d(e, { W: () => c });
 var i = a(477900),
     o = a(582128);
 let r =
-    "https://cdn.discordapp.com/assets/content/1b8ba221d40c86526a5c7a47ae25db8ac77e4c568d801c3ec6072a200c1339dd.riv";
+    "https://cdn.discordapp.com/assets/content/ac944bbc27f5b24b0e933be35727383c207161789acfb0ae4788c49de7c1bb93.riv";
 var g = a(729901),
     n = a(611361),
     m = a(799226),

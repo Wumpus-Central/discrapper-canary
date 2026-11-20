@@ -648,8 +648,8 @@ let eR = {
         widthAt1x: 228,
     },
     tex_headwear_09_fire: {
-        url: "https://cdn.discordapp.com/assets/content/d377f8a7de8828800cd314e34dc0941508d4cf3f549532a90d0996ce58963937.webp",
-        riveId: 6878288,
+        url: "https://cdn.discordapp.com/assets/content/55947b2deb21a91c8f89dc38e7fcf7c399ca7ff0cf0c69237a83e3cb2b28a0ee.webp",
+        riveId: 7476587,
         width: 1495,
         height: 943,
         widthAt1x: 298,
