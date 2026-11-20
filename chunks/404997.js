@@ -22419,7 +22419,7 @@ let NS = (0, h.zD)(f.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
     useTitle: () => V.intl.string((0, xH.H)() ? xK.default["IxZyA+"] : V.t.AGDDkH),
     useSubtitle: () => V.intl.string((0, xH.H)() ? xK.default.GjNXmw : V.t.kyo3dJ),
     useValue: () => U.Q$.useSetting(),
-    setValue: (e) => xY.eQ({ allowVoiceRecording: e }),
+    setValue: (e) => xY.eQ({ allowVoiceRecording: e, analyticsLocation: tw.A.USER_SETTINGS }),
 });
 var NT = n(157559),
     Nx = n(331887);

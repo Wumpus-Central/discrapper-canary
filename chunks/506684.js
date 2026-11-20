@@ -366,10 +366,13 @@ let ea = new (class extends W {
         let { games: t, removed: n } = e;
         if (t.length > 0) return void (0, J.eM)();
         let i = n.map((e) => e.id).find((e) => null != e);
-        null == i || (!(0, m.qj)(y.default.getCurrentUser()) && (0, X.o)("ClipsManager") && (0, J.OT)(i));
+        null == i ||
+            (!(0, m.qj)(y.default.getCurrentUser()) &&
+                (0, X.o)("autoclips_ea:post_session_nitro_offer") &&
+                (0, J.OT)(i));
     }
     shouldUseClipsInUseNotice() {
-        return p.A.getConfig({ location: "ClipsInCallNotice" }).marketingEnabled;
+        return p.A.getConfig({ location: "autoclips_ea:in_call_clips_notice" }).marketingEnabled;
     }
     showClipsToast() {
         (0, i.P0)({ text: er.intl.string(er.t["d+41qJ"]), icon: r.ClipsIcon, duration: P.Vi });

@@ -350,9 +350,9 @@ var q = n(284009),
     et = n(253116),
     en = n(652215);
 async function ei(e) {
-    let { allowVoiceRecording: t } = e;
+    let { allowVoiceRecording: t, analyticsLocation: n } = e;
     (await o.Q$.updateSetting(t),
-        T.default.track(en.HAw.CLIPS_SETTINGS_UPDATED, { ...C.lc(), allow_voice_recording: t }),
+        T.default.track(en.HAw.CLIPS_SETTINGS_UPDATED, { location: n, ...C.lc(), allow_voice_recording: t }),
         a.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" }));
 }
 async function er(e) {

@@ -85,8 +85,8 @@ n.d(t, {
     lA: () => eH,
     OO: () => ej,
     Bu: () => ee,
-    uP: () => e7,
-    Kq: () => e8,
+    uP: () => e8,
+    Kq: () => e7,
     WT: () => z,
     hd: () => J,
     gD: () => F,
@@ -505,6 +505,12 @@ var eV =
         (c.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL =
             "clips_guild_sidebar_coachmark_premium_early_access_upsell"),
         (c.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL = "clips_go_live_premium_early_access_roadblock_upsell"),
+        (c.AUTOCLIPS_EA_LAUNCH_ANNOUNCEMENT_UPSELL = "autoclips_ea_launch_announcement_upsell"),
+        (c.AUTOCLIPS_EA_NITRO_TAB_UPSELL = "autoclips_ea_nitro_tab_upsell"),
+        (c.AUTOCLIPS_EA_NITRO_MARKETING_CARD_UPSELL = "autoclips_ea_nitro_marketing_card_upsell"),
+        (c.AUTOCLIPS_EA_CHAT_UPSELL = "autoclips_ea_chat_upsell"),
+        (c.AUTOCLIPS_EA_CAPTURE_MODE_ROADBLOCK_UPSELL = "autoclips_ea_capture_mode_roadblock_upsell"),
+        (c.AUTOCLIPS_EA_POST_SESSION_UPSELL = "autoclips_ea_post_session_upsell"),
         (c.CUSTOM_NOTIFICATION_SOUNDS_UPSELL = "custom_notification_sounds_upsell"),
         (c.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL = "custom_notification_sounds_settings_inline_upsell"),
         (c.HD_STREAMING_VIEWER_UPSELL = "hd_streaming_viewer_upsell"),
@@ -669,11 +675,11 @@ let e5 = {
     "944037208325619722": 8,
     "642251038925127690": 5,
 };
-var e7 =
+var e8 =
     (((f = {}).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
     (f.MID_STREAMING_QUALITY = "mid_streaming_quality"),
     f);
-let e8 = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
+let e7 = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
 var e4 =
         (((h = {})[(h.UserSettings = 0)] = "UserSettings"),
         (h[(h.ApplicationStoreHome = 1)] = "ApplicationStoreHome"),
