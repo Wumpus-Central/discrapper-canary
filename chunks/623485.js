@@ -1,4 +1,4 @@
-(n.d(t, { A: () => J }), n(938796));
+(n.d(t, { A: () => Z }), n(938796));
 var i,
     r,
     a = n(665260),
@@ -589,170 +589,180 @@ class b {
 }
 var v = n(565886),
     P = n(652215),
-    M = n(55010);
-let U = null,
-    w = null,
+    M = n(55010),
+    U = n(731854);
+let w = null,
     G = null,
     x = null,
     k = null,
-    F = new Set();
-function B(e, t, n) {
+    F = null,
+    B = new Set();
+function V(e, t, n) {
     return (0, c._z)({ streamType: null != t ? M.U4.GUILD : M.U4.CALL, guildId: t, channelId: n, ownerId: e });
 }
-function V(e) {
-    e !== k && ((k = e), Q.emitChange());
-}
-function H() {
-    null != k && ((k = null), Q.emitChange());
+function H(e) {
+    e !== F && ((F = e), J.emitChange());
 }
 function j() {
-    if (null != U) return U;
+    null != F && ((F = null), J.emitChange());
+}
+function W() {
+    if (null != w) return w;
     let e = _.A.getRTCConnection();
     if (null == e) return null;
     let t = new g(e, u.default.getId());
     return (
-        (w = () => {
-            U === t &&
-                (null != G &&
+        (G = () => {
+            w === t &&
+                (null != x &&
                     o.h.dispatch({
                         type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: G.streamKey,
+                        streamKey: x.streamKey,
                         isHost: !0,
                         host: u.default.getId(),
                         active: !1,
                     }),
-                null != x &&
+                null != k &&
                     o.h.dispatch({
                         type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: x.streamKey,
+                        streamKey: k.streamKey,
                         isHost: !1,
-                        host: x.inputGuest.host,
+                        host: k.inputGuest.host,
                         active: !1,
                     }));
         }),
-        t.on(p.Disconnect, w),
+        t.on(p.Disconnect, G),
         t.connect(),
-        (U = t)
+        (w = t)
     );
 }
-function W() {
-    null != U && null == G && null == x && (null != w && U.off(p.Disconnect, w), U.close(), (w = null), (U = null));
+function Y() {
+    null != w && null == x && null == k && (null != G && w.off(p.Disconnect, G), w.close(), (G = null), (w = null));
 }
-function Y(e) {
-    return G?.streamKey === e && (G.inputHost.shutdown(), (G = null), (k = null), W(), !0);
+function K(e) {
+    return (
+        x?.streamKey === e &&
+        (x.inputHost.shutdown(),
+        (x = null),
+        (F = null),
+        Y(),
+        E.A.getRTCConnection(e)?.setVideoEncoderLatencyProfile(U.$o.DEFAULT),
+        !0)
+    );
 }
-function K() {
-    null != x &&
-        (E.A.getRTCConnection(x.streamKey)?.setAvSyncEnabled(x.inputGuest.host, !0),
-        x.inputGuest.shutdown(),
-        (x = null));
-}
-function $(e) {
-    return x?.streamKey === e && (K(), W(), !0);
+function $() {
+    null != k &&
+        (E.A.getRTCConnection(k.streamKey)?.setAvSyncEnabled(k.inputGuest.host, !0),
+        k.inputGuest.shutdown(),
+        (k = null));
 }
 function X(e) {
-    let t = Y(e),
-        n = $(e);
-    return t || n;
+    return k?.streamKey === e && ($(), Y(), !0);
 }
 function z(e) {
-    let t = F.delete(e),
-        n = $(e);
+    let t = K(e),
+        n = X(e);
     return t || n;
 }
-class q extends s.Ay.Store {
+function q(e) {
+    let t = B.delete(e),
+        n = X(e);
+    return t || n;
+}
+class Q extends s.Ay.Store {
     initialize() {
         this.waitFor(u.default, _.A, d.Ay, E.A);
     }
     static displayName = "PassTheControllerStore";
     isSelfPassingController(e) {
-        return G?.streamKey === e;
-    }
-    isStreamPassingController(e) {
-        return F.has(e);
-    }
-    isSelfHoldingController(e) {
         return x?.streamKey === e;
     }
+    isStreamPassingController(e) {
+        return B.has(e);
+    }
+    isSelfHoldingController(e) {
+        return k?.streamKey === e;
+    }
     getInputGuest(e) {
-        return x?.streamKey === e ? x.inputGuest : null;
+        return k?.streamKey === e ? k.inputGuest : null;
     }
     getControllerHolderId(e) {
-        return G?.streamKey === e ? k : null;
+        return x?.streamKey === e ? F : null;
     }
     getGuestStreamKey() {
-        return x?.streamKey ?? null;
+        return k?.streamKey ?? null;
     }
     getGuestHostId(e) {
-        return x?.streamKey === e ? x.inputGuest.host : null;
+        return k?.streamKey === e ? k.inputGuest.host : null;
     }
     getHostStreamKeys() {
-        return F;
+        return B;
     }
 }
-let Q = new q(o.h, {
+let J = new Q(o.h, {
         CONNECTION_OPEN: function () {
-            (F.clear(), (k = null));
+            (B.clear(), (F = null));
         },
         PASS_THE_CONTROLLER_UPDATE: function (e) {
             let { streamKey: t, isHost: n, host: i, active: r } = e;
             return n
                 ? r
                     ? (function (e) {
-                          if (G?.streamKey === e) return !1;
+                          if (x?.streamKey === e) return !1;
                           let t = E.A.getStreamPid(e);
                           if (null == t || (0, v.X)(e)) return !1;
-                          let n = j();
+                          let n = W();
                           return (
                               null != n &&
-                              (G?.inputHost.shutdown(),
-                              (k = null),
-                              (G = { streamKey: e, inputHost: new b(n, t, (0, c.Iy)(e).guildId ?? null, V, H) }),
+                              (x?.inputHost.shutdown(),
+                              (F = null),
+                              E.A.getRTCConnection(e)?.setVideoEncoderLatencyProfile(U.$o.ULTRA_LOW),
+                              (x = { streamKey: e, inputHost: new b(n, t, (0, c.Iy)(e).guildId ?? null, H, j) }),
                               !0)
                           );
                       })(t)
-                    : Y(t)
+                    : K(t)
                 : r
                   ? (function (e, t) {
-                        if (x?.streamKey === e) return !1;
-                        let n = j();
+                        if (k?.streamKey === e) return !1;
+                        let n = W();
                         return (
                             null != n &&
-                            (K(),
+                            ($(),
                             E.A.getRTCConnection(e)?.setAvSyncEnabled(t, !1),
-                            (x = { streamKey: e, inputGuest: new R(n, t, e) }),
+                            (k = { streamKey: e, inputGuest: new R(n, t, e) }),
                             !0)
                         );
                     })(t, i)
-                  : $(t);
+                  : X(t);
         },
         PASS_THE_CONTROLLER_TAKE_BACK: function (e) {
-            if (G?.streamKey !== e.streamKey || null == k) return !1;
-            G.inputHost.takeBackController();
+            if (x?.streamKey !== e.streamKey || null == F) return !1;
+            x.inputHost.takeBackController();
         },
         STREAM_DELETE: function (e) {
-            return x?.streamKey === e.streamKey && e.reason === P.H2B.USER_REQUESTED ? z(e.streamKey) : X(e.streamKey);
+            return k?.streamKey === e.streamKey && e.reason === P.H2B.USER_REQUESTED ? q(e.streamKey) : z(e.streamKey);
         },
         STREAM_START: function (e) {
             let { streamType: t, guildId: n, channelId: i } = e,
                 r = (0, c._z)({ streamType: t, guildId: n, channelId: i, ownerId: u.default.getId() });
-            return G?.streamKey === r && E.A.getStreamPid(r) !== G.inputHost.pid && Y(r);
+            return x?.streamKey === r && E.A.getStreamPid(r) !== x.inputHost.pid && K(r);
         },
         STREAM_STOP: function (e) {
-            return X(e.streamKey);
+            return z(e.streamKey);
         },
         RTC_CONNECTION_FLAGS: function (e) {
             let { flags: t, userId: n, guildId: i, channelId: r } = e,
-                s = B(n, i, r);
-            (0, a.Lt)(t, P.Ajs.PASS_THE_CONTROLLER_HOST) ? F.add(s) : z(s);
+                s = V(n, i, r);
+            (0, a.Lt)(t, P.Ajs.PASS_THE_CONTROLLER_HOST) ? B.add(s) : q(s);
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, guildId: n, channelId: i, context: r } = e;
-            return r === l.x.DEFAULT && (null != G && t === k && G.inputHost.takeBackController(), z(B(t, n, i)));
+            return r === l.x.DEFAULT && (null != x && t === F && x.inputHost.takeBackController(), q(V(t, n, i)));
         },
         RTC_CONNECTION_STATE: function (e) {
-            if (e.context !== l.x.DEFAULT || e.state !== P.S7L.DISCONNECTED || 0 === F.size) return !1;
-            F.clear();
+            if (e.context !== l.x.DEFAULT || e.state !== P.S7L.DISCONNECTED || 0 === B.size) return !1;
+            B.clear();
         },
     }),
-    J = Q;
+    Z = J;
