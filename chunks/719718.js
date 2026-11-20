@@ -129,8 +129,8 @@ let S = new j(c.h, {
     CHECKPOINT_COMPLETE_FAILED: function () {
         E = !1;
     },
-    CHECKPOINT_RESET_SUCCESS: function () {
-        ((g = null), (I = null), (_.progress = null));
+    CHECKPOINT_RESET_PROGRESS: function () {
+        ((_.progress = null), (I = null));
     },
     CHECKPOINT_SELECT_CHARACTER_TRAIT: function (e) {
         ((I = { ...(I ?? g ?? p), [e.trait]: e.optionId }),

@@ -278,10 +278,17 @@ function e1(e, t, n) {
 let e2 = [
     e1("open", e0.default.yLZjcu),
     {
-        id: "reset",
-        label: e0.default["2DL3aX"],
+        id: "reset-progress",
+        label: e0.default.HYMZmZ,
+        action: () => {
+            ((0, eq.BS)(), eJ(eB.intl.string(eB.t.i4jeWR), "success"));
+        },
+    },
+    {
+        id: "reset-character",
+        label: e0.default.Q9JHSs,
         action: async () => {
-            (await (0, eq.sm)())
+            (await (0, eq.Z0)())
                 ? eJ(eB.intl.string(eB.t.i4jeWR), "success")
                 : eJ(eB.intl.string(eB.t.fEptJP), "failure");
         },
@@ -291,7 +298,7 @@ let e2 = [
     e1("open-zero-stats", e0.default.BYW9oX, e$.ZERO_STATS),
 ];
 e1("open-unavailable", e0.default["58TARv"], e$.UNAVAILABLE);
-let e3 = ["reset"];
+let e3 = ["reset-progress", "reset-character"];
 var e6 = n(852717),
     e5 = n(641214);
 function e8() {
@@ -3030,7 +3037,7 @@ function l2(e) {
         }, [a]),
         g = eo.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, l1.A)("1795212722566", !0);
+        let e = (0, l1.A)("1795215345687", !0);
         t =
             null != e
                 ? eB.intl.formatToPlainString(eB.t.wve4kg, { webBuildOverride: r.id, builtAt: e })

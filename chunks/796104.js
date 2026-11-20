@@ -15,11 +15,21 @@ a.d(
     t,
     {},
     {
+        BS: function () {
+            return n.h.dispatch({ type: "CHECKPOINT_RESET_PROGRESS" });
+        },
         IB: function (e, t) {
             return n.h.dispatch({ type: "CHECKPOINT_SELECT_CHARACTER_TRAIT", trait: e, optionId: t });
         },
         K8: function () {
             (n.h.dispatch({ type: "CHECKPOINT_TOGGLE_MUTE" }), (0, b.d3)(f.A.isMuted));
+        },
+        Z0: async function () {
+            try {
+                return (await r.Bo.del({ url: p.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }), !0);
+            } catch {
+                return !1;
+            }
         },
         fr: async function (e, t) {
             let a = await s.A.getOrEnsurePrivateChannel(t),
@@ -78,18 +88,6 @@ a.d(
                 );
             } catch {
                 return (n.h.dispatch({ type: "CHECKPOINT_FETCH_FAILED" }), f.T.ERROR);
-            }
-        },
-        sm: async function () {
-            n.h.dispatch({ type: "CHECKPOINT_RESET_START" });
-            try {
-                return (
-                    await r.Bo.del({ url: p.Rsh.CHECKPOINT_RESET, rejectWithError: !0 }),
-                    n.h.dispatch({ type: "CHECKPOINT_RESET_SUCCESS" }),
-                    !0
-                );
-            } catch {
-                return (n.h.dispatch({ type: "CHECKPOINT_RESET_FAILED" }), !1);
             }
         },
         yE: async function (e) {
