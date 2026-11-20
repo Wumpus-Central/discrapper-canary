@@ -46,7 +46,7 @@ function y(e) {
         let t = d.A.getGuildId(),
             n =
                 A.Ay.getGlobalSelectedProjectId() ??
-                (null != t && o.Ay.getChannelId() === I.VV.CONJURE ? A.Ay.getSelectedProjectId(t) : null);
+                (null != t && o.Ay.getChannelId() === I.VV.CONJURE_PROJECT ? A.Ay.getSelectedProjectId(t) : null);
         return null == n || null == A.Ay.getProject(n) ? null : n;
     })();
     if (null == n)

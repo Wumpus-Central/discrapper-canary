@@ -49,7 +49,7 @@ function O(e, t, n, i, g) {
     if (
         (_.A.getShownProjectId() === e ||
             E.Ay.getGlobalSelectedProjectId() === e ||
-            (null != S && E.Ay.getSelectedProjectId(S) === e && d.Ay.getChannelId() === m.VV.CONJURE)) &&
+            (null != S && E.Ay.getSelectedProjectId(S) === e && d.Ay.getChannelId() === m.VV.CONJURE_PROJECT)) &&
         f.A.isWindowFocused()
     ) {
         T && (0, a.Ak)(R, D);
