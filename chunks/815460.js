@@ -1,7 +1,11 @@
 var i = n(477900);
 n(582128);
-var r = n(192308);
-function s(e, t) {
+var r = n(192308),
+    s = n(419490),
+    l = n(572164),
+    a = n(489496);
+function o(e, t) {
+    let o = "mode_picker" === e.variant && (0, l.T)();
     return (0, r.mM)(
         async () => {
             let { default: t } = await Promise.all([
@@ -13,16 +17,26 @@ function s(e, t) {
             ]).then(n.bind(n, 729331));
             return (n) => (0, i.jsx)(t, { ...n, ...e });
         },
-        { modalKey: "clips-ea-announcement", onCloseCallback: t },
+        {
+            modalKey: "clips-ea-announcement",
+            onCloseCallback: () => {
+                let e = o && !s.Ay.getState().clipsSettings.clipsEnabled;
+                try {
+                    t?.();
+                } finally {
+                    e && (0, a.Zw)();
+                }
+            },
+        },
     );
 }
 n.d(
     t,
     {},
     {
-        C: s,
+        C: o,
         t: function (e) {
-            return s({ variant: e, source: "devtools" });
+            return o({ variant: e, source: "devtools" });
         },
     },
 );

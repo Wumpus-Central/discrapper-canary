@@ -5,15 +5,21 @@ var t = e(582128),
     c = e(818349),
     p = e(734066),
     d = e(419490),
-    u = e(489496);
-async function o(l, a) {
-    let e = (0, c.K)(l),
-        { clipsEnabled: t } = d.Ay.getState().clipsSettings;
-    (null != e.enableAutoclipping &&
-        e.enableAutoclipping !== d.Ay.getEnableAutoclipping() &&
-        u.uL(e.enableAutoclipping, !0, a),
-        e.clipsEnabled !== t &&
-            (await u.yO({ clipsEnabled: e.clipsEnabled, trackAnalytics: !0, analyticsLocation: a })));
+    o = e(489496);
+async function u(l, a) {
+    let { skipOptOutSurvey: e = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        t = (0, c.K)(l),
+        { clipsEnabled: i } = d.Ay.getState().clipsSettings;
+    (null != t.enableAutoclipping &&
+        t.enableAutoclipping !== d.Ay.getEnableAutoclipping() &&
+        o.uL(t.enableAutoclipping, !0, a),
+        t.clipsEnabled !== i &&
+            (await o.yO({
+                clipsEnabled: t.clipsEnabled,
+                trackAnalytics: !0,
+                analyticsLocation: a,
+                skipOptOutSurvey: e,
+            })));
 }
 e.d(
     a,
@@ -29,12 +35,12 @@ e.d(
                 ),
                 e = t.useCallback(
                     (e) => {
-                        e !== a && o(e, l);
+                        e !== a && u(e, l);
                     },
                     [a, l],
                 );
             return { value: a, onChange: e };
         },
-        r: o,
+        r: u,
     },
 );

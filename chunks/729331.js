@@ -1,9 +1,9 @@
-e.d(n, { default: () => B });
+e.d(n, { default: () => K });
 var i = e(477900),
     l = e(582128),
     r = e(224640),
-    a = e(516521),
-    s = e(866665),
+    s = e(516521),
+    a = e(866665),
     o = e(408278),
     c = e(972213),
     d = e(503698),
@@ -28,10 +28,10 @@ var i = e(477900),
     S = e(350535),
     L = e(805573),
     w = e(818349),
-    T = e(419490),
-    M = e(572164),
+    O = e(419490),
+    T = e(572164),
     P = e(439408),
-    O = e(14868),
+    M = e(14868),
     U = e(271597),
     G = e(464132);
 e(696016);
@@ -41,95 +41,97 @@ var V = e(652215),
     R = e(792996),
     q = e(698292),
     H = e(148289);
-function Q(t) {
-    let { variant: n, source: e, preselectedMode: r, onClose: a } = t,
-        [s] = l.useState(() => (0, w.r)((0, M.T)(), T.Ay.getEnableAutoclipping())),
-        [o, c] = l.useState(() => r ?? s),
+function Q() {
+    return (0, w.r)((0, T.T)(), O.Ay.getEnableAutoclipping());
+}
+function W(t) {
+    let { variant: n, source: e, onClose: r } = t,
+        [s, a] = l.useState(Q),
+        [o, c] = l.useState(!1),
         [d, x] = l.useState(!1),
-        [m, f] = l.useState(!1),
-        h = "mode_picker" === n,
-        g = "expressive_non_nitro" === n,
-        { markActedOn: v, logUpsellAction: j } = (function (t, n) {
+        m = "mode_picker" === n,
+        f = "expressive_non_nitro" === n,
+        { markActedOn: h, logUpsellAction: g } = (function (t, n) {
             let e = "expressive_non_nitro" === t,
                 { trackViewed: i, trackInteracted: r } = (0, L.r)(
                     z.e.AUTOCLIPS_EA_LAUNCH_ANNOUNCEMENT_UPSELL,
                     y.A.CLIPS_EA_LAUNCH_ANNOUNCEMENT,
                 ),
-                a = l.useRef(!1);
+                s = l.useRef(!1);
             l.useEffect(() => {
                 if (e)
                     return (
                         i(n),
                         () => {
-                            a.current || r("close");
+                            s.current || r("close");
                         }
                     );
             }, [e, n, i, r]);
-            let s = l.useCallback(() => {
-                    a.current = !0;
+            let a = l.useCallback(() => {
+                    s.current = !0;
                 }, []),
                 o = l.useCallback(
                     function (t) {
                         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                        (s(), e && r(t, n));
+                        (a(), e && r(t, n));
                     },
-                    [e, s, r],
+                    [e, a, r],
                 );
-            return { markActedOn: s, logUpsellAction: o };
+            return { markActedOn: a, logUpsellAction: o };
         })(n, e);
-    async function C() {
-        (v(), await a(), (0, _.openUserSettings)(E.X.CLIPS_PANEL));
+    async function v() {
+        (h(), await r(), (0, _.openUserSettings)(E.X.CLIPS_PANEL));
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(W, {
+            (0, i.jsx)(F, {
                 onPlay: function () {
-                    j("watch_video");
+                    g("watch_video");
                 },
             }),
             (0, i.jsxs)("div", {
-                className: u()(q.Qs, { [q.SI]: h }),
+                className: u()(q.Qs, { [q.SI]: m }),
                 children: [
-                    (0, i.jsx)(F, { variant: n }),
-                    h
-                        ? (0, i.jsx)(X, { mode: o, saving: d, saveError: m, onChange: c, onSettings: C })
-                        : (0, i.jsx)(Y, {}),
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(X, { variant: n }),
+                    m
+                        ? (0, i.jsx)(Y, {
+                              mode: s,
+                              saving: o,
+                              saveError: d,
+                              onChange: async function (t) {
+                                  (a(t), c(!0), x(!1));
+                                  try {
+                                      await (0, G.r)(t, y.A.CLIPS_EA_LAUNCH_ANNOUNCEMENT, { skipOptOutSurvey: !0 });
+                                  } catch {
+                                      (x(!0), a(Q()));
+                                  }
+                                  c(!1);
+                              },
+                              onSettings: v,
+                          })
+                        : (0, i.jsx)(Z, {}),
+                    (0, i.jsx)(B, {
                         variant: n,
-                        saving: d,
                         onConfirm: async function () {
-                            if (!d) {
-                                if (o === s) {
-                                    (v(), await a());
-                                    return;
-                                }
-                                (x(!0), f(!1));
-                                try {
-                                    await (0, G.r)(o, y.A.CLIPS_EA_LAUNCH_ANNOUNCEMENT);
-                                } catch {
-                                    (f(!0), x(!1));
-                                    return;
-                                }
-                                (v(), await a());
-                            }
+                            (h(), await r());
                         },
                         onCheckItOut: async function () {
-                            (j("nitro_home", "nitro_home"), await a(), g ? (0, A.x)() : (0, U.p)());
+                            (g("nitro_home", "nitro_home"), await r(), f ? (0, A.x)() : (0, U.p)());
                         },
-                        onSettings: C,
+                        onSettings: v,
                     }),
                 ],
             }),
         ],
     });
 }
-function W(t) {
+function F(t) {
     let { onPlay: n } = t;
     return (0, i.jsxs)(m.D, {
         className: q.Qw,
         "aria-label": R.intl.string(D.default["2axqmn"]),
         onClick: () => {
-            (n(), (0, O.z)("ClipsEAAnnouncementModal"));
+            (n(), (0, M.z)("ClipsEAAnnouncementModal"));
         },
         children: [
             (0, i.jsx)("img", { className: q.d3, src: H.A, alt: "", loading: "lazy", decoding: "async" }),
@@ -141,7 +143,7 @@ function W(t) {
         ],
     });
 }
-function F(t) {
+function X(t) {
     let { variant: n } = t,
         e = "mode_picker" === n ? D.default.BtyRCT : "expressive_non_nitro" === n ? D.default.kWigdu : D.default.M8rOjI;
     return (0, i.jsxs)("div", {
@@ -152,8 +154,8 @@ function F(t) {
         ],
     });
 }
-function X(t) {
-    let { mode: n, saving: e, saveError: r, onChange: a, onSettings: s } = t,
+function Y(t) {
+    let { mode: n, saving: e, saveError: r, onChange: s, onSettings: a } = t,
         o = (0, x.bG)([k.Ay], () =>
             (0, S.dI)(k.Ay.getKeybindForAction(V.hCu.SAVE_CLIP, !0)?.shortcut ?? (0, S.OH)("alt+c"), !0),
         ),
@@ -199,7 +201,7 @@ function X(t) {
                             (0, i.jsx)(N.Q, {
                                 textVariant: "body-sm/normal",
                                 text: R.intl.string(D.default["7kGdh5"]),
-                                onClick: s,
+                                onClick: a,
                             }),
                         ],
                     }),
@@ -208,7 +210,7 @@ function X(t) {
             (0, i.jsx)(P.u, {
                 "aria-label": R.intl.string(D.default.q8YDuR),
                 value: n,
-                onChange: a,
+                onChange: s,
                 options: c,
                 disabled: e,
             }),
@@ -236,7 +238,7 @@ function X(t) {
         ],
     });
 }
-function Y() {
+function Z() {
     return (0, i.jsxs)("div", {
         className: q.kR,
         children: [
@@ -267,13 +269,13 @@ function Y() {
         ],
     });
 }
-function Z(t) {
-    let { variant: n, saving: e, onConfirm: l, onCheckItOut: r, onSettings: a } = t,
+function B(t) {
+    let { variant: n, onConfirm: e, onCheckItOut: l, onSettings: r } = t,
         s = "mode_picker" === n,
-        o = "expressive_non_nitro" === n;
+        a = "expressive_non_nitro" === n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            s || o
+            s || a
                 ? null
                 : (0, i.jsx)(g.E, {
                       variant: "body-xs/normal",
@@ -281,7 +283,7 @@ function Z(t) {
                       className: q.N4,
                       children: R.intl.format(D.default.oguG2t, {
                           settingsHook: (t, n) =>
-                              (0, i.jsx)(N.Q, { textVariant: "body-xs/normal", text: t, onClick: a }, n),
+                              (0, i.jsx)(N.Q, { textVariant: "body-xs/normal", text: t, onClick: r }, n),
                       }),
                   }),
             (0, i.jsxs)("div", {
@@ -289,12 +291,11 @@ function Z(t) {
                 children: [
                     (0, i.jsx)(p.$, {
                         fullWidth: !0,
-                        variant: o ? "expressive" : "primary",
-                        text: R.intl.string(s ? D.default.liWTC0 : o ? D.default.cXDBee : D.default.n9r54F),
-                        onClick: s ? l : r,
-                        loading: e,
+                        variant: a ? "expressive" : "primary",
+                        text: R.intl.string(s ? D.default.liWTC0 : a ? D.default.cXDBee : D.default.n9r54F),
+                        onClick: s ? e : l,
                     }),
-                    o
+                    a
                         ? (0, i.jsx)(g.E, {
                               variant: "body-xs/normal",
                               color: "text-subtle",
@@ -306,31 +307,31 @@ function Z(t) {
         ],
     });
 }
-function B(t) {
-    let { variant: n, source: e, preselectedMode: l, ...d } = t;
+function K(t) {
+    let { variant: n, source: e, ...l } = t;
     return (0, i.jsx)(r.d, {
-        ...d,
+        ...l,
         size: "lg",
         "aria-label": R.intl.string(D.default.Ggh4C0),
         children: (0, i.jsxs)("div", {
             className: q.Gt,
             children: [
-                (0, i.jsx)(a.Ch, {
+                (0, i.jsx)(s.Ch, {
                     className: q.W2,
                     overflow: "auto",
                     scrollbarGutter: !1,
                     fade: !0,
-                    children: (0, i.jsx)(Q, { variant: n, source: e, preselectedMode: l, onClose: d.onClose }),
+                    children: (0, i.jsx)(W, { variant: n, source: e, onClose: l.onClose }),
                 }),
                 (0, i.jsx)("div", {
                     className: q.VN,
-                    children: (0, i.jsx)(s.m, {
+                    children: (0, i.jsx)(a.m, {
                         text: R.intl.string(R.t.cpT0Cq),
                         children: (0, i.jsx)(o.K, {
                             icon: c.XLargeIcon,
                             variant: "overlay-secondary",
                             "aria-label": R.intl.string(R.t.cpT0Cq),
-                            onClick: d.onClose,
+                            onClick: l.onClose,
                         }),
                     }),
                 }),
