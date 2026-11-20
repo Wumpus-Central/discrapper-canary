@@ -3,7 +3,7 @@ l(582128);
 var t = l(442433),
     i = l(800202),
     a = l(174865),
-    r = l(822588),
+    r = l(119199),
     o = l(95264);
 function u(n, e) {
     let { onExport: l } = (0, i.A)(n);
@@ -21,7 +21,7 @@ l.d(
         S: function (n) {
             let { project: e, guildId: l } = n,
                 t = u(e, l);
-            return (0, s.jsx)(r.A, { ...t, trigger: "iconButton" });
+            return (0, s.jsx)(r.A, { ...t });
         },
         V: function (n, e, l) {
             (0, t.jA)(n, () => (0, s.jsx)(d, { project: e, guildId: l }));

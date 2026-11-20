@@ -9,5 +9,6 @@ e.exports = {
     cb: "agentChat_ajKoHp",
     v7: "chatPanelHost_ajKoHp",
     z4: "chatPanelHostFloating_ajKoHp",
+    iu: "chatPanelHostBelowControlBar_ajKoHp",
     LL: "chatPanelHostHidden_ajKoHp",
 };

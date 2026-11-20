@@ -5,7 +5,7 @@ var c = r(477900),
     n = r(289873),
     a = r(976860),
     l = r(200789),
-    d = r(64662),
+    d = r(457560),
     i = r(404373),
     o = r(227007),
     j = r(398773),
@@ -42,7 +42,7 @@ function b(e) {
         ? (0, c.jsx)("div", { className: P.l, children: (0, c.jsx)(n.y, {}) })
         : (0, c.jsx)(o.A.Provider, {
               value: r,
-              children: (0, c.jsx)(d.A, { project: x, projectsLoaded: A, onBack: y, guildId: t, inServer: !0 }),
+              children: (0, c.jsx)(d.A, { project: x, projectsLoaded: A, onBack: y, guildId: t }),
           });
 }
 r.d(

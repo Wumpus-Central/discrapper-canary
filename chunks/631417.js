@@ -6,6 +6,4 @@ r.exports = {
     DD: "title_krOYhC",
     Qw: "titleText_krOYhC",
     qY: "draftTag_krOYhC",
-    l0: "shareTarget_krOYhC",
-    uN: "shareTargetDivider_krOYhC",
 };
