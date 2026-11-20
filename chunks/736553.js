@@ -15,6 +15,7 @@
                         c = new URLSearchParams({
                             ticket: n,
                             debug: "on_demand",
+                            preview_add_bot_prompt: "1",
                             ...(null != r ? { template: r } : {}),
                         }),
                         d = new WebSocket(`${a}/agent/ws?${c}`);
@@ -221,6 +222,11 @@
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
                         throw Error("WebSocket not open");
                     this.socket.send(JSON.stringify(e));
+                }
+                sendPreviewBotAnswer(e, t) {
+                    if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
+                        throw Error("WebSocket not open");
+                    this.socket.send(JSON.stringify({ type: "preview_bot_answer", id: e, answer: t }));
                 }
                 sendRestartSandbox() {
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
