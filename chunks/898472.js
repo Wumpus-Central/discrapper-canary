@@ -44,8 +44,8 @@ var l,
     m = n(898578),
     D = n(411153),
     R = n(734057),
-    h = n(317525),
-    L = n(994500),
+    L = n(317525),
+    h = n(994500),
     C = n(287809),
     M = n(5377),
     U = n(735547),
@@ -53,8 +53,8 @@ var l,
     x = n(427262),
     p = n(523599),
     k = n(652215),
-    F = n(746080),
-    P = n(890634),
+    P = n(746080),
+    F = n(890634),
     b = n(539916),
     j = n(988794),
     y = n(792996);
@@ -114,6 +114,7 @@ function V(e) {
             return {
                 [k.gGk.NAME]: ed(y.t.f8Rh0U, y.t.ebD4Qp),
                 [k.gGk.POSITION]: ed(y.t.isS8te, y.t.t5uBis),
+                [k.gGk.PARENT_ID]: eg(y.t.UzQe83, y.t["XbS++5"], y.t.JmRY4R),
                 [k.gGk.TOPIC]: eg(y.t.esQcxn, y.t["m+veAn"], y.t["ws/1FA"]),
                 [k.gGk.BITRATE]: ed(y.t.fw81ak, y.t.MFNlgZ),
                 [k.gGk.RTC_REGION_OVERRIDE]: eg(y.t["6kajxx"], y.t.eGOlmU, y.t["0JMZdz"]),
@@ -263,6 +264,7 @@ function V(e) {
             };
         case k.GaG.THREAD:
             return {
+                [k.gGk.PARENT_ID]: eA(y.t.NeUd53, y.t["p/Rd4u"]),
                 [k.gGk.NAME]: ed(y.t.tUKRzX, y.t.kPCHON),
                 [k.gGk.ARCHIVED]: eI(y.t.jDi9FK, y.t.F6dvbT),
                 [k.gGk.LOCKED]: eI(y.t.JSy1QW, y.t.C7Jgo8),
@@ -357,6 +359,7 @@ let H = {
     [k.GaG.GUILD_SOUNDBOARD]: { [k.gGk.ID]: !0, [k.gGk.SOUND_ID]: !0 },
 };
 function w(e, t) {
+    if (t.key === k.gGk.PARENT_ID && (e.action === k.F_X.CHANNEL_DELETE || e.action === k.F_X.THREAD_DELETE)) return !1;
     if (
         e.actionType === k.RWi.DELETE &&
         e.action !== k.F_X.MEMBER_BAN_ADD &&
@@ -660,7 +663,7 @@ function ee(e) {
         case k.F_X.AUTO_MODERATION_BLOCK_MESSAGE:
             return y.t.NqWv2K;
         case k.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL:
-            if (e.options?.auto_moderation_rule_trigger_type === P.uh.USER_PROFILE.toString()) return y.t.YQsjej;
+            if (e.options?.auto_moderation_rule_trigger_type === F.uh.USER_PROFILE.toString()) return y.t.YQsjej;
             return y.t.SD0PwJ;
         case k.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
             return y.t.Vk4TwX;
@@ -727,22 +730,22 @@ function ee(e) {
 }
 function et(e) {
     switch (e) {
-        case F.lx.GUILD_FEED_REMOVED:
+        case P.lx.GUILD_FEED_REMOVED:
             return y.intl.string(y.t["5G8ZD4"]);
-        case F.lx.ACTIVE_CHANNELS_REMOVED:
+        case P.lx.ACTIVE_CHANNELS_REMOVED:
             return y.intl.string(y.t["4YLtzC"]);
-        case F.lx.PINNED:
+        case P.lx.PINNED:
             return y.intl.string(y.t["1QLRYb"]);
     }
     return null;
 }
 function en(e) {
     switch (e) {
-        case F.lx.GUILD_FEED_REMOVED:
+        case P.lx.GUILD_FEED_REMOVED:
             return y.intl.string(y.t.S5kuWQ);
-        case F.lx.ACTIVE_CHANNELS_REMOVED:
+        case P.lx.ACTIVE_CHANNELS_REMOVED:
             return y.intl.string(y.t["8qpgcz"]);
-        case F.lx.PINNED:
+        case P.lx.PINNED:
             return y.intl.string(y.t.CMweGA);
     }
     return null;
@@ -887,7 +890,7 @@ function ea(e, t) {
                                 e,
                                 k.gGk.NAME,
                                 (e) => R.A.getChannel(e),
-                                (e) => (0, g.m1)(e, C.default, L.A, !0),
+                                (e) => (0, g.m1)(e, C.default, h.A, !0),
                             );
                         case k.GaG.USER:
                             return ec(
@@ -900,7 +903,7 @@ function ea(e, t) {
                             return ec(
                                 e,
                                 k.gGk.NAME,
-                                (e) => h.A.getRole(t.id, e),
+                                (e) => L.A.getRole(t.id, e),
                                 (e) => e.name,
                             );
                         case k.GaG.ONBOARDING_PROMPT:
@@ -1004,7 +1007,7 @@ function ea(e, t) {
                                 e,
                                 k.gGk.STATUS,
                                 (e) => R.A.getChannel(e),
-                                (e) => (0, g.m1)(e, C.default, L.A, !0),
+                                (e) => (0, g.m1)(e, C.default, h.A, !0),
                             );
                         default:
                             return (v.warn("Unknown targetType for log", e), null);
@@ -1074,7 +1077,7 @@ function ea(e, t) {
                                     case k.g0g.ROLE:
                                         e.subtarget = e_(
                                             t.id,
-                                            (e) => h.A.getRole(n.id, e),
+                                            (e) => L.A.getRole(n.id, e),
                                             (e) => e.name,
                                         );
                                         break;
@@ -1091,7 +1094,7 @@ function ea(e, t) {
                                             : (e.subtarget = e_(
                                                   t.id,
                                                   (e) => R.A.getChannel(e),
-                                                  (e) => (0, g.m1)(e, C.default, L.A, !0),
+                                                  (e) => (0, g.m1)(e, C.default, h.A, !0),
                                               ));
                                 }
                                 return e;
@@ -1100,6 +1103,7 @@ function ea(e, t) {
                                 case k.gGk.OWNER_ID:
                                     return eo(e, (e) => C.default.getUser(e));
                                 case k.gGk.CHANNEL_ID:
+                                case k.gGk.PARENT_ID:
                                 case k.gGk.AFK_CHANNEL_ID:
                                 case k.gGk.SYSTEM_CHANNEL_ID:
                                 case k.gGk.RULES_CHANNEL_ID:
@@ -1107,7 +1111,7 @@ function ea(e, t) {
                                     return eo(
                                         e,
                                         (e) => R.A.getChannel(e),
-                                        (e) => (0, g.m1)(e, C.default, L.A, !0),
+                                        (e) => (0, g.m1)(e, C.default, h.A, !0),
                                     );
                                 case k.gGk.AFK_TIMEOUT:
                                     return eo(e, (e) => e / 60);
@@ -1161,7 +1165,7 @@ function ea(e, t) {
                                                 a = _.VL(n, l),
                                                 i = [],
                                                 s = [];
-                                            for (let e of Object.values(F.lx))
+                                            for (let e of Object.values(P.lx))
                                                 (_.Lt(r, e) && i.push(e), _.Lt(a, e) && s.push(e));
                                             return { added: i, removed: s };
                                         })(e.oldValue, e.newValue);
@@ -1254,7 +1258,7 @@ function ea(e, t) {
                                                 e
                                                     .map(R.A.getChannel)
                                                     .filter((e) => null != e)
-                                                    .map((e) => (0, g.m1)(e, C.default, L.A, !0)),
+                                                    .map((e) => (0, g.m1)(e, C.default, h.A, !0)),
                                             (e) =>
                                                 null != e && e.length > 0 ? e.join(", ") : y.intl.string(y.t["K/EdV8"]),
                                         );
@@ -1265,7 +1269,7 @@ function ea(e, t) {
                                             e,
                                             (e) =>
                                                 e
-                                                    .map((e) => h.A.getRole(n.id, e))
+                                                    .map((e) => L.A.getRole(n.id, e))
                                                     .filter((e) => null != e)
                                                     .map((e) => e.name),
                                             (e) =>
@@ -1276,7 +1280,7 @@ function ea(e, t) {
                                     if (t.targetType === k.GaG.INVITE)
                                         return eo(e, (e) =>
                                             e
-                                                .map((e) => h.A.getRole(n.id, e))
+                                                .map((e) => L.A.getRole(n.id, e))
                                                 .filter((e) => null != e)
                                                 .map((e) => ({ id: e.id, name: e.name })),
                                         );
