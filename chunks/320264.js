@@ -6,10 +6,10 @@ n.d(t, {
     OS: () => G,
     Y9: () => K,
     vw: () => q,
-    N_: () => W,
+    N_: () => Z,
     Q7: () => V,
     KJ: () => H,
-    TT: () => Z,
+    TT: () => W,
 });
 var i = n(477900),
     r = n(582128),
@@ -22,13 +22,13 @@ var i = n(477900),
     u = n(173936),
     h = n(99677),
     C = n(194261),
-    E = n(34188),
-    A = n(577473),
+    A = n(34188),
+    E = n(577473),
     _ = n(403581),
-    p = n(323384),
-    g = n(625903),
-    T = n(659421),
-    m = n(329308),
+    g = n(323384),
+    p = n(625903),
+    m = n(659421),
+    T = n(329308),
     N = n(571694),
     f = n(47167),
     I = n(713654),
@@ -42,16 +42,16 @@ let x = function (e) {
           : null;
 };
 var O = n(769015),
-    U = n(168017),
-    v = n(106191),
+    v = n(168017),
+    U = n(106191),
     L = n(682163),
     R = n(376943),
-    D = n(636585),
-    j = n(71393),
+    j = n(636585),
+    D = n(71393),
     y = n(994500),
     b = n(287809),
-    k = n(147036),
-    M = n(427262),
+    M = n(147036),
+    k = n(427262),
     P = n(792996),
     w = n(445388);
 class V extends r.PureComponent {
@@ -148,7 +148,7 @@ class F extends r.Component {
         let { channel: e } = this.props,
             t = (0, I.gU)(e);
         if (null == t) return null;
-        let n = (0, k.Jg)(e) ?? "";
+        let n = (0, M.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
             className: w.zc,
             role: "img",
@@ -178,7 +178,7 @@ class F extends r.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(D.A, {
+            : (0, i.jsx)(j.A, {
                   className: w.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -198,9 +198,9 @@ class F extends r.Component {
     }
     getAccessibilityLabel() {
         let { channel: e } = this.props,
-            t = j.A.getGuild(this.props.channel.guild_id)?.name,
+            t = D.A.getGuild(this.props.channel.guild_id)?.name,
             n = (0, f.m1)(e, b.default, y.A),
-            i = (0, k.Jg)(e);
+            i = (0, M.Jg)(e);
         return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });
     }
     render() {
@@ -286,7 +286,7 @@ class H extends r.Component {
             i = y.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
-                (e = i ?? M.Ay.getName(t)),
+                (e = i ?? k.Ay.getName(t)),
             e
         );
     }
@@ -301,7 +301,7 @@ class H extends r.Component {
                 children: [
                     (0, i.jsx)("span", { className: w.YW, children: r }),
                     e,
-                    (0, i.jsx)("span", { className: w.Xh, children: M.Ay.getUserTag(t) }),
+                    (0, i.jsx)("span", { className: w.Xh, children: k.Ay.getUserTag(t) }),
                 ],
             })
         );
@@ -316,7 +316,7 @@ class H extends r.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: t } = this.props,
             n = this.getDisplayNickname(),
-            i = M.Ay.getUserTag(t);
+            i = k.Ay.getUserTag(t);
         return null != e && e > 0
             ? P.intl.formatToPlainString(P.t["6b9UrR"], { name: n, id: i, mentions: e })
             : P.intl.formatToPlainString(P.t.GWYOAY, { name: n, id: i });
@@ -365,7 +365,7 @@ class B extends r.Component {
 }
 function z(e) {
     let { game: t, onMouseEnter: n, onClick: r, onFocus: s, focused: l, id: a, inlineLabel: o, children: c } = e,
-        { extraChromeEnabled: d } = U.A.useConfig({ location: "quickswitcher" });
+        { extraChromeEnabled: d } = v.A.useConfig({ location: "quickswitcher" });
     return (0, i.jsx)(V, {
         id: a,
         onMouseEnter: n,
@@ -377,7 +377,7 @@ function z(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: w.zc,
-                    children: (0, i.jsx)(v.A, { game: t, iconClassName: w.bN, withBackground: d }),
+                    children: (0, i.jsx)(U.A, { game: t, iconClassName: w.bN, withBackground: d }),
                 }),
                 (0, i.jsxs)("div", {
                     className: w.UU,
@@ -402,7 +402,7 @@ class K extends r.Component {
         });
     }
 }
-class W extends r.Component {
+class Z extends r.Component {
     renderContent() {
         let e,
             t,
@@ -442,24 +442,24 @@ class W extends r.Component {
         });
     }
 }
-function Z(e) {
+function W(e) {
     switch (e.type) {
-        case m.t1.SHOP:
-            return { label: P.intl.string(P.t.pWG4ze), Icon: E.ShopIcon };
-        case m.t1.SHOP_ORBS_TAB:
-            return { label: P.intl.string(P.t.fG3RIg), Icon: E.ShopIcon };
-        case m.t1.QUEST_ORBS:
-            return { label: `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`, Icon: A.QuestsIcon };
-        case m.t1.NITRO_HOME:
+        case T.t1.SHOP:
+            return { label: P.intl.string(P.t.pWG4ze), Icon: A.ShopIcon };
+        case T.t1.SHOP_ORBS_TAB:
+            return { label: P.intl.string(P.t.fG3RIg), Icon: A.ShopIcon };
+        case T.t1.QUEST_ORBS:
+            return { label: `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`, Icon: E.QuestsIcon };
+        case T.t1.NITRO_HOME:
             return { label: P.intl.string(P.t.Ipxkog), Icon: _.NitroWheelIcon };
-        case m.t1.QUEST_HOME:
-            return { label: P.intl.string(P.t.JALI2K), Icon: A.QuestsIcon };
-        case m.t1.APPS_HOME:
-            return { label: P.intl.string(P.t.PHjkRE), Icon: p.AppsIcon };
-        case m.t1.SETTINGS:
-            return { label: e.label ?? P.intl.string(P.t["3D5yo/"]), Icon: g.SettingsIcon };
-        case m.t1.PLAYGROUND:
-            return { label: e.label ?? `${e.collectionId} Playground`, Icon: e.IconComponent ?? T.PotionIcon };
+        case T.t1.QUEST_HOME:
+            return { label: P.intl.string(P.t.JALI2K), Icon: E.QuestsIcon };
+        case T.t1.APPS_HOME:
+            return { label: P.intl.string(P.t.PHjkRE), Icon: g.AppsIcon };
+        case T.t1.SETTINGS:
+            return { label: e.label ?? P.intl.string(P.t["3D5yo/"]), Icon: p.SettingsIcon };
+        case T.t1.PLAYGROUND:
+            return { label: e.label ?? `${e.collectionId} Playground`, Icon: e.IconComponent ?? m.PotionIcon };
         default:
             return { label: e.id, Icon: u.LinkIcon };
     }
@@ -467,7 +467,7 @@ function Z(e) {
 class q extends r.Component {
     renderContent() {
         let { navigationRecord: e, children: t } = this.props,
-            { label: n, Icon: r } = Z(e),
+            { label: n, Icon: r } = W(e),
             s = (0, i.jsx)(r, { size: "xs", color: "currentColor" });
         return (0, i.jsxs)("div", {
             className: w.xr,

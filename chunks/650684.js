@@ -15,13 +15,13 @@ e.d(
                     height: c,
                     color: p = i.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: d = "",
-                    ...u
+                    ...o
                 } = l,
-                o = (0, s.J)(a),
-                r = o?.width ?? e,
-                g = o?.height ?? c;
+                u = (0, s.J)(a),
+                r = u?.width ?? e,
+                g = u?.height ?? c;
             return (0, t.jsxs)("svg", {
-                ...(0, n.A)(u),
+                ...(0, n.A)(o),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: r,
                 height: g,

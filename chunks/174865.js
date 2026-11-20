@@ -1,16 +1,16 @@
-var r = n(260498);
-n.d(
-    t,
+var t = i(260498);
+i.d(
+    l,
     {},
     {
-        A: function (e, t) {
+        A: function (n, l) {
             return {
-                projectId: e.id,
-                projectName: e.name,
-                guildId: t,
-                projectGuildId: e.guild_id,
-                isOwner: (0, r.PV)(e),
-                canRemix: (0, r.H_)(e),
+                projectId: n.id,
+                projectName: n.name,
+                guildId: l,
+                projectGuildId: n.guild_id,
+                isOwner: (0, t.PV)(n),
+                canRemix: (0, t.H_)(n),
             };
         },
     },

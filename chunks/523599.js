@@ -35,8 +35,8 @@ let g = a.kg(
     m = [],
     D = [],
     R = [],
-    h = !0,
-    L = !1,
+    L = !0,
+    h = !1,
     C = !1,
     M = !0,
     U = !1,
@@ -44,8 +44,8 @@ let g = a.kg(
     x = A.F_X.ALL,
     p = null,
     k = {},
-    F = 0;
-function P(e) {
+    P = 0;
+function F(e) {
     let t = [],
         n = 0;
     return (
@@ -178,10 +178,10 @@ class j extends i.Ay.Store {
         return R;
     }
     get isInitialLoading() {
-        return h;
+        return L;
     }
     get isLoading() {
-        return L;
+        return h;
     }
     get isLoadingNextPage() {
         return C;
@@ -208,20 +208,20 @@ class j extends i.Ay.Store {
         return k;
     }
     get groupedFetchCount() {
-        return F;
+        return P;
     }
 }
 let y = new j(s.h, {
     AUDIT_LOG_FETCH_START: function () {
-        L = !0;
+        h = !0;
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
-        ((F = 0),
-            (h = !1),
+        ((P = 0),
             (L = !1),
+            (h = !1),
             (M = !0),
             (U = !1),
-            (T = P(e.logs)),
+            (T = F(e.logs)),
             (N = e.integrations),
             (O = e.webhooks),
             (S = e.guildScheduledEvents),
@@ -231,11 +231,11 @@ let y = new j(s.h, {
             e.logs.length < 50 && (M = !1));
     },
     AUDIT_LOG_FETCH_FAIL: function () {
-        ((L = !1), (U = !0), (T = []));
+        ((h = !1), (U = !0), (T = []));
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
-        ((C = !0), t && F++);
+        ((C = !0), t && P++);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let {
@@ -258,7 +258,7 @@ let y = new j(s.h, {
             (0 === t.length || t.length < 50) && (M = !1),
             t.length > 0)
         ) {
-            let e = P(t);
+            let e = F(t);
             T = [...T, ...e];
         }
     },
@@ -289,8 +289,8 @@ let y = new j(s.h, {
             (f = null),
             (p = null),
             (k = {}),
-            (F = 0),
-            (h = !0),
+            (P = 0),
+            (L = !0),
             (N = []),
             (O = []),
             (S = []),

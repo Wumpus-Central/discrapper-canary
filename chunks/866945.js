@@ -9,26 +9,26 @@ if (221552 == n.j) var d = n(939249);
 if (221552 == n.j) var u = n(789645);
 var h = n(558001),
     C = n(835002),
-    E = n(792996),
-    A = n(323747);
+    A = n(792996),
+    E = n(323747);
 n.d(
     t,
     {},
     {
         e: function (e) {
-            let { label: t, labelHook: n, count: s, dismissNotice: _, className: p, noticeType: g } = e,
-                T = null != _;
+            let { label: t, labelHook: n, count: s, dismissNotice: _, className: g, noticeType: p } = e,
+                m = null != _;
             r.useEffect(() => {
-                (0, h.N)(g, C.YX.VIEWED);
-            }, [g]);
-            let m = r.useCallback(() => {
-                    null != _ && (_(), (0, h.N)(g, C.YX.DISMISS));
-                }, [g, _]),
+                (0, h.N)(p, C.YX.VIEWED);
+            }, [p]);
+            let T = r.useCallback(() => {
+                    null != _ && (_(), (0, h.N)(p, C.YX.DISMISS));
+                }, [p, _]),
                 N = r.useCallback(() => {
-                    (n(), (0, h.N)(g, C.YX.LEARN_MORE));
-                }, [g, n]);
+                    (n(), (0, h.N)(p, C.YX.LEARN_MORE));
+                }, [p, n]);
             return (0, i.jsxs)("div", {
-                className: l()(A.I, p),
+                className: l()(E.I, g),
                 children: [
                     (0, i.jsx)(a.CircleInformationIcon, { size: "md" }),
                     (0, i.jsx)(o.E, {
@@ -36,15 +36,15 @@ n.d(
                         color: "interactive-text-active",
                         children:
                             null != s
-                                ? E.intl.format(t, {
+                                ? A.intl.format(t, {
                                       hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
                                       count: s,
                                   })
-                                : E.intl.format(t, {
+                                : A.intl.format(t, {
                                       hook: (e, t) => (0, i.jsx)(c.Anchor, { onClick: N, children: e }, t),
                                   }),
                     }),
-                    T && (0, i.jsx)(d.D, { className: A.b, onClick: m, children: (0, i.jsx)(u.XSmallIcon, {}) }),
+                    m && (0, i.jsx)(d.D, { className: E.b, onClick: T, children: (0, i.jsx)(u.XSmallIcon, {}) }),
                 ],
             });
         },

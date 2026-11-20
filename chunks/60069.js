@@ -8,14 +8,14 @@ var l = n(823459),
     u = n(332560),
     d = n(189916),
     h = n(397504),
-    g = n(211824),
-    m = n(385803);
+    m = n(211824),
+    g = n(385803);
 n.d(
     t,
     {},
     {
         r: async function (e) {
-            if (!(await (0, c.Br)(g.vB.CLIENT_THEME))) return !1;
+            if (!(await (0, c.Br)(m.vB.CLIENT_THEME))) return !1;
             r.A.isPreview && ((0, l.S8)(), (0, s.XG)());
             let t = a.A.isSameAsDeviceThemeEnabled(),
                 n = (0, d.oB)(r.A.gradientPreset?.id);
@@ -23,11 +23,11 @@ n.d(
                 (!!n && !t) ||
                 ((0, h.P)(),
                 t && (0, o.i)(),
-                (0, h.e)({ theme: m.eJ.theme, backgroundGradientPresetId: m.eJ.id }, e),
-                (0, c.VN)(g.vB.CLIENT_THEME),
+                (0, h.e)({ theme: g.eJ.theme, backgroundGradientPresetId: g.eJ.id }, e),
+                (0, c.VN)(m.vB.CLIENT_THEME),
                 !!n ||
                     ((0, u.Cy)({
-                        perks: [g.vB.CLIENT_THEME],
+                        perks: [m.vB.CLIENT_THEME],
                         content: i.uF.CLIENT_THEME_SETTINGS,
                         contentSurface: u.rl.THEME_PICKER,
                     }),

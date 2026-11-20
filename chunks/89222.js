@@ -1,5 +1,5 @@
-var l = r(435558),
-    n = r.n(l),
+var n = r(435558),
+    l = r.n(n),
     a = r(855986),
     i = r(506774),
     s = r(73153);
@@ -8,7 +8,7 @@ function c() {
     return i.w.get(o) ?? {};
 }
 let u = new Map(),
-    d = n().throttle(() => {
+    d = l().throttle(() => {
         if (0 === u.size) return;
         let e = c();
         for (let [t, r] of u) "" === r ? delete e[t] : (e[t] = r);

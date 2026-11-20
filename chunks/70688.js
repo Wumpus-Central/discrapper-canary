@@ -19,12 +19,12 @@ n.d(
                 } = e,
                 d = (0, s.J)(t),
                 h = d?.width ?? n,
-                g = d?.height ?? a;
+                m = d?.height ?? a;
             return (0, l.jsxs)("svg", {
                 ...(0, i.A)(u),
                 xmlns: "http://www.w3.org/2000/svg",
                 width: h,
-                height: g,
+                height: m,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

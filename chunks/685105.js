@@ -52,8 +52,8 @@ var R = l(731084),
     D = l(104317),
     H = l(886540),
     U = l(162052),
-    B = l(790624);
-function F(n) {
+    F = l(790624);
+function Z(n) {
     let { projectId: e } = n,
         l = (0, g.bG)(
             [N.A],
@@ -73,20 +73,20 @@ function F(n) {
     return (0, s.jsx)(r.E, {
         variant: "body-xs/normal",
         color: "none",
-        className: a()(B.pG, U.Hz),
+        className: a()(F.pG, U.Hz),
         "aria-hidden": !0,
         children: l ?? w.intl.string(M.default["Y8pS+n"]),
     });
 }
-function Z(n) {
+function B(n) {
     let { project: e, time: l } = n,
         t = (0, j.vm)(e.owner_user_id),
         i = (0, x.tx)(t),
-        d = (0, s.jsx)("span", { className: B.uk, "aria-hidden": !0 });
+        d = (0, s.jsx)("span", { className: F.uk, "aria-hidden": !0 });
     return (0, s.jsxs)(r.E, {
         variant: "body-xs/normal",
         color: "none",
-        className: a()(B.pG, B.sL, B.kB),
+        className: a()(F.pG, F.sL, F.kB),
         children: [
             l,
             null != t
@@ -96,10 +96,10 @@ function Z(n) {
                           (0, s.jsx)(o.eu, {
                               src: t.getAvatarURL(e.guild_id, (0, u.FT)(u._3.SIZE_16)),
                               size: u._3.SIZE_16,
-                              className: B.Wy,
+                              className: F.Wy,
                               "aria-hidden": !0,
                           }),
-                          (0, s.jsx)("span", { className: B.p8, children: i }),
+                          (0, s.jsx)("span", { className: F.p8, children: i }),
                       ],
                   })
                 : null,
@@ -153,40 +153,40 @@ let W = t.memo(function (n) {
         Y = (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)("span", {
-                    className: B.Kk,
+                    className: F.Kk,
                     children: [
                         (0, s.jsx)(v.A, { project: t, size: "sidebar", className: null != R ? T : void 0 }),
                         null != R ? (0, s.jsx)(G, { status: R }) : null,
                     ],
                 }),
                 (0, s.jsxs)("span", {
-                    className: B.rf,
+                    className: F.rf,
                     children: [
                         (0, s.jsx)(r.E, {
                             variant: "body-md/medium",
                             color: "none",
-                            className: a()(B.UU, { [U.Hz]: k }),
+                            className: a()(F.UU, { [U.Hz]: k }),
                             children: t.name,
                         }),
                         L
                             ? (0, s.jsx)(r.E, {
                                   variant: "body-xs/normal",
                                   color: "none",
-                                  className: a()(B.pG, B.sL),
+                                  className: a()(F.pG, F.sL),
                                   children: w.intl.string(M.default.Yh5pAc),
                               })
                             : k
-                              ? (0, s.jsx)(F, { projectId: t.id })
+                              ? (0, s.jsx)(Z, { projectId: t.id })
                               : j
                                 ? null != W
                                     ? (0, s.jsx)(r.E, {
                                           variant: "body-xs/normal",
                                           color: "none",
-                                          className: a()(B.pG, B.sL),
+                                          className: a()(F.pG, F.sL),
                                           children: W,
                                       })
                                     : null
-                                : (0, s.jsx)(Z, { project: t, time: W }),
+                                : (0, s.jsx)(B, { project: t, time: W }),
                     ],
                 }),
                 "" !== D ? (0, s.jsx)(d.A, { children: D }) : null,
@@ -194,24 +194,24 @@ let W = t.memo(function (n) {
         });
     return null == i
         ? (0, s.jsxs)("li", {
-              className: a()(B.AS, { [B.Cp]: L }),
+              className: a()(F.AS, { [F.Cp]: L }),
               "aria-busy": L,
               children: [
-                  z ? (0, s.jsx)("span", { className: B.dM, "aria-hidden": !0 }) : null,
+                  z ? (0, s.jsx)("span", { className: F.dM, "aria-hidden": !0 }) : null,
                   (0, s.jsxs)("div", {
-                      className: a()(B.nM, B.bl, { [B.gy]: z }),
+                      className: a()(F.nM, F.bl, { [F.gy]: z }),
                       onContextMenu: null == x || L ? void 0 : (n) => x(n, t),
-                      children: [Y, null == u || L ? null : (0, s.jsx)("div", { className: B.a7, children: u(t) })],
+                      children: [Y, null == u || L ? null : (0, s.jsx)("div", { className: F.a7, children: u(t) })],
                   }),
               ],
           })
         : (0, s.jsxs)("li", {
-              className: a()(B.AS, { [B.Cp]: L, [B.vX]: null != u }),
+              className: a()(F.AS, { [F.Cp]: L, [F.vX]: null != u }),
               "aria-busy": L,
               children: [
-                  z ? (0, s.jsx)("span", { className: B.dM, "aria-hidden": !0 }) : null,
+                  z ? (0, s.jsx)("span", { className: F.dM, "aria-hidden": !0 }) : null,
                   (0, s.jsx)(c.D, {
-                      className: a()(B.nM, { [B.wH]: o, [B.gy]: z }),
+                      className: a()(F.nM, { [F.wH]: o, [F.gy]: z }),
                       "aria-current": o ? "page" : void 0,
                       tabIndex: L ? -1 : void 0,
                       onMouseDown: L
@@ -225,7 +225,7 @@ let W = t.memo(function (n) {
                   }),
                   null != u
                       ? (0, s.jsx)("div", {
-                            className: a()(B.XI, { [B.Rn]: L }),
+                            className: a()(F.XI, { [F.Rn]: L }),
                             children: L ? (0, s.jsx)(p.y, { type: p.t.SPINNING_CIRCLE_SIMPLE }) : u(t),
                         })
                       : null,

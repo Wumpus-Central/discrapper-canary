@@ -1,6 +1,6 @@
-var r = a(477900),
-    i = a(503698),
-    n = a.n(i),
+var i = a(477900),
+    r = a(503698),
+    n = a.n(r),
     s = a(343053),
     c = a(214847);
 a.d(
@@ -9,8 +9,8 @@ a.d(
     {
         A: function (e) {
             let { variant: t, className: a } = e,
-                { size: i } = (0, s.Z)();
-            return (0, r.jsx)("div", { className: n()(c.wordmark, c[i], "full" === t ? c.full : c.short, a) });
+                { size: r } = (0, s.Z)();
+            return (0, i.jsx)("div", { className: n()(c.wordmark, c[r], "full" === t ? c.full : c.short, a) });
         },
     },
 );

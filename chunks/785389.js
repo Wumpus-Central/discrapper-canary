@@ -1,5 +1,5 @@
-n(321073);
-let r = new Set([
+r(321073);
+let n = new Set([
     "bad_request",
     "bad_connection_type",
     "unknown_project",
@@ -10,31 +10,31 @@ let r = new Set([
     "child_malformed",
     "child_unavailable",
 ]);
-n.d(
+r.d(
     t,
     {},
     {
         K9: function (e, t) {
             if (e.has(t)) return null;
-            let n = new Set(e);
-            return (n.add(t), n);
+            let r = new Set(e);
+            return (r.add(t), r);
         },
         Q6: function (e, t) {
             if (!e.has(t)) return e;
-            let n = new Set(e);
-            return (n.delete(t), n);
+            let r = new Set(e);
+            return (r.delete(t), r);
         },
         Xl: function (e) {
             let t = [],
-                n = new Set();
-            for (let r of e) {
+                r = new Set();
+            for (let n of e) {
                 let e =
-                    "string" != typeof r.type || "" === r.type || "string" != typeof r.label || "" === r.label.trim()
+                    "string" != typeof n.type || "" === n.type || "string" != typeof n.label || "" === n.label.trim()
                         ? null
-                        : r.configured
+                        : n.configured
                           ? "authorize"
                           : "finish-setup";
-                null == e || n.has(r.type) || (n.add(r.type), t.push({ connection: r, offer: e }));
+                null == e || r.has(n.type) || (r.add(n.type), t.push({ connection: n, offer: e }));
             }
             return t;
         },
@@ -58,7 +58,7 @@ n.d(
             return 404 === e ? "not_declared" : e >= 500 ? "unavailable" : "unknown";
         },
         rG: function (e) {
-            return "string" == typeof e && r.has(e) ? e : null;
+            return "string" == typeof e && n.has(e) ? e : null;
         },
         rq: function (e) {
             return "not_configured" === e ? "setup" : "generic";

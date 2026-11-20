@@ -9,7 +9,7 @@ var i,
     u = n(792996),
     h = (((i = {}).RESTRICTING = "restricting"), (i.EXPANDING = "expanding"), i);
 let C = r.Qd;
-function E(e) {
+function A(e) {
     switch (e) {
         case C.ACTIVITY_STATUS_OFF:
             return 2;
@@ -21,18 +21,18 @@ function E(e) {
             return -1;
     }
 }
-let A = new Map([
+let E = new Map([
     [r.KP.FRIENDS_AND_ALL_GUILDS, C.ACTIVITY_STATUS_OFF],
     [r.KP.FRIENDS_AND_SMALL_GUILDS, C.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS],
     [r.KP.FRIENDS_ONLY, C.ACTIVITY_STATUS_ON],
 ]);
 function _(e) {
-    return A.get(e) ?? C.ACTIVITY_STATUS_OFF;
+    return E.get(e) ?? C.ACTIVITY_STATUS_OFF;
 }
-function p(e, t) {
+function g(e, t) {
     if (e === t) return null;
-    let n = E(e),
-        i = E(t);
+    let n = A(e),
+        i = A(t);
     if (n < 0 || i < 0) return null;
     let r = i < n ? "restricting" : "expanding",
         s = (0, d.Kk)(),
@@ -96,7 +96,7 @@ n.d(
                 toastContent: u.intl.string(e ? u.t.AdpgML : u.t["Q7E+QF"]),
             };
         },
-        g8: p,
+        g8: g,
         gF: function (e, t) {
             let n = (0, d.Kk)(),
                 i = new Set(t);
@@ -111,8 +111,8 @@ n.d(
         gS: function (e, t) {
             let n = _(t),
                 i = s._Z.getSetting();
-            if (i === n || E(_(e)) > E(n) != E(i) > E(n)) return null;
-            let l = p(i, n);
+            if (i === n || A(_(e)) > A(n) != A(i) > A(n)) return null;
+            let l = g(i, n);
             if (null == l) return null;
             let a = (function (e) {
                 switch (e) {

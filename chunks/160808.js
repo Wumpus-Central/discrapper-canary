@@ -1,4 +1,4 @@
-n.d(t, { hE: () => i.h, hm: () => T, Wt: () => r.Wt, LH: () => r.LH });
+n.d(t, { hE: () => i.h, hm: () => m, Wt: () => r.Wt, LH: () => r.LH });
 var i = n(483456),
     r = n(766586),
     s = n(477900),
@@ -10,33 +10,33 @@ var o = n(780964),
     u = n(871309),
     h = n(171576),
     C = n(36149),
-    E = n(961943),
-    A = n(652215),
+    A = n(961943),
+    E = n(652215),
     _ = n(49999),
-    p = n(124616),
-    g = n(792996);
-function T(e) {
+    g = n(124616),
+    p = n(792996);
+function m(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         i = (0, C.yM)(),
         r = l.useCallback(() => {
             (t(_.i.TAKE_ACTION), u.A.showAgeVerificationGetStartedModal({ entryPoint: h.q1.AGE_NOTICE_POPOVER }));
         }, [t]),
-        T = l.useCallback(() => {
-            (t(_.i.TAKE_ACTION), u.A.openUrl(d.A.getArticleURL(A.MVz.AGE_VERIFICATION_LEARN_MORE)));
-        }, [t]),
         m = l.useCallback(() => {
+            (t(_.i.TAKE_ACTION), u.A.openUrl(d.A.getArticleURL(E.MVz.AGE_VERIFICATION_LEARN_MORE)));
+        }, [t]),
+        T = l.useCallback(() => {
             (t(_.i.TAKE_ACTION), (0, c.openUserSettings)(o.X.ACCOUNT_STANDING_CATEGORY));
         }, [t]),
         N = l.useCallback(() => {
             t(_.i.USER_DISMISS);
         }, [t]),
-        f = i ? g.intl.string(p.default.f7c7qE) : g.intl.string(p.default.jssaTD),
+        f = i ? p.intl.string(g.default.f7c7qE) : p.intl.string(g.default.jssaTD),
         I = i
-            ? { text: g.intl.string(p.default.ZzcLhc), onClick: r, external: !1 }
-            : { text: g.intl.string(p.default["Bp/1dq"]), link: E.M1, external: !0 },
+            ? { text: p.intl.string(g.default.ZzcLhc), onClick: r, external: !1 }
+            : { text: p.intl.string(g.default["Bp/1dq"]), link: A.M1, external: !0 },
         S = i
-            ? { text: g.intl.string(p.default["+7NlgO"]), variant: "primary", onClick: T }
-            : { text: g.intl.string(p.default.jjpcno), variant: "primary", onClick: m };
+            ? { text: p.intl.string(g.default["+7NlgO"]), variant: "primary", onClick: m }
+            : { text: p.intl.string(g.default.jjpcno), variant: "primary", onClick: T };
     return (0, s.jsx)(a.A, {
         targetElementRef: n,
         shouldShow: !0,
@@ -45,7 +45,7 @@ function T(e) {
         caretConfig: { align: "end" },
         size: "md",
         graphic: { type: "image", src: "/assets/397709a27ee3c251.svg", aspectRatio: "6/4" },
-        title: g.intl.string(p.default.GdTVPF),
+        title: p.intl.string(g.default.GdTVPF),
         body: f,
         textLink: I,
         actions: [S],

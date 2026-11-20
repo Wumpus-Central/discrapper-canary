@@ -1,7 +1,7 @@
 var l = n(582128),
     r = n(886540),
-    a = n(191850),
-    i = n(792996);
+    i = n(191850),
+    a = n(792996);
 let s = new Set();
 function o(e, t) {
     return { cardId: e, status: "pending" === t ? null : t };
@@ -24,13 +24,13 @@ n.d(
                         c ||
                         (function (e) {
                             let t = e.content.trim();
-                            return t === i.intl.string(a.default.UGqnoV) || t === i.intl.string(a.default.sMQt5O);
+                            return t === a.intl.string(i.default.UGqnoV) || t === a.intl.string(i.default.sMQt5O);
                         })(d);
                     continue;
                 }
-                let m = d.secretRequest?.fields ?? [];
-                if (0 === m.length || !(0, r.BL)(d)) continue;
-                let f =
+                let f = d.secretRequest?.fields ?? [];
+                if (0 === f.length || !(0, r.BL)(d)) continue;
+                let m =
                     c ||
                     (function (e) {
                         let t = e.secretRequest;
@@ -38,14 +38,14 @@ n.d(
                             t?.over_mcp === !0 && (!0 !== e.finished || (null != t.request_id && s.has(t.request_id)))
                         );
                     })(d);
-                for (let e of (f && null == n
+                for (let e of (m && null == n
                     ? l.set(d.render_id, "pending")
-                    : f && null != n && m.every((e) => n.has(e.name))
+                    : m && null != n && f.every((e) => n.has(e.name))
                       ? l.set(d.render_id, "received")
                       : u
-                        ? l.set(d.render_id, m.some((e) => o.has(e.name)) ? "superseded" : "inactive")
+                        ? l.set(d.render_id, f.some((e) => o.has(e.name)) ? "superseded" : "inactive")
                         : l.set(d.render_id, "open"),
-                m))
+                f))
                     o.add(e.name);
                 ((u = !0), (c = !1));
             }

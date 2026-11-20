@@ -1,5 +1,5 @@
-var l = r(477900),
-    n = r(582128),
+var n = r(477900),
+    l = r(582128),
     a = r(477262),
     i = r(432017),
     s = r(81369),
@@ -11,7 +11,7 @@ var l = r(477900),
     m = r(663341),
     p = r(191850),
     h = r(792996);
-let g = [
+let x = [
     {
         id: "add-images-videos",
         label: p.default["51+9lc"],
@@ -37,72 +37,72 @@ r.d(
                     buttonClassName: a,
                     iconClassName: i,
                     onAddFiles: s,
-                    onImport: x,
+                    onImport: g,
                     onSendToOtherProjects: b,
                 } = e,
-                j = n.useRef(null),
-                v = n.useRef(null),
-                y = h.intl.string(h.t.d56gCa),
-                C = n.useCallback((e) => {
+                j = l.useRef(null),
+                v = l.useRef(null),
+                w = h.intl.string(h.t.d56gCa),
+                y = l.useCallback((e) => {
                     let t = j.current;
                     null != t && ((t.accept = e), t.click());
                 }, []),
-                w = n.useCallback(
+                C = l.useCallback(
                     (e) => {
                         (s(Array.from(e.currentTarget.files ?? [])), (e.currentTarget.value = ""));
                     },
                     [s],
                 );
-            return (0, l.jsxs)(l.Fragment, {
+            return (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, l.jsx)("input", {
+                    (0, n.jsx)("input", {
                         ref: j,
                         type: "file",
                         multiple: !0,
                         hidden: !0,
-                        onChange: w,
+                        onChange: C,
                         tabIndex: -1,
                         "aria-hidden": !0,
                     }),
-                    (0, l.jsx)(o.Y, {
+                    (0, n.jsx)(o.Y, {
                         targetElementRef: v,
                         position: "top",
                         align: "left",
                         animation: o.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: r } = e;
-                            return (0, l.jsx)(c.W, {
+                            return (0, n.jsx)(c.W, {
                                 "data-menu-migrated": !0,
                                 navId: t,
-                                "aria-label": y,
+                                "aria-label": w,
                                 onClose: r,
                                 onSelect: r,
-                                children: (0, l.jsxs)(u.rX, {
+                                children: (0, n.jsxs)(u.rX, {
                                     children: [
-                                        g.map((e) =>
-                                            (0, l.jsx)(
+                                        x.map((e) =>
+                                            (0, n.jsx)(
                                                 u.Dr,
                                                 {
                                                     id: e.id,
                                                     label: h.intl.string(e.label),
                                                     iconLeft: e.icon,
                                                     leadingAccessory: { type: "icon", icon: e.icon },
-                                                    action: () => C(e.accept),
+                                                    action: () => y(e.accept),
                                                 },
                                                 e.id,
                                             ),
                                         ),
-                                        null != x
-                                            ? (0, l.jsx)(u.Dr, {
+                                        null != g
+                                            ? (0, n.jsx)(u.Dr, {
                                                   id: "import-project",
                                                   label: h.intl.string(p.default["p/k5i7"]),
                                                   iconLeft: d.BrowserPlusIcon,
                                                   leadingAccessory: { type: "icon", icon: d.BrowserPlusIcon },
-                                                  action: x,
+                                                  action: g,
                                               })
                                             : null,
                                         null != b
-                                            ? (0, l.jsx)(u.Dr, {
+                                            ? (0, n.jsx)(u.Dr, {
                                                   id: "send-to-other-projects",
                                                   label: h.intl.string(p.default["5HmLrK"]),
                                                   iconLeft: f.ChatArrowRightIcon,
@@ -115,17 +115,17 @@ r.d(
                             });
                         },
                         children: (e, t) => {
-                            let { isShown: n } = t;
-                            return (0, l.jsx)("button", {
+                            let { isShown: l } = t;
+                            return (0, n.jsx)("button", {
                                 ...e,
                                 ref: v,
                                 type: "button",
                                 className: a,
                                 disabled: r,
-                                "aria-label": y,
+                                "aria-label": w,
                                 "aria-haspopup": "menu",
-                                "aria-expanded": n,
-                                children: (0, l.jsx)(m.PlusLargeIcon, {
+                                "aria-expanded": l,
+                                children: (0, n.jsx)(m.PlusLargeIcon, {
                                     size: "refresh_sm",
                                     color: "currentColor",
                                     className: i,

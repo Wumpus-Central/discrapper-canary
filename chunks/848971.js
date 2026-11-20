@@ -9,8 +9,8 @@ var o = n(73153),
     u = n(336044),
     d = n(450232),
     h = n(526162),
-    g = n(603880),
-    m = n(236814),
+    m = n(603880),
+    g = n(236814),
     x = n(792996),
     f = n(40025);
 function v(e) {
@@ -18,7 +18,7 @@ function v(e) {
         [i] = (0, r.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]),
         s = (0, u.i)();
     return (0, l.jsx)(l.Fragment, {
-        children: (0, m.v8)()
+        children: (0, g.v8)()
             .filter((e) => {
                 let { isHidden: t } = e;
                 return !t;
@@ -26,7 +26,7 @@ function v(e) {
             .map((e, r) => {
                 let a = s || (!0 === t && e.isPremium);
                 return (0, l.jsx)(
-                    g.A,
+                    m.A,
                     {
                         icon: e,
                         isSelected: i === e.id,
@@ -50,10 +50,10 @@ n.d(
         A: function (e) {
             let { className: t, disabled: n, isEditor: r, renderCTAButtons: o, iconSize: u } = e,
                 h = (0, c.GV)(),
-                { ref: g, ...m } = (0, i._u)({ orientation: "horizontal", labelledBy: h });
+                { ref: m, ...g } = (0, i._u)({ orientation: "horizontal", labelledBy: h });
             return (0, l.jsx)("div", {
-                ...m,
-                ref: g,
+                ...g,
+                ref: m,
                 children: (0, l.jsxs)("div", {
                     className: t,
                     children: [

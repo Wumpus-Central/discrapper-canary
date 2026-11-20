@@ -8,8 +8,8 @@ var l = n(477900),
     u = n(939249),
     d = n(194261),
     h = n(653523),
-    g = n(350972),
-    m = n(677056),
+    m = n(350972),
+    g = n(677056),
     x = n(236814),
     f = n(652215),
     v = n(792996),
@@ -20,19 +20,19 @@ function A(e) {
             className: n,
             style: i,
             onSelect: a,
-            isSelected: m = !1,
+            isSelected: g = !1,
             tabIndex: A,
             children: j,
             locked: p = !1,
-            disabled: N = !1,
+            disabled: S = !1,
         } = e,
-        [S, b] = r.useState((0, x.gG)(t).name),
-        C = t === g.Ic.PIRATE;
+        [N, E] = r.useState((0, x.gG)(t).name),
+        b = t === m.Ic.PIRATE;
     return (0, l.jsx)(c.m, {
-        text: S,
+        text: N,
         onTooltipShow: () =>
-            C &&
-            b(
+            b &&
+            E(
                 o().sample([
                     v.intl.string(v.t["EgWTY+"]),
                     v.intl.string(v.t.umBn5f),
@@ -47,15 +47,15 @@ function A(e) {
             children: [
                 (0, l.jsx)(u.D, {
                     role: "radio",
-                    "aria-label": S,
-                    "aria-checked": m,
-                    "aria-disabled": N,
-                    tabIndex: A ?? (m ? 0 : -1),
-                    className: s()(y.Ni, { [y.wH]: m }, n),
-                    onClick: m ? f.tEg : () => a?.(t),
+                    "aria-label": N,
+                    "aria-checked": g,
+                    "aria-disabled": S,
+                    tabIndex: A ?? (g ? 0 : -1),
+                    className: s()(y.Ni, { [y.wH]: g }, n),
+                    onClick: g ? f.tEg : () => a?.(t),
                     children: j,
                 }),
-                m && (0, l.jsx)(h.H$, {}),
+                g && (0, l.jsx)(h.H$, {}),
                 p &&
                     (0, l.jsx)("div", {
                         className: y.RK,
@@ -89,7 +89,7 @@ n.d(
                 tabIndex: a,
                 locked: c,
                 disabled: s,
-                children: (0, l.jsx)(m.A, { id: n.id, size: t }),
+                children: (0, l.jsx)(g.A, { id: n.id, size: t }),
             });
         },
     },

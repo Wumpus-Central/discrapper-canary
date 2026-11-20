@@ -1,4 +1,4 @@
-t.exports = {
+a.exports = {
     vr: "threadSubLabel_yLOKc6",
     Q9: "subLabelIcon_yLOKc6",
     Ql: "subLabelSeparator_yLOKc6",

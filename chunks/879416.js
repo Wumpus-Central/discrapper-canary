@@ -14,8 +14,8 @@ n.d(
                 u = null != d && !d.isPurchasedExternally,
                 h = null != d && d.hasPremiumNitroMonthly,
                 C = !0 === a && o === s.xb.ORBS,
-                E = !0 === a && o === s.xb.DISCOUNT && u && h;
-            return { isEligibleForIncentive: C || E, referralRewardType: o, useAltReferralCardArt: c };
+                A = !0 === a && o === s.xb.DISCOUNT && u && h;
+            return { isEligibleForIncentive: C || A, referralRewardType: o, useAltReferralCardArt: c };
         },
     },
 );
