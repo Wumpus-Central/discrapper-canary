@@ -739,8 +739,8 @@ function e8(e) {
         ],
     });
 }
-var e9 = n(709372),
-    e4 = n(984680);
+var e4 = n(709372),
+    e9 = n(984680);
 let e7 = i.memo(function (e) {
     var t;
     let { channelId: n } = e,
@@ -748,7 +748,7 @@ let e7 = i.memo(function (e) {
     i.useEffect(() => {
         r.current?.focus();
     }, []);
-    let a = (0, e9.om)(n),
+    let a = (0, e4.om)(n),
         o = a?.phase === "recording",
         u = a?.phase === "recorded";
     i.useEffect(() => {
@@ -815,14 +815,14 @@ let e7 = i.memo(function (e) {
         T = E ? x : f,
         j = E && null == T;
     return (0, l.jsxs)("div", {
-        className: e4.M0,
+        className: e9.M0,
         role: "group",
         "aria-label": k.intl.string(k.t.lwy6aX),
         children: [
             null != T
                 ? (0, l.jsx)(e8, { playback: T, durationSecs: a.recordedDurationSecs ?? 0, animateWaveformEntrance: E })
                 : (0, l.jsxs)("div", {
-                      className: e4.Fg,
+                      className: e9.Fg,
                       children: [
                           o
                               ? (0, l.jsx)(Y.m, {
@@ -841,19 +841,19 @@ let e7 = i.memo(function (e) {
                               : null,
                           (0, l.jsx)(eZ, {
                               channelId: n,
-                              className: e4.ou,
+                              className: e9.ou,
                               recording: o,
                               reducedMotion: d,
                               collapsing: j,
                               onCollapseComplete: A,
                           }),
                           (0, l.jsxs)("div", {
-                              className: e4.RE,
+                              className: e9.RE,
                               children: [
-                                  (0, l.jsx)("div", { className: s()(e4.Zz, { [e4.Py]: !o }), "aria-hidden": !0 }),
+                                  (0, l.jsx)("div", { className: s()(e9.Zz, { [e9.Py]: !o }), "aria-hidden": !0 }),
                                   (0, l.jsx)(eB.E, {
                                       variant: "body-sm/normal",
-                                      className: s()(e4.O1, { [e4.w2]: h }),
+                                      className: s()(e9.O1, { [e9.w2]: h }),
                                       tabularNumbers: !0,
                                       children: (0, eH.rB)(v),
                                   }),
@@ -861,7 +861,7 @@ let e7 = i.memo(function (e) {
                           }),
                       ],
                   }),
-            (0, l.jsx)("div", { className: e4.yF, "aria-hidden": !0 }),
+            (0, l.jsx)("div", { className: e9.yF, "aria-hidden": !0 }),
             (0, l.jsx)(Y.m, {
                 text: k.intl.string(k.t.oyYWHE),
                 children: (0, l.jsx)("div", {
@@ -882,8 +882,8 @@ let e7 = i.memo(function (e) {
                     onKeyDown: I,
                     children: (0, l.jsx)(eK.A, {
                         ref: r,
-                        className: e4.jo,
-                        childClassName: s()(e4.Jp, { [e4.Tq]: !N }),
+                        className: e9.jo,
+                        childClassName: s()(e9.Jp, { [e9.Tq]: !N }),
                         onClick: N ? b : void 0,
                         disabled: !N,
                         noHover: !N,
@@ -892,7 +892,7 @@ let e7 = i.memo(function (e) {
                         children: (0, l.jsx)(eG.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: e4.AO,
+                            className: e9.AO,
                         }),
                     }),
                 }),
@@ -1364,7 +1364,7 @@ function t8(e) {
         }),
     });
 }
-function t9(e) {
+function t4(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, l.jsx)("div", { children: e }, t)),
         r = t.floating.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t));
@@ -1377,7 +1377,7 @@ function t9(e) {
               ],
           });
 }
-var t4 = n(290153),
+var t9 = n(12764),
     t7 = n(102077),
     ne = n(246049),
     nt = n(135261),
@@ -1877,7 +1877,7 @@ let nb = i.memo(function (e) {
             },
             [D, k.commands?.enabled, eJ],
         ),
-        { submitting: e3, submit: e8, handleSubmit: e4 } = nc(F, k, eE, eI, T.id),
+        { submitting: e3, submit: e8, handleSubmit: e9 } = nc(F, k, eE, eI, T.id),
         { autocompleteRef: tt, handleMaybeShowAutocomplete: tn, handleHideAutocomplete: tr } = ng(),
         ta = nd(e8, k, eE),
         to = nh(eE),
@@ -2036,10 +2036,10 @@ let nb = i.memo(function (e) {
             selectedAutocompleteInputError: tN,
         }),
         tG = 0 === r.trim().length,
-        tH = null != (0, e9.om)(T.id);
+        tH = null != (0, e4.om)(T.id);
     i.useEffect(
         () => () => {
-            let e = (0, e9.Mk)(T.id);
+            let e = (0, e4.Mk)(T.id);
             e?.phase === "recording" ? (0, eq.yx)(T.id) : e?.phase === "requesting" && (0, eq.eT)(T.id);
         },
         [T.id],
@@ -2056,11 +2056,11 @@ let nb = i.memo(function (e) {
         t5 =
             null != L
                 ? L()
-                : (0, l.jsx)(t4.A, {
+                : (0, l.jsx)(t9.A, {
                       type: k,
                       disabled: eF,
                       channel: T,
-                      handleSubmit: e4,
+                      handleSubmit: e9,
                       isEmpty: tG,
                       showAllButtons: !eL && !eM,
                       expressionButtonsHidden: eM,
@@ -2102,7 +2102,7 @@ let nb = i.memo(function (e) {
                             [e6.z3]: null != _,
                         }),
                         children: [
-                            tX || t0 ? null : (0, l.jsx)(t9, { bars: tB }),
+                            tX || t0 ? null : (0, l.jsx)(t4, { bars: tB }),
                             (0, l.jsxs)("div", {
                                 ref: eb,
                                 onScroll: tp,
