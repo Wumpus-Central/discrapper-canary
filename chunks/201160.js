@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { useMacaronBentoBox: () => C, useMacaronPerkCard: () => T }));
+(n.r(t), n.d(t, { useMacaronBentoBox: () => T, useMacaronPerkCard: () => C }));
 var i = n(477900),
     a = n(582128),
     l = n(793574),
@@ -7,7 +7,7 @@ var i = n(477900),
     s = n(713271),
     d = n(555393),
     c = n(852218),
-    u = n(670328),
+    u = n(88210),
     f = n(722793),
     m = n(275357),
     g = n(652215),
@@ -17,23 +17,23 @@ var i = n(477900),
     P = n(792996),
     E = n(505051);
 let _ = new Date(2026, 10, 18);
-function T(e) {
+function C(e) {
     let { location: t } = e,
         { enabled: n, phase: s } = f.A.useConfig({ location: t }),
         { analyticsLocations: E } = (0, r.Ay)(l.A.PREMIUM_MARKETING_PERK_CARD),
-        T = null === (0, d.N)(),
-        C = null;
+        C = null === (0, d.N)(),
+        T = null;
     return (
         s === f.H.PHASE_ONE
-            ? (C = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
-            : s === f.H.PHASE_TWO && (C = P.intl.formatToPlainString(p.default.RAQCKQ, { date: _ })),
+            ? (T = P.intl.formatToPlainString(A.default.XuYNQR, { date: _, rewardPercentage: 10 }))
+            : s === f.H.PHASE_TWO && (T = P.intl.formatToPlainString(p.default.RAQCKQ, { date: _ })),
         (0, a.useMemo)(
             () =>
                 n
                     ? {
                           id: m.A,
                           title: P.intl.string(p.default["9gMXJv"]),
-                          description: C,
+                          description: T,
                           subscriptionRequired: !0,
                           isThirdPartyPerk: !0,
                           backgroundAssetUrl:
@@ -56,32 +56,32 @@ function T(e) {
                                   }),
                                   analyticsLocations: E,
                               }),
-                          ctaDisabled: T,
-                          ctaLoading: T,
+                          ctaDisabled: C,
+                          ctaLoading: C,
                           pillText: P.intl.string(P.t.y2b7CA),
                       }
                     : null,
-            [E, n, T, C, s],
+            [E, n, C, T, s],
         )
     );
 }
-function C(e) {
+function T(e) {
     let { location: t } = e,
         { enabled: n, phase: d } = f.A.useConfig({ location: t }),
         { analyticsLocations: m } = (0, r.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX),
-        T = null;
+        C = null;
     return (
         d === f.H.PHASE_ONE
-            ? (T = P.intl.format(A.default.MJep2r, {
+            ? (C = P.intl.format(A.default.MJep2r, {
                   date: _,
                   rewardPercentage: 10,
                   termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION),
               }))
             : d === f.H.PHASE_TWO &&
-              (T = P.intl.format(p.default.DZRLe2, { date: _, termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION) })),
+              (C = P.intl.format(p.default.DZRLe2, { date: _, termsUrl: o.A.getArticleURL(g.MVz.BEST_BUY_PROMOTION) })),
         (0, a.useMemo)(
             () =>
-                n && null != T
+                n && null != C
                     ? {
                           name: s.N.MACARON,
                           caption: (0, i.jsx)("img", {
@@ -94,7 +94,7 @@ function C(e) {
                                   ? "https://cdn.discordapp.com/assets/content/7db5e6857b36d6ea33af3c6a57f9701f26539c29fdb613ff81ec5a51d544f23f.png"
                                   : "https://cdn.discordapp.com/assets/content/d2b00ed1d159f58e3b59d64ffb8386063ec48b58789f366785e534a1b74aea0f.png",
                           containerClassName: E.macaronGradient,
-                          description: T,
+                          description: C,
                           descriptionCta: P.intl.string(b.default.WMK6Pg),
                           onClick: () =>
                               (0, u.P)({
@@ -109,7 +109,7 @@ function C(e) {
                               }),
                       }
                     : null,
-            [m, n, T, d],
+            [m, n, C, d],
         )
     );
 }
