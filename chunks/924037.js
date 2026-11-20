@@ -1,4 +1,4 @@
-e.d(n, { default: () => O });
+e.d(n, { default: () => J });
 var l = e(477900),
     i = e(582128),
     r = e(165862),
@@ -30,48 +30,46 @@ let R = "YYYYMMDDTHHmmss",
     L = "YYYY-MM-DDTHH:mm:ss",
     N = /RRULE:.*/;
 var k = e(173936),
-    I = e(207560),
-    X = e(253932),
-    C = e(957565),
-    Y = e(691012),
-    P = e(858899),
-    Q = e(192308),
-    M = e(732159),
-    B = e(834730),
-    F = e(931991),
-    H = e(496092),
-    Z = e(722260),
-    U = e(823508),
-    V = e(24661),
-    W = e(138134),
-    $ = e(928658),
-    K = e(857071),
-    q = e(46653),
-    J = e(508654);
-function O(t) {
+    I = e(253932),
+    X = e(957565),
+    C = e(691012),
+    Y = e(858899),
+    P = e(192308),
+    Q = e(732159),
+    M = e(834730),
+    B = e(931991),
+    F = e(496092),
+    H = e(722260),
+    Z = e(823508),
+    U = e(24661),
+    V = e(138134),
+    W = e(928658),
+    $ = e(857071),
+    K = e(46653),
+    q = e(508654);
+function J(t) {
     let n,
         c,
         g,
+        J,
         O,
         z,
-        tt,
-        tn,
         {
-            guildEventId: te,
-            recurrenceId: tl,
-            channel: ti,
-            guild: tr,
-            analyticsContext: td,
-            isRecurrenceItem: ta = !1,
-            onSelect: ts,
-            target: tu,
+            guildEventId: tt,
+            recurrenceId: tn,
+            channel: te,
+            guild: tl,
+            analyticsContext: ti,
+            isRecurrenceItem: tr = !1,
+            onSelect: td,
+            target: ta,
         } = t,
-        tc = (function (t) {
+        ts = (function (t) {
             let { guildEventId: n, recurrenceId: e, guild: i, channel: r } = t,
                 a = null != e,
-                { canManageGuildEvent: s } = (0, F.nr)(r ?? i),
+                { canManageGuildEvent: s } = (0, B.nr)(r ?? i),
                 u = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(n)),
-                c = (0, Z.A)(e, u?.id),
+                c = (0, H.A)(e, u?.id),
                 o = null != u && s(u);
             return a && c?.is_canceled && o
                 ? (0, l.jsx)(d.Dr, {
@@ -83,8 +81,8 @@ function O(t) {
                               (function (t, n, e, l) {
                                   let { scheduled_start_time: i, scheduled_end_time: r } = t;
                                   null == i && null == r
-                                      ? H.default.deleteGuildEventException(n, e, l)
-                                      : H.default.updateGuildEventException(
+                                      ? F.default.deleteGuildEventException(n, e, l)
+                                      : F.default.updateGuildEventException(
                                             { scheduled_start_time: i, scheduled_end_time: r, is_canceled: !1 },
                                             n,
                                             e,
@@ -94,13 +92,13 @@ function O(t) {
                       },
                   })
                 : null;
-        })({ guildEventId: te, recurrenceId: tl, guild: tr, channel: ti }),
-        to = (function (t) {
+        })({ guildEventId: tt, recurrenceId: tn, guild: tl, channel: te }),
+        tu = (function (t) {
             let { guildEventId: n, recurrenceId: e, guild: i, channel: r } = t,
                 a = null != e,
-                { canManageGuildEvent: s } = (0, F.nr)(r ?? i),
+                { canManageGuildEvent: s } = (0, B.nr)(r ?? i),
                 [u, c] = (0, f.yK)([j.Ay], () => [j.Ay.isActive(n), j.Ay.getGuildScheduledEvent(n)]),
-                o = (0, Z.A)(e, c?.id),
+                o = (0, H.A)(e, c?.id),
                 g = null != c && s(c),
                 m = c?.recurrence_rule != null && !a,
                 b = (0, D.nh)(n, e);
@@ -112,18 +110,18 @@ function O(t) {
                 if (new Date() > t) return null;
             }
             function A(t) {
-                (0, Q.qf)((r) =>
-                    (0, l.jsx)(M.u, {
+                (0, P.qf)((r) =>
+                    (0, l.jsx)(Q.u, {
                         ...r,
                         title: T.intl.string(T.t.R5bpin),
                         subtitle: T.intl.string(T.t.v2GWNQ),
                         confirmText: m || t ? T.intl.string(T.t["8ZsNv5"]) : T.intl.string(T.t.B9sJLX),
                         cancelText: T.intl.string(T.t.oEAioF),
                         onConfirm: () =>
-                            a && !t ? H.default.deleteRecurrence(i.id, n, e, o) : H.default.deleteGuildEvent(n, i.id),
+                            a && !t ? F.default.deleteRecurrence(i.id, n, e, o) : F.default.deleteGuildEvent(n, i.id),
                         children:
                             (m || t) &&
-                            (0, l.jsx)(B.E, { variant: "body-md/normal", children: T.intl.format(T.t.ZcpcyO, {}) }),
+                            (0, l.jsx)(M.E, { variant: "body-md/normal", children: T.intl.format(T.t.ZcpcyO, {}) }),
                     }),
                 );
             }
@@ -152,21 +150,21 @@ function O(t) {
                         ],
                     }),
             });
-        })({ guildEventId: te, recurrenceId: tl, guild: tr, channel: ti }),
-        tg = (function (t) {
+        })({ guildEventId: tt, recurrenceId: tn, guild: tl, channel: te }),
+        tc = (function (t) {
             let { guildEventId: n, guild: i, channel: r, recurrenceId: a, isRecurrenceItem: s } = t,
-                { canManageGuildEvent: u } = (0, F.nr)(r ?? i),
+                { canManageGuildEvent: u } = (0, B.nr)(r ?? i),
                 c = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(n)),
                 o = u(c),
-                g = (0, U.A)(),
-                m = (0, Z.A)(a, c?.id),
+                g = (0, Z.A)(),
+                m = (0, H.A)(a, c?.id),
                 b = (0, D.nh)(n, a);
             if (!o || null == b || null == c) return null;
             let h = null != c.recurrence_rule && !s;
             function A(t) {
                 null != c &&
                     ((null == a || t) && !s
-                        ? (0, Q.mM)(async () => {
+                        ? (0, P.mM)(async () => {
                               let { default: t } = await Promise.all([
                                   e.e(237427),
                                   e.e(670870),
@@ -223,7 +221,7 @@ function O(t) {
                               return (e) => (0, l.jsx)(t, { ...e, guildScheduledEventId: n, guildId: i.id });
                           }, g)
                         : null != a &&
-                          (0, Q.mM)(async () => {
+                          (0, P.mM)(async () => {
                               let { default: t } = await Promise.all([
                                   e.e(881717),
                                   e.e(232551),
@@ -257,13 +255,13 @@ function O(t) {
                         ],
                     }),
             });
-        })({ guildEventId: te, guild: tr, channel: ti, recurrenceId: tl, isRecurrenceItem: ta }),
-        tm = (0, V.A)(te, tr, ti),
-        tb = (function (t, n, i) {
-            let { canManageGuildEvent: r } = (0, F.nr)(i ?? n),
+        })({ guildEventId: tt, guild: tl, channel: te, recurrenceId: tn, isRecurrenceItem: tr }),
+        to = (0, U.A)(tt, tl, te),
+        tg = (function (t, n, i) {
+            let { canManageGuildEvent: r } = (0, B.nr)(i ?? n),
                 a = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(t), [t]),
                 s = r(a),
-                u = null != (0, J.Qs)(i?.id ?? ""),
+                u = null != (0, q.Qs)(i?.id ?? ""),
                 c = null != a && (0, j.Fd)(a);
             return !s || c || u
                 ? null
@@ -272,7 +270,7 @@ function O(t) {
                       label: T.intl.string(T.t.cK1GGY),
                       action: function () {
                           null != a &&
-                              (0, Q.mM)(async () => {
+                              (0, P.mM)(async () => {
                                   let { default: t } = await Promise.all([
                                       e.e(998835),
                                       e.e(107427),
@@ -285,14 +283,14 @@ function O(t) {
                               });
                       },
                   });
-        })(te, tr, ti),
-        tf = (function (t, n, e) {
+        })(tt, tl, te),
+        tm = (function (t, n, e) {
             let i = null != e;
             if (null == (0, f.bG)([v.A], () => v.A.getGuild(n), [n])) return null;
             function r() {
                 let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     i = `${location.protocol}//${location.host}${S.BVt.GUILD_EVENT_DETAILS(n, t, l ? null : e)}`;
-                (0, C.C)(i, () => (0, P.P0)({ text: T.intl.string(T.t["L/PwZf"]), variant: "success" }));
+                (0, X.C)(i, () => (0, Y.P0)({ text: T.intl.string(T.t["L/PwZf"]), variant: "success" }));
             }
             return (0, l.jsx)(d.Dr, {
                 id: T.intl.string(T.t["9o+VKx"]),
@@ -315,39 +313,38 @@ function O(t) {
                         ],
                     }),
             });
-        })(te, tr.id, tl),
-        th =
-            ((n = X.Q_.useSetting()),
-            (c = (0, I.lF)()),
-            (O = null != (g = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(te))) ? (0, Y.A)(g) : null),
-            (z = "event-image" === tu.getAttribute("data-type")),
-            (tt = i.useCallback(() => {
-                null != O && (0, C.C)(O);
-            }, [O])),
-            C.p5 && n && c && null != O && z
+        })(tt, tl.id, tn),
+        tb =
+            ((n = I.Q_.useSetting()),
+            (g = null != (c = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(tt))) ? (0, C.A)(c) : null),
+            (J = "event-image" === ta.getAttribute("data-type")),
+            (O = i.useCallback(() => {
+                null != g && (0, X.C)(g);
+            }, [g])),
+            X.p5 && n && null != g && J
                 ? (0, l.jsx)(d.Dr, {
                       id: "copy-event-image-link",
                       label: T.intl.string(T.t["8xHmxo"]),
-                      action: tt,
+                      action: O,
                       icon: k.LinkIcon,
                   })
                 : null),
-        tA =
-            ((tn = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(te), [te])),
-            null == te || null == tn
+        tf =
+            ((z = (0, f.bG)([j.Ay], () => j.Ay.getGuildScheduledEvent(tt), [tt])),
+            null == tt || null == z
                 ? null
                 : (0, l.jsx)(d.Dr, {
                       id: "report-event",
                       label: T.intl.string(T.t.IBA5wX),
                       action: function () {
-                          if (null != tn) return (0, $.uA)(tn);
+                          if (null != z) return (0, W.uA)(z);
                       },
-                      icon: W.FlagIcon,
+                      icon: V.FlagIcon,
                       color: "danger",
                   })),
-        tx = (0, u.A)({ id: te, label: T.intl.string(T.t.WZwPO4) }),
-        tv = (0, u.A)({ id: tl, label: T.intl.string(T.t.NZRGQo) }),
-        tp = (function (t, n, e, i) {
+        th = (0, u.A)({ id: tt, label: T.intl.string(T.t.WZwPO4) }),
+        tA = (0, u.A)({ id: tn, label: T.intl.string(T.t.NZRGQo) }),
+        tx = (function (t, n, e, i) {
             let r,
                 a = (0, f.bG)([j.Ay], () => j.Ay.isActive(t)),
                 s = (0, D.nh)(t ?? "", i),
@@ -434,11 +431,11 @@ function O(t) {
                     }),
                 ],
             });
-        })(te, tr.id, ti, tl),
-        tE = (function (t) {
+        })(tt, tl.id, te, tn),
+        tv = (function (t) {
             let { guildEventId: n, guildId: e, recurrenceId: i } = t,
-                r = (0, f.bG)([K.A], () => K.A.isLurking(e), [e]),
-                a = (0, f.bG)([q.default], () => q.default.getId()),
+                r = (0, f.bG)([$.A], () => $.A.isLurking(e), [e]),
+                a = (0, f.bG)([K.default], () => K.default.getId()),
                 {
                     rsvped: s,
                     baseRsvp: u,
@@ -452,13 +449,13 @@ function O(t) {
                     }),
                     [i, n, a],
                 ),
-                o = (0, Z.A)(i, n);
+                o = (0, H.A)(i, n);
             if (r || o?.is_canceled) return null;
             function g() {
                 let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     l = u?.response === w.Qi.INTERESTED ? w.Qi.UNINTERESTED : w.Qi.INTERESTED,
                     r = t ? null : i;
-                H.default.updateRsvp(n, r, e, l);
+                F.default.updateRsvp(n, r, e, l);
             }
             return (0, l.jsxs)(d.Dr, {
                 id: s ? T.intl.string(T.t["7M5gaN"]) : T.intl.string(T.t.FXixvH),
@@ -478,21 +475,21 @@ function O(t) {
                     }),
                 ],
             });
-        })({ guildEventId: te, guildId: tr.id, recurrenceId: tl });
+        })({ guildEventId: tt, guildId: tl.id, recurrenceId: tn });
     return (0, l.jsx)(s.A, {
-        context: td,
+        context: ti,
         object: S.ZSU.CONTEXT_MENU,
         children: (0, l.jsxs)(r.W, {
             "data-menu-migrated-auto": !0,
             navId: "user-context",
             onClose: a.Z_,
             "aria-label": T.intl.string(T.t.liqwPJ),
-            onSelect: ts,
+            onSelect: td,
             children: [
-                (0, l.jsxs)(d.rX, { children: [tp, !ta && tb, tg, !ta && tm, to, tc, tf, ta && tE] }),
-                !ta && (0, l.jsx)(d.rX, { children: tA }),
-                null != th && (0, l.jsx)(d.rX, { children: th }),
-                (0, l.jsxs)(d.rX, { children: [tx, tv] }),
+                (0, l.jsxs)(d.rX, { children: [tx, !tr && tg, tc, !tr && to, tu, ts, tm, tr && tv] }),
+                !tr && (0, l.jsx)(d.rX, { children: tf }),
+                null != tb && (0, l.jsx)(d.rX, { children: tb }),
+                (0, l.jsxs)(d.rX, { children: [th, tA] }),
             ],
         }),
     });
