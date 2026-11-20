@@ -137,10 +137,22 @@
     padding-inline: var(--space-16) var(--space-24)
 }
 
+.characterAndStats_bcgTHb.checkpointEnabled_bcgTHb .stats_bcgTHb {
+    gap: var(--space-12);
+    padding-block: var(--space-12) calc(var(--space-12) + var(--space-40));
+    padding-inline: var(--space-16)
+}
+
 @container (width < 300px) {
-    .characterAndStats_bcgTHb .stats_bcgTHb {
+
+    .characterAndStats_bcgTHb .stats_bcgTHb,
+    .characterAndStats_bcgTHb.checkpointEnabled_bcgTHb .stats_bcgTHb {
         gap: var(--space-8)
     }
+}
+
+.card_bcgTHb:not(.checkpointEnabled_bcgTHb) .characterColumn_bcgTHb {
+    padding-bottom: var(--space-12)
 }
 
 .statRow_bcgTHb {
@@ -191,26 +203,29 @@
     position: absolute
 }
 
-.clickable_bcgTHb {
-    cursor: pointer
-}
-
 .footerTitle_bcgTHb {
     font-size: 12px;
     line-height: 14px;
     white-space: nowrap
 }
 
-.footerButton_bcgTHb {
-    background-color: var(--custom-checkpoint-card-tertiary);
-    border: .8px solid #000;
-    box-shadow: 1.6px 1.6px 0 #000;
+.card_bcgTHb .ctaButton_bcgTHb {
+    background-color: var(--custom-checkpoint-card-primary);
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0 #000;
     box-sizing: border-box;
     display: grid;
-    height: 16px;
-    margin-inline-start: var(--space-8);
+    height: 28px;
+    inset-block-end: var(--space-10);
+    inset-inline-end: var(--space-10);
     place-items: center;
-    width: 16px
+    position: absolute;
+    width: 28px
+}
+
+.card_bcgTHb .ctaButton_bcgTHb:active {
+    box-shadow: none;
+    transform: translate(2px, 2px)
 }
 
 .description_Hb929y {
@@ -1337,4 +1352,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=801781.2ac8781d2e42e3d0.css.map*/
+/*# sourceMappingURL=801781.096430b389d8cc67.css.map*/

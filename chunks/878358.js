@@ -13,11 +13,11 @@ var i = a(477900),
     p = a(687966),
     _ = a(554830),
     m = a(866665),
-    x = a(939249),
-    g = a(565645),
-    A = a(142617),
-    v = a(819648),
-    w = a(772210),
+    x = a(565645),
+    g = a(142617),
+    A = a(819648),
+    v = a(772210),
+    w = a(994641),
     I = a(33293),
     E = a(498137),
     j = a(192339),
@@ -101,7 +101,7 @@ function U(e) {
             }),
             null != t.topEmojiName && null != s
                 ? (0, i.jsx)(P, {
-                      icon: (0, i.jsx)(g.A, { emojiId: s.emojiId, emojiName: s.emojiName, alt: "", className: M.Gl }),
+                      icon: (0, i.jsx)(x.A, { emojiId: s.emojiId, emojiName: s.emojiName, alt: "", className: M.Gl }),
                       stat: t.topEmojiName,
                   })
                 : null,
@@ -118,44 +118,40 @@ function U(e) {
         ],
     });
 }
-function G(e) {
-    let { isCheckpointEnabled: t } = e;
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)(l.E, {
-                variant: "display-xs",
-                color: "text-overlay-dark",
-                className: M.K8,
-                children: T.intl.string(R.default["CdU/PF"]),
-            }),
-            t
-                ? (0, i.jsx)("div", {
-                      className: M.wC,
-                      "aria-hidden": !0,
-                      children: (0, i.jsx)(_.ArrowLargeRightIcon, { color: c.A.colors.ICON_OVERLAY_DARK, size: "xxs" }),
-                  })
-                : null,
-        ],
+function G() {
+    return (0, i.jsx)("div", {
+        className: M.qr,
+        "aria-hidden": !0,
+        children: (0, i.jsx)(l.E, {
+            variant: "display-xs",
+            color: "text-overlay-dark",
+            className: M.K8,
+            children: T.intl.string(R.default["CdU/PF"]),
+        }),
     });
 }
-function H(e) {
-    let { isCheckpointEnabled: t, onClick: a } = e;
-    return t && null != a
-        ? (0, i.jsx)(m.m, {
+function H() {
+    return (0, i.jsx)(_.ArrowLargeRightIcon, {
+        color: c.A.colors.ICON_OVERLAY_DARK,
+        size: "custom",
+        width: 14,
+        height: 14,
+    });
+}
+function F(e) {
+    let { onClick: t } = e;
+    return null == t
+        ? (0, i.jsx)("div", { className: M.lI, "aria-hidden": !0, children: (0, i.jsx)(H, {}) })
+        : (0, i.jsx)(m.m, {
               text: T.intl.string(O.default.UjtEWE),
-              caretConfig: { align: "end" },
               ariaHidden: !0,
-              children: (0, i.jsx)(x.D, {
-                  className: s()(M.qr, M.vk),
-                  onClick: a,
+              children: (0, i.jsx)(w.f, {
+                  size: "custom",
+                  className: M.lI,
+                  onClick: t,
                   "aria-label": T.intl.string(O.default.UjtEWE),
-                  children: (0, i.jsx)(G, { isCheckpointEnabled: t }),
+                  children: (0, i.jsx)(H, {}),
               }),
-          })
-        : (0, i.jsx)("div", {
-              className: M.qr,
-              "aria-hidden": !0,
-              children: (0, i.jsx)(G, { isCheckpointEnabled: t }),
           });
 }
 a.d(
@@ -163,16 +159,16 @@ a.d(
     {},
     {
         A: function (e) {
-            let { checkpointData: t, onFooterClick: a } = e,
+            let { checkpointData: t, onCtaClick: a } = e,
                 { character: n, stats: c, cardColorPalette: d } = t,
-                l = (0, w.A)(n, 224),
+                l = (0, v.A)(n, 224),
                 u = null != n && null != c,
-                h = (0, A.FX)("Checkpoint2026CardDisplayComponent"),
-                f = r.useMemo(() => (null != c ? (0, v.R8)(c) : null), [c]);
+                h = (0, g.FX)("Checkpoint2026CardDisplayComponent"),
+                f = r.useMemo(() => (null != c ? (0, A.R8)(c) : null), [c]);
             return (0, i.jsxs)(E.A, {
                 cardColorPalette: d,
                 size: N.W.SM,
-                className: s()(M.Nr, { [M.Q9]: u }),
+                className: s()(M.Nr, { [M.Q9]: u, [M.WY]: h }),
                 style: y,
                 isLoading: "loading" === l.status,
                 inert: "loading" === l.status,
@@ -180,9 +176,10 @@ a.d(
                     (0, i.jsx)(o.A, { children: T.intl.string(O.default.Og2R9d) }),
                     (0, i.jsx)(j.A, {}),
                     (0, i.jsx)(S.A, { variant: null != n ? "full" : "short", className: M.Ss }),
-                    null != n ? (0, i.jsx)(I.A, { character: n, images: l }) : null,
+                    null != n ? (0, i.jsx)(I.A, { character: n, images: l, className: M.AM }) : null,
                     null != f ? (0, i.jsx)(U, { stats: f }) : null,
-                    (0, i.jsx)(H, { isCheckpointEnabled: h, onClick: a }),
+                    (0, i.jsx)(G, {}),
+                    h ? (0, i.jsx)(F, { onClick: a }) : null,
                 ],
             });
         },

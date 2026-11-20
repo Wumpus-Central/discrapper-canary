@@ -1354,7 +1354,7 @@ function n1() {
     });
 }
 var n5 = t(142617),
-    n8 = t(253264),
+    n8 = t(261336),
     n2 = t(617390);
 t(321073);
 var n4 = t(602853),
@@ -1610,7 +1610,7 @@ function tm(e) {
             return (0, i.jsx)(tu, { checkpointData: n });
         case td.wk.V2026:
             if (!l) return (0, i.jsx)(n1, {});
-            return (0, i.jsx)(tc.A, { checkpointData: n, onFooterClick: r });
+            return (0, i.jsx)(tc.A, { checkpointData: n, onCtaClick: r });
         default:
             return (0, i.jsx)(n1, {});
     }

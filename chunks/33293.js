@@ -9,10 +9,10 @@ a.d(
     {},
     {
         A: function (e) {
-            let { character: t, images: a } = e,
-                { size: r } = (0, c.Z)();
+            let { character: t, images: a, className: r } = e,
+                { size: l } = (0, c.Z)();
             return (0, i.jsx)("div", {
-                className: n()(d.characterColumn, d[r]),
+                className: n()(d.characterColumn, d[l], r),
                 children: (0, i.jsx)(s.A, { character: t, images: a, className: d.character }),
             });
         },
