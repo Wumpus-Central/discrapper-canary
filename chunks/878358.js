@@ -22,8 +22,8 @@ var i = a(477900),
     E = a(33293),
     j = a(498137),
     S = a(192339),
-    C = a(834109),
-    N = a(486020),
+    N = a(834109),
+    C = a(486020),
     T = a(48763),
     R = a(792996),
     M = a(350363),
@@ -69,13 +69,13 @@ function G(e) {
     let { stats: t } = e,
         { topGuild: a, topGuildAcronymCharacter: n, topEmoji: s, topGame: d } = t,
         l = r.useMemo(
-            () => (null != a ? N.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
+            () => (null != a ? C.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
             [a],
         ),
         o = r.useMemo(
             () =>
                 d?.applicationImageId != null
-                    ? N.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
+                    ? C.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
                     : void 0,
             [d],
         ),
@@ -189,7 +189,7 @@ a.d(
                 children: [
                     (0, i.jsx)(o.A, { children: R.intl.string(O.default.Og2R9d) }),
                     (0, i.jsx)(S.A, {}),
-                    (0, i.jsx)(C.A, { variant: null != n ? "full" : "short", className: y.Ss }),
+                    (0, i.jsx)(N.A, { variant: null != n ? "full" : "short", className: y.Ss }),
                     null != n ? (0, i.jsx)(E.A, { character: n, images: l, className: y.AM }) : null,
                     null != f ? (0, i.jsx)(G, { stats: f }) : null,
                     (0, i.jsx)(H, {}),

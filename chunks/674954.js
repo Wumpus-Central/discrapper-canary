@@ -65,7 +65,7 @@ var b =
     M = n(14702),
     T = n(792996),
     y = n(728500);
-function D() {
+function L() {
     return (0, o.jsxs)("div", {
         className: y.nM,
         "aria-hidden": !0,
@@ -78,7 +78,7 @@ function D() {
         ],
     });
 }
-function L(e) {
+function D(e) {
     let { skuId: t, disabled: n = !1, source: l } = e,
         { product: r, state: i } = (0, j.IK)(t, { needsCategory: !1, shouldFetchProduct: !1 }),
         u = (0, a.bG)(
@@ -99,7 +99,7 @@ function L(e) {
         }, [r, t, n, l]),
         "loading" === i)
     )
-        return (0, o.jsx)(D, {});
+        return (0, o.jsx)(L, {});
     if (null == r) return null;
     let d = (0, P.YW)(r),
         f =
@@ -229,7 +229,7 @@ function w(e, t, n) {
                                     return (0, o.jsxs)(o.Fragment, {
                                         children: [
                                             0 === t && null == I ? m : null,
-                                            (0, o.jsx)(L, { skuId: l, disabled: r, source: n }),
+                                            (0, o.jsx)(D, { skuId: l, disabled: r, source: n }),
                                         ],
                                     });
                                 },

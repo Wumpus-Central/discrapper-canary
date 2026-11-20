@@ -1,11 +1,11 @@
-i.d(n, { E: () => b, c: () => v });
+i.d(n, { E: () => v, c: () => b });
 var l = i(477900);
 i(582128);
 var t = i(855986),
     o = i(477782),
     r = i(138134),
-    a = i(865116),
-    c = i(928658);
+    c = i(865116),
+    a = i(928658);
 let d = (0, i(945810).mj)({
     name: "2026-11-iar-guild-reporting-desktop",
     kind: "user",
@@ -15,7 +15,7 @@ let d = (0, i(945810).mj)({
 var s = i(260509),
     u = i(287809),
     g = i(792996);
-function b(e, n) {
+function v(e, n) {
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return !(function (e) {
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -38,17 +38,17 @@ function b(e, n) {
               label: g.intl.string(g.t.Aen9eh),
               icon: i ? r.FlagIcon : void 0,
               leadingAccessory: i ? { type: "icon", icon: r.FlagIcon } : void 0,
-              action: () => (0, c.b1)(e, n),
+              action: () => (0, a.b1)(e, n),
           });
 }
-function v(e) {
-    let n = (0, t.bG)([a.Ay], () => a.Ay.get("iar_testing")),
+function b(e) {
+    let n = (0, t.bG)([c.Ay], () => c.Ay.get("iar_testing")),
         i = (0, t.bG)([u.default], () => u.default.getCurrentUser());
     return null != i && i.isStaff() && n
         ? (0, l.jsx)(o.Dr, {
               id: "staff-test-guild-report",
               label: "[STAFF] Test Guild Report",
-              action: () => (0, c.RV)(e, "web_guild_context_menu"),
+              action: () => (0, a.RV)(e, "web_guild_context_menu"),
               icon: r.FlagIcon,
               color: "danger",
           })

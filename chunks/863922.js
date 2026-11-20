@@ -9,16 +9,16 @@ var l = n(582128),
     d = n(225123),
     m = n(734057),
     h = n(927813),
-    p = n(391820),
-    f = n(652215);
+    f = n(391820),
+    p = n(652215);
 let g = 30 * h.A.Millis.SECOND;
-async function C(e) {
+async function A(e) {
     let t, n;
-    if (!p.A.shouldFetch(e)) return;
+    if (!f.A.shouldFetch(e)) return;
     let l = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: l });
     try {
-        n = await i.Bo.get({ url: f.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
+        n = await i.Bo.get({ url: p.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
     } catch (e) {
         t = new c.LG(e);
     }
@@ -33,7 +33,7 @@ async function C(e) {
             receivedAt: Date.now(),
         }));
 }
-function A(e, t) {
+function C(e, t) {
     o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
 }
 function x(e, t) {
@@ -41,11 +41,11 @@ function x(e, t) {
         null != t &&
         (async function (e, t) {
             let n, l;
-            if (!p.A.shouldFetch(e, t)) return;
+            if (!f.A.shouldFetch(e, t)) return;
             let s = Date.now();
             o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: s });
             try {
-                let n = await i.Bo.get({ url: f.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
+                let n = await i.Bo.get({ url: p.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
                 l = n?.body;
             } catch (e) {
                 n = new c.LG(e);
@@ -67,7 +67,7 @@ function E(e, t) {
 function j(e, t) {
     o.h.dispatch({ type: "SET_SUMMARY_FEEDBACK", summary: e, rating: t });
 }
-async function _(e) {
+async function v(e) {
     let t,
         n,
         { useQuickSwitcher: l = !0, useChannelAffinities: s = !0 } =
@@ -77,14 +77,14 @@ async function _(e) {
     if (
         0 ===
         (e = e
-            .concat(p.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: s }))
+            .concat(f.A.defaultChannelIds({ withQuickSwitcher: l, withChannelAffinities: s }))
             .filter((e) => {
                 let t = m.A.getChannel(e);
                 return (0, u.pk)(t, !1, !0);
             })
             .filter((e) => {
                 let t = Date.now(),
-                    n = p.A.status(e);
+                    n = f.A.status(e);
                 if (n?.fetching) return !1;
                 let l = n?.lastReceivedAt;
                 return null == l || t - l > g;
@@ -94,7 +94,7 @@ async function _(e) {
         return Promise.resolve(null);
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: a });
     try {
-        n = await i.Bo.post({ url: f.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
+        n = await i.Bo.post({ url: p.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
     } catch (e) {
         t = new c.LG(e);
     }
@@ -108,23 +108,23 @@ async function _(e) {
         error: t,
     });
 }
-async function N(e) {
+async function _(e) {
     try {
-        (await i.Bo.del({ url: f.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
+        (await i.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
         throw new c.LG(e);
     }
 }
-let v =
+let N =
         221552 == n.j
             ? {
                   setSummaryFeedback: j,
                   updateVisibleMessages: E,
                   setSelectedSummary: x,
-                  setHighlightedSummary: A,
-                  fetchSummaries: C,
-                  fetchSummariesBulk: _,
+                  setHighlightedSummary: C,
+                  fetchSummaries: A,
+                  fetchSummariesBulk: v,
                   useChannelSummaries: function (e) {
                       let { channelIds: t = [] } = e;
                       return (
@@ -138,7 +138,7 @@ let v =
                                           try {
                                               await (async function () {
                                                   let e, t;
-                                                  if (!p.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
+                                                  if (!f.A.shouldFetchChannelAffinities()) return Promise.resolve(null);
                                                   let n = Date.now();
                                                   o.h.dispatch({ type: "REQUEST_CHANNEL_AFFINITIES", requestedAt: n });
                                                   try {
@@ -159,26 +159,26 @@ let v =
                                                   });
                                               })();
                                           } catch (e) {}
-                                          await _(n.split(","));
+                                          await v(n.split(","));
                                       })();
                               }, [n, t]);
                           })(t),
-                          (0, r.yK)([p.A], () => p.A.topSummaries(), [])
+                          (0, r.yK)([f.A], () => f.A.topSummaries(), [])
                       );
                   },
-                  deleteSummary: N,
+                  deleteSummary: _,
               }
             : null,
-    I = 221552 == n.j ? v : null;
+    y = 221552 == n.j ? N : null;
 n.d(
     t,
     {},
     {
-        $T: C,
-        Ay: I,
-        C6: A,
+        $T: A,
+        Ay: y,
+        C6: C,
         C7: j,
-        O$: N,
+        O$: _,
         Oz: function () {
             o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
         },

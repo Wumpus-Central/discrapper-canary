@@ -7,16 +7,16 @@ var i = n(435558),
     d = n(432371),
     m = n(662090),
     h = n(343446),
-    p = n(174768),
-    f = n(734057),
+    f = n(174768),
+    p = n(734057),
     g = n(71393),
-    C = n(218461),
-    A = n(309010),
+    A = n(218461),
+    C = n(309010),
     x = n(543465),
     E = n(287809),
     j = n(927813),
-    _ = n(661191);
-function N(e, t) {
+    v = n(661191);
+function _(e, t) {
     return {
         id: e.id,
         topic: e.topic,
@@ -30,17 +30,17 @@ function N(e, t) {
         type: e.type,
     };
 }
-var v = n(521732);
-let I = {},
-    y = {},
+var N = n(521732);
+let y = {},
+    I = {},
     S = {},
     b = [],
     M = {},
     T = { status: "ok", lastRequest: null, lastResponse: null },
-    L = [],
-    w = [];
+    w = [],
+    L = [];
 function R() {
-    L = p.A.getProps()
+    w = f.A.getProps()
         .results.filter((e) => e.type === m.rD.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -51,24 +51,24 @@ class k extends c.Ay.PersistedStore {
     }
     initialize(e) {
         ((l = e?.shouldShowTopicsBar ?? !0),
-            this.waitFor(f.A, h.A, g.A, p.A, C.Ay, A.Ay, x.Ay, E.default),
-            this.syncWith([p.A], R));
+            this.waitFor(p.A, h.A, g.A, f.A, A.Ay, C.Ay, x.Ay, E.default),
+            this.syncWith([f.A], R));
     }
     allSummaries() {
-        return I;
+        return y;
     }
     topSummaries() {
-        return Object.values(I)
+        return Object.values(y)
             .flat()
             .filter(
                 (e) =>
                     e.people.length > 1 &&
-                    _.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * j.A.Millis.HOUR,
+                    v.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * j.A.Millis.HOUR,
             )
-            .sort((e, t) => _.default.extractTimestamp(t.endId) - _.default.extractTimestamp(e.endId));
+            .sort((e, t) => v.default.extractTimestamp(t.endId) - v.default.extractTimestamp(e.endId));
     }
     summaries(e) {
-        return I[e] ?? w;
+        return y[e] ?? L;
     }
     shouldShowTopicsBar() {
         return l;
@@ -83,19 +83,19 @@ class k extends c.Ay.PersistedStore {
         return null == e ? null : S[e.id];
     }
     isFetching(e, t) {
-        return null != t ? y[e]?.summaryId === t : y[e]?.fetching === !0;
+        return null != t ? I[e]?.summaryId === t : I[e]?.fetching === !0;
     }
     status(e) {
-        return y[e];
+        return I[e];
     }
     shouldFetch(e, t) {
-        let n = y[e],
-            l = f.A.getChannel(e);
+        let n = I[e],
+            l = p.A.getChannel(e);
         if (!(0, d.pk)(l)) return !1;
         if (null != t) {
             let e = n?.summaryIdLastRequestedAt ?? 0,
                 l = Date.now() - e;
-            return t !== n?.summaryId || l > v.hf;
+            return t !== n?.summaryId || l > N.hf;
         }
         let s = n?.lastReceivedAt ?? 0;
         return !n?.fetching && 0 === s;
@@ -119,15 +119,15 @@ class k extends c.Ay.PersistedStore {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: l, numChannels: s = 25 } = e,
             a = [];
         return (
-            t && (a = a.concat(L)),
+            t && (a = a.concat(w)),
             n && (a = a.concat(b.map((e) => e.channel_id))),
             l &&
                 (a = a.filter((e) => {
-                    let t = f.A.getChannel(e);
-                    return null != t && !x.Ay.isChannelMuted(t.guild_id, e) && C.Ay.hasUnread(e);
+                    let t = p.A.getChannel(e);
+                    return null != t && !x.Ay.isChannelMuted(t.guild_id, e) && A.Ay.hasUnread(e);
                 })),
             (a = a.filter((e) => {
-                let t = f.A.getChannel(e);
+                let t = p.A.getChannel(e);
                 return (0, d.pk)(t, !1, !1);
             })).slice(0, s)
         );
@@ -148,31 +148,31 @@ let D = new k(u.h, {
     RECEIVE_CHANNEL_SUMMARY(e) {
         let { summary: t, channelId: n, error: l, receivedAt: s } = e;
         if (null != t && Object.keys(t).length > 0) {
-            let e = N(t, n),
-                l = [...(I[n] ?? [])],
+            let e = _(t, n),
+                l = [...(y[n] ?? [])],
                 s = l.findIndex((t) => t.id === e?.id);
-            (s > -1 ? (l[s] = e) : l.push(e), (I[n] = l));
+            (s > -1 ? (l[s] = e) : l.push(e), (y[n] = l));
         }
-        let a = { ...(y[n] ?? { fetching: !1 }), summaryId: void 0, summaryIdLastReceivedAt: s, summaryIdError: l };
-        y[n] = a;
+        let a = { ...(I[n] ?? { fetching: !1 }), summaryId: void 0, summaryIdLastReceivedAt: s, summaryIdError: l };
+        I[n] = a;
     },
     REQUEST_CHANNEL_SUMMARY(e) {
         let { channelId: t, summaryId: n, requestedAt: l } = e;
-        y[t] = { ...(y[t] ?? { fetching: !1 }), summaryId: n, summaryIdLastRequestedAt: l };
+        I[t] = { ...(I[t] ?? { fetching: !1 }), summaryId: n, summaryIdLastRequestedAt: l };
     },
     RECEIVE_CHANNEL_SUMMARIES(e) {
         let { summaries: t, channelId: n, error: l, receivedAt: s } = e,
-            a = t.filter((e) => Object.keys(e).length > 0).map((e) => N(e, n));
+            a = t.filter((e) => Object.keys(e).length > 0).map((e) => _(e, n));
         if (null != r && r.channelId === n && !a.some((e) => e.id === r?.summaryId)) {
-            let e = (I[n] ?? []).find((e) => e.id === r?.summaryId);
+            let e = (y[n] ?? []).find((e) => e.id === r?.summaryId);
             null != e && a.push(e);
         }
-        I[n] = (0, i.sortBy)(a, (e) => _.default.extractTimestamp(e.startId)).reverse();
-        let o = { ...y[n], fetching: !1, error: void 0, lastReceivedAt: s };
-        (null != l && (o.error = l), (y[n] = o));
+        y[n] = (0, i.sortBy)(a, (e) => v.default.extractTimestamp(e.startId)).reverse();
+        let o = { ...I[n], fetching: !1, error: void 0, lastReceivedAt: s };
+        (null != l && (o.error = l), (I[n] = o));
     },
     REQUEST_CHANNEL_SUMMARIES(e) {
-        y[e.channelId] = { ...(y[e.channelId] ?? {}), fetching: !0, lastRequestedAt: e.requestedAt };
+        I[e.channelId] = { ...(I[e.channelId] ?? {}), fetching: !0, lastRequestedAt: e.requestedAt };
     },
     SET_HIGHLIGHTED_SUMMARY(e) {
         if ((null == s && null == e.channelId) || (e.channelId === s?.channelId && e.summaryId === s?.summaryId))
@@ -182,18 +182,18 @@ let D = new k(u.h, {
             s.channelId === e.channelId &&
             null != s.summaryId
         ) {
-            let e = I[s.channelId];
+            let e = y[s.channelId];
             a = e?.findIndex((e) => e.id === s?.summaryId);
         }
     },
     UPDATE_VISIBLE_MESSAGES(e) {
-        let t = A.Ay.getChannelId();
+        let t = C.Ay.getChannelId();
         if (null != t)
             if (null != s && s.channelId === t && null != s.summaryId) {
-                let e = I[s.channelId];
+                let e = y[s.channelId];
                 a = e?.findIndex((e) => e.id === s?.summaryId);
             } else
-                a = I[t]?.findIndex((t) => {
+                a = y[t]?.findIndex((t) => {
                     var n, l, s, a;
                     return (
                         (n = e.topVisibleMessage),
@@ -231,10 +231,10 @@ let D = new k(u.h, {
     REQUEST_CHANNEL_SUMMARIES_BULK(e) {
         let { channelIds: t, requestedAt: n } = e,
             l = t.reduce((e, t) => {
-                let l = y[t] ?? {};
+                let l = I[t] ?? {};
                 return ((e[t] = { ...l, fetching: !0, lastRequestedAt: n, error: void 0 }), e);
             }, {});
-        y = { ...y, ...l };
+        I = { ...I, ...l };
     },
     RECEIVE_CHANNEL_SUMMARIES_BULK(e) {
         let {
@@ -248,8 +248,8 @@ let D = new k(u.h, {
                 .reduce((e, t) => {
                     let [n, l] = t,
                         s = o()
-                            .chain(l.map((e) => N(e, n)))
-                            .sortBy((e) => _.default.extractTimestamp(e.startId))
+                            .chain(l.map((e) => _(e, n)))
+                            .sortBy((e) => v.default.extractTimestamp(e.startId))
                             .takeRight(75)
                             .reverse()
                             .filter((e) => Object.keys(e).length > 0)
@@ -258,7 +258,7 @@ let D = new k(u.h, {
                 }, {}),
             r = s.reduce(
                 (e, t) => {
-                    let s = y[t] ?? {},
+                    let s = I[t] ?? {},
                         r = a[t];
                     return (
                         null != r && (e.summariesByChannel[t] = r),
@@ -268,35 +268,35 @@ let D = new k(u.h, {
                 },
                 { summariesByChannel: {}, summaryFetchStatusByChannel: {} },
             );
-        ((I = { ...I, ...r.summariesByChannel }), (y = { ...y, ...r.summaryFetchStatusByChannel }));
+        ((y = { ...y, ...r.summariesByChannel }), (I = { ...I, ...r.summaryFetchStatusByChannel }));
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         let { channel_id: t, summaries: n, guild_id: l } = e,
             s = Date.now(),
             a = o()
                 .chain(n)
-                .sortBy((e) => _.default.extractTimestamp(e.start_id))
+                .sortBy((e) => v.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
-                .map((e) => N(e, t))
+                .map((e) => _(e, t))
                 .reverse()
                 .value(),
-            r = I[t] ?? [],
+            r = y[t] ?? [],
             i = o()
                 .chain(a)
                 .concat(r)
-                .sortBy((e) => _.default.extractTimestamp(e.startId))
+                .sortBy((e) => v.default.extractTimestamp(e.startId))
                 .takeRight(75)
                 .uniqBy("id")
                 .reverse()
                 .value();
-        ((I[t] = i), (y[t] = { ...y[t], error: void 0, fetching: y[t]?.fetching ?? !1, lastReceivedAt: s }));
+        ((y[t] = i), (I[t] = { ...I[t], error: void 0, fetching: I[t]?.fetching ?? !1, lastReceivedAt: s }));
     },
     CLEAR_CONVERSATION_SUMMARIES() {
-        ((I = {}), (y = {}));
+        ((y = {}), (I = {}));
     },
     DELETE_SUMMARY(e) {
         let t = e.summary.channelId,
-            n = (I[t] ?? []).indexOf(e.summary);
-        -1 !== n && I[t].splice(n, 1);
+            n = (y[t] ?? []).indexOf(e.summary);
+        -1 !== n && y[t].splice(n, 1);
     },
 });

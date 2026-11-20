@@ -12,8 +12,8 @@ var i,
         (i[(i.UPDATE_CODECS = 4)] = "UPDATE_CODECS"),
         (i[(i.DESTROY_USER = 5)] = "DESTROY_USER"),
         i),
-    f = (((l = {})[(l.ENCRYPT = 0)] = "ENCRYPT"), (l[(l.DECRYPT = 1)] = "DECRYPT"), l),
-    s = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
+    s = (((l = {})[(l.ENCRYPT = 0)] = "ENCRYPT"), (l[(l.DECRYPT = 1)] = "DECRYPT"), l),
+    f = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
     p = t(214958),
     y = t.n(p);
 let S = parseInt(y().version ?? "0", 10),
@@ -59,10 +59,10 @@ function O(e) {
     let r,
         { operation: t, readable: n, writable: o } = e;
     switch (t) {
-        case f.ENCRYPT:
+        case s.ENCRYPT:
             r = v;
             break;
-        case f.DECRYPT:
+        case s.DECRYPT:
             r = _;
             break;
         default:
@@ -72,7 +72,7 @@ function O(e) {
     n.pipeThrough(a).pipeTo(o);
 }
 function P(e) {
-    postMessage({ type: s.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
+    postMessage({ type: f.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
 }
 function v(e, r) {
     try {
@@ -200,7 +200,7 @@ function D(e) {
                 !(function (e) {
                     let { userId: r, operation: t, protocolVersion: o, keyRatchet: a } = e,
                         i = !a && o === n.kDisabledVersion;
-                    if (t === f.ENCRYPT) {
+                    if (t === s.ENCRYPT) {
                         let e = (function () {
                             if (null == b) {
                                 let e = new n.Encryptor();

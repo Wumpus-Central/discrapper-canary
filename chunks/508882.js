@@ -180,20 +180,20 @@ function y(e) {
         }, [a]);
     return (0, l.jsx)(u.br, { tooltipText: s, ...c, onClick: d, loading: i });
 }
-let D = {
+let L = {
         [m.eA$.FRIEND]: o.UserCheckIcon,
         [m.eA$.PENDING_OUTGOING]: s.UserClockIcon,
         [m.eA$.PENDING_INCOMING]: s.UserClockIcon,
     },
-    L = {
+    D = {
         [m.eA$.FRIEND]: () => I.intl.string(I.t.G7jMpU),
         [m.eA$.PENDING_OUTGOING]: () => I.intl.string(I.t["s/+byI"]),
         [m.eA$.PENDING_INCOMING]: () => I.intl.string(I.t["6QQCQ+"]),
     };
 function U(e) {
     let { user: t, relationshipType: n, analyticsLocation: i, ...o } = e,
-        s = D[n],
-        a = L[n](),
+        s = L[n],
+        a = D[n](),
         c = h({ user: t, analyticsLocation: i }),
         d = r.useRef(null),
         f = { icon: s, tooltipText: a, ...o };
@@ -207,8 +207,8 @@ function U(e) {
 }
 function F(e) {
     let { user: t, relationshipType: n, analyticsLocation: i, ...o } = e,
-        s = D[n],
-        a = L[n](),
+        s = L[n],
+        a = D[n](),
         c = h({ user: t, analyticsLocation: i }),
         d = r.useRef(null),
         f = { icon: s, tooltipText: a, ...o };

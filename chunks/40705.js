@@ -152,14 +152,14 @@ function G(e) {
         }),
     });
 }
-var H = n(636537),
-    V = n(260612),
-    X = n(953727);
+var X = n(636537),
+    H = n(260612),
+    V = n(953727);
 function Y(e) {
     let { size: t = "md", width: n, height: l, color: a = k.A.colors.WHITE, ...i } = e,
-        u = (0, V.J)(t);
+        u = (0, H.J)(t);
     return (0, r.jsxs)("svg", {
-        ...(0, X.A)(i),
+        ...(0, V.A)(i),
         xmlns: "http://www.w3.org/2000/svg",
         width: u?.width ?? n,
         height: u?.height ?? l,
@@ -232,8 +232,8 @@ function er(e) {
             volume: B,
             muted: F,
             transcriptEnabled: $,
-            captionEnabled: V,
-            handlePlaybackBtnClick: X,
+            captionEnabled: H,
+            handlePlaybackBtnClick: V,
             handleTranscriptBtnClick: ee,
             handleCaptionBtnClick: et,
             handleFullScreenBtnClick: en,
@@ -270,15 +270,15 @@ function er(e) {
         e_ = l.useRef(null),
         [e$, eK] = l.useState(1),
         [eO, eQ] = l.useState(B),
-        [eG, eH] = l.useState(F);
-    (B !== eO || F !== eG) && (eQ(B), eH(F), eC(F ? 0 : B));
-    let eV = l.useCallback(
+        [eG, eX] = l.useState(F);
+    (B !== eO || F !== eG) && (eQ(B), eX(F), eC(F ? 0 : B));
+    let eH = l.useCallback(
             (e) => {
                 (eK(e), null != eg.current && (eg.current.playbackRate = e));
             },
             [eg],
         ),
-        eX = l.useCallback(() => {
+        eV = l.useCallback(() => {
             if (null == P) return;
             let e = k?.split("/");
             (R.default.track(q.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
@@ -342,10 +342,10 @@ function er(e) {
             if (!(e.metaKey || ((0, o.vq)(e.target) && (0, o.Cw)(e.target))))
                 switch (e.key) {
                     case c.TJ.PLAYBACK:
-                        (e.stopPropagation(), X());
+                        (e.stopPropagation(), V());
                         break;
                     case c.TJ.SPACE:
-                        (e.stopPropagation(), ev || (e.preventDefault(), X()));
+                        (e.stopPropagation(), ev || (e.preventDefault(), V()));
                         break;
                     case c.TJ.SEEK_BACK:
                     case c.TJ.SEEK_BACK_ALT:
@@ -365,7 +365,7 @@ function er(e) {
                         (e.stopPropagation(), eW());
                 }
         },
-        [et, en, X, er, ea, eW, E, S, ev],
+        [et, en, V, er, ea, eW, E, S, ev],
     );
     (l.useEffect(() => {
         D && null != e_.current && e_.current.focus();
@@ -448,7 +448,7 @@ function er(e) {
                         ariaLabel: e3,
                         tooltipLabel: e3,
                         shortcut: c.TJ.PLAYBACK,
-                        onClick: X,
+                        onClick: V,
                         ref: e_,
                         buttonSize: O[w],
                         "data-testid": "discord-web-video-player-play-pause-btn",
@@ -505,7 +505,7 @@ function er(e) {
                                 renderPopout: () =>
                                     (0, r.jsx)("div", {
                                         id: ek,
-                                        className: i()(H.i.blurple, _.p8, _.Gl),
+                                        className: i()(X.i.blurple, _.p8, _.Gl),
                                         onMouseEnter: eJ,
                                         onMouseLeave: e0,
                                         "data-testid": "discord-web-video-player-volume-popout",
@@ -608,12 +608,12 @@ function er(e) {
                             hideTranscriptBtn: b,
                             hideCaptionBtn: E,
                             transcriptEnabled: $,
-                            captionEnabled: V,
+                            captionEnabled: H,
                             playerState: t,
                             handleTranscriptBtnClick: ee,
                             handleCaptionBtnClick: et,
                             downloadUrl: P,
-                            handleDownloadButtonClick: eX,
+                            handleDownloadButtonClick: eV,
                             extraButtons: M,
                         }),
                         visible: a,
@@ -622,7 +622,7 @@ function er(e) {
                     !(!0 === C || ("inline" === C && !ex)) &&
                         (0, r.jsx)(ei, {
                             playbackRate: e$,
-                            onPlaybackRateChange: eV,
+                            onPlaybackRateChange: eH,
                             visible: a,
                             size: w,
                             handleControlBarPendingInteraction: ed,
@@ -796,7 +796,7 @@ function eu(e) {
         (0, C.tj)(u),
         (0, r.jsxs)("div", {
             ref: u,
-            className: i()(H.i.blurple, _.p8, _.qp),
+            className: i()(X.i.blurple, _.p8, _.qp),
             role: "dialog",
             "aria-label": a,
             "data-testid": "discord-web-video-player-playback-speed-popout",

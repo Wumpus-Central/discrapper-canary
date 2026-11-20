@@ -13,9 +13,9 @@ var s = t(118517),
     A = t(147036),
     m = t(957565),
     f = t(188567),
-    h = t(661191),
-    p = t(965407),
-    y = t(439147),
+    p = t(661191),
+    y = t(965407),
+    h = t(439147),
     I = t(249700),
     E = t(145530),
     _ = t(652215);
@@ -33,7 +33,7 @@ t.d(
             (0, m.C)(t.shiftKey ? `${n.channel_id}-${n.id}` : n.id);
         },
         Io: function (e, n) {
-            (0, I.A)(e, n, void 0, p.A.getOptions(n.id));
+            (0, I.A)(e, n, void 0, y.A.getOptions(n.id));
         },
         Le: function (e, n) {
             (0, a.A)(e.id, n.id);
@@ -54,10 +54,10 @@ t.d(
             (0, o.fO)({ message: n, source: "message-actions" });
         },
         cl: function (e, n) {
-            (0, y.A)(e.id, n.id);
+            (0, h.A)(e.id, n.id);
         },
         mF: function (e, n) {
-            let t = u.A.getChannel(h.default.castMessageIdAsChannelId(n.id));
+            let t = u.A.getChannel(p.default.castMessageIdAsChannelId(n.id));
             null != t && (0, c.JA)(t);
         },
         rS: function (e, n, t) {

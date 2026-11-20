@@ -1,27 +1,27 @@
-(t(323874), t(14289), t(35956));
-var i = t(77729),
-    r = t(723702),
-    n = t(264572).hp;
-t.d(
-    a,
+(n(323874), n(14289), n(35956));
+var l = n(77729),
+    s = n(723702),
+    a = n(264572).hp;
+n.d(
+    t,
     {},
     {
-        H: async function (e, a) {
-            if (r.isPlatformEmbedded) {
-                let t = n.from(await e.arrayBuffer());
-                if ("function" == typeof i.A.fileManager.saveWithDialog2) await i.A.fileManager.saveWithDialog2(t, a);
+        H: async function (e, t) {
+            if (s.isPlatformEmbedded) {
+                let n = a.from(await e.arrayBuffer());
+                if ("function" == typeof l.A.fileManager.saveWithDialog2) await l.A.fileManager.saveWithDialog2(n, t);
                 else
                     try {
-                        await i.A.fileManager.saveWithDialog(t, a);
+                        await l.A.fileManager.saveWithDialog(n, t);
                     } catch {}
                 return;
             }
-            let t = URL.createObjectURL(e);
+            let n = URL.createObjectURL(e);
             try {
                 let e = document.createElement("a");
-                ((e.href = t), (e.download = a), (e.rel = "noopener"), e.click());
+                ((e.href = n), (e.download = t), (e.rel = "noopener"), e.click());
             } finally {
-                window.setTimeout(() => URL.revokeObjectURL(t), 0);
+                window.setTimeout(() => URL.revokeObjectURL(n), 0);
             }
         },
     },
