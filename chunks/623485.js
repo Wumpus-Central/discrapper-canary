@@ -287,7 +287,7 @@ class R {
             this._captureGamepad());
     }
     _handleKeyEvent(e) {
-        (e.preventDefault(), this.isMouseCaptured && "Escape" === e.code)
+        (e.preventDefault(), e.stopImmediatePropagation(), this.isMouseCaptured && "Escape" === e.code)
             ? this._dropController()
             : null == T[e.code]
               ? this.logger.log(`Unhandled key code ${e.code}`)
@@ -295,6 +295,7 @@ class R {
     }
     _handleMouseEvent(e) {
         (e.preventDefault(),
+            e.stopImmediatePropagation(),
             "mousemove" === e.type
                 ? this.connection.sendMouseMove(this.sessionId, e.movementX, e.movementY)
                 : "wheel" === e.type
