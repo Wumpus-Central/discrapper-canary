@@ -8,11 +8,11 @@ var i = n(855986),
 function c(e) {
     let {
             channel: t,
-            authenticationStore: n = a.default,
-            voiceStateStore: i = o.A,
-            mediaEngineStore: c = s.Ay,
-            permissionStore: u = l.A,
-            impersonateStore: _ = r.A,
+            AuthenticationStore: n = a.default,
+            VoiceStateStore: i = o.A,
+            MediaEngineStore: c = s.Ay,
+            PermissionStore: u = l.A,
+            ImpersonateStore: _ = r.A,
         } = e,
         E = null != t ? i.getVoiceState(t.getGuildId(), n.getId()) : null,
         A = c.isSelfMute() || c.isSelfMutedTemporarily(),
@@ -28,11 +28,11 @@ n.d(
             return (0, i.cf)([a.default, o.A, s.Ay, l.A, r.A], () =>
                 c({
                     channel: e,
-                    authenticationStore: a.default,
-                    voiceStateStore: o.A,
-                    mediaEngineStore: s.Ay,
-                    permissionStore: l.A,
-                    impersonateStore: r.A,
+                    AuthenticationStore: a.default,
+                    VoiceStateStore: o.A,
+                    MediaEngineStore: s.Ay,
+                    PermissionStore: l.A,
+                    ImpersonateStore: r.A,
                 }),
             );
         },
