@@ -11,4 +11,6 @@ t.exports = {
     qr: "footer_bcgTHb",
     K8: "footerTitle_bcgTHb",
     lI: "ctaButton_bcgTHb",
+    KV: "ctaSpinner_bcgTHb",
+    bZ: "ctaSpinnerItem_bcgTHb",
 };
