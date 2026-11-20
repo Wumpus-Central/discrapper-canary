@@ -1,9 +1,9 @@
 var i = n(77729),
     r = n(311043),
-    a = n(46653),
-    s = n(779559),
-    l = n(419490),
-    o = n(439818),
+    a = n(97770),
+    s = n(46653),
+    l = n(779559),
+    o = n(419490),
     d = n(395378),
     c = n(489496),
     u = n(335182),
@@ -92,16 +92,16 @@ n.d(
                 let t = this.candidates;
                 if (
                     (f.GU.info(
-                        `decider: finalizing session \u{2014} sessionId=${this.id} candidates=${t.length} autoStashEnabled=${l.Ay.isAutoStashEnabled()}`,
+                        `decider: finalizing session \u{2014} sessionId=${this.id} candidates=${t.length} autoStashEnabled=${o.Ay.isAutoStashEnabled()}`,
                     ),
-                    l.Ay.isAutoStashEnabled())
+                    o.Ay.isAutoStashEnabled())
                 )
                     try {
                         await this.stashDeciderData(t, e);
                     } catch (e) {
                         f.GU.error("decider: auto-stash failed", e);
                     }
-                let n = (0, d.Ly)(t, e, a.default.getId(), this.gameId ?? void 0);
+                let n = (0, d.Ly)(t, e, s.default.getId(), this.gameId ?? void 0);
                 f.GU.info("ranked clips:", n);
                 let i = null;
                 try {
@@ -138,7 +138,7 @@ n.d(
                                 : `decider: auto-montage replaces worst selected clip (id=${s.clip.id}, score=${s.score})`,
                         ));
                 }
-                let s = new Set(
+                let a = new Set(
                     r.map((e) => {
                         let { clip: t } = e;
                         return t.id;
@@ -154,16 +154,16 @@ n.d(
                         }
                     }),
                 );
-                let o = Promise.resolve();
+                let l = Promise.resolve();
                 if (null != i)
                     try {
                         let e = this.buildMontagePlaceholderClip(i, t);
-                        o = this.startAutoMontageRender(i, e);
+                        l = this.startAutoMontageRender(i, e);
                     } catch (e) {
                         f.GU.error("decider: failed to start the auto-montage render", e);
                     }
-                let u = t.filter((e) => !s.has(e.id));
-                o.finally(async function () {
+                let u = t.filter((e) => !a.has(e.id));
+                l.finally(async function () {
                     await Promise.all(
                         u.map(async (e) => {
                             try {
@@ -179,22 +179,22 @@ n.d(
                 let n = {
                         decisionSignals: t,
                         clipCandidates: [...e],
-                        localUserId: a.default.getId(),
+                        localUserId: s.default.getId(),
                         gameId: this.gameId ?? void 0,
-                        fps: l.Ay.getSettings().clipsQuality.frameRate,
+                        fps: o.Ay.getSettings().clipsQuality.frameRate,
                     },
                     r = i.A.clips.debugStashClipDeciderData;
                 if (null == r) return;
-                let s = this.buildStashName();
-                (await r(n, s), f.GU.info(`stashDeciderData: stashed ${e.length} candidates to ${s}`));
+                let a = this.buildStashName();
+                (await r(n, a), f.GU.info(`stashDeciderData: stashed ${e.length} candidates to ${a}`));
             }
             buildStashName() {
                 let e = r.A.getGame(this.gameId)?.name,
-                    t = null != e ? (0, o.A)(e).slice(0, 40) : "";
+                    t = null != e ? (0, a.A)(e).slice(0, 40) : "";
                 return "" !== t ? `${this.id}_${t}` : this.id;
             }
             createAutoMontage(e, t) {
-                if (!s.A.getConfig({ location: "ClipsSession#createAutoMontage" }).enableAutomontage) return null;
+                if (!l.A.getConfig({ location: "ClipsSession#createAutoMontage" }).enableAutomontage) return null;
                 if (null == i.A.clips.renderMontageRecipe)
                     return (
                         f.GU.warn(
@@ -205,9 +205,9 @@ n.d(
                 let n = {
                         clipCandidates: e,
                         decisionSignals: t,
-                        localUserId: a.default.getId(),
+                        localUserId: s.default.getId(),
                         gameId: this.gameId ?? void 0,
-                        fps: l.Ay.getSettings().clipsQuality.frameRate,
+                        fps: o.Ay.getSettings().clipsQuality.frameRate,
                     },
                     r = (0, u.$Q)(n);
                 return null == r
@@ -222,14 +222,14 @@ n.d(
                     a = new Set(e.resolved.map((e) => e.clip.id)),
                     s = new Set(n.users);
                 for (let e of t) if (a.has(e.id)) for (let t of e.users) s.add(t);
-                let o = r.A.getGame(this.gameId)?.name,
-                    d = i.A.fileManager.join(l.Ay.getSettings().storageLocation, `${e.type}_${n.id}.mp4`);
+                let l = r.A.getGame(this.gameId)?.name,
+                    d = i.A.fileManager.join(o.Ay.getSettings().storageLocation, `${e.type}_${n.id}.mp4`);
                 return {
                     ...n,
                     name: h.intl.string(u.qn[e.type]),
                     filepath: d,
                     type: f.nQ.CLIP,
-                    applicationName: o ?? n.applicationName,
+                    applicationName: l ?? n.applicationName,
                     applicationId: this.gameId ?? n.applicationId,
                     users: Array.from(s),
                     length: e.durationMs,
@@ -238,7 +238,7 @@ n.d(
                 };
             }
             resolveClipPath = (e) => {
-                let t = l.Ay.getClipById(e.id) ?? this.getCandidate(e.id);
+                let t = o.Ay.getClipById(e.id) ?? this.getCandidate(e.id);
                 if (null == t) throw Error(`auto-montage: source clip ${e.id} is no longer in the clips store`);
                 return t.filepath;
             };
