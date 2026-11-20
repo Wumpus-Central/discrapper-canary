@@ -1,4 +1,4 @@
-t.d(n, { ForwardModal: () => eP });
+t.d(n, { ForwardModal: () => eN });
 var l = t(477900),
     a = t(582128),
     i = t(435558),
@@ -17,9 +17,9 @@ var l = t(477900),
     A = t(465532),
     p = t(928039),
     b = t(408018),
-    w = t(915089),
-    y = t(123363),
-    v = t(135621),
+    v = t(915089),
+    w = t(123363),
+    y = t(135621),
     j = t(378570),
     I = t(223863),
     S = t(151054),
@@ -102,7 +102,7 @@ function z(e) {
             inputValue: o,
             setInputValue: c,
         } = e,
-        u = (0, v.A)(),
+        u = (0, y.A)(),
         d = (0, V.QK)(i),
         h = (0, H.VF)(),
         { textValue: m, richValue: g } = o,
@@ -116,12 +116,12 @@ function z(e) {
             },
             [h, n, c],
         ),
-        w = a.useCallback(() => {
+        v = a.useCallback(() => {
             (null != n && A.A.clearDraft(n.channel_id, R.C.ForwardContextMessage), s(m));
         }, [n, s, m]),
-        y = a.useCallback(
-            () => (r || !t || m.length > u || w(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
-            [w, m, u, t, r],
+        w = a.useCallback(
+            () => (r || !t || m.length > u || v(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
+            [v, m, u, t, r],
         );
     return (0, l.jsx)(X.Ay, {
         innerClassName: q.OG,
@@ -134,7 +134,7 @@ function z(e) {
         onBlur: p,
         onFocus: C,
         focused: f,
-        onSubmit: y,
+        onSubmit: w,
         parentModalKey: Y.aU,
         autoCompletePosition: "bottom",
         emojiPickerCloseOnModalOuterClick: !0,
@@ -160,48 +160,54 @@ function eo(e) {
 var ec = t(366056),
     eu = t(373955),
     ed = t(142617),
-    eh = t(259204),
-    em = t(663302);
-function eg(e) {
+    eh = t(772210),
+    em = t(259204),
+    eg = t(663302),
+    ef = t(610771);
+function ex(e) {
     let { checkpointData: n } = e,
         t = (0, ed.Hd)("Checkpoint2026ForwardPreview"),
         { character: a } = n,
-        { secondaryBackgroundColor: i } = (0, eu.j)(n.cardColorPalette);
+        i = (0, eh.A)(a, 56),
+        { secondaryBackgroundColor: r } = (0, eu.j)(n.cardColorPalette);
     return t
         ? (0, l.jsx)("div", {
-              className: em.V,
-              style: { backgroundColor: i },
+              className: eg.V,
+              style: { backgroundColor: r },
               children:
                   null != a
-                      ? (0, l.jsx)(eh.A, { character: a, size: 56, className: em.G })
+                      ? (0, l.jsx)("div", {
+                            className: $()(eg.G, ef.reveal, { [ef.loading]: "loading" === i.status }),
+                            children: (0, l.jsx)(em.A, { character: a, images: i }),
+                        })
                       : (0, l.jsx)(ec.ExperimentalCheckpointIcon, { color: m.A.colors.ICON_OVERLAY_DARK }),
           })
         : null;
 }
-var ef = t(532294);
-function ex(e) {
+var eC = t(532294);
+function eA(e) {
     let { checkpointData: n } = e;
     switch (n.version) {
-        case ef.wk.V2025:
+        case eC.wk.V2025:
             return (0, l.jsx)(eo, { checkpointData: n });
-        case ef.wk.V2026:
-            return (0, l.jsx)(eg, { checkpointData: n });
+        case eC.wk.V2026:
+            return (0, l.jsx)(ex, { checkpointData: n });
         default:
             return null;
     }
 }
-var eC = t(573435),
-    eA = t(619517),
-    ep = t(448381),
-    eb = t(74096),
-    ew = t(538355),
-    ey = t(253932),
-    ev = t(659674),
-    ej = t(739126);
-let eI = { formatInline: !0, allowLinks: !0, allowHeading: !0, allowList: !0, hideSimpleEmbedContent: !1 };
-function eS(e) {
+var ep = t(573435),
+    eb = t(619517),
+    ev = t(448381),
+    ew = t(74096),
+    ey = t(538355),
+    ej = t(253932),
+    eI = t(659674),
+    eS = t(739126);
+let ek = { formatInline: !0, allowLinks: !0, allowHeading: !0, allowList: !0, hideSimpleEmbedContent: !1 };
+function eR(e) {
     let { message: n, forwardOptions: t, channel: r } = e,
-        o = ey.hH.useSetting(),
+        o = ej.hH.useSetting(),
         {
             attachments: c,
             embeds: d,
@@ -216,7 +222,7 @@ function eS(e) {
             null != a ? (o = r.attachments.filter((e) => a.includes(e.id))) : null != i && (o = []);
             let c = [];
             return (
-                (0, s.bG)([T.A], () => null != t && !(0, ev.fS)(t, T.A) && (0, ev.ax)(n)) ||
+                (0, s.bG)([T.A], () => null != t && !(0, eI.fS)(t, T.A) && (0, eI.ax)(n)) ||
                     ((c = r.embeds),
                     null != i ? (c = r.embeds.filter((e, n) => i.includes(n))) : null != a && (c = [])),
                 (null != i || ("" === r.content && c.length > 0)) &&
@@ -229,13 +235,13 @@ function eS(e) {
         })({ message: n, channel: r, forwardOptions: t }),
         f = (0, ea._S)(g),
         x = a.useMemo(() => n.merge({ content: g.content, embeds: g.embeds, customRenderedContent: null }), [g, n]),
-        { content: C } = (0, ew.A)(h ? x : null, eI),
+        { content: C } = (0, ey.A)(h ? x : null, ek),
         A = c.length,
         p = null,
         b = null,
-        w = null;
+        v = null;
     if (A > 0 || d.length > 0) {
-        let e = (0, i.countBy)(c, (e) => (0, ep.NI)(e, !0)),
+        let e = (0, i.countBy)(c, (e) => (0, ev.NI)(e, !0)),
             n = e.IMAGE ?? 0,
             t = e.VIDEO ?? 0;
         (n > 0 && t > 0
@@ -247,38 +253,38 @@ function eS(e) {
                   (b = 1 === n ? et.ImageIcon : ee.ImagesIcon))
                 : ((p = J.intl.formatToPlainString(J.t["89ihS8"], { count: A })), (b = el.AttachmentIcon)),
             t > 0 && A === t
-                ? (w = (0, l.jsxs)("div", {
-                      className: $()(ej.cR, ej.JZ),
+                ? (v = (0, l.jsxs)("div", {
+                      className: $()(eS.cR, eS.JZ),
                       children: [
-                          (0, l.jsx)(eA.Ay, { className: ej.xn, src: c[0].proxy_url, width: 56, height: 56 }),
-                          (0, l.jsx)(en.CirclePlayIcon, { className: ej.uZ, size: "md", color: "white" }),
+                          (0, l.jsx)(eb.Ay, { className: eS.xn, src: c[0].proxy_url, width: 56, height: 56 }),
+                          (0, l.jsx)(en.CirclePlayIcon, { className: eS.uZ, size: "md", color: "white" }),
                       ],
                   }))
                 : A > 0
-                  ? (w = (0, l.jsx)("div", {
-                        className: ej.cR,
-                        children: (0, l.jsx)(eA.Ay, { src: c[0].proxy_url, width: 56, height: 56 }),
+                  ? (v = (0, l.jsx)("div", {
+                        className: eS.cR,
+                        children: (0, l.jsx)(eb.Ay, { src: c[0].proxy_url, width: 56, height: 56 }),
                     }))
                   : d[0]?.thumbnail?.proxyURL != null &&
-                    (w = (0, l.jsx)("div", {
-                        className: ej.cR,
-                        children: (0, l.jsx)(eA.Ay, { src: d[0].thumbnail.proxyURL, width: 56, height: 56 }),
+                    (v = (0, l.jsx)("div", {
+                        className: eS.cR,
+                        children: (0, l.jsx)(eb.Ay, { src: d[0].thumbnail.proxyURL, width: 56, height: 56 }),
                     })));
     }
     return (
         A > 1 &&
-            null != w &&
-            (w = (0, l.jsxs)("div", {
-                className: ej.EW,
+            null != v &&
+            (v = (0, l.jsxs)("div", {
+                className: eS.EW,
                 children: [
-                    (0, l.jsx)(eC.Ay, {
-                        mask: eC.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                    (0, l.jsx)(ep.Ay, {
+                        mask: ep.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: w,
+                        children: v,
                     }),
                     (0, l.jsxs)(u.E, {
-                        className: ej.mB,
+                        className: eS.mB,
                         variant: "body-xs/semibold",
                         color: "text-default",
                         children: ["+", A - 1],
@@ -286,22 +292,22 @@ function eS(e) {
                 ],
             })),
         (0, l.jsxs)("div", {
-            className: ej.sq,
+            className: eS.sq,
             children: [
                 (0, l.jsxs)("div", {
-                    className: ej.FG,
+                    className: eS.FG,
                     children: [
                         null != f && (0, l.jsx)(u.E, { variant: "body-md/medium", children: (0, ea.b5)(f) }),
                         h &&
-                            (0, l.jsx)(eb.Ay, {
-                                className: $()(ej.vp, A > 0 && ej.NL),
+                            (0, l.jsx)(ew.Ay, {
+                                className: $()(eS.vp, A > 0 && eS.NL),
                                 message: n,
                                 content: C,
                                 compact: o,
                             }),
                         A > 0 &&
                             (0, l.jsxs)("div", {
-                                className: ej.kp,
+                                className: eS.kp,
                                 children: [
                                     null != b &&
                                         (0, l.jsx)(b, {
@@ -319,15 +325,15 @@ function eS(e) {
                             }),
                     ],
                 }),
-                w,
-                null != f && (0, l.jsx)("div", { className: ej.cR, children: (0, l.jsx)(ex, { checkpointData: f }) }),
+                v,
+                null != f && (0, l.jsx)("div", { className: eS.cR, children: (0, l.jsx)(eA, { checkpointData: f }) }),
             ],
         })
     );
 }
-var ek = t(61916);
-let eR = (0, w.Ld)();
-function e_() {
+var e_ = t(61916);
+let eP = (0, v.Ld)();
+function eE() {
     return (0, l.jsx)("div", {
         className: q.wV,
         children: (0, l.jsx)(u.E, {
@@ -337,10 +343,10 @@ function e_() {
         }),
     });
 }
-function eP(e) {
+function eN(e) {
     let {
             message: n,
-            initialSelectedDestinations: w = [],
+            initialSelectedDestinations: v = [],
             forwardOptions: E,
             onClose: N,
             onRequestSent: F,
@@ -368,7 +374,7 @@ function eP(e) {
         er = (0, H.nL)(),
         es = a.useRef(0),
         eo = a.useRef(0),
-        [ec, eu] = a.useState(w),
+        [ec, eu] = a.useState(v),
         ed = ec.length,
         eh = ed >= 5,
         em = (0, V.QK)(ec),
@@ -376,9 +382,9 @@ function eP(e) {
         ef = (0, s.bG)([R.A], () => (null != el ? R.A.getDraft(el.channel_id, R.C.ForwardContextMessage) : "")),
         [ex, eC] = a.useState(() => (0, b.ur)(ef)),
         eA = (0, V.M6)(ec),
-        ep = (0, v.A)(),
-        [eb, ew] = a.useState(""),
-        { results: ey, updateSearchText: ev } = (0, S.R)({
+        ep = (0, y.A)(),
+        [eb, ev] = a.useState(""),
+        { results: ew, updateSearchText: ey } = (0, S.R)({
             selectedDestinations: ec,
             originDestination: ee,
             includeMissingDMs: !0,
@@ -386,9 +392,9 @@ function eP(e) {
         }),
         ej = a.useCallback(
             (e) => {
-                (ew(e), ev(e));
+                (ev(e), ey(e));
             },
-            [ev],
+            [ey],
         ),
         eI = a.useCallback(
             (e) => {
@@ -396,10 +402,10 @@ function eP(e) {
             },
             [Z, $, er, ej],
         ),
-        eP = a.useCallback(() => {
+        eS = a.useCallback(() => {
             ej("");
         }, [ej]),
-        eE = a.useCallback(async () => {
+        ek = a.useCallback(async () => {
             (null != Z &&
                 null != $ &&
                 (0, H.hH)({
@@ -495,7 +501,7 @@ function eP(e) {
                 (r && (0, Y.Be)(),
                     F?.(),
                     i &&
-                        (await y.A.fetchMessages({ channelId: o[0] }),
+                        (await w.A.fetchMessages({ channelId: o[0] }),
                         (0, j.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 })));
                 let c = await G.sendForwards(s, o, { ...E, withMessage: a }),
                     u = o.some((e) => {
@@ -545,8 +551,8 @@ function eP(e) {
         eT = a.useCallback(() => {
             (null != el && A.A.clearDraft(el.channel_id, R.C.ForwardContextMessage), eO(ex.textValue));
         }, [el, ex.textValue, eO]),
-        eV = (0, ek.s)({
-            rowData: ey,
+        eV = (0, e_.s)({
+            rowData: ew,
             message: el,
             originChannel: ea,
             selectedDestinations: ec,
@@ -558,10 +564,10 @@ function eP(e) {
         eU = (0, p.A)("forward-modal", eL),
         eG = a.useMemo(
             () =>
-                ey.length > 0
+                ew.length > 0
                     ? eV
-                    : { sections: [1], sectionHeight: 0, renderRow: () => (0, l.jsx)(e_, {}), rowHeight: 72 },
-            [ey, eV],
+                    : { sections: [1], sectionHeight: 0, renderRow: () => (0, l.jsx)(eE, {}), rowHeight: 72 },
+            [ew, eV],
         ),
         eH = ed <= 1 ? J.intl.string(J.t.TXNS7S) : J.intl.formatToPlainString(J.t.jWtYUm, { count: ed });
     return (0, l.jsx)(r.hD, {
@@ -571,7 +577,7 @@ function eP(e) {
                 let { ref: n, ...t } = e;
                 return (0, l.jsx)(o.a, {
                     ...X,
-                    onClose: eE,
+                    onClose: ek,
                     title: M ?? J.intl.string(J.t["+SkRRj"]),
                     subtitle:
                         D ??
@@ -582,14 +588,14 @@ function eP(e) {
                                 ref: eN,
                                 query: eb,
                                 onChange: eI,
-                                onClear: eP,
+                                onClear: eS,
                                 placeholder: J.intl.string(J.t["5h0QOP"]),
                                 "aria-label": J.intl.string(J.t["5h0QOP"]),
                                 autoFocus: !0,
                             }),
                             eg.length > 0 &&
                                 (0, l.jsx)(x.A, {
-                                    id: eR,
+                                    id: eP,
                                     children: J.intl.formatToPlainString(J.t["5X5Oe2"], { names: eg.join(", ") }),
                                 }),
                         ],
@@ -599,7 +605,7 @@ function eP(e) {
                         (null != el &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, l.jsx)(eS, { message: el, forwardOptions: E, channel: em }),
+                                    (0, l.jsx)(eR, { message: el, forwardOptions: E, channel: em }),
                                     eA.length > 0 &&
                                         ex.textValue.length > 0 &&
                                         (0, l.jsx)(u.E, {
@@ -627,7 +633,7 @@ function eP(e) {
                         {
                             variant: "primary",
                             text: eH,
-                            "aria-describedby": eg.length > 0 ? eR : void 0,
+                            "aria-describedby": eg.length > 0 ? eP : void 0,
                             onClick: eT,
                             disabled: ed <= 0 || ex.textValue.length > ep,
                             loading: en,

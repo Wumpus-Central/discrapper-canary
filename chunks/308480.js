@@ -10187,7 +10187,7 @@ let oD = {
     FavoritesGuildAddChannelModal: async () => {
         let { default: e } = await Promise.all([
             a.e(866475),
-            a.e(684068),
+            a.e(796662),
             a.e(850979),
             a.e(236946),
             a.e(692639),
@@ -10203,7 +10203,7 @@ let oD = {
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([
             a.e(866475),
-            a.e(684068),
+            a.e(796662),
             a.e(58243),
             a.e(236946),
             a.e(692639),
@@ -15595,7 +15595,7 @@ var uP = a(141931),
     uL = a(306173),
     uU = a(142617),
     uG = a(719718),
-    uF = a(105283),
+    uF = a(253264),
     uB = a(225123),
     u$ = a(237984),
     uV = a(43203),

@@ -1,5 +1,5 @@
-var r = a(477900),
-    i = a(582128),
+var i = a(477900),
+    r = a(582128),
     n = a(503698),
     s = a.n(n),
     c = a(373955),
@@ -10,8 +10,8 @@ a.d(
     {},
     {
         A: function (e) {
-            let { cardColorPalette: t, size: a, className: n, style: o, children: u } = e,
-                h = i.useMemo(() => {
+            let { cardColorPalette: t, size: a, className: n, style: o, isLoading: u = !1, inert: h, children: f } = e,
+                b = r.useMemo(() => {
                     let e = (0, c.j)(t);
                     return {
                         "--custom-checkpoint-card-primary": e.primaryBackgroundColor,
@@ -20,10 +20,15 @@ a.d(
                         ...o,
                     };
                 }, [t, o]),
-                f = i.useMemo(() => ({ size: a }), [a]);
-            return (0, r.jsx)(d.I.Provider, {
-                value: f,
-                children: (0, r.jsx)("div", { className: s()(l.container, l[a], n), style: h, children: u }),
+                p = r.useMemo(() => ({ size: a }), [a]);
+            return (0, i.jsx)(d.I.Provider, {
+                value: p,
+                children: (0, i.jsx)("div", {
+                    className: s()(l.container, l.reveal, l[a], { [l.loading]: u }, n),
+                    style: b,
+                    inert: h,
+                    children: f,
+                }),
             });
         },
     },
