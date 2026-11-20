@@ -797,6 +797,7 @@ function eO(e) {
                                         variant: "primary",
                                         size: "sm",
                                         icon: eA.SendMessageIcon,
+                                        iconPosition: "end",
                                         text: w.intl.string(E.default.bNtzxp),
                                         disabled: o,
                                         loading: c,
