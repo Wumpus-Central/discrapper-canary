@@ -137,7 +137,7 @@ let W = o().debounce(() => {
         }),
         e && $.emitChange());
 }, 500);
-function K(e, t) {
+function X(e, t) {
     let n = t.map((t) => e.get(t)).filter(p.Vq),
         i = new Set(t);
     e.forEach((e, t) => {
@@ -146,7 +146,7 @@ function K(e, t) {
     let l = n.length;
     return n.map((e, t) => ({ ...e, position: l - 1 - t }));
 }
-function X(e, t) {
+function K(e, t) {
     let n = L.indexOf(e);
     if (n < 0) return !1;
     let i = { ...e, ...t },
@@ -267,27 +267,27 @@ let $ = new Q(
                       l = q(t);
                   if (null == l) return !1;
                   let { permissions: s } = l;
-                  return X(l, { permissions: (s = i ? d.WQ(s, n) : d.TF(s, n)) });
+                  return K(l, { permissions: (s = i ? d.WQ(s, n) : d.TF(s, n)) });
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function (e) {
                   let { id: t, permissions: n } = e,
                       i = q(t);
-                  return null != i && X(i, { permissions: n });
+                  return null != i && K(i, { permissions: n });
               },
               GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                   let { id: t } = e,
                       n = q(t);
-                  return null != n && X(n, { permissions: A.x3 });
+                  return null != n && K(n, { permissions: A.x3 });
               },
               GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                   let { id: t, name: n } = e,
                       i = q(t);
-                  return null != i && X(i, { name: n });
+                  return null != i && K(i, { name: n });
               },
               GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION: function (e) {
                   let { id: t, description: n } = e,
                       i = q(t);
-                  return null != i && X(i, { description: n });
+                  return null != i && K(i, { description: n });
               },
               GUILD_SETTINGS_ROLES_UPDATE_COLOR: function (e) {
                   let { id: t, color: n } = e,
@@ -300,7 +300,7 @@ let $ = new Q(
                       ((s.currentStyle = "solid"),
                       (s.styleColors.solid = { primary_color: n, secondary_color: null, tertiary_color: null }),
                       U.set(t, { ...s }),
-                      X(l, {
+                      K(l, {
                           color: n,
                           colorString: i,
                           colors: { primary_color: n, secondary_color: null, tertiary_color: null },
@@ -320,25 +320,25 @@ let $ = new Q(
                       ((r.styleColors[i] = n),
                       (r.currentStyle = i),
                       U.set(t, { ...r }),
-                      X(l, { color: n.primary_color, colors: n, colorString: s.primaryColor, colorStrings: s }))
+                      K(l, { color: n.primary_color, colors: n, colorString: s.primaryColor, colorStrings: s }))
                   );
               },
               GUILD_SETTINGS_ROLES_UPDATE_SETTINGS: function (e) {
                   let { id: t, hoist: n, mentionable: i } = e,
                       l = q(t);
-                  return null != l && X(l, { hoist: n, mentionable: i });
+                  return null != l && K(l, { hoist: n, mentionable: i });
               },
               GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON: function (e) {
                   let { id: t, icon: n, unicodeEmoji: i } = e,
                       l = q(t);
-                  return null != l && X(l, { icon: n, unicodeEmoji: i });
+                  return null != l && K(l, { icon: n, unicodeEmoji: i });
               },
               GUILD_SETTINGS_ROLES_DISCARD_SECTION_CHANGES: function (e) {
                   let { id: t, section: n } = e,
                       l = Y(t, n);
                   if (null == l) return !1;
                   let { fields: s, role: r, original: a } = l;
-                  (X(r, o().pick(a, s)), (s.includes("color") || s.includes("colors")) && z(i?.id, [a]));
+                  (K(r, o().pick(a, s)), (s.includes("color") || s.includes("colors")) && z(i?.id, [a]));
               },
               GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES: function (e) {
                   let { id: t } = e,
@@ -356,16 +356,16 @@ let $ = new Q(
               GUILD_SETTINGS_ROLE_SELECT: function (e) {
                   let { role: t, searchQuery: n } = e;
                   if (((l = n), null != t)) {
-                      if (null != q(t.id)) return void X(t, t);
+                      if (null != q(t.id)) return void K(t, t);
                       ((L = [...L, t]), W());
                   }
               },
               GUILD_SETTINGS_ROLES_DUPLICATE_SUCCESS: function (e) {
                   let { role: t, roles: n } = e,
                       l = new Map(L.map((e) => [e.id, e]));
-                  (l.set(t.id, t), (L = K(l, n)));
+                  (l.set(t.id, t), (L = X(l, n)));
                   let s = new Map(D.map((e) => [e.id, e]));
-                  (s.set(t.id, t), (D = K(s, n)), z(i?.id, [t]));
+                  (s.set(t.id, t), (D = X(s, n)), z(i?.id, [t]));
               },
               GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE: function (e) {
                   let { id: t, currentStyle: n } = e,
@@ -376,7 +376,7 @@ let $ = new Q(
                   U.set(t, { currentStyle: n, styleColors: l.styleColors });
                   let s = l.styleColors[n],
                       r = (0, x.K3)(s);
-                  return X(i, {
+                  return K(i, {
                       color: s.primary_color ?? void 0,
                       colors: s,
                       colorString: r.primaryColor,

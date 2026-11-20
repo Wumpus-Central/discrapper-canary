@@ -15,8 +15,8 @@ l.d(
         A: function (e, t) {
             let l = (0, r.bG)([o.A], () => o.A.hidePersonalInformation),
                 m = (0, c.B5)(e),
-                p = (0, r.cf)([u.A], () => Object.fromEntries(m.map((e) => [e.id, u.A.getStatus(e.id)])), [m]),
-                g = a.useMemo(
+                g = (0, r.cf)([u.A], () => Object.fromEntries(m.map((e) => [e.id, u.A.getStatus(e.id)])), [m]),
+                p = a.useMemo(
                     () =>
                         m.map((t) => ({
                             id: t.id,
@@ -26,15 +26,15 @@ l.d(
                                 size: s._3.SIZE_24,
                                 src: t.getAvatarURL(e, 24),
                                 "aria-hidden": !0,
-                                status: p[t.id],
+                                status: g[t.id],
                             }),
                             description: (0, c.hY)(t, l),
                         })),
-                    [e, l, p, m],
+                    [e, l, g, m],
                 ),
                 v = (0, c.S6)(e, t);
             return {
-                options: g,
+                options: p,
                 onQueryChange: a.useCallback((e) => v(e.currentTarget.value), [v]),
                 matchSorterOptions: f,
             };

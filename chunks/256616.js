@@ -1,56 +1,56 @@
-var e = l(477900),
-    i = l(582128),
-    u = l(855986),
-    a = l(189213),
-    r = l(858899),
-    s = l(192308),
-    o = l(587895),
-    d = l(664619),
-    c = l(191850),
-    p = l(792996);
+var l = i(477900),
+    n = i(582128),
+    e = i(855986),
+    s = i(189213),
+    c = i(858899),
+    o = i(192308),
+    r = i(587895),
+    u = i(664619),
+    p = i(191850),
+    d = i(792996);
 function f(t) {
-    let { project: n, ...l } = t,
-        [s, f] = i.useState(!1),
-        [g, h] = i.useState(null),
-        A = (0, u.bG)([o.A], () => o.A.getApplication(n.application_id)?.name ?? n.name, [n.application_id, n.name]),
-        b = p.intl.formatToPlainString(c.default.m8KWic, { app: A });
-    return (0, e.jsx)(a.a, {
-        ...l,
+    let { project: a, ...i } = t,
+        [o, f] = n.useState(!1),
+        [g, m] = n.useState(null),
+        b = (0, e.bG)([r.A], () => r.A.getApplication(a.application_id)?.name ?? a.name, [a.application_id, a.name]),
+        k = d.intl.formatToPlainString(p.default.m8KWic, { app: b });
+    return (0, l.jsx)(s.a, {
+        ...i,
         role: "alertdialog",
-        title: b,
-        subtitle: p.intl.string("guild" === n.install_scope ? c.default["6upWvS"] : c.default.wve4kB),
-        "aria-label": b,
+        title: k,
+        subtitle: d.intl.string("guild" === a.install_scope ? p.default["6upWvS"] : p.default.wve4kB),
+        "aria-label": k,
         notice: null == g ? void 0 : { message: g, type: "critical", role: "alert" },
         actions: [
-            { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: l.onClose },
+            { text: d.intl.string(d.t["ETE/oC"]), variant: "secondary", onClick: i.onClose },
             {
-                text: p.intl.string(c.default.GqcQyH),
+                text: d.intl.string(p.default.GqcQyH),
                 variant: "critical-primary",
-                loading: s,
-                disabled: s,
+                loading: o,
+                disabled: o,
                 onClick: () => {
                     (async function () {
-                        (f(!0), h(null));
-                        let t = await (0, d.qt)(n);
+                        (f(!0), m(null));
+                        let t = await (0, u.qt)(a);
                         (f(!1), t)
-                            ? ((0, r.P0)({
-                                  text: p.intl.formatToPlainString(c.default.b8LN7N, { app: A }),
+                            ? ((0, c.P0)({
+                                  text: d.intl.formatToPlainString(p.default.b8LN7N, { app: b }),
                                   variant: "success",
                               }),
-                              l.onClose())
-                            : h(p.intl.string(c.default["rE/0SD"]));
+                              i.onClose())
+                            : m(d.intl.string(p.default["rE/0SD"]));
                     })().catch(() => {});
                 },
             },
         ],
     });
 }
-l.d(
-    n,
+i.d(
+    a,
     {},
     {
         A: function (t) {
-            (0, s.qf)((n) => (0, e.jsx)(f, { ...n, ...t }));
+            (0, o.qf)((a) => (0, l.jsx)(f, { ...a, ...t }));
         },
     },
 );

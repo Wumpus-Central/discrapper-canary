@@ -31,8 +31,8 @@ n.d(
                     onLoadComplete: y,
                 } = t,
                 g = (0, c.M)(f) ? x.NJ8.DARK : x.NJ8.LIGHT,
-                m = (0, C.a5)(o.id, g),
-                N = T && null != o.config.cosponsorMetadata && null != m;
+                S = (0, C.a5)(o.id, g),
+                _ = T && null != o.config.cosponsorMetadata && null != S;
             return (0, i.jsxs)("div", {
                 className: r()(A.Iu, e),
                 children: [
@@ -65,14 +65,14 @@ n.d(
                         children: (t) =>
                             (0, i.jsx)(a.animated.img, {
                                 ref: t,
-                                className: r()(A.lW, n, { [A.TO]: N }),
+                                className: r()(A.lW, n, { [A.TO]: _ }),
                                 style: L,
                                 alt: o.config.messages.gameTitle,
                                 src: (0, d.tW)(o, d.fY.LOGO_TYPE, g).url,
                                 onLoad: y,
                             }),
                     }),
-                    N &&
+                    _ &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)("div", {
@@ -91,7 +91,7 @@ n.d(
                                             className: r()(A.lW, A.TO, n),
                                             style: L,
                                             alt: o.config.cosponsorMetadata?.name ?? "",
-                                            src: m.url,
+                                            src: S.url,
                                             onLoad: y,
                                         }),
                                 }),

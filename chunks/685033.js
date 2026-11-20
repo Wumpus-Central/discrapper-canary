@@ -1,38 +1,38 @@
-var n = t(582128),
-    a = t(233470);
-async function r(e, l) {
+var e = n(582128),
+    a = n(233470);
+async function i(l, t) {
     try {
-        let t = await (0, a.U1)(e, l, (0, a.gg)());
-        return t.ok ? !0 === t.body.share_links_enabled : null;
+        let n = await (0, a.U1)(l, t, (0, a.gg)());
+        return n.ok ? !0 === n.body.share_links_enabled : null;
     } catch {
         return null;
     }
 }
-t.d(
-    l,
+n.d(
+    t,
     {},
     {
-        A: function (e) {
-            let [l, t] = n.useState(null),
-                [a, i] = n.useState(!1),
-                s = n.useCallback((e) => {
-                    (t(e), i(!1));
+        A: function (l) {
+            let [t, n] = e.useState(null),
+                [a, r] = e.useState(!1),
+                s = e.useCallback((l) => {
+                    (n(l), r(!1));
                 }, []);
-            n.useEffect(() => {
-                let l = new AbortController();
+            e.useEffect(() => {
+                let t = new AbortController();
                 return (
                     !(async function () {
-                        let t = await r(e, l.signal);
-                        l.signal.aborted || (null == t ? i(!0) : s(t));
+                        let n = await i(l, t.signal);
+                        t.signal.aborted || (null == n ? r(!0) : s(n));
                     })(),
-                    () => l.abort()
+                    () => t.abort()
                 );
-            }, [e, s]);
-            let u = n.useCallback(async () => {
-                let l = await r(e);
-                null == l ? i(!0) : s(l);
-            }, [e, s]);
-            return { shareLinksEnabled: l, loadFailed: a, setShareLinksEnabled: s, reload: u };
+            }, [l, s]);
+            let o = e.useCallback(async () => {
+                let t = await i(l);
+                null == t ? r(!0) : s(t);
+            }, [l, s]);
+            return { shareLinksEnabled: t, loadFailed: a, setShareLinksEnabled: s, reload: o };
         },
     },
 );

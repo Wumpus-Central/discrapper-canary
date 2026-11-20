@@ -15,9 +15,9 @@ l.d(
             let { id: l, status: s, error: u } = t,
                 f = (0, a.bG)([i.Ay], () => "open" === i.Ay.getConnState(e), [e]),
                 m = (0, a.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
-                [p, g] = n.useState(null),
-                v = n.useCallback(() => g({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
-                h = p?.frame === t ? p : null,
+                [g, p] = n.useState(null),
+                v = n.useCallback(() => p({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
+                h = g?.frame === t ? g : null,
                 x = h?.ok === !0 && f;
             if ("undone" === s) return null;
             if ("reverted" === s)

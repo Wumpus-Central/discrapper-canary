@@ -70,8 +70,8 @@ function W(e) {
 var z = l(696451),
     B = l(309010),
     D = l(351906),
-    H = l(851767),
-    X = l(612770),
+    X = l(851767),
+    H = l(612770),
     Y = l(571259),
     J = l(559506),
     K = l(791556),
@@ -102,7 +102,7 @@ function es(e) {
             onClose: x,
         } = e,
         g = y.Ay.getName(c?.id, p, u),
-        A = (0, i.bG)([H.A], () => H.A.getUserProfile(u.id)?.application),
+        A = (0, i.bG)([X.A], () => X.A.getUserProfile(u.id)?.application),
         j = (0, i.bG)([F.A, B.Ay], () => F.A.getChannel(B.Ay.getChannelId())),
         v =
             ((t = c?.id),
@@ -152,7 +152,7 @@ function es(e) {
             (0, n.jsx)(Z.A, { user: u, currentUser: s, guildId: c?.id, onOpenUserProfileModal: h, onClose: x }),
             A?.popularApplicationCommandIds != null &&
                 null != j &&
-                (0, n.jsx)(X.A, {
+                (0, n.jsx)(H.A, {
                     applicationId: A.id,
                     commandIds: A.popularApplicationCommandIds,
                     channel: j,
@@ -192,17 +192,17 @@ function eh(e) {
         B = (0, I.pb)({ layout: "POPOUT", userId: t.id, guildId: f, channelId: h, messageId: m, roleId: p }),
         D = (0, w.Ay)(t.id, f);
     (0, P.A)(W, D, ec.R7.POPOUT);
-    let H = (0, i.bG)([b.A], () => (null != f ? b.A.getGuild(f) : null)),
-        X = r.useRef(null),
-        { isHoveringOrFocusing: Y } = (0, j.A)(X);
+    let X = (0, i.bG)([b.A], () => (null != f ? b.A.getGuild(f) : null)),
+        H = r.useRef(null),
+        { isHoveringOrFocusing: Y } = (0, j.A)(H);
     function J(e) {
         (U?.(),
             z.dispatch(q.jej.POPOUT_CLOSE),
             (0, C.openUserProfileModal)({ sourceAnalyticsLocations: W, hideRestrictedProfile: !0, ...B, ...e }));
     }
     r.useEffect(() => {
-        F?.(X?.current);
-    }, [X, F]);
+        F?.(H?.current);
+    }, [H, F]);
     let K = _ ? "div" : a.l,
         Q = (0, A.GV)(),
         Z = y.Ay.useName(f, h, t);
@@ -215,7 +215,7 @@ function eh(e) {
             fetchEndedAt: D?.fetchEndedAt,
             isLoaded: D?.isLoaded,
             children: (0, n.jsxs)(K, {
-                ref: X,
+                ref: H,
                 "aria-labelledby": Q,
                 onClick: G,
                 children: [
@@ -274,7 +274,7 @@ function eh(e) {
                                 user: t,
                                 currentUser: l,
                                 displayProfile: D,
-                                guild: H,
+                                guild: X,
                                 isHoveringOrFocusing: Y,
                                 onOpenProfile: S ? void 0 : J,
                                 channelId: h,

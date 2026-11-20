@@ -23,38 +23,38 @@ n.d(
                 L = (0, o.r)(i.A.colors.BACKGROUND_BASE_LOWEST, E.NJ8.DARK).hex(),
                 y = (0, o.r)(i.A.colors.BACKGROUND_BRAND).hex(),
                 g = (0, c.cb)(T, 0.5),
-                m = (0, c.cb)(O, 0.5),
-                N = I === C.MA.XBOX_GAME_PASS,
-                S = (0, C.B9)(I);
+                S = (0, c.cb)(O, 0.5),
+                _ = I === C.MA.XBOX_GAME_PASS,
+                m = (0, C.B9)(I);
             if (null == f) return null;
-            let _ = S
+            let N = m
                 ? x.intl.formatToPlainString(x.t.l2UfLG, { bonusOrbMultiplier: f })
                 : x.intl.formatToPlainString(x.t["G+mKoo"], { bonusOrbMultiplier: f });
             function Q() {
                 null != f && ((0, d.gC)(f, I), e?.());
             }
-            return N
+            return _
                 ? (0, s.jsx)(r.D, {
                       onClick: Q,
-                      "aria-label": _,
+                      "aria-label": N,
                       children: (0, s.jsx)("div", {
                           className: A._,
                           style: { "--custom-pill-crepe-bg": y },
                           children: (0, s.jsx)(a.E, {
                               variant: "body-xs/semibold",
                               color: "text-overlay-light",
-                              children: _,
+                              children: N,
                           }),
                       }),
                   })
                 : (0, s.jsx)(r.D, {
                       onClick: Q,
-                      "aria-label": _,
+                      "aria-label": N,
                       children: (0, s.jsxs)("div", {
                           className: A.I,
                           style: {
                               "--custom-pill-gradient-start": g,
-                              "--custom-pill-gradient-end": m,
+                              "--custom-pill-gradient-end": S,
                               "--custom-pill-base-color": L,
                           },
                           children: [
@@ -62,7 +62,7 @@ n.d(
                               (0, s.jsx)(a.E, {
                                   variant: "body-xs/semibold",
                                   color: "text-overlay-light",
-                                  children: _,
+                                  children: N,
                               }),
                           ],
                       }),

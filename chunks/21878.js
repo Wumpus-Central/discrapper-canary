@@ -7,7 +7,7 @@ var s = n(477900),
     c = n(596344),
     d = n(951727);
 let u = i.createContext(void 0);
-function h(e) {
+function m(e) {
     let { message: t, children: n } = e,
         a = (0, l.bG)([c.A], () => c.A.getMessage(t.channel_id, t.id), [t.channel_id, t.id]),
         r = null != a;
@@ -24,7 +24,7 @@ n.d(
     {
         A: function (e) {
             let { message: t, children: n } = e;
-            return (0, d.Ls)(t) ? n : (0, s.jsx)(h, { message: t, children: n });
+            return (0, d.Ls)(t) ? n : (0, s.jsx)(m, { message: t, children: n });
         },
         M: function (e) {
             let t = i.useContext(u) ?? e;

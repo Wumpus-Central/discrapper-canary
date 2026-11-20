@@ -13,12 +13,12 @@ n.d(
             let n = (0, l.M)(e),
                 d = (0, r.d$)(n.getChannelId())[n.id],
                 u = (0, c.A)(n.poll?.expiry),
-                h = a.Sf.useSetting(),
-                m = (0, i.Ay)(),
-                x = t ?? m;
+                m = a.Sf.useSetting(),
+                h = (0, i.Ay)(),
+                x = t ?? h;
             return s.useMemo(
-                () => (0, o.Ay)(n, d, { animateEmoji: h, theme: x, formattedExpirationLabel: u }),
-                [h, n, d, u, x],
+                () => (0, o.Ay)(n, d, { animateEmoji: m, theme: x, formattedExpirationLabel: u }),
+                [m, n, d, u, x],
             );
         },
     },

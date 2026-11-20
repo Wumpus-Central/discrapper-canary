@@ -15,7 +15,7 @@ function f(e) {
 function m(e, t) {
     return (0, r.bG)([s.Ay], () => (0, o.Ux)(s.Ay.getProject(e), t), [t, e]);
 }
-let p = [];
+let g = [];
 l.d(
     t,
     {},
@@ -37,7 +37,7 @@ l.d(
                     () => {
                         let t = s.Ay.getProject(e);
                         return null == t
-                            ? p
+                            ? g
                             : (0, u.Jr)(t).map((e) => ({
                                   guildId: e,
                                   name: i.A.getGuild(e)?.name ?? c.intl.string(d.default["6bhivN"]),
@@ -47,9 +47,9 @@ l.d(
                     a.isEqual,
                 ),
                 o = m(e, t),
-                [f, g] = n.useState(null),
+                [f, p] = n.useState(null),
                 v = [f, o].find((e) => null != e && l.some((t) => t.guildId === e));
-            return { servers: l, serverId: v ?? l[0]?.guildId ?? null, setServerId: g };
+            return { servers: l, serverId: v ?? l[0]?.guildId ?? null, setServerId: p };
         },
     },
 );

@@ -17,11 +17,11 @@ n.d(
                 m,
                 h,
                 x,
-                { channelId: p, authorId: g } = null == e ? {} : (0, d.nx)(e);
+                { channelId: p, authorId: C } = null == e ? {} : (0, d.nx)(e);
             return (
                 (t = (0, d.ku)()),
                 (n = (0, s.bG)([o.default], () => o.default.getCurrentUser())),
-                (m = (0, s.bG)([a.A, r.A], () => (0, d.c2)(p, g, [a.A, r.A]))),
+                (m = (0, s.bG)([a.A, r.A], () => (0, d.c2)(p, C, [a.A, r.A]))),
                 (h = (0, s.bG)(
                     [i.A],
                     () => t.reduce((e, t) => ({ ...e, [t.harmType]: t.getProtoUserSettings(i.A.settings) }), {}),
@@ -31,7 +31,7 @@ n.d(
                 0 ===
                 (x = l.useMemo(
                     () =>
-                        null == m || g === n?.id || null == n
+                        null == m || C === n?.id || null == n
                             ? []
                             : t
                                   .map((e) => {
@@ -40,7 +40,7 @@ n.d(
                                       return (0, d.f)(n) ? e.harmType : null;
                                   })
                                   .filter((e) => null != e),
-                    [m, t, h, g, n],
+                    [m, t, h, C, n],
                 )).length
                     ? u.LO.NONE
                     : (0, d.LE)(x)

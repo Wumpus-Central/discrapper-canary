@@ -659,8 +659,8 @@ var e0 = n(554146),
     e3 = n(695366),
     e6 = n(834730),
     e8 = n(789645),
-    e9 = n(565645),
-    e4 = n(775602),
+    e4 = n(565645),
+    e9 = n(775602),
     e7 = n(826673),
     te = n(371680),
     tt = n(532624),
@@ -673,14 +673,14 @@ function ts(e) {
         r = (0, d.RQ)((e) => e.searchQuery),
         s = (0, m.bG)([g.A], () => null != t && g.A.isFavoriteSound(t.soundId)),
         a = (0, m.bG)([ex.A], () => ex.A.getGuild(t?.guildId)),
-        o = (0, m.bG)([e4.Ay], () => e4.Ay.useReducedMotion, []),
+        o = (0, m.bG)([e9.Ay], () => e9.Ay.useReducedMotion, []),
         u = (0, m.bG)([tn.A], () => tn.A.isFocused()),
         c = (0, m.bG)([tt.Ay], () => tt.Ay.getKeybindForAction(ev.hCu.SOUNDBOARD_HOLD));
     if (null != t && r.length > 0)
         return (0, l.jsx)(te.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, l.jsx)(e9.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
+                    ? (0, l.jsx)(e4.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tr.Zg })
                     : (0, l.jsx)(e1.ImageIcon, { size: "md", color: "currentColor", className: tr.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(L.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
@@ -1314,11 +1314,11 @@ function tb(e) {
         e8 = i.useCallback(() => {
             null != g.A.getSoundById("3") && e1();
         }, [e1]),
-        e9 = i.useCallback(() => {
+        e4 = i.useCallback(() => {
             let e = (0, W.Dd)(ej.PremiumTypes.TIER_2);
             return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
         }, [e8]),
-        e4 = i.useCallback((e) => (e6(e, t) ? 65 : 32), [t, e6]),
+        e9 = i.useCallback((e) => (e6(e, t) ? 65 : 32), [t, e6]),
         e7 = i.useCallback(
             (e) => {
                 let t = e === eK.length - 1;
@@ -1419,9 +1419,9 @@ function tb(e) {
                     inExpressionPicker: v,
                     newSoundCountByGuildId: eD ? eo : void 0,
                     isNewSound: Z,
-                    getSectionHeaderHeight: e4,
+                    getSectionHeaderHeight: e9,
                 }),
-            [q, A, ez, t, v, eD, eo, Z, e4],
+            [q, A, ez, t, v, eD, eo, Z, e9],
         ),
         tc = i.useCallback(() => {
             let e = (0, Y.qD)();
@@ -1443,7 +1443,7 @@ function tb(e) {
                 eq
                     ? (0, l.jsx)(ee.d, {
                           showUpsell: eB,
-                          text: e9(),
+                          text: e4(),
                           button: tc(),
                           buttonAnalyticsObject: { section: ev.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: (0, l.jsx)(en.l, {
@@ -1454,7 +1454,7 @@ function tb(e) {
                           }),
                       })
                     : null,
-            [e9, tc, eq, eB],
+            [e4, tc, eq, eB],
         ),
         tm = i.useCallback(
             (e) =>
@@ -1513,7 +1513,7 @@ function tb(e) {
                     renderCategoryList: tu,
                     renderHeaderAccessories: to,
                     rowHeight: 48,
-                    sectionHeaderHeight: e4,
+                    sectionHeaderHeight: e9,
                     sectionFooterHeight: e7,
                     itemNodeWidth: 150,
                     gridNavigatorId: z,

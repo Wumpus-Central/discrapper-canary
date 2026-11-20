@@ -928,8 +928,8 @@ let e6 = (0, B.mj)({
     variations: { 1: { enabled: !0 } },
 });
 var e5 = n(111162),
-    e7 = n(927813);
-function e8() {}
+    e8 = n(927813);
+function e7() {}
 var e4 =
     (((l = {})[(l.AUTHENTICATION_FAILED = 4004)] = "AUTHENTICATION_FAILED"),
     (l[(l.INVALID_SESSION = 4006)] = "INVALID_SESSION"),
@@ -943,9 +943,9 @@ var e4 =
     (l[(l.DAVE_DOWNGRADE_REFUSED = 4804)] = "DAVE_DOWNGRADE_REFUSED"),
     (l[(l.DAVE_INVALID_MESSAGE = 4805)] = "DAVE_INVALID_MESSAGE"),
     l);
-let e9 = 20 * e7.A.Millis.SECOND,
-    te = +e7.A.Millis.MINUTE,
-    tt = 5 * e7.A.Millis.SECOND;
+let e9 = 20 * e8.A.Millis.SECOND,
+    te = +e8.A.Millis.MINUTE,
+    tt = 5 * e8.A.Millis.SECOND;
 function tn(e) {
     return e.map((e) => ({
         name: e.name,
@@ -1385,7 +1385,7 @@ class ts extends N.A {
         (this.stopHeartbeater(), this.clearHelloTimeout());
         let t = this.webSocket;
         ((this.webSocket = null),
-            null != t && ((t.onopen = e8), (t.onmessage = e8), (t.onerror = e8), (t.onclose = e8), e?.(t)),
+            null != t && ((t.onopen = e7), (t.onmessage = e7), (t.onerror = e7), (t.onclose = e7), e?.(t)),
             this.backoff.cancel());
     }
     cleanupState() {
@@ -1598,8 +1598,8 @@ var tl = n(4511),
     tu = n(590087);
 let t_ = { any: 100 },
     tE = { any: 0 },
-    tA = 30 * e7.A.Millis.SECOND,
-    tf = 120 * e7.A.Millis.SECOND,
+    tA = 30 * e8.A.Millis.SECOND,
+    tf = 120 * e8.A.Millis.SECOND,
     th = -1 !== (0, td.EL)();
 var tI = (((d = {}).UserSSRCUpdate = "user-ssrc-update"), (d.Update = "update"), d);
 function tp(e) {
@@ -3541,8 +3541,8 @@ function t3(e, t) {
 }
 var t6 = n(753070),
     t5 = n(396574),
-    t7 = n(792996);
-let t8 = /^https/.test("https:") ? "wss:" : "ws:",
+    t8 = n(792996);
+let t7 = /^https/.test("https:") ? "wss:" : "ws:",
     t4 = null;
 function t9() {
     return new T.A(1e3, 1e4);
@@ -3837,10 +3837,10 @@ class na extends N.A {
     set endpoint(e) {
         if ((this.recordEvent({ c: 6, e: null != e }), null == e)) ((this._endpoint = null), (this.hostname = null));
         else {
-            e = `${t8}//${e}`;
+            e = `${t7}//${e}`;
             let { hostname: t, port: n } = e$.A.toURLSafe(e) ?? {},
                 i = null != n ? parseInt(n) : 0 / 0;
-            (null != t && (80 === i || 443 === i) && (e = `${t8}//${t}`),
+            (null != t && (80 === i || 443 === i) && (e = `${t7}//${t}`),
                 (this._endpoint = e + "/"),
                 (this.hostname = t));
         }
@@ -5816,7 +5816,7 @@ class na extends N.A {
                 eventLog: nr(),
             }),
             e.includes("GetPersistedKeyPair")
-                ? L.A.show({ title: t7.intl.string(t7.t.fJUioH), body: t7.intl.string(t7.t.CQLWvo) })
+                ? L.A.show({ title: t8.intl.string(t8.t.fJUioH), body: t8.intl.string(t8.t.CQLWvo) })
                 : this._alertMLSFailureDebouced(e, t));
     }
     _trackMLSFailures(e) {

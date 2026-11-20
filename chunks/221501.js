@@ -13,11 +13,11 @@ t.d(
     {
         A: function (e) {
             let { targetElementRef: n, shouldShow: t, text: x, onRequestClose: g } = e,
-                { preventIdle: h, allowIdle: p } = (0, c.o)("clips-in-call-notice");
+                { preventIdle: p, allowIdle: h } = (0, c.o)("clips-in-call-notice");
             return (
                 i.useEffect(() => {
-                    if (t) return (h(), p);
-                }, [t, h, p]),
+                    if (t) return (p(), h);
+                }, [t, p, h]),
                 (0, l.jsxs)(s.x, {
                     targetElementRef: n,
                     shouldShow: t,

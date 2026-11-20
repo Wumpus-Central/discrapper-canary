@@ -1,32 +1,32 @@
-var l = n(582128);
-let i = new Set(),
+var i = n(582128);
+let l = new Set(),
     a = null;
 n.d(
     e,
     {},
     {
         N: function (t) {
-            for (let e of ((a = t), [...i])) e(t);
+            for (let e of ((a = t), [...l])) e(t);
             return a !== t;
         },
         z: function (t, e) {
-            let n = l.useRef(e);
-            (l.useLayoutEffect(() => {
+            let n = i.useRef(e);
+            (i.useLayoutEffect(() => {
                 n.current = e;
             }),
-                l.useEffect(() => {
+                i.useEffect(() => {
                     if (null == t) return;
                     function e() {
                         a === t && ((a = null), n.current());
                     }
                     e();
-                    let l = (n) => {
+                    let i = (n) => {
                         n === t && e();
                     };
                     return (
-                        i.add(l),
+                        l.add(i),
                         () => {
-                            i.delete(l);
+                            l.delete(i);
                         }
                     );
                 }, [t]));

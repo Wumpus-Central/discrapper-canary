@@ -123,12 +123,12 @@ n.d(
                 [F, H] = l.useState(!1),
                 [V, z] = l.useState(!1),
                 Y = l.useRef(null),
-                { refs: W, floatingStyles: K } = (0, h.u)({
+                { refs: W, floatingStyles: X } = (0, h.u)({
                     placement: "bottom-start",
                     offset: 0,
                     matchReferenceWidth: !0,
                 }),
-                { sections: X, sectionCounts: q } = l.useMemo(() => {
+                { sections: K, sectionCounts: q } = l.useMemo(() => {
                     let e = "" !== y ? s.filter((e) => o()(y, e.display.toLocaleLowerCase())) : s,
                         t = "" !== y ? n.filter((e) => o()(y, e.display.toLocaleLowerCase())) : n,
                         i = [],
@@ -188,7 +188,7 @@ n.d(
                 ee = l.useCallback(
                     (e) => {
                         let { section: n, row: l } = e,
-                            s = X[n][l];
+                            s = K[n][l];
                         return (0, i.jsx)(
                             x.D,
                             {
@@ -201,7 +201,7 @@ n.d(
                             s.id,
                         );
                     },
-                    [t, $, X],
+                    [t, $, K],
                 ),
                 et = l.useMemo(
                     () =>
@@ -245,7 +245,7 @@ n.d(
                             V &&
                                 (0, i.jsx)("div", {
                                     ref: W.setFloating,
-                                    style: K,
+                                    style: X,
                                     className: L.Dr,
                                     onFocus: (e) => Q(!0, 1, e),
                                     onBlur: (e) => Q(!1, 1, e),

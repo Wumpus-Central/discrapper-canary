@@ -18,18 +18,18 @@ var s = n(477900),
     L = n(775602),
     y = n(438457),
     g = n(144779),
-    m = n(413599),
-    N = n(178540),
-    S = n(506988),
-    _ = n(61387),
+    S = n(413599),
+    _ = n(178540),
+    m = n(506988),
+    N = n(61387),
     Q = n(760914),
-    v = n(590202),
-    h = n(971649),
+    h = n(590202),
+    v = n(971649),
     R = n(574112),
     P = n(792620),
     D = n(280905),
-    p = n(201805),
-    U = n(818348),
+    U = n(201805),
+    p = n(818348),
     j = n(792996),
     M = n(175276);
 function b(t) {
@@ -87,32 +87,32 @@ n.d(
     {
         default: function (t) {
             let { quest: e, transitionState: n, onClose: o, sourceQuestContent: I, refreshOnOpen: f = !1 } = t,
-                T = (0, N.O)((t) => t.getErrorHints(e.id)),
+                T = (0, _.O)((t) => t.getErrorHints(e.id)),
                 O = (0, i.useRef)(!1),
-                D = (0, _.UX)(),
-                w = (0, h.vU)()?.getId(),
+                D = (0, N.UX)(),
+                w = (0, v.vU)()?.getId(),
                 q = (0, l.bG)([L.Ay], () => L.Ay.useReducedMotion),
-                k = (0, p.Xf)({ useReducedMotion: q, className: M.Zf }),
-                W = T.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
+                W = (0, U.Xf)({ useReducedMotion: q, className: M.Zf }),
+                k = T.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
                 X = (0, P.YL)(e),
-                z = (0, l.bG)([m.A], () => m.A.getState().theme),
-                V = (0, u.M)(z) ? U.NJ.DARK : U.NJ.LIGHT,
-                { startConsoleQuest: F, startingConsoleQuest: K } = (0, _.Wj)({
+                z = (0, l.bG)([S.A], () => S.A.getState().theme),
+                V = (0, u.M)(z) ? p.NJ.DARK : p.NJ.LIGHT,
+                { startConsoleQuest: F, startingConsoleQuest: K } = (0, N.Wj)({
                     questId: e.id,
                     beforeRequest: () => {
-                        (k.startAnimation(),
+                        (W.startAnimation(),
                             (0, y.r)({
                                 type: g.F.CLICK_INTERNAL,
                                 adCreativeType: a.p.QUEST,
                                 adCreativeId: e.id,
-                                questContentCTA: v.Cy.DEFIBRILLATOR,
-                                surfaceId: S.uF.CONNECTIONS_MODAL,
+                                questContentCTA: h.Cy.DEFIBRILLATOR,
+                                surfaceId: m.uF.CONNECTIONS_MODAL,
                                 sourceQuestContent: I,
                                 impressionId: w,
                             }));
                     },
                     afterRequest: () => {
-                        k.stopAnimation();
+                        W.stopAnimation();
                     },
                 });
             return (
@@ -132,8 +132,8 @@ n.d(
                                 (0, R.b6)(
                                     { quest: e },
                                     {
-                                        content: S.uF.CONNECTIONS_MODAL,
-                                        ctaContent: v.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
+                                        content: m.uF.CONNECTIONS_MODAL,
+                                        ctaContent: h.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                                         impressionId: w,
                                         sourceQuestContent: I,
                                     },
@@ -156,7 +156,7 @@ n.d(
                                         className: r()(M.Tm, { [M.r9]: K }),
                                         onClick: F,
                                         children: [
-                                            k.render(),
+                                            W.render(),
                                             (0, s.jsx)(d.E, {
                                                 variant: "body-sm/medium",
                                                 color: "currentColor",
@@ -177,7 +177,7 @@ n.d(
                                     (0, s.jsx)(b, {
                                         icon: (0, s.jsx)(A.GameControllerIcon, { size: "sm" }),
                                         text: j.intl.string(j.t.XF4wuA),
-                                        errors: X ? void 0 : W.map((t) => t.message),
+                                        errors: X ? void 0 : k.map((t) => t.message),
                                         gameTile: X
                                             ? (0, s.jsx)(C.m, {
                                                   "aria-label": e.config.messages.gameTitle,
@@ -217,7 +217,7 @@ n.d(
                     return (0, s.jsx)(D.R, {
                         overrideVisibility: !0,
                         questOrQuests: t.quest,
-                        questContent: S.uF.CONNECTIONS_MODAL,
+                        questContent: m.uF.CONNECTIONS_MODAL,
                         sourceQuestContent: t.sourceQuestContent,
                         children: () => (0, s.jsx)(e, { ...n, ...t }),
                     });

@@ -24,11 +24,11 @@ n.d(
         Q: function (e) {
             let { quest: t, isHovering: n = !1, content: l } = e,
                 I = (0, f.Pd)(t),
-                S = (0, a.bG)([h.A], () => I === f.UA.UNENROLLED && null != h.A.questEnrollmentBlockedUntil, [I]),
-                N = (0, C.fc)(t),
+                N = (0, a.bG)([h.A], () => I === f.UA.UNENROLLED && null != h.A.questEnrollmentBlockedUntil, [I]),
+                S = (0, C.fc)(t),
                 p = (0, C.I3)(t),
-                O = i.useMemo(() => (0, g.Dd)(t.config, I, S), [t.config, I, S]),
-                y = i.useMemo(() => (0, g.CK)(I, N, p, S), [I, N, p, S]),
+                O = i.useMemo(() => (0, g.Dd)(t.config, I, N), [t.config, I, N]),
+                y = i.useMemo(() => (0, g.CK)(I, S, p, N), [I, S, p, N]),
                 T = (0, A.A)(t, null == l),
                 q = null != l ? l.leadingText : (T ?? O),
                 w = null == l || l.showTask ? y : null;
@@ -74,7 +74,7 @@ n.d(
                                                       case g.UK.ARENA:
                                                           return (0, s.jsx)(m.QuestsArenaIcon, { ...n });
                                                   }
-                                              })(t, S),
+                                              })(t, N),
                                               (0, s.jsx)(E.E, {
                                                   variant: "body-xs/semibold",
                                                   tag: "span",

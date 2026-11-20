@@ -31,29 +31,29 @@ var r = n(115560),
     E = n(188567),
     T = n(723702),
     _ = n(914313),
-    I = n(561844),
-    C = n(590202),
+    C = n(561844),
+    I = n(590202),
     p = n(506988);
 function S(e, t, n) {
     switch (e) {
-        case I.Dq.MAIN_CTA:
+        case C.Dq.MAIN_CTA:
             (0, a.r)({
                 type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                questContentCTA: C.Cy.GAME_STORE_OPEN_GAME_LINK,
+                questContentCTA: I.Cy.GAME_STORE_OPEN_GAME_LINK,
                 ...n,
                 ...t,
             });
             break;
-        case I.Dq.RATING_STAT:
+        case C.Dq.RATING_STAT:
             (0, a.r)({
                 type: s.F.CLICK_EXTERNAL_ADVERTISER_CTA,
-                questContentCTA: C.Cy.GAME_STORE_OPEN_REVIEWS,
+                questContentCTA: I.Cy.GAME_STORE_OPEN_REVIEWS,
                 ...n,
                 ...t,
             });
             break;
-        case I.Dq.SEE_MORE:
-            (0, a.r)({ type: s.F.CLICK_INTERNAL, questContentCTA: C.Cy.EXPAND, ...n, ...t });
+        case C.Dq.SEE_MORE:
+            (0, a.r)({ type: s.F.CLICK_INTERNAL, questContentCTA: I.Cy.EXPAND, ...n, ...t });
     }
 }
 var m = n(651892),
@@ -173,7 +173,7 @@ function U(e, t) {
                     ? null
                     : M({ url: (0, m.Jx)(e.config), android: i.android, ios: i.ios }),
             trackOverlayEvent: (n, r, u, i, l) =>
-                (0, I.eA)({
+                (0, C.eA)({
                     quest: e,
                     trackingCtx: t,
                     inlineStoreAppId: r,
@@ -204,7 +204,7 @@ function U(e, t) {
                       type: s.F.CLICK_INTERNAL,
                       adCreativeType: u.p.QUEST,
                       adCreativeId: e.id,
-                      questContentCTA: C.Cy.OPEN_CUSTOM_APP_STORE,
+                      questContentCTA: I.Cy.OPEN_CUSTOM_APP_STORE,
                       surfaceId: t.content,
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
@@ -242,7 +242,7 @@ function D(e, t) {
                       type: s.F.CLICK_INTERNAL,
                       adCreativeType: u,
                       adCreativeId: r,
-                      questContentCTA: C.Cy.OPEN_CUSTOM_APP_STORE,
+                      questContentCTA: I.Cy.OPEN_CUSTOM_APP_STORE,
                       surfaceId: t.content,
                       sourceQuestContent: t.sourceQuestContent,
                       questContentPosition: t.position,
@@ -268,7 +268,7 @@ function D(e, t) {
             directLink: A,
             inlineStoreParams: m,
             trackOverlayEvent: (e, n, i, l, o) =>
-                (0, I.YE)({
+                (0, C.YE)({
                     adContentId: r,
                     adCreativeType: u,
                     trackingCtx: t,

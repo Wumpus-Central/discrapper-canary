@@ -9,8 +9,8 @@ var n = l(477900),
     c = l(932111),
     f = l(161431),
     m = l(407653),
-    p = l(191850),
-    g = l(792996),
+    g = l(191850),
+    p = l(792996),
     v = l(587041);
 l.d(
     t,
@@ -20,7 +20,7 @@ l.d(
             let { attachmentId: t } = e,
                 l = a.useContext(c.Fu),
                 r = (0, f.Od)(l, t),
-                h = r?.name ?? g.intl.string(p.default.ff9Q4C),
+                h = r?.name ?? p.intl.string(g.default.ff9Q4C),
                 x = (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: v.xn }), h],
                 });
@@ -42,7 +42,7 @@ l.d(
                               location: "ConjureChat",
                           });
                       },
-                      "aria-label": g.intl.formatToPlainString(p.default.GtNukg, { name: r.name }),
+                      "aria-label": p.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
                       children: x,
                   })
                 : (0, n.jsx)("span", { className: v.Pq, children: x });

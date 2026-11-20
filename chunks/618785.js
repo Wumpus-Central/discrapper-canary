@@ -9,13 +9,13 @@ var n = l(477900),
     c = l(777847),
     f = l(125372),
     m = l(653036),
-    p = l(191850),
-    g = l(792996);
+    g = l(191850),
+    p = l(792996);
 function v(e) {
     let { projectId: t, transitionState: l, onClose: v } = e,
         h = (0, f.A)(t),
-        { appName: x, moving: b, guilds: y, guild: j, rows: k, pending: A, error: S } = h,
-        w = a.useMemo(
+        { appName: x, moving: b, guilds: y, guild: j, rows: A, pending: k, error: w } = h,
+        S = a.useMemo(
             () =>
                 y.map((e) => ({
                     id: e.id,
@@ -28,12 +28,12 @@ function v(e) {
     return (0, n.jsx)(r.a, {
         transitionState: l,
         onClose: v,
-        title: g.intl.formatToPlainString(b ? p.default.M4jq44 : p.default.PE4egI, { app: x }),
-        notice: null != S ? { type: "critical", message: S, role: "alert" } : void 0,
+        title: p.intl.formatToPlainString(b ? g.default.M4jq44 : g.default.PE4egI, { app: x }),
+        notice: null != w ? { type: "critical", message: w, role: "alert" } : void 0,
         actions: [
-            { text: g.intl.string(g.t["ETE/oC"]), variant: "secondary", onClick: v, disabled: A },
+            { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: v, disabled: k },
             {
-                text: g.intl.string(b ? p.default.MHSKBb : p.default["+uQwxA"]),
+                text: p.intl.string(b ? g.default.MHSKBb : g.default["+uQwxA"]),
                 variant: "primary",
                 onClick: async function () {
                     let e = await h.submit();
@@ -43,8 +43,8 @@ function v(e) {
                         (0, s.s7)(),
                         (0, c.n0)(t, x, { kind: "server", guildId: j.id, name: j.name }));
                 },
-                loading: A,
-                disabled: null == j || A,
+                loading: k,
+                disabled: null == j || k,
             },
         ],
         children: (0, n.jsxs)(u.B, {
@@ -52,16 +52,16 @@ function v(e) {
             children: [
                 null != j
                     ? (0, n.jsx)(o.l, {
-                          label: g.intl.string(p.default.Uq5hU9),
-                          options: w,
+                          label: p.intl.string(g.default.Uq5hU9),
+                          options: S,
                           value: j.id,
                           onSelectionChange: h.pickGuild,
                           selectionMode: "single",
-                          disabled: A,
+                          disabled: k,
                           fullWidth: !0,
                       })
                     : null,
-                k.length > 0 ? (0, n.jsx)(m.A, { rows: k }) : null,
+                A.length > 0 ? (0, n.jsx)(m.A, { rows: A }) : null,
             ],
         }),
     });

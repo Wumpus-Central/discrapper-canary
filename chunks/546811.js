@@ -462,7 +462,7 @@ let e5 = function (e) {
 var e3 = n(240864),
     e6 = n(89366),
     e8 = n(202639);
-let e9 = (0, a.throttle)(
+let e4 = (0, a.throttle)(
     function (e) {
         let {
                 listRef: t,
@@ -486,7 +486,7 @@ let e9 = (0, a.throttle)(
     300,
     { leading: !1, trailing: !0 },
 );
-var e4 = n(307301),
+var e9 = n(307301),
     e7 = n(371680),
     te = n(683522);
 let tt = (0, q.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
@@ -528,7 +528,7 @@ let tt = (0, q.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
                     ? (0, l.jsx)(em.A, { isInteracting: !0, size: tt, sticker: r, disableAnimation: !0 })
                     : (0, l.jsx)("div", {
                           className: te.P,
-                          children: (0, l.jsx)(e4.PlusSmallIcon, {
+                          children: (0, l.jsx)(e9.PlusSmallIcon, {
                               size: "md",
                               color: "currentColor",
                               className: te.K,
@@ -647,7 +647,7 @@ let td = i.memo(function (e) {
                                     !I && (0, l.jsx)("div", { className: tc.fw }),
                                     (0, l.jsx)("div", {
                                         className: tc.P0,
-                                        children: (0, l.jsx)(e4.PlusSmallIcon, {
+                                        children: (0, l.jsx)(e9.PlusSmallIcon, {
                                             size: "md",
                                             color: "currentColor",
                                             className: tc.Kk,
@@ -1184,7 +1184,7 @@ let tP = function (e) {
                 f = i.useMemo(() => s.map((e) => ({ isNitroLocked: !0 === e.isNitroLocked })), [s]),
                 p = i.useCallback(
                     (e) => {
-                        e9({
+                        e4({
                             listRef: n,
                             searchQuery: r,
                             nitroLockedSectionStates: f,
@@ -1735,8 +1735,8 @@ let t3 = function (e) {
 };
 var t6 = n(964404),
     t8 = n(712687),
-    t9 = n(188567),
-    t4 = n(49999),
+    t4 = n(188567),
+    t9 = n(49999),
     t7 = n(732139),
     ne = n(307731),
     nt = n(818625);
@@ -1880,7 +1880,7 @@ let nn = 498 + t7.as.MEDIUM,
                         e.preventDefault(),
                         (0, F.v8)());
                     let n = (0, c.BF)(e)?.activeElement;
-                    (null == n || "BODY" === n.tagName) && t9._.dispatchToLastSubscribed(ef.jej.TEXTAREA_FOCUS);
+                    (null == n || "BODY" === n.tagName) && t4._.dispatchToLastSubscribed(ef.jej.TEXTAREA_FOCUS);
                 },
                 [W, er, ei, el],
             ),
@@ -1895,12 +1895,12 @@ let nn = 498 + t7.as.MEDIUM,
                 X.addEventListener("mousedown", em),
                 X.addEventListener("contextmenu", em),
                 Y.subscribe(ef.jej.POPOUT_CLOSE, ex),
-                t9._.subscribe(ef.jej.CLOSE_GIF_PICKER, e),
+                t4._.subscribe(ef.jej.CLOSE_GIF_PICKER, e),
                 () => {
                     (X.removeEventListener("mousedown", em),
                         X.removeEventListener("contextmenu", em),
                         Y.unsubscribe(ef.jej.POPOUT_CLOSE, ex),
-                        t9._.unsubscribe(ef.jej.CLOSE_GIF_PICKER, e));
+                        t4._.unsubscribe(ef.jej.CLOSE_GIF_PICKER, e));
                 }
             );
         }, [Q, ex, em, X, Y]),
@@ -1912,7 +1912,7 @@ let nn = 498 + t7.as.MEDIUM,
         }, [Q]),
             i.useEffect(
                 () => () => {
-                    eE && ey(t4.i.TAKE_ACTION);
+                    eE && ey(t9.i.TAKE_ACTION);
                 },
                 [eE, ey],
             ),

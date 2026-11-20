@@ -1,4 +1,4 @@
-let l = (0, n(945810).mj)({
+let i = (0, n(945810).mj)({
     name: "2026-10-conjure-mcp-ui",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -9,7 +9,7 @@ n.d(
     {},
     {
         f: function (t) {
-            return l.useConfig({ location: t }).enabled;
+            return i.useConfig({ location: t }).enabled;
         },
     },
 );

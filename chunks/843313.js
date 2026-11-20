@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     Mf: "tab_grK-Uf",
     Gf: "sectionTitle_grK-Uf",
     nf: "link_grK-Uf",

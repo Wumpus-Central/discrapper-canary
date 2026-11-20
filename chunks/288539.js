@@ -33,28 +33,28 @@ r.d(
                     channelId: c,
                     parsedUserId: T,
                     content: v,
-                    inlinePreview: m = !1,
-                    viewingChannelId: R,
+                    inlinePreview: L = !1,
+                    viewingChannelId: m,
                 } = e,
-                L = o.useRef(null),
+                R = o.useRef(null),
                 { analyticsLocations: I } = (0, u.Ay)(i.A.USER_MENTION),
                 k = (0, a.bG)([f.default], () => f.default.getUser(r)),
                 _ = (0, a.bG)([y.A], () => y.A.getChannel(c)),
                 U = null != _ ? _.getGuildId() : null,
-                C = (0, A.A)({ userId: r, channelId: c, viewingChannelId: R }),
-                b = m ? void 0 : C,
+                C = (0, A.A)({ userId: r, channelId: c, viewingChannelId: m }),
+                b = L ? void 0 : C,
                 M = E.Ay.useName(k),
                 x = (0, a.bG)([y.A, h.Ay, p.A], () => g.Ay.getNickname(U, c, k));
             if (null == k) return (0, t.jsx)(S, { userId: T, className: n, children: v });
             function N(e) {
-                return (0, t.jsx)(s.A, { ref: L, className: n, onContextMenu: b, ...e, children: `@${x ?? M}` });
+                return (0, t.jsx)(s.A, { ref: R, className: n, onContextMenu: b, ...e, children: `@${x ?? M}` });
             }
-            return m
+            return L
                 ? (0, t.jsx)(u.f5, { value: I, children: N() })
                 : (0, t.jsx)(u.f5, {
                       value: I,
                       children: (0, t.jsx)(d.A, {
-                          targetElementRef: L,
+                          targetElementRef: R,
                           user: k,
                           guildId: U ?? void 0,
                           channelId: c,

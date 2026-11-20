@@ -10,8 +10,8 @@ var a = l(430392),
     c = l(950305),
     f = l(152367),
     m = l(664121),
-    p = l(625903),
-    g = l(331322),
+    g = l(625903),
+    p = l(331322),
     v = l(834730),
     h = l(191850),
     x = l(792996),
@@ -27,7 +27,7 @@ let y = {
     only_you: c.UserIcon,
     location: f.MagicWandIcon,
     server: m.ServerIcon,
-    settings: p.SettingsIcon,
+    settings: g.SettingsIcon,
 };
 l.d(
     t,
@@ -35,7 +35,7 @@ l.d(
     {
         A: function (e) {
             let { rows: t } = e;
-            return (0, n.jsxs)(g.B, {
+            return (0, n.jsxs)(p.B, {
                 gap: 8,
                 children: [
                     (0, n.jsx)(v.E, {

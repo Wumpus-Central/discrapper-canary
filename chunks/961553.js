@@ -1,35 +1,35 @@
-var l = e(582128),
-    r = e(233470),
-    i = e(535466);
-e.d(
+var e = l(582128),
+    r = l(233470),
+    u = l(535466);
+l.d(
     n,
     {},
     {
         A: function (t) {
-            let n = (0, i.Ay)(t);
-            l.useEffect(() => {
+            let n = (0, u.Ay)(t);
+            e.useEffect(() => {
                 (0, r._b)(t).catch(() => {});
             }, [t]);
-            let [e, u] = l.useState(null),
-                [a, c] = l.useState(null),
-                d = a ?? n.description,
-                s = d.trim(),
-                o = s !== n.description.trim() ? s : null,
-                f = l.useMemo(
-                    () => ({ ...(null != e ? { icon: e } : {}), ...(null != o ? { description: o } : {}) }),
-                    [e, o],
+            let [l, a] = e.useState(null),
+                [i, s] = e.useState(null),
+                c = i ?? n.description,
+                o = c.trim(),
+                d = o !== n.description.trim() ? o : null,
+                f = e.useMemo(
+                    () => ({ ...(null != l ? { icon: l } : {}), ...(null != d ? { description: d } : {}) }),
+                    [l, d],
                 ),
-                p = l.useCallback(() => {
-                    (u(null), c(null));
+                g = e.useCallback(() => {
+                    (a(null), s(null));
                 }, []);
             return {
-                iconURL: e ?? n.iconURL,
-                setIcon: u,
-                description: d,
-                setDescription: c,
+                iconURL: l ?? n.iconURL,
+                setIcon: a,
+                description: c,
+                setDescription: s,
                 changes: f,
-                changed: null != e || null != o,
-                commit: p,
+                changed: null != l || null != d,
+                commit: g,
             };
         },
     },
