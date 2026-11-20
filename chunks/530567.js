@@ -68,35 +68,33 @@ t.d(
     {},
     {
         Dq: function (i, e, t) {
-            let o,
-                r,
-                l,
-                a = Math.max(24, n.E[i.iconSize] ?? 0),
-                x = i.controlsGapPx,
-                P = a + (e.showSkipButtons ? 2 * (x + a) : 0),
-                u = e.showInlineVolumeSlider
+            let o = Math.max(24, n.E[i.iconSize] ?? 0),
+                r = i.controlsGapPx,
+                l = o + (e.showSkipButtons ? 2 * (r + o) : 0),
+                a = e.showInlineVolumeSlider
                     ? i.volumeSliderMarginStartPx +
                       2 * i.volumeSliderPaddingInlinePx +
                       i.volumeSliderWidthPx +
                       i.volumeGroupMarginEndPx
                     : 0,
-                m = d[i.timeTextVariant.split("/")[0].replace("body-", "")] ?? 14,
-                g =
-                    x +
+                x = d[i.timeTextVariant.split("/")[0].replace("body-", "")] ?? 14,
+                P =
+                    r +
+                    o +
                     a +
-                    u +
                     i.midGroupGapPx +
                     i.durationMarginPx +
-                    ((r = Math.floor((o = Math.floor(Math.max(0, t))) / 3600)),
-                    (l = Math.floor((o % 3600) / 60)),
-                    (0.389 +
-                        2 * (0.562 * (r > 0 ? String(r).length + 4 : String(l).length + 2) + (r > 0 ? 2 : 1) * 0.278) +
-                        0.333) *
-                        m +
-                        8) +
+                    (function (i, e) {
+                        let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                            o = Math.floor(Math.max(0, i)),
+                            n = Math.floor(o / 3600),
+                            r = Math.floor((o % 3600) / 60),
+                            l = 0.562 * (n > 0 ? String(n).length + 4 : String(r).length + 2) + (n > 0 ? 2 : 1) * 0.278;
+                        return t ? (0.389 + l) * e : (0.389 + 2 * l + 0.333) * e + 8;
+                    })(t, x, !0 === e.compactTime) +
                     8,
-                h = e.trailingButtonCount + +!!e.showPlaybackSpeedBtn + +!!e.showFullScreenBtn;
-            return Math.ceil(2 * i.footerHorizontalPaddingPx + P + g + (h > 0 ? h * a + (h - 1) * x : 0));
+                u = e.trailingButtonCount + +!!e.showPlaybackSpeedBtn + +!!e.showFullScreenBtn;
+            return Math.ceil(2 * i.footerHorizontalPaddingPx + l + P + (u > 0 ? u * o + (u - 1) * r : 0));
         },
         Kj: x,
         X4: l,

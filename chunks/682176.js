@@ -33,10 +33,10 @@ let f = (0, p.qT)({
             i.e(56021),
             i.e(791154),
             i.e(133179),
-            i.e(555793),
+            i.e(384498),
             i.e(271244),
-        ]).then(i.bind(i, 955368)),
-    webpackId: 955368,
+        ]).then(i.bind(i, 973513)),
+    webpackId: 973513,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, n.jsx)("div", { className: y.Lq }),
 });
