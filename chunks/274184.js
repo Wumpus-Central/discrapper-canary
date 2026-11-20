@@ -161,7 +161,7 @@ let U = new M(d.h, {
     PUSH_NOTIFICATION_CLICK: function () {},
     DISPLAYED_INVITE_SHOW: function () {},
     LOGOUT: function () {
-        m.hiddenSurveys = {};
+        ((m.hiddenSurveys = {}), (T = null));
     },
     SURVEY_SEEN: function () {
         m.lastSeen = Date.now();

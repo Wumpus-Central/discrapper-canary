@@ -267,7 +267,7 @@ var i = {
     "./ArrowSmallUpIcon.web.tsx": ["872351", [652212]],
     "./ChannelListRetryIcon.web.tsx": ["147177", [701714]],
     "./ChevronLargeDownIcon.web.tsx": ["715482", []],
-    "./ClipboardCheckIcon.web.tsx": ["662546", [739599]],
+    "./ClipboardCheckIcon.web.tsx": ["662546", []],
     "./ReactionMinusIcon.web.tsx": ["997571", [168768]],
     "./CandyIcon.web.tsx": ["662483", [165456]],
     "./PhoneHangUpIcon.web.tsx": ["960027", [658216]],

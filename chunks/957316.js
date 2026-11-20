@@ -7,7 +7,7 @@ i.d(
     {
         M: function (e) {
             (0, t.mM)(async () => {
-                let { default: a } = await Promise.all([i.e(231541), i.e(940258), i.e(710727), i.e(245535)]).then(
+                let { default: a } = await Promise.all([i.e(3942), i.e(940258), i.e(710727), i.e(245535)]).then(
                     i.bind(i, 935074),
                 );
                 return (i) => (0, s.jsx)(a, { ...i, guildId: e });
