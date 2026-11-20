@@ -6,9 +6,10 @@ var n = l(582128),
     u = l(16619),
     o = l(313537),
     d = l(680032),
-    c = l(191850),
-    f = l(792996);
-function m(e) {
+    c = l(894076),
+    f = l(191850),
+    m = l(792996);
+function g(e) {
     let t = (0, u.z9)("ConjureProjectServerChange"),
         l = (0, a.bG)([i.Ay], () => (0, o.fL)(i.Ay.getProject(e)), [e]);
     return n.useMemo(() => t.filter((e) => e.id !== l), [t, l]);
@@ -19,61 +20,62 @@ l.d(
     {
         A: function (e) {
             let t = (0, a.bG)([i.Ay], () => i.Ay.getProject(e), [e]),
-                l = m(e),
+                l = g(e),
                 [u] = n.useState(() => t?.install_scope === "guild"),
                 [o] = n.useState(l);
             n.useEffect(() => {
                 u && (0, r.GO)(e);
             }, [u, e]);
             let p = (0, s.Bs)(u ? e : null),
-                [g, v] = n.useState(null),
-                h = null == g ? p : g.target,
-                [x, b] = n.useState(null),
-                y = o.find((e) => e.id === x) ?? o[0] ?? null,
-                [j, k] = n.useState(!1),
-                [A, S] = n.useState(null),
-                w = t?.name ?? "",
-                C = n.useMemo(
-                    () => (null == t || null == y ? [] : u ? (0, d.by)(t, h, y.name) : (0, d.dv)(t, y.name)),
-                    [t, y, u, h],
+                [v, h] = n.useState(null),
+                x = null == v ? p : v.target,
+                [b, y] = n.useState(null),
+                j = o.find((e) => e.id === b) ?? o[0] ?? null,
+                [A, k] = n.useState(!1),
+                [w, S] = n.useState(null),
+                C = t?.name ?? "",
+                E = n.useMemo(
+                    () => (null == t || null == j ? [] : u ? (0, d.by)(t, x, j.name) : (0, d.dv)(t, j.name)),
+                    [t, j, u, x],
                 ),
                 P = n.useCallback((e) => {
-                    (b(e), S(null));
+                    (y(e), S(null));
                 }, []),
-                E = n.useCallback(async () => {
-                    if (null == y) return null;
-                    (k(!0), S(null), v({ target: p }));
+                _ = n.useCallback(async () => {
+                    if (null == j) return null;
+                    (k(!0), S(null), h({ target: p }));
                     try {
-                        await (0, r.xo)(e, y.id);
+                        await (0, r.xo)(e, j.id);
                     } catch (t) {
                         let e = t?.body?.message;
                         return (
-                            S("string" == typeof e ? e : f.intl.string(u ? c.default.mdrXGt : c.default.qDjkvv)),
-                            v(null),
+                            S("string" == typeof e ? e : m.intl.string(u ? f.default.mdrXGt : f.default.qDjkvv)),
+                            h(null),
                             k(!1),
                             null
                         );
                     }
                     return (
                         k(!1),
-                        f.intl.formatToPlainString(u ? c.default["B+Xtjy"] : c.default.yHhjsi, {
-                            app: w,
-                            server: y.name,
+                        null == t || u || (0, c.A)(t, "added"),
+                        m.intl.formatToPlainString(u ? f.default["B+Xtjy"] : f.default.yHhjsi, {
+                            app: C,
+                            server: j.name,
                         })
                     );
-                }, [w, y, p, u, e]);
+                }, [C, j, p, u, t, e]);
             return {
-                appName: w,
+                appName: C,
                 moving: u,
                 guilds: o,
-                guild: y,
+                guild: j,
                 pickGuild: P,
-                rows: C,
-                pending: j,
-                error: A,
-                submit: E,
+                rows: E,
+                pending: A,
+                error: w,
+                submit: _,
             };
         },
-        Y: m,
+        Y: g,
     },
 );
