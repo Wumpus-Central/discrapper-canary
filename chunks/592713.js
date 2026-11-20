@@ -11,7 +11,6 @@ function d(e, t) {
     let o = {
         ...n,
         guildId: e,
-        nick: n.nick ?? r.username,
         avatar: n.avatar ?? void 0,
         avatarDecoration: null != n.avatarDecoration ? { ...n.avatarDecoration } : void 0,
         premiumSince: n.premiumSince ?? void 0,
