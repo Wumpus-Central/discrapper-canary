@@ -2604,7 +2604,7 @@ let n = async function () {
                 destructorFunction: null,
             });
         },
-        o: (e, r, t, n, o, a, s, i, l, u, d, c, h) => {
+        p: (e, r, t, n, o, a, s, i, l, u, d, c, h) => {
             ((d = ev(d)), (a = eZ(o, a)), (i &&= eZ(s, i)), (u &&= eZ(l, u)), (h = eZ(c, h)));
             var f,
                 p,
@@ -2637,7 +2637,7 @@ let n = async function () {
                     return ((ex[e] = { pointerType: p, constPointerType: v }), eK(m, s), [f, p, v]);
                 }));
         },
-        r: (e, r, t, n, o, a) => {
+        s: (e, r, t, n, o, a) => {
             var s = e2(r, t);
             ((o = eZ(n, o)),
                 e1([], [e], (e) => {
@@ -2757,7 +2757,7 @@ let n = async function () {
                         delete n[r].argCount);
             }
         },
-        i: (e, r, t) => {
+        j: (e, r, t) => {
             var n = ra(e, "enum");
             switch (((r = ev(r)), n.valueType)) {
                 case "object":
@@ -2918,7 +2918,7 @@ let n = async function () {
                     },
                 }));
         },
-        m: (e, r) => {
+        n: (e, r) => {
             rn(e);
         },
         aa: (e, r) => {
@@ -2970,19 +2970,19 @@ ${n}
             );
         },
         b: re,
-        n: (e) => (e ? ((e = rv(e)), rr.toHandle(globalThis[e])) : rr.toHandle(globalThis)),
-        l: (e, r) => ((e = rr.toValue(e)), (r = rr.toValue(r)), rr.toHandle(e[r])),
+        o: (e) => (e ? ((e = rv(e)), rr.toHandle(globalThis[e])) : rr.toHandle(globalThis)),
+        m: (e, r) => ((e = rr.toValue(e)), (r = rr.toValue(r)), rr.toHandle(e[r])),
         d: (e) => {
             e > 9 && (e7[e + 1] += 1);
         },
         F: (e, r) => (e = rr.toValue(e)) instanceof (r = rr.toValue(r)),
         g: (e, r, t, n, o) => rf[e](r, t, n, o),
-        j: (e) => rr.toHandle(rv(e)),
-        s: () => rr.toHandle({}),
+        i: (e) => rr.toHandle(rv(e)),
+        q: () => rr.toHandle({}),
         f: (e) => {
             (e4(rr.toValue(e)), re(e));
         },
-        p: (e, r, t) => {
+        l: (e, r, t) => {
             ((e = rr.toValue(e)), (r = rr.toValue(r)), (t = rr.toValue(t)), (e[r] = t));
         },
         G: (e) => {
@@ -3076,7 +3076,7 @@ ${n}
             for (var o of t) n += Z(o) + 1;
             return ((u[r >> 2] = n), 0);
         },
-        q: function (e) {
+        r: function (e) {
             try {
                 var r = ep.getStreamFromFD(e);
                 return (eh.close(r), 0);

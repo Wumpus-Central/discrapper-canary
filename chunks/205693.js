@@ -17,7 +17,7 @@ var i,
 function _(e) {
     switch (e) {
         case o.Ku.NATIVE:
-            return n(31595).A;
+            return n(322947).A;
         case o.Ku.WEBRTC:
             return n(510098).A;
         case o.Ku.DUMMY:
