@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => eT }), n(321073));
+(n.d(t, { Ay: () => eS }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(478676),
@@ -665,15 +665,16 @@ let eo = {
         "soundboard",
     ]),
     eh = r().omit(ed, ["codeBlock", "blockQuote", "br"]),
-    eI = r().omit(ed, ["codeBlock", "br", "inlineCode"]);
-function ep(e, t) {
+    eI = r().omit(ed, ["codeBlock", "br", "inlineCode"]),
+    ep = r().pick(ed, ["escape", "emoticon", "text", "strong", "em", "u", "s", "inlineCode", "timestamp"]);
+function em(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
-function em(e, t, n) {
+function eg(e, t, n) {
     let i = t + n;
     return i === e.length || "" === e.charAt(i).trim();
 }
-let eg = (0, Z.A)([
+let eT = (0, Z.A)([
         {
             highlightWord: {
                 order: -1,
@@ -686,11 +687,11 @@ let eg = (0, Z.A)([
                         return null;
                     let n = e.indexOf(t.highlightWord);
                     if (-1 === n) return null;
-                    let i = !ep(e, n) || !em(e, n, t.highlightWord.length);
+                    let i = !em(e, n) || !eg(e, n, t.highlightWord.length);
                     if (i)
                         do
                             ((n = e.indexOf(t.highlightWord, n + 1)),
-                                (i = !ep(e, n) || !em(e, n, t.highlightWord.length)));
+                                (i = !em(e, n) || !eg(e, n, t.highlightWord.length)));
                         while (i && -1 !== n);
                     if (-1 === n) return null;
                     let r = e.substring(0, n),
@@ -708,7 +709,7 @@ let eg = (0, Z.A)([
         },
         r().omit(ed, ["url"]),
     ]),
-    eT = {
+    eS = {
         RULES: ed,
         CHANNEL_TOPIC_RULES: ec,
         VOICE_CHANNEL_STATUS_RULES: eu,
@@ -717,6 +718,7 @@ let eg = (0, Z.A)([
         GUILD_VERIFICATION_FORM_RULES: eA,
         GUILD_EVENT_RULES: eh,
         PROFILE_BIO_RULES: ef,
-        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eg,
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eT,
         NATIVE_SEARCH_RESULT_LINK_RULES: eI,
+        POLL_RULES: ep,
     };
