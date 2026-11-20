@@ -241,6 +241,9 @@ n.d(
                     previewAppChannels: Array.isArray(e.preview_app_channels)
                         ? e.preview_app_channels.filter((e) => "string" == typeof e)
                         : [],
+                    newAppChannels: Array.isArray(e.new_app_channels)
+                        ? e.new_app_channels.filter((e) => "string" == typeof e)
+                        : [],
                     previewDevicePermissions: Array.isArray(e.preview_device_permissions)
                         ? e.preview_device_permissions.filter(o.de)
                         : [],

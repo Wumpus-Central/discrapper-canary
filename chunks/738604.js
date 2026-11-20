@@ -1,4 +1,4 @@
-l.d(n, { bI: () => R, Ay: () => $, qF: () => x, KL: () => L, vL: () => B, FZ: () => Z, T3: () => q });
+l.d(n, { bI: () => R, t8: () => k, Ay: () => $, qF: () => x, KL: () => L, vL: () => B, FZ: () => Z, T3: () => q });
 var e = l(582128),
     i = l(855986),
     u = l(73153),
@@ -89,7 +89,7 @@ let j = {
     activating: v.default.ff1Fq1,
 };
 var D = l(652215);
-let R = 221552 == l.j ? e.createContext(null) : null;
+let R = e.createContext(null);
 function L(t, n) {
     return "guild" === t.install_scope ? (t.guild_id ?? n) : null;
 }

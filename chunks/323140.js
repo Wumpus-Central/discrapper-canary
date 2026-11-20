@@ -2,7 +2,7 @@ t.exports = {
     nj: "screen_gxtY1y",
     JX: "chatBody_gxtY1y",
     FO: "projectHeaderIconActions_gxtY1y",
-    w7: "syncShareGroup_gxtY1y",
+    Cl: "publishShareGroup_gxtY1y",
     YJ: "projectHeaderDivider_gxtY1y",
     As: "publishAction_gxtY1y",
     Hv: "publishingSpinner_gxtY1y",

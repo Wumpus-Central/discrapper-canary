@@ -11,7 +11,7 @@ var t = o(477900),
     a = o(174865),
     A = o(822588),
     h = o(738604),
-    C = o(50181),
+    C = o(585412),
     j = o(719593),
     f = o(95264),
     v = o(465080);
@@ -28,7 +28,7 @@ o.d(
                 k && (0, u.ensureConnection)(n);
             }, [k, n]);
             let P = (0, r.f)("ConjureServerProjectContextMenu"),
-                { publishOptions: g, publish: w, label: D } = (0, j.A)(n, o, !m),
+                { publishOptions: g, publish: w, text: D } = (0, j.A)(n, o, !m),
                 E = (0, C.A)(n, w, g);
             return null == _
                 ? null

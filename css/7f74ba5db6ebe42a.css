@@ -29,14 +29,14 @@
 }
 
 .projectHeaderIconActions_gxtY1y,
-.syncShareGroup_gxtY1y {
+.publishShareGroup_gxtY1y {
     align-items: center;
     display: flex;
     gap: var(--space-xs)
 }
 
-.syncShareGroup_gxtY1y {
-    margin-inline-end: var(--space-4);
+.publishShareGroup_gxtY1y {
+    margin-inline-start: var(--space-4);
     min-width: 0
 }
 
@@ -89,4 +89,4 @@ svg.selectModeIcon_gxtY1y {
     text-align: center
 }
 
-/*# sourceMappingURL=ac3acba8dcbf3231.css.map*/
+/*# sourceMappingURL=7f74ba5db6ebe42a.css.map*/
