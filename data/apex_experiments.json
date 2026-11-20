@@ -5954,28 +5954,56 @@
           "new": false,
           "countdown": true
         }
+      }
+    }
+  },
+  {
+    "name": "2026-11-quest-home-tile-single-elements-pt-2",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
       },
-      "6": {
+      "1": {
+        "newLayoutWithSearch": true
+      },
+      "2": {
         "newLayoutWithSearch": true,
         "showGameLogo": false
       },
-      "7": {
+      "3": {
         "newLayoutWithSearch": true,
         "showQuestTitle": false
       },
-      "8": {
+      "4": {
         "newLayoutWithSearch": true,
         "compactReward": true
       },
-      "9": {
+      "5": {
         "newLayoutWithSearch": true,
         "shorterHeight": true
+      }
+    }
+  },
+  {
+    "name": "2026-11-quest-home-tile-single-elements-pt-3",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
       },
-      "10": {
+      "1": {
+        "newLayoutWithSearch": true
+      },
+      "2": {
         "newLayoutWithSearch": true,
         "gameIconReward": true
       },
-      "11": {
+      "3": {
         "newLayoutWithSearch": true,
         "badge": {
           "duration": true,
@@ -5983,7 +6011,7 @@
           "countdown": false
         }
       },
-      "12": {
+      "4": {
         "newLayoutWithSearch": true,
         "underlinedMultiplier": true
       }

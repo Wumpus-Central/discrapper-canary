@@ -8,12 +8,14 @@ n.d(t, {
     B5: () => N,
     d: () => S,
     Mk: () => m,
-    aD: () => C,
+    aD: () => I,
     s9: () => v,
+    UH: () => L,
+    hn: () => R,
     LV: () => g,
     Ds: () => O,
     uK: () => d,
-    lk: () => I,
+    lk: () => C,
 });
 var r,
     u,
@@ -67,7 +69,7 @@ let T = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function I(e) {
+function C(e) {
     let { enabled: t } = _.useConfig({ location: e }),
         n = (0, s.z)();
     return {
@@ -75,7 +77,7 @@ function I(e) {
         multiplier: o.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
-let C = (0, a.mj)({
+let I = (0, a.mj)({
         name: "2026-05-quest-home-tile-redesign",
         kind: "user",
         defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useNewFeaturedTiles: !1, ctaOnHover: !1 },
@@ -167,12 +169,30 @@ let h = (0, a.mj)({
             3: { ...N, newLayoutWithSearch: !0, badge: { duration: !0, new: !1, countdown: !1 } },
             4: { ...N, newLayoutWithSearch: !0, badge: { duration: !1, new: !0, countdown: !1 } },
             5: { ...N, newLayoutWithSearch: !0, badge: { duration: !1, new: !1, countdown: !0 } },
-            6: { ...N, newLayoutWithSearch: !0, showGameLogo: !1 },
-            7: { ...N, newLayoutWithSearch: !0, showQuestTitle: !1 },
-            8: { ...N, newLayoutWithSearch: !0, compactReward: !0 },
-            9: { ...N, newLayoutWithSearch: !0, shorterHeight: !0 },
-            10: { ...N, newLayoutWithSearch: !0, gameIconReward: !0 },
-            11: { ...N, newLayoutWithSearch: !0, badge: { duration: !0, new: !0, countdown: !1 } },
-            12: { ...N, newLayoutWithSearch: !0, underlinedMultiplier: !0 },
+        },
+    }),
+    L = (0, a.mj)({
+        name: "2026-11-quest-home-tile-single-elements-pt-2",
+        kind: "user",
+        defaultConfig: N,
+        variations: {
+            0: N,
+            1: { ...N, newLayoutWithSearch: !0 },
+            2: { ...N, newLayoutWithSearch: !0, showGameLogo: !1 },
+            3: { ...N, newLayoutWithSearch: !0, showQuestTitle: !1 },
+            4: { ...N, newLayoutWithSearch: !0, compactReward: !0 },
+            5: { ...N, newLayoutWithSearch: !0, shorterHeight: !0 },
+        },
+    }),
+    R = (0, a.mj)({
+        name: "2026-11-quest-home-tile-single-elements-pt-3",
+        kind: "user",
+        defaultConfig: N,
+        variations: {
+            0: N,
+            1: { ...N, newLayoutWithSearch: !0 },
+            2: { ...N, newLayoutWithSearch: !0, gameIconReward: !0 },
+            3: { ...N, newLayoutWithSearch: !0, badge: { duration: !0, new: !0, countdown: !1 } },
+            4: { ...N, newLayoutWithSearch: !0, underlinedMultiplier: !0 },
         },
     });
