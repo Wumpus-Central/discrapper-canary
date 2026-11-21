@@ -65,5 +65,8 @@ a.d(
                 ...n.A.getAnalyticsProperties(),
             });
         },
+        p3: function () {
+            r.default.track(s.HAw.CHECKPOINT_2026_CHARACTER_SAVE_CLICKED);
+        },
     },
 );
