@@ -797,7 +797,7 @@ function eW(e) {
                             n.e(16954),
                             n.e(501962),
                             n.e(17736),
-                            n.e(565621),
+                            n.e(350681),
                             n.e(280559),
                             n.e(156132),
                             n.e(974049),
@@ -947,7 +947,7 @@ function e2(e) {
         { extraChromeEnabled: n } = ez.A.useConfig({ location: "browse_games_popout" });
     return (0, l.jsx)(eB.X2, { maxVisibleItems: 7, renderListItem: n ? t : void 0 });
 }
-function e9(e) {
+function e8(e) {
     let { widgetType: t, widget: n, onAddGame: i, children: a, ...s } = e,
         r = d.useMemo(() => new Set(n.games.map((e) => e.gameId)), [n.games]),
         { trackUserProfileEditAction: o } = (0, v.NJ)(),
@@ -1086,10 +1086,10 @@ function e9(e) {
         children: (e) => a(e),
     });
 }
-function e8(e) {
+function e9(e) {
     let { disabled: t, ...n } = e,
         i = d.useRef(null);
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e8, {
         targetElementRef: i,
         position: "bottom",
         align: "center",
@@ -1113,7 +1113,7 @@ function e8(e) {
 }
 function e6(e) {
     let t = d.useRef(null);
-    return (0, l.jsx)(e9, {
+    return (0, l.jsx)(e8, {
         targetElementRef: t,
         position: "right",
         align: "top",
@@ -1557,7 +1557,7 @@ function tP(e) {
             u && !h
                 ? [
                       (0, l.jsx)(
-                          e8,
+                          e9,
                           { disabled: f, widgetType: t.type, widget: t, onAddGame: () => r(!0) },
                           `${t.type}-browse-games-popout`,
                       ),

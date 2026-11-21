@@ -419,9 +419,9 @@ var e3 = l(549685),
     e9 = l(403362),
     e6 = l(53677),
     e4 = l(609174),
-    e8 = l(151184),
+    e7 = l(151184),
     e5 = l(82716),
-    e7 = l(449397),
+    e8 = l(449397),
     te = l(399053),
     tt = l(285072),
     tl = l(284009),
@@ -780,7 +780,7 @@ function tj(e) {
                                         size: "sm",
                                     }),
                                 }),
-                                (0, n.jsx)(e8.k, { onBeforeDelete: c }),
+                                (0, n.jsx)(e7.k, { onBeforeDelete: c }),
                             ],
                         }),
                 ],
@@ -918,7 +918,7 @@ function ty(e) {
                                         }),
                                         (0, n.jsx)("div", {
                                             className: th.lO,
-                                            children: (0, n.jsx)(e7.e, { variant: "primary" }),
+                                            children: (0, n.jsx)(e8.e, { variant: "primary" }),
                                         }),
                                     ],
                                 }),
@@ -1655,9 +1655,9 @@ function t6(e) {
     });
 }
 var t4 = l(91871),
-    t8 = l.n(t4),
+    t7 = l.n(t4),
     t5 = l(190199),
-    t7 = l(914427),
+    t8 = l(914427),
     le = l(724141);
 function lt(e) {
     let {
@@ -1674,7 +1674,7 @@ function lt(e) {
         m = a.useCallback(
             (e) => {
                 let t;
-                return ("" === (t = e.trim().toLowerCase()) ? l : l.filter((e) => t8()(t, e.label.toLowerCase()))).map(
+                return ("" === (t = e.trim().toLowerCase()) ? l : l.filter((e) => t7()(t, e.label.toLowerCase()))).map(
                     (e) =>
                         (0, n.jsxs)(
                             t5.x4,
@@ -1699,7 +1699,7 @@ function lt(e) {
         targetElementRef: d,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, n.jsx)(t7.p, {
+            return (0, n.jsx)(t8.p, {
                 "aria-label": t,
                 placeholder: o,
                 value: u,
@@ -2286,14 +2286,14 @@ var lp = l(65154),
     lj = l(331322),
     ly = l(509434),
     lv = l(106983),
-    lC = l(14868),
+    lC = l(257920),
     lb = l(171251),
     lN = l(876474),
     lA = l(801344),
     lE = l(190443),
     lk = l(979563),
     lI = l(865278),
-    lS = l(148289);
+    lS = l(763180);
 function lL() {
     (0, lC.z)("ClipsHomeEducation");
 }
@@ -2975,9 +2975,9 @@ function l6(e) {
             : (0, n.jsx)(eO, { isEmptyBecauseQuery: l > 0 });
 }
 var l4 = l(837381),
-    l8 = l(741918),
+    l7 = l(741918),
     l5 = l(812993),
-    l7 = l(332837),
+    l8 = l(332837),
     ne = l(95362),
     nt = l(625903),
     nl = l(260762),
@@ -3048,7 +3048,7 @@ function ni(e) {
     let { ref: _, onKeyDown: M, ...D } = (0, l4.LT)(L),
         T = a.useCallback(
             (e) => {
-                j.current = e.key === l8.D$.ENTER || e.key === l8.D$.SPACE;
+                j.current = e.key === l7.D$.ENTER || e.key === l7.D$.SPACE;
                 try {
                     M(e);
                 } finally {
@@ -3071,7 +3071,7 @@ function ni(e) {
                     children: [
                         (0, n.jsx)(na, {
                             itemId: ea.oH.HOME,
-                            icon: (0, n.jsx)(l7.HomeIcon, { size: "sm", color: "currentColor" }),
+                            icon: (0, n.jsx)(l8.HomeIcon, { size: "sm", color: "currentColor" }),
                             label: B.intl.string($.default.iVqj8B),
                             isSelected: p(ea.oH.HOME),
                             onClick: () => v(ea.oH.HOME),
@@ -3424,7 +3424,7 @@ function no(e) {
                 { stackingBehavior: "stack" },
             );
         }, [ef, Q, e9]),
-        e8 = a.useCallback(async () => {
+        e7 = a.useCallback(async () => {
             let e = ef.filter((e) => Q.has(e.id));
             await ep({ clips: e, onShared: e9 });
         }, [ef, Q, ep, e9]),
@@ -3434,7 +3434,7 @@ function no(e) {
             },
             [ep, e9],
         ),
-        e7 = a.useCallback(() => {
+        e8 = a.useCallback(() => {
             let e = e_.P.getState();
             (e.setGameFacet(null),
                 e.setClippedWithFacet(null),
@@ -3587,7 +3587,7 @@ function no(e) {
                                                                           position: "bottom",
                                                                           text: B.intl.string(B.t["5h0QOP"]),
                                                                           children: (0, n.jsx)(j.K, {
-                                                                              onClick: e7,
+                                                                              onClick: e8,
                                                                               icon: y.MagnifyingGlassIcon,
                                                                               size: "sm",
                                                                               variant: "icon-only",
@@ -3653,7 +3653,7 @@ function no(e) {
                                                       onClear: e9,
                                                       onFavorite: tt,
                                                       onDelete: e4,
-                                                      onShare: e8,
+                                                      onShare: e7,
                                                       isSharing: ej,
                                                       actionsDisabled: ey,
                                                   }),

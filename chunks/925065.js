@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 678969, Version Hash: e94f689c142122d41b63f051f335303b0f43a983`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 678973, Version Hash: d1b20042e863b6f597a84fbc2be94232472d4937`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678969";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "678973";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -2250,7 +2250,7 @@ let rn = (0, re.qT)({
             n.e(690901),
             n.e(10622),
             n.e(569468),
-            n.e(565621),
+            n.e(350681),
             n.e(501888),
             n.e(507127),
             n.e(384820),
@@ -4887,7 +4887,7 @@ let ss = (0, re.Fe)({
                 n.e(576415),
                 n.e(983947),
                 n.e(944727),
-                n.e(565621),
+                n.e(350681),
                 n.e(774542),
                 n.e(705871),
                 n.e(527462),
@@ -16096,7 +16096,7 @@ let pD = "isHideDevBanner",
                     className: td()(py.Wz, py.mr),
                     children: [
                         (0, v.jsx)(pL, { className: py.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678969" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "678973" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -46900,8 +46900,8 @@ let Gh = (0, tW.Fe)({
             n.e(576415),
             n.e(983947),
             n.e(944727),
+            n.e(350681),
             n.e(88321),
-            n.e(565621),
             n.e(774542),
             n.e(911802),
             n.e(499118),
