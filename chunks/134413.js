@@ -61,11 +61,11 @@ n.d(
         lN: function (e) {
             let t,
                 n,
-                i,
                 a,
                 d,
                 u,
-                A =
+                A,
+                h =
                     ((t = f(e)),
                     (n = (0, r.bG)(
                         [s.A, o.default],
@@ -86,36 +86,36 @@ n.d(
                     )),
                     t && n),
                 {
-                    canAccessBulkRole: h,
-                    canAccessBulkKick: I,
-                    canAccessBulkTimeout: p,
-                } = ((i = c.A.useConfig({ guildId: e, location: "Members page bulk actions" }).enabled),
-                (a = f(e)),
-                (d = (0, r.cf)(
+                    canAccessBulkRole: I,
+                    canAccessBulkKick: p,
+                    canAccessBulkTimeout: m,
+                } = ((a = c.A.useConfig({ guildId: e, location: "Members page bulk actions" }).enabled),
+                (d = f(e)),
+                (u = (0, r.cf)(
                     [s.A, l.A, o.default],
                     () => {
                         let t = E(e, [s.A, o.default])?.guild;
                         return {
                             role: l.A.can(_.xBc.MANAGE_ROLES, t),
-                            kick: l.A.can(_.xBc.KICK_MEMBERS, t),
-                            timeout: l.A.can(_.xBc.MODERATE_MEMBERS, t),
+                            kick: l.A.can(i.kg(_.xBc.MANAGE_GUILD, _.xBc.KICK_MEMBERS), t),
+                            timeout: l.A.can(i.kg(_.xBc.MANAGE_GUILD, _.xBc.MODERATE_MEMBERS), t),
                         };
                     },
                     [e],
                 )),
                 {
-                    canAccessBulkRole: (u = i && a) && d.role,
-                    canAccessBulkKick: u && d.kick,
-                    canAccessBulkTimeout: u && d.timeout,
+                    canAccessBulkRole: (A = a && d) && u.role,
+                    canAccessBulkKick: A && u.kick,
+                    canAccessBulkTimeout: A && u.timeout,
                 }),
-                m = h || I || p;
+                g = I || p || m;
             return {
-                canAccessBulkActions: A || m,
-                canAccessBulkBan: A,
-                canAccessBulkRole: h,
-                canAccessBulkKick: I,
-                canAccessBulkTimeout: p,
-                canSelectAnyMember: m,
+                canAccessBulkActions: h || g,
+                canAccessBulkBan: h,
+                canAccessBulkRole: I,
+                canAccessBulkKick: p,
+                canAccessBulkTimeout: m,
+                canSelectAnyMember: g,
             };
         },
     },

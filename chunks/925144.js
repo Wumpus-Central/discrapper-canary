@@ -4,56 +4,71 @@ var i = n(477900),
     r = n.n(a),
     o = n(91871),
     s = n.n(o),
-    c = n(855986),
-    d = n(342952),
-    u = n(189213),
-    g = n(545442),
-    h = n(858899),
-    m = n(331322),
-    j = n(683438),
-    p = n(834730),
-    f = n(95362),
-    A = n(150934),
-    x = n(140735),
-    S = n(148149),
-    E = n(775602),
-    y = n(149468),
-    b = n(266891),
-    _ = n(676608),
-    N = n(46653),
-    R = n(696451),
-    C = n(317525),
-    D = n(71393),
+    c = n(136722),
+    d = n(855986),
+    u = n(342952),
+    g = n(189213),
+    A = n(545442),
+    E = n(858899),
+    h = n(331322),
+    m = n(683438),
+    S = n(834730),
+    x = n(95362),
+    p = n(150934),
+    j = n(140735),
+    N = n(148149),
+    _ = n(775602),
+    f = n(149468),
+    M = n(266891),
+    R = n(676608),
+    y = n(46653),
+    B = n(696451),
+    D = n(317525),
+    b = n(71393),
     O = n(576705),
-    L = n(287809),
-    k = n(129230),
-    v = n(403362),
-    T = n(427262),
-    M = n(504049),
-    w = n(543079),
-    I = n(782513),
-    P = n(652215),
-    q = n(778712),
-    z = n(792996),
-    B = n(911888);
-function H(t) {
+    C = n(287809),
+    L = n(129230),
+    T = n(403362),
+    I = n(427262),
+    k = n(504049),
+    G = n(543079),
+    v = n(782513),
+    w = n(652215),
+    P = n(778712),
+    H = n(792996),
+    K = n(911888);
+let q = c.kg(
+    w.xBc.KICK_MEMBERS,
+    w.xBc.BAN_MEMBERS,
+    w.xBc.ADMINISTRATOR,
+    w.xBc.MANAGE_CHANNELS,
+    w.xBc.MANAGE_GUILD,
+    w.xBc.MANAGE_ROLES,
+    w.xBc.MANAGE_MESSAGES,
+    w.xBc.MANAGE_WEBHOOKS,
+    w.xBc.MANAGE_EVENTS,
+    w.xBc.MANAGE_THREADS,
+    w.xBc.MODERATE_MEMBERS,
+    w.xBc.MANAGE_OFFICIAL_MESSAGES,
+);
+function z(t) {
     let { action: e, hasRoles: n, autoFocusSearch: l, searchQuery: a, onSearchChange: r } = t;
-    return (0, i.jsx)(m.B, {
+    return (0, i.jsx)(h.B, {
         direction: "vertical",
         padding: { top: "md" },
         children: n
-            ? (0, i.jsx)(j.I, {
+            ? (0, i.jsx)(m.I, {
                   autoFocus: l,
                   query: a,
                   onChange: r,
                   onClear: () => r(""),
-                  placeholder: z.intl.string(z.t.Sojqsr),
-                  "aria-label": z.intl.string(z.t.Sojqsr),
+                  placeholder: H.intl.string(H.t.Sojqsr),
+                  "aria-label": H.intl.string(H.t.Sojqsr),
               })
-            : (0, i.jsx)(p.E, {
+            : (0, i.jsx)(S.E, {
                   variant: "body-md/normal",
                   color: "text-subtle",
-                  children: z.intl.string(e === M.Nj.ADD_ROLE ? z.t.v65TBm : z.t["2U13qa"]),
+                  children: H.intl.string(e === k.Nj.ADD_ROLE ? H.t.v65TBm : H.t["2U13qa"]),
               }),
     });
 }
@@ -63,126 +78,127 @@ n.d(
     {
         default: function (t) {
             let { guildId: e, userIds: n, transitionState: a, onClose: o } = t,
-                [j, V] = l.useState(M.Nj.ADD_ROLE),
-                [K, U] = l.useState(""),
-                [J, X] = l.useState(!0),
-                [G, Q] = l.useState(() => ({ [M.Nj.ADD_ROLE]: new Set(), [M.Nj.REMOVE_ROLE]: new Set() })),
-                Z = (0, c.cf)(
-                    [R.Ay],
+                [m, U] = l.useState(k.Nj.ADD_ROLE),
+                [V, X] = l.useState(""),
+                [J, F] = l.useState(!0),
+                [Q, W] = l.useState(() => ({ [k.Nj.ADD_ROLE]: new Set(), [k.Nj.REMOVE_ROLE]: new Set() })),
+                Z = (0, d.cf)(
+                    [B.Ay],
                     () => {
                         let t = {};
                         for (let i of n)
-                            R.Ay.getMember(e, i)?.roles.forEach((e) => {
+                            B.Ay.getMember(e, i)?.roles.forEach((e) => {
                                 t[e] = (t[e] ?? 0) + 1;
                             });
                         return t;
                     },
                     [e, n],
                 ),
-                [F, W] = l.useState(null),
-                Y = l.useCallback((t) => F?.openUserList(t.currentTarget), [F]),
-                $ = (0, c.yK)([L.default], () => [...n].map((t) => L.default.getUser(t)).filter(v.Vq), [n]),
-                tt = (0, c.yK)([R.Ay], () => $.slice(0, 3).map((t) => R.Ay.getNick(e, t.id) ?? T.Ay.getName(t)), [
+                [Y, $] = l.useState(null),
+                tt = l.useCallback((t) => Y?.openUserList(t.currentTarget), [Y]),
+                te = (0, d.yK)([C.default], () => [...n].map((t) => C.default.getUser(t)).filter(T.Vq), [n]),
+                tn = (0, d.yK)([B.Ay], () => te.slice(0, 3).map((t) => B.Ay.getNick(e, t.id) ?? I.Ay.getName(t)), [
                     e,
-                    $,
+                    te,
                 ]),
-                te = (0, c.yK)(
-                    [C.A, D.A, O.A],
+                ti = (0, d.yK)(
+                    [D.A, b.A, O.A],
                     () => {
-                        let t = D.A.getGuild(e);
+                        let t = b.A.getGuild(e);
                         if (null == t) return [];
-                        let n = O.A.getHighestRole(t);
-                        return C.A.getSortedRoles(e).filter((e) => (0, b.m)(t, n, e));
+                        let n = O.A.getHighestRole(t),
+                            i = O.A.can(w.xBc.MANAGE_GUILD, t);
+                        return D.A.getSortedRoles(e).filter((e) => (0, M.m)(t, n, e) && (i || !c.X8(e.permissions, q)));
                     },
                     [e],
                 ),
-                tn = (0, c.bG)([E.Ay], () => E.Ay.roleStyle),
-                ti = (0, _.Ay)(e, null),
-                tl = l.useMemo(
+                tl = (0, d.bG)([_.Ay], () => _.Ay.roleStyle),
+                ta = (0, R.Ay)(e, null),
+                tr = l.useMemo(
                     () =>
                         new Map(
-                            te.map((t) => {
+                            ti.map((t) => {
                                 var e;
                                 let n, l;
                                 return [
                                     t.id,
-                                    ((e = "dot" === tn),
-                                    (n = t.colorString ?? P.TpD),
-                                    (l = ti ? t.colorStrings : null),
+                                    ((e = "dot" === tl),
+                                    (n = t.colorString ?? w.TpD),
+                                    (l = ta ? t.colorStrings : null),
                                     function (t) {
                                         let { className: a } = t;
                                         return (0, i.jsx)("span", {
-                                            className: r()(a, B.SI),
+                                            className: r()(a, K.SI),
                                             "aria-hidden": !0,
                                             children: e
-                                                ? (0, i.jsx)(g.W, { color: n, colors: l, background: !1, tooltip: !1 })
-                                                : (0, i.jsx)(g.R, { color: n, colors: l ?? null }),
+                                                ? (0, i.jsx)(A.W, { color: n, colors: l, background: !1, tooltip: !1 })
+                                                : (0, i.jsx)(A.R, { color: n, colors: l ?? null }),
                                         });
                                     }),
                                 ];
                             }),
                         ),
-                    [te, tn, ti],
+                    [ti, tl, ta],
                 ),
-                ta = l.useMemo(() => (j === M.Nj.ADD_ROLE ? te : te.filter((t) => (Z[t.id] ?? 0) > 0)), [j, te, Z]),
-                tr = l.useMemo(
-                    () => ("" === K ? ta : ta.filter((t) => s()(K.toLowerCase(), t.name.toLowerCase()))),
-                    [ta, K],
+                to = l.useMemo(() => (m === k.Nj.ADD_ROLE ? ti : ti.filter((t) => (Z[t.id] ?? 0) > 0)), [m, ti, Z]),
+                ts = l.useMemo(
+                    () => ("" === V ? to : to.filter((t) => s()(V.toLowerCase(), t.name.toLowerCase()))),
+                    [to, V],
                 ),
-                to = l.useMemo(() => ta.filter((t) => G[j].has(t.id)), [ta, G, j]),
-                ts = to.length >= 10;
-            function tc() {
-                return (0, i.jsx)(H, {
-                    action: j,
-                    hasRoles: ta.length > 0,
+                tc = l.useMemo(() => to.filter((t) => Q[m].has(t.id)), [to, Q, m]),
+                td = tc.length >= 10;
+            function tu() {
+                return (0, i.jsx)(z, {
+                    action: m,
+                    hasRoles: to.length > 0,
                     autoFocusSearch: J,
-                    searchQuery: K,
-                    onSearchChange: U,
+                    searchQuery: V,
+                    onSearchChange: X,
                 });
             }
-            let td = null;
+            let tg = null;
             return (
-                ta.length > 0 && 0 === tr.length
-                    ? (td = z.intl.string(z.t["Xe+fJM"]))
-                    : ta.length > 0 &&
-                      (td = (0, i.jsx)(f.Ip, {
-                          className: B.r9,
-                          children: (0, i.jsx)(m.B, {
+                to.length > 0 && 0 === ts.length
+                    ? (tg = H.intl.string(H.t["Xe+fJM"]))
+                    : to.length > 0 &&
+                      (tg = (0, i.jsx)(x.Ip, {
+                          className: K.r9,
+                          children: (0, i.jsx)(h.B, {
                               direction: "vertical",
                               gap: 12,
                               role: "group",
-                              "aria-label": z.intl.string(j === M.Nj.ADD_ROLE ? z.t["/LCz1j"] : z.t.xdpeXG),
-                              children: tr.map((t) =>
+                              "aria-label": H.intl.string(m === k.Nj.ADD_ROLE ? H.t["/LCz1j"] : H.t.xdpeXG),
+                              children: ts.map((t) =>
                                   (0, i.jsx)(
-                                      A.S,
+                                      p.S,
                                       {
                                           label:
-                                              j === M.Nj.REMOVE_ROLE
-                                                  ? z.intl.format(z.t["0Cbkgq"], {
+                                              m === k.Nj.REMOVE_ROLE
+                                                  ? H.intl.format(H.t["0Cbkgq"], {
                                                         roleName: t.name,
                                                         held: Z[t.id] ?? 0,
                                                         total: n.size,
                                                         countHook: (t) =>
-                                                            (0, i.jsx)(p.E, {
+                                                            (0, i.jsx)(S.E, {
                                                                 tag: "span",
                                                                 variant: "body-md/normal",
                                                                 color: "text-subtle",
                                                                 "aria-hidden": !0,
                                                                 children: t,
                                                             }),
-                                                        accessibleCountHook: (t) => (0, i.jsx)(x.A, { children: t }),
+                                                        accessibleCountHook: (t) => (0, i.jsx)(j.A, { children: t }),
                                                     })
                                                   : t.name,
-                                          leadingIcon: tl.get(t.id),
-                                          checked: G[j].has(t.id),
-                                          disabled: ts && !G[j].has(t.id),
+                                          leadingIcon: tr.get(t.id),
+                                          checked: Q[m].has(t.id),
+                                          disabled: td && !Q[m].has(t.id),
                                           onChange: (e) => {
                                               var n;
                                               return (
                                                   (n = t.id),
-                                                  void Q((t) => {
-                                                      let i = new Set(t[j]);
-                                                      return (e ? i.add(n) : i.delete(n), { ...t, [j]: i });
+                                                  void W((t) => {
+                                                      let i = new Set(t[m]);
+                                                      return (e ? i.add(n) : i.delete(n), { ...t, [m]: i });
                                                   })
                                               );
                                           },
@@ -192,108 +208,108 @@ n.d(
                               ),
                           }),
                       })),
-                (0, i.jsx)(u.a, {
+                (0, i.jsx)(g.a, {
                     transitionState: a,
                     onClose: o,
-                    title: z.intl.formatToPlainString(z.t.maeAjm, { count: n.size }),
-                    notice: ts
-                        ? { type: "info", role: "status", message: z.intl.formatToPlainString(z.t.ydcz2f, { max: 10 }) }
+                    title: H.intl.formatToPlainString(H.t.maeAjm, { count: n.size }),
+                    notice: td
+                        ? { type: "info", role: "status", message: H.intl.formatToPlainString(H.t.ydcz2f, { max: 10 }) }
                         : void 0,
-                    input: (0, i.jsxs)(m.B, {
+                    input: (0, i.jsxs)(h.B, {
                         direction: "vertical",
                         gap: 16,
                         children: [
-                            (0, i.jsxs)(m.B, {
+                            (0, i.jsxs)(h.B, {
                                 direction: "horizontal",
                                 gap: 8,
                                 align: "center",
                                 children: [
-                                    (0, i.jsx)(d.A, {
-                                        ref: W,
-                                        users: $,
+                                    (0, i.jsx)(u.A, {
+                                        ref: $,
+                                        users: te,
                                         maxUsers: 3,
                                         guildId: e,
-                                        size: q._3.SIZE_20,
-                                        "aria-label": z.intl.string(z.t.t6QKaP),
+                                        size: P._3.SIZE_20,
+                                        "aria-label": H.intl.string(H.t.t6QKaP),
                                     }),
-                                    (0, i.jsxs)(p.E, {
+                                    (0, i.jsxs)(S.E, {
                                         variant: "body-sm/normal",
                                         color: "text-subtle",
-                                        className: B.IV,
+                                        className: K.IV,
                                         lineClamp: 1,
-                                        title: tt.join(", "),
+                                        title: tn.join(", "),
                                         children: [
-                                            (0, i.jsxs)(x.A, { children: [z.intl.string(z.t.sqCqvs), " "] }),
+                                            (0, i.jsxs)(j.A, { children: [H.intl.string(H.t.sqCqvs), " "] }),
                                             (function (t, e, n) {
                                                 let [i, l, a] = t;
                                                 return e <= 3 && t.length === e
                                                     ? 1 === e
-                                                        ? z.intl.formatToPlainString(z.t["J+Wpst"], { first: i })
+                                                        ? H.intl.formatToPlainString(H.t["J+Wpst"], { first: i })
                                                         : 2 === e
-                                                          ? z.intl.formatToPlainString(z.t.gwRP0Y, {
+                                                          ? H.intl.formatToPlainString(H.t.gwRP0Y, {
                                                                 first: i,
                                                                 second: l,
                                                             })
-                                                          : z.intl.formatToPlainString(z.t.QDB5et, {
+                                                          : H.intl.formatToPlainString(H.t.QDB5et, {
                                                                 first: i,
                                                                 second: l,
                                                                 third: a,
                                                             })
-                                                    : z.intl.format(z.t.Xj4dhN, {
+                                                    : H.intl.format(H.t.Xj4dhN, {
                                                           first: i,
                                                           second: l,
                                                           count: e - 2,
                                                           onOpen: n,
                                                       });
-                                            })(tt, n.size, Y),
+                                            })(tn, n.size, tt),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(S.t, {
-                                "aria-label": z.intl.string(z.t.HLUgs8),
-                                selectedId: j,
+                            (0, i.jsx)(N.t, {
+                                "aria-label": H.intl.string(H.t.HLUgs8),
+                                selectedId: m,
                                 onChange: (t) => {
-                                    (X(!1), V(t));
+                                    (F(!1), U(t));
                                 },
                                 items: [
-                                    { id: M.Nj.ADD_ROLE, label: z.intl.string(z.t.OYkgVk), panel: tc },
-                                    { id: M.Nj.REMOVE_ROLE, label: z.intl.string(z.t.N86XcP), panel: tc },
+                                    { id: k.Nj.ADD_ROLE, label: H.intl.string(H.t.OYkgVk), panel: tu },
+                                    { id: k.Nj.REMOVE_ROLE, label: H.intl.string(H.t.N86XcP), panel: tu },
                                 ],
                             }),
                         ],
                     }),
                     actions: [
-                        { variant: "secondary", text: z.intl.string(z.t["ETE/oC"]), onClick: o },
+                        { variant: "secondary", text: H.intl.string(H.t["ETE/oC"]), onClick: o },
                         {
-                            variant: j === M.Nj.ADD_ROLE ? "primary" : "critical-primary",
-                            text: z.intl.formatToPlainString(j === M.Nj.ADD_ROLE ? z.t["nHzh/X"] : z.t.K3ZhuJ, {
-                                count: to.length,
+                            variant: m === k.Nj.ADD_ROLE ? "primary" : "critical-primary",
+                            text: H.intl.formatToPlainString(m === k.Nj.ADD_ROLE ? H.t["nHzh/X"] : H.t.K3ZhuJ, {
+                                count: tc.length,
                             }),
-                            disabled: 0 === to.length,
+                            disabled: 0 === tc.length,
                             onClick: function () {
                                 let t = [...n];
-                                (k.default.track(P.HAw.BULK_MODERATION_ACTION_STARTED, {
-                                    ...(0, y.H$)(e),
-                                    action_type: j,
+                                (L.default.track(w.HAw.BULK_MODERATION_ACTION_STARTED, {
+                                    ...(0, f.H$)(e),
+                                    action_type: m,
                                     target_user_ids: t,
-                                    mod_user_id: N.default.getId(),
+                                    mod_user_id: y.default.getId(),
                                     location: "MemberSafetyPageActionNotice",
                                 }),
                                     (async function (t, e, n, i) {
-                                        ((0, h.P0)({ text: z.intl.string(z.t["JZ0+/0"]) }),
-                                            await (0, I.cd)((0, w.V)(t, e, n, i), (0, I.J9)()));
+                                        ((0, E.P0)({ text: H.intl.string(H.t["JZ0+/0"]) }),
+                                            await (0, v.cd)((0, G.V)(t, e, n, i), (0, v.J9)()));
                                     })(
                                         e,
-                                        to.map((t) => t.id),
-                                        j,
+                                        tc.map((t) => t.id),
+                                        m,
                                         t,
                                     ),
                                     o());
                             },
                         },
                     ],
-                    children: td,
+                    children: tg,
                 })
             );
         },
