@@ -1,4 +1,4 @@
-var i = n(815622);
+var i = n(520535);
 function r() {
     let e = i.A.getIsExperimentEligible();
     return s() && e;
@@ -23,9 +23,7 @@ n.d(
                     : null;
             },
             useIsEligible: a,
-            getAppSpinnerSources: function () {
-                return s() ? i.A.appSpinnerSources : null;
-            },
+            isHolidayHappening: s,
             getLoadingTips: function () {
                 return s() ? i.A.getLoadingTips?.() : null;
             },
