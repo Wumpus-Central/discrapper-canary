@@ -32,6 +32,13 @@ a.d(
                 ...n.A.getAnalyticsProperties(),
             });
         },
+        TH: function (e) {
+            r.default.track(s.HAw.CHECKPOINT_2026_GIFT_CTA_CLICKED, {
+                other_user_id: e,
+                step_name: n.A.getStepName(),
+                ...n.A.getAnalyticsProperties(),
+            });
+        },
         d3: function (e) {
             r.default.track(s.HAw.CHECKPOINT_2026_MUTE_TOGGLED, {
                 step_name: n.A.getStepName(),
@@ -57,13 +64,6 @@ a.d(
         },
         lw: function (e) {
             r.default.track(s.HAw.CHECKPOINT_2026_STARTED, { source: e, ...n.A.getAnalyticsProperties() });
-        },
-        nr: function (e) {
-            r.default.track(s.HAw.CHECKPOINT_2026_GIFT_CTA_CLICKED, {
-                other_user_id: e,
-                step_name: n.A.getStepName(),
-                ...n.A.getAnalyticsProperties(),
-            });
         },
         p3: function () {
             r.default.track(s.HAw.CHECKPOINT_2026_CHARACTER_SAVE_CLICKED);

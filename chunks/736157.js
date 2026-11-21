@@ -1610,7 +1610,7 @@ function tm(e) {
             return (0, i.jsx)(tu, { checkpointData: n });
         case td.wk.V2026:
             if (!l) return (0, i.jsx)(n1, {});
-            return (0, i.jsx)(tc.A, { checkpointData: n, onCtaClick: r });
+            return (0, i.jsx)(tc.A, { checkpointData: n, onCTAClick: r });
         default:
             return (0, i.jsx)(n1, {});
     }

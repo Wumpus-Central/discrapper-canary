@@ -3,7 +3,7 @@ t.exports = {
     Q9: "characterAndStats_bcgTHb",
     Ss: "wordmark_bcgTHb",
     M1: "stats_bcgTHb",
-    WY: "checkpointEnabled_bcgTHb",
+    jI: "hasCTA_bcgTHb",
     AM: "characterColumn_bcgTHb",
     N8: "statRow_bcgTHb",
     Gl: "statIcon_bcgTHb",

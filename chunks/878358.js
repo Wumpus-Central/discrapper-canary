@@ -22,12 +22,12 @@ var i = a(477900),
     E = a(33293),
     j = a(498137),
     S = a(192339),
-    N = a(834109),
-    C = a(486020),
+    C = a(834109),
+    N = a(486020),
     T = a(48763),
     R = a(792996),
-    M = a(350363),
-    O = a(852717),
+    O = a(350363),
+    M = a(852717),
     y = a(241802);
 let L = {
     "--custom-checkpoint-card-logo-size": "44px",
@@ -69,13 +69,13 @@ function G(e) {
     let { stats: t } = e,
         { topGuild: a, topGuildAcronymCharacter: n, topEmoji: s, topGame: d } = t,
         l = r.useMemo(
-            () => (null != a ? C.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
+            () => (null != a ? N.Ay.getGuildIconURL({ id: a.guildId, icon: a.guildIcon, size: 16 }) : void 0),
             [a],
         ),
         o = r.useMemo(
             () =>
                 d?.applicationImageId != null
-                    ? C.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
+                    ? N.Ay.getApplicationIconURL({ id: d.applicationId, icon: d.applicationImageId, size: 16 })
                     : void 0,
             [d],
         ),
@@ -127,7 +127,7 @@ function H() {
             variant: "display-xs",
             color: "text-overlay-dark",
             className: y.K8,
-            children: R.intl.string(M.default["CdU/PF"]),
+            children: R.intl.string(O.default["CdU/PF"]),
         }),
     });
 }
@@ -142,58 +142,56 @@ function F() {
 function K(e) {
     let { onClick: t } = e,
         [a, n] = r.useState(!1);
-    return null == t
-        ? (0, i.jsx)("div", { className: y.lI, "aria-hidden": !0, children: (0, i.jsx)(F, {}) })
-        : (0, i.jsx)(m.m, {
-              text: R.intl.string(O.default.UjtEWE),
-              ariaHidden: !0,
-              children: (0, i.jsx)(I.f, {
-                  size: "custom",
-                  className: y.lI,
-                  onClick: async () => {
-                      if (!a) {
-                          n(!0);
-                          try {
-                              await t();
-                          } finally {
-                              n(!1);
-                          }
-                      }
-                  },
-                  "aria-label": R.intl.string(O.default.UjtEWE),
-                  "aria-busy": a,
-                  children: a
-                      ? (0, i.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE, className: y.KV, itemClassName: y.bZ })
-                      : (0, i.jsx)(F, {}),
-              }),
-          });
+    return (0, i.jsx)(m.m, {
+        text: R.intl.string(M.default.UjtEWE),
+        ariaHidden: !0,
+        children: (0, i.jsx)(I.f, {
+            size: "custom",
+            className: y.lI,
+            onClick: async function () {
+                if (!a) {
+                    n(!0);
+                    try {
+                        await t();
+                    } finally {
+                        n(!1);
+                    }
+                }
+            },
+            "aria-label": R.intl.string(M.default.UjtEWE),
+            "aria-busy": a,
+            children: a
+                ? (0, i.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE, className: y.KV, itemClassName: y.bZ })
+                : (0, i.jsx)(F, {}),
+        }),
+    });
 }
 a.d(
     t,
     {},
     {
         A: function (e) {
-            let { checkpointData: t, onCtaClick: a } = e,
+            let { checkpointData: t, onCTAClick: a } = e,
                 { character: n, stats: c, cardColorPalette: d } = t,
                 l = (0, w.A)(n, 224),
                 u = null != n && null != c,
-                h = (0, A.FX)("Checkpoint2026CardDisplayComponent"),
+                h = (0, A.FX)("Checkpoint2026CardDisplayComponent") ? a : void 0,
                 f = r.useMemo(() => (null != c ? (0, v.R8)(c) : null), [c]);
             return (0, i.jsxs)(j.A, {
                 cardColorPalette: d,
                 size: T.W.SM,
-                className: s()(y.Nr, { [y.Q9]: u, [y.WY]: h }),
+                className: s()(y.Nr, { [y.Q9]: u, [y.jI]: null != h }),
                 style: L,
                 isLoading: "loading" === l.status,
                 inert: "loading" === l.status,
                 children: [
-                    (0, i.jsx)(o.A, { children: R.intl.string(O.default.Og2R9d) }),
+                    (0, i.jsx)(o.A, { children: R.intl.string(M.default.Og2R9d) }),
                     (0, i.jsx)(S.A, {}),
-                    (0, i.jsx)(N.A, { variant: null != n ? "full" : "short", className: y.Ss }),
+                    (0, i.jsx)(C.A, { variant: null != n ? "full" : "short", className: y.Ss }),
                     null != n ? (0, i.jsx)(E.A, { character: n, images: l, className: y.AM }) : null,
                     null != f ? (0, i.jsx)(G, { stats: f }) : null,
                     (0, i.jsx)(H, {}),
-                    h ? (0, i.jsx)(K, { onClick: a }) : null,
+                    null != h ? (0, i.jsx)(K, { onClick: h }) : null,
                 ],
             });
         },
