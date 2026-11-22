@@ -49,7 +49,7 @@ let S = Object.freeze({ client_theme: "client_theme", display_name_style: "displ
     }),
     C = new Set([l.ju.HEXAGON]);
 Date.parse("2026-11-16T18:00:00+00:00");
-let O = Date.parse("2026-11-22T18:00:00+00:00"),
+let O = Date.parse("2026-11-23T18:00:00+00:00"),
     R = Date.parse("2026-12-13T18:00:00+00:00"),
     L = Date.parse("2027-02-20T18:00:00+00:00"),
     y = Object.freeze({
