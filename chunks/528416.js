@@ -30,6 +30,7 @@
     {
         1: [
             function (e, t, r) {
+                "use strict";
                 t.exports = (0, e("./adapter_factory.js").adapterFactory)({
                     window: "u" < typeof window ? void 0 : window,
                 });
@@ -38,6 +39,7 @@
         ],
         2: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.adapterFactory = function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -171,6 +173,7 @@
         ],
         3: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = r.shimGetUserMedia = void 0));
                 var n =
@@ -807,6 +810,7 @@
         ],
         4: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = function (e, t) {
                         if (
@@ -843,6 +847,7 @@
         ],
         5: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1035,6 +1040,7 @@
         ],
         6: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n,
                     i =
@@ -1314,6 +1320,7 @@
         ],
         7: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = r.shimGetUserMedia = void 0));
                 var n =
@@ -1598,6 +1605,7 @@
         ],
         8: [
             function (e, t, r) {
+                "use strict";
                 (Object.defineProperty(r, "__esModule", { value: !0 }),
                     (r.shimGetDisplayMedia = function (e, t) {
                         (e.navigator.mediaDevices && "getDisplayMedia" in e.navigator.mediaDevices) ||
@@ -1620,6 +1628,7 @@
         ],
         9: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1703,6 +1712,7 @@
         ],
         10: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -1975,6 +1985,7 @@
         ],
         11: [
             function (e, t, r) {
+                "use strict";
                 Object.defineProperty(r, "__esModule", { value: !0 });
                 var n =
                     "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -2144,6 +2155,7 @@
         12: [function (e, t, r) {}, {}],
         13: [
             function (e, t, r) {
+                "use strict";
                 var n = {};
                 ((n.generateIdentifier = function () {
                     return Math.random().toString(36).substr(2, 10);

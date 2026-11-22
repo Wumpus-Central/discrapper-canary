@@ -1,7 +1,7 @@
 var l = t(477900),
     r = t(582128),
-    a = t(359787),
-    i = t(196765),
+    i = t(359787),
+    a = t(196765),
     u = t(976245),
     s = t(302031);
 function o() {
@@ -26,8 +26,8 @@ t.d(
     {},
     {
         KE: function (e) {
-            for (let n of (0, a.tJ)(e))
-                if ("spoiler" === n.type && Array.from((0, a.tJ)(n.value.content)).some(h)) return !0;
+            for (let n of (0, i.tJ)(e))
+                if ("spoiler" === n.type && Array.from((0, i.tJ)(n.value.content)).some(h)) return !0;
             return !1;
         },
         L1: function (e) {
@@ -37,12 +37,12 @@ t.d(
         },
         dC: function (e) {
             let { children: n, id: t } = e,
-                a = r.useContext(d),
-                u = (0, i.P)(a, (e) => e.revealedIds.has(t)),
-                o = (0, i.P)(a, (e) => e.hoveredId === t),
-                c = r.useCallback(() => a.getState().reveal(t), [a, t]),
-                h = r.useCallback(() => a.getState().setHovered(t, !0), [a, t]),
-                f = r.useCallback(() => a.getState().setHovered(t, !1), [a, t]);
+                i = r.useContext(d),
+                u = (0, a.P)(i, (e) => e.revealedIds.has(t)),
+                o = (0, a.P)(i, (e) => e.hoveredId === t),
+                c = r.useCallback(() => i.getState().reveal(t), [i, t]),
+                h = r.useCallback(() => i.getState().setHovered(t, !0), [i, t]),
+                f = r.useCallback(() => i.getState().setHovered(t, !1), [i, t]);
             return (0, l.jsx)(s.Ay, {
                 type: s.Ay.Types.TEXT,
                 obscured: !u,

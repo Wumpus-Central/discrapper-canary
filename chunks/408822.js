@@ -12,8 +12,8 @@ function d(e, t) {
     return Math.min(1, Math.max(0, (t.clientX - s.left) / s.width));
 }
 var c = s(998304),
-    m = s(934581),
-    p = s(539451);
+    p = s(934581),
+    m = s(539451);
 s(518950);
 var g = s(587159);
 let f = [0, 0, 0, 0, 0];
@@ -133,7 +133,7 @@ function b(e) {
                                 let a = t - e.length;
                                 return e.concat(Array(a).fill(0));
                             }
-                            return (0, m.A)(e, t);
+                            return (0, p.A)(e, t);
                         }
                     })(t ?? [], s, r) ?? f,
                 [t, s, r],
@@ -160,14 +160,14 @@ function b(e) {
                 l = (0, h.r)(o.A.unsafe_rawColors.WHITE).hex(),
                 r = t ? n : s,
                 [u, d] = S(r, t, e),
-                [c, m] = S(t ? l : e ? i : a, t, e),
-                [p, g] = S(e ? r : a, t, e);
+                [c, p] = S(t ? l : e ? i : a, t, e),
+                [m, g] = S(e ? r : a, t, e);
             return {
                 lastBackgroundFillColor: u,
                 backgroundFillColor: d,
                 lastActiveFillColor: c,
-                activeFillColor: m,
-                lastInactiveFillColor: p,
+                activeFillColor: p,
+                lastInactiveFillColor: m,
                 inactiveFillColor: g,
             };
         })(A, j),
@@ -182,7 +182,7 @@ function b(e) {
         i.useEffect(() => {
             let { currentTime: e, duration: t, played: s } = G.current,
                 a = v({ showAll: !s, currentTime: e, duration: t, numSegments: N.length });
-            V.current = N.map((e, t) => new p.A(t < a ? e : 0));
+            V.current = N.map((e, t) => new m.A(t < a ? e : 0));
         }, [N]),
         i.useEffect(() => {
             let e = V.current;
@@ -232,14 +232,14 @@ function b(e) {
                     i.fill();
                     let [d, c] = C(Y, X, s, O.current);
                     l = l || c;
-                    let [m, p] = C(K, q, s, O.current);
-                    l = l || p;
+                    let [p, m] = C(K, q, s, O.current);
+                    l = l || m;
                     for (let e = 0; e < n.length; e++) {
                         let t = n[e],
                             s = T(r, e, n.length),
                             a = Math.max(t.getCurrentValue(), N[e] - 0.1) * s;
                         (i.beginPath(),
-                            (i.fillStyle = t.isReset ? d : m),
+                            (i.fillStyle = t.isReset ? d : p),
                             y({
                                 context: i,
                                 devicePixelRatio: B,

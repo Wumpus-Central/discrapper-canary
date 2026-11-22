@@ -9,8 +9,8 @@ var r = n(477900),
     d = n(403581),
     c = n(834730),
     f = n(866665),
-    m = n(939249),
-    p = n(287809),
+    p = n(939249),
+    m = n(287809),
     g = n(448645);
 let h = (0, n(945810).mj)({
     name: "2026-11-nitro-upload-badge",
@@ -26,8 +26,8 @@ var b = n(925056),
 let S = "nitro-upload-badge";
 function E(e) {
     let { visible: t, animSpring: l, size: i, requiredPremiumType: h } = e,
-        b = (0, o.bG)([p.default], () => {
-            let e = p.default.getCurrentUser();
+        b = (0, o.bG)([m.default], () => {
+            let e = m.default.getCurrentUser();
             return (0, g.TW)(e) ? (e?.premiumType ?? null) : null;
         }),
         E = (0, g.CC)(b, h),
@@ -56,7 +56,7 @@ function E(e) {
             position: "bottom",
             children: E
                 ? (0, r.jsx)("div", { className: j, "data-testid": S, children: w })
-                : (0, r.jsx)(m.D, {
+                : (0, r.jsx)(p.D, {
                       className: j,
                       "aria-label": _,
                       "data-testid": S,

@@ -8,8 +8,8 @@ var a = s(477900),
     u = s(939249),
     d = s(122641),
     c = s(792996),
-    m = s(28680);
-class p extends i.PureComponent {
+    p = s(28680);
+class m extends i.PureComponent {
     _mediaBar = i.createRef();
     _hoverTimeout;
     state = { hovered: !1, focused: !1, dragging: !1 };
@@ -71,7 +71,7 @@ class p extends i.PureComponent {
                 className: s,
                 sliderWrapperClassName: i,
                 sliderClassName: n,
-                currentWindow: p,
+                currentWindow: m,
                 muted: g,
                 minValue: f,
                 maxValue: v,
@@ -84,7 +84,7 @@ class p extends i.PureComponent {
         return (
             g || y === f ? (w = o.VoiceXIcon) : y < v / 2 && (w = h.VoiceLowIcon),
             (0, a.jsxs)("div", {
-                className: l()(s, m.kL),
+                className: l()(s, p.kL),
                 onMouseEnter: () => {
                     (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), S?.());
                 },
@@ -98,7 +98,7 @@ class p extends i.PureComponent {
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, a.jsx)("div", {
-                        className: l()(m.QS, i, { [m.OZ]: T || b || x }),
+                        className: l()(p.QS, i, { [p.OZ]: T || b || x }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -107,19 +107,19 @@ class p extends i.PureComponent {
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150)));
                         },
                         children: (0, a.jsx)(d.A, {
-                            className: m.YZ,
+                            className: p.YZ,
                             sliderClassName: n,
                             type: d.A.Types.VOLUME,
                             value: y / v,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: p,
+                            currentWindow: m,
                             ref: this._mediaBar,
                         }),
                     }),
                     (0, a.jsx)(u.D, {
-                        className: m.bk,
+                        className: p.bk,
                         "aria-label": c.intl.string(c.t["19lt24"]),
                         onClick: this.handleToggleMute,
                         children: (0, a.jsx)(w, { color: t, className: e }),
@@ -129,4 +129,4 @@ class p extends i.PureComponent {
         );
     }
 }
-s.d(t, {}, { A: p });
+s.d(t, {}, { A: m });

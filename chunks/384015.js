@@ -16,8 +16,8 @@ s.d(
                     className: s,
                     iconClassName: d,
                     rel: c,
-                    target: m,
-                    mimeType: p,
+                    target: p,
+                    mimeType: m,
                     fileName: g,
                     focusProps: f,
                     onClick: v,
@@ -27,19 +27,19 @@ s.d(
                 C = i.useCallback(
                     (e) => {
                         (o.default.track(h.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                            attachment_type: p?.[0],
-                            attachment_subtype: p?.[1],
+                            attachment_type: m?.[0],
+                            attachment_subtype: m?.[1],
                         }),
                             v?.(),
                             S?.(e));
                     },
-                    [S, p, v],
+                    [S, m, v],
                 );
             return null != g
                 ? (0, a.jsx)(l.Anchor, {
                       href: t,
                       onClick: C,
-                      target: m,
+                      target: p,
                       rel: c,
                       className: s,
                       focusProps: f,
@@ -49,7 +49,7 @@ s.d(
                 : (0, a.jsx)(l.Anchor, {
                       href: t,
                       onClick: C,
-                      target: m,
+                      target: p,
                       rel: c,
                       className: s,
                       "aria-label": u.intl.string(u.t["1WjMbC"]),

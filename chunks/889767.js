@@ -1,4 +1,4 @@
-n.d(t, { o: () => m });
+n.d(t, { o: () => p });
 var r = n(427930),
     l = n(734057),
     i = n(71393);
@@ -14,13 +14,13 @@ let c = Date.UTC(2026, 7, 10),
         [d.GuildFeatures.MAX_FILE_SIZE_100_MB, s.w6],
         [d.GuildFeatures.MAX_FILE_SIZE_50_MB, s.eZ],
     ];
-function m(e, t) {
+function p(e, t) {
     if (null == t || (0, r.A)(t) || !t.attachments.some((t) => t.id === e.id)) return null;
     let n = l.A.getChannel(t.channel_id);
     if (null == n) return null;
-    let m = n.getGuildId(),
-        p = null != m ? i.A.getGuild(m) : null;
-    return null != m && null == p
+    let p = n.getGuildId(),
+        m = null != p ? i.A.getGuild(p) : null;
+    return null != p && null == m
         ? null
         : (function (e, t) {
               var n;
@@ -28,12 +28,12 @@ function m(e, t) {
               if (r) return null;
               let { size: i, content_type: f } = e;
               if (null == f || !f.startsWith("video/")) return null;
-              let m = (0, a.Lt)(e.flags ?? 0, d.sbO.IS_CLIP);
+              let p = (0, a.Lt)(e.flags ?? 0, d.sbO.IS_CLIP);
               return i <=
                   Math.max(
                       ((n = e.id), o.default.extractTimestamp(n) >= c ? u.t : Math.max(u.t, 0x1900000)),
                       l,
-                      0x6400000 * !!m,
+                      0x6400000 * !!p,
                   )
                   ? null
                   : i <= s.DC
@@ -44,10 +44,10 @@ function m(e, t) {
           })(e, {
               sentByApplication: t.author.bot || null != t.webhookId,
               guildMaxFileSize:
-                  null != p
+                  null != m
                       ? f.reduce((e, t) => {
                             let [n, r] = t;
-                            return p.features.has(n) && r > e ? r : e;
+                            return m.features.has(n) && r > e ? r : e;
                         }, 0)
                       : 0,
           });

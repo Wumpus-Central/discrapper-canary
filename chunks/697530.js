@@ -2,9 +2,9 @@
 var l = t(435558),
     r = t.n(l);
 t(309613);
-var a = t(83956);
-function i(e) {
-    return (0, a.W)(e);
+var i = t(83956);
+function a(e) {
+    return (0, i.W)(e);
 }
 let u = new Set([
     "a",
@@ -57,7 +57,7 @@ function h(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         t = e.length >= 3 && e.length <= 12;
     return {
-        words: new Set(r()(e.split(/\W+/)).map(s).reject(d).map(o).reject(c).map(i).value()),
+        words: new Set(r()(e.split(/\W+/)).map(s).reject(d).map(o).reject(c).map(a).value()),
         supportPartialMatches: t && n,
     };
 }
@@ -65,21 +65,21 @@ function f(e, n) {
     let { words: t, supportPartialMatches: l } = n;
     if (0 === t.size) return null;
     let r = [],
-        a = "";
+        i = "";
     for (let n of e.split(/(\W+)/g))
         !(function (e, n) {
             let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             if (d((e = o(s(e)))) || c(e)) return !1;
-            let l = i(e);
+            let l = a(e);
             if (t) {
                 for (let e of n.values()) if (l.includes(e)) return !0;
                 return !1;
             }
             return n.has(l);
         })(n, t, l)
-            ? (a += n)
-            : (a.length > 0 && r.push({ text: a, highlight: !1 }), r.push({ text: n, highlight: !0 }), (a = ""));
-    return 0 === r.length ? null : (a.length > 0 && r.push({ text: a, highlight: !1 }), r);
+            ? (i += n)
+            : (i.length > 0 && r.push({ text: i, highlight: !1 }), r.push({ text: n, highlight: !0 }), (i = ""));
+    return 0 === r.length ? null : (i.length > 0 && r.push({ text: i, highlight: !1 }), r);
 }
 function m(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

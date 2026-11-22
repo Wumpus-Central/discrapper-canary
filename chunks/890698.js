@@ -1,4 +1,4 @@
-l.d(n, { wy: () => y, MF: () => N, $w: () => I, PM: () => M, E8: () => E });
+l.d(n, { wy: () => y, MF: () => N, $w: () => C, PM: () => M, E8: () => I });
 var e = l(582128),
     i = l(855986),
     u = l(73153),
@@ -41,11 +41,11 @@ class h extends i.Ay.PersistedStore {
         return g.pending;
     }
 }
-function A(t) {
+function b(t) {
     let { projectId: n } = t;
     return g.pending?.projectId === n && ((g = { pending: null }), !0);
 }
-let b = new h(u.h, {
+let _ = new h(u.h, {
     CONJURE_PUBLISH_EVAL_PENDING: function (t) {
         let { pending: n } = t;
         return ((g = { pending: n }), !0);
@@ -55,31 +55,31 @@ let b = new h(u.h, {
             { pending: e } = g;
         return null != e && e.projectId === n && e.publishTurnId === l && ((g = { pending: null }), !0);
     },
-    CONJURE_PROJECT_DELETE_SUCCESS: A,
-    CONJURE_PUBLISH_EVAL_PROJECT_GONE: A,
+    CONJURE_PROJECT_DELETE_SUCCESS: b,
+    CONJURE_PUBLISH_EVAL_PROJECT_GONE: b,
 });
-var _ = l(786986),
+var A = l(786986),
     P = l(991238),
-    m = l(191850),
-    S = l(792996);
+    S = l(191850),
+    m = l(792996);
 function w(t) {
-    return _.n_.some((n) => null != t.getGuild(n));
+    return A.n_.some((n) => null != t.getGuild(n));
 }
-function E(t) {
+function I(t) {
     return (0, i.bG)(
-        [b, r.default, a.A],
+        [_, r.default, a.A],
         () => {
-            let n = b.getPending();
+            let n = _.getPending();
             return n?.projectId === t && n.userId === r.default.getCurrentUser()?.id && w(a.A) ? n : null;
         },
         [t],
     );
 }
-function I(t) {
+function C(t) {
     let n = r.default.getCurrentUser()?.id;
     if (null == n || !w(a.A)) return;
     let l = p.getSubmittedAt(n, t);
-    (null != l && Date.now() - l < _.hr) ||
+    (null != l && Date.now() - l < A.hr) ||
         u.h.dispatch({
             type: "CONJURE_PUBLISH_EVAL_PENDING",
             pending: {
@@ -97,16 +97,16 @@ function I(t) {
             },
         });
 }
-let C = 221552 == l.j ? { quality: null, metExpectations: null, speed: null } : null,
-    v = { quality: m.default["N94/JU"], metExpectations: m.default["7mnit0"], speed: m.default["J/xftE"] };
+let E = 221552 == l.j ? { quality: null, metExpectations: null, speed: null } : null,
+    v = { quality: S.default["N94/JU"], metExpectations: S.default["7mnit0"], speed: S.default["J/xftE"] };
 function y(t) {
-    return S.intl.string(v[t]);
+    return m.intl.string(v[t]);
 }
 function N(t, n) {
-    return S.intl.formatToPlainString(m.default.fML8aJ, { score: n, dimension: y(t) });
+    return m.intl.formatToPlainString(S.default.fML8aJ, { score: n, dimension: y(t) });
 }
 function M(t) {
-    let [n, l] = e.useState(C),
+    let [n, l] = e.useState(E),
         [i, a] = e.useState(""),
         [r, s] = e.useState(!1),
         [d, c] = e.useState(!1),
@@ -146,14 +146,14 @@ function M(t) {
             }
         }, [p, i, t, r]);
     return {
-        dimensions: _.Wp,
+        dimensions: A.Wp,
         scores: n,
         setScore: f,
         feedback: i,
         setFeedback: a,
         canSubmit: null != p && !r,
         submitting: r,
-        error: d ? S.intl.string(m.default.Nu6mEB) : null,
+        error: d ? m.intl.string(S.default.Nu6mEB) : null,
         submit: g,
     };
 }

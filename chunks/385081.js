@@ -7,7 +7,7 @@ var l = e(149468),
 function a(t) {
     return null == t || "" === t ? null : t.slice(0, 256);
 }
-function c(t) {
+function s(t) {
     let n = u.Ay.getProject(t);
     return {
         project_id: t,
@@ -17,7 +17,7 @@ function c(t) {
         install_scope: n?.install_scope ?? null,
     };
 }
-function s(t, n) {
+function c(t, n) {
     let e = u.Ay.getProject(t),
         l = (n ? e?.preview_guild_id : e?.guild_id) ?? null,
         i = (n ? e?.preview_application_id : e?.application_id) ?? null;
@@ -30,9 +30,9 @@ e.d(
         Hy: function (t, n) {
             let { location: e, code: i, message: _, details: u, isPreview: o = !0, turnId: p } = n;
             (0, l.zV)(r.HAw.CONJURE_ERRORED, {
-                ...c(t),
+                ...s(t),
                 is_preview: o,
-                ...s(t, o),
+                ...c(t, o),
                 turn_id: p ?? null,
                 error_location: e,
                 error_code: i,
@@ -43,8 +43,8 @@ e.d(
         hV: function (t, n) {
             var e;
             (0, l.zV)(r.HAw.CONJURE_TURN_RESULTED, {
-                ...c(t),
-                ...s(t, !0),
+                ...s(t),
+                ...c(t, !0),
                 turn_id: n.turn_id ?? null,
                 turn_result: n.result ?? null,
                 turn_summary: a(n.detail ?? n.summary),
@@ -94,11 +94,11 @@ e.d(
         },
         yJ: function (t, n) {
             let { entryPoint: e, publishState: i, surface: _, installScope: o, action: a } = n,
-                c = u.Ay.getProject(t);
+                s = u.Ay.getProject(t);
             (0, l.zV)(r.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
                 project_id: t,
-                application_id: c?.application_id ?? null,
-                ...("user" === o ? { guild_id: null, channel_id: null } : s(t, !1)),
+                application_id: s?.application_id ?? null,
+                ...("user" === o ? { guild_id: null, channel_id: null } : c(t, !1)),
                 entry_point: e,
                 publish_state:
                     null == i
