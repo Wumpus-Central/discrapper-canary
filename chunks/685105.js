@@ -125,7 +125,7 @@ let W = t.memo(function (n) {
                         ? "in_progress"
                         : null != l && ("nothing_built" === l || "not_live" === l || "live_outdated" === l)
                           ? "draft"
-                          : (null != l && (0, S.lE)(l)) || s
+                          : (null != l && (0, S.l)(l)) || s
                             ? "published"
                             : "draft";
                 })({

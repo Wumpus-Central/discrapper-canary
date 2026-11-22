@@ -81,7 +81,7 @@ l.d(
         a1: function (e, t) {
             return null == t || !0 === t.safetyHold
                 ? null
-                : (0, s.lE)(t.publishState)
+                : (0, s.l)(t.publishState)
                   ? d(e).length > 0 || (t.newAppChannels ?? []).length > 0
                       ? "adds_surfaces"
                       : null
