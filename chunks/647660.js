@@ -1,8 +1,8 @@
-t.d(n, { A: () => eU, N: () => eZ });
+t.d(n, { A: () => eV, N: () => eK });
 var l = t(477900),
     r = t(582128),
-    a = t(621902),
-    i = t(359787),
+    i = t(621902),
+    a = t(359787),
     u = t(292442),
     s = t(834730),
     o = t(791606),
@@ -21,13 +21,13 @@ var l = t(477900),
     A = t(969490);
 function k(e) {
     let { text: n } = e,
-        [t, a] = r.useState(!1);
+        [t, i] = r.useState(!1);
     return (0, l.jsx)(p.D, {
         onClick: function () {
             (0, I.C)(
                 n,
-                () => a(!0),
-                () => a(!1),
+                () => i(!0),
+                () => i(!1),
             );
         },
         children: t
@@ -45,22 +45,22 @@ let M = r.createContext(!1);
 function P(e) {
     let { value: n, jumboable: t } = e,
         r = N.Ay.getURL(n),
-        a = w.Ay.convertSurrogateToName(n),
-        i = (0, d.p)();
+        i = w.Ay.convertSurrogateToName(n),
+        a = (0, d.p)();
     return (0, l.jsx)(S.H, {
-        node: { name: a, src: r, jumboable: t },
-        channelId: i?.channelId,
-        messageId: i?.messageId,
+        node: { name: i, src: r, jumboable: t },
+        channelId: a?.channelId,
+        messageId: a?.messageId,
     });
 }
 function E(e) {
     let { value: n, jumboable: t } = e,
         r = (0, d.p)(),
-        a = r?.guildId,
-        i = (0, C.bG)([b.Ay], () => b.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
-        u = i?.name ?? n.name;
+        i = r?.guildId,
+        a = (0, C.bG)([b.Ay], () => b.Ay.getDisambiguatedEmojiContext(i).getById(String(n.id)), [i, n.id]),
+        u = a?.name ?? n.name;
     return (
-        null != i && i.require_colons && (u = `:${i.name}:`),
+        null != a && a.require_colons && (u = `:${a.name}:`),
         (0, l.jsx)(S.X, {
             node: { name: u, animated: n.animated, emojiId: String(n.id), jumboable: t },
             channelId: r?.channelId,
@@ -82,20 +82,20 @@ var z = t(588975),
     _ = t(332173),
     W = t(679164),
     B = t(734057),
-    R = t(889558),
-    D = t(376943);
+    D = t(889558),
+    R = t(376943);
 function Q(e) {
-    let n = D.En.exec(e);
+    let n = R.En.exec(e);
     if (null != n) {
         let [, e, t, l, r] = n;
         return { guildId: e, channelId: l, messageId: r, parentChannelId: t, conversationId: void 0 };
     }
-    let t = D.BM.exec(e);
+    let t = R.BM.exec(e);
     if (null == t) return null;
-    let [, l, r, a, i] = t;
-    return null == r || /\D/.test(r) || (null != a && /\D/.test(a))
+    let [, l, r, i, a] = t;
+    return null == r || /\D/.test(r) || (null != i && /\D/.test(i))
         ? null
-        : { guildId: l, channelId: r, messageId: a, parentChannelId: void 0, conversationId: (0, D.te)(i) };
+        : { guildId: l, channelId: r, messageId: i, parentChannelId: void 0, conversationId: (0, R.te)(a) };
 }
 var Z = t(333421),
     K = t(100392),
@@ -139,8 +139,8 @@ function en(e) {
 var et = t(192308),
     el = t(47167),
     er = t(499211),
-    ea = t(987877),
-    ei = t(78390),
+    ei = t(987877),
+    ea = t(78390),
     eu = t(392605),
     es = t(990474),
     eo = t(232042),
@@ -150,21 +150,22 @@ var et = t(192308),
     ef = t(665303),
     em = t(593284),
     ep = t(288539),
-    ex = t(317525),
-    ev = t(71393),
-    eg = t(994500),
-    ej = t(287809),
-    eI = t(147036),
-    ey = t(403362),
-    eA = t(240248);
-let ek = { home: "home", browse: "browse", customize: "customize", guide: "guide", linked_roles: "linked-roles" };
+    ex = t(897898),
+    ev = t(317525),
+    eg = t(71393),
+    ej = t(994500),
+    eI = t(287809),
+    ey = t(147036),
+    eA = t(403362),
+    ek = t(240248);
+let eC = { home: "home", browse: "browse", customize: "customize", guide: "guide", linked_roles: "linked-roles" };
 t(73510);
-var eC = t(792996);
-function eb(e) {
+var eb = t(792996);
+function ew(e) {
     let n,
-        { channelId: t, guildId: r, messageId: a, conversationId: i } = e,
+        { channelId: t, guildId: r, messageId: i, conversationId: a } = e,
         u = (0, er.A)(t),
-        s = (0, C.bG)([ev.A], () => ev.A.getGuild(r), [r]),
+        s = (0, C.bG)([eg.A], () => eg.A.getGuild(r), [r]),
         {
             name: o,
             iconType: c,
@@ -173,61 +174,69 @@ function eb(e) {
             parentName: m,
             parentIconType: p,
         } = (0, C.cf)(
-            [B.A, ej.default, eg.A],
+            [B.A, eI.default, ej.A],
             () => {
                 let e = B.A.getChannel(t),
                     n = e?.isForumPost() ? B.A.getChannel(e.parent_id) : void 0;
                 return {
-                    name: null != e ? (0, eA.EJ)((0, el.m1)(e, ej.default, eg.A), 32) : void 0,
-                    iconType: (0, eI.QG)(e),
+                    name: null != e ? (0, ek.EJ)((0, el.m1)(e, eI.default, ej.A), 32) : void 0,
+                    iconType: (0, ey.QG)(e),
                     isForumPost: e?.isForumPost(),
-                    hasAccess: null == e || (0, D.nc)(e),
-                    parentName: null != n ? (0, eA.EJ)((0, el.m1)(n, ej.default, eg.A), 32) : void 0,
-                    parentIconType: null != n ? (0, eI.QG)(n) : void 0,
+                    hasAccess: null == e || (0, R.nc)(e),
+                    parentName: null != n ? (0, ek.EJ)((0, el.m1)(n, eI.default, ej.A), 32) : void 0,
+                    parentIconType: null != n ? (0, ey.QG)(n) : void 0,
                 };
             },
             [t],
         ),
         x = (0, d.p)(),
         v = x?.noStyleAndInteraction !== !0,
-        g = (0, ef.A)({ channelId: t, messageId: a });
+        g = (0, ef.A)({ channelId: t, messageId: i }),
+        j = v && null == i;
     if (null == c) return;
-    let j = r === x?.guildId || null == r,
-        I = (0, l.jsx)(eo.A, {
+    let I = r === x?.guildId || null == r,
+        y = (0, l.jsx)(eo.A, {
             iconType: c,
-            children: o ?? (0, l.jsx)("em", { children: eC.intl.string(eC.t.J90oLW) }),
+            children: o ?? (0, l.jsx)("em", { children: eb.intl.string(eb.t.J90oLW) }),
         }),
-        y = (0, l.jsx)(eo.A, { iconType: h ? "post" : "message" });
+        A = (0, l.jsx)(eo.A, { iconType: h ? "post" : "message" });
     if (f || u.isSubscriptionGated)
-        if (j || null == s || null == o)
-            if (null != a) {
+        if (I || null == s || null == o)
+            if (null != i) {
                 let e = h && null != m && null != p;
                 n = (0, l.jsxs)(l.Fragment, {
-                    children: [e ? (0, l.jsx)(eo.A, { iconType: p, children: m }) : I, (0, l.jsx)(eh.A, {}), e ? I : y],
+                    children: [e ? (0, l.jsx)(eo.A, { iconType: p, children: m }) : y, (0, l.jsx)(eh.A, {}), e ? y : A],
                 });
-            } else n = I;
+            } else n = y;
         else
             n = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(ed.A, { guild: s, children: (0, eA.EJ)(s.name, 32) }),
+                    (0, l.jsx)(ed.A, { guild: s, children: (0, ek.EJ)(s.name, 32) }),
                     (0, l.jsx)(eh.A, {}),
-                    null == a || h ? I : y,
+                    null == i || h ? y : A,
                 ],
             });
-    else n = (0, l.jsx)(eo.A, { iconType: "locked", children: eC.intl.string(eC.t["/YzI63"]) });
+    else n = (0, l.jsx)(eo.A, { iconType: "locked", children: eb.intl.string(eb.t["/YzI63"]) });
     return (0, l.jsx)(_.A, {
         role: "link",
         onClick: v
             ? function (e) {
-                  (e?.stopPropagation(), (0, ea.o)(r, t, a, i), (0, et.s7)());
+                  (e?.stopPropagation(), (0, ei.o)(r, t, i, a), (0, et.s7)());
               }
             : void 0,
         onContextMenu: v ? g : void 0,
+        onMouseDown: j ? ex.q : void 0,
+        onAuxClick: j
+            ? function (e) {
+                  let n = B.A.getChannel(t);
+                  null != n && (0, ex.A)(e, n);
+              }
+            : void 0,
         className: "channelMention",
         children: n,
     });
 }
-function ew(e) {
+function eS(e) {
     let { id: n } = e,
         t = (0, d.p)();
     return (0, l.jsx)(ep.A, {
@@ -240,11 +249,11 @@ function ew(e) {
         inlinePreview: t?.noStyleAndInteraction,
     });
 }
-function eS(e) {
+function eN(e) {
     let { id: n } = e,
         t = (0, d.p)(),
         r = t?.guildId,
-        a = (0, C.bG)([ex.A], () => (null != r ? ex.A.getRole(r, n)?.name : null) ?? eC.intl.string(eC.t["YV4F/n"]), [
+        i = (0, C.bG)([ev.A], () => (null != r ? ev.A.getRole(r, n)?.name : null) ?? eb.intl.string(eb.t["YV4F/n"]), [
             r,
             n,
         ]);
@@ -253,15 +262,15 @@ function eS(e) {
         channelId: t?.channelId,
         guildId: t?.guildId,
         inlinePreview: t?.noStyleAndInteraction,
-        children: `@${a}`,
+        children: `@${i}`,
     });
 }
-function eN(e) {
+function eM(e) {
     let { id: n } = e,
         t = (0, d.p)();
     return (0, l.jsx)(ec.A, { gameId: n, authorId: t?.authorId });
 }
-function eM(e) {
+function eP(e) {
     let { roleName: n } = e,
         t = (0, d.p)();
     return (0, l.jsx)(em.A, {
@@ -272,13 +281,13 @@ function eM(e) {
         children: n,
     });
 }
-function eP(e) {
+function eE(e) {
     let { route: n, itemId: t } = e,
         r = (0, d.p)(),
-        a = r?.guildId,
-        i = (0, ei.Q)(n),
-        u = (0, C.bG)([ex.A], () => (0, ei.f)(ex.A, n, t, a), [n, t, a]);
-    return null == i
+        i = r?.guildId,
+        a = (0, ea.Q)(n),
+        u = (0, C.bG)([ev.A], () => (0, ea.f)(ev.A, n, t, i), [n, t, i]);
+    return null == a
         ? null
         : (0, l.jsxs)(_.A, {
               role: "link",
@@ -286,34 +295,34 @@ function eP(e) {
                   r?.noStyleAndInteraction === !0
                       ? void 0
                       : function (e) {
-                            (e?.stopPropagation(), (0, eu.i)(a, n, t));
+                            (e?.stopPropagation(), (0, eu.i)(i, n, t));
                         },
               className: "channelMention",
               iconType: n,
-              children: [i, null != u ? (0, l.jsx)(eh.A, {}) : null, u],
+              children: [a, null != u ? (0, l.jsx)(eh.A, {}) : null, u],
           });
 }
-function eE(e) {
+function eL(e) {
     let { id: n, name: t } = e,
-        a = (0, d.p)(),
-        i = r.useMemo(() => {
+        i = (0, d.p)(),
+        a = r.useMemo(() => {
             let [, ...e] = t.split(" ");
             return `${n}${[...e].map((e) => `\0${e}`).join("")}`;
         }, [n, t]),
         u = r.useMemo(
-            () => ({ type: "commandMention", channelId: a?.channelId, commandId: n, commandName: t, commandKey: i }),
-            [a?.channelId, i, n, t],
+            () => ({ type: "commandMention", channelId: i?.channelId, commandId: n, commandName: t, commandKey: a }),
+            [i?.channelId, a, n, t],
         );
     return (0, l.jsx)(es.gn, { node: u, children: t });
 }
-var eL = t(147190);
-function ez(e) {
-    let { guildId: n, channelId: t, messageId: r, parentChannelId: a, conversationId: i } = e,
-        u = (0, C.bG)([B.A], () => (null != a && null == B.A.getChannel(t) ? a : t), [t, a]);
-    return (0, l.jsx)(eb, { channelId: u, guildId: n, messageId: r, conversationId: i });
-}
+var ez = t(147190);
 function e$(e) {
-    let { url: n, name: a, interactive: i } = e,
+    let { guildId: n, channelId: t, messageId: r, parentChannelId: i, conversationId: a } = e,
+        u = (0, C.bG)([B.A], () => (null != i && null == B.A.getChannel(t) ? i : t), [t, i]);
+    return (0, l.jsx)(ew, { channelId: u, guildId: n, messageId: r, conversationId: a });
+}
+function eF(e) {
+    let { url: n, name: i, interactive: a } = e,
         u = r.useCallback(async () => {
             let e = await W.AN(n);
             (H.A.trackLinkClicked(e), (0, G.A)(e));
@@ -322,47 +331,47 @@ function e$(e) {
             (e) => {
                 (0, $.L3)(e, async () => {
                     let { default: e } = await t.e(762529).then(t.bind(t, 740024));
-                    return (t) => (0, l.jsx)(e, { ...t, attachmentUrl: n, attachmentName: a });
+                    return (t) => (0, l.jsx)(e, { ...t, attachmentUrl: n, attachmentName: i });
                 });
             },
-            [a, n],
+            [i, n],
         );
     return (0, l.jsxs)(_.A, {
         role: "link",
         href: n,
-        onClick: i ? u : void 0,
-        onContextMenu: i ? s : void 0,
+        onClick: a ? u : void 0,
+        onContextMenu: a ? s : void 0,
         className: "attachmentLink",
-        children: [(0, l.jsx)(z.AttachmentIcon, { size: "xs", className: eL.Kk, color: "currentColor" }), a],
+        children: [(0, l.jsx)(z.AttachmentIcon, { size: "xs", className: ez.Kk, color: "currentColor" }), i],
     });
 }
-var eF = t(886609),
-    eG = t(678473),
-    eT = t(379418),
-    eH = t(152959);
+var eG = t(886609),
+    eT = t(678473),
+    eH = t(379418),
+    eq = t(152959);
 t(321073);
-var eq = t(448767),
-    eJ = t(886737);
-function e_(e) {
+var eJ = t(448767),
+    e_ = t(886737);
+function eW(e) {
     return "link" === e.type;
 }
-function eW(e) {
+function eB(e) {
     switch (e.type) {
         case "paragraph":
-            return { ...e, value: eB(e.value) };
+            return { ...e, value: eD(e.value) };
         case "heading":
-            return { ...e, value: { ...e.value, content: eB(e.value.content) } };
+            return { ...e, value: { ...e.value, content: eD(e.value.content) } };
         case "subtext":
-            return { ...e, value: { content: eB(e.value.content) } };
+            return { ...e, value: { content: eD(e.value.content) } };
         case "quote":
-            return { ...e, value: e.value.map(eW) };
+            return { ...e, value: e.value.map(eB) };
         case "list":
-            return { ...e, value: { ...e.value, items: e.value.items.map((e) => ({ content: e.content.map(eW) })) } };
+            return { ...e, value: { ...e.value, items: e.value.items.map((e) => ({ content: e.content.map(eB) })) } };
         default:
             return e;
     }
 }
-function eB(e) {
+function eD(e) {
     return e.map(eR);
 }
 function eR(e) {
@@ -371,68 +380,68 @@ function eR(e) {
             if ((null == e.value.text || 0 === e.value.text.length) && null != Q(e.value.url)) return e;
             return { type: "code", value: e.value.url };
         case "emoji":
-            return "custom" === e.value.type ? { type: "text", value: (0, eJ.u)(e.value.value.name) } : e;
+            return "custom" === e.value.type ? { type: "text", value: (0, e_.u)(e.value.value.name) } : e;
         case "bold":
         case "italic":
         case "underline":
         case "strikethrough":
-            return { ...e, value: eB(e.value) };
+            return { ...e, value: eD(e.value) };
         case "spoiler":
-            return { ...e, value: { ...e.value, content: eB(e.value.content) } };
+            return { ...e, value: { ...e.value, content: eD(e.value.content) } };
         default:
             return e;
     }
 }
-var eD = t(254221);
-let eQ = [];
-function eZ(e, n) {
+var eQ = t(254221);
+let eZ = [];
+function eK(e, n) {
     let { enabled: t, syntax: l } = n,
-        a = (0, eH.n9)(t);
+        i = (0, eq.n9)(t);
     return r.useMemo(() => {
-        if (!t || !a || null == e) return null;
+        if (!t || !i || null == e) return null;
         try {
-            return { ast: (0, i.qg)(e, l) };
+            return { ast: (0, a.qg)(e, l) };
         } catch (e) {
             return { error: e };
         }
-    }, [t, a, e, l]);
+    }, [t, i, e, l]);
 }
-let eK = {
+let eU = {
     text: function (e) {
         let { node: n } = e;
         return (0, l.jsx)(h.z, { text: n.value });
     },
     paragraph: function (e) {
         let { siblings: n, index: t, children: r } = e,
-            a = (0, d.p)()?.formatInline === !0,
-            i = t === n.length - 1;
-        return a
-            ? (0, l.jsxs)(l.Fragment, { children: [r, i ? null : " "] })
-            : (0, l.jsxs)("span", { children: [r, i ? null : (0, l.jsx)("br", {})] });
+            i = (0, d.p)()?.formatInline === !0,
+            a = t === n.length - 1;
+        return i
+            ? (0, l.jsxs)(l.Fragment, { children: [r, a ? null : " "] })
+            : (0, l.jsxs)("span", { children: [r, a ? null : (0, l.jsx)("br", {})] });
     },
     empty: function () {
         return (0, d.p)()?.formatInline === !0 ? " " : "\n";
     },
     emoji: function (e) {
         let { value: n, type: t } = e,
-            a = r.useContext(M);
+            i = r.useContext(M);
         switch (t) {
             case "unicode":
-                return (0, l.jsx)(P, { value: n, jumboable: a });
+                return (0, l.jsx)(P, { value: n, jumboable: i });
             case "custom":
-                return (0, l.jsx)(E, { value: n, jumboable: a });
+                return (0, l.jsx)(E, { value: n, jumboable: i });
         }
     },
     link: function (e) {
-        let { text: n, url: t, title: r, children: a } = e,
-            i = (0, d.p)(),
-            u = i?.noStyleAndInteraction === !0,
+        let { text: n, url: t, title: r, children: i } = e,
+            a = (0, d.p)(),
+            u = a?.noStyleAndInteraction === !0,
             s = null == n || 0 === n.length;
         if (s) {
             let e = Q(t);
-            if (null != e) return (0, l.jsx)(ez, { ...e });
+            if (null != e) return (0, l.jsx)(e$, { ...e });
             let n = (0, q.h)(t);
-            if (null != n) return (0, l.jsx)(e$, { url: t, name: n.name, interactive: !u });
+            if (null != n) return (0, l.jsx)(eF, { url: t, name: n.name, interactive: !u });
         }
         if ((0, T.vS)(t)) return (0, l.jsx)(en, { url: t });
         let o = (0, J.W1)(t),
@@ -458,7 +467,7 @@ let eK = {
                           })
                           .join("");
                   })(n),
-            f = s ? (0, l.jsx)(h.z, { text: c }) : a;
+            f = s ? (0, l.jsx)(h.z, { text: c }) : i;
         if (V.test(t))
             return (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)("span", { children: f }), (0, l.jsx)(en, { url: t })],
@@ -476,26 +485,26 @@ let eK = {
             : (0, l.jsx)(F.A, {
                   title: m,
                   href: t,
-                  trusted: () => (0, R.m)(o?.target ?? t, null != r && r.length > 0 ? r : c),
-                  messageId: i?.messageId,
-                  channelId: i?.channelId,
+                  trusted: () => (0, D.m)(o?.target ?? t, null != r && r.length > 0 ? r : c),
+                  messageId: a?.messageId,
+                  channelId: a?.channelId,
                   children: (0, l.jsx)("span", { children: f }),
               });
     },
     list: function (e) {
-        let { type: n, children: t, value: r, items: a } = e,
-            i = (0, d.p)()?.formatInline === !0 ? y.tZ : void 0;
+        let { type: n, children: t, value: r, items: i } = e,
+            a = (0, d.p)()?.formatInline === !0 ? y.tZ : void 0;
         switch (n) {
             case "ordered":
-                let u = (r + a.length - 1).toString().length;
+                let u = (r + i.length - 1).toString().length;
                 return (0, l.jsx)("ol", {
                     start: r,
-                    className: i,
+                    className: a,
                     style: { "--totalCharacters": u, "--olCounterStart": r - 1 },
                     children: t,
                 });
             case "unordered":
-                return (0, l.jsx)("ul", { className: i, children: t });
+                return (0, l.jsx)("ul", { className: a, children: t });
         }
     },
     listItem: function (e) {
@@ -552,26 +561,26 @@ let eK = {
         let { type: n, value: t } = e;
         switch (n) {
             case "channel":
-                return (0, l.jsx)(eb, { channelId: String(t) });
+                return (0, l.jsx)(ew, { channelId: String(t) });
             case "user":
-                return (0, l.jsx)(ew, { id: String(t) });
-            case "role":
                 return (0, l.jsx)(eS, { id: String(t) });
-            case "everyone":
-                return (0, l.jsx)(eM, { roleName: "@everyone" });
-            case "here":
-                return (0, l.jsx)(eM, { roleName: "@here" });
-            case "game":
+            case "role":
                 return (0, l.jsx)(eN, { id: String(t) });
+            case "everyone":
+                return (0, l.jsx)(eP, { roleName: "@everyone" });
+            case "here":
+                return (0, l.jsx)(eP, { roleName: "@here" });
+            case "game":
+                return (0, l.jsx)(eM, { id: String(t) });
             case "command":
-                return (0, l.jsx)(eE, { id: String(t.id), name: t.name });
+                return (0, l.jsx)(eL, { id: String(t.id), name: t.name });
             case "static":
-                return (0, l.jsx)(eP, {
-                    route: ek[t.type],
+                return (0, l.jsx)(eE, {
+                    route: eC[t.type],
                     itemId: "linked_roles" === t.type && null != t.value ? String(t.value) : void 0,
                 });
         }
-        (0, ey.xb)(n);
+        (0, eA.xb)(n);
     },
     heading: function (e) {
         let { level: n, children: t } = e,
@@ -582,45 +591,45 @@ let eK = {
         let { children: n } = e;
         return (0, l.jsx)("small", { className: L(), children: n });
     },
-    spoiler: eF.dC,
+    spoiler: eG.dC,
     timestamp: function (e) {
         let { value: n, style: t } = e,
-            r = (0, eT.EH)(String(n), t);
-        return null == r ? null : (0, l.jsx)(eG.A, { node: r });
+            r = (0, eH.EH)(String(n), t);
+        return null == r ? null : (0, l.jsx)(eT.A, { node: r });
     },
 };
-function eU(e) {
+function eV(e) {
     let {
         content: n,
         parsed: t,
         allowJumboEmoji: r = !0,
-        hideSingleLinkContent: a = !1,
-        redactRestrictedContent: i = !1,
+        hideSingleLinkContent: i = !1,
+        redactRestrictedContent: a = !1,
     } = e;
     return (0, l.jsx)(u.tH, {
         fallbackRender: (e) => {
             let { error: t } = e;
-            return (0, l.jsx)(eX, { content: n, error: t });
+            return (0, l.jsx)(eY, { content: n, error: t });
         },
-        children: (0, l.jsx)(eV, {
+        children: (0, l.jsx)(eX, {
             content: n,
             parsed: t,
             allowJumboEmoji: r,
-            hideSingleLinkContent: a,
-            redactRestrictedContent: i,
+            hideSingleLinkContent: i,
+            redactRestrictedContent: a,
         }),
     });
 }
-function eV(e) {
+function eX(e) {
     let { content: n, parsed: t, allowJumboEmoji: u, hideSingleLinkContent: s, redactRestrictedContent: o } = e;
-    if (((0, eH.bf)(null == t), null != t && "error" in t)) throw t.error;
-    let c = t?.ast ?? eQ,
+    if (((0, eq.bf)(null == t), null != t && "error" in t)) throw t.error;
+    let c = t?.ast ?? eZ,
         d = r.useMemo(
             () =>
                 u &&
                 (function (e) {
                     let n = 0;
-                    for (let t of (0, i.tJ)(e))
+                    for (let t of (0, a.tJ)(e))
                         switch (t.type) {
                             case "emoji":
                                 n += 1;
@@ -644,10 +653,10 @@ function eV(e) {
                     let { hideSingleLinkContent: t, redactRestrictedContent: l = !1 } = n,
                         r = (function (e) {
                             let [n] = e;
-                            return 1 !== e.length || "paragraph" !== n.type ? eq.tq : (0, eq.dn)(n.value, e_);
+                            return 1 !== e.length || "paragraph" !== n.type ? eJ.tq : (0, eJ.dn)(n.value, eW);
                         })(e);
-                    if (t && (0, eq.iz)(r)) return [];
-                    let a = (function (e, n) {
+                    if (t && (0, eJ.iz)(r)) return [];
+                    let i = (function (e, n) {
                         let t = [],
                             l = !1;
                         for (let r of e) {
@@ -656,8 +665,8 @@ function eV(e) {
                                 continue;
                             }
                             let e = r.value.filter((e) => {
-                                let t = e_(e) ? e.value.url : null;
-                                return null == t || !(0, eq.c_)(t, n);
+                                let t = eW(e) ? e.value.url : null;
+                                return null == t || !(0, eJ.c_)(t, n);
                             });
                             if (e.length === r.value.length) {
                                 t.push(r);
@@ -667,16 +676,16 @@ function eV(e) {
                         }
                         return l ? t : e;
                     })(e, { onlyLinkContent: r.onlyLinks, stripGameServerShareLinks: !0 });
-                    return l ? a.map(eW) : a;
+                    return l ? i.map(eB) : i;
                 })(c, { hideSingleLinkContent: s, redactRestrictedContent: o }),
             [c, s, o],
         );
     return (0, l.jsx)(M.Provider, {
         value: d,
-        children: (0, l.jsx)(eF.L1, { children: (0, l.jsx)(a.$, { nodes: h, renderers: eK }) }, n),
+        children: (0, l.jsx)(eG.L1, { children: (0, l.jsx)(i.$, { nodes: h, renderers: eU }) }, n),
     });
 }
-function eX(e) {
+function eY(e) {
     let { content: n, error: t } = e;
     return (
         r.useEffect(() => {
@@ -688,8 +697,8 @@ function eX(e) {
                 (0, l.jsxs)(s.E, {
                     variant: "body-md/normal",
                     color: "text-feedback-critical",
-                    className: eD.g,
-                    children: [(0, l.jsx)(o.A, { width: 16, height: 16 }), eC.intl.string(eC.t.dpFK4M)],
+                    className: eQ.g,
+                    children: [(0, l.jsx)(o.A, { width: 16, height: 16 }), eb.intl.string(eb.t.dpFK4M)],
                 }),
             ],
         })
