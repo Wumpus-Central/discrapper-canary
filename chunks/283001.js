@@ -132,7 +132,10 @@ function k(e) {
                     (0, i.jsx)(y.Q, {
                         "aria-hidden": !0,
                         isFolder: !0,
-                        upperBadge: P,
+                        upperBadge:
+                            null != P
+                                ? (0, i.jsx)("div", { "data-testid": "guild-folder-media-badge", children: P })
+                                : null,
                         lowerBadge: G,
                         lowerBadgeSize: { width: (0, D.o6)(l) },
                         children: (0, i.jsx)("div", {

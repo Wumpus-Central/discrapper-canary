@@ -275,6 +275,7 @@ function el(e) {
               children: [
                   !c && (!g || !A) && (0, i.jsx)("div", { className: en.s_ }),
                   (0, i.jsx)(p.animated.div, {
+                      "data-testid": "clip-media-mention-timeline",
                       className: en.IO,
                       style: {
                           transform: g
