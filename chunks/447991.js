@@ -15,7 +15,7 @@ let f = l.lazy(() =>
             name: "DiscordVideoPlayer",
         }),
     ),
-    m = { width: "100%", height: "100%", objectFit: "contain" };
+    p = { width: "100%", height: "100%", objectFit: "contain" };
 n.d(
     t,
     {},
@@ -25,127 +25,129 @@ n.d(
                     onPlay: t,
                     autoplay: n,
                     playable: u = !0,
-                    mimeType: p,
+                    mimeType: m,
                     attachmentLayout: g,
                     onOpenInMediaViewer: h,
-                    ...b
+                    playerRef: b,
+                    ...y
                 } = e,
-                y = "single" === g,
-                C = "portrait" === b.orientation,
-                v =
+                C = "single" === g,
+                v = "portrait" === y.orientation,
+                x =
                     null == g
                         ? {}
                         : {
                               minWidth: 0,
                               minHeight: 0,
                               autoFitControls: !0,
-                              hideSkipButtons: !y,
+                              hideSkipButtons: !C,
                               autoCompactTimeDisplay: !0,
-                              autoHideVolumeSlider: !y || C,
-                              floatingVolumeSlider: y && C,
-                              hidePlaybackSpeedBtn: !!y && !!C && "inline",
+                              autoHideVolumeSlider: !C || v,
+                              floatingVolumeSlider: C && v,
+                              hidePlaybackSpeedBtn: !!C && !!v && "inline",
                               controlBarConfig: s.Xq,
                               objectFit: "contain",
                           },
-                x = l.useRef(!1),
                 S = l.useRef(!1),
-                E = l.useCallback(
+                E = l.useRef(!1),
+                k = l.useCallback(
                     (e, n) => {
-                        x.current && ((x.current = !1), t?.(S.current, e, n));
+                        S.current && ((S.current = !1), t?.(E.current, e, n));
                     },
                     [t],
                 ),
-                k = l.useCallback(
-                    (e, t) => {
-                        e === i.Q6.PLAYING
-                            ? t !== i.KB.BUFFERING_RECOVERY && ((x.current = !0), (S.current = t !== i.KB.USER))
-                            : E(0, 0);
-                    },
-                    [E],
-                ),
                 _ = l.useCallback(
                     (e, t) => {
-                        E(1e3 * e, Number.isFinite(t) ? 1e3 * t : 0);
+                        e === i.Q6.PLAYING
+                            ? t !== i.KB.BUFFERING_RECOVERY && ((S.current = !0), (E.current = t !== i.KB.USER))
+                            : k(0, 0);
                     },
-                    [E],
+                    [k],
                 ),
-                [j] = l.useState(() => new o.A({ src: b.src ?? "", mimeType: p, fileSize: b.fileSizeBytes })),
-                w = l.useRef(null),
-                I = l.useRef(!1),
-                M = l.useCallback(
-                    (e) => {
-                        ((I.current = e), e ? j.onDragStart(w.current?.currentTime ?? null) : j.onDragEnd());
+                j = l.useCallback(
+                    (e, t) => {
+                        k(1e3 * e, Number.isFinite(t) ? 1e3 * t : 0);
                     },
-                    [j],
+                    [k],
                 ),
-                P = l.useRef(null),
-                T = l.useCallback(
+                [w] = l.useState(() => new o.A({ src: y.src ?? "", mimeType: m, fileSize: y.fileSizeBytes })),
+                I = l.useRef(null),
+                M = l.useRef(!1),
+                P = l.useCallback(
                     (e) => {
-                        if ((P.current?.(), (P.current = null), (w.current = e), null == e)) return;
+                        ((M.current = e), e ? w.onDragStart(I.current?.currentTime ?? null) : w.onDragEnd());
+                    },
+                    [w],
+                ),
+                T = l.useRef(null),
+                R = l.useCallback(
+                    (e) => {
+                        if ((T.current?.(), (T.current = null), (I.current = e), null == e)) return;
                         let t = { currentTarget: e },
                             n = {
-                                waiting: () => j.onWaiting(t),
-                                seeking: () => j.onSeeking(t),
-                                seeked: () => j.onSeeked(t),
-                                timeupdate: () => j.onTimeUpdate(t),
-                                loadedmetadata: () => j.onLoadedMetadata(t),
+                                waiting: () => w.onWaiting(t),
+                                seeking: () => w.onSeeking(t),
+                                seeked: () => w.onSeeked(t),
+                                timeupdate: () => w.onTimeUpdate(t),
+                                loadedmetadata: () => w.onLoadedMetadata(t),
                                 playing: () => {
-                                    (j.onPlaying(t), j.checkVideoDecodability(e, !0));
+                                    (w.onPlaying(t), w.checkVideoDecodability(e, !0));
                                 },
                                 pause: () => {
-                                    I.current || j.onPause(t);
+                                    M.current || w.onPause(t);
                                 },
                                 error: () => {
-                                    ((j.errorCode = e.error?.code ?? null),
-                                        (j.errorMessage = e.error?.message ?? null),
-                                        j.onError(t));
+                                    ((w.errorCode = e.error?.code ?? null),
+                                        (w.errorMessage = e.error?.message ?? null),
+                                        w.onError(t));
                                 },
                             };
                         for (let [t, r] of Object.entries(n)) e.addEventListener(t, r);
-                        P.current = () => {
+                        T.current = () => {
                             for (let [t, r] of Object.entries(n)) e.removeEventListener(t, r);
                         };
                     },
-                    [j],
+                    [w],
                 ),
                 B = l.useRef(null),
-                R = l.useRef(h);
+                F = b ?? B,
+                A = l.useRef(h);
             l.useLayoutEffect(() => {
-                R.current = h;
+                A.current = h;
             }, [h]);
-            let F = null != h,
-                A = l.useMemo(() => {
-                    if (F)
+            let D = null != h,
+                V = l.useMemo(() => {
+                    if (D)
                         return {
                             id: "open-in-media-viewer",
                             iconComponent: a.WindowTopOutlineIcon,
                             label: d.intl.string(c.default.EyuFlE),
                             onClick: () => {
-                                B.current?.pause();
-                                let e = w.current,
+                                F.current?.pause();
+                                let e = I.current,
                                     t = null == e || e.ended ? 0 : e.currentTime;
-                                R.current?.(Math.round(1e3 * t));
+                                A.current?.(Math.round(1e3 * t));
                             },
                             "data-testid": "discord-web-video-player-open-in-media-viewer-btn",
                         };
-                }, [F]),
-                D = null != b.poster ? (0, r.jsx)("img", { src: b.poster, alt: "", style: m }) : null;
+                }, [D, F]),
+                L = null != y.poster ? (0, r.jsx)("img", { src: y.poster, alt: "", style: p }) : null;
             return u
                 ? (0, r.jsx)(l.Suspense, {
-                      fallback: D,
+                      fallback: L,
                       children: (0, r.jsx)(f, {
-                          ...b,
-                          ...v,
+                          ...y,
+                          ...x,
                           autoplay: n,
-                          onPlayerStateChange: k,
-                          onProgressUpdate: _,
-                          onTimelineDragStateChange: M,
-                          expandButton: A,
-                          playerRef: B,
-                          ref: T,
+                          onPlayerStateChange: _,
+                          onProgressUpdate: j,
+                          onTimelineDragStateChange: P,
+                          expandButton: V,
+                          playerRef: F,
+                          ref: R,
                       }),
                   })
-                : D;
+                : L;
         },
     },
 );

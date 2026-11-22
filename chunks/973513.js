@@ -757,7 +757,8 @@ function J(e) {
         (t1(e), ev?.(e));
     }
     let rU = l.useRef(null),
-        r_ = l.useCallback(
+        r_ = (0, y.A)(rS),
+        r$ = l.useCallback(
             (e) => {
                 (ro(), rU.current?.(e.nativeEvent));
             },
@@ -772,13 +773,16 @@ function J(e) {
             pause: () => {
                 rn(d.Q6.PAUSED, d.KB.USER);
             },
+            togglePlayback: () => {
+                r_();
+            },
             seek: (e) => {
                 ry(e);
             },
         }),
-        [rn, ry],
+        [rn, ry, r_],
     );
-    let r$ = {
+    let rK = {
             ref: l.useCallback(
                 (e) => {
                     nd.current = e;
@@ -876,7 +880,7 @@ function J(e) {
                 ],
             }),
         },
-        rK = (0, r.jsx)(M, {
+        rO = (0, r.jsx)(M, {
             children: (0, r.jsx)(A.pT, {
                 activeLayer: t2 ? j : void 0,
                 isFullscreen: t2,
@@ -963,7 +967,7 @@ function J(e) {
                         ref: nm,
                         className: i()(z.NS, { [z.DO]: "portrait" === a, [z.r7]: "landscape" === a }),
                         tabIndex: -1,
-                        onKeyDown: r_,
+                        onKeyDown: r$,
                         "data-testid": "discord-web-video-player-frame",
                         style: {
                             "--custom-footer-horizontal-padding": `${nG.footerHorizontalPaddingPx}px`,
@@ -985,7 +989,7 @@ function J(e) {
                         children: [
                             tW && e5 && !ns && (0, r.jsx)("canvas", { ref: nf, className: z.Xm }),
                             rI && ed?.({ replay: rB }),
-                            em(r$),
+                            em(rK),
                             tj !== d.h$.READY &&
                                 tp === d.Q6.PLAYING &&
                                 null != tu &&
@@ -1290,5 +1294,5 @@ function J(e) {
                 }),
             }),
         });
-    return (0, r.jsx)(s.Jh, { enabled: t2, children: rK });
+    return (0, r.jsx)(s.Jh, { enabled: t2, children: rO });
 }
