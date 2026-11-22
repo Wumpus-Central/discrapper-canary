@@ -163,6 +163,11 @@
     padding-inline-end: 0
 }
 
+.platform-linux .leadingGrow_3zSH5d+.trailing_3zSH5d,
+.platform-win .leadingGrow_3zSH5d+.trailing_3zSH5d {
+    inset-inline-end: 0
+}
+
 .systemBar_3zSH5d {
     display: none;
     justify-content: flex-end;
@@ -213,6 +218,12 @@
 .leadingGrow_3zSH5d {
     flex: 1 1 auto;
     min-width: 0
+}
+
+.leadingGrow_3zSH5d+.trailing_3zSH5d {
+    inset-block: 0;
+    inset-inline-end: var(--space-12);
+    position: absolute
 }
 
 .trailing_3zSH5d {
@@ -278,4 +289,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=300559.4a72579276d64044.css.map*/
+/*# sourceMappingURL=300559.7f76f64306972669.css.map*/

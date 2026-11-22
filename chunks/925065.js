@@ -703,7 +703,7 @@ if (null == e5 || "0.0.0" !== e5.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e8}, Build Number: 679023, Version Hash: e19a7d556ccd0956a500e11574d3009841b0ccb6`,
+    `[BUILD INFO] Release Channel: ${e8}, Build Number: 679031, Version Hash: c6ccfad8673728e130ce52d62f176de80f1d2d2c`,
 ),
     w.A.setTags({ appContext: H.QCW }),
     eT.A.initBasic(),
@@ -775,7 +775,7 @@ let e8 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "679023";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "679031";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eB.Ay.setCrashInformation(ew.du.BuildNumber, r);
         let s = eH?.processUtils?.getLastCrash;
@@ -3527,65 +3527,60 @@ function r6(e) {
 var r5 = n(845311),
     r8 = n(605117),
     r7 = n(960498);
-function r4(e) {
-    let { hidden: t } = e,
-        n = !(0, r8.c)(),
-        i = (0, e_.bG)([r1], () => r1.getOnlineFriendCount()),
-        r = eh.useRef(null),
-        a = (0, t_.A)(),
-        [s, l] = (0, rc.kn)(a || n || t ? [] : [rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], {
-            bypassAutoDismiss: !0,
-        }),
-        o = s === rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK,
-        [d, c] = eh.useState(null);
+function r4() {
+    let e = !(0, r8.c)(),
+        t = (0, e_.bG)([r1], () => r1.getOnlineFriendCount()),
+        n = eh.useRef(null),
+        i = (0, t_.A)(),
+        [r, a] = (0, rc.kn)(i || e ? [] : [rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], { bypassAutoDismiss: !0 }),
+        s = r === rF.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK,
+        [l, o] = eh.useState(null);
     eh.useEffect(() => {
-        if (!o) return;
-        let e = r.current?.parentElement;
+        if (!s) return;
+        let e = n.current?.parentElement;
         if (null == e) return;
         let t = new ResizeObserver((e) => {
             let [t] = e;
-            return c(t.contentRect.width);
+            return o(t.contentRect.width);
         });
         return (t.observe(e), () => t.disconnect());
-    }, [o]);
-    let { analyticsLocations: u } = (0, rH.Ay)(),
-        _ = eh.useCallback(() => {
-            (l(rE.i.TAKE_ACTION),
-                (0, rW.RQ)({ open: !n, source: rW.TY.TOGGLE_BUTTON, analyticsLocations: u }),
-                rV.A.setFriendsSidebarCollapsed(n));
-        }, [n, l, u]),
-        E = eh.useCallback(() => {
+    }, [s]);
+    let { analyticsLocations: d } = (0, rH.Ay)(),
+        c = eh.useCallback(() => {
+            (a(rE.i.TAKE_ACTION),
+                (0, rW.RQ)({ open: !e, source: rW.TY.TOGGLE_BUTTON, analyticsLocations: d }),
+                rV.A.setFriendsSidebarCollapsed(e));
+        }, [e, a, d]),
+        u = eh.useCallback(() => {
             rV.A.setFriendsSidebarCollapsed(!1);
         }, []),
-        A = n ? tN.intl.string(r3.default.ZsAL7q) : tN.intl.string(r3.default.sgse8P);
+        _ = e ? tN.intl.string(r3.default.ZsAL7q) : tN.intl.string(r3.default.sgse8P);
     return (0, v.jsxs)(v.Fragment, {
         children: [
             (0, v.jsx)(rR.m, {
                 position: "bottom",
-                text: A,
+                text: _,
                 ariaHidden: !0,
                 children: (0, v.jsxs)(tc.D, {
-                    innerRef: r,
+                    innerRef: n,
                     tag: "div",
                     role: "button",
-                    "aria-label": A,
-                    "aria-pressed": n,
-                    onClick: _,
-                    className: td()(r7.j, { [r7.R]: t }),
+                    "aria-label": _,
+                    "aria-pressed": e,
+                    onClick: c,
+                    className: r7.j,
                     children: [
-                        (0, v.jsx)(r5.A, { hasOnlineFriends: i > 0 }),
-                        (0, v.jsx)(rB.E, { variant: "body-sm/semibold", color: "text-subtle", children: i }),
+                        (0, v.jsx)(r5.A, { hasOnlineFriends: t > 0 }),
+                        (0, v.jsx)(rB.E, { variant: "body-sm/semibold", color: "text-subtle", children: t }),
                     ],
                 }),
             }),
-            o && null != d && (0, v.jsx)(r6, { targetElementRef: r, markAsDismissed: l, onShowFriendsList: E }, d),
+            s && null != l && (0, v.jsx)(r6, { targetElementRef: n, markAsDismissed: a, onShowFriendsList: u }, l),
         ],
     });
 }
 function r9() {
-    let e = (0, e_.bG)([rj.Ay], () => rj.Ay.isFriendsSidebarAvailable()),
-        t = (0, e_.bG)([rv.A], () => rv.A.isTabBarVisible());
-    return e || t ? (0, v.jsx)(r4, { hidden: !e }) : null;
+    return (0, e_.bG)([rj.Ay], () => rj.Ay.isFriendsSidebarAvailable()) ? (0, v.jsx)(r4, {}) : null;
 }
 var ae = n(76268),
     at = n(646514),
@@ -16096,7 +16091,7 @@ let pD = "isHideDevBanner",
                     className: td()(py.Wz, py.mr),
                     children: [
                         (0, v.jsx)(pL, { className: py.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "679023" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "679031" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })

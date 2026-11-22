@@ -2,6 +2,7 @@
     align-items: center;
     border-radius: var(--radius-sm);
     box-sizing: border-box;
+    container-type: inline-size;
     display: grid;
     flex: 0 1 calc(var(--space-192) + var(--space-48));
     grid-template-columns: minmax(0, 1fr) auto;
@@ -41,9 +42,15 @@
     width: 1px
 }
 
+.tabPinned_ve0N80 {
+    min-width: calc(var(--icon-size-sm) + var(--space-8)*2)
+}
+
+.tab_ve0N80:hover+.tab_ve0N80:before,
+.tab_ve0N80:hover:before,
 .tabActive_ve0N80+.tab_ve0N80:before,
 .tabActive_ve0N80:before {
-    visibility: hidden
+    opacity: 0
 }
 
 @keyframes channelTabEnter_ve0N80 {
@@ -51,6 +58,7 @@
         flex-basis: 0;
         flex-grow: 0;
         max-width: 0;
+        min-width: 0;
         opacity: 0
     }
 }
@@ -60,6 +68,7 @@
         flex-basis: 0;
         flex-grow: 0;
         max-width: 0;
+        min-width: 0;
         opacity: 0
     }
 }
@@ -74,6 +83,7 @@
 }
 
 .tabButton_ve0N80 {
+    align-items: center;
     align-self: stretch;
     box-sizing: border-box;
     cursor: pointer;
@@ -81,20 +91,32 @@
     grid-column: 1/-1;
     grid-row: 1;
     grid-template-columns: subgrid;
+    min-width: 0;
     padding-inline: var(--space-8)
 }
 
-.tabButton_ve0N80,
 .tabButtonContent_ve0N80 {
-    align-items: center;
-    min-width: 0
+    grid-column: 1
 }
 
-.tabButtonContent_ve0N80 {
+.tabButtonContent_ve0N80,
+.tabButtonFade_ve0N80 {
+    align-items: center;
     display: flex;
     gap: var(--space-8);
-    grid-column: 1;
+    min-width: 0;
     overflow: hidden
+}
+
+.tabButtonFade_ve0N80 {
+    flex: 1 1 auto;
+    -webkit-mask-image: linear-gradient(to left, transparent, currentColor var(--space-12));
+    mask-image: linear-gradient(to left, transparent, currentColor var(--space-12))
+}
+
+.tabButtonFade_ve0N80:dir(rtl) {
+    -webkit-mask-image: linear-gradient(to right, transparent, currentColor var(--space-12));
+    mask-image: linear-gradient(to right, transparent, currentColor var(--space-12))
 }
 
 .trail_ve0N80 {
@@ -122,16 +144,13 @@
 
 .channelName_ve0N80 {
     flex: 1 1 auto;
-    -webkit-mask-image: linear-gradient(to left, transparent, currentColor var(--space-12));
-    mask-image: linear-gradient(to left, transparent, currentColor var(--space-12));
     min-width: 0;
     overflow: hidden;
     white-space: nowrap
 }
 
-.channelName_ve0N80:dir(rtl) {
-    -webkit-mask-image: linear-gradient(to right, transparent, currentColor var(--space-12));
-    mask-image: linear-gradient(to right, transparent, currentColor var(--space-12))
+.tabUnread_ve0N80 .channelName_ve0N80 {
+    color: var(--text-strong)
 }
 
 .guildIcon_ve0N80 {
@@ -149,8 +168,17 @@
     border-radius: var(--radius-round)
 }
 
-.locationIcon_ve0N80 {
+.locationIcon_ve0N80,
+.pinIcon_ve0N80 {
     flex-shrink: 0
+}
+
+@container (width < 56px) {
+
+    .tab_ve0N80:has(:focus-visible) .pinIcon_ve0N80,
+    .tab_ve0N80:hover .pinIcon_ve0N80 {
+        display: none
+    }
 }
 
 .trailDuration_ve0N80,
@@ -159,11 +187,26 @@
     flex-shrink: 0
 }
 
-.trailButton_ve0N80,
-.trailDuration_ve0N80,
-.trailMention_ve0N80,
-.unreadIndicator_ve0N80 {
+.trailMention_ve0N80 {
+    justify-content: center;
+    margin-inline: var(--space-4) calc(var(--custom-channel-tab-trail-icon-inset)*-1);
+    min-width: var(--space-24)
+}
+
+@container (width < 176px) {
+    .trailDuration_ve0N80 {
+        display: none
+    }
+}
+
+.trailDuration_ve0N80 {
     margin-inline-start: var(--space-4)
+}
+
+.tab_ve0N80:has(:focus-visible) .trailButton_ve0N80,
+.tab_ve0N80:hover .trailButton_ve0N80,
+.unreadIndicator_ve0N80 {
+    margin-inline: calc(var(--space-4) - var(--custom-channel-tab-trail-icon-inset)) calc(var(--custom-channel-tab-trail-icon-inset)*-1)
 }
 
 .trailButton_ve0N80,
@@ -174,18 +217,6 @@
     height: var(--space-24);
     justify-content: center;
     width: var(--space-24)
-}
-
-.tab_ve0N80:has(:focus-visible) .trailButton_ve0N80,
-.tab_ve0N80:hover .trailButton_ve0N80,
-.unreadIndicator_ve0N80 {
-    margin-inline-end: calc(var(--custom-channel-tab-trail-icon-inset)*-1)
-}
-
-.unreadIndicator_ve0N80 {
-    box-sizing: border-box;
-    justify-content: flex-end;
-    padding-inline-end: var(--custom-channel-tab-trail-icon-inset)
 }
 
 .trailButton_ve0N80 {
@@ -202,14 +233,12 @@
 }
 
 .tab_ve0N80 .trailButton_ve0N80 {
-    margin-inline-start: 0;
     overflow: hidden;
     width: 0
 }
 
 .tab_ve0N80:has(:focus-visible) .trailButton_ve0N80,
 .tab_ve0N80:hover .trailButton_ve0N80 {
-    margin-inline-start: var(--space-4);
     width: var(--space-24)
 }
 
@@ -220,8 +249,7 @@
 
 .result_hNjocA {
     border-radius: var(--radius-sm);
-    flex-shrink: 0;
-    height: var(--space-48)
+    flex-shrink: 0
 }
 
 .header_hNjocA {
@@ -232,8 +260,7 @@
     align-items: center;
     display: flex;
     gap: var(--space-8);
-    height: 100%;
-    padding-inline: var(--space-8)
+    padding: var(--space-8)
 }
 
 .visual_hNjocA {
@@ -320,9 +347,14 @@
     gap: var(--space-8);
     height: var(--custom-app-top-bar-height);
     min-width: 0;
-    padding-inline-end: var(--space-24);
+    padding-inline-end: 268px;
     position: relative;
     -webkit-app-region: drag
+}
+
+.platform-linux .tabBar_lg7KTV,
+.platform-win .tabBar_lg7KTV {
+    padding-inline-end: 409px
 }
 
 .refresh-fast-follow-guild-bg .tabBar_lg7KTV {
@@ -336,4 +368,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=910df0ef568ef318.css.map*/
+/*# sourceMappingURL=aa2bf8bc18e1e29a.css.map*/
