@@ -56,22 +56,6 @@
     }
   },
   {
-    "name": "2025-05-search-results-feedback",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2025-08-browser-hevc",
     "kind": "user",
     "defaultConfig": {

@@ -1,70 +1,64 @@
 var i = n(450510),
-    r = n(868974),
-    a = n(495867),
-    s = n(670455);
-let l = { chance: 0.2, cooldown: 864e5 },
-    o = {
-        [s.MW.VOICE]: {
-            ...l,
-            group: s.h0.AV,
+    r = n(495867),
+    a = n(670455);
+let s = { chance: 0.2, cooldown: 864e5 },
+    l = {
+        [a.MW.VOICE]: {
+            ...s,
+            group: a.h0.AV,
             hotspot: i._2.VOICE_CALL_FEEDBACK,
             storageKey: "lastVoiceFeedback",
-            feedbackType: s.MW.VOICE,
+            feedbackType: a.MW.VOICE,
             eligibilityChecks: [
                 function (e) {
-                    return !a.A.getWasEverRtcConnected() || a.A.getWasEverMultiParticipant();
+                    return !r.A.getWasEverRtcConnected() || r.A.getWasEverMultiParticipant();
                 },
             ],
         },
-        [s.MW.STREAM]: {
-            ...l,
-            group: s.h0.AV,
+        [a.MW.STREAM]: {
+            ...s,
+            group: a.h0.AV,
             hotspot: i._2.REPORT_PROBLEM_POST_STREAM,
             storageKey: "lastStreamFeedback",
-            feedbackType: s.MW.STREAM,
+            feedbackType: a.MW.STREAM,
         },
-        [s.MW.VIDEO_BACKGROUND]: {
-            ...l,
-            group: s.h0.AV,
+        [a.MW.VIDEO_BACKGROUND]: {
+            ...s,
+            group: a.h0.AV,
             hotspot: i._2.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: "lastVideoBackgroundFeedback",
-            feedbackType: s.MW.VIDEO_BACKGROUND,
+            feedbackType: a.MW.VIDEO_BACKGROUND,
         },
-        [s.MW.ACTIVITY]: {
+        [a.MW.ACTIVITY]: {
             cooldown: 0,
             chance: 0.5,
-            group: s.h0.AV,
+            group: a.h0.AV,
             hotspot: i._2.POST_ACTIVITY_FEEDBACK,
             storageKey: "lastActivityFeedback",
-            feedbackType: s.MW.ACTIVITY,
+            feedbackType: a.MW.ACTIVITY,
         },
-        [s.MW.IN_APP_REPORTS]: {
+        [a.MW.IN_APP_REPORTS]: {
             cooldown: 1728e5,
             chance: 0.5,
-            group: s.h0.SAFETY,
+            group: a.h0.SAFETY,
             hotspot: i._2.IN_APP_REPORTS_FEEDBACK,
             storageKey: "inAppReportsFeedback",
-            feedbackType: s.MW.IN_APP_REPORTS,
+            feedbackType: a.MW.IN_APP_REPORTS,
         },
-        [s.MW.SEARCH_RESULTS]: {
-            ...l,
-            group: s.h0.SEARCH,
+        [a.MW.SEARCH_RESULTS]: {
+            ...s,
+            group: a.h0.SEARCH,
             hotspot: i._2.SEARCH_RESULTS_FEEDBACK,
             storageKey: "searchResultsFeedback",
-            feedbackType: s.MW.SEARCH_RESULTS,
-            eligibilityChecks: [
-                function (e) {
-                    return !!(0, r.s)({ location: "FeedbackManager" });
-                },
-            ],
+            feedbackType: a.MW.SEARCH_RESULTS,
         },
-        [s.MW.CONJURE]: {
+        [a.MW.CONJURE]: {
             cooldown: 36e5,
             chance: 1,
-            group: s.h0.BUILDER,
+            group: a.h0.BUILDER,
             hotspot: i._2.CONJURE_FEEDBACK,
             storageKey: "lastConjureFeedback",
-            feedbackType: s.MW.CONJURE,
+            feedbackType: a.MW.CONJURE,
         },
     };
-n.d(t, {}, { u: o });
+n.d(t, {}, { u: l });

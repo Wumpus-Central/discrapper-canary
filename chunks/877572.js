@@ -704,7 +704,7 @@ if (null == e6 || "0.0.0" !== e6.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 679716, Version Hash: 1c2cf6f31e96c5e9dc3f82bcb005b93398de56bb`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 679718, Version Hash: 23573ec636a3c11cd78136e5e190387f1d5b79aa`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     eg.A.initBasic(),
@@ -776,7 +776,7 @@ let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "679716";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "679718";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eF.Ay.setCrashInformation(eU.du.BuildNumber, r);
         let s = eV?.processUtils?.getLastCrash;
@@ -6500,10 +6500,9 @@ function dN() {
                           ((0, tW.mM)(async () => {
                               let { default: e } = await Promise.all([
                                   n.e(36781),
-                                  n.e(139032),
-                                  n.e(155925),
                                   n.e(988295),
-                                  n.e(137381),
+                                  n.e(139032),
+                                  n.e(910404),
                                   n.e(326484),
                                   n.e(574192),
                               ]).then(n.bind(n, 976627));
@@ -8834,10 +8833,9 @@ let uo = (0, tj.Fe)({
                                 ((0, tW.mM)(async () => {
                                     let { default: e } = await Promise.all([
                                         n.e(36781),
-                                        n.e(139032),
-                                        n.e(155925),
                                         n.e(988295),
-                                        n.e(137381),
+                                        n.e(139032),
+                                        n.e(910404),
                                         n.e(326484),
                                         n.e(109163),
                                     ]).then(n.bind(n, 307750));
@@ -16127,7 +16125,7 @@ let pD = "isHideDevBanner",
                     className: to()(py.Wz, py.mr),
                     children: [
                         (0, b.jsx)(pL, { className: py.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "679716" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "679718" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
