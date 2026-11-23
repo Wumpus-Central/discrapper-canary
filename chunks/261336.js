@@ -1551,17 +1551,18 @@ let ej = /^tex_(aura|base_\d+|outfit)_/,
     eL = [1, 1.25, 1.5, 1.75, 2, 3, 4, 5],
     ek = Math.min(...eL),
     eD = Math.max(...eL);
-function eP(e, t) {
-    let { url: a, width: i, height: r, widthAt1x: n } = ep[e];
-    if (null == n) return a;
-    let s = 4096 / Math.max(i, r),
-        c = Math.min((t * n) / i, s),
-        d = s >= 1 && t >= Math.round(i / n);
-    if (c >= 1 || d) return a;
-    let { columns: l, rows: o } = ey[e] ?? eR,
-        u = l * Math.round((i / l) * c),
-        h = o * Math.round((r / o) * c);
-    return `${a}?width=${u}&height=${h}`;
+function eP(e, t, a) {
+    let i = a ? (e.startsWith("tex_aura_") || "tex_wireframe_spritesheet" === e ? 1 : ek) : t,
+        { url: r, width: n, height: s, widthAt1x: c } = ep[e];
+    if (null == c) return r;
+    let d = 4096 / Math.max(n, s),
+        l = Math.min((i * c) / n, d),
+        o = d >= 1 && i >= Math.round(n / c);
+    if (l >= 1 || o) return r;
+    let { columns: u, rows: h } = ey[e] ?? eR,
+        f = u * Math.round((n / u) * l),
+        b = h * Math.round((s / h) * l);
+    return `${r}?width=${f}&height=${b}`;
 }
 let eU = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
     eG = eU.map((e) => `outfit${e}Image`),
@@ -1683,13 +1684,15 @@ function e8(e) {
         a,
         { stage: i, isHidden: n, onExitPlaying: s } = e,
         c = (0, x.bG)([d.A], () => {
-            let e = d.A.windowSize();
-            return (function (e, t) {
-                let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (a) return ek;
-                let i = Math.max(e / 960, t / 540) * (0, eI.A)();
-                return eL.find((e) => e >= i) ?? eD;
-            })(e.width, e.height);
+            var e, t;
+            let a,
+                i = d.A.windowSize();
+            return (
+                (e = i.width),
+                (t = i.height),
+                (a = Math.max(e / 960, t / 540) * (0, eI.A)()),
+                eL.find((e) => e >= a) ?? eD
+            );
         }),
         [l, o] = b.useState(c);
     c > l && o(c);
@@ -1701,28 +1704,27 @@ function e8(e) {
         p = b.useMemo(
             () =>
                 (function (e) {
-                    var t;
-                    let { stage: a, isHidden: i, traits: r, layout: n, textureScale: s, compactAssets: c = !1 } = e,
-                        { base: d, shoes: l, outfit: o, face: u, hat: h, wearable: f, aura: b } = (0, G.XI)(r),
-                        p = ew[o],
-                        _ = {};
+                    let { stage: t, isHidden: a, traits: i, layout: r, textureScale: n, compactAssets: s = !1 } = e,
+                        { base: c, shoes: d, outfit: l, face: o, hat: u, wearable: h, aura: f } = (0, G.XI)(i),
+                        b = ew[l],
+                        p = {};
                     return (
                         eU.forEach((e) => {
-                            let t = Number(e) === p?.riveId ? p.texture : em;
-                            _[`outfit${e}Image`] = eP(t.name, s);
+                            let t = Number(e) === b?.riveId ? b.texture : em;
+                            p[`outfit${e}Image`] = eP(t.name, n, s);
                         }),
                         {
-                            device: n,
-                            chapterID: i && a === S.s9.FACE ? eH[S.s9.IDLE] : eH[a],
-                            faceID: u,
-                            shoesID: l,
-                            headwearID: ex[h],
-                            wearableID: eg[f],
-                            outfitID: p?.riveId ?? 0,
-                            auraImage: ((t = eA[b].name), eP(t, c ? 1 : s)),
-                            baseColorImage: eP(ev[d].name, s),
-                            ...("MobilePortrait" === n && a === S.s9.INTRODUCTION ? eK : eF[n]),
-                            ..._,
+                            device: r,
+                            chapterID: a && t === S.s9.FACE ? eH[S.s9.IDLE] : eH[t],
+                            faceID: o,
+                            shoesID: d,
+                            headwearID: ex[u],
+                            wearableID: eg[h],
+                            outfitID: b?.riveId ?? 0,
+                            auraImage: eP(eA[f].name, n, s),
+                            baseColorImage: eP(ev[c].name, n, s),
+                            ...("MobilePortrait" === r && t === S.s9.INTRODUCTION ? eK : eF[r]),
+                            ...p,
                         }
                     );
                 })({ stage: i, isHidden: n, traits: h, layout: "Desktop", textureScale: l }),
@@ -1732,8 +1734,14 @@ function e8(e) {
         A = m ?? p,
         v = m === p,
         w = (function (e) {
-            let { visibleDataBinding: t, requestedDataBinding: a, textureScale: i, preloadedTextureNames: r } = e,
-                n = (function (e) {
+            let {
+                    visibleDataBinding: t,
+                    requestedDataBinding: a,
+                    textureScale: i,
+                    preloadedTextureNames: r,
+                    compactAssets: n,
+                } = e,
+                s = (function (e) {
                     let { visibleTextureNames: t, requestedTextureNames: a } = e,
                         [i, r] = b.useState(t),
                         [n, s] = b.useState(t);
@@ -1754,16 +1762,16 @@ function e8(e) {
                 var e;
                 let t;
                 return (
-                    (e = new Set([...n, ...r])),
+                    (e = new Set([...s, ...r])),
                     (t = {}),
                     eq.forEach((a) => {
-                        let { name: r, swapKey: n } = a,
-                            s = e.has(r) ? eP(r, i) : em.url;
-                        t[n] = { source: { uri: s } };
+                        let { name: r, swapKey: s } = a,
+                            c = e.has(r) ? eP(r, i, n) : em.url;
+                        t[s] = { source: { uri: c } };
                     }),
                     t
                 );
-            }, [n, r, i]);
+            }, [s, r, i, n]);
         })({
             visibleDataBinding: A,
             requestedDataBinding: p,
@@ -1775,6 +1783,7 @@ function e8(e) {
                     s = n ? e : null;
                 return (s !== a && i(s), n ? r : eZ);
             })(i, v),
+            compactAssets: !1,
         }),
         {
             assetLoader: I,
