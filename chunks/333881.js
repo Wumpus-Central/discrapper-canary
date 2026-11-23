@@ -13,8 +13,8 @@ var i,
     m = t(142617),
     f = t(819648),
     p = t(617390),
-    y = t(858899),
-    h = t(564218),
+    h = t(858899),
+    y = t(564218),
     I = t(792996);
 async function E(e) {
     let n = new Image();
@@ -98,8 +98,8 @@ function ef(e) {
     });
 }
 var ep = t(290136),
-    ey = t(519222),
-    eh = t(345254),
+    eh = t(519222),
+    ey = t(345254),
     eI = t(624479),
     eE = t(257249),
     e_ = t(383233),
@@ -195,8 +195,8 @@ var eY = t(110384),
     nm = t(152367),
     nf = t(37646),
     np = t(73153),
-    ny = t(147087),
-    nh = t(773669),
+    nh = t(147087),
+    ny = t(773669),
     nI = t(132183);
 let nE = new Map();
 var n_ = t(534890),
@@ -234,29 +234,30 @@ function nF(e) {
             onSelect: f,
             onHeightUpdate: p,
         } = e,
-        { analyticsLocations: y } = (0, g.Ay)([u.A.MESSAGE_CONTEXT_MENU]),
-        h = d,
+        { analyticsLocations: h } = (0, g.Ay)([u.A.MESSAGE_CONTEXT_MENU]),
+        y = d,
         E = d.getAttribute("data-type"),
         _ = d.getAttribute("data-id"),
         b = d.getAttribute("data-name");
     if (null != A) t = n = i = A.url;
     else
-        for (; (0, o.vq)(h);)
-            ((0, o.vq)(h, HTMLImageElement) && null != h.src && (t = h.src),
-                (0, o.vq)(h, HTMLAnchorElement) &&
-                    null != h.href &&
-                    ((n = h.href),
-                    (a = h.textContent),
+        for (; (0, o.vq)(y);)
+            ((0, o.vq)(y, HTMLImageElement) && null != y.src && (t = y.src),
+                y.hasAttribute("data-composite-image") && (t = void 0),
+                (0, o.vq)(y, HTMLAnchorElement) &&
+                    null != y.href &&
+                    ((n = y.href),
+                    (a = y.textContent),
                     null == t &&
-                        "img" === h.getAttribute("data-role") &&
+                        "img" === y.getAttribute("data-role") &&
                         ((t = n),
-                        h.hasAttribute("data-safe-src") &&
-                            "" !== h.getAttribute("data-safe-src") &&
-                            (i = h.getAttribute("data-safe-src")))),
-                (h = h.parentElement));
+                        y.hasAttribute("data-safe-src") &&
+                            "" !== y.getAttribute("data-safe-src") &&
+                            (i = y.getAttribute("data-safe-src")))),
+                (y = y.parentElement));
     let S = document.getSelection()?.toString() ?? "";
     return (0, l.jsx)(g.f5, {
-        value: y,
+        value: h,
         children: nH({
             message: s,
             channel: r,
@@ -464,7 +465,7 @@ function nH(e) {
                       icon: eT.PencilIcon,
                   })
                 : null),
-        ty =
+        th =
             ((V = (0, e0.u)(n6, n1)),
             ($ = (0, eQ.A)()),
             !V || $
@@ -475,17 +476,17 @@ function nH(e) {
                       leadingAccessory: { type: "icon", icon: eY.ArrowAngleLeftUpIcon },
                       icon: eY.ArrowAngleLeftUpIcon,
                       action: (e) => {
-                          (0, ey.$b)(n6, n1, e);
+                          (0, eh.$b)(n6, n1, e);
                       },
                   })),
-        th = (0, eN.m)(n1)
+        ty = (0, eN.m)(n1)
             ? (0, l.jsx)(r.Dr, {
                   id: "forward",
                   label: I.intl.string(I.t.I3ltXO),
                   leadingAccessory: { type: "icon", icon: eO.A },
                   icon: eO.A,
                   action: () => {
-                      (0, ey.Z4)(n6, n1);
+                      (0, eh.Z4)(n6, n1);
                   },
               })
             : null,
@@ -496,7 +497,7 @@ function nH(e) {
                   leadingAccessory: { type: "icon", icon: ng.ThreadIcon },
                   icon: ng.ThreadIcon,
                   action: () => {
-                      (0, ey.Nw)(n6, n1);
+                      (0, eh.Nw)(n6, n1);
                   },
               })
             : null,
@@ -525,7 +526,7 @@ function nH(e) {
                     isTranslated: c,
                 } = (function (e) {
                     let [n, t] = a.useState(!1),
-                        i = (0, C.bG)([nh.default], () => nh.default.locale);
+                        i = (0, C.bG)([ny.default], () => ny.default.locale);
                     return {
                         handleTranslate: a.useCallback(
                             async (l, a) => {
@@ -534,7 +535,7 @@ function nH(e) {
                                 t(!0);
                                 let r = a ?? (0, I.getAvailableLocales)().find((e) => e.value === o)?.name ?? o;
                                 (nE.has(e.id) || nE.set(e.id, e.content),
-                                    (0, y.P0)({
+                                    (0, h.P0)({
                                         text: I.intl.formatToPlainString(I.t.Znl8Z8, { targetLanguage: r }),
                                         icon: nm.MagicWandIcon,
                                     }));
@@ -549,7 +550,7 @@ function nH(e) {
                                             type: "MESSAGE_UPDATE",
                                             message: { id: e.id, channel_id: e.channel_id, content: n.body.content },
                                         }),
-                                        (0, y.P0)({
+                                        (0, h.P0)({
                                             text: I.intl.formatToPlainString(I.t.FtVUqm, { targetLanguage: r }),
                                             variant: "success",
                                         }));
@@ -598,7 +599,7 @@ function nH(e) {
                             }),
                         [i, s, n],
                     )),
-                u = (0, ny.b)();
+                u = (0, nh.b)();
             return null != e.content && "" !== e.content.trim() && u
                 ? c
                     ? (0, l.jsx)(r.Dr, {
@@ -667,10 +668,10 @@ function nH(e) {
                       label: I.intl.string(I.t.NpHUi1),
                       leadingAccessory: { type: "icon", icon: ep.CircleQuestionIcon },
                       icon: ep.CircleQuestionIcon,
-                      action: () => (0, ey.vc)(n6),
+                      action: () => (0, eh.vc)(n6),
                   })
                 : null,
-        tC = (0, eh.A)(n1, n6),
+        tC = (0, ey.A)(n1, n6),
         tT =
             ((ed = (0, nS.WU)(n6.getGuildId(), "message_context_menu")),
             (em = (0, C.bG)([nb.A], () => nb.A.getConversationForMessage(n6.id, n1.id) ?? null, [n6.id, n1.id])),
@@ -934,9 +935,9 @@ function nH(e) {
                 [u, g] = a.useState(!1),
                 [A, m] = (0, U.H6)(n),
                 { rulesByTriggerType: f, updateRule: p } = (0, U.wP)(n),
-                h = a.useMemo(() => f[W] ?? [], [f]),
-                E = 0 === h.length,
-                _ = t > h.length && !E;
+                y = a.useMemo(() => f[W] ?? [], [f]),
+                E = 0 === y.length,
+                _ = t > y.length && !E;
             if (!a.useMemo(() => (0, F.i_)(n), [n]) || null == e || 0 === e.length || null == n) return null;
             let b = e.split(" "),
                 S = b.length;
@@ -966,7 +967,7 @@ function nH(e) {
                                     action: x,
                                     disabled: i,
                                 }),
-                            h.map((n) => {
+                            y.map((n) => {
                                 let t = (0, B.J6)(W).reduce((e, t) => {
                                     let i = n.actions.find((e) => {
                                         let { type: n } = e;
@@ -1000,14 +1001,14 @@ function nH(e) {
                                                         keywordFilter: [...(n.triggerMetadata?.keywordFilter ?? []), e],
                                                     },
                                                 };
-                                                (await o(t, h),
+                                                (await o(t, y),
                                                     p(t),
                                                     null != s
-                                                        ? (0, y.P0)({
+                                                        ? (0, h.P0)({
                                                               text: I.intl.string(I.t.wH6L0r),
                                                               variant: "critical",
                                                           })
-                                                        : (0, y.P0)({
+                                                        : (0, h.P0)({
                                                               text: I.intl.string(I.t["0rdYm2"]),
                                                               variant: "success",
                                                           }));
@@ -1114,9 +1115,9 @@ function nH(e) {
                                               })
                                           );
                                       })(e);
-                                      await (0, h.H)(n, "checkpoint-character.png");
+                                      await (0, y.H)(n, "checkpoint-character.png");
                                   } catch {
-                                      (0, y.P0)({ text: I.intl.string(I.t["8Ve/S0"]), variant: "critical" });
+                                      (0, h.P0)({ text: I.intl.string(I.t["8Ve/S0"]), variant: "critical" });
                                   }
                               })(nY));
                       },
@@ -1210,7 +1211,7 @@ function nH(e) {
             (0, l.jsx)(r.rX, { children: tA }),
             (0, l.jsx)(r.rX, { children: tm }),
             (0, l.jsxs)(r.rX, { children: ["" === n5 ? tg : null, tf, tw] }),
-            (0, l.jsxs)(r.rX, { children: [tp, ty, th, tI] }),
+            (0, l.jsxs)(r.rX, { children: [tp, th, ty, tI] }),
             (0, l.jsxs)(r.rX, { children: [tE, t_, tb, tS, tx, tj, tM, tD, tv, tC, tT, tG, tL, tN] }),
             (0, l.jsxs)(r.rX, { children: [tO, tR, tk, ti && tP, ti && tU, tB] }),
             t$,
