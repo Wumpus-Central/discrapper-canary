@@ -6,7 +6,7 @@ r.exports = {
     HL: "accountCreditTitle_NedsCW",
     JU: "accountCreditDescription_NedsCW",
     O: "cardText_NedsCW",
-    wb: "noItemsCard_NedsCW " + e(736541)["body-md/medium"],
+    wb: "noItemsCard_NedsCW " + n(736541)["body-md/medium"],
     pV: "noItemsIcon_NedsCW",
     hr: "hr_NedsCW",
 };

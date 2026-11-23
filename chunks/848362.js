@@ -42,20 +42,20 @@ n.d(
                     handleGoLive: p,
                     onClose: f,
                     onSelect: g,
-                    appContext: y = A.BRT.APP,
-                    disableChangeWindows: I = !1,
+                    appContext: I = A.BRT.APP,
+                    disableChangeWindows: y = !1,
                     onInteraction: C,
                 } = e,
-                b = r.find((e) => e.ownerId === n?.id) ?? null,
-                S = E(t, n, r),
-                w = (0, d.A)(b, y),
+                S = r.find((e) => e.ownerId === n?.id) ?? null,
+                b = E(t, n, r),
+                w = (0, d.A)(S, I),
                 x = (0, h.E)({
-                    disableChangeWindows: I,
-                    stream: b,
+                    disableChangeWindows: y,
+                    stream: S,
                     showReportOption: c,
                     handleGoLive: p,
                     minimal: !0,
-                    appContext: y,
+                    appContext: I,
                 });
             return (0, i.jsx)(u.A, {
                 section: A.JJy.CONTEXT_MENU,
@@ -65,10 +65,10 @@ n.d(
                     navId: "manage-streams",
                     onClose: f,
                     onInteraction: C,
-                    "aria-label": null != b ? v.intl.string(v.t.S5anIc) : v.intl.string(v.t.fjBNo1),
+                    "aria-label": null != S ? v.intl.string(v.t.S5anIc) : v.intl.string(v.t.fjBNo1),
                     children: [
                         (0, i.jsx)(a.rX, {
-                            children: S.map((e) => {
+                            children: b.map((e) => {
                                 let { stream: t, username: n } = e;
                                 return (0, i.jsx)(
                                     a.Dr,

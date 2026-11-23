@@ -22,13 +22,13 @@ n.d(
                     (m.current.delete(e), A(m.current.size > 0));
                 }, []),
                 E = i.useCallback((e) => (m.current.add(e), A(!0), () => v(e)), [v]),
-                x = i.useCallback((e, t) => {
+                w = i.useCallback((e, t) => {
                     for (let n of m.current) n(e, t);
                 }, []);
             i.useEffect(() => {
                 h?.clearConfetti();
             }, [h, y]);
-            let w = i.useCallback((e) => {
+            let x = i.useCallback((e) => {
                     (window.clearTimeout(g.current),
                         (g.current = window.setTimeout(() => {
                             ((e.width = 0), (e.height = 0));
@@ -44,22 +44,22 @@ n.d(
                 }, []),
                 C = i.useCallback(
                     (e) => {
-                        w(e.canvas);
+                        x(e.canvas);
                     },
-                    [w],
+                    [x],
                 );
             return (
                 i.useEffect(() => {
                     let e = h?.getCanvas();
                     if (null == e) return;
-                    let t = new ResizeObserver(() => w(e));
+                    let t = new ResizeObserver(() => x(e));
                     return (
                         t.observe(e),
                         () => {
                             (t.disconnect(), window.clearTimeout(g.current));
                         }
                     );
-                }, [h, w]),
+                }, [h, x]),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.k, {
@@ -74,7 +74,7 @@ n.d(
                             ref: f,
                             className: d.J,
                             environment: u.XA,
-                            onClick: p ? x : void 0,
+                            onClick: p ? w : void 0,
                             onBeforeRender: b,
                             onAfterRender: C,
                         }),

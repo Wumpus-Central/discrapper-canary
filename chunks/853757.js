@@ -17,8 +17,8 @@ var r = n(477900),
     y = n(638495),
     v = n(557361),
     E = n(353680),
-    x = n(318009),
-    w = n(92960),
+    w = n(318009),
+    x = n(92960),
     b = n(14214),
     C = n(775602),
     N = n(697138),
@@ -118,8 +118,8 @@ function eh(e) {
             },
             [s, n],
         ),
-        x = (0, h.bG)([ei.A], () => ei.A.getFocusedRunningGame()),
-        w = d
+        w = (0, h.bG)([ei.A], () => ei.A.getFocusedRunningGame()),
+        x = d
             ? (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)(H.E, {
@@ -147,14 +147,14 @@ function eh(e) {
         b = d ? null : ea.intl.string(ea.t.oEJEFq);
     return (0, r.jsx)(el.$, {
         title: ea.intl.string(ea.t.U38qZj),
-        body: w,
+        body: x,
         hint: p ? b : void 0,
         confirmText: ea.intl.string(ea.t.a3HlgJ),
-        cancelText: null != x ? ea.intl.string(ea.t.qIYnPo) : void 0,
+        cancelText: null != w ? ea.intl.string(ea.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(q.A, { width: 40, height: 40, className: eu.Lo }),
         onNotificationClick: v,
         onConfirmClick: y,
-        onCancelClick: null != x ? E : void 0,
+        onCancelClick: null != w ? E : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
@@ -225,8 +225,8 @@ var eg = n(97469),
     ey = n(723702),
     ev = n(677134),
     eE = n(253400),
-    ex = n(80833),
-    ew = n(869146),
+    ew = n(80833),
+    ex = n(869146),
     eb = n(392164),
     eC = n(577063);
 function eN(e) {
@@ -255,7 +255,7 @@ class e_ extends i.Component {
         (null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
-            (0, ex.M)(e),
+            (0, ew.M)(e),
             e.addEventListener("blur", this.handleBlur),
             ey.isPlatformEmbedded
                 ? t.addEventListener("contextmenu", ev.contextMenuCallbackNative, !1)
@@ -266,7 +266,7 @@ class e_ extends i.Component {
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                (ew.A.unmountWindow(this.props.windowKey), ey.isPlatformEmbedded && eE.Ay.close(this.props.windowKey));
+                (ex.A.unmountWindow(this.props.windowKey), ey.isPlatformEmbedded && eE.Ay.close(this.props.windowKey));
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -310,7 +310,7 @@ class e_ extends i.Component {
         let { guestWindow: e, channelId: t } = this.props,
             n = e.document;
         for (let e of ((this._combokeys = (0, P.I)(n.documentElement)),
-        [b.VT, b.rR, (0, w.LB)(t), ...(this.props.keybinds ?? [])]))
+        [b.VT, b.rR, (0, x.LB)(t), ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
                     this._combokeys.bindGlobal(t, (t, n) => ("function" == typeof e.action && e.action(t, n), !1));
@@ -334,8 +334,8 @@ class e_ extends i.Component {
                 appContext: m,
             } = this.props,
             E = eN({ withTitleBar: l, isFullScreen: i }),
-            w = n === eb.f,
-            b = w ? ef : R.A;
+            x = n === eb.f,
+            b = x ? ef : R.A;
         return (0, r.jsx)(u.Kd, {
             children: (0, r.jsxs)(
                 em.e,
@@ -350,7 +350,7 @@ class e_ extends i.Component {
                                 children: [
                                     (0, r.jsx)(eD, {
                                         guestWindow: o,
-                                        className: s()(a, { overlay: w }),
+                                        className: s()(a, { overlay: x }),
                                         children: (0, r.jsxs)(b, {
                                             children: [
                                                 (0, r.jsx)(j.Al, {}),
@@ -380,7 +380,7 @@ class e_ extends i.Component {
                                                                         ],
                                                                     }),
                                                                     !g && (0, r.jsx)(y.b, {}),
-                                                                    (0, r.jsx)(x.A, {}),
+                                                                    (0, r.jsx)(w.A, {}),
                                                                     (0, r.jsx)(c.P, {}),
                                                                     (0, r.jsx)(L.C8, {}),
                                                                     (0, r.jsx)(M.ok, {}),
@@ -426,9 +426,9 @@ function eD(e) {
 }
 let eS = function (e) {
     let { ref: t, ...n } = e,
-        { guestWindow: i, isFullScreen: l } = (0, h.cf)([ew.A], () => ({
-            guestWindow: ew.A.getWindow(n.windowKey),
-            isFullScreen: ew.A.isWindowFullScreen(n.windowKey),
+        { guestWindow: i, isFullScreen: l } = (0, h.cf)([ex.A], () => ({
+            guestWindow: ex.A.getWindow(n.windowKey),
+            isFullScreen: ex.A.isWindowFullScreen(n.windowKey),
         }));
     a()(null != i, "Missing guestWindow reference");
     let { forcedColors: s, connectedEmbeddedActivity: o } = (0, h.cf)([C.Ay, O.Ay], () => ({

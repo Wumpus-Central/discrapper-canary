@@ -38,20 +38,20 @@ n.d(
                 })(r);
             E = null != C ? `${t} ${C}` : t;
             let [S] = i.useState(new a.Ep()),
-                [I, b] = i.useState(!1),
+                [b, I] = i.useState(!1),
                 [y, _] = i.useState(!1),
                 N = i.useCallback(() => {
                     S.start(
                         250,
                         () => {
-                            b(!1);
+                            I(!1);
                         },
                         !1,
                     );
-                }, [S, b]),
+                }, [S, I]),
                 w = i.useCallback(() => {
-                    (S.stop(), b(!0));
-                }, [S, b]),
+                    (S.stop(), I(!0));
+                }, [S, I]),
                 k = i.useCallback(() => {
                     _(!0);
                 }, []),
@@ -78,7 +78,7 @@ n.d(
                         }),
                     }),
                 targetElementRef: v,
-                shouldShow: y || I,
+                shouldShow: y || b,
                 position: "bottom",
                 children: (e) =>
                     (0, l.jsx)(f.A, {

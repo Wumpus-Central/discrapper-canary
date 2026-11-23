@@ -17,12 +17,12 @@ var i = n(855986),
 let y = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     v = null,
     E = null,
-    x = [],
     w = [],
+    x = [],
     b = [];
 function C(e) {
-    ((x = [...x, e]),
-        (b = _((w = w.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: x.includes(e.data.record.id) }))))),
+    ((w = [...w, e]),
+        (b = _((x = x.map((e) => (e.type === o.rD.HEADER ? e : { ...e, sent: w.includes(e.data.record.id) }))))),
         k.emitChange());
 }
 function N(e) {
@@ -58,13 +58,13 @@ function S(e) {
                       }),
                   )
                 : null,
-        n = w.map((e) => {
+        n = x.map((e) => {
             if (e.type !== o.rD.USER || (null != t && !t.has(e.data.record.id))) return e;
             let n = h.A.getStatus(e.data.record.id),
                 r = N(e.data.record.id);
             return n === e.status && r === e.playingSameGame ? e : { ...e, status: n, playingSameGame: r };
         });
-    return !n.every((e, t) => e === w[t]) && ((b = _((w = n))), !0);
+    return !n.every((e, t) => e === x[t]) && ((b = _((x = n))), !0);
 }
 function I() {
     return S(null);
@@ -92,13 +92,13 @@ let k = new T(l.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             ((v = e.activity),
                 (E = e.resolve),
-                (x = []),
+                (w = []),
                 null == r &&
                     (r = new o.Ay(
                         (e, t) => {
                             let n;
                             ((b = _(
-                                (w = (
+                                (x = (
                                     "" === t.trim()
                                         ? ((n = []),
                                           m.A.getPrivateChannelIds().forEach((e) => {
@@ -121,7 +121,7 @@ let k = new T(l.h, {
                                                 let { record: t } = e;
                                                 return {
                                                     type: o.rD.USER,
-                                                    sent: x.includes(t.id),
+                                                    sent: w.includes(t.id),
                                                     status: h.A.getStatus(t.id),
                                                     playingSameGame: N(t.id),
                                                     data: e,
@@ -133,7 +133,7 @@ let k = new T(l.h, {
                                                     r = d.A.getGuild(t.guild_id);
                                                 return {
                                                     type: o.rD.TEXT_CHANNEL,
-                                                    sent: x.includes(t.id),
+                                                    sent: w.includes(t.id),
                                                     categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
                                                     guildName: r?.name ?? "",
                                                     data: e,
@@ -141,7 +141,7 @@ let k = new T(l.h, {
                                             }
                                             case o.rD.GROUP_DM: {
                                                 let { record: t } = e;
-                                                return { type: o.rD.GROUP_DM, sent: x.includes(t.id), data: e };
+                                                return { type: o.rD.GROUP_DM, sent: w.includes(t.id), data: e };
                                             }
                                             default:
                                                 return null;

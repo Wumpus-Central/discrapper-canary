@@ -16,8 +16,8 @@ var r = n(477900),
     y = n(913379),
     v = n(976860),
     E = n(129230),
-    x = n(856383),
-    w = n(253400),
+    w = n(856383),
+    x = n(253400),
     b = n(721668),
     C = n(652215),
     N = n(792996),
@@ -63,7 +63,7 @@ class S extends i.PureComponent {
         let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
         let r = (0, d.b)(),
-            i = x.A.captureCrash(e, { extra: t });
+            i = w.A.captureCrash(e, { extra: t });
         (E.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -74,7 +74,7 @@ class S extends i.PureComponent {
             error_level: "fatal",
         }),
             D(r),
-            w.Ay.cleanupDisplaySleep());
+            x.Ay.cleanupDisplaySleep());
     }
     _handleSubmitReport() {
         location.reload(!0);

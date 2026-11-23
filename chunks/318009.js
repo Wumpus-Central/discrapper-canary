@@ -32,19 +32,19 @@ function A(e) {
     i.useEffect(() => {
         E.current = n;
     });
-    let x = i.useRef(o);
+    let w = i.useRef(o);
     (i.useEffect(() => {
-        x.current = o;
+        w.current = o;
     }),
-        i.useEffect(() => () => x.current?.(), []),
+        i.useEffect(() => () => w.current?.(), []),
         (0, d.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
-    let w = (0, c.aL)(),
+    let x = (0, c.aL)(),
         b = i.useCallback(() => {
-            w.dispatch(m.jej.POPOUT_SHOW);
-        }, [w]),
+            x.dispatch(m.jej.POPOUT_SHOW);
+        }, [x]),
         C = i.useCallback(() => {
-            w.dispatch(m.jej.POPOUT_HIDE);
-        }, [w]),
+            x.dispatch(m.jej.POPOUT_HIDE);
+        }, [x]),
         N = a.ownerDocument;
     return (0, r.jsx)(s.Ow, {
         focus: "modal",

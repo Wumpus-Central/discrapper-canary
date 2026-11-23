@@ -1,7 +1,7 @@
 var t = n(951178),
     a = n(191850),
-    u = n(792996);
-let r = [
+    r = n(792996);
+let u = [
         [t.q7.APP_CHANNEL, a.default.bHLrO8],
         [t.q7.ACTIVITY, a.default["hp+8nc"]],
         [t.q7.VOICE_CHANNEL, a.default["4V2QWl"]],
@@ -30,7 +30,7 @@ n.d(
     {},
     {
         T8: function (l) {
-            return u.intl.string(s[l]);
+            return r.intl.string(s[l]);
         },
         Y$: function (l) {
             return i
@@ -44,14 +44,14 @@ n.d(
                 });
         },
         nX: function (l) {
-            return r
+            return u
                 .filter((e) => {
                     let [n] = e;
                     return l.includes(n);
                 })
                 .map((l) => {
                     let [, e] = l;
-                    return u.intl.string(e);
+                    return r.intl.string(e);
                 });
         },
     },

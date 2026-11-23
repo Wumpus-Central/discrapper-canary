@@ -48,8 +48,8 @@ var O = n(769015),
     R = n(376943),
     j = n(636585),
     D = n(71393),
-    y = n(994500),
-    b = n(287809),
+    b = n(994500),
+    y = n(287809),
     M = n(147036),
     k = n(427262),
     P = n(792996),
@@ -162,11 +162,11 @@ class F extends r.Component {
             { mentions: n, category: r, channel: s, isMentionLowImportance: l } = this.props;
         return (
             null != n && n > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: n, lowImportance: l })),
-            null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, f.m1)(r, b.default, y.A) })),
+            null != r && (t = (0, i.jsx)("span", { className: w.N4, children: (0, f.m1)(r, y.default, b.A) })),
             (0, i.jsxs)("div", {
                 className: w.UU,
                 children: [
-                    (0, i.jsx)("span", { className: w.YW, children: (0, f.m1)(s, b.default, y.A) }),
+                    (0, i.jsx)("span", { className: w.YW, children: (0, f.m1)(s, y.default, b.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -199,7 +199,7 @@ class F extends r.Component {
     getAccessibilityLabel() {
         let { channel: e } = this.props,
             t = D.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, f.m1)(e, b.default, y.A),
+            n = (0, f.m1)(e, y.default, b.A),
             i = (0, M.Jg)(e);
         return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });
     }
@@ -233,7 +233,7 @@ class Y extends r.Component {
             null != t && t > 0 && (e = (0, i.jsx)(x, { className: w.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: w.UU,
-                children: [(0, i.jsx)("span", { className: w.YW, children: (0, f.m1)(n, b.default, y.A) }), e],
+                children: [(0, i.jsx)("span", { className: w.YW, children: (0, f.m1)(n, y.default, b.A) }), e],
             })
         );
     }
@@ -246,7 +246,7 @@ class Y extends r.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, f.m1)(e, b.default, y.A);
+            n = (0, f.m1)(e, y.default, b.A);
         return null != t && t > 0
             ? P.intl.formatToPlainString(P.t.LYdVfN, { name: n, mentions: t })
             : P.intl.formatToPlainString(P.t.lLSbno, { name: n });
@@ -283,7 +283,7 @@ class H extends r.Component {
     getDisplayNickname() {
         let e,
             { user: t, comparator: n } = this.props,
-            i = y.A.getNickname(t.id);
+            i = b.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
                 (e = i ?? k.Ay.getName(t)),

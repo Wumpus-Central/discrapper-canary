@@ -1,4 +1,4 @@
-n.d(t, { m: () => y });
+n.d(t, { m: () => b });
 var i = n(477900);
 n(582128);
 var r = n(855986),
@@ -84,7 +84,7 @@ function j(e) {
     });
 }
 var D = n(316632);
-function y(e) {
+function b(e) {
     var t;
     let { onClose: n, markAsDismissed: m } = e,
         T = p.H.useConfig({ location: "entrance_sound_picker_upsell" }),

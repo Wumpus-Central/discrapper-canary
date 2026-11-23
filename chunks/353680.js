@@ -324,13 +324,13 @@ class v {
     }
 }
 let E = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
-    x = (0, l.eV)(
+    w = (0, l.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
-    w = {
+    x = {
         backends: [
-            { id: "html5", backend: i.t, transition: x },
+            { id: "html5", backend: i.t, transition: w },
             {
                 id: "keyboard",
                 backend: (e, t, n) => new v(e, t, n),
@@ -343,5 +343,5 @@ let E = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
     };
 function b(e) {
     let { children: t } = e;
-    return (0, r.jsx)(l.QP, { options: w, children: t });
+    return (0, r.jsx)(l.QP, { options: x, children: t });
 }

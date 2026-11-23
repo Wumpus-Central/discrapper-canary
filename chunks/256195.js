@@ -21,7 +21,7 @@ n.d(
         A: function (e) {
             let { participant: t, width: n, noArt: r = !1, selected: v = !1 } = e,
                 E = n < 195,
-                y = (0, s.bG)([h.A, m.default], () =>
+                I = (0, s.bG)([h.A, m.default], () =>
                     h.A.getAllActiveStreams().some((e) => {
                         let { ownerId: t } = e;
                         return t !== m.default.getId();
@@ -49,7 +49,7 @@ n.d(
                                           text: n < 175 ? f.intl.string(f.t.I6JG46) : f.intl.string(f.t["7Xq/nV"]),
                                       }),
                                   }),
-                                  y
+                                  I
                                       ? (0, i.jsx)("div", {
                                             className: l()(g.lO, g.EU),
                                             children: (0, i.jsx)(o.m, {

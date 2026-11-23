@@ -1,7 +1,7 @@
 a.d(e, { A: () => R });
 var i = a(858899),
-    l = a(610056),
-    n = a(485845),
+    n = a(610056),
+    l = a(485845),
     r = a(179771),
     s = a(384739),
     c = a(633075),
@@ -11,34 +11,34 @@ var i = a(858899),
     p = a(856383),
     E = a(998218),
     A = a(361504),
-    I = a(316601),
-    f = a(191850),
+    f = a(316601),
+    I = a(191850),
     _ = a(792996);
 let g = new Set();
 function R(t, e) {
     var a;
     let R,
-        L =
+        m =
             ((a = { onTurnedOn: e, showToast: i.P0 }),
-            null == (R = I.A.getProject(t)?.id)
+            null == (R = f.A.getProject(t)?.id)
                 ? null
                 : {
                       clientId: t,
                       scopes: [r.F.IDENTIFY, r.F.APPLICATION_IDENTITIES_WRITE],
                       responseType: "code",
                       redirectUri: "https://127.0.0.1",
-                      integrationType: n.b.GUILD_INSTALL,
+                      integrationType: l.b.GUILD_INSTALL,
                       callback: (e) => {
                           let { location: i } = e,
-                              l = E.A.toURLSafe(i ?? "")?.searchParams.get("code");
+                              n = E.A.toURLSafe(i ?? "")?.searchParams.get("code");
                           return (
-                              null != l &&
+                              null != n &&
                                   (async function (t, e, a, i) {
                                       if (!g.has(e)) {
                                           g.add(e);
                                           try {
                                               await (async function (t, e, a, i) {
-                                                  let { onTurnedOn: l, showToast: n } = i;
+                                                  let { onTurnedOn: n, showToast: l } = i;
                                                   try {
                                                       (await (async function (t, e) {
                                                           let a,
@@ -63,11 +63,11 @@ function R(t, e) {
                                                               }
                                                           })(e));
                                                   } catch {
-                                                      n({ text: _.intl.string(f.default.to9Sp4), variant: "critical" });
+                                                      l({ text: _.intl.string(I.default.to9Sp4), variant: "critical" });
                                                       return;
                                                   }
                                                   try {
-                                                      l?.();
+                                                      n?.();
                                                   } catch (t) {
                                                       p.A.captureException(t);
                                                   }
@@ -77,10 +77,10 @@ function R(t, e) {
                                               g.delete(e);
                                           }
                                       }
-                                  })(R, t, l, a),
+                                  })(R, t, n, a),
                               !0
                           );
                       },
                   });
-    null != L && (0, l.openOAuth2Modal)(L);
+    null != m && (0, n.openOAuth2Modal)(m);
 }

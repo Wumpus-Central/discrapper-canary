@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => I });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -26,21 +26,21 @@ let g = (0, n(945810).mj)({
 var A = n(652215),
     v = n(996988),
     E = n(621647);
-let y = function (e) {
+let I = function (e) {
     let {
             style: t,
             src: n,
             backgroundSrc: l,
             userId: c,
-            guildId: y,
-            pulseSpeakingIndicator: I = !1,
+            guildId: I,
+            pulseSpeakingIndicator: y = !1,
             speaking: C = !1,
-            ...b
+            ...S
         } = e,
-        S = l ?? n,
-        w = (0, u.Ay)(S, a.A.unsafe_rawColors.PRIMARY_800.css),
+        b = l ?? n,
+        w = (0, u.Ay)(b, a.A.unsafe_rawColors.PRIMARY_800.css),
         x = g.useConfig({ location: "VideoBackground" }).enabled,
-        T = (0, m.Ay)(c ?? "", y),
+        T = (0, m.Ay)(c ?? "", I),
         R = (0, h.tM)(T?.themeColors?.[0]) ?? A.NJ8.DARK,
         { profileThemeStyle: _, profileThemeClassName: k } = (0, p.A)({
             theme: R,
@@ -51,16 +51,16 @@ let y = function (e) {
         P = T?.themeColors?.[0] != null && T?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
-            null != c && x && (0, f.A)(c, void 0, { guildId: y });
-        }, [x, c, y]),
+            null != c && x && (0, f.A)(c, void 0, { guildId: I });
+        }, [x, c, I]),
         null == n)
     )
         return null;
-    let M = (0, i.jsx)(o.eu, { className: E.R, src: n, ...b }),
+    let M = (0, i.jsx)(o.eu, { className: E.R, src: n, ...S }),
         O = { ...t, backgroundColor: w };
     return (0, i.jsx)("div", {
         style: P ? { ...t, ..._ } : { ...O },
         className: s()(E.T, { [k]: P }),
-        children: I ? (0, i.jsx)(d, { shouldAnimate: C, children: M }) : M,
+        children: y ? (0, i.jsx)(d, { shouldAnimate: C, children: M }) : M,
     });
 };

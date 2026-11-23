@@ -17,11 +17,11 @@ var r = n(477900),
     y = n(435558),
     v = n.n(y),
     E = n(939249);
-function x(e, t, n) {
+function w(e, t, n) {
     return (n.y - e.y) * (t.x - e.x) > (t.y - e.y) * (n.x - e.x);
 }
-function w(e, t, n, r) {
-    return x(e, n, r) !== x(t, n, r) && x(e, t, n) !== x(e, t, r);
+function x(e, t, n, r) {
+    return w(e, n, r) !== w(t, n, r) && w(e, t, n) !== w(e, t, r);
 }
 var b = n(792996),
     C = n(229834);
@@ -104,15 +104,15 @@ let S = i.memo(function (e) {
         m = i.useRef([]),
         p = i.useRef(!1),
         A = i.useRef(null),
-        [x, S] = i.useState(0),
+        [w, S] = i.useState(0),
         [I, j] = i.useState({ x: 0, y: 0 }),
         T = Math.abs(I.x) + Math.abs(I.y) > 0,
         k = i.useMemo(() => v().chunk(f, _), [f]),
         R = i.useCallback(
             (e, t) => {
-                null == m.current[x] ? (m.current[x] = []) : (m.current[x][t] = e);
+                null == m.current[w] ? (m.current[w] = []) : (m.current[w][t] = e);
             },
-            [x],
+            [w],
         ),
         P = i.useCallback(
             (e, t) => {
@@ -149,9 +149,9 @@ let S = i.memo(function (e) {
         }, []),
         U = i.useCallback(
             (e) => {
-                null != A.current && (e.preventDefault(), e.stopPropagation(), d?.(_ * x + A.current));
+                null != A.current && (e.preventDefault(), e.stopPropagation(), d?.(_ * w + A.current));
             },
-            [d, x],
+            [d, w],
         ),
         K = i.useMemo(
             () =>
@@ -170,8 +170,8 @@ let S = i.memo(function (e) {
                         ((r = Math.max(t, n)),
                         (i = Math.sqrt(Math.pow(s.x - o.x, 2) + Math.pow(s.y - o.y, 2))),
                         { x: o.x + ((o.x - s.x) / i) * r, y: o.y + ((o.y - s.y) / i) * r });
-                    for (let e = 0; e < m.current[x].length; e++) {
-                        let t = m.current[x][e];
+                    for (let e = 0; e < m.current[w].length; e++) {
+                        let t = m.current[w][e];
                         if (
                             null != t &&
                             (function (e, t, n) {
@@ -179,28 +179,28 @@ let S = i.memo(function (e) {
                                     i = { x: n.x + n.width, y: n.y },
                                     l = { x: n.x, y: n.y + n.height },
                                     s = { x: n.x + n.width, y: n.y + n.height };
-                                return w(e, t, r, i) || w(e, t, i, s) || w(e, t, s, l) || w(e, t, l, r);
+                                return x(e, t, r, i) || x(e, t, i, s) || x(e, t, s, l) || x(e, t, l, r);
                             })(s, u, t.getBoundingClientRect())
                         )
-                            return void P(x, e);
+                            return void P(w, e);
                     }
                     L();
                 }, 16),
-            [a, G, L, P, x, n, t],
+            [a, G, L, P, w, n, t],
         ),
         W = i.useCallback(
             (e) => {
                 if (!c) return;
-                let t = x + (e.deltaY > 0 ? 1 : -1);
+                let t = w + (e.deltaY > 0 ? 1 : -1);
                 t >= 0 &&
                     t < k.length &&
                     (null != A.current && (k[t].length > A.current ? P(t, A.current) : L()), S(t));
             },
-            [c, x, k, P, L],
+            [c, w, k, P, L],
         ),
         B = i.useMemo(
             () =>
-                k[x].map((e, i) => {
+                k[w].map((e, i) => {
                     let o = O[i];
                     if (null == o) throw Error(`Too many items supplied ${f.length} expected max of ${O.length}`);
                     let a = D(o.x, t, l),
@@ -216,7 +216,7 @@ let S = i.memo(function (e) {
                         i,
                     );
                 }),
-            [k, x, t, l, n, s, f.length, R],
+            [k, w, t, l, n, s, f.length, R],
         );
     return (0, r.jsx)(E.D, {
         className: C.Pw,
@@ -325,8 +325,8 @@ function k(e) {
             width: y,
             height: v,
             keepOpen: E,
-            interactive: x = !0,
-            analyticsSource: w,
+            interactive: w = !0,
+            analyticsSource: x,
             onClose: b,
         } = e,
         C = (function (e) {
@@ -371,9 +371,9 @@ function k(e) {
             {
                 type: l.ImpressionTypes.POPOUT,
                 name: l.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: w, guild_id: t, media_session_id: k, type: j.c4.WHEEL },
+                properties: { source: x, guild_id: t, media_session_id: k, type: j.c4.WHEEL },
             },
-            { disableTrack: !x },
+            { disableTrack: !w },
         ));
     let L = i.useCallback((e) => {
             ((O.current = e), D(e?.soundId));
@@ -399,11 +399,11 @@ function k(e) {
                 C.map((e) =>
                     (0, r.jsx)(
                         I.Ay,
-                        { interactive: x, className: T.a, sound: e, focused: _ === e.soundId, channel: n },
+                        { interactive: w, className: T.a, sound: e, focused: _ === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),
-            [_, n, x, C],
+            [_, n, w, C],
         );
     return 0 === C.length
         ? null
@@ -419,7 +419,7 @@ function k(e) {
                   onItemSelect: M,
                   onItemAction: G,
                   onClose: b,
-                  interactive: x,
+                  interactive: w,
                   children: U,
               }),
           });

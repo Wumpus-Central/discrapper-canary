@@ -20,8 +20,8 @@ var v = n(289873),
     C = n(688810),
     j = n(660298),
     S = n(294323),
-    I = n(409626),
-    b = n(692969),
+    b = n(409626),
+    I = n(692969),
     y = n(980822),
     _ = n(201718),
     N = n(741534),
@@ -45,8 +45,8 @@ var v = n(289873),
     B = n(44724),
     K = n(310784),
     Y = n.n(K),
-    X = n(778712),
-    Z = n(318254),
+    Z = n(778712),
+    X = n(318254),
     Q = n(366010),
     q = n(890856),
     J = n(43990),
@@ -70,7 +70,7 @@ let ef = Object.freeze({
         iconSize: 20,
         iconInset: 12,
         buttonInset: 8,
-        avatarSize: X._3.SIZE_24,
+        avatarSize: Z._3.SIZE_24,
         wishlistButtonSize: "md",
     }),
     eh = Y()("#000000").darken(1.5).alpha(0.9).hex(),
@@ -95,9 +95,9 @@ function ev(e) {
         { isHoveringOrFocusing: E } = (0, en.A)(A),
         { guildId: C } = (0, z.nG)(t.applicationId),
         j = (0, u.bG)([et.A], () => et.A.getApplication(t.applicationId)),
-        { primaryIconAsset: S, primaryIconLabel: I } = i.useMemo(() => (0, z.Cv)(t, t.applicationId), [t]),
+        { primaryIconAsset: S, primaryIconLabel: b } = i.useMemo(() => (0, z.Cv)(t, t.applicationId), [t]),
         {
-            priceComponent: b,
+            priceComponent: I,
             extendedHeight: y,
             displayPrice: _,
             purchaseButtonText: N,
@@ -119,7 +119,7 @@ function ev(e) {
                                           orbCount: t.orbsReward,
                                           orbIconHook: () =>
                                               (0, l.jsx)(
-                                                  Z.OrbsIcon,
+                                                  X.OrbsIcon,
                                                   { size: "xs", color: "currentColor" },
                                                   "orbs-icon",
                                               ),
@@ -237,9 +237,9 @@ function ev(e) {
                         className: s()(eg.zH, e),
                         children: [
                             (0, l.jsxs)("div", {
-                                className: s()(eg.gn, { [eg.ov]: null == b, [eg.w4]: y }),
+                                className: s()(eg.gn, { [eg.ov]: null == I, [eg.w4]: y }),
                                 children: [
-                                    null != S && (0, l.jsx)("img", { src: S.toString(), alt: I, className: eg.ye }),
+                                    null != S && (0, l.jsx)("img", { src: S.toString(), alt: b, className: eg.ye }),
                                     (0, l.jsx)(p.E, {
                                         color: "text-overlay-light",
                                         variant: "body-md/medium",
@@ -248,7 +248,7 @@ function ev(e) {
                                     }),
                                 ],
                             }),
-                            (0, l.jsx)("div", { className: eg.iQ, children: b }),
+                            (0, l.jsx)("div", { className: eg.iQ, children: I }),
                         ],
                     }),
             }),
@@ -269,7 +269,7 @@ var eE = n(661492),
     eC = n(146423),
     ej = n(662349);
 let eS = n(699976).Z.SIZE_90;
-function eI(e) {
+function eb(e) {
     let {
             sku: t,
             targetUser: n,
@@ -319,7 +319,7 @@ function eI(e) {
         ],
     });
 }
-var eb = n(910200),
+var eI = n(910200),
     ey = n(487887),
     e_ = n(518477),
     eN = n(774240);
@@ -402,7 +402,7 @@ function eD(e) {
 function eM(e) {
     let { applicationId: t, onClose: n } = e,
         { gameId: i } = (0, y.A)({ applicationId: t }),
-        r = (0, b.A)({ gameId: i ?? void 0, source: I.GameProfileSources.VcHeaderActivity });
+        r = (0, I.A)({ gameId: i ?? void 0, source: b.GameProfileSources.VcHeaderActivity });
     return null == r
         ? null
         : (0, l.jsx)(f.$, {
@@ -498,7 +498,7 @@ function eV(e) {
 function eF(e) {
     let { applicationId: t, surface: n } = e,
         i = (0, $.u)({ surface: n, applicationId: t });
-    return null == i ? null : (0, l.jsx)(eb.O0, { Icon: i.Icon, text: i.text, endDatetime: i.endsAt });
+    return null == i ? null : (0, l.jsx)(eI.O0, { Icon: i.Icon, text: i.text, endDatetime: i.endsAt });
 }
 function eH(e) {
     let { className: t, userId: n, applicationId: r, channel: a, onClose: o, canShowCTA: c, onDismissCTA: d } = e;
@@ -509,7 +509,7 @@ function eH(e) {
         h = (0, u.bG)([k.A], () => k.A.getWidgets(n)?.find((e) => e instanceof w.R && e.applicationId === r)),
         A = (0, u.bG)([V.default], () => V.default.getId()),
         x = n === A,
-        I = (function (e) {
+        b = (function (e) {
             let {
                     currentUserId: t,
                     applicationId: n,
@@ -562,7 +562,7 @@ function eH(e) {
             onDismissCTA: d,
             isTargetingCurrentUser: x,
         }),
-        b = (0, W.A)(r),
+        I = (0, W.A)(r),
         {
             status: y,
             recommendations: M,
@@ -577,7 +577,7 @@ function eH(e) {
                     : (M.length > 8 ? M.slice(0, 8) : M).map((e) => {
                           let t = (P[e.id] ?? {})[n] === G.j.WISHLIST;
                           return (0, l.jsx)(
-                              eI,
+                              eb,
                               {
                                   sku: e,
                                   targetUser: g,
@@ -595,7 +595,7 @@ function eH(e) {
                       }),
             [g, M, a.guild_id, a.id, P, n, x, H, p, o],
         ),
-        $ = null != b,
+        $ = null != I,
         B = i.useMemo(() => {
             if (!$) return null;
             let e = x ? "vc_purchase_recommendations" : "vc_gift_recommendations";
@@ -628,8 +628,8 @@ function eH(e) {
         }, [r, $, U, x, z]),
         K = i.useMemo(
             () =>
-                $ ? (0, l.jsx)(eD, { application: b, onClose: o }) : (0, l.jsx)(eM, { applicationId: r, onClose: o }),
-            [b, r, $, o],
+                $ ? (0, l.jsx)(eD, { application: I, onClose: o }) : (0, l.jsx)(eM, { applicationId: r, onClose: o }),
+            [I, r, $, o],
         );
     return (0, l.jsxs)(eR, {
         className: s()(t, { [eN.gi]: !$ }),
@@ -652,13 +652,13 @@ function eH(e) {
                                       channelId: a.id,
                                       allowEditing: !1,
                                       disableInteraction: !0,
-                                      disableCTA: null != I,
+                                      disableCTA: null != b,
                                       embedded: !0,
                                   }),
-                                  I,
+                                  b,
                               ],
                           })
-                        : (0, l.jsx)(eL, { application: b }),
+                        : (0, l.jsx)(eL, { application: I }),
                     $ && (0, l.jsx)(eT, { user: g, isGift: !x }),
                 ],
             }),
@@ -700,7 +700,7 @@ function eU(e) {
                 e.slice(1).map((e) => {
                     let t = (h[e.id] ?? {})[n] === G.j.WISHLIST;
                     return (0, l.jsx)(
-                        eI,
+                        eb,
                         {
                             sku: e,
                             targetUser: c,
@@ -718,7 +718,7 @@ function eU(e) {
                 }),
             ];
         }, [c, f, h, n, d, s.guild_id, s.id, A, o, a]),
-        I = i.useMemo(
+        b = i.useMemo(
             () =>
                 x
                     ? (0, l.jsx)(v.y, { className: eN.kc })
@@ -748,7 +748,7 @@ function eU(e) {
                 gap: 12,
                 children: [(0, l.jsx)(eL, { application: p }), (0, l.jsx)(eT, { user: c, isGift: !d })],
             }),
-            I,
+            b,
             (0, l.jsx)(eD, { application: p, onClose: a }),
         ],
     });

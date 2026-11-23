@@ -1,19 +1,19 @@
-(s.d(t, { A: () => h }), s(321073));
+(s.d(t, { A: () => u }), s(321073));
 var r = s(149468),
     a = s(822382),
     n = s(963144),
     i = s(115560);
-function _() {
+function c() {
     return { sessionId: (0, i.A)(), searchQueryId: null };
 }
-class c {
+class l {
     sessions = new Map();
     getSession(e) {
         return this.sessions.get((0, a.bS)(e)) ?? null;
     }
     setSession(e, t) {
         let s = (0, a.bS)(e),
-            r = this.sessions.get(s) ?? _();
+            r = this.sessions.get(s) ?? c();
         this.sessions.set(s, { ...r, ...t });
     }
     deleteSession(e) {
@@ -38,11 +38,11 @@ class c {
     transferSession(e, t) {
         this._transferSession(e, t);
         let s = this.getSession(e);
-        (this.sessions.set((0, a.bS)(t), s ?? _()), this.deleteSession(e));
+        (this.sessions.set((0, a.bS)(t), s ?? c()), this.deleteSession(e));
     }
 }
-var l = s(652215);
-let h = new (class extends c {
+var _ = s(652215);
+let u = new (class extends l {
     viewStates = new Map();
     pendingTimeouts = new Map();
     pendingEvents = new Map();
@@ -61,8 +61,8 @@ let h = new (class extends c {
         (this.setViewState(t, n), this.viewStates.delete(s));
         let i = this.pendingTimeouts.get(s);
         null != i && (clearTimeout(i), this.pendingTimeouts.delete(s), this.schedule(t));
-        let _ = this.pendingEvents.get(s);
-        null != _ && (this.pendingEvents.set(r, _), this.pendingEvents.delete(s));
+        let c = this.pendingEvents.get(s);
+        null != c && (this.pendingEvents.set(r, c), this.pendingEvents.delete(s));
     }
     getViewState(e) {
         let t = (0, a.bS)(e);
@@ -89,14 +89,14 @@ let h = new (class extends c {
     }
     trackSearchOpened(e) {
         (this.initialize(e),
-            r.Ay.trackWithMetadata(l.HAw.SEARCH_OPENED, {
+            r.Ay.trackWithMetadata(_.HAw.SEARCH_OPENED, {
                 search_id: (0, n.l)(e),
                 search_session_id: this.getSessionId(e),
                 search_type: e.type,
             }));
     }
     trackSearchClosed(e) {
-        (r.Ay.trackWithMetadata(l.HAw.SEARCH_CLOSED, {
+        (r.Ay.trackWithMetadata(_.HAw.SEARCH_CLOSED, {
             search_id: (0, n.l)(e),
             search_session_id: this.getSessionId(e),
             search_query_id: this.getQueryId(e),

@@ -19,8 +19,8 @@ var l = n(477900),
     C = n(697682),
     j = n(259264),
     S = n(869146),
-    I = n(718734),
-    b = n(854627),
+    b = n(718734),
+    I = n(854627),
     y = n(912630),
     _ = n(530804),
     N = n(46653),
@@ -60,8 +60,8 @@ n.d(
                 W = (0, a.bG)([N.default], () => N.default.getId()),
                 { user: $, streamId: B, speaking: K } = t,
                 Y = $.id === W,
-                X = (0, L.Ay)(t),
-                Z = (0, a.bG)([k.A], () => k.A.isFocused()),
+                Z = (0, L.Ay)(t),
+                X = (0, a.bG)([k.A], () => k.A.isFocused()),
                 Q = (0, a.bG)([S.A], () => S.A.getWindowFocused(M.MLl.CHANNEL_CALL_POPOUT)),
                 q = (0, a.bG)([w.Ay], () => null != $.id && w.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
                     $.id,
@@ -69,9 +69,9 @@ n.d(
                 ]),
                 J = (0, E.A)(n.guild_id, $.id),
                 ee = R.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${P.intl.string(P.t["pFO/Ph"])}` : ""),
-                et = K && (Q || Z),
+                et = K && (Q || X),
                 en = o < 124 ? F : V,
-                { avatarSrc: el, avatarDecorationSrc: ei } = (0, b.A)({
+                { avatarSrc: el, avatarDecorationSrc: ei } = (0, I.A)({
                     userId: $.id,
                     guildId: n.guild_id,
                     size: en,
@@ -80,7 +80,7 @@ n.d(
                 er = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(n.id)),
                 es = (0, v.A)(O.x.DEFAULT, t.user.id),
                 ea = (0, x.A)(t.user.id),
-                eo = (0, I.e)(n, "UserTile"),
+                eo = (0, b.e)(n, "UserTile"),
                 eu = { channel: n, selectedParticipant: er, user: $, isStageUnifiedCall: eo },
                 ec = i.useRef(eu);
             return (i.useEffect(() => {
@@ -88,9 +88,9 @@ n.d(
             }),
             i.useEffect(() => {
                 let { channel: e, selectedParticipant: t, user: n, isStageUnifiedCall: l } = ec.current;
-                !l && e.isGuildStageVoice() && !X && t?.id === n.id && p.A.selectParticipant(e.id, null);
-            }, [X]),
-            r && !q && !D && X && !u && null != z && w.Ay.supports(O.O5.VIDEO))
+                !l && e.isGuildStageVoice() && !Z && t?.id === n.id && p.A.selectParticipant(e.id, null);
+            }, [Z]),
+            r && !q && !D && Z && !u && null != z && w.Ay.supports(O.O5.VIDEO))
                 ? null != es && null == ea
                     ? (0, l.jsx)(T.A, { avError: es, userId: t.id, width: o, selected: u })
                     : (0, l.jsx)(

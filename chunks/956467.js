@@ -2,46 +2,46 @@ var r = s(177068),
     a = s(409037),
     n = s(768570),
     i = s(652215);
-class _ extends a.c {
+class c extends a.c {
     createRequestPayload(e) {
         let { searchQuery: t, searchTabs: s, getLimit: r, pagination: a, trackExactTotalHits: i } = e,
-            { include_nsfw: _, channel_id: c, search_session_id: l, search_query_id: h, ...d } = t,
-            u = {
-                include_nsfw: _,
-                channel_ids: c,
+            { include_nsfw: c, channel_id: l, search_session_id: _, search_query_id: u, ...d } = t,
+            h = {
+                include_nsfw: c,
+                channel_ids: l,
                 tabs: {},
                 track_exact_total_hits: i,
-                search_session_id: l,
-                search_query_id: h,
+                search_session_id: _,
+                search_query_id: u,
             };
         return (
             s.forEach((e) => {
                 let t = r(e),
                     s = n.B7[e],
                     i = null != s ? n.su[s] : {};
-                u.tabs[e] = { ...n.us, ...i, ...d, ...a, limit: t };
+                h.tabs[e] = { ...n.us, ...i, ...d, ...a, limit: t };
             }),
-            u
+            h
         );
     }
     createWithPayload(e) {
-        let { searchContext: t, searchQuery: s, searchTabs: a, getLimit: n, pagination: _, trackExactTotalHits: c } = e,
-            l = this.createRequestPayload({
+        let { searchContext: t, searchQuery: s, searchTabs: a, getLimit: n, pagination: c, trackExactTotalHits: l } = e,
+            _ = this.createRequestPayload({
                 searchQuery: s,
                 searchTabs: a,
                 getLimit: n,
-                pagination: _,
-                trackExactTotalHits: c,
+                pagination: c,
+                trackExactTotalHits: l,
             });
         switch (t.type) {
             case i.I4_.GUILD:
             case i.I4_.GUILD_CHANNEL:
             case i.I4_.THREAD:
-                return new r.DX(t.guildId, t.type, s, l);
+                return new r.DX(t.guildId, t.type, s, _);
             case i.I4_.CHANNEL:
-                return new r.DX(t.channelId, t.type, s, l);
+                return new r.DX(t.channelId, t.type, s, _);
             case i.I4_.DMS:
-                return new r.DX(t.type, t.type, s, l);
+                return new r.DX(t.type, t.type, s, _);
             default:
                 throw Error(`[SearchFetchManager] Unsupported search context type: ${t.type}`);
         }
@@ -54,19 +54,19 @@ class _ extends a.c {
             searchTabs: a,
             getLimit: n,
             pagination: i,
-            trackExactTotalHits: _,
+            trackExactTotalHits: c,
         } = e;
         this.cancel(t);
-        let c = this.createWithPayload({
+        let l = this.createWithPayload({
             searchContext: s,
             searchQuery: r,
             searchTabs: a,
             getLimit: n,
             pagination: i,
-            trackExactTotalHits: _,
+            trackExactTotalHits: c,
         });
-        return (this.set(t, c), c);
+        return (this.set(t, l), l);
     }
 }
-let c = new _();
-s.d(t, {}, { A: c });
+let l = new c();
+s.d(t, {}, { A: l });

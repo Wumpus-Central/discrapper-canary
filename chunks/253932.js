@@ -774,7 +774,7 @@ let e8 = (0, _.c$)("textAndImages", "goreContentSettings", e6, e5);
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ));
-let e7 = (0, _.c$)(
+let e4 = (0, _.c$)(
     "appearance",
     "timestampHourCycle",
     (e) => e ?? s.PZ.AUTO,
@@ -793,7 +793,7 @@ let e7 = (0, _.c$)(
         (e) => e ?? s.kW.SWIPE_RIGHT_TO_LEFT_UNSET,
         (e) => e,
     ));
-let e4 = (0, _.c$)(
+let e7 = (0, _.c$)(
         "userContent",
         "lastReceivedChangelogId",
         (e) => e ?? "0",
@@ -859,7 +859,7 @@ n.d(
         NF: e6,
         NO: P,
         NR: L,
-        PZ: e7,
+        PZ: e4,
         Pf: X,
         Pw: eK,
         Q$: eb,
@@ -922,7 +922,7 @@ n.d(
         on: eg,
         oz: y,
         pE: eX,
-        pK: e4,
+        pK: e7,
         pR: W,
         qN: e8,
         rs: eM,

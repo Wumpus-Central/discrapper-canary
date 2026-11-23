@@ -15,8 +15,8 @@ var i = n(477900),
     A = n(127242),
     v = n(545807),
     E = n(392164),
-    y = n(85290);
-function I(e, t) {
+    I = n(85290);
+function y(e, t) {
     return {
         name: e,
         left: Math.ceil(t.left),
@@ -48,7 +48,7 @@ let C = r.createContext(
             let t = this.zones.get(e);
             null != t && this.resizeObserver.unobserve(t.element);
             let n = e.getBoundingClientRect();
-            (this.zones.set(e, { element: e, zone: I(t?.zone.name ?? (0, u.A)(), n) }),
+            (this.zones.set(e, { element: e, zone: y(t?.zone.name ?? (0, u.A)(), n) }),
                 this.elements.add(e),
                 this.resizeObserver.observe(e),
                 this.updateZones());
@@ -68,7 +68,7 @@ let C = r.createContext(
                 let e = !1;
                 for (let [t, n] of this.zones) {
                     let i = t.getBoundingClientRect(),
-                        r = I(n.zone.name, i);
+                        r = y(n.zone.name, i);
                     (0, d.A)(r, n.zone) || ((e = !0), (n = { element: n.element, zone: r }), this.zones.set(t, n));
                 }
                 e && this.updateZones();
@@ -130,7 +130,7 @@ n.d(
                 (0, i.jsx)("div", {
                     ref: h,
                     style: l,
-                    className: s()(n, y.v, u && y.p),
+                    className: s()(n, I.v, u && I.p),
                     "data-click-zone": !0,
                     children: a,
                 })

@@ -1,11 +1,11 @@
 var i = a(855986),
-    l = a(73153),
-    n = a(951178);
+    n = a(73153),
+    l = a(951178);
 let r = [],
     s = r,
     c = "unattempted";
 function o(t) {
-    return "guild" === t.install_scope && t.supported_surfaces?.includes(n.q7.PROFILE_WIDGET) === !0;
+    return "guild" === t.install_scope && t.supported_surfaces?.includes(l.q7.PROFILE_WIDGET) === !0;
 }
 class d extends i.Ay.Store {
     static displayName = "ConjureServerWidgetStore";
@@ -19,7 +19,7 @@ class d extends i.Ay.Store {
         return c;
     }
 }
-let u = new d(l.h, {
+let u = new d(n.h, {
     CONJURE_SERVER_PROFILE_WIDGETS_FETCH_START: function () {
         c = "loading";
     },

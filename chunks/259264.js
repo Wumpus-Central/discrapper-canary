@@ -28,8 +28,8 @@ let v = r.memo(function (e) {
             hidden: C = !1,
             children: j,
             onVideoElement: S,
-            streamPreviewURL: I,
-            videoSpinnerContext: b,
+            streamPreviewURL: b,
+            videoSpinnerContext: I,
             userId: y,
             streamKey: _,
             emptyPreviewAspectRatio: N = "16 / 9",
@@ -50,7 +50,7 @@ let v = r.memo(function (e) {
             r.useEffect(() => {
                 a || (s ? o.onSpinnerStarted() : null != i && o.trackSpinnerDuration(n, l, i));
             }, [s, a, i, o, n, l]);
-        })({ location: "VideoStream", videoSpinnerContext: b, userId: y, streamId: t, loading: w, paused: E }));
+        })({ location: "VideoStream", videoSpinnerContext: I, userId: y, streamId: t, loading: w, paused: E }));
     let { onReady: M } = (function (e) {
             let { streamId: t, userId: n, videoSpinnerContext: l, streamKey: i, loading: s, paused: a = !1 } = e,
                 o = r.useRef(new c.Ep()),
@@ -74,7 +74,7 @@ let v = r.memo(function (e) {
                     }, [n, p]),
                 }
             );
-        })({ streamId: t, userId: y, loading: w, videoSpinnerContext: b, streamKey: _, paused: E }),
+        })({ streamId: t, userId: y, loading: w, videoSpinnerContext: I, streamKey: _, paused: E }),
         O = r.useCallback(() => {
             (k(!1), M());
         }, [M]);
@@ -100,8 +100,8 @@ let v = r.memo(function (e) {
                           w &&
                           (0, i.jsxs)(r.Fragment, {
                               children: [
-                                  null != I
-                                      ? (0, i.jsx)("img", { src: I, alt: "", className: A.previewImage })
+                                  null != b
+                                      ? (0, i.jsx)("img", { src: b, alt: "", className: A.previewImage })
                                       : (0, i.jsx)("div", {
                                             className: A.emptyPreviewWrapper,
                                             style: { aspectRatio: N },

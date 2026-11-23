@@ -23,9 +23,9 @@ function j(e) {
 function S(e) {
     return (1 & e.buttons) == 1;
 }
-let I = i.memo(function (e) {
+let b = i.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: r } = e,
-        { onActive: I, onPreventIdle: b, onAllowIdle: y } = i.useContext(h.k3),
+        { onActive: b, onPreventIdle: I, onAllowIdle: y } = i.useContext(h.k3),
         {
             enabled: _,
             zoomLevel: N,
@@ -47,8 +47,8 @@ let I = i.memo(function (e) {
         W = i.useRef(null),
         $ = N > w,
         B = i.useCallback(() => {
-            b("interact");
-        }, [b]),
+            I("interact");
+        }, [I]),
         K = i.useCallback(() => {
             (z(!1), y("interact"));
         }, [y]),
@@ -56,7 +56,7 @@ let I = i.memo(function (e) {
             let e = 120 * Math.min(P, 32 / 9);
             return { "--custom-zoom-minimap-width": `${e}px`, "--custom-zoom-minimap-height": "120px" };
         }, [P]),
-        X = i.useCallback(
+        Z = i.useCallback(
             (e) => {
                 if (null == W.current || null == G.current) return;
                 let t = W.current.getBoundingClientRect(),
@@ -68,17 +68,17 @@ let I = i.memo(function (e) {
             },
             [H, N, G, F],
         ),
-        Z = i.useCallback(
+        X = i.useCallback(
             (e) => {
-                S(e) && (e.preventDefault(), e.stopPropagation(), z(!0), X({ x: e.clientX, y: e.clientY }));
+                S(e) && (e.preventDefault(), e.stopPropagation(), z(!0), Z({ x: e.clientX, y: e.clientY }));
             },
-            [X],
+            [Z],
         ),
         Q = i.useCallback(
             (e) => {
-                U && (e.preventDefault(), e.stopPropagation(), X({ x: e.clientX, y: e.clientY }));
+                U && (e.preventDefault(), e.stopPropagation(), Z({ x: e.clientX, y: e.clientY }));
             },
-            [U, X],
+            [U, Z],
         ),
         q = i.useCallback(
             (e) => {
@@ -122,13 +122,13 @@ let I = i.memo(function (e) {
             (e) => {
                 (D(!0),
                     M(e, x.qd, "slider"),
-                    I(),
+                    b(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {
                         D(!1);
                     }));
             },
-            [M, I, D],
+            [M, b, D],
         );
     return ((0, f.l0)(() => {
         el.current?.stop();
@@ -152,7 +152,7 @@ let I = i.memo(function (e) {
                               onPointerDown: function (e) {
                                   S(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
-                              onMouseDown: Z,
+                              onMouseDown: X,
                               onMouseMove: Q,
                               onMouseUp: q,
                               children: [
@@ -213,4 +213,4 @@ let I = i.memo(function (e) {
           })
         : null;
 });
-n.d(t, {}, { A: I });
+n.d(t, {}, { A: b });

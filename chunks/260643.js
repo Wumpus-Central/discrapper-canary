@@ -6,14 +6,14 @@ var i = n(141931),
     u = n(824613),
     o = n(587895),
     d = n(91242),
-    c = n(484697),
-    s = n(616356),
+    s = n(484697),
+    c = n(616356),
     p = n(988468),
     f = n(309010),
     m = n(338771),
     h = n(652215),
-    A = n(165610),
-    g = n(731854);
+    g = n(165610),
+    A = n(731854);
 let I = "activity-frame:",
     y = new a.Vy("activityStreamSource"),
     S = new Map(),
@@ -23,22 +23,22 @@ let I = "activity-frame:",
     C = 0,
     T = new Set(),
     R = !1,
-    $ = null;
-function P() {
+    b = null;
+function $() {
     return window.DiscordNative?.activityCapture ?? null;
 }
-let _ = null;
-function b(e) {
+let D = null;
+function P(e) {
     return e.id.startsWith(I);
 }
-function D(e) {
-    return b(e) ? e.id.slice(I.length) : null;
+function _(e) {
+    return P(e) ? e.id.slice(I.length) : null;
 }
 function F(e, t, n) {
     let i,
-        a = P();
+        a = $();
     if (null == a) return null;
-    let r = (0, c.fl)(e);
+    let r = (0, s.fl)(e);
     if (null != r && r.clientWidth > 0 && r.clientHeight > 0) {
         let e = Math.min(t.width / r.clientWidth, t.height / r.clientHeight);
         i = { width: Math.max(1, Math.round(r.clientWidth * e)), height: Math.max(1, Math.round(r.clientHeight * e)) };
@@ -48,13 +48,13 @@ function F(e, t, n) {
         .then((e) => new Blob([e.data], { type: e.mimeType }));
 }
 function M(e) {
-    P()
+    $()
         ?.stop(e)
         .catch((t) => y.warn(`Failed to stop activity capture ${e}`, t));
 }
 function O(e, t) {
     let { sound: n, frameRate: i } = t;
-    P()
+    $()
         ?.update(e, { audio: n, maxFrameRate: i })
         .catch((t) => y.warn(`Failed to update activity capture ${e}`, t));
 }
@@ -64,7 +64,7 @@ function L() {
         ((R = e),
         r.h.dispatch({
             type: "MEDIA_ENGINE_VIDEO_STATE_CHANGED",
-            context: g.x.STREAM,
+            context: A.x.STREAM,
             videoState: e ? h.uPF.PAUSED : h.uPF.PLAYING,
         }));
 }
@@ -77,13 +77,13 @@ function V(e) {
 }
 (r.h.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", (e) => {
     let { settings: t } = e;
-    if (t?.context != null && t.context !== g.x.STREAM) return;
+    if (t?.context != null && t.context !== A.x.STREAM) return;
     let n = t?.desktopSettings?.sourceId,
         a = `${i.fS.ACTIVITY}:`,
         r = n?.startsWith(a) ? n.slice(a.length) : null;
     if (null != r && w.delete(r)) {
         (y.warn(`Activity capture ${r} stopped before the stream picked it up`),
-            setTimeout(() => (0, m.A)(s.A.getCurrentUserActiveStream())));
+            setTimeout(() => (0, m.A)(c.A.getCurrentUserActiveStream())));
         return;
     }
     let l = { sound: t?.desktopSettings?.sound, frameRate: t?.qualityOptions?.frameRate };
@@ -93,10 +93,10 @@ function V(e) {
     }
     null != r && r === E ? O(r, l) : null != E && n !== `${i.fS.ACTIVITY}:${E}` && (M(E), (E = null), setTimeout(L));
 }),
-    P()?.onStopped((e, t) => {
+    $()?.onStopped((e, t) => {
         (y.info(`Activity capture ${e} stopped: ${t}`), T.delete(e), e === E ? (E = null) : V(e));
     }),
-    P()?.onPausedChanged((e, t) => {
+    $()?.onPausedChanged((e, t) => {
         (y.info(`Activity capture ${e} ${t ? "paused" : "resumed"}`), t ? T.add(e) : T.delete(e), L());
     }),
     n.d(
@@ -104,7 +104,7 @@ function V(e) {
         {},
         {
             En: async function (e, t) {
-                let n = D(e),
+                let n = _(e),
                     i = null != n ? F(n, t, 2e3) : null;
                 if (null == i) return null;
                 try {
@@ -113,7 +113,7 @@ function V(e) {
                     return (y.warn("Failed to capture activity preview", e), null);
                 }
             },
-            K4: b,
+            K4: P,
             YX: function () {
                 let e = (function () {
                     let e,
@@ -128,7 +128,7 @@ function V(e) {
                         ...(null != e ? d.A.getFramesForChannel(e) : []),
                         ...(null != t && t !== e ? d.A.getFramesForChannel(t) : []),
                     ]
-                        .map(A.ny)
+                        .map(g.ny)
                         .filter((e) => null != e)))
                         if ((null == n || i.applicationId === n.applicationId) && null != i.data.iframeId)
                             return { applicationId: i.applicationId, iframeId: i.data.iframeId };
@@ -144,13 +144,13 @@ function V(e) {
                 };
             },
             sV: function () {
-                return (_ ??= P()?.canCaptureStream?.() === !0) && p.Ay.supports(g.O5.ACTIVITY_CAPTURE);
+                return (D ??= $()?.canCaptureStream?.() === !0) && p.Ay.supports(A.O5.ACTIVITY_CAPTURE);
             },
             uO: async function (e, t) {
-                let n = D(e),
+                let n = _(e),
                     i = null != n ? F(n, t, 500) : null;
                 if (null == n || null == i) return null;
-                let a = $?.frameId === n ? $.url : null;
+                let a = b?.frameId === n ? b.url : null;
                 try {
                     var r;
                     let e = await ((r = await i),
@@ -158,7 +158,7 @@ function V(e) {
                         let n = new FileReader();
                         ((n.onload = () => e(n.result)), (n.onerror = () => t(n.error)), n.readAsDataURL(r));
                     }));
-                    return (($ = { frameId: n, url: e }), e);
+                    return ((b = { frameId: n, url: e }), e);
                 } catch {
                     return a;
                 }
@@ -166,8 +166,8 @@ function V(e) {
             ys: async function (e, t) {
                 let n,
                     { audio: a, maxFrameRate: r } = t,
-                    l = P();
-                if (null == l || !b(e)) return null;
+                    l = $();
+                if (null == l || !P(e)) return null;
                 let u = ++v;
                 try {
                     ({ captureId: n } = await l.captureStream({
