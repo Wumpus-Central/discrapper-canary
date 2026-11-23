@@ -914,13 +914,13 @@ var eR = n(46653),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "679463",
-        r = "7038a400d1be24fbd8c7cfc412b8b53544197446".substring(0, 7),
+        n = "679472",
+        r = "c2ea2de11f908c728b937f5753ca9786c3a6c41c".substring(0, 7),
         i = eU.A?.app.getVersion(),
         s = eU.A?.app.getBuildNumber(),
         o = eU.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eZ.A)("1795465350712", !1) : null,
+        u = null != c ? (0, eZ.A)("1795465723324", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         h = (function () {
             let e = eX()?.os?.toString();
@@ -1087,8 +1087,8 @@ function e5() {
 }
 var e2 = n(402651),
     e3 = n(669067),
-    e4 = n(830543),
-    e6 = n(953056);
+    e6 = n(830543),
+    e4 = n(953056);
 let e8 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
     e9 = new Map([[eD.X.SESSIONS_PANEL, i.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e7(e) {
@@ -1100,7 +1100,7 @@ function e7(e) {
         [m, g] = r.useState(!1);
     return (r.useLayoutEffect(() => {
         function e() {
-            null == ew.default.getCurrentUser() && (g(!0), (0, e4.default)());
+            null == ew.default.getCurrentUser() && (g(!0), (0, e6.default)());
         }
         return (
             eR.default.addChangeListener(e),
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, l.jsx)("div", {
-            className: e6.P,
+            className: e4.P,
             children: (0, l.jsx)(s.I, { size: "md", query: e, onFocus: n, onBlur: i, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, l.jsxs)("div", {
-        className: e6.t,
+        className: e4.t,
         children: [
             (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: F.intl.string(F.t.zihbmv) }),
             (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: F.intl.string(F.t.XclvsB) }),
