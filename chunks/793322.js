@@ -115,8 +115,7 @@ function j() {
 }
 let W = new Set([E.t1.SETTINGS, E.t1.PLAYGROUND, E.t1.SHOP_ORBS_TAB]);
 function Y(e) {
-    let t = U.A.isTabPicker();
-    (j(), (0, i.s7)(), H(w.HAw.QUICKSWITCHER_RESULT_SELECTED, e, t));
+    (H(w.HAw.QUICKSWITCHER_RESULT_SELECTED, e, U.A.isTabPicker()), j(), (0, i.s7)());
 }
 function K(e) {
     let t,
