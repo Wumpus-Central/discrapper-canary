@@ -44,13 +44,12 @@ n.d(
                     return (
                         !(async function () {
                             try {
-                                let e = (
-                                    await a.Bo.get({
-                                        url: h.Rsh.SOUNDBOARD_DEFAULT_SOUNDS,
+                                let { body: e } = await a.Bo.get({
+                                        url: h.Rsh.SOUNDBOARD_SOUNDS_CATALOG,
                                         rejectWithError: (0, a.fT)(),
-                                    })
-                                ).body.map((e) => (0, A.N0)(e, "0"));
-                                s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: e });
+                                    }),
+                                    t = e.default_sounds.map((e) => (0, A.N0)(e, "0"));
+                                s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: t });
                             } catch (e) {
                                 (s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" }),
                                     (0, d.o)(new o.A(e)));

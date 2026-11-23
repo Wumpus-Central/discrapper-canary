@@ -1535,7 +1535,7 @@ let nL = Object.freeze({
         TOP_SOUNDBOARD_SOUNDS_FOR_GUILD: (e) => `/guilds/${e}/top-soundboard-sounds`,
         SOUNDBOARD_SOUND: (e) => `/soundboard-sounds/${e}`,
         SOUNDBOARD_SOUND_GUILD_DATA: (e, t) => `/soundboard-sounds/${e}/guild/${t}`,
-        SOUNDBOARD_DEFAULT_SOUNDS: "/soundboard-default-sounds",
+        SOUNDBOARD_SOUNDS_CATALOG: "/soundboard-sounds/catalog",
         SEND_SOUNDBOARD_SOUND: (e) => `/channels/${e}/send-soundboard-sound`,
         SEND_SOUNDBOARD_ECHO: (e) => `/channels/${e}/send-soundboard-echo`,
         SEND_CLIPS_REMOTE_TRIGGER: (e) => `/channels/${e}/clips-remote-trigger`,

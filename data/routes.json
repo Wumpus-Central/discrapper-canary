@@ -716,7 +716,7 @@
   "TOP_SOUNDBOARD_SOUNDS_FOR_GUILD": "/guilds/:param/top-soundboard-sounds",
   "SOUNDBOARD_SOUND": "/soundboard-sounds/:param",
   "SOUNDBOARD_SOUND_GUILD_DATA": "/soundboard-sounds/:param/guild/:param",
-  "SOUNDBOARD_DEFAULT_SOUNDS": "/soundboard-default-sounds",
+  "SOUNDBOARD_SOUNDS_CATALOG": "/soundboard-sounds/catalog",
   "SEND_SOUNDBOARD_SOUND": "/channels/:param/send-soundboard-sound",
   "SEND_SOUNDBOARD_ECHO": "/channels/:param/send-soundboard-echo",
   "SEND_CLIPS_REMOTE_TRIGGER": "/channels/:param/clips-remote-trigger",
