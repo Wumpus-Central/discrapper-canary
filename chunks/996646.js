@@ -36,8 +36,8 @@ var l = n(477900),
     L = n(571694),
     z = n(47167),
     B = n(475889),
-    U = n(713654),
-    O = n(693879),
+    O = n(713654),
+    U = n(693879),
     F = n(5180),
     $ = n(682163),
     H = n(365571),
@@ -74,7 +74,7 @@ function eo(e) {
         ? null
         : (0, l.jsx)("span", {
               className: el.XE,
-              children: (0, l.jsx)(O.z, { textColor: "text-feedback-positive", entry: { start: n } }),
+              children: (0, l.jsx)(U.z, { textColor: "text-feedback-positive", entry: { start: n } }),
           });
 }
 let ec = r.memo(function (e) {
@@ -105,10 +105,10 @@ let ec = r.memo(function (e) {
         C = (0, i.bG)([Y.A], () => ("channel" === t.kind ? Y.A.getGuild(t.guildId) : null), [t]),
         E = (0, i.bG)([J.default], () => (null != I && I.isDM() ? J.default.getUser(I.getRecipientId()) : null), [I]),
         B = (0, z.Ay)(I),
-        O = "channel" === t.kind ? t.channelId : null;
+        U = "channel" === t.kind ? t.channelId : null;
     r.useEffect(() => {
-        null != O && null != B && es.set(O, B);
-    }, [O, B]);
+        null != U && null != B && es.set(U, B);
+    }, [U, B]);
     let et = "route" === t.kind ? t.routeLabel : (B ?? es.get(t.channelId) ?? en.intl.string(en.t.zLZPmk)),
         ec = r.useCallback(() => {
             (0, ee.ZD)(t.id, "tab_click");
@@ -263,7 +263,7 @@ let ec = r.memo(function (e) {
     let eS = null;
     o && null != I && I.isPrivate()
         ? (eS = ew ? v.ScreenArrowIcon : R.VoiceNormalIcon)
-        : "channel" === t.kind && null != C && null != I && (eS = (0, U.gU)(I, null, { stream: ew }));
+        : "channel" === t.kind && null != C && null != I && (eS = (0, O.gU)(I, null, { stream: ew }));
     let eT = null != C ? en.intl.formatToPlainString(en.t.gT4jAr, { channelName: et, guildName: C.name }) : et,
         eP = null;
     return (
@@ -350,17 +350,22 @@ let ec = r.memo(function (e) {
                                     className: el.ez,
                                     children: [
                                         !t.pinned && ek,
-                                        null != eS &&
-                                            (0, l.jsx)(eS, {
-                                                size: "xs",
-                                                color: "currentColor",
-                                                className: b()(el.j1, { [el.Av]: o }),
-                                            }),
-                                        (0, l.jsx)(P.E, {
-                                            variant: "body-sm/medium",
-                                            color: "none",
-                                            className: el.HA,
-                                            children: et,
+                                        (0, l.jsxs)("span", {
+                                            className: el.Om,
+                                            children: [
+                                                null != eS &&
+                                                    (0, l.jsx)(eS, {
+                                                        size: "xs",
+                                                        color: "currentColor",
+                                                        className: b()(el.j1, { [el.Av]: o }),
+                                                    }),
+                                                (0, l.jsx)(P.E, {
+                                                    variant: "body-sm/medium",
+                                                    color: "none",
+                                                    className: el.HA,
+                                                    children: et,
+                                                }),
+                                            ],
                                         }),
                                     ],
                                 }),
@@ -460,7 +465,7 @@ function eN(e) {
                         title: e,
                         subtitle: t.isGroupDM() ? en.intl.string(en.t["e5y+gm"]) : (l?.username ?? null),
                     };
-                let i = (0, U.gU)(t, n),
+                let i = (0, O.gU)(t, n),
                     s = (0, F.ai)(t.guild_id);
                 return {
                     visual: null == n || s ? { type: "icon", Icon: i } : { type: "guild", guild: n },

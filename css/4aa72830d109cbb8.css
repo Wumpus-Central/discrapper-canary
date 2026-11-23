@@ -119,6 +119,14 @@
     mask-image: linear-gradient(to right, transparent, currentColor var(--space-12))
 }
 
+.channelTypeIconContainer_ve0N80 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0;
+    overflow: hidden
+}
+
 .trail_ve0N80 {
     align-items: center;
     display: flex;
@@ -130,8 +138,7 @@
 
 .channelTypeIcon_ve0N80 {
     color: var(--icon-muted);
-    flex-shrink: 0;
-    margin-inline-end: calc(var(--space-4)*-1)
+    flex-shrink: 0
 }
 
 .tabActive_ve0N80 .channelTypeIcon_ve0N80 {
@@ -371,4 +378,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=691216938a33ccfb.css.map*/
+/*# sourceMappingURL=4aa72830d109cbb8.css.map*/

@@ -7,6 +7,7 @@ e.exports = {
     eg: "tabButton_ve0N80",
     XH: "tabButtonContent_ve0N80",
     ez: "tabButtonFade_ve0N80",
+    Om: "channelTypeIconContainer_ve0N80",
     Pq: "trail_ve0N80",
     j1: "channelTypeIcon_ve0N80",
     Av: "channelTypeIconConnected_ve0N80",
