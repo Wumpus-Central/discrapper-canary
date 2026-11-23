@@ -13,7 +13,7 @@
 var i,
     r = n(896170),
     a = n(160517),
-    s = n(877624),
+    s = n(517352),
     l = n(856793),
     o = n(792673),
     d = n(554146),
@@ -162,7 +162,7 @@ function U(e) {
     return t.charAt(0).toUpperCase() + t.slice(1).replace(/\bnitro\b/g, "Nitro");
 }
 function w(e, t) {
-    let n = ("number" == typeof e ? s.C[e] : e) ?? t?.properties.oneofKind;
+    let n = ("number" == typeof e ? s.oW[e] : e) ?? t?.properties.oneofKind;
     return null != n ? U(n) : null != e ? `Surface type ${e}` : "Unknown surface";
 }
 function G(e, t) {
@@ -217,7 +217,12 @@ function x(e, t, n) {
     let i = new Map(t.map((e) => [e.id, e])),
         r = new Set();
     return e.flatMap((e) => {
-        if (e.componentType !== s.C.ANNOUNCEMENT_MODAL && e.componentType !== s.C.MOBILE_BOTTOM_SHEET) return [];
+        if (
+            e.componentType !== s.oW.ANNOUNCEMENT_MODAL_VARIANT_1 &&
+            e.componentType !== s.oW.MOBILE_BOTTOM_SHEET &&
+            e.componentType !== s.oW.ORBS_CONFIRMATION_MODAL
+        )
+            return [];
         let t = i.get(e.id);
         if (null != t && D(t)) return [];
         let a = `${e.componentType}:${e.id}`;
@@ -286,17 +291,17 @@ function k(e) {
     });
 }
 let F = {
-    [s.C.ANNOUNCEMENT_MODAL]: [d.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL],
-    [s.C.PREMIUM_TAB]: [d.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE],
-    [s.C.PREMIUM_TAB_POPOVER]: [d.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL],
-    [s.C.NAGBAR]: [d.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL],
-    [s.C.GIFT_REMINDER_COACHMARK]: [d.M.GIFTING_PROMOTION_REMINDER],
-    [s.C.GIFT_REMINDER_NAGBAR]: [d.M.GIFTING_PROMOTION_REMINDER],
-    [s.C.SHOP_NAGBAR]: [d.M.PREMIUM_SHOP_NAGBAR_NOTICE],
-    [s.C.SHOP_TAB_TOOLTIP]: [d.M.SHOP_TAB_TOOLTIP],
-    [s.C.SHOP_COACHMARK]: [d.M.SHOP_TAB_TOOLTIP],
-    [s.C.GUILD_HEADER_COACHMARK]: [d.M.GUILD_HEADER_COACHMARK],
-    [s.C.GUILD_BOOST_TAB_BANNER]: [d.M.GUILD_BOOST_TAB_BANNER, d.M.GUILD_BOOST_TAB_HIGHLIGHT],
+    [s.oW.ANNOUNCEMENT_MODAL_VARIANT_1]: [d.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL],
+    [s.oW.PREMIUM_TAB]: [d.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE],
+    [s.oW.PREMIUM_TAB_POPOVER]: [d.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL],
+    [s.oW.NAGBAR]: [d.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL],
+    [s.oW.GIFT_REMINDER_COACHMARK]: [d.M.GIFTING_PROMOTION_REMINDER],
+    [s.oW.GIFT_REMINDER_NAGBAR]: [d.M.GIFTING_PROMOTION_REMINDER],
+    [s.oW.SHOP_NAGBAR]: [d.M.PREMIUM_SHOP_NAGBAR_NOTICE],
+    [s.oW.SHOP_TAB_TOOLTIP]: [d.M.SHOP_TAB_TOOLTIP],
+    [s.oW.SHOP_COACHMARK]: [d.M.SHOP_TAB_TOOLTIP],
+    [s.oW.GUILD_HEADER_COACHMARK]: [d.M.GUILD_HEADER_COACHMARK],
+    [s.oW.GUILD_BOOST_TAB_BANNER]: [d.M.GUILD_BOOST_TAB_BANNER, d.M.GUILD_BOOST_TAB_HIGHLIGHT],
 };
 function B(e) {
     let t = new Map();
@@ -304,7 +309,7 @@ function B(e) {
         let e = y(n);
         if (!e.isDefaultBase)
             for (let i of (function (e, t) {
-                if (e.component_type === s.C.MOBILE_BOTTOM_SHEET) {
+                if (e.component_type === s.oW.MOBILE_BOTTOM_SHEET) {
                     var n;
                     let e = t.properties;
                     return [
@@ -314,11 +319,11 @@ function B(e) {
                             : d.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL,
                     ];
                 }
-                return e.component_type === s.C.GIFT_ICON
+                return e.component_type === s.oW.GIFT_ICON
                     ? e.platform === a.j.MOBILE
                         ? [d.M.GIFTING_PROMOTION_ICON]
                         : []
-                    : e.component_type === s.C.GIFT_ICON_COACHMARK
+                    : e.component_type === s.oW.GIFT_ICON_COACHMARK
                       ? e.platform === a.j.MOBILE
                           ? [d.M.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET]
                           : [d.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK]
@@ -332,7 +337,7 @@ function B(e) {
                     (function (e, t, n) {
                         if (n === d.M.GUILD_BOOST_TAB_HIGHLIGHT) return "Guild boost tab highlight";
                         let i = w(e.component_type, t);
-                        return e.component_type !== s.C.MOBILE_BOTTOM_SHEET
+                        return e.component_type !== s.oW.MOBILE_BOTTOM_SHEET
                             ? i
                             : n === d.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL
                               ? `${i}: announcement`
