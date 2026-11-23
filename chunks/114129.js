@@ -235,9 +235,6 @@ n.d(
                 (0, o.JK)().location.pathname !== h.BVt.FRIENDS &&
                 (0, o.pX)(h.BVt.FRIENDS);
         },
-        lj: function (e) {
-            r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });
-        },
         oZ: function (e) {
             f.A.isEnabled() && c.A.getChannel(e)?.isGuildVocal() === !0 && a.A.updateChatOpen(e, !1);
         },

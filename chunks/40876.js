@@ -40,15 +40,8 @@ let r = {
         neverLoadBeforeConnectionOpen: !0,
     },
     ChannelTabsManager: {
-        actions: [
-            "POST_CONNECTION_OPEN",
-            "CHANNEL_SELECT",
-            "CHANNEL_TABS_OPEN",
-            "CHANNEL_TABS_NAVIGATE_ROUTE",
-            "CHANNEL_TABS_SET_ENABLED",
-        ],
         inlineRequire: () => n(729238).A,
-        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0,
         loadRightBeforeConnectionOpen: !0,
     },
     CommonTriggerPointManager: {
