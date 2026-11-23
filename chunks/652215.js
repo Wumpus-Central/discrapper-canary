@@ -3310,6 +3310,7 @@ var il =
         (eL[(eL.MOBILE = 5)] = "MOBILE"),
         (eL[(eL.PREMIUM_TIER_0 = 6)] = "PREMIUM_TIER_0"),
         (eL[(eL.MOBILE_PREMIUM_TIER_2 = 7)] = "MOBILE_PREMIUM_TIER_2"),
+        (eL[(eL.MOBILE_GIFT = 8)] = "MOBILE_GIFT"),
         eL);
 let id = Object.freeze({
     fonts: [{ src: "url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)", family: "gg sans" }],
