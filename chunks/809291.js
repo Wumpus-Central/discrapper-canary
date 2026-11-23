@@ -1,26 +1,26 @@
 s(321073);
 var r = s(52133),
-    a = s(149468),
-    n = s(822382),
+    n = s(149468),
+    a = s(822382),
     i = s(386649),
     c = s(652215);
 let l = /\s+/;
-function _(e) {
+function u(e) {
     let t = new Set(),
         s = [],
         r = [],
-        a = [];
-    for (let n of e) {
-        let e = n.message.author?.id;
-        (null != e && t.add(e), s.push(n.sourceType), r.push(n.channelId), a.push(n.messageId));
+        n = [];
+    for (let a of e) {
+        let e = a.message.author?.id;
+        (null != e && t.add(e), s.push(a.sourceType), r.push(a.channelId), n.push(a.messageId));
     }
-    return { num_citation_authors: t.size, citation_source_types: s, citation_channel_ids: r, citation_message_ids: a };
+    return { num_citation_authors: t.size, citation_source_types: s, citation_channel_ids: r, citation_message_ids: n };
 }
-function u(e) {
+function _(e) {
     let t = e.trim();
     return { length: t.length, wordCount: t.split(l).filter(Boolean).length };
 }
-let d = new (class {
+let h = new (class {
     rowVisibilityState = {
         isRowViewable: !1,
         isTabActive: !1,
@@ -55,13 +55,13 @@ let d = new (class {
     }
     updateVisibility(e, t) {
         let s = this.rowVisibilityState,
-            a = { ...s, ...e };
-        if ((0, r.A)(a, s)) return;
-        this.rowVisibilityState = a;
-        let n = a.isRowViewable && a.isTabActive && a.isNavigationFocused && a.isAppActive && null != a.currentAnswer;
+            n = { ...s, ...e };
+        if ((0, r.A)(n, s)) return;
+        this.rowVisibilityState = n;
+        let a = n.isRowViewable && n.isTabActive && n.isNavigationFocused && n.isAppActive && null != n.currentAnswer;
         if (
             null != this.dwellStartTime &&
-            (!n || a.currentAnswer?.smartSearchQuery.requestKey !== s.currentAnswer?.smartSearchQuery.requestKey)
+            (!a || n.currentAnswer?.smartSearchQuery.requestKey !== s.currentAnswer?.smartSearchQuery.requestKey)
         ) {
             let e = performance.now() - this.dwellStartTime;
             ((this.dwellStartTime = null),
@@ -71,10 +71,10 @@ let d = new (class {
                         t,
                     ));
         }
-        n &&
-            null != a.currentAnswer &&
+        a &&
+            null != n.currentAnswer &&
             null == this.dwellStartTime &&
-            ((this.dwellStartTime = performance.now()), this.trackSmartSearchAnswerShownDeduped(a.currentAnswer, t));
+            ((this.dwellStartTime = performance.now()), this.trackSmartSearchAnswerShownDeduped(n.currentAnswer, t));
     }
     getContextualProperties(e, t) {
         return {
@@ -82,7 +82,7 @@ let d = new (class {
             search_query_id: t.getQueryId(e.searchContext),
             search_location: t.getLocation(e.searchContext),
             guild_id: e.guildId,
-            channel_id: (0, n._b)(e.searchContext),
+            channel_id: (0, a._b)(e.searchContext),
             filter_channel_ids: e.channelIds,
             num_filter_channels: e.channelIds.length,
             parent_suggested_search_id:
@@ -96,93 +96,93 @@ let d = new (class {
                 smartSearchQuery: t,
                 requestId: s,
                 durationMs: r,
-                responseStatus: n,
+                responseStatus: a,
                 smartSearchStatus: i,
                 answerText: l,
-                citations: d,
-                contextualProperties: h,
+                citations: h,
+                contextualProperties: d,
             } = e,
-            o = u(t.queryText),
-            S = u(l);
-        a.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_RETURNED, {
-            ...h,
-            ..._(d),
+            o = _(t.queryText),
+            S = _(l);
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_RETURNED, {
+            ...d,
+            ...u(h),
             request_id: s,
             duration_ms: Math.round(r),
-            response_status: n,
+            response_status: a,
             smart_search_status: i,
             search_query_length: t.searchQueryString.trim().length,
             search_query_content_length: o.length,
             num_query_words: o.wordCount,
             answer_length: S.length,
             num_answer_words: S.wordCount,
-            num_citations_returned: d.length,
+            num_citations_returned: h.length,
         });
     }
     trackSuggestedSearchesReturned(e) {
-        let { requestId: t, durationMs: s, responseStatusCode: r, suggestedSearches: n, contextualProperties: i } = e;
-        a.Ay.trackWithMetadata(c.HAw.SUGGESTED_SEARCHES_RETURNED, {
+        let { requestId: t, durationMs: s, responseStatusCode: r, suggestedSearches: a, contextualProperties: i } = e;
+        n.Ay.trackWithMetadata(c.HAw.SUGGESTED_SEARCHES_RETURNED, {
             ...i,
             request_id: t,
             duration_ms: Math.round(s),
             response_status_code: r,
-            suggested_search_ids: n.map((e) => e.suggestionId),
+            suggested_search_ids: a.map((e) => e.suggestionId),
         });
     }
     trackSmartSearchAnswerToggled(e, t) {
         let { smartSearchQuery: s, isCollapsed: r } = e;
-        a.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_TOGGLED, {
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_TOGGLED, {
             ...this.getContextualProperties(s, t),
             is_collapsed: r,
         });
     }
     trackSmartSearchCitationOpened(e, t) {
-        let { smartSearchQuery: s, citation: r, index: n, numCitationsPresented: i } = e;
-        a.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_CITATION_OPENED, {
+        let { smartSearchQuery: s, citation: r, index: a, numCitationsPresented: i } = e;
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_CITATION_OPENED, {
             ...this.getContextualProperties(s, t),
             citation_source_id: r.sourceId,
             citation_source_type: r.sourceType,
             citation_channel_id: r.channelId,
             citation_message_id: r.messageId,
-            citation_index: n,
+            citation_index: a,
             num_citations_presented: i,
         });
     }
     trackSuggestedSearchStarted(e, t) {
-        let { smartSearchQuery: s, suggestedSearch: r, suggestionSource: n, index: l, numSuggestedSearches: _ } = e,
-            u = i.A.getStateForScope(s),
-            d = u?.suggestedSearches.findIndex((e) => e.suggestionId === r.suggestionId) ?? -1;
-        (a.Ay.trackWithMetadata(c.HAw.SUGGESTED_SEARCH_STARTED, {
+        let { smartSearchQuery: s, suggestedSearch: r, suggestionSource: a, index: l, numSuggestedSearches: u } = e,
+            _ = i.A.getStateForScope(s),
+            h = _?.suggestedSearches.findIndex((e) => e.suggestionId === r.suggestionId) ?? -1;
+        (n.Ay.trackWithMetadata(c.HAw.SUGGESTED_SEARCH_STARTED, {
             ...this.getContextualProperties(s, t),
             suggested_search_id: r.suggestionId,
             shown_index: l,
-            suggestion_source: n,
-            num_suggested_searches: _,
-            fetch_request_id: u?.requestId,
-            global_index: d >= 0 ? d : null,
+            suggestion_source: a,
+            num_suggested_searches: u,
+            fetch_request_id: _?.requestId,
+            global_index: h >= 0 ? h : null,
         }),
             (this.parentSuggestedSearch = r));
     }
     trackSuggestedSearchesShownDeduped(e, t) {
-        let { smartSearchQuery: s, suggestedSearches: r, suggestionSource: n } = e,
-            i = `${n}:${s.requestKey}`;
+        let { smartSearchQuery: s, suggestedSearches: r, suggestionSource: a } = e,
+            i = `${a}:${s.requestKey}`;
         this.lastShownSuggestionKey !== i &&
             ((this.lastShownSuggestionKey = i),
-            a.Ay.trackWithMetadata(c.HAw.SUGGESTED_SEARCHES_SHOWN, {
+            n.Ay.trackWithMetadata(c.HAw.SUGGESTED_SEARCHES_SHOWN, {
                 ...this.getContextualProperties(s, t),
                 suggested_search_ids: r.map((e) => e.suggestionId),
-                suggestion_source: n,
+                suggestion_source: a,
             }));
     }
     trackSmartSearchAnswerShownDeduped(e, t) {
-        let { smartSearchQuery: s, answerText: r, presentedCitations: n, hasKeywordResults: i } = e;
+        let { smartSearchQuery: s, answerText: r, presentedCitations: a, hasKeywordResults: i } = e;
         if (this.lastShownAnswerKey === s.requestKey) return;
         this.lastShownAnswerKey = s.requestKey;
-        let l = u(r);
-        a.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_SHOWN, {
+        let l = _(r);
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_SHOWN, {
             ...this.getContextualProperties(s, t),
-            ..._(n),
-            num_citations_presented: n.length,
+            ...u(a),
+            num_citations_presented: a.length,
             answer_length: l.length,
             num_answer_words: l.wordCount,
             search_query_length: s.searchQueryString.trim().length,
@@ -191,17 +191,17 @@ let d = new (class {
     }
     trackSmartSearchAnswerDwelled(e, t) {
         let { smartSearchQuery: s, dwellDurationMs: r } = e;
-        a.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_DWELLED, {
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_DWELLED, {
             ...this.getContextualProperties(s, t),
             dwell_duration_ms: Math.round(r),
         });
     }
     trackSmartSearchFeedbackGiven(e, t) {
         let { smartSearchQuery: s, hasPositiveFeedback: r } = e;
-        a.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_FEEDBACK_GIVEN, {
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_FEEDBACK_GIVEN, {
             ...this.getContextualProperties(s, t),
             is_positive_feedback: r,
         });
     }
 })();
-s.d(t, {}, { A: d });
+s.d(t, {}, { A: h });
