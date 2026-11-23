@@ -8,7 +8,8 @@ var i = n(582128),
     d = n(503275),
     c = n(191850),
     u = n(792996);
-let _ = /<@!?(\d+)>|<file:(\d{16}-[a-z0-9]{6})>/g;
+let _ = /<@!?(\d+)>|<file:(\d{16}-[a-z0-9]{6})>/g,
+    E = /```[\s\S]*?```|`[^`\n]*`|(^|[\s(])@/g;
 n.d(
     t,
     {},
@@ -26,7 +27,7 @@ n.d(
             );
         },
         OG: function (e, t) {
-            let n = /(?:^|\s)@([\w.-]*)$/.exec(e.slice(0, t));
+            let n = /(?:^|[\s(])@([\p{L}\p{M}\p{N}_.-]*)$/u.exec(e.slice(0, t));
             return null == n ? null : { start: t - n[1].length - 1, end: t, text: n[1] };
         },
         Qu: function (e) {
@@ -76,6 +77,27 @@ n.d(
                     .split(/\s+/)
                     .some((e) => e.startsWith(t))
             );
+        },
+        wl: function (e, t) {
+            let n = "",
+                i = 0;
+            for (let r of e.matchAll(E)) {
+                if (null == r[1] || r.index < i) continue;
+                let a = r.index + r[0].length,
+                    s = e.slice(a),
+                    l = t
+                        .filter((e) => {
+                            let { username: t } = e;
+                            return s.slice(0, t.length).toLowerCase() === t.toLowerCase();
+                        })
+                        .sort((e, t) =>
+                            t.username.length !== e.username.length
+                                ? t.username.length - e.username.length
+                                : Number(s.startsWith(t.username)) - Number(s.startsWith(e.username)),
+                        )[0];
+                null != l && ((n += `${e.slice(i, a - 1)}<@${l.id}>`), (i = a + l.username.length));
+            }
+            return n + e.slice(i);
         },
     },
 );
