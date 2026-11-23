@@ -1,4 +1,4 @@
-(n.d(t, { ML: () => d, FH: () => I, iQ: () => f, P4: () => E, pd: () => A, pX: () => g, hw: () => m }), n(321073));
+(n.d(t, { ML: () => d, FH: () => h, P4: () => E, pd: () => A, pX: () => m, hw: () => p }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(306173),
@@ -122,10 +122,9 @@ let E = new (class extends u {
                 (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e))
             );
         }
-    })("2025-09-libdiscore-telemetry"),
-    f = new _("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+    })("2025-09-libdiscore-telemetry");
 new _("2026-09-react-compiler-mobile", "React Compiler for mobile");
-class h extends u {
+class f extends u {
     label;
     treatmentCount;
     getLabel() {
@@ -138,13 +137,13 @@ class h extends u {
         (super(e), (this.label = t), (this.treatmentCount = n));
     }
 }
-let I = new h("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
-(new h("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+let h = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
+(new f("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
     new _("2026-08-android-jank-per-screen", "Android Per-Screen Jank Aggregation"),
-    new h("2026-10-android-chat-preinflation", "Android Chat Preinflation", 3),
-    new h("2026-10-uimanager-experiments", "UIManager Experiments", 3),
+    new f("2026-10-android-chat-preinflation", "Android Chat Preinflation", 3),
+    new f("2026-10-uimanager-experiments", "UIManager Experiments", 3),
     new _("2026-10-android-ui-manager-constants-cache", "Android UIManager Constants Cache"),
     new _("2026-09-ios-callkit-connected-on-rtc", "iOS: show CallKit connected only once voice flows"),
     new _("2026-11-android-telecom", "Android: Support TelecomManager on Android"),
@@ -153,11 +152,11 @@ let I = new h("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
     ));
-let p = !1;
-function m() {
-    return p;
+let I = !1;
+function p() {
+    return I;
 }
-function g() {
+function m() {
     (0, a.xd)() &&
-        (o.info("Clearing libdiscore experiment cache and disabling sync"), (p = !0), (0, a.Ih)().clearCache());
+        (o.info("Clearing libdiscore experiment cache and disabling sync"), (I = !0), (0, a.Ih)().clearCache());
 }
