@@ -5,6 +5,7 @@ e.exports = {
     xX: "design_KOkKTK",
     sN: "designImage_KOkKTK",
     nj: "overlayDesign_KOkKTK",
+    d9: "sceneCapture_KOkKTK",
     nk: "overlayWidget_KOkKTK",
     M7: "overlayWidgetImage_KOkKTK",
     qr: "footer_KOkKTK",

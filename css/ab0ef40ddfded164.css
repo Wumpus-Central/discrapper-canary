@@ -49,6 +49,10 @@
     position: relative
 }
 
+.sceneCapture_KOkKTK {
+    width: 640px
+}
+
 .overlayWidget_KOkKTK {
     height: var(--custom-conjure-plan-overlay-widget-height);
     inset-block-start: var(--custom-conjure-plan-overlay-widget-top);
@@ -251,4 +255,4 @@
     color: var(--text-muted)
 }
 
-/*# sourceMappingURL=527d3c3c308c1f96.css.map*/
+/*# sourceMappingURL=ab0ef40ddfded164.css.map*/
