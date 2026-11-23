@@ -1,4 +1,4 @@
-n.d(t, { D: () => ea, A: () => eo });
+n.d(t, { D: () => eo, A: () => eu });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -20,8 +20,8 @@ var l = n(477900),
     C = n(652896),
     j = n(638480),
     S = n(607407),
-    I = n(872363),
-    b = n(293651),
+    b = n(872363),
+    I = n(293651),
     y = n(310685),
     _ = n(964404),
     N = n(919706),
@@ -76,8 +76,8 @@ var z = n(259264),
     B = n(451988),
     K = n(765671),
     Y = n(461782),
-    X = n(426179),
-    Z = n(109294);
+    Z = n(426179),
+    X = n(109294);
 function Q(e) {
     return (1 & e.buttons) == 1;
 }
@@ -101,7 +101,7 @@ let q = i.memo(function (e) {
             doZoom: j,
             clampPanOffset: S,
         } = i.useContext(W.e9),
-        [I, b] = i.useState(null),
+        [b, I] = i.useState(null),
         [y, _] = i.useState(null),
         [N, w] = i.useState(0),
         [k, R] = i.useState(null),
@@ -132,7 +132,7 @@ let q = i.memo(function (e) {
                 if (!H || !Q(e)) return;
                 (e.preventDefault(), e.stopPropagation());
                 let t = q(e);
-                (m(!0), _(t), b(t), w(Date.now()), T(t), R(p));
+                (m(!0), _(t), I(t), w(Date.now()), T(t), R(p));
             },
             [q, H, p, m],
         ),
@@ -143,7 +143,7 @@ let q = i.memo(function (e) {
                 let t = q(e),
                     n = t.x - L.x,
                     l = t.y - L.y;
-                (f(S({ x: k.x + n, y: k.y + l })), b(t));
+                (f(S({ x: k.x + n, y: k.y + l })), I(t));
             },
             [S, L, k, u, q, d, H, o, f],
         ),
@@ -155,14 +155,14 @@ let q = i.memo(function (e) {
         ),
         en = i.useCallback(
             (e) => {
-                if (H && null != y && null != I) {
+                if (H && null != y && null != b) {
                     let { x: t, y: n } = y,
-                        { x: l, y: i } = I;
+                        { x: l, y: i } = b;
                     (Math.sqrt((l - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - N >= 500) &&
                         (e.preventDefault(), e.stopPropagation());
                 }
             },
-            [H, y, N, I],
+            [H, y, N, b],
         ),
         el = i.useCallback(() => {
             (m(!1), T(null), R(null));
@@ -220,7 +220,7 @@ let q = i.memo(function (e) {
             (O.current.stop(), P.current.stop(), V.current.stop());
         }),
         i.useEffect(() => {
-            null != n && (0, X.c)(n, void 0, u && H ? h : 1);
+            null != n && (0, Z.c)(n, void 0, u && H ? h : 1);
         }, [u, H, n, h]));
     let er = i.useMemo(() => {
         let e = S(p);
@@ -233,7 +233,7 @@ let q = i.memo(function (e) {
     }, [S, d, D, A, v, p, h]);
     return (0, l.jsx)("div", {
         ref: C,
-        className: s()(Z.iE, a, { [Z.rc]: u && H, [Z.d$]: d }),
+        className: s()(X.iE, a, { [X.rc]: u && H, [X.d$]: d }),
         onMouseDown: J,
         onMouseMove: ee,
         onMouseUp: et,
@@ -243,45 +243,47 @@ let q = i.memo(function (e) {
         children:
             null != n &&
             (0, l.jsx)("div", {
-                className: s()(Z.j, Z.L2),
+                className: s()(X.j, X.L2),
                 style: er,
                 children: (0, l.jsx)(z.A, { ...t, onResize: U, wrapperClassName: void 0 }),
             }),
     });
 });
-var J = n(76795);
-function ee(e) {
+var J = n(76795),
+    ee = n(210608);
+function et(e) {
     let { streamDrawingStreamKey: t, onResize: n, fit: r, ...s } = e,
-        { zoomLevel: a, minZoom: o } = i.useContext(W.e9),
-        [u, c] = i.useState(null),
-        d = i.useRef(null),
-        m = i.useCallback((e) => {
-            d.current = e;
+        o = (0, a.bG)([ee.A], () => null != t && ee.A.isStreamDrawingAllowed(t), [t]),
+        { zoomLevel: u, minZoom: c } = i.useContext(W.e9),
+        [d, m] = i.useState(null),
+        p = i.useRef(null),
+        g = i.useCallback((e) => {
+            p.current = e;
         }, []),
-        p = i.useCallback(
+        h = i.useCallback(
             (e) => {
-                (c((t) => (t?.width === e.width && t?.height === e.height ? t : e)), n?.(e));
+                (m((t) => (t?.width === e.width && t?.height === e.height ? t : e)), n?.(e));
             },
             [n],
         ),
-        g = r;
+        A = r;
     return (
-        r === z.$.COVER_LANDSCAPE && ((g = z.$.COVER), null != u && u.width < u.height && (g = z.$.CONTAIN)),
+        r === z.$.COVER_LANDSCAPE && ((A = z.$.COVER), null != d && d.width < d.height && (A = z.$.CONTAIN)),
         (0, l.jsx)(q, {
             ...s,
-            fit: g,
-            onResize: p,
-            onVideoElement: m,
+            fit: A,
+            onResize: h,
+            onVideoElement: g,
             children:
-                null != t && a <= o
+                o && null != t && u <= c
                     ? (0, l.jsx)(
                           J.A,
                           {
                               streamKey: t,
-                              dimensions: u,
+                              dimensions: d,
                               visible: !(s.videoSpinnerContext === f.u.SELF_STREAM && s.paused),
-                              fit: g,
-                              videoRef: d,
+                              fit: A,
+                              videoRef: p,
                           },
                           t,
                       )
@@ -289,22 +291,22 @@ function ee(e) {
         })
     );
 }
-var et = n(275731),
-    en = n(345812),
-    el = n(652215),
-    ei = n(806931),
-    er = n(731854);
-let es = new x.A("StreamTile");
-function ea(e) {
+var en = n(275731),
+    el = n(345812),
+    ei = n(652215),
+    er = n(806931),
+    es = n(731854);
+let ea = new x.A("StreamTile");
+function eo(e) {
     let { participant: t, selected: n, focused: i, idle: r, width: s, premiumIndicator: o } = e,
         u = (0, a.bG)([w.A], () => w.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        c = (0, en.VE)(s);
+        c = (0, el.VE)(s);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            n || i ? null : (0, l.jsx)(et.A, { participant: t }),
-            i || null == u || u.state === el.XYD.ENDED || u.state === el.XYD.FAILED
+            n || i ? null : (0, l.jsx)(en.A, { participant: t }),
+            i || null == u || u.state === ei.XYD.ENDED || u.state === ei.XYD.FAILED
                 ? null
-                : (0, l.jsx)(I.A, {
+                : (0, l.jsx)(b.A, {
                       size: A.Ay.Sizes.SMALL,
                       className: H.Ok,
                       participant: t,
@@ -315,74 +317,74 @@ function ea(e) {
         ],
     });
 }
-function eo(e) {
+function eu(e) {
     let {
             participant: t,
             selected: n,
             onVideoResize: r,
             fit: A,
             popoutType: x,
-            width: I,
+            width: b,
             wrapperClassName: G,
             paused: V = !1,
         } = e,
         z = (0, y.T)("StreamTile"),
-        W = (0, b.B)(t.id),
+        W = (0, I.BC)(t.id),
         $ = L.Ay.getVideoComponent(),
         B = (0, a.bG)([k.default], () => k.default.getId()),
         K = (0, E.A)(),
-        { stream: Y, user: X, streamId: Z } = t,
+        { stream: Y, user: Z, streamId: X } = t,
         Q = (0, a.bG)([R.A], () => R.A.getChannel(Y.channelId)),
-        q = (0, a.bG)([w.A], () => w.A.getActiveStreamForUser(X.id, Y.guildId), [X.id, Y.guildId]),
+        q = (0, a.bG)([w.A], () => w.A.getActiveStreamForUser(Z.id, Y.guildId), [Z.id, Y.guildId]),
         J = (0, a.bG)([w.A], () => w.A.getAllActiveStreams().length > 0),
-        et = (0, a.bG)([T.A], () => T.A.isFocused()),
+        ee = (0, a.bG)([T.A], () => T.A.isFocused()),
         en = (0, a.bG)([_.Ay], () => _.Ay.pauseSelfStreamPreviewWhenUnfocused),
-        ea = q?.ownerId === B,
-        eo = ea && en && !et && x === h.N.NO_POPOUT,
-        eu = null != q ? (0, j.A)(q, X, X.id === B, eo) : null,
-        ec = I < 195;
+        el = q?.ownerId === B,
+        eo = el && en && !ee && x === h.N.NO_POPOUT,
+        eu = null != q ? (0, j.A)(q, Z, Z.id === B, eo) : null,
+        ec = b < 195;
     (0, g.Ay)(() => {
         !J &&
             Q?.isGuildStageVoice() &&
-            !ea &&
+            !el &&
             !w.A.isStreamMarkedFull((0, C._z)(Y)) &&
             ((0, p.A9)(Y), m.A.updateStageStreamSize(Y.channelId, !1));
     });
-    let ed = (0, v.u)(er.x.STREAM, t.user.id);
+    let ed = (0, v.u)(es.x.STREAM, t.user.id);
     if (
         (i.useEffect(() => {
-            es.info(
-                `Stream Tile State - activeStream: ${null != q} | selected: ${n} | Video: ${null != $} | MediaEngine: ${L.Ay.supports(er.O5.VIDEO)}`,
+            ea.info(
+                `Stream Tile State - activeStream: ${null != q} | selected: ${n} | Video: ${null != $} | MediaEngine: ${L.Ay.supports(es.O5.VIDEO)}`,
             );
         }, [$, q, n]),
         K)
     )
-        return (0, l.jsx)(U, { stream: t.stream, isSmall: ec, selected: n, isSelfStream: X.id === B });
-    if (q?.state === el.XYD.ENDED) return (0, l.jsx)(M.A, { selected: n, stream: q, width: I });
-    if (null != ed || q?.state === el.XYD.FAILED)
-        return (0, l.jsx)(O.A, { avError: ed?.type, avErrorContext: ed, selected: n, stream: t.stream, width: I });
-    if (t.type === ei.lp.HIDDEN_STREAM) return (0, l.jsx)(P.A, { selected: n, participant: t, width: I });
-    if (null != q && !n && null != $ && L.Ay.supports(er.O5.VIDEO))
+        return (0, l.jsx)(U, { stream: t.stream, isSmall: ec, selected: n, isSelfStream: Z.id === B });
+    if (q?.state === ei.XYD.ENDED) return (0, l.jsx)(M.A, { selected: n, stream: q, width: b });
+    if (null != ed || q?.state === ei.XYD.FAILED)
+        return (0, l.jsx)(O.A, { avError: ed?.type, avErrorContext: ed, selected: n, stream: t.stream, width: b });
+    if (t.type === er.lp.HIDDEN_STREAM) return (0, l.jsx)(P.A, { selected: n, participant: t, width: b });
+    if (null != q && !n && null != $ && L.Ay.supports(es.O5.VIDEO))
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(
-                    ee,
+                    et,
                     {
                         onResize: r,
                         wrapperClassName: s()(x !== h.N.CALL_TILE ? H.tN : void 0, G),
                         className: H.Qs,
-                        streamId: Z,
+                        streamId: X,
                         videoComponent: $,
                         fit: A,
-                        paused: V || q?.state === el.XYD.PAUSED || eo,
-                        videoSpinnerContext: ea ? f.u.SELF_STREAM : f.u.REMOTE_STREAM,
-                        userId: X.id,
+                        paused: V || q?.state === ei.XYD.PAUSED || eo,
+                        videoSpinnerContext: el ? f.u.SELF_STREAM : f.u.REMOTE_STREAM,
+                        userId: Z.id,
                         streamKey: t.id,
                         streamDrawingStreamKey: z && W && !Q?.isGuildStageVoice() ? (0, C._z)(Y) : void 0,
                     },
-                    Z,
+                    X,
                 ),
-                null != eu ? (0, l.jsx)(N.A, { size: (0, D.J)(I), ...eu }) : null,
+                null != eu ? (0, l.jsx)(N.A, { size: (0, D.J)(b), ...eu }) : null,
             ],
         });
     else
@@ -404,7 +406,7 @@ function eo(e) {
                                   children: (0, l.jsx)(o.$, {
                                       variant: "secondary",
                                       size: ec ? "sm" : "md",
-                                      text: I < 175 ? F.intl.string(F.t.I6JG46) : F.intl.string(F.t["7Xq/nV"]),
+                                      text: b < 175 ? F.intl.string(F.t.I6JG46) : F.intl.string(F.t["7Xq/nV"]),
                                   }),
                               }),
                               J

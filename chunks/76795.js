@@ -16,8 +16,8 @@ var i,
     A = n(293651),
     v = n(972347),
     E = n(626584),
-    y = n(654186),
-    I = n(182667);
+    I = n(654186),
+    y = n(182667);
 class C {
     senders = new Map();
     accept(e, t) {
@@ -29,14 +29,14 @@ class C {
     }
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(661191));
-var b =
+var S =
     (((i = {})[(i.Stroke = 0)] = "Stroke"),
     (i[(i.Cursor = 1)] = "Cursor"),
     (i[(i.Ping = 2)] = "Ping"),
     (i[(i.Stamp = 3)] = "Stamp"),
     (i[(i.StampGrowing = 4)] = "StampGrowing"),
     i);
-let S = 1e3 / 30;
+let b = 1e3 / 30;
 function w() {
     return Array.from(crypto.getRandomValues(new Uint32Array(2)), (e) => e.toString(16).padStart(8, "0")).join("");
 }
@@ -48,18 +48,18 @@ class R extends v.A {
     sentPings = new C();
     receivedPings = new C();
     constructor(e, t) {
-        (super(), (this.transport = e), (this.userId = t), e.on(x, this.receive), e.on(y.I.Failure, this.failure));
+        (super(), (this.transport = e), (this.userId = t), e.on(x, this.receive), e.on(I.I.Failure, this.failure));
     }
     receive = (e, t) => {
-        (t.kind !== b.Ping || this.receivedPings.accept(e, t.strokeId)) && this.emit(x, e, t);
+        (t.kind !== S.Ping || this.receivedPings.accept(e, t.strokeId)) && this.emit(x, e, t);
     };
     failure = (e) => T.error(e);
     sendPoint(e) {
-        (e.kind !== b.Ping || this.sentPings.accept(BigInt(this.userId), e.strokeId)) &&
+        (e.kind !== S.Ping || this.sentPings.accept(BigInt(this.userId), e.strokeId)) &&
             (this.emit(x, BigInt(this.userId), e), this.transport.send("sendStreamDrawing", e));
     }
     dispose() {
-        (this.transport.off(x, this.receive), this.transport.off(y.I.Failure, this.failure));
+        (this.transport.off(x, this.receive), this.transport.off(I.I.Failure, this.failure));
     }
 }
 let _ = new WeakMap();
@@ -85,8 +85,8 @@ function M(e, t) {
 function O(e) {
     return Math.round(16 + 72 * Math.min(1, Math.max(0, (e - 150) / 1850)));
 }
-var N = n(269049);
-class D {
+var D = n(269049);
+class N {
     canvas;
     fit;
     getReducedMotion;
@@ -210,21 +210,21 @@ class D {
         let s = `${e}:${t.strokeId}`,
             a = this.stamps.get(s);
         if (null != a && t.sequence <= a.point.sequence) return;
-        if (t.kind === b.StampGrowing && t.end) {
+        if (t.kind === S.StampGrowing && t.end) {
             (this.rememberStamp(e, t.strokeId), this.removeStamp(s), this.wake());
             return;
         }
-        if (t.kind === b.StampGrowing && null != a && null == a.growth) return;
+        if (t.kind === S.StampGrowing && null != a && null == a.growth) return;
         null != i ? this.setFrame(i) : (this.frame = { width: t.width, height: t.height });
         let o = performance.now(),
             u = this.cursors.get(e);
         null != u && (u.time = o);
         let c = null;
-        if (t.kind === b.StampGrowing) {
+        if (t.kind === S.StampGrowing) {
             if (null == t.stampElapsed) return;
             c = { fromSize: null == a ? 16 : this.getStampSize(a, o), size: r, receivedAt: o, elapsed: t.stampElapsed };
         }
-        if ((t.kind !== b.StampGrowing && this.rememberStamp(e, t.strokeId), null != a && this.stamps.get(s) === a)) {
+        if ((t.kind !== S.StampGrowing && this.rememberStamp(e, t.strokeId), null != a && this.stamps.get(s) === a)) {
             ((a.growth = c),
                 (a.size = r),
                 (a.point = { ...t, x: a.point.x, y: a.point.y, emoji: a.point.emoji }),
@@ -498,14 +498,14 @@ class D {
         if (!1 !== i.animate && this.canAnimateEmoji(t, n) && null != n && null != this.imageHost) {
             (this.animatedImages.has(n) || this.imageHost.append(n),
                 this.animatedImages.add(n),
-                (n.className = N.oG),
+                (n.className = D.oG),
                 (n.alt = ""),
                 n.setAttribute("aria-hidden", "true"),
                 (n.hidden = !1),
                 (n.style.opacity = String(i.opacity ?? 1)),
                 n.style.setProperty("--custom-stream-drawing-emoji-rotation", `${i.rotation ?? 0}rad`));
             let e = "fixed" === this.targetWindow.getComputedStyle(this.canvas).position;
-            n.classList.toggle(N.nz, e);
+            n.classList.toggle(D.nz, e);
             let t = this.canvas.getBoundingClientRect();
             (n.style.setProperty("--custom-stream-drawing-emoji-x", `${(e ? t.left : this.canvas.offsetLeft) + r}px`),
                 n.style.setProperty("--custom-stream-drawing-emoji-y", `${(e ? t.top : this.canvas.offsetTop) + l}px`),
@@ -624,10 +624,10 @@ var j = n(210608),
     L = n(400492),
     U = n(988468),
     z = n(803224),
-    W = n(257645);
-let G = new C(),
-    V = "mention2";
-function F(e) {
+    G = n(257645);
+let W = new C(),
+    F = "mention2";
+function V(e) {
     let t = e / 255;
     return t <= 0.04045 ? t / 12.92 : ((t + 0.055) / 1.055) ** 2.4;
 }
@@ -641,7 +641,7 @@ function q(e) {
         n.drawImage(e, 0, 0, 16, 16);
         let { data: i } = n.getImageData(0, 0, 16, 16),
             r = 0;
-        for (let e = 0; e < i.length; e += 4) r += 0.2126 * F(i[e]) + 0.7152 * F(i[e + 1]) + 0.0722 * F(i[e + 2]);
+        for (let e = 0; e < i.length; e += 4) r += 0.2126 * V(i[e]) + 0.7152 * V(i[e + 1]) + 0.0722 * V(i[e + 2]);
         return r / 256 < 0.179;
     } catch {
         return !1;
@@ -650,15 +650,17 @@ function q(e) {
 var H = n(791005),
     B = n(792996);
 let K = l.memo(function (e) {
-    return (0, A.B)(e.streamKey) ? (0, r.jsx)(X, { ...e }) : null;
+    let t = (0, A.BC)(e.streamKey),
+        n = (0, u.bG)([j.A], () => j.A.isStreamDrawingAllowed(e.streamKey), [e.streamKey]);
+    return t && n ? (0, r.jsx)(X, { ...e }) : null;
 });
 function X(e) {
     let { streamKey: t, dimensions: n, fit: i = "contain", overlay: s = !1, visible: v = !0, videoRef: E } = e,
-        y = l.useRef(null),
+        I = l.useRef(null),
         T = l.useRef(null),
         P = l.useRef(() => {}),
         M = l.useRef(null),
-        F = l.useRef(null),
+        V = l.useRef(null),
         K = l.useRef(null),
         X = l.useRef(null),
         Y = l.useRef(null),
@@ -708,30 +710,30 @@ function X(e) {
                     for (let e of u) f.A.isBlockedOrIgnored(e.toString()) && (a?.removeSender(e), u.delete(e));
                 },
                 m = (e, n) => {
-                    if (null == a || n.streamKey !== t || !(0, A.E)(t) || f.A.isBlockedOrIgnored(e.toString())) return;
+                    if (null == a || n.streamKey !== t || !(0, A.EG)(t) || f.A.isBlockedOrIgnored(e.toString())) return;
                     u.add(e);
                     let i = g.default.getUser(e.toString());
                     switch (n.kind) {
-                        case b.Stamp:
-                        case b.StampGrowing:
+                        case S.Stamp:
+                        case S.StampGrowing:
                             a.addStamp(e, n, i?.getAvatarURL(null, 32) ?? null, et.current);
                             break;
-                        case b.Ping:
+                        case S.Ping:
                             var r;
                             (a.addPing(e, n, i?.getAvatarURL(null, 32) ?? null, et.current),
                                 eh.current &&
                                     !s &&
                                     ((r = n.strokeId),
-                                    !G.accept(e, r) ||
+                                    !W.accept(e, r) ||
                                         U.Ay.isSelfDeaf() ||
-                                        z.A.isSoundDisabled(V) ||
-                                        (0, L.Ak)(V, 0.14, void 0, void 0, { outputChannel: W.a.VOICE })));
+                                        z.A.isSoundDisabled(F) ||
+                                        (0, L.Ak)(F, 0.14, void 0, void 0, { outputChannel: G.a.VOICE })));
                             break;
-                        case b.Cursor:
+                        case S.Cursor:
                             if (e.toString() === el && !s) return;
                             a.addCursor(e, n, i?.getAvatarURL(null, 32) ?? null, et.current);
                             break;
-                        case b.Stroke:
+                        case S.Stroke:
                             a.add(e, n, et.current);
                     }
                 },
@@ -749,7 +751,7 @@ function X(e) {
                     ((e = {
                         onConnection: (e) => {
                             (p(),
-                                (a = new D(l, i, () => h.Ay.useReducedMotion, F)).setVisible(eh.current),
+                                (a = new N(l, i, () => h.Ay.useReducedMotion, V)).setVisible(eh.current),
                                 a.setFrame(et.current),
                                 (X.current = a),
                                 (o = e),
@@ -780,7 +782,7 @@ function X(e) {
                     }),
                     (n = null),
                     {
-                        retry: (r = (0, I.x)(ei, el, {
+                        retry: (r = (0, y.x)(ei, el, {
                             onConnection(t) {
                                 let i, r;
                                 (n?.release(),
@@ -804,9 +806,9 @@ function X(e) {
                         },
                     });
             return (
-                (y.current = v),
+                (I.current = v),
                 () => {
-                    y.current = null;
+                    I.current = null;
                     let e = J.current;
                     ((J.current = null),
                         e?.growing && o?.sendPoint({ ...e.point, sequence: e.point.sequence + 1, end: !0 }));
@@ -823,7 +825,7 @@ function X(e) {
             );
         }, [ei, el, t, i, s]),
         l.useEffect(() => {
-            s || ec !== t || null != Y.current || (j.A.getActiveStreamKey() === ec && y.current?.retry());
+            s || ec !== t || null != Y.current || (j.A.getActiveStreamKey() === ec && I.current?.retry());
         }, [ec, s, t, ei, el, i]));
     let ef = l.useCallback((e) => {
             Y.current?.sendPoint(e);
@@ -849,7 +851,7 @@ function X(e) {
                 ...(l ?? { x: 0, y: 0 }),
                 ...n,
                 color: ep,
-                kind: b.Cursor,
+                kind: S.Cursor,
                 emoji: eu,
                 end: !1,
                 outlineWhite: $.current?.point.outlineWhite ?? s?.point.outlineWhite ?? q(E?.current ?? null),
@@ -906,7 +908,7 @@ function X(e) {
                         ? ef({
                               ...n.point,
                               sequence: n.point.sequence + 1,
-                              kind: b.Stamp,
+                              kind: S.Stamp,
                               stampSize: O(t ?? performance.now() - n.startedAt),
                               stampElapsed: void 0,
                           })
@@ -977,14 +979,14 @@ function X(e) {
             };
         }, [ed]),
         (0, r.jsxs)("div", {
-            ref: F,
-            className: N.qd,
+            ref: V,
+            className: D.qd,
             children: [
                 (0, r.jsx)("canvas", {
                     ref: K,
                     hidden: !v,
                     "aria-hidden": !0,
-                    className: a()(N.Ji, { [N.pW]: ed, [N.Lw]: s }),
+                    className: a()(D.Ji, { [D.pW]: ed, [D.Lw]: s }),
                     onPointerDown: (e) => {
                         if (
                             !ed ||
@@ -1016,7 +1018,7 @@ function X(e) {
                                             ...n,
                                             color: ep,
                                             end: !1,
-                                            kind: b.Ping,
+                                            kind: S.Ping,
                                             emoji: eu,
                                             outlineWhite: q(E?.current ?? null),
                                         });
@@ -1034,7 +1036,7 @@ function X(e) {
                                     ...n,
                                     color: ep,
                                     end: !1,
-                                    kind: b.StampGrowing,
+                                    kind: S.StampGrowing,
                                     stampSize: 16,
                                     stampElapsed: 0,
                                     emoji: eu,
@@ -1076,7 +1078,7 @@ function X(e) {
                             return;
                         }
                         let l = {
-                            kind: b.Stroke,
+                            kind: S.Stroke,
                             streamKey: t,
                             strokeId: w(),
                             sequence: 0,
@@ -1097,7 +1099,7 @@ function X(e) {
                                     let e = $.current;
                                     null != e &&
                                         ((e.point = { ...e.point, sequence: e.point.sequence + 1 }), ef(e.point));
-                                }, S),
+                                }, b),
                             }),
                             eA(e.clientX, e.clientY));
                     },
@@ -1153,7 +1155,7 @@ function X(e) {
                     "pencil" === es &&
                     (0, r.jsx)("span", {
                         ref: M,
-                        className: N.OF,
+                        className: D.OF,
                         hidden: !0,
                         "aria-hidden": !0,
                         children: (0, r.jsx)(d.PencilIcon, { size: "md", color: "currentColor" }),

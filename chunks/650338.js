@@ -33,19 +33,24 @@ n.d(
             return null == E.ZV.find((e) => e.fps === t && !I(e));
         },
         K2: function (e, t, n, i) {
-            let r = E.ZV.find((i) => (null == i.preset || i.preset === e) && i.resolution === t && i.fps === n),
-                a = c.default.getCurrentUser(),
-                s = d.A.getGuildId(),
-                l = null != s ? o.A.getGuild(s) : null;
+            let r =
+                    arguments.length > 4 && void 0 !== arguments[4]
+                        ? arguments[4]
+                        : s.A.getState().streamDrawingEnabled,
+                a = E.ZV.find((i) => (null == i.preset || i.preset === e) && i.resolution === t && i.fps === n),
+                l = c.default.getCurrentUser(),
+                f = d.A.getGuildId(),
+                h = null != f ? o.A.getGuild(f) : null;
             u.default.track(_.HAw.STREAM_SETTINGS_UPDATE, {
-                user_premium_tier: a?.premiumType,
-                guild_premium_tier: l?.premiumTier,
-                stream_quality_user_premium_tier: r?.quality != null ? A.Kq[r.quality] : null,
-                stream_quality_guild_premium_tier: r?.guildPremiumTier,
+                user_premium_tier: l?.premiumType,
+                guild_premium_tier: h?.premiumTier,
+                stream_quality_user_premium_tier: a?.quality != null ? A.Kq[a.quality] : null,
+                stream_quality_guild_premium_tier: a?.guildPremiumTier,
                 stream_quality_preset: e,
                 stream_quality_resolution: t,
                 stream_quality_frame_rate: n,
                 soundshare_enabled: i,
+                stream_drawing_enabled: r,
             });
         },
         ME: function (e) {

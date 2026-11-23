@@ -5,19 +5,24 @@ var i = n(855986),
 let l = a.jQ.PRESET_VIDEO,
     o = a.on.RESOLUTION_720,
     d = a.kn.FPS_30,
-    c = !0;
-class u extends i.Ay.PersistedStore {
+    c = !0,
+    u = !0;
+class _ extends i.Ay.PersistedStore {
     static displayName = "ApplicationStreamingSettingsStore";
     static persistKey = "ApplicationStreamingSettingStore";
     initialize(e) {
         null != e &&
-            ((l = e.preset ?? a.jQ.PRESET_VIDEO), (o = e.resolution), (d = e.fps), (c = e.soundshareEnabled ?? !0));
+            ((l = e.preset ?? a.jQ.PRESET_VIDEO),
+            (o = e.resolution),
+            (d = e.fps),
+            (c = e.soundshareEnabled ?? !0),
+            (u = e.streamDrawingEnabled ?? !0));
     }
     getState() {
-        return { preset: l, resolution: o, fps: d, soundshareEnabled: c };
+        return { preset: l, resolution: o, fps: d, soundshareEnabled: c, streamDrawingEnabled: u };
     }
 }
-let _ = new u(r.h, {
+let E = new _(r.h, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
         let { settings: t } = e;
         if (t?.context !== s.x.STREAM || t?.qualityOptions == null) return !1;
@@ -30,15 +35,16 @@ let _ = new u(r.h, {
         );
     },
     STREAM_UPDATE_SETTINGS: function (e) {
-        let { preset: t, resolution: n, frameRate: i, soundshareEnabled: r } = e,
-            a = !1;
+        let { preset: t, resolution: n, frameRate: i, soundshareEnabled: r, streamDrawingEnabled: a } = e,
+            s = !1;
         return (
-            null != t && t !== l && ((l = t), (a = !0)),
-            null != n && n !== o && ((o = n), (a = !0)),
-            null != i && i !== d && ((d = i), (a = !0)),
-            null != r && r !== c && ((c = r), (a = !0)),
-            a
+            null != t && t !== l && ((l = t), (s = !0)),
+            null != n && n !== o && ((o = n), (s = !0)),
+            null != i && i !== d && ((d = i), (s = !0)),
+            null != r && r !== c && ((c = r), (s = !0)),
+            null != a && a !== u && ((u = a), (s = !0)),
+            s
         );
     },
 });
-n.d(t, {}, { A: _ });
+n.d(t, {}, { A: E });

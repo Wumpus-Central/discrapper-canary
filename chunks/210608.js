@@ -1,85 +1,122 @@
-var i = n(855986),
-    r = n(73153),
-    l = n(652896),
-    s = n(623485),
-    a = n(734057),
-    o = n(71393),
-    u = n(495867),
-    c = n(293651);
-let d = { tool: "pencil", emoji: void 0, color: void 0 },
-    h = null,
-    m = null,
-    p = d;
-function f() {
-    let e = null != m;
-    return ((m = null), (p = d), e);
+n(938796);
+var i = n(665260),
+    r = n(855986),
+    l = n(73153),
+    s = n(652896),
+    a = n(623485),
+    o = n(929921),
+    u = n(46653),
+    c = n(734057),
+    d = n(71393),
+    h = n(495867),
+    m = n(293651),
+    p = n(652215),
+    f = n(55010),
+    g = n(731854);
+let A = new Set(),
+    v = { tool: "pencil", emoji: void 0, color: void 0 },
+    E = null,
+    I = null,
+    y = v;
+function C() {
+    let e = null != I;
+    return ((I = null), (y = v), e);
 }
-function g() {
-    let e = null != h;
-    return ((h = null), f() || e);
+function S() {
+    let e = null != E || A.size > 0;
+    return ((E = null), A.clear(), C() || e);
 }
-function A(e) {
+function b(e) {
+    return (0, s.Iy)(e).ownerId === u.default.getId() ? o.A.getState().streamDrawingEnabled : A.has(e);
+}
+function w(e) {
+    let { guildId: t, channelId: n, userId: i } = e;
+    return (0, s._z)({ streamType: null != t ? f.U4.GUILD : f.U4.CALL, guildId: t, channelId: n, ownerId: i });
+}
+function x(e) {
     var t;
     let n = !1;
-    return (null != m && m !== e && (n = f()),
-    null == h ||
-        ((t = h), (0, l.Iy)(t).channelId === e && u.A.isConnected() && null == s.A.getGuestStreamKey() && (0, c.E)(t)))
+    return (null != I && I !== e && (n = C()),
+    null == E ||
+        ((t = E),
+        (0, s.Iy)(t).channelId === e && h.A.isConnected() && null == a.A.getGuestStreamKey() && (0, m.EG)(t) && b(t)))
         ? n
-        : ((h = null), !0);
+        : ((E = null), !0);
 }
-function v() {
-    return A(u.A.getChannelId() ?? null);
+function T() {
+    return x(h.A.getChannelId() ?? null);
 }
-class E extends i.Ay.Store {
+class R extends r.Ay.Store {
     static displayName = "StreamDrawingStore";
     initialize() {
-        this.waitFor(u.A, s.A, a.A, o.A);
+        this.waitFor(h.A, a.A, c.A, d.A, u.default, o.A);
+    }
+    isStreamDrawingAllowed(e) {
+        return b(e);
     }
     getActiveStreamKey() {
-        return h;
+        return E;
     }
     getSelectedTool() {
-        return p.tool;
+        return y.tool;
     }
     getColor() {
-        return p.color;
+        return y.color;
     }
     getEmoji() {
-        return p.emoji;
+        return y.emoji;
     }
 }
-let y = new E(r.h, {
+let _ = new R(l.h, {
     STREAM_DRAWING_SET_MODE: function (e) {
         let { streamKey: t } = e;
-        if (h === t) return !1;
+        if (E === t) return !1;
         if (null != t) {
-            if (null != s.A.getGuestStreamKey() || !(0, c.E)(t)) return !1;
-            m !== (0, l.Iy)(t).channelId && f();
+            if (null != a.A.getGuestStreamKey() || !(0, m.EG)(t) || !b(t)) return !1;
+            I !== (0, s.Iy)(t).channelId && C();
         }
-        h = t;
+        E = t;
     },
     STREAM_DRAWING_UPDATE_TOOLS: function (e) {
         let { streamKey: t, settings: n } = e,
-            { channelId: i } = (0, l.Iy)(t),
-            r = { ...(m === i ? p : d), ...n };
-        if (m === i && p.tool === r.tool && p.emoji === r.emoji && p.color === r.color) return !1;
-        ((m = i), (p = r));
+            { channelId: i } = (0, s.Iy)(t),
+            r = { ...(I === i ? y : v), ...n };
+        if (I === i && y.tool === r.tool && y.emoji === r.emoji && y.color === r.color) return !1;
+        ((I = i), (y = r));
     },
-    CONNECTION_CLOSED: g,
-    LOGOUT: g,
+    CONNECTION_CLOSED: S,
+    LOGOUT: S,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return A(t ?? null);
+        return x(t ?? null);
     },
-    VOICE_SERVER_UPDATE: v,
-    GUILD_DELETE: v,
-    CHANNEL_DELETE: v,
-    CALL_DELETE: v,
-    THREAD_DELETE: v,
-    VOICE_STATE_UPDATES: v,
-    RTC_CONNECTION_STATE: v,
-    RTC_CONNECTION_CLIENT_DISCONNECT: v,
-    POST_CONNECTION_OPEN: g,
-    PASS_THE_CONTROLLER_UPDATE: v,
+    VOICE_SERVER_UPDATE: T,
+    GUILD_DELETE: T,
+    CHANNEL_DELETE: T,
+    CALL_DELETE: T,
+    THREAD_DELETE: T,
+    VOICE_STATE_UPDATES: T,
+    RTC_CONNECTION_STATE: function (e) {
+        let t = !1;
+        return (e.context === g.x.DEFAULT && e.state === p.S7L.DISCONNECTED && ((t = A.size > 0), A.clear()), T() || t);
+    },
+    RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
+        let t = !1;
+        return (e.context === g.x.DEFAULT && (t = A.delete(w(e))), T() || t);
+    },
+    POST_CONNECTION_OPEN: S,
+    PASS_THE_CONTROLLER_UPDATE: T,
+    STREAM_UPDATE_SETTINGS: function (e) {
+        return T() || null != e.streamDrawingEnabled;
+    },
+    RTC_CONNECTION_FLAGS: function (e) {
+        let t = !1;
+        if (e.context === g.x.DEFAULT) {
+            let n = w(e),
+                r = (0, i.Lt)(e.flags, p.Ajs.ALLOW_STREAM_DRAWING);
+            ((t = r !== A.has(n)), r ? A.add(n) : A.delete(n));
+        }
+        return T() || t;
+    },
 });
-n.d(t, {}, { A: y });
+n.d(t, {}, { A: _ });

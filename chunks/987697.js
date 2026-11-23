@@ -1,26 +1,29 @@
 var i = n(477900),
     r = n(582128),
-    a = n(310685),
-    s = n(76795),
-    l = n(712577),
-    o = n(34387);
+    a = n(855986),
+    s = n(310685),
+    l = n(76795),
+    o = n(210608),
+    d = n(712577),
+    c = n(34387);
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { streamKey: t, paused: n, ...d } = e,
-                c = (0, a.T)("BufferedStreamVideo"),
-                [u, _] = r.useState(null),
-                E = r.useRef(null),
-                A = r.useCallback((e) => {
-                    E.current = e;
+            let { streamKey: t, paused: n, ...u } = e,
+                _ = (0, a.bG)([o.A], () => o.A.isStreamDrawingAllowed(t), [t]),
+                E = (0, s.T)("BufferedStreamVideo"),
+                [A, f] = r.useState(null),
+                h = r.useRef(null),
+                I = r.useCallback((e) => {
+                    h.current = e;
                 }, []);
             return (0, i.jsxs)("div", {
-                className: o.i,
+                className: c.i,
                 children: [
-                    (0, i.jsx)(l.A, { ...d, paused: n, onResize: _, onVideoElement: A }),
-                    c ? (0, i.jsx)(s.A, { streamKey: t, dimensions: u, visible: !n, videoRef: E }) : null,
+                    (0, i.jsx)(d.A, { ...u, paused: n, onResize: f, onVideoElement: I }),
+                    E && _ ? (0, i.jsx)(l.A, { streamKey: t, dimensions: A, visible: !n, videoRef: h }) : null,
                 ],
             });
         },

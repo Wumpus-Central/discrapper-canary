@@ -1,4 +1,4 @@
-n.d(t, { A: () => H });
+n.d(t, { A: () => U });
 var l = n(477900),
     i = n(582128),
     r = n(855986),
@@ -20,35 +20,36 @@ var l = n(477900),
     C = n(581925),
     j = n(508274),
     S = n(123292),
-    I = n(821609),
-    b = n(775602),
+    b = n(821609),
+    I = n(775602),
     y = n(652896),
     _ = n(734057),
-    N = n(382730),
-    w = n(210608),
-    k = n(461782),
-    R = n(307731),
-    L = n(791005),
-    T = n(792996),
-    D = n(269049);
-let M = i.lazy(() => Promise.resolve().then(n.bind(n, 863576)));
-function O(e) {
-    return (0, l.jsxs)("span", {
-        className: D.N$,
-        children: [(0, l.jsx)(h.PencilIcon, { ...e }), (0, l.jsx)("span", { className: D.OE, "aria-hidden": !0 })],
-    });
-}
+    N = n(562153),
+    w = n(382730),
+    k = n(210608),
+    R = n(461782),
+    L = n(307731),
+    T = n(791005),
+    D = n(792996),
+    M = n(269049);
+let O = i.lazy(() => Promise.resolve().then(n.bind(n, 863576)));
 function P(e) {
     return (0, l.jsxs)("span", {
-        className: D.u7,
-        "aria-hidden": !0,
-        children: [
-            (0, l.jsx)("span", { className: D.kI, children: (0, l.jsx)(h.PencilIcon, { ...e }) }),
-            (0, l.jsx)("span", { className: D.N_, children: (0, l.jsx)(A.XSmallIcon, { ...e }) }),
-        ],
+        className: M.N$,
+        children: [(0, l.jsx)(h.PencilIcon, { ...e }), (0, l.jsx)("span", { className: M.OE, "aria-hidden": !0 })],
     });
 }
 function G(e) {
+    return (0, l.jsxs)("span", {
+        className: M.u7,
+        "aria-hidden": !0,
+        children: [
+            (0, l.jsx)("span", { className: M.kI, children: (0, l.jsx)(h.PencilIcon, { ...e }) }),
+            (0, l.jsx)("span", { className: M.N_, children: (0, l.jsx)(A.XSmallIcon, { ...e }) }),
+        ],
+    });
+}
+function V(e) {
     let {
         buttonRef: t,
         icon: n,
@@ -95,24 +96,24 @@ function G(e) {
             }),
     });
 }
-function V(e) {
-    let { streamKey: t, connection: n, avatarColor: s, disabled: a = !1, zoomed: o = !1 } = e,
-        u = (0, r.bG)([w.A], () => w.A.getActiveStreamKey() === t),
+function F(e) {
+    let { streamKey: t, connection: n, avatarColor: s, disabled: a = !1, zoomed: o = !1, disallowed: u = !1 } = e,
+        c = (0, r.bG)([k.A], () => k.A.getActiveStreamKey() === t),
         {
-            rootRef: c,
-            entryRef: d,
-            id: m,
-            picker: p,
-            setPicker: h,
-            expanded: A,
-            close: x,
-            resetCollapse: V,
-            onFocus: F,
-            onBlur: H,
-            onEscape: U,
-            onEntryPointerDown: z,
-            onEntryPointerCancel: W,
-            onEntryClick: $,
+            rootRef: m,
+            entryRef: p,
+            id: h,
+            picker: A,
+            setPicker: x,
+            expanded: F,
+            close: H,
+            resetCollapse: U,
+            onFocus: z,
+            onBlur: W,
+            onEscape: $,
+            onEntryPointerDown: B,
+            onEntryPointerCancel: K,
+            onEntryClick: Y,
         } = (function (e) {
             let { pressed: t, disabled: n, onToggleMode: l } = e,
                 [r, s] = i.useState(t),
@@ -124,11 +125,11 @@ function V(e) {
             r !== t && (s(t), o(t), c(null));
             let A = i.useRef(null),
                 x = i.useRef(null),
-                v = i.useRef(b.Ay.keyboardModeEnabled),
+                v = i.useRef(I.Ay.keyboardModeEnabled),
                 E = i.useRef(!1),
                 C = i.useRef(!1),
                 j = i.useId(),
-                { onPreventIdle: S, onAllowIdle: I } = i.useContext(k.k3),
+                { onPreventIdle: S, onAllowIdle: b } = i.useContext(R.k3),
                 y = t && (a || null != u) && !n,
                 _ = d || p || null != u,
                 N = i.useCallback(() => c(null), []);
@@ -198,13 +199,13 @@ function V(e) {
                 i.useEffect(() => {
                     if (!d) return;
                     let e = `stream-drawing-hover-${j}`;
-                    return (S(e), () => I(e));
-                }, [d, j, S, I]),
+                    return (S(e), () => b(e));
+                }, [d, j, S, b]),
                 i.useEffect(() => {
                     if (!y) return;
                     let e = `stream-drawing-${j}`;
-                    return (S(e), () => I(e));
-                }, [y, j, S, I]),
+                    return (S(e), () => b(e));
+                }, [y, j, S, b]),
                 {
                     rootRef: A,
                     entryRef: x,
@@ -241,47 +242,50 @@ function V(e) {
                     },
                 }
             );
-        })({ pressed: u, disabled: a, onToggleMode: () => (0, g.WX)(t) }),
-        B = i.useRef(null),
-        K = i.useRef(null),
-        { guildId: Y, channelId: X } = (0, y.Iy)(t),
-        Z = (0, r.bG)([_.A], () => _.A.getChannel(X), [X]),
-        Q = (0, r.bG)([w.A], () => w.A.getSelectedTool()),
-        q = (0, r.bG)([w.A], () => w.A.getEmoji()),
-        J = (0, r.bG)([w.A], () => w.A.getColor()),
-        ee = null == J ? s : (0, f.Hl)(J),
-        et = L.default.SdXXOA;
-    (u && (et = L.default.InWDv7), A && (et = L.default.EqYF6z));
-    let en = T.intl.string(et),
-        el = en;
-    a && (el = T.intl.string(o ? L.default["98MNI1"] : L.default.vql1fM));
-    let ei = (0, r.bG)([b.Ay], () => b.Ay.useReducedMotion),
-        er = T.intl.string(L.default.maGwHF),
-        es = T.intl.string(L.default["7haKYj"]),
-        ea = i.useMemo(() => {
-            let e = (0, N.W)(q, !ei);
+        })({ pressed: c, disabled: a, onToggleMode: () => (0, g.WX)(t) }),
+        Z = i.useRef(null),
+        X = i.useRef(null),
+        { guildId: Q, channelId: q, ownerId: J } = (0, y.Iy)(t),
+        ee = (0, r.bG)([d.default], () => d.default.getUser(J), [J]),
+        et = N.Ay.useName(Q, q, ee),
+        en = (0, r.bG)([_.A], () => _.A.getChannel(q), [q]),
+        el = (0, r.bG)([k.A], () => k.A.getSelectedTool()),
+        ei = (0, r.bG)([k.A], () => k.A.getEmoji()),
+        er = (0, r.bG)([k.A], () => k.A.getColor()),
+        es = null == er ? s : (0, f.Hl)(er),
+        ea = T.default.SdXXOA;
+    (c && (ea = T.default.InWDv7), F && (ea = T.default.EqYF6z));
+    let eo = D.intl.string(ea),
+        eu = eo;
+    (a && (eu = D.intl.string(o ? T.default["98MNI1"] : T.default.vql1fM)),
+        u && (eu = D.intl.formatToPlainString(T.default.MNzZ94, { username: et })));
+    let ec = (0, r.bG)([I.Ay], () => I.Ay.useReducedMotion),
+        ed = D.intl.string(T.default.maGwHF),
+        em = D.intl.string(T.default["7haKYj"]),
+        ep = i.useMemo(() => {
+            let e = (0, w.W)(ei, !ec);
             return null == e
                 ? C.StampIcon
                 : function () {
-                      return (0, l.jsx)("img", { src: e, className: D.M7, alt: "" });
+                      return (0, l.jsx)("img", { src: e, className: M.M7, alt: "" });
                   };
-        }, [q, ei]);
-    function eo(e, l) {
-        u && !a && null != n && (0, g.cW)(t, { tool: e, ...(null == l ? {} : { emoji: l }) });
+        }, [ei, ec]);
+    function eg(e, l) {
+        c && !a && null != n && (0, g.cW)(t, { tool: e, ...(null == l ? {} : { emoji: l }) });
     }
     return (
         i.useLayoutEffect(() => {
-            c.current?.style.setProperty("--custom-stream-drawing-stroke-color", ee);
-        }, [c, ee]),
+            m.current?.style.setProperty("--custom-stream-drawing-stroke-color", es);
+        }, [m, es]),
         (0, l.jsxs)("div", {
-            ref: c,
+            ref: m,
             role: "toolbar",
-            "aria-label": T.intl.string(L.default.SdXXOA),
-            className: D.ne,
-            "data-expanded": A,
-            onFocus: F,
-            onBlur: H,
-            onClickCapture: V,
+            "aria-label": D.intl.string(T.default.SdXXOA),
+            className: M.ne,
+            "data-expanded": F,
+            onFocus: z,
+            onBlur: W,
+            onClickCapture: U,
             onClick: (e) => e.stopPropagation(),
             onPointerDown: (e) => {
                 0 === e.button && e.stopPropagation();
@@ -295,8 +299,8 @@ function V(e) {
             },
             onDoubleClick: (e) => e.stopPropagation(),
             onKeyDown: (e) => {
-                if (U(e)) return;
-                let t = [B.current, K.current, d.current].filter((e) => null != e && !e.disabled && -1 !== e.tabIndex),
+                if ($(e)) return;
+                let t = [Z.current, X.current, p.current].filter((e) => null != e && !e.disabled && -1 !== e.tabIndex),
                     n = t.indexOf(e.target);
                 if (n < 0) return;
                 let l = 0;
@@ -312,45 +316,45 @@ function V(e) {
             },
             children: [
                 (0, l.jsxs)("div", {
-                    id: `${m}-tools`,
-                    className: D.Yl,
-                    "data-expanded": A,
-                    "aria-hidden": !A,
+                    id: `${h}-tools`,
+                    className: M.Yl,
+                    "data-expanded": F,
+                    "aria-hidden": !F,
                     children: [
-                        (0, l.jsx)(G, {
-                            buttonRef: B,
-                            icon: O,
-                            label: er,
-                            selected: u && "pencil" === Q,
+                        (0, l.jsx)(V, {
+                            buttonRef: Z,
+                            icon: P,
+                            label: ed,
+                            selected: c && "pencil" === el,
                             disabled: a || null == n,
-                            expanded: A,
-                            pickerOpen: "color" === p,
-                            showTooltip: A && null == p,
-                            onRequestClose: x,
+                            expanded: F,
+                            pickerOpen: "color" === A,
+                            showTooltip: F && null == A,
+                            onRequestClose: H,
                             onOpenPicker: () => {
-                                (eo("pencil"), h("color"));
+                                (eg("pencil"), x("color"));
                             },
                             renderPopout: () =>
                                 (0, l.jsx)(j.VN, {
-                                    value: (0, f.LX)(ee),
+                                    value: (0, f.LX)(es),
                                     onChange: (e) => {
                                         null != n && (0, g.cW)(t, { color: e });
                                     },
                                     footer: (0, l.jsxs)("div", {
-                                        className: D.XR,
+                                        className: M.XR,
                                         children: [
                                             (0, l.jsx)(S.Q, {
-                                                text: T.intl.string(L.default.Fr1ZLG),
+                                                text: D.intl.string(T.default.Fr1ZLG),
                                                 onClick: (e) => {
                                                     (e.stopPropagation(), null != n && (0, g.cW)(t, { color: void 0 }));
                                                 },
                                             }),
-                                            (0, l.jsx)(I.$, {
-                                                text: T.intl.string(L.default["3Kpyww"]),
+                                            (0, l.jsx)(b.$, {
+                                                text: D.intl.string(T.default["3Kpyww"]),
                                                 size: "sm",
                                                 variant: "primary",
                                                 onClick: (e) => {
-                                                    (e.stopPropagation(), x());
+                                                    (e.stopPropagation(), H());
                                                 },
                                             }),
                                         ],
@@ -358,75 +362,75 @@ function V(e) {
                                 }),
                             onClick: (e) => {
                                 (e.stopPropagation(),
-                                    "pencil" !== Q ? (eo("pencil"), x()) : h("color" === p ? null : "color"));
+                                    "pencil" !== el ? (eg("pencil"), H()) : x("color" === A ? null : "color"));
                             },
                         }),
-                        (0, l.jsx)(G, {
-                            buttonRef: K,
-                            icon: ea,
-                            label: es,
-                            selected: u && "stamp" === Q,
+                        (0, l.jsx)(V, {
+                            buttonRef: X,
+                            icon: ep,
+                            label: em,
+                            selected: c && "stamp" === el,
                             disabled: a || null == n,
-                            expanded: A,
-                            pickerOpen: "emoji" === p,
-                            showTooltip: A && null == p,
-                            onRequestClose: x,
+                            expanded: F,
+                            pickerOpen: "emoji" === A,
+                            showTooltip: F && null == A,
+                            onRequestClose: H,
                             onOpenPicker: () => {
-                                (eo("stamp"), h("emoji"));
+                                (eg("stamp"), x("emoji"));
                             },
                             renderPopout: () =>
                                 (0, l.jsx)(i.Suspense, {
                                     fallback: null,
-                                    children: (0, l.jsx)(M, {
-                                        channel: Z,
-                                        guildId: Y ?? void 0,
-                                        pickerIntention: R.EmojiIntention.CHAT,
-                                        closePopout: x,
+                                    children: (0, l.jsx)(O, {
+                                        channel: en,
+                                        guildId: Q ?? void 0,
+                                        pickerIntention: L.EmojiIntention.CHAT,
+                                        closePopout: H,
                                         onSelectEmoji: (e) => {
                                             let { emoji: t } = e;
                                             null != t &&
-                                                (eo(
+                                                (eg(
                                                     "stamp",
                                                     null != t.id
                                                         ? { id: t.id, animated: t.animated ?? !1 }
                                                         : { unicode: t.surrogates },
                                                 ),
-                                                x());
+                                                H());
                                         },
                                     }),
                                 }),
                             onClick: (e) => {
                                 (e.stopPropagation(),
-                                    null == q
-                                        ? h("emoji" === p ? null : "emoji")
-                                        : "stamp" !== Q
-                                          ? (eo("stamp"), x())
-                                          : h("emoji" === p ? null : "emoji"));
+                                    null == ei
+                                        ? x("emoji" === A ? null : "emoji")
+                                        : "stamp" !== el
+                                          ? (eg("stamp"), H())
+                                          : x("emoji" === A ? null : "emoji"));
                             },
                         }),
                     ],
                 }),
                 (0, l.jsx)(v.m, {
-                    text: el,
+                    text: eu,
                     position: "top",
                     delay: 150,
-                    shouldShow: null == p,
+                    shouldShow: null == A,
                     ariaHidden: !a,
                     asContainer: !0,
                     children: (0, l.jsx)(E.K, {
-                        buttonRef: d,
-                        icon: P,
+                        buttonRef: p,
+                        icon: G,
                         size: "sm",
-                        variant: u ? "overlay-primary" : "overlay-secondary",
+                        variant: c ? "overlay-primary" : "overlay-secondary",
                         disabled: a,
-                        "aria-pressed": u,
-                        "aria-expanded": A,
-                        "aria-controls": `${m}-tools`,
-                        "aria-label": en,
-                        onPointerDown: z,
-                        onPointerCancel: W,
+                        "aria-pressed": c,
+                        "aria-expanded": F,
+                        "aria-controls": `${h}-tools`,
+                        "aria-label": eo,
+                        onPointerDown: B,
+                        onPointerCancel: K,
                         onClick: (e) => {
-                            (e.stopPropagation(), $());
+                            (e.stopPropagation(), Y());
                         },
                     }),
                 }),
@@ -434,37 +438,45 @@ function V(e) {
         })
     );
 }
-var F = n(652215);
-function H(e) {
+var H = n(652215);
+function U(e) {
     let { streamKey: t } = e,
         { zoomLevel: n, minZoom: f } = i.useContext(a.e9),
         h = n > f,
         A = (0, p.T)("FocusedStreamTile"),
-        x = (0, m.B)(t),
-        v = A && x,
-        E = (0, r.bG)(
+        x = (0, m.BC)(t),
+        v = (0, r.bG)([k.A], () => k.A.isStreamDrawingAllowed(t), [t]),
+        E = A && x,
+        C = (0, r.bG)(
             [u.A],
             () => {
                 let e = u.A.getActiveStreamForStreamKey(t);
-                return null != e && e.state !== F.XYD.ENDED && e.state !== F.XYD.FAILED;
+                return null != e && e.state !== H.XYD.ENDED && e.state !== H.XYD.FAILED;
             },
             [t],
         ),
-        C = (0, r.bG)([o.A], () => null != o.A.getGuestStreamKey()),
-        j = (0, r.bG)([c.A], () => c.A.getRTCConnection()),
-        S = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-        I = (0, s.Ay)(S?.getAvatarURL(null, 80), "#ffffff", !1);
+        j = (0, r.bG)([o.A], () => null != o.A.getGuestStreamKey()),
+        S = (0, r.bG)([c.A], () => c.A.getRTCConnection()),
+        b = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
+        I = (0, s.Ay)(b?.getAvatarURL(null, 80), "#ffffff", !1);
     return (i.useEffect(() => {
         function e() {
-            w.A.getActiveStreamKey() === t && (0, g.w3)(null);
+            k.A.getActiveStreamKey() === t && (0, g.w3)(null);
         }
-        return ((v && E && !h) || e(), e);
-    }, [v, E, t, h]),
-    v && E)
+        return ((E && C && !h && v) || e(), e);
+    }, [E, C, t, h, v]),
+    E && C)
         ? (0, l.jsx)(
-              V,
-              { streamKey: t, connection: j ?? null, avatarColor: I, disabled: C || h, zoomed: h },
-              C || h ? "disabled" : "enabled",
+              F,
+              {
+                  streamKey: t,
+                  connection: S ?? null,
+                  avatarColor: I,
+                  disabled: j || h || !v,
+                  zoomed: h,
+                  disallowed: !v,
+              },
+              j || h || !v ? "disabled" : "enabled",
           )
         : null;
 }

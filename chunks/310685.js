@@ -11,5 +11,9 @@ n.d(
         T: function (e) {
             return i.useConfig({ location: e }).enabled;
         },
+        q: function (e) {
+            let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+            return i.getConfig({ location: e }, { autoTrackExposure: t }).enabled;
+        },
     },
 );
