@@ -4,7 +4,7 @@ var i = n(855986),
     s = n(46653),
     l = n(287809);
 function o(e) {
-    return (l.default.getCurrentUser()?.isStaff(), !1);
+    return !1;
 }
 ((0, r.mj)({
     name: "2026-11-waterwheels-discover",
