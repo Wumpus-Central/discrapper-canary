@@ -49,8 +49,7 @@ var b = n(503698),
     $ = n(76795),
     X = n(210608);
 function Q() {
-    let e = (0, J.T)("StreamDrawingOverlay"),
-        t = (0, l.bG)([H.A, z.A, Y.Ay, V.A, F.default], () => {
+    let e = (0, l.bG)([H.A, z.A, Y.Ay, V.A, F.default], () => {
             let e = H.A.getCurrentUserActiveStream();
             if (null == e) return null;
             let t = (0, W._z)(e),
@@ -65,8 +64,9 @@ function Q() {
                 ? t
                 : null;
         }),
-        n = (0, l.bG)([X.A], () => null != t && X.A.isStreamDrawingAllowed(t), [t]);
-    return e && n && null != t ? (0, r.jsx)($.A, { streamKey: t, dimensions: null, overlay: !0 }, t) : null;
+        t = (0, J.T)(null == e ? null : (0, W.Iy)(e).channelId, "StreamDrawingOverlay"),
+        n = (0, l.bG)([X.A], () => null != e && X.A.isStreamDrawingAllowed(e), [e]);
+    return t && n && null != e ? (0, r.jsx)($.A, { streamKey: e, dimensions: null, overlay: !0 }, e) : null;
 }
 var q = n(734057),
     Z = n(71393),

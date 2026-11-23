@@ -6254,6 +6254,22 @@
     }
   },
   {
+    "name": "2026-11-stream-drawing-guild",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-11-subscription-management-settings-brand-refresh",
     "defaultConfig": {

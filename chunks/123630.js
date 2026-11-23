@@ -2,27 +2,27 @@ n.d(t, { A: () => U });
 var l = n(477900),
     i = n(582128),
     r = n(855986),
-    s = n(654107),
-    a = n(40056),
-    o = n(623485),
-    u = n(616356),
-    c = n(495867),
-    d = n(287809),
-    m = n(293651),
-    p = n(310685),
-    g = n(721326),
-    f = n(317097),
-    h = n(22231),
-    A = n(789645),
-    x = n(265872),
-    v = n(866665),
-    E = n(408278),
-    C = n(581925),
-    j = n(508274),
-    S = n(123292),
+    a = n(654107),
+    s = n(652896),
+    o = n(40056),
+    u = n(623485),
+    c = n(616356),
+    d = n(495867),
+    m = n(287809),
+    p = n(293651),
+    g = n(310685),
+    f = n(721326),
+    h = n(317097),
+    A = n(22231),
+    x = n(789645),
+    v = n(265872),
+    E = n(866665),
+    C = n(408278),
+    j = n(581925),
+    S = n(508274),
+    I = n(123292),
     b = n(821609),
-    I = n(775602),
-    y = n(652896),
+    y = n(775602),
     _ = n(734057),
     N = n(562153),
     w = n(382730),
@@ -36,7 +36,7 @@ let O = i.lazy(() => Promise.resolve().then(n.bind(n, 863576)));
 function P(e) {
     return (0, l.jsxs)("span", {
         className: M.N$,
-        children: [(0, l.jsx)(h.PencilIcon, { ...e }), (0, l.jsx)("span", { className: M.OE, "aria-hidden": !0 })],
+        children: [(0, l.jsx)(A.PencilIcon, { ...e }), (0, l.jsx)("span", { className: M.OE, "aria-hidden": !0 })],
     });
 }
 function G(e) {
@@ -44,8 +44,8 @@ function G(e) {
         className: M.u7,
         "aria-hidden": !0,
         children: [
-            (0, l.jsx)("span", { className: M.kI, children: (0, l.jsx)(h.PencilIcon, { ...e }) }),
-            (0, l.jsx)("span", { className: M.N_, children: (0, l.jsx)(A.XSmallIcon, { ...e }) }),
+            (0, l.jsx)("span", { className: M.kI, children: (0, l.jsx)(A.PencilIcon, { ...e }) }),
+            (0, l.jsx)("span", { className: M.N_, children: (0, l.jsx)(x.XSmallIcon, { ...e }) }),
         ],
     });
 }
@@ -55,8 +55,8 @@ function V(e) {
         icon: n,
         label: i,
         selected: r,
-        disabled: s,
-        expanded: a,
+        disabled: a,
+        expanded: s,
         pickerOpen: o,
         showTooltip: u,
         renderPopout: c,
@@ -64,7 +64,7 @@ function V(e) {
         onOpenPicker: m,
         onClick: p,
     } = e;
-    return (0, l.jsx)(x.Y, {
+    return (0, l.jsx)(v.Y, {
         targetElementRef: t,
         shouldShow: o,
         onRequestClose: d,
@@ -72,17 +72,17 @@ function V(e) {
         align: "center",
         renderPopout: c,
         children: () =>
-            (0, l.jsx)(v.m, {
+            (0, l.jsx)(E.m, {
                 shouldShow: u,
                 delay: 150,
                 text: i,
                 asContainer: !0,
-                children: (0, l.jsx)(E.K, {
+                children: (0, l.jsx)(C.K, {
                     buttonRef: t,
                     icon: n,
                     size: "sm",
-                    disabled: s,
-                    tabIndex: a ? 0 : -1,
+                    disabled: a,
+                    tabIndex: s ? 0 : -1,
                     variant: r ? "overlay-primary" : "overlay-secondary",
                     "aria-pressed": r,
                     "aria-expanded": o,
@@ -97,14 +97,14 @@ function V(e) {
     });
 }
 function F(e) {
-    let { streamKey: t, connection: n, avatarColor: s, disabled: a = !1, zoomed: o = !1, disallowed: u = !1 } = e,
-        c = (0, r.bG)([k.A], () => k.A.getActiveStreamKey() === t),
+    let { streamKey: t, connection: n, avatarColor: a, disabled: o = !1, zoomed: u = !1, disallowed: c = !1 } = e,
+        d = (0, r.bG)([k.A], () => k.A.getActiveStreamKey() === t),
         {
-            rootRef: m,
-            entryRef: p,
-            id: h,
-            picker: A,
-            setPicker: x,
+            rootRef: p,
+            entryRef: g,
+            id: A,
+            picker: x,
+            setPicker: v,
             expanded: F,
             close: H,
             resetCollapse: U,
@@ -116,29 +116,29 @@ function F(e) {
             onEntryClick: Y,
         } = (function (e) {
             let { pressed: t, disabled: n, onToggleMode: l } = e,
-                [r, s] = i.useState(t),
-                [a, o] = i.useState(t),
+                [r, a] = i.useState(t),
+                [s, o] = i.useState(t),
                 [u, c] = i.useState(null),
                 [d, m] = i.useState(!1),
                 [p, g] = i.useState(!1),
                 [f, h] = i.useReducer((e) => e + 1, 0);
-            r !== t && (s(t), o(t), c(null));
+            r !== t && (a(t), o(t), c(null));
             let A = i.useRef(null),
                 x = i.useRef(null),
-                v = i.useRef(I.Ay.keyboardModeEnabled),
+                v = i.useRef(y.Ay.keyboardModeEnabled),
                 E = i.useRef(!1),
                 C = i.useRef(!1),
                 j = i.useId(),
-                { onPreventIdle: S, onAllowIdle: b } = i.useContext(R.k3),
-                y = t && (a || null != u) && !n,
+                { onPreventIdle: S, onAllowIdle: I } = i.useContext(R.k3),
+                b = t && (s || null != u) && !n,
                 _ = d || p || null != u,
                 N = i.useCallback(() => c(null), []);
             return (
                 i.useEffect(() => {
-                    if (!y || _) return;
+                    if (!b || _) return;
                     let e = window.setTimeout(() => o(!1), 1500);
                     return () => window.clearTimeout(e);
-                }, [y, _, f]),
+                }, [b, _, f]),
                 i.useEffect(() => {
                     let e = A.current;
                     if (null == e) return;
@@ -147,14 +147,14 @@ function F(e) {
                     function r(e) {
                         "touch" !== e.pointerType && (m(!0), t && !n && o(!0));
                     }
-                    function s() {
+                    function a() {
                         m(!1);
                     }
-                    function a(t) {
+                    function s(t) {
                         e.contains(t.target) || m(!1);
                     }
                     function u(e) {
-                        ((v.current = !1), g(!1), a(e));
+                        ((v.current = !1), g(!1), s(e));
                     }
                     function c(t) {
                         !t.altKey &&
@@ -179,19 +179,19 @@ function F(e) {
                     }
                     return (
                         e.addEventListener("pointerenter", r),
-                        e.addEventListener("pointerleave", s),
+                        e.addEventListener("pointerleave", a),
                         l.addEventListener("pointerdown", u, !0),
                         l.addEventListener("keydown", c, !0),
-                        l.addEventListener("pointerover", a, !0),
-                        l.addEventListener("gotpointercapture", a, !0),
+                        l.addEventListener("pointerover", s, !0),
+                        l.addEventListener("gotpointercapture", s, !0),
                         i?.addEventListener("blur", d),
                         () => {
                             (e.removeEventListener("pointerenter", r),
-                                e.removeEventListener("pointerleave", s),
+                                e.removeEventListener("pointerleave", a),
                                 l.removeEventListener("pointerdown", u, !0),
                                 l.removeEventListener("keydown", c, !0),
-                                l.removeEventListener("pointerover", a, !0),
-                                l.removeEventListener("gotpointercapture", a, !0),
+                                l.removeEventListener("pointerover", s, !0),
+                                l.removeEventListener("gotpointercapture", s, !0),
                                 i?.removeEventListener("blur", d));
                         }
                     );
@@ -199,20 +199,20 @@ function F(e) {
                 i.useEffect(() => {
                     if (!d) return;
                     let e = `stream-drawing-hover-${j}`;
-                    return (S(e), () => b(e));
-                }, [d, j, S, b]),
+                    return (S(e), () => I(e));
+                }, [d, j, S, I]),
                 i.useEffect(() => {
-                    if (!y) return;
+                    if (!b) return;
                     let e = `stream-drawing-${j}`;
-                    return (S(e), () => b(e));
-                }, [y, j, S, b]),
+                    return (S(e), () => I(e));
+                }, [b, j, S, I]),
                 {
                     rootRef: A,
                     entryRef: x,
                     id: j,
                     picker: u,
                     setPicker: c,
-                    expanded: y,
+                    expanded: b,
                     close: N,
                     resetCollapse: h,
                     onFocus(e) {
@@ -227,10 +227,10 @@ function F(e) {
                         !!t &&
                         (e.preventDefault(),
                         e.stopPropagation(),
-                        null != u ? N() : (y || l(), o(!1), (E.current = !0), x.current?.focus(), (E.current = !1)),
+                        null != u ? N() : (b || l(), o(!1), (E.current = !0), x.current?.focus(), (E.current = !1)),
                         !0),
                     onEntryPointerDown() {
-                        C.current = t && !y;
+                        C.current = t && !b;
                     },
                     onEntryPointerCancel() {
                         C.current = !1;
@@ -238,47 +238,47 @@ function F(e) {
                     onEntryClick() {
                         N();
                         let e = C.current;
-                        ((C.current = !1), t && (!y || e) ? (o(!0), h()) : (o(!t), l()));
+                        ((C.current = !1), t && (!b || e) ? (o(!0), h()) : (o(!t), l()));
                     },
                 }
             );
-        })({ pressed: c, disabled: a, onToggleMode: () => (0, g.WX)(t) }),
+        })({ pressed: d, disabled: o, onToggleMode: () => (0, f.WX)(t) }),
         Z = i.useRef(null),
         X = i.useRef(null),
-        { guildId: Q, channelId: q, ownerId: J } = (0, y.Iy)(t),
-        ee = (0, r.bG)([d.default], () => d.default.getUser(J), [J]),
+        { guildId: Q, channelId: q, ownerId: J } = (0, s.Iy)(t),
+        ee = (0, r.bG)([m.default], () => m.default.getUser(J), [J]),
         et = N.Ay.useName(Q, q, ee),
         en = (0, r.bG)([_.A], () => _.A.getChannel(q), [q]),
         el = (0, r.bG)([k.A], () => k.A.getSelectedTool()),
         ei = (0, r.bG)([k.A], () => k.A.getEmoji()),
         er = (0, r.bG)([k.A], () => k.A.getColor()),
-        es = null == er ? s : (0, f.Hl)(er),
-        ea = T.default.SdXXOA;
-    (c && (ea = T.default.InWDv7), F && (ea = T.default.EqYF6z));
-    let eo = D.intl.string(ea),
+        ea = null == er ? a : (0, h.Hl)(er),
+        es = T.default.SdXXOA;
+    (d && (es = T.default.InWDv7), F && (es = T.default.EqYF6z));
+    let eo = D.intl.string(es),
         eu = eo;
-    (a && (eu = D.intl.string(o ? T.default["98MNI1"] : T.default.vql1fM)),
-        u && (eu = D.intl.formatToPlainString(T.default.MNzZ94, { username: et })));
-    let ec = (0, r.bG)([I.Ay], () => I.Ay.useReducedMotion),
+    (o && (eu = D.intl.string(u ? T.default["98MNI1"] : T.default.vql1fM)),
+        c && (eu = D.intl.formatToPlainString(T.default.MNzZ94, { username: et })));
+    let ec = (0, r.bG)([y.Ay], () => y.Ay.useReducedMotion),
         ed = D.intl.string(T.default.maGwHF),
         em = D.intl.string(T.default["7haKYj"]),
         ep = i.useMemo(() => {
             let e = (0, w.W)(ei, !ec);
             return null == e
-                ? C.StampIcon
+                ? j.StampIcon
                 : function () {
                       return (0, l.jsx)("img", { src: e, className: M.M7, alt: "" });
                   };
         }, [ei, ec]);
     function eg(e, l) {
-        c && !a && null != n && (0, g.cW)(t, { tool: e, ...(null == l ? {} : { emoji: l }) });
+        d && !o && null != n && (0, f.cW)(t, { tool: e, ...(null == l ? {} : { emoji: l }) });
     }
     return (
         i.useLayoutEffect(() => {
-            m.current?.style.setProperty("--custom-stream-drawing-stroke-color", es);
-        }, [m, es]),
+            p.current?.style.setProperty("--custom-stream-drawing-stroke-color", ea);
+        }, [p, ea]),
         (0, l.jsxs)("div", {
-            ref: m,
+            ref: p,
             role: "toolbar",
             "aria-label": D.intl.string(T.default.SdXXOA),
             className: M.ne,
@@ -300,7 +300,7 @@ function F(e) {
             onDoubleClick: (e) => e.stopPropagation(),
             onKeyDown: (e) => {
                 if ($(e)) return;
-                let t = [Z.current, X.current, p.current].filter((e) => null != e && !e.disabled && -1 !== e.tabIndex),
+                let t = [Z.current, X.current, g.current].filter((e) => null != e && !e.disabled && -1 !== e.tabIndex),
                     n = t.indexOf(e.target);
                 if (n < 0) return;
                 let l = 0;
@@ -316,7 +316,7 @@ function F(e) {
             },
             children: [
                 (0, l.jsxs)("div", {
-                    id: `${h}-tools`,
+                    id: `${A}-tools`,
                     className: M.Yl,
                     "data-expanded": F,
                     "aria-hidden": !F,
@@ -325,28 +325,28 @@ function F(e) {
                             buttonRef: Z,
                             icon: P,
                             label: ed,
-                            selected: c && "pencil" === el,
-                            disabled: a || null == n,
+                            selected: d && "pencil" === el,
+                            disabled: o || null == n,
                             expanded: F,
-                            pickerOpen: "color" === A,
-                            showTooltip: F && null == A,
+                            pickerOpen: "color" === x,
+                            showTooltip: F && null == x,
                             onRequestClose: H,
                             onOpenPicker: () => {
-                                (eg("pencil"), x("color"));
+                                (eg("pencil"), v("color"));
                             },
                             renderPopout: () =>
-                                (0, l.jsx)(j.VN, {
-                                    value: (0, f.LX)(es),
+                                (0, l.jsx)(S.VN, {
+                                    value: (0, h.LX)(ea),
                                     onChange: (e) => {
-                                        null != n && (0, g.cW)(t, { color: e });
+                                        null != n && (0, f.cW)(t, { color: e });
                                     },
                                     footer: (0, l.jsxs)("div", {
                                         className: M.XR,
                                         children: [
-                                            (0, l.jsx)(S.Q, {
+                                            (0, l.jsx)(I.Q, {
                                                 text: D.intl.string(T.default.Fr1ZLG),
                                                 onClick: (e) => {
-                                                    (e.stopPropagation(), null != n && (0, g.cW)(t, { color: void 0 }));
+                                                    (e.stopPropagation(), null != n && (0, f.cW)(t, { color: void 0 }));
                                                 },
                                             }),
                                             (0, l.jsx)(b.$, {
@@ -362,21 +362,21 @@ function F(e) {
                                 }),
                             onClick: (e) => {
                                 (e.stopPropagation(),
-                                    "pencil" !== el ? (eg("pencil"), H()) : x("color" === A ? null : "color"));
+                                    "pencil" !== el ? (eg("pencil"), H()) : v("color" === x ? null : "color"));
                             },
                         }),
                         (0, l.jsx)(V, {
                             buttonRef: X,
                             icon: ep,
                             label: em,
-                            selected: c && "stamp" === el,
-                            disabled: a || null == n,
+                            selected: d && "stamp" === el,
+                            disabled: o || null == n,
                             expanded: F,
-                            pickerOpen: "emoji" === A,
-                            showTooltip: F && null == A,
+                            pickerOpen: "emoji" === x,
+                            showTooltip: F && null == x,
                             onRequestClose: H,
                             onOpenPicker: () => {
-                                (eg("stamp"), x("emoji"));
+                                (eg("stamp"), v("emoji"));
                             },
                             renderPopout: () =>
                                 (0, l.jsx)(i.Suspense, {
@@ -402,30 +402,30 @@ function F(e) {
                             onClick: (e) => {
                                 (e.stopPropagation(),
                                     null == ei
-                                        ? x("emoji" === A ? null : "emoji")
+                                        ? v("emoji" === x ? null : "emoji")
                                         : "stamp" !== el
                                           ? (eg("stamp"), H())
-                                          : x("emoji" === A ? null : "emoji"));
+                                          : v("emoji" === x ? null : "emoji"));
                             },
                         }),
                     ],
                 }),
-                (0, l.jsx)(v.m, {
+                (0, l.jsx)(E.m, {
                     text: eu,
                     position: "top",
                     delay: 150,
-                    shouldShow: null == A,
-                    ariaHidden: !a,
+                    shouldShow: null == x,
+                    ariaHidden: !o,
                     asContainer: !0,
-                    children: (0, l.jsx)(E.K, {
-                        buttonRef: p,
+                    children: (0, l.jsx)(C.K, {
+                        buttonRef: g,
                         icon: G,
                         size: "sm",
-                        variant: c ? "overlay-primary" : "overlay-secondary",
-                        disabled: a,
-                        "aria-pressed": c,
+                        variant: d ? "overlay-primary" : "overlay-secondary",
+                        disabled: o,
+                        "aria-pressed": d,
                         "aria-expanded": F,
-                        "aria-controls": `${h}-tools`,
+                        "aria-controls": `${A}-tools`,
                         "aria-label": eo,
                         onPointerDown: B,
                         onPointerCancel: K,
@@ -441,42 +441,42 @@ function F(e) {
 var H = n(652215);
 function U(e) {
     let { streamKey: t } = e,
-        { zoomLevel: n, minZoom: f } = i.useContext(a.e9),
-        h = n > f,
-        A = (0, p.T)("FocusedStreamTile"),
-        x = (0, m.BC)(t),
-        v = (0, r.bG)([k.A], () => k.A.isStreamDrawingAllowed(t), [t]),
-        E = A && x,
-        C = (0, r.bG)(
-            [u.A],
+        { zoomLevel: n, minZoom: h } = i.useContext(o.e9),
+        A = n > h,
+        x = (0, g.T)((0, s.Iy)(t).channelId, "FocusedStreamTile"),
+        v = (0, p.BC)(t),
+        E = (0, r.bG)([k.A], () => k.A.isStreamDrawingAllowed(t), [t]),
+        C = x && v,
+        j = (0, r.bG)(
+            [c.A],
             () => {
-                let e = u.A.getActiveStreamForStreamKey(t);
+                let e = c.A.getActiveStreamForStreamKey(t);
                 return null != e && e.state !== H.XYD.ENDED && e.state !== H.XYD.FAILED;
             },
             [t],
         ),
-        j = (0, r.bG)([o.A], () => null != o.A.getGuestStreamKey()),
-        S = (0, r.bG)([c.A], () => c.A.getRTCConnection()),
-        b = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-        I = (0, s.Ay)(b?.getAvatarURL(null, 80), "#ffffff", !1);
+        S = (0, r.bG)([u.A], () => null != u.A.getGuestStreamKey()),
+        I = (0, r.bG)([d.A], () => d.A.getRTCConnection()),
+        b = (0, r.bG)([m.default], () => m.default.getCurrentUser()),
+        y = (0, a.Ay)(b?.getAvatarURL(null, 80), "#ffffff", !1);
     return (i.useEffect(() => {
         function e() {
-            k.A.getActiveStreamKey() === t && (0, g.w3)(null);
+            k.A.getActiveStreamKey() === t && (0, f.w3)(null);
         }
-        return ((E && C && !h && v) || e(), e);
-    }, [E, C, t, h, v]),
-    E && C)
+        return ((C && j && !A && E) || e(), e);
+    }, [C, j, t, A, E]),
+    C && j)
         ? (0, l.jsx)(
               F,
               {
                   streamKey: t,
-                  connection: S ?? null,
-                  avatarColor: I,
-                  disabled: j || h || !v,
-                  zoomed: h,
-                  disallowed: !v,
+                  connection: I ?? null,
+                  avatarColor: y,
+                  disabled: S || A || !E,
+                  zoomed: A,
+                  disallowed: !E,
               },
-              j || h || !v ? "disabled" : "enabled",
+              S || A || !E ? "disabled" : "enabled",
           )
         : null;
 }

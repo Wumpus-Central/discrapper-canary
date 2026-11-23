@@ -1712,53 +1712,53 @@ function t_(e) {
 }
 function tw(e) {
     let { onClose: t, onSelect: s } = e,
-        i = (0, tn.T)("GoLiveStreamOptions"),
         [
             {
-                audioSourceId: r,
-                notifyFriends: n,
-                hidePreview: a,
-                muteStreamAudio: o,
-                streamDrawingEnabled: c,
-                preset: f,
-                resolution: h,
-                fps: x,
-                sourceType: p,
-                selectedChannel: m,
+                audioSourceId: i,
+                notifyFriends: r,
+                hidePreview: n,
+                muteStreamAudio: a,
+                streamDrawingEnabled: o,
+                preset: c,
+                resolution: f,
+                fps: h,
+                sourceType: x,
+                selectedChannel: p,
             },
-            j,
+            m,
         ] = eD(),
-        g = (0, u.bG)([to.Ay], () => to.Ay.getVoiceChannelId()),
-        v = m ?? g,
+        j = (0, u.bG)([to.Ay], () => to.Ay.getVoiceChannelId()),
+        g = p ?? j,
+        v = (0, tn.T)(g, "GoLiveStreamOptions"),
         S = (0, u.bG)(
             [$.A, et.A],
             () => {
-                let e = $.A.getChannel(v);
+                let e = $.A.getChannel(g);
                 return (0, tr.HB)(e, et.A.getGuild(e?.guild_id));
             },
-            [v],
+            [g],
         ),
         y = (0, u.bG)(
             [$.A, ta.A],
             () => {
-                if (null == g) return !0;
-                let e = $.A.getChannel(g),
+                if (null == j) return !0;
+                let e = $.A.getChannel(j),
                     t = e?.guild_id;
                 if (null == t) return !0;
                 let s = ta.A.getMemberCount(t);
                 return null == s || (s > 30 && s <= eQ.G1);
             },
-            [g],
+            [j],
         ),
         A = tf(),
         [E, _] = tg(eR.jQ.PRESET_VIDEO) ?? [eR.on.RESOLUTION_720, eR.kn.FPS_30],
         [w, I] = tg(eR.jQ.PRESET_DOCUMENTS) ?? [eR.on.RESOLUTION_SOURCE, eR.kn.FPS_15],
         N = (0, ti.H)({
             deviceType: tv.oh.AUDIO_INPUT,
-            selectedDeviceId: r,
+            selectedDeviceId: i,
             analyticsLocations: [C.A.GO_LIVE_MODAL_SETTINGS_SELECTION],
             asSubmenu: !0,
-            onDeviceSelect: (e) => (j({ type: "set_audio_source", audioSourceId: e }), !1),
+            onDeviceSelect: (e) => (m({ type: "set_audio_source", audioSourceId: e }), !1),
             menuItemOverrideProps: {
                 id: "device-audio-input",
                 label: ec.intl.string(eo.default.YSdHVw),
@@ -1781,7 +1781,7 @@ function tw(e) {
                 children: tA
                     .filter((e) => {
                         let { canUse: t } = e;
-                        return t(p);
+                        return t(x);
                     })
                     .map((e) => {
                         let { value: t } = e;
@@ -1790,7 +1790,7 @@ function tw(e) {
                             {
                                 group: "preset",
                                 id: `stream-preset-${t}`,
-                                checked: f === t,
+                                checked: c === t,
                                 label: td(t),
                                 subtext: (function (e) {
                                     switch (e) {
@@ -1815,13 +1815,13 @@ function tw(e) {
                                             throw Error(`No case implemented for ${e}`);
                                     }
                                 })(t),
-                                action: () => j({ type: "set_preset", preset: t }),
+                                action: () => m({ type: "set_preset", preset: t }),
                             },
                             t,
                         );
                     }),
             }),
-            f === eR.jQ.PRESET_CUSTOM &&
+            c === eR.jQ.PRESET_CUSTOM &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(tl.bX, {}),
@@ -1831,7 +1831,7 @@ function tw(e) {
                             children: tC
                                 .filter((e) => {
                                     let { canUse: t } = e;
-                                    return t(p);
+                                    return t(x);
                                 })
                                 .map((e) => {
                                     let { value: s } = e;
@@ -1840,19 +1840,19 @@ function tw(e) {
                                         {
                                             group: "resolution",
                                             id: `stream-option-resolution-${s}`,
-                                            checked: h === s,
+                                            checked: f === s,
                                             void_label:
                                                 s !== eR.on.RESOLUTION_720 ? (0, l.jsx)(t_, { label: tu(s) }) : tu(s),
                                             action: () =>
                                                 (function (e) {
-                                                    if (!(0, eO.A)(f, e, x, R.default.getCurrentUser(), A))
+                                                    if (!(0, eO.A)(c, e, h, R.default.getCurrentUser(), A))
                                                         return (
                                                             t(),
                                                             tx({
                                                                 analyticsLocation: C.A.GO_LIVE_MODAL_SETTINGS_SELECTION,
                                                             })
                                                         );
-                                                    j({ type: "set_resolution", resolution: e });
+                                                    m({ type: "set_resolution", resolution: e });
                                                 })(s),
                                         },
                                         s,
@@ -1868,17 +1868,17 @@ function tw(e) {
                                     {
                                         group: "frame-rate",
                                         id: `stream-option-frame-rate-${e}`,
-                                        checked: x === e,
+                                        checked: h === e,
                                         void_label:
                                             e === eR.kn.FPS_60 ? (0, l.jsx)(t_, { label: `${e}fps` }) : `${e}fps`,
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, eO.A)(f, h, e, R.default.getCurrentUser(), A))
+                                                if (!(0, eO.A)(c, f, e, R.default.getCurrentUser(), A))
                                                     return (
                                                         t(),
                                                         tx({ analyticsLocation: C.A.GO_LIVE_MODAL_SETTINGS_SELECTION })
                                                     );
-                                                j({ type: "set_fps", fps: e });
+                                                m({ type: "set_fps", fps: e });
                                             })(e),
                                     },
                                     e,
@@ -1890,35 +1890,35 @@ function tw(e) {
             (0, l.jsx)(tl.bX, {}),
             (0, l.jsx)(tl.sL, {
                 id: "stream-option-mute",
-                checked: o,
+                checked: a,
                 label: ec.intl.string(eo.default["b0+Irf"]),
-                action: () => j({ type: "set_mute_audio", value: !o }),
+                action: () => m({ type: "set_mute_audio", value: !a }),
             }),
-            i && S
+            v && S
                 ? (0, l.jsx)(tl.sL, {
                       id: "stream-option-drawing",
-                      checked: c,
+                      checked: o,
                       label: ec.intl.string(tS.default.rvEHMm),
-                      action: () => j({ type: "set_stream_drawing", value: !c }),
+                      action: () => m({ type: "set_stream_drawing", value: !o }),
                   })
                 : null,
-            p === d.fS.CAMERA && N,
+            x === d.fS.CAMERA && N,
             (0, l.jsxs)(tl.Dr, {
                 id: "advanced-items",
                 label: ec.intl.string(eo.default.eYyK1v),
                 children: [
                     (0, l.jsx)(tl.sL, {
                         id: "stream-option-share-preview",
-                        checked: a,
+                        checked: n,
                         label: ec.intl.string(eo.default.H3QjqX),
-                        action: () => j({ type: "set_hide_preview", hidePreview: !a }),
+                        action: () => m({ type: "set_hide_preview", hidePreview: !n }),
                     }),
                     y &&
                         (0, l.jsx)(tl.sL, {
                             id: "stream-option-notify",
-                            checked: n,
+                            checked: r,
                             label: ec.intl.string(eo.default.SiHtXy),
-                            action: () => j({ type: "set_notify_friends", value: !n }),
+                            action: () => m({ type: "set_notify_friends", value: !r }),
                         }),
                 ],
             }),
