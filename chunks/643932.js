@@ -719,12 +719,12 @@ var eZ = l(619517),
     e0 = l(456412),
     e1 = l(133296),
     e8 = l(516521),
-    e4 = l(532197),
-    e6 = l(837344);
-let e7 = { CENTER: e6.Hu, LEFT: e6.Vl };
+    e7 = l(532197),
+    e4 = l(837344);
+let e6 = { CENTER: e4.Hu, LEFT: e4.Vl };
 class e5 extends n.PureComponent {
-    static Align = e7;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e7.CENTER };
+    static Align = e6;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e6.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -746,7 +746,7 @@ class e5 extends n.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: s, align: r } = this.props,
-            o = l ? e6.XA : e6.BU;
+            o = l ? e4.XA : e4.BU;
         return (0, i.jsx)(e8.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: a()(o, s, r),
@@ -772,9 +772,9 @@ class e2 extends n.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(eO.D, {
-            className: a()(e6.t1, e),
+            className: a()(e4.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, i.jsx)(e4.A, { className: e6.UE, direction: e4.A.Directions.LEFT }),
+            children: (0, i.jsx)(e7.A, { className: e4.UE, direction: e7.A.Directions.LEFT }),
         });
     }
 }
@@ -787,9 +787,9 @@ class e3 extends n.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(eO.D, {
-            className: a()(e6.XS, e),
+            className: a()(e4.XS, e),
             onClick: this.handleNextClick,
-            children: (0, i.jsx)(e4.A, { className: e6.UE, direction: e4.A.Directions.RIGHT }),
+            children: (0, i.jsx)(e7.A, { className: e4.UE, direction: e7.A.Directions.RIGHT }),
         });
     }
 }
@@ -1606,9 +1606,9 @@ function t0(e) {
 }
 var t1 = l(449054),
     t8 = l(664343),
-    t4 = l(950305),
-    t6 = l(573435),
-    t7 = l(714991),
+    t7 = l(950305),
+    t4 = l(573435),
+    t6 = l(714991),
     t5 = l(776231),
     t2 = l(537975),
     t3 = l(882553),
@@ -1642,8 +1642,8 @@ function lt(e) {
                     (0, i.jsx)("img", { src: c, alt: "", className: t3.j0 }),
                     (0, i.jsx)("div", {
                         className: t3.$f,
-                        children: (0, i.jsx)(t6.Ay, {
-                            mask: t6.Ay.Masks.AVATAR_DEFAULT,
+                        children: (0, i.jsx)(t4.Ay, {
+                            mask: t4.Ay.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)("div", {
@@ -1665,7 +1665,7 @@ function lt(e) {
                     (0, i.jsxs)("div", {
                         className: t3.Y_,
                         children: [
-                            (0, i.jsx)(t7.A, { className: t3.n2, guild: t, tooltipColor: t8.ST.Colors.PRIMARY }),
+                            (0, i.jsx)(t6.A, { className: t3.n2, guild: t, tooltipColor: t8.ST.Colors.PRIMARY }),
                             (0, i.jsx)(h.D, { variant: "heading-sm/semibold", className: t3.J5, children: t.name }),
                         ],
                     }),
@@ -1681,7 +1681,7 @@ function lt(e) {
                         children: (0, i.jsxs)("div", {
                             className: t3.FG,
                             children: [
-                                (0, i.jsx)(t4.UserIcon, { color: "currentColor", className: t3.NP, size: "xs" }),
+                                (0, i.jsx)(t7.UserIcon, { color: "currentColor", className: t3.NP, size: "xs" }),
                                 (0, i.jsx)(g.E, {
                                     variant: "body-xs/normal",
                                     color: "text-default",
@@ -1835,7 +1835,7 @@ var lc = l(478676),
     lp = l(28863),
     lg = l(574332),
     lx = l(167189),
-    lv = l(486889),
+    lv = l(780788),
     lj = l(481859),
     lA = l(143145);
 let lC = /^discord.gg\/[a-zA-Z0-9-]+/,
@@ -2056,9 +2056,9 @@ var lk = l(607399),
     l0 = l(928658),
     l1 = l(327891),
     l8 = l(957565),
-    l4 = l(692848),
-    l6 = l(108861);
-let l7 = "start_application_install",
+    l7 = l(692848),
+    l4 = l(108861);
+let l6 = "start_application_install",
     l5 = "launch_activity";
 function l2(e) {
     let { renderDropdown: t, size: l } = e,
@@ -2095,7 +2095,7 @@ function l3(e) {
             (s = (0, lW.A)(n.useMemo(() => (0, es.SU)(t), [t]))),
             (a = n.useCallback(() => {
                 let e = L.h.getField("guildId") ?? void 0;
-                (0, l4.o)({
+                (0, l7.o)({
                     applicationId: t.id,
                     customInstallUrl: t.custom_install_url,
                     installParams: t.install_params,
@@ -2106,8 +2106,8 @@ function l3(e) {
             }, [t])),
             n.useEffect(() => {
                 let e = new URL(location.href);
-                if (l && "true" === e.searchParams.get(l7)) {
-                    e.searchParams.delete(l7);
+                if (l && "true" === e.searchParams.get(l6)) {
+                    e.searchParams.delete(l6);
                     let t = e.pathname + e.search;
                     ((0, f.bG)(t), s && a());
                 }
@@ -2118,7 +2118,7 @@ function l3(e) {
                         (O(D.HAw.APP_DIRECTORY_INSTALL_CLICKED, { application_id: t.id }),
                         (lk.Fr || lk.v1) && null == t.custom_install_url)
                     ) {
-                        let e = (0, l4.Z)({
+                        let e = (0, l7.Z)({
                             applicationId: t.id,
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
@@ -2136,7 +2136,7 @@ function l3(e) {
                             source: "product_page",
                             device_platform: lk.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            U({ [l7]: "true" }));
+                            U({ [l6]: "true" }));
                     }
                 }, [t, a, l]),
                 canInstall: s,
@@ -2269,7 +2269,7 @@ let ie = function (e) {
         ref: o,
         children: [
             (0, i.jsxs)("div", {
-                className: a()(l6.Ik, l6.U),
+                className: a()(l4.Ik, l4.U),
                 children: [
                     v && (0, i.jsx)(l9, { size: r, contentWidth: "normal", onClick: g, isSubmitting: x }),
                     A && (0, i.jsx)(l3, { application: s, size: r, contentWidth: "normal", variant: j }),
@@ -2286,7 +2286,7 @@ let ie = function (e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: a()(l6.Ik, l6.EX),
+                className: a()(l4.Ik, l4.EX),
                 children: [
                     v && (0, i.jsx)(l9, { size: r, contentWidth: "small", onClick: g, isSubmitting: x }),
                     A && (0, i.jsx)(l3, { application: s, size: r, contentWidth: "small", variant: j }),
@@ -2294,7 +2294,7 @@ let ie = function (e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: a()(l6.Ik, l6.nU),
+                className: a()(l4.Ik, l4.nU),
                 children: [
                     v && (0, i.jsx)(l9, { size: r, contentWidth: "icon", onClick: g, isSubmitting: x }),
                     A && (0, i.jsx)(l3, { application: s, size: r, contentWidth: "icon", variant: j }),

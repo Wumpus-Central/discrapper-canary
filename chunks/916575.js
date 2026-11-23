@@ -620,25 +620,25 @@ var eH = n(435558),
     e0 = n(311043),
     e1 = n(620632),
     e2 = n(73153);
-let e4 = {};
-class e8 extends m.Ay.Store {
+let e8 = {};
+class e4 extends m.Ay.Store {
     static displayName = "DiscoverableGuildsStore";
     initialize() {
         this.waitFor(eb.default);
     }
     getGuild(e) {
-        return e4[e]?.guild ?? null;
+        return e8[e]?.guild ?? null;
     }
     getGuilds(e) {
-        return e.map((e) => e4[e]?.guild).filter(eN.Vq);
+        return e.map((e) => e8[e]?.guild).filter(eN.Vq);
     }
     isFetching(e) {
-        return e.some((e) => e4[e]?.fetchState === "fetching");
+        return e.some((e) => e8[e]?.fetchState === "fetching");
     }
     getStaleGuildIds(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
         return e.filter((e) => {
-            let n = e4[e];
+            let n = e8[e];
             return (
                 null == n ||
                 "failed" === n.fetchState ||
@@ -647,22 +647,22 @@ class e8 extends m.Ay.Store {
         });
     }
 }
-let e6 = new e8(e2.h, {
+let e6 = new e4(e2.h, {
     DISCOVERABLE_GUILDS_FETCH_START: function (e) {
         let { guildIds: t } = e;
         for (let e of t)
-            e4[e] = { guild: e4[e]?.guild ?? null, fetchState: "fetching", fetchedAt: e4[e]?.fetchedAt ?? null };
+            e8[e] = { guild: e8[e]?.guild ?? null, fetchState: "fetching", fetchedAt: e8[e]?.fetchedAt ?? null };
     },
     DISCOVERABLE_GUILDS_FETCH_SUCCESS: function (e) {
         let { guildIds: t, guilds: n } = e,
             l = Date.now(),
             i = new Map(n.map((e) => [e.id, (0, eQ.jE)(e)]));
-        for (let e of t) e4[e] = { guild: i.get(e) ?? null, fetchState: "succeeded", fetchedAt: l };
+        for (let e of t) e8[e] = { guild: i.get(e) ?? null, fetchState: "succeeded", fetchedAt: l };
     },
     DISCOVERABLE_GUILDS_FETCH_FAILURE: function (e) {
         let { guildIds: t } = e;
         for (let e of t)
-            e4[e] = { guild: e4[e]?.guild ?? null, fetchState: "failed", fetchedAt: e4[e]?.fetchedAt ?? null };
+            e8[e] = { guild: e8[e]?.guild ?? null, fetchState: "failed", fetchedAt: e8[e]?.fetchedAt ?? null };
     },
 });
 var e3 = n(652215);
@@ -1263,8 +1263,8 @@ var tK = n(707554),
     t0 = n(459746);
 let t1 = "1552821538409939044";
 var t2 = n(175213);
-let t4 = n(892799);
-function t8(e) {
+let t8 = n(892799);
+function t4(e) {
     let { ref: t } = e,
         { game: n } = W(),
         l = (function (e) {
@@ -1356,7 +1356,7 @@ let ne = function () {
                             (0, r.jsx)(tr.D, { variant: "heading-xxl/semibold", children: n }),
                             e.id === t1 &&
                                 (0, r.jsx)("img", {
-                                    src: t4,
+                                    src: t8,
                                     className: t2.IU,
                                     alt: "",
                                     "aria-hidden": "true",
@@ -1964,7 +1964,7 @@ var n0 = n(155718),
     n1 = n(505779);
 (n(323874), n(14289), n(35956));
 var n2 = n(989441);
-let n4 = {
+let n8 = {
         appStore: {
             websiteCategories: [n1.V1.IPHONE, n1.V1.IPAD],
             websiteHostnames: n1.FU,
@@ -1978,8 +1978,8 @@ let n4 = {
             buildUrl: (e) => `https://${n1.SX["0"]}/store/apps/details?id=${encodeURIComponent(e)}`,
         },
     },
-    n8 = new Set(
-        Object.values(n4).flatMap((e) => {
+    n4 = new Set(
+        Object.values(n8).flatMap((e) => {
             let { websiteCategories: t } = e;
             return t;
         }),
@@ -2213,9 +2213,9 @@ let lL = function () {
         u = s.useMemo(() => {
             let t = e.websites.filter((e) => {
                     let { category: t } = e;
-                    return n1.pF.includes(t) && !n8.has(t);
+                    return n1.pF.includes(t) && !n4.has(t);
                 }),
-                n = Object.values(n4)
+                n = Object.values(n8)
                     .map((t) => n6(e, t))
                     .filter(eN.Vq);
             return t.sort((e, t) => n1.pF.indexOf(e.category) - n1.pF.indexOf(t.category)).concat(n);
@@ -2809,8 +2809,8 @@ function l2(e, t, n) {
     else if (t < (n ? 100 : 500)) return l1.vI.VERY_NEGATIVE;
     return l1.vI.OVERWHELMINGLY_NEGATIVE;
 }
-var l4 = n(792216);
-let l8 = {
+var l8 = n(792216);
+let l4 = {
     appStore: { getTitle: () => es.intl.string(es.t.LVy7Ug), action: k.Ws.AppStoreReviews },
     googlePlay: { getTitle: () => es.intl.string(es.t.V6rllO), action: k.Ws.GooglePlayReviews },
 };
@@ -3137,7 +3137,7 @@ let is = function () {
             mobileStoreReviews: m,
         } = s.useMemo(() => {
             let n = e.reviews?.steam,
-                l = e.steamReleaseStatus !== l4.Y.RETIRED_ABANDONED && null != t,
+                l = e.steamReleaseStatus !== l8.Y.RETIRED_ABANDONED && null != t,
                 i = l2(n?.recentRating, n?.recentRatingCount, !0),
                 a = l && i !== l1.vI.NO_USER_REVIEWS,
                 r =
@@ -3155,7 +3155,7 @@ let is = function () {
                 primarySteamRating: r ? n?.localizedRating : n?.rating,
                 primarySteamRatingCount: r ? n?.localizedRatingCount : n?.ratingCount,
                 primarySteamTitleKey: r ? es.t["aWb+V4"] : es.t["8e4LiB"],
-                mobileStoreReviews: Object.entries(l8).flatMap((t) => {
+                mobileStoreReviews: Object.entries(l4).flatMap((t) => {
                     var n;
                     let l,
                         i,
@@ -3164,7 +3164,7 @@ let is = function () {
                         o = s?.rating,
                         c = s?.ratingCount;
                     if (null == o || null == c) return [];
-                    let u = n6(e, n4[a]);
+                    let u = n6(e, n8[a]);
                     return null != u
                         ? [
                               ((n = u.url),
@@ -3190,7 +3190,7 @@ let is = function () {
             };
         }, [e, t]),
         h =
-            (e.steamReleaseStatus !== l4.Y.RETIRED_ABANDONED || m.length > 0) &&
+            (e.steamReleaseStatus !== l8.Y.RETIRED_ABANDONED || m.length > 0) &&
             e.reviews?.opencritic != null &&
             null != e.opencriticUrl;
     return i || h || 0 !== m.length
@@ -3526,11 +3526,11 @@ function iW(e) {
                     i?.filter(
                         (e) =>
                             (e.category !== n1.V1.EPICGAMES || !!iT.has(l)) &&
-                            (e.category !== n1.V1.STEAM || a !== l4.Y.RETIRED_ABANDONED) &&
+                            (e.category !== n1.V1.STEAM || a !== l8.Y.RETIRED_ABANDONED) &&
                             iM.includes(e.category),
                     ) ?? [];
                 null == t ||
-                    a === l4.Y.RETIRED_ABANDONED ||
+                    a === l8.Y.RETIRED_ABANDONED ||
                     e.some((e) => e.category === n1.V1.STEAM) ||
                     e.push({ category: n1.V1.STEAM, url: t });
                 let r = e.sort((e, t) => (e.category === n1.V1.STEAM ? -1 : +(t.category === n1.V1.STEAM)));
@@ -3585,7 +3585,7 @@ var iY = n(123292),
     iB = n(30772),
     iz = n(478676),
     iH = n.n(iz),
-    iX = n(486889),
+    iX = n(780788),
     iK = n(694403),
     i$ = n(417964),
     iJ = n(998218);
@@ -3605,8 +3605,8 @@ let iQ = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/,
     i0 = /[\n\r\u001c-\u001e\u0085\u2029]/,
     i1 = RegExp(`(${i0.source})`),
     i2 = RegExp(`${/[\u0000-\u001f\u007f]/.source}|${i0.source}`),
-    i4 = /[\p{M}\p{Default_Ignorable_Code_Point}]/gu,
-    i8 = new Set(["subject", "body"]),
+    i8 = /[\p{M}\p{Default_Ignorable_Code_Point}]/gu,
+    i4 = new Set(["subject", "body"]),
     i6 = /https?:\/\//i,
     i3 = /\b(https?)(?::[/\\]+|[/\\]{2,})/gi,
     i9 = String.raw`https?:\/\/[^\s<]+[^<.,:;"'\]\s]`,
@@ -3760,7 +3760,7 @@ function au(e, t) {
         ? n
         : t || "mailto:" !== n.protocol
           ? void 0
-          : Array.from(n.searchParams.keys()).every((e) => i8.has(e.toLowerCase()))
+          : Array.from(n.searchParams.keys()).every((e) => i4.has(e.toLowerCase()))
             ? n
             : void 0;
 }
@@ -3769,7 +3769,7 @@ function ad(e) {
     return null != e ? au(e, t)?.href : void 0;
 }
 function am(e) {
-    return (0, i$.El)(e.replace(i4, "").normalize("NFKC"));
+    return (0, i$.El)(e.replace(i8, "").normalize("NFKC"));
 }
 function ah(e) {
     return am((0, i$.Fd)(e));
@@ -4506,8 +4506,8 @@ let a2 = s.memo(function (e) {
         ],
     });
 });
-var a4 = n(881698),
-    a8 = n(928550),
+var a8 = n(881698),
+    a4 = n(928550),
     a6 = n(613412),
     a3 = n(414499),
     a9 = n(359549),
@@ -4551,9 +4551,9 @@ var rn = n(768626);
 function rl(e) {
     let { analyticsLocations: t } = e,
         { game: n } = W(),
-        l = (0, a4.A)(n.linkedApplications)?.id,
-        [i] = (0, a8.L_)(n.getOfficialApplicationId()),
-        [a] = (0, a8.L_)(n.id),
+        l = (0, a8.A)(n.linkedApplications)?.id,
+        [i] = (0, a4.L_)(n.getOfficialApplicationId()),
+        [a] = (0, a4.L_)(n.id),
         { showsStoreLinks: s } = iW(n);
     return (0, r.jsxs)("div", {
         className: u()(rn.pz, a$.fi, s ? rn.FJ : rn.dg),
@@ -4594,7 +4594,7 @@ function ra(e) {
         }, []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(t8, { ref: o }),
+            (0, r.jsx)(t4, { ref: o }),
             (0, r.jsxs)(eK.Ch, {
                 ref: c,
                 className: ri.XG,
