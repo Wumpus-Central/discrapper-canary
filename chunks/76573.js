@@ -2568,6 +2568,7 @@ class ex extends O.G {
             },
             { no: 2, name: "anon_user_id", kind: "message", T: () => R.ol },
             { no: 3, name: "original_user_created_at", kind: "message", T: () => L.D },
+            { no: 4, name: "original_user_id", kind: "message", T: () => R.ol },
         ]);
     }
     create(e) {
@@ -2593,6 +2594,9 @@ class ex extends O.G {
                 case 3:
                     r.originalUserCreatedAt = L.D.internalBinaryRead(e, e.uint32(), n, r.originalUserCreatedAt);
                     break;
+                case 4:
+                    r.originalUserId = R.ol.internalBinaryRead(e, e.uint32(), n, r.originalUserId);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2607,7 +2611,9 @@ class ex extends O.G {
         (0 !== e.status && t.tag(1, S.O0.Varint).int32(e.status),
             e.anonUserId && R.ol.internalBinaryWrite(e.anonUserId, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
             e.originalUserCreatedAt &&
-                L.D.internalBinaryWrite(e.originalUserCreatedAt, t.tag(3, S.O0.LengthDelimited).fork(), n).join());
+                L.D.internalBinaryWrite(e.originalUserCreatedAt, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
+            e.originalUserId &&
+                R.ol.internalBinaryWrite(e.originalUserId, t.tag(4, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
