@@ -76,7 +76,7 @@ class v extends r.Ay.Store {
         return h[e];
     }
     getConfig() {
-        return "success" === g.state ? g.config : null;
+        return "success" === g.state || "loading" === g.state ? g.config : null;
     }
     getConfigForApplicationId(e) {
         return O[e];
@@ -222,7 +222,7 @@ let P = new v(a.h, {
         (h = { ...h })[t] = { state: "error" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function () {
-        g = { state: "loading" };
+        g = { state: "loading", config: "success" === g.state ? g.config : null };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: function (e) {
         let { config: t } = e;

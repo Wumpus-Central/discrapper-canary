@@ -1,5 +1,4 @@
 !(function (e) {
-    "use strict";
     var a = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_"),
         n = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_"),
         r = [
