@@ -143,7 +143,7 @@ let em = {
     [N.IWg.TOGGLE_CHANNEL_PINS]: {
         binds: ["mod+p"],
         comboKeysBindGlobal: !0,
-        action: () => (S._.dispatch(N.jej.TOGGLE_CHANNEL_PINS), !1),
+        action: () => !(b.A.hasLayers() || (0, C.ue)()) && (S._.dispatch(N.jej.TOGGLE_CHANNEL_PINS), !1),
     },
     [N.IWg.TOGGLE_INBOX]: {
         binds: ["mod+i"],
