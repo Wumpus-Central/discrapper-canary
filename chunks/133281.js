@@ -19,6 +19,7 @@ e.exports = {
     Pu: "trailButton_ve0N80",
     XE: "trailDuration_ve0N80",
     Xe: "trailMention_ve0N80",
+    RL: "typingIndicator_ve0N80",
     o2: "unreadIndicator_ve0N80",
     zL: "tabWithTrailControl_ve0N80",
 };

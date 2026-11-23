@@ -203,11 +203,13 @@
 
 .tab_ve0N80:has(:focus-visible) .trailButton_ve0N80,
 .tab_ve0N80:hover .trailButton_ve0N80,
+.typingIndicator_ve0N80,
 .unreadIndicator_ve0N80 {
     margin-inline: calc(var(--space-4) - var(--custom-channel-tab-trail-icon-inset)) calc(var(--custom-channel-tab-trail-icon-inset)*-1)
 }
 
 .trailButton_ve0N80,
+.typingIndicator_ve0N80,
 .unreadIndicator_ve0N80 {
     align-items: center;
     display: flex;
@@ -242,8 +244,8 @@
 
 @container (width >=56px) {
 
-    .tabWithTrailControl_ve0N80:has(:focus-visible) :is(.unreadIndicator_ve0N80, .trailMention_ve0N80, .trailDuration_ve0N80),
-    .tabWithTrailControl_ve0N80:hover :is(.unreadIndicator_ve0N80, .trailMention_ve0N80, .trailDuration_ve0N80) {
+    .tabWithTrailControl_ve0N80:has(:focus-visible) :is(.unreadIndicator_ve0N80, .typingIndicator_ve0N80, .trailMention_ve0N80, .trailDuration_ve0N80),
+    .tabWithTrailControl_ve0N80:hover :is(.unreadIndicator_ve0N80, .typingIndicator_ve0N80, .trailMention_ve0N80, .trailDuration_ve0N80) {
         display: none
     }
 }
@@ -369,4 +371,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=23b80aac9516b8b8.css.map*/
+/*# sourceMappingURL=691216938a33ccfb.css.map*/
