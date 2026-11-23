@@ -16,9 +16,9 @@ e.exports = {
     ro: "dmIcon_ve0N80",
     NR: "locationIcon_ve0N80",
     Ne: "pinIcon_ve0N80",
+    Pu: "trailButton_ve0N80",
     XE: "trailDuration_ve0N80",
     Xe: "trailMention_ve0N80",
-    Pu: "trailButton_ve0N80",
     o2: "unreadIndicator_ve0N80",
     zL: "tabWithTrailControl_ve0N80",
 };
