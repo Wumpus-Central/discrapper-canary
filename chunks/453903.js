@@ -81,7 +81,9 @@ class O extends r.Component {
         return e;
     }
     get closeAction() {
-        return this.props.ignoreModalClicks ? T.jej.POPOUT_CLOSE_AFTER_MODALS : T.jej.POPOUT_CLOSE;
+        return this.props.ignoreModalClicks && (0, f.PD)(this.modalsAtOpen)
+            ? T.jej.POPOUT_CLOSE_AFTER_MODALS
+            : T.jej.POPOUT_CLOSE;
     }
     setupShowPopout() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -94,20 +96,26 @@ class O extends r.Component {
                 ? t.ownerDocument?.addEventListener("scroll", this.handleScroll, !0)
                 : "sticky" === this.props.scrollBehavior &&
                   t.ownerDocument?.addEventListener("scroll", this.handleStickyScroll, !0),
-            this.context.windowDispatch.subscribe(this.closeAction, this.handleEscapeClose),
             (this.domElementRef.current = t),
             (this.isValidClickStart = !1),
             e && (this.modalsAtOpen = (0, f.Kg)()),
+            this.subscribeEscapeClose(),
             this.subscribeToModalStack(),
             this.forceUpdate());
     }
+    subscribeEscapeClose() {
+        (this.context.windowDispatch.unsubscribe(T.jej.POPOUT_CLOSE, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(T.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
+            this.context.windowDispatch.subscribe(this.closeAction, this.handleEscapeClose));
+    }
     subscribeToModalStack() {
-        !0 === this.props.clickTrap &&
+        (!0 === this.props.clickTrap || this.props.ignoreModalClicks) &&
             (this.updateModalStackedOnTop(),
             null == this.unsubscribeModalChanges &&
                 (this.unsubscribeModalChanges = (0, f.mc)(this.updateModalStackedOnTop)));
     }
     updateModalStackedOnTop = () => {
+        this.subscribeEscapeClose();
         let e = (0, f.PD)(this.modalsAtOpen);
         this.state.isModalStackedOnTop !== e && this.setState({ isModalStackedOnTop: e });
     };
