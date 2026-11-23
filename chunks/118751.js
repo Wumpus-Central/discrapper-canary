@@ -32,5 +32,12 @@ n.d(
             let r = a(t, +((Math.round((e / 1e6) * 10) / 10) % 1 != 0)).format(e / 1e6);
             return i.A.Messages.NUMBER_ABBREVIATIONS_MILLION.format({ num: r });
         },
+        tg: function (e, t) {
+            if (e < 1e3) return a(t).format(Math.floor(e));
+            if (e < 1e6) return i.A.Messages.NUMBER_ABBREVIATIONS_THOUSAND.format({ num: Math.floor(e / 1e3) });
+            let n = Math.floor((10 * e) / 1e6) / 10,
+                r = a(t, 1).format(n);
+            return i.A.Messages.NUMBER_ABBREVIATIONS_MILLION.format({ num: r });
+        },
     },
 );

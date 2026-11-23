@@ -1,4 +1,4 @@
-e.exports = {
+l.exports = {
     DB: "itemContainer_lm2_KW",
     AS: "item_lm2_KW",
     Fx: "itemIcon_lm2_KW",
@@ -18,4 +18,6 @@ e.exports = {
     Mj: "answerPill_lm2_KW",
     JG: "channelAnswerPill_lm2_KW",
     Wh: "channelPillIcon_lm2_KW",
+    WX: "suggestionPlaceholder_lm2_KW",
+    mQ: "suggestionPlaceholderLabel_lm2_KW",
 };

@@ -1,0 +1,57 @@
+.container_R726Px {
+    contain: layout;
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column
+}
+
+.labelContainer_R726Px {
+    margin-bottom: var(--space-8)
+}
+
+.clearFilters_R726Px {
+    cursor: pointer
+}
+
+.filterSection_R726Px {
+    padding-bottom: var(--space-20)
+}
+
+.filterSection_R726Px:first-child {
+    padding-top: var(--space-12)
+}
+
+.filterSection_R726Px:last-child {
+    padding-bottom: var(--space-12)
+}
+
+.dateFilter_R726Px {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 120px 1fr 40px;
+    margin-bottom: var(--space-12)
+}
+
+.dateFilter_R726Px:last-child {
+    margin-bottom: 0
+}
+
+.removeDateFilterButton_R726Px {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center
+}
+
+.removeDateFilterButton_R726Px:hover .trashIcon_R726Px {
+    color: var(--control-critical-primary-background-hover)
+}
+
+.trashIcon_R726Px {
+    color: var(--text-muted);
+    height: 24px;
+    transition: color var(--custom-button-transition-duration) ease;
+    width: 24px
+}
+
+/*# sourceMappingURL=841d6ac9455be0bc.css.map*/

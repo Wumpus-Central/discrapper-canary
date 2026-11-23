@@ -34,8 +34,16 @@ s.d(
                 r.h.dispatch({ type: "SEARCH_SET_SHOW_NO_RESULTS_ALT", id: t });
             },
             updateSearchResultsQuery: function (e, t, s, n) {
-                let i = (0, a.bS)(e);
-                r.h.dispatch({ type: "SEARCH_RESULTS_QUERY_UPDATE", id: i, queryString: t, query: s, offset: n });
+                let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+                    c = (0, a.bS)(e);
+                r.h.dispatch({
+                    type: "SEARCH_RESULTS_QUERY_UPDATE",
+                    id: c,
+                    queryString: t,
+                    query: s,
+                    offset: n,
+                    isNewSearch: i,
+                });
             },
             updateSearchMode: function (e, t) {
                 let s = (0, a.bS)(e);

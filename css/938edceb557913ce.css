@@ -1,0 +1,72 @@
+.container_cbVzxY {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    max-height: calc(100vh - var(--custom-app-top-bar-height) - var(--custom-channel-textarea-text-area-height) - var(--custom-channel-header-height));
+    overflow: hidden;
+    padding: var(--space-12) var(--space-8);
+    width: 356px
+}
+
+.datePickerContainer_cbVzxY {
+    padding: 0
+}
+
+.calendar_cbVzxY {
+    display: flex;
+    justify-content: center;
+    width: 314px
+}
+
+.searchResultDMChannelIcon_cbVzxY {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px
+}
+
+.searchResultDMChannelIcon_cbVzxY,
+.searchResultGDMChannelIcon_cbVzxY {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-inline-end: 4px;
+    vertical-align: top
+}
+
+.searchResultGDMChannelIcon_cbVzxY {
+    line-height: 0
+}
+
+.searchResultDMChannelName_cbVzxY {
+    color: var(--search-popout-option-user-nickname);
+    font-weight: 500
+}
+
+.searchResultDMUserName_cbVzxY {
+    color: var(--search-popout-option-user-username);
+    font-weight: 500;
+    margin: 0 5px
+}
+
+.searchResultChannelCategory_cbVzxY {
+    flex-shrink: 1;
+    font-size: 10px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 4px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    text-transform: none;
+    top: 2px;
+    white-space: nowrap
+}
+
+.resultChannel_cbVzxY {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap
+}
+
+/*# sourceMappingURL=938edceb557913ce.css.map*/

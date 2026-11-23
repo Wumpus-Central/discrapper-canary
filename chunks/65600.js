@@ -2,9 +2,11 @@ var r = s(855986),
     a = s(73153),
     n = s(921242);
 let i = new Map(),
-    _ = !1;
-function c(e) {
+    c = !1,
+    l = 0;
+function _(e) {
     let t = i.get(e) ?? {
+        searchSubmissionId: 0,
         queryText: null,
         showBlockedResults: !1,
         showNoResultsAlt: !1,
@@ -15,45 +17,51 @@ function c(e) {
     };
     return (i.set(e, t), t);
 }
-function l(e, t) {
+function u(e, t) {
     let s = i.get(e);
     return null == s ? null : t(s);
 }
-class h extends r.Ay.Store {
+class d extends r.Ay.Store {
     static displayName = "SearchQueryStore";
     getQueryText(e) {
-        return l(e, (e) => e.queryText);
+        return u(e, (e) => e.queryText);
     }
     shouldShowBlockedResults(e) {
-        return l(e, (e) => e.showBlockedResults) ?? !1;
+        return u(e, (e) => e.showBlockedResults) ?? !1;
     }
     shouldShowNoResultsAlt(e) {
-        return l(e, (e) => e.showNoResultsAlt) ?? !1;
+        return u(e, (e) => e.showNoResultsAlt) ?? !1;
+    }
+    getSearchSubmissionId(e) {
+        return u(e, (e) => e.searchSubmissionId) ?? 0;
     }
     getSearchResultsQueryString(e) {
-        return l(e, (e) => e.searchResultsQueryString);
+        return u(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return l(e, (e) => e.searchResultsQuery);
+        return u(e, (e) => e.searchResultsQuery);
     }
     getSearchMode(e) {
-        return l(e, (e) => e.searchMode);
+        return u(e, (e) => e.searchMode);
     }
     getSearchResultsOffset(e) {
-        return l(e, (e) => e.searchResultsOffset);
+        return u(e, (e) => e.searchResultsOffset);
     }
     getIsSearchTokensInitialized() {
-        return _;
+        return c;
     }
     getSearchStateIds() {
         return Array.from(i.keys());
     }
 }
-let d = new h(a.h, {
+let h = new d(a.h, {
     SEARCH_RESULTS_QUERY_UPDATE: function (e) {
-        let { id: t, queryString: s, query: r, offset: a } = e,
-            n = c(t);
-        ((n.searchResultsQueryString = s), (n.searchResultsQuery = r), (n.searchResultsOffset = a ?? 0));
+        let { id: t, queryString: s, query: r, offset: a, isNewSearch: n } = e,
+            i = _(t);
+        (!0 === n && (i.searchSubmissionId = ++l),
+            (i.searchResultsQueryString = s),
+            (i.searchResultsQuery = r),
+            (i.searchResultsOffset = a ?? 0));
     },
     SEARCH_QUERY_TEXT_CLEAR: function (e) {
         let { id: t } = e;
@@ -61,26 +69,26 @@ let d = new h(a.h, {
     },
     SEARCH_ENSURE_SEARCH_STATE: function (e) {
         let { id: t } = e;
-        c(t);
+        _(t);
     },
     SEARCH_QUERY_TEXT_CHANGE: function (e) {
         let { id: t, queryText: s } = e;
-        c(t).queryText = s;
+        _(t).queryText = s;
     },
     SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
         let { id: t, showBlocked: s } = e;
-        c(t).showBlockedResults = s;
+        _(t).showBlockedResults = s;
     },
     SEARCH_SET_SHOW_NO_RESULTS_ALT: function (e) {
         let { id: t } = e;
-        c(t).showNoResultsAlt = 0.05 > Math.random();
+        _(t).showNoResultsAlt = 0.05 > Math.random();
     },
     SEARCH_SEARCH_MODE_UPDATE: function (e) {
         let { id: t, searchMode: s } = e;
-        c(t).searchMode = s;
+        _(t).searchMode = s;
     },
     SEARCH_TOKENS_REFRESHED: function () {
-        _ = !0;
+        c = !0;
     },
 });
-s.d(t, {}, { A: d });
+s.d(t, {}, { A: h });

@@ -123,6 +123,9 @@ n.d(
             }
             return ((t = N(t)), n) ? `#${t}` : t;
         },
+        T4: function (e, t, n) {
+            return `${T(e)}-${t}-${n}`;
+        },
         TZ: N,
         VI: function (e, t) {
             if (!(0, I._)(e) || !u.A.getGuild(e.guildId)?.features.has(m.GuildFeatures.DISCOVERABLE)) return null;
