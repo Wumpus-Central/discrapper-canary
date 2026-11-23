@@ -1,8 +1,8 @@
 var l = n(477900),
     i = n(582128),
     r = n(503698),
-    s = n.n(r),
-    a = n(435558),
+    a = n.n(r),
+    s = n(435558),
     o = n(451988),
     u = n(939249),
     c = n(866665),
@@ -23,9 +23,9 @@ function j(e) {
 function S(e) {
     return (1 & e.buttons) == 1;
 }
-let b = i.memo(function (e) {
+let I = i.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: r } = e,
-        { onActive: b, onPreventIdle: I, onAllowIdle: y } = i.useContext(h.k3),
+        { onActive: I, onPreventIdle: b, onAllowIdle: y } = i.useContext(h.k3),
         {
             enabled: _,
             zoomLevel: N,
@@ -47,8 +47,8 @@ let b = i.memo(function (e) {
         W = i.useRef(null),
         $ = N > w,
         B = i.useCallback(() => {
-            I("interact");
-        }, [I]),
+            b("interact");
+        }, [b]),
         K = i.useCallback(() => {
             (z(!1), y("interact"));
         }, [y]),
@@ -95,8 +95,8 @@ let b = i.memo(function (e) {
                 i = 0.5 - V.x / (e * N),
                 r = 0.5 - V.y / (t * N);
             return {
-                "--custom-zoom-indicator-left": `${100 * (0, a.clamp)(i - n / 2, 0, 1 - n)}%`,
-                "--custom-zoom-indicator-top": `${100 * (0, a.clamp)(r - l / 2, 0, 1 - l)}%`,
+                "--custom-zoom-indicator-left": `${100 * (0, s.clamp)(i - n / 2, 0, 1 - n)}%`,
+                "--custom-zoom-indicator-top": `${100 * (0, s.clamp)(r - l / 2, 0, 1 - l)}%`,
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * l}%`,
                 "--custom-zoom-indicator-transition":
@@ -122,20 +122,20 @@ let b = i.memo(function (e) {
             (e) => {
                 (D(!0),
                     M(e, x.qd, "slider"),
-                    b(),
+                    I(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {
                         D(!1);
                     }));
             },
-            [M, b, D],
+            [M, I, D],
         );
     return ((0, f.l0)(() => {
         el.current?.stop();
     }),
     _ && null != n)
         ? (0, l.jsxs)("div", {
-              className: s()(C.ne, { [C.Ge]: O || $ }),
+              className: a()(C.ne, { [C.Ge]: O || $ }),
               onMouseEnter: B,
               onMouseLeave: K,
               onClick: j,
@@ -157,7 +157,7 @@ let b = i.memo(function (e) {
                               onMouseUp: q,
                               children: [
                                   (0, l.jsx)(J, {
-                                      className: s()(C.BZ, { [E.mirror]: t }),
+                                      className: a()(C.BZ, { [E.mirror]: t }),
                                       streamId: n,
                                       paused: r,
                                       reportContainerResized: !1,
@@ -213,4 +213,4 @@ let b = i.memo(function (e) {
           })
         : null;
 });
-n.d(t, {}, { A: b });
+n.d(t, {}, { A: I });

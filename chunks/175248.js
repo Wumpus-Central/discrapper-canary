@@ -8,10 +8,10 @@ var r = n(477900),
     c = n(192308),
     d = n(830215),
     f = n(287809),
-    A = n(710969),
-    C = n(792996),
-    E = n(674456),
-    g = n(661965);
+    E = n(710969),
+    A = n(792996),
+    C = n(674456),
+    _ = n(661965);
 n.d(
     t,
     {},
@@ -25,48 +25,48 @@ n.d(
         QuestRewardModalUnverified: function (e) {
             let { transitionState: t, onClose: n } = e,
                 c = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.email),
-                [T, _] = i.useState({ status: "unknown" });
+                [T, g] = i.useState({ status: "unknown" });
             i.useEffect(() => {
-                (_({ status: "loading" }),
+                (g({ status: "loading" }),
                     d.A.verifyResend().then(
-                        () => _({ status: "success" }),
+                        () => g({ status: "success" }),
                         (e) => {
-                            (_({ status: "error" }),
-                                (0, A.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } }));
+                            (g({ status: "error" }),
+                                (0, E.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } }));
                         },
                     ));
             }, []);
             let m =
                 "error" === T.status
-                    ? C.intl.string(C.t.vjying)
+                    ? A.intl.string(A.t.vjying)
                     : "success" === T.status
-                      ? C.intl.format(C.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
+                      ? A.intl.format(A.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
                       : void 0;
             return (0, r.jsxs)(l.k, {
                 transitionState: t,
                 onClose: n,
-                graphic: "loading" === T.status ? void 0 : { type: "image", src: g },
-                title: "loading" === T.status ? void 0 : C.intl.string(C.t.c8eASM),
+                graphic: "loading" === T.status ? void 0 : { type: "image", src: _ },
+                title: "loading" === T.status ? void 0 : A.intl.string(A.t.c8eASM),
                 subtitle: m,
                 actions:
                     "loading" === T.status
                         ? void 0
-                        : [{ variant: "secondary", text: C.intl.string(C.t.cpT0Cq), onClick: n }],
+                        : [{ variant: "secondary", text: A.intl.string(A.t.cpT0Cq), onClick: n }],
                 children: [
                     "loading" === T.status && (0, r.jsx)(a.y, {}),
                     "success" === T.status &&
                         (0, r.jsxs)("div", {
-                            className: E.d,
+                            className: C.d,
                             children: [
                                 (0, r.jsx)(u.CircleInformationIcon, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: E.q,
+                                    className: C.q,
                                 }),
                                 (0, r.jsx)(o.E, {
                                     variant: "body-sm/normal",
                                     color: "text-default",
-                                    children: C.intl.string(C.t.yb7itQ),
+                                    children: A.intl.string(A.t.yb7itQ),
                                 }),
                             ],
                         }),

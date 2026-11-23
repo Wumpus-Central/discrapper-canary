@@ -2,8 +2,8 @@ var l = n(477900);
 n(582128);
 var i = n(487329),
     r = n(821715),
-    s = n(93067),
-    a = n(792996);
+    a = n(93067),
+    s = n(792996);
 n.d(
     t,
     {},
@@ -16,19 +16,19 @@ n.d(
                 switch (e) {
                     case i.iy.STREAM_SEND_LOW_FPS:
                     case i.iy.STREAM_SEND_HIGH_PACKET_LOSS:
-                        return a.intl.string(a.t["1f1LHp"]);
+                        return s.intl.string(s.t["1f1LHp"]);
                     case i.iy.STREAM_BAD_NETWORK_QUALITY:
-                        return a.intl.string(a.t.Ic588B);
+                        return s.intl.string(s.t.Ic588B);
                     case i.iy.STREAM_SOUNDSHARE_FAILED:
-                        return a.intl.string(a.t["9lcych"]);
+                        return s.intl.string(s.t["9lcych"]);
                     case i.iy.STREAM_VIEW_HIGH_PACKET_LOSS:
                     case i.iy.STREAM_VIEW_LOW_FPS:
-                        return a.intl.string(a.t.BcOifw);
+                        return s.intl.string(s.t.BcOifw);
                     default:
                         return;
                 }
             })(o);
-            return null != u ? (0, l.jsx)(s.A, { className: n, errorMessage: u, avError: o }) : null;
+            return null != u ? (0, l.jsx)(a.A, { className: n, errorMessage: u, avError: o }) : null;
         },
     },
 );

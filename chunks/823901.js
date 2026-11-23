@@ -9,26 +9,26 @@ var l = n(477900),
     p = n(49999),
     c = n(652215),
     b = n(792996),
-    m = n(971656);
+    _ = n(971656);
 n.d(
     t,
     {},
     {
         y: function (e) {
             let { markAsDismissed: t, className: n } = e,
-                { analyticsLocations: _ } = (0, d.Ay)(),
-                { openGiftModal: A } = (0, s.$)({
+                { analyticsLocations: m } = (0, d.Ay)(),
+                { openGiftModal: I } = (0, s.$)({
                     giftRecipient: null,
-                    analyticsLocations: _,
+                    analyticsLocations: m,
                     analyticsLocation: c.ThZ.SEASONAL_GIFTING_REMINDER_NAGBAR,
                     analyticsObject: { page: c.liQ.PREMUIM_UPSELL_GIFTING_PROMOTION },
                     location: "gift-promotion-reminder-nagbar",
                 }),
-                I = (0, a.bG)([u.A], () => {
+                A = (0, a.bG)([u.A], () => {
                     let e = u.A.getMarketingComponentBySurface(o.oW.GIFT_REMINDER_NAGBAR);
                     return e?.surface ?? null;
                 });
-            return null == I
+            return null == A
                 ? null
                 : (0, l.jsxs)(r.$T, {
                       color: r.Hv.PREMIUM_TIER_2,
@@ -43,11 +43,11 @@ n.d(
                               width: 20,
                               height: 20,
                               color: "currentColor",
-                              className: m.ez,
+                              className: _.ez,
                           }),
-                          I.body,
+                          A.body,
                           (0, l.jsx)(r.Z_, {
-                              onClick: A,
+                              onClick: I,
                               noticeType: c.kqX.GIFTING_PROMOTION_REMINDER,
                               children: b.intl.string(b.t.RzWDqY),
                           }),

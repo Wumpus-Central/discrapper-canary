@@ -9,10 +9,10 @@ var l = n(477900),
     p = n(498470),
     c = n(807098),
     b = n(92551),
-    m = n(637706),
-    _ = n(788883),
-    A = n(49999),
-    I = n(792996);
+    _ = n(637706),
+    m = n(788883),
+    I = n(49999),
+    A = n(792996);
 n.d(
     t,
     {},
@@ -24,14 +24,14 @@ n.d(
                 T = o.useMemo(() => null != N && (0, s.r1)(N), [N]);
             if (null == E) return t;
             let { surface: g, id: S, promotionId: y, componentType: O } = E,
-                R = E.getFormatVariableValues(I.intl.currentLocale),
+                R = E.getFormatVariableValues(A.intl.currentLocale),
                 M = (0, b.n)(g.header, R);
             if (!M.ok) return t;
             let C = (0, b.d)(g.body, R);
             if (!C.ok) return t;
             let P = (0, b.n)(g.button?.copy ?? "", R);
             if (!P.ok) return t;
-            let h = (0, l.jsx)(_.A, {
+            let h = (0, l.jsx)(m.A, {
                     componentType: O,
                     componentId: S,
                     promotionId: y,
@@ -39,7 +39,7 @@ n.d(
                 }),
                 { icon: v, iconPosition: L } = (0, p.x)({ buttonAction: g.button?.buttonAction });
             function D() {
-                return f(A.i.USER_DISMISS);
+                return f(I.i.USER_DISMISS);
             }
             let U =
                     null != g.button
@@ -58,7 +58,7 @@ n.d(
                               iconPosition: L,
                           }
                         : void 0,
-                G = (0, m.C)(g.helpArticle, g.helpArticleId),
+                G = (0, _.C)(g.helpArticle, g.helpArticleId),
                 x = null != G ? { text: G.linkText, link: G.url } : void 0,
                 B = {
                     targetElementRef: n,

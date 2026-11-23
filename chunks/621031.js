@@ -75,8 +75,8 @@ function k(e) {
         } = e,
         H = (0, u.bG)([C.A], () => C.A.hidePersonalInformation),
         {
-            validPaymentSources: X,
-            hasFetchedPaymentSources: z,
+            validPaymentSources: z,
+            hasFetchedPaymentSources: X,
             hasFetchedSubscriptionPlans: Y,
             hasFetchError: W,
         } = (0, D.A)(t, R),
@@ -175,7 +175,7 @@ function k(e) {
         (l.useImperativeHandle(B, () => ({
             openManagePayment() {
                 if (t.isPurchasedExternally) return;
-                if (0 === X.length) return void el();
+                if (0 === z.length) return void el();
                 let e = es.current;
                 if (null == e) return;
                 e.scrollIntoView({ block: "center" });
@@ -197,15 +197,15 @@ function k(e) {
             })
         );
     }
-    if ((!z && !W) || !Y) return (0, i.jsx)(g.y, {});
-    if (X.length > 0) {
+    if ((!X && !W) || !Y) return (0, i.jsx)(g.y, {});
+    if (z.length > 0) {
         let e,
             n,
             l = y.A.get(t.planIdForCurrencies);
         o()(null != l, "Unable to fetch plan");
         let s = null != R.checkoutContext ? R.checkoutContext.allowed_currencies : null,
             a = null != s && s.length > 0 ? s : (0, v._w)(l, t.paymentSourceId, !1),
-            u = null != t.paymentSourceId ? X.find((e) => e.id === t.paymentSourceId) : null,
+            u = null != t.paymentSourceId ? z.find((e) => e.id === t.paymentSourceId) : null,
             c = u?.type === M.hes.TDS_WALLET,
             d = (0, i.jsx)(T.A, {
                 label: U.intl.string(U.t["0YjaXf"]),
@@ -225,7 +225,7 @@ function k(e) {
                                 null == (e = t.paymentSourceId)
                                     ? { label: U.intl.string(U.t.iA5vA1), value: null }
                                     : null,
-                            paymentSources: X,
+                            paymentSources: z,
                             hidePersonalInformation: H,
                             selectedPaymentSourceId: e,
                             onChange: async function (e) {

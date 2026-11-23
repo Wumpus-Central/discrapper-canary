@@ -1,8 +1,8 @@
 var l = n(477900),
     i = n(582128),
     r = n(115560),
-    s = n(855986),
-    a = n(73153),
+    a = n(855986),
+    s = n(73153),
     o = n(775602),
     u = n(149468),
     c = n(716365),
@@ -15,20 +15,20 @@ n.d(
     {
         A: function (e) {
             let { channelId: t, guildId: n, userId: g, containerDimensions: f } = e,
-                h = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
+                h = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 [A, x] = i.useState([]),
                 v = A.length < 50;
             i.useEffect(() => {
                 function e(e) {
-                    let { channelId: l, userId: i, emoji: s, animationType: a, animationId: o } = e;
+                    let { channelId: l, userId: i, emoji: a, animationType: s, animationId: o } = e;
                     if (null != g && g !== i) return;
-                    let d = null != s && null != a && null != o;
+                    let d = null != a && null != s && null != o;
                     if (l === t && !h && v && d) {
-                        let e = (0, c.Br)(s),
-                            l = null != s.id && !s.animated,
+                        let e = (0, c.Br)(a),
+                            l = null != a.id && !a.animated,
                             d = {
                                 id: (0, r.A)(),
-                                animationType: a,
+                                animationType: s,
                                 animationId: o,
                                 shouldResize: l,
                                 url: e,
@@ -39,9 +39,9 @@ n.d(
                     }
                 }
                 return (
-                    a.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
+                    s.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
                     () => {
-                        a.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
+                        s.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
                     }
                 );
             }, [t, n, g, h, v]);

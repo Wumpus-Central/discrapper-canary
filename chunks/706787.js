@@ -1,8 +1,8 @@
 var l = n(477900),
     i = n(582128),
     r = n(156150),
-    s = n(855986),
-    a = n(866323),
+    a = n(855986),
+    s = n(866323),
     o = n(565645),
     u = n(775602),
     c = n(927813),
@@ -21,10 +21,10 @@ n.d(
         A: function (e) {
             let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
                 { emoji: A, sentAt: x } = n,
-                v = (0, s.bG)([u.Ay], () => u.Ay.useReducedMotion),
+                v = (0, a.bG)([u.Ay], () => u.Ay.useReducedMotion),
                 [E, C] = i.useState(!0),
                 j = !v,
-                S = (0, a.p)(E, {
+                S = (0, s.p)(E, {
                     from: { rotate: -120 },
                     enter: { rotate: 0 },
                     leave: { rotate: -120 },

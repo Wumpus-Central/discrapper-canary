@@ -7,8 +7,8 @@ var a = l(582128),
     o = l(385345),
     c = l(617617),
     d = l(188275),
-    h = l(355097),
-    u = l(312653);
+    u = l(355097),
+    h = l(312653);
 let m = "2026-11-23T17:00:00Z",
     C = "2026-12-01T07:59:00Z",
     _ = {
@@ -18,9 +18,9 @@ let m = "2026-11-23T17:00:00Z",
         applicationId: d.IG,
         startsAt: m,
         endsAt: C,
-        title: u.default.XgfZ0E,
-        body: u.default.mPf8Wg,
-        cta: u.default.dnqFO2,
+        title: h.default.XgfZ0E,
+        body: h.default.mPf8Wg,
+        cta: h.default.dnqFO2,
         artUrl: "https://cdn.discordapp.com/assets/content/492f3b6b6422d7262f401adcad0aa7cabcc8fa2a1f8aa1dcc5d109893fa0ee19.png",
     },
     E = {
@@ -30,9 +30,9 @@ let m = "2026-11-23T17:00:00Z",
         applicationId: d.S3,
         startsAt: m,
         endsAt: C,
-        title: u.default.UEMMJO,
-        body: u.default.mPf8Wg,
-        cta: u.default["72cAX3"],
+        title: h.default.UEMMJO,
+        body: h.default.mPf8Wg,
+        cta: h.default["72cAX3"],
         artUrl: "https://cdn.discordapp.com/assets/content/011c03cac9aa90208279e1ab95b2beb0ce5b90543ca646dc80a910ba56f8ece0.png",
     };
 function A(e, t) {
@@ -40,7 +40,7 @@ function A(e, t) {
             (0, r.z)(
                 { kind: "single_use", content: e.dismissibleContent, scope: {} },
                 { dismissedContents: c.A.settings.userContent?.dismissedContents },
-                c.A.hasLoaded(h.oD.PRELOADED_USER_SETTINGS),
+                c.A.hasLoaded(u.oD.PRELOADED_USER_SETTINGS),
             ),
         ),
         s = (function (e, t) {

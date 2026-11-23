@@ -1,8 +1,8 @@
 var l = n(582128),
     i = n(855986),
     r = n(643501),
-    s = n(652896),
-    a = n(616356),
+    a = n(652896),
+    s = n(616356),
     o = n(46653),
     u = n(734057),
     c = n(775456),
@@ -19,17 +19,17 @@ var l = n(582128),
                         guildId: e?.guildId ?? "",
                         location: "usePassTheControllerGuestAction",
                     }),
-                    n = null != e ? (0, s._z)(e) : null,
+                    n = null != e ? (0, a._z)(e) : null,
                     g = (0, i.bG)([o.default], () => o.default.getId()),
                     f = (0, i.bG)([r.default], () => null != r.default.getRemoteSessionId()),
                     h = e?.channelId ?? null,
                     A = (0, i.bG)([u.A], () => u.A.getChannel(h)?.isGuildStageVoice() ?? !1, [h]),
                     x = (0, i.bG)(
-                        [a.A],
+                        [s.A],
                         () => {
                             if (null == e || null == n) return !1;
-                            let t = a.A.getActiveStreamForApplicationStream(e);
-                            return null != t && (0, s._z)(t) === n;
+                            let t = s.A.getActiveStreamForApplicationStream(e);
+                            return null != t && (0, a._z)(t) === n;
                         },
                         [e, n],
                     ),

@@ -18,13 +18,13 @@ n.d(
                 c = (0, i.T)(p?.asset);
             if (null == p || null == n) return t;
             let b = n.getFormatVariableValues(s.intl.currentLocale),
-                m = (0, d.d)(p.body, b);
-            if (!m.ok) return t;
-            let _ = (0, d.d)(p.header, b);
-            return _.ok
+                _ = (0, d.d)(p.body, b);
+            if (!_.ok) return t;
+            let m = (0, d.d)(p.header, b);
+            return m.ok
                 ? (0, l.jsx)(a.u, {
-                      title: _.content,
-                      body: m.content,
+                      title: m.content,
+                      body: _.content,
                       asset: null != c ? (0, l.jsx)("img", { src: c, className: u.L, alt: "" }) : void 0,
                       assetSize: 80,
                       padding: "lg",

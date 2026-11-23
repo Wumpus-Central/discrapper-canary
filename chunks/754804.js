@@ -9,10 +9,10 @@ var l = n(477900),
     p = n(498470),
     c = n(92551),
     b = n(637706),
-    m = n(788883),
-    _ = n(635995),
-    A = n(652215),
-    I = n(49999),
+    _ = n(788883),
+    m = n(635995),
+    I = n(652215),
+    A = n(49999),
     f = n(792996);
 n.d(
     t,
@@ -34,8 +34,8 @@ n.d(
                     [E],
                 ),
                 T = o.useCallback(() => {
-                    (s.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR }),
-                        N(I.i.USER_DISMISS));
+                    (s.default.track(I.HAw.APP_NOTICE_CLOSED, { notice_type: I.kqX.PREMIUM_MARKETING_NAGBAR }),
+                        N(A.i.USER_DISMISS));
                 }, [N]),
                 g = o.useRef(null);
             if (
@@ -56,7 +56,7 @@ n.d(
                     shopCollectionId: t.shopCollectionId?.value,
                     giftModalDestination: t.giftModalDestination,
                     onClose: () => {
-                        N(I.i.TAKE_ACTION);
+                        N(A.i.TAKE_ACTION);
                     },
                 }),
                 y = (0, b.C)(t.helpArticle, ""),
@@ -68,16 +68,16 @@ n.d(
             return P.ok
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(m.A, {
+                          (0, l.jsx)(_.A, {
                               componentType: e.componentType,
                               componentId: n,
                               promotionId: E,
                               dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
                           }),
-                          (0, l.jsxs)(_.T0, {
+                          (0, l.jsxs)(m.T0, {
                               onClick: T,
                               children: [
-                                  (0, l.jsxs)(_.In, {
+                                  (0, l.jsxs)(m.In, {
                                       children: [
                                           C.content,
                                           null != y &&
@@ -90,11 +90,11 @@ n.d(
                                       ],
                                   }),
                                   "" !== P.content &&
-                                      (0, l.jsx)(_.fY, {
+                                      (0, l.jsx)(m.fY, {
                                           text: P.content,
                                           onClick: function () {
-                                              (s.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                                                  notice_type: A.kqX.PREMIUM_MARKETING_NAGBAR,
+                                              (s.default.track(I.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                                                  notice_type: I.kqX.PREMIUM_MARKETING_NAGBAR,
                                               }),
                                                   S());
                                           },

@@ -143,8 +143,8 @@ let F = (0, i.E2)(l.X.APPEARANCE_DEFAULT_THEMES, {
 });
 var B = n(873298),
     H = n(858899),
-    X = n(793574),
-    z = n(11029),
+    z = n(793574),
+    X = n(11029),
     Y = n(653523),
     W = n(471865),
     K = n(332560),
@@ -161,7 +161,7 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
-        let { analyticsLocations: t } = (0, S.Ay)(X.A.CLIENT_THEMES_THEME_SELECTOR),
+        let { analyticsLocations: t } = (0, S.Ay)(z.A.CLIENT_THEMES_THEME_SELECTOR),
             [n, i, l, a, o] = (0, s.yK)([L.A, r.A], () => [
                 L.A.themePreferenceForSystemTheme(ee.Fc.LIGHT),
                 L.A.themePreferenceForSystemTheme(ee.Fc.DARK),
@@ -181,7 +181,7 @@ let el = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
             if (e === ee.Fc.DARK && I.current) return;
             ((0, J.NA)({ [e]: n }), (0, J.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
             let l = null != i ? `${e}-mode-${B.ju[i]}` : `${e}-mode-${n}`;
-            ((0, w.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l }), (0, z.cO)(), (0, z.by)());
+            ((0, w.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l }), (0, X.cO)(), (0, X.by)());
         }
         let b = o ? [] : k.G$.filter(k.Qm),
             C = o ? [] : k.iA.filter(k.Qm);

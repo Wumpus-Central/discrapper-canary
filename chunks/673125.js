@@ -14,8 +14,8 @@ function d(e) {
         achievementStatus: e.status,
     };
 }
-let h = new Set([null, o.x.NONE, o.x.IN_PROGRESS, o.x.ELIGIBLE, o.x.COMPLETED]);
-function u() {
+let u = new Set([null, o.x.NONE, o.x.IN_PROGRESS, o.x.ELIGIBLE, o.x.COMPLETED]);
+function h() {
     return {
         challenges: [],
         isFetchingChallenges: !1,
@@ -37,7 +37,7 @@ var m =
     C = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
 class _ extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
-    state = u();
+    state = h();
     constructor() {
         super(i.h, {
             ORB_CHALLENGES_LIST_FETCH: (e) => this.handleOrbChallengesFetchStart(e),
@@ -69,7 +69,7 @@ class _ extends s.Ay.Store {
         );
     }
     handleReset() {
-        this.state = u();
+        this.state = h();
     }
     handleConnectionOpen() {
         return !!this.state.hasFetchedChallenges && !this.state.isFetchingChallenges && ((0, c.Od)(), !1);
@@ -170,7 +170,7 @@ class _ extends s.Ay.Store {
         let { challenges: e } = this.state;
         return (
             (null == this.challengesForOrbWalletCache || this.challengesForOrbWalletCache.source !== e) &&
-                (this.challengesForOrbWalletCache = { source: e, result: e.filter((e) => h.has(e.achievementStatus)) }),
+                (this.challengesForOrbWalletCache = { source: e, result: e.filter((e) => u.has(e.achievementStatus)) }),
             this.challengesForOrbWalletCache.result
         );
     }

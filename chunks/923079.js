@@ -1,8 +1,8 @@
 var D,
-    a = r(212739),
-    t = r(403362),
-    R = r(286348),
-    n =
+    t = r(212739),
+    a = r(403362),
+    n = r(286348),
+    R =
         (((D = {}).DEFAULT = "default"),
         (D.DEPRECATED = "deprecated"),
         (D.DEPRECATED_XBOX = "deprecated_xbox"),
@@ -15,19 +15,19 @@ r.d(
     {
         A: function (e) {
             let { location: _ } = e,
-                r = (0, R.EX)({ location: _ }),
-                D = (0, a.O)(!1);
+                r = (0, n.EX)({ location: _ }),
+                D = (0, t.O)(!1);
             switch (r) {
-                case R.F9.DEFAULT:
+                case n.F9.DEFAULT:
                     return "default";
-                case R.F9.DEPRECATED:
+                case n.F9.DEPRECATED:
                     return D ? "deprecated_xbox" : "deprecated";
-                case R.F9.REMOVED:
+                case n.F9.REMOVED:
                     return D ? "removed_xbox" : "removed";
                 default:
-                    return (0, t.xb)(r);
+                    return (0, a.xb)(r);
             }
         },
-        m: n,
+        m: R,
     },
 );

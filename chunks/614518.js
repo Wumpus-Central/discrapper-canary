@@ -2,8 +2,8 @@ let l;
 n(667532);
 var i = n(435558),
     r = n(855986),
-    s = n(765178),
-    a = n(73153),
+    a = n(765178),
+    s = n(73153),
     o = n(927813),
     u = n(716365);
 n(806931);
@@ -14,7 +14,7 @@ let c = [],
     g = 10 * o.A.Millis.SECOND,
     f = (0, i.debounce)(() => {
         let e = (0, u.fr)(m);
-        (s.O.announce(e, "polite"), (m = []));
+        (a.O.announce(e, "polite"), (m = []));
     }, 500);
 class h extends r.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
@@ -31,7 +31,7 @@ class h extends r.Ay.Store {
         return d[e];
     }
 }
-let A = new h(a.h, {
+let A = new h(s.h, {
     VOICE_CHANNEL_EFFECT_CLEAR: function (e) {
         let { userId: t } = e;
         null != d[t] && delete d[t];
@@ -67,7 +67,7 @@ n.d(
     {
         A: A,
         a: function (e) {
-            null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
+            null != e && s.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
         },
     },
 );

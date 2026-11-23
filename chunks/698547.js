@@ -6,7 +6,7 @@ n.d(
     {},
     {
         A: function (e, t) {
-            let { onClick: n, onDoubleClick: s, onMouseDown: a } = t,
+            let { onClick: n, onDoubleClick: a, onMouseDown: s } = t,
                 o = (0, i.bG)([r.A], () => null != e && r.A.getActiveStreamKey() === e);
             return l.useMemo(
                 () => ({
@@ -14,13 +14,13 @@ n.d(
                         o ? e.stopPropagation() : n?.(e);
                     },
                     onDoubleClick: (e) => {
-                        o ? e.stopPropagation() : s?.(e);
-                    },
-                    onMouseDown: (e) => {
                         o ? e.stopPropagation() : a?.(e);
                     },
+                    onMouseDown: (e) => {
+                        o ? e.stopPropagation() : s?.(e);
+                    },
                 }),
-                [o, n, s, a],
+                [o, n, a, s],
             );
         },
     },

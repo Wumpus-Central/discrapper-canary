@@ -1,8 +1,8 @@
 var l = n(477900),
     i = n(582128),
     r = n(503698),
-    s = n.n(r),
-    a = n(855986),
+    a = n.n(r),
+    s = n(855986),
     o = n(778712),
     u = n(866665),
     c = n(653766),
@@ -19,8 +19,8 @@ var l = n(477900),
     C = n(697682),
     j = n(259264),
     S = n(869146),
-    b = n(718734),
-    I = n(854627),
+    I = n(718734),
+    b = n(854627),
     y = n(912630),
     _ = n(530804),
     N = n(46653),
@@ -57,13 +57,13 @@ n.d(
                     paused: U = !1,
                 } = e,
                 z = w.Ay.getVideoComponent(),
-                W = (0, a.bG)([N.default], () => N.default.getId()),
+                W = (0, s.bG)([N.default], () => N.default.getId()),
                 { user: $, streamId: B, speaking: K } = t,
                 Y = $.id === W,
                 Z = (0, L.Ay)(t),
-                X = (0, a.bG)([k.A], () => k.A.isFocused()),
-                Q = (0, a.bG)([S.A], () => S.A.getWindowFocused(M.MLl.CHANNEL_CALL_POPOUT)),
-                q = (0, a.bG)([w.Ay], () => null != $.id && w.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
+                X = (0, s.bG)([k.A], () => k.A.isFocused()),
+                Q = (0, s.bG)([S.A], () => S.A.getWindowFocused(M.MLl.CHANNEL_CALL_POPOUT)),
+                q = (0, s.bG)([w.Ay], () => null != $.id && w.Ay.isLocalVideoDisabled($.id, (0, h.A)(t.type)), [
                     $.id,
                     t.type,
                 ]),
@@ -71,16 +71,16 @@ n.d(
                 ee = R.Ay.getName(n.getGuildId(), n.id, $) + (J ? ` ${P.intl.string(P.t["pFO/Ph"])}` : ""),
                 et = K && (Q || X),
                 en = o < 124 ? F : V,
-                { avatarSrc: el, avatarDecorationSrc: ei } = (0, I.A)({
+                { avatarSrc: el, avatarDecorationSrc: ei } = (0, b.A)({
                     userId: $.id,
                     guildId: n.guild_id,
                     size: en,
                     animateOnHover: !et,
                 }),
-                er = (0, a.bG)([f.A], () => f.A.getSelectedParticipant(n.id)),
-                es = (0, v.A)(O.x.DEFAULT, t.user.id),
-                ea = (0, x.A)(t.user.id),
-                eo = (0, b.e)(n, "UserTile"),
+                er = (0, s.bG)([f.A], () => f.A.getSelectedParticipant(n.id)),
+                ea = (0, v.A)(O.x.DEFAULT, t.user.id),
+                es = (0, x.A)(t.user.id),
+                eo = (0, I.e)(n, "UserTile"),
                 eu = { channel: n, selectedParticipant: er, user: $, isStageUnifiedCall: eo },
                 ec = i.useRef(eu);
             return (i.useEffect(() => {
@@ -91,8 +91,8 @@ n.d(
                 !l && e.isGuildStageVoice() && !Z && t?.id === n.id && p.A.selectParticipant(e.id, null);
             }, [Z]),
             r && !q && !D && Z && !u && null != z && w.Ay.supports(O.O5.VIDEO))
-                ? null != es && null == ea
-                    ? (0, l.jsx)(T.A, { avError: es, userId: t.id, width: o, selected: u })
+                ? null != ea && null == es
+                    ? (0, l.jsx)(T.A, { avError: ea, userId: t.id, width: o, selected: u })
                     : (0, l.jsx)(
                           j.A,
                           {
@@ -110,7 +110,7 @@ n.d(
                           B,
                       )
                 : (0, l.jsx)("div", {
-                      className: s()(G.Qs, { [G.Kx]: y || _ }),
+                      className: a()(G.Qs, { [G.Kx]: y || _ }),
                       children: (0, l.jsx)(C.A, {
                           "aria-label": ee,
                           avatarDecoration: ei,
@@ -128,14 +128,14 @@ n.d(
             let { channelId: t, participant: n } = e,
                 i = (0, _.uy)(t, n.id),
                 r = (0, _.b0)(n.id),
-                o = (0, a.bG)([N.default], () => N.default.getId()),
-                p = (0, a.bG)([y.A], () => y.A.videoBackgroundUnavailable);
+                o = (0, s.bG)([N.default], () => N.default.getId()),
+                p = (0, s.bG)([y.A], () => y.A.videoBackgroundUnavailable);
             return r
                 ? (0, l.jsx)(u.m, {
                       text: P.intl.string(P.t["6mh541"]),
                       position: "bottom",
                       children: (0, l.jsx)("div", {
-                          className: s()(G.h5, G.bG),
+                          className: a()(G.h5, G.bG),
                           children: (0, l.jsx)(c.ConnectionUnknownIcon, { color: d.A.colors.ICON_FEEDBACK_WARNING }),
                       }),
                   })

@@ -10,7 +10,7 @@ var o = n(503698),
     p = n(789645),
     c = n(818348),
     b = n(792996),
-    m = n(698833);
+    _ = n(698833);
 n.d(
     t,
     {},
@@ -20,7 +20,7 @@ n.d(
             return (0, l.jsx)(i.D, {
                 variant: "heading-xs/medium",
                 color: "text-strong",
-                className: m.ut,
+                className: _.ut,
                 children: t,
             });
         },
@@ -31,12 +31,12 @@ n.d(
                 children: (e) =>
                     (0, l.jsxs)("div", {
                         ref: n,
-                        className: a()(m.lm, e, t),
+                        className: a()(_.lm, e, t),
                         children: [
-                            (0, l.jsx)("div", { className: m.qZ, children: o }),
+                            (0, l.jsx)("div", { className: _.qZ, children: o }),
                             (0, l.jsx)(u.D, {
                                 focusProps: { offset: 6 },
-                                className: m.b,
+                                className: _.b,
                                 onClick: r,
                                 "aria-label": b.intl.string(b.t.WAI6xu),
                                 children: (0, l.jsx)(p.XSmallIcon, { size: "sm" }),

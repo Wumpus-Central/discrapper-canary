@@ -2,8 +2,8 @@
 var l = n(477900),
     i = n(582128),
     r = n(520698),
-    s = n(412780),
-    a = n(262012);
+    a = n(412780),
+    s = n(262012);
 n.d(
     t,
     {},
@@ -19,19 +19,19 @@ n.d(
                 x = t === A,
                 v = i.useCallback((e, t, n) => {
                     var l, i;
-                    let r = n ? s.Ay.getOutboundStats(t) : s.Ay.getInboundStats(e, t),
-                        a =
+                    let r = n ? a.Ay.getOutboundStats(t) : a.Ay.getInboundStats(e, t),
+                        s =
                             void 0 === (l = r?.resolution) || (0 === l.width && 0 === l.height)
                                 ? "unknown"
                                 : l.width + " x " + l.height;
-                    (c("unknown" === a ? "-" : (r?.codec ?? "unknown")),
-                        m("unknown" === a ? "-" : a),
+                    (c("unknown" === s ? "-" : (r?.codec ?? "unknown")),
+                        m("unknown" === s ? "-" : s),
                         g(
                             r?.bitrateEstimate !== void 0
                                 ? ((i = r.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                                 : "unknown",
                         ),
-                        h("unknown" === a || r?.fps === void 0 ? "-" : String(r.fps)));
+                        h("unknown" === s || r?.fps === void 0 ? "-" : String(r.fps)));
                 }, []);
             return (
                 i.useEffect(() => {
@@ -43,25 +43,25 @@ n.d(
                     return () => clearInterval(t);
                 }, [x, A, o, v]),
                 (0, l.jsxs)("div", {
-                    className: a.w,
+                    className: s.w,
                     children: [
                         (0, l.jsx)("div", { children: (0, l.jsx)("strong", { children: "Stream Info" }) }),
                         (0, l.jsxs)("div", {
-                            className: a.l,
+                            className: s.l,
                             children: [
                                 (0, l.jsx)("span", { children: "Video Codec: " }),
                                 (0, l.jsx)("strong", { children: u }),
                             ],
                         }),
                         (0, l.jsxs)("div", {
-                            className: a.l,
+                            className: s.l,
                             children: [
                                 (0, l.jsx)("span", { children: "Resolution: " }),
                                 (0, l.jsx)("strong", { children: d }),
                             ],
                         }),
                         (0, l.jsxs)("div", {
-                            className: a.l,
+                            className: s.l,
                             children: [
                                 (0, l.jsx)("span", { children: "FPS: " }),
                                 (0, l.jsx)("strong", { children: f }),
@@ -69,7 +69,7 @@ n.d(
                         }),
                         x &&
                             (0, l.jsxs)("div", {
-                                className: a.l,
+                                className: s.l,
                                 children: [
                                     (0, l.jsx)("span", { children: "Bitrate Estimate: " }),
                                     (0, l.jsx)("strong", { children: p }),

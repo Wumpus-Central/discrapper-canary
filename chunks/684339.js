@@ -1,8 +1,8 @@
 var l,
     i = n(499979),
     r = n(626584),
-    s = n(46653),
-    a = n(734057),
+    a = n(46653),
+    s = n(734057),
     o = n(544180),
     u = n(495867),
     c = n(977997),
@@ -41,7 +41,7 @@ n.d(
                 this.logger.info(`spinner visible for ${p} ms
       [${e}, count for stream: ${r}]`);
                 let f = u.A.getGuildId(),
-                    h = c.A.getUserVoiceChannelId(f, s.default.getId()),
+                    h = c.A.getUserVoiceChannelId(f, a.default.getId()),
                     A = (function (e) {
                         if (null != e) {
                             if (e.isGuildVoice()) return "guild_voice";
@@ -50,7 +50,7 @@ n.d(
                             if (e.isGroupDM()) return "group_dm";
                         }
                         return null;
-                    })(a.A.getChannel(h));
+                    })(s.A.getChannel(h));
                 d.default.track(m.HAw.VIDEO_SPINNER_SHOWN_V2, {
                     video_spinner_context: e,
                     duration_video_spinner_visible_ms: p,

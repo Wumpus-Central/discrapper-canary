@@ -2,8 +2,8 @@ var l = n(477900);
 n(582128);
 var i = n(855986),
     r = n(646514),
-    s = n(866665),
-    a = n(786889),
+    a = n(866665),
+    s = n(786889),
     o = n(312006),
     u = n(718734),
     c = n(792996);
@@ -16,12 +16,12 @@ n.d(
                 d = (0, u.e)(t, "StageModeratorTileBadge"),
                 m = (0, i.bG)([o.Ay], () => o.Ay.isModerator(n, t.id), [n, t.id]);
             return d && m
-                ? (0, l.jsx)(s.m, {
+                ? (0, l.jsx)(a.m, {
                       text: c.intl.string(c.t.GMZqSi),
                       children: (0, l.jsx)("div", {
                           role: "img",
                           "aria-label": c.intl.string(c.t.GMZqSi),
-                          children: (0, l.jsx)(a.A, { width: 24, height: 24, color: r.A.unsafe_rawColors.WHITE.css }),
+                          children: (0, l.jsx)(s.A, { width: 24, height: 24, color: r.A.unsafe_rawColors.WHITE.css }),
                       }),
                   })
                 : null;
