@@ -10,10 +10,10 @@ var l,
     p = n(308588),
     c = n(821609),
     b = n(192308),
-    m = n(273185),
-    _ = n(661191),
-    A = n(331322),
-    I = n(691885),
+    _ = n(273185),
+    m = n(661191),
+    I = n(331322),
+    A = n(691885),
     f = n(839214),
     E = n(693369),
     N = n(365977),
@@ -168,7 +168,7 @@ function U(e) {
                 }
                 return [...l.values()];
             }, [n, t])),
-        m = a.useMemo(
+        _ = a.useMemo(
             () =>
                 (0, v.getLanguages)()
                     .filter((e) => e.enabled && "en-US" !== e.code)
@@ -176,29 +176,31 @@ function U(e) {
                     .sort((e, t) => e.label.localeCompare(t.label)),
             [],
         ),
-        _ = a.useMemo(() => {
+        m = a.useMemo(() => {
             let e;
             return (
                 (e = new Set(c)),
                 [
                     { label: "Default (en-US)", value: h },
-                    ...m
-                        .filter((e) => "en-US" !== e.value)
-                        .map((t) => ({ label: t.label, value: t.value, disabled: !e.has(t.value) })),
+                    ..._.filter((e) => "en-US" !== e.value).map((t) => ({
+                        label: t.label,
+                        value: t.value,
+                        disabled: !e.has(t.value),
+                    })),
                 ]
             );
-        }, [c, m]),
+        }, [c, _]),
         f = (i?.get(o)?.length ?? 0) > 0;
     if (null == r || !f) return null;
     let N = b.length >= 1,
         T = [{ label: "Default", value: h }, ...b.map((e) => ({ label: e.label, value: e.id }))];
     return (0, d.jsx)("div", {
         className: L.k,
-        children: (0, d.jsxs)(A.B, {
+        children: (0, d.jsxs)(I.B, {
             gap: 16,
             children: [
                 N &&
-                    (0, d.jsx)(I.l, {
+                    (0, d.jsx)(A.l, {
                         label: "User State",
                         value: u.get(o) ?? h,
                         onSelectionChange: (e) =>
@@ -213,14 +215,14 @@ function U(e) {
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
-                (0, d.jsx)(I.l, {
+                (0, d.jsx)(A.l, {
                     label: "Locale",
                     value: p ?? h,
                     onSelectionChange: (e) => {
                         var t;
                         return ((t = e === h ? null : e), void R.setState({ localeOverride: t }));
                     },
-                    options: _,
+                    options: m,
                     formatOption: D,
                     selectionMode: "single",
                     fullWidth: !0,
@@ -241,8 +243,8 @@ function k(e, t) {
     return e === P(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
 }
 var W = n(117513);
-let j = "playground-announcement-modal",
-    V = _.default.fromTimestamp(Date.UTC(2016, 0, 1)),
+let V = "playground-announcement-modal",
+    j = m.default.fromTimestamp(Date.UTC(2016, 0, 1)),
     K = {
         name: "Announcement Modal",
         id: "announcement-modal",
@@ -261,7 +263,7 @@ let j = "playground-announcement-modal",
                             a,
                             r =
                                 ((t = e.heroAssetUrl),
-                                (o = (0, m.r1)(t)),
+                                (o = (0, _.r1)(t)),
                                 (a = {
                                     modalTopPill: e.modalTopPill,
                                     header: e.header,
@@ -289,7 +291,7 @@ let j = "playground-announcement-modal",
                                                 : (l?.button?.giftModalDestination ?? p.We.UNSPECIFIED),
                                     },
                                 }),
-                                B(j, {
+                                B(V, {
                                     oneofKind: "announcementModalVariant1",
                                     announcementModalVariant1: null != l ? { ...l, ...a } : u.ih.create(a),
                                 }));
@@ -380,8 +382,8 @@ let j = "playground-announcement-modal",
                                 return (t) =>
                                     (0, d.jsx)(e, {
                                         renderModalProps: t,
-                                        componentId: j,
-                                        promotionId: V,
+                                        componentId: V,
+                                        promotionId: j,
                                         properties: r,
                                     });
                             },
@@ -617,6 +619,8 @@ var q = n(959129),
         (o.HALLOWEEN_GIFTING_2026_UMBRA_SKU_ID = "1552382432504840293"),
         (o.HALLOWEEN_GIFTING_2026_HEX_SKU_ID = "1552383012002332842"),
         (o.HALLOWEEN_GIFTING_2026_CROWSEPH_SKU_ID = "1552383354190565476"),
+        (o.BLACK_FRIDAY_GIFTING_2026_VENGEANCE_NOIR_SKU_ID = "1572014001158754395"),
+        (o.BLACK_FRIDAY_GIFTING_2026_HELLFLAME_NOIR_SKU_ID = "1572012306248900639"),
         o),
     J = n(67948),
     Q = n(73153),
@@ -657,10 +661,10 @@ function eu(e) {
 var ep = n(652215);
 let ec = "playground-gift-icon",
     eb = (0, es.createChannelRecord)({ id: "1", guild_id: "1", type: ep.rbe.GUILD_TEXT, name: "playground" });
-var em = n(720119),
-    e_ = n(40493);
-function eA() {}
-let eI = (0, es.createChannelRecord)({ id: "1", guild_id: "1", type: ep.rbe.GUILD_TEXT, name: "playground" });
+var e_ = n(720119),
+    em = n(40493);
+function eI() {}
+let eA = (0, es.createChannelRecord)({ id: "1", guild_id: "1", type: ep.rbe.GUILD_TEXT, name: "playground" });
 var ef = n(978656);
 let eE = "playground-gift-plan-selection-card-banner",
     eN = "playground-gift-plan-selection-card-banner-promotion",
@@ -778,7 +782,7 @@ let eM = {
 };
 var eC = n(754804);
 let eP = "playground-nagbar",
-    eh = _.default.fromTimestamp(Date.UTC(2016, 0, 1));
+    eh = m.default.fromTimestamp(Date.UTC(2016, 0, 1));
 var ev = n(834730),
     eL = n(709870),
     eD = n(37126),
@@ -842,8 +846,8 @@ let eG =
     eF = "playground-plan-select-card-banner";
 var ek = n(964661),
     eW = n(503698),
-    ej = n.n(eW),
-    eV = n(612324),
+    eV = n.n(eW),
+    ej = n(612324),
     eK = n(403581),
     ew = n(214947),
     eH = n(34188),
@@ -855,11 +859,11 @@ function eX() {}
 function eZ(e) {
     let { icon: t, label: n, selected: l = !1, decoration: o, showHoverGradient: a = !1, ref: r } = e,
         { width: i, ref: s } = (0, e$.Ay)(),
-        u = (0, eV.A)(r, s);
+        u = (0, ej.A)(r, s);
     return (0, d.jsxs)("button", {
         ref: u,
         type: "button",
-        className: ej()(eq.pc, { [eq.EV]: l }),
+        className: eV()(eq.pc, { [eq.EV]: l }),
         onClick: eX,
         children: [
             a && (0, d.jsx)(eY.ls, { eventTargetRef: s, isNitro: !0, contentWidth: i }),
@@ -923,10 +927,10 @@ let e2 = "playground-premium-tab-popover",
                     buttonAction: u,
                     navigableStorefrontApplicationId: c,
                     giftModalDestination: b,
-                    assetUrl: m,
+                    assetUrl: _,
                 } = e,
-                _ = M(s.oW.PREMIUM_TAB_POPOVER),
-                A = _?.properties.premiumTabPopover ?? null;
+                m = M(s.oW.PREMIUM_TAB_POPOVER),
+                I = m?.properties.premiumTabPopover ?? null;
             eu(
                 ((n = {
                     header: (t = {
@@ -936,40 +940,40 @@ let e2 = "playground-premium-tab-popover",
                         buttonAction: u,
                         navigableStorefrontApplicationId: c,
                         giftModalDestination: b,
-                        assetUrl: m,
+                        assetUrl: _,
                     }).header,
                     body: t.body,
                     button: {
-                        ...A?.button,
+                        ...I?.button,
                         copy: t.buttonCopy,
                         buttonAction:
                             t.buttonAction !== p.dz.UNSPECIFIED
                                 ? t.buttonAction
-                                : (A?.button?.buttonAction ?? p.dz.OPEN_TIER_2_PAYMENT_MODAL),
-                        deeplinkSection: A?.button?.deeplinkSection ?? "",
+                                : (I?.button?.buttonAction ?? p.dz.OPEN_TIER_2_PAYMENT_MODAL),
+                        deeplinkSection: I?.button?.deeplinkSection ?? "",
                         navigableStorefrontApplicationId:
-                            A?.button?.navigableStorefrontApplicationId ??
+                            I?.button?.navigableStorefrontApplicationId ??
                             ("" !== t.navigableStorefrontApplicationId
                                 ? { value: t.navigableStorefrontApplicationId }
                                 : void 0),
                         giftModalDestination:
                             t.giftModalDestination !== p.We.UNSPECIFIED
                                 ? t.giftModalDestination
-                                : (A?.button?.giftModalDestination ?? p.We.UNSPECIFIED),
+                                : (I?.button?.giftModalDestination ?? p.We.UNSPECIFIED),
                     },
-                    asset: k(t.assetUrl, A?.asset),
+                    asset: k(t.assetUrl, I?.asset),
                 }),
                 (l = B(e2, {
                     oneofKind: "premiumTabPopover",
-                    premiumTabPopover: null != A ? { ...A, ...n } : { helpArticleId: "", ...n },
+                    premiumTabPopover: null != I ? { ...I, ...n } : { helpArticleId: "", ...n },
                 })),
                 F(e2, s.oW.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", l)),
             );
-            let I = a.useRef(null);
+            let A = a.useRef(null);
             return (0, d.jsx)(eJ, {
                 selected: !0,
-                nitroRowRef: I,
-                wrapNitroRow: (e) => (0, d.jsx)(eQ.A, { targetElementRef: I, dismissPopover: e0, children: e }),
+                nitroRowRef: A,
+                wrapNitroRow: (e) => (0, d.jsx)(eQ.A, { targetElementRef: A, dismissPopover: e0, children: e }),
             });
         },
         ControlsExtension: () => (0, d.jsx)(U, { componentType: s.oW.PREMIUM_TAB_POPOVER }),
@@ -1138,7 +1142,7 @@ let ta = {
                         id: "nitro-orbs-bonus-modal",
                         component: function (e) {
                             let { orbsAmount: t } = e;
-                            return (0, d.jsxs)(A.B, {
+                            return (0, d.jsxs)(I.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
@@ -1164,7 +1168,7 @@ let ta = {
                         name: "Shop Reward Modal",
                         id: "nitro-shop-reward-modal",
                         component: function () {
-                            return (0, d.jsxs)(A.B, {
+                            return (0, d.jsxs)(I.B, {
                                 direction: "vertical",
                                 gap: 16,
                                 align: "start",
@@ -1649,15 +1653,15 @@ let ta = {
                             let t = M(s.oW.GIFT_ICON_COACHMARK),
                                 n = t?.properties.giftIconCoachmark ?? null,
                                 l = { header: e.header, body: e.body, asset: k(e.assetUrl, n?.asset) },
-                                o = null != n ? { ...n, ...l } : em.l.create(l);
+                                o = null != n ? { ...n, ...l } : e_.l.create(l);
                             return (0, d.jsx)("div", {
                                 className: W.WG,
-                                children: (0, d.jsx)(e_.A, {
+                                children: (0, d.jsx)(em.A, {
                                     coachmarkConfig: o,
-                                    onComplete: eA,
-                                    onCheckItOutClick: eA,
-                                    markAsDismissed: eA,
-                                    children: (0, d.jsx)(ed.A, { channel: eI }),
+                                    onComplete: eI,
+                                    onCheckItOutClick: eI,
+                                    markAsDismissed: eI,
+                                    children: (0, d.jsx)(ed.A, { channel: eA }),
                                 }),
                             });
                         },
