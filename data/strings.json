@@ -29512,7 +29512,7 @@
   "DinVUQ": "{displayNoun, select, ALLIANCE {You can’t join this alliance}CLAN {You can’t join this clan}other {You can’t join this guild}}",
   "VNY3C1": "{displayNoun, select, ALLIANCE {Doesn’t meet alliance criteria}CLAN {Doesn’t meet clan criteria}other {Doesn’t meet guild criteria}}",
   "ybJIQJ": "{displayNoun, select, ALLIANCE {Not meeting alliance criteria can be due to factors like insufficient ranking or leveling, or already being in another alliance. Check with the alliance admin to learn more.}CLAN {Not meeting clan criteria can be due to factors like insufficient ranking or leveling, or already being in another clan. Check with the clan admin to learn more.}other {Not meeting guild criteria can be due to factors like insufficient ranking or leveling, or already being in another guild. Check with the guild admin to learn more.}}",
-  "OkMPbI": "Awaiting response",
+  "OkMPbI": "Awaiting Response",
   "bY80Jh": "Eligible guilds are full",
   "yKyx41": "Your invite expires in {days, plural,one {# day}other {# days}.",
   "jKi+kc": "{displayNoun, select, ALLIANCE {Alliance Invite}CLAN {Clan Invite}other {Guild Invite}}",
