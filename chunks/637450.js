@@ -3356,7 +3356,7 @@ class tB extends y.G {
             },
             {
                 no: 2,
-                name: "fiscal_half",
+                name: "fiscal_period",
                 kind: "enum",
                 T: () => ["discord_protos.discord_experimentation.v1.HoldoutScope.FiscalPeriod", tL],
             },
@@ -3364,7 +3364,7 @@ class tB extends y.G {
         ]);
     }
     create(e) {
-        let t = { level: 0, fiscalHalf: 0, fiscalYear: 0 };
+        let t = { level: 0, fiscalPeriod: 0, fiscalYear: 0 };
         return (
             globalThis.Object.defineProperty(t, L.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, R.x)(this, t, e),
@@ -3381,7 +3381,7 @@ class tB extends y.G {
                     r.level = e.int32();
                     break;
                 case 2:
-                    r.fiscalHalf = e.int32();
+                    r.fiscalPeriod = e.int32();
                     break;
                 case 3:
                     r.fiscalYear = e.int32();
@@ -3398,7 +3398,7 @@ class tB extends y.G {
     }
     internalBinaryWrite(e, t, n) {
         (0 !== e.level && t.tag(1, O.O0.Varint).int32(e.level),
-            0 !== e.fiscalHalf && t.tag(2, O.O0.Varint).int32(e.fiscalHalf),
+            0 !== e.fiscalPeriod && t.tag(2, O.O0.Varint).int32(e.fiscalPeriod),
             0 !== e.fiscalYear && t.tag(3, O.O0.Varint).int32(e.fiscalYear));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? O.f$.onWrite : i)(this.typeName, e, t), t);
