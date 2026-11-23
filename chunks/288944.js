@@ -24,7 +24,7 @@ var E = n(442433),
     T = n(397244),
     S = n(342312),
     I = n(160808),
-    N = n(120692),
+    N = n(156150),
     j = n(866323),
     R = n(120842);
 function O(e) {
@@ -300,9 +300,9 @@ let e2 = [
 e1("open-unavailable", e0.default["58TARv"], e$.UNAVAILABLE);
 let e6 = ["reset-progress", "reset-character"];
 var e3 = n(852717),
-    e8 = n(641214);
-function e5() {
-    return (0, i.jsx)(eL.y, { type: eL.t.SPINNING_CIRCLE_SIMPLE, className: e8.u1, itemClassName: e8.$N });
+    e5 = n(641214);
+function e8() {
+    return (0, i.jsx)(eL.y, { type: eL.t.SPINNING_CIRCLE_SIMPLE, className: e5.u1, itemClassName: e5.$N });
 }
 function e7(e) {
     let { onClose: t } = e,
@@ -319,9 +319,9 @@ function e7(e) {
         })(n),
         r = (0, c.bG)([eK.A], () => eK.A.isFetching);
     return (0, i.jsx)(eW, {
-        icon: r ? e5 : ew.ExperimentalCheckpointIcon,
+        icon: r ? e8 : ew.ExperimentalCheckpointIcon,
         label: eB.intl.string(e3.default["8hclXY"]),
-        sublabel: (0, i.jsx)("span", { className: e8.$B, children: eB.intl.string(e3.default.BFc4lY) }),
+        sublabel: (0, i.jsx)("span", { className: e5.$B, children: eB.intl.string(e3.default.BFc4lY) }),
         onClick: async function () {
             (await (0, eY.D)("user_profile_account_popout"), t());
         },
@@ -332,7 +332,7 @@ function e7(e) {
                       return (0, i.jsx)(eH, {
                           navId: "checkpoint-qa-submenu",
                           "aria-label": eB.intl.string(e0.default["9dS734"]),
-                          className: e8.gn,
+                          className: e5.gn,
                           onClose: n,
                           children: l.map((e) =>
                               (0, i.jsx)(
@@ -701,7 +701,7 @@ let t3 = {
         [t2.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
         [t2.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
-    t8 = {
+    t5 = {
         [t2.Ac.PREMIUM_TENURE_1_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm",
             light: "https://cdn.discordapp.com/assets/content/f09f5aa678c2d463109f0ca84a572646c1b6b21974865e84ac92f3c3a3f50b87.webm",
@@ -735,7 +735,7 @@ let t3 = {
             light: "https://cdn.discordapp.com/assets/content/c5e4aed8b111912db02d0aa12a73d162720f27aaf432000378344e94cde1ec65.webm",
         },
     };
-var t5 = n(570484);
+var t8 = n(570484);
 let t7 = l.lazy(() => Promise.all([n.e(969274), n.e(924832)]).then(n.bind(n, 748579)));
 function t9() {
     let e = (0, c.bG)([tQ.Ay], () => tQ.Ay.useReducedMotion),
@@ -745,7 +745,7 @@ function t9() {
                 t = (0, tX.M)((0, tZ.Ay)());
             if (null == e) return null;
             let n = t3[e],
-                i = t8[e],
+                i = t5[e],
                 l = {
                     currentBadge: (0, tJ.e0)(e),
                     currentBadgeTextGradient: t ? n?.dark : n?.light,
@@ -771,10 +771,10 @@ function t4(e) {
     return (0, i.jsx)(tY.Ok, {
         containerRef: n,
         children: (0, i.jsxs)("div", {
-            className: t5.i,
+            className: t8.i,
             children: [
                 (0, i.jsx)("div", {
-                    className: t5.b,
+                    className: t8.b,
                     children: (0, i.jsx)(ts.m, {
                         text: eB.intl.string(eB.t.cpT0Cq),
                         children: (0, i.jsx)(to.K, {
@@ -1037,8 +1037,8 @@ var nL = n(290863),
     n2 = n(633075),
     n6 = n(667049),
     n3 = n(46653),
-    n8 = n(90165),
-    n5 = n(403362),
+    n5 = n(90165),
+    n8 = n(403362),
     n7 = n(49999),
     n9 = n(518477);
 function n4(e) {
@@ -1055,12 +1055,12 @@ function n4(e) {
                 n = (0, n6.A)(t),
                 i = l.useMemo(() => n.filter((e) => e instanceof n2.R), [n]),
                 r = (0, n0.A)(e),
-                a = l.useMemo(() => r.filter(n5.Vq), [r]),
-                s = (0, c.cf)([n8.A], () => {
+                a = l.useMemo(() => r.filter(n8.Vq), [r]),
+                s = (0, c.cf)([n5.A], () => {
                     let t = {};
                     for (let n of e) {
                         let e = a.find((e) => e.id === n)?.getCanonicalGameId();
-                        null != e && (t[n] = n8.A.getLastPlayedDateTime(e));
+                        null != e && (t[n] = n5.A.getLastPlayedDateTime(e));
                     }
                     return t;
                 }),
@@ -2276,27 +2276,27 @@ var iJ = n(45780),
     i2 = n(685073),
     i6 = n(73153);
 let i3 = { lastSeenInfos: {} },
-    i8 = i3;
-class i5 extends c.Ay.PersistedStore {
+    i5 = i3;
+class i8 extends c.Ay.PersistedStore {
     static displayName = "GuildTagChangedCoachmarkStore";
     static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        i8 = e ?? i3;
+        i5 = e ?? i3;
     }
     getState() {
-        return i8;
+        return i5;
     }
     getGuildLastSeenInfo(e) {
-        return i8.lastSeenInfos[e] ?? null;
+        return i5.lastSeenInfos[e] ?? null;
     }
 }
-let i7 = new i5(i6.h, {
+let i7 = new i8(i6.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
-        i8.lastSeenInfos[t] = n;
+        i5.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        i8 = i3;
+        i5 = i3;
     },
 });
 var i9 = n(514661);
@@ -3036,7 +3036,7 @@ function l1(e) {
         }, [a]),
         g = eo.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, l0.A)("1795457078518", !0);
+        let e = (0, l0.A)("1795457212343", !0);
         t =
             null != e
                 ? eB.intl.formatToPlainString(eB.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3086,8 +3086,8 @@ function l1(e) {
 var l2 = n(358285);
 let l6 = iw.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
     l3 = 2.5 * tp.A.Millis.SECOND,
-    l8 = 2 * tp.A.Millis.MINUTE,
-    l5 = 5 * tp.A.Millis.SECOND;
+    l5 = 2 * tp.A.Millis.MINUTE,
+    l8 = 5 * tp.A.Millis.SECOND;
 function l7(e) {
     let {
             ref: t,
@@ -4183,7 +4183,7 @@ class l9 extends l.PureComponent {
             { hoveringOnMute: l } = this.state,
             r =
                 void 0 === this.lastSpeakingWhileMutedNotificationTime ||
-                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l8;
+                performance.now() - this.lastSpeakingWhileMutedNotificationTime > l5;
         t
             ? !l &&
               e &&
@@ -4417,7 +4417,7 @@ function re(e) {
         t &&
             n &&
             (a(!0),
-            i.current.start(l5, () => {
+            i.current.start(l8, () => {
                 a(!1);
             }));
     }, [t, n]);
@@ -4496,7 +4496,7 @@ function rt() {
                 null != e &&
                     (i = o()(Array.from(iS.A.getParty(e) ?? []))
                         .map((e) => eI.default.getUser(e))
-                        .filter(n5.Vq)
+                        .filter(n8.Vq)
                         .value()),
                 i.length > 1
             );

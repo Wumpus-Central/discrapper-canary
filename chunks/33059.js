@@ -1,5 +1,5 @@
 let s;
-(n.r(t), n.d(t, { default: () => l5 }), n(323874), n(14289), n(35956));
+(n.r(t), n.d(t, { default: () => l2 }), n(323874), n(14289), n(35956));
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -60,7 +60,7 @@ function z(e) {
         n = W();
     return !(0, q.Tn)(t) || n ? null : (0, l.jsx)("div", { className: G.D, "aria-hidden": !0 });
 }
-var K = n(120692),
+var K = n(156150),
     $ = n(62617);
 function Y(e) {
     let { alt: t, ariaLabel: n, ariaHidden: s, role: i, width: a, height: o, className: c, style: u } = e,
@@ -269,8 +269,8 @@ var eX = n(49491),
     e0 = n(646514),
     e1 = n(169099),
     e4 = n(650809),
-    e2 = n(48507),
-    e5 = n(111159),
+    e5 = n(48507),
+    e2 = n(111159),
     e8 = n(717421),
     e6 = n(559106),
     e3 = n(516521);
@@ -1069,8 +1069,8 @@ var tq = n(211824),
     tB = n(161005);
 let tV = [
     { key: "client-theme", icon: e4.PaintPaletteIcon, label: er.default.TTUKuI },
-    { key: "display-name-style", icon: e2.LettersIcon, label: ei.t.NEzEws },
-    { key: "app-icon", icon: e5.ClydeIcon, label: ei.t.RPh2ou },
+    { key: "display-name-style", icon: e5.LettersIcon, label: ei.t.NEzEws },
+    { key: "app-icon", icon: e2.ClydeIcon, label: ei.t.RPh2ou },
 ];
 function tW(e) {
     let { hero: t, contentPosition: n, impressionRef: s } = e,
@@ -1372,7 +1372,7 @@ function t4(e) {
                 };
         }, [p]);
     return s || x
-        ? (0, l.jsx)(t2, { numShelfCards: n.length + 1, hasWideLeadingTile: c || u })
+        ? (0, l.jsx)(t5, { numShelfCards: n.length + 1, hasWideLeadingTile: c || u })
         : (0, l.jsx)("div", {
               ref: E,
               children: (0, l.jsx)(td, {
@@ -1471,7 +1471,7 @@ function t4(e) {
               }),
           });
 }
-function t2(e) {
+function t5(e) {
     let { className: t, numShelfCards: n, hasWideLeadingTile: s } = e,
         r = (0, tz.C)(),
         i = s ? Math.max(n, 3) : Math.max(n, 4);
@@ -1492,12 +1492,12 @@ function t2(e) {
         }),
     });
 }
-var t5 = n(74498);
+var t2 = n(74498);
 function t8(e) {
     let { showHexagonCampaignOverlay: t = !1 } = e;
     return (0, l.jsx)("div", {
-        className: a()(t5.Np, { [t5.Zv]: t }),
-        children: t && (0, l.jsx)("div", { className: t5.hl }),
+        className: a()(t2.Np, { [t2.Zv]: t }),
+        children: t && (0, l.jsx)("div", { className: t2.hl }),
     });
 }
 function t6(e) {
@@ -1514,13 +1514,13 @@ function t6(e) {
                 assetRef: s,
                 imageAsset: {
                     alt: "",
-                    className: t5.LY,
+                    className: t2.LY,
                     asset: { url: i, mimetype: (0, eH.vm)(i), isAnimated: !1 },
                     assetId: i,
                 },
                 videoAsset: {
                     alt: "",
-                    className: t5.LY,
+                    className: t2.LY,
                     asset: { url: n, mimetype: (0, eH.vm)(n), isAnimated: !0 },
                     assetId: n,
                 },
@@ -1531,31 +1531,31 @@ function t3(e) {
     let { heroImage: t, heroVideo: n, showHexagonCampaignOverlay: s } = e;
     return null == n
         ? (0, l.jsxs)("div", {
-              className: t5.Tv,
+              className: t2.Tv,
               children: [
                   (0, l.jsx)(t8, { showHexagonCampaignOverlay: s }),
                   (0, l.jsx)("div", {
-                      className: t5.LO,
+                      className: t2.LO,
                       children: (0, l.jsx)(ep._M, {
                           id: "QuestHomeHeroBackground_heroImage",
-                          children: (e) => (0, l.jsx)("img", { ref: e, className: t5.LY, src: t, alt: "" }),
+                          children: (e) => (0, l.jsx)("img", { ref: e, className: t2.LY, src: t, alt: "" }),
                       }),
                   }),
                   (0, l.jsx)("div", {
-                      className: a()(t5.LO, t5.jx, t5.hw),
-                      children: (0, l.jsx)("img", { className: t5.LY, src: t, alt: "" }),
+                      className: a()(t2.LO, t2.jx, t2.hw),
+                      children: (0, l.jsx)("img", { className: t2.LY, src: t, alt: "" }),
                   }),
                   (0, l.jsx)("div", {
-                      className: a()(t5.LO, t5.jx, t5.Co),
-                      children: (0, l.jsx)("img", { className: t5.LY, src: t, alt: "" }),
+                      className: a()(t2.LO, t2.jx, t2.Co),
+                      children: (0, l.jsx)("img", { className: t2.LY, src: t, alt: "" }),
                   }),
               ],
           })
         : (0, l.jsxs)("div", {
-              className: t5.Tv,
+              className: t2.Tv,
               children: [
                   (0, l.jsx)(t8, { showHexagonCampaignOverlay: s }),
-                  (0, l.jsx)("div", { className: t5.LO, children: (0, l.jsx)(t6, { heroImage: t, heroVideo: n }) }),
+                  (0, l.jsx)("div", { className: t2.LO, children: (0, l.jsx)(t6, { heroImage: t, heroVideo: n }) }),
               ],
           });
 }
@@ -1611,7 +1611,7 @@ function t9(e) {
                                     e.current = s ? null : t;
                                 },
                                 adContentId: t.id,
-                                className: a()({ [t5.lX]: s }),
+                                className: a()({ [t2.lX]: s }),
                                 topContent: (0, l.jsxs)(v.B, {
                                     direction: "horizontal",
                                     justify: "space-between",
@@ -1625,13 +1625,13 @@ function t9(e) {
                                                         ref: e,
                                                         src: t.sponsorImage,
                                                         alt: "",
-                                                        className: t5.wm,
+                                                        className: t2.wm,
                                                     }),
                                             }),
                                         (0, l.jsx)(J.E, {
                                             color: "text-strong",
                                             variant: "body-sm/normal",
-                                            className: t5.yu,
+                                            className: t2.yu,
                                             children: ei.intl.string(ei.t.OJjFi5),
                                         }),
                                     ],
@@ -1642,7 +1642,7 @@ function t9(e) {
                                     j &&
                                     (0, l.jsx)(eO.D, {
                                         tag: "div",
-                                        className: t5.fj,
+                                        className: t2.fj,
                                         "aria-label": t.cta.buttonLabel,
                                         onClick: () => {
                                             (0, eM._Q)(
@@ -2187,8 +2187,8 @@ function n1(e) {
     });
 }
 var n4 = n(443541),
-    n2 = n(947641),
-    n5 = n(194261),
+    n5 = n(947641),
+    n2 = n(194261),
     n8 = n(106799),
     n6 = n(476334);
 function n3(e) {
@@ -2234,7 +2234,7 @@ function n3(e) {
                 x &&
                     (0, l.jsx)("div", {
                         className: n6.EY,
-                        children: (0, l.jsx)(n2.CheckmarkLargeBoldIcon, {
+                        children: (0, l.jsx)(n5.CheckmarkLargeBoldIcon, {
                             className: n6.AM,
                             size: "sm",
                             color: "currentColor",
@@ -2243,7 +2243,7 @@ function n3(e) {
                 E === nw.UA.EXPIRED &&
                     (0, l.jsx)("div", {
                         className: n6.EY,
-                        children: (0, l.jsx)(n5.LockIcon, { size: "sm", className: n6.Sz, color: "currentColor" }),
+                        children: (0, l.jsx)(n2.LockIcon, { size: "sm", className: n6.Sz, color: "currentColor" }),
                     }),
             ],
         }),
@@ -3442,20 +3442,20 @@ var sY = n(575593),
     s0 = n(162232),
     s1 = n(734736),
     s4 = n(303136),
-    s2 = n(842245);
-let s5 = function (e) {
+    s5 = n(842245);
+let s2 = function (e) {
     let { assetUrl: t, className: n, isAnimated: s = !1, questName: r } = e,
         i = t + "?format=webp";
     return (0, l.jsx)("div", {
-        className: a()(s2.k, n),
+        className: a()(s5.k, n),
         children: s
             ? (0, l.jsx)(s4.A, {
                   preload: "auto",
-                  className: s2.L,
+                  className: s5.L,
                   fallbackImage: i,
                   children: (0, l.jsx)("source", { src: t, type: "video/webm" }),
               })
-            : (0, l.jsx)("img", { className: s2.L, src: i, alt: r }),
+            : (0, l.jsx)("img", { className: s5.L, src: i, alt: r }),
     });
 };
 var s8 = n(57718),
@@ -3540,7 +3540,7 @@ let s3 = (0, r.memo)(function (e) {
                       S
                           ? (0, l.jsx)(s1.A, { className: s6.Sl })
                           : p
-                            ? (0, l.jsx)(s5, {
+                            ? (0, l.jsx)(s2, {
                                   className: s6.Sl,
                                   isAnimated: n,
                                   questName: t.config.messages.questName,
@@ -4546,7 +4546,7 @@ function l4(e) {
         ],
     });
 }
-function l2(e) {
+function l5(e) {
     let { onAssetLoad: t } = e,
         { enabled: n } = eC.useConfig({ location: tL.rE.QUEST_HOME_DESKTOP }),
         s = !n,
@@ -4587,7 +4587,7 @@ function l2(e) {
         background: (0, l.jsx)(l4, { onAssetLoad: t, isVirtualCurrencyEnabled: s }),
     });
 }
-let l5 = function (e) {
+let l2 = function (e) {
     let { topLevelRoute: t } = e,
         n = (0, o.zy)(),
         s = (0, o.W6)(),
@@ -4762,14 +4762,14 @@ let l5 = function (e) {
                                       children: $
                                           ? (0, l.jsx)(lH, {
                                                 hasSearchResults: Z,
-                                                children: (0, l.jsx)(l2, { onAssetLoad: D }),
+                                                children: (0, l.jsx)(l5, { onAssetLoad: D }),
                                             })
                                           : (0, l.jsx)(ly, {
                                                 onQuestCtaClick: V,
                                                 hasSearchResults: Z,
                                                 questHomeHero: G,
                                                 isLoadingQuestHomeHero: K,
-                                                children: (0, l.jsx)(l2, { onAssetLoad: D }),
+                                                children: (0, l.jsx)(l5, { onAssetLoad: D }),
                                             }),
                                   },
                                   G?.id,

@@ -863,7 +863,7 @@ function e7(e) {
         },
     });
 }
-function e6(e) {
+function e5(e) {
     var l;
     let { guildId: s, currentTab: t, onTabSelect: r } = e,
         [a, c] = i.useState(0),
@@ -946,15 +946,15 @@ function e6(e) {
         })
     );
 }
-var e4 = s(956972),
-    e5 = s(138298);
-function e9(e) {
+var e6 = s(956972),
+    e4 = s(138298);
+function e1(e) {
     let { guildId: l } = e,
         s = (0, d.bG)([R.A], () => R.A.getGuild(l)),
         { analyticsLocations: t } = (0, m.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([T.Ay], () => T.Ay.getGuildSidebarState(l), [l]),
         a = i.useCallback(() => {
-            e5.A.closeGuildSidebar(l);
+            e4.A.closeGuildSidebar(l);
         }, [l]),
         c = null != r;
     return null != s && c && null != r
@@ -963,7 +963,7 @@ function e9(e) {
               children: (0, n.jsx)("div", {
                   className: eZ.__invalid_sidebarContainer,
                   style: { width: 480 },
-                  children: (0, n.jsx)(e4.default, {
+                  children: (0, n.jsx)(e6.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -972,8 +972,8 @@ function e9(e) {
           })
         : null;
 }
-var e1 = s(176803),
-    e3 = s(120692),
+var e9 = s(176803),
+    e3 = s(156150),
     e8 = s(164636),
     e2 = s(717421),
     le = s(811977),
@@ -1042,7 +1042,7 @@ function lo(e) {
             children: [
                 (0, n.jsx)(v.A.Icon, { icon: c.GroupIcon, "aria-hidden": !0 }),
                 (0, n.jsx)(v.A.Title, { children: a }),
-                i && (0, n.jsx)(e6, { guildId: l.id, currentTab: s, onTabSelect: t }),
+                i && (0, n.jsx)(e5, { guildId: l.id, currentTab: s, onTabSelect: t }),
             ],
         })
     );
@@ -1111,14 +1111,14 @@ function lu(e) {
                                             : (0, n.jsx)(ew, { guildId: c.id, currentTab: t }),
                               }),
                           }),
-                          (0, n.jsx)(e1.A, { guildId: c.id }),
+                          (0, n.jsx)(e9.A, { guildId: c.id }),
                       ],
                   }),
                   y &&
                       (null == c
                           ? null
                           : P
-                            ? (0, n.jsx)(e9, { guildId: c.id })
+                            ? (0, n.jsx)(e1, { guildId: c.id })
                             : t === M.ALL_MEMBERS
                               ? null
                               : (0, n.jsx)(eI, { guildId: c.id })),
