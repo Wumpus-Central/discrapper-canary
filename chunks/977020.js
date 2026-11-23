@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     $Q: "clip_2LrOmL",
     UE: "arrow_2LrOmL",
     SP: "shown_2LrOmL",

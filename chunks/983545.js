@@ -25,31 +25,31 @@ n.d(
                     setItemTypeFilter: n,
                     setThirdPartyOnlyFilter: a,
                     setOfferEligibleFilter: g,
-                    reset: h,
-                    resetWithSearchQuery: E,
+                    reset: E,
+                    resetWithSearchQuery: h,
                     setCurrentTab: f,
                 } = (0, o.vs)(),
-                x = (0, s.W6)(),
-                C = l.useMemo(() => {
+                C = (0, s.W6)(),
+                x = l.useMemo(() => {
                     var t;
                     return (0, u.dF)(e) || (t = e) === u.G2.COLLABS || t === u.G2.OFFER_ELIGIBLE ? u.G2.CATALOG : e;
                 }, [e]),
-                [p, S] = l.useState(C),
+                [p, S] = l.useState(x),
                 [A, I] = l.useState(u.Pf.VISIBLE);
             (l.useEffect(() => {
                 p !== u.G2.GAME_SERVERS && f(p);
             }, [p, f]),
                 l.useEffect(() => {
-                    if ((S(C), e === u.G2.CATALOG)) {
-                        let e = x.location.state?.searchQuery;
-                        null != e ? E(e) : h();
+                    if ((S(x), e === u.G2.CATALOG)) {
+                        let e = C.location.state?.searchQuery;
+                        null != e ? h(e) : E();
                     } else if (e === u.G2.COLLABS) a();
                     else if (e === u.G2.OFFER_ELIGIBLE) g();
                     else if ((0, u.dF)(e)) {
                         let t = m[e];
-                        null != t ? n(t) : h();
+                        null != t ? n(t) : E();
                     }
-                }, [C, e, n, a, g, h, E, x]),
+                }, [x, e, n, a, g, E, h, C]),
                 l.useEffect(() => {
                     if (p === u.G2.CATALOG)
                         return o.vs.subscribe(
@@ -58,18 +58,18 @@ n.d(
                                 (function (e, t) {
                                     let { location: n } = e;
                                     e.replace({ ...n, state: { ...n.state, searchQuery: "" !== t ? t : void 0 } });
-                                })(x, e),
+                                })(C, e),
                         );
-                }, [p, x]));
+                }, [p, C]));
             let { clearError: _ } = (0, c.S)(),
                 b = l.useCallback(
                     async (e, l, s) => {
-                        if ((_(), e === u.G2.CATALOG)) s?.searchQuery != null ? E(s.searchQuery) : h();
+                        if ((_(), e === u.G2.CATALOG)) s?.searchQuery != null ? h(s.searchQuery) : E();
                         else if (e === u.G2.COLLABS) a();
                         else if (e === u.G2.OFFER_ELIGIBLE) g();
                         else if ((0, u.dF)(e) && e !== p) {
                             let t = m[e];
-                            null != t ? n(t) : h();
+                            null != t ? n(t) : E();
                         }
                         if (p !== e) {
                             if (l && !t) {
@@ -78,11 +78,11 @@ n.d(
                             }
                             (S(e === u.G2.HOME || e === u.G2.ORBS || e === u.G2.GAME_SERVERS ? e : u.G2.CATALOG),
                                 l && !t && I(u.Pf.IN),
-                                x.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { searchQuery: s?.searchQuery }),
+                                C.push(d.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { searchQuery: s?.searchQuery }),
                                 I(u.Pf.VISIBLE));
                         }
                     },
-                    [x, n, a, g, h, E, p, _, t],
+                    [C, n, a, g, E, h, p, _, t],
                 );
             return { selectedTab: p, transitionState: A, transitionToTab: b };
         },

@@ -20,7 +20,7 @@ n.d(
                 l.useEffect(() => {
                     if (!t) return;
                     let l = Date.now(),
-                        s = (function (e, t) {
+                        o = (function (e, t) {
                             let n = null;
                             for (let l of e) {
                                 let e = u(l, t);
@@ -31,7 +31,7 @@ n.d(
                             }
                             return n;
                         })(e, l),
-                        o =
+                        s =
                             !(l <= n) &&
                             e.some((e) => {
                                 let t = r(e);
@@ -40,12 +40,12 @@ n.d(
                                 return (u > n && u <= l) || (t > n && t <= l);
                             })
                                 ? 0
-                                : null == s
+                                : null == o
                                   ? null
-                                  : Math.min(s - l, 0x7fffffff);
-                    if (null == o) return;
-                    let d = setTimeout(() => a(Date.now()), o);
-                    return () => clearTimeout(d);
+                                  : Math.min(o - l, 0x7fffffff);
+                    if (null == s) return;
+                    let f = setTimeout(() => a(Date.now()), s);
+                    return () => clearTimeout(f);
                 }, [e, t, n]),
                 l.useMemo(
                     () =>

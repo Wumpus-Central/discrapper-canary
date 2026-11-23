@@ -1,173 +1,173 @@
-var t = l(477900),
-    a = l(582128),
-    r = l(503698),
-    i = l.n(r),
-    s = l(719442),
-    u = l(235599),
-    o = l(855986),
-    d = l(43990),
-    c = l(265872),
-    g = l(15626),
-    v = l(559106),
-    f = l(452027),
-    h = l(281595),
-    p = l(355622),
-    b = l(408018),
-    m = l(186306),
-    A = l(787564),
-    I = l(323350),
-    y = l(135261),
-    C = l(35277),
-    k = l(339200),
-    x = l(702483),
-    N = l(490682),
-    j = l(68059),
-    P = l(375499),
-    E = l(863576),
-    w = l(267102),
-    R = l(413599),
-    S = l(253932),
-    D = l(95701),
-    L = l(652215),
-    M = l(551483),
-    T = l(307731),
-    G = l(569622),
-    O = l(465410),
-    B = l(736541);
-let V = (0, D.createChannelRecord)({ id: "1", type: L.rbe.DM });
-function z(e) {
-    let { editor: n, pickerIntention: l } = e,
-        r = (0, o.bG)([R.A], () => R.A.theme),
-        i = a.useRef(null),
-        s = a.useCallback(
-            (e, l) => {
+var t = r(477900),
+    a = r(582128),
+    l = r(503698),
+    o = r.n(l),
+    i = r(719442),
+    s = r(235599),
+    c = r(855986),
+    u = r(43990),
+    d = r(265872),
+    h = r(15626),
+    f = r(559106),
+    p = r(452027),
+    v = r(281595),
+    b = r(355622),
+    m = r(408018),
+    g = r(186306),
+    x = r(787564),
+    E = r(323350),
+    C = r(135261),
+    j = r(35277),
+    y = r(339200),
+    w = r(702483),
+    I = r(490682),
+    N = r(68059),
+    k = r(375499),
+    S = r(863576),
+    D = r(267102),
+    A = r(413599),
+    M = r(253932),
+    R = r(95701),
+    L = r(652215),
+    T = r(551483),
+    O = r(307731),
+    F = r(569622),
+    K = r(465410),
+    _ = r(736541);
+let B = (0, R.createChannelRecord)({ id: "1", type: L.rbe.DM });
+function $(e) {
+    let { editor: n, pickerIntention: r } = e,
+        l = (0, c.bG)([A.A], () => A.A.theme),
+        o = a.useRef(null),
+        i = a.useCallback(
+            (e, r) => {
                 let { emoji: t, willClose: a } = e;
                 (null != t &&
                     (!(function (e, n) {
-                        let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             t = n.animated ? "a" : "",
                             a = n.originalName ?? n.name ?? "",
-                            r = `:${n.name}:`,
-                            i = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
-                            s = k.VW.areStylesDisabled(e) || null == i ? r : i;
-                        m.o.withSingleEntry(e, () => {
-                            C.b.insertText(e, s + (l ? " " : ""));
+                            l = `:${n.name}:`,
+                            o = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
+                            i = y.VW.areStylesDisabled(e) || null == o ? l : o;
+                        g.o.withSingleEntry(e, () => {
+                            j.b.insertText(e, i + (r ? " " : ""));
                         });
                     })(n, t, a),
-                    k.VW.focus(n)),
-                    a && l());
+                    y.VW.focus(n)),
+                    a && r());
             },
             [n],
         ),
-        u = a.useCallback(
+        s = a.useCallback(
             (e) => {
                 let { closePopout: n } = e;
-                return (0, t.jsx)(d.N, {
-                    theme: r,
+                return (0, t.jsx)(u.N, {
+                    theme: l,
                     children: (e) =>
                         (0, t.jsx)("div", {
                             className: e,
-                            children: (0, t.jsx)(E.default, {
+                            children: (0, t.jsx)(S.default, {
                                 persistSearch: !0,
                                 closePopout: n,
                                 onSelectEmoji: (e) => {
-                                    let { emoji: l, willClose: t } = e;
-                                    return s({ emoji: l, willClose: t }, n);
+                                    let { emoji: r, willClose: t } = e;
+                                    return i({ emoji: r, willClose: t }, n);
                                 },
-                                pickerIntention: l,
+                                pickerIntention: r,
                             }),
                         }),
                 });
             },
-            [s, l, r],
+            [i, r, l],
         );
     return (0, t.jsx)("div", {
-        className: G.S0,
+        className: F.S0,
         onMouseDown: (e) => e.preventDefault(),
-        children: (0, t.jsx)(c.Y, {
-            targetElementRef: i,
-            renderPopout: u,
+        children: (0, t.jsx)(d.Y, {
+            targetElementRef: o,
+            renderPopout: s,
             position: "top",
-            animation: c.Y.Animation.NONE,
+            animation: d.Y.Animation.NONE,
             align: "right",
             children: (e, n) => {
-                let { isShown: l } = n;
-                return (0, t.jsx)(P.A, { ...e, ref: i, active: l, tabIndex: 0, className: G.Z8 });
+                let { isShown: r } = n;
+                return (0, t.jsx)(k.A, { ...e, ref: o, active: r, tabIndex: 0, className: F.Z8 });
             },
         }),
     });
 }
-function F(e) {
+function G(e) {
     let {
             editor: n,
-            placeholder: l,
-            readOnly: r,
-            autoFocus: s,
-            required: o,
-            pickerIntention: d,
-            onChangeValue: c,
-            onKeyDown: f,
-            onFocus: h,
-            onBlur: p,
-            ariaLabelledByProp: b,
+            placeholder: r,
+            readOnly: l,
+            autoFocus: i,
+            required: c,
+            pickerIntention: u,
+            onChangeValue: d,
+            onKeyDown: p,
+            onFocus: v,
+            onBlur: b,
+            ariaLabelledByProp: m,
         } = e,
-        m = a.useContext(g._),
-        I = m?.errorMessageId != null,
-        k = a.useRef(null),
-        j = a.useRef(null),
-        P = a.useCallback(() => n, [n]),
-        E = a.useCallback((e) => [...(0, N.A)(n, e, void 0), ...(0, x.A)(n, e)], [n]);
+        g = a.useContext(h._),
+        E = g?.errorMessageId != null,
+        y = a.useRef(null),
+        N = a.useRef(null),
+        k = a.useCallback(() => n, [n]),
+        S = a.useCallback((e) => [...(0, I.A)(n, e, void 0), ...(0, w.A)(n, e)], [n]);
     return (
         a.useEffect(() => {
-            let e = j.current;
+            let e = N.current;
             if (null != e)
                 return (
                     e.ownerDocument.addEventListener("scroll", n, { capture: !0 }),
                     () => e.ownerDocument.removeEventListener("scroll", n, { capture: !0 })
                 );
             function n(n) {
-                n.target.contains(e) && k.current?.hide();
+                n.target.contains(e) && y.current?.hide();
             }
         }, []),
         (0, t.jsxs)(t.Fragment, {
             children: [
-                (0, t.jsx)(y.A, { ref: k, getSlateEditor: P, containerRef: j }),
-                (0, t.jsx)(v.vN, {
+                (0, t.jsx)(C.A, { ref: y, getSlateEditor: k, containerRef: N }),
+                (0, t.jsx)(f.vN, {
                     children: (0, t.jsxs)("div", {
-                        className: i()(G.I6, B["body-sm/normal"]),
-                        "data-error": I || void 0,
-                        "data-disabled": r || void 0,
+                        className: o()(F.I6, _["body-sm/normal"]),
+                        "data-error": E || void 0,
+                        "data-disabled": l || void 0,
                         children: [
                             (0, t.jsx)("div", {
-                                ref: j,
-                                className: i()(G.XG, O.yL),
+                                ref: N,
+                                className: o()(F.XG, K.yL),
                                 onMouseDown: (e) => {
                                     e.target === e.currentTarget &&
-                                        (e.preventDefault(), C.b.resetSelectionToEditorEnd(n), u.rL.focus(n));
+                                        (e.preventDefault(), j.b.resetSelectionToEditorEnd(n), s.rL.focus(n));
                                 },
-                                onScroll: () => k.current?.hide(),
-                                children: (0, t.jsx)(A.A, {
-                                    id: m?.controlId,
-                                    containerClassName: G.RZ,
-                                    className: G.EN,
+                                onScroll: () => y.current?.hide(),
+                                children: (0, t.jsx)(x.A, {
+                                    id: g?.controlId,
+                                    containerClassName: F.RZ,
+                                    className: F.EN,
                                     editor: n,
-                                    placeholder: l,
-                                    readOnly: r,
-                                    canFocus: !r,
-                                    autoFocus: s,
-                                    decorate: E,
-                                    onChange: c,
-                                    onKeyDown: f,
-                                    onFocus: h,
-                                    onBlur: p,
-                                    "aria-labelledby": b ?? m?.labelId,
-                                    "aria-describedby": m?.describedById,
-                                    "aria-errormessage": m?.errorMessageId,
-                                    "aria-invalid": I || void 0,
-                                    "aria-required": o || void 0,
+                                    placeholder: r,
+                                    readOnly: l,
+                                    canFocus: !l,
+                                    autoFocus: i,
+                                    decorate: S,
+                                    onChange: d,
+                                    onKeyDown: p,
+                                    onFocus: v,
+                                    onBlur: b,
+                                    "aria-labelledby": m ?? g?.labelId,
+                                    "aria-describedby": g?.describedById,
+                                    "aria-errormessage": g?.errorMessageId,
+                                    "aria-invalid": E || void 0,
+                                    "aria-required": c || void 0,
                                 }),
                             }),
-                            !r && (0, t.jsx)(z, { editor: n, pickerIntention: d }),
+                            !l && (0, t.jsx)($, { editor: n, pickerIntention: u }),
                         ],
                     }),
                 }),
@@ -175,43 +175,43 @@ function F(e) {
         })
     );
 }
-l.d(
+r.d(
     n,
     {},
     {
         f: function (e) {
             let {
                     value: n,
-                    placeholder: l,
-                    minLength: r,
-                    maxLength: i,
-                    autoFocus: o = !1,
-                    error: d,
-                    emojiPickerIntention: c = T.EmojiIntention.CHAT,
-                    editorRef: g,
-                    onChange: v,
-                    onKeyDown: m,
-                    onFocus: A,
-                    onBlur: y,
-                    "aria-labelledby": k,
-                    ...x
+                    placeholder: r,
+                    minLength: l,
+                    maxLength: o,
+                    autoFocus: c = !1,
+                    error: u,
+                    emojiPickerIntention: d = O.EmojiIntention.CHAT,
+                    editorRef: h,
+                    onChange: f,
+                    onKeyDown: g,
+                    onFocus: x,
+                    onBlur: C,
+                    "aria-labelledby": y,
+                    ...w
                 } = e,
-                N = (function (e) {
-                    let n = a.useContext(w.Ay),
-                        l = S.SI.useSetting(),
+                I = (function (e) {
+                    let n = a.useContext(D.Ay),
+                        r = M.SI.useSetting(),
                         [t] = a.useState(() => {
-                            let t = (0, s.ie)();
+                            let t = (0, i.ie)();
                             return (
-                                (t.children = (0, b.x7)(e)),
-                                (t.selection = { anchor: M.K, focus: M.K }),
-                                (0, j.a)({
+                                (t.children = (0, m.x7)(e)),
+                                (t.selection = { anchor: T.K, focus: T.K }),
+                                (0, N.a)({
                                     editor: t,
-                                    chatInputType: p.oU.GENERIC_RICH_TEXTAREA,
-                                    channel: V,
+                                    chatInputType: b.oU.GENERIC_RICH_TEXTAREA,
+                                    channel: B,
                                     windowContext: n,
-                                    previewMarkdown: l,
-                                    updateState: (e, n, l) => {
-                                        let { value: t, selection: a } = l;
+                                    previewMarkdown: r,
+                                    updateState: (e, n, r) => {
+                                        let { value: t, selection: a } = r;
                                         (void 0 !== t && (e.children = t),
                                             null != a && (e.selection = a),
                                             e.onChange());
@@ -225,60 +225,60 @@ l.d(
                             t.onChange();
                         }, [t]),
                         a.useEffect(() => {
-                            t.previewMarkdown !== l && ((t.previewMarkdown = l), t.onChange());
-                        }, [t, l]),
+                            t.previewMarkdown !== r && ((t.previewMarkdown = r), t.onChange());
+                        }, [t, r]),
                         t
                     );
                 })(n),
-                [P, E] = a.useState(n);
+                [k, S] = a.useState(n);
             a.useImperativeHandle(
-                g,
+                h,
                 () => ({
                     focus(e) {
-                        (C.b.resetSelectionToEditorEnd(N), u.rL.toDOMNode(N, N).focus(e));
+                        (j.b.resetSelectionToEditorEnd(I), s.rL.toDOMNode(I, I).focus(e));
                     },
                     blur() {
-                        u.rL.toDOMNode(N, N).blur();
+                        s.rL.toDOMNode(I, I).blur();
                     },
                 }),
-                [N],
+                [I],
             );
-            let { fieldProps: R } = (0, f.n)(x),
-                { disabled: D, required: L } = R,
+            let { fieldProps: A } = (0, p.n)(w),
+                { disabled: R, required: L } = A,
                 {
-                    setShouldValidate: G,
-                    errorMessage: O,
-                    hasError: B,
-                } = (0, h.Y)({ validateOn: "change", error: d, value: P, minLength: r, maxLength: i }),
-                z = a.useRef(P);
-            z.current = P;
+                    setShouldValidate: F,
+                    errorMessage: K,
+                    hasError: _,
+                } = (0, v.Y)({ validateOn: "change", error: u, value: k, minLength: l, maxLength: o }),
+                $ = a.useRef(k);
+            $.current = k;
             let H = a.useCallback(
                 (e) => {
-                    let n = (0, I.WO)(e, { mode: "raw" });
-                    n !== z.current && (E(n), G(!0), v?.(n));
+                    let n = (0, E.WO)(e, { mode: "raw" });
+                    n !== $.current && (S(n), F(!0), f?.(n));
                 },
-                [v, G],
+                [f, F],
             );
             return (
                 a.useEffect(() => {
-                    n !== z.current &&
-                        ((N.children = (0, b.x7)(n)), (N.selection = { anchor: M.K, focus: M.K }), N.onChange(), E(n));
-                }, [n, N]),
-                (0, t.jsx)(f.D, {
-                    ...R,
-                    errorMessage: B ? O : void 0,
-                    children: (0, t.jsx)(F, {
-                        editor: N,
-                        placeholder: l,
-                        readOnly: D,
-                        autoFocus: o,
+                    n !== $.current &&
+                        ((I.children = (0, m.x7)(n)), (I.selection = { anchor: T.K, focus: T.K }), I.onChange(), S(n));
+                }, [n, I]),
+                (0, t.jsx)(p.D, {
+                    ...A,
+                    errorMessage: _ ? K : void 0,
+                    children: (0, t.jsx)(G, {
+                        editor: I,
+                        placeholder: r,
+                        readOnly: R,
+                        autoFocus: c,
                         required: L,
-                        pickerIntention: c,
+                        pickerIntention: d,
                         onChangeValue: H,
-                        onKeyDown: m,
-                        onFocus: A,
-                        onBlur: y,
-                        ariaLabelledByProp: k,
+                        onKeyDown: g,
+                        onFocus: x,
+                        onBlur: C,
+                        ariaLabelledByProp: y,
                     }),
                 })
             );

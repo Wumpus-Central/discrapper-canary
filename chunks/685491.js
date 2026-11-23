@@ -10,11 +10,11 @@ var l = n(477900),
     d = n(34188),
     m = n(646514),
     g = n(770178),
-    h = n(742589),
-    E = n(321538),
+    E = n(742589),
+    h = n(321538),
     f = n(100663),
-    x = n(318346),
-    C = n(435775),
+    C = n(318346),
+    x = n(435775),
     p = n(287809),
     S = n(365491),
     A = n(115560),
@@ -110,10 +110,10 @@ let U = (e) => {
 function z(e) {
     let { handleTransition: t, selectedTab: n, isNarrow: a, hasText: r } = e,
         { searchSuggestions: u, placeholderIndex: d, setPlaceholderIndex: m } = (0, k.S)(),
-        { searchQuery: g, onSetSearchQuery: h } = (0, S.vs)(),
-        [E, f] = s.useState(""),
-        x = s.useRef(!1),
-        C = (0, N.uM)(),
+        { searchQuery: g, onSetSearchQuery: E } = (0, S.vs)(),
+        [h, f] = s.useState(""),
+        C = s.useRef(!1),
+        x = (0, N.uM)(),
         { enabled: p, searchBarWidthPx: I } = y.useConfig({ location: "collectibles_search_bar" }),
         O = s.useRef(null),
         [P, F] = s.useState(!1),
@@ -122,54 +122,54 @@ function z(e) {
         [K, Y] = s.useState(!1),
         [W, $] = s.useState(-1),
         [q, Z] = s.useState(!1),
-        X = (0, R.Ay)(),
-        Q = p && z && !K && "" === E,
+        Q = (0, R.Ay)(),
+        X = p && z && !K && "" === h,
         J = (0, o.bG)([L.Ay], () => L.Ay.useReducedMotion),
         ee = p && !J,
         et = G.intl.string(G.t.arz34K),
         en = u[d],
-        el = "" === E ? (ee ? en : et) : null;
+        el = "" === h ? (ee ? en : et) : null;
     (s.useEffect(() => {
         f(g);
     }, [g]),
         s.useEffect(() => {
-            x.current = !1;
+            C.current = !1;
         }, [n]),
         s.useEffect(() => {
-            if (!ee || "" !== E || z) return;
+            if (!ee || "" !== h || z) return;
             let e = setInterval(() => {
                 (m((e) => (e + 1) % u.length), Z(!1));
             }, 7e3);
             return () => clearInterval(e);
-        }, [ee, E, z, u, m]),
+        }, [ee, h, z, u, m]),
         s.useEffect(() => {
             F(a && r);
         }, [a, r]));
     let es = s.useCallback(
             (e, t) => {
                 j.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: C?.sessionId,
-                    page_section: C?.pageSection,
-                    page_category: C?.pageCategory,
-                    page_index: C?.pageIndex,
-                    page_size: C?.pageSize,
+                    collectibles_shop_session_id: x?.sessionId,
+                    page_section: x?.pageSection,
+                    page_category: x?.pageCategory,
+                    page_index: x?.pageIndex,
+                    page_size: x?.pageSize,
                     cta_name: e,
                     page_type: n,
                     tile_type: t,
                 });
             },
-            [n, C],
+            [n, x],
         ),
         ea = s.useCallback(
             (e, l, s) => {
                 let a = e.trim(),
                     i = n === T.G2.CATALOG,
-                    r = !i && x.current;
-                (r || X(a, l, (0, A.A)(), i, s), f(a), i)
-                    ? h(a)
-                    : r || ((x.current = !0), t(T.G2.CATALOG, !1, { searchQuery: a }));
+                    r = !i && C.current;
+                (r || Q(a, l, (0, A.A)(), i, s), f(a), i)
+                    ? E(a)
+                    : r || ((C.current = !0), t(T.G2.CATALOG, !1, { searchQuery: a }));
             },
-            [n, h, t, X],
+            [n, E, t, Q],
         ),
         ei = s.useCallback(
             (e) => {
@@ -180,7 +180,7 @@ function z(e) {
         ),
         er = s.useCallback(
             (e) => {
-                if (Q && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
+                if (X && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
                     e.preventDefault();
                     let t = "ArrowDown" === e.key ? 1 : -1;
                     $((e) => {
@@ -189,16 +189,16 @@ function z(e) {
                     });
                     return;
                 }
-                if (Q && "Escape" === e.key) {
+                if (X && "Escape" === e.key) {
                     (e.preventDefault(), Y(!0), $(-1));
                     return;
                 }
                 if ("Enter" === e.key) {
-                    if (Q && W >= 0) return void ei(W);
-                    ea(E, T.Vf.ENTER);
+                    if (X && W >= 0) return void ei(W);
+                    ea(h, T.Vf.ENTER);
                 }
             },
-            [E, ea, Q, W, ei, u],
+            [h, ea, X, W, ei, u],
         ),
         eo = s.useCallback((e) => {
             (f(e), Y(!1), $(-1));
@@ -209,10 +209,10 @@ function z(e) {
                 Y(!1),
                 $(-1),
                 j.default.track(M.HAw.COLLECTIBLES_SHOP_SEARCH_STARTED, {
-                    collectibles_shop_session_id: C?.sessionId,
+                    collectibles_shop_session_id: x?.sessionId,
                     placeholder_text: el,
                 }));
-        }, [C?.sessionId, el]),
+        }, [x?.sessionId, el]),
         eu = s.useCallback(() => {
             (es(T.uY.SEARCH_ICON, T.Xi.SEARCH), F(!0), setTimeout(() => O.current?.focus()));
         }, [es]),
@@ -220,13 +220,13 @@ function z(e) {
             es(T.uY.SEARCH_BAR, T.Xi.SEARCH);
         }, [es]),
         em = s.useCallback(() => {
-            (f(""), h(""), es(T.uY.SEARCH_BAR_CLEAR, T.Xi.SEARCH), a && F(!1));
-        }, [h, es, a]),
+            (f(""), E(""), es(T.uY.SEARCH_BAR_CLEAR, T.Xi.SEARCH), a && F(!1));
+        }, [E, es, a]),
         eg = s.useCallback(() => {
-            (V(!1), a && "" === E && F(!1));
-        }, [a, E]),
-        eh = a && !P,
-        eE = (0, l.jsx)(c.D, {
+            (V(!1), a && "" === h && F(!1));
+        }, [a, h]),
+        eE = a && !P,
+        eh = (0, l.jsx)(c.D, {
             className: D.qc,
             onClick: eu,
             "aria-label": et,
@@ -239,7 +239,7 @@ function z(e) {
                     size: "sm",
                     ref: O,
                     onKeyDown: er,
-                    query: E,
+                    query: h,
                     onChange: eo,
                     onClear: em,
                     onFocus: ec,
@@ -249,10 +249,10 @@ function z(e) {
                         ...(p
                             ? {
                                   role: "combobox",
-                                  "aria-expanded": Q,
-                                  "aria-controls": Q ? B : void 0,
+                                  "aria-expanded": X,
+                                  "aria-controls": X ? B : void 0,
                                   "aria-autocomplete": "list",
-                                  "aria-activedescendant": Q && W >= 0 ? `${B}-${W}` : void 0,
+                                  "aria-activedescendant": X && W >= 0 ? `${B}-${W}` : void 0,
                               }
                             : void 0),
                         onClick: ed,
@@ -260,28 +260,28 @@ function z(e) {
                     placeholder: ee ? "" : et,
                     "aria-label": et,
                 }),
-                ee && "" === E ? (0, l.jsx)(U, { option: en, optionKey: d, isFocused: z, isResumed: q }) : null,
+                ee && "" === h ? (0, l.jsx)(U, { option: en, optionKey: d, isFocused: z, isResumed: q }) : null,
             ],
         }),
-        ex = { "--custom-search-bar-width": `${I}px` };
-    return eh
-        ? (0, l.jsx)("div", { style: ex, children: eE })
+        eC = { "--custom-search-bar-width": `${I}px` };
+    return eE
+        ? (0, l.jsx)("div", { style: eC, children: eh })
         : (0, l.jsx)(v.Y, {
               targetElementRef: H,
               renderPopout: () =>
                   (0, l.jsx)("div", {
-                      style: ex,
+                      style: eC,
                       children: (0, l.jsx)(w, { suggestions: u, selectedIndex: W, onSelect: ei, onHover: $ }),
                   }),
               position: "bottom",
               align: "right",
               animation: v.Y.Animation.NONE,
-              shouldShow: Q,
+              shouldShow: X,
               autoInvert: !1,
               children: () =>
                   (0, l.jsx)("div", {
                       className: i()(D.ON, { [D.Nz]: P }),
-                      style: ex,
+                      style: eC,
                       children: (0, l.jsx)("div", { ref: H, children: ef }),
                   }),
           });
@@ -294,9 +294,9 @@ var K = n(278416),
     $ = n(288106),
     q = n(223311),
     Z = n(65238),
-    X = n(758461),
-    Q = n(812729),
-    J = n.n(Q),
+    Q = n(758461),
+    X = n(812729),
+    J = n.n(X),
     ee = n(627363),
     et = n(587895),
     en = n(733391),
@@ -334,8 +334,8 @@ function em(e) {
     );
     let O = t === T.G2.ORBS ? M.liQ.SHOP_ORBS_TAB : M.liQ.COLLECTIBLES_SHOP,
         y = s.useCallback(() => {
-            ((0, x.Y)({ pageType: O, sectionType: M.JJy.ORBS_BALANCE_MENU, ctaObject: M.ZSU.CTA_TO_QUEST_HOME }),
-                (0, E.mA)({ fromContent: r.u.ORBS_BALANCE_MENU }));
+            ((0, C.Y)({ pageType: O, sectionType: M.JJy.ORBS_BALANCE_MENU, ctaObject: M.ZSU.CTA_TO_QUEST_HOME }),
+                (0, h.mA)({ fromContent: r.u.ORBS_BALANCE_MENU }));
         }, [O]),
         R = s.useCallback(() => {
             A?.id != null && (0, f.openUserProfileModal)({ userId: A.id, tabSection: eu.RP.WISHLIST });
@@ -352,11 +352,11 @@ function em(e) {
                 d,
                 m,
                 g,
-                h,
                 E,
+                h,
                 f,
-                x,
                 C,
+                x,
                 p,
                 S,
                 A,
@@ -434,7 +434,7 @@ function em(e) {
                         ),
                         hasGameShops: n.length > 0,
                     }),
-                O = null != (0, X.HH)(),
+                O = null != (0, Q.HH)(),
                 y =
                     ((i = (0, q.A)(M.FYj)),
                     (r = (0, Z.XF)(i)),
@@ -447,14 +447,14 @@ function em(e) {
                             : { title: u, icon: c?.icon, collectionId: d }) ??
                         ((m = (0, Z.NN)(i)),
                         (g = m?.navigation?.tab),
-                        (h = g?.title),
-                        (E = m?.collectionId),
-                        null == h || null == E ? null : { title: h, icon: g?.icon, collectionId: E }) ??
+                        (E = g?.title),
+                        (h = m?.collectionId),
+                        null == E || null == h ? null : { title: E, icon: g?.icon, collectionId: h }) ??
                         ((f = (0, Z.d3)(i)),
-                        (x = f?.navigation?.tab),
-                        (C = x?.title),
+                        (C = f?.navigation?.tab),
+                        (x = C?.title),
                         (p = f?.collectionId),
-                        null == C || null == p ? null : { title: C, icon: x?.icon, collectionId: p })),
+                        null == x || null == p ? null : { title: x, icon: C?.icon, collectionId: p })),
                     (A = S?.title),
                     (I = S?.icon),
                     (_ = S?.collectionId),
@@ -557,7 +557,7 @@ function em(e) {
             : t;
     return (0, l.jsx)("div", {
         ref: b,
-        children: (0, l.jsxs)(h.A, {
+        children: (0, l.jsxs)(E.A, {
             disableDoubleClick: !0,
             disableFocusRingScope: !0,
             keepToastsBelow: !0,
@@ -571,9 +571,9 @@ function em(e) {
                         "aria-label": G.intl.string(G.t["7lZ31J"]),
                         children: (0, l.jsx)(u.HeartIcon, { size: "xs", color: "currentColor" }),
                     }),
-                    (0, l.jsx)(C.SS, {
+                    (0, l.jsx)(x.SS, {
                         analyticsPage: O,
-                        cardAlignment: C.SS.CardAlignment.END,
+                        cardAlignment: x.SS.CardAlignment.END,
                         ctaText: G.intl.string(G.t.VC4Mq0),
                         ctaOnClick: y,
                     }),

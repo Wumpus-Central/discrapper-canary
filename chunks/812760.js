@@ -10,30 +10,30 @@ var l = n(477900),
     d = n(866665),
     m = n(881636),
     g = n(646514),
-    h = n(775602),
-    E = n(607470),
+    E = n(775602),
+    h = n(607470),
     f = n(531685),
-    x = n(993408),
-    C = n(805251),
+    C = n(993408),
+    x = n(805251),
     p = n(792996),
     S = n(543136);
 let A = function (e) {
     let { category: t, daysRemainingText: n = p.t.Io7ozn, className: s } = e;
-    if (!(0, x.HF)(t.unpublishedAt)) return null;
-    let a = (0, x.WU)(t.unpublishedAt),
+    if (!(0, C.HF)(t.unpublishedAt)) return null;
+    let a = (0, C.WU)(t.unpublishedAt),
         r = a > 1 ? p.intl.formatToPlainString(n, { days: a }) : p.intl.string(p.t.Bc13HF);
     return (0, l.jsx)("div", {
         className: i()(S.Z, s),
-        children: (0, l.jsx)(C.E, { type: { text: r }, variant: "inverted" }),
+        children: (0, l.jsx)(x.E, { type: { text: r }, variant: "inverted" }),
     });
 };
 var I = n(212407),
     _ = n(761977);
 function b(e) {
     let { category: t, onSelect: n } = e,
-        a = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion),
-        x = (0, o.bG)([f.A], () => f.A.isFocused()),
-        { catalogBannerStatic: C, catalogBannerAnimated: S, catalogBannerRive: b } = (0, I.MV)(t),
+        a = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        C = (0, o.bG)([f.A], () => f.A.isFocused()),
+        { catalogBannerStatic: x, catalogBannerAnimated: S, catalogBannerRive: b } = (0, I.MV)(t),
         v = s.useRef(null),
         L = null != b,
         j =
@@ -67,11 +67,11 @@ function b(e) {
                       })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)("img", { className: _.ze, src: C, alt: "" }),
+                              (0, l.jsx)("img", { className: _.ze, src: x, alt: "" }),
                               null != S &&
                                   !a &&
-                                  x &&
-                                  (0, l.jsx)(E.A, { src: S, className: _.tr, autoPlay: !0, loop: !0 }),
+                                  C &&
+                                  (0, l.jsx)(h.A, { src: S, className: _.tr, autoPlay: !0, loop: !0 }),
                           ],
                       }),
             }),
@@ -91,4 +91,4 @@ function b(e) {
         ],
     });
 }
-(0, x.$b)(90);
+(0, C.$b)(90);

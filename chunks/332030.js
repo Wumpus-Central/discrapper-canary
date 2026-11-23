@@ -147,15 +147,15 @@ let w = function (e) {
         Y = f ? "nitro-pink" : "nitro-green",
         z = N ? (0, y.DP)() : f ? L.intl.string(L.t.lG6a5x) : L.intl.string(L.t["t9uG/o"]),
         K = j.kL,
-        X = a()(j.N1, R.headerGradient);
+        Z = a()(j.N1, R.headerGradient);
     return U
-        ? (0, n.jsx)("div", { className: K, children: (0, n.jsx)(c.h, { color: Y, className: X }) })
+        ? (0, n.jsx)("div", { className: K, children: (0, n.jsx)(c.h, { color: Y, className: Z }) })
         : (0, n.jsxs)("div", {
               className: K,
               children: [
                   (0, n.jsxs)(c.h, {
                       color: Y,
-                      className: a()(X, { [j.s1]: !V }),
+                      className: a()(Z, { [j.s1]: !V }),
                       children: [
                           (0, n.jsx)(b, { isTier2: f }),
                           !t &&

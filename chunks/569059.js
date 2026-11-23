@@ -1,23 +1,23 @@
 var t = l(582128),
-    a = l(688810),
-    r = l(468450),
-    i = l(339984);
+    i = l(688810),
+    a = l(468450),
+    r = l(339984);
 let s = [{ name: "gif, webp", extensions: ["gif", "webp"] }];
 function u(e) {
-    let { uploadType: n, guildId: l, isPremiumTryItOut: i = !1, returnRef: s, filters: u } = e,
-        { newestAnalyticsLocation: o } = (0, a.Ay)();
+    let { uploadType: n, guildId: l, isPremiumTryItOut: r = !1, returnRef: s, filters: u } = e,
+        { newestAnalyticsLocation: d } = (0, i.Ay)();
     return t.useCallback(
         () =>
-            (0, r.XD)({
+            (0, a.XD)({
                 uploadType: n,
-                analyticsSource: o,
+                analyticsSource: d,
                 filters: u,
                 guildId: l ?? void 0,
-                isTryItOut: i,
+                isTryItOut: r,
                 stackingBehavior: "stack",
                 returnRef: s,
             }),
-        [n, l, i, o, s, u],
+        [n, l, r, d, s, u],
     );
 }
 l.d(
@@ -25,11 +25,11 @@ l.d(
     {},
     {
         P: function (e) {
-            return u({ ...e, uploadType: i.HL.BANNER });
+            return u({ ...e, uploadType: r.HL.BANNER });
         },
         _: function (e) {
             let { isPremiumTryItOut: n, ...l } = e;
-            return u({ ...l, uploadType: i.HL.AVATAR, isPremiumTryItOut: n, filters: n ? s : void 0 });
+            return u({ ...l, uploadType: r.HL.AVATAR, isPremiumTryItOut: n, filters: n ? s : void 0 });
         },
     },
 );

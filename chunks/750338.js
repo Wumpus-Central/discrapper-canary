@@ -3,8 +3,8 @@ var a = n(477900),
     i = n(503698),
     r = n.n(i),
     l = n(435558),
-    c = n(831259),
-    d = n(805251),
+    d = n(831259),
+    c = n(805251),
     o = n(821609),
     u = n(745396),
     m = n(834730),
@@ -40,13 +40,13 @@ n.d(
                     isReducedMotion: y,
                     onClick: S,
                     badgeText: L,
-                    badgeVariant: B = "gradient",
-                    size: k,
+                    badgeVariant: k = "gradient",
+                    size: B,
                     backgroundVideoUrl: G,
                     previewImageStyle: V = R.Tb.CONTAINED,
-                    actions: Y,
-                    mediaRef: w,
-                    boxArtContainerClassName: D,
+                    actions: w,
+                    mediaRef: D,
+                    boxArtContainerClassName: Y,
                     containerClassName: H,
                 } = e,
                 X = (0, x.TM)(),
@@ -54,9 +54,9 @@ n.d(
                 F = s.useRef(0),
                 { sectionRef: z, handleVisibilityChange: K } = (0, A.A)({ boxType: t }),
                 q = (0, h.A)("(min-width: 1140px)"),
-                $ = V === R.Tb.OVERLAY && (k !== R.A0.LARGE || !q),
-                J = k === R.A0.LARGE && q && V === R.Tb.OVERLAY,
-                Z = null != G && q && k === R.A0.LARGE,
+                $ = V === R.Tb.OVERLAY && (B !== R.A0.LARGE || !q),
+                J = B === R.A0.LARGE && q && V === R.Tb.OVERLAY,
+                Z = null != G && q && B === R.A0.LARGE,
                 Q = s.useMemo(
                     () =>
                         (0, l.debounce)(() => {
@@ -65,7 +65,7 @@ n.d(
                     [t],
                 ),
                 ee = (0, a.jsx)("div", {
-                    className: r()(O.captionWrapper, O[`${k}`]),
+                    className: r()(O.captionWrapper, O[`${B}`]),
                     children:
                         "string" == typeof i
                             ? (0, a.jsx)(m.E, { variant: "body-sm/normal", color: "text-muted", children: i })
@@ -73,18 +73,18 @@ n.d(
                 });
             function et() {
                 (null == W.current || y || ((W.current.currentTime = F.current), W.current.play()),
-                    y || w?.current?.play());
+                    y || D?.current?.play());
             }
             function en() {
                 (null == W.current || y || ((F.current = W.current.currentTime), W.current.pause()),
-                    y || w?.current?.pause());
+                    y || D?.current?.pause());
             }
-            let ea = k === R.A0.LARGE ? "heading-xxl/semibold" : "heading-xl/semibold";
+            let ea = B === R.A0.LARGE ? "heading-xxl/semibold" : "heading-xl/semibold";
             function es() {
                 let e = null != I && null != S,
-                    t = null != Y && Y.length > 0;
+                    t = null != w && w.length > 0;
                 if (!e && !t) return null;
-                let n = e ? [{ variant: "secondary", onClick: S, text: I }] : Y;
+                let n = e ? [{ variant: "secondary", onClick: S, text: I }] : w;
                 return (0, a.jsx)("div", {
                     className: O.bentoBoxButton,
                     children: (0, a.jsx)(p.e, {
@@ -106,13 +106,13 @@ n.d(
             }
             function ei() {
                 return (0, a.jsxs)("div", {
-                    className: r()(O.textBox, O[`${k}`], J && O.overlayTextBox),
+                    className: r()(O.textBox, O[`${B}`], J && O.overlayTextBox),
                     children: [
                         (0, a.jsxs)("div", {
                             children: [
                                 null == L
                                     ? null
-                                    : "gradient" === B
+                                    : "gradient" === k
                                       ? (0, a.jsx)("div", {
                                             className: O.badgeContainer,
                                             children: (0, a.jsx)("div", {
@@ -126,9 +126,9 @@ n.d(
                                         })
                                       : (0, a.jsx)("div", {
                                             className: O.badgeContainer,
-                                            children: (0, a.jsx)(d.E, { type: { text: L }, variant: B }),
+                                            children: (0, a.jsx)(c.E, { type: { text: L }, variant: k }),
                                         }),
-                                null != i && k === R.A0.LARGE && ee,
+                                null != i && B === R.A0.LARGE && ee,
                                 (0, a.jsx)(b.D, {
                                     variant: ea,
                                     color: "text-strong",
@@ -149,7 +149,7 @@ n.d(
             }
             function er() {
                 return (0, a.jsxs)("div", {
-                    className: r()(O.boxArtContainer, O[`${k}`], D),
+                    className: r()(O.boxArtContainer, O[`${B}`], Y),
                     children: [
                         null == M && (0, u.O)(C) && "string" != typeof C
                             ? C
@@ -168,7 +168,7 @@ n.d(
                                   M,
                               ),
                         null != i &&
-                            k !== R.A0.LARGE &&
+                            B !== R.A0.LARGE &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)("div", { className: O.captionGradient, "aria-hidden": !0 }), ee],
                             }),
@@ -176,7 +176,7 @@ n.d(
                 });
             }
             let el = j % 2 != 0;
-            return (0, a.jsx)(c.L, {
+            return (0, a.jsx)(d.L, {
                 innerRef: z,
                 onChange: K,
                 threshold: 0.5,
@@ -186,7 +186,7 @@ n.d(
                     className: r()(
                         O.backgroundColor,
                         O.boxContainer,
-                        O[`${k}`],
+                        O[`${B}`],
                         O.gradientBackground,
                         H,
                         $ && O.overlayImageMode,

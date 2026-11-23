@@ -18,17 +18,17 @@ n.d(
             l.useEffect(() => {
                 "" !== d && o.p.requestCollections([d], { includeUnpublished: t, includePricing: n });
             }, [d, t, n, m]);
-            let { collection: g, fetchState: h } = (0, s.cf)(
+            let { collection: g, fetchState: E } = (0, s.cf)(
                     [i.A],
                     () => ({ collection: i.A.getCollection(d), fetchState: i.A.getFetchState(d) }),
                     [d],
                 ),
-                E = (0, u.Hd)(d, h),
+                h = (0, u.Hd)(d, E),
                 f = l.useMemo(() => (null != g ? c.A.fromStorefrontCollectionRecord(g) : null), [g]),
-                x = l.useMemo(() => ("error" === h || E ? "error" : null != f ? "ready" : "loading"), [h, E, f]);
+                C = l.useMemo(() => ("error" === E || h ? "error" : null != f ? "ready" : "loading"), [E, h, f]);
             return {
                 category: f,
-                state: x,
+                state: C,
                 retry: l.useCallback(() => {
                     "" !== d &&
                         (0, a._v)(

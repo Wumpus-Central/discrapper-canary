@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(562153),
     a = n(183555),
     o = n(100663),
-    u = n(527212),
-    d = n(487409),
+    d = n(527212),
+    u = n(487409),
     c = n(792996);
 n.d(
     t,
@@ -15,8 +15,8 @@ n.d(
             let { user: t, guildId: n, channelId: g, displayProfile: m, onClose: f } = e,
                 { analyticsLocations: h, sourceAnalyticsLocations: p } = (0, r.Ay)(),
                 { context: x, trackUserProfileAction: A } = (0, a.NJ)(),
-                I = (0, u.Ay)(t.id, n);
-            return (0, d.A)(t.id) || I?.guildId == null
+                I = (0, d.Ay)(t.id, n);
+            return (0, u.A)(t.id) || I?.guildId == null
                 ? null
                 : m?.guildId != null
                   ? (0, i.jsx)(l.Dr, {

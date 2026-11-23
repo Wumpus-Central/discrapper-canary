@@ -1,44 +1,44 @@
-var n = i(582128),
-    s = i(159001),
-    u = i(591179),
-    l = i(780964),
-    r = i(287809),
-    a = i(729934);
-i(652215);
-var d = i(355097);
-(i(836602),
-    i.d(
-        t,
+var n = t(582128),
+    u = t(159001),
+    l = t(591179),
+    s = t(780964),
+    r = t(287809),
+    a = t(729934);
+t(652215);
+var d = t(355097);
+(t(836602),
+    t.d(
+        i,
         {},
         {
             A: function () {
                 let {
                         guild: e,
-                        scrollPosition: t,
-                        initialTab: c,
-                        analyticsLocations: o,
+                        scrollPosition: i,
+                        initialTab: o,
+                        analyticsLocations: c,
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    p = (0, u.X)("useOpenProfileSettings");
+                    f = (0, l.X)("useOpenProfileSettings");
                 return (0, n.useCallback)(() => {
-                    if (p) {
-                        let t = r.default.getCurrentUser();
-                        if (null != t) {
-                            let { openUserProfileModal: n } = i(100663);
-                            n({ userId: t.id, guildId: e?.id, sourceAnalyticsLocations: o });
+                    if (f) {
+                        let i = r.default.getCurrentUser();
+                        if (null != i) {
+                            let { openUserProfileModal: n } = t(100663);
+                            n({ userId: i.id, guildId: e?.id, sourceAnalyticsLocations: c });
                             return;
                         }
                     }
-                    (null != e && (0, s.V2)(e.id),
+                    (null != e && (0, u.V2)(e.id),
                         a.A.setState({
                             subsection: null != e ? d.Eq.GUILD : d.Eq.USER_PROFILE,
-                            scrollPosition: t,
-                            editingTab: c ?? "main",
+                            scrollPosition: i,
+                            editingTab: o ?? "main",
                         }));
                     {
-                        let { openUserSettings: e } = i(766075);
-                        e(l.X.PROFILE_PANEL, { analyticsLocations: o });
+                        let { openUserSettings: e } = t(766075);
+                        e(s.X.PROFILE_PANEL, { analyticsLocations: c });
                     }
-                }, [e, t, c, o, p]);
+                }, [e, i, o, c, f]);
             },
         },
     ));
