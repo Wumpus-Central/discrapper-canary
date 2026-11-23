@@ -52,22 +52,27 @@ function P(e) {
     };
 }
 function M(e) {
+    if ((R.delete(e.id), "channel" !== e.kind || !C("ChannelTabsStore.recordClosedTab"))) return;
+    let { channelId: t, guildId: n } = e;
+    O = [{ channelId: t, guildId: n, closedAt: Date.now() }, ...O.filter((e) => e.channelId !== t)].slice(0, 10);
+}
+function U(e) {
     null != m && (e.has(m.tabId) || e.has(m.openerId)) && (m = null);
 }
-function U() {
+function w() {
     (null != p && m?.tabId === p && R.has(p)) || (m = null);
 }
-function w() {
+function G() {
     ((I = []), (p = null), (m = null));
 }
-function G(e) {
+function x(e) {
     I = I.map((t) => {
         if (t.id !== p) return t;
         let n = [...t.entries.slice(0, t.index + 1), e].slice(-50);
-        return k(t, e, n, n.length - 1);
+        return F(t, e, n, n.length - 1);
     });
 }
-function x(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p,
         n = null != t ? (I.find((e) => e.id === t) ?? I.find((e) => e.id === p)) : void 0,
         i = null != n ? n.entries.slice(Math.max(0, n.index - 10), n.index + 1).map((e) => ({ ...e })) : [],
@@ -75,66 +80,70 @@ function x(e) {
         a = null != r && (0, _.Pp)(r, e) ? i : [...i, e].slice(-11);
     return { id: String(g++), ...e, pinned: !1, entries: a, index: a.length - 1 };
 }
-function k(e, t, n, i) {
+function F(e, t, n, i) {
     return { id: e.id, pinned: !0 === e.pinned, ...t, entries: n, index: i };
 }
-function F(e) {
-    I = W(I.map((t) => (t.id === e ? { ...t, pinned: !1 } : t)));
-}
 function B(e) {
-    let t = x(e);
+    I = K(I.map((t) => (t.id === e ? { ...t, pinned: !1 } : t)));
+}
+function V(e) {
+    let t = k(e);
     ((I = [t]), (p = t.id));
 }
-function V() {
+function H() {
     let e = (0, _.rv)(window.location);
     if (null != e) return e;
     let t = d.Ay.getCurrentlySelectedChannelId();
     return null == t || (0, f.jq)(t) ? null : { kind: "channel", channelId: t, guildId: c.A.getGuildId() ?? null };
 }
-function H() {
-    let e = V();
-    return null != e && (B(e), !0);
+function j() {
+    let e = H();
+    return null != e && (V(e), !0);
 }
-function j(e) {
+function W(e, t) {
+    let n = I.findIndex((t) => t.id === e);
+    return -1 === n ? [] : I.filter((e, i) => !e.pinned && i !== n && ("all" === t || i > n));
+}
+function Y(e) {
     return "route" === e.kind
         ? { kind: "route", routePath: e.routePath, routeLabel: e.routeLabel }
         : { kind: "channel", channelId: e.channelId, guildId: e.guildId };
 }
-function W(e) {
+function K(e) {
     return [...e.filter((e) => e.pinned), ...e.filter((e) => !e.pinned)];
 }
-function Y(e, t) {
+function $(e, t) {
     if (((T = null), !C(t) || null == e)) return !1;
-    if (0 === I.length) return B(e);
+    if (0 === I.length) return V(e);
     let n = I.find((e) => e.id === p);
     if (null == n || (0, _.Pp)(n, e)) return !1;
-    if ((U(), n.pinned)) {
+    if ((w(), n.pinned)) {
         if (I.length >= h() && null != p) {
-            ((T = p), F(p), G(e));
+            ((T = p), B(p), x(e));
             return;
         }
-        let t = x(e);
+        let t = k(e);
         ((I = [...I, t]), null != p && (m = { tabId: t.id, openerId: p, survivesSwitchToOpener: !0 }), (p = t.id));
         return;
     }
-    G(e);
+    x(e);
 }
-function K(e) {
+function X(e) {
     let t = I.find((e) => e.id === p);
     if (null == t) return !1;
     let n = t.index + e,
         i = t.entries[n];
     if (null == i) return !1;
-    (U(), (I = I.map((e) => (e.id === p ? k(e, i, e.entries, n) : e))));
+    (w(), (I = I.map((e) => (e.id === p ? F(e, i, e.entries, n) : e))));
 }
-function $(e) {
+function z(e) {
     let { channel: t } = e;
     if (!C("ChannelTabsStore.handleChannelDelete")) return !1;
     let n = (e) => "channel" === e.kind && e.channelId === t.id && e.id !== p;
     if (!I.some(n)) return !1;
-    (M(new Set(I.filter(n).map((e) => e.id))), (I = I.filter((e) => !n(e))));
+    (U(new Set(I.filter(n).map((e) => e.id))), (I = I.filter((e) => !n(e))));
 }
-class X extends r.Ay.PersistedStore {
+class q extends r.Ay.PersistedStore {
     static displayName = "ChannelTabsStore";
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
@@ -142,14 +151,14 @@ class X extends r.Ay.PersistedStore {
         (this.waitFor(l.A, o.A, d.Ay, c.A, u.default),
             this.syncWith([l.A], () => N),
             (N = e?.enabled ?? !1),
-            (I = W(
+            (I = K(
                 (e?.tabs ?? []).map((e) =>
                     (function (e) {
                         if (!Array.isArray(e.entries) || e.entries.length <= 50) return e;
                         let t = Math.min(Math.max(e.index, 0), e.entries.length - 1),
                             n = Math.min(t, e.entries.length - 50);
                         return { ...e, entries: e.entries.slice(n, n + 50), index: t - n };
-                    })(k(e, j(e), e.entries, e.index)),
+                    })(F(e, Y(e), e.entries, e.index)),
                 ),
             )),
             (p = e?.activeTabId ?? null),
@@ -203,6 +212,15 @@ class X extends r.Ay.PersistedStore {
     getTabUnpinnedAtLimit() {
         return I.find((e) => e.id === T) ?? null;
     }
+    getOtherTabsToClose(e, t) {
+        return W(e, t);
+    }
+    getCloseOtherTabsCount(e) {
+        return W(e, "all").length;
+    }
+    getCloseTabsToRightCount(e) {
+        return W(e, "right").length;
+    }
     getRecentlyClosed() {
         return O;
     }
@@ -225,10 +243,10 @@ class X extends r.Ay.PersistedStore {
         return null != e && e.index < e.entries.length - 1;
     }
 }
-let z = new X(a.h, {
+let Q = new q(a.h, {
     CHANNEL_TABS_OPEN: function (e) {
         if (I.length >= h()) return !1;
-        let t = x(j(e.location), void 0 === e.sourceTabId ? p : e.sourceTabId);
+        let t = k(Y(e.location), void 0 === e.sourceTabId ? p : e.sourceTabId);
         ((I = [...I, t]),
             null == p
                 ? (p = t.id)
@@ -249,15 +267,15 @@ let z = new X(a.h, {
             (i = m?.tabId === n ? m.openerId : m?.openerId === n ? m.tabId : null),
             (r = [...I.slice(t + 1), ...I.slice(0, t).reverse()]).find((e) => e.id === i) ?? r[0]).id),
             (I = I.filter((e) => e.id !== a)),
-            M(new Set([a])),
-            (function (e) {
-                if ((R.delete(e.id), "channel" !== e.kind || !C("ChannelTabsStore.recordClosedTab"))) return;
-                let { channelId: t, guildId: n } = e;
-                O = [{ channelId: t, guildId: n, closedAt: Date.now() }, ...O.filter((e) => e.channelId !== t)].slice(
-                    0,
-                    10,
-                );
-            })(l));
+            U(new Set([a])),
+            M(l));
+    },
+    CHANNEL_TABS_CLOSE_OTHERS: function (e) {
+        let { tabId: t, mode: n } = e,
+            i = W(t, n);
+        if (0 === i.length) return !1;
+        let r = new Set(i.map((e) => e.id));
+        (null != p && r.has(p) && (p = t), (I = I.filter((e) => !r.has(e.id))), U(r), i.reverse().forEach(M));
     },
     CHANNEL_TABS_SET_ACTIVE: function (e) {
         let { tabId: t } = e;
@@ -289,29 +307,29 @@ let z = new X(a.h, {
             a = r.filter((e) => e.pinned).length;
         I = [...r.slice(0, a), { ...i, pinned: n }, ...r.slice(a)];
     },
-    CHANNEL_TABS_BACK: P(() => K(-1)),
-    CHANNEL_TABS_FORWARD: P(() => K(1)),
+    CHANNEL_TABS_BACK: P(() => X(-1)),
+    CHANNEL_TABS_FORWARD: P(() => X(1)),
     CHANNEL_TABS_SET_ENABLED: function (e) {
         let { enabled: t } = e;
         if (N === t) return !1;
-        (N = t) ? 0 === I.length && C("ChannelTabsStore.handleSetEnabled") && H() : w();
+        (N = t) ? 0 === I.length && C("ChannelTabsStore.handleSetEnabled") && j() : G();
     },
     CHANNEL_TABS_NAVIGATE_ROUTE: P(function (e) {
         let { routePath: t, routeLabel: n } = e;
-        return Y({ kind: "route", routePath: t, routeLabel: n }, "ChannelTabsStore.handleNavigateRoute");
+        return $({ kind: "route", routePath: t, routeLabel: n }, "ChannelTabsStore.handleNavigateRoute");
     }),
     CHANNEL_SELECT: P(function (e) {
         let { channelId: t, guildId: n } = e;
-        return Y(
+        return $(
             null == t || (0, f.jq)(t) ? null : { kind: "channel", channelId: t, guildId: n ?? null },
             "ChannelTabsStore.handleChannelSelect",
         );
     }),
-    CHANNEL_DELETE: $,
+    CHANNEL_DELETE: z,
     CONNECTION_OPEN: function () {
         let e = !S;
         if (((S = !0), !C("ChannelTabsStore.handleConnectionOpen"))) return !1;
-        if (!e && 0 === I.length) return H();
+        if (!e && 0 === I.length) return j();
         let t = (function () {
             let e = I.length - h();
             if (e <= 0) return !1;
@@ -320,26 +338,26 @@ let z = new X(a.h, {
                     .slice(-e)
                     .map((e) => e.id),
             );
-            return ((I = I.filter((e) => !t.has(e.id))), M(t), !0);
+            return ((I = I.filter((e) => !t.has(e.id))), U(t), !0);
         })();
         return (
             (e &&
                 (function () {
-                    let e = V() ?? (0, _.rv)({ pathname: o.A.defaultRoute });
+                    let e = H() ?? (0, _.rv)({ pathname: o.A.defaultRoute });
                     if (null == e) return !1;
                     let t = I.at(-1);
                     if (null == t || (t.pinned && I.length < h())) {
-                        let t = x(e, null);
+                        let t = k(e, null);
                         return ((I = [...I, t]), (p = t.id), !0);
                     }
-                    return ((p = t.id), t.pinned && F(t.id), (0, _.Pp)(t, e) || G(e), !0);
+                    return ((p = t.id), t.pinned && B(t.id), (0, _.Pp)(t, e) || x(e), !0);
                 })()) ||
             t
         );
     },
-    THREAD_DELETE: $,
+    THREAD_DELETE: z,
     LOGOUT: function () {
-        (w(), (R = new Set()), (O = []), D.overwriteHistory({}));
+        (G(), (R = new Set()), (O = []), D.overwriteHistory({}));
     },
 });
-n.d(t, {}, { A: z });
+n.d(t, {}, { A: Q });

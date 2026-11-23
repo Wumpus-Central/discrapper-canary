@@ -209,7 +209,8 @@ let ea = r.memo(function (e) {
         } = (0, i.cf)(
             [Y.Ay, q.Ay],
             () => {
-                if ("channel" !== t.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
+                if ("channel" !== t.kind || s)
+                    return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
                 let e = Y.Ay.getMentionCount(t.channelId),
                     n = q.Ay.isGuildOrCategoryOrChannelMuted(t.guildId, t.channelId);
                 return {
@@ -218,7 +219,7 @@ let ea = r.memo(function (e) {
                     showUnreadDot: 0 === e && !n && Y.Ay.hasUnread(t.channelId),
                 };
             },
-            [t],
+            [t, s],
         ),
         ev = (0, i.bG)(
             [H.A],

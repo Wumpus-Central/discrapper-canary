@@ -53,30 +53,32 @@ function V(e) {
     return { query: t, queryMode: n };
 }
 function H(e, t) {
-    let { results: n, queryMode: i, query: r, maxQueryLength: a } = U.A.getProps(),
-        s = v.A.getGuildId(),
-        l = b.Ay.getChannelId(s),
-        o = n[(0, _.Vv)(_.vB.DOWN, -1, n)],
-        d = M.A.isEmail(r),
-        c = M.A.isPhoneNumber(r),
-        u = M.A.isUserTagLike(r),
-        E = null != l && (0, G.jq)(l);
-    function A(e) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        { results: i, queryMode: r, query: a, maxQueryLength: s } = U.A.getProps(),
+        l = v.A.getGuildId(),
+        o = b.Ay.getChannelId(l),
+        d = i[(0, _.Vv)(_.vB.DOWN, -1, i)],
+        c = M.A.isEmail(a),
+        u = M.A.isPhoneNumber(a),
+        E = M.A.isUserTagLike(a),
+        A = null != o && (0, G.jq)(o);
+    function f(e) {
         return null == e ? null : e.type === _.rD.IN_APP_NAVIGATION ? e.type + "_" + e.record.type : e.type;
     }
-    let f = {
-        current_channel_id: E ? void 0 : l,
-        current_channel_static_route: E ? l : void 0,
-        current_guild_id: s,
-        query_mode: i ?? "GENERAL",
-        query_length: r.length,
-        max_query_length: a,
-        is_email_like: d,
-        is_phone_like: c,
-        is_username_like: u,
-        query: d || c || u ? null : r,
-        top_result_type: A(o),
-        top_result_score: null != o ? o.score : null,
+    let h = {
+        current_channel_id: A ? void 0 : o,
+        current_channel_static_route: A ? o : void 0,
+        current_guild_id: l,
+        is_tab_picker: n,
+        query_mode: r ?? "GENERAL",
+        query_length: a.length,
+        max_query_length: s,
+        is_email_like: c,
+        is_phone_like: u,
+        is_username_like: E,
+        query: c || u || E ? null : a,
+        top_result_type: f(d),
+        top_result_score: null != d ? d.score : null,
         num_results_total: U.A.getResultTotals(),
         num_results_users: U.A.getResultTotals(_.rD.USER),
         num_results_text_channels: U.A.getResultTotals(_.rD.TEXT_CHANNEL),
@@ -84,36 +86,37 @@ function H(e, t) {
         num_results_guilds: U.A.getResultTotals(_.rD.GUILD),
         num_results_group_dms: U.A.getResultTotals(_.rD.GROUP_DM),
     };
-    if (null != l) {
-        let e = y.A.getChannel(l);
-        f.current_channel_type = null != e ? e.type : null;
+    if (null != o) {
+        let e = y.A.getChannel(o);
+        h.current_channel_type = null != e ? e.type : null;
     }
     if (null != t) {
-        let { type: e, score: i, record: r } = t;
-        switch (((f.selected_type = A(t)), (f.selected_score = i), (f.selected_index = n.indexOf(t)), e)) {
+        let { type: e, score: n, record: r } = t;
+        switch (((h.selected_type = f(t)), (h.selected_score = n), (h.selected_index = i.indexOf(t)), e)) {
             case _.rD.GUILD:
-                f.selected_guild_id = r.id;
+                h.selected_guild_id = r.id;
                 break;
             case _.rD.TEXT_CHANNEL:
             case _.rD.VOICE_CHANNEL:
-                (r instanceof L.YB && (f.selected_guild_id = null != r.guild_id ? r.guild_id : null),
-                    (f.selected_channel_id = r.id));
+                (r instanceof L.YB && (h.selected_guild_id = null != r.guild_id ? r.guild_id : null),
+                    (h.selected_channel_id = r.id));
                 break;
             case _.rD.GROUP_DM:
-                f.selected_channel_id = r.id;
+                h.selected_channel_id = r.id;
                 break;
             case _.rD.USER:
-                f.selected_user_id = r.id;
+                h.selected_user_id = r.id;
         }
     }
-    P.default.track(e, f);
+    P.default.track(e, h);
 }
 function j() {
     r.h.dispatch({ type: "QUICKSWITCHER_HIDE" });
 }
 let W = new Set([E.t1.SETTINGS, E.t1.PLAYGROUND, E.t1.SHOP_ORBS_TAB]);
 function Y(e) {
-    (j(), (0, i.s7)(), H(w.HAw.QUICKSWITCHER_RESULT_SELECTED, e));
+    let t = U.A.isTabPicker();
+    (j(), (0, i.s7)(), H(w.HAw.QUICKSWITCHER_RESULT_SELECTED, e, t));
 }
 function K(e) {
     let t,
@@ -283,7 +286,7 @@ n.d(
                 r.h.dispatch({ type: "QUICKSWITCHER_SHOW", ...V(t), isTabPicker: n }));
         },
         jD: function () {
-            (H(w.HAw.QUICKSWITCHER_CLOSED), j());
+            (H(w.HAw.QUICKSWITCHER_CLOSED, void 0, U.A.isTabPicker()), j());
         },
         wf: function (e) {
             r.h.dispatch({ type: "QUICKSWITCHER_SELECT", selectedIndex: e });
