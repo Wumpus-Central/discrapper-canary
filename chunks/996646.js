@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => eG }));
+(n.r(t), n.d(t, { default: () => eL }));
 var l = n(477900),
     r = n(582128),
     i = n(855986),
@@ -402,50 +402,51 @@ let ec = r.memo(function (e) {
 });
 var ed = n(305866),
     ef = n(683438),
-    eh = n(662090),
-    eg = n(280157),
-    em = n(320264),
-    ep = n(319593),
-    ex = n(576705);
-function eb(e) {
+    eh = n(95362),
+    eg = n(662090),
+    em = n(280157),
+    ep = n(320264),
+    ex = n(319593),
+    eb = n(576705);
+function ey(e) {
     switch (e.type) {
-        case eh.rD.TEXT_CHANNEL:
-        case eh.rD.VOICE_CHANNEL:
-        case eh.rD.GROUP_DM:
-        case eh.rD.DM:
-        case eh.rD.USER:
-        case eh.rD.GUILD:
+        case eg.rD.TEXT_CHANNEL:
+        case eg.rD.VOICE_CHANNEL:
+        case eg.rD.GROUP_DM:
+        case eg.rD.DM:
+        case eg.rD.USER:
+        case eg.rD.GUILD:
             return !0;
-        case eh.rD.IN_APP_NAVIGATION:
+        case eg.rD.IN_APP_NAVIGATION:
             return !o.Pc.has(e.record.type);
-        case eh.rD.LINK:
+        case eg.rD.LINK:
             return null == e.record.inviteCode;
         default:
             return !1;
     }
 }
-var ey = n(254838),
-    eA = n(778712),
-    eI = n(97808),
-    eC = n(476921);
-function eE(e) {
+var eA = n(254838),
+    eI = n(778712),
+    eC = n(97808),
+    eE = n(476921);
+function eN(e) {
     let { children: t } = e;
     return (0, l.jsx)("div", {
-        className: eC.wx,
+        className: eE.wx,
         role: "presentation",
         children: (0, l.jsx)(P.E, { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, children: t }),
     });
 }
-function eN(e) {
+function ev(e) {
     let t,
         { result: n, ...r } = e,
         s = (function (e) {
             let t = (function (e) {
                     switch (e.type) {
-                        case eh.rD.TEXT_CHANNEL:
-                        case eh.rD.VOICE_CHANNEL:
-                        case eh.rD.GROUP_DM:
-                        case eh.rD.DM:
+                        case eg.rD.TEXT_CHANNEL:
+                        case eg.rD.VOICE_CHANNEL:
+                        case eg.rD.GROUP_DM:
+                        case eg.rD.DM:
                             return e.record;
                         default:
                             return null;
@@ -475,21 +476,21 @@ function eN(e) {
                 };
             }
             switch (e.type) {
-                case eh.rD.USER: {
+                case eg.rD.USER: {
                     let t = e.record;
                     return {
-                        visual: { type: "image", src: t.getAvatarURL(void 0, (0, eA.FT)(eA._3.SIZE_32)) },
+                        visual: { type: "image", src: t.getAvatarURL(void 0, (0, eI.FT)(eI._3.SIZE_32)) },
                         titleIcon: null,
                         title: t.globalName ?? t.username,
                         subtitle: t.username,
                     };
                 }
-                case eh.rD.GUILD: {
+                case eg.rD.GUILD: {
                     let t = e.record;
                     return { visual: { type: "guild", guild: t }, titleIcon: null, title: t.name, subtitle: null };
                 }
-                case eh.rD.IN_APP_NAVIGATION: {
-                    let { label: t, Icon: n } = (0, em.TT)(e.record);
+                case eg.rD.IN_APP_NAVIGATION: {
+                    let { label: t, Icon: n } = (0, ep.TT)(e.record);
                     return { visual: { type: "icon", Icon: n }, titleIcon: null, title: t, subtitle: null };
                 }
                 default:
@@ -500,28 +501,28 @@ function eN(e) {
     let { visual: a, titleIcon: u, title: o, subtitle: c } = s;
     if ("guild" === a.type) t = (0, l.jsx)($.Ay, { tabIndex: -1, guild: a.guild, size: $.Ay.Sizes.SMALL, active: !0 });
     else if ("image" === a.type && null != a.src)
-        t = (0, l.jsx)(eI.eu, { src: a.src, size: eA._3.SIZE_32, "aria-hidden": !0 });
+        t = (0, l.jsx)(eC.eu, { src: a.src, size: eI._3.SIZE_32, "aria-hidden": !0 });
     else {
         let e = "icon" === a.type ? a.Icon : null;
         t = (0, l.jsx)("div", {
-            className: eC.aU,
+            className: eE.aU,
             children: null != e ? (0, l.jsx)(e, { size: "sm", color: "currentColor" }) : null,
         });
     }
-    return (0, l.jsx)(em.Q7, {
+    return (0, l.jsx)(ep.Q7, {
         ...r,
-        className: eC.Ke,
+        className: eE.Ke,
         children: (0, l.jsxs)("div", {
-            className: eC.nM,
+            className: eE.nM,
             children: [
-                (0, l.jsx)("div", { className: eC.Tn, children: t }),
+                (0, l.jsx)("div", { className: eE.Tn, children: t }),
                 (0, l.jsxs)("div", {
-                    className: eC.Qq,
+                    className: eE.Qq,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: eC.DD,
+                            className: eE.DD,
                             children: [
-                                null != u && (0, l.jsx)(u, { size: "xs", color: "currentColor", className: eC.gr }),
+                                null != u && (0, l.jsx)(u, { size: "xs", color: "currentColor", className: eE.gr }),
                                 (0, l.jsx)(P.E, {
                                     variant: "body-md/medium",
                                     color: "text-strong",
@@ -543,13 +544,13 @@ function eN(e) {
         }),
     });
 }
-var ev = n(746080),
-    eR = n(492652);
-function eM(e, t) {
+var eR = n(746080),
+    eM = n(492652);
+function ej(e, t) {
     let n = 0;
-    return t.map((t) => ({ result: t, section: e, sectionIndex: t.type === eh.rD.HEADER ? -1 : n++ }));
+    return t.map((t) => ({ result: t, section: e, sectionIndex: t.type === eg.rD.HEADER ? -1 : n++ }));
 }
-function ej(e) {
+function ew(e) {
     let { returnFocusRef: t } = e,
         n = r.useId(),
         s = r.useRef(null),
@@ -574,10 +575,10 @@ function ej(e) {
         v = (0, i.bG)([d.Ay], () => d.Ay.getChannelId()),
         R = r.useMemo(() => [...new Set([...I, ...C, ...N])], [I, C, N]),
         M = (0, i.yK)(
-            [X.A, Y.A, ex.A, Q.A],
+            [X.A, Y.A, eb.A, Q.A],
             () =>
                 R.filter((e) => {
-                    if ((0, ev.jq)(e)) return !1;
+                    if ((0, eR.jq)(e)) return !1;
                     let t = X.A.getChannel(e);
                     return (
                         null != t &&
@@ -585,7 +586,7 @@ function ej(e) {
                             ? !t.isDM() || !Q.A.isBlocked(t.getRecipientId())
                             : !(t.isThread() && t.isArchivedThread()) &&
                               null != Y.A.getGuild(t.getGuildId()) &&
-                              ex.A.can(et.xBc.VIEW_CHANNEL, t))
+                              eb.A.can(et.xBc.VIEW_CHANNEL, t))
                     );
                 }),
             [R],
@@ -612,11 +613,11 @@ function ej(e) {
         D = r.useMemo(
             () =>
                 w
-                    ? eM("search", A.filter(eb))
+                    ? ej("search", A.filter(ey))
                     : j.flatMap((e) => {
                           let { section: t, title: n, channelIds: l } = e,
-                              r = l.flatMap((e) => (0, eg.A)(e) ?? []);
-                          return r.length > 0 ? eM(t, [(0, eh.jF)(n), ...r]) : [];
+                              r = l.flatMap((e) => (0, em.A)(e) ?? []);
+                          return r.length > 0 ? ej(t, [(0, eg.jF)(n), ...r]) : [];
                       }),
             [w, A, j],
         ),
@@ -629,13 +630,13 @@ function ej(e) {
     }
     function _(e) {
         let { result: t, section: n, sectionIndex: l } = e;
-        (0, ey.H)()
+        (0, eA.H)()
             ? ((a.current = null),
               (0, o.$U)(t, { source: "new_tab_popout", newTabPickerSelection: { section: n, resultIndex: l } }))
             : (0, o.jD)();
     }
     return (0, l.jsxs)(ed.l, {
-        className: eR.SW,
+        className: eM.SW,
         "aria-label": en.intl.string(en.t.GR7NIF),
         returnRef: a,
         onMouseMove: () => y(!1),
@@ -647,7 +648,7 @@ function ej(e) {
                 onClear: () => S(""),
                 onKeyDown: (e) => {
                     (y(!0),
-                        (0, ep.W)(e, {
+                        (0, ex.W)(e, {
                             query: u,
                             results: D.map((e) => e.result),
                             selectedIndex: k,
@@ -671,17 +672,17 @@ function ej(e) {
                 },
             }),
             D.length > 0
-                ? (0, l.jsx)("div", {
+                ? (0, l.jsx)(eh.Ip, {
                       id: n,
                       role: "listbox",
                       tabIndex: -1,
                       "aria-label": en.intl.string(en.t.KsjOJI),
-                      className: eR.p_,
+                      className: eM.p_,
                       onMouseDown: (e) => e.preventDefault(),
                       children: D.map(function (e, t) {
                           let { result: r } = e,
                               i = `${e.section}-${r.type}-${r.record.id}`;
-                          if (r.type === eh.rD.HEADER) return (0, l.jsx)(eE, { children: r.record.text }, i);
+                          if (r.type === eg.rD.HEADER) return (0, l.jsx)(eN, { children: r.record.text }, i);
                           let s = {
                               id: `${n}-${t}`,
                               focused: t === k,
@@ -689,15 +690,17 @@ function ej(e) {
                               onMouseEnter: () => {
                                   b || T(t);
                               },
-                              onFocus: (e) => e.scrollIntoView({ block: "nearest" }),
+                              onFocus: (e) => {
+                                  b && e.scrollIntoView({ block: "nearest" });
+                              },
                           };
-                          return r.type === eh.rD.LINK
-                              ? (0, l.jsx)(em.N_, { link: r.record, ...s }, i)
-                              : (0, l.jsx)(eN, { result: r, ...s }, i);
+                          return r.type === eg.rD.LINK
+                              ? (0, l.jsx)(ep.N_, { link: r.record, ...s }, i)
+                              : (0, l.jsx)(ev, { result: r, ...s }, i);
                       }),
                   })
                 : (0, l.jsx)("div", {
-                      className: eR.p$,
+                      className: eM.p$,
                       role: "status",
                       children: (0, l.jsx)(P.E, {
                           variant: "body-sm/medium",
@@ -711,19 +714,19 @@ function ej(e) {
     });
 }
 n(321073);
-var ew = n(333007),
-    eD = n(717421),
-    ek = n(775602);
-function eS(e, t) {
+var eD = n(333007),
+    ek = n(717421),
+    eS = n(775602);
+function eT(e, t) {
     ((e.style.flexGrow = "0"),
         (e.style.flexShrink = "0"),
         (e.style.flexBasis = `${t}px`),
         (e.style.maxWidth = `${t}px`));
 }
-function eT(e) {
+function eP(e) {
     ((e.style.flexGrow = ""), (e.style.flexShrink = ""), (e.style.flexBasis = ""), (e.style.maxWidth = ""));
 }
-function eP(e) {
+function e_(e) {
     ((e.style.position = ""),
         (e.style.boxSizing = ""),
         (e.style.left = ""),
@@ -735,8 +738,8 @@ function eP(e) {
         (e.style.boxShadow = ""),
         (e.style.transition = ""));
 }
-var e_ = n(266553);
-function eG() {
+var eG = n(266553);
+function eL() {
     let {
             tabs: e,
             activeTabId: t,
@@ -763,7 +766,7 @@ function eG() {
             handleDragEnd: j,
             handleCloseStart: w,
         } = (function (e) {
-            let [, t] = (0, eD.z)(() => ({ progress: 0, config: { duration: 150 } })),
+            let [, t] = (0, ek.z)(() => ({ progress: 0, config: { duration: 150 } })),
                 n = r.useRef(null);
             r.useEffect(() => () => n.current?.(!1), []);
             let l = r.useRef(null),
@@ -798,7 +801,7 @@ function eG() {
                     (e.forEach((e, t) => {
                         n.includes(t) && l.set(t, e.getBoundingClientRect().left);
                     }),
-                    t.size === n.length && n.every((e) => t.has(e)) && !ek.Ay.useReducedMotion)
+                    t.size === n.length && n.every((e) => t.has(e)) && !eS.Ay.useReducedMotion)
                 ) {
                     let n = [];
                     if (
@@ -836,14 +839,14 @@ function eG() {
                             (clearTimeout(t), e.set(n, n.getBoundingClientRect().width));
                         }),
                         e.forEach((e, t) => {
-                            ((t.style.transition = ""), eS(t, e));
+                            ((t.style.transition = ""), eT(t, e));
                         }),
                         N.current.clear(),
                         e
                     );
                 }, []),
                 R = r.useCallback((e) => {
-                    if (ek.Ay.useReducedMotion) return;
+                    if (eS.Ay.useReducedMotion) return;
                     let t = [];
                     if (
                         (e.forEach((e, n) => {
@@ -852,11 +855,11 @@ function eG() {
                         }),
                         0 !== t.length)
                     ) {
-                        for (let { node: e, from: n } of t) ((e.style.transition = ""), eS(e, n));
+                        for (let { node: e, from: n } of t) ((e.style.transition = ""), eT(e, n));
                         for (let { node: e, to: n } of (t[0].node.getBoundingClientRect(), t)) {
-                            ((e.style.transition = "flex-basis 150ms ease-out, max-width 150ms ease-out"), eS(e, n));
+                            ((e.style.transition = "flex-basis 150ms ease-out, max-width 150ms ease-out"), eT(e, n));
                             let t = setTimeout(() => {
-                                (N.current.delete(e), (e.style.transition = ""), eT(e));
+                                (N.current.delete(e), (e.style.transition = ""), eP(e));
                             }, 150);
                             N.current.set(e, t);
                         }
@@ -872,12 +875,12 @@ function eG() {
                     (i.current.forEach((t) => {
                         "" === t.style.flexBasis && e.set(t, t.getBoundingClientRect().width);
                     }),
-                        e.forEach((e, t) => eS(t, e)));
+                        e.forEach((e, t) => eT(t, e)));
                 }, [v]),
                 j = r.useCallback(() => {
                     ((E.current = !1), v());
                     let e = new Map();
-                    (i.current.forEach((t) => e.set(t, t.getBoundingClientRect().width)), i.current.forEach(eT), R(e));
+                    (i.current.forEach((t) => e.set(t, t.getBoundingClientRect().width)), i.current.forEach(eP), R(e));
                 }, [v, R]);
             r.useEffect(() => {
                 function e(e) {
@@ -932,7 +935,7 @@ function eG() {
                                 (t.style.height = `${e.height}px`),
                                 (t.style.margin = "0"));
                         }));
-                    let N = ek.Ay.useReducedMotion,
+                    let N = eS.Ay.useReducedMotion,
                         v = [],
                         R = 1 / 0,
                         M = n.find((t) => t.id === e)?.pinned === !0,
@@ -1022,9 +1025,9 @@ function eG() {
                                           ? u.findIndex((e) => e.id === p) + 1
                                           : u.length,
                                 b = () => (0, ee.Aq)(e, x);
-                            (t ? (0, ew.flushSync)(b) : b(),
-                                i.current.forEach(eP),
-                                null != s.current && eP(s.current),
+                            (t ? (0, eD.flushSync)(b) : b(),
+                                i.current.forEach(e_),
+                                null != s.current && e_(s.current),
                                 (a.current = null),
                                 (c.current = []));
                             let y = new Map();
@@ -1035,7 +1038,7 @@ function eG() {
                         };
                     (null == l ||
                         !Number.isFinite(r) ||
-                        ek.Ay.useReducedMotion ||
+                        eS.Ay.useReducedMotion ||
                         ((n.current = m),
                         await t({
                             from: { progress: 0 },
@@ -1090,7 +1093,7 @@ function eG() {
         }),
         (0, l.jsxs)("div", {
             ref: E,
-            className: e_.$,
+            className: eG.$,
             role: "group",
             "aria-label": en.intl.string(en.t.es0PkU),
             onDoubleClick: () => f.Ay.maximize(),
@@ -1115,7 +1118,7 @@ function eG() {
                 ),
                 (0, l.jsx)("div", {
                     ref: v,
-                    className: e_.Y,
+                    className: eG.Y,
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: (0, l.jsx)(s.Y, {
                         targetElementRef: v,
@@ -1124,7 +1127,7 @@ function eG() {
                         position: "bottom",
                         align: "left",
                         animation: s.Y.Animation.FADE,
-                        renderPopout: () => (0, l.jsx)(ej, { returnFocusRef: C }),
+                        renderPopout: () => (0, l.jsx)(ew, { returnFocusRef: C }),
                         children: () =>
                             (0, l.jsx)(u.A, {
                                 ref: C,

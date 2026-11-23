@@ -322,8 +322,8 @@
     box-sizing: border-box;
     gap: var(--space-8);
     max-height: min(calc(var(--space-192)*2), calc(100vh - var(--space-96)));
-    padding: var(--space-8);
-    width: var(--modal-width-small)
+    padding: var(--space-8) var(--space-8) 0;
+    width: 356px
 }
 
 .list_XEgn-F,
@@ -334,9 +334,9 @@
 
 .list_XEgn-F {
     gap: var(--space-4);
-    min-height: 0;
-    overflow-y: auto;
-    scrollbar-width: thin
+    margin-block-end: var(--space-8);
+    margin-inline-end: calc(var(--space-8)*-1);
+    padding-bottom: var(--space-4)
 }
 
 .emptyState_XEgn-F {
@@ -378,4 +378,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=4aa72830d109cbb8.css.map*/
+/*# sourceMappingURL=e41ca5b033526b33.css.map*/
