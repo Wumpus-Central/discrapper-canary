@@ -1,4 +1,4 @@
-n.d(i, { default: () => ei });
+n.d(i, { default: () => en });
 var t = n(477900),
     l = n(284009),
     s = n.n(l),
@@ -9,75 +9,76 @@ var t = n(477900),
     c = n(442433),
     u = n(793574),
     g = n(688810),
-    A = n(359047),
-    E = n(36942),
-    b = n(260509),
-    f = n(46653),
-    h = n(287809),
-    _ = n(346247),
-    S = n(810263),
-    x = n(911612),
-    L = n(664967);
+    A = n(5180),
+    E = n(359047),
+    b = n(36942),
+    f = n(260509),
+    h = n(46653),
+    _ = n(287809),
+    S = n(346247),
+    x = n(810263),
+    L = n(911612),
+    N = n(664967);
 n(582128);
-var N = n(458294),
-    p = n(567035),
-    j = n(792996),
-    m = n(711014),
-    I = n(263715),
-    M = n(36412),
-    y = n(727479),
-    D = n(507238),
-    G = n(832712),
-    O = n(568873),
-    T = n(769591),
-    v = n(393432),
-    X = n(543465),
-    R = n(477427),
-    U = n(652215),
+var p = n(458294),
+    j = n(567035),
+    m = n(792996),
+    I = n(711014),
+    M = n(263715),
+    y = n(36412),
+    D = n(727479),
+    G = n(507238),
+    O = n(832712),
+    T = n(568873),
+    v = n(769591),
+    X = n(393432),
+    R = n(543465),
+    U = n(477427),
+    P = n(652215),
     B = n(790782),
-    P = n(355097);
-function C(e) {
+    C = n(355097);
+function Y(e) {
     return [
-        { setting: U.orn.ALL_MESSAGES, label: j.intl.string(j.t["n/bTaY"]) },
-        ...(e ? [{ setting: U.orn.ONLY_MENTIONS, label: j.intl.string(j.t.JzbSEY), allUnreads: !0 }] : []),
-        { setting: U.orn.ONLY_MENTIONS, label: j.intl.format(j.t.L2hmYy, {}) },
-        { setting: U.orn.NO_MESSAGES, label: j.intl.string(j.t.CtVGyQ) },
+        { setting: P.orn.ALL_MESSAGES, label: m.intl.string(m.t["n/bTaY"]) },
+        ...(e ? [{ setting: P.orn.ONLY_MENTIONS, label: m.intl.string(m.t.JzbSEY), allUnreads: !0 }] : []),
+        { setting: P.orn.ONLY_MENTIONS, label: m.intl.format(m.t.L2hmYy, {}) },
+        { setting: P.orn.NO_MESSAGES, label: m.intl.string(m.t.CtVGyQ) },
     ];
 }
-var Y = n(121210),
-    k = n(811893),
-    w = n(837057),
-    F = n(310419),
-    H = n(727419),
-    W = n(576705),
-    J = n(602881),
-    V = n(887501),
-    z = n(684407),
-    Q = n(783832),
-    K = n(267102),
-    q = n(488995),
-    Z = n(153594),
-    $ = n(531335);
-function ee(e) {
+var k = n(121210),
+    w = n(811893),
+    F = n(837057),
+    H = n(310419),
+    W = n(727419),
+    J = n(576705),
+    V = n(602881),
+    z = n(887501),
+    Q = n(684407),
+    K = n(783832),
+    q = n(267102),
+    Z = n(488995),
+    $ = n(153594),
+    ee = n(531335);
+function ei(e) {
     var i;
     let l,
         g,
-        { guild: ee, onSelect: ei, hideSettings: en } = e,
-        et = ee.id,
-        el = (0, r.bG)(
-            [h.default],
+        { guild: ei, onSelect: en, hideSettings: et } = e,
+        el = ei.id,
+        es = (0, r.bG)(
+            [_.default],
             () => {
-                let e = h.default.getCurrentUser();
-                return (s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, b.bM)(ee, e));
+                let e = _.default.getCurrentUser();
+                return (s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, f.bM)(ei, e));
             },
-            [ee],
+            [ei],
         ),
-        es = (0, $.A)({ guild: ee, source: U.PE1.GUILD_CONTEXT_MENU, channel: null }),
-        er = (0, Z.A)(et),
-        ea = (0, D.A)(ee),
-        ed = (function (e) {
+        er = (0, ee.A)({ guild: ei, source: P.PE1.GUILD_CONTEXT_MENU, channel: null }),
+        ea = (0, $.A)(el),
+        ed = (0, G.A)(ei),
+        eo = (function (e) {
             let i = (function (e) {
-                    let i = (0, T.os)("GuildNotificationItems"),
+                    let i = (0, v.os)("GuildNotificationItems"),
                         {
                             suppressEveryone: n,
                             suppressRoles: l,
@@ -86,26 +87,26 @@ function ee(e) {
                             notifyHighlights: d,
                             unreadSetting: c,
                         } = (0, r.cf)(
-                            [X.Ay],
+                            [R.Ay],
                             () => ({
-                                suppressEveryone: X.Ay.isSuppressEveryoneEnabled(e.id),
-                                suppressRoles: X.Ay.isSuppressRolesEnabled(e.id),
-                                mobilePush: X.Ay.isMobilePushEnabled(e.id),
-                                messageNotifications: X.Ay.getMessageNotifications(e.id),
-                                notifyHighlights: X.Ay.getNotifyHighlights(e.id),
-                                unreadSetting: X.Ay.getGuildUnreadSetting(e.id),
+                                suppressEveryone: R.Ay.isSuppressEveryoneEnabled(e.id),
+                                suppressRoles: R.Ay.isSuppressRolesEnabled(e.id),
+                                mobilePush: R.Ay.isMobilePushEnabled(e.id),
+                                messageNotifications: R.Ay.getMessageNotifications(e.id),
+                                notifyHighlights: R.Ay.getNotifyHighlights(e.id),
+                                unreadSetting: R.Ay.getGuildUnreadSetting(e.id),
                             }),
                             [e.id],
                         ),
-                        u = d === U.guM.DISABLED,
-                        g = (0, O.A)(e.id);
+                        u = d === P.guM.DISABLED,
+                        g = (0, T.A)(e.id);
                     function A(i, n) {
-                        G.A.updateGuildNotificationSettings(e.id, i, n);
+                        O.A.updateGuildNotificationSettings(e.id, i, n);
                     }
                     return (0, t.jsxs)(t.Fragment, {
                         children: [
                             (0, t.jsx)(o.rX, {
-                                children: C(i).map((n) => {
+                                children: Y(i).map((n) => {
                                     let { setting: l, label: s, allUnreads: r } = n,
                                         d = `${l}-${!0 === r}`;
                                     return (0, t.jsx)(
@@ -119,25 +120,25 @@ function ee(e) {
                                                     if (!i)
                                                         return void A(
                                                             { message_notifications: n },
-                                                            R.G_.notifications(n),
+                                                            U.G_.notifications(n),
                                                         );
                                                     let l =
-                                                        t || n === U.orn.ALL_MESSAGES
-                                                            ? P.n3.UNREADS_ALL_MESSAGES
-                                                            : P.n3.UNREADS_ONLY_MENTIONS;
+                                                        t || n === P.orn.ALL_MESSAGES
+                                                            ? C.n3.UNREADS_ALL_MESSAGES
+                                                            : C.n3.UNREADS_ONLY_MENTIONS;
                                                     A(
                                                         {
                                                             message_notifications: n,
-                                                            flags: (0, v.md)(X.Ay.getGuildFlags(e.id), l),
+                                                            flags: (0, X.md)(R.Ay.getGuildFlags(e.id), l),
                                                         },
-                                                        R.G_.notifications(n),
+                                                        U.G_.notifications(n),
                                                     );
                                                 })(l, !0 === r),
                                             checked:
                                                 !0 === n.allUnreads
-                                                    ? a === U.orn.ONLY_MENTIONS && c === B.e.ALL_MESSAGES
-                                                    : i && n.setting === U.orn.ONLY_MENTIONS
-                                                      ? a === U.orn.ONLY_MENTIONS && c !== B.e.ALL_MESSAGES
+                                                    ? a === P.orn.ONLY_MENTIONS && c === B.e.ALL_MESSAGES
+                                                    : i && n.setting === P.orn.ONLY_MENTIONS
+                                                      ? a === P.orn.ONLY_MENTIONS && c !== B.e.ALL_MESSAGES
                                                       : n.setting === a,
                                         },
                                         d,
@@ -148,23 +149,23 @@ function ee(e) {
                                 children: [
                                     (0, t.jsx)(o.sL, {
                                         id: "suppress-everyone",
-                                        label: j.intl.format(j.t.OWiWAp, {}),
-                                        action: () => A({ suppress_everyone: !n }, R.G_.suppressEveryone(!n)),
+                                        label: m.intl.format(m.t.OWiWAp, {}),
+                                        action: () => A({ suppress_everyone: !n }, U.G_.suppressEveryone(!n)),
                                         checked: n,
                                     }),
                                     (0, t.jsx)(o.sL, {
                                         id: "suppress-roles",
-                                        label: j.intl.string(j.t["O/QdoD"]),
-                                        action: () => A({ suppress_roles: !l }, R.G_.suppressRoles(!l)),
+                                        label: m.intl.string(m.t["O/QdoD"]),
+                                        action: () => A({ suppress_roles: !l }, U.G_.suppressRoles(!l)),
                                         checked: l,
                                     }),
                                     (0, t.jsx)(o.sL, {
                                         id: "suppress-highlights",
-                                        label: j.intl.string(j.t.gPuteJ),
+                                        label: m.intl.string(m.t.gPuteJ),
                                         action: () => {
                                             A(
-                                                { notify_highlights: u ? U.guM.ENABLED : U.guM.DISABLED },
-                                                R.G_.highlights(u),
+                                                { notify_highlights: u ? P.guM.ENABLED : P.guM.DISABLED },
+                                                U.G_.highlights(u),
                                             );
                                         },
                                         checked: u,
@@ -175,34 +176,34 @@ function ee(e) {
                             (0, t.jsx)(o.rX, {
                                 children: (0, t.jsx)(o.sL, {
                                     id: "mobile-push",
-                                    label: j.intl.string(j.t.h1DL66),
-                                    action: () => A({ mobile_push: !s }, R.G_.mobilePush(!s)),
+                                    label: m.intl.string(m.t.h1DL66),
+                                    action: () => A({ mobile_push: !s }, U.G_.mobilePush(!s)),
                                     checked: s,
                                 }),
                             }),
                         ],
                     });
                 })(e),
-                l = (0, T.os)("GuildNotificationItems"),
+                l = (0, v.os)("GuildNotificationItems"),
                 { messageNotifications: s, unreadSetting: d } = (0, r.cf)(
-                    [X.Ay],
+                    [R.Ay],
                     () => ({
-                        messageNotifications: X.Ay.getMessageNotifications(e.id),
-                        unreadSetting: X.Ay.getGuildUnreadSetting(e.id),
+                        messageNotifications: R.Ay.getMessageNotifications(e.id),
+                        unreadSetting: R.Ay.getGuildUnreadSetting(e.id),
                     }),
                     [e.id],
                 ),
                 c =
-                    l && s === U.orn.ONLY_MENTIONS && d === B.e.ALL_MESSAGES
-                        ? j.intl.string(j.t.JzbSEY)
-                        : C(!1).find((e) => {
+                    l && s === P.orn.ONLY_MENTIONS && d === B.e.ALL_MESSAGES
+                        ? m.intl.string(m.t.JzbSEY)
+                        : Y(!1).find((e) => {
                               let { setting: i } = e;
                               return i === s;
                           })?.label;
             return null != i
                 ? (0, t.jsx)(o.Dr, {
                       id: "guild-notifications",
-                      label: j.intl.string(j.t.h850Ss),
+                      label: m.intl.string(m.t.h850Ss),
                       subtext: c,
                       action: () =>
                           (0, a.mM)(async () => {
@@ -214,11 +215,11 @@ function ee(e) {
                       children: i,
                   })
                 : null;
-        })(ee),
-        eo = (function (e) {
+        })(ei),
+        ec = (function (e) {
             let i,
                 n,
-                l = (0, K.aL)(),
+                l = (0, q.aL)(),
                 s = (function (e) {
                     let {
                         canManageGuild: i,
@@ -230,16 +231,16 @@ function ee(e) {
                         canManageWebhooks: d,
                         canViewAuditLog: o,
                     } = (0, r.cf)(
-                        [W.A],
+                        [J.A],
                         () => ({
-                            canManageGuild: W.A.can(U.xBc.MANAGE_GUILD, e),
-                            canManageRoles: W.A.can(U.xBc.MANAGE_ROLES, e),
-                            canBanMembers: W.A.can(U.xBc.BAN_MEMBERS, e),
-                            canManageNicknames: W.A.can(U.xBc.MANAGE_NICKNAMES, e),
-                            canCreateEmojisAndStickers: W.A.can(U.xBc.CREATE_GUILD_EXPRESSIONS, e),
-                            canManageEmojisAndStickers: W.A.can(U.xBc.MANAGE_GUILD_EXPRESSIONS, e),
-                            canManageWebhooks: W.A.can(U.xBc.MANAGE_WEBHOOKS, e),
-                            canViewAuditLog: W.A.can(U.xBc.VIEW_AUDIT_LOG, e),
+                            canManageGuild: J.A.can(P.xBc.MANAGE_GUILD, e),
+                            canManageRoles: J.A.can(P.xBc.MANAGE_ROLES, e),
+                            canBanMembers: J.A.can(P.xBc.BAN_MEMBERS, e),
+                            canManageNicknames: J.A.can(P.xBc.MANAGE_NICKNAMES, e),
+                            canCreateEmojisAndStickers: J.A.can(P.xBc.CREATE_GUILD_EXPRESSIONS, e),
+                            canManageEmojisAndStickers: J.A.can(P.xBc.MANAGE_GUILD_EXPRESSIONS, e),
+                            canManageWebhooks: J.A.can(P.xBc.MANAGE_WEBHOOKS, e),
+                            canViewAuditLog: J.A.can(P.xBc.VIEW_AUDIT_LOG, e),
                         }),
                         [e],
                     );
@@ -247,20 +248,20 @@ function ee(e) {
                 })(e);
             if (__OVERLAY__ || !s) return null;
             function d(i) {
-                (H.A.open(e.id, i), l.dispatch(U.jej.POPOUT_CLOSE), (0, a.s7)());
+                (W.A.open(e.id, i), l.dispatch(P.jej.POPOUT_CLOSE), (0, a.s7)());
             }
             return (0, t.jsx)(o.Dr, {
                 id: "guild-settings",
-                label: j.intl.string(j.t["154/bL"]),
+                label: m.intl.string(m.t["154/bL"]),
                 action: () => d(),
-                children: ((i = W.A.getGuildPermissionProps(e)),
-                (n = (0, V.b)(e.id).length > 0),
-                Q.Ay.generateSections({
+                children: ((i = J.A.getGuildPermissionProps(e)),
+                (n = (0, z.b)(e.id).length > 0),
+                K.Ay.generateSections({
                     showDirtyGuildTemplateIndicator: !1,
                     ...i,
                     canUnlinkChannels: n,
-                    welcomeScreenEmpty: z.A.isEmpty(e.id),
-                    isLinkedGameOrganizationEnabled: (0, J.Dl)(e.id, "get-guild-settings-sections"),
+                    welcomeScreenEmpty: Q.A.isEmpty(e.id),
+                    isLinkedGameOrganizationEnabled: (0, V.Dl)(e.id, "get-guild-settings-sections"),
                 })
                     .filter((e) => {
                         let { section: i } = e;
@@ -269,27 +270,27 @@ function ee(e) {
                     .filter((e) => null == e.predicate || e.predicate())).map((i) => {
                     let { section: n, label: l, ariaLabel: s } = i;
                     switch (n) {
-                        case U.BEX.DELETE:
+                        case P.BEX.DELETE:
                             return null;
-                        case U.BEX.COMMUNITY:
-                            return (0, t.jsx)(o.Dr, { id: n, action: () => d(n), label: j.intl.string(j.t.nRtNqn) }, n);
-                        case U.BEX.APP_DIRECTORY:
+                        case P.BEX.COMMUNITY:
+                            return (0, t.jsx)(o.Dr, { id: n, action: () => d(n), label: m.intl.string(m.t.nRtNqn) }, n);
+                        case P.BEX.APP_DIRECTORY:
                             return (0, t.jsx)(
                                 o.Dr,
                                 {
                                     id: n,
                                     action: () => {
-                                        (0, w.transitionToGlobalDiscovery)({
-                                            tab: q.GlobalDiscoveryTab.APPS,
+                                        (0, F.transitionToGlobalDiscovery)({
+                                            tab: Z.GlobalDiscoveryTab.APPS,
                                             newSessionState: {
                                                 guildId: e.id,
-                                                entrypoint: { name: F.sW.GUILD_HEADER_POPOUT },
+                                                entrypoint: { name: H.sW.GUILD_HEADER_POPOUT },
                                             },
                                         });
                                     },
-                                    trailingIndicator: { type: "icon", icon: k.WindowLaunchIcon },
-                                    icon: k.WindowLaunchIcon,
-                                    label: j.intl.string(j.t.AKcFUj),
+                                    trailingIndicator: { type: "icon", icon: w.WindowLaunchIcon },
+                                    icon: w.WindowLaunchIcon,
+                                    label: m.intl.string(m.t.AKcFUj),
                                 },
                                 n,
                             );
@@ -300,36 +301,36 @@ function ee(e) {
                     }
                 }),
             });
-        })(ee),
-        ec = (0, _.A)({
-            guildId: ee.id,
-            userId: f.default.getId(),
+        })(ei),
+        eu = (0, S.A)({
+            guildId: ei.id,
+            userId: h.default.getId(),
             analyticsLocation: {
-                page: U.liQ.GUILD_CHANNEL,
-                section: U.JJy.CHAT_USERNAME,
-                object: U.ZSU.CONTEXT_MENU_ITEM,
+                page: P.liQ.GUILD_CHANNEL,
+                section: P.JJy.CHAT_USERNAME,
+                object: P.ZSU.CONTEXT_MENU_ITEM,
             },
         }),
-        eu = (0, x.A)(ee),
-        eg = (0, A.A)(ee.id),
-        eA = (0, S.A)(ee),
-        eE =
-            ((i = { section: U.JJy.GUILD_LIST }),
-            (l = ee.id),
-            (g = (0, r.bG)([N.default], () => N.default.getGuildHasUnreadIgnoreMuted(l), [l])),
+        eg = (0, L.A)(ei),
+        eA = (0, E.A)(ei.id),
+        eE = (0, x.A)(ei),
+        eb =
+            ((i = { section: P.JJy.GUILD_LIST }),
+            (l = ei.id),
+            (g = (0, r.bG)([p.default], () => p.default.getGuildHasUnreadIgnoreMuted(l), [l])),
             (0, t.jsx)(o.Dr, {
                 id: "mark-guild-read",
-                label: j.intl.string(j.t.e6RscS),
+                label: m.intl.string(m.t.e6RscS),
                 icon: void 0,
-                action: () => (0, p.A)([l], i.section),
+                action: () => (0, j.A)([l], i.section),
                 disabled: !g,
             })),
-        eb = (0, E.A)(ee.id),
-        ef = (0, L.A)(ee),
-        eh = (function (e) {
+        ef = (0, b.A)(ei.id),
+        eh = (0, N.A)(ei),
+        e_ = (function (e) {
             let i = (function (e) {
-                let [i] = (0, r.yK)([m.Ay], () => {
-                        let e = m.Ay.getGuildsTree();
+                let [i] = (0, r.yK)([I.Ay], () => {
+                        let e = I.Ay.getGuildsTree();
                         return [e, e.version];
                     }),
                     n = i.getNode(e),
@@ -337,37 +338,37 @@ function ee(e) {
                     l = null != t ? i.getNode(t) : void 0,
                     s = l?.children ?? i.getRoots(),
                     a = s.length > 1 ? { first: s[0], last: s[s.length - 1] } : null,
-                    d = i.getRoots().filter((e) => e.type === I.PJ.FOLDER);
+                    d = i.getRoots().filter((e) => e.type === M.PJ.FOLDER);
                 return null == n || (0 === d.length && null == a)
                     ? null
                     : {
-                          label: j.intl.string(j.t.A95Fzm),
-                          destinationsLabel: j.intl.string(j.t.znwvG4),
+                          label: m.intl.string(m.t.A95Fzm),
+                          destinationsLabel: m.intl.string(m.t.znwvG4),
                           destinations:
                               d.length > 0
                                   ? [
-                                        { folderId: null, label: j.intl.string(j.t.IfgLzT), disabled: null == t },
-                                        ...d.map((e) => ({ folderId: e.id, label: (0, M.M)(e), disabled: e.id === t })),
+                                        { folderId: null, label: m.intl.string(m.t.IfgLzT), disabled: null == t },
+                                        ...d.map((e) => ({ folderId: e.id, label: (0, y.M)(e), disabled: e.id === t })),
                                     ]
                                   : [],
                           placements:
                               null != a
                                   ? {
-                                        firstLabel: j.intl.string(null != l ? j.t["9qpRrY"] : j.t.IMqgs9),
-                                        lastLabel: j.intl.string(null != l ? j.t.ytlaCY : j.t["8fQe3x"]),
+                                        firstLabel: m.intl.string(null != l ? m.t["9qpRrY"] : m.t.IMqgs9),
+                                        lastLabel: m.intl.string(null != l ? m.t.ytlaCY : m.t["8fQe3x"]),
                                         isFirst: a.first === n,
                                         isLast: a.last === n,
-                                        moveFirst: () => (0, y.A)(e, a.first.id, !1),
-                                        moveLast: () => (0, y.A)(e, a.last.id, !0),
+                                        moveFirst: () => (0, D.A)(e, a.first.id, !1),
+                                        moveLast: () => (0, D.A)(e, a.last.id, !0),
                                     }
                                   : null,
                           moveTo: function (i) {
                               if (null == i) {
                                   if (null == t) return;
-                                  (0, y.A)(e, t, !0);
+                                  (0, D.A)(e, t, !0);
                                   return;
                               }
-                              (0, y.A)(e, i, !0, !0);
+                              (0, D.A)(e, i, !0, !0);
                           },
                       };
             })(e);
@@ -437,29 +438,30 @@ function ee(e) {
                     }),
                 ],
             });
-        })(et),
-        e_ = (0, Y.E)(ee, u.A.CONTEXT_MENU),
-        eS = (0, Y.c)(ee);
-    function ex() {
+        })(el),
+        eS = ei.features.has(P.GuildFeatures.HUB),
+        ex = (0, k.E)(ei, u.A.CONTEXT_MENU, { isEligible: !(0, A.ai)(el) && el !== P.gNP }),
+        eL = (0, k.c)(ei);
+    function eN() {
         (0, a.mM)(async () => {
             let { default: e } = await n.e(553485).then(n.bind(n, 20508));
-            return (i) => (0, t.jsx)(e, { ...i, guild: ee });
+            return (i) => (0, t.jsx)(e, { ...i, guild: ei });
         });
     }
-    return ee.features.has(U.GuildFeatures.HUB)
+    return eS
         ? (0, t.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
-              "aria-label": j.intl.string(j.t.HpQykc),
-              onSelect: ei,
+              "aria-label": m.intl.string(m.t.HpQykc),
+              onSelect: en,
               children: [
                   (0, t.jsxs)(o.rX, {
                       children: [
-                          es,
+                          er,
                           (0, t.jsx)(o.Dr, {
                               id: "privacy",
-                              label: j.intl.string(j.t.IlFwwR),
+                              label: m.intl.string(m.t.IlFwwR),
                               action: () =>
                                   (0, a.mM)(async () => {
                                       let { default: e } = await Promise.all([
@@ -474,43 +476,46 @@ function ee(e) {
                                           n.e(354565),
                                           n.e(855979),
                                       ]).then(n.bind(n, 632038));
-                                      return (i) => (0, t.jsx)(e, { ...i, guild: ee });
+                                      return (i) => (0, t.jsx)(e, { ...i, guild: ei });
                                   }),
                           }),
-                          ec,
+                          eu,
                       ],
                   }),
-                  el
+                  es
                       ? null
-                      : (0, t.jsx)(o.rX, {
-                            children: (0, t.jsx)(o.Dr, {
-                                id: "leave-guild",
-                                label: j.intl.string(j.t.Dv8gFT),
-                                action: ex,
-                                color: "danger",
-                            }),
+                      : (0, t.jsxs)(o.rX, {
+                            children: [
+                                ex,
+                                (0, t.jsx)(o.Dr, {
+                                    id: "leave-guild",
+                                    label: m.intl.string(m.t.Dv8gFT),
+                                    action: eN,
+                                    color: "danger",
+                                }),
+                            ],
                         }),
-                  (0, t.jsx)(o.rX, { children: eA }),
+                  (0, t.jsx)(o.rX, { children: eE }),
               ],
           })
         : (0, t.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
-              "aria-label": j.intl.string(j.t.HpQykc),
-              onSelect: ei,
+              "aria-label": m.intl.string(m.t.HpQykc),
+              onSelect: en,
               children: [
-                  (0, t.jsx)(o.rX, { children: eE }),
-                  (0, t.jsx)(o.rX, { children: es }),
-                  (0, t.jsxs)(o.rX, { children: [ea, __OVERLAY__ ? null : ed, er, eb] }),
+                  (0, t.jsx)(o.rX, { children: eb }),
+                  (0, t.jsx)(o.rX, { children: er }),
+                  (0, t.jsxs)(o.rX, { children: [ed, __OVERLAY__ ? null : eo, ea, ef] }),
                   (0, t.jsxs)(o.rX, {
                       children: [
-                          en ? null : eo,
+                          et ? null : ec,
                           __OVERLAY__
                               ? null
                               : (0, t.jsx)(o.Dr, {
                                     id: "privacy",
-                                    label: j.intl.string(j.t.BayiAo),
+                                    label: m.intl.string(m.t.BayiAo),
                                     action: () =>
                                         (0, a.mM)(async () => {
                                             let { default: e } = await Promise.all([
@@ -525,33 +530,33 @@ function ee(e) {
                                                 n.e(354565),
                                                 n.e(855979),
                                             ]).then(n.bind(n, 632038));
-                                            return (i) => (0, t.jsx)(e, { ...i, guild: ee });
+                                            return (i) => (0, t.jsx)(e, { ...i, guild: ei });
                                         }),
                                 }),
-                          ec,
+                          eu,
                       ],
                   }),
-                  (0, t.jsxs)(o.rX, { children: [eu, eg] }),
-                  (0, t.jsx)(o.rX, { children: eh }),
+                  (0, t.jsxs)(o.rX, { children: [eg, eA] }),
+                  (0, t.jsx)(o.rX, { children: e_ }),
                   (0, t.jsxs)(o.rX, {
                       children: [
-                          e_,
-                          ef,
-                          !el &&
+                          ex,
+                          eh,
+                          !es &&
                               (0, t.jsx)(o.Dr, {
                                   id: "leave-guild",
-                                  label: j.intl.string(j.t.J2TBi3),
-                                  action: ex,
+                                  label: m.intl.string(m.t.J2TBi3),
+                                  action: eN,
                                   color: "danger",
                               }),
                       ],
                   }),
-                  (0, t.jsx)(o.rX, { children: eS }),
-                  (0, t.jsx)(o.rX, { children: eA }),
+                  (0, t.jsx)(o.rX, { children: eL }),
+                  (0, t.jsx)(o.rX, { children: eE }),
               ],
           });
 }
-function ei(e) {
+function en(e) {
     let { analyticsLocations: i } = (0, g.Ay)(u.A.CONTEXT_MENU);
-    return (0, t.jsx)(g.f5, { value: i, children: (0, t.jsx)(ee, { ...e }) });
+    return (0, t.jsx)(g.f5, { value: i, children: (0, t.jsx)(ei, { ...e }) });
 }

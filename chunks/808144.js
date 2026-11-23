@@ -30,8 +30,8 @@ var l = n(477900),
     U = n(826603),
     T = n(899360),
     _ = n(989683),
-    M = n(752222),
-    w = n(792996),
+    w = n(752222),
+    M = n(792996),
     k = n(435558),
     N = n.n(k),
     H = n(534890),
@@ -105,8 +105,8 @@ let eD = t.memo(function (e) {
         eU = (0, d.bG)([eo.A], () => eo.A.isLurking(ef.id), [ef.id]),
         eT = (0, d.bG)([eI.Ay], () => eI.Ay.isCurrentUserGuest(ef.id)),
         e_ = (0, ei.A)(ef.id, !0),
-        eM = (0, E.Ay)(ef),
-        ew = (0, q.A)({ source: eh.PE1.GUILD_HEADER, guild: ef }),
+        ew = (0, E.Ay)(ef),
+        eM = (0, q.A)({ source: eh.PE1.GUILD_HEADER, guild: ef }),
         ek = (function (e) {
             let i = (0, _.Ay)(e, "guild_header_popout"),
                 { data: t } = (0, U.c)(i ? e.id : null),
@@ -115,7 +115,7 @@ let eD = t.memo(function (e) {
             let o = null != t && (0, L.A)(t);
             return (0, l.jsx)(I.Dr, {
                 id: "invite-to-linked-game-organization",
-                label: w.intl.formatToPlainString(M.default.EnTIIr, { displayNoun: a ?? "other" }),
+                label: M.intl.formatToPlainString(w.default.EnTIIr, { displayNoun: a ?? "other" }),
                 subtext: o ? (0, T.zA)(t, a) : void 0,
                 disabled: o,
                 icon: S.LinkIcon,
@@ -156,7 +156,7 @@ let eD = t.memo(function (e) {
             k && eD
                 ? (0, l.jsx)(I.Dr, {
                       id: "active-threads",
-                      label: w.intl.string(w.t.TM6err),
+                      label: M.intl.string(M.t.TM6err),
                       icon: H.ChatIcon,
                       leadingAccessory: { type: "icon", icon: H.ChatIcon },
                       action: function () {
@@ -191,7 +191,7 @@ let eD = t.memo(function (e) {
                 : null),
         eW = (0, l.jsx)(I.Dr, {
             id: "application-directory",
-            label: w.intl.string(w.t.AKcFUj),
+            label: M.intl.string(M.t.AKcFUj),
             icon: F.AppsIcon,
             leadingAccessory: { type: "icon", icon: F.AppsIcon },
             action: function () {
@@ -202,13 +202,13 @@ let eD = t.memo(function (e) {
             },
         }),
         eR = (0, z.A)(ef, !0),
-        eJ = (0, K.E)(ef, G.A.GUILD_HEADER, !0),
+        eJ = (0, K.E)(ef, G.A.GUILD_HEADER, { isEligible: !eO && !eB, showIcon: !0 }),
         eY = (function (e) {
             let { guildFriendsEnabled: i } = V.useConfig({ location: "useFriendsItem" });
             return i
                 ? (0, l.jsx)(I.Dr, {
                       id: "friends",
-                      label: w.intl.string(w.t.kYxEcH),
+                      label: M.intl.string(M.t.kYxEcH),
                       icon: Q.FriendsIcon,
                       leadingAccessory: { type: "icon", icon: Q.FriendsIcon },
                       action: function () {
@@ -244,11 +244,12 @@ let eD = t.memo(function (e) {
               navId: "guild-header-popout",
               variant: "fixed",
               onClose: ej,
-              "aria-label": w.intl.string(w.t.HpQykc),
+              "aria-label": M.intl.string(M.t.HpQykc),
               children: [
+                  eJ,
                   (0, l.jsx)(I.Dr, {
                       id: "leave-guild",
-                      label: w.intl.string(w.t.J2TBi3),
+                      label: M.intl.string(M.t.J2TBi3),
                       icon: y.DoorExitIcon,
                       leadingAccessory: { type: "icon", icon: y.DoorExitIcon },
                       action: () => {
@@ -265,7 +266,7 @@ let eD = t.memo(function (e) {
                 navId: "favorites-header-popout",
                 variant: "fixed",
                 onClose: ej,
-                "aria-label": w.intl.string(w.t.HpQykc),
+                "aria-label": M.intl.string(M.t.HpQykc),
                 children: eQ,
             })
           : eH
@@ -275,14 +276,14 @@ let eD = t.memo(function (e) {
                   navId: "guild-header-popout",
                   variant: "fixed",
                   onClose: ej,
-                  "aria-label": w.intl.string(w.t.HpQykc),
+                  "aria-label": M.intl.string(M.t.HpQykc),
                   children: [
                       (0, l.jsxs)(I.rX, {
                           children: [
                               ev
                                   ? (0, l.jsx)(I.Dr, {
                                         id: "settings",
-                                        label: w.intl.string(w.t["154/bL"]),
+                                        label: M.intl.string(M.t["154/bL"]),
                                         icon: A.SettingsIcon,
                                         leadingAccessory: { type: "icon", icon: A.SettingsIcon },
                                         action: () => {
@@ -290,10 +291,10 @@ let eD = t.memo(function (e) {
                                         },
                                     })
                                   : null,
-                              ew,
+                              eM,
                               (0, l.jsx)(I.Dr, {
                                   id: "privacy",
-                                  label: w.intl.string(w.t.BayiAo),
+                                  label: M.intl.string(M.t.BayiAo),
                                   icon: p.ShieldIcon,
                                   leadingAccessory: { type: "icon", icon: p.ShieldIcon },
                                   action: () =>
@@ -316,15 +317,18 @@ let eD = t.memo(function (e) {
                       }),
                       eL
                           ? null
-                          : (0, l.jsx)(I.rX, {
-                                children: (0, l.jsx)(I.Dr, {
-                                    id: "leave",
-                                    label: w.intl.string(w.t.Dv8gFT),
-                                    icon: y.DoorExitIcon,
-                                    leadingAccessory: { type: "icon", icon: y.DoorExitIcon },
-                                    color: "danger",
-                                    action: e$,
-                                }),
+                          : (0, l.jsxs)(I.rX, {
+                                children: [
+                                    eJ,
+                                    (0, l.jsx)(I.Dr, {
+                                        id: "leave",
+                                        label: M.intl.string(M.t.Dv8gFT),
+                                        icon: y.DoorExitIcon,
+                                        leadingAccessory: { type: "icon", icon: y.DoorExitIcon },
+                                        color: "danger",
+                                        action: e$,
+                                    }),
+                                ],
                             }),
                   ],
               })
@@ -336,13 +340,13 @@ let eD = t.memo(function (e) {
                     navId: "guild-header-popout",
                     variant: "fixed",
                     onClose: ej,
-                    "aria-label": w.intl.string(w.t.HpQykc),
+                    "aria-label": M.intl.string(M.t.HpQykc),
                     children: [
                         (0, l.jsxs)(I.rX, {
                             children: [
                                 (0, l.jsx)(I.Dr, {
                                     id: "premium-subscribe",
-                                    label: w.intl.string(w.t.VJEVbu),
+                                    label: M.intl.string(M.t.VJEVbu),
                                     icon: b.BoostGemIcon,
                                     leadingAccessory: { type: "icon", icon: b.BoostGemIcon },
                                     action: () => {
@@ -355,7 +359,7 @@ let eD = t.memo(function (e) {
                                 eV
                                     ? (0, l.jsx)(I.sL, {
                                           id: "use-server-theme",
-                                          label: w.intl.string(w.t.CFzDOG),
+                                          label: M.intl.string(M.t.CFzDOG),
                                           leadingAccessory: { type: "icon", icon: c.PaintPaletteIcon },
                                           checked: ez === s.tI.GUILD,
                                           action: eK,
@@ -364,7 +368,7 @@ let eD = t.memo(function (e) {
                                 eZ &&
                                     (0, l.jsx)(I.Dr, {
                                         id: "guild-tag",
-                                        label: w.intl.string(ex.default.mf2OwH),
+                                        label: M.intl.string(ex.default.mf2OwH),
                                         leadingAccessory: {
                                             type: "guildTag",
                                             element: (0, l.jsx)(ea.o9, {
@@ -402,12 +406,12 @@ let eD = t.memo(function (e) {
                         }),
                         (0, l.jsxs)(I.rX, {
                             children: [
-                                ew,
+                                eM,
                                 ek,
                                 ev
                                     ? (0, l.jsx)(I.Dr, {
                                           id: "settings",
-                                          label: w.intl.string(w.t["154/bL"]),
+                                          label: M.intl.string(M.t["154/bL"]),
                                           icon: A.SettingsIcon,
                                           leadingAccessory: { type: "icon", icon: A.SettingsIcon },
                                           action: () => {
@@ -418,7 +422,7 @@ let eD = t.memo(function (e) {
                                 eS
                                     ? (0, l.jsx)(I.Dr, {
                                           id: "insights",
-                                          label: w.intl.string(w.t["0wWfUG"]),
+                                          label: M.intl.string(M.t["0wWfUG"]),
                                           icon: h.AnalyticsIcon,
                                           leadingAccessory: { type: "icon", icon: h.AnalyticsIcon },
                                           action: () => en.A.open(ef.id, eh.BEX.ANALYTICS),
@@ -429,7 +433,7 @@ let eD = t.memo(function (e) {
                                           children: [
                                               (0, l.jsx)(I.Dr, {
                                                   id: "create-channel",
-                                                  label: w.intl.string(w.t["fUYU+j"]),
+                                                  label: M.intl.string(M.t["fUYU+j"]),
                                                   icon: x.CirclePlusIcon,
                                                   leadingAccessory: { type: "icon", icon: x.CirclePlusIcon },
                                                   action: () =>
@@ -465,7 +469,7 @@ let eD = t.memo(function (e) {
                                               }),
                                               (0, l.jsx)(I.Dr, {
                                                   id: "create-category",
-                                                  label: w.intl.string(w.t["ISN+NM"]),
+                                                  label: M.intl.string(M.t["ISN+NM"]),
                                                   icon: D.FolderPlusIcon,
                                                   leadingAccessory: { type: "icon", icon: D.FolderPlusIcon },
                                                   action: () =>
@@ -505,7 +509,7 @@ let eD = t.memo(function (e) {
                                 e_,
                                 eX,
                                 eW,
-                                eM,
+                                ew,
                                 eY,
                             ],
                         }),
@@ -514,7 +518,7 @@ let eD = t.memo(function (e) {
                                 eF,
                                 (0, l.jsx)(I.Dr, {
                                     id: "notifications",
-                                    label: w.intl.string(w.t.h850Ss),
+                                    label: M.intl.string(M.t.h850Ss),
                                     icon: f.BellIcon,
                                     leadingAccessory: { type: "icon", icon: f.BellIcon },
                                     action: () =>
@@ -536,7 +540,7 @@ let eD = t.memo(function (e) {
                                 }),
                                 (0, l.jsx)(I.Dr, {
                                     id: "privacy",
-                                    label: w.intl.string(w.t.BayiAo),
+                                    label: M.intl.string(M.t.BayiAo),
                                     icon: p.ShieldIcon,
                                     leadingAccessory: { type: "icon", icon: p.ShieldIcon },
                                     action: () =>
@@ -561,7 +565,7 @@ let eD = t.memo(function (e) {
                                 eN,
                                 (0, l.jsx)(I.sL, {
                                     id: "hide-muted-channels",
-                                    label: w.intl.string(w.t.UwOLJO),
+                                    label: M.intl.string(M.t.UwOLJO),
                                     leadingAccessory: { type: "icon", icon: j.EyeSlashIcon },
                                     checked: eE,
                                     action: () => m.A.toggleCollapseGuild(ef.id),
@@ -574,7 +578,7 @@ let eD = t.memo(function (e) {
                                 eC && ef.features.has(eh.GuildFeatures.COMMUNITY)
                                     ? (0, l.jsx)(I.Dr, {
                                           id: "report-raid",
-                                          label: w.intl.string(w.t.cswId3),
+                                          label: M.intl.string(M.t.cswId3),
                                           icon: p.ShieldIcon,
                                           leadingAccessory: { type: "icon", icon: p.ShieldIcon },
                                           color: "danger",
@@ -586,7 +590,7 @@ let eD = t.memo(function (e) {
                                     ? null
                                     : (0, l.jsx)(I.Dr, {
                                           id: "leave",
-                                          label: w.intl.string(w.t.J2TBi3),
+                                          label: M.intl.string(M.t.J2TBi3),
                                           icon: y.DoorExitIcon,
                                           leadingAccessory: { type: "icon", icon: y.DoorExitIcon },
                                           color: "danger",

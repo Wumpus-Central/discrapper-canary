@@ -16,28 +16,26 @@ var s = i(260509),
     u = i(287809),
     g = i(792996);
 function v(e, n) {
-    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return !(function (e) {
-        let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            { enabled: i } = d.useConfig({ location: e }, { autoTrackExposure: n });
-        return n && i;
-    })(
-        n,
-        !(0, t.bG)(
+    let { isEligible: i = !0, showIcon: c = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        v = (0, t.bG)(
             [u.default],
             () => {
                 let n = u.default.getCurrentUser();
                 return null != n && (0, s.bM)(e, n);
             },
             [e],
-        ),
-    )
+        );
+    return !(function (e) {
+        let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            { enabled: i } = d.useConfig({ location: e }, { autoTrackExposure: n });
+        return n && i;
+    })(n, i && !v)
         ? null
         : (0, l.jsx)(o.Dr, {
               id: "report-guild",
               label: g.intl.string(g.t.Aen9eh),
-              icon: i ? r.FlagIcon : void 0,
-              leadingAccessory: i ? { type: "icon", icon: r.FlagIcon } : void 0,
+              icon: c ? r.FlagIcon : void 0,
+              leadingAccessory: c ? { type: "icon", icon: r.FlagIcon } : void 0,
               action: () => (0, a.b1)(e, n),
           });
 }
