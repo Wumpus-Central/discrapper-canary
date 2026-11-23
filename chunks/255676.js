@@ -546,7 +546,7 @@ function e8(e, t, n) {
         ((e.style.top = `${i.top - t}px`), (e.style.bottom = "auto"));
     } else (e.style.removeProperty("top"), e.style.removeProperty("bottom"));
 }
-function e7(e) {
+function e4(e) {
     let { discoverButtonRef: t, scrollerRef: n, onClick: a, onRequestClose: s } = e,
         {
             anchorRef: l,
@@ -617,7 +617,7 @@ function e7(e) {
         ],
     });
 }
-var e4 = n(633965),
+var e7 = n(633965),
     e9 = n(857071),
     te = n(851109),
     tt = n(72314),
@@ -926,7 +926,7 @@ class tX extends r.PureComponent {
         null != r
             ? (0, tD.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e(339715),
+                      n.e(848798),
                       n.e(924697),
                       n.e(24312),
                       n.e(622936),
@@ -1170,8 +1170,8 @@ var t2 = n(245604),
     t6 = n(272613),
     t5 = n(398884),
     t8 = n(772366),
-    t7 = n(728321),
-    t4 = n(260509),
+    t4 = n(728321),
+    t7 = n(260509),
     t9 = n(531053),
     ne = n(819638),
     nt = n(260727);
@@ -1191,7 +1191,7 @@ function na(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, _.yK)([tr.A], () => tr.A.getGuildsArray()),
         s = (0, _.bG)([eH.default], () => eH.default.getCurrentUser()),
-        l = r.useMemo(() => a.some((e) => (0, t4.bM)(e, s)), [a, s]),
+        l = r.useMemo(() => a.some((e) => (0, t7.bM)(e, s)), [a, s]),
         o = (0, y.re)((e) => (0, y.fD)(e, ne.fc)),
         { analyticsLocations: d } = (0, O.Ay)(),
         c = a.length >= 100 && !(0, t5.Om)(s);
@@ -1207,7 +1207,7 @@ function na(e) {
     let E = { showPill: !1, id: "create-join-button", selected: o, onContextMenu: ni, icon: t2.CirclePlusIcon };
     return (0, i.jsx)("div", {
         className: nt.Uq,
-        children: (0, i.jsxs)(t7.A, {
+        children: (0, i.jsxs)(t4.A, {
             tutorialId: l ? "create-more-servers" : "create-first-server",
             inlineSpecs: nn,
             position: "right",
@@ -1402,7 +1402,7 @@ function nH(e) {
     return (0, i.jsx)("div", {
         className: nB.Uq,
         "data-guilds-bar-home": !0,
-        children: (0, i.jsx)(t7.A, {
+        children: (0, i.jsx)(t4.A, {
             inlineSpecs: nV,
             tutorialId: "friends-list",
             position: "right",
@@ -1522,8 +1522,8 @@ function n5(e) {
     );
 }
 var n8 = n(36412),
-    n7 = n(283001),
-    n4 = n(354583);
+    n4 = n(283001),
+    n7 = n(354583);
 let n9 = r.memo(function (e) {
     let t,
         a,
@@ -1550,7 +1550,7 @@ let n9 = r.memo(function (e) {
             (o = !1),
             (d = !1),
             (c = (0, _.bG)([tR.A], () => tR.A.getChannelId())),
-            (E = null != (u = (0, n4.A)()?.guild_id) && a.includes(u)),
+            (E = null != (u = (0, n7.A)()?.guild_id) && a.includes(u)),
             (A = (0, _.bG)([eT.A], () => null != c && eT.A.hasVideo(c), [c])),
             (f = (0, _.bG)([ep.A], () => ep.A.getCurrentUserActiveStream())),
             s && ((l = !A), (o = A), (d = null != f && null != f.guildId && a.includes(f.guildId))),
@@ -1582,7 +1582,7 @@ let n9 = r.memo(function (e) {
             },
             [p, m, g, D, v],
         );
-    return (0, i.jsx)(n7.A, {
+    return (0, i.jsx)(n4.A, {
         ...I,
         folderNode: h,
         expanded: C,
@@ -2203,7 +2203,7 @@ function iV(e, t) {
             n.e(459257),
             n.e(924697),
             n.e(549009),
-            n.e(339715),
+            n.e(848798),
             n.e(985301),
             n.e(981059),
             n.e(631323),
@@ -2232,8 +2232,7 @@ function iV(e, t) {
             n.e(726399),
             n.e(424216),
             n.e(842429),
-            n.e(304350),
-            n.e(22865),
+            n.e(921596),
             n.e(173896),
             n.e(57358),
             n.e(580305),
@@ -2625,15 +2624,17 @@ function iV(e, t) {
             n.e(184621),
             n.e(466147),
             n.e(462984),
+            n.e(134504),
             n.e(369501),
             n.e(303710),
             n.e(256373),
             n.e(636002),
             n.e(50342),
+            n.e(248985),
             n.e(10622),
             n.e(409391),
             n.e(645830),
-            n.e(134504),
+            n.e(553683),
             n.e(810262),
             n.e(479971),
             n.e(995602),
@@ -2643,7 +2644,6 @@ function iV(e, t) {
             n.e(838336),
             n.e(115368),
             n.e(343233),
-            n.e(248985),
             n.e(96200),
             n.e(569468),
             n.e(836681),
@@ -2651,7 +2651,6 @@ function iV(e, t) {
             n.e(756684),
             n.e(419690),
             n.e(583827),
-            n.e(553683),
             n.e(495748),
             n.e(138728),
             n.e(708364),
@@ -2872,7 +2871,7 @@ let iH = r.memo(function (e) {
                   onMouseDown: J,
                   onContextMenu: ee,
                   onKeyDown: et,
-                  icon: (0, t4.Iv)(d, 2 * el, j && u, !0),
+                  icon: (0, t7.Iv)(d, 2 * el, j && u, !0),
                   selected: _ || j,
                   ...B,
                   "aria-setsize": y,
@@ -2898,7 +2897,7 @@ let iH = r.memo(function (e) {
                           onMouseDown: J,
                           onContextMenu: ee,
                           onKeyDown: et,
-                          icon: (0, t4.Iv)(d, 2 * el, j && u, !0),
+                          icon: (0, t7.Iv)(d, 2 * el, j && u, !0),
                           selected: _ || j,
                           ...B,
                           "aria-setsize": y,
@@ -3146,7 +3145,7 @@ function i6(e) {
         ? null
         : (0, i.jsx)(i3, {
               onActivate: t,
-              children: (0, i.jsx)(n7.A, {
+              children: (0, i.jsx)(n4.A, {
                   folderNode: c,
                   expanded: n,
                   selected: u,
@@ -3185,7 +3184,7 @@ function i5(e) {
         : (0, i.jsx)(iH, { guildNode: n, guild: a, animatable: s, selected: l, draggable: !1, mediaState: o });
 }
 var i8 = n(987566);
-let i7 = (0, el.Fe)({
+let i4 = (0, el.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e(185830),
@@ -3234,7 +3233,7 @@ let i7 = (0, el.Fe)({
         webpackId: 489555,
         name: "NotificationsInboxButton",
     }),
-    i4 = (0, ts.uF)() ? 4 : 12 * !(0, ts.cX)();
+    i7 = (0, ts.uF)() ? 4 : 12 * !(0, ts.cX)();
 function i9(e, t, n) {
     let i = e + t,
         r = 2 + t;
@@ -3243,7 +3242,7 @@ function i9(e, t, n) {
         iconTotalSize: i,
         badgeVisibleBuffer: i - 16,
         separatorSize: r,
-        heightBeforeGuilds: i4 + r + n * i,
+        heightBeforeGuilds: i7 + r + n * i,
         bottomInset: 16,
     };
 }
@@ -3266,7 +3265,7 @@ class rt {
             (this.setIsScrolledToBottom = n),
             (this.onScroll = i),
             (this.sizes = r),
-            (0, e4.u9)(this.getVisibleGuildIds));
+            (0, e7.u9)(this.getVisibleGuildIds));
     }
     setResizeObserver = () => {
         let e = this.scrollerRef.current?.getScrollerNode();
@@ -3373,7 +3372,7 @@ function rn(e) {
         children: [
             (0, i.jsx)(nj, {}),
             s ? null : l,
-            c === te.RK.SERVER_RAIL_TOP && (0, i.jsx)(i7, {}),
+            c === te.RK.SERVER_RAIL_TOP && (0, i.jsx)(i4, {}),
             s ? (0, i.jsx)(eZ, {}) : null,
             s ? l : null,
             !t && (0, i.jsx)(tq, {}),
@@ -3624,13 +3623,13 @@ function rr(e) {
                                     (0, i.jsxs)("div", {
                                         children: [
                                             (0, i.jsx)(nY, { fullWidth: !0 }),
-                                            (0, i.jsx)("div", { className: i8.JU, children: (0, i.jsx)(i7, {}) }),
+                                            (0, i.jsx)("div", { className: i8.JU, children: (0, i.jsx)(i4, {}) }),
                                         ],
                                     }),
                             ],
                         }),
                         eo && !D
-                            ? (0, i.jsx)(e7, {
+                            ? (0, i.jsx)(e4, {
                                   discoverButtonRef: el,
                                   scrollerRef: er.scrollerRef,
                                   onClick: ed,

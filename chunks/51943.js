@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(3026),
     a = n(462887),
     o = n(778712),
-    u = n(939249),
-    d = n(664343),
+    d = n(939249),
+    u = n(664343),
     c = n(97808),
     g = n(834730),
     m = n(442433),
@@ -27,7 +27,7 @@ n.d(
                 S = t.hasAvatarForGuild(j.id),
                 N = l.useId(),
                 k = A.intl.formatToPlainString(A.t.Ce2iXp, { guildName: j.name });
-            return (0, i.jsxs)(u.D, {
+            return (0, i.jsxs)(d.D, {
                 focusProps: E === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: I.nM,
                 "aria-label": k,
@@ -178,8 +178,7 @@ n.d(
                             n.e(726399),
                             n.e(424216),
                             n.e(842429),
-                            n.e(304350),
-                            n.e(22865),
+                            n.e(921596),
                             n.e(173896),
                             n.e(57358),
                             n.e(580305),
@@ -650,7 +649,7 @@ n.d(
                         badgeStrokeColor: (0, a.M)(C)
                             ? r.A.unsafe_rawColors.PRIMARY_600.css
                             : r.A.unsafe_rawColors.WHITE.css,
-                        badgeTooltipColor: d.oM.PRIMARY,
+                        badgeTooltipColor: u.oM.PRIMARY,
                         badgeTooltipDelay: 300,
                         size: f.Ay.Sizes.MEDIUM,
                         active: !0,

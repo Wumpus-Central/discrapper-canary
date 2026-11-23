@@ -193,7 +193,7 @@ function O(e) {
                         if (null == e.channel || null == e.user) return;
                         (0, h.L3)(e.event, async () => {
                             let { default: n } = await Promise.all([
-                                t.e(339715),
+                                t.e(848798),
                                 t.e(924697),
                                 t.e(24312),
                                 t.e(622936),
