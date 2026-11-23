@@ -12,8 +12,8 @@ var i,
     E = a(116281),
     A = a(667049),
     I = a(71393),
-    f = a(287809),
-    _ = a(246338),
+    _ = a(287809),
+    f = a(499466),
     g = a(73153),
     R = a(46653),
     L = a(951178),
@@ -39,7 +39,7 @@ async function T() {
 let S = new n.A(3e4, 3e5);
 function N() {
     let t, e;
-    ((t = (0, s.bG)([I.A, u.Bt], () => (0, _.XF)(I.A.getGuildsArray(), "useConjureServerWidgetOffers"))),
+    ((t = (0, s.bG)([I.A, u.Bt], () => (0, f.d_)(I.A.getGuildsArray(), "useConjureServerWidgetOffers"))),
         (e = (0, s.bG)([h.A], () => h.A.getFetchState())),
         l.useEffect(() => {
             ("success" === e && S.succeed(),
@@ -72,7 +72,7 @@ function N() {
             }
         );
     }, [a]);
-    let i = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
+    let i = (0, s.bG)([_.default], () => _.default.getCurrentUser()),
         n = (0, A.A)(i?.id),
         g = (0, s.bG)([d.A], () => d.A.getAllConfigsByApplication()),
         R = (0, s.bG)([I.A], () => I.A.getGuilds());

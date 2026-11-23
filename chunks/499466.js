@@ -1,4 +1,4 @@
-n.d(t, { OC: () => u, zN: () => E, L0: () => c, cx: () => _, TW: () => A, m0: () => d });
+n.d(t, { d_: () => _, OC: () => u, zN: () => A, L0: () => c, cx: () => E, TW: () => f, m0: () => d });
 var i = n(855986),
     r = n(945810),
     a = n(71393);
@@ -46,13 +46,17 @@ function u(e, t) {
     return !1;
 }
 function _(e, t) {
-    return o(l.getConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }), t, !1);
-}
-function E(e) {
-    for (let t of Object.values(a.A.getGuilds())) if (_(t.id, e)) return !0;
+    for (let n of e) if (l.getConfig({ guildId: n.id, location: t }).enabled) return !0;
     return !1;
 }
+function E(e, t) {
+    return o(l.getConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }), t, !1);
+}
 function A(e) {
+    for (let t of Object.values(a.A.getGuilds())) if (E(t.id, e)) return !0;
+    return !1;
+}
+function f(e) {
     let { autoTrackExposure: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (0, i.bG)([a.A, r.Bt], () => (t ? u(Object.values(a.A.getGuilds()), e) : E(e)), [e, t]);
+    return (0, i.bG)([a.A, r.Bt], () => (t ? u(Object.values(a.A.getGuilds()), e) : A(e)), [e, t]);
 }
