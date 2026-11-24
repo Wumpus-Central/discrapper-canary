@@ -307,8 +307,8 @@ let e2 = [
     e1("open-zero-stats", e0.default.BYW9oX, e$.ZERO_STATS),
 ];
 e1("open-unavailable", e0.default["58TARv"], e$.UNAVAILABLE);
-let e6 = ["reset-all", "reset-progress", "reset-character"];
-var e3 = n(852717),
+let e3 = ["reset-all", "reset-progress", "reset-character"];
+var e6 = n(852717),
     e5 = n(641214);
 function e8() {
     return (0, i.jsx)(eL.y, { type: eL.t.SPINNING_CIRCLE_SIMPLE, className: e5.u1, itemClassName: e5.$N });
@@ -321,7 +321,7 @@ function e7(e) {
                 case "off":
                     return [];
                 case "reset_only":
-                    return e2.filter((e) => e6.includes(e.id));
+                    return e2.filter((e) => e3.includes(e.id));
                 case "all":
                     return e2;
             }
@@ -329,8 +329,8 @@ function e7(e) {
         r = (0, c.bG)([eK.A], () => eK.A.isFetching);
     return (0, i.jsx)(eW, {
         icon: r ? e8 : ew.ExperimentalCheckpointIcon,
-        label: eB.intl.string(e3.default["8hclXY"]),
-        sublabel: (0, i.jsx)("span", { className: e5.$B, children: eB.intl.string(e3.default.BFc4lY) }),
+        label: eB.intl.string(e6.default["8hclXY"]),
+        sublabel: (0, i.jsx)("span", { className: e5.$B, children: eB.intl.string(e6.default.BFc4lY) }),
         onClick: async function () {
             (await (0, eY.D)("user_profile_account_popout"), t());
         },
@@ -686,7 +686,7 @@ var tG = n(971217),
     t0 = n(270060),
     t1 = n(105909),
     t2 = n(682901);
-function t6() {
+function t3() {
     let e = (0, t1.Xb)(),
         t = (0, t0.h)();
     if (null == e || !t) return null;
@@ -700,7 +700,7 @@ function t6() {
     }
     return null;
 }
-let t3 = {
+let t6 = {
         [t2.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
         [t2.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
         [t2.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
@@ -750,10 +750,10 @@ function t9() {
     let e = (0, c.bG)([tQ.Ay], () => tQ.Ay.useReducedMotion),
         t = (0, t$.A)((e) => e.shouldRenderTenureLevelUp),
         n = (function () {
-            let e = t6(),
+            let e = t3(),
                 t = (0, tX.M)((0, tZ.Ay)());
             if (null == e) return null;
-            let n = t3[e],
+            let n = t6[e],
                 i = t5[e],
                 l = {
                     currentBadge: (0, tJ.e0)(e),
@@ -763,7 +763,7 @@ function t9() {
                 r = t2.sp.indexOf(e);
             if (r > 0) {
                 let e = t2.sp[r - 1],
-                    n = t3[e];
+                    n = t6[e];
                 ((l.prevBadge = (0, tJ.e0)(e)), (l.prevBadgeTextGradient = t ? n?.dark : n?.light));
             }
             return l;
@@ -1044,8 +1044,8 @@ var nL = n(290863),
     n0 = n(429913),
     n1 = n(334074),
     n2 = n(633075),
-    n6 = n(667049),
-    n3 = n(46653),
+    n3 = n(667049),
+    n6 = n(46653),
     n5 = n(90165),
     n8 = n(403362),
     n7 = n(49999),
@@ -1053,15 +1053,15 @@ var nL = n(290863),
 function n4(e) {
     let { targetElementRef: t, onClose: r } = e,
         [a, s] = l.useState(!1),
-        o = (0, c.bG)([n3.default], () => n3.default.getId()),
+        o = (0, c.bG)([n6.default], () => n6.default.getId()),
         { eligibleApplications: u, markAsDismissed: m } = (function () {
             let e = (0, c.yK)([nZ.A], () => nZ.A.getFeaturedApplicationIds());
             ((0, nJ.A)(e),
                 l.useEffect(() => {
                     (0, nX.X)();
                 }, []));
-            let t = (0, c.bG)([n3.default], () => n3.default.getId()),
-                n = (0, n6.A)(t),
+            let t = (0, c.bG)([n6.default], () => n6.default.getId()),
+                n = (0, n3.A)(t),
                 i = l.useMemo(() => n.filter((e) => e instanceof n2.R), [n]),
                 r = (0, n0.A)(e),
                 a = l.useMemo(() => r.filter(n8.Vq), [r]),
@@ -2283,14 +2283,14 @@ var iJ = n(45780),
     i0 = n(696451),
     i1 = n(71393),
     i2 = n(685073),
-    i6 = n(73153);
-let i3 = { lastSeenInfos: {} },
-    i5 = i3;
+    i3 = n(73153);
+let i6 = { lastSeenInfos: {} },
+    i5 = i6;
 class i8 extends c.Ay.PersistedStore {
     static displayName = "GuildTagChangedCoachmarkStore";
     static persistKey = "GuildTagChangedCoachmarkStore";
     initialize(e) {
-        i5 = e ?? i3;
+        i5 = e ?? i6;
     }
     getState() {
         return i5;
@@ -2299,13 +2299,13 @@ class i8 extends c.Ay.PersistedStore {
         return i5.lastSeenInfos[e] ?? null;
     }
 }
-let i7 = new i8(i6.h, {
+let i7 = new i8(i3.h, {
     GUILD_TAG_CHANGED_COACHMARK_SEEN: function (e) {
         let { guildId: t, lastSeenInfo: n } = e;
         i5.lastSeenInfos[t] = n;
     },
     LOGOUT: function () {
-        i5 = i3;
+        i5 = i6;
     },
 });
 var i9 = n(514661);
@@ -2314,7 +2314,7 @@ function le(e) {
     let t = (0, c.bG)([i1.A], () => i1.A.getGuild(e.guildId));
     function n(n) {
         (t?.profile?.tag != null &&
-            i6.h.dispatch({
+            i3.h.dispatch({
                 type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
                 guildId: t.id,
                 lastSeenInfo: { tag: t.profile.tag },
@@ -2387,7 +2387,7 @@ var ln = n(843010),
     ll = n(208223);
 function lr(e) {
     let { groupName: t, targetElementRef: n } = e,
-        l = t6(),
+        l = t3(),
         r = (0, c.bG)([tQ.Ay], () => tQ.Ay.useReducedMotion),
         a = (0, t$.A)((e) => e.isOpen),
         s = (0, ln.G)(),
@@ -2703,7 +2703,7 @@ class lT extends c.Ay.Store {
         return ly[e] ?? !1;
     }
 }
-let lS = new lT(i6.h, {
+let lS = new lT(i3.h, {
     CALL_FEEDBACK_TUTORIAL_SHOW: function (e) {
         let { tutorialKey: t } = e;
         ly[t] = !0;
@@ -3046,7 +3046,7 @@ function l1(e) {
         }, [a]),
         g = eo.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, l0.A)("1795545060763", !0);
+        let e = (0, l0.A)("1795545144530", !0);
         t =
             null != e
                 ? eB.intl.formatToPlainString(eB.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3094,8 +3094,8 @@ function l1(e) {
     );
 }
 var l2 = n(358285);
-let l6 = iw.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
-    l3 = 2.5 * tp.A.Millis.SECOND,
+let l3 = iw.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu,
+    l6 = 2.5 * tp.A.Millis.SECOND,
     l5 = 2 * tp.A.Millis.MINUTE,
     l8 = 5 * tp.A.Millis.SECOND;
 function l7(e) {
@@ -3207,7 +3207,7 @@ function l7(e) {
                                   className: l2.$n,
                                   "data-jump-section": x,
                               }),
-                              (0, i.jsx)(l6, {
+                              (0, i.jsx)(l3, {
                                   size: p._3.SIZE_32,
                                   src: u.getAvatarURL(void 0, 28, !1),
                                   avatarDecoration: b,
@@ -4201,7 +4201,7 @@ class l9 extends l.PureComponent {
               null == i &&
               this.setState({ shouldShowSpeakingWhileMutedTooltip: !0 }, () => {
                   ((this.lastSpeakingWhileMutedNotificationTime = performance.now()),
-                      this.speakingWhileMutedTooltipTimeout.start(l3, () =>
+                      this.speakingWhileMutedTooltipTimeout.start(l6, () =>
                           this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }),
                       ));
               })
@@ -4442,7 +4442,7 @@ function re(e) {
 }
 function rt() {
     let e = (0, c.bG)([eI.default], () => eI.default.getCurrentUser()),
-        t = (0, c.bG)([n3.default], () => n3.default.getId()),
+        t = (0, c.bG)([n6.default], () => n6.default.getId()),
         {
             activities: n,
             streaming: r,
