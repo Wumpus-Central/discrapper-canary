@@ -19,29 +19,29 @@ n.d(
                     applicationId: t,
                     headerText: n,
                     subheaderText: E,
-                    gradientColors: p,
-                    gradientAngle: f,
+                    gradientColors: f,
+                    gradientAngle: p,
                     skuIds: x,
-                    resolvedSkuIds: A,
-                    isLoading: v,
-                    tab: C,
+                    resolvedSkuIds: C,
+                    isLoading: A,
+                    tab: v,
                     endTime: b,
-                    ctaType: y = "storefront",
-                    logoUrl: L,
+                    ctaType: L = "storefront",
+                    logoUrl: y,
                     termsUrl: _,
-                    backgroundImageUrl: S,
+                    backgroundImageUrl: I,
                 } = e,
-                I = (0, c.ur)(b) ?? void 0,
-                j = (0, o.W8)(),
-                k = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
+                S = (0, c.ur)(b) ?? void 0,
+                k = (0, o.W8)(),
+                j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 N = r.useMemo(() => {
-                    if ("none" !== y)
-                        return "nitro" !== y || j
+                    if ("none" !== L)
+                        return "nitro" !== L || k
                             ? {
                                   kind: "button",
                                   text:
-                                      null != k
-                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: k })
+                                      null != j
+                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: j })
                                           : g.intl.string(g.t.apFNLU),
                                   onClick: () => (0, u.default)({ applicationId: t }),
                                   onMouseDown: () => (0, u.G)({ applicationId: t }),
@@ -55,24 +55,24 @@ n.d(
                                       buttonTextOverride: g.intl.string(g.t.pj0XBN),
                                   }),
                               };
-                }, [y, t, k, j]);
+                }, [L, t, j, k]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
-                resolvedSkuIds: A,
-                isLoading: v,
-                tab: C,
+                resolvedSkuIds: C,
+                isLoading: A,
+                tab: v,
                 applicationId: t,
                 headerText: n,
                 subheaderText: E,
-                logoUrl: L,
+                logoUrl: y,
                 cta: N,
-                timeLeftText: I,
+                timeLeftText: S,
                 termsUrl: _,
-                backgroundImageUrl: S,
+                backgroundImageUrl: I,
                 analyticsSection: "slayer-storefront-promotional-banner",
                 analyticsTileType: "SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER",
                 analyticsImpressionType: "social_layer_storefront_promotional_banner",
-                backgroundGradient: p.length > 0 ? `linear-gradient(${f}deg, ${p.join(", ")})` : void 0,
+                backgroundGradient: f.length > 0 ? `linear-gradient(${p}deg, ${f.join(", ")})` : void 0,
             });
         },
     },

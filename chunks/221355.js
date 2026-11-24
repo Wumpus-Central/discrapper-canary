@@ -28,8 +28,8 @@ s.d(
             o.A.hasSuggestions(g) || (0, d.E)(g, A);
             let f = u.A.getStatus(y, T);
             if (null != f && f !== _.o.ERROR) return;
-            let m = performance.now(),
-                I = c.A.getContextualProperties(g, A);
+            let I = performance.now(),
+                w = c.A.getContextualProperties(g, A);
             n.h.dispatch({ type: "SMART_SEARCH_FETCH_START", smartSearchQuery: g });
             try {
                 let e = await r.Bo.post({
@@ -72,12 +72,12 @@ s.d(
                     c.A.trackSmartSearchAnswerReturned({
                         smartSearchQuery: g,
                         requestId: e.body.request_id,
-                        durationMs: performance.now() - m,
+                        durationMs: performance.now() - I,
                         responseStatus: e.body.search_status,
                         smartSearchStatus: s,
                         answerText: e.body.answer_text,
                         citations: t,
-                        contextualProperties: I,
+                        contextualProperties: w,
                     }));
             } catch (s) {
                 let e = s?.status,
@@ -86,12 +86,12 @@ s.d(
                     c.A.trackSmartSearchAnswerReturned({
                         smartSearchQuery: g,
                         requestId: null,
-                        durationMs: performance.now() - m,
+                        durationMs: performance.now() - I,
                         responseStatus: 404 === e ? "no_results" : "error",
                         smartSearchStatus: t,
                         answerText: "",
                         citations: [],
-                        contextualProperties: I,
+                        contextualProperties: w,
                     }));
             }
         },

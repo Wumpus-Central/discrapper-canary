@@ -52,12 +52,12 @@ n.d(
                     onButtonClick: a,
                     className: c,
                 } = e,
-                { headingVariant: d, headingColor: E, buttonVariant: p, buttonSize: f, align: x, fullWidth: A } = g[n];
+                { headingVariant: d, headingColor: E, buttonVariant: f, buttonSize: p, align: x, fullWidth: C } = g[n];
             return (0, l.jsxs)(i.B, {
                 direction: "horizontal",
                 justify: "space-between",
                 align: x,
-                fullWidth: A,
+                fullWidth: C,
                 className: c,
                 children: [
                     (0, l.jsxs)("div", {
@@ -67,7 +67,7 @@ n.d(
                             null != r && (0, l.jsx)(h, { helpArticle: r }),
                         ],
                     }),
-                    null != s && null != a && (0, l.jsx)(u.$, { variant: p, size: f, onClick: a, text: s }),
+                    null != s && null != a && (0, l.jsx)(u.$, { variant: f, size: p, onClick: a, text: s }),
                 ],
             });
         },

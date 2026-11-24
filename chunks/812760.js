@@ -34,8 +34,8 @@ function b(e) {
         a = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
         C = (0, o.bG)([f.A], () => f.A.isFocused()),
         { catalogBannerStatic: x, catalogBannerAnimated: S, catalogBannerRive: b } = (0, I.MV)(t),
-        v = s.useRef(null),
-        L = null != b,
+        L = s.useRef(null),
+        v = null != b,
         j =
             null != n
                 ? {
@@ -49,20 +49,20 @@ function b(e) {
                   }
                 : {};
     return (0, l.jsxs)("div", {
-        ref: v,
-        className: i()(_.sW, { [_.by]: L, [_.vk]: null != n }),
+        ref: L,
+        className: i()(_.sW, { [_.by]: v, [_.vk]: null != n }),
         ...j,
         children: [
             (0, l.jsx)(r.s, { children: (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, l.jsx)("div", {
                 className: _.Db,
-                children: L
+                children: v
                     ? (0, l.jsx)(u._, {
                           src: b,
                           fit: "cover",
                           alignment: "center-left",
                           style: { width: "100%", height: "100%" },
-                          eventTargetRef: v,
+                          eventTargetRef: L,
                           autoplay: !0,
                       })
                     : (0, l.jsxs)(l.Fragment, {

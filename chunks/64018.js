@@ -12,25 +12,25 @@ var l = n(477900),
     g = n(331322),
     h = n(834730),
     E = n(821609),
-    p = n(793574),
-    f = n(688810),
+    f = n(793574),
+    p = n(688810),
     x = n(321538),
-    A = n(604913),
-    v = n(773669),
-    C = n(318346),
+    C = n(604913),
+    A = n(773669),
+    v = n(318346),
     b = n(287809),
-    y = n(129230),
-    L = n(857512),
+    L = n(129230),
+    y = n(857512),
     _ = n(993408);
-let S = (0, n(945810).mj)({
+let I = (0, n(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var I = n(304210),
-    j = n(39196),
-    k = n(480750),
+var S = n(304210),
+    k = n(39196),
+    j = n(480750),
     N = n(808598),
     O = n(93955),
     T = n(212407),
@@ -73,7 +73,7 @@ let W = {
 };
 function z(e) {
     let { heroBlockRecord: t, isBlockLoading: n } = e,
-        r = S.useConfig({ location: "orbs_hero_block_cards" }).enabled;
+        r = I.useConfig({ location: "orbs_hero_block_cards" }).enabled;
     return (0, l.jsx)(M.A, { heroBlockRecord: t, tab: F.G2.ORBS, isBlockLoading: n, layout: r ? "hscroll" : "feed" });
 }
 let Y = (e) => {
@@ -81,7 +81,7 @@ let Y = (e) => {
                 isLoading: t,
                 handleTransition: n,
                 category: s,
-                heroBlock: S,
+                heroBlock: I,
                 tab: B,
                 onVisibilityChange: w,
                 badge: H,
@@ -99,14 +99,14 @@ let Y = (e) => {
             Q = r.useRef(null),
             Z = (0, D.yB)("HeroBlock"),
             J = (0, c.bG)([b.default], () => b.default.getCurrentUser()),
-            ee = (0, c.bG)([v.default], () => v.default.locale),
-            et = (0, L.uM)(),
-            { analyticsLocations: en } = (0, f.Ay)(p.A.COLLECTIBLES_SHOP_HERO),
-            el = (0, I.ST)(),
+            ee = (0, c.bG)([A.default], () => A.default.locale),
+            et = (0, y.uM)(),
+            { analyticsLocations: en } = (0, p.Ay)(f.A.COLLECTIBLES_SHOP_HERO),
+            el = (0, S.ST)(),
             er = r.useMemo(
                 () =>
-                    null != S
-                        ? S
+                    null != I
+                        ? I
                         : null == s
                           ? W
                           : {
@@ -123,16 +123,16 @@ let Y = (e) => {
                                 heroBannerUrl: s.heroBannerUrl,
                                 heroBannerAnimatedUrl: s.heroBannerAnimatedUrl,
                             },
-                [S, s],
+                [I, s],
             ),
-            es = r.useMemo(() => (0, j.HF)(el, er), [el, er]),
-            ea = es?.subtype === A.h5.TAKEOVER,
-            ei = es?.subtype === A.h5.BASIC,
+            es = r.useMemo(() => (0, k.HF)(el, er), [el, er]),
+            ea = es?.subtype === C.h5.TAKEOVER,
+            ei = es?.subtype === C.h5.BASIC,
             eo = ea && el?.endsAt != null && null == (0, N.X)(el.endsAt) && B === F.G2.HOME,
             eu = ea && !eo,
             ec = (eu || ei) && B === F.G2.COLLECTION_INDEX,
             ed = r.useMemo(
-                () => (null != er.foregroundBlock || null == el || eo ? er : (0, j.O8)(el, er, B, ee)),
+                () => (null != er.foregroundBlock || null == el || eo ? er : (0, k.O8)(el, er, B, ee)),
                 [el, er, eo, B, ee],
             ),
             {
@@ -140,19 +140,19 @@ let Y = (e) => {
                 logoDisplayConfig: eg,
                 heroLogo: eh,
                 heroBannerStatic: eE,
-                heroBannerAnimated: ep,
-                heroBannerRive: ef,
+                heroBannerAnimated: ef,
+                heroBannerRive: ep,
             } = (0, T.Kk)(ed),
             ex = em?.responsive ?? !1,
-            eA = em?.backgroundStyle,
-            ev = null != ef && !eu,
-            eC = B === F.G2.ORBS,
+            eC = em?.backgroundStyle,
+            eA = null != ep && !eu,
+            ev = B === F.G2.ORBS,
             eb = null != s && s.isOrbsExclusive,
-            ey = B === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
-            eL = eC ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
+            eL = B === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
+            ey = ev ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
         function e_() {
-            eC
-                ? ((0, C.Y)({
+            ev
+                ? ((0, v.Y)({
                       pageType: $.liQ.SHOP_ORBS_TAB,
                       sectionType: $.JJy.ORBS_SHOP_HERO_BLOCK,
                       ctaObject: $.ZSU.CTA_TO_QUEST_HOME,
@@ -164,7 +164,7 @@ let Y = (e) => {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: eb,
                   }),
-                  y.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  L.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: et?.sessionId,
                       sku_id: ed.categorySkuId,
                       page_type: B,
@@ -174,10 +174,10 @@ let Y = (e) => {
                   }));
         }
         if (null == J || (!t && ed === W)) return null;
-        function eS() {
-            return t || U ? null : (0, l.jsx)(E.$, { variant: "overlay-primary", onClick: e_, text: eL });
+        function eI() {
+            return t || U ? null : (0, l.jsx)(E.$, { variant: "overlay-primary", onClick: e_, text: ey });
         }
-        return (0, l.jsx)(f.f5, {
+        return (0, l.jsx)(p.f5, {
             value: en,
             children: (0, l.jsxs)("div", {
                 ref: X,
@@ -186,18 +186,18 @@ let Y = (e) => {
                     [K.MW]: null == q && null != ed.foregroundBlock && 0 === ed.rankedSkuIds.length,
                 }),
                 children: [
-                    ev && null == q
+                    eA && null == q
                         ? (0, R.VA)({ isCustomCursorEnabled: Z, className: K.Xt, riveEventTargetRef: Q })
                         : null,
                     (0, l.jsx)("div", {
-                        className: a()(K.vK, { [K.cN]: ev, [K.no]: ex }),
-                        style: null != eA ? { background: eA } : void 0,
+                        className: a()(K.vK, { [K.cN]: eA, [K.no]: ex }),
+                        style: null != eC ? { background: eC } : void 0,
                         children:
                             null != eE &&
                             (0, l.jsx)(P.A, {
                                 bannerStatic: eE,
-                                bannerAnimated: ep,
-                                bannerRive: ev ? ef : void 0,
+                                bannerAnimated: ef,
+                                bannerRive: eA ? ep : void 0,
                                 isResponsive: ex,
                                 eventTargetRef: Q,
                             }),
@@ -208,8 +208,8 @@ let Y = (e) => {
                             q ??
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    ev
-                                        ? (0, l.jsx)("div", { className: K.fy, children: eS() })
+                                    eA
+                                        ? (0, l.jsx)("div", { className: K.fy, children: eI() })
                                         : (0, l.jsxs)("div", {
                                               className: a()(K.uZ, { [K.no]: ex, [K.RD]: ec }),
                                               children: [
@@ -247,7 +247,7 @@ let Y = (e) => {
                                                                         null != ed.title &&
                                                                             (0, l.jsx)(m.D, {
                                                                                 variant: "heading-xxl/semibold",
-                                                                                className: eC ? K.DD : void 0,
+                                                                                className: ev ? K.DD : void 0,
                                                                                 color: "text-strong",
                                                                                 children: ed.title,
                                                                             }),
@@ -256,13 +256,13 @@ let Y = (e) => {
                                                                             (0, l.jsx)(g.B, {
                                                                                 onClick:
                                                                                     null != el && eu
-                                                                                        ? (e) => (0, k.h)(e, el, ey)
+                                                                                        ? (e) => (0, j.h)(e, el, eL)
                                                                                         : void 0,
                                                                                 children: (0, l.jsx)(h.E, {
                                                                                     variant: eu
                                                                                         ? "body-sm/normal"
                                                                                         : "body-md/normal",
-                                                                                    className: a()(eC ? K.h4 : K.Tm, {
+                                                                                    className: a()(ev ? K.h4 : K.Tm, {
                                                                                         [K.vd]: eu || ei,
                                                                                     }),
                                                                                     style: {
@@ -282,12 +282,12 @@ let Y = (e) => {
                                                                         children: (0, l.jsx)(O.A, {
                                                                             collectionId: ed.categorySkuId,
                                                                             variant: "full",
-                                                                            surface: ey,
+                                                                            surface: eL,
                                                                         }),
                                                                     }),
                                                             ],
                                                         }),
-                                                  !U && !t && (0, l.jsx)("div", { className: K.pv, children: eS() }),
+                                                  !U && !t && (0, l.jsx)("div", { className: K.pv, children: eI() }),
                                               ],
                                           }),
                                     !Y &&
@@ -308,7 +308,7 @@ let Y = (e) => {
                         B === F.G2.HOME &&
                         (0, l.jsx)("div", {
                             className: a()(K.xX, K.uC),
-                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: ey }),
+                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: eL }),
                         }),
                 ],
             }),

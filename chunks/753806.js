@@ -29,7 +29,7 @@ function f(e) {
         A.A.updateSearchResultsQuery(t, s, r, n, a),
         A.A.addSearchHistoryItem(t, s));
 }
-function m(e) {
+function I(e) {
     let { searchContext: t, searchQueryString: s, searchEverywhere: r, offset: n, includeSmartSearch: c = !1 } = e,
         l = (0, h.bS)(t),
         u = E.A.getSearchMode(l) ?? y.z,
@@ -70,11 +70,11 @@ function m(e) {
                 failImmediatelyWhenRateLimited: !0,
             }));
 }
-function I(e) {
+function w(e) {
     let t = (0, h.bS)(e);
     return E.A.getQueryText(t) ?? null;
 }
-function w(e, t) {
+function m(e, t) {
     A.A.updateSearchQueryText(e, t.slice(0, 512));
 }
 function C(e) {
@@ -86,10 +86,10 @@ s.d(
     {
         A: {
             cleanUpSearchState: T,
-            fetchMessages: m,
-            setSearchInputText: w,
+            fetchMessages: I,
+            setSearchInputText: m,
             appendToSearchInputText: function (e, t) {
-                let s = I(e);
+                let s = w(e);
                 null == s ||
                     C({
                         query: s.endsWith(" ") ? s + t : s + " " + t,
@@ -98,7 +98,7 @@ s.d(
                         searchQuerySource: p.Q_.SEARCH_RESULTS_HINT,
                     });
             },
-            getSearchInputText: I,
+            getSearchInputText: w,
             setSearchQuery: function (e) {
                 let { query: t, performSearch: s, replace: r, resultsState: n, searchQuerySource: a } = e,
                     { mode: i, cursorScope: c } = n,
@@ -113,7 +113,7 @@ s.d(
                     n = E.A.getQueryText(r);
                 if (null == n) return;
                 let a = t.type === R.I4_.CHANNEL ? (0, h.EH)(n) : n;
-                w(t, (a = a.trim()));
+                m(t, (a = a.trim()));
                 let i = E.A.getSearchMode(r);
                 (A.A.updateSearchMode(t, i ?? y.z), S.A.transferSession(e, t));
                 let l = (0, h._o)(a),
@@ -125,7 +125,7 @@ s.d(
                         queryString: a,
                         searchQuerySource: p.Q_.SEARCH_XDM_SETTINGS,
                     }),
-                    m({ searchContext: t, searchQueryString: a, offset: 0 }));
+                    I({ searchContext: t, searchQueryString: a, offset: 0 }));
                 let d = (0, h.bS)(t);
                 (c.A.setSelectedSearchContext(d), A.A.clearSearchQueryText(e), _.A.clearSearchMessages(r), s?.());
             },

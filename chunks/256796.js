@@ -46,9 +46,9 @@ s.d(
                     trackExactTotalHits: u,
                 });
                 o?.({ searchContext: t, searchQueryString: r, searchQuery: R });
-                let m = s.map((e) => h(e));
+                let I = s.map((e) => h(e));
                 return (
-                    a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: m }),
+                    a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: I }),
                     f.fetch(
                         (e) => {
                             let { body: s } = e,
@@ -77,10 +77,10 @@ s.d(
                                 S?.({ searchContext: t, tabEntries: r }));
                         },
                         () => {
-                            a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: m });
+                            a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: I });
                         },
                         (e) => {
-                            a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: m, error: e });
+                            a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: I, error: e });
                         },
                     ),
                     !0

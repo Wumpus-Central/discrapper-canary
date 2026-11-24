@@ -1,6 +1,6 @@
 var l = e(805974),
-    r = e(278416),
-    u = e(403581),
+    u = e(278416),
+    r = e(403581),
     i = e(318254);
 e.d(
     t,
@@ -9,9 +9,9 @@ e.d(
         s: function (n) {
             switch (n) {
                 case l._.TAG:
-                    return r.TagIcon;
+                    return u.TagIcon;
                 case l._.NITRO:
-                    return u.NitroWheelIcon;
+                    return r.NitroWheelIcon;
                 case l._.ORBS:
                     return i.OrbsIcon;
                 default:

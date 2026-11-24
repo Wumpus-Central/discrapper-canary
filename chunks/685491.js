@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(834730),
     _ = n(7689),
     b = n(683438),
-    v = n(265872),
-    L = n(775602),
+    L = n(265872),
+    v = n(775602),
     j = n(129230),
     N = n(857512),
     O = n(945810),
@@ -122,9 +122,9 @@ function z(e) {
         [K, Y] = s.useState(!1),
         [W, $] = s.useState(-1),
         [q, Z] = s.useState(!1),
-        Q = (0, R.Ay)(),
-        X = p && z && !K && "" === h,
-        J = (0, o.bG)([L.Ay], () => L.Ay.useReducedMotion),
+        X = (0, R.Ay)(),
+        Q = p && z && !K && "" === h,
+        J = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
         ee = p && !J,
         et = G.intl.string(G.t.arz34K),
         en = u[d],
@@ -165,11 +165,11 @@ function z(e) {
                 let a = e.trim(),
                     i = n === T.G2.CATALOG,
                     r = !i && C.current;
-                (r || Q(a, l, (0, A.A)(), i, s), f(a), i)
+                (r || X(a, l, (0, A.A)(), i, s), f(a), i)
                     ? E(a)
                     : r || ((C.current = !0), t(T.G2.CATALOG, !1, { searchQuery: a }));
             },
-            [n, E, t, Q],
+            [n, E, t, X],
         ),
         ei = s.useCallback(
             (e) => {
@@ -180,7 +180,7 @@ function z(e) {
         ),
         er = s.useCallback(
             (e) => {
-                if (X && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
+                if (Q && ("ArrowDown" === e.key || "ArrowUp" === e.key)) {
                     e.preventDefault();
                     let t = "ArrowDown" === e.key ? 1 : -1;
                     $((e) => {
@@ -189,16 +189,16 @@ function z(e) {
                     });
                     return;
                 }
-                if (X && "Escape" === e.key) {
+                if (Q && "Escape" === e.key) {
                     (e.preventDefault(), Y(!0), $(-1));
                     return;
                 }
                 if ("Enter" === e.key) {
-                    if (X && W >= 0) return void ei(W);
+                    if (Q && W >= 0) return void ei(W);
                     ea(h, T.Vf.ENTER);
                 }
             },
-            [h, ea, X, W, ei, u],
+            [h, ea, Q, W, ei, u],
         ),
         eo = s.useCallback((e) => {
             (f(e), Y(!1), $(-1));
@@ -249,10 +249,10 @@ function z(e) {
                         ...(p
                             ? {
                                   role: "combobox",
-                                  "aria-expanded": X,
-                                  "aria-controls": X ? B : void 0,
+                                  "aria-expanded": Q,
+                                  "aria-controls": Q ? B : void 0,
                                   "aria-autocomplete": "list",
-                                  "aria-activedescendant": X && W >= 0 ? `${B}-${W}` : void 0,
+                                  "aria-activedescendant": Q && W >= 0 ? `${B}-${W}` : void 0,
                               }
                             : void 0),
                         onClick: ed,
@@ -266,7 +266,7 @@ function z(e) {
         eC = { "--custom-search-bar-width": `${I}px` };
     return eE
         ? (0, l.jsx)("div", { style: eC, children: eh })
-        : (0, l.jsx)(v.Y, {
+        : (0, l.jsx)(L.Y, {
               targetElementRef: H,
               renderPopout: () =>
                   (0, l.jsx)("div", {
@@ -275,8 +275,8 @@ function z(e) {
                   }),
               position: "bottom",
               align: "right",
-              animation: v.Y.Animation.NONE,
-              shouldShow: X,
+              animation: L.Y.Animation.NONE,
+              shouldShow: Q,
               autoInvert: !1,
               children: () =>
                   (0, l.jsx)("div", {
@@ -294,9 +294,9 @@ var K = n(278416),
     $ = n(288106),
     q = n(223311),
     Z = n(65238),
-    Q = n(758461),
-    X = n(812729),
-    J = n.n(X),
+    X = n(758461),
+    Q = n(812729),
+    J = n.n(Q),
     ee = n(627363),
     et = n(587895),
     en = n(733391),
@@ -325,11 +325,11 @@ function em(e) {
         I = (0, ec.yB)("CollectiblesShopHeaderBar"),
         { searchQuery: _ } = (0, S.vs)(),
         b = s.useRef(null),
-        [v, L] = s.useState(!1);
+        [L, v] = s.useState(!1);
     (0, g.g)(
         b,
         s.useCallback((e) => {
-            L(e.contentRect.width < 800);
+            v(e.contentRect.width < 800);
         }, []),
     );
     let O = t === T.G2.ORBS ? M.liQ.SHOP_ORBS_TAB : M.liQ.COLLECTIBLES_SHOP,
@@ -363,7 +363,7 @@ function em(e) {
                 I,
                 _,
                 b = (0, Y.H)({ location: "useCollectiblesShopNavigationMenuOptions" }),
-                { gameShops: v, hasGameShops: L } =
+                { gameShops: L, hasGameShops: v } =
                     ((t = (0, N.uM)()),
                     (n = (0, o.yK)(
                         [el.A],
@@ -434,7 +434,7 @@ function em(e) {
                         ),
                         hasGameShops: n.length > 0,
                     }),
-                O = null != (0, Q.HH)(),
+                O = null != (0, X.HH)(),
                 y =
                     ((i = (0, q.A)(M.FYj)),
                     (r = (0, Z.XF)(i)),
@@ -506,13 +506,13 @@ function em(e) {
                         },
                     ];
                 if (
-                    (L &&
+                    (v &&
                         n.push({
                             type: "menu",
                             key: T.G2.GAME_SHOPS,
                             text: G.intl.string(G.t.FkjcWY),
                             expandLabel: G.intl.string(G.t.bf9uMH),
-                            options: v,
+                            options: L,
                         }),
                     b &&
                         n.push({
@@ -537,7 +537,7 @@ function em(e) {
                     });
                 }
                 return n;
-            }, [e, O, y, b, L, v]);
+            }, [e, O, y, b, v, L]);
         })(
             s.useCallback(
                 (e) => {
@@ -564,7 +564,7 @@ function em(e) {
             className: i()(ed.jr, { [ec.jP]: I }),
             toolbar: (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(z, { handleTransition: a, selectedTab: t, isNarrow: v, hasText: "" !== _ }),
+                    (0, l.jsx)(z, { handleTransition: a, selectedTab: t, isNarrow: L, hasText: "" !== _ }),
                     (0, l.jsx)(c.D, {
                         className: ed.ij,
                         onClick: R,
