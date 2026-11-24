@@ -36,81 +36,85 @@ function T() {
     };
 }
 let S = !1,
-    N = null,
+    N = !1,
     C = null,
-    O = T(),
-    R = null,
-    L = new Map(),
-    y = null,
-    D = [],
-    b = (0, _.L_)((e, t, i, r) => {
+    O = null,
+    R = T(),
+    L = null,
+    y = new Map(),
+    D = null,
+    b = [],
+    v = (0, _.L_)((e, t, i, r) => {
         let { resolveCampaignComponents: a } = n(547515);
         return a(e.components, t, i, e.endDate, r);
     });
-function v() {
+function P() {
     let e = u.default.getCurrentUser(),
         t = [];
-    if (null != y && e?.isStaff() === !0) {
+    if (null != D && e?.isStaff() === !0) {
         let n = E.A.hasPremiumTypeOverride(e) ? E.A.getPremiumTypeOverride() : void 0;
-        t = b(y, e, o.default.locale, n);
+        t = v(D, e, o.default.locale, n);
     }
-    return !r().isEqual(t, D) && ((D = t), !0);
+    return !r().isEqual(t, b) && ((b = t), !0);
 }
-function P() {
-    return null != y && v();
+function M() {
+    return null != D && P();
 }
-let M = null;
-function U(e) {
-    return null != y && u.default.getCurrentUser()?.isStaff() === !0
-        ? D.filter((t) => t.properties.properties.oneofKind === e)
-        : M?.properties.properties.oneofKind === e
-          ? [M]
+let U = null;
+function w(e) {
+    return null != D && u.default.getCurrentUser()?.isStaff() === !0
+        ? b.filter((t) => t.properties.properties.oneofKind === e)
+        : U?.properties.properties.oneofKind === e
+          ? [U]
           : null;
 }
-function w(e, t) {
+function G(e, t) {
     let n = u.default.getCurrentUser(),
         i = new Date();
-    return t(L.get(e) ?? [], i, (e) => null != n && e.isIncludedInRollout(n.id, i));
+    return t(y.get(e) ?? [], i, (e) => null != n && e.isIncludedInRollout(n.id, i));
 }
-let G = [],
-    x = !1;
-function k() {
+let x = [],
+    k = !1;
+function F() {
     let e = null;
-    for (let t of Object.values(O[h.pt.THIRD_PARTY_OUTBOUND])) (null == e || t.startDate > e) && (e = t.startDate);
+    for (let t of Object.values(R[h.pt.THIRD_PARTY_OUTBOUND])) (null == e || t.startDate > e) && (e = t.startDate);
     return e?.toISOString() ?? null;
 }
-function F() {
-    R = d.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
+function B() {
+    L = d.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
 }
-class B extends s.Ay.PersistedStore {
+class V extends s.Ay.PersistedStore {
     static displayName = "PromotionsStore";
     static persistKey = "PromotionsPersistedStore";
     initialize(e) {
         (null != e && (g = e),
             this.waitFor(d.A, u.default, o.default, E.A),
-            this.syncWith([u.default, o.default, E.A], P),
-            this.syncWith([d.A], F));
+            this.syncWith([u.default, o.default, E.A], M),
+            this.syncWith([d.A], B));
     }
     get outboundPromotions() {
-        return Object.values(O[h.pt.THIRD_PARTY_OUTBOUND]);
+        return Object.values(R[h.pt.THIRD_PARTY_OUTBOUND]);
     }
     get outboundRecurringPromotions() {
-        return Object.values(O[h.pt.THIRD_PARTY_OUTBOUND_RECURRING]);
+        return Object.values(R[h.pt.THIRD_PARTY_OUTBOUND_RECURRING]);
     }
     get lastSeenOutboundPromotionStartDate() {
         return g.lastSeenOutboundPromotionStartDate;
     }
     get lastDismissedOutboundPromotionStartDate() {
-        return R;
+        return L;
     }
     get lastFetchedActivePromotions() {
-        return N;
+        return C;
     }
     get lastFetchedActivePromotionsLocale() {
-        return C;
+        return O;
     }
     get isFetchingActivePromotions() {
         return S;
+    }
+    get lastActivePromotionsFetchFailed() {
+        return N;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return g.hasFetchedConsumedInboundPromotionId;
@@ -119,16 +123,16 @@ class B extends s.Ay.PersistedStore {
         return g.consumedInboundPromotionId;
     }
     get promotionsByType() {
-        return O;
+        return R;
     }
     getPromotionByTypeAndId(e, t) {
-        return O[e]?.[t];
+        return R[e]?.[t];
     }
     getMarketingPromotionForEligibility(e) {
         return this.campaignOverrideId === e ? null : this.getPromotionByTypeAndId(h.pt.MARKETING_MOMENT, e);
     }
     getPromotionByTypeAndKey(e, t) {
-        return Object.values(O[e]).find((e) => e.promotionKey === t);
+        return Object.values(R[e]).find((e) => e.promotionKey === t);
     }
     getState() {
         return g;
@@ -136,41 +140,41 @@ class B extends s.Ay.PersistedStore {
     getMarketingComponentsBySurfaceAcrossPromotions(e) {
         if (!(0, f.Uy)(e)) return [];
         let t = a.bt[e],
-            n = U(t);
-        return null != n ? n : (L.get(t) ?? []);
+            n = w(t);
+        return null != n ? n : (y.get(t) ?? []);
     }
     get campaignOverrideId() {
-        return u.default.getCurrentUser()?.isStaff() !== !0 ? null : (y?.promotionId ?? null);
+        return u.default.getCurrentUser()?.isStaff() !== !0 ? null : (D?.promotionId ?? null);
     }
     get campaignOverrideRows() {
-        return u.default.getCurrentUser()?.isStaff() !== !0 ? [] : (y?.components ?? []);
+        return u.default.getCurrentUser()?.isStaff() !== !0 ? [] : (D?.components ?? []);
     }
     get campaignOverrideComponents() {
-        return u.default.getCurrentUser()?.isStaff() !== !0 ? [] : D;
+        return u.default.getCurrentUser()?.isStaff() !== !0 ? [] : b;
     }
     getMarketingComponentBySurface(e) {
         return (0, f.Uy)(e) ? this.getMarketingComponentByKind(a.bt[e]) : null;
     }
     getMarketingComponentByKind(e) {
-        let t = U(e);
-        return null != t ? (t[0] ?? null) : w(e, p.A);
+        let t = w(e);
+        return null != t ? (t[0] ?? null) : G(e, p.A);
     }
     getActiveMarketingComponentsBySurfaceUnprioritized(e) {
         if (!(0, f.Uy)(e)) return [];
         let t = a.bt[e];
-        return U(t) ?? w(t, I.A);
+        return w(t) ?? G(t, I.A);
     }
     hasPromotion(e) {
-        return Object.values(O).some((t) => Object.values(t).some((t) => t.promotionKey === e));
+        return Object.values(R).some((t) => Object.values(t).some((t) => t.promotionKey === e));
     }
     getPromotionsByPartner(e) {
         return {
-            oneTime: Object.values(O[h.pt.THIRD_PARTY_OUTBOUND]).filter((t) => t.partnerId === e),
-            recurring: Object.values(O[h.pt.THIRD_PARTY_OUTBOUND_RECURRING]).filter((t) => t.partnerId === e),
+            oneTime: Object.values(R[h.pt.THIRD_PARTY_OUTBOUND]).filter((t) => t.partnerId === e),
+            recurring: Object.values(R[h.pt.THIRD_PARTY_OUTBOUND_RECURRING]).filter((t) => t.partnerId === e),
         };
     }
     getGiftPromotion() {
-        let e = O[h.pt.GIFT_PROMOTION],
+        let e = R[h.pt.GIFT_PROMOTION],
             t = Object.keys(e);
         return 0 === t.length ? null : e[t[0]];
     }
@@ -178,7 +182,7 @@ class B extends s.Ay.PersistedStore {
         return this.getGiftPromotion()?.rewardSkuIds ?? [];
     }
     getMarketingMomentPromotion() {
-        let e = O[h.pt.MARKETING_MOMENT],
+        let e = R[h.pt.MARKETING_MOMENT],
             t = Object.keys(e);
         if (0 === t.length) return null;
         let n = e[t[0]];
@@ -189,89 +193,100 @@ class B extends s.Ay.PersistedStore {
     }
     getActiveBogoRewardPromotion() {
         let e = new Date();
-        return Object.values(O[h.pt.MARKETING_MOMENT]).find((t) => t.hasBogoReward && t.endDate >= e) ?? null;
+        return Object.values(R[h.pt.MARKETING_MOMENT]).find((t) => t.hasBogoReward && t.endDate >= e) ?? null;
     }
     hasActiveBogoRewardPromotion() {
         return null !== this.getActiveBogoRewardPromotion();
     }
     get claimedOutboundPromotionCodes() {
-        return G;
-    }
-    get claimedOutboundPromotionCodesLoaded() {
         return x;
     }
+    get claimedOutboundPromotionCodesLoaded() {
+        return k;
+    }
 }
-let V = new B(l.h, {
+let H = new V(l.h, {
     CAMPAIGN_OVERRIDE_SET: function (e) {
-        return u.default.getCurrentUser()?.isStaff() === !0 && ((y = null == e.promotionId ? null : e), v(), !0);
+        return u.default.getCurrentUser()?.isStaff() === !0 && ((D = null == e.promotionId ? null : e), P(), !0);
     },
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: function (e) {
         let { promotions: t, consumedInboundPromotionId: n } = e;
-        ((O = T()),
-            (L = new Map()),
-            (M = null),
+        ((R = T()),
+            (y = new Map()),
+            (U = null),
             t.forEach((e) => {
                 let t = c.A.createFromServer(e);
-                ((O[e.promotion_type][e.id] = t),
+                ((R[e.promotion_type][e.id] = t),
                     e.marketing_components?.forEach((e) => {
                         let n = A.A.createFromServer(e, t),
                             i = n.properties.properties.oneofKind;
                         if (null != i) {
-                            let e = L.get(i) ?? [];
-                            (e.push(n), L.set(i, e));
+                            let e = y.get(i) ?? [];
+                            (e.push(n), y.set(i, e));
                         }
                     }));
             }),
-            (N = Date.now()),
+            (C = Date.now()),
             (S = !1),
+            (N = !1),
             g.hasFetchedConsumedInboundPromotionId ||
                 ((g.hasFetchedConsumedInboundPromotionId = !0), (g.consumedInboundPromotionId = n)));
     },
     ACTIVE_PROMOTIONS_FETCH: function (e) {
         let { locale: t } = e;
-        ((S = !0), (C = t));
+        ((S = !0), (O = t));
     },
     ACTIVE_PROMOTIONS_FETCH_FAIL: function () {
-        ((O = T()), (L = new Map()), (M = null), (S = !1));
+        ((R = T()), (y = new Map()), (U = null), (S = !1), (N = !0));
     },
     ACTIVE_PROMOTIONS_CLEAR: function () {
-        ((O = T()), (L = new Map()), (M = null), (S = !1), (N = Date.now()));
+        ((R = T()), (y = new Map()), (U = null), (S = !1), (N = !1), (C = Date.now()));
     },
     OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
-        if (0 === Object.values(O[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
-        let e = k();
-        null != e && (R = e);
+        if (0 === Object.values(R[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
+        let e = F();
+        null != e && (L = e);
     },
     OUTBOUND_PROMOTIONS_SEEN: function () {
-        if (0 === Object.values(O[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
-        let e = k();
-        null != e && ((R = e), (g.lastSeenOutboundPromotionStartDate = e));
+        if (0 === Object.values(R[h.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
+        let e = F();
+        null != e && ((L = e), (g.lastSeenOutboundPromotionStartDate = e));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS: function (e) {
         let { claimedOutboundPromotionCodes: t } = e;
-        ((G = t), (x = !0));
+        ((x = t), (k = !0));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL: function (e) {
-        ((G = []), (x = !0));
+        ((x = []), (k = !0));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODE_ADD: function (e) {
         let { claimedOutboundPromotionCode: t } = e;
         if (
-            G.some((e) => {
+            x.some((e) => {
                 let { promotion: n } = e;
                 return n.id === t.promotion.id;
             })
         )
             return !1;
-        G = [...G, t];
+        x = [...x, t];
     },
     LOGOUT: function () {
-        ((y = null), (D = []), (g = m()), (S = !1), (N = null), (O = T()), L.clear(), (M = null), (G = []), (x = !1));
+        ((D = null),
+            (b = []),
+            (g = m()),
+            (S = !1),
+            (N = !1),
+            (C = null),
+            (R = T()),
+            y.clear(),
+            (U = null),
+            (x = []),
+            (k = !1));
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,
             n = null != t.promotion ? c.A.createFromServer(t.promotion) : null;
-        ((M = A.A.createFromServer(t, n)), null != n && (O[n.promotionType][n.id] = n));
+        ((U = A.A.createFromServer(t, n)), null != n && (R[n.promotionType][n.id] = n));
     },
 });
-n.d(t, {}, { A: V });
+n.d(t, {}, { A: H });

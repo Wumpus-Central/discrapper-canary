@@ -5,4 +5,5 @@ e.exports = {
     KY: "variantCaption_5gwPwi",
     A2: "variantRow_5gwPwi",
     gi: "dismissalRow_5gwPwi",
+    Jv: "serverSurfaceTable_5gwPwi",
 };
