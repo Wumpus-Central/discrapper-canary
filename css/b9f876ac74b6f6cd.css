@@ -50,12 +50,13 @@
 }
 
 .transparent_arblTP {
+    filter: drop-shadow(0 0 13px rgba(255, 255, 255, .5));
     padding: 0;
     --custom-countdown-banner-border: none;
     --custom-countdown-banner-background: none;
     --custom-countdown-banner-backdrop-filter: none;
     --custom-countdown-banner-shadow: none;
-    --custom-countdown-filter: none;
+    --custom-countdown-filter: drop-shadow(0 0 7px hsla(0, 0%, 100%, .45));
     --custom-countdown-tile-background: var(--white);
     --custom-countdown-numeral-color: var(--text-overlay-dark);
     --custom-countdown-colon-color: var(--white);
@@ -161,4 +162,4 @@
     box-shadow: var(--shadow-button-overlay)
 }
 
-/*# sourceMappingURL=ad34b6e02db18a5c.css.map*/
+/*# sourceMappingURL=b9f876ac74b6f6cd.css.map*/
