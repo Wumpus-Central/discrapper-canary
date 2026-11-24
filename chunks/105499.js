@@ -46,6 +46,7 @@ e.exports = {
     yE: "sequencedOfferCarousel_XBXDcd",
     tX: "sequencedOfferScrollList_XBXDcd",
     q8: "sequencedOfferScroller_XBXDcd",
+    BI: "collectionIndexSequencedOfferHeroHeader_XBXDcd",
     NF: "sequencedOfferHeader_XBXDcd",
     F7: "sortChangedIntro_XBXDcd",
     tz: "sortChangedOutro_XBXDcd",

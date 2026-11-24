@@ -12,21 +12,21 @@ var l = n(477900),
     g = n(688810),
     h = n(604913),
     E = n(287809),
-    f = n(129230),
-    p = n(857512),
+    p = n(129230),
+    f = n(857512),
     x = n(993408),
     C = n(212407),
     A = n(815280),
     v = n(665414),
     b = n(821609),
     L = n(313217),
-    y = n(172218),
-    _ = n(140735),
+    _ = n(172218),
+    y = n(140735),
     I = n(598047),
     S = n(396583),
-    k = n(568631),
-    j = n(792996),
-    N = n(868102);
+    N = n(568631),
+    k = n(792996),
+    j = n(868102);
 let O = r.memo((e) => {
         let { endsAt: t, onCountdownEnd: n } = e,
             s = (0, I.A)(),
@@ -36,9 +36,9 @@ let O = r.memo((e) => {
             c = r.useCallback((e) => {
                 i(e);
             }, []),
-            m = (0, y.K)(c, 0),
-            g = (0, k.Ty)(t),
-            h = (0, k.lF)(g);
+            m = (0, _.K)(c, 0),
+            g = (0, N.Ty)(t),
+            h = (0, N.lF)(g);
         return (
             (0, S.A)(o, h || !(s && a) ? null : 1e3),
             r.useEffect(() => {
@@ -46,17 +46,17 @@ let O = r.memo((e) => {
             }, [h, n]),
             (0, l.jsxs)("div", {
                 ref: m,
-                className: N.qW,
+                className: j.qW,
                 role: "timer",
                 children: [
-                    (0, k.z0)(g).map((e, t) =>
+                    (0, N.z0)(g).map((e, t) =>
                         (0, l.jsxs)(
                             r.Fragment,
                             {
                                 children: [
-                                    t > 0 && (0, l.jsx)("div", { className: N.kx, "aria-hidden": !0 }),
+                                    t > 0 && (0, l.jsx)("div", { className: j.kx, "aria-hidden": !0 }),
                                     (0, l.jsx)("div", {
-                                        className: N.t8,
+                                        className: j.t8,
                                         "aria-hidden": !0,
                                         children: e
                                             .split("")
@@ -67,7 +67,7 @@ let O = r.memo((e) => {
                                                         tag: "span",
                                                         variant: "heading-xl/semibold",
                                                         color: "currentColor",
-                                                        className: N.m3,
+                                                        className: j.m3,
                                                         children: e,
                                                     },
                                                     t,
@@ -79,7 +79,7 @@ let O = r.memo((e) => {
                             t,
                         ),
                     ),
-                    (0, l.jsx)(_.A, { children: j.intl.format(j.t.j6IyVe, g) }),
+                    (0, l.jsx)(y.A, { children: k.intl.format(k.t.j6IyVe, g) }),
                 ],
             })
         );
@@ -96,44 +96,44 @@ let O = r.memo((e) => {
                 switch (e.type) {
                     case h.hE.COLLECTION_SALE:
                         return {
-                            text: j.intl.format(n ? j.t["97Qza2"] : j.t.ibsiKg, {
+                            text: k.intl.format(n ? k.t["97Qza2"] : k.t.ibsiKg, {
                                 percent: e.percentOff,
                                 collectionName: t,
                             }),
-                            ctaText: j.intl.string(j.t["5GoOlx"]),
+                            ctaText: k.intl.string(k.t["5GoOlx"]),
                         };
                     case h.hE.COLLECTION_SEQUENCED_OFFER:
-                        return { text: j.intl.string(j.t["4AE45b"]), ctaText: j.intl.string(j.t.vEZeL1) };
+                        return { text: k.intl.string(k.t["4AE45b"]), ctaText: k.intl.string(k.t.vEZeL1) };
                     default:
-                        return { text: null, ctaText: j.intl.string(j.t["5GoOlx"]) };
+                        return { text: null, ctaText: k.intl.string(k.t["5GoOlx"]) };
                 }
             })(n, t, (0, L.s)("collection_promotion_countdown_banner"));
         return (0, l.jsxs)("div", {
             className: a()(
-                N.kL,
+                j.kL,
                 (function (e) {
                     switch (e) {
                         case v.i.LIGHT:
-                            return N.BB;
+                            return j.BB;
                         case v.i.DARK:
-                            return N.XT;
+                            return j.XT;
                         case v.i.GRADIENT_V1:
-                            return N.eg;
+                            return j.eg;
                         case v.i.TRANSPARENT:
-                            return N.JO;
+                            return j.JO;
                         default:
-                            return N.XT;
+                            return j.XT;
                     }
                 })(n.countdownStyle),
-                { [N.CT]: n.countdownPosition === i.l.LEFT },
+                { [j.CT]: n.countdownPosition === i.l.LEFT },
             ),
             children: [
                 (0, l.jsx)(O, { endsAt: n.endsAt, onCountdownEnd: o }, n.endsAt.getTime()),
-                (0, l.jsx)(d.E, { variant: "body-md/semibold", color: "currentColor", className: N.fn, children: u }),
+                (0, l.jsx)(d.E, { variant: "body-md/semibold", color: "currentColor", className: j.fn, children: u }),
                 n.showCountdownCta &&
                     !r &&
                     (0, l.jsx)("div", {
-                        className: N.lO,
+                        className: j.lO,
                         children: (0, l.jsx)(b.$, { variant: "overlay-primary", fullWidth: !0, onClick: s, text: c }),
                     }),
             ],
@@ -151,20 +151,20 @@ let B = (e) => {
             tab: v,
             onPromotionEnd: b,
             hideCards: L = !1,
-            forceHideCountdownCta: y = !1,
+            forceHideCountdownCta: _ = !1,
         } = e,
-        _ = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
-        I = (0, p.uM)(),
+        y = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
+        I = (0, f.uM)(),
         { analyticsLocations: S } = (0, g.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
         {
-            bannerDisplayConfig: k,
-            logoDisplayConfig: N,
+            bannerDisplayConfig: N,
+            logoDisplayConfig: j,
             heroLogo: O,
             heroBannerStatic: B,
             heroBannerAnimated: w,
         } = (0, C.Kk)(t),
-        H = k?.responsive ?? !1,
-        U = k?.backgroundStyle,
+        H = N?.responsive ?? !1,
+        U = N?.backgroundStyle,
         { sourceButton: G, ctaName: F } = (function (e) {
             switch (e.type) {
                 case h.hE.COLLECTION_SALE:
@@ -180,7 +180,7 @@ let B = (e) => {
         })(n),
         $ = r.useCallback(() => {
             (s({ sourceButton: G, categorySkuId: t.categorySkuId, isInternalShopDeeplink: !0 }),
-                f.default.track(P.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                p.default.track(P.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: I?.sessionId,
                     sku_id: t.categorySkuId,
                     page_type: v,
@@ -189,12 +189,12 @@ let B = (e) => {
                     cta_name: F,
                 }));
         }, [s, G, t.categorySkuId, I, v, F]);
-    if (null == _) return null;
+    if (null == y) return null;
     let V = n.countdownPosition === i.l.LEFT,
         K = (0, l.jsx)(T, {
             collectionName: t.name,
             collectionPromotion: n,
-            forceHideCountdownCta: y,
+            forceHideCountdownCta: _,
             onShopSale: $,
             onCountdownEnd: b,
         });
@@ -212,7 +212,10 @@ let B = (e) => {
                     className: M.xX,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: a()(M.uZ, M.bC, { [M.no]: H }),
+                            className: a()(M.uZ, M.bC, {
+                                [M.no]: H,
+                                [M.BI]: v === D.G2.COLLECTION_INDEX && n.type === h.hE.COLLECTION_SEQUENCED_OFFER,
+                            }),
                             children: [
                                 (0, l.jsxs)("div", {
                                     className: M.Hw,
@@ -221,7 +224,7 @@ let B = (e) => {
                                             (0, l.jsx)("div", {
                                                 className: M.v0,
                                                 children: (0, l.jsx)(u.E, {
-                                                    type: { text: j.intl.string(j.t["h/uBCR"]) },
+                                                    type: { text: k.intl.string(k.t["h/uBCR"]) },
                                                     variant: "inverted",
                                                 }),
                                             }),
@@ -234,7 +237,7 @@ let B = (e) => {
                                                         draggable: !1,
                                                         src: O,
                                                         alt: t.name,
-                                                        style: N?.toDesktopStyles(),
+                                                        style: j?.toDesktopStyles(),
                                                     }),
                                                 null != t.title &&
                                                     (0, l.jsx)(c.D, {

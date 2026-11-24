@@ -444,6 +444,14 @@
     margin-bottom: 0
 }
 
+.collectionIndexSequencedOfferHeroHeader_XBXDcd .heroHeaderBadgeLogoSummaryContainer_XBXDcd {
+    gap: var(--space-10)
+}
+
+.collectionIndexSequencedOfferHeroHeader_XBXDcd .heroHeaderLogo_XBXDcd {
+    margin-bottom: 0
+}
+
 .heroHeaderContainer_XBXDcd.collectionSaleHeroHeader_XBXDcd+.sequencedOfferCarousel_XBXDcd {
     margin-top: calc(var(--space-80) - 1px)
 }
@@ -685,4 +693,4 @@
     transform: translateX(250px)
 }
 
-/*# sourceMappingURL=7a23f2531c140e28.css.map*/
+/*# sourceMappingURL=9f3fec1952928b46.css.map*/
