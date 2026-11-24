@@ -16,11 +16,11 @@ var n = t(477900),
     I = t(47167),
     v = t(643501),
     S = t(916641),
-    _ = t(652896),
-    x = t(279250),
+    x = t(652896),
+    _ = t(279250),
     y = t(346846),
     E = t(342296),
-    N = t(293277),
+    N = t(481947),
     C = t(46653),
     b = t(71393),
     j = t(576705),
@@ -91,13 +91,13 @@ let R = (0, h.J)(function (e) {
               },
           };
     function eS() {
-        if (!Z || !(0, x.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
+        if (!Z || !(0, _.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
         let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
         (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
-            J ? ((0, y.A)(e), c.A.selectParticipant(e.channelId, (0, _._z)(e))) : (0, g.Nl)(e),
+            J ? ((0, y.A)(e), c.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, g.Nl)(e),
             ei?.(s.id));
     }
-    function e_(e) {
+    function ex(e) {
         (0, A.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 t.e(848798),
@@ -169,7 +169,7 @@ let R = (0, h.J)(function (e) {
         },
         [],
     );
-    let ex = (0, n.jsx)("div", {
+    let e_ = (0, n.jsx)("div", {
         className: k.kZ,
         "data-dnd-name": ec,
         ...ev,
@@ -221,7 +221,7 @@ let R = (0, h.J)(function (e) {
                         selected: em,
                         onClick: t ? void 0 : ef,
                         onDoubleClick: eS,
-                        onContextMenu: e_,
+                        onContextMenu: ex,
                         guildId: r.guild_id,
                         isSelf: er,
                         application: ed,
@@ -262,7 +262,7 @@ let R = (0, h.J)(function (e) {
             },
         }),
     });
-    return W ? $(ex) : ex;
+    return W ? $(e_) : e_;
 });
 t.d(
     i,

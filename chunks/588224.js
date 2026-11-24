@@ -17,9 +17,9 @@ var n = t(477900),
     I = t(551826),
     v = t(209932),
     S = t(541157),
-    _ = t(530804),
-    x = t(955283),
-    y = t(293277),
+    x = t(530804),
+    _ = t(955283),
+    y = t(481947),
     E = t(616356),
     N = t(46653),
     C = t(988468),
@@ -72,14 +72,14 @@ let M = l.memo((e) => {
         $ = (0, r.bG)([G.A], () => G.A.getSessionById(a)),
         W = V.Ay.useName(l),
         Z = (0, r.bG)([P.A], () => P.A.getVoicePlatformForChannel(s.id, f), [s.id, f]),
-        J = (0, _.uy)(s.id, f),
+        J = (0, x.uy)(s.id, f),
         X = (0, r.bG)(
             [T.A],
             () =>
                 p &&
                 T.A.getChannelId() === s.id &&
                 T.A.getState() !== k.S7L.RTC_CONNECTED &&
-                x.A.getConfig({ location: "ConnectedVoiceUser" }).showSelfConnectingUI,
+                _.A.getConfig({ location: "ConnectedVoiceUser" }).showSelfConnectingUI,
             [p, s.id],
         );
     return (0, n.jsx)(I.A, {
@@ -130,11 +130,11 @@ t.d(
                     withGuildIcon: h = !1,
                     className: I,
                     children: v,
-                    isThread: x = !1,
+                    isThread: _ = !1,
                 } = e,
                 [E, C] = l.useState(null),
                 T = l.useRef(null),
-                G = (0, _.$n)(s.id, o ?? D),
+                G = (0, x.$n)(s.id, o ?? D),
                 { shouldShow: O, dismiss: P } = (0, p.Z0)(s, { collapsed: u }),
                 V = l.useRef(
                     new d.J_(50, () => {
@@ -216,7 +216,7 @@ t.d(
             return null == q && null == v
                 ? null
                 : (0, n.jsxs)(y.Wr, {
-                      className: a()(I, U.p_, { [U.yZ]: u, [U.lY]: h, [U.fT]: x }),
+                      className: a()(I, U.p_, { [U.yZ]: u, [U.lY]: h, [U.fT]: _ }),
                       collapsed: u,
                       children: [q, v],
                   });

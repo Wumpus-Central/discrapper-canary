@@ -99,9 +99,7 @@ class A extends l.A {
                                 invite_channel_id: e.inviteChannelId,
                                 invite_instance_id: e.inviteInstanceId,
                                 has_active_stream: e.hasActiveStream,
-                                location_stack: e.treatmentRendered
-                                    ? [o.A.INVITE_EMBED, o.A.VOICE_CHANNEL_LIST_INVITE_EMBED]
-                                    : [o.A.INVITE_EMBED],
+                                location_stack: [o.A.INVITE_EMBED],
                             },
                         };
                     default:
