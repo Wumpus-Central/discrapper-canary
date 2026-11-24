@@ -13,6 +13,11 @@
     min-width: 0
 }
 
+.productTile_IxwVgM .revealedProductCard_IxwVgM {
+    --custom-revealed-card-glow: rgba(24, 62, 168, .6);
+    background: radial-gradient(202% 80% at 50% 50%, transparent, var(--custom-revealed-card-glow)), var(--background-base-low)
+}
+
 @container (max-width: 480px) {
     .tile_IxwVgM {
         aspect-ratio: var(--custom-calendar-tile-aspect-ratio)
@@ -35,18 +40,30 @@
     width: 100%
 }
 
-.assetTile_IxwVgM:focus-visible {
-    outline: none
+.assetTile_IxwVgM,
+.raisedDoor_IxwVgM {
+    --custom-door-background: linear-gradient(180deg, #295dc9, #7492cf);
+    --custom-door-inner-glow: inset 0 0 10.4px 0 hsla(0, 0%, 100%, .3);
+    background-image: var(--custom-door-background)
 }
 
-.assetTile_IxwVgM:focus-visible:after {
-    border: 2px solid var(--border-focus);
+.assetTile_IxwVgM:after,
+.raisedDoor_IxwVgM:after {
     border-radius: inherit;
+    box-shadow: var(--custom-door-inner-glow);
     content: "";
     inset: 0;
     pointer-events: none;
     position: absolute;
     z-index: 2
+}
+
+.assetTile_IxwVgM:focus-visible {
+    outline: none
+}
+
+.assetTile_IxwVgM:focus-visible:after {
+    border: 2px solid var(--border-focus)
 }
 
 .asset_IxwVgM {
@@ -105,6 +122,58 @@
     flex-direction: column
 }
 
+.tile_IxwVgM.openableTile_IxwVgM {
+    outline: 2px solid var(--border-subtle);
+    outline-offset: -2px;
+    overflow: visible
+}
+
+.openableTile_IxwVgM:after,
+.openableTile_IxwVgM:before {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: -2
+}
+
+.openableTile_IxwVgM:before {
+    --custom-underglow-dark: #1160b4;
+    --custom-underglow-light: #78b8ff;
+    background-image: linear-gradient(225deg, var(--custom-underglow-dark) 0, var(--custom-underglow-light) 25%, var(--custom-underglow-dark) 50%, var(--custom-underglow-light) 75%, var(--custom-underglow-dark) 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    filter: blur(9px)
+}
+
+.full-motion .openableTile_IxwVgM:before {
+    animation: calendarUnderglowShimmer_IxwVgM 3s linear infinite
+}
+
+.openableTile_IxwVgM:after {
+    background: var(--background-base-low)
+}
+
+.openableTile_IxwVgM>.idleAnimation_IxwVgM {
+    border-radius: inherit
+}
+
+.openableDoor_IxwVgM {
+    border-radius: inherit;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    position: relative
+}
+
+.openableDoor_IxwVgM>.raisedDoor_IxwVgM {
+    border-start-end-radius: inherit;
+    border-start-start-radius: inherit
+}
+
 .raisedDoor_IxwVgM {
     container-type: inline-size;
     flex: 1;
@@ -118,16 +187,16 @@
     object-position: bottom
 }
 
-.full-motion .openableTile_IxwVgM>.raisedDoor_IxwVgM {
+.full-motion .openableDoor_IxwVgM>.raisedDoor_IxwVgM {
     transition: transform .22s ease-out
 }
 
-.full-motion .openableTile_IxwVgM:is(:hover, :has(:focus-visible))>.raisedDoor_IxwVgM {
+.full-motion .openableTile_IxwVgM:is(:hover, :has(:focus-visible))>.openableDoor_IxwVgM>.raisedDoor_IxwVgM {
     transform: translateY(calc(var(--custom-calendar-door-bump)*-1));
     transition: transform .2s cubic-bezier(.3, 1.3, .6, 1)
 }
 
-.full-motion .largeSquareTile_IxwVgM.openableTile_IxwVgM:is(:hover, :has(:focus-visible))>.raisedDoor_IxwVgM {
+.full-motion .largeSquareTile_IxwVgM.openableTile_IxwVgM:is(:hover, :has(:focus-visible))>.openableDoor_IxwVgM>.raisedDoor_IxwVgM {
     transform: translateX(calc(var(--custom-calendar-door-bump)*-1))
 }
 
@@ -173,8 +242,8 @@
     background-color: var(--control-overlay-primary-background-default);
     border: 1px solid var(--control-overlay-primary-border-default);
     border-radius: var(--radius-sm);
-    inset-inline: var(--space-12);
-    bottom: var(--space-12);
+    inset-inline: var(--space-8);
+    bottom: var(--space-8);
     box-sizing: border-box;
     color: var(--control-overlay-primary-text-default);
     display: flex;
@@ -185,28 +254,63 @@
     pointer-events: none;
     position: absolute;
     text-align: center;
-    transition: opacity .2s ease-out;
     z-index: 2
 }
 
-.largeSquareTile_IxwVgM .revealDateLabel_IxwVgM {
-    inset-inline: var(--space-8);
-    bottom: var(--space-8)
-}
-
 .full-motion .revealDateLabel_IxwVgM {
-    transform: translateY(calc(100% + var(--space-12)));
+    transform: translateY(calc(100% + var(--space-8)));
     transition: opacity .2s ease-out, transform .2s ease-out
-}
-
-.full-motion .largeSquareTile_IxwVgM .revealDateLabel_IxwVgM {
-    transform: translateY(calc(100% + var(--space-8)))
 }
 
 .assetTile_IxwVgM:focus-visible .revealDateLabel_IxwVgM,
 .assetTile_IxwVgM:hover .revealDateLabel_IxwVgM {
     opacity: var(--custom-reveal-date-label-opacity);
     transform: none
+}
+
+.revealDateFade_IxwVgM {
+    --custom-reveal-date-fade-color: #b1dbec;
+    inset-inline: 0;
+    bottom: 0;
+    height: 110px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2
+}
+
+.largeSquareTile_IxwVgM .revealDateFade_IxwVgM {
+    --custom-reveal-date-fade-color: #295479
+}
+
+.revealDateFade_IxwVgM:after,
+.revealDateFade_IxwVgM:before {
+    content: "";
+    inset: 0;
+    opacity: 0;
+    position: absolute
+}
+
+.full-motion .revealDateFade_IxwVgM:after,
+.full-motion .revealDateFade_IxwVgM:before {
+    transition: opacity .2s ease-out
+}
+
+.revealDateFade_IxwVgM:before {
+    -webkit-backdrop-filter: blur(21.8px);
+    backdrop-filter: blur(21.8px);
+    -webkit-mask-image: linear-gradient(180deg, transparent 45%, #000);
+    mask-image: linear-gradient(180deg, transparent 45%, #000)
+}
+
+.revealDateFade_IxwVgM:after {
+    background: linear-gradient(to bottom, transparent, var(--custom-reveal-date-fade-color))
+}
+
+.assetTile_IxwVgM:focus-visible .revealDateFade_IxwVgM:after,
+.assetTile_IxwVgM:focus-visible .revealDateFade_IxwVgM:before,
+.assetTile_IxwVgM:hover .revealDateFade_IxwVgM:after,
+.assetTile_IxwVgM:hover .revealDateFade_IxwVgM:before {
+    opacity: 1
 }
 
 .idleAnimation_IxwVgM {
@@ -243,7 +347,7 @@
     position: absolute
 }
 
-.slidingDoor_IxwVgM>.raisedDoor_IxwVgM {
+.slidingDoor_IxwVgM>.openableDoor_IxwVgM>.raisedDoor_IxwVgM {
     transform: var(--custom-calendar-door-start-transform)
 }
 
@@ -267,10 +371,16 @@
     }
 }
 
+@keyframes calendarUnderglowShimmer_IxwVgM {
+    to {
+        background-position: 0 100%
+    }
+}
+
 @keyframes calendarDoorSlideLeft_IxwVgM {
     to {
         transform: translateX(-100%)
     }
 }
 
-/*# sourceMappingURL=ca57dd1e706e2676.css.map*/
+/*# sourceMappingURL=c8d2f53a067d63e8.css.map*/

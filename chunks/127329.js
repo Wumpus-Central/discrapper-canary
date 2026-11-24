@@ -42,14 +42,17 @@ let k = (e) => {
             }),
         });
     },
-    j = (e) => {
+    N = (e) => {
         let { skuId: t, tilePosition: n, listItemProps: s } = e,
             a = r.useMemo(() => ({ tilePosition: n }), [n]);
         return null == t
             ? null
-            : (0, l.jsx)(m.R9, { newValue: a, children: (0, l.jsx)(L.A, { skuId: t, listItemProps: s }) });
+            : (0, l.jsx)(m.R9, {
+                  newValue: a,
+                  children: (0, l.jsx)(L.A, { skuId: t, listItemProps: s, cardClassName: _.QW }),
+              });
     },
-    N = (e) => {
+    j = (e) => {
         let {
                 day: t,
                 lockedAssetUrl: n,
@@ -68,7 +71,8 @@ let k = (e) => {
                 },
                 [u],
             );
-        return (0, l.jsxs)(l.Fragment, {
+        return (0, l.jsxs)("div", {
+            className: _.$N,
             children: [
                 (0, l.jsxs)("div", {
                     ref: h,
@@ -136,16 +140,21 @@ let k = (e) => {
                     (0, l.jsx)("img", { className: a()(_.LY, _.qC), src: s, alt: "", draggable: !1, onError: o }),
                 (0, l.jsx)(k, { day: t }),
                 null != d &&
-                    (0, l.jsx)("span", {
-                        className: _._J,
-                        "aria-hidden": "true",
-                        children: (0, l.jsx)(u.E, {
-                            variant: "body-md/medium",
-                            color: "none",
-                            tag: "span",
-                            lineClamp: 2,
-                            children: y.intl.formatToPlainString(y.t.GwQvTT, { date: d }),
-                        }),
+                    (0, l.jsxs)(l.Fragment, {
+                        children: [
+                            (0, l.jsx)("span", { className: _.Cx, "aria-hidden": "true" }),
+                            (0, l.jsx)("span", {
+                                className: _._J,
+                                "aria-hidden": "true",
+                                children: (0, l.jsx)(u.E, {
+                                    variant: "body-md/medium",
+                                    color: "none",
+                                    tag: "span",
+                                    lineClamp: 2,
+                                    children: y.intl.formatToPlainString(y.t.GwQvTT, { date: d }),
+                                }),
+                            }),
+                        ],
                     }),
             ],
         });
@@ -195,7 +204,7 @@ let k = (e) => {
                     className: a()(_.Dx, I[u]),
                     style: f,
                     onAnimationEnd: A,
-                    children: (0, l.jsx)(N, {
+                    children: (0, l.jsx)(j, {
                         day: t,
                         lockedAssetUrl: n,
                         hintAssetUrl: s,
@@ -318,10 +327,10 @@ let k = (e) => {
         let ei = m === i.G.LARGE_SQUARE;
         switch (c) {
             case C.k$.REVEALED:
-                t = (0, l.jsx)(j, { skuId: y, tilePosition: P, listItemProps: G });
+                t = (0, l.jsx)(N, { skuId: y, tilePosition: P, listItemProps: G });
                 break;
             case C.k$.OPENABLE:
-                t = (0, l.jsx)(N, {
+                t = (0, l.jsx)(j, {
                     day: n,
                     lockedAssetUrl: V,
                     hintAssetUrl: W,

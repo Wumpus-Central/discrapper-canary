@@ -1,0 +1,21 @@
+.title_tQQC_c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.helpArticle_tQQC_c {
+    color: var(--icon-strong);
+    cursor: pointer;
+    display: flex
+}
+
+.overlayTitle_tQQC_c {
+    text-shadow: 0 0 4px var(--opacity-black-24)
+}
+
+.overlayTitle_tQQC_c .helpArticle_tQQC_c {
+    color: var(--icon-overlay-light)
+}
+
+/*# sourceMappingURL=726516e9c8c03fb0.css.map*/

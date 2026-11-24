@@ -1,17 +1,20 @@
 var l = n(477900),
     r = n(582128),
-    s = n(939249),
-    a = n(885574),
-    i = n(331322),
-    o = n(534514),
-    u = n(821609),
-    c = n(975807),
-    d = n(975571),
-    m = n(707296);
-let g = {
+    s = n(503698),
+    a = n.n(s),
+    i = n(939249),
+    o = n(885574),
+    u = n(331322),
+    c = n(534514),
+    d = n(821609),
+    m = n(975807),
+    g = n(975571),
+    h = n(707296);
+let E = {
         "eligible-items": {
             headingVariant: "heading-lg/semibold",
             headingColor: void 0,
+            titleClassName: void 0,
             buttonVariant: "overlay-primary",
             buttonSize: "sm",
             align: "center",
@@ -19,24 +22,25 @@ let g = {
         },
         "sequenced-offer": {
             headingVariant: "heading-lg/medium",
-            headingColor: "text-strong",
+            headingColor: "text-overlay-light",
+            titleClassName: h.ns,
             buttonVariant: "overlay-secondary",
             buttonSize: "md",
             align: "end",
             fullWidth: !1,
         },
     },
-    h = (e) => {
+    f = (e) => {
         let { helpArticle: t } = e,
-            { id: n, label: i } = t,
-            o = r.useCallback(() => {
-                (0, c.A)(d.A.getArticleURL(n));
+            { id: n, label: s } = t,
+            a = r.useCallback(() => {
+                (0, m.A)(g.A.getArticleURL(n));
             }, [n]);
-        return (0, l.jsx)(s.D, {
-            "aria-label": i,
-            onClick: o,
-            className: m.o,
-            children: (0, l.jsx)(a.CircleInformationIcon, { size: "sm", color: "currentColor" }),
+        return (0, l.jsx)(i.D, {
+            "aria-label": s,
+            onClick: a,
+            className: h.oZ,
+            children: (0, l.jsx)(o.CircleInformationIcon, { size: "sm", color: "currentColor" }),
         });
     };
 n.d(
@@ -49,25 +53,33 @@ n.d(
                     variant: n = "eligible-items",
                     helpArticle: r,
                     buttonText: s,
-                    onButtonClick: a,
-                    className: c,
+                    onButtonClick: i,
+                    className: o,
                 } = e,
-                { headingVariant: d, headingColor: E, buttonVariant: f, buttonSize: p, align: x, fullWidth: C } = g[n];
-            return (0, l.jsxs)(i.B, {
+                {
+                    headingVariant: m,
+                    headingColor: g,
+                    titleClassName: p,
+                    buttonVariant: x,
+                    buttonSize: C,
+                    align: A,
+                    fullWidth: v,
+                } = E[n];
+            return (0, l.jsxs)(u.B, {
                 direction: "horizontal",
                 justify: "space-between",
-                align: x,
-                fullWidth: C,
-                className: c,
+                align: A,
+                fullWidth: v,
+                className: o,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: m.D,
+                        className: a()(h.DD, p),
                         children: [
-                            (0, l.jsx)(o.D, { variant: d, color: E, children: t }),
-                            null != r && (0, l.jsx)(h, { helpArticle: r }),
+                            (0, l.jsx)(c.D, { variant: m, color: g, children: t }),
+                            null != r && (0, l.jsx)(f, { helpArticle: r }),
                         ],
                     }),
-                    null != s && null != a && (0, l.jsx)(u.$, { variant: f, size: p, onClick: a, text: s }),
+                    null != s && null != i && (0, l.jsx)(d.$, { variant: x, size: C, onClick: i, text: s }),
                 ],
             });
         },

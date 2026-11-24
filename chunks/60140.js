@@ -28,7 +28,7 @@ function S(e) {
 function k(e) {
     return e.skuId;
 }
-function j(e) {
+function N(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, x.Mk)(r);
     return t
@@ -44,7 +44,7 @@ function j(e) {
               }),
           });
 }
-function N(e) {
+function j(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, x.Mk)(r),
         i = y.intl.string(y.t.HP8LNG);
@@ -109,6 +109,8 @@ function R(e) {
                         "aria-label": y.intl.string(y.t.HP8LNG),
                         items: c,
                         getItemKey: O,
+                        className: _.tX,
+                        scrollerClassName: _.q8,
                         itemClassName: _.xo,
                         renderItem: T,
                         initialScrollIndex: d >= 0 ? Math.max(d - 1, 0) : null,
@@ -165,11 +167,11 @@ n.d(
                 T = "hscroll" === m && f === L.G2.HOME && null != A && O && !b;
             switch (m) {
                 case "feed":
-                    return (0, l.jsx)(j, { isLoading: I, products: S, tab: f });
+                    return (0, l.jsx)(N, { isLoading: I, products: S, tab: f });
                 case "hscroll":
                     if (k && O)
                         return (0, l.jsx)(R, { collectionId: A, sequencedOffers: v, products: y, onViewAll: x });
-                    return (0, l.jsx)(N, { isLoading: I || T, products: S, tab: f });
+                    return (0, l.jsx)(j, { isLoading: I || T, products: S, tab: f });
             }
         },
     },
