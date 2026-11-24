@@ -328,7 +328,7 @@ function eu(e) {
             wrapperClassName: G,
             paused: V = !1,
         } = e,
-        z = (0, y.T)(t.stream.channelId, "StreamTile"),
+        z = (0, y.TC)(t.stream.channelId, "StreamTile"),
         W = (0, b.BC)(t.id),
         $ = L.Ay.getVideoComponent(),
         B = (0, s.bG)([k.default], () => k.default.getId()),

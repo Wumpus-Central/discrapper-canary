@@ -20,7 +20,8 @@ n.d(
     t,
     {},
     {
-        T: function (e, t) {
+        Np: d,
+        TC: function (e, t) {
             let { guildId: n, supported: r } = (0, i.cf)(
                     [a.A, s.A],
                     () => {
@@ -33,7 +34,8 @@ n.d(
                 u = d.useConfig({ guildId: n ?? "", location: t }, { autoTrackExposure: r && null != n });
             return r && (c.enabled || (null != n && u.enabled));
         },
-        q: function (e, t) {
+        a5: o,
+        qQ: function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = a.A.getChannel(e),
                 r = i?.guild_id;

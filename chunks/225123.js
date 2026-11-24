@@ -148,7 +148,7 @@ let W = new c.A("ConnectionStore"),
                     n,
                     V.Ajs.ALLOW_STREAM_DRAWING,
                     (0, x.HB)(p.A.getChannel(t), B.A.getGuild(e)) &&
-                        (0, k.q)(t, "LocalVoiceStateManager", !1) &&
+                        (0, k.qQ)(t, "LocalVoiceStateManager", !1) &&
                         f.A.getState().streamDrawingEnabled,
                 ))
             );

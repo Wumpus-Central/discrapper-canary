@@ -64,7 +64,7 @@ function Q() {
                 ? t
                 : null;
         }),
-        t = (0, J.T)(null == e ? null : (0, W.Iy)(e).channelId, "StreamDrawingOverlay"),
+        t = (0, J.TC)(null == e ? null : (0, W.Iy)(e).channelId, "StreamDrawingOverlay"),
         n = (0, l.bG)([X.A], () => null != e && X.A.isStreamDrawingAllowed(e), [e]);
     return t && n && null != e ? (0, r.jsx)($.A, { streamKey: e, dimensions: null, overlay: !0 }, e) : null;
 }

@@ -56,7 +56,7 @@ function L(e) {
             },
             [q],
         ),
-        B = (0, g.T)(q, "SelfStreamContextMenu"),
+        B = (0, g.TC)(q, "SelfStreamContextMenu"),
         K = (0, l.bG)([A.A], () => A.A.getState().streamDrawingEnabled),
         X = (0, l.bG)([A.A], () => A.A.getState().soundshareEnabled),
         Y = I.Ay.supports(O.O5.DESKTOP_CAPTURE_APPLICATIONS),

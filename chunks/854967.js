@@ -22618,7 +22618,7 @@ function bt() {
     });
 }
 var ba = a(963935),
-    bn = a(864988),
+    bn = a(95767),
     bl = a(333357);
 function bi(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

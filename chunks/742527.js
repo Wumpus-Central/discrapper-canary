@@ -1729,7 +1729,7 @@ function tw(e) {
         ] = eD(),
         j = (0, u.bG)([to.Ay], () => to.Ay.getVoiceChannelId()),
         g = p ?? j,
-        v = (0, tn.T)(g, "GoLiveStreamOptions"),
+        v = (0, tn.TC)(g, "GoLiveStreamOptions"),
         S = (0, u.bG)(
             [$.A, et.A],
             () => {

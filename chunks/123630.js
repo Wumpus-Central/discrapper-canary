@@ -443,7 +443,7 @@ function U(e) {
     let { streamKey: t } = e,
         { zoomLevel: n, minZoom: h } = i.useContext(o.e9),
         A = n > h,
-        x = (0, g.T)((0, s.Iy)(t).channelId, "FocusedStreamTile"),
+        x = (0, g.TC)((0, s.Iy)(t).channelId, "FocusedStreamTile"),
         v = (0, p.BC)(t),
         E = (0, r.bG)([k.A], () => k.A.isStreamDrawingAllowed(t), [t]),
         C = x && v,

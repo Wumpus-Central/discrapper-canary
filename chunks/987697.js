@@ -14,7 +14,7 @@ n.d(
         A: function (e) {
             let { streamKey: t, paused: n, ..._ } = e,
                 E = (0, a.bG)([d.A], () => d.A.isStreamDrawingAllowed(t), [t]),
-                A = (0, l.T)((0, s.Iy)(t).channelId, "BufferedStreamVideo"),
+                A = (0, l.TC)((0, s.Iy)(t).channelId, "BufferedStreamVideo"),
                 [f, h] = r.useState(null),
                 I = r.useRef(null),
                 p = r.useCallback((e) => {
