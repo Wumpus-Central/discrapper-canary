@@ -38,8 +38,8 @@ var l = n(477900),
     j = n(841907),
     R = n(650583),
     O = n(452027),
-    L = n(403581),
-    M = n(646514),
+    M = n(403581),
+    L = n(646514),
     k = n(682901),
     w = n(50302),
     D = n(792996),
@@ -224,9 +224,9 @@ function K(e) {
                                         (0, l.jsx)("div", {
                                             className: U.E6,
                                             "aria-hidden": "true",
-                                            children: (0, l.jsx)(L.NitroWheelIcon, {
+                                            children: (0, l.jsx)(M.NitroWheelIcon, {
                                                 size: "sm",
-                                                color: M.A.colors.ICON_STRONG,
+                                                color: L.A.colors.ICON_STRONG,
                                             }),
                                         }),
                                         (0, l.jsx)(V, {
@@ -508,18 +508,18 @@ function eI(e) {
             customGiftMessage: N,
             setCustomGiftMessage: R,
             claimableRewards: O,
-            setSelectedGiftingPromotionRewards: L,
+            setSelectedGiftingPromotionRewards: M,
         } = (0, E.Pv)(),
-        M = (0, p.A)(),
+        L = (0, p.A)(),
         k = (0, h.t4)((e) => e.getIsRecurringGiftCheckout());
     (0, j.r)(k);
-    let w = (0, b.kz)(M, x && (0, g.Ik)(_), O);
+    let w = (0, b.kz)(L, x && (0, g.Ik)(_), O);
     a()(void 0 !== f, "should not be undefined");
     let [D, U] = (0, s.yK)([S.A], () => [null != f ? S.A.get(f.planId) : null, null != t ? S.A.get(t) : null]),
         G = I?.subscriptionTrial,
         F = I?.isReferralTrial === !0,
         B = (0, ei.Sq)() && !F,
-        H = U ?? M,
+        H = U ?? L,
         W = n ?? m;
     a()(null != W, "Price option has to be set");
     let V = P?.discount?.planIds,
@@ -537,8 +537,8 @@ function eI(e) {
         }
     }, [q, x, l, D, d, Z, v]),
         i.useEffect(() => {
-            w && null != O && O.length > 0 && L(O);
-        }, [O, L, w]));
+            w && null != O && O.length > 0 && M(O);
+        }, [O, M, w]));
     let { ref: z, ...$ } = (0, o._u)(),
         Q = H?.id != null ? (0, y.y8)(H.id, !1, x, W) : void 0,
         { ipCountryCode: J } = (0, el.A)(),
@@ -837,8 +837,8 @@ function eN(e) {
             giftRecipient: j,
             customGiftMessage: R,
             setCustomGiftMessage: O,
-            selectedGiftStyle: L,
-            isPlansEligibleForDiscount: M,
+            selectedGiftStyle: M,
+            isPlansEligibleForDiscount: L,
             discountedPlanRegularPrice: w,
             userTrialOffer: U,
             shouldShowTrialOrDiscountLayout: G,
@@ -881,7 +881,7 @@ function eN(e) {
             thePriceOptions: v,
             shouldShowTrialOrDiscountLayout: G,
             isEligibleForTrial: b,
-            isPlansEligibleForDiscount: M,
+            isPlansEligibleForDiscount: L,
             isRecurringGiftEnabled: J,
         });
     }
@@ -897,7 +897,7 @@ function eN(e) {
             giftRecipient: j,
             customGiftMessage: R,
             setCustomGiftMessage: O,
-            selectedGiftStyle: L,
+            selectedGiftStyle: M,
             isPrepaid: F,
             canContinue: Z,
             selectedPlan: C,
@@ -978,7 +978,7 @@ function eN(e) {
                             ],
                         });
                     }
-                })(U, b, M),
+                })(U, b, L),
             en(),
             eb({
                 selectedPlan: C,

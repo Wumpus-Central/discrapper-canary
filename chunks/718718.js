@@ -189,7 +189,7 @@ var N =
     j = (((i = j || {}).EDIT = "edit"), (i.CREATE = "create"), i);
 let R = { US: c, CA: s },
     O = { US: d, CA: o },
-    L = (e, t) => ({
+    M = (e, t) => ({
         name: "name",
         id: A,
         title: () => E.intl.string(E.t.vyuULb),
@@ -208,7 +208,7 @@ let R = { US: c, CA: s },
                 : S.bt,
         renderInput: (e) => (0, r.jsx)(m.k, { ...e }),
     }),
-    M = (e, t) => {
+    L = (e, t) => {
         let n = t?.allowedBillingAddressCountries,
             l = null != n && n.length > 0 ? I.filter((e) => n.includes(e.value)) : I,
             i = t?.countryHelperText;
@@ -422,16 +422,16 @@ let R = { US: c, CA: s },
         };
     },
     F = {
-        modalUS: [[M], [k], [w], [D], [G, U]],
-        modalInternational: [[M], [k], [w], [D], [G], [U]],
-        modalUSWithName: [[M], [L], [k], [w], [D], [G, U]],
-        modalInternationalWithName: [[M], [L], [k], [w], [D], [G], [U]],
-        settingsUS: [[L], [k, w], [D, G, U], [M]],
-        settingsUSMobile: [[L], [k], [w], [D], [G], [U], [M]],
-        settingsInternational: [[L], [k, w], [D], [G, U], [M]],
-        settingsInternationalMobile: [[L], [k], [w], [D], [G], [U], [M]],
-        settingsInternationalWithoutName: [[k, w], [D], [G, U], [M]],
-        settingsInternationalWithoutNameMobile: [[k], [w], [D], [G], [U], [M]],
+        modalUS: [[L], [k], [w], [D], [G, U]],
+        modalInternational: [[L], [k], [w], [D], [G], [U]],
+        modalUSWithName: [[L], [M], [k], [w], [D], [G, U]],
+        modalInternationalWithName: [[L], [M], [k], [w], [D], [G], [U]],
+        settingsUS: [[M], [k, w], [D, G, U], [L]],
+        settingsUSMobile: [[M], [k], [w], [D], [G], [U], [L]],
+        settingsInternational: [[M], [k, w], [D], [G, U], [L]],
+        settingsInternationalMobile: [[M], [k], [w], [D], [G], [U], [L]],
+        settingsInternationalWithoutName: [[k, w], [D], [G, U], [L]],
+        settingsInternationalWithoutNameMobile: [[k], [w], [D], [G], [U], [L]],
     };
 class B extends a.PureComponent {
     static Layouts = N;

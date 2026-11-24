@@ -174,9 +174,9 @@ let W = function (e) {
         F = B?.subscriptionTrial?.skuId,
         W = (0, j.O)(),
         z = (0, E.YJ)(W),
-        Y = null != W && (0, E.U9)(W, P.pe.TIER_2) && z === P.gD.PREMIUM_MONTH_TIER_2,
-        K = (0, E.N1)(z),
-        X = null != K ? `${K}/${(0, N.FJ)(P.WT.MONTH)}` : "",
+        K = null != W && (0, E.U9)(W, P.pe.TIER_2) && z === P.gD.PREMIUM_MONTH_TIER_2,
+        Y = (0, E.N1)(z),
+        X = null != Y ? `${Y}/${(0, N.FJ)(P.WT.MONTH)}` : "",
         q = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_0),
         Z = (0, N.JM)(P.gD.PREMIUM_MONTH_TIER_2),
         J = (function () {
@@ -421,7 +421,7 @@ let W = function (e) {
                                 (0, s.jsx)(V, {
                                     tier0Price: q,
                                     tier2Price: Z,
-                                    shouldUseDiscountPrice: Y,
+                                    shouldUseDiscountPrice: K,
                                     tier2DiscountedPriceString: X,
                                     showMonthlyInterval: d,
                                 }),

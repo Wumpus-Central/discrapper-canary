@@ -82,7 +82,7 @@ var A = n(164636),
     j = n(430993),
     R = n(969951),
     O = n(599062);
-function L() {
+function M() {
     let { refreshCategories: e } = (0, R.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -91,7 +91,7 @@ function L() {
         ],
     });
 }
-var M = n(534479),
+var L = n(534479),
     k = n(121005),
     w = n(800471),
     D = n(169801),
@@ -137,11 +137,11 @@ function q(e) {
               : t(r.pn.REVIEW);
     }, [C, d, t, s, h, m, n, a, u]),
     C)
-        ? (0, l.jsx)(M.A, {})
+        ? (0, l.jsx)(L.A, {})
         : d
           ? (0, l.jsx)(_.oO, {})
           : null != S
-            ? (0, l.jsx)(L, {})
+            ? (0, l.jsx)(M, {})
             : null;
 }
 function z(e) {
@@ -208,7 +208,7 @@ function z(e) {
                     : t(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: p })));
     }, [d, p, h, u, E, j, C, N, t, f, s, o, T, c, y, R, n]),
     N)
-        ? (0, l.jsx)(M.A, {})
+        ? (0, l.jsx)(L.A, {})
         : E
           ? (0, l.jsx)(_.oO, {})
           : null;

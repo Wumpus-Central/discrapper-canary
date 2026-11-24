@@ -40,7 +40,7 @@ function R(e) {
             quantity: e.quantity,
         })),
         O = (0, r.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { isPremium: L, isPremiumGroupPurchase: M, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, m.i)(),
+        { isPremium: M, isPremiumGroupPurchase: L, isEligibleForTrial: k, isEligibleForDiscount: w } = (0, m.i)(),
         D = (0, u.S3)(),
         U = (0, o.s2)(),
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
@@ -100,14 +100,14 @@ function R(e) {
                                     isGift: G,
                                     giftRecipient: B,
                                     isEligibleForTrial: k,
-                                    enablePremiumBrandRefresh: L,
+                                    enablePremiumBrandRefresh: M,
                                     isDisplayingWowMomentConfirmation: O,
-                                    isPremiumGroupPurchase: M,
+                                    isPremiumGroupPurchase: L,
                                 })
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, S, n, U, k, w, R, c, K, Z, H, z, G, B, L, O, M]);
+    }, [F, $, S, n, U, k, w, R, c, K, Z, H, z, G, B, M, O, L]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, d.t4)((e) => ({
@@ -132,7 +132,7 @@ function O(e) {
               : { headerBadgePreset: o };
     }, [e, l, r, a, s, t, n]);
 }
-function L() {
+function M() {
     let e = O();
     return (0, l.jsx)(c.f, { headerBadgeConfig: e });
 }
@@ -143,7 +143,7 @@ n.d(
         Fe: O,
         kc: function (e) {
             let { isGift: t } = (0, P.Pv)();
-            return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(L, {});
+            return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(M, {});
         },
     },
 );

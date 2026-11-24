@@ -76,12 +76,12 @@ n.d(
                 { product: v, purchase: y } = (0, p.A)(n),
                 O = E.Ay.canUseCollectibles(t),
                 T = (0, f.G0)(v),
-                k = (0, f.gA)(y),
-                N = !O && k,
-                C = null != y && !N,
+                N = (0, f.gA)(y),
+                k = !O && N,
+                C = null != y && !k,
                 I = (0, _.Sw)(y),
                 P = (0, _.VG)(v),
-                b = T || k,
+                b = T || N,
                 D = v?.type ?? y?.type,
                 F = !C && (!b || D === s.R.AVATAR_DECORATION || D === s.R.PROFILE_EFFECT);
             if (null == v && null == y) return null;
@@ -103,7 +103,7 @@ n.d(
                                 ],
                             }),
                             C
-                                ? (0, l.jsx)(j, { purchase: y, isPremiumPurchase: k, locale: x })
+                                ? (0, l.jsx)(j, { purchase: y, isPremiumPurchase: N, locale: x })
                                 : (0, l.jsx)(m.E, {
                                       variant: e ? "footnote/normal" : "body-sm/medium",
                                       color: "text-default",
@@ -118,7 +118,7 @@ n.d(
                                                 return t ? g.intl.string(g.t.hmyYK8) : n ? l : r;
                                             })({
                                                 canUsePremiumCollectibles: O,
-                                                hasLostAccess: N,
+                                                hasLostAccess: k,
                                                 nitroChurnCTA: r,
                                                 nitroJoinCTA: h,
                                             })

@@ -16,10 +16,10 @@ var i,
     A = n(613412);
 n(181658);
 var C = n(499785),
-    x = n(652215);
-let E = a.createContext(null);
+    E = n(652215);
+let x = a.createContext(null);
 function v() {
-    let e = a.useContext(E);
+    let e = a.useContext(x);
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
@@ -153,7 +153,7 @@ function eh(e) {
         h = f?.username ?? n.parent_username,
         g = h !== p,
         A = f?.avatar ?? n.parent_avatar,
-        { isConnected: C, isResolved: x } = (function (e) {
+        { isConnected: C, isResolved: E } = (function (e) {
             let t = (0, O.bG)([$.A], () => $.A.getLinkedUsers()[e]?.link_status),
                 [n, i] = a.useState(() =>
                     t === el.Ef.ACTIVE ? "connected" : null == t || t === el.Ef.PENDING ? null : "declined",
@@ -172,7 +172,7 @@ function eh(e) {
                 o = "declined" === n;
             return { isConnected: s, isDeclined: o, isResolved: s || o };
         })(n.parent_id),
-        E = ((t = n.created_at), (0, ed.mV)(Date.parse(t), em)),
+        x = ((t = n.created_at), (0, ed.mV)(Date.parse(t), em)),
         v = ec.Ay.getUserAvatarURL({ id: n.parent_id, avatar: A }, !1, (0, er.FT)(er._3.SIZE_40));
     return (0, r.jsxs)("div", {
         className: ep.nM,
@@ -197,10 +197,10 @@ function eh(e) {
                             lineClamp: 1,
                             children: h,
                         }),
-                    (0, r.jsx)(d.E, { variant: "body-xs/normal", color: "text-muted", children: E }),
+                    (0, r.jsx)(d.E, { variant: "body-xs/normal", color: "text-muted", children: x }),
                 ],
             }),
-            x
+            E
                 ? (0, r.jsx)(d.E, {
                       variant: "body-sm/normal",
                       color: "text-muted",
@@ -285,22 +285,22 @@ function eg(e) {
                     },
                     [m, h, u],
                 ),
-                [C, x] = a.useState(t),
-                [E, v] = a.useState(t),
+                [C, E] = a.useState(t),
+                [x, v] = a.useState(t),
                 [_, b] = a.useState(n);
             return (
                 n && !_
                     ? (b(!0),
                       v(t),
-                      x((e) => {
+                      E((e) => {
                           let n = new Map();
                           for (let t of e) f.has(t.parent_id) && n.set(t.parent_id, t);
                           for (let e of t) n.set(e.parent_id, e);
                           return Array.from(n.values());
                       }))
-                    : t !== E &&
+                    : t !== x &&
                       (v(t),
-                      x((e) => {
+                      E((e) => {
                           let n = new Map(e.map((e) => [e.parent_id, e]));
                           for (let e of t) n.set(e.parent_id, e);
                           return Array.from(n.values());
@@ -346,8 +346,8 @@ function eg(e) {
 }
 var eA = n(818348),
     eC = n(703687);
-let ex = "https://support.discord.com/hc/articles/14155060633623";
-var eE = n(846330);
+let eE = "https://support.discord.com/hc/articles/14155060633623";
+var ex = n(846330);
 let ev = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
@@ -355,17 +355,17 @@ let ev = {
                     (await t({ type: j.Empty }), window.location.reload());
                 }, [t]);
             return (0, r.jsxs)("div", {
-                className: eE.kL,
+                className: ex.kL,
                 children: [
                     (0, r.jsx)(c.D, {
                         variant: "heading-lg/semibold",
-                        className: eE.DD,
+                        className: ex.DD,
                         children: b.intl.string(_.default.v52itt),
                     }),
                     (0, r.jsx)(d.E, {
                         variant: "body-md/normal",
                         color: "text-muted",
-                        className: eE.h_,
+                        className: ex.h_,
                         children: b.intl.string(_.default["5am8D3"]),
                     }),
                     (0, r.jsx)(u.B, {
@@ -435,14 +435,14 @@ let ev = {
                 }, [l]),
                 A = (0, ee.VT)(),
                 C = (0, ee.Du)(),
-                x = (0, O.bG)([$.A], () => $.A.getLinkedUsers()),
-                E = (0, O.bG)([$.A], () => $.A.getAreLinkedUsersProcessed()),
+                E = (0, O.bG)([$.A], () => $.A.getLinkedUsers()),
+                x = (0, O.bG)([$.A], () => $.A.getAreLinkedUsersProcessed()),
                 v =
                     ((t = g.pending_requests),
                     (n = (0, O.bG)([$.A], () => $.A.getLinkedUsers())),
                     (i = (0, O.bG)([k.default], () => k.default.getCurrentUser()?.id)),
                     a.useMemo(() => {
-                        if (!E) return t;
+                        if (!x) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             l = [];
                         for (let t of Object.values(n)) {
@@ -457,9 +457,9 @@ let ev = {
                             });
                         }
                         return l;
-                    }, [E, n, i, t])),
-                y = E ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
-                T = E ? A : g.pending_requests.length,
+                    }, [x, n, i, t])),
+                y = x ? Object.values(E).some((e) => null != e) : g.pending_requests.length > 0,
+                T = x ? A : g.pending_requests.length,
                 S = (0, O.bG)([$.A], () => $.A.getLinkCode()),
                 I = (0, O.bG)([$.A], () => $.A.getLinkCodeExpiresAt()),
                 N = S ?? g.link_code,
@@ -480,8 +480,8 @@ let ev = {
             (0, J.A)(F);
             let B = !w || U,
                 V = B
-                    ? b.intl.format(_.default["6GaRTu"], { link: ex })
-                    : b.intl.format(_.default["Ke+kz5"], { pendingCount: T, link: ex });
+                    ? b.intl.format(_.default["6GaRTu"], { link: eE })
+                    : b.intl.format(_.default["Ke+kz5"], { pendingCount: T, link: eE });
             return (0, r.jsxs)(K.d, {
                 transitionState: p,
                 onClose: eA.tE,
@@ -512,7 +512,7 @@ let ev = {
                                 }),
                             (0, r.jsx)("div", {
                                 hidden: B,
-                                children: (0, r.jsx)(eg, { pendingRequests: v, linkedUsersProcessed: E }),
+                                children: (0, r.jsx)(eg, { pendingRequests: v, linkedUsersProcessed: x }),
                             }),
                         ],
                     }),
@@ -683,7 +683,7 @@ function ej(e) {
         o(t);
     }, [t]);
     let c = I.has(s.task_type);
-    return (0, r.jsxs)(E.Provider, {
+    return (0, r.jsxs)(x.Provider, {
         value: u,
         children: [!c && (0, r.jsx)(eS, {}), (0, r.jsx)(e_, { onSubmit: n, disabled: i, transitionState: l })],
     });
@@ -691,7 +691,7 @@ function ej(e) {
 let eR = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = a.useState(null),
-        [E, v] = a.useState(!0),
+        [x, v] = a.useState(!0),
         [N, O] = a.useState(null),
         [M, P] = a.useState(!1),
         k = a.useCallback(async () => {
@@ -699,7 +699,7 @@ let eR = function (e) {
             try {
                 let e = await (async function () {
                     let e = await C.A.get({
-                        url: x.Rsh.SAFETY_FLOWS_TASK,
+                        url: E.Rsh.SAFETY_FLOWS_TASK,
                         trackedActionData: { event: A.NetworkActionNames.USER_VERIFY },
                         rejectWithError: !0,
                     });
@@ -730,7 +730,7 @@ let eR = function (e) {
                         (await (async function (e) {
                             return (
                                 await C.A.post({
-                                    url: x.Rsh.SAFETY_FLOWS_TASK,
+                                    url: E.Rsh.SAFETY_FLOWS_TASK,
                                     body: e,
                                     trackedActionData: { event: A.NetworkActionNames.USER_VERIFY },
                                     rejectWithError: !0,
@@ -771,7 +771,7 @@ let eR = function (e) {
                   ? (0, r.jsx)(ej, { task: i, handleSubmit: L, disabled: M, transitionState: t ?? s.ip.ENTERED })
                   : (0, r.jsx)("div", {
                         className: eI.nA,
-                        children: E
+                        children: x
                             ? (0, r.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE })
                             : (0, r.jsx)("div", {
                                   className: eI.kL,

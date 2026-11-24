@@ -102,7 +102,7 @@ function R(e) {
             (S(void 0), null != T && T());
         }, [S, T]),
         O = i.useMemo(() => t(), [t]),
-        L = (0, l.jsx)(d.U, {
+        M = (0, l.jsx)(d.U, {
             ...n,
             onBack: R,
             onPaymentSourceAdd: C,
@@ -113,6 +113,6 @@ function R(e) {
             postPurchaseStep: o.pn.CONFIRM,
         });
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(u.dZ, { children: g ? (0, l.jsx)(b, {}) : O }), (0, l.jsx)(u.UX, { children: L })],
+        children: [(0, l.jsx)(u.dZ, { children: g ? (0, l.jsx)(b, {}) : O }), (0, l.jsx)(u.UX, { children: M })],
     });
 }

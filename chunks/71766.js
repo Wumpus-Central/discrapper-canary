@@ -28,13 +28,13 @@ var l = n(477900),
     j = n(50302),
     R = n(107198),
     O = n(885234);
-function L(e) {
+function M(e) {
     let { subscriptionPlan: t, storeListing: n } = e,
         i = (0, r.bG)([g.A], () => g.A.get(t.skuId), [t.skuId]),
         a = (0, y.ys)(t.id) ? (0, y.m6)(t.id) : void 0;
     return (0, y.z4)(t.id) ? (0, l.jsx)(d.a6, {}) : (0, l.jsx)(d.WH, { sku: i, premiumType: a, storeListing: n });
 }
-function M(e) {
+function L(e) {
     return e === o.u$.PREMIUM_GIFT;
 }
 n.d(
@@ -90,7 +90,7 @@ n.d(
                         return null != c
                             ? (0, C.Tp)(c, i)
                             : b.intl.formatToPlainString(R.default["8bPDtb"], { premiumGroupProductName: (0, T.DP)() });
-                    if (M(t)) {
+                    if (L(t)) {
                         let e = (0, v.iK)(i);
                         return (
                             o > 1 && (e = b.intl.format(N.default.kyGViz, { quantity: o, label: e })),
@@ -121,7 +121,7 @@ n.d(
                 J = (function (e) {
                     let { guildId: t, invoiceSummaryType: n, giftRecipient: l, isRecurringGiftCheckout: i } = e,
                         a = (0, r.bG)([E.A], () => (null != t ? E.A.getGuild(t) : null), [t]);
-                    return (M(n) || i) && null != l
+                    return (L(n) || i) && null != l
                         ? { type: "gift", user: l }
                         : null != a
                           ? { type: "guildSubscription", guild: a }
@@ -139,7 +139,7 @@ n.d(
                         ? i.interval === _.WT.YEAR
                             ? b.intl.string(j.default.rstMwN)
                             : b.intl.string(j.default.Vb8FaC)
-                        : M(t)
+                        : L(t)
                           ? null != l
                               ? ""
                               : b.intl.string(N.default["3wsYeI"])
@@ -200,7 +200,7 @@ n.d(
                                     invoicePlanId: c,
                                 } = e,
                                 { subscriptionPlanInvoiceItem: d } = (0, C.Sb)(l, c ?? n.id),
-                                m = M(t),
+                                m = L(t),
                                 p = t === o.u$.PREMIUM_WITH_TRIAL,
                                 E = (m ? d?.amount : d?.subscriptionPlanPrice) ?? 0,
                                 S = (0, A.$g)(E, l.currency),
@@ -262,7 +262,7 @@ n.d(
                 priceSubText: es,
                 priceSubTextHasStrikethrough: eo,
                 target: J,
-                graphic: (0, l.jsx)(L, { subscriptionPlan: d, storeListing: B }),
+                graphic: (0, l.jsx)(M, { subscriptionPlan: d, storeListing: B }),
                 omitDefaultIconBackground: eu,
                 header: ee,
                 headerIconSrc: et,

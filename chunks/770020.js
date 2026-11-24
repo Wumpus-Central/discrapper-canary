@@ -39,8 +39,8 @@ n.d(
                 {
                     selectedPlan: R,
                     selectedPlanPrice: O,
-                    isPrepaid: L,
-                    isPlansEligibleForDiscount: M,
+                    isPrepaid: M,
+                    isPlansEligibleForDiscount: L,
                     shouldShowHRKEuroWarning: k,
                     shouldShowTotalInSubscriptionFlow: w,
                     shouldShowTrialOrDiscountLayout: D,
@@ -98,7 +98,7 @@ n.d(
                             discountInfo: e.premiumDiscountInfo,
                         })),
                         j = (0, o.bG)([E.default], () => E.default.locale),
-                        { discountOffer: R, discountAmountOff: O, applicablePlan: L } = N;
+                        { discountOffer: R, discountAmountOff: O, applicablePlan: M } = N;
                     return i.useMemo(
                         () =>
                             e.map((e) => {
@@ -108,8 +108,8 @@ n.d(
                                     { isCurrentPlan: m, disabled: E } = (0, C.cD)(T, e),
                                     N = S.A.get(e);
                                 a()(null != N, "Missing subscriptionPlan");
-                                let M = (0, g.L_)({ planId: e, isGift: b, priceOptions: u, subscriptionPlan: N }),
-                                    k = null != M && null == R,
+                                let L = (0, g.L_)({ planId: e, isGift: b, priceOptions: u, subscriptionPlan: N }),
+                                    k = null != L && null == R,
                                     w = (0, g.y8)(e, !1, b, u),
                                     D = (0, f.gS)(T, N, {
                                         userLocale: j,
@@ -117,7 +117,7 @@ n.d(
                                         shouldShowSavingsPercent: k,
                                         isGift: b,
                                         planId: e,
-                                        savingsPercent: M,
+                                        savingsPercent: L,
                                         priceOptions: u,
                                         isEligibleForTrial: d,
                                     }),
@@ -139,13 +139,13 @@ n.d(
                                             : (0, I.$g)(e.amount, e.currency);
                                     })(w, { isEligibleForTrial: d }),
                                     F = G,
-                                    B = r && null != L && e === L ? O : null;
+                                    B = r && null != M && e === M ? O : null;
                                 if (
                                     (null != R &&
                                         !d &&
                                         ((0, p.p2)(R)
                                             ? N.interval === y.WT.YEAR
-                                                ? (t = A.intl.format(P.default.ODKoJd, { percent: M ?? "" }))
+                                                ? (t = A.intl.format(P.default.ODKoJd, { percent: L ?? "" }))
                                                 : N.interval === y.WT.MONTH &&
                                                   (null != B &&
                                                       (F = A.intl.format(A.t.hXcaLT, {
@@ -187,7 +187,7 @@ n.d(
                                         subscriptionPlan: N,
                                         userLocale: j,
                                         discountOffer: R,
-                                        savingsPercent: M,
+                                        savingsPercent: L,
                                         shouldHideSavingsBadge: null != T || null != R || v,
                                     }),
                                 });
@@ -202,12 +202,12 @@ n.d(
                                     isDisabled: E || n,
                                 };
                             }),
-                        [l, e, r, u, d, v, x, _, T, O, L, R, b, j, n],
+                        [l, e, r, u, d, v, x, _, T, O, M, R, b, j, n],
                     );
                 })(r, {
                     disabled: T,
                     planPricesLoading: j,
-                    isEligibleForDiscount: M,
+                    isEligibleForDiscount: L,
                     priceOptions: W,
                     isEligibleForTrial: F,
                     isEligibleForBOGOPromotion: B,
@@ -236,7 +236,7 @@ n.d(
                               ? (0, C.LR)({
                                     selectedPlan: R,
                                     selectedPlanPrice: O,
-                                    isPrepaid: L,
+                                    isPrepaid: M,
                                     shouldShowHRKEuroWarning: k,
                                     shouldShowTrialOrDiscountLayout: D,
                                     showTotal: b,

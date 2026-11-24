@@ -69,7 +69,7 @@ function R(e) {
             resolveInternalState: T,
             renderCustomPaymentSourceSelectorContent: R,
         } = e,
-        { setPaymentSourceId: O, paymentSourceId: L } = (function (e) {
+        { setPaymentSourceId: O, paymentSourceId: M } = (function (e) {
             let { setPaymentSourceId: t, paymentSourceId: n } = (function () {
                     let {
                             paymentSourceId: e,
@@ -101,7 +101,7 @@ function R(e) {
                 );
             return { setPaymentSourceId: l, paymentSourceId: r };
         })({ setPaymentSourceId: t, paymentSourceId: n }),
-        [M, k] = i.useState(!1),
+        [L, k] = i.useState(!1),
         {
             giftCardsEnabled: w,
             giftCardCheckboxProps: D,
@@ -214,11 +214,11 @@ function R(e) {
                 isSplitPaymentMode: T,
             };
         })({
-            paymentSourceId: L,
+            paymentSourceId: M,
             setPaymentSourceId: O,
             location: C,
             subscriptionPaymentSourceId: I,
-            pendingGiftCardWalletSelection: M,
+            pendingGiftCardWalletSelection: L,
             setPendingGiftCardWalletSelection: k,
         }),
         {

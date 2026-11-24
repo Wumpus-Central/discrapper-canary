@@ -73,8 +73,8 @@ function b(e) {
             currentTime: w,
             duration: M,
             played: A,
-            playing: _,
-            onDrag: D,
+            playing: D,
+            onDrag: _,
             onDragStart: k,
             onDragEnd: E,
         } = e,
@@ -138,10 +138,10 @@ function b(e) {
                     })(t ?? [], s, r) ?? f,
                 [t, s, r],
             )),
-        j = _ && !c,
+        j = D && !c,
         L = i.useRef(A),
-        U = i.useRef(j),
-        O = i.useRef(null),
+        O = i.useRef(j),
+        U = i.useRef(null),
         W = i.useRef(null),
         F = i.useRef(b),
         B = window.devicePixelRatio,
@@ -212,11 +212,11 @@ function b(e) {
                         let e = s - W.current;
                         e < 160 ? ((r = e), (l = !0)) : (W.current = null);
                     }
-                    ((L.current !== A || U.current !== j) && ((L.current = A), (U.current = j), (O.current = s)),
-                        null != O.current && s > O.current + 200 && (O.current = null));
+                    ((L.current !== A || O.current !== j) && ((L.current = A), (O.current = j), (U.current = s)),
+                        null != U.current && s > U.current + 200 && (U.current = null));
                     let o = a.height / B;
                     (i.clearRect(0, 0, a.width, a.height), i.beginPath());
-                    let [h, u] = C(H, z, s, O.current);
+                    let [h, u] = C(H, z, s, U.current);
                     ((l = l || u), (i.fillStyle = h));
                     for (let e = 0; e < N.length; e++) {
                         let t = T(r, e, N.length);
@@ -230,9 +230,9 @@ function b(e) {
                         });
                     }
                     i.fill();
-                    let [d, c] = C(Y, X, s, O.current);
+                    let [d, c] = C(Y, X, s, U.current);
                     l = l || c;
-                    let [p, m] = C(K, q, s, O.current);
+                    let [p, m] = C(K, q, s, U.current);
                     l = l || m;
                     for (let e = 0; e < n.length; e++) {
                         let t = n[e],
@@ -291,7 +291,7 @@ function b(e) {
                 ),
             ]
         );
-    })({ ref: R, onDrag: D, onDragStart: k, onDragEnd: E });
+    })({ ref: R, onDrag: _, onDragStart: k, onDragEnd: E });
     return (0, a.jsx)("canvas", {
         onMouseDown: Z,
         className: l()(g.J, n),

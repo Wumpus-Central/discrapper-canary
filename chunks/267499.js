@@ -40,7 +40,7 @@ function O() {
         a = (0, v.dA)(r?.endDate, t);
     return null == n || null == e || 0 === e.length
         ? null
-        : (0, i.jsx)(L, {
+        : (0, i.jsx)(M, {
               rewardImageUrl: l,
               countdownText: a,
               header: (0, x.uJ)(n.header) ? j.intl.string(j.t.OEtqpm) : n.header,
@@ -49,7 +49,7 @@ function O() {
                   : n.desktopBody,
           });
 }
-function L(e) {
+function M(e) {
     let { rewardImageUrl: t, countdownText: n, header: l, body: r } = e;
     return (0, i.jsx)("div", {
         className: R.KE,
@@ -66,7 +66,7 @@ function L(e) {
         }),
     });
 }
-var M = n(423814),
+var L = n(423814),
     k = n(77528),
     w = n(35587),
     D = n(511484),
@@ -252,13 +252,13 @@ function es(e) {
         T = _?.subscriptionTrial?.skuId,
         b = v?.hasActiveTrial ? x?.premiumType : null,
         N = v?.planIdFromItems === H.gD.PREMIUM_YEAR_TIER_2,
-        R = (0, M.O)(),
-        L = (0, g.k5)(),
-        G = null != T || null != b ? H.Vk.PREMIUM_TRIAL : null != R || L ? H.Vk.PREMIUM_DISCOUNT : null,
+        R = (0, L.O)(),
+        M = (0, g.k5)(),
+        G = null != T || null != b ? H.Vk.PREMIUM_TRIAL : null != R || M ? H.Vk.PREMIUM_DISCOUNT : null,
         F = (0, c.q)((0, h.Ay)()),
         B = !a && null != R && (0, D.hm)(R),
-        W = !a && L && N && G === H.Vk.PREMIUM_DISCOUNT,
-        V = (0, U.rm)(L, b, a ? null : R, _, T),
+        W = !a && M && N && G === H.Vk.PREMIUM_DISCOUNT,
+        V = (0, U.rm)(M, b, a ? null : R, _, T),
         Y = (0, w.Sq)() && !a && null == G,
         K = null != t || E ? (0, i.jsxs)(i.Fragment, { children: [t, E && (0, i.jsx)(O, {})] }) : null,
         Z = u && !a,

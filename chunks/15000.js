@@ -15,9 +15,9 @@ var i = n(477900),
     g = n(557722),
     A = n(413599),
     C = n(870570),
-    x = n(446868),
-    E = n(503698),
-    v = n.n(E),
+    E = n(446868),
+    x = n(503698),
+    v = n.n(x),
     _ = n(607399),
     b = n(821609),
     y = n(331322),
@@ -37,7 +37,7 @@ class P extends l.PureComponent {
             children: e.map((e) =>
                 e === j.Fz7.CAPTCHA
                     ? (0, i.jsx)(I.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(b.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
+                    : (0, i.jsx)(b.$, { onClick: () => this.handleClick(e), text: E.A.getButtonTitle(e) }, e),
             ),
         });
     }
@@ -136,9 +136,9 @@ var k = n(87404),
     L = n(53516);
 function w() {
     let { action: e, theme: t } = (0, a.cf)([C.A, A.A], () => ({ action: C.A.getAction(), theme: A.A.theme })),
-        E = x.A.getVerificationTypes(e),
+        x = E.A.getVerificationTypes(e),
         [v, _] = l.useState(0),
-        b = (0, m.Ay)(E);
+        b = (0, m.Ay)(x);
     function y() {
         ((0, d.Cw)(),
             (0, o.mM)(
@@ -156,10 +156,10 @@ function w() {
             {
                 type: r.ImpressionTypes.MODAL,
                 name: r.ImpressionNames.USER_ACTION_REQUIRED,
-                properties: { verification_type: E[0], verification_types: E },
+                properties: { verification_type: x[0], verification_types: x },
             },
             {},
-            [E.toString()],
+            [x.toString()],
         ),
         l.useEffect(
             () => (
@@ -172,7 +172,7 @@ function w() {
         ),
         l.useEffect(() => {
             b?.[0] === j.Fz7.PHONE &&
-                E?.[0] === j.Fz7.EMAIL &&
+                x?.[0] === j.Fz7.EMAIL &&
                 (0, o.mM)(
                     async () => {
                         let { Alert: e } = await Promise.all([n.e(844331), n.e(542369)]).then(n.bind(n, 291064));
@@ -186,9 +186,9 @@ function w() {
                     },
                     { modalKey: k.Pr, Layer: h.Ay, onCloseCallback: y },
                 );
-        }, [E, b]),
+        }, [x, b]),
         (0, i.jsx)(P, {
-            types: E,
+            types: x,
             captchaKey: v,
             onCaptchaVerify: function (e) {
                 s.Bo.post({

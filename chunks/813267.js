@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => w, gS: () => k, O7: () => L });
+n.d(t, { Ay: () => w, gS: () => k, O7: () => M });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -106,11 +106,11 @@ function N(e) {
 var j = n(35587),
     R = n(387278),
     O = n(268431);
-function L(e, t) {
+function M(e, t) {
     let n = e.interval === v.WT.YEAR ? _.t.ECT4A5 : _.t.v9QeON;
     return _.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });
 }
-function M(e) {
+function L(e) {
     return { type: "badge", textBadgeVariant: "body-sm/medium", text: e };
 }
 function k(e, t, n) {
@@ -125,7 +125,7 @@ function k(e, t, n) {
             isEligibleForTrial: d,
         } = n,
         m = null != e && (e.planId === s || (null != t && e.planId === t.id));
-    if (i) return a || s !== v.gD.PREMIUM_MONTH_TIER_2 ? null : M(_.intl.string(_.t.iQTfWx));
+    if (i) return a || s !== v.gD.PREMIUM_MONTH_TIER_2 ? null : L(_.intl.string(_.t.iQTfWx));
     if (null != t && (t.interval !== v.WT.YEAR || null == e) && !(r && !m)) return null;
     if (
         null != t &&
@@ -133,12 +133,12 @@ function k(e, t, n) {
         (0, R.sR)({ targetSubscriptionPlan: t, isGift: a, shouldShowSavingsPercent: r, isEligibleForTrial: d ?? !1 })
     ) {
         let e = (0, R.vK)(t, a, c);
-        return null != e ? M(e) : null;
+        return null != e ? L(e) : null;
     }
     return null != t && t.interval === v.WT.YEAR && null != e
         ? _.intl.string(_.t["122kWB"])
         : r && !m && null != o
-          ? M(_.intl.format(_.t.IAybsG, { discount: (0, u.l9)(l, o / 100) }))
+          ? L(_.intl.format(_.t.IAybsG, { discount: (0, u.l9)(l, o / 100) }))
           : null;
 }
 function w(e) {
@@ -151,7 +151,7 @@ function w(e) {
             selected: T,
             priceOptions: b,
             isPrepaid: R,
-            shouldShowTrialOrDiscountLayout: M,
+            shouldShowTrialOrDiscountLayout: L,
             isEligibleForDiscount: w,
             isEligibleForTrial: D,
             isCurrentPlan: U,
@@ -182,7 +182,7 @@ function w(e) {
         en = (0, j.Sq)(),
         el = (0, g.L_)({ planId: u, isGift: Y, priceOptions: b, subscriptionPlan: Q }),
         ei = (0, g.y8)(u, !1, Y, b),
-        er = null != el && !M,
+        er = null != el && !L,
         ea = i.useCallback(() => {
             let e = k(s, Q, {
                 userLocale: B,
@@ -226,7 +226,7 @@ function w(e) {
     function ed() {
         (G || T || W(u, { shouldUpdateQuantity: !(0, P.bM)(u) }), eo || V(!1));
     }
-    let em = M
+    let em = L
             ? _.intl.format(_.t.hXcaLT, {
                   price:
                       w && null != z && ec
@@ -258,7 +258,7 @@ function w(e) {
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsxs)("div", {
-                                            className: a()(O.Gl, { [O.h4]: T || Z, [O.ox]: M && (T || Z) }),
+                                            className: a()(O.Gl, { [O.h4]: T || Z, [O.ox]: L && (T || Z) }),
                                             children: [es, Z && ea()],
                                         }),
                                         et &&
@@ -280,7 +280,7 @@ function w(e) {
                                 !Z && ea(),
                             ],
                         }),
-                        M
+                        L
                             ? (0, l.jsx)("div", { className: a()({ [O.kb]: T }), children: em })
                             : (0, l.jsxs)("div", {
                                   className: a()({ [O.h4]: T || Z }),
@@ -303,7 +303,7 @@ function w(e) {
                               }),
                     ],
                 }),
-                M &&
+                L &&
                     (0, l.jsx)("div", {
                         className: O.hB,
                         children: (0, l.jsx)(d.E, {
@@ -332,7 +332,7 @@ function w(e) {
                                               regularPrice: (0, I.$g)(n.amount, n.currency),
                                           })
                                     : i
-                                      ? L(e, n)
+                                      ? M(e, n)
                                       : e.interval === v.WT.YEAR
                                         ? _.intl.formatToPlainString(_.t.rtLTJP, { percent: o ?? "" })
                                         : null;

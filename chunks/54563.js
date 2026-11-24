@@ -16,8 +16,8 @@ var p = n(156150),
     g = n(683063),
     A = n(265872),
     C = n(460905),
-    x = n(110384),
-    E = n(939249),
+    E = n(110384),
+    x = n(939249),
     v = n(834730),
     _ = n(138399),
     b = n(565645),
@@ -208,7 +208,7 @@ function z(e) {
                         }),
                             w._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
-                    children: (0, i.jsx)(x.ArrowAngleLeftUpIcon, { size: "sm" }),
+                    children: (0, i.jsx)(E.ArrowAngleLeftUpIcon, { size: "sm" }),
                 }),
             }),
             ei > 0 &&
@@ -216,7 +216,7 @@ function z(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(K, {}),
-                        (0, i.jsx)(E.D, {
+                        (0, i.jsx)(x.D, {
                             className: H.jC,
                             tag: "span",
                             onClick: function (e) {
@@ -265,11 +265,11 @@ function el(e) {
         m = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
         { isActive: g, isControlBarExpanded: A } = (0, f.X$)(),
         C = (0, u.bG)([N.A], () => N.A.getMessage(s, o), [s, o]),
-        { data: x } = R(n, s, a, C?.author.id, d && m && g);
+        { data: E } = R(n, s, a, C?.author.id, d && m && g);
     return (l.useEffect(() => {
         g && R.refetch(n, s, a, C?.author.id, d && m && g);
     }, [g, n, s, a, C?.author.id, d, m]),
-    !d || null == x || r <= 0)
+    !d || null == E || r <= 0)
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -282,7 +282,7 @@ function el(e) {
                               ? (0, p.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
                               : "translateY(60px)",
                       },
-                      children: x.map((e) => (0, i.jsx)(ea, { hidden: c, message: e, durationSeconds: r }, e.id)),
+                      children: E.map((e) => (0, i.jsx)(ea, { hidden: c, message: e, durationSeconds: r }, e.id)),
                   }),
               ],
           });
@@ -309,7 +309,7 @@ function ea(e) {
         u = "" !== t.content ? o : null,
         { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, f.X$)(),
         [h, A] = l.useState(!1),
-        [C, x] = l.useState(!1),
+        [C, E] = l.useState(!1),
         [v, y] = l.useState(!1);
     l.useEffect(() => {
         let e = c.current;
@@ -340,12 +340,12 @@ function ea(e) {
         null == t)
     )
         return null;
-    let N = (0, i.jsx)(E.D, {
+    let N = (0, i.jsx)(x.D, {
         className: en.xL,
         style: { left: a, display: r ? "none" : "block" },
         inert: r,
-        onMouseEnter: () => x(!0),
-        onMouseLeave: () => x(!1),
+        onMouseEnter: () => E(!0),
+        onMouseLeave: () => E(!1),
         onClick: function (e) {
             e.stopPropagation();
             let n = t.messageReference?.channel_id,
@@ -422,8 +422,8 @@ var ef = n(419490),
     eg = n(110742),
     eA = n(352527),
     eC = n(996682),
-    ex = n(27989);
-function eE(e) {
+    eE = n(27989);
+function ex(e) {
     let {
             size: t = "md",
             width: n,
@@ -432,7 +432,7 @@ function eE(e) {
             colorClass: a = "",
             ...s
         } = e,
-        o = (0, ex.J)(t),
+        o = (0, eE.J)(t),
         u = o?.width ?? n,
         c = o?.height ?? l;
     return (0, i.jsxs)("svg", {
@@ -523,7 +523,7 @@ function e_(e) {
               className: a()(ev.eZ, { [ev.vu]: s, [ev.jn]: !o }),
               onClick: h,
               children: [
-                  (0, i.jsx)(eE, { size: "refresh_sm", color: $.A.colors.WHITE }),
+                  (0, i.jsx)(ex, { size: "refresh_sm", color: $.A.colors.WHITE }),
                   (0, i.jsx)(v.E, {
                       variant: "body-xs/semibold",
                       color: "text-overlay-light",
@@ -545,8 +545,8 @@ function ey(e) {
             guildId: g,
             isFullScreen: A,
             showParticipants: C,
-            showTextContent: x,
-            channelId: E,
+            showTextContent: E,
+            channelId: x,
             messageId: v,
             showSpeakingIndicators: _,
             clipUserIds: b,
@@ -575,35 +575,35 @@ function ey(e) {
                         isControlBarExpanded: l,
                         isFullScreen: A,
                         activeLayer: j,
-                        showTextContent: x,
+                        showTextContent: E,
                         isGridView: I,
                         setIsGridView: S,
                     }),
                     !I &&
                         null != v &&
-                        null != E &&
+                        null != x &&
                         (0, i.jsx)(e_, {
                             isControlBarExpanded: l,
                             isPlayerActive: r,
                             attachment: h,
                             messageId: v,
-                            channelId: E,
+                            channelId: x,
                         }),
                     !I &&
                         _ &&
                         null != h.clip_events_timeline &&
-                        null != E &&
-                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: b, channelId: E }),
+                        null != x &&
+                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: b, channelId: x }),
                     r &&
                         null != g &&
-                        null != E &&
+                        null != x &&
                         null != v &&
                         (0, i.jsx)(d.NA.Provider, {
                             value: N,
                             children: (0, i.jsx)(z, {
                                 controlBarAnimationSpring: n,
                                 attachment: h,
-                                channelId: E,
+                                channelId: x,
                                 messageId: v,
                                 guildId: g,
                                 containerWidth: O,
@@ -611,12 +611,12 @@ function ey(e) {
                             }),
                         }),
                     null != g &&
-                        null != E &&
+                        null != x &&
                         null != v &&
                         (0, i.jsx)(el, {
                             controlBarAnimationSpring: n,
                             attachment: h,
-                            channelId: E,
+                            channelId: x,
                             messageId: v,
                             guildId: g,
                             durationSeconds: h.duration_secs ?? y,

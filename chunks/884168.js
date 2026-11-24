@@ -1,4 +1,5 @@
 !(function (e) {
+    "use strict";
     var n = [
             /^led/i,
             /^\xfano/i,

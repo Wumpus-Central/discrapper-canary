@@ -142,8 +142,8 @@ var A = n(391048),
     j = n(783327),
     R = n(825755),
     O = n(295405),
-    L = n(129230),
-    M = n(166532),
+    M = n(129230),
+    L = n(166532),
     k = n(69494),
     w = n(482132),
     D = n(632088);
@@ -214,7 +214,7 @@ function X(e) {
         }),
         { returnToPaymentElementStep: m, remountAddressElement: p } = d,
         h = a.useCallback(() => {
-            (l(M.pn.ADDRESS), $.Ky.includes(o) && p());
+            (l(L.pn.ADDRESS), $.Ky.includes(o) && p());
         }, [l, p, o]),
         C = a.useCallback(
             (e) => {
@@ -647,10 +647,10 @@ let eT = (e) => {
     });
 };
 var eb = n(818348);
-let eN = [M.pn.CREDIT_CARD_INFORMATION, M.pn.ADDRESS];
+let eN = [L.pn.CREDIT_CARD_INFORMATION, L.pn.ADDRESS];
 function ej(e) {
     let { billingError: t, onCardInfoChange: n } = e,
-        l = null != t && (null == t.code || (0, M.ou)(t) === M.pn.CREDIT_CARD_INFORMATION);
+        l = null != t && (null == t.code || (0, L.ou)(t) === L.pn.CREDIT_CARD_INFORMATION);
     return (0, r.jsxs)(a.Fragment, {
         children: [
             l
@@ -687,18 +687,18 @@ function eO(e) {
               paymentSourceType: s,
           });
 }
-let eL = {
-    SHARED_ADD_PAYMENT_STEPS: [M.pn.PAYMENT_ELEMENT],
-    SHARED_CREDIT_CARD_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.ADDRESS],
-    SHARED_PAYPAL_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.PAYPAL_INFORMATION, M.pn.ADDRESS],
-    SHARED_VENMO_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.VENMO_INFORMATION, M.pn.ADDRESS],
-    SHARED_CASH_APP_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.CASH_APP_INFORMATION, M.pn.ADDRESS],
-    SHARED_PRZELEWY24_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.PRZELEWY24_INFORMATION, M.pn.ADDRESS],
-    SHARED_EPS_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.EPS_INFORMATION, M.pn.ADDRESS],
-    SHARED_IDEAL_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.ADDRESS],
-    SHARED_TYPE_AND_ADDRESS_STEPS: [M.pn.PAYMENT_ELEMENT, M.pn.ADDRESS],
+let eM = {
+    SHARED_ADD_PAYMENT_STEPS: [L.pn.PAYMENT_ELEMENT],
+    SHARED_CREDIT_CARD_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.ADDRESS],
+    SHARED_PAYPAL_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.PAYPAL_INFORMATION, L.pn.ADDRESS],
+    SHARED_VENMO_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.VENMO_INFORMATION, L.pn.ADDRESS],
+    SHARED_CASH_APP_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.CASH_APP_INFORMATION, L.pn.ADDRESS],
+    SHARED_PRZELEWY24_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.PRZELEWY24_INFORMATION, L.pn.ADDRESS],
+    SHARED_EPS_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.EPS_INFORMATION, L.pn.ADDRESS],
+    SHARED_IDEAL_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.ADDRESS],
+    SHARED_TYPE_AND_ADDRESS_STEPS: [L.pn.PAYMENT_ELEMENT, L.pn.ADDRESS],
 };
-var eM = n(685094);
+var eL = n(685094);
 class ek extends a.PureComponent {
     componentDidMount() {
         null != this.props.paypalClient && g();
@@ -954,10 +954,10 @@ function tn(e) {
         { isGift: S } = (0, e2.Pv)(),
         [g, I] = a.useState(!1);
     switch (n) {
-        case M.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+        case L.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
             t = f.do8.GOOGLE_PAY;
             break;
-        case M.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+        case L.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
             t = f.do8.APPLE_PAY;
     }
     return (
@@ -1081,23 +1081,23 @@ function tc(e) {
         } = t,
         v = i.methodType,
         { backStep: x } = s
-            ? { backStep: M.pn.PAYMENT_ELEMENT }
+            ? { backStep: L.pn.PAYMENT_ELEMENT }
             : (function (e) {
                   switch (e) {
                       case eb.he.CARD:
-                          return { backStep: M.pn.CREDIT_CARD_INFORMATION };
+                          return { backStep: L.pn.CREDIT_CARD_INFORMATION };
                       case eb.he.PAYPAL:
-                          return { backStep: M.pn.PAYPAL_INFORMATION };
+                          return { backStep: L.pn.PAYPAL_INFORMATION };
                       case eb.he.VENMO:
-                          return { backStep: M.pn.VENMO_INFORMATION };
+                          return { backStep: L.pn.VENMO_INFORMATION };
                       case eb.he.EPS:
-                          return { backStep: M.pn.EPS_INFORMATION };
+                          return { backStep: L.pn.EPS_INFORMATION };
                       case eb.he.PRZELEWY24:
-                          return { backStep: M.pn.PRZELEWY24_INFORMATION };
+                          return { backStep: L.pn.PRZELEWY24_INFORMATION };
                       case eb.he.CASH_APP:
-                          return { backStep: M.pn.CASH_APP_INFORMATION };
+                          return { backStep: L.pn.CASH_APP_INFORMATION };
                       default:
-                          return { backStep: M.pn.PAYMENT_ELEMENT };
+                          return { backStep: L.pn.PAYMENT_ELEMENT };
                   }
               })(v),
         _ = s ? () => d(void 0) : () => n(x);
@@ -1173,12 +1173,12 @@ function tp(e) {
                         remountAddressElement: C,
                         setBillingAddressState: l,
                     }),
-                        u(e.stepAfterPaymentElement ?? M.pn.ADDRESS));
+                        u(e.stepAfterPaymentElement ?? L.pn.ADDRESS));
                     return;
                 }
                 let t = (0, td.eI)(p);
                 if (null != t) return void u(t);
-                u(M.pn.ADDRESS);
+                u(L.pn.ADDRESS);
             } catch (e) {
                 tm.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
             } finally {
@@ -1231,7 +1231,7 @@ function tS(e) {
                         t(!0);
                         try {
                             let t = await (0, d.YJ)(o, e);
-                            (n({ token: t, confirmedPaymentMethodId: null }), a(M.pn.ADDRESS));
+                            (n({ token: t, confirmedPaymentMethodId: null }), a(L.pn.ADDRESS));
                         } catch (e) {
                             tf.error(e.message ?? JSON.stringify(e));
                         } finally {
@@ -1331,27 +1331,27 @@ function tx(e) {
     });
 }
 let t_ = {
-    [M.pn.CREDIT_CARD_INFORMATION]: {
+    [L.pn.CREDIT_CARD_INFORMATION]: {
         renderStepBody: (e) => (0, r.jsx)(tE, { ...e }),
         renderStepFooter: (e) => (0, r.jsx)(tS, { ...e }),
     },
-    [M.pn.AWAITING_BROWSER_CHECKOUT]: {
+    [L.pn.AWAITING_BROWSER_CHECKOUT]: {
         renderStepBody: () => (0, r.jsx)(tg, {}),
         renderStepFooter: () => (0, r.jsx)(tI, {}),
     },
-    [M.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY]: {
+    [L.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY]: {
         renderStepBody: () => (0, r.jsx)(tg, {}),
         renderStepFooter: () => (0, r.jsx)(tI, {}),
     },
-    [M.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY]: {
+    [L.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY]: {
         renderStepBody: () => (0, r.jsx)(tg, {}),
         renderStepFooter: () => (0, r.jsx)(tI, {}),
     },
-    [M.pn.PAYMENT_ELEMENT]: {
+    [L.pn.PAYMENT_ELEMENT]: {
         renderStepBody: () => null,
         renderStepFooter: (e) => (0, r.jsx)(tp, { addPaymentMethodStepState: e }),
     },
-    [M.pn.EPS_INFORMATION]: {
+    [L.pn.EPS_INFORMATION]: {
         renderStepBody: (e) => {
             let { setBillingAddressState: t, billingAddressState: n, setEpsBankState: l, epsBankState: i } = e;
             return (0, r.jsx)(eZ, {
@@ -1364,7 +1364,7 @@ let t_ = {
         },
         renderStepFooter: (e) => (0, r.jsx)(tA, { ...e }),
     },
-    [M.pn.PRZELEWY24_INFORMATION]: {
+    [L.pn.PRZELEWY24_INFORMATION]: {
         renderStepBody: (e) => {
             let { setBillingAddressState: t, billingAddressState: n, setP24BankState: l, p24BankState: i } = e;
             return (0, r.jsx)(eZ, {
@@ -1380,23 +1380,23 @@ let t_ = {
         },
         renderStepFooter: (e) => (0, r.jsx)(tP, { ...e }),
     },
-    [M.pn.PAYPAL_INFORMATION]: {
+    [L.pn.PAYPAL_INFORMATION]: {
         renderStepBody: () => (0, r.jsx)(ew, {}),
         renderStepFooter: (e) => (0, r.jsx)(tv, { ...e }),
     },
-    [M.pn.VENMO_INFORMATION]: {
+    [L.pn.VENMO_INFORMATION]: {
         renderStepBody: () => (0, r.jsx)(eB, {}),
         renderStepFooter: (e) => (0, r.jsx)(tx, { ...e }),
     },
-    [M.pn.CASH_APP_INFORMATION]: {
+    [L.pn.CASH_APP_INFORMATION]: {
         renderStepBody: () => (0, r.jsx)(tr, {}),
         renderStepFooter: (e) => {
             let { adyenPaymentData: t } = e;
             return (0, r.jsx)(ty, { adyenPaymentData: t });
         },
     },
-    [M.pn.AWAITING_AUTHENTICATION]: { renderStepBody: () => (0, r.jsx)(eH.N, {}), renderStepFooter: () => null },
-    [M.pn.ADDRESS]: {
+    [L.pn.AWAITING_AUTHENTICATION]: { renderStepBody: () => (0, r.jsx)(eH.N, {}), renderStepFooter: () => null },
+    [L.pn.ADDRESS]: {
         renderStepBody: (e) => (0, r.jsx)(eO, { addPaymentMethodStepState: e }),
         renderStepFooter: (e) => (0, r.jsx)(tc, { addPaymentMethodStepState: e }),
     },
@@ -1435,14 +1435,14 @@ function tT(e) {
         addressElementKey: S,
         billingAddressInfo: t.info,
         onSetupError: () => {
-            (m(), a(), l(M.pn.CREDIT_CARD_INFORMATION));
+            (m(), a(), l(L.pn.CREDIT_CARD_INFORMATION));
         },
         paymentElementFooter: p
             ? (0, r.jsx)(e$.Z4, {
                   className: th.SO,
                   stackingBehavior: "stack",
                   onComplete: () => {
-                      (c(), setTimeout(() => o(M.pn.REVIEW), 0));
+                      (c(), setTimeout(() => o(L.pn.REVIEW), 0));
                   },
               })
             : null,
@@ -1452,7 +1452,7 @@ function tb(e) {
     let { billingAddressState: t, children: n } = e,
         { stripePaymentElementState: l, currentStep: i, paymentMethodSteps: a } = ee(),
         { shouldRenderPaymentElement: s } = l;
-    return (0, r.jsxs)(eM.Y, {
+    return (0, r.jsxs)(eL.Y, {
         className: tC.C9,
         staticClassName: tC.a2,
         animatedNodeClassName: tC.L2,
@@ -1473,7 +1473,7 @@ function tO(e) {
         o = "";
     return (
         null != n &&
-            (0, M.h5)(n, s) &&
+            (0, L.h5)(n, s) &&
             ((o = n.message),
             n.code === tR.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
                 ? (o = H.intl.string(H.t.ypuSd8))
@@ -1500,8 +1500,8 @@ function tO(e) {
         })
     );
 }
-let tL = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
-    tM = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
+let tM = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
+    tL = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
 function tk(e) {
     let {
             addPaymentMethodStepState: t,
@@ -1528,7 +1528,7 @@ function tk(e) {
         }));
     (0, P.l0)(b);
     let D = a.useMemo(
-            () => (n === M.pn.PAYMENT_ELEMENT ? (I ? M.pn.AWAITING_BROWSER_CHECKOUT : M.pn.PAYMENT_ELEMENT) : n),
+            () => (n === L.pn.PAYMENT_ELEMENT ? (I ? L.pn.AWAITING_BROWSER_CHECKOUT : L.pn.PAYMENT_ELEMENT) : n),
             [n, I],
         ),
         {
@@ -1543,7 +1543,7 @@ function tk(e) {
                             let { prependSteps: n, appendSteps: l } = t;
                             return e.map((e) => {
                                 let { sharedStepsKey: t, methodType: i } = e,
-                                    r = eL[t];
+                                    r = eM[t];
                                 return { steps: [...n, ...r, ...l], methodType: i };
                             });
                         })(
@@ -1589,12 +1589,12 @@ function tk(e) {
         [V, Y] = a.useState(
             (function (e) {
                 switch (e) {
-                    case M.pn.CREDIT_CARD_INFORMATION:
+                    case L.pn.CREDIT_CARD_INFORMATION:
                         return U;
-                    case M.pn.CASH_APP_INFORMATION:
+                    case L.pn.CASH_APP_INFORMATION:
                         return G;
                     default:
-                        return { steps: [M.pn.ADD_PAYMENT_STEPS] };
+                        return { steps: [L.pn.ADD_PAYMENT_STEPS] };
                 }
             })(D),
         );
@@ -1621,7 +1621,7 @@ function tk(e) {
         ((z.current = q),
             null != q &&
                 q !== e &&
-                L.default.track(f.HAw.PAYMENT_FLOW_ADD_SOURCE_ERROR, {
+                M.default.track(f.HAw.PAYMENT_FLOW_ADD_SOURCE_ERROR, {
                     load_id: x.loadId,
                     analytics_location: h,
                     payment_source_type: V.methodType,
@@ -1665,7 +1665,7 @@ function tk(e) {
             })();
         }, [et]));
     let er = a.useCallback(() => {
-            (Y(U), K(M.pn.PAYMENT_ELEMENT));
+            (Y(U), K(L.pn.PAYMENT_ELEMENT));
         }, [Y, K, U]),
         ea = a.useCallback(
             (e) => {
@@ -1840,9 +1840,9 @@ function tw(e) {
     let [C, g] = a.useState(t),
         I = (0, v.Ay)(t);
     t !== I && null != t && null == C && g(t);
-    let [y, _] = a.useState(() => ({ info: tL, isValid: !1 })),
-        [T, j] = a.useState(() => ({ info: tM, isValid: !1 })),
-        [L, M] = a.useState(""),
+    let [y, _] = a.useState(() => ({ info: tM, isValid: !1 })),
+        [T, j] = a.useState(() => ({ info: tL, isValid: !1 })),
+        [M, L] = a.useState(""),
         [k, w] = a.useState(""),
         [U, G] = a.useState(() => ({ token: null, confirmedPaymentMethodId: null })),
         [F, Y, K, Z, q] = (0, s.yK)([R.A], () => [
@@ -1914,8 +1914,8 @@ function tw(e) {
             purchaseTokenHash: ea,
             epsBankState: k,
             setEpsBankState: w,
-            p24BankState: L,
-            setP24BankState: M,
+            p24BankState: M,
+            setP24BankState: L,
         }
     );
 }

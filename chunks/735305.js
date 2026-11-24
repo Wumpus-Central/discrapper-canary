@@ -49,7 +49,7 @@ n.d(
                 })),
                 { purchaseErrorBlockRef: R } = (0, u.Gm)(),
                 { paymentAuthenticationState: O } = (0, s.o)(),
-                { isPremiumGroupPurchase: L, isEligibleForTrial: M } = (0, d.i)(),
+                { isPremiumGroupPurchase: M, isEligibleForTrial: L } = (0, d.i)(),
                 { step: k } = (0, o.Ay)(),
                 { isGift: w } = (0, h.Pv)(),
                 D = {
@@ -80,7 +80,7 @@ n.d(
                 appendSteps: [C.pn.REVIEW, C.pn.CONFIRM],
                 useCheckoutStep: !0,
                 analyticsData: t,
-                onReturn: L ? void 0 : U,
+                onReturn: M ? void 0 : U,
                 onComplete: (e) => {
                     C.l_.has(e)
                         ? (v(f.h.COMPLETED), l(C.pn.CONFIRM, { trackedFromStep: e }))
@@ -97,7 +97,7 @@ n.d(
                         flow_duration_ms: i - x.startTime,
                     });
                 },
-                isEligibleForTrial: M,
+                isEligibleForTrial: L,
                 allowDesktopRedirectPurchase:
                     (0, p.xl)() && null != P && [g.pe.TIER_0, g.pe.TIER_2].includes(P) && !w && null == j,
                 continueSessionToInitialStep: y,

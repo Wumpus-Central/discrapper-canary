@@ -92,8 +92,8 @@ n.d(
                     paymentGatewayRestrictions: j,
                     newPaymentMethodOptionLabel: R,
                     defaultPaymentSourceId: O,
-                    tooltipText: L,
-                    resolvePaymentSourceOptions: M,
+                    tooltipText: M,
+                    resolvePaymentSourceOptions: L,
                     addPaymentSourceVariant: k,
                     addPaymentSourceText: w,
                 } = e,
@@ -217,8 +217,8 @@ n.d(
                         let { label: t, brand: n, ...l } = e;
                         return { id: null != l.key ? `${l.key}` : l.value, label: t ?? "", icon: n ?? void 0, ...l };
                     });
-                    return null != M ? M(e) : e;
-                }, [F, M]),
+                    return null != L ? L(e) : e;
+                }, [F, L]),
                 V = i.useMemo(() => (null != S ? S : () => {}), [S]);
             if (N)
                 return (0, l.jsx)("div", {
@@ -235,7 +235,7 @@ n.d(
                 newPaymentMethodOptionLabel: R,
                 noticeMessage: H,
             });
-            return null != L ? (0, l.jsx)(o.m, { asContainer: !0, text: L, children: Y }) : Y;
+            return null != M ? (0, l.jsx)(o.m, { asContainer: !0, text: M, children: Y }) : Y;
         },
         Sm: T,
     },

@@ -152,11 +152,11 @@ n.d(
                 [_, T] = i.useState(v ? y.he.CARD : null),
                 [N, j] = i.useState(!1),
                 [R, O] = i.useState(void 0),
-                L = (function (e) {
+                M = (function (e) {
                     let { step: t, paymentElementSelectedType: n } = e;
                     return x.has(t) || (t === g.pn.ADDRESS && null != n);
                 })({ step: t, paymentElementSelectedType: _ }),
-                M = i.useCallback(() => {
+                L = i.useCallback(() => {
                     O(Date.now().toString());
                 }, []);
             i.useEffect(() => {
@@ -269,7 +269,7 @@ n.d(
                 T(null);
             }, []);
             return {
-                shouldRenderPaymentElement: L,
+                shouldRenderPaymentElement: M,
                 stripePaymentElementProps: D,
                 stripeAddressElementProps: U,
                 stripeElementsRef: c,
@@ -281,7 +281,7 @@ n.d(
                 returnToPaymentElementStep: F,
                 onBackFromPaymentElement: B,
                 addressElementKey: R,
-                remountAddressElement: M,
+                remountAddressElement: L,
                 clearAddressElement: G,
             };
         },

@@ -16,7 +16,7 @@ n.d(
                 g = i.useMemo(() => (0, u.Vi)(t), [t]),
                 { enableDistributedClips: A } = o.A.useConfig({ location: "useMultiSourceConfig" }),
                 C = (0, l.bG)([s.Ay], () => s.Ay.getMatchingPOVReferences(t.id), [t.id]),
-                x = (0, l.yK)([r.A], () =>
+                E = (0, l.yK)([r.A], () =>
                     C.map((e) => r.A.getMessage(e.channelId, e.messageId))
                         .filter(a.Vq)
                         .sort((e, t) => e.id.localeCompare(t.id))
@@ -38,7 +38,7 @@ n.d(
                         },
                         subSources: C.flatMap((e) => {
                             if (null == g) return [];
-                            let t = x.find((t) => t.id === e.messageId && t.channel_id === e.channelId);
+                            let t = E.find((t) => t.id === e.messageId && t.channel_id === e.channelId);
                             if (null == t) return [];
                             let n = t.attachments.find((t) => t.id === e.attachmentId);
                             return null == n
@@ -57,7 +57,7 @@ n.d(
                         }),
                         activeSourceId: t.id,
                     };
-            }, [C, t, m, x, h, g, A, f, p]);
+            }, [C, t, m, E, h, g, A, f, p]);
         },
     },
 );

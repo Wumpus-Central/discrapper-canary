@@ -1,4 +1,4 @@
-i.exports = {
+t.exports = {
     Xl: "timerContainer_u7GTn0",
     $R: "timeUnitsOuterContainer_u7GTn0",
     bh: "timeUnitInnerContainer_u7GTn0",

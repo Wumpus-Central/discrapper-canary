@@ -15,8 +15,8 @@ var i = n(477900),
     g = n(443184),
     A = n(696016),
     C = n(683825),
-    x = n(792996),
-    E = n(328115);
+    E = n(792996),
+    x = n(328115);
 function v(e) {
     let {
         leftPx: t,
@@ -38,7 +38,7 @@ function v(e) {
                 body: A,
                 position: "top",
                 children: (0, i.jsx)(s.animated.div, {
-                    className: a()(E.z, e),
+                    className: a()(x.z, e),
                     onMouseEnter: () => l(m),
                     onMouseLeave: () => l(null),
                     style: {
@@ -147,9 +147,9 @@ n.d(
                             u = S(t, a),
                             m =
                                 null != a.emotion
-                                    ? x.intl.string(C.default.Ek6GZO)
+                                    ? E.intl.string(C.default.Ek6GZO)
                                     : null != a.game
-                                      ? x.intl.string(C.default["347DBb"])
+                                      ? E.intl.string(C.default["347DBb"])
                                       : null;
                         return null == u || null == m
                             ? null

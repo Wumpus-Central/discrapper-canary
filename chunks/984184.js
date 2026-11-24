@@ -29,8 +29,8 @@ var l = n(477900),
     j = n(65238),
     R = n(436912),
     O = n(306396),
-    L = n(248180),
-    M = n(664749),
+    M = n(248180),
+    L = n(664749),
     k = n(518865),
     w = n(536572),
     D = n(652215),
@@ -67,7 +67,7 @@ function J(e) {
                 switch (e?.type) {
                     case b.hE.COLLECT_AND_CLAIM: {
                         if (null == n) break;
-                        let t = (0, M.L0)(n, u),
+                        let t = (0, L.L0)(n, u),
                             i = t?.progress;
                         if (null == i) break;
                         let s = Math.min(i.current + (0, O.oO)(n, e.collectionId), i.target);
@@ -86,13 +86,13 @@ function J(e) {
                     }
                     case b.hE.TARGETED_OFFER: {
                         let n = e.reward,
-                            i = null != n && (0, M.g5)(t, u) ? n : null;
+                            i = null != n && (0, L.g5)(t, u) ? n : null;
                         (l(i?.collected?.overrideTitle), r(void 0), a(null != i ? (0, k.lG)(i.flavor) : void 0), o(!1));
                         return;
                     }
                     case b.hE.COLLECTION_SALE: {
-                        let e = (0, L.G)(u);
-                        if (null == e || !(0, M.g5)(t, u)) break;
+                        let e = (0, M.G)(u);
+                        if (null == e || !(0, L.g5)(t, u)) break;
                         (l(U.intl.formatToPlainString(U.t.VuV3Td, { discountOfferAmount: e })),
                             r(void 0),
                             a(void 0),
@@ -100,7 +100,7 @@ function J(e) {
                         return;
                     }
                     case b.hE.COLLECTION_SEQUENCED_OFFER: {
-                        if (null == n || !(0, M.g5)(t, u)) break;
+                        if (null == n || !(0, L.g5)(t, u)) break;
                         let { position: i } = e,
                             s = d?.promotions.some((e) => e.position > i) === !0;
                         (l(U.intl.formatToPlainString(U.t.LoVrW5, { day: i })),
@@ -343,7 +343,7 @@ function eS(e) {
             [f, r],
         ),
         O = i.useMemo(() => (null != j ? (0, l.jsx)(C.Vm, { ...j }) : null), [j]),
-        L = i.useMemo(() => {
+        M = i.useMemo(() => {
             var e, t;
             return (
                 (e = n),
@@ -357,7 +357,7 @@ function eS(e) {
                         : (0, l.jsx)(ec, { ...t })
             );
         }, [n, f, g, c, R]),
-        M = i.useMemo(() => (null != r ? (0, A.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
+        L = i.useMemo(() => (null != r ? (0, A.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         w = (0, S.g)(N ?? null),
         q = i.useMemo(
             () =>
@@ -437,7 +437,7 @@ function eS(e) {
                 (0, l.jsx)(J, { requiredCheckoutFlow: d.C.COLLECTIBLES_CHECKOUT, invoicePreview: r, product: N }),
             (0, l.jsx)(h.T_, {
                 headerBadgeConfig: z,
-                purchaseItemContent: L,
+                purchaseItemContent: M,
                 invoiceSummaryContent: O,
                 paymentMethodContent: _,
                 legalContent: P,
@@ -445,7 +445,7 @@ function eS(e) {
                 upperInlineNoticeContent: (0, l.jsx)(eE, { application: g }),
                 footerInlineNoticeContent: (0, l.jsx)(eC, { productLine: f.productLine, application: g, isGift: s }),
                 invoiceTotalDueLabel: U.intl.string($.default.Zxav97),
-                invoiceTotalDueValue: M,
+                invoiceTotalDueValue: L,
             }),
         ],
     });
