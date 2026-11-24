@@ -28,7 +28,7 @@ let h = new (class {
         isAppActive: !0,
         currentAnswer: null,
     };
-    dwellStartTime = null;
+    pendingDwell = null;
     lastShownAnswerKey = null;
     lastShownSuggestionKey = null;
     parentSuggestedSearch = null;
@@ -49,6 +49,7 @@ let h = new (class {
     }
     resetSession(e) {
         (this.updateVisibility({ currentAnswer: null }, e),
+            (this.pendingDwell = null),
             (this.lastShownAnswerKey = null),
             (this.lastShownSuggestionKey = null),
             (this.parentSuggestedSearch = null));
@@ -60,21 +61,22 @@ let h = new (class {
         this.rowVisibilityState = n;
         let a = n.isRowViewable && n.isTabActive && n.isNavigationFocused && n.isAppActive && null != n.currentAnswer;
         if (
-            null != this.dwellStartTime &&
+            null != this.pendingDwell &&
             (!a || n.currentAnswer?.smartSearchQuery.requestKey !== s.currentAnswer?.smartSearchQuery.requestKey)
         ) {
-            let e = performance.now() - this.dwellStartTime;
-            ((this.dwellStartTime = null),
-                null != s.currentAnswer &&
-                    this.trackSmartSearchAnswerDwelled(
-                        { smartSearchQuery: s.currentAnswer.smartSearchQuery, dwellDurationMs: e },
-                        t,
-                    ));
+            let e = performance.now() - this.pendingDwell.startTime,
+                { contextualProperties: t } = this.pendingDwell;
+            ((this.pendingDwell = null),
+                this.trackSmartSearchAnswerDwelled({ contextualProperties: t, dwellDurationMs: e }));
         }
         a &&
             null != n.currentAnswer &&
-            null == this.dwellStartTime &&
-            ((this.dwellStartTime = performance.now()), this.trackSmartSearchAnswerShownDeduped(n.currentAnswer, t));
+            null == this.pendingDwell &&
+            ((this.pendingDwell = {
+                startTime: performance.now(),
+                contextualProperties: this.getContextualProperties(n.currentAnswer.smartSearchQuery, t),
+            }),
+            this.trackSmartSearchAnswerShownDeduped(n.currentAnswer, this.pendingDwell.contextualProperties));
     }
     getContextualProperties(e, t) {
         return {
@@ -180,7 +182,7 @@ let h = new (class {
         this.lastShownAnswerKey = s.requestKey;
         let l = _(r);
         n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_SHOWN, {
-            ...this.getContextualProperties(s, t),
+            ...t,
             ...u(a),
             num_citations_presented: a.length,
             answer_length: l.length,
@@ -189,12 +191,9 @@ let h = new (class {
             has_keyword_results: i,
         });
     }
-    trackSmartSearchAnswerDwelled(e, t) {
-        let { smartSearchQuery: s, dwellDurationMs: r } = e;
-        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_DWELLED, {
-            ...this.getContextualProperties(s, t),
-            dwell_duration_ms: Math.round(r),
-        });
+    trackSmartSearchAnswerDwelled(e) {
+        let { contextualProperties: t, dwellDurationMs: s } = e;
+        n.Ay.trackWithMetadata(c.HAw.SMART_SEARCH_ANSWER_DWELLED, { ...t, dwell_duration_ms: Math.round(s) });
     }
     trackSmartSearchFeedbackGiven(e, t) {
         let { smartSearchQuery: s, hasPositiveFeedback: r } = e;
