@@ -13,11 +13,11 @@ var l = n(477900),
     m = n(956956),
     C = n(820287),
     y = n(708791),
-    E = n(981036),
-    _ = n(725836),
+    _ = n(981036),
+    E = n(725836),
     g = n(682689),
-    S = n(520149),
-    I = n(56763),
+    I = n(520149),
+    S = n(56763),
     A = n(652215),
     P = n(126223);
 function x(e) {
@@ -54,7 +54,7 @@ function x(e) {
                 title: n,
                 subtitle: y,
             }),
-            C && (0, l.jsx)(S.w, { countryCode: c, relocationCountryCode: o }),
+            C && (0, l.jsx)(I.w, { countryCode: c, relocationCountryCode: o }),
         ],
     });
 }
@@ -62,7 +62,7 @@ let v = { top: 16, bottom: 8 };
 function R(e) {
     let { onBackClick: t, primaryButtonProps: n, portalClassName: i, stripeExpressCheckoutComponent: s } = e,
         { variant: o } = n,
-        { setCheckoutFooterContentNode: d } = (0, _.ck)(),
+        { setCheckoutFooterContentNode: d } = (0, E.ck)(),
         { isExpressCheckoutEnabledForFooter: h, shouldExpressCheckoutBeVisible: p } = (0, g.t4)((e) => {
             let t = e.getExpressCheckoutVisibilityState();
             return {
@@ -70,10 +70,10 @@ function R(e) {
                 shouldExpressCheckoutBeVisible: t.shouldExpressCheckoutBeVisible,
             };
         }),
-        f = (0, l.jsx)(E.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
+        f = (0, l.jsx)(_.p, { ...n, variant: o ?? "active", autoFocus: !0 }),
         m = h && null != s,
-        S = m && p,
-        I = null != t,
+        I = m && p,
+        S = null != t,
         {
             direction: A,
             align: x,
@@ -81,11 +81,11 @@ function R(e) {
         } = r.useMemo(() => {
             let e = "end";
             return (
-                I && !S && (e = "space-between"),
-                { direction: S ? "vertical" : "horizontal", align: S ? "stretch" : "center", justify: e }
+                S && !I && (e = "space-between"),
+                { direction: I ? "vertical" : "horizontal", align: I ? "stretch" : "center", justify: e }
             );
-        }, [I, S]),
-        T = I ? (0, l.jsx)(C.A, { onClick: t }) : null;
+        }, [S, I]),
+        T = S ? (0, l.jsx)(C.A, { onClick: t }) : null;
     return (0, l.jsxs)(u.j, {
         children: [
             (0, l.jsx)("div", { ref: d, className: a()(P.K4, i) }),
@@ -94,12 +94,12 @@ function R(e) {
                 align: x,
                 justify: R,
                 fullWidth: !0,
-                padding: { ...v, bottom: S ? 8 : v.bottom },
+                padding: { ...v, bottom: I ? 8 : v.bottom },
                 children: [
-                    S ? null : T,
-                    S ? (0, l.jsx)(y.rI, {}) : null,
+                    I ? null : T,
+                    I ? (0, l.jsx)(y.rI, {}) : null,
                     m ? (0, l.jsx)(y.Zr, { stripeExpressCheckoutComponent: s, fallbackComponent: f }) : f,
-                    S && null != T ? (0, l.jsx)("div", { className: P.aY, children: T }) : null,
+                    I && null != T ? (0, l.jsx)("div", { className: P.aY, children: T }) : null,
                 ],
             }),
         ],
@@ -107,11 +107,11 @@ function R(e) {
 }
 function T(e) {
     let { className: t } = e;
-    return (0, l.jsx)("div", { className: a()(P.g4, t), children: (0, l.jsx)(I.I, {}) });
+    return (0, l.jsx)("div", { className: a()(P.g4, t), children: (0, l.jsx)(S.I, {}) });
 }
 function M(e) {
     let { children: t, size: n = "md", maxHeight: r = "viewport", isModalContentLoading: i, ...a } = e;
-    return (0, l.jsx)(_.e0, {
+    return (0, l.jsx)(E.e0, {
         children: (0, l.jsx)(o.d, {
             size: n,
             ...a,
@@ -149,7 +149,7 @@ n.d(
                 children: d,
                 ...p
             } = e;
-            return (0, l.jsx)(_.e0, {
+            return (0, l.jsx)(E.e0, {
                 children: (0, l.jsxs)(o.d, {
                     ...p,
                     children: [

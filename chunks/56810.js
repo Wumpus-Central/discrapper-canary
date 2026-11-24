@@ -1057,13 +1057,13 @@ function e4(e) {
           })
         : eR;
 }
-var e6 = n(996988);
-let e3 = {
-    [e6.d.POPOUT]: 12,
-    [e6.d.MODAL]: 26,
-    [e6.d.SIDEBAR]: 12,
-    [e6.d.VIDEO_TILE_BACKGROUND]: 12,
-    [e6.d.EMBED]: 12,
+var e3 = n(996988);
+let e6 = {
+    [e3.d.POPOUT]: 12,
+    [e3.d.MODAL]: 26,
+    [e3.d.SIDEBAR]: 12,
+    [e3.d.VIDEO_TILE_BACKGROUND]: 12,
+    [e3.d.EMBED]: 12,
 };
 function e7(e) {
     let t,
@@ -1097,7 +1097,7 @@ function e7(e) {
     let C = N && !R,
         D = C ? Math.max(S.length - 6, 0) : 0;
     return (
-        (t = C ? [S.slice(0, 6)] : d === e6.d.MODAL_V2 ? [S] : (0, r.chunk)(S, e3[d])),
+        (t = C ? [S.slice(0, 6)] : d === e3.d.MODAL_V2 ? [S] : (0, r.chunk)(S, e6[d])),
         (0, a.jsx)(a.Fragment, {
             children: t.map((e, t) =>
                 (0, a.jsx)(

@@ -3,15 +3,15 @@ var l = n(582128),
     r = n(71393),
     s = n(121681),
     a = n(770335),
-    u = n(624793),
-    o = n(652215);
+    o = n(624793),
+    u = n(652215);
 n.d(
     t,
     {},
     {
         y: function (e) {
             let { emojiId: t, refreshPositionKey: n, skipKnownGuildEmojiFetch: d = !1 } = e,
-                { joinedEmojiSourceGuildRecord: c, emoji: h } = (0, i.cf)([s.Ay, r.A], () => {
+                { joinedEmojiSourceGuildRecord: c, emoji: m } = (0, i.cf)([s.Ay, r.A], () => {
                     var e, n;
                     let l;
                     return (
@@ -23,48 +23,48 @@ n.d(
                             : { emoji: null, joinedEmojiSourceGuildRecord: null }
                     );
                 }),
-                m = null != c,
-                f = null != c && c.features.has(o.GuildFeatures.DISCOVERABLE),
-                p = null != t && !(d && null != h) && (!m || f),
-                [g, A] = l.useState(p),
-                [v, j] = l.useState(null),
-                x = null != c ? u.GO.createFromGuildRecord(c) : null,
-                [b, E] = l.useState(x),
-                [N, S] = l.useState(null),
-                [y, I] = l.useState(null),
-                C = l.useRef(n);
+                h = null != c,
+                f = null != c && c.features.has(u.GuildFeatures.DISCOVERABLE),
+                p = null != t && !(d && null != m) && (!h || f),
+                [A, E] = l.useState(p),
+                [g, v] = l.useState(null),
+                j = null != c ? o.GO.createFromGuildRecord(c) : null,
+                [x, _] = l.useState(j),
+                [I, b] = l.useState(null),
+                [S, T] = l.useState(null),
+                y = l.useRef(n);
             return (
                 l.useEffect(() => {
-                    C.current = n;
+                    y.current = n;
                 }),
                 l.useEffect(() => {
-                    (C.current?.(), p)
+                    (y.current?.(), p)
                         ? (async function () {
-                              let e = null != t ? await (0, u.g_)(t) : null;
+                              let e = null != t ? await (0, o.g_)(t) : null;
                               if (null != e)
-                                  switch ((j(e.type), e.type)) {
-                                      case u.rV.APPLICATION:
-                                          S(e.application);
+                                  switch ((v(e.type), e.type)) {
+                                      case o.rV.APPLICATION:
+                                          b(e.application);
                                           break;
-                                      case u.rV.GUILD:
-                                          E(e.guild);
+                                      case o.rV.GUILD:
+                                          _(e.guild);
                                           break;
-                                      case u.rV.PACK:
-                                          I(e.pack);
+                                      case o.rV.PACK:
+                                          T(e.pack);
                                   }
-                              (A(!1), C.current?.());
+                              (E(!1), y.current?.());
                           })()
-                        : C.current?.();
+                        : y.current?.();
                 }, [t, p]),
                 {
-                    expressionSourceGuild: b,
-                    expressionSourceApplication: N,
-                    expressionSourcePack: y,
-                    sourceType: v,
+                    expressionSourceGuild: x,
+                    expressionSourceApplication: I,
+                    expressionSourcePack: S,
+                    sourceType: g,
                     joinedEmojiSourceGuildRecord: c,
-                    hasJoinedEmojiSourceGuild: m,
-                    emoji: h,
-                    isFetching: g,
+                    hasJoinedEmojiSourceGuild: h,
+                    emoji: m,
+                    isFetching: A,
                 }
             );
         },

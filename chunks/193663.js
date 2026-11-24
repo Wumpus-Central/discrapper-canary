@@ -3,11 +3,11 @@ var l = n(477900),
     r = n(503698),
     s = n.n(r),
     a = n(561028),
-    u = n(559106),
-    o = n(939249),
+    o = n(559106),
+    u = n(939249),
     d = n(88686),
     c = n(214881),
-    h = n(996205);
+    m = n(996205);
 n.d(
     t,
     {},
@@ -17,74 +17,74 @@ n.d(
                 ref: t,
                 avatar: n,
                 name: r,
-                nameplate: m,
+                nameplate: h,
                 children: f,
                 subText: p,
-                decorators: g,
-                onClick: A,
-                hovered: v,
-                selected: j,
-                muted: x,
-                to: b,
-                avatarClassName: E,
-                selectedClassName: N,
-                innerClassName: S,
-                wrapContent: y,
-                highlighted: I,
-                focusProps: C,
-                ...L
+                decorators: A,
+                onClick: E,
+                hovered: g,
+                selected: v,
+                muted: j,
+                to: x,
+                avatarClassName: _,
+                selectedClassName: I,
+                innerClassName: b,
+                wrapContent: S,
+                highlighted: T,
+                focusProps: y,
+                ...N
             } = e;
-            ((L.className = s()(L.className, h.kL, {
-                [h.wH]: j,
-                [h.mr]: I,
-                [N ?? ""]: j,
-                [h.vk]: !j && (null != b || null != A),
+            ((N.className = s()(N.className, m.kL, {
+                [m.wH]: v,
+                [m.mr]: T,
+                [I ?? ""]: v,
+                [m.vk]: !v && (null != x || null != E),
             })),
-                (L["aria-selected"] = L["aria-selected"] ?? j));
-            let T = i.useRef(null),
+                (N["aria-selected"] = N["aria-selected"] ?? v));
+            let L = i.useRef(null),
                 P = (0, l.jsxs)("div", {
-                    className: s()(h.sn, { [h.EY]: null != m }),
+                    className: s()(m.sn, { [m.EY]: null != h }),
                     children: [
                         (0, l.jsx)(c.A, {
-                            nameplate: m,
-                            hovered: v,
-                            selected: j,
-                            content: T,
+                            nameplate: h,
+                            hovered: g,
+                            selected: v,
+                            content: L,
                             placement: d.u.MEMBER_LIST,
                         }),
                         (0, l.jsxs)("div", {
-                            ref: T,
-                            className: s()(S, h.Zp, { [h.SU]: !j && x, [h.Ib]: y }),
+                            ref: L,
+                            className: s()(b, m.Zp, { [m.SU]: !v && j, [m.Ib]: S }),
                             children: [
-                                (0, l.jsx)("div", { className: s()(h.my, E), children: n }),
+                                (0, l.jsx)("div", { className: s()(m.my, _), children: n }),
                                 (0, l.jsxs)("div", {
-                                    className: h.Qs,
+                                    className: m.Qs,
                                     children: [
                                         (0, l.jsxs)("div", {
-                                            className: h.BG,
+                                            className: m.BG,
                                             children: [
-                                                (0, l.jsx)("div", { className: s()(h.UU, { [h.to]: y }), children: r }),
-                                                g,
+                                                (0, l.jsx)("div", { className: s()(m.UU, { [m.to]: S }), children: r }),
+                                                A,
                                             ],
                                         }),
-                                        null != p ? (0, l.jsx)("div", { className: h.Sv, children: p }) : null,
+                                        null != p ? (0, l.jsx)("div", { className: m.Sv, children: p }) : null,
                                     ],
                                 }),
-                                null != f ? (0, l.jsx)("div", { className: h.Y_, children: f }) : null,
+                                null != f ? (0, l.jsx)("div", { className: m.Y_, children: f }) : null,
                             ],
                         }),
                     ],
                 });
-            return null != b
-                ? (0, l.jsx)(u.vN, {
-                      ...C,
-                      children: (0, l.jsx)(a.N_, { to: b, onClick: A, ...L, role: "listitem", ref: t, children: P }),
+            return null != x
+                ? (0, l.jsx)(o.vN, {
+                      ...y,
+                      children: (0, l.jsx)(a.N_, { to: x, onClick: E, ...N, role: "listitem", ref: t, children: P }),
                   })
-                : null != A
-                  ? (0, l.jsx)(o.D, { onClick: A, focusProps: C, ...L, role: "listitem", innerRef: t, children: P })
-                  : (0, l.jsx)(u.vN, {
-                        ...C,
-                        children: (0, l.jsx)("div", { ...L, role: "listitem", ref: t, children: P }),
+                : null != E
+                  ? (0, l.jsx)(u.D, { onClick: E, focusProps: y, ...N, role: "listitem", innerRef: t, children: P })
+                  : (0, l.jsx)(o.vN, {
+                        ...y,
+                        children: (0, l.jsx)("div", { ...N, role: "listitem", ref: t, children: P }),
                     });
         },
     },

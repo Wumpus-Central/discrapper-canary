@@ -10,8 +10,8 @@ E.d(
         GL: async function (_, t) {
             let {
                 nick: E,
-                avatar: a,
-                avatarDescription: o,
+                avatar: o,
+                avatarDescription: a,
                 avatarId: s,
                 avatarDecoration: S,
                 nameplate: r,
@@ -20,10 +20,10 @@ E.d(
             } = t;
             if (null == _) throw Error("Need guildId");
             i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: _ });
-            let c = {
+            let R = {
                 nick: E,
-                avatar: a,
-                avatar_description: o,
+                avatar: o,
+                avatar_description: a,
                 avatar_id: s,
                 avatar_decoration_sku_id: void 0 !== S ? (S?.skuId ?? null) : void 0,
                 collectibles: void 0 !== r ? { nameplate: null === r ? null : { sku_id: r.skuId } } : void 0,
@@ -34,7 +34,7 @@ E.d(
             try {
                 let t = await e.Bo.patch({
                         url: l.Rsh.SET_GUILD_MEMBER(_),
-                        body: c,
+                        body: R,
                         headers: d.A.buildHeadersForMd5({ [n.f.USER_GUILD_PROFILE_AVATAR]: u }),
                         oldFormErrors: !0,
                         rejectWithError: !1,
@@ -43,7 +43,7 @@ E.d(
                 return (
                     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: _ }),
                     i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: E, guildId: _ }),
-                    (null != a || null != s) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+                    (null != o || null != s) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
                     t
                 );
             } catch (E) {

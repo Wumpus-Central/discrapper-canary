@@ -95,7 +95,7 @@ function I() {
         null
     );
 }
-let _ = i.memo(function () {
+let S = i.memo(function () {
     let { isEligible: e, isSelected: t } = (0, o.lK)(),
         n = i.useRef(!1);
     return (i.useLayoutEffect(() => {
@@ -109,7 +109,7 @@ let _ = i.memo(function () {
         ? (0, l.jsx)(I, {})
         : null;
 });
-var S = n(225123),
+var _ = n(225123),
     b = n(181079),
     j = n(794412),
     v = n(834730),
@@ -275,7 +275,7 @@ function et(e) {
         { guildChannels: o, shouldShowEmptyState: c, hasNoChannels: u } = (0, a.D)(),
         { density: h } = (0, s.wR)();
     return (
-        (t = (0, d.bG)([S.A], () => S.A.isConnected())),
+        (t = (0, d.bG)([_.A], () => _.A.isConnected())),
         (n = (0, d.bG)([b.A], () => b.A.pruneInactiveThreads)),
         i.useEffect(() => {
             t &&
@@ -290,7 +290,7 @@ function et(e) {
         }, [t, n]),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(_, {}),
+                (0, l.jsx)(S, {}),
                 c
                     ? (0, l.jsxs)("div", { className: ee.XG, children: [(0, l.jsx)(Q, {}), (0, l.jsx)(H, {})] })
                     : (0, l.jsxs)(l.Fragment, {

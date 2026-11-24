@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => I, Q9: () => M, W: () => w }), n(321073));
+(n.d(t, { Ay: () => I, Q9: () => M, W: () => O }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -14,9 +14,9 @@ var l = n(626551),
     p = n(323350),
     g = n(35277),
     x = n(339200),
-    S = n(551483),
-    y = n(891031),
-    E = n(389437);
+    E = n(551483),
+    S = n(891031),
+    y = n(389437);
 let A = new o.Vy("withCodeBlocks"),
     C = new Set(["line"]),
     b = /^[a-z0-9_+\-.#]+$/i;
@@ -62,7 +62,7 @@ function I(e) {
     );
 }
 let v = new Map();
-for (let [e, t] of Object.entries(E)) e.startsWith("a-") && null != t && v.set(e, t);
+for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && v.set(e, t);
 function N(e, t) {
     let n = (function (e, t) {
         let n = (0, f.p0)(e);
@@ -199,11 +199,11 @@ function T(e, t) {
                     }
                     let u = 0;
                     for (let t of (0, l.$M)(e)) {
-                        o(e.substring(u, t.position), [y.ansiControlSequence]);
+                        o(e.substring(u, t.position), [S.ansiControlSequence]);
                         let n = (0, c.OT)(t);
-                        (o(t.value, null != n ? [E.ansi] : [], n), (u = t.position + t.value.length));
+                        (o(t.value, null != n ? [y.ansi] : [], n), (u = t.position + t.value.length));
                     }
-                    return (o(e.substring(u), [y.ansiControlSequence]), r.length !== t) ? null : (R.set(n, r), r);
+                    return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t) ? null : (R.set(n, r), r);
                 })(e, n.length);
                 for (let e = 0; e < n.length; e++) n[e].hljsTypes = t?.[e] ?? [];
             } else
@@ -297,14 +297,14 @@ let k = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     j.reset();
 });
 let R = new (r())(k);
-function w(e, t) {
-    let n = (0, f.p0)(e);
-    return null != n ? (0, f.tA)(n, t) : O(e, t);
-}
 function O(e, t) {
+    let n = (0, f.p0)(e);
+    return null != n ? (0, f.tA)(n, t) : w(e, t);
+}
+function w(e, t) {
     let n = 0;
     for (let l of x.VW.nodes(e, {
-        at: { anchor: { path: S.fP, offset: 0 }, focus: t },
+        at: { anchor: { path: E.fP, offset: 0 }, focus: t },
         mode: "lowest",
         match: (e) => x.l5.isText(e),
     })) {
@@ -318,5 +318,5 @@ function O(e, t) {
 function M(e) {
     if (null == e.selection) return !1;
     let t = x.ZF.start(e.selection);
-    return O(e, t);
+    return w(e, t);
 }

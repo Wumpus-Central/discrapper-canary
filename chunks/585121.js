@@ -9,8 +9,8 @@ var l = t(477900),
     o = t(676279),
     c = t(573359),
     d = t(659746),
-    m = t(792996),
-    p = t(902062);
+    p = t(792996),
+    m = t(902062);
 let A = function (e) {
     let { type: a, text: t, buttonText: A, buttonLoading: E, hideClose: P, onClose: y } = e,
         C = (0, n.bG)([u.default], () => u.default.getCurrentUser()),
@@ -21,25 +21,25 @@ let A = function (e) {
         g = (function (e) {
             switch (e) {
                 case d.Or.PREMIUM_UPDATED:
-                    return m.intl.string(m.t["75Wt0E"]);
+                    return p.intl.string(p.t["75Wt0E"]);
                 case d.Or.PREMIUM_ACTIVATED:
-                    return m.intl.string(m.t.QWljxE);
+                    return p.intl.string(p.t.QWljxE);
                 default:
-                    return m.intl.string(m.t.X79Az5);
+                    return p.intl.string(p.t.X79Az5);
             }
         })(a);
     return (0, l.jsxs)("div", {
-        className: p.kL,
+        className: m.kL,
         children: [
-            (0, l.jsx)(s.D, { className: p.wx, variant: "nitro-lg", color: "text-strong", children: g }),
+            (0, l.jsx)(s.D, { className: m.wx, variant: "nitro-lg", color: "text-strong", children: g }),
             null != C &&
                 (0, l.jsxs)("div", {
-                    className: p.Dz,
+                    className: m.Dz,
                     children: [
                         (0, l.jsx)(h.A, {
                             fallbackImage:
                                 "https://cdn.discordapp.com/assets/content/3ce3d676b7d77ce5184982326720c020ad6ba69d47068473e0096a62472a81d6.png",
-                            className: p.d9,
+                            className: m.d9,
                             children: (0, l.jsx)("source", { src: T }),
                         }),
                         (0, l.jsx)(i.A, {
@@ -47,17 +47,17 @@ let A = function (e) {
                             isHighlighted: !0,
                             nameplate: null,
                             nameplateData: C.nameplate,
-                            className: p.M4,
+                            className: m.M4,
                             nameplatePreviewSize: "large",
                             pendingDisplayNameStyles: M?.displayNameStyles,
                             pendingAvatar: M?.avatar,
                         }),
                     ],
                 }),
-            (0, l.jsx)("div", { className: p.FS, children: t }),
+            (0, l.jsx)("div", { className: m.FS, children: t }),
             !P &&
                 (0, l.jsx)("div", {
-                    className: p.qr,
+                    className: m.qr,
                     children: (0, l.jsx)(r.$, {
                         variant: "expressive",
                         fullWidth: !0,

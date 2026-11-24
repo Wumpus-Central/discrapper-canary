@@ -14,23 +14,23 @@ n.d(
         A: function (e) {
             let { user: t, guildId: n, size: h, avatarDecorationOverride: m, onlyAnimateOnHoverOrFocus: g = !1 } = e,
                 [f, p] = l.useState(!1),
-                { canAnimate: E } = (0, o.T)(f, g),
-                A = (0, i.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
-                _ = (0, u.A)(
-                    (0, s.lw)({ userValue: t?.avatarDecoration, guildValue: A?.avatarDecoration, guildId: n }),
+                { canAnimate: A } = (0, o.T)(f, g),
+                E = (0, i.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
+                x = (0, u.A)(
+                    (0, s.lw)({ userValue: t?.avatarDecoration, guildValue: E?.avatarDecoration, guildId: n }),
                 ),
-                x = (0, c.VU)(),
+                _ = (0, c.VU)(),
                 j = l.useMemo(
                     () =>
-                        null != x && "" !== x
-                            ? x
-                            : (0, a.F_)({ avatarDecoration: void 0 !== m ? m : _, canAnimate: E, size: h }),
-                    [x, m, _, E, h],
+                        null != _ && "" !== _
+                            ? _
+                            : (0, a.F_)({ avatarDecoration: void 0 !== m ? m : x, canAnimate: A, size: h }),
+                    [_, m, x, A, h],
                 );
             return {
                 avatarPlaceholderSrc: d,
                 avatarDecorationSrc: j,
-                isAvatarDecorationAnimating: E,
+                isAvatarDecorationAnimating: A,
                 eventHandlers: {
                     onMouseEnter: l.useCallback(() => p(!0), []),
                     onMouseLeave: l.useCallback(() => p(!1), []),

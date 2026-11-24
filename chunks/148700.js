@@ -30,8 +30,8 @@ var l = n(477900),
     x = n(976860),
     N = n(71393),
     I = n(645619),
-    _ = n(379229),
-    S = n(990208),
+    S = n(379229),
+    _ = n(990208),
     b = n(864310),
     j = n(363487),
     v = n(828162),
@@ -109,7 +109,7 @@ function K(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         a = (0, o.bG)([N.A], () => N.A.getGuild(t)?.name),
         { onActivate: d, isLoading: c, error: u } = (0, L.A)(t, n[0]),
-        h = (0, S.A)(n[0], !0);
+        h = (0, _.A)(n[0], !0);
     if (((0, U.A)(u), 0 === n.length)) return;
     let m =
             n.length >= 3
@@ -148,7 +148,7 @@ function Y(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         r = n.find((e) => e.skuId === a.d0),
         o =
-            (0, S.A)(r, !0) ??
+            (0, _.A)(r, !0) ??
             "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png",
         d = n.find((e) => e.skuId === a.FB);
     if (null != r)
@@ -270,9 +270,9 @@ function X(e) {
             className: F.Sl,
             stateMachine: c ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: k.intl.string(n === _.o.GAME_SERVER_HOSTING_AVAILABLE ? B.default.wXLChx : B.default["8z8RpY"]),
+        title: k.intl.string(n === S.o.GAME_SERVER_HOSTING_AVAILABLE ? B.default.wXLChx : B.default["8z8RpY"]),
         body:
-            n === _.o.GAME_SERVER_HOSTING_AVAILABLE
+            n === S.o.GAME_SERVER_HOSTING_AVAILABLE
                 ? k.intl.formatToPlainString(B.default["7KXp9J"], { gameName: a, gameName2: d })
                 : k.intl.format(B.default["IQ1E+d"], { boostCount: r }),
         actions: [
@@ -384,7 +384,7 @@ function Z(e) {
     let { guildId: t, powerup: n, channelRowRef: s, markAsDismissed: r, ...a } = e,
         { available: o } = (0, b.A)(t),
         d = n.cost - o,
-        c = (0, S.A)(n, !0),
+        c = (0, _.A)(n, !0),
         { analyticsLocations: u } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
         h = (0, j.A)(t),
         m = i.useRef(null);
@@ -427,15 +427,15 @@ function Q(e) {
         d = (0, o.bG)([I.A], () => I.A.getStateForGuild(t)),
         { analyticsLocations: c } = (0, A.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
         u = d?.allPowerups[n.skuId],
-        f = (0, S.A)(u, !0),
+        f = (0, _.A)(u, !0),
         p = i.useRef(null),
         C = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
     if (null == u && !n.isGameServer) return null;
     let x = n.isGameServer
             ? k.intl.string(H.default["9L0pAN"])
             : k.intl.formatToPlainString(H.default.gG8bI8, { perkName: n.name }),
-        _ = 0 === n.daysUntilExpiry ? H.default.BNS5zl : H.default["Xla/TL"],
-        b = k.intl.formatToPlainString(_, { boostCount: n.numExpiringBoosts, days: n.daysUntilExpiry });
+        S = 0 === n.daysUntilExpiry ? H.default.BNS5zl : H.default["Xla/TL"],
+        b = k.intl.formatToPlainString(S, { boostCount: n.numExpiringBoosts, days: n.daysUntilExpiry });
     return (0, l.jsx)(ee, {
         size: n.isGameServer ? "video" : void 0,
         asset: n.isGameServer

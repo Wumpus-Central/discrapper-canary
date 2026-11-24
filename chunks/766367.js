@@ -1,27 +1,27 @@
-var r = t(477900);
-t(582128);
-var i = t(358618),
-    a = t(983851),
-    l = t(625180),
-    u = t(58736),
-    o = t(620999),
-    c = t(165610),
-    d = t(191850),
-    A = t(792996);
-t.d(
+var t = i(477900);
+i(582128);
+var a = i(358618),
+    l = i(983851),
+    o = i(625180),
+    r = i(58736),
+    u = i(620999),
+    d = i(165610),
+    c = i(191850),
+    p = i(792996);
+i.d(
     e,
     {},
     {
         A: function (n) {
             let { frame: e } = n;
-            if (!(0, c.x1)(e) || !(0, o.v)(e)) return null;
-            let { userMuted: t } = e.data,
-                p = A.intl.string(t ? d.default.bd0Ufh : d.default.dxBzpe);
-            return (0, r.jsx)(u.Ay.Icon, {
-                icon: t ? i.VoiceXIcon : a.VoiceNormalIcon,
-                tooltip: p,
-                "aria-label": p,
-                onClick: () => l.A.setFrameUserMuted(e.id, !t),
+            if (!(0, d.x1)(e) || !(0, u.v)(e)) return null;
+            let { userMuted: i } = e.data,
+                s = p.intl.string(i ? c.default.bd0Ufh : c.default.dxBzpe);
+            return (0, t.jsx)(r.Ay.Icon, {
+                icon: i ? a.VoiceXIcon : l.VoiceNormalIcon,
+                tooltip: s,
+                "aria-label": s,
+                onClick: () => o.A.setFrameUserMuted(e.id, !i),
             });
         },
     },

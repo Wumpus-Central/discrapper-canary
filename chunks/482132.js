@@ -26,23 +26,23 @@ n.d(
                     let { header: t, disableDefaultSlideTransformStyling: n, ...l } = e;
                     return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
                 })(e),
-                { step: s, stepConfigs: E } = (0, h.Ay)(),
-                { setBodyNode: _, setFooterNode: g, setModalOverlayNode: S } = (0, p.Gm)(),
-                I = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
+                { step: s, stepConfigs: _ } = (0, h.Ay)(),
+                { setBodyNode: E, setFooterNode: g, setModalOverlayNode: I } = (0, p.Gm)(),
+                S = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
                 { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, f.t4)((e) => ({
                     setReadySlideId: e.setReadySlideId,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
                 })),
-                x = E.find((e) => e.key === s);
+                x = _.find((e) => e.key === s);
             if (
                 (r.useEffect(() => {
-                    S(null);
-                }, [s, S]),
+                    I(null);
+                }, [s, I]),
                 null == x)
             )
                 throw new d.v({
                     message: "Unknown step for current payment flow (PaymentModalStep)",
-                    extraSentryInformation: { stepConfig: x, step: s, unifiedCheckoutFlow: P, stepConfigs: E },
+                    extraSentryInformation: { stepConfig: x, step: s, unifiedCheckoutFlow: P, stepConfigs: _ },
                 });
             let v = x?.options?.hideSlider ?? !1,
                 R = x?.options?.hideDefaultModalBody ?? !1,
@@ -50,9 +50,9 @@ n.d(
                 M = s === C.pn.REVIEW,
                 b = r.useCallback(
                     (e, t) => {
-                        t === s && _(e);
+                        t === s && E(e);
                     },
-                    [s, _],
+                    [s, E],
                 );
             return (0, l.jsxs)(l.Fragment, {
                 children: [
@@ -72,8 +72,8 @@ n.d(
                                                 onSlideReady: (e) => A(e),
                                                 width: "100%",
                                                 disableDefaultTransformStyling: M || n,
-                                                overflow: I ? "visible" : void 0,
-                                                children: E.filter((e) => null != e.key).map((e) =>
+                                                overflow: S ? "visible" : void 0,
+                                                children: _.filter((e) => null != e.key).map((e) =>
                                                     (0, l.jsx)(
                                                         o.q,
                                                         {
@@ -92,7 +92,7 @@ n.d(
                                   (0, l.jsx)("div", { ref: (e) => g(e) }),
                                   (0, l.jsx)("div", {
                                       ref: (e) => {
-                                          S(e);
+                                          I(e);
                                       },
                                   }),
                               ],

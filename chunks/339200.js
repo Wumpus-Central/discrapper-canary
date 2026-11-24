@@ -27,8 +27,8 @@ var a = n(635377),
     p = n(551965),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
-    S = new d.A("MarkdownToSlate"),
-    y = {
+    E = new d.A("MarkdownToSlate"),
+    S = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -72,23 +72,23 @@ let x = /^[a-z0-9_+\-.#]+$/i,
         inlineCode: { type: "inlineStyle", before: "`", after: "`" },
         subtext: { type: "inlineStyle", before: "-# ", after: "" },
     },
-    E = new Set(["start", "end"]),
+    y = new Set(["start", "end"]),
     A = new Map([
-        ["inlineCode", E],
-        ["spoiler", E],
-        ["s", E],
+        ["inlineCode", y],
+        ["spoiler", y],
+        ["s", y],
         ["subtext", new Set(["start"])],
-        ["u", E],
+        ["u", y],
     ]),
     C = new Set(["*", "_", "~", "|", "\\"]),
     b = {},
     I = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in y))
+    if (!(e in S))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = y[e];
+    let t = S[e];
     ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
@@ -134,14 +134,14 @@ let T = {
     j = (0, p.A)([b, T]),
     _ = (0, p.A)([I, T]),
     R = c.X(j),
-    w = c.X(_),
-    O = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    M = new (o())(O),
-    L = new (o())(O);
+    O = c.X(_),
+    w = { max: 250, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    M = new (o())(w),
+    L = new (o())(w);
 function P(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
-    o && S.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
+    o && E.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
     let u = o ? [s] : n.originalMatch;
     switch ((i()(null != u, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
         case "newline":
@@ -227,7 +227,7 @@ function P(e, t, n, l, r) {
                     if ("inlineCode" === e) return { before: t[1], after: t[1] };
                     if ("em" === e && t[0].startsWith("_")) return { before: "_", after: "_" };
                     if ("subtext" === e) return { before: k.exec(t.input)[1], after: "" };
-                    let n = y["link" === e ? "url" : e];
+                    let n = S["link" === e ? "url" : e];
                     if ("inlineStyle" === n.type) return n;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(a, u),
@@ -328,7 +328,7 @@ function G(e, t) {
     return t;
 }
 function K(e, t, n) {
-    if (t.split("").some((e) => C.has(e))) return (S.error(e), n);
+    if (t.split("").some((e) => C.has(e))) return (E.error(e), n);
     throw Error(e);
 }
 function H(e, t, n, l) {
@@ -364,17 +364,17 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             p = d.path[0] ?? h.length - 1,
             g = o ? p : f,
             x = o ? f : p,
-            S = !1;
-        function* y(n) {
+            E = !1;
+        function* S(n) {
             let [s, h] = n,
                 f = h.length,
                 p = X.isAncestor(h, c.path),
                 g = X.isAncestor(h, d.path),
                 x = p ? c.path[f] : 0,
-                E = g ? d.path[f] : s.children.length - 1,
-                A = o ? E : x,
-                C = o ? x : E;
-            for (let n = A; !S && (!o ? n <= C : n >= C); n += m) {
+                y = g ? d.path[f] : s.children.length - 1,
+                A = o ? y : x,
+                C = o ? x : y;
+            for (let n = A; !E && (!o ? n <= C : n >= C); n += m) {
                 let m = s.children[n],
                     f = X.child(h, n);
                 if (Q.isElement(m)) {
@@ -382,12 +382,12 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                     if (!(X.equals(f, e) || X.isAncestor(f, e))) {
                         let e = t.isVoid(m);
                         if ("line" === a && Q.isElement(m) && !e) {
-                            (null != l && (yield l, (l = void 0)), (S = !0));
+                            (null != l && (yield l, (l = void 0)), (E = !0));
                             return;
                         }
                         if (!u && e) continue;
                     }
-                    for (let e of y([m, f])) yield e;
+                    for (let e of S([m, f])) yield e;
                 } else if (Z.isText(m))
                     if ("line" === a) l = { path: f, offset: o ? 0 : m.text.length };
                     else if (0 === m.text.length) yield { path: f, offset: 0 };
@@ -399,10 +399,10 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                             yield l;
                     }
             }
-            "line" === a && Q.isElement(s) && !t.isVoid(s) && (null != l && (yield l, (l = void 0)), (S = !0));
+            "line" === a && Q.isElement(s) && !t.isVoid(s) && (null != l && (yield l, (l = void 0)), (E = !0));
         }
         "line" === a && (yield o ? d : c);
-        for (let e = g; !S && (!o ? e <= x : e >= x); e += m) for (let t of y(h[e])) yield t;
+        for (let e = g; !E && (!o ? e <= x : e >= x); e += m) for (let t of S(h[e])) yield t;
     };
     let t = s.rL.findDocumentOrShadowRoot;
     ((s.rL.findDocumentOrShadowRoot = (e) => e.windowContext?.renderWindow.document ?? t(e)),
@@ -607,7 +607,7 @@ let q = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? w : R)(s, !0, {
+                                            content: (n ? O : R)(s, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

@@ -1,4 +1,4 @@
-n.d(t, { L: () => g, A: () => S });
+n.d(t, { L: () => g, A: () => E });
 var l,
     i = n(477900),
     r = n(582128),
@@ -21,16 +21,16 @@ var l,
 function x(e) {
     e.stopPropagation();
 }
-let S = function (e) {
+let E = function (e) {
     let {
             id: t,
             channelId: n,
             className: l,
             children: s,
             actions: g,
-            handleEditModal: S,
-            keyboardModeEnabled: y,
-            onKeyDown: E,
+            handleEditModal: E,
+            keyboardModeEnabled: S,
+            onKeyDown: y,
             draftType: A,
             size: C = 1,
             ref: b,
@@ -70,13 +70,13 @@ let S = function (e) {
                 }
             },
             onKeyDown: function (e) {
-                if (y) {
+                if (S) {
                     switch (e.which) {
                         case m.Ks6.D:
                             (e.preventDefault(), c.A.remove(n, t, A));
                             return;
                         case m.Ks6.E:
-                            null != S && (e.preventDefault(), S(e));
+                            null != E && (e.preventDefault(), E(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
@@ -87,7 +87,7 @@ let S = function (e) {
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
-                    E?.(e);
+                    y?.(e);
                 }
             },
             className: a()(p.Se, l),

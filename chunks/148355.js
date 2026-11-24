@@ -13,9 +13,9 @@ var l = n(477900),
     p = n(717421),
     g = n(775602),
     x = n(776231),
-    S = n(750506),
-    y = n(218394),
-    E = n(256449),
+    E = n(750506),
+    S = n(218394),
+    y = n(256449),
     A = n(832628),
     C = n(378058),
     b = n(792996),
@@ -84,8 +84,8 @@ function R(e) {
             onError: p,
         } = e,
         g = i.useRef(null),
-        S = i.useRef(null),
-        [y, E] = i.useState(!0),
+        E = i.useRef(null),
+        [S, y] = i.useState(!0),
         [A, v] = i.useState(!1),
         N = i.useRef(!1);
     N.current = t && c;
@@ -101,28 +101,28 @@ function R(e) {
                 if (null == T) return;
                 let { default: e } = await Promise.all([n.e(570716), n.e(709330)]).then(n.bind(n, 140521));
                 null != g.current &&
-                    ((S.current = new e({
+                    ((E.current = new e({
                         canvas: g.current,
                         animationId: s.id,
                         assetUrl: T,
                         assetData: u,
                         onInitialDraw: () => {
-                            t || E(!1);
+                            t || y(!1);
                         },
                         onError: () => {
-                            t || (E(!1), v(!0), p?.());
+                            t || (y(!1), v(!0), p?.());
                         },
                     })),
-                    N.current && S.current.setState(!0));
+                    N.current && E.current.setState(!0));
             })(),
             () => {
-                (S.current?.drop(), (S.current = null), (t = !0));
+                (E.current?.drop(), (E.current = null), (t = !0));
             }
         );
     }, [T, r, s.id, u, p]),
     i.useEffect(() => {
         let e;
-        (t || (e = 0), S.current?.setState(t && c, e));
+        (t || (e = 0), E.current?.setState(t && c, e));
     }, [s, t, c]),
     null == T)
         ? null
@@ -133,7 +133,7 @@ function R(e) {
               ref: m,
               children: (0, l.jsx)(_, {
                   hasError: A,
-                  isLoading: y,
+                  isLoading: S,
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: f,
@@ -141,7 +141,7 @@ function R(e) {
               }),
           });
 }
-let w = (e) => {
+let O = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -155,19 +155,19 @@ let w = (e) => {
             } = e,
             [f, p] = i.useState(!1),
             [g, x] = i.useState(!0),
-            [S, y] = i.useState(!1),
-            E = i.useRef(null),
+            [E, S] = i.useState(!1),
+            y = i.useRef(null),
             A = i.useRef(null),
             b = m ?? (0, C.zg)(n, { isPreview: !t || !f || !r, size: a }),
             N = i.useCallback(() => {
                 x(!1);
             }, []),
             T = i.useCallback(() => {
-                y(!0);
+                S(!0);
             }, []);
         return (i.useEffect(() => {
-            if (null != E.current) {
-                let { isVisible: e } = E.current;
+            if (null != y.current) {
+                let { isVisible: e } = y.current;
                 p(e);
             }
         }, []),
@@ -178,14 +178,14 @@ let w = (e) => {
             ? null
             : (0, l.jsx)(d.L, {
                   innerRef: c,
-                  ref: E,
+                  ref: y,
                   onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
                       className: s()(o, I.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, l.jsx)(_, {
-                          hasError: S,
+                          hasError: E,
                           isLoading: g,
                           maskAsset: u,
                           size: a,
@@ -207,7 +207,7 @@ let w = (e) => {
                   }),
               });
     },
-    O = (e) => {
+    w = (e) => {
         let {
                 disableAnimation: t,
                 enlargeScaleFactor: n,
@@ -219,8 +219,8 @@ let w = (e) => {
             } = e,
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
-            y = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            E = (0, f.p)(s, { ref: x, from: y, enter: { transform: "scale(1)", opacity: 1 }, leave: y, config: N }),
+            S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
+            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: N }),
             A = i.useRef(null),
             C = (0, p.z)(
                 { ref: A, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
@@ -228,10 +228,10 @@ let w = (e) => {
             );
         return (
             (0, u.useChain)(s ? [x, A] : [A, x], s ? [0, 0.0625] : [0, 0]),
-            E(
+            y(
                 (e, i) =>
                     i &&
-                    (0, l.jsx)(S.nE, {
+                    (0, l.jsx)(E.nE, {
                         className: I.O2,
                         fixed: !0,
                         align: "center",
@@ -287,11 +287,11 @@ function M(e) {
             fileUri: f,
             onError: p,
         } = e,
-        g = (0, y.j)(),
-        x = (0, E.Th)(t) && !n,
-        S = i.useRef(null);
+        g = (0, S.j)(),
+        x = (0, y.Th)(t) && !n,
+        E = i.useRef(null);
     if (null == c) return null;
-    let C = c.format_type === A.TG.LOTTIE ? R : w;
+    let C = c.format_type === A.TG.LOTTIE ? R : O;
     return (0, l.jsxs)(
         i.Fragment,
         {
@@ -303,19 +303,19 @@ function M(e) {
                     sticker: c,
                     className: d,
                     maskAsset: o,
-                    positionRef: S,
+                    positionRef: E,
                     withLoadingIndicator: h,
                     assetData: m,
                     fileUri: f,
                     onError: p,
                 }),
                 r &&
-                    (0, l.jsx)(O, {
+                    (0, l.jsx)(w, {
                         disableAnimation: n,
                         enlargeScaleFactor: a,
                         enlargeWithName: s,
                         isInteracting: t,
-                        positionRef: S,
+                        positionRef: E,
                         size: u,
                         sticker: c,
                     }),

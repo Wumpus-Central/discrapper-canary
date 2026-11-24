@@ -14,20 +14,20 @@ var l = n(477900),
     p = n(939249),
     g = n(795816),
     x = n(211401),
-    S = n(989837),
-    y = n(500049),
-    E = n(598071),
+    E = n(989837),
+    S = n(500049),
+    y = n(598071),
     A = n(60809),
     C = n(792996),
     b = n(215837);
 let I = function (e) {
         let { type: t, channelId: n, ref: r } = e,
             a = (0, s.bG)(
-                [S.A],
-                () => S.A.shouldShowPopup() && S.A.activeViewType() === t && S.A.activeChannelId() === n,
+                [E.A],
+                () => E.A.shouldShowPopup() && E.A.activeViewType() === t && E.A.activeChannelId() === n,
             ),
             { Component: o, events: u, play: c } = (0, f.c)(),
-            d = i.useContext(E.Ay);
+            d = i.useContext(y.Ay);
         i.useEffect(() => {
             function e() {
                 u.onMouseEnter();
@@ -40,7 +40,7 @@ let I = function (e) {
             );
         }, [d, u]);
         let h = i.useCallback(() => {
-                (a ? x.k(y.Se.DISMISSED) : (x.R(y.s4.TEXT, t, void 0, n), g.LK()), c());
+                (a ? x.k(S.Se.DISMISSED) : (x.R(S.s4.TEXT, t, void 0, n), g.LK()), c());
             }, [a, t, n, c]),
             I = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
@@ -69,8 +69,8 @@ var N = n(931664),
     j = n(188567),
     _ = n(709372),
     R = n(841817),
-    w = n(652215),
-    O = n(522602),
+    O = n(652215),
+    w = n(522602),
     M = n(287809),
     L = n(448645),
     P = n(462180),
@@ -171,11 +171,11 @@ let el = i.memo(function (e) {
                     (u(!1), (g.current = 0));
                 }, 2e3)));
         }, []);
-    (0, et.Vo)({ event: w.jej.FAVORITE_GIF, handler: x });
-    let S = i.useCallback(() => {
+    (0, et.Vo)({ event: O.jej.FAVORITE_GIF, handler: x });
+    let E = i.useCallback(() => {
             (0, B.r$)(K.kx.GIF, n, r.id);
         }, [n, r.id]),
-        { Component: y, events: E, play: A } = (0, Y.V)();
+        { Component: S, events: y, play: A } = (0, Y.V)();
     if (t) return null;
     let b = d === K.kx.GIF && h === n && p === r.id;
     return (0, l.jsx)(J.m, {
@@ -187,10 +187,10 @@ let el = i.memo(function (e) {
             className: m()(K.VQ, Q.UD),
             children: (0, l.jsx)(en.A, {
                 className: Q.x6,
-                onMouseEnter: E.onMouseEnter,
-                onMouseLeave: E.onMouseLeave,
+                onMouseEnter: y.onMouseEnter,
+                onMouseLeave: y.onMouseLeave,
                 onClick: () => {
-                    (S(), A());
+                    (E(), A());
                 },
                 isActive: b,
                 pulse: o,
@@ -198,7 +198,7 @@ let el = i.memo(function (e) {
                 "aria-expanded": b,
                 "aria-haspopup": "dialog",
                 "aria-controls": f,
-                children: (0, l.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
+                children: (0, l.jsx)(S, { size: "refresh_sm", color: "currentColor" }),
             }),
         }),
     });
@@ -244,12 +244,12 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             o,
             { disabled: u, type: c, channel: d, ref: h } = e,
             [f, p, g, x] = (0, B.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
-            S = f === K.kx.STICKER && x === c && g === d.id,
-            y = i.useCallback(() => {
+            E = f === K.kx.STICKER && x === c && g === d.id,
+            S = i.useCallback(() => {
                 (0, B.r$)(K.kx.STICKER, c, d.id);
             }, [c, d.id]),
             {
-                Component: E,
+                Component: y,
                 events: A,
                 play: b,
             } = ((t = i.useRef(null)),
@@ -283,15 +283,15 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                       className: m()(Q.x6, Q.KE),
                       ...A,
                       onClick: () => {
-                          (y(), b());
+                          (S(), b());
                       },
-                      isActive: S,
+                      isActive: E,
                       "aria-label": C.intl.string(C.t.rZpidU),
-                      "aria-expanded": S,
+                      "aria-expanded": E,
                       "aria-haspopup": "dialog",
                       "aria-controls": p,
                       sparkle: !1,
-                      children: (0, l.jsx)(E, { size: "refresh_sm", color: "currentColor" }),
+                      children: (0, l.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
                   }),
               });
     }),
@@ -302,9 +302,9 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 type: p,
                 disabled: g,
                 channel: x,
-                handleSubmit: S,
-                isEmpty: y,
-                showAllButtons: E,
+                handleSubmit: E,
+                isEmpty: S,
+                showAllButtons: y,
                 expressionButtonsHidden: A,
             } = e,
             C = (0, T.n)("ChannelTextAreaButtons"),
@@ -323,11 +323,11 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             W =
                 ((n = x.id),
                 (h = p),
-                (m = y),
-                (0, s.bG)([N.A, O.A], () => {
+                (m = S),
+                (0, s.bG)([N.A, w.A], () => {
                     let e = N.A.getStickerPreview(n, h.drafts.type),
                         t = null != e && e.length > 0;
-                    return 0 === O.A.getUploads(n, h.drafts.type).length && m && !t;
+                    return 0 === w.A.getUploads(n, h.drafts.type).length && m && !t;
                 })),
             { activeCommand: B, activeCommandOption: F } = (0, s.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(x.id),
@@ -353,9 +353,9 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             i.useEffect(() => {
                 if (Y && !f)
                     return (
-                        j._.subscribe(w.jej.RECORD_VOICE_MESSAGE, e),
+                        j._.subscribe(O.jej.RECORD_VOICE_MESSAGE, e),
                         () => {
-                            j._.unsubscribe(w.jej.RECORD_VOICE_MESSAGE, e);
+                            j._.unsubscribe(O.jej.RECORD_VOICE_MESSAGE, e);
                         }
                     );
                 function e() {
@@ -371,24 +371,24 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 K.push((0, l.jsx)(ei.A, { disabled: g, channel: x }, "gift")),
             p.gifs?.button != null &&
                 null == B &&
-                E &&
+                y &&
                 U &&
                 !A &&
                 K.push((0, l.jsx)(el, { disabled: g, type: p, channel: x }, "gif")),
             p.stickers?.button != null &&
                 null == B &&
-                E &&
+                y &&
                 V &&
                 !A &&
                 K.push((0, l.jsx)(ec, { disabled: g, type: p, channel: x }, "sticker"))),
         p.emojis?.button != null &&
             !A &&
             J &&
-            (E || A
+            (y || A
                 ? D && K.push((0, l.jsx)(Z, { disabled: g, type: p, channelId: x.id }, "emoji"))
                 : K.push((0, l.jsx)(X.A, { disabled: g, type: p, channel: x }, "expression"))),
         q && P && K.push((0, l.jsx)(v, { channelId: x.id, type: p }, "appLauncher")),
-        $ && K.push((0, l.jsx)(ea, { onClick: S, disabled: g || W }, "submit")),
+        $ && K.push((0, l.jsx)(ea, { onClick: E, disabled: g || W }, "submit")),
         0 === K.length)
             ? null
             : (0, l.jsx)("div", { className: Q.Uo, children: K });

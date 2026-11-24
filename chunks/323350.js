@@ -59,7 +59,7 @@ function g(e, t) {
     return g.join(r);
 }
 function x(e, t) {
-    let { mode: n, start: l, allowBlockQuotePrefix: x = !1, preventEmojiSurrogates: S = !1 } = t ?? {};
+    let { mode: n, start: l, allowBlockQuotePrefix: x = !1, preventEmojiSurrogates: E = !1 } = t ?? {};
     if (f.l5.isText(e))
         return (function (e, t) {
             let { start: n, end: l } = t ?? {};
@@ -83,7 +83,7 @@ function x(e, t) {
         }
         case "emoji": {
             let t = e.emoji;
-            if (!S && null != t.surrogate) return t.surrogate;
+            if (!E && null != t.surrogate) return t.surrogate;
             return t.name;
         }
         case "customEmoji": {

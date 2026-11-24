@@ -14,11 +14,11 @@ var l = n(477900),
     m = n(778712),
     C = n(534514),
     y = n(289873),
-    E = n(890497),
-    _ = n(398590),
+    _ = n(890497),
+    E = n(398590),
     g = n(49229),
-    S = n(966327),
-    I = n(682689),
+    I = n(966327),
+    S = n(682689),
     A = n(674658),
     P = n(159522),
     x = n(769015),
@@ -68,7 +68,7 @@ function ei(e) {
             onClose: f,
         } = e,
         [C, y] = r.useState([]),
-        [I, A] = r.useState(!1),
+        [S, A] = r.useState(!1),
         { isLoading: P, potentialRecipients: x } = (function () {
             r.useEffect(() => {
                 (g.A.fetchRelationships(), (0, M.u)());
@@ -99,12 +99,12 @@ function ei(e) {
         N = L ? !s : null == t,
         U = 1 === C.length,
         w = C.length > 1 && null == a,
-        H = I || 0 === C.length || C.length > i || T.length !== C.length || (U ? null == t : !s) || w,
+        H = S || 0 === C.length || C.length > i || T.length !== C.length || (U ? null == t : !s) || w,
         F = x.map((e) => ({
             id: e.id,
             value: e.id,
             label: O.Ay.getUserTag(e),
-            leading: (0, l.jsx)(S.A, { user: e, size: m._3.SIZE_20 }),
+            leading: (0, l.jsx)(I.A, { user: e, size: m._3.SIZE_20 }),
             disabled: L && C.length >= i && !C.includes(e.id),
         })),
         ei = (0, Q.D)(d),
@@ -147,25 +147,25 @@ function ei(e) {
                                                   }),
                                               ],
                                           }),
-                                          (0, l.jsx)(E.Z, {
+                                          (0, l.jsx)(_.Z, {
                                               selectionMode: "multiple",
                                               label: en.intl.string(el.default.ZolTTE),
                                               hideLabel: !0,
                                               placeholder: en.intl.string(el.default.xdDO7f),
                                               loading: P || N,
-                                              disabled: N || I,
+                                              disabled: N || S,
                                               value: C,
                                               onSelectionChange: ec,
                                               options: F,
                                           }),
                                       ],
                                   })
-                                : (0, l.jsx)(E.Z, {
+                                : (0, l.jsx)(_.Z, {
                                       selectionMode: "single",
                                       label: en.intl.string(en.t.MJw05f),
                                       placeholder: en.intl.string(en.t.J019jZ),
                                       loading: P || N,
-                                      disabled: N || I,
+                                      disabled: N || S,
                                       value: C[0],
                                       onSelectionChange: (e) => ec(null != e ? [e] : []),
                                       options: F,
@@ -179,7 +179,7 @@ function ei(e) {
                         message: en.intl.format(el.default.ZvgWUV, {
                             giftCount: i,
                             onInventoryClick: function () {
-                                (f(), (0, _.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: R }));
+                                (f(), (0, E.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: R }));
                             },
                         }),
                         role: "none",
@@ -193,10 +193,10 @@ function ei(e) {
                         {
                             variant: "secondary",
                             text: en.intl.string(el.default["qTXpj/"]),
-                            disabled: ei || I,
+                            disabled: ei || S,
                             onClick: function () {
                                 (f(),
-                                    (0, _.bz)(),
+                                    (0, E.bz)(),
                                     null != es
                                         ? (0, V.A)({
                                               product: es,
@@ -213,7 +213,7 @@ function ei(e) {
                             variant: "primary",
                             text: en.intl.string(en.t["+EgwQn"]),
                             disabled: H,
-                            loading: ei || I,
+                            loading: ei || S,
                             onClick: async function () {
                                 var e;
                                 let r;
@@ -238,7 +238,7 @@ function ei(e) {
                                     A(!1);
                                 }
                                 (f(),
-                                    (0, _.bz)(),
+                                    (0, E.bz)(),
                                     (e = {
                                         recipients: r.recipients,
                                         failedRecipients: r.failedRecipients,
@@ -281,7 +281,7 @@ function eo(e) {
             checkoutSessionId: i,
             giftCodeDeliveryReady: s = !1,
             shouldUsePostPurchaseRecipientDelivery: u = !1,
-            application: E,
+            application: _,
             sku: g,
             subscriptionPlan: A,
             selectedGiftStyle: v,
@@ -293,7 +293,7 @@ function eo(e) {
             orbsBack: B,
         } = e,
         [G, K] = r.useState(p.e.Modes.DEFAULT),
-        Z = (0, I.t4)((e) => e.getIsRecurringGiftCheckout()),
+        Z = (0, S.t4)((e) => e.getIsRecurringGiftCheckout()),
         W = (0, c.bG)([N.A], () => N.A.enabled),
         Y = M || (null != v && null != b),
         z = g?.productLine === es.EZt.COLLECTIBLES,
@@ -367,8 +367,8 @@ function eo(e) {
         ? (0, l.jsxs)("div", {
               className: ec.EL,
               children: [
-                  null != E
-                      ? (0, l.jsx)(x.A, { game: E, className: ec.__invalid_icon, size: x.M.LARGE, skuId: J() })
+                  null != _
+                      ? (0, l.jsx)(x.A, { game: _, className: ec.__invalid_icon, size: x.M.LARGE, skuId: J() })
                       : null,
                   (0, l.jsx)(y.y, { type: y.t.PULSING_ELLIPSIS }),
               ],
@@ -390,9 +390,9 @@ function eo(e) {
                     (0, l.jsxs)("div", {
                         className: a()(ec.EL, { [ec.L1]: X }),
                         children: [
-                            null != E
+                            null != _
                                 ? (0, l.jsx)(x.A, {
-                                      game: E,
+                                      game: _,
                                       className: ec.__invalid_icon,
                                       size: x.M.LARGE,
                                       skuId: J(),
@@ -416,7 +416,7 @@ function eo(e) {
                                           (0, l.jsxs)("div", {
                                               className: ec.jx,
                                               children: [
-                                                  (0, l.jsx)(S.A, { user: b, size: m._3.SIZE_24 }),
+                                                  (0, l.jsx)(I.A, { user: b, size: m._3.SIZE_24 }),
                                                   (0, l.jsx)(C.D, {
                                                       variant: "heading-lg/semibold",
                                                       children: O.Ay.getName(b),
@@ -433,7 +433,7 @@ function eo(e) {
                                               (0, l.jsx)(eh, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      (T(), (0, _.bz)(), $ && Q());
+                                                      (T(), (0, E.bz)(), $ && Q());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: ec.yF }),
@@ -504,9 +504,9 @@ function eh(e) {
             isLoading: b.A.isFetching(),
         })),
         y = Array.from(f.keys()).sort((e, t) => b.A.compare(e, t)),
-        _ = (0, c.bG)([k.A], () => k.A.getFriendIDs()),
-        I = u().difference(_, y),
-        A = [...y, ...I],
+        E = (0, c.bG)([k.A], () => k.A.getFriendIDs()),
+        S = u().difference(E, y),
+        A = [...y, ...S],
         P = (0, c.bG)([j.default], () => j.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
     if (null == P || 0 === P.length) return null;
     let x = u().sortBy(P, (e) => A.indexOf(e.id));
@@ -516,7 +516,7 @@ function eh(e) {
             (0, l.jsxs)("div", {
                 className: ec.AQ,
                 children: [
-                    (0, l.jsx)(E.Z, {
+                    (0, l.jsx)(_.Z, {
                         selectionMode: "single",
                         label: en.intl.string(en.t.MJw05f),
                         placeholder: en.intl.string(en.t.J019jZ),
@@ -529,7 +529,7 @@ function eh(e) {
                             id: e.id,
                             value: e,
                             label: `${O.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(S.A, { user: e, size: m._3.SIZE_20 }),
+                            leading: (0, l.jsx)(I.A, { user: e, size: m._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {

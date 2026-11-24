@@ -1,4 +1,4 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => w });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -14,9 +14,9 @@ var l = n(477900),
     p = n(135621),
     g = n(287809),
     x = n(448645),
-    S = n(192308),
-    y = n(939249),
-    E = n(404374),
+    E = n(192308),
+    S = n(939249),
+    y = n(404374),
     A = n(739053),
     C = n(82498),
     b = n(734057),
@@ -26,7 +26,7 @@ var l = n(477900),
     T = n(792996),
     k = n(845210);
 function j() {
-    (0, S.mM)(async () => {
+    (0, E.mM)(async () => {
         let { default: e } = await Promise.all([n.e(235257), n.e(66920)]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
@@ -48,7 +48,7 @@ function _(e) {
                 (0, A.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, C.uq)("longer messages inline")));
         }, [r, a]),
         n
-            ? (0, l.jsx)(y.D, {
+            ? (0, l.jsx)(S.D, {
                   className: k.e7,
                   onClick: () => j(),
                   children: (0, l.jsx)(u.m, {
@@ -60,7 +60,7 @@ function _(e) {
             : (0, l.jsxs)("div", {
                   className: s()(k.zr, t),
                   children: [
-                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: E.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: y.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
                           className: k.Qq,
                           variant: "body-sm/normal",
@@ -71,16 +71,16 @@ function _(e) {
     );
 }
 var R = n(263582),
-    w = n(412028);
-function O(e) {
-    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: S } = e,
-        y = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        E = (0, p.A)(),
-        A = i ?? E,
-        C = r ?? i ?? E / 10,
+    O = n(412028);
+function w(e) {
+    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
+        S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        y = (0, p.A)(),
+        A = i ?? y,
+        C = r ?? i ?? y / 10,
         b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > 2e3 && y,
-        v = null != t.upsellLongMessages && !y,
+        I = null != t.upsellLongMessages && (b ?? 0) > 2e3 && S,
+        v = null != t.upsellLongMessages && !S,
         N = A - b,
         k = N > C;
     (0, a.$)({ currentLength: b, maxLength: A, message: T.intl.string(T.t.c2Jqed) });
@@ -90,17 +90,17 @@ function O(e) {
                 : N > 0
                   ? T.intl.formatToPlainString(T.t.qH8uFW, { count: N })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: O } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { analyticsLocations: w } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: M } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
     if (!M) return null;
     let L = N >= 0;
     return (0, l.jsx)(f.f5, {
-        value: O,
+        value: w,
         children: (0, l.jsxs)("div", {
-            className: s()(S, w.Dq),
+            className: s()(E, O.Dq),
             children: [
                 (0, l.jsxs)("div", {
-                    className: w.SW,
+                    className: O.SW,
                     children: [
                         I && L
                             ? (0, l.jsx)(u.m, {
@@ -109,7 +109,7 @@ function O(e) {
                                   children: (0, l.jsx)(c.NitroWheelIcon, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: w.y,
+                                      className: O.y,
                                   }),
                               })
                             : null,
@@ -130,7 +130,7 @@ function O(e) {
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: N }) }),
                 v && !k
-                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
+                    ? (0, l.jsx)(_, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
                     : null,
             ],
         }),

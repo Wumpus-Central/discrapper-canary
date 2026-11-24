@@ -150,7 +150,7 @@ let c = {
         disableAutoFocus: !0,
         permissions: { requireSendMessages: !0 },
     },
-    S = {
+    E = {
         analyticsName: "create_game_invite_post_description",
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         drafts: { type: s.C.FirstThreadMessage },
@@ -163,7 +163,7 @@ let c = {
         showCharacterCount: !0,
         layout: 1,
     },
-    y = {
+    S = {
         analyticsName: "create_forum_post",
         attachments: !0,
         drafts: { type: s.C.FirstThreadMessage },
@@ -179,7 +179,7 @@ let c = {
         showSlowmodeIndicator: !0,
         layout: 2,
     },
-    E = {
+    y = {
         analyticsName: "create_poll",
         attachments: !0,
         drafts: { type: s.C.ChannelMessage },
@@ -298,7 +298,7 @@ let c = {
         layout: 1,
         expressionPicker: { onlyEmojis: !0 },
     },
-    w = {
+    O = {
         analyticsName: "share_custom_client_theme_input",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -311,7 +311,7 @@ let c = {
         showCharacterCount: !0,
         layout: 1,
     },
-    O = {
+    w = {
         analyticsName: "conjure_patch_notes_input",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -356,16 +356,16 @@ n.d(
             GENERIC_RICH_TEXTAREA: v,
             CUSTOM_GIFT: N,
             RULES_INPUT: T,
-            CREATE_FORUM_POST: y,
-            CREATE_GAME_INVITE_POST_DESCRIPTION: S,
+            CREATE_FORUM_POST: S,
+            CREATE_GAME_INVITE_POST_DESCRIPTION: E,
             CREATE_ANNOUNCEMENT_POST: x,
-            CREATE_POLL: E,
+            CREATE_POLL: y,
             FORUM_CHANNEL_GUIDELINES: k,
             CHANNEL_TOPIC: j,
             ATOMIC_REACTOR_REPLY_INPUT: _,
             FORWARD_MESSAGE_INPUT: R,
-            SHARE_CUSTOM_CLIENT_THEME_INPUT: w,
-            CONJURE_PATCH_NOTES: O,
+            SHARE_CUSTOM_CLIENT_THEME_INPUT: O,
+            CONJURE_PATCH_NOTES: w,
             GUILD_ROOM: M,
         },
         wt: u,

@@ -14,9 +14,9 @@ var l = n(477900),
     p = n(579940),
     g = n(915089),
     x = n(462446),
-    S = n(750506),
-    y = n(513609),
-    E = n(71393),
+    E = n(750506),
+    S = n(513609),
+    y = n(71393),
     A = n(597184),
     C = n(105330),
     b = n(265431),
@@ -28,8 +28,8 @@ var l = n(477900),
     j = n(576705),
     _ = n(351906),
     R = n(287809),
-    w = n(31498),
-    O = n(116903),
+    O = n(31498),
+    w = n(116903),
     M = n(741918),
     L = n(267102),
     P = n(652215),
@@ -43,11 +43,11 @@ function B(e) {
         { ref: r, ...B } = e,
         { channel: F, type: G, editorHeight: K, onVisibilityChange: H, editorScrollerRef: z, barsHeight: q } = B,
         $ = (0, g.GV)(),
-        Q = (0, o.bG)([E.A], () => E.A.getGuild(F.guild_id) ?? null, [F.guild_id]),
+        Q = (0, o.bG)([y.A], () => y.A.getGuild(F.guild_id) ?? null, [F.guild_id]),
         Z = i.useRef(null),
         [X, Y, J] = (function (e, t, n) {
             let { channel: l, type: r } = e,
-                [s, a] = i.useState(() => (0, w.Ur)()),
+                [s, a] = i.useState(() => (0, O.Ur)()),
                 u = (0, b.A)(),
                 c = (0, o.bG)([k.Ay, R.default], () => {
                     let e = R.default.getCurrentUser();
@@ -93,7 +93,7 @@ function B(e) {
                             (u.setFocus(e.toString()), r?.(e));
                         }
                     }
-                    let u = (0, O.Ay)({
+                    let u = (0, w.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
                             orientation: M.Gl.VERTICAL,
@@ -119,15 +119,15 @@ function B(e) {
                     );
                 })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => C.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
-                S = e.editorRef.current?.getSlateEditor(),
-                y = null;
-            null != S && (y = T.VW.getSelectedParentOfType(S, w.mk)?.[0] ?? null);
-            let E = {
+                E = e.editorRef.current?.getSlateEditor(),
+                S = null;
+            null != E && (S = T.VW.getSelectedParentOfType(E, O.mk)?.[0] ?? null);
+            let y = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
                     activeCommandOption: f,
-                    activeInlineAutocompleteInput: y,
+                    activeInlineAutocompleteInput: S,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
@@ -145,10 +145,10 @@ function B(e) {
                             ? (0, I.AA)({ [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, f.name)
                             : "",
                 },
-                [C] = i.useState(() => new w.Ay(E));
+                [C] = i.useState(() => new O.Ay(y));
             return (
                 i.useEffect(() => {
-                    C.updateProps(E);
+                    C.updateProps(y);
                 }),
                 i.useImperativeHandle(t, () => C, [C]),
                 i.useEffect(() => () => C.unmount(), [C]),
@@ -179,7 +179,7 @@ function B(e) {
                 [s, C, g]
             );
         })({ ...B, guild: Q }, r, Z),
-        ee = G.autocomplete?.forceChatLayer ? y.Ay : S.Ay,
+        ee = G.autocomplete?.forceChatLayer ? S.Ay : E.Ay,
         et = i.useMemo(() => {
             if (!X.isVisible || X.query?.type !== A.DB.MENTIONS) return null;
             let e = X.query.results.users;
