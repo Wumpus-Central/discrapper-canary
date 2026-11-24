@@ -349,6 +349,7 @@ class e_ extends i.Component {
                                 containerRef: this.rootRef,
                                 children: [
                                     (0, r.jsx)(eD, {
+                                        ref: this.rootRef,
                                         guestWindow: o,
                                         className: s()(a, { overlay: x }),
                                         children: (0, r.jsxs)(b, {
