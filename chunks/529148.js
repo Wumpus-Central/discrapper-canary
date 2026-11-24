@@ -1,4 +1,4 @@
-(n.d(t, { e: () => X }), n(321073));
+(n.d(t, { e: () => $ }), n(321073));
 var i,
     r = n(477900),
     a = n(582128),
@@ -70,19 +70,18 @@ var S = n(869146),
     y = n(418842),
     D = n(607399),
     b = n(112834),
-    v = n(964486),
-    P = n(657043),
-    M = n(723702);
-let U = (0, g.mj)({
+    v = n(657043),
+    P = n(723702);
+let M = (0, g.mj)({
     kind: "user",
     name: "2026-10-mana-badge-refresh",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var w = n(354328),
-    G = n(964404),
-    x = n(611635);
-function k(e) {
+var U = n(354328),
+    w = n(964404),
+    G = n(611635);
+function x(e) {
     let t,
         {
             rootClassName: i,
@@ -105,17 +104,17 @@ function k(e) {
             isPopoutWindow: O,
             children: R,
         } = e,
-        y = window.CSS.supports("selector(::-webkit-scrollbar)"),
-        k = (0, o.bG)([A.Ay], () => A.Ay.zoom),
-        F = O ? "" : `--custom-zoom: ${k};`,
-        B = (0, w.A)("highlight_mana_buttons"),
-        V = (0, w.A)("highlight_mana_components"),
-        H = (0, w.A)("highlight_mana_text"),
-        j = (0, w.A)("highlight_void_toggleables"),
-        W = (0, w.A)("highlight_void_buttons"),
-        Y = (0, w.A)("highlight_mana_text_overrides");
+        L = window.CSS.supports("selector(::-webkit-scrollbar)"),
+        y = (0, o.bG)([A.Ay], () => A.Ay.zoom),
+        x = O ? "" : `--custom-zoom: ${y};`,
+        k = (0, U.A)("highlight_mana_buttons"),
+        F = (0, U.A)("highlight_mana_components"),
+        B = (0, U.A)("highlight_mana_text"),
+        V = (0, U.A)("highlight_void_toggleables"),
+        H = (0, U.A)("highlight_void_buttons"),
+        j = (0, U.A)("highlight_mana_text_overrides");
     (a.useEffect(() => {
-        if (!H) return;
+        if (!B) return;
         let e = () => {},
             t = !1;
         return (
@@ -128,9 +127,9 @@ function k(e) {
                 ((t = !0), e());
             }
         );
-    }, [H]),
+    }, [B]),
         a.useEffect(() => {
-            if (!Y) return;
+            if (!j) return;
             let e = () => {},
                 t = !1;
             return (
@@ -143,20 +142,20 @@ function k(e) {
                     ((t = !0), e());
                 }
             );
-        }, [Y]));
-    let K = (0, o.bG)([G.Ay], () => G.Ay.hdrDynamicRange),
-        $ = (0, P.BX)("RootElementContextProvider"),
-        X = U.useConfig({ location: "RootElementContextProvider" }).enabled,
-        z = `font-size: ${_}%; --saturation-factor: ${I}; dynamic-range-limit: ${K}; ${F}`,
-        q = l()(
+        }, [j]));
+    let W = (0, o.bG)([w.Ay], () => w.Ay.hdrDynamicRange),
+        Y = (0, v.BX)("RootElementContextProvider"),
+        K = M.useConfig({ location: "RootElementContextProvider" }).enabled,
+        $ = `font-size: ${_}%; --saturation-factor: ${I}; dynamic-range-limit: ${W}; ${x}`,
+        X = l()(
             ((t = ""),
-            (0, M.uF)()
+            (0, P.uF)()
                 ? (t = "platform-win")
-                : (0, M.cX)()
+                : (0, P.cX)()
                   ? (t = "platform-osx")
-                  : (0, M.j9)()
+                  : (0, P.j9)()
                     ? (t = "platform-linux")
-                    : (0, M.HZ)() && (t = "platform-web"),
+                    : (0, P.HZ)() && (t = "platform-web"),
             __OVERLAY__ ? `${t} platform-overlay` : t),
             (0, b.m)(d),
             `density-${c}`,
@@ -165,8 +164,8 @@ function k(e) {
                 "low-saturation": I <= 0.4,
                 "keyboard-mode": h,
                 "decorate-links": S,
-                "no-webkit-scrollbar": !y,
-                "has-webkit-scrollbar": y,
+                "no-webkit-scrollbar": !L,
+                "has-webkit-scrollbar": L,
                 "mouse-mode": f,
                 "reduce-motion": T,
                 "full-motion": !T,
@@ -178,36 +177,31 @@ function k(e) {
                 "visual-refresh": !0,
                 "hardware-acceleration-disabled": !N,
                 "visual-refresh-chat-input": !1,
-                "highlight-mana-buttons": B,
-                "highlight-mana-components": V,
-                "highlight-mana-text": H,
-                "highlight-mana-text-overrides": Y,
-                "highlight-void-toggleables": j,
-                "highlight-void-buttons": W,
+                "highlight-mana-buttons": k,
+                "highlight-mana-components": F,
+                "highlight-mana-text": B,
+                "highlight-mana-text-overrides": j,
+                "highlight-void-toggleables": V,
+                "highlight-void-buttons": H,
                 "high-contrast-mode": C,
-                "enlarge-target-size": $,
-                "mana-badge-refresh": X,
+                "enlarge-target-size": Y,
+                "mana-badge-refresh": K,
             },
             i,
         ),
-        Q = a.useMemo(() => ({ lang: s, style: z, className: q, focused: u }), [s, z, q, u]);
-    return (
-        (0, v.Ay)(() => {
-            L.Ay.setTrafficLightPosition({ x: 9, y: 9 });
-        }),
-        (0, r.jsx)(x.q.Provider, { value: Q, children: R })
-    );
+        z = a.useMemo(() => ({ lang: s, style: $, className: X, focused: u }), [s, $, X, u]);
+    return (0, r.jsx)(G.q.Provider, { value: z, children: R });
 }
-var F = n(95498),
-    B = n(613412),
-    V = n(116833),
-    H = n(449275),
-    j = n(989395),
-    W = n(750506),
-    Y = n(738098),
-    K = n(792996);
-let $ = { Modal: B.ImpressionTypes.MODAL };
-function X(e) {
+var k = n(95498),
+    F = n(613412),
+    B = n(116833),
+    V = n(449275),
+    H = n(989395),
+    j = n(750506),
+    W = n(738098),
+    Y = n(792996);
+let K = { Modal: F.ImpressionTypes.MODAL };
+function $(e) {
     let { windowKey: t, themeOverride: n, children: i } = e,
         s = null != t,
         [u] = a.useState(() => L.Ay.getEnableHardwareAcceleration()),
@@ -222,8 +216,8 @@ function X(e) {
             keyboardModeEnabled: U,
             saturation: w,
             desaturateUserColors: G,
-            useForcedColors: x,
-            systemForcedColors: B,
+            useForcedColors: F,
+            systemForcedColors: $,
             useReducedMotion: X,
             alwaysShowLinkDecorations: z,
             highContrastMode: q,
@@ -287,146 +281,149 @@ function X(e) {
         en = (0, m.lV)("RootThemeContextProvider"),
         ei = T.useConfig({ location: "RootThemeContextProvider" }).enabled,
         er = (0, o.bG)([N.A], () => !s && N.A.isTabBarVisible(), [s]),
-        ea = (0, f.m2)({ isPopoutWindow: s, hasChannelTabs: er }),
-        es = (function (e) {
-            let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: s, locale: l } = e,
-                o = a.useContext(j.A),
-                d = a.useCallback(
-                    (e) => {
-                        let { componentName: t, payload: n } = e;
-                        o(
-                            {
-                                type: n.impressionType ?? $[t],
-                                name: n.impression?.impressionName,
-                                properties: n.impression?.impressionProperties,
-                            },
-                            { disableTrack: n.disableTrack },
-                        );
-                    },
-                    [o],
-                ),
-                [c, u] = a.useState(0);
-            return (
-                a.useLayoutEffect(() => {
-                    let e = !0;
-                    function t() {
-                        e && u((e) => e + 1);
-                    }
-                    !(async function () {
-                        (await (0, F.waitForAllDefaultIntlMessagesLoaded)(), t());
-                    })();
-                    let n = K.intl.onLocaleChange(t),
-                        i = (0, H.I)(t);
-                    return () => {
-                        ((e = !1), n(), i());
-                    };
-                }, []),
-                a.useMemo(
-                    () => ({
-                        i18n: {
-                            CANCEL: K.intl.string(K.t["ETE/oC"]),
-                            BACK: K.intl.string(K.t["13/7kX"]),
-                            NEXT: K.intl.string(K.t.PDTjLN),
-                            SUBMIT: K.intl.string(K.t.geKm7t),
-                            SPINNER_LOADING_LABEL: K.intl.string(K.t.ZTNur7),
-                            BUTTON_LOADING_STARTED_LABEL: K.intl.string(K.t.pfChQr),
-                            BUTTON_LOADING_FINISHED_LABEL: K.intl.string(K.t.SVParY),
-                            CLOSE_BUTTON_LABEL: K.intl.string(K.t.cpT0Cq),
-                            DISMISS_BUTTON_LABEL: K.intl.string(K.t.WAI6xu),
-                            PLAY_BUTTON_LABEL: K.intl.string(K.t.RscU7I),
-                            PAUSE_BUTTON_LABEL: K.intl.string(K.t.ZcgDJX),
-                            NEW: K.intl.string(K.t.y2b7CA),
-                            BETA: K.intl.string(K.t.oW0eUd),
-                            EARLY_ACCESS: K.intl.string(K.t.EYxi0o),
-                            BILLING_TRIAL_FREE_TRIAL_TEXT: K.intl.string(K.t.IBYG5U),
-                            MODAL_DONT_SHOW_AGAIN: K.intl.string(Y.default.m3Vfcs),
-                            SEARCH: K.intl.string(K.t["5h0QOP"]),
-                            AUTOCOMPLETE_NO_RESULTS_HEADER: K.intl.string(K.t["4o4z3e"]),
-                            AUTOCOMPLETE_NO_RESULTS_BODY: K.intl.string(K.t.QwSXv8),
-                            LISTBOX_EMPTY_STATE: K.intl.string(Y.default.db85vU),
-                            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) =>
-                                K.intl.formatToPlainString(Y.default.bPKiId, { query: e }),
-                            KEY_CTRL_A11Y_LABEL: K.intl.string(K.t.jm6v8i),
-                            KEY_CMD_A11Y_LABEL: K.intl.string(K.t.pYkiQq),
-                            KEY_ALT_A11Y_LABEL: K.intl.string(K.t.R2n7d3),
-                            KEY_OPTION_A11Y_LABEL: K.intl.string(K.t.FMYSJY),
-                            KEY_SHIFT: K.intl.string(K.t["L+jWo5"]),
-                            KEY_SHIFT_A11Y_LABEL: K.intl.string(K.t["q+/2+S"]),
-                            KEY_UP_A11Y_LABEL: K.intl.string(K.t.HxzHDb),
-                            KEY_DOWN_A11Y_LABEL: K.intl.string(K.t["a+iRlH"]),
-                            KEY_LEFT_A11Y_LABEL: K.intl.string(K.t.xFjIVC),
-                            KEY_RIGHT_A11Y_LABEL: K.intl.string(K.t["BT3jf/"]),
-                            KEY_PAGEUP: K.intl.string(K.t.VdCWGI),
-                            KEY_PAGEDOWN: K.intl.string(K.t.gpSh3U),
-                            KEY_ANY: K.intl.string(K.t.CkGpcV),
-                            KEY_ENTER: K.intl.string(K.t.SUweGy),
-                            KEY_ENTER_A11Y_LABEL: K.intl.string(K.t.yLNala),
-                            KEY_RETURN_A11Y_LABEL: K.intl.string(K.t.V7nPj0),
-                            KEY_ESCAPE: K.intl.string(K.t.cQmsQF),
-                            KEY_ESCAPE_A11Y_LABEL: K.intl.string(K.t["2qsw5/"]),
-                            KEY_BACKSPACE: K.intl.string(K.t["L+36+h"]),
-                            KEY_BACKSPACE_A11Y_LABEL: K.intl.string(K.t["9c/Ikv"]),
-                            KEY_DELETE_A11Y_LABEL: K.intl.string(K.t.BTFDmq),
-                            DATE_INPUT_OPEN_CALENDAR_LABEL: K.intl.string(Y.default.I8kUqR),
-                            CALENDAR_PREVIOUS_MONTH_LABEL: K.intl.string(Y.default.raS6yf),
-                            CALENDAR_NEXT_MONTH_LABEL: K.intl.string(Y.default["/cp93l"]),
-                            INLINE_NOTICE_GENERIC_ERROR: K.intl.string(K.t["rTU7/z"]),
-                            FEEDBACK_CRITICAL_ICON_A11Y_LABEL: K.intl.string(Y.default.uKMqrF),
-                            FEEDBACK_WARNING_ICON_A11Y_LABEL: K.intl.string(Y.default["7vL/d/"]),
-                            FEEDBACK_INFO_ICON_A11Y_LABEL: K.intl.string(Y.default.BReS7U),
-                            FEEDBACK_POSITIVE_ICON_A11Y_LABEL: K.intl.string(Y.default["1MXXPf"]),
-                            STEP_INDICATOR: (e, t) =>
-                                K.intl.formatToPlainString(Y.default["v2YSk/"], { stepNumber: e, stepCount: t }),
-                            SELECT_PLACEHOLDER: K.intl.string(Y.default["A+pfVR"]),
-                            CLEAR_SELECTION: K.intl.string(Y.default.JA5C7L),
-                            SELECTED_TAGS_HEADING: K.intl.string(Y.default.VMNfsY),
-                            PRESS_DELETE_TO_REMOVE_TAG: K.intl.string(Y.default["/Y7vRd"]),
-                            PERCENT_COMPLETE: (e) => K.intl.formatToPlainString(Y.default["2L/ygS"], { percent: e }),
-                            TEXT_INPUT_CLEAR: K.intl.string(K.t.VkKicb),
-                            TEXT_INPUT_VIEW_PASSWORD: K.intl.string(K.t.nFzpM5),
-                            TEXT_INPUT_HIDE_PASSWORD: K.intl.string(K.t.Nusip4),
-                            TEXT_INPUT_PASSWORD_VISIBLE: K.intl.string(K.t.agstwg),
-                            TEXT_INPUT_PASSWORD_HIDDEN: K.intl.string(K.t.SHvAer),
-                            CHARACTER_COUNT_LIMIT_REACHED: K.intl.string(K.t.c2Jqed),
-                            CHARACTER_COUNT_A11Y_LABEL: (e) =>
-                                K.intl.formatToPlainString(K.t.fR1cof, { remainingCharacters: e }),
-                            MINIMUM_LENGTH_ERROR: (e) => K.intl.formatToPlainString(K.t["62rk1K"], { minLength: e }),
-                            MAXIMUM_LENGTH_ERROR: (e) => K.intl.formatToPlainString(K.t.ICT5S6, { maxLength: e }),
-                            MINIMUM_VALUE_ERROR: (e) => K.intl.formatToPlainString(K.t.ykmNSo, { min: e }),
-                            MAXIMUM_VALUE_ERROR: (e) => K.intl.formatToPlainString(K.t.KiDDCk, { max: e }),
-                            GLOBAL_BANNER_COUNTDOWN_TIME_LEFT: (e) =>
-                                K.intl.formatToPlainString(Y.default.ody6zm, { time: e }),
+        ea = (0, f.m2)({ isPopoutWindow: s, hasChannelTabs: er });
+    a.useEffect(() => {
+        s || L.Ay.setTrafficLightPosition(er ? { x: 14, y: 14 } : { x: 9, y: 9 });
+    }, [s, er]);
+    let es = (function (e) {
+        let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: s, locale: l } = e,
+            o = a.useContext(H.A),
+            d = a.useCallback(
+                (e) => {
+                    let { componentName: t, payload: n } = e;
+                    o(
+                        {
+                            type: n.impressionType ?? K[t],
+                            name: n.impression?.impressionName,
+                            properties: n.impression?.impressionProperties,
                         },
-                        locale: l,
-                        theme: t,
-                        saturation: n,
-                        defaultLayerContext: W.uY,
-                        experiments: { enabledExperiments: i },
-                        trackImpression: d,
-                        isWindowFocused: () => r,
-                        isMainWindowVisible: () => s,
-                        dynamicGraphicComponents: V.Q,
-                    }),
-                    [t, n, i, d, r, s, l, c],
-                )
+                        { disableTrack: n.disableTrack },
+                    );
+                },
+                [o],
+            ),
+            [c, u] = a.useState(0);
+        return (
+            a.useLayoutEffect(() => {
+                let e = !0;
+                function t() {
+                    e && u((e) => e + 1);
+                }
+                !(async function () {
+                    (await (0, k.waitForAllDefaultIntlMessagesLoaded)(), t());
+                })();
+                let n = Y.intl.onLocaleChange(t),
+                    i = (0, V.I)(t);
+                return () => {
+                    ((e = !1), n(), i());
+                };
+            }, []),
+            a.useMemo(
+                () => ({
+                    i18n: {
+                        CANCEL: Y.intl.string(Y.t["ETE/oC"]),
+                        BACK: Y.intl.string(Y.t["13/7kX"]),
+                        NEXT: Y.intl.string(Y.t.PDTjLN),
+                        SUBMIT: Y.intl.string(Y.t.geKm7t),
+                        SPINNER_LOADING_LABEL: Y.intl.string(Y.t.ZTNur7),
+                        BUTTON_LOADING_STARTED_LABEL: Y.intl.string(Y.t.pfChQr),
+                        BUTTON_LOADING_FINISHED_LABEL: Y.intl.string(Y.t.SVParY),
+                        CLOSE_BUTTON_LABEL: Y.intl.string(Y.t.cpT0Cq),
+                        DISMISS_BUTTON_LABEL: Y.intl.string(Y.t.WAI6xu),
+                        PLAY_BUTTON_LABEL: Y.intl.string(Y.t.RscU7I),
+                        PAUSE_BUTTON_LABEL: Y.intl.string(Y.t.ZcgDJX),
+                        NEW: Y.intl.string(Y.t.y2b7CA),
+                        BETA: Y.intl.string(Y.t.oW0eUd),
+                        EARLY_ACCESS: Y.intl.string(Y.t.EYxi0o),
+                        BILLING_TRIAL_FREE_TRIAL_TEXT: Y.intl.string(Y.t.IBYG5U),
+                        MODAL_DONT_SHOW_AGAIN: Y.intl.string(W.default.m3Vfcs),
+                        SEARCH: Y.intl.string(Y.t["5h0QOP"]),
+                        AUTOCOMPLETE_NO_RESULTS_HEADER: Y.intl.string(Y.t["4o4z3e"]),
+                        AUTOCOMPLETE_NO_RESULTS_BODY: Y.intl.string(Y.t.QwSXv8),
+                        LISTBOX_EMPTY_STATE: Y.intl.string(W.default.db85vU),
+                        LISTBOX_EMPTY_STATE_WITH_QUERY: (e) =>
+                            Y.intl.formatToPlainString(W.default.bPKiId, { query: e }),
+                        KEY_CTRL_A11Y_LABEL: Y.intl.string(Y.t.jm6v8i),
+                        KEY_CMD_A11Y_LABEL: Y.intl.string(Y.t.pYkiQq),
+                        KEY_ALT_A11Y_LABEL: Y.intl.string(Y.t.R2n7d3),
+                        KEY_OPTION_A11Y_LABEL: Y.intl.string(Y.t.FMYSJY),
+                        KEY_SHIFT: Y.intl.string(Y.t["L+jWo5"]),
+                        KEY_SHIFT_A11Y_LABEL: Y.intl.string(Y.t["q+/2+S"]),
+                        KEY_UP_A11Y_LABEL: Y.intl.string(Y.t.HxzHDb),
+                        KEY_DOWN_A11Y_LABEL: Y.intl.string(Y.t["a+iRlH"]),
+                        KEY_LEFT_A11Y_LABEL: Y.intl.string(Y.t.xFjIVC),
+                        KEY_RIGHT_A11Y_LABEL: Y.intl.string(Y.t["BT3jf/"]),
+                        KEY_PAGEUP: Y.intl.string(Y.t.VdCWGI),
+                        KEY_PAGEDOWN: Y.intl.string(Y.t.gpSh3U),
+                        KEY_ANY: Y.intl.string(Y.t.CkGpcV),
+                        KEY_ENTER: Y.intl.string(Y.t.SUweGy),
+                        KEY_ENTER_A11Y_LABEL: Y.intl.string(Y.t.yLNala),
+                        KEY_RETURN_A11Y_LABEL: Y.intl.string(Y.t.V7nPj0),
+                        KEY_ESCAPE: Y.intl.string(Y.t.cQmsQF),
+                        KEY_ESCAPE_A11Y_LABEL: Y.intl.string(Y.t["2qsw5/"]),
+                        KEY_BACKSPACE: Y.intl.string(Y.t["L+36+h"]),
+                        KEY_BACKSPACE_A11Y_LABEL: Y.intl.string(Y.t["9c/Ikv"]),
+                        KEY_DELETE_A11Y_LABEL: Y.intl.string(Y.t.BTFDmq),
+                        DATE_INPUT_OPEN_CALENDAR_LABEL: Y.intl.string(W.default.I8kUqR),
+                        CALENDAR_PREVIOUS_MONTH_LABEL: Y.intl.string(W.default.raS6yf),
+                        CALENDAR_NEXT_MONTH_LABEL: Y.intl.string(W.default["/cp93l"]),
+                        INLINE_NOTICE_GENERIC_ERROR: Y.intl.string(Y.t["rTU7/z"]),
+                        FEEDBACK_CRITICAL_ICON_A11Y_LABEL: Y.intl.string(W.default.uKMqrF),
+                        FEEDBACK_WARNING_ICON_A11Y_LABEL: Y.intl.string(W.default["7vL/d/"]),
+                        FEEDBACK_INFO_ICON_A11Y_LABEL: Y.intl.string(W.default.BReS7U),
+                        FEEDBACK_POSITIVE_ICON_A11Y_LABEL: Y.intl.string(W.default["1MXXPf"]),
+                        STEP_INDICATOR: (e, t) =>
+                            Y.intl.formatToPlainString(W.default["v2YSk/"], { stepNumber: e, stepCount: t }),
+                        SELECT_PLACEHOLDER: Y.intl.string(W.default["A+pfVR"]),
+                        CLEAR_SELECTION: Y.intl.string(W.default.JA5C7L),
+                        SELECTED_TAGS_HEADING: Y.intl.string(W.default.VMNfsY),
+                        PRESS_DELETE_TO_REMOVE_TAG: Y.intl.string(W.default["/Y7vRd"]),
+                        PERCENT_COMPLETE: (e) => Y.intl.formatToPlainString(W.default["2L/ygS"], { percent: e }),
+                        TEXT_INPUT_CLEAR: Y.intl.string(Y.t.VkKicb),
+                        TEXT_INPUT_VIEW_PASSWORD: Y.intl.string(Y.t.nFzpM5),
+                        TEXT_INPUT_HIDE_PASSWORD: Y.intl.string(Y.t.Nusip4),
+                        TEXT_INPUT_PASSWORD_VISIBLE: Y.intl.string(Y.t.agstwg),
+                        TEXT_INPUT_PASSWORD_HIDDEN: Y.intl.string(Y.t.SHvAer),
+                        CHARACTER_COUNT_LIMIT_REACHED: Y.intl.string(Y.t.c2Jqed),
+                        CHARACTER_COUNT_A11Y_LABEL: (e) =>
+                            Y.intl.formatToPlainString(Y.t.fR1cof, { remainingCharacters: e }),
+                        MINIMUM_LENGTH_ERROR: (e) => Y.intl.formatToPlainString(Y.t["62rk1K"], { minLength: e }),
+                        MAXIMUM_LENGTH_ERROR: (e) => Y.intl.formatToPlainString(Y.t.ICT5S6, { maxLength: e }),
+                        MINIMUM_VALUE_ERROR: (e) => Y.intl.formatToPlainString(Y.t.ykmNSo, { min: e }),
+                        MAXIMUM_VALUE_ERROR: (e) => Y.intl.formatToPlainString(Y.t.KiDDCk, { max: e }),
+                        GLOBAL_BANNER_COUNTDOWN_TIME_LEFT: (e) =>
+                            Y.intl.formatToPlainString(W.default.ody6zm, { time: e }),
+                    },
+                    locale: l,
+                    theme: t,
+                    saturation: n,
+                    defaultLayerContext: j.uY,
+                    experiments: { enabledExperiments: i },
+                    trackImpression: d,
+                    isWindowFocused: () => r,
+                    isMainWindowVisible: () => s,
+                    dynamicGraphicComponents: B.Q,
+                }),
+                [t, n, i, d, r, s, l, c],
+            )
+        );
+    })({
+        theme: g,
+        saturation: w,
+        enabledExperiments: a.useMemo(() => {
+            let e = [];
+            return (
+                ee && e.push("refresh-fast-follow-avatars"),
+                et && e.push("refresh-fast-follow-guild-bg"),
+                en && e.push("refresh-fast-follow-distinct-borders"),
+                ei && e.push("rive-web-perf"),
+                e
             );
-        })({
-            theme: g,
-            saturation: w,
-            enabledExperiments: a.useMemo(() => {
-                let e = [];
-                return (
-                    ee && e.push("refresh-fast-follow-avatars"),
-                    et && e.push("refresh-fast-follow-guild-bg"),
-                    en && e.push("refresh-fast-follow-distinct-borders"),
-                    ei && e.push("rive-web-perf"),
-                    e
-                );
-            }, [ee, et, en, ei]),
-            focused: D,
-            mainWindowVisible: b,
-            locale: _,
-        });
+        }, [ee, et, en, ei]),
+        focused: D,
+        mainWindowVisible: b,
+        locale: _,
+    });
     return (0, r.jsx)(c.GE, {
         value: es,
         children: (0, r.jsx)(E, {
@@ -434,7 +431,7 @@ function X(e) {
             flags: J,
             saturation: w,
             density: Z,
-            children: (0, r.jsx)(k, {
+            children: (0, r.jsx)(x, {
                 lang: _,
                 theme: g,
                 density: Z,
@@ -445,8 +442,8 @@ function X(e) {
                 mouseMode: Q,
                 saturation: w,
                 desaturateUserColors: G,
-                useForcedColors: x,
-                systemForcedColors: B,
+                useForcedColors: F,
+                systemForcedColors: $,
                 useReducedMotion: X,
                 alwaysShowLinkDecorations: z,
                 hardwareAccelerationEnabled: u,
