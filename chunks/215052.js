@@ -1,4 +1,4 @@
-n.d(t, { A: () => gf });
+n.d(t, { A: () => gh });
 var l,
     r,
     i = n(477900),
@@ -17350,10 +17350,12 @@ var h0 = n(663417),
     h6 = n(729475),
     ge = n(12470),
     gt = n(811893),
-    gn = n(715482),
-    gl = n(869146),
-    gr = n(475815);
-function gi(e) {
+    gn = n(387758),
+    gl = n(715482),
+    gr = n(429582),
+    gi = n(869146),
+    ga = n(475815);
+function gs(e) {
     let {
             projectId: t,
             previewPaused: n,
@@ -17369,18 +17371,20 @@ function gi(e) {
             let n = (0, ho.cR)(e?.id ?? null),
                 l = (0, eN.Zv)(t),
                 r = (0, c.bG)(
-                    [gl.A, f9.A],
-                    () => null != e && gl.A.getWindowOpen(ll.MLl.ACTIVITY_POPOUT) && f9.A.getMainFrame()?.id === e.id,
+                    [gi.A, f9.A],
+                    () => null != e && gi.A.getWindowOpen(ll.MLl.ACTIVITY_POPOUT) && f9.A.getMainFrame()?.id === e.id,
                     [e],
                 );
             if (!(0, tm.x1)(e) || r || l) return null;
             let i = (0, ho.fl)(e.id);
-            return null != i && (0, gr.Ub)(i) ? { active: n, toggle: () => (0, ho.U8)(e.id) } : null;
+            return null != i && (0, ga.Ub)(i) ? { active: n, toggle: () => (0, ho.U8)(e.id) } : null;
         })(s, t),
         m = n ? mc.PlayIcon : h8.PauseIcon,
         h = f?.active === !0 ? h9.FullscreenExitIcon : h6.FullscreenEnterIcon,
         g = u ? ge.WindowReturnIcon : gt.WindowLaunchIcon,
-        p = ej.intl.string(eb.default.WjdaFw);
+        p = ej.intl.string(eb.default.WjdaFw),
+        x = (0, hv.UJ)(t),
+        v = null != x ? (0, gr.FO)(x) : null;
     return (0, i.jsx)(ca.W, {
         "data-menu-migrated": !0,
         navId: `conjure-frame-actions-${t}`,
@@ -17418,11 +17422,20 @@ function gi(e) {
                           action: o,
                       })
                     : null,
+                null != v
+                    ? (0, i.jsx)(cs.Dr, {
+                          id: "open-devtools",
+                          icon: gn.AngleBracketsIcon,
+                          leadingAccessory: { type: "icon", icon: gn.AngleBracketsIcon },
+                          label: ej.intl.string(eb.default.gQB2mY),
+                          action: v,
+                      })
+                    : null,
             ],
         }),
     });
 }
-function ga(e) {
+function go(e) {
     let t = a.useRef(null),
         n = ej.intl.string(ej.t["UKOtz+"]);
     return (0, i.jsx)(tk.Y, {
@@ -17432,14 +17445,14 @@ function ga(e) {
         animation: tk.Y.Animation.NONE,
         renderPopout: (t) => {
             let { closePopout: n } = t;
-            return (0, i.jsx)(gi, { ...e, onCloseMenu: n });
+            return (0, i.jsx)(gs, { ...e, onCloseMenu: n });
         },
         children: (e, l) => {
             let { onClick: r } = e,
                 { isShown: a } = l;
             return (0, i.jsx)(tR.Ay.Icon, {
                 ref: t,
-                icon: gn.ChevronLargeDownIcon,
+                icon: gl.ChevronLargeDownIcon,
                 tooltip: a ? null : n,
                 "aria-label": n,
                 "aria-haspopup": "menu",
@@ -17450,8 +17463,8 @@ function ga(e) {
         },
     });
 }
-var gs = n(705609);
-function go(e) {
+var gu = n(705609);
+function gc(e) {
     let {
             projectId: t,
             projectName: n,
@@ -17502,7 +17515,7 @@ function go(e) {
         D = p(E),
         q = S ? h1.MobilePhoneIcon : h2.ScreenIcon;
     return (0, i.jsxs)("div", {
-        className: gs.M,
+        className: gu.M,
         children: [
             (0, i.jsx)(tl, {
                 targets: b,
@@ -17514,7 +17527,7 @@ function go(e) {
                 panelId: x,
             }),
             (0, i.jsxs)("div", {
-                className: gs.o,
+                className: gu.o,
                 children: [
                     v,
                     L,
@@ -17539,7 +17552,7 @@ function go(e) {
                                       disabled: g,
                                       onClick: N,
                                   }),
-                                  (0, i.jsx)(ga, {
+                                  (0, i.jsx)(go, {
                                       projectId: t,
                                       previewPaused: c,
                                       pauseDisabled: !c && h,
@@ -17557,10 +17570,10 @@ function go(e) {
         ],
     });
 }
-var gu = n(705427),
-    gc = n(606128),
-    gd = n(323140);
-function gf(e) {
+var gd = n(705427),
+    gf = n(606128),
+    gm = n(323140);
+function gh(e) {
     let t,
         l,
         r,
@@ -18036,7 +18049,7 @@ function gf(e) {
             null == tD || null == s
                 ? null
                 : (0, i.jsx)("div", {
-                      className: gd.As,
+                      className: gm.As,
                       onMouseDown:
                           null == q || tD.disabled
                               ? void 0
@@ -18048,7 +18061,7 @@ function gf(e) {
                           children: (0, i.jsx)(f.$, {
                               size: "sm",
                               variant: tO,
-                              icon: "publishing" === tq ? gm : void 0,
+                              icon: "publishing" === tq ? gg : void 0,
                               text: tF,
                               onClick: () => tU("header"),
                           }),
@@ -18056,7 +18069,7 @@ function gf(e) {
                   }),
         tX = ej.intl.string(eb.default.FzfmQ8),
         tY = ej.intl.string(eb.default.xjJAQm),
-        tZ = (0, i.jsx)(gu.A, {
+        tZ = (0, i.jsx)(gd.A, {
             title: s?.name ?? ej.intl.string(eb.default.G1WwgK),
             project: s,
             onOpenProjectSettings: tH,
@@ -18065,7 +18078,7 @@ function gf(e) {
                 null == s
                     ? null
                     : (0, i.jsxs)("div", {
-                          className: gd.FO,
+                          className: gm.FO,
                           children: [
                               null != tH
                                   ? (0, i.jsx)(j.A.Icon, {
@@ -18087,14 +18100,14 @@ function gf(e) {
                                   debugOpen: I,
                               }),
                               (0, i.jsxs)("div", {
-                                  className: gd.Cl,
+                                  className: gm.Cl,
                                   children: [(0, i.jsx)(tI, { project: s, guildId: w }), tV],
                               }),
                               C || Q
                                   ? null
                                   : (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)("div", { className: gd.YJ, "aria-hidden": !0 }),
+                                            (0, i.jsx)("div", { className: gm.YJ, "aria-hidden": !0 }),
                                             (0, i.jsx)(j.A.Icon, {
                                                 icon: h.PanelOpenIcon,
                                                 tooltip: tY,
@@ -18121,7 +18134,7 @@ function gf(e) {
             ? tt
                 ? (0, i.jsx)(j.A.Icon, {
                       icon: g.ExperimentalDirectSelectIcon,
-                      iconClassName: gd.D8,
+                      iconClassName: gm.D8,
                       tooltip: tk,
                       "aria-label": tk,
                       selected: e0,
@@ -18131,7 +18144,7 @@ function gf(e) {
                 : (0, i.jsx)(j.A.Icon, {
                       ref: e7,
                       icon: g.ExperimentalDirectSelectIcon,
-                      iconClassName: gd.D8,
+                      iconClassName: gm.D8,
                       tooltip: tw,
                       "aria-label": tw,
                       selected: e5,
@@ -18141,7 +18154,7 @@ function gf(e) {
             : null,
         t1 =
             null != s && (null == X ? Y : "nothing_built" !== X)
-                ? (0, i.jsx)(go, {
+                ? (0, i.jsx)(gc, {
                       editToggle: t0,
                       projectId: s.id,
                       projectName: s.name,
@@ -18162,16 +18175,16 @@ function gf(e) {
                   })
                 : null;
     return (0, i.jsxs)("div", {
-        className: u()(gd.nj, gc.T),
+        className: u()(gm.nj, gf.T),
         children: [
             tM.importInput,
             (0, i.jsx)("main", {
-                className: gd.JX,
+                className: gm.JX,
                 children: G
                     ? (0, i.jsx)("div", {
-                          className: gd.j5,
+                          className: gm.j5,
                           children: (0, i.jsx)("div", {
-                              className: gd.sD,
+                              className: gm.sD,
                               children: (0, i.jsx)(p.D, {
                                   variant: "heading-lg/semibold",
                                   children: ej.intl.string(eb.default.i7PaZ5),
@@ -18180,11 +18193,11 @@ function gf(e) {
                       })
                     : null == s
                       ? (0, i.jsxs)("div", {
-                            className: gd.j5,
+                            className: gm.j5,
                             children: [
                                 tZ,
                                 (0, i.jsxs)("div", {
-                                    className: gd.sD,
+                                    className: gm.sD,
                                     children: [
                                         (0, i.jsx)(p.D, {
                                             variant: "heading-lg/semibold",
@@ -18207,11 +18220,11 @@ function gf(e) {
                         })
                       : Q
                         ? (0, i.jsxs)("div", {
-                              className: gd.j5,
+                              className: gm.j5,
                               children: [
                                   tZ,
                                   (0, i.jsx)("div", {
-                                      className: gd.sD,
+                                      className: gm.sD,
                                       children: (0, i.jsx)(p.D, {
                                           variant: "heading-lg/semibold",
                                           children: ej.intl.string(eb.default.Y2sGrh),
@@ -18257,6 +18270,6 @@ function gf(e) {
         ],
     });
 }
-function gm() {
-    return (0, i.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: gd.Hv, itemClassName: gd.C5 });
+function gg() {
+    return (0, i.jsx)(v.y, { type: v.t.SPINNING_CIRCLE_SIMPLE, className: gm.Hv, itemClassName: gm.C5 });
 }
