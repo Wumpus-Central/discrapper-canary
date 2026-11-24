@@ -50,13 +50,17 @@
     align-items: center;
     display: flex;
     gap: var(--space-16);
-    justify-content: space-between;
+    justify-content: flex-start;
     list-style: none;
     margin: 0;
     min-width: -moz-max-content;
     min-width: max-content;
     padding: 0;
     width: 100%
+}
+
+.items_Tek8Yo[data-full=true] {
+    justify-content: space-between
 }
 
 .item_Tek8Yo {
@@ -166,4 +170,4 @@
     min-width: 320px
 }
 
-/*# sourceMappingURL=fabc5a906fb8c1cf.css.map*/
+/*# sourceMappingURL=33311d3d553c3960.css.map*/

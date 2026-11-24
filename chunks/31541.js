@@ -1,30 +1,30 @@
-r.d(t, { default: () => eC });
-var l,
-    s = r(477900),
-    n = r(582128),
-    i = r(855986),
-    u = r(935462),
-    a = r(289873),
-    d = r(354328),
-    o = r(744082),
-    c = r(634110),
-    S = r(287809),
-    p = r(4227),
-    I = r(298072),
-    h = r(682301),
-    f = r(841702),
-    A = r(466459);
-(r(321073), r(134528), r(947204));
-var m = r(334279);
+l.d(t, { default: () => eC });
+var r,
+    s = l(477900),
+    n = l(582128),
+    i = l(855986),
+    u = l(935462),
+    a = l(289873),
+    d = l(354328),
+    o = l(744082),
+    c = l(634110),
+    S = l(287809),
+    p = l(4227),
+    I = l(298072),
+    h = l(682301),
+    f = l(841702),
+    A = l(466459);
+(l(321073), l(134528), l(947204));
+var m = l(334279);
 function C(e) {
     return { currentSkuId: e, history: [], hasSwapped: !1 };
 }
 function E(e, t) {
     switch (t.type) {
         case "SELECT_SIMILAR_ITEM": {
-            let { nextSkuId: r, leftSkuId: l } = t,
-                s = e.history.filter((e) => e !== r && e !== l);
-            return (m.I.ALL.has(l) || s.push(l), { currentSkuId: r, history: s.slice(-20), hasSwapped: !0 });
+            let { nextSkuId: l, leftSkuId: r } = t,
+                s = e.history.filter((e) => e !== l && e !== r);
+            return (m.I.ALL.has(r) || s.push(r), { currentSkuId: l, history: s.slice(-20), hasSwapped: !0 });
         }
         case "GO_BACK": {
             let t = k(e);
@@ -32,8 +32,8 @@ function E(e, t) {
             return { currentSkuId: t, history: e.history.slice(0, -1), hasSwapped: !0 };
         }
         case "RESTORE": {
-            let r = new Set([t.skuId, ...t.productSkuIds]);
-            return { currentSkuId: t.skuId, history: e.history.filter((e) => !r.has(e)), hasSwapped: t.hasSwapped };
+            let l = new Set([t.skuId, ...t.productSkuIds]);
+            return { currentSkuId: t.skuId, history: e.history.filter((e) => !l.has(e)), hasSwapped: t.hasSwapped };
         }
     }
 }
@@ -41,40 +41,40 @@ function k(e) {
     let { history: t } = e;
     return t.at(-1) ?? null;
 }
-var R = r(623373),
-    y = r(599062),
-    _ = r(844821);
-let O = (0, r(945810).mj)({
+var R = l(623373),
+    y = l(599062),
+    _ = l(844821);
+let O = (0, l(945810).mj)({
     name: "2026-11-shop-pdp-similar-items",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var x = r(517461),
-    v = (((l = {}).LOADING = "loading"), (l.SUCCESS = "success"), (l.ERROR = "error"), l),
-    g = r(821925),
-    w = r(295586),
-    T = r(993408),
-    b = r(986630);
-function L(e, t, r, l) {
+var x = l(517461),
+    v = (((r = {}).LOADING = "loading"), (r.SUCCESS = "success"), (r.ERROR = "error"), r),
+    g = l(821925),
+    w = l(295586),
+    T = l(993408),
+    b = l(986630);
+function L(e, t, l, r) {
     let s = e.items.flatMap((e) => {
             if (e.product.skuIds.some((e) => t.has(e))) return [];
-            let s = (function (e, t, r) {
-                let { skuId: l, product: s } = e,
-                    n = s.skus.find((e) => e.id === l);
-                if (null == n || !n.isAvailable() || m.I.ALL.has(l)) return null;
-                let i = b.A.fromStorefrontProductRecord(s, { flattenVariantSkuId: l });
+            let s = (function (e, t, l) {
+                let { skuId: r, product: s } = e,
+                    n = s.skus.find((e) => e.id === r);
+                if (null == n || !n.isAvailable() || m.I.ALL.has(r)) return null;
+                let i = b.A.fromStorefrontProductRecord(s, { flattenVariantSkuId: r });
                 if (
                     null == i ||
                     i.isCategoryReward ||
                     (0, T.tt)(i) ||
-                    (null == (0, R.$K)({ product: i, hasShopDiscount: r }) &&
-                        null == (0, R.CW)({ product: i, hasShopDiscount: r }))
+                    (null == (0, R.$K)({ product: i, hasShopDiscount: l }) &&
+                        null == (0, R.CW)({ product: i, hasShopDiscount: l }))
                 )
                     return null;
                 let { isPurchased: u, isPartiallyOwnedBundle: a } = (0, A.o)(t, i);
-                return { skuId: l, sku: n, product: i, isOwned: u || a };
-            })(e, r, l);
+                return { skuId: r, sku: n, product: i, isOwned: u || a };
+            })(e, l, r);
             return null != s ? [{ productId: e.product.id, item: s }] : [];
         }),
         n = new Set(),
@@ -85,14 +85,14 @@ function L(e, t, r, l) {
     }
     return i;
 }
-var j = r(158390),
-    M = r(620632),
-    N = r(73153),
-    F = r(627784),
-    G = r(39418),
-    P = r(103348),
-    U = r(773669),
-    D = r(927813);
+var j = l(158390),
+    M = l(620632),
+    N = l(73153),
+    F = l(627784),
+    G = l(39418),
+    P = l(103348),
+    U = l(773669),
+    D = l(927813);
 let V = 30 * D.A.Millis.MINUTE,
     H = {};
 function q() {
@@ -121,8 +121,8 @@ let z = new B(N.h, {
         H = { ...H, [t]: { state: v.LOADING } };
     },
     SHOP_SIMILAR_ITEMS_FETCH_SUCCESS: function (e) {
-        let { seedSkuId: t, result: r } = e;
-        H = { ...H, [t]: { state: v.SUCCESS, fetchedAt: Date.now(), result: r } };
+        let { seedSkuId: t, result: l } = e;
+        H = { ...H, [t]: { state: v.SUCCESS, fetchedAt: Date.now(), result: l } };
     },
     SHOP_SIMILAR_ITEMS_FETCH_FAILURE: function (e) {
         let { seedSkuId: t } = e;
@@ -130,7 +130,7 @@ let z = new B(N.h, {
     },
     LOGOUT: q,
 });
-var W = r(652215);
+var W = l(652215);
 let Y = new j.A(2 * D.A.Millis.SECOND, 5 * D.A.Millis.MINUTE),
     K = 0,
     Q = 0;
@@ -138,28 +138,28 @@ N.h.subscribe("LOGOUT", () => {
     (Q++, (K = 0), Y.succeed());
 });
 let $ = [];
-var Z = r(503698),
-    J = r.n(Z),
-    X = r(900797),
-    ee = r(646514),
-    et = r(847374),
-    er = r(123292),
-    el = r(406810),
-    es = r(834730),
-    en = r(146423),
-    ei = r(536572),
-    eu = r(140877),
-    ea = r(561769),
-    ed = r(699976),
-    eo = r(792996),
-    ec = r(498654);
+var Z = l(503698),
+    J = l.n(Z),
+    X = l(900797),
+    ee = l(646514),
+    et = l(847374),
+    el = l(123292),
+    er = l(406810),
+    es = l(834730),
+    en = l(146423),
+    ei = l(536572),
+    eu = l(140877),
+    ea = l(561769),
+    ed = l(699976),
+    eo = l(792996),
+    ec = l(498654);
 let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
     ep = (e) => {
-        let { trayId: t, isOpen: r, onToggle: l } = e;
+        let { trayId: t, isOpen: l, onToggle: r } = e;
         return (0, s.jsxs)("div", {
             className: ec.L$,
             children: [
-                r
+                l
                     ? (0, s.jsx)(X.ChevronSmallUpIcon, {
                           size: "md",
                           color: ee.A.colors.TEXT_STRONG,
@@ -170,23 +170,23 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                           color: ee.A.colors.TEXT_STRONG,
                           "aria-hidden": !0,
                       }),
-                (0, s.jsx)(er.Q, {
+                (0, s.jsx)(el.Q, {
                     variant: "secondary",
                     textVariant: "body-sm/medium",
-                    "aria-expanded": r,
+                    "aria-expanded": l,
                     "aria-controls": t,
-                    onClick: l,
-                    text: eo.intl.string(r ? eo.t["0PiW99"] : eo.t["69Y8jQ"]),
+                    onClick: r,
+                    text: eo.intl.string(l ? eo.t["0PiW99"] : eo.t["69Y8jQ"]),
                 }),
             ],
         });
     },
     eI = n.memo(function (e) {
-        let { item: t, user: r, onSelect: l } = e,
+        let { item: t, user: l, onSelect: r } = e,
             i = n.useMemo(() => ({ productOverride: t.product }), [t.product]),
             u = n.useCallback(() => {
-                l(t);
-            }, [t, l]),
+                r(t);
+            }, [t, r]),
             a = n.useCallback(
                 (e) => {
                     e &&
@@ -200,7 +200,7 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
             className: ec.AS,
             children: (0, s.jsx)(en.A, {
                 sku: t.sku,
-                user: r,
+                user: l,
                 spec: ed.Z.SIZE_133,
                 cardStyle: ec.Nr,
                 "aria-label": t.isViewed ? eo.intl.formatToPlainString(eo.t.TTApvp, { productName: d }) : d,
@@ -213,7 +213,7 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                         children: t.isViewed
                             ? (0, s.jsxs)(s.Fragment, {
                                   children: [
-                                      (0, s.jsx)(el.ClockIcon, {
+                                      (0, s.jsx)(er.ClockIcon, {
                                           size: "xs",
                                           color: ee.A.colors.ICON_STRONG,
                                           "aria-hidden": !0,
@@ -239,11 +239,12 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
         });
     }),
     eh = (e) => {
-        let { trayId: t, footer: r, onSelect: l } = e,
-            { isOpen: n, similarItems: u } = r,
+        let { trayId: t, footer: l, onSelect: r } = e,
+            { isOpen: n, similarItems: u } = l,
             { status: a, items: d } = u,
             o = a === v.LOADING,
-            c = (0, i.bG)([S.default], () => S.default.getCurrentUser());
+            c = o ? eS.length : d.length,
+            p = (0, i.bG)([S.default], () => S.default.getCurrentUser());
         return (0, s.jsx)("div", {
             className: ec.qr,
             "data-open": n,
@@ -259,6 +260,7 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                     className: ec.Fm,
                     children: (0, s.jsx)("ul", {
                         className: ec.ld,
+                        "data-full": c >= 6,
                         children: o
                             ? eS.map((e) =>
                                   (0, s.jsx)(
@@ -271,27 +273,27 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                                       e,
                                   ),
                               )
-                            : d.map((e) => (0, s.jsx)(eI, { item: e, user: c, onSelect: l }, e.skuId)),
+                            : d.map((e) => (0, s.jsx)(eI, { item: e, user: p, onSelect: r }, e.skuId)),
                     }),
                 }),
             }),
         });
     },
     ef = (e) => {
-        let { seedSkuId: t, viewedSkuId: r, onNavigate: l, ...u } = e,
+        let { seedSkuId: t, viewedSkuId: l, onNavigate: r, ...u } = e,
             { product: a, isSwapping: d = !1 } = u,
             o = O.useConfig({ location: "collectibles_shop_pdp" }).enabled,
             c = (0, I.Q)(a),
             h = (0, R.rb)(a, c).skuId,
             f = (function (e) {
-                let { seedSkuId: t, excludedSkuIds: r, viewedSkuId: l, isEnabled: s, isPdpLoading: u } = e,
+                let { seedSkuId: t, excludedSkuIds: l, viewedSkuId: r, isEnabled: s, isPdpLoading: u } = e,
                     [a, d] = (0, x.V)("shop-pdp-similar-items-tray-open", !0),
                     o = a ?? !0,
                     c = (function (e) {
-                        let { seedSkuId: t, excludedSkuIds: r, viewedSkuId: l, isEnabled: s, isPdpLoading: u } = e;
+                        let { seedSkuId: t, excludedSkuIds: l, viewedSkuId: r, isEnabled: s, isPdpLoading: u } = e;
                         n.useEffect(() => {
-                            s && null != l && w.p.requestProducts([l]);
-                        }, [s, l]);
+                            s && null != r && w.p.requestProducts([r]);
+                        }, [s, r]);
                         let { fetchState: a, result: d } = (0, i.cf)(
                             [z],
                             () => ({ fetchState: z.getFetchState(t), result: z.getResult(t) }),
@@ -308,9 +310,9 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                                             });
                                         !(async function (e) {
                                             let t = Q,
-                                                r = U.default.locale;
-                                            function l() {
-                                                return t !== Q || r !== U.default.locale;
+                                                l = U.default.locale;
+                                            function r() {
+                                                return t !== Q || l !== U.default.locale;
                                             }
                                             N.h.dispatch({ type: "SHOP_SIMILAR_ITEMS_FETCH_START", seedSkuId: e });
                                             try {
@@ -321,12 +323,12 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                                                         application_ids: [W.FYj],
                                                         limit: 24,
                                                         hydrate: !0,
-                                                        locale: r,
+                                                        locale: l,
                                                     },
                                                     rejectWithError: !0,
                                                     failImmediatelyWhenRateLimited: !0,
                                                 });
-                                                if (l()) return;
+                                                if (r()) return;
                                                 ((K = 0),
                                                     Y.succeed(),
                                                     N.h.dispatch({
@@ -334,17 +336,17 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                                                         seedSkuId: e,
                                                         result: {
                                                             items: t.body.recommended_items.flatMap((e) => {
-                                                                let { sku_id: t, product: r } = e;
-                                                                return null != r
-                                                                    ? [{ skuId: t, product: P.A.fromServer(r) }]
+                                                                let { sku_id: t, product: l } = e;
+                                                                return null != l
+                                                                    ? [{ skuId: t, product: P.A.fromServer(l) }]
                                                                     : [];
                                                             }),
                                                             requestId: t.body.request_id,
                                                         },
                                                     }));
-                                            } catch (r) {
-                                                if (l()) return;
-                                                let t = new F.LG(r);
+                                            } catch (l) {
+                                                if (r()) return;
+                                                let t = new F.LG(l);
                                                 if (((0, G.o)(t), null == t.status || !(0, M.RU)(t.status))) {
                                                     let e =
                                                         null != t.retryAfter
@@ -364,10 +366,10 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                         let { viewedStorefrontProduct: o, viewedFetchState: c } = (0, i.cf)(
                                 [g.A],
                                 () => ({
-                                    viewedStorefrontProduct: g.A.getProductsForSku(l)?.[0],
-                                    viewedFetchState: g.A.getFetchStateForSku(l),
+                                    viewedStorefrontProduct: g.A.getProductsForSku(r)?.[0],
+                                    viewedFetchState: g.A.getFetchStateForSku(r),
                                 }),
-                                [l],
+                                [r],
                             ),
                             I = (0, i.bG)([p.A], () => p.A.purchases),
                             h = (0, i.bG)([p.A], () => {
@@ -380,52 +382,52 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                             }),
                             f = (0, i.bG)([S.default], () => null != (0, T.xM)(S.default.getCurrentUser())),
                             C = (function (e) {
-                                let { isPdpLoading: t, fetchState: r, purchasesState: l } = e;
+                                let { isPdpLoading: t, fetchState: l, purchasesState: r } = e;
                                 return t
                                     ? v.LOADING
-                                    : l === v.ERROR || r === v.ERROR
+                                    : r === v.ERROR || l === v.ERROR
                                       ? v.ERROR
-                                      : r === v.SUCCESS && l === v.SUCCESS
+                                      : l === v.SUCCESS && r === v.SUCCESS
                                         ? v.SUCCESS
                                         : v.LOADING;
                             })({ isPdpLoading: u, fetchState: a, purchasesState: h }),
-                            E = null != l && null == o && "loading" === c,
+                            E = null != r && null == o && "loading" === c,
                             k = C === v.SUCCESS && E ? v.LOADING : C,
                             y = n.useMemo(
                                 () =>
-                                    null != l && null != o
+                                    null != r && null != o
                                         ? (function (e, t) {
                                               if (m.I.ALL.has(t)) return null;
-                                              let r = e.skus.find((e) => e.id === t),
-                                                  l = b.A.fromStorefrontProductRecord(e, { flattenVariantSkuId: t });
-                                              return null != r && null != l
-                                                  ? { skuId: t, sku: r, product: l, isOwned: !1, isViewed: !0 }
+                                              let l = e.skus.find((e) => e.id === t),
+                                                  r = b.A.fromStorefrontProductRecord(e, { flattenVariantSkuId: t });
+                                              return null != l && null != r
+                                                  ? { skuId: t, sku: l, product: r, isOwned: !1, isViewed: !0 }
                                                   : null;
-                                          })(o, l)
+                                          })(o, r)
                                         : null,
-                                [l, o],
+                                [r, o],
                             ),
                             _ = n.useMemo(
                                 () =>
                                     s && k === v.SUCCESS && null != d
-                                        ? (function (e, t, r, l, s) {
+                                        ? (function (e, t, l, r, s) {
                                               let n = null != s ? (0, R.v8)(s.product) : [];
                                               if (null == s || n.some((e) => t.has(e)))
-                                                  return L(e, t, r, l).map((e) => ({ ...e, isViewed: !1 }));
-                                              let i = L(e, new Set([...t, ...n]), r, l)
+                                                  return L(e, t, l, r).map((e) => ({ ...e, isViewed: !1 }));
+                                              let i = L(e, new Set([...t, ...n]), l, r)
                                                       .slice(0, 5)
                                                       .map((e) => ({ ...e, isViewed: !1 })),
                                                   { isPurchased: u, isPartiallyOwnedBundle: a } = (0, A.o)(
-                                                      r,
+                                                      l,
                                                       s.product,
                                                   );
                                               return [...i, { ...s, isOwned: u || a }];
-                                          })(d, r, { getPurchase: (e) => (null != e ? I.get(e) : void 0) }, f, y)
+                                          })(d, l, { getPurchase: (e) => (null != e ? I.get(e) : void 0) }, f, y)
                                         : $,
-                                [s, k, d, r, I, f, y],
+                                [s, k, d, l, I, f, y],
                             );
                         return { status: k, items: _ };
-                    })({ seedSkuId: t, excludedSkuIds: r, viewedSkuId: l, isEnabled: s && o, isPdpLoading: u }),
+                    })({ seedSkuId: t, excludedSkuIds: l, viewedSkuId: r, isEnabled: s && o, isPdpLoading: u }),
                     I = n.useCallback(() => d(!o), [o, d]);
                 return {
                     isVisible: s && (!o || c.status === v.LOADING || c.items.length > 0),
@@ -436,19 +438,19 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
             })({
                 seedSkuId: t,
                 excludedSkuIds: n.useMemo(() => new Set((0, R.v8)(a)), [a]),
-                viewedSkuId: r,
+                viewedSkuId: l,
                 isEnabled: o,
                 isPdpLoading: d,
             }),
             C = n.useId(),
             E = n.useCallback(
                 (e) =>
-                    l(
+                    r(
                         e.isViewed
                             ? { type: "GO_BACK" }
                             : { type: "SELECT_SIMILAR_ITEM", nextSkuId: e.skuId, leftSkuId: h },
                     ),
-                [l, h],
+                [r, h],
             );
         return (0, s.jsx)(_.default, {
             ...u,
@@ -458,13 +460,13 @@ let eS = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
             footer: f.isVisible ? (0, s.jsx)(eh, { trayId: C, footer: f, onSelect: E }) : void 0,
         });
     };
-var eA = r(850186);
+var eA = l(850186);
 let em = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsGroup: !1 },
     eC = function (e) {
         let {
                 skuId: t,
-                flattenVariants: r = !1,
-                transitionState: l,
+                flattenVariants: l = !1,
+                transitionState: r,
                 onClose: m,
                 returnRef: O,
                 analyticsLocations: x,
@@ -487,7 +489,7 @@ let em = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariants
                 needsCategory: !0,
                 seedCategoryStore: !0,
                 includeUnpublished: L,
-                flattenVariants: !F && r,
+                flattenVariants: !F && l,
             }),
             { hasPreviouslyFetched: H, fetchPurchasesError: q } = (0, f.b5)(),
             B = H || null != q;
@@ -502,8 +504,8 @@ let em = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariants
         let [$, Z] = n.useState(null);
         if (null != P && (0, R.B1)(P) && $?.skuId !== N) {
             let e = F ? N : (b ?? t),
-                r = P.variants.findIndex((t) => t.skuId === e);
-            Z({ skuId: N, product: P, variantIndex: r, isApplied: -1 === r });
+                l = P.variants.findIndex((t) => t.skuId === e);
+            Z({ skuId: N, product: P, variantIndex: l, isApplied: -1 === l });
         }
         let J = (0, I.Q)(P ?? void 0);
         ($?.skuId !== N || $.isApplied || J !== $.variantIndex || Z({ ...$, isApplied: !0 }),
@@ -516,22 +518,22 @@ let em = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariants
                 () => (ee && null != P && null != U ? { skuId: N, product: P, category: U } : null),
                 [ee, N, P, U],
             ),
-            [er, el] = n.useState(null);
-        (null != et && et !== er && el(et),
+            [el, er] = n.useState(null);
+        (null != et && et !== el && er(et),
             "error" === D &&
-                null != er &&
-                er.skuId !== N &&
+                null != el &&
+                el.skuId !== N &&
                 (M({
                     type: "RESTORE",
-                    skuId: er.skuId,
-                    productSkuIds: (0, R.v8)(er.product),
-                    hasSwapped: er.skuId !== t,
+                    skuId: el.skuId,
+                    productSkuIds: (0, R.v8)(el.product),
+                    hasSwapped: el.skuId !== t,
                 }),
-                Z({ skuId: er.skuId, product: er.product, variantIndex: -1, isApplied: !0 })));
-        let es = et ?? er;
+                Z({ skuId: el.skuId, product: el.product, variantIndex: -1, isApplied: !0 })));
+        let es = et ?? el;
         if (null != es) {
             let e = {
-                transitionState: l,
+                transitionState: r,
                 onClose: m,
                 returnRef: O,
                 product: es.product,
@@ -549,7 +551,7 @@ let em = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariants
         }
         return (0, s.jsx)(u.EO, {
             returnRef: O,
-            transitionState: l,
+            transitionState: r,
             size: u.rI.DYNAMIC,
             parentComponent: "CollectiblesShopStandaloneProductDetailsModal",
             children: (0, s.jsx)(u.$m, {
