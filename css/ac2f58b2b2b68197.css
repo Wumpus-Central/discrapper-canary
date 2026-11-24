@@ -33,6 +33,13 @@
     padding: 24px
 }
 
+.trialColorThemesBackground_A7cGXu {
+    background: radial-gradient(101% 100% at 50% 100%, var(--background-base-low) 60%, transparent 100%), linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start), var(--expressive-gradient-nitro-pink-end)), var(--background-base-low);
+    border-radius: var(--radius-md);
+    overflow: clip;
+    padding: var(--space-24)
+}
+
 .container_yH_g_W {
     align-items: center;
     background-color: var(--background-base-lowest);
@@ -76,4 +83,4 @@
     margin-top: var(--space-16)
 }
 
-/*# sourceMappingURL=2260ffe01d4da867.css.map*/
+/*# sourceMappingURL=ac2f58b2b2b68197.css.map*/

@@ -6,4 +6,5 @@ e.exports = {
     EK: "displayClientThemesHeading_A7cGXu",
     Hq: "displayPremiumIcon_A7cGXu",
     _$: "colorThemesBackground_A7cGXu",
+    OM: "trialColorThemesBackground_A7cGXu",
 };

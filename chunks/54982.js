@@ -605,8 +605,8 @@ function e5(e) {
     });
 }
 var e8 = n(633965),
-    e4 = n(857071),
-    e7 = n(851109),
+    e7 = n(857071),
+    e4 = n(851109),
     e9 = n(72314),
     te = n(543897),
     tt = n(696451),
@@ -1159,8 +1159,8 @@ var t0 = n(245604),
     t6 = n(772366),
     t5 = n(728321),
     t8 = n(260509),
-    t4 = n(531053),
-    t7 = n(819638),
+    t7 = n(531053),
+    t4 = n(819638),
     t9 = n(260727);
 let ne = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function nt(e) {
@@ -1179,7 +1179,7 @@ function ni(e) {
         a = (0, _.yK)([tn.A], () => tn.A.getGuildsArray()),
         s = (0, _.bG)([ek.default], () => ek.default.getCurrentUser()),
         l = r.useMemo(() => a.some((e) => (0, t8.bM)(e, s)), [a, s]),
-        o = (0, y.re)((e) => (0, y.fD)(e, t7.fc)),
+        o = (0, y.re)((e) => (0, y.fD)(e, t4.fc)),
         { analyticsLocations: d } = (0, O.Ay)(),
         c = a.length >= 100 && !(0, t3.Om)(s);
     function u(e) {
@@ -1204,7 +1204,7 @@ function ni(e) {
                     ? (0, i.jsx)(G, { ...E, onClick: () => u(!1), tooltip: j.intl.string(j.t.l5WIbf) })
                     : (0, i.jsx)(nn, { ...E, onClick: u }),
                 null != n &&
-                    (0, i.jsx)(t4.Ay, { name: j.intl.string(j.t["45xjM5"]), targetNode: n, below: !0, noCombine: !0 }),
+                    (0, i.jsx)(t7.Ay, { name: j.intl.string(j.t["45xjM5"]), targetNode: n, below: !0, noCombine: !0 }),
             ],
         }),
     });
@@ -1511,7 +1511,7 @@ function n3(e) {
 var n6 = n(36412),
     n5 = n(283001),
     n8 = n(354583);
-let n4 = r.memo(function (e) {
+let n7 = r.memo(function (e) {
     let t,
         a,
         s,
@@ -1584,7 +1584,7 @@ let n4 = r.memo(function (e) {
         onContextMenu: M,
     });
 });
-var n7 = n(113494),
+var n4 = n(113494),
     n9 = n(947832),
     ie = n(821124),
     it = n(212455);
@@ -2069,9 +2069,9 @@ function iF(e, t) {
             n.e(590088),
             n.e(807003),
             n.e(46083),
-            n.e(152133),
+            n.e(889957),
             n.e(747802),
-            n.e(684019),
+            n.e(716541),
             n.e(736663),
             n.e(846900),
             n.e(419121),
@@ -2314,6 +2314,7 @@ function iF(e, t) {
             n.e(649408),
             n.e(221856),
             n.e(686367),
+            n.e(971508),
             n.e(755936),
             n.e(147662),
             n.e(316344),
@@ -2329,7 +2330,7 @@ function iF(e, t) {
             n.e(595653),
             n.e(958038),
             n.e(719466),
-            n.e(255087),
+            n.e(352805),
             n.e(576909),
             n.e(830228),
             n.e(27355),
@@ -2891,7 +2892,7 @@ let iB = r.memo(function (e) {
                   }),
               }),
         eA = $ || Y ? eu : eE,
-        ef = (0, i.jsx)(t4.g4, { children: (0, i.jsx)(iw.A, {}) }),
+        ef = (0, i.jsx)(t7.g4, { children: (0, i.jsx)(iw.A, {}) }),
         eh = q
             ? (0, i.jsx)(Z.animated.div, {
                   ref: S
@@ -2935,7 +2936,7 @@ let iB = r.memo(function (e) {
                 shouldShowNotificationContext: !I && (E || m > 0),
                 children: k ? ef : eh,
             }),
-            S ? (0, i.jsx)(t4.Ay, { name: d.name, targetNode: t, onDragOverChanged: ei }) : null,
+            S ? (0, i.jsx)(t7.Ay, { name: d.name, targetNode: t, onDragOverChanged: ei }) : null,
         ],
     });
 });
@@ -2971,7 +2972,7 @@ let iH = r.memo(function (e) {
                       : m
                         ? (0, i.jsx)("div", {
                               className: iV.j,
-                              children: (0, i.jsx)(n7.PauseIcon, {
+                              children: (0, i.jsx)(n4.PauseIcon, {
                                   size: "custom",
                                   color: "currentColor",
                                   className: iV.v,
@@ -3218,7 +3219,7 @@ let i5 = (0, ei.Fe)({
         name: "NotificationsInboxButton",
     }),
     i8 = (0, tr.uF)() ? 4 : 12 * !(0, tr.cX)();
-function i4(e, t, n) {
+function i7(e, t, n) {
     let i = e + t,
         r = 2 + t;
     return {
@@ -3230,7 +3231,7 @@ function i4(e, t, n) {
         bottomInset: 16,
     };
 }
-function i7(e) {
+function i4(e) {
     return e.startsWith(eV.BVt.GUILD_DISCOVERY) || e.startsWith(eV.BVt.GLOBAL_DISCOVERY);
 }
 class i9 {
@@ -3268,7 +3269,7 @@ class i9 {
         let n = this.scrollerRef.current;
         if (
             null == n ||
-            (null == e && i7(window.location.pathname)) ||
+            (null == e && i4(window.location.pathname)) ||
             e === eV.sFm.SERVER_DISCOVERY_BADGE ||
             e === eV.sFm.E3_SERVER_DISCOVERY_BADGE
         )
@@ -3351,12 +3352,12 @@ function re(e) {
         l = (0, i.jsx)(ea, { shown: a }),
         o = (0, _.yK)([tn.A, tt.Ay], () => tn.A.getGuildIds().filter((e) => tt.Ay.isCurrentUserGuest(e))),
         d = r.concat(o),
-        { entrypoint: c } = (0, e7.X8)({ location: "GuildsBar" });
+        { entrypoint: c } = (0, e4.X8)({ location: "GuildsBar" });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(nV, {}),
             s ? null : l,
-            c === e7.RK.SERVER_RAIL_TOP && (0, i.jsx)(i5, {}),
+            c === e4.RK.SERVER_RAIL_TOP && (0, i.jsx)(i5, {}),
             s ? (0, i.jsx)(ez, {}) : null,
             s ? l : null,
             !t && (0, i.jsx)(tX, {}),
@@ -3403,7 +3404,7 @@ function rn(e) {
             let e = ti.Ay.getGuildsTree();
             return [e, e.version];
         }),
-        L = (0, _.bG)([e4.A], () => e4.A.lurkingGuildIds()),
+        L = (0, _.bG)([e7.A], () => e7.A.lurkingGuildIds()),
         y = r.useMemo(() => (E ? [] : L), [L, E]),
         D = (0, _.bG)([R.A], () => R.A.isFullscreenInContext()),
         { isSorting: b, startSorting: v, stopSorting: P } = (0, ta.A)(),
@@ -3427,10 +3428,10 @@ function rn(e) {
             }, [n, o]),
             n && (l || a)),
         { pathname: Z } = (0, d.zy)(),
-        { entrypoint: ee } = (0, e7.X8)({ location: "GuildsBar" }),
-        et = +!!K + +!!$ + +(ee === e7.RK.SERVER_RAIL_TOP),
+        { entrypoint: ee } = (0, e4.X8)({ location: "GuildsBar" }),
+        et = +!!K + +!!$ + +(ee === e4.RK.SERVER_RAIL_TOP),
         en = r.useMemo(() => {
-            let e = i4(W, Y, 0);
+            let e = i7(W, Y, 0);
             return new i9(
                 N,
                 H,
@@ -3442,7 +3443,7 @@ function rn(e) {
             );
         }, [W, Y, N]);
     (r.useLayoutEffect(() => {
-        en.setSizes(i4(W, Y, et));
+        en.setSizes(i7(W, Y, et));
     }, [en, W, Y, et]),
         r.useEffect(
             () => (
@@ -3460,7 +3461,7 @@ function rn(e) {
             return (eN.default.addChangeListener(e), () => eN.default.removeChangeListener(e));
         }, []));
     let { analyticsLocations: ei } = (0, O.Ay)(C.A.GUILDS_LIST),
-        er = i7(Z),
+        er = i4(Z),
         ea = r.useRef(null),
         {
             shouldShow: el,
@@ -3524,7 +3525,7 @@ function rn(e) {
                 switch (t.type) {
                     case ts.PJ.FOLDER:
                         return (0, i.jsx)(
-                            n4,
+                            n7,
                             {
                                 folderNode: t,
                                 treeVersion: N.version,
@@ -3561,7 +3562,7 @@ function rn(e) {
             [v, P, b, en.setNodeRef, N.version],
         ),
         e_ = (0, i.jsx)(nf, { ref: ea, selected: er, className: i6.ai, onClick: eo }),
-        eA = ee === e7.RK.SERVER_RAIL_BOTTOM;
+        eA = ee === e4.RK.SERVER_RAIL_BOTTOM;
     return (0, i.jsx)(O.f5, {
         value: ei,
         children: (0, i.jsx)(m.N, {

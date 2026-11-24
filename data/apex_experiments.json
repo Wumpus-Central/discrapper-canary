@@ -5864,6 +5864,18 @@
     }
   },
   {
+    "name": "2026-11-nitro-trials-brand-refresh",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "name": "2026-11-nitro-upload-badge",
     "kind": "user",
     "defaultConfig": {

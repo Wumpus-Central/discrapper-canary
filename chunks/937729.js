@@ -5,6 +5,7 @@ e.exports = {
     r0: "defaultThemeSelection_IhyaN_",
     BO: "selectionCircle_IhyaN_",
     AU: "checkmarkCircle_IhyaN_",
+    rm: "selectionCircleBorder_IhyaN_",
     AI: "checkmark_IhyaN_",
     g3: "redCircle_IhyaN_",
     RK: "lockedBadgeContainer_IhyaN_",

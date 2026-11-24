@@ -18,9 +18,10 @@ var i = n(477900),
     g = n(652215),
     T = n(792996),
     S = n(937729);
-function N() {
+function N(e) {
+    let { hideBorder: t = !1 } = e;
     return (0, i.jsx)("div", {
-        className: S.BO,
+        className: s()(S.BO, { [S.rm]: !t }),
         children: (0, i.jsx)(u.CircleCheckIcon, {
             size: "md",
             color: "currentColor",
@@ -43,28 +44,29 @@ function C(e) {
             showBadge: h,
             showLockedBadge: I,
             showSelectionCircle: p = !1,
-            disabled: T = !1,
-            ariaDescribedBy: C,
+            hideSelectionBorder: T = !1,
+            disabled: C = !1,
+            ariaDescribedBy: O,
         } = e,
-        O = (0, c.Gx)({ label: n, isSelected: d }),
-        R = r.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
+        R = (0, c.Gx)({ label: n, isSelected: d }),
+        L = r.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
     return (0, i.jsx)(_.m, {
         __unsupportedReactNodeAsText: n,
         children: (0, i.jsxs)("div", {
             className: S.RH,
-            style: R,
+            style: L,
             children: [
                 (0, i.jsx)(E.D, {
-                    ...O,
-                    "aria-disabled": T,
-                    "aria-describedby": C,
-                    tabIndex: u ?? O.tabIndex,
+                    ...R,
+                    "aria-disabled": C,
+                    "aria-describedby": O,
+                    tabIndex: u ?? R.tabIndex,
                     className: s()(S.yM, { [S.wH]: d }, a),
                     style: l,
                     onClick: d ? g.tEg : o,
                     children: f,
                 }),
-                (d || p) && (0, i.jsx)(N, {}),
+                (d || p) && (0, i.jsx)(N, { hideBorder: T }),
                 !d && h && (0, i.jsx)("div", { className: S.g3 }),
                 I &&
                     (0, i.jsx)("div", {
@@ -91,21 +93,23 @@ n.d(
                     showBadge: c,
                     showLockedBadge: u,
                     ariaDescribedBy: _,
+                    hideSelectionBorder: E,
                 } = e,
-                { colors: E, angle: A, theme: f } = n,
-                h = (0, p.FK)({ colors: E, angle: A });
+                { colors: A, angle: f, theme: h } = n,
+                I = (0, p.FK)({ colors: A, angle: f });
             return (0, i.jsx)(C, {
                 size: t,
                 onSelect: a ? void 0 : o,
                 isSelected: r,
                 name: n.getName(),
-                className: s()([a ? S.r9 : null, (0, d.M)(f) ? S.Xu : S.VO]),
-                style: { background: `var(--background-gradient), ${h}` },
+                className: s()([a ? S.r9 : null, (0, d.M)(h) ? S.Xu : S.VO]),
+                style: { background: `var(--background-gradient), ${I}` },
                 tabIndex: l,
                 showBadge: c,
                 showLockedBadge: u,
                 disabled: a,
                 ariaDescribedBy: _,
+                hideSelectionBorder: E,
             });
         },
         S4: C,

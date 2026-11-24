@@ -8,4 +8,5 @@ e.exports = {
     _7: "sparkles_QF5mJe",
     W$: "subtext_QF5mJe",
     Qw: "titleText_QF5mJe",
+    Jd: "trialRefreshHeader_QF5mJe",
 };

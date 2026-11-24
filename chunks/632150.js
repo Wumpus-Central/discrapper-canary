@@ -19,12 +19,9 @@ n.d(
                 className: c.kL,
                 onClick: function () {
                     (0, i.mM)(async () => {
-                        let { default: t } = await Promise.all([
-                            n.e(133902),
-                            n.e(499709),
-                            n.e(403370),
-                            n.e(569595),
-                        ]).then(n.bind(n, 526710));
+                        let { default: t } = await Promise.all([n.e(499709), n.e(403370), n.e(569595)]).then(
+                            n.bind(n, 526710),
+                        );
                         return (e) => (0, l.jsx)(t, { ...e });
                     });
                 },
