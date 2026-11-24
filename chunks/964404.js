@@ -72,6 +72,9 @@ class A extends a.Ay.DeviceSettingsStore {
     get expressionPickerWidth() {
         return E.expressionPickerWidth ?? c.wp.MIN;
     }
+    get expressionPickerHeight() {
+        return E.expressionPickerHeight;
+    }
     get messageRequestSidebarWidth() {
         return E.messageRequestSidebarWidth ?? 650;
     }

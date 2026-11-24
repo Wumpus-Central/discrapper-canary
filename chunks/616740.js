@@ -451,8 +451,8 @@ var eW = n(581007),
     e6 = n(836944),
     e2 = n(828162),
     e9 = n(517352),
-    e5 = n(641436),
-    e4 = n(586428),
+    e4 = n(641436),
+    e5 = n(586428),
     e7 = n(247806);
 function e8(e) {
     let { indicator: t } = e;
@@ -471,7 +471,7 @@ let te = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
         let { guildId: t, selected: l } = e,
             i = (0, e6.Ay)(t),
             { showHighlight: s, markAsDismissed: o } = (function () {
-                let e = (0, e5.uF)(e9.oW.GUILD_BOOST_TAB_BANNER),
+                let e = (0, e4.uF)(e9.oW.GUILD_BOOST_TAB_BANNER),
                     t = null != e,
                     [n, l] = (0, ed.Cc)(t ? el.M.GUILD_BOOST_TAB_HIGHLIGHT : null, e?.promotionId ?? "");
                 return { showHighlight: n === el.M.GUILD_BOOST_TAB_HIGHLIGHT, markAsDismissed: l };
@@ -549,7 +549,7 @@ let te = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                         }),
                     text: (0, r.jsx)("span", {
                         className: eT()({ [e7.A7]: i?.showUnread === !0 }),
-                        children: eA.intl.string(e4.default.yv3DJJ),
+                        children: eA.intl.string(e5.default.yv3DJJ),
                     }),
                     selected: l,
                     onClick: u,
@@ -638,7 +638,7 @@ let tf = (e) => {
                                 (0, r.jsx)(ti.E, {
                                     className: tA.Qq,
                                     variant: "body-xs/semibold",
-                                    children: eA.intl.string(e4.default.NI6Ihe),
+                                    children: eA.intl.string(e5.default.NI6Ihe),
                                 }),
                                 l >= n &&
                                     (0, r.jsx)(ti.E, {
@@ -655,8 +655,8 @@ let tf = (e) => {
                                     className: eT()(tA.Qq, tA.ue),
                                     variant: "body-xs/semibold",
                                     children: o
-                                        ? eA.intl.formatToPlainString(e4.default["Ehpq+7"], { appliedBoostCount: t })
-                                        : eA.intl.formatToPlainString(e4.default["/rbPDs"], {
+                                        ? eA.intl.formatToPlainString(e5.default["Ehpq+7"], { appliedBoostCount: t })
+                                        : eA.intl.formatToPlainString(e5.default["/rbPDs"], {
                                               appliedBoostCount: t,
                                               maxBoostCount: n,
                                           }),
@@ -760,8 +760,8 @@ var tG = n(787541),
     t6 = n(499373),
     t2 = n(559106),
     t9 = n(847374),
-    t5 = n(285796),
-    t4 = n(983851),
+    t4 = n(285796),
+    t5 = n(983851),
     t7 = n(914430),
     t8 = n(47167),
     ne = n(485947),
@@ -848,7 +848,7 @@ let nd = F(
                                 n.e(377476),
                                 n.e(597622),
                                 n.e(746309),
-                                n.e(521332),
+                                n.e(474750),
                                 n.e(844780),
                                 n.e(470068),
                                 n.e(203589),
@@ -975,7 +975,7 @@ let nd = F(
                               children: (0, r.jsx)(es.D, {
                                   className: nr.r,
                                   onClick: n,
-                                  children: (0, r.jsx)(t5.CircleXIcon, {
+                                  children: (0, r.jsx)(t4.CircleXIcon, {
                                       size: "md",
                                       color: "currentColor",
                                       className: nr.X8,
@@ -1002,7 +1002,7 @@ let nd = F(
                 variant: "secondary",
                 fullWidth: !0,
                 onClick: l,
-                icon: t4.VoiceNormalIcon,
+                icon: t5.VoiceNormalIcon,
                 text: n ? eA.intl.string(eA.t["/eB9Bg"]) : eA.intl.string(eA.t.Q2gPWl),
             }),
         });
@@ -1231,7 +1231,7 @@ function nz(e) {
                     onClick: s,
                     tabIndex: n,
                     "aria-label": eA.intl.string(eA.t["96ANUN"]),
-                    children: (0, r.jsx)(t4.VoiceNormalIcon, { size: "xs", color: "currentColor", className: ep.gE }),
+                    children: (0, r.jsx)(t5.VoiceNormalIcon, { size: "xs", color: "currentColor", className: ep.gE }),
                 }),
             }),
             (0, r.jsx)(ei.m, {
@@ -1308,8 +1308,8 @@ function n6(e) {
 }
 var n2 = n(588224),
     n9 = n(672812),
-    n5 = n(447199);
-function n4(e) {
+    n4 = n(447199);
+function n5(e) {
     let { thread: t, countInVoice: n, hasVideo: l, mentionCount: i, isMentionLowImportance: s } = e,
         a = n > 0 && t.userLimit > 0,
         o = n$(i);
@@ -1325,7 +1325,7 @@ function n4(e) {
 }
 function n7(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
-        i = { className: eT()(n5.GI, { [n5.a7]: n }, { [n5.BJ]: l }), style: t },
+        i = { className: eT()(n4.GI, { [n4.a7]: n }, { [n4.BJ]: l }), style: t },
         { density: s } = (0, E.wR)();
     switch (s) {
         case "cozy":
@@ -1505,7 +1505,7 @@ let n8 = a.memo(function (e) {
                                         onClick: nq.dG,
                                         onKeyDown: nq.dG,
                                         children: [
-                                            (0, r.jsx)(n4, {
+                                            (0, r.jsx)(n5, {
                                                 thread: t,
                                                 countInVoice: I,
                                                 hasVideo: u,
@@ -1712,12 +1712,12 @@ function la(e) {
     return 0 === n.length
         ? null
         : (0, r.jsx)("li", {
-              className: n5.kL,
+              className: n4.kL,
               children: (0, r.jsxs)("ul", {
                   role: "group",
                   "aria-label": eA.intl.string(le.default.e81UDK),
                   children: [
-                      (0, r.jsx)("div", { className: n5.eh }),
+                      (0, r.jsx)("div", { className: n4.eh }),
                       n.map((e, i) =>
                           (0, r.jsx)(
                               lr,
@@ -2210,8 +2210,8 @@ var l0 = n(34188),
     l6 = n(832163),
     l2 = n(831024),
     l9 = n(44724),
-    l5 = n(849134),
-    l4 = n(770178),
+    l4 = n(849134),
+    l5 = n(770178),
     l7 = n(307076);
 let l8 = 50;
 function ie(e) {
@@ -2220,7 +2220,7 @@ function ie(e) {
         s = a.useCallback((e) => {
             i(e.contentRect.width);
         }, []),
-        o = (0, l4.w)(s, [], { fireOnMount: !0 }),
+        o = (0, l5.w)(s, [], { fireOnMount: !0 }),
         [{ shineSpring: d }, c] = (0, tl.z)(() => ({
             from: { shineSpring: 0 },
             config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
@@ -2384,7 +2384,7 @@ let ir = a.memo(function (e) {
         L = a.useCallback(
             () =>
                 S && null != T
-                    ? (0, r.jsx)(l5.A, {
+                    ? (0, r.jsx)(l4.A, {
                           onActionClick: b,
                           onActionMouseDown: j,
                           onRender: y,
@@ -2623,7 +2623,7 @@ function iU(e) {
                                 (i && a) || (0, eu.bG)(H.BVt.CHANNEL(t, tL.A.getDefaultChannel(t)?.id)));
                         },
                         "aria-label": eA.intl.string(eA.t.cpT0Cq),
-                        children: (0, r.jsx)(t5.CircleXIcon, { size: "xs", color: "currentColor" }),
+                        children: (0, r.jsx)(t4.CircleXIcon, { size: "xs", color: "currentColor" }),
                     }),
             ],
         }),
@@ -2663,13 +2663,13 @@ let iO = a.memo(function (e) {
             return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, r.jsx)("li", {
-        className: n5.kL,
+        className: n4.kL,
         children: (0, r.jsxs)("ul", {
             role: "group",
             "aria-label": eA.intl.formatToPlainString(eA.t.EiyIi6, { channelName: a }),
             children: [
                 (0, r.jsx)("div", {
-                    className: eT()(n5.eh, { [n5.ET]: s }),
+                    className: eT()(n4.eh, { [n4.ET]: s }),
                     style: { bottom: ("cozy" === o ? 28 : 24) + c },
                 }),
                 d.map((e, t) =>
@@ -2839,8 +2839,8 @@ var i3 = n(824865),
     i6 = n(378570),
     i2 = n(129095),
     i9 = n(113783),
-    i5 = n(96566),
-    i4 = n(312006),
+    i4 = n(96566),
+    i5 = n(312006),
     i7 = n(505543),
     i8 = n(994500),
     se = n(685399),
@@ -2910,7 +2910,7 @@ function sm(e) {
         p = (0, h.bG)([P.A], () => !P.A.can(H.xBc.CONNECT, t)),
         C = (0, st.H)(t),
         E = (0, h.bG)([nk.A], () => nk.A.hasVideo(t.id)),
-        x = (0, i5.qT)(t.id) && t.isGuildStageVoice(),
+        x = (0, i4.qT)(t.id) && t.isGuildStageVoice(),
         N = (function (e) {
             let { channel: t, locked: n, video: l, selected: i } = e;
             return (
@@ -3201,10 +3201,10 @@ function sf(e) {
             (l = (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return (0, h.cf)(
-                    [i4.Ay, lE.default],
+                    [i5.Ay, lE.default],
                     () => {
                         let n = lE.default.getId();
-                        return i4.Ay.getPermissionsForUser(n, e, t);
+                        return i5.Ay.getPermissionsForUser(n, e, t);
                     },
                     [e, t],
                 );
@@ -3214,7 +3214,7 @@ function sf(e) {
         C = (0, i9.zy)(s.id, tj.ip.AUDIENCE),
         { isSubscriptionGated: E, needSubscriptionToAccess: x } = (0, nw.A)(s.id),
         N = (0, h.bG)([V.Ay], () => V.Ay.isFavorite(i.id, s.id)),
-        I = (0, i5.xn)(s.id),
+        I = (0, i4.xn)(s.id),
         S = sm({
             channel: s,
             isChannelSelected: !1,
@@ -3683,7 +3683,7 @@ function s9(e) {
               ],
           });
 }
-let s5 = F(
+let s4 = F(
     class extends lJ {
         state = { shouldShowThreadsPopout: !1, shouldShowActivities: !1 };
         channelItemRef = a.createRef();
@@ -4012,7 +4012,7 @@ let s5 = F(
         }
     },
 );
-function s4(e) {
+function s5(e) {
     let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: i, muted: s, selected: a } = e,
         { hasActiveThreads: o, hasMoreActiveThreads: d } = (0, nV.NR)(t),
         c = (0, h.cf)([nX.Ay], () => ({
@@ -4053,7 +4053,7 @@ function s4(e) {
         { frameId: _, runningLabel: b } = (0, sI.A)(t);
     return I
         ? null
-        : (0, r.jsx)(s5, {
+        : (0, r.jsx)(s4, {
               ...c,
               ...m,
               ...e,
@@ -4310,7 +4310,7 @@ function rx(e) {
         className: eT()(rC.M0, rC.OF),
         onClick: s,
         children: [
-            (0, r.jsx)(t4.VoiceNormalIcon, {
+            (0, r.jsx)(t5.VoiceNormalIcon, {
                 size: "custom",
                 className: rC.Gs,
                 width: 14,
@@ -5074,14 +5074,14 @@ function r2(e) {
 }
 n(131955);
 let r9 = [];
-function r5(e) {
+function r4(e) {
     return (
         m.A.modules.channels.NAME_LINE_HEIGHT.resolve({ density: e }) +
         2 * m.A.space.SPACE_XXS.resolve({ density: e }) +
         2
     );
 }
-class r4 extends a.PureComponent {
+class r5 extends a.PureComponent {
     static contextType = c.nC;
     _list = null;
     unreadTopRef = a.createRef();
@@ -5138,8 +5138,8 @@ class r4 extends a.PureComponent {
             if (null != s.threadOffset) {
                 let [e] = i.getScrollPosition(s.section, s.row),
                     { density: r = "default" } = this.props,
-                    a = s.threadOffset * r5(r);
-                i.scrollIntoViewRect({ start: e + a, end: e + a + r5(r), padding: n, animate: t, callback: l });
+                    a = s.threadOffset * r4(r);
+                i.scrollIntoViewRect({ start: e + a, end: e + a + r4(r), padding: n, animate: t, callback: l });
             } else i.scrollToIndex({ section: s.section, row: s.row, animate: t, padding: n, callback: l });
         else l?.();
     }
@@ -5311,7 +5311,7 @@ class r4 extends a.PureComponent {
                 selectedVoiceChannelId: s,
                 density: r = "default",
             } = this.props,
-            a = r5(r);
+            a = r4(r);
         if (1 === e) {
             let e = n.getGuildActionSection();
             return e.isEmpty()
@@ -5331,7 +5331,7 @@ class r4 extends a.PureComponent {
         if (d.record.type === H.rbe.GUILD_CATEGORY) return 40;
         for (let e of d.threadIds) {
             let { density: t = "default" } = this.props;
-            a += r5(t);
+            a += r4(t);
             let n = l[d.id];
             null != n && n.length > 0 && (a += s === e ? 32 * n.length : 32);
         }
@@ -5530,7 +5530,7 @@ class r4 extends a.PureComponent {
                     a.Fragment,
                     {
                         children: [
-                            (0, r.jsx)(s4, {
+                            (0, r.jsx)(s5, {
                                 channel: x,
                                 guild: l,
                                 position: C.position,
@@ -5602,7 +5602,7 @@ class r4 extends a.PureComponent {
             case H.rbe.PRIVATE_THREAD:
             case H.rbe.ANNOUNCEMENT_THREAD:
                 return (0, r.jsx)(
-                    s4,
+                    s5,
                     {
                         channel: x,
                         guild: l,
@@ -5877,7 +5877,7 @@ let r7 = (e) => {
                 navigator: E,
                 children: [
                     (0, r.jsx)(tR.q, { containerRef: E.containerProps.ref, itemType: k }),
-                    (0, r.jsx)(r4, {
+                    (0, r.jsx)(r5, {
                         ...e,
                         listNavigator: E,
                         ref: A,
