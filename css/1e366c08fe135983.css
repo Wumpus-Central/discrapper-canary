@@ -74,6 +74,16 @@
     }
 }
 
+.comparisonDetailPanel_RXxYOV {
+    margin-inline-start: -1px
+}
+
+@media (max-width:485px) {
+    .comparisonDetailPanel_RXxYOV {
+        margin-inline-start: 0
+    }
+}
+
 .detailScroller_RXxYOV {
     align-items: center;
     display: flex;
@@ -98,6 +108,10 @@
     width: 100%
 }
 
+.comparisonDetailHeader_RXxYOV {
+    margin-block-end: calc(var(--space-4)*-1)
+}
+
 .detailCloseButton_RXxYOV {
     inset-block-start: var(--space-16);
     inset-inline-end: var(--space-16);
@@ -113,6 +127,10 @@
     object-fit: contain
 }
 
+.comparisonBadgeGraphic_RXxYOV {
+    height: 100px
+}
+
 .badgeGraphicAnimatedNitro_RXxYOV {
     height: 150px;
     margin: calc(var(--space-12)*-1)
@@ -123,6 +141,10 @@
     flex-direction: column;
     gap: var(--space-24);
     width: 100%
+}
+
+.comparisonBadgeInfo_RXxYOV {
+    gap: calc(var(--space-24) - 2px)
 }
 
 .badgeIdentity_RXxYOV {
@@ -312,4 +334,4 @@
     }
 }
 
-/*# sourceMappingURL=7cd6338fac85bdd9.css.map*/
+/*# sourceMappingURL=1e366c08fe135983.css.map*/

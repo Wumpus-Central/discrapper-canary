@@ -291,6 +291,19 @@
     min-width: 0
 }
 
+button.user_dM3t6a {
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    padding: 0
+}
+
+button.user_dM3t6a:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .avatar_dM3t6a {
     border-radius: var(--radius-round);
     flex-shrink: 0;
@@ -304,4 +317,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=3316278b766b0add.css.map*/
+/*# sourceMappingURL=9c7695fcaab107d6.css.map*/
