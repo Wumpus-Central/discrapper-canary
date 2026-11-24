@@ -1,34 +1,36 @@
-var t = l(477900),
-    o = l(582128),
+var a = l(477900),
+    n = l(582128),
     r = l(165862),
     u = l(477782),
-    n = l(442433),
+    o = l(442433),
     s = l(545059),
-    d = l(810412),
-    c = l(521398),
-    i = l(652215);
+    c = l(810412),
+    d = l(521398),
+    i = l(652215),
+    p = l(361729),
+    _ = l(792996);
 l.d(
-    a,
+    t,
     {},
     {
         default: function (e) {
-            let { groupId: a, onSelect: l } = e,
-                p = o.useCallback(() => {
-                    ((0, c.R)({ groupId: a }), (0, n.Z_)());
-                }, [a]),
-                _ = o.useCallback(() => {
-                    (s.A.deleteGroup(a),
-                        (0, n.Z_)(),
-                        (0, d.YX)(i.uss.FRIENDS, { type: d.Z5.GROUP_MANAGED, value: d.IP.REMOVED_FROM_FAVORITES }));
-                }, [a]);
-            return (0, t.jsxs)(r.W, {
+            let { groupId: t, onSelect: l } = e,
+                b = n.useCallback(() => {
+                    ((0, d.R)({ groupId: t }), (0, o.Z_)());
+                }, [t]),
+                h = n.useCallback(() => {
+                    (s.A.deleteGroup(t),
+                        (0, o.Z_)(),
+                        (0, c.YX)(i.uss.FRIENDS, { type: c.Z5.GROUP_MANAGED, value: c.IP.REMOVED_FROM_FAVORITES }));
+                }, [t]);
+            return (0, a.jsxs)(r.W, {
                 "aria-label": "Group Context Menu",
                 navId: "overlay-group-context-menu",
-                onClose: n.Z_,
+                onClose: o.Z_,
                 onSelect: l,
                 children: [
-                    (0, t.jsx)(u.Dr, { id: "edit", label: "Edit Group", action: p }),
-                    (0, t.jsx)(u.Dr, { id: "delete", label: "Delete Group", action: _, color: "danger" }),
+                    (0, a.jsx)(u.Dr, { id: "edit", label: _.intl.string(p.default.ncTtw1), action: b }),
+                    (0, a.jsx)(u.Dr, { id: "delete", label: "Delete Group", action: h, color: "danger" }),
                 ],
             });
         },
