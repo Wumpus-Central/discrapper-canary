@@ -10,8 +10,8 @@ var l = n(477900),
     h = n(653523),
     m = n(350972),
     g = n(677056),
-    f = n(236814),
-    x = n(652215),
+    x = n(236814),
+    f = n(652215),
     v = n(792996),
     y = n(997328);
 function A(e) {
@@ -26,7 +26,7 @@ function A(e) {
             locked: p = !1,
             disabled: S = !1,
         } = e,
-        [N, E] = r.useState((0, f.gG)(t).name),
+        [N, E] = r.useState((0, x.gG)(t).name),
         b = t === m.Ic.PIRATE;
     return (0, l.jsx)(c.m, {
         text: N,
@@ -52,7 +52,7 @@ function A(e) {
                     "aria-disabled": S,
                     tabIndex: A ?? (g ? 0 : -1),
                     className: s()(y.Ni, { [y.wH]: g }, n),
-                    onClick: g ? x.tEg : () => a?.(t),
+                    onClick: g ? f.tEg : () => a?.(t),
                     children: j,
                 }),
                 g && (0, l.jsx)(h.H$, {}),
@@ -71,7 +71,7 @@ n.d(
     {
         A: function (e) {
             let {
-                    size: t = f.N8.SIZE_60,
+                    size: t = x.N8.SIZE_60,
                     icon: n,
                     isSelected: i,
                     disabled: s,

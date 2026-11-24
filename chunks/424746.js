@@ -57,10 +57,10 @@ function c(e) {
             [D],
         );
     l.useEffect(() => D, [D]);
-    let O = l.useCallback(() => {
+    let P = l.useCallback(() => {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
-        P = l.useCallback(() => {
+        O = l.useCallback(() => {
             R && M(!1);
         }, [M, R]),
         U = l.useCallback(() => {
@@ -128,8 +128,8 @@ function c(e) {
             S(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: O,
-        onMouseLeave: P,
+        onMouseEnter: P,
+        onMouseLeave: O,
         onFocus: U,
         onBlur: B,
         children: [

@@ -1,4 +1,5 @@
 !(function (e, t) {
+    "use strict";
     function r(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {

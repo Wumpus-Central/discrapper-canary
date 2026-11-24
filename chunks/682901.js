@@ -73,7 +73,7 @@ n.d(t, {
     Jm: () => P,
     TP: () => eZ,
     o2: () => e9,
-    tU: () => e7,
+    tU: () => e4,
     Vk: () => b,
     WN: () => k,
     pe: () => w,
@@ -86,7 +86,7 @@ n.d(t, {
     OO: () => ej,
     Bu: () => ee,
     uP: () => e8,
-    Kq: () => e4,
+    Kq: () => e7,
     WT: () => z,
     hd: () => J,
     gD: () => F,
@@ -679,8 +679,8 @@ var e8 =
     (((f = {}).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
     (f.MID_STREAMING_QUALITY = "mid_streaming_quality"),
     f);
-let e4 = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
-var e7 =
+let e7 = Object.freeze({ high_streaming_quality: 2, mid_streaming_quality: 1 });
+var e4 =
         (((h = {})[(h.UserSettings = 0)] = "UserSettings"),
         (h[(h.ApplicationStoreHome = 1)] = "ApplicationStoreHome"),
         h),

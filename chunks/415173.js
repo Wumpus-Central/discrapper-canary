@@ -580,7 +580,7 @@ let eQ = { mass: 1, tension: 250, friction: 18, clamp: !0 },
     });
 var e0 = n(392164),
     e1 = n(391436);
-function e2(e) {
+function e3(e) {
     var t, n;
     let i,
         r,
@@ -924,7 +924,7 @@ function e2(e) {
                 }),
             });
 }
-var e3 = n(143129),
+var e2 = n(143129),
     e5 = n(821609),
     e6 = n(706712),
     e4 = n(225123),
@@ -979,7 +979,7 @@ function e7(e) {
                               !t &&
                                   (0, l.jsx)("div", {
                                       className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: _, onChange: (e) => N(e) }),
+                                      children: (0, l.jsx)(e2.d, { checked: _, onChange: (e) => N(e) }),
                                   }),
                               (0, l.jsxs)(w.E, {
                                   variant: "body-md/normal",
@@ -1010,7 +1010,7 @@ function e7(e) {
                               !t &&
                                   (0, l.jsx)("div", {
                                       className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: R, onChange: (e) => M(e) }),
+                                      children: (0, l.jsx)(e2.d, { checked: R, onChange: (e) => M(e) }),
                                   }),
                               (0, l.jsxs)(w.E, {
                                   variant: "body-md/normal",
@@ -1036,7 +1036,7 @@ function e7(e) {
                               !t &&
                                   (0, l.jsx)("div", {
                                       className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: D, onChange: (e) => k(e) }),
+                                      children: (0, l.jsx)(e2.d, { checked: D, onChange: (e) => k(e) }),
                                   }),
                               (0, l.jsxs)(w.E, {
                                   variant: "body-md/normal",
@@ -1074,7 +1074,7 @@ function e7(e) {
                               !t &&
                                   (0, l.jsx)("div", {
                                       className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: z, onChange: (e) => V(e) }),
+                                      children: (0, l.jsx)(e2.d, { checked: z, onChange: (e) => V(e) }),
                                   }),
                               (0, l.jsxs)(w.E, {
                                   variant: "body-md/normal",
@@ -1100,7 +1100,7 @@ function e7(e) {
                               !t &&
                                   (0, l.jsx)("div", {
                                       className: e9.On,
-                                      children: (0, l.jsx)(e3.d, { checked: L, onChange: (e) => U(e) }),
+                                      children: (0, l.jsx)(e2.d, { checked: L, onChange: (e) => U(e) }),
                                   }),
                               (0, l.jsx)(en.m, {
                                   position: "left",
@@ -1351,7 +1351,7 @@ function t1(e) {
         "aria-label": E["aria-label"],
     });
 }
-function t2(e) {
+function t3(e) {
     let { voiceChannel: t, locked: n } = e,
         i = v.useRef(null),
         { suppress: r, selfMute: s, mute: a } = (0, tF.A)(t),
@@ -1416,7 +1416,7 @@ function t2(e) {
         },
     });
 }
-function t3(e) {
+function t2(e) {
     let { voiceChannel: t, locked: n } = e,
         i = v.useRef(null),
         { selfDeaf: r, deaf: s } = (0, tG.A)(t),
@@ -1930,8 +1930,8 @@ function nr(e) {
                     (0, l.jsxs)("div", {
                         className: nn.qi,
                         children: [
-                            (0, l.jsx)(t2, { voiceChannel: r, locked: t }),
                             (0, l.jsx)(t3, { voiceChannel: r, locked: t }),
+                            (0, l.jsx)(t2, { voiceChannel: r, locked: t }),
                             (0, l.jsx)(t5, { voiceChannel: r, locked: t }),
                         ],
                     }),
@@ -2460,7 +2460,7 @@ var nB = n(602853),
     n$ = n(73153),
     n0 = n(308528);
 let n1 = new Set();
-async function n2(e) {
+async function n3(e) {
     if (!n1.has(e)) {
         n1.add(e);
         try {
@@ -2472,7 +2472,7 @@ async function n2(e) {
         } catch {}
     }
 }
-var n3 = n(835078),
+var n2 = n(835078),
     n5 = (((r = {}).DEFAULT = "DEFAULT"), (r.CHANNEL_TYPE = "CHANNEL_TYPE"), r);
 let n6 = v.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: i, iconVariant: r = "DEFAULT" } = e,
@@ -2509,7 +2509,7 @@ let n6 = v.memo(function (e) {
             [t],
         );
     v.useEffect(() => {
-        null == j && n2(t);
+        null == j && n3(t);
     }, [j, t]);
     let y = (0, P.bG)(
             [nQ.A, eS.default],
@@ -2531,7 +2531,7 @@ let n6 = v.memo(function (e) {
             [j],
         ),
         b = (0, l.jsx)("div", {
-            className: n3.St,
+            className: n2.St,
             children: (function () {
                 let e = j?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === r && !e) {
@@ -2544,10 +2544,10 @@ let n6 = v.memo(function (e) {
                     return (
                         t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${r})`),
                         (0, l.jsx)("div", {
-                            className: C()(n3.s, a && n3.lJ),
+                            className: C()(n2.s, a && n2.lJ),
                             style: n,
                             children: (0, l.jsx)(e, {
-                                className: n3.Yc,
+                                className: n2.Yc,
                                 size: "sm",
                                 color: a ? np.A.colors.WHITE : np.A.colors.ICON_STATUS_ONLINE,
                             }),
@@ -2689,7 +2689,7 @@ let n6 = v.memo(function (e) {
             return ((e ??= m.ChatIcon), (0, l.jsx)(e, { size: "sm", color: np.A.colors.INTERACTIVE_ICON_DEFAULT }));
         })();
     return null == j
-        ? (0, l.jsx)("div", { className: n3.R })
+        ? (0, l.jsx)("div", { className: n2.R })
         : (0, l.jsx)(nx.u, {
               title: O,
               body: M,
@@ -2697,7 +2697,7 @@ let n6 = v.memo(function (e) {
               assetSize: 20,
               "aria-label": A,
               children: (0, l.jsxs)(N.D, {
-                  className: n3.pc,
+                  className: n2.pc,
                   focusProps: { offset: 4 },
                   onClick: () => {
                       (s && (0, nb.S$)({ minimized: !1 }),
@@ -2713,7 +2713,7 @@ let n6 = v.memo(function (e) {
                   children: [
                       b,
                       (0, l.jsx)("div", {
-                          className: n3.vT,
+                          className: n2.vT,
                           children: (0, l.jsx)(nq.A, { selected: a, hovered: c, unread: T }),
                       }),
                   ],
@@ -2783,7 +2783,7 @@ function ia(e) {
         a = (0, P.bG)([E.A], () => E.A.getVoiceChatMinimized()),
         o = (0, P.bG)([W.A], () => (null != s ? (W.A.getChannel(s) ?? null) : null), [s]);
     v.useEffect(() => {
-        null == s || (null == o && n2(s));
+        null == s || (null == o && n3(s));
     }, [o, s]);
     let d = (0, P.bG)([x.A], () => nd(o, x.A), [o]),
         u = (0, P.bG)([A.A], () => A.A.getChannelId(), []),
@@ -3282,8 +3282,8 @@ let i1 = new i0(n$.h, {
         i$ = { ...i$, [t]: n };
     },
 });
-var i2 = n(743082),
-    i3 = n(395771),
+var i3 = n(743082),
+    i2 = n(395771),
     i5 = n(207228),
     i6 = n(760751),
     i4 = n(365010);
@@ -3322,11 +3322,11 @@ function re(e) {
             gameName: r,
             targetedGames: s,
         } = (0, P.bG)(
-            [iL.Ay, tK.A, i1, p.A, iD.A, iK.A, i3.A, iV.A, i6.A],
+            [iL.Ay, tK.A, i1, p.A, iD.A, iK.A, i2.A, iV.A, i6.A],
             () => {
                 let e = (0, iP.V)(iL.Ay, tK.A),
                     n = iK.A.getDecision(t, "screen_capture"),
-                    i = i3.A.getFailure(t),
+                    i = i2.A.getFailure(t),
                     r = (0, iz.s)(t, p.A, iV.A),
                     l = (function (e) {
                         let {
@@ -3359,7 +3359,7 @@ function re(e) {
                         return n && "hide" !== a && null != o ? "capture_failed" : null;
                     })({
                         frameState: i1.getState(t),
-                        usesCapture: null != n || null != i || i3.A.hasRequested(t),
+                        usesCapture: null != n || null != i || i2.A.hasRequested(t),
                         captureSupported: (0, iJ.yG)("screen_capture") && (0, i5.y8)(),
                         permission: n,
                         targeting: r,
@@ -3427,7 +3427,7 @@ function re(e) {
                       },
                   }
                 : "settings_failed" === i && null != o
-                  ? { text: eC.intl.string(i_.default.o9LC3H), variant: "secondary", onClick: () => (0, i2.fD)(o) }
+                  ? { text: eC.intl.string(i_.default.o9LC3H), variant: "secondary", onClick: () => (0, i3.fD)(o) }
                   : "game_unrecognized" === i || "game_not_targeted" === i
                     ? {
                           text: eC.intl.string(i_.default.P9lk1I),
@@ -3728,7 +3728,7 @@ let rE = v.memo(function (e) {
                     borderWidth: u,
                 } = e;
                 return (0, eG.dO)(t)
-                    ? (0, l.jsx)(e2, {
+                    ? (0, l.jsx)(e3, {
                           id: t.id,
                           locked: n,
                           pinned: t.pinned,

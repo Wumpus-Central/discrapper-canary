@@ -16,8 +16,8 @@ var n = t(477900),
     I = t(652215),
     v = t(778712),
     S = t(97808),
-    _ = t(863610),
-    x = t(283973),
+    x = t(863610),
+    _ = t(283973),
     y = t(574332),
     E = t(774300),
     N = t(566903),
@@ -153,7 +153,7 @@ function q(e) {
                 ],
             }),
             "sending" === A &&
-                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(_.n, { dotRadius: 2, themed: !0 }) }),
+                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(x.n, { dotRadius: 2, themed: !0 }) }),
             "success" === A &&
                 (0, n.jsx)(f.E, {
                     variant: "body-xs/medium",
@@ -165,7 +165,7 @@ function q(e) {
             null == A &&
                 (0, n.jsx)("div", {
                     className: K.SB,
-                    children: (0, n.jsx)(x.UserPlusIcon, { color: "currentColor", size: "sm", className: K.Kk }),
+                    children: (0, n.jsx)(_.UserPlusIcon, { color: "currentColor", size: "sm", className: K.Kk }),
                 }),
         ],
     });
@@ -179,14 +179,14 @@ t.d(
                 p = l.useRef(null),
                 v = (0, V.M)(p),
                 S = (0, z.kt)({ channel: i }),
-                { analyticsLocations: _ } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+                { analyticsLocations: x } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
             (l.useEffect(() => {
                 s && p.current?.focus();
             }, [s]),
                 (0, O.A)({
                     name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
                     type: o.ImpressionTypes.POPOUT,
-                    properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
+                    properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: x },
                 }),
                 l.useEffect(() => {
                     u?.(p.current);
@@ -194,7 +194,7 @@ t.d(
                 l.useEffect(() => {
                     r?.(v);
                 }, [r, v]));
-            let x = l.useCallback(() => {
+            let _ = l.useCallback(() => {
                 let e = U.A.getGuild(i.guild_id);
                 (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
                     (0, A.mM)(async () => {
@@ -230,7 +230,7 @@ t.d(
                                 S.map((e) => (0, n.jsx)(q, { channel: i, user: e }, e.id)),
                                 (0, n.jsxs)(g.D, {
                                     tag: "li",
-                                    onClick: x,
+                                    onClick: _,
                                     className: a()(K.nM, K.vk),
                                     children: [
                                         (0, n.jsx)("div", {

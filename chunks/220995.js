@@ -16,8 +16,8 @@ var n = t(477900),
     I = t(320448),
     v = t(775602),
     S = t(793574),
-    _ = t(688810),
-    x = t(139286),
+    x = t(688810),
+    _ = t(139286),
     y = t(713517),
     E = t(71393),
     N = t(576705),
@@ -41,8 +41,8 @@ t.d(
                 w = l.useRef(null),
                 [k, R] = l.useState(!1),
                 [U, M] = l.useState(0),
-                { analyticsLocations: D } = (0, _.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
-            (0, x.A)({
+                { analyticsLocations: D } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
+            (0, _.A)({
                 name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
                 type: d.ImpressionTypes.VIEW,
                 properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: D },

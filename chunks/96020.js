@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => L });
 var i = n(477900),
     r = n(582128),
     l = n(613412),
@@ -52,15 +52,15 @@ var y = n(819027),
     R = n(792996),
     O = n(610234),
     x = n(788066);
-function P(e) {
+function L(e) {
     let {
             appContext: t,
             onInteraction: n,
             onSelect: r,
             onClose: N,
-            maybeRenderPTTCheckbox: P = !1,
-            renderDeafenCheckbox: U = !1,
-            renderInputProfiles: L = !1,
+            maybeRenderPTTCheckbox: L = !1,
+            renderDeafenCheckbox: P = !1,
+            renderInputProfiles: U = !1,
             renderOutputDevices: w = !1,
             renderOutputVolume: b = !1,
             renderInputDevices: G = !1,
@@ -107,7 +107,7 @@ function P(e) {
             "aria-label": R.intl.string(R.t.ZR1Ss6),
             className: x.MK,
             children: [
-                (0, i.jsxs)(u.rX, { children: [G && W, L && J, w && Y] }),
+                (0, i.jsxs)(u.rX, { children: [G && W, U && J, w && Y] }),
                 (0, i.jsxs)(u.rX, {
                     children: [
                         F && $,
@@ -132,7 +132,7 @@ function P(e) {
                 }),
                 (0, i.jsxs)(u.rX, {
                     children: [
-                        P &&
+                        L &&
                             en &&
                             (0, i.jsx)(u.sL, {
                                 checked: ee === v.TBI.PUSH_TO_TALK,
@@ -141,7 +141,7 @@ function P(e) {
                                 action: () => d.default.setMode(et, void 0, void 0, { analyticsLocations: H }),
                                 disabled: z === M.m.STUDIO,
                             }),
-                        U &&
+                        P &&
                             (0, i.jsx)(
                                 u.sL,
                                 {

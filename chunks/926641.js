@@ -28,9 +28,9 @@ var i = n(477900),
     R = n(652215),
     O = n(731854),
     x = n(792996),
-    P = n(300303),
-    U = n(479137);
-let L = function (e) {
+    L = n(300303),
+    P = n(479137);
+let U = function (e) {
     let [t, n] = (0, r.useState)("idle");
     (0, r.useEffect)(() => {
         v.default.track(R.HAw.OPEN_POPOUT, { type: "RTC Connection" });
@@ -65,33 +65,33 @@ let L = function (e) {
                         (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: P.o0,
+                                    className: L.o0,
                                     children: (0, i.jsx)(N.A, { dataPoints: e.pings, width: 258, height: 80 }),
                                 }),
                                 (0, i.jsx)(f.E, {
                                     variant: "body-sm/semibold",
                                     color: "text-default",
-                                    className: P.VU,
+                                    className: L.VU,
                                     children: D.A.getShortHostname(t),
                                 }),
                             ],
                         }),
                     (0, i.jsx)("div", {
-                        className: P.ew,
+                        className: L.ew,
                         children: (0, i.jsxs)("div", {
-                            className: P.zS,
+                            className: L.zS,
                             children: [
                                 (0, i.jsx)(f.E, {
                                     variant: "body-xs/normal",
                                     color: "text-default",
-                                    className: P.VU,
+                                    className: L.VU,
                                     children: x.intl.format(x.t["X58/lN"], { averagePing: n.toFixed(0) }),
                                 }),
                                 null != l
                                     ? (0, i.jsx)(f.E, {
                                           variant: "body-xs/normal",
                                           color: "text-default",
-                                          className: P.VU,
+                                          className: L.VU,
                                           children: x.intl.format(x.t["6iv2TF"], { lastPing: l.toFixed(0) }),
                                       })
                                     : null,
@@ -99,7 +99,7 @@ let L = function (e) {
                                     ? (0, i.jsx)(f.E, {
                                           variant: "body-xs/normal",
                                           color: "text-default",
-                                          className: P.VU,
+                                          className: L.VU,
                                           children: x.intl.format(x.t["VIBJM+"], { outboundLossRate: s.toFixed(1) }),
                                       })
                                     : null,
@@ -111,7 +111,7 @@ let L = function (e) {
             });
         }, [e, u]),
         { connectionState: c, connectionTypeText: h } = e,
-        L = T.Q_.getSetting(),
+        U = T.Q_.getSetting(),
         w = {
             [R.S7L.AWAITING_ENDPOINT]: x.intl.format(x.t.Eu2vUR, { url: R.qF7.STATUS }),
             [R.S7L.CONNECTING]: x.intl.string(x.t["y+E8aD"]),
@@ -127,7 +127,7 @@ let L = function (e) {
             [R.S7L.RTC_DISCONNECTED]: x.intl.string(x.t.fOX25I),
         }[c];
     return (0, i.jsxs)("div", {
-        className: P.kL,
+        className: L.kL,
         children: [
             "function" == typeof w
                 ? w()
@@ -135,11 +135,11 @@ let L = function (e) {
             !__OVERLAY__ &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)("hr", { className: U.me }),
+                        (0, i.jsx)("hr", { className: P.me }),
                         (0, i.jsxs)("div", {
-                            className: P.Uo,
+                            className: L.Uo,
                             children: [
-                                L &&
+                                U &&
                                     y.Ay.supports(O.O5.DIAGNOSTICS) &&
                                     (0, i.jsx)(g.$, {
                                         icon: A.BugIcon,
@@ -165,7 +165,7 @@ let L = function (e) {
                 }),
             (0, i.jsxs)(I.Z, {
                 type: I.Z.Types.SUCCESS,
-                className: U.g4,
+                className: P.g4,
                 children: [
                     (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, { variant: "body-xs/medium", color: "text-feedback-positive", children: h }),
@@ -210,11 +210,11 @@ function W(e) {
             }),
             null != s &&
                 (0, i.jsxs)(b.D, {
-                    className: U.n2,
+                    className: P.n2,
                     onClick: h,
                     children: [
                         (0, i.jsx)("div", {
-                            className: a ? U.Dx : U.t6,
+                            className: a ? P.Dx : P.t6,
                             children: (0, i.jsx)(g.$, {
                                 icon: G.CopyIcon,
                                 text: x.intl.string(x.t.OpuAlK),
@@ -224,7 +224,7 @@ function W(e) {
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: a ? U.t6 : U.Dx,
+                            className: a ? P.t6 : P.Dx,
                             children: (0, i.jsx)(g.$, {
                                 icon: p.CircleCheckIcon,
                                 text: x.intl.string(x.t.t5VZ88),
@@ -235,11 +235,11 @@ function W(e) {
                         }),
                     ],
                 }),
-            (0, i.jsx)("hr", { className: U.me }),
+            (0, i.jsx)("hr", { className: P.me }),
             (0, i.jsx)(f.E, { variant: "body-xs/normal", color: "text-subtle", children: x.intl.string(x.t.B9JNsl) }),
             (0, i.jsxs)(I.Z, {
                 type: I.Z.Types.SUCCESS,
-                className: U.g4,
+                className: P.g4,
                 children: [
                     (0, i.jsx)(E.LockIcon, { size: "xxs", color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, {
@@ -263,7 +263,7 @@ function z(e) {
             pings: u.A.getPings(),
             outboundLossRate: u.A.getOutboundLossRate(t),
         }));
-    return (0, i.jsx)(L, { ...s, closePopout: r, connectionTypeText: n });
+    return (0, i.jsx)(U, { ...s, closePopout: r, connectionTypeText: n });
 }
 function J(e) {
     let { closePopout: t, connectionTypeText: n } = e,
@@ -275,7 +275,7 @@ function J(e) {
             outboundLossRate: o.A.getOutboundLossRate(),
             pings: o.A.getPings(),
         }));
-    return (0, i.jsx)(L, { ...r, closePopout: t, connectionTypeText: n });
+    return (0, i.jsx)(U, { ...r, closePopout: t, connectionTypeText: n });
 }
 function $(e) {
     let { channelId: t, isOverlay: n, lobbyId: r, closePopout: l } = e,

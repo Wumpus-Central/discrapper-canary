@@ -59,8 +59,8 @@ function E(e) {
         M = l.useCallback((e) => {
             T(e);
         }, []),
-        O = N ? g.caretHoverable : void 0,
-        P = {
+        P = N ? g.caretHoverable : void 0,
+        O = {
             targetElementRef: y.targetElementRef,
             shouldShow: y.shouldShow,
             hasVideo: y.hasVideo,
@@ -80,7 +80,7 @@ function E(e) {
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...P,
+        ...O,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
@@ -95,7 +95,7 @@ function E(e) {
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
-                null != S && (0, a.jsx)(d.F, { className: O }),
+                null != S && (0, a.jsx)(d.F, { className: P }),
             ],
         }),
     });

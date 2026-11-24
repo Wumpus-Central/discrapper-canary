@@ -7,7 +7,7 @@ let c = new Map(),
     d = {},
     h = o.CUs.BOTTOM_RIGHT,
     m = { [u.R8.VIDEO]: u.fG[u.R8.VIDEO], [u.R8.CAMERA_PREVIEW]: u.fG[u.R8.CAMERA_PREVIEW] };
-class p extends s.Ay.PersistedStore {
+class f extends s.Ay.PersistedStore {
     static displayName = "PictureInPictureStore";
     static persistKey = "PictureInPictureStore";
     static migrations = [
@@ -61,7 +61,7 @@ class p extends s.Ay.PersistedStore {
         return { openPosition: h, pipWidths: m };
     }
 }
-let f = new p(a.h, {
+let p = new f(a.h, {
     PICTURE_IN_PICTURE_OPEN: function (e) {
         let { id: t, component: n, props: s } = e;
         if (null != c.get(t)) return;
@@ -160,4 +160,4 @@ let f = new p(a.h, {
         ((i = null), (r = null), (l = null), (c = new Map()));
     },
 });
-n.d(t, {}, { A: f });
+n.d(t, {}, { A: p });

@@ -1,9 +1,9 @@
 n.r(t);
 var i = n(477900);
 n(582128);
-var s = n(646514),
-    a = n(996682),
-    r = n(27989);
+var r = n(646514),
+    l = n(996682),
+    s = n(27989);
 n.d(
     t,
     {},
@@ -12,19 +12,19 @@ n.d(
             let {
                     size: t = "md",
                     width: n,
-                    height: l,
-                    color: o = s.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    height: a,
+                    color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
                     colorClass: u = "",
-                    ...c
+                    ...d
                 } = e,
-                d = (0, r.J)(t),
-                E = d?.width ?? n,
-                _ = d?.height ?? l;
+                c = (0, s.J)(t),
+                h = c?.width ?? n,
+                f = c?.height ?? a;
             return (0, i.jsxs)("svg", {
-                ...(0, a.A)(c),
+                ...(0, l.A)(d),
                 xmlns: "http://www.w3.org/2000/svg",
-                width: E,
-                height: _,
+                width: h,
+                height: f,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

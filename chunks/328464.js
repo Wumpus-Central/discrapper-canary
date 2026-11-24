@@ -66,16 +66,16 @@ function y(e) {
             targetElementRef: C,
             onShow: D,
             position: M = "top",
-            shouldShow: O,
+            shouldShow: P,
         } = e,
-        P = I && null == N && null == T,
+        O = I && null == N && null == T,
         U = r()({ [j.ce]: null != T || S, [j.Yb]: T?.isStarted }),
         {
             tooltipId: B,
             isVisible: G,
             targetElementRef: k,
             trigger: w,
-        } = (0, i.D)({ children: t, targetElementRef: C, delay: 300, onTooltipShow: D, shouldShow: O }),
+        } = (0, i.D)({ children: t, targetElementRef: C, delay: 300, onTooltipShow: D, shouldShow: P }),
         L = null != y && y !== s.x.COMMON,
         H = (0, a.jsxs)(
             "div",
@@ -86,7 +86,7 @@ function y(e) {
                 children: [
                     L && (0, a.jsx)("div", { className: j.xV, children: (0, a.jsx)(v, { rarity: y }) }),
                     (0, a.jsx)("div", {
-                        className: r()(j.fA, { [j.qJ]: P, [j.yH]: S }),
+                        className: r()(j.fA, { [j.qJ]: O, [j.yH]: S }),
                         "aria-hidden": !0,
                         children:
                             null != T

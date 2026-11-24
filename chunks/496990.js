@@ -1,4 +1,4 @@
-(n.d(t, { A: () => L }), n(938796));
+(n.d(t, { A: () => U }), n(938796));
 var i = n(665260),
     r = n(855986),
     l = n(73153),
@@ -40,7 +40,7 @@ function D() {
         0 !== v && (clearInterval(v), (v = 0)),
         d.Ay.useNewNotifications &&
             (v = setInterval(() => {
-                M() && U.emitChange();
+                M() && P.emitChange();
             }, 15 * c.A.Millis.SECOND)),
         !1
     );
@@ -73,7 +73,7 @@ function x(e, t) {
         )
     );
 }
-class P extends r.Ay.PersistedStore {
+class L extends r.Ay.PersistedStore {
     static displayName = "UnreadSettingNoticeStore2";
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
@@ -126,7 +126,7 @@ class P extends r.Ay.PersistedStore {
         );
     }
 }
-let U = new P(l.h, {
+let P = new L(l.h, {
         CHANNEL_SELECT: function () {
             let e = M();
             return ((T = u.Ay.getChannelId()), (y = Date.now()), e);
@@ -146,4 +146,4 @@ let U = new P(l.h, {
             ((t.lastActionTime = Date.now()), t.numSends++);
         },
     }),
-    L = U;
+    U = P;

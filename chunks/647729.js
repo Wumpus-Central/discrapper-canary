@@ -2,16 +2,16 @@ var l = n(477900),
     r = n(582128),
     a = n(503698),
     i = n.n(a),
-    u = n(855986),
-    s = n(765178),
+    s = n(855986),
+    u = n(765178),
     o = n(943654),
     d = n(775602),
     c = n(998304),
     m = n(253400),
     _ = n(988341),
     f = n(873571),
-    g = n(97192),
-    b = n(193579);
+    b = n(97192),
+    g = n(193579);
 let p = m.Ay.getEnableHardwareAcceleration();
 function x(e) {
     return (0, f.ux)(e) + 1e3;
@@ -32,55 +32,55 @@ n.d(
                     canStart: a,
                     size: m = "large",
                     startDelay: v = 200,
-                    onStart: y,
-                    onEnd: T,
+                    onStart: S,
+                    onEnd: y,
                 } = e,
-                A = (0, u.bG)([d.Ay], () => d.Ay.useReducedMotion),
-                { previousTier: N, currentTier: h } = (0, f.VR)(t, n),
-                E = null != N,
-                S = v + x(E),
-                [C, k] = r.useState(!1),
-                [R, j] = r.useState(!1),
-                [U, w] = r.useState(!1),
-                [$, O] = r.useState(!1),
-                P = p && !A,
-                M = R && P && !$,
-                H = (0, g.C)((0, f.AO)(t, h, !1)) ?? g.P,
-                I = r.useMemo(() => ({ fill: (0, c.E2)(H) }), [H]),
-                F = r.useCallback(
+                T = (0, s.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                { previousTier: A, currentTier: N } = (0, f.VR)(t, n),
+                h = null != A,
+                E = v + x(h),
+                [C, R] = r.useState(!1),
+                [k, U] = r.useState(!1),
+                [j, w] = r.useState(!1),
+                [O, $] = r.useState(!1),
+                M = p && !T,
+                H = k && M && !O,
+                P = (0, b.C)((0, f.AO)(t, N, !1)) ?? b.P,
+                B = r.useMemo(() => ({ fill: (0, c.E2)(P) }), [P]),
+                I = r.useCallback(
                     (e) => {
-                        (k(!0), O(e), y?.(e));
+                        (R(!0), $(e), S?.(e));
                     },
-                    [y],
+                    [S],
                 );
             return (
                 r.useEffect(() => {
-                    C && s.O.announce((0, _.kD)(t, n), "polite");
+                    C && u.O.announce((0, _.kD)(t, n), "polite");
                 }, [C]),
                 r.useEffect(() => {
                     if (!C) return;
-                    let e = setTimeout(() => j(!0), $ ? 0 : S);
+                    let e = setTimeout(() => U(!0), O ? 0 : E);
                     return () => clearTimeout(e);
-                }, [$, C, S]),
+                }, [O, C, E]),
                 r.useEffect(() => {
                     if (!C) return;
-                    let e = v + (0, f.ux)(E) + 1500,
-                        t = setTimeout(() => w(!0), $ || A ? 0 : e);
+                    let e = v + (0, f.ux)(h) + 1500,
+                        t = setTimeout(() => w(!0), O || T ? 0 : e);
                     return () => clearTimeout(t);
-                }, [E, $, A, C, v]),
+                }, [h, O, T, C, v]),
                 r.useEffect(() => {
-                    U && T?.();
-                }, [U]),
+                    j && y?.();
+                }, [j]),
                 (0, l.jsxs)("div", {
-                    className: b.Tl,
+                    className: g.Tl,
                     "aria-hidden": !0,
                     children: [
-                        P &&
+                        M &&
                             (0, l.jsx)(o.x, {
                                 artboard: "Web",
-                                autoplay: M,
-                                dataBinding: I,
-                                className: i()(b.U6, "small" === m && b.Pv, !M && b.qJ),
+                                autoplay: H,
+                                dataBinding: B,
+                                className: i()(g.U6, "small" === m && g.Pv, !H && g.qJ),
                             }),
                         (0, l.jsx)(f.Ay, {
                             badge: t,
@@ -88,7 +88,7 @@ n.d(
                             size: m,
                             startDelay: v,
                             canStart: a,
-                            onStart: F,
+                            onStart: I,
                         }),
                     ],
                 })

@@ -13,9 +13,9 @@ n.d(
     {
         e: function (e) {
             let { location: t, hasUnread: n } = e,
-                u = (0, r.bG)([a.Bt], () => n && i.getConfig({ location: t }).enabled, [n, t]),
-                [s, o] = l.useState(!1);
-            return (u && !s && o(!0), u || s);
+                s = (0, r.bG)([a.Bt], () => n && i.getConfig({ location: t }).enabled, [n, t]),
+                [u, o] = l.useState(!1);
+            return (s && !u && o(!0), s || u);
         },
     },
 );

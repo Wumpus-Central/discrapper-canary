@@ -20,15 +20,15 @@ var i = n(582128),
                     n = (0, r.bG)([o.A], () => null != e && o.A.isSelfPassingController((0, l._z)(e)), [e]),
                     h = (0, d.y)(e),
                     m = (0, c.A)(e),
-                    p = null != m,
-                    f = i.useCallback(() => {
-                        null != e && (p ? (0, u.HQ)(e) : (0, u.Bw)(e));
-                    }, [e, p]);
+                    f = null != m,
+                    p = i.useCallback(() => {
+                        null != e && (f ? (0, u.HQ)(e) : (0, u.Bw)(e));
+                    }, [e, f]);
                 if (null == e || !t || h) return null;
                 let g = a.Q.PASS;
                 return (
                     null != m ? (g = a.Q.TAKE_BACK_FROM(m)) : n && (g = a.Q.TAKE_BACK),
-                    { isActive: n, label: g, toggle: f }
+                    { isActive: n, label: g, toggle: p }
                 );
             },
         },

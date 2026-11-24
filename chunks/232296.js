@@ -39,7 +39,7 @@ function I(e) {
         D = (0, A.X)(t),
         O = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: E });
     if (null == S || P) return null;
-    function G() {
+    function U() {
         var e;
         return (
             (e = { guildId: I, guildProductListingId: t.id, analyticsLocation: E }),
@@ -55,7 +55,7 @@ function I(e) {
             })
         );
     }
-    let U = (0, i.jsx)(x.i, {
+    let G = (0, i.jsx)(x.i, {
         product: t,
         guildId: I,
         showEditProduct: M,
@@ -96,9 +96,9 @@ function I(e) {
             ctaComponent: (0, i.jsx)(s.$, { ...O }),
             productType: L,
             shouldShowFullDescriptionButton: v,
-            onShowFullDescription: G,
-            onTapCard: G,
-            actionMenu: U,
+            onShowFullDescription: U,
+            onTapCard: U,
+            actionMenu: G,
             showOpaqueBackground: T,
             hideRoleTag: C,
             lineClamp: _,

@@ -35,7 +35,7 @@ function v(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        [O, P] = l.useState(!1),
+        [P, O] = l.useState(!1),
         U = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
@@ -43,7 +43,7 @@ function v(e) {
             displayProfile: n,
             pendingBanner: A,
             size: T,
-            canAnimate: M || !B ? O : U,
+            canAnimate: M || !B ? P : U,
         }),
         L = G ? null : (k ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
@@ -59,8 +59,8 @@ function v(e) {
         height: S,
         cutout: z,
         overlay: v,
-        onInteractionStart: () => P(!0),
-        onInteractionEnd: () => P(!1),
+        onInteractionStart: () => O(!0),
+        onInteractionEnd: () => O(!1),
     });
 }
 n.d(

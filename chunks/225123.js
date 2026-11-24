@@ -2058,8 +2058,8 @@ Y.dispatcher.getDispatchHandler = function (e) {
 let e6 = new c.A("ConnectionStore"),
     e5 = 0,
     e8 = null,
-    e4 = !0,
-    e7 = null,
+    e7 = !0,
+    e4 = null,
     e9 = null;
 function te() {
     $.update();
@@ -2137,13 +2137,13 @@ let ta = new tr(l.h, {
                         n ||
                         i ||
                         (await e3?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
-                        !e4)
+                        !e7)
                 ) {
                     let e = p.A.getChannel(r);
                     null != e && ((t = { guildId: e.getGuildId(), channelId: r }), (0, E.A)(r));
                 } else (g.A.setLastSessionVoiceChannelId(null != r ? r : null), o.default.selectVoiceChannel(null));
             }
-            ($.update(t, !0), (e4 = !1), (e9 = null));
+            ($.update(t, !0), (e7 = !1), (e9 = null));
         })(e);
     },
     CONNECTION_RESUMED: function () {
@@ -2161,7 +2161,7 @@ let ta = new tr(l.h, {
             $.update({ guildId: e.guildId, channelId: e.channelId }),
             (e9 = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, O.un)() &&
-                e7 === V.g6G.BACKGROUND &&
+                e4 === V.g6G.BACKGROUND &&
                 (null == e.channelId ? Y.close(!0) : Y.isClosed() && (X.V(!1), Y.connect())),
             !1
         );
@@ -2199,13 +2199,13 @@ let ta = new tr(l.h, {
         return (
             (0, O.un)()
                 ? (h.default.isAuthenticated() &&
-                      (e7 === V.g6G.INACTIVE && e.state === V.g6G.BACKGROUND && null == $.channelId
+                      (e4 === V.g6G.INACTIVE && e.state === V.g6G.BACKGROUND && null == $.channelId
                           ? Y.close(!0)
-                          : e7 === V.g6G.BACKGROUND &&
+                          : e4 === V.g6G.BACKGROUND &&
                             e.state === V.g6G.ACTIVE &&
                             Y.isClosed() &&
                             (X.V(!1), Y.connect())),
-                  (e7 = e.state))
+                  (e4 = e.state))
                 : e.state === V.g6G.ACTIVE &&
                   (X.V(!1), h.default.isAuthenticated() && Y.resetBackoff("App state is active")),
             !1

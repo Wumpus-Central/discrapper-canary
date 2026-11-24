@@ -9,8 +9,8 @@ var r = n(477900),
     d = n(834730),
     m = n(257249),
     h = n(436283),
-    p = n(964363),
-    f = n(652215),
+    f = n(964363),
+    p = n(652215),
     A = n(792996),
     E = n(389760);
 function C(e) {
@@ -39,8 +39,8 @@ let b = i.memo(function (e) {
         a = (0, c.bG)([h.Ay], () => h.Ay.getInteraction(t), [t]);
     i.useEffect(() => {
         let e = null;
-        if (t.hasFlag(f.pr7.LOADING) && null != a) {
-            let n = (0, p.I5)(t.id) - Date.now();
+        if (t.hasFlag(p.pr7.LOADING) && null != a) {
+            let n = (0, f.I5)(t.id) - Date.now();
             n > 0 && (e = setTimeout(() => l(), 1e3 + n));
         }
         return () => {
@@ -50,14 +50,14 @@ let b = i.memo(function (e) {
     let u = null;
     if (null == o)
         u = (function (e, t) {
-            switch ((0, p.fK)(t, e)) {
-                case p.h0.SENDING:
+            switch ((0, f.fK)(t, e)) {
+                case f.h0.SENDING:
                     return C(A.intl.string(A.t.RiLfBY));
-                case p.h0.CREATED:
+                case f.h0.CREATED:
                     return C(A.intl.formatToPlainString(A.t["7ePV4t"], { applicationName: t.author.username }));
-                case p.h0.TIMED_OUT:
+                case f.h0.TIMED_OUT:
                     return g(A.intl.string(A.t.h8hzPd));
-                case p.h0.FAILED:
+                case f.h0.FAILED:
                     return g(t.interactionError);
             }
         })(a, t);

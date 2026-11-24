@@ -10,8 +10,8 @@ var i,
     d = n(22231),
     h = n(775602),
     m = n(654107),
-    p = n(495867),
-    f = n(994500),
+    f = n(495867),
+    p = n(994500),
     g = n(287809),
     A = n(293651),
     v = n(972347),
@@ -36,8 +36,8 @@ var S =
     (i[(i.Stamp = 3)] = "Stamp"),
     (i[(i.StampGrowing = 4)] = "StampGrowing"),
     i);
-let b = 1e3 / 30;
-function w() {
+let w = 1e3 / 30;
+function b() {
     return Array.from(crypto.getRandomValues(new Uint32Array(2)), (e) => e.toString(16).padStart(8, "0")).join("");
 }
 let x = "stream-drawing",
@@ -254,13 +254,13 @@ class N {
                 growth: c,
                 size: r,
             },
-            p = (0, P.W)(t.emoji, !this.getReducedMotion(), 88) ?? n;
-        (null != p &&
+            f = (0, P.W)(t.emoji, !this.getReducedMotion(), 88) ?? n;
+        (null != f &&
             ((m.image = this.canvas.ownerDocument.createElement("img")),
             (m.image.onload = () => {
                 ((m.layer = null), this.wake());
             }),
-            (m.image.src = p)),
+            (m.image.src = f)),
             this.stamps.set(s, m),
             this.wake());
     }
@@ -390,7 +390,7 @@ class N {
                 h = d / 16,
                 m = r.image?.complete && r.image.naturalWidth > 0 ? r.image : (r.fallbackImage ?? r.image);
             if (null != r.point.emoji && (!m?.complete || 0 === m.naturalWidth)) continue;
-            let p = (null == m || m === r.image) && this.canAnimateEmoji(r.point, r.image);
+            let f = (null == m || m === r.image) && this.canAnimateEmoji(r.point, r.image);
             if (((e.globalAlpha = o), null != r.growth)) {
                 let t = (function (e, t, n, i) {
                     if (i || n <= 16) return { x: 0, y: 0, rotation: 0 };
@@ -404,14 +404,14 @@ class N {
                         rotation: (Math.PI / 60) * Math.sin(l + (t / 1e3) * Math.PI * 20) * s,
                     };
                 })(r.point.strokeId, r.growth.elapsed + s - r.growth.receivedAt, d, this.getReducedMotion());
-                p
+                f
                     ? this.drawAvatar(e, r.point, m, { x: u + t.x, y: c + t.y, scale: h, rotation: t.rotation })
                     : (e.save(),
                       e.translate(u + t.x, c + t.y),
                       0 !== t.rotation && e.rotate(t.rotation),
                       this.drawAvatar(e, r.point, m, { x: 0, y: 0, scale: h, animate: !1 }),
                       e.restore());
-            } else if (p) this.drawAvatar(e, r.point, m, { x: u, y: c, scale: h, opacity: o });
+            } else if (f) this.drawAvatar(e, r.point, m, { x: u, y: c, scale: h, opacity: o });
             else {
                 let t = Math.ceil(d / 24),
                     n = d + 2 * t,
@@ -554,19 +554,19 @@ class N {
             h = Math.min(n.rect.width, Math.ceil(Math.max(...a.map((e) => e.x)) + 4)),
             m = Math.min(n.rect.height, Math.ceil(Math.max(...a.map((e) => e.y)) + 4));
         if (h <= c || m <= d) return;
-        let p = Math.min(r, 512 / (h - c), 512 / (m - d)),
-            f = Math.ceil((h - c) * p),
-            g = Math.ceil((m - d) * p);
-        ((this.maskCanvas.width = f), (this.maskCanvas.height = g));
+        let f = Math.min(r, 512 / (h - c), 512 / (m - d)),
+            p = Math.ceil((h - c) * f),
+            g = Math.ceil((m - d) * f);
+        ((this.maskCanvas.width = p), (this.maskCanvas.height = g));
         let A = this.maskCanvas.getContext("2d", { willReadFrequently: !0 });
         if (null == A) return;
-        (A.setTransform(p, 0, 0, p, -c * p, -d * p),
+        (A.setTransform(f, 0, 0, f, -c * f, -d * f),
             (A.fillStyle = "#000000"),
             A.fillRect(c, d, h - c, m - d),
             (A.globalCompositeOperation = "lighten"),
             (A.lineCap = "round"),
             (A.lineJoin = "round"),
-            (A.lineWidth = Math.max(8, 4 / p)));
+            (A.lineWidth = Math.max(8, 4 / f)));
         let v = (e) => {
             let t = Math.round(255 * Math.max(0, Math.min(1, (e - i) / 600)));
             return `rgb(${t}, ${t}, ${t})`;
@@ -594,7 +594,7 @@ class N {
                     ? ((A.fillStyle = v(n.expiresAt)), A.arc(n.x, n.y, A.lineWidth / 2, 0, 2 * Math.PI), A.fill())
                     : A.stroke());
         }
-        let E = A.getImageData(0, 0, f, g);
+        let E = A.getImageData(0, 0, p, g);
         for (let e = 0; e < E.data.length; e += 4)
             ((E.data[e + 3] = E.data[e]), (E.data[e] = E.data[e + 1] = E.data[e + 2] = 255));
         (A.putImageData(E, 0, 0),
@@ -603,7 +603,7 @@ class N {
             e.rect(c, d, h - c, m - d),
             e.clip(),
             (e.globalCompositeOperation = "destination-in"),
-            e.drawImage(this.maskCanvas, c, d, f / p, g / p),
+            e.drawImage(this.maskCanvas, c, d, p / f, g / f),
             e.restore());
     }
     destroy() {
@@ -626,8 +626,8 @@ var j = n(210608),
     z = n(803224),
     G = n(257645);
 let W = new C(),
-    F = "mention2";
-function V(e) {
+    V = "mention2";
+function F(e) {
     let t = e / 255;
     return t <= 0.04045 ? t / 12.92 : ((t + 0.055) / 1.055) ** 2.4;
 }
@@ -641,7 +641,7 @@ function q(e) {
         n.drawImage(e, 0, 0, 16, 16);
         let { data: i } = n.getImageData(0, 0, 16, 16),
             r = 0;
-        for (let e = 0; e < i.length; e += 4) r += 0.2126 * V(i[e]) + 0.7152 * V(i[e + 1]) + 0.0722 * V(i[e + 2]);
+        for (let e = 0; e < i.length; e += 4) r += 0.2126 * F(i[e]) + 0.7152 * F(i[e + 1]) + 0.0722 * F(i[e + 2]);
         return r / 256 < 0.179;
     } catch {
         return !1;
@@ -660,19 +660,19 @@ function X(e) {
         T = l.useRef(null),
         P = l.useRef(() => {}),
         M = l.useRef(null),
-        V = l.useRef(null),
+        F = l.useRef(null),
         K = l.useRef(null),
         X = l.useRef(null),
         Y = l.useRef(null),
         $ = l.useRef(null),
         J = l.useRef(null),
-        Q = l.useRef(new C()),
-        Z = l.useRef(null),
+        Z = l.useRef(new C()),
+        Q = l.useRef(null),
         ee = l.useRef(null),
         et = l.useRef(n),
         en = l.useRef(null),
-        { rtc: ei, user: er } = (0, u.cf)([p.A, g.default], () => ({
-            rtc: p.A.isConnected() ? p.A.getRTCConnection() : null,
+        { rtc: ei, user: er } = (0, u.cf)([f.A, g.default], () => ({
+            rtc: f.A.isConnected() ? f.A.getRTCConnection() : null,
             user: g.default.getCurrentUser(),
         })),
         el = er?.id,
@@ -687,7 +687,7 @@ function X(e) {
         ((eh.current = v), X.current?.setVisible(v));
     }, [v]);
     let em = (0, m.Ay)(er?.getAvatarURL(null, 80), "#ffffff", !1),
-        ep = eo ?? (0, o.LX)(em);
+        ef = eo ?? (0, o.LX)(em);
     (l.useEffect(() => {
         et.current = n;
         let e = $.current;
@@ -707,10 +707,10 @@ function X(e) {
                 o = null,
                 u = new Set(),
                 d = () => {
-                    for (let e of u) f.A.isBlockedOrIgnored(e.toString()) && (a?.removeSender(e), u.delete(e));
+                    for (let e of u) p.A.isBlockedOrIgnored(e.toString()) && (a?.removeSender(e), u.delete(e));
                 },
                 m = (e, n) => {
-                    if (null == a || n.streamKey !== t || !(0, A.EG)(t) || f.A.isBlockedOrIgnored(e.toString())) return;
+                    if (null == a || n.streamKey !== t || !(0, A.EG)(t) || p.A.isBlockedOrIgnored(e.toString())) return;
                     u.add(e);
                     let i = g.default.getUser(e.toString());
                     switch (n.kind) {
@@ -726,8 +726,8 @@ function X(e) {
                                     ((r = n.strokeId),
                                     !W.accept(e, r) ||
                                         U.Ay.isSelfDeaf() ||
-                                        z.A.isSoundDisabled(F) ||
-                                        (0, L.Ak)(F, 0.14, void 0, void 0, { outputChannel: G.a.VOICE })));
+                                        z.A.isSoundDisabled(V) ||
+                                        (0, L.Ak)(V, 0.14, void 0, void 0, { outputChannel: G.a.VOICE })));
                             break;
                         case S.Cursor:
                             if (e.toString() === el && !s) return;
@@ -737,8 +737,8 @@ function X(e) {
                             a.add(e, n, et.current);
                     }
                 },
-                p = () => {
-                    (f.A.removeChangeListener(d),
+                f = () => {
+                    (p.A.removeChangeListener(d),
                         o?.off(x, m),
                         a?.destroy(),
                         (a = null),
@@ -750,26 +750,26 @@ function X(e) {
                 v =
                     ((e = {
                         onConnection: (e) => {
-                            (p(),
-                                (a = new N(l, i, () => h.Ay.useReducedMotion, V)).setVisible(eh.current),
+                            (f(),
+                                (a = new N(l, i, () => h.Ay.useReducedMotion, F)).setVisible(eh.current),
                                 a.setFrame(et.current),
                                 (X.current = a),
                                 (o = e),
                                 (Y.current = e),
-                                f.A.addChangeListener(d),
+                                p.A.addChangeListener(d),
                                 e.on(x, m));
                         },
                         onDisconnect: (e) => {
-                            let n = $.current?.pointerId ?? J.current?.pointerId ?? Z.current?.pointerId;
+                            let n = $.current?.pointerId ?? J.current?.pointerId ?? Q.current?.pointerId;
                             (($.current = null),
                                 (J.current = null),
-                                (Z.current = null),
+                                (Q.current = null),
                                 (ee.current = null),
                                 null != en.current &&
                                     (en.current.window.clearInterval(en.current.id), (en.current = null)),
                                 null != M.current && (M.current.hidden = !0),
                                 null != n && l.hasPointerCapture(n) && l.releasePointerCapture(n),
-                                p(),
+                                f(),
                                 s ||
                                     j.A.getActiveStreamKey() !== t ||
                                     ((0, k.w3)(null),
@@ -819,7 +819,7 @@ function X(e) {
                     (null != n && o?.sendPoint({ ...n.point, sequence: n.point.sequence + 1, end: !0 }),
                         ($.current = null),
                         null != en.current && (en.current.window.clearInterval(en.current.id), (en.current = null)),
-                        p(),
+                        f(),
                         v.release());
                 }
             );
@@ -827,7 +827,7 @@ function X(e) {
         l.useEffect(() => {
             s || ec !== t || null != Y.current || (j.A.getActiveStreamKey() === ec && I.current?.retry());
         }, [ec, s, t, ei, el, i]));
-    let ef = l.useCallback((e) => {
+    let ep = l.useCallback((e) => {
             Y.current?.sendPoint(e);
         }, []),
         eg = l.useCallback(() => {
@@ -835,8 +835,8 @@ function X(e) {
             let e = ee.current;
             null == e ||
                 e.point.end ||
-                ((e.point = { ...e.point, sequence: e.point.sequence + 1, end: !0 }), ef(e.point));
-        }, [ef, el]);
+                ((e.point = { ...e.point, sequence: e.point.sequence + 1, end: !0 }), ep(e.point));
+        }, [ep, el]);
     function eA(e, i) {
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (((T.current = { x: e, y: i }), !ed || null == n || null == el || null != J.current)) return;
@@ -846,11 +846,11 @@ function X(e) {
             a = performance.now(),
             o = {
                 streamKey: t,
-                strokeId: s?.point.strokeId ?? w(),
+                strokeId: s?.point.strokeId ?? b(),
                 sequence: (s?.point.sequence ?? -1) + 1,
                 ...(l ?? { x: 0, y: 0 }),
                 ...n,
-                color: ep,
+                color: ef,
                 kind: S.Cursor,
                 emoji: eu,
                 end: !1,
@@ -879,7 +879,7 @@ function X(e) {
         ) {
             if (!r && null != s && !s.point.end && (a - s.sentAt < 40 || (s.point.x === l.x && s.point.y === l.y)))
                 return;
-            ((ee.current = { point: o, sentAt: a }), ef(o));
+            ((ee.current = { point: o, sentAt: a }), ep(o));
         }
     }
     (l.useLayoutEffect(() => {
@@ -898,26 +898,26 @@ function X(e) {
                 n = J.current;
             J.current = null;
             let i = $.current,
-                r = Z.current;
-            ((Z.current = null),
+                r = Q.current;
+            ((Q.current = null),
                 null != en.current && (en.current.window.clearInterval(en.current.id), (en.current = null)),
                 ($.current = null),
-                null != i && ef({ ...i.point, sequence: i.point.sequence + 1, end: !0 }),
+                null != i && ep({ ...i.point, sequence: i.point.sequence + 1, end: !0 }),
                 null != n &&
                     (e
-                        ? ef({
+                        ? ep({
                               ...n.point,
                               sequence: n.point.sequence + 1,
                               kind: S.Stamp,
                               stampSize: O(t ?? performance.now() - n.startedAt),
                               stampElapsed: void 0,
                           })
-                        : n.growing && ef({ ...n.point, sequence: n.point.sequence + 1, end: !0 })));
+                        : n.growing && ep({ ...n.point, sequence: n.point.sequence + 1, end: !0 })));
             let l = i?.pointerId ?? r?.pointerId ?? n?.pointerId,
                 s = K.current;
             null != l && s?.hasPointerCapture(l) && s.releasePointerCapture(l);
         },
-        [ef],
+        [ep],
     );
     function eE(e, t) {
         let n = $.current;
@@ -979,7 +979,7 @@ function X(e) {
             };
         }, [ed]),
         (0, r.jsxs)("div", {
-            ref: V,
+            ref: F,
             className: D.qd,
             children: [
                 (0, r.jsx)("canvas", {
@@ -992,7 +992,7 @@ function X(e) {
                             !ed ||
                             0 !== e.button ||
                             null != $.current ||
-                            null != Z.current ||
+                            null != Q.current ||
                             null != J.current ||
                             null == n
                         )
@@ -1003,26 +1003,26 @@ function X(e) {
                         let r = i.normalize(e.clientX, e.clientY);
                         if (null == r || null == Y.current) return;
                         if (e.altKey) {
-                            ((Z.current = { pointerId: e.pointerId }),
+                            ((Q.current = { pointerId: e.pointerId }),
                                 e.currentTarget.setPointerCapture(e.pointerId),
                                 (function (e, i, r) {
                                     if (!ed || null == el || null == n) return;
                                     let l = X.current?.normalize(e, i);
                                     null != l &&
-                                        Q.current.accept(BigInt(el), r) &&
-                                        ef({
+                                        Z.current.accept(BigInt(el), r) &&
+                                        ep({
                                             streamKey: t,
                                             strokeId: r,
                                             sequence: 0,
                                             ...l,
                                             ...n,
-                                            color: ep,
+                                            color: ef,
                                             end: !1,
                                             kind: S.Ping,
                                             emoji: eu,
                                             outlineWhite: q(E?.current ?? null),
                                         });
-                                })(e.clientX, e.clientY, w()));
+                                })(e.clientX, e.clientY, b()));
                             return;
                         }
                         if ("stamp" === es) {
@@ -1030,11 +1030,11 @@ function X(e) {
                             let i = performance.now(),
                                 l = {
                                     streamKey: t,
-                                    strokeId: w(),
+                                    strokeId: b(),
                                     sequence: 0,
                                     ...r,
                                     ...n,
-                                    color: ep,
+                                    color: ef,
                                     end: !1,
                                     kind: S.StampGrowing,
                                     stampSize: 16,
@@ -1071,7 +1071,7 @@ function X(e) {
                                                 stampElapsed: n,
                                             }),
                                             (e.sentAt = t),
-                                            ef(e.point));
+                                            ep(e.point));
                                     }, 60),
                                 }),
                                 eA(e.clientX, e.clientY));
@@ -1080,17 +1080,17 @@ function X(e) {
                         let l = {
                             kind: S.Stroke,
                             streamKey: t,
-                            strokeId: w(),
+                            strokeId: b(),
                             sequence: 0,
                             ...r,
                             ...n,
-                            color: ep,
+                            color: ef,
                             outlineWhite: q(E?.current ?? null),
                             end: !1,
                         };
                         (e.currentTarget.setPointerCapture(e.pointerId),
                             ($.current = { point: l, pointerId: e.pointerId }),
-                            ef(l));
+                            ep(l));
                         let s = e.currentTarget.ownerDocument.defaultView;
                         (null != s &&
                             (en.current = {
@@ -1098,8 +1098,8 @@ function X(e) {
                                 id: s.setInterval(() => {
                                     let e = $.current;
                                     null != e &&
-                                        ((e.point = { ...e.point, sequence: e.point.sequence + 1 }), ef(e.point));
-                                }, b),
+                                        ((e.point = { ...e.point, sequence: e.point.sequence + 1 }), ep(e.point));
+                                }, w),
                             }),
                             eA(e.clientX, e.clientY));
                     },
@@ -1110,7 +1110,7 @@ function X(e) {
                     onPointerMove: (e) => {
                         if (
                             (eA(e.clientX, e.clientY),
-                            Z.current?.pointerId === e.pointerId || J.current?.pointerId === e.pointerId)
+                            Q.current?.pointerId === e.pointerId || J.current?.pointerId === e.pointerId)
                         ) {
                             (e.preventDefault(), e.stopPropagation());
                             return;
@@ -1126,7 +1126,7 @@ function X(e) {
                         if (
                             0 !== e.button ||
                             ($.current?.pointerId !== e.pointerId &&
-                                Z.current?.pointerId !== e.pointerId &&
+                                Q.current?.pointerId !== e.pointerId &&
                                 J.current?.pointerId !== e.pointerId)
                         )
                             return;

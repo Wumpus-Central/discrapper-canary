@@ -1,13 +1,13 @@
-var i = n(582128);
-let l = i.createContext(!1),
-    s = 221552 == n.j ? l : null;
+var r = n(582128);
+let i = r.createContext(!1),
+    o = 221552 == n.j ? i : null;
 n.d(
     t,
     {},
     {
-        A: s,
+        A: o,
         U: function () {
-            return i.useContext(l);
+            return r.useContext(i);
         },
     },
 );

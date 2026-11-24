@@ -32,17 +32,17 @@ function y(e) {
         P = (0, v.A)(l.id),
         D = (0, i.jsx)(i.Fragment, { children: (0, c.uk)(l, a, t) }),
         { analyticsLocations: O } = (0, m.Ay)(o, u.A.REQUEST_TO_STREAM_INVITE_EMBED),
-        G = (0, E.W)({ location: "RequestToStreamInviteEmbed" }),
-        U = G ? N.intl.string(j.default.K0spYL) : N.intl.string(j.default["5+172e"]),
+        U = (0, E.W)({ location: "RequestToStreamInviteEmbed" }),
+        G = U ? N.intl.string(j.default.K0spYL) : N.intl.string(j.default["5+172e"]),
         w = !1;
     return (
         P
-            ? ((U = N.intl.string(j.default.u4QmWl)), (w = !0))
+            ? ((G = N.intl.string(j.default.u4QmWl)), (w = !0))
             : null != L
-              ? ((U = N.intl.string(j.default.P0wwmM)), (w = !0))
+              ? ((G = N.intl.string(j.default.P0wwmM)), (w = !0))
               : M !== a.id
-                ? ((U = N.intl.string(j.default.qRXats)), (w = !0))
-                : null == R && ((U = N.intl.string(j.default["43zohO"])), (w = !0)),
+                ? ((G = N.intl.string(j.default.qRXats)), (w = !0))
+                : null == R && ((G = N.intl.string(j.default["43zohO"])), (w = !0)),
         (0, i.jsx)(h.h, {
             header: N.intl.string(j.default.nAyuPp),
             title: s.name,
@@ -56,12 +56,12 @@ function y(e) {
                     ? []
                     : [
                           {
-                              label: U,
+                              label: G,
                               trackingArea: g.kY.STREAM,
                               disabled: w,
                               onClick: () => {
                                   null != R &&
-                                      ((0, I.uF)() && !G
+                                      ((0, I.uF)() && !U
                                           ? (0, C.X)(R, O)
                                           : (0, d.mM)(async () => {
                                                 let { default: e } = await Promise.all([
@@ -113,15 +113,15 @@ var b = n(666176),
     P = n(454292),
     D = n(850670),
     O = n(125017),
-    G = n(104171),
-    U = n(414499),
+    U = n(104171),
+    G = n(414499),
     w = n(359800),
     B = n(660298),
     H = n(574660),
     V = n(409626),
     F = n(692969),
-    z = n(928550),
-    Y = n(913659),
+    Y = n(928550),
+    z = n(913659),
     K = n(659051),
     W = n(359549),
     J = n(835517),
@@ -301,7 +301,7 @@ function ec(e) {
             let { bot: n } = t;
             return {
                 iconSrc:
-                    (e.activity?.icon_override != null ? (0, Y.uD)(t.id, e.activity?.icon_override) : null) ??
+                    (e.activity?.icon_override != null ? (0, z.uD)(t.id, e.activity?.icon_override) : null) ??
                     f.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: n }),
                 name: e.activity?.name_override ?? t.name,
             };
@@ -319,7 +319,7 @@ function ec(e) {
                                 let s = 600 * (0, J.A)(),
                                     r =
                                         (n?.assets?.invite_cover_image != null
-                                            ? (0, Y.uD)(n.application_id, n.assets.invite_cover_image, s)
+                                            ? (0, z.uD)(n.application_id, n.assets.invite_cover_image, s)
                                             : null) ??
                                         l ??
                                         i.getCoverImageURL(s) ??
@@ -346,7 +346,7 @@ function ec(e) {
         { openGameProfileModal: y, launchableAppId: b } =
             ((t = o.id),
             (n = A.author.id),
-            (s = (0, z.dB)(t)),
+            (s = (0, Y.dB)(t)),
             {
                 openGameProfileModal: (0, F.A)({
                     location: "Rich Presence Activity Invite Embed",
@@ -362,7 +362,7 @@ function ec(e) {
             if (null != T)
                 return {
                     label: N.intl.string(N.t["jaYS/h"]),
-                    icon: U.CloudIcon,
+                    icon: G.CloudIcon,
                     trackingArea: g.kY.CLOUD_PLAY,
                     onClick: T,
                 };
@@ -372,14 +372,14 @@ function ec(e) {
         { canStartAuthorization: L, hasAlreadyLinked: M, startAuthorization: P } = (0, B.RD)(o),
         D = (0, w.z)(P, M),
         O = !(0, K.A)(E, A, o.id),
-        G = (0, c.n$)(_, A.activity?.type, O);
+        U = (0, c.n$)(_, A.activity?.type, O);
     return O
         ? (0, i.jsx)(eo, {
               message: A,
               application: o,
               applicationName: _,
               channel: d,
-              header: G,
+              header: U,
               currentUserId: u,
               launchableAppId: b,
               tryWithGdnAction: S,
@@ -396,7 +396,7 @@ function ec(e) {
               application: o,
               applicationName: _,
               channel: d,
-              header: G,
+              header: U,
               currentUserId: u,
               isEmbeddedApplication: v,
               tryWithGdnAction: S,
@@ -529,7 +529,7 @@ function ex(e) {
             ((t = n.id),
             (null == o || null == o.assets || null == o.assets.large_image
                 ? null
-                : (0, Y.uD)(t, o.assets.large_image, [160, 160])) ?? void 0),
+                : (0, z.uD)(t, o.assets.large_image, [160, 160])) ?? void 0),
         info: j,
         actions: I,
         onClickContent: m,
@@ -581,17 +581,17 @@ function eE(e) {
         o = Math.max(n, t.length),
         d = (0, c.SJ)({ maxPartySize: l, partySize: o, activityActionType: r }),
         u = [...t];
-    for (; u.length < n && u.length < 8;) u.push(G.mt);
+    for (; u.length < n && u.length < 8;) u.push(U.mt);
     for (; u.length < l && u.length < 8;) u.push(null);
     return (0, i.jsxs)("div", {
         className: er.UF,
         children: [
             u.length > 0 &&
-                (0, i.jsx)(G.Ay, {
+                (0, i.jsx)(U.Ay, {
                     guildId: s,
                     users: u,
                     max: l > 0 ? Math.min(l, 8) : 8,
-                    size: G.DN.SIZE_16,
+                    size: U.DN.SIZE_16,
                     dimEmptyUsers: !0,
                     avatarBackground: !0,
                 }),
@@ -609,7 +609,7 @@ function ev(e) {
             () =>
                 a.map((e) => {
                     let t = M.default.getUser(e);
-                    return null != t ? t : G.mt;
+                    return null != t ? t : U.mt;
                 }),
             [a],
         );

@@ -1,21 +1,21 @@
-var a = i(477900);
+var n = i(477900);
 i(582128);
-var l = i(192308),
-    n = i(401843),
+var a = i(192308),
+    l = i(401843),
     s = i(676030),
     r = i(734057),
     d = i(71393),
     h = i(988468),
     o = i(287809),
-    c = i(723702),
-    u = i(753070);
+    u = i(723702),
+    c = i(753070);
 i.d(
     t,
     {},
     {
         A: function (e, t, g) {
-            if (c.isPlatformEmbedded)
-                (0, l.mM)(async () => {
+            if (u.isPlatformEmbedded)
+                (0, a.mM)(async () => {
                     let { default: e } = await Promise.all([
                         i.e(249169),
                         i.e(506933),
@@ -56,30 +56,30 @@ i.d(
                         i.e(191782),
                         i.e(190088),
                     ]).then(i.bind(i, 742527));
-                    return (t) => (0, a.jsx)(e, { ...t, analyticsLocations: g });
+                    return (t) => (0, n.jsx)(e, { ...t, analyticsLocations: g });
                 });
             else {
                 let i = r.A.getChannel(t),
-                    a = (0, s.A)(
-                        u.jQ.PRESET_CUSTOM,
-                        u.on.RESOLUTION_1080,
-                        u.kn.FPS_30,
+                    n = (0, s.A)(
+                        c.jQ.PRESET_CUSTOM,
+                        c.on.RESOLUTION_1080,
+                        c.kn.FPS_30,
                         o.default.getCurrentUser(),
                         d.A.getGuild(e)?.premiumTier,
                         i,
                     )
                         ? { width: 1920, height: 1080 }
                         : { width: 1280, height: 720 };
-                ((0, n.Xd)({
-                    preset: u.jQ.PRESET_CUSTOM,
-                    resolution: a.height,
-                    frameRate: u.kn.FPS_30,
+                ((0, l.Xd)({
+                    preset: c.jQ.PRESET_CUSTOM,
+                    resolution: n.height,
+                    frameRate: c.kn.FPS_30,
                     soundshareEnabled: !0,
                 }),
                     h.Ay.getMediaEngine()
-                        .getDesktopSource(a, !0)
+                        .getDesktopSource(n, !0)
                         .then((i) => {
-                            (0, n.XI)(e, t, { pid: null, sourceId: i, sourceName: null, analyticsLocations: g });
+                            (0, l.XI)(e, t, { pid: null, sourceId: i, sourceName: null, analyticsLocations: g });
                         }));
             }
         },

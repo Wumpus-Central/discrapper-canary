@@ -14,8 +14,8 @@ n.d(
     {},
     {
         A: function (e, t, m) {
-            let p = (0, u.AO)(e),
-                f = (0, r.bG)([c.default], () => c.default.getId());
+            let f = (0, u.AO)(e),
+                p = (0, r.bG)([c.default], () => c.default.getId());
             if (null == e) return null;
             let g = (0, o._z)(e),
                 A = d.A.getVideoStats(g) ?? {},
@@ -45,8 +45,8 @@ n.d(
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         stream: e,
-                                        streamApplication: p,
-                                        isStreamer: f === e?.ownerId,
+                                        streamApplication: f,
+                                        isStreamer: p === e?.ownerId,
                                         analyticsData: v,
                                         ...n,
                                     });
