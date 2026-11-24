@@ -1,9 +1,10 @@
 var e = E(839214),
-    i = E(355097);
-let d = (0, e.D)(() => ({
-    subsection: i.Eq.USER_PROFILE,
+    i = E(518477),
+    d = E(355097);
+let n = (0, e.D)(() => ({
+    subsection: d.Eq.USER_PROFILE,
     scrollPosition: null,
     pendingCustomizeBadgesSheet: !1,
-    editingTab: "main",
+    editingTab: i.RP.MAIN,
 }));
-E.d(t, {}, { A: d });
+E.d(t, {}, { A: n });
