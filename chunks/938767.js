@@ -1,1 +1,7 @@
-i.exports = { kL: "container_uKEKOI", my: "avatar_uKEKOI", QC: "displayName_uKEKOI" };
+t.exports = {
+    kL: "container_uKEKOI",
+    my: "avatar_uKEKOI",
+    QC: "displayName_uKEKOI",
+    e8: "withDisplayNameStyles_uKEKOI",
+    ZV: "defaultFont_uKEKOI",
+};

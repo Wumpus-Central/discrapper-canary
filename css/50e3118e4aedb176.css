@@ -68,9 +68,18 @@
     font-size: 44px;
     line-height: normal;
     max-width: 380px;
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.withDisplayNameStyles_uKEKOI {
+    overflow: visible
+}
+
+.defaultFont_uKEKOI {
+    font-weight: var(--font-weight-semibold)
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
@@ -85,4 +94,4 @@
     }
 }
 
-/*# sourceMappingURL=cb641ae9287dbe1f.css.map*/
+/*# sourceMappingURL=50e3118e4aedb176.css.map*/
