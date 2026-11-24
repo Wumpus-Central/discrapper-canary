@@ -36,8 +36,8 @@ var b = s(927813),
     w = s(475815),
     M = s(953584),
     A = s(122641),
-    _ = s(584307);
-let { LayerContainer: D, LayerProvider: k, layerContext: E } = (0, s(365912).Ay)("MediaPlayer");
+    D = s(584307);
+let { LayerContainer: _, LayerProvider: k, layerContext: E } = (0, s(365912).Ay)("MediaPlayer");
 var R = s(453903),
     P = s(44808),
     I = s(165862),
@@ -50,11 +50,11 @@ let j = (0, s(945810).mj)({
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
     L = [0.5, 0.75, 1, 1.2, 1.5, 2, 3];
-var U = s(650583),
-    O = s(792996),
+var O = s(650583),
+    U = s(792996),
     W = s(302034),
     F = s(311225);
-let B = new Set([U.dh.SPACE, U.dh.ARROW_LEFT, U.dh.ARROW_RIGHT]);
+let B = new Set([O.dh.SPACE, O.dh.ARROW_LEFT, O.dh.ARROW_RIGHT]);
 function H(e) {
     let {
             playbackRate: t,
@@ -66,7 +66,7 @@ function H(e) {
         } = e,
         u = j.useConfig({ location: "MessageMediaPlayer" }).enabled,
         c = i.useRef(null),
-        p = O.intl.string(W.default.ZwPhbB),
+        p = U.intl.string(W.default.ZwPhbB),
         m = 1 !== t,
         g = i.useCallback((e) => {
             (B.has(e.key) || /^\d$/.test(e.key)) && e.stopPropagation();
@@ -124,7 +124,7 @@ function H(e) {
                   (0, a.jsx)(d.D, {
                       ...e,
                       onKeyDown: (t) => {
-                          (e.onKeyDown(t), t.key === U.dh.SPACE && t.stopPropagation());
+                          (e.onKeyDown(t), t.key === O.dh.SPACE && t.stopPropagation());
                       },
                       innerRef: c,
                       className: l()(F.Nn, o),
@@ -161,7 +161,7 @@ function q(e) {
                       className: l()(s, K.Iv, { [K.vu]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
-                      "aria-label": O.intl.string(O.t.RscU7I),
+                      "aria-label": U.intl.string(U.t.RscU7I),
                       focusProps: { ringTarget: r },
                       children: o,
                   }),
@@ -237,24 +237,27 @@ class el extends i.Component {
         return e
             ? (0, a.jsx)(d.D, {
                   className: F.CY,
+                  focusProps: { offset: 4 * (this.props.type === es.VIDEO) },
                   onClick: i,
                   tabIndex: l ? -1 : 0,
-                  "aria-label": O.intl.string(O.t.ZcgDJX),
+                  "aria-label": U.intl.string(U.t.ZcgDJX),
                   children: (0, a.jsx)(c.PauseIcon, { size: "xs", color: "currentColor", className: F.pd }, "pause"),
               })
             : null != t && t === s
               ? (0, a.jsx)(d.D, {
                     className: F.CY,
+                    focusProps: { offset: 4 * (this.props.type === es.VIDEO) },
                     onClick: n,
                     tabIndex: l ? -1 : 0,
-                    "aria-label": O.intl.string(O.t.hsvh0i),
+                    "aria-label": U.intl.string(U.t.hsvh0i),
                     children: (0, a.jsx)(T, { className: F.pd }, "replay"),
                 })
               : (0, a.jsx)(d.D, {
                     className: F.CY,
+                    focusProps: { offset: 4 * (this.props.type === es.VIDEO) },
                     onClick: n,
                     tabIndex: l ? -1 : 0,
-                    "aria-label": O.intl.string(O.t.RscU7I),
+                    "aria-label": U.intl.string(U.t.RscU7I),
                     children: (0, a.jsx)(p.PlayIcon, { size: "xs", color: "currentColor", className: F.pd }, "play"),
                 });
     }
@@ -295,6 +298,7 @@ class el extends i.Component {
                 (0, a.jsx)("div", {
                     className: Q.Uu,
                     children: (0, a.jsx)(G.A, {
+                        focusProps: { offset: 4 * (g === es.VIDEO) },
                         ref: this.setVolumeButtonRef,
                         muted: n,
                         value: m,
@@ -399,7 +403,7 @@ class eh extends i.PureComponent {
     }
     constructor(e) {
         (super(e),
-            (this._analytics = new _.A({ src: e.src, mimeType: e.mimeType?.join("/"), fileSize: e.fileSizeBytes })));
+            (this._analytics = new D.A({ src: e.src, mimeType: e.mimeType?.join("/"), fileSize: e.fileSizeBytes })));
         let { autoPlay: t, autoMute: s, volume: a, playable: i } = this.props,
             n = "function" == typeof a ? a() : a,
             l = "function" == typeof s ? s() : s;
@@ -674,9 +678,9 @@ class eh extends i.PureComponent {
     handleKeyDown = (e) => {
         let { current: t } = this.mediaRef,
             { disableArrowKeySeek: s } = this.props;
-        if (e.key === U.dh.SPACE) (e.preventDefault(), this.setPlay(!this.state.playing));
-        else if (e.key !== U.dh.ARROW_LEFT || null == t || s)
-            if (e.key !== U.dh.ARROW_RIGHT || null == t || s) {
+        if (e.key === O.dh.SPACE) (e.preventDefault(), this.setPlay(!this.state.playing));
+        else if (e.key !== O.dh.ARROW_LEFT || null == t || s)
+            if (e.key !== O.dh.ARROW_RIGHT || null == t || s) {
                 if ((0, y.A)(e.key) && null != t) {
                     (e.preventDefault(), e.stopPropagation());
                     let s = Number(e.key) / 10;
@@ -859,7 +863,8 @@ class eh extends i.PureComponent {
                           : null,
                       t === es.VIDEO && !1 !== this.props.allowFullScreen
                           ? (0, a.jsx)(S.A, {
-                                "aria-label": O.intl.string(O.t["2nM3Pk"]),
+                                focusProps: { offset: 4 },
+                                "aria-label": U.intl.string(U.t["2nM3Pk"]),
                                 className: F.CY,
                                 iconClassName: F.pd,
                                 guestWindow: window,
@@ -943,7 +948,7 @@ class eh extends i.PureComponent {
                         children: (e) =>
                             (0, a.jsx)("div", {
                                 className: e,
-                                children: (0, a.jsxs)(k, { children: [this.renderControls(), (0, a.jsx)(D, {})] }),
+                                children: (0, a.jsxs)(k, { children: [this.renderControls(), (0, a.jsx)(_, {})] }),
                             }),
                     }),
                     t === es.VIDEO ? this.renderPlayPausePop() : null,

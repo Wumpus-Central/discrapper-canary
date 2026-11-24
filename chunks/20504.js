@@ -66,39 +66,40 @@ class m extends i.PureComponent {
     };
     render() {
         let {
-                iconClassName: e,
-                iconColor: t,
-                className: s,
-                sliderWrapperClassName: i,
-                sliderClassName: n,
-                currentWindow: m,
-                muted: g,
-                minValue: f,
-                maxValue: v,
-                value: y,
-                onVolumeShow: S,
-                onVolumeHide: C,
+                focusProps: e,
+                iconClassName: t,
+                iconColor: s,
+                className: i,
+                sliderWrapperClassName: n,
+                sliderClassName: m,
+                currentWindow: g,
+                muted: f,
+                minValue: v,
+                maxValue: y,
+                value: S,
+                onVolumeShow: C,
+                onVolumeHide: T,
             } = this.props,
-            { hovered: T, focused: b, dragging: x } = this.state,
-            w = r.VoiceNormalIcon;
+            { hovered: b, focused: x, dragging: w } = this.state,
+            M = r.VoiceNormalIcon;
         return (
-            g || y === f ? (w = o.VoiceXIcon) : y < v / 2 && (w = h.VoiceLowIcon),
+            f || S === v ? (M = o.VoiceXIcon) : S < y / 2 && (M = h.VoiceLowIcon),
             (0, a.jsxs)("div", {
-                className: l()(s, p.kL),
+                className: l()(i, p.kL),
                 onMouseEnter: () => {
-                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), S?.());
+                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.());
                 },
                 onMouseLeave: () => {
                     (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), C?.());
+                            (this.setState({ hovered: !1 }), T?.());
                         }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, a.jsx)("div", {
-                        className: l()(p.QS, i, { [p.OZ]: T || b || x }),
+                        className: l()(p.QS, n, { [p.OZ]: b || x || w }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -108,21 +109,22 @@ class m extends i.PureComponent {
                         },
                         children: (0, a.jsx)(d.A, {
                             className: p.YZ,
-                            sliderClassName: n,
+                            sliderClassName: m,
                             type: d.A.Types.VOLUME,
-                            value: y / v,
+                            value: S / y,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: m,
+                            currentWindow: g,
                             ref: this._mediaBar,
                         }),
                     }),
                     (0, a.jsx)(u.D, {
+                        focusProps: e,
                         className: p.bk,
                         "aria-label": c.intl.string(c.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, a.jsx)(w, { color: t, className: e }),
+                        children: (0, a.jsx)(M, { color: s, className: t }),
                     }),
                 ],
             })

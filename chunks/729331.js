@@ -17,8 +17,8 @@ var i = e(477900),
     j = e(176781),
     C = e(650684),
     N = e(123292),
-    b = e(687966),
-    p = e(821609),
+    p = e(687966),
+    b = e(821609),
     y = e(793574),
     A = e(87719),
     E = e(780964),
@@ -29,8 +29,8 @@ var i = e(477900),
     L = e(805573),
     w = e(818349),
     O = e(419490),
-    T = e(572164),
-    P = e(439408),
+    P = e(572164),
+    T = e(439408),
     M = e(257920),
     U = e(271597),
     G = e(464132);
@@ -42,7 +42,7 @@ var V = e(652215),
     q = e(698292),
     H = e(763180);
 function Q() {
-    return (0, w.r)((0, T.T)(), O.Ay.getEnableAutoclipping());
+    return (0, w.r)((0, P.T)(), O.Ay.getEnableAutoclipping());
 }
 function W(t) {
     let { variant: n, source: e, onClose: r } = t,
@@ -129,6 +129,7 @@ function F(t) {
     let { onPlay: n } = t;
     return (0, i.jsxs)(m.D, {
         className: q.Qw,
+        focusProps: { offset: 8 },
         "aria-label": R.intl.string(D.default["2axqmn"]),
         onClick: () => {
             (n(), (0, M.z)("ClipsEAAnnouncementModal"));
@@ -207,7 +208,7 @@ function Y(t) {
                     }),
                 ],
             }),
-            (0, i.jsx)(P.u, {
+            (0, i.jsx)(T.u, {
                 "aria-label": R.intl.string(D.default.q8YDuR),
                 value: n,
                 onChange: s,
@@ -257,7 +258,7 @@ function Z() {
             (0, i.jsxs)("div", {
                 className: q.Nr,
                 children: [
-                    (0, i.jsx)(b.GameControllerIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    (0, i.jsx)(p.GameControllerIcon, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
                     (0, i.jsx)(g.E, { variant: "body-md/medium", children: R.intl.string(D.default.L0RzNn) }),
                     (0, i.jsx)(g.E, {
                         variant: "body-sm/normal",
@@ -289,7 +290,7 @@ function B(t) {
             (0, i.jsxs)("div", {
                 className: q.o1,
                 children: [
-                    (0, i.jsx)(p.$, {
+                    (0, i.jsx)(b.$, {
                         fullWidth: !0,
                         variant: a ? "expressive" : "primary",
                         text: R.intl.string(s ? D.default.liWTC0 : a ? D.default.cXDBee : D.default.n9r54F),
