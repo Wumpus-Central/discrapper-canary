@@ -704,7 +704,7 @@ if (null == e6 || "0.0.0" !== e6.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 680211, Version Hash: c99fc9e291ff572d25b295ef1ff8a6d6725bda40`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 680213, Version Hash: 59a9e60770ef9aa0f25f65507fc3d00ff17b8118`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     eg.A.initBasic(),
@@ -776,7 +776,7 @@ let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "680211";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "680213";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eF.Ay.setCrashInformation(eU.du.BuildNumber, r);
         let s = eV?.processUtils?.getLastCrash;
@@ -2228,7 +2228,8 @@ let rt = (0, i9.qT)({
             n.e(894292),
             n.e(242967),
             n.e(557729),
-            n.e(463143),
+            n.e(537014),
+            n.e(693615),
             n.e(804365),
             n.e(332447),
             n.e(910471),
@@ -2654,7 +2655,7 @@ let rm = (0, i9.Fe)({
                 n.e(849162),
                 n.e(96922),
                 n.e(28636),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -4187,7 +4188,7 @@ let sa = (0, i9.Fe)({
                 n.e(515236),
                 n.e(633567),
                 n.e(308378),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(411938),
@@ -4406,7 +4407,8 @@ let sa = (0, i9.Fe)({
                 n.e(942186),
                 n.e(242967),
                 n.e(557729),
-                n.e(463143),
+                n.e(537014),
+                n.e(693615),
                 n.e(363750),
                 n.e(28420),
                 n.e(477550),
@@ -10729,7 +10731,7 @@ let Ep =
                             n.e(860350),
                             n.e(774550),
                             n.e(923981),
-                            n.e(317446),
+                            n.e(578667),
                             n.e(71866),
                             n.e(891473),
                             n.e(412117),
@@ -16119,7 +16121,7 @@ let pD = "isHideDevBanner",
                     className: to()(py.Wz, py.mr),
                     children: [
                         (0, b.jsx)(pL, { className: py.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "680211" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "680213" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -19087,7 +19089,7 @@ let Sc = (0, tj.Fe)({
                 n.e(699250),
                 n.e(528311),
                 n.e(97191),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(411938),
@@ -19926,7 +19928,7 @@ let Sc = (0, tj.Fe)({
                 n.e(849162),
                 n.e(96922),
                 n.e(28636),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -20618,7 +20620,7 @@ let Sc = (0, tj.Fe)({
                 n.e(395267),
                 n.e(189908),
                 n.e(865429),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -21284,7 +21286,7 @@ let Sc = (0, tj.Fe)({
     Sm = (0, tj.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e(317446),
+                n.e(578667),
                 n.e(301815),
                 n.e(30612),
                 n.e(139970),
@@ -21321,7 +21323,7 @@ let Sc = (0, tj.Fe)({
                 n.e(611899),
                 n.e(18420),
                 n.e(527552),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -21819,7 +21821,7 @@ let Sc = (0, tj.Fe)({
             Promise.all([
                 n.e(189908),
                 n.e(865429),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -23139,7 +23141,8 @@ let Sc = (0, tj.Fe)({
     Sb = (0, tj.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e(317446),
+                n.e(635664),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -23599,7 +23602,7 @@ let Sc = (0, tj.Fe)({
                 n.e(598476),
                 n.e(56501),
                 n.e(446860),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -24202,7 +24205,7 @@ let Sc = (0, tj.Fe)({
                     n.e(801071),
                     n.e(56501),
                     n.e(446860),
-                    n.e(317446),
+                    n.e(578667),
                     n.e(71866),
                     n.e(891473),
                     n.e(412117),
@@ -24940,7 +24943,7 @@ let Sc = (0, tj.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e(97191),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -27141,7 +27144,7 @@ let N7 = (0, i9.Fe)({
                 n.e(860350),
                 n.e(774550),
                 n.e(923981),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -29328,7 +29331,7 @@ let Rr = (0, i9.Fe)({
                 n.e(28094),
                 n.e(56501),
                 n.e(446860),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(411938),
@@ -30153,7 +30156,7 @@ let Rr = (0, i9.Fe)({
                 n.e(865429),
                 n.e(56501),
                 n.e(446860),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
@@ -30941,7 +30944,7 @@ let Rr = (0, i9.Fe)({
                 n.e(28094),
                 n.e(56501),
                 n.e(446860),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(411938),
@@ -38240,7 +38243,7 @@ let bB = {
                 return (
                     N(async () => {
                         let { default: i } = await Promise.all([
-                            n.e(317446),
+                            n.e(578667),
                             n.e(24312),
                             n.e(622936),
                             n.e(216947),
@@ -45561,7 +45564,7 @@ let w4 = (0, tj.Fe)({
             n.e(337375),
             n.e(970200),
             n.e(308378),
-            n.e(317446),
+            n.e(578667),
             n.e(71866),
             n.e(891473),
             n.e(411938),
@@ -45817,7 +45820,8 @@ let w4 = (0, tj.Fe)({
             n.e(942186),
             n.e(242967),
             n.e(557729),
-            n.e(463143),
+            n.e(537014),
+            n.e(693615),
             n.e(363750),
             n.e(28420),
             n.e(477550),
@@ -48861,7 +48865,7 @@ let xv = (0, i9.Fe)({
                 n.e(883221),
                 n.e(801071),
                 n.e(446860),
-                n.e(317446),
+                n.e(578667),
                 n.e(71866),
                 n.e(891473),
                 n.e(412117),
