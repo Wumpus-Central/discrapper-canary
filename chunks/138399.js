@@ -803,6 +803,7 @@ ${a}`),
                 url: D.Rsh.MESSAGES_GREET(e),
                 body: { sticker_ids: [t], allowed_mentions: r, message_reference: i },
                 oldFormErrors: !0,
+                failImmediatelyWhenRateLimited: !0,
                 rejectWithError: (0, s.fT)(),
                 context: { location: eF.Hx.GREET },
             }).then(
