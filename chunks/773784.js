@@ -264,8 +264,8 @@ var e1 = n(858899);
 function e2(e, t) {
     (0, e1.P0)({ text: e, variant: "success" === t ? "success" : "critical" });
 }
-var e6 = n(96494);
-function e3(e, t, n) {
+var e3 = n(96494);
+function e6(e, t, n) {
     return {
         id: e,
         label: t,
@@ -279,10 +279,10 @@ function e3(e, t, n) {
     };
 }
 let e5 = [
-    e3("open", e6.default.yLZjcu),
+    e6("open", e3.default.yLZjcu),
     {
         id: "reset-all",
-        label: e6.default.WM19oT,
+        label: e3.default.WM19oT,
         action: async () => {
             (await (0, eX.sm)())
                 ? e2(eW.intl.string(eW.t.i4jeWR), "success")
@@ -291,25 +291,25 @@ let e5 = [
     },
     {
         id: "reset-progress",
-        label: e6.default.HYMZmZ,
+        label: e3.default.HYMZmZ,
         action: () => {
             ((0, eX.BS)(), e2(eW.intl.string(eW.t.i4jeWR), "success"));
         },
     },
     {
         id: "reset-character",
-        label: e6.default.Q9JHSs,
+        label: e3.default.Q9JHSs,
         action: async () => {
             (await (0, eX.Z0)())
                 ? e2(eW.intl.string(eW.t.i4jeWR), "success")
                 : e2(eW.intl.string(eW.t.fEptJP), "failure");
         },
     },
-    e3("open-fake-data", e6.default.kPBZ5M, eJ.FAKE_DATA),
-    e3("open-global-stats", e6.default.UwiUbM, eJ.GLOBAL_STATS),
-    e3("open-zero-stats", e6.default.BYW9oX, eJ.ZERO_STATS),
+    e6("open-fake-data", e3.default.kPBZ5M, eJ.FAKE_DATA),
+    e6("open-global-stats", e3.default.UwiUbM, eJ.GLOBAL_STATS),
+    e6("open-zero-stats", e3.default.BYW9oX, eJ.ZERO_STATS),
 ];
-e3("open-unavailable", e6.default["58TARv"], eJ.UNAVAILABLE);
+e6("open-unavailable", e3.default["58TARv"], eJ.UNAVAILABLE);
 let e8 = ["reset-all", "reset-progress", "reset-character"];
 var e7 = n(852717),
     e9 = n(641214);
@@ -343,7 +343,7 @@ function te(e) {
                       let { closePopout: n } = e;
                       return (0, i.jsx)(eK, {
                           navId: "checkpoint-qa-submenu",
-                          "aria-label": eW.intl.string(e6.default["9dS734"]),
+                          "aria-label": eW.intl.string(e3.default["9dS734"]),
                           className: e9.gn,
                           onClose: n,
                           children: l.map((e) =>
@@ -686,12 +686,12 @@ var tV = n(971217),
     t0 = n(462887),
     t1 = n(736653),
     t2 = n(439174),
-    t6 = n(270060),
-    t3 = n(105909),
+    t3 = n(270060),
+    t6 = n(105909),
     t5 = n(682901);
 function t8() {
-    let e = (0, t3.Xb)(),
-        t = (0, t6.h)();
+    let e = (0, t6.Xb)(),
+        t = (0, t3.h)();
     if (null == e || !t) return null;
     let n = new Date().getTime();
     for (let t = t5.sp.length - 1; t >= 0; t--) {
@@ -1044,8 +1044,8 @@ var nU = n(290863),
     n0 = n(661439),
     n1 = n(385113),
     n2 = n(352003),
-    n6 = n(429913),
-    n3 = n(334074),
+    n3 = n(429913),
+    n6 = n(334074),
     n5 = n(633075),
     n8 = n(667049),
     n7 = n(46653),
@@ -1066,7 +1066,7 @@ function ii(e) {
             let t = (0, c.bG)([n7.default], () => n7.default.getId()),
                 n = (0, n8.A)(t),
                 i = l.useMemo(() => n.filter((e) => e instanceof n5.R), [n]),
-                r = (0, n6.A)(e),
+                r = (0, n3.A)(e),
                 a = l.useMemo(() => r.filter(n4.Vq), [r]),
                 s = (0, c.cf)([n9.A], () => {
                     let t = {};
@@ -1084,10 +1084,10 @@ function ii(e) {
                         return null != n && e - n < 7776e6;
                     });
                 }, [a, i, s]),
-                { eligibleToShow: u, markAsDismissed: m } = (0, n3.hj)({
+                { eligibleToShow: u, markAsDismissed: m } = (0, n6.hj)({
                     applications: o,
                     dismissibleContent: d.M.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
-                    cooldownConfig: n3.SH,
+                    cooldownConfig: n6.SH,
                 });
             return {
                 eligibleApplications: l.useMemo(() => o.filter((e) => u.includes(e.id)), [o, u]),
@@ -2304,8 +2304,8 @@ function i2(e) {
         ],
     });
 }
-var i6 = n(45780),
-    i3 = n(696451),
+var i3 = n(45780),
+    i6 = n(696451),
     i5 = n(71393),
     i8 = n(685073),
     i7 = n(73153);
@@ -2503,9 +2503,9 @@ function lf(e) {
         [r, a] = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 { shouldShow: n = !0 } = t,
-                i = (0, i6.G$)(d.V.ADOPT_CLAN_IDENTITY_NOTICE, e ?? ""),
+                i = (0, i3.G$)(d.V.ADOPT_CLAN_IDENTITY_NOTICE, e ?? ""),
                 l = (0, c.bG)(
-                    [i5.A, eO.default, i3.Ay],
+                    [i5.A, eO.default, i6.Ay],
                     () => {
                         if (null === e) return !1;
                         let t = i5.A.getGuild(e);
@@ -2516,7 +2516,7 @@ function lf(e) {
                             (n.primaryGuild?.identityGuildId === t.id && n.primaryGuild?.tag === t.profile.tag)
                         )
                             return !1;
-                        let i = i3.Ay.getMember(e, n.id);
+                        let i = i6.Ay.getMember(e, n.id);
                         return null != i && !i.isPending;
                     },
                     [e],
@@ -3017,7 +3017,7 @@ function l0(e) {
 }
 var l1 = n(873298),
     l2 = n(840387);
-function l6(e) {
+function l3(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
         r = (0, l2.Z)(),
         a = nT.KP.useSetting(),
@@ -3051,7 +3051,7 @@ function l6(e) {
         actions: [{ text: eW.intl.string(eW.t.eOoTMX), variant: "primary", onClick: o }],
     });
 }
-var l3 = n(415443);
+var l6 = n(415443);
 function l5(e) {
     let t,
         n,
@@ -3081,7 +3081,7 @@ function l5(e) {
         }, [a]),
         g = em.A.coachmarkDismissibleContent;
     if (null != r) {
-        let e = (0, l3.A)("1795562659075", !0);
+        let e = (0, l6.A)("1795563083416", !0);
         t =
             null != e
                 ? eW.intl.formatToPlainString(eW.t.wve4kg, { webBuildOverride: r.id, builtAt: e })
@@ -3116,7 +3116,7 @@ function l5(e) {
                                   children: (0, i.jsx)(I.hm, { markAsDismissed: n, targetElementRef: m }),
                               })
                             : t === d.M.PRIVATE_PROFILE_COACHMARK
-                              ? (0, i.jsx)(l6, { markAsDismissed: n, targetElementRef: m })
+                              ? (0, i.jsx)(l3, { markAsDismissed: n, targetElementRef: m })
                               : t === d.M.CONSOLE_CONNECTION_COACHMARK
                                 ? (0, i.jsx)(lQ, { markAsDismissed: n, targetElementRef: m })
                                 : null != g && t === g
