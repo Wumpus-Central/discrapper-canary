@@ -11,8 +11,8 @@ var o = n(73153),
     h = n(526162),
     m = n(603880),
     g = n(236814),
-    x = n(792996),
-    f = n(40025);
+    f = n(792996),
+    x = n(40025);
 function v(e) {
     let { disabled: t, size: n } = e,
         [i] = (0, r.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]),
@@ -58,28 +58,28 @@ n.d(
                     className: t,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: f.wx,
+                            className: x.wx,
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: f.so,
+                                    className: x.so,
                                     children: [
                                         !r &&
                                             (0, l.jsxs)("div", {
-                                                className: f.DD,
+                                                className: x.DD,
                                                 children: [
                                                     (0, l.jsx)(s.D, {
-                                                        className: f.Qw,
+                                                        className: x.Qw,
                                                         variant: "heading-xl/medium",
                                                         color: "text-strong",
-                                                        children: x.intl.string(x.t.NThqTw),
+                                                        children: f.intl.string(f.t.NThqTw),
                                                     }),
                                                     (0, l.jsx)(d.A, { color: "strong", size: "sm" }),
                                                 ],
                                             }),
                                         (0, l.jsx)(s.D, {
                                             variant: "body-sm/normal",
-                                            className: f.W$,
-                                            children: x.intl.string(x.t.IgENJo),
+                                            className: x.W$,
+                                            children: f.intl.string(f.t.IgENJo),
                                         }),
                                     ],
                                 }),

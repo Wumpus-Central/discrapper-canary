@@ -22,8 +22,8 @@ n.d(
                     "aria-label": m,
                     onButtonClick: h,
                     onBlockClick: E,
-                    badge: f,
-                    innerRef: p,
+                    badge: p,
+                    innerRef: f,
                     listItemProps: x,
                 } = e,
                 C = s.useId(),
@@ -36,13 +36,13 @@ n.d(
             return (0, r.jsxs)(o.D, {
                 ...x,
                 className: i()(d.iC, g[t]),
-                innerRef: p,
+                innerRef: f,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
                 "aria-describedby": null != l ? C : void 0,
                 onClick: E,
                 children: [
-                    (0, r.jsx)("div", { className: d.LI, children: f }),
+                    (0, r.jsx)("div", { className: d.LI, children: p }),
                     (0, r.jsx)("div", {
                         className: d.P4,
                         children:

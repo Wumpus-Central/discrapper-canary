@@ -64,8 +64,8 @@ function L(e) {
               children: c.map((e) => (0, s.jsx)(_.A, { containerDimensions: t, effect: e, onComplete: x }, e.id)),
           });
 }
-var M = t(253932),
-    w = t(967198),
+var w = t(253932),
+    M = t(967198),
     D = t(129230),
     U = t(796774),
     z = t(209932),
@@ -95,7 +95,7 @@ function $(e) {
 }
 function Z(e) {
     let { sound: n, previewSound: t, disabled: l = !1, tooltipPosition: a = "top", analyticsLocations: r } = e,
-        c = (0, o.bG)([w.A], () => w.A.getGuildId()),
+        c = (0, o.bG)([M.A], () => M.A.getGuildId()),
         d = (0, J._)("PreviewButton"),
         u = i.useMemo(
             () =>
@@ -167,7 +167,7 @@ function ee(e) {
             onMouseEnter: _,
             onSelectItem: R,
             analyticsLocations: P,
-            buttonOverlay: w = B.If.PLAY,
+            buttonOverlay: M = B.If.PLAY,
             showLockForDisabledSound: D = !0,
             inNitroLockedSection: U = !1,
             isAnimated: z = !0,
@@ -189,7 +189,7 @@ function ee(e) {
         } = (0, K.A)(
             m,
             h?.id ?? null,
-            (H ? M.HO.getSetting() : M.dG.getSetting()?.volume) ?? 100,
+            (H ? w.HO.getSetting() : w.dG.getSetting()?.volume) ?? 100,
             !H && h?.isVocal() ? q.a.VOICE : q.a.DEFAULT,
         ),
         { createMultipleConfettiAt: eh } = i.useContext(E.x),
@@ -261,12 +261,12 @@ function ee(e) {
             () => e.stop()
         );
     }, [eN]);
-    let eM =
+    let ew =
             ((l = ex.current),
             null == (d = l?.parentElement?.getBoundingClientRect())
                 ? { width: 0, height: 0 }
                 : { width: d.width, height: d.height }),
-        ew = X.intl.formatToPlainString(X.t.tuMUJ2, { emojiName: m.emojiName, soundName: m.name });
+        eM = X.intl.formatToPlainString(X.t.tuMUJ2, { emojiName: m.emojiName, soundName: m.name });
     return (0, s.jsxs)("li", {
         ref: es,
         className: a()(Y.H, x),
@@ -281,7 +281,7 @@ function ee(e) {
                 children: (0, s.jsxs)(f.s, {
                     ...ei,
                     buttonProps: { ...ef, id: eI, role: "button" },
-                    "aria-label": et ? `${ew}, ${X.intl.string(X.t.y2b7CA)}` : ew,
+                    "aria-label": et ? `${eM}, ${X.intl.string(X.t.y2b7CA)}` : eM,
                     className: a()(
                         Y.aG,
                         {
@@ -318,7 +318,7 @@ function ee(e) {
                         }),
                         et && !ej && (0, s.jsx)("span", { className: Y.wO, "aria-hidden": !0 }),
                         (function () {
-                            switch (w) {
+                            switch (M) {
                                 case B.If.ADD:
                                     return (0, s.jsxs)("div", {
                                         className: Y.ec,
@@ -374,7 +374,7 @@ function ee(e) {
                                                   (0, s.jsx)("div", {
                                                       className: Y.O5,
                                                       children:
-                                                          w === B.If.SOUNDMOJI
+                                                          M === B.If.SOUNDMOJI
                                                               ? (0, s.jsx)(S.Ay, {
                                                                     sound: m,
                                                                     channel: h,
@@ -401,7 +401,7 @@ function ee(e) {
                         children: !U && (0, s.jsxs)("div", { className: Y.ld, children: [eR, eL] }),
                     }),
                 }),
-            !0 === H && (0, s.jsx)(L, { sound: m, containerDimensions: eM, ref: $ }),
+            !0 === H && (0, s.jsx)(L, { sound: m, containerDimensions: ew, ref: $ }),
         ],
     });
 }

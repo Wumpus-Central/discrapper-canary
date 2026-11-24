@@ -12,8 +12,8 @@ var r = n(855986),
     h = n(535229),
     m = n(526162),
     g = n(603880),
-    x = n(793943),
-    f = n(915089),
+    f = n(793943),
+    x = n(915089),
     v = n(506988),
     y = n(830543),
     A = n(332560),
@@ -36,7 +36,7 @@ function P(e) {
         D = R === C.S9.HIDDEN,
         B = R === C.S9.LOCKED,
         O = "settings" === t,
-        L = (0, f.GV)(),
+        L = (0, x.GV)(),
         { ref: F, ...K } = (0, i._u)({ orientation: "horizontal", labelledBy: L });
     return ((0, A.UF)(v.uF.APP_ICON_SETTINGS, A.rl.APP_ICON_PICKER, !D), D)
         ? null
@@ -75,7 +75,7 @@ function P(e) {
                           isSelected: w,
                           onSelect: function () {
                               B
-                                  ? ((0, h.C)(d.aS.HEXAGON), O && ((0, x.nf)(x.HP.APP_ICON), (0, y.default)()))
+                                  ? ((0, h.C)(d.aS.HEXAGON), O && ((0, f.nf)(f.HP.APP_ICON), (0, y.default)()))
                                   : (async function () {
                                         !1 ===
                                             (await (async function () {

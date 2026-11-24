@@ -22,7 +22,7 @@ function E(e, t) {
     for (let e = n; e < n + t.rows; e++) for (let n = l; n < l + t.columns; n++) r.push(`${e},${n}`);
     return r;
 }
-function f(e, t, n) {
+function p(e, t, n) {
     return E(t, n).every((t) => !e.has(t));
 }
 n.d(
@@ -87,7 +87,7 @@ n.d(
                     (o = 1),
                     l.forEach((t, n) => {
                         let u = n === l.length - 1;
-                        for (; (u && i + t.rows - 1 < a) || o + t.columns - 1 > r || !f(e, { row: i, column: o }, t);)
+                        for (; (u && i + t.rows - 1 < a) || o + t.columns - 1 > r || !p(e, { row: i, column: o }, t);)
                             ++o > r && ((o = 1), i++);
                         (E({ row: i, column: o }, t).forEach((t) => e.add(t)),
                             s.push({ row: i, column: o }),
@@ -107,7 +107,7 @@ n.d(
                         let e = null;
                         for (let r = 1; r + l.rows - 1 <= n && null == e; r++)
                             for (let n = 1; n + l.columns - 1 <= t && null == e; n++)
-                                f(s, { row: r, column: n }, l) && (e = { row: r, column: n });
+                                p(s, { row: r, column: n }, l) && (e = { row: r, column: n });
                         if (null == e) return null;
                         (E(e, l).forEach((e) => s.add(e)), a.push(e));
                     }

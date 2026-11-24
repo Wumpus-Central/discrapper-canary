@@ -34,8 +34,8 @@ var s,
 t(801541);
 var L = t(889137);
 t(980504);
-var M = t(792996),
-    w =
+var w = t(792996),
+    M =
         (((s = {})[(s.JOIN_GUILD = 0)] = "JOIN_GUILD"),
         (s[(s.GET_NITRO = 1)] = "GET_NITRO"),
         (s[(s.NONE = 2)] = "NONE"),
@@ -51,7 +51,7 @@ function B(e) {
                     (await S.A.joinGuild(n), S.A.transitionToGuildSync(n));
                 } catch {}
         }, [t, n]);
-    return s === w.GET_NITRO
+    return s === M.GET_NITRO
         ? (0, i.jsx)(P.A, {
               fullWidth: !0,
               showGradient: !0,
@@ -60,13 +60,13 @@ function B(e) {
               size: E.$n.Sizes.SMALL,
               color: E.$n.Colors.CUSTOM,
               onClick: t,
-              textOptions: { textOverride: M.intl.string(M.t.pj0XBN) },
+              textOptions: { textOverride: w.intl.string(w.t.pj0XBN) },
           })
-        : s === w.JOIN_GUILD
+        : s === M.JOIN_GUILD
           ? (0, i.jsx)(y.$, {
                 variant: "primary",
                 size: "sm",
-                text: M.intl.string(M.t.riu2R5),
+                text: w.intl.string(w.t.riu2R5),
                 fullWidth: !0,
                 onClick: a,
             })
@@ -113,20 +113,20 @@ function V(e) {
                         canSendSoundmojis: s,
                         isDefaultSound: n,
                     })
-                        .with({ canSendSoundmojis: !1 }, () => M.intl.string(M.t.x2kyyJ))
-                        .with({ isDefaultSound: !0 }, () => M.intl.string(M.t.AabHep))
-                        .with({ isInGuild: !1, isGuildDiscoverable: !1 }, () => M.intl.string(M.t.MRYt06))
+                        .with({ canSendSoundmojis: !1 }, () => w.intl.string(w.t.x2kyyJ))
+                        .with({ isDefaultSound: !0 }, () => w.intl.string(w.t.AabHep))
+                        .with({ isInGuild: !1, isGuildDiscoverable: !1 }, () => w.intl.string(w.t.MRYt06))
                         .with({ hasSoundmojiPermissions: !0, isInGuild: !0, isSoundFromDifferentGuild: !1 }, () =>
-                            M.intl.string(M.t.p17MQJ),
+                            w.intl.string(w.t.p17MQJ),
                         )
                         .with({ hasSoundmojiPermissions: !0, isInGuild: !0, isSoundFromDifferentGuild: !0 }, () =>
-                            M.intl.string(M.t.Lkbm5s),
+                            w.intl.string(w.t.Lkbm5s),
                         )
                         .with({ hasSoundmojiPermissions: !0, isInGuild: !1, isGuildDiscoverable: !0 }, () =>
-                            M.intl.string(M.t.GTJmaS),
+                            w.intl.string(w.t.GTJmaS),
                         )
                         .with({ hasSoundmojiPermissions: !1, isInGuild: !0, isSoundFromDifferentGuild: !1 }, () =>
-                            M.intl.string(M.t["sj/imS"]),
+                            w.intl.string(w.t["sj/imS"]),
                         )
                         .with(
                             {
@@ -135,15 +135,15 @@ function V(e) {
                                 isSoundFromDifferentGuild: !0,
                                 canSendSoundmojis: !0,
                             },
-                            () => M.intl.string(M.t["3Ru2/x"]),
+                            () => w.intl.string(w.t["3Ru2/x"]),
                         )
                         .with({ hasSoundmojiPermissions: !1, isInGuild: !1, isGuildDiscoverable: !0 }, () =>
-                            M.intl.string(M.t.qRkWhZ),
+                            w.intl.string(w.t.qRkWhZ),
                         )
                         .exhaustive();
                 }, [n, b, t, p, a, s]),
             }),
-        D = S === w.JOIN_GUILD,
+        D = S === M.JOIN_GUILD,
         U = !g && E,
         V = l.useMemo(
             () => (p ? O.GO.createFromGuildRecord(j) : null != b ? O.GO.createFromDiscoverableGuild(b) : void 0),
@@ -177,7 +177,7 @@ function V(e) {
                                           variant: "body-sm/medium",
                                           color: "text-muted",
                                           className: z.x$,
-                                          children: p ? M.intl.string(M.t.tGDabk) : M.intl.string(M.t.rnOmOa),
+                                          children: p ? w.intl.string(w.t.tGDabk) : w.intl.string(w.t.rnOmOa),
                                       }),
                                       (0, i.jsx)("div", {
                                           className: z.Ff,
@@ -216,11 +216,11 @@ function J() {
         className: z.xJ,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(d.E, { variant: "body-sm/normal", children: M.intl.string(M.t["2JbvKw"]) }),
+            (0, i.jsx)(d.E, { variant: "body-sm/normal", children: w.intl.string(w.t["2JbvKw"]) }),
             (0, i.jsx)("div", {
                 className: z.aw,
                 children: (0, i.jsx)(u.A, {
-                    "aria-label": M.intl.string(M.t["2JbvKw"]),
+                    "aria-label": w.intl.string(w.t["2JbvKw"]),
                     onChangeEnd: n,
                     defaultValue: (0, f.M)(e),
                     maxValue: 100,
@@ -252,7 +252,7 @@ function W(e) {
                               variant: "body-xs/medium",
                               color: "text-overlay-light",
                               className: z.sD,
-                              children: M.intl.string(M.t["BMw+7I"]),
+                              children: w.intl.string(w.t["BMw+7I"]),
                           }),
                           (0, i.jsx)(m.E, { type: { text: "BETA" }, variant: "primary" }),
                       ],
@@ -278,7 +278,7 @@ function H(e) {
                     }),
                     (0, i.jsx)("div", {
                         className: z.tn,
-                        children: (0, i.jsx)(d.E, { variant: "body-sm/normal", children: M.intl.string(M.t.D6eYmf) }),
+                        children: (0, i.jsx)(d.E, { variant: "body-sm/normal", children: w.intl.string(w.t.D6eYmf) }),
                     }),
                 ],
             }),
@@ -348,14 +348,14 @@ function q(e) {
             (0, i.jsx)(F, {
                 setTooltipShowing: s,
                 renderPopout: () => (0, i.jsx)(J, {}),
-                tooltipText: M.intl.string(M.t["19lt24"]),
+                tooltipText: w.intl.string(w.t["19lt24"]),
                 position: "top",
                 children: (0, i.jsx)(p.VoiceNormalIcon, { size: "md", color: "currentColor", className: K.Wo }),
             }),
             (0, i.jsx)(F, {
                 setTooltipShowing: s,
                 renderPopout: (e) => (0, i.jsx)(V, { sound: n, channel: t, renderSoundButton: l, ...e }),
-                tooltipText: M.intl.string(M.t["KVbJU/"]),
+                tooltipText: w.intl.string(w.t["KVbJU/"]),
                 position: "right",
                 children: (0, i.jsx)(b.CircleInformationIcon, { size: "md", color: "currentColor", className: K.Wo }),
             }),

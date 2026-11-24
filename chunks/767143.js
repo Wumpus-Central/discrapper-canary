@@ -31,8 +31,8 @@ var s = t(477900),
     R = t(384684),
     P = t(985242),
     L = t(87719),
-    M = t(465794),
-    w = t(976860),
+    w = t(465794),
+    M = t(976860),
     D = t(309010),
     U = t(967198),
     z = t(287809),
@@ -60,7 +60,7 @@ let Q = (e) => {
         g = V.Ay.getGuildIconURL({ id: o, icon: d, size: 32, canAnimate: !0 }),
         j = (i = i ?? !0) || t.isDiscoverable();
     function p() {
-        t.isDiscoverable() ? (r(), (0, K.Z2)(o, {})) : i && (r(), (0, w.pX)(q.BVt.CHANNEL(o, D.Ay.getChannelId(o))));
+        t.isDiscoverable() ? (r(), (0, K.Z2)(o, {})) : i && (r(), (0, M.pX)(q.BVt.CHANNEL(o, D.Ay.getChannelId(o))));
     }
     let b = t.isDiscoverable() && null != t.presenceCount;
     return (0, s.jsxs)(v.A, {
@@ -157,7 +157,7 @@ function ee(e) {
             closePopout: S,
             onToggleShowMoreEmojis: k,
             guildEmoji: _,
-            demoMode: w = !1,
+            demoMode: M = !1,
             nonce: D,
         } = e,
         V = (0, o.bG)([z.default], () => z.default.getCurrentUser()),
@@ -167,7 +167,7 @@ function ee(e) {
         et = null != H && (H === j?.id || H === C?.id),
         es = null != C,
         ei = j?.isDiscoverable() ?? !1;
-    w && ((ee = !0), (ei = !0), (es = !1), (et = !1));
+    M && ((ee = !0), (ei = !0), (es = !1), (et = !1));
     let el = {
             page: null != (0, o.bG)([U.A], () => U.A.getGuildId()) ? q.liQ.GUILD_CHANNEL : q.liQ.DM_CHANNEL,
             section: q.JJy.EMOJI_UPSELL_POPOUT,
@@ -227,7 +227,7 @@ function ee(e) {
             popoutData: em,
             emojiSourceGuildId: j?.id,
             nonce: D,
-            demoMode: w,
+            demoMode: M,
         }),
         ep = em.type === W.u.JOIN_GUILD,
         eb = em.type === W.u.GET_PREMIUM,
@@ -238,7 +238,7 @@ function ee(e) {
         children: [
             (function () {
                 async function e() {
-                    if (w || null == j || es) return;
+                    if (M || null == j || es) return;
                     S();
                     let e = j.id;
                     try {
@@ -283,7 +283,7 @@ function ee(e) {
                             ? (0, s.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: Z.lI,
-                                  children: (0, s.jsx)(M.A, {
+                                  children: (0, s.jsx)(w.A, {
                                       subscriptionTier: Y.pe.TIER_2,
                                       size: "sm",
                                       fullWidth: !0,
@@ -361,7 +361,7 @@ function ee(e) {
                                             t &&
                                                 (k?.(),
                                                 eN ||
-                                                    w ||
+                                                    M ||
                                                     B.default.track(q.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ej),
                                                 eI(!eN));
                                         },
@@ -437,7 +437,7 @@ function en(e) {
                               (0, s.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: Z.lI,
-                                  children: (0, s.jsx)(M.A, {
+                                  children: (0, s.jsx)(w.A, {
                                       subscriptionTier: Y.pe.TIER_2,
                                       buttonTextOverride: l.text,
                                       fullWidth: !0,

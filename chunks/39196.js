@@ -19,15 +19,15 @@ n.d(
                 h = u(e, t);
             if (null == e || null == h) return t;
             let E = (0, o.Q7)(h, n),
-                f = {
+                p = {
                     locale: s,
                     endsAt: e.endsAt,
                     redemptionEndsAt: e.redemptionEndsAt,
                     helpCenterId: h.shared.helpCenter?.id,
                 },
-                p = E?.title != null && "" !== E.title ? (0, l.U)((0, a.wJ)(E.title, f)) : t.title,
-                x = E?.description != null && "" !== E.description ? (0, l.U)((0, a.wJ)(E.description, f)) : t.summary;
-            if (h.subtype === r.h5.BASIC) return { ...t, title: p, summary: x };
+                f = E?.title != null && "" !== E.title ? (0, l.U)((0, a.wJ)(E.title, p)) : t.title,
+                x = E?.description != null && "" !== E.description ? (0, l.U)((0, a.wJ)(E.description, p)) : t.summary;
+            if (h.subtype === r.h5.BASIC) return { ...t, title: f, summary: x };
             let C =
                 E?.rewardStates != null
                     ? ((c = E.rewardStates),
@@ -37,7 +37,7 @@ n.d(
                     : void 0;
             return {
                 ...t,
-                title: p,
+                title: f,
                 summary: x,
                 heroBannerUrl: C ?? t.heroBannerUrl,
                 heroBannerAnimatedUrl: void 0,

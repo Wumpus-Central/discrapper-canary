@@ -30,7 +30,7 @@ let E = {
             fullWidth: !1,
         },
     },
-    f = (e) => {
+    p = (e) => {
         let { helpArticle: t } = e,
             { id: n, label: s } = t,
             a = r.useCallback(() => {
@@ -59,7 +59,7 @@ n.d(
                 {
                     headingVariant: m,
                     headingColor: g,
-                    titleClassName: p,
+                    titleClassName: f,
                     buttonVariant: x,
                     buttonSize: C,
                     align: A,
@@ -73,10 +73,10 @@ n.d(
                 className: o,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: a()(h.DD, p),
+                        className: a()(h.DD, f),
                         children: [
                             (0, l.jsx)(c.D, { variant: m, color: g, children: t }),
-                            null != r && (0, l.jsx)(f, { helpArticle: r }),
+                            null != r && (0, l.jsx)(p, { helpArticle: r }),
                         ],
                     }),
                     null != s && null != i && (0, l.jsx)(d.$, { variant: x, size: C, onClick: i, text: s }),

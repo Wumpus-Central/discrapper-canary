@@ -19,29 +19,29 @@ n.d(
                     applicationId: t,
                     headerText: n,
                     subheaderText: E,
-                    gradientColors: f,
-                    gradientAngle: p,
+                    gradientColors: p,
+                    gradientAngle: f,
                     skuIds: x,
                     resolvedSkuIds: C,
                     isLoading: A,
                     tab: v,
                     endTime: b,
                     ctaType: L = "storefront",
-                    logoUrl: y,
-                    termsUrl: _,
+                    logoUrl: _,
+                    termsUrl: y,
                     backgroundImageUrl: I,
                 } = e,
                 S = (0, c.ur)(b) ?? void 0,
-                k = (0, o.W8)(),
-                j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
-                N = r.useMemo(() => {
+                N = (0, o.W8)(),
+                k = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
+                j = r.useMemo(() => {
                     if ("none" !== L)
-                        return "nitro" !== L || k
+                        return "nitro" !== L || N
                             ? {
                                   kind: "button",
                                   text:
-                                      null != j
-                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: j })
+                                      null != k
+                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: k })
                                           : g.intl.string(g.t.apFNLU),
                                   onClick: () => (0, u.default)({ applicationId: t }),
                                   onMouseDown: () => (0, u.G)({ applicationId: t }),
@@ -55,7 +55,7 @@ n.d(
                                       buttonTextOverride: g.intl.string(g.t.pj0XBN),
                                   }),
                               };
-                }, [L, t, j, k]);
+                }, [L, t, k, N]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
                 resolvedSkuIds: C,
@@ -64,15 +64,15 @@ n.d(
                 applicationId: t,
                 headerText: n,
                 subheaderText: E,
-                logoUrl: y,
-                cta: N,
+                logoUrl: _,
+                cta: j,
                 timeLeftText: S,
-                termsUrl: _,
+                termsUrl: y,
                 backgroundImageUrl: I,
                 analyticsSection: "slayer-storefront-promotional-banner",
                 analyticsTileType: "SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER",
                 analyticsImpressionType: "social_layer_storefront_promotional_banner",
-                backgroundGradient: f.length > 0 ? `linear-gradient(${p}deg, ${f.join(", ")})` : void 0,
+                backgroundGradient: p.length > 0 ? `linear-gradient(${f}deg, ${p.join(", ")})` : void 0,
             });
         },
     },
