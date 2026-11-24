@@ -199,8 +199,14 @@ n.d(
                 !("error" === e.state && Date.now() - e.fetchedAt < h)
             )
                 try {
-                    a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
-                    let e = (await r.Bo.get({ url: _.Rsh.SOCIAL_LAYER_STOREFRONT_CONFIG, rejectWithError: !0 })).body,
+                    await a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
+                    let e = (
+                            await r.Bo.get({
+                                url: _.Rsh.SOCIAL_LAYER_STOREFRONT_CONFIG,
+                                rejectWithError: !0,
+                                retries: 3,
+                            })
+                        ).body,
                         t =
                             e.storefronts?.map((e) => ({
                                 guildId: e.guild_id,
