@@ -529,7 +529,7 @@ let i = {
         languageId: "styx",
         languageExport: "tree_sitter_styx",
         wasm: new URL(a(63694), a.b),
-        highlights: new URL(a(223705), a.b),
+        highlights: new URL(a(446086), a.b),
         injections: new URL(a(752104), a.b),
     },
     svelte: {

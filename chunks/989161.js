@@ -2,11 +2,11 @@ n.d(t, {
     Ay: () => nb,
     v7: () => ng,
     uW: () => nC,
-    Wh: () => nS,
-    ck: () => ny,
+    Wh: () => nE,
+    ck: () => nS,
     ml: () => np,
     MD: () => nA,
-    Sk: () => nE,
+    Sk: () => ny,
     NO: () => nh,
     Vu: () => nd,
     C: () => nm,
@@ -29,9 +29,9 @@ var l = n(477900),
     p = n(559106),
     g = n(281595),
     x = n(465532),
-    S = n(765671),
-    y = n(775602),
-    E = n(793574),
+    E = n(765671),
+    S = n(775602),
+    y = n(793574),
     A = n(688810),
     C = n(177640),
     b = n(989837),
@@ -269,9 +269,9 @@ function ed(e) {
             sectionDescriptors: p,
             activeSections: g,
             commandsByActiveSection: x,
-            hasMoreAfter: S,
-            commands: y,
-            filteredSectionId: E,
+            hasMoreAfter: E,
+            commands: S,
+            filteredSectionId: y,
             scrollDown: A,
             filterSection: C,
         } = $.cu({
@@ -296,8 +296,8 @@ function ed(e) {
         });
     function I(e) {
         let t = g.length,
-            n = x.reduce((e, t) => e + t.data.length, 0) - 7 * !!S;
-        (S && e + 420 > 48 * t + 56 * n - 512 && A(), b(e), ec(), (o.current = e));
+            n = x.reduce((e, t) => e + t.data.length, 0) - 7 * !!E;
+        (E && e + 420 > 48 * t + 56 * n - 512 && A(), b(e), ec(), (o.current = e));
     }
     let v = i.useRef(I);
     (i.useEffect(() => {
@@ -305,20 +305,20 @@ function ed(e) {
     }),
         i.useEffect(() => {
             v.current(o.current);
-        }, [y]));
-    let N = i.useCallback((e) => (e !== g.length - 1 || S ? 16 : 0), [g.length, S]),
+        }, [S]));
+    let N = i.useCallback((e) => (e !== g.length - 1 || E ? 16 : 0), [g.length, E]),
         T = x.map((e) => e.data.length);
     (i.useEffect(() => {
         null != d.current && h && null != u && d.current.scrollRowIntoView(u);
     }, [h, u]),
         i.useLayoutEffect(() => {
-            null != E && d.current?.scrollToSectionTop(0);
-        }, [y, E]));
+            null != y && d.current?.scrollToSectionTop(0);
+        }, [S, y]));
     let j = i.useCallback(
             (e) => {
-                e.id === E || e.id === es.Ik.FRECENCY ? (C(null), d.current?.scrollToSectionTop(0)) : C(e.id);
+                e.id === y || e.id === es.Ik.FRECENCY ? (C(null), d.current?.scrollToSectionTop(0)) : C(e.id);
             },
-            [C, E],
+            [C, y],
         ),
         _ = i.useCallback(
             (e, n, l) => {
@@ -344,14 +344,14 @@ function ed(e) {
                 return !0;
             },
             onMoveSelection: (e) => {
-                if (0 === y.length) return !0;
-                let t = 7 * !!S,
-                    n = y.length + t,
+                if (0 === S.length) return !0;
+                let t = 7 * !!E,
+                    n = S.length + t,
                     l = null == u ? 0 : u + e;
                 return (l >= n ? (l = n - 1) : l < 0 && (l = 0), c(l), m(!0), !0);
             },
         }),
-        [y.length, x, S, p, _, u],
+        [S.length, x, E, p, _, u],
     );
     let R = i.useCallback(
             (e) => {
@@ -439,7 +439,7 @@ function ed(e) {
                     className: eo.H$,
                     channel: t,
                     sections: p,
-                    filteredSectionId: E,
+                    filteredSectionId: y,
                     activeCategoryIndex: f,
                     onSectionClick: j,
                     applicationCommandListRef: d,
@@ -472,10 +472,10 @@ var em = n(164636),
     ep = n(31498),
     eg = n(598071),
     ex = n(151271),
-    eS = n(546811),
-    ey = n(256265);
+    eE = n(323793),
+    eS = n(256265);
 n(336807);
-var eE = n(857071),
+var ey = n(857071),
     eA = n(135621),
     eC = n(105330),
     eb = n(46653),
@@ -550,11 +550,11 @@ function eZ(e) {
                 p = 48,
                 g = null,
                 x = null,
-                S = !1;
-            function y(e) {
+                E = !1;
+            function S(e) {
                 return Math.max(0, Math.min(1, e / 255));
             }
-            function E(e, t) {
+            function y(e, t) {
                 let n = new ez.A(t ? 0 : e);
                 return (t && n.animateTo(e), { target: e, animator: n });
             }
@@ -570,20 +570,20 @@ function eZ(e) {
                     let v = (0, eq.yM)(t) ?? [];
                     (!(function (e, t) {
                         if (e === a) return;
-                        let n = (s.length > 0 ? s : t.map((e) => E(y(e), !1))).slice(-e);
-                        ((s = Array.from({ length: Math.max(0, e - n.length) }, () => E(0, !1)).concat(n)),
+                        let n = (s.length > 0 ? s : t.map((e) => y(S(e), !1))).slice(-e);
+                        ((s = Array.from({ length: Math.max(0, e - n.length) }, () => y(0, !1)).concat(n)),
                             (a = e),
                             (u = s[s.length - 1]?.target ?? 0));
                     })(Math.max(1, Math.ceil(b / 6) + 2), v),
-                        v.length < o && ((s = Array.from({ length: a }, () => E(0, !1))), (u = 0), (p = 48)),
+                        v.length < o && ((s = Array.from({ length: a }, () => y(0, !1))), (u = 0), (p = 48)),
                         (o = v.length));
-                    let N = v.length > 0 ? y(v[v.length - 1]) : u;
+                    let N = v.length > 0 ? S(v[v.length - 1]) : u;
                     if (d.current)
                         for (p += C; p >= 48;) {
                             var T;
                             ((u += (N - u) * 0.45),
                                 (T = u),
-                                s.push(E(T, !h.current)),
+                                s.push(y(T, !h.current)),
                                 s.length > a && s.splice(0, s.length - a),
                                 (p -= 48));
                         }
@@ -597,9 +597,9 @@ function eZ(e) {
                         M = 2 * r,
                         L = d.current && !h.current ? _ * (1 - p / 48) : 0,
                         P = k - s.length * _ + L;
-                    !m.current || h.current ? ((x = null), (S = !1)) : null == x && (x = A);
+                    !m.current || h.current ? ((x = null), (E = !1)) : null == x && (x = A);
                     let D = null == x ? null : A - x;
-                    (null != D && D >= 100 && !S && ((S = !0), f.current()), n.beginPath());
+                    (null != D && D >= 100 && !E && ((E = !0), f.current()), n.beginPath());
                     for (let e = 0; e < s.length; e++) {
                         let t = s[e],
                             l = h.current ? t.target : Math.max(0, t.animator.getCurrentValue()),
@@ -637,7 +637,7 @@ function e8(e) {
         [d, h] = i.useState(!1),
         [m, f] = i.useState(!1),
         [p, g] = i.useState(0),
-        [x, S] = i.useState(r);
+        [x, E] = i.useState(r);
     (i.useEffect(() => {
         if (!u) return;
         let e = 0;
@@ -664,10 +664,10 @@ function e8(e) {
                 n !== t && c(!1);
             }
         }, [t, u, c]));
-    let y = i.useCallback(() => {
+    let S = i.useCallback(() => {
             (h(!0), c((e) => !e));
         }, []),
-        E = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 let t = o.current;
                 if (null == t) return;
@@ -678,7 +678,7 @@ function e8(e) {
         ),
         A = i.useCallback((e) => {
             let t = e.currentTarget.duration;
-            Number.isFinite(t) && t > 0 && S(t);
+            Number.isFinite(t) && t > 0 && E(t);
         }, []),
         C = i.useCallback(() => {
             let e = o.current;
@@ -698,7 +698,7 @@ function e8(e) {
                 text: T,
                 children: (0, l.jsx)("div", {
                     className: s()(e5.VQ, e6.UD),
-                    children: (0, l.jsx)(eK.A, { className: e6.x6, onClick: y, isActive: u, icon: v, "aria-label": N }),
+                    children: (0, l.jsx)(eK.A, { className: e6.x6, onClick: S, isActive: u, icon: v, "aria-label": N }),
                 }),
             }),
             (0, l.jsx)(e2.A, {
@@ -711,7 +711,7 @@ function e8(e) {
                 fluid: !0,
                 neutralPlaybackColors: !0,
                 animateOnMount: a,
-                onDrag: E,
+                onDrag: y,
                 onDragStart: () => f(!0),
                 onDragEnd: b,
             }),
@@ -739,8 +739,8 @@ function e8(e) {
         ],
     });
 }
-var e4 = n(709372),
-    e9 = n(984680);
+var e9 = n(709372),
+    e4 = n(984680);
 let e7 = i.memo(function (e) {
     var t;
     let { channelId: n } = e,
@@ -748,7 +748,7 @@ let e7 = i.memo(function (e) {
     i.useEffect(() => {
         r.current?.focus();
     }, []);
-    let a = (0, e4.om)(n),
+    let a = (0, e9.om)(n),
         o = a?.phase === "recording",
         u = a?.phase === "recorded";
     i.useEffect(() => {
@@ -767,7 +767,7 @@ let e7 = i.memo(function (e) {
                 ? 0
                 : Math.max(0, Math.floor((t - e) / 1e3));
         })(o ? a.startTimeMillis : void 0),
-        d = (0, m.bG)([y.Ay], () => y.Ay.useReducedMotion),
+        d = (0, m.bG)([S.Ay], () => S.Ay.useReducedMotion),
         h = (function (e, t) {
             let [n, l] = i.useState(!1);
             return (
@@ -781,13 +781,13 @@ let e7 = i.memo(function (e) {
         })(o ? ((t = 1e3 * c) >= e$.Uu ? "imminent" : t >= e$.Y_ ? "approaching" : "none") : "none", d),
         f = u ? a?.recordedPlayback : void 0,
         [p, g] = i.useState(!1),
-        [x, S] = i.useState(f),
-        E = p && !d && null != f;
+        [x, E] = i.useState(f),
+        y = p && !d && null != f;
     i.useEffect(() => {
         u && p && (null == document.activeElement || document.activeElement === document.body) && r.current?.focus();
     }, [p, u]);
     let A = i.useCallback(() => {
-            null != f && S(f);
+            null != f && E(f);
         }, [f]),
         C = i.useCallback(() => {
             (0, eq.nM)(n) && g(!0);
@@ -812,17 +812,17 @@ let e7 = i.memo(function (e) {
     if (null == a) return null;
     let v = u ? Math.round(a.recordedDurationSecs ?? 0) : c,
         N = o || u,
-        T = E ? x : f,
-        j = E && null == T;
+        T = y ? x : f,
+        j = y && null == T;
     return (0, l.jsxs)("div", {
-        className: e9.M0,
+        className: e4.M0,
         role: "group",
         "aria-label": k.intl.string(k.t.lwy6aX),
         children: [
             null != T
-                ? (0, l.jsx)(e8, { playback: T, durationSecs: a.recordedDurationSecs ?? 0, animateWaveformEntrance: E })
+                ? (0, l.jsx)(e8, { playback: T, durationSecs: a.recordedDurationSecs ?? 0, animateWaveformEntrance: y })
                 : (0, l.jsxs)("div", {
-                      className: e9.Fg,
+                      className: e4.Fg,
                       children: [
                           o
                               ? (0, l.jsx)(Y.m, {
@@ -841,19 +841,19 @@ let e7 = i.memo(function (e) {
                               : null,
                           (0, l.jsx)(eZ, {
                               channelId: n,
-                              className: e9.ou,
+                              className: e4.ou,
                               recording: o,
                               reducedMotion: d,
                               collapsing: j,
                               onCollapseComplete: A,
                           }),
                           (0, l.jsxs)("div", {
-                              className: e9.RE,
+                              className: e4.RE,
                               children: [
-                                  (0, l.jsx)("div", { className: s()(e9.Zz, { [e9.Py]: !o }), "aria-hidden": !0 }),
+                                  (0, l.jsx)("div", { className: s()(e4.Zz, { [e4.Py]: !o }), "aria-hidden": !0 }),
                                   (0, l.jsx)(eB.E, {
                                       variant: "body-sm/normal",
-                                      className: s()(e9.O1, { [e9.w2]: h }),
+                                      className: s()(e4.O1, { [e4.w2]: h }),
                                       tabularNumbers: !0,
                                       children: (0, eH.rB)(v),
                                   }),
@@ -861,7 +861,7 @@ let e7 = i.memo(function (e) {
                           }),
                       ],
                   }),
-            (0, l.jsx)("div", { className: e9.yF, "aria-hidden": !0 }),
+            (0, l.jsx)("div", { className: e4.yF, "aria-hidden": !0 }),
             (0, l.jsx)(Y.m, {
                 text: k.intl.string(k.t.oyYWHE),
                 children: (0, l.jsx)("div", {
@@ -882,8 +882,8 @@ let e7 = i.memo(function (e) {
                     onKeyDown: I,
                     children: (0, l.jsx)(eK.A, {
                         ref: r,
-                        className: e9.jo,
-                        childClassName: s()(e9.Jp, { [e9.Tq]: !N }),
+                        className: e4.jo,
+                        childClassName: s()(e4.Jp, { [e4.Tq]: !N }),
                         onClick: N ? b : void 0,
                         disabled: !N,
                         noHover: !N,
@@ -892,7 +892,7 @@ let e7 = i.memo(function (e) {
                         children: (0, l.jsx)(eG.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
-                            className: e9.AO,
+                            className: e4.AO,
                         }),
                     }),
                 }),
@@ -918,9 +918,9 @@ var te = n(696451),
     tp = n(463930),
     tg = n(935063),
     tx = n(73392),
-    tS = n(650019),
-    ty = n(763754),
-    tE = n(967144),
+    tE = n(650019),
+    tS = n(763754),
+    ty = n(967144),
     tA = n(118517),
     tC = n(976860),
     tb = n(747926),
@@ -986,13 +986,13 @@ function tR(e) {
             nick: p,
             colorString: g,
             colorStrings: x,
-            colorRoleName: S,
-            authorId: y,
-            displayNameStyles: E,
-        } = (0, ty.Ay)(u),
-        A = (0, tE.gn)(f, y, x),
-        C = (0, tx.a)({ displayNameStyles: E }),
-        b = (0, tS.A)(h, u.attachments),
+            colorRoleName: E,
+            authorId: S,
+            displayNameStyles: y,
+        } = (0, tS.Ay)(u),
+        A = (0, ty.gn)(f, S, x),
+        C = (0, tx.a)({ displayNameStyles: y }),
+        b = (0, tE.A)(h, u.attachments),
         I =
             ((t = o.id),
             (n = u.id),
@@ -1063,7 +1063,7 @@ function tR(e) {
                                                               name: p,
                                                               colorString: g,
                                                               colorStrings: A,
-                                                              roleName: S,
+                                                              roleName: E,
                                                               displayNameStylesFont: C,
                                                           }),
                                             },
@@ -1364,7 +1364,7 @@ function t8(e) {
         }),
     });
 }
-function t4(e) {
+function t9(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, l.jsx)("div", { children: e }, t)),
         r = t.floating.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t));
@@ -1377,7 +1377,7 @@ function t4(e) {
               ],
           });
 }
-var t9 = n(12764),
+var t4 = n(12764),
     t7 = n(102077),
     ne = n(246049),
     nt = n(135261),
@@ -1440,9 +1440,9 @@ function nc(e, t, r, s, a) {
             (i, d, h, m, p, g) => {
                 if (o) return;
                 u(!0);
-                let S = eR.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
-                    y = eO.A.getUploads(a, t.drafts.type) ?? [];
-                if (null == d && !m && !p && (0, ey.xz)(y, a)) {
+                let E = eR.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
+                    S = eO.A.getUploads(a, t.drafts.type) ?? [];
+                if (null == d && !m && !p && (0, eS.xz)(S, a)) {
                     (u(!1),
                         (0, f.mM)(async () => {
                             let { default: e } = await Promise.all([
@@ -1544,7 +1544,7 @@ function nc(e, t, r, s, a) {
                                 (0, l.jsx)(e, {
                                     ...t,
                                     threadId: a,
-                                    attachments: y,
+                                    attachments: S,
                                     sendMessage: () => c(i, void 0, void 0, void 0, !0),
                                 });
                         }));
@@ -1552,8 +1552,8 @@ function nc(e, t, r, s, a) {
                 }
                 e({
                     value: i,
-                    uploads: y,
-                    stickers: S,
+                    uploads: S,
+                    stickers: E,
                     command: d,
                     commandOptionValues: h,
                     isGif: m,
@@ -1694,7 +1694,7 @@ function nx(e) {
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function nS(e, t) {
+function nE(e, t) {
     return i.useMemo(
         () => ({
             current: {
@@ -1707,7 +1707,7 @@ function nS(e, t) {
         [e, t],
     );
 }
-function ny(e) {
+function nS(e) {
     let [t, n] = i.useState(0);
     return {
         editorHeight: t,
@@ -1719,9 +1719,9 @@ function ny(e) {
         ),
     };
 }
-function nE(e, t, n, l) {
+function ny(e, t, n, l) {
     let i = e.getGuildId(),
-        r = (0, m.bG)([eE.A], () => null != i && eE.A.isLurking(i), [i]),
+        r = (0, m.bG)([ey.A], () => null != i && ey.A.isLurking(i), [i]),
         s = (0, m.bG)([te.Ay, ti.default], () => {
             let e = ti.default.getCurrentUser();
             return (null != i && null != e ? te.Ay.getMember(i, e.id)?.isPending : null) ?? !1;
@@ -1823,31 +1823,31 @@ let nb = i.memo(function (e) {
             ref: eo,
         } = e;
     u()(null != k, "chat input type must be set");
-    let { analyticsLocations: eu } = (0, A.Ay)(E.A.CHANNEL_TEXT_AREA),
+    let { analyticsLocations: eu } = (0, A.Ay)(y.A.CHANNEL_TEXT_AREA),
         ec = nx(eo),
         eh = i.useRef(null),
+        eS = i.useRef(null),
         ey = i.useRef(null),
-        eE = i.useRef(null),
-        eC = nS(ec, eE),
+        eC = nE(ec, ey),
         eb = i.useRef(null),
         eI = i.useRef(null),
-        ev = i.useCallback(() => eE.current?.getSlateEditor() ?? null, []);
-    J?.(eE.current);
+        ev = i.useCallback(() => ey.current?.getSlateEditor() ?? null, []);
+    J?.(ey.current);
     let eN = (0, C.A)(T),
         eT = (0, eV.n)("ChannelTextAreaContainer"),
-        ek = (0, m.cf)([y.Ay], () => ({
-            expressionPickerFormat: y.Ay.expressionPickerFormat,
-            condensePickerWhenNarrow: y.Ay.condensePickerWhenNarrow,
+        ek = (0, m.cf)([S.Ay], () => ({
+            expressionPickerFormat: S.Ay.expressionPickerFormat,
+            condensePickerWhenNarrow: S.Ay.condensePickerWhenNarrow,
         })),
-        ej = eT ? ek.expressionPickerFormat : y.IG.FLEXIBLE,
+        ej = eT ? ek.expressionPickerFormat : S.IG.FLEXIBLE,
         eR = !eT || ek.condensePickerWhenNarrow,
         [ew, eO] = i.useState(!eN);
-    (0, S.i4)(ec, (e) => {
+    (0, E.i4)(ec, (e) => {
         let { width: t } = e;
         return eO(!eN && (null == t || t > 450));
     });
-    let eM = ej === y.IG.HIDDEN,
-        eL = ej === y.IG.CONDENSED || (ej === y.IG.FLEXIBLE && eR && !ew),
+    let eM = ej === S.IG.HIDDEN,
+        eL = ej === S.IG.CONDENSED || (ej === S.IG.FLEXIBLE && eR && !ew),
         { activeCommand: eP, activeCommandSection: eD } = (0, m.cf)([M.A], () => ({
             activeCommand: k.commands?.enabled ? M.A.getActiveCommand(T.id) : null,
             activeCommandSection: k.commands?.enabled ? M.A.getActiveCommandSection(T.id) : null,
@@ -1859,15 +1859,15 @@ let nb = i.memo(function (e) {
             canAttachFiles: eG,
             canCreateThreads: eK,
             canEveryoneSendMessages: eH,
-        } = nE(T, k, eP, I),
+        } = ny(T, k, eP, I),
         ez = k.toolbarType === td.O1.STATIC,
         e$ = !eU.D_.useSetting() && !(0, tu.Ct)() && null != window.ResizeObserver,
         eQ = !e$ || !k.commands?.enabled || !j || "/" !== r,
         eZ = (0, eA.A)(),
-        { fontSize: eX } = (0, m.cf)([y.Ay], () => ({ fontSize: y.Ay.fontSize })),
+        { fontSize: eX } = (0, m.cf)([S.Ay], () => ({ fontSize: S.Ay.fontSize })),
         eY = (0, m.bG)([tl.A], () => tl.A.isEnabled());
     nf(k, eF, T.id);
-    let { eventEmitter: eJ, handleEditorSelectionChanged: e1 } = np(eE, r, a),
+    let { eventEmitter: eJ, handleEditorSelectionChanged: e1 } = np(ey, r, a),
         e2 = i.useRef(r);
     e2.current = r;
     let e5 = i.useCallback(
@@ -1877,14 +1877,14 @@ let nb = i.memo(function (e) {
             },
             [D, k.commands?.enabled, eJ],
         ),
-        { submitting: e3, submit: e8, handleSubmit: e9 } = nc(F, k, eE, eI, T.id),
+        { submitting: e3, submit: e8, handleSubmit: e4 } = nc(F, k, ey, eI, T.id),
         { autocompleteRef: tt, handleMaybeShowAutocomplete: tn, handleHideAutocomplete: tr } = ng(),
-        ta = nd(e8, k, eE),
-        to = nh(eE),
-        tm = nm({ editorRef: eE, disabled: eF, textValue: r, channelId: T.id, chatInputType: k, submit: F }),
+        ta = nd(e8, k, ey),
+        to = nh(ey),
+        tm = nm({ editorRef: ey, disabled: eF, textValue: r, channelId: T.id, chatInputType: k, submit: F }),
         tf = i.useCallback(
             (e, t, n) => {
-                let l = eE.current;
+                let l = ey.current;
                 (null != e &&
                     null != l &&
                     (ts.default.track(ea.HAw.SOUNDMOJI_SELECT, {
@@ -1898,14 +1898,14 @@ let nb = i.memo(function (e) {
                     n && (0, ex.v8)(),
                     l?.focus());
             },
-            [eE, T.id, T.guild_id],
+            [ey, T.id, T.guild_id],
         ),
         tp = i.useCallback(() => eI?.current?.hide(), []),
-        { editorHeight: tg, handleResize: tx } = ny(U),
+        { editorHeight: tg, handleResize: tx } = nS(U),
         {
-            handleTab: tS,
-            handleEnter: ty,
-            handleSpace: tE,
+            handleTab: tE,
+            handleEnter: tS,
+            handleSpace: ty,
             handleMoveSelection: tA,
         } = ((t = i.useCallback(
             () => !!(!eQ && eh.current?.onTabOrEnter(!1)) || tt.current?.onTabOrEnter(!1) || !1,
@@ -1924,7 +1924,7 @@ let nb = i.memo(function (e) {
                 [eQ, eh, tt],
             ),
         }),
-        { expressionPickerView: tC, shouldHideExpressionPicker: tb, handleOuterClick: tI } = nA(k, eE, T.id),
+        { expressionPickerView: tC, shouldHideExpressionPicker: tb, handleOuterClick: tI } = nA(k, ey, T.id),
         { selectedAutocompleteInputType: tv, selectedAutocompleteInputError: tN } = (function (e, t) {
             let [n, l] = i.useState({ selectedAutocompleteInputType: null, selectedAutocompleteInputError: !1 }),
                 r = i.useCallback(() => {
@@ -1950,7 +1950,7 @@ let nb = i.memo(function (e) {
                 ),
                 n
             );
-        })(eJ, eE),
+        })(eJ, ey),
         { handleAutocompleteVisibilityChange: tT } = nC(k, T.id),
         tk = (function (e) {
             let { type: t, channelId: n } = e;
@@ -2036,31 +2036,31 @@ let nb = i.memo(function (e) {
             selectedAutocompleteInputError: tN,
         }),
         tG = 0 === r.trim().length,
-        tH = null != (0, e4.om)(T.id);
+        tH = null != (0, e9.om)(T.id);
     i.useEffect(
         () => () => {
-            let e = (0, e4.Mk)(T.id);
+            let e = (0, e9.Mk)(T.id);
             e?.phase === "recording" ? (0, eq.yx)(T.id) : e?.phase === "requesting" && (0, eq.eT)(T.id);
         },
         [T.id],
     );
     let tq = i.useRef(tH);
     i.useEffect(() => {
-        (tq.current && !tH && eE.current?.focus(), (tq.current = tH));
+        (tq.current && !tH && ey.current?.focus(), (tq.current = tH));
     }, [tH]);
     let tZ = null != P ? [X, tj].filter(Boolean).join(" ") : X,
         tX = k.layout === td.wt.INLINE,
         t0 = k.layout === td.wt.FLUSH,
-        t1 = (0, l.jsx)("div", { ref: ey, className: e6.BW }),
-        t2 = tk ? (0, l.jsx)(O, { align: "right", positionTargetRef: ey, channel: T }) : null,
+        t1 = (0, l.jsx)("div", { ref: eS, className: e6.BW }),
+        t2 = tk ? (0, l.jsx)(O, { align: "right", positionTargetRef: eS, channel: T }) : null,
         t5 =
             null != L
                 ? L()
-                : (0, l.jsx)(t9.A, {
+                : (0, l.jsx)(t4.A, {
                       type: k,
                       disabled: eF,
                       channel: T,
-                      handleSubmit: e9,
+                      handleSubmit: e4,
                       isEmpty: tG,
                       showAllButtons: !eL && !eM,
                       expressionButtonsHidden: eM,
@@ -2102,7 +2102,7 @@ let nb = i.memo(function (e) {
                             [e6.z3]: null != _,
                         }),
                         children: [
-                            tX || t0 ? null : (0, l.jsx)(t4, { bars: tB }),
+                            tX || t0 ? null : (0, l.jsx)(t9, { bars: tB }),
                             (0, l.jsxs)("div", {
                                 ref: eb,
                                 onScroll: tp,
@@ -2133,7 +2133,7 @@ let nb = i.memo(function (e) {
                                                               ringTarget: ec,
                                                               ringClassName: e6.Rg,
                                                               children: (0, l.jsx)(th.A, {
-                                                                  ref: eE,
+                                                                  ref: ey,
                                                                   id: f,
                                                                   focused: j,
                                                                   useSlate: e$,
@@ -2158,9 +2158,9 @@ let nb = i.memo(function (e) {
                                                                   onKeyDown: B,
                                                                   onSubmit: e8,
                                                                   onSubmitFailure: t_,
-                                                                  onTab: tS,
-                                                                  onEnter: ty,
-                                                                  onSpace: tE,
+                                                                  onTab: tE,
+                                                                  onEnter: tS,
+                                                                  onSpace: ty,
                                                                   onMoveSelection: tA,
                                                                   onSelectionChanged: e1,
                                                                   onMaybeShowAutocomplete: tn,
@@ -2204,7 +2204,7 @@ let nb = i.memo(function (e) {
                                 expressionPickerView: tC,
                                 type: k,
                                 targetRef: ec,
-                                editorRef: eE,
+                                editorRef: ey,
                                 onSendMessage: e8,
                                 onSendSticker: tm,
                                 onVisibilityChange: tT,
@@ -2222,7 +2222,7 @@ let nb = i.memo(function (e) {
                     (0, l.jsx)(g.U, { error: _ }),
                     tb
                         ? null
-                        : (0, l.jsx)(eS.A, {
+                        : (0, l.jsx)(eE.A, {
                               returnRef: eC,
                               positionTargetRef: ec,
                               type: k,
