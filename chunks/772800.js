@@ -16,8 +16,8 @@ var n = t(477900),
     I = t(268218),
     v = t(834757),
     S = t(727353),
-    _ = t(208284),
-    x = t(729829),
+    x = t(208284),
+    _ = t(729829),
     y = t(25528),
     E = t(655724),
     N = t(832163),
@@ -237,7 +237,7 @@ function F(e) {
             activities: G.A.getActivities(i.id, t),
         })),
         S = (0, s.bG)([O.A], () => O.A.getVoiceStateForChannel(l, i.id)?.connectedAt),
-        _ = null != S ? new Date(S * V.A.Millis.SECOND).getTime() : null;
+        x = null != S ? new Date(S * V.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
         className: M.aq,
         children: [
@@ -254,7 +254,7 @@ function F(e) {
                 className: M.Qq,
                 children: [
                     (0, n.jsx)(o.E, { variant: "body-sm/medium", lineClamp: 1, children: A }),
-                    null != _ && (0, n.jsx)(p.z, { textColor: "text-feedback-positive", entry: { start: _ } }),
+                    null != x && (0, n.jsx)(p.z, { textColor: "text-feedback-positive", entry: { start: x } }),
                 ],
             }),
         ],
@@ -282,9 +282,9 @@ t.d(
                 z = (0, s.bG)([N.A], () => N.A.getDetectableIdsToApplicationIds()),
                 B = g ?? V,
                 K = (0, A.m)(r, B),
-                { enabled: Y } = _.A.useConfig({ guildId: a.guild_id, location: "VoiceUserPopout" }),
-                q = (0, x.u)(r.id, a),
-                H = (0, y.Ay)(r.id, a.guild_id),
+                { enabled: Y } = x.A.useConfig({ guildId: a.guild_id, location: "VoiceUserPopout" }),
+                q = (0, _.u)(r.id, a),
+                H = (0, y.Ay)(r.id),
                 $ = Y && null != q && 0 === H.length,
                 W = null != O && null != p && !w,
                 Z = W || K.length > 0 || U.length > 0 || null != q,
