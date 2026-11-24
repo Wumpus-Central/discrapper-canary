@@ -1,14 +1,14 @@
 (n.d(t, {
-    Bn: () => e_,
-    Ay: () => eg,
-    ensureConnection: () => eo,
-    fu: () => ed,
-    P6: () => eh,
-    dv: () => el,
-    Wx: () => ea,
-    r2: () => eu,
+    Bn: () => ef,
+    Ay: () => eE,
+    ensureConnection: () => el,
+    fu: () => eu,
+    P6: () => e_,
+    dv: () => ea,
+    Wx: () => ec,
+    r2: () => ep,
     Rw: () => es,
-    re: () => ec,
+    re: () => ed,
 }),
     n(321073));
 var r = n(158390),
@@ -35,8 +35,8 @@ var r = n(158390),
     N = n(962998),
     C = n(991238),
     k = n(416473),
-    w = n(525530),
-    R = n(743082),
+    R = n(525530),
+    w = n(743082),
     A = n(385081),
     v = n(519325);
 class U {
@@ -198,8 +198,8 @@ let K = {
         ...N.qy,
         ...C.Wh,
         ...k.Rd,
-        ...w.ow,
-        ...R.WO,
+        ...R.ow,
+        ...w.WO,
         ...p.V5,
     },
     z = {
@@ -304,6 +304,7 @@ function ee(e) {
             warmTemplateId: null,
             debugOnDemand: !1,
             endedTurnIds: new Set(),
+            accessRefusedUserId: null,
         }),
             G.set(e, n),
             (0, M.Sm)(e, n.ws),
@@ -330,6 +331,7 @@ function ee(e) {
         q(e, "connecting"),
         (async function (e, t) {
             (t.ws.close(), t.helloSeen && (0, I.$Y)(e));
+            let n = l.default.getCurrentUser()?.id ?? null;
             try {
                 let { ticket: n, baseUrl: r } = await (0, I.dv)(e);
                 if (t.disposed) return;
@@ -347,7 +349,7 @@ function ee(e) {
                                 let s = { projectId: t, ws: n.ws };
                                 switch (r.type) {
                                     case "history_page":
-                                        if (r.requested !== ep.get(t) || (ep.delete(t), !0 === r.failed)) return;
+                                        if (r.requested !== eh.get(t) || (eh.delete(t), !0 === r.failed)) return;
                                         i.h.dispatch({
                                             type: "CONJURE_CHAT_HISTORY_PREPEND",
                                             projectId: t,
@@ -372,7 +374,7 @@ function ee(e) {
                                             degraded: !0 === r.degraded,
                                         }),
                                             void 0 !== r.active_turn_id && X(t, n, r.active_turn_id),
-                                            ep.delete(t));
+                                            eh.delete(t));
                                         let o = n.pendingEvents;
                                         for (let r of ((n.pendingEvents = []), q(t, "open"), o)) e(t, n, r);
                                         (en.get(t) ?? 0) > 0 && er(t, n);
@@ -484,22 +486,23 @@ function ee(e) {
                         console.error("[conjure] ws error", e);
                     },
                 });
-            } catch (n) {
-                if ((console.error("[conjure] ws open failed", n), t.disposed)) return;
-                (q(e, "failed"),
-                    F(e, t, n instanceof Error ? n.message : "ws open failed"),
+            } catch (r) {
+                if ((console.error("[conjure] ws open failed", r), t.disposed)) return;
+                ((t.accessRefusedUserId = r?.status === 403 ? n : null),
+                    q(e, "failed"),
+                    F(e, t, r instanceof Error ? r.message : "ws open failed"),
                     (t.pendingModelSettings = null),
                     (t.pendingTemplatePrep = null),
                     (0, N.Mz)(e, "Connection failed before the publish result arrived"),
                     (0, k.Fc)(e),
                     (0, C.yv)(e),
-                    (0, C.OB)(e, n),
+                    (0, C.OB)(e, r),
                     (0, N.BC)(e, "Connection failed before the draft arrived"),
                     (0, N.Nc)(e),
                     (0, A.Hy)(e, {
                         location: "connection",
                         code: A.xf.WS_OPEN_FAILED,
-                        message: n instanceof Error ? n.message : "ws open failed",
+                        message: r instanceof Error ? r.message : "ws open failed",
                     }));
             }
         })(e, o));
@@ -541,21 +544,24 @@ function ei(e) {
         G.delete(e),
         (0, M.ng)(e),
         (t = e),
-        ep.delete(t),
+        eh.delete(t),
         v.A.releasePreviewControl(e),
         (0, m.RP)(e),
         q(e, "closed"),
         !0)
     );
 }
-function eo(e) {
+function eo(e, t) {
+    return e?.accessRefusedUserId != null && e.accessRefusedUserId === t;
+}
+function el(e) {
     let { templateId: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = G.get(e);
     if (null == n) return void ee(e, t ?? null);
     let r = W.get(e);
-    ("closed" !== r && "failed" !== r) || n.reconnectPending || ee(e);
+    ("closed" !== r && "failed" !== r) || n.reconnectPending || eo(n, l.default.getCurrentUser()?.id) || ee(e);
 }
-function el(e, t, n) {
+function ea(e, t, n) {
     let {
             templateId: r,
             remix: s,
@@ -603,17 +609,17 @@ function el(e, t, n) {
         return (null == a && (0, d.Gu)(e, t), !1);
     }
 }
-function ea(e, t, n) {
+function ec(e, t, n) {
     let r = (0, o.m)();
     return (
         V(e, { content: t.trim(), nonce: r, attachments: null != n && n.length > 0 ? n : void 0 }),
         { nonce: r, messageKey: $(r) }
     );
 }
-function ec(e, t) {
+function ed(e, t) {
     (Y.delete(t), i.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: e, id: $(t), withdrawn: !0 }));
 }
-function ed(e) {
+function eu(e) {
     let t = G.get(e);
     try {
         if (null == t) throw Error("Not connected");
@@ -623,32 +629,35 @@ function ed(e) {
         console.error("[conjure] interrupt send failed", e);
     }
 }
-function eu(e, t) {
+function ep(e, t) {
     let n = G.get(e);
     null == n
         ? console.error("[conjure] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-let ep = new Map();
-function eh(e) {
+let eh = new Map();
+function e_(e) {
     let t = (0, c.b)(e);
     if (null == t) return !1;
-    if (ep.get(e) === t) return !0;
+    if (eh.get(e) === t) return !0;
     let n = G.get(e);
-    return null != n && "open" === W.get(e) && (ep.set(e, t), n.ws.sendLoadHistory(t), !0);
+    return null != n && "open" === W.get(e) && (eh.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-function e_(e) {
+function ef(e) {
     ei(e);
 }
-class ef extends s.Ay.Store {
+class eg extends s.Ay.Store {
     initialize() {
         this.waitFor(c.A, h.A, O.Ay, l.default);
     }
     getConnState(e) {
         return W.get(e) ?? "connecting";
     }
+    isAccessRefused(e, t) {
+        return eo(G.get(e), t);
+    }
 }
-let eg = new ef(i.h, {
+let eE = new eg(i.h, {
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
         return ("active" === t && et(), !1);
