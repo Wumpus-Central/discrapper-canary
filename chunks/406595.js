@@ -59,7 +59,7 @@ function O() {
 function x(e) {
     return { hasMention: h.Ay.getMentionCount(e) > 0, hasUnread: h.Ay.hasUnread(e) };
 }
-function P(e, t) {
+function L(e, t) {
     let n = o.A.getChannel(t);
     if (null == n) return !1;
     switch (e) {
@@ -76,7 +76,7 @@ function P(e, t) {
             return e;
     }
 }
-function U(e) {
+function P(e) {
     var t;
     let n,
         { tab: i, targetId: r, isOnline: l, affinityScore: s, hasMention: a, hasUnread: o, addedTimestampMs: u } = e,
@@ -104,7 +104,7 @@ function U(e) {
         d
     );
 }
-function L(e) {
+function U(e) {
     let { tab: t, targetId: n, addedTimestampMs: i, guildAffinityNormalizationMax: r, pruneInvalid: l } = e;
     if (t === A.x.FRIENDS) {
         if (null == g.default.getUser(n)) return { kind: "NOT_READY_YET" };
@@ -116,7 +116,7 @@ function L(e) {
                 l = s.A.getUserAffinity(t)?.communicationProbability ?? 0,
                 a = o.A.getDMFromUserId(t),
                 { hasMention: u, hasUnread: d } = null != a ? x(a) : { hasMention: !1, hasUnread: !1 };
-            return U({
+            return P({
                 tab: e,
                 targetId: t,
                 isOnline: r,
@@ -129,9 +129,9 @@ function L(e) {
         return null == e ? (l ? { kind: "INVALID" } : { kind: "NOT_READY_YET" }) : { kind: "BUILT", row: e };
     }
     if (null == o.A.getChannel(n)) return { kind: "NOT_READY_YET" };
-    if (!P(t, n)) return l ? { kind: "INVALID" } : { kind: "NOT_READY_YET" };
+    if (!L(t, n)) return l ? { kind: "INVALID" } : { kind: "NOT_READY_YET" };
     let d = (function (e, t, n, i) {
-        if (!P(e, t)) return null;
+        if (!L(e, t)) return null;
         let r = o.A.getChannel(t);
         if (null == r) return null;
         let l = r.getGuildId() ?? null,
@@ -140,7 +140,7 @@ function L(e) {
                 (0, a.ke)(r.type) || r.isDM() || r.isMultiUserDM() || r.isPrivate()
                     ? x(t)
                     : { hasMention: !1, hasUnread: !1 };
-        return U({
+        return P({
             tab: e,
             targetId: t,
             isOnline: !1,
@@ -174,7 +174,7 @@ function b(e) {
         let l = D(e);
         for (let [s, a] of l.entries()) {
             let o = M(e, s),
-                u = L({
+                u = U({
                     tab: e,
                     targetId: s,
                     addedTimestampMs: a.addedTimestampMs,
@@ -213,7 +213,7 @@ function F(e) {
         s = l.get(n),
         a = M(t, n);
     if (null == s) return E.delete(a);
-    let o = L({
+    let o = U({
         tab: t,
         targetId: n,
         addedTimestampMs: s.addedTimestampMs,
@@ -338,7 +338,7 @@ let Y = new B(
                       i = D(e.tab);
                   i.set(e.targetId, { targetId: e.targetId, addedTimestampMs: n });
                   let r = O(),
-                      l = L({
+                      l = U({
                           tab: e.tab,
                           targetId: e.targetId,
                           addedTimestampMs: n,
