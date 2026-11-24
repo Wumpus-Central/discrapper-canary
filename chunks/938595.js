@@ -1,30 +1,36 @@
-var t = l(855986),
-    i = l(73153);
-let o = l(927813).A.Millis.DAY,
-    u = null,
+var t = e(158390),
+    u = e(855986),
+    i = e(73153),
+    c = e(927813);
+let o = c.A.Millis.DAY,
+    s = c.A.Millis.MINUTE,
+    E = c.A.Millis.HOUR,
     a = null,
-    d = !1;
-class s extends t.Ay.Store {
+    C = null,
+    d = null,
+    T = !1,
+    A = new t.A(s, E);
+class O extends u.Ay.Store {
     static displayName = "CollectiblesRecommendationStore";
     getRecommendations() {
-        return u;
+        return a;
     }
     shouldFetch() {
-        return !d && (null == a || Date.now() - a >= o);
+        return !(T || (null != d && Date.now() < d)) && (null == C || Date.now() - C >= o);
     }
 }
-let c = new s(i.h, {
+let S = new O(i.h, {
     COLLECTIBLES_RECOMMENDATIONS_FETCH_START: function () {
-        ((u = null), (a = null), (d = !0));
+        ((a = null), (C = null), (T = !0));
     },
-    COLLECTIBLES_RECOMMENDATIONS_FETCH_SUCCESS: function (e) {
-        ((u = e.recommendation), (a = Date.now()), (d = !1));
+    COLLECTIBLES_RECOMMENDATIONS_FETCH_SUCCESS: function (l) {
+        ((a = l.recommendation), (C = Date.now()), (d = null), (T = !1), A.succeed());
     },
     COLLECTIBLES_RECOMMENDATIONS_FETCH_FAILURE: function () {
-        d = !1;
+        ((d = Date.now() + A.fail()), (T = !1));
     },
     LOGOUT: function () {
-        ((u = null), (a = null), (d = !1));
+        ((a = null), (C = null), (d = null), (T = !1), A.succeed());
     },
 });
-l.d(n, {}, { A: c });
+e.d(n, {}, { A: S });

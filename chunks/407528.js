@@ -1,20 +1,18 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var l = n(582128),
     r = n(444927),
-    i = n(938595),
-    o = n(859226);
+    i = n(938595);
 n(321073);
-let s = [];
-function a(e, t) {
-    let n = (0, o.D)("collectibles_picker"),
-        a = (0, r.A)(() => (n ? (i.A.getRecommendations()?.skuIds ?? s) : s));
+let o = [];
+function s(e, t) {
+    let n = (0, r.A)(() => i.A.getRecommendations()?.skuIds ?? o);
     return (0, l.useMemo)(
         () =>
-            0 === a.length
+            0 === n.length
                 ? e
                 : e.map((e) => {
                       if (e.section !== t) return e;
-                      let n = (function (e, t) {
+                      let l = (function (e, t) {
                           if (e.length <= 1 || 0 === t.length) return e;
                           let n = new Map(e.map((e) => [e.skuId, e])),
                               l = [];
@@ -23,9 +21,9 @@ function a(e, t) {
                               null != t && (l.push(t), n.delete(e));
                           }
                           return l.length > 0 ? [...l, ...n.values()] : e;
-                      })(e.items, a);
-                      return n === e.items ? e : { ...e, items: n };
+                      })(e.items, n);
+                      return l === e.items ? e : { ...e, items: l };
                   }),
-        [t, a, e],
+        [t, n, e],
     );
 }
