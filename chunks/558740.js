@@ -1,4 +1,4 @@
-n.d(t, { ap: () => p, yx: () => f, Cv: () => A, _Z: () => I, uK: () => h, PU: () => g, So: () => E });
+n.d(t, { ap: () => g, yx: () => f, fN: () => m, Cv: () => A, _Z: () => I, uK: () => h, PU: () => S, So: () => E });
 var i = n(832081),
     r = n(855986),
     a = n(620632);
@@ -96,7 +96,11 @@ function I(e) {
     let { name: t, line1: n, line2: i, city: r, state: a, postalCode: s, country: l } = e;
     return { name: t, address: { line1: n, line2: i, city: r, state: a, postal_code: s, country: l } };
 }
-async function p(e) {
+let p = null;
+function m() {
+    return p;
+}
+async function g(e) {
     try {
         let { clientSecret: t, merchantAccountId: n } = await f(e),
             i = await A(n);
@@ -114,10 +118,17 @@ async function p(e) {
         ) {
             case "requires_payment_method":
             case "requires_confirmation":
-            case "requires_action":
-                let { error: l } = await i.confirmCardPayment(t, s);
-                if (null != l) return { error: l };
-                return {};
+            case "requires_action": {
+                let n = { paymentId: e, startedAt: Date.now() };
+                null == p && (p = n);
+                try {
+                    let { error: e } = await i.confirmCardPayment(t, s);
+                    if (null != e) return { error: e };
+                    return {};
+                } finally {
+                    p === n && (p = null);
+                }
+            }
             case "succeeded":
             case "processing":
                 return {};
@@ -128,10 +139,10 @@ async function p(e) {
         return { error: e };
     }
 }
-let m = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-function g() {
+let T = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
+function S() {
     return (0, r.bG)([o.default], () => {
         var e;
-        return m[(e = o.default.locale)] ?? e;
+        return T[(e = o.default.locale)] ?? e;
     });
 }

@@ -1,28 +1,40 @@
-var n = r(949192),
-    i = r(752266);
-function l(e) {
-    if (null == e) throw Error("Stripe next action context has no client secret or instructions url");
+var r = n(708146),
+    i = n(752266);
+class a extends Error {
+    name = "NextActionInstructionsMissing";
+    constructor() {
+        super("Stripe next action context has no client secret or instructions url");
+    }
+}
+class l extends Error {
+    name = "StripeNextActionFailed";
+    constructor(e) {
+        super(`Stripe next action failed: ${e}`);
+    }
+}
+function o(e) {
+    if (null == e) throw new a();
     window.open(e);
 }
-async function a(e, t) {
-    let { client_secret: r, instructions_url: n } = e;
-    if (null == r) return void l(n);
+async function u(e, t) {
+    let { client_secret: n, instructions_url: r } = e;
+    if (null == n) return void o(r);
     let a = await (0, i.h)(t),
-        { error: o } = await a.handleNextAction({ clientSecret: r });
-    if (null != o) throw Error(`Stripe next action failed: ${o.message}`);
+        { error: u } = await a.handleNextAction({ clientSecret: n });
+    if (null != u) throw new l(u.message);
 }
-r.d(
+n.d(
     t,
     {},
     {
         A: async function (e, t) {
             try {
-                await a(e, t);
+                await u(e, t);
             } catch (t) {
-                ((0, n.pM)(t, { tags: { source: "order_signing_reopen_next_action" } }),
-                    null != e.client_secret && null != e.instructions_url && l(e.instructions_url));
+                (r.r.report({ site: "order_signing_reopen_next_action" }, t),
+                    null != e.client_secret && null != e.instructions_url && o(e.instructions_url));
             }
         },
-        Z: a,
+        Z: u,
     },
 );

@@ -3,16 +3,14 @@ var l = n(582128),
     r = n(602853),
     i = n(646514),
     a = n(964486),
-    s = n(626584),
-    u = n(558740),
-    c = n(708146),
-    o = n(648335),
-    d = n(908166),
-    h = n(818348);
-let p = new s.A("useStripePaymentElementOptions"),
-    f = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" },
-    m = { spacingUnit: "3px", fontSizeSm: "13px" };
-function C() {
+    s = n(558740),
+    u = n(708146),
+    c = n(648335),
+    o = n(908166),
+    d = n(818348);
+let h = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" },
+    p = { spacingUnit: "3px", fontSizeSm: "13px" };
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, r.r)(i.A.colors.MODAL_BACKGROUND),
         n = (0, r.r)(i.A.colors.TEXT_STRONG),
@@ -22,33 +20,33 @@ function C() {
         c = e.colorText ?? n.hex(),
         o = e.colorBackground ?? t.hex(),
         d = e.inputBackgroundColor ?? a.hex(),
-        h = s.hex(),
-        p = e.tabBackgroundColor ?? a.hex(),
+        f = s.hex(),
+        m = e.tabBackgroundColor ?? a.hex(),
         C = e.tabSelectedBackgroundColor ?? null,
         y = e.compact ?? !1;
     return {
         elementsAppearance: l.useMemo(
             () => ({
                 theme: u,
-                variables: { colorText: c, colorBackground: o, ...(y ? m : {}) },
+                variables: { colorText: c, colorBackground: o, ...(y ? p : {}) },
                 rules: {
-                    ".Label": { ...f, color: c, marginBottom: "8px" },
-                    ".Input": { backgroundColor: d, borderColor: h, borderWidth: "1px", borderStyle: "solid" },
-                    ".Error": { ...f },
-                    ".CheckboxInput": { border: `1px solid ${h}` },
-                    ".Tab": { backgroundColor: p },
+                    ".Label": { ...h, color: c, marginBottom: "8px" },
+                    ".Input": { backgroundColor: d, borderColor: f, borderWidth: "1px", borderStyle: "solid" },
+                    ".Error": { ...h },
+                    ".CheckboxInput": { border: `1px solid ${f}` },
+                    ".Tab": { backgroundColor: m },
                     ...(null != C ? { ".Tab--selected": { backgroundColor: C } } : {}),
-                    ".AccordionItem": { backgroundColor: o, borderColor: h },
+                    ".AccordionItem": { backgroundColor: o, borderColor: f },
                 },
             }),
-            [u, c, o, d, h, p, C, y],
+            [u, c, o, d, f, m, C, y],
         ),
         elementsAppearanceOptions: {
             theme: u,
             colorText: c,
             colorBackground: o,
             inputBackgroundColor: d,
-            tabBackgroundColor: p,
+            tabBackgroundColor: m,
         },
     };
 }
@@ -56,30 +54,30 @@ n.d(
     t,
     {},
     {
-        E: C,
+        E: f,
         p: function (e) {
             let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
                 [r, i] = l.useState(void 0),
-                [s, f] = l.useState(null),
-                [m, y] = l.useState(!0),
-                [E, _] = l.useState([]),
-                { createSetupIntentDeduped: g } = (0, d.x)(),
-                [S, I] = l.useState([]),
-                { customPaymentMethods: A, customPaymentMethodIdsToSourceTypes: P } = l.useMemo(
+                [h, p] = l.useState(null),
+                [m, C] = l.useState(!0),
+                [y, _] = l.useState([]),
+                { createSetupIntentDeduped: E } = (0, o.x)(),
+                [g, I] = l.useState([]),
+                { customPaymentMethods: S, customPaymentMethodIdsToSourceTypes: A } = l.useMemo(
                     () => ({
-                        customPaymentMethods: (0, o.Dd)(E),
-                        customPaymentMethodIdsToSourceTypes: E.reduce(
+                        customPaymentMethods: (0, c.Dd)(y),
+                        customPaymentMethodIdsToSourceTypes: y.reduce(
                             (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                             {},
                         ),
                     }),
-                    [E],
+                    [y],
                 ),
-                x = l.useCallback(async () => {
+                P = l.useCallback(async () => {
                     try {
                         let e,
                             t,
-                            { client_secret: n, custom_payment_methods: l, payment_method_order: r } = await g();
+                            { client_secret: n, custom_payment_methods: l, payment_method_order: r } = await E();
                         if (!Array.isArray(l)) {
                             let e = Error("Setup intent response is missing custom_payment_methods");
                             throw ((e.name = "MalformedSetupIntentResponse"), e);
@@ -90,46 +88,43 @@ n.d(
                                 null != r && Array.isArray(r)
                                     ? r
                                     : ((e = ["pix", "card"]),
-                                      (t = l.find((e) => e.payment_source_type === h.he.PAYPAL)),
+                                      (t = l.find((e) => e.payment_source_type === d.he.PAYPAL)),
                                       null != t && e.push(t.custom_payment_method_id),
                                       e),
                             ));
                     } catch (e) {
-                        (f(e),
-                            null != t && t(e),
-                            p.error("there was an error on setup for Payment Elements: ", e),
-                            c.r.report({ site: "payment_element_setup" }, e));
+                        (p(e), null != t && t(e), u.r.report({ site: "payment_element_setup" }, e));
                     }
-                    y(!1);
-                }, [t, g]);
+                    C(!1);
+                }, [t, E]);
             (0, a.Ay)(() => {
-                x();
+                P();
             });
-            let { elementsAppearance: v, elementsAppearanceOptions: R } = C(n),
-                T = (0, u.PU)(),
-                M = l.useMemo(
+            let { elementsAppearance: x, elementsAppearanceOptions: v } = f(n),
+                R = (0, s.PU)(),
+                T = l.useMemo(
                     () =>
                         m
                             ? null
                             : {
                                   clientSecret: r,
-                                  appearance: v,
-                                  locale: T,
-                                  customPaymentMethods: A,
+                                  appearance: x,
+                                  locale: R,
+                                  customPaymentMethods: S,
                                   paymentMethodCreation: "manual",
                               },
-                    [v, T, r, A, m],
+                    [x, R, r, S, m],
                 ),
-                b = {
-                    setupError: s,
-                    customPaymentMethods: A,
-                    customPaymentMethodIdsToSourceTypes: P,
-                    paymentMethodOrder: S,
-                    elementsAppearanceOptions: R,
+                M = {
+                    setupError: h,
+                    customPaymentMethods: S,
+                    customPaymentMethodIdsToSourceTypes: A,
+                    paymentMethodOrder: g,
+                    elementsAppearanceOptions: v,
                 };
-            return null == r || null == M || m
-                ? { ...b, isLoading: !0, elementsOptions: M, setupIntentSecret: r }
-                : { ...b, isLoading: !1, elementsOptions: M, setupIntentSecret: r };
+            return null == r || null == T || m
+                ? { ...M, isLoading: !0, elementsOptions: T, setupIntentSecret: r }
+                : { ...M, isLoading: !1, elementsOptions: T, setupIntentSecret: r };
         },
     },
 );

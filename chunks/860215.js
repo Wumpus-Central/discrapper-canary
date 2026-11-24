@@ -1,35 +1,35 @@
-n.d(t, { rV: () => I, _5: () => g });
+n.d(t, { rV: () => S, _5: () => g });
 var l = n(477900),
     r = n(582128),
     i = n(20742),
     a = n(430993),
     s = n(834730),
     u = n(534479),
-    c = n(977445),
-    o = n(624210);
-let d = (0, n(945810).mj)({
+    c = n(708146),
+    o = n(977445),
+    d = n(624210);
+let h = (0, n(945810).mj)({
     name: "2026-06-otp-orders-phase-1",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var h = n(937427),
-    p = n(949192),
+var p = n(937427),
     f = n(120700),
     m = n(818348);
 let C = new Set([f.C.COLLECTIBLES_CHECKOUT, f.C.SLAYER_STOREFRONT_CHECKOUT]);
 var y = n(169797),
-    E = n(792996);
-let _ = r.createContext({ order: null, isOrderCreationEnabled: !1 });
+    _ = n(792996);
+let E = r.createContext({ order: null, isOrderCreationEnabled: !1 });
 function g() {
-    return r.useContext(_);
+    return r.useContext(E);
 }
-function S(e) {
+function I(e) {
     let { renderModalProps: t, children: n } = e,
         r = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(i.rQ, {}), (0, l.jsx)(a.c, { children: n })] });
     return null != t ? (0, l.jsx)(y.Jg, { ...t, children: r }) : r;
 }
-function I(e) {
+function S(e) {
     let {
             loadId: t,
             skuIDs: n,
@@ -38,7 +38,7 @@ function I(e) {
             checkoutFlow: f,
             isGift: y,
             onOrderCreated: g,
-            renderModalProps: I,
+            renderModalProps: S,
             children: A,
         } = e,
         {
@@ -58,12 +58,12 @@ function I(e) {
                     loadId: u,
                     onOrderCreated: f,
                 } = e,
-                y = d.useConfig({ location: "payment_modal" }).enabled,
-                E = i === m.kM.VIRTUAL_CURRENCY,
-                _ = null != a && C.has(a),
-                g = (t = !!E || (!!_ && !0 !== s && y)),
-                S = null != n ? n[0] : void 0,
-                [I, A] = (0, r.useState)(null),
+                y = h.useConfig({ location: "payment_modal" }).enabled,
+                _ = i === m.kM.VIRTUAL_CURRENCY,
+                E = null != a && C.has(a),
+                g = (t = !!_ || (!!E && !0 !== s && y)),
+                I = null != n ? n[0] : void 0,
+                [S, A] = (0, r.useState)(null),
                 [P, x] = (0, r.useState)(null),
                 [v, R] = (0, r.useState)(g),
                 T = (0, r.useRef)(!1),
@@ -72,23 +72,22 @@ function I(e) {
                         let { skuId: t } = e;
                         R(!0);
                         try {
-                            let e = null != l && (0, c.Fs)(l),
-                                n = await (0, o.fS)({
+                            let e = null != l && (0, o.Fs)(l),
+                                n = await (0, d.fS)({
                                     skuId: t,
                                     paymentGateway: i,
                                     loadId: u,
                                     testMode: e,
-                                    promotionIdOverride: h.A.getPromotionIdOverride(),
+                                    promotionIdOverride: p.A.getPromotionIdOverride(),
                                 });
                             (A(n), null != f && f(n));
-                        } catch (n) {
-                            let e = n instanceof Error ? n : Error(String(n));
-                            ((0, p.gr)(n) ||
-                                (0, p.pM)(e, {
-                                    tags: { source: "create_order" },
-                                    extra: { skuId: t, paymentGateway: String(i), loadId: u },
-                                }),
-                                x(e));
+                        } catch (e) {
+                            x(
+                                c.r.report(
+                                    { site: "order_create", extra: { skuId: t, paymentGateway: String(i), loadId: u } },
+                                    e,
+                                ),
+                            );
                         } finally {
                             R(!1);
                         }
@@ -97,10 +96,10 @@ function I(e) {
                 );
             return (
                 (0, r.useEffect)(() => {
-                    t && null != S && (null != I || null != P || T.current || ((T.current = !0), M({ skuId: S })));
-                }, [S, t, I, M, P]),
+                    t && null != I && (null != S || null != P || T.current || ((T.current = !0), M({ skuId: I })));
+                }, [I, t, S, M, P]),
                 {
-                    order: I,
+                    order: S,
                     isCreateOrderLoading: v,
                     createOrderError: P,
                     shouldBlockOnOrderCreation: g,
@@ -118,12 +117,12 @@ function I(e) {
         }),
         M = r.useMemo(() => ({ order: P, isOrderCreationEnabled: T }), [P, T]);
     if (R) {
-        if (x) return (0, l.jsx)(S, { renderModalProps: I, children: (0, l.jsx)(u.A, {}) });
+        if (x) return (0, l.jsx)(I, { renderModalProps: S, children: (0, l.jsx)(u.A, {}) });
         else if (null != v)
-            return (0, l.jsx)(S, {
-                renderModalProps: I,
-                children: (0, l.jsx)(s.E, { variant: "body-md/normal", children: E.intl.string(E.t.F8FvUy) }),
+            return (0, l.jsx)(I, {
+                renderModalProps: S,
+                children: (0, l.jsx)(s.E, { variant: "body-md/normal", children: _.intl.string(_.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(_.Provider, { value: M, children: A });
+    return (0, l.jsx)(E.Provider, { value: M, children: A });
 }

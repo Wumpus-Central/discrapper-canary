@@ -487,8 +487,25 @@ function eE(e) {
                         s === r.tG.AUTHENTICATION_REQUIRED &&
                             (async function (e) {
                                 if (null == e) return;
-                                let { error: t } = await (0, W.ap)(e);
-                                null != t && j.r.report({ site: "payment_authentication", extra: { paymentId: e } }, t);
+                                let t = (0, W.fN)(),
+                                    { error: n } = await (0, W.ap)(e);
+                                null != n &&
+                                    j.r.report(
+                                        {
+                                            site: "payment_authentication",
+                                            extra: {
+                                                paymentId: e,
+                                                ...(null != t
+                                                    ? {
+                                                          pending_challenge_payment_id: t.paymentId,
+                                                          pending_challenge_same_payment: t.paymentId === e,
+                                                          pending_challenge_for_ms: Date.now() - t.startedAt,
+                                                      }
+                                                    : {}),
+                                            },
+                                        },
+                                        n,
+                                    );
                             })(l));
                 },
                 handlePaymentUpdate: (t) => {

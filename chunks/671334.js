@@ -1806,7 +1806,11 @@ function tw(e) {
                                     onSubmit: (e) => {
                                         let { data: t, isValid: n } = e;
                                         if (n) u.h.dispatch({ type: "ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS", data: t });
-                                        else throw (0, d.i0)("Cash App Pay setup attempt is not valid.");
+                                        else
+                                            throw (0, d.J0)(
+                                                "payment_method_confirmation",
+                                                "Cash App Pay setup attempt is not valid.",
+                                            );
                                     },
                                     onError: (e) => {
                                         let t,
@@ -1821,7 +1825,10 @@ function tw(e) {
                                                 case "Error rendering CashAppPay button":
                                                     ((n = !1), (t = H.intl.string(H.t.TJ8dDB)));
                                             }
-                                            (0, d.i0)(e.message, { captureException: n, defaultErrorMessage: t });
+                                            (0, d.J0)("payment_method_confirmation", e.message, {
+                                                captureException: n,
+                                                defaultErrorMessage: t,
+                                            });
                                         }
                                     },
                                 });

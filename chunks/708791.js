@@ -8,8 +8,8 @@ var l = t(477900),
     o = t(834730),
     c = t(391048),
     d = t(627784),
-    m = t(793574),
-    p = t(669815),
+    p = t(793574),
+    m = t(669815),
     A = t(708146),
     E = t(942340),
     P = t(626584),
@@ -73,7 +73,7 @@ function w(e) {
                     l = null != t && Object.values(t).some(Boolean);
                 ((0, I.FY)(
                     { loadId: $, checkoutFlow: J, expressCheckoutType: a, availablePaymentMethods: t },
-                    m.A.EXPRESS_CHECKOUT,
+                    p.A.EXPRESS_CHECKOUT,
                 ),
                     W(l));
             },
@@ -90,7 +90,7 @@ function w(e) {
                         error: a,
                         errorMessage: a.message ?? "Express Checkout Element failed to load",
                     },
-                    m.A.EXPRESS_CHECKOUT,
+                    p.A.EXPRESS_CHECKOUT,
                 );
                 (A.r.report({ site: "express_checkout_load", extra: t }, a), F(f.i.UNAVAILABLE));
             },
@@ -143,9 +143,9 @@ function w(e) {
                 (n &&
                     (0, I.ik)(
                         { ...i, displayedAmount: G.current, updatedAmount: l, currency: Y.currency },
-                        m.A.EXPRESS_CHECKOUT,
+                        p.A.EXPRESS_CHECKOUT,
                     ),
-                    (0, I.Y2)({ ...i, paymentSource: w, autoPurchaseSkipReason: r }, m.A.EXPRESS_CHECKOUT),
+                    (0, I.Y2)({ ...i, paymentSource: w, autoPurchaseSkipReason: r }, p.A.EXPRESS_CHECKOUT),
                     s
                         ? ((0, u.P0)({
                               text: n ? N.intl.string(D.default.cxwOJN) : N.intl.string(D.default["302Ck/"]),
@@ -174,12 +174,15 @@ function w(e) {
                                 errorMessage: l,
                                 expressPaymentType: e.expressPaymentType,
                             },
-                            m.A.EXPRESS_CHECKOUT,
+                            p.A.EXPRESS_CHECKOUT,
                         ),
                         s = {};
                     (null != e.expressPaymentType && (s.express_payment_type = e.expressPaymentType),
                         null != e.billingDetails && (s.country = e.billingDetails.address.country),
-                        A.r.report({ site: "express_checkout_vault", tags: s, extra: { ...r, ...s } }, a),
+                        A.r.report(
+                            { site: "express_checkout_vault", isStripeWallet: !0, tags: s, extra: { ...r, ...s } },
+                            a,
+                        ),
                         et(),
                         X(n ?? new d.Ey(l)),
                         e.paymentFailed({ reason: "invalid_payment_data", message: l }));
@@ -202,10 +205,10 @@ function w(e) {
                     }
                     let { billingAddressInfo: h } = (0, x.uK)(s),
                         u = s.id,
-                        o = await (0, p.IC)({ stripePaymentMethodId: u, billingAddress: h });
+                        o = await (0, m.IC)({ stripePaymentMethodId: u, billingAddress: h });
                     ((0, I.lO)(
                         { loadId: $, paymentSource: o, expressPaymentType: e.expressPaymentType },
-                        m.A.EXPRESS_CHECKOUT,
+                        p.A.EXPRESS_CHECKOUT,
                     ),
                         U(o));
                 } catch (e) {
@@ -242,9 +245,9 @@ function w(e) {
                     o = a.getWalletAmount(),
                     c = a.getAmountDue(),
                     d = a.hasGiftCardBalanceApplied ? [{ name: N.intl.string(D.default.bdF0KJ), amount: -o }] : [],
-                    m = n > 0 ? [{ name: N.intl.string(N.t.jiRvC7), amount: n }] : [];
-                function p(e) {
-                    return c > 0 ? [{ name: e, amount: u }, ...d, ...m] : [];
+                    p = n > 0 ? [{ name: N.intl.string(N.t.jiRvC7), amount: n }] : [];
+                function m(e) {
+                    return c > 0 ? [{ name: e, amount: u }, ...d, ...p] : [];
                 }
                 if (r === _.C.PREMIUM_CHECKOUT || r === _.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT) {
                     let e = (function (e) {
@@ -264,7 +267,7 @@ function w(e) {
                     let { planDisplayName: l, recurringPaymentIntervalUnit: n, recurringPaymentIntervalCount: r } = e,
                         s = null != t ? t.total : i;
                     return {
-                        lineItems: p(l),
+                        lineItems: m(l),
                         applePay: {
                             recurringPaymentRequest: {
                                 paymentDescription: l,
@@ -279,7 +282,7 @@ function w(e) {
                         },
                     };
                 }
-                return { lineItems: null != s ? p(s) : [] };
+                return { lineItems: null != s ? m(s) : [] };
             }, [a, t, s, e, r]);
         })(a),
         ei = n.useCallback(
@@ -293,7 +296,7 @@ function w(e) {
                             expressCheckoutType: a,
                             expressPaymentType: e.expressPaymentType,
                         },
-                        m.A.EXPRESS_CHECKOUT,
+                        p.A.EXPRESS_CHECKOUT,
                     ),
                     e.resolve(es ?? void 0));
             },
@@ -302,7 +305,7 @@ function w(e) {
         eh = n.useCallback(() => {
             ((0, I.dJ)(
                 { loadId: $, checkoutFlow: J, expressCheckoutType: L.current, expressPaymentType: k.current },
-                m.A.EXPRESS_CHECKOUT,
+                p.A.EXPRESS_CHECKOUT,
             ),
                 et());
         }, [et, $, J]);

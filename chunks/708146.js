@@ -7,6 +7,7 @@ let o = new a.A("ClientBillingError"),
     d = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL,
     c = {
         payment_method_confirmation: "PaymentMethodConfirmation",
+        payment_confirmation: "PaymentConfirmation",
         submit_address_step: "SubmitAddressStep",
         payment_element_setup: "PaymentElementSetup",
         express_checkout_vault: "ExpressCheckoutAddPaymentMethod",
@@ -15,76 +16,84 @@ let o = new a.A("ClientBillingError"),
         braintree_tokenize: "BraintreeTokenize",
         gateway_sdk_init: "GatewaySdkInit",
         stripe_load: "StripeLoad",
+        order_create: "OrderCreate",
+        order_sync: "OrderSync",
+        order_sign: "OrderSign",
+        order_fetch: "OrderFetch",
+        order_signing_reopen_next_action: "OrderSigningReopenNextAction",
+        subscription_plans_fetch: "SubscriptionPlansFetch",
     },
     u = new Set(["card_error", "api_connection_error", "validation_error"]),
     _ = new Set(["setup_intent_authentication_failure", "payment_intent_authentication_failure"]),
     E = new Set(["email_invalid", "tax_id_invalid"]),
-    A = ["google_pay.", "apple_pay."],
-    f = new Set(["BraintreeError", "AdyenCheckoutError"]),
-    h = /Failed to fetch|NetworkError|Load failed|Failed to load Stripe\.js/,
-    I = new Set(["PAYPAL_TOKENIZATION_REQUEST_ACTIVE"]);
-function p(e, t) {
+    A = new Set([r.Ay.Fields.CARD_NUMBER, r.Ay.Fields.CARD_CVC, r.Ay.Fields.CARD_EXPIRATION_DATE]),
+    f = ["google_pay.", "apple_pay."],
+    h = new Set(["BraintreeError", "AdyenCheckoutError"]),
+    I = /Failed to fetch|NetworkError|Load failed|Failed to load Stripe\.js/,
+    p = new Set(["PAYPAL_TOKENIZATION_REQUEST_ACTIVE"]);
+function m(e, t) {
     if ("object" != typeof e || null === e) return null;
     let n = e[t];
     return "string" == typeof n ? n : null;
 }
-let m = [
+function g(e) {
+    return e instanceof Error || (null != m(e, "name") && null != m(e, "message"));
+}
+let T = [
     [/authentication/gi, "verification"],
     [/authoriz/gi, "approv"],
     [/token/gi, "tokn"],
     [/email/gi, "e_mail"],
 ];
-function g(e) {
-    return m.reduce((e, t) => {
+function S(e) {
+    return T.reduce((e, t) => {
         let [n, i] = t;
         return e.replace(n, (e) => (e === e.toUpperCase() ? i.toUpperCase() : i));
     }, e);
 }
-function T(e) {
+function N(e) {
     return Object.fromEntries(
         Object.entries(e).map((e) => {
             let [t, n] = e;
             return "string" == typeof n
-                ? [t, g(n)]
+                ? [t, S(n)]
                 : Array.isArray(n)
-                  ? [t, n.map((e) => ("string" == typeof e ? g(e) : e))]
+                  ? [t, n.map((e) => ("string" == typeof e ? S(e) : e))]
                   : [t, n];
         }),
     );
 }
-function S(e) {
+function C(e) {
     return e
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "_")
         .replace(/^_+|_+$/g, "")
         .slice(0, 48);
 }
-class N extends Error {
+class O extends Error {
     classification;
     key;
     shouldReport;
     source;
     cause;
     constructor(e, t) {
-        let n = N.classify(t);
-        (super(N.getMessage(n)),
+        let n = O.classify(t);
+        (super(O.getMessage(n)),
             (this.classification = n),
             (this.source = e),
-            (this.key = N.getKeyFor(this.classification)),
+            (this.key = O.getKeyFor(this.classification)),
             (this.shouldReport = this.getShouldReport()),
             (this.cause = t instanceof Error ? t : void 0),
             (this.name = `${c[e.site]}Error[${this.key}]`));
     }
     static report(e, t, n) {
-        let i = new N(e, t),
-            r = i.getSentryOptions(n);
+        let i = new O(e, t),
+            r = i.getSentryOptions(n),
+            a = { fingerprint: r.fingerprint, tags: r.tags, ...(d ? { extra: r.extra } : {}) };
         return (
-            o.info(i.shouldReport ? "Reporting to Sentry:" : "Skipping Sentry report:", i.name, {
-                fingerprint: r.fingerprint,
-                tags: r.tags,
-                ...(d ? { extra: r.extra } : {}),
-            }),
-            i.shouldReport && (0, s.pM)(i, r),
+            i.shouldReport
+                ? (o.error("reporting error to Sentry:", i.name, a), (0, s.pM)(i, r))
+                : o.info("skipping Sentry report:", i.name, a),
             i
         );
     }
@@ -93,12 +102,12 @@ class N extends Error {
         if ((0, s.Lt)(e)) return { shape: "stripe_error", error: e };
         if (e instanceof i.oh) return { shape: "http_error", error: e };
         if ("string" == typeof e) return { shape: "string", error: e };
-        let t = p(e, "code");
-        return null != t && A.some((e) => t.startsWith(e))
+        let t = m(e, "code");
+        return null != t && f.some((e) => t.startsWith(e))
             ? { shape: "stripe_wallet_exception", error: e }
-            : null != t && e instanceof Error && f.has(e.name)
+            : null != t && g(e) && h.has(e.name)
               ? { shape: "gateway_sdk_error", error: e }
-              : e instanceof Error
+              : g(e)
                 ? { shape: "error", error: e }
                 : { shape: "unknown", error: e };
     }
@@ -117,15 +126,15 @@ class N extends Error {
             }
             case "billing_error": {
                 let { code: t, status: n } = e.error,
-                    i = N.getBillingErrorFieldNames(e.error);
+                    i = O.getBillingErrorFieldNames(e.error);
                 if (i.length > 0) return `BillingError (field error: ${i.join(", ")})`;
                 return t > 0 ? `BillingError (code: ${t})` : `BillingError${null != n ? ` (HTTP ${n})` : ""}`;
             }
             case "stripe_wallet_exception":
                 return `Stripe Wallet Exception (code: ${e.error.code})`;
             default: {
-                let t = p(e.error, "message");
-                return null != t && "" !== t ? t : N.getKeyFor(e);
+                let t = m(e.error, "message");
+                return null != t && "" !== t ? t : O.getKeyFor(e);
             }
         }
     }
@@ -133,10 +142,12 @@ class N extends Error {
         switch (e.shape) {
             case "billing_error": {
                 let { error: t } = e,
-                    n = N.getBillingErrorFieldNames(t);
+                    n = O.getBillingErrorFieldNames(t);
                 if (n.length > 0) return `field_error:${n.join("+")}`;
                 if (t.code > 0) return String(t.code);
-                return null != t.status ? `http_${t.status}` : "unknown";
+                if (null != t.status) return `http_${t.status}`;
+                let i = m(t, "name");
+                return null != i ? i : "unknown";
             }
             case "stripe_error": {
                 let { error: t } = e;
@@ -147,9 +158,9 @@ class N extends Error {
             case "stripe_wallet_exception":
                 return e.error.code;
             case "gateway_sdk_error":
-                return `${S(e.error.name)}:${e.error.code}`;
+                return `${C(e.error.name)}:${e.error.code}`;
             case "string":
-                return S(e.error);
+                return C(e.error);
             case "error":
                 return e.error.name;
             case "unknown":
@@ -162,7 +173,7 @@ class N extends Error {
             case "billing_error": {
                 let { error: t } = e;
                 if (t.code === r.Ay.ErrorCodes.INVALID_PAYMENT_SOURCE) return !1;
-                if (N.getBillingErrorFieldNames(t).length > 0) return !0;
+                if (O.getBillingErrorFieldNames(t).some((e) => !A.has(e))) return !0;
                 return !(0, s.gr)(t);
             }
             case "stripe_error": {
@@ -180,18 +191,16 @@ class N extends Error {
             case "stripe_wallet_exception":
                 return !1;
             case "error":
-                return !h.test(e.error.message);
+                return !I.test(e.error.message);
             case "gateway_sdk_error":
-                return !I.has(e.error.code);
+                return !p.has(e.error.code);
             case "string":
             case "unknown":
                 return !0;
         }
     }
     isStripeWalletSelected() {
-        return (
-            "express_checkout_vault" === this.source.site || this.source.selectedElementType === l.he.PAYMENT_REQUEST
-        );
+        return !!this.source.isStripeWallet || this.source.selectedElementType === l.he.PAYMENT_REQUEST;
     }
     getErrorTags() {
         let { classification: e } = this;
@@ -199,7 +208,7 @@ class N extends Error {
             case "billing_error":
                 return {
                     error_code: String(e.error.code),
-                    has_field_error: String(N.getBillingErrorFieldNames(e.error).length > 0),
+                    has_field_error: String(O.getBillingErrorFieldNames(e.error).length > 0),
                     http_status: null != e.error.status ? String(e.error.status) : null,
                 };
             case "stripe_error":
@@ -229,34 +238,34 @@ class N extends Error {
             case "billing_error": {
                 let { code: t, status: n, message: i } = e.error;
                 return {
-                    raw_error: T({ code: t, status: n, message: i, fields: N.getBillingErrorFieldNames(e.error) }),
+                    raw_error: N({ code: t, status: n, message: i, fields: O.getBillingErrorFieldNames(e.error) }),
                 };
             }
             case "stripe_error": {
                 let { type: t, code: n, decline_code: i, param: r, doc_url: a, message: s } = e.error;
-                return { raw_error: T({ type: t, code: n, decline_code: i, param: r, doc_url: a, message: s }) };
+                return { raw_error: N({ type: t, code: n, decline_code: i, param: r, doc_url: a, message: s }) };
             }
             case "http_error": {
                 let { status: t, method: n, message: i } = e.error;
-                return { raw_error: T({ status: t, method: n, message: i }) };
+                return { raw_error: N({ status: t, method: n, message: i }) };
             }
             case "stripe_wallet_exception": {
                 let { code: t, message: n } = e.error;
-                return { raw_error: T({ code: t, message: n }) };
+                return { raw_error: N({ code: t, message: n }) };
             }
             case "gateway_sdk_error": {
                 let { name: t, code: n, message: i } = e.error;
-                return { raw_error: T({ name: t, code: n, message: i }) };
+                return { raw_error: N({ name: t, code: n, message: i }) };
             }
             case "error": {
                 let { name: t, message: n } = e.error;
-                return { raw_error: T({ name: t, message: n }) };
+                return { raw_error: N({ name: t, message: n }) };
             }
             case "string":
                 return {};
             case "unknown":
                 return null != e.error
-                    ? T({ raw_error_keys: Object.keys(e.error), raw_error_message: p(e.error, "message") })
+                    ? N({ raw_error_keys: Object.keys(e.error), raw_error_message: m(e.error, "message") })
                     : {};
         }
     }
@@ -281,4 +290,4 @@ class N extends Error {
         };
     }
 }
-n.d(t, {}, { r: N });
+n.d(t, {}, { r: O });

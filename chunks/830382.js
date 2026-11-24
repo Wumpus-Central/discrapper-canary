@@ -190,7 +190,8 @@ n.d(
                     n.code !== l.tG.CONFIRMATION_REQUIRED)
                 )
                     throw n;
-                if (!r.body.payment_id) throw (0, d.i0)("payment id cannot be null on redirected confirmations.");
+                if (!r.body.payment_id)
+                    throw (0, d.J0)("payment_confirmation", "payment id cannot be null on redirected confirmations.");
                 return (0, d.Oj)(r.body, i);
             }
         },

@@ -82,7 +82,7 @@ let C = {
     [u.he.PRZELEWY24]: {
         submitAddressStep: async (e) => {
             let { stripe: t, p24BankState: n, billingAddressState: l, analyticsLocation: i } = e;
-            if (void 0 === n) throw (0, r.i0)("Bank required for Przelewy24");
+            if (void 0 === n) throw (0, r.J0)("payment_method_confirmation", "Bank required for Przelewy24");
             return { paymentSource: await (0, r.TD)(t, { p24Bank: n }, l.info, i), responseType: "payment-source" };
         },
     },
