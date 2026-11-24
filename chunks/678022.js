@@ -163,7 +163,11 @@ function G(e) {
     return f(r.bb.CLIENT_THEMES, e);
 }
 function x(e, t) {
-    return "high" === e ? f(r.bb.STREAM_HIGH_QUALITY, t) : f(r.bb.STREAM_MID_QUALITY, t);
+    return "high" === e
+        ? ((0, s.CC)(t?.premiumType, c.PremiumTypes.TIER_2) || t?.hasFreePremium() === !0) &&
+              f(r.bb.STREAM_HIGH_QUALITY, t)
+        : ((0, s.CC)(t?.premiumType, c.PremiumTypes.TIER_1) || t?.hasFreePremium() === !0) &&
+              f(r.bb.STREAM_MID_QUALITY, t);
 }
 function k(e) {
     return null != e && !e.isFractionalPremiumWithNoStandardSub() && (0, s.YE)(e, c.PremiumTypes.TIER_2);
