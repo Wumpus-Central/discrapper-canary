@@ -63,12 +63,7 @@ function I(e) {
           }),
         c &&
             null != (0, i.W)(t, s) &&
-            a.$({
-                searchContext: t,
-                searchQueryString: s,
-                SearchSessionAnalyticsManager: S.A,
-                failImmediatelyWhenRateLimited: !0,
-            }));
+            a.$({ searchContext: t, searchQueryString: s, SearchSessionAnalyticsManager: S.A }));
 }
 function w(e) {
     let t = (0, h.bS)(e);

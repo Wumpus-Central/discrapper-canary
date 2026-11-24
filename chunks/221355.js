@@ -9,35 +9,32 @@ var r = s(620632),
     h = s(583231),
     d = s(133986),
     o = s(386649),
-    S = s(652215);
+    S = s(163839),
+    A = s(652215);
 s.d(
     t,
     {},
     {
         $: async function (e) {
-            let {
-                    searchContext: t,
-                    searchQueryString: s,
-                    SearchSessionAnalyticsManager: A,
-                    failImmediatelyWhenRateLimited: E,
-                } = e,
+            let { searchContext: t, searchQueryString: s, SearchSessionAnalyticsManager: E } = e,
                 g = (0, h.qi)(t, s);
             if (null == g || !(0, l.Qc)(g.guildId, "fetch_answer")) return;
             let { queryText: p, guildId: y, channelIds: R, requestKey: T } = g;
             if (0 === p.length) return;
-            o.A.hasSuggestions(g) || (0, d.E)(g, A);
+            o.A.hasSuggestions(g) || (0, d.E)(g, E);
             let f = u.A.getStatus(y, T);
             if (null != f && f !== _.o.ERROR) return;
             let I = performance.now(),
-                w = c.A.getContextualProperties(g, A);
+                w = c.A.getContextualProperties(g, E);
             n.h.dispatch({ type: "SMART_SEARCH_FETCH_START", smartSearchQuery: g });
             try {
                 let e = await r.Bo.post({
-                        url: S.Rsh.SMART_SEARCH(y),
+                        url: A.Rsh.SMART_SEARCH(y),
                         body: { query_text: p, channel_ids: R },
                         oldFormErrors: !0,
                         rejectWithError: !0,
-                        failImmediatelyWhenRateLimited: E,
+                        failImmediatelyWhenRateLimited: !0,
+                        timeout: S.I0,
                     }),
                     t = e.body.message_citations
                         .map((e) => ({
@@ -79,10 +76,14 @@ s.d(
                         citations: t,
                         contextualProperties: w,
                     }));
-            } catch (s) {
-                let e = s?.status,
-                    t = 404 === e ? _.o.EMPTY : _.o.ERROR;
-                (n.h.dispatch({ type: "SMART_SEARCH_FETCH_FAILURE", smartSearchQuery: g, status: t }),
+            } catch (r) {
+                let e = r?.status,
+                    t = 404 === e ? _.o.EMPTY : _.o.ERROR,
+                    s = u.A.getStatus(y, T);
+                (s !== _.o.LOADED &&
+                    s !== _.o.EMPTY &&
+                    s !== _.o.NOT_QUALIFIED &&
+                    n.h.dispatch({ type: "SMART_SEARCH_FETCH_FAILURE", smartSearchQuery: g, status: t }),
                     c.A.trackSmartSearchAnswerReturned({
                         smartSearchQuery: g,
                         requestId: null,

@@ -13,7 +13,7 @@ let s = (0, r.h)((e, t) => ({
         removeUser: (n, i) => {
             let { selectedUserIds: r } = t(),
                 s = r[n];
-            if (null == s) return;
+            if (null == s || !s.has(i)) return;
             let l = [...s].filter((e) => e !== i);
             (0, a.r)(() => {
                 e({ selectedUserIds: { ...r, [n]: new Set(l) } });

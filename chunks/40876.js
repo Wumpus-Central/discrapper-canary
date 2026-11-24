@@ -234,6 +234,17 @@ let r = {
         inlineRequire: () => n(764056).h,
     },
     LoginRequiredActionManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(165685).A },
+    MemberSafetyPageSelectionManager: {
+        actions: [
+            "GUILD_MEMBER_REMOVE",
+            "GUILD_MEMBER_REMOVE_LOCAL",
+            "GUILD_BAN_ADD",
+            "GUILD_DELETE",
+            "GUILD_SETTINGS_CLOSE",
+            "LOGOUT",
+        ],
+        inlineRequire: () => n(12476).A,
+    },
     MemberSafetySearchManager: {
         actions: [
             "INITIALIZE_MEMBER_SAFETY_STORE",
