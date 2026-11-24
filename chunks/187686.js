@@ -8,20 +8,20 @@ var n = s(477900),
     c = s(192308),
     u = s(73153),
     E = s(830215),
-    g = s(277861),
-    d = s(976860),
+    d = s(277861),
+    g = s(976860),
     N = s(46653),
     h = s(67521),
     x = s(207913),
-    p = s(462714),
-    f = s(482876),
+    f = s(462714),
+    p = s(482876),
     j = s(37380),
-    _ = s(239093),
-    S = s(652215),
+    S = s(239093),
+    _ = s(652215),
     A = s(792996),
     m = s(400514);
 function I() {
-    return (0, i.bG)([x.A], () => x.A.getAgeCheckStatus()) === _.qN.VERIFIED
+    return (0, i.bG)([x.A], () => x.A.getAgeCheckStatus()) === S.qN.VERIFIED
         ? null
         : (0, n.jsxs)(l.$T, {
               color: l.Hv.DANGER,
@@ -34,8 +34,8 @@ function I() {
                       children: A.intl.string(A.t["MG+Bzb"]),
                   }),
                   (0, n.jsx)(l.eC, {
-                      noticeType: S.kqX.SAFETY_SUSPENDED_USER_WARNING,
-                      href: _.d$.WARNING_SYSTEM_HELPCENTER_LINK,
+                      noticeType: _.kqX.SAFETY_SUSPENDED_USER_WARNING,
+                      href: S.d$.WARNING_SYSTEM_HELPCENTER_LINK,
                       children: (0, n.jsx)(a.E, {
                           variant: "body-md/normal",
                           color: "text-overlay-light",
@@ -52,9 +52,9 @@ function b() {
     h.A.openV2("");
 }
 function D() {
-    (0, g.Vq)();
+    (0, d.Vq)();
 }
-function y() {
+function U() {
     return (0, n.jsx)(o.w, {
         type: "critical",
         message: A.intl.string(A.t.dqbMbn),
@@ -62,18 +62,18 @@ function y() {
         action: { text: A.intl.string(A.t.IcA9iD), onClick: b },
     });
 }
-function U() {
+function k() {
     let t = (0, i.bG)([x.A], () => x.A.getIsExpressiveModalV2Enabled());
     return (0, n.jsx)(o.w, { type: "info", message: A.intl.string(t ? A.t.PU8nMu : A.t["nhhy/R"]), role: "status" });
 }
-function k() {
+function y() {
     let { methods: t, loading: e } = (function () {
         let [t, e] = r.useState({ methods: null, loading: !0 });
         return (
             r.useEffect(() => {
                 let t = !1;
                 return (
-                    (0, f.j)()
+                    (0, p.j)()
                         .then(
                             (t) => (
                                 u.h.dispatch({
@@ -82,7 +82,7 @@ function k() {
                                     footerMessage: t.footerMessage,
                                     outageBannerMessage: t.outageBannerMessage,
                                 }),
-                                (0, p.Y)(t.methods)
+                                (0, f.Y)(t.methods)
                             ),
                         )
                         .then((s) => {
@@ -100,7 +100,7 @@ function k() {
         );
     })();
     return e
-        ? (0, n.jsx)(U, {})
+        ? (0, n.jsx)(k, {})
         : null == t || 0 === t.length
           ? (0, n.jsx)(o.w, {
                 type: "critical",
@@ -108,7 +108,7 @@ function k() {
                 role: "alert",
                 action: { text: A.intl.string(A.t.NkTGsC), onClick: D },
             })
-          : (0, n.jsx)(y, {});
+          : (0, n.jsx)(U, {});
 }
 function C() {
     return (0, n.jsx)(o.w, {
@@ -121,32 +121,32 @@ function C() {
 function T(t) {
     let {} = t,
         e = (0, i.bG)([x.A], () => x.A.getAgeCheckStatus());
-    return e === _.qN.NONE
+    return e === S.qN.NONE
         ? null
-        : e === _.qN.SUCCESS
+        : e === S.qN.SUCCESS
           ? (0, n.jsx)(o.w, {
                 type: "success",
                 message: A.intl.format(A.t.maZDL6, { login: "/login" }),
                 role: "status",
             })
-          : e === _.qN.VERIFIED
+          : e === S.qN.VERIFIED
             ? (0, n.jsx)(o.w, {
                   type: "success",
                   message: A.intl.string(A.t["2Qe65J"]),
                   role: "status",
                   action: { text: A.intl.string(A.t["2jvQ6K"]), onClick: R },
               })
-            : e === _.qN.VERIFIED_OTHER_VIOLATIONS_REMAIN
+            : e === S.qN.VERIFIED_OTHER_VIOLATIONS_REMAIN
               ? (0, n.jsx)(o.w, { type: "success", message: A.intl.string(A.t.Ie7p1Q), role: "status" })
-              : e === _.qN.ERROR
+              : e === S.qN.ERROR
                 ? (0, n.jsx)(o.w, { type: "critical", message: A.intl.string(A.t["4sILBU"]), role: "alert" })
-                : e === _.qN.FAILURE
+                : e === S.qN.FAILURE
                   ? (0, n.jsx)(o.w, { type: "critical", message: A.intl.string(A.t["40R63o"]), role: "alert" })
-                  : e === _.qN.UNDERAGE
-                    ? (0, n.jsx)(y, {})
-                    : e === _.qN.UNDERAGE_MANUAL_REVIEW
-                      ? (0, n.jsx)(k, {})
-                      : (0, n.jsx)(U, {});
+                  : e === S.qN.UNDERAGE
+                    ? (0, n.jsx)(U, {})
+                    : e === S.qN.UNDERAGE_MANUAL_REVIEW
+                      ? (0, n.jsx)(y, {})
+                      : (0, n.jsx)(k, {});
 }
 function G() {
     let t = (0, i.bG)([N.default], () => N.default.isSuspendedUserTokenExpired());
@@ -156,8 +156,12 @@ function G() {
     });
 }
 function L() {
-    let t = (0, i.bG)([N.default], () => N.default.getSuspendedUserToken());
+    let t = (0, i.bG)([N.default], () => N.default.getSuspendedUserToken()),
+        e = (0, i.bG)([N.default], () => N.default.isSuspendedUserTokenExpired());
     return (
+        r.useEffect(() => {
+            e && (0, c.s7)();
+        }, [e]),
         r.useEffect(() => {
             function t() {
                 (0, c.s7)();
@@ -169,7 +173,7 @@ function L() {
                 }
             );
         }, []),
-        null == t && (0, d.pX)(S.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
+        null == t && (0, g.pX)(_.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
         (0, n.jsxs)("div", { className: m.kL, children: [(0, n.jsx)(I, {}), (0, n.jsx)(G, {})] })
     );
 }
