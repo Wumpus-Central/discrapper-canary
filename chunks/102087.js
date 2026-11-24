@@ -14,6 +14,7 @@ e.exports = {
     nu: "raisedDoorAsset_IxwVgM",
     Jl: "largeSquareTile_IxwVgM",
     a7: "revealStrip_IxwVgM",
+    Si: "revealButton_IxwVgM",
     W_: "centeredHintTile_IxwVgM",
     qC: "hintAsset_IxwVgM",
     _J: "revealDateLabel_IxwVgM",

@@ -101,13 +101,16 @@ let N = (e) => {
                     className: a()(y.a7, { [y.u0]: g }),
                     children: [
                         m && (0, l.jsx)(N, { day: t }),
-                        (0, l.jsx)(c.$, {
-                            ...d,
-                            variant: "overlay-primary",
-                            fullWidth: !0,
-                            text: _.intl.string(_.t["1PdKvg"]),
-                            "aria-label": _.intl.formatToPlainString(_.t.zzDQv3, { day: t }),
-                            onClick: E,
+                        (0, l.jsx)("div", {
+                            className: y.Si,
+                            children: (0, l.jsx)(c.$, {
+                                ...d,
+                                variant: "overlay-primary",
+                                fullWidth: !0,
+                                text: _.intl.string(_.t["1PdKvg"]),
+                                "aria-label": _.intl.formatToPlainString(_.t.zzDQv3, { day: t }),
+                                onClick: E,
+                            }),
                         }),
                     ],
                 }),

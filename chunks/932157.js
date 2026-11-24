@@ -13,6 +13,7 @@ var i,
         (i[(i.AGENCY_CLASSIFICATION_APPLE = 8)] = "AGENCY_CLASSIFICATION_APPLE"),
         (i[(i.AGENCY_CLASSIFICATION_ROBLOX = 9)] = "AGENCY_CLASSIFICATION_ROBLOX"),
         (i[(i.AGENCY_CLASSIFICATION_IGDB_CSR = 10)] = "AGENCY_CLASSIFICATION_IGDB_CSR"),
+        (i[(i.DEVELOPER_SELF_LABEL = 11)] = "DEVELOPER_SELF_LABEL"),
         i),
     s = n(381438);
 let l = { ALL: new Set([1, 2, 3, 4, 5, 6, 7]), IS_ADULT_ONLY: new Set([]) },
@@ -64,67 +65,75 @@ let I = { source: a.NO_CLASSIFICATION, status: s.Y.EVERYONE },
     p = {};
 function m(e) {
     return (function (e) {
-        var t, n, i, r, E;
-        let A, f, h, m, T, S, N;
+        var t, n, i, r, E, A;
+        let f, h, m, T, S, N, C, O;
         if (null == e) return I;
-        let C = [],
-            { type: O, data: R } = e;
+        let R = [],
+            { type: L, data: y } = e;
         return (
-            "minimal" === O
-                ? null != R.discord_classifications && C.push(g(a.DISCORD_CLASSIFICATION, R.discord_classifications))
-                : null != R.manual_classifications
-                  ? C.push(g(a.MANUAL_CLASSIFICATION, R.manual_classifications))
-                  : null != R.automated_classifications &&
-                    C.push(g(a.AUTOMATED_CLASSIFICATION, R.automated_classifications)),
-            null != R.agency_ratings &&
-                (null != R.agency_ratings.esrb &&
-                    C.push(
-                        ((t = R.agency_ratings.esrb),
-                        (A = o.IS_ADULT_ONLY.has(t.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_ESRB, status: A }),
+            "minimal" === L
+                ? null != y.discord_classifications && R.push(g(a.DISCORD_CLASSIFICATION, y.discord_classifications))
+                : null != y.manual_classifications
+                  ? R.push(g(a.MANUAL_CLASSIFICATION, y.manual_classifications))
+                  : null != y.automated_classifications &&
+                    R.push(g(a.AUTOMATED_CLASSIFICATION, y.automated_classifications)),
+            null != y.agency_ratings &&
+                (null != y.agency_ratings.esrb &&
+                    R.push(
+                        ((t = y.agency_ratings.esrb),
+                        (f = o.IS_ADULT_ONLY.has(t.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_ESRB, status: f }),
                     ),
-                null != R.agency_ratings.pegi &&
-                    C.push(
-                        ((n = R.agency_ratings.pegi),
-                        (f = u.IS_ADULT_ONLY.has(n.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_PEGI, status: f }),
+                null != y.agency_ratings.pegi &&
+                    R.push(
+                        ((n = y.agency_ratings.pegi),
+                        (h = u.IS_ADULT_ONLY.has(n.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_PEGI, status: h }),
                     ),
-                null != R.agency_ratings.gop &&
-                    C.push(
-                        ((i = R.agency_ratings.gop),
-                        (h = d.IS_ADULT.has(i.classification) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_GOP, status: h }),
+                null != y.agency_ratings.gop &&
+                    R.push(
+                        ((i = y.agency_ratings.gop),
+                        (m = d.IS_ADULT.has(i.classification) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_GOP, status: m }),
                     ),
-                null != R.agency_ratings.igdb &&
-                    C.push(
-                        ((m = (R.agency_ratings.igdb.themes ?? []).some((e) => c.ADULT_THEMES.has(e))
+                null != y.agency_ratings.igdb &&
+                    R.push(
+                        ((T = (y.agency_ratings.igdb.themes ?? []).some((e) => c.ADULT_THEMES.has(e))
                             ? s.Y.ADULT
                             : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_IGDB, status: m }),
+                        { source: a.AGENCY_CLASSIFICATION_IGDB, status: T }),
                     ),
-                null != R.agency_ratings.apple &&
-                    C.push(
-                        ((r = R.agency_ratings.apple),
-                        (T = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: T }),
+                null != y.agency_ratings.apple &&
+                    R.push(
+                        ((r = y.agency_ratings.apple),
+                        (S = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_APPLE, status: S }),
                     ),
-                null != R.agency_ratings.roblox &&
-                    C.push(
-                        ((E = R.agency_ratings.roblox),
-                        (S = _.IS_ADULT_ONLY.has(E.rating) ? s.Y.ADULT : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_ROBLOX, status: S }),
+                null != y.agency_ratings.roblox &&
+                    R.push(
+                        ((E = y.agency_ratings.roblox),
+                        (N = _.IS_ADULT_ONLY.has(E.rating) ? s.Y.ADULT : s.Y.EVERYONE),
+                        { source: a.AGENCY_CLASSIFICATION_ROBLOX, status: N }),
                     ),
-                "full" === O &&
-                    null != R.agency_ratings.igdb_csr &&
-                    C.push(
-                        ((N = R.agency_ratings.igdb_csr.ratings.some((e) => {
+                "full" === L &&
+                    null != y.agency_ratings.igdb_csr &&
+                    R.push(
+                        ((C = y.agency_ratings.igdb_csr.ratings.some((e) => {
                             let t = p[e.category];
                             return null != t && e.severity >= t;
                         })
                             ? s.Y.ADULT
                             : s.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_IGDB_CSR, status: N }),
+                        { source: a.AGENCY_CLASSIFICATION_IGDB_CSR, status: C }),
                     )),
+            "minimal" === L
+                ? !0 === y.developer_age_restricted && R.push({ source: a.DEVELOPER_SELF_LABEL, status: s.Y.ADULT })
+                : (y.developer_self_labels?.length ?? 0) > 0 &&
+                  R.push(
+                      ((A = y.developer_self_labels),
+                      (O = (A?.length ?? 0) > 0 ? s.Y.ADULT : s.Y.EVERYONE),
+                      { source: a.DEVELOPER_SELF_LABEL, status: O }),
+                  ),
             (function (e) {
                 let t = null;
                 for (let r of e) {
@@ -136,7 +145,7 @@ function m(e) {
                     ((n = r.status), (i = t.status), s.R.indexOf(n) - s.R.indexOf(i) > 0 && (t = r));
                 }
                 return t ?? I;
-            })(C)
+            })(R)
         );
     })(e).status;
 }

@@ -205,6 +205,10 @@
     padding: var(--space-12)
 }
 
+.revealButton_IxwVgM {
+    width: 100%
+}
+
 .largeSquareTile_IxwVgM .dayNumberText_IxwVgM[data-text-variant] {
     background-image: linear-gradient(0deg, rgba(12, 71, 133, .6) 13.701%, rgba(12, 71, 133, 0) 64.951%), linear-gradient(90deg, #fff, #fff)
 }
@@ -351,6 +355,10 @@
     transform: var(--custom-calendar-door-start-transform)
 }
 
+.full-motion .slidingDoor_IxwVgM .revealButton_IxwVgM {
+    animation: calendarRevealButtonSlideDown_IxwVgM .22s ease-in forwards
+}
+
 .full-motion .slideUp_IxwVgM {
     animation-name: calendarDoorSlideUp_IxwVgM
 }
@@ -371,6 +379,18 @@
     }
 }
 
+@keyframes calendarRevealButtonSlideDown_IxwVgM {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(calc(200% + var(--space-12)))
+    }
+}
+
 @keyframes calendarUnderglowShimmer_IxwVgM {
     to {
         background-position: 0 100%
@@ -383,4 +403,4 @@
     }
 }
 
-/*# sourceMappingURL=c8d2f53a067d63e8.css.map*/
+/*# sourceMappingURL=303fbb071321f364.css.map*/
