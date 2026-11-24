@@ -1,10 +1,14 @@
-o.exports = {
+e.exports = {
     CR: "modalRoot_zTijXM",
     Zc: "overflowHost_zTijXM",
     jE: "modalContent_zTijXM",
     dw: "stage_zTijXM",
     Qw: "art_zTijXM",
-    b: "closeButton_zTijXM",
+    ne: "controls_zTijXM",
+    Wh: "volumeIcon_zTijXM",
+    pD: "volume_zTijXM",
+    MQ: "volumeSlider_zTijXM",
+    Oe: "volumeBar_zTijXM",
     wx: "header_zTijXM",
     W0: "tallyHeader_zTijXM",
     UP: "eyebrow_zTijXM",

@@ -11,7 +11,7 @@ var i = n(158390),
     E = n(475489);
 let A = new i.A(E.Mf, E.if),
     f = new i.A(E.Mf, E.if),
-    h = new a.J_(E.xY, u.c$);
+    h = new a.J_(E.T, u.c$);
 function I(e) {
     return e === d.default.getId();
 }
@@ -33,7 +33,7 @@ class m extends s.A {
         },
         ORB_VOID_CLICK: (e) => {
             let { flushNow: t } = e;
-            t ? (0, u.c$)() : h.delay();
+            t ? (0, u.c$)() : h.delay(!1);
         },
         ORB_VOID_FLUSH: () => {
             (h.cancel(), p());

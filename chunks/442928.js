@@ -1,4 +1,16 @@
-n.d(t, { sY: () => f, RJ: () => I, c$: () => m, A: () => h, O4: () => A, RQ: () => p, Wv: () => g, AP: () => T });
+n.d(t, {
+    sY: () => f,
+    RJ: () => g,
+    c$: () => S,
+    A: () => h,
+    Av: () => I,
+    O4: () => A,
+    RQ: () => T,
+    Wv: () => N,
+    DE: () => m,
+    wC: () => p,
+    AP: () => C,
+});
 var i = n(73153),
     r = n(181658),
     a = n(195880),
@@ -23,7 +35,16 @@ function f() {
 function h() {
     i.h.dispatch({ type: "ORB_VOID_CONSENT_GRANT" });
 }
-async function I() {
+function I() {
+    i.h.dispatch({ type: "ORB_VOID_ELEVATOR_MUSIC_HEARD" });
+}
+function p() {
+    i.h.dispatch({ type: "ORB_VOID_SOUND_MUTE_TOGGLE" });
+}
+function m(e) {
+    i.h.dispatch({ type: "ORB_VOID_SOUND_VOLUME_SET", volume: e });
+}
+async function g() {
     let e = s.default.getId();
     try {
         let t = await (async function () {
@@ -45,7 +66,7 @@ async function I() {
         i.h.dispatch({ type: "ORB_VOID_STATE_FETCH_FAIL", userId: e, error: E(t) });
     }
 }
-function p(e) {
+function T(e) {
     let t;
     if (!u.A.canSpend(e)) return null;
     let n = u.A.getDisplayedTotal() ?? 0,
@@ -59,10 +80,10 @@ function p(e) {
         r
     );
 }
-function m() {
+function S() {
     i.h.dispatch({ type: "ORB_VOID_FLUSH", sinkId: (0, a.m)(), batchTimestamp: new Date().toISOString() });
 }
-async function g() {
+async function N() {
     let e = u.A.getBatchToSend();
     if (null == e) return;
     let t = s.default.getId(),
@@ -100,6 +121,6 @@ async function g() {
         });
     }
 }
-function T(e) {
+function C(e) {
     i.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e });
 }
