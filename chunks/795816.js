@@ -132,7 +132,7 @@ async function ed(e) {
             inviterUserId: z,
             launchParams: { customId: M, referrerId: L, renderInFramePool: es },
         });
-        let [e] = await Promise.all([(0, $.D2)(s, t ?? void 0), (0, y.A)(s)]);
+        let [e] = await Promise.all([(0, $.D2)(s, t ?? void 0), (0, y.Ay)(s)]);
         d.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: s,

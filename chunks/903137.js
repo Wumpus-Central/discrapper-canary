@@ -7881,9 +7881,9 @@ let u$ = (0, tr.Fe)({
                 t.e(154168),
                 t.e(979585),
                 t.e(357718),
-                t.e(989677),
-            ]).then(t.bind(t, 98492)),
-        webpackId: 98492,
+                t.e(415905),
+            ]).then(t.bind(t, 676792)),
+        webpackId: 676792,
         renderLoader: uK,
         name: "AppChannel",
     });

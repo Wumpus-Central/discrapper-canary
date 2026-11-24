@@ -1,21 +1,21 @@
 (n.r(t),
     n.d(t, {
-        attachFrameHostWindow: () => b,
-        attachFrameIframe: () => y,
-        clearMainFrameSlot: () => p,
-        demoteMainFrame: () => m,
-        detachFrameHostWindow: () => v,
-        detachFrameIframe: () => D,
-        launchFrame: () => I,
-        promoteFrame: () => g,
-        refreshProxyTicket: () => P,
-        resetFrameGuestClaims: () => C,
-        resetFrameLayoutModes: () => L,
-        setFramePictureInPictureInteractive: () => N,
-        setFrameRunsInBackground: () => S,
-        setFrameUserMuted: () => O,
-        updateFrameLayoutMode: () => T,
-        updateFramePanelMode: () => R,
+        attachFrameHostWindow: () => P,
+        attachFrameIframe: () => b,
+        clearMainFrameSlot: () => g,
+        demoteMainFrame: () => T,
+        detachFrameHostWindow: () => M,
+        detachFrameIframe: () => v,
+        launchFrame: () => m,
+        promoteFrame: () => S,
+        refreshProxyTicket: () => U,
+        resetFrameGuestClaims: () => R,
+        resetFrameLayoutModes: () => D,
+        setFramePictureInPictureInteractive: () => O,
+        setFrameRunsInBackground: () => C,
+        setFrameUserMuted: () => L,
+        updateFrameLayoutMode: () => N,
+        updateFramePanelMode: () => y,
     }));
 var i = n(73153),
     r = n(730602),
@@ -27,57 +27,74 @@ function o() {
     null != e && (0, l.d)({ location: e.location, applicationId: e.applicationId, showFeedback: !1 });
 }
 var d = n(85982),
-    c = n(982844),
-    u = n(197184),
-    _ = n(91242),
-    E = n(457827),
-    A = n(165610),
-    f = n(5867);
-let h = 0;
-async function I(e) {
+    c = n(197184),
+    u = n(91242),
+    _ = n(457827),
+    E = n(105790),
+    A = n(182025),
+    f = n(534645),
+    h = n(165610),
+    I = n(5867);
+let p = 0;
+async function m(e) {
     let {
             applicationId: t,
             surface: n,
             launch: s,
             analyticsContext: l,
-            hostWindowKey: E,
-            showErrorModal: f = !0,
-            invite: I,
+            hostWindowKey: _,
+            showErrorModal: I = !0,
+            invite: m,
         } = e,
-        m = (0, A.VA)(t, n),
-        S = _.A.getFrame(m);
-    if (null != S) return (S.intent === A.sV.MAIN && (g(m), T({ frameId: m, layoutMode: A.y0.FOCUSED })), m);
-    (0, A.Yf)(n) === A.sV.MAIN && (o(), p());
-    let N = ++h;
+        T = (0, h.VA)(t, n),
+        C = u.A.getFrame(T);
+    if (null != C) {
+        let e = (0, E.zN)(T);
+        return (
+            null == e && (e = (0, E.U)(A.cu.LAUNCH_FRAME, T, t, n)),
+            e.finish({ type: A.Vj.REUSED }),
+            C.intent === h.sV.MAIN && (S(T), N({ frameId: T, layoutMode: h.y0.FOCUSED })),
+            T
+        );
+    }
+    (0, h.Yf)(n) === h.sV.MAIN && (o(), g());
+    let O = (0, E.U)(A.cu.LAUNCH_FRAME, T, t, n),
+        R = ++p;
     i.h.dispatch({
         type: "FRAME_LAUNCH_START",
         applicationId: t,
-        frameId: m,
+        frameId: T,
         surface: n,
-        hostWindowKey: E,
+        hostWindowKey: _,
         launch: s,
-        invite: I,
-        launchRequestId: N,
+        invite: m,
+        launchRequestId: R,
     });
     try {
-        let [e] = await Promise.all([(0, r.D2)(t, (0, u.V)(n), n.type, I), (0, c.A)(t)]);
+        let e = O.span(A.aY.PROXY_TICKET, async (e) => {
+                let i = (0, c.V)(n),
+                    a = await (0, r.Gt)(t, i, n.type, m);
+                return (a.prefetched && e.setStatus(A.xo.PREFETCHED), a.ticket);
+            }),
+            a = (0, f.U)(O, t),
+            [o] = await Promise.all([e, a]);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
-                frameId: m,
+                frameId: T,
                 surface: n,
-                proxyTicket: e,
+                proxyTicket: o,
                 analyticsContext: l,
                 launch: s ?? {},
-                invite: I,
-                hostWindowKey: E,
-                launchRequestId: N,
+                invite: m,
+                hostWindowKey: _,
+                launchRequestId: R,
             }),
-            m
+            T
         );
     } catch (e) {
-        if (f) {
+        if (I) {
             let n = await (0, a.f)(e, t);
             (0, d.A)(n.message);
         }
@@ -85,8 +102,8 @@ async function I(e) {
             i.h.dispatch({
                 type: "FRAME_LAUNCH_FAIL",
                 applicationId: t,
-                frameId: m,
-                launchRequestId: N,
+                frameId: T,
+                launchRequestId: R,
                 error: e,
                 analyticsContext: l,
             }),
@@ -94,62 +111,62 @@ async function I(e) {
         );
     }
 }
-function p() {
-    let e = _.A.getMainFrame();
-    null != e && (e.intent === A.sV.MAIN ? (0, E.r)(e.id) : m(e.id));
-}
-function m(e) {
-    _.A.getMainFrame()?.id === e && (L(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
-}
-function g(e) {
-    null != _.A.getFrame(e) &&
-        _.A.getMainFrame()?.id !== e &&
-        (o(), p(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));
+function g() {
+    let e = u.A.getMainFrame();
+    null != e && (e.intent === h.sV.MAIN ? (0, _.r)(e.id) : T(e.id));
 }
 function T(e) {
+    u.A.getMainFrame()?.id === e && (D(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
+}
+function S(e) {
+    null != u.A.getFrame(e) &&
+        u.A.getMainFrame()?.id !== e &&
+        (o(), g(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));
+}
+function N(e) {
     let { frameId: t, layoutMode: n } = e,
-        r = _.A.getFrame(t);
+        r = u.A.getFrame(t);
     null != r &&
         i.h.dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: r.applicationId, frameId: t, layoutMode: n });
 }
-function S(e, t) {
+function C(e, t) {
     i.h.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: e, enabled: t });
 }
-function N(e, t) {
+function O(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE", frameId: e, enabled: t });
 }
-function C(e) {
-    N(e, !1);
+function R(e) {
+    O(e, !1);
 }
-function O(e, t) {
+function L(e, t) {
     i.h.dispatch({ type: "FRAME_SET_USER_MUTED", frameId: e, muted: t });
 }
-function R(e, t) {
+function y(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
-function L(e) {
-    (T({ frameId: e, layoutMode: A.y0.FOCUSED }), R(e, f.Gd.PANEL));
-}
-function y(e, t) {
-    i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
-}
-function D(e, t) {
-    i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
+function D(e) {
+    (N({ frameId: e, layoutMode: h.y0.FOCUSED }), y(e, I.Gd.PANEL));
 }
 function b(e, t) {
-    i.h.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId: e, windowKey: t });
+    i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
 }
 function v(e, t) {
+    i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
+}
+function P(e, t) {
+    i.h.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId: e, windowKey: t });
+}
+function M(e, t) {
     i.h.dispatch({ type: "FRAME_HOST_WINDOW_UNMOUNT", frameId: e, windowKey: t });
 }
-async function P(e) {
-    let t = _.A.getFrame(e);
+async function U(e) {
+    let t = u.A.getFrame(e);
     if (null == t) return !1;
     let { applicationId: n, surface: s } = t,
-        l = (0, A.x1)(t) ? t.data.invite : t.invite;
+        l = (0, h.x1)(t) ? t.data.invite : t.invite;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D2)(n, (0, u.V)(s), s.type, l);
+        let t = await (0, r.D2)(n, (0, c.V)(s), s.type, l);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (t) {
         let e = await (0, a.f)(t, n);
