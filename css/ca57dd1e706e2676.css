@@ -99,6 +99,8 @@
 }
 
 .openableTile_IxwVgM {
+    --custom-calendar-door-bump: calc(var(--space-16) - 2px);
+    cursor: pointer;
     display: flex;
     flex-direction: column
 }
@@ -114,6 +116,19 @@
 .raisedDoorAsset_IxwVgM {
     -o-object-position: bottom;
     object-position: bottom
+}
+
+.full-motion .openableTile_IxwVgM>.raisedDoor_IxwVgM {
+    transition: transform .22s ease-out
+}
+
+.full-motion .openableTile_IxwVgM:is(:hover, :has(:focus-visible))>.raisedDoor_IxwVgM {
+    transform: translateY(calc(var(--custom-calendar-door-bump)*-1));
+    transition: transform .2s cubic-bezier(.3, 1.3, .6, 1)
+}
+
+.full-motion .largeSquareTile_IxwVgM.openableTile_IxwVgM:is(:hover, :has(:focus-visible))>.raisedDoor_IxwVgM {
+    transform: translateX(calc(var(--custom-calendar-door-bump)*-1))
 }
 
 .revealStrip_IxwVgM {
@@ -228,6 +243,10 @@
     position: absolute
 }
 
+.slidingDoor_IxwVgM>.raisedDoor_IxwVgM {
+    transform: var(--custom-calendar-door-start-transform)
+}
+
 .full-motion .slideUp_IxwVgM {
     animation-name: calendarDoorSlideUp_IxwVgM
 }
@@ -254,4 +273,4 @@
     }
 }
 
-/*# sourceMappingURL=a541b6c944d860e0.css.map*/
+/*# sourceMappingURL=ca57dd1e706e2676.css.map*/
