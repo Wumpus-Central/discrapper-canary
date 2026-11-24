@@ -650,8 +650,8 @@ i.d(
                         i.e(864316),
                         i.e(806221),
                         i.e(585782),
-                        i.e(46672),
-                    ]).then(i.bind(i, 597331));
+                        i.e(1046),
+                    ]).then(i.bind(i, 31541));
                     return (i) =>
                         (0, t.jsx)(s.R9, {
                             newValue: { cardId: k, sessionId: b, tilePosition: f },
