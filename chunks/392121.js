@@ -126,6 +126,7 @@ let r = (0, n(945810).mj)({
         i.M.AUTOCLIPPING_EARLY_ACCESS_LAUNCH_ANNOUNCEMENT,
         i.M.ORB_WALLET_SHOP_CTA_CARD_MOBILE,
         i.M.ORB_WALLET_NITRO_UPSELL_CTA_CARD_MOBILE,
+        i.M.BUILD_A_BEAR_RELAUNCH_COACHMARK,
     ]);
 function s(e) {
     return (
