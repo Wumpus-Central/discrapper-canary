@@ -1185,7 +1185,7 @@ function ni(e) {
 function nr(e) {
     let { onClick: t, ...n } = e,
         r = (0, t3.P)("guild_list_add_server");
-    return (0, i.jsx)(G, { ...n, onClick: () => t(r), tooltip: $.intl.string(r ? $.t.riOUtB : $.t.l5WIbf) });
+    return (0, i.jsx)(G, { ...n, onClick: () => t(r), tooltip: $.intl.string(r ? $.t["5hrFyt"] : $.t.l5WIbf) });
 }
 function na(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
