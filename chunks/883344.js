@@ -499,10 +499,10 @@ let eF = new ek(a.h, {
     APEX_EXPERIMENTS_FETCH_SUCCESS: eS,
     APEX_EXPERIMENTS_FETCH_FAILURE: eS,
     DISCOVER_PICKER_COMMIT: function (e) {
-        let { identity: t } = e,
-            n = (0, E.SL)(F);
-        if ((R.C2.observeGate(n), !R.C2.matches(t) || !eT(t))) return !1;
-        ((eI = (0, R.Sw)(eI, { type: "commit", enabled: n })), (ep = t));
+        let { identity: t, clearSnapshot: n } = e,
+            i = (0, E.SL)(F);
+        if ((R.C2.observeGate(i), !R.C2.matches(t) || !eT(t))) return !1;
+        (n && em(), (eI = (0, R.Sw)(eI, { type: "commit", enabled: i })), (ep = t));
     },
     DISCOVER_REQUEST_STARTED: function (e) {
         let { identity: t } = e;

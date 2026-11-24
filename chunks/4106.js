@@ -101,13 +101,20 @@ function v() {
                             (N = { picks: l.A.getPicks() }),
                             _.C2.observeGate((0, s.SL)("fetchDehydrated")),
                             _.C2.commitPicker(),
-                            !(async function (e) {
+                            !(async function (e, t) {
                                 try {
-                                    await r.h.dispatch({ type: "DISCOVER_PICKER_COMMIT", identity: e });
+                                    await r.h.dispatch({
+                                        type: "DISCOVER_PICKER_COMMIT",
+                                        identity: e,
+                                        clearSnapshot: t,
+                                    });
                                 } catch (e) {
                                     c.A.captureException(e);
                                 }
-                            })(_.C2.capture(C, o.default.getAuthSessionIdHash() ?? null))),
+                            })(
+                                _.C2.capture(C, o.default.getAuthSessionIdHash() ?? null),
+                                e.clearDiscoverSnapshot ?? !1,
+                            )),
                         (0, E.Lg)("fetchDehydrated"))
                     ) {
                         if ((0, s.SL)("fetchDehydrated")) {
