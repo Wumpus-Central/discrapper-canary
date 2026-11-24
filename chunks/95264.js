@@ -33,8 +33,8 @@ i.d(
                     i.e(117928),
                     i.e(36509),
                     i.e(716875),
-                    i.e(812935),
-                ]).then(i.bind(i, 73274));
+                    i.e(974272),
+                ]).then(i.bind(i, 24003));
                 return (i) => (0, a.jsx)(d, { ...i, project: e, mode: r, currentGuildId: t, shareTicket: c });
             });
         },
