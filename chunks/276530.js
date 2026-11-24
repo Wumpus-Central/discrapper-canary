@@ -11,8 +11,8 @@ var l = n(477900),
     h = n(324593),
     m = n(855986),
     g = n(521489),
-    x = n(568602),
-    f = n(775602),
+    f = n(568602),
+    x = n(775602),
     v = n(531685),
     y = n(188567),
     A = n(140735),
@@ -189,7 +189,7 @@ var es = n(284009),
     eh = n(253932),
     em = n(480423);
 let eg = "refresh_sm";
-function ex(e) {
+function ef(e) {
     let { category: t, onClick: n, active: i, dismissibleBadge: s } = e,
         { useTitle: o, useSubnavLabel: c, key: u, usePersistentBadge: d } = t,
         h = d?.(),
@@ -205,9 +205,9 @@ function ex(e) {
             [i, s, h],
         ),
         g = o?.(),
-        x = c?.() ?? g;
+        f = c?.() ?? g;
     return (
-        ea()(null != x, "[SettingsSubnavigationCategory] Category must have a title"),
+        ea()(null != f, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, l.jsx)(q.tG, {
             id: u,
             children: (e) =>
@@ -221,7 +221,7 @@ function ex(e) {
                             ...e,
                             role: "link",
                             "aria-current": i ? "location" : void 0,
-                            children: [(0, l.jsx)(a.E, { variant: "body-md/normal", color: "none", children: x }), m],
+                            children: [(0, l.jsx)(a.E, { variant: "body-md/normal", color: "none", children: f }), m],
                         },
                         u,
                     ),
@@ -229,7 +229,7 @@ function ex(e) {
         })
     );
 }
-function ef(e) {
+function ex(e) {
     let t,
         n,
         i,
@@ -240,10 +240,10 @@ function ef(e) {
     r.useLayoutEffect(() => {
         a && g(!0);
     }, [a]);
-    let x = r.useMemo(() => c.findIndex((e) => e.key === h), [c, h]);
+    let f = r.useMemo(() => c.findIndex((e) => e.key === h), [c, h]);
     r.useEffect(() => {
         if (!a) {
-            let e = f.current;
+            let e = x.current;
             null != e &&
                 ((e.style.height = `${e.scrollHeight}px`),
                 window.getComputedStyle(e).height,
@@ -253,7 +253,7 @@ function ef(e) {
                 }));
         }
     }, [a]);
-    let f = r.useRef(null),
+    let x = r.useRef(null),
         [v, y] = r.useState(a ? "auto" : "0");
     return (
         (t = r.useRef(null)),
@@ -324,17 +324,17 @@ function ef(e) {
         (0, l.jsx)("div", {
             className: em.lK,
             style: { height: v, opacity: +!!a },
-            ref: f,
+            ref: x,
             children:
                 m &&
                 (0, l.jsx)(ev, {
-                    index: x,
+                    index: f,
                     activeKey: h,
                     categories: c,
                     visibleContent: u,
                     dismissibleBadges: d,
                     onMount: function () {
-                        let e = f.current;
+                        let e = x.current;
                         null != e &&
                             ((e.style.height = `${e.scrollHeight}px`),
                             Promise.all(e.getAnimations().map((e) => e.finished))
@@ -372,10 +372,10 @@ function ev(e) {
                         let [d, h] = [n.current.getBoundingClientRect(), i.current.getBoundingClientRect()],
                             m = d.width / 2,
                             g = (h.y - d.y) / m,
-                            x = h.height / m;
-                        (s.current || r || f.Ay.useReducedMotion || -1 === o.current
-                            ? (c.y.set(g), c.height.set(x))
-                            : u({ y: g, height: x }),
+                            f = h.height / m;
+                        (s.current || r || x.Ay.useReducedMotion || -1 === o.current
+                            ? (c.y.set(g), c.height.set(f))
+                            : u({ y: g, height: f }),
                             (s.current = !1),
                             (a.current = t),
                             (o.current = e));
@@ -421,7 +421,7 @@ function ev(e) {
             i.map((e) => {
                 let t = et(e.key, s, a);
                 return (0, l.jsx)(
-                    ex,
+                    ef,
                     {
                         onClick: () => {
                             var t;
@@ -445,9 +445,9 @@ function eA(e) {
             StronglyDiscouragedCustomComponent: h,
             usePersistentBadge: m,
             useTitle: g,
-            variant: x = "default",
+            variant: f = "default",
         } = i,
-        f = g?.(),
+        x = g?.(),
         v = (function (e) {
             switch (e) {
                 case "default":
@@ -455,7 +455,7 @@ function eA(e) {
                 case "destructive":
                     return "text-feedback-critical";
             }
-        })(x),
+        })(f),
         y = (function (e) {
             switch (e) {
                 case "default":
@@ -463,7 +463,7 @@ function eA(e) {
                 case "destructive":
                     return en.A.colors.ICON_FEEDBACK_CRITICAL;
             }
-        })(x),
+        })(f),
         A = m?.(n),
         j = r.useMemo(
             () =>
@@ -484,7 +484,7 @@ function eA(e) {
                 ...c,
                 role: "link",
                 "aria-current": n ? "page" : void 0,
-                className: E()(ey.AS, { [ey.vu]: n, [ey.RD]: "destructive" === x }),
+                className: E()(ey.AS, { [ey.vu]: n, [ey.RD]: "destructive" === f }),
                 onClick: t,
                 children: [
                     null != h
@@ -493,7 +493,7 @@ function eA(e) {
                               className: ey.Ly,
                               children: [
                                   (0, l.jsx)(d, { color: y, size: eg, className: ey.Kk }),
-                                  (0, l.jsx)(a.E, { variant: "body-md/medium", color: v, children: f }),
+                                  (0, l.jsx)(a.E, { variant: "body-md/medium", color: v, children: x }),
                               ],
                           }),
                     j,
@@ -527,10 +527,10 @@ function ej(e) {
                   }
                 : t.onClick,
         g = null != o,
-        x = r.useMemo(
+        f = r.useMemo(
             () =>
                 null != h && g
-                    ? (0, l.jsx)(ef, {
+                    ? (0, l.jsx)(ex, {
                           active: d,
                           isTopLevelPanelVisible: u,
                           visibleCategories: h,
@@ -540,7 +540,7 @@ function ej(e) {
                     : null,
             [h, g, d, u, n, i],
         ),
-        f = r.useMemo(() => et(t.key, n, i), [t.key, n, i]);
+        x = r.useMemo(() => et(t.key, n, i), [t.key, n, i]);
     return s
         ? (0, l.jsx)(eA, {
               panelKey: a?.key,
@@ -548,8 +548,8 @@ function ej(e) {
               active: d,
               "aria-expanded": null != h ? d : void 0,
               node: t,
-              dismissibleBadge: f,
-              children: x,
+              dismissibleBadge: x,
+              children: f,
           })
         : (0, l.jsx)(q.tG, {
               id: a?.key ?? t.key,
@@ -559,9 +559,9 @@ function ej(e) {
                       onClick: m,
                       active: d,
                       node: t,
-                      dismissibleBadge: f,
+                      dismissibleBadge: x,
                       listItemProps: e,
-                      children: x,
+                      children: f,
                   }),
           });
 }
@@ -617,7 +617,7 @@ function eS(e) {
     r.useEffect(() => {
         J.A.registerBadges(m, g);
     }, [m, g]);
-    let [x, f] = r.useMemo(() => {
+    let [f, x] = r.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -666,7 +666,7 @@ function eS(e) {
                                             }),
                                         }),
                                     (0, l.jsx)("div", {
-                                        children: x.map((e) =>
+                                        children: f.map((e) =>
                                             (0, l.jsx)(
                                                 eN,
                                                 { section: e, visibleContent: g, dismissibleBadges: m },
@@ -675,7 +675,7 @@ function eS(e) {
                                         ),
                                     }),
                                     null != o && (0, l.jsx)(o, {}),
-                                    null != a && 0 === f.length && (0, l.jsx)(a, {}),
+                                    null != a && 0 === x.length && (0, l.jsx)(a, {}),
                                 ],
                             }),
                             (0, l.jsx)("nav", {
@@ -698,7 +698,7 @@ function eS(e) {
                                                         className: ep.jV,
                                                         ...n,
                                                         ref: t,
-                                                        children: f.map((e) =>
+                                                        children: x.map((e) =>
                                                             (0, l.jsx)(
                                                                 eE,
                                                                 { section: e, visibleContent: g, dismissibleBadges: m },
@@ -777,24 +777,24 @@ function ek(e) {
             clearSearchQuery: h,
         } = e,
         m = M.A.useField("currentPanelKey"),
-        { node: g, visibleDirectory: x, accessibleDirectory: f } = (0, eC.Ay)(t, d ?? ""),
-        v = null != n && x.entry(n)?.parentPanelKey != null ? n : i,
+        { node: g, visibleDirectory: f, accessibleDirectory: x } = (0, eC.Ay)(t, d ?? ""),
+        v = null != n && f.entry(n)?.parentPanelKey != null ? n : i,
         y = r.useMemo(() => {
-            let e = f.entry(m ?? v)?.parentPanelKey;
-            if (null != e) return f.getPanelOrThrow(e);
-        }, [m, f, v]),
+            let e = x.entry(m ?? v)?.parentPanelKey;
+            if (null != e) return x.getPanelOrThrow(e);
+        }, [m, x, v]),
         { navigateWithValidation: N } = (0, eb.L_)(),
         E = r.useMemo(() => () => N(s), [N, s]);
     r.useEffect(() => {
         D.A.init({
-            accessibleDirectory: f,
+            accessibleDirectory: x,
             onViewChange: c,
             navigateWithValidation: (e, t) => {
-                (null == x.entry(e) && h?.(), N(t));
+                (null == f.entry(e) && h?.(), N(t));
             },
             closeWithValidation: E,
         });
-    }, [f, N, c, h, x, E]);
+    }, [x, N, c, h, f, E]);
     let [b, C] = r.useState(!0);
     (0, S.Ay)(
         () => (
@@ -805,8 +805,8 @@ function ek(e) {
             }
         ),
     );
-    let I = r.useMemo(() => ({ visibleDirectory: x, accessibleDirectory: f }), [x, f]),
-        k = null != m ? x.get(m) : void 0,
+    let I = r.useMemo(() => ({ visibleDirectory: f, accessibleDirectory: x }), [f, x]),
+        k = null != m ? f.get(m) : void 0,
         _ = b ? void 0 : (k ?? y),
         P = _?.useTitle() ?? F.intl.string(F.t["3D5yo/"]);
     return (0, l.jsx)(Q.x.Provider, {
@@ -852,7 +852,7 @@ function eT(e) {
         [A, j] = r.useState(!1),
         [p, S] = r.useState(1.4),
         N = r.useRef(null),
-        E = (0, m.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        E = (0, m.bG)([x.Ay], () => x.Ay.useReducedMotion),
         b = (0, m.bG)([v.A], () => v.A.isFocused());
     return (
         r.useEffect(() => {
@@ -869,7 +869,7 @@ function eT(e) {
                 }
             );
         }, [E, b]),
-        (0, l.jsx)(x.b, {
+        (0, l.jsx)(f.b, {
             isShaking: A,
             intensity: p,
             children: (0, l.jsx)(g.N, {
@@ -914,13 +914,13 @@ var eR = n(46653),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "680470",
-        r = "1226fc69201e022260930b69fcc99ad784ef8436".substring(0, 7),
+        n = "680480",
+        r = "c40f0a605ff9bf36d54fff6415c0f7f274704129".substring(0, 7),
         i = eU.A?.app.getVersion(),
         s = eU.A?.app.getBuildNumber(),
         o = eU.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eZ.A)("1795557482344", !1) : null,
+        u = null != c ? (0, eZ.A)("1795557757442", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         h = (function () {
             let e = eX()?.os?.toString();
@@ -1088,8 +1088,8 @@ function e5() {
 var e2 = n(402651),
     e3 = n(669067),
     e6 = n(830543),
-    e9 = n(953056);
-let e4 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
+    e4 = n(953056);
+let e9 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
     e8 = new Map([[eD.X.SESSIONS_PANEL, i.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e7(e) {
     let { target: t, ...n } = e,
@@ -1117,7 +1117,7 @@ function e7(e) {
               emptyState: tt,
               sidebarFooter: e5,
               onViewChange: function (e) {
-                  e4.has(e) || (0, e3._)(e);
+                  e9.has(e) || (0, e3._)(e);
                   let t = e8.get(e);
                   (null != t &&
                       (0, c.x)({
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, l.jsx)("div", {
-            className: e9.P,
+            className: e4.P,
             children: (0, l.jsx)(s.I, { size: "md", query: e, onFocus: n, onBlur: i, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, l.jsxs)("div", {
-        className: e9.t,
+        className: e4.t,
         children: [
             (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: F.intl.string(F.t.zihbmv) }),
             (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: F.intl.string(F.t.XclvsB) }),
