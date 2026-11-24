@@ -59,6 +59,7 @@ function h(e, t, n) {
                     cardShape: a,
                     tileProps: {
                         day: s,
+                        collectionId: u,
                         cardShape: o || a === r.G.LARGE_SQUARE ? a : r.G.SMALL_SQUARE,
                         isHintCentered: o && (a === r.G.TALL || a === r.G.WIDE),
                         state: (0, g.q9)({ position: s, openPosition: n, hintPosition: e, isOpenPositionRevealed: E }),
@@ -73,5 +74,5 @@ function h(e, t, n) {
                     },
                 };
             });
-    }, [c, t, n, E, p, o, d]);
+    }, [c, u, t, n, E, p, o, d]);
 }

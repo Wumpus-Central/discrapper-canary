@@ -4916,6 +4916,7 @@ var ih =
         (eP.SHOP_PRODUCT_DETAIL_PAGE_CLICKED = "shop_product_detail_page_clicked"),
         (eP.SHOP_CARD_CLICKED = "shop_card_clicked"),
         (eP.SHOP_COLLECT_AND_CLAIM_TAKEOVER_PROMOTION_ACTION = "shop_collect_and_claim_takeover_promotion_action"),
+        (eP.SHOP_SEQUENCED_OFFER_PROMOTION_ACTION = "shop_sequenced_offer_promotion_action"),
         (eP.SLIDE_CAROUSEL_ITEM_VIEWED = "slide_carousel_item_viewed"),
         (eP.SLIDE_CAROUSEL_PAGINATION_CLICKED = "slide_carousel_pagination_clicked"),
         (eP.SHOP_HEADER_CAROUSEL_CTA_CLICKED = "shop_header_carousel_cta_clicked"),

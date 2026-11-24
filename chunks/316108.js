@@ -1,4 +1,4 @@
-(n.d(t, { r8: () => eI, rK: () => eO, Vp: () => ep, Ay: () => eT }), n(321073));
+(n.d(t, { r8: () => e_, rK: () => eT, Vp: () => eS, Ay: () => ey }), n(321073));
 var l = n(477900),
     s = n(582128),
     a = n(503698),
@@ -21,8 +21,8 @@ var l = n(477900),
     I = n(924473),
     _ = n(511265),
     b = n(304210),
-    v = n(706113),
-    L = n(350172),
+    L = n(706113),
+    v = n(350172),
     j = n(730202),
     N = n(510801),
     O = n(652215),
@@ -98,15 +98,15 @@ function w(e) {
 }
 var U = n(987421),
     z = n(484469),
-    V = n(687461),
+    V = n(127329),
     K = n(198329),
     Y = n(579720),
     W = n(517352),
     $ = n(462887),
     q = n(736653),
     Z = n(775602),
-    Q = n(793574),
-    X = n(688810),
+    X = n(793574),
+    Q = n(688810),
     J = n(412260),
     ee = n(498470),
     et = n(807098),
@@ -133,45 +133,46 @@ let eu = (e) => {
           })
         : (0, l.jsx)(er.A, { heroBlock: t, isLoading: !1, tab: P.G2.COLLECTION_INDEX, hideButton: !0, hideCards: !0 });
 };
-var ed = n(146053);
-function em(e) {
+var ed = n(504820),
+    em = n(146053);
+function eg(e) {
     return e.skuId;
 }
-function eg(e) {
+function eE(e) {
     let t = (0, h.A)("shop_include_unpublished"),
-        { category: n } = (0, v.A)(e, { includeUnpublished: t, includePricing: !0 });
+        { category: n } = (0, L.A)(e, { includeUnpublished: t, includePricing: !0 });
     return n ?? void 0;
 }
-let eE = { aspectRatio: "1 / 1" },
-    eh = {
-        [c.R.PROFILE_EFFECT]: { className: ed.I5, aspectRatio: "1 / 2" },
-        [c.R.BUNDLE]: { className: ed.kP, aspectRatio: "2 / 1" },
-    },
+let eh = { aspectRatio: "1 / 1" },
     ef = {
-        [o.G.SMALL_SQUARE]: eE,
-        [o.G.TALL]: { className: ed.I5, aspectRatio: "1 / 2" },
-        [o.G.WIDE]: { className: ed.kP, aspectRatio: "2 / 1" },
-        [o.G.LARGE_SQUARE]: { className: ed.pr, aspectRatio: "1 / 1" },
+        [c.R.PROFILE_EFFECT]: { className: em.I5, aspectRatio: "1 / 2" },
+        [c.R.BUNDLE]: { className: em.kP, aspectRatio: "2 / 1" },
     },
-    eC = Array.from({ length: 8 }, (e, t) => t);
-function ex(e) {
+    eC = {
+        [o.G.SMALL_SQUARE]: eh,
+        [o.G.TALL]: { className: em.I5, aspectRatio: "1 / 2" },
+        [o.G.WIDE]: { className: em.kP, aspectRatio: "2 / 1" },
+        [o.G.LARGE_SQUARE]: { className: em.pr, aspectRatio: "1 / 1" },
+    },
+    ex = Array.from({ length: 8 }, (e, t) => t);
+function ep(e) {
     return (0, l.jsx)(z.A, {}, e);
 }
-let ep = () => (0, l.jsx)("div", { className: ed.fr, children: eC.map(ex) });
-function eS(e) {
+let eS = () => (0, l.jsx)("div", { className: em.fr, children: ex.map(ep) });
+function eA(e) {
     let { products: t } = e;
     return (0, l.jsx)("div", {
-        className: ed.fr,
+        className: em.fr,
         children: t.map((e, t) => {
             let { className: n, aspectRatio: s } =
-                eh[
+                ef[
                     e.type === c.R.VARIANTS_GROUP &&
                     null != e.variants &&
                     e.variants.length > 0 &&
                     e.variants.every((e) => e.type === c.R.PROFILE_EFFECT)
                         ? c.R.PROFILE_EFFECT
                         : e.type
-                ] ?? eE;
+                ] ?? eh;
             return (0, l.jsx)(
                 p.R9,
                 {
@@ -183,48 +184,48 @@ function eS(e) {
         }),
     });
 }
-let eA = [4, 3, 2],
-    eI = (e) => {
-        let { sequencedOffers: t, products: n, openPosition: a, isSmallSquaresOnly: r = !1 } = e,
-            c = (0, Y.A)(t, n, a, !r),
-            u = s.useMemo(() => {
+let eI = [4, 3, 2],
+    e_ = (e) => {
+        let { sequencedOffers: t, products: n, openPosition: a, surface: r, isSmallSquaresOnly: c = !1 } = e,
+            u = (0, Y.A)(t, n, a, !c),
+            d = s.useMemo(() => {
                 var e;
                 let t;
-                return r
+                return c
                     ? null
-                    : ((e = c.map((e) => {
+                    : ((e = u.map((e) => {
                           let { cardShape: t } = e;
                           return t;
                       })),
-                      (t = eA.map((t) => (0, K.Vv)(e, t))),
+                      (t = eI.map((t) => (0, K.Vv)(e, t))),
                       e.map((e, n) => {
                           let l = {};
                           return (
-                              eA.forEach((e, s) => {
+                              eI.forEach((e, s) => {
                                   ((l[`--custom-calendar-${e}-row`] = t[s][n].row),
                                       (l[`--custom-calendar-${e}-column`] = t[s][n].column));
                               }),
                               l
                           );
                       }));
-            }, [c, r]);
+            }, [u, c]);
         return (0, l.jsx)("div", {
-            className: ed.aD,
+            className: em.aD,
             children: (0, l.jsx)("ol", {
-                className: i()(ed.fr, ed.ZP),
-                children: c.map((e, t) => {
+                className: i()(em.fr, em.ZP),
+                children: u.map((e, t) => {
                     let { cardShape: n, tileProps: s } = e,
-                        { className: a, aspectRatio: c } = ef[r ? o.G.SMALL_SQUARE : n] ?? ef[o.G.SMALL_SQUARE];
+                        { className: a, aspectRatio: u } = eC[c ? o.G.SMALL_SQUARE : n] ?? eC[o.G.SMALL_SQUARE];
                     return (0, l.jsx)(
                         V.A,
-                        { ...s, aspectRatio: c, className: i()(null != u && ed.Pu, a), style: u?.[t] },
+                        { ...s, surface: r, aspectRatio: u, className: i()(null != d && em.Pu, a), style: d?.[t] },
                         s.day,
                     );
                 }),
             }),
         });
     };
-function e_(e) {
+function eb(e) {
     let t,
         { category: n } = e,
         s = (0, y.A)(n.skuId),
@@ -239,24 +240,29 @@ function e_(e) {
         ? null
         : ((t =
               a && !i
-                  ? (0, l.jsx)(ep, {})
+                  ? (0, l.jsx)(eS, {})
                   : null != s && a
-                    ? (0, l.jsx)(eI, { sequencedOffers: s, products: n.products, openPosition: r })
-                    : (0, l.jsx)(eS, { products: m })),
+                    ? (0, l.jsx)(e_, {
+                          sequencedOffers: s,
+                          products: n.products,
+                          openPosition: r,
+                          surface: ed.L.COLLECTION_INDEX,
+                      })
+                    : (0, l.jsx)(eA, { products: m })),
           (0, l.jsxs)("div", {
-              className: ed.hd,
-              children: [u && (0, l.jsx)(k.A, { title: es.intl.string(es.t.Pla5Vk), className: ed.aQ }), t],
+              className: em.hd,
+              children: [u && (0, l.jsx)(k.A, { title: es.intl.string(es.t.Pla5Vk), className: em.aQ }), t],
           }));
 }
-function eb(e) {
+function eL(e) {
     let { currentCategorySkuId: t, handleTransition: n } = e,
         { categories: a } = (function (e) {
             let { anchorCollectionId: t, limit: n } = e,
                 l = s.useMemo(() => ({ applicationId: O.FYj, anchorCollectionId: t ?? "", limit: n }), [t, n]),
                 a = null != t && "" !== t,
-                i = (0, L.HX)(l);
+                i = (0, v.HX)(l);
             s.useEffect(() => {
-                a && (0, L.Su)(l);
+                a && (0, v.Su)(l);
             }, [a, l]);
             let { collectionIds: r, fetchState: o } = (0, d.cf)(
                     [j.A],
@@ -305,10 +311,10 @@ function eb(e) {
     return 0 === r.length
         ? null
         : (0, l.jsxs)("div", {
-              className: ed.t3,
+              className: em.t3,
               children: [
                   (0, l.jsx)("div", {
-                      className: ed.bb,
+                      className: em.bb,
                       children: (0, l.jsx)(m.D, {
                           variant: "heading-lg/semibold",
                           children: es.intl.string(es.t.EhRZ9o),
@@ -320,7 +326,7 @@ function eb(e) {
                           gap: "xl",
                           scrollStep: "item",
                           items: r,
-                          getItemKey: em,
+                          getItemKey: eg,
                           renderItem: (e, t, s) =>
                               (0, l.jsx)(ev, { category: e, index: s, handleTransition: n, listItemProps: t }, e.skuId),
                       },
@@ -342,22 +348,22 @@ function ev(e) {
         }),
     });
 }
-let eL = [
+let ej = [
     { tab: P.G2.AVATAR_DECORATIONS, label: () => es.intl.string(es.t.dRZYNE) },
     { tab: P.G2.PROFILE_EFFECTS, label: () => es.intl.string(es.t["1cNjtx"]) },
     { tab: P.G2.NAMEPLATES, label: () => es.intl.string(es.t.V68Fqz) },
     { tab: P.G2.PROFILE_FRAMES, label: () => es.intl.string(es.t.ecTJkR) },
     { tab: P.G2.BUNDLES, label: () => es.intl.string(es.t.FYFpps) },
 ];
-function ej() {
+function eN() {
     let e = (0, r.W6)();
     return (0, l.jsxs)("div", {
-        className: ed.nb,
+        className: em.nb,
         children: [
             (0, l.jsx)(m.D, { variant: "heading-sm/semibold", children: es.intl.string(es.t.Yr70c4) }),
             (0, l.jsx)("div", {
-                className: ed.J2,
-                children: eL.map((t) => {
+                className: em.J2,
+                children: ej.map((t) => {
                     let { tab: n, label: s } = t;
                     return (0, l.jsx)(
                         g.$,
@@ -369,11 +375,11 @@ function ej() {
         ],
     });
 }
-function eN(e) {
+function eO(e) {
     let { collectionId: t } = e,
         n = (0, r.W6)(),
         a = (0, p.uM)(),
-        o = eg(t)?.name,
+        o = eE(t)?.name,
         c = s.useMemo(
             () => [
                 { id: "shop_all", label: es.intl.string(es.t.xFcotU) },
@@ -398,40 +404,40 @@ function eN(e) {
         d = s.useCallback(
             (e, t) =>
                 (0, l.jsxs)("span", {
-                    className: i()(ed.u, { [ed.kG]: t }),
-                    children: [e.label, !t && (0, l.jsx)("span", { className: ed.Tl, children: "/" })],
+                    className: i()(em.u, { [em.kG]: t }),
+                    children: [e.label, !t && (0, l.jsx)("span", { className: em.Tl, children: "/" })],
                 }),
             [],
         );
     return (0, l.jsx)(E.A, {
-        className: ed.C2,
-        separatorClassName: ed.Lw,
+        className: em.C2,
+        separatorClassName: em.Lw,
         breadcrumbs: c,
         activeId: "collection",
         onBreadcrumbClick: u,
         renderCustomBreadcrumb: d,
     });
 }
-function eO() {
+function eT() {
     return (0, l.jsxs)("div", {
-        className: ed.kL,
+        className: em.kL,
         children: [
             (0, l.jsx)(er.A, { isLoading: !0, hideButton: !0, hideCards: !0, tab: P.G2.COLLECTION_INDEX }),
-            (0, l.jsx)("div", { className: ed.hd, children: (0, l.jsx)(ep, {}) }),
+            (0, l.jsx)("div", { className: em.hd, children: (0, l.jsx)(eS, {}) }),
             (0, l.jsxs)("div", {
-                className: ed.t3,
+                className: em.t3,
                 children: [
-                    (0, l.jsx)("div", { className: ed.bb, children: (0, l.jsx)("div", { className: ed.M$ }) }),
-                    (0, l.jsxs)("div", { className: ed.A9, children: [(0, l.jsx)(M.R3, {}), (0, l.jsx)(M.R3, {})] }),
+                    (0, l.jsx)("div", { className: em.bb, children: (0, l.jsx)("div", { className: em.M$ }) }),
+                    (0, l.jsxs)("div", { className: em.A9, children: [(0, l.jsx)(M.R3, {}), (0, l.jsx)(M.R3, {})] }),
                 ],
             }),
         ],
     });
 }
-let eT = function (e) {
+let ey = function (e) {
     let { collectionId: t } = e,
         n = (0, r.W6)(),
-        a = eg(t),
+        a = eE(t),
         i = (function (e) {
             var t;
             let n = (0, en.A)(O.FYj),
@@ -440,7 +446,7 @@ let eT = function (e) {
                     (0, d.yK)([J.A], () => J.A.getMarketingComponentsBySurfaceAcrossPromotions(t), [t])),
                 a = (0, $.M)((0, q.Ay)()),
                 i = (0, d.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
-                { analyticsLocations: r } = (0, X.Ay)(Q.A.COLLECTIBLES_SHOP_COLLECTION_MARKETING_BLOCK),
+                { analyticsLocations: r } = (0, Q.Ay)(X.A.COLLECTIBLES_SHOP_COLLECTION_MARKETING_BLOCK),
                 o = s.useMemo(
                     () =>
                         l.map((e) => {
@@ -505,39 +511,39 @@ let eT = function (e) {
     return (0, l.jsx)(S.iM, {
         tab: P.G2.COLLECTION_INDEX,
         children: (0, l.jsxs)("div", {
-            className: ed.kL,
+            className: em.kL,
             children: [
                 m && null != c
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsxs)("div", {
-                                  className: ed.rz,
+                                  className: em.rz,
                                   children: [
                                       (0, l.jsx)("div", {
-                                          className: ed.zn,
-                                          children: (0, l.jsx)(eN, { collectionId: t }),
+                                          className: em.zn,
+                                          children: (0, l.jsx)(eO, { collectionId: t }),
                                       }),
                                       (0, l.jsx)(eu, { heroBlock: c, handleTransition: o }),
                                   ],
                               }),
-                              (0, l.jsx)(e_, { category: a }),
+                              (0, l.jsx)(eb, { category: a }),
                               null != i
-                                  ? (0, l.jsx)("div", { className: ed.t3, children: (0, l.jsx)(w, { section: i }) })
-                                  : (0, l.jsx)(eb, { currentCategorySkuId: a.skuId, handleTransition: o }, a.skuId),
+                                  ? (0, l.jsx)("div", { className: em.t3, children: (0, l.jsx)(w, { section: i }) })
+                                  : (0, l.jsx)(eL, { currentCategorySkuId: a.skuId, handleTransition: o }, a.skuId),
                           ],
                       })
                     : (0, l.jsxs)("div", {
-                          className: ed.AW,
+                          className: em.AW,
                           children: [
-                              (0, l.jsx)("div", { className: ed.zn, children: (0, l.jsx)(eN, { collectionId: t }) }),
-                              (0, l.jsx)("div", { className: ed.$T, children: (0, l.jsx)(R.A, { category: a }) }),
-                              (0, l.jsx)(e_, { category: a }),
+                              (0, l.jsx)("div", { className: em.zn, children: (0, l.jsx)(eO, { collectionId: t }) }),
+                              (0, l.jsx)("div", { className: em.$T, children: (0, l.jsx)(R.A, { category: a }) }),
+                              (0, l.jsx)(eb, { category: a }),
                               null != i
-                                  ? (0, l.jsx)("div", { className: ed.t3, children: (0, l.jsx)(w, { section: i }) })
-                                  : (0, l.jsx)(eb, { currentCategorySkuId: a.skuId, handleTransition: o }, a.skuId),
+                                  ? (0, l.jsx)("div", { className: em.t3, children: (0, l.jsx)(w, { section: i }) })
+                                  : (0, l.jsx)(eL, { currentCategorySkuId: a.skuId, handleTransition: o }, a.skuId),
                           ],
                       }),
-                (0, l.jsx)(ej, {}),
+                (0, l.jsx)(eN, {}),
             ],
         }),
     });
