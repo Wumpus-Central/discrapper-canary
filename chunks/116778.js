@@ -722,7 +722,7 @@ function ew(e) {
         t = i.useRef(null),
         r = (0, d.bG)([R.A], () => R.A.getGuild(l)),
         a = f({ guildId: l }),
-        c = (0, d.bG)([b.A], () => b.A.isFetching()),
+        c = (0, d.bG)([b.A], () => b.A.isFetching(l, s), [l, s]),
         { guildJoinRequests: u } = I({ guildId: l, applicationStatus: s, sortOrder: a }),
         { fetchNextPage: m } = (0, E.K)({ guildId: l, guildJoinRequests: u }),
         x = i.useCallback(async () => {

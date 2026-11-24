@@ -17,8 +17,8 @@ n.d(
             fetchGuildJoinRequests: async function (t) {
                 let { guildId: e, status: n = E.B5.SUBMITTED, before: l, after: u, limit: s = 25, force: o = !1 } = t,
                     c = o || !a.A.hasFetched(e);
-                if (!a.A.isFetching() && c) {
-                    r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
+                if (!a.A.isFetching(e, n) && c) {
+                    r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START", guildId: e, status: n });
                     try {
                         let t = await i.Bo.get({
                                 url: _.Rsh.GUILD_JOIN_REQUESTS(e),
@@ -39,7 +39,7 @@ n.d(
                             t
                         );
                     } catch (t) {
-                        throw (r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" }), t);
+                        throw (r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE", guildId: e, status: n }), t);
                     }
                 }
             },

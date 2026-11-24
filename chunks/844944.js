@@ -27,118 +27,120 @@ function h(e, t, n) {
     }
 }
 let I = {},
-    p = !1,
-    m = (e, t) => `guild-${e}-${t}`;
-function g(e) {
-    let t,
-        n = [];
-    return (n.push(((t = e.joinRequestId), `guild-join-request=${t}`)), n.push(m(e.guildId, e.applicationStatus)), n);
+    p = new Set(),
+    m = (e) => `guild-join-request=${e}`,
+    g = (e, t) => `guild-${e}-${t}`;
+function T(e) {
+    let t = [];
+    return (t.push(m(e.joinRequestId)), t.push(g(e.guildId, e.applicationStatus)), t);
 }
-let T = new s.J(g, (e) => `${e.joinRequestId}`),
-    S = new s.J(g, (e) => `${e.joinRequestId}`),
-    N = new s.J(g, (e) => `${e.actionedAt}`);
-function C(e) {
-    return T.get(e);
-}
+let S = new s.J(T, (e) => `${e.joinRequestId}`),
+    N = new s.J(T, (e) => `${e.joinRequestId}`),
+    C = new s.J(T, (e) => `${e.actionedAt}`);
 function O(e) {
-    ((b[e.joinRequestId] = e),
-        T.set(e.joinRequestId, e),
-        (0, c.ar)(e.applicationStatus) && (N.delete(e.joinRequestId), S.set(e.joinRequestId, e)),
-        (0, c.mf)(e.applicationStatus) && (S.delete(e.joinRequestId), N.set(e.joinRequestId, e)));
+    return S.get(e);
 }
 function R(e) {
+    ((v[e.joinRequestId] = e),
+        S.set(e.joinRequestId, e),
+        (0, c.ar)(e.applicationStatus) && (C.delete(e.joinRequestId), N.set(e.joinRequestId, e)),
+        (0, c.mf)(e.applicationStatus) && (N.delete(e.joinRequestId), C.set(e.joinRequestId, e)));
+}
+function L(e) {
     let { guildId: t, request: n } = e,
         i = (0, _.j)(n),
         r = o.default.getCurrentUser();
     if (null == r || i.userId === r.id) return !1;
-    let a = C(i.joinRequestId)?.applicationStatus;
-    return (h(t, i.applicationStatus, a), O(i), !0);
+    let a = O(i.joinRequestId)?.applicationStatus;
+    return (h(t, i.applicationStatus, a), R(i), !0);
 }
-let L = {},
-    y = {},
+let y = {},
     D = {},
     b = {},
-    v = 10 * d.A.Seconds.MINUTE;
-class P extends a.Ay.Store {
+    v = {},
+    P = 10 * d.A.Seconds.MINUTE;
+class M extends a.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
     static displayName = "GuildJoinRequestStoreV2";
     getRequest(e) {
-        return b[e];
+        return v[e];
     }
     getRequests(e, t) {
-        let n = m(e, t);
-        return (0, c.mf)(t) ? N.values(n) : (0, c.ar)(t) ? S.values(n) : T.values(n);
+        let n = g(e, t);
+        return (0, c.mf)(t) ? C.values(n) : (0, c.ar)(t) ? N.values(n) : S.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
         return A[e];
     }
-    isFetching() {
-        return p;
+    isFetching(e, t) {
+        return p.has(g(e, t));
     }
     hasFetched(e) {
         if (!E.has(e)) return !1;
         let t = E.get(e);
-        return null != t && r()().diff(t, "seconds") < v;
+        return null != t && r()().diff(t, "seconds") < P;
     }
     getSelectedApplicationTab(e) {
         let t = u.B5.SUBMITTED;
-        return L[e] ?? t;
+        return y[e] ?? t;
     }
     getSelectedSortOrder(e) {
-        return y[e] ?? u._e.TIMESTAMP_DESC;
+        return D[e] ?? u._e.TIMESTAMP_DESC;
     }
     getSelectedGuildJoinRequest(e) {
-        let t = D[e];
-        return null != t ? C(t.joinRequestId) : null;
+        let t = b[e];
+        return null != t ? O(t.joinRequestId) : null;
     }
     getRequestsForUser(e, t) {
         let n = I[`${e}:${t}`];
-        return null == n ? null : n.map((e) => C(e)).filter((e) => null != e);
+        return null == n ? null : n.map((e) => O(e)).filter((e) => null != e);
     }
 }
-let M = new P(l.h, {
+let U = new M(l.h, {
     GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function (e) {
         let { joinRequest: t } = e;
-        O(t);
+        R(t);
     },
     GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS: function (e) {
         let { guildId: t, userId: n, requests: i } = e;
-        (i.forEach(O), (I[`${t}:${n}`] = i.map((e) => e.joinRequestId)));
+        (i.forEach(R), (I[`${t}:${n}`] = i.map((e) => e.joinRequestId)));
     },
     GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
         let { status: t, requests: n, total: i, guildId: r } = e;
-        ((p = !1),
+        (p.delete(g(r, t)),
             t === u.B5.SUBMITTED && f(r, i),
             n.forEach((e) => {
-                O(e);
+                R(e);
             }));
     },
-    GUILD_JOIN_REQUESTS_FETCH_START: function () {
-        p = !0;
+    GUILD_JOIN_REQUESTS_FETCH_START: function (e) {
+        let { guildId: t, status: n } = e;
+        p.add(g(t, n));
     },
-    GUILD_JOIN_REQUESTS_FETCH_FAILURE: function () {
-        p = !1;
+    GUILD_JOIN_REQUESTS_FETCH_FAILURE: function (e) {
+        let { guildId: t, status: n } = e;
+        p.delete(g(t, n));
     },
-    GUILD_JOIN_REQUEST_CREATE: R,
-    GUILD_JOIN_REQUEST_UPDATE: R,
+    GUILD_JOIN_REQUEST_CREATE: L,
+    GUILD_JOIN_REQUEST_UPDATE: L,
     GUILD_JOIN_REQUEST_DELETE: function (e) {
         let { id: t, guildId: n } = e,
-            i = C(t);
-        null != i && (h(n, "DELETED", i.applicationStatus), delete b[t], T.delete(t), S.delete(t), N.delete(t));
+            i = O(t);
+        null != i && (h(n, "DELETED", i.applicationStatus), delete v[t], S.delete(t), N.delete(t), C.delete(t));
     },
     GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {
         let { guildId: t, applicationTab: n } = e;
-        n !== L[t] && (L[t] = n);
+        n !== y[t] && (y[t] = n);
     },
     GUILD_JOIN_REQUESTS_SET_SORT_ORDER: function (e) {
         let { guildId: t, sortOrder: n, applicationStatus: i } = e;
-        n !== y[t] && ((y[t] = n), (0, c.mf)(i) && N.clear(), (0, c.ar)(i) && S.clear());
+        n !== D[t] && ((D[t] = n), (0, c.mf)(i) && C.clear(), (0, c.ar)(i) && N.clear());
     },
     GUILD_JOIN_REQUESTS_SET_SELECTED: function (e) {
         let { guildId: t, request: n } = e;
-        D[t] = n;
+        b[t] = n;
     },
 });
-n.d(t, {}, { A: M });
+n.d(t, {}, { A: U });
