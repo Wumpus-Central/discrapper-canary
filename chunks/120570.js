@@ -4,8 +4,12 @@ var i = n(855986),
     s = n(987741);
 let l = null,
     o = 0,
-    d = 0;
-class c extends i.Ay.Store {
+    d = 0,
+    c = null;
+function u() {
+    ((l = null), (d = o));
+}
+class _ extends i.Ay.Store {
     static displayName = "SelectedConversationStore";
     initialize() {
         this.syncWith([a.A, s.A], () => null != l);
@@ -61,11 +65,15 @@ class c extends i.Ay.Store {
                 return !1;
         }
     }
+    getFocusRequest() {
+        return o === d ? null : c;
+    }
     consumeFocusRequest() {
-        return o !== d && ((d = o), !0);
+        let e = this.getFocusRequest();
+        return ((d = o), e);
     }
 }
-let u = new c(r.h, {
+let E = new _(r.h, {
     SET_SELECTED_CONVERSATION: function (e) {
         let { channelId: t, conversationId: n, cacheType: i } = e;
         l = { channelId: t, conversationId: n, cacheType: i };
@@ -73,23 +81,24 @@ let u = new c(r.h, {
     CLEAR_CONVERSATION_SELECTION: function (e) {
         let { channelId: t, conversationId: n } = e;
         if (l?.channelId !== t || (null != n && l.conversationId !== n)) return !1;
-        l = null;
+        u();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == l || l.channelId === t) return !1;
-        l = null;
+        u();
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
         if (l?.channelId !== t.id) return !1;
-        l = null;
+        u();
     },
-    CONVERSATION_FOCUS_REQUEST: function () {
-        o++;
+    CONVERSATION_FOCUS_REQUEST: function (e) {
+        let { messageId: t } = e;
+        (o++, (c = { messageId: t ?? null }));
     },
     LOGOUT: function () {
-        l = null;
+        u();
     },
 });
-n.d(t, {}, { A: u });
+n.d(t, {}, { A: E });

@@ -119,8 +119,8 @@ function T(e, t, n) {
 function S(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
-function N() {
-    a.h.dispatch({ type: "CONVERSATION_FOCUS_REQUEST" });
+function N(e) {
+    a.h.dispatch({ type: "CONVERSATION_FOCUS_REQUEST", messageId: e });
 }
 function C(e, t, n) {
     a.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
