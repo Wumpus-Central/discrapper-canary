@@ -1,104 +1,106 @@
-n.d(t, { Ay: () => x, Wz: () => C, $J: () => g, p3: () => E });
+n.d(t, { Ay: () => k, Wz: () => b, $J: () => v, p3: () => x });
 var r = n(477900),
     i = n(582128),
-    o = n(146849),
-    l = n(647660),
-    s = n(129230),
-    c = n(903369),
-    a = n(448767),
-    u = n(354777),
-    d = n(78377),
-    m = n(886737),
-    h = n(594808),
-    p = n(652215),
-    f = n(792996),
-    A = n(910379);
-function E(e) {
+    o = n(855986),
+    l = n(146849),
+    s = n(647660),
+    c = n(959698),
+    a = n(540999),
+    u = n(129230),
+    d = n(903369),
+    m = n(448767),
+    h = n(354777),
+    f = n(78377),
+    p = n(886737),
+    A = n(594808),
+    E = n(652215),
+    C = n(792996),
+    g = n(910379);
+function x(e) {
     let {
-        hideSimpleEmbedContent: t = !0,
-        formatInline: n = !1,
-        noStyleAndInteraction: r = !1,
-        allowHeading: o = !1,
-        allowList: l = !1,
-        allowLinks: s = !1,
-        allowDevLinks: c = !1,
-        previewLinkTarget: a = !1,
-        viewingChannelId: u,
-        restrictedPreview: d = !1,
-    } = e;
+            hideSimpleEmbedContent: t = !0,
+            formatInline: n = !1,
+            noStyleAndInteraction: r = !1,
+            allowHeading: l = !1,
+            allowList: s = !1,
+            allowLinks: u = !1,
+            previewLinkTarget: d = !1,
+            viewingChannelId: m,
+        } = e,
+        h = (0, c.U)(),
+        f = (0, o.bG)([a.A], () => a.A.isDeveloper);
     return i.useMemo(
         () => ({
             hideSimpleEmbedContent: t,
             formatInline: n,
             noStyleAndInteraction: r,
-            allowHeading: o,
-            allowList: l,
-            allowLinks: s,
-            allowDevLinks: c,
-            previewLinkTarget: a,
-            viewingChannelId: u,
-            restrictedPreview: d,
+            allowHeading: l,
+            allowList: s,
+            allowLinks: u,
+            allowDevLinks: f,
+            previewLinkTarget: d,
+            viewingChannelId: m,
+            restrictedPreview: h,
         }),
-        [t, n, r, o, l, s, c, a, u, d],
+        [t, n, r, l, s, u, f, d, m, h],
     );
 }
-function C(e, t) {
+function b(e, t) {
     let { restrictedPreview: n, ...r } = t;
-    return (0, u.Ay)(e, { ...r, allowGameMentions: !0, postProcessor: n ? m.A : void 0 });
+    return (0, h.Ay)(e, { ...r, allowGameMentions: !0, postProcessor: n ? p.A : void 0 });
 }
-function g(e) {
+function v(e) {
     if (null != e.customRenderedContent) return e.customRenderedContent;
-    if (e.isUnsupported) return { content: f.intl.string(f.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
-    if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(p.pr7.LOADING))
-        return { content: (0, r.jsx)(h.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
-    if (e.type === p.lAJ.CHANGELOG) {
+    if (e.isUnsupported) return { content: C.intl.string(C.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+    if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(E.pr7.LOADING))
+        return { content: (0, r.jsx)(A.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+    if (e.type === E.lAJ.CHANGELOG) {
         let { renderChangelogMessageMarkup: t } = n(550997);
-        return t(e, A, {
+        return t(e, g, {
             track: (e, t) => {
-                s.default.track(e, t);
+                u.default.track(e, t);
             },
         });
     }
     return null;
 }
-function x(e) {
-    let { message: t, options: n, parsed: s } = e,
-        u = E(n),
-        m = (0, o.I2)({ location: "MessageRenderedContent" }).enabled,
-        h = t.id,
-        f = t.channel_id,
-        A = (0, c.U)(t),
-        x = t.author?.id,
-        { viewingChannelId: b, formatInline: k, noStyleAndInteraction: N } = u,
-        S = i.useMemo(
+function k(e) {
+    let { message: t, options: n, parsed: o } = e,
+        c = (0, l.I2)({ location: "MessageRenderedContent" }).enabled,
+        a = t.id,
+        u = t.channel_id,
+        h = (0, d.U)(t),
+        p = t.author?.id,
+        { viewingChannelId: A, formatInline: C, noStyleAndInteraction: g } = n,
+        x = i.useMemo(
             () => ({
-                messageId: h,
-                channelId: f,
-                viewingChannelId: b,
-                guildId: A,
-                authorId: x,
-                formatInline: k,
-                noStyleAndInteraction: N,
+                messageId: a,
+                channelId: u,
+                viewingChannelId: A,
+                guildId: h,
+                authorId: p,
+                formatInline: C,
+                noStyleAndInteraction: g,
             }),
-            [h, f, b, A, x, k, N],
+            [a, u, A, h, p, C, g],
         );
     return i.useMemo(() => {
-        let e = g(t);
+        let e = v(t);
         return null != e
             ? e.content
-            : m
+            : c
               ? (0, r.jsx)(i.Suspense, {
-                    children: (0, r.jsx)(d.O.Provider, {
-                        value: S,
-                        children: (0, r.jsx)(l.A, {
+                    children: (0, r.jsx)(f.O.Provider, {
+                        value: x,
+                        children: (0, r.jsx)(s.A, {
                             content: t.content,
-                            parsed: s,
-                            allowJumboEmoji: !k && t.type !== p.lAJ.MEDIA_MENTION_MESSAGE,
-                            hideSingleLinkContent: u.hideSimpleEmbedContent && (0, a.k5)(t.embeds),
-                            redactRestrictedContent: u.restrictedPreview,
+                            parsed: o,
+                            allowJumboEmoji: !C && t.type !== E.lAJ.MEDIA_MENTION_MESSAGE,
+                            hideSingleLinkContent: n.hideSimpleEmbedContent && (0, m.k5)(t.embeds),
+                            redactRestrictedContent: n.restrictedPreview,
                         }),
                     }),
                 })
-              : C(t, u).content;
-    }, [t.content, t.customRenderedContent, t.embeds, t.interaction, t.state, t.type, u, m, s, S]);
+              : b(t, n).content;
+    }, [t.content, t.customRenderedContent, t.embeds, t.interaction, t.state, t.type, n, c, o, x]);
 }

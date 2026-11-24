@@ -255,10 +255,11 @@ function et(t) {
 let ee = { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 };
 function ei(t) {
     let { message: e } = t,
-        i = (0, tY.I2)({ location: "textChatNotification" }).enabled,
-        n = (0, tG.j)({ excluded: tG.Z }),
-        l = (0, tF.N)(e.content, { enabled: i, syntax: n });
-    return (0, $.jsx)(tH.Ay, { message: e, options: ee, parsed: l });
+        i = (0, tH.p3)(ee),
+        n = (0, tY.I2)({ location: "textChatNotification" }).enabled,
+        l = (0, tG.j)({ excluded: tG.Z }),
+        a = (0, tF.N)(e.content, { enabled: n, syntax: l });
+    return (0, $.jsx)(tH.Ay, { message: e, options: i, parsed: a });
 }
 var en = i(554146),
     el = i(298990),

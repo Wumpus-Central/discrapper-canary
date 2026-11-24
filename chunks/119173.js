@@ -2620,11 +2620,12 @@ function nz(e) {
                 isCallActive: o,
             });
         })(l, n),
-        o = (0, nR.I2)({ location: "OverlayChannelPreviewLine" }).enabled,
-        u = (0, nv.j)({ excluded: nv.Z }),
-        d = (0, nD.N)(r?.type === "message" ? r.message.content : null, { enabled: o, syntax: u });
+        o = (0, nP.p3)(nK),
+        u = (0, nR.I2)({ location: "OverlayChannelPreviewLine" }).enabled,
+        d = (0, nv.j)({ excluded: nv.Z }),
+        c = (0, nD.N)(r?.type === "message" ? r.message.content : null, { enabled: u, syntax: d });
     if (null == r) return null;
-    let { authorLabel: c, color: m, trailingIcon: I } = r;
+    let { authorLabel: m, color: I, trailingIcon: E } = r;
     switch (r.type) {
         case "text":
             t = r.text;
@@ -2633,13 +2634,13 @@ function nz(e) {
             t = (0, i.jsx)(nB, { markup: r.markup, channelId: l.channel_id });
             break;
         case "message":
-            t = (0, i.jsx)(nP.Ay, { message: r.message, options: nK, parsed: d });
+            t = (0, i.jsx)(nP.Ay, { message: r.message, options: o, parsed: c });
     }
     return (0, i.jsxs)("div", {
-        className: h()(nH.Sl, { [nH.Vz]: "text-feedback-positive" === m }),
+        className: h()(nH.Sl, { [nH.Vz]: "text-feedback-positive" === I }),
         children: [
-            (0, i.jsxs)("span", { className: nH.BK, children: [null != c && `${c}: `, t] }),
-            null != I && (0, i.jsx)(nY, { icon: I, size: "xxs", color: "currentColor", className: nH.sl }),
+            (0, i.jsxs)("span", { className: nH.BK, children: [null != m && `${m}: `, t] }),
+            null != E && (0, i.jsx)(nY, { icon: E, size: "xxs", color: "currentColor", className: nH.sl }),
         ],
     });
 }
