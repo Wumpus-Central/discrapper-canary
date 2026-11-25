@@ -1,4 +1,4 @@
-t.d(r, { p: () => P, A: () => M });
+t.d(r, { p: () => M, A: () => C });
 var n = t(477900),
     l = t(582128),
     a = t(503698),
@@ -10,14 +10,15 @@ var n = t(477900),
     d = t(203632),
     f = t(855915),
     A = t(940622),
-    m = t(881106),
-    T = t(284009),
-    E = t.n(T),
-    I = t(964486);
-let p = 1e3 / 24,
-    h = function (e) {
+    m = t(442372),
+    T = t(881106),
+    E = t(284009),
+    I = t.n(E),
+    p = t(964486);
+let h = 1e3 / 24,
+    N = function (e) {
         let {
-                minInterval: r = p,
+                minInterval: r = h,
                 allowableMinInterval: t,
                 droppedFramesCallbackThreshold: n,
                 droppedFramesCallback: a,
@@ -36,7 +37,7 @@ let p = 1e3 / 24,
             T = l.useCallback(() => {
                 ((d.current = !1), cancelAnimationFrame(o.current), clearTimeout(A.current));
             }, []),
-            h = l.useCallback(
+            E = l.useCallback(
                 (r) => {
                     if (!d.current) return;
                     (null == c.current && (c.current = r), null == i.current && (i.current = r));
@@ -47,14 +48,14 @@ let p = 1e3 / 24,
                         (A.current = setTimeout(m, u)),
                         null != n &&
                             f.current > n &&
-                            (E()(
+                            (I()(
                                 null != a,
                                 "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit",
                             ),
                             a() && (f.current = 0))),
                         (c.current = r),
                         l >= s.current - 3 && ((i.current = r), e(l)),
-                        (o.current = requestAnimationFrame(h)));
+                        (o.current = requestAnimationFrame(E)));
                 },
                 [t, m, u, n, a, e],
             ),
@@ -62,47 +63,43 @@ let p = 1e3 / 24,
                 ((d.current = !0),
                     (i.current = void 0),
                     cancelAnimationFrame(o.current),
-                    (o.current = requestAnimationFrame(h)));
-            }, [h]);
+                    (o.current = requestAnimationFrame(E)));
+            }, [E]);
         return (
             l.useEffect(() => {
                 s.current = r;
             }, [r]),
-            (0, I.Ay)(() => ((o.current = requestAnimationFrame(h)), () => T())),
+            (0, p.Ay)(() => ((o.current = requestAnimationFrame(E)), () => T())),
             { stop: T, reset: N, ticking: d }
         );
     };
-var N = t(942426),
-    y = t(435558);
-function b(e) {
+var y = t(942426),
+    b = t(435558);
+function v(e, r) {
+    var t, n;
     if (null == e) return e;
-    let r = (0, y.cloneDeep)(e),
-        t = Math.floor(
-            Math.random() *
-                (r.effects.reduce((e, r) => {
-                    let t = r.randomizedSources?.length ?? 0;
-                    return (t > 0 && (e = 0 === e ? t : Math.min(e, t)), e);
-                }, 0) -
-                    1 -
-                    0 +
-                    1) +
-                0,
-        );
+    let l = (0, b.cloneDeep)(e),
+        a =
+            ((t = l.effects.reduce((e, r) => {
+                let t = r.randomizedSources?.length ?? 0;
+                return (t > 0 && (e = 0 === e ? t : Math.min(e, t)), e);
+            }, 0)),
+            null == (n = r) ? Math.floor(Math.random() * (t - 1 - 0 + 1) + 0) : Math.floor(n * t));
     return (
-        (r.effects = r.effects.map(
+        (l.effects = l.effects.map(
             (e) => (
-                null != e.randomizedSources && e.randomizedSources.length > 0 && (e.src = e.randomizedSources[t].src),
+                null != e.randomizedSources && e.randomizedSources.length > 0 && (e.src = e.randomizedSources[a].src),
                 e
             ),
         )),
-        r
+        l
     );
 }
 (t(323874), t(14289), t(35956));
-var v = t(676279),
-    S = t(856383),
-    g = t(666082);
-let R = (e) => {
+var S = t(676279),
+    g = t(856383),
+    R = t(666082);
+let P = (e) => {
         let {
                 layerConfig: r,
                 animationType: t,
@@ -115,19 +112,19 @@ let R = (e) => {
                 bannerAdjustment: f,
                 imageData: A,
             } = e,
-            T = !0,
+            m = !0,
             E = 0,
             [I, p] = l.useState("reset"),
             h = l.useRef(A?.src ?? r.src),
             [N, y] = l.useState(A?.src ?? r.src),
             b = l.useRef(null),
-            R = (0, v.gm)() && null != r.loopDelay && r.loopDelay > 0 && A?.src != null;
+            v = (0, S.gm)() && null != r.loopDelay && r.loopDelay > 0 && A?.src != null;
         function P(e) {
-            (0, v.gm)() && e !== I && p(e);
+            (0, S.gm)() && e !== I && p(e);
         }
         if (
             (l.useEffect(() => {
-                if (!R || "layer" === I) return;
+                if (!v || "layer" === I) return;
                 let e = new AbortController();
                 return (
                     !(async function () {
@@ -144,43 +141,43 @@ let R = (e) => {
                                     y(() => h.current));
                             } catch (e) {
                                 if ("AbortError" === e.name) return null;
-                                S.A.captureException(e);
+                                g.A.captureException(e);
                             }
                     })(),
                     () => {
                         e.abort();
                     }
                 );
-            }, [I, R, y, A?.src]),
+            }, [I, v, y, A?.src]),
             l.useEffect(
                 () => () => {
                     h.current !== A?.src && URL.revokeObjectURL(h.current);
                 },
                 [],
             ),
-            a || (T = !1),
-            u < r.start && (T = !1),
-            !r.loop && u > r.duration + r.start && (T = !1),
+            a || (m = !1),
+            u < r.start && (m = !1),
+            !r.loop && u > r.duration + r.start && (m = !1),
             t === s.l.ANIMATION_TYPE_PERSISTENT && !o && null != i && u >= d && c(!0),
             r.loop && void 0 !== r.loopDelay && r.loopDelay > 0)
         ) {
             let e = r.duration + r.loopDelay;
             ((E = Math.floor((u - r.start) / e)),
                 u - r.start - E * e > r.duration &&
-                    (t === s.l.ANIMATION_TYPE_INTERMITTENT && !o && null != i && E >= i && c(!0), (T = !1)));
+                    (t === s.l.ANIMATION_TYPE_INTERMITTENT && !o && null != i && E >= i && c(!0), (m = !1)));
         }
-        return T
+        return m
             ? (P("layer"),
               (0, n.jsx)("img", {
                   src: N,
-                  className: g.QZ,
+                  className: R.QZ,
                   style: { top: (r.position?.y ?? 0) - f, left: r.position?.x ?? 0 },
                   alt: "",
                   "aria-hidden": !0,
               }))
-            : (P("reset"), (0, n.jsx)("img", { src: m.Ut, alt: "", "aria-hidden": !0 }));
+            : (P("reset"), (0, n.jsx)("img", { src: T.Ut, alt: "", "aria-hidden": !0 }));
     },
-    P = (e) => {
+    M = (e) => {
         let {
                 bannerAdjustment: r = 0,
                 maxLoops: t,
@@ -196,7 +193,7 @@ let R = (e) => {
             } = e,
             I = l.useRef(null),
             p = l.useMemo(() => A.effects.sort((e, r) => (e.zIndex ?? 0) - (r.zIndex ?? 0)), [A]),
-            { accessibilityLabel: N } = A,
+            { accessibilityLabel: h } = A,
             { firstLoop: y, loopEnd: b } = l.useMemo(() => {
                 let e = 0,
                     r = 1 / 0;
@@ -209,14 +206,14 @@ let R = (e) => {
                 );
             }, [p]),
             v = m ? 500 : 0.1,
-            [S, P] = l.useState(-v),
+            [S, g] = l.useState(-v),
             {
-                stop: _,
-                reset: M,
+                stop: M,
+                reset: _,
                 ticking: C,
-            } = h(
+            } = N(
                 l.useCallback((e) => {
-                    P((r) => r + e);
+                    g((r) => r + e);
                 }, []),
             ),
             O = l.useRef(v);
@@ -224,29 +221,29 @@ let R = (e) => {
             O.current = v;
         }),
             l.useEffect(() => {
-                P(-O.current);
+                g(-O.current);
             }, [A]));
-        let [w, j] = l.useState(!1);
+        let [w, x] = l.useState(!1);
         return (
             l.useEffect(() => {
-                null != T && (P(-O.current), j(!1), C.current || M());
-            }, [T, M, C]),
+                null != T && (g(-O.current), x(!1), C.current || _());
+            }, [T, _, C]),
             l.useEffect(() => {
-                (!0 === i || o || (_(), P(0)),
-                    !o && w && C.current && (_(), P(0)),
+                (!0 === i || o || (M(), g(0)),
+                    !o && w && C.current && (M(), g(0)),
                     a &&
                         o &&
                         !C.current &&
-                        (M(),
-                        A.animationType === s.l.ANIMATION_TYPE_PERSISTENT ? P(f === d.HL.FromStart ? 0 : y) : P(0)));
-            }, [o, w, y, a, _, M, C, A.animationType, i, f]),
+                        (_(),
+                        A.animationType === s.l.ANIMATION_TYPE_PERSISTENT ? g(f === d.HL.FromStart ? 0 : y) : g(0)));
+            }, [o, w, y, a, M, _, C, A.animationType, i, f]),
             (0, n.jsx)("div", {
                 ref: I,
-                className: u()(g.yC, { [g.yo]: o && c }),
-                "aria-label": N,
+                className: u()(R.yC, { [R.yo]: o && c }),
+                "aria-label": h,
                 role: "img",
                 children: (0, n.jsx)("div", {
-                    className: g.vW,
+                    className: R.vW,
                     children: p.map((e, l) => {
                         if (
                             !C.current &&
@@ -259,7 +256,7 @@ let R = (e) => {
                             return (0, n.jsx)(
                                 "img",
                                 {
-                                    className: g.QZ,
+                                    className: R.QZ,
                                     style: { top: e.position?.y ?? 0 - r, left: e.position?.x ?? 0 },
                                     src: t,
                                     alt: "",
@@ -269,14 +266,14 @@ let R = (e) => {
                             );
                         }
                         return (0, n.jsx)(
-                            R,
+                            P,
                             {
                                 layerConfig: e,
                                 animationType: A.animationType,
                                 ticking: C.current,
                                 time: S,
                                 hasPlayedThrough: w,
-                                setHasPlayedThrough: j,
+                                setHasPlayedThrough: x,
                                 maxLoops: t,
                                 loopEnd: b,
                                 bannerAdjustment: r,
@@ -299,14 +296,14 @@ function _(e) {
         } = e,
         { reducedMotionSrc: o, thumbnailPreviewSrc: c, accessibilityLabel: i } = r;
     return (0, n.jsx)("div", {
-        className: u()(g.yC, { [g.yo]: a && s }),
+        className: u()(R.yC, { [R.yo]: a && s }),
         "aria-label": i,
         role: "img",
         children: (0, n.jsx)("div", {
-            className: g.vW,
+            className: R.vW,
             children: (0, n.jsx)("img", {
                 src: t && !a ? c : o,
-                className: g.QZ,
+                className: R.QZ,
                 style: { top: 0 - l },
                 alt: "",
                 "aria-hidden": !0,
@@ -314,36 +311,38 @@ function _(e) {
         }),
     });
 }
-let M = function (e) {
+let C = function (e) {
     let r = (0, i.j)(),
         t = (0, o.bG)([c.Ay], () => c.Ay.useReducedMotion),
-        a = (0, N.A)(e.skuId),
+        a = (0, y.A)(e.skuId),
         u = (0, A.C)(a),
         d = (function (e) {
-            let [r, t] = l.useState(e),
-                [n, a] = l.useState(b(e));
-            return ((0, y.isEqual)(r, e) || (t(e), a(b(e))), n);
-        })(a),
-        m = u ?? d,
-        { autoPlay: T = !0, isHovering: E } = e,
-        I = !!(
+            let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                [t, n] = l.useState(e),
+                [a, u] = l.useState(r),
+                [s, o] = l.useState(v(e, r));
+            return (((0, b.isEqual)(t, e) && a === r) || (n(e), u(r), o(v(e, r))), s);
+        })(a, l.useContext(m.A)),
+        T = u ?? d,
+        { autoPlay: E = !0, isHovering: I } = e,
+        p = !!(
             (!r && e.shopPreview) ||
             (!r && a?.animationType === s.l.ANIMATION_TYPE_PERSISTENT) ||
             t ||
-            (!1 === T && !1 === E)
+            (!1 === E && !1 === I)
         ),
-        { loaded: p, layerData: h } = (0, f.A)({ skuId: a?.skuId, layers: I ? void 0 : a?.effects });
-    return null != a && null != m && (r || e.shopPreview || a.animationType !== s.l.ANIMATION_TYPE_INTERMITTENT)
-        ? I
+        { loaded: h, layerData: N } = (0, f.A)({ skuId: a?.skuId, layers: p ? void 0 : a?.effects });
+    return null != a && null != T && (r || e.shopPreview || a.animationType !== s.l.ANIMATION_TYPE_INTERMITTENT)
+        ? p
             ? (0, n.jsx)(_, {
                   useThumbnail: e.useThumbnail,
-                  profileEffect: m,
+                  profileEffect: T,
                   bannerAdjustment: e.bannerAdjustment,
                   isHovering: e.isHovering,
                   useOpacityOnHover: e.useOpacityOnHover,
               })
-            : p
-              ? (0, n.jsx)(P, { profileEffect: m, layerData: h, ...e })
+            : h
+              ? (0, n.jsx)(M, { profileEffect: T, layerData: N, ...e })
               : null
         : null;
 };
