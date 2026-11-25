@@ -450,7 +450,7 @@ let ep = Array.from({ length: 6 }, (e, t) => `skeleton-${t}`),
                     similarItems: c,
                 };
             })({
-                seedSkuId: t,
+                seedSkuId: a ? t : h,
                 excludedSkuIds: i.useMemo(() => new Set((0, O.v8)(d)), [d]),
                 viewedSkuId: r,
                 isEnabled: o,
