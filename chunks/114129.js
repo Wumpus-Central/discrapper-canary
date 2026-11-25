@@ -196,10 +196,14 @@ n.d(
         },
         ZD: C,
         _U: function (e, t) {
-            let n = f.A.getActiveTabId();
+            let n = f.A.getActiveTabId(),
+                i = f.A.getTabs();
             r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
-            let i = f.A.getActiveTab();
-            null != n && null != i && i.id !== n && g(i, { method: "page_navigation", isNewTab: !0, focused: !0 });
+            let a = f.A.getActiveTab();
+            null == n ||
+                null == a ||
+                i.some((e) => e.id === a.id) ||
+                g(a, { method: "page_navigation", isNewTab: !0, focused: !0 });
         },
         a2: function () {
             return N(-1);

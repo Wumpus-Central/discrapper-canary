@@ -35,10 +35,15 @@ class o extends r.A {
             t = null != e && this.knownTabs.length > 0 && !this.knownTabs.some((t) => t.id === e.id);
         (this.rememberTabs(),
             null != e && t && (0, a.FP)(e, { method: "page_navigation", isNewTab: !0, focused: !0 }),
+            this.handleRefocusedFromPinned(),
             this.handleUnpinnedAtLimit());
     }
     handleNavigateRoute() {
-        (this.rememberTabs(), this.handleUnpinnedAtLimit());
+        (this.rememberTabs(), this.handleRefocusedFromPinned(), this.handleUnpinnedAtLimit());
+    }
+    handleRefocusedFromPinned() {
+        let e = s.A.getTabRefocusedFromPinned();
+        null != e && (0, a.FP)(e, { method: "pinned_navigation", isNewTab: !1, focused: !0 });
     }
     handleUnpinnedAtLimit() {
         let e = s.A.getTabUnpinnedAtLimit();
