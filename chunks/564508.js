@@ -390,13 +390,10 @@ function $(e) {
     if (et && J === W.BVt.FEATURE("badges"))
         return (e) => (
             e?.preventDefault(),
-            n
-                .e(644816)
-                .then(n.bind(n, 470739))
-                .then((e) => {
-                    let { openBadgeDirectoryModal: t } = e;
-                    t({ viewingCurrentUserBadges: !0 });
-                }),
+            Promise.all([n.e(644816).then(n.bind(n, 470739)), n.e(920481).then(n.bind(n, 861304))]).then((e) => {
+                let [{ openBadgeDirectoryModal: t }, { trackOwnBadgeDirectoryOpened: n }] = e;
+                (n("link"), t({ viewingCurrentUserBadges: !0 }));
+            }),
             !0
         );
     if (et && J?.startsWith("/playground")) {

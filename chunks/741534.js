@@ -129,6 +129,7 @@ function R(e) {
         action: o,
         section: d,
         applicationId: c,
+        hasUnreadIndicator: u,
     } = e;
     E.default.track(m.HAw.USER_PROFILE_ACTION, {
         ...(0, r.H$)(t),
@@ -142,6 +143,7 @@ function R(e) {
         source_message_id: i,
         source_role_id: a,
         widget_type: s,
+        has_unread_indicator: u,
     });
 }
 function L(e) {

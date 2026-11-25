@@ -6,15 +6,17 @@ var l = n(477900),
     u = n(765178),
     o = n(943654),
     d = n(775602),
-    c = n(998304),
-    m = n(253400),
-    _ = n(988341),
-    f = n(873571),
-    b = n(97192),
-    g = n(193579);
-let p = m.Ay.getEnableHardwareAcceleration();
-function x(e) {
-    return (0, f.ux)(e) + 1e3;
+    c = n(287809),
+    m = n(998304),
+    _ = n(253400),
+    f = n(988341),
+    g = n(861304),
+    b = n(873571),
+    p = n(97192),
+    x = n(193579);
+let v = _.Ay.getEnableHardwareAcceleration();
+function y(e) {
+    return (0, b.ux)(e) + 1e3;
 }
 n.d(
     t,
@@ -22,7 +24,7 @@ n.d(
     {
         $: function (e) {
             let { isLevelUp: t, startDelay: n = 200, isMotionSkipped: l = !1 } = e,
-                r = l ? 0 : n + x(t);
+                r = l ? 0 : n + y(t);
             return { "--custom-badge-unlock-reveal": `${r}ms` };
         },
         A: function (e) {
@@ -30,65 +32,74 @@ n.d(
                     badge: t,
                     previousTierKey: n,
                     canStart: a,
-                    size: m = "large",
-                    startDelay: v = 200,
-                    onStart: S,
-                    onEnd: y,
+                    surface: _,
+                    size: S = "large",
+                    startDelay: N = 200,
+                    onStart: T,
+                    onEnd: A,
                 } = e,
-                T = (0, s.bG)([d.Ay], () => d.Ay.useReducedMotion),
-                { previousTier: A, currentTier: N } = (0, f.VR)(t, n),
-                h = null != A,
-                E = v + x(h),
-                [C, R] = r.useState(!1),
-                [k, U] = r.useState(!1),
-                [j, w] = r.useState(!1),
-                [O, $] = r.useState(!1),
-                M = p && !T,
-                H = k && M && !O,
-                P = (0, b.C)((0, f.AO)(t, N, !1)) ?? b.P,
-                B = r.useMemo(() => ({ fill: (0, c.E2)(P) }), [P]),
-                I = r.useCallback(
+                h = (0, s.bG)([d.Ay], () => d.Ay.useReducedMotion),
+                { previousTier: E, currentTier: C } = (0, b.VR)(t, n),
+                R = null != E,
+                k = N + y(R),
+                [U, j] = r.useState(!1),
+                [w, O] = r.useState(!1),
+                [$, M] = r.useState(!1),
+                [H, P] = r.useState(!1),
+                I = v && !h,
+                B = w && I && !H,
+                F = (0, p.C)((0, b.AO)(t, C, !1)) ?? p.P,
+                L = r.useMemo(() => ({ fill: (0, m.E2)(F) }), [F]),
+                q = r.useCallback(
                     (e) => {
-                        (R(!0), $(e), S?.(e));
+                        (j(!0), P(e), T?.(e));
                     },
-                    [S],
+                    [T],
                 );
             return (
                 r.useEffect(() => {
-                    C && u.O.announce((0, _.kD)(t, n), "polite");
-                }, [C]),
+                    U &&
+                        (u.O.announce((0, f.kD)(t, n), "polite"),
+                        (0, g.default)({
+                            actionName: "badge_unlock_viewed",
+                            badge: t,
+                            displayedUserId: c.default.getCurrentUser()?.id,
+                            isSociallyNavigated: !1,
+                            surface: _,
+                        }));
+                }, [U]),
                 r.useEffect(() => {
-                    if (!C) return;
-                    let e = setTimeout(() => U(!0), O ? 0 : E);
+                    if (!U) return;
+                    let e = setTimeout(() => O(!0), H ? 0 : k);
                     return () => clearTimeout(e);
-                }, [O, C, E]),
+                }, [H, U, k]),
                 r.useEffect(() => {
-                    if (!C) return;
-                    let e = v + (0, f.ux)(h) + 1500,
-                        t = setTimeout(() => w(!0), O || T ? 0 : e);
+                    if (!U) return;
+                    let e = N + (0, b.ux)(R) + 1500,
+                        t = setTimeout(() => M(!0), H || h ? 0 : e);
                     return () => clearTimeout(t);
-                }, [h, O, T, C, v]),
+                }, [R, H, h, U, N]),
                 r.useEffect(() => {
-                    j && y?.();
-                }, [j]),
+                    $ && A?.();
+                }, [$]),
                 (0, l.jsxs)("div", {
-                    className: g.Tl,
+                    className: x.Tl,
                     "aria-hidden": !0,
                     children: [
-                        M &&
+                        I &&
                             (0, l.jsx)(o.x, {
                                 artboard: "Web",
-                                autoplay: H,
-                                dataBinding: B,
-                                className: i()(g.U6, "small" === m && g.Pv, !H && g.qJ),
+                                autoplay: B,
+                                dataBinding: L,
+                                className: i()(x.U6, "small" === S && x.Pv, !B && x.qJ),
                             }),
-                        (0, l.jsx)(f.Ay, {
+                        (0, l.jsx)(b.Ay, {
                             badge: t,
                             previousTierKey: n,
-                            size: m,
-                            startDelay: v,
+                            size: S,
+                            startDelay: N,
                             canStart: a,
-                            onStart: I,
+                            onStart: q,
                         }),
                     ],
                 })

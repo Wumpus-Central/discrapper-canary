@@ -1,6 +1,7 @@
-var n = t(477900),
-    r = t(277057),
-    l = t.n(r),
+t.r(a);
+var r = t(477900),
+    n = t(277057),
+    l = t.n(n),
     i = t(192308);
 let d = null;
 t.d(
@@ -11,7 +12,7 @@ t.d(
             let {
                 initialBadgeId: e,
                 targetUserId: a,
-                targetUsername: r,
+                targetUsername: n,
                 viewingCurrentUserBadges: s,
                 stackingBehavior: o,
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -22,24 +23,26 @@ t.d(
                 (0, i.mM)(
                     async () => {
                         let { default: l } = await Promise.all([
-                            t.e(398384),
+                            t.e(251400),
+                            t.e(572274),
                             t.e(485480),
                             t.e(399437),
                             t.e(463095),
                             t.e(710911),
                             t.e(90373),
                             t.e(332875),
+                            t.e(920481),
                             t.e(571180),
                             t.e(518097),
                             t.e(312064),
-                            t.e(12305),
-                        ]).then(t.bind(t, 678120));
+                            t.e(604131),
+                        ]).then(t.bind(t, 490670));
                         return (t) =>
-                            (0, n.jsx)(l, {
+                            (0, r.jsx)(l, {
                                 ...t,
                                 initialBadgeId: e,
                                 targetUserId: a,
-                                targetUsername: r,
+                                targetUsername: n,
                                 viewingCurrentUserBadges: s,
                             });
                     },
