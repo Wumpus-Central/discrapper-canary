@@ -5223,6 +5223,7 @@ var ih =
         (eP.GUILD_ROOM_SETTINGS_UPDATE = "guild_room_settings_update"),
         (eP.GUILD_ROOM_UPDATED = "guild_room_updated"),
         (eP.APP_TRANSACTION_ID_SYNCED = "app_transaction_id_synced"),
+        (eP.APP_STORE_AGE_SIGNAL_REPORTED = "app_store_age_signal_reported"),
         (eP.PARENTAL_CONSENT_CHECKED = "parental_consent_checked"),
         (eP.PARENTAL_CONSENT_WARNING_BANNER_TAPPED = "parental_consent_warning_banner_tapped"),
         (eP.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN = "parental_consent_warning_surface_shown"),
