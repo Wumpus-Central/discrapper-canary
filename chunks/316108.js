@@ -117,7 +117,7 @@ let ea = { page: O.liQ.COLLECTIBLES_SHOP, section: O.JJy.COLLECTIBLES_SHOP };
 var ei = n(196231),
     er = n(64018),
     eo = n(643306),
-    ec = n(200420);
+    ec = n(686471);
 let eu = (e) => {
     let { heroBlock: t, handleTransition: n } = e,
         { collectionPromotion: s, handlePromotionEnd: a } = (0, eo.A)(t.categorySkuId);

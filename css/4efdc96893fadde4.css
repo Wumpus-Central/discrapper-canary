@@ -162,4 +162,18 @@
     box-shadow: var(--shadow-button-overlay)
 }
 
-/*# sourceMappingURL=b9f876ac74b6f6cd.css.map*/
+.heroRive_niOhCA {
+    height: 24vw;
+    inset-inline-start: 0;
+    min-height: 210px;
+    min-width: 825px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.loading_niOhCA {
+    visibility: hidden
+}
+
+/*# sourceMappingURL=4efdc96893fadde4.css.map*/
