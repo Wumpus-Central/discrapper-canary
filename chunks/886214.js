@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(309010),
     f = n(253400),
     h = n(300259),
-    g = n(442325),
-    m = n(716099),
+    m = n(442325),
+    g = n(716099),
     p = n(858760),
     x = n(503698),
     b = n.n(x),
@@ -34,8 +34,8 @@ var l = n(477900),
     _ = n(812993),
     L = n(442433),
     G = n(571694),
-    z = n(47167),
-    O = n(475889),
+    O = n(47167),
+    z = n(475889),
     B = n(713654),
     U = n(693879),
     F = n(5180),
@@ -69,7 +69,7 @@ let es = new Map(),
     eu = !1;
 function eo(e) {
     let { channel: t } = e,
-        n = (0, O.H)(t);
+        n = (0, z.H)(t);
     return null == n
         ? null
         : (0, l.jsx)("span", {
@@ -87,11 +87,11 @@ let ec = r.memo(function (e) {
             registerTabNode: c,
             onDragStart: d,
             onDragMove: f,
-            onDragEnd: m,
+            onDragEnd: g,
             onExited: p,
         } = e,
         [x, A] = r.useState(
-            () => (eu || ((eu = !0), g.A.getTabs().forEach((e) => ea.add(e.id))), !ea.has(t.id) && !ei()),
+            () => (eu || ((eu = !0), m.A.getTabs().forEach((e) => ea.add(e.id))), !ea.has(t.id) && !ei()),
         );
     (r.useEffect(() => {
         ea.add(t.id);
@@ -104,12 +104,12 @@ let ec = r.memo(function (e) {
     let I = (0, i.bG)([X.A], () => ("channel" === t.kind ? X.A.getChannel(t.channelId) : null), [t]),
         C = (0, i.bG)([q.A], () => ("channel" === t.kind ? q.A.getGuild(t.guildId) : null), [t]),
         E = (0, i.bG)([J.default], () => (null != I && I.isDM() ? J.default.getUser(I.getRecipientId()) : null), [I]),
-        O = (0, z.Ay)(I),
+        z = (0, O.Ay)(I),
         U = "channel" === t.kind ? t.channelId : null;
     r.useEffect(() => {
-        null != U && null != O && es.set(U, O);
-    }, [U, O]);
-    let et = "route" === t.kind ? t.routeLabel : (O ?? es.get(t.channelId) ?? en.intl.string(en.t.zLZPmk)),
+        null != U && null != z && es.set(U, z);
+    }, [U, z]);
+    let et = "route" === t.kind ? t.routeLabel : (z ?? es.get(t.channelId) ?? en.intl.string(en.t.zLZPmk)),
         ec = r.useCallback(() => {
             (0, ee.ZD)(t.id, "tab_click");
         }, [t.id]),
@@ -140,16 +140,16 @@ let ec = r.memo(function (e) {
             },
             [t, ed],
         ),
-        [eg, em] = r.useState(!1),
+        [em, eg] = r.useState(!1),
         ep = r.useCallback(
             (e, t) => {
-                (em(!0), d(e, t));
+                (eg(!0), d(e, t));
             },
             [d],
         ),
         ex = r.useCallback(() => {
-            (em(!1), m());
-        }, [m]),
+            (eg(!1), g());
+        }, [g]),
         {
             nodeRef: eb,
             handlePointerDown: ey,
@@ -334,7 +334,7 @@ let ec = r.memo(function (e) {
                     position: "bottom",
                     text: eT,
                     delay: 500,
-                    shouldShow: !eg && !u,
+                    shouldShow: !em && !u,
                     ariaHidden: null == C,
                     children: (0, l.jsx)(w.D, {
                         className: el.eg,
@@ -403,8 +403,8 @@ let ec = r.memo(function (e) {
 var ed = n(621466),
     ef = n(554146),
     eh = n(195118),
-    eg = n(31188),
-    em = n(916845),
+    em = n(31188),
+    eg = n(916845),
     ep = n(890856),
     ex = n(805251),
     eb = n(534514),
@@ -445,7 +445,7 @@ function eC(e) {
                 (a(eA.i.TAKE_ACTION), i());
             },
             children: [
-                (0, l.jsx)(em.q, {
+                (0, l.jsx)(eg.q, {
                     onClick: (e) => {
                         (e.stopPropagation(), d("user:explicit"));
                     },
@@ -466,7 +466,7 @@ function eC(e) {
                         }),
                     ],
                 }),
-                (0, l.jsx)(eg.F, {}),
+                (0, l.jsx)(em.F, {}),
             ],
         }),
     });
@@ -527,7 +527,7 @@ function eG(e) {
                 l = (0, i.bG)([J.default], () => (t?.isDM() === !0 ? J.default.getUser(t.getRecipientId()) : null), [
                     t,
                 ]),
-                r = (0, z.Ay)(t);
+                r = (0, O.Ay)(t);
             if (null != t) {
                 let e = r ?? "";
                 if (t.isPrivate())
@@ -615,8 +615,8 @@ function eG(e) {
         }),
     });
 }
-var ez = n(746080),
-    eO = n(492652);
+var eO = n(746080),
+    ez = n(492652);
 function eB(e, t) {
     let n = 0;
     return t.map((t) => ({ result: t, section: e, sectionIndex: t.type === eR.rD.HEADER ? -1 : n++ }));
@@ -630,26 +630,25 @@ function eU(e) {
         a.current = t.current;
     }, [t]);
     let [u, f] = r.useState(""),
-        [h, m] = r.useState(-1),
-        [p, x] = r.useState(0),
-        [b, y] = r.useState(!0),
-        A = (0, i.bG)([c.A], () => c.A.getProps().results),
-        I = (0, i.bG)([g.A], () => g.A.getFrequentlyOpenedChannelIds()),
-        C = (0, i.yK)([g.A], () =>
-            g.A.getRecentlyClosed().map((e) => {
+        [h, g] = r.useState(null),
+        [p, x] = r.useState(!0),
+        b = (0, i.bG)([c.A], () => c.A.getProps().results),
+        y = (0, i.bG)([m.A], () => m.A.getFrequentlyOpenedChannelIds()),
+        A = (0, i.yK)([m.A], () =>
+            m.A.getRecentlyClosed().map((e) => {
                 let { channelId: t } = e;
                 return t;
             }),
         ),
-        E = (0, i.yK)([g.A], () => g.A.getTabs().flatMap((e) => ("channel" === e.kind ? [e.channelId] : []))),
-        N = (0, i.bG)([c.A], () => c.A.getChannelHistory()),
-        v = (0, i.bG)([d.Ay], () => d.Ay.getChannelId()),
-        R = r.useMemo(() => [...new Set([...I, ...C, ...N])], [I, C, N]),
-        j = (0, i.yK)(
+        I = (0, i.yK)([m.A], () => m.A.getTabs().flatMap((e) => ("channel" === e.kind ? [e.channelId] : []))),
+        C = (0, i.bG)([c.A], () => c.A.getChannelHistory()),
+        E = (0, i.bG)([d.Ay], () => d.Ay.getChannelId()),
+        N = r.useMemo(() => [...new Set([...y, ...A, ...C])], [y, A, C]),
+        v = (0, i.yK)(
             [X.A, q.A, ew.A, Q.A],
             () =>
-                R.filter((e) => {
-                    if ((0, ez.jq)(e)) return !1;
+                N.filter((e) => {
+                    if ((0, eO.jq)(e)) return !1;
                     let t = X.A.getChannel(e);
                     return (
                         null != t &&
@@ -660,46 +659,44 @@ function eU(e) {
                               ew.A.can(et.xBc.VIEW_CHANNEL, t))
                     );
                 }),
-            [R],
+            [N],
         ),
-        M = r.useMemo(() => {
-            let e = new Set(j);
-            for (let t of E) e.delete(t);
+        R = r.useMemo(() => {
+            let e = new Set(v);
+            for (let t of I) e.delete(t);
             function t(t) {
                 let n = t.filter((t) => e.has(t)).slice(0, 3);
                 for (let t of n) e.delete(t);
                 return n;
             }
-            null != v && e.delete(v);
-            let n = t(I),
-                l = t(C),
-                r = 0 === n.length || 0 === l.length ? t(N) : [];
+            null != E && e.delete(E);
+            let n = t(y),
+                l = t(A),
+                r = 0 === n.length || 0 === l.length ? t(C) : [];
             return [
                 { section: "frequently_opened", title: en.intl.string(en.t.EuJQg8), channelIds: n },
                 { section: "recently_closed", title: en.intl.string(en.t["94yiQK"]), channelIds: l },
                 { section: "previous_channels", title: en.intl.string(en.t["80lOZ1"]), channelIds: r },
             ];
-        }, [j, E, v, I, C, N]),
-        k = "" !== u.trim(),
-        w = r.useMemo(
+        }, [v, I, E, y, A, C]),
+        j = "" !== u.trim(),
+        M = r.useMemo(
             () =>
-                k
-                    ? eB("search", A.filter(eD))
-                    : M.flatMap((e) => {
+                j
+                    ? eB("search", b.filter(eD))
+                    : R.flatMap((e) => {
                           let { section: t, title: n, channelIds: l } = e,
                               r = l.flatMap((e) => (0, ej.A)(e) ?? []);
                           return r.length > 0 ? eB(t, [(0, eR.jF)(n), ...r]) : [];
                       }),
-            [k, A, M],
+            [j, b, R],
         ),
-        D = k ? Math.min(p, w.length - 1) : h;
+        k = r.useMemo(() => M.map((e) => e.result), [M]),
+        w = Math.min(h ?? (0, eR.Vv)(eR.vB.DOWN, -1, k), M.length - 1);
+    function D(e) {
+        (f(e), g(null), (0, o.$P)(e), s.current?.focus());
+    }
     function S(e) {
-        (f(e), m(-1), x(0), (0, o.$P)(e), s.current?.focus());
-    }
-    function T(e) {
-        k ? x(e) : m(e);
-    }
-    function _(e) {
         let { result: t, section: n, sectionIndex: l } = e;
         (0, eS.H)()
             ? ((a.current = null),
@@ -707,26 +704,26 @@ function eU(e) {
             : (0, o.jD)();
     }
     return (0, l.jsxs)(eE.l, {
-        className: eO.SW,
+        className: ez.SW,
         "aria-label": en.intl.string(en.t.GR7NIF),
         returnRef: a,
-        onMouseMove: () => y(!1),
+        onMouseMove: () => x(!1),
         children: [
             (0, l.jsx)(eN.I, {
                 ref: s,
                 query: u,
-                onChange: S,
-                onClear: () => S(""),
+                onChange: D,
+                onClear: () => D(""),
                 onKeyDown: (e) => {
-                    (y(!0),
+                    (x(!0),
                         (0, ek.W)(e, {
                             query: u,
-                            results: w.map((e) => e.result),
-                            selectedIndex: D,
-                            onSearch: S,
+                            results: k,
+                            selectedIndex: w,
+                            onSearch: D,
                             onDismiss: o.jD,
-                            onSelectIndex: T,
-                            onPick: () => _(w[D]),
+                            onSelectIndex: g,
+                            onPick: () => S(M[w]),
                         }));
                 },
                 placeholder: en.intl.string(en.t["++zIVN"]),
@@ -736,33 +733,33 @@ function eU(e) {
                 inputProps: {
                     role: "combobox",
                     "aria-controls": n,
-                    "aria-expanded": w.length > 0,
-                    "aria-activedescendant": null != w[D] ? `${n}-${D}` : void 0,
+                    "aria-expanded": M.length > 0,
+                    "aria-activedescendant": null != M[w] ? `${n}-${w}` : void 0,
                     "aria-autocomplete": "list",
                     spellCheck: !1,
                 },
             }),
-            w.length > 0
+            M.length > 0
                 ? (0, l.jsx)(ev.Ip, {
                       id: n,
                       role: "listbox",
                       tabIndex: -1,
                       "aria-label": en.intl.string(en.t.KsjOJI),
-                      className: eO.p_,
+                      className: ez.p_,
                       onMouseDown: (e) => e.preventDefault(),
-                      children: w.map(function (e, t) {
+                      children: M.map(function (e, t) {
                           let { result: r } = e,
                               i = `${e.section}-${r.type}-${r.record.id}`;
                           if (r.type === eR.rD.HEADER) return (0, l.jsx)(eL, { children: r.record.text }, i);
                           let s = {
                               id: `${n}-${t}`,
-                              focused: t === D,
-                              onClick: () => _(e),
+                              focused: t === w,
+                              onClick: () => S(e),
                               onMouseEnter: () => {
-                                  b || T(t);
+                                  p || g(t);
                               },
                               onFocus: (e) => {
-                                  b && e.scrollIntoView({ block: "nearest" });
+                                  p && e.scrollIntoView({ block: "nearest" });
                               },
                           };
                           return r.type === eR.rD.LINK
@@ -771,12 +768,12 @@ function eU(e) {
                       }),
                   })
                 : (0, l.jsx)("div", {
-                      className: eO.p$,
+                      className: ez.p$,
                       role: "status",
                       children: (0, l.jsx)(P.E, {
                           variant: "body-sm/medium",
                           color: "text-muted",
-                          children: k
+                          children: j
                               ? en.intl.formatToPlainString(en.t.AqkHKJ, { query: u.trim() })
                               : en.intl.string(en.t["6HQ6PJ"]),
                       }),
@@ -811,19 +808,19 @@ function eX(e) {
 }
 var eq = n(266553);
 function eY() {
-    (0, m.k)("new_tab_button");
+    (0, g.k)("new_tab_button");
 }
 function eQ() {
     let {
             tabs: e,
             activeTabId: t,
             isAtMaxTabs: n,
-            maxTabs: m,
-        } = (0, i.cf)([g.A], () => ({
-            tabs: g.A.getTabs(),
-            activeTabId: g.A.getActiveTabId(),
-            isAtMaxTabs: g.A.isAtMaxTabs(),
-            maxTabs: g.A.getMaxTabs(),
+            maxTabs: g,
+        } = (0, i.cf)([m.A], () => ({
+            tabs: m.A.getTabs(),
+            activeTabId: m.A.getActiveTabId(),
+            isAtMaxTabs: m.A.isAtMaxTabs(),
+            maxTabs: m.A.getMaxTabs(),
         })),
         x = (0, i.bG)([d.Ay], () => d.Ay.getVoiceChannelId()),
         b = (0, i.bG)([c.A], () => c.A.isTabPicker()),
@@ -851,7 +848,7 @@ function eQ() {
                 d = r.useRef(0),
                 f = r.useRef(0),
                 h = r.useRef(0),
-                m = r.useRef(0),
+                g = r.useRef(0),
                 p = r.useRef(0),
                 x = r.useRef(0),
                 b = r.useRef(0),
@@ -981,8 +978,8 @@ function eQ() {
             let D = r.useCallback((e, t) => {
                     let n = w.current,
                         r = l.current,
-                        g = i.current.get(e);
-                    if (null == r || null == g) return;
+                        m = i.current.get(e);
+                    if (null == r || null == m) return;
                     let y = r.getBoundingClientRect(),
                         A = parseFloat(getComputedStyle(r).columnGap);
                     h.current = Number.isFinite(A) ? A : 0;
@@ -1033,31 +1030,31 @@ function eQ() {
                         (c.current = v),
                         (d.current = Number.isFinite(R) ? R : 0),
                         (u.current = t));
-                    let D = parseFloat(g.style.left);
+                    let D = parseFloat(m.style.left);
                     o.current = D;
                     let S = Number.isFinite(M) ? M : D,
                         T = Number.isFinite(k) ? k : D + f.current;
-                    ((m.current = Math.min(S, D)),
+                    ((g.current = Math.min(S, D)),
                         (p.current = Math.max(T - f.current, D)),
                         (x.current = n.findIndex((t) => t.id === e)),
                         (b.current = D),
                         (a.current = e),
-                        (g.style.zIndex = "1"),
-                        (g.style.boxShadow = "var(--shadow-high)"));
+                        (m.style.zIndex = "1"),
+                        (m.style.boxShadow = "var(--shadow-high)"));
                 }, []),
                 S = r.useCallback((e, t) => {
                     if (a.current !== e) return;
                     let n = i.current.get(e);
                     if (null == n) return;
-                    let l = Math.min(Math.max(o.current + t - u.current, m.current), p.current);
+                    let l = Math.min(Math.max(o.current + t - u.current, g.current), p.current);
                     n.style.left = `${l}px`;
                     let r = c.current,
                         s = f.current,
-                        g = l + s,
+                        m = l + s,
                         y = o.current + s / 2,
                         A = 0;
                     for (let e of r) {
-                        let t = e.center > y ? g : l;
+                        let t = e.center > y ? m : l;
                         e.center < t && A++;
                     }
                     let I = h.current,
@@ -1080,19 +1077,19 @@ function eQ() {
                         d = o.slice(x.current),
                         f = o.slice(0, x.current).reverse(),
                         h = !1,
-                        m = function () {
+                        g = function () {
                             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                             if (h) return;
                             ((h = !0), (n.current = null));
-                            let l = g.A.getTabs(),
+                            let l = m.A.getTabs(),
                                 r = l.find((t) => t.id === e),
                                 u = l.filter((t) => t.id !== e),
                                 o = (e) => u.some((t) => t.id === e && t.pinned === r?.pinned),
-                                m = d.find(o),
+                                g = d.find(o),
                                 p = f.find(o),
                                 x =
-                                    null != m
-                                        ? u.findIndex((e) => e.id === m)
+                                    null != g
+                                        ? u.findIndex((e) => e.id === g)
                                         : null != p
                                           ? u.findIndex((e) => e.id === p) + 1
                                           : u.length,
@@ -1111,7 +1108,7 @@ function eQ() {
                     (null == l ||
                         !Number.isFinite(r) ||
                         e$.Ay.useReducedMotion ||
-                        ((n.current = m),
+                        ((n.current = g),
                         await t({
                             from: { progress: 0 },
                             to: { progress: 1 },
@@ -1121,7 +1118,7 @@ function eQ() {
                                 h || (l.style.left = `${r + (u - r) * t}px`);
                             },
                         })),
-                        m());
+                        g());
                 }, [t]);
             return {
                 stripRef: l,
@@ -1154,7 +1151,7 @@ function eQ() {
                 return (n.delete(e), n);
             });
         }, []),
-        P = n ? en.intl.formatToPlainString(en.t["I8l3Z+"], { count: m }) : void 0,
+        P = n ? en.intl.formatToPlainString(en.t["I8l3Z+"], { count: g }) : void 0,
         _ = e.length > 1,
         L = [...e];
     return (
