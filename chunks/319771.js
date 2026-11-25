@@ -1,6 +1,9 @@
 var i = n(80703),
     r = n(46653),
     a = n(403362);
+function s() {
+    return (0, i.v)(r.default.getInstallationForTracking());
+}
 n.d(
     t,
     {},
@@ -12,10 +15,11 @@ n.d(
                 case "user":
                     return r.default.getId();
                 case "installation":
-                    return (0, i.v)(r.default.getInstallationForTracking()) ?? "";
+                    return s() ?? "";
                 default:
                     (0, a.xb)(e);
             }
         },
+        o: s,
     },
 );

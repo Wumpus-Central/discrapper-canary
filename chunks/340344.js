@@ -266,24 +266,26 @@ class C extends a.Ay.PersistedStore {
                     ),
                 );
     }
-    trackCommonTriggerPointExposures(e, t) {
-        let n = this.getEvaluation("user", t);
-        if (null != n) {
-            let t = N(`${n}|${e}`);
+    trackCommonTriggerPointExposures(e, t, n) {
+        let i = this.getEvaluation("user", t);
+        if (null != i) {
+            let t = N(`${i}|${e}`);
             this.withExposureTracking(t, () =>
                 this.track(
                     d.sE.EXPERIMENT_USER_EVALUATION_EXPOSED,
-                    { evaluation_id: n, exposure_location: e, unit_type: "user" },
+                    { evaluation_id: i, exposure_location: e, unit_type: "user" },
                     { flush: !0 },
                 ),
             );
         }
-        for (let { evaluationId: t, unitId: n } of this.evaluationsWithUnitIds("installation")) {
-            let i = N(`${t}|${e}`);
-            this.withExposureTracking(i, () =>
+        if (null == n) return;
+        let r = this.getEvaluation("installation", n);
+        if (null != r) {
+            let t = N(`${r}|${e}`);
+            this.withExposureTracking(t, () =>
                 this.track(
                     d.sE.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
-                    { evaluation_id: t, exposure_location: e, unit_type: "installation", installation_id: n },
+                    { evaluation_id: r, exposure_location: e, unit_type: "installation", installation_id: n },
                     { flush: !0 },
                 ),
             );
@@ -291,6 +293,9 @@ class C extends a.Ay.PersistedStore {
     }
     withExposureTracking(e, t) {
         this.shouldTrackExposure(e) && (t(), (T[e] = Date.now()), this.saveTrackedExposures(T));
+    }
+    getInstallationUnitIdForSuppression() {
+        return Object.keys(_.installation)[0] ?? null;
     }
     trackExposureSuppression(e, t) {
         let n = E[e];
@@ -302,8 +307,9 @@ class C extends a.Ay.PersistedStore {
                     { flush: !0 },
                 );
             else if ("installation" === n.kind) {
-                let i = Object.keys(_.installation)[0];
+                let i = this.getInstallationUnitIdForSuppression();
                 null != i &&
+                    null != _.installation[i] &&
                     this.track(
                         d.sE.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED,
                         { experiment: e, unit_type: n.kind, suppression_source: t, installation_id: i },
@@ -319,22 +325,6 @@ class C extends a.Ay.PersistedStore {
                     );
             }
         }
-    }
-    evaluationIds(e) {
-        return Object.values(_[e])
-            .map((e) => e.evaluationId)
-            .filter((e) => null != e);
-    }
-    evaluationsWithUnitIds(e) {
-        return Object.entries(_[e])
-            .filter((e) => {
-                let [t, n] = e;
-                return null != n.evaluationId;
-            })
-            .map((e) => {
-                let [t, n] = e;
-                return { evaluationId: n.evaluationId, unitId: t };
-            });
     }
     shouldTrackExposure(e) {
         let t = T[e];
@@ -812,7 +802,10 @@ let V = new (class extends C {
             this.updateLaunchLatchUnits());
     }
     trackCommonTriggerPointExposures(e) {
-        super.trackCommonTriggerPointExposures(e, L.default.getId());
+        super.trackCommonTriggerPointExposures(e, L.default.getId(), (0, D.o)());
+    }
+    getInstallationUnitIdForSuppression() {
+        return (0, D.o)();
     }
     maybeEmitDebugExperimentEvent() {
         let e = L.default.getId(),
