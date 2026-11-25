@@ -12,8 +12,8 @@ var n = l(477900),
     h = l(718812),
     p = l(923904);
 (l(696016), l(600253));
-var v = l(792996),
-    x = l(880275);
+var x = l(792996),
+    v = l(880275);
 l.d(
     t,
     {},
@@ -26,7 +26,7 @@ l.d(
             if (N)
                 return (0, n.jsx)(s.k, {
                     autoFocus: !0,
-                    "aria-label": v.intl.string(v.t.SJKc5n),
+                    "aria-label": x.intl.string(x.t.SJKc5n),
                     value: j,
                     placeholder: C,
                     minLength: 0,
@@ -40,7 +40,7 @@ l.d(
             let E = null != j && "" !== j ? j : C;
             return g
                 ? (0, n.jsxs)("div", {
-                      className: r()(x.R_, i),
+                      className: r()(v.R_, i),
                       children: [
                           (0, n.jsx)(o.D, {
                               variant: t,
@@ -49,29 +49,29 @@ l.d(
                               children: (0, n.jsx)(c.D, {
                                   tag: "span",
                                   tabIndex: -1,
-                                  className: x.N4,
+                                  className: v.N4,
                                   onClick: () => k(!0),
                                   children: E,
                               }),
                           }),
                           (0, n.jsx)(u.m, {
-                              text: v.intl.string(v.t.bt75uw),
+                              text: x.intl.string(x.t.bt75uw),
                               children: (0, n.jsx)(d.K, {
                                   icon: m.PencilIcon,
                                   size: "sm",
                                   variant: "icon-only",
-                                  "aria-label": v.intl.string(v.t.bt75uw),
+                                  "aria-label": x.intl.string(x.t.bt75uw),
                                   onClick: () => k(!0),
                               }),
                           }),
                       ],
                   })
                 : (0, n.jsxs)(c.D, {
-                      className: r()(x.x6, i),
+                      className: r()(v.x6, i),
                       onClick: () => k(!0),
                       children: [
                           (0, n.jsx)(f.E, { variant: t, color: "text-default", className: l, children: E }),
-                          (0, n.jsx)(m.PencilIcon, { className: x.IZ, size: "xs", color: "currentColor" }),
+                          (0, n.jsx)(m.PencilIcon, { className: v.IZ, size: "xs", color: "currentColor" }),
                       ],
                   });
         },

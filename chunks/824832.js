@@ -57,12 +57,12 @@ function d(e) {
             title: h,
             ref: g,
         } = e,
-        p = s.useRef(null),
-        [A, _] = s.useState(!1);
+        A = s.useRef(null),
+        [p, _] = s.useState(!1);
     return (
         s.useEffect(() => {
-            A && null !== p.current && ((0, l.Oo)(p.current), (p.current = null));
-        }, [A]),
+            p && null !== A.current && ((0, l.Oo)(A.current), (A.current = null));
+        }, [p]),
         (0, i.jsx)(r.A, {
             ref: g,
             onChange: async function (e) {
@@ -73,7 +73,7 @@ function d(e) {
                 )
                     return;
                 let s = e.currentTarget.files;
-                p.current = await (0, l.mM)(async () => {
+                A.current = await (0, l.mM)(async () => {
                     let { default: e } = await Promise.all([n.e(886895), n.e(817259)]).then(n.bind(n, 897126));
                     return (n) =>
                         (0, i.jsx)(e, {

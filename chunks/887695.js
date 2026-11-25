@@ -67,7 +67,7 @@ function f(e) {
             dispatch: I,
             getItemProps: h,
             getRowProps: g,
-            getContainerProps: p,
+            getContainerProps: A,
         } = (0, a.A)({
             navId: n,
             columnCounts: t,
@@ -76,10 +76,10 @@ function f(e) {
             autoFocusElement: !1,
             useVirtualFocus: !0,
         }),
-        { gridContainerProps: A, handleGridContainerKeyDown: _ } = i.useMemo(() => {
-            let e = p();
+        { gridContainerProps: p, handleGridContainerKeyDown: _ } = i.useMemo(() => {
+            let e = A();
             return { gridContainerProps: e, handleGridContainerKeyDown: e.onKeyDown };
-        }, [p]);
+        }, [A]);
     return (
         i.useEffect(() => {
             function e() {
@@ -91,7 +91,7 @@ function f(e) {
             gridDispatch: I,
             getItemProps: h,
             getRowProps: g,
-            gridContainerProps: A,
+            gridContainerProps: p,
             handleGridContainerKeyDown: _,
             isUsingKeyboardNavigation: u,
         }

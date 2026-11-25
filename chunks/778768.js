@@ -16,11 +16,11 @@ var n = t(477900),
     I = t(652215),
     v = t(778712),
     S = t(97808),
-    x = t(863610),
+    y = t(863610),
     _ = t(283973),
-    y = t(574332),
-    E = t(774300),
-    N = t(566903),
+    x = t(574332),
+    N = t(774300),
+    E = t(566903),
     C = t(714114),
     b = t(864436),
     j = t(835072),
@@ -32,13 +32,13 @@ var n = t(477900),
     w = t(854627),
     k = t(10862),
     R = t(696451),
-    U = t(71393),
-    M = t(958590),
+    M = t(71393),
+    U = t(958590),
     D = t(576705),
     L = t(290863),
     F = t(427262),
-    z = t(582904),
-    B = t(792996),
+    B = t(582904),
+    z = t(792996),
     K = t(469640);
 let Y = "VoiceInviteSuggestionsPopover";
 function q(e) {
@@ -61,35 +61,35 @@ function q(e) {
             }),
             [t.id, s],
         ),
-        { activityStatusText: O, activityStatusIcon: U } = l.useMemo(() => {
+        { activityStatusText: O, activityStatusIcon: M } = l.useMemo(() => {
             let e = G.find((e) => e.type !== u.$.CUSTOM_STATUS && e.type !== u.$.HANG_STATUS);
-            return { activityStatusText: (0, N.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
+            return { activityStatusText: (0, E.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
         }, [G]),
-        { voiceChannel: z } = (0, C.Ay)({ userId: t.id }),
-        q = (0, P.Ay)(z),
+        { voiceChannel: B } = (0, C.Ay)({ userId: t.id }),
+        q = (0, P.Ay)(B),
         H = (0, p.S3)(I.clD.ONLINE),
         $ = "success" === A || "sending" === A,
         W = l.useCallback(async () => {
             if ($) return;
             m("sending");
             let e = await (async function () {
-                let e = M.A.getInvite(i.id, {}) ?? null;
+                let e = U.A.getInvite(i.id, {}) ?? null;
                 if (null == e) {
                     if (!D.A.can(I.xBc.CREATE_INSTANT_INVITE, i)) return null;
                     try {
-                        await y.Ay.createInvite(i.id, {}, Y);
+                        await x.Ay.createInvite(i.id, {}, Y);
                     } catch (e) {
                         return null;
                     }
-                    e = M.A.getInvite(i.id, {}) ?? null;
+                    e = U.A.getInvite(i.id, {}) ?? null;
                 }
                 return e?.code ?? null;
             })();
             null == e
                 ? m(null)
-                : E.A.enqueue(
+                : N.A.enqueue(
                       {
-                          type: E.F.USER,
+                          type: N.F.USER,
                           user: t,
                           inviteKey: e,
                           location: Y,
@@ -107,10 +107,10 @@ function q(e) {
         } = (0, w.A)({ userId: t.id, size: v._3.SIZE_24, animateOnHover: !o, guildId: s });
     if (null == d) return null;
     let Q = F.Ay.getName(t),
-        ee = B.intl.string(B.t.jYnGPG),
+        ee = z.intl.string(z.t.jYnGPG),
         ei = h !== I.clD.OFFLINE ? h : void 0,
         et = null != O.text,
-        en = null != z && null != q;
+        en = null != B && null != q;
     return (0, n.jsxs)(g.D, {
         innerRef: r,
         tag: "li",
@@ -138,9 +138,9 @@ function q(e) {
                             className: K.J2,
                             children: [
                                 en
-                                    ? (0, n.jsx)(k.A, { size: "custom", color: H, channel: z, className: K.RI })
-                                    : null != U
-                                      ? (0, n.jsx)(b.A, { icon: U, className: K.RI })
+                                    ? (0, n.jsx)(k.A, { size: "custom", color: H, channel: B, className: K.RI })
+                                    : null != M
+                                      ? (0, n.jsx)(b.A, { icon: M, className: K.RI })
                                       : null,
                                 (0, n.jsx)(f.E, {
                                     variant: "body-xs/medium",
@@ -153,14 +153,14 @@ function q(e) {
                 ],
             }),
             "sending" === A &&
-                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(x.n, { dotRadius: 2, themed: !0 }) }),
+                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(y.n, { dotRadius: 2, themed: !0 }) }),
             "success" === A &&
                 (0, n.jsx)(f.E, {
                     variant: "body-xs/medium",
                     color: "text-muted",
                     className: K.h5,
                     lineClamp: 1,
-                    children: B.intl.string(B.t["8BEiNn"]),
+                    children: z.intl.string(z.t["8BEiNn"]),
                 }),
             null == A &&
                 (0, n.jsx)("div", {
@@ -178,15 +178,15 @@ t.d(
             let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: c } = e,
                 p = l.useRef(null),
                 v = (0, V.M)(p),
-                S = (0, z.kt)({ channel: i }),
-                { analyticsLocations: x } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
+                S = (0, B.kt)({ channel: i }),
+                { analyticsLocations: y } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
             (l.useEffect(() => {
                 s && p.current?.focus();
             }, [s]),
                 (0, O.A)({
                     name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
                     type: o.ImpressionTypes.POPOUT,
-                    properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: x },
+                    properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: y },
                 }),
                 l.useEffect(() => {
                     u?.(p.current);
@@ -195,7 +195,7 @@ t.d(
                     r?.(v);
                 }, [r, v]));
             let _ = l.useCallback(() => {
-                let e = U.A.getGuild(i.guild_id);
+                let e = M.A.getGuild(i.guild_id);
                 (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
                     (0, A.mM)(async () => {
                         let { default: l } = await Promise.all([
@@ -220,7 +220,7 @@ t.d(
                     role: "dialog",
                     tabIndex: -1,
                     ref: p,
-                    "aria-label": B.intl.string(B.t.o53CL2),
+                    "aria-label": z.intl.string(z.t.o53CL2),
                     className: K.oO,
                     children: (0, n.jsx)("div", {
                         className: K.vW,
@@ -241,7 +241,7 @@ t.d(
                                             variant: "body-sm/medium",
                                             className: K.UU,
                                             lineClamp: 1,
-                                            children: B.intl.string(B.t.NOP3Ry),
+                                            children: z.intl.string(z.t.NOP3Ry),
                                         }),
                                     ],
                                 }),

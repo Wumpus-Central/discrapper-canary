@@ -19,7 +19,7 @@ var l = t(477900),
     I = t(32523),
     k = t(688151),
     C = t(263748);
-function E(e) {
+function v(e) {
     let { url: n } = e,
         t = a.useCallback(() => {
             (0, x.C)(n, () => (0, r.P0)({ text: "Copied experiment link", variant: "success" }));
@@ -39,35 +39,35 @@ t.d(
                 t = (0, g.OL)(n),
                 r = (0, g.Kb)(n),
                 { experiments: s, overridesInfo: o } = (0, I.hI)(),
-                { experiments: x, overridesInfo: v } = (0, A.op)(),
+                { experiments: x, overridesInfo: E } = (0, A.op)(),
                 N = a.useMemo(() => (null == t ? null : null != s[t] ? s[t] : x[t]), [s, x, t]),
                 b = a.useMemo(() => {
                     if (null == t);
                     else if (null != o[t]) return o[t];
-                    else if (null != v[t]) return v[t];
-                }, [o, v, t]),
+                    else if (null != E[t]) return E[t];
+                }, [o, E, t]),
                 S = h.default.getId(),
                 _ = (0, y.Fm)(N, S),
                 M = a.useMemo(() => (0, g.GI)(N, _), [_, N]),
-                w = (0, i.bG)([p.default], () => {
+                T = (0, i.bG)([p.default], () => {
                     let e = p.default.getCurrentUser();
                     return e?.isStaff() || e?.isStaffPersonal();
                 });
             if (null == t || null == N) return null;
-            let L = (0, g.hp)(N).find((e) => e.value === r),
-                T = null != L ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
-                O = null != b && null != L && b.variantId === L.value,
-                P = (0, l.jsx)(E, { url: n }),
+            let w = (0, g.hp)(N).find((e) => e.value === r),
+                L = null != w ? k.Ps.EXPERIMENT_TREATMENT : k.Ps.EXPERIMENT,
+                O = null != b && null != w && b.variantId === w.value,
+                P = (0, l.jsx)(v, { url: n }),
                 D = null;
-            return (T === k.Ps.EXPERIMENT_TREATMENT && null != L
-                ? (D = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: L.label }))
+            return (L === k.Ps.EXPERIMENT_TREATMENT && null != w
+                ? (D = (0, l.jsx)(c.E, { variant: "body-xs/normal", color: "text-muted", children: w.label }))
                 : null != _ &&
                   (D = (0, l.jsxs)(c.E, {
                       variant: "body-xs/normal",
                       color: "text-muted",
                       children: ["Server Config: ", M],
                   })),
-            w)
+            T)
                 ? (0, l.jsxs)("div", {
                       className: C.zr,
                       children: [
@@ -101,16 +101,16 @@ t.d(
                                   }),
                               }),
                           }),
-                          null != L
+                          null != w
                               ? (0, l.jsx)(m.$, {
                                     fullWidth: !0,
                                     variant: O ? "critical-primary" : "primary",
-                                    text: O ? `Clear Treatment ${L.value}` : `Apply Treatment ${L.value}`,
+                                    text: O ? `Clear Treatment ${w.value}` : `Apply Treatment ${w.value}`,
                                     onClick: function () {
                                         null == t ||
                                             null == N ||
-                                            (null != L &&
-                                                (O ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, L.value)));
+                                            (null != w &&
+                                                (O ? (0, j.t$)(N.system, t, null) : (0, j.t$)(N.system, t, w.value)));
                                     },
                                 })
                               : (0, l.jsx)("div", {

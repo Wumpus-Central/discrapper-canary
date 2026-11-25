@@ -25,8 +25,8 @@ n.d(
                     maintainFocusPosition: I = !0,
                     enabled: h = !0,
                     onDispatch: g,
-                    autoFocusElement: p = !0,
-                    useVirtualFocus: A = !1,
+                    autoFocusElement: A = !0,
+                    useVirtualFocus: p = !1,
                 } = e,
                 _ = i.useCallback(
                     (e, t) => {
@@ -54,8 +54,8 @@ n.d(
                             dispatch: I,
                             maintainFocusPosition: h,
                             enabled: g,
-                            autoFocusElement: p,
-                            useVirtualFocus: A,
+                            autoFocusElement: A,
+                            useVirtualFocus: p,
                         } = e,
                         _ = i.useRef(g),
                         N = c(o(t, u, d)),
@@ -74,10 +74,10 @@ n.d(
                     i.useEffect(() => () => T.clean(), [T]);
                     let b = i.useCallback(
                             (e) => {
-                                if (!_.current || !p) return !1;
+                                if (!_.current || !A) return !1;
                                 e.focus();
                             },
-                            [p],
+                            [A],
                         ),
                         R = i.useCallback(
                             (e, n) => {
@@ -123,7 +123,7 @@ n.d(
                             (e) => {
                                 if (!_.current) return;
                                 if (
-                                    !A &&
+                                    !p &&
                                     a.includes(e.key) &&
                                     !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                                     e.currentTarget === e.target
@@ -166,14 +166,14 @@ n.d(
                                             I({ type: t }));
                                         return;
                                     case l.X2.SELECT_FOCUSED_ITEM:
-                                        if ((p && N?.ownerDocument.activeElement !== N) || e.repeat) return;
+                                        if ((A && N?.ownerDocument.activeElement !== N) || e.repeat) return;
                                         (e.preventDefault(),
                                             e.stopPropagation(),
                                             I({ type: t }),
                                             null != m ? m(u, d, e) : null != N && N.click());
                                 }
                             },
-                            [v, I, p, N, m, u, d],
+                            [v, I, A, N, m, u, d],
                         ),
                         w = i.useCallback(
                             (e) =>
@@ -234,8 +234,8 @@ n.d(
                     getNewFocusPosition: E,
                     maintainFocusPosition: I,
                     enabled: h,
-                    autoFocusElement: p,
-                    useVirtualFocus: A,
+                    autoFocusElement: A,
+                    useVirtualFocus: p,
                 })
             );
         },

@@ -15,20 +15,20 @@ var l = n(477900),
     g = n(186306),
     x = n(654821),
     E = n(35277),
-    S = n(339200),
-    y = n(632760),
+    y = n(339200),
+    S = n(632760),
     A = n(855986),
     C = n(866665),
-    b = n(778712),
-    I = n(545442),
+    I = n(778712),
+    b = n(545442),
     v = n(265872),
     N = n(565645),
-    T = n(730134),
+    j = n(730134),
     k = n(775602),
-    j = n(47167),
+    T = n(47167),
     _ = n(442247),
-    R = n(454908),
-    O = n(545868),
+    O = n(454908),
+    R = n(545868),
     w = n(376943),
     M = n(465365),
     L = n(78390),
@@ -36,9 +36,9 @@ var l = n(477900),
     D = n(654255),
     U = n(332173),
     V = n(37632),
-    W = n(665303),
-    B = n(650620),
-    F = n(31797),
+    F = n(665303),
+    W = n(650620),
+    B = n(31797),
     G = n(593284),
     K = n(967144);
 n(209932);
@@ -46,11 +46,11 @@ var H = n(342296),
     z = n(734057),
     q = n(317525),
     $ = n(994500),
-    Q = n(351906),
+    J = n(351906),
     Z = n(287809),
-    X = n(147036),
-    Y = n(562153),
-    J = n(427262),
+    Q = n(147036),
+    X = n(562153),
+    Y = n(427262),
     ee = n(650583),
     et = n(792996),
     en = n(307126);
@@ -94,10 +94,10 @@ function ea(e) {
 function eo(e) {
     let { id: t, guildId: n, channelId: r } = e,
         s = (0, A.bG)([Z.default], () => Z.default.getUser(t)),
-        a = (0, A.bG)([Q.A], () => Q.A.hidePersonalInformation),
+        a = (0, A.bG)([J.A], () => J.A.hidePersonalInformation),
         o = i.useRef(null),
-        u = (0, F.A)({ channelId: r, userId: t }),
-        c = Y.Ay.useName(n, r, s),
+        u = (0, B.A)({ channelId: r, userId: t }),
+        c = X.Ay.useName(n, r, s),
         d = i.useCallback(
             (e) => (0, l.jsx)(ea, { id: t, name: c, targetRef: o, popoutProps: e, onContextMenu: u }),
             [t, c, u],
@@ -108,14 +108,14 @@ function eo(e) {
             __unsupportedReactNodeAsText: (0, l.jsxs)("div", {
                 className: en.fX,
                 children: [
-                    (0, l.jsx)(T.A, { user: s, animate: !0, size: b._3.SIZE_16, className: en.my }),
-                    J.Ay.getUserTag(s, { mode: "username", identifiable: a ? "never" : "always" }),
+                    (0, l.jsx)(j.A, { user: s, animate: !0, size: I._3.SIZE_16, className: en.my }),
+                    Y.Ay.getUserTag(s, { mode: "username", identifiable: a ? "never" : "always" }),
                     (0, l.jsx)("span", { className: en.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
-            "aria-label": J.Ay.getUserTag(s, { decoration: "never" }),
+            "aria-label": Y.Ay.getUserTag(s, { decoration: "never" }),
             asContainer: !0,
             children: (0, l.jsx)(H.A, {
                 targetElementRef: o,
@@ -133,7 +133,7 @@ function eo(e) {
 function eu(e) {
     let { id: t, guildId: n, channelId: r } = e,
         s = (0, A.bG)([q.A], () => (null != n ? q.A.getRole(n, t) : void 0)),
-        a = (0, B.A)(n, t),
+        a = (0, W.A)(n, t),
         o = (0, A.bG)([k.Ay], () => k.Ay.roleStyle),
         u = (0, K.X_)(n, s, s?.colorStrings),
         c = i.useRef(null);
@@ -151,7 +151,7 @@ function eu(e) {
                   ...e,
                   onContextMenu: a,
                   children: [
-                      h && (0, l.jsx)(I.W, { color: s.colorString, colors: u, background: !1, tooltip: !1 }),
+                      h && (0, l.jsx)(b.W, { color: s.colorString, colors: u, background: !1, tooltip: !1 }),
                       "@",
                       s.name,
                   ],
@@ -162,7 +162,7 @@ function eu(e) {
         : (0, l.jsx)(v.Y, {
               targetElementRef: c,
               preload: async () => {
-                  await (0, O.a)(n, t);
+                  await (0, R.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(G.Y, { guildId: n, channelId: r, roleId: t, popoutProps: e }),
               position: "top",
@@ -172,13 +172,13 @@ function eu(e) {
 function ec(e) {
     let { id: t } = e,
         n = (0, A.bG)([z.A], () => z.A.getChannel(t)),
-        i = (0, W.A)({ channelId: t }),
+        i = (0, F.A)({ channelId: t }),
         r = et.intl.string(et.t.zLZPmk).toLowerCase(),
         s = "text",
         a = !0;
     return (null != n &&
-        ((r = (0, w.nc)(n) ? (0, j.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
-        (s = (0, w.nc)(n) ? ((0, X.QG)(n) ?? "text") : "locked"),
+        ((r = (0, w.nc)(n) ? (0, T.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
+        (s = (0, w.nc)(n) ? ((0, Q.QG)(n) ?? "text") : "locked"),
         (a = (0, M.Y)(n.type))),
     a)
         ? (0, l.jsx)(U.A, { iconType: s, onContextMenu: null == n ? void 0 : i, children: r })
@@ -201,7 +201,7 @@ function em(e) {
 function ef(e) {
     let { id: t } = e,
         n = (0, _.K)(t);
-    return ((0, R.I)(null != n ? void 0 : t), (0, l.jsx)(D.A, { gameId: t, onKeyDown: es }));
+    return ((0, O.I)(null != n ? void 0 : t), (0, l.jsx)(D.A, { gameId: t, onKeyDown: es }));
 }
 var ep = n(891031),
     eg = n(106972),
@@ -225,8 +225,8 @@ let eE = {
         codeBlockLang: ep.codeBlockLang,
         subtext: ep.subtext,
     },
-    eS = new Set(["link", "url", "autolink"]);
-var ey = n(165648);
+    ey = new Set(["link", "url", "autolink"]);
+var eS = n(165648);
 function eA(e) {
     (e.preventDefault(), e.stopPropagation());
 }
@@ -242,8 +242,8 @@ function eC(e) {
         children: i,
     });
 }
-var eb = n(652215),
-    eI = n(809067);
+var eI = n(652215),
+    eb = n(809067);
 class ev extends i.PureComponent {
     containerRef = i.createRef();
     state;
@@ -261,9 +261,9 @@ class ev extends i.PureComponent {
             (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
-            S.VW.isEditorEmpty(e.editor)
+            y.VW.isEditorEmpty(e.editor)
                 ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
-                : (this.state = { initialValue: S.VW.richValue(e.editor), showPlaceholder: !1 }));
+                : (this.state = { initialValue: y.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
@@ -309,12 +309,12 @@ class ev extends i.PureComponent {
                             });
                         return (0, l.jsx)("div", { ...r, children: a });
                     case "blockQuote": {
-                        let e = s()(ey.h, ey.MN);
+                        let e = s()(eS.h, eS.MN);
                         return (0, l.jsxs)("div", {
                             ...r,
                             className: e,
                             children: [
-                                (0, l.jsx)("span", { contentEditable: !1, className: ey.r }),
+                                (0, l.jsx)("span", { contentEditable: !1, className: eS.r }),
                                 (0, l.jsx)("blockquote", { children: a }),
                             ],
                         });
@@ -367,7 +367,7 @@ class ev extends i.PureComponent {
                         return (0, l.jsxs)(eC, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(y.LF, { soundId: o.soundId }), a],
+                            children: [(0, l.jsx)(S.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
                         return (0, l.jsxs)(eC, {
@@ -405,8 +405,8 @@ class ev extends i.PureComponent {
                         { attributes: r, children: a, leaf: o, text: u } = t,
                         c = e.chatInputType.markdown?.disableLinks === !0,
                         d = !1,
-                        [h] = S.VW.node(e, S.PW.parent(S.VW.findPath(e, u)));
-                    switch (S.VW.isEditor(h) ? "editor" : h.type) {
+                        [h] = y.VW.node(e, y.PW.parent(y.VW.findPath(e, u)));
+                    switch (y.VW.isEditor(h) ? "editor" : h.type) {
                         case "line":
                         case "blockQuote": {
                             d = void 0;
@@ -425,7 +425,7 @@ class ev extends i.PureComponent {
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
                                             return [ep[t]];
-                                        if (c && eS.has(t)) return [];
+                                        if (c && ey.has(t)) return [];
                                         if (t in eE) return [eE[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
@@ -445,10 +445,10 @@ class ev extends i.PureComponent {
     }
     handleOnChange() {
         let { editor: e } = this.props,
-            t = S.VW.isEditorEmpty(e) && null == e.composition;
+            t = y.VW.isEditorEmpty(e) && null == e.composition;
         if (
             (t !== this.state.showPlaceholder && this.setState({ showPlaceholder: t }),
-            this.props.onChange?.(S.VW.richValue(e)),
+            this.props.onChange?.(y.VW.richValue(e)),
             !1 === this.props.canFocus)
         ) {
             let t = a.rL.findDocumentOrShadowRoot(e).getSelection();
@@ -480,19 +480,19 @@ class ev extends i.PureComponent {
                 ("insertText" === e.inputType || "insertReplacementText" === e.inputType) &&
                 (null == i && (i = l), null != i)
             ) {
-                let n = S.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
+                let n = y.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
                 null != n &&
                     null != e.data &&
-                    (S.ZF.isExpanded(n)
+                    (y.ZF.isExpanded(n)
                         ? g.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
             }
             if (e.inputType.startsWith("deleteContent") && null != l && !l.collapsed) {
-                let n = S.VW.toSlateRange(t, l, { exactMatch: !0, suppressThrow: !0 });
+                let n = y.VW.toSlateRange(t, l, { exactMatch: !0, suppressThrow: !0 });
                 null != n &&
-                    S.ZF.isExpanded(n) &&
+                    y.ZF.isExpanded(n) &&
                     ((t.selection = n),
                     t.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
                     e.preventDefault());
@@ -503,26 +503,26 @@ class ev extends i.PureComponent {
         let { editor: e } = this.props,
             t = { insertedPrefix: !1, startedInsideInline: !1 };
         this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
-        let n = null != e.selection && S.ZF.isCollapsed(e.selection) ? S.VW.leaf(e, e.selection.anchor.path) : null;
+        let n = null != e.selection && y.ZF.isCollapsed(e.selection) ? y.VW.leaf(e, e.selection.anchor.path) : null;
         if (null == n) {
             e.composition = t;
             return;
         }
         if (
             (null !=
-                (null != e.selection && S.ZF.isCollapsed(e.selection)
-                    ? S.VW.above(e, { at: n[1], match: (t) => S.VW.isInline(e, t), mode: "lowest" })
+                (null != e.selection && y.ZF.isCollapsed(e.selection)
+                    ? y.VW.above(e, { at: n[1], match: (t) => y.VW.isInline(e, t), mode: "lowest" })
                     : null) && (t.startedInsideInline = !0),
-            S.VW.isEditorEmpty(e))
+            y.VW.isEditorEmpty(e))
         ) {
             (E.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t));
             return;
         }
         let l = a.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
             i = (l?.rangeCount ?? 0) > 0 ? l?.getRangeAt(0) : null;
-        if (null == (null != i ? S.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
-            let t = S.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
-            ((e.selection = null), null != t ? E.b.select(e, t) : E.b.select(e, S.VW.end(e, [])));
+        if (null == (null != i ? y.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
+            let t = y.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
+            ((e.selection = null), null != t ? E.b.select(e, t) : E.b.select(e, y.VW.end(e, [])));
         }
         e.composition = t;
     }
@@ -530,12 +530,12 @@ class ev extends i.PureComponent {
         let { editor: t } = this.props;
         if (null == t.composition) return;
         let { insertedPrefix: n } = t.composition;
-        if (n && null != t.selection && S.ZF.isCollapsed(t.selection)) {
+        if (n && null != t.selection && y.ZF.isCollapsed(t.selection)) {
             let e = t.selection.anchor.path,
-                n = S.AS.leaf(t, e);
-            S.VW.withoutNormalizing(t, () => {
+                n = y.AS.leaf(t, e);
+            y.VW.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                (E.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), S.VW.insertText(t, e));
+                (E.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), y.VW.insertText(t, e));
             });
         }
         t.composition = null;
@@ -622,13 +622,13 @@ class ev extends i.PureComponent {
                         (0, l.jsx)(e, {
                             ...n,
                             editor: t,
-                            text: S.VW.getSelectedText(t, !0),
+                            text: y.VW.getSelectedText(t, !0),
                             clipboardHasMixedContent: i,
                         });
                 },
                 {
                     align: null != i && null != r && i < r / 2 ? "top" : "bottom",
-                    enableSpellCheck: s === eb.BRT.APP || (0, m.GG)(),
+                    enableSpellCheck: s === eI.BRT.APP || (0, m.GG)(),
                     repositionOnContentChange: !0,
                 },
             );
@@ -660,8 +660,8 @@ class ev extends i.PureComponent {
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: E,
-            renderExtraLeaf: S,
-            ...y
+            renderExtraLeaf: y,
+            ...S
         } = this.props;
         return (0, l.jsxs)("div", {
             ref: this.containerRef,
@@ -669,7 +669,7 @@ class ev extends i.PureComponent {
             children: [
                 this.state.showPlaceholder
                     ? (0, l.jsx)("div", {
-                          className: s()(eI.q, t),
+                          className: s()(eb.q, t),
                           "aria-hidden": !0,
                           "data-slate-placeholder": "true",
                           children: o,
@@ -679,8 +679,8 @@ class ev extends i.PureComponent {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
-                        ...y,
-                        className: s()(ey.PT, eI.E, t),
+                        ...S,
+                        className: s()(eS.PT, eb.E, t),
                         decorate: u,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,

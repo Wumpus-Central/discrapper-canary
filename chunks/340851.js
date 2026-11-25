@@ -16,11 +16,11 @@ var n = t(477900),
     I = t(47167),
     v = t(643501),
     S = t(916641),
-    x = t(652896),
+    y = t(652896),
     _ = t(279250),
-    y = t(346846),
-    E = t(342296),
-    N = t(481947),
+    x = t(346846),
+    N = t(342296),
+    E = t(481947),
     C = t(46653),
     b = t(71393),
     j = t(576705),
@@ -40,13 +40,13 @@ let R = (0, h.J)(function (e) {
             mute: d,
             localMute: h,
             localVideoDisabled: R,
-            deaf: U,
-            video: M,
+            deaf: M,
+            video: U,
             embeddedApplication: D,
             serverMute: L,
             serverDeaf: F,
-            nick: z,
-            ringing: B,
+            nick: B,
+            ringing: z,
             speaking: K,
             playingSoundboard: Y,
             disconnected: q,
@@ -94,10 +94,10 @@ let R = (0, h.J)(function (e) {
         if (!Z || !(0, _.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
         let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
         (C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
-            J ? ((0, y.A)(e), c.A.selectParticipant(e.channelId, (0, x._z)(e))) : (0, g.Nl)(e),
+            J ? ((0, x.A)(e), c.A.selectParticipant(e.channelId, (0, y._z)(e))) : (0, g.Nl)(e),
             ei?.(s.id));
     }
-    function ex(e) {
+    function ey(e) {
         (0, A.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 t.e(339715),
@@ -179,7 +179,7 @@ let R = (0, h.J)(function (e) {
                   em || (eh.current = setTimeout(() => ee?.(s.id), 100));
               },
         onMouseLeave: es ? void 0 : eI,
-        children: (0, n.jsx)(E.A, {
+        children: (0, n.jsx)(N.A, {
             clickTrap: s?.id === T.default.getCurrentUser()?.id && em,
             targetElementRef: eA,
             user: s,
@@ -203,11 +203,11 @@ let R = (0, h.J)(function (e) {
                         localVideoDisabled: R,
                         isStreaming: Z,
                         isGuest: X,
-                        video: M,
+                        video: U,
                         priority: Q,
-                        ringing: B,
-                        deaf: U,
-                        nick: z,
+                        ringing: z,
+                        deaf: M,
+                        nick: B,
                         collapsed: i,
                         overlap: i,
                         serverMute: L,
@@ -221,7 +221,7 @@ let R = (0, h.J)(function (e) {
                         selected: em,
                         onClick: t ? void 0 : ef,
                         onDoubleClick: eS,
-                        onContextMenu: ex,
+                        onContextMenu: ey,
                         guildId: r.guild_id,
                         isSelf: er,
                         application: ed,
@@ -232,7 +232,7 @@ let R = (0, h.J)(function (e) {
                     es
                         ? (0, n.jsx)(o.m, {
                               text: (0, S.A)(en) ?? w.intl.string(w.t.IyYqqY),
-                              children: (0, n.jsx)(N.Ay, { ref: eA, ...l }),
+                              children: (0, n.jsx)(E.Ay, { ref: eA, ...l }),
                           })
                         : (0, n.jsx)(u.Y, {
                               targetElementRef: eA,
@@ -251,7 +251,7 @@ let R = (0, h.J)(function (e) {
                               onRequestClose: ep,
                               spacing: 17,
                               children: () =>
-                                  (0, n.jsx)(N.Ay, {
+                                  (0, n.jsx)(E.Ay, {
                                       ...l,
                                       ref: eA,
                                       onMouseDown: e.onMouseDown,

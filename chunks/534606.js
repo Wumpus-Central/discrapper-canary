@@ -1,4 +1,4 @@
-n.d(t, { o: () => g, A: () => p });
+n.d(t, { o: () => g, A: () => A });
 var i,
     s = n(477900),
     l = n(646514),
@@ -37,14 +37,14 @@ var I = n(792996),
         (i[(i.WRONG_TYPE = 4)] = "WRONG_TYPE"),
         (i[(i.RESIZE_ANIMATED = 5)] = "RESIZE_ANIMATED"),
         i);
-let p = function (e) {
+let A = function (e) {
     let { error: t } = e,
         { type: n, filename: i } = t,
         {
             icon: f,
             description: g,
-            color: p,
-            tooltip: A,
+            color: A,
+            tooltip: p,
         } = {
             0: {
                 icon: r.FileWarningIcon,
@@ -97,8 +97,8 @@ let p = function (e) {
             (0, s.jsx)(d.m, {
                 asContainer: !0,
                 position: "right",
-                text: A,
-                children: (0, s.jsx)(m.CircleErrorIcon, { size: "custom", width: 20, height: 20, color: p }),
+                text: p,
+                children: (0, s.jsx)(m.CircleErrorIcon, { size: "custom", width: 20, height: 20, color: A }),
             }),
         ],
     });

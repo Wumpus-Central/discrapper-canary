@@ -15,19 +15,19 @@ var l = n(477900),
     g = n(795816),
     x = n(211401),
     E = n(989837),
-    S = n(500049),
-    y = n(598071),
+    y = n(500049),
+    S = n(598071),
     A = n(60809),
     C = n(792996),
-    b = n(215837);
-let I = function (e) {
+    I = n(215837);
+let b = function (e) {
         let { type: t, channelId: n, ref: r } = e,
             a = (0, s.bG)(
                 [E.A],
                 () => E.A.shouldShowPopup() && E.A.activeViewType() === t && E.A.activeChannelId() === n,
             ),
             { Component: o, events: u, play: c } = (0, f.c)(),
-            d = i.useContext(y.Ay);
+            d = i.useContext(S.Ay);
         i.useEffect(() => {
             function e() {
                 u.onMouseEnter();
@@ -40,36 +40,36 @@ let I = function (e) {
             );
         }, [d, u]);
         let h = i.useCallback(() => {
-                (a ? x.k(S.Se.DISMISSED) : (x.R(S.s4.TEXT, t, void 0, n), g.LK()), c());
+                (a ? x.k(y.Se.DISMISSED) : (x.R(y.s4.TEXT, t, void 0, n), g.LK()), c());
             }, [a, t, n, c]),
-            I = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
+            b = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
-            className: m()(b.UD, A.KG),
+            className: m()(I.UD, A.KG),
             ref: r,
             children: (0, l.jsx)(p.D, {
                 tabIndex: 0,
-                className: m()(b.x6, { [b.rK]: a }),
+                className: m()(I.x6, { [I.rK]: a }),
                 onClick: h,
                 "aria-label": C.intl.string(C.t.erHFxI),
                 "aria-expanded": a,
                 "aria-haspopup": "dialog",
                 focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
                 ...u,
-                children: I,
+                children: b,
             }),
         });
     },
     v = i.memo(function (e) {
         let { type: t, channelId: n } = e;
-        return (0, l.jsx)(I, { type: t, channelId: n });
+        return (0, l.jsx)(b, { type: t, channelId: n });
     });
 var N = n(931664),
-    T = n(951260),
+    j = n(951260),
     k = n(87207),
-    j = n(188567),
+    T = n(188567),
     _ = n(709372),
-    R = n(841817),
-    O = n(652215),
+    O = n(841817),
+    R = n(652215),
     w = n(522602),
     M = n(287809),
     L = n(448645),
@@ -77,9 +77,9 @@ var N = n(931664),
     D = n(375499),
     U = n(554146),
     V = n(43105),
-    W = n(263775),
-    B = n(151271),
-    F = n(490035),
+    F = n(263775),
+    W = n(151271),
+    B = n(490035),
     G = n(49999),
     K = n(698279),
     H = n(236432),
@@ -87,12 +87,12 @@ var N = n(931664),
 function q(e) {
     let { targetElementRef: t, type: n, channelId: r } = e,
         a = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        u = (0, F.H)("DefaultEmojisPopover"),
-        c = (0, B.RQ)((e) => null != e.activeView),
-        [d, h] = (0, W.kn)(u && !c ? [U.M.DEFAULT_EMOJIS_POPOVER] : []),
+        u = (0, B.H)("DefaultEmojisPopover"),
+        c = (0, W.RQ)((e) => null != e.activeView),
+        [d, h] = (0, F.kn)(u && !c ? [U.M.DEFAULT_EMOJIS_POPOVER] : []),
         m = d === U.M.DEFAULT_EMOJIS_POPOVER,
         f = i.useCallback(() => {
-            (h(G.i.TAKE_ACTION), (0, B.bf)(K.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
+            (h(G.i.TAKE_ACTION), (0, W.bf)(K.kx.EMOJI, n, r, { showEmojiPacks: !0 }));
         }, [h, n, r]),
         p = i.useCallback(() => {
             h(G.i.USER_DISMISS);
@@ -120,24 +120,24 @@ function q(e) {
         : null;
 }
 var $ = n(355622),
-    Q = n(495088);
+    J = n(495088);
 let Z = i.memo(function (e) {
     let { disabled: t, type: n, channelId: r, ref: s } = e,
-        [a, o, u, c] = (0, B.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
+        [a, o, u, c] = (0, W.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
         d = n === $.oU.NORMAL,
         h = i.useRef(null),
         f = i.useCallback(() => {
-            (0, B.r$)(K.kx.EMOJI, n, r);
+            (0, W.r$)(K.kx.EMOJI, n, r);
         }, [n, r]);
     return t
         ? null
         : (0, l.jsxs)("div", {
-              className: m()(K.VQ, Q.UD),
+              className: m()(K.VQ, J.UD),
               ref: s,
               children: [
                   (0, l.jsx)(D.A, {
                       ref: h,
-                      className: Q.Z8,
+                      className: J.Z8,
                       onClick: f,
                       active: a === K.kx.EMOJI && o === n && c === r,
                       "aria-controls": u,
@@ -149,9 +149,9 @@ let Z = i.memo(function (e) {
               ],
           });
 });
-var X = n(530134),
-    Y = n(3203),
-    J = n(866665),
+var Q = n(530134),
+    X = n(3203),
+    Y = n(866665),
     ee = n(617617),
     et = n(234320),
     en = n(243185);
@@ -162,7 +162,7 @@ let el = i.memo(function (e) {
             [ee.A],
             () => o && Object.values(ee.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
-        [d, h, f, p] = (0, B.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
+        [d, h, f, p] = (0, W.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
         g = i.useRef(0),
         x = i.useCallback(() => {
             (u(!0),
@@ -171,34 +171,34 @@ let el = i.memo(function (e) {
                     (u(!1), (g.current = 0));
                 }, 2e3)));
         }, []);
-    (0, et.Vo)({ event: O.jej.FAVORITE_GIF, handler: x });
+    (0, et.Vo)({ event: R.jej.FAVORITE_GIF, handler: x });
     let E = i.useCallback(() => {
-            (0, B.r$)(K.kx.GIF, n, r.id);
+            (0, W.r$)(K.kx.GIF, n, r.id);
         }, [n, r.id]),
-        { Component: S, events: y, play: A } = (0, Y.V)();
+        { Component: y, events: S, play: A } = (0, X.V)();
     if (t) return null;
-    let b = d === K.kx.GIF && h === n && p === r.id;
-    return (0, l.jsx)(J.m, {
+    let I = d === K.kx.GIF && h === n && p === r.id;
+    return (0, l.jsx)(Y.m, {
         text: C.intl.string(c ? C.t.mE2e8A : C.t.nffuyb),
         shouldShow: c,
         forceOpen: c,
         children: (0, l.jsx)("div", {
             ref: a,
-            className: m()(K.VQ, Q.UD),
+            className: m()(K.VQ, J.UD),
             children: (0, l.jsx)(en.A, {
-                className: Q.x6,
-                onMouseEnter: y.onMouseEnter,
-                onMouseLeave: y.onMouseLeave,
+                className: J.x6,
+                onMouseEnter: S.onMouseEnter,
+                onMouseLeave: S.onMouseLeave,
                 onClick: () => {
                     (E(), A());
                 },
-                isActive: b,
+                isActive: I,
                 pulse: o,
                 "aria-label": C.intl.string(C.t.PtVpk2),
-                "aria-expanded": b,
+                "aria-expanded": I,
                 "aria-haspopup": "dialog",
                 "aria-controls": f,
-                children: (0, l.jsx)(S, { size: "refresh_sm", color: "currentColor" }),
+                children: (0, l.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
             }),
         }),
     });
@@ -243,15 +243,15 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             a,
             o,
             { disabled: u, type: c, channel: d, ref: h } = e,
-            [f, p, g, x] = (0, B.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
+            [f, p, g, x] = (0, W.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
             E = f === K.kx.STICKER && x === c && g === d.id,
-            S = i.useCallback(() => {
-                (0, B.r$)(K.kx.STICKER, c, d.id);
+            y = i.useCallback(() => {
+                (0, W.r$)(K.kx.STICKER, c, d.id);
             }, [c, d.id]),
             {
-                Component: y,
+                Component: S,
                 events: A,
-                play: b,
+                play: I,
             } = ((t = i.useRef(null)),
             (r = i.useCallback(() => {
                 null != t.current && t.current.play("click");
@@ -277,13 +277,13 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
         return u
             ? null
             : (0, l.jsx)("div", {
-                  className: m()(K.VQ, Q.UD),
+                  className: m()(K.VQ, J.UD),
                   ref: h,
                   children: (0, l.jsx)(en.A, {
-                      className: m()(Q.x6, Q.KE),
+                      className: m()(J.x6, J.KE),
                       ...A,
                       onClick: () => {
-                          (S(), b());
+                          (y(), I());
                       },
                       isActive: E,
                       "aria-label": C.intl.string(C.t.rZpidU),
@@ -291,7 +291,7 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                       "aria-haspopup": "dialog",
                       "aria-controls": p,
                       sparkle: !1,
-                      children: (0, l.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
+                      children: (0, l.jsx)(S, { size: "refresh_sm", color: "currentColor" }),
                   }),
               });
     }),
@@ -303,33 +303,33 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 disabled: g,
                 channel: x,
                 handleSubmit: E,
-                isEmpty: S,
-                showAllButtons: y,
+                isEmpty: y,
+                showAllButtons: S,
                 expressionButtonsHidden: A,
             } = e,
-            C = (0, T.n)("ChannelTextAreaButtons"),
-            b = (0, s.cf)([o.Ay], () => ({
+            C = (0, j.n)("ChannelTextAreaButtons"),
+            I = (0, s.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
                 isEmojiButtonEnabled: o.Ay.isEmojiButtonEnabled,
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            I = b.isSubmitButtonEnabled,
-            P = !C || b.isAppsButtonEnabled,
-            D = !C || b.isEmojiButtonEnabled,
-            U = !C || b.isGifButtonEnabled,
-            V = !C || b.isStickerButtonEnabled,
-            W =
+            b = I.isSubmitButtonEnabled,
+            P = !C || I.isAppsButtonEnabled,
+            D = !C || I.isEmojiButtonEnabled,
+            U = !C || I.isGifButtonEnabled,
+            V = !C || I.isStickerButtonEnabled,
+            F =
                 ((n = x.id),
                 (h = p),
-                (m = S),
+                (m = y),
                 (0, s.bG)([N.A, w.A], () => {
                     let e = N.A.getStickerPreview(n, h.drafts.type),
                         t = null != e && e.length > 0;
                     return 0 === w.A.getUploads(n, h.drafts.type).length && m && !t;
                 })),
-            { activeCommand: B, activeCommandOption: F } = (0, s.cf)([u.A], () => ({
+            { activeCommand: W, activeCommandOption: B } = (0, s.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(x.id),
                 activeCommandOption: u.A.getActiveOption(x.id),
             })),
@@ -346,50 +346,50 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return l && i && null == r;
             })({ channel: x, chatInputType: p }),
-            $ = p.submit?.button != null && (p.submit?.ignorePreference || I),
-            Y = (0, k.A)(x, p);
+            $ = p.submit?.button != null && (p.submit?.ignorePreference || b),
+            X = (0, k.A)(x, p);
         ((t = x.id),
             (f = (0, _.wX)()),
             i.useEffect(() => {
-                if (Y && !f)
+                if (X && !f)
                     return (
-                        j._.subscribe(O.jej.RECORD_VOICE_MESSAGE, e),
+                        T._.subscribe(R.jej.RECORD_VOICE_MESSAGE, e),
                         () => {
-                            j._.unsubscribe(O.jej.RECORD_VOICE_MESSAGE, e);
+                            T._.unsubscribe(R.jej.RECORD_VOICE_MESSAGE, e);
                         }
                     );
                 function e() {
-                    (0, R.K3)(t);
+                    (0, O.K3)(t);
                 }
-            }, [t, Y, f]));
-        let J = null == B || (null != F && F.type !== a.n4.ATTACHMENT);
+            }, [t, X, f]));
+        let Y = null == W || (null != B && B.type !== a.n4.ATTACHMENT);
         return (!r.Fr &&
             (p.gifts?.button != null &&
-                null == B &&
+                null == W &&
                 !G &&
                 (null == z || L.Ay.isPremiumEligible(z)) &&
                 K.push((0, l.jsx)(ei.A, { disabled: g, channel: x }, "gift")),
             p.gifs?.button != null &&
-                null == B &&
-                y &&
+                null == W &&
+                S &&
                 U &&
                 !A &&
                 K.push((0, l.jsx)(el, { disabled: g, type: p, channel: x }, "gif")),
             p.stickers?.button != null &&
-                null == B &&
-                y &&
+                null == W &&
+                S &&
                 V &&
                 !A &&
                 K.push((0, l.jsx)(ec, { disabled: g, type: p, channel: x }, "sticker"))),
         p.emojis?.button != null &&
             !A &&
-            J &&
-            (y || A
+            Y &&
+            (S || A
                 ? D && K.push((0, l.jsx)(Z, { disabled: g, type: p, channelId: x.id }, "emoji"))
-                : K.push((0, l.jsx)(X.A, { disabled: g, type: p, channel: x }, "expression"))),
+                : K.push((0, l.jsx)(Q.A, { disabled: g, type: p, channel: x }, "expression"))),
         q && P && K.push((0, l.jsx)(v, { channelId: x.id, type: p }, "appLauncher")),
-        $ && K.push((0, l.jsx)(ea, { onClick: E, disabled: g || W }, "submit")),
+        $ && K.push((0, l.jsx)(ea, { onClick: E, disabled: g || F }, "submit")),
         0 === K.length)
             ? null
-            : (0, l.jsx)("div", { className: Q.Uo, children: K });
+            : (0, l.jsx)("div", { className: J.Uo, children: K });
     });

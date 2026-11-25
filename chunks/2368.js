@@ -28,22 +28,22 @@ let m =
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
     E = new Set(["applicationCommandOption"]);
-function S(e, t, n) {
+function y(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (x.has(i[0].type)) l ? A(e, i, !0, null) : y(e, i, t, n);
+        if (x.has(i[0].type)) l ? A(e, i, !0, null) : S(e, i, t, n);
         else {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
                 if (!h.l5.isText(a) && E.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
-                    l ? A(e, r, !0, null) : y(e, r, t, n);
+                    l ? A(e, r, !0, null) : S(e, r, t, n);
                 }
             }
         }
 }
-function y(e, t, n, l) {
+function S(e, t, n, l) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = h.cv.markdown(t[0], n);
     (A(e, t, r, s) && ((t = h.cv.updateElement(e, t)), (s = h.cv.markdown(t[0], n))),
@@ -51,7 +51,7 @@ function y(e, t, n, l) {
             ((function (e, t, n, l, r) {
                 let [s, o] = t,
                     u = !1,
-                    c = I(e, o);
+                    c = b(e, o);
                 for (let f = s.children.length - 1; f >= 0; f--) {
                     let p,
                         g = s.children[f];
@@ -93,7 +93,7 @@ function y(e, t, n, l) {
 function A(e, t, n, l) {
     let [i, r] = t,
         s = !1,
-        a = n || null == l ? null : I(e, r);
+        a = n || null == l ? null : b(e, r);
     for (let t = i.children.length - 1; t >= 0; t--) {
         let o = i.children[t];
         if (h.l5.isText(o) && !n) {
@@ -210,22 +210,22 @@ function C(e, t, n, l) {
     }
     return r;
 }
-function b(e) {
+function I(e) {
     return e.join(",");
 }
-function I(e, t) {
+function b(e, t) {
     let n = new Map(),
         l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
-    for (let [e, t] of l) (n.set(b(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
+    for (let [e, t] of l) (n.set(I(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
     return n;
 }
 function v(e, t, n) {
     if (null == e) return !1;
-    let l = e.get(b(t.path));
+    let l = e.get(I(t.path));
     if (null != l) l += t.offset;
     else {
-        let n = e.get(b(h.PW.parent(t.path)));
+        let n = e.get(I(h.PW.parent(t.path)));
         if (null == n) return !1;
         l = n + 1;
     }
@@ -276,7 +276,7 @@ n.d(
                     let l = h.VW.richValue(e);
                     ((l !== s || e.previewMarkdown !== a) &&
                         (o.o.withMergedEntry(e, () => {
-                            h.VW.withoutNormalizing(e, () => S(e, t, n));
+                            h.VW.withoutNormalizing(e, () => y(e, t, n));
                         }),
                         (s = l),
                         (a = e.previewMarkdown)),
@@ -285,7 +285,7 @@ n.d(
                 e
             );
         },
-        eF: S,
+        eF: y,
         lE: C,
     },
 );

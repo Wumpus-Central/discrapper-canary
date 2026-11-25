@@ -16,11 +16,11 @@ var n = t(477900),
     I = t(320448),
     v = t(775602),
     S = t(793574),
-    x = t(688810),
+    y = t(688810),
     _ = t(139286),
-    y = t(713517),
-    E = t(71393),
-    N = t(576705),
+    x = t(713517),
+    N = t(71393),
+    E = t(576705),
     C = t(129230),
     b = t(778768),
     j = t(652215);
@@ -40,21 +40,21 @@ t.d(
                 V = l.useRef(null),
                 w = l.useRef(null),
                 [k, R] = l.useState(!1),
-                [U, M] = l.useState(0),
-                { analyticsLocations: D } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
+                [M, U] = l.useState(0),
+                { analyticsLocations: D } = (0, y.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
             (0, _.A)({
                 name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
                 type: d.ImpressionTypes.VIEW,
                 properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: D },
             });
-            let L = (0, o.bG)([N.A], () => N.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
-                F = (0, o.bG)([E.A], () => E.A.getGuild(i.guild_id)),
-                z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
-                [B, K] = l.useState(!1),
+            let L = (0, o.bG)([E.A], () => E.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
+                F = (0, o.bG)([N.A], () => N.A.getGuild(i.guild_id)),
+                B = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
+                [z, K] = l.useState(!1),
                 Y = l.useRef(null),
-                q = (0, y.M)(L ? V : Y),
+                q = (0, x.M)(L ? V : Y),
                 [H, $] = l.useState(!1),
-                { isFocusing: W } = (0, y.A)(w),
+                { isFocusing: W } = (0, x.A)(w),
                 [Z, J] = l.useState(!1),
                 X = q || H || Z,
                 Q = l.useCallback(
@@ -111,7 +111,7 @@ t.d(
             }, [X]);
             let el = l.useRef(null);
             l.useEffect(() => {
-                if (X || z) {
+                if (X || B) {
                     el.current = null;
                     return;
                 }
@@ -120,12 +120,12 @@ t.d(
                     null != el.current ? Math.max(1e4 - (Date.now() - el.current), 0) : 1e4,
                 );
                 return (
-                    null == el.current && (M((e) => e + 1), (el.current = Date.now())),
+                    null == el.current && (U((e) => e + 1), (el.current = Date.now())),
                     () => {
                         clearTimeout(e);
                     }
                 );
-            }, [X, z, en]);
+            }, [X, B, en]);
             let es = l.useCallback(() => {
                     R(!0);
                 }, []),
@@ -150,9 +150,9 @@ t.d(
                               style: ei,
                               children: (0, n.jsx)(m.D, {
                                   innerRef: V,
-                                  className: a()({ [G.vk]: !B }, O.q7, O.L9, O.vk),
+                                  className: a()({ [G.vk]: !z }, O.q7, O.L9, O.vk),
                                   focusProps: { offset: { right: 4 } },
-                                  "aria-disabled": B,
+                                  "aria-disabled": z,
                                   "aria-label": T.intl.string(T.t.F3qiJr),
                                   onClick: ee,
                                   ignoreKeyPress: W,
@@ -164,7 +164,7 @@ t.d(
                                               className: G.R4,
                                               style: { "--custom-voice-invite-suggestions-timer-size": 24 },
                                               children: [
-                                                  z
+                                                  B
                                                       ? null
                                                       : (0, n.jsxs)(
                                                             "svg",
@@ -179,7 +179,7 @@ t.d(
                                                                     (0, n.jsx)("circle", { className: G.hN }),
                                                                 ],
                                                             },
-                                                            `voice-invite-suggestions-timer-${U}`,
+                                                            `voice-invite-suggestions-timer-${M}`,
                                                         ),
                                                   (0, n.jsx)(g.UserPlusIcon, {
                                                       size: "custom",

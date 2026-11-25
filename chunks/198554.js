@@ -29,15 +29,15 @@ let E = function (e) {
             children: s,
             actions: g,
             handleEditModal: E,
-            keyboardModeEnabled: S,
-            onKeyDown: y,
+            keyboardModeEnabled: y,
+            onKeyDown: S,
             draftType: A,
             size: C = 1,
-            ref: b,
+            ref: I,
         } = e,
-        I = r.useRef(null),
+        b = r.useRef(null),
         { onFocus: v, ...N } = (0, o.rm)(t),
-        { handleFocus: T, handleBlur: k } = (function (e) {
+        { handleFocus: j, handleBlur: k } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
             return {
                 handleFocus: (0, r.useCallback)(
@@ -56,21 +56,21 @@ let E = function (e) {
                 isFocused: t,
             };
         })(v),
-        j = 0 === C,
+        T = 0 === C,
         _ = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ...N,
-            onFocus: T,
+            onFocus: j,
             onBlur: k,
             onClick: function (e) {
-                if (0 === e.detail && null != I.current) {
-                    let e = I.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != b.current) {
+                    let e = b.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
             onKeyDown: function (e) {
-                if (S) {
+                if (y) {
                     switch (e.which) {
                         case m.Ks6.D:
                             (e.preventDefault(), c.A.remove(n, t, A));
@@ -87,24 +87,24 @@ let E = function (e) {
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
-                    y?.(e);
+                    S?.(e);
                 }
             },
             className: a()(p.Se, l),
-            ref: b,
+            ref: I,
             children: (0, i.jsxs)("div", {
                 className: p.PO,
-                ref: I,
+                ref: b,
                 children: [
                     s,
                     _
                         ? (0, i.jsx)("div", {
                               className: p.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(p.KY, { [p.BN]: j }),
+                                  className: a()(p.KY, { [p.BN]: T }),
                                   onContextMenu: x,
                                   "aria-label": f.intl.string(f.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: j }), children: g }),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: T }), children: g }),
                               }),
                           })
                         : null,

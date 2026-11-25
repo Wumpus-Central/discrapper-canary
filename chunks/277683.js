@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => I, Q9: () => L, W: () => w }), n(321073));
+(n.d(t, { Ay: () => b, Q9: () => L, W: () => w }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -15,12 +15,12 @@ var l = n(626551),
     g = n(35277),
     x = n(339200),
     E = n(551483),
-    S = n(891031),
-    y = n(389437);
+    y = n(891031),
+    S = n(389437);
 let A = new o.Vy("withCodeBlocks"),
     C = new Set(["line"]),
-    b = /^[a-z0-9_+\-.#]+$/i;
-function I(e) {
+    I = /^[a-z0-9_+\-.#]+$/i;
+function b(e) {
     let { onChange: t } = e,
         n = null,
         l = null,
@@ -93,7 +93,7 @@ function I(e) {
                             c = n && 0 === r.length,
                             d = l && 0 === r.length,
                             h = (u ? r.slice(1) : r).length % 2 == 1,
-                            m = h && (null == o || "" === o || null != o.match(b)),
+                            m = h && (null == o || "" === o || null != o.match(I)),
                             f = m && null != o && "" !== o ? o.toLowerCase() : null;
                         return {
                             blockEntry: t,
@@ -167,7 +167,7 @@ function I(e) {
     );
 }
 let v = new Map();
-for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && v.set(e, t);
+for (let [e, t] of Object.entries(S)) e.startsWith("a-") && null != t && v.set(e, t);
 function N(e, t) {
     let n = [],
         i = !1;
@@ -179,7 +179,7 @@ function N(e, t) {
             if (null != i && "ansi" === (0, c.py)(i)) {
                 let t = (function (e, t) {
                     let n = a()(e),
-                        i = O.get(n);
+                        i = R.get(n);
                     if (null != i && i.length === t) return i;
                     let r = [[]],
                         s = 0;
@@ -197,11 +197,11 @@ function N(e, t) {
                     }
                     let u = 0;
                     for (let t of (0, l.$M)(e)) {
-                        o(e.substring(u, t.position), [S.ansiControlSequence]);
+                        o(e.substring(u, t.position), [y.ansiControlSequence]);
                         let n = (0, c.OT)(t);
-                        (o(t.value, null != n ? [y.ansi] : [], n), (u = t.position + t.value.length));
+                        (o(t.value, null != n ? [S.ansi] : [], n), (u = t.position + t.value.length));
                     }
-                    return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t) ? null : (O.set(n, r), r);
+                    return (o(e.substring(u), [y.ansiControlSequence]), r.length !== t) ? null : (R.set(n, r), r);
                 })(e, n.length);
                 for (let e = 0; e < n.length; e++) n[e].hljsTypes = t?.[e] ?? [];
             } else
@@ -216,26 +216,26 @@ function N(e, t) {
                             let o = a()(`${r}\0${e}`),
                                 d = k.get(o);
                             if (null != d && d.length === n) {
-                                for (let e of R.get(o) ?? []) l?.(e);
+                                for (let e of O.get(o) ?? []) l?.(e);
                                 return d;
                             }
-                            if (j.has(o) || !(0, c.VB)(e)) return null;
+                            if (T.has(o) || !(0, c.VB)(e)) return null;
                             try {
                                 let t = s.highlightToSpans(e);
                                 if (((i = t.spans), null != l && t.missingInjections.length > 0)) {
-                                    let e = R.get(o);
+                                    let e = O.get(o);
                                     for (let n of (null == e &&
                                         _(o) &&
                                         ((e = t.missingInjections),
                                         !(async function (e, t) {
-                                            (R.set(e, t), await (0, u.$z)(t), R.delete(e));
+                                            (O.set(e, t), await (0, u.$z)(t), O.delete(e));
                                         })(o, e)),
                                     e ?? []))
                                         l(n);
                                 }
                             } catch (e) {
                                 return (
-                                    j.set(o, !0),
+                                    T.set(o, !0),
                                     h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                         tags: { app_context: "syntax_highlighting" },
                                         extra: { lang: r, surface: "editor" },
@@ -300,15 +300,15 @@ function N(e, t) {
         (i && n.push(r), r.opensCodeBlock && (i = !0));
     }
 }
-let T = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    k = new (r())(T),
-    j = new (r())(T),
+let j = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    k = new (r())(j),
+    T = new (r())(j),
     _ = (0, u.Gn)(),
-    R = new Map();
+    O = new Map();
 (0, u.Q4)(() => {
     k.reset();
 });
-let O = new (r())(T);
+let R = new (r())(j);
 function w(e, t) {
     let n = (0, f.p0)(e);
     return null != n ? (0, f.tA)(n, t) : M(e, t);

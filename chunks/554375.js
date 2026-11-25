@@ -14,14 +14,14 @@ var i = n(435558),
     I = n(225123),
     h = n(594061),
     g = n(919638),
-    p = n(403362),
-    A = n(157559),
+    A = n(403362),
+    p = n(157559),
     _ = n(652215),
     N = n(355097),
     C = n(792996);
 function y(e) {
     if (g.A.totalUnavailableGuilds > 0 || !I.A.isConnected()) return e;
-    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? f.A.getEmoji(e) ?? m.Ay.getByName(e)).filter(p.Vq);
+    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? f.A.getEmoji(e) ?? m.Ay.getByName(e)).filter(A.Vq);
     return [...(0, E.A)(t).keys()];
 }
 function x(e) {
@@ -80,7 +80,7 @@ n.d(
                     "favoriteEmojis",
                     (e) =>
                         ((e.emojis = y(e.emojis)), s().size(e.emojis) >= 250)
-                            ? (A.A.show({
+                            ? (p.A.show({
                                   title: C.intl.string(C.t["+XYXtZ"]),
                                   body: C.intl.formatToPlainString(C.t.JaIyFi, { count: 250 }),
                               }),

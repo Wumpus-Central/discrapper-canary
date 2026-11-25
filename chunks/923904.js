@@ -23,8 +23,8 @@ function f(e, t) {
 }
 var h = l(635793),
     p = l(696016),
-    v = l(683825),
-    x = l(792996);
+    x = l(683825),
+    v = l(792996);
 let g = (e, t, l, n) => (n([]), () => {}),
     b = a.createContext(null);
 function j(e) {
@@ -90,10 +90,10 @@ function j(e) {
         [ec, eu] = a.useState([]),
         [ed, em] = a.useState(!1),
         [ef, eh] = a.useState(() => g),
-        [ep, ev] = a.useState(null),
-        [ex, eg] = a.useState(() => A.tracks ?? []),
-        eb = a.useRef(ex);
-    eb.current = ex;
+        [ep, ex] = a.useState(null),
+        [ev, eg] = a.useState(() => A.tracks ?? []),
+        eb = a.useRef(ev);
+    eb.current = ev;
     let ej = a.useCallback(() => {
             let e = K.current?.videoElement?.currentTime ?? G,
                 t = (0, i.clamp)(e, G, B - 1);
@@ -106,7 +106,7 @@ function j(e) {
                     type: p.Me.TEXT,
                     ...ej(),
                     data: {
-                        text: x.intl.string(v.default.v2jEIc),
+                        text: v.intl.string(x.default.v2jEIc),
                         style: { ...p.QK },
                         position: { ...p._S },
                         rotationDeg: 0,
@@ -262,7 +262,7 @@ function j(e) {
                             let t = e.data;
                             switch (t.type) {
                                 case "ready":
-                                    ev({ width: t.width, height: t.height });
+                                    ex({ width: t.width, height: t.height });
                                     break;
                                 case "thumbnails": {
                                     let e = a.get(t.requestId);
@@ -298,7 +298,7 @@ function j(e) {
                     (e.terminate(), n.terminate(), a.clear());
                 }
             );
-        }, [t, eR, ev, eT]),
+        }, [t, eR, ex, eT]),
         a.useEffect(
             () => () => {
                 null != ei && URL.revokeObjectURL(ei);
@@ -538,7 +538,7 @@ function j(e) {
                 soundboardAudioEnabled: W,
                 setSoundboardAudioEnabled: eH,
                 getEditedClip: eI,
-                tracks: ex,
+                tracks: ev,
                 addTextTrack: ey,
                 addImageTrack: eN,
                 removeTrack: ek,
@@ -585,7 +585,7 @@ function j(e) {
                 W,
                 eH,
                 eI,
-                ex,
+                ev,
                 ey,
                 eN,
                 ek,

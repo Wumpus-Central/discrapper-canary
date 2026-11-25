@@ -15,17 +15,17 @@ var l = n(477900),
     g = n(287809),
     x = n(448645),
     E = n(192308),
-    S = n(939249),
-    y = n(404374),
+    y = n(939249),
+    S = n(404374),
     A = n(739053),
     C = n(82498),
-    b = n(734057),
-    I = n(309010),
+    I = n(734057),
+    b = n(309010),
     v = n(129230),
     N = n(652215),
-    T = n(792996),
+    j = n(792996),
     k = n(845210);
-function j() {
+function T() {
     (0, E.mM)(async () => {
         let { default: e } = await Promise.all([n.e(235257), n.e(66920)]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
@@ -33,8 +33,8 @@ function j() {
 }
 function _(e) {
     let { className: t, iconOnly: n } = e,
-        r = (0, o.bG)([I.Ay, b.A], () => {
-            let e = b.A.getChannel(I.Ay.getChannelId());
+        r = (0, o.bG)([b.Ay, I.A], () => {
+            let e = I.A.getChannel(b.Ay.getChannelId());
             return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
@@ -48,11 +48,11 @@ function _(e) {
                 (0, A.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, C.uq)("longer messages inline")));
         }, [r, a]),
         n
-            ? (0, l.jsx)(S.D, {
+            ? (0, l.jsx)(y.D, {
                   className: k.e7,
-                  onClick: () => j(),
+                  onClick: () => T(),
                   children: (0, l.jsx)(u.m, {
-                      text: T.intl.string(T.t["+eFIjX"]),
+                      text: j.intl.string(j.t["+eFIjX"]),
                       position: "top",
                       children: (0, l.jsx)(c.NitroWheelIcon, { size: "md", color: "currentColor", className: k.M2 }),
                   }),
@@ -60,63 +60,63 @@ function _(e) {
             : (0, l.jsxs)("div", {
                   className: s()(k.zr, t),
                   children: [
-                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: y.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: S.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
                           className: k.Qq,
                           variant: "body-sm/normal",
-                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: j }),
+                          children: j.intl.format(j.t.BNAIBU, { onLearnMore: T }),
                       }),
                   ],
               })
     );
 }
-var R = n(263582),
-    O = n(412028);
+var O = n(263582),
+    R = n(412028);
 function w(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
-        S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        y = (0, p.A)(),
-        A = i ?? y,
-        C = r ?? i ?? y / 10,
-        b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > 2e3 && S,
-        v = null != t.upsellLongMessages && !S,
-        N = A - b,
+        y = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        S = (0, p.A)(),
+        A = i ?? S,
+        C = r ?? i ?? S / 10,
+        I = n.length,
+        b = null != t.upsellLongMessages && (I ?? 0) > 2e3 && y,
+        v = null != t.upsellLongMessages && !y,
+        N = A - I,
         k = N > C;
-    (0, a.$)({ currentLength: b, maxLength: A, message: T.intl.string(T.t.c2Jqed) });
-    let j =
+    (0, a.$)({ currentLength: I, maxLength: A, message: j.intl.string(j.t.c2Jqed) });
+    let T =
             0 === N
-                ? T.intl.string(T.t.tU6YQ7)
+                ? j.intl.string(j.t.tU6YQ7)
                 : N > 0
-                  ? T.intl.formatToPlainString(T.t.qH8uFW, { count: N })
-                  : T.intl.string(T.t.YSRIqa),
+                  ? j.intl.formatToPlainString(j.t.qH8uFW, { count: N })
+                  : j.intl.string(j.t.YSRIqa),
         { analyticsLocations: w } = (0, f.Ay)(m.A.CHARACTER_COUNT),
-        { isVisible: M } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
+        { isVisible: M } = (0, O.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
     if (!M) return null;
     let L = N >= 0;
     return (0, l.jsx)(f.f5, {
         value: w,
         children: (0, l.jsxs)("div", {
-            className: s()(E, O.Dq),
+            className: s()(E, R.Dq),
             children: [
                 (0, l.jsxs)("div", {
-                    className: O.SW,
+                    className: R.SW,
                     children: [
-                        I && L
+                        b && L
                             ? (0, l.jsx)(u.m, {
-                                  text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: A }),
+                                  text: j.intl.formatToPlainString(j.t.vcvHa0, { maxLength: A }),
                                   position: "top",
                                   children: (0, l.jsx)(c.NitroWheelIcon, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: O.y,
+                                      className: R.y,
                                   }),
                               })
                             : null,
                         k
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: j,
+                                  text: T,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "body-sm/semibold",
@@ -128,9 +128,9 @@ function w(e) {
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: N }) }),
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: j.intl.format(j.t.qH8uFW, { count: N }) }),
                 v && !k
-                    ? (0, l.jsx)(_, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
+                    ? (0, l.jsx)(_, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
                     : null,
             ],
         }),

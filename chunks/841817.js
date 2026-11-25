@@ -26,20 +26,20 @@ var l = n(477900),
     g = n(400492),
     x = n(734057),
     E = n(803224),
-    S = n(74477),
-    y = n(934581),
+    y = n(74477),
+    S = n(934581),
     A = n(582128),
     C = n(189213),
-    b = n(778712),
-    I = n(97808),
+    I = n(778712),
+    b = n(97808),
     v = n(825484),
     N = n(821609),
-    T = n(559106),
+    j = n(559106),
     k = n(939249),
-    j = n(834730),
+    T = n(834730),
     _ = n(47167),
-    R = n(713654),
-    O = n(598104),
+    O = n(713654),
+    R = n(598104),
     w = n(145497),
     M = n(71393),
     L = n(994500),
@@ -47,12 +47,12 @@ var l = n(477900),
     D = n(427262),
     U = n(652215),
     V = n(792996),
-    W = n(510723);
-function B(e) {
+    F = n(510723);
+function W(e) {
     return e.isForumPost() ? (x.A.getChannel(e.parent_id) ?? e) : e;
 }
-function F(e, t) {
-    let n = (0, R.gU)(e);
+function B(e, t) {
+    let n = (0, O.gU)(e);
     return null == n
         ? null
         : 12 === t
@@ -61,26 +61,26 @@ function F(e, t) {
 }
 function G(e) {
     let { channel: t, targetChannel: n, transitionState: i, onClose: r, onReturn: s, onDiscard: a } = e,
-        o = B(t),
+        o = W(t),
         u = t.getGuildId(),
         c =
             null == u || u !== n.getGuildId()
                 ? (function (e) {
-                      let t = B(e),
+                      let t = W(e),
                           n = M.A.getGuild(e.getGuildId());
                       if (null != n)
                           return {
-                              icon: (0, l.jsx)(w.Ay, { guild: n, iconSize: 32, className: W.sm }),
+                              icon: (0, l.jsx)(w.Ay, { guild: n, iconSize: 32, className: F.sm }),
                               primary: n.name,
                               secondary: (0, _.m1)(t, P.default, L.A),
                           };
                       let i = (e.recipients ?? []).map((e) => P.default.getUser(e)).filter(Boolean);
                       if (e.type === U.rbe.GROUP_DM)
                           return {
-                              icon: (0, l.jsx)(O.A, {
+                              icon: (0, l.jsx)(R.A, {
                                   channel: e,
-                                  size: b._3.SIZE_32,
-                                  className: W.sm,
+                                  size: I._3.SIZE_32,
+                                  className: F.sm,
                                   "aria-hidden": !0,
                               }),
                               primary: (0, _.m1)(e, P.default, L.A),
@@ -90,10 +90,10 @@ function G(e) {
                       return {
                           icon:
                               null != r
-                                  ? (0, l.jsx)(I.eu, {
-                                        size: b._3.SIZE_32,
+                                  ? (0, l.jsx)(b.eu, {
+                                        size: I._3.SIZE_32,
                                         src: r.getAvatarURL(null, 32),
-                                        className: W.sm,
+                                        className: F.sm,
                                         "aria-hidden": !0,
                                     })
                                   : null,
@@ -120,7 +120,7 @@ function G(e) {
                     recipientName: D.Ay.getName(n) ?? (0, _.m1)(e, P.default, L.A),
                     recipientHook: (e) => (0, l.jsx)("strong", { children: e }),
                 });
-            let i = B(e),
+            let i = W(e),
                 r = M.A.getGuild(e.getGuildId()),
                 s = (0, _.m1)(i, P.default, L.A),
                 a = null != r ? s : (D.Ay.getName(n) ?? s);
@@ -128,8 +128,8 @@ function G(e) {
                 destinationName: a,
                 destinationHook: (e) =>
                     (0, l.jsxs)("span", {
-                        className: W.Fx,
-                        children: [null != r ? F(i, "xxs") : null, (0, l.jsx)("strong", { children: e })],
+                        className: F.Fx,
+                        children: [null != r ? B(i, "xxs") : null, (0, l.jsx)("strong", { children: e })],
                     }),
             });
         })(t),
@@ -138,7 +138,7 @@ function G(e) {
         role: "alertdialog",
         actions: [],
         actionBarInput: (0, l.jsxs)(v.e, {
-            className: W.o1,
+            className: F.o1,
             direction: "vertical",
             fullWidth: !0,
             children: [
@@ -148,19 +148,19 @@ function G(e) {
         }),
         children:
             null != c
-                ? (0, l.jsx)(T.vN, {
+                ? (0, l.jsx)(j.vN, {
                       offset: { right: 4, bottom: 4 },
                       children: (0, l.jsxs)(k.D, {
-                          className: W.j_,
+                          className: F.j_,
                           onClick: d,
                           "aria-label": V.intl.string(V.t.h7tN5I),
                           children: [
                               c.icon,
                               (0, l.jsxs)("div", {
-                                  className: W.Yr,
+                                  className: F.Yr,
                                   children: [
-                                      (0, l.jsx)(j.E, {
-                                          className: W.ed,
+                                      (0, l.jsx)(T.E, {
+                                          className: F.ed,
                                           variant: "body-md/semibold",
                                           color: "text-default",
                                           lineClamp: 1,
@@ -168,11 +168,11 @@ function G(e) {
                                       }),
                                       null != c.secondary && "" !== c.secondary
                                           ? (0, l.jsxs)("div", {
-                                                className: W.lj,
+                                                className: F.lj,
                                                 children: [
-                                                    null != t.getGuildId() ? F(o, 12) : null,
-                                                    (0, l.jsx)(j.E, {
-                                                        className: W.ed,
+                                                    null != t.getGuildId() ? B(o, 12) : null,
+                                                    (0, l.jsx)(T.E, {
+                                                        className: F.ed,
                                                         variant: "body-xs/medium",
                                                         color: "text-muted",
                                                         lineClamp: 1,
@@ -194,25 +194,25 @@ var K = n(709372),
     z = n(518950),
     q = n(381941);
 let $ = (z.iA + 500) / 1e3,
-    Q = "voice_message_recording_stopped",
+    J = "voice_message_recording_stopped",
     Z = new c.A("VoiceMessageRecording");
-function X() {
+function Q() {
     (0, r.P0)({ text: V.intl.string(V.t.GjXjfk), variant: "critical" });
 }
-function Y(e) {
+function X(e) {
     e.cleanup?.();
 }
-let J = null;
+let Y = null;
 function ee(e) {
     null != e.maxDurationTimer && (window.clearTimeout(e.maxDurationTimer), (e.maxDurationTimer = null));
 }
 let et = null;
 function en(e) {
-    return J?.channelId === e ? J.samples : et?.channelId === e ? et.samples : null;
+    return Y?.channelId === e ? Y.samples : et?.channelId === e ? et.samples : null;
 }
 function el(e) {
     if (0 === e.length) return "";
-    let t = (e.length > 256 ? (0, y.A)(e, 256) : e).map((e) => Math.min(Math.round(e), 255));
+    let t = (e.length > 256 ? (0, S.A)(e, 256) : e).map((e) => Math.min(Math.round(e), 255));
     return i.fromByteArray(new Uint8Array(t));
 }
 function ei(e) {
@@ -220,11 +220,11 @@ function ei(e) {
 }
 function er(e) {
     let t = et;
-    t?.channelId === e && (ei(t), (et = null), (0, K.zh)(e), t.resultPromise.then(Y).catch(() => {}));
+    t?.channelId === e && (ei(t), (et = null), (0, K.zh)(e), t.resultPromise.then(X).catch(() => {}));
 }
 async function es(e) {
     if (!(0, H.t)()) return void Z.warn("Voice message recording is not supported on this client");
-    if (!S.A.getConfig({ location: S.R }).enabled || (0, K.tO)()) return;
+    if (!y.A.getConfig({ location: y.R }).enabled || (0, K.tO)()) return;
     let t = (0, K.yC)();
     if (null != t)
         if (null == x.A.getChannel(t)) er(t);
@@ -251,45 +251,45 @@ async function es(e) {
     if (i?.phase === "requesting" || i?.phase === "recording") return;
     let a = (0, H.d)(),
         o = { channelId: e, backend: a, samples: [], startedAtMs: null, maxDurationTimer: null };
-    ((J = o), (0, K.z5)(e, "requesting"));
+    ((Y = o), (0, K.z5)(e, "requesting"));
     try {
         await a.start((e) => {
             o.samples.push(e);
         });
     } catch (t) {
         (Z.error("Failed to start voice message recording", t),
-            (J = null),
+            (Y = null),
             (0, K.zh)(e),
             (0, r.P0)({ text: V.intl.string(V.t.H03AqF), variant: "critical" }));
         return;
     }
-    J !== o
+    Y !== o
         ? a.cancel()
         : ((o.startedAtMs = Date.now()),
           (0, K.z5)(e, "recording", o.startedAtMs),
           (o.maxDurationTimer = window.setTimeout(() => {
-              J === o && ec(o.channelId, $);
+              Y === o && ec(o.channelId, $);
           }, z.iA)));
 }
 async function ea(e) {
     let t,
-        n = J;
+        n = Y;
     if (null == n || n.channelId !== e) return;
-    ((J = null), ee(n), (0, K.zh)(e), (0, K.Rz)(e, !0));
+    ((Y = null), ee(n), (0, K.zh)(e), (0, K.Rz)(e, !0));
     try {
         t = await n.backend.stop();
     } catch (e) {
-        (Z.error("Failed to finalize voice message recording", e), X());
+        (Z.error("Failed to finalize voice message recording", e), Q());
         return;
     } finally {
         (0, K.Rz)(e, !1);
     }
-    if (t.durationSecs < 0.5) return void Y(t);
+    if (t.durationSecs < 0.5) return void X(t);
     let l = el(n.samples);
     em(e, t.file, t.durationSecs, l, t.cleanup);
 }
 function eo(e) {
-    let t = J;
+    let t = Y;
     return (
         null != t &&
         t.channelId === e &&
@@ -298,13 +298,13 @@ function eo(e) {
 }
 function eu(e) {
     eo(e) &&
-        (E.A.isSoundDisabled(Q) || (0, g.Ak)(Q, 0.4),
+        (E.A.isSoundDisabled(J) || (0, g.Ak)(J, 0.4),
         (0, r.P0)({ text: V.intl.string(V.t.UM2R7g), variant: "default" }));
 }
 function ec(e, t) {
-    let n = J;
+    let n = Y;
     if (null == n || n.channelId !== e) return;
-    ((J = null), ee(n));
+    ((Y = null), ee(n));
     let l = n.backend.stop();
     ((0, K.Rz)(e, !0),
         l.then(
@@ -320,7 +320,7 @@ function ec(e, t) {
         ),
         l.catch((t) => {
             (Z.error("Failed to finalize voice message recording", t),
-                et?.resultPromise === l && ((et = null), (0, K.zh)(e), X()));
+                et?.resultPromise === l && ((et = null), (0, K.zh)(e), Q()));
         }),
         (et = { channelId: e, resultPromise: l, waveform: el(n.samples), samples: n.samples, playbackUrl: null }),
         (0, K.tH)(e, t));
@@ -332,16 +332,16 @@ async function ed(e) {
         try {
             t = await n.resultPromise;
         } catch {
-            X();
+            Q();
             return;
         }
-        if (t.durationSecs < 0.5) return void Y(t);
+        if (t.durationSecs < 0.5) return void X(t);
         em(e, t.file, t.durationSecs, n.waveform, t.cleanup);
     }
 }
 function eh(e) {
-    let t = J;
-    (null != t && t.channelId === e && (ee(t), t.backend.cancel(), (J = null)), er(e), (0, K.zh)(e));
+    let t = Y;
+    (null != t && t.channelId === e && (ee(t), t.backend.cancel(), (Y = null)), er(e), (0, K.zh)(e));
 }
 function em(e, t, n, l, i) {
     let r = x.A.getChannel(e);
@@ -368,8 +368,8 @@ function em(e, t, n, l, i) {
         (0, m.Jx)(e));
 }
 a.h.subscribe("LOGOUT", function () {
-    let e = J;
-    null != e && (ee(e), e.backend.cancel(), (J = null));
+    let e = Y;
+    null != e && (ee(e), e.backend.cancel(), (Y = null));
     let t = et;
-    (null != t && ei(t), (et = null), t?.resultPromise.then(Y).catch(() => {}), (0, K.nf)());
+    (null != t && ei(t), (et = null), t?.resultPromise.then(X).catch(() => {}), (0, K.nf)());
 });

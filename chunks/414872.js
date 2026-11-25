@@ -13,8 +13,8 @@ var i = n(477900),
     I = n(775602),
     h = n(263775),
     g = n(49999),
-    p = n(792996),
-    A = n(988864);
+    A = n(792996),
+    p = n(988864);
 n.d(
     t,
     {},
@@ -24,22 +24,22 @@ n.d(
                 n = (0, E.Ay)(),
                 s = (0, c.q)(n);
             return (0, i.jsxs)("div", {
-                className: r()(A.gg, t),
+                className: r()(p.gg, t),
                 children: [
-                    (0, i.jsx)("div", { className: A.d6 }),
-                    (0, i.jsx)("div", { className: A.FV }),
+                    (0, i.jsx)("div", { className: p.d6 }),
+                    (0, i.jsx)("div", { className: p.FV }),
                     (0, i.jsxs)("div", {
-                        className: A.tP,
+                        className: p.tP,
                         children: [
-                            (0, i.jsx)("div", { className: A.Mq }),
+                            (0, i.jsx)("div", { className: p.Mq }),
                             (0, i.jsx)("div", {
-                                className: A._Y,
+                                className: p._Y,
                                 children: (0, i.jsx)(u.LockIcon, { size: "xs", color: s ? "black" : "white" }),
                             }),
-                            (0, i.jsx)("div", { className: A.Ss }),
+                            (0, i.jsx)("div", { className: p.Ss }),
                         ],
                     }),
-                    (0, i.jsx)("div", { className: A.KI }),
+                    (0, i.jsx)("div", { className: p.KI }),
                 ],
             });
         },
@@ -55,37 +55,37 @@ n.d(
                     [c, l],
                 ),
                 (0, i.jsxs)("div", {
-                    className: r()(A.gg, A.sk),
+                    className: r()(p.gg, p.sk),
                     children: [
-                        (0, i.jsx)("div", { className: A.d6 }),
-                        (0, i.jsx)("div", { className: r()(A.FV, A.ys, { [A.VN]: e || !c }) }),
+                        (0, i.jsx)("div", { className: p.d6 }),
+                        (0, i.jsx)("div", { className: r()(p.FV, p.ys, { [p.VN]: e || !c }) }),
                         (0, i.jsxs)("div", {
-                            className: A.tP,
+                            className: p.tP,
                             children: [
-                                (0, i.jsx)("div", { className: A.Mq }),
+                                (0, i.jsx)("div", { className: p.Mq }),
                                 !e &&
                                     c &&
                                     (0, i.jsx)(d.a, {
-                                        className: A.UV,
+                                        className: p.UV,
                                         loop: !1,
                                         importData: () => n.e(131838).then(n.t.bind(n, 650125, 19)),
                                     }),
                                 (0, i.jsxs)("div", {
-                                    className: r()(A.bl, { [A.VN]: e || !c }),
+                                    className: r()(p.bl, { [p.VN]: e || !c }),
                                     children: [
                                         (0, i.jsx)(m.NitroWheelIcon, { size: "xs", color: "white" }),
                                         (0, i.jsx)(f.E, {
                                             variant: "body-xs/medium",
                                             color: "text-overlay-light",
                                             lineClamp: 1,
-                                            children: p.intl.string(p.t["BMw+7I"]),
+                                            children: A.intl.string(A.t["BMw+7I"]),
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)("div", { className: A.Ss }),
+                                (0, i.jsx)("div", { className: p.Ss }),
                             ],
                         }),
-                        (0, i.jsx)("div", { className: A.EL }),
+                        (0, i.jsx)("div", { className: p.EL }),
                     ],
                 })
             );

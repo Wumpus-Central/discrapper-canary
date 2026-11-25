@@ -14,44 +14,44 @@ var l = n(477900),
     g = n(775602),
     x = n(47167),
     E = n(713654),
-    S = n(418842),
-    y = n(734057),
+    y = n(418842),
+    S = n(734057),
     A = n(696451),
     C = n(71393),
-    b = n(225142),
-    I = n(374084),
+    I = n(225142),
+    b = n(374084),
     v = n(101611),
     N = n(473529),
-    T = n(111487),
+    j = n(111487),
     k = n(652215),
-    j = n(792996),
+    T = n(792996),
     _ = n(160639);
-let R = { compact: 58, cozy: 74, default: 64 };
-function O(e) {
+let O = { compact: 58, cozy: 74, default: 64 };
+function R(e) {
     let { action: t } = e,
-        n = (0, o.bG)([y.A], () => y.A.getChannel(t.channelId)),
+        n = (0, o.bG)([S.A], () => S.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
     return null == n
         ? (0, l.jsx)(u.E, {
               variant: "footnote/normal",
               color: "text-default",
-              children: j.intl.format(j.t.MkzlDL, { channelName: j.intl.string(j.t.J90oLW) }),
+              children: T.intl.format(T.t.MkzlDL, { channelName: T.intl.string(T.t.J90oLW) }),
           })
         : (0, l.jsx)(u.E, {
               variant: "footnote/normal",
               color: "text-default",
-              children: j.intl.format(j.t.MkzlDL, { channelName: i }),
+              children: T.intl.format(T.t.MkzlDL, { channelName: i }),
           });
 }
 function w(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
-        r = (0, o.bG)([y.A], () => y.A.getChannel(t));
+        r = (0, o.bG)([S.A], () => S.A.getChannel(t));
     if (null == r) return null;
     let s = (0, E.gU)(r) ?? c.TextIcon;
-    return (0, l.jsx)(T.A, {
+    return (0, l.jsx)(j.A, {
         emojiId: n,
         emojiName: i,
-        size: T.g.MEDIUM,
+        size: j.g.MEDIUM,
         defaultComponent: (0, l.jsx)(s, { className: _.p }),
     });
 }
@@ -59,32 +59,32 @@ function M(e) {
     let { guildId: t, channel: n, className: r } = e,
         { channelAction: c, completed: x } = (0, v.j4)(t, n),
         E = (0, v.Lr)(t, c?.channelId),
-        y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        A = c?.actionType === I.NewMemberActionTypes.VIEW,
+        S = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        A = c?.actionType === b.NewMemberActionTypes.VIEW,
         C = (0, d.r)(h.A.colors.WHITE),
-        N = R[(0, S.C)()],
-        [T, k] = i.useState(!1),
+        N = O[(0, y.C)()],
+        [j, k] = i.useState(!1),
         [M] = i.useState(new a.A.Value(0)),
         [L] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
-            ? a.A.timing(M, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !A }).start(() =>
+            ? a.A.timing(M, { toValue: 0, duration: S ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !A }).start(() =>
                   k(!0),
               )
-            : a.A.timing(M, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, M, A, y]),
+            : a.A.timing(M, { toValue: 1, duration: S ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, M, A, S]),
         i.useEffect(() => {
-            x && T && a.A.timing(L, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, L, T, y]));
+            x && j && a.A.timing(L, { toValue: 1, duration: 350 * !S, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, L, j, S]));
     let P = i.useCallback(() => {
-        null != E && (0, b.qo)(t, E.channelId);
+        null != E && (0, I.qo)(t, E.channelId);
     }, [t, E]);
-    return null == c || (A && !T)
+    return null == c || (A && !j)
         ? null
         : (0, l.jsx)("div", {
               className: s()(_.kL, r),
               children:
-                  T && null != E
+                  j && null != E
                       ? (0, l.jsx)(a.A.div, {
                             style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: (0, l.jsxs)(m.D, {
@@ -102,9 +102,9 @@ function M(e) {
                                             (0, l.jsx)(u.E, {
                                                 variant: "body-md/semibold",
                                                 color: "text-strong",
-                                                children: j.intl.format(j.t["/beONw"], { step: E.title }),
+                                                children: T.intl.format(T.t["/beONw"], { step: E.title }),
                                             }),
-                                            (0, l.jsx)(O, { action: E }),
+                                            (0, l.jsx)(R, { action: E }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
@@ -138,7 +138,7 @@ function M(e) {
                                         (0, l.jsx)(u.E, {
                                             variant: "footnote/normal",
                                             color: "text-muted",
-                                            children: j.intl.string(j.t["ElGg8+"]),
+                                            children: T.intl.string(T.t["ElGg8+"]),
                                         }),
                                     ],
                                 }),

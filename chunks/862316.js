@@ -27,16 +27,16 @@ let k = function () {
     });
 };
 var C = t(632760),
-    E = t(930101),
-    v = t(302031),
+    v = t(930101),
+    E = t(302031),
     N = t(441136),
     b = t(71393),
     S = t(957565),
     _ = t(143145),
     M = t(392605),
-    w = t(678473),
-    L = t(192308),
-    T = t(588975),
+    T = t(678473),
+    w = t(192308),
+    L = t(588975),
     O = t(442433),
     P = t(975807),
     D = t(235393),
@@ -51,9 +51,9 @@ var V = t(380610),
     z = t(355435),
     K = t(780788),
     F = t(333421),
-    q = t(100392),
-    X = t(950980),
-    Z = t(836156);
+    Z = t(100392),
+    q = t(950980),
+    X = t(836156);
 let W = a.lazy(async () => ({
         default: (
             await Promise.all([t.e(503634), t.e(761764), t.e(60800), t.e(218126), t.e(467696)]).then(t.bind(t, 881267))
@@ -156,9 +156,9 @@ let ed = {
     spoiler: {
         react: (e, n, t) =>
             (0, l.jsx)(
-                v.Ay,
+                E.Ay,
                 {
-                    type: v.Ay.Types.TEXT,
+                    type: E.Ay.Types.TEXT,
                     inline: t.formatInline,
                     renderTextElement: (e, n) =>
                         null == e || e.type !== m.A || n ? e : a.cloneElement(e, { tabIndex: -1 }),
@@ -199,7 +199,7 @@ let ed = {
                   )
                 : null,
     },
-    timestamp: { react: (e, n, t) => (0, l.jsx)(w.A, { node: e }, t.key) },
+    timestamp: { react: (e, n, t) => (0, l.jsx)(T.A, { node: e }, t.key) },
     list: {
         react: (e, n, t) => {
             let a = e.ordered ? "ol" : "ul",
@@ -269,18 +269,18 @@ function em(e) {
                           { children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(z.default, { url: i }, i)] },
                           t.key,
                       )
-                    : (0, q.W0)(i)
+                    : (0, Z.W0)(i)
                       ? (0, l.jsxs)(
                             a.Fragment,
                             {
                                 children: [
                                     (0, l.jsx)("span", { children: i }),
-                                    (0, l.jsx)(X.ExperimentEmbed, { url: i }),
+                                    (0, l.jsx)(q.ExperimentEmbed, { url: i }),
                                 ],
                             },
                             t.key,
                         )
-                      : (0, Z.i)(i)
+                      : (0, X.i)(i)
                         ? (0, l.jsx)(
                               a.Fragment,
                               {
@@ -314,7 +314,7 @@ function em(e) {
                         let { key: s, channelId: o, messageId: c } = r;
                         return e.src
                             ? (0, l.jsx)(
-                                  E.H,
+                                  v.H,
                                   {
                                       node: e,
                                       tooltipPosition: n,
@@ -342,7 +342,7 @@ function em(e) {
                             e = { ...e, name: n ? `:${d.name}:` : d.name };
                         }
                         return (0, l.jsx)(
-                            E.X,
+                            v.X,
                             { node: e, tooltipPosition: n, enableClick: t, focusable: a, channelId: c, messageId: u },
                             s,
                         );
@@ -360,7 +360,7 @@ function em(e) {
                               let l = await R.AN(n.attachmentUrl);
                               (e.shouldStopPropagation && t?.stopPropagation(),
                                   D.A.trackLinkClicked(l),
-                                  e.shouldCloseDefaultModals && (0, L.s7)(),
+                                  e.shouldCloseDefaultModals && (0, w.s7)(),
                                   (0, P.A)(l));
                           },
                     o = i.noStyleAndInteraction
@@ -385,7 +385,7 @@ function em(e) {
                         onContextMenu: o,
                         className: "attachmentLink",
                         children: [
-                            (0, l.jsx)(T.AttachmentIcon, {
+                            (0, l.jsx)(L.AttachmentIcon, {
                                 size: "xs",
                                 className: r()(H.Kk, G.K),
                                 color: "currentColor",

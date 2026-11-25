@@ -14,8 +14,8 @@ var i = n(477900),
     I = n(821609),
     h = n(398590),
     g = n(523527),
-    p = n(976860),
-    A = n(129230),
+    A = n(976860),
+    p = n(129230),
     _ = n(676279),
     N = n(448645),
     C = n(739053),
@@ -46,7 +46,7 @@ function D(e) {
             useNitroGradient: K = !1,
         } = e;
     s.useEffect(() => {
-        (A.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, w),
+        (p.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, w),
             (0, C.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, w.location_stack, () =>
                 (0, y.uq)(w.type, w.has_premium_stream_fps, w.has_premium_stream_resolution),
             ),
@@ -117,7 +117,7 @@ function D(e) {
                                     (0, i.jsx)(I.$, {
                                         variant: "secondary",
                                         onClick: function () {
-                                            (A.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
+                                            (p.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
                                                 location_section: D,
                                                 location_object: R.ZSU.NAVIGATION_LINK,
                                             }),
@@ -125,7 +125,7 @@ function D(e) {
                                                 (0, g.A)(),
                                                 k(),
                                                 (0, h.jH)(),
-                                                (0, p.pX)(R.BVt.APPLICATION_STORE));
+                                                (0, A.pX)(R.BVt.APPLICATION_STORE));
                                         },
                                         text: P.intl.string(P.t.ZnqyZ2),
                                         fullWidth: !0,

@@ -1,4 +1,4 @@
-n.d(t, { J: () => h, A: () => p });
+n.d(t, { J: () => h, A: () => A });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -36,14 +36,14 @@ function h(e) {
 }
 n(652215);
 var g = n(14753);
-let p = function (e) {
+let A = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
             categories: l,
             store: d,
-            children: p,
-            renderListHeader: A,
+            children: A,
+            renderListHeader: p,
             listHeaderHeight: _,
             className: N,
             listPadding: C,
@@ -75,14 +75,14 @@ let p = function (e) {
                 d = (0, m.bG)([f.Ay], () => f.Ay.keyboardModeEnabled),
                 h = s.useRef(null),
                 g = s.useRef(0),
-                p = c && d;
+                A = c && d;
             s.useEffect(
                 () => () => {
                     g.current += 1;
                 },
                 [],
             );
-            let A = s.useCallback(
+            let p = s.useCallback(
                     (e, t) => {
                         let i = o?.(e, t) ?? 0;
                         n.current?.scrollRowIntoView(e, { animate: !1, offset: i });
@@ -94,7 +94,7 @@ let p = function (e) {
                         let s = l(n);
                         if (null != s) {
                             let e = E(l) ?? h.current;
-                            (A(s, null == e || s >= e), (h.current = s));
+                            (p(s, null == e || s >= e), (h.current = s));
                         } else h.current = null;
                         let r = document.querySelector(e);
                         if (null != r) {
@@ -103,13 +103,13 @@ let p = function (e) {
                         }
                         null != s && I(t, i(s), g);
                     },
-                    [i, t, l, A],
+                    [i, t, l, p],
                 ),
                 N = s.useCallback(
                     (e, n) => {
-                        (A(e, n), (h.current = e), I(t, i(e), g));
+                        (p(e, n), (h.current = e), I(t, i(e), g));
                     },
-                    [i, t, A],
+                    [i, t, p],
                 ),
                 C = s.useCallback(
                     () =>
@@ -142,7 +142,7 @@ let p = function (e) {
                 }, [N, l]),
                 O = (0, u.Ay)({
                     id: t,
-                    isEnabled: p,
+                    isEnabled: A,
                     setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: y,
@@ -207,7 +207,7 @@ let p = function (e) {
             listPadding: C,
             onScroll: S,
             ref: t,
-            renderListHeader: A,
+            renderListHeader: p,
             listHeaderHeight: _,
             renderRow: G,
             rowCount: y,
@@ -228,7 +228,7 @@ let p = function (e) {
                           },
                       })
                     : J,
-                p?.(U),
+                A?.(U),
             ],
         });
     return M ? (0, i.jsx)(a.hD, { navigator: k, children: K }) : K;

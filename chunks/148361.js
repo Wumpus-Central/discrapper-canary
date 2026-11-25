@@ -22,13 +22,13 @@ n.d(
                     onUpsellClicked: I,
                     channel: h,
                     emojiDescriptor: g,
-                    pickerIntention: p,
-                    analyticsLocation: A,
+                    pickerIntention: A,
+                    analyticsLocation: p,
                 } = e,
                 _ = (0, r.RQ)((e) => e.searchQuery),
                 { analyticsLocations: N } = (0, l.Ay)(s.A.EMOJI_PICKER);
             t =
-                p === m.EmojiIntention.REACTION
+                A === m.EmojiIntention.REACTION
                     ? f.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
                     : null == g
                       ? f.e.EMOJI_PICKER_FLOATING_UPSELL
@@ -50,7 +50,7 @@ n.d(
                 upsellViewedTrackingData: {
                     type: t,
                     is_external: x,
-                    location: { ...A, object: j },
+                    location: { ...p, object: j },
                     location_stack: N,
                     sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
                     has_search_query: null != _ && "" !== _,

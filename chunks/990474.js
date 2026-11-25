@@ -54,7 +54,7 @@ function C(e, n, t, l, a) {
         }
     }
 }
-function E(e) {
+function v(e) {
     let { node: n, stateKey: t, children: r } = e,
         s = (0, i.bG)([x.A, f.Ay], () => x.A.getChannel(n.channelId ?? f.Ay.getChannelId()), [n.channelId]),
         { hasSendMessagePerm: o, hasUseAppCommandsPerm: c } = (0, i.cf)([j.A], () => ({
@@ -64,14 +64,14 @@ function E(e) {
         g = void 0 !== s ? { type: "channel", channel: s } : { type: "contextless" },
         { command: A } = u.D3(g, n.commandKey ?? ""),
         k = p.D_.useSetting(),
-        E = a.useMemo(() => {
+        v = a.useMemo(() => {
             if (null == A || null == s || A.untranslatedName !== n.commandName || k) return !1;
             let e = s.isPrivate();
             if ((0, h.UJ)(s) || (!e && !o)) return !1;
             let t = A?.applicationId === I.Ik.BUILT_IN;
             return !!e || !!t || !!c;
         }, [s, A, o, c, n.commandName, k]),
-        v = a.useCallback(
+        E = a.useCallback(
             (e) => {
                 (e?.stopPropagation(),
                     null != s &&
@@ -81,8 +81,8 @@ function E(e) {
             },
             [s, n.commandKey, n.commandName],
         );
-    return E
-        ? (0, l.jsxs)(m.A, { role: "link", onClick: v, children: ["/", r] }, t)
+    return v
+        ? (0, l.jsxs)(m.A, { role: "link", onClick: E, children: ["/", r] }, t)
         : (0, l.jsxs)("span", { children: ["/", r] });
 }
 t.d(
@@ -90,7 +90,7 @@ t.d(
     {},
     {
         Ay: function (e) {
-            return { react: (e, n, t) => (0, l.jsx)(E, { node: e, stateKey: t.key, children: n(e.content, t) }) };
+            return { react: (e, n, t) => (0, l.jsx)(v, { node: e, stateKey: t.key, children: n(e.content, t) }) };
         },
         Oh: function (e) {
             let { commandId: n, commandName: t, commandDescription: a, applicationId: r, onClick: c } = e,
@@ -108,6 +108,6 @@ t.d(
                 }),
             });
         },
-        gn: E,
+        gn: v,
     },
 );

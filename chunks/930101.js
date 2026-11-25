@@ -56,7 +56,7 @@ t.d(
                     messageId: h,
                 });
             }
-            function E(e) {
+            function v(e) {
                 return (0, l.jsx)(o.u, {
                     asset: y("jumbo"),
                     title: n.name ?? "",
@@ -95,9 +95,9 @@ t.d(
                       },
                       renderPopout: (e) => (0, l.jsx)(x.MV, { ...e, node: n }),
                       targetElementRef: p,
-                      children: E,
+                      children: v,
                   })
-                : E();
+                : v();
         },
         X: (e) => {
             let {
@@ -106,28 +106,28 @@ t.d(
                     enableClick: i = !0,
                     focusable: m = !0,
                     channelId: y,
-                    messageId: E,
+                    messageId: v,
                 } = e,
-                v = (0, j.n)(),
+                E = (0, j.n)(),
                 [N, b] = a.useState(String(Date.now())),
                 [S, _] = a.useState(!1),
-                [M, w] = a.useState(!1),
-                L = a.useRef(null);
-            function T(e) {
+                [M, T] = a.useState(!1),
+                w = a.useRef(null);
+            function L(e) {
                 return (0, l.jsx)(d.A, {
                     emojiName: n.name,
                     size: e ?? (n.jumboable ? "jumbo" : "default"),
                     emojiId: n.emojiId,
                     animated: n.animated,
-                    isInteracting: v,
+                    isInteracting: E,
                     channelId: y,
-                    messageId: E,
+                    messageId: v,
                 });
             }
             let O = (0, s.A)();
             function P(e) {
                 return (0, l.jsx)(o.u, {
-                    asset: T("jumbo"),
+                    asset: L("jumbo"),
                     title: n.name,
                     titleLineClamp: 1,
                     body: i ? I.intl.string(I.t["515vjG"]) : "",
@@ -143,13 +143,13 @@ t.d(
                     },
                     children: (0, l.jsx)(c.D, {
                         ...e,
-                        innerRef: L,
+                        innerRef: w,
                         onMouseEnter: () => {
                             e?.onMouseEnter?.();
                         },
                         onClick: i
                             ? (n) => {
-                                  (_(!1), w(!0), e?.onClick?.(n));
+                                  (_(!1), T(!0), e?.onClick?.(n));
                               }
                             : void 0,
                         onMouseLeave: () => {
@@ -158,7 +158,7 @@ t.d(
                         tag: "span",
                         tabIndex: m ? 0 : -1,
                         className: r()(k.qq, { [k._Y]: i, [k.gp]: n.jumboable }),
-                        children: T(),
+                        children: L(),
                     }),
                 });
             }
@@ -168,7 +168,7 @@ t.d(
                       scrollBehavior: "close",
                       align: "center",
                       onRequestClose: () => {
-                          (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: O }), _(!1), w(!1));
+                          (p.default.track(f.HAw.CLOSE_POPOUT, { nonce: O }), _(!1), T(!1));
                       },
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
@@ -182,7 +182,7 @@ t.d(
                           });
                       },
                       positionKey: N,
-                      targetElementRef: L,
+                      targetElementRef: w,
                       children: P,
                   })
                 : P();

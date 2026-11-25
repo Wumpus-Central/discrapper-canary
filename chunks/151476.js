@@ -1,5 +1,5 @@
-var t = n(435558),
-    l = n.n(t),
+var l = n(435558),
+    t = n.n(l),
     a = n(855986),
     s = n(988468),
     d = n(731854);
@@ -9,7 +9,7 @@ n.d(
     {
         A: function () {
             let { enabled: e, cameraUnavailable: i } = (0, a.cf)([s.Ay], () => {
-                let e = l()(s.Ay.getVideoDevices()).values().first()?.disabled ?? !0;
+                let e = t()(s.Ay.getVideoDevices()).values().first()?.disabled ?? !0;
                 return { enabled: s.Ay.isVideoEnabled(), cameraUnavailable: e || !s.Ay.supports(d.O5.VIDEO) };
             });
             return { enabled: e, cameraUnavailable: i };

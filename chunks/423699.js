@@ -30,8 +30,8 @@ function f() {
 l(321073);
 var h = l(503698),
     p = l.n(h),
-    v = l(435558),
-    x = l.n(v),
+    x = l(435558),
+    v = l.n(x),
     g = l(194498),
     b = l(607470),
     j = l(176781),
@@ -56,7 +56,7 @@ function L() {
         o = r - i.length,
         c = a.useCallback(
             (e) => {
-                let t = 1e3 * x().round(e, 3);
+                let t = 1e3 * v().round(e, 3);
                 return s.getEventsAtTimestamp(o + t);
             },
             [s, o],
@@ -127,7 +127,7 @@ function P(e) {
             audioURL: m,
             applicationAudioEnabled: f,
             voiceAudioEnabled: h,
-            soundboardAudioEnabled: x,
+            soundboardAudioEnabled: v,
             clip: j,
         } = (0, w.T)(),
         y = a.useRef({}),
@@ -137,9 +137,9 @@ function P(e) {
         P = a.useCallback(() => {
             let e = y.current.main;
             if (null == e) return;
-            let t = (0, v.round)(e.currentTime, 3),
-                l = (0, v.round)(o, 3);
-            if (t >= (null != c ? (0, v.round)(c, 3) : (0, v.round)(e.duration, 3)) || t < l) {
+            let t = (0, x.round)(e.currentTime, 3),
+                l = (0, x.round)(o, 3);
+            if (t >= (null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3)) || t < l) {
                 for (let e of Object.values(y.current)) null != e && (e.currentTime = o);
                 return !0;
             }
@@ -165,8 +165,8 @@ function P(e) {
             if (!r) {
                 let e = y.current.main;
                 if (null != e) {
-                    let t = null != c ? (0, v.round)(c, 3) : (0, v.round)(e.duration, 3);
-                    if ((0, v.round)(e.currentTime, 3) >= t) {
+                    let t = null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3);
+                    if ((0, x.round)(e.currentTime, 3) >= t) {
                         (z(), (E.current = !1));
                         return;
                     }
@@ -248,7 +248,7 @@ function P(e) {
                             muted: D(":all", {
                                 applicationAudioEnabled: f,
                                 voiceAudioEnabled: h,
-                                soundboardAudioEnabled: x,
+                                soundboardAudioEnabled: v,
                                 isVoiceClip: H,
                             }),
                             preload: "auto",
@@ -262,7 +262,7 @@ function P(e) {
                       muted: D(":application", {
                           applicationAudioEnabled: f,
                           voiceAudioEnabled: h,
-                          soundboardAudioEnabled: x,
+                          soundboardAudioEnabled: v,
                           isVoiceClip: H,
                       }),
                       className: S.R,
@@ -280,7 +280,7 @@ function P(e) {
                               muted: D(e, {
                                   applicationAudioEnabled: f,
                                   voiceAudioEnabled: h,
-                                  soundboardAudioEnabled: x,
+                                  soundboardAudioEnabled: v,
                                   isVoiceClip: H,
                               }),
                           },
@@ -458,7 +458,7 @@ function ef(e) {
             resizable: m = !0,
             selected: f,
             visible: h,
-            onSelect: x,
+            onSelect: v,
             onChange: g,
             children: b,
         } = e,
@@ -533,15 +533,15 @@ function ef(e) {
                         case "move":
                             g({
                                 position: {
-                                    x: (0, v.clamp)((e.clientX - n.left - l.left) / l.width - t.grabOffset.x, 0, 1),
-                                    y: (0, v.clamp)((e.clientY - n.top - l.top) / l.height - t.grabOffset.y, 0, 1),
+                                    x: (0, x.clamp)((e.clientX - n.left - l.left) / l.width - t.grabOffset.x, 0, 1),
+                                    y: (0, x.clamp)((e.clientY - n.top - l.top) / l.height - t.grabOffset.y, 0, 1),
                                 },
                             });
                             break;
                         case "scale": {
                             if (0 === t.startDistance) return;
                             let l = Math.hypot(e.clientX - t.centerX, e.clientY - t.centerY);
-                            g({ scale: (0, v.clamp)((t.baseScale * l) / t.startDistance, o, c) });
+                            g({ scale: (0, x.clamp)((t.baseScale * l) / t.startDistance, o, c) });
                             break;
                         }
                         case "rotate": {
@@ -567,7 +567,7 @@ function ef(e) {
     );
     let D = a.useCallback(
             (e) => (t) => {
-                (t.stopPropagation(), t.preventDefault(), x(), y.current?.focus({ preventScroll: !0 }));
+                (t.stopPropagation(), t.preventDefault(), v(), y.current?.focus({ preventScroll: !0 }));
                 let n = L.current,
                     a = j.current?.getBoundingClientRect();
                 if (null == n || null == a || 0 === n.width || 0 === n.height) return;
@@ -587,7 +587,7 @@ function ef(e) {
                     startAngleDeg: eh(s, o, t.clientX, t.clientY),
                 };
             },
-            [x, l, i, r, L],
+            [v, l, i, r, L],
         ),
         M = a.useCallback(
             (e) => {
@@ -622,7 +622,7 @@ function ef(e) {
                 }
                 (e.preventDefault(),
                     e.stopPropagation(),
-                    g({ position: { x: (0, v.clamp)(l.x + n, 0, 1), y: (0, v.clamp)(l.y + a, 0, 1) } }));
+                    g({ position: { x: (0, x.clamp)(l.x + n, 0, 1), y: (0, x.clamp)(l.y + a, 0, 1) } }));
             },
             [g, l, i],
         );
@@ -635,7 +635,7 @@ function ef(e) {
             style: { display: h ? void 0 : "none" },
             "aria-label": t,
             "aria-keyshortcuts": "Alt+ArrowLeft Alt+ArrowRight",
-            onClick: x,
+            onClick: v,
             onMouseDown: D("move"),
             onKeyDown: M,
             children: [
@@ -669,8 +669,8 @@ function eh(e, t, l, n) {
     return (180 * Math.atan2(n - t, l - e)) / Math.PI;
 }
 var ep = l(1093),
-    ev = l(683825),
-    ex = l(545052);
+    ex = l(683825),
+    ev = l(545052);
 function eg(e) {
     let { track: t, selected: l, onSelect: i } = e,
         { useCurrentTime: r } = (0, w.T)(),
@@ -678,8 +678,8 @@ function eg(e) {
         o = r(),
         { src: c, position: u, rotationDeg: d, widthFraction: m, naturalWidth: f, naturalHeight: h } = t.data,
         p = t.data.shadow ?? "none",
-        v = t.data.shadowColor ?? R.pk,
-        x = a.useCallback(
+        x = t.data.shadowColor ?? R.pk,
+        v = a.useCallback(
             (e) => {
                 let { position: l, rotationDeg: n, scale: a } = e;
                 s(t.id, (e) => ({
@@ -695,10 +695,10 @@ function eg(e) {
         b = R.EC[p],
         j =
             b > 0
-                ? `drop-shadow(0 calc(${0.4 * b} * var(--clip-track-scale)) calc(${b} * var(--clip-track-scale)) ${v})`
+                ? `drop-shadow(0 calc(${0.4 * b} * var(--clip-track-scale)) calc(${b} * var(--clip-track-scale)) ${x})`
                 : void 0;
     return (0, n.jsx)(ef, {
-        label: en.intl.formatToPlainString(ev.default.lZuIri, { fileName: t.data.fileName }),
+        label: en.intl.formatToPlainString(ex.default.lZuIri, { fileName: t.data.fileName }),
         position: u,
         rotationDeg: d,
         scale: m,
@@ -709,9 +709,9 @@ function eg(e) {
         selected: l,
         visible: g,
         onSelect: i,
-        onChange: x,
+        onChange: v,
         children: (0, n.jsx)("img", {
-            className: ex.S,
+            className: ev.S,
             src: c,
             alt: "",
             "aria-hidden": !0,
@@ -743,7 +743,7 @@ function ej(e) {
         h = o >= t.startSec - 0.05 && o <= t.endSec + 0.05,
         p = R.mO[d.strokeWidth];
     return (0, n.jsxs)(ef, {
-        label: en.intl.formatToPlainString(ev.default.EDmwVf, { text: c }),
+        label: en.intl.formatToPlainString(ex.default.EDmwVf, { text: c }),
         position: u,
         rotationDeg: m,
         scale: d.fontSize,
@@ -791,7 +791,7 @@ let eM = new Map(),
             c = a.useRef(null),
             { ref: u, width: d, height: m } = (0, eA.Ay)(),
             [f, h] = a.useState(null),
-            v = (0, eR.r)(eL.A.colors.BACKGROUND_MOD_STRONG).hex();
+            x = (0, eR.r)(eL.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (a.useEffect(
             () => (
                 (c.current = new Worker(new URL("/assets/" + l.u(33197), l.b))),
@@ -849,13 +849,13 @@ let eM = new Map(),
             let { width: l, height: n } = e,
                 a = l / f.length,
                 i = -(a * (eS.Jh.waveformBarWidth - 1));
-            (t.clearRect(0, 0, l, n), (t.fillStyle = v));
+            (t.clearRect(0, 0, l, n), (t.fillStyle = x));
             for (let e = 0; e < f.length; e++) {
                 let l = f[e] * n,
                     r = e * a + i;
                 t.fillRect(r, n, a - i, -l);
             }
-        }, [v, d, u, m, f]),
+        }, [x, d, u, m, f]),
         0 === i.length)
             ? o
                 ? (0, n.jsx)("div", { className: p()(eD.k, s), onMouseDown: r })
@@ -895,7 +895,7 @@ function eX(e) {
         }),
     });
 }
-let eH = { [R.Gy.LAUGHTER]: ev.default.bTC23D, [R.Gy.SHOUTING]: ev.default["3gqpuo"] };
+let eH = { [R.Gy.LAUGHTER]: ex.default.bTC23D, [R.Gy.SHOUTING]: ex.default["3gqpuo"] };
 function eW(e) {
     let { icon: t, signal: l, guildId: a, position: i, compact: r } = e,
         s = (0, U.bG)([J.default], () => J.default.getUser(l.userId)),
@@ -975,7 +975,7 @@ let eF = a.memo(function (e) {
                     {
                         icon: o,
                         title: en.intl.string(eH[e.signal.type]),
-                        body: en.intl.string(ev.default.Ek6GZO),
+                        body: en.intl.string(ex.default.Ek6GZO),
                         position: r,
                         compact: i,
                     },
@@ -989,7 +989,7 @@ let eF = a.memo(function (e) {
                         title:
                             ((a = e.signal),
                             (0, eU.PZ)(s, a.type, a.type === R.Gy.GAME_EVENT ? a.eventName : void 0) ?? ""),
-                        body: en.intl.string(ev.default["347DBb"]),
+                        body: en.intl.string(ex.default["347DBb"]),
                         position: r,
                         compact: i,
                     },
@@ -1098,7 +1098,7 @@ function eQ(e) {
         } = e,
         f = a.useRef(null),
         h = a.useRef(null),
-        [x, g] = a.useState(null),
+        [v, g] = a.useState(null),
         b = a.useCallback(() => {
             let e = f.current;
             if (null == e) return 0;
@@ -1109,13 +1109,13 @@ function eQ(e) {
             let t = h.current;
             if (null == t) return;
             let l = (e.clientX - t.clientX) * b();
-            if ("start" === t.mode) m((0, v.clamp)(t.initialStart + l, 0, t.initialEnd - 1), t.initialEnd);
+            if ("start" === t.mode) m((0, x.clamp)(t.initialStart + l, 0, t.initialEnd - 1), t.initialEnd);
             else if ("end" === t.mode) {
-                let e = (0, v.clamp)(t.initialEnd + l, t.initialStart + 1, c);
+                let e = (0, x.clamp)(t.initialEnd + l, t.initialStart + 1, c);
                 m(t.initialStart, e);
             } else {
                 let e = t.initialEnd - t.initialStart,
-                    n = (0, v.clamp)(t.initialStart + l, 0, c - e);
+                    n = (0, x.clamp)(t.initialStart + l, 0, c - e);
                 m(n, n + e);
             }
         }),
@@ -1123,7 +1123,7 @@ function eQ(e) {
             ((h.current = null), g(null));
         }, []);
     a.useEffect(() => {
-        if (null != x)
+        if (null != v)
             return (
                 document.addEventListener("mousemove", j),
                 document.addEventListener("mouseup", y),
@@ -1131,7 +1131,7 @@ function eQ(e) {
                     (document.removeEventListener("mousemove", j), document.removeEventListener("mouseup", y));
                 }
             );
-    }, [x, j, y]);
+    }, [v, j, y]);
     let C = a.useCallback(
             (e) => (t) => {
                 (t.stopPropagation(),
@@ -1148,8 +1148,8 @@ function eQ(e) {
                     n = !1,
                     a = r;
                 ("ArrowLeft" === e.key
-                    ? ((n = !0), (a = (0, v.clamp)(r - t, 0, c - l)))
-                    : "ArrowRight" === e.key && ((n = !0), (a = (0, v.clamp)(r + t, 0, c - l))),
+                    ? ((n = !0), (a = (0, x.clamp)(r - t, 0, c - l)))
+                    : "ArrowRight" === e.key && ((n = !0), (a = (0, x.clamp)(r + t, 0, c - l))),
                     n && (e.preventDefault(), e.stopPropagation(), m(a, a + l)));
             },
             [r, o, c, m],
@@ -1160,8 +1160,8 @@ function eQ(e) {
                     l = !1,
                     n = r;
                 ("ArrowLeft" === e.key
-                    ? ((l = !0), (n = (0, v.clamp)(r - t, 0, o - 1)))
-                    : "ArrowRight" === e.key && ((l = !0), (n = (0, v.clamp)(r + t, 0, o - 1))),
+                    ? ((l = !0), (n = (0, x.clamp)(r - t, 0, o - 1)))
+                    : "ArrowRight" === e.key && ((l = !0), (n = (0, x.clamp)(r + t, 0, o - 1))),
                     l && (e.preventDefault(), e.stopPropagation(), m(n, o)));
             },
             [r, o, m],
@@ -1172,8 +1172,8 @@ function eQ(e) {
                     l = !1,
                     n = o;
                 ("ArrowLeft" === e.key
-                    ? ((l = !0), (n = (0, v.clamp)(o - t, r + 1, c)))
-                    : "ArrowRight" === e.key && ((l = !0), (n = (0, v.clamp)(o + t, r + 1, c))),
+                    ? ((l = !0), (n = (0, x.clamp)(o - t, r + 1, c)))
+                    : "ArrowRight" === e.key && ((l = !0), (n = (0, x.clamp)(o + t, r + 1, c))),
                     l && (e.preventDefault(), e.stopPropagation(), m(r, n)));
             },
             [r, o, c, m],
@@ -1266,7 +1266,7 @@ function e5(e) {
             setCropEnd: m,
             play: f,
             pause: h,
-            subscribe: x,
+            subscribe: v,
             seek: g,
             clip: b,
             generateThumbnails: j,
@@ -1281,12 +1281,12 @@ function e5(e) {
         [P, _] = a.useState(null);
     a.useEffect(
         () =>
-            x({
+            v({
                 onPlay: () => {
                     (L(null), M(!1));
                 },
             }),
-        [x],
+        [v],
     );
     let { ref: z, width: U = 0, height: $ = 0 } = (0, eA.Ay)(),
         B = (0, ey.bG)([eI.A], () => eI.A.windowSize()),
@@ -1305,11 +1305,11 @@ function e5(e) {
     let F = a.useCallback(
             (e, t) => {
                 if (null == r || null == P) return;
-                let l = (((0, v.clamp)(e, P.left, P.right) - P.left) / P.width) * r,
-                    n = (0, v.clamp)(l, 0, r),
+                let l = (((0, x.clamp)(e, P.left, P.right) - P.left) / P.width) * r,
+                    n = (0, x.clamp)(l, 0, r),
                     a = I;
                 (null == a && t && ((a = "playhead"), s && (h(), M(!0)), L(a)),
-                    "start" === a ? d(n) : "end" === a ? m(n) : "playhead" === a && g((0, v.clamp)(n, o, c)));
+                    "start" === a ? d(n) : "end" === a ? m(n) : "playhead" === a && g((0, x.clamp)(n, o, c)));
             },
             [r, P, I, o, c, s, h, d, m, g],
         ),
@@ -1592,9 +1592,9 @@ function e5(e) {
                                             label: (function (e) {
                                                 switch (e) {
                                                     case R.Me.TEXT:
-                                                        return en.intl.string(ev.default.WvkbtB);
+                                                        return en.intl.string(ex.default.WvkbtB);
                                                     case R.Me.IMAGE:
-                                                        return en.intl.string(ev.default.heHHUW);
+                                                        return en.intl.string(ex.default.heHHUW);
                                                     default:
                                                         return "";
                                                 }
@@ -1634,8 +1634,8 @@ function e3(e) {
             cropStart: m,
             cropEnd: h,
             videoPlayerRef: p,
-            videoURL: v,
-            audioTracks: x,
+            videoURL: x,
+            audioTracks: v,
             clip: g,
             activeTool: b,
             cropPreset: j,
@@ -1671,7 +1671,7 @@ function e3(e) {
             a && (e.stopPropagation(), e.preventDefault());
         }
     }, [p, I, g.type, m, h, k, A]);
-    let L = a.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
+    let L = a.useMemo(() => v.filter((e) => e.trackName.includes(":voice")), [v]),
         S = a.useCallback(() => {
             (0, u.R)(
                 {
@@ -1708,7 +1708,7 @@ function e3(e) {
                       }),
             ],
         });
-    let D = null == v || t !== r.ip.ENTERED,
+    let D = null == x || t !== r.ip.ENTERED,
         M = g.type === R.nQ.VOICE_CLIP,
         _ = b === d.Y.CROP,
         U = null != y ? y.width / y.height : null,
