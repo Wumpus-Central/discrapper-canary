@@ -12,8 +12,8 @@ var n = l(477900),
     f = l(27232),
     h = l(505930),
     p = l(241326),
-    v = l(365199),
-    x = l(92446),
+    x = l(365199),
+    v = l(92446),
     g = l(972213),
     b = l(95362),
     j = l(821609),
@@ -117,7 +117,7 @@ function ea() {
                     }),
                 ],
             }),
-            (0, n.jsx)("div", {
+            (0, n.jsx)(b.Ip, {
                 className: et.G3,
                 children: (0, n.jsx)(j.$, {
                     fullWidth: !0,
@@ -251,7 +251,7 @@ function ef(e) {
                         }),
                 ],
             }),
-            (0, n.jsx)("div", {
+            (0, n.jsx)(b.Ip, {
                 className: et.G3,
                 children: (0, n.jsx)(j.$, {
                     size: "md",
@@ -272,13 +272,13 @@ let ep = [
         { value: 0.06, label: J.default.LGX80j },
         { value: 0.09, label: J.default.sa6Q0q },
     ],
-    ev = [
+    ex = [
         { value: q.UY.NONE, label: J.default["tYuPp+"] },
         { value: q.UY.SMALL, label: J.default["42Skzz"] },
         { value: q.UY.MEDIUM, label: J.default["Ujlm+F"] },
         { value: q.UY.LARGE, label: J.default.lT4Cq2 },
     ],
-    ex = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
+    ev = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
 function eg(e) {
     let { track: t } = e,
         { updateTextTrackData: l, setSelectedTrackId: i, removeTrack: s, textTrackIdToFocus: o } = (0, eo.fn)(),
@@ -369,7 +369,7 @@ function eg(e) {
                                 }),
                                 (0, n.jsx)(es.default, {
                                     defaultColor: 0xffffff,
-                                    colors: ex,
+                                    colors: ev,
                                     className: eu.Ei,
                                     colorContainerClassName: eu.oP,
                                     value: (0, er.LX)(t.data.style.color),
@@ -389,7 +389,7 @@ function eg(e) {
                                 }),
                                 (0, n.jsx)("div", {
                                     className: el.si,
-                                    children: ev.map((e) => {
+                                    children: ex.map((e) => {
                                         let { value: a, label: i } = e,
                                             s = t.data.style.strokeWidth === a;
                                         return (0, n.jsx)(
@@ -421,7 +421,7 @@ function eg(e) {
                                     }),
                                     (0, n.jsx)(es.default, {
                                         defaultColor: 0,
-                                        colors: ex,
+                                        colors: ev,
                                         className: eu.Ei,
                                         colorContainerClassName: eu.oP,
                                         value: (0, er.LX)(t.data.style.strokeColor),
@@ -436,7 +436,7 @@ function eg(e) {
                             }),
                     ],
                 }),
-                (0, n.jsx)("div", {
+                (0, n.jsx)(b.Ip, {
                     className: et.G3,
                     children: (0, n.jsx)(j.$, {
                         size: "md",
@@ -521,15 +521,15 @@ function eC(e) {
         { isCropEnabled: ef } = (0, eo.As)(),
         eh = en.type === q.nQ.SCREENSHOT,
         ep = en.type === q.nQ.VOICE_CLIP,
-        ev = (0, T.h)(en.applicationId),
-        ex = (0, i.bG)([M.Ay], () => M.Ay.isClipExporting(en.id)),
+        ex = (0, T.h)(en.applicationId),
+        ev = (0, i.bG)([M.Ay], () => M.Ay.isClipExporting(en.id)),
         { onShareClick: eg } = (0, G.A)(t),
         { picker: ey } = a.useContext(_.$),
         eC = (0, z.$)(ey?.action),
         eN = (0, i.bG)([D.A], () => D.A.isDeveloper),
         ek = a.useMemo(() => es.filter((e) => e.trackName.includes(q.gC.VOICE)).length, [es]),
         eE = a.useMemo(() => es.filter((e) => e.trackName.includes(q.gC.SOUNDBOARD)).length, [es]),
-        ew = ev?.name ?? en.applicationName ?? ee.intl.string(ee.t.GnQui9);
+        ew = ex?.name ?? en.applicationName ?? ee.intl.string(ee.t.GnQui9);
     return (0, n.jsxs)("div", {
         className: et.XV,
         children: [
@@ -605,7 +605,7 @@ function eC(e) {
                                     },
                                     variant: "icon-only",
                                     "aria-label": ee.intl.string(ee.t.PdRCRg),
-                                    icon: v.MoreHorizontalIcon,
+                                    icon: x.MoreHorizontalIcon,
                                 }),
                             }),
                             eN &&
@@ -627,7 +627,7 @@ function eC(e) {
                                                 { stackingBehavior: "stack" },
                                             );
                                         },
-                                        icon: x.BugIcon,
+                                        icon: v.BugIcon,
                                         variant: "icon-only",
                                         "aria-label": "Clip Debug",
                                     }),
@@ -730,8 +730,8 @@ function eC(e) {
                                     children: [
                                         (0, n.jsx)(ej, {
                                             icon:
-                                                null != ev
-                                                    ? (0, n.jsx)(S.A, { game: ev, size: S.M.XXSMALL })
+                                                null != ex
+                                                    ? (0, n.jsx)(S.A, { game: ex, size: S.M.XXSMALL })
                                                     : (0, n.jsx)(k.WaveformIcon, { size: "sm", color: "currentColor" }),
                                             label: ew,
                                             enabled: K,
@@ -765,8 +765,8 @@ function eC(e) {
                     fullWidth: !0,
                     children: ea
                         ? (0, n.jsx)(j.$, {
-                              loading: ex,
-                              disabled: ex,
+                              loading: ev,
+                              disabled: ev,
                               variant: "primary",
                               onClick: () =>
                                   eg({
@@ -780,8 +780,8 @@ function eC(e) {
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)(j.$, {
-                                      loading: ex,
-                                      disabled: ex,
+                                      loading: ev,
+                                      disabled: ev,
                                       variant: "secondary",
                                       icon: A.PlusLargeIcon,
                                       iconPosition: "start",
@@ -791,8 +791,8 @@ function eC(e) {
                                       text: ee.intl.string(J.default.HH4Tjj),
                                   }),
                                   (0, n.jsx)(j.$, {
-                                      loading: ex,
-                                      disabled: ex,
+                                      loading: ev,
+                                      disabled: ev,
                                       variant: "primary",
                                       icon: eC.icon,
                                       iconPosition: "start",
