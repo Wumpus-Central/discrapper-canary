@@ -517,16 +517,16 @@ async function eA(e) {
                                 return (0, W.lq)((0, W.Tv)(e, s, o), s, l).map((e) => e.value);
                             }
                             let u = (0, W.Q4)(a, n.gameEventData),
-                                _ = (0, $.p)(n.gameEventData, s, o);
+                                _ = (0, $.p)(n.gameEventData, s, o).filter((e) => Number.isFinite(e.timestamp_ms + r));
                             return {
                                 game_events_supported: (0, W.GC)(a),
                                 created_at_ms: e.createdAt,
                                 window_start_ms: s + r,
                                 window_end_ms: o + r,
-                                trim_start_ms: t.trimStartMs + r,
-                                trim_end_ms: t.trimEndMs + r,
+                                trim_start_ms: Math.round(t.trimStartMs + r),
+                                trim_end_ms: Math.round(t.trimEndMs + r),
                                 in_game: u?.getInGameState?.(s, o) ?? [],
-                                game_event_ts_ms: _.map((e) => e.timestamp_ms + r),
+                                game_event_ts_ms: _.map((e) => Math.round(e.timestamp_ms + r)),
                                 game_event_weight: _.map((e) => e.score ?? 0),
                                 game_event_name: _.map((e) => e.eventName ?? ""),
                                 ...i,

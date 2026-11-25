@@ -174,26 +174,29 @@ class I {
         let s = t.player?.player_slot,
             d = o(t.player?.team_name);
         if (!e.qualified || null == s || null == d || !e.participants.has(String(s))) return;
-        let c = l - (i - e.endTimeS) * 1e3,
+        function c(e) {
+            return Math.round(l - (i - e) * 1e3);
+        }
+        let f = c(e.endTimeS),
             {
-                allyKills: f,
-                enemyKills: S,
-                winning: I,
-                clipWindow: _,
-                additionalData: y,
-            } = (0, a.Jo)(e, d, l - (i - e.startTimeS) * 1e3, c),
-            K = { id: (0, r.A)(), ...y };
+                allyKills: S,
+                enemyKills: I,
+                winning: _,
+                clipWindow: y,
+                additionalData: K,
+            } = (0, a.Jo)(e, d, c(e.startTimeS), f),
+            A = { id: (0, r.A)(), ...K };
         n(
-            I
-                ? T(m.I.TeamFightWin, h.rb.UNCLASSIFIED, K, {
-                      description: p.intl.formatToPlainString(u.default.h9gDdS, { allyKills: f, enemyKills: S }),
-                      clipWindow: _,
+            _
+                ? T(m.I.TeamFightWin, h.rb.UNCLASSIFIED, A, {
+                      description: p.intl.formatToPlainString(u.default.h9gDdS, { allyKills: S, enemyKills: I }),
+                      clipWindow: y,
                   })
-                : T(m.I.TeamFight, h.rb.UNCLASSIFIED, K, {
-                      description: p.intl.formatToPlainString(u.default.no2oEG, { allyKills: f, enemyKills: S }),
-                      clipWindow: _,
+                : T(m.I.TeamFight, h.rb.UNCLASSIFIED, A, {
+                      description: p.intl.formatToPlainString(u.default.no2oEG, { allyKills: S, enemyKills: I }),
+                      clipWindow: y,
                   }),
-            c,
+            f,
         );
     }
 }

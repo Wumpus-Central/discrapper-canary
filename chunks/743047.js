@@ -72,7 +72,7 @@ class p {
     gameTimeToClipTs(e) {
         return null == this.lastEventGameTimeS
             ? null
-            : this.lastEventWallMs - (this.lastEventGameTimeS - e) * 1e3 - (0, n.p)();
+            : Math.round(this.lastEventWallMs - (this.lastEventGameTimeS - e) * 1e3 - (0, n.p)());
     }
     async fetchActivePlayerData() {
         try {
