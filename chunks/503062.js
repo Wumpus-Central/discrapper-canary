@@ -17,23 +17,23 @@ var i = n(477900),
     I = n(214881),
     v = n(290863),
     j = n(427262),
-    b = n(253400),
-    y = n(854627),
+    y = n(253400),
+    b = n(854627),
     C = n(939496),
     E = n(652215),
     S = n(996988),
     N = n(792996),
     k = n(135650);
 let T = o._3.SIZE_40,
-    P = b.Ay.getEnableHardwareAcceleration();
+    P = y.Ay.getEnableHardwareAcceleration();
 n.d(
     t,
     {},
     {
         A: function (e) {
-            let { user: t, status: r, guildId: o, channelId: b, onSelect: O } = e,
+            let { user: t, status: r, guildId: o, channelId: y, onSelect: O } = e,
                 { themeType: R } = (0, C.E)(),
-                _ = l.useMemo(() => t.isNonUserBot() || (0, h.c)(t, b), [t, b]),
+                _ = l.useMemo(() => t.isNonUserBot() || (0, h.c)(t, y), [t, y]),
                 { activities: L, isMobileOnline: w } = (0, a.cf)([v.A], () => ({
                     activities: v.A.getActivities(t.id),
                     isMobileOnline: v.A.isMobileOnline(t.id),
@@ -45,7 +45,7 @@ n.d(
                     avatarSrc: F,
                     avatarDecorationSrc: B,
                     eventHandlers: W,
-                } = (0, y.A)({ userId: t.id, guildId: o, size: T, animateOnHover: !G }),
+                } = (0, b.A)({ userId: t.id, guildId: o, size: T, animateOnHover: !G }),
                 H = P ? d.Js : d.eu,
                 V = l.useRef(null),
                 z = l.useId(),

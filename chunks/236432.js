@@ -37,5 +37,5 @@ let { createLoader: l } = n(95498),
         "en-US",
     ),
     { makeMessagesProxy: r } = n(95498),
-    s = r(i);
-n.d(t, {}, { default: s, messagesLoader: i });
+    a = r(i);
+n.d(t, {}, { default: a, messagesLoader: i });

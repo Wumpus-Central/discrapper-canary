@@ -1,8 +1,8 @@
 var l = n(350835),
     i = n(121681),
     r = n(95701),
-    s = n(690521),
-    a = n(488926),
+    a = n(690521),
+    s = n(488926),
     o = n(652215);
 n.d(
     t,
@@ -14,8 +14,8 @@ n.d(
             let d = t.emoji;
             if (null == d.id || null == u || !(0, r.ke)(u.type)) return !0;
             let c = i.Ay.getUsableCustomEmojiById(d.id),
-                m = s.Ay.isInternalEmojiForGuildId(c, u.getGuildId()),
-                h = a.$3({ permission: o.xBc.USE_EXTERNAL_EMOJIS, user: n, context: u });
+                m = a.Ay.isInternalEmojiForGuildId(c, u.getGuildId()),
+                h = s.$3({ permission: o.xBc.USE_EXTERNAL_EMOJIS, user: n, context: u });
             return !m || h;
         },
     },

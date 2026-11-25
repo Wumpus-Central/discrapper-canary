@@ -22,7 +22,7 @@ n.d(
     {},
     {
         A: function (e) {
-            let { user: t, guild: j, nick: b, onSelect: y } = e,
+            let { user: t, guild: j, nick: y, onSelect: b } = e,
                 { theme: C, themeType: E } = (0, p.E)(),
                 S = t.hasAvatarForGuild(j.id),
                 N = l.useId(),
@@ -31,8 +31,8 @@ n.d(
                 focusProps: E === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: I.nM,
                 "aria-label": k,
-                "aria-describedby": S || null != b ? N : void 0,
-                onClick: y,
+                "aria-describedby": S || null != y ? N : void 0,
+                onClick: b,
                 onContextMenu: function (e) {
                     (0, m.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -670,17 +670,17 @@ n.d(
                                             variant: "body-xs/medium",
                                             children: (0, i.jsx)(s.A, {
                                                 delay: 300,
-                                                children: b ?? h.Ay.getName(j.id, void 0, t),
+                                                children: y ?? h.Ay.getName(j.id, void 0, t),
                                             }),
                                         }),
                                     ],
                                 }),
                             !S &&
-                                null != b &&
+                                null != y &&
                                 (0, i.jsx)(g.E, {
                                     id: N,
                                     variant: "body-xs/medium",
-                                    children: (0, i.jsx)(s.A, { delay: 300, children: b }),
+                                    children: (0, i.jsx)(s.A, { delay: 300, children: y }),
                                 }),
                         ],
                     }),

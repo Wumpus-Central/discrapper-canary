@@ -1,4 +1,4 @@
-s.d(t, { A: () => p });
+s.d(t, { A: () => m });
 var a = s(477900);
 s(582128);
 var i = s(503698),
@@ -6,11 +6,11 @@ var i = s(503698),
     l = s(782134),
     r = s(939249),
     o = s(692051),
-    h = s(953727);
-function u(e) {
+    u = s(953727);
+function h(e) {
     let { width: t = 16, height: s = 16, color: i = "currentColor", foreground: n, ...l } = e;
     return (0, a.jsx)("svg", {
-        ...(0, h.A)(l),
+        ...(0, u.A)(l),
         width: t,
         height: s,
         viewBox: "0 0 24 24",
@@ -24,22 +24,22 @@ function u(e) {
 }
 var d = s(792996),
     c = s(621634);
-let p = function (e) {
+let m = function (e) {
     let {
         onPlay: t,
         externalURL: s,
         className: i,
-        renderLinkComponent: h,
-        inactive: p,
-        messageId: m,
-        channelId: g,
+        renderLinkComponent: u,
+        inactive: m,
+        messageId: p,
+        channelId: f,
     } = e;
     return (0, a.jsx)(o.Y.Consumer, {
         children: (e) =>
             (0, a.jsxs)("div", {
                 className: n()(i, c.iE, { [c.y7]: e.disableInteractions }),
                 children: [
-                    p && null == t
+                    m && null == t
                         ? (0, a.jsx)("div", {
                               className: c.P0,
                               children: (0, a.jsx)(l.PlayIcon, { size: "xs", color: "currentColor", className: c._R }),
@@ -49,23 +49,23 @@ let p = function (e) {
                         ? (0, a.jsx)(r.D, {
                               onClick: t,
                               className: c.Rw,
-                              tabIndex: p ? -1 : 0,
+                              tabIndex: m ? -1 : 0,
                               "aria-label": d.intl.string(d.t.RscU7I),
                               children: (0, a.jsx)(l.PlayIcon, { size: "xs", color: "currentColor", className: c._R }),
                           })
                         : null,
                     null != s
-                        ? h({
+                        ? u({
                               href: s,
                               target: "_blank",
                               rel: "noreferrer noopener",
                               className: c.Rw,
-                              children: (0, a.jsx)(u, {
+                              children: (0, a.jsx)(h, {
                                   "aria-label": d.intl.string(d.t.wuRE8M),
                                   className: null != t ? c._L : c.Zl,
                               }),
-                              messageId: m,
-                              channelId: g,
+                              messageId: p,
+                              channelId: f,
                           })
                         : null,
                 ],

@@ -1,21 +1,21 @@
 var l = n(477900),
     i = n(582128),
     r = n(855986),
-    s = n(531685),
-    a = n(620141),
+    a = n(531685),
+    s = n(620141),
     o = n(19309),
     u = n(224964);
 function d(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
-        l = (0, r.bG)([s.A], () => s.A.isFocused()),
-        a = (0, u.A)();
+        l = (0, r.bG)([a.A], () => a.A.isFocused()),
+        s = (0, u.A)();
     return (
         i.useEffect(() => {
             if (l && n) {
                 let e = (0, o.A)(t);
-                null != e && a.fire(e.x, e.y);
+                null != e && s.fire(e.x, e.y);
             }
-        }, [a, t, l, n]),
+        }, [s, t, l, n]),
         null
     );
 }
@@ -24,7 +24,7 @@ n.d(
     {},
     {
         A: function (e) {
-            return (0, l.jsx)(a.A, { confettiLocation: e.confettiLocation, children: (0, l.jsx)(d, { ...e }) });
+            return (0, l.jsx)(s.A, { confettiLocation: e.confettiLocation, children: (0, l.jsx)(d, { ...e }) });
         },
     },
 );

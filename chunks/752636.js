@@ -1,8 +1,8 @@
-var n = i(477900),
-    a = i(582128),
+var a = i(477900),
+    n = i(582128),
     l = i(143413),
     r = i(549587);
-let o = a.memo(r.Ay);
+let o = n.memo(r.Ay);
 i.d(
     t,
     {},
@@ -11,34 +11,34 @@ i.d(
             let {
                 message: t,
                 channel: i,
-                author: a,
+                author: n,
                 compact: r,
                 animateAvatar: s,
                 guildId: d,
-                isGroupStart: c = !0,
-                roleIcon: u,
+                isGroupStart: u = !0,
+                roleIcon: c,
                 hideTimestamp: m,
                 hideGuildTag: h,
-                preview: g,
-                avatarDecorationOverride: p,
-                avatarOverride: A,
-                usernameClassName: _,
+                preview: p,
+                avatarDecorationOverride: g,
+                avatarOverride: _,
+                usernameClassName: A,
             } = e;
-            return !(0, l.A)(t) && (c || r)
-                ? (0, n.jsx)(o, {
+            return !(0, l.A)(t) && (u || r)
+                ? (0, a.jsx)(o, {
                       message: t,
                       channel: i,
-                      author: a,
+                      author: n,
                       guildId: d,
                       compact: r,
                       animate: s,
-                      roleIcon: u,
+                      roleIcon: c,
                       hideTimestamp: m,
                       hideGuildTag: h,
-                      preview: g,
-                      avatarDecorationOverride: p,
-                      avatarOverride: A,
-                      usernameClassName: _,
+                      preview: p,
+                      avatarDecorationOverride: g,
+                      avatarOverride: _,
+                      usernameClassName: A,
                   })
                 : void 0;
         },

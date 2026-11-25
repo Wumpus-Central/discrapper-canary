@@ -1,8 +1,8 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var l = n(855986),
     i = n(773669),
     r = n(792996);
-function s(e) {
+function a(e) {
     let t,
         n =
             ((t = (0, l.bG)([i.default], () => i.default.locale.startsWith("en-"))),

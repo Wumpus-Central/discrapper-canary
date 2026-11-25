@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     PB: "roller_SRoosE",
     HD: "readable_SRoosE",
     x: "window_SRoosE",

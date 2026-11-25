@@ -4,8 +4,8 @@ var a = s(477900),
     l = s(28863),
     r = s(32880),
     o = s(129230),
-    h = s(652215),
-    u = s(792996);
+    u = s(652215),
+    h = s(792996);
 s.d(
     t,
     {},
@@ -16,45 +16,45 @@ s.d(
                     className: s,
                     iconClassName: d,
                     rel: c,
-                    target: p,
-                    mimeType: m,
-                    fileName: g,
-                    focusProps: f,
-                    onClick: v,
-                    ...y
+                    target: m,
+                    mimeType: p,
+                    fileName: f,
+                    focusProps: g,
+                    onClick: y,
+                    ...v
                 } = e,
                 S = i.useMemo(() => n.V.getDefaultLinkInterceptor(t), [t]),
                 C = i.useCallback(
                     (e) => {
-                        (o.default.track(h.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                            attachment_type: m?.[0],
-                            attachment_subtype: m?.[1],
+                        (o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                            attachment_type: p?.[0],
+                            attachment_subtype: p?.[1],
                         }),
-                            v?.(),
+                            y?.(),
                             S?.(e));
                     },
-                    [S, m, v],
+                    [S, p, y],
                 );
-            return null != g
+            return null != f
                 ? (0, a.jsx)(l.Anchor, {
                       href: t,
                       onClick: C,
-                      target: p,
+                      target: m,
                       rel: c,
                       className: s,
-                      focusProps: f,
-                      ...y,
-                      children: g,
+                      focusProps: g,
+                      ...v,
+                      children: f,
                   })
                 : (0, a.jsx)(l.Anchor, {
                       href: t,
                       onClick: C,
-                      target: p,
+                      target: m,
                       rel: c,
                       className: s,
-                      "aria-label": u.intl.string(u.t["1WjMbC"]),
-                      focusProps: f,
-                      ...y,
+                      "aria-label": h.intl.string(h.t["1WjMbC"]),
+                      focusProps: g,
+                      ...v,
                       children: (0, a.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: d }),
                   });
         },

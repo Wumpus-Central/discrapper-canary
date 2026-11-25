@@ -1,16 +1,16 @@
 var a = s(477900),
-    i = s(582128),
-    n = s(503698),
-    l = s.n(n),
-    r = s(983851),
-    o = s(358618),
+    n = s(582128),
+    i = s(503698),
+    r = s.n(i),
+    o = s(983851),
+    l = s(358618),
     h = s(793920),
-    u = s(939249),
-    d = s(122641),
-    c = s(792996),
-    p = s(28680);
-class m extends i.PureComponent {
-    _mediaBar = i.createRef();
+    d = s(939249),
+    u = s(122641),
+    p = s(792996),
+    c = s(28680);
+class g extends n.PureComponent {
+    _mediaBar = n.createRef();
     _hoverTimeout;
     state = { hovered: !1, focused: !1, dragging: !1 };
     static defaultProps = { minValue: 0, maxValue: 100, handleSize: 16 };
@@ -34,22 +34,22 @@ class m extends i.PureComponent {
         e?.();
     };
     handleKeyDown = (e) => {
-        let { minValue: t, value: s, maxValue: a, onValueChange: i } = this.props,
-            n = 0.05 * (a - t);
+        let { minValue: t, value: s, maxValue: a, onValueChange: n } = this.props,
+            i = 0.05 * (a - t);
         switch (e.key) {
             case "ArrowUp":
                 if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                     this.setState({ focused: !0 });
                     break;
                 }
-                i?.(Math.min(a, s + n));
+                n?.(Math.min(a, s + i));
                 break;
             case "ArrowDown":
                 if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
                     this.setState({ focused: !0 });
                     break;
                 }
-                i?.(Math.max(t, s - n));
+                n?.(Math.max(t, s - i));
                 break;
             case "Escape":
                 (this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault());
@@ -69,37 +69,37 @@ class m extends i.PureComponent {
                 focusProps: e,
                 iconClassName: t,
                 iconColor: s,
-                className: i,
-                sliderWrapperClassName: n,
-                sliderClassName: m,
-                currentWindow: g,
-                muted: f,
-                minValue: v,
-                maxValue: y,
-                value: S,
-                onVolumeShow: C,
-                onVolumeHide: T,
+                className: n,
+                sliderWrapperClassName: i,
+                sliderClassName: g,
+                currentWindow: v,
+                muted: m,
+                minValue: f,
+                maxValue: w,
+                value: D,
+                onVolumeShow: M,
+                onVolumeHide: b,
             } = this.props,
-            { hovered: b, focused: x, dragging: w } = this.state,
-            M = r.VoiceNormalIcon;
+            { hovered: E, focused: L, dragging: T } = this.state,
+            x = o.VoiceNormalIcon;
         return (
-            f || S === v ? (M = o.VoiceXIcon) : S < y / 2 && (M = h.VoiceLowIcon),
+            m || D === f ? (x = l.VoiceXIcon) : D < w / 2 && (x = h.VoiceLowIcon),
             (0, a.jsxs)("div", {
-                className: l()(i, p.kL),
+                className: r()(n, c.kL),
                 onMouseEnter: () => {
-                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.());
+                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), M?.());
                 },
                 onMouseLeave: () => {
                     (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            (this.setState({ hovered: !1 }), T?.());
+                            (this.setState({ hovered: !1 }), b?.());
                         }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, a.jsx)("div", {
-                        className: l()(p.QS, n, { [p.OZ]: b || x || w }),
+                        className: r()(c.QS, i, { [c.OZ]: E || L || T }),
                         onMouseEnter: () => {
                             (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
@@ -107,28 +107,28 @@ class m extends i.PureComponent {
                             (clearTimeout(this._hoverTimeout),
                                 (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150)));
                         },
-                        children: (0, a.jsx)(d.A, {
-                            className: p.YZ,
-                            sliderClassName: m,
-                            type: d.A.Types.VOLUME,
-                            value: S / y,
+                        children: (0, a.jsx)(u.A, {
+                            className: c.YZ,
+                            sliderClassName: g,
+                            type: u.A.Types.VOLUME,
+                            value: D / w,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: g,
+                            currentWindow: v,
                             ref: this._mediaBar,
                         }),
                     }),
-                    (0, a.jsx)(u.D, {
+                    (0, a.jsx)(d.D, {
                         focusProps: e,
-                        className: p.bk,
-                        "aria-label": c.intl.string(c.t["19lt24"]),
+                        className: c.bk,
+                        "aria-label": p.intl.string(p.t["19lt24"]),
                         onClick: this.handleToggleMute,
-                        children: (0, a.jsx)(M, { color: s, className: t }),
+                        children: (0, a.jsx)(x, { color: s, className: t }),
                     }),
                 ],
             })
         );
     }
 }
-s.d(t, {}, { A: m });
+s.d(t, {}, { A: g });

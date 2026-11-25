@@ -52,9 +52,9 @@ var V = t(380610),
     K = t(780788),
     F = t(333421),
     q = t(100392),
-    Z = t(950980),
-    W = t(836156);
-let X = a.lazy(async () => ({
+    X = t(950980),
+    Z = t(836156);
+let W = a.lazy(async () => ({
         default: (
             await Promise.all([t.e(503634), t.e(761764), t.e(60800), t.e(218126), t.e(467696)]).then(t.bind(t, 881267))
         ).PlaygroundEmbed,
@@ -275,18 +275,18 @@ function em(e) {
                             {
                                 children: [
                                     (0, l.jsx)("span", { children: i }),
-                                    (0, l.jsx)(Z.ExperimentEmbed, { url: i }),
+                                    (0, l.jsx)(X.ExperimentEmbed, { url: i }),
                                 ],
                             },
                             t.key,
                         )
-                      : (0, W.i)(i)
+                      : (0, Z.i)(i)
                         ? (0, l.jsx)(
                               a.Fragment,
                               {
                                   children: (0, l.jsxs)(a.Suspense, {
                                       fallback: null,
-                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(X, { url: i })],
+                                      children: [(0, l.jsx)("span", { children: i }), (0, l.jsx)(W, { url: i })],
                                   }),
                               },
                               t.key,

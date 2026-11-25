@@ -23,10 +23,10 @@ n.d(
                 I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
                 v = I?.roles,
                 j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(u.m), [v, n]),
-                [b] = (0, l.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
+                [y] = (0, l.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
             if (null == A) return null;
-            let y = b && null != I;
-            return 0 !== j.length || y
+            let b = y && null != I;
+            return 0 !== j.length || b
                 ? (0, i.jsx)(g.A, {
                       heading: h.intl.string(h.t["LPJmL/"]),
                       scrollTargetId: m.bk.ROLES,

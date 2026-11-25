@@ -1,25 +1,25 @@
 var a = s(477900),
-    i = s(582128),
-    n = s(503698),
-    l = s.n(n),
-    r = s(615300),
-    o = s(913483);
+    n = s(582128),
+    i = s(503698),
+    r = s.n(i),
+    o = s(615300),
+    l = s(913483);
 let h = { friction: 14, tension: 200 },
-    u = { DURATION: "DURATION", VOLUME: "VOLUME" };
-function d(e) {
+    d = { DURATION: "DURATION", VOLUME: "VOLUME" };
+function u(e) {
     let t = 0 | e,
         s = t % 60;
     return `${(t - s) / 60}:${String(s).padStart(2, "0")}`;
 }
-class c extends i.Component {
-    static Types = u;
+class p extends n.Component {
+    static Types = d;
     static defaultProps = { currentWindow: window };
     state = {
-        animatedProgress: new r.A.Value(0),
+        animatedProgress: new o.A.Value(0),
         dragging: !1,
         offsetLeft: 0,
         offsetWidth: 0,
-        previewWidth: new r.A.Value(0),
+        previewWidth: new o.A.Value(0),
     };
     wrapper;
     bubble;
@@ -43,7 +43,7 @@ class c extends i.Component {
             state: { dragging: t, previewWidth: s },
             props: { value: a },
         } = this;
-        t || null == e || (e.innerText = d(s._value * a));
+        t || null == e || (e.innerText = u(s._value * a));
     };
     handleAnimatedChange = () => {
         let {
@@ -51,16 +51,16 @@ class c extends i.Component {
             state: { dragging: t, animatedProgress: s },
             props: { value: a },
         } = this;
-        t && null != e && (e.innerText = d(s._value * a));
+        t && null != e && (e.innerText = u(s._value * a));
     };
     componentDidUpdate(e, t) {
-        let { dragging: s, previewWidth: a, animatedProgress: i } = this.state;
-        !s && t.dragging && a.setValue(i._value);
+        let { dragging: s, previewWidth: a, animatedProgress: n } = this.state;
+        !s && t.dragging && a.setValue(n._value);
     }
     setGrabber(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             { animatedProgress: s } = this.state;
-        t ? r.A.spring(s, { toValue: e, ...h }).start() : s.setValue(e);
+        t ? o.A.spring(s, { toValue: e, ...h }).start() : s.setValue(e);
     }
     calculatePercentage(e, t) {
         let {
@@ -68,32 +68,32 @@ class c extends i.Component {
             props: { type: a },
         } = this;
         if (null == s) return 0;
-        let { left: i, width: n, bottom: l, height: r } = s.getBoundingClientRect();
-        return Math.min(1, Math.max(0, a === u.VOLUME ? (l - t) / r : (e - i) / n));
+        let { left: n, width: i, bottom: r, height: o } = s.getBoundingClientRect();
+        return Math.min(1, Math.max(0, a === d.VOLUME ? (r - t) / o : (e - n) / i));
     }
     handleMouseMove = (e) => {
         let { dragging: t, previewWidth: s } = this.state;
         if (t) return;
-        let { clientX: a, clientY: i } = e;
-        s.setValue(this.calculatePercentage(a, i));
+        let { clientX: a, clientY: n } = e;
+        s.setValue(this.calculatePercentage(a, n));
     };
     handleDragMove = (e) => {
         let { onDrag: t, type: s } = this.props,
-            { clientX: a, clientY: i } = e;
-        t(this.calculatePercentage(a, i), s);
+            { clientX: a, clientY: n } = e;
+        t(this.calculatePercentage(a, n), s);
     };
     handleDragStart = (e) => {
-        let { onDragStart: t, onDrag: s, type: a, currentWindow: i } = this.props,
-            { clientX: n, clientY: l } = e;
+        let { onDragStart: t, onDrag: s, type: a, currentWindow: n } = this.props,
+            { clientX: i, clientY: r } = e;
         if ((e.preventDefault(), null == this.wrapper)) return;
-        let { left: r, width: o } = this.wrapper.getBoundingClientRect();
-        this.setState({ dragging: !0, offsetLeft: r, offsetWidth: o }, () => {
+        let { left: o, width: l } = this.wrapper.getBoundingClientRect();
+        this.setState({ dragging: !0, offsetLeft: o, offsetWidth: l }, () => {
             (t(a),
-                s(this.calculatePercentage(n, l), a),
-                i.removeEventListener("mouseup", this.handleDragEnd, !1),
-                i.removeEventListener("mousemove", this.handleDragMove, !1),
-                i.addEventListener("mouseup", this.handleDragEnd, !1),
-                i.addEventListener("mousemove", this.handleDragMove, !1));
+                s(this.calculatePercentage(i, r), a),
+                n.removeEventListener("mouseup", this.handleDragEnd, !1),
+                n.removeEventListener("mousemove", this.handleDragMove, !1),
+                n.addEventListener("mouseup", this.handleDragEnd, !1),
+                n.addEventListener("mousemove", this.handleDragMove, !1));
         });
     };
     handleDragEnd = () => {
@@ -111,47 +111,47 @@ class c extends i.Component {
               : null != e.refs && (this.bubble = e.refs.node);
     };
     render() {
-        let { buffers: e, type: t, className: s, sliderClassName: i } = this.props,
-            { dragging: n, previewWidth: h, animatedProgress: d } = this.state,
-            c = n ? d : h;
+        let { buffers: e, type: t, className: s, sliderClassName: n } = this.props,
+            { dragging: i, previewWidth: h, animatedProgress: u } = this.state,
+            p = i ? u : h;
         return (0, a.jsx)("div", {
-            className: l()(s, t === u.VOLUME ? o.Vd : o.xM),
+            className: r()(s, t === d.VOLUME ? l.Vd : l.xM),
             children: (0, a.jsx)("div", {
-                className: l()(i, n ? o.h4 : o.GU, t === u.VOLUME ? o.iR : null),
+                className: r()(n, i ? l.h4 : l.GU, t === d.VOLUME ? l.iR : null),
                 onMouseDown: this.handleDragStart,
                 onMouseMove: this.handleMouseMove,
                 ref: (e) => {
                     this.wrapper = e;
                 },
                 children: (0, a.jsxs)("div", {
-                    className: l()(o.HY, t === u.VOLUME ? o.xw : null),
+                    className: r()(l.HY, t === d.VOLUME ? l.xw : null),
                     children: [
                         null != e
                             ? e.map((e, t) => {
-                                  let [s, i] = e;
+                                  let [s, n] = e;
                                   return (0, a.jsx)(
                                       "div",
-                                      { className: o.r, style: { width: `${100 * i}%`, left: `${100 * s}%` } },
+                                      { className: l.r, style: { width: `${100 * n}%`, left: `${100 * s}%` } },
                                       t,
                                   );
                               })
                             : null,
-                        t === u.DURATION
-                            ? (0, a.jsx)(r.A.div, {
-                                  className: o.mk,
+                        t === d.DURATION
+                            ? (0, a.jsx)(o.A.div, {
+                                  className: l.mk,
                                   style: { width: h.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
                               })
                             : null,
-                        (0, a.jsx)(r.A.div, {
-                            className: o.vG,
-                            style: { width: d.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
-                            children: (0, a.jsx)("span", { className: o.Pq }),
+                        (0, a.jsx)(o.A.div, {
+                            className: l.vG,
+                            style: { width: u.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
+                            children: (0, a.jsx)("span", { className: l.Pq }),
                         }),
-                        t === u.DURATION
-                            ? (0, a.jsx)(r.A.div, {
+                        t === d.DURATION
+                            ? (0, a.jsx)(o.A.div, {
                                   ref: this.setBubbleRef,
-                                  className: o.Tq,
-                                  style: { left: c.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
+                                  className: l.Tq,
+                                  style: { left: p.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
                               })
                             : null,
                     ],
@@ -160,4 +160,4 @@ class c extends i.Component {
         });
     }
 }
-s.d(t, {}, { A: c });
+s.d(t, {}, { A: p });

@@ -4,7 +4,7 @@ var a = s(621466),
     l = s(544180),
     r = s(129230),
     o = s(652215);
-let h = (0, n.mj)({
+let u = (0, n.mj)({
     name: "2026-03-media-play-metrics",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -31,7 +31,7 @@ s.d(
             lastPlayingTime;
             analyticsEnabled;
             constructor(e) {
-                ((this.metadata = e), (this.analyticsEnabled = h.getConfig({ location: "media_player" }).enabled));
+                ((this.metadata = e), (this.analyticsEnabled = u.getConfig({ location: "media_player" }).enabled));
             }
             moveToState(e) {
                 ((this.stateTime = performance.now()), (this.currentState = e));
