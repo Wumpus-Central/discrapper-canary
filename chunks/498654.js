@@ -6,8 +6,10 @@ e.exports = {
     ld: "items_Tek8Yo",
     AS: "item_Tek8Yo",
     Nr: "card_Tek8Yo",
+    uB: "ownedPreview_Tek8Yo",
+    Q$: "ownedCard_Tek8Yo",
+    _0: "detail_Tek8Yo",
     qV: "skeleton_Tek8Yo",
     Zl: "skeletonBar_Tek8Yo",
-    _0: "detail_Tek8Yo",
     JW: "detailContent_Tek8Yo",
 };

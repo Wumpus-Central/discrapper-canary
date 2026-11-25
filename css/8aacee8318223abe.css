@@ -84,6 +84,14 @@
     transform: scale(1.06767)
 }
 
+.ownedPreview_Tek8Yo {
+    opacity: .5
+}
+
+.ownedCard_Tek8Yo .detail_Tek8Yo {
+    display: none
+}
+
 .item_Tek8Yo>.card_Tek8Yo:after {
     z-index: 2
 }
@@ -170,4 +178,4 @@
     min-width: 320px
 }
 
-/*# sourceMappingURL=33311d3d553c3960.css.map*/
+/*# sourceMappingURL=8aacee8318223abe.css.map*/
