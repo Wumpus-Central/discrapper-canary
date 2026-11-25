@@ -5102,9 +5102,8 @@ function aJ(e) {
         p = s.y - f;
     return (0, i.jsx)("div", { className: a$.kL, style: { transform: `translate3d(${h}px, ${p}px, 0)` }, children: d });
 }
-var aQ = n(151869);
-n(839272);
-var a0 = n(540185);
+var aQ = n(151869),
+    a0 = n(540185);
 function a1(e) {
     let t,
         { addableWidgets: n, applicationAffinityData: i, hasClips: l } = e,
@@ -5128,7 +5127,7 @@ function a1(e) {
                 let { isConnected: n, lastPlayedAt: i } = e;
                 return n || (null != i && t - i < 7776e6);
             })
-            .toSorted((e, t) => {
+            .sort((e, t) => {
                 if (e.isConnected !== t.isConnected) return e.isConnected ? -1 : 1;
                 let n = t.totalPlayDuration - e.totalPlayDuration;
                 return 0 !== n ? n : (t.lastPlayedAt ?? 0) - (e.lastPlayedAt ?? 0);
