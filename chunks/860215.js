@@ -1,52 +1,57 @@
-n.d(t, { rV: () => S, _5: () => g });
+n.d(t, { rV: () => v, _5: () => P });
 var l = n(477900),
     r = n(582128),
     i = n(20742),
     a = n(430993),
-    s = n(834730),
-    u = n(534479),
-    c = n(708146),
-    o = n(977445),
-    d = n(624210);
-let h = (0, n(945810).mj)({
+    s = n(331322),
+    u = n(834730),
+    c = n(821609),
+    o = n(534479),
+    d = n(708146),
+    h = n(977445),
+    p = n(624210);
+let f = (0, n(945810).mj)({
     name: "2026-06-otp-orders-phase-1",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var p = n(937427),
-    f = n(120700),
-    m = n(818348);
-let C = new Set([f.C.COLLECTIBLES_CHECKOUT, f.C.SLAYER_STOREFRONT_CHECKOUT]);
-var y = n(169797),
-    _ = n(792996);
-let E = r.createContext({ order: null, isOrderCreationEnabled: !1 });
-function g() {
-    return r.useContext(E);
+var m = n(937427),
+    C = n(129230),
+    y = n(120700),
+    _ = n(652215),
+    E = n(818348);
+let g = new Set([y.C.COLLECTIBLES_CHECKOUT, y.C.SLAYER_STOREFRONT_CHECKOUT]);
+var S = n(169797),
+    I = n(792996);
+let A = r.createContext({ order: null, isOrderCreationEnabled: !1 });
+function P() {
+    return r.useContext(A);
 }
-function I(e) {
+function x(e) {
     let { renderModalProps: t, children: n } = e,
         r = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(i.rQ, {}), (0, l.jsx)(a.c, { children: n })] });
-    return null != t ? (0, l.jsx)(y.Jg, { ...t, children: r }) : r;
+    return null != t ? (0, l.jsx)(S.Jg, { ...t, children: r }) : r;
 }
-function S(e) {
+function v(e) {
     let {
             loadId: t,
             skuIDs: n,
             applicationId: i,
             paymentGateway: a,
-            checkoutFlow: f,
-            isGift: y,
-            onOrderCreated: g,
-            renderModalProps: S,
-            children: A,
+            checkoutFlow: y,
+            isGift: S,
+            onOrderCreated: P,
+            renderModalProps: v,
+            children: R,
         } = e,
         {
-            order: P,
-            isCreateOrderLoading: x,
-            createOrderError: v,
-            shouldBlockOnOrderCreation: R,
-            isOrderCreationEnabled: T,
+            order: T,
+            isCreateOrderLoading: M,
+            createOrderError: b,
+            retryCreateOrder: L,
+            shouldBlockOnOrderCreation: k,
+            isOrderCreationEnabled: N,
         } = (function (e) {
             let t,
                 {
@@ -56,53 +61,64 @@ function S(e) {
                     checkoutFlow: a,
                     isGift: s,
                     loadId: u,
-                    onOrderCreated: f,
+                    onOrderCreated: c,
                 } = e,
-                y = h.useConfig({ location: "payment_modal" }).enabled,
-                _ = i === m.kM.VIRTUAL_CURRENCY,
-                E = null != a && C.has(a),
-                g = (t = !!_ || (!!E && !0 !== s && y)),
-                I = null != n ? n[0] : void 0,
-                [S, A] = (0, r.useState)(null),
+                o = f.useConfig({ location: "payment_modal" }).enabled,
+                y = i === E.kM.VIRTUAL_CURRENCY,
+                S = null != a && g.has(a),
+                I = (t = !!y || (!!S && !0 !== s && o)),
+                A = null != n ? n[0] : void 0,
                 [P, x] = (0, r.useState)(null),
-                [v, R] = (0, r.useState)(g),
-                T = (0, r.useRef)(!1),
-                M = (0, r.useCallback)(
+                [v, R] = (0, r.useState)(null),
+                [T, M] = (0, r.useState)(I),
+                b = (0, r.useRef)(!1),
+                L = (0, r.useCallback)(
                     async (e) => {
                         let { skuId: t } = e;
-                        R(!0);
+                        (M(!0), R(null));
                         try {
-                            let e = null != l && (0, o.Fs)(l),
-                                n = await (0, d.fS)({
+                            let e = null != l && (0, h.Fs)(l),
+                                n = await (0, p.fS)({
                                     skuId: t,
                                     paymentGateway: i,
                                     loadId: u,
                                     testMode: e,
-                                    promotionIdOverride: p.A.getPromotionIdOverride(),
+                                    promotionIdOverride: m.A.getPromotionIdOverride(),
                                 });
-                            (A(n), null != f && f(n));
-                        } catch (e) {
-                            x(
-                                c.r.report(
-                                    { site: "order_create", extra: { skuId: t, paymentGateway: String(i), loadId: u } },
-                                    e,
-                                ),
+                            (x(n), null != c && c(n));
+                        } catch (n) {
+                            let e = d.r.report(
+                                { site: "order_create", extra: { skuId: t, paymentGateway: String(i), loadId: u } },
+                                n,
                             );
+                            (C.default.track(_.HAw.PAYMENT_FLOW_ERROR, {
+                                load_id: u,
+                                sku_id: t,
+                                payment_gateway: i,
+                                checkout_flow: a,
+                                error_message: e.message,
+                                crashed: !1,
+                            }),
+                                R(e));
                         } finally {
-                            R(!1);
+                            M(!1);
                         }
                     },
-                    [l, i, u, f],
-                );
+                    [l, i, a, u, c],
+                ),
+                k = (0, r.useCallback)(() => {
+                    null != A && L({ skuId: A });
+                }, [A, L]);
             return (
                 (0, r.useEffect)(() => {
-                    t && null != I && (null != S || null != P || T.current || ((T.current = !0), M({ skuId: I })));
-                }, [I, t, S, M, P]),
+                    t && null != A && (null != P || null != v || b.current || ((b.current = !0), L({ skuId: A })));
+                }, [A, t, P, L, v]),
                 {
-                    order: S,
-                    isCreateOrderLoading: v,
-                    createOrderError: P,
-                    shouldBlockOnOrderCreation: g,
+                    order: P,
+                    isCreateOrderLoading: T,
+                    createOrderError: v,
+                    retryCreateOrder: k,
+                    shouldBlockOnOrderCreation: I,
                     isOrderCreationEnabled: t,
                 }
             );
@@ -110,19 +126,26 @@ function S(e) {
             skuIDs: n,
             applicationId: i,
             paymentGateway: a,
-            checkoutFlow: f,
-            isGift: y,
+            checkoutFlow: y,
+            isGift: S,
             loadId: t,
-            onOrderCreated: g,
+            onOrderCreated: P,
         }),
-        M = r.useMemo(() => ({ order: P, isOrderCreationEnabled: T }), [P, T]);
-    if (R) {
-        if (x) return (0, l.jsx)(I, { renderModalProps: S, children: (0, l.jsx)(u.A, {}) });
-        else if (null != v)
-            return (0, l.jsx)(I, {
-                renderModalProps: S,
-                children: (0, l.jsx)(s.E, { variant: "body-md/normal", children: _.intl.string(_.t.F8FvUy) }),
+        j = r.useMemo(() => ({ order: T, isOrderCreationEnabled: N }), [T, N]);
+    if (k) {
+        if (M) return (0, l.jsx)(x, { renderModalProps: v, children: (0, l.jsx)(o.A, {}) });
+        else if (null != b)
+            return (0, l.jsx)(x, {
+                renderModalProps: v,
+                children: (0, l.jsxs)(s.B, {
+                    gap: 16,
+                    align: "start",
+                    children: [
+                        (0, l.jsx)(u.E, { variant: "body-md/normal", children: b.getUserFacingMessage() }),
+                        (0, l.jsx)(c.$, { text: I.intl.string(I.t["7NqTJn"]), onClick: L }),
+                    ],
+                }),
             });
     }
-    return (0, l.jsx)(E.Provider, { value: M, children: A });
+    return (0, l.jsx)(A.Provider, { value: j, children: R });
 }
