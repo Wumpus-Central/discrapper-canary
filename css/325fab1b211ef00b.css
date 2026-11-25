@@ -60,7 +60,7 @@
 
 .tabListScroller_y4ZEM5 {
     flex: 0 1 auto;
-    margin-block: -4px -14px;
+    margin-block: -4px;
     margin-inline: calc(-4px + var(--custom-modal-v2-gutter)) -4px;
     padding-block: 4px;
     padding-inline: 4px calc(4px + var(--custom-modal-v2-tabpanel-scrollbar-offset));
@@ -107,7 +107,7 @@
     height: 100%;
     padding-inline-end: var(--custom-modal-v2-tabpanel-scrollbar-offset);
     padding-bottom: var(--space-32);
-    padding-top: var(--space-20)
+    padding-top: var(--space-10)
 }
 
 .has-webkit-scrollbar .tabPanelScroller_y4ZEM5 {
@@ -144,4 +144,4 @@
     margin: 0
 }
 
-/*# sourceMappingURL=a94a5bd4a740cf6c.css.map*/
+/*# sourceMappingURL=325fab1b211ef00b.css.map*/
