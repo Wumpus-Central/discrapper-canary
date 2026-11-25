@@ -1037,7 +1037,7 @@ function iE(e) {
         }),
     });
 }
-var iy = s(784560);
+var iy = s(304597);
 function iS(e) {
     let { hideRestrictedProfile: i, ...s } = e,
         { user: u } = s,

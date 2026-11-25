@@ -5165,17 +5165,6 @@
     }
   },
   {
-    "name": "2026-10-profile-default-tab-with-content",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      }
-    }
-  },
-  {
     "name": "2026-10-profile-nitro-upsell-refresh",
     "kind": "user",
     "defaultConfig": {
