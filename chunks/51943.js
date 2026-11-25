@@ -4,8 +4,8 @@ var i = n(477900),
     s = n(3026),
     a = n(462887),
     o = n(778712),
-    d = n(939249),
-    u = n(664343),
+    u = n(939249),
+    d = n(664343),
     c = n(97808),
     g = n(834730),
     m = n(442433),
@@ -22,17 +22,17 @@ n.d(
     {},
     {
         A: function (e) {
-            let { user: t, guild: j, nick: y, onSelect: b } = e,
+            let { user: t, guild: j, nick: b, onSelect: y } = e,
                 { theme: C, themeType: E } = (0, p.E)(),
                 S = t.hasAvatarForGuild(j.id),
                 N = l.useId(),
                 k = A.intl.formatToPlainString(A.t.Ce2iXp, { guildName: j.name });
-            return (0, i.jsxs)(d.D, {
+            return (0, i.jsxs)(u.D, {
                 focusProps: E === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
                 className: I.nM,
                 "aria-label": k,
-                "aria-describedby": S || null != y ? N : void 0,
-                onClick: b,
+                "aria-describedby": S || null != b ? N : void 0,
+                onClick: y,
                 onContextMenu: function (e) {
                     (0, m.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -174,7 +174,8 @@ n.d(
                             n.e(726399),
                             n.e(424216),
                             n.e(842429),
-                            n.e(921596),
+                            n.e(304350),
+                            n.e(22865),
                             n.e(173896),
                             n.e(57358),
                             n.e(580305),
@@ -646,7 +647,7 @@ n.d(
                         badgeStrokeColor: (0, a.M)(C)
                             ? r.A.unsafe_rawColors.PRIMARY_600.css
                             : r.A.unsafe_rawColors.WHITE.css,
-                        badgeTooltipColor: u.oM.PRIMARY,
+                        badgeTooltipColor: d.oM.PRIMARY,
                         badgeTooltipDelay: 300,
                         size: f.Ay.Sizes.MEDIUM,
                         active: !0,
@@ -670,17 +671,17 @@ n.d(
                                             variant: "body-xs/medium",
                                             children: (0, i.jsx)(s.A, {
                                                 delay: 300,
-                                                children: y ?? h.Ay.getName(j.id, void 0, t),
+                                                children: b ?? h.Ay.getName(j.id, void 0, t),
                                             }),
                                         }),
                                     ],
                                 }),
                             !S &&
-                                null != y &&
+                                null != b &&
                                 (0, i.jsx)(g.E, {
                                     id: N,
                                     variant: "body-xs/medium",
-                                    children: (0, i.jsx)(s.A, { delay: 300, children: y }),
+                                    children: (0, i.jsx)(s.A, { delay: 300, children: b }),
                                 }),
                         ],
                     }),

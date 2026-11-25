@@ -1,0 +1,34 @@
+.memberSinceWrapper_EhAvF- {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.memberSince_EhAvF- {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.guildIcon_EhAvF- {
+    border-radius: var(--radius-xs)
+}
+
+.discordIcon_EhAvF- {
+    color: var(--text-subtle);
+    height: 16px;
+    width: 16px
+}
+
+.divider_EhAvF- {
+    background-color: var(--text-subtle);
+    border-radius: 50%;
+    height: 4px;
+    width: 4px
+}
+
+.enable-forced-colors .divider_EhAvF- {
+    background-color: CanvasText
+}
+
+/*# sourceMappingURL=0573e884189bc0a4.css.map*/
