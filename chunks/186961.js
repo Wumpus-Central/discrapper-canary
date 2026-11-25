@@ -428,7 +428,7 @@ let eM = new Set([
                     caption: (0, i.jsx)("img", { src: e_.A, alt: "Voicemod" }),
                     title: O.intl.string(ep.default.pkGxhZ),
                     previewImage:
-                        "https://cdn.discordapp.com/assets/content/172748c81c3d0208e7c0ee05aa10cb89d63655350cc95feeab0f54ea4bfdf699.png",
+                        "https://cdn.discordapp.com/assets/content/d64968f84d9c3ff6c2a731f6744e7af9e1beb7bdc9967a49749657dde0b6da45.png",
                     description: O.intl.format(ep.default["4ABTfP"], {
                         termsUrl: V.A.getArticleURL(ec.MVz.VOICEMOD_PROMOTION),
                     }),
@@ -491,10 +491,10 @@ let eM = new Set([
                     b = [
                         ...(l ? [N.N.MACARON] : []),
                         ...(n ? [N.N.YOUTUBE] : []),
+                        ...(o && u ? [N.N.VOICEMOD] : []),
                         ...(a && (n || l) ? [N.N.XBOX_PARTNER_PASS] : []),
                         ...(d ? [N.N.CODE_BLURPLE] : []),
                         ...(t || s ? [N.N.THREE_P_PROMOTIONS] : []),
-                        ...(o && u ? [N.N.VOICEMOD] : []),
                         ...(e ? [N.N.ORB_MULTIPLIER] : []),
                         ...(m ? [N.N.PREMIUM_GROUP] : []),
                         N.N.DISPLAY_NAME_STYLES,

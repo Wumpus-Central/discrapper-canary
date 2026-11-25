@@ -366,7 +366,7 @@ let er =
     es =
         "https://cdn.discordapp.com/assets/content/6bbac5a155872455d86969ce5309725d9aa0317ba3b104b3027716e70040e11f.webp",
     ed =
-        "https://cdn.discordapp.com/assets/content/b4e635dddd9f115499c50420e0907e9f67ebf645f688bd1cb5583441f109ff5c.png",
+        "https://cdn.discordapp.com/assets/content/76f19b9f01c1c098511dcc09090cfac5a68ee07fda021bac227df6dfc75bac51.png",
     ec =
         "https://cdn.discordapp.com/assets/content/9fc3dd18f3074d23a9bf78be5287bf7a727597c962ea220a0ebda311fd7997ea.webp";
 function eu(e, t) {

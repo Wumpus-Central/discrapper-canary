@@ -1826,7 +1826,8 @@ function iH(e) {
                                   isThirdPartyPerk: !0,
                                   caption: (0, o.jsx)("img", { src: iL.A, alt: "Voicemod" }),
                                   backgroundAssetUrl:
-                                      "https://cdn.discordapp.com/assets/content/d78c7ca47e2f2bf66dcc2fb12a7b190392672d4c44d6138f26b011f8bd923fff.png",
+                                      "https://cdn.discordapp.com/assets/content/23ff9f25ac6efd389d67344c19a24180cdaee8313c2ac6a04c308333fb5a280c.png",
+                                  blurTint: "#1C163A",
                                   progress: x.getDate() / h,
                                   ctaText: ey.intl.string(iO.default.vlafDc),
                                   onCtaClick: () =>
