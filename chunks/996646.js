@@ -1122,7 +1122,7 @@ function eL() {
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: (0, l.jsx)(s.Y, {
                         targetElementRef: v,
-                        shouldShow: A,
+                        shouldShow: I && A,
                         onRequestClose: o.jD,
                         position: "bottom",
                         align: "left",

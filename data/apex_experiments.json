@@ -2349,6 +2349,10 @@
       "2": {
         "enabled": true,
         "newTabExperience": "friends"
+      },
+      "3": {
+        "enabled": true,
+        "newTabExperience": "quickswitcher"
       }
     }
   },

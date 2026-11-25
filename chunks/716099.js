@@ -19,6 +19,8 @@ n.d(
                     return ((0, l.l7)(e), !0);
                 case "popout":
                     return ((0, r.WU)("NEW_TAB_POPOUT", "", { isTabPicker: !0 }), !0);
+                case "quickswitcher":
+                    return ((0, r.WU)("NEW_TAB_QUICKSWITCHER", "", { isTabPicker: !0 }), !0);
             }
         },
     },
