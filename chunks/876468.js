@@ -4,7 +4,6 @@ e.exports = {
     Fb: "emojiPicker_vhuLMo",
     uK: "bodyWrapper_vhuLMo",
     wx: "header_vhuLMo",
-    fx: "diversitySelector_vhuLMo",
     qV: "inspector_vhuLMo",
     Iy: "emojiPickerListWrapper_vhuLMo",
     jv: "categoryList_vhuLMo",

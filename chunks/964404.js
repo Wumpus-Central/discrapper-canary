@@ -7,12 +7,13 @@ n(677313);
 var o = n(185928),
     d = n(355097);
 n(652215);
-var c = n(698279);
+var c = n(698279),
+    u = n(627167);
 n(276831);
-let u = (window.innerWidth - 240) / 2,
-    _ = null,
-    E = {};
-class A extends a.Ay.DeviceSettingsStore {
+let _ = (window.innerWidth - 240) / 2,
+    E = null,
+    A = {};
+class f extends a.Ay.DeviceSettingsStore {
     static displayName = "UnsyncedUserSettingsStore";
     static persistKey = "UnsyncedUserSettingsStore";
     static migrations = [
@@ -55,115 +56,119 @@ class A extends a.Ay.DeviceSettingsStore {
         },
     ];
     initialize(e) {
-        (E = e ?? {}).hdrDynamicRange = E.hdrDynamicRange ?? "no-limit";
+        (A = e ?? {}).hdrDynamicRange = A.hdrDynamicRange ?? "no-limit";
     }
     getUserAgnosticState() {
-        return E;
+        return A;
     }
     get lowQualityImageMode() {
-        return E.lowQualityImageMode ?? !1;
+        return A.lowQualityImageMode ?? !1;
     }
     get videoUploadQuality() {
-        return E.videoUploadQuality ?? "standard";
+        return A.videoUploadQuality ?? "standard";
     }
     get dataSavingMode() {
-        return E.dataSavingMode ?? E.lowQualityImageMode ?? !1;
+        return A.dataSavingMode ?? A.lowQualityImageMode ?? !1;
     }
     get expressionPickerWidth() {
-        return E.expressionPickerWidth ?? c.wp.MIN;
+        return A.expressionPickerWidth ?? c.wp.MIN;
     }
     get expressionPickerHeight() {
-        return E.expressionPickerHeight;
+        return A.expressionPickerHeight;
+    }
+    get emojiPickerSortOrder() {
+        let e = A.emojiPickerSortOrder;
+        return null != e && Object.values(u.N).includes(e) ? e : u.N.DEFAULT;
     }
     get messageRequestSidebarWidth() {
-        return E.messageRequestSidebarWidth ?? 650;
+        return A.messageRequestSidebarWidth ?? 650;
     }
     get threadSidebarWidth() {
-        return E.threadSidebarWidth ?? 480;
+        return A.threadSidebarWidth ?? 480;
     }
     get postSidebarWidth() {
-        return E.postSidebarWidth ?? u;
+        return A.postSidebarWidth ?? _;
     }
     get callChatSidebarWidth() {
-        return E.callChatSidebarWidth ?? 480;
+        return A.callChatSidebarWidth ?? 480;
     }
     get stageAudienceSidebarWidth() {
-        return E.stageAudienceSidebarWidth ?? 320;
+        return A.stageAudienceSidebarWidth ?? 320;
     }
     get homeSidebarWidth() {
-        return E.homeSidebarWidth ?? (null == _ && (_ = Math.max((window.innerWidth - 240) * 0.4, 480)), _);
+        return A.homeSidebarWidth ?? (null == E && (E = Math.max((window.innerWidth - 240) * 0.4, 480)), E);
     }
     get callHeaderHeight() {
-        return E.callHeaderHeight;
+        return A.callHeaderHeight;
     }
     get useSystemTheme() {
-        return E.useSystemTheme ?? o.Q_.UNSET;
+        return A.useSystemTheme ?? o.Q_.UNSET;
     }
     get activityPanelHeight() {
-        return E.activityPanelHeight;
+        return A.activityPanelHeight;
     }
     get disableVoiceChannelChangeAlert() {
-        return E.disableVoiceChannelChangeAlert ?? !1;
+        return A.disableVoiceChannelChangeAlert ?? !1;
     }
     get disableEmbeddedActivityPopOutAlert() {
-        return E.disableEmbeddedActivityPopOutAlert ?? !1;
+        return A.disableEmbeddedActivityPopOutAlert ?? !1;
     }
     get disableActivityHardwareAccelerationPrompt() {
-        return E.disableActivityHardwareAccelerationPrompt ?? !1;
+        return A.disableActivityHardwareAccelerationPrompt ?? !1;
     }
     get disableInviteWithTextChannelActivityLaunch() {
-        return E.disableInviteWithTextChannelActivityLaunch ?? !1;
+        return A.disableInviteWithTextChannelActivityLaunch ?? !1;
     }
     get disableHideSelfStreamAndVideoConfirmationAlert() {
-        return E.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
+        return A.disableHideSelfStreamAndVideoConfirmationAlert ?? !1;
     }
     get pushUpsellUserSettingsDismissed() {
-        return E.pushUpsellDismissed ?? !1;
+        return A.pushUpsellDismissed ?? !1;
     }
     get disableActivityHostLeftNitroUpsell() {
-        return E.disableActivityHostLeftNitroUpsell ?? !1;
+        return A.disableActivityHostLeftNitroUpsell ?? !1;
     }
     get disableCallUserConfirmationPrompt() {
-        return E.disableCallUserConfirmationPrompt ?? !1;
+        return A.disableCallUserConfirmationPrompt ?? !1;
     }
     get disableApplicationSubscriptionCancellationSurvey() {
-        return E.disableApplicationSubscriptionCancellationSurvey ?? !1;
+        return A.disableApplicationSubscriptionCancellationSurvey ?? !1;
     }
     get allowConjureRunInBackground() {
-        return E.allowConjureRunInBackground ?? !0;
+        return A.allowConjureRunInBackground ?? !0;
     }
     get darkSidebar() {
-        return E.darkSidebar ?? !1;
+        return A.darkSidebar ?? !1;
     }
     get saveCameraUploadsToDevice() {
-        return E.saveCameraUploadsToDevice ?? !0;
+        return A.saveCameraUploadsToDevice ?? !0;
     }
     isVisualRefreshDisabled(e) {
-        return E.disableVisualRefresh ?? e;
+        return A.disableVisualRefresh ?? e;
     }
     get listDensity() {
-        return E.listDensity ?? d.YP.COZY;
+        return A.listDensity ?? d.YP.COZY;
     }
     get hdrDynamicRange() {
-        return E.hdrDynamicRange ?? "no-limit";
+        return A.hdrDynamicRange ?? "no-limit";
     }
     get pauseSelfStreamPreviewWhenUnfocused() {
-        return E.pauseSelfStreamPreviewWhenUnfocused ?? !0;
+        return A.pauseSelfStreamPreviewWhenUnfocused ?? !0;
     }
     get videoBackground() {
-        return E.videoBackground ?? null;
+        return A.videoBackground ?? null;
     }
 }
-let f = new A(l.h, {
+let h = new f(l.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
-        E = { ...E, ...e.settings };
+        A = { ...A, ...e.settings };
     },
     LOGOUT: function () {
-        E = { useSystemTheme: E.useSystemTheme };
+        A = { useSystemTheme: A.useSystemTheme };
     },
     LOGIN_SUCCESS: function () {
-        null == E && (E = {});
+        null == A && (A = {});
     },
     REGISTER_SUCCESS: function () {},
 });
-n.d(t, {}, { Ay: f });
+n.d(t, {}, { Ay: h });

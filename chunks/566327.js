@@ -288,7 +288,7 @@ var i = {
     "./ExperimentalGraphMajorNegativeIcon.web.tsx": ["952868", [580357]],
     "./ActivitiesPlusIcon.web.tsx": ["768451", []],
     "./DpadIcon.web.tsx": ["111219", [788976]],
-    "./FiltersHorizontalIcon.web.tsx": ["783977", [781202]],
+    "./FiltersHorizontalIcon.web.tsx": ["783977", []],
     "./LaptopIcon.web.tsx": ["197284", [613637]],
     "./LightbulbIcon.web.tsx": ["443865", [269442]],
     "./PaymentTypeVenmoIcon.web.tsx": ["279397", [877510]],

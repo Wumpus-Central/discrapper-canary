@@ -11,4 +11,6 @@ e.exports = {
     G3: "selectionIndicator_FYYAJZ",
     ty: "packIcon_FYYAJZ",
     me: "separator_FYYAJZ",
+    HE: "packsButtonHost_FYYAJZ",
+    aW: "discoveryDot_FYYAJZ",
 };

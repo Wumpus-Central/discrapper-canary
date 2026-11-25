@@ -788,6 +788,17 @@
     border-color: CanvasText
 }
 
+.packsButtonHost_FYYAJZ {
+    position: relative
+}
+
+.discoveryDot_FYYAJZ {
+    inset-inline-end: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0
+}
+
 .wrapper_vhuLMo {
     --custom-emoji-picker-constants-emoji-size-large: var(--space-40);
     --custom-emoji-picker-constants-emoji-size-medium: var(--space-40);
@@ -878,10 +889,6 @@
 .emojiPickerHasTabWrapper_vhuLMo .header_vhuLMo {
     background-color: transparent;
     padding-top: 0
-}
-
-.diversitySelector_vhuLMo {
-    flex: 0 0 auto
 }
 
 .bodyWrapper_vhuLMo {
@@ -1727,7 +1734,7 @@
 }
 
 .full-motion .tab_dyDYQj {
-    transition: background-color .1s ease-in-out, color .1s ease-in-out, padding-inline .2s cubic-bezier(.22, 1, .36, 1)
+    transition: background-color .1s ease-in-out, color .1s ease-in-out
 }
 
 .high-contrast-mode .tab_dyDYQj {
@@ -1742,18 +1749,6 @@
 .tab_dyDYQj:active {
     background-color: var(--background-mod-strong);
     color: var(--interactive-text-active)
-}
-
-.navList_dyDYQj:not(:hover, :has(:focus-visible)) .tab_dyDYQj:not(.tabActive_dyDYQj) {
-    padding-inline: var(--space-8)
-}
-
-.navList_dyDYQj:not(:hover, :has(:focus-visible)) .tab_dyDYQj:not(.tabActive_dyDYQj):first-child {
-    padding-inline-start: 0
-}
-
-.navList_dyDYQj:is(:hover, :has(:focus-visible)) .tab_dyDYQj:not(.tabActive_dyDYQj, :hover) {
-    background-color: var(--background-mod-muted)
 }
 
 .tabActive_dyDYQj {
@@ -1816,4 +1811,4 @@
     border-color: Highlight
 }
 
-/*# sourceMappingURL=75739.222a2e7c433ee977.css.map*/
+/*# sourceMappingURL=75739.677178b09bd30eb1.css.map*/

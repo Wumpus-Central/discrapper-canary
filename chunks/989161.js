@@ -39,8 +39,8 @@ var l = n(477900),
     v = n(268218),
     N = n(750506),
     j = n(60809),
-    k = n(792996),
-    T = n(836555);
+    T = n(792996),
+    k = n(836555);
 let _ = { width: 500, height: j.$V },
     O = (0, v.Fe)({
         createPromise: () =>
@@ -113,7 +113,7 @@ let _ = { width: 500, height: j.$V },
                 n.e(135621),
             ]).then(n.bind(n, 854379)),
         webpackId: 854379,
-        renderLoader: () => (0, l.jsx)("div", { className: T.R4, style: _, children: (0, l.jsx)(b.y, {}) }),
+        renderLoader: () => (0, l.jsx)("div", { className: k.R4, style: _, children: (0, l.jsx)(b.y, {}) }),
     }),
     R = { height: j.$V },
     w = i.memo(function (e) {
@@ -121,7 +121,7 @@ let _ = { width: 500, height: j.$V },
         return (0, l.jsx)("span", {
             style: j.sK,
             children: (0, l.jsx)(N.nE, {
-                className: T.T8,
+                className: k.T8,
                 targetRef: t,
                 position: "top",
                 align: n ?? "right",
@@ -132,10 +132,10 @@ let _ = { width: 500, height: j.$V },
                 children: (e) => {
                     let { isPositioned: t } = e;
                     return (0, l.jsx)("section", {
-                        className: T.V6,
+                        className: k.V6,
                         role: "dialog",
                         style: R,
-                        "aria-label": k.intl.string(k.t["3CNGLK"]),
+                        "aria-label": T.intl.string(T.t["3CNGLK"]),
                         children: t && (0, l.jsx)(O, { ...i }),
                     });
                 },
@@ -313,7 +313,7 @@ function ed(e) {
         i.useLayoutEffect(() => {
             null != S && d.current?.scrollToSectionTop(0);
         }, [y, S]));
-    let T = i.useCallback(
+    let k = i.useCallback(
             (e) => {
                 e.id === S || e.id === es.Ik.FRECENCY ? (C(null), d.current?.scrollToSectionTop(0)) : C(e.id);
             },
@@ -377,7 +377,7 @@ function ed(e) {
                             t,
                             0 === r.length &&
                                 (0, l.jsx)(D.A, {
-                                    message: k.intl.format(k.t.WoQXT6, { applicationName: i.name }),
+                                    message: T.intl.format(T.t.WoQXT6, { applicationName: i.name }),
                                     className: eo.qK,
                                 }),
                         ],
@@ -440,7 +440,7 @@ function ed(e) {
                     sections: p,
                     filteredSectionId: S,
                     activeCategoryIndex: f,
-                    onSectionClick: T,
+                    onSectionClick: k,
                     applicationCommandListRef: d,
                 }),
                 (0, l.jsx)(B.A, {
@@ -471,7 +471,7 @@ var em = n(164636),
     ep = n(31498),
     eg = n(598071),
     ex = n(151271),
-    eE = n(116796),
+    eE = n(759521),
     ey = n(256265);
 n(336807);
 var eS = n(857071),
@@ -482,8 +482,8 @@ var eS = n(857071),
     ev = n(620141),
     eN = n(224964),
     ej = n(31408),
-    ek = n(77183);
-function eT(e) {
+    eT = n(77183);
+function ek(e) {
     let { editorHeight: t, textValue: n, channelId: l } = e,
         r = i.useRef(n),
         s = (0, eC.l)({ editorHeight: t }),
@@ -495,13 +495,13 @@ function eT(e) {
         h = i.useMemo(() => 0.05 > Math.random(), [d]);
     return (
         i.useEffect(() => {
-            0 !== n.length && n !== r.current && o && (a.fire(u, c, h ? { sprite: ek.dR } : null), (r.current = n));
+            0 !== n.length && n !== r.current && o && (a.fire(u, c, h ? { sprite: eT.dR } : null), (r.current = n));
         }, [n, o, u, c, h, a]),
         null
     );
 }
 function e_(e) {
-    return (0, l.jsx)(ev.A, { confettiLocation: ej.k.CHAT_INPUT, children: (0, l.jsx)(eT, { ...e }) });
+    return (0, l.jsx)(ev.A, { confettiLocation: ej.k.CHAT_INPUT, children: (0, l.jsx)(ek, { ...e }) });
 }
 var eO = n(931664),
     eR = n(631576),
@@ -587,15 +587,15 @@ function eZ(e) {
                                 (p -= 48));
                         }
                     else p = Math.min(48, p + C);
-                    let k = e.width,
-                        T = e.height,
+                    let T = e.width,
+                        k = e.height,
                         _ = 6 * r,
                         O = 2 * r,
                         R = +r,
                         w = 24 * r,
                         M = 2 * r,
                         L = d.current && !h.current ? _ * (1 - p / 48) : 0,
-                        P = k - s.length * _ + L;
+                        P = T - s.length * _ + L;
                     !m.current || h.current ? ((x = null), (E = !1)) : null == x && (x = A);
                     let D = null == x ? null : A - x;
                     (null != D && D >= 100 && !E && ((E = !0), f.current()), n.beginPath());
@@ -606,7 +606,7 @@ function eZ(e) {
                             r = null == D ? 0 : Math.max(0, Math.min((D - i) / 60, 1)),
                             a = l * (1 - r * r) * (w - M) + M,
                             o = P + e * _,
-                            u = (T - a) / 2;
+                            u = (k - a) / 2;
                         n.roundRect(o, u, O, a, R);
                     }
                     (n.fill(), (l = requestAnimationFrame(c)));
@@ -688,8 +688,8 @@ function e8(e) {
         }, [p, x, C]),
         b = d ? Math.max(0, Math.ceil(x - p)) : Math.ceil(x),
         v = u ? eQ.PauseIcon : eX.PlayIcon,
-        N = u ? k.intl.string(k.t["3XohGn"]) : k.intl.string(k.t.AlHqHT),
-        j = u ? k.intl.string(k.t.ZcgDJX) : k.intl.string(k.t.RscU7I);
+        N = u ? T.intl.string(T.t["3XohGn"]) : T.intl.string(T.t.AlHqHT),
+        j = u ? T.intl.string(T.t.ZcgDJX) : T.intl.string(T.t.RscU7I);
     return (0, l.jsxs)("div", {
         className: e3._W,
         children: [
@@ -812,11 +812,11 @@ let e9 = i.memo(function (e) {
     let v = u ? Math.round(a.recordedDurationSecs ?? 0) : c,
         N = o || u,
         j = S ? x : f,
-        T = S && null == j;
+        k = S && null == j;
     return (0, l.jsxs)("div", {
         className: e7.M0,
         role: "group",
-        "aria-label": k.intl.string(k.t.lwy6aX),
+        "aria-label": T.intl.string(T.t.lwy6aX),
         children: [
             null != j
                 ? (0, l.jsx)(e8, { playback: j, durationSecs: a.recordedDurationSecs ?? 0, animateWaveformEntrance: S })
@@ -825,7 +825,7 @@ let e9 = i.memo(function (e) {
                       children: [
                           o
                               ? (0, l.jsx)(X.m, {
-                                    text: k.intl.string(k.t.hHBkuG),
+                                    text: T.intl.string(T.t.hHBkuG),
                                     children: (0, l.jsx)("div", {
                                         className: s()(e5.VQ, e6.UD),
                                         children: (0, l.jsx)(eK.A, {
@@ -833,7 +833,7 @@ let e9 = i.memo(function (e) {
                                             onClick: C,
                                             isActive: !1,
                                             icon: eF.StopIcon,
-                                            "aria-label": k.intl.string(k.t["cmFRF+"]),
+                                            "aria-label": T.intl.string(T.t["cmFRF+"]),
                                         }),
                                     }),
                                 })
@@ -843,7 +843,7 @@ let e9 = i.memo(function (e) {
                               className: e7.ou,
                               recording: o,
                               reducedMotion: d,
-                              collapsing: T,
+                              collapsing: k,
                               onCollapseComplete: A,
                           }),
                           (0, l.jsxs)("div", {
@@ -862,7 +862,7 @@ let e9 = i.memo(function (e) {
                   }),
             (0, l.jsx)("div", { className: e7.yF, "aria-hidden": !0 }),
             (0, l.jsx)(X.m, {
-                text: k.intl.string(k.t.oyYWHE),
+                text: T.intl.string(T.t.oyYWHE),
                 children: (0, l.jsx)("div", {
                     className: s()(e5.VQ, e6.UD),
                     children: (0, l.jsx)(eK.A, {
@@ -870,12 +870,12 @@ let e9 = i.memo(function (e) {
                         onClick: () => (0, eq.eT)(n),
                         isActive: !1,
                         icon: eB.TrashIcon,
-                        "aria-label": k.intl.string(k.t.RdK9sV),
+                        "aria-label": T.intl.string(T.t.RdK9sV),
                     }),
                 }),
             }),
             (0, l.jsx)(X.m, {
-                text: k.intl.string(k.t.TXNS7S),
+                text: T.intl.string(T.t.TXNS7S),
                 children: (0, l.jsx)("div", {
                     className: s()(e5.VQ, e6.UD),
                     onKeyDown: b,
@@ -887,7 +887,7 @@ let e9 = i.memo(function (e) {
                         disabled: !N,
                         noHover: !N,
                         isActive: !1,
-                        "aria-label": k.intl.string(k.t["+8GStU"]),
+                        "aria-label": T.intl.string(T.t["+8GStU"]),
                         children: (0, l.jsx)(eG.SendMessageIcon, {
                             size: "xs",
                             color: "currentColor",
@@ -935,8 +935,8 @@ function tj(e) {
         children: (0, l.jsx)(tv.CircleXIcon, { size: "md", color: "currentColor", className: tN.u }),
     });
 }
-var tk = n(558497);
-let tT = "channel-reply-bar-a11y-description";
+var tT = n(558497);
+let tk = "channel-reply-bar-a11y-description";
 function t_(e) {
     let { channel: t, message: n, replyChainLength: r } = e,
         s = i.useRef(r);
@@ -956,20 +956,20 @@ function t_(e) {
             onClick: function () {
                 ((0, tA.Jx)(t.id), (0, tI.Tv)(t, n, "Reply Chain Nudge"));
             },
-            className: tk._r,
+            className: tT._r,
             focusProps: { offset: { right: -4, left: -4 } },
             children: [
                 (0, l.jsx)(eW.E, {
                     color: "text-default",
-                    className: tk.Qq,
+                    className: tT.Qq,
                     variant: "body-sm/normal",
-                    children: k.intl.format(k.t.B3V0FM, { count: Math.min(10, r + 1) }),
+                    children: T.intl.format(T.t.B3V0FM, { count: Math.min(10, r + 1) }),
                 }),
                 (0, l.jsx)(eW.E, {
                     color: "text-link",
-                    className: tk.NG,
+                    className: tT.NG,
                     variant: "body-sm/semibold",
-                    children: k.intl.string(k.t.rBIGBL),
+                    children: T.intl.string(T.t.rBIGBL),
                 }),
             ],
         })
@@ -1011,14 +1011,14 @@ function tO(e) {
         v = (0, eD.n)(o, u),
         N = a.showThreadPromptOnReply && b >= 2 && v;
     return (0, l.jsx)("div", {
-        className: tk.e1,
+        className: tT.e1,
         children: (0, l.jsxs)("div", {
-            className: tk.kL,
+            className: tT.kL,
             children: [
                 (0, l.jsxs)("div", {
-                    className: tk.eU,
+                    className: tT.eU,
                     children: [
-                        (0, l.jsx)(tm.A, { id: tT, children: k.intl.formatToPlainString(k.t.EpJL4E, { username: p }) }),
+                        (0, l.jsx)(tm.A, { id: tk, children: T.intl.formatToPlainString(T.t.EpJL4E, { username: p }) }),
                         (0, l.jsx)(Y.D, {
                             onClick: function () {
                                 return (0, tC.pX)(ea.BVt.CHANNEL(o.getGuildId(), o.id, u.id));
@@ -1026,9 +1026,9 @@ function tO(e) {
                             focusProps: { offset: { top: -8, right: -4, bottom: -8, left: -4 } },
                             children: (0, l.jsx)(eW.E, {
                                 color: "text-default",
-                                className: s()(tk.Qq, tk.Fn),
+                                className: s()(tT.Qq, tT.Fn),
                                 variant: "body-sm/normal",
-                                children: k.intl.format(k.t["8E4GxS"], {
+                                children: T.intl.format(T.t["8E4GxS"], {
                                     userHook: (e, t) =>
                                         (0, l.jsx)(
                                             i.Fragment,
@@ -1036,18 +1036,18 @@ function tO(e) {
                                                 children:
                                                     I?.title != null
                                                         ? (0, l.jsxs)("span", {
-                                                              className: tk.H8,
+                                                              className: tT.H8,
                                                               children: [
                                                                   I.isClip &&
                                                                       (0, l.jsx)(tf.ClipsIcon, {
                                                                           size: "xs",
                                                                           color: "currentColor",
-                                                                          className: tk.gS,
+                                                                          className: tT.gS,
                                                                       }),
                                                                   (0, l.jsx)(eW.E, {
                                                                       variant: "body-sm/semibold",
                                                                       color: "text-default",
-                                                                      className: tk.NV,
+                                                                      className: tT.NV,
                                                                       children: I.title,
                                                                   }),
                                                                   (0, l.jsxs)(eW.E, {
@@ -1058,7 +1058,7 @@ function tO(e) {
                                                               ],
                                                           })
                                                         : (0, l.jsx)(tp.g, {
-                                                              className: tk.UU,
+                                                              className: tT.UU,
                                                               name: p,
                                                               colorString: g,
                                                               colorStrings: A,
@@ -1072,14 +1072,14 @@ function tO(e) {
                             }),
                         }),
                         (0, l.jsxs)("div", {
-                            className: tk.o1,
+                            className: tT.o1,
                             children: [
                                 d &&
                                     (0, l.jsxs)(l.Fragment, {
                                         children: [
                                             (0, l.jsx)(X.m, {
                                                 asContainer: !0,
-                                                text: c ? k.intl.string(k.t.DH2o6R) : k.intl.string(k.t.utGGIY),
+                                                text: c ? T.intl.string(T.t.DH2o6R) : T.intl.string(T.t.utGGIY),
                                                 children: (0, l.jsx)(Y.D, {
                                                     role: "switch",
                                                     "aria-checked": c,
@@ -1089,27 +1089,27 @@ function tO(e) {
                                                     children: (0, l.jsxs)(eW.E, {
                                                         variant: "body-sm/semibold",
                                                         color: c ? "text-link" : "text-muted",
-                                                        className: tk.Z4,
+                                                        className: tT.Z4,
                                                         children: [
                                                             (0, l.jsx)(tg.AtIcon, {
                                                                 size: "md",
                                                                 color: "currentColor",
-                                                                "aria-label": k.intl.string(k.t.P8tvKG),
-                                                                className: tk.mM,
+                                                                "aria-label": T.intl.string(T.t.P8tvKG),
+                                                                className: tT.mM,
                                                             }),
-                                                            c ? k.intl.string(k.t.p9jC2r) : k.intl.string(k.t.U7f3bK),
+                                                            c ? T.intl.string(T.t.p9jC2r) : T.intl.string(T.t.U7f3bK),
                                                         ],
                                                     }),
                                                 }),
                                             }),
-                                            (0, l.jsx)("div", { className: tk.me, "aria-hidden": !0 }),
+                                            (0, l.jsx)("div", { className: tT.me, "aria-hidden": !0 }),
                                         ],
                                     }),
                                 (0, l.jsx)(tj, {
                                     onClick: function (e) {
                                         (e.stopPropagation(), (0, tA.Jx)(o.id));
                                     },
-                                    "aria-label": k.intl.string(k.t.jSnJGT),
+                                    "aria-label": T.intl.string(T.t.jSnJGT),
                                 }),
                             ],
                         }),
@@ -1142,7 +1142,7 @@ let tL = i.memo(function (e) {
                                           onFocus: () => s(e.id),
                                           onBlur: () => s(null),
                                           className: tM.b,
-                                          "aria-label": k.intl.formatToPlainString(k.t.BGAQRd, { name: e.name }),
+                                          "aria-label": T.intl.formatToPlainString(T.t.BGAQRd, { name: e.name }),
                                           onClick: () => (0, eR.x5)(t, n.drafts.type),
                                           children: (0, l.jsx)("div", {
                                               className: tM.Nk,
@@ -1186,7 +1186,7 @@ function tV(e) {
                     ? e.preventDefault()
                     : (0, tD.L3)(e, async () => {
                           let { default: e } = await n.e(715687).then(n.bind(n, 646938));
-                          return (n) => (0, l.jsx)(e, { ...n, id: t, label: k.intl.string(k.t.oJ1Muw) });
+                          return (n) => (0, l.jsx)(e, { ...n, id: t, label: T.intl.string(T.t.oJ1Muw) });
                       });
             },
             [u?.rootCommand?.id],
@@ -1219,7 +1219,7 @@ function tV(e) {
             }),
             (0, l.jsx)("div", {
                 className: tU.o1,
-                children: (0, l.jsx)(tj, { onClick: f, "aria-label": k.intl.string(k.t.cpT0Cq) }),
+                children: (0, l.jsx)(tj, { onClick: f, "aria-label": T.intl.string(T.t.cpT0Cq) }),
             }),
         ],
     });
@@ -1249,16 +1249,16 @@ function tH() {
 }
 function tz() {
     return (0, l.jsxs)("div", {
-        className: tk.eU,
+        className: tT.eU,
         children: [
             (0, l.jsx)(eW.E, {
                 variant: "body-sm/medium",
-                className: s()(tk.Qq, tk.Fn),
-                children: k.intl.string(k.t["2UvR1E"]),
+                className: s()(tT.Qq, tT.Fn),
+                children: T.intl.string(T.t["2UvR1E"]),
             }),
             (0, l.jsx)("div", {
-                className: tk.o1,
-                children: (0, l.jsx)(tj, { onClick: tH, "aria-label": k.intl.string(k.t.cpT0Cq) }),
+                className: tT.o1,
+                children: (0, l.jsx)(tj, { onClick: tH, "aria-label": T.intl.string(T.t.cpT0Cq) }),
             }),
         ],
     });
@@ -1272,14 +1272,14 @@ function t$(e) {
             (0, l.jsx)(eW.E, {
                 variant: "body-xs/semibold",
                 color: "text-strong",
-                children: k.intl.string(k.t["4VDCG0"]),
+                children: T.intl.string(T.t["4VDCG0"]),
             }),
             t
-                ? (0, l.jsx)(eW.E, { variant: "body-xs/medium", className: tq.z, children: k.intl.string(k.t.qNorwt) })
+                ? (0, l.jsx)(eW.E, { variant: "body-xs/medium", className: tq.z, children: T.intl.string(T.t.qNorwt) })
                 : (0, l.jsx)(eW.E, {
                       variant: "body-xs/medium",
                       color: "text-muted",
-                      children: k.intl.string(k.t["260qZS"]),
+                      children: T.intl.string(T.t["260qZS"]),
                   }),
         ],
     });
@@ -1297,10 +1297,10 @@ function tX(e) {
             ((t = a),
             (n = r.results),
             t
-                ? k.intl.string(k.t["x/FIRX"])
+                ? T.intl.string(T.t["x/FIRX"])
                 : null == n
                   ? ""
-                  : k.intl.formatToPlainString(k.t.xU4pF1, { total: n.reduce((e, t) => e + t, 0) }));
+                  : T.intl.formatToPlainString(T.t.xU4pF1, { total: n.reduce((e, t) => e + t, 0) }));
     return (0, l.jsx)("div", {
         className: s()(tQ.kL, { [tQ.Kd]: !r.dismissing }),
         children: (0, l.jsxs)("div", {
@@ -1345,17 +1345,17 @@ function t8(e) {
                             color: "text-default",
                             className: t6.Qq,
                             variant: "body-sm/normal",
-                            children: k.intl.formatToPlainString(k.t["MQcRX/"], { timestamp: new Date(r).valueOf() }),
+                            children: T.intl.formatToPlainString(T.t["MQcRX/"], { timestamp: new Date(r).valueOf() }),
                         }),
                     }),
-                    (0, l.jsx)(tm.A, { id: s, children: k.intl.string(k.t.SBcdAN) }),
+                    (0, l.jsx)(tm.A, { id: s, children: T.intl.string(T.t.SBcdAN) }),
                     (0, l.jsx)("div", {
                         className: t6.o1,
                         children: (0, l.jsx)(tj, {
                             onClick: function (e) {
                                 (e.stopPropagation(), x.A.clearDraft(t.id, t2.C.ScheduledMessage));
                             },
-                            "aria-label": k.intl.string(k.t.cpT0Cq),
+                            "aria-label": T.intl.string(T.t.cpT0Cq),
                         }),
                     }),
                 ],
@@ -1383,7 +1383,7 @@ var t7 = n(12764),
     nn = n(339200),
     nl = n(265872),
     ni = n(375499),
-    nr = n(398616),
+    nr = n(201614),
     ns = n(307731),
     na = n(9287);
 function no(e) {
@@ -1785,8 +1785,8 @@ let nI = i.memo(function (e) {
             placeholder: v,
             accessibilityLabel: N,
             channel: j,
-            type: k,
-            focused: T,
+            type: T,
+            focused: k,
             error: _,
             renderAttachButton: O,
             renderApplicationCommandIcon: R,
@@ -1818,7 +1818,7 @@ let nI = i.memo(function (e) {
             showValueWhenDisabled: es = !1,
             ref: eo,
         } = e;
-    u()(null != k, "chat input type must be set");
+    u()(null != T, "chat input type must be set");
     let { analyticsLocations: eu } = (0, A.Ay)(S.A.CHANNEL_TEXT_AREA),
         ec = nx(eo),
         eh = i.useRef(null),
@@ -1831,22 +1831,22 @@ let nI = i.memo(function (e) {
     Y?.(eS.current);
     let eN = (0, C.A)(j),
         ej = (0, eV.n)("ChannelTextAreaContainer"),
-        ek = (0, m.cf)([y.Ay], () => ({
+        eT = (0, m.cf)([y.Ay], () => ({
             expressionPickerFormat: y.Ay.expressionPickerFormat,
             condensePickerWhenNarrow: y.Ay.condensePickerWhenNarrow,
         })),
-        eT = ej ? ek.expressionPickerFormat : y.IG.FLEXIBLE,
-        eO = !ej || ek.condensePickerWhenNarrow,
+        ek = ej ? eT.expressionPickerFormat : y.IG.FLEXIBLE,
+        eO = !ej || eT.condensePickerWhenNarrow,
         [eR, ew] = i.useState(!eN);
     (0, E.i4)(ec, (e) => {
         let { width: t } = e;
         return ew(!eN && (null == t || t > 450));
     });
-    let eM = eT === y.IG.HIDDEN,
-        eL = eT === y.IG.CONDENSED || (eT === y.IG.FLEXIBLE && eO && !eR),
+    let eM = ek === y.IG.HIDDEN,
+        eL = ek === y.IG.CONDENSED || (ek === y.IG.FLEXIBLE && eO && !eR),
         { activeCommand: eP, activeCommandSection: eD } = (0, m.cf)([M.A], () => ({
-            activeCommand: k.commands?.enabled ? M.A.getActiveCommand(j.id) : null,
-            activeCommandSection: k.commands?.enabled ? M.A.getActiveCommandSection(j.id) : null,
+            activeCommand: T.commands?.enabled ? M.A.getActiveCommand(j.id) : null,
+            activeCommandSection: T.commands?.enabled ? M.A.getActiveCommandSection(j.id) : null,
         })),
         {
             isLurking: eF,
@@ -1855,29 +1855,29 @@ let nI = i.memo(function (e) {
             canAttachFiles: eG,
             canCreateThreads: eK,
             canEveryoneSendMessages: eH,
-        } = nS(j, k, eP, b),
-        ez = k.toolbarType === td.O1.STATIC,
+        } = nS(j, T, eP, b),
+        ez = T.toolbarType === td.O1.STATIC,
         e$ = !eU.D_.useSetting() && !(0, tu.Ct)() && null != window.ResizeObserver,
-        eJ = !e$ || !k.commands?.enabled || !T || "/" !== r,
+        eJ = !e$ || !T.commands?.enabled || !k || "/" !== r,
         eZ = (0, eA.A)(),
         { fontSize: eQ } = (0, m.cf)([y.Ay], () => ({ fontSize: y.Ay.fontSize })),
         eX = (0, m.bG)([tl.A], () => tl.A.isEnabled());
-    nf(k, eB, j.id);
+    nf(T, eB, j.id);
     let { eventEmitter: eY, handleEditorSelectionChanged: e1 } = np(eS, r, a),
         e2 = i.useRef(r);
     e2.current = r;
     let e5 = i.useCallback(
             (e, t, n) => {
-                ("/" === t && "" === e2.current && k.commands?.enabled && eY.emit("command-sentinel-typed"),
+                ("/" === t && "" === e2.current && T.commands?.enabled && eY.emit("command-sentinel-typed"),
                     D?.(e, t, n));
             },
-            [D, k.commands?.enabled, eY],
+            [D, T.commands?.enabled, eY],
         ),
-        { submitting: e3, submit: e8, handleSubmit: e7 } = nc(B, k, eS, eb, j.id),
+        { submitting: e3, submit: e8, handleSubmit: e7 } = nc(B, T, eS, eb, j.id),
         { autocompleteRef: tt, handleMaybeShowAutocomplete: tn, handleHideAutocomplete: tr } = ng(),
-        ta = nd(e8, k, eS),
+        ta = nd(e8, T, eS),
         to = nh(eS),
-        tm = nm({ editorRef: eS, disabled: eB, textValue: r, channelId: j.id, chatInputType: k, submit: B }),
+        tm = nm({ editorRef: eS, disabled: eB, textValue: r, channelId: j.id, chatInputType: T, submit: B }),
         tf = i.useCallback(
             (e, t, n) => {
                 let l = eS.current;
@@ -1920,7 +1920,7 @@ let nI = i.memo(function (e) {
                 [eJ, eh, tt],
             ),
         }),
-        { expressionPickerView: tC, shouldHideExpressionPicker: tI, handleOuterClick: tb } = nA(k, eS, j.id),
+        { expressionPickerView: tC, shouldHideExpressionPicker: tI, handleOuterClick: tb } = nA(T, eS, j.id),
         { selectedAutocompleteInputType: tv, selectedAutocompleteInputError: tN } = (function (e, t) {
             let [n, l] = i.useState({ selectedAutocompleteInputType: null, selectedAutocompleteInputError: !1 }),
                 r = i.useCallback(() => {
@@ -1947,8 +1947,8 @@ let nI = i.memo(function (e) {
                 n
             );
         })(eY, eS),
-        { handleAutocompleteVisibilityChange: tj } = nC(k, j.id),
-        tk = (function (e) {
+        { handleAutocompleteVisibilityChange: tj } = nC(T, j.id),
+        tT = (function (e) {
             let { type: t, channelId: n } = e;
             return (0, em.bG)(
                 [I.A],
@@ -1958,23 +1958,23 @@ let nI = i.memo(function (e) {
                 },
                 [t, n],
             );
-        })({ type: k, channelId: j.id }),
+        })({ type: T, channelId: j.id }),
         t_ = i.useCallback(() => {
             eY.emit("submit-failure");
         }, [eY]);
     (0, tc.R)(eY, j.guild_id, j.id);
     let tR = null != P,
-        tw = (eB && !((eF || eW) && eH)) || (e3 && k.submit?.useDisabledStylesOnSubmit),
+        tw = (eB && !((eF || eW) && eH)) || (e3 && T.submit?.useDisabledStylesOnSubmit),
         tM = null;
     null != eP ? (tM = R?.(eP, eD, e6.g$)) : (!eB || eK) && (tM = O?.(tR, e6.g$));
     let { isVisible: tP, showsUpsell: tD } = (0, nu.A)({
-            type: k,
+            type: T,
             textValue: r,
             maxCharacterCount: q,
             showRemainingCharsAfterCount: $,
         }),
-        tU = e$ && null != a && !eB && k.showCharacterCount && null == eP,
-        tF = e$ && !__OVERLAY__ && null != a && null == eP && k.toolbarType !== td.O1.NONE && !eB,
+        tU = e$ && null != a && !eB && T.showCharacterCount && null == eP,
+        tF = e$ && !__OVERLAY__ && null != a && null == eP && T.toolbarType !== td.O1.NONE && !eB,
         tW = (function (e) {
             let {
                     channel: t,
@@ -2024,7 +2024,7 @@ let nI = i.memo(function (e) {
             }, [r, c, d, t, f, s, h, n, a, o, u]);
         })({
             channel: j,
-            type: k,
+            type: T,
             activeCommand: eP,
             pendingReply: P,
             scheduledMessageDraft: er,
@@ -2044,16 +2044,16 @@ let nI = i.memo(function (e) {
     i.useEffect(() => {
         (tq.current && !tH && eS.current?.focus(), (tq.current = tH));
     }, [tH]);
-    let tZ = null != P ? [Q, tT].filter(Boolean).join(" ") : Q,
-        tQ = k.layout === td.wt.INLINE,
-        t0 = k.layout === td.wt.FLUSH,
+    let tZ = null != P ? [Q, tk].filter(Boolean).join(" ") : Q,
+        tQ = T.layout === td.wt.INLINE,
+        t0 = T.layout === td.wt.FLUSH,
         t1 = (0, l.jsx)("div", { ref: ey, className: e6.BW }),
-        t2 = tk ? (0, l.jsx)(w, { align: "right", positionTargetRef: ey, channel: j }) : null,
+        t2 = tT ? (0, l.jsx)(w, { align: "right", positionTargetRef: ey, channel: j }) : null,
         t5 =
             null != L
                 ? L()
                 : (0, l.jsx)(t7.A, {
-                      type: k,
+                      type: T,
                       disabled: eB,
                       channel: j,
                       handleSubmit: e7,
@@ -2063,7 +2063,7 @@ let nI = i.memo(function (e) {
                   }),
         t3 = tU
             ? (0, l.jsx)(ne.A, {
-                  type: k,
+                  type: T,
                   textValue: r,
                   className: Z,
                   maxCharacterCount: q,
@@ -2072,17 +2072,17 @@ let nI = i.memo(function (e) {
             : null;
     return (
         i.useEffect(() => {
-            T && e0._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: j.id });
-        }, [T, j.id]),
+            k && e0._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: j.id });
+        }, [k, j.id]),
         (0, l.jsx)(eg.Sv, {
             value: eY,
             children: (0, l.jsxs)(A.f5, {
                 value: eu,
                 children: [
                     tF && ez
-                        ? (0, l.jsx)(no, { getSlateEditor: ev, onInsertEmoji: to, type: k, channel: j })
+                        ? (0, l.jsx)(no, { getSlateEditor: ev, onInsertEmoji: to, type: T, channel: j })
                         : tF
-                          ? (0, l.jsx)(nt.A, { ref: eb, getSlateEditor: ev, containerRef: eI, options: k.markdown })
+                          ? (0, l.jsx)(nt.A, { ref: eb, getSlateEditor: ev, containerRef: eI, options: T.markdown })
                           : null,
                     (0, l.jsxs)("div", {
                         ref: ec,
@@ -2104,18 +2104,18 @@ let nI = i.memo(function (e) {
                                 onScroll: tp,
                                 className: s()(c, { [e6.xx]: !0, [e6.k6]: !en, [e6.Ri]: tW.stacked.length > 0 }),
                                 children: [
-                                    (0, l.jsx)(tL, { channelId: j.id, chatInputType: k }),
-                                    k.hideAttachmentArea
+                                    (0, l.jsx)(tL, { channelId: j.id, chatInputType: T }),
+                                    T.hideAttachmentArea
                                         ? null
-                                        : (0, l.jsx)(t9.A, { channelId: j.id, type: k, canAttachFiles: eG }),
+                                        : (0, l.jsx)(t9.A, { channelId: j.id, type: T, canAttachFiles: eG }),
                                     (0, l.jsxs)("div", {
                                         className: s()(e6.vW, {
                                             [e6.mb]: tH,
                                             [e6.BF]: tw,
-                                            [e6.RL]: k !== td.oU.EDIT && (null != tM || (tw && null == tM) || eF),
-                                            [e6.fk]: k === td.oU.THREAD_CREATION,
-                                            [e6.TZ]: k === td.oU.CREATE_FORUM_POST || k === td.oU.FORWARD_MESSAGE_INPUT,
-                                            [e6.$i]: k === td.oU.USER_PROFILE_REPLY,
+                                            [e6.RL]: T !== td.oU.EDIT && (null != tM || (tw && null == tM) || eF),
+                                            [e6.fk]: T === td.oU.THREAD_CREATION,
+                                            [e6.TZ]: T === td.oU.CREATE_FORUM_POST || T === td.oU.FORWARD_MESSAGE_INPUT,
+                                            [e6.$i]: T === td.oU.USER_PROFILE_REPLY,
                                         }),
                                         onMouseDown: tb,
                                         children: [
@@ -2131,7 +2131,7 @@ let nI = i.memo(function (e) {
                                                               children: (0, l.jsx)(th.A, {
                                                                   ref: eS,
                                                                   id: f,
-                                                                  focused: T,
+                                                                  focused: k,
                                                                   useSlate: e$,
                                                                   textValue: r,
                                                                   richValue: a,
@@ -2141,7 +2141,7 @@ let nI = i.memo(function (e) {
                                                                   accessibilityLabel: N,
                                                                   isPreviewing: (eF || eW) && eH,
                                                                   channel: j,
-                                                                  type: k,
+                                                                  type: T,
                                                                   canPasteFiles: eG,
                                                                   uploadPromptCharacterCount: 4e3,
                                                                   maxCharacterCount: q ?? eZ,
@@ -2167,9 +2167,9 @@ let nI = i.memo(function (e) {
                                                                   canOnlyUseTextCommands: tR,
                                                                   className: s()(
                                                                       {
-                                                                          [e6.QI]: k === td.oU.THREAD_CREATION,
-                                                                          [e6.AV]: k === td.oU.PROFILE_BIO_INPUT,
-                                                                          [e6.GR]: k === td.oU.OVERLAY_INLINE_REPLY,
+                                                                          [e6.QI]: T === td.oU.THREAD_CREATION,
+                                                                          [e6.AV]: T === td.oU.PROFILE_BIO_INPUT,
+                                                                          [e6.GR]: T === td.oU.OVERLAY_INLINE_REPLY,
                                                                       },
                                                                       h,
                                                                   ),
@@ -2193,12 +2193,12 @@ let nI = i.memo(function (e) {
                                 canMentionChannels: z,
                                 useNewSlashCommands: e$,
                                 canOnlyUseTextCommands: tR,
-                                canSendStickers: k.stickers?.allowSending,
-                                canSendSoundmoji: k.soundmoji?.allowSending,
+                                canSendStickers: T.stickers?.allowSending,
+                                canSendSoundmoji: T.soundmoji?.allowSending,
                                 textValue: r,
-                                focused: T,
+                                focused: k,
                                 expressionPickerView: tC,
-                                type: k,
+                                type: T,
                                 targetRef: ec,
                                 editorRef: eS,
                                 onSendMessage: e8,
@@ -2221,7 +2221,7 @@ let nI = i.memo(function (e) {
                         : (0, l.jsx)(eE.A, {
                               returnRef: eC,
                               positionTargetRef: ec,
-                              type: k,
+                              type: T,
                               onSelectGIF: ta,
                               onSelectEmoji: to,
                               onSelectSticker: tm,
