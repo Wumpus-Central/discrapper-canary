@@ -560,4 +560,29 @@
     display: none
 }
 
-/*# sourceMappingURL=817e185994c68c5a.css.map*/
+.bar_KUyZhJ {
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    gap: var(--space-16);
+    justify-content: space-between;
+    min-height: var(--space-48);
+    padding-inline: var(--space-8);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.actions_KUyZhJ,
+.bar_KUyZhJ {
+    align-items: center;
+    display: flex
+}
+
+.actions_KUyZhJ {
+    flex-shrink: 0;
+    gap: var(--space-xs)
+}
+
+/*# sourceMappingURL=7f3c3602791165d3.css.map*/

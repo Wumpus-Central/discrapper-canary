@@ -15,18 +15,20 @@ var t = i(477900),
     f = i(287809),
     h = i(957565),
     m = i(540665),
-    y = i(738604),
-    A = i(616334),
+    A = i(738604),
+    y = i(616334),
     I = i(260498),
-    D = i(189714),
-    C = i(733791),
-    k = i(127139),
-    z = i(256616),
-    W = i(842615),
-    X = i(191850),
-    v = i(792996),
-    E = i(552821);
-function P(l) {
+    D = i(530165),
+    C = i(189714),
+    k = i(733791),
+    v = i(127139),
+    z = i(167483),
+    W = i(256616),
+    X = i(719588),
+    P = i(191850),
+    E = i(792996),
+    U = i(552821);
+function w(l) {
     let {
             projectId: n,
             projectName: i,
@@ -34,22 +36,23 @@ function P(l) {
             projectGuildId: p,
             isOwner: x,
             canRemix: b,
-            onPublish: E,
-            publishLabel: P,
-            publishDisabled: w = !1,
-            onExport: G,
-            onImport: N,
-            onRemix: O,
-            onConnectTool: R,
-            onHistory: U,
-            onDismiss: Y,
-            onCloseMenu: H,
+            onPublish: U,
+            publishLabel: w,
+            publishDisabled: G = !1,
+            onExport: N,
+            onImport: O,
+            onRemix: R,
+            onConnectTool: S,
+            onHistory: Y,
+            onDismiss: H,
+            onCloseMenu: _,
         } = l,
-        S = (0, D.iI)(n),
-        _ = e.useContext(y.bI),
-        q = (0, W.A)(n, i),
-        K = (0, C.CU)(n) && x,
-        L = (0, r.bG)(
+        q = (0, C.iI)(n),
+        K = e.useContext(A.bI),
+        L = (0, X.A)(n, i),
+        V = (0, k.CU)(n) && x,
+        B = (0, D.UC)(n),
+        F = (0, r.bG)(
             [I.Ay],
             () => {
                 let l = I.Ay.getProject(n);
@@ -57,62 +60,62 @@ function P(l) {
             },
             [n],
         ),
-        V = (0, r.bG)([m.Ay, f.default], () => m.Ay.isAccessRefused(n, f.default.getCurrentUser()?.id), [n]),
-        B = (x || L) && !V,
-        F = null != O && b,
-        M = x && null != N,
-        $ = h.p5 && null != j,
-        Q = null != G || M || null != R || null != U,
-        T = S ? s.BellIcon : o.BellSlashIcon;
+        M = (0, r.bG)([m.Ay, f.default], () => m.Ay.isAccessRefused(n, f.default.getCurrentUser()?.id), [n]),
+        $ = (x || F) && !M,
+        Q = null != R && b,
+        T = x && null != O,
+        Z = h.p5 && null != j,
+        J = null != N || T || null != S || null != Y,
+        ll = q ? s.BellIcon : o.BellSlashIcon;
     return (0, t.jsxs)(a.W, {
         "data-menu-migrated": !0,
         navId: `conjure-project-actions-${n}`,
-        "aria-label": v.intl.string(v.t.ogxXGq),
-        onClose: H,
-        onSelect: H,
+        "aria-label": E.intl.string(E.t.ogxXGq),
+        onClose: _,
+        onSelect: _,
         children: [
-            null != E
+            null != U
                 ? (0, t.jsx)(c.rX, {
                       children: (0, t.jsx)(c.Dr, {
                           id: "publish",
-                          label: P ?? v.intl.string(X.default["120EFN"]),
-                          disabled: w,
-                          action: E,
+                          label: w ?? E.intl.string(P.default["120EFN"]),
+                          disabled: G,
+                          action: U,
                       }),
                   })
                 : null,
-            F || B
+            Q || $
                 ? (0, t.jsxs)(c.rX, {
                       children: [
-                          F
-                              ? (0, t.jsx)(c.Dr, { id: "remix", label: v.intl.string(X.default.XWgAfc), action: O })
+                          Q
+                              ? (0, t.jsx)(c.Dr, { id: "remix", label: E.intl.string(P.default.XWgAfc), action: R })
                               : null,
-                          B
+                          $
                               ? (0, t.jsx)(c.Dr, {
                                     id: "settings",
-                                    label: v.intl.string(X.default.FzfmQ8),
+                                    label: E.intl.string(P.default.FzfmQ8),
                                     icon: u.SettingsIcon,
                                     leadingAccessory: { type: "icon", icon: u.SettingsIcon },
                                     action: () =>
-                                        (0, A.A)(n, {
+                                        (0, y.A)(n, {
                                             guildId: p ?? j,
                                             initialTab: "project",
                                             isPreview: !0,
-                                            publishOptions: _,
+                                            publishOptions: K,
                                         }),
                                 })
                               : null,
                       ],
                   })
                 : null,
-            $
+            Z
                 ? (0, t.jsx)(c.rX, {
                       children: (0, t.jsx)(c.Dr, {
                           id: "copy-link",
-                          label: v.intl.string(v.t.WqhZss),
+                          label: E.intl.string(E.t.WqhZss),
                           icon: d.LinkIcon,
                           leadingAccessory: { type: "icon", icon: d.LinkIcon },
-                          action: () => (0, k.V)(j, n),
+                          action: () => (0, v.V)(j, n),
                       }),
                   })
                 : null,
@@ -120,71 +123,82 @@ function P(l) {
                 children: [
                     (0, t.jsx)(c.Dr, {
                         id: "mute",
-                        label: v.intl.string(S ? X.default.s9rCuH : X.default["a+i/As"]),
-                        icon: T,
-                        leadingAccessory: { type: "icon", icon: T },
-                        action: () => (0, D.$L)(n, !S),
+                        label: E.intl.string(q ? P.default.s9rCuH : P.default["a+i/As"]),
+                        icon: ll,
+                        leadingAccessory: { type: "icon", icon: ll },
+                        action: () => (0, C.$L)(n, !q),
                     }),
-                    null != Y
-                        ? (0, t.jsx)(c.Dr, { id: "dismiss", label: v.intl.string(X.default.bWzWw9), action: Y })
+                    null != H
+                        ? (0, t.jsx)(c.Dr, { id: "dismiss", label: E.intl.string(P.default.bWzWw9), action: H })
                         : null,
                 ],
             }),
-            Q
+            J
                 ? (0, t.jsxs)(c.rX, {
                       children: [
-                          null != G
-                              ? (0, t.jsx)(c.Dr, { id: "export", label: v.intl.string(X.default.WsEEP7), action: G })
+                          null != N
+                              ? (0, t.jsx)(c.Dr, { id: "export", label: E.intl.string(P.default.WsEEP7), action: N })
                               : null,
-                          M
-                              ? (0, t.jsx)(c.Dr, { id: "import", label: v.intl.string(X.default.rWGY3e), action: N })
+                          T
+                              ? (0, t.jsx)(c.Dr, { id: "import", label: E.intl.string(P.default.rWGY3e), action: O })
                               : null,
-                          null != R
+                          null != S
                               ? (0, t.jsx)(c.Dr, {
                                     id: "connect-tool",
-                                    label: v.intl.string(X.default.yOIql5),
-                                    action: R,
+                                    label: E.intl.string(P.default.yOIql5),
+                                    action: S,
                                 })
                               : null,
-                          null != U
+                          null != Y
                               ? (0, t.jsx)(c.Dr, {
                                     id: "history",
-                                    label: v.intl.string(X.default["3hIVou"]),
-                                    action: U,
+                                    label: E.intl.string(P.default["3hIVou"]),
+                                    action: Y,
                                 })
                               : null,
                       ],
                   })
                 : null,
-            K || x || h.p5
+            V || null != B || x || h.p5
                 ? (0, t.jsxs)(c.rX, {
                       children: [
-                          K
+                          V
                               ? (0, t.jsx)(c.Dr, {
                                     id: "unpublish",
-                                    label: v.intl.string(X.default.jYAR58),
+                                    label: E.intl.string(P.default.jYAR58),
                                     color: "danger",
                                     action: () => {
                                         let l = I.Ay.getProject(n);
-                                        null != l && (0, z.A)({ project: l });
+                                        null != l && (0, W.A)({ project: l });
+                                    },
+                                })
+                              : null,
+                          null != B
+                              ? (0, t.jsx)(c.Dr, {
+                                    id: "unpublish-from-server",
+                                    label: E.intl.string(P.default.mS61Dm),
+                                    color: "danger",
+                                    action: () => {
+                                        let l = I.Ay.getProject(n);
+                                        null != l && (0, z.A)({ project: l, target: B, action: "remove" });
                                     },
                                 })
                               : null,
                           x
                               ? (0, t.jsx)(c.Dr, {
                                     id: "delete",
-                                    label: v.intl.string(v.t.oyYWHE),
+                                    label: E.intl.string(E.t.oyYWHE),
                                     color: "danger",
-                                    action: q,
+                                    action: L,
                                 })
                               : null,
                           h.p5
                               ? (0, t.jsx)(c.Dr, {
                                     id: "copy-project-id",
-                                    label: v.intl.string(X.default["nm/zuU"]),
+                                    label: E.intl.string(P.default["nm/zuU"]),
                                     icon: g.IdIcon,
                                     leadingAccessory: { type: "icon", icon: g.IdIcon },
-                                    action: () => (0, k.o)(n),
+                                    action: () => (0, v.o)(n),
                                 })
                               : null,
                       ],
@@ -206,21 +220,21 @@ i.d(
                 animation: j.Y.Animation.NONE,
                 renderPopout: (n) => {
                     let { closePopout: i } = n;
-                    return (0, t.jsx)(P, { ...l, onCloseMenu: i });
+                    return (0, t.jsx)(w, { ...l, onCloseMenu: i });
                 },
                 children: (l, i) => {
                     let { onClick: e } = l,
                         { isShown: r } = i;
                     return (0, t.jsx)("div", {
                         ref: n,
-                        className: E.h,
+                        className: U.h,
                         children: (0, t.jsx)(p.m, {
-                            text: v.intl.string(v.t["UKOtz+"]),
+                            text: E.intl.string(E.t["UKOtz+"]),
                             children: (0, t.jsx)(x.K, {
                                 icon: b.MoreHorizontalIcon,
                                 size: "sm",
                                 variant: "icon-only",
-                                "aria-label": v.intl.string(v.t["UKOtz+"]),
+                                "aria-label": E.intl.string(E.t["UKOtz+"]),
                                 "aria-haspopup": "menu",
                                 "aria-expanded": r,
                                 onClick: e,
@@ -230,6 +244,6 @@ i.d(
                 },
             });
         },
-        z: P,
+        z: w,
     },
 );
