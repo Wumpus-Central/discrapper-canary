@@ -59,8 +59,8 @@ n.d(
                                         Object.assign(n.floating.style, { maxHeight: `${h.current(t.reference)}px` }));
                             },
                         })),
-                        (0, a.UU)(m),
                         (0, a.cY)(n),
+                        (0, a.UU)(m),
                         (0, a.BN)(m),
                     ],
                     whileElementsMounted: s.ll,
