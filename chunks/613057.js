@@ -50,6 +50,7 @@ n.d(
     {},
     {
         Hi: d,
+        JI: 1048576,
         LQ: "RPC_PRIVATE_SCOPE",
         OE: function (e) {
             switch (e) {
