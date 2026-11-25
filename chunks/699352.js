@@ -1,7 +1,7 @@
 var i = n(477900);
 n(582128);
 var l = n(21878),
-    s = n(628577);
+    s = n(197832);
 function r(e) {
     let {
         channelMessageProps: { message: t, channel: n, compact: a = !1 },

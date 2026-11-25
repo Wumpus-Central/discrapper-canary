@@ -1,41 +1,39 @@
-(i.d(t, { Nj: () => z, UB: () => b, Cr: () => T, R6: () => P, I1: () => w, SX: () => O }), i(938796));
-var n = i(477900),
-    a = i(582128),
-    l = i(448761),
-    r = i(665260),
-    o = i(682176),
-    s = i(776231),
-    d = i(713021),
-    c = i(925056),
+(i.d(t, { Nj: () => E, UB: () => P, Cr: () => C, R6: () => O, I1: () => M, SX: () => z }), i(938796));
+var a = i(477900),
+    n = i(582128),
+    l = i(665260),
+    r = i(682176),
+    o = i(776231),
+    s = i(713021),
+    d = i(925056),
     u = i(889767),
-    m = i(608628),
-    h = i(777501),
-    g = i(129230),
+    c = i(608628),
+    m = i(777501),
+    h = i(129230),
     p = i(652215),
-    A = i(644447),
+    g = i(644447),
     _ = i(515718),
-    S = i(587481),
-    f = i(998218),
-    I = i(869938),
-    y = i(465856);
+    A = i(587481),
+    S = i(998218),
+    f = i(465856);
 i(876230);
-var v = i(383055),
-    x = i(447991);
+var x = i(383055),
+    y = i(447991);
 i(838541);
-var C = i(516653),
-    M = i(792996);
-function T(e) {
+var I = i(516653),
+    v = i(792996);
+function C(e) {
     let t = e.item.originalItem;
-    return (0, v.LL)({
+    return (0, x.LL)({
         ...e,
         alt: t.description,
-        src: (0, A.E)({ proxyURL: t.proxy_url, url: t.url }),
+        src: (0, g.E)({ proxyURL: t.proxy_url, url: t.url }),
         original: t.url,
         placeholder: t.placeholder,
         placeholderVersion: t.placeholder_version,
         contentType: t.content_type,
         originalContentType: t.original_content_type,
-        srcIsAnimated: (0, r.Lt)(t.flags ?? 0, p.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(t.flags ?? 0, p.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, title: t.title, size: t.size },
@@ -43,24 +41,24 @@ function T(e) {
         analyticsSource: "ImageComponentForMessageAttachment",
     });
 }
-function w(e) {
+function M(e) {
     let t = e.item.originalItem,
-        i = (0, r.Lt)(t.flags ?? 0, p.sbO.IS_CLIP),
-        a = f.A.toURLSafe(t.proxy_url);
-    return null == a
+        i = (0, l.Lt)(t.flags ?? 0, p.sbO.IS_CLIP),
+        n = S.A.toURLSafe(t.proxy_url);
+    return null == n
         ? null
-        : (a.searchParams.append("format", "webp"), i)
-          ? (0, n.jsxs)(n.Fragment, {
+        : (n.searchParams.append("format", "webp"), i)
+          ? (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, n.jsx)(o.A, {
+                    (0, a.jsx)(r.A, {
                         attachment: t,
                         src: t.url,
-                        posterUrl: a.toString(),
+                        posterUrl: n.toString(),
                         channelId: e.message.channel_id,
                         className: e.className,
                         embed: !0,
-                        volume: (0, S.GD)(),
-                        autoMute: (0, S.uj)(),
+                        volume: (0, A.GD)(),
+                        autoMute: (0, A.uj)(),
                         messageId: e.message.id,
                         fillContainer: !e.isSingleMosaicItem,
                         onClick: e.onClick ?? void 0,
@@ -71,55 +69,55 @@ function w(e) {
                         showParticipants: e.isSingleMosaicItem,
                         allowFullScreen: e.allowFullScreen,
                         onPlay: e.onPlay ?? void 0,
-                        onVolumeChange: S.oc,
-                        onMutedChange: S.y5,
+                        onVolumeChange: A.oc,
+                        onMutedChange: A.y5,
                     }),
                     e.renderAdjacentContent?.(),
                 ],
             })
-          : (0, C.T)(e.naturalWidth, e.naturalHeight)
-            ? (0, n.jsx)(k, { attachmentProps: e, posterUrl: a.toString() })
-            : E(e, a.toString());
+          : (0, I.T)(e.naturalWidth, e.naturalHeight)
+            ? (0, a.jsx)(T, { attachmentProps: e, posterUrl: n.toString() })
+            : w(e, n.toString());
 }
-function E(e, t) {
-    let { onOpenInMediaViewer: i, ...n } = e,
-        a = n.item.originalItem;
-    return (0, v.$o)({
-        ...n,
+function w(e, t) {
+    let { onOpenInMediaViewer: i, ...a } = e,
+        n = a.item.originalItem;
+    return (0, x.$o)({
+        ...a,
         showPlaybackSpeedControl: !0,
-        alt: a.description,
+        alt: n.description,
         poster: t,
-        fileSize: a.size,
-        fileName: (0, y.A)(a),
-        src: a.url,
-        placeholder: a.placeholder,
-        placeholderVersion: a.placeholder_version,
-        srcIsAnimated: (0, r.Lt)(a.flags ?? 0, p.sbO.IS_ANIMATED),
+        fileSize: n.size,
+        fileName: (0, f.A)(n),
+        src: n.url,
+        placeholder: n.placeholder,
+        placeholderVersion: n.placeholder_version,
+        srcIsAnimated: (0, l.Lt)(n.flags ?? 0, p.sbO.IS_ANIMATED),
         sourceMetadata: {
-            message: n.message,
-            identifier: { type: "attachment", attachmentId: a.id, filename: a.filename, size: a.size },
+            message: a.message,
+            identifier: { type: "attachment", attachmentId: n.id, filename: n.filename, size: n.size },
         },
     });
 }
-function k(e) {
+function T(e) {
     let { attachmentProps: t, posterUrl: i } = e,
-        a = t.item.originalItem,
-        { useDiscordVideoPlayer: l } = (0, h.r)({ location: "VideoComponentForMessageAttachment" });
+        n = t.item.originalItem,
+        { useDiscordVideoPlayer: l } = (0, m.r)({ location: "VideoComponentForMessageAttachment" });
     if (l) {
         let e,
             l,
-            r = null != a.width && null != a.height && a.height > a.width ? "portrait" : "landscape",
-            o = !0 === t.isSingleMosaicItem,
-            d = null != a.description && "" !== a.description ? a.description : M.intl.string(M.t.FlNoSV),
-            { width: h, height: g } = (function (e) {
-                let { width: t, height: i, maxWidth: n, maxHeight: a, fillTile: l } = e;
-                if (l) return { width: n, height: a };
-                let r = n >= 240 && a >= 180;
+            r = null != n.width && null != n.height && n.height > n.width ? "portrait" : "landscape",
+            s = !0 === t.isSingleMosaicItem,
+            m = null != n.description && "" !== n.description ? n.description : v.intl.string(v.t.FlNoSV),
+            { width: h, height: p } = (function (e) {
+                let { width: t, height: i, maxWidth: a, maxHeight: n, fillTile: l } = e;
+                if (l) return { width: a, height: n };
+                let r = a >= 240 && n >= 180;
                 return (0, _.Uj)({
                     width: t,
                     height: i,
-                    maxWidth: n,
-                    maxHeight: a,
+                    maxWidth: a,
+                    maxHeight: n,
                     minWidth: 240 * !!r,
                     minHeight: 180 * !!r,
                 });
@@ -128,14 +126,14 @@ function k(e) {
                 height: t.height ?? 0,
                 maxWidth: t.maxWidth ?? 550,
                 maxHeight: t.maxHeight ?? 350,
-                fillTile: !o,
+                fillTile: !s,
             }),
-            p =
+            g =
                 ((e = t.width ?? 0),
                 (l = t.height ?? 0),
-                e <= 0 || l <= 0 || h <= 0 || g <= 0
+                e <= 0 || l <= 0 || h <= 0 || p <= 0
                     ? i
-                    : (0, s.AE)({
+                    : (0, o.AE)({
                           src: i,
                           width: e,
                           height: l,
@@ -143,64 +141,64 @@ function k(e) {
                               width: e,
                               height: l,
                               maxWidth: h,
-                              maxHeight: g,
+                              maxHeight: p,
                           }),
                           maxWidth: h,
-                          maxHeight: g,
+                          maxHeight: p,
                       })),
-            A = (0, v.Ir)({
-                alt: a.description,
+            S = (0, x.Ir)({
+                alt: n.description,
                 disableAltTextDisplay: t.disableAltTextDisplay,
                 hiddenSpoilers: t.hiddenSpoilers,
             })
                 ? `${4 + (!0 === t.reducedSizeAltTextButton ? 18 : 32) + 4}px`
                 : void 0;
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: t.className ?? void 0,
                     style: {
-                        width: o ? h : "100%",
+                        width: s ? h : "100%",
                         maxWidth: "100%",
                         minWidth: 0,
                         minHeight: 0,
-                        height: o ? "auto" : "100%",
-                        maxHeight: o ? void 0 : "inherit",
-                        aspectRatio: `${h} / ${g}`,
+                        height: s ? "auto" : "100%",
+                        maxHeight: s ? void 0 : "inherit",
+                        aspectRatio: `${h} / ${p}`,
                         position: "relative",
                         display: "flex",
-                        "--custom-top-start-overlay-top": A,
+                        "--custom-top-start-overlay-top": S,
                     },
                     onContextMenu: t.onContextMenu ?? void 0,
                     children: [
-                        (0, n.jsx)(x.A, {
-                            attachmentLayout: o ? "single" : "tile",
+                        (0, a.jsx)(y.A, {
+                            attachmentLayout: s ? "single" : "tile",
                             crossOrigin: null,
-                            alt: d,
-                            src: a.url,
-                            poster: p,
-                            fileSizeBytes: a.size,
+                            alt: m,
+                            src: n.url,
+                            poster: g,
+                            fileSizeBytes: n.size,
                             mimeType: t.mimeType?.join("/"),
                             initialActive: !1,
                             preloadOnHover: !0,
                             playable: t.playable,
                             autoplay: t.autoPlay,
-                            initialVolume: (0, S.v1)(),
-                            initialMuted: (0, S.uj)(),
-                            getInitialVolume: S.v1,
-                            getInitialMuted: S.uj,
+                            initialVolume: (0, A.v1)(),
+                            initialMuted: (0, A.uj)(),
+                            getInitialVolume: A.v1,
+                            getInitialMuted: A.uj,
                             orientation: r,
                             parentTransitionState: null,
                             onPlay: t.onPlay ?? void 0,
-                            onVolumeChange: S.ls,
-                            onMutedChange: S.y5,
+                            onVolumeChange: A.ls,
+                            onMutedChange: A.y5,
                             onOpenInMediaViewer: t.onOpenInMediaViewer,
                             renderOverlay: t.renderOverlayContent ?? void 0,
                             hideFullScreenBtn: !(t.allowFullScreen ?? !0),
-                            renderTopStartOverlay: (0, m.PR)((0, u.o)(a, t.message), c.u.MOSAIC),
+                            renderTopStartOverlay: (0, c.PR)((0, u.o)(n, t.message), d.u.MOSAIC),
                         }),
-                        (0, n.jsx)(v._z, {
-                            alt: a.description,
+                        (0, a.jsx)(x._z, {
+                            alt: n.description,
                             disableAltTextDisplay: t.disableAltTextDisplay,
                             hiddenSpoilers: t.hiddenSpoilers,
                             reducedSizeAltTextButton: t.reducedSizeAltTextButton,
@@ -211,90 +209,74 @@ function k(e) {
             ],
         });
     }
-    return E(t, i);
+    return w(t, i);
+}
+function E(e) {
+    let t = e.item.originalItem;
+    return (0, x.gL)({ ...e, fileSize: t.size, fileName: (0, f.A)(t), src: t.url });
 }
 function z(e) {
-    let t = e.item.originalItem;
-    return (0, v.gL)({ ...e, fileSize: t.size, fileName: (0, y.A)(t), src: t.url });
-}
-function O(e) {
     let { message: t, item: i } = e,
-        n = i.originalItem,
-        l = (0, d.dx)(d.k0.VOICE_MESSAGE, n.id),
-        r = a.useCallback(
-            (e, i, a) => {
+        a = i.originalItem,
+        l = (0, s.dx)(s.k0.VOICE_MESSAGE, a.id),
+        r = n.useCallback(
+            (e, i, n) => {
                 var l, r, o;
                 ((l = t.id),
-                    (r = n.duration_secs ?? null),
+                    (r = a.duration_secs ?? null),
                     (o = t.author.id),
-                    g.default.track(p.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
+                    h.default.track(p.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
                         message_id: l,
                         total_duration_secs: r,
                         start_duration_secs: Math.min(r ?? i, i),
                         sender_user_id: o,
                     }));
             },
-            [t, n.duration_secs],
+            [t, a.duration_secs],
         ),
-        o = a.useCallback(
+        o = n.useCallback(
             (e, i) => {
-                var a, l, r;
-                ((a = t.id),
-                    (l = n.duration_secs ?? null),
+                var n, l, r;
+                ((n = t.id),
+                    (l = a.duration_secs ?? null),
                     (r = t.author.id),
-                    g.default.track(p.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
-                        message_id: a,
+                    h.default.track(p.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
+                        message_id: n,
                         total_duration_secs: l,
                         end_duration_secs: Math.min(l ?? e, e),
                         sender_user_id: r,
                         duration_listening_secs: i,
                     }));
             },
-            [t, n.duration_secs],
+            [t, a.duration_secs],
         ),
-        s = a.useCallback(
+        d = n.useCallback(
             (e) => {
-                var i, n;
+                var i, a;
                 ((i = t.id),
-                    (n = e?.message ?? null),
-                    g.default.track(p.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, { message_id: i, error_message: n }));
+                    (a = e?.message ?? null),
+                    h.default.track(p.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, { message_id: i, error_message: a }));
             },
             [t],
         );
-    return (0, v.P$)({
+    return (0, x.P$)({
         ...e,
-        fileSize: n.size,
-        fileName: (0, y.A)(n),
-        src: n.url,
-        durationSecs: n.duration_secs,
-        waveform: n.waveform,
+        fileSize: a.size,
+        fileName: (0, f.A)(a),
+        src: a.url,
+        durationSecs: a.duration_secs,
+        waveform: a.waveform,
         onPlay: r,
         onPause: o,
-        onError: s,
+        onError: d,
         playbackCacheKey: l,
     });
 }
-function P(e) {
-    let t = e.item.originalItem,
-        { message: i } = e;
-    return (0, v._d)({
-        ...e,
-        url: t.url,
-        fileName: (0, y.A)(t),
-        fileSize: t.size,
-        contentType: t.content_type,
-        defaultExpanded:
-            0 === (0, I.A)(i) &&
-            1 === i.attachments.filter((e) => !(0, r.Lt)(e.flags ?? 0, p.sbO.IS_THUMBNAIL)).length &&
-            0 === i.embeds.length &&
-            0 === i.codedLinks.length &&
-            0 === i.giftCodes.length &&
-            null == i.sharedClientTheme &&
-            (null == i.application || null == i.activityInstance) &&
-            i.type !== l.l.INTERACTION_PREMIUM_UPSELL,
-    });
-}
-function b(e) {
+function O(e) {
     let t = e.item.originalItem;
-    return (0, v.Dk)({ ...e, url: t.url, fileName: (0, y.A)(t), fileSize: t.size });
+    return (0, x._d)({ ...e, url: t.url, fileName: (0, f.A)(t), fileSize: t.size, contentType: t.content_type });
+}
+function P(e) {
+    let t = e.item.originalItem;
+    return (0, x.Dk)({ ...e, url: t.url, fileName: (0, f.A)(t), fileSize: t.size });
 }
