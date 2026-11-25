@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     iR: "home_Et7tR8",
     zP: "educationGradient_Et7tR8",
     dc: "spinnerContainer_Et7tR8",

@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(265872),
     N = n(565645),
     j = n(730134),
-    k = n(775602),
-    T = n(47167),
+    T = n(775602),
+    k = n(47167),
     _ = n(442247),
     O = n(454908),
     R = n(545868),
@@ -134,7 +134,7 @@ function eu(e) {
     let { id: t, guildId: n, channelId: r } = e,
         s = (0, A.bG)([q.A], () => (null != n ? q.A.getRole(n, t) : void 0)),
         a = (0, W.A)(n, t),
-        o = (0, A.bG)([k.Ay], () => k.Ay.roleStyle),
+        o = (0, A.bG)([T.Ay], () => T.Ay.roleStyle),
         u = (0, K.X_)(n, s, s?.colorStrings),
         c = i.useRef(null);
     if (null == s) return (0, l.jsxs)("span", { children: ["@", et.intl.string(et.t["YV4F/n"])] });
@@ -177,7 +177,7 @@ function ec(e) {
         s = "text",
         a = !0;
     return (null != n &&
-        ((r = (0, w.nc)(n) ? (0, T.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
+        ((r = (0, w.nc)(n) ? (0, k.m1)(n, Z.default, $.A) : et.intl.string(et.t["/YzI63"])),
         (s = (0, w.nc)(n) ? ((0, Q.QG)(n) ?? "text") : "locked"),
         (a = (0, M.Y)(n.type))),
     a)

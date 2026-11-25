@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     lm: "notice_Q02kKo",
     Fr: "isMobile_Q02kKo",
     x6: "button_Q02kKo",

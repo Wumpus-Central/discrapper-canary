@@ -4,14 +4,14 @@ var r = n(534514),
     i = n(834730),
     a = n(191850),
     s = n(792996),
-    o = n(892715);
+    u = n(892715);
 n.d(
     t,
     {},
     {
         A: function () {
             return (0, l.jsxs)("div", {
-                className: o.l,
+                className: u.l,
                 children: [
                     (0, l.jsx)(r.D, { variant: "heading-lg/semibold", children: s.intl.string(a.default.Bp6rtc) }),
                     (0, l.jsx)(i.E, {

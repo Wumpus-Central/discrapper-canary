@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     Kk: "icon_hxzEt-",
     sV: "shopIcon_hxzEt- icon_hxzEt-",
     Pw: "presetDecorationImg_hxzEt-",

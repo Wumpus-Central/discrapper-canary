@@ -214,12 +214,12 @@ function N(e, t) {
                             let s = (0, u.F)(r);
                             if (null == s) return (l?.(r), null);
                             let o = a()(`${r}\0${e}`),
-                                d = k.get(o);
+                                d = T.get(o);
                             if (null != d && d.length === n) {
                                 for (let e of O.get(o) ?? []) l?.(e);
                                 return d;
                             }
-                            if (T.has(o) || !(0, c.VB)(e)) return null;
+                            if (k.has(o) || !(0, c.VB)(e)) return null;
                             try {
                                 let t = s.highlightToSpans(e);
                                 if (((i = t.spans), null != l && t.missingInjections.length > 0)) {
@@ -235,7 +235,7 @@ function N(e, t) {
                                 }
                             } catch (e) {
                                 return (
-                                    T.set(o, !0),
+                                    k.set(o, !0),
                                     h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                         tags: { app_context: "syntax_highlighting" },
                                         extra: { lang: r, surface: "editor" },
@@ -290,7 +290,7 @@ function N(e, t) {
                                     }
                                 return (d(e.length), i);
                             })(e, i, v);
-                            return m.length !== n ? null : (k.set(o, m), m);
+                            return m.length !== n ? null : (T.set(o, m), m);
                         })(e, t, n.length, l);
                         if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                         else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -301,12 +301,12 @@ function N(e, t) {
     }
 }
 let j = { max: 250, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    k = new (r())(j),
     T = new (r())(j),
+    k = new (r())(j),
     _ = (0, u.Gn)(),
     O = new Map();
 (0, u.Q4)(() => {
-    k.reset();
+    T.reset();
 });
 let R = new (r())(j);
 function w(e, t) {

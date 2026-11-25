@@ -254,7 +254,7 @@ let c = {
         disableAutoFocus: !0,
         hideAccessoryBar: !0,
     },
-    k = {
+    T = {
         analyticsName: "forum_channel_guidelines",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -263,7 +263,7 @@ let c = {
         showCharacterCount: !0,
         toolbarType: 1,
     },
-    T = {
+    k = {
         analyticsName: "channel_topic",
         drafts: { type: s.C.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -360,8 +360,8 @@ n.d(
             CREATE_GAME_INVITE_POST_DESCRIPTION: E,
             CREATE_ANNOUNCEMENT_POST: x,
             CREATE_POLL: S,
-            FORUM_CHANNEL_GUIDELINES: k,
-            CHANNEL_TOPIC: T,
+            FORUM_CHANNEL_GUIDELINES: T,
+            CHANNEL_TOPIC: k,
             ATOMIC_REACTOR_REPLY_INPUT: _,
             FORWARD_MESSAGE_INPUT: O,
             SHARE_CUSTOM_CLIENT_THEME_INPUT: R,

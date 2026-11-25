@@ -25,8 +25,8 @@ var l,
     N = n(714736);
 n(980504);
 let j = 7.5 * v.A.Millis.SECOND,
-    k = new Map(),
     T = new Map(),
+    k = new Map(),
     _ = new Map();
 class O extends u.Ay.Store {
     initialize() {
@@ -34,13 +34,13 @@ class O extends u.Ay.Store {
     }
     static displayName = "SoundboardEchoStore";
     getActiveSoundboardEchoes() {
-        return k;
-    }
-    getExpiredSoundboardEchoes() {
         return T;
     }
+    getExpiredSoundboardEchoes() {
+        return k;
+    }
     getSoundboardEcho(e) {
-        return k.get(e);
+        return T.get(e);
     }
 }
 let R = new O(I.h, {
@@ -76,9 +76,9 @@ let R = new O(I.h, {
             let t,
                 n,
                 { soundId: l, sound: i, authorId: r, playedByUserId: s, isEcho: a } = e,
-                o = k.get(l),
+                o = T.get(l),
                 u = Date.now(),
-                c = new Map(k);
+                c = new Map(T);
             if (null == o) {
                 if (
                     (c.set(l, {
@@ -90,10 +90,10 @@ let R = new O(I.h, {
                         lastPlayedAt: u,
                         startedAt: u,
                     }),
-                    T.has(l))
+                    k.has(l))
                 ) {
-                    let e = new Map(T);
-                    (e.delete(l), (T = e));
+                    let e = new Map(k);
+                    (e.delete(l), (k = e));
                 }
             } else
                 c.set(l, {
@@ -103,7 +103,7 @@ let R = new O(I.h, {
                     mostRecentPlayedByUserId: s === r ? o.mostRecentPlayedByUserId : s,
                     lastPlayedAt: u,
                 });
-            ((k = c),
+            ((T = c),
                 null != (t = _.get(l)) && clearTimeout(t),
                 (n = setTimeout(() => {
                     I.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
@@ -114,15 +114,15 @@ let R = new O(I.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         let { currentVoiceChannelId: t, channelId: n } = e;
         if (t === n) return !1;
-        (_.forEach(clearTimeout), _.clear(), (T = new Map()), (k = new Map()));
+        (_.forEach(clearTimeout), _.clear(), (k = new Map()), (T = new Map()));
     },
     SOUNDBOARD_ECHO_EXPIRED: function (e) {
         let { soundId: t } = e,
-            n = k.get(t);
+            n = T.get(t);
         if (null == n) return !1;
-        (_.delete(t), (T = new Map(T).set(t, n)));
-        let l = new Map(k);
-        (l.delete(t), (k = l));
+        (_.delete(t), (k = new Map(k).set(t, n)));
+        let l = new Map(T);
+        (l.delete(t), (T = l));
     },
 });
 var w = n(994500),
@@ -550,14 +550,14 @@ function eE(e) {
             onDetailsMouseEnter: v,
             onDetailsMouseLeave: N,
         } = e,
-        { authorUser: j, mostRecentPlayedUser: k } = (0, u.cf)([M.default, w.A], () => {
+        { authorUser: j, mostRecentPlayedUser: T } = (0, u.cf)([M.default, w.A], () => {
             let e = w.A.isBlockedOrIgnored(o ?? void 0);
             return {
                 authorUser: M.default.getUser(s),
                 mostRecentPlayedUser: e || s === o ? null : M.default.getUser(o),
             };
         }),
-        T = r.useRef(null),
+        k = r.useRef(null),
         { analyticsLocations: _ } = (0, S.Ay)(y.A.SOUNDBOARD_ECHO);
     r.useEffect(() => {
         null == t ||
@@ -604,7 +604,7 @@ function eE(e) {
         style: { height: 36 },
         children: [
             (0, i.jsx)(h.Y, {
-                targetElementRef: T,
+                targetElementRef: k,
                 shouldShow: b,
                 renderPopout: (e) => {
                     let { setPopoutRef: r } = e;
@@ -625,10 +625,10 @@ function eE(e) {
                 align: "center",
                 children: () =>
                     (0, i.jsx)("div", {
-                        ref: T,
+                        ref: k,
                         onMouseEnter: O,
                         onMouseLeave: N,
-                        children: (0, i.jsx)(ex, { authorUser: j, mostRecentPlayedUser: k, guildId: t, channelId: n }),
+                        children: (0, i.jsx)(ex, { authorUser: j, mostRecentPlayedUser: T, guildId: t, channelId: n }),
                     }),
             }),
             (0, i.jsx)(m.m, {

@@ -232,8 +232,8 @@ n.d(
                 null == y || null == S)
             )
                 return null;
-            let k = t();
-            return null == k
+            let T = t();
+            return null == T
                 ? null
                 : (0, l.jsx)(x.Ay, {
                       children: (0, l.jsx)("div", {
@@ -247,7 +247,7 @@ n.d(
                           onMouseUp: (e) => {
                               e.stopPropagation();
                           },
-                          children: (0, l.jsx)(b, { slateEditor: k, options: r }),
+                          children: (0, l.jsx)(b, { slateEditor: T, options: r }),
                       }),
                   });
         },

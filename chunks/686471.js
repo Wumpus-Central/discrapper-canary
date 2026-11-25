@@ -19,10 +19,10 @@ var l = n(477900),
     v = n(775602),
     A = n(620632),
     L = n(403362);
-let y = "https://cdn.discordapp.com/";
-function b(e) {
-    return null != e && e.startsWith(y) && ((0, L.iT)() || null != (0, L.fb)())
-        ? `${(0, A.TP)()}/_cdn_storage/${e.slice(y.length)}`
+let b = "https://cdn.discordapp.com/";
+function y(e) {
+    return null != e && e.startsWith(b) && ((0, L.iT)() || null != (0, L.fb)())
+        ? `${(0, A.TP)()}/_cdn_storage/${e.slice(b.length)}`
         : e;
 }
 var _ = n(815280),
@@ -237,7 +237,7 @@ let Y = (e) => {
             handleTransition: s,
             tab: A,
             onPromotionEnd: L,
-            hideCards: y = !1,
+            hideCards: b = !1,
             forceHideCountdownCta: I = !1,
         } = e,
         S = r.useRef(null),
@@ -246,10 +246,10 @@ let Y = (e) => {
         { analyticsLocations: k } = (0, h.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
         O = (0, C.Kk)(t),
         { bannerDisplayConfig: T, logoDisplayConfig: R } = O,
-        P = b(O.heroLogo),
-        M = b(O.heroBannerStatic),
-        H = b(O.heroBannerAnimated),
-        U = b(O.heroBannerRive),
+        P = y(O.heroLogo),
+        M = y(O.heroBannerStatic),
+        H = y(O.heroBannerAnimated),
+        U = y(O.heroBannerRive),
         {
             shouldRenderRive: G,
             isRiveLoaded: F,
@@ -367,7 +367,7 @@ let Y = (e) => {
                                 !J && (0, l.jsx)("div", { className: W.pv, children: ee }),
                             ],
                         }),
-                        !y &&
+                        !b &&
                             (0, l.jsx)(B.A, {
                                 heroBlockRecord: t,
                                 tab: A,

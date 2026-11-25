@@ -42,8 +42,8 @@ n.d(
                 } = e,
                 L = a?.categorySkuId;
             null == L && null != a && (L = u.A.getCategoryByStoreListingId(a?.categoryStoreListingId)?.skuId);
-            let y = L ?? n?.skuId ?? "",
-                { handleCardVisibilityChange: b } = (0, m.Z)(y, d, "marketing featured block"),
+            let b = L ?? n?.skuId ?? "",
+                { handleCardVisibilityChange: y } = (0, m.Z)(b, d, "marketing featured block"),
                 _ = (0, f.s4)(n, a, c),
                 I = r.useRef(null),
                 S = a?.bodyText,
@@ -53,10 +53,10 @@ n.d(
                 O = (0, o.uM)(),
                 T = r.useCallback(
                     (e, t) => {
-                        (h({ sourceButton: e, categorySkuId: y, isInternalShopDeeplink: !0, isOrbsExclusive: N }),
+                        (h({ sourceButton: e, categorySkuId: b, isInternalShopDeeplink: !0, isOrbsExclusive: N }),
                             i.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: O?.sessionId,
-                                sku_id: y,
+                                sku_id: b,
                                 page_type: d,
                                 page_section: O?.pageSection,
                                 page_category: O?.pageCategory,
@@ -65,7 +65,7 @@ n.d(
                                 cta_name: t,
                             }));
                     },
-                    [h, y, N, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
+                    [h, b, N, d, O?.sessionId, O?.pageSection, O?.pageCategory, O?.tilePosition],
                 ),
                 R = r.useCallback(() => {
                     T("shop marketing take me there button", "Take me there button");
@@ -75,7 +75,7 @@ n.d(
                 }, [T]);
             return (0, l.jsx)(s.L, {
                 innerRef: I,
-                onChange: b,
+                onChange: y,
                 threshold: 0,
                 children: (0, l.jsx)(g.Ay, {
                     layout: t,
@@ -85,7 +85,7 @@ n.d(
                         null != S
                             ? { text: S, variant: "heading-sm/medium", color: a?.bannerTextColor, className: v.D }
                             : void 0,
-                    badge: (0, l.jsx)(A, { skuId: y, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
+                    badge: (0, l.jsx)(A, { skuId: b, unpublishedAt: a?.unpublishedAt ?? n?.unpublishedAt }),
                     ctaText: C.intl.string(C.t.jVcuVY),
                     "aria-label": k,
                     onButtonClick: R,

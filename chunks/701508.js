@@ -7,14 +7,14 @@ var i = l(477900),
     c = l(834730),
     d = l(736653),
     u = l(611371),
-    h = l(513076);
-function m(e) {
+    m = l(513076);
+function h(e) {
     let { title: t, betaTag: l, color: n = "text-strong" } = e;
     return (0, i.jsxs)(o.D, {
-        className: a()(h.DD, h.Zv),
+        className: a()(m.DD, m.Zv),
         variant: "display-lg",
         color: n,
-        children: [t, l && (0, i.jsx)(u.A, { className: h.TN })],
+        children: [t, l && (0, i.jsx)(u.A, { className: m.TN })],
     });
 }
 l.d(
@@ -28,27 +28,27 @@ l.d(
                 j = n.useMemo(
                     () =>
                         Array.isArray(t)
-                            ? t.map((e, t) => (0, i.jsx)(m, { title: e, betaTag: g, color: l }, t))
-                            : (0, i.jsx)(m, { title: t, betaTag: g, color: l }),
+                            ? t.map((e, t) => (0, i.jsx)(h, { title: e, betaTag: g, color: l }, t))
+                            : (0, i.jsx)(h, { title: t, betaTag: g, color: l }),
                     [t, g, l],
                 );
             return (0, i.jsxs)("div", {
-                className: a()(h.kL, u),
+                className: a()(m.kL, u),
                 children: [
                     (0, i.jsx)("div", {
-                        className: h.Qs,
+                        className: m.Qs,
                         children: (0, i.jsxs)("div", {
-                            className: h.FS,
+                            className: m.FS,
                             children: [
                                 j,
                                 null != s &&
                                     (0, i.jsx)(c.E, {
-                                        className: h.h_,
+                                        className: m.h_,
                                         variant: "body-md/medium",
                                         color: v ? "text-muted" : "text-strong",
                                         children: s,
                                     }),
-                                null != o && (0, i.jsx)("div", { className: h.UD, children: o }),
+                                null != o && (0, i.jsx)("div", { className: m.UD, children: o }),
                             ],
                         }),
                     }),

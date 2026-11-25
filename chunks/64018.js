@@ -19,8 +19,8 @@ var l = n(477900),
     v = n(773669),
     A = n(318346),
     L = n(287809),
-    y = n(129230),
-    b = n(857512),
+    b = n(129230),
+    y = n(857512),
     _ = n(993408);
 let I = (0, n(945810).mj)({
     name: "2026-09-orbs-hero-carousel",
@@ -100,7 +100,7 @@ let z = (e) => {
             Z = (0, D.yB)("HeroBlock"),
             J = (0, c.bG)([L.default], () => L.default.getCurrentUser()),
             ee = (0, c.bG)([v.default], () => v.default.locale),
-            et = (0, b.uM)(),
+            et = (0, y.uM)(),
             { analyticsLocations: en } = (0, p.Ay)(f.A.COLLECTIBLES_SHOP_HERO),
             el = (0, S.ST)(),
             er = r.useMemo(
@@ -148,8 +148,8 @@ let z = (e) => {
             ev = null != ep && !eu,
             eA = w === F.G2.ORBS,
             eL = null != s && s.isOrbsExclusive,
-            ey = w === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
-            eb = eA ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
+            eb = w === F.G2.COLLECTION_INDEX ? G.S.COLLECTION_INDEX : G.S.HOME,
+            ey = eA ? V.intl.string(V.t["1CdL8d"]) : V.intl.string(V.t.xYKa1T);
         function e_() {
             eA
                 ? ((0, A.Y)({
@@ -164,7 +164,7 @@ let z = (e) => {
                       isInternalShopDeeplink: !0,
                       isOrbsExclusive: eL,
                   }),
-                  y.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                  b.default.track($.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                       collectibles_shop_session_id: et?.sessionId,
                       sku_id: ed.categorySkuId,
                       page_type: w,
@@ -175,7 +175,7 @@ let z = (e) => {
         }
         if (null == J || (!t && ed === W)) return null;
         function eI() {
-            return t || U ? null : (0, l.jsx)(E.$, { variant: "overlay-primary", onClick: e_, text: eb });
+            return t || U ? null : (0, l.jsx)(E.$, { variant: "overlay-primary", onClick: e_, text: ey });
         }
         return (0, l.jsx)(p.f5, {
             value: en,
@@ -256,7 +256,7 @@ let z = (e) => {
                                                                             (0, l.jsx)(h.B, {
                                                                                 onClick:
                                                                                     null != el && eu
-                                                                                        ? (e) => (0, j.h)(e, el, ey)
+                                                                                        ? (e) => (0, j.h)(e, el, eb)
                                                                                         : void 0,
                                                                                 children: (0, l.jsx)(g.E, {
                                                                                     variant: eu
@@ -282,7 +282,7 @@ let z = (e) => {
                                                                         children: (0, l.jsx)(O.A, {
                                                                             collectionId: ed.categorySkuId,
                                                                             variant: "full",
-                                                                            surface: ey,
+                                                                            surface: eb,
                                                                         }),
                                                                     }),
                                                             ],
@@ -308,7 +308,7 @@ let z = (e) => {
                         w === F.G2.HOME &&
                         (0, l.jsx)("div", {
                             className: a()(K.xX, K.uC),
-                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: ey }),
+                            children: (0, l.jsx)(O.A, { collectionId: ed.categorySkuId, variant: "full", surface: eb }),
                         }),
                 ],
             }),

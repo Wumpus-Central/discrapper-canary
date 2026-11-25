@@ -25,7 +25,7 @@ function v(e) {
 }
 let N = { tension: 1100, friction: 40 },
     j = { tension: 1600, friction: 60 };
-function k(e, t) {
+function T(e, t) {
     return i.cloneElement(e, {
         "data-type": "sticker",
         "data-id": t.id,
@@ -33,7 +33,7 @@ function k(e, t) {
         "data-format-type": t.format_type,
     });
 }
-function T(e) {
+function k(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
     return I.intl.formatToPlainString(I.t.rk6pOw, { stickerName: t });
 }
@@ -129,7 +129,7 @@ function O(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": A ? I.intl.string(I.t.yEvsK9) : T(s),
+              "aria-label": A ? I.intl.string(I.t.yEvsK9) : k(s),
               ref: m,
               children: (0, l.jsx)(_, {
                   hasError: A,
@@ -137,7 +137,7 @@ function O(e) {
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: f,
-                  children: k((0, l.jsx)("canvas", { className: b.ex, ref: g }), s),
+                  children: T((0, l.jsx)("canvas", { className: b.ex, ref: g }), s),
               }),
           });
 }
@@ -190,10 +190,10 @@ let R = (e) => {
                           maskAsset: u,
                           size: a,
                           withLoadingIndicator: h,
-                          children: k(
+                          children: T(
                               (0, l.jsx)("img", {
                                   className: b.r3,
-                                  alt: T(n),
+                                  alt: k(n),
                                   src: I,
                                   draggable: !1,
                                   onError: j,
@@ -324,4 +324,4 @@ function M(e) {
         `${c.id},${u}`,
     );
 }
-n.d(t, {}, { A: M, h: T });
+n.d(t, {}, { A: M, h: k });

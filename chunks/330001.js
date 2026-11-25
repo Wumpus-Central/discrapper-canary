@@ -1,17 +1,17 @@
-var n = s(734057),
-    c = s(129230),
-    d = s(652215);
-s.d(
+var l = a(734057),
+    t = a(129230),
+    i = a(652215);
+a.d(
     e,
     {},
     {
-        W: function (a) {
+        W: function (n) {
             var e;
-            let s;
-            c.default.track(d.HAw.WAVE_CTA_CLICKED, {
-                channel_id: a.channelId,
-                source: a.source,
-                dm_has_message_history: ((e = a.channelId), (s = n.A.getChannel(e)), s?.lastMessageId != null),
+            let a;
+            t.default.track(i.HAw.WAVE_CTA_CLICKED, {
+                channel_id: n.channelId,
+                source: n.source,
+                dm_has_message_history: ((e = n.channelId), (a = l.A.getChannel(e)), a?.lastMessageId != null),
             });
         },
     },

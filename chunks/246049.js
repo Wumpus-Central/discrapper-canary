@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(129230),
     N = n(652215),
     j = n(792996),
-    k = n(845210);
-function T() {
+    T = n(845210);
+function k() {
     (0, E.mM)(async () => {
         let { default: e } = await Promise.all([n.e(235257), n.e(66920)]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
@@ -49,22 +49,22 @@ function _(e) {
         }, [r, a]),
         n
             ? (0, l.jsx)(y.D, {
-                  className: k.e7,
-                  onClick: () => T(),
+                  className: T.e7,
+                  onClick: () => k(),
                   children: (0, l.jsx)(u.m, {
                       text: j.intl.string(j.t["+eFIjX"]),
                       position: "top",
-                      children: (0, l.jsx)(c.NitroWheelIcon, { size: "md", color: "currentColor", className: k.M2 }),
+                      children: (0, l.jsx)(c.NitroWheelIcon, { size: "md", color: "currentColor", className: T.M2 }),
                   }),
               })
             : (0, l.jsxs)("div", {
-                  className: s()(k.zr, t),
+                  className: s()(T.zr, t),
                   children: [
-                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: k.M2, color: S.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.NitroWheelIcon, { size: "md", className: T.M2, color: S.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
-                          className: k.Qq,
+                          className: T.Qq,
                           variant: "body-sm/normal",
-                          children: j.intl.format(j.t.BNAIBU, { onLearnMore: T }),
+                          children: j.intl.format(j.t.BNAIBU, { onLearnMore: k }),
                       }),
                   ],
               })
@@ -82,9 +82,9 @@ function w(e) {
         b = null != t.upsellLongMessages && (I ?? 0) > 2e3 && y,
         v = null != t.upsellLongMessages && !y,
         N = A - I,
-        k = N > C;
+        T = N > C;
     (0, a.$)({ currentLength: I, maxLength: A, message: j.intl.string(j.t.c2Jqed) });
-    let T =
+    let k =
             0 === N
                 ? j.intl.string(j.t.tU6YQ7)
                 : N > 0
@@ -113,10 +113,10 @@ function w(e) {
                                   }),
                               })
                             : null,
-                        k
+                        T
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: T,
+                                  text: k,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "body-sm/semibold",
@@ -129,7 +129,7 @@ function w(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: j.intl.format(j.t.qH8uFW, { count: N }) }),
-                v && !k
+                v && !T
                     ? (0, l.jsx)(_, { className: R.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: N })
                     : null,
             ],

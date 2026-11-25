@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(734057),
     N = n(218461),
     j = n(531685),
-    k = n(365971);
-function T(e) {
+    T = n(365971);
+function k(e) {
     let t = N.Ay.getChannelIdsForWindowId(e)[0];
     return null == t ? null : (v.A.getChannel(t) ?? null);
 }
@@ -416,8 +416,8 @@ function eI(e) {
             required: v,
             textAreaPaddingClassName: N,
             onChange: j,
-            onPaste: k,
-            onResize: T,
+            onPaste: T,
+            onResize: k,
             onFocus: _,
             onBlur: O,
             onKeyDown: R,
@@ -434,8 +434,8 @@ function eI(e) {
             canUseCommands: ev,
             disableAutoFocus: eN,
             disableEnterToSubmit: ej,
-            allowNewLines: ek,
-            "aria-owns": eT,
+            allowNewLines: eT,
+            "aria-owns": ek,
             "aria-expanded": e_,
             "aria-haspopup": eO,
             "aria-activedescendant": eR,
@@ -712,15 +712,15 @@ function eI(e) {
             let e = n.current;
             if (null == e) return;
             let l = e.offsetHeight;
-            t.current !== l && (null != eU.current && (eU.current.style.height = `${l}px`), (t.current = l), T?.(l));
-        }, [eU, T])),
-        (0, ec.g)(n, a, [a, ez, T], eh),
+            t.current !== l && (null != eU.current && (eU.current.style.height = `${l}px`), (t.current = l), k?.(l));
+        }, [eU, k])),
+        (0, ec.g)(n, a, [a, ez, k], eh),
         i.useLayoutEffect(() => {
             let e = el.rL.findDocumentOrShadowRoot(ez).defaultView;
             if (e?.ResizeObserver == null) return;
             let n = em(ez);
-            null != n && ((t.current = n.offsetHeight), T?.(t.current));
-        }, [eU, ez, T]));
+            null != n && ((t.current = n.offsetHeight), k?.(t.current));
+        }, [eU, ez, k]));
     let { handleKeyDown: eJ, handleKeyUp: eZ } = (function (e) {
             let {
                 editor: t,
@@ -808,7 +808,7 @@ function eI(e) {
             onTab: L,
             onEnter: U,
             onSpace: V,
-            allowNewLines: ek,
+            allowNewLines: eT,
             submit: e$,
             hideAutocomplete: eg,
             moveSelection: eI,
@@ -818,10 +818,10 @@ function eI(e) {
                 (e) => {
                     if (eB) return !0;
                     if (!0 === e.defaultPrevented) return !1;
-                    let t = k(e);
+                    let t = T(e);
                     return (t && (e.preventDefault(), e.stopPropagation()), t);
                 },
-                [eB, k],
+                [eB, T],
             )),
             (u = i.useCallback(
                 (e) => {
@@ -981,7 +981,7 @@ function eI(e) {
                     decorate: e5,
                     renderExtraElement: e3,
                     renderExtraLeaf: e6,
-                    "aria-owns": eT,
+                    "aria-owns": ek,
                     "aria-haspopup": eO,
                     "aria-expanded": e_,
                     "aria-activedescendant": eR,
@@ -1182,16 +1182,16 @@ class eN extends i.Component {
                 accessibilityLabel: N,
                 showValueWhenDisabled: j,
             } = this.props,
-            { submitting: k, popup: T } = this.state,
+            { submitting: T, popup: k } = this.state,
             _ = {
                 channel: d,
-                className: s()(x, eb.Tg, { [eb.w5]: m, [eb.Rr]: n || k }),
+                className: s()(x, eb.Tg, { [eb.w5]: m, [eb.Rr]: n || T }),
                 id: E,
                 placeholder: this.getPlaceholder(),
                 required: S,
                 accessibilityLabel: N,
                 disabled: n || !1,
-                submitting: k,
+                submitting: T,
                 isEdit: h === C.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -1217,10 +1217,10 @@ class eN extends i.Component {
                 useNewSlashCommands: p,
                 disableAutoFocus: u.Fr || (h.disableAutoFocus ?? !1),
                 disableEnterToSubmit: h.submit?.disableEnterToSubmit ?? !1,
-                "aria-controls": T.id ?? void 0,
+                "aria-controls": k.id ?? void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== T.id || void 0,
-                "aria-activedescendant": T.activeDescendant ?? void 0,
+                "aria-expanded": null !== k.id || void 0,
+                "aria-activedescendant": k.activeDescendant ?? void 0,
                 "aria-invalid": e.length > A,
                 "aria-describedby": b,
                 "aria-labelledby": v,
@@ -1282,15 +1282,15 @@ class eN extends i.Component {
                 null != n
                     ? (function (e) {
                           if (null == e) return null;
-                          let t = (0, k.Q2)(e);
-                          return null == t ? null : T(t);
+                          let t = (0, T.Q2)(e);
+                          return null == t ? null : k(t);
                       })(n)
                     : null,
-            c = null == (t = j.A.getFocusedWindowId()) ? null : T(t),
+            c = null == (t = j.A.getFocusedWindowId()) ? null : k(t),
             p = !(function (e, t) {
                 if (null == e || null == t) return !1;
-                let n = (0, k.Q2)(e);
-                return n === (0, k.Q2)(t) && null != n;
+                let n = (0, T.Q2)(e);
+                return n === (0, T.Q2)(t) && null != n;
             })(n, this._getEditorWindow())
                 ? (u ?? c ?? l)
                 : l;

@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(861382),
     N = n(355622),
     j = n(339200),
-    k = n(696451),
-    T = n(576705),
+    T = n(696451),
+    k = n(576705),
     _ = n(351906),
     O = n(287809),
     R = n(31498),
@@ -49,15 +49,15 @@ function W(e) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
                 u = (0, I.A)(),
-                c = (0, o.bG)([k.Ay, O.default], () => {
+                c = (0, o.bG)([T.Ay, O.default], () => {
                     let e = O.default.getCurrentUser();
-                    return (null != l.guild_id && null != e ? k.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
+                    return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [T.A, _.A],
+                    [k.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === N.oU.RULES_INPUT || T.A.can(P.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === N.oU.RULES_INPUT || k.A.can(P.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],

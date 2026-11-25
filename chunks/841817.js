@@ -35,8 +35,8 @@ var l = n(477900),
     v = n(825484),
     N = n(821609),
     j = n(559106),
-    k = n(939249),
-    T = n(834730),
+    T = n(939249),
+    k = n(834730),
     _ = n(47167),
     O = n(713654),
     R = n(598104),
@@ -150,7 +150,7 @@ function G(e) {
             null != c
                 ? (0, l.jsx)(j.vN, {
                       offset: { right: 4, bottom: 4 },
-                      children: (0, l.jsxs)(k.D, {
+                      children: (0, l.jsxs)(T.D, {
                           className: F.j_,
                           onClick: d,
                           "aria-label": V.intl.string(V.t.h7tN5I),
@@ -159,7 +159,7 @@ function G(e) {
                               (0, l.jsxs)("div", {
                                   className: F.Yr,
                                   children: [
-                                      (0, l.jsx)(T.E, {
+                                      (0, l.jsx)(k.E, {
                                           className: F.ed,
                                           variant: "body-md/semibold",
                                           color: "text-default",
@@ -171,7 +171,7 @@ function G(e) {
                                                 className: F.lj,
                                                 children: [
                                                     null != t.getGuildId() ? B(o, 12) : null,
-                                                    (0, l.jsx)(T.E, {
+                                                    (0, l.jsx)(k.E, {
                                                         className: F.ed,
                                                         variant: "body-xs/medium",
                                                         color: "text-muted",

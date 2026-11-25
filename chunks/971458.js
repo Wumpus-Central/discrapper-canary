@@ -65,26 +65,26 @@ function L(e) {
         })(n, s),
         A = r.useRef(null),
         L = r.useRef(null),
-        y = r.useRef(!1),
-        { isHovered: b, setIsHovered: _, onMouseEnter: I, onMouseLeave: S, cancelTimers: N } = (0, p.A)(100, 100),
+        b = r.useRef(!1),
+        { isHovered: y, setIsHovered: _, onMouseEnter: I, onMouseLeave: S, cancelTimers: N } = (0, p.A)(100, 100),
         j = r.useCallback(() => {
-            ((y.current = f.Ay.keyboardModeEnabled), I());
+            ((b.current = f.Ay.keyboardModeEnabled), I());
         }, [I]),
         k = r.useCallback(() => {
-            (N(), _(!0), (y.current = f.Ay.keyboardModeEnabled));
+            (N(), _(!0), (b.current = f.Ay.keyboardModeEnabled));
         }, [N, _]),
         O = r.useCallback(
             (e) => {
                 (N(),
-                    y.current && !f.Ay.keyboardModeEnabled && (0, E.uS)(),
+                    b.current && !f.Ay.keyboardModeEnabled && (0, E.uS)(),
                     _(!1),
                     e && requestAnimationFrame(() => (null != L.current ? L.current.focus() : A.current?.focus())));
             },
             [N, _],
         ),
         T = r.useCallback(() => {
-            b ? O(!1) : k();
-        }, [b, k, O]),
+            y ? O(!1) : k();
+        }, [y, k, O]),
         R = r.useCallback(
             (e) => {
                 (O(!1), null != n.route && C(e) && (e.preventDefault(), n.onClick(e)));
@@ -94,21 +94,21 @@ function L(e) {
         D = r.useCallback(
             (e) => {
                 "ArrowDown" === e.key &&
-                    (e.preventDefault(), e.stopPropagation(), b ? (O(!1), requestAnimationFrame(k)) : k());
+                    (e.preventDefault(), e.stopPropagation(), y ? (O(!1), requestAnimationFrame(k)) : k());
             },
-            [b, k, O],
+            [y, k, O],
         ),
         P = (0, l.jsx)(c.E, { variant: "body-md/medium", color: "none", children: n.text }),
         M = (0, l.jsx)(m.ChevronSmallDownIcon, {
             size: "sm",
             color: "currentColor",
-            className: a()(x.OW, { [x.g3]: b }),
+            className: a()(x.OW, { [x.g3]: y }),
         });
     return (0, l.jsx)("li", {
         className: x.I,
         children: (0, l.jsx)(h.Y, {
             targetElementRef: A,
-            shouldShow: b,
+            shouldShow: y,
             position: "bottom",
             align: "left",
             spacing: 4,
@@ -198,10 +198,10 @@ function L(e) {
         }),
     });
 }
-var y = n(765671);
-let b = 'a[href], [role="button"]';
+var b = n(765671);
+let y = 'a[href], [role="button"]';
 function _(e, t) {
-    let n = Array.from(e.querySelectorAll(b)),
+    let n = Array.from(e.querySelectorAll(y)),
         l = n.indexOf(document.activeElement);
     -1 !== l && n[l + t]?.focus();
 }
@@ -214,11 +214,11 @@ function I(e) {
             (e.preventDefault(), _(e.currentTarget, -1));
             return;
         case "Home":
-            (e.preventDefault(), e.currentTarget.querySelector(b)?.focus());
+            (e.preventDefault(), e.currentTarget.querySelector(y)?.focus());
             return;
         case "End": {
             e.preventDefault();
-            let t = e.currentTarget.querySelectorAll(b);
+            let t = e.currentTarget.querySelectorAll(y);
             t[t.length - 1]?.focus();
         }
     }
@@ -234,7 +234,7 @@ function S(e) {
             onItemLayout: f,
             overflowItemsRef: p,
         } = (function (e, t, n, l) {
-            let { ref: s, width: a } = (0, y.Ay)(),
+            let { ref: s, width: a } = (0, b.Ay)(),
                 {
                     lastVisibleIndex: o,
                     onItemLayout: u,

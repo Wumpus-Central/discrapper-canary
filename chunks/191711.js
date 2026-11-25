@@ -7,8 +7,8 @@ var i,
     c = l(477782),
     d = l(628284),
     u = l(265872),
-    h = l(834730),
-    m = l(900797),
+    m = l(834730),
+    h = l(900797),
     p = l(646514),
     g = l(847374),
     x = l(773669),
@@ -87,13 +87,13 @@ l.d(
                         ref: d,
                         className: r()(v.pb, x),
                         children: [
-                            (0, n.jsx)(h.E, {
+                            (0, n.jsx)(m.E, {
                                 variant: "body-sm/medium",
                                 color: "interactive-text-default",
                                 children: l,
                             }),
                             i
-                                ? (0, n.jsx)(m.ChevronSmallUpIcon, {
+                                ? (0, n.jsx)(h.ChevronSmallUpIcon, {
                                       size: "xs",
                                       color: p.A.colors.INTERACTIVE_TEXT_DEFAULT,
                                   })

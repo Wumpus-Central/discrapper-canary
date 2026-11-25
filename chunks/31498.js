@@ -167,14 +167,14 @@ class p extends l.EventEmitter {
         l && y.length > 0 && y !== this.state.query?.queryText && (0, s.AR)(x, d);
         let N = !0 === I.isLoading,
             j = this.shouldShow(v, N, E),
-            k = this.state.selectedIndex;
-        (!j || N ? (k = null) : null != k && k >= v && (k = v - 1),
+            T = this.state.selectedIndex;
+        (!j || N ? (T = null) : null != T && T >= v && (T = v - 1),
             j && !this.state.isVisible && (0, s.uA)(x, this.props.channel, b),
             this.endGameSearchSessionIfLeaving(x),
             this.setState({
                 query: { type: x, typeInfo: E, queryText: y, results: I, resultCount: v, options: d, isLoading: N },
                 isVisible: j,
-                selectedIndex: k,
+                selectedIndex: T,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             }));

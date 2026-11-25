@@ -18,8 +18,8 @@ var l = n(477900),
     v = n(127329),
     A = n(579720),
     L = n(504820),
-    y = n(758836),
-    b = n(792996),
+    b = n(758836),
+    y = n(792996),
     _ = n(105499);
 let I = { flattenProductVariants: !1 };
 function S(e) {
@@ -47,7 +47,7 @@ function j(e) {
 function k(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, x.Mk)(r),
-        i = b.intl.string(b.t.HP8LNG);
+        i = y.intl.string(y.t.HP8LNG);
     if (t) {
         let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
         return (0, l.jsx)(a.A, {
@@ -88,7 +88,7 @@ function R(e) {
             return t.day === u;
         }),
         { helpCenterArticleId: h } = n,
-        g = r.useMemo(() => (null != h ? { id: h, label: b.intl.string(b.t.vaqebJ) } : null), [h]);
+        g = r.useMemo(() => (null != h ? { id: h, label: y.intl.string(y.t.vaqebJ) } : null), [h]);
     return (0, l.jsx)(i.R9, {
         newValue: { pageSection: "top 4", categoryPosition: 0 },
         children: (0, l.jsxs)("div", {
@@ -96,9 +96,9 @@ function R(e) {
             children: [
                 (0, l.jsx)(f.A, {
                     variant: "sequenced-offer",
-                    title: b.intl.string(b.t.a05zGh),
+                    title: y.intl.string(y.t.a05zGh),
                     helpArticle: g,
-                    buttonText: b.intl.string(b.t["kJSKt+"]),
+                    buttonText: y.intl.string(y.t["kJSKt+"]),
                     onButtonClick: o,
                     className: _.NF,
                 }),
@@ -106,7 +106,7 @@ function R(e) {
                     value: I,
                     children: (0, l.jsx)(a.A, {
                         gap: "xl",
-                        "aria-label": b.intl.string(b.t.HP8LNG),
+                        "aria-label": y.intl.string(y.t.HP8LNG),
                         items: c,
                         getItemKey: O,
                         className: _.tX,
@@ -144,7 +144,7 @@ n.d(
                 v = i.categorySkuId,
                 A = (0, E.A)(v),
                 L = (0, c.A)(),
-                b = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
+                y = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
                 _ = r.useMemo(
                     () =>
                         !p &&
@@ -157,20 +157,20 @@ n.d(
                 S = r.useMemo(() => C.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [C]),
                 N =
                     "hscroll" === m &&
-                    f === y.G2.HOME &&
+                    f === b.G2.HOME &&
                     !I &&
                     null != v &&
                     null != A &&
                     A.promotions.length > 0 &&
-                    null != b,
+                    null != y,
                 O = (0, u.t)("shop_home_carousel", { autoTrackExposure: N }).enabled,
-                T = "hscroll" === m && f === y.G2.HOME && null != v && O && !L;
+                T = "hscroll" === m && f === b.G2.HOME && null != v && O && !L;
             switch (m) {
                 case "feed":
                     return (0, l.jsx)(j, { isLoading: I, products: S, tab: f });
                 case "hscroll":
                     if (N && O)
-                        return (0, l.jsx)(R, { collectionId: v, sequencedOffers: A, products: b, onViewAll: x });
+                        return (0, l.jsx)(R, { collectionId: v, sequencedOffers: A, products: y, onViewAll: x });
                     return (0, l.jsx)(k, { isLoading: I || T, products: S, tab: f });
             }
         },

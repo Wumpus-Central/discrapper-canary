@@ -566,7 +566,7 @@ var eJ = n(21599),
     e4 = n(993077),
     e8 = n(235986),
     e3 = n(408738);
-function e5(e) {
+function e7(e) {
     let { text: t, buttonCta: i, onClick: l } = e;
     return (0, c.jsxs)(c.Fragment, {
         children: [
@@ -603,9 +603,9 @@ function e5(e) {
         ],
     });
 }
-function e7(e) {
+function e5(e) {
     let { text: t, buttonCta: n, theme: i = L.NJ8.DARK, onClick: l } = e;
-    return (0, c.jsx)(w.Ay, { theme: i, children: (0, c.jsx)(e5, { text: t, buttonCta: n, onClick: l }) });
+    return (0, c.jsx)(w.Ay, { theme: i, children: (0, c.jsx)(e7, { text: t, buttonCta: n, onClick: l }) });
 }
 var e9 = n(765671),
     e6 = n(71393),
@@ -1006,8 +1006,8 @@ var tJ = n(153488),
     t4 = n(627784),
     t8 = n(934337),
     t3 = n(15552),
-    t5 = n(536637),
-    t7 = n.n(t5),
+    t7 = n(536637),
+    t5 = n.n(t7),
     t9 = n(955437),
     t6 = n(295562),
     ne = n(831167);
@@ -1033,7 +1033,7 @@ function ni(e) {
         let e;
         ((0, nt.A)(o, L.JJy.REGISTER),
             b.default.track(L.HAw.AGE_GATE_ACTION, { source: nn.w_.REGISTER, action: nn.AM.AGE_GATE_SUBMITTED }),
-            (e = t7()().diff(o, "years")) < 13 ||
+            (e = t5()().diff(o, "years")) < 13 ||
                 b.default.track(L.HAw.USER_AGE_SUBMITTED, {
                     age_bucket: e >= 13 && e <= 17 ? "13-17" : e >= 18 && e <= 22 ? "18-22" : "23+",
                 }));
@@ -1672,8 +1672,8 @@ function nb(e) {
 function nR(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return t?.state === L.elq.BANNED
-        ? (0, c.jsx)(e5, { text: Q.intl.string(Q.t["5AkWAd"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n })
-        : (0, c.jsx)(e5, { text: Q.intl.string(Q.t["usP+Mb"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n });
+        ? (0, c.jsx)(e7, { text: Q.intl.string(Q.t["5AkWAd"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n })
+        : (0, c.jsx)(e7, { text: Q.intl.string(Q.t["usP+Mb"]), buttonCta: Q.intl.string(Q.t["8osdkn"]), onClick: n });
 }
 function nL(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, sectionClassName: l, inviteCardClassName: s = ny.qF } = e,
@@ -2013,7 +2013,7 @@ let n8 = { [nX.tY.MESSAGE]: Q.t.fuqnBC, [nX.tY.USER]: Q.t.F4jrRW, [nX.tY.GUILD]:
             ],
         });
     },
-    n5 = (e) => {
+    n7 = (e) => {
         let { dsaCapabilities: t, onReopen: n } = e;
         return (0, c.jsx)(eD.B, {
             gap: 16,
@@ -2027,7 +2027,7 @@ let n8 = { [nX.tY.MESSAGE]: Q.t.fuqnBC, [nX.tY.USER]: Q.t.F4jrRW, [nX.tY.GUILD]:
             }),
         });
     };
-var n7 = n(881636);
+var n5 = n(881636);
 let n9 = "https://stopncii.org/partners/global-network-of-partners/",
     n6 = {
         [nX.sl.TIDA]: {
@@ -2088,7 +2088,7 @@ let il = (e) => {
                                     }),
                                 ],
                             }),
-                            (0, c.jsx)(n7.ChevronLargeRightIcon, { size: "sm" }),
+                            (0, c.jsx)(n5.ChevronLargeRightIcon, { size: "sm" }),
                         ],
                     }),
                     (0, c.jsxs)(n1.D, {
@@ -2105,7 +2105,7 @@ let il = (e) => {
                                     }),
                                 ],
                             }),
-                            (0, c.jsx)(n7.ChevronLargeRightIcon, { size: "sm" }),
+                            (0, c.jsx)(n5.ChevronLargeRightIcon, { size: "sm" }),
                         ],
                     }),
                 ],
@@ -2268,7 +2268,7 @@ let io = (e) => {
                     transitionState: t,
                     onClose: n,
                     dismissable: !1,
-                    children: (0, c.jsx)(n5, { dsaCapabilities: _, onReopen: v }),
+                    children: (0, c.jsx)(n7, { dsaCapabilities: _, onReopen: v }),
                 });
             if (j)
                 return (0, c.jsx)(nK.a, {
@@ -2294,7 +2294,7 @@ let io = (e) => {
                         supportURL: n$.A.getArticleURL(L.MVz.COPYRIGHT_AND_IP_POLICY),
                     }),
                 },
-                body: (0, c.jsx)(n5, { dsaCapabilities: _, onReopen: v }),
+                body: (0, c.jsx)(n7, { dsaCapabilities: _, onReopen: v }),
             },
             {
                 stepKey: it.TIDA,
@@ -2710,8 +2710,8 @@ function i3(e) {
         ),
     });
 }
-var i5 = n(895600),
-    i7 = n(506774),
+var i7 = n(895600),
+    i5 = n(506774),
     i9 = n(104798),
     i6 = n(991512);
 let le = "mweb_handoff_nonce",
@@ -2720,7 +2720,7 @@ let le = "mweb_handoff_nonce",
     li = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
     ll = new Set(["deep_link_failed"]);
 function ls() {
-    (i7.w.remove(le), i7.w.remove(lt));
+    (i5.w.remove(le), i5.w.remove(lt));
 }
 let lr = () => {
     let e = (0, f.bG)([e$.default], () => e$.default.getFingerprint()),
@@ -2742,13 +2742,13 @@ let lr = () => {
             },
             [r, l],
         ),
-        o = i7.w.get(le);
+        o = i5.w.get(le);
     if (
         ("null" === n && null === s && a("deep_link_failed"),
         null != n && "null" !== n && null == o && null === s && a("nonce_missing"),
         u.useEffect(() => {
             if (null != o) {
-                let e = i7.w.get(lt);
+                let e = i5.w.get(lt);
                 (null == e || Date.now() >= e) && (a("nonce_expired"), ls());
             }
         }, [o, a]),
@@ -2810,7 +2810,7 @@ let lr = () => {
                       text: Q.intl.string(Q.t.NcC759),
                       onClick: function () {
                           let e = i9.A.generateNonce();
-                          (i7.w.set(le, e), i7.w.set(lt, Date.now() + ln));
+                          (i5.w.set(le, e), i5.w.set(lt, Date.now() + ln));
                           let t = new URL(L.J$u),
                               n = new URLSearchParams(window.location.search);
                           (n.delete("fingerprint"), n.delete("handoff_token"));
@@ -3141,7 +3141,7 @@ function lf(e) {
                     tag: "form",
                     className: B()(s, i0.Sy),
                     children: () => [
-                        (0, c.jsx)(i5.A, { guildTemplate: i }, "template"),
+                        (0, c.jsx)(i7.A, { guildTemplate: i }, "template"),
                         (0, c.jsx)(u.Fragment, { children: V }, "form-wrapper"),
                     ],
                 })
@@ -4269,7 +4269,7 @@ function lz(e) {
     let U = (0, c.jsx)(w.hE, { children: Q.intl.string(Q.t.wC4TlR) }, "title"),
         F = !1;
     null != l
-        ? ((U = (0, c.jsx)(i5.A, { guildTemplate: l })), (F = !0))
+        ? ((U = (0, c.jsx)(i7.A, { guildTemplate: l })), (F = !0))
         : null != n
           ? (U = (0, c.jsx)(iY, { giftCode: n }))
           : !r &&
@@ -4586,7 +4586,7 @@ var l0 = n(584265),
     l8 = n(396574),
     l3 = n(838697);
 f.Ay.initialize();
-class l5 extends u.PureComponent {
+class l7 extends u.PureComponent {
     componentDidMount() {
         ((0, P.d0)("guildTemplate"),
             l8.VP || eZ.A.launch("discord://" + L.BVt.GUILD_TEMPLATE(this.props.code), () => void 0));
@@ -4628,7 +4628,7 @@ class l5 extends u.PureComponent {
         let { guildTemplate: e } = this.props;
         return (eK()(null != e, "guild template must not be null"), e.state === lm.QB.RESOLVING)
             ? (0, c.jsx)(w.Ay, { className: l3.sL, children: (0, c.jsx)(l1.A, { guildTemplate: e }) })
-            : (0, c.jsx)(l7, { guildTemplate: e });
+            : (0, c.jsx)(l5, { guildTemplate: e });
     }
     renderContinue() {
         return (0, c.jsxs)(w.Ay, {
@@ -4665,7 +4665,7 @@ class l5 extends u.PureComponent {
         }
     }
 }
-function l7(e) {
+function l5(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: i } = (0, l0.A)(t, !1);
     l2.A.flowStep(l4.do.ORGANIC_GUILD_TEMPLATES, l4.jC.GUILD_CREATE);
@@ -4682,7 +4682,7 @@ function l7(e) {
     return (0, c.jsx)(i3, {
         className: l3.sL,
         children: () => [
-            (0, c.jsx)(i5.A, { guildTemplate: t }, "template"),
+            (0, c.jsx)(i7.A, { guildTemplate: t }, "template"),
             (0, c.jsx)("div", { className: l3.KJ, children: l }, "contents"),
         ],
     });
@@ -4721,7 +4721,7 @@ function l6(e) {
                     }),
                 ],
             })
-          : (0, c.jsx)(e7, {
+          : (0, c.jsx)(e5, {
                 text: Q.intl.string(Q.t["e/rZ2n"]),
                 buttonCta: Q.intl.string(Q.t.HAvYn0),
                 onClick: (e) => l9(e, t, n),
@@ -5344,7 +5344,7 @@ let sP = iC(lv),
             authenticated: (0, f.bG)([e$.default], () => e$.default.isAuthenticated()),
             defaultRoute: (0, f.bG)([ed.A], () => ed.A.defaultRoute),
         };
-        return (0, c.jsx)(l5, { ...e, ...t });
+        return (0, c.jsx)(l7, { ...e, ...t });
     }),
     sF = iC(l$),
     sM = iC(function (e) {

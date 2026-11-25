@@ -26,8 +26,8 @@ n.d(
                     isLoading: v,
                     tab: A,
                     endTime: L,
-                    ctaType: y = "storefront",
-                    logoUrl: b,
+                    ctaType: b = "storefront",
+                    logoUrl: y,
                     termsUrl: _,
                     backgroundImageUrl: I,
                 } = e,
@@ -35,8 +35,8 @@ n.d(
                 N = (0, o.W8)(),
                 j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
                 k = r.useMemo(() => {
-                    if ("none" !== y)
-                        return "nitro" !== y || N
+                    if ("none" !== b)
+                        return "nitro" !== b || N
                             ? {
                                   kind: "button",
                                   text:
@@ -55,7 +55,7 @@ n.d(
                                       buttonTextOverride: h.intl.string(h.t.pj0XBN),
                                   }),
                               };
-                }, [y, t, j, N]);
+                }, [b, t, j, N]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
                 resolvedSkuIds: C,
@@ -64,7 +64,7 @@ n.d(
                 applicationId: t,
                 headerText: n,
                 subheaderText: E,
-                logoUrl: b,
+                logoUrl: y,
                 cta: k,
                 timeLeftText: S,
                 termsUrl: _,

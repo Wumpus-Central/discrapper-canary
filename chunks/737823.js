@@ -7,7 +7,7 @@ var i,
     c = l(646514),
     d = l(939249),
     u = l(381645),
-    h = (((i = {}).OVERLAY = "overlay"), (i.RELATIVE = "relative"), i);
+    m = (((i = {}).OVERLAY = "overlay"), (i.RELATIVE = "relative"), i);
 l.d(
     t,
     {},
@@ -30,7 +30,7 @@ l.d(
                 children: (0, n.jsx)(l, { color: "currentColor", size: "sm" }),
             });
         },
-        Z5: h,
+        Z5: m,
         ns: function (e) {
             let { scrollPosition: t } = e;
             return (0, n.jsx)(o.animated.div, { className: u.tB, style: { opacity: t?.to([0, 100], [0, 1]) } });

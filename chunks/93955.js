@@ -19,8 +19,8 @@ var l = n(477900),
     v = n(65238),
     A = n(773669),
     L = n(975571),
-    y = n(304210),
-    b = n(324157),
+    b = n(304210),
+    y = n(324157),
     _ = n(480750),
     I = n(727142);
 let S = function (e) {
@@ -188,8 +188,8 @@ function q(e) {
             backgroundUrl: C,
             title: v,
             description: A,
-            progressText: y,
-            timeLeftText: b,
+            progressText: b,
+            timeLeftText: y,
             contentThemeClassName: I,
             rewardProduct: j,
             claimRewardButtonVariant: k,
@@ -211,7 +211,7 @@ function q(e) {
         className: a()($.N, I),
         style: { backgroundImage: `url(${C})` },
         children: [
-            (0, l.jsx)(T, { assetPath: s, progress: i, progressText: y, progressColor: f }),
+            (0, l.jsx)(T, { assetPath: s, progress: i, progressText: b, progressColor: f }),
             (0, l.jsxs)(o.B, {
                 direction: "vertical",
                 gap: 10,
@@ -243,8 +243,8 @@ function q(e) {
                         align: "center",
                         wrap: !0,
                         children: [
-                            null != y && (0, l.jsx)(S, { text: y, indicatorColor: f ?? N.W }),
-                            null != b && (0, l.jsx)(S, { icon: c.ClockIcon, text: b }),
+                            null != b && (0, l.jsx)(S, { text: b, indicatorColor: f ?? N.W }),
+                            null != y && (0, l.jsx)(S, { icon: c.ClockIcon, text: y }),
                         ],
                     }),
                 ],
@@ -316,11 +316,11 @@ function X(e) {
         return null;
     let L = p.showProgressRing && null != v,
         {
-            title: y,
+            title: b,
             description: I,
             progressText: S,
             timeLeftText: N,
-        } = (0, b.MZ)({
+        } = (0, y.MZ)({
             promotion: s,
             promotionProgress: v,
             progressIndicator: m.progressIndicator,
@@ -335,7 +335,7 @@ function X(e) {
             progress: L ? v : null,
             progressColor: g?.progressColor,
             backgroundUrl: h.backgroundUrl,
-            title: y,
+            title: b,
             description: I,
             progressText: S,
             timeLeftText: N,
@@ -350,7 +350,7 @@ function X(e) {
 }
 let Q = function (e) {
     let { variant: t, surface: n, collectionId: s } = e,
-        a = (0, y.ST)(),
+        a = (0, b.ST)(),
         { analyticsLocations: i } = (0, f.Ay)(),
         o = r.useCallback(
             (e) => {

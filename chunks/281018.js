@@ -20,12 +20,12 @@ n.d(
                 { data: n, isLoading: d, error: s } = (0, u.$M)(e, t),
                 p = t && null != n ? n : c;
             (0, r.x)(p);
-            let _ = (0, l.bG)(
+            let f = (0, l.bG)(
                     [i.A],
                     () => p.some((e) => null == i.A.getGame(e) && !i.A.hasNoData(e) && !i.A.didFetchingFail(e)),
                     [p],
                 ),
-                f = (0, l.yK)(
+                _ = (0, l.yK)(
                     [i.A, a.default],
                     () => {
                         let e = a.default.getCurrentUser()?.nsfwAllowed;
@@ -37,7 +37,7 @@ n.d(
                     [p],
                 );
             return t
-                ? { isFetching: (null == s && null == n) || d || _, similarGames: f }
+                ? { isFetching: (null == s && null == n) || d || f, similarGames: _ }
                 : { isFetching: !1, similarGames: m };
         },
         n: h,

@@ -34,11 +34,11 @@ function j(e, t) {
     let n = p.get(e);
     (null == n && ((n = new Set()), p.set(e, n)), n.add(t));
 }
-function k(e, t) {
+function T(e, t) {
     let n = E.get(e);
     null != n && (n.delete(t), 0 === n.size && E.delete(e));
 }
-function T() {
+function k() {
     M.delay(!1);
 }
 function _(e) {
@@ -69,7 +69,7 @@ function w() {
         }
         0 === i.size && S.delete(l);
     }
-    (1 / 0 !== t && O(t), n && T());
+    (1 / 0 !== t && O(t), n && k());
 }
 let M = new r.J_(500, () => {
     var e;
@@ -92,7 +92,7 @@ let M = new r.J_(500, () => {
                     let n = new Map();
                     for (let l of t) {
                         let t = d.Ay.getTrueMember(e, l);
-                        b(t) ? n.set(l, t) : k(e, l);
+                        b(t) ? n.set(l, t) : T(e, l);
                     }
                     if (0 === n.size) return;
                     let i = ((I += 1), `gmv:${Date.now().toString(36)}:${I.toString(36)}`),
@@ -115,8 +115,8 @@ let M = new r.J_(500, () => {
                                 }
                                 if ((0 === i.size && E.delete(n), r)) {
                                     let e;
-                                    (null == (e = y.get(n)) && ((e = new l.A(1e3, 6e4)), y.set(n, e)), e.fail(T));
-                                } else (_(n), p.has(n) && T());
+                                    (null == (e = y.get(n)) && ((e = new l.A(1e3, 6e4)), y.set(n, e)), e.fail(k));
+                                } else (_(n), p.has(n) && k());
                             })(i),
                         3e4,
                     );
@@ -140,12 +140,12 @@ function P() {
         let t = e.nonce,
             n = g.get(t);
         if (null == n || n.guildId !== e.guildId) continue;
-        (clearTimeout(n.timeout), g.delete(t), _(e.guildId), p.has(e.guildId) && T());
+        (clearTimeout(n.timeout), g.delete(t), _(e.guildId), p.has(e.guildId) && k());
         let l = new Set(e.members.map((e) => e.user.id)),
             i = new Set(e.notFound ?? []),
             r = Date.now();
         n.members.forEach((n, a) => {
-            if ((N(e.guildId, a, t), k(e.guildId, a), l.has(a))) {
+            if ((N(e.guildId, a, t), T(e.guildId, a), l.has(a))) {
                 let t = f.get(e.guildId);
                 (null == t && ((t = new Map()), f.set(e.guildId, t)), t.set(a, r));
             } else {
@@ -173,10 +173,10 @@ function P() {
     s.h.subscribe("CONNECTION_OPEN", function () {
         for (let e of g.values()) for (let t of e.members.keys()) j(e.guildId, t);
         for (let [e, t] of (L(), P(), E.clear(), f.clear(), S)) for (let n of t.keys()) j(e, n);
-        (S.clear(), R(), p.size > 0 && T());
+        (S.clear(), R(), p.size > 0 && k());
     }),
     s.h.subscribe("CONNECTION_RESUMED", function () {
-        p.size > 0 && T();
+        p.size > 0 && k();
     }),
     s.h.subscribe("LOGOUT", function () {
         (f.clear(), p.clear(), E.clear(), S.clear(), R(), L(), P(), M.cancel());
@@ -202,7 +202,7 @@ function P() {
                     }
                     (j(e, s), (r = !0));
                 }
-                r && T();
+                r && k();
             },
         },
     ));

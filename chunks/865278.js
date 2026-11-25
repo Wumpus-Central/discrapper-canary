@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     ZK: "hero_MIigO5",
     uW: "section_MIigO5",
     C: "copy_MIigO5",

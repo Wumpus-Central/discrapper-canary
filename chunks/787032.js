@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     wx: "header_dJk4eQ",
     b: "closeButton_dJk4eQ",
     rf: "body_dJk4eQ",

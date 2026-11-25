@@ -44,10 +44,10 @@ function j(e, t, n) {
           ? l.length
           : i) > 0 && x.b.delete(e, { distance: r, unit: "offset", reverse: n });
 }
-function k(e) {
+function T(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: E.VW.richValue(e), selection: e.selection };
 }
-var T = n(113001),
+var k = n(113001),
     _ = n(2368);
 function O(e, t, n) {
     let l = E.VW.getCurrentInline(e);
@@ -465,7 +465,7 @@ function D(e) {
             ((e.history = { index: 0, stack: [] }),
                 (e.onChange = () => {
                     let { history: t } = e;
-                    (0 === t.stack.length && ((t.stack = [k(e)]), (t.index = 0)),
+                    (0 === t.stack.length && ((t.stack = [T(e)]), (t.index = 0)),
                         null != e.selection && (g.o.currentEntry(e).selection = e.selection),
                         (d = null),
                         o());
@@ -485,7 +485,7 @@ function D(e) {
                     n(t);
                     let i = E.VW.richValue(e);
                     i !== h &&
-                        (0 === l.stack.length && ((l.stack = [k(e)]), (l.index = 0)),
+                        (0 === l.stack.length && ((l.stack = [T(e)]), (l.index = 0)),
                         g.o.isSaving(e) &&
                             ((function (e, t, n) {
                                 var l, i;
@@ -649,7 +649,7 @@ function D(e) {
                             }),
                             e
                         );
-                    })((m = (0, T.A)(m)))),
+                    })((m = (0, k.A)(m)))),
                 )),
                 c,
                 d,

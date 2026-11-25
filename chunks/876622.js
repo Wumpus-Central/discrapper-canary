@@ -7,15 +7,15 @@ var i = l(477900),
     c = l(761508),
     d = l(834730),
     u = l(900797),
-    h = l(847374),
-    m = l(3666),
+    m = l(847374),
+    h = l(3666),
     p = l(770178),
     g = l(124589),
     x = l(792996),
     v = l(129066);
 function j(e) {
     let { onTabSelect: t, tabs: l, selectedTab: s } = e,
-        m = n.useMemo(
+        h = n.useMemo(
             () =>
                 null !=
                 l.find((e) => {
@@ -28,11 +28,11 @@ function j(e) {
         A = (function (e) {
             let { selected: t, isHovered: l } = e;
             return l ? "text-strong" : t ? "text-brand" : "text-default";
-        })({ selected: m, isHovered: p }),
+        })({ selected: h, isHovered: p }),
         C = (function (e) {
             let { selected: t, isHovered: l } = e;
             return l ? r.A.colors.TEXT_STRONG : t ? r.A.colors.TEXT_BRAND : r.A.colors.INTERACTIVE_TEXT_DEFAULT;
-        })({ selected: m, isHovered: p }),
+        })({ selected: h, isHovered: p }),
         I = n.useCallback(() => j(!0), []),
         f = n.useCallback(() => j(!1), []),
         N = n.useRef(null);
@@ -50,7 +50,7 @@ function j(e) {
                 ...e,
                 id: "more",
                 look: "brand",
-                selectedItem: m ? "more" : void 0,
+                selectedItem: h ? "more" : void 0,
                 className: a()(v.Mf, { [v.wH]: !1 }),
                 clickableRef: (e) => {
                     null != e && null != e.ref && (N.current = e.ref);
@@ -68,7 +68,7 @@ function j(e) {
                         }),
                         l
                             ? (0, i.jsx)(u.ChevronSmallUpIcon, { size: "xs", color: C })
-                            : (0, i.jsx)(h.ChevronSmallDownIcon, { size: "xs", color: C }),
+                            : (0, i.jsx)(m.ChevronSmallDownIcon, { size: "xs", color: C }),
                     ],
                 }),
             });
@@ -81,39 +81,39 @@ l.d(
     {
         A: function (e) {
             let { className: t, selectedTab: l, tabs: s, onTabSelect: r, onAvailableWidthChange: o } = e,
-                [u, h] = n.useState(0),
+                [u, m] = n.useState(0),
                 g = n.useRef(u),
                 {
                     lastVisibleIndex: x,
                     onItemLayout: A,
                     overflowItemsRef: C,
                     itemWidthsRef: I,
-                } = (0, m.Wv)({ items: s, itemGapPx: 20, maxLines: 1, containerWidth: u }),
+                } = (0, h.Wv)({ items: s, itemGapPx: 20, maxLines: 1, containerWidth: u }),
                 f = n.useMemo(() => s.slice(0, x + 1), [x, s]),
                 N = n.useMemo(() => s.slice(x + 1), [x, s]),
-                b = n.useRef(null),
-                y = n.useCallback(
+                y = n.useRef(null),
+                b = n.useCallback(
                     (e) => {
                         let t = e.contentRect.width;
                         if (null == t || g.current === t) return;
-                        (h(t), (g.current = t));
+                        (m(t), (g.current = t));
                         let l = t - I.current.reduce((e, t, l) => e + t + 20 * (0 !== l));
                         o?.(l);
                     },
                     [I, o],
                 );
-            (0, p.g)(b, y);
+            (0, p.g)(y, b);
             let E = 0 !== u;
             return (0, i.jsxs)("div", {
                 className: a()(v.kL, t),
-                ref: b,
+                ref: y,
                 children: [
                     (0, i.jsxs)("div", {
                         className: v.Kk,
                         children: [
                             s.map((e, t) =>
                                 (0, i.jsx)(
-                                    m.Ae,
+                                    h.Ae,
                                     {
                                         index: t,
                                         onItemLayout: A,

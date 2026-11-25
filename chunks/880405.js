@@ -10,7 +10,7 @@ var l = n(158390),
     m = n(422069),
     h = n(652215),
     p = n(277450);
-let _ = (0, i.UT)(m.A, {
+let f = (0, i.UT)(m.A, {
     getQueryId: (e, t) => (t && null != e ? `similar-games:${e}` : null),
     get: (e) => (null != e ? (m.A.getSimilarGames(e) ?? null) : null),
     load: async (e) => {
@@ -29,7 +29,7 @@ n.d(
     t,
     {},
     {
-        $M: _,
+        $M: f,
         Rf: async function (e, t) {
             a.h.dispatch({ type: "GAME_PROFILE_GET_ANNOUNCEMENTS_START", gameId: e });
             try {

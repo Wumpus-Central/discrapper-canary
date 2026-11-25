@@ -7,7 +7,7 @@ var i = l(477900),
     c = l(646514),
     d = l(683438),
     u = l(488995),
-    h = l(449378);
+    m = l(449378);
 l.d(
     t,
     {},
@@ -17,7 +17,7 @@ l.d(
                     state: t,
                     query: l,
                     placeholder: s,
-                    onTextChange: m,
+                    onTextChange: h,
                     onCollapsedClick: p,
                     onClear: g,
                     onBlur: x,
@@ -37,18 +37,18 @@ l.d(
                 }, [p]);
             return t === u.Um.COLLAPSED
                 ? (0, i.jsx)(r.D, {
-                      className: h.qc,
+                      className: m.qc,
                       onClick: f,
                       children: (0, i.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
                   })
                 : (0, i.jsx)("div", {
-                      className: a()(h.ON, { [h.Nz]: t === u.Um.FLOATING }),
+                      className: a()(m.ON, { [m.Nz]: t === u.Um.FLOATING }),
                       children: (0, i.jsx)(d.I, {
                           size: "sm",
                           ref: C,
                           query: l,
                           placeholder: s,
-                          onChange: m,
+                          onChange: h,
                           onClear: g,
                           onKeyDown: I,
                           onBlur: x,

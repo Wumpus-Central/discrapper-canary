@@ -402,8 +402,8 @@ let e8 = i.memo(function () {
 });
 var e5 = n(934058),
     e6 = n(190488),
-    e4 = n(630398),
-    e7 = n(233470),
+    e7 = n(630398),
+    e4 = n(233470),
     e9 = n(743082),
     te = n(897720),
     tt = n(312130),
@@ -816,9 +816,9 @@ function t_() {
         }),
         ((b = (0, tt.H)()),
         i.useEffect(() => {
-            b && (0, e7.listProjects)();
+            b && (0, e4.listProjects)();
         }, [b]),
-        (0, e4.A)({ refetchOnMount: !1 }),
+        (0, e7.A)({ refetchOnMount: !1 }),
         (C = (0, eS.A)()),
         (N = (0, l.yK)([e5.A, ta, Z.A], () =>
             e5.A.getServerProjects().filter((e) => {

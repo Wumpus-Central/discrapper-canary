@@ -25,8 +25,8 @@ var l = n(485845),
 (n(652215), n(827669));
 let N = new Set(["applicationCommandOption"]),
     j = new Set([r.n4.ATTACHMENT]),
-    k = new Set(["line", "applicationCommand"]);
-function T(e, t, n, l) {
+    T = new Set(["line", "applicationCommand"]);
+function k(e, t, n, l) {
     let [i] = b.VW.blocks(e)[0],
         r = (l ? (0, C.IQ)(i, { mode: "plain" }).trimEnd() : "")
             .split("\n")
@@ -234,12 +234,12 @@ n.d(
                                     )
                                         return (
                                             null != h
-                                                ? T(t, a.id, E, !0)
+                                                ? k(t, a.id, E, !0)
                                                 : null != E && s.Gf({ channelId: a.id, command: null, section: null }),
                                             null
                                         );
                                     if (null != h) {
-                                        if (b.VW.isEditorEmpty(t) || null == E) return (T(t, a.id, E, !1), null);
+                                        if (b.VW.isEditorEmpty(t) || null == E) return (k(t, a.id, E, !1), null);
                                         let e = `/${h.displayName}`;
                                         if (
                                             null == g ||
@@ -247,7 +247,7 @@ n.d(
                                             (0 === S.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
                                         )
                                             return (
-                                                i.A.clearDraftCommand(a.id, x.C.ChannelMessage), T(t, a.id, E, !0), null
+                                                i.A.clearDraftCommand(a.id, x.C.ChannelMessage), k(t, a.id, E, !0), null
                                             );
                                     } else {
                                         if (null != E && u) {
@@ -361,7 +361,7 @@ n.d(
                                             return (s.Gf({ channelId: a.id, command: null, section: null }), null);
                                         let e = b.VW.richValue(t)[0],
                                             l = e.children[0];
-                                        if (k.has(e.type) && b.l5.isText(l)) {
+                                        if (T.has(e.type) && b.l5.isText(l)) {
                                             let e = (function (e, t) {
                                                 if (!e.startsWith("/")) return null;
                                                 let n = (0, m.p)(t, e, x.A.getDraftCommand(t.id, x.C.ChannelMessage));
@@ -470,6 +470,6 @@ n.d(
                 e
             );
         },
-        t: T,
+        t: k,
     },
 );

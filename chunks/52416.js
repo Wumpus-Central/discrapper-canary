@@ -37,8 +37,8 @@ n.d(
                     promotionId: y,
                     dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
                 }),
-                { icon: v, iconPosition: L } = (0, p.x)({ buttonAction: g.button?.buttonAction });
-            function D() {
+                { icon: v, iconPosition: D } = (0, p.x)({ buttonAction: g.button?.buttonAction });
+            function L() {
                 return f(I.i.USER_DISMISS);
             }
             let U =
@@ -52,10 +52,10 @@ n.d(
                                   applicationId: g.button.navigableStorefrontApplicationId?.value,
                                   shopCollectionId: g.button.shopCollectionId?.value,
                                   giftModalDestination: g.button.giftModalDestination,
-                                  onClose: D,
+                                  onClose: L,
                               }),
                               icon: v,
-                              iconPosition: L,
+                              iconPosition: D,
                           }
                         : void 0,
                 G = (0, _.C)(g.helpArticle, g.helpArticleId),
@@ -69,7 +69,7 @@ n.d(
                     alignmentStrategy: "edge",
                     align: "top",
                     caretConfig: { align: "start" },
-                    onRequestClose: D,
+                    onRequestClose: L,
                 };
             if (T) {
                 let e = { ...B, assetUrl: N ?? "", action: U, disableMediaViewer: !0 };

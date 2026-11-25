@@ -65,8 +65,8 @@ let b = function (e) {
     });
 var N = n(931664),
     j = n(951260),
-    k = n(87207),
-    T = n(188567),
+    T = n(87207),
+    k = n(188567),
     _ = n(709372),
     O = n(841817),
     R = n(652215),
@@ -347,15 +347,15 @@ let eu = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 return l && i && null == r;
             })({ channel: x, chatInputType: p }),
             $ = p.submit?.button != null && (p.submit?.ignorePreference || b),
-            X = (0, k.A)(x, p);
+            X = (0, T.A)(x, p);
         ((t = x.id),
             (f = (0, _.wX)()),
             i.useEffect(() => {
                 if (X && !f)
                     return (
-                        T._.subscribe(R.jej.RECORD_VOICE_MESSAGE, e),
+                        k._.subscribe(R.jej.RECORD_VOICE_MESSAGE, e),
                         () => {
-                            T._.unsubscribe(R.jej.RECORD_VOICE_MESSAGE, e);
+                            k._.unsubscribe(R.jej.RECORD_VOICE_MESSAGE, e);
                         }
                     );
                 function e() {

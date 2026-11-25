@@ -9,11 +9,11 @@ var o = n(246338),
     c = n(525530),
     s = n(191850),
     f = n(792996);
-let m = new Map(),
-    p = new Set();
+let p = new Map(),
+    h = new Set();
 (t.h.subscribe("CONJURE_PROJECT_CREATE_PROGRESS", (e) => {
     let { nonce: l, projectId: n, wsTicket: t } = e;
-    m.get(l)?.(n, t);
+    p.get(l)?.(n, t);
 }),
     n.d(
         l,
@@ -23,96 +23,96 @@ let m = new Map(),
                 return e.trim().length >= 2;
             },
             Du: function (e) {
-                return p.has(e);
+                return h.has(e);
             },
             yG: function (e, l, n) {
                 let t = null,
-                    h = !1;
+                    m = !1;
                 return {
                     confirm: async function (_, v, g) {
-                        let { name: k, copy: b } = v;
-                        if (h) return null;
-                        h = !0;
-                        let w = k.trim(),
-                            y = !0 === b;
+                        let { name: k, copy: w } = v;
+                        if (m) return null;
+                        m = !0;
+                        let b = k.trim(),
+                            y = !0 === w;
                         try {
-                            (t?.guildId !== _ || t.name !== w || t.copy !== y) &&
+                            (t?.guildId !== _ || t.name !== b || t.copy !== y) &&
                                 (t?.abandon(),
                                 (t = (function (e, l, n, t) {
-                                    let h,
+                                    let m,
                                         { name: _, copy: v } = n,
-                                        { preloadPreview: g, shareTicket: k, onReserved: b } = t,
-                                        w = f.intl.string(s.default.Cn8H0Y),
+                                        { preloadPreview: g, shareTicket: k, onReserved: w } = t,
+                                        b = f.intl.string(s.default.Cn8H0Y),
                                         y = (0, r.gA)(e.id, null != k ? { share_ticket: k } : void 0);
                                     y.catch(() => void 0);
-                                    let I = null,
-                                        R = null,
-                                        C = !1,
-                                        E = !1;
-                                    function M(e) {
+                                    let C = null,
+                                        E = null,
+                                        R = !1,
+                                        I = !1;
+                                    function P(e) {
                                         return (
                                             (0, a.ensureConnection)(e),
-                                            (I ??= (0, c.Io)(y, e, v).catch(() => "rejected"))
+                                            (C ??= (0, c.Io)(y, e, v).catch(() => "rejected"))
                                         );
                                     }
-                                    let P = (function (e, l) {
+                                    let A = (function (e, l) {
                                             if (null == l || "guild" !== e.install_scope) return null;
                                             let n = i.A.getGuild(l);
                                             return null != n && (0, o.sM)(n, "ConjureRemix") ? l : null;
                                         })(e, l),
                                         S = (0, u.m)();
-                                    m.set(S, (e, l) => {
-                                        (m.delete(S), (R = e), p.add(e), (0, r.vG)(e, l), M(e), b?.(e, P));
+                                    p.set(S, (e, l) => {
+                                        (p.delete(S), (E = e), h.add(e), (0, r.vG)(e, l), P(e), w?.(e, A));
                                     });
-                                    let x = (0, d.iR)({
+                                    let M = (0, d.iR)({
                                         name: _,
-                                        ...(null != P ? { guild_id: P } : {}),
+                                        ...(null != A ? { guild_id: A } : {}),
                                         remix_source_project_id: e.id,
                                         remix_share_ticket: k,
                                         nonce: S,
                                     }).then(
                                         (e) => (
-                                            m.delete(S),
-                                            p.delete(e.id),
+                                            p.delete(S),
+                                            h.delete(e.id),
                                             null != e.remix_preview &&
-                                                ((0, d.A5)(e.id, e.remix_preview), E || (h = g?.(e))),
-                                            M(e.id),
+                                                ((0, d.A5)(e.id, e.remix_preview), I || (m = g?.(e))),
+                                            P(e.id),
                                             e
                                         ),
-                                        () => (m.delete(S), null != R && (p.delete(R), (0, a.Bn)(R)), null),
+                                        () => (p.delete(S), null != E && (h.delete(E), (0, a.Bn)(E)), null),
                                     );
                                     return {
                                         guildId: l,
                                         name: _,
                                         copy: v,
                                         open: async function () {
-                                            C = !0;
-                                            let e = await x;
-                                            if (null == e) return { ok: !1, message: w, kept: !1 };
-                                            let l = await M(e.id);
+                                            R = !0;
+                                            let e = await M;
+                                            if (null == e) return { ok: !1, message: b, kept: !1 };
+                                            let l = await P(e.id);
                                             return "unreachable" === l
-                                                ? ((I = null), (C = !1), { ok: !1, message: w, kept: !0 })
+                                                ? ((C = null), (R = !1), { ok: !1, message: b, kept: !0 })
                                                 : "rejected" === l
-                                                  ? (h?.(),
+                                                  ? (m?.(),
                                                     (0, a.Bn)(e.id),
                                                     await (0, d.xx)(e.id).catch(() => void 0),
-                                                    { ok: !1, message: w, kept: !1 })
-                                                  : { ok: !0, projectId: e.id, guildId: P };
+                                                    { ok: !1, message: b, kept: !1 })
+                                                  : { ok: !0, projectId: e.id, guildId: A };
                                         },
                                         abandon: function () {
-                                            C ||
-                                                E ||
-                                                ((E = !0),
-                                                x.then((e) => {
-                                                    (h?.(), null != e && (0, a.Bn)(e.id));
+                                            R ||
+                                                I ||
+                                                ((I = !0),
+                                                M.then((e) => {
+                                                    (m?.(), null != e && (0, a.Bn)(e.id));
                                                 }));
                                         },
                                     };
-                                })(e, _, { name: w, copy: y }, { preloadPreview: l, shareTicket: n, onReserved: g })));
-                            let h = await t.open();
-                            return (h.ok || h.kept || (t = null), h);
+                                })(e, _, { name: b, copy: y }, { preloadPreview: l, shareTicket: n, onReserved: g })));
+                            let m = await t.open();
+                            return (m.ok || m.kept || (t = null), m);
                         } finally {
-                            h = !1;
+                            m = !1;
                         }
                     },
                     dismiss: () => t?.abandon(),

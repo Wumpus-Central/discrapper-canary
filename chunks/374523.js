@@ -11,17 +11,17 @@ n.d(
             let {
                     project: t,
                     unavailable: n,
-                    creating: o,
+                    creating: u,
                 } = (0, r.cf)(
                     [a.Ay],
                     () => ({ project: a.Ay.getProject(e), unavailable: (0, i.su)(e), creating: (0, s.Du)(e) }),
                     [e],
                 ),
-                u = null == t && !o;
+                o = null == t && !u;
             return (
                 l.useEffect(() => {
-                    u && (0, i.tF)([e]);
-                }, [u, e]),
+                    o && (0, i.tF)([e]);
+                }, [o, e]),
                 { project: t, settled: null != t || n }
             );
         },

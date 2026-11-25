@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(792996),
     N = n(683825),
     j = n(429955);
-let k = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
-function T(e) {
+let T = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
+function k(e) {
     let { alt: t, spoiler: n, renderContent: r, size: a } = e,
         [o, u] = i.useState(!1);
     return (0, l.jsx)(S.Bs.Provider, {
@@ -67,7 +67,7 @@ function _(e) {
         [h, m] = i.useState({ width: 0, height: 0 }),
         f = a === b.L.SMALL;
     i.useEffect(() => {
-        if (null == t || !1 === k.includes(t.type)) return;
+        if (null == t || !1 === T.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         d(e);
         let n = new Image();
@@ -123,7 +123,7 @@ function _(e) {
             className: j.clickableMedia,
             "aria-label": E,
             tabIndex: -1,
-            children: (0, l.jsx)(T, { size: a, alt: n, spoiler: r, renderContent: p }),
+            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: p }),
         }),
     });
 }
@@ -155,7 +155,7 @@ function O(e) {
             onMouseEnter: o,
             className: j.mediaContainer,
             children: [
-                (0, l.jsx)(T, {
+                (0, l.jsx)(k, {
                     size: a,
                     alt: n,
                     spoiler: r,
@@ -239,14 +239,14 @@ n.d(
                     hideFileName: S = !1,
                     clip: C,
                 } = e,
-                k = null != C,
-                T = E === b.L.SMALL,
+                T = null != C,
+                k = E === b.L.SMALL,
                 _ = (0, a.bG)([A.A], () => A.A.getChannel(t)?.guild_id);
             function O() {
                 p.A.remove(t, o.id, r);
             }
             function w(e) {
-                (e.stopPropagation(), k)
+                (e.stopPropagation(), T)
                     ? (0, c.mM)(async () => {
                           let { default: e } = await Promise.all([
                               n.e(277162),
@@ -313,8 +313,8 @@ n.d(
                     children: [
                         y
                             ? (0, l.jsx)(I.A, {
-                                  className: s()({ [j.action]: T }),
-                                  tooltip: k ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
+                                  className: s()({ [j.action]: k }),
+                                  tooltip: T ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
                                   onClick: () => {
                                       p.A.update(t, o.id, r, { spoiler: !o.spoiler });
                                   },
@@ -322,36 +322,36 @@ n.d(
                                       ? (0, l.jsx)(d.EyeSlashIcon, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: s()({ [j.actionBarIcon]: T }),
+                                            className: s()({ [j.actionBarIcon]: k }),
                                         })
                                       : (0, l.jsx)(h.EyeIcon, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: s()({ [j.actionBarIcon]: T }),
+                                            className: s()({ [j.actionBarIcon]: k }),
                                         }),
                               })
                             : null,
                         y
                             ? (0, l.jsx)(I.A, {
-                                  className: s()({ [j.action]: T }),
-                                  tooltip: k ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
+                                  className: s()({ [j.action]: k }),
+                                  tooltip: T ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
                                   onClick: w,
                                   children: (0, l.jsx)(m.PencilIcon, {
                                       size: "xs",
                                       color: "currentColor",
-                                      className: s()({ [j.actionBarIcon]: T }),
+                                      className: s()({ [j.actionBarIcon]: k }),
                                   }),
                               })
                             : null,
                         (0, l.jsx)(I.A, {
-                            className: s()({ [j.action]: T }),
-                            tooltip: k ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
+                            className: s()({ [j.action]: k }),
+                            tooltip: T ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
                             onClick: O,
                             dangerous: !0,
                             children: (0, l.jsx)(f.TrashIcon, {
                                 size: "md",
                                 color: "currentColor",
-                                className: s()({ [j.actionBarIcon]: T }),
+                                className: s()({ [j.actionBarIcon]: k }),
                             }),
                         }),
                     ],
@@ -362,7 +362,7 @@ n.d(
                 handleEditModal: w,
                 keyboardModeEnabled: g,
                 size: E,
-                className: s()({ [j.attachmentItemSmall]: T }),
+                className: s()({ [j.attachmentItemSmall]: k }),
                 children: [
                     (0, l.jsx)(R, { upload: o, size: E, clip: C, guildId: _ }),
                     !S &&
@@ -372,7 +372,7 @@ n.d(
                             children: (0, l.jsx)(u.E, {
                                 className: j.filename,
                                 variant: "body-sm/normal",
-                                children: null != x ? x : k ? C.name : o.filename,
+                                children: null != x ? x : T ? C.name : o.filename,
                             }),
                         }),
                 ],

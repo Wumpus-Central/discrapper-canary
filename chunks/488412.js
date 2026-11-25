@@ -15,10 +15,10 @@ function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span";
     return `${e} ${t}${1 === e ? "" : "s"}`;
 }
-function o(e) {
+function u(e) {
     return a(e.count > 1 ? e.totalMs : e.end - e.start);
 }
-let u = ["Arguments", "Result", "Usage", "Details"];
+let o = ["Arguments", "Result", "Usage", "Details"];
 function c(e, t) {
     return { label: e, value: t, block: t.length > 80 || t.includes("\n") };
 }
@@ -72,14 +72,14 @@ n.d(
         },
         Zy: a,
         n2: function (e) {
-            return e.marker ? `at ${a(e.start)}` : o(e);
+            return e.marker ? `at ${a(e.start)}` : u(e);
         },
         oX: function (e) {
             return s(e.count, "smaller span");
         },
         qL: function (e) {
             let t = [c("Start", `+${a(e.start)}`)];
-            (e.marker || t.push(c("Duration", o(e))),
+            (e.marker || t.push(c("Duration", u(e))),
                 e.count > 1
                     ? t.push(
                           c("Calls", String(e.count)),
@@ -113,7 +113,7 @@ n.d(
             }
             return [
                 { title: null, rows: t },
-                ...u.flatMap((e) => {
+                ...o.flatMap((e) => {
                     let t = r.get(e);
                     return null == t ? [] : [{ title: e, rows: t }];
                 }),

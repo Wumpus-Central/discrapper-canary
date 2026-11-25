@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     u1: "spinner_UlS6S9",
     yl: "modal_UlS6S9",
     Hc: "modalHeader_UlS6S9",

@@ -4,7 +4,7 @@ var r = n(834730),
     i = n(488412),
     a = n(667931),
     s = n(872892);
-let o = {
+let u = {
     op: s.Q,
     model: s.i3,
     tool: s.dH,
@@ -35,7 +35,7 @@ n.d(
                                 : (0, l.jsx)(
                                       "div",
                                       {
-                                          className: `${s.DJ} ${o[t]}`,
+                                          className: `${s.DJ} ${u[t]}`,
                                           style: { "--custom-conjure-perf-trace-weight": String(n) },
                                       },
                                       t,
@@ -51,7 +51,7 @@ n.d(
                                 {
                                     className: s.fI,
                                     children: [
-                                        (0, l.jsx)("span", { className: `${s.nf} ${o[e]}` }),
+                                        (0, l.jsx)("span", { className: `${s.nf} ${u[e]}` }),
                                         (0, l.jsx)(r.E, {
                                             variant: "body-xs/normal",
                                             color: "text-muted",
@@ -82,6 +82,6 @@ n.d(
                 ],
             });
         },
-        o: o,
+        o: u,
     },
 );

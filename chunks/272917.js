@@ -1,4 +1,4 @@
-e.exports = {
+p.exports = {
     EA: "combobox_YIHpnz",
     wx: "header_YIHpnz",
     p_: "list_YIHpnz",
