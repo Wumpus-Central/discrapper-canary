@@ -5,22 +5,22 @@ var n = t(435558),
     i = t(280157),
     d = t(174768),
     c = t(734057),
-    s = t(576705),
-    a = t(287809),
-    o = t(403362),
+    o = t(576705),
+    s = t(287809),
+    a = t(403362),
     p = t(507696),
     f = t(652215);
 t(792996);
 let y = /^deleted_user_[0-9a-f]{12}$/;
-function h(e) {
+function D(e) {
     if ("channel" === e.type) return e.id;
     let r = c.A.getDMFromUserId(e.id);
     if (null != r) return r;
 }
-function D(e) {
+function h(e) {
     if ("user" !== e.type) return (0, i.A)(e.id);
     {
-        let r = a.default.getUser(e.id);
+        let r = s.default.getUser(e.id);
         return null != r ? { type: u.rD.USER, record: r, score: 0 } : null;
     }
 }
@@ -40,8 +40,9 @@ function E(e, r) {
         e.type === u.rD.GROUP_DM ||
         (e.record.type !== f.rbe.GUILD_FORUM &&
             e.record.type !== f.rbe.GUILD_MEDIA &&
-            s.A.can(f.xBc.VIEW_CHANNEL, e.record) &&
-            s.A.can(f.xBc.SEND_MESSAGES, e.record))
+            e.record.type !== f.rbe.GUILD_DIRECTORY &&
+            o.A.can(f.xBc.VIEW_CHANNEL, e.record) &&
+            o.A.can(f.xBc.SEND_MESSAGES, e.record))
     );
 }
 function A(e, r) {
@@ -60,7 +61,7 @@ function A(e, r) {
 }
 function U(e, r) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E;
-    return e.filter((e) => (0, o.Vq)(e) && (e.type === u.rD.HEADER || ((0, p.N)(e) && t(e, r))));
+    return e.filter((e) => (0, a.Vq)(e) && (e.type === u.rD.HEADER || ((0, p.N)(e) && t(e, r))));
 }
 t.d(
     r,
@@ -73,26 +74,26 @@ t.d(
                 queryMode: l,
                 frequentChannels: u,
                 targetDestination: c,
-                selectedDestinations: s,
-                pinnedDestinations: a,
-                originDestination: o,
+                selectedDestinations: o,
+                pinnedDestinations: s,
+                originDestination: a,
                 channelFilter: p,
                 includeMissingDMs: f,
             } = e;
             if (t) return A(U(r, f, p));
-            let y = null != a && a.length > 0 ? a.map((e) => D(e)) : [],
-                h = d.A.getChannelHistory(),
-                E = h.length > 0 ? h.map((e) => (0, i.A)(e)) : [],
+            let y = null != s && s.length > 0 ? s.map((e) => h(e)) : [],
+                D = d.A.getChannelHistory(),
+                E = D.length > 0 ? D.map((e) => (0, i.A)(e)) : [],
                 _ = u.length > 0 ? u.map((e) => (0, i.A)(e.id)) : [],
-                g = U([...y, null != c ? D(c) : null, ...E, ..._], f, p),
-                C = s?.find((e) => (0, n.isEqual)(e, o)) != null,
-                S = null == o || C ? [] : [o.id];
+                g = U([...y, null != c ? h(c) : null, ...E, ..._], f, p),
+                C = o?.find((e) => (0, n.isEqual)(e, a)) != null,
+                R = null == a || C ? [] : [a.id];
             return null != l
                 ? A(
                       g.filter((e) => e.type === l),
-                      S,
+                      R,
                   )
-                : A(g, S).slice(0, 15);
+                : A(g, R).slice(0, 15);
         },
         I: function (e) {
             return `${e.type}-${e.id}`;
@@ -101,13 +102,13 @@ t.d(
             let r = c.A.getChannel(e);
             return r?.type === f.rbe.DM ? { type: "user", id: r.recipients[0] } : { type: "channel", id: e };
         },
-        _g: h,
+        _g: D,
         hY: function (e) {
             let { type: r, record: t } = e;
             return r === u.rD.USER ? { type: "user", id: t.id } : { type: "channel", id: t.id };
         },
         pk: async function (e) {
-            let r = h(e);
+            let r = D(e);
             if (null != r) return r;
             if ("user" === e.type)
                 try {
