@@ -1,0 +1,32 @@
+.previewContainer_uEa-A9 {
+    border: 2px solid transparent;
+    gap: var(--space-12);
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    width: 276px
+}
+
+.previewBox_uEa-A9,
+.previewContainer_uEa-A9 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.previewBox_uEa-A9 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    height: 190px;
+    width: 100%
+}
+
+.previewContents_uEa-A9 {
+    height: 100%;
+    position: relative;
+    top: -10px;
+    width: 224px
+}
+
+/*# sourceMappingURL=b65f43eef11b8176.css.map*/

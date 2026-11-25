@@ -1754,6 +1754,14 @@ let n$ = s.memo(function (e) {
                         (0, r.jsx)("div", { className: nY.fm }),
                     ],
                 }),
+            null != t.attachmentFilenames &&
+                t.attachmentFilenames.length > 0 &&
+                (0, r.jsx)(Y.E, {
+                    variant: "body-sm/medium",
+                    color: "text-default",
+                    lineClamp: 3,
+                    children: t.attachmentFilenames.join(", "),
+                }),
             (0, r.jsxs)("div", {
                 className: nY.ov,
                 children: [

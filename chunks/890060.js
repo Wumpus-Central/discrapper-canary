@@ -11,7 +11,7 @@ var l = n(317097),
     m = n(998218),
     h = n(792996);
 let p = /^#{1,3}\s+(.+)$/,
-    _ = /^https?:\/\/\S+$/;
+    f = /^https?:\/\/\S+$/;
 n.d(
     t,
     {},
@@ -32,7 +32,7 @@ n.d(
                                 .map((e) => e.content)
                                 .join("\n");
                         let t = e.content;
-                        return 0 === t.length || _.test(t.trim())
+                        return 0 === t.length || f.test(t.trim())
                             ? ((function (e) {
                                   let t = e.embeds[0];
                                   if (null == t) return null;
@@ -89,7 +89,7 @@ n.d(
                                 "IMAGE",
                             );
                     })(a),
-                    { title: f, body: E } =
+                    { title: _, body: E } =
                         null != (n = (-1 === (t = m.indexOf("\n")) ? m : m.slice(0, t)).match(p))
                             ? { title: n[1].trim(), body: -1 === t ? "" : m.slice(t + 1).trimStart() }
                             : { body: m },
@@ -119,12 +119,14 @@ n.d(
                 return {
                     id: a.id,
                     media: h,
-                    title: f,
+                    title: _,
                     body: E,
                     content: m,
                     timestamp: e.timestamp,
                     reactionCount: A,
                     embedSource: S,
+                    attachmentFilenames:
+                        null == h && 0 === m.trim().length ? a.attachments.map((e) => e.filename) : void 0,
                     poll: a.poll,
                 };
             });
