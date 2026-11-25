@@ -12,6 +12,7 @@ e.exports = {
     Di: "resizeHandle_dyDYQj",
     C$: "nav_dyDYQj",
     CT: "navList_dyDYQj",
+    hE: "navActions_dyDYQj",
     Mf: "tab_dyDYQj",
     yR: "tabActive_dyDYQj",
     Gn: "tabLabel_dyDYQj",

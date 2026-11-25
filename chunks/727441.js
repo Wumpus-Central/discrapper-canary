@@ -308,7 +308,7 @@ let V = "playground-announcement-modal",
                                     n.e(375724),
                                     n.e(999272),
                                     n.e(77413),
-                                    n.e(521332),
+                                    n.e(474750),
                                     n.e(267526),
                                     n.e(441674),
                                     n.e(669174),
@@ -1029,9 +1029,9 @@ let e2 = "playground-premium-tab-popover",
         },
     };
 var e6 = n(796878);
-let e3 = "playground-premium-tab-tooltip";
+let e7 = "playground-premium-tab-tooltip";
 n(321073);
-var e7 = n(896170),
+var e3 = n(896170),
     e8 = n(890497),
     e9 = n(620632);
 let e5 = [
@@ -1279,11 +1279,11 @@ let ta = {
                                         body: t.body,
                                         asset: k(t.assetUrl, u?.asset),
                                     }),
-                                    (l = B(e3, {
+                                    (l = B(e7, {
                                         oneofKind: "premiumTabTooltip",
                                         premiumTabTooltip: null != u ? { ...u, ...n } : n,
                                     })),
-                                    F(e3, s.oW.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", l)),
+                                    F(e7, s.oW.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", l)),
                                 ),
                                 (0, d.jsx)(eJ, { selected: !0, wrapNitroRow: (e) => (0, d.jsx)(e6.A, { children: e }) })
                             );
@@ -1867,7 +1867,7 @@ let ta = {
                     );
                 }, []);
                 let o = a.useMemo(() => e4(t), [t]),
-                    r = a.useCallback((e, n) => e4((0, e7.Ht)(t, n, { keys: ["name"] })), [t]);
+                    r = a.useCallback((e, n) => e4((0, e3.Ht)(t, n, { keys: ["name"] })), [t]);
                 return 0 === t.length
                     ? null
                     : (0, d.jsx)("div", {

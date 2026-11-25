@@ -141,7 +141,7 @@ var er = n(458350),
     ec = n(86944),
     eh = n(915089),
     eg = n(375499),
-    ep = n(863576),
+    ep = n(398616),
     eA = n(770335),
     eE = n(611371),
     eI = n(769015);
@@ -291,10 +291,10 @@ var eY = n(976860),
     e5 = n(47167),
     e8 = n(280513),
     e3 = n(837011),
-    e4 = n(90084);
-function e9(e) {
+    e9 = n(90084);
+function e4(e) {
     let { guildId: t, channelType: n, className: i } = e,
-        { guildProfile: s, fetchGuildProfile: r, fetchStatus: o } = (0, e4.u)(t),
+        { guildProfile: s, fetchGuildProfile: r, fetchStatus: o } = (0, e9.u)(t),
         d = o !== e3.X.FETCHED,
         u = null != s && e8.i.VISIBLE.has(s.visibility);
     a.useEffect(() => {
@@ -1046,7 +1046,7 @@ class td extends a.PureComponent {
                         s === ek.rbe.GUILD_STORE ? this.renderStoreOptions() : null,
                         n === tl ? this.renderGameInvitesChannelOptions() : null,
                         s === ek.rbe.GUILD_APP && null == d ? this.renderAppChannelOptions() : null,
-                        (0, l.jsx)(e9, { guildId: r, channelType: s, className: ti.wI }),
+                        (0, l.jsx)(e4, { guildId: r, channelType: s, className: ti.wI }),
                         s === ek.rbe.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions(),
                         null == d
                             ? (0, l.jsx)(eX, {

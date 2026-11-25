@@ -75,7 +75,7 @@ var i = {
     "./HandRequestDenyIcon.web.tsx": ["309796", [314117]],
     "./BattlenetBrandIcon.web.tsx": ["902738", [251151]],
     "./EmojiHappyWinkingFaceIcon.web.tsx": ["30040", [576897]],
-    "./ExperimentalCreateEmojiIcon.web.tsx": ["677548", [921757]],
+    "./ExperimentalCreateEmojiIcon.web.tsx": ["677548", []],
     "./FilterIcon.web.tsx": ["371750", [119979]],
     "./PawPrintIcon.web.tsx": ["157225", [410194]],
     "./RedoIcon.web.tsx": ["803656", [16369]],

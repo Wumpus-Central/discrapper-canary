@@ -109,7 +109,7 @@ class F extends r.PureComponent {
 var M = n(95362),
     K = n(956956),
     W = n(792996),
-    B = n(352412),
+    B = n(130031),
     U = n(969426);
 class $ extends r.PureComponent {
     constructor(e) {
