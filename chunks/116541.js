@@ -373,8 +373,14 @@ function ex(e) {
     });
 }
 function eI(e) {
-    let { subscription: t, analyticsLocations: s, isContinuationEnabled: r, churnUserDiscountOffer: a } = e,
-        o = l.useCallback(() => {
+    let {
+            subscription: t,
+            analyticsLocations: s,
+            isContinuationEnabled: r,
+            churnUserDiscountOffer: a,
+            disabled: o,
+        } = e,
+        u = l.useCallback(() => {
             (0, V.mM)(async () => {
                 let { default: e } = await Promise.all([
                     n.e(489361),
@@ -389,11 +395,11 @@ function eI(e) {
                 return (n) => (0, i.jsx)(e, { ...n, premiumSubscription: t, analyticsLocations: s });
             });
         }, [t, s]),
-        u =
+        c =
             r && a?.discountId === ec.Ki
                 ? en.intl.formatToPlainString(eg.default.JsnZTi, { percent: a.discount.amount })
                 : en.intl.string(et.default.oO0EYw);
-    return (0, i.jsx)(w.$, { variant: "secondary", size: "md", fullWidth: !0, text: u, onClick: o });
+    return (0, i.jsx)(w.$, { variant: "secondary", size: "md", fullWidth: !0, text: c, onClick: u, disabled: o });
 }
 function e_(e) {
     let { subscription: t, analyticsLocations: s, churnUserDiscountOffer: r } = e,
@@ -532,6 +538,7 @@ function eb(e) {
                                               analyticsLocations: s,
                                               isContinuationEnabled: g,
                                               churnUserDiscountOffer: A,
+                                              disabled: h,
                                           }),
                                 ],
                             });
