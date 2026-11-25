@@ -1903,6 +1903,9 @@ function ly(e) {
         children: [
             (0, i.jsx)("div", {
                 ref: o,
+                onFocus: () => {
+                    s && d(!0);
+                },
                 className: a()({ [lf.mA]: !c, [lf.ii]: !c && "Safari" === platform.name }),
                 children: l
                     ? (0, i.jsx)(lm.A, {
