@@ -758,7 +758,7 @@ function eC(e) {
                         }),
                 ],
             }),
-            (0, n.jsx)("div", {
+            (0, n.jsx)(b.Ip, {
                 className: et.G3,
                 children: (0, n.jsx)(d.e, {
                     direction: "vertical",

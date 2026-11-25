@@ -72,15 +72,15 @@
     padding: 0 var(--space-16)
 }
 
-.clipFormFooter_XKaV_y,
 .clipFormSection_XKaV_y {
     padding: var(--space-16)
 }
 
-.clipFormFooter_XKaV_y {
+.clipForm_XKaV_y>.clipFormFooter_XKaV_y {
     border-top: 1px solid var(--border-muted);
-    flex-shrink: 0;
-    margin-top: auto
+    flex: 0 0 auto;
+    margin-top: auto;
+    padding: var(--space-16)
 }
 
 .fieldContent_XKaV_y {
@@ -269,4 +269,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=3e510feba492050f.css.map*/
+/*# sourceMappingURL=db93a8ab824bf393.css.map*/
