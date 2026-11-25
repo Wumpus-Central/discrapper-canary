@@ -9,8 +9,8 @@ var u = (((r = {}).UP = "UP"), (r.LEFT = "LEFT"), r);
 let c = { [s.G.SMALL_SQUARE]: "UP", [s.G.WIDE]: "UP", [s.G.TALL]: "UP", [s.G.LARGE_SQUARE]: "LEFT" },
     d = "none",
     m = { matrix: 6, matrix3d: 16 },
-    g = /^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i,
-    h = {
+    h = /^[-+]?(\d+\.?\d*|\.\d+)(e[-+]?\d+)?$/i,
+    g = {
         [s.G.SMALL_SQUARE]: { columns: 1, rows: 1 },
         [s.G.TALL]: { columns: 1, rows: 2 },
         [s.G.WIDE]: { columns: 2, rows: 1 },
@@ -22,7 +22,7 @@ function E(e, t) {
     for (let e = n; e < n + t.rows; e++) for (let n = l; n < l + t.columns; n++) r.push(`${e},${n}`);
     return r;
 }
-function p(e, t, n) {
+function f(e, t, n) {
     return E(t, n).every((t) => !e.has(t));
 }
 n.d(
@@ -64,13 +64,13 @@ n.d(
             let t = /^(matrix|matrix3d)\((.*)\)$/.exec(e.trim());
             if (null == t) return d;
             let n = t[2].split(",").map((e) => e.trim());
-            if (n.length !== m[t[1]] || !n.every((e) => g.test(e))) return d;
+            if (n.length !== m[t[1]] || !n.every((e) => h.test(e))) return d;
             let l = n.map(Number);
             return l.every(Number.isFinite) ? `${t[1]}(${l.join(", ")})` : d;
         },
         Vv: function (e, t) {
             let n = e.map((e) => {
-                let n = h[e] ?? h[s.G.SMALL_SQUARE];
+                let n = g[e] ?? g[s.G.SMALL_SQUARE];
                 return { columns: Math.min(n.columns, t), rows: n.rows };
             });
             if (0 === n.length) return [];
@@ -87,7 +87,7 @@ n.d(
                     (o = 1),
                     l.forEach((t, n) => {
                         let u = n === l.length - 1;
-                        for (; (u && i + t.rows - 1 < a) || o + t.columns - 1 > r || !p(e, { row: i, column: o }, t);)
+                        for (; (u && i + t.rows - 1 < a) || o + t.columns - 1 > r || !f(e, { row: i, column: o }, t);)
                             ++o > r && ((o = 1), i++);
                         (E({ row: i, column: o }, t).forEach((t) => e.add(t)),
                             s.push({ row: i, column: o }),
@@ -107,7 +107,7 @@ n.d(
                         let e = null;
                         for (let r = 1; r + l.rows - 1 <= n && null == e; r++)
                             for (let n = 1; n + l.columns - 1 <= t && null == e; n++)
-                                p(s, { row: r, column: n }, l) && (e = { row: r, column: n });
+                                f(s, { row: r, column: n }, l) && (e = { row: r, column: n });
                         if (null == e) return null;
                         (E(e, l).forEach((e) => s.add(e)), a.push(e));
                     }

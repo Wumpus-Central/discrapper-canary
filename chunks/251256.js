@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(534514),
     d = n(821609),
     m = n(975807),
-    g = n(975571),
-    h = n(707296);
+    h = n(975571),
+    g = n(707296);
 let E = {
         "eligible-items": {
             headingVariant: "heading-lg/semibold",
@@ -23,23 +23,23 @@ let E = {
         "sequenced-offer": {
             headingVariant: "heading-lg/medium",
             headingColor: "text-overlay-light",
-            titleClassName: h.ns,
+            titleClassName: g.ns,
             buttonVariant: "overlay-secondary",
             buttonSize: "md",
             align: "end",
             fullWidth: !1,
         },
     },
-    p = (e) => {
+    f = (e) => {
         let { helpArticle: t } = e,
             { id: n, label: s } = t,
             a = r.useCallback(() => {
-                (0, m.A)(g.A.getArticleURL(n));
+                (0, m.A)(h.A.getArticleURL(n));
             }, [n]);
         return (0, l.jsx)(i.D, {
             "aria-label": s,
             onClick: a,
-            className: h.oZ,
+            className: g.oZ,
             children: (0, l.jsx)(o.CircleInformationIcon, { size: "sm", color: "currentColor" }),
         });
     };
@@ -58,25 +58,25 @@ n.d(
                 } = e,
                 {
                     headingVariant: m,
-                    headingColor: g,
-                    titleClassName: f,
+                    headingColor: h,
+                    titleClassName: p,
                     buttonVariant: x,
                     buttonSize: C,
-                    align: A,
-                    fullWidth: v,
+                    align: v,
+                    fullWidth: A,
                 } = E[n];
             return (0, l.jsxs)(u.B, {
                 direction: "horizontal",
                 justify: "space-between",
-                align: A,
-                fullWidth: v,
+                align: v,
+                fullWidth: A,
                 className: o,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: a()(h.DD, f),
+                        className: a()(g.DD, p),
                         children: [
-                            (0, l.jsx)(c.D, { variant: m, color: g, children: t }),
-                            null != r && (0, l.jsx)(p, { helpArticle: r }),
+                            (0, l.jsx)(c.D, { variant: m, color: h, children: t }),
+                            null != r && (0, l.jsx)(f, { helpArticle: r }),
                         ],
                     }),
                     null != s && null != i && (0, l.jsx)(d.$, { variant: x, size: C, onClick: i, text: s }),

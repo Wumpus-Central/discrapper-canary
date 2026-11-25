@@ -1,15 +1,15 @@
 var r = n(855986),
     s = n(73153);
-let i = new Map();
-class o extends r.Ay.Store {
+let o = new Map();
+class i extends r.Ay.Store {
     getPrompt(e) {
-        return i.get(e) ?? null;
+        return o.get(e) ?? null;
     }
 }
-let l = new o(s.h, {
+let l = new i(s.h, {
         CONJURE_PREVIEW_ADD_BOT_PROMPT_SET(e) {
             let { projectId: t, prompt: n } = e;
-            return (i.get(t)?.id ?? null) !== (n?.id ?? null) && (null == n ? i.delete(t) : i.set(t, n), !0);
+            return (o.get(t)?.id ?? null) !== (n?.id ?? null) && (null == n ? o.delete(t) : o.set(t, n), !0);
         },
     }),
     a = 221552 == n.j ? l : null;

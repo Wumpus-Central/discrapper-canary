@@ -1,12 +1,12 @@
 var r = n(73153),
     s = n(975189),
-    i = n(233470),
-    o = n(385081),
+    o = n(233470),
+    i = n(385081),
     l = n(187308),
     a = n(191850),
     c = n(792996);
-let d = { location: "connection", code: o.xf.SEND_FAILED },
-    u = { location: "agent", code: o.xf.AGENT_ERROR };
+let d = { location: "connection", code: i.xf.SEND_FAILED },
+    u = { location: "agent", code: i.xf.AGENT_ERROR };
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d;
     (r.h.dispatch({
@@ -14,7 +14,7 @@ function p(e, t) {
         projectId: e,
         step: { type: "step", kind: "terminal_error", message: t },
     }),
-        (0, o.Hy)(e, { ...n, message: t }));
+        (0, i.Hy)(e, { ...n, message: t }));
 }
 function h(e, t) {
     r.h.dispatch({ type: "CONJURE_CHAT_STEP_APPEND", projectId: e, turnId: t.turn_id, step: t });
@@ -22,7 +22,7 @@ function h(e, t) {
 function _(e, t) {
     let { projectId: n } = t;
     (h(n, e),
-        (0, o.Hy)(n, {
+        (0, i.Hy)(n, {
             ...g[e.kind],
             message: e.message,
             details: "build_error" === e.kind ? e.stderr_tail : void 0,
@@ -36,12 +36,12 @@ function f(e, t) {
             "remixed" !== e.type &&
             "voice_channel_pin" !== e.type &&
             "staff_notice" !== e.type &&
-            (0, i.GO)(n));
+            (0, o.GO)(n));
 }
 let g = {
-        build_error: { location: "build", code: o.xf.BUILD_FAILED },
-        healthcheck_failed: { location: "healthcheck", code: o.xf.HEALTHCHECK_FAILED },
-        error: { location: "agent", code: o.xf.AGENT_ERROR },
+        build_error: { location: "build", code: i.xf.BUILD_FAILED },
+        healthcheck_failed: { location: "healthcheck", code: i.xf.HEALTHCHECK_FAILED },
+        error: { location: "agent", code: i.xf.AGENT_ERROR },
     },
     E = { steered: !0, queued: !0, restarting: !0, answered: !0 };
 n.d(
@@ -132,14 +132,14 @@ n.d(
             },
             thinking_lifecycle(e, t) {
                 let { projectId: n } = t,
-                    { phase: s, session: i, seq: o, ticks: l, elapsed_ms: a, text: c } = e;
+                    { phase: s, session: o, seq: i, ticks: l, elapsed_ms: a, text: c } = e;
                 null != s &&
-                    null != o &&
                     null != i &&
+                    null != o &&
                     r.h.dispatch({
                         type: "CONJURE_CHAT_THINKING_SET",
                         projectId: n,
-                        activity: { phase: s, session: i, seq: o, ticks: l ?? 0, elapsedMs: a ?? 0, text: c ?? "" },
+                        activity: { phase: s, session: o, seq: i, ticks: l ?? 0, elapsedMs: a ?? 0, text: c ?? "" },
                     });
             },
             compaction(e, t) {

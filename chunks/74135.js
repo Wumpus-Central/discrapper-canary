@@ -1,37 +1,37 @@
-var r = n(477900);
+var i = n(477900);
 n(582128);
-var i = n(503698),
-    s = n.n(i),
+var r = n(503698),
+    s = n.n(r),
     c = n(866665),
-    o = n(278416),
+    u = n(278416),
     l = n(240248);
 n(634110);
-var u = n(196085);
+var o = n(196085);
 function a(e) {
-    let { spec: t, icon: n, tooltipText: i } = e,
-        o = !(0, l.uJ)(i),
-        a = (0, r.jsx)("div", {
-            className: s()(u.Fx, { [u.Y_]: o }),
+    let { spec: t, icon: n, tooltipText: r } = e,
+        u = !(0, l.uJ)(r),
+        a = (0, i.jsx)("div", {
+            className: s()(o.Fx, { [o.Y_]: u }),
             style: { bottom: t.iconInset, insetInlineStart: t.iconInset },
             children: n,
         });
-    return o ? (0, r.jsx)(c.m, { text: i, position: "top", delay: 350, children: a }) : a;
+    return u ? (0, i.jsx)(c.m, { text: r, position: "top", delay: 350, children: a }) : a;
 }
 n.d(
     t,
     {},
     {
         s: function (e) {
-            let { spec: t, icon: n, tooltipText: i } = e,
-                s = n ?? o.TagIcon;
-            return (0, r.jsx)(a, {
+            let { spec: t, icon: n, tooltipText: r } = e,
+                s = n ?? u.TagIcon;
+            return (0, i.jsx)(a, {
                 spec: t,
-                icon: (0, r.jsx)("div", {
-                    className: u.wz,
+                icon: (0, i.jsx)("div", {
+                    className: o.wz,
                     style: { width: t.iconSize, height: t.iconSize },
-                    children: (0, r.jsx)(s, { size: "xxs", color: "white" }),
+                    children: (0, i.jsx)(s, { size: "xxs", color: "white" }),
                 }),
-                tooltipText: i,
+                tooltipText: r,
             });
         },
     },

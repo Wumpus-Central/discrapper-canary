@@ -1,8 +1,8 @@
-var r = n(477900),
-    i = n(582128);
-let s = i.createContext(null);
+var i = n(477900),
+    r = n(582128);
+let s = r.createContext(null);
 function c() {
-    return i.useContext(s);
+    return r.useContext(s);
 }
 n.d(
     t,
@@ -11,9 +11,9 @@ n.d(
         Ar: c,
         dB: function (e) {
             let { newValue: t, children: n } = e,
-                o = c(),
-                l = i.useMemo(() => ({ ...o, ...t }), [o, t]);
-            return (0, r.jsx)(s.Provider, { value: l, children: n });
+                u = c(),
+                l = r.useMemo(() => ({ ...u, ...t }), [u, t]);
+            return (0, i.jsx)(s.Provider, { value: l, children: n });
         },
     },
 );

@@ -1,23 +1,23 @@
 (n(323874), n(14289), n(35956));
 var r = n(73153),
     s = n(382541),
-    i = n(975189);
+    o = n(975189);
 n.d(
     t,
     {},
     {
         CM: function (e) {
-            return (0, i.b4)(e, "retry remix", (e) => e.sendRetryRemix());
+            return (0, o.b4)(e, "retry remix", (e) => e.sendRetryRemix());
         },
         Io: async function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                [r, i] = await Promise.all([e, (0, s.dv)(t)]),
-                o = new URLSearchParams({ ticket: r.ticket });
+                [r, o] = await Promise.all([e, (0, s.dv)(t)]),
+                i = new URLSearchParams({ ticket: r.ticket });
             for (let e = 1; ; e++) {
-                let t = await fetch(`${r.baseUrl}/agent/fork?${o}`, {
+                let t = await fetch(`${r.baseUrl}/agent/fork?${i}`, {
                     method: "POST",
                     headers: { "content-type": "application/json" },
-                    body: JSON.stringify({ dest_ticket: i.ticket, ...(n ? { copy: !0 } : {}) }),
+                    body: JSON.stringify({ dest_ticket: o.ticket, ...(n ? { copy: !0 } : {}) }),
                 }).then(
                     (e) => e.status,
                     () => null,

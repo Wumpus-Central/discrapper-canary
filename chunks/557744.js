@@ -1,15 +1,15 @@
 var r = n(855986),
     s = n(73153);
-let i = new Map();
-class o extends r.Ay.Store {
+let o = new Map();
+class i extends r.Ay.Store {
     getModelSettings(e) {
-        return i.get(e) ?? null;
+        return o.get(e) ?? null;
     }
 }
-let l = new o(s.h, {
+let l = new i(s.h, {
     CONJURE_MODEL_SETTINGS_SET: function (e) {
-        let { projectId: t, settings: n, tierSettings: r, tiers: s, choices: o } = e;
-        i.set(t, { settings: n, tierSettings: r, tiers: s, choices: o });
+        let { projectId: t, settings: n, tierSettings: r, tiers: s, choices: i } = e;
+        o.set(t, { settings: n, tierSettings: r, tiers: s, choices: i });
     },
 });
 n.d(t, {}, { A: l });

@@ -1,7 +1,7 @@
 var r = n(73153),
     s = n(587895),
-    i = n(975189),
-    o = n(276983),
+    o = n(975189),
+    i = n(276983),
     l = n(908276),
     a = n(260498),
     c = n(677690),
@@ -50,18 +50,18 @@ n.d(
     {
         $C: function (e) {
             return new Promise((t, n) => {
-                let r = (0, i.KY)(e);
+                let r = (0, o.KY)(e);
                 if (null == r) return void n(Error("Not connected"));
                 y(e, "Superseded by a newer draft request");
                 let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-                    o = setTimeout(() => {
+                    i = setTimeout(() => {
                         y(e, "Draft timed out");
                     }, 45e3);
-                m.set(e, { resolve: t, reject: n, timeout: o, nonce: s });
+                m.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
                 try {
                     r.sendDraftPatchNotes(s);
                 } catch (t) {
-                    (m.delete(e), clearTimeout(o), n(t instanceof Error ? t : Error("draft send failed")));
+                    (m.delete(e), clearTimeout(i), n(t instanceof Error ? t : Error("draft send failed")));
                 }
             });
         },
@@ -72,7 +72,7 @@ n.d(
         BG: function (e, t, n) {
             r.h.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId: e, sent: t });
             try {
-                let r = (0, i.KY)(e);
+                let r = (0, o.KY)(e);
                 if (null == r) throw Error("Not connected");
                 r.sendPatchNotesSent(t, n);
             } catch (t) {
@@ -84,14 +84,14 @@ n.d(
         TV: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 s = !1;
-            return new Promise((o, l) => {
-                let a = (0, i.KY)(e);
+            return new Promise((i, l) => {
+                let a = (0, o.KY)(e);
                 if (null == a) return void l(Error("Not connected"));
                 if (E.has(e)) return void l(Error("Publish already in flight"));
                 let c = setTimeout(() => {
                     S(e, "Publish timed out");
                 }, 9e5);
-                (E.set(e, { resolve: o, reject: l, timeout: c }),
+                (E.set(e, { resolve: i, reject: l, timeout: c }),
                     (s = !0),
                     r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
                 try {
@@ -108,7 +108,7 @@ n.d(
                 });
         },
         dx: function (e) {
-            (0, i.KY)(e)?.sendPreparePublish();
+            (0, o.KY)(e)?.sendPreparePublish();
         },
         qy: {
             publish_notice(e, t) {
@@ -245,7 +245,7 @@ n.d(
                         ? e.new_app_channels.filter((e) => "string" == typeof e)
                         : [],
                     previewDevicePermissions: Array.isArray(e.preview_device_permissions)
-                        ? e.preview_device_permissions.filter(o.de)
+                        ? e.preview_device_permissions.filter(i.de)
                         : [],
                     publishedRevision: "number" == typeof e.published_revision ? e.published_revision : null,
                     publishedAt: "string" == typeof e.published_at ? e.published_at : null,
@@ -275,9 +275,9 @@ n.d(
             publish_result(e, t) {
                 let { projectId: n } = t;
                 r.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId: n, approvalUrl: null });
-                let i = E.get(n);
+                let o = E.get(n);
                 (E.delete(n),
-                    null != i && (clearTimeout(i.timeout), i.resolve(e)),
+                    null != o && (clearTimeout(o.timeout), o.resolve(e)),
                     !0 !== e.ok
                         ? (0, d.Is)(n, e.error ?? "publish_result not ok", !1)
                         : (function (e) {
@@ -301,7 +301,7 @@ n.d(
         },
         xQ: function (e) {
             return new Promise((t, n) => {
-                let r = (0, i.KY)(e);
+                let r = (0, o.KY)(e);
                 if (null == r) return n(Error("Not connected"));
                 if (!r.supportsPublishOptions)
                     return void t({
@@ -310,8 +310,8 @@ n.d(
                     });
                 C(e, "Superseded by a newer publish request");
                 let s = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-                    o = setTimeout(() => C(e, "Could not load publish destinations. Try again."), 15e3);
-                N.set(e, { resolve: t, reject: n, timeout: o, nonce: s });
+                    i = setTimeout(() => C(e, "Could not load publish destinations. Try again."), 15e3);
+                N.set(e, { resolve: t, reject: n, timeout: i, nonce: s });
                 try {
                     r.sendPublishOptions(s);
                 } catch {
@@ -321,7 +321,7 @@ n.d(
         },
         zu: function (e) {
             if (u.A.getSafetyRecheck(e)?.status === "pending") return;
-            let t = (0, i.b4)(e, "safety recheck", (e) => e.sendSafetyRecheck());
+            let t = (0, o.b4)(e, "safety recheck", (e) => e.sendSafetyRecheck());
             f(e, t ? { status: "pending" } : { status: "unavailable" });
         },
     },

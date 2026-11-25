@@ -9,7 +9,7 @@
                 socket = null;
                 supportsPublishOptions = !1;
                 open(e) {
-                    let { url: t, ticket: n, templateId: r, onEvent: s, onPong: i, onClose: o, onError: l } = e;
+                    let { url: t, ticket: n, templateId: r, onEvent: s, onPong: o, onClose: i, onError: l } = e;
                     this.close();
                     let a = t.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:"),
                         c = new URLSearchParams({
@@ -23,7 +23,7 @@
                         d.addEventListener("message", (e) => {
                             let t;
                             if (this.socket === d) {
-                                if ("pong" === e.data) return void i?.();
+                                if ("pong" === e.data) return void o?.();
                                 try {
                                     t = JSON.parse(e.data);
                                 } catch (e) {
@@ -37,7 +37,7 @@
                             this.socket === d && l?.(e);
                         }),
                         d.addEventListener("close", () => {
-                            this.socket === d && o?.();
+                            this.socket === d && i?.();
                         }));
                 }
                 sendPublishScheduleMessage(e) {
@@ -54,8 +54,8 @@
                     let {
                         templateId: r,
                         remix: s,
-                        copy: i,
-                        clarificationAnswers: o,
+                        copy: o,
+                        clarificationAnswers: i,
                         linkEmbeds: l,
                     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
@@ -68,8 +68,8 @@
                             attachment_ids: n,
                             template_id: r,
                             remix: s,
-                            copy: i,
-                            clarification_answers: o,
+                            copy: o,
+                            clarification_answers: i,
                             link_embeds: l,
                         }),
                     );

@@ -8,19 +8,19 @@ var l = n(477900),
     c = n(924473),
     d = n(511265),
     m = n(654512),
-    g = n(313276),
-    h = n(206077),
+    h = n(313276),
+    g = n(206077),
     E = n(695960),
-    p = n(251256),
-    f = n(987421),
+    f = n(251256),
+    p = n(987421),
     x = n(561769),
     C = n(484469),
-    A = n(127329),
-    v = n(579720),
-    b = n(504820),
-    L = n(758836),
-    _ = n(792996),
-    y = n(105499);
+    v = n(127329),
+    A = n(579720),
+    L = n(504820),
+    y = n(758836),
+    b = n(792996),
+    _ = n(105499);
 let I = { flattenProductVariants: !1 };
 function S(e) {
     return String(e);
@@ -28,26 +28,26 @@ function S(e) {
 function N(e) {
     return e.skuId;
 }
-function k(e) {
+function j(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, x.Mk)(r);
     return t
         ? (0, l.jsx)("div", {
-              className: y.hm,
+              className: _.hm,
               children: [void 0, void 0, void 0, void 0].map((e, t) => (0, l.jsx)(C.A, {}, t)),
           })
         : (0, l.jsx)("div", {
-              className: y.hm,
+              className: _.hm,
               children: (0, l.jsx)(x.v3.Provider, {
                   value: I,
                   children: n.map((e, t) => (0, l.jsx)(D, { item: e, index: t, prioritizedCurrency: s }, e.skuId)),
               }),
           });
 }
-function j(e) {
+function k(e) {
     let { isLoading: t, products: n, tab: r } = e,
         s = (0, x.Mk)(r),
-        i = _.intl.string(_.t.HP8LNG);
+        i = b.intl.string(b.t.HP8LNG);
     if (t) {
         let e = [void 0, void 0, void 0, void 0].map((e, t) => t);
         return (0, l.jsx)(a.A, {
@@ -77,41 +77,41 @@ function O(e) {
 }
 function T(e, t) {
     let { tileProps: n } = e;
-    return (0, l.jsx)(A.A, { ...n, surface: b.L.HOME, aspectRatio: "auto", tag: "div", listItemProps: t });
+    return (0, l.jsx)(v.A, { ...n, surface: L.L.HOME, aspectRatio: "auto", tag: "div", listItemProps: t });
 }
 function R(e) {
     let { collectionId: t, sequencedOffers: n, products: s, onViewAll: o } = e,
         u = (0, m.A)(t),
-        c = (0, v.A)(n, s, u),
+        c = (0, A.A)(n, s, u),
         d = c.findIndex((e) => {
             let { tileProps: t } = e;
             return t.day === u;
         }),
-        { helpCenterArticleId: g } = n,
-        h = r.useMemo(() => (null != g ? { id: g, label: _.intl.string(_.t.vaqebJ) } : null), [g]);
+        { helpCenterArticleId: h } = n,
+        g = r.useMemo(() => (null != h ? { id: h, label: b.intl.string(b.t.vaqebJ) } : null), [h]);
     return (0, l.jsx)(i.R9, {
         newValue: { pageSection: "top 4", categoryPosition: 0 },
         children: (0, l.jsxs)("div", {
-            className: y.yE,
+            className: _.yE,
             children: [
-                (0, l.jsx)(p.A, {
+                (0, l.jsx)(f.A, {
                     variant: "sequenced-offer",
-                    title: _.intl.string(_.t.a05zGh),
-                    helpArticle: h,
-                    buttonText: _.intl.string(_.t["kJSKt+"]),
+                    title: b.intl.string(b.t.a05zGh),
+                    helpArticle: g,
+                    buttonText: b.intl.string(b.t["kJSKt+"]),
                     onButtonClick: o,
-                    className: y.NF,
+                    className: _.NF,
                 }),
                 (0, l.jsx)(x.v3.Provider, {
                     value: I,
                     children: (0, l.jsx)(a.A, {
                         gap: "xl",
-                        "aria-label": _.intl.string(_.t.HP8LNG),
+                        "aria-label": b.intl.string(b.t.HP8LNG),
                         items: c,
                         getItemKey: O,
-                        className: y.tX,
-                        scrollerClassName: y.q8,
-                        itemClassName: y.xo,
+                        className: _.tX,
+                        scrollerClassName: _.q8,
+                        itemClassName: _.xo,
                         renderItem: T,
                         initialScrollIndex: d >= 0 ? Math.max(d - 1, 0) : null,
                     }),
@@ -124,7 +124,7 @@ function D(e) {
     let { item: t, index: n, prioritizedCurrency: r, listItemProps: s } = e;
     return (0, l.jsx)(i.R9, {
         newValue: { tilePosition: n, pageSection: "top 4", categoryPosition: 0 },
-        children: (0, l.jsx)(f.A, { skuId: t.skuId, prioritizedCurrency: r, listItemProps: s }),
+        children: (0, l.jsx)(p.A, { skuId: t.skuId, prioritizedCurrency: r, listItemProps: s }),
     });
 }
 n.d(
@@ -135,43 +135,43 @@ n.d(
             let t,
                 n,
                 a,
-                { heroBlockRecord: i, layout: m, tab: p, isBlockLoading: f = !1, onViewAll: x } = e,
+                { heroBlockRecord: i, layout: m, tab: f, isBlockLoading: p = !1, onViewAll: x } = e,
                 { products: C } =
-                    ((t = (0, g.A)()),
+                    ((t = (0, h.A)()),
                     (n = (0, d.p)()),
-                    (a = r.useMemo(() => (f ? [] : n(t(i.rankedSkuIds))), [f, t, i.rankedSkuIds, n])),
-                    { products: (0, h.X)(a) }),
-                A = i.categorySkuId,
-                v = (0, E.A)(A),
-                b = (0, c.A)(),
-                _ = (0, s.bG)([o.A], () => (null != A ? o.A.getCategory(A)?.products : void 0)),
-                y = r.useMemo(
+                    (a = r.useMemo(() => (p ? [] : n(t(i.rankedSkuIds))), [p, t, i.rankedSkuIds, n])),
+                    { products: (0, g.X)(a) }),
+                v = i.categorySkuId,
+                A = (0, E.A)(v),
+                L = (0, c.A)(),
+                b = (0, s.bG)([o.A], () => (null != v ? o.A.getCategory(v)?.products : void 0)),
+                _ = r.useMemo(
                     () =>
-                        !f &&
+                        !p &&
                         0 !== i.rankedSkuIds.length &&
                         !(C.length > 0) &&
                         i.rankedSkuIds.every((e) => o.A.getProduct(e)?.variantGroupStoreListingId != null),
-                    [f, i.rankedSkuIds, C.length],
+                    [p, i.rankedSkuIds, C.length],
                 ),
-                I = f || y,
+                I = p || _,
                 S = r.useMemo(() => C.filter((e) => null != o.A.getCategoryForProduct(e.skuId)), [C]),
                 N =
                     "hscroll" === m &&
-                    p === L.G2.HOME &&
+                    f === y.G2.HOME &&
                     !I &&
-                    null != A &&
                     null != v &&
-                    v.promotions.length > 0 &&
-                    null != _,
+                    null != A &&
+                    A.promotions.length > 0 &&
+                    null != b,
                 O = (0, u.t)("shop_home_carousel", { autoTrackExposure: N }).enabled,
-                T = "hscroll" === m && p === L.G2.HOME && null != A && O && !b;
+                T = "hscroll" === m && f === y.G2.HOME && null != v && O && !L;
             switch (m) {
                 case "feed":
-                    return (0, l.jsx)(k, { isLoading: I, products: S, tab: p });
+                    return (0, l.jsx)(j, { isLoading: I, products: S, tab: f });
                 case "hscroll":
                     if (N && O)
-                        return (0, l.jsx)(R, { collectionId: A, sequencedOffers: v, products: _, onViewAll: x });
-                    return (0, l.jsx)(j, { isLoading: I || T, products: S, tab: p });
+                        return (0, l.jsx)(R, { collectionId: v, sequencedOffers: A, products: b, onViewAll: x });
+                    return (0, l.jsx)(k, { isLoading: I || T, products: S, tab: f });
             }
         },
     },

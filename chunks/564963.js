@@ -1,7 +1,7 @@
 var l = n(582128),
     r = n(886540),
-    a = n(191850),
-    i = n(792996);
+    i = n(191850),
+    a = n(792996);
 let s = new Set();
 function o(e, t) {
     return { cardId: e, status: "pending" === t ? null : t };
@@ -24,7 +24,7 @@ n.d(
                         c ||
                         (function (e) {
                             let t = e.content.trim();
-                            return t === i.intl.string(a.default.UGqnoV) || t === i.intl.string(a.default.sMQt5O);
+                            return t === a.intl.string(i.default.UGqnoV) || t === a.intl.string(i.default.sMQt5O);
                         })(d);
                     continue;
                 }

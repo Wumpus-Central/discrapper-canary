@@ -1,6 +1,6 @@
 var r = n(73153),
     s = n(975189),
-    i = n(664619);
+    o = n(664619);
 n.d(
     t,
     {},
@@ -10,7 +10,7 @@ n.d(
                 let { projectId: n } = t;
                 (r.h.dispatch({ type: "CONJURE_CHAT_CONTEXT_SWITCH", projectId: n, contextSwitch: e }),
                     "reverted" === e.status &&
-                        (0, i.tZ)(n, { isPreview: !0 }).catch((e) => {
+                        (0, o.tZ)(n, { isPreview: !0 }).catch((e) => {
                             console.error("[conjure] post-revert refresh failed", n, e);
                         }));
             },

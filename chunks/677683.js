@@ -1,31 +1,31 @@
 var r = n(855986),
     s = n(73153);
-let i = new Map();
-function o(e, t) {
+let o = new Map();
+function i(e, t) {
     var n;
     return (
-        (n = i.get(e)),
+        (n = o.get(e)),
         (n?.status !== t.status || ("pinned" === n.status && "pinned" === t.status && n.channelId !== t.channelId)) &&
-            (i.set(e, t), !0)
+            (o.set(e, t), !0)
     );
 }
 class l extends r.Ay.Store {
     getOutcome(e) {
-        return i.get(e) ?? null;
+        return o.get(e) ?? null;
     }
 }
 let a = new l(s.h, {
     LOGOUT: function () {
-        if (0 === i.size) return !1;
-        i.clear();
+        if (0 === o.size) return !1;
+        o.clear();
     },
     CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
         let { projectId: t, voiceChannelPin: n } = e;
-        return null != n && o(t, n);
+        return null != n && i(t, n);
     },
     CONJURE_VOICE_CHANNEL_PIN_RESOLVED: function (e) {
         let { projectId: t, outcome: n } = e;
-        return o(t, n);
+        return i(t, n);
     },
 });
 n.d(t, {}, { A: a });

@@ -239,7 +239,7 @@ class B extends y.G {
             { no: 14, name: "user_has_flag", kind: "message", oneof: "filter", T: () => eZ },
             { no: 15, name: "unit_id_in_range_by_hash", kind: "message", oneof: "filter", T: () => e1 },
             { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e3 },
-            { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e4 },
+            { no: 17, name: "always", kind: "message", oneof: "filter", T: () => e8 },
             { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => Z },
             { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => e9 },
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => tt },
@@ -357,7 +357,7 @@ class B extends y.G {
                 case 17:
                     r.filter = {
                         oneofKind: "always",
-                        always: e4.internalBinaryRead(e, e.uint32(), n, r.filter.always),
+                        always: e8.internalBinaryRead(e, e.uint32(), n, r.filter.always),
                     };
                     break;
                 case 18:
@@ -488,7 +488,7 @@ class B extends y.G {
             "clientReleaseChannel" === e.filter.oneofKind &&
                 e3.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, O.O0.LengthDelimited).fork(), n).join(),
             "always" === e.filter.oneofKind &&
-                e4.internalBinaryWrite(e.filter.always, t.tag(17, O.O0.LengthDelimited).fork(), n).join(),
+                e8.internalBinaryWrite(e.filter.always, t.tag(17, O.O0.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
                 Z.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, O.O0.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
@@ -2240,8 +2240,8 @@ class e7 extends y.G {
         return (!1 !== i && (!0 == i ? O.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e7();
-class e8 extends y.G {
+let e8 = new e7();
+class e4 extends y.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UnitIdInExperiment",
@@ -2297,7 +2297,7 @@ class e8 extends y.G {
         return (!1 !== i && (!0 == i ? O.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e9 = new e8();
+let e9 = new e4();
 class te extends y.G {
     constructor() {
         super(

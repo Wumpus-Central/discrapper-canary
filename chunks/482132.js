@@ -27,8 +27,8 @@ n.d(
                     return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
                 })(e),
                 { step: s, stepConfigs: _ } = (0, h.Ay)(),
-                { setBodyNode: E, setFooterNode: g, setModalOverlayNode: I } = (0, p.Gm)(),
-                S = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
+                { setBodyNode: E, setFooterNode: g, setModalOverlayNode: S } = (0, p.Gm)(),
+                I = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
                 { setReadySlideId: A, unifiedCheckoutFlow: P } = (0, f.t4)((e) => ({
                     setReadySlideId: e.setReadySlideId,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -36,8 +36,8 @@ n.d(
                 x = _.find((e) => e.key === s);
             if (
                 (r.useEffect(() => {
-                    I(null);
-                }, [s, I]),
+                    S(null);
+                }, [s, S]),
                 null == x)
             )
                 throw new d.v({
@@ -72,7 +72,7 @@ n.d(
                                                 onSlideReady: (e) => A(e),
                                                 width: "100%",
                                                 disableDefaultTransformStyling: M || n,
-                                                overflow: S ? "visible" : void 0,
+                                                overflow: I ? "visible" : void 0,
                                                 children: _.filter((e) => null != e.key).map((e) =>
                                                     (0, l.jsx)(
                                                         o.q,
@@ -92,7 +92,7 @@ n.d(
                                   (0, l.jsx)("div", { ref: (e) => g(e) }),
                                   (0, l.jsx)("div", {
                                       ref: (e) => {
-                                          I(e);
+                                          S(e);
                                       },
                                   }),
                               ],

@@ -1,8 +1,8 @@
 (n(323874), n(14289), n(35956));
 var r = n(73153),
     s = n(201718),
-    i = n(287809),
-    o = n(940874),
+    o = n(287809),
+    i = n(940874),
     l = n(649121),
     a = n(975189),
     c = n(688954),
@@ -126,7 +126,7 @@ n.d(
             },
             widget_refreshed() {
                 !(async function () {
-                    let e = i.default.getCurrentUser()?.id;
+                    let e = o.default.getCurrentUser()?.id;
                     if (null != e)
                         try {
                             await s.A.fetchUserApplicationIdentitiesWithProfiles(e);
@@ -174,7 +174,7 @@ n.d(
             },
             preview_ready(e, t) {
                 let { projectId: n } = t;
-                (0, o.OA)(n, e);
+                (0, i.OA)(n, e);
                 let r =
                     null != e.integration_installed && null != e.bot_permissions_changed
                         ? {

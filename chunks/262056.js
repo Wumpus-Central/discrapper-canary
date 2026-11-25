@@ -9,8 +9,8 @@ var r = n(503698),
 let c = 2 * Math.PI * 57,
     d = "var(--status-positive)",
     m = "var(--background-mod-strong)",
-    g = -Math.PI / 2;
-function h(e) {
+    h = -Math.PI / 2;
+function g(e) {
     return `${60 + 57 * Math.cos(e)} ${60 + 57 * Math.sin(e)}`;
 }
 n.d(
@@ -18,15 +18,15 @@ n.d(
     {},
     {
         A: function (e) {
-            let { current: t, target: n, progressColor: r = d, segmentGap: E = 4, children: p } = e,
-                f = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+            let { current: t, target: n, progressColor: r = d, segmentGap: E = 4, children: f } = e,
+                p = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
                 x = Math.round(n);
             if (x > 1 && x <= 12) {
                 let e, n, i;
                 return (0, l.jsxs)("div", {
                     className: u.iE,
                     children: [
-                        p,
+                        f,
                         (0, l.jsx)("svg", {
                             className: u.hN,
                             viewBox: "0 0 120 120",
@@ -34,10 +34,10 @@ n.d(
                             (n = (0, a.clamp)(Math.floor(t), 0, x)),
                             (i = (2 * Math.PI) / x),
                             Array.from({ length: x }, (t, l) => {
-                                let r = g + l * i + e / 2;
+                                let r = h + l * i + e / 2;
                                 return {
                                     key: `${x}-${l}`,
-                                    d: `M ${h(r)} A 57 57 0 0 1 ${h(r + i - e)}`,
+                                    d: `M ${g(r)} A 57 57 0 0 1 ${g(r + i - e)}`,
                                     isFilled: l < n,
                                 };
                             })).map((e) =>
@@ -47,7 +47,7 @@ n.d(
                                         children: [
                                             (0, l.jsx)("path", { className: u.u4, d: e.d, strokeWidth: 6, stroke: m }),
                                             (0, l.jsx)("path", {
-                                                className: s()(u.mX, { [u.Vr]: !f }),
+                                                className: s()(u.mX, { [u.Vr]: !p }),
                                                 d: e.d,
                                                 strokeWidth: 6,
                                                 stroke: r,
@@ -68,14 +68,14 @@ n.d(
             return (0, l.jsxs)("div", {
                 className: u.iE,
                 children: [
-                    p,
+                    f,
                     (0, l.jsxs)("svg", {
                         className: u.hN,
                         viewBox: "0 0 120 120",
                         children: [
                             (0, l.jsx)("circle", { className: u.u4, cx: 60, cy: 60, r: 57, strokeWidth: 6, stroke: m }),
                             (0, l.jsx)("circle", {
-                                className: s()(u.M0, { [u.Vr]: !f }),
+                                className: s()(u.M0, { [u.Vr]: !p }),
                                 cx: 60,
                                 cy: 60,
                                 r: 57,

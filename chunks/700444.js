@@ -8,8 +8,8 @@ var l = n(477900),
     c = n(421108),
     d = n(873297),
     m = n(682901),
-    g = n(792996),
-    h = n(25082);
+    h = n(792996),
+    g = n(25082);
 n.d(
     t,
     {},
@@ -19,30 +19,30 @@ n.d(
                     applicationId: t,
                     headerText: n,
                     subheaderText: E,
-                    gradientColors: p,
-                    gradientAngle: f,
+                    gradientColors: f,
+                    gradientAngle: p,
                     skuIds: x,
                     resolvedSkuIds: C,
-                    isLoading: A,
-                    tab: v,
-                    endTime: b,
-                    ctaType: L = "storefront",
-                    logoUrl: _,
-                    termsUrl: y,
+                    isLoading: v,
+                    tab: A,
+                    endTime: L,
+                    ctaType: y = "storefront",
+                    logoUrl: b,
+                    termsUrl: _,
                     backgroundImageUrl: I,
                 } = e,
-                S = (0, c.ur)(b) ?? void 0,
+                S = (0, c.ur)(L) ?? void 0,
                 N = (0, o.W8)(),
-                k = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
-                j = r.useMemo(() => {
-                    if ("none" !== L)
-                        return "nitro" !== L || N
+                j = (0, s.bG)([a.A], () => a.A.getApplication(t)?.name, [t]),
+                k = r.useMemo(() => {
+                    if ("none" !== y)
+                        return "nitro" !== y || N
                             ? {
                                   kind: "button",
                                   text:
-                                      null != k
-                                          ? g.intl.formatToPlainString(h.default["8OFeFD"], { applicationName: k })
-                                          : g.intl.string(g.t.apFNLU),
+                                      null != j
+                                          ? h.intl.formatToPlainString(g.default["8OFeFD"], { applicationName: j })
+                                          : h.intl.string(h.t.apFNLU),
                                   onClick: () => (0, u.default)({ applicationId: t }),
                                   onMouseDown: () => (0, u.G)({ applicationId: t }),
                               }
@@ -52,27 +52,27 @@ n.d(
                                       size: "sm",
                                       applicationId: t,
                                       subscriptionTier: m.pe.TIER_2,
-                                      buttonTextOverride: g.intl.string(g.t.pj0XBN),
+                                      buttonTextOverride: h.intl.string(h.t.pj0XBN),
                                   }),
                               };
-                }, [L, t, k, N]);
+                }, [y, t, j, N]);
             return (0, l.jsx)(d.A, {
                 skuIds: x,
                 resolvedSkuIds: C,
-                isLoading: A,
-                tab: v,
+                isLoading: v,
+                tab: A,
                 applicationId: t,
                 headerText: n,
                 subheaderText: E,
-                logoUrl: _,
-                cta: j,
+                logoUrl: b,
+                cta: k,
                 timeLeftText: S,
-                termsUrl: y,
+                termsUrl: _,
                 backgroundImageUrl: I,
                 analyticsSection: "slayer-storefront-promotional-banner",
                 analyticsTileType: "SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER",
                 analyticsImpressionType: "social_layer_storefront_promotional_banner",
-                backgroundGradient: p.length > 0 ? `linear-gradient(${f}deg, ${p.join(", ")})` : void 0,
+                backgroundGradient: f.length > 0 ? `linear-gradient(${p}deg, ${f.join(", ")})` : void 0,
             });
         },
     },

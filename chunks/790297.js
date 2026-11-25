@@ -8,8 +8,8 @@ var l = n(582128),
     c = n(448645),
     d = n(870216),
     m = n(758836),
-    g = n(652215),
-    h = n(682901);
+    h = n(652215),
+    g = n(682901);
 function E(e) {
     let { analyticsSource: t, analyticsLocations: n } = (0, r.cf)([d.A], () => d.A.getAnalytics()),
         l = (function (e) {
@@ -53,8 +53,8 @@ n.d(
             l.useEffect(() => {
                 null == t ||
                     c.Ay.canUseCollectibles(t) ||
-                    (u.default.track(g.HAw.PREMIUM_UPSELL_VIEWED, { type: h.e.COLLECTIBLES_SHOP, location_stack: n }),
-                    (0, i.sq)(g.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(h.e.COLLECTIBLES_SHOP)));
+                    (u.default.track(h.HAw.PREMIUM_UPSELL_VIEWED, { type: g.e.COLLECTIBLES_SHOP, location_stack: n }),
+                    (0, i.sq)(h.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, o.uq)(g.e.COLLECTIBLES_SHOP)));
             }, [n, t]);
         },
         lC: E,
@@ -65,7 +65,7 @@ n.d(
             l.useEffect(() => {
                 if (!a || r !== m.Pf.VISIBLE || d !== c) return;
                 let l = t === m.G2.CATALOG ? s : o;
-                u.default.track(g.HAw.COLLECTIBLES_SHOP_VIEWED, {
+                u.default.track(h.HAw.COLLECTIBLES_SHOP_VIEWED, {
                     location_stack: i,
                     source: l,
                     page_session_id: e,

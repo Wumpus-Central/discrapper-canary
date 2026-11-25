@@ -17,8 +17,8 @@ var l,
     _ = n(97352),
     E = n(67480),
     g = n(975571),
-    I = n(448645),
-    S = n(615396),
+    S = n(448645),
+    I = n(615396),
     A = n(573359),
     P = n(462887),
     x = n(659746);
@@ -94,8 +94,8 @@ var L = n(585121),
     k = n(682901),
     N = n(88001),
     j = n(652215),
-    U = n(26279),
-    w = n(107198),
+    w = n(26279),
+    U = n(107198),
     H = n(792996),
     O = n(379912),
     F = n(896554);
@@ -127,7 +127,7 @@ function D(e) {
                 t = H.intl.string(H.t["XEoQ7+"]);
                 break;
             case k.gD.PREMIUM_GROUP_MONTH:
-                t = H.intl.formatToPlainString(w.default.pDiwHe, {
+                t = H.intl.formatToPlainString(U.default.pDiwHe, {
                     premiumGroupProductName: (0, N.DP)(),
                     totalSeats: 5,
                 });
@@ -185,11 +185,11 @@ function G(e) {
         })),
         { theme: Z } = (0, o.wR)(),
         W = (0, u.bG)([E.A], () => (null != m ? E.A.get(m.id) : null)),
-        Y = (0, S.b2)(R),
-        z = G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    function q(e) {
+        Y = (0, I.b2)(R),
+        q = G === w.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
+    function z(e) {
         return B
-            ? H.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, N.DP)(), totalSeats: 5 })
+            ? H.intl.formatToPlainString(U.default.pDiwHe, { premiumGroupProductName: (0, N.DP)(), totalSeats: 5 })
             : e.skuId === k.pe.TIER_0
               ? j.NcF.has(v ?? j.hes.UNKNOWN)
                   ? H.intl.format(H.t.o6hBiR, {})
@@ -216,7 +216,7 @@ function G(e) {
             className: F.Qq,
             children: H.intl.string(O.default["t+xzd8"]),
         });
-    else if ("deeplink_to_desktop_app" === T || G === U.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
+    else if ("deeplink_to_desktop_app" === T || G === w.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
         t = (0, r.jsx)(c.E, {
             variant: "body-md/medium",
             color: "interactive-text-default",
@@ -271,7 +271,7 @@ function G(e) {
                         variant: "body-md/medium",
                         color: "interactive-text-default",
                         className: F.Qq,
-                        children: q(e),
+                        children: z(e),
                     }),
                     (0, r.jsx)(c.E, {
                         variant: "body-md/medium",
@@ -288,12 +288,12 @@ function G(e) {
                 variant: "body-md/medium",
                 color: "interactive-text-default",
                 className: F.Qq,
-                children: q(e),
+                children: z(e),
             })));
     }
     let [Q, V] = i.useState(!1),
         X = i.useCallback(() => {
-            null != p && (p(), G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT && V(!0));
+            null != p && (p(), G === w.uH.MOBILE_WEB_REDIRECT_CHECKOUT && V(!0));
         }, [p, G]);
     function $() {
         return j.NcF.has(v ?? j.hes.UNKNOWN)
@@ -304,8 +304,8 @@ function G(e) {
     }
     if (
         ((n = B
-            ? H.intl.string(w.default.clIveA)
-            : "deeplink_to_desktop_app" === T || G === U.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+            ? H.intl.string(U.default.clIveA)
+            : "deeplink_to_desktop_app" === T || G === w.uH.MOBILE_WEB_REDIRECT_CHECKOUT
               ? H.intl.string(H.t.sRApon)
               : null != W
                 ? H.intl.formatToPlainString(H.t["1qGgm4"], { skuName: W.name })
@@ -316,14 +316,14 @@ function G(e) {
                     : H.intl.string(H.t.TkTvBz)),
         M)
     )
-        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || z, onClose: X, buttonLoading: Q });
-    let J = (0, I.z4)(l);
+        return (0, r.jsx)(L.A, { type: $(), text: t, buttonText: n, hideClose: y || q, onClose: X, buttonLoading: Q });
+    let J = (0, S.z4)(l);
     return (0, r.jsxs)("div", {
         className: F.EL,
         children: [
             !J && (0, r.jsx)(b, { type: $(), theme: Z }),
             t,
-            y || z
+            y || q
                 ? null
                 : (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
@@ -348,18 +348,18 @@ function K(e) {
         {
             quantity: E,
             checkoutSessionId: g,
-            isRecurringGiftCheckout: I,
+            isRecurringGiftCheckout: S,
         } = (0, f.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
             isRecurringGiftCheckout: e.getIsRecurringGiftCheckout(),
         })),
-        S = (0, u.bG)([y.A], () => y.A.isGiftCodeDeliveryReady(g), [g]);
+        I = (0, u.bG)([y.A], () => y.A.isGiftCodeDeliveryReady(g), [g]);
     return (0, r.jsx)(m.A, {
-        giftCode: I ? null : p,
+        giftCode: S ? null : p,
         giftCount: E,
         checkoutSessionId: g,
-        giftCodeDeliveryReady: S,
+        giftCodeDeliveryReady: I,
         shouldUsePostPurchaseRecipientDelivery: l,
         subscriptionPlan: h,
         onClose: n,

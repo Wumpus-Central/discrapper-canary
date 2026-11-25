@@ -1,5 +1,5 @@
-var r = n(582128),
-    i = n(129230),
+var i = n(582128),
+    r = n(129230),
     s = n(299679),
     c = n(652215);
 n.d(
@@ -8,20 +8,20 @@ n.d(
     {
         G: function (e) {
             let t = (0, s.Ar)(),
-                n = r.useRef(null),
-                o = r.useRef(!1),
-                l = r.useRef(t);
-            r.useEffect(() => {
+                n = i.useRef(null),
+                u = i.useRef(!1),
+                l = i.useRef(t);
+            i.useEffect(() => {
                 l.current = t;
             }, [t]);
-            let u = r.useCallback(
+            let o = i.useCallback(
                 (t) => {
                     t
-                        ? o.current ||
+                        ? u.current ||
                           (null === n.current &&
                               (n.current = setTimeout(() => {
                                   let t = l.current;
-                                  (i.default.track(c.HAw.IMPRESSION_WISHLIST_ITEM, {
+                                  (r.default.track(c.HAw.IMPRESSION_WISHLIST_ITEM, {
                                       sku_id: t?.skuId,
                                       wishlist_id: t?.wishlistId,
                                       wishlist_owner_id: t?.wishlistOwnerId,
@@ -33,7 +33,7 @@ n.d(
                                       impression_session_id: t?.impressionSessionId,
                                       location_stack: t?.analyticsLocations,
                                   }),
-                                      (o.current = !0),
+                                      (u.current = !0),
                                       (n.current = null));
                               }, 500)))
                         : null !== n.current && (clearTimeout(n.current), (n.current = null));
@@ -41,13 +41,13 @@ n.d(
                 [e],
             );
             return (
-                r.useEffect(
+                i.useEffect(
                     () => () => {
                         null !== n.current && (clearTimeout(n.current), (n.current = null));
                     },
                     [],
                 ),
-                { handleVisibilityChange: u }
+                { handleVisibilityChange: o }
             );
         },
     },

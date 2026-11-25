@@ -62,8 +62,8 @@ n.d(
                 [m, C] = l.useState(!0),
                 [y, _] = l.useState([]),
                 { createSetupIntentDeduped: E } = (0, o.x)(),
-                [g, I] = l.useState([]),
-                { customPaymentMethods: S, customPaymentMethodIdsToSourceTypes: A } = l.useMemo(
+                [g, S] = l.useState([]),
+                { customPaymentMethods: I, customPaymentMethodIdsToSourceTypes: A } = l.useMemo(
                     () => ({
                         customPaymentMethods: (0, c.Dd)(y),
                         customPaymentMethodIdsToSourceTypes: y.reduce(
@@ -84,7 +84,7 @@ n.d(
                         }
                         (_(l),
                             i(n),
-                            I(
+                            S(
                                 null != r && Array.isArray(r)
                                     ? r
                                     : ((e = ["pix", "card"]),
@@ -110,14 +110,14 @@ n.d(
                                   clientSecret: r,
                                   appearance: x,
                                   locale: R,
-                                  customPaymentMethods: S,
+                                  customPaymentMethods: I,
                                   paymentMethodCreation: "manual",
                               },
-                    [x, R, r, S, m],
+                    [x, R, r, I, m],
                 ),
                 M = {
                     setupError: h,
-                    customPaymentMethods: S,
+                    customPaymentMethods: I,
                     customPaymentMethodIdsToSourceTypes: A,
                     paymentMethodOrder: g,
                     elementsAppearanceOptions: v,

@@ -1,7 +1,7 @@
 let r = new Map(),
     s = new Map(),
-    i = new Map();
-function o(e, t, n) {
+    o = new Map();
+function i(e, t, n) {
     l(e, t);
     let r = setTimeout(() => e.delete(t), 1e4);
     e.set(t, { ...n, timer: r });
@@ -11,7 +11,7 @@ function l(e, t) {
     null != n && (clearTimeout(n.timer), e.delete(t));
 }
 function a(e, t) {
-    o(i, t, { projectId: e });
+    i(o, t, { projectId: e });
 }
 n.d(
     t,
@@ -19,14 +19,14 @@ n.d(
     {
         RP: function (e) {
             for (let [t, n] of [...r]) n.projectId === e && (r.delete(t), clearTimeout(n.timer), n.resolve(null));
-            for (let t of [s, i]) for (let [n, r] of [...t]) r.projectId === e && l(t, n);
+            for (let t of [s, o]) for (let [n, r] of [...t]) r.projectId === e && l(t, n);
         },
         bm: function (e, t) {
             let n = r.get(t);
             null != n && (clearTimeout(n.timer), n.resolve(null));
-            let i = s.get(t);
-            return null != i
-                ? (l(s, t), a(e, t), Promise.resolve({ uploadToken: i.uploadToken }))
+            let o = s.get(t);
+            return null != o
+                ? (l(s, t), a(e, t), Promise.resolve({ uploadToken: o.uploadToken }))
                 : new Promise((n) => {
                       let s = setTimeout(() => {
                           (r.delete(t), n(null));
@@ -37,7 +37,7 @@ n.d(
         n1: function (e, t, n) {
             let l = r.get(t);
             if (null == l) {
-                i.has(t) || o(s, t, { uploadToken: n, projectId: e });
+                o.has(t) || i(s, t, { uploadToken: n, projectId: e });
                 return;
             }
             (r.delete(t), clearTimeout(l.timer), a(e, t), l.resolve({ uploadToken: n }));

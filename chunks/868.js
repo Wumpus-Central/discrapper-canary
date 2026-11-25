@@ -1896,7 +1896,7 @@ var eZ = n(33282),
 class e5 extends e6.G {
     constructor() {
         super("discord_protos.qos_token.v1.QosToken", [
-            { no: 1, name: "client_provided", kind: "message", T: () => e8 },
+            { no: 1, name: "client_provided", kind: "message", T: () => e4 },
             { no: 2, name: "derived", kind: "message", T: () => te },
         ]);
     }
@@ -1915,7 +1915,7 @@ class e5 extends e6.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.clientProvided = e8.internalBinaryRead(e, e.uint32(), n, r.clientProvided);
+                    r.clientProvided = e4.internalBinaryRead(e, e.uint32(), n, r.clientProvided);
                     break;
                 case 2:
                     r.derived = te.internalBinaryRead(e, e.uint32(), n, r.derived);
@@ -1931,14 +1931,14 @@ class e5 extends e6.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.clientProvided && e8.internalBinaryWrite(e.clientProvided, t.tag(1, e1.O0.LengthDelimited).fork(), n).join(),
+        (e.clientProvided && e4.internalBinaryWrite(e.clientProvided, t.tag(1, e1.O0.LengthDelimited).fork(), n).join(),
             e.derived && te.internalBinaryWrite(e.derived, t.tag(2, e1.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? e1.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e7 = new e5();
-class e4 extends e6.G {
+class e8 extends e6.G {
     constructor() {
         super("discord_protos.qos_token.v1.ClientProvidedQosData", [
             { no: 1, name: "is_active", kind: "scalar", T: 8 },
@@ -1974,7 +1974,7 @@ class e4 extends e6.G {
         return (!1 !== i && (!0 == i ? e1.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e8 = new e4();
+let e4 = new e8();
 class e9 extends e6.G {
     constructor() {
         super("discord_protos.qos_token.v1.DerivedQosData", [
@@ -2579,7 +2579,7 @@ class tf extends eJ {
             a = (function (e, t) {
                 let n;
                 var i = ti.A.getForUser(e);
-                let r = e8.create({ isActive: t });
+                let r = e4.create({ isActive: t });
                 if (null != i)
                     try {
                         n = (0, tn.ii)(te, i);

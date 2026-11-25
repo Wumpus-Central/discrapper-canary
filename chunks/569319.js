@@ -6,9 +6,9 @@ n.d(
         V: function (e, t) {
             let [n, s] = r.useState(null);
             null != n && n === e && s(null);
-            let i = null != n && n !== (e ?? !1),
-                o = r.useCallback(() => !i || null == n || t(n), [i, n, t]);
-            return { checked: n ?? e ?? !1, changed: i, setChecked: s, save: o };
+            let o = null != n && n !== (e ?? !1),
+                i = r.useCallback(() => !o || null == n || t(n), [o, n, t]);
+            return { checked: n ?? e ?? !1, changed: o, setChecked: s, save: i };
         },
     },
 );

@@ -8,7 +8,7 @@ var l,
     c = n(821609),
     d = n(692651),
     m = 221552 == n.j ? (((l = {}).FILL = "fill"), (l.CAROUSEL = "carousel"), l) : null;
-let g = { fill: d.GS, carousel: d.Dk };
+let h = { fill: d.GS, carousel: d.Dk };
 n.d(
     t,
     {},
@@ -20,29 +20,29 @@ n.d(
                     title: l,
                     ctaText: a,
                     "aria-label": m,
-                    onButtonClick: h,
+                    onButtonClick: g,
                     onBlockClick: E,
-                    badge: p,
-                    innerRef: f,
+                    badge: f,
+                    innerRef: p,
                     listItemProps: x,
                 } = e,
                 C = s.useId(),
-                A = s.useCallback(
+                v = s.useCallback(
                     (e) => {
-                        (e.stopPropagation(), h());
+                        (e.stopPropagation(), g());
                     },
-                    [h],
+                    [g],
                 );
             return (0, r.jsxs)(o.D, {
                 ...x,
-                className: i()(d.iC, g[t]),
-                innerRef: f,
+                className: i()(d.iC, h[t]),
+                innerRef: p,
                 style: null != n ? { backgroundImage: `url(${n})` } : void 0,
                 "aria-label": m ?? a,
                 "aria-describedby": null != l ? C : void 0,
                 onClick: E,
                 children: [
-                    (0, r.jsx)("div", { className: d.LI, children: p }),
+                    (0, r.jsx)("div", { className: d.LI, children: f }),
                     (0, r.jsx)("div", {
                         className: d.P4,
                         children:
@@ -62,14 +62,14 @@ n.d(
                         text: a,
                         tabIndex: -1,
                         "aria-hidden": !0,
-                        onClick: A,
+                        onClick: v,
                     }),
                 ],
             });
         },
         R3: (e) => {
             let { layout: t = "fill" } = e;
-            return (0, r.jsx)("div", { className: i()(d.qV, g[t]), children: (0, r.jsx)("div", { className: d.xA }) });
+            return (0, r.jsx)("div", { className: i()(d.qV, h[t]), children: (0, r.jsx)("div", { className: d.xA }) });
         },
         uf: m,
     },

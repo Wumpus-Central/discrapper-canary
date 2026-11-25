@@ -16,8 +16,8 @@ var l = n(477900),
     _ = n(842385),
     E = n(761365),
     g = n(366523),
-    I = n(403362),
-    S = n(652215),
+    S = n(403362),
+    I = n(652215),
     A = n(778712),
     P = n(880465);
 function x(e) {
@@ -119,20 +119,20 @@ n.d(
                 disableHover: u,
             } = e;
             switch (t.productLine) {
-                case S.EZt.COLLECTIBLES:
+                case I.EZt.COLLECTIBLES:
                     return (0, l.jsx)(v, { sku: t, isFocused: n, user: r, guildId: i });
-                case S.EZt.SOCIAL_LAYER_GAME_ITEM:
+                case I.EZt.SOCIAL_LAYER_GAME_ITEM:
                     return (0, l.jsx)(R, { sku: t, isFocused: n });
-                case S.EZt.APPLICATION:
-                case S.EZt.BOOST:
-                case S.EZt.GUILD_ROLE:
+                case I.EZt.APPLICATION:
+                case I.EZt.BOOST:
+                case I.EZt.GUILD_ROLE:
                     return null;
-                case S.EZt.PREMIUM:
+                case I.EZt.PREMIUM:
                     return (0, l.jsx)(T, { eventTargetRef: a, assetClassName: s, disableHover: u });
-                case S.EZt.GUILD_PRODUCT:
+                case I.EZt.GUILD_PRODUCT:
                     return null;
                 default:
-                    (0, I.xb)(t.productLine);
+                    (0, S.xb)(t.productLine);
             }
         },
         pL: x,

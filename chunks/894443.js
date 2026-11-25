@@ -1,21 +1,21 @@
 var r = n(855986),
     s = n(73153);
-let i = new Map(),
-    o = new Map();
+let o = new Map(),
+    i = new Map();
 class l extends r.Ay.Store {
     getFailure(e) {
-        return i.get(e);
+        return o.get(e);
     }
     getSetupStartedAt(e) {
-        return null === i.get(e) ? o.get(e) : void 0;
+        return null === o.get(e) ? i.get(e) : void 0;
     }
 }
 let a = new l(s.h, {
     CONJURE_REMIX_STATE_SET: function (e) {
         let { projectId: t, pending: n, failed: r } = e;
         return n
-            ? (null == r && null !== i.get(t) && o.set(t, Date.now()), i.set(t, r), !0)
-            : (o.delete(t), i.delete(t));
+            ? (null == r && null !== o.get(t) && i.set(t, Date.now()), o.set(t, r), !0)
+            : (i.delete(t), o.delete(t));
     },
 });
 n.d(t, {}, { A: a });

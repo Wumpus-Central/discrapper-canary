@@ -15,29 +15,29 @@ n.d(
         HF: u,
         O8: function (e, t, n, s) {
             var c, d, m;
-            let g,
-                h = u(e, t);
-            if (null == e || null == h) return t;
-            let E = (0, o.Q7)(h, n),
-                p = {
+            let h,
+                g = u(e, t);
+            if (null == e || null == g) return t;
+            let E = (0, o.Q7)(g, n),
+                f = {
                     locale: s,
                     endsAt: e.endsAt,
                     redemptionEndsAt: e.redemptionEndsAt,
-                    helpCenterId: h.shared.helpCenter?.id,
+                    helpCenterId: g.shared.helpCenter?.id,
                 },
-                f = E?.title != null && "" !== E.title ? (0, l.U)((0, a.wJ)(E.title, p)) : t.title,
-                x = E?.description != null && "" !== E.description ? (0, l.U)((0, a.wJ)(E.description, p)) : t.summary;
-            if (h.subtype === r.h5.BASIC) return { ...t, title: f, summary: x };
+                p = E?.title != null && "" !== E.title ? (0, l.U)((0, a.wJ)(E.title, f)) : t.title,
+                x = E?.description != null && "" !== E.description ? (0, l.U)((0, a.wJ)(E.description, f)) : t.summary;
+            if (g.subtype === r.h5.BASIC) return { ...t, title: p, summary: x };
             let C =
                 E?.rewardStates != null
                     ? ((c = E.rewardStates),
                       (d = e.rewardStatus),
                       (m = e.progress?.current ?? 0),
-                      null != (g = (0, i.x)(c, d, m)?.heroUrl) && "" !== g ? g : void 0)
+                      null != (h = (0, i.x)(c, d, m)?.heroUrl) && "" !== h ? h : void 0)
                     : void 0;
             return {
                 ...t,
-                title: f,
+                title: p,
                 summary: x,
                 heroBannerUrl: C ?? t.heroBannerUrl,
                 heroBannerAnimatedUrl: void 0,
