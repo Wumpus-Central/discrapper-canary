@@ -32,9 +32,9 @@ i.d(
                     i.e(46233),
                     i.e(117928),
                     i.e(36509),
-                    i.e(716875),
-                    i.e(974272),
-                ]).then(i.bind(i, 24003));
+                    i.e(505198),
+                    i.e(79077),
+                ]).then(i.bind(i, 430660));
                 return (i) => (0, a.jsx)(d, { ...i, project: e, mode: r, currentGuildId: t, shareTicket: c });
             });
         },
