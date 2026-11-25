@@ -3,15 +3,15 @@ var l = e(149468),
     _ = e(723702),
     u = e(260498),
     o = e(246338),
-    r = e(652215);
-function a(t) {
+    a = e(652215);
+function r(t) {
     return null == t || "" === t ? null : t.slice(0, 256);
 }
 function s(t) {
     let n = u.Ay.getProject(t);
     return {
         project_id: t,
-        project_name: a(n?.name),
+        project_name: r(n?.name),
         application_id: n?.application_id ?? null,
         preview_application_id: n?.preview_application_id ?? null,
         install_scope: n?.install_scope ?? null,
@@ -29,25 +29,25 @@ e.d(
     {
         Hy: function (t, n) {
             let { location: e, code: i, message: _, details: u, isPreview: o = !0, turnId: p } = n;
-            (0, l.zV)(r.HAw.CONJURE_ERRORED, {
+            (0, l.zV)(a.HAw.CONJURE_ERRORED, {
                 ...s(t),
                 is_preview: o,
                 ...c(t, o),
                 turn_id: p ?? null,
                 error_location: e,
                 error_code: i,
-                error_message: a(_),
-                error_details: a(u),
+                error_message: r(_),
+                error_details: r(u),
             });
         },
         hV: function (t, n) {
             var e;
-            (0, l.zV)(r.HAw.CONJURE_TURN_RESULTED, {
+            (0, l.zV)(a.HAw.CONJURE_TURN_RESULTED, {
                 ...s(t),
                 ...c(t, !0),
                 turn_id: n.turn_id ?? null,
                 turn_result: n.result ?? null,
-                turn_summary: a(n.detail ?? n.summary),
+                turn_summary: r(n.detail ?? n.summary),
                 turn_cost: n.cost_usd ?? null,
                 turn_duration_ms: n.duration_ms ?? null,
                 model_tier: n.model_tier ?? null,
@@ -74,7 +74,7 @@ e.d(
         },
         wQ: function (t, n) {
             let e = u.Ay.getProject(t);
-            i.default.track(r.HAw.CONJURE_BUILDER_OPENED, {
+            i.default.track(a.HAw.CONJURE_BUILDER_OPENED, {
                 project_id: t,
                 entry_point: n,
                 is_owner: null != e ? (0, u.PV)(e) : null,
@@ -93,11 +93,11 @@ e.d(
             RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
         },
         yJ: function (t, n) {
-            let { entryPoint: e, publishState: i, surface: _, installScope: o, action: a } = n,
-                s = u.Ay.getProject(t);
-            (0, l.zV)(r.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
+            let { entryPoint: e, publishState: i, surface: _, installScope: o } = n,
+                r = u.Ay.getProject(t);
+            (0, l.zV)(a.HAw.CONJURE_PUBLISH_ACTION_CLICKED, {
                 project_id: t,
-                application_id: s?.application_id ?? null,
+                application_id: r?.application_id ?? null,
                 ...("user" === o ? { guild_id: null, channel_id: null } : c(t, !1)),
                 entry_point: e,
                 publish_state:
@@ -110,7 +110,7 @@ e.d(
                             : "up_to_date",
                 surface: _,
                 install_scope: o,
-                action: a,
+                action: "publish",
             });
         },
     },

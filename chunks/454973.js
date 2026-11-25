@@ -8708,7 +8708,7 @@ function oY(e) {
     );
 }
 function oQ(e) {
-    return e?.state === "action_needed" && "review_permissions" === e.action;
+    return e?.state === "action_needed" && e.permissionsChanged;
 }
 var oZ = n(247171);
 function oJ(e) {

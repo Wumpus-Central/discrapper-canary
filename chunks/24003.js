@@ -313,7 +313,7 @@ function q(e) {
                         if (H.Ay.getIntegrationStatus(e)?.preview_ready !== !0) return null;
                         if (Y(e)) {
                             try {
-                                await (0, X.vL)(e, t);
+                                if ((await (0, X.vL)(e, t)) !== "approved") return null;
                             } catch {
                                 return null;
                             }

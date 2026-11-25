@@ -248,9 +248,8 @@ let K = (function (e) {
 let $ = {
     openConjureAppInstallModal: async function (e) {
         let { onClose: t, ...i } = e,
-            { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 610056));
-        r(
-            (function (e) {
+            { openOAuth2Modal: r } = await Promise.resolve().then(n.bind(n, 610056)),
+            a = (function (e) {
                 let { applicationId: t, application: n, guildId: i } = e,
                     r = n?.integrationTypesConfig?.[U.b.GUILD_INSTALL]?.oauth2InstallParams ?? n?.installParams;
                 return {
@@ -263,8 +262,8 @@ let $ = {
                     callback: () => ((0, x.eO)(t, { withMutualGuilds: !0 }), !0),
                 };
             })(i),
-            t,
-        );
+            s = !1;
+        r({ ...a, callback: (e) => ((s = !0 !== e.canceled), a.callback?.(e)) }, () => t?.(s));
     },
     isWindowFocused: function () {
         return l.A.isFocused();

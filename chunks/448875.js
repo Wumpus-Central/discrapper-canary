@@ -2,8 +2,8 @@ n(938796);
 var i = n(155718),
     o = n(46054),
     r = n(763754),
-    a = n(619019),
-    l = n(734057),
+    l = n(619019),
+    a = n(734057),
     s = n(994500),
     c = n(287809),
     u = n(403362),
@@ -21,7 +21,7 @@ function m(e) {
 function h(e) {
     if (null != e) return { id: e.id, name: e.name, animated: e.animated };
 }
-function f(e) {
+function y(e) {
     return {
         url: e.url,
         proxy_url: e.proxyUrl,
@@ -35,7 +35,7 @@ function f(e) {
         flags: e.flags,
     };
 }
-function g(e) {
+function f(e) {
     return {
         custom_id: e.customId,
         disabled: e.disabled,
@@ -45,12 +45,12 @@ function g(e) {
         max_values: e.maxValues,
     };
 }
-function y(e) {
+function g(e) {
     return e
         ?.map(function e(t) {
             switch (t.type) {
                 case i.I5.ACTION_ROW:
-                    return { type: t.type, components: y(t.components) };
+                    return { type: t.type, components: g(t.components) };
                 case i.I5.BUTTON:
                     return {
                         type: t.type,
@@ -65,7 +65,7 @@ function y(e) {
                 case i.I5.STRING_SELECT:
                     return {
                         type: t.type,
-                        ...g(t),
+                        ...f(t),
                         options: t.options.map((e) => ({
                             label: e.label,
                             value: e.value,
@@ -77,26 +77,29 @@ function y(e) {
                 case i.I5.USER_SELECT:
                 case i.I5.ROLE_SELECT:
                 case i.I5.MENTIONABLE_SELECT:
-                    return { type: t.type, ...g(t), default_values: t.defaultValues };
+                    return { type: t.type, ...f(t), default_values: t.defaultValues };
                 case i.I5.CHANNEL_SELECT:
-                    return { type: t.type, ...g(t), channel_types: t.channelTypes, default_values: t.defaultValues };
-                case i.I5.SECTION:
-                    return { type: t.type, components: y(t.components), accessory: e(t.accessory) };
+                    return { type: t.type, ...f(t), channel_types: t.channelTypes, default_values: t.defaultValues };
+                case i.I5.SECTION: {
+                    let n = e(t.accessory);
+                    if (null == n) return null;
+                    return { type: t.type, components: g(t.components), accessory: n };
+                }
                 case i.I5.TEXT_DISPLAY:
                     return { type: t.type, content: t.content };
                 case i.I5.THUMBNAIL:
-                    return { type: t.type, media: f(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
+                    return { type: t.type, media: y(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
                 case i.I5.MEDIA_GALLERY:
                     return {
                         type: t.type,
                         items: t.items.map((e) => ({
-                            media: f(e.media),
+                            media: y(e.media),
                             description: e.description,
                             spoiler: e.spoiler ?? !1,
                         })),
                     };
                 case i.I5.FILE:
-                    return { type: t.type, file: f(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
+                    return { type: t.type, file: y(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
                 case i.I5.SEPARATOR:
                     return { type: t.type, divider: t.divider, spacing: t.spacing };
                 case i.I5.CONTENT_INVENTORY_ENTRY:
@@ -106,7 +109,23 @@ function y(e) {
                         type: t.type,
                         accent_color: t.accentColor,
                         spoiler: t.spoiler,
-                        components: y(t.components),
+                        components: g(t.components),
+                    };
+                case i.I5.OVERFLOW_MENU:
+                    return {
+                        type: t.type,
+                        groups: t.groups.map((e) => ({ label: e.label, components: g(e.components) })),
+                    };
+                case i.I5.MENU_ACTION_ITEM:
+                    return {
+                        type: t.type,
+                        custom_id: t.customId,
+                        disabled: t.disabled,
+                        style: t.style,
+                        label: t.label,
+                        description: t.description,
+                        url: t.url,
+                        emoji: h(t.emoji),
                     };
                 case i.I5.TEXT_INPUT:
                 case i.I5.LABEL:
@@ -163,7 +182,7 @@ function A(e) {
             if (null != e) return { text: e.text, icon_url: e.iconURL, proxy_icon_url: e.iconProxyURL };
         })(e.footer),
         reference_id: e.referenceId,
-        components: y(e.components),
+        components: g(e.components),
     };
 }
 function v(e) {
@@ -171,15 +190,15 @@ function v(e) {
 }
 function E(e, t, n) {
     let i = null != t ? o.A.parseToAST(t, !0, { channelId: e }).map(m) : [],
-        a = null != e ? l.A.getChannel(e) : void 0,
-        s = null != n ? (0, r.FT)(n, a) : void 0;
+        l = null != e ? a.A.getChannel(e) : void 0,
+        s = null != n ? (0, r.FT)(n, l) : void 0;
     return { content_parsed: i.length ? i : void 0, nick: s?.nick, author_color: s?.colorString };
 }
 function C(e) {
     return {
         ...e,
-        user: (0, p.A)(new a.A(e.user)),
-        target_user: "target_user" in e && null != e.target_user ? (0, p.A)(new a.A(e.target_user)) : void 0,
+        user: (0, p.A)(new l.A(e.user)),
+        target_user: "target_user" in e && null != e.target_user ? (0, p.A)(new l.A(e.target_user)) : void 0,
         triggering_interaction_metadata:
             "triggering_interaction_metadata" in e ? C(e.triggering_interaction_metadata) : void 0,
     };
@@ -192,7 +211,7 @@ n.d(
             return {
                 id: e.id,
                 channel_id: e.channel_id,
-                guild_id: l.A.getChannel(e.channel_id)?.guild_id,
+                guild_id: a.A.getChannel(e.channel_id)?.guild_id,
                 author: (0, p.A)(e.author),
                 content: e.content,
                 timestamp: e.timestamp.toISOString(),
@@ -210,7 +229,7 @@ n.d(
                     let t = (e.images ?? []).filter((t) => t !== e.image);
                     return [A(e), ...t.map((t) => A({ id: e.id, type: _.Auw.RICH, url: e.url, image: t }))];
                 }),
-                components: y(e.components),
+                components: g(e.components),
                 reactions: v(
                     e.reactions
                         .filter((e) => e.count_details?.vote == null)
@@ -256,18 +275,18 @@ n.d(
             };
         },
         d: function (e) {
-            let t = null != e.author ? new a.A(e.author) : void 0;
+            let t = null != e.author ? new l.A(e.author) : void 0;
             return {
                 id: e.id,
                 channel_id: e.channel_id,
-                guild_id: null != e.channel_id ? l.A.getChannel(e.channel_id)?.guild_id : void 0,
+                guild_id: null != e.channel_id ? a.A.getChannel(e.channel_id)?.guild_id : void 0,
                 author: null != t ? (0, p.A)(t) : void 0,
                 content: e.content,
                 timestamp: e.timestamp,
                 edited_timestamp: e.edited_timestamp,
                 tts: e.tts,
                 mention_everyone: e.mention_everyone,
-                mentions: e.mentions?.map((e) => (0, p.A)(new a.A(e))),
+                mentions: e.mentions?.map((e) => (0, p.A)(new l.A(e))),
                 mention_roles: e.mention_roles,
                 mention_channels: e.mention_channels,
                 attachments: e.attachments,
