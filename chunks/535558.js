@@ -2,12 +2,17 @@ var i,
     r,
     a = n(143138);
 let s = "discordEmbeddedAppShim";
-var l = (((i = {})[(i.STATE_UPDATED = 0)] = "STATE_UPDATED"), (i[(i.KEYBINDS_UPDATED = 1)] = "KEYBINDS_UPDATED"), i),
+var l =
+        (((i = {})[(i.STATE_UPDATED = 0)] = "STATE_UPDATED"),
+        (i[(i.KEYBINDS_UPDATED = 1)] = "KEYBINDS_UPDATED"),
+        (i[(i.LAUNCH_TIMINGS_REQUEST = 2)] = "LAUNCH_TIMINGS_REQUEST"),
+        i),
     o =
         (((r = {})[(r.STATE_UPDATED = 0)] = "STATE_UPDATED"),
         (r[(r.DISCONNECTED = 1)] = "DISCONNECTED"),
         (r[(r.CONNECTION_ACCEPTED = 2)] = "CONNECTION_ACCEPTED"),
         (r[(r.KEYBIND_CAPTURED = 3)] = "KEYBIND_CAPTURED"),
+        (r[(r.LAUNCH_TIMINGS_RESPONSE = 4)] = "LAUNCH_TIMINGS_RESPONSE"),
         r);
 n.d(
     t,

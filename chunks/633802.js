@@ -12,5 +12,8 @@ n.d(
         dY: function (e, t) {
             i.h.dispatch({ type: "EMBEDDED_APP_SHIM_PIPE_OPEN", iframeId: e, pipe: t });
         },
+        lB: function (e) {
+            i.h.dispatch({ type: "EMBEDDED_APP_SHIM_CONNECT", iframeId: e });
+        },
     },
 );

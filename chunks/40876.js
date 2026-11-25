@@ -116,7 +116,7 @@ let r = {
     },
     EmbeddedAppShimManager: {
         actions: ["EMBEDDED_APP_SHIM_PIPE_OPEN"],
-        inlineRequire: () => n(391890).A,
+        inlineRequire: () => n(990588).A,
         hasStoreChangeListeners: !0,
     },
     EntityVersionsManager: {
