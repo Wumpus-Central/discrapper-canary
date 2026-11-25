@@ -11,6 +11,7 @@ e.exports = {
     Rm: "detailHeader_H11xQD",
     wL: "searchHeader_H11xQD",
     aL: "nagbar_H11xQD",
+    e: "nagbarBannerSlot_H11xQD",
     ll: "nagbarActionContainer_H11xQD",
     wm: "logo_H11xQD",
 };

@@ -649,7 +649,7 @@ var i = {
     "./ForumLockIcon.web.tsx": ["597050", []],
     "./ScreenSlashIcon.web.tsx": ["1215", [587732]],
     "./ExperimentalSnowflakeIcon.web.tsx": ["406122", [782711]],
-    "./VrHeadsetIcon.web.tsx": ["738678", [35771]],
+    "./VrHeadsetIcon.web.tsx": ["738678", []],
     "./ArrowLargeLeftIcon.web.tsx": ["548411", [918024]],
     "./LinkshellIcon.web.tsx": ["123510", [90363]],
     "./ScreenXIcon.web.tsx": ["959988", []],

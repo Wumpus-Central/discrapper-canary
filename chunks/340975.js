@@ -2,7 +2,7 @@ var t = a(582128),
     o = a(855986),
     n = a(506774),
     i = a(73153);
-let s = "GlobalBannerAppPreview.v10";
+let s = "GlobalBannerAppPreview.v12";
 class r extends o.Ay.Store {
     static displayName = "GlobalBannerPreviewStore";
     config;
@@ -29,24 +29,24 @@ function m(e) {
     );
 }
 function y(e) {
-    if ((e && null != h.pending && g({ ...h, pending: null }), e !== p)) for (let l of ((p = e), b)) l();
+    if ((e && null != v.pending && g({ ...v, pending: null }), e !== p)) for (let l of ((p = e), b)) l();
 }
-let v = new Set(),
-    h = { pending: null, replayId: 0 },
+let h = new Set(),
+    v = { pending: null, replayId: 0 },
     x = 0;
 function f(e) {
     return (
-        v.add(e),
+        h.add(e),
         () => {
-            v.delete(e);
+            h.delete(e);
         }
     );
 }
 function g(e) {
-    for (let l of ((h = e), v)) l();
+    for (let l of ((v = e), h)) l();
 }
 function V(e) {
-    p || g({ ...h, pending: { action: e, id: ++x } });
+    p || g({ ...v, pending: { action: e, id: ++x } });
 }
 a.d(
     l,
@@ -54,7 +54,7 @@ a.d(
     {
         Ay: u,
         HF: function () {
-            return t.useSyncExternalStore(f, () => h);
+            return t.useSyncExternalStore(f, () => v);
         },
         MF: function () {
             V("hide");
@@ -69,8 +69,8 @@ a.d(
             return t.useSyncExternalStore(m, () => p);
         },
         gQ: function () {
-            let { pending: e } = h;
-            null != e && g({ pending: null, replayId: "replay" === e.action ? e.id : h.replayId });
+            let { pending: e } = v;
+            null != e && g({ pending: null, replayId: "replay" === e.action ? e.id : v.replayId });
         },
         iM: function (e) {
             return e?.isStaff() === !0 || e?.isStaffPersonal() === !0;

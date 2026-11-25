@@ -1,66 +1,59 @@
-var r = t(477900),
-    s = t(582128),
-    a = t(520923),
-    i = t(28863),
-    o = t(403581),
-    c = t(217838);
-function l() {
+var i = s(477900),
+    n = s(582128),
+    o = s(520923),
+    r = s(403581),
+    c = s(217838);
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 189958e3,
-        [n] = s.useState(() => new Date(Date.now() + e));
-    return n;
-}
-function u() {
-    return (0, r.jsx)("img", { src: c.A, alt: "" });
+        [t] = n.useState(() => new Date(Date.now() + e));
+    return t;
 }
 function d() {
-    return (0, r.jsxs)("svg", {
+    return (0, i.jsx)("img", { src: c.A, alt: "" });
+}
+function u() {
+    return (0, i.jsxs)("svg", {
         width: "200",
         height: "20",
         viewBox: "0 0 200 20",
         fill: "currentColor",
         children: [
-            (0, r.jsx)("rect", { x: "0", y: "2", width: "56", height: "16", rx: "8" }),
-            (0, r.jsx)("rect", { x: "64", y: "4", width: "64", height: "12", rx: "6" }),
-            (0, r.jsx)("rect", { x: "136", y: "4", width: "64", height: "12", rx: "6" }),
+            (0, i.jsx)("rect", { x: "0", y: "2", width: "56", height: "16", rx: "8" }),
+            (0, i.jsx)("rect", { x: "64", y: "4", width: "64", height: "12", rx: "6" }),
+            (0, i.jsx)("rect", { x: "136", y: "4", width: "64", height: "12", rx: "6" }),
         ],
     });
 }
-function m(e) {
-    return [e, (0, r.jsx)(i.Anchor, { href: "https://discordstatus.com", children: "Discord Status" }, "link"), "."];
-}
-function f(e) {
+function l(e) {
     return "promotion" === e.variant || "critical" !== e.type || e.dismissible;
 }
-t.d(
-    n,
+s.d(
+    t,
     {},
     {
-        A8: l,
+        A8: a,
         CF: function (e) {
-            let { ref: n, config: t, onDismiss: s, actionLoading: i = !1 } = e,
-                c = l(),
-                p = {
-                    title: "" === t.title ? void 0 : t.title,
-                    message: t.sampleLink
-                        ? m(
-                              "Discord will be down for maintenance tonight from 10pm to 11pm, and you can follow along on ",
-                          )
-                        : t.message,
+            let { ref: t, config: s, onDismiss: n, actionLoading: c = !1 } = e,
+                p = a(),
+                h = {
+                    title: "" === s.title ? void 0 : s.title,
+                    message: s.message,
+                    link: "" === s.link ? void 0 : { text: s.link, href: "https://discordstatus.com" },
                 },
-                v =
-                    "" === t.primaryAction
+                y =
+                    "" === s.primaryAction
                         ? {}
                         : {
                               primaryAction: {
-                                  text: t.primaryAction,
-                                  icon: t.primaryActionIcon ? o.NitroWheelIcon : void 0,
+                                  text: s.primaryAction,
+                                  icon: s.primaryActionIcon ? r.NitroWheelIcon : void 0,
                                   onClick: () => {},
-                                  loading: i,
+                                  loading: c,
                               },
                               secondaryAction:
-                                  "" === t.secondaryAction ? void 0 : { text: t.secondaryAction, onClick: () => {} },
+                                  "" === s.secondaryAction ? void 0 : { text: s.secondaryAction, onClick: () => {} },
                           },
-                h = (function (e) {
+                v = (function (e) {
                     switch (e) {
                         case "none":
                         case "voice":
@@ -68,87 +61,75 @@ t.d(
                         case "stage":
                             return;
                         case "icon":
-                            return (0, r.jsx)(o.NitroWheelIcon, { size: "md", color: "currentColor" });
+                            return (0, i.jsx)(r.NitroWheelIcon, { size: "md", color: "currentColor" });
                         case "image":
-                            return (0, r.jsx)(u, {});
+                            return (0, i.jsx)(d, {});
                         case "wide-image":
-                            return (0, r.jsx)(d, {});
+                            return (0, i.jsx)(u, {});
                     }
-                })(t.leadingAccessory);
-            if ("promotion" === t.variant)
-                return (0, r.jsx)(a.q, {
-                    ref: n,
+                })(s.leadingAccessory);
+            if ("promotion" === s.variant)
+                return (0, i.jsx)(o.q, {
+                    ref: t,
                     variant: "promotion",
-                    type: "nitro" === t.type ? "nitro" : "expressive",
-                    ...p,
-                    ...v,
-                    leadingAccessory: h,
-                    countdown: t.countdown
-                        ? "days-left" === t.countdownAppearance
-                            ? { endsAt: c, appearance: "days-left" }
+                    type: "nitro" === s.type ? "nitro" : "expressive",
+                    ...h,
+                    ...y,
+                    leadingAccessory: v,
+                    countdown: s.countdown
+                        ? "days-left" === s.countdownAppearance
+                            ? { endsAt: p, appearance: "days-left" }
                             : {
-                                  endsAt: c,
+                                  endsAt: p,
                                   appearance: "timer",
-                                  showDays: t.countdownShowDays,
-                                  showSeconds: t.countdownShowSeconds,
+                                  showDays: s.countdownShowDays,
+                                  showSeconds: s.countdownShowSeconds,
                               }
                         : void 0,
-                    onDismiss: s,
+                    onDismiss: n,
                 });
-            switch (t.type) {
+            switch (s.type) {
                 case "critical":
-                    return (0, r.jsx)(a.q, {
-                        ref: n,
+                    return (0, i.jsx)(o.q, {
+                        ref: t,
                         variant: "status",
                         type: "critical",
-                        role: t.role,
-                        ...p,
-                        ...v,
-                        onDismiss: f(t) ? s : void 0,
+                        ...h,
+                        ...y,
+                        onDismiss: l(s) ? n : void 0,
                     });
                 case "connected":
-                    return (0, r.jsx)(a.q, {
-                        ref: n,
+                    return (0, i.jsx)(o.q, {
+                        ref: t,
                         variant: "status",
                         type: "connected",
                         leadingAccessory:
-                            "video" === t.leadingAccessory || "stage" === t.leadingAccessory
-                                ? t.leadingAccessory
+                            "video" === s.leadingAccessory || "stage" === s.leadingAccessory
+                                ? s.leadingAccessory
                                 : "voice",
-                        role: t.role,
-                        ...p,
-                        ...v,
-                        onDismiss: s,
+                        ...h,
+                        ...y,
+                        onDismiss: n,
                     });
                 case "warning":
-                    return (0, r.jsx)(a.q, {
-                        ref: n,
-                        variant: "status",
-                        type: "warning",
-                        role: t.role,
-                        ...p,
-                        ...v,
-                        onDismiss: s,
-                    });
+                    return (0, i.jsx)(o.q, { ref: t, variant: "status", type: "warning", ...h, ...y, onDismiss: n });
                 case "expressive":
                 case "nitro":
                 case "info":
-                    return (0, r.jsx)(a.q, {
-                        ref: n,
+                    return (0, i.jsx)(o.q, {
+                        ref: t,
                         variant: "status",
                         type: "info",
-                        role: t.role,
-                        ...p,
-                        ...v,
-                        leadingAccessory: h,
-                        onDismiss: s,
+                        ...h,
+                        ...y,
+                        leadingAccessory: v,
+                        onDismiss: n,
                     });
             }
         },
-        S0: f,
-        St: m,
-        lv: d,
+        S0: l,
+        lv: u,
         s8: 17158e3,
-        vy: u,
+        vy: d,
     },
 );

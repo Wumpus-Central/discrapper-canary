@@ -3139,16 +3139,6 @@ let ab = [
             options: [...ab, ...ap],
             getOptions: (e) => (al(e) ? ap : ab),
         },
-        role: {
-            label: "Screen reader",
-            type: "select",
-            defaultValue: "status",
-            options: [
-                { label: "Announce right away", value: "alert" },
-                { label: "Announce when idle", value: "status" },
-            ],
-            isVisible: ae,
-        },
         title: { label: "Title", hint: "Optional bold lead-in.", type: "text", defaultValue: "" },
         message: {
             label: "Message",
@@ -3156,11 +3146,11 @@ let ab = [
             defaultValue:
                 "Discord will be down for maintenance tonight from 10pm to 11pm, so voice calls and messages might not work.",
         },
-        sampleLink: {
-            label: "End the message with a link",
-            hint: "Replaces the message with the maintenance notice, linking to Discord Status.",
-            type: "boolean",
-            defaultValue: !1,
+        link: {
+            label: "Link",
+            hint: "The `link` prop: a link after the message, to Discord Status. Leave empty for no link.",
+            type: "text",
+            defaultValue: "",
         },
         leadingAccessory: {
             label: "Leading graphic",
@@ -6196,12 +6186,11 @@ let tX = {
                                             children: [
                                                 (0, o.jsx)(as, {
                                                     children:
-                                                        "Every type with a title, as in the Figma R2 frames, and an inline link",
+                                                        "Every type with a title, as in the Figma R2 frames, and a link",
                                                 }),
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "critical",
-                                                    role: "alert",
                                                     title: "Someone signed in to your account from a new device,",
                                                     message: "so change your password if it wasn\u2019t you.",
                                                     primaryAction: { text: "Change Password", onClick: () => {} },
@@ -6211,17 +6200,14 @@ let tX = {
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "warning",
-                                                    role: "status",
                                                     title: "Discord will be down for maintenance tonight",
-                                                    message: (0, lv.St)(
-                                                        "from 10pm to 11pm, and you can follow along on ",
-                                                    ),
+                                                    message: "from 10pm to 11pm.",
+                                                    link: { text: "Discord Status", href: "https://discordstatus.com" },
                                                     onDismiss: () => {},
                                                 }),
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "info",
-                                                    role: "status",
                                                     leadingAccessory: (0, o.jsx)(l7.BellSlashIcon, {
                                                         size: "refresh_sm",
                                                         color: "currentColor",
@@ -6236,7 +6222,6 @@ let tX = {
                                                     variant: "status",
                                                     type: "connected",
                                                     leadingAccessory: "voice",
-                                                    role: "status",
                                                     title: "You\u2019re in a voice call on your phone,",
                                                     message: "so transfer it here to keep talking from your computer.",
                                                     primaryAction: { text: "Transfer Call", onClick: () => {} },
@@ -6280,7 +6265,6 @@ let tX = {
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "critical",
-                                                    role: "alert",
                                                     message:
                                                         "Your Nitro payment didn\u2019t go through, so update your payment method to keep your perks.",
                                                     primaryAction: { text: "Update Payment", onClick: () => {} },
@@ -6289,7 +6273,6 @@ let tX = {
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "critical",
-                                                    role: "alert",
                                                     message:
                                                         "Verify your email address to keep sending messages and joining servers on Discord.",
                                                     primaryAction: { text: "Verify Email", onClick: () => {} },
@@ -6297,7 +6280,6 @@ let tX = {
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "warning",
-                                                    role: "status",
                                                     title: "Your version of macOS is no longer supported,",
                                                     message: "so update it to keep getting Discord updates.",
                                                     onDismiss: () => {},
@@ -6305,7 +6287,6 @@ let tX = {
                                                 (0, o.jsx)(l5.q, {
                                                     variant: "status",
                                                     type: "info",
-                                                    role: "status",
                                                     title: "Streamer Mode is on,",
                                                     message:
                                                         "so your personal details and server invite links are hidden on stream.",
@@ -6316,7 +6297,6 @@ let tX = {
                                                     variant: "status",
                                                     type: "connected",
                                                     leadingAccessory: "voice",
-                                                    role: "status",
                                                     message:
                                                         "You\u2019re in a voice call in General with your mic muted, so unmute when you\u2019re ready to talk.",
                                                     primaryAction: { text: "Unmute Mic", onClick: () => {} },
@@ -6326,7 +6306,6 @@ let tX = {
                                                     variant: "status",
                                                     type: "connected",
                                                     leadingAccessory: "video",
-                                                    role: "status",
                                                     message:
                                                         "You\u2019re in a video call with Wumpus, and your camera is off until you turn it on.",
                                                     primaryAction: { text: "Turn On Camera", onClick: () => {} },
@@ -6336,7 +6315,6 @@ let tX = {
                                                     variant: "status",
                                                     type: "connected",
                                                     leadingAccessory: "stage",
-                                                    role: "status",
                                                     message:
                                                         "You\u2019ve been invited to speak on Stage in Town Hall, so join as a speaker when you\u2019re ready.",
                                                     primaryAction: { text: "Join as Speaker", onClick: () => {} },

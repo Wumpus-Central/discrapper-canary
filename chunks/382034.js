@@ -1,4 +1,4 @@
-n.d(t, { A: () => m, e: () => p });
+n.d(t, { A: () => g, e: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -8,57 +8,66 @@ var i = n(477900),
     d = n(793574),
     c = n(688810),
     u = n(429913),
-    _ = n(660298),
-    E = n(942370),
-    A = n(49999),
-    f = n(705799),
-    h = n(792996),
-    I = n(971656);
-function p(e) {
-    return null != e && !e.scopes.includes(l.F.SDK_SOCIAL_LAYER) && e.application.id === E.Tr.ACTIVISION_APPLICATION_ID;
+    _ = n(430783),
+    E = n(660298),
+    A = n(942370),
+    f = n(49999),
+    h = n(705799),
+    I = n(792996),
+    p = n(971656);
+function m(e) {
+    return null != e && !e.scopes.includes(l.F.SDK_SOCIAL_LAYER) && e.application.id === A.Tr.ACTIVISION_APPLICATION_ID;
 }
-let m = function (e) {
+let g = function (e) {
     let { markAsDismissed: t, recurringDismiss: n, noticeType: a } = e,
-        l = E.Tr.CALL_OF_DUTY_APPLICATION_ID,
-        m = (0, u.h)(l),
-        g = m?.name,
-        { startAuthorization: T, canStartAuthorization: S, fetched: N, token: C } = (0, _.RD)(m),
-        { analyticsLocations: O } = (0, c.Ay)(d.A.NOTICE),
-        R = p(C),
-        [L, y] = r.useState(!1);
-    return (r.useEffect(() => {
-        N && !R && t(L ? A.i.TAKE_ACTION : A.i.INDIRECT_ACTION);
-    }, [L, N, t, R]),
-    null != m && S && N)
-        ? (0, i.jsxs)(o.$T, {
-              color: o.Hv.WARNING,
-              children: [
-                  (0, i.jsx)(o.PM, {
-                      noticeType: a,
-                      onClick: () => {
-                          t(A.i.USER_DISMISS);
-                      },
-                  }),
-                  (0, i.jsx)("img", {
-                      src: "https://cdn.discordapp.com/assets/content/37dd378cbc52678cf98cba1b9abef1a63da6d2bdbc6535c3982aff71e6d23783.png",
-                      alt: g,
-                      className: s()(I.tV, I.Y5),
-                  }),
-                  h.intl.string(f.default.OleW32),
-                  (0, i.jsx)(o.Z_, {
-                      onClick: function () {
-                          (y(!0), T({ analyticsLocations: O }));
-                      },
-                      className: I.NS,
-                      noticeType: a,
-                      children: h.intl.string(f.default.ZeOhh9),
-                  }),
-                  (0, i.jsx)(o.zr, {
-                      onClick: () => n(A.i.USER_DISMISS),
-                      className: I.go,
-                      children: h.intl.string(f.default["8qJAeT"]),
-                  }),
-              ],
-          })
-        : null;
+        l = A.Tr.CALL_OF_DUTY_APPLICATION_ID,
+        g = (0, u.h)(l),
+        T = g?.name,
+        { startAuthorization: S, canStartAuthorization: N, fetched: C, token: O } = (0, E.RD)(g),
+        { analyticsLocations: R } = (0, c.Ay)(d.A.NOTICE),
+        L = m(O),
+        [y, D] = r.useState(!1);
+    if (
+        (r.useEffect(() => {
+            C && !L && t(y ? f.i.TAKE_ACTION : f.i.INDIRECT_ACTION);
+        }, [y, C, t, L]),
+        null == g || !N || !C)
+    )
+        return null;
+    function b() {
+        (D(!0), S({ analyticsLocations: R }));
+    }
+    let v = (0, i.jsxs)(o.$T, {
+        color: o.Hv.WARNING,
+        children: [
+            (0, i.jsx)(o.PM, {
+                noticeType: a,
+                onClick: () => {
+                    t(f.i.USER_DISMISS);
+                },
+            }),
+            (0, i.jsx)("img", {
+                src: "https://cdn.discordapp.com/assets/content/37dd378cbc52678cf98cba1b9abef1a63da6d2bdbc6535c3982aff71e6d23783.png",
+                alt: T,
+                className: s()(p.tV, p.Y5),
+            }),
+            I.intl.string(h.default.OleW32),
+            (0, i.jsx)(o.Z_, { onClick: b, className: p.NS, noticeType: a, children: I.intl.string(h.default.ZeOhh9) }),
+            (0, i.jsx)(o.zr, {
+                onClick: () => n(f.i.USER_DISMISS),
+                className: p.go,
+                children: I.intl.string(h.default["8qJAeT"]),
+            }),
+        ],
+    });
+    return (0, i.jsx)(_.qg, {
+        noticeType: a,
+        variant: "status",
+        type: "warning",
+        message: I.intl.string(h.default.OleW32),
+        primaryAction: { text: I.intl.string(h.default.ZeOhh9), onClick: b },
+        secondaryAction: { text: I.intl.string(h.default["8qJAeT"]), onClick: () => n(f.i.USER_DISMISS) },
+        onDismiss: () => t(f.i.USER_DISMISS),
+        legacy: v,
+    });
 };

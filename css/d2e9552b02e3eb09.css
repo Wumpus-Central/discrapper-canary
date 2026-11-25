@@ -1,3 +1,13 @@
+.backdrop_hnSB1X {
+    background: var(--background-brand);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
+.label_hnSB1X {
+    color: var(--text-overlay-light)
+}
+
 .inputField_vxox-C {
     align-items: center;
     display: flex;
@@ -141,4 +151,125 @@
     background-color: ButtonFace
 }
 
-/*# sourceMappingURL=099515718a5b047e.css.map*/
+.popout_FZwK71 {
+    align-items: stretch;
+    background: var(--background-surface-high);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    display: flex;
+    overflow: hidden;
+    padding: var(--space-4)
+}
+
+.full-motion .popout_FZwK71 {
+    transition: width .22s ease
+}
+
+.presetColumn_FZwK71 {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-8);
+    width: 220px
+}
+
+.sectionLabel_FZwK71 {
+    letter-spacing: .04em;
+    padding: 0 var(--space-8);
+    text-transform: none
+}
+
+.presetList_FZwK71 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.presetItem_FZwK71 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-8) var(--space-12);
+    transition: background-color .12s ease, color .12s ease
+}
+
+.presetItem_FZwK71:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.presetItemActive_FZwK71,
+.presetItemActive_FZwK71:hover {
+    background-color: var(--background-mod-strong);
+    color: var(--text-default)
+}
+
+.customRow_FZwK71 {
+    border-top: 1px solid var(--border-subtle);
+    margin-top: var(--space-4);
+    padding-top: var(--space-12)
+}
+
+.customChevron_FZwK71 {
+    font-size: 10px;
+    line-height: 1;
+    margin-inline-start: var(--space-8)
+}
+
+.customPanel_FZwK71 {
+    flex: 0 0 auto;
+    opacity: 0;
+    width: 0
+}
+
+.full-motion .customPanel_FZwK71 {
+    transition: width .22s ease, opacity .18s ease
+}
+
+.popoutExpanded_FZwK71 .customPanel_FZwK71 {
+    opacity: 1;
+    width: 280px
+}
+
+.customInner_FZwK71 {
+    box-sizing: border-box;
+    gap: var(--space-12);
+    padding: var(--space-8) var(--space-12);
+    width: 280px
+}
+
+.customInner_FZwK71,
+.fieldBlock_FZwK71 {
+    display: flex;
+    flex-direction: column
+}
+
+.fieldBlock_FZwK71 {
+    gap: var(--space-4)
+}
+
+.fieldLabel_FZwK71 {
+    letter-spacing: .04em;
+    text-transform: none
+}
+
+.fieldRow_FZwK71 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.fieldRow_FZwK71>:first-child {
+    flex: 0 0 180px
+}
+
+.customFooter_FZwK71 {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--space-4) var(--space-12) var(--space-8)
+}
+
+/*# sourceMappingURL=d2e9552b02e3eb09.css.map*/

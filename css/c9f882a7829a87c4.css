@@ -123,6 +123,13 @@
     background: var(--background-feedback-mod-critical)
 }
 
+.streamerModeBanner_6Ln5ei {
+    --custom-global-banner-start-start-radius: var(--radius-sm);
+    align-self: stretch;
+    border-radius: var(--radius-sm);
+    overflow: hidden
+}
+
 .streamerModeNotice_6Ln5ei {
     align-self: stretch;
     border: none;
@@ -137,33 +144,4 @@
     vertical-align: baseline
 }
 
-.pro_xW8MJW {
-    text-transform: none
-}
-
-.tip_xW8MJW {
-    line-height: 16px;
-    opacity: 1
-}
-
-.block_xW8MJW .pro_xW8MJW,
-.block_xW8MJW .tip_xW8MJW,
-.tip_xW8MJW {
-    font-size: 14px
-}
-
-.inline_xW8MJW .pro_xW8MJW,
-.inline_xW8MJW .tip_xW8MJW {
-    display: inline;
-    font-size: 12px
-}
-
-.inline_xW8MJW .pro_xW8MJW {
-    margin-inline-end: 3px
-}
-
-.enable-forced-colors .tip_xW8MJW {
-    opacity: 1
-}
-
-/*# sourceMappingURL=587308.7241ede0566f6d72.css.map*/
+/*# sourceMappingURL=c9f882a7829a87c4.css.map*/

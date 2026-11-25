@@ -384,6 +384,13 @@
     padding-inline: 28px
 }
 
+.nagbarBannerSlot_H11xQD {
+    --custom-global-banner-start-border-width: 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 101
+}
+
 .nagbarActionContainer_H11xQD {
     display: inline-block
 }
@@ -396,4 +403,4 @@
     width: 22px
 }
 
-/*# sourceMappingURL=81acee5178bf5efb.css.map*/
+/*# sourceMappingURL=87d44ddd623ba00d.css.map*/

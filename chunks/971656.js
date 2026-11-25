@@ -20,4 +20,5 @@ Q.exports = {
     NS: "connectionDeprecationNoticeCTAButton_2zQQDh",
     go: "connectionDeprecationRemindLaterButton_2zQQDh",
     Y5: "connectionDeprecationNoticeIcon_2zQQDh",
+    JE: "bannerRow_2zQQDh",
 };

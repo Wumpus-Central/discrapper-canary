@@ -76,22 +76,22 @@
 }
 
 .motion_n-yNGx {
-    --custom-global-banner-spring-soft: cubic-bezier(0.23, 0.14, 0.21, 1.14);
     --custom-global-banner-spring-smooth: linear(0, 0.041 5%, 0.198 13%, 0.543 29%, 0.715 40%, 0.845 53%, 0.933 70%, 1);
     container: global-banner/inline-size;
     display: grid;
     grid-template-rows: 1fr;
     overflow: clip;
-    transition: grid-template-rows .6s var(--custom-global-banner-spring-soft);
+    transition: grid-template-rows .6s var(--custom-global-banner-spring-smooth), border-start-start-radius .6s step-end;
     width: 100%;
 
     @starting-style {
+        border-start-start-radius: var(--custom-global-banner-start-start-radius, 0);
         grid-template-rows: 0fr
     }
 }
 
 .motion_n-yNGx .globalBanner_n-yNGx {
-    transition: translate .6s var(--custom-global-banner-spring-soft);
+    transition: translate .6s var(--custom-global-banner-spring-smooth);
 
     @starting-style {
         translate: 0 -100%
@@ -103,6 +103,7 @@
 }
 
 .exiting_n-yNGx {
+    border-start-start-radius: var(--custom-global-banner-start-start-radius, 0);
     grid-template-rows: 0fr;
     pointer-events: none;
     transition: grid-template-rows .4s var(--custom-global-banner-spring-smooth)
@@ -129,9 +130,10 @@
 .globalBanner_n-yNGx {
     --custom-global-banner-first-row: max(var(--space-32), 1lh);
     background: var(--custom-global-banner-background);
+    background-origin: border-box;
     border-block-start: 1px solid var(--border-subtle);
-    border-inline-start: 1px solid var(--border-subtle);
-    border-start-start-radius: var(--radius-md);
+    border-inline-start: var(--custom-global-banner-start-border-width, 1px) solid var(--border-subtle);
+    border-start-start-radius: var(--custom-global-banner-start-start-radius, 0);
     box-sizing: border-box;
     color: var(--custom-global-banner-text);
     min-height: var(--space-48);
@@ -210,6 +212,16 @@
     margin-inline-end: var(--space-8)
 }
 
+.selectableContent_n-yNGx {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.link_n-yNGx {
+    margin-inline-start: var(--space-8)
+}
+
 .actions_n-yNGx {
     gap: var(--space-8)
 }
@@ -257,28 +269,18 @@
 }
 
 .expressive_n-yNGx {
-    background: linear-gradient(var(--opacity-black-20), var(--opacity-black-20)), linear-gradient(to right, var(--brand-gradient-blurple), var(--brand-gradient-blurple-dark))
+    background-image: linear-gradient(var(--opacity-black-20), var(--opacity-black-20)), linear-gradient(to right, var(--brand-gradient-blurple), var(--brand-gradient-blurple-dark))
 }
 
 .nitro_n-yNGx {
     --custom-global-banner-text: var(--global-banner-nitro-text);
     --custom-global-banner-icon: var(--global-banner-nitro-icon);
     --custom-global-banner-nitro-middle-stop: 50%;
-    background: linear-gradient(to right, var(--global-banner-nitro-start), var(--global-banner-nitro-middle) var(--custom-global-banner-nitro-middle-stop), var(--global-banner-nitro-end))
+    background-image: linear-gradient(to right, var(--global-banner-nitro-start), var(--global-banner-nitro-middle) var(--custom-global-banner-nitro-middle-stop), var(--global-banner-nitro-end))
 }
 
 .theme-light .nitro_n-yNGx {
     --custom-global-banner-nitro-middle-stop: 51.9%
 }
 
-.backdrop_hnSB1X {
-    background: var(--background-brand);
-    border-radius: var(--radius-md);
-    padding: var(--space-16)
-}
-
-.label_hnSB1X {
-    color: var(--text-overlay-light)
-}
-
-/*# sourceMappingURL=c4308403cc97a7b4.css.map*/
+/*# sourceMappingURL=538208.68d4ec64606cf9df.css.map*/

@@ -1,0 +1,132 @@
+.combobox_YIHpnz {
+    height: 100%;
+    overflow: hidden;
+    padding: var(--space-8)
+}
+
+.header_YIHpnz {
+    padding-bottom: var(--space-8)
+}
+
+.list_YIHpnz {
+    height: 100%;
+    list-style: none;
+    margin-top: 8px
+}
+
+.list_YIHpnz.scroller_YIHpnz {
+    margin-block: 0 8px;
+    margin-inline: 8px 0
+}
+
+.item_YIHpnz {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 4px;
+    outline: none;
+    padding: 10px 8px
+}
+
+.focused_YIHpnz,
+.item_YIHpnz:hover:not(.disabled_YIHpnz) {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.itemLabel_YIHpnz {
+    width: 100%
+}
+
+.itemCheckbox_YIHpnz~.itemLabel_YIHpnz {
+    margin-inline-start: 8px
+}
+
+.empty_YIHpnz {
+    display: grid;
+    padding: 20px;
+    text-align: center;
+    grid-gap: 12px
+}
+
+.disabled_YIHpnz {
+    cursor: not-allowed;
+    opacity: .3
+}
+
+.selected_YIHpnz {
+    background-color: var(--interactive-background-selected)
+}
+
+.selectedBrand_YIHpnz {
+    background: var(--brand-500);
+    color: var(--white)
+}
+
+.selectedBrand_YIHpnz.focused_YIHpnz,
+.selectedBrand_YIHpnz:hover {
+    background: var(--brand-600);
+    color: var(--white)
+}
+
+.searchWithScrollbar_YIHpnz {
+    margin: 8px
+}
+
+.enable-forced-colors .item_YIHpnz {
+    border: 1px solid Canvas
+}
+
+.enable-forced-colors .disabled_YIHpnz {
+    color: GrayText;
+    opacity: 1
+}
+
+.enable-forced-colors .disabled_YIHpnz.focused_YIHpnz {
+    border-color: GrayText
+}
+
+.enable-forced-colors .focused_YIHpnz:not(.disabled_YIHpnz),
+.enable-forced-colors .item_YIHpnz:hover:not(.disabled_YIHpnz) {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .selected_YIHpnz:not(.disabled_YIHpnz) {
+    background-color: HighlightText;
+    color: Highlight
+}
+
+.enable-forced-colors .selected_YIHpnz:not(.disabled_YIHpnz).focused_YIHpnz,
+.enable-forced-colors .selected_YIHpnz:not(.disabled_YIHpnz):hover {
+    border-color: Highlight
+}
+
+.container_aQ9i70 {
+    background-color: var(--modal-background);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 8px;
+    width: 250px
+}
+
+.scroller_aQ9i70 {
+    padding: 0
+}
+
+.list_aQ9i70 {
+    height: 280px;
+    padding: 8px 0
+}
+
+.refresh-fast-follow-distinct-borders .container_aQ9i70 {
+    border-color: var(--app-frame-border)
+}
+
+/*# sourceMappingURL=c029ec89227aea5a.css.map*/

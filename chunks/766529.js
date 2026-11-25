@@ -755,8 +755,9 @@ function eW(e) {
                             n.e(865257),
                             n.e(228767),
                             n.e(323079),
-                            n.e(437655),
-                            n.e(626501),
+                            n.e(906887),
+                            n.e(351598),
+                            n.e(818499),
                             n.e(116145),
                             n.e(970846),
                             n.e(795807),
@@ -1079,7 +1080,7 @@ function e8(e) {
         children: (e) => a(e),
     });
 }
-function e6(e) {
+function e9(e) {
     let { disabled: t, ...n } = e,
         i = d.useRef(null);
     return (0, l.jsx)(e8, {
@@ -1104,7 +1105,7 @@ function e6(e) {
             }),
     });
 }
-function e9(e) {
+function e6(e) {
     let t = d.useRef(null);
     return (0, l.jsx)(e8, {
         targetElementRef: t,
@@ -1152,7 +1153,7 @@ function tt(e) {
     return (0, l.jsxs)("div", {
         className: i ? te.O : te.k,
         children: [
-            i && (0, l.jsx)(e9, { widget: t, widgetType: t.type }),
+            i && (0, l.jsx)(e6, { widget: t, widgetType: t.type }),
             (0, l.jsx)(h.E, { variant: "body-xs/normal", color: "text-subtle", children: a }),
         ],
     });
@@ -1550,7 +1551,7 @@ function tP(e) {
             u && !h
                 ? [
                       (0, l.jsx)(
-                          e6,
+                          e9,
                           { disabled: f, widgetType: t.type, widget: t, onAddGame: () => r(!0) },
                           `${t.type}-browse-games-popout`,
                       ),

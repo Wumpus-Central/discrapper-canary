@@ -13,6 +13,8 @@ t.r(
         leadingAccessory: "leadingAccessory_n-yNGx",
         message: "message_n-yNGx",
         title: "title_n-yNGx",
+        selectableContent: "selectableContent_n-yNGx",
+        link: "link_n-yNGx",
         promotion: "promotion_n-yNGx",
         status: "status_n-yNGx",
         critical: "critical_n-yNGx",

@@ -1,0 +1,8 @@
+.slot_RIzAT- {
+    --custom-global-banner-start-start-radius: var(--radius-md);
+    grid-area: notice;
+    position: relative;
+    z-index: 101
+}
+
+/*# sourceMappingURL=2e1b90eb59dc3236.css.map*/

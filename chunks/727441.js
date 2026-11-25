@@ -140,8 +140,8 @@ function P(e) {
 }
 let h = "__default__";
 var v = n(792996),
-    L = n(771207);
-function D(e) {
+    D = n(771207);
+function L(e) {
     let { label: t, value: n, disabled: l } = e;
     return { id: n, value: n, label: t, disabled: l };
 }
@@ -195,7 +195,7 @@ function U(e) {
     let N = b.length >= 1,
         T = [{ label: "Default", value: h }, ...b.map((e) => ({ label: e.label, value: e.id }))];
     return (0, d.jsx)("div", {
-        className: L.k,
+        className: D.k,
         children: (0, d.jsxs)(I.B, {
             gap: 16,
             children: [
@@ -211,7 +211,7 @@ function U(e) {
                                 (null == t ? l.delete(n) : l.set(n, t), R.setState({ userStateByKind: l }));
                             })(l, e === h ? null : e),
                         options: T,
-                        formatOption: D,
+                        formatOption: L,
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
@@ -223,7 +223,7 @@ function U(e) {
                         return ((t = e === h ? null : e), void R.setState({ localeOverride: t }));
                     },
                     options: m,
-                    formatOption: D,
+                    formatOption: L,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -243,8 +243,8 @@ function k(e, t) {
     return e === P(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
 }
 var W = n(117513);
-let V = "playground-announcement-modal",
-    j = m.default.fromTimestamp(Date.UTC(2016, 0, 1)),
+let j = "playground-announcement-modal",
+    V = m.default.fromTimestamp(Date.UTC(2016, 0, 1)),
     K = {
         name: "Announcement Modal",
         id: "announcement-modal",
@@ -291,7 +291,7 @@ let V = "playground-announcement-modal",
                                                 : (l?.button?.giftModalDestination ?? p.We.UNSPECIFIED),
                                     },
                                 }),
-                                B(V, {
+                                B(j, {
                                     oneofKind: "announcementModalVariant1",
                                     announcementModalVariant1: null != l ? { ...l, ...a } : u.ih.create(a),
                                 }));
@@ -308,7 +308,7 @@ let V = "playground-announcement-modal",
                                     n.e(375724),
                                     n.e(999272),
                                     n.e(77413),
-                                    n.e(474750),
+                                    n.e(521332),
                                     n.e(267526),
                                     n.e(441674),
                                     n.e(669174),
@@ -371,8 +371,8 @@ let V = "playground-announcement-modal",
                                 return (t) =>
                                     (0, d.jsx)(e, {
                                         renderModalProps: t,
-                                        componentId: V,
-                                        promotionId: j,
+                                        componentId: j,
+                                        promotionId: V,
                                         properties: r,
                                     });
                             },
@@ -773,8 +773,8 @@ var eC = n(754804);
 let eP = "playground-nagbar",
     eh = m.default.fromTimestamp(Date.UTC(2016, 0, 1));
 var ev = n(834730),
-    eL = n(709870),
-    eD = n(37126),
+    eD = n(709870),
+    eL = n(37126),
     eU = n(297204);
 let eG =
         "https://cdn.discordapp.com/assets/content/ce3500be6abe18b64c923af6d520c74cc915387831c4cdd5e4240d175417a87a.svg",
@@ -835,8 +835,8 @@ let eG =
     eF = "playground-plan-select-card-banner";
 var ek = n(964661),
     eW = n(503698),
-    eV = n.n(eW),
-    ej = n(612324),
+    ej = n.n(eW),
+    eV = n(612324),
     eK = n(403581),
     ew = n(214947),
     eH = n(34188),
@@ -848,11 +848,11 @@ function eX() {}
 function eZ(e) {
     let { icon: t, label: n, selected: l = !1, decoration: o, showHoverGradient: a = !1, ref: r } = e,
         { width: i, ref: s } = (0, e$.Ay)(),
-        u = (0, ej.A)(r, s);
+        u = (0, eV.A)(r, s);
     return (0, d.jsxs)("button", {
         ref: u,
         type: "button",
-        className: eV()(eq.pc, { [eq.EV]: l }),
+        className: ej()(eq.pc, { [eq.EV]: l }),
         onClick: eX,
         children: [
             a && (0, d.jsx)(eY.ls, { eventTargetRef: s, isNitro: !0, contentWidth: i }),
@@ -1029,9 +1029,9 @@ let e2 = "playground-premium-tab-popover",
         },
     };
 var e6 = n(796878);
-let e7 = "playground-premium-tab-tooltip";
+let e3 = "playground-premium-tab-tooltip";
 n(321073);
-var e3 = n(896170),
+var e7 = n(896170),
     e8 = n(890497),
     e9 = n(620632);
 let e5 = [
@@ -1144,7 +1144,7 @@ let ta = {
                                     }),
                                     (0, d.jsx)(c.$, {
                                         text: "Open Orbs delivered modal",
-                                        onClick: () => (0, eL.$)({ orbsAmount: t }),
+                                        onClick: () => (0, eD.$)({ orbsAmount: t }),
                                     }),
                                 ],
                             });
@@ -1168,7 +1168,7 @@ let ta = {
                                         children:
                                             "The \u201CYour free Shop item is ready for you\u201D reward modal. Open it to preview.",
                                     }),
-                                    (0, d.jsx)(c.$, { text: "Open Shop reward modal", onClick: () => (0, eD.tu)() }),
+                                    (0, d.jsx)(c.$, { text: "Open Shop reward modal", onClick: () => (0, eL.tu)() }),
                                 ],
                             });
                         },
@@ -1279,11 +1279,11 @@ let ta = {
                                         body: t.body,
                                         asset: k(t.assetUrl, u?.asset),
                                     }),
-                                    (l = B(e7, {
+                                    (l = B(e3, {
                                         oneofKind: "premiumTabTooltip",
                                         premiumTabTooltip: null != u ? { ...u, ...n } : n,
                                     })),
-                                    F(e7, s.oW.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", l)),
+                                    F(e3, s.oW.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", l)),
                                 ),
                                 (0, d.jsx)(eJ, { selected: !0, wrapNitroRow: (e) => (0, d.jsx)(e6.A, { children: e }) })
                             );
@@ -1867,7 +1867,7 @@ let ta = {
                     );
                 }, []);
                 let o = a.useMemo(() => e4(t), [t]),
-                    r = a.useCallback((e, n) => e4((0, e3.Ht)(t, n, { keys: ["name"] })), [t]);
+                    r = a.useCallback((e, n) => e4((0, e7.Ht)(t, n, { keys: ["name"] })), [t]);
                 return 0 === t.length
                     ? null
                     : (0, d.jsx)("div", {
