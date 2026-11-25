@@ -160,8 +160,14 @@
     align-items: center;
     display: flex;
     gap: var(--space-4);
+    max-width: 100%;
+    overflow: hidden;
     position: relative;
     z-index: 1
+}
+
+.detailContent_Tek8Yo>* {
+    min-width: 0
 }
 
 @media (max-width:960px) {
@@ -178,4 +184,4 @@
     min-width: 320px
 }
 
-/*# sourceMappingURL=8aacee8318223abe.css.map*/
+/*# sourceMappingURL=fe8563d4d9c365a3.css.map*/

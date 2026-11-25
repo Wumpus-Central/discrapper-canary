@@ -86,7 +86,10 @@ function E(e) {
     return D
         ? (0, i.jsxs)("div", {
               className: M ? _.rV : _.KQ,
-              children: [(0, i.jsx)(g.a, { price: V, variant: "body-md/medium", className: M ? _.ug : void 0 }), w],
+              children: [
+                  (0, i.jsx)(g.a, { price: V, variant: c ?? "body-md/medium", className: M ? _.ug : void 0 }),
+                  w,
+              ],
           })
         : w;
 }
