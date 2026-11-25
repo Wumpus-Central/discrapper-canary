@@ -2,10 +2,11 @@ var e = n(477900),
     a = n(582128),
     i = n(503698),
     o = n.n(i),
-    r = n(834730),
-    s = n(683063);
+    r = n(140735),
+    s = n(834730),
+    u = n(683063);
 n(851883);
-var u = n(607013);
+var c = n(607013);
 n.d(
     l,
     {},
@@ -15,49 +16,49 @@ n.d(
                     text: l,
                     tooltipText: n,
                     textVariant: i = "body-xs/medium",
-                    textClassName: c,
-                    "aria-label": p,
-                    icon: d,
-                    canTruncate: A = !0,
-                    hideTooltip: m = !1,
-                    hideText: x = !1,
+                    textClassName: p,
+                    "aria-label": d,
+                    icon: A,
+                    canTruncate: m = !0,
+                    hideTooltip: x = !1,
+                    hideText: I = !1,
                 } = t,
-                I = a.useRef(null),
-                [T, S] = a.useState(!1),
-                N = { variant: i, color: "none", className: o()(A && u.ps, c) },
-                f = null != l && null == n && A,
-                y = !m && (null != n || f || x),
-                h = n ?? l ?? "",
-                E = i?.startsWith("body-sm") ? u.WV : u.Dk,
-                v = a.useCallback(() => {
-                    if (f) {
-                        let { current: t } = I;
-                        S((null != t && t.offsetWidth < t.scrollWidth) || x);
-                    } else S(!0);
-                }, [f, x]),
+                T = a.useRef(null),
+                [S, N] = a.useState(!1),
+                f = { variant: i, color: "none", className: o()(m && c.ps, p) },
+                h = null != l && null == n && m,
+                y = !x && (null != n || h || I),
+                E = n ?? l ?? "",
+                v = i?.startsWith("body-sm") ? c.WV : c.Dk,
+                j = a.useCallback(() => {
+                    if (h) {
+                        let { current: t } = T;
+                        N((null != t && t.offsetWidth < t.scrollWidth) || I);
+                    } else N(!0);
+                }, [h, I]),
                 C = a.useCallback(() => {
-                    S(!1);
+                    N(!1);
                 }, []);
-            return null == d && x
+            return null == A && I
                 ? null
                 : y
-                  ? (0, e.jsx)(s.u, {
-                        body: h,
-                        asset: d,
+                  ? (0, e.jsx)(u.u, {
+                        body: E,
+                        asset: A,
                         assetSize: 16,
                         delay: 150,
-                        shouldShow: T,
+                        shouldShow: S,
                         children: (0, e.jsxs)("div", {
-                            className: o()(u.kL, u.O1, E),
-                            "aria-label": p,
-                            onMouseEnter: v,
+                            className: o()(c.kL, c.O1, v),
+                            "aria-label": d,
+                            onMouseEnter: j,
                             onMouseLeave: C,
-                            children: [d, !x && (0, e.jsx)(r.E, { ref: I, ...N, children: l })],
+                            children: [A, !I && (0, e.jsx)(s.E, { ref: T, ...f, children: l })],
                         }),
                     })
                   : (0, e.jsxs)("div", {
-                        className: o()(u.kL, u.O1, E),
-                        children: [d, !x && (0, e.jsx)(r.E, { ...N, children: l })],
+                        className: o()(c.kL, c.O1, v),
+                        children: [A, I ? (0, e.jsx)(r.A, { children: d }) : (0, e.jsx)(s.E, { ...f, children: l })],
                     });
         },
     },

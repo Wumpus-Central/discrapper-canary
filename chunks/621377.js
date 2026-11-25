@@ -541,7 +541,7 @@ function eQ(e) {
                                             action: () => {
                                                 (0, eR.mM)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e(426782),
+                                                        n.e(978898),
                                                         n.e(538855),
                                                         n.e(464759),
                                                         n.e(942571),
@@ -588,7 +588,8 @@ function eQ(e) {
                                                         n.e(716541),
                                                         n.e(906470),
                                                         n.e(736663),
-                                                        n.e(846900),
+                                                        n.e(730931),
+                                                        n.e(361243),
                                                         n.e(291103),
                                                         n.e(419121),
                                                         n.e(121046),
@@ -610,7 +611,6 @@ function eQ(e) {
                                                         n.e(84194),
                                                         n.e(485480),
                                                         n.e(641877),
-                                                        n.e(126301),
                                                         n.e(866212),
                                                         n.e(535308),
                                                         n.e(762309),
@@ -727,7 +727,6 @@ function eQ(e) {
                                                         n.e(952548),
                                                         n.e(577084),
                                                         n.e(826240),
-                                                        n.e(124006),
                                                         n.e(455924),
                                                         n.e(294067),
                                                         n.e(523276),
@@ -974,14 +973,14 @@ function e1(e) {
         })
     );
 }
-var e2 = n(34188),
-    e8 = n(700623),
+var e8 = n(34188),
+    e2 = n(700623),
     e4 = n(177953),
     e7 = n(825484),
-    e6 = n(683071),
-    e3 = n(900797),
-    e9 = n(847374),
-    e5 = n(10716),
+    e3 = n(683071),
+    e9 = n(900797),
+    e5 = n(847374),
+    e6 = n(10716),
     te = n(164636),
     tt = n(150934),
     tn = n(95477),
@@ -995,11 +994,11 @@ function ta(e) {
             useActivityUrlOverride: i,
             filter: s,
         } = (0, te.cf)(
-            [e5.A],
+            [e6.A],
             () => ({
-                activityUrlOverride: e5.A.getActivityUrlOverride(),
-                useActivityUrlOverride: e5.A.getUseActivityUrlOverride(),
-                filter: e5.A.getFilter(),
+                activityUrlOverride: e6.A.getActivityUrlOverride(),
+                useActivityUrlOverride: e6.A.getUseActivityUrlOverride(),
+                filter: e6.A.getFilter(),
             }),
             [],
         );
@@ -1161,7 +1160,7 @@ var tI = n(576917),
 function tj(e) {
     let { context: t, application: n, videoUrl: l, imageCoverUrl: i, sectionName: s, hasCommands: a } = e,
         c = o.useMemo(() => (0, I.u8)(n) ?? "", [n]),
-        d = (0, A.bG)([e5.A], () => e5.A.inDevModeForApplication(n.id)),
+        d = (0, A.bG)([e6.A], () => e6.A.inDevModeForApplication(n.id)),
         { isSlideReady: u } = (0, h.uM)(),
         [m, p] = o.useState(!1);
     o.useEffect(() => {
@@ -1234,7 +1233,7 @@ function tv(e) {
                       ? (0, r.jsxs)("div", {
                             className: tI.wi,
                             children: [
-                                (0, r.jsx)(e2.ShopIcon, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e8.ShopIcon, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(b.E, {
                                     variant: "body-sm/normal",
                                     color: "text-subtle",
@@ -1247,7 +1246,7 @@ function tv(e) {
                       ? (0, r.jsxs)("div", {
                             className: tI.wi,
                             children: [
-                                (0, r.jsx)(e8.BillIcon, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.BillIcon, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(b.E, {
                                     variant: "body-sm/normal",
                                     color: "text-subtle",
@@ -1361,7 +1360,7 @@ function tT(e) {
             : s && !i && (0, I.Z$)(n)
               ? (0, r.jsx)("div", {
                     className: tI.ai,
-                    children: (0, r.jsx)(e6.w, {
+                    children: (0, r.jsx)(e3.w, {
                         type: "warning",
                         message: et.intl.format(et.t["s/3hjE"], {}),
                         role: "none",
@@ -1427,8 +1426,8 @@ function tL(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e3.ChevronSmallUpIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e9.ChevronSmallDownIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e9.ChevronSmallUpIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e5.ChevronSmallDownIcon, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1518,10 +1517,10 @@ var tU = n(724002),
 function tK() {
     let e = (0, tX.z)(),
         t = eK.Q_.getSetting(),
-        n = (0, A.bG)([e5.A], () => e5.A.getFetchState(), []);
+        n = (0, A.bG)([e6.A], () => e6.A.getFetchState(), []);
     return (
         o.useEffect(() => {
-            e && t && n === e5.$.INITIALIZED && (0, tz.S)();
+            e && t && n === e6.$.INITIALIZED && (0, tz.S)();
         }, [e, n, t]),
         null
     );
@@ -1533,14 +1532,14 @@ var tY = n(111042),
     tJ = n(179771),
     t0 = n(168186),
     t1 = n(594061),
-    t2 = n(661191),
-    t8 = n(630248),
+    t8 = n(661191),
+    t2 = n(630248),
     t4 = n(355097);
 function t7(e, t) {
     o.useEffect(() => {
         t1.bW.loadIfUncached(t4.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t8.A], () => t8.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t2.A], () => t2.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1551,7 +1550,7 @@ function t7(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             (i?.forEach((e) => {
-                let t = t2.default.extractTimestamp(e.id);
+                let t = t8.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute());
@@ -1569,7 +1568,7 @@ function t7(e, t) {
     return o.useMemo(() => {
         let e, i;
         (t?.forEach((t) => {
-            let n = t2.default.extractTimestamp(t.id);
+            let n = t8.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1582,10 +1581,10 @@ function t7(e, t) {
         return [...r, ...o];
     }, [s, l, n, t]);
 }
-var t6 = n(785728),
-    t3 = n(712440),
-    t9 = n(733110),
-    t5 = n(73153);
+var t3 = n(785728),
+    t9 = n(712440),
+    t5 = n(733110),
+    t6 = n(73153);
 let ne = 10 * K.A.Millis.MINUTE,
     nt = { lastUsedCommandId: null, lastUsedTimeMs: null };
 class nn extends A.Ay.PersistedStore {
@@ -1605,7 +1604,7 @@ class nn extends A.Ay.PersistedStore {
               nt.lastUsedCommandId);
     }
 }
-new nn(t5.h, {
+new nn(t6.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
         ((nt.lastUsedCommandId = t.id), (nt.lastUsedTimeMs = Date.now()));
@@ -2002,7 +2001,7 @@ function nG(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t2.default.extractTimestamp(n);
+                        return -t8.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2221,13 +2220,13 @@ function n0(e) {
         });
     }));
 var n1 = n(984516),
-    n2 = n(935573),
-    n8 = n(651753),
+    n8 = n(935573),
+    n2 = n(651753),
     n4 = n(485845),
     n7 = n(994369),
-    n6 = n(240591),
-    n3 = n(46477);
-function n9(e, t) {
+    n3 = n(240591),
+    n9 = n(46477);
+function n5(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2277,9 +2276,9 @@ function n9(e, t) {
         i,
     ).slice(0, i);
 }
-function n5(e, t) {
-    let n = t8.A.getScoreWithoutLoadingLatest(e.id);
-    return t8.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n6(e, t) {
+    let n = t2.A.getScoreWithoutLoadingLatest(e.id);
+    return t2.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function le(e, t) {
     let n = (0, I.lq)(e),
@@ -2483,7 +2482,7 @@ function lA(e) {
                             includeNonEmbeddedApps: a,
                         } = e,
                         r = "channel" === t.type ? t.channel : void 0,
-                        c = (0, n6.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
+                        c = (0, n3.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
                         d = (0, g.SD)(t, c, i),
                         u = (0, g.A4)(c, i),
                         m = o.useCallback(
@@ -2525,10 +2524,10 @@ function lA(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n9(c, {
+                    return n5(c, {
                         limit: l,
                         filterPredicates: [
-                            ((m = (0, n6.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
+                            ((m = (0, n3.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
                             (p = {}),
                             (e) => {
                                 let { context: n, userId: l, roleIds: i, isImpersonating: s } = m;
@@ -2538,8 +2537,8 @@ function lA(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n3.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n3._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n9.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n9._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2556,13 +2555,13 @@ function lA(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n3.zl(e, m, {
+                                    n9.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n3.CA.ALLOWED
+                                    }) === n9.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2662,10 +2661,10 @@ function lA(e) {
                                     }),
                             ));
                     } else a && (u = m);
-                    return n9(u, {
+                    return n5(u, {
                         limit: i,
                         filterPredicates: [
-                            ((d = (0, n6.Bh)("channel" === t.type ? t.channel : void 0, [
+                            ((d = (0, n3.Bh)("channel" === t.type ? t.channel : void 0, [
                                 M.kc.CHAT,
                                 M.kc.PRIMARY_ENTRY_POINT,
                             ])),
@@ -2677,20 +2676,20 @@ function lA(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n3.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n3._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n9.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n9._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n3.zl(e, d, {
+                                            n9.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n3.CA.ALLOWED,
+                                            }) === n9.CA.ALLOWED,
                                     )
                                 );
                             }),
@@ -2709,7 +2708,7 @@ function lA(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n5, le],
+                        sortComparers: [n6, le],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -2736,9 +2735,9 @@ function lA(e) {
                 u = o.useRef(c);
             u.current = c;
             let { fetchState: m, totalPages: p } = (0, A.cf)(
-                    [n8.A],
+                    [n2.A],
                     () => ({
-                        fetchState: n8.A.getFetchState({
+                        fetchState: n2.A.getFetchState({
                             query: n,
                             guildId: r,
                             page: c,
@@ -2750,7 +2749,7 @@ function lA(e) {
                             source: n7.V.APP_LAUNCHER,
                         }),
                         totalPages:
-                            n8.A.getSearchResults({
+                            n2.A.getSearchResults({
                                 query: n,
                                 guildId: r,
                                 page: c,
@@ -2767,9 +2766,9 @@ function lA(e) {
                 h = o.useMemo(
                     () =>
                         Array.from(
-                            { length: m === n8.e.FETCHED || m === n8.e.ERROR ? c : c - 1 },
+                            { length: m === n2.e.FETCHED || m === n2.e.ERROR ? c : c - 1 },
                             (e, t) =>
-                                n8.A.getSearchResults({
+                                n2.A.getSearchResults({
                                     query: n,
                                     guildId: r,
                                     page: t + 1,
@@ -2785,7 +2784,7 @@ function lA(e) {
                 ),
                 f = o.useCallback(() => {
                     let e = h.length;
-                    m === n8.e.FETCHED &&
+                    m === n2.e.FETCHED &&
                         e === u.current &&
                         e > 0 &&
                         e < p &&
@@ -2823,9 +2822,9 @@ function lA(e) {
             );
         })({ query: n, context: t, fetches: !0, pageLimit: 5, entrypoint: l });
     o.useEffect(() => {
-        i && h === n8.e.FETCHED && x();
+        i && h === n2.e.FETCHED && x();
     }, [x, h, i]);
-    let N = null == h || h === n8.e.FETCHING,
+    let N = null == h || h === n2.e.FETCHING,
         E = o.useMemo(() => {
             let e = p.map((e) => ({ application: e, installOnDemand: !0 })),
                 t = new Set(
@@ -2836,7 +2835,7 @@ function lA(e) {
                 ),
                 n = eE().compact(
                     f.map((e) =>
-                        e.type === n2.j.CONNECTION || t.has(e.data.id)
+                        e.type === n8.j.CONNECTION || t.has(e.data.id)
                             ? null
                             : { application: e.data, installOnDemand: !0 },
                     ),
@@ -3052,7 +3051,7 @@ let l_ = [],
     lj = tw.K.APP_LAUNCHER_IN_TEXT;
 function lv(e) {
     let { context: t, entrypoint: n, searchQuery: l, setSearchQuery: i, setScroller: s, isScrollCloseToBottom: a } = e,
-        c = (0, A.bG)([e5.A], () => e5.A.getIsEnabled(), []),
+        c = (0, A.bG)([e6.A], () => e6.A.getIsEnabled(), []),
         d = n === _.s4.TEXT && "channel" === t.type && null != t.channel && !t.channel.isPrivate(),
         u = (0, I.sw)(n),
         m = !(0, I.sw)(n),
@@ -3194,13 +3193,13 @@ function lb(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t9.A], () => t9.A.getFetchState());
+                        s = (0, A.bG)([t5.A], () => t5.A.getFetchState());
                     o.useEffect(() => {
-                        i && s === t9.FetchState.NOT_FETCHED && t3.A.fetch();
+                        i && s === t5.FetchState.NOT_FETCHED && t9.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t9.A], () =>
+                    let a = (0, A.yK)([t5.A], () =>
                             i
-                                ? t9.A.getNewestTokens().filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
+                                ? t5.A.getNewestTokens().filter((e) => e.scopes.includes(tJ.F.APPLICATIONS_COMMANDS))
                                 : [],
                         ),
                         r = t.filter((e) => e.id !== ea.Ik.FRECENCY && e.id !== ea.Ik.BUILT_IN),
@@ -3213,7 +3212,7 @@ function lb(e) {
                         m = (0, A.bG)([eB.default], () => eB.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t6.A)(e.id));
+                            return !(!1 === m && (0, t3.A)(e.id));
                         }
                         return l
                             ? u
@@ -3410,7 +3409,7 @@ function lL(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t6.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t3.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

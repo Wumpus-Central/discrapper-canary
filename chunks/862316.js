@@ -367,19 +367,7 @@ function em(e) {
                         ? U.tEg
                         : (e) => {
                               (0, O.L3)(e, async () => {
-                                  let { default: e } = await Promise.all([
-                                      t.e(476662),
-                                      t.e(253044),
-                                      t.e(311913),
-                                      t.e(881717),
-                                      t.e(474172),
-                                      t.e(363269),
-                                      t.e(489218),
-                                      t.e(55348),
-                                      t.e(912875),
-                                      t.e(862782),
-                                      t.e(762529),
-                                  ]).then(t.bind(t, 740024));
+                                  let { default: e } = await t.e(762529).then(t.bind(t, 740024));
                                   return (t) =>
                                       (0, l.jsx)(e, {
                                           ...t,

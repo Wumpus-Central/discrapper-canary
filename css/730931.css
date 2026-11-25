@@ -1,3 +1,73 @@
+.doubleInput_IJurXJ {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    position: relative
+}
+
+.doubleInput_IJurXJ>div {
+    flex: 1 1 0;
+    width: 0
+}
+
+.doubleInput_IJurXJ>div:first-child {
+    margin-inline-end: 8px
+}
+
+.doubleInput_IJurXJ>div:nth-child(2) {
+    margin-inline-start: 8px
+}
+
+.blockedUsersContainer_LuOTYw {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.form_LuOTYw {
+    align-self: stretch
+}
+
+.formItem_LuOTYw {
+    margin-top: 24px;
+    width: 100%
+}
+
+.topicFormItem_LuOTYw {
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.cancelButton_LuOTYw {
+    margin-inline-end: 8px
+}
+
+.addImageHint_LuOTYw,
+.warning_LuOTYw {
+    margin-bottom: 8px
+}
+
+.imageField_LuOTYw {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.imagePreview_LuOTYw {
+    margin-bottom: 8px
+}
+
+.imagePreviewInner_LuOTYw {
+    width: 100%
+}
+
+.header_FGibn_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--space-16) 0
+}
+
 .copyInput_cZux1n {
     background-color: var(--input-background-default);
     border: 1px solid var(--input-border-default);
@@ -109,16 +179,4 @@
     color: var(--input-placeholder-text-default)
 }
 
-.orbsBackRewardBanner_qmS-12 {
-    align-items: center;
-    background: linear-gradient(90deg, #0e3864, #068ab9);
-    border-radius: var(--radius-sm);
-    display: flex;
-    gap: var(--space-6);
-    margin-inline: auto;
-    padding: var(--space-8) var(--space-16);
-    width: -moz-fit-content;
-    width: fit-content
-}
-
-/*# sourceMappingURL=846900.00c65be996be2cc3.css.map*/
+/*# sourceMappingURL=730931.aea5fd6e5e9f7624.css.map*/

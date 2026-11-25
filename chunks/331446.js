@@ -1,46 +1,46 @@
-var a = t(477900),
-    i = t(582128),
-    l = t(265872),
-    r = t(866665),
-    o = t(939249),
-    d = t(834730),
-    s = t(7834);
+var a = n(477900),
+    i = n(582128),
+    r = n(265872),
+    l = n(866665),
+    s = n(939249),
+    o = n(834730),
+    d = n(7834);
 let u = i.lazy(() =>
-    Promise.all([t.e(126301), t.e(201074), t.e(353604), t.e(124006), t.e(177104), t.e(446054)])
-        .then(t.bind(t, 680901))
+    Promise.all([n.e(353604), n.e(446054)])
+        .then(n.bind(n, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
-t.d(
-    n,
+n.d(
+    t,
     {},
     {
         w: function (e) {
-            let { participants: n, maxVisibleParticipants: t, overflowLabel: c, guildId: g, layerContext: f } = e,
-                m = i.useRef(null),
-                p = n.length - t,
-                b = (0, i.useCallback)(
-                    () => (0, a.jsx)(i.Suspense, { fallback: null, children: (0, a.jsx)(u, { users: n, guildId: g }) }),
-                    [n, g],
+            let { participants: t, maxVisibleParticipants: n, overflowLabel: c, guildId: f, layerContext: b } = e,
+                g = i.useRef(null),
+                p = t.length - n,
+                h = (0, i.useCallback)(
+                    () => (0, a.jsx)(i.Suspense, { fallback: null, children: (0, a.jsx)(u, { users: t, guildId: f }) }),
+                    [t, f],
                 );
-            return (0, a.jsx)(l.Y, {
-                renderPopout: b,
-                layerContext: f,
-                targetElementRef: m,
+            return (0, a.jsx)(r.Y, {
+                renderPopout: h,
+                layerContext: b,
+                targetElementRef: g,
                 position: "right",
                 children: (e) =>
-                    (0, a.jsx)(r.m, {
+                    (0, a.jsx)(l.m, {
                         text: c,
                         ariaHidden: !0,
-                        children: (0, a.jsx)(o.D, {
+                        children: (0, a.jsx)(s.D, {
                             ...e,
-                            innerRef: m,
-                            className: s.x,
+                            innerRef: g,
+                            className: d.x,
                             "aria-label": c,
-                            onClick: (n) => {
-                                (n.stopPropagation(), e.onClick?.(n));
+                            onClick: (t) => {
+                                (t.stopPropagation(), e.onClick?.(t));
                             },
-                            children: (0, a.jsxs)(d.E, {
-                                className: s.s,
+                            children: (0, a.jsxs)(o.E, {
+                                className: d.s,
                                 variant: "body-xs/medium",
                                 color: "interactive-text-default",
                                 children: ["+", p],

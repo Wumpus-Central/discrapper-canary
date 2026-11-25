@@ -176,8 +176,6 @@ let eo = a.memo(function (e) {
                                             let t = e.currentTarget;
                                             (0, et.L3)(e, async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e(476662),
-                                                    n.e(912875),
                                                     n.e(73500),
                                                     n.e(496715),
                                                     n.e(904774),
@@ -1757,8 +1755,6 @@ function n7(e) {
                       onContextMenu: function (e) {
                           (0, et.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  n.e(476662),
-                                  n.e(912875),
                                   n.e(73500),
                                   n.e(496715),
                                   n.e(904774),

@@ -1,0 +1,15 @@
+e.exports = {
+    nf: "link_-kuxsn",
+    Wh: "flexRow_-kuxsn",
+    ec: "flexColumn_-kuxsn",
+    N1: "headerContainer_-kuxsn",
+    wt: "detailsContainer_-kuxsn",
+    p9: "bodyTextSize_-kuxsn",
+    Mo: "ellipsisRow_-kuxsn",
+    QJ: "bodyLinkMuted_-kuxsn",
+    Sl: "image_-kuxsn",
+    Jq: "timeBar_-kuxsn",
+    wv: "activityClickable_-kuxsn",
+    DD: "title_-kuxsn",
+    XA: "activityImageClickable_-kuxsn",
+};

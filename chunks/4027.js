@@ -41,11 +41,9 @@ function O(e) {
                           let { default: e } = await Promise.all([
                               i.e(876400),
                               i.e(207998),
-                              i.e(126301),
                               i.e(880472),
                               i.e(25658),
                               i.e(577084),
-                              i.e(124006),
                               i.e(678195),
                               i.e(66580),
                               i.e(695067),
@@ -104,11 +102,9 @@ function f(e) {
                           let { default: e } = await Promise.all([
                               i.e(876400),
                               i.e(207998),
-                              i.e(126301),
                               i.e(880472),
                               i.e(25658),
                               i.e(577084),
-                              i.e(124006),
                               i.e(678195),
                               i.e(66580),
                               i.e(695067),

@@ -1,5 +1,5 @@
 (n.d(t, {
-    OAuth2AuthorizeModal: () => e8,
+    OAuth2AuthorizeModal: () => e7,
     k: () => e5,
     getOAuth2AuthorizeProps: () => tr,
     openOAuth2Modal: () => ti,
@@ -643,28 +643,47 @@ let e6 = (0, F.Fe)({
             n.e(188259),
             n.e(715867),
             n.e(249938),
-            n.e(266201),
-            n.e(752704),
-            n.e(56606),
+            n.e(213922),
+            n.e(476662),
+            n.e(253044),
+            n.e(311913),
+            n.e(799075),
+            n.e(501095),
+            n.e(977306),
+            n.e(589302),
+            n.e(847980),
+            n.e(957251),
+            n.e(306637),
             n.e(678749),
             n.e(327545),
             n.e(163466),
+            n.e(234017),
+            n.e(933373),
+            n.e(599618),
+            n.e(201074),
+            n.e(879641),
+            n.e(390430),
+            n.e(110425),
+            n.e(990185),
+            n.e(266201),
+            n.e(752704),
+            n.e(56606),
             n.e(520218),
             n.e(738015),
-            n.e(234017),
             n.e(629972),
             n.e(40791),
             n.e(358404),
             n.e(996907),
-            n.e(831130),
-            n.e(599618),
-            n.e(377989),
+            n.e(428197),
             n.e(232731),
-            n.e(587618),
+            n.e(759699),
+            n.e(474172),
+            n.e(363269),
             n.e(645499),
             n.e(438811),
             n.e(454048),
             n.e(508702),
+            n.e(188941),
             n.e(397270),
             n.e(300699),
             n.e(490028),
@@ -682,6 +701,7 @@ let e6 = (0, F.Fe)({
             n.e(253729),
             n.e(593600),
             n.e(879315),
+            n.e(234236),
             n.e(827708),
             n.e(266900),
             n.e(707826),
@@ -695,18 +715,27 @@ let e6 = (0, F.Fe)({
             n.e(672727),
             n.e(417286),
             n.e(463095),
+            n.e(190889),
             n.e(710911),
             n.e(27773),
             n.e(783988),
+            n.e(588940),
+            n.e(401827),
             n.e(511527),
             n.e(927211),
+            n.e(82367),
             n.e(717907),
+            n.e(757598),
             n.e(361626),
             n.e(646506),
+            n.e(61129),
             n.e(445124),
             n.e(76428),
             n.e(445421),
+            n.e(599141),
+            n.e(133179),
             n.e(832823),
+            n.e(776750),
             n.e(302008),
             n.e(761935),
             n.e(763070),
@@ -715,42 +744,53 @@ let e6 = (0, F.Fe)({
             n.e(502018),
             n.e(276863),
             n.e(128796),
+            n.e(530943),
             n.e(441432),
             n.e(728633),
+            n.e(344695),
+            n.e(173547),
+            n.e(35403),
             n.e(628439),
+            n.e(964320),
+            n.e(108634),
             n.e(570506),
             n.e(539620),
             n.e(225990),
+            n.e(466322),
             n.e(951811),
-            n.e(747829),
+            n.e(151016),
+            n.e(591591),
             n.e(787672),
-            n.e(522517),
-            n.e(909708),
+            n.e(555586),
+            n.e(55348),
             n.e(401590),
             n.e(213653),
             n.e(466354),
             n.e(349460),
+            n.e(991991),
             n.e(123353),
             n.e(967288),
             n.e(593176),
-            n.e(776750),
             n.e(76705),
             n.e(165595),
-            n.e(401827),
             n.e(494768),
+            n.e(489218),
             n.e(674783),
             n.e(489949),
+            n.e(912875),
             n.e(695881),
             n.e(858514),
             n.e(344265),
             n.e(621624),
             n.e(780262),
             n.e(637721),
+            n.e(332470),
+            n.e(177104),
             n.e(486309),
             n.e(603341),
             n.e(54953),
             n.e(456003),
-            n.e(547646),
+            n.e(466944),
             n.e(288004),
             n.e(231578),
             n.e(288705),
@@ -852,7 +892,7 @@ function e5() {
     }
     return (0, i.jsx)(eZ.$, {
         removeChildWrapper: !0,
-        children: (0, i.jsx)(e8, {
+        children: (0, i.jsx)(e7, {
             transitionState: I.i.ENTERED,
             ...t,
             showLogout: !0,
@@ -861,7 +901,7 @@ function e5() {
         }),
     });
 }
-function e8(e) {
+function e7(e) {
     let {
             label: t,
             title: n,
@@ -903,7 +943,7 @@ function e8(e) {
         children: (0, i.jsx)(W.A, { className: e3.dx, obscured: !0 === A, children: f }),
     });
 }
-function e7(e) {
+function e4(e) {
     let { clientId: t, platformType: n, platformName: a } = e,
         s = (0, f.bG)([U.A], () => U.A.getApplication(t), [t]),
         l = (0, f.bG)([$.default, z.default], () => (null != $.default.getId() ? z.default.getCurrentUser() : null)),
@@ -970,7 +1010,7 @@ function e7(e) {
         })
     );
 }
-function e4(e) {
+function e8(e) {
     let { platformType: t, platformName: n, connectedAccount: r, applicationName: a } = e,
         s = (0, D.Ay)(),
         l = b.A.get(t),
@@ -1083,7 +1123,7 @@ function te(e) {
         }, [eq?.scopes, D, e$]),
         e2 = r.useMemo(() => (e$ ? E.iu(eq?.permissions ?? 0) : P) ?? Q.x3, [eq?.permissions, P, e$]),
         e5 = r.useRef(!1),
-        [e8, te] = r.useState(ed ?? []),
+        [e7, te] = r.useState(ed ?? []),
         [tt, tn] = r.useState(null != ed && ed.length > 0);
     ((0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
@@ -1136,7 +1176,7 @@ function te(e) {
                         guildId: eY === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                         channelId: eY === u.b.GUILD_INSTALL && null != eP ? eP : void 0,
                     });
-                    if ((e && (await (0, w.Yx)(A, e8)), null != q))
+                    if ((e && (await (0, w.Yx)(A, e7)), null != q))
                         (q({ application: eI?.application, location: n.location, guild: eW, scopes: eQ, canceled: t }),
                             eo?.());
                     else if (null != n.location) {
@@ -1154,7 +1194,7 @@ function te(e) {
                         eO(!1));
                 }
             },
-            [ee, q, eI?.application, eW, eo, A, eQ, h, I, p, m, T, S, e2, ew, eb, eY, eE, eP, e8],
+            [ee, q, eI?.application, eW, eo, A, eQ, h, I, p, m, T, S, e2, ew, eb, eY, eE, eP, e7],
         ),
         ta = r.useRef(!1),
         ts = r.useCallback(async () => {
@@ -1286,7 +1326,7 @@ function te(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e9, {}) };
         case "CONNECT_ACCOUNT":
-            ((t = (0, i.jsx)(e7, { clientId: A, platformType: eE, platformName: tu })),
+            ((t = (0, i.jsx)(e4, { clientId: A, platformType: eE, platformName: tu })),
                 (tA = !1),
                 (tf = !1),
                 (th = !1),
@@ -1318,7 +1358,7 @@ function te(e) {
                 children: [
                     null != ex &&
                         eF &&
-                        (0, i.jsx)(e4, {
+                        (0, i.jsx)(e8, {
                             platformType: ex.type,
                             platformName: tu,
                             connectedAccount: ex,
@@ -1380,7 +1420,7 @@ function te(e) {
                 (0, i.jsx)(em, {
                     application: eI.application,
                     scopes: eQ,
-                    disclosures: e8,
+                    disclosures: e7,
                     redirectUri: eI.redirect_uri ?? null,
                     approximateGuildCount: void 0 !== e ? e : null,
                     isEmbeddedFlow: W,
@@ -1460,7 +1500,7 @@ function tn(e, t) {
     (0, H._9)() ? B.A.openCreateGuildModal({ onSuccess: (n) => ti({ ...e, guildId: n }, t) }) : ti(e, t);
 }
 function ti(e, t) {
-    (0, O.qf)((t) => (0, i.jsx)(e8, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
+    (0, O.qf)((t) => (0, i.jsx)(e7, { ...t, ...e, callback: tt.bind(null, e) }), { onCloseCallback: t });
 }
 function tr(e) {
     let { hostname: t = "", host: n, pathname: i, search: r } = J.A.toURLSafe(e) ?? {};

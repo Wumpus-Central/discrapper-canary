@@ -12,5 +12,7 @@ t.exports = {
     O1: "textWithIconContainer_HigqCD",
     qi: "activityCounter_HigqCD",
     Om: "dot_HigqCD",
+    dU: "popoutTarget_HigqCD",
+    dr: "popoutTargetNoShrink_HigqCD",
     tt: "questsIcon_HigqCD",
 };

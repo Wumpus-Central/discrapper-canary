@@ -452,7 +452,6 @@ function eD(e) {
                                       t.e(891089),
                                       t.e(728925),
                                       t.e(569603),
-                                      t.e(253044),
                                       t.e(174554),
                                       t.e(196063),
                                       t.e(392028),
@@ -472,10 +471,8 @@ function eD(e) {
                                       t.e(474750),
                                       t.e(424199),
                                       t.e(342551),
-                                      t.e(862782),
                                       t.e(721690),
                                       t.e(35757),
-                                      t.e(234236),
                                       t.e(832817),
                                       t.e(893928),
                                       t.e(416143),
@@ -517,9 +514,7 @@ function eD(e) {
                                       t.e(610449),
                                       t.e(32781),
                                       t.e(488990),
-                                      t.e(332470),
                                       t.e(729599),
-                                      t.e(35403),
                                       t.e(662355),
                                       t.e(872648),
                                       t.e(565065),
@@ -922,8 +917,8 @@ var e0 = t(789645),
     e5 = t(312556),
     e8 = t(489673),
     e4 = t(958590),
-    e6 = t(129230),
-    e9 = t(957565),
+    e9 = t(129230),
+    e6 = t(957565),
     e3 = t(673707);
 let { INVITE_OPTIONS_7_DAYS: ne, INVITE_OPTIONS_UNLIMITED: nn } = I.Ay;
 function nt(e) {
@@ -988,9 +983,9 @@ function nt(e) {
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == t || h) return;
-                            (0, e9.C)(e);
+                            (0, e6.C)(e);
                             let n = (0, M.dy)(t.entity_type);
-                            e6.default.track(eo.HAw.COPY_INSTANT_INVITE, {
+                            e9.default.track(eo.HAw.COPY_INSTANT_INVITE, {
                                 server: t.guild_id,
                                 channel: d,
                                 channel_type: n,

@@ -50,15 +50,8 @@ function T(t) {
             null != m &&
                 (0, k.L3)(t, async () => {
                     let { default: t } = await Promise.all([
-                        n.e(476662),
-                        n.e(253044),
-                        n.e(881717),
-                        n.e(363269),
                         n.e(693165),
                         n.e(993103),
-                        n.e(489218),
-                        n.e(912875),
-                        n.e(862782),
                         n.e(482861),
                         n.e(252229),
                         n.e(60086),

@@ -1,3 +1,15 @@
+.fontCode_1a6Bd3 {
+    font-family: var(--font-code)
+}
+
+.bold_1a6Bd3 {
+    font-weight: 700
+}
+
+.inlineTimestamp_1a6Bd3 {
+    display: inline
+}
+
 .badgeContainer_CTWncy {
     align-items: center;
     display: flex;
@@ -41,4 +53,4 @@
     row-gap: 4px
 }
 
-/*# sourceMappingURL=843335.9150e76b00a738a0.css.map*/
+/*# sourceMappingURL=957251.42a69cbc85d44d5a.css.map*/

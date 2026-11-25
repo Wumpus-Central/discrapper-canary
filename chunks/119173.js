@@ -52,7 +52,7 @@ var F = n(172218),
     z = n(566903),
     Z = n(397244),
     W = n(714114),
-    $ = n(342312),
+    $ = n(755388),
     Q = n(864436),
     q = n(835072),
     J = n(87664),
@@ -343,10 +343,10 @@ var eJ = n(808380),
     e0 = n(646514),
     e1 = n(429913),
     e3 = n(263577),
-    e2 = n(790381),
-    e5 = n(266080),
+    e5 = n(790381),
+    e2 = n(266080),
     e6 = n(70191);
-let e4 = { [eJ.Y.XBOX]: e5.A, [eJ.Y.PLAYSTATION]: e2.A };
+let e4 = { [eJ.Y.XBOX]: e2.A, [eJ.Y.PLAYSTATION]: e5.A };
 function e9(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
@@ -1758,8 +1758,8 @@ var tY = n(687966),
     t0 = n(427262),
     t1 = n(589051),
     t3 = n(545807),
-    t2 = n(659540);
-let t5 = r.memo(function (e) {
+    t5 = n(659540);
+let t2 = r.memo(function (e) {
     let { startTimestampMs: t } = e,
         n = (0, t3.A)(),
         [l, i] = r.useState(() => Date.now());
@@ -1770,7 +1770,7 @@ let t5 = r.memo(function (e) {
     let s = Math.max(0, (l - t) / 1e3);
     return (0, tW.fU)(s);
 });
-t5.displayName = "OverlayElapsedTime";
+t2.displayName = "OverlayElapsedTime";
 let t6 = r.memo(function () {
     let e = (0, t3.A)(),
         [t, n] = r.useState(() => Date.now());
@@ -1835,22 +1835,22 @@ function t4(e) {
             ? null
             : ((0, tJ.z)({ id: l.id, banner: l.banner, canAnimate: t$.kt.getSetting(), size: 600 }) ?? null);
     return (0, i.jsxs)("div", {
-        className: t2.cI,
+        className: t5.cI,
         children: [
-            (0, i.jsx)("div", { className: t2.CK, style: { backgroundImage: null != _ ? `url(${_})` : void 0 } }),
+            (0, i.jsx)("div", { className: t5.CK, style: { backgroundImage: null != _ ? `url(${_})` : void 0 } }),
             (0, i.jsxs)("div", {
-                className: t2.vK,
+                className: t5.vK,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: t2.iy,
+                        className: t5.iy,
                         children: [
-                            (0, i.jsx)(tB.A, { user: l, isMobile: m, status: I, className: t2.my, size: L._3.SIZE_40 }),
+                            (0, i.jsx)(tB.A, { user: l, isMobile: m, status: I, className: t5.my, size: L._3.SIZE_40 }),
                             (0, i.jsxs)("div", {
-                                className: t2.ic,
+                                className: t5.ic,
                                 children: [
                                     (0, i.jsx)(ea.A, {
                                         userName: h,
-                                        textClassName: t2.Xh,
+                                        textClassName: t5.Xh,
                                         displayNameStyles: g,
                                         effectDisplayType: es.G.ANIMATED,
                                     }),
@@ -1858,15 +1858,15 @@ function t4(e) {
                                         switch (x.type) {
                                             case "activity":
                                                 return (0, i.jsxs)("div", {
-                                                    className: t2.nU,
+                                                    className: t5.nU,
                                                     children: [
                                                         (0, i.jsx)(tY.GameControllerIcon, {
                                                             size: "xxs",
                                                             color: "currentColor",
-                                                            className: t2.Wo,
+                                                            className: t5.Wo,
                                                         }),
                                                         (0, i.jsx)(p.E, {
-                                                            className: t2.Yg,
+                                                            className: t5.Yg,
                                                             variant: "body-xs/medium",
                                                             color: "text-subtle",
                                                             children: x.label,
@@ -1875,15 +1875,15 @@ function t4(e) {
                                                 });
                                             case "voice_call":
                                                 return (0, i.jsxs)("div", {
-                                                    className: t2.nU,
+                                                    className: t5.nU,
                                                     children: [
                                                         (0, i.jsx)(tK.VoiceNormalIcon, {
                                                             size: "xxs",
                                                             color: "currentColor",
-                                                            className: t2.Wo,
+                                                            className: t5.Wo,
                                                         }),
                                                         (0, i.jsx)(p.E, {
-                                                            className: t2.Yg,
+                                                            className: t5.Yg,
                                                             variant: "body-xs/medium",
                                                             color: "text-subtle",
                                                             children: x.label,
@@ -1892,12 +1892,12 @@ function t4(e) {
                                                 });
                                             case "custom_status":
                                                 return (0, i.jsx)("div", {
-                                                    className: t2.nU,
+                                                    className: t5.nU,
                                                     children: (0, i.jsx)(tZ.A, {
                                                         activity: x.customStatusActivity,
-                                                        className: t2.tR,
-                                                        emojiClassName: t2.qp,
-                                                        textClassName: t2.Yg,
+                                                        className: t5.tR,
+                                                        emojiClassName: t5.qp,
+                                                        textClassName: t5.Yg,
                                                         hideTooltip: !0,
                                                     }),
                                                 });
@@ -1913,16 +1913,16 @@ function t4(e) {
                         ? null == x.startTimestampMs
                             ? null
                             : (0, i.jsx)(p.E, {
-                                  className: t2.p0,
+                                  className: t5.p0,
                                   variant: "mono-md/bold",
                                   tag: "div",
-                                  children: (0, i.jsx)(t5, { startTimestampMs: x.startTimestampMs }),
+                                  children: (0, i.jsx)(t2, { startTimestampMs: x.startTimestampMs }),
                               })
                         : "voice_call" === x.type
                           ? null == E
                               ? null
                               : (0, i.jsx)(p.E, {
-                                    className: t2.p0,
+                                    className: t5.p0,
                                     variant: "mono-md/bold",
                                     tag: "div",
                                     children: (0, i.jsx)(t6, {}),
@@ -1987,11 +1987,11 @@ function t9(e) {
         A = (0, s.bG)([tX.Ay], () => tX.Ay.useReducedMotion),
         f = r.useMemo(() => ({ [u.x.FRIENDS]: !A && m, [u.x.MESSAGES]: !A && I, [u.x.VOICE]: !1 }), [A, m, I]);
     return (0, i.jsxs)("div", {
-        className: t2.kL,
+        className: t5.kL,
         children: [
             (0, i.jsx)(t4, { currentUser: t, activity: n, currentGameName: l }),
             (0, i.jsx)("div", {
-                className: t2.vR,
+                className: t5.vR,
                 role: "tablist",
                 "aria-label": eW.intl.string(eW.t.TdEu5X),
                 children: [
@@ -2029,11 +2029,11 @@ function t7(e) {
             onSelect: a,
             className: o,
         } = e,
-        u = r ? h()(t2.OD, s && t2.S) : null;
+        u = r ? h()(t5.OD, s && t5.S) : null;
     return (0, i.jsxs)(E.D, {
         role: "tab",
         "aria-selected": l,
-        className: h()(t2.Mf, l && t2.jP, o),
+        className: h()(t5.Mf, l && t5.jP, o),
         onClick: () => a(t),
         children: [
             null != u ? (0, i.jsx)("span", { className: u, "aria-hidden": !0 }) : null,
@@ -2930,8 +2930,8 @@ function n3(e) {
                 onContextMenu: a,
             });
 }
-var n2 = n(91868);
-function n5(e) {
+var n5 = n(91868);
+function n2(e) {
     return Array.from(e).sort();
 }
 let n6 = (0, g.throttle)(
@@ -2994,11 +2994,11 @@ function n9() {
         E = (0, _.A)("friends-widget-messages", m),
         [f, S] = (0, s.bG)([tT.A], () => tT.A.getFavoriteTargetIdsForTab(u.x.MESSAGES), [], j.D),
         [p, x] = (0, s.bG)(
-            [n2.A],
+            [n5.A],
             () => {
-                let [e, t] = n2.A.getRows(n2.Y.ACTIVE_NOW),
-                    [n] = n2.A.getRows(n2.Y.DMS),
-                    [l] = n2.A.getRows(n2.Y.RECENT_TEXT),
+                let [e, t] = n5.A.getRows(n5.Y.ACTIVE_NOW),
+                    [n] = n5.A.getRows(n5.Y.DMS),
+                    [l] = n5.A.getRows(n5.Y.RECENT_TEXT),
                     i = n.slice(0, 5),
                     r = l.slice(0, 8);
                 return [{ activeNowRows: e.slice(0, 8), dmRows: i, recentTextRows: r }, t];
@@ -3164,7 +3164,7 @@ function n9() {
         L = (0, o.Dk)(() => F, [F]),
         U = (0, o.Dk)(() => G, [G]);
     r.useEffect(() => {
-        (0 !== L.size || 0 !== U.size) && n6({ shownUserIds: n5(L), contentInventoryIds: n5(U) });
+        (0 !== L.size || 0 !== U.size) && n6({ shownUserIds: n2(L), contentInventoryIds: n2(U) });
     }, [L, U]);
     let P = r.useCallback((e) => b[e], [b]),
         V = r.useCallback(
@@ -4291,7 +4291,7 @@ let lj = r.memo(function (e) {
                             e.event,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e(924697),
+                                    n.e(790484),
                                     n.e(463317),
                                     n.e(926132),
                                     n.e(834552),
@@ -4355,7 +4355,7 @@ let lj = r.memo(function (e) {
                         }),
                             (0, lf.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e(924697),
+                                    n.e(790484),
                                     n.e(24312),
                                     n.e(622936),
                                     n.e(216947),
@@ -4373,14 +4373,14 @@ let lj = r.memo(function (e) {
                                     n.e(391763),
                                     n.e(189673),
                                     n.e(571210),
+                                    n.e(491001),
                                     n.e(576432),
                                     n.e(797558),
-                                    n.e(491001),
+                                    n.e(88342),
                                     n.e(451162),
                                     n.e(229787),
-                                    n.e(88342),
-                                    n.e(576665),
                                     n.e(311802),
+                                    n.e(576665),
                                     n.e(698965),
                                     n.e(235313),
                                     n.e(579245),
@@ -4390,9 +4390,9 @@ let lj = r.memo(function (e) {
                                     n.e(552172),
                                     n.e(529422),
                                     n.e(823427),
+                                    n.e(309291),
                                     n.e(242204),
                                     n.e(307059),
-                                    n.e(309291),
                                     n.e(838056),
                                     n.e(508829),
                                     n.e(298199),
@@ -4541,8 +4541,8 @@ let lj = r.memo(function (e) {
                                     n.e(893190),
                                     n.e(146652),
                                     n.e(21921),
-                                    n.e(189673),
                                     n.e(676418),
+                                    n.e(189673),
                                     n.e(576432),
                                     n.e(797558),
                                     n.e(451162),

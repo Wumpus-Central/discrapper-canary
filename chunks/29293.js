@@ -22,7 +22,7 @@ t.d(
                     (u?.(),
                         (0, r.mM)(
                             async () => {
-                                let { default: n } = await Promise.all([t.e(144909), t.e(188941), t.e(659139)]).then(
+                                let { default: n } = await Promise.all([t.e(589302), t.e(188941), t.e(659139)]).then(
                                     t.bind(t, 609422),
                                 );
                                 return (t) => (0, i.jsx)(n, { user: e, nickname: A, ...t });

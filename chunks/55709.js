@@ -310,7 +310,7 @@ function J(n) {
                   ? () => {
                         (0, I.mM)(async () => {
                             let { SubscriptionDetailsModal: n } = await Promise.all([
-                                i.e(426782),
+                                i.e(978898),
                                 i.e(406322),
                                 i.e(942571),
                                 i.e(817989),
@@ -364,7 +364,7 @@ function X(n) {
                         : () => {
                               (0, I.mM)(async () => {
                                   let { ItemDetailsModal: n } = await Promise.all([
-                                      i.e(426782),
+                                      i.e(978898),
                                       i.e(406322),
                                       i.e(942571),
                                       i.e(817989),

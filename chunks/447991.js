@@ -10,7 +10,7 @@ var r = n(477900),
 let f = l.lazy(() =>
         (0, u.sq)({
             createPromise: () =>
-                Promise.all([n.e(985768), n.e(936090), n.e(791154), n.e(133179), n.e(384498)]).then(n.bind(n, 973513)),
+                Promise.all([n.e(985768), n.e(936090), n.e(791154), n.e(384498)]).then(n.bind(n, 973513)),
             webpackId: 973513,
             name: "DiscordVideoPlayer",
         }),

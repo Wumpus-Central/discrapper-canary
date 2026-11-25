@@ -317,9 +317,9 @@ function eI(e, t, n) {
     (0, eA.mM)(
         async () => {
             let { default: s } = await Promise.all([
-                l.e(846201),
+                l.e(277162),
                 l.e(311913),
-                l.e(881717),
+                l.e(400052),
                 l.e(5257),
                 l.e(991625),
                 l.e(230029),
@@ -632,13 +632,13 @@ var eZ = l(83827),
     e1 = l(683063),
     e2 = l(573435),
     e6 = l(409626),
-    e3 = l(692969),
-    e4 = l(396583),
-    e9 = l(46653),
+    e9 = l(692969),
+    e3 = l(396583),
+    e4 = l(46653),
     e8 = l(994500);
 function e7(e, t) {
     let l = t.user_id,
-        n = (0, D.bG)([e9.default], () => e9.default.getId() === l, [l]);
+        n = (0, D.bG)([e4.default], () => e4.default.getId() === l, [l]);
     return er(e, l, { showYouSuffix: n });
 }
 function e5(e) {
@@ -874,7 +874,7 @@ function to(e) {
 }
 function tc(e) {
     let { game: t, notched: l, onOpenActivity: n, onTrackClick: s } = e,
-        a = (0, e3.A)({
+        a = (0, e9.A)({
             location: "GameIconButton",
             applicationId: t.id,
             source: e6.GameProfileSources.GuildSpaceLeaderboard,
@@ -1566,7 +1566,7 @@ function tF(e) {
                 a = i <= 0,
                 r = i - (Math.ceil(i / ep.A.Millis.DAY) - 1) * ep.A.Millis.DAY;
             return (
-                (0, e4.A)(() => n(Date.now()), a ? null : r),
+                (0, e3.A)(() => n(Date.now()), a ? null : r),
                 s.useMemo(
                     () => ({
                         ended: a,
@@ -1759,9 +1759,9 @@ function t6(e) {
         role: r ?? "img",
     });
 }
-var t3 = l(22231),
-    t4 = l(445187);
-function t9(e) {
+var t9 = l(22231),
+    t3 = l(445187);
+function t4(e) {
     let { alt: t, ariaLabel: l, ariaHidden: n, role: r, width: d, height: o, className: c, style: u } = e,
         m = s.useMemo(
             () => (0, a.H)({ width: d, height: o, intrinsicWidth: 288, intrinsicHeight: 192, style: u }),
@@ -1876,7 +1876,7 @@ function lo(e) {
 function lc(e) {
     let { guildId: t, entry: l, games: n, onClick: s } = e,
         { name: a, coverUrl: r, coverFallbackIconUrl: d, isLoading: o } = ef(n, l.application_id),
-        c = (0, e3.A)({
+        c = (0, e9.A)({
             location: "PopularGamesGameCard",
             applicationId: l.application_id,
             source: e6.GameProfileSources.GuildSpacePopularGames,
@@ -1938,7 +1938,7 @@ function lf(e) {
     let { guildId: t, requirement: l, onClick: n } = e;
     return (0, i.jsx)(w, {
         className: lh.p$,
-        illustration: t9,
+        illustration: t4,
         title: C.intl.string(J.default.ULK65a),
         body: C.intl.format(null != l ? J.default.JDAHQV : J.default.LeSGal, { memberCount: 3 }),
         action:
@@ -2362,7 +2362,7 @@ function lX(e) {
                                     l.e(357900),
                                     l.e(148729),
                                     l.e(650195),
-                                    l.e(144909),
+                                    l.e(589302),
                                     l.e(778082),
                                     l.e(67702),
                                     l.e(662387),
@@ -2395,7 +2395,7 @@ function lX(e) {
                                     l.e(375724),
                                     l.e(999272),
                                     l.e(677625),
-                                    l.e(216112),
+                                    l.e(685611),
                                     l.e(490514),
                                     l.e(962953),
                                     l.e(550929),
@@ -2405,17 +2405,28 @@ function lX(e) {
                                     l.e(60002),
                                     l.e(260009),
                                     l.e(249938),
-                                    l.e(266201),
-                                    l.e(752704),
-                                    l.e(56606),
+                                    l.e(213922),
+                                    l.e(501095),
+                                    l.e(977306),
+                                    l.e(847980),
+                                    l.e(957251),
+                                    l.e(306637),
                                     l.e(678749),
                                     l.e(163466),
                                     l.e(234017),
+                                    l.e(933373),
+                                    l.e(201074),
+                                    l.e(879641),
+                                    l.e(390430),
+                                    l.e(110425),
+                                    l.e(990185),
+                                    l.e(266201),
+                                    l.e(752704),
+                                    l.e(56606),
                                     l.e(40791),
                                     l.e(358404),
                                     l.e(996907),
-                                    l.e(831130),
-                                    l.e(377989),
+                                    l.e(428197),
                                     l.e(358931),
                                     l.e(880150),
                                     l.e(168248),
@@ -2448,10 +2459,9 @@ function lX(e) {
                                     l.e(706073),
                                     l.e(227512),
                                     l.e(933947),
-                                    l.e(866475),
-                                    l.e(56347),
+                                    l.e(769281),
                                     l.e(232731),
-                                    l.e(587618),
+                                    l.e(759699),
                                     l.e(424199),
                                     l.e(645499),
                                     l.e(438811),
@@ -2474,6 +2484,7 @@ function lX(e) {
                                     l.e(253729),
                                     l.e(593600),
                                     l.e(879315),
+                                    l.e(234236),
                                     l.e(900361),
                                     l.e(266900),
                                     l.e(707826),
@@ -2484,16 +2495,24 @@ function lX(e) {
                                     l.e(809915),
                                     l.e(314243),
                                     l.e(463095),
+                                    l.e(190889),
                                     l.e(783988),
+                                    l.e(588940),
                                     l.e(511527),
                                     l.e(927211),
+                                    l.e(82367),
+                                    l.e(757598),
                                     l.e(361626),
                                     l.e(646506),
+                                    l.e(61129),
                                     l.e(445124),
                                     l.e(76428),
                                     l.e(445421),
                                     l.e(721690),
+                                    l.e(599141),
+                                    l.e(133179),
                                     l.e(832823),
+                                    l.e(776750),
                                     l.e(302008),
                                     l.e(761935),
                                     l.e(763070),
@@ -2503,15 +2522,18 @@ function lX(e) {
                                     l.e(276863),
                                     l.e(441432),
                                     l.e(728633),
+                                    l.e(344695),
+                                    l.e(173547),
                                     l.e(628439),
+                                    l.e(964320),
+                                    l.e(108634),
                                     l.e(35757),
                                     l.e(539620),
                                     l.e(225990),
                                     l.e(951811),
-                                    l.e(747829),
+                                    l.e(151016),
+                                    l.e(591591),
                                     l.e(787672),
-                                    l.e(522517),
-                                    l.e(234236),
                                     l.e(832817),
                                     l.e(893928),
                                     l.e(416143),
@@ -2524,18 +2546,17 @@ function lX(e) {
                                     l.e(349460),
                                     l.e(425906),
                                     l.e(92124),
+                                    l.e(991991),
                                     l.e(123353),
                                     l.e(123216),
                                     l.e(45072),
                                     l.e(593176),
                                     l.e(988077),
-                                    l.e(776750),
                                     l.e(76705),
                                     l.e(232551),
                                     l.e(182408),
                                     l.e(561216),
                                     l.e(692835),
-                                    l.e(588940),
                                     l.e(21219),
                                     l.e(829177),
                                     l.e(106943),
@@ -2551,7 +2572,9 @@ function lX(e) {
                                     l.e(491279),
                                     l.e(398793),
                                     l.e(592731),
+                                    l.e(332470),
                                     l.e(723794),
+                                    l.e(177104),
                                     l.e(486309),
                                     l.e(894747),
                                     l.e(603341),
@@ -2561,7 +2584,7 @@ function lX(e) {
                                     l.e(170653),
                                     l.e(56021),
                                     l.e(456003),
-                                    l.e(547646),
+                                    l.e(466944),
                                     l.e(124060),
                                     l.e(240511),
                                     l.e(718573),
@@ -2580,7 +2603,6 @@ function lX(e) {
                                     l.e(810034),
                                     l.e(817852),
                                     l.e(996218),
-                                    l.e(133179),
                                     l.e(614784),
                                     l.e(8563),
                                     l.e(499941),
@@ -2594,7 +2616,6 @@ function lX(e) {
                                     l.e(32781),
                                     l.e(444376),
                                     l.e(488990),
-                                    l.e(332470),
                                     l.e(729599),
                                     l.e(826240),
                                     l.e(130674),
@@ -2617,7 +2638,7 @@ function lX(e) {
                                     l.e(409843),
                                     l.e(565065),
                                     l.e(834386),
-                                    l.e(482652),
+                                    l.e(888050),
                                     l.e(464242),
                                     l.e(959669),
                                     l.e(220518),
@@ -2743,13 +2764,13 @@ function l0(e) {
 var l1 = l(872351),
     l2 = l(708988),
     l6 = l(628137);
-let l3 = "none",
-    l4 = (e, t) => (0, i.jsx)(_.E, { tag: "span", variant: "body-xs/medium", color: "text-strong", children: e }, t);
-function l9(e) {
+let l9 = "none",
+    l3 = (e, t) => (0, i.jsx)(_.E, { tag: "span", variant: "body-xs/medium", color: "text-strong", children: e }, t);
+function l4(e) {
     return e;
 }
 function l8(e) {
-    return e?.direction ?? l3;
+    return e?.direction ?? l9;
 }
 function l7(e) {
     if (null == e) return null;
@@ -2796,7 +2817,7 @@ function nl(e) {
         role: "group",
         "aria-label":
             ((t = n.unique_listeners),
-            C.intl.formatToPlainString(J.default.AzIhRB, { count: t, trend: l3, countHook: l9 })),
+            C.intl.formatToPlainString(J.default.AzIhRB, { count: t, trend: l9, countHook: l4 })),
         children: (0, i.jsx)(t7.Ay, {
             users: d,
             guildId: l,
@@ -2887,7 +2908,7 @@ function ns(e) {
                                 color: "text-subtle",
                                 children:
                                     ((t = a.plays),
-                                    C.intl.format(J.default["7hHUIS"], { count: t, trend: l8(r), countHook: l4 })),
+                                    C.intl.format(J.default["7hHUIS"], { count: t, trend: l8(r), countHook: l3 })),
                             }),
                             null != r && (0, i.jsx)(nt, { trend: r }),
                         ],
@@ -2969,8 +2990,8 @@ function nu(e) {
                               memberCount: a.distinct_listeners,
                               artistCount: a.distinct_artists,
                               trend: l8(x),
-                              memberCountHook: l4,
-                              artistCountHook: l4,
+                              memberCountHook: l3,
+                              artistCountHook: l3,
                           }),
                 trend: x,
             }),
@@ -3093,9 +3114,9 @@ function nj(e) {
                         (0, eA.mM)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    l.e(846201),
+                                    l.e(277162),
                                     l.e(311913),
-                                    l.e(881717),
+                                    l.e(400052),
                                     l.e(5257),
                                     l.e(991625),
                                     l.e(230029),
@@ -3719,7 +3740,7 @@ function nV(e) {
                               : C.intl.format(J.default.AzIhRB, {
                                     count: r.distinct_listeners,
                                     trend: l8(p),
-                                    countHook: l4,
+                                    countHook: l3,
                                 }),
                       trend: p,
                   }),
@@ -3765,9 +3786,9 @@ var n1 = l(77915),
 function n6(e) {
     return e.default_title ?? C.intl.string(J.default["5xxUI2"]);
 }
-var n3 = l(890497),
-    n4 = l(734057),
-    n9 = l(317525),
+var n9 = l(890497),
+    n3 = l(734057),
+    n4 = l(317525),
     n8 = l(576705),
     n7 = l(661191),
     n5 = l(44167);
@@ -3811,7 +3832,7 @@ let ib = {
                               ? (0, i.jsx)(H.$, {
                                     variant: "secondary",
                                     size: "sm",
-                                    icon: t3.PencilIcon,
+                                    icon: t9.PencilIcon,
                                     text: C.intl.string(C.t.bt75uw),
                                     disabled: a,
                                     onClick: s,
@@ -3819,14 +3840,14 @@ let ib = {
                               : null,
                   })
                 : (0, i.jsxs)("div", {
-                      className: t4.kL,
+                      className: t3.kL,
                       children: [
-                          null != c && (0, i.jsx)("img", { className: t4.Sl, src: c, alt: "" }),
+                          null != c && (0, i.jsx)("img", { className: t3.Sl, src: c, alt: "" }),
                           null != r &&
                               (0, i.jsx)(_.E, {
                                   variant: "body-md/normal",
                                   color: "text-subtle",
-                                  className: t4.Qq,
+                                  className: t3.Qq,
                                   children: r,
                               }),
                       ],
@@ -4142,7 +4163,7 @@ let ib = {
                     "edit" === r && null == n
                         ? (0, i.jsx)(M, {
                               minHeight: 273,
-                              graphic: (0, i.jsx)(t9, { alt: "", ariaHidden: !0, width: 200 }),
+                              graphic: (0, i.jsx)(t4, { alt: "", ariaHidden: !0, width: 200 }),
                               title: C.intl.string(J.default.v59XPT),
                               subtitle: C.intl.string(J.default.Bayri1),
                           })
@@ -4351,9 +4372,9 @@ let ib = {
                 l,
                 n = (0, n5.n)(),
                 a = (0, D.bG)(
-                    [n4.A, n8.A],
+                    [n3.A, n8.A],
                     () => {
-                        let e = null != n ? n4.A.getChannel(n) : void 0;
+                        let e = null != n ? n3.A.getChannel(n) : void 0;
                         return null != e && n8.A.can(ty.xBc.USE_EMBEDDED_ACTIVITIES, e);
                     },
                     [n],
@@ -4451,9 +4472,9 @@ let ib = {
                 l = (0, D.bG)([tD.A], () => tD.A.getGuildId()),
                 n = n7.default.castGuildIdAsEveryoneGuildRoleId(l),
                 a = (0, n5.n)(),
-                r = (0, D.bG)([n4.A], () => (null != a ? n4.A.getChannel(a) : void 0), [a]),
+                r = (0, D.bG)([n3.A], () => (null != a ? n3.A.getChannel(a) : void 0), [a]),
                 d = (0, D.bG)([n8.A], () => null != r && n8.A.can(ty.xBc.MANAGE_ROLES, r), [r]),
-                o = (0, D.bG)([n9.A], () => (null == l ? ix : n9.A.getSortedRoles(l).filter((e) => e.id !== n)), [
+                o = (0, D.bG)([n4.A], () => (null == l ? ix : n4.A.getSortedRoles(l).filter((e) => e.id !== n)), [
                     l,
                     n,
                 ]),
@@ -4481,7 +4502,7 @@ let ib = {
                 : (0, i.jsxs)(N.B, {
                       gap: 16,
                       children: [
-                          (0, i.jsx)(n3.Z, {
+                          (0, i.jsx)(n9.Z, {
                               selectionMode: "multiple",
                               label: C.intl.string(J.default.XXLbfv),
                               description: C.intl.string(J.default.XrpYIG),

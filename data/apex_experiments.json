@@ -6326,6 +6326,22 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-11-voice-activity-status-group",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-11-voicemod-3p",
     "kind": "user",
     "defaultConfig": {

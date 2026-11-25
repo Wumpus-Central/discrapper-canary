@@ -34,8 +34,8 @@ var p = l(988794),
     L = l(778712),
     M = l(834730),
     U = l(939249),
-    P = l(463930),
-    w = l(140735),
+    w = l(463930),
+    P = l(140735),
     O = l(664343),
     z = l(177953),
     K = l(534514),
@@ -90,7 +90,7 @@ function er(e) {
                                 className: ei.xL,
                                 tag: "span",
                                 role: "link",
-                                children: (0, t.jsx)(P.g, {
+                                children: (0, t.jsx)(w.g, {
                                     name: d?.nick ?? X.Ay.getName(n),
                                     colorString: d?.colorString ?? null,
                                     colorStrings: a,
@@ -114,7 +114,7 @@ function ed(e) {
         ),
         d = (0, t.jsxs)(t.Fragment, {
             children: [
-                (0, t.jsx)(w.A, { children: es.intl.string(es.t["5qyruI"]) }),
+                (0, t.jsx)(P.A, { children: es.intl.string(es.t["5qyruI"]) }),
                 (0, t.jsx)(V.Ay, {
                     guild: n,
                     size: V.Ay.Sizes.MINI,
@@ -399,43 +399,29 @@ function eS(e) {
                       onContextMenu: function (e, n) {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  l.e(476662),
-                                  l.e(253044),
-                                  l.e(881717),
-                                  l.e(924697),
+                                  l.e(790484),
                                   l.e(463317),
-                                  l.e(363269),
                                   l.e(834552),
                                   l.e(708757),
                                   l.e(585968),
                                   l.e(893190),
-                                  l.e(489218),
-                                  l.e(912875),
-                                  l.e(862782),
                                   l.e(776273),
                                   l.e(189673),
                                   l.e(576432),
                                   l.e(797558),
-                                  l.e(451162),
-                                  l.e(229787),
                                   l.e(936320),
+                                  l.e(451162),
                                   l.e(482861),
+                                  l.e(229787),
                                   l.e(576665),
-                                  l.e(332470),
                                   l.e(624198),
                                   l.e(715038),
                                   l.e(60086),
-                                  l.e(190889),
-                                  l.e(242204),
                                   l.e(856753),
-                                  l.e(61129),
-                                  l.e(205941),
-                                  l.e(331203),
-                                  l.e(255302),
+                                  l.e(242204),
                                   l.e(172883),
                                   l.e(825486),
                                   l.e(169103),
-                                  l.e(873786),
                                   l.e(532418),
                               ]).then(l.bind(l, 668569));
                               return (l) => (0, t.jsx)(e, { ...l, user: n });
@@ -485,8 +471,8 @@ let eD = function (e) {
         L = D?.id,
         M = D?.guild_id,
         U = (0, i.bG)([f.A], () => f.A.getGuild(M), [M]),
-        P = D?.channel_id,
-        w = (0, i.bG)([j.A], () => j.A.getChannel(P), [P]),
+        w = D?.channel_id,
+        P = (0, i.bG)([j.A], () => j.A.getChannel(w), [w]),
         O = (0, g.GV)(),
         [z, K] = s.useState(p.al.EVENT_INFO),
         F = s.useRef(null),
@@ -516,16 +502,7 @@ let eD = function (e) {
             (e) => {
                 null != q &&
                     (0, o.L3)(e, async () => {
-                        let { default: e } = await Promise.all([
-                            l.e(476662),
-                            l.e(253044),
-                            l.e(881717),
-                            l.e(363269),
-                            l.e(489218),
-                            l.e(912875),
-                            l.e(862782),
-                            l.e(431658),
-                        ]).then(l.bind(l, 928625));
+                        let { default: e } = await l.e(431658).then(l.bind(l, 928625));
                         return (n) => (0, t.jsx)(e, { ...n, imageUrl: q });
                     });
             },
@@ -579,7 +556,7 @@ let eD = function (e) {
                                             children: (0, t.jsx)(eu, {
                                                 guildEvent: D,
                                                 guild: U,
-                                                channel: w,
+                                                channel: P,
                                                 headerId: O,
                                                 onClose: E,
                                                 onClickInterestedCount: () => J(p.al.RSVP_LIST, !0),
@@ -607,7 +584,7 @@ let eD = function (e) {
                         }),
                     }),
                 }),
-                (0, t.jsx)(eT, { guildEvent: D, guild: U, channel: w, onActionTaken: E, recurrenceId: $ }),
+                (0, t.jsx)(eT, { guildEvent: D, guild: U, channel: P, onActionTaken: E, recurrenceId: $ }),
             ],
         }),
     });

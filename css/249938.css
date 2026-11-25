@@ -188,6 +188,12 @@
     display: none
 }
 
+.popoutTarget_HigqCD {
+    display: flex;
+    min-width: var(--custom-activity-status-icon-size)
+}
+
+.popoutTargetNoShrink_HigqCD,
 .questsIcon_HigqCD {
     flex-shrink: 0
 }
@@ -196,4 +202,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=249938.64a7b2f9fe8aecc3.css.map*/
+/*# sourceMappingURL=249938.506ed2b713831366.css.map*/

@@ -1,69 +1,69 @@
-var l = i(477900);
-i(582128);
-var a = i(855986),
-    n = i(534514),
-    s = i(939249),
-    d = i(834730),
-    r = i(302959),
-    c = i(765379),
-    o = i(961272),
-    m = i(506326),
-    p = i(409626),
-    u = i(692969),
-    A = i(78871),
-    h = i(287809),
-    v = i(804630),
-    x = i(742782);
-function g(e) {
-    let { resolvedActivity: t, presenceActivity: i, showHeader: a = !0 } = e,
-        r = (0, u.A)({
+var l = n(477900);
+n(582128);
+var i = n(855986),
+    a = n(534514),
+    r = n(939249),
+    s = n(834730),
+    o = n(302959),
+    u = n(765379),
+    c = n(961272),
+    d = n(506326),
+    m = n(409626),
+    A = n(692969),
+    p = n(78871),
+    h = n(287809),
+    f = n(804630),
+    g = n(742782);
+function x(e) {
+    let { resolvedActivity: t, presenceActivity: n, showHeader: i = !0 } = e,
+        o = (0, A.A)({
             location: "UserActivityRow",
             applicationId: t.applicationId,
-            source: p.GameProfileSources.UserProfile,
+            source: m.GameProfileSources.UserProfile,
             sourceUserId: t.userId,
             trackEntryPointImpression: !0,
         }),
-        o = null != i && !(0, c.A)(i) && null != i.party,
-        h = null != t.state && t.state.length > 0 && !o;
+        c = null != n && !(0, u.A)(n) && null != n.party,
+        h = null != t.state && t.state.length > 0 && !c;
     return (0, l.jsxs)("div", {
-        className: x.ec,
+        className: g.ec,
         children: [
-            a
+            i
                 ? (0, l.jsx)("div", {
-                      className: x.N1,
-                      children: (0, l.jsx)(n.D, {
+                      className: g.N1,
+                      children: (0, l.jsx)(a.D, {
                           variant: "body-xs/medium",
                           color: "text-muted",
-                          children: (0, v._Q)(t.type),
+                          children: (0, f._Q)(t.type),
                       }),
                   })
                 : null,
             (0, l.jsxs)("div", {
-                className: x.Wh,
+                className: g.Wh,
                 children: [
-                    null != r
-                        ? (0, l.jsx)(s.D, {
-                              className: x.XA,
-                              onClick: r,
+                    null != o
+                        ? (0, l.jsx)(r.D, {
+                              className: g.XA,
+                              onClick: o,
                               "aria-label": t.name,
-                              children: (0, l.jsx)(v.Tf, { resolvedActivity: t }),
+                              children: (0, l.jsx)(f.Tf, { resolvedActivity: t }),
                           })
-                        : (0, l.jsx)(v.Tf, { resolvedActivity: t }),
+                        : (0, l.jsx)(f.Tf, { resolvedActivity: t }),
                     (0, l.jsx)("div", {
-                        className: x.wt,
-                        children: (0, l.jsxs)(s.D, {
-                            className: null != r ? x.wv : void 0,
-                            onClick: r,
+                        className: g.wt,
+                        children: (0, l.jsxs)(r.D, {
+                            className: null != o ? g.wv : void 0,
+                            onClick: o,
                             children: [
-                                (0, l.jsx)(n.D, {
+                                (0, l.jsx)(a.D, {
                                     variant: "heading-xs/medium",
                                     color: "text-strong",
-                                    className: x.DD,
+                                    className: g.DD,
                                     lineClamp: 1,
                                     children: t.name,
                                 }),
                                 null != t.details
-                                    ? (0, l.jsx)(d.E, {
+                                    ? (0, l.jsx)(s.E, {
                                           variant: "body-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
@@ -71,20 +71,20 @@ function g(e) {
                                       })
                                     : null,
                                 h
-                                    ? (0, l.jsx)(d.E, {
+                                    ? (0, l.jsx)(s.E, {
                                           variant: "body-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
                                           children: t.state,
                                       })
                                     : null,
-                                null != i
-                                    ? (0, l.jsxs)(m.mG, {
-                                          location: m.N5.VOICE_USER_POPOUT,
+                                null != n
+                                    ? (0, l.jsxs)(d.mG, {
+                                          location: d.N5.VOICE_USER_POPOUT,
                                           children: [
-                                              (0, l.jsx)(A.QA, { activity: i }),
-                                              (0, l.jsx)(A.cy, { activity: i }),
-                                              (0, l.jsx)(A.Rq, { activity: i }),
+                                              (0, l.jsx)(p.QA, { activity: n }),
+                                              (0, l.jsx)(p.cy, { activity: n }),
+                                              (0, l.jsx)(p.Rq, { activity: n }),
                                           ],
                                       })
                                     : null,
@@ -96,38 +96,39 @@ function g(e) {
         ],
     });
 }
-i.d(
+n.d(
     t,
     {},
     {
         A: function (e) {
             let {
                     channel: t,
-                    presenceActivity: i,
-                    userId: n,
-                    embeddedApp: s,
-                    applicationStream: d,
-                    onAction: c,
-                    showHeader: m = !0,
+                    presenceActivity: n,
+                    userId: a,
+                    embeddedApp: r,
+                    applicationStream: s,
+                    onAction: u,
+                    showHeader: d = !0,
+                    buttonVariant: m = "primary",
                 } = e,
-                p = (0, a.bG)([h.default], () => (null != n ? h.default.getUser(n) : null), [n]);
-            if (null == p) return null;
-            let u = (0, v.Gf)(p.id, i, s);
+                A = (0, i.bG)([h.default], () => (null != a ? h.default.getUser(a) : null), [a]);
+            if (null == A) return null;
+            let p = (0, f.Gf)(A.id, n, r);
             return (0, l.jsxs)("div", {
                 children: [
-                    u.isSpotify
-                        ? (0, l.jsx)(v.vP, { resolvedActivity: u, showHeader: m })
-                        : (0, l.jsx)(g, { resolvedActivity: u, presenceActivity: i, showHeader: m }),
-                    (0, l.jsx)(o.A, {
-                        type: null != d ? r.M.STREAM_PREVIEW : r.M.VOICE_CHANNEL,
-                        activity: i,
-                        embeddedActivity: s?.embeddedActivity,
-                        applicationStream: d,
-                        user: p,
-                        guildId: t.guild_id,
-                        channelId: t.id,
-                        buttonVariant: "primary",
-                        onAction: c,
+                    p.isSpotify
+                        ? (0, l.jsx)(f.vP, { resolvedActivity: p, showHeader: d })
+                        : (0, l.jsx)(x, { resolvedActivity: p, presenceActivity: n, showHeader: d }),
+                    (0, l.jsx)(c.A, {
+                        type: null != s ? o.M.STREAM_PREVIEW : o.M.VOICE_CHANNEL,
+                        activity: n,
+                        embeddedActivity: r?.embeddedActivity,
+                        applicationStream: s,
+                        user: A,
+                        guildId: t?.guild_id,
+                        channelId: t?.id,
+                        buttonVariant: m,
+                        onAction: u,
                     }),
                 ],
             });

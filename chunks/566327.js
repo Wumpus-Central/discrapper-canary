@@ -81,7 +81,7 @@ var i = {
     "./RedoIcon.web.tsx": ["803656", [16369]],
     "./SlashBoxIcon.web.tsx": ["633018", []],
     "./SoundboardIcon.web.tsx": ["7807", []],
-    "./SpotifyNeutralIcon.web.tsx": ["109487", [14020]],
+    "./SpotifyNeutralIcon.web.tsx": ["109487", []],
     "./ChatArrowRightIcon.web.tsx": ["99677", []],
     "./PaymentTypeGooglePayIcon.web.tsx": ["168987", [647080]],
     "./WaveformSlashIcon.web.tsx": ["125628", []],
