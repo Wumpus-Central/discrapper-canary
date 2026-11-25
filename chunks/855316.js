@@ -704,7 +704,7 @@ if (null == e6 || "0.0.0" !== e6.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 680764, Version Hash: 9f4adfefea2aa4a994e68b33dd96ecf9931bd2e6`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 680771, Version Hash: 61902228e1c5e25f00999d2b8264131caed33cec`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     eg.A.initBasic(),
@@ -776,7 +776,7 @@ let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "680764";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "680771";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eF.Ay.setCrashInformation(eU.du.BuildNumber, r);
         let s = eV?.processUtils?.getLastCrash;
@@ -5120,8 +5120,8 @@ function so() {
 }
 let sd = (0, i9.Fe)({
         createPromise: () =>
-            Promise.all([n.e(972399), n.e(102698), n.e(736926), n.e(912601), n.e(450309)]).then(n.bind(n, 996646)),
-        webpackId: 996646,
+            Promise.all([n.e(644201), n.e(102698), n.e(736926), n.e(912601), n.e(450309)]).then(n.bind(n, 886214)),
+        webpackId: 886214,
         name: "ChannelTabBar",
     }),
     sc = (0, i9.Fe)({ createPromise: so, webpackId: 824042 }),
@@ -16119,7 +16119,7 @@ let pD = "isHideDevBanner",
                     className: to()(py.Wz, py.mr),
                     children: [
                         (0, b.jsx)(pL, { className: py.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "680764" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "680771" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })

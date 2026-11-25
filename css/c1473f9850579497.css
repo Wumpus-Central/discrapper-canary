@@ -257,6 +257,26 @@
     }
 }
 
+.clickable_ZWUM0d {
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin: calc(var(--space-16)*-1);
+    padding: var(--space-16)
+}
+
+.content_ZWUM0d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-block: var(--space-8);
+    text-wrap: pretty
+}
+
+.badge_ZWUM0d {
+    margin-block-end: var(--space-8)
+}
+
 .result_hNjocA {
     border-radius: var(--radius-sm);
     flex-shrink: 0
@@ -378,4 +398,4 @@
     -webkit-app-region: no-drag
 }
 
-/*# sourceMappingURL=e41ca5b033526b33.css.map*/
+/*# sourceMappingURL=c1473f9850579497.css.map*/
