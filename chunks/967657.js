@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => X, zN: () => x, Ww: () => k, U: () => G }), n(321073));
+(n.d(t, { Ay: () => W, zN: () => M, Ww: () => U, U: () => P }), n(321073));
 var i,
     r = n(73153),
     a = n(439372),
@@ -9,40 +9,13 @@ var i,
     c = n(982844),
     u = n(976860),
     _ = n(91242),
-    E = n(218583),
-    A = n(855986);
-let f = [],
-    h = [];
-class I extends A.Ay.Store {
-    getRecords() {
-        return f;
-    }
-    getUnlaunched() {
-        return h;
-    }
-    getRecord(e) {
-        let t = f.find((t) => t.launchId === e);
-        return null != t ? t : (h.find((t) => t.launchId === e) ?? null);
-    }
-    getRecordsForFrame(e) {
-        return f.filter((t) => t.frameId === e);
-    }
-}
-new I(r.h, {
-    FRAME_LAUNCH_TIMING_CLOSED: function (e) {
-        let { record: t } = e;
-        null != t.launchStartedMs ? (f = [...f, t].slice(-20)) : (h = [...h, t].slice(-20));
-    },
-    LOGOUT: function () {
-        if (0 === f.length && 0 === h.length) return !1;
-        ((f = []), (h = []));
-    },
-});
-var p = n(115560),
-    m = n(744230),
-    g = n(113267),
-    T = n(182025);
-function S(e) {
+    E = n(218583);
+n(747653);
+var A = n(115560),
+    f = n(744230),
+    h = n(113267),
+    I = n(182025);
+function p(e) {
     try {
         let t = new URL(e, location.href);
         return t.origin + t.pathname;
@@ -50,28 +23,28 @@ function S(e) {
         return null;
     }
 }
-function N(e, t) {
-    return e <= 0 || t < e ? 0 : C(t - e);
+function m(e, t) {
+    return e <= 0 || t < e ? 0 : g(t - e);
 }
-function C(e) {
+function g(e) {
     return Math.round(10 * e) / 10;
 }
 (n(323874), n(14289), n(35956));
-var O = n(700224);
-let R = new Set([T.xo.CACHED, T.xo.SKIPPED, T.xo.PREFETCHED, T.xo.IN_FLIGHT]),
-    L = {
-        [T.Vj.SETTLED]: T.nW.READY,
-        [T.Vj.CAPPED]: T.nW.READY,
-        [T.Vj.FAILED]: T.nW.FAILED,
-        [T.Vj.TIMEOUT]: T.nW.TIMEOUT,
-        [T.Vj.SUPERSEDED]: T.nW.SUPERSEDED,
-        [T.Vj.STOPPED]: T.nW.STOPPED,
-        [T.Vj.REUSED]: T.nW.REUSED,
-        [T.Vj.ABANDONED]: T.nW.ABANDONED,
+var T = n(700224);
+let S = new Set([I.xo.CACHED, I.xo.SKIPPED, I.xo.PREFETCHED, I.xo.IN_FLIGHT]),
+    N = {
+        [I.Vj.SETTLED]: I.nW.READY,
+        [I.Vj.CAPPED]: I.nW.READY,
+        [I.Vj.FAILED]: I.nW.FAILED,
+        [I.Vj.TIMEOUT]: I.nW.TIMEOUT,
+        [I.Vj.SUPERSEDED]: I.nW.SUPERSEDED,
+        [I.Vj.STOPPED]: I.nW.STOPPED,
+        [I.Vj.REUSED]: I.nW.REUSED,
+        [I.Vj.ABANDONED]: I.nW.ABANDONED,
     };
-var y = (((i = {}).STARTED = "started"), (i.LAUNCHED = "launched"), (i.CLOSED = "closed"), i);
-class D {
-    launchId = (0, p.A)();
+var C = (((i = {}).STARTED = "started"), (i.LAUNCHED = "launched"), (i.CLOSED = "closed"), i);
+class O {
+    launchId = (0, A.A)();
     frameId;
     startTime = performance.now();
     startedAt = Date.now();
@@ -88,7 +61,7 @@ class D {
     constructor(e) {
         ((this.options = e),
             (this.frameId = e.frameId),
-            (this.timer = setTimeout(() => this.finish({ type: T.Vj.ABANDONED }), 6e4)));
+            (this.timer = setTimeout(() => this.finish({ type: I.Vj.ABANDONED }), 6e4)));
     }
     get phase() {
         return this.currentPhase;
@@ -103,23 +76,23 @@ class D {
         return this.steps.some((t) => t.step === e);
     }
     span(e, t) {
-        if ("closed" === this.currentPhase) return t(O.U);
+        if ("closed" === this.currentPhase) return t(T.U);
         let n = this.startSpan(e);
         return this.runSpan(n, t);
     }
     event(e) {
         if ("closed" !== this.currentPhase)
             switch (e.step) {
-                case T.aY.IFRAME_CREATED:
+                case I.aY.IFRAME_CREATED:
                     this.recordIframeCreated(e.iframeId, e.url);
                     return;
-                case T.aY.IFRAME_LOAD:
+                case I.aY.IFRAME_LOAD:
                     this.recordIframeLoad();
                     return;
-                case T.aY.HANDSHAKE:
+                case I.aY.HANDSHAKE:
                     this.recordHandshake(e.sdkVersion);
                     return;
-                case T.aY.READY:
+                case I.aY.READY:
                     this.recordReady();
                     return;
             }
@@ -127,14 +100,14 @@ class D {
     markLaunchStarted(e) {
         if ("started" !== this.currentPhase) return;
         ((this.currentPhase = "launched"), (this.launchRequestId = e ?? null));
-        let t = this.addStep(T.aY.LAUNCH_STARTED, T.xo.OK);
-        ((this.launchStartedAt = t.start), this.setTimer(3e4, T.Vj.TIMEOUT));
+        let t = this.addStep(I.aY.LAUNCH_STARTED, I.xo.OK);
+        ((this.launchStartedAt = t.start), this.setTimer(3e4, I.Vj.TIMEOUT));
     }
     markDispatched() {
-        "closed" !== this.currentPhase && this.addStep(T.aY.DISPATCHED, T.xo.OK);
+        "closed" !== this.currentPhase && this.addStep(I.aY.DISPATCHED, I.xo.OK);
     }
     finish(e) {
-        if ("closed" === this.currentPhase || (e.type === T.Vj.REUSED && "launched" === this.currentPhase)) return;
+        if ("closed" === this.currentPhase || (e.type === I.Vj.REUSED && "launched" === this.currentPhase)) return;
         ((this.currentPhase = "closed"), clearTimeout(this.timer));
         let t = performance.now();
         this.options.resourceMatcher.flush();
@@ -159,13 +132,13 @@ class D {
                 },
             });
         } catch (t) {
-            throw (this.endStep(e, T.xo.FAILED), t);
+            throw (this.endStep(e, I.xo.FAILED), t);
         }
-        return (this.endStep(e, T.xo.OK), n);
+        return (this.endStep(e, I.xo.OK), n);
     }
     recordIframeCreated(e, t) {
         this.iframeIds.push(e);
-        let n = this.addStep(T.aY.IFRAME_CREATED, T.xo.OK),
+        let n = this.addStep(I.aY.IFRAME_CREATED, I.xo.OK),
             i = (function (e) {
                 try {
                     return new URL(e, location.href).href;
@@ -173,21 +146,21 @@ class D {
                     return null;
                 }
             })(t);
-        null != i && this.claim(n, T.tP.IFRAME, i, this.startTime);
+        null != i && this.claim(n, I.tP.IFRAME, i, this.startTime);
     }
     recordIframeLoad() {
         if (null != this.loadAt) return;
-        let e = this.addStep(T.aY.IFRAME_LOAD, T.xo.OK);
-        ((this.loadAt = e.start), null != this.readyAt && this.finish({ type: T.Vj.SETTLED }));
+        let e = this.addStep(I.aY.IFRAME_LOAD, I.xo.OK);
+        ((this.loadAt = e.start), null != this.readyAt && this.finish({ type: I.Vj.SETTLED }));
     }
     recordHandshake(e) {
-        this.hasStep(T.aY.HANDSHAKE) || ((this.sdkVersion = e), this.addStep(T.aY.HANDSHAKE, T.xo.OK));
+        this.hasStep(I.aY.HANDSHAKE) || ((this.sdkVersion = e), this.addStep(I.aY.HANDSHAKE, I.xo.OK));
     }
     recordReady() {
         if (null != this.readyAt) return;
-        let e = this.addStep(T.aY.READY, T.xo.OK);
+        let e = this.addStep(I.aY.READY, I.xo.OK);
         ((this.readyAt = e.start),
-            null != this.loadAt ? this.finish({ type: T.Vj.SETTLED }) : this.setTimer(3e4, T.Vj.CAPPED));
+            null != this.loadAt ? this.finish({ type: I.Vj.SETTLED }) : this.setTimer(3e4, I.Vj.CAPPED));
     }
     releaseClaims() {
         for (let e of this.steps) this.releaseStepClaims(e);
@@ -199,16 +172,16 @@ class D {
     buildRecord(e, t) {
         let n,
             { applicationId: i, surface: r, trigger: a, detailCollected: s } = this.options;
-        n = null != this.readyAt ? T.nW.READY : L[e.type];
+        n = null != this.readyAt ? I.nW.READY : N[e.type];
         let l = null;
-        e.type === T.Vj.FAILED &&
+        e.type === I.Vj.FAILED &&
             (l = (function (e) {
                 let t;
-                if (e instanceof m.A) {
-                    let n = m.A.Reasons[e.reason] ?? e.reason;
+                if (e instanceof f.A) {
+                    let n = f.A.Reasons[e.reason] ?? e.reason;
                     t = `EmbeddedActivityClientError: ${n}`;
-                } else if (e instanceof g.A) {
-                    let n = g.A.ReasonCodes[e.reason] ?? e.reason;
+                } else if (e instanceof h.A) {
+                    let n = h.A.ReasonCodes[e.reason] ?? e.reason;
                     t = `InteractionCallbackError: ${n}`;
                 } else
                     e instanceof Error
@@ -221,7 +194,7 @@ class D {
             })(e.error));
         let o = null;
         return (
-            null != this.loadAt && (o = T.d1.HOST),
+            null != this.loadAt && (o = I.d1.HOST),
             {
                 launchId: this.launchId,
                 frameId: this.frameId,
@@ -246,7 +219,7 @@ class D {
     }
     buildStepRecord(e) {
         let t = null;
-        null != e.end && (t = b(e.end - e.start));
+        null != e.end && (t = R(e.end - e.start));
         let n = [];
         for (let { kind: t, entry: i } of e.claims)
             null != i &&
@@ -265,15 +238,15 @@ class D {
                                     return "";
                                 }
                             })(t.name),
-                            startMs: C(t.startTime - n),
-                            durationMs: C(t.duration),
+                            startMs: g(t.startTime - n),
+                            durationMs: g(t.duration),
                             phases: {
-                                dns: N(t.domainLookupStart, t.domainLookupEnd),
-                                connect: N(t.connectStart, t.connectEnd),
-                                tls: N(t.secureConnectionStart, t.connectEnd),
-                                request: N(t.requestStart, t.responseStart),
-                                ttfb: N(t.startTime, t.responseStart),
-                                download: N(t.responseStart, t.responseEnd),
+                                dns: m(t.domainLookupStart, t.domainLookupEnd),
+                                connect: m(t.connectStart, t.connectEnd),
+                                tls: m(t.secureConnectionStart, t.connectEnd),
+                                request: m(t.requestStart, t.responseStart),
+                                ttfb: m(t.startTime, t.responseStart),
+                                download: m(t.responseStart, t.responseEnd),
                             },
                             transferSize: t.transferSize,
                             protocol: t.nextHopProtocol,
@@ -283,7 +256,7 @@ class D {
                 );
         return {
             step: e.step,
-            status: e.status ?? T.xo.PENDING,
+            status: e.status ?? I.xo.PENDING,
             startMs: this.relative(e.start),
             durationMs: t,
             resources: n,
@@ -295,7 +268,7 @@ class D {
     }
     endStep(e, t) {
         "closed" !== this.currentPhase &&
-            ((e.end = performance.now()), (e.status ??= t), R.has(e.status) && this.releaseStepClaims(e));
+            ((e.end = performance.now()), (e.status ??= t), S.has(e.status) && this.releaseStepClaims(e));
     }
     claim(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e.start,
@@ -306,16 +279,16 @@ class D {
         (clearTimeout(this.timer), (this.timer = setTimeout(() => this.finish({ type: t }), e)));
     }
     relative(e) {
-        return null == e ? null : b(e - this.startTime);
+        return null == e ? null : R(e - this.startTime);
     }
 }
-function b(e) {
+function R(e) {
     return Math.round(10 * e) / 10;
 }
-var v = n(400421);
-let P = [],
-    M = new Map(),
-    U = new (class {
+var L = n(400421);
+let y = [],
+    D = new Map(),
+    b = new (class {
         claimsByKey = new Map();
         observer = null;
         addClaim(e) {
@@ -374,55 +347,55 @@ let P = [],
             }
         }
     })(),
-    w = new Set([T.cu.SIDEBAR_MOUSEDOWN, T.cu.NAVIGATION]);
-function G(e, t, n, i) {
-    let r = M.get(t);
+    v = new Set([I.cu.SIDEBAR_MOUSEDOWN, I.cu.NAVIGATION]);
+function P(e, t, n, i) {
+    let r = D.get(t);
     switch (r?.phase) {
         case void 0:
-        case y.CLOSED:
+        case C.CLOSED:
             break;
-        case y.STARTED:
+        case C.STARTED:
             return r;
-        case y.LAUNCHED:
-            r.finish({ type: T.Vj.SUPERSEDED });
+        case C.LAUNCHED:
+            r.finish({ type: I.Vj.SUPERSEDED });
     }
-    let a = new D({
+    let a = new O({
         frameId: t,
         applicationId: n,
         surface: i,
         trigger: e,
-        detailCollected: (0, v.K4)(),
+        detailCollected: (0, L.K4)(),
         resources: (function (e) {
             let t = [],
-                n = S((0, s.SR)(e));
-            null != n && t.push({ kind: T.tP.PROXY_TICKET, key: n });
+                n = p((0, s.SR)(e));
+            null != n && t.push({ kind: I.tP.PROXY_TICKET, key: n });
             let i = (0, s.ah)(e);
             if (null != i) {
-                let e = S(i);
-                null != e && t.push({ kind: T.tP.PREWARM, key: e });
+                let e = p(i);
+                null != e && t.push({ kind: I.tP.PREWARM, key: e });
             }
             let r = [],
                 a = (0, c.pl)(e);
             if (null != a) {
-                let e = S(a);
-                null != e && r.push({ kind: T.tP.CSP, key: e });
+                let e = p(a);
+                null != e && r.push({ kind: I.tP.CSP, key: e });
             }
-            return { [T.aY.PROXY_TICKET]: t, [T.aY.CSP]: r };
+            return { [I.aY.PROXY_TICKET]: t, [I.aY.CSP]: r };
         })(n),
-        resourceMatcher: U,
-        onClose: F,
+        resourceMatcher: b,
+        onClose: w,
     });
-    return (M.set(t, a), a);
+    return (D.set(t, a), a);
 }
-function x(e) {
-    return M.get(e) ?? null;
+function M(e) {
+    return D.get(e) ?? null;
 }
-function k(e) {
+function U(e) {
     let t = _.A.getFrameByIframeId(e);
-    return null == t ? null : x(t.id);
+    return null == t ? null : M(t.id);
 }
-function F(e, t) {
-    (M.get(e.frameId) === e && M.delete(e.frameId),
+function w(e, t) {
+    (D.get(e.frameId) === e && D.delete(e.frameId),
         r.h.dispatch({ type: "FRAME_LAUNCH_TIMING_CLOSED", record: t }),
         t.detailCollected &&
             (function (e, t) {
@@ -437,76 +410,76 @@ function F(e, t) {
                             : (performance.mark(e, { startTime: a }), i.marks.push(e));
                     }
                 } catch {}
-                for (P.push(i); P.length > 20;) {
-                    let e = P.shift();
+                for (y.push(i); y.length > 20;) {
+                    let e = y.shift();
                     for (let t of e.measures) performance.clearMeasures(t);
                     for (let t of e.marks) performance.clearMarks(t);
                 }
             })(t, e.startTime));
 }
-function B(e, t) {
-    let n = M.get(e);
+function G(e, t) {
+    let n = D.get(e);
     return null != n && n.isLaunch(t) ? n : null;
 }
-function V(e) {
+function x(e) {
     let { frameId: t, applicationId: n, launchRequestId: i } = e,
-        r = M.get(t);
+        r = D.get(t);
     null == r ||
-        r.phase !== y.STARTED ||
+        r.phase !== C.STARTED ||
         (r.markLaunchStarted(i),
-        r.hasStep(T.aY.APPLICATION) ||
-            r.span(T.aY.APPLICATION, (e) => {
+        r.hasStep(I.aY.APPLICATION) ||
+            r.span(I.aY.APPLICATION, (e) => {
                 var t, i;
                 return d.A.isHydrated(n)
-                    ? (e.setStatus(T.xo.CACHED), Promise.resolve())
+                    ? (e.setStatus(I.xo.CACHED), Promise.resolve())
                     : ((t = r),
                       (i = n),
                       new Promise((e) => {
                           d.A.addConditionalChangeListener(
-                              () => t.phase !== y.CLOSED && (!d.A.isHydrated(i) || (e(), !1)),
+                              () => t.phase !== C.CLOSED && (!d.A.isHydrated(i) || (e(), !1)),
                               !1,
                           );
                       }));
             }));
 }
-function H(e) {
+function k(e) {
     let { frameId: t, launchRequestId: n } = e;
-    B(t, n)?.markDispatched();
+    G(t, n)?.markDispatched();
 }
-function j(e) {
+function F(e) {
     let { frameId: t, launchRequestId: n, error: i } = e;
-    B(t, n)?.finish({ type: T.Vj.FAILED, error: i });
+    G(t, n)?.finish({ type: I.Vj.FAILED, error: i });
 }
-function W(e) {
+function B(e) {
     let { frameId: t } = e;
-    M.get(t)?.finish({ type: T.Vj.STOPPED });
+    D.get(t)?.finish({ type: I.Vj.STOPPED });
 }
-function Y() {
-    for (let e of M.values()) e.drop();
-    M.clear();
+function V() {
+    for (let e of D.values()) e.drop();
+    D.clear();
 }
-function K(e) {
+function H(e) {
     let { channelId: t } = e,
         n = null;
-    for (let e of (null != t && (n = (0, E.A)(t)), [...M.values()])) {
+    for (let e of (null != t && (n = (0, E.A)(t)), [...D.values()])) {
         let t = null != n && e.frameId === n.frameId,
-            i = e.phase === y.STARTED;
-        !t && i && w.has(e.trigger) && e.finish({ type: T.Vj.ABANDONED });
+            i = e.phase === C.STARTED;
+        !t && i && v.has(e.trigger) && e.finish({ type: I.Vj.ABANDONED });
     }
     if (null == n || null != _.A.getFrame(n.frameId)) return;
     let i = (0, u.JK)().location.state;
     if ((0, l.rm)() || i?.appChannelClosed === !0 || (0, o.z)(n.frameId)) return;
     let { frameId: r, applicationId: a, surface: s } = n;
-    G(T.cu.NAVIGATION, r, a, s);
+    P(I.cu.NAVIGATION, r, a, s);
 }
-class $ extends a.A {
+class j extends a.A {
     actions = {
-        FRAME_LAUNCH_START: V,
-        FRAME_LAUNCH: H,
-        FRAME_LAUNCH_FAIL: j,
-        FRAME_STOP: W,
-        LOGOUT: Y,
-        CHANNEL_SELECT: K,
+        FRAME_LAUNCH_START: x,
+        FRAME_LAUNCH: k,
+        FRAME_LAUNCH_FAIL: F,
+        FRAME_STOP: B,
+        LOGOUT: V,
+        CHANNEL_SELECT: H,
     };
 }
-let X = new $();
+let W = new j();

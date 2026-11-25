@@ -468,7 +468,7 @@ function eD(e) {
                                       t.e(662387),
                                       t.e(31544),
                                       t.e(334168),
-                                      t.e(474750),
+                                      t.e(521332),
                                       t.e(424199),
                                       t.e(342551),
                                       t.e(721690),
@@ -916,8 +916,8 @@ var e0 = t(789645),
     e2 = t(279208),
     e5 = t(312556),
     e8 = t(489673),
-    e4 = t(958590),
-    e9 = t(129230),
+    e9 = t(958590),
+    e4 = t(129230),
     e6 = t(957565),
     e3 = t(673707);
 let { INVITE_OPTIONS_7_DAYS: ne, INVITE_OPTIONS_UNLIMITED: nn } = I.Ay;
@@ -928,10 +928,10 @@ function nt(e) {
         a = (0, s.bG)([C.A], () => C.A.getGuild(l), [l]),
         { channel_id: d, id: o } = t ?? {},
         u = (0, s.bG)(
-            [e4.A],
+            [e9.A],
             () => {
                 let e = d ?? r;
-                return null == e ? null : e4.A.getInvite(e);
+                return null == e ? null : e9.A.getInvite(e);
             },
             [d, r],
         );
@@ -985,7 +985,7 @@ function nt(e) {
                             if (null == t || h) return;
                             (0, e6.C)(e);
                             let n = (0, M.dy)(t.entity_type);
-                            e9.default.track(eo.HAw.COPY_INSTANT_INVITE, {
+                            e4.default.track(eo.HAw.COPY_INSTANT_INVITE, {
                                 server: t.guild_id,
                                 channel: d,
                                 channel_type: n,

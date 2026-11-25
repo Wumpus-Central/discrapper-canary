@@ -29,6 +29,7 @@ e.exports = {
     io: "tick_wfmW80",
     L5: "tickEnd_wfmW80",
     M0: "bar_wfmW80",
+    Mx: "barMarker_wfmW80",
     p0: "duration_wfmW80",
     jh: "durationAfter_wfmW80",
     EU: "durationBefore_wfmW80",

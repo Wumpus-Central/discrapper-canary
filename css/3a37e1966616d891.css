@@ -798,19 +798,23 @@
     border-radius: var(--radius-xs);
     bottom: var(--space-4);
     inset-inline-start: calc(var(--custom-conjure-perf-trace-left)*1%);
+    position: absolute;
     top: var(--space-4);
     width: max(2px, calc(var(--custom-conjure-perf-trace-width)*1%))
 }
 
-.bar_wfmW80,
-.duration_wfmW80 {
-    position: absolute
+.barMarker_wfmW80 {
+    border-radius: 0;
+    bottom: 0;
+    top: 0;
+    width: 2px
 }
 
 .duration_wfmW80 {
     align-items: center;
     bottom: 0;
     display: flex;
+    position: absolute;
     top: 0;
     white-space: nowrap
 }
@@ -1054,4 +1058,4 @@
     flex: none
 }
 
-/*# sourceMappingURL=c6901a0c93670544.css.map*/
+/*# sourceMappingURL=3a37e1966616d891.css.map*/
