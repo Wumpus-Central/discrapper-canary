@@ -1610,6 +1610,7 @@ var j =
         (g[(g.PREMIUM_REFERRALS = 35)] = "PREMIUM_REFERRALS"),
         (g[(g.PREMIUM_TENURE_BADGE = 36)] = "PREMIUM_TENURE_BADGE"),
         (g[(g.SCHEDULED_MESSAGES = 37)] = "SCHEDULED_MESSAGES"),
+        (g[(g.INCREASED_GROUP_DM_SIZE_LIMIT = 38)] = "INCREASED_GROUP_DM_SIZE_LIMIT"),
         g),
     er =
         (((T = {})[(T.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
@@ -3528,8 +3529,8 @@ class e5 extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e8 = new e5();
-class e7 extends O.G {
+let e7 = new e5();
+class e8 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedFileUploadSize", [
             { no: 1, name: "max_size", kind: "scalar", T: 4 },
@@ -3565,7 +3566,7 @@ class e7 extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e4 = new e7();
+let e4 = new e8();
 class e9 extends O.G {
     constructor() {
         super("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", [
@@ -3751,7 +3752,7 @@ class tl extends O.G {
     constructor() {
         super("discord_protos.users.v1.Perks", [
             { no: 1, name: "active_perks_bitmask", kind: "scalar", repeat: 1, T: 4 },
-            { no: 2, name: "config_by_perk", kind: "map", K: 13, V: { kind: "message", T: () => e8 } },
+            { no: 2, name: "config_by_perk", kind: "map", K: 13, V: { kind: "message", T: () => e7 } },
             { no: 3, name: "rules_version", kind: "scalar", T: 13 },
             { no: 4, name: "updated_at", kind: "message", T: () => L.D },
         ]);
@@ -3806,7 +3807,7 @@ class tl extends O.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = e8.internalBinaryRead(t, t.uint32(), n);
+                    s = e7.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -3814,7 +3815,7 @@ class tl extends O.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? e8.create();
+        e[a ?? 0] = s ?? e7.create();
     }
     internalBinaryWrite(e, t, n) {
         if (e.activePerksBitmask.length) {
@@ -3825,7 +3826,7 @@ class tl extends O.G {
         for (let i of Object.keys(e.configByPerk))
             (t.tag(2, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
-                e8.internalBinaryWrite(e.configByPerk[i], t, n),
+                e7.internalBinaryWrite(e.configByPerk[i], t, n),
                 t.join().join());
         (0 !== e.rulesVersion && t.tag(3, S.O0.Varint).uint32(e.rulesVersion),
             e.updatedAt && L.D.internalBinaryWrite(e.updatedAt, t.tag(4, S.O0.LengthDelimited).fork(), n).join());
