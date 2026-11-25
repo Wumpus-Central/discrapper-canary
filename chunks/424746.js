@@ -25,9 +25,9 @@ function c(e) {
         N = l.useRef(null),
         v = l.useRef(!1),
         R = "opening-mouse" === _ || "open-mouse" === _,
-        j = "opening-keyboard" === _ || "open-keyboard" === _,
-        y = "open-mouse" === _ || "open-keyboard" === _,
-        I = (x.keyboardModeEnabled || j) && null != h,
+        y = "opening-keyboard" === _ || "open-keyboard" === _,
+        j = "open-mouse" === _ || "open-keyboard" === _,
+        I = (x.keyboardModeEnabled || y) && null != h,
         [T, S] = l.useState(0),
         C = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
@@ -50,20 +50,20 @@ function c(e) {
         D = l.useCallback(() => {
             null != N.current && (clearTimeout(N.current), (N.current = null));
         }, []),
-        M = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 (e && (v.current = !0), D(), A("closing"));
             },
             [D],
         );
     l.useEffect(() => D, [D]);
-    let P = l.useCallback(() => {
+    let M = l.useCallback(() => {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
+        P = l.useCallback(() => {
+            R && U(!1);
+        }, [U, R]),
         O = l.useCallback(() => {
-            R && M(!1);
-        }, [M, R]),
-        U = l.useCallback(() => {
             if (v.current || !s.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
                 v.current = !1;
                 return;
@@ -71,8 +71,8 @@ function c(e) {
             (D(), A("opening-keyboard"));
         }, [D, _]),
         B = l.useCallback(() => {
-            (I && "opening-keyboard" !== _) || M(!1);
-        }, [M, _, I]);
+            (I && "opening-keyboard" !== _) || U(!1);
+        }, [U, _, I]);
     (l.useEffect(() => {
         if ("opening-mouse" === _)
             return (
@@ -101,7 +101,7 @@ function c(e) {
                 );
         }, [_, D]),
         l.useEffect(() => {
-            if (y)
+            if (j)
                 return (
                     document.addEventListener("keydown", e, !0),
                     () => {
@@ -109,9 +109,9 @@ function c(e) {
                     }
                 );
             function e(e) {
-                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), M(!0));
+                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), U(!0));
             }
-        }, [y, M]));
+        }, [j, U]));
     let G = l.useMemo(
             () =>
                 null == h
@@ -119,24 +119,24 @@ function c(e) {
                     : h.map((e) => ({
                           ...e,
                           onClick: (t) => {
-                              (e.onClick?.(t), M(!1));
+                              (e.onClick?.(t), U(!1));
                           },
                       })),
-            [h, M],
+            [h, U],
         ),
         k = l.useCallback((e) => {
             S(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: P,
-        onMouseLeave: O,
-        onFocus: U,
+        onMouseEnter: M,
+        onMouseLeave: P,
+        onFocus: O,
         onBlur: B,
         children: [
             t,
             (0, a.jsx)(o.j, {
                 targetElementRef: n,
-                shouldShow: y,
+                shouldShow: j,
                 position: C,
                 align: "center",
                 title: f,
@@ -152,7 +152,7 @@ function c(e) {
                 caretConfig: { align: "custom", customOffset: T },
                 onNudgeChange: k,
                 onRequestClose: (e) => {
-                    M(null != e && (0, i.sg)(e));
+                    U(null != e && (0, i.sg)(e));
                 },
             }),
         ],

@@ -12,8 +12,8 @@ var i,
     g = n(265872),
     A = n(235986),
     p = n(129230),
-    m = n(652215),
-    I = n(792996),
+    I = n(652215),
+    m = n(792996),
     E = n(51377),
     S = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
     C = (((r = {}).TOP = "top"), (r.MIDDLE = "middle"), r);
@@ -21,10 +21,10 @@ class _ extends s.PureComponent {
     state = { confirmed: !1 };
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        p.default.track(m.HAw.SHOW_TUTORIAL, { tutorial: e });
+        p.default.track(I.HAw.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        p.default.track(m.HAw.CLOSE_TUTORIAL, { tutorial: this.props.uniqueId, acknowledged: this.state.confirmed });
+        p.default.track(I.HAw.CLOSE_TUTORIAL, { tutorial: this.props.uniqueId, acknowledged: this.state.confirmed });
     }
     handleDismiss = () => {
         let { onClickComplete: e } = this.props;
@@ -64,13 +64,13 @@ class _ extends s.PureComponent {
                             fullWidth: !0,
                             variant: "primary",
                             onClick: this.handleDismiss,
-                            text: I.intl.string(I.t["+IrDzN"]),
+                            text: m.intl.string(m.t["+IrDzN"]),
                         }),
                         (0, l.jsx)(h.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             onClick: a,
-                            text: I.intl.string(I.t["33wtxt"]),
+                            text: m.intl.string(m.t["33wtxt"]),
                         }),
                     ],
                 }),
@@ -86,7 +86,7 @@ class N extends s.PureComponent {
     };
     onClickSkipAll = (e) => {
         let { onSkipAll: t, uniqueId: n } = this.props;
-        (e(), t(), p.default.track(m.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n }));
+        (e(), t(), p.default.track(I.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n }));
     };
     renderPopoutContent = (e) => {
         let { closePopout: t, position: n } = e,

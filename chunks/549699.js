@@ -1,20 +1,20 @@
-(l(323874), l(14289), l(35956));
-var n = l(620632),
-    a = l(776231);
-l.d(
-    t,
+(t(323874), t(14289), t(35956));
+var l = t(620632),
+    s = t(776231);
+t.d(
+    n,
     {},
     {
-        Q: function (e, t, l) {
-            let s = new URL(
+        Q: function (e, n, t) {
+            let a = new URL(
                 null != window.GLOBAL_ENV.CDN_HOST
-                    ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t.asset_id}.webp`
-                    : `${(0, n.TP)()}/applications/${e}/app-assets/${t.asset_id}.webp`,
+                    ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${n.asset_id}.webp`
+                    : `${(0, l.TP)()}/applications/${e}/app-assets/${n.asset_id}.webp`,
             );
             return (
-                null != l && s.searchParams.set("size", (0, a.kr)(l).toString()),
-                t.metadata.is_animated && s.searchParams.set("animated", "true"),
-                s.toString()
+                null != t && a.searchParams.set("size", (0, s.kr)(t).toString()),
+                n.metadata.is_animated && a.searchParams.set("animated", "true"),
+                a.toString()
             );
         },
     },

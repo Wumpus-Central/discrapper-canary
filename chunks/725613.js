@@ -1,47 +1,47 @@
-var l = t(478437),
-    i = t(855986),
-    a = t(73153),
-    s = t(225123),
-    r = t(927813);
-let c = new Set(),
+var i = n(478437),
+    r = n(855986),
+    a = n(73153),
+    s = n(225123),
+    l = n(927813);
+let o = new Set(),
     d = {};
-function o(e) {
-    return new Date(e * r.A.Millis.SECOND).getTime();
+function c(e) {
+    return new Date(e * l.A.Millis.SECOND).getTime();
 }
 function u() {
-    c.clear();
+    o.clear();
 }
-function N(e) {
-    c.delete(e.guild.id);
+function _(e) {
+    o.delete(e.guild.id);
 }
-class g extends i.Ay.Store {
+class E extends r.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
     static displayName = "VoiceChannelStartTimeStore";
     getStartTime(e) {
-        if (null != e && null != e.guild_id && e.type === l.r.GUILD_VOICE) return d[e.guild_id]?.[e.id];
+        if (null != e && null != e.guild_id && e.type === i.r.GUILD_VOICE) return d[e.guild_id]?.[e.id];
     }
     hasRequestedStartTimes(e) {
-        return c.has(e);
+        return o.has(e);
     }
 }
-let C = new g(a.h, {
-    GUILD_CREATE: N,
-    GUILD_DELETE: N,
+let A = new E(a.h, {
+    GUILD_CREATE: _,
+    GUILD_DELETE: _,
     CONNECTION_RESUMED: u,
     CONNECTION_OPEN: u,
     VOICE_CHANNEL_START_TIME_UPDATE: function (e) {
-        let { guildId: n, id: t, voiceStartTime: l } = e;
-        (null == d[n] && (d[n] = {}), (d[n][t] = null != l ? o(l) : void 0));
+        let { guildId: t, id: n, voiceStartTime: i } = e;
+        (null == d[t] && (d[t] = {}), (d[t][n] = null != i ? c(i) : void 0));
     },
     CHANNEL_INFO: function (e) {
-        let { guildId: n, channels: t } = e;
-        for (let { id: e, voiceStartTime: l } of ((d[n] = {}), t)) d[n][e] = null != l ? o(l) : void 0;
+        let { guildId: t, channels: n } = e;
+        for (let { id: e, voiceStartTime: i } of ((d[t] = {}), n)) d[t][e] = null != i ? c(i) : void 0;
     },
     FETCH_CHANNEL_INFO: function (e) {
-        let { guildId: n } = e;
-        c.add(n);
+        let { guildId: t } = e;
+        o.add(t);
     },
 });
-t.d(n, {}, { A: C });
+n.d(t, {}, { A: A });

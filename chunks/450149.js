@@ -1,36 +1,36 @@
 var l = n(582128),
-    r = n(855986),
-    s = n(401843),
-    t = n(384200),
-    a = n(734057),
-    c = n(576705),
-    h = n(309010),
-    u = n(818348);
+    i = n(855986),
+    a = n(401843),
+    r = n(384200),
+    s = n(734057),
+    o = n(576705),
+    u = n(309010),
+    c = n(818348);
 n.d(
-    i,
+    t,
     {},
     {
-        A: function (e, i, n) {
-            let d = null == i || null == n,
-                A = (0, r.bG)([a.A], () => a.A.getChannel(i)),
-                o = (0, r.bG)([c.A], () => null != A && c.A.canBasicChannel(u.hV.CONNECT, A)),
-                p = (0, r.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === i),
+        A: function (e, t, n) {
+            let d = null == t || null == n,
+                m = (0, i.bG)([s.A], () => s.A.getChannel(t)),
+                A = (0, i.bG)([o.A], () => null != m && o.A.canBasicChannel(c.hV.CONNECT, m)),
+                p = (0, i.bG)([u.Ay], () => u.Ay.getVoiceChannelId() === t),
                 {
-                    shouldFetchPreview: v,
-                    previewUrl: w,
+                    shouldFetchPreview: h,
+                    previewUrl: f,
                     isLoading: g,
-                } = (0, r.cf)([t.A], () => ({
-                    shouldFetchPreview: !d && t.A.shouldFetchPreview(e, i, n),
-                    previewUrl: d ? null : t.A.getPreviewURL(e, i, n),
-                    isLoading: !d && t.A.getIsPreviewLoading(e, i, n),
+                } = (0, i.cf)([r.A], () => ({
+                    shouldFetchPreview: !d && r.A.shouldFetchPreview(e, t, n),
+                    previewUrl: d ? null : r.A.getPreviewURL(e, t, n),
+                    isLoading: !d && r.A.getIsPreviewLoading(e, t, n),
                 })),
-                C = o || p;
+                x = A || p;
             return (l.useEffect(() => {
-                v && !d && C && (0, s.Tp)(e, i, n);
-            }, [v, i, e, n, d, C]),
-            d || !C)
+                h && !d && x && (0, a.Tp)(e, t, n);
+            }, [h, t, e, n, d, x]),
+            d || !x)
                 ? { previewUrl: void 0, isLoading: !1 }
-                : { previewUrl: w, isLoading: g };
+                : { previewUrl: f, isLoading: g };
         },
     },
 );

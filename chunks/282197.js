@@ -17,7 +17,7 @@ function A(t) {
     let { entry: n } = t;
     return (0, l.jsx)(l.Fragment, { children: [s.Xr].map((t, e) => (0, l.jsx)(t, { entry: n }, `entry-${e}`)) });
 }
-function f(t) {
+function x(t) {
     let { entry: n } = t;
     return (0, l.jsx)(l.Fragment, { children: [s.Y8].map((t, e) => (0, l.jsx)(t, { entry: n }, `entry-${e}`)) });
 }
@@ -26,9 +26,9 @@ e.d(
     {},
     {
         A: function (t) {
-            let { user: n, activity: e, className: g } = t,
-                m = (0, o.A)({ activity: e, user: n }),
-                p = (0, c.Cy)(e)
+            let { user: n, activity: e, className: m } = t,
+                f = (0, o.A)({ activity: e, user: n }),
+                g = (0, c.Cy)(e)
                     ? []
                     : e.type === a.$.PLAYING
                       ? [u.cy, u.QA]
@@ -39,17 +39,17 @@ e.d(
                           : e.type === a.$.COMPETING
                             ? [u.QA]
                             : [];
-            return 0 === p.length
+            return 0 === g.length
                 ? null
                 : (0, l.jsxs)(s.mG, {
                       location: s.N5.USER_PROFILE,
-                      className: g,
+                      className: m,
                       children: [
-                          p.map((t, n) => (0, l.jsx)(t, { activity: e }, `activity-${n}`)),
-                          (0, i.YW)(m)
+                          g.map((t, n) => (0, l.jsx)(t, { activity: e }, `activity-${n}`)),
+                          (0, i.YW)(f)
                               .when(r.qQ, (t) => (0, l.jsx)(d, { entry: t }))
                               .when(r.UQ, (t) => (0, l.jsx)(A, { entry: t }))
-                              .when(r.p6, (t) => (0, l.jsx)(f, { entry: t }))
+                              .when(r.p6, (t) => (0, l.jsx)(x, { entry: t }))
                               .otherwise(() => null),
                       ],
                   });

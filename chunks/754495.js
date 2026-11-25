@@ -22,15 +22,15 @@ e.d(
     {
         W: d,
         s: function (t) {
-            let { user: n, entry: u, display: A, onAction: f } = t,
-                g = (0, c.A)(),
-                m = (0, i.bG)([o.default], () => o.default.getCurrentUser());
-            return n.id === m?.id && "recent" === A && (0, s.$R)(u)
+            let { user: n, entry: u, display: A, onAction: x } = t,
+                m = (0, c.A)(),
+                f = (0, i.bG)([o.default], () => o.default.getCurrentUser());
+            return n.id === f?.id && "recent" === A && (0, s.$R)(u)
                 ? (0, l.jsx)(r.Dr, {
                       id: "delete-entry-history",
                       label: d(u),
                       action: () => {
-                          (f?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
+                          (x?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
                               (0, s.$R)(u) &&
                                   (0, a.mM)(async () => {
                                       let { default: t } = await Promise.all([
@@ -49,8 +49,8 @@ e.d(
                                           (0, l.jsx)(t, {
                                               entry: u,
                                               user: n,
-                                              onAction: f,
-                                              onOpenGameSettings: g,
+                                              onAction: x,
+                                              onOpenGameSettings: m,
                                               ...e,
                                           });
                                   }));

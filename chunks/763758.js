@@ -1,40 +1,40 @@
-var i = e(477900),
-    n = e(582128),
-    p = e(28863);
-class r extends n.PureComponent {
+var l = n(477900),
+    i = n(582128),
+    a = n(28863);
+class r extends i.PureComponent {
     render() {
-        let { text: s, lastItem: t, className: e } = this.props;
-        return (0, i.jsxs)("span", {
-            children: [(0, i.jsx)(p.Anchor, { className: e, onClick: this.handleClick, children: s }), t ? "" : ", "],
+        let { text: e, lastItem: t, className: n } = this.props;
+        return (0, l.jsxs)("span", {
+            children: [(0, l.jsx)(a.Anchor, { className: n, onClick: this.handleClick, children: e }), t ? "" : ", "],
         });
     }
     handleClick = () => {
-        let { onClick: s, index: t } = this.props;
-        s?.(t);
+        let { onClick: e, index: t } = this.props;
+        e?.(t);
     };
 }
-class l extends n.PureComponent {
+class s extends i.PureComponent {
     render() {
-        let s = this.props.artists.split("; ");
-        if (!this.props.canOpen) return s.join(", ");
-        let t = s.length - 1;
-        return s.map((s, e) =>
-            (0, i.jsx)(
+        let e = this.props.artists.split("; ");
+        if (!this.props.canOpen) return e.join(", ");
+        let t = e.length - 1;
+        return e.map((e, n) =>
+            (0, l.jsx)(
                 r,
                 {
-                    text: s,
-                    index: e,
-                    lastItem: e === t,
+                    text: e,
+                    index: n,
+                    lastItem: n === t,
                     onClick: this.handleOpenSpotifyArtist,
                     className: this.props.linkClassName,
                 },
-                `spotify-artist-${e}`,
+                `spotify-artist-${n}`,
             ),
         );
     }
-    handleOpenSpotifyArtist = (s) => {
+    handleOpenSpotifyArtist = (e) => {
         let { onOpenSpotifyArtist: t } = this.props;
-        t?.(s);
+        t?.(e);
     };
 }
-e.d(t, {}, { A: l });
+n.d(t, {}, { A: s });

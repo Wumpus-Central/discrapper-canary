@@ -13,8 +13,8 @@ var i = n(477900),
     g = n(43105),
     A = n(129230),
     p = n(652215),
-    m = n(792996);
-function I(e) {
+    I = n(792996);
+function m(e) {
     let {
             tutorialId: t,
             targetElementRef: n,
@@ -45,7 +45,7 @@ function I(e) {
         graphic: { type: "image", src: s },
         title: a,
         body: o,
-        actions: [{ text: m.intl.string(m.t["+IrDzN"]), variant: "primary", onClick: h }],
+        actions: [{ text: I.intl.string(I.t["+IrDzN"]), variant: "primary", onClick: h }],
         onRequestClose: u,
     });
 }
@@ -55,7 +55,7 @@ function E(e) {
         a = r.useCallback(() => s((e) => !e), []),
         o = r.useCallback(() => s(!1), []);
     return (0, i.jsxs)(i.Fragment, {
-        children: [t({ onClick: a, "aria-expanded": l }, l), l && (0, i.jsx)(I, { ...n, onClose: o })],
+        children: [t({ onClick: a, "aria-expanded": l }, l), l && (0, i.jsx)(m, { ...n, onClose: o })],
     });
 }
 var S = n(787541),
@@ -76,34 +76,34 @@ var N = n(241541),
     T = n(851230);
 function y() {
     return (0, i.jsx)(i.Fragment, {
-        children: m.intl.format(m.t.ymkBti, {
-            shareIcon: m.intl.string(m.t.VINpSK),
+        children: I.intl.format(I.t.ymkBti, {
+            shareIcon: I.intl.string(I.t.VINpSK),
             shareIconHook: () => (0, i.jsx)(N.GroupPlusIcon, { className: T.Kk }, "icon"),
         }),
     });
 }
 var v = n(179913),
     M = n(71393),
-    D = n(967198),
-    R = n(303634);
+    R = n(967198),
+    D = n(303634);
 let O = {
     "voice-conversations": function (e) {
         return (0, i.jsx)(E, {
             ...e,
             graphicSrc:
                 "https://cdn.discordapp.com/assets/content/2fbf80a634ec810152549bc64cc498329014001bf81341a6fd08ca73f0370316.svg",
-            title: m.intl.string(m.t.w5HAll),
-            body: m.intl.string(m.t.Ww4hhq),
+            title: I.intl.string(I.t.w5HAll),
+            body: I.intl.string(I.t.Ww4hhq),
         });
     },
     "writing-messages": function (e) {
-        let t = (0, d.bG)([M.A, D.A], () => M.A.getGuild(D.A.getGuildId()))?.name;
+        let t = (0, d.bG)([M.A, R.A], () => M.A.getGuild(R.A.getGuildId()))?.name;
         return (0, i.jsx)(E, {
             ...e,
             graphicSrc:
                 "https://cdn.discordapp.com/assets/content/bdb4aa801d39492170cf3db05e482b46af127a4a87ba006b661eb376daeaee04.svg",
-            title: m.intl.string(m.t.nkP0ly),
-            body: [m.intl.format(m.t.oQuG3K, { serverName: t })],
+            title: I.intl.string(I.t.nkP0ly),
+            body: [I.intl.format(I.t.oQuG3K, { serverName: t })],
         });
     },
     "organize-by-topic": function (e) {
@@ -111,8 +111,8 @@ let O = {
             ...e,
             graphicSrc:
                 "https://cdn.discordapp.com/assets/content/5d2fe3296aafdf78f5a3c44a803c714f1c90e3b0d6d1c7290aa5fdf2e79831e3.svg",
-            title: m.intl.string(m.t["j/5+IX"]),
-            body: m.intl.string(m.t.mufH2P),
+            title: I.intl.string(I.t["j/5+IX"]),
+            body: I.intl.string(I.t.mufH2P),
         });
     },
 };
@@ -173,13 +173,13 @@ class x extends r.PureComponent {
         return {
             title: (e =
                 {
-                    WHOS_ONLINE: { title: m.intl.string(m.t.l2nSoI), body: m.intl.format(m.t.y6tbBB, {}) },
-                    INSTANT_INVITE: { title: m.intl.string(m.t.XcehY3), body: (0, i.jsx)(y, {}) },
-                    SERVER_SETTINGS: { title: m.intl.string(m.t.wc8wi5), body: m.intl.format(m.t.mIfDhc, {}) },
-                    DIRECT_MESSAGES: { title: m.intl.string(m.t.V07x5y), body: m.intl.format(m.t.GEBBey, {}) },
-                    CREATE_MORE_SERVERS: { title: m.intl.string(m.t["50FORo"]), body: m.intl.format(m.t.zVL4qa, {}) },
-                    CREATE_FIRST_SERVER: { title: m.intl.string(m.t.CtOX9T), body: m.intl.format(m.t.TflqTe, {}) },
-                    FRIENDS_LIST: { title: m.intl.string(m.t.Fnk9L4), body: m.intl.format(m.t.NTq0AZ, {}) },
+                    WHOS_ONLINE: { title: I.intl.string(I.t.l2nSoI), body: I.intl.format(I.t.y6tbBB, {}) },
+                    INSTANT_INVITE: { title: I.intl.string(I.t.XcehY3), body: (0, i.jsx)(y, {}) },
+                    SERVER_SETTINGS: { title: I.intl.string(I.t.wc8wi5), body: I.intl.format(I.t.mIfDhc, {}) },
+                    DIRECT_MESSAGES: { title: I.intl.string(I.t.V07x5y), body: I.intl.format(I.t.GEBBey, {}) },
+                    CREATE_MORE_SERVERS: { title: I.intl.string(I.t["50FORo"]), body: I.intl.format(I.t.zVL4qa, {}) },
+                    CREATE_FIRST_SERVER: { title: I.intl.string(I.t.CtOX9T), body: I.intl.format(I.t.TflqTe, {}) },
+                    FRIENDS_LIST: { title: I.intl.string(I.t.Fnk9L4), body: I.intl.format(I.t.NTq0AZ, {}) },
                 }[t.replace(/-/g, "_").toUpperCase()] ?? {}).title,
             body: e.body,
             isLongText: e.isLongText ?? !1,
@@ -199,33 +199,33 @@ class x extends r.PureComponent {
                 popoutPosition: g,
             } = l,
             { offsetX: A, offsetY: p } = this.state,
-            I = { left: null != A ? r.x + A : void 0, top: null != p ? r.y + p : void 0 };
+            m = { left: null != A ? r.x + A : void 0, top: null != p ? r.y + p : void 0 };
         function E(e) {
             let t = n && !e;
-            return { [R.bW]: t, [R.EO]: !t, [R.TX]: d };
+            return { [D.bW]: t, [D.EO]: !t, [D.TX]: d };
         }
         let S = (e, t) => {
                 let r;
                 return (0, i.jsx)(c.D, {
                     ...e,
-                    "aria-label": m.intl.string(m.t.IyCzIF),
-                    className: R.q3,
-                    style: I,
+                    "aria-label": I.intl.string(I.t.IyCzIF),
+                    className: D.q3,
+                    style: m,
                     innerRef: this.contentRef,
                     children: (0, i.jsxs)("div", {
-                        className: s()(R.Mp, E(t)),
+                        className: s()(D.Mp, E(t)),
                         children: [
                             ((r = n && !t),
                             !0 !== d
                                 ? null
                                 : (0, i.jsxs)("div", {
                                       children: [
-                                          (0, i.jsx)("div", { className: s()(R.Mn, { [R.bW]: r, [R.EO]: !r }) }),
-                                          (0, i.jsx)("div", { className: s()(R.sQ, { [R.bW]: r, [R.EO]: !r }) }),
+                                          (0, i.jsx)("div", { className: s()(D.Mn, { [D.bW]: r, [D.EO]: !r }) }),
+                                          (0, i.jsx)("div", { className: s()(D.sQ, { [D.bW]: r, [D.EO]: !r }) }),
                                       ],
                                   })),
-                            (0, i.jsx)("div", { className: s()(R.r6, E(t)) }),
-                            (0, i.jsx)("div", { className: s()(R.CY, E(t)) }),
+                            (0, i.jsx)("div", { className: s()(D.r6, E(t)) }),
+                            (0, i.jsx)("div", { className: s()(D.CY, E(t)) }),
                         ],
                     }),
                 });

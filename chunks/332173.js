@@ -1,12 +1,12 @@
-var s = t(477900),
-    i = t(582128),
-    l = t(503698),
-    a = t.n(l),
+var l = t(477900),
+    s = t(582128),
+    a = t(503698),
+    i = t.n(a),
     r = t(317097),
     o = t(36075),
-    c = t(939249),
-    d = t(232042),
-    u = t(209599);
+    u = t(939249),
+    c = t(232042),
+    d = t(209599);
 t.d(
     n,
     {},
@@ -15,49 +15,49 @@ t.d(
             let {
                     ref: n,
                     children: t,
-                    className: l,
+                    className: a,
                     color: m,
-                    roleColors: h,
-                    iconType: x,
-                    onMouseEnter: g,
+                    roleColors: x,
+                    iconType: h,
+                    onMouseEnter: p,
                     onMouseLeave: j,
-                    ...p
+                    ...g
                 } = e,
-                [b, N] = i.useState(!1),
-                { gradientStyle: I, gradientClassname: f } = (0, o.v5)({
-                    colorStrings: h ?? null,
+                [f, v] = s.useState(!1),
+                { gradientStyle: N, gradientClassname: I } = (0, o.v5)({
+                    colorStrings: x ?? null,
                     roleStyle: "username",
-                    animateGradient: b,
+                    animateGradient: f,
                 }),
-                v = i.useCallback(
+                b = s.useCallback(
                     (e) => {
-                        (N(!0), g?.(e));
+                        (v(!0), p?.(e));
                     },
-                    [N, g],
+                    [v, p],
                 ),
-                C = i.useCallback(
+                E = s.useCallback(
                     (e) => {
-                        (N(!1), j?.(e));
+                        (v(!1), j?.(e));
                     },
-                    [N, j],
+                    [v, j],
                 ),
                 A = {};
             return (
-                null != m && (A = { color: (0, r.Hl)(m), backgroundColor: b ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
-                (0, s.jsx)(c.D, {
-                    ...p,
+                null != m && (A = { color: (0, r.Hl)(m), backgroundColor: f ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
+                (0, l.jsx)(u.D, {
+                    ...g,
                     innerRef: n,
                     tag: "span",
-                    className: a()(l, { [u.i]: !0, interactive: p.onClick }),
-                    onMouseEnter: v,
-                    onMouseLeave: C,
+                    className: i()(a, { [d.i]: !0, interactive: g.onClick }),
+                    onMouseEnter: b,
+                    onMouseLeave: E,
                     style: A,
-                    tabIndex: null != p.onClick ? 0 : -1,
+                    tabIndex: null != g.onClick ? 0 : -1,
                     children:
-                        null != x
-                            ? (0, s.jsx)(d.A, { iconType: x, children: t })
-                            : null != h
-                              ? (0, s.jsx)("span", { style: { ...I }, className: f, children: t })
+                        null != h
+                            ? (0, l.jsx)(c.A, { iconType: h, children: t })
+                            : null != x
+                              ? (0, l.jsx)("span", { style: { ...N }, className: I, children: t })
                               : t,
                 })
             );

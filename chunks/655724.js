@@ -1,31 +1,31 @@
-var n = l(477900),
-    i = l(866665),
-    a = l(821609),
-    s = l(729829),
-    r = l(756977),
-    o = l(861089),
-    c = l(792996);
-l.d(
+var l = n(477900),
+    i = n(866665),
+    a = n(821609),
+    r = n(729829),
+    s = n(756977),
+    o = n(861089),
+    u = n(792996);
+n.d(
     t,
     {},
     {
         B: function (e) {
-            let { userId: t, channel: l, onAction: u, variant: d = "primary" } = e,
-                m = (0, s.u)(t, l),
-                [A, h] = (0, r.A)(t, l.id);
+            let { userId: t, channel: n, onAction: c, variant: d = "primary" } = e,
+                m = (0, r.u)(t, n),
+                [A, p] = (0, s.A)(t, n.id);
             return null == m
                 ? null
-                : (0, n.jsx)(i.m, {
+                : (0, l.jsx)(i.m, {
                       position: "top",
-                      text: h,
+                      text: p,
                       shouldShow: A,
                       asContainer: !0,
-                      children: (0, n.jsx)(a.$, {
-                          text: c.intl.string(o.default.DKHhec),
+                      children: (0, l.jsx)(a.$, {
+                          text: u.intl.string(o.default.DKHhec),
                           variant: d,
                           size: "sm",
                           onClick: () => {
-                              (m.handleRequestToStream({ analyticsLocation: "request to stream button" }), u?.());
+                              (m.handleRequestToStream({ analyticsLocation: "request to stream button" }), c?.());
                           },
                           fullWidth: !0,
                           disabled: A,

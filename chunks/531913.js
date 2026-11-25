@@ -1,35 +1,35 @@
-var n = l(582128),
-    a = l(90947),
-    s = l(855986),
-    i = l(549699),
-    r = l(29496),
-    o = l(201718),
-    u = l(339580),
-    c = l(773669),
-    m = l(403362),
-    d = l(352003);
-let v = [];
-l.d(
-    t,
+var l = t(582128),
+    s = t(90947),
+    a = t(855986),
+    i = t(549699),
+    r = t(29496),
+    o = t(201718),
+    u = t(339580),
+    c = t(773669),
+    d = t(403362),
+    m = t(352003);
+let x = [];
+t.d(
+    n,
     {},
     {
-        A: function (e, t) {
+        A: function (e, n) {
             (0, o.P)(e);
-            let l = (0, s.bG)([u.A], () => u.A.getUserIdentityByApplication(e, t)),
-                p = (0, s.bG)([c.default], () => c.default.locale),
-                x = n.useMemo(() => [t], [t]),
-                [f] = (0, d.A)(x),
-                _ = n.useMemo(() => (0, a.VG)(l?.profile ?? void 0), [l?.profile]),
-                h = (0, s.bG)([u.A], () => u.A.getFetchState(e) !== u.e.FETCHED),
-                N = (0, s.bG)([r.A], () => r.A.getAssets(t)),
-                j = n.useMemo(() => Object.values(N ?? {}).filter(m.Vq), [N]),
-                T = n.useCallback((e) => (0, i.Q)(t, e, e.metadata.width), [t]);
+            let t = (0, a.bG)([u.A], () => u.A.getUserIdentityByApplication(e, n)),
+                h = (0, a.bG)([c.default], () => c.default.locale),
+                p = l.useMemo(() => [n], [n]),
+                [j] = (0, m.A)(p),
+                g = l.useMemo(() => (0, s.VG)(t?.profile ?? void 0), [t?.profile]),
+                f = (0, a.bG)([u.A], () => u.A.getFetchState(e) !== u.e.FETCHED),
+                v = (0, a.bG)([r.A], () => r.A.getAssets(n)),
+                N = l.useMemo(() => Object.values(v ?? {}).filter(d.Vq), [v]),
+                I = l.useCallback((e) => (0, i.Q)(n, e, e.metadata.width), [n]);
             return {
-                locale: p,
-                surfaceConfigs: f?.surfaces ?? {},
-                isLoading: h,
-                hasIdentity: null != l,
-                resolutionContext: { data: _, applicationAssets: j, getApplicationAssetUrl: T, localizedStrings: v },
+                locale: h,
+                surfaceConfigs: j?.surfaces ?? {},
+                isLoading: f,
+                hasIdentity: null != t,
+                resolutionContext: { data: g, applicationAssets: N, getApplicationAssetUrl: I, localizedStrings: x },
             };
         },
     },

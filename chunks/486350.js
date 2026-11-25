@@ -1,17 +1,17 @@
-var h = E(73153),
-    i = E(820672);
-E.d(
+var l = n(73153),
+    i = n(820672);
+n.d(
     t,
     {},
     {
-        p: function (p) {
-            (h.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_START", userId: p }),
+        p: function (e) {
+            (l.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_START", userId: e }),
                 setTimeout(() => {
-                    h.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_END", userId: p });
+                    l.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_END", userId: e });
                 }, i.e));
         },
-        q: function (p) {
-            h.h.dispatch({ type: "STREAM_REQUEST_REMINDER_DISMISS", messageId: p });
+        q: function (e) {
+            l.h.dispatch({ type: "STREAM_REQUEST_REMINDER_DISMISS", messageId: e });
         },
     },
 );

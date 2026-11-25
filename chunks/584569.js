@@ -12,13 +12,13 @@ var i = n(855986),
     g = n(607567),
     A = n(652215),
     p = n(806931);
-let m = new s.A(),
-    I = new s.A(),
+let I = new s.A(),
+    m = new s.A(),
     E = new Set();
 function S(e, t, n) {
     let i = new o.A({ userId: e.id, channelId: n }),
         r = (0, g.RQ)(i, t ?? A.ME, e.id);
-    m.set(e.id, r);
+    I.set(e.id, r);
     let l = {
         type: p.lp.USER,
         user: e,
@@ -36,11 +36,11 @@ function S(e, t, n) {
         localVideoDisabled: !1,
         isPoppedOut: !1,
     };
-    I.set(e.id, l);
+    m.set(e.id, l);
 }
 function C(e) {
-    let t = m.delete(e),
-        n = I.delete(e),
+    let t = I.delete(e),
+        n = m.delete(e),
         i = E.delete(e);
     return t || n || i;
 }
@@ -59,7 +59,7 @@ function _() {
     );
 }
 function N() {
-    (m.clear(), I.clear(), E.clear());
+    (I.clear(), m.clear(), E.clear());
 }
 class T extends i.Ay.Store {
     static displayName = "RTCConnectionDesyncStore";
@@ -67,16 +67,16 @@ class T extends i.Ay.Store {
         (this.waitFor(f.A, h.default, d.A, c.A), this.syncWith([h.default], _));
     }
     get desyncedVoiceStatesCount() {
-        return m.size();
+        return I.size();
     }
     getDesyncedUserIds() {
-        return m.keys();
+        return I.keys();
     }
     getDesyncedVoiceStates() {
-        return m.values();
+        return I.values();
     }
     getDesyncedParticipants() {
-        return I.values();
+        return m.values();
     }
 }
 let y = new T(l.h, {

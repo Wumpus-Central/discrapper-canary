@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     V: "comparison_dM3t6a",
     Nr: "card_dM3t6a",
     Kk: "icon_dM3t6a",

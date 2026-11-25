@@ -1,10 +1,10 @@
 var i = l(477900);
 l(582128);
-var a = l(503698),
-    n = l.n(a),
+var n = l(503698),
+    a = l.n(n),
     r = l(709066),
     t = l(705751),
-    d = l(646810);
+    o = l(646810);
 l.d(
     s,
     { v: () => t.nu },
@@ -13,35 +13,35 @@ l.d(
             let {
                 name: s,
                 discriminator: l,
-                invertBotTagColor: a,
+                invertBotTagColor: n,
                 nameColor: t,
-                className: o,
+                className: d,
                 botType: u,
                 usernameClass: c,
                 discriminatorClass: m,
                 botClass: p,
                 botVerified: y = !1,
-                style: N,
+                style: h,
                 useRemSizes: v = !1,
-                usernameIcon: h,
-                guildTag: x,
+                usernameIcon: x,
+                guildTag: N,
             } = e;
             return (0, i.jsxs)("div", {
-                className: n()(o, d.oM),
-                style: N,
+                className: a()(d, o.oM),
+                style: h,
                 children: [
                     (0, i.jsxs)("span", {
-                        className: n()(d.Xh, c),
+                        className: a()(o.Xh, c),
                         style: null != t ? { color: t } : void 0,
-                        children: [h, s],
+                        children: [x, s],
                     }),
-                    x,
+                    N,
                     null != l ? (0, i.jsxs)("span", { className: m ?? void 0, children: ["#", l] }) : null,
                     null != u
                         ? (0, i.jsx)(r.A, {
                               type: u,
-                              invertColor: a,
-                              className: n()(p, d.Od),
+                              invertColor: n,
+                              className: a()(p, o.Od),
                               verified: y,
                               useRemSizes: v,
                           })

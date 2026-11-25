@@ -1,35 +1,35 @@
-var a = t(945810),
-    i = t(813645),
-    l = t(735729);
-let r = (0, a.mj)({
+var a = n(945810),
+    i = n(813645),
+    r = n(735729);
+let l = (0, a.mj)({
         name: "2025-04-native-markdown",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    o = (0, a.mj)({
+    s = (0, a.mj)({
         name: "2026-10-native-markdown-setting",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    d = "enable_native_markdown";
-t.d(
-    n,
+    o = "enable_native_markdown";
+n.d(
+    t,
     {},
     {
         I2: function (e) {
-            let { location: n } = e,
-                t = o.useConfig({ location: n }).enabled,
-                a = (0, l.A)(d),
-                i = r.useConfig({ location: n }).enabled;
-            return { enabled: t ? a : i };
+            let { location: t } = e,
+                n = s.useConfig({ location: t }).enabled,
+                a = (0, r.A)(o),
+                i = l.useConfig({ location: t }).enabled;
+            return { enabled: n ? a : i };
         },
-        XQ: d,
-        wG: o,
-        wr: function (e, n) {
-            let { location: t } = e;
-            return o.getConfig({ location: t }, n).enabled ? i.A.get(d) : r.getConfig({ location: t }, n).enabled;
+        XQ: o,
+        wG: s,
+        wr: function (e, t) {
+            let { location: n } = e;
+            return s.getConfig({ location: n }, t).enabled ? i.A.get(o) : l.getConfig({ location: n }, t).enabled;
         },
     },
 );

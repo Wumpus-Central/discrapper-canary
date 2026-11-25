@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     UD: "buttonContainer_rMw7KK",
     rf: "body_rMw7KK",
     FS: "textContainer_rMw7KK",

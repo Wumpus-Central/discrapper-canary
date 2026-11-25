@@ -141,8 +141,8 @@ n.d(
                         () => cancelAnimationFrame(e)
                     );
                 }, [n, h]));
-            let m = { width: e.width, height: e.height },
-                { onHoverTime: I, onHoverClick: E } = e;
+            let I = { width: e.width, height: e.height },
+                { onHoverTime: m, onHoverClick: E } = e;
             function S(e) {
                 if (null == A) return null;
                 let t = e.currentTarget.getBoundingClientRect();
@@ -151,10 +151,10 @@ n.d(
                 return Date.now() - (1 - n) * A;
             }
             let C =
-                    null != I && null != A
+                    null != m && null != A
                         ? (e) => {
                               let t = S(e);
-                              null != t && I(t);
+                              null != t && m(t);
                           }
                         : void 0,
                 _ =
@@ -167,12 +167,12 @@ n.d(
             return (0, i.jsx)(
                 "canvas",
                 {
-                    style: m,
+                    style: I,
                     width: e.width,
                     height: e.height,
                     ref: t,
                     onPointerMove: C,
-                    onPointerLeave: null != I ? () => I(null) : void 0,
+                    onPointerLeave: null != m ? () => m(null) : void 0,
                     onPointerDown: _,
                 },
                 "canvas",

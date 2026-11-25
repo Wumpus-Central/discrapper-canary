@@ -25,22 +25,22 @@ e.d(
     {
         Ay: function (t) {
             let { user: n, activity: e, entry: i, onAction: a, isMenuOpen: s, appContext: o } = t,
-                { applicationId: f, sourceUserId: g } = A({ activity: e, entry: i, user: n }),
-                m = (0, u.A)({
+                { applicationId: x, sourceUserId: m } = A({ activity: e, entry: i, user: n }),
+                f = (0, u.A)({
                     location: "UserProfileActivityContextMenu",
                     source: c.GameProfileSources.UserProfileCardContextMenu,
                     trackEntryPointImpression: s,
-                    applicationId: f,
-                    sourceUserId: g,
+                    applicationId: x,
+                    sourceUserId: m,
                     appContext: o,
                 });
-            return null == m
+            return null == f
                 ? null
                 : (0, l.jsx)(r.Dr, {
                       id: "game-profile",
                       label: d.intl.string(d.t.ajHoOr),
                       action: (t) => {
-                          (a?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), m(t));
+                          (a?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), f(t));
                       },
                   });
         },

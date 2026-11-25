@@ -1,67 +1,67 @@
-var l = e(477900);
-e(582128);
-var i = e(350835),
-    a = e(339350),
-    r = e(687966),
-    s = e(323384),
-    o = e(432017),
-    c = e(748562),
-    u = e(646514),
-    d = e(177953),
-    A = e(306788),
-    f = e(765379),
-    g = e(189117),
-    m = e(471107),
-    p = e(506326),
-    x = e(693879),
-    I = e(583846),
-    _ = e(53257);
-e.d(
-    n,
+var l = n(477900);
+n(582128);
+var i = n(350835),
+    a = n(339350),
+    r = n(687966),
+    s = n(323384),
+    o = n(432017),
+    u = n(748562),
+    c = n(646514),
+    d = n(177953),
+    m = n(306788),
+    A = n(765379),
+    p = n(189117),
+    h = n(471107),
+    f = n(506326),
+    g = n(693879),
+    x = n(583846),
+    I = n(53257);
+n.d(
+    t,
     {},
     {
-        QA: function (t) {
-            let { activity: n } = t,
-                e = n.timestamps?.start ?? n.created_at,
-                { now: d } = (0, m.G)();
-            if (null == e || (0, _.A)(n)) return null;
-            let A = n.timestamps?.end,
-                I = n.timestamps?.isCountDown ?? !1,
-                N = (function (t) {
-                    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                        e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n
+        QA: function (e) {
+            let { activity: t } = e,
+                n = t.timestamps?.start ?? t.created_at,
+                { now: d } = (0, h.G)();
+            if (null == n || (0, I.A)(t)) return null;
+            let m = t.timestamps?.end,
+                x = t.timestamps?.isCountDown ?? !1,
+                v = (function (e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                    return t
                         ? a.HourglassIcon
-                        : (0, f.A)(t) || (0, g.$_)(t)
-                          ? e
+                        : (0, A.A)(e) || (0, p.$_)(e)
+                          ? n
                               ? r.GameControllerIcon
                               : s.AppsIcon
-                          : t.type === i.$.LISTENING
+                          : e.type === i.$.LISTENING
                             ? o.MusicIcon
-                            : t.type === i.$.WATCHING
-                              ? c.TvIcon
+                            : e.type === i.$.WATCHING
+                              ? u.TvIcon
                               : r.GameControllerIcon;
-                })(n, I && null != A && A > d);
-            return (0, l.jsxs)(p.er, {
+                })(t, x && null != m && m > d);
+            return (0, l.jsxs)(f.er, {
                 children: [
-                    (0, l.jsx)(N, { size: "xxs", color: u.A.colors.TEXT_FEEDBACK_POSITIVE }),
-                    (0, l.jsx)(x.z, {
-                        entry: { start: e, end: A, isCountDown: I },
+                    (0, l.jsx)(v, { size: "xxs", color: c.A.colors.TEXT_FEEDBACK_POSITIVE }),
+                    (0, l.jsx)(g.z, {
+                        entry: { start: n, end: m, isCountDown: x },
                         textColor: "text-feedback-positive",
                     }),
                 ],
             });
         },
-        Rq: function (t) {
-            let { activity: n } = t,
-                e = (0, I.kR)(n.assets?.large_text);
-            return null == e ? null : (0, l.jsx)(p.fM, { Icon: A.TopicsIcon, text: e });
+        Rq: function (e) {
+            let { activity: t } = e,
+                n = (0, x.kR)(t.assets?.large_text);
+            return null == n ? null : (0, l.jsx)(f.fM, { Icon: m.TopicsIcon, text: n });
         },
-        cy: function (t) {
-            let { activity: n } = t;
-            if ((0, f.A)(n) || null == n.party) return null;
-            let e = (0, I.gF)(n.state, n.party);
-            return null == e ? null : (0, l.jsx)(p.fM, { Icon: d.GroupIcon, text: e });
+        cy: function (e) {
+            let { activity: t } = e;
+            if ((0, A.A)(t) || null == t.party) return null;
+            let n = (0, x.gF)(t.state, t.party);
+            return null == n ? null : (0, l.jsx)(f.fM, { Icon: d.GroupIcon, text: n });
         },
     },
 );

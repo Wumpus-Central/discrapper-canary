@@ -12,18 +12,18 @@ e.d(
     {},
     {
         A: function (t) {
-            let { text: n, textId: e, tags: i, platformIcon: d, platformLabel: A, contextMenu: f } = t,
-                { themeType: g } = (0, o.E)();
-            return (null == n || "" === n) && null == f
+            let { text: n, textId: e, tags: i, platformIcon: d, platformLabel: A, contextMenu: x } = t,
+                { themeType: m } = (0, o.E)();
+            return (null == n || "" === n) && null == x
                 ? null
                 : null == n || "" === n
-                  ? (0, l.jsx)("div", { className: a()(u.Si, u.ys), children: f })
+                  ? (0, l.jsx)("div", { className: a()(u.Si, u.ys), children: x })
                   : (0, l.jsxs)("div", {
                         className: u.wx,
                         children: [
                             (0, l.jsxs)(s.E, {
                                 className: u.TK,
-                                variant: g === c.d.SIDEBAR ? "body-sm/medium" : "body-xs/medium",
+                                variant: m === c.d.SIDEBAR ? "body-sm/medium" : "body-xs/medium",
                                 color: "text-strong",
                                 id: e,
                                 children: [
@@ -42,7 +42,7 @@ e.d(
                                     i,
                                 ],
                             }),
-                            null != f && (0, l.jsx)("div", { className: u.Si, children: f }),
+                            null != x && (0, l.jsx)("div", { className: u.Si, children: x }),
                         ],
                     });
         },

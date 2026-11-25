@@ -24,20 +24,20 @@ n.d(
                 } = e,
                 p = (0, a.G)(t?.state);
             if (null == t) return null;
-            let { emoji: m } = t,
-                I = null != p && "" !== p ? p : d;
+            let { emoji: I } = t,
+                m = null != p && "" !== p ? p : d;
             return (0, i.jsxs)("div", {
                 className: l()(o.__invalid_container, n),
                 children: [
-                    g || null == m
+                    g || null == I
                         ? null
                         : (0, i.jsx)(s.A, {
-                              emoji: m,
-                              className: l()(o.Z, r, null != c ? { [c]: null == I || "" === I } : null),
+                              emoji: I,
+                              className: l()(o.Z, r, null != c ? { [c]: null == m || "" === m } : null),
                               animate: h,
                               hideTooltip: f,
                           }),
-                    null != I && I.length > 0 ? (0, i.jsx)("span", { className: u, children: I }) : null,
+                    null != m && m.length > 0 ? (0, i.jsx)("span", { className: u, children: m }) : null,
                     A,
                 ],
             });

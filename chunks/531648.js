@@ -12,7 +12,7 @@ function d(t) {
         { themeType: d } = (0, o.E)(),
         A = "string" == typeof n ? n.trim() : n;
     if (null == A || "" === A) return null;
-    function f() {
+    function x() {
         return d === c.d.MODAL || d === c.d.MODAL_V2
             ? (0, l.jsx)(r, { color: "text-default", ...s, children: A })
             : (0, l.jsx)(r, { color: "text-default", ...s, children: (0, l.jsx)(i.A, { children: A }) });
@@ -23,9 +23,9 @@ function d(t) {
                   (t.stopPropagation(), e(t));
               },
               className: u.sd,
-              children: f(),
+              children: x(),
           })
-        : f();
+        : x();
 }
 e.d(
     n,

@@ -1,14 +1,14 @@
-var t = n(350835),
-    a = n(818348);
+var l = n(350835),
+    i = n(818348);
 n.d(
-    l,
+    t,
     {},
     {
         A: function (e) {
-            let { activities: l, status: n, applicationStream: s, voiceChannel: i } = e;
-            if (n === a.cl.OFFLINE || n === a.cl.INVISIBLE) return !1;
-            let r = l?.filter((e) => e.type !== t.$.HANG_STATUS);
-            return null != s || null != i || (r?.length ?? 0) > 0;
+            let { activities: t, status: n, applicationStream: a, voiceChannel: r } = e;
+            if (n === i.cl.OFFLINE || n === i.cl.INVISIBLE) return !1;
+            let s = t?.filter((e) => e.type !== l.$.HANG_STATUS);
+            return null != a || null != r || (s?.length ?? 0) > 0;
         },
     },
 );

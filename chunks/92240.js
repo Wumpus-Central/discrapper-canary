@@ -9,28 +9,28 @@ e.d(
     {},
     {
         A: function (t) {
-            let { user: n, display: e, activity: c, entry: u, stream: d, voiceChannelId: A, analyticsLocations: f } = t,
-                { context: g, trackUserProfileAction: m } = (0, s.NJ)(),
-                { analyticsLocations: p } = (0, a.Ay)(),
-                x = f ?? p,
-                I = (0, i.bG)([r.A], () => r.A.getUserOutbox(n.id));
+            let { user: n, display: e, activity: c, entry: u, stream: d, voiceChannelId: A, analyticsLocations: x } = t,
+                { context: m, trackUserProfileAction: f } = (0, s.NJ)(),
+                { analyticsLocations: g } = (0, a.Ay)(),
+                p = x ?? g,
+                _ = (0, i.bG)([r.A], () => r.A.getUserOutbox(n.id));
             return (0, l.useCallback)(
                 (t) => {
                     let { action: n } = t;
-                    (m({ action: n, analyticsLocations: x }),
+                    (f({ action: n, analyticsLocations: p }),
                         (0, o.Tu)({
                             action: n,
                             display: e,
                             activity: c,
                             entry: u,
                             stream: d,
-                            outbox: I,
+                            outbox: _,
                             voiceChannelId: A,
-                            analyticsLocations: x,
-                            ...g,
+                            analyticsLocations: p,
+                            ...m,
                         }));
                 },
-                [m, g, e, c, d, u, I, A, x],
+                [f, m, e, c, d, u, _, A, p],
             );
         },
     },

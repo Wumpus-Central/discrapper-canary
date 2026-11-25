@@ -1,8 +1,8 @@
-var i = n(477900),
-    r = n(582128),
-    l = n(451988),
-    s = n(792996);
-function a(e) {
+var l = n(477900),
+    i = n(582128),
+    a = n(451988),
+    r = n(792996);
+function s(e) {
     return `${e}`.length < 13 ? 1e3 * e : e;
 }
 n.d(
@@ -10,10 +10,10 @@ n.d(
     {},
     {
         A: function (e) {
-            return class extends r.PureComponent {
+            return class extends i.PureComponent {
                 _interval;
                 constructor(e) {
-                    (super(e), (this._interval = new l.IX()), (this.state = { ...this.getUpdatedTime() }));
+                    (super(e), (this._interval = new a.IX()), (this.state = { ...this.getUpdatedTime() }));
                 }
                 componentDidMount() {
                     this._interval.start(1e3, () => this.setState(this.getUpdatedTime()));
@@ -30,9 +30,9 @@ n.d(
                     let { timestamps: e } = this.props,
                         t = Date.now() / 1e3;
                     return null != e.end
-                        ? this.getDiff(t, a(e.end) / 1e3)
+                        ? this.getDiff(t, s(e.end) / 1e3)
                         : null != e.start
-                          ? this.getDiff(a(e.start) / 1e3, t)
+                          ? this.getDiff(s(e.start) / 1e3, t)
                           : { hours: 0, minutes: 0, seconds: 0 };
                 }
                 renderTime(e) {
@@ -41,20 +41,20 @@ n.d(
                 }
                 getDiff(e, t) {
                     let n = Math.max(t - e, 0),
-                        i = Math.floor(n) % 60,
-                        r = Math.floor(n / 60) % 60;
-                    return { hours: Math.floor(n / 3600) % 24, minutes: r, seconds: i };
+                        l = Math.floor(n) % 60,
+                        i = Math.floor(n / 60) % 60;
+                    return { hours: Math.floor(n / 3600) % 24, minutes: i, seconds: l };
                 }
                 render() {
                     let { timestamps: t, ...n } = this.props,
-                        r = this.renderTime(this.state.hours, !0),
-                        l = this.renderTime(this.state.minutes),
-                        a = this.renderTime(this.state.seconds),
-                        o = -1 === r ? `${l}:${a}` : `${r}:${l}:${a}`;
+                        i = this.renderTime(this.state.hours, !0),
+                        a = this.renderTime(this.state.minutes),
+                        s = this.renderTime(this.state.seconds),
+                        o = -1 === i ? `${a}:${s}` : `${i}:${a}:${s}`;
                     return null != t.end
-                        ? (0, i.jsx)(e, { ...n, message: s.intl.formatToPlainString(s.t["I/J7vI"], { duration: o }) })
+                        ? (0, l.jsx)(e, { ...n, message: r.intl.formatToPlainString(r.t["I/J7vI"], { duration: o }) })
                         : null != t.start
-                          ? (0, i.jsx)(e, { ...n, message: s.intl.formatToPlainString(s.t.M9Fexd, { duration: o }) })
+                          ? (0, l.jsx)(e, { ...n, message: r.intl.formatToPlainString(r.t.M9Fexd, { duration: o }) })
                           : null;
                 }
             };

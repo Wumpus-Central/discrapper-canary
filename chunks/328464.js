@@ -1,4 +1,4 @@
-n.d(t, { K: () => y, A: () => I });
+n.d(t, { K: () => j, A: () => I });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -47,8 +47,8 @@ function v(e) {
 }
 var R = n(460969);
 n(518477);
-var j = n(881518);
-function y(e) {
+var y = n(881518);
+function j(e) {
     let {
             children: t,
             title: n,
@@ -59,34 +59,34 @@ function y(e) {
             badgeImage: _,
             badgeName: A,
             progressCircle: N,
-            rarity: y,
+            rarity: j,
             isAnimated: I = !1,
             unlock: T,
             isUnlockPending: S = !1,
             targetElementRef: C,
             onShow: D,
-            position: M = "top",
-            shouldShow: P,
+            position: U = "top",
+            shouldShow: M,
         } = e,
-        O = I && null == N && null == T,
-        U = r()({ [j.ce]: null != T || S, [j.Yb]: T?.isStarted }),
+        P = I && null == N && null == T,
+        O = r()({ [y.ce]: null != T || S, [y.Yb]: T?.isStarted }),
         {
             tooltipId: B,
             isVisible: G,
             targetElementRef: k,
             trigger: w,
-        } = (0, i.D)({ children: t, targetElementRef: C, delay: 300, onTooltipShow: D, shouldShow: P }),
-        L = null != y && y !== s.x.COMMON,
+        } = (0, i.D)({ children: t, targetElementRef: C, delay: 300, onTooltipShow: D, shouldShow: M }),
+        L = null != j && j !== s.x.COMMON,
         H = (0, a.jsxs)(
             "div",
             {
-                className: j.Qs,
+                className: y.Qs,
                 style: T?.timingStyle,
                 "data-mana-component": "mini-premium-tooltip",
                 children: [
-                    L && (0, a.jsx)("div", { className: j.xV, children: (0, a.jsx)(v, { rarity: y }) }),
+                    L && (0, a.jsx)("div", { className: y.xV, children: (0, a.jsx)(v, { rarity: j }) }),
                     (0, a.jsx)("div", {
-                        className: r()(j.fA, { [j.qJ]: O, [j.yH]: S }),
+                        className: r()(y.fA, { [y.qJ]: P, [y.yH]: S }),
                         "aria-hidden": !0,
                         children:
                             null != T
@@ -103,31 +103,31 @@ function y(e) {
                     (0, a.jsxs)(o.B, {
                         gap: 4,
                         align: "center",
-                        className: j.i8,
+                        className: y.i8,
                         children: [
                             null != l &&
                                 (0, a.jsx)(d.E, {
                                     variant: "body-sm/medium",
                                     color: "text-subtle",
-                                    className: r()(j.UP, U),
+                                    className: r()(y.UP, O),
                                     children: l,
                                 }),
                             (0, a.jsx)(c.D, {
                                 variant: "display-sm",
                                 color: "text-strong",
-                                className: r()(j.DD, { [j.x$]: "nitro" === x }, U),
+                                className: r()(y.DD, { [y.x$]: "nitro" === x }, O),
                                 children: n,
                             }),
                             null != h &&
                                 (0, a.jsx)(d.E, {
                                     variant: "body-sm/medium",
                                     color: "text-subtle",
-                                    className: r()(j.rf, U),
+                                    className: r()(y.rf, O),
                                     children: h,
                                 }),
                             null != T &&
                                 (0, a.jsx)("div", {
-                                    className: r()(j.BI, { [j.Dp]: T.isStarted }),
+                                    className: r()(y.BI, { [y.Dp]: T.isStarted }),
                                     children: (0, a.jsx)(d.E, {
                                         variant: "body-sm/normal",
                                         color: "text-default",
@@ -138,7 +138,7 @@ function y(e) {
                     }),
                     null != T &&
                         (0, a.jsxs)("div", {
-                            className: j.VU,
+                            className: y.VU,
                             children: [
                                 (0, a.jsx)(u.N, {}),
                                 (0, a.jsx)(d.E, {
@@ -162,7 +162,7 @@ function y(e) {
                           isRendered: !0,
                           targetElementRef: k,
                           content: H,
-                          position: M,
+                          position: U,
                           align: "center",
                           animationStyle: e,
                           positionKey: (0, p.Xj)(n),
@@ -172,4 +172,4 @@ function y(e) {
         );
     return (0, a.jsxs)(a.Fragment, { children: [w, (0, a.jsx)(E.A, { id: B, children: V }), $] });
 }
-let I = y;
+let I = j;

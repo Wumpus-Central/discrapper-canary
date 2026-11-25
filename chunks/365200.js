@@ -39,11 +39,11 @@ function P(e) {
     let t = [e.username];
     return (e?.nick != null && t.push(e.nick), { id: e.id, names: t });
 }
-function W(e) {
+function D(e) {
     return { id: e.id, names: [e.name] };
 }
 n(172879);
-var D = n(43105),
+var W = n(43105),
     G = n(834730),
     U = n(939249),
     B = n(241326),
@@ -239,7 +239,7 @@ function ed(e) {
                 }),
             }),
         }),
-        E = (0, l.jsx)(D.A, {
+        E = (0, l.jsx)(W.A, {
             targetElementRef: j,
             title: O.intl.string(O.t.ufFDiC),
             body: O.intl.format(O.t.pW4Crz, {
@@ -336,7 +336,7 @@ function eA(e) {
             for (let [n, i] of Object.entries(I)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
         }, [I]),
-        W = s.useCallback(
+        D = s.useCallback(
             (e) => {
                 let t = j.A.getGuild(a),
                     n = b.Ay.getSelfMember(a);
@@ -357,7 +357,7 @@ function eA(e) {
             },
             [a, w, i, T],
         ),
-        D = s.useCallback(
+        W = s.useCallback(
             (e, t) => {
                 let n,
                     i,
@@ -407,9 +407,9 @@ function eA(e) {
             (e, n) => {
                 let i = {};
                 for (let [e, t] of Object.entries(I)) i[e] = { id: t.id, permission: t.permission, type: t.type };
-                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : D(e, n);
+                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), D(i)) ? E.T0(t, M, i) : W(e, n);
             },
-            [t, I, M, W, D],
+            [t, I, M, D, W],
         ),
         U = s.useCallback(() => {
             let e = Object.keys(_);
@@ -606,7 +606,7 @@ function ef(e) {
                 var t;
                 let n = (t = d).startsWith("@") ? t.substr(1) : t,
                     i = d.startsWith("@") ? o.filter((t) => t.id === e) : o;
-                return { members: (0, S.I)(r, P, n), roles: (0, S.I)(i, W, n) };
+                return { members: (0, S.I)(r, P, n), roles: (0, S.I)(i, D, n) };
             }, [e, r, d, o]);
         return { query: d, results: m, setQuery: u, unfilteredCount: m.members.length + m.roles.length };
     })(e);

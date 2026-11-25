@@ -1,8 +1,8 @@
 var l = n(477900),
     s = n(582128),
     a = n(453771),
-    r = n(619517),
-    i = n(153440);
+    i = n(619517),
+    r = n(153440);
 n(516653);
 var o = n(792996);
 class c extends s.Component {
@@ -45,36 +45,36 @@ class c extends s.Component {
             alt: B = o.intl.string(o.t.FlNoSV),
             ...F
         } = this.props;
-        return (0, l.jsx)(r.Ay, {
+        return (0, l.jsx)(i.Ay, {
             alt: B,
             className: n,
             src: c,
             ...F,
-            minWidth: i.Ay.minWidth,
-            minHeight: i.Ay.minHeight,
+            minWidth: r.Ay.minWidth,
+            minHeight: r.Ay.minHeight,
             shouldLink: !1,
             shouldAnimate: !1,
             mediaLayoutType: x,
             responsive: C,
             children: (n) => {
                 let {
-                    src: r,
+                    src: i,
                     size: { width: o, height: c },
                 } = n;
-                return (0, l.jsx)(i.Ay, {
+                return (0, l.jsx)(r.Ay, {
                     ref: P,
                     alt: B,
                     className: s,
                     forceExternal: !((d <= 6016 && m <= 3384) || (d <= 3384 && m <= 6016)),
                     src: e,
-                    poster: r,
+                    poster: i,
                     width: o,
                     height: c,
                     responsive: C,
                     volume: p,
                     autoPlay: g ?? !1,
                     autoMute: A ?? !1,
-                    type: i.Ay.Types.VIDEO,
+                    type: r.Ay.Types.VIDEO,
                     mediaLayoutType: x,
                     fileName: u,
                     fileSize: null == t ? void 0 : (0, a.Hb)(t),

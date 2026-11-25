@@ -1,4 +1,4 @@
-e.exports = {
+u.exports = {
     GU: "blockedUsersContainer_LuOTYw",
     Zd: "form_LuOTYw",
     kz: "formItem_LuOTYw",

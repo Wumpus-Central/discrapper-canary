@@ -2,9 +2,9 @@ n.d(t, { e: () => N, A: () => y });
 var l = n(477900),
     s = n(582128),
     a = n(503698),
-    r = n.n(a),
-    i = n(796873),
-    o = n.n(i),
+    i = n.n(a),
+    r = n(796873),
+    o = n.n(r),
     c = n(855986),
     u = n(911608),
     d = n(939249),
@@ -46,7 +46,7 @@ function _(e) {
 function N(e) {
     let { channelId: t, file: n } = e,
         a = (0, c.bG)([A.A], () => A.A.getMessageForFile(n.id)?.content),
-        r = s.useMemo(() => {
+        i = s.useMemo(() => {
             let e = n.items;
             return null == e
                 ? j.intl.string(j.t.jfKTes)
@@ -54,7 +54,7 @@ function N(e) {
                   ? e[0].filename
                   : j.intl.formatToPlainString(j.t.D0noUt, { count: e.length });
         }, [n.items]),
-        i = s.useCallback(() => {
+        r = s.useCallback(() => {
             C.cancel(t, n);
         }, [t, n]),
         h = !0 === n.isPreparing || 100 === n.progress,
@@ -72,14 +72,14 @@ function N(e) {
                 children: (0, l.jsxs)("div", {
                     className: v.NJ,
                     children: [
-                        (0, l.jsx)(_, { filename: r }),
+                        (0, l.jsx)(_, { filename: i }),
                         (0, l.jsxs)("div", {
                             className: v.Jg,
                             children: [
                                 (0, l.jsxs)("div", {
                                     className: v.tP,
                                     children: [
-                                        (0, l.jsx)("div", { className: v.iW, children: r }),
+                                        (0, l.jsx)("div", { className: v.iW, children: i }),
                                         f
                                             ? (0, l.jsx)("div", {
                                                   className: v.Ej,
@@ -95,14 +95,14 @@ function N(e) {
                                             ? j.intl.string(j.t.B3vFdU)
                                             : h
                                               ? p
-                                              : (0, l.jsx)(u.z, { value: n.progress, "aria-label": r }),
+                                              : (0, l.jsx)(u.z, { value: n.progress, "aria-label": i }),
                                 }),
                             ],
                         }),
                         h
                             ? null
                             : (0, l.jsx)(d.D, {
-                                  onClick: i,
+                                  onClick: r,
                                   "aria-label": j.intl.string(!0 === n.preparationFailed ? j.t.oyYWHE : j.t["ETE/oC"]),
                                   children: (0, l.jsx)(m.XSmallIcon, {
                                       size: "md",
@@ -117,9 +117,9 @@ function N(e) {
     });
 }
 let y = function (e) {
-    let { className: t, url: n, fileName: s, fileSize: a, onClick: i, onContextMenu: c, renderAdjacentContent: u } = e;
+    let { className: t, url: n, fileName: s, fileSize: a, onClick: r, onContextMenu: c, renderAdjacentContent: u } = e;
     return (0, l.jsxs)("div", {
-        className: r()(v.Ig, t),
+        className: i()(v.Ig, t),
         children: [
             (0, l.jsxs)("div", {
                 className: v.NJ,
@@ -133,7 +133,7 @@ let y = function (e) {
                                 children: (0, l.jsx)(h.Anchor, {
                                     className: v.AD,
                                     href: n,
-                                    onClick: i,
+                                    onClick: r,
                                     onContextMenu: c,
                                     children: s,
                                 }),

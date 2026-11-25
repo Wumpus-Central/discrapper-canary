@@ -1,13 +1,13 @@
-var a = l(922590),
-    s = l(652215);
-l.d(
-    e,
+var s = t(922590),
+    n = t(652215);
+t.d(
+    r,
     {},
     {
-        W: function (t) {
-            let e = (0, a.KL)(t, s.eA$.FRIEND),
-                l = (0, a.KL)(t, s.eA$.PENDING_INCOMING);
-            return e || l;
+        W: function (e) {
+            let r = (0, s.KL)(e, n.eA$.FRIEND),
+                t = (0, s.KL)(e, n.eA$.PENDING_INCOMING);
+            return r || t;
         },
     },
 );

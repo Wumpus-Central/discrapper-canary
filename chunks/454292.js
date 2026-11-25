@@ -1,13 +1,13 @@
-n.d(
-    i,
+i.d(
+    n,
     {},
     {
-        A: function (t, i, n) {
-            return null == n
+        A: function (t, n, i) {
+            return null == i
                 ? null
-                : (t.getApplicationActivity(n) ??
-                      i.getApplicationActivity(n, !0) ??
-                      i.getHiddenActivities().find((t) => t.application_id === n));
+                : (t.getApplicationActivity(i) ??
+                      n.getApplicationActivity(i, !0) ??
+                      n.getHiddenActivities().find((t) => t.application_id === i));
         },
     },
 );

@@ -7,22 +7,22 @@ n.d(
         A: function (e, t) {
             let [n, a] = i.useState(!1),
                 l = i.useRef(new r.J_(t, () => a(!1))),
-                d = i.useRef(new r.J_(e, () => a(!0))),
-                s = i.useCallback(() => {
-                    (l.current.cancel(), d.current.cancel());
+                s = i.useRef(new r.J_(e, () => a(!0))),
+                d = i.useCallback(() => {
+                    (l.current.cancel(), s.current.cancel());
                 }, []);
-            i.useEffect(() => s, [s]);
+            i.useEffect(() => d, [d]);
             let u = i.useCallback(() => {
-                (s(), l.current.delay());
-            }, [s]);
+                (d(), l.current.delay());
+            }, [d]);
             return {
                 isHovered: n,
                 setIsHovered: a,
                 onMouseEnter: i.useCallback(() => {
-                    (s(), d.current.delay());
-                }, [s]),
+                    (d(), s.current.delay());
+                }, [d]),
                 onMouseLeave: u,
-                cancelTimers: s,
+                cancelTimers: d,
             };
         },
     },

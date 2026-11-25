@@ -1,5 +1,5 @@
-var l = n(582128),
-    i = n(855986),
+var i = n(582128),
+    l = n(855986),
     s = n(919395),
     r = n(696451),
     a = n(486020),
@@ -13,14 +13,14 @@ n.d(
     {
         A: function (e) {
             let { user: t, guildId: n, size: h, avatarDecorationOverride: m, onlyAnimateOnHoverOrFocus: g = !1 } = e,
-                [f, p] = l.useState(!1),
+                [f, p] = i.useState(!1),
                 { canAnimate: A } = (0, o.T)(f, g),
-                E = (0, i.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
+                E = (0, l.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
                 x = (0, u.A)(
                     (0, s.lw)({ userValue: t?.avatarDecoration, guildValue: E?.avatarDecoration, guildId: n }),
                 ),
                 _ = (0, c.VU)(),
-                j = l.useMemo(
+                j = i.useMemo(
                     () =>
                         null != _ && "" !== _
                             ? _
@@ -32,8 +32,8 @@ n.d(
                 avatarDecorationSrc: j,
                 isAvatarDecorationAnimating: A,
                 eventHandlers: {
-                    onMouseEnter: l.useCallback(() => p(!0), []),
-                    onMouseLeave: l.useCallback(() => p(!1), []),
+                    onMouseEnter: i.useCallback(() => p(!0), []),
+                    onMouseLeave: i.useCallback(() => p(!1), []),
                 },
             };
         },

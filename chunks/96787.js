@@ -6,8 +6,8 @@ n.d(
     {
         Z: function (e, t) {
             let n = (0, s.F)(e, t),
-                r = (0, i.Hg)(null != n ? e?.guild_id : null, t);
-            return null != n && r;
+                a = (0, i.Hg)(null != n ? e?.guild_id : null, t);
+            return null != n && a;
         },
     },
 );

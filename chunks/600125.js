@@ -10,8 +10,8 @@ var i = n(477900),
     d = n(401843),
     h = n(71689),
     m = n(338771),
-    f = n(208603),
-    p = n(293651),
+    p = n(208603),
+    f = n(293651),
     g = n(310685),
     A = n(929921),
     v = n(734057),
@@ -20,8 +20,8 @@ var i = n(477900),
     y = n(723702),
     C = n(74329),
     S = n(192308),
-    w = n(231723),
-    b = n(212245),
+    b = n(231723),
+    w = n(212245),
     x = n(676030),
     T = n(474626),
     R = n(375742),
@@ -52,7 +52,7 @@ function L(e) {
             [v.A, E.A],
             () => {
                 let e = v.A.getChannel(q);
-                return (0, p.HB)(e, E.A.getGuild(e?.guild_id));
+                return (0, f.HB)(e, E.A.getGuild(e?.guild_id));
             },
             [q],
         ),
@@ -62,12 +62,12 @@ function L(e) {
         Y = I.Ay.supports(O.O5.DESKTOP_CAPTURE_APPLICATIONS),
         $ = (0, l.bG)([I.Ay], () => I.Ay.supports(O.O5.SOUNDSHARE)),
         J = (0, l.bG)([I.Ay], () => I.Ay.supportsScreenSoundshare()),
-        Z = (function (e, t) {
+        Q = (function (e, t) {
             let { preset: a, resolution: o, fps: u, soundshareEnabled: d } = (0, l.cf)([A.A], () => A.A.getState()),
                 h = (0, l.bG)([I.Ay], () => I.Ay.getGoLiveSource()),
                 m = (0, l.bG)([k.default], () => k.default.getCurrentUser()),
-                f = (0, l.bG)([E.A], () => E.A.getGuild(e?.guildId)?.premiumTier),
-                { location: p } = (0, b.p)(),
+                p = (0, l.bG)([E.A], () => E.A.getGuild(e?.guildId)?.premiumTier),
+                { location: f } = (0, w.p)(),
                 g = (0, l.bG)([_.Ay, v.A], () => v.A.getChannel(_.Ay.getVoiceChannelId())),
                 y = r.useCallback(
                     (e, r, l, s) => {
@@ -89,7 +89,7 @@ function L(e) {
                             }
                         } else {
                             var a;
-                            ((a = { ...p, object: P.ZSU.RADIO_ITEM, objectType: s }),
+                            ((a = { ...f, object: P.ZSU.RADIO_ITEM, objectType: s }),
                                 (0, S.mM)(
                                     async () => {
                                         let { default: e } = await Promise.all([
@@ -112,24 +112,24 @@ function L(e) {
                                         ]).then(n.bind(n, 826789));
                                         return (t) => (0, i.jsx)(e, { ...t, analyticsSource: a });
                                     },
-                                    { contextKey: t === P.BRT.POPOUT ? "popout" : w.SY },
+                                    { contextKey: t === P.BRT.POPOUT ? "popout" : b.SY },
                                 ));
                         }
                     },
-                    [t, p, d, h],
+                    [t, f, d, h],
                 );
             if (null == e) return null;
             let C = a === M.jQ.PRESET_DOCUMENTS ? M.kn.FPS_30 : u,
                 N = (0, T.A)("useStreamSettingsItems", m, e.guildId),
                 j = o === N?.maxResolution && u === N?.maxFPS;
             function L(e) {
-                return j ? ((0, R.A)(e, m, f, g) ?? o) : o;
+                return j ? ((0, R.A)(e, m, p, g) ?? o) : o;
             }
             let U = L(u),
                 z = M.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
                         l = L(t),
-                        a = (0, x.A)(M.jQ.PRESET_CUSTOM, l, t, m, f, g);
+                        a = (0, x.A)(M.jQ.PRESET_CUSTOM, l, t, m, p, g);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -147,7 +147,7 @@ function L(e) {
                 }),
                 G = M.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, x.A)(M.jQ.PRESET_CUSTOM, t, C, m, f, g);
+                        l = (0, x.A)(M.jQ.PRESET_CUSTOM, t, C, m, p, g);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -170,10 +170,10 @@ function L(e) {
                 ],
             });
         })(t, W),
-        Q = (0, C.A)(t, W, N.FX),
+        Z = (0, C.A)(t, W, N.FX),
         ee = null != V && $ && (!V.startsWith("screen") || J),
         et = (0, l.bG)([I.Ay], () => I.Ay.getUseSystemScreensharePicker() && (0, y.j9)()),
-        en = (0, f.A)(t),
+        en = (0, p.A)(t),
         ei = r.useCallback(() => {
             V?.startsWith("prepicked:")
                 ? I.Ay.getMediaEngine().eachConnection((e) => {
@@ -207,7 +207,7 @@ function L(e) {
             action: L,
         });
     let eu = y.isPlatformEmbedded
-            ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: D.intl.string(D.t.ytAD9d), children: Z })
+            ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: D.intl.string(D.t.ytAD9d), children: Q })
             : null,
         ec = ee
             ? (0, i.jsx)(s.sL, {
@@ -244,7 +244,7 @@ function L(e) {
             leadingAccessory: { type: "icon", icon: o.ScreenXIcon },
             action: () => (0, m.A)(t),
         }),
-        ef =
+        ep =
             null != en
                 ? (0, i.jsx)(s.Dr, {
                       id: "pass-controller",
@@ -255,6 +255,6 @@ function L(e) {
                   })
                 : null;
     return G
-        ? (0, i.jsxs)(i.Fragment, { children: [em, eh, eu, ec, ed, ef] })
-        : (0, i.jsxs)(i.Fragment, { children: [eu, U ? Q : null, ec, ed, eh, em, ef] });
+        ? (0, i.jsxs)(i.Fragment, { children: [em, eh, eu, ec, ed, ep] })
+        : (0, i.jsxs)(i.Fragment, { children: [eu, U ? Z : null, ec, ed, eh, em, ep] });
 }

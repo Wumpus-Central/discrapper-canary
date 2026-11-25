@@ -1,9 +1,9 @@
-var l = n(855986),
-    i = n(73153),
+var i = n(855986),
+    l = n(73153),
     s = n(652215);
 let r = null,
     a = {};
-class o extends l.Ay.Store {
+class o extends i.Ay.Store {
     static displayName = "CodedLinkNativeAppStateStore";
     getState(e) {
         return a[e];
@@ -12,7 +12,7 @@ class o extends l.Ay.Store {
         return r;
     }
 }
-let c = new o(i.h, {
+let c = new o(l.h, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
         ((a[t] = s.fAW.OPENING), null === r && (r = s.fAW.OPENING));

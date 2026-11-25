@@ -23,7 +23,7 @@ function g(e, t) {
 }
 async function A() {
     let e = performance.now(),
-        t = await I();
+        t = await m();
     if (a && e > o && t?.encodeFailed === !0) {
         let e = d;
         (E(), null != e && g(e.appId, "encode_failed"));
@@ -32,10 +32,10 @@ async function A() {
 function p() {
     r.Ay.getMediaEngine().setSnapshotSource(h());
 }
-function m() {
+function I() {
     return r.Ay.getMediaEngine().supports(s.O5.CONJURE_SNAPSHOT);
 }
-function I() {
+function m() {
     return r.Ay.getMediaEngine()
         .getSnapshotStats()
         .catch(() => null);
@@ -50,7 +50,7 @@ n.d(
     t,
     {},
     {
-        Az: I,
+        Az: m,
         DD: g,
         aG: function () {
             return null != h();
@@ -62,7 +62,7 @@ n.d(
                 if ("string" != typeof n || "" === n.trim())
                     throw Error(`startConjureSnapshots: app.${t} must be a non-empty string`);
             }
-            if (!m()) return !1;
+            if (!I()) return !1;
             if (
                 (r.Ay.getMediaEngine().startSnapshotCapture(
                     (function (e) {
@@ -78,6 +78,6 @@ n.d(
             }
             return ((d = e), f(e), !0);
         },
-        y8: m,
+        y8: I,
     },
 );

@@ -1,40 +1,40 @@
-var e = i(477900);
-i(582128);
-var l = i(866665),
-    r = i(821609),
-    a = i(513772);
-i.d(
+var l = n(477900);
+n(582128);
+var i = n(866665),
+    a = n(821609),
+    r = n(513772);
+n.d(
     t,
     {},
     {
-        A: function (n) {
+        A: function (e) {
             let {
                     activity: t,
-                    embeddedActivity: i,
+                    embeddedActivity: n,
                     user: s,
                     onAction: o,
-                    location: d,
-                    variant: u = "secondary",
-                    size: c = "sm",
-                    ...v
-                } = n,
-                h = (0, a.l)({ activity: t ?? void 0, embeddedActivity: i, user: s, onGameJoin: o, location: d });
-            if (null == h) return null;
-            let { isJoining: p, handleJoinRequest: f, buttonCTA: k, tooltip: x, isEnabled: C } = h;
-            return (0, e.jsx)(
-                l.m,
+                    location: u,
+                    variant: c = "secondary",
+                    size: d = "sm",
+                    ...m
+                } = e,
+                A = (0, r.l)({ activity: t ?? void 0, embeddedActivity: n, user: s, onGameJoin: o, location: u });
+            if (null == A) return null;
+            let { isJoining: p, handleJoinRequest: h, buttonCTA: f, tooltip: g, isEnabled: x } = A;
+            return (0, l.jsx)(
+                i.m,
                 {
-                    text: x,
-                    asContainer: !C,
-                    children: (0, e.jsx)(r.$, {
-                        variant: u,
-                        size: c,
-                        text: k,
-                        onClick: f,
-                        disabled: !C,
+                    text: g,
+                    asContainer: !x,
+                    children: (0, l.jsx)(a.$, {
+                        variant: c,
+                        size: d,
+                        text: f,
+                        onClick: h,
+                        disabled: !x,
                         loading: p,
                         fullWidth: !0,
-                        ...v,
+                        ...m,
                     }),
                 },
                 "join",

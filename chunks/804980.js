@@ -12,8 +12,8 @@ var i = n(477900),
     g = n(211449),
     A = n(878549),
     p = n(969151),
-    m = n(550151),
-    I = n(902439),
+    I = n(550151),
+    m = n(902439),
     E = n(283488),
     S = n(732637),
     C = n(315206),
@@ -23,14 +23,14 @@ var i = n(477900),
     y = n(793574),
     v = n(688810),
     M = n(698141),
-    D = n(429913),
-    R = n(625180),
+    R = n(429913),
+    D = n(625180),
     O = n(91242),
     x = n(898879),
     L = n(293495),
-    P = n(267102),
-    U = n(293432),
-    w = n(46653),
+    U = n(267102),
+    w = n(293432),
+    P = n(46653),
     b = n(186111),
     G = n(287809),
     F = n(403362),
@@ -63,10 +63,10 @@ function Y(e) {
 function z(e) {
     let { participants: t, application: n, channel: l, width: u } = e,
         p = u > 400 ? 2 : +(u > 300),
-        [I] = u > 400 ? [o._3.SIZE_56, 56] : u > 300 ? [o._3.SIZE_32, 32] : [o._3.SIZE_24, 24],
-        E = (0, a.yK)([G.default, w.default], () =>
+        [m] = u > 400 ? [o._3.SIZE_56, 56] : u > 300 ? [o._3.SIZE_32, 32] : [o._3.SIZE_24, 24],
+        E = (0, a.yK)([G.default, P.default], () =>
             Array.from(t)
-                .map((e) => ((0, A.S)(e, w.default) ? null : G.default.getUser(e.userId)))
+                .map((e) => ((0, A.S)(e, P.default) ? null : G.default.getUser(e.userId)))
                 .filter(F.Vq),
         ),
         S = (0, a.bG)([f.Ay], () =>
@@ -75,16 +75,16 @@ function z(e) {
         { analyticsLocations: C } = (0, v.Ay)(),
         _ = (0, h.p)(),
         N = j.Ay.getName(l.getGuildId(), l.id, E?.[0]),
-        T = (0, m.vG)({ userId: G.default.getCurrentUser()?.id, channelId: l.id, application: n }) === m.Gy.CAN_JOIN,
+        T = (0, I.vG)({ userId: G.default.getCurrentUser()?.id, channelId: l.id, application: n }) === I.Gy.CAN_JOIN,
         y = l.getGuildId() ?? void 0,
-        D = r.useId(),
-        R = n.id,
+        R = r.useId(),
+        D = n.id,
         O = r.useMemo(() => ({ channel: l, type: "channel" }), [l]),
-        { submitting: x } = (0, M.A)({ applicationId: R, context: O, launchingComponentId: D });
+        { submitting: x } = (0, M.A)({ applicationId: D, context: O, launchingComponentId: R });
     return (0, i.jsxs)("div", {
         className: B.Yi,
         children: [
-            (0, i.jsx)(Y, { avatarSize: I, guildId: y, channelId: l.id, users: E }),
+            (0, i.jsx)(Y, { avatarSize: m, guildId: y, channelId: l.id, users: E }),
             (0, i.jsx)(d.E, {
                 className: s()(B.m_, { [B.EX]: 0 === p, [B.Y]: 1 === p }),
                 variant: "body-sm/normal",
@@ -111,7 +111,7 @@ function z(e) {
                                           activityChannelId: l.id,
                                           locationObject: _.location,
                                           analyticsLocations: C,
-                                          componentId: D,
+                                          componentId: R,
                                       }));
                           },
                           loading: x,
@@ -131,32 +131,32 @@ n.d(
             let { participant: t, width: n, selected: l, interactible: s, channel: o } = e,
                 { analyticsLocations: u } = (0, v.Ay)(y.A.ACTIVITY_TILE),
                 { applicationId: d, frameId: c } = t,
-                h = (0, I.A)(),
+                h = (0, m.A)(),
                 f = (0, a.bG)([O.A], () => (0, V.ny)(O.A.getFrame(c)), [c]),
-                g = (0, P.Us)() === k.BRT.APP,
+                g = (0, U.Us)() === k.BRT.APP,
                 A = null != h && (0, p.H)(h.location) === o.id && h.applicationId === d,
-                m = f?.id,
+                I = f?.id,
                 _ = f?.data.layoutMode,
-                M = null != m || A,
-                w = null != m ? g : A,
-                [G] = (0, D.A)([d]),
+                M = null != I || A,
+                P = null != I ? g : A,
+                [G] = (0, R.A)([d]),
                 { url: F } = (0, E.A)({ applicationId: d, names: W, size: 1024 }),
-                j = !l && w,
-                H = !w,
-                Y = (0, a.bG)([b.A, U.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: U.A }));
+                j = !l && P,
+                H = !P,
+                Y = (0, a.bG)([b.A, w.A], () => (0, T.A)({ LayerStore: b.A, PopoutWindowStore: w.A }));
             return (
                 r.useEffect(() => {
-                    if (j && null == m && null != h && !Y) {
+                    if (j && null == I && null != h && !Y) {
                         let e = (0, N.A)(h.location.id, h.applicationId);
                         (0, C.cK)(e);
                     }
-                }, [j, m, h, Y]),
+                }, [j, I, h, Y]),
                 r.useEffect(() => {
                     j &&
-                        null != m &&
+                        null != I &&
                         _ !== V.y0.FOCUSED &&
-                        R.A.updateFrameLayoutMode({ frameId: m, layoutMode: V.y0.FOCUSED });
-                }, [j, m, _]),
+                        D.A.updateFrameLayoutMode({ frameId: I, layoutMode: V.y0.FOCUSED });
+                }, [j, I, _]),
                 (0, i.jsx)(v.f5, {
                     value: u,
                     children: (0, i.jsxs)("div", {

@@ -33,8 +33,8 @@ var i = n(477900),
     M = n(235986),
     _ = n(769015),
     P = n(834409),
-    W = n(671576),
-    D = n(137811),
+    D = n(671576),
+    W = n(137811),
     G = n(939249),
     U = n(442433),
     B = n(950072),
@@ -323,13 +323,13 @@ function ec(e) {
         y = () => {
             (0, f.mM)(
                 async () => (e) =>
-                    (0, i.jsx)(D.default, { ...e, channel: c, guild: n, source: en.PE1.SETTINGS_INVITE }),
+                    (0, i.jsx)(W.default, { ...e, channel: c, guild: n, source: en.PE1.SETTINGS_INVITE }),
             );
         },
         [S, O] = l.useState(62),
         w = () => {
             let e = { source: P.Eo.GUILD_SETTINGS };
-            (0, f.mM)(async () => (t) => (0, i.jsx)(W.default, { ...t, guildId: n.id, analyticsData: e }));
+            (0, f.mM)(async () => (t) => (0, i.jsx)(D.default, { ...t, guildId: n.id, analyticsData: e }));
         };
     return (0, i.jsx)(k.ic, {
         sections: [1, +!r, +!!r, Math.max(1, T.length)],

@@ -1,42 +1,42 @@
 var l = n(855986),
-    r = n(6161),
-    o = n(890615),
-    i = n(450149),
-    a = n(616356),
-    s = n(734057),
-    c = n(576705),
-    u = n(290863),
+    i = n(6161),
+    a = n(890615),
+    r = n(450149),
+    s = n(616356),
+    o = n(734057),
+    u = n(576705),
+    c = n(290863),
     d = n(977997),
-    x = n(583846);
+    m = n(583846);
 n.d(
-    e,
+    t,
     {},
     {
-        A: function (t) {
-            let e = (0, x.JM)(t),
+        A: function (e) {
+            let t = (0, m.JM)(e),
                 n = (0, l.bG)(
-                    [d.A, s.A, c.A],
+                    [d.A, o.A, u.A],
                     () => {
-                        if (!e || t.author_type !== r.ContentInventoryAuthorType.USER) return null;
-                        let n = d.A.getVoiceStateForUser(t.author_id),
-                            l = s.A.getChannel(n?.channelId),
-                            i = "channel_id" in t ? t.channel_id : null;
-                        return (null == i || i === n?.channelId) && (null == l || (0, o.A)(l, c.A)) ? l : null;
+                        if (!t || e.author_type !== i.ContentInventoryAuthorType.USER) return null;
+                        let n = d.A.getVoiceStateForUser(e.author_id),
+                            l = o.A.getChannel(n?.channelId),
+                            r = "channel_id" in e ? e.channel_id : null;
+                        return (null == r || r === n?.channelId) && (null == l || (0, a.A)(l, u.A)) ? l : null;
                     },
-                    [t, e],
+                    [e, t],
                 ),
-                C = (0, l.bG)([u.A], () => (null != e ? u.A.getPrimaryActivity(t.author_id, n?.guild_id) : null), [
+                A = (0, l.bG)([c.A], () => (null != t ? c.A.getPrimaryActivity(e.author_id, n?.guild_id) : null), [
                     n,
-                    t.author_id,
-                    e,
+                    e.author_id,
+                    t,
                 ]),
-                A = (0, l.bG)([a.A], () => (e ? a.A.getStreamForUser(t.author_id, n?.guild_id) : null), [
+                p = (0, l.bG)([s.A], () => (t ? s.A.getStreamForUser(e.author_id, n?.guild_id) : null), [
                     n,
-                    t.author_id,
-                    e,
+                    e.author_id,
+                    t,
                 ]),
-                { previewUrl: h } = (0, i.A)(A?.guildId, A?.channelId, A?.ownerId);
-            return { channel: n, activity: C, streamPreviewUrl: h, stream: A };
+                { previewUrl: h } = (0, r.A)(p?.guildId, p?.channelId, p?.ownerId);
+            return { channel: n, activity: A, streamPreviewUrl: h, stream: p };
         },
     },
 );

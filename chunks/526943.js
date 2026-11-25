@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     bW: "triggerButton_MdUQoo",
     nd: "panel_MdUQoo",
     t5: "disablePanelAnimation_MdUQoo",

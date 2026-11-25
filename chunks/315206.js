@@ -12,8 +12,8 @@ var r = n(31728),
     g = n(646865),
     A = n(933958),
     p = n(969151),
-    m = n(594007),
-    I = n(227042),
+    I = n(594007),
+    m = n(227042),
     E = n(652215);
 function S(e) {
     let t = e ?? i;
@@ -33,7 +33,7 @@ function _() {
         return void (null != (e = i) && u.A.isOpen(e) && (r.VN(e), (i = null)));
     }
     {
-        let e = (0, m.A)(t.location.id, t.applicationId);
+        let e = (0, I.A)(t.location.id, t.applicationId);
         return (
             !((0, g.f)() || u.A.isOpen(e)) &&
             (null != i && r.VN(i), r.ho(e, E.o1q.ACTIVITY, { channel: l }), void (i = e))
@@ -41,7 +41,7 @@ function _() {
     }
 }
 function N() {
-    return (0, I.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
+    return (0, m.A)({ LayerStore: o.A, PopoutWindowStore: s.A }) ? S() : C();
 }
 class T extends l.A {
     _initialize() {

@@ -1,9 +1,9 @@
 var l = n(792216),
-    r = n(505779),
-    o = n(855986),
-    a = n(311043),
-    i = n(240248),
-    s = n(652215);
+    i = n(505779),
+    a = n(855986),
+    r = n(311043),
+    s = n(240248),
+    o = n(652215);
 function u(e) {
     return `https://store.steampowered.com/app/${encodeURIComponent(e)}`;
 }
@@ -12,17 +12,17 @@ n.d(
     {},
     {
         I: function (e) {
-            return (0, o.bG)(
-                [a.A],
+            return (0, a.bG)(
+                [r.A],
                 () => {
                     if (null == e) return null;
-                    let t = a.A.getGame(e);
+                    let t = r.A.getGame(e);
                     if (null == t || t.steamReleaseStatus === l.Y.RETIRED_ABANDONED) return null;
-                    let n = t.websites.find((e) => e.category === r.V1.STEAM)?.url,
-                        o = t.thirdPartySkus.filter((e) => e.distributor === s.d3x.STEAM && !(0, i.uJ)(e.id)),
-                        c = o[0]?.id,
-                        d = (0, i.uJ)(c) ? null : u(c);
-                    return o.length > 1 && null != n ? n : null != d ? d : null != n ? n : null;
+                    let n = t.websites.find((e) => e.category === i.V1.STEAM)?.url,
+                        a = t.thirdPartySkus.filter((e) => e.distributor === o.d3x.STEAM && !(0, s.uJ)(e.id)),
+                        c = a[0]?.id,
+                        d = (0, s.uJ)(c) ? null : u(c);
+                    return a.length > 1 && null != n ? n : null != d ? d : null != n ? n : null;
                 },
                 [e],
             );

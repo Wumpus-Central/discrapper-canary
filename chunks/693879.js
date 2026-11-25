@@ -1,67 +1,67 @@
-var n = r(477900),
-    a = r(582128),
-    s = r(503698),
-    i = r.n(s),
-    l = r(855986),
-    o = r(834730),
-    c = r(140735),
-    d = r(773669),
-    u = r(574520),
-    h = r(583846),
-    p = r(809854),
-    m = r(358509);
-function f(t) {
+var l = n(477900),
+    i = n(582128),
+    a = n(503698),
+    r = n.n(a),
+    s = n(855986),
+    o = n(834730),
+    u = n(140735),
+    c = n(773669),
+    d = n(574520),
+    m = n(583846),
+    A = n(809854),
+    p = n(358509);
+function h(e) {
     let {
-            entry: e,
-            inline: r = !1,
-            textColor: s,
-            textTabularNumbers: l = !0,
-            hovered: d = !1,
-            scaleFontToUserSetting: u = !1,
-        } = t,
-        { now: f } = (0, p.e)(d),
-        { timestamp: A, a11yTimeStamp: x } = a.useMemo(
-            () => ({ timestamp: (0, h.W6)(e, f), a11yTimeStamp: (0, h.U3)(e, f) }),
-            [e, f],
+            entry: t,
+            inline: n = !1,
+            textColor: a,
+            textTabularNumbers: s = !0,
+            hovered: c = !1,
+            scaleFontToUserSetting: d = !1,
+        } = e,
+        { now: h } = (0, A.e)(c),
+        { timestamp: f, a11yTimeStamp: g } = i.useMemo(
+            () => ({ timestamp: (0, m.W6)(t, h), a11yTimeStamp: (0, m.U3)(t, h) }),
+            [t, h],
         );
-    return (0, n.jsxs)(o.E, {
-        className: i()(m.$N, { [m.E1]: r }),
+    return (0, l.jsxs)(o.E, {
+        className: r()(p.$N, { [p.E1]: n }),
         variant: "body-xs/normal",
-        tabularNumbers: l,
-        color: s,
-        scaleFontToUserSetting: u,
+        tabularNumbers: s,
+        color: a,
+        scaleFontToUserSetting: d,
         children: [
-            (0, n.jsx)(c.A, { tag: "span", role: "timer", children: x }),
-            (0, n.jsx)("span", { "aria-hidden": "true", children: A }),
+            (0, l.jsx)(u.A, { tag: "span", role: "timer", children: g }),
+            (0, l.jsx)("span", { "aria-hidden": "true", children: f }),
         ],
     });
 }
-r.d(
-    e,
+n.d(
+    t,
     {},
     {
-        A: function (t) {
-            let { entry: e, textColor: r, hovered: a = !1, scaleFontToUserSetting: s = !1 } = t,
-                i = (0, h.Hd)(e),
-                p = (0, l.bG)([d.default], () => d.default.locale),
-                m = (0, l.bG)([u.A], () => u.A.getMatchingActivity(e)),
-                A = m?.timestamps?.start ?? m?.created_at;
-            if (null != A)
-                return (0, n.jsx)(f, { entry: { start: A }, textColor: r, hovered: a, scaleFontToUserSetting: s });
-            if (i) return (0, n.jsx)(f, { entry: e, textColor: r, hovered: a, scaleFontToUserSetting: s });
-            let x = (0, h.aJ)(e, p),
-                S = (0, h.aJ)(e, p, void 0, { formatSet: h.sg });
-            return (0, n.jsxs)(o.E, {
+        A: function (e) {
+            let { entry: t, textColor: n, hovered: i = !1, scaleFontToUserSetting: a = !1 } = e,
+                r = (0, m.Hd)(t),
+                A = (0, s.bG)([c.default], () => c.default.locale),
+                p = (0, s.bG)([d.A], () => d.A.getMatchingActivity(t)),
+                f = p?.timestamps?.start ?? p?.created_at;
+            if (null != f)
+                return (0, l.jsx)(h, { entry: { start: f }, textColor: n, hovered: i, scaleFontToUserSetting: a });
+            if (r) return (0, l.jsx)(h, { entry: t, textColor: n, hovered: i, scaleFontToUserSetting: a });
+            let g = (0, m.aJ)(t, A),
+                x = (0, m.aJ)(t, A, void 0, { formatSet: m.sg });
+            return (0, l.jsxs)(o.E, {
                 variant: "body-xs/normal",
-                color: r,
+                color: n,
                 lineClamp: 1,
-                scaleFontToUserSetting: s,
+                scaleFontToUserSetting: a,
                 children: [
-                    (0, n.jsx)(c.A, { tag: "span", children: S }),
-                    (0, n.jsx)("span", { "aria-hidden": "true", children: x }),
+                    (0, l.jsx)(u.A, { tag: "span", children: x }),
+                    (0, l.jsx)("span", { "aria-hidden": "true", children: g }),
                 ],
             });
         },
-        z: f,
+        z: h,
     },
 );

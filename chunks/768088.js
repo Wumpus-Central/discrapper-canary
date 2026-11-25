@@ -13,7 +13,7 @@ n.d(
     {},
     {
         A: function (e) {
-            let { stream: t, width: n, avError: h, avErrorContext: m, selected: f = !1, noArt: p = !1 } = e,
+            let { stream: t, width: n, avError: h, avErrorContext: m, selected: p = !1, noArt: f = !1 } = e,
                 g = (function (e) {
                     switch (e?.type) {
                         case s.iy.SCREENSHARE_OS_ERROR:
@@ -27,8 +27,8 @@ n.d(
             return (0, i.jsx)(u.A, {
                 header: g,
                 size: (0, u.J)(n),
-                noArt: p,
-                selected: f,
+                noArt: f,
+                selected: p,
                 description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(c.MVz.STREAM_FAILED) }),
                 errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: A }),
                 onCTAClick: () => {

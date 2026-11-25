@@ -1,7 +1,7 @@
-let l, s, a, r;
+let l, s, a, i;
 (n.d(t, { A: () => D }), n(321073));
-var i = n(435558),
-    o = n.n(i),
+var r = n(435558),
+    o = n.n(r),
     c = n(855986),
     u = n(73153),
     d = n(432371),
@@ -77,7 +77,7 @@ class k extends c.Ay.PersistedStore {
         return this.summaries(e).find((e) => e.id === t) ?? null;
     }
     selectedSummary(e) {
-        return null != r && r.channelId === e && null != r.summaryId ? this.findSummary(e, r?.summaryId) : null;
+        return null != i && i.channelId === e && null != i.summaryId ? this.findSummary(e, i?.summaryId) : null;
     }
     summaryFeedback(e) {
         return null == e ? null : S[e.id];
@@ -140,7 +140,7 @@ let D = new k(u.h, {
     CONNECTION_OPEN: () => !1,
     CHANNEL_SELECT(e) {
         let { channelId: t } = e;
-        r?.channelId !== t && (r = null);
+        i?.channelId !== t && (i = null);
     },
     TOGGLE_TOPICS_BAR() {
         l = !l;
@@ -163,11 +163,11 @@ let D = new k(u.h, {
     RECEIVE_CHANNEL_SUMMARIES(e) {
         let { summaries: t, channelId: n, error: l, receivedAt: s } = e,
             a = t.filter((e) => Object.keys(e).length > 0).map((e) => _(e, n));
-        if (null != r && r.channelId === n && !a.some((e) => e.id === r?.summaryId)) {
-            let e = (y[n] ?? []).find((e) => e.id === r?.summaryId);
+        if (null != i && i.channelId === n && !a.some((e) => e.id === i?.summaryId)) {
+            let e = (y[n] ?? []).find((e) => e.id === i?.summaryId);
             null != e && a.push(e);
         }
-        y[n] = (0, i.sortBy)(a, (e) => v.default.extractTimestamp(e.startId)).reverse();
+        y[n] = (0, r.sortBy)(a, (e) => v.default.extractTimestamp(e.startId)).reverse();
         let o = { ...I[n], fetching: !1, error: void 0, lastReceivedAt: s };
         (null != l && (o.error = l), (I[n] = o));
     },
@@ -208,8 +208,8 @@ let D = new k(u.h, {
         let t = e.channelId;
         return null == t
             ? null
-            : (t !== r?.channelId || e.summaryId !== r?.summaryId) &&
-                  void (r = { channelId: t, summaryId: e.summaryId ?? null });
+            : (t !== i?.channelId || e.summaryId !== i?.summaryId) &&
+                  void (i = { channelId: t, summaryId: e.summaryId ?? null });
     },
     SET_SUMMARY_FEEDBACK(e) {
         let { summary: t, rating: n } = e;
@@ -256,19 +256,19 @@ let D = new k(u.h, {
                             .value();
                     return ((e[n] = s), e);
                 }, {}),
-            r = s.reduce(
+            i = s.reduce(
                 (e, t) => {
                     let s = I[t] ?? {},
-                        r = a[t];
+                        i = a[t];
                     return (
-                        null != r && (e.summariesByChannel[t] = r),
+                        null != i && (e.summariesByChannel[t] = i),
                         (e.summaryFetchStatusByChannel[t] = { ...s, fetching: !1, error: l, lastReceivedAt: n }),
                         e
                     );
                 },
                 { summariesByChannel: {}, summaryFetchStatusByChannel: {} },
             );
-        ((y = { ...y, ...r.summariesByChannel }), (I = { ...I, ...r.summaryFetchStatusByChannel }));
+        ((y = { ...y, ...i.summariesByChannel }), (I = { ...I, ...i.summaryFetchStatusByChannel }));
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         let { channel_id: t, summaries: n, guild_id: l } = e,
@@ -280,16 +280,16 @@ let D = new k(u.h, {
                 .map((e) => _(e, t))
                 .reverse()
                 .value(),
-            r = y[t] ?? [],
-            i = o()
+            i = y[t] ?? [],
+            r = o()
                 .chain(a)
-                .concat(r)
+                .concat(i)
                 .sortBy((e) => v.default.extractTimestamp(e.startId))
                 .takeRight(75)
                 .uniqBy("id")
                 .reverse()
                 .value();
-        ((y[t] = i), (I[t] = { ...I[t], error: void 0, fetching: I[t]?.fetching ?? !1, lastReceivedAt: s }));
+        ((y[t] = r), (I[t] = { ...I[t], error: void 0, fetching: I[t]?.fetching ?? !1, lastReceivedAt: s }));
     },
     CLEAR_CONVERSATION_SUMMARIES() {
         ((y = {}), (I = {}));

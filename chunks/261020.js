@@ -1,17 +1,17 @@
-var l = n(210528),
-    r = n(723702),
-    o = n(272984);
-function i(t) {
-    let e = null;
-    ((0, r.xl)() || (e = window.open("", "_blank")), null != e ? (e.location.href = t) : window.open(t));
+var i = t(210528),
+    l = t(723702),
+    n = t(272984);
+function o(e) {
+    let C = null;
+    ((0, l.xl)() || (C = window.open("", "_blank")), null != C ? (C.location.href = e) : window.open(e));
 }
-n.d(
-    e,
+t.d(
+    C,
     {},
     {
-        C: i,
-        n: function (t, e) {
-            i(l.A.isProtocolRegistered() ? o.RQ.PLAYER_OPEN(t, e) : o.RQ.WEB_OPEN(t, e));
+        C: o,
+        n: function (e, C) {
+            o(i.A.isProtocolRegistered() ? n.RQ.PLAYER_OPEN(e, C) : n.RQ.WEB_OPEN(e, C));
         },
     },
 );

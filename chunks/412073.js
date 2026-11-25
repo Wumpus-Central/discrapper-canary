@@ -1,4 +1,4 @@
-t.exports = {
+p.exports = {
     Os: "group_V4JTH7",
     MX: "half_V4JTH7",
     mz: "remix_V4JTH7",

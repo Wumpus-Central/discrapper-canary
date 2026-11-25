@@ -1,10 +1,10 @@
-var l,
-    i = n(158390),
+var i,
+    l = n(158390),
     s = n(855986),
     r = n(73153),
     a = n(9994),
     o = n(652215),
-    c = (((l = {}).NOT_FETCHED = "NOT_FETCHED"), (l.FETCHING = "FETCHING"), (l.FETCHED = "FETCHED"), l);
+    c = (((i = {}).NOT_FETCHED = "NOT_FETCHED"), (i.FETCHING = "FETCHING"), (i.FETCHED = "FETCHED"), i);
 let u = new Map(),
     d = new Map(),
     h = {
@@ -22,18 +22,18 @@ function m(e) {
 }
 function g(e) {
     let { guildId: t, error: n } = e,
-        l = u.get(t);
-    null == l ? u.set(t, { ...h, error: n }) : u.set(t, { ...l, error: n, isUpdating: !1 });
+        i = u.get(t);
+    null == i ? u.set(t, { ...h, error: n }) : u.set(t, { ...i, error: n, isUpdating: !1 });
 }
 function f(e) {
     let { invite: t } = e,
         { profile: n } = t;
     if (null == n) return;
-    let l = u.get(n.id),
-        i = (0, a.wr)(n);
-    null == l
-        ? u.set(n.id, { ...h, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
-        : u.set(n.id, { ...l, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
+    let i = u.get(n.id),
+        l = (0, a.wr)(n);
+    null == i
+        ? u.set(n.id, { ...h, profile: l, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
+        : u.set(n.id, { ...i, profile: l, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
 }
 class p extends s.Ay.Store {
     static displayName = "GuildProfileStore";
@@ -65,11 +65,11 @@ let A = new p(r.h, {
     GUILD_PROFILE_FETCH_SUCCESS: function (e) {
         let { guildId: t, profile: n } = e;
         (d.get(t)?.succeed(), d.delete(t));
-        let l = u.get(t);
-        null == l
+        let i = u.get(t);
+        null == i
             ? u.set(t, { ...h, profile: n, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
             : u.set(t, {
-                  ...l,
+                  ...i,
                   profile: n,
                   lastSyncTimestamp: Date.now(),
                   fetchStatus: "FETCHED",
@@ -79,29 +79,29 @@ let A = new p(r.h, {
     },
     GUILD_PROFILE_FETCH_FAILURE: function (e) {
         let t,
-            { guildId: n, error: l } = e,
-            s = (null == (t = d.get(n)) && ((t = new i.A(5e3, 3e5)), d.set(n, t)), t).fail(),
+            { guildId: n, error: i } = e,
+            s = (null == (t = d.get(n)) && ((t = new l.A(5e3, 3e5)), d.set(n, t)), t).fail(),
             r = Date.now() + s,
             a = u.get(n);
         null == a
-            ? u.set(n, { ...h, error: l, fetchStatus: "FETCHED", nextFetchAllowedAt: r })
-            : u.set(n, { ...a, error: l, fetchStatus: "FETCHED", nextFetchAllowedAt: r });
+            ? u.set(n, { ...h, error: i, fetchStatus: "FETCHED", nextFetchAllowedAt: r })
+            : u.set(n, { ...a, error: i, fetchStatus: "FETCHED", nextFetchAllowedAt: r });
     },
     GUILD_PROFILE_UPDATE: m,
     GUILD_PROFILE_UPDATE_SUCCESS: function (e) {
         let { guildId: t, profile: n } = e,
-            l = u.get(t);
-        null == l ? u.set(t, { ...h, profile: n }) : u.set(t, { ...l, profile: n, isUpdating: !1 });
+            i = u.get(t);
+        null == i ? u.set(t, { ...h, profile: n }) : u.set(t, { ...i, profile: n, isUpdating: !1 });
     },
     GUILD_PROFILE_UPDATE_FAILURE: g,
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
         let { form: t, guildId: n } = e,
-            l = t?.profile;
-        if (null == l) return;
-        let i = u.get(n);
-        null == i
-            ? u.set(n, { ...h, profile: l, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
-            : u.set(n, { ...i, profile: l, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
+            i = t?.profile;
+        if (null == i) return;
+        let l = u.get(n);
+        null == l
+            ? u.set(n, { ...h, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })
+            : u.set(n, { ...l, profile: i, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" });
     },
     INVITE_RESOLVE_SUCCESS: f,
     INSTANT_INVITE_CREATE_SUCCESS: f,
@@ -117,21 +117,21 @@ let A = new p(r.h, {
         let { guild: t } = e,
             n = u.get(t.id);
         if (null == n || null == n.profile) return !1;
-        let l = {
+        let i = {
             ...n.profile,
             name: t.name,
             icon: t.icon ?? null,
             description: t.description ?? "",
             customBanner: t.discovery_splash ?? null,
         };
-        u.set(t.id, { ...n, profile: l });
+        u.set(t.id, { ...n, profile: i });
     },
     GUILD_PROFILE_UPDATE_VISIBILITY: m,
     GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: function (e) {
         let { guildId: t, visibility: n } = e,
-            l = u.get(t),
-            i = l?.profile;
-        null != l && null != i && u.set(t, { ...l, isUpdating: !1, profile: { ...i, visibility: n } });
+            i = u.get(t),
+            l = i?.profile;
+        null != i && null != l && u.set(t, { ...i, isUpdating: !1, profile: { ...l, visibility: n } });
     },
     GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: g,
 });

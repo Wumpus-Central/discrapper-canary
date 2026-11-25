@@ -39,8 +39,8 @@ n.d(
                     (await (0, l.A)(e), (await c({ channelId: A, conversationId: t, messageId: p })) && (0, u.Rl)());
                 });
             }
-            let m = h.toString();
-            return { path: "" === m ? t + s : `${t}?${m}${s}`, state: o };
+            let I = h.toString();
+            return { path: "" === I ? t + s : `${t}?${I}${s}`, state: o };
         },
         zZ: function (e) {
             let { id: t, guildId: n, channelId: i, startMessageId: r } = e,

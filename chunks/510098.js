@@ -3098,7 +3098,7 @@ class e5 extends R.EventEmitter {
         );
     }
 }
-class e8 {
+class e7 {
     pool = {};
     async acquire(e, t) {
         let n = await e5.get(e, t, this);
@@ -3113,9 +3113,9 @@ class e8 {
         this.pool[e.id] = e;
     }
 }
-var e7 = n(935399),
-    e4 = n(503698),
-    e9 = n.n(e4),
+var e4 = n(935399),
+    e8 = n(503698),
+    e9 = n.n(e8),
     te = n(51906);
 function tt(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, onVideoElement: a, className: s, ...l } = e,
@@ -3189,7 +3189,7 @@ function tn(e) {
             ),
             [o, a],
         ),
-        (0, e7.l0)(() => {
+        (0, e4.l0)(() => {
             o.destroy();
         }),
         f.useEffect(() => {
@@ -3220,7 +3220,7 @@ class tr extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e8();
+    desktopInputPool = new e7();
     enablePromise = null;
     dave = null;
     maxSupportedProtocolVersion = null;

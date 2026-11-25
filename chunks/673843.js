@@ -9,14 +9,14 @@ n.d(
     {
         A: function (e) {
             let t = l.useMemo(() => e?.items.find((e) => (0, a.P)(e))?.skuId ?? null, [e]),
-                { isLoaded: n, isFetching: o } = (0, i.cf)([u.A], () => ({
+                { isLoaded: n, isFetching: s } = (0, i.cf)([u.A], () => ({
                     isLoaded: null == t || u.A.isLoadedForSKU(t),
                     isFetching: null != t && u.A.isFetchingForSKU(t),
                 })),
-                s = l.useRef(!1);
+                o = l.useRef(!1);
             l.useEffect(() => {
-                null == t || n || o || s.current || ((s.current = !0), (0, r.ur)(t).catch(() => {}));
-            }, [t, n, o]);
+                null == t || n || s || o.current || ((o.current = !0), (0, r.ur)(t).catch(() => {}));
+            }, [t, n, s]);
         },
     },
 );

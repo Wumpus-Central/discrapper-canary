@@ -1,20 +1,20 @@
 var l = n(855986),
-    r = n(933958),
-    o = n(429913),
-    i = n(574520);
+    i = n(933958),
+    a = n(429913),
+    r = n(574520);
 n.d(
-    e,
+    t,
     {},
     {
-        A: function (t) {
-            let e = (0, l.bG)([i.A], () => i.A.getMatchingActivity(t)),
-                [n, a] = (0, o.A)([e?.application_id, "application_id" in t.extra ? t.extra.application_id : void 0]);
+        A: function (e) {
+            let t = (0, l.bG)([r.A], () => r.A.getMatchingActivity(e)),
+                [n, s] = (0, a.A)([t?.application_id, "application_id" in e.extra ? e.extra.application_id : void 0]);
             return {
-                activity: e,
-                embeddedActivity: (0, l.bG)([r.Ay], () => r.Ay.getEmbeddedActivityForUserId(t.author_id, n?.id)),
-                anyMatchingApplication: n ?? a,
+                activity: t,
+                embeddedActivity: (0, l.bG)([i.Ay], () => i.Ay.getEmbeddedActivityForUserId(e.author_id, n?.id)),
+                anyMatchingApplication: n ?? s,
                 activityApplication: n,
-                fallbackApplication: a,
+                fallbackApplication: s,
             };
         },
     },

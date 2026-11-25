@@ -1,39 +1,39 @@
-var t = n(855986),
-    a = n(50268),
-    s = n(317525),
-    i = n(71393),
-    r = n(576705),
-    u = n(120747),
-    o = n(652215),
-    d = n(792996);
+var l = n(855986),
+    i = n(50268),
+    a = n(317525),
+    r = n(71393),
+    s = n(576705),
+    o = n(120747),
+    u = n(652215),
+    c = n(792996);
 n.d(
-    l,
+    t,
     {},
     {
         A: function (e) {
-            let { guildId: l, roleId: n, targetChannelId: c } = e,
-                m = (0, a.A)({ id: n, label: d.intl.string(d.t.sMsaLg) }),
-                { role: x, canManageRoles: h } = (0, t.cf)(
-                    [s.A, i.A, r.A],
+            let { guildId: t, roleId: n, targetChannelId: d } = e,
+                m = (0, i.A)({ id: n, label: c.intl.string(c.t.sMsaLg) }),
+                { role: A, canManageRoles: p } = (0, l.cf)(
+                    [a.A, r.A, s.A],
                     () => {
-                        let e = i.A.getGuild(l);
+                        let e = r.A.getGuild(t);
                         return {
-                            role: null != l && null != n ? s.A.getRole(l, n) : void 0,
-                            canManageRoles: null != e && r.A.can(o.xBc.MANAGE_ROLES, e),
+                            role: null != t && null != n ? a.A.getRole(t, n) : void 0,
+                            canManageRoles: null != e && s.A.can(u.xBc.MANAGE_ROLES, e),
                         };
                     },
-                    [l, n],
+                    [t, n],
                 ),
-                f = (0, u.A)({
-                    targetChannelId: c,
-                    mention: null != x && null != n ? { display: `@${x.name}`, raw: `<@&${n}>` } : null,
+                h = (0, o.A)({
+                    targetChannelId: d,
+                    mention: null != A && null != n ? { display: `@${A.name}`, raw: `<@&${n}>` } : null,
                 });
             return {
-                role: x,
+                role: A,
                 copyIdItem: m,
-                mentionItem: f,
-                canManageRoles: h,
-                hasItems: null != x && (null != f || h || null != m),
+                mentionItem: h,
+                canManageRoles: p,
+                hasItems: null != A && (null != h || p || null != m),
             };
         },
     },

@@ -13,14 +13,14 @@ n.d(
     {},
     {
         A: function (e) {
-            let { userId: t, width: n, avError: m, selected: f = !1, noArt: p = !1 } = e,
+            let { userId: t, width: n, avError: m, selected: p = !1, noArt: f = !1 } = e,
                 g = (0, a.B1)(m)?.errorCode;
             return (0, i.jsx)(u.A, {
                 artURL: h,
                 header: d.intl.string(d.t["z+mxvo"]),
                 size: (0, u.J)(n),
-                noArt: p,
-                selected: f,
+                noArt: f,
+                selected: p,
                 description: d.intl.format(d.t.d486Wm, {
                     helpUrl: o.A.getArticleURL(c.MVz.VOICE_VIDEO_TROUBLESHOOTING),
                 }),

@@ -9,9 +9,9 @@ var i = e(503698),
     u = e(946356),
     d = e(939496),
     A = e(518477),
-    f = e(996988),
-    g = e(792996),
-    m = e(260155);
+    x = e(996988),
+    m = e(792996),
+    f = e(260155);
 e.d(
     n,
     {},
@@ -21,37 +21,37 @@ e.d(
                     children: n,
                     className: e,
                     profileModalScrollTarget: i,
-                    onAction: p,
-                    onClose: x,
-                    "aria-labelledby": I,
-                    ref: _,
-                    ...N
+                    onAction: g,
+                    onClose: p,
+                    "aria-labelledby": _,
+                    ref: I,
+                    ...E
                 } = t,
-                { themeType: E } = (0, d.E)(),
-                { analyticsLocations: T } = (0, s.Ay)(),
+                { themeType: T } = (0, d.E)(),
+                { analyticsLocations: N } = (0, s.Ay)(),
                 { context: h } = (0, o.NJ)();
-            return E === f.d.MODAL || E === f.d.MODAL_V2 || h?.userId == null
+            return T === x.d.MODAL || T === x.d.MODAL_V2 || h?.userId == null
                 ? (0, l.jsx)("article", {
-                      "aria-labelledby": I,
-                      children: (0, l.jsx)(u.A.Overlay, { ref: _, className: a()(m.Nr, e), ...N, children: n }),
+                      "aria-labelledby": _,
+                      children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(f.Nr, e), ...E, children: n }),
                   })
                 : (0, l.jsx)("article", {
-                      "aria-labelledby": I,
+                      "aria-labelledby": _,
                       children: (0, l.jsx)(r.s, {
-                          className: m.OV,
-                          "aria-label": g.intl.string(g.t.pD1L1u),
-                          focusProps: { ringTarget: _ },
+                          className: f.OV,
+                          "aria-label": m.intl.string(m.t.pD1L1u),
+                          focusProps: { ringTarget: I },
                           onClick: () => {
-                              (p?.({ action: "PRESS_CARD" }),
+                              (g?.({ action: "PRESS_CARD" }),
                                   (0, c.openUserProfileModal)({
                                       tabSection: A.RP.ACTIVITY,
-                                      sourceAnalyticsLocations: T,
+                                      sourceAnalyticsLocations: N,
                                       scrollTarget: i,
                                       ...h,
                                   }),
-                                  x?.());
+                                  p?.());
                           },
-                          children: (0, l.jsx)(u.A.Overlay, { ref: _, className: a()(m.Nr, e), ...N, children: n }),
+                          children: (0, l.jsx)(u.A.Overlay, { ref: I, className: a()(f.Nr, e), ...E, children: n }),
                       }),
                   });
         },

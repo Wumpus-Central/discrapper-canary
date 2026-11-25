@@ -1,12 +1,12 @@
 var l,
     s = n(635377),
     a = n.n(s),
-    r = n(855986),
-    i = n(73153),
+    i = n(855986),
+    r = n(73153),
     o = (((l = {}).VOICE_MESSAGE = "voice_message"), l);
 let c = { rates: { voice_message: 1 }, positions: new (a())({ max: 25 }) },
     u = { ...c };
-class d extends r.Ay.DeviceSettingsStore {
+class d extends i.Ay.DeviceSettingsStore {
     static displayName = "MediaPlaybackStore";
     static persistKey = "MediaPlaybackStore";
     initialize(e) {
@@ -23,7 +23,7 @@ class d extends r.Ay.DeviceSettingsStore {
         return u.positions.get(e) ?? 0;
     }
 }
-let m = new d(i.h, {
+let m = new d(r.h, {
     MEDIA_PLAYBACK_RATE_UPDATE: function (e) {
         let { rate: t, playbackType: n } = e;
         u = { ...u, rates: { ...u.rates, [n]: t } };

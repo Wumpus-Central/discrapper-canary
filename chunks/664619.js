@@ -3,8 +3,8 @@ var l = e(620632),
     _ = e(803306),
     u = e(382483),
     o = e(287809),
-    r = e(517244),
-    a = e(513845),
+    a = e(517244),
+    r = e(513845),
     s = e(233470),
     c = e(260498),
     p = e(385081),
@@ -28,7 +28,7 @@ async function h(t, n, e) {
         null !== e && A(t, n, e));
 }
 function A(t, n, e) {
-    n ? e?.integrationInstalled !== !0 || e.botPermissionsChanged || (0, r.k)(t) : (0, a.R2)(t);
+    n ? e?.integrationInstalled !== !0 || e.botPermissionsChanged || (0, a.k)(t) : (0, r.R2)(t);
 }
 e.d(
     n,
@@ -62,8 +62,8 @@ e.d(
                     previewAppChannels: u.previewAppChannels,
                     previewDevicePermissions: u.previewDevicePermissions,
                 });
-            let r = o.default.getCurrentUser()?.id;
-            return (null != r && (0, _.eO)(r).catch(() => {}), !0);
+            let a = o.default.getCurrentUser()?.id;
+            return (null != a && (0, _.eO)(a).catch(() => {}), !0);
         },
         tZ: async function (t, n) {
             let { isPreview: e, install: l } = n,
@@ -71,10 +71,10 @@ e.d(
                 _ = null == i ? null : e ? i.preview_application_id : i.application_id,
                 u = !e || null != l,
                 o = null != _ ? h(_, e, u ? l : null) : null,
-                { bot_permissions_changed: r, integration_installed: a, project: p } = (await (0, s.U1)(t)).body,
+                { bot_permissions_changed: a, integration_installed: r, project: p } = (await (0, s.U1)(t)).body,
                 d = e ? p.preview_application_id : p.application_id;
             if (null != d) {
-                let t = { integrationInstalled: a, botPermissionsChanged: r };
+                let t = { integrationInstalled: r, botPermissionsChanged: a };
                 d !== _ || null == o ? await h(d, e, t) : (await o, u || A(d, e, t));
             }
         },

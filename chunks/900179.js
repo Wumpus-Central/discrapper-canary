@@ -37,19 +37,19 @@ n.d(
                     className: v,
                     scrollTargetId: R,
                 } = e,
-                j = (0, p.GV)(),
-                y = l.useRef(null),
+                y = (0, p.GV)(),
+                j = l.useRef(null),
                 I = (0, h.g)(),
                 T = null != R && I === R;
-            (0, E.A)(y, T);
+            (0, E.A)(j, T);
             let S = "function" == typeof c ? { icon: c } : c;
             return (0, a.jsxs)("section", {
-                ref: T ? y : void 0,
+                ref: T ? j : void 0,
                 className: s()(b.uW, v),
-                "aria-labelledby": j,
+                "aria-labelledby": y,
                 children: [
                     A
-                        ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: j, children: n }) })
+                        ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: y, children: n }) })
                         : (0, a.jsxs)("div", {
                               className: b.so,
                               children: [
@@ -61,7 +61,7 @@ n.d(
                                               variant: i,
                                               color: "currentColor",
                                               className: r,
-                                              id: j,
+                                              id: y,
                                               children: n,
                                           }),
                                           null != S && (0, a.jsx)(_, { ...S }),

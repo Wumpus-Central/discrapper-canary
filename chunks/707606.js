@@ -1,6 +1,6 @@
 var l = n(477900);
 n(582128);
-var s = n(129230);
+var i = n(129230);
 n.d(
     t,
     {},
@@ -8,7 +8,7 @@ n.d(
         A: function (e) {
             let t = (t) => {
                 let { ref: n, ...a } = t;
-                return (0, l.jsx)(s.Ig.Consumer, {
+                return (0, l.jsx)(i.Ig.Consumer, {
                     children: (t) => (0, l.jsx)(e, { ...a, ref: n, analyticsContext: t }),
                 });
             };

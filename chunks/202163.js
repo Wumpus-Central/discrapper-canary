@@ -1,39 +1,39 @@
-var a = t(582128),
-    i = t(855986),
-    l = t(587895),
-    r = t(429913),
-    o = t(403362),
-    d = t(311043),
-    s = t(454908);
-t.d(
-    n,
+var l = n(582128),
+    i = n(855986),
+    a = n(587895),
+    r = n(429913),
+    s = n(403362),
+    o = n(311043),
+    u = n(454908);
+n.d(
+    t,
     {},
     {
         Ay: function (e) {
-            let n = (0, r.h)(e),
-                t = null != e && null == n,
-                a = n?.getCanonicalGameId() ?? null,
-                { data: i, isLoading: l } = (0, s.I)(a);
-            return { gameId: a, gameRecord: i ?? null, isLoading: t || l };
+            let t = (0, r.h)(e),
+                n = null != e && null == t,
+                l = t?.getCanonicalGameId() ?? null,
+                { data: i, isLoading: a } = (0, u.I)(l);
+            return { gameId: l, gameRecord: i ?? null, isLoading: n || a };
         },
         iE: function (e) {
-            let n = (0, r.A)(e),
-                t = (0, i.yK)([l.A], () => e.map((e) => !l.A.isHydrated(e) && !l.A.didFetchingApplicationFail(e)), [e]),
-                u = a.useMemo(() => n.map((e) => e?.getCanonicalGameId() ?? null), [n]),
-                c = a.useMemo(() => u.filter(o.Vq), [u]);
-            (0, s.x)(c);
-            let g = (0, i.yK)([d.A], () => u.map((e) => d.A.getGame(e) ?? null), [u]),
-                f = (0, i.yK)(
-                    [d.A],
+            let t = (0, r.A)(e),
+                n = (0, i.yK)([a.A], () => e.map((e) => !a.A.isHydrated(e) && !a.A.didFetchingApplicationFail(e)), [e]),
+                c = l.useMemo(() => t.map((e) => e?.getCanonicalGameId() ?? null), [t]),
+                d = l.useMemo(() => c.filter(s.Vq), [c]);
+            (0, u.x)(d);
+            let m = (0, i.yK)([o.A], () => c.map((e) => o.A.getGame(e) ?? null), [c]),
+                A = (0, i.yK)(
+                    [o.A],
                     () =>
-                        u.map(
-                            (e) => null != e && null == d.A.getGame(e) && !d.A.hasNoData(e) && !d.A.didFetchingFail(e),
+                        c.map(
+                            (e) => null != e && null == o.A.getGame(e) && !o.A.hasNoData(e) && !o.A.didFetchingFail(e),
                         ),
-                    [u],
+                    [c],
                 );
-            return a.useMemo(
-                () => u.map((e, n) => ({ gameId: e, gameRecord: g[n], isLoading: t[n] || f[n] })),
-                [u, g, t, f],
+            return l.useMemo(
+                () => c.map((e, t) => ({ gameId: e, gameRecord: m[t], isLoading: n[t] || A[t] })),
+                [c, m, n, A],
             );
         },
     },

@@ -1,10 +1,10 @@
-n.d(
-    i,
+i.d(
+    n,
     {},
     {
         U: function (t) {
-            let { partySize: i, maxPartySize: n } = t;
-            return i > -1 && n > 0 && i >= n;
+            let { partySize: n, maxPartySize: i } = t;
+            return n > -1 && i > 0 && n >= i;
         },
     },
 );

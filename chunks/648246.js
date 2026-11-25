@@ -1,27 +1,27 @@
-var e = i(477900);
-i(582128);
-var l = i(821609),
-    r = i(908289),
-    a = i(960076),
-    s = i(792996);
-i.d(
+var l = n(477900);
+n(582128);
+var i = n(821609),
+    a = n(908289),
+    r = n(960076),
+    s = n(792996);
+n.d(
     t,
     {},
     {
-        A: function (n) {
-            let { activity: t, onAction: i, variant: o = "secondary", size: d = "sm", ...u } = n;
-            return (0, a.A)(t)
-                ? (0, e.jsx)(l.$, {
+        A: function (e) {
+            let { activity: t, onAction: n, variant: o = "secondary", size: u = "sm", ...c } = e;
+            return (0, r.A)(t)
+                ? (0, l.jsx)(i.$, {
                       variant: o,
-                      size: d,
+                      size: u,
                       text: s.intl.string(s.t.I6JG46),
                       onClick: function () {
-                          i?.();
-                          let n = (0, r.A)(t);
-                          return window.open(null != n ? n : void 0);
+                          n?.();
+                          let e = (0, a.A)(t);
+                          return window.open(null != e ? e : void 0);
                       },
                       fullWidth: !0,
-                      ...u,
+                      ...c,
                   })
                 : null;
         },

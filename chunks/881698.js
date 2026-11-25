@@ -1,10 +1,10 @@
-var l = n(155718);
-n.d(
-    i,
+var l = t(155718);
+t.d(
+    n,
     {},
     {
-        A: function (t) {
-            return t?.find((t) => t.type === l.Mh.NVIDIA) ?? null;
+        A: function (i) {
+            return i?.find((i) => i.type === l.Mh.NVIDIA) ?? null;
         },
     },
 );

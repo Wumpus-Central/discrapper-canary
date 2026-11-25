@@ -1,6 +1,6 @@
-var l = n(477900);
+var i = n(477900);
 n(582128);
-var i = n(778712),
+var l = n(778712),
     s = n(192308);
 (n(515718),
     n(190460),
@@ -11,7 +11,7 @@ var i = n(778712),
             L: function (e) {
                 let {
                     analyticsLocations: t,
-                    initialSelectedDecoration: i,
+                    initialSelectedDecoration: l,
                     guild: r,
                     onClose: a,
                     stackingBehavior: o,
@@ -53,12 +53,12 @@ var i = n(778712),
                             n.e(886713),
                         ]).then(n.bind(n, 50976));
                         return (n) =>
-                            (0, l.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...n,
                                 onCloseModal: n.onClose,
                                 onClose: a,
                                 analyticsLocations: t,
-                                initialSelectedDecoration: i,
+                                initialSelectedDecoration: l,
                                 guild: r,
                                 returnRef: c,
                             });
@@ -67,7 +67,7 @@ var i = n(778712),
                 );
             },
             Te: function (e) {
-                return "number" != typeof e ? 1.2 * (0, i.FT)(e) : 1.2 * e;
+                return "number" != typeof e ? 1.2 * (0, l.FT)(e) : 1.2 * e;
             },
         },
     ));

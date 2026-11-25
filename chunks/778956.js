@@ -1,5 +1,5 @@
 r.r(
-    (e.exports = {
+    (o.exports = {
         textButton: "textButton_nJgowo",
         text: "text_nJgowo",
         primary: "primary_nJgowo",

@@ -1,5 +1,5 @@
 let l = "discord7937464",
-    r = "www.xbox.com";
+    i = "www.xbox.com";
 n.d(
     t,
     {},
@@ -8,10 +8,10 @@ n.d(
             let t = encodeURIComponent(e);
             return `msxbox://game/?productid=${t}&ocid=${l}`;
         },
-        bH: r,
+        bH: i,
         jA: function (e) {
             let t = encodeURIComponent(e);
-            return `https://${r}/games/store/title/${t}?ocid=${l}`;
+            return `https://${i}/games/store/title/${t}?ocid=${l}`;
         },
     },
 );

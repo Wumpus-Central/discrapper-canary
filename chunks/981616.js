@@ -1,74 +1,74 @@
-r(142703);
-var i = r(729937),
-    n = r(573648),
-    o = r(644727),
-    s = r(927813),
-    u = r(107750),
-    c = r(210528),
-    l = r(655116),
-    a = r(272984),
-    d = r(652215);
-let m = 30 * s.A.Millis.SECOND;
-function A(e) {
+n(142703);
+var i = n(729937),
+    l = n(573648),
+    s = n(644727),
+    r = n(927813),
+    a = n(107750),
+    o = n(210528),
+    c = n(655116),
+    u = n(272984),
+    d = n(652215);
+let h = 30 * r.A.Millis.SECOND;
+function m(e) {
     if ("string" == typeof e) return e;
     throw Error("value is not a string");
 }
-r.d(
+n.d(
     t,
     {},
     {
         G8: function () {
-            let e = l.A.getActiveSocketAndDevice();
+            let e = c.A.getActiveSocketAndDevice();
             if (null == e) return Promise.reject(Error("no active profile"));
             let { socket: t } = e;
             return t.isPremium
                 ? Promise.resolve()
-                : (0, u.E$)(t.accountId, t.accessToken).then(() => {
+                : (0, a.E$)(t.accountId, t.accessToken).then(() => {
                       if (!t.isPremium) return Promise.reject(Error("spotify account is not premium"));
                   });
         },
         d3: function (e) {
-            return null != e.getActiveSocketAndDevice() || c.A.isProtocolRegistered();
+            return null != e.getActiveSocketAndDevice() || o.A.isProtocolRegistered();
         },
         dM: function () {
-            let e = l.A.getActiveSocketAndDevice();
+            let e = c.A.getActiveSocketAndDevice();
             if (null != e) return Promise.resolve(e);
-            if (!c.A.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
-            let t = l.A.getPlayableComputerDevices();
-            if (o.Ay.isObservedAppRunning(n.A.get(d.fg2.SPOTIFY).name) && t.length > 0) {
-                let { socket: e, device: r } = t[0];
-                return ((0, u.VR)(e.accountId, r.id), Promise.resolve({ socket: e, device: r }));
+            if (!o.A.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
+            let t = c.A.getPlayableComputerDevices();
+            if (s.Ay.isObservedAppRunning(l.A.get(d.fg2.SPOTIFY).name) && t.length > 0) {
+                let { socket: e, device: n } = t[0];
+                return ((0, a.VR)(e.accountId, n.id), Promise.resolve({ socket: e, device: n }));
             }
-            return new Promise((e, r) => {
+            return new Promise((e, n) => {
                 let i = setTimeout(() => {
-                    (l.A.removeChangeListener(n), r(Error("timeout launching spotify")));
-                }, m);
-                function n() {
-                    for (let { socket: r, device: o } of l.A.getPlayableComputerDevices())
-                        null == t.find((e) => e.device.id === o.id) &&
+                    (c.A.removeChangeListener(l), n(Error("timeout launching spotify")));
+                }, h);
+                function l() {
+                    for (let { socket: n, device: s } of c.A.getPlayableComputerDevices())
+                        null == t.find((e) => e.device.id === s.id) &&
                             (clearTimeout(i),
-                            l.A.removeChangeListener(n),
+                            c.A.removeChangeListener(l),
                             setImmediate(() => {
-                                ((0, u.VR)(r.accountId, o.id), e({ socket: r, device: o }));
+                                ((0, a.VR)(n.accountId, s.id), e({ socket: n, device: s }));
                             }));
                 }
-                (l.A.addChangeListener(n), window.open(`${a.gY}:`));
+                (c.A.addChangeListener(l), window.open(`${u.gY}:`));
             });
         },
         getSpotifyMetadataFromActivity: async function (e, t) {
-            let r = await (0, i.yb)(e, t),
-                n = (0, a.NJ)(A(r.type ?? a.M0.TRACK));
-            if (null === n) throw Error(`invalid type ${r.type}`);
+            let n = await (0, i.yb)(e, t),
+                l = (0, u.NJ)(m(n.type ?? u.M0.TRACK));
+            if (null === l) throw Error(`invalid type ${n.type}`);
             return {
-                context_uri: "string" == typeof r.context_uri ? r.context_uri : void 0,
-                album_id: A(r.album_id),
-                artist_ids: Array.isArray(r.artist_ids) ? r.artist_ids.map(A) : [],
-                type: n,
-                button_urls: Array.isArray(r.button_urls) ? r.button_urls.map(A) : [],
+                context_uri: "string" == typeof n.context_uri ? n.context_uri : void 0,
+                album_id: m(n.album_id),
+                artist_ids: Array.isArray(n.artist_ids) ? n.artist_ids.map(m) : [],
+                type: l,
+                button_urls: Array.isArray(n.button_urls) ? n.button_urls.map(m) : [],
             };
         },
         mD: function () {
-            let e = l.A.getActiveSocketAndDevice();
+            let e = c.A.getActiveSocketAndDevice();
             if (null == e) return null;
             let { socket: t } = e;
             return t.isPremium;

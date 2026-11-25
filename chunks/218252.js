@@ -1,5 +1,5 @@
-var l = n(477900),
-    i = n(855986),
+var i = n(477900),
+    l = n(855986),
     s = n(964486),
     r = n(793574),
     a = n(688810),
@@ -23,7 +23,7 @@ n.d(
     {
         A: function (e) {
             let { handleLearnMore: t, effectiveMaxSize: n, ...I } = e,
-                N = (0, i.bG)([c.A], () => c.A.getGuildId()),
+                N = (0, l.bG)([c.A], () => c.A.getGuildId()),
                 { analyticsLocations: C } = (0, a.Ay)(r.A.FILE_UPLOAD_POPOUT, r.A.PREMIUM_UPSELL_MODAL);
             (0, s.Ay)(() => {
                 (u.default.track(E.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -36,13 +36,13 @@ n.d(
                     (0, g.sq)(E.U7l.PREMIUM_UPSELL_VIEWED, C, () => (0, f.uq)(A.e.LARGER_FILE_UPLOAD_UPSELL)));
             });
             let v = (0, h.Iu)({ guildId: N, maxSize: n }),
-                T = (0, d.TM)() ? _.A : j.A;
-            return (0, l.jsx)(a.f5, {
+                y = (0, d.TM)() ? _.A : j.A;
+            return (0, i.jsx)(a.f5, {
                 value: C,
-                children: (0, l.jsx)(p.A, {
+                children: (0, i.jsx)(p.A, {
                     title: x.intl.string(x.t["9C+41g"]),
                     subtitle: v,
-                    graphic: { type: "video", src: T, loop: !0, loopAt: 2.1 },
+                    graphic: { type: "video", src: y, loop: !0, loopAt: 2.1 },
                     secondaryCTA: x.intl.string(x.t.ZnqyZ2),
                     onSecondaryClick: t,
                     ...I,

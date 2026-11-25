@@ -16,9 +16,9 @@ e.d(
                     return Math.floor(t / n) * n;
                 })(o),
                 A = c > 0 ? Math.round((d / c) * 100) : 0,
-                f = (0, a.Ar)(d),
-                g = (0, a.Ar)(c),
-                m = r.intl.formatToPlainString(r.t.bnnNER, { elapsed: f, duration: g });
+                x = (0, a.Ar)(d),
+                m = (0, a.Ar)(c),
+                f = r.intl.formatToPlainString(r.t.bnnNER, { elapsed: x, duration: m });
             return (0, l.jsxs)("div", {
                 className: s.kL,
                 children: [
@@ -36,7 +36,7 @@ e.d(
                         "aria-valuenow": A,
                         "aria-valuemin": 0,
                         "aria-valuemax": 100,
-                        "aria-valuetext": m,
+                        "aria-valuetext": f,
                         children: (0, l.jsx)("div", { className: s.qB, style: { width: `${100 * u}%` } }),
                     }),
                     (0, l.jsx)(i.E, {

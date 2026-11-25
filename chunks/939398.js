@@ -1,97 +1,97 @@
-var n = u(582128),
-    t = u(598748),
-    a = u(991690),
-    s = u(855986),
-    d = u(294323),
-    o = u(627363),
-    i = u(457827),
-    c = u(25451),
-    r = u(46653),
-    f = u(373677),
-    m = u(238490),
-    h = u(754027),
-    p = u(165610);
-let v = 221552 == u.j ? [] : null;
-function I(l, e, u) {
-    return e !== a.U.APP_CHANNEL || u.length < 2 ? null : null != l && u.includes(l) ? l : u[0];
+var t = n(582128),
+    u = n(598748),
+    i = n(991690),
+    a = n(855986),
+    r = n(294323),
+    d = n(627363),
+    o = n(457827),
+    c = n(25451),
+    s = n(46653),
+    f = n(373677),
+    m = n(238490),
+    p = n(754027),
+    h = n(165610);
+let _ = 221552 == n.j ? [] : null;
+function v(e, l, n) {
+    return l !== i.U.APP_CHANNEL || n.length < 2 ? null : null != e && n.includes(e) ? e : n[0];
 }
-u.d(
-    e,
+n.d(
+    l,
     {},
     {
-        h: I,
-        p: function (l) {
+        h: v,
+        p: function (e) {
             let {
-                    applicationId: e,
-                    previewApplicationId: u,
-                    declaredActivity: a,
-                    previewSupportedSurfaces: b,
-                    installScope: g,
-                    ownerAuthorizationRevoked: E,
-                    mainCardOnly: M = !1,
-                    supportsOverlay: P = !1,
-                    previewAppChannels: y = v,
-                    initialSelection: C,
-                    onSelectionChange: R,
-                } = l,
-                [S, T] = n.useState(C?.mode ?? null),
-                [_, w] = n.useState(C?.frameSurface ?? null),
-                [O, k] = n.useState(C?.appChannel ?? null),
-                [A, L] = n.useState(e);
-            A !== e && (L(e), null != A && (T(null), w(null), k(null)));
-            let Y = n.useRef(R);
-            (n.useLayoutEffect(() => {
-                Y.current = R;
+                    applicationId: l,
+                    previewApplicationId: n,
+                    declaredActivity: i,
+                    previewSupportedSurfaces: g,
+                    installScope: k,
+                    ownerAuthorizationRevoked: b,
+                    mainCardOnly: w = !1,
+                    supportsOverlay: y = !1,
+                    previewAppChannels: I = _,
+                    initialSelection: R,
+                    onSelectionChange: C,
+                } = e,
+                [E, M] = t.useState(R?.mode ?? null),
+                [P, S] = t.useState(R?.frameSurface ?? null),
+                [x, A] = t.useState(R?.appChannel ?? null),
+                [O, T] = t.useState(l);
+            O !== l && (T(l), null != O && (M(null), S(null), A(null)));
+            let G = t.useRef(C);
+            (t.useLayoutEffect(() => {
+                G.current = C;
             }),
-                n.useEffect(() => {
-                    Y.current?.({ mode: S, frameSurface: _, appChannel: O });
-                }, [S, _, O]));
-            let B = null != u && u === e ? u : null,
-                D = (0, s.bG)([r.default], () => r.default.getId()),
-                { applicationWidgetConfig: G } = (0, d.A)(D, B ?? void 0),
-                N = G?.surfaces,
-                H = (0, m.yZ)({
-                    widgetTop: N?.[t.m.WIDGET_TOP] != null,
-                    widgetBottom: N?.[t.m.WIDGET_BOTTOM] != null,
-                    miniProfile: N?.[t.m.MINI_PROFILE] != null,
+                t.useEffect(() => {
+                    G.current?.({ mode: E, frameSurface: P, appChannel: x });
+                }, [E, P, x]));
+            let j = null != n && n === l ? n : null,
+                B = (0, a.bG)([s.default], () => s.default.getId()),
+                { applicationWidgetConfig: Y } = (0, r.A)(B, j ?? void 0),
+                D = Y?.surfaces,
+                L = (0, m.yZ)({
+                    widgetTop: D?.[u.m.WIDGET_TOP] != null,
+                    widgetBottom: D?.[u.m.WIDGET_BOTTOM] != null,
+                    miniProfile: D?.[u.m.MINI_PROFILE] != null,
                 }),
-                W = null != B && (M ? H.hasMainCard : H.hasAny),
-                { data: X } = (0, o.YY)(u ?? void 0),
-                j = null != u && X?.bot?.id != null,
-                { data: x, isLoading: F } = (0, o.YY)(e ?? void 0),
-                Q = a || (0, c.X)(x),
-                U = null != e && F && null == x,
-                Z = (0, m.P5)(b, {
-                    legacy: { hasFrame: Q, hasProfileWidget: W, hasBotDm: j },
-                    widgetResolvable: null != B,
-                    botDmResolvable: j,
+                N = null != j && (w ? L.hasMainCard : L.hasAny),
+                { data: H } = (0, d.YY)(n ?? void 0),
+                J = null != n && H?.bot?.id != null,
+                { data: U, isLoading: W } = (0, d.YY)(l ?? void 0),
+                X = i || (0, c.X)(U),
+                F = null != l && W && null == U,
+                Q = (0, m.P5)(g, {
+                    legacy: { hasFrame: X, hasProfileWidget: N, hasBotDm: J },
+                    widgetResolvable: null != j,
+                    botDmResolvable: J,
                 }),
-                q = (0, m.Xm)({ installScope: g, ...Z, hasOverlay: P, ownerAuthorizationRevoked: E }),
-                z = n.useMemo(() => (0, f.hR)(b), [b]),
-                J = (0, f.PH)(_, z),
-                K = I(O, J, y),
-                V = n.useMemo(() => (null == K ? void 0 : { customId: K }), [K]);
+                Z = (0, m.Xm)({ installScope: k, ...Q, hasOverlay: y, ownerAuthorizationRevoked: b }),
+                $ = t.useMemo(() => (0, f.hR)(g), [g]),
+                q = (0, f.PH)(P, $),
+                z = v(x, q, I),
+                K = t.useMemo(() => (null == z ? void 0 : { customId: z }), [z]);
             return (
-                n.useEffect(() => {
-                    if (null != e)
-                        for (let l of (0, h.Mm)(e)) {
-                            let e = l.surface.type !== (0, f.BR)(J),
-                                u = (((0, p.x1)(l) ? l.data.launch.customId : l.launch?.customId) ?? null) !== K;
-                            (e || u) && (0, i.r)(l.id);
+                t.useEffect(() => {
+                    if (null != l)
+                        for (let e of (0, p.Mm)(l)) {
+                            let l = e.surface.type !== (0, f.BR)(q),
+                                n = (((0, h.x1)(e) ? e.data.launch.customId : e.launch?.customId) ?? null) !== z;
+                            (l || n) && (0, o.r)(e.id);
                         }
-                }, [e, J, K]),
+                }, [l, q, z]),
                 {
-                    availability: q,
-                    isResolving: U,
-                    activeMode: U ? null : (0, m.Qs)(S, q),
-                    setMode: T,
-                    frameSurface: J,
-                    frameSurfaceOptions: z,
-                    setFrameSurface: w,
-                    appChannel: K,
-                    setAppChannel: k,
-                    frameLaunchParams: V,
-                    widgetApplicationId: B,
+                    availability: Z,
+                    isResolving: F,
+                    activeMode: F ? null : (0, m.Qs)(E, Z),
+                    setMode: M,
+                    frameSurface: q,
+                    frameSurfaceOptions: $,
+                    setFrameSurface: S,
+                    appChannel: z,
+                    setAppChannel: A,
+                    frameLaunchParams: K,
+                    widgetApplicationId: j,
                 }
             );
         },

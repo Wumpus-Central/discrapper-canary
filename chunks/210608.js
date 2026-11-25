@@ -10,8 +10,8 @@ var i = n(665260),
     d = n(71393),
     h = n(495867),
     m = n(293651),
-    f = n(652215),
-    p = n(55010),
+    p = n(652215),
+    f = n(55010),
     g = n(731854);
 let A = new Set(),
     v = { tool: "pencil", emoji: void 0, color: void 0 },
@@ -26,12 +26,12 @@ function S() {
     let e = null != E || A.size > 0;
     return ((E = null), A.clear(), C() || e);
 }
-function w(e) {
+function b(e) {
     return (0, s.Iy)(e).ownerId === u.default.getId() ? o.A.getState().streamDrawingEnabled : A.has(e);
 }
-function b(e) {
+function w(e) {
     let { guildId: t, channelId: n, userId: i } = e;
-    return (0, s._z)({ streamType: null != t ? p.U4.GUILD : p.U4.CALL, guildId: t, channelId: n, ownerId: i });
+    return (0, s._z)({ streamType: null != t ? f.U4.GUILD : f.U4.CALL, guildId: t, channelId: n, ownerId: i });
 }
 function x(e) {
     var t;
@@ -39,7 +39,7 @@ function x(e) {
     return (null != I && I !== e && (n = C()),
     null == E ||
         ((t = E),
-        (0, s.Iy)(t).channelId === e && h.A.isConnected() && null == a.A.getGuestStreamKey() && (0, m.EG)(t) && w(t)))
+        (0, s.Iy)(t).channelId === e && h.A.isConnected() && null == a.A.getGuestStreamKey() && (0, m.EG)(t) && b(t)))
         ? n
         : ((E = null), !0);
 }
@@ -52,7 +52,7 @@ class R extends r.Ay.Store {
         this.waitFor(h.A, a.A, c.A, d.A, u.default, o.A);
     }
     isStreamDrawingAllowed(e) {
-        return w(e);
+        return b(e);
     }
     getActiveStreamKey() {
         return E;
@@ -72,7 +72,7 @@ let _ = new R(l.h, {
         let { streamKey: t } = e;
         if (E === t) return !1;
         if (null != t) {
-            if (null != a.A.getGuestStreamKey() || !(0, m.EG)(t) || !w(t)) return !1;
+            if (null != a.A.getGuestStreamKey() || !(0, m.EG)(t) || !b(t)) return !1;
             I !== (0, s.Iy)(t).channelId && C();
         }
         E = t;
@@ -98,11 +98,11 @@ let _ = new R(l.h, {
     VOICE_STATE_UPDATES: T,
     RTC_CONNECTION_STATE: function (e) {
         let t = !1;
-        return (e.context === g.x.DEFAULT && e.state === f.S7L.DISCONNECTED && ((t = A.size > 0), A.clear()), T() || t);
+        return (e.context === g.x.DEFAULT && e.state === p.S7L.DISCONNECTED && ((t = A.size > 0), A.clear()), T() || t);
     },
     RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
         let t = !1;
-        return (e.context === g.x.DEFAULT && (t = A.delete(b(e))), T() || t);
+        return (e.context === g.x.DEFAULT && (t = A.delete(w(e))), T() || t);
     },
     POST_CONNECTION_OPEN: S,
     PASS_THE_CONTROLLER_UPDATE: T,
@@ -112,8 +112,8 @@ let _ = new R(l.h, {
     RTC_CONNECTION_FLAGS: function (e) {
         let t = !1;
         if (e.context === g.x.DEFAULT) {
-            let n = b(e),
-                r = (0, i.Lt)(e.flags, f.Ajs.ALLOW_STREAM_DRAWING);
+            let n = w(e),
+                r = (0, i.Lt)(e.flags, p.Ajs.ALLOW_STREAM_DRAWING);
             ((t = r !== A.has(n)), r ? A.add(n) : A.delete(n));
         }
         return T() || t;

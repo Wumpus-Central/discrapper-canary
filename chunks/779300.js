@@ -1,29 +1,29 @@
-var n = l(894279),
-    a = l(398251);
-function s(e) {
+var l = t(894279),
+    s = t(398251);
+function a(e) {
     return isNaN(e) ? 0 : Math.min(Math.max(Math.round(100 * e), 0), 100);
 }
-l.d(
-    t,
+t.d(
+    n,
     {},
     {
-        CZ: function (e, t, l, s) {
+        CZ: function (e, n, t, a) {
             let i,
                 r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             if (null == e) return r ? { value: { status: "skeleton" }, label: { status: "skeleton" } } : null;
-            let o = t(e.fields.value, [a.o.STRING, a.o.NUMBER]),
-                u = t(e.fields.label, [a.o.STRING]),
-                c = t(e.fields.icon, [a.o.MEDIA]);
+            let o = n(e.fields.value, [s.o.STRING, s.o.NUMBER]),
+                u = n(e.fields.label, [s.o.STRING]),
+                c = n(e.fields.icon, [s.o.MEDIA]);
             if (null == o) i = { status: "skeleton" };
             else
                 i = {
                     status: "value",
                     text:
-                        o.type === a.o.STRING
+                        o.type === s.o.STRING
                             ? o.value
-                            : o.presentationType === n.P.DURATION
-                              ? s(o.value)
-                              : l.format(o.value),
+                            : o.presentationType === l.P.DURATION
+                              ? a(o.value)
+                              : t.format(o.value),
                     icon: c?.media ?? null,
                 };
             return {
@@ -36,21 +36,21 @@ l.d(
                           : { status: "value", text: u.value },
             };
         },
-        Hx: function (e, t, l) {
-            let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            if (null == e) return n ? { status: "skeleton" } : { status: "hidden" };
-            let i = t(e.fields.text, [a.o.STRING, a.o.NUMBER]),
-                r = s ? null : t(e.fields.label, [a.o.STRING, a.o.NUMBER]);
+        Hx: function (e, n, t) {
+            let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            if (null == e) return l ? { status: "skeleton" } : { status: "hidden" };
+            let i = n(e.fields.text, [s.o.STRING, s.o.NUMBER]),
+                r = a ? null : n(e.fields.label, [s.o.STRING, s.o.NUMBER]);
             if (null == i && null == r) return { status: "skeleton" };
-            let o = t(e.fields.icon, [a.o.MEDIA]),
-                u = null == r || "" === r.value ? "" : `${"number" == typeof r.value ? l.format(r.value) : r.value}: `,
-                c = null == i || "" === i.value ? "\u2013" : "number" == typeof i.value ? l.format(i.value) : i.value;
+            let o = n(e.fields.icon, [s.o.MEDIA]),
+                u = null == r || "" === r.value ? "" : `${"number" == typeof r.value ? t.format(r.value) : r.value}: `,
+                c = null == i || "" === i.value ? "\u2013" : "number" == typeof i.value ? t.format(i.value) : i.value;
             return { status: "value", text: `${u}${c}`, icon: o?.media ?? null };
         },
-        eq: function (e, t) {
-            return null == e ? 0 : null == t ? s(e.value) : 0 === t.value ? 0 : s(e.value / t.value);
+        eq: function (e, n) {
+            return null == e ? 0 : null == n ? a(e.value) : 0 === n.value ? 0 : a(e.value / n.value);
         },
-        rr: s,
+        rr: a,
     },
 );

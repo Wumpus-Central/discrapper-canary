@@ -7,7 +7,7 @@ n.d(
         A: function (e) {
             let { wishlistId: t, onAction: n, productLines: r } = e,
                 [u, a] = (0, l.useState)(!1),
-                o = (0, l.useCallback)(
+                s = (0, l.useCallback)(
                     (e) => {
                         e &&
                             null != t &&
@@ -15,7 +15,7 @@ n.d(
                     },
                     [t, n, r],
                 );
-            return (0, i.K)(o, void 0, null != t && !u);
+            return (0, i.K)(s, void 0, null != t && !u);
         },
     },
 );

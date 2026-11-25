@@ -17,10 +17,10 @@ n.d(
         A: function (e) {
             let t,
                 { embedId: n, className: A, style: p } = e,
-                m = (0, l.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
-                I = (0, h.A)(),
+                I = (0, l.bG)([a.A], () => a.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT)),
+                m = (0, h.A)(),
                 E = (0, l.bG)([u.Ay], () => u.Ay.getActivityPanelMode());
-            t = null == I || (0, c.A)((0, d.H)(I.location)) || E !== f.Gd.PANEL ? (m?.window ?? window) : window;
+            t = null == m || (0, c.A)((0, d.H)(m.location)) || E !== f.Gd.PANEL ? (I?.window ?? window) : window;
             let S = r.useRef(null),
                 C = r.useMemo(() => {
                     let e = null;

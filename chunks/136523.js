@@ -16,37 +16,37 @@ var a = n(477900),
     E = n(287809),
     S = n(129230),
     p = n(652215),
-    y = n(792996),
-    N = n(809401),
+    N = n(792996),
+    y = n(809401),
     v = n(379649);
-let x = "VoiceChannelStatusModal";
+let T = "VoiceChannelStatusModal";
 n.d(
     e,
     {},
     {
         default: function (t) {
-            let { channel: e, transitionState: n, sourceAnalyticsLocations: T, onClose: b } = t,
+            let { channel: e, transitionState: n, sourceAnalyticsLocations: x, onClose: b } = t,
                 k = (0, h.l)(e),
-                m = (0, l.bG)([f.A], () => f.A.getMediaSessionId()),
-                [w, I] = i.useState(k ?? ""),
-                [M, O] = i.useState(!1),
+                I = (0, l.bG)([f.A], () => f.A.getMediaSessionId()),
+                [m, w] = i.useState(k ?? ""),
+                [O, M] = i.useState(!1),
                 [V, L] = i.useState(null),
                 U = (0, l.bG)([E.default], () => E.default.getCurrentUser()),
-                B = (0, c.Ay)(e),
-                G = w.length > 500;
-            function H(t) {
+                H = (0, c.Ay)(e),
+                q = m.length > 500;
+            function B(t) {
                 L(new s.LG(t, t.status).getAnyErrorMessage());
             }
-            async function D(t) {
-                (w === k && b(), t?.preventDefault(), L(null), O(!0));
-                let n = w.length,
-                    a = w.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
-                    i = A.Ay.parse(e, w),
+            async function G(t) {
+                (m === k && b(), t?.preventDefault(), L(null), M(!0));
+                let n = m.length,
+                    a = m.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
+                    i = A.Ay.parse(e, m),
                     { hasErrors: l } = (function (t) {
                         let { invalidEmojis: n } = t;
                         if (null != n && n.length > 0) {
                             let { errorMessage: t } = d.A.validateMessage(n, U, e.id);
-                            return (L(t), O(!1), { hasErrors: !0 });
+                            return (L(t), M(!1), { hasErrors: !0 });
                         }
                         return { hasErrors: !1 };
                     })(i);
@@ -57,49 +57,49 @@ n.d(
                             ? (S.default.track(p.HAw.VOICE_CHANNEL_TOPIC_SET, {
                                   guild_id: e.guild_id,
                                   channel_id: e.id,
-                                  media_session_id: m,
+                                  media_session_id: I,
                                   raw_length: n,
                                   text_length: a,
-                                  location_stack: T,
+                                  location_stack: x,
                               }),
                               b())
-                            : H(t);
+                            : B(t);
                     } catch (t) {
-                        H(t);
+                        B(t);
                     }
-                    O(!1);
+                    M(!1);
                 }
             }
             i.useEffect(() => {
                 S.default.track(p.HAw.OPEN_MODAL, {
                     type: "Voice Channel Topic Modal",
                     guild_id: e.guild_id,
-                    location_stack: T,
+                    location_stack: x,
                 });
-            }, [e.guild_id, T]);
-            let [R, j] = i.useState((0, g.x7)(w)),
-                q = (0, a.jsx)(r.D, {
-                    label: y.intl.string(y.t.Fq5lwN),
+            }, [e.guild_id, x]);
+            let [R, D] = i.useState((0, g.x7)(m)),
+                j = (0, a.jsx)(r.D, {
+                    label: N.intl.string(N.t.Fq5lwN),
                     errorMessage: V,
                     children: (0, a.jsx)(_.Ay, {
-                        innerClassName: N.Tg,
-                        characterCountClassName: N.Dq,
-                        textValue: w,
+                        innerClassName: y.Tg,
+                        characterCountClassName: y.Dq,
+                        textValue: m,
                         richValue: R,
-                        placeholder: y.intl.formatToPlainString(y.t.DUXxBh, { channelName: B }),
+                        placeholder: N.intl.formatToPlainString(N.t.DUXxBh, { channelName: H }),
                         focused: !0,
                         channel: e,
                         onChange: function (t, e, n) {
-                            (I(e), j(n));
+                            (w(e), D(n));
                         },
                         onSubmit: async function () {
-                            return (G || M || (await D()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 }));
+                            return (q || O || (await G()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 }));
                         },
                         type: C.oU.VOICE_CHANNEL_STATUS,
                         canMentionRoles: !1,
                         canMentionChannels: !1,
                         allowNewLines: !1,
-                        parentModalKey: x,
+                        parentModalKey: T,
                         maxCharacterCount: 500,
                         showRemainingCharsAfterCount: 250,
                         emojiPickerCloseOnModalOuterClick: !0,
@@ -109,15 +109,15 @@ n.d(
                 transitionState: n,
                 onClose: b,
                 graphic: { type: "image", src: v },
-                title: y.intl.string(y.t["5CyJBd"]),
-                subtitle: y.intl.string(y.t.NRBYju),
+                title: N.intl.string(N.t["5CyJBd"]),
+                subtitle: N.intl.string(N.t.NRBYju),
                 actions: [
-                    { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: b },
-                    { variant: "primary", loading: M, disabled: G, text: y.intl.string(y.t.XqK2I2), onClick: D },
+                    { variant: "secondary", text: N.intl.string(N.t["ETE/oC"]), onClick: b },
+                    { variant: "primary", loading: O, disabled: q, text: N.intl.string(N.t.XqK2I2), onClick: G },
                 ],
-                children: q,
+                children: j,
             });
         },
-        m: x,
+        m: T,
     },
 );

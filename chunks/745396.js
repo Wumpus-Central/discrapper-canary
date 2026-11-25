@@ -1,6 +1,6 @@
-var s = t(582128);
-t.d(
-    n,
+var l = n(582128);
+n.d(
+    t,
     {},
     {
         O: function (e) {
@@ -9,7 +9,7 @@ t.d(
                 "string" == typeof e ||
                 "number" == typeof e ||
                 "boolean" == typeof e ||
-                s.isValidElement(e)
+                l.isValidElement(e)
             );
         },
     },

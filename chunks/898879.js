@@ -23,7 +23,7 @@ n.d(
             r.useLayoutEffect(() => {
                 p();
             });
-            let m = r.useMemo(
+            let I = r.useMemo(
                 () =>
                     new ResizeObserver(() => {
                         p();
@@ -33,8 +33,8 @@ n.d(
             return (
                 r.useLayoutEffect(() => {
                     let e = A.current;
-                    if (null != e) return (m.observe(e), () => m.unobserve(e));
-                }, [m]),
+                    if (null != e) return (I.observe(e), () => I.unobserve(e));
+                }, [I]),
                 r.useLayoutEffect(() => {
                     function e() {
                         return p();

@@ -1,4 +1,4 @@
-a.exports = {
+t.exports = {
     vk: "clickable_1AI0dL",
     B_: "imagePosition_1AI0dL",
     cH: "aspectRatio_1AI0dL",

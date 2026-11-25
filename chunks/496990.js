@@ -1,4 +1,4 @@
-(n.d(t, { A: () => U }), n(938796));
+(n.d(t, { A: () => w }), n(938796));
 var i = n(665260),
     r = n(855986),
     l = n(73153),
@@ -13,8 +13,8 @@ var i = n(665260),
     g = n(477427),
     A = n(393432),
     p = n(790782),
-    m = n(355097),
-    I = n(652215);
+    I = n(355097),
+    m = n(652215);
 let E = [
         { timeSinceJoin: +c.A.Millis.HOUR, sends: 1, viewTime: +c.A.Millis.MINUTE },
         { timeSinceJoin: +c.A.Millis.DAY, sends: 2, viewTime: 2 * c.A.Millis.MINUTE },
@@ -30,22 +30,22 @@ let E = [
     v = 0;
 function M() {
     if (null == T || !O(T)) return !1;
-    let e = R(T);
+    let e = D(T);
     if (e.lastActionTime > Date.now() - c.A.Millis.DAY && e.viewDuration > S) return !1;
     let t = Date.now();
     return ((e.lastActionTime = t), (e.viewDuration += t - y), (y = t), !0);
 }
-function D() {
+function R() {
     return (
         0 !== v && (clearInterval(v), (v = 0)),
         d.Ay.useNewNotifications &&
             (v = setInterval(() => {
-                M() && P.emitChange();
+                M() && U.emitChange();
             }, 15 * c.A.Millis.SECOND)),
         !1
     );
 }
-function R(e) {
+function D(e) {
     return (e in _.channels || (_.channels[e] = { lastActionTime: 0, viewDuration: 0, numSends: 0 }), _.channels[e]);
 }
 function O(e) {
@@ -68,8 +68,8 @@ function x(e, t) {
     return (
         null != n &&
         !!(
-            (null != n.message_notifications && n.message_notifications !== I.orn.NULL) ||
-            (null != n.flags && (0, i.br)(n.flags, m.vv.UNREADS_ALL_MESSAGES | m.vv.UNREADS_ONLY_MENTIONS))
+            (null != n.message_notifications && n.message_notifications !== m.orn.NULL) ||
+            (null != n.flags && (0, i.br)(n.flags, I.vv.UNREADS_ALL_MESSAGES | I.vv.UNREADS_ONLY_MENTIONS))
         )
     );
 }
@@ -78,7 +78,7 @@ class L extends r.Ay.PersistedStore {
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
         (null != e && (_.channels = e.channels),
-            this.syncWith([d.Ay], D),
+            this.syncWith([d.Ay], R),
             this.waitFor(s.default, a.A, o.A, u.Ay, d.Ay));
     }
     getState() {
@@ -117,7 +117,7 @@ class L extends r.Ay.PersistedStore {
                 settings: {
                     flags: (0, A.mD)(
                         r,
-                        i === p.e.ALL_MESSAGES ? m.vv.UNREADS_ALL_MESSAGES : m.vv.UNREADS_ONLY_MENTIONS,
+                        i === p.e.ALL_MESSAGES ? I.vv.UNREADS_ALL_MESSAGES : I.vv.UNREADS_ONLY_MENTIONS,
                     ),
                 },
                 label: g.G_.unreads(i),
@@ -126,13 +126,13 @@ class L extends r.Ay.PersistedStore {
         );
     }
 }
-let P = new L(l.h, {
+let U = new L(l.h, {
         CHANNEL_SELECT: function () {
             let e = M();
             return ((T = u.Ay.getChannelId()), (y = Date.now()), e);
         },
         CONNECTION_OPEN: function () {
-            ((T = u.Ay.getChannelId()), (y = Date.now()), D());
+            ((T = u.Ay.getChannelId()), (y = Date.now()), R());
             let e = Date.now() - C;
             h.default.forEach(_.channels, (t, n) => {
                 let { lastActionTime: i } = t;
@@ -142,8 +142,8 @@ let P = new L(l.h, {
         MESSAGE_CREATE: function (e) {
             if (e.optimistic || e.isPushNotification || e.message.author?.id !== s.default.getId() || !O(e.channelId))
                 return !1;
-            let t = R(e.channelId);
+            let t = D(e.channelId);
             ((t.lastActionTime = Date.now()), t.numSends++);
         },
     }),
-    U = P;
+    w = U;

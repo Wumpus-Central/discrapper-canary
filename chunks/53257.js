@@ -1,13 +1,13 @@
-var l = e(350835);
-e.d(
-    n,
+var l = n(350835);
+n.d(
+    t,
     {},
     {
-        A: function (t) {
+        A: function (e) {
             return (
-                (t.type === l.$.LISTENING || t.type === l.$.WATCHING) &&
-                t.timestamps?.start != null &&
-                null != t.timestamps.end
+                (e.type === l.$.LISTENING || e.type === l.$.WATCHING) &&
+                e.timestamps?.start != null &&
+                null != e.timestamps.end
             );
         },
     },

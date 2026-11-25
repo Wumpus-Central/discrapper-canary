@@ -1,88 +1,88 @@
-var a = l(582128),
-    s = l(855986),
-    u = l(451988),
-    n = l(475743),
-    r = l(46653),
-    c = l(927813),
-    A = l(427262),
-    i = l(655116),
-    p = l(160768),
-    o = l(341335),
-    C = l(286617),
-    E = l(533207),
-    _ = l(881335),
-    d = l(272984);
-let f = 30 * c.A.Millis.SECOND;
-function I(t) {
-    let { currentUserTrackId: e, syncingWithUser: l, syncingWithParty: s } = t,
-        [r, c] = a.useState(!1),
-        [A] = a.useState(() => new u.Ep()),
-        i = (0, n.Ay)(e);
-    a.useEffect(() => {
-        r && (e !== i || l || s) && (c(!1), A.stop());
-    }, [e, i, l, s, r, A]);
-    let p = a.useCallback(() => {
-            (c(!0), A.start(f, () => c(!1)));
-        }, [A]),
-        o = a.useCallback(() => {
-            (c(!1), A.stop());
-        }, [A]);
-    return (a.useEffect(() => () => A.stop(), [A]), { loading: r, startLoading: p, clearLoading: o });
+var l = n(582128),
+    i = n(855986),
+    a = n(451988),
+    r = n(475743),
+    s = n(46653),
+    o = n(927813),
+    u = n(427262),
+    c = n(655116),
+    d = n(160768),
+    m = n(341335),
+    A = n(286617),
+    p = n(533207),
+    h = n(881335),
+    f = n(272984);
+let g = 30 * o.A.Millis.SECOND;
+function x(e) {
+    let { currentUserTrackId: t, syncingWithUser: n, syncingWithParty: i } = e,
+        [s, o] = l.useState(!1),
+        [u] = l.useState(() => new a.Ep()),
+        c = (0, r.Ay)(t);
+    l.useEffect(() => {
+        s && (t !== c || n || i) && (o(!1), u.stop());
+    }, [t, c, n, i, s, u]);
+    let d = l.useCallback(() => {
+            (o(!0), u.start(g, () => o(!1)));
+        }, [u]),
+        m = l.useCallback(() => {
+            (o(!1), u.stop());
+        }, [u]);
+    return (l.useEffect(() => () => u.stop(), [u]), { loading: s, startLoading: d, clearLoading: m });
 }
-function S(t, e) {
-    return (0, s.cf)([i.A, r.default], () => (0, C.A)(i.A, r.default, e, t), [t, e]);
+function I(e, t) {
+    return (0, i.cf)([c.A, s.default], () => (0, A.A)(c.A, s.default, t, e), [e, t]);
 }
-l.d(
-    e,
+n.d(
+    t,
     {},
     {
-        Gq: function (t, e, l) {
-            let s = S(t, e),
-                { notPlayable: u, syncingWithUser: n, syncingWithParty: r, isCurrentUser: c } = s,
-                { loading: A, startLoading: i, clearLoading: C } = I(s),
-                _ = a.useCallback(() => {
-                    (i(), (0, E.A)(s, d.Qp.EMBED_SYNC, l).catch(C));
-                }, [s, l, i, C]);
+        Gq: function (e, t, n) {
+            let i = I(e, t),
+                { notPlayable: a, syncingWithUser: r, syncingWithParty: s, isCurrentUser: o } = i,
+                { loading: u, startLoading: c, clearLoading: A } = x(i),
+                h = l.useCallback(() => {
+                    (c(), (0, p.A)(i, f.Qp.EMBED_SYNC, n).catch(A));
+                }, [i, n, c, A]);
             return {
-                label: (0, p.A)(s, d.Qp.EMBED_SYNC),
-                tooltip: (0, o.A)(s, d.Qp.EMBED_SYNC),
-                disabled: !A && (c || n || r || u),
-                loading: A,
-                onClick: _,
-                spotifyData: s,
+                label: (0, d.A)(i, f.Qp.EMBED_SYNC),
+                tooltip: (0, m.A)(i, f.Qp.EMBED_SYNC),
+                disabled: !u && (o || r || s || a),
+                loading: u,
+                onClick: h,
+                spotifyData: i,
             };
         },
-        J$: function (t, e, l, s) {
-            let u = s ?? A.Ay.getName(e),
-                n = S(t, e),
-                { notPlayable: r, syncingWithUser: c, syncingWithParty: i, isCurrentUser: C } = n,
-                { loading: _, startLoading: f, clearLoading: Y } = I(n),
-                b = a.useCallback(() => {
-                    (f(), (0, E.A)(n, d.Qp.USER_ACTIVITY_SYNC, l).catch(Y));
-                }, [n, l, f, Y]);
+        J$: function (e, t, n, i) {
+            let a = i ?? u.Ay.getName(t),
+                r = I(e, t),
+                { notPlayable: s, syncingWithUser: o, syncingWithParty: c, isCurrentUser: A } = r,
+                { loading: h, startLoading: g, clearLoading: v } = x(r),
+                T = l.useCallback(() => {
+                    (g(), (0, p.A)(r, f.Qp.USER_ACTIVITY_SYNC, n).catch(v));
+                }, [r, n, g, v]);
             return {
-                label: (0, p.A)(n, d.Qp.USER_ACTIVITY_SYNC),
-                tooltip: (0, o.A)(n, d.Qp.USER_ACTIVITY_SYNC, u),
-                disabled: !_ && (r || C || c || i),
-                loading: _,
-                onClick: b,
-                spotifyData: n,
+                label: (0, d.A)(r, f.Qp.USER_ACTIVITY_SYNC),
+                tooltip: (0, m.A)(r, f.Qp.USER_ACTIVITY_SYNC, a),
+                disabled: !h && (s || A || o || c),
+                loading: h,
+                onClick: T,
+                spotifyData: r,
             };
         },
-        _B: function (t, e, l) {
-            let s = S(t, e),
-                { notPlayable: u, isCurrentUser: n, playingSameTrack: r } = s,
-                { loading: c, startLoading: A, clearLoading: i } = I(s),
-                C = a.useCallback(() => {
-                    (A(), (0, _.A)(s, d.Qp.USER_ACTIVITY_PLAY, l).catch(i));
-                }, [s, l, A, i]);
+        _B: function (e, t, n) {
+            let i = I(e, t),
+                { notPlayable: a, isCurrentUser: r, playingSameTrack: s } = i,
+                { loading: o, startLoading: u, clearLoading: c } = x(i),
+                A = l.useCallback(() => {
+                    (u(), (0, h.A)(i, f.Qp.USER_ACTIVITY_PLAY, n).catch(c));
+                }, [i, n, u, c]);
             return {
-                label: (0, p.A)(s, d.Qp.USER_ACTIVITY_PLAY),
-                tooltip: (0, o.A)(s, d.Qp.USER_ACTIVITY_PLAY),
-                disabled: !c && (n || u || r),
-                loading: c,
-                onClick: C,
-                spotifyData: s,
+                label: (0, d.A)(i, f.Qp.USER_ACTIVITY_PLAY),
+                tooltip: (0, m.A)(i, f.Qp.USER_ACTIVITY_PLAY),
+                disabled: !o && (r || a || s),
+                loading: o,
+                onClick: A,
+                spotifyData: i,
             };
         },
     },

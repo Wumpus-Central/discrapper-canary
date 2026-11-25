@@ -1,11 +1,11 @@
-var s = t(477900);
+var l = t(477900);
 t(582128);
-var i = t(503698),
-    l = t.n(i),
-    a = t(959760);
+var s = t(503698),
+    a = t.n(s),
+    i = t(959760);
 function r(e) {
     let { children: n, className: t } = e;
-    return (0, s.jsx)("div", { className: l()(a.jC, t), children: n });
+    return (0, l.jsx)("div", { className: a()(i.jC, t), children: n });
 }
 t.d(
     n,
@@ -15,9 +15,9 @@ t.d(
         Uq: r,
         Y0: function (e) {
             let { className: n } = e;
-            return (0, s.jsx)(r, {
+            return (0, l.jsx)(r, {
                 className: n,
-                children: (0, s.jsx)("div", { className: a.wH, children: (0, s.jsx)("div", { className: a.j3 }) }),
+                children: (0, l.jsx)("div", { className: i.wH, children: (0, l.jsx)("div", { className: i.j3 }) }),
             });
         },
     },

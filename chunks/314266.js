@@ -8,13 +8,13 @@ new a.W(10);
 let s = new a.W(0);
 function o(e, t) {
     let n = t && t.cache ? t.cache : f,
-        r = t && t.serializer ? t.serializer : d;
+        r = t && t.serializer ? t.serializer : l;
     return (
         t && t.strategy
             ? t.strategy
             : function (e, t) {
                   var n, r;
-                  let i = 1 === e.length ? u : l;
+                  let i = 1 === e.length ? u : d;
                   return ((n = t.cache.create()), (r = t.serializer), i.bind(this, e, n, r));
               }
     )(e, { cache: n, serializer: r });
@@ -24,14 +24,14 @@ function u(e, t, n, r) {
         a = t.get(i);
     return (void 0 === a && ((a = e.call(this, r)), t.set(i, a)), a);
 }
-function l(e, t, n) {
+function d(e, t, n) {
     let r = Array.prototype.slice.call(arguments, 3),
         i = n(r),
         a = t.get(i);
     return (void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a);
 }
 new a.W(-0);
-let d = function () {
+let l = function () {
     return JSON.stringify(arguments);
 };
 class c {
@@ -54,7 +54,7 @@ let f = {
     h = {
         variadic: function (e, t) {
             var n, r;
-            return ((n = t.cache.create()), (r = t.serializer), l.bind(this, e, n, r));
+            return ((n = t.cache.create()), (r = t.serializer), d.bind(this, e, n, r));
         },
         monadic: function (e, t) {
             var n, r;
@@ -75,7 +75,7 @@ function y(e) {
 function g(e) {
     return "function" == typeof e;
 }
-function w(e, t, n, r, i) {
+function v(e, t, n, r, i) {
     if ("object" != typeof e) throw TypeError("Options must be an object");
     let a = e[t];
     if (void 0 !== a) {
@@ -94,10 +94,10 @@ function w(e, t, n, r, i) {
     }
     return i;
 }
-let v = new WeakMap();
-function b(e, t) {
-    let n = v.get(e);
-    n || ((n = new Set(e)), v.set(e, n));
+let b = new WeakMap();
+function w(e, t) {
+    let n = b.get(e);
+    n || ((n = new Set(e)), b.set(e, n));
     let r = t;
     for (;;) {
         if (n.has(r)) return r;
@@ -106,7 +106,7 @@ function b(e, t) {
         (e >= 2 && "-" === r[e - 2] && (e -= 2), (r = r.slice(0, e)));
     }
 }
-let k = {
+let V = {
         "written-new": [
             { paradigmLocales: { _locales: "en en_GB es es_419 pt_BR pt_PT" } },
             { $enUS: { _value: "AS+CA+GU+MH+MP+PH+PR+UM+US+VI" } },
@@ -489,7 +489,7 @@ let k = {
             { "*-*-*": { _desired: "*-*-*", _distance: "4" } },
         ],
     },
-    S = {
+    T = {
         "001": [
             "001",
             "001-status-grouping",
@@ -1650,35 +1650,35 @@ let k = {
             "ZW",
         ],
     },
-    z = /-u(?:-[0-9a-z]{2,8})+/gi;
-function E(e, t, n = Error) {
+    k = /-u(?:-[0-9a-z]{2,8})+/gi;
+function A(e, t, n = Error) {
     if (!e) throw new n(t);
 }
-function O(e, t, n) {
+function E(e, t, n) {
     let [r, i, a] = t.split("-"),
         s = !0;
     if (a && "$" === a[0]) {
         let t = "!" !== a[1],
-            r = (t ? n[a.slice(1)] : n[a.slice(2)]).map((e) => S[e] || [e]).reduce((e, t) => [...e, ...t], []);
+            r = (t ? n[a.slice(1)] : n[a.slice(2)]).map((e) => T[e] || [e]).reduce((e, t) => [...e, ...t], []);
         s &&= r.indexOf(e.region || "") > -1 == t;
     } else s &&= !e.region || "*" === a || a === e.region;
     return ((s &&= !e.script || "*" === i || i === e.script), (s &&= !e.language || "*" === r || r === e.language));
 }
-function A(e) {
+function P(e) {
     return [e.language, e.script, e.region].filter(Boolean).join("-");
 }
-function T(e, t, n) {
+function x(e, t, n) {
     for (let r of n.matches) {
-        let i = O(e, r.desired, n.matchVariables) && O(t, r.supported, n.matchVariables);
-        if ((r.oneway || i || (i = O(e, r.supported, n.matchVariables) && O(t, r.desired, n.matchVariables)), i)) {
+        let i = E(e, r.desired, n.matchVariables) && E(t, r.supported, n.matchVariables);
+        if ((r.oneway || i || (i = E(e, r.supported, n.matchVariables) && E(t, r.desired, n.matchVariables)), i)) {
             let i = 10 * r.distance;
-            if (n.paradigmLocales.indexOf(A(e)) > -1 != n.paradigmLocales.indexOf(A(t)) > -1) return i - 1;
+            if (n.paradigmLocales.indexOf(P(e)) > -1 != n.paradigmLocales.indexOf(P(t)) > -1) return i - 1;
             return i;
         }
     }
     throw Error("No matching distance found");
 }
-let M = o(
+let S = o(
         function (e, t) {
             let n = new Intl.Locale(e).maximize(),
                 i = new Intl.Locale(t).maximize(),
@@ -1687,10 +1687,10 @@ let M = o(
                 o = 0,
                 u = (function () {
                     if (!r) {
-                        let e = k["written-new"]["0"]?.paradigmLocales?._locales.split(" "),
-                            t = k["written-new"].slice(1, 5);
+                        let e = V["written-new"]["0"]?.paradigmLocales?._locales.split(" "),
+                            t = V["written-new"].slice(1, 5);
                         r = {
-                            matches: k["written-new"].slice(5).map((e) => {
+                            matches: V["written-new"].slice(5).map((e) => {
                                 let t = Object.keys(e)[0],
                                     n = e[t];
                                 return {
@@ -1715,28 +1715,28 @@ let M = o(
                 })();
             return (
                 a.language !== s.language &&
-                    (o += T(
+                    (o += x(
                         { language: n.language, script: "", region: "" },
                         { language: i.language, script: "", region: "" },
                         u,
                     )),
                 a.script !== s.script &&
-                    (o += T(
+                    (o += x(
                         { language: n.language, script: a.script, region: "" },
                         { language: i.language, script: s.script, region: "" },
                         u,
                     )),
-                a.region !== s.region && (o += T(a, s, u)),
+                a.region !== s.region && (o += x(a, s, u)),
                 o
             );
         },
         { serializer: (e) => `${e[0]}|${e[1]}` },
     ),
-    x = new WeakMap();
-function P(e) {
+    O = new WeakMap();
+function R(e) {
     return Intl.getCanonicalLocales(e)[0];
 }
-let $ = [
+let M = [
         "years",
         "months",
         "weeks",
@@ -1748,7 +1748,7 @@ let $ = [
         "microseconds",
         "nanoseconds",
     ],
-    L = [
+    F = [
         {
             valueField: "years",
             styleSlot: "years",
@@ -1814,26 +1814,26 @@ let $ = [
             numberFormatUnit: "nanosecond",
         },
     ],
-    I = new WeakMap();
-function C(e) {
-    let t = I.get(e);
-    return (t || ((t = Object.create(null)), I.set(e, t)), t);
+    C = new WeakMap();
+function D(e) {
+    let t = C.get(e);
+    return (t || ((t = Object.create(null)), C.set(e, t)), t);
 }
-function N(e, t) {
+function z(e, t) {
     let n = [],
         r = !1,
         i = !1,
-        a = C(e),
+        a = D(e),
         s = a.dataLocale,
         o = U.localeData[s];
     if (!o) throw TypeError("Invalid locale");
     let u = a.numberingSystem,
-        l = o.digitalFormat[u];
-    for (let e = 0; e < L.length && !r; e++) {
-        let s = L[e],
+        d = o.digitalFormat[u];
+    for (let e = 0; e < F.length && !r; e++) {
+        let s = F[e],
             o = t[s.valueField],
             u = a[s.styleSlot],
-            d = a[s.displaySlot],
+            l = a[s.displaySlot],
             { unit: c, numberFormatUnit: f } = s,
             h = Object.create(null);
         ("seconds" === c || "milliseconds" === c || "microseconds" === c) &&
@@ -1848,24 +1848,24 @@ function N(e, t) {
                 : ((h.maximumFractionDigits = a.fractionalDigits), (h.minimumFractionDigits = a.fractionalDigits)),
             (h.roundingMode = "trunc"),
             (r = !0));
-        if (0 !== o || "auto" !== d) {
+        if (0 !== o || "auto" !== l) {
             let e;
             ((h.numberingSystem = a.numberingSystem),
                 "2-digit" === u && (h.minimumIntegerDigits = 2),
                 "2-digit" !== u && "numeric" !== u && ((h.style = "unit"), (h.unit = f), (h.unitDisplay = u)));
             let t = _(a.locale, h);
-            (i ? (e = n[n.length - 1]).push({ type: "literal", value: l }) : (e = []),
+            (i ? (e = n[n.length - 1]).push({ type: "literal", value: d }) : (e = []),
                 t.formatToParts(o).forEach(({ type: t, value: n }) => {
                     e.push({ type: t, value: n, unit: f });
                 }),
                 i || (("2-digit" === u || "numeric" === u) && (i = !0), n.push(e)));
         } else i = !1;
     }
-    let d = Object.create(null);
-    d.type = "unit";
+    let l = Object.create(null);
+    l.type = "unit";
     let c = a.style;
-    ("digital" === c && (c = "short"), (d.style = c));
-    let f = m(a.locale, d),
+    ("digital" === c && (c = "short"), (l.style = c));
+    let f = m(a.locale, l),
         h = [];
     for (let e of n) {
         let t = "";
@@ -1874,16 +1874,16 @@ function N(e, t) {
     }
     let y = f.formatToParts(h),
         g = 0,
-        w = n.length,
-        v = [];
+        v = n.length,
+        b = [];
     for (let { type: e, value: t } of y)
         if ("element" === e) {
-            for (let e of (p(g < w, "Index out of bounds"), n[g])) v.push(e);
+            for (let e of (p(g < v, "Index out of bounds"), n[g])) b.push(e);
             g++;
-        } else (p("literal" === e, "Type must be literal"), v.push({ type: "literal", value: t }));
-    return v;
+        } else (p("literal" === e, "Type must be literal"), b.push({ type: "literal", value: t }));
+    return b;
 }
-function D(e) {
+function I(e) {
     let t = (function e(t) {
         if ("number" == typeof t) return new a.W(t);
         if ("bigint" == typeof t) return new a.W(t.toString());
@@ -1927,7 +1927,7 @@ function D(e) {
     })(e);
     return (p(t.isInteger(), `${e} is not an integer`), t.toNumber());
 }
-function Z(e) {
+function L(e) {
     if ("object" != typeof e) {
         if ("string" == typeof e) throw RangeError("Invalid duration format");
         throw TypeError("Invalid duration");
@@ -1945,16 +1945,16 @@ function Z(e) {
         nanoseconds: 0,
     };
     if (
-        (void 0 !== e.days && (t.days = D(e.days)),
-        void 0 !== e.hours && (t.hours = D(e.hours)),
-        void 0 !== e.microseconds && (t.microseconds = D(e.microseconds)),
-        void 0 !== e.milliseconds && (t.milliseconds = D(e.milliseconds)),
-        void 0 !== e.minutes && (t.minutes = D(e.minutes)),
-        void 0 !== e.months && (t.months = D(e.months)),
-        void 0 !== e.nanoseconds && (t.nanoseconds = D(e.nanoseconds)),
-        void 0 !== e.seconds && (t.seconds = D(e.seconds)),
-        void 0 !== e.weeks && (t.weeks = D(e.weeks)),
-        void 0 !== e.years && (t.years = D(e.years)),
+        (void 0 !== e.days && (t.days = I(e.days)),
+        void 0 !== e.hours && (t.hours = I(e.hours)),
+        void 0 !== e.microseconds && (t.microseconds = I(e.microseconds)),
+        void 0 !== e.milliseconds && (t.milliseconds = I(e.milliseconds)),
+        void 0 !== e.minutes && (t.minutes = I(e.minutes)),
+        void 0 !== e.months && (t.months = I(e.months)),
+        void 0 !== e.nanoseconds && (t.nanoseconds = I(e.nanoseconds)),
+        void 0 !== e.seconds && (t.seconds = I(e.seconds)),
+        void 0 !== e.weeks && (t.weeks = I(e.weeks)),
+        void 0 !== e.years && (t.years = I(e.years)),
         void 0 === e.years &&
             void 0 === e.months &&
             void 0 === e.weeks &&
@@ -1970,13 +1970,13 @@ function Z(e) {
     if (
         !(function (e) {
             let t = (function (e) {
-                for (let t of $) {
+                for (let t of M) {
                     if (e[t] < 0) return -1;
                     if (e[t] > 0) return 1;
                 }
                 return 0;
             })(e);
-            for (let n of $) {
+            for (let n of M) {
                 let r = e[n];
                 if ((p(isFinite(Number(r)), `${n} is not finite`), (r < 0 && t > 0) || (r > 0 && t < 0))) return !1;
             }
@@ -2085,7 +2085,7 @@ let j = [
         "wara",
         "wcho",
     ],
-    R = {
+    B = {
         aa: { nu: ["latn"] },
         "aa-DJ": { nu: ["latn"] },
         "aa-ER": { nu: ["latn"] },
@@ -2853,7 +2853,7 @@ let j = [
         "zh-Latn": { nu: ["latn"] },
         zu: { nu: ["latn"] },
     },
-    G = [
+    N = [
         "locale",
         "style",
         "years",
@@ -2879,7 +2879,7 @@ let j = [
         "numberingSystem",
         "fractionalDigits",
     ],
-    F = [
+    G = [
         {
             styleSlot: "years",
             displaySlot: "yearsDisplay",
@@ -2958,36 +2958,36 @@ class U {
         let n = i(e),
             r = Object.create(null),
             a = void 0 === t ? Object.create(null) : y(t),
-            s = w(a, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
-            o = w(a, "numberingSystem", "string", void 0, void 0);
+            s = v(a, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
+            o = v(a, "numberingSystem", "string", void 0, void 0);
         if (void 0 !== o && 0 > j.indexOf(o)) throw RangeError(`Invalid numberingSystems: ${o}`);
         ((r.nu = o), (r.localeMatcher = s));
-        let { localeData: u, availableLocales: l } = U,
-            d = (function (e, t, n, r, i, a) {
+        let { localeData: u, availableLocales: d } = U,
+            l = (function (e, t, n, r, i, a) {
                 let s, o;
                 if ("lookup" === n.localeMatcher)
                     s = (function (e, t, n) {
                         let r = { locale: "" };
                         for (let n of t) {
-                            let t = n.replace(z, ""),
-                                i = b(e, t);
+                            let t = n.replace(k, ""),
+                                i = w(e, t);
                             if (i) return ((r.locale = i), n !== t && (r.extension = n.slice(t.length, n.length)), r);
                         }
                         return ((r.locale = n()), r);
                     })(Array.from(e), t, a);
                 else {
                     var u;
-                    let n, r, i, o, l;
+                    let n, r, i, o, d;
                     ((u = Array.from(e)),
                         (i = []),
                         (o = t.reduce((e, t) => {
-                            let n = t.replace(z, "");
+                            let n = t.replace(k, "");
                             return (i.push(n), (e[n] = t), e);
                         }, {})),
-                        (l = (function (e, t, n = 838) {
+                        (d = (function (e, t, n = 838) {
                             let r = 1 / 0,
                                 i = { matchedDesiredLocale: "", distances: {} },
-                                a = x.get(t);
+                                a = O.get(t);
                             a ||
                                 ((a = t.map((e) => {
                                     try {
@@ -2996,7 +2996,7 @@ class U {
                                         return e;
                                     }
                                 })),
-                                x.set(t, a));
+                                O.set(t, a));
                             let s = new Set(a);
                             for (let t = 0; t < e.length; t++) {
                                 let n = e[t];
@@ -3057,7 +3057,7 @@ class U {
                                         (i.distances[e] || (i.distances[e] = {}),
                                             a.forEach((a, s) => {
                                                 let o = t[s],
-                                                    u = M(e, a) + 0 + 40 * n;
+                                                    u = S(e, a) + 0 + 40 * n;
                                                 ((i.distances[e][o] = u),
                                                     u < r &&
                                                         ((r = u),
@@ -3069,20 +3069,20 @@ class U {
                                 i
                             );
                         })(i, u)).matchedSupportedLocale &&
-                            l.matchedDesiredLocale &&
-                            ((n = l.matchedSupportedLocale),
-                            (r = o[l.matchedDesiredLocale].slice(l.matchedDesiredLocale.length) || void 0)),
+                            d.matchedDesiredLocale &&
+                            ((n = d.matchedSupportedLocale),
+                            (r = o[d.matchedDesiredLocale].slice(d.matchedDesiredLocale.length) || void 0)),
                         (s = n ? { locale: n, extension: r } : { locale: a() }));
                 }
                 null == s && (s = { locale: a(), extension: "" });
-                let l = s.locale,
-                    d = i[l],
-                    c = { locale: "en", dataLocale: l };
+                let d = s.locale,
+                    l = i[d],
+                    c = { locale: "en", dataLocale: d };
                 o = s.extension
                     ? (function (e) {
                           let t;
-                          (E(e === e.toLowerCase(), "Expected extension to be lowercase"),
-                              E("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension"));
+                          (A(e === e.toLowerCase(), "Expected extension to be lowercase"),
+                              A("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension"));
                           let n = [],
                               r = [],
                               i = e.length,
@@ -3092,7 +3092,7 @@ class U {
                                   o = e.indexOf("-", a);
                               s = -1 === o ? i - a : o - a;
                               let u = e.slice(a, a + s);
-                              (E(s >= 2, "Expected a subtag to have at least 2 characters"),
+                              (A(s >= 2, "Expected a subtag to have at least 2 characters"),
                                   void 0 === t && 2 != s
                                       ? -1 === n.indexOf(u) && n.push(u)
                                       : 2 === s
@@ -3100,7 +3100,7 @@ class U {
                                           void 0 === r.find((e) => e.key === t?.key) && r.push(t))
                                         : t?.value === ""
                                           ? (t.value = u)
-                                          : (E(void 0 !== t, "Expected keyword to be defined"), (t.value += "-" + u)),
+                                          : (A(void 0 !== t, "Expected keyword to be defined"), (t.value += "-" + u)),
                                   (a += s + 1));
                           }
                           return { attributes: n, keywords: r };
@@ -3109,10 +3109,10 @@ class U {
                 let f = [];
                 for (let e of r) {
                     let t,
-                        r = d?.[e] ?? [];
-                    E(Array.isArray(r), `keyLocaleData for ${e} must be an array`);
+                        r = l?.[e] ?? [];
+                    A(Array.isArray(r), `keyLocaleData for ${e} must be an array`);
                     let i = r[0];
-                    E(void 0 === i || "string" == typeof i, "value must be a string or undefined");
+                    A(void 0 === i || "string" == typeof i, "value must be a string or undefined");
                     let a = o.find((t) => t.key === e);
                     if (a) {
                         let n = a.value;
@@ -3121,12 +3121,12 @@ class U {
                             : r.indexOf("true") > -1 && (t = { key: e, value: (i = "true") });
                     }
                     let s = n[e];
-                    (E(null == s || "string" == typeof s, "optionsValue must be a string or undefined"),
+                    (A(null == s || "string" == typeof s, "optionsValue must be a string or undefined"),
                         "string" == typeof s &&
                             "" ===
                                 (s = (function (e, t) {
                                     let n = t.toLowerCase();
-                                    return (E(void 0 !== e, "ukey must be defined"), n);
+                                    return (A(void 0 !== e, "ukey must be defined"), n);
                                 })(e.toLowerCase(), s)) &&
                             (s = "true"),
                         s !== i && r.indexOf(s) > -1 && ((i = s), (t = void 0)),
@@ -3135,38 +3135,38 @@ class U {
                 }
                 return (
                     f.length > 0 &&
-                        (l = (function (e, t, n) {
-                            E(-1 === e.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+                        (d = (function (e, t, n) {
+                            A(-1 === e.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
                             let r = "-u";
                             for (let e of t) r += `-${e}`;
                             for (let e of n) {
                                 let { key: t, value: n } = e;
                                 ((r += `-${t}`), "" !== n && (r += `-${n}`));
                             }
-                            if ("-u" === r) return P(e);
+                            if ("-u" === r) return R(e);
                             let i = e.indexOf("-x-");
-                            return P(-1 === i ? e + r : e.slice(0, i) + r + e.slice(i));
-                        })(l, [], f)),
-                    (c.locale = l),
+                            return R(-1 === i ? e + r : e.slice(0, i) + r + e.slice(i));
+                        })(d, [], f)),
+                    (c.locale = d),
                     c
                 );
-            })(l, n, r, ["nu"], u, U.getDefaultLocale),
-            c = d.locale,
-            f = C(this);
-        ((f.initializedDurationFormat = !0), (f.locale = c), (f.numberingSystem = d.nu));
-        let h = w(a, "style", "string", ["long", "short", "narrow", "digital"], "short");
-        ((f.style = h), (f.dataLocale = d.dataLocale));
+            })(d, n, r, ["nu"], u, U.getDefaultLocale),
+            c = l.locale,
+            f = D(this);
+        ((f.initializedDurationFormat = !0), (f.locale = c), (f.numberingSystem = l.nu));
+        let h = v(a, "style", "string", ["long", "short", "narrow", "digital"], "short");
+        ((f.style = h), (f.dataLocale = l.dataLocale));
         let p = "";
-        (F.forEach((e) => {
+        (G.forEach((e) => {
             let { styleSlot: t, displaySlot: n, unit: r, values: i, digitalDefault: s } = e,
                 o = (function (e, t, n, r, i, a) {
-                    let s = w(t, e, "string", r, void 0),
+                    let s = v(t, e, "string", r, void 0),
                         o = "always";
                     void 0 === s &&
                         ("digital" === n
                             ? ("hours" !== e && "minutes" !== e && "seconds" !== e && (o = "auto"), (s = i))
                             : ((o = "auto"), (s = "numeric" === a || "2-digit" === a ? "numeric" : n)));
-                    let u = w(t, `${e}Display`, "string", ["always", "auto"], o);
+                    let u = v(t, `${e}Display`, "string", ["always", "auto"], o);
                     if ("numeric" === a || "2-digit" === a) {
                         if ("numeric" !== s && "2-digit" !== s)
                             throw RangeError("Can't mix numeric and non-numeric styles");
@@ -3208,9 +3208,9 @@ class U {
             })(U, this)
         )
             throw TypeError("Method Intl.DurationFormat.prototype.resolvedOptions called on incompatible receiver");
-        let e = C(this),
+        let e = D(this),
             t = {};
-        for (let n of G) {
+        for (let n of N) {
             let r = e[n];
             ("fractionalDigits" === n ? void 0 !== r && (r = Number(r)) : p(void 0 !== r, `Missing internal slot ${n}`),
                 (t[n] = r));
@@ -3218,8 +3218,8 @@ class U {
         return t;
     }
     formatToParts(e) {
-        if (void 0 === C(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
-        let t = N(this, Z(e)),
+        if (void 0 === D(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
+        let t = z(this, L(e)),
             n = [];
         for (let { type: e, unit: r, value: i } of t) {
             let t = { type: e, value: i };
@@ -3228,19 +3228,19 @@ class U {
         return n;
     }
     format(e) {
-        if (void 0 === C(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
-        let t = N(this, Z(e)),
+        if (void 0 === D(this).initializedDurationFormat) throw TypeError("Error uninitialized locale");
+        let t = z(this, L(e)),
             n = "";
         for (let { value: e } of t) n += e;
         return n;
     }
     static supportedLocalesOf(e, t) {
         return (function (e, t, n) {
-            void 0 !== n && w((n = y(n)), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
+            void 0 !== n && v((n = y(n)), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
             var r = Array.from(e);
             let i = [];
             for (let e of t) {
-                let t = b(r, e.replace(z, ""));
+                let t = w(r, e.replace(k, ""));
                 t && i.push(t);
             }
             return i;
@@ -3248,10 +3248,10 @@ class U {
     }
     static __defaultLocale = "en";
     static availableLocales = new Set();
-    static localeData = Object.keys(R).reduce((e, t) => {
+    static localeData = Object.keys(B).reduce((e, t) => {
         U.availableLocales.add(t);
-        let n = R[t].nu;
-        return ((e[t] = { nu: n, digitalFormat: R[t].separator || n.reduce((e, t) => ((e[t] = ":"), e), {}) }), e);
+        let n = B[t].nu;
+        return ((e[t] = { nu: n, digitalFormat: B[t].separator || n.reduce((e, t) => ((e[t] = ":"), e), {}) }), e);
     }, {});
     static getDefaultLocale = () => U.__defaultLocale;
     static polyfilled = !0;

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => n8 }), n(321073));
+(n.d(t, { A: () => n7 }), n(321073));
 var i,
     r = n(477900),
     a = n(582128),
@@ -465,9 +465,9 @@ function e6(e) {
     return (0, r.jsx)(B.E, { className: l()({ [e3.Q]: null == n }, t), color: n, ...i });
 }
 var e5 = n(976860),
-    e8 = n(95701),
-    e7 = n(46653),
-    e4 = n(734057),
+    e7 = n(95701),
+    e4 = n(46653),
+    e8 = n(734057),
     e9 = n(184989),
     te = n(71393),
     tt = n(576705),
@@ -757,7 +757,7 @@ let t5 = a.memo(function (e) {
         }, [O]));
     let ee = null == b || null == p ? null : (0, r.jsx)(t9, { applicationId: b.id }),
         et = w
-            ? (0, r.jsx)(t4, { gameName: X, runningGameId: _?.id, isGameServerHostingInShopEnabled: P, onClick: z })
+            ? (0, r.jsx)(t8, { gameName: X, runningGameId: _?.id, isGameServerHostingInShopEnabled: P, onClick: z })
             : null,
         en =
             !K || $
@@ -801,7 +801,7 @@ let t5 = a.memo(function (e) {
                       : ((e = !0),
                         (t = null),
                         (n = th.ScreenArrowIcon),
-                        null != c && (0, e8.gV)(c.type) && (i = Q.intl.string(Q.t.uQn9B8))),
+                        null != c && (0, e7.gV)(c.type) && (i = Q.intl.string(Q.t.uQn9B8))),
                 (0, r.jsx)("div", {
                     className: t3.IF,
                     children: (0, r.jsx)(tD.A, { tooltipText: i, disabled: e, onClick: t, icon: n }),
@@ -836,7 +836,7 @@ let t5 = a.memo(function (e) {
         el =
             !C || O
                 ? null
-                : (0, r.jsx)(t8, {
+                : (0, r.jsx)(t7, {
                       runningGame: _,
                       startAuthorization: function () {
                           N({ analyticsLocations: y }) === tZ._M.RPC &&
@@ -879,7 +879,7 @@ let t5 = a.memo(function (e) {
         ],
     });
 });
-function t8(e) {
+function t7(e) {
     let { runningGame: t, startAuthorization: n, connectionApp: i, ref: a } = e;
     return (0, r.jsx)(tD.A, {
         ref: a,
@@ -895,7 +895,7 @@ function t8(e) {
         tooltipText: Q.intl.string(Q.t.sbdnpw),
     });
 }
-function t7(e) {
+function t4(e) {
     let {
             tooltipText: t,
             onClick: n,
@@ -932,13 +932,13 @@ function t7(e) {
         ],
     });
 }
-function t4(e) {
+function t8(e) {
     let { gameName: t, runningGameId: n, isGameServerHostingInShopEnabled: i, onClick: a } = e,
         s = (function (e) {
             let { location: t } = e;
             return tB.useConfig({ location: t }).enabled;
         })({ location: "activity-panel" });
-    return (0, r.jsx)(t7, {
+    return (0, r.jsx)(t4, {
         tooltipText: Q.intl.formatToPlainString(tj.default.oZ4ZFn, { gameName: t }),
         coachmarkContent: A.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_COACHMARK,
         badgeContent: A.M.GAME_SERVER_HOSTING_IN_SHOP_DETECTION_NEW_BADGE,
@@ -1658,12 +1658,12 @@ function n3(e) {
         (d()(null != a, "Channel cannot be null during navigation click"),
             S.A.channelListScrollTo(a.guild_id ?? F.ME, a.id),
             !E &&
-                ((0, e8.gV)(a.type) &&
+                ((0, e7.gV)(a.type) &&
                     T.A.selectParticipant(
                         a.id,
                         (0, ep.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
                     ),
-                (0, e8.pQ)(a.type) && (0, L.gk)(nj.Gd.PANEL)));
+                (0, e7.pQ)(a.type) && (0, L.gk)(nj.Gd.PANEL)));
     }
     null != l && null != a
         ? ((t = F.BVt.CHANNEL(l.id, a.id)), (f = `${f} / ${l.name}`))
@@ -1685,7 +1685,7 @@ function n3(e) {
                             },
                             children: (0, r.jsx)(tu.A, { className: nX._W, children: n.name }),
                         }),
-                        null != a && (0, e8.pQ)(a.type)
+                        null != a && (0, e7.pQ)(a.type)
                             ? (0, r.jsx)(eq.A, {
                                   href: t,
                                   onClick: h,
@@ -1762,12 +1762,12 @@ function n5(e) {
         ],
     });
 }
-let n8 = (0, C.A)(function (e) {
+let n7 = (0, C.A)(function (e) {
     let { analyticsContext: t, className: n } = e,
         i = a.useRef(null),
         s = a.useRef(null),
         o = a.useRef(null),
-        d = (0, E.bG)([e7.default], () => e7.default.getId()),
+        d = (0, E.bG)([e4.default], () => e4.default.getId()),
         c = (0, E.bG)([ew.Ay, ts.A], () => (0, ez.A)(ew.Ay, ts.A)),
         { enabled: f } = eU.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: h, isWithinThreshold: I } = (function () {
@@ -1790,9 +1790,9 @@ let n8 = (0, C.A)(function (e) {
             let i = e - n.endedAt;
             return { previouslyRunningGame: n, isWithinThreshold: i < eV };
         })(),
-        p = (0, E.bG)([tr.Ay, e4.A], () => e4.A.getChannel(tr.Ay.getVoiceChannelId())),
+        p = (0, E.bG)([tr.Ay, e8.A], () => e8.A.getChannel(tr.Ay.getVoiceChannelId())),
         m = (0, E.bG)([y.Ay], () => y.Ay.getConnectedActivityChannelId()),
-        g = (0, E.bG)([e4.A], () => e4.A.getChannel(m)),
+        g = (0, E.bG)([e8.A], () => e8.A.getChannel(m)),
         T = (0, E.bG)([te.A], () => te.A.getGuild(g?.guild_id)),
         [S, N] = (0, E.yK)([e0.A], () => [e0.A.getCurrentUserActiveStream(), e0.A.getStreamerActiveStreamMetadata()]),
         C = (0, E.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),

@@ -13,8 +13,8 @@ var i = n(477900),
     g = n(657043),
     A = n(793574),
     p = n(384059),
-    m = n(917592),
-    I = n(926641),
+    I = n(917592),
+    m = n(926641),
     E = n(834730),
     S = n(29160),
     C = n(792996),
@@ -32,15 +32,15 @@ var T = n(652215),
     y = n(473718);
 let v = { [T.vkP.CONNECTED]: y.nf, [T.vkP.CONNECTING]: y._6, [T.vkP.ERROR]: y.Il },
     M = { [T.bFR.FINE]: y.LP, [T.bFR.AVERAGE]: y.mq, [T.bFR.BAD]: y.yA, [T.bFR.UNKNOWN]: null },
-    D = {
+    R = {
         [T.bFR.FINE]: a.ConnectionFineIcon,
         [T.bFR.AVERAGE]: o.ConnectionAverageIcon,
         [T.bFR.BAD]: u.ConnectionBadIcon,
         [T.bFR.UNKNOWN]: d.ConnectionUnknownIcon,
     };
-function R(e) {
+function D(e) {
     let { quality: t, largePing: n, ...r } = e,
-        l = D[t];
+        l = R[t];
     return (0, i.jsx)(l, { className: s()(y.hU, { [y.kV]: n }), ...r });
 }
 function O(e) {
@@ -61,10 +61,10 @@ function x(e) {
             statusAccessory: C,
         } = e,
         _ = r.useRef(null),
-        D = l === T.S7L.RTC_CONNECTED,
-        x = r.useCallback((e) => (0, i.jsx)(I.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: L, connectionStatusText: P } = m.A.getStatus(l, S),
-        U = (0, g.KN)("RTCConnectionStatus");
+        R = l === T.S7L.RTC_CONNECTED,
+        x = r.useCallback((e) => (0, i.jsx)(m.A, { ...e, channelId: u }), [u]),
+        { connectionStatus: L, connectionStatusText: U } = I.A.getStatus(l, S),
+        w = (0, g.KN)("RTCConnectionStatus");
     return (0, i.jsxs)("div", {
         className: y.pe,
         children: [
@@ -79,7 +79,7 @@ function x(e) {
                         let { onClick: r } = e;
                         return (0, i.jsxs)(i.Fragment, {
                             children: [
-                                D &&
+                                R &&
                                     (0, i.jsx)(h.m, {
                                         text: t !== T.bFR.UNKNOWN && null != n ? `${n.toFixed(0)} ms` : null,
                                         children: (0, i.jsx)(f.D, {
@@ -87,13 +87,13 @@ function x(e) {
                                             onClick: (e) => {
                                                 ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), r(e));
                                             },
-                                            children: (0, i.jsx)(R, { quality: t, largePing: d }),
+                                            children: (0, i.jsx)(D, { quality: t, largePing: d }),
                                         }),
                                     }),
                                 (0, i.jsxs)("div", {
                                     className: y.ei,
                                     children: [
-                                        d && U
+                                        d && w
                                             ? null
                                             : (0, i.jsx)(O, {
                                                   accessory: C,
@@ -102,7 +102,7 @@ function x(e) {
                                                           ((0, p.XJ)(A.A.RTC_PANEL, p.OP.CONNECTION_STATUS), r(e));
                                                       },
                                                       children: (0, i.jsx)(N, {
-                                                          text: P,
+                                                          text: U,
                                                           textVariant: E,
                                                           hasVideo: S,
                                                           className: v[L],
@@ -111,7 +111,7 @@ function x(e) {
                                                   }),
                                               }),
                                         d
-                                            ? (0, i.jsx)(O, { accessory: U ? C : null, enlarged: !0, children: o })
+                                            ? (0, i.jsx)(O, { accessory: w ? C : null, enlarged: !0, children: o })
                                             : null,
                                     ],
                                 }),

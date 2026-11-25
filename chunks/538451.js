@@ -1,68 +1,68 @@
-var a = n(477900),
-    i = n(582128),
-    r = n(503698),
-    l = n.n(r),
-    t = n(939249),
-    o = n(97808),
-    c = n(778712),
-    u = n(834730),
-    d = n(297413),
-    h = n(342296),
-    m = n(475977);
-n.d(
+var i = l(477900),
+    n = l(582128),
+    a = l(503698),
+    r = l.n(a),
+    t = l(939249),
+    o = l(97808),
+    d = l(778712),
+    u = l(834730),
+    c = l(297413),
+    m = l(342296),
+    p = l(475977);
+l.d(
     s,
     {},
     {
         A: function (e) {
             let {
                     user: s,
-                    guildId: n,
-                    channelId: r,
-                    nick: p,
-                    className: k,
-                    textClassName: C,
-                    disablePopout: R,
-                    ignoreModalClicks: x,
-                    onClick: _,
-                    onContextMenu: f,
-                    onPopoutRequestOpen: j,
-                    onPopoutRequestClose: b,
+                    guildId: l,
+                    channelId: a,
+                    nick: y,
+                    className: h,
+                    textClassName: v,
+                    disablePopout: x,
+                    ignoreModalClicks: N,
+                    onClick: f,
+                    onContextMenu: j,
+                    onPopoutRequestOpen: A,
+                    onPopoutRequestClose: g,
                 } = e,
-                g = i.useRef(null);
-            return (0, a.jsx)(h.A, {
-                targetElementRef: g,
+                S = n.useRef(null);
+            return (0, i.jsx)(m.A, {
+                targetElementRef: S,
                 user: s,
-                guildId: n,
-                channelId: r,
+                guildId: l,
+                channelId: a,
                 position: "left",
-                shouldShow: !R && void 0,
-                onRequestOpen: j,
-                onRequestClose: b,
-                ignoreModalClicks: x,
+                shouldShow: !x && void 0,
+                onRequestOpen: A,
+                onRequestClose: g,
+                ignoreModalClicks: N,
                 children: (e) => {
-                    let { onClick: i, ...r } = e;
-                    return (0, a.jsxs)(t.D, {
-                        ...r,
-                        innerRef: g,
-                        className: l()(m.DV, k, { [m.YR]: R }),
-                        onContextMenu: f,
+                    let { onClick: n, ...a } = e;
+                    return (0, i.jsxs)(t.D, {
+                        ...a,
+                        innerRef: S,
+                        className: r()(p.DV, h, { [p.YR]: x }),
+                        onContextMenu: j,
                         onClick: (e) => {
-                            (i(e), _?.(e));
+                            (n(e), f?.(e));
                         },
                         children: [
-                            (0, a.jsx)(o.eu, {
-                                src: s.getAvatarURL(n, (0, c.FT)(c._3.SIZE_24)),
-                                className: m.my,
+                            (0, i.jsx)(o.eu, {
+                                src: s.getAvatarURL(l, (0, d.FT)(d._3.SIZE_24)),
+                                className: p.my,
                                 "aria-label": s.username,
-                                size: c._3.SIZE_24,
+                                size: d._3.SIZE_24,
                             }),
-                            (0, a.jsx)(u.E, {
-                                className: l()(m.Ft, C),
+                            (0, i.jsx)(u.E, {
+                                className: r()(p.Ft, v),
                                 variant: "body-sm/normal",
-                                children: (0, a.jsx)(d.A, {
+                                children: (0, i.jsx)(c.A, {
                                     user: s,
-                                    nick: p,
-                                    usernameClass: m.Xh,
+                                    nick: y,
+                                    usernameClass: p.Xh,
                                     hideDiscriminator: !0,
                                 }),
                             }),

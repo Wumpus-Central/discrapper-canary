@@ -1,14 +1,14 @@
 var l = n(582128);
 let r = new Set(),
-    i = new Set();
-function a() {
-    for (let e of i) e();
+    a = new Set();
+function i() {
+    for (let e of a) e();
 }
 function s(e) {
     return (
-        i.add(e),
+        a.add(e),
         () => {
-            i.delete(e);
+            a.delete(e);
         }
     );
 }
@@ -22,11 +22,11 @@ n.d(
         },
         x: async function (e, t) {
             if (r.has(e)) return null;
-            (r.add(e), a());
+            (r.add(e), i());
             try {
                 return await t();
             } finally {
-                (r.delete(e), a());
+                (r.delete(e), i());
             }
         },
     },

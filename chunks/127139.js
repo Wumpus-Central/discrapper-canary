@@ -1,20 +1,20 @@
-var i = n(858899),
-    l = n(147036),
+var e = n(858899),
+    i = n(147036),
     a = n(957565),
-    r = n(746080),
-    s = n(191850),
-    o = n(792996);
+    u = n(746080),
+    r = n(191850),
+    s = n(792996);
 n.d(
-    e,
+    l,
     {},
     {
-        V: function (t, e) {
-            (0, a.C)((0, l.n)(t, r.VV.CONJURE, e), () =>
-                (0, i.P0)({ text: o.intl.string(o.t["L/PwZf"]), variant: "success" }),
+        V: function (t, l) {
+            (0, a.C)((0, i.n)(t, u.VV.CONJURE, l), () =>
+                (0, e.P0)({ text: s.intl.string(s.t["L/PwZf"]), variant: "success" }),
             );
         },
         o: function (t) {
-            (0, a.C)(t, () => (0, i.P0)({ text: o.intl.string(s.default.CmfaZG), variant: "success" }));
+            (0, a.C)(t, () => (0, e.P0)({ text: s.intl.string(r.default.CmfaZG), variant: "success" }));
         },
     },
 );

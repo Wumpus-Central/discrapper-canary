@@ -1,40 +1,40 @@
-var s = t(855986),
-    i = t(52133),
-    l = t(49491),
-    a = t(311043),
+var l = t(855986),
+    s = t(52133),
+    a = t(49491),
+    i = t(311043),
     r = t(243264),
     o = t(287809);
-function c(e) {
-    let { gameId: n, user: t, game: s, autocompleteGame: i } = e;
-    if (null != s) {
-        if ((0, l.b)(s, t?.nsfwAllowed)) return;
-        return { gameId: n, gameName: s.name, gameIcon: s.media?.icon };
+function u(e) {
+    let { gameId: n, user: t, game: l, autocompleteGame: s } = e;
+    if (null != l) {
+        if ((0, a.b)(l, t?.nsfwAllowed)) return;
+        return { gameId: n, gameName: l.name, gameIcon: l.media?.icon };
     }
-    if (null != i) return { gameId: n, gameName: i.name, gameIcon: i.icon };
+    if (null != s) return { gameId: n, gameName: s.name, gameIcon: s.icon };
 }
 t.d(
     n,
     {},
     {
         K: function (e) {
-            return (0, s.bG)(
-                [a.A, r.A, o.default],
+            return (0, l.bG)(
+                [i.A, r.A, o.default],
                 () =>
-                    c({
+                    u({
                         gameId: e,
                         user: o.default.getCurrentUser(),
-                        game: a.A.getGame(e),
+                        game: i.A.getGame(e),
                         autocompleteGame: r.A.getGameById(e),
                     }),
                 [e],
-                i.A,
+                s.A,
             );
         },
         v: function (e) {
-            return c({
+            return u({
                 gameId: e,
                 user: o.default.getCurrentUser(),
-                game: a.A.getGame(e),
+                game: i.A.getGame(e),
                 autocompleteGame: r.A.getGameById(e),
             });
         },

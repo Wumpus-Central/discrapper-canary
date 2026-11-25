@@ -1,20 +1,20 @@
-var t = n(477900);
+var l = n(477900);
 n(582128);
-var a = n(503698),
-    s = n.n(a),
-    i = n(534514),
-    r = n(672073);
+var i = n(503698),
+    a = n.n(i),
+    r = n(534514),
+    s = n(672073);
 n.d(
-    l,
+    t,
     {},
     {
         A: function (e) {
-            let { className: l, children: n, "aria-label": a, id: u } = e;
-            return (0, t.jsx)(i.D, {
+            let { className: t, children: n, "aria-label": i, id: o } = e;
+            return (0, l.jsx)(r.D, {
                 variant: "body-sm/medium",
-                className: s()(l, r.k),
-                "aria-label": a,
-                id: u,
+                className: a()(t, s.k),
+                "aria-label": i,
+                id: o,
                 color: "none",
                 children: n,
             });

@@ -8,46 +8,46 @@ var l = e(477900),
     u = e(627363),
     d = e(263775),
     A = e(308335),
-    f = e(21241),
-    g = e(939496),
-    m = e(985629),
-    p = e(996988),
-    x = e(792996),
-    I = e(41821);
+    x = e(21241),
+    m = e(939496),
+    f = e(985629),
+    g = e(996988),
+    p = e(792996),
+    _ = e(41821);
 e.d(
     n,
     {},
     {
         A: function (t) {
-            let { applicationId: n, onAction: e, onClose: _, activity: N } = t,
-                { analyticsLocations: E } = (0, c.Ay)(o.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-                { data: T } = (0, u.YY)(n),
-                h = (0, s.JC)(T),
-                { themeType: C } = (0, g.E)(),
-                S = C === p.d.MODAL || C === p.d.MODAL_V2,
-                y = (0, A.o)(N?.application_id ?? n),
-                v = h && S && null != T && !y,
-                O = v ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
-                [j] = (0, d.kn)(O);
-            return v
+            let { applicationId: n, onAction: e, onClose: I, activity: E } = t,
+                { analyticsLocations: T } = (0, c.Ay)(o.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+                { data: N } = (0, u.YY)(n),
+                h = (0, s.JC)(N),
+                { themeType: C } = (0, m.E)(),
+                v = C === g.d.MODAL || C === g.d.MODAL_V2,
+                y = (0, A.o)(E?.application_id ?? n),
+                S = h && v && null != N && !y,
+                j = S ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
+                [O] = (0, d.kn)(j);
+            return S
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(f.A, { className: I.Xl }),
+                          (0, l.jsx)(x.A, { className: _.Xl }),
                           (0, l.jsxs)("div", {
-                              className: I.DK,
+                              className: _.DK,
                               children: [
                                   (0, l.jsxs)("div", {
-                                      className: I.tJ,
+                                      className: _.tJ,
                                       children: [
-                                          j === i.M.CLOUD_PLAY_NEW_BADGE &&
+                                          O === i.M.CLOUD_PLAY_NEW_BADGE &&
                                               (0, l.jsx)(a.E, { type: "new", variant: "primary" }),
                                           (0, l.jsx)(r.E, {
                                               variant: "body-xs/medium",
-                                              children: x.intl.string(x.t.IQjdmV),
+                                              children: p.intl.string(p.t.IQjdmV),
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(m.A, { application: T, onAction: e, onClose: _, analyticsLocations: E }),
+                                  (0, l.jsx)(f.A, { application: N, onAction: e, onClose: I, analyticsLocations: T }),
                               ],
                           }),
                       ],

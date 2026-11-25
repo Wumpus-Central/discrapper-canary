@@ -1,5 +1,5 @@
 r.r(
-    (e.exports = {
+    (o.exports = {
         carousel: "carousel_7AR6oU",
         children: "children_7AR6oU",
         child: "child_7AR6oU",

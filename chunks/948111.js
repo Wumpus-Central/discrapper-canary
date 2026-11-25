@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     rJ: "collection_pz5eUz",
     rf: "body_pz5eUz",
     wm: "logo_pz5eUz",

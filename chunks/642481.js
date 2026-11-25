@@ -39,8 +39,8 @@ function E(e) {
             isCaretHoverable: N = !1,
             shouldTrapFocus: v = !1,
             returnRef: R,
-            onNudgeChange: j,
-            ...y
+            onNudgeChange: y,
+            ...j
         } = e,
         [I, T] = l.useState(b ?? "top");
     l.useEffect(() => {
@@ -56,31 +56,31 @@ function E(e) {
             },
             [h],
         ),
-        M = l.useCallback((e) => {
+        U = l.useCallback((e) => {
             T(e);
         }, []),
-        P = N ? g.caretHoverable : void 0,
-        O = {
-            targetElementRef: y.targetElementRef,
-            shouldShow: y.shouldShow,
-            hasVideo: y.hasVideo,
+        M = N ? g.caretHoverable : void 0,
+        P = {
+            targetElementRef: j.targetElementRef,
+            shouldShow: j.shouldShow,
+            hasVideo: j.hasVideo,
             position: I,
             caretConfig: S,
             onRequestClose: C,
             gradientColor: E,
-            onPositionChange: M,
-            onNudgeChange: j,
+            onPositionChange: U,
+            onNudgeChange: y,
             scrollBehavior: _,
             modal: v,
             returnRef: R,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
-            ...("edge" === y.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: y.align }
+            ...("edge" === j.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: j.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...O,
+        ...P,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
@@ -95,7 +95,7 @@ function E(e) {
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: g.actionBar }) : null,
-                null != S && (0, a.jsx)(d.F, { className: P }),
+                null != S && (0, a.jsx)(d.F, { className: M }),
             ],
         }),
     });

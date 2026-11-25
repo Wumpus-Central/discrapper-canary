@@ -1,10 +1,10 @@
-var t = s(487887);
-s.d(
-    r,
+var r = i(487887);
+i.d(
+    n,
     {},
     {
-        A: function (u) {
-            if (null != u && null != u.url && t.yz.test(u.url)) return u.url;
+        A: function (t) {
+            if (null != t && null != t.url && r.yz.test(t.url)) return t.url;
         },
     },
 );

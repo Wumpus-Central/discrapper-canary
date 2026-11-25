@@ -1,30 +1,30 @@
-var l = i(477900),
-    a = i(582128),
-    n = i(503698),
-    s = i.n(n),
-    d = i(451988),
-    r = i(235986),
-    c = i(697970);
-function o(e) {
-    let { percentage: t, isSingleLine: i } = e;
+var l = n(477900),
+    i = n(582128),
+    a = n(503698),
+    r = n.n(a),
+    s = n(451988),
+    o = n(235986),
+    u = n(697970);
+function c(e) {
+    let { percentage: t, isSingleLine: n } = e;
     return (0, l.jsx)("div", {
-        className: s()({ [c.M0]: i, [c.Sg]: !i }),
-        children: (0, l.jsx)("div", { className: c.qT, style: { width: `${100 * Math.max(Math.min(t, 1), 0)}%` } }),
+        className: r()({ [u.M0]: n, [u.Sg]: !n }),
+        children: (0, l.jsx)("div", { className: u.qT, style: { width: `${100 * Math.max(Math.min(t, 1), 0)}%` } }),
     });
 }
-function m(e) {
+function d(e) {
     return String(e).padStart(2, "0");
 }
-function p(e) {
-    let { time: t, padLargestUnit: i } = e,
+function m(e) {
+    let { time: t, padLargestUnit: n } = e,
         l = Math.floor(t) % 60,
-        a = Math.floor(t / 60) % 60,
-        n = Math.floor(t / 3600);
-    return 0 === n ? (i ? `${m(a)}:${m(l)}` : `${a}:${m(l)}`) : i ? `${m(n)}:${m(a)}:${m(l)}` : `${n}:${m(a)}:${m(l)}`;
+        i = Math.floor(t / 60) % 60,
+        a = Math.floor(t / 3600);
+    return 0 === a ? (n ? `${d(i)}:${d(l)}` : `${i}:${d(l)}`) : n ? `${d(a)}:${d(i)}:${d(l)}` : `${a}:${d(i)}:${d(l)}`;
 }
-class u extends a.PureComponent {
+class A extends i.PureComponent {
     static defaultProps = { themed: !1 };
-    timer = new d.IX();
+    timer = new s.IX();
     state = { now: Date.now() };
     componentDidMount() {
         this.timer.start(500, () => {
@@ -35,37 +35,37 @@ class u extends a.PureComponent {
         this.timer.stop();
     }
     render() {
-        let { start: e, end: t, className: i, themed: a, singleLine: n = !1 } = this.props,
-            { now: d } = this.state,
-            m = (t - e) / 1e3,
-            u = Math.max(Math.min((d - e) / 1e3, m), 0);
-        return n
+        let { start: e, end: t, className: n, themed: i, singleLine: a = !1 } = this.props,
+            { now: s } = this.state,
+            d = (t - e) / 1e3,
+            A = Math.max(Math.min((s - e) / 1e3, d), 0);
+        return a
             ? (0, l.jsxs)("div", {
-                  className: s()(i, { [c.Sp]: a }, c.Od),
+                  className: r()(n, { [u.Sp]: i }, u.Od),
                   children: [
-                      (0, l.jsx)("div", { className: c.Iq, children: p({ time: u, padLargestUnit: !0 }) }),
+                      (0, l.jsx)("div", { className: u.Iq, children: m({ time: A, padLargestUnit: !0 }) }),
                       (0, l.jsx)("div", {
-                          className: c.h7,
-                          children: (0, l.jsx)(o, { percentage: u / m, isSingleLine: !0 }),
+                          className: u.h7,
+                          children: (0, l.jsx)(c, { percentage: A / d, isSingleLine: !0 }),
                       }),
-                      (0, l.jsx)("div", { className: c.EL, children: p({ time: m, padLargestUnit: !0 }) }),
+                      (0, l.jsx)("div", { className: u.EL, children: m({ time: d, padLargestUnit: !0 }) }),
                   ],
               })
             : (0, l.jsxs)("div", {
-                  className: s()(i, { [c.Sp]: a }),
+                  className: r()(n, { [u.Sp]: i }),
                   children: [
-                      (0, l.jsx)(o, { percentage: u / m, isSingleLine: !1 }),
-                      (0, l.jsxs)(r.A, {
+                      (0, l.jsx)(c, { percentage: A / d, isSingleLine: !1 }),
+                      (0, l.jsxs)(o.A, {
                           children: [
-                              (0, l.jsx)(r.A.Child, {
+                              (0, l.jsx)(o.A.Child, {
                                   grow: 1,
-                                  className: c.n_,
-                                  children: p({ time: u, padLargestUnit: !1 }),
+                                  className: u.n_,
+                                  children: m({ time: A, padLargestUnit: !1 }),
                               }),
-                              (0, l.jsx)(r.A.Child, {
+                              (0, l.jsx)(o.A.Child, {
                                   grow: 0,
-                                  className: c.EL,
-                                  children: p({ time: m, padLargestUnit: !1 }),
+                                  className: u.EL,
+                                  children: m({ time: d, padLargestUnit: !1 }),
                               }),
                           ],
                       }),
@@ -73,4 +73,4 @@ class u extends a.PureComponent {
               });
     }
 }
-i.d(t, {}, { A: u });
+n.d(t, {}, { A: A });

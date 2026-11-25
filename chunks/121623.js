@@ -1,5 +1,5 @@
-var l = n(400253),
-    i = n(869733),
+var i = n(400253),
+    l = n(869733),
     s = n(80703),
     r = n(197111),
     a = n(129230),
@@ -14,9 +14,9 @@ let d = "template",
         },
         openMobileApp(e, t) {
             if (null != platform.ua && platform.ua.toLowerCase().indexOf("googlebot") > -1) return;
-            let n = null != e ? (0, l.FH)(e) : (0, l.BH)(),
-                r = (0, i.I_)(),
-                c = (0, i.Ay)(n, { utmSource: d, fingerprint: t, attemptId: r });
+            let n = null != e ? (0, i.FH)(e) : (0, i.BH)(),
+                r = (0, l.I_)(),
+                c = (0, l.Ay)(n, { utmSource: d, fingerprint: t, attemptId: r });
             (a.default.track(u.HAw.DEEP_LINK_CLICKED, {
                 fingerprint: (0, s.v)(t),
                 attempt_id: r,

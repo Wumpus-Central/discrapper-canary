@@ -34,19 +34,19 @@ n.d(
                 return n === t;
             });
             if (null == l) return null;
-            let d = r(e),
-                s = [
-                    d[0].filter((e) => {
+            let s = r(e),
+                d = [
+                    s[0].filter((e) => {
                         let { id: n } = e;
                         return n !== t;
                     }),
-                    d[1].filter((e) => {
+                    s[1].filter((e) => {
                         let { id: n } = e;
                         return n !== t;
                     }),
                 ],
-                u = s[+(1 === n)];
-            return (u.splice(Math.max(0, Math.min(i, u.length)), 0, l), a(s));
+                u = d[+(1 === n)];
+            return (u.splice(Math.max(0, Math.min(i, u.length)), 0, l), a(d));
         },
         O6: function (e, t, n, i) {
             let r =
@@ -74,8 +74,8 @@ n.d(
         QD: function (e, t, n) {
             let i = r(e),
                 l = i[+(n?.column === 1)],
-                d = n?.index ?? l.length;
-            return (l.splice(Math.max(0, Math.min(d, l.length)), 0, t), a(i));
+                s = n?.index ?? l.length;
+            return (l.splice(Math.max(0, Math.min(s, l.length)), 0, t), a(i));
         },
         Rl: r,
         W$: function (e) {

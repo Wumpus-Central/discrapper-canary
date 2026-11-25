@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     fC: "badgeContainer_CTWncy",
     KT: "badgeLabel_CTWncy",
     cV: "badgesContainer_CTWncy",
