@@ -1,174 +1,178 @@
-var n = l(855986),
-    i = l(52133),
-    s = l(73153),
-    r = l(260498);
-let u = new Map(),
-    a = new Set(),
-    o = new Map(),
-    d = new Map(),
+var l = n(855986),
+    i = n(52133),
+    s = n(73153),
+    r = n(260498),
+    u = n(612210);
+let a = new Map(),
+    o = new Set(),
+    p = new Map(),
     c = new Map(),
-    E = new Map(),
-    p = new Set(),
-    h = [];
-class P extends n.Ay.Store {
+    d = new Map(),
+    h = new Map(),
+    f = new Set(),
+    g = [];
+class _ extends l.Ay.Store {
     initialize() {
         this.waitFor(r.Ay);
     }
     getPublishStatus(e) {
-        return u.get(e) ?? null;
+        return a.get(e) ?? null;
     }
     isProjectPublishing(e) {
-        return a.has(e);
+        return o.has(e);
     }
     getPublishApprovalUrl(e) {
-        return o.get(e) ?? null;
+        return p.get(e) ?? null;
     }
     getPublishProgress(e) {
-        return d.get(e) ?? null;
-    }
-    getSafetyRecheck(e) {
-        return E.get(e) ?? null;
-    }
-    getPublishFailure(e) {
         return c.get(e) ?? null;
     }
+    getSafetyRecheck(e) {
+        return h.get(e) ?? null;
+    }
+    getPublishFailure(e) {
+        return d.get(e) ?? null;
+    }
     isAppChannelPending(e) {
-        return p.has(e);
+        return f.has(e);
     }
 }
-let _ = [],
+let v = [],
     C = [],
-    R = new P(s.h, {
+    y = new _(s.h, {
         LOGOUT: function () {
             if (
-                0 === u.size &&
                 0 === a.size &&
                 0 === o.size &&
-                0 === d.size &&
+                0 === p.size &&
                 0 === c.size &&
-                0 === E.size &&
-                0 === p.size
+                0 === d.size &&
+                0 === h.size &&
+                0 === f.size
             )
                 return !1;
-            (u.clear(), a.clear(), o.clear(), d.clear(), c.clear(), E.clear(), p.clear());
+            (a.clear(), o.clear(), p.clear(), c.clear(), d.clear(), h.clear(), f.clear());
         },
         CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of u.keys()) null == r.Ay.getProject(e) && (u.delete(e), (t = !0));
-            for (let e of o.keys()) null == r.Ay.getProject(e) && (o.delete(e), (t = !0));
-            for (let e of d.keys()) null == r.Ay.getProject(e) && (d.delete(e), (t = !0));
+            for (let e of a.keys()) null == r.Ay.getProject(e) && (a.delete(e), (t = !0));
+            for (let e of p.keys()) null == r.Ay.getProject(e) && (p.delete(e), (t = !0));
             for (let e of c.keys()) null == r.Ay.getProject(e) && (c.delete(e), (t = !0));
+            for (let e of d.keys()) null == r.Ay.getProject(e) && (d.delete(e), (t = !0));
             if (!t) return !1;
         },
         CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
             var t;
             let {
-                    projectId: l,
-                    publishState: n,
+                    projectId: n,
+                    publishState: l,
                     surface: s,
                     previewAppChannels: r,
-                    newAppChannels: a = C,
-                    previewDevicePermissions: E = _,
-                    publishedRevision: p = null,
-                    publishedAt: P = null,
-                    publishing: R = !1,
-                    patchNotesSent: S,
-                    newUiUnpublished: f = !1,
-                    safetyHold: g = !1,
+                    newAppChannels: o = C,
+                    previewDevicePermissions: h = v,
+                    publishedRevision: f = null,
+                    publishedAt: _ = null,
+                    publishing: y = !1,
+                    patchNotesSent: E,
+                    newUiUnpublished: P = !1,
+                    safetyHold: S = !1,
+                    views: R = null,
                 } = e,
-                O = !R && o.delete(l),
-                T = !R && d.delete(l),
-                U = u.get(l),
-                N = (R || (null != U && U.publishedRevision !== p)) && c.delete(l),
-                A =
-                    null == S ||
-                    ((t = U?.patchNotesSent ?? h),
-                    t.length === S.length &&
+                w = !y && p.delete(n),
+                A = !y && c.delete(n),
+                O = a.get(n),
+                m = (y || (null != O && O.publishedRevision !== f)) && d.delete(n),
+                T =
+                    null == E ||
+                    ((t = O?.patchNotesSent ?? g),
+                    t.length === E.length &&
                         t.every(
-                            (e, t) => e.publishedRevision === S[t].publishedRevision && e.messageId === S[t].messageId,
+                            (e, t) => e.publishedRevision === E[t].publishedRevision && e.messageId === E[t].messageId,
                         ))
-                        ? (U?.patchNotesSent ?? h)
-                        : S;
+                        ? (O?.patchNotesSent ?? g)
+                        : E;
             if (
-                !O &&
-                !T &&
-                !N &&
-                U?.publishState === n &&
-                U.surface === s &&
-                (0, i.v)(U.previewAppChannels, r) &&
-                (0, i.v)(U.newAppChannels ?? C, a) &&
-                (0, i.v)(U.previewDevicePermissions ?? _, E) &&
-                U.publishedRevision === p &&
-                U.publishedAt === P &&
-                U.publishing === R &&
-                U.patchNotesSent === A &&
-                U.newUiUnpublished === f &&
-                (U.safetyHold ?? !1) === g
+                !w &&
+                !A &&
+                !m &&
+                O?.publishState === l &&
+                O.surface === s &&
+                (0, i.v)(O.previewAppChannels, r) &&
+                (0, i.v)(O.newAppChannels ?? C, o) &&
+                (0, i.v)(O.previewDevicePermissions ?? v, h) &&
+                O.publishedRevision === f &&
+                O.publishedAt === _ &&
+                O.publishing === y &&
+                O.patchNotesSent === T &&
+                O.newUiUnpublished === P &&
+                (O.safetyHold ?? !1) === S &&
+                (0, u.t)(O.views ?? null, R)
             )
                 return !1;
-            u.set(l, {
-                publishState: n,
+            a.set(n, {
+                publishState: l,
                 surface: s,
                 previewAppChannels: r,
-                newAppChannels: a,
-                previewDevicePermissions: E,
-                publishedRevision: p,
-                publishedAt: P,
-                publishing: R,
-                patchNotesSent: A,
-                newUiUnpublished: f,
-                safetyHold: g,
+                newAppChannels: o,
+                previewDevicePermissions: h,
+                publishedRevision: f,
+                publishedAt: _,
+                publishing: y,
+                patchNotesSent: T,
+                newUiUnpublished: P,
+                safetyHold: S,
+                views: R,
             });
         },
         CONJURE_PROJECT_PUBLISH_START: function (e) {
             let { projectId: t } = e;
-            (a.add(t), c.delete(t));
+            (o.add(t), d.delete(t));
         },
         CONJURE_PROJECT_PUBLISH_SETTLE: function (e) {
             let { projectId: t } = e,
-                l = a.delete(t),
-                n = u.get(t)?.publishing !== !0 && d.delete(t);
-            return l || n;
+                n = o.delete(t),
+                l = a.get(t)?.publishing !== !0 && c.delete(t);
+            return n || l;
         },
         CONJURE_PROJECT_PUBLISH_FAILED: function (e) {
-            let { projectId: t, message: l } = e;
-            if (c.get(t) === l) return !1;
-            c.set(t, l);
+            let { projectId: t, message: n } = e;
+            if (d.get(t) === n) return !1;
+            d.set(t, n);
         },
         CONJURE_PROJECT_PUBLISH_APPROVAL: function (e) {
-            let { projectId: t, approvalUrl: l } = e;
-            return null == l ? o.delete(t) : o.get(t) !== l && void o.set(t, l);
+            let { projectId: t, approvalUrl: n } = e;
+            return null == n ? p.delete(t) : p.get(t) !== n && void p.set(t, n);
         },
         CONJURE_PROJECT_SAFETY_RECHECK: function (e) {
-            let { projectId: t, recheck: l } = e;
-            if (null == l) return E.delete(t);
-            E.set(t, l);
+            let { projectId: t, recheck: n } = e;
+            if (null == n) return h.delete(t);
+            h.set(t, n);
         },
         CONJURE_PROJECT_PUBLISH_PROGRESS: function (e) {
-            let { projectId: t, progress: l } = e;
-            if (d.get(t)?.stage === l.stage) return !1;
-            d.set(t, l);
+            let { projectId: t, progress: n } = e;
+            if (c.get(t)?.stage === n.stage) return !1;
+            c.set(t, n);
         },
         CONJURE_PROJECT_APP_CHANNEL_PENDING: function (e) {
-            let { projectId: t, pending: l } = e;
-            if (p.has(t) === l) return !1;
-            l ? p.add(t) : p.delete(t);
+            let { projectId: t, pending: n } = e;
+            if (f.has(t) === n) return !1;
+            n ? f.add(t) : f.delete(t);
         },
         CONJURE_PROJECT_PATCH_NOTES_SENT: function (e) {
-            let { projectId: t, sent: l } = e,
-                n = u.get(t);
-            if (null == n) return !1;
-            u.set(t, {
-                ...n,
+            let { projectId: t, sent: n } = e,
+                l = a.get(t);
+            if (null == l) return !1;
+            a.set(t, {
+                ...l,
                 patchNotesSent: [
-                    ...(n.patchNotesSent ?? h).filter((e) => e.publishedRevision !== l.publishedRevision),
-                    l,
+                    ...(l.patchNotesSent ?? g).filter((e) => e.publishedRevision !== n.publishedRevision),
+                    n,
                 ],
             });
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
-            (u.delete(t), a.delete(t), o.delete(t), d.delete(t), c.delete(t), E.delete(t), p.delete(t));
+            (a.delete(t), o.delete(t), p.delete(t), c.delete(t), d.delete(t), h.delete(t), f.delete(t));
         },
     });
-l.d(t, {}, { A: R });
+n.d(t, {}, { A: y });

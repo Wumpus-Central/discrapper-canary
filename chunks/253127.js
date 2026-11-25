@@ -704,7 +704,7 @@ if (null == e6 || "0.0.0" !== e6.app.getVersion()) {
     n.e(859864).then(n.t.bind(n, 122123, 19)));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 681377, Version Hash: f5263cc87facdb62406e378f76493c2b2c8bd524`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 681398, Version Hash: c0d0b6eded008964aad3e3b4e80000daf146c8ef`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     eg.A.initBasic(),
@@ -776,7 +776,7 @@ let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
         let n,
             i,
             r,
-            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "681377";
+            a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "681398";
         if (__OVERLAY__) return;
         isNaN((r = parseInt(a ?? "", 10))) || eF.Ay.setCrashInformation(eU.du.BuildNumber, r);
         let s = eV?.processUtils?.getLastCrash;
@@ -3291,8 +3291,8 @@ let rg = (0, i9.Fe)({
                 n.e(717934),
                 n.e(65694),
                 n.e(136515),
+                n.e(562086),
                 n.e(385540),
-                n.e(397605),
                 n.e(986044),
                 n.e(919008),
                 n.e(788064),
@@ -16071,7 +16071,7 @@ let py = "isHideDevBanner",
                     className: to()(pL.Wz, pL.mr),
                     children: [
                         (0, b.jsx)(pR, { className: pL.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "681377" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "681398" }),
                         (0, b.jsx)(r, {}),
                     ],
                 })
@@ -20499,7 +20499,7 @@ let Sd = (0, tj.Fe)({
                 n.e(717934),
                 n.e(65694),
                 n.e(136515),
-                n.e(397605),
+                n.e(562086),
                 n.e(986044),
                 n.e(919008),
                 n.e(788064),
@@ -45987,7 +45987,7 @@ let w9 = (0, tj.Fe)({
             n.e(88599),
             n.e(317225),
             n.e(538887),
-            n.e(830993),
+            n.e(53374),
             n.e(56021),
             n.e(147626),
             n.e(647177),

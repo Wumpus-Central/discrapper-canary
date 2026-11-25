@@ -103,14 +103,15 @@
                     this.socket.send(JSON.stringify({ type: "publish_options", nonce: e }));
                 }
                 sendPublish(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     if (null == this.socket || this.socket.readyState !== WebSocket.OPEN)
                         throw Error("WebSocket not open");
                     this.socket.send(
                         JSON.stringify({
                             type: "publish",
                             destination_id: e,
-                            ...(t ? { app_channels_private: !0 } : {}),
+                            ...(!0 === t.appChannelsPrivate ? { app_channels_private: !0 } : {}),
+                            ...(null != t.viewMounts ? { view_mounts: t.viewMounts } : {}),
                         }),
                     );
                 }

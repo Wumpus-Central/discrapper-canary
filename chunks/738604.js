@@ -194,7 +194,7 @@ function q(t) {
 }
 let F = new Set();
 async function V(t, n, e) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         { guildId: u, platform: a } = e;
     if (!0 === e.busy || F.has(t)) return;
     let r = O(t, u),

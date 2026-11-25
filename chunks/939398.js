@@ -8,90 +8,104 @@ var t = n(582128),
     c = n(25451),
     s = n(46653),
     f = n(373677),
-    m = n(238490),
-    p = n(754027),
-    h = n(165610);
-let _ = 221552 == n.j ? [] : null;
-function v(e, l, n) {
+    p = n(238490),
+    h = n(754027),
+    m = n(165610);
+let _ = 221552 == n.j ? [] : null,
+    v = 221552 == n.j ? [] : null,
+    g = [i.U.APP_CHANNEL];
+function k(e, l, n) {
     return l !== i.U.APP_CHANNEL || n.length < 2 ? null : null != e && n.includes(e) ? e : n[0];
 }
 n.d(
     l,
     {},
     {
-        h: v,
+        h: k,
         p: function (e) {
             let {
                     applicationId: l,
                     previewApplicationId: n,
                     declaredActivity: i,
-                    previewSupportedSurfaces: g,
-                    installScope: k,
-                    ownerAuthorizationRevoked: b,
-                    mainCardOnly: w = !1,
-                    supportsOverlay: y = !1,
-                    previewAppChannels: I = _,
-                    initialSelection: R,
-                    onSelectionChange: C,
+                    previewSupportedSurfaces: w,
+                    installScope: b,
+                    ownerAuthorizationRevoked: y,
+                    mainCardOnly: C = !1,
+                    supportsOverlay: E = !1,
+                    previewAppChannels: R = _,
+                    previewViews: I = v,
+                    initialSelection: P,
+                    onSelectionChange: A,
                 } = e,
-                [E, M] = t.useState(R?.mode ?? null),
-                [P, S] = t.useState(R?.frameSurface ?? null),
-                [x, A] = t.useState(R?.appChannel ?? null),
-                [O, T] = t.useState(l);
-            O !== l && (T(l), null != O && (M(null), S(null), A(null)));
-            let G = t.useRef(C);
+                [S, M] = t.useState(P?.mode ?? null),
+                [x, O] = t.useState(P?.frameSurface ?? null),
+                [T, j] = t.useState(P?.appChannel ?? null),
+                [G, B] = t.useState(P?.view ?? null),
+                [N, L] = t.useState(l);
+            N !== l && (L(l), null != N && (M(null), O(null), j(null), B(null)));
+            let Y = t.useRef(A);
             (t.useLayoutEffect(() => {
-                G.current = C;
+                Y.current = A;
             }),
                 t.useEffect(() => {
-                    G.current?.({ mode: E, frameSurface: P, appChannel: x });
-                }, [E, P, x]));
-            let j = null != n && n === l ? n : null,
-                B = (0, a.bG)([s.default], () => s.default.getId()),
-                { applicationWidgetConfig: Y } = (0, r.A)(B, j ?? void 0),
-                D = Y?.surfaces,
-                L = (0, m.yZ)({
-                    widgetTop: D?.[u.m.WIDGET_TOP] != null,
-                    widgetBottom: D?.[u.m.WIDGET_BOTTOM] != null,
-                    miniProfile: D?.[u.m.MINI_PROFILE] != null,
+                    Y.current?.({ mode: S, frameSurface: x, appChannel: T, view: G });
+                }, [S, x, T, G]));
+            let D = null != n && n === l ? n : null,
+                H = (0, a.bG)([s.default], () => s.default.getId()),
+                { applicationWidgetConfig: U } = (0, r.A)(H, D ?? void 0),
+                J = U?.surfaces,
+                W = (0, p.yZ)({
+                    widgetTop: J?.[u.m.WIDGET_TOP] != null,
+                    widgetBottom: J?.[u.m.WIDGET_BOTTOM] != null,
+                    miniProfile: J?.[u.m.MINI_PROFILE] != null,
                 }),
-                N = null != j && (w ? L.hasMainCard : L.hasAny),
-                { data: H } = (0, d.YY)(n ?? void 0),
-                J = null != n && H?.bot?.id != null,
-                { data: U, isLoading: W } = (0, d.YY)(l ?? void 0),
-                X = i || (0, c.X)(U),
-                F = null != l && W && null == U,
-                Q = (0, m.P5)(g, {
-                    legacy: { hasFrame: X, hasProfileWidget: N, hasBotDm: J },
-                    widgetResolvable: null != j,
-                    botDmResolvable: J,
+                X = null != D && (C ? W.hasMainCard : W.hasAny),
+                { data: F } = (0, d.YY)(n ?? void 0),
+                Q = null != n && F?.bot?.id != null,
+                { data: Z, isLoading: $ } = (0, d.YY)(l ?? void 0),
+                q = i || (0, c.X)(Z),
+                z = null != l && $ && null == Z,
+                K = (0, p.P5)(w, {
+                    legacy: { hasFrame: q, hasProfileWidget: X, hasBotDm: Q },
+                    widgetResolvable: null != D,
+                    botDmResolvable: Q,
                 }),
-                Z = (0, m.Xm)({ installScope: k, ...Q, hasOverlay: y, ownerAuthorizationRevoked: b }),
-                $ = t.useMemo(() => (0, f.hR)(g), [g]),
-                q = (0, f.PH)(P, $),
-                z = v(x, q, I),
-                K = t.useMemo(() => (null == z ? void 0 : { customId: z }), [z]);
+                V = (0, p.Xm)({ installScope: b, ...K, hasOverlay: E, ownerAuthorizationRevoked: y }),
+                ee = I.length > 0,
+                el = t.useMemo(() => (ee ? g : (0, f.hR)(w)), [ee, w]),
+                en = (0, f.PH)(x, el),
+                et = ee
+                    ? (I.find((e) => {
+                          let { id: l } = e;
+                          return l === G;
+                      }) ?? I[0])
+                    : null,
+                eu = ee ? null : k(T, en, R),
+                ei = et?.id ?? eu,
+                ea = t.useMemo(() => (null == ei ? void 0 : { customId: ei }), [ei]);
             return (
                 t.useEffect(() => {
                     if (null != l)
-                        for (let e of (0, p.Mm)(l)) {
-                            let l = e.surface.type !== (0, f.BR)(q),
-                                n = (((0, h.x1)(e) ? e.data.launch.customId : e.launch?.customId) ?? null) !== z;
+                        for (let e of (0, h.Mm)(l)) {
+                            let l = e.surface.type !== (0, f.BR)(en),
+                                n = (((0, m.x1)(e) ? e.data.launch.customId : e.launch?.customId) ?? null) !== ei;
                             (l || n) && (0, o.r)(e.id);
                         }
-                }, [l, q, z]),
+                }, [l, en, ei]),
                 {
-                    availability: Z,
-                    isResolving: F,
-                    activeMode: F ? null : (0, m.Qs)(E, Z),
+                    availability: V,
+                    isResolving: z,
+                    activeMode: z ? null : (0, p.Qs)(S, V),
                     setMode: M,
-                    frameSurface: q,
-                    frameSurfaceOptions: $,
-                    setFrameSurface: S,
-                    appChannel: z,
-                    setAppChannel: A,
-                    frameLaunchParams: K,
-                    widgetApplicationId: j,
+                    frameSurface: en,
+                    frameSurfaceOptions: el,
+                    setFrameSurface: O,
+                    appChannel: eu,
+                    setAppChannel: j,
+                    view: et,
+                    setView: B,
+                    frameLaunchParams: ea,
+                    widgetApplicationId: D,
                 }
             );
         },
