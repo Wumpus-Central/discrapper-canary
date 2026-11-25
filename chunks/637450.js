@@ -3740,10 +3740,11 @@ class tJ extends y.G {
                 T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", tP, "PLAN_STATUS_"],
             },
             { no: 2, name: "ramp_steps", kind: "message", repeat: 1, T: () => t3 },
+            { no: 3, name: "id", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
-        let t = { status: 0, rampSteps: [] };
+        let t = { status: 0, rampSteps: [], id: "0" };
         return (
             globalThis.Object.defineProperty(t, L.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, R.x)(this, t, e),
@@ -3762,6 +3763,9 @@ class tJ extends y.G {
                 case 2:
                     r.rampSteps.push(t3.internalBinaryRead(e, e.uint32(), n));
                     break;
+                case 3:
+                    r.id = e.fixed64().toString();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -3776,6 +3780,7 @@ class tJ extends y.G {
         0 !== e.status && t.tag(1, O.O0.Varint).int32(e.status);
         for (let i = 0; i < e.rampSteps.length; i++)
             t3.internalBinaryWrite(e.rampSteps[i], t.tag(2, O.O0.LengthDelimited).fork(), n).join();
+        "0" !== e.id && t.tag(3, O.O0.Bit64).fixed64(e.id);
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? O.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -3791,10 +3796,11 @@ class t0 extends y.G {
                 T: () => ["discord_protos.discord_experimentation.v1.LifecyclePlan.PlanStatus", tP, "PLAN_STATUS_"],
             },
             { no: 2, name: "ramp_steps", kind: "message", repeat: 1, T: () => t3 },
+            { no: 3, name: "id", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
-        let t = { status: 0, rampSteps: [] };
+        let t = { status: 0, rampSteps: [], id: "0" };
         return (
             globalThis.Object.defineProperty(t, L.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, R.x)(this, t, e),
@@ -3813,6 +3819,9 @@ class t0 extends y.G {
                 case 2:
                     r.rampSteps.push(t3.internalBinaryRead(e, e.uint32(), n));
                     break;
+                case 3:
+                    r.id = e.fixed64().toString();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -3827,6 +3836,7 @@ class t0 extends y.G {
         0 !== e.status && t.tag(1, O.O0.Varint).int32(e.status);
         for (let i = 0; i < e.rampSteps.length; i++)
             t3.internalBinaryWrite(e.rampSteps[i], t.tag(2, O.O0.LengthDelimited).fork(), n).join();
+        "0" !== e.id && t.tag(3, O.O0.Bit64).fixed64(e.id);
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? O.f$.onWrite : i)(this.typeName, e, t), t);
     }
