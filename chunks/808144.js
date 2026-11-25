@@ -4,8 +4,8 @@ var l = n(477900),
     a = n(284009),
     o = n.n(a),
     c = n(650809),
-    d = n(855986),
-    s = n(873298),
+    s = n(855986),
+    d = n(873298),
     r = n(22231),
     u = n(192308),
     g = n(165862),
@@ -24,19 +24,19 @@ var l = n(477900),
     E = n(293260),
     v = n(5180),
     P = n(425912),
-    S = n(173936),
+    S = n(383860),
     C = n(988912),
-    L = n(839516),
-    U = n(826603),
+    U = n(839516),
+    L = n(826603),
     T = n(899360),
     _ = n(989683),
     w = n(752222),
     M = n(792996),
-    k = n(435558),
-    N = n.n(k),
-    H = n(534890),
-    O = n(970278),
-    B = n(406704),
+    N = n(435558),
+    k = n.n(N),
+    B = n(534890),
+    H = n(970278),
+    O = n(406704),
     F = n(323384),
     X = n(837057),
     W = n(310419),
@@ -63,8 +63,8 @@ var z = n(664967),
     ea = n(534400),
     eo = n(857071),
     ec = n(36942),
-    ed = n(875317),
-    es = n(383272),
+    es = n(875317),
+    ed = n(383272),
     er = n(594061),
     eu = n(617617),
     eg = n(260509),
@@ -77,20 +77,20 @@ var z = n(664967),
     ex = n(242868);
 let eD = t.memo(function (e) {
     var i, a;
-    let k,
+    let N,
         eD,
         { guild: ef, onClose: ej, onSelect: em } = e,
-        eG = (0, d.bG)([ep.default], () => ep.default.getCurrentUser());
+        eG = (0, s.bG)([ep.default], () => ep.default.getCurrentUser());
     (o()(null != eG, "GuildHeaderPopout: user cannot be undefined"),
         t.useEffect(() => {
             eb.default.track(eh.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: ef.id });
         }));
-    let eE = (0, d.bG)([eA.Ay], () => eA.Ay.isGuildCollapsed(ef.id), [ef.id]),
+    let eE = (0, s.bG)([eA.Ay], () => eA.Ay.isGuildCollapsed(ef.id), [ef.id]),
         {
             canAccessSettings: ev,
             canManageChannels: eP,
             showGuildAnalytics: eS,
-        } = (0, d.cf)(
+        } = (0, s.cf)(
             [ey.A],
             () => ({
                 canAccessSettings: ey.A.canAccessGuildSettings(ef),
@@ -101,25 +101,25 @@ let eD = t.memo(function (e) {
             [ef],
         ),
         eC = (0, $.ic)(ef),
-        eL = (0, eg.bM)(ef, eG),
-        eU = (0, d.bG)([eo.A], () => eo.A.isLurking(ef.id), [ef.id]),
-        eT = (0, d.bG)([eI.Ay], () => eI.Ay.isCurrentUserGuest(ef.id)),
+        eU = (0, eg.bM)(ef, eG),
+        eL = (0, s.bG)([eo.A], () => eo.A.isLurking(ef.id), [ef.id]),
+        eT = (0, s.bG)([eI.Ay], () => eI.Ay.isCurrentUserGuest(ef.id)),
         e_ = (0, ei.A)(ef.id, !0),
         ew = (0, E.Ay)(ef),
         eM = (0, q.A)({ source: eh.PE1.GUILD_HEADER, guild: ef }),
-        ek = (function (e) {
+        eN = (function (e) {
             let i = (0, _.Ay)(e, "guild_header_popout"),
-                { data: t } = (0, U.c)(i ? e.id : null),
-                a = (0, d.bG)([C.A], () => C.A.getDisplayNounByGuildId(e.id), [e.id]);
+                { data: t } = (0, L.c)(i ? e.id : null),
+                a = (0, s.bG)([C.A], () => C.A.getDisplayNounByGuildId(e.id), [e.id]);
             if (!i) return null;
-            let o = null != t && (0, L.A)(t);
+            let o = null != t && (0, U.A)(t);
             return (0, l.jsx)(I.Dr, {
                 id: "invite-to-linked-game-organization",
                 label: M.intl.formatToPlainString(w.default.EnTIIr, { displayNoun: a ?? "other" }),
                 subtext: o ? (0, T.zA)(t, a) : void 0,
                 disabled: o,
-                icon: S.LinkIcon,
-                leadingAccessory: { type: "icon", icon: S.LinkIcon },
+                icon: S.ExperimentalBannerPlusIcon,
+                leadingAccessory: { type: "icon", icon: S.ExperimentalBannerPlusIcon },
                 action: () => {
                     var i;
                     return (
@@ -140,25 +140,25 @@ let eD = t.memo(function (e) {
                 },
             });
         })(ef),
-        eN = (0, J.A)({
+        ek = (0, J.A)({
             guildId: ef.id,
             userId: eG.id,
             analyticsLocation: { page: eh.liQ.GUILD_CHANNEL, section: eh.JJy.GUILD_DROPDOWN_MENU },
             icon: r.PencilIcon,
         }),
-        eH = ef.features.has(eh.GuildFeatures.HUB),
-        eO = (0, v.ai)(ef.id),
-        eB = ef.id === eh.gNP,
+        eB = ef.features.has(eh.GuildFeatures.HUB),
+        eH = (0, v.ai)(ef.id),
+        eO = ef.id === eh.gNP,
         eF = (0, ec.A)(ef.id, !0),
         eX =
-            ((k = (0, B.H_)(ef)),
-            (eD = (0, d.bG)([O.A], () => !N().isEmpty(O.A.getThreadsForGuild(ef.id)))),
-            k && eD
+            ((N = (0, O.H_)(ef)),
+            (eD = (0, s.bG)([H.A], () => !k().isEmpty(H.A.getThreadsForGuild(ef.id)))),
+            N && eD
                 ? (0, l.jsx)(I.Dr, {
                       id: "active-threads",
                       label: M.intl.string(M.t.TM6err),
-                      icon: H.ChatIcon,
-                      leadingAccessory: { type: "icon", icon: H.ChatIcon },
+                      icon: B.ChatIcon,
+                      leadingAccessory: { type: "icon", icon: B.ChatIcon },
                       action: function () {
                           (0, u.mM)(async () => {
                               let { default: e } = await Promise.all([
@@ -202,7 +202,7 @@ let eD = t.memo(function (e) {
             },
         }),
         eR = (0, z.A)(ef, !0),
-        eJ = (0, K.E)(ef, G.A.GUILD_HEADER, { isEligible: !eO && !eB, showIcon: !0 }),
+        eJ = (0, K.E)(ef, G.A.GUILD_HEADER, { isEligible: !eH && !eO, showIcon: !0 }),
         eY = (function (e) {
             let { guildFriendsEnabled: i } = V.useConfig({ location: "useFriendsItem" });
             return i
@@ -223,10 +223,10 @@ let eD = t.memo(function (e) {
                 : null;
         })(ef),
         eQ = (0, P.A)(),
-        eV = ((i = ef.id), (a = "GuildHeaderPopout"), (0, es.DD)(i ?? void 0, a), null != (0, ed.Kb)(i, a)),
-        ez = (0, d.bG)([eu.A], () => eu.A.resolveGuildThemeSourcePreference(ef.id), [ef.id]),
+        eV = ((i = ef.id), (a = "GuildHeaderPopout"), (0, ed.DD)(i ?? void 0, a), null != (0, es.Kb)(i, a)),
+        ez = (0, s.bG)([eu.A], () => eu.A.resolveGuildThemeSourcePreference(ef.id), [ef.id]),
         eK = t.useCallback(() => {
-            let e = ez === s.tI.GUILD ? s.tI.PERSONAL : s.tI.GUILD;
+            let e = ez === d.tI.GUILD ? d.tI.PERSONAL : d.tI.GUILD;
             (0, er.XW)(ef.id, e);
         }, [ef.id, ez]),
         eq = (0, Y.A)(ef, { showIcons: !0 }),
@@ -237,7 +237,7 @@ let eD = t.memo(function (e) {
                 return (i) => (0, l.jsx)(e, { ...i, guild: ef });
             });
         }, [ef]);
-    return eU || eT
+    return eL || eT
         ? (0, l.jsxs)(g.W, {
               "data-menu-migrated-auto": !0,
               onSelect: em,
@@ -259,7 +259,7 @@ let eD = t.memo(function (e) {
                   (0, l.jsx)(I.rX, { children: eq }),
               ],
           })
-        : eO
+        : eH
           ? (0, l.jsx)(g.W, {
                 "data-menu-migrated-auto": !0,
                 onSelect: em,
@@ -269,7 +269,7 @@ let eD = t.memo(function (e) {
                 "aria-label": M.intl.string(M.t.HpQykc),
                 children: eQ,
             })
-          : eH
+          : eB
             ? (0, l.jsxs)(g.W, {
                   "data-menu-migrated": !0,
                   onSelect: em,
@@ -312,10 +312,10 @@ let eD = t.memo(function (e) {
                                           return (i) => (0, l.jsx)(e, { ...i, guild: ef });
                                       }),
                               }),
-                              eN,
+                              ek,
                           ],
                       }),
-                      eL
+                      eU
                           ? null
                           : (0, l.jsxs)(I.rX, {
                                 children: [
@@ -332,7 +332,7 @@ let eD = t.memo(function (e) {
                             }),
                   ],
               })
-            : eB
+            : eO
               ? null
               : (0, l.jsxs)(g.W, {
                     "data-menu-needs-review": !0,
@@ -361,7 +361,7 @@ let eD = t.memo(function (e) {
                                           id: "use-server-theme",
                                           label: M.intl.string(M.t.CFzDOG),
                                           leadingAccessory: { type: "icon", icon: c.PaintPaletteIcon },
-                                          checked: ez === s.tI.GUILD,
+                                          checked: ez === d.tI.GUILD,
                                           action: eK,
                                       })
                                     : null,
@@ -407,7 +407,7 @@ let eD = t.memo(function (e) {
                         (0, l.jsxs)(I.rX, {
                             children: [
                                 eM,
-                                ek,
+                                eN,
                                 ev
                                     ? (0, l.jsx)(I.Dr, {
                                           id: "settings",
@@ -562,7 +562,7 @@ let eD = t.memo(function (e) {
                         }),
                         (0, l.jsxs)(I.rX, {
                             children: [
-                                eN,
+                                ek,
                                 (0, l.jsx)(I.sL, {
                                     id: "hide-muted-channels",
                                     label: M.intl.string(M.t.UwOLJO),
@@ -586,7 +586,7 @@ let eD = t.memo(function (e) {
                                       })
                                     : null,
                                 eJ,
-                                eL
+                                eU
                                     ? null
                                     : (0, l.jsx)(I.Dr, {
                                           id: "leave",
