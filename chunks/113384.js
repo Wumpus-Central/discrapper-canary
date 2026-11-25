@@ -7,8 +7,18 @@ let a = [],
 function d() {
     ((a = []), (s = !1), (l = !1));
 }
-class c extends i.Ay.Store {
+class c extends i.Ay.PersistedStore {
     static displayName = "InterestPickerSessionStore";
+    static persistKey = "InterestPickerSessionStore";
+    initialize(e) {
+        ((a = e?.ownerId != null ? (e.picks ?? []) : []),
+            (s = e?.ownerId != null && (e.pickerSeen ?? !1)),
+            (o = e?.ownerId ?? null),
+            (l = !1));
+    }
+    getState() {
+        return { picks: a, pickerSeen: s, ownerId: o };
+    }
     getPicks() {
         return [...a];
     }
