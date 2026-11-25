@@ -14,22 +14,22 @@ var n = l(477900),
     x = l(834730),
     f = l(682163),
     p = l(792996),
-    b = l(393612);
-function j(e) {
+    j = l(393612);
+function b(e) {
     let { linkedGuild: t } = e,
         { id: l, name: i, icon: s, presenceCount: o, memberCount: c } = t,
         d = r.useMemo(() => ({ id: l, name: i, icon: s, features: [] }), [l, i, s]);
     return (0, n.jsx)("div", {
-        className: b.Nr,
+        className: j.Nr,
         children: (0, n.jsxs)(a.B, {
             direction: "horizontal",
             align: "center",
             gap: 16,
             children: [
-                (0, n.jsx)(f.Ay, { guild: d, size: f.Ay.Sizes.LARGER, className: b.Kk, "aria-hidden": !0 }),
+                (0, n.jsx)(f.Ay, { guild: d, size: f.Ay.Sizes.LARGER, className: j.Kk, "aria-hidden": !0 }),
                 (0, n.jsxs)(a.B, {
                     gap: 4,
-                    className: b.pq,
+                    className: j.pq,
                     children: [
                         (0, n.jsx)(x.E, {
                             variant: "body-lg/semibold",
@@ -50,7 +50,7 @@ function j(e) {
                                           gap: 6,
                                           fullWidth: !1,
                                           children: [
-                                              (0, n.jsx)("span", { className: b.RS }),
+                                              (0, n.jsx)("span", { className: j.RS }),
                                               (0, n.jsx)(x.E, {
                                                   variant: "body-md/medium",
                                                   color: "text-muted",
@@ -68,7 +68,7 @@ function j(e) {
                                           gap: 6,
                                           fullWidth: !1,
                                           children: [
-                                              (0, n.jsx)("span", { className: b.Ps }),
+                                              (0, n.jsx)("span", { className: j.Ps }),
                                               (0, n.jsx)(x.E, {
                                                   variant: "body-md/medium",
                                                   color: "text-muted",
@@ -123,7 +123,7 @@ function M(e) {
             t
         );
     }
-    function b() {
+    function j() {
         (window.clearTimeout(c.current), (o.current = null), g("idle"));
     }
     return (
@@ -142,7 +142,7 @@ function M(e) {
                         tabIndex: 0,
                         onScroll: function () {
                             let e = l.current?.getScrollerNode();
-                            null != e && (u(f(e)), null != o.current && 1 > Math.abs(e.scrollLeft - o.current) && b());
+                            null != e && (u(f(e)), null != o.current && 1 > Math.abs(e.scrollLeft - o.current) && j());
                         },
                         onPointerDown: function (e) {
                             let t = l.current?.getScrollerNode();
@@ -156,7 +156,7 @@ function M(e) {
                                     startScrollLeft: t.scrollLeft,
                                     startIndex: f(t),
                                 }),
-                                b(),
+                                j(),
                                 g("dragging"));
                         },
                         onPointerMove: function (e) {
@@ -181,7 +181,7 @@ function M(e) {
                                 ? g("idle")
                                 : ((0, v.flushSync)(() => g("settling")),
                                   (o.current = a),
-                                  (c.current = window.setTimeout(b, 1e3)),
+                                  (c.current = window.setTimeout(j, 1e3)),
                                   n.scrollTo({ left: a }));
                         },
                         onDragStart: (e) => e.preventDefault(),
@@ -257,7 +257,7 @@ function A(e) {
                             displayNoun: t.displayNoun ?? "other",
                         }),
                     }),
-                    (0, n.jsx)(j, { linkedGuild: t.linkedGuild }),
+                    (0, n.jsx)(b, { linkedGuild: t.linkedGuild }),
                 ],
             }),
             (0, n.jsxs)(a.B, {
@@ -363,8 +363,8 @@ function O(e) {
             }),
             d
                 ? (0, n.jsx)(x.E, {
-                      variant: "body-sm/medium",
-                      color: "text-subtle",
+                      variant: "body-sm/normal",
+                      color: "text-muted",
                       children: p.intl.formatToPlainString(k.default.ybJIQJ, { displayNoun: s ?? "other" }),
                   })
                 : null,
@@ -440,9 +440,9 @@ let H = ["VIEW", "ACCEPT"];
 function J(e) {
     let { code: t, ...h } = e,
         x = (0, u.A)(t),
-        [f, b] = r.useState("VIEW"),
-        j = x?.characterMode === g.Wy.MULTI,
-        { data: N } = (0, d.P)(j ? t : null),
+        [f, j] = r.useState("VIEW"),
+        b = x?.characterMode === g.Wy.MULTI,
+        { data: N } = (0, d.P)(b ? t : null),
         [y, v] = r.useState(null),
         S = N?.find((e) => e.id === y) ?? null,
         [T, I] = r.useState(!1),
@@ -474,12 +474,12 @@ function J(e) {
         z = p.intl.string(k.default.BaZ6nt),
         M = (0, n.jsx)(Y, {
             invite: x,
-            isMultiCharacter: j,
+            isMultiCharacter: b,
             characters: N,
             selectedCharacterId: y,
             onSelectCharacter: v,
         });
-    if (!j)
+    if (!b)
         return (0, n.jsx)(i.a, {
             ...h,
             title: E,
@@ -522,5 +522,5 @@ function J(e) {
             backButtonProps: { text: p.intl.string(p.t["13/7kX"]), disabled: T },
         },
     ];
-    return (0, n.jsx)(o.t, { ...h, dismissable: !T, steps: w, currentStepKey: f, numberedSteps: H, onStepChange: b });
+    return (0, n.jsx)(o.t, { ...h, dismissable: !T, steps: w, currentStepKey: f, numberedSteps: H, onStepChange: j });
 }
