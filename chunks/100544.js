@@ -63,6 +63,7 @@ var i,
         (r.AGE_VERIFICATION_AGEKEY_RETURN = "agekey-return"),
         (r.CONJURE = "conjure"),
         (r.CONJURE_PROJECT_LINK = "conjure-project-link"),
+        (r.CHECKPOINT = "checkpoint"),
         r),
     o =
         (((a = {}).NONE = "none"),
