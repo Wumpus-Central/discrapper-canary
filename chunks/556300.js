@@ -28,6 +28,7 @@ function m(e) {
             onClick: x,
             onContextMenu: j ? g : void 0,
             onMouseDown: f ? o.q : void 0,
+            onClickCapture: f ? (e) => (0, o.A)(e, p) : void 0,
             onAuxClick: f ? (e) => (0, o.A)(e, p) : void 0,
             className: "channelMention",
             children: [

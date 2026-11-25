@@ -19,8 +19,8 @@ var l = t(477900),
     I = t(441136),
     y = t(957565),
     A = t(165648),
-    k = t(969490);
-function C(e) {
+    C = t(969490);
+function k(e) {
     let { text: n } = e,
         [t, r] = (0, g.A)(!1, 2e3);
     return (0, l.jsx)(p.D, {
@@ -157,8 +157,8 @@ var el = t(192308),
     eI = t(994500),
     ey = t(287809),
     eA = t(147036),
-    ek = t(403362),
-    eC = t(240248);
+    eC = t(403362),
+    ek = t(240248);
 let eb = { home: "home", browse: "browse", customize: "customize", guide: "guide", linked_roles: "linked-roles" };
 t(73510);
 var ew = t(792996);
@@ -180,11 +180,11 @@ function eS(e) {
                 let e = D.A.getChannel(t),
                     n = e?.isForumPost() ? D.A.getChannel(e.parent_id) : void 0;
                 return {
-                    name: null != e ? (0, eC.EJ)((0, er.m1)(e, ey.default, eI.A), 32) : void 0,
+                    name: null != e ? (0, ek.EJ)((0, er.m1)(e, ey.default, eI.A), 32) : void 0,
                     iconType: (0, eA.QG)(e),
                     isForumPost: e?.isForumPost(),
                     hasAccess: null == e || (0, Q.nc)(e),
-                    parentName: null != n ? (0, eC.EJ)((0, er.m1)(n, ey.default, eI.A), 32) : void 0,
+                    parentName: null != n ? (0, ek.EJ)((0, er.m1)(n, ey.default, eI.A), 32) : void 0,
                     parentIconType: null != n ? (0, eA.QG)(n) : void 0,
                 };
             },
@@ -194,27 +194,31 @@ function eS(e) {
         v = x?.noStyleAndInteraction !== !0,
         g = (0, em.A)({ channelId: t, messageId: i }),
         j = v && null == i;
+    function I(e) {
+        let n = D.A.getChannel(t);
+        null != n && (0, ev.A)(e, n);
+    }
     if (null == c) return;
-    let I = r === x?.guildId || null == r,
-        y = (0, l.jsx)(ec.A, {
+    let y = r === x?.guildId || null == r,
+        A = (0, l.jsx)(ec.A, {
             iconType: c,
             children: o ?? (0, l.jsx)("em", { children: ew.intl.string(ew.t.J90oLW) }),
         }),
-        A = (0, l.jsx)(ec.A, { iconType: h ? "post" : "message" });
+        C = (0, l.jsx)(ec.A, { iconType: h ? "post" : "message" });
     if (f || u.isSubscriptionGated)
-        if (I || null == s || null == o)
+        if (y || null == s || null == o)
             if (null != i) {
                 let e = h && null != m && null != p;
                 n = (0, l.jsxs)(l.Fragment, {
-                    children: [e ? (0, l.jsx)(ec.A, { iconType: p, children: m }) : y, (0, l.jsx)(ef.A, {}), e ? y : A],
+                    children: [e ? (0, l.jsx)(ec.A, { iconType: p, children: m }) : A, (0, l.jsx)(ef.A, {}), e ? A : C],
                 });
-            } else n = y;
+            } else n = A;
         else
             n = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(eh.A, { guild: s, children: (0, eC.EJ)(s.name, 32) }),
+                    (0, l.jsx)(eh.A, { guild: s, children: (0, ek.EJ)(s.name, 32) }),
                     (0, l.jsx)(ef.A, {}),
-                    null == i || h ? y : A,
+                    null == i || h ? A : C,
                 ],
             });
     else n = (0, l.jsx)(ec.A, { iconType: "locked", children: ew.intl.string(ew.t["/YzI63"]) });
@@ -227,12 +231,8 @@ function eS(e) {
             : void 0,
         onContextMenu: v ? g : void 0,
         onMouseDown: j ? ev.q : void 0,
-        onAuxClick: j
-            ? function (e) {
-                  let n = D.A.getChannel(t);
-                  null != n && (0, ev.A)(e, n);
-              }
-            : void 0,
+        onClickCapture: j ? I : void 0,
+        onAuxClick: j ? I : void 0,
         className: "channelMention",
         children: n,
     });
@@ -529,8 +529,8 @@ let eV = {
             children: (0, l.jsxs)("div", {
                 className: A.Hy,
                 children: [
-                    y.p5 ? (0, l.jsx)("div", { className: A.lB, children: (0, l.jsx)(C, { text: t }) }) : null,
-                    (0, l.jsx)(I.E, { code: t, lang: n, className: m()(k.kw, "hljs") }),
+                    y.p5 ? (0, l.jsx)("div", { className: A.lB, children: (0, l.jsx)(k, { text: t }) }) : null,
+                    (0, l.jsx)(I.E, { code: t, lang: n, className: m()(C.kw, "hljs") }),
                 ],
             }),
         });
@@ -581,7 +581,7 @@ let eV = {
                     itemId: "linked_roles" === t.type && null != t.value ? String(t.value) : void 0,
                 });
         }
-        (0, ek.xb)(n);
+        (0, eC.xb)(n);
     },
     heading: function (e) {
         let { level: n, children: t } = e,

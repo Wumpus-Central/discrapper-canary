@@ -1487,6 +1487,7 @@ let n8 = a.memo(function (e) {
                             innerRef: b,
                             className: n9.nf,
                             onClick: C,
+                            onClickCapture: x,
                             onMouseDown: nK.q,
                             onAuxClick: x,
                             "aria-label": j,

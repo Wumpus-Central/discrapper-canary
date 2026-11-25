@@ -16,14 +16,14 @@ var N = l(25639),
     b = l(47167),
     _ = l(970812),
     D = l(713654),
-    T = l(501803),
-    p = l(922301),
+    p = l(501803),
+    T = l(922301),
     g = l(16371),
     x = l(598104),
-    M = l(95035),
-    U = l(162199),
-    v = l(897898),
-    C = l(71393),
+    C = l(95035),
+    M = l(162199),
+    U = l(897898),
+    v = l(71393),
     I = l(290863),
     j = l(741961),
     y = l(287809),
@@ -33,16 +33,16 @@ var N = l(25639),
     S = l(652215),
     O = l(790782),
     V = l(964306),
-    P = l(672812),
-    k = l(736541);
+    k = l(672812),
+    P = l(736541);
 let w = "body-md/medium",
     H = {
-        SELECTED: P.J1,
-        CONNECTED: P.d4,
-        UNREAD_IMPORTANT: P.V2,
-        UNREAD_LESS_IMPORTANT: P.modeUnreadLessImportant,
-        MUTED: P.F4,
-        LOCKED: P.yg,
+        SELECTED: k.J1,
+        CONNECTED: k.d4,
+        UNREAD_IMPORTANT: k.V2,
+        UNREAD_LESS_IMPORTANT: k.modeUnreadLessImportant,
+        MUTED: k.F4,
+        LOCKED: k.yg,
     };
 function K(e) {
     (e.preventDefault(), e.stopPropagation());
@@ -90,13 +90,13 @@ let Z = i.memo(function (e) {
             hasUsersInVoiceChannel: c,
             tooltipText: o,
         } = e,
-        d = (0, u.bG)([C.A], () => C.A.getGuild(i.guild_id), [i.guild_id]),
+        d = (0, u.bG)([v.A], () => v.A.getGuild(i.guild_id), [i.guild_id]),
         { enableWaveformIcon: E } = (0, m.b)(i.guild_id, "ChannelItemIcon"),
         f = (0, u.bG)([N.A], () => N.A.getAnimationStyle(i.id), [i.id]),
         b = i.type === S.rbe.GUILD_VOICE,
-        T = null;
+        p = null;
     if (E && b && !t && c)
-        T = (0, s.jsx)(_.A, { color: "currentColor", className: a()(P.Kk, n), animationStyle: f, locked: (0, h.A)(i) });
+        p = (0, s.jsx)(_.A, { color: "currentColor", className: a()(k.Kk, n), animationStyle: f, locked: (0, h.A)(i) });
     else {
         let e = (function (e, n, l) {
             switch (e.type) {
@@ -115,26 +115,26 @@ let Z = i.memo(function (e) {
             }
         })(i, d, { locked: t, hasActiveThreads: r });
         if (null == e) return null;
-        T = (0, s.jsx)(e, { color: "currentColor", className: a()(P.Kk, n) });
+        p = (0, s.jsx)(e, { color: "currentColor", className: a()(k.Kk, n) });
     }
-    let p = (0, D.Bq)(i, d, t, r),
-        g = `${p} icon`;
+    let T = (0, D.Bq)(i, d, t, r),
+        g = `${T} icon`;
     return (0, s.jsx)(A.m, {
-        text: o ?? p,
+        text: o ?? T,
         delay: 500,
-        children: (0, s.jsx)("div", { role: "img", "aria-label": g, className: a()(P.zc, l), children: T }),
+        children: (0, s.jsx)("div", { role: "img", "aria-label": g, className: a()(k.zc, l), children: p }),
     });
 });
 function q(e) {
     let { channel: n, name: l, textVariant: t } = e,
         a = n.isPrivate() && 1 === (n.rawRecipients ?? []).length,
         r = n.rawRecipients?.[0]?.display_name_styles,
-        u = i.useMemo(() => (a ? (0, T.mT)(r) : null), [a, r]);
+        u = i.useMemo(() => (a ? (0, p.mT)(r) : null), [a, r]);
     return null != u
         ? (0, s.jsx)(g.A, {
               userName: l,
               displayNameStyles: u,
-              effectDisplayType: p.G.PLAIN,
+              effectDisplayType: T.G.PLAIN,
               boldFontOpacity: 0.9,
               textVariant: t,
           })
@@ -157,11 +157,11 @@ l.d(
                     onClick: h,
                     onMouseDown: _,
                     onMouseUp: D,
-                    onContextMenu: T,
-                    connectDragPreview: p,
+                    onContextMenu: p,
+                    connectDragPreview: T,
                     className: g,
                     iconClassName: x,
-                    iconTooltipText: C,
+                    iconTooltipText: v,
                     subtitle: I,
                     subtitleColor: j,
                     channel: { type: y },
@@ -185,24 +185,25 @@ l.d(
                 { role: ea, ...er } = (0, r.rm)(n.id),
                 eu = i.useRef(null),
                 ec = i.useRef(null),
-                eo = (0, U.A)(n);
+                eo = (0, M.A)(n);
             null != eo && G.A.getConfig({ guildId: eo, location: "channel_item" });
             let ed = S.BVt.CHANNEL(eo, n.id),
                 eA = (0, b.Ay)(n),
                 eE = n.isGuildVocal(),
                 ef = null != h || null != D || null != _ || Y,
                 eN = (0, s.jsx)("div", {
-                    className: a()({ [P.ow]: Q }),
+                    className: a()({ [k.ow]: Q }),
                     ref: ec,
-                    children: (0, s.jsxs)(M.A, {
+                    children: (0, s.jsxs)(C.A, {
                         role: eE && !d ? "button" : "link",
                         href: eE ? void 0 : ed,
                         target: "_blank",
                         ref: eu,
-                        className: P.nf,
+                        className: k.nf,
                         onClick: () => h?.(n),
-                        onMouseDown: eE ? v.q : void 0,
-                        onAuxClick: (e) => (0, v.A)(e, n),
+                        onMouseDown: eE ? U.q : void 0,
+                        onClickCapture: (e) => (0, U.A)(e, n),
+                        onAuxClick: (e) => (0, U.A)(e, n),
                         transitionExtras: el,
                         ...er,
                         "aria-label": z,
@@ -210,11 +211,11 @@ l.d(
                         focusProps: { enabled: !1 },
                         children: [
                             (0, s.jsxs)("div", {
-                                className: P.Y5,
+                                className: k.Y5,
                                 children: [
                                     (0, s.jsx)(Z, {
                                         className: x,
-                                        tooltipText: C,
+                                        tooltipText: v,
                                         channel: n,
                                         guild: J,
                                         hasUsersInVoiceChannel: et,
@@ -222,7 +223,7 @@ l.d(
                                         locked: N,
                                     }),
                                     (0, s.jsx)(c.A, {
-                                        className: a()(P.UU, k[w], { [P.NW]: ee }),
+                                        className: a()(k.UU, P[w], { [k.NW]: ee }),
                                         shouldShow: !en,
                                         "aria-hidden": !0,
                                         children: (0, s.jsx)(q, {
@@ -232,17 +233,17 @@ l.d(
                                         }),
                                     }),
                                     i.Children.count(B) > 0
-                                        ? (0, s.jsx)("div", { onClick: K, onKeyPress: K, className: P.Y_, children: B })
+                                        ? (0, s.jsx)("div", { onClick: K, onKeyPress: K, className: k.Y_, children: B })
                                         : null,
                                 ],
                             }),
                             null != I
                                 ? (0, s.jsx)("div", {
-                                      className: P.MA,
+                                      className: k.MA,
                                       children: (0, s.jsx)(E.E, {
                                           color: j ?? "text-muted",
                                           variant: "body-xs/medium",
-                                          className: P.VA,
+                                          className: k.VA,
                                           children: I,
                                       }),
                                   })
@@ -258,7 +259,7 @@ l.d(
                     ref: es,
                     className: a()(
                         g,
-                        ef ? P.iE : P.IA,
+                        ef ? k.iE : k.IA,
                         (function () {
                             if (o) return a()(V.rM, H.SELECTED);
                             if (d) return a()(V.rM, H.CONNECTED);
@@ -273,11 +274,11 @@ l.d(
                             switch (e) {
                                 case S.rbe.GUILD_STAGE_VOICE:
                                 case S.rbe.GUILD_VOICE:
-                                    return P.typeVoice;
+                                    return k.typeVoice;
                                 case S.rbe.ANNOUNCEMENT_THREAD:
                                 case S.rbe.PUBLIC_THREAD:
                                 case S.rbe.PRIVATE_THREAD:
-                                    return P.ZS;
+                                    return k.ZS;
                                 case S.rbe.GUILD_ANNOUNCEMENT:
                                 case S.rbe.GUILD_TEXT:
                                 case S.rbe.GUILD_STORE:
@@ -285,18 +286,18 @@ l.d(
                                 case S.rbe.GUILD_MEDIA:
                                 case S.rbe.GUILD_APP:
                                 default:
-                                    return P.typeDefault;
+                                    return k.typeDefault;
                             }
                         })(W ?? y),
                     ),
                     onMouseUp: (e) => D?.(e, n),
                     onMouseDown: (e) => _?.(e, n),
-                    onContextMenu: (e) => T?.(e, n),
+                    onContextMenu: (e) => p?.(e, n),
                     onMouseEnter: L,
                     onMouseLeave: F,
                     children: [
-                        t || !A ? null : (0, s.jsx)("div", { className: a()(P.gy, ei ? P.WS : void 0) }),
-                        p?.(eN) ?? eN,
+                        t || !A ? null : (0, s.jsx)("div", { className: a()(k.gy, ei ? k.WS : void 0) }),
+                        T?.(eN) ?? eN,
                     ],
                 }),
             });
