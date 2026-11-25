@@ -2,8 +2,9 @@ var i = n(73153),
     r = n(439372),
     a = n(114129),
     s = n(442325),
-    l = n(254838);
-class o extends r.A {
+    l = n(858760),
+    o = n(254838);
+class d extends r.A {
     knownTabs = [];
     isSubscribed = !1;
     tabActions = [
@@ -13,9 +14,9 @@ class o extends r.A {
         ["CHANNEL_TABS_OPEN", () => this.rememberTabs()],
         ["CHANNEL_TABS_NAVIGATE_ROUTE", () => this.handleNavigateRoute()],
     ];
-    stores = new Map([[s.A, () => this.setSubscribed(s.A.isEnabled())]]);
+    stores = new Map([[s.A, () => this.setSubscribed((0, l.Z6)("ChannelTabsManager"))]]);
     _initialize() {
-        this.setSubscribed(s.A.isEnabled());
+        this.setSubscribed((0, l.Z6)("ChannelTabsManager"));
     }
     _terminate() {
         this.setSubscribed(!1);
@@ -47,7 +48,7 @@ class o extends r.A {
     }
     handleUnpinnedAtLimit() {
         let e = s.A.getTabUnpinnedAtLimit();
-        null != e && ((0, l.l)(), (0, a.bi)(e, "tab_limit"));
+        null != e && ((0, o.l)(), (0, a.bi)(e, "tab_limit"));
     }
     handlePostConnectionOpen() {
         this.rememberTabs();
@@ -55,5 +56,5 @@ class o extends r.A {
         null != e && (0, a.FP)(e, { method: "app_start", isNewTab: !1, focused: !0 });
     }
 }
-let d = new o();
-n.d(t, {}, { A: d });
+let c = new d();
+n.d(t, {}, { A: c });

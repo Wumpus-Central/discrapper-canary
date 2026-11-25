@@ -817,28 +817,26 @@ function eQ() {
     let {
             tabs: e,
             activeTabId: t,
-            isVisible: n,
-            isAtMaxTabs: m,
-            maxTabs: x,
+            isAtMaxTabs: n,
+            maxTabs: m,
         } = (0, i.cf)([g.A], () => ({
             tabs: g.A.getTabs(),
             activeTabId: g.A.getActiveTabId(),
-            isVisible: g.A.isTabBarVisible(),
             isAtMaxTabs: g.A.isAtMaxTabs(),
             maxTabs: g.A.getMaxTabs(),
         })),
-        b = (0, i.bG)([d.Ay], () => d.Ay.getVoiceChannelId()),
-        y = (0, i.bG)([c.A], () => c.A.isTabPicker()),
-        A = "popout" === p.A.useConfig({ location: "ChannelTabBar" }).newTabExperience,
-        I = r.useRef(null),
+        x = (0, i.bG)([d.Ay], () => d.Ay.getVoiceChannelId()),
+        b = (0, i.bG)([c.A], () => c.A.isTabPicker()),
+        y = "popout" === p.Ay.useConfig({ location: "ChannelTabBar" }).newTabExperience,
+        A = r.useRef(null),
         {
-            stripRef: C,
-            registerTabNode: E,
-            newTabButtonRef: N,
-            handleDragStart: v,
-            handleDragMove: R,
-            handleDragEnd: j,
-            handleCloseStart: M,
+            stripRef: I,
+            registerTabNode: C,
+            newTabButtonRef: E,
+            handleDragStart: N,
+            handleDragMove: v,
+            handleDragEnd: R,
+            handleCloseStart: j,
         } = (function (e) {
             let [, t] = (0, eH.z)(() => ({ progress: 0, config: { duration: 150 } })),
                 n = r.useRef(null);
@@ -1135,88 +1133,87 @@ function eQ() {
                 handleCloseStart: k,
             };
         })(e),
-        [k, w] = r.useState(() => new Map()),
-        [D, S] = r.useState(e);
-    if (D !== e) {
-        let t = D.filter((t) => !e.some((e) => e.id === t.id));
+        [M, k] = r.useState(() => new Map()),
+        [w, D] = r.useState(e);
+    if (w !== e) {
+        let t = w.filter((t) => !e.some((e) => e.id === t.id));
         (t.length > 0 &&
-            w((e) => {
+            k((e) => {
                 let n = new Map(e);
-                return (t.forEach((e) => n.set(e.id, { tab: e, index: D.indexOf(e) })), n);
+                return (t.forEach((e) => n.set(e.id, { tab: e, index: w.indexOf(e) })), n);
             }),
-            S(e));
+            D(e));
     }
-    let T = r.useRef(0);
+    let S = r.useRef(0);
     r.useLayoutEffect(() => {
-        (k.size > T.current && M(), (T.current = k.size));
-    }, [k, M]);
-    let P = r.useCallback((e) => {
-        w((t) => {
-            let n = new Map(t);
-            return (n.delete(e), n);
-        });
-    }, []);
-    if (!n) return null;
-    let _ = m ? en.intl.formatToPlainString(en.t["I8l3Z+"], { count: x }) : void 0,
-        L = e.length > 1,
-        G = [...e];
+        (M.size > S.current && j(), (S.current = M.size));
+    }, [M, j]);
+    let T = r.useCallback((e) => {
+            k((t) => {
+                let n = new Map(t);
+                return (n.delete(e), n);
+            });
+        }, []),
+        P = n ? en.intl.formatToPlainString(en.t["I8l3Z+"], { count: m }) : void 0,
+        _ = e.length > 1,
+        L = [...e];
     return (
-        k.forEach((e) => {
+        M.forEach((e) => {
             let { tab: t, index: n } = e;
-            return G.splice(Math.min(n, G.length), 0, t);
+            return L.splice(Math.min(n, L.length), 0, t);
         }),
         (0, l.jsxs)("div", {
-            ref: C,
+            ref: I,
             className: eq.$,
             role: "group",
             "aria-label": en.intl.string(en.t.es0PkU),
             onDoubleClick: () => f.Ay.maximize(),
             children: [
-                G.map((e) =>
+                L.map((e) =>
                     (0, l.jsx)(
                         ec,
                         {
                             tab: e,
                             isActive: e.id === t,
-                            closable: L,
-                            isExiting: k.has(e.id),
-                            isConnectedVoiceChannel: "channel" === e.kind && e.channelId === b,
-                            registerTabNode: E,
-                            onDragStart: v,
-                            onDragMove: R,
-                            onDragEnd: j,
-                            onExited: P,
+                            closable: _,
+                            isExiting: M.has(e.id),
+                            isConnectedVoiceChannel: "channel" === e.kind && e.channelId === x,
+                            registerTabNode: C,
+                            onDragStart: N,
+                            onDragMove: v,
+                            onDragEnd: R,
+                            onExited: T,
                         },
                         e.id,
                     ),
                 ),
                 (0, l.jsxs)("div", {
-                    ref: N,
+                    ref: E,
                     className: eq.Y,
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
                         (0, l.jsx)(s.Y, {
-                            targetElementRef: N,
-                            shouldShow: A && y,
+                            targetElementRef: E,
+                            shouldShow: y && b,
                             onRequestClose: o.jD,
                             position: "bottom",
                             align: "left",
                             animation: s.Y.Animation.FADE,
-                            renderPopout: () => (0, l.jsx)(eU, { returnFocusRef: I }),
+                            renderPopout: () => (0, l.jsx)(eU, { returnFocusRef: A }),
                             children: () =>
                                 (0, l.jsx)(u.A, {
-                                    ref: I,
+                                    ref: A,
                                     icon: a.PlusLargeIcon,
                                     onClick: eY,
-                                    disabled: null != _,
-                                    selected: y,
-                                    "aria-expanded": A ? y : void 0,
-                                    "aria-haspopup": A ? "dialog" : void 0,
-                                    tooltip: _ ?? en.intl.string(en.t.GR7NIF),
-                                    tooltipKeyboardShortcut: null == _ ? h.T3.binds["0"] : void 0,
+                                    disabled: null != P,
+                                    selected: b,
+                                    "aria-expanded": y ? b : void 0,
+                                    "aria-haspopup": y ? "dialog" : void 0,
+                                    tooltip: P ?? en.intl.string(en.t.GR7NIF),
+                                    tooltipKeyboardShortcut: null == P ? h.T3.binds["0"] : void 0,
                                 }),
                         }),
-                        (0, l.jsx)(eC, { targetElementRef: N, suppressed: y, onOpenNewTab: eY }),
+                        (0, l.jsx)(eC, { targetElementRef: E, suppressed: b, onOpenNewTab: eY }),
                     ],
                 }),
             ],

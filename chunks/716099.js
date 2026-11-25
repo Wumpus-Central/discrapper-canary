@@ -13,7 +13,7 @@ n.d(
             if (a.A.isTabPicker()) return ((0, r.jD)(), !0);
             if (a.A.isOpen() || s.A.hasLayers() || (0, i.ue)()) return !1;
             if (!(0, d.H)()) return !0;
-            let { newTabExperience: t } = o.A.getConfig({ location: "NewTabSwitcher" });
+            let { newTabExperience: t } = o.Ay.getConfig({ location: "NewTabSwitcher" });
             switch (t) {
                 case "friends":
                     return ((0, l.l7)(e), !0);

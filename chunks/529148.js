@@ -62,7 +62,7 @@ let T = (0, g.mj)({
     variations: { 1: { enabled: !0 } },
 });
 var S = n(869146),
-    N = n(442325),
+    N = n(858760),
     C = n(773669),
     O = n(413599),
     R = n(531685),
@@ -280,12 +280,13 @@ function $(e) {
         et = (0, m.k5)("RootThemeContextProvider"),
         en = (0, m.lV)("RootThemeContextProvider"),
         ei = T.useConfig({ location: "RootThemeContextProvider" }).enabled,
-        er = (0, o.bG)([N.A], () => !s && N.A.isTabBarVisible(), [s]),
-        ea = (0, f.m2)({ isPopoutWindow: s, hasChannelTabs: er });
+        er = (0, N.SU)("RootThemeContextProvider"),
+        ea = !s && er,
+        es = (0, f.m2)({ isPopoutWindow: s, hasChannelTabs: ea });
     a.useEffect(() => {
-        s || L.Ay.setTrafficLightPosition(er ? { x: 14, y: 14 } : { x: 9, y: 9 });
-    }, [s, er]);
-    let es = (function (e) {
+        s || L.Ay.setTrafficLightPosition(ea ? { x: 14, y: 14 } : { x: 9, y: 9 });
+    }, [s, ea]);
+    let el = (function (e) {
         let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: s, locale: l } = e,
             o = a.useContext(H.A),
             d = a.useCallback(
@@ -425,7 +426,7 @@ function $(e) {
         locale: _,
     });
     return (0, r.jsx)(c.GE, {
-        value: es,
+        value: el,
         children: (0, r.jsx)(E, {
             theme: g,
             flags: J,
@@ -449,7 +450,7 @@ function $(e) {
                 hardwareAccelerationEnabled: u,
                 highContrastMode: q,
                 isPopoutWindow: s,
-                rootClassName: l()(ea, {
+                rootClassName: l()(es, {
                     "refresh-fast-follow-avatars": ee,
                     "refresh-fast-follow-guild-bg": et,
                     "refresh-fast-follow-distinct-borders": en,
