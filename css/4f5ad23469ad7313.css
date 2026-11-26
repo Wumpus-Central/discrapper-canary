@@ -538,17 +538,6 @@
     min-width: 0
 }
 
-.chatLogDimmed_ElNoP4 {
-    filter: blur(3px);
-    opacity: .5;
-    pointer-events: none;
-    transition: opacity .15s ease, filter .15s ease
-}
-
-.chatLogDimmed_ElNoP4>* {
-    pointer-events: none
-}
-
 .panel_wfmW80 {
     display: flex;
     flex: 1;
@@ -1058,4 +1047,4 @@
     flex: none
 }
 
-/*# sourceMappingURL=3a37e1966616d891.css.map*/
+/*# sourceMappingURL=4f5ad23469ad7313.css.map*/

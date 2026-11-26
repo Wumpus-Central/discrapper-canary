@@ -10,5 +10,4 @@ e.exports = {
     qB: "remixNotice_ElNoP4",
     jU: "incompleteNoticeClose_ElNoP4",
     g0: "designFeedbackBanner_ElNoP4",
-    J9: "chatLogDimmed_ElNoP4",
 };
