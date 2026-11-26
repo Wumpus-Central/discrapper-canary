@@ -319,8 +319,8 @@ function eJ(e) {
 }
 var e0 = n(613412),
     e1 = n(164636),
-    e3 = n(139286),
-    e6 = n(727419),
+    e6 = n(139286),
+    e3 = n(727419),
     e5 = n(792996),
     e7 = n(330766);
 function e8(e) {
@@ -331,7 +331,7 @@ function e8(e) {
             return null != n && (0, eE.bM)(n, e);
         });
     return (
-        (0, e3.A)({
+        (0, e6.A)({
             type: e0.ImpressionTypes.POPOUT,
             name: e0.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -346,7 +346,7 @@ function e8(e) {
                     text: e5.intl.string(e5.t.OgQQbG),
                     variant: "primary",
                     onClick: function () {
-                        e6.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
+                        e3.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS);
                     },
                 },
             ],
@@ -367,7 +367,7 @@ function e2(e) {
             text: e5.intl.string(e5.t.BQq86h),
             variant: "primary",
             onClick: function () {
-                e6.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                e3.A.open(t, j.BEX.ROLE_SUBSCRIPTIONS, void 0, j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
         },
         onRequestClose: () => n(el.i.USER_DISMISS),
@@ -409,7 +409,7 @@ function ti(e) {
                 text: e5.intl.string(e5.t["9l+df7"]),
                 variant: "primary",
                 onClick: function (e) {
-                    e6.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
+                    e3.A.open(t.id, j.BEX.DISCOVERY_LANDING_PAGE);
                 },
             },
         ],
@@ -788,8 +788,8 @@ var tK = n(503698),
     tJ = n(47167),
     t0 = n(713654),
     t1 = n(976860),
-    t3 = n(129095),
-    t6 = n(110618),
+    t6 = n(129095),
+    t3 = n(110618),
     t5 = n(46653),
     t7 = n(309010),
     t8 = n(312006),
@@ -1056,7 +1056,7 @@ function nE(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t3.av)(t), (0, t1.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t6.av)(t), (0, t1.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1136,7 +1136,7 @@ function ng(e) {
                                     color: "none",
                                     variant: "body-xs/normal",
                                     className: nr.c8,
-                                    children: (0, t6.c)(o, d, n?.id, i.length),
+                                    children: (0, t3.c)(o, d, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1234,7 +1234,7 @@ function np(e) {
         type: j.n5X.COMMANDS_MIGRATION,
         image: "/assets/ab63b30e9bc8855c.svg",
         onClick: () => {
-            (n(), e6.A.open(t.id, j.BEX.INTEGRATIONS));
+            (n(), e3.A.open(t.id, j.BEX.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22,
@@ -1279,7 +1279,7 @@ function nf(e) {
               type: j.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: "/assets/eaaec668caed688e.svg",
               onClick: () => {
-                  (a(), e6.A.open(n.id, j.BEX.INTEGRATIONS));
+                  (a(), e3.A.open(n.id, j.BEX.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,
@@ -1311,7 +1311,7 @@ let nR = function (e) {
     return (0, s.jsx)(tL, {
         guild: t,
         onDismissed: n,
-        onClick: () => e6.A.open(t.id, j.BEX.COMMUNITY),
+        onClick: () => e3.A.open(t.id, j.BEX.COMMUNITY),
         message: e5.intl.string(e5.t["2klD0Z"]),
         trackingSource: j.kZU.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
         type: j.n5X.PUBLIC_UPSELL,
@@ -1485,8 +1485,8 @@ let nZ = new nQ(m.h),
 function n1(e) {
     e.stopPropagation();
 }
-let n3 = [];
-function n6(e) {
+let n6 = [];
+function n3(e) {
     var t, n;
     let i,
         a,
@@ -1509,7 +1509,7 @@ function n6(e) {
             (c = d && u),
             l.useMemo(() => {
                 let e = [];
-                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n3);
+                return (c && e.push(o.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n6);
             }, [c])),
         [g, I] = (0, q.ww)(m, A.id, el.m.CHANNEL_NOTICES, !0),
         C = null != g,
@@ -1574,7 +1574,7 @@ let n5 = function (e) {
         case Y.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, s.jsx)(nf, { guild: t });
     }
-    return nL.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n6, { guild: e.guild });
+    return nL.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n3, { guild: e.guild });
 };
 var n7 = n(883476);
 function n8(e) {
@@ -1864,7 +1864,7 @@ class ii extends l.PureComponent {
                     n.e(842429),
                     n.e(304350),
                     n.e(22865),
-                    n.e(173896),
+                    n.e(185661),
                     n.e(57358),
                     n.e(580305),
                     n.e(722765),
@@ -2153,6 +2153,7 @@ class ii extends l.PureComponent {
                     n.e(460773),
                     n.e(444567),
                     n.e(93907),
+                    n.e(26001),
                     n.e(159957),
                     n.e(229666),
                     n.e(92295),
@@ -2167,7 +2168,6 @@ class ii extends l.PureComponent {
                     n.e(495861),
                     n.e(163069),
                     n.e(883952),
-                    n.e(26001),
                     n.e(414591),
                     n.e(652111),
                     n.e(434786),
@@ -2194,16 +2194,17 @@ class ii extends l.PureComponent {
                     n.e(680029),
                     n.e(343116),
                     n.e(583518),
+                    n.e(507775),
                     n.e(978046),
                     n.e(807476),
                     n.e(127659),
                     n.e(635864),
-                    n.e(507775),
                     n.e(447864),
                     n.e(428235),
                     n.e(610943),
                     n.e(637038),
                     n.e(794704),
+                    n.e(636002),
                     n.e(396854),
                     n.e(710727),
                     n.e(966016),
@@ -2214,7 +2215,6 @@ class ii extends l.PureComponent {
                     n.e(369501),
                     n.e(303710),
                     n.e(256373),
-                    n.e(636002),
                     n.e(50342),
                     n.e(10622),
                     n.e(838336),
@@ -2227,6 +2227,7 @@ class ii extends l.PureComponent {
                     n.e(346313),
                     n.e(553203),
                     n.e(218489),
+                    n.e(946051),
                     n.e(115368),
                     n.e(343233),
                     n.e(248985),
@@ -2241,7 +2242,7 @@ class ii extends l.PureComponent {
                     n.e(708364),
                     n.e(753376),
                     n.e(452823),
-                    n.e(556967),
+                    n.e(408268),
                     n.e(647011),
                     n.e(205896),
                     n.e(269178),
@@ -2268,7 +2269,7 @@ class ii extends l.PureComponent {
                     n.e(528038),
                     n.e(81398),
                     n.e(114751),
-                    n.e(115313),
+                    n.e(932747),
                     n.e(93685),
                     n.e(118504),
                     n.e(8458),
@@ -2761,7 +2762,7 @@ function is(e) {
                 markAsDismissed: l,
             };
         })(e0 ? null : R),
-        [e3, e6] = (0, q.kn)(e0 ? [] : e$, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
+        [e6, e3] = (0, q.kn)(e0 ? [] : e$, { groupName: el.m.GUILD_HEADER_TOOLTIPS }),
         [e5, e7] = (0, ex.vB)(eK && !1 === eB && !(0, $.ai)(R) && !e0, el.m.GUILD_HEADER_TOOLTIPS),
         [e8, e2] = (0, q.D8)(
             eQ && !e0 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
@@ -2783,8 +2784,8 @@ function is(e) {
                           data: { marketingComponent: e1.marketingComponent },
                           markAsDismissed: e1.markAsDismissed,
                       }
-                    : null != e3
-                      ? { contentType: e3, data: null, markAsDismissed: e6 }
+                    : null != e6
+                      ? { contentType: e6, data: null, markAsDismissed: e3 }
                       : e5 === o.M.GAME_SERVER_NEW_GAMES_COACHMARK
                         ? { contentType: e5, data: null, markAsDismissed: e7 }
                         : e8 === o.M.BOOST_TO_UNLOCK_COACHMARK && null != ez
@@ -2792,7 +2793,7 @@ function is(e) {
                           : e4 === o.M.EXPIRING_POWERUP_COACHMARK && null != eZ
                             ? { contentType: e4, data: { featuredExpiringPowerup: eZ }, markAsDismissed: e9 }
                             : null,
-            [e1.shouldShow, e1.marketingComponent, e1.markAsDismissed, e3, e5, e8, e4, ez, eZ, e6, e7, e2, e9],
+            [e1.shouldShow, e1.marketingComponent, e1.markAsDismissed, e6, e5, e8, e4, ez, eZ, e3, e7, e2, e9],
         );
     return (0, s.jsx)(ii, {
         guildId: R,

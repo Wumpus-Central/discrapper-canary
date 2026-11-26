@@ -1,58 +1,61 @@
-var r = n(477900);
-n(582128);
-var a = n(503698),
-    e = n.n(a),
-    i = n(534514),
-    c = n(933832),
+var e = n(477900),
+    r = n(582128),
+    a = n(503698),
+    i = n.n(a),
+    c = n(534514),
+    o = n(933832),
     d = n(834730),
-    o = n(789645),
-    t = n(376092),
-    h = n(750382);
+    t = n(789645),
+    h = n(558393),
+    m = n(886094),
+    u = n(839317);
 n.d(
-    l,
+    s,
     {},
     {
-        A: function (s) {
+        A: function (l) {
             let {
-                grantedPermissions: l,
-                disabledPermissions: n,
-                grantedPermissionsHeader: a,
-                disabledPermissionsHeader: x,
-                className: m,
-            } = s;
-            return (0, r.jsxs)("div", {
-                className: e()(h.p_, m),
+                    grantedPermissions: s,
+                    disabledPermissions: n,
+                    grantedPermissionsHeader: a,
+                    disabledPermissionsHeader: x,
+                    className: j,
+                    guild: g,
+                } = l,
+                p = r.useMemo(() => (null != g ? h.A.getGuildPermissionSpecMap(g) : null), [g]);
+            return (0, e.jsxs)("div", {
+                className: i()(u.p_, j),
                 children: [
-                    null != l && l.length > 0
-                        ? (0, r.jsxs)(r.Fragment, {
+                    null != s && s.length > 0
+                        ? (0, e.jsxs)(e.Fragment, {
                               children: [
                                   null != a
-                                      ? (0, r.jsx)(i.D, {
+                                      ? (0, e.jsx)(c.D, {
                                             variant: "heading-xs/semibold",
                                             color: "text-strong",
                                             children: a,
                                         })
                                       : null,
-                                  (0, r.jsx)("div", {
-                                      className: h.kL,
-                                      children: l.map((s) =>
-                                          (0, r.jsxs)(
+                                  (0, e.jsx)("div", {
+                                      className: u.kL,
+                                      children: s.map((l) =>
+                                          (0, e.jsxs)(
                                               "div",
                                               {
-                                                  className: h.EK,
+                                                  className: u.EK,
                                                   children: [
-                                                      (0, r.jsx)(c.CheckmarkLargeIcon, {
+                                                      (0, e.jsx)(o.CheckmarkLargeIcon, {
                                                           size: "xs",
                                                           color: "currentColor",
-                                                          className: h.z6,
+                                                          className: u.z6,
                                                       }),
-                                                      (0, r.jsx)(d.E, {
+                                                      (0, e.jsx)(d.E, {
                                                           variant: "body-sm/normal",
-                                                          children: (0, t.hx)(s),
+                                                          children: (0, m.A)(l, p),
                                                       }),
                                                   ],
                                               },
-                                              s.toString(),
+                                              l.toString(),
                                           ),
                                       ),
                                   }),
@@ -60,35 +63,35 @@ n.d(
                           })
                         : null,
                     null != n && n.length > 0
-                        ? (0, r.jsxs)(r.Fragment, {
+                        ? (0, e.jsxs)(e.Fragment, {
                               children: [
                                   null != x
-                                      ? (0, r.jsx)(i.D, {
+                                      ? (0, e.jsx)(c.D, {
                                             variant: "heading-xs/semibold",
                                             color: "text-strong",
                                             children: x,
                                         })
                                       : null,
-                                  (0, r.jsx)("div", {
-                                      className: h.kL,
-                                      children: n.map((s) =>
-                                          (0, r.jsxs)(
+                                  (0, e.jsx)("div", {
+                                      className: u.kL,
+                                      children: n.map((l) =>
+                                          (0, e.jsxs)(
                                               "div",
                                               {
-                                                  className: h.EK,
+                                                  className: u.EK,
                                                   children: [
-                                                      (0, r.jsx)(o.XSmallIcon, {
+                                                      (0, e.jsx)(t.XSmallIcon, {
                                                           size: "xs",
                                                           color: "currentColor",
-                                                          className: h.$A,
+                                                          className: u.$A,
                                                       }),
-                                                      (0, r.jsx)(d.E, {
+                                                      (0, e.jsx)(d.E, {
                                                           variant: "body-sm/normal",
-                                                          children: (0, t.hx)(s),
+                                                          children: (0, m.A)(l, p),
                                                       }),
                                                   ],
                                               },
-                                              s.toString(),
+                                              l.toString(),
                                           ),
                                       ),
                                   }),

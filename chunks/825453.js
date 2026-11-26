@@ -12,11 +12,12 @@ var i = n(582128),
     g = n(317525),
     h = n(71393),
     x = n(576705),
-    p = n(287809),
-    A = n(403362),
+    A = n(287809),
+    p = n(403362),
     b = n(803378),
     f = n(200662),
     j = n(652215);
+let N = {};
 n.d(
     t,
     {},
@@ -36,37 +37,37 @@ n.d(
                         n
                     );
                 }, [l, e]),
-                N = (0, o.bG)(
+                C = (0, o.bG)(
                     [b.A],
                     () => {
                         if (null == n) return;
                         let e = b.A.getCommand(n);
-                        return e?.permissions ?? {};
+                        return e?.permissions ?? N;
                     },
                     [n],
                 ),
-                E = (0, o.bG)(
+                v = (0, o.bG)(
                     [b.A],
                     () => (null == n ? b.A.getEditedApplication() : b.A.getEditedCommand()?.permissions),
                     [n],
                 ),
-                C = n ?? t,
-                v = null != n ? N : a,
-                I = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
-                T = i.useMemo(() => Object.keys(I).length, [I]),
-                y = i.useMemo(() => (null == v || null == I ? null : !r().isEqual(v, I)), [v, I]);
+                E = n ?? t,
+                I = null != n ? C : a,
+                T = i.useMemo(() => v ?? { ...(I ?? {}) }, [v, I]),
+                y = i.useMemo(() => Object.keys(T).length, [T]),
+                S = i.useMemo(() => (null == I || null == T ? null : !r().isEqual(I, T)), [I, T]);
             return (
                 i.useEffect(() => {
-                    C === t && (y ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
-                }, [t, y, C]),
+                    E === t && (S ? c.A.startEditingCommandPermissions(E) : c.A.stopEditingCommandPermissions(E));
+                }, [t, S, E]),
                 {
                     originalApplicationPermissions: a,
-                    originalCommandPermissions: N,
+                    originalCommandPermissions: C,
                     editedTargetPermissions: (function (e, t) {
                         let n = (0, o.bG)([h.A], () => h.A.getGuild(e), [e]);
                         s()(null != n, "guild must be present to be editing its integration settings");
                         let l = (0, o.bG)([x.A], () => x.A.getHighestRole(n), [n]),
-                            a = (0, o.bG)([p.default], () => p.default.getCurrentUser()?.id);
+                            a = (0, o.bG)([A.default], () => A.default.getCurrentUser()?.id);
                         s()(null != a, "useComputePermissions: currentUserId must not be null");
                         let r = a === n.ownerId,
                             {
@@ -99,29 +100,29 @@ n.d(
                                     Object.fromEntries(
                                         c
                                             .map(m.A.getChannel)
-                                            .filter(A.Vq)
+                                            .filter(p.Vq)
                                             .map((e) => [e.id, e]),
                                     ),
                                 [c],
                             ),
-                            E = (0, o.cf)(
+                            C = (0, o.cf)(
                                 [g.A],
                                 () =>
                                     Object.fromEntries(
                                         b
                                             .map((t) => g.A.getRole(e, t))
-                                            .filter(A.Vq)
+                                            .filter(p.Vq)
                                             .map((e) => [e.id, e]),
                                     ),
                                 [b, e],
                             ),
-                            C = (0, o.cf)(
-                                [p.default],
+                            v = (0, o.cf)(
+                                [A.default],
                                 () =>
                                     Object.fromEntries(
                                         f
-                                            .map(p.default.getUser)
-                                            .filter(A.Vq)
+                                            .map(A.default.getUser)
+                                            .filter(p.Vq)
                                             .map((e) => [e.id, e]),
                                     ),
                                 [f],
@@ -142,12 +143,12 @@ n.d(
                                     }
                                     case d.RA.ROLE: {
                                         let i = o.id === e,
-                                            s = E[o.id];
+                                            s = C[o.id];
                                         ((t = i || null != s), (c = r || i || x.A.isRoleHigher(n, l, s)));
                                         break;
                                     }
                                     case d.RA.USER: {
-                                        let e = C[o.id];
+                                        let e = v[o.id];
                                         ((t = null != e),
                                             (c =
                                                 null != e &&
@@ -160,10 +161,10 @@ n.d(
                                 s[a] = { ...o, canRead: t, canWrite: c };
                             }
                             return s;
-                        }, [N, n, l, r, t, E, C]);
-                    })(e, I),
-                    hasChanges: y,
-                    selectedPermissionCount: T,
+                        }, [N, n, l, r, t, C, v]);
+                    })(e, T),
+                    hasChanges: S,
+                    selectedPermissionCount: y,
                 }
             );
         },

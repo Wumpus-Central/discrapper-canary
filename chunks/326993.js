@@ -1,31 +1,27 @@
 var n = t(477900),
     s = t(582128),
-    a = t(435558),
-    r = t.n(a),
-    l = t(855986),
-    o = t(189213),
-    d = t(331322),
-    c = t(834730),
-    p = t(683071),
-    m = t(97808),
-    u = t(778712),
-    y = t(282956),
-    g = t(181658),
-    b = t(155718),
-    A = t(392054),
-    h = t(168186),
-    E = t(587895),
-    j = t(696451),
-    v = t(486020),
-    x = t(542580),
-    C = t(200662),
-    f = t(825453),
-    k = t(365200),
-    I = t(792996);
-function N(i) {
+    a = t(855986),
+    r = t(189213),
+    l = t(331322),
+    d = t(834730),
+    o = t(683071),
+    c = t(97808),
+    p = t(778712),
+    u = t(282956),
+    m = t(181658),
+    g = t(155718),
+    y = t(587895),
+    b = t(696451),
+    h = t(486020),
+    A = t(542580),
+    x = t(200662),
+    C = t(825453),
+    j = t(118661),
+    v = t(792996);
+function E(i) {
     let { icon: e, id: t, guildMember: s, bot: a } = i,
-        r = v.Ay.getApplicationIconURL({ id: t, guildMember: s, bot: a, icon: e, size: 40 });
-    return (0, n.jsx)(m.eu, { src: r, size: u._3.SIZE_40, "aria-hidden": !0 });
+        r = h.Ay.getApplicationIconURL({ id: t, guildMember: s, bot: a, icon: e, size: 40 });
+    return (0, n.jsx)(c.eu, { src: r, size: p._3.SIZE_40, "aria-hidden": !0 });
 }
 t.d(
     e,
@@ -35,108 +31,102 @@ t.d(
             let {
                     applicationIcon: e,
                     applicationId: t,
-                    applicationName: a,
-                    command: m,
-                    guildId: u,
-                    onClose: v,
+                    applicationName: c,
+                    command: p,
+                    guildId: h,
+                    onClose: I,
                     transitionState: P,
                 } = i,
-                [R, w] = s.useState(null),
-                [B, _] = s.useState(!1),
+                [k, B] = s.useState(null),
+                [f, w] = s.useState(!1),
                 {
-                    originalApplicationPermissions: M,
-                    originalCommandPermissions: O,
-                    editedTargetPermissions: S,
-                    hasChanges: T,
-                    selectedPermissionCount: z,
-                } = (0, f.A)(u, t, m.id),
-                L = s.useCallback(async () => {
-                    if (!T) return void v();
-                    let i = r().difference(Object.keys(m.permissions ?? {}), Object.keys(S)),
-                        e = r().omit({ ...S }, i),
-                        n = (0, h.Ap)(u),
-                        s = (0, C.Eu)(u, A.RA.ROLE),
-                        a = (0, C.Eu)(n, A.RA.CHANNEL),
-                        l = M[s]?.permission ?? !0,
-                        o = M[a]?.permission ?? !0,
-                        d = Object.values(e).map((i) => ({ id: i.id, permission: i.permission, type: i.type }));
-                    (w(null), _(!0));
+                    originalApplicationPermissions: _,
+                    originalCommandPermissions: M,
+                    editedTargetPermissions: N,
+                    hasChanges: R,
+                    selectedPermissionCount: S,
+                } = (0, C.A)(h, t, p.id),
+                T = s.useCallback(async () => {
+                    if (!R) return void I();
+                    (B(null), w(!0));
                     try {
-                        (await x.Ni({
-                            defaultEveryoneValue: l,
-                            defaultEverywhereValue: o,
+                        (await A.B3({
                             applicationId: t,
-                            commandId: m.id,
-                            guildId: u,
-                            permissions: d,
+                            command: p,
+                            editedPermissions: N,
+                            guildId: h,
+                            originalApplicationPermissions: _,
                         }),
-                            _(!1),
-                            v());
+                            w(!1),
+                            I());
                     } catch (i) {
-                        w(new g.A(i));
+                        B(new m.A(i));
                     }
-                    _(!1);
-                }, [t, M, m.id, m.permissions, u, T, v, S, w, _]);
+                    w(!1);
+                }, [t, _, p, h, R, I, N, B, w]);
             s.useEffect(
                 () => () => {
-                    (x.C8(m.id), y.A.stopEditingCommandPermissions(m.id));
+                    (A.C8(p.id), u.A.stopEditingCommandPermissions(p.id));
                 },
-                [m.id],
+                [p.id],
             );
-            let G = (0, C.p6)(m.type, m.displayName),
-                H = (0, l.bG)([E.A], () => E.A.getApplication(t)),
-                V = H?.bot?.id,
-                Y = (0, l.bG)([j.Ay], () => (null != V ? j.Ay.getMember(u, V) : null));
-            return (0, n.jsx)(o.a, {
-                "aria-label": I.intl.string(I.t["N+InBa"]),
+            let z = (0, x.p6)(p.type, p.displayName),
+                D = (0, a.bG)([y.A], () => y.A.getApplication(t)),
+                G = D?.bot?.id,
+                Y = (0, a.bG)([b.Ay], () => (null != G ? b.Ay.getMember(h, G) : null));
+            return (0, n.jsx)(r.a, {
+                "aria-label": v.intl.string(v.t["N+InBa"]),
                 transitionState: P,
-                onClose: v,
-                title: I.intl.string(I.t["N+InBa"]),
-                preview: (0, n.jsxs)(d.B, {
+                onClose: I,
+                title: v.intl.string(v.t["N+InBa"]),
+                preview: (0, n.jsxs)(l.B, {
                     direction: "horizontal",
+                    align: "center",
                     gap: 16,
                     children: [
-                        (0, n.jsx)(N, {
+                        (0, n.jsx)(E, {
                             icon: e,
                             id: t,
-                            name: a,
+                            name: c,
                             guildMember: Y,
-                            bot: m.type !== b.kc.PRIMARY_ENTRY_POINT ? H?.bot : void 0,
+                            bot: p.type !== g.kc.PRIMARY_ENTRY_POINT ? D?.bot : void 0,
                         }),
-                        (0, n.jsxs)(d.B, {
+                        (0, n.jsxs)(l.B, {
                             direction: "vertical",
                             gap: 4,
                             children: [
-                                (0, n.jsx)(c.E, { variant: "body-md/semibold", children: G }),
-                                (0, n.jsx)(c.E, {
-                                    color: "text-muted",
-                                    variant: "body-sm/normal",
-                                    children: m.displayDescription,
-                                }),
+                                (0, n.jsx)(d.E, { variant: "body-md/semibold", children: z }),
+                                "" !== p.displayDescription
+                                    ? (0, n.jsx)(d.E, {
+                                          color: "text-muted",
+                                          variant: "body-sm/normal",
+                                          children: p.displayDescription,
+                                      })
+                                    : null,
                             ],
                         }),
                     ],
                 }),
                 actions: [
-                    { text: I.intl.string(I.t["ETE/oC"]), onClick: v, variant: "secondary" },
-                    { text: I.intl.string(I.t["R3BPH+"]), onClick: L, variant: "primary", disabled: !T, loading: B },
+                    { text: v.intl.string(v.t["ETE/oC"]), onClick: I, variant: "secondary" },
+                    { text: v.intl.string(v.t["R3BPH+"]), onClick: T, variant: "primary", disabled: !R, loading: f },
                 ],
-                children: (0, n.jsxs)(d.B, {
+                children: (0, n.jsxs)(l.B, {
                     direction: "vertical",
                     gap: 16,
                     children: [
-                        null == R || R.hasFieldErrors()
+                        null == k || k.hasFieldErrors()
                             ? null
-                            : (0, n.jsx)(p.w, { type: "critical", message: R.getAnyErrorMessage(), role: "alert" }),
-                        (0, n.jsx)(k.A, {
+                            : (0, n.jsx)(o.w, { type: "critical", message: k.getAnyErrorMessage(), role: "alert" }),
+                        (0, n.jsx)(j.A, {
                             applicationId: t,
-                            commandId: m.id,
-                            guildId: u,
+                            commandId: p.id,
+                            guildId: h,
                             inModal: !0,
-                            originalApplicationPermissions: M,
-                            originalCommandPermissions: O,
-                            editedTargetPermissions: S,
-                            selectedPermissionCount: z,
+                            originalApplicationPermissions: _,
+                            originalCommandPermissions: M,
+                            editedTargetPermissions: N,
+                            selectedPermissionCount: S,
                         }),
                     ],
                 }),

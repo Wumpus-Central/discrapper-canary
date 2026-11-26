@@ -720,12 +720,12 @@ var eq = l(619517),
     e1 = l(456412),
     e8 = l(133296),
     e7 = l(516521),
-    e5 = l(532197),
-    e4 = l(837344);
-let e6 = { CENTER: e4.Hu, LEFT: e4.Vl };
+    e4 = l(532197),
+    e6 = l(837344);
+let e5 = { CENTER: e6.Hu, LEFT: e6.Vl };
 class e3 extends n.PureComponent {
-    static Align = e6;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e6.CENTER };
+    static Align = e5;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e5.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -747,7 +747,7 @@ class e3 extends n.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: s, align: r } = this.props,
-            o = l ? e4.XA : e4.BU;
+            o = l ? e6.XA : e6.BU;
         return (0, i.jsx)(e7.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: a()(o, s, r),
@@ -773,9 +773,9 @@ class e2 extends n.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(ek.D, {
-            className: a()(e4.t1, e),
+            className: a()(e6.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, i.jsx)(e5.A, { className: e4.UE, direction: e5.A.Directions.LEFT }),
+            children: (0, i.jsx)(e4.A, { className: e6.UE, direction: e4.A.Directions.LEFT }),
         });
     }
 }
@@ -788,9 +788,9 @@ class e9 extends n.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(ek.D, {
-            className: a()(e4.XS, e),
+            className: a()(e6.XS, e),
             onClick: this.handleNextClick,
-            children: (0, i.jsx)(e5.A, { className: e4.UE, direction: e5.A.Directions.RIGHT }),
+            children: (0, i.jsx)(e4.A, { className: e6.UE, direction: e4.A.Directions.RIGHT }),
         });
     }
 }
@@ -1607,9 +1607,9 @@ function t1(e) {
 }
 var t8 = l(449054),
     t7 = l(664343),
-    t5 = l(950305),
-    t4 = l(573435),
-    t6 = l(714991),
+    t4 = l(950305),
+    t6 = l(573435),
+    t5 = l(714991),
     t3 = l(776231),
     t2 = l(537975),
     t9 = l(882553),
@@ -1643,8 +1643,8 @@ function ll(e) {
                     (0, i.jsx)("img", { src: c, alt: "", className: t9.j0 }),
                     (0, i.jsx)("div", {
                         className: t9.$f,
-                        children: (0, i.jsx)(t4.Ay, {
-                            mask: t4.Ay.Masks.AVATAR_DEFAULT,
+                        children: (0, i.jsx)(t6.Ay, {
+                            mask: t6.Ay.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)("div", {
@@ -1666,7 +1666,7 @@ function ll(e) {
                     (0, i.jsxs)("div", {
                         className: t9.Y_,
                         children: [
-                            (0, i.jsx)(t6.A, { className: t9.n2, guild: t, tooltipColor: t7.ST.Colors.PRIMARY }),
+                            (0, i.jsx)(t5.A, { className: t9.n2, guild: t, tooltipColor: t7.ST.Colors.PRIMARY }),
                             (0, i.jsx)(m.D, { variant: "heading-sm/semibold", className: t9.J5, children: t.name }),
                         ],
                     }),
@@ -1682,7 +1682,7 @@ function ll(e) {
                         children: (0, i.jsxs)("div", {
                             className: t9.FG,
                             children: [
-                                (0, i.jsx)(t5.UserIcon, { color: "currentColor", className: t9.NP, size: "xs" }),
+                                (0, i.jsx)(t4.UserIcon, { color: "currentColor", className: t9.NP, size: "xs" }),
                                 (0, i.jsx)(g.E, {
                                     variant: "body-xs/normal",
                                     color: "text-default",
@@ -1979,14 +1979,14 @@ let lS = function (e) {
           });
 };
 var lR = l(136722),
-    lP = l(595738),
-    lT = l(376092),
+    lP = l(376092),
+    lT = l(760711),
     lL = l(263442);
 let lD = function (e) {
     let { application: t } = e,
         l = n.useMemo(() => {
             let e = t?.install_params?.permissions;
-            if (null != e) return lT.Q.filter((t) => lR.zy(lR.iu(e), t));
+            if (null != e) return lP.Q.filter((t) => lR.zy(lR.iu(e), t));
         }, [t?.install_params?.permissions]);
     return null != l && l.length > 0
         ? (0, i.jsxs)("div", {
@@ -1997,7 +1997,7 @@ let lD = function (e) {
                       color: "text-strong",
                       children: G.intl.string(G.t.runNF8),
                   }),
-                  (0, i.jsx)(lP.A, {
+                  (0, i.jsx)(lT.A, {
                       className: lL.h,
                       grantedPermissions: l,
                       grantedPermissionsHeader: G.intl.string(G.t.SLgiNH),
@@ -2060,9 +2060,9 @@ var lU = l(607399),
     l1 = l(928658),
     l8 = l(327891),
     l7 = l(957565),
-    l5 = l(692848),
-    l4 = l(108861);
-let l6 = "start_application_install",
+    l4 = l(692848),
+    l6 = l(108861);
+let l5 = "start_application_install",
     l3 = "launch_activity";
 function l2(e) {
     let { renderDropdown: t, size: l } = e,
@@ -2099,7 +2099,7 @@ function l9(e) {
             (s = (0, l$.A)(n.useMemo(() => (0, ea.SU)(t), [t]))),
             (a = n.useCallback(() => {
                 let e = D.h.getField("guildId") ?? void 0;
-                (0, l5.o)({
+                (0, l4.o)({
                     applicationId: t.id,
                     customInstallUrl: t.custom_install_url,
                     installParams: t.install_params,
@@ -2110,8 +2110,8 @@ function l9(e) {
             }, [t])),
             n.useEffect(() => {
                 let e = new URL(location.href);
-                if (l && "true" === e.searchParams.get(l6)) {
-                    e.searchParams.delete(l6);
+                if (l && "true" === e.searchParams.get(l5)) {
+                    e.searchParams.delete(l5);
                     let t = e.pathname + e.search;
                     ((0, N.bG)(t), s && a());
                 }
@@ -2122,7 +2122,7 @@ function l9(e) {
                         (k(O.HAw.APP_DIRECTORY_INSTALL_CLICKED, { application_id: t.id }),
                         (lU.Fr || lU.v1) && null == t.custom_install_url)
                     ) {
-                        let e = (0, l5.Z)({
+                        let e = (0, l4.Z)({
                             applicationId: t.id,
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
@@ -2140,7 +2140,7 @@ function l9(e) {
                             source: "product_page",
                             device_platform: lU.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            w({ [l6]: "true" }));
+                            w({ [l5]: "true" }));
                     }
                 }, [t, a, l]),
                 canInstall: s,
@@ -2273,7 +2273,7 @@ let it = function (e) {
         ref: o,
         children: [
             (0, i.jsxs)("div", {
-                className: a()(l4.Ik, l4.U),
+                className: a()(l6.Ik, l6.U),
                 children: [
                     v && (0, i.jsx)(ie, { size: r, contentWidth: "normal", onClick: g, isSubmitting: x }),
                     A && (0, i.jsx)(l9, { application: s, size: r, contentWidth: "normal", variant: j }),
@@ -2290,7 +2290,7 @@ let it = function (e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: a()(l4.Ik, l4.EX),
+                className: a()(l6.Ik, l6.EX),
                 children: [
                     v && (0, i.jsx)(ie, { size: r, contentWidth: "small", onClick: g, isSubmitting: x }),
                     A && (0, i.jsx)(l9, { application: s, size: r, contentWidth: "small", variant: j }),
@@ -2298,7 +2298,7 @@ let it = function (e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: a()(l4.Ik, l4.nU),
+                className: a()(l6.Ik, l6.nU),
                 children: [
                     v && (0, i.jsx)(ie, { size: r, contentWidth: "icon", onClick: g, isSubmitting: x }),
                     A && (0, i.jsx)(l9, { application: s, size: r, contentWidth: "icon", variant: j }),
