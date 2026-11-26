@@ -57,7 +57,7 @@ l.d(
                     }
                     return (
                         k(!1),
-                        null == t || u || (0, c.A)(t, "added"),
+                        null != t && (0, c.A)(t, u ? "moved" : "added"),
                         m.intl.formatToPlainString(u ? f.default["B+Xtjy"] : f.default.yHhjsi, {
                             app: C,
                             server: j.name,
