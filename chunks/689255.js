@@ -1,4 +1,4 @@
-r.exports = {
+i.exports = {
     kL: "container_NedsCW",
     Lq: "loading_NedsCW",
     Qs: "content_NedsCW",

@@ -21,9 +21,9 @@ var l = n(534514),
     I = n(682901),
     _ = n(652215),
     b = n(792996),
-    C = n(858432),
-    y = n(398932);
-let N = { page: _.liQ.USER_SETTINGS, section: _.JJy.SETTINGS_PREMIUM, object: _.ZSU.CARD };
+    y = n(858432),
+    N = n(398932);
+let C = { page: _.liQ.USER_SETTINGS, section: _.JJy.SETTINGS_PREMIUM, object: _.ZSU.CARD };
 function v(e) {
     let { premiumSubscription: t, discountInfo: n, invoicePreview: r, isDiscountActive: a } = e,
         o = f.Ay.getPlanIdFromInvoice(t, r),
@@ -111,7 +111,7 @@ function O(e, t) {
         },
         showCancelModal: s,
         switchPlans: function () {
-            (0, g.A)({ analyticsLocations: l, analyticsLocation: t, analyticsObject: N, subscription: e });
+            (0, g.A)({ analyticsLocations: l, analyticsLocation: t, analyticsObject: C, subscription: e });
         },
     };
 }
@@ -135,35 +135,35 @@ n.d(
             return (0, A.m1)(I)
                 ? null
                 : (0, i.jsx)("div", {
-                      className: C.S6,
+                      className: y.S6,
                       children: (0, i.jsx)(c.h, {
                           color: "nitro-pink",
-                          className: C.YL,
+                          className: y.YL,
                           children: (0, i.jsxs)("div", {
-                              className: C.mK,
+                              className: y.mK,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: C.Gp,
+                                      className: y.Gp,
                                       children: [
                                           (0, i.jsx)(h.A, {
                                               color: "currentcolor",
-                                              className: C.fJ,
+                                              className: y.fJ,
                                               "aria-label": b.intl.string(b.t.lpNrPu),
                                           }),
                                           (0, i.jsx)(s.E, {
-                                              className: C.tD,
+                                              className: y.tD,
                                               variant: "body-sm/medium",
                                               color: "text-strong",
                                               children: null != g && _,
                                           }),
                                       ],
                                   }),
-                                  (0, i.jsx)("div", { className: C.T }),
+                                  (0, i.jsx)("div", { className: y.T }),
                                   (0, i.jsxs)("div", {
-                                      className: C.ly,
+                                      className: y.ly,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: C.Yc,
+                                              className: y.Yc,
                                               children: [
                                                   null != g
                                                       ? (0, i.jsx)(j, { discountOffer: g, premiumSubscription: t })
@@ -174,13 +174,13 @@ n.d(
                                                             isDiscountActive: null != d,
                                                         }),
                                                   (0, i.jsx)("div", {
-                                                      className: C.e_,
+                                                      className: y.e_,
                                                       children: (function () {
                                                           let e = f.Ay.isSwitchingPlansDisabled(t),
                                                               n = f.Ay.getSwitchingPlansDisabledMessage(t);
                                                           if (!f.Ay.isBaseSubscriptionCanceled(t))
                                                               return (0, i.jsxs)("div", {
-                                                                  className: C.qK,
+                                                                  className: y.qK,
                                                                   children: [
                                                                       (0, i.jsx)(u.m, {
                                                                           text: n,
@@ -223,7 +223,7 @@ n.d(
                                                   }),
                                               ],
                                           }),
-                                          (0, i.jsx)("img", { className: C.Hp, src: y.A, alt: "", draggable: !1 }),
+                                          (0, i.jsx)("img", { className: y.Hp, src: N.A, alt: "", draggable: !1 }),
                                       ],
                                   }),
                               ],

@@ -48,8 +48,8 @@ l.d(
                 ),
                 o = m(e, t),
                 [f, p] = n.useState(null),
-                v = [f, o].find((e) => null != e && l.some((t) => t.guildId === e));
-            return { servers: l, serverId: v ?? l[0]?.guildId ?? null, setServerId: p };
+                h = [f, o].find((e) => null != e && l.some((t) => t.guildId === e));
+            return { servers: l, serverId: h ?? l[0]?.guildId ?? null, setServerId: p };
         },
     },
 );

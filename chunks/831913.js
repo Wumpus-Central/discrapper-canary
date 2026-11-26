@@ -12,8 +12,8 @@ var n = l(477900),
     m = l(733791),
     g = l(680032),
     p = l(894076),
-    v = l(191850),
-    h = l(792996),
+    h = l(191850),
+    v = l(792996),
     x = l(653036);
 function b(e) {
     let { project: t, transitionState: l, onClose: b } = e,
@@ -31,11 +31,11 @@ function b(e) {
                     try {
                         await (0, c.kY)(e.id);
                     } catch {
-                        return (r(h.intl.string(v.default["d+wTRF"])), u(null), l(!1), null);
+                        return (r(v.intl.string(h.default["d+wTRF"])), u(null), l(!1), null);
                     }
                     (l(!1), (0, p.A)(e, "removed"));
                     let t = f.Ay.getIntegrationStatus(e.id)?.owner_authorization_revoked === !0;
-                    return h.intl.formatToPlainString(t ? v.default.tOu7uv : v.default.TWYUzf, { app: d });
+                    return v.intl.formatToPlainString(t ? h.default.tOu7uv : h.default.TWYUzf, { app: d });
                 }, [d, i, e]);
             return {
                 appName: d,
@@ -46,32 +46,32 @@ function b(e) {
                 submit: b,
             };
         })(t),
-        { appName: j, rows: A, keptChannels: k, pending: w, error: S } = y;
+        { appName: j, rows: k, keptChannels: A, pending: S, error: w } = y;
     return (0, n.jsx)(r.a, {
         transitionState: l,
         onClose: b,
         role: "alertdialog",
-        title: h.intl.formatToPlainString(v.default.cAxBIL, { app: j }),
-        notice: null == S ? void 0 : { type: "critical", message: S, role: "alert" },
+        title: v.intl.formatToPlainString(h.default.cAxBIL, { app: j }),
+        notice: null == w ? void 0 : { type: "critical", message: w, role: "alert" },
         actions: [
-            { text: h.intl.string(h.t["ETE/oC"]), variant: "secondary", onClick: b, disabled: w },
+            { text: v.intl.string(v.t["ETE/oC"]), variant: "secondary", onClick: b, disabled: S },
             {
-                text: h.intl.string(v.default.ErhKil),
+                text: v.intl.string(h.default.ErhKil),
                 variant: "critical-primary",
                 onClick: async function () {
                     let e = await y.submit();
                     null != e &&
                         ((0, i.P0)({ text: e, variant: "success" }), (0, s.s7)(), (0, d.n0)(t.id, j, { kind: "wand" }));
                 },
-                loading: w,
-                disabled: w,
+                loading: S,
+                disabled: S,
             },
         ],
         children: (0, n.jsxs)(u.B, {
             gap: 12,
             children: [
-                (0, n.jsx)(x.A, { rows: A }),
-                null != k ? (0, n.jsx)(o.E, { variant: "body-sm/normal", color: "text-muted", children: k }) : null,
+                (0, n.jsx)(x.A, { rows: k }),
+                null != A ? (0, n.jsx)(o.E, { variant: "body-sm/normal", color: "text-muted", children: A }) : null,
             ],
         }),
     });

@@ -11,7 +11,7 @@ var n = l(477900),
     m = l(407653),
     g = l(191850),
     p = l(792996),
-    v = l(587041);
+    h = l(587041);
 l.d(
     t,
     {},
@@ -20,14 +20,14 @@ l.d(
             let { attachmentId: t } = e,
                 l = a.useContext(c.Fu),
                 r = (0, f.Od)(l, t),
-                h = r?.name ?? p.intl.string(g.default.ff9Q4C),
+                v = r?.name ?? p.intl.string(g.default.ff9Q4C),
                 x = (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: v.xn }), h],
+                    children: [(0, n.jsx)(m.A, { projectId: l, file: r, className: h.xn }), v],
                 });
             return null != l && null != r && o.XB.has(r.content_type)
                 ? (0, n.jsx)(s.D, {
                       tag: "span",
-                      className: i()(v.Pq, v.Td),
+                      className: i()(h.Pq, h.Td),
                       onClick: async () => {
                           let e;
                           try {
@@ -45,7 +45,7 @@ l.d(
                       "aria-label": p.intl.formatToPlainString(g.default.GtNukg, { name: r.name }),
                       children: x,
                   })
-                : (0, n.jsx)("span", { className: v.Pq, children: x });
+                : (0, n.jsx)("span", { className: h.Pq, children: x });
         },
     },
 );

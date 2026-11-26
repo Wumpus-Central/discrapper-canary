@@ -12,21 +12,21 @@ var i,
     g = n(270003),
     h = n(225419),
     x = n(503698),
-    p = n.n(x),
-    A = n(785007),
+    A = n.n(x),
+    p = n(785007),
     b = n(789645),
     f = n(933832),
     j = n(88187),
     N = n(939249),
-    E = n(792996),
-    C = n(622061),
-    v = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
-let I = Object.keys(v);
+    C = n(792996),
+    v = n(622061),
+    E = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
+let I = Object.keys(E);
 function T(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a, permissionName: r } = e,
-        { ref: o, ...c } = (0, A._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
+        { ref: o, ...c } = (0, p._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
     return (0, l.jsx)("div", {
-        className: p()(C.Os, { [C.r9]: s }),
+        className: A()(v.Os, { [v.r9]: s }),
         ref: o,
         id: a,
         ...c,
@@ -53,24 +53,24 @@ function y(e) {
         { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            ((i = E.intl.string(E.t["6639O5"])), (t = b.XSmallIcon), (n = C.Xg));
+            ((i = C.intl.string(C.t["6639O5"])), (t = b.XSmallIcon), (n = v.Xg));
             break;
         case "ALLOW":
-            ((i = E.intl.string(E.t.RzDfSk)), (t = f.CheckmarkLargeIcon), (n = C.cw));
+            ((i = C.intl.string(C.t.RzDfSk)), (t = f.CheckmarkLargeIcon), (n = v.cw));
             break;
         default:
-            ((i = E.intl.string(E.t.ujC3ZS)), (t = j.SlashIcon), (n = C.le));
+            ((i = C.intl.string(C.t.ujC3ZS)), (t = j.SlashIcon), (n = v.le));
     }
-    let c = null != o ? E.intl.formatToPlainString(E.t.KgPfJx, { permissionName: o, action: i }) : i,
-        d = (0, A.Gx)({ isSelected: r, label: c });
+    let c = null != o ? C.intl.formatToPlainString(C.t.KgPfJx, { permissionName: o, action: i }) : i,
+        d = (0, p.Gx)({ isSelected: r, label: c });
     return (0, l.jsx)(N.D, {
-        className: p()(C.AS, n, { [C.wH]: r }),
+        className: A()(v.AS, n, { [v.wH]: r }),
         onClick: () => a(s),
         ...d,
         children: (0, l.jsx)(t, { color: "currentColor", size: "xs" }),
     });
 }
-T.Types = v;
+T.Types = E;
 var S = n(452027);
 function k(e) {
     let { value: t, onChange: n, disabled: i, permissionName: s, ...a } = e;
@@ -95,7 +95,7 @@ class w extends s.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
-        return a.zy(t, e) ? v.ALLOW : a.zy(n, e) ? v.DENY : v.PASSTHROUGH;
+        return a.zy(t, e) ? E.ALLOW : a.zy(n, e) ? E.DENY : E.PASSTHROUGH;
     }
     getPermissionValue(e, t) {
         return a.zy(t, e);
@@ -117,8 +117,8 @@ class w extends s.PureComponent {
         let { title: n, description: i, flag: s } = e,
             { permissions: a, locked: r, permissionRender: g } = this.props,
             x = g?.(s),
-            p = !!(r || x),
-            A = "string" == typeof x && "" !== x ? o.DenyIcon : void 0,
+            A = !!(r || x),
+            p = "string" == typeof x && "" !== x ? o.DenyIcon : void 0,
             b =
                 null == a
                     ? (0, l.jsx)(
@@ -127,8 +127,8 @@ class w extends s.PureComponent {
                               label: n,
                               permissionName: n,
                               description: (0, h.Nk)(i),
-                              icon: A,
-                              disabled: p,
+                              icon: p,
+                              disabled: A,
                               value: this.getOverwriteValue(s),
                               onChange: (e) => this.handleChange(s, e),
                           },
@@ -139,8 +139,8 @@ class w extends s.PureComponent {
                           {
                               label: n,
                               description: (0, h.Nk)(i),
-                              icon: A,
-                              disabled: p,
+                              icon: p,
+                              disabled: A,
                               checked: this.getPermissionValue(s, a),
                               onChange: (e) => this.handleChange(s, e),
                           },

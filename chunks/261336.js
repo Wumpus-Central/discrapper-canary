@@ -3655,7 +3655,7 @@ function iN() {
                 (0, ip.fO)({
                     message: new ix.Ay({
                         content: "",
-                        components: [{ type: ib.I5.CHECKPOINT_CARD, id: (0, i_.X1)("0"), checkpointData: t }],
+                        components: [{ type: ib.I5.CHECKPOINT_CARD, id: (0, i_.X1)(0), checkpointData: t }],
                     }),
                     source: "checkpoint",
                     customSendHandler: async (t, a, i) => {

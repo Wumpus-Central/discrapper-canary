@@ -1,4 +1,4 @@
-r.exports = {
+i.exports = {
     kL: "container_INOv01",
     fG: "noCredit_INOv01",
     nM: "row_INOv01",

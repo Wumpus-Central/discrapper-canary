@@ -21,7 +21,7 @@ var r,
     S = n(652215),
     C = n(178758),
     _ = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
-let v = {
+let T = {
         [b.T$.DISPLAY]: [
             "name",
             "hoist",
@@ -37,7 +37,7 @@ let v = {
         [b.T$.MEMBERS]: [],
         [b.T$.VERIFICATIONS]: [],
     },
-    T = new Set(),
+    v = new Set(),
     y = S.XlH.CLOSED,
     R = !1,
     G = !1,
@@ -49,7 +49,7 @@ let v = {
     P = new Map(),
     U = new Map();
 function w(e) {
-    (T.delete(e), 0 === T.size && (R = !1));
+    (v.delete(e), 0 === v.size && (R = !1));
 }
 function F(e) {
     (M.delete(e), 0 === M.size && (O = !1));
@@ -76,7 +76,7 @@ function V() {
         (R = !1),
         (G = !1),
         (s = void 0),
-        T.clear(),
+        v.clear(),
         U.clear(),
         (y = S.XlH.OPEN),
         (D = [...(L = null != i ? [...f.A.getSortedRoles(i.id)] : [])]),
@@ -120,7 +120,7 @@ function z(e, t) {
     });
 }
 function Y(e, t) {
-    let n = v[t];
+    let n = T[t];
     if (null == n || 0 === n.length) return null;
     let i = q(e),
         l = J(e);
@@ -129,7 +129,7 @@ function Y(e, t) {
 let W = o().debounce(() => {
     let e = !1;
     (G && ((G = B().length > 0) || (e = !0)),
-        [...T].forEach((t) => {
+        [...v].forEach((t) => {
             (0, j.nk)(q(t), J(t)) && (w(t), (e = !0));
         }),
         [...M].forEach((t) => {
@@ -151,7 +151,7 @@ function K(e, t) {
     if (n < 0) return !1;
     let i = { ...e, ...t },
         l = [...L];
-    ((l[n] = i), (L = l), (R = !0), T.add(i.id), W());
+    ((l[n] = i), (L = l), (R = !0), v.add(i.id), W());
 }
 function q(e) {
     return L.find((t) => {
@@ -169,7 +169,7 @@ function Z(e) {
     let { guildId: t } = e;
     if (null == (i = I.A.getProps().guild) || t !== i.id || y === S.XlH.SUBMITTING) return !1;
     let n = [...f.A.getSortedRoles(i.id)];
-    T.forEach((e) => {
+    v.forEach((e) => {
         let t = q(e),
             i = -1;
         null ==
@@ -181,7 +181,7 @@ function Z(e) {
             : (n[i] = t);
     });
     let l = new Map();
-    (T.forEach((e) => {
+    (v.forEach((e) => {
         let t = U.get(e);
         null != t && l.set(e, t);
     }),
@@ -222,7 +222,7 @@ class Q extends u.Ay.Store {
         return i;
     }
     get editedRoleIds() {
-        return Array.from(T);
+        return Array.from(v);
     }
     get editedRoleIdsForConfigurations() {
         return M;
@@ -401,7 +401,7 @@ let $ = new Q(
                   ((i = null),
                       (D = L = []),
                       k.clear(),
-                      T.clear(),
+                      v.clear(),
                       U.clear(),
                       P.clear(),
                       (M = new Set()),

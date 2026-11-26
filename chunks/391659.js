@@ -1,4 +1,4 @@
-r.exports = {
+i.exports = {
     f8: "fractionalPremiumAccountCredit_ysRrD_",
     xF: "premiumSubscriptionAccountCredit_ysRrD_",
     Bh: "accountCreditRow_ysRrD_",

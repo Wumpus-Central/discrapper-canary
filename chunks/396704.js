@@ -14,22 +14,22 @@ var a = n(855986),
     g = n(619006),
     h = n(50268),
     x = n(34457),
-    p = n(576705),
-    A = n(292024),
+    A = n(576705),
+    p = n(292024),
     b = n(792996);
 function f(e, t, l) {
-    let s = (0, a.bG)([p.A], () => {
-            let n = p.A.getHighestRole(e);
-            return !p.A.isRoleHigher(e, n, t);
+    let s = (0, a.bG)([A.A], () => {
+            let n = A.A.getHighestRole(e);
+            return !A.A.isRoleHigher(e, n, t);
         }),
         f = [],
         j = t.tags?.guild_connections === null,
         N = e.verificationRoleId === t.id,
-        E = t.managed && !j,
-        C = null != t && (0, x.Oy)(t);
+        C = t.managed && !j,
+        v = null != t && (0, x.Oy)(t);
     s ||
-        E ||
         C ||
+        v ||
         null == l ||
         f.push(
             (0, i.jsx)(
@@ -46,10 +46,10 @@ function f(e, t, l) {
                 "duplicate-role",
             ),
         );
-    let v = (0, A.A)(e, t);
-    null != v && f.push(v);
+    let E = (0, p.A)(e, t);
+    null != E && f.push(E);
     let I = (0, h.A)({ id: t.id, label: b.intl.string(b.t.sMsaLg) });
-    if ((null != I && f.push(I), !s && !E && !C)) {
+    if ((null != I && f.push(I), !s && !C && !v)) {
         async function T() {
             (j && (await (0, g.qK)(e.id, t.id, [])), m.A.deleteRole(e.id, t.id));
         }

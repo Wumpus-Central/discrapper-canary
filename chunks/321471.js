@@ -28,7 +28,7 @@ t.d(
                 I = null != p ? C : void 0,
                 [N, A] = r.useState(void 0),
                 [y, E] = r.useState(void 0),
-                b = void 0 !== y;
+                S = void 0 !== y;
             return (0, l.jsx)("div", {
                 ref: f,
                 className: o ?? void 0,
@@ -43,7 +43,7 @@ t.d(
                     hasValue: y,
                     setHasValue: E,
                     children: (0, l.jsxs)("div", {
-                        className: b ? s.G : void 0,
+                        className: S ? s.G : void 0,
                         children: [
                             null != h || null != p
                                 ? (0, l.jsx)(i.z, {

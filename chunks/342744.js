@@ -33,20 +33,20 @@ function b(e) {
         ],
     });
 }
-function C() {
+function y() {
     return (0, i.jsxs)("div", {
         className: _.rf,
         children: [(0, i.jsx)("div", { className: _.dk }), (0, i.jsx)("div", { children: I.intl.string(I.t.G27uHe) })],
     });
 }
-function y(e) {
+function N(e) {
     let { step: t, errorMsg: n, premiumSubscription: l } = e;
     if (null == l) return (0, i.jsx)(c.y, {});
     switch (t) {
         case 1:
             return (0, i.jsx)(b, { errorMsg: n });
         case 2:
-            return (0, i.jsx)(C, {});
+            return (0, i.jsx)(y, {});
         default:
             throw new T.f({ message: `Unexpected step: ${t}` });
     }
@@ -63,12 +63,12 @@ n.d(
             }, []);
             let c = (0, a.bG)([p.A], () => p.A.getPremiumTypeSubscription()),
                 [T, _] = l.useState(1),
-                [b, C] = l.useState(!1),
-                [N, v] = l.useState(null),
+                [b, y] = l.useState(!1),
+                [C, v] = l.useState(null),
                 j = l.useCallback(async () => {
                     if (null != c)
                         try {
-                            (C(!0), v(null));
+                            (y(!0), v(null));
                             let e = (0, f.v)(c, 1);
                             (r()(
                                 (0, S.bx)(e) <= (0, S.bx)(c.additionalPlans),
@@ -93,7 +93,7 @@ n.d(
                                     e.code === g.tG.BILLING_PAUSE_INVALID_UPDATE ? I.t.dq4vq7 : I.t["5mlOCW"],
                                 ),
                             ),
-                                C(!1));
+                                y(!1));
                         }
                 }, [c, t, u]);
             return (0, i.jsx)(E.f5, {
@@ -128,7 +128,7 @@ n.d(
                     children: (0, i.jsx)(x.d, {
                         errorHandlingBehavior: "close-and-alert",
                         guildBoostSlotId: t,
-                        children: (0, i.jsx)(y, { step: T, errorMsg: N, premiumSubscription: c }),
+                        children: (0, i.jsx)(N, { step: T, errorMsg: C, premiumSubscription: c }),
                     }),
                 }),
             });

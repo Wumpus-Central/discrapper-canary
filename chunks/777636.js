@@ -929,8 +929,8 @@ let e6 = (0, B.mj)({
 });
 var e5 = n(111162),
     e7 = n(927813);
-function e4() {}
-var e8 =
+function e8() {}
+var e4 =
     (((l = {})[(l.AUTHENTICATION_FAILED = 4004)] = "AUTHENTICATION_FAILED"),
     (l[(l.INVALID_SESSION = 4006)] = "INVALID_SESSION"),
     (l[(l.SERVER_NOT_FOUND = 4011)] = "SERVER_NOT_FOUND"),
@@ -1385,7 +1385,7 @@ class ts extends N.A {
         (this.stopHeartbeater(), this.clearHelloTimeout());
         let t = this.webSocket;
         ((this.webSocket = null),
-            null != t && ((t.onopen = e4), (t.onmessage = e4), (t.onerror = e4), (t.onclose = e4), e?.(t)),
+            null != t && ((t.onopen = e8), (t.onmessage = e8), (t.onerror = e8), (t.onclose = e8), e?.(t)),
             this.backoff.cancel());
     }
     cleanupState() {
@@ -3542,8 +3542,8 @@ function t3(e, t) {
 var t6 = n(753070),
     t5 = n(396574),
     t7 = n(792996);
-let t4 = /^https/.test("https:") ? "wss:" : "ws:",
-    t8 = null;
+let t8 = /^https/.test("https:") ? "wss:" : "ws:",
+    t4 = null;
 function t9() {
     return new T.A(1e3, 1e4);
 }
@@ -3837,10 +3837,10 @@ class na extends N.A {
     set endpoint(e) {
         if ((this.recordEvent({ c: 6, e: null != e }), null == e)) ((this._endpoint = null), (this.hostname = null));
         else {
-            e = `${t4}//${e}`;
+            e = `${t8}//${e}`;
             let { hostname: t, port: n } = e$.A.toURLSafe(e) ?? {},
                 i = null != n ? parseInt(n) : 0 / 0;
-            (null != t && (80 === i || 443 === i) && (e = `${t4}//${t}`),
+            (null != t && (80 === i || 443 === i) && (e = `${t8}//${t}`),
                 (this._endpoint = e + "/"),
                 (this.hostname = t));
         }
@@ -4269,9 +4269,9 @@ class na extends N.A {
         let r = "Force Close" !== i;
         if (r) {
             let e =
-                n === e8.REPEATED_MLS_INVALID_MESSAGES ||
-                n === e8.DAVE_DOWNGRADE_REFUSED ||
-                n === e8.DAVE_INVALID_MESSAGE
+                n === e4.REPEATED_MLS_INVALID_MESSAGES ||
+                n === e4.DAVE_DOWNGRADE_REFUSED ||
+                n === e4.DAVE_INVALID_MESSAGE
                     ? this._scheduleMLSFailureReconnect()
                     : this._scheduleReconnect();
             this.logger.warn(`Disconnect was not clean! reason=${i}. Reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
@@ -4740,7 +4740,7 @@ class na extends N.A {
         (this._connection?.fastUdpReconnect(), this._connection?.clearAllSpeaking());
     }
     async _setAvx512EntropyHistogramIfSupported(e) {
-        (await (t8 ??= (async function () {
+        (await (t4 ??= (async function () {
             let e = await (0, eD.w)();
             return e?.cpu_features?.includes(eb.Avx512icl) === !0;
         })())) &&

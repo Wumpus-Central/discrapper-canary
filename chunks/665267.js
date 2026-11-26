@@ -20,15 +20,15 @@ var i = n(477900),
     I = n(511484),
     _ = n(811611),
     b = n(129230),
-    C = n(830543),
-    y = n(652215),
-    N = n(385803),
+    y = n(830543),
+    N = n(652215),
+    C = n(385803),
     v = n(211824),
     j = n(682901),
     O = n(792996),
     D = n(510081);
 function P() {
-    ((0, g.nf)(g.HP.CLIENT_THEMES), (0, C.default)());
+    ((0, g.nf)(g.HP.CLIENT_THEMES), (0, y.default)());
 }
 function R() {
     let e = p.R.useConfig({ location: "appearance_theme_trial_cta" }),
@@ -40,12 +40,12 @@ function R() {
     return e && t?.subscriptionTrial?.skuId === j.pe.TIER_2
         ? (0, i.jsx)(d.r, {
               trialOffer: t,
-              premiumModalAnalyticsLocation: { object: y.ZSU.BUTTON_CTA, objectType: y.btD.BUY },
+              premiumModalAnalyticsLocation: { object: N.ZSU.BUTTON_CTA, objectType: N.btD.BUY },
           })
         : (0, i.jsx)(x.A, {
               subscriptionTier: j.pe.TIER_2,
               defaultTextOverride: l,
-              premiumModalAnalyticsLocation: { object: y.ZSU.BUTTON_CTA, objectType: y.btD.BUY },
+              premiumModalAnalyticsLocation: { object: N.ZSU.BUTTON_CTA, objectType: N.btD.BUY },
               fullWidth: !0,
           });
 }
@@ -75,11 +75,11 @@ function G(e) {
         { analyticsLocations: d } = (0, u.Ay)(o.A.USER_SETTINGS);
     return (l.useEffect(() => {
         a &&
-            (b.default.track(y.HAw.PREMIUM_UPSELL_VIEWED, {
+            (b.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: j.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: d,
             }),
-            (0, h.sq)(y.U7l.PREMIUM_UPSELL_VIEWED, d, () => (0, f.uq)(j.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
+            (0, h.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, d, () => (0, f.uq)(j.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
     }, [a, d]),
     a && n && r)
         ? (0, i.jsx)("div", { className: D.OM, children: t })
@@ -137,7 +137,7 @@ n.d(
                             wrap: !0,
                             gap: 8,
                             padding: { top: 24 },
-                            children: (0, i.jsx)(m.Zg, { disabled: !1, size: N.ni.SIZE_48 }),
+                            children: (0, i.jsx)(m.Zg, { disabled: !1, size: C.ni.SIZE_48 }),
                         }),
                         (0, i.jsx)(U, {}),
                         (0, i.jsx)(M, {}),

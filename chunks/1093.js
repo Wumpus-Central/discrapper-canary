@@ -1,4 +1,4 @@
-l.d(t, { JQ: () => f, fn: () => p, As: () => x });
+l.d(t, { JQ: () => f, fn: () => p, As: () => v });
 var n = l(477900),
     a = l(582128),
     i = l(858899),
@@ -19,9 +19,9 @@ function f(e) {
             removeTrack: d,
             updateTrackRange: f,
             updateTextTrackData: p,
-            updateImageTrackData: x,
+            updateImageTrackData: v,
         } = (0, o.T)(),
-        [v, g] = a.useState(null),
+        [x, g] = a.useState(null),
         [b, j] = a.useState(null),
         y = a.useCallback(
             (e) => {
@@ -33,16 +33,16 @@ function f(e) {
             let e = c();
             (g(e), j(e));
         }, [c]),
-        N = a.useCallback(async () => {
+        k = a.useCallback(async () => {
             let e = await h();
             null != e && g(u(e));
         }, [u]),
-        k = a.useCallback(
+        N = a.useCallback(
             async (e) => {
                 let t = await h();
-                null != t && x(e, (e) => ({ ...e, ...t }));
+                null != t && v(e, (e) => ({ ...e, ...t }));
             },
-            [x],
+            [v],
         ),
         E = a.useCallback(
             (e) => {
@@ -54,19 +54,19 @@ function f(e) {
         A = a.useMemo(
             () => ({
                 tracks: r,
-                selectedTrackId: v,
+                selectedTrackId: x,
                 textTrackIdToFocus: b,
                 setSelectedTrackId: y,
                 addTextTrack: C,
-                pickAndAddImageTrack: N,
-                pickAndReplaceImage: k,
+                pickAndAddImageTrack: k,
+                pickAndReplaceImage: N,
                 removeTrack: E,
                 updateTrackRange: f,
                 updateTextTrackData: p,
-                updateImageTrackData: x,
+                updateImageTrackData: v,
                 editorFeatures: w,
             }),
-            [r, v, b, y, C, N, k, E, f, p, x, w],
+            [r, x, b, y, C, k, N, E, f, p, v, w],
         );
     return (0, n.jsx)(m.Provider, { value: A, children: t });
 }
@@ -90,6 +90,6 @@ function p() {
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
-function x() {
+function v() {
     return p().editorFeatures;
 }

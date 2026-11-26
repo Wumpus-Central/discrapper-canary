@@ -32,10 +32,10 @@ l.d(
                         })),
                     [e, l, g, m],
                 ),
-                v = (0, c.S6)(e, t);
+                h = (0, c.S6)(e, t);
             return {
                 options: p,
-                onQueryChange: a.useCallback((e) => v(e.currentTarget.value), [v]),
+                onQueryChange: a.useCallback((e) => h(e.currentTarget.value), [h]),
                 matchSorterOptions: f,
             };
         },

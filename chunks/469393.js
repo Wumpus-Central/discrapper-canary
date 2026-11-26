@@ -1,1 +1,1 @@
-r.exports = { r: "body_NLtuwI", z: "details_NLtuwI" };
+t.exports = { r: "body_NLtuwI", z: "details_NLtuwI" };

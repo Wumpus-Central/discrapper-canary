@@ -12,8 +12,8 @@ var a = l(430392),
     m = l(664121),
     g = l(625903),
     p = l(331322),
-    v = l(834730),
-    h = l(191850),
+    h = l(834730),
+    v = l(191850),
     x = l(792996),
     b = l(32924);
 let y = {
@@ -38,10 +38,10 @@ l.d(
             return (0, n.jsxs)(p.B, {
                 gap: 8,
                 children: [
-                    (0, n.jsx)(v.E, {
+                    (0, n.jsx)(h.E, {
                         variant: "body-md/semibold",
                         color: "text-strong",
-                        children: x.intl.string(h.default["kG/2e8"]),
+                        children: x.intl.string(v.default["kG/2e8"]),
                     }),
                     (0, n.jsx)("div", {
                         className: b.aP,
@@ -58,7 +58,7 @@ l.d(
                                             className: b.Kk,
                                             "aria-hidden": !0,
                                         }),
-                                        (0, n.jsx)(v.E, {
+                                        (0, n.jsx)(h.E, {
                                             variant: "body-sm/medium",
                                             color: "text-subtle",
                                             children: e.text,

@@ -89,7 +89,7 @@ n.d(
             if ((0, g.m1)(f)) return null;
             let p = E.Ay.isSwitchingPlansDisabled(n),
                 I = E.Ay.getSwitchingPlansDisabledMessage(n),
-                C =
+                y =
                     null == (t = n.metadata?.active_discount_expires_at)
                         ? null
                         : S.intl.formatToPlainString(S.t.u8bQ1q, { expiryDate: new Date(t) });
@@ -113,7 +113,7 @@ n.d(
                                         className: T.Sd,
                                         variant: "body-sm/medium",
                                         color: "text-strong",
-                                        children: C,
+                                        children: y,
                                     }),
                                 ],
                             }),

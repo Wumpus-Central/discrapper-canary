@@ -27,7 +27,7 @@ n.d(
                 v = r.useRef(null),
                 [b, j] = r.useState(!1),
                 y = (0, i.A)(),
-                w = r.useCallback(
+                k = r.useCallback(
                     async (e) => {
                         let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                         try {
@@ -45,9 +45,9 @@ n.d(
                     },
                     [t, n],
                 ),
-                k = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-                A = null == f ? 0 : Math.round(f * Math.min(k, 2)),
-                S = (0, a.KK)(t, n, { fps: o, onFrame: w, enabled: !d && y, width: A }),
+                w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
+                A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+                S = (0, a.KK)(t, n, { fps: o, onFrame: k, enabled: !d && y, width: A }),
                 C = (0, a.AV)(t, n),
                 I = r.useRef(C);
             (r.useEffect(() => {
