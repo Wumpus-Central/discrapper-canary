@@ -15,8 +15,8 @@ var l = n(477900),
     f = n(129230),
     p = n(857512),
     x = n(993408),
-    C = n(212407),
-    v = n(775602),
+    v = n(212407),
+    C = n(775602),
     A = n(620632),
     L = n(403362);
 let b = "https://cdn.discordapp.com/";
@@ -93,7 +93,7 @@ let M = r.memo((e) => {
             })
         );
     }),
-    w = r.memo((e) => {
+    B = r.memo((e) => {
         let {
                 collectionName: t,
                 collectionPromotion: n,
@@ -148,7 +148,7 @@ let M = r.memo((e) => {
             ],
         });
     });
-var B = n(60140),
+var w = n(60140),
     H = n(653887),
     U = n(921201);
 let G = { x: 0, y: 0 };
@@ -224,7 +224,14 @@ let $ = (e) => {
     return (0, l.jsx)("div", {
         ref: o,
         className: a()(U.x, { [U.L]: !n }),
-        children: (0, l.jsx)(H._, { src: t, fit: "fit-width", eventTargetRef: s, dynamicDataBinding: f, onLoad: m }),
+        children: (0, l.jsx)(H._, {
+            src: t,
+            fit: "cover",
+            alignment: "top-center",
+            eventTargetRef: s,
+            dynamicDataBinding: f,
+            onLoad: m,
+        }),
     });
 };
 var V = n(758836),
@@ -244,7 +251,7 @@ let Y = (e) => {
         N = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
         j = (0, p.uM)(),
         { analyticsLocations: k } = (0, h.Ay)(m.A.COLLECTIBLES_SHOP_HERO),
-        O = (0, C.Kk)(t),
+        O = (0, v.Kk)(t),
         { bannerDisplayConfig: T, logoDisplayConfig: R } = O,
         P = y(O.heroLogo),
         M = y(O.heroBannerStatic),
@@ -256,7 +263,7 @@ let Y = (e) => {
             handleRiveLoad: Y,
         } = (function (e) {
             let { heroBannerRive: t, promotionType: n } = e,
-                l = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
+                l = (0, o.bG)([C.Ay], () => C.Ay.useReducedMotion),
                 s = null != t && n === g.hE.COLLECTION_SEQUENCED_OFFER && !l,
                 [a, i] = r.useState(null);
             s || null == a || i(null);
@@ -293,7 +300,7 @@ let Y = (e) => {
         }, [s, X, t.categorySkuId, j, A, Q]);
     if (null == N) return null;
     let J = n.countdownPosition === i.l.LEFT,
-        ee = (0, l.jsx)(w, {
+        ee = (0, l.jsx)(B, {
             collectionName: t.name,
             collectionPromotion: n,
             forceHideCountdownCta: I,
@@ -368,7 +375,7 @@ let Y = (e) => {
                             ],
                         }),
                         !b &&
-                            (0, l.jsx)(B.A, {
+                            (0, l.jsx)(w.A, {
                                 heroBlockRecord: t,
                                 tab: A,
                                 isBlockLoading: !1,
