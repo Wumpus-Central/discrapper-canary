@@ -24,9 +24,9 @@ var i = l(477900),
     w = l(287809),
     E = l(961553),
     I = l(60498),
-    P = l(233470),
-    S = l(951178),
-    k = l(277085),
+    k = l(233470),
+    P = l(951178),
+    S = l(277085),
     T = l(88112),
     L = l(734057),
     R = l(811587);
@@ -39,7 +39,7 @@ var M = l(722701),
 let q = [];
 var U = l(641655),
     D = l(652215);
-let G = new Set(["app_channel", S.q7.ACTIVITY, S.q7.VOICE_CHANNEL]);
+let G = new Set(["app_channel", P.q7.ACTIVITY, P.q7.VOICE_CHANNEL]);
 var z = l(503698),
     F = l.n(z),
     W = l(31300),
@@ -344,14 +344,14 @@ var ew = l(229171);
 let eE = { screen_capture: W.ScreenIcon, connect_user_to_voice: O.VoiceNormalIcon },
     eI = {
         app_channel: Y.AppsIcon,
-        [S.q7.BOT]: Z.RobotIcon,
-        [S.q7.ACTIVITY]: B.ActivitiesIcon,
-        [S.q7.VOICE_CHANNEL]: O.VoiceNormalIcon,
-        [S.q7.PROFILE_WIDGET]: H.BadgeIcon,
-        [S.q7.AUTOMOD]: K.ShieldIcon,
-        [S.q7.OVERLAY]: X.WindowTopIcon,
+        [P.q7.BOT]: Z.RobotIcon,
+        [P.q7.ACTIVITY]: B.ActivitiesIcon,
+        [P.q7.VOICE_CHANNEL]: O.VoiceNormalIcon,
+        [P.q7.PROFILE_WIDGET]: H.BadgeIcon,
+        [P.q7.AUTOMOD]: K.ShieldIcon,
+        [P.q7.OVERLAY]: X.WindowTopIcon,
     };
-function eP(e) {
+function ek(e) {
     let { review: n } = e,
         { identity: l, appChannelsPrivate: a } = n,
         t = null == a || a.shared ? null : a,
@@ -363,7 +363,7 @@ function eP(e) {
                     label: e.label,
                     isNew: e.isNew,
                     trailing:
-                        e.creates && null != t ? (0, i.jsx)(ek, { appChannelsPrivate: t, disabled: n.saving }) : null,
+                        e.creates && null != t ? (0, i.jsx)(eS, { appChannelsPrivate: t, disabled: n.saving }) : null,
                 },
                 e.key,
             ),
@@ -464,7 +464,7 @@ function eP(e) {
         ],
     });
 }
-function eS(e) {
+function eP(e) {
     let { review: n, onConjureIcon: l } = e,
         { identity: t } = n,
         s = a.useRef(null),
@@ -494,7 +494,7 @@ function eS(e) {
           ? (0, i.jsx)("img", { className: ew.Dp, src: t.iconURL, alt: "" })
           : null;
 }
-function ek(e) {
+function eS(e) {
     let { appChannelsPrivate: n, disabled: l } = e;
     return (0, i.jsx)("div", {
         className: ew.to,
@@ -627,8 +627,8 @@ function eq(e) {
                 [p, x] = a.useState(!1),
                 g = (0, j.PV)(e),
                 v = d.trim(),
-                C = g ? (0, k.p)(v) : null,
-                S = (0, V.a1)(e, c),
+                C = g ? (0, S.p)(v) : null,
+                P = (0, V.a1)(e, c),
                 z = (function (e, n) {
                     let l = n?.views ?? null,
                         i = "user" === e.install_scope,
@@ -727,9 +727,9 @@ function eq(e) {
                 })(e, c),
                 F = null != z,
                 W = a.useMemo(() => {
-                    let n = (0, V.Dy)(e, c, S);
+                    let n = (0, V.Dy)(e, c, P);
                     return F ? n.filter((e) => !G.has(e.icon)) : n;
-                }, [e, c, S, F]),
+                }, [e, c, P, F]),
                 O = c?.views?.mounts.appChannels,
                 Y = null == z ? W.filter((e) => e.creates).length : (0, T.F7)(z.draft, O ?? []),
                 Z = g && Y > 0 && "guild" === e.install_scope && e.guild_id === n ? n : null,
@@ -749,7 +749,7 @@ function eq(e) {
                 K = (0, t.bG)([w.default], () => w.default.getCurrentUser());
             return {
                 projectId: e.id,
-                reason: S,
+                reason: P,
                 editable: g,
                 managedCopy: s,
                 identity: i,
@@ -775,10 +775,10 @@ function eq(e) {
                     h(!0);
                     try {
                         if (
-                            (g && (v !== e.name || i.changed) && (await (0, P.CW)(e.id, { ...i.changes, name: v })),
+                            (g && (v !== e.name || i.changed) && (await (0, k.CW)(e.id, { ...i.changes, name: v })),
                             !(await o.save()))
                         )
-                            throw Error("Saving who can remix failed");
+                            throw Error("Saving who can make a copy failed");
                         return !0;
                     } finally {
                         h(!1);
@@ -786,7 +786,7 @@ function eq(e) {
                 },
             };
         })(n, l.guildId);
-    async function S() {
+    async function P() {
         p.current = !0;
         try {
             return await C.save();
@@ -807,10 +807,10 @@ function eq(e) {
             (0, i.jsxs)("div", {
                 className: eM.wx,
                 children: [
-                    (0, i.jsx)(eS, {
+                    (0, i.jsx)(eP, {
                         review: C,
                         onConjureIcon: async function () {
-                            if (await S()) {
+                            if (await P()) {
                                 var e;
                                 (g(), (e = n.id), (0, v.dv)(e, b.intl.string(f.default["hOg/Uu"])));
                             }
@@ -833,7 +833,7 @@ function eq(e) {
                 ],
             }),
             (0, i.jsx)(r.c, {
-                children: (0, i.jsx)("div", { className: eM.rf, children: (0, i.jsx)(eP, { review: C }) }),
+                children: (0, i.jsx)("div", { className: eM.rf, children: (0, i.jsx)(ek, { review: C }) }),
             }),
             (0, i.jsxs)("div", {
                 className: eM.qr,
@@ -845,7 +845,7 @@ function eq(e) {
                         loading: C.saving,
                         disabled: l.disabled || null != C.nameError || C.placement?.blocked === !0,
                         onClick: async function () {
-                            (await S()) &&
+                            (await P()) &&
                                 (l.run(h, {
                                     appChannelsPrivate: C.appChannelsPrivate?.isPrivate === !0,
                                     ...(null != C.placement ? { viewMounts: C.placement.wire } : {}),

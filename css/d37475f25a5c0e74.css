@@ -1,0 +1,42 @@
+.autoUpdates_1a2dfO {
+    gap: var(--space-16);
+    justify-content: space-between
+}
+
+.autoUpdates_1a2dfO,
+.autoUpdatesLabel_1a2dfO {
+    align-items: center;
+    display: flex
+}
+
+.autoUpdatesLabel_1a2dfO {
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.info_1a2dfO {
+    border-radius: var(--radius-round);
+    color: var(--icon-muted);
+    display: inline-flex
+}
+
+.autoUpdatesSwitch_1a2dfO {
+    flex-shrink: 0
+}
+
+.source_1a2dfO {
+    white-space: nowrap
+}
+
+.sourceName_1a2dfO {
+    overflow-wrap: anywhere;
+    white-space: normal
+}
+
+.sourceIcon_1a2dfO {
+    display: inline-flex;
+    margin-inline-end: var(--space-4);
+    vertical-align: text-bottom
+}
+
+/*# sourceMappingURL=d37475f25a5c0e74.css.map*/

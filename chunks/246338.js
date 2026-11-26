@@ -58,7 +58,6 @@ n.d(
                 (0, d.L0)({ guildId: e?.guild_id, location: t })
             );
         },
-        dd: A,
         i8: function (e, t) {
             for (let { channel: n } of a.A.getChannels(e)[a.I]) if (E(n) === t) return n.id;
             return null;

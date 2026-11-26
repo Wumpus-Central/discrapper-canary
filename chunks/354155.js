@@ -6,31 +6,31 @@ var a = i(189213),
     o = i(95264),
     c = i(529424),
     s = i(412667),
-    p = i(395009),
-    d = i(207602),
+    d = i(395009),
+    p = i(207602),
     u = i(191850),
-    y = i(792996);
+    x = i(792996);
 i.d(
     n,
     {},
     {
         default: function (t) {
-            let { applicationId: n, source: i, ticket: x = null, transitionState: j, onClose: h } = t,
+            let { applicationId: n, source: i, ticket: y = null, transitionState: j, onClose: h } = t,
                 { guildId: f } = i,
-                g = (0, c.A)(n, x),
+                g = (0, c.A)(n, y),
                 {
                     type: m,
                     launching: v,
                     launchFailed: k,
                     run: C,
                 } = (0, s.A)(n, "ready" === g.type ? g.project : null, i),
-                A = { text: y.intl.string(y.t.cpT0Cq), variant: "secondary", onClick: h };
+                A = { text: x.intl.string(x.t.cpT0Cq), variant: "secondary", onClick: h };
             if ("ready" !== g.type && "info_only" !== g.type)
                 return (0, e.jsx)(a.a, {
                     transitionState: j,
                     onClose: h,
-                    title: y.intl.string(
-                        "loading" === g.type ? y.t.ZTNur7 : "expired" === g.type ? u.default.wahvH2 : u.default.mQma36,
+                    title: x.intl.string(
+                        "loading" === g.type ? x.t.ZTNur7 : "expired" === g.type ? u.default.wahvH2 : u.default.mQma36,
                     ),
                     actions: [A],
                 });
@@ -47,10 +47,10 @@ i.d(
                         : [
                               A,
                               {
-                                  text: y.intl.string(u.default.XWgAfc),
+                                  text: x.intl.string(u.default.XWgAfc),
                                   variant: "primary",
                                   onClick: function () {
-                                      null != w && (h(), (0, o.A)(w, f, "copy", x ?? void 0));
+                                      null != w && (h(), (0, o.A)(w, f, y ?? void 0));
                                   },
                               },
                           ],
@@ -58,7 +58,7 @@ i.d(
                     gap: 16,
                     children: [
                         null != m
-                            ? (0, e.jsx)(p.A, {
+                            ? (0, e.jsx)(d.A, {
                                   application: b,
                                   type: m,
                                   launching: v,
@@ -66,26 +66,26 @@ i.d(
                                       (await C()) && h();
                                   },
                               })
-                            : (0, e.jsx)(d.go, { application: b }),
+                            : (0, e.jsx)(p.go, { application: b }),
                         k
                             ? (0, e.jsx)(r.E, {
                                   variant: "body-sm/normal",
                                   color: "text-feedback-critical",
-                                  children: y.intl.string(u.default.hh2nuX),
+                                  children: x.intl.string(u.default.hh2nuX),
                               })
                             : null,
-                        (0, e.jsx)(d.PJ, { application: b }),
+                        (0, e.jsx)(p.PJ, { application: b }),
                         "ready" === g.type
                             ? (0, e.jsxs)(e.Fragment, {
                                   children: [
-                                      (0, e.jsx)(d.r8, { project: g.project }),
-                                      (0, e.jsx)(d.HP, { project: g.project, guildId: f }),
+                                      (0, e.jsx)(p.r8, { project: g.project }),
+                                      (0, e.jsx)(p.HP, { project: g.project, guildId: f }),
                                   ],
                               })
                             : (0, e.jsx)(r.E, {
                                   variant: "body-sm/normal",
                                   color: "text-muted",
-                                  children: y.intl.string(u.default["2DSRxV"]),
+                                  children: x.intl.string(u.default["2DSRxV"]),
                               }),
                     ],
                 }),

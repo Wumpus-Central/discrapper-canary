@@ -25,6 +25,9 @@ let p = new Map(),
             Du: function (e) {
                 return h.has(e);
             },
+            Zz: function (e, l) {
+                return ("guild" === e.install_scope) != (null != l);
+            },
             yG: function (e, l, n) {
                 let t = null,
                     m = !1;
@@ -55,11 +58,11 @@ let p = new Map(),
                                             (C ??= (0, c.Io)(y, e, v).catch(() => "rejected"))
                                         );
                                     }
-                                    let A = (function (e, l) {
-                                            if (null == l || "guild" !== e.install_scope) return null;
-                                            let n = i.A.getGuild(l);
-                                            return null != n && (0, o.sM)(n, "ConjureRemix") ? l : null;
-                                        })(e, l),
+                                    let A = (function (e) {
+                                            if (null == e) return null;
+                                            let l = i.A.getGuild(e);
+                                            return null != l && (0, o.sM)(l, "ConjureRemix") ? e : null;
+                                        })(l),
                                         S = (0, u.m)();
                                     p.set(S, (e, l) => {
                                         (p.delete(S), (E = e), h.add(e), (0, r.vG)(e, l), P(e), w?.(e, A));

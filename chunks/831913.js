@@ -1,8 +1,8 @@
 l.d(t, { A: () => y });
 var n = l(477900),
     a = l(582128),
-    r = l(189213),
-    i = l(858899),
+    i = l(189213),
+    r = l(858899),
     s = l(192308),
     u = l(331322),
     o = l(834730),
@@ -11,7 +11,7 @@ var n = l(477900),
     f = l(260498),
     m = l(733791),
     g = l(680032),
-    p = l(894076),
+    p = l(959956),
     h = l(191850),
     v = l(792996),
     x = l(653036);
@@ -19,24 +19,24 @@ function b(e) {
     let { project: t, transitionState: l, onClose: b } = e,
         y = (function (e) {
             let [t, l] = a.useState(!1),
-                [n, r] = a.useState(null);
+                [n, i] = a.useState(null);
             a.useEffect(() => (0, c.GO)(e.id), [e.id]);
-            let i = (0, m.Bs)(e.id),
+            let r = (0, m.Bs)(e.id),
                 [s, u] = a.useState(null),
-                o = null == s ? i : s.target,
+                o = null == s ? r : s.target,
                 d = o?.appName ?? e.name,
                 x = a.useMemo(() => (0, g.wJ)(e, o), [e, o]),
                 b = a.useCallback(async () => {
-                    (l(!0), r(null), u({ target: i }));
+                    (l(!0), i(null), u({ target: r }));
                     try {
                         await (0, c.kY)(e.id);
                     } catch {
-                        return (r(v.intl.string(h.default["d+wTRF"])), u(null), l(!1), null);
+                        return (i(v.intl.string(h.default["d+wTRF"])), u(null), l(!1), null);
                     }
-                    (l(!1), (0, p.A)(e, "removed"));
+                    (l(!1), (0, p.Ay)(e, "removed"));
                     let t = f.Ay.getIntegrationStatus(e.id)?.owner_authorization_revoked === !0;
                     return v.intl.formatToPlainString(t ? h.default.tOu7uv : h.default.TWYUzf, { app: d });
-                }, [d, i, e]);
+                }, [d, r, e]);
             return {
                 appName: d,
                 rows: x,
@@ -47,7 +47,7 @@ function b(e) {
             };
         })(t),
         { appName: j, rows: k, keptChannels: A, pending: S, error: w } = y;
-    return (0, n.jsx)(r.a, {
+    return (0, n.jsx)(i.a, {
         transitionState: l,
         onClose: b,
         role: "alertdialog",
@@ -61,7 +61,7 @@ function b(e) {
                 onClick: async function () {
                     let e = await y.submit();
                     null != e &&
-                        ((0, i.P0)({ text: e, variant: "success" }), (0, s.s7)(), (0, d.n0)(t.id, j, { kind: "wand" }));
+                        ((0, r.P0)({ text: e, variant: "success" }), (0, s.s7)(), (0, d.n0)(t.id, j, { kind: "wand" }));
                 },
                 loading: S,
                 disabled: S,

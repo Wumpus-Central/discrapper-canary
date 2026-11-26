@@ -1510,7 +1510,7 @@ function n5(e) {
         children: (0, s.jsx)(eg.$, {
             variant: "primary",
             text: K.intl.string(nq.default.XWgAfc),
-            onClick: () => (0, nY.A)(t, n, "copy", l),
+            onClick: () => (0, nY.A)(t, n, l),
         }),
     });
 }

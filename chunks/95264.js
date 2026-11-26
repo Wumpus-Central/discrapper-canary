@@ -1,40 +1,43 @@
-var a = i(477900);
-i(582128);
-var d = i(192308);
-i.d(
+var r = a(477900);
+a(582128);
+var i = a(192308);
+a.d(
     t,
     {},
     {
-        A: function (e, t) {
-            let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "copy",
-                c = arguments.length > 3 ? arguments[3] : void 0;
-            (0, d.mM)(async () => {
-                let { default: d } = await Promise.all([
-                    i.e(311913),
-                    i.e(207991),
-                    i.e(474172),
-                    i.e(783988),
-                    i.e(344695),
-                    i.e(55348),
-                    i.e(916758),
-                    i.e(947802),
-                    i.e(741111),
-                    i.e(421060),
-                    i.e(763096),
-                    i.e(386594),
-                    i.e(967874),
-                    i.e(79216),
-                    i.e(202622),
-                    i.e(736621),
-                    i.e(752516),
-                    i.e(916519),
-                    i.e(46233),
-                    i.e(117928),
-                    i.e(36509),
-                    i.e(505198),
-                    i.e(79077),
-                ]).then(i.bind(i, 430660));
-                return (i) => (0, a.jsx)(d, { ...i, project: e, mode: r, currentGuildId: t, shareTicket: c });
+        A: function (e, t, s) {
+            (0, i.mM)(async () => {
+                let { default: i } = await Promise.all([
+                    a.e(142753),
+                    a.e(415695),
+                    a.e(799075),
+                    a.e(931510),
+                    a.e(536029),
+                    a.e(363269),
+                    a.e(268582),
+                    a.e(161379),
+                    a.e(344695),
+                    a.e(489218),
+                    a.e(916758),
+                    a.e(947802),
+                    a.e(741111),
+                    a.e(421060),
+                    a.e(763096),
+                    a.e(386594),
+                    a.e(967874),
+                    a.e(79216),
+                    a.e(202622),
+                    a.e(736621),
+                    a.e(850140),
+                    a.e(916519),
+                    a.e(46233),
+                    a.e(117928),
+                    a.e(36509),
+                    a.e(420405),
+                    a.e(505198),
+                    a.e(409718),
+                ]).then(a.bind(a, 393301));
+                return (a) => (0, r.jsx)(i, { ...a, project: e, currentGuildId: t, shareTicket: s });
             });
         },
     },
