@@ -19,6 +19,15 @@
     margin-top: 0
 }
 
+.pendingChangeText_RTvmVT {
+    flex: 1
+}
+
+.pendingChangeAction_RTvmVT {
+    display: flex;
+    flex-shrink: 0
+}
+
 .container_INOv01 {
     background: var(--background-mod-subtle);
     border: 1px solid transparent;
@@ -345,4 +354,4 @@
     }
 }
 
-/*# sourceMappingURL=20275e368c505869.css.map*/
+/*# sourceMappingURL=568dae246100cd14.css.map*/
