@@ -2310,7 +2310,7 @@ function lR(e) {
         { message: r } = (0, h.jc)(),
         [a, s] = (0, p.zn)(),
         o = (0, p.Hq)(s),
-        c = t.type === d.I5.BUTTON || t.type === d.I5.OVERFLOW_MENU;
+        c = t?.type === d.I5.BUTTON || t?.type === d.I5.OVERFLOW_MENU;
     return (0, i.jsxs)("div", {
         className: lO.uW,
         ref: a,
@@ -2319,19 +2319,21 @@ function lR(e) {
                 className: lO.Y_,
                 children: [
                     (0, i.jsx)("div", { className: u()(lO.zt, { [lO.uf]: c }), children: l(n) }),
-                    (0, i.jsx)("div", {
-                        className: u()(lO.LP, { [lO.HQ]: o }),
-                        children: (function (e) {
-                            switch (e.type) {
-                                case d.I5.BUTTON:
-                                    return (0, i.jsx)(V, { ...e });
-                                case d.I5.THUMBNAIL:
-                                    return (0, i.jsx)(nQ, { ...e });
-                                case d.I5.OVERFLOW_MENU:
-                                    return (0, i.jsx)(lL, { ...e });
-                            }
-                        })(t),
-                    }),
+                    null != t
+                        ? (0, i.jsx)("div", {
+                              className: u()(lO.LP, { [lO.HQ]: o }),
+                              children: (function (e) {
+                                  switch (e.type) {
+                                      case d.I5.BUTTON:
+                                          return (0, i.jsx)(V, { ...e });
+                                      case d.I5.THUMBNAIL:
+                                          return (0, i.jsx)(nQ, { ...e });
+                                      case d.I5.OVERFLOW_MENU:
+                                          return (0, i.jsx)(lL, { ...e });
+                                  }
+                              })(t),
+                          })
+                        : null,
                 ],
             }),
             null != r ? (0, i.jsx)(eo.Ay, { message: r, component: e }) : null,

@@ -114,7 +114,7 @@ function R(e) {
         case a.I5.ACTION_ROW:
             return e.components;
         case a.I5.SECTION:
-            return [...e.components, e.accessory];
+            return null != e.accessory ? [...e.components, e.accessory] : e.components;
         case a.I5.CONTAINER:
             return e.components;
         case a.I5.LABEL:
@@ -344,9 +344,9 @@ function v(e) {
                         defaultValues: t.default_values,
                     };
                 case a.I5.SECTION: {
-                    let e = t.components.map(n).filter(A.Vq),
-                        i = n(t.accessory);
-                    if (0 === e.length || null == i) return null;
+                    let e = t.components.map(n).filter(A.Vq);
+                    if (0 === e.length) return null;
+                    let i = null != t.accessory ? n(t.accessory) : null;
                     return { type: a.I5.SECTION, id: t.id, components: e, accessory: i };
                 }
                 case a.I5.TEXT_DISPLAY:

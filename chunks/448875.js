@@ -89,6 +89,7 @@ function g(e) {
                         default_values: t.defaultValues,
                     };
                 case i.I5.SECTION: {
+                    if (null == t.accessory) return null;
                     let n = e(t.accessory);
                     if (null == n) return null;
                     return { type: t.type, id: t.id, components: g(t.components), accessory: n };

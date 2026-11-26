@@ -15,7 +15,7 @@ n.d(
                         case i.I5.FILE:
                             return t.file;
                         case i.I5.SECTION:
-                            return [...t.components.flatMap(e), ...e(t.accessory)];
+                            return [...t.components.flatMap(e), ...(null != t.accessory ? e(t.accessory) : [])];
                         case i.I5.ACTION_ROW:
                         case i.I5.CONTAINER:
                             return t.components.flatMap(e);
