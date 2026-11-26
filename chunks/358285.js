@@ -5,6 +5,7 @@ t.exports = {
     oM: "nameTag_g6VwXp",
     $n: "accountPopoutButton_g6VwXp",
     dI: "accountPopout_g6VwXp",
+    UU: "clipDragging_g6VwXp",
     eW: "panelTitleContainer_g6VwXp",
     XP: "panelSubtextContainer_g6VwXp",
     e8: "withDisplayNameStyles_g6VwXp",

@@ -1,5 +1,6 @@
 p.exports = {
     SW: "popout_p-On7-",
+    cB: "dragging_p-On7-",
     wx: "header_p-On7-",
     $: "titleRow_p-On7-",
     P: "keybind_p-On7-",

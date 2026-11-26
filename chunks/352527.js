@@ -1,36 +1,38 @@
-var a = s(582128),
-    n = s(688810),
-    r = s(74847),
-    i = s(240620);
-s.d(
+var i = n(582128),
+    l = n(688810),
+    r = n(74847),
+    a = n(240620);
+n.d(
     t,
     {},
     {
         A: function (e) {
-            let { analyticsLocations: t } = (0, n.Ay)();
+            let { analyticsLocations: t } = (0, l.Ay)();
             return {
-                onShareClick: a.useCallback(
-                    async (s) => {
+                onShareClick: i.useCallback(
+                    async (n) => {
                         let {
-                            clips: a,
-                            onShareComplete: n,
-                            messageReference: l,
+                            clips: i,
+                            onShareComplete: l,
+                            messageReference: s,
                             povTargetInformation: o,
-                            onShared: d,
-                        } = s;
-                        if (0 === a.length) return;
-                        let u = (0, r.t)(e);
+                            onShared: u,
+                            keepModalsOpen: c,
+                        } = n;
+                        if (0 === i.length) return;
+                        let d = (0, r.t)(e);
                         try {
-                            await (0, i.K)(a, {
-                                channelId: u ? e : void 0,
+                            await (0, a.K)(i, {
+                                channelId: d ? e : void 0,
                                 analyticsLocations: t,
-                                messageReference: l,
+                                messageReference: s,
                                 povTargetInformation: o,
-                                onShared: d,
+                                onShared: u,
+                                keepModalsOpen: c,
                             });
                         } catch (e) {
                         } finally {
-                            n?.();
+                            l?.();
                         }
                     },
                     [e, t],

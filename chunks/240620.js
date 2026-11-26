@@ -16,14 +16,21 @@ var c = n(608299),
     p = n(341923),
     g = n(538724),
     I = n(489496),
-    v = n(132319),
-    C = n(589553),
-    _ = n(767637),
-    A = n(696016);
+    C = n(132319),
+    v = n(589553),
+    A = n(767637),
+    _ = n(696016);
 function M(e, l) {
-    let { channelId: M, analyticsLocations: w, messageReference: E, povTargetInformation: S, onShared: T } = l,
-        y = r.A.getChannel(M);
-    if (null != y) {
+    let {
+            channelId: M,
+            analyticsLocations: w,
+            messageReference: E,
+            povTargetInformation: S,
+            onShared: T,
+            keepModalsOpen: y = !1,
+        } = l,
+        D = r.A.getChannel(M);
+    if (null != D) {
         let l = e.map((e) =>
                 (function (e, l) {
                     if (null == l || null == e.syncTimestamp) return e;
@@ -56,26 +63,26 @@ function M(e, l) {
                 if (i.length + e.length > 10) return ((0, u.UQ)(), !1);
                 if (0 === e.length) return !1;
                 let o = (0, g.D)(e.map((e) => e.id));
-                if (null == o) return ((0, _.A)(), !1);
+                if (null == o) return ((0, A.A)(), !1);
                 let r = e.length,
                     d = (0, p.s)(),
                     M = e.map((e) => {
                         let i = a(e),
                             m = structuredClone(e),
-                            p = m.type === A.nQ.SCREENSHOT ? "image/jpeg" : "video/mp4",
-                            g = (0, C.A)(m, m.type === A.nQ.SCREENSHOT ? "jpeg" : "mp4"),
-                            _ = new s.bK(
+                            p = m.type === _.nQ.SCREENSHOT ? "image/jpeg" : "video/mp4",
+                            g = (0, v.A)(m, m.type === _.nQ.SCREENSHOT ? "jpeg" : "mp4"),
+                            A = new s.bK(
                                 {
                                     platform: h.x.WEB,
                                     file: new File([], g, { type: p }),
-                                    clip: m.type === A.nQ.SCREENSHOT ? void 0 : (0, v.J)(m),
+                                    clip: m.type === _.nQ.SCREENSHOT ? void 0 : (0, C.J)(m),
                                     origin: "unknown:clip_share",
                                 },
                                 l,
                             );
                         return (
-                            (_.isPreparing = !0),
-                            (_.preparation = {
+                            (A.isPreparing = !0),
+                            (A.preparation = {
                                 claimed: !1,
                                 ready: (async function () {
                                     try {
@@ -84,24 +91,24 @@ function M(e, l) {
                                             watermark: d,
                                             isTemporaryEdit: i,
                                         });
-                                        if (_.isCancelled()) return !1;
-                                        let a = f.A.getUpload(l, _.id, t) === _;
-                                        if ((!a && _.preparation?.claimed !== !0) || _.item.platform !== h.x.WEB)
+                                        if (A.isCancelled()) return !1;
+                                        let a = f.A.getUpload(l, A.id, t) === A;
+                                        if ((!a && A.preparation?.claimed !== !0) || A.item.platform !== h.x.WEB)
                                             return !1;
                                         return (
-                                            (_.item.file = new File([e], g, { type: p })),
-                                            (_.currentSize = e.size),
-                                            (_.preCompressionSize = e.size),
-                                            (_.isPreparing = !1),
-                                            a && (c.A.update(l, _.id, t, {}), _.upload()),
+                                            (A.item.file = new File([e], g, { type: p })),
+                                            (A.currentSize = e.size),
+                                            (A.preCompressionSize = e.size),
+                                            (A.isPreparing = !1),
+                                            a && (c.A.update(l, A.id, t, {}), A.upload()),
                                             !0
                                         );
                                     } catch (e) {
                                         return (
-                                            A.GU.error(`Clip export failed for ${m.id}`, e),
-                                            _.isCancelled() ||
-                                                f.A.getUpload(l, _.id, t) !== _ ||
-                                                (c.A.remove(l, _.id, t), (0, u.UQ)()),
+                                            _.GU.error(`Clip export failed for ${m.id}`, e),
+                                            A.isCancelled() ||
+                                                f.A.getUpload(l, A.id, t) !== A ||
+                                                (c.A.remove(l, A.id, t), (0, u.UQ)()),
                                             !1
                                         );
                                     } finally {
@@ -109,18 +116,18 @@ function M(e, l) {
                                     }
                                 })(),
                             }),
-                            _
+                            A
                         );
                     });
                 return (c.A.setUploads({ uploads: [...i, ...M], channelId: l, draftType: t }), !0);
-            })(l, y.id, w, (e) => n.has(e))
+            })(l, D.id, w, (e) => n.has(e))
         )
             return Promise.resolve();
         if (null != E) {
             let e = d.A.getMessage(E.channel_id, E.message_id);
-            null != e && (0, o.Yf)({ message: e, channel: y, shouldMention: !1, showMentionToggle: !1 });
+            null != e && (0, o.Yf)({ message: e, channel: D, shouldMention: !1, showMentionToggle: !1 });
         }
-        (T?.(), t.s7());
+        (T?.(), y || t.s7());
     } else
         (0, t.mM)(
             async () => {
