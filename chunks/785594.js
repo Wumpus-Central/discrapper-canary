@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"XtNqyy":["\u0391\u03C0\u03CC\u03BA\u03C4\u03B7\u03C3\u03B5 \u03C4\u03BF Nitro"]}');
+p.exports = JSON.parse(
+    '{"2ChYpV":["\u03A4\u03C3\u03AD\u03BA\u03B1\u03C1\u03AD \u03C4\u03BF"],"XtNqyy":["\u0391\u03C0\u03CC\u03BA\u03C4\u03B7\u03C3\u03B5 \u03C4\u03BF Nitro"]}',
+);

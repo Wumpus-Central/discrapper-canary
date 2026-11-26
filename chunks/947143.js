@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"XtNqyy":["Obtenir Nitro"]}');
+p.exports = JSON.parse('{"2ChYpV":["En profiter"],"XtNqyy":["Obtenir Nitro"]}');
