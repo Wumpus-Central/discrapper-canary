@@ -23477,7 +23477,7 @@ let vH = (0, h.zD)(f.X.AGE_RESTRICTED_DM_SETTING, {
     }),
     vY = (0, h.zD)(f.X.AGE_RESTRICTED_IOS_SETTING, {
         useTitle: () => V.intl.string(V.t["L+yTsa"]),
-        useSubtitle: () => V.intl.string(V.t["t6i/jW"]),
+        useSubtitle: () => V.intl.string(V.t["18HDKV"]),
         useValue: vX.tI,
         useDisabled: function () {
             let e = (0, vz.A)() ?? !0,
