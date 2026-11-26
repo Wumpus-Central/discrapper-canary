@@ -1,4 +1,4 @@
-n.d(t, { so: () => O, t_: () => R, mj: () => C });
+n.d(t, { so: () => y, t_: () => D, mj: () => L, NV: () => b, mD: () => v });
 var i,
     r = n(988468),
     a = n(253400),
@@ -129,63 +129,83 @@ var h = n(341923),
 let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     m = !1,
     g = null,
-    T = null,
-    S = null,
-    N = null;
-function C() {
+    T = !1,
+    S = !1,
+    N = new Set(),
+    C = null,
+    O = null,
+    R = null;
+function L() {
     if (!(0, s.ri)(r.Ay)) return;
     let e = (0, u.T)(),
         t = r.Ay.getMediaEngine(),
         n = e && (0, h.s)(),
         i = l.Ay.getEnableAutoclipping(),
-        a = S !== i;
-    (T !== n || a) &&
-        (I.GU.info(`clips ml flags pushed: ml=${n} (was ${T}), autoclipping=${i} (was ${S})`),
-        (T = n),
-        (S = i),
+        a = O !== i;
+    (C !== n || a) &&
+        (I.GU.info(`clips ml flags pushed: ml=${n} (was ${C}), autoclipping=${i} (was ${O})`),
+        (C = n),
+        (O = i),
         n
-            ? (null === N &&
+            ? (null === R &&
                   (I.GU.info("clips v3 ml flag set ml=false until download complete"),
                   t.setClipsV3MLEnabled(!1),
-                  (N = !1)),
+                  (R = !1)),
               (async () => {
                   let { allAssetsDownloaded: e } = await f.start(),
-                      n = e && !0 === T && !0 === S;
-                  N !== n &&
+                      n = e && !0 === C && !0 === O;
+                  R !== n &&
                       (I.GU.info(
-                          `clips v3 ml flag set ml=${n} (was ${N}). allAssetsDownloaded=${e}, autoclipping=${S}`,
+                          `clips v3 ml flag set ml=${n} (was ${R}). allAssetsDownloaded=${e}, autoclipping=${O}`,
                       ),
                       t.setClipsV3MLEnabled(n),
-                      (N = n));
+                      (R = n));
               })())
-            : !1 !== N && (I.GU.info(`clips v3 ml flag set ml=false (was ${N})`), t.setClipsV3MLEnabled(!1), (N = !1)));
+            : !1 !== R && (I.GU.info(`clips v3 ml flag set ml=false (was ${R})`), t.setClipsV3MLEnabled(!1), (R = !1)));
 }
-function O() {
+function y() {
     return (0, s.ri)(r.Ay)
         ? null != g
             ? g
-            : (C(),
+            : (L(),
               (g = (async () => {
                   try {
                       await a.Ay.ensureModule("discord_clips");
-                      let e = a.Ay.requireModule("discord_clips").getModulePath(),
-                          t = r.Ay.getMediaEngine(),
-                          n = a.Ay.getClipsDataDirSync();
-                      t.setClipsDataPath(n);
-                      let i = p[a.Ay.releaseChannel] ?? p.stable,
-                          s = a.Ay.getClipsSentryDirSync();
-                      (null != s &&
-                          null != t.setClipsSentryConfig &&
-                          t.setClipsSentryConfig(`discord_clips@${a.Ay.buildNumber ?? 0}`, s, i),
-                          t.setClipsModulePath(e),
+                      let e = a.Ay.requireModule("discord_clips"),
+                          t = e.getModulePath();
+                      ((T = e.supportsPerSpeakerVoice?.() === !0), (S = e.supportsSpeakerVolume?.() === !0));
+                      let n = r.Ay.getMediaEngine(),
+                          i = a.Ay.getClipsDataDirSync();
+                      n.setClipsDataPath(i);
+                      let s = p[a.Ay.releaseChannel] ?? p.stable,
+                          l = a.Ay.getClipsSentryDirSync();
+                      (null != l &&
+                          null != n.setClipsSentryConfig &&
+                          n.setClipsSentryConfig(`discord_clips@${a.Ay.buildNumber ?? 0}`, l, s),
+                          n.setClipsModulePath(t),
                           (m = !0),
-                          I.GU.info("discord_clips module loaded, path: " + e));
+                          I.GU.info("discord_clips module loaded, path: " + t));
                   } catch (e) {
-                      ((g = null), I.GU.error("Failed to load discord_clips module", e));
+                      ((g = null), (T = !1), (S = !1), I.GU.error("Failed to load discord_clips module", e));
                   }
               })()))
         : Promise.resolve();
 }
-function R() {
+function D() {
     return m;
+}
+function b() {
+    return m && T && P("supportsClipsPerSpeakerVoice");
+}
+function v() {
+    return m && S && P("supportsClipsSpeakerVolume");
+}
+function P(e) {
+    if (N.has(e)) return !0;
+    try {
+        if (a.Ay.getVoiceEngine()[e]?.() !== !0) return !1;
+        return (N.add(e), !0);
+    } catch {
+        return !1;
+    }
 }

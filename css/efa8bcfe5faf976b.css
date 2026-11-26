@@ -1,0 +1,54 @@
+.group_DY30Hz {
+    background-color: var(--input-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    padding: var(--space-4)
+}
+
+.group_DY30Hz,
+.segment_DY30Hz {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.segment_DY30Hz {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--interactive-icon-default);
+    cursor: pointer;
+    height: 32px;
+    justify-content: center;
+    min-width: 32px;
+    padding: 0 var(--space-8);
+    position: relative;
+    white-space: nowrap
+}
+
+.segment_DY30Hz:hover:not([aria-checked=true]) {
+    background-color: var(--background-mod-subtle);
+    color: var(--interactive-icon-hover)
+}
+
+.segment_DY30Hz[aria-checked=true] {
+    background-color: var(--background-mod-normal);
+    box-shadow: inset 0 0 0 1px var(--border-muted), var(--shadow-medium);
+    color: var(--text-strong);
+    cursor: default;
+    padding-inline: var(--space-12)
+}
+
+.divider_DY30Hz {
+    background-color: var(--border-normal);
+    flex-shrink: 0;
+    height: 20px;
+    width: 1px
+}
+
+/*# sourceMappingURL=efa8bcfe5faf976b.css.map*/

@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     uW: "section_hNFXXu",
     L0: "infoCard_hNFXXu",
     Nf: "infoThumbnail_hNFXXu",
@@ -9,11 +9,19 @@ o.exports = {
     sW: "audioRowIcon_hNFXXu",
     RZ: "audioRowLabel_hNFXXu",
     Mo: "audioRowCount_hNFXXu",
+    KH: "audioRowCountButton_hNFXXu",
     To: "audioRowToggle_hNFXXu",
+    BN: "speakerRows_hNFXXu",
+    g_: "speakerRow_hNFXXu",
+    vg: "speakerAvatar_hNFXXu",
+    eQ: "speakerAvatarPlaceholder_hNFXXu",
+    $P: "speakerName_hNFXXu",
     CD: "toolHeader_hNFXXu",
     hX: "toolBody_hNFXXu",
     Ln: "presetSection_hNFXXu",
     si: "presetGrid_hNFXXu",
     is: "presetCard_hNFXXu",
     j5: "presetCardSelected_hNFXXu",
+    zN: "volumeTrigger_hNFXXu",
+    Gl: "volumePopout_hNFXXu",
 };

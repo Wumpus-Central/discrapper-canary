@@ -39,7 +39,7 @@ n.d(
                     (a.title = e.clip.name),
                     (a.application_id = e.clip.applicationId),
                     (a.clip_created_at = (0, i.Uq)(e.clip.createdAt)),
-                    (a.clip_participant_ids = (0, i.gD)(e.clip.users)),
+                    (a.clip_participant_ids = (0, i.gD)(e.clip)),
                     (a.clip_remote_id = e.clip.remoteClipId),
                     (a.clip_events_timeline = (0, i.lz)(e.clip)),
                     (a.clip_sync_timestamp = (0, i.Ae)(e.clip))),
