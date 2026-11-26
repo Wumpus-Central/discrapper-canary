@@ -227,20 +227,16 @@ function N(e) {
                         ],
                     }),
                 }),
-                (0, r.jsx)(
-                    a.A,
-                    {
-                        targetElementRef: g,
-                        position: _,
-                        shouldShow: u,
-                        onRequestClose: x,
-                        popoverRef: C,
-                        title: k,
-                        body: b,
-                        textLink: { text: E.intl.string(v.default.jnib0s), onClick: A, external: !1 },
-                    },
-                    R,
-                ),
+                (0, r.jsx)(a.A, {
+                    targetElementRef: $,
+                    position: _,
+                    shouldShow: u,
+                    onRequestClose: x,
+                    popoverRef: C,
+                    title: k,
+                    body: b,
+                    textLink: { text: E.intl.string(v.default.jnib0s), onClick: A, external: !1 },
+                }),
             ],
         })
     );
