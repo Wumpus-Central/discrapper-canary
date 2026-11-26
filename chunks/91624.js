@@ -16,10 +16,10 @@ var s = n(477900),
     E = n(145530),
     f = n(74096),
     S = n(205120),
-    b = n(652215);
-n(294920);
-var y = n(13673);
-function T(e) {
+    b = n(652215),
+    y = n(294920),
+    T = n(13673);
+function _(e) {
     let { value: t, channel: n, message: s } = e;
     return (0, A.i)({
         type: c.oU.EDIT,
@@ -32,19 +32,19 @@ function T(e) {
         respectCooldown: !1,
     });
 }
-function _(e) {
+function v(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: u } = n,
         m = t.getGuildId(),
         A = (0, l.bG)([p.A], () => p.A.getGuild(m), [m]),
         f = t.type === b.rbe.GUILD_ANNOUNCEMENT,
-        _ = null != A && A.features.has(b.GuildFeatures.NEWS),
-        C = f && _,
+        v = null != A && A.features.has(b.GuildFeatures.NEWS),
+        I = f && v,
         {
-            editingMessage: I,
-            editingTextValue: M,
-            editingRichValue: N,
+            editingMessage: M,
+            editingTextValue: N,
+            editingRichValue: P,
         } = (0, l.cf)(
             [h.A],
             () => ({
@@ -55,47 +55,47 @@ function _(e) {
             [c],
         ),
         R = (0, l.bG)([d.default], () => d.default.getId()),
-        P = i.useCallback(
+        k = i.useCallback(
             (e, s, i) => {
                 let { content: l } = i,
                     c = g.A.can(b.xBc.MANAGE_MESSAGES, t),
-                    u = null != I && null != I.author ? I.author.id : null,
-                    d = C && (u === R || c),
+                    u = null != M && null != M.author ? M.author.id : null,
+                    d = I && (u === R || c),
                     h = { content: l, components: void 0 };
                 if (n.hasFlag(b.pr7.IS_COMPONENTS_V2)) {
                     let e = n.components[0]?.type === r.I5.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== r.I5.TEXT_DISPLAY);
-                    (t.splice(+!!e, 0, { type: r.I5.TEXT_DISPLAY, content: l, id: "82744" }),
+                    (t.splice(+!!e, 0, { type: r.I5.TEXT_DISPLAY, content: l, id: y.sm }),
                         (h.content = ""),
                         (h.components = t));
                 }
                 return (
-                    d && null != I && (0, a.Lt)(I.flags, b.pr7.CROSSPOSTED)
+                    d && null != M && (0, a.Lt)(M.flags, b.pr7.CROSSPOSTED)
                         ? E.A.confirmEdit(e, s, h)
                         : o.A.editMessage(e, s, h),
                     Promise.resolve()
                 );
             },
-            [I, C, R, t, n],
+            [M, I, R, t, n],
         ),
-        k = i.useCallback((e) => (0, i.createElement)(v, { ...e, className: y.gM, key: u }), [u]);
-    return null != M && null != N
+        L = i.useCallback((e) => (0, i.createElement)(C, { ...e, className: T.gM, key: u }), [u]);
+    return null != N && null != P
         ? (0, s.jsx)(S.A, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: M,
-              richValue: N,
+              textValue: N,
+              richValue: P,
               onCancel: o.A.endEditMessage,
               onChange: o.A.updateEditMessage,
               onConfirmDelete: E.A.confirmDelete,
-              saveMessage: P,
-              validateEdit: T,
-              children: k,
+              saveMessage: k,
+              validateEdit: _,
+              children: L,
           })
         : null;
 }
-function v(e) {
+function C(e) {
     let {
             textValue: t,
             richValue: n,
@@ -123,7 +123,7 @@ function v(e) {
         (0, s.jsx)(
             u.Ay,
             {
-                className: y.gM,
+                className: T.gM,
                 textValue: t,
                 richValue: n,
                 channel: l,
@@ -150,10 +150,10 @@ n.d(
         Ay: function (e, t, n) {
             let { message: i, channel: a, compact: l } = e;
             return n
-                ? (0, s.jsx)(_, { channel: a, message: i })
+                ? (0, s.jsx)(v, { channel: a, message: i })
                 : (0, s.jsx)(f.Ay, { message: i, content: t, compact: l ?? !1 });
         },
-        Nr: v,
-        R3: T,
+        Nr: C,
+        R3: _,
     },
 );

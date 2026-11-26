@@ -50,10 +50,11 @@ function g(e) {
         ?.map(function e(t) {
             switch (t.type) {
                 case i.I5.ACTION_ROW:
-                    return { type: t.type, components: g(t.components) };
+                    return { type: t.type, id: t.id, components: g(t.components) };
                 case i.I5.BUTTON:
                     return {
                         type: t.type,
+                        id: t.id,
                         custom_id: t.customId,
                         disabled: t.disabled,
                         style: t.style,
@@ -65,6 +66,7 @@ function g(e) {
                 case i.I5.STRING_SELECT:
                     return {
                         type: t.type,
+                        id: t.id,
                         ...f(t),
                         options: t.options.map((e) => ({
                             label: e.label,
@@ -77,21 +79,34 @@ function g(e) {
                 case i.I5.USER_SELECT:
                 case i.I5.ROLE_SELECT:
                 case i.I5.MENTIONABLE_SELECT:
-                    return { type: t.type, ...f(t), default_values: t.defaultValues };
+                    return { type: t.type, id: t.id, ...f(t), default_values: t.defaultValues };
                 case i.I5.CHANNEL_SELECT:
-                    return { type: t.type, ...f(t), channel_types: t.channelTypes, default_values: t.defaultValues };
+                    return {
+                        type: t.type,
+                        id: t.id,
+                        ...f(t),
+                        channel_types: t.channelTypes,
+                        default_values: t.defaultValues,
+                    };
                 case i.I5.SECTION: {
                     let n = e(t.accessory);
                     if (null == n) return null;
-                    return { type: t.type, components: g(t.components), accessory: n };
+                    return { type: t.type, id: t.id, components: g(t.components), accessory: n };
                 }
                 case i.I5.TEXT_DISPLAY:
-                    return { type: t.type, content: t.content };
+                    return { type: t.type, id: t.id, content: t.content };
                 case i.I5.THUMBNAIL:
-                    return { type: t.type, media: y(t.media), description: t.description, spoiler: t.spoiler ?? !1 };
+                    return {
+                        type: t.type,
+                        id: t.id,
+                        media: y(t.media),
+                        description: t.description,
+                        spoiler: t.spoiler ?? !1,
+                    };
                 case i.I5.MEDIA_GALLERY:
                     return {
                         type: t.type,
+                        id: t.id,
                         items: t.items.map((e) => ({
                             media: y(e.media),
                             description: e.description,
@@ -99,14 +114,22 @@ function g(e) {
                         })),
                     };
                 case i.I5.FILE:
-                    return { type: t.type, file: y(t.file), name: t.name, size: t.size, spoiler: t.spoiler ?? !1 };
+                    return {
+                        type: t.type,
+                        id: t.id,
+                        file: y(t.file),
+                        name: t.name,
+                        size: t.size,
+                        spoiler: t.spoiler ?? !1,
+                    };
                 case i.I5.SEPARATOR:
-                    return { type: t.type, divider: t.divider, spacing: t.spacing };
+                    return { type: t.type, id: t.id, divider: t.divider, spacing: t.spacing };
                 case i.I5.CONTENT_INVENTORY_ENTRY:
-                    return { type: t.type, content_inventory_entry: t.contentInventoryEntry };
+                    return { type: t.type, id: t.id, content_inventory_entry: t.contentInventoryEntry };
                 case i.I5.CONTAINER:
                     return {
                         type: t.type,
+                        id: t.id,
                         accent_color: t.accentColor,
                         spoiler: t.spoiler,
                         components: g(t.components),
@@ -114,11 +137,13 @@ function g(e) {
                 case i.I5.OVERFLOW_MENU:
                     return {
                         type: t.type,
+                        id: t.id,
                         groups: t.groups.map((e) => ({ label: e.label, components: g(e.components) })),
                     };
                 case i.I5.MENU_ACTION_ITEM:
                     return {
                         type: t.type,
+                        id: t.id,
                         custom_id: t.customId,
                         disabled: t.disabled,
                         style: t.style,

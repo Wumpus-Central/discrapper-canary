@@ -58,7 +58,7 @@ n.d(
             let e = (0, N.jc)(),
                 n = e?.modal?.components[0];
             return (
-                (n?.type === d.I5.ACTION_ROW && n.components[0].id === t) ||
+                (n?.type === d.I5.ACTION_ROW && n.components[0]?.id === t) ||
                 (n?.type === d.I5.LABEL && n.component.id === t)
             );
         },
