@@ -1,4 +1,4 @@
-l.d(t, { A: () => eP });
+l.d(t, { A: () => ez });
 var n = l(477900),
     a = l(582128),
     i = l(855986),
@@ -23,11 +23,11 @@ var n = l(477900),
     N = l(7807),
     E = l(663341),
     w = l(442433),
-    A = l(793574),
-    I = l(688810),
+    I = l(793574),
+    A = l(688810),
     R = l(429913),
-    S = l(769015),
-    L = l(540999),
+    L = l(769015),
+    S = l(540999),
     T = l(419490),
     M = l(489496),
     D = l(253799),
@@ -35,8 +35,8 @@ var n = l(477900),
     P = l(686320),
     _ = l(105009),
     z = l(645655),
-    $ = l(352527),
-    U = l(635793),
+    U = l(352527),
+    $ = l(635793),
     G = l(923904),
     V = l(876798),
     B = l(358618),
@@ -88,76 +88,96 @@ function q(e) {
     );
 }
 function J(e) {
-    let { label: t, volume: l, disabled: i, muted: r = !1, title: s, onCommit: o, children: c } = e,
-        u = a.useRef(null);
+    let { onOpenChange: t, label: l, volume: i, disabled: r, muted: s = !1, title: o, onCommit: c, children: u } = e,
+        d = a.useRef(null);
     return (0, n.jsx)(F.Y, {
-        targetElementRef: u,
+        onRequestOpen: () => t?.(!0),
+        onRequestClose: () => t?.(!1),
+        targetElementRef: d,
         position: "top",
         align: "center",
         renderPopout: (e) => {
-            let { setPopoutRef: a } = e;
+            let { setPopoutRef: t } = e;
             return (0, n.jsx)(W.l, {
-                ref: a,
+                ref: t,
                 className: Z.Gl,
-                "aria-label": t,
-                children: (0, n.jsx)(q, { label: t, volume: l, disabled: i, onCommit: o }),
+                "aria-label": l,
+                children: (0, n.jsx)(q, { label: l, volume: i, disabled: r, onCommit: c }),
             });
         },
         children: (e) =>
             (0, n.jsx)("button", {
                 ...e,
-                ref: u,
+                ref: d,
                 type: "button",
                 className: Z.zN,
-                disabled: i,
-                "data-muted": r,
-                title: s,
+                disabled: r,
+                "data-muted": s,
+                title: o,
                 "aria-haspopup": "dialog",
-                "aria-label": t,
-                children: c,
+                "aria-label": l,
+                children: u,
             }),
     });
 }
 function ee(e) {
-    let { icon: t, label: l, count: a, enabled: i, disabled: r = !1, onToggle: s, countToggle: o, volume: c } = e,
-        u = (0, n.jsxs)(n.Fragment, {
+    let {
+            buttonRef: t,
+            icon: l,
+            label: a,
+            count: i,
+            enabled: r,
+            disabled: s = !1,
+            onToggle: o,
+            countToggle: c,
+            volume: u,
+        } = e,
+        d = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)("div", { className: Z.sW, children: t }),
-                (0, n.jsx)(x.E, { variant: "body-sm/normal", color: "text-default", className: Z.RZ, children: l }),
+                (0, n.jsx)("div", { className: Z.sW, children: l }),
+                (0, n.jsx)(x.E, { variant: "body-sm/normal", color: "text-default", className: Z.RZ, children: a }),
             ],
         });
     return (0, n.jsxs)("div", {
         className: Z.l3,
         children: [
             null != c
-                ? (0, n.jsx)(J, {
-                      label: Y.intl.formatToPlainString(K.default.lBmQau, { name: l }),
-                      volume: c.value,
-                      disabled: r || !i,
-                      onCommit: c.onCommit,
-                      children: u,
+                ? (0, n.jsxs)("button", {
+                      ref: t,
+                      type: "button",
+                      className: Z.zN,
+                      disabled: c.disabled,
+                      "aria-label": c.label,
+                      "aria-controls": c.disabled ? void 0 : c.controlsId,
+                      "aria-expanded": !c.disabled && c.expanded,
+                      onClick: c.onClick,
+                      children: [
+                          d,
+                          c.children ??
+                              (null != i && i > 0
+                                  ? (0, n.jsx)(x.E, { variant: "body-xs/medium", color: "text-muted", children: i })
+                                  : null),
+                      ],
                   })
-                : u,
-            null != a &&
-                a > 0 &&
-                (null != o
-                    ? (0, n.jsx)("button", {
-                          type: "button",
-                          className: `${Z.Mo} ${Z.KH}`,
-                          disabled: o.disabled,
-                          "aria-label": o.label,
-                          "aria-controls": o.disabled ? void 0 : o.controlsId,
-                          "aria-expanded": !o.disabled && o.expanded,
-                          onClick: o.onClick,
-                          children: (0, n.jsx)(x.E, { variant: "body-xs/medium", color: "text-muted", children: a }),
-                      })
-                    : (0, n.jsx)("div", {
-                          className: Z.Mo,
-                          children: (0, n.jsx)(x.E, { variant: "body-xs/medium", color: "text-muted", children: a }),
-                      })),
+                : null != u
+                  ? (0, n.jsx)(J, {
+                        label: Y.intl.formatToPlainString(K.default.lBmQau, { name: a }),
+                        volume: u.value,
+                        disabled: s || !r,
+                        onCommit: u.onCommit,
+                        children: d,
+                    })
+                  : d,
+            null == c &&
+                null != i &&
+                i > 0 &&
+                (0, n.jsx)("div", {
+                    className: Z.Mo,
+                    children: (0, n.jsx)(x.E, { variant: "body-xs/medium", color: "text-muted", children: i }),
+                }),
             (0, n.jsx)("div", {
                 className: Z.To,
-                children: (0, n.jsx)(Q, { label: l, enabled: i, disabled: r, onToggle: s }),
+                children: (0, n.jsx)(Q, { label: a, enabled: r, disabled: s, onToggle: o }),
             }),
         ],
     });
@@ -190,7 +210,7 @@ function em() {
                     icon: er.ArrowSmallLeftIcon,
                     iconPosition: "start",
                     text: Y.intl.string(K.default["7yBrfD"]),
-                    onClick: () => l(U.Y.NONE),
+                    onClick: () => l($.Y.NONE),
                 }),
             }),
             (0, n.jsxs)(v.Ip, {
@@ -385,75 +405,149 @@ function ey(e) {
         ],
     });
 }
-var eC = l(915089),
-    ek = l(734057),
-    eN = l(696451),
-    eE = l(994500),
-    ew = l(287809),
+var eC = l(778712),
+    ek = l(915089),
+    eN = l(734057),
+    eE = l(696451),
+    ew = l(994500),
+    eI = l(287809),
     eA = l(562153),
-    eI = l(706409);
-function eR() {
+    eR = l(706409);
+let eL = eC._3.SIZE_24;
+function eS() {
     let {
             audioTracks: e,
             clip: t,
             voiceAudioEnabled: l,
             setVoiceAudioEnabled: r,
             mutedSpeakerIds: s,
-            setSpeakerMuted: o,
-            speakerVolumes: c,
-            setSpeakerVolume: u,
-            speakerVolumeSupported: d,
+            setSpeakerMuted: c,
+            speakerVolumes: u,
+            setSpeakerVolume: d,
+            speakerVolumeSupported: m,
         } = (0, G.T)(),
-        [m, f] = a.useState(!1),
-        h = (0, eC.GV)(),
-        p = a.useMemo(() => (0, eI.O)(e), [e]),
-        v = (0, i.yK)([ew.default], () => p.map((e) => ew.default.getUser(e)), [p]),
-        g = (0, i.yK)(
-            [ew.default, eN.Ay, ek.A, eE.A],
+        [f, h] = a.useState(!1),
+        p = a.useRef(null),
+        v = a.useRef(!1),
+        g = a.useRef(null);
+    a.useEffect(() => {
+        if (!f) {
+            v.current = !1;
+            return;
+        }
+        function e(e) {
+            g.current !== e && h(!1);
+        }
+        return (
+            document.addEventListener("pointerdown", e),
+            () => {
+                document.removeEventListener("pointerdown", e);
+            }
+        );
+    }, [f]);
+    let b = (0, ek.GV)(),
+        j = a.useMemo(() => (0, eR.O)(e), [e]),
+        y = (0, i.yK)([eI.default], () => j.map((e) => eI.default.getUser(e)), [j]),
+        C = (0, i.yK)(
+            [eI.default, eE.Ay, eN.A, ew.A],
             () =>
-                p.map((e) => {
-                    let l = ew.default.getUser(e);
+                j.map((e) => {
+                    let l = eI.default.getUser(e);
                     return null != l
                         ? (0, eA.mG)(t.guildId, t.channelId, l)
                         : `${Y.intl.string(Y.t["30mdIx"])} ${e.slice(-4)}`;
                 }),
-            [p, t.guildId, t.channelId],
+            [j, t.guildId, t.channelId],
         ),
-        b = a.useMemo(
+        N = a.useMemo(
             () =>
-                p
-                    .map((e, t) => ({ userId: e, user: v[t], name: g[t] }))
+                j
+                    .map((e, t) => ({ userId: e, user: y[t], name: C[t] }))
                     .sort((e, t) => {
                         let l = e.name.localeCompare(t.name);
                         return 0 !== l ? l : e.userId.localeCompare(t.userId);
                     }),
-            [p, v, g],
+            [j, y, C],
         ),
-        j = p.length > 0,
-        y = j ? p.length : e.filter((e) => e.trackName.includes(ec.gC.VOICE)).length;
-    return (0, n.jsxs)(n.Fragment, {
+        E = j.length > 0,
+        w = E ? j.length : e.filter((e) => e.trackName.includes(ec.gC.VOICE)).length;
+    return (0, n.jsxs)("div", {
+        onKeyDown: (e) => {
+            "Escape" === e.key &&
+                f &&
+                !v.current &&
+                (e.preventDefault(), e.stopPropagation(), h(!1), p.current?.focus());
+        },
+        onPointerDownCapture: (e) => {
+            g.current = e.nativeEvent;
+        },
         children: [
             (0, n.jsx)(ee, {
+                buttonRef: p,
                 icon: (0, n.jsx)(k.MicrophoneIcon, { size: "sm", color: "currentColor" }),
                 label: Y.intl.string(K.default.ai9fWO),
-                count: y,
+                count: w,
                 countToggle: {
-                    label: Y.intl.formatToPlainString(K.default.cb30Fe, { count: y }),
-                    expanded: m,
-                    disabled: !j,
-                    controlsId: h,
-                    onClick: () => f((e) => !e),
+                    children: E
+                        ? (0, n.jsxs)("span", {
+                              className: Z.iC,
+                              "data-expanded": f,
+                              "aria-hidden": f,
+                              children: [
+                                  N.slice(0, 5).map((e) => {
+                                      let { userId: l, user: a, name: i } = e;
+                                      return (0, n.jsx)(
+                                          o.m,
+                                          {
+                                              text: i,
+                                              shouldShow: !f,
+                                              ariaHidden: !0,
+                                              children: (0, n.jsx)("span", {
+                                                  className: Z.md,
+                                                  role: "img",
+                                                  "aria-label": i,
+                                                  children:
+                                                      null != a
+                                                          ? (0, n.jsx)("img", {
+                                                                className: Z.vg,
+                                                                src: a.getAvatarURL(t.guildId, (0, eC.FT)(eL), !1),
+                                                                alt: "",
+                                                            })
+                                                          : (0, n.jsx)("span", {
+                                                                className: Z.eQ,
+                                                                "aria-hidden": !0,
+                                                                children: "?",
+                                                            }),
+                                              }),
+                                          },
+                                          l,
+                                      );
+                                  }),
+                                  N.length > 5 &&
+                                      (0, n.jsxs)(x.E, {
+                                          variant: "body-sm/medium",
+                                          color: "text-muted",
+                                          children: ["+", N.length - 5],
+                                      }),
+                              ],
+                          })
+                        : void 0,
+                    label: Y.intl.formatToPlainString(K.default.cb30Fe, { count: w }),
+                    expanded: f,
+                    disabled: !E,
+                    controlsId: b,
+                    onClick: () => h((e) => !e),
                 },
                 enabled: l,
-                disabled: 0 === y,
+                disabled: 0 === w,
                 onToggle: r,
             }),
-            j &&
+            E &&
+                f &&
                 (0, n.jsx)("div", {
-                    id: h,
+                    id: b,
                     className: Z.BN,
-                    hidden: !m,
-                    children: b.map((e) => {
+                    children: N.map((e) => {
                         let { userId: a, user: i, name: r } = e;
                         return (0, n.jsxs)(
                             "div",
@@ -463,12 +557,15 @@ function eR() {
                                 "aria-label": r,
                                 children: [
                                     (0, n.jsxs)(J, {
+                                        onOpenChange: (e) => {
+                                            v.current = e;
+                                        },
                                         label: Y.intl.formatToPlainString(K.default.lBmQau, { name: r }),
-                                        volume: c[a] ?? 100,
-                                        disabled: !l || s.includes(a) || !d,
+                                        volume: u[a] ?? 100,
+                                        disabled: !l || s.includes(a) || !m,
                                         muted: !l || s.includes(a),
                                         title: r,
-                                        onCommit: (e) => u(a, e),
+                                        onCommit: (e) => d(a, e),
                                         children: [
                                             null != i
                                                 ? (0, n.jsx)("img", {
@@ -493,7 +590,7 @@ function eR() {
                                         label: Y.intl.formatToPlainString(K.default.CBCjab, { name: r }),
                                         enabled: !s.includes(a),
                                         disabled: !l,
-                                        onToggle: (e) => o(a, !e),
+                                        onToggle: (e) => c(a, !e),
                                     }),
                                 ],
                             },
@@ -504,20 +601,20 @@ function eR() {
         ],
     });
 }
-var eS = l(95477);
-let eL = [
+var eT = l(95477);
+let eM = [
         { value: 0.04, label: K.default.zYVcjp },
         { value: 0.06, label: K.default.LGX80j },
         { value: 0.09, label: K.default.sa6Q0q },
     ],
-    eT = [
+    eD = [
         { value: ec.UY.NONE, label: K.default["tYuPp+"] },
         { value: ec.UY.SMALL, label: K.default["42Skzz"] },
         { value: ec.UY.MEDIUM, label: K.default["Ujlm+F"] },
         { value: ec.UY.LARGE, label: K.default.lT4Cq2 },
     ],
-    eM = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
-function eD(e) {
+    eO = [0xfe6e0d, 0xffe047, 3534206, 5793266, 0xff4cd2];
+function eP(e) {
     let { track: t } = e,
         { updateTextTrackData: l, setSelectedTrackId: i, removeTrack: r, textTrackIdToFocus: s } = (0, ev.fn)(),
         o = a.useRef(null);
@@ -558,7 +655,7 @@ function eD(e) {
                                     color: "text-subtle",
                                     children: Y.intl.string(K.default["R/JN4b"]),
                                 }),
-                                (0, n.jsx)(eS.k, {
+                                (0, n.jsx)(eT.k, {
                                     inputRef: o,
                                     "aria-label": Y.intl.string(K.default["R/JN4b"]),
                                     value: t.data.text,
@@ -576,7 +673,7 @@ function eD(e) {
                                 }),
                                 (0, n.jsx)("div", {
                                     className: Z.si,
-                                    children: eL.map((e) => {
+                                    children: eM.map((e) => {
                                         let { value: a, label: i } = e,
                                             r = t.data.style.fontSize === a;
                                         return (0, n.jsx)(
@@ -607,7 +704,7 @@ function eD(e) {
                                 }),
                                 (0, n.jsx)(ep.default, {
                                     defaultColor: 0xffffff,
-                                    colors: eM,
+                                    colors: eO,
                                     className: eg.Ei,
                                     colorContainerClassName: eg.oP,
                                     value: (0, eh.LX)(t.data.style.color),
@@ -627,7 +724,7 @@ function eD(e) {
                                 }),
                                 (0, n.jsx)("div", {
                                     className: Z.si,
-                                    children: eT.map((e) => {
+                                    children: eD.map((e) => {
                                         let { value: a, label: i } = e,
                                             r = t.data.style.strokeWidth === a;
                                         return (0, n.jsx)(
@@ -659,7 +756,7 @@ function eD(e) {
                                     }),
                                     (0, n.jsx)(ep.default, {
                                         defaultColor: 0,
-                                        colors: eM,
+                                        colors: eO,
                                         className: eg.Ei,
                                         colorContainerClassName: eg.oP,
                                         value: (0, eh.LX)(t.data.style.strokeColor),
@@ -690,27 +787,27 @@ function eD(e) {
         })
     );
 }
-let eO = D.I.difference(new Set([D.C.EXPORT_TO_SOUNDBOARD, D.C.FAVORITE, D.C.DELETE, D.C.MAIN_ACTION, D.C.EDIT]));
-function eP(e) {
+let e_ = D.I.difference(new Set([D.C.EXPORT_TO_SOUNDBOARD, D.C.FAVORITE, D.C.DELETE, D.C.MAIN_ACTION, D.C.EDIT]));
+function ez(e) {
     let { activeTool: t } = (0, G.T)(),
         { tracks: l, selectedTrackId: a } = (0, ev.fn)(),
         i = l.find((e) => e.id === a);
     if (null != i)
         switch (i.type) {
             case ec.Me.TEXT:
-                return (0, n.jsx)(eD, { track: i });
+                return (0, n.jsx)(eP, { track: i });
             case ec.Me.IMAGE:
                 return (0, n.jsx)(ey, { track: i });
         }
     switch (t) {
-        case U.Y.CROP:
+        case $.Y.CROP:
             return (0, n.jsx)(em, {});
-        case U.Y.NONE:
+        case $.Y.NONE:
         default:
-            return (0, n.jsx)(e_, { ...e });
+            return (0, n.jsx)(eU, { ...e });
     }
 }
-function e_(e) {
+function eU(e) {
     let { channelId: t, onEdit: D, onClose: V, onExit: B } = e,
         {
             getEditedClip: X,
@@ -732,18 +829,18 @@ function e_(e) {
             soundboardVolume: em,
             setSoundboardVolume: eh,
         } = (0, G.T)(),
-        { analyticsLocations: ep } = (0, I.Ay)(A.A.CLIPS_EDITOR),
+        { analyticsLocations: ep } = (0, A.Ay)(I.A.CLIPS_EDITOR),
         { addTextTrack: ex, pickAndAddImageTrack: eg, setSelectedTrackId: eb } = (0, ev.fn)(),
         { isCropEnabled: ej } = (0, ev.As)(),
         ey = el.type === ec.nQ.SCREENSHOT,
         eC = el.type === ec.nQ.VOICE_CLIP,
         ek = (0, R.h)(el.applicationId),
         eN = (0, i.bG)([T.Ay], () => T.Ay.isClipExporting(el.id)),
-        { onShareClick: eE } = (0, $.A)(t),
+        { onShareClick: eE } = (0, U.A)(t),
         { picker: ew } = a.useContext(O.$),
-        eA = (0, P.$)(ew?.action),
-        eI = (0, i.bG)([L.A], () => L.A.isDeveloper),
-        eS = a.useMemo(() => ei.filter((e) => e.trackName.includes(ec.gC.VOICE)).length, [ei]),
+        eI = (0, P.$)(ew?.action),
+        eA = (0, i.bG)([S.A], () => S.A.isDeveloper),
+        eR = a.useMemo(() => ei.filter((e) => e.trackName.includes(ec.gC.VOICE)).length, [ei]),
         eL = a.useMemo(() => ei.filter((e) => e.trackName.includes(ec.gC.SOUNDBOARD)).length, [ei]),
         eT = ek?.name ?? el.applicationName ?? Y.intl.string(Y.t.GnQui9);
     return (0, n.jsxs)("div", {
@@ -813,7 +910,7 @@ function e_(e) {
                                                         analyticsLocations: ep,
                                                         channelId: t,
                                                         onAfterDelete: V,
-                                                        displayConfiguration: eO,
+                                                        displayConfiguration: e_,
                                                     });
                                             }));
                                     },
@@ -822,7 +919,7 @@ function e_(e) {
                                     icon: f.MoreHorizontalIcon,
                                 }),
                             }),
-                            eI &&
+                            eA &&
                                 (0, n.jsx)(o.m, {
                                     position: "bottom",
                                     text: "Clip Debug",
@@ -909,7 +1006,7 @@ function e_(e) {
                                         fullWidth: !0,
                                         text: Y.intl.string(K.default.RiEyiS),
                                         onClick: () => {
-                                            (eb(null), ea(U.Y.CROP));
+                                            (eb(null), ea($.Y.CROP));
                                         },
                                     }),
                                 (0, n.jsx)(g.$, {
@@ -945,7 +1042,7 @@ function e_(e) {
                                         (0, n.jsx)(ee, {
                                             icon:
                                                 null != ek
-                                                    ? (0, n.jsx)(S.A, { game: ek, size: S.M.XXSMALL })
+                                                    ? (0, n.jsx)(L.A, { game: ek, size: L.M.XXSMALL })
                                                     : (0, n.jsx)(C.WaveformIcon, { size: "sm", color: "currentColor" }),
                                             label: eT,
                                             enabled: W,
@@ -953,16 +1050,16 @@ function e_(e) {
                                             volume: es ? { value: eo, onCommit: ed } : void 0,
                                         }),
                                         er
-                                            ? (0, n.jsx)(eR, {})
+                                            ? (0, n.jsx)(eS, {})
                                             : (0, n.jsx)(ee, {
                                                   icon: (0, n.jsx)(k.MicrophoneIcon, {
                                                       size: "sm",
                                                       color: "currentColor",
                                                   }),
                                                   label: Y.intl.string(K.default.ai9fWO),
-                                                  count: eS,
+                                                  count: eR,
                                                   enabled: H,
-                                                  disabled: 0 === eS,
+                                                  disabled: 0 === eR,
                                                   onToggle: F,
                                               }),
                                         (0, n.jsx)(ee, {
@@ -1015,10 +1112,10 @@ function e_(e) {
                                       loading: eN,
                                       disabled: eN,
                                       variant: "primary",
-                                      icon: eA.icon,
+                                      icon: eI.icon,
                                       iconPosition: "start",
                                       onClick: null != ew ? () => ew.onPick(X()) : () => eE({ clips: [X()] }),
-                                      text: eA.label,
+                                      text: eI.label,
                                   }),
                               ],
                           }),

@@ -96,33 +96,48 @@
 }
 
 .audioRowCount_hNFXXu {
-    align-items: center;
     background: var(--background-mod-strong);
     border-radius: var(--radius-round);
-    display: flex;
     flex-shrink: 0;
     height: 20px;
     justify-content: center;
     padding: 0 var(--space-8)
 }
 
-.audioRowCountButton_hNFXXu {
-    border: 1px solid transparent;
-    cursor: pointer
+.audioRowCount_hNFXXu,
+.speakerAvatars_hNFXXu {
+    align-items: center;
+    display: flex
 }
 
-.audioRowCountButton_hNFXXu:hover:not(:disabled) {
-    border-color: var(--border-normal)
+.speakerAvatars_hNFXXu {
+    gap: var(--space-4);
+    opacity: 1;
+    transition: opacity .1s ease
 }
 
-.audioRowCountButton_hNFXXu:focus-visible {
-    outline: 2px solid var(--text-default);
-    outline-offset: 2px
+.speakerAvatars_hNFXXu[data-expanded=true] {
+    opacity: 0;
+    pointer-events: none
 }
 
-.audioRowCountButton_hNFXXu:disabled {
-    background: var(--background-mod-subtle);
-    cursor: not-allowed
+.full-motion .speakerAvatars_hNFXXu {
+    transform: translateY(0);
+    transition: opacity .18s ease, transform .18s ease
+}
+
+.full-motion .speakerAvatars_hNFXXu[data-expanded=true] {
+    transform: translateY(var(--space-4))
+}
+
+.speakerThumbnail_hNFXXu {
+    border-radius: var(--radius-round);
+    display: flex;
+    flex-shrink: 0
+}
+
+.speakerThumbnail_hNFXXu+.speakerThumbnail_hNFXXu {
+    margin-inline-start: calc(var(--space-10)*-1)
 }
 
 .audioRowToggle_hNFXXu {
@@ -750,4 +765,4 @@
     width: 60%
 }
 
-/*# sourceMappingURL=883b9994c0c59fbc.css.map*/
+/*# sourceMappingURL=96faaffb026aad4c.css.map*/
