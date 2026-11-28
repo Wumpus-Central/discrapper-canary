@@ -1,5 +1,5 @@
 var i = n(841873);
-e.exports = n.v(t, "840134059e9c10c9.module.wasm", {
+e.exports = n.v(t, "8599eb7f9c67e2c1.module.wasm", {
     "./libdiscore_wasm_bg.js": {
         __wbindgen_string_new: i.yc,
         __wbindgen_number_new: i.N8,
@@ -112,7 +112,7 @@ e.exports = n.v(t, "840134059e9c10c9.module.wasm", {
         __wbindgen_throw: i.Qn,
         __wbindgen_debug_string: i.rl,
         __wbindgen_closure_wrapper1676: i.Zb,
-        __wbindgen_closure_wrapper1713: i.n7,
+        __wbindgen_closure_wrapper1743: i.gZ,
         __wbindgen_closure_wrapper2570: i.Lw,
         __wbindgen_init_externref_table: i.bL,
     },
