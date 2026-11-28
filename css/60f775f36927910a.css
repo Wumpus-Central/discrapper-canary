@@ -255,4 +255,26 @@
     color: var(--text-muted)
 }
 
-/*# sourceMappingURL=ab0ef40ddfded164.css.map*/
+.box_pqX-ln {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    padding: var(--space-12)
+}
+
+.box_pqX-ln,
+.row_pqX-ln {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.row_pqX-ln {
+    align-items: flex-start;
+    color: var(--text-subtle)
+}
+
+.icon_pqX-ln {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=60f775f36927910a.css.map*/

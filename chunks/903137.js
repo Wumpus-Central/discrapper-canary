@@ -7872,15 +7872,9 @@ let u$ = (0, tl.Fe)({
     }),
     uK = (0, tl.Fe)({
         createPromise: () =>
-            Promise.all([
-                t.e(770583),
-                t.e(43853),
-                t.e(578090),
-                t.e(154168),
-                t.e(979585),
-                t.e(357718),
-                t.e(415905),
-            ]).then(t.bind(t, 676792)),
+            Promise.all([t.e(770583), t.e(43853), t.e(87729), t.e(154168), t.e(979585), t.e(357718), t.e(415905)]).then(
+                t.bind(t, 676792),
+            ),
         webpackId: 676792,
         renderLoader: uq,
         name: "AppChannel",
@@ -7958,7 +7952,7 @@ function uZ() {
         t.e(40811),
         t.e(349740),
         t.e(795752),
-        t.e(578090),
+        t.e(87729),
         t.e(360536),
         t.e(704374),
         t.e(998882),

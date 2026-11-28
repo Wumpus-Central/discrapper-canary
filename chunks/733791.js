@@ -20,8 +20,8 @@ var t = n(582128),
     b = n(652215),
     k = n(258576),
     w = n(792996);
-let N = [v.Ay, f.A, p.A, c.Ay, d.A, a.A, s.A, m.default, g.A];
-function j(l) {
+let j = 221552 == n.j ? [v.Ay, f.A, p.A, c.Ay, d.A, a.A, s.A, m.default, g.A] : null;
+function N(l) {
     var e, n;
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.guild_id,
         i = null == t ? null : f.A.getGuild(t);
@@ -53,7 +53,7 @@ function j(l) {
 function C(l) {
     return (0, o.m1)(l, m.default, g.A);
 }
-let P = [];
+let P = 221552 == n.j ? [] : null;
 n.d(
     e,
     {},
@@ -89,10 +89,10 @@ n.d(
                     for (let { guildId: l, botUserIds: e } of n) r.A.requestMembersById(l, e, !1);
                 }, [n]),
                 (0, u.bG)(
-                    N,
+                    j,
                     () => {
                         let e = null == l ? null : v.Ay.getProject(l);
-                        return null == e ? null : j(e);
+                        return null == e ? null : N(e);
                     },
                     [l],
                     i.isEqual,
@@ -158,7 +158,7 @@ n.d(
         zu: function (l) {
             return (0, h.Jr)(l)
                 .filter((e) => e !== l.guild_id)
-                .map((e) => j(l, e))
+                .map((e) => N(l, e))
                 .filter((l) => null != l);
         },
     },

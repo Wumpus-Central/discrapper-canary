@@ -1,81 +1,96 @@
 var n = l(582128),
-    a = l(855986),
-    i = l(233470),
-    r = l(260498),
+    u = l(855986),
+    a = l(71393),
+    r = l(233470),
+    i = l(260498),
     s = l(733791),
-    u = l(16619),
-    o = l(313537),
-    d = l(680032),
-    c = l(959956),
-    f = l(258576),
-    m = l(792996);
-function g(e) {
-    let t = (0, u.z9)("ConjureProjectServerChange"),
-        l = (0, a.bG)([r.Ay], () => (0, o.fL)(r.Ay.getProject(e)), [e]);
-    return n.useMemo(() => t.filter((e) => e.id !== l), [t, l]);
+    o = l(16619),
+    d = l(313537),
+    f = l(680032),
+    p = l(624048),
+    c = l(947275),
+    y = l(652215),
+    g = l(258576),
+    h = l(792996);
+function k(t) {
+    return t.features.has(y.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+}
+function _(t) {
+    let e = (0, o.z9)("ConjureProjectServerChange"),
+        l = (0, u.bG)([i.Ay], () => (0, d.fL)(i.Ay.getProject(t)), [t]),
+        r = (0, u.bG)(
+            [a.A],
+            () => {
+                let t = null == l ? null : a.A.getGuild(l);
+                return null == t ? null : k(t);
+            },
+            [l],
+        );
+    return n.useMemo(() => e.filter((t) => t.id !== l && (null == r || k(t) === r)), [e, l, r]);
 }
 l.d(
-    t,
+    e,
     {},
     {
-        A: function (e) {
-            let t = (0, a.bG)([r.Ay], () => r.Ay.getProject(e), [e]),
-                l = g(e),
-                [u] = n.useState(() => t?.install_scope === "guild"),
+        Ay: function (t) {
+            let e = (0, u.bG)([i.Ay], () => i.Ay.getProject(t), [t]),
+                l = _(t),
+                [a] = n.useState(() => e?.install_scope === "guild"),
                 [o] = n.useState(l);
             n.useEffect(() => {
-                u && (0, i.GO)(e);
-            }, [u, e]);
-            let p = (0, s.Bs)(u ? e : null),
-                [h, v] = n.useState(null),
-                x = null == h ? p : h.target,
-                [b, y] = n.useState(null),
-                j = o.find((e) => e.id === b) ?? o[0] ?? null,
-                [k, A] = n.useState(!1),
-                [S, w] = n.useState(null),
-                C = t?.name ?? "",
-                E = n.useMemo(
-                    () => (null == t || null == j ? [] : u ? (0, d.by)(t, x, j.name) : (0, d.dv)(t, j.name)),
-                    [t, j, u, x],
+                a && (0, r.GO)(t);
+            }, [a, t]);
+            let d = (0, s.Bs)(a ? t : null),
+                [y, k] = n.useState(null),
+                m = null == y ? d : y.target,
+                [x, b] = n.useState(null),
+                v = o.find((t) => t.id === x) ?? o[0] ?? null,
+                [S, L] = n.useState(!1),
+                [P, w] = n.useState(null),
+                A = e?.name ?? "",
+                G = n.useMemo(
+                    () => (null == e || null == v ? [] : a ? (0, f.by)(e, m, v.name) : (0, f.dv)(e, v.name)),
+                    [e, v, a, m],
                 ),
-                I = n.useCallback((e) => {
-                    (y(e), w(null));
+                O = n.useCallback((t) => {
+                    (b(t), w(null));
                 }, []),
-                P = n.useCallback(async () => {
-                    if (null == j) return null;
-                    (A(!0), w(null), v({ target: p }));
+                T = n.useCallback(async () => {
+                    if (null == v) return null;
+                    (L(!0), w(null), k({ target: d }), (0, p.u6)(t));
                     try {
-                        await (0, i.xo)(e, j.id);
-                    } catch (t) {
-                        let e = t?.body?.message;
+                        await (0, r.xo)(t, v.id);
+                    } catch (l) {
+                        (0, p.MX)(t);
+                        let e = l?.body?.message;
                         return (
-                            w("string" == typeof e ? e : m.intl.string(u ? f.default.mdrXGt : f.default.qDjkvv)),
-                            v(null),
-                            A(!1),
+                            w("string" == typeof e ? e : h.intl.string(a ? g.default.mdrXGt : g.default.qDjkvv)),
+                            k(null),
+                            L(!1),
                             null
                         );
                     }
                     return (
-                        A(!1),
-                        null != t && (0, c.Ay)(t, u ? "moved" : "added"),
-                        m.intl.formatToPlainString(u ? f.default["B+Xtjy"] : f.default.yHhjsi, {
-                            app: C,
-                            server: j.name,
+                        L(!1),
+                        null != e && (0, c.Ay)(e, a ? "moved" : "added"),
+                        h.intl.formatToPlainString(a ? g.default["B+Xtjy"] : g.default.yHhjsi, {
+                            app: A,
+                            server: v.name,
                         })
                     );
-                }, [C, j, p, u, t, e]);
+                }, [A, v, d, a, e, t]);
             return {
-                appName: C,
-                moving: u,
+                appName: A,
+                moving: a,
                 guilds: o,
-                guild: j,
-                pickGuild: I,
-                rows: E,
-                pending: k,
-                error: S,
-                submit: P,
+                guild: v,
+                pickGuild: O,
+                rows: G,
+                pending: S,
+                error: P,
+                submit: T,
             };
         },
-        Y: g,
+        Y3: _,
     },
 );

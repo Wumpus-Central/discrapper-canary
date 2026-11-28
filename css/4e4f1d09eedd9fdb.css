@@ -112,23 +112,26 @@
     align-items: center;
     background: var(--background-gradient-chat, var(--background-base-lower));
     box-sizing: border-box;
+    display: flex;
     flex: 1;
     flex-direction: column;
     gap: var(--space-4);
     justify-content: center;
+    min-height: 0;
+    min-width: 0;
     padding: var(--space-24);
     text-align: center
 }
 
-.previewEmpty_EEzyYX,
-.previewPane_EEzyYX {
-    display: flex;
-    min-height: 0;
-    min-width: 0
+.previewSettling_EEzyYX {
+    gap: var(--space-16)
 }
 
 .previewPane_EEzyYX {
+    display: flex;
     flex: 1;
+    min-height: 0;
+    min-width: 0;
     position: relative
 }
 
@@ -585,4 +588,4 @@
     gap: var(--space-xs)
 }
 
-/*# sourceMappingURL=7f3c3602791165d3.css.map*/
+/*# sourceMappingURL=4e4f1d09eedd9fdb.css.map*/

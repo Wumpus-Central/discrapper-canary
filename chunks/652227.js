@@ -1,1 +1,1 @@
-e.exports = { qs: "previewEmpty_EEzyYX", RG: "previewPane_EEzyYX" };
+e.exports = { qs: "previewEmpty_EEzyYX", Lk: "previewSettling_EEzyYX", RG: "previewPane_EEzyYX" };

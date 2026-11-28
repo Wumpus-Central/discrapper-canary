@@ -33,8 +33,9 @@ a.d(
                     a.e(46233),
                     a.e(117928),
                     a.e(36509),
-                    a.e(420405),
+                    a.e(773144),
                     a.e(505198),
+                    a.e(411594),
                     a.e(409718),
                 ]).then(a.bind(a, 393301));
                 return (a) => (0, r.jsx)(i, { ...a, project: e, currentGuildId: t, shareTicket: s });
