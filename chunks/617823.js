@@ -892,9 +892,9 @@ let e0 = (0, a.memo)(
 var e1 = t(435558),
     e3 = t.n(e1),
     e4 = t(837381),
-    e2 = t(847374),
-    e6 = t(912592),
-    e8 = t(821609),
+    e8 = t(847374),
+    e2 = t(912592),
+    e6 = t(821609),
     e7 = t(475825),
     e9 = t(928039),
     e5 = t(188567);
@@ -918,7 +918,7 @@ let ne = { [e_.Ur.UNREAD]: !0, [e_.Ur.TODAY]: !0, [e_.Ur.YESTERDAY]: !1, [e_.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? nn : ne }));
         },
     }));
-var ns = t(642466),
+var ns = t(406788),
     na = t(875436);
 function ni(e) {
     e.stopPropagation();
@@ -940,7 +940,7 @@ function nl(e) {
                     className: na.P7,
                     children: (0, e1.capitalize)(eD.intl.string(e_.v7[n]).toLowerCase()),
                 }),
-                (0, s.jsx)(e2.ChevronSmallDownIcon, { size: "xxs", className: na.ai }),
+                (0, s.jsx)(e8.ChevronSmallDownIcon, { size: "xxs", className: na.ai }),
             ],
         }),
     });
@@ -958,7 +958,7 @@ function no() {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, s.jsx)(e6.InboxIcon, {
+                        (0, s.jsx)(e2.InboxIcon, {
                             size: "custom",
                             height: 40,
                             width: 40,
@@ -972,7 +972,7 @@ function no() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e8.$, {
+                (0, s.jsx)(e6.$, {
                     variant: "secondary",
                     onClick: () => (0, L.tZ)(e),
                     text: eD.intl.string(ns.default.klSpfs),

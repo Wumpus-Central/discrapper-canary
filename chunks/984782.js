@@ -1,6 +1,6 @@
 var l = t(951178),
     a = t(811587),
-    u = t(191850),
+    u = t(258576),
     r = t(792996);
 let i = [
         [l.q7.BOT, u.default.UnoAgo],

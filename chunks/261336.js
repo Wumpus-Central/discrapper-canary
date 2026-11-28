@@ -1964,8 +1964,8 @@ function e7(e) {
         }),
     });
 }
-var e6 = a(840527);
-function e9(e) {
+var e9 = a(840527);
+function e6(e) {
     let { stage: t, hiddenBy: a, onExitPlaying: i, className: n, children: s } = e,
         c = a === V.xk.STATS,
         d = a === V.xk.CUSTOMIZATION_ROUTE_CHANGE,
@@ -1998,10 +1998,10 @@ function e9(e) {
         className: n,
         children: [
             (0, r.jsx)("div", {
-                className: e6.q,
+                className: e9.q,
                 children: !h && (0, r.jsx)(e7, { stage: f, isHidden: l, onExitPlaying: i }),
             }),
-            null != b && (0, r.jsx)("div", { className: e6.q, children: b }),
+            null != b && (0, r.jsx)("div", { className: e9.q, children: b }),
         ],
     });
 }
@@ -2061,7 +2061,7 @@ function th(e) {
     let { children: t, className: a, style: i } = e;
     return (0, r.jsx)(tl, { tag: "span", variant: "mono-md/bold", className: m()(tu.T, a), style: i, children: t });
 }
-var tf = a(852717),
+var tf = a(547507),
     tb = a(792996),
     tp = a(383931);
 function t_(e) {
@@ -2488,7 +2488,7 @@ function t8() {
     });
 }
 var t7 = a(937383);
-function t6(e) {
+function t9(e) {
     let { selectedOption: t } = e,
         a = e$((e) => e.hoveredOption) ?? t;
     return null == a
@@ -2513,11 +2513,11 @@ function t6(e) {
               description: tW(a),
           });
 }
-function t9(e) {
+function t6(e) {
     let { disabled: t } = e,
         { traitOptions: a, selectedOption: i, onSelectOption: n } = t0({ customizationOption: j.v7.OUTFIT_COLOR });
     return (0, r.jsx)(tZ, {
-        details: (0, r.jsx)(t6, { selectedOption: i }),
+        details: (0, r.jsx)(t9, { selectedOption: i }),
         children: (0, r.jsx)(tU, {
             customizationOption: j.v7.OUTFIT_COLOR,
             traitOptions: a,
@@ -2572,7 +2572,7 @@ function at(e) {
         case j.v7.OUTFIT:
             return (0, r.jsx)(t4, { lastColorwayIdByOutfitId: a, disabled: i });
         case j.v7.OUTFIT_COLOR:
-            return (0, r.jsx)(t9, { disabled: i });
+            return (0, r.jsx)(t6, { disabled: i });
         default:
             return (0, r.jsx)(ae, { customizationOption: t, disabled: i });
     }
@@ -2999,7 +2999,7 @@ function aI() {
     });
 }
 var aE = a(534890),
-    aj = a(350363);
+    aj = a(298533);
 function aS() {
     let e = (0, g.bG)([u.A], () => u.A.stats?.messages);
     return (0, r.jsxs)(t3, {
@@ -3340,7 +3340,7 @@ function a7(e) {
         ],
     });
 }
-function a6(e) {
+function a9(e) {
     let { onClick: t, disabled: a } = e;
     return (0, r.jsxs)(a1, {
         size: "custom",
@@ -3359,7 +3359,7 @@ function a6(e) {
         ],
     });
 }
-function a9(e) {
+function a6(e) {
     let { onBack: t, isRouteBlocked: a, isCharacterExiting: i, blockedTraitDescriptionId: n } = e,
         s = (0, g.bG)([u.A], () => u.A.isSaving);
     return (0, r.jsx)(a2, {
@@ -3445,7 +3445,7 @@ function a4(e) {
         case C.gr.FINALIZE_CHARACTER:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a9, {
+                    (0, r.jsx)(a6, {
                         onBack: () => h(s),
                         isRouteBlocked: o,
                         isCharacterExiting: n,
@@ -3465,7 +3465,7 @@ function a4(e) {
                 children: [
                     (0, r.jsx)(a2, { onClick: () => u(s) }),
                     (0, r.jsx)(a3, { onClick: () => u(l) }),
-                    (0, r.jsx)(a6, { onClick: () => u(c) }),
+                    (0, r.jsx)(a9, { onClick: () => u(c) }),
                 ],
             });
         case C.gr.SHARE:
@@ -3990,13 +3990,13 @@ void main() {
         0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0,
         1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0,
     ],
-    i6 = [
+    i9 = [
         0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0,
         -1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 0,
     ];
-function i9(e) {
+function i6(e) {
     let t,
         { emoji: a } = e,
         [i, n] = p.useState(null),
@@ -4061,7 +4061,7 @@ function i9(e) {
                 b = r.getUniformLocation(d, "u_normalMatrix"),
                 p = r.createBuffer();
             (r.bindBuffer(r.ARRAY_BUFFER, p),
-                r.bufferData(r.ARRAY_BUFFER, new Float32Array(i6), r.STATIC_DRAW),
+                r.bufferData(r.ARRAY_BUFFER, new Float32Array(i9), r.STATIC_DRAW),
                 r.vertexAttribPointer(f, 3, r.FLOAT, !1, 0, 0),
                 r.enableVertexAttribArray(f));
             let m = r.createBuffer();
@@ -4251,7 +4251,7 @@ function ra() {
         children: (0, r.jsxs)("div", {
             className: i5.kL,
             children: [
-                (0, r.jsx)("div", { className: i5.KY, children: null != d && (0, r.jsx)(i9, { emoji: d }) }),
+                (0, r.jsx)("div", { className: i5.KY, children: null != d && (0, r.jsx)(i6, { emoji: d }) }),
                 (0, r.jsxs)("div", {
                     className: i5.C,
                     children: [
@@ -4968,7 +4968,7 @@ function r7(e) {
         ],
     });
 }
-function r6(e) {
+function r9(e) {
     let { numWordsSent: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -4988,7 +4988,7 @@ function r6(e) {
         ],
     });
 }
-function r9() {
+function r6() {
     let e = (0, g.bG)([u.A], () => u.A.stats?.messages),
         t = (0, g.bG)([u.A], () => (0, X.nb)(u.A.stats)),
         a = (0, g.bG)([u.A], () => u.A.globalStats?.messages?.numWordsSent),
@@ -5006,7 +5006,7 @@ function r9() {
                 }),
                 (0, r.jsx)("div", {
                     className: r8.C,
-                    children: i ? (0, r.jsx)(r6, { numWordsSent: a }) : (0, r.jsx)(r7, { messages: e }),
+                    children: i ? (0, r.jsx)(r9, { numWordsSent: a }) : (0, r.jsx)(r7, { messages: e }),
                 }),
             ],
         }),
@@ -5520,7 +5520,7 @@ function nL(e) {
                 description: tb.intl.string(tf.default["kF+Y3a"]),
             });
         case C.oI.MESSAGES:
-            return (0, r.jsx)(r9, {});
+            return (0, r.jsx)(r6, {});
         case C.oI.SERVERS_INTRO:
             return (0, r.jsx)(nh, {
                 icon: aC.ServerIcon,
@@ -5923,7 +5923,7 @@ function nK(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(e9, {
+                        (0, r.jsx)(e6, {
                             stage: ep ? C.s9.EXIT : b,
                             hiddenBy: P,
                             onExitPlaying: em,

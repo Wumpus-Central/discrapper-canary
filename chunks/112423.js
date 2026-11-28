@@ -225,7 +225,7 @@ var eN = t(581487),
     ey = t(787844),
     eS = t(910200),
     eO = t(682901),
-    eR = t(25082),
+    eR = t(804280),
     eL = t(996712);
 function eD(e) {
     let { offer: l, applicationId: t, analyticsLocations: r, onUpsellClick: a } = e,
@@ -677,11 +677,11 @@ function eJ(e) {
         e8 = s.useCallback(() => {
             (eK(ew.Jq.VISIT_SHOP), (0, j.s7)(), null != l ? l() : (0, J.default)({ applicationId: d }));
         }, [d, eK, l]),
-        e5 = s.useCallback(() => {
+        e9 = s.useCallback(() => {
             (ec(!eo), eK(ew.Jq.MUTE_BUTTON));
         }, [eo, eK]),
-        e9 = eu?.tenantMetadata?.socialLayer;
-    if (null == eu || null == e9) return ea ? (0, n.jsx)(f.y, {}) : null;
+        e5 = eu?.tenantMetadata?.socialLayer;
+    if (null == eu || null == e5) return ea ? (0, n.jsx)(f.y, {}) : null;
     let e6 = es?.storefront,
         le = e6?.logoAssetId != null ? (0, B.YE)(e6.applicationId, e6.logoAssetId, 256) : null,
         ll = e6?.lightThemeLogoAssetId != null ? (0, B.YE)(e6.applicationId, e6.lightThemeLogoAssetId, 256) : null,
@@ -725,7 +725,7 @@ function eJ(e) {
                         }),
                         eX &&
                             (0, n.jsx)(ez, {
-                                onClick: e5,
+                                onClick: e9,
                                 ariaLabel: eo ? ee.intl.string(ee.t.YqAjXy) : ee.intl.string(ee.t.w4m945),
                                 children: eo
                                     ? (0, n.jsx)(N.VoiceXIcon, { size: "refresh_sm", color: "currentColor" })

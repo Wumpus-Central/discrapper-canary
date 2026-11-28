@@ -24,7 +24,7 @@ i.d(
                     ((r = u.intl.formatToPlainString(u.t.hVGjEW, { name: e })),
                     (h = u.intl.format(u.t.IK1Qvs, { name: e }))),
                     (0, l.mM)(async () => {
-                        let { default: t } = await Promise.all([i.e(446215), i.e(137803)]).then(i.bind(i, 925785));
+                        let { default: t } = await Promise.all([i.e(446215), i.e(693041)]).then(i.bind(i, 925785));
                         return (n) => (0, a.jsx)(t, { title: r, body: h, onSubmit: f, ...n });
                     }));
             }, [t, n]);

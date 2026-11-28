@@ -41,11 +41,11 @@ function R(e) {
     }, [t?.entitlements]);
 }
 var k = n(792996),
-    L = n(586428),
+    L = n(912510),
     D = n(144977);
 n(628049);
 var P = n(568065),
-    O = n(105518),
+    O = n(53776),
     U = n(929729),
     B = n(517826);
 function V(e) {
@@ -700,7 +700,7 @@ function e6(e) {
         children: (0, l.jsx)(I.E, { variant: "body-sm/normal", children: t }),
     });
 }
-function e8(e) {
+function e5(e) {
     let { guildId: t } = e,
         n = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(eu.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
             ? { shouldShow: !0, text: k.intl.string(L.default.l9n4QZ) }
@@ -764,8 +764,8 @@ function e8(e) {
           })
         : null;
 }
-var e4 = n(652242);
-function e5(e) {
+var e3 = n(652242);
+function e4(e) {
     let { guildId: t, powerup: n, badge: i } = e,
         [r, o] = s.useState(void 0);
     (0, ey.A)(r);
@@ -777,7 +777,7 @@ function e5(e) {
         powerup: n,
         badge: i,
         children: [
-            (0, l.jsx)(e4.l, { className: B.Sl, powerup: n, isHovering: a }),
+            (0, l.jsx)(e3.l, { className: B.Sl, powerup: n, isHovering: a }),
             (0, l.jsx)(_.Ft, {
                 title: n.title,
                 textColor: u,
@@ -793,7 +793,7 @@ function e5(e) {
         ],
     });
 }
-var e3 = n(862482),
+var e8 = n(862482),
     e2 = n(944304),
     e7 = n(975571),
     te = n(380572);
@@ -878,8 +878,8 @@ function tl(e) {
                         page: eu.liQ.GUILD_POWERUPS_OVERVIEW,
                         section: eu.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: e3.XD.CUSTOM,
-                    size: e3.lO.LARGE,
+                    color: e8.XD.CUSTOM,
+                    size: e8.lO.LARGE,
                     icon: (0, l.jsx)(x.BoostGemIcon, {
                         className: tn.Ng,
                         size: "sm",
@@ -978,8 +978,8 @@ function tA(e) {
                           page: eu.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: eu.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: e3.XD.BRAND,
-                      size: e3.lO.MEDIUM,
+                      color: e8.XD.BRAND,
+                      size: e8.lO.MEDIUM,
                       fullWidth: !0,
                       icon: (0, l.jsx)(x.BoostGemIcon, { className: th.Ng, color: "currentColor", size: "sm" }),
                   }),
@@ -1470,7 +1470,7 @@ function tL(e) {
                                                   );
                                               case "singlePerk":
                                                   return (0, l.jsx)(
-                                                      e5,
+                                                      e4,
                                                       { guildId: N, powerup: e.powerup, badge: e.badge },
                                                       `powerup-${e.powerup.skuId}`,
                                                   );
@@ -1516,7 +1516,7 @@ function tL(e) {
                               children: [
                                   T
                                       ? (0, l.jsxs)(l.Fragment, {
-                                            children: [(0, l.jsx)(tl, { guildId: N }), (0, l.jsx)(e8, { guildId: N })],
+                                            children: [(0, l.jsx)(tl, { guildId: N }), (0, l.jsx)(e5, { guildId: N })],
                                         })
                                       : (0, l.jsx)(tR, { guildId: N }),
                                   (0, l.jsx)(tG, { guildId: N }),

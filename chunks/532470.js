@@ -3,7 +3,7 @@ var a = n(713608),
     i = n(877784),
     o = n(144705),
     r = n(826685),
-    d = n(683825);
+    d = n(636107);
 let c = {
         [o.I.Kill]: a.ModerationIcon,
         [o.I.MultiKill]: a.ModerationIcon,

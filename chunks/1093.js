@@ -6,7 +6,7 @@ var n = l(477900),
     s = l(635793),
     o = l(923904),
     c = l(696016),
-    u = l(683825),
+    u = l(636107),
     d = l(792996);
 let m = a.createContext(null);
 function f(e) {
@@ -51,7 +51,7 @@ function f(e) {
             [d],
         ),
         w = a.useMemo(() => ({ isCropEnabled: l }), [l]),
-        A = a.useMemo(
+        I = a.useMemo(
             () => ({
                 tracks: r,
                 selectedTrackId: x,
@@ -68,7 +68,7 @@ function f(e) {
             }),
             [r, x, b, y, C, k, N, E, f, p, v, w],
         );
-    return (0, n.jsx)(m.Provider, { value: A, children: t });
+    return (0, n.jsx)(m.Provider, { value: I, children: t });
 }
 async function h() {
     try {

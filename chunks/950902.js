@@ -1,19 +1,19 @@
 var n = l(582128),
     a = l(435558),
-    r = l(855986);
+    i = l(855986);
 (l(47167), l(808728));
-var i = l(71393);
+var r = l(71393);
 (l(994500), l(351906), l(287809), l(562153), l(644968));
 var s = l(260498),
     u = l(951178),
     o = l(246338),
-    d = l(191850),
+    d = l(258576),
     c = l(792996);
 function f(e) {
     return Array.isArray(e) ? e : "string" == typeof e && "" !== e ? [e] : [];
 }
 function m(e, t) {
-    return (0, r.bG)([s.Ay], () => (0, o.Ux)(s.Ay.getProject(e), t), [t, e]);
+    return (0, i.bG)([s.Ay], () => (0, o.Ux)(s.Ay.getProject(e), t), [t, e]);
 }
 let g = [];
 l.d(
@@ -32,15 +32,15 @@ l.d(
             return t.length < 25 ? [...e] : e.map((e) => (t.includes(e.id) ? e : { ...e, disabled: !0 }));
         },
         v4: function (e, t) {
-            let l = (0, r.bG)(
-                    [s.Ay, i.A],
+            let l = (0, i.bG)(
+                    [s.Ay, r.A],
                     () => {
                         let t = s.Ay.getProject(e);
                         return null == t
                             ? g
                             : (0, u.Jr)(t).map((e) => ({
                                   guildId: e,
-                                  name: i.A.getGuild(e)?.name ?? c.intl.string(d.default["6bhivN"]),
+                                  name: r.A.getGuild(e)?.name ?? c.intl.string(d.default["6bhivN"]),
                               }));
                     },
                     [e],

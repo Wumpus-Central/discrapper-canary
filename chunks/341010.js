@@ -607,8 +607,8 @@ function e5(e) {
     let { text: t, buttonCta: n, theme: i = L.NJ8.DARK, onClick: l } = e;
     return (0, c.jsx)(w.Ay, { theme: i, children: (0, c.jsx)(e7, { text: t, buttonCta: n, onClick: l }) });
 }
-var e9 = n(765671),
-    e6 = n(71393),
+var e6 = n(765671),
+    e9 = n(71393),
     te = n(299091),
     tt = n(486020),
     tn = n(403362),
@@ -1008,8 +1008,8 @@ var tJ = n(153488),
     t3 = n(15552),
     t7 = n(536637),
     t5 = n.n(t7),
-    t9 = n(955437),
-    t6 = n(295562),
+    t6 = n(955437),
+    t9 = n(295562),
     ne = n(831167);
 n(861807);
 var nt = n(569717),
@@ -1076,10 +1076,10 @@ function ni(e) {
             e.body
         ),
         (e) => {
-            if (e instanceof t6.CaptchaCancelError) throw e;
+            if (e instanceof t9.CaptchaCancelError) throw e;
             let t = new V.A(e);
             throw (
-                null != t.getFieldErrors("date_of_birth") && t9.Xv(nn.w_.REGISTER),
+                null != t.getFieldErrors("date_of_birth") && t6.Xv(nn.w_.REGISTER),
                 b.default.track(L.HAw.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),
@@ -1632,7 +1632,7 @@ function nS(e, t, n, i) {
                 channel_id: n?.channel?.id,
                 inviter_id: n?.inviter?.id,
                 invite_type: null != n && n?.type != null ? ty.Xd[n?.type] : void 0,
-                user_is_member: null != n && null != n.guild && null != e6.A.getGuild(n.guild.id),
+                user_is_member: null != n && null != n.guild && null != e9.A.getGuild(n.guild.id),
                 size_total: n?.approximate_member_count,
                 time_to_click_ms: Math.round(performance.now()),
             },
@@ -1677,7 +1677,7 @@ function nR(e) {
 }
 function nL(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, sectionClassName: l, inviteCardClassName: s = ny.qF } = e,
-        { ref: r, height: a } = (0, e9.Ay)(),
+        { ref: r, height: a } = (0, e6.Ay)(),
         o = (0, e1.z)({ height: null != a && 0 !== a ? `${a}px` : `${i}px`, config: e0.config.stiff });
     return (0, c.jsxs)(e0.animated.div, {
         className: s,
@@ -2028,19 +2028,19 @@ let n8 = { [nX.tY.MESSAGE]: Q.t.fuqnBC, [nX.tY.USER]: Q.t.F4jrRW, [nX.tY.GUILD]:
         });
     };
 var n5 = n(881636);
-let n9 = "https://stopncii.org/partners/global-network-of-partners/",
-    n6 = {
+let n6 = "https://stopncii.org/partners/global-network-of-partners/",
+    n9 = {
         [nX.sl.TIDA]: {
             selectionLabel: Q.t.jMSjZL,
             selectionDescription: Q.t.qEaUPS,
             helpBody: Q.t.R2Q57u,
-            supportOrgURL: n9,
+            supportOrgURL: n6,
         },
         [nX.sl.UK_STOPNCII]: {
             selectionLabel: Q.t.jMSjZL,
             selectionDescription: Q.t.J0tNny,
             helpBody: Q.t.R2Q57u,
-            supportOrgURL: n9,
+            supportOrgURL: n6,
         },
         [nX.sl.BRAZIL_ONLINE_SAFETY_OF_WOMEN]: {
             selectionLabel: Q.t.jMSjZL,
@@ -2050,7 +2050,7 @@ let n9 = "https://stopncii.org/partners/global-network-of-partners/",
         },
     };
 function ie(e) {
-    return (0, nX.c7)(e) ? n6[e] : n6[nX.sl.TIDA];
+    return (0, nX.c7)(e) ? n9[e] : n9[nX.sl.TIDA];
 }
 var it = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s),
     ii = n(138658);
@@ -2712,8 +2712,8 @@ function i3(e) {
 }
 var i7 = n(895600),
     i5 = n(506774),
-    i9 = n(104798),
-    i6 = n(991512);
+    i6 = n(104798),
+    i9 = n(991512);
 let le = "mweb_handoff_nonce",
     lt = "mweb_handoff_nonce_expiration",
     ln = +tz.A.Millis.MINUTE,
@@ -2794,7 +2794,7 @@ let lr = () => {
                 : void 0;
     return null != s && ll.has(s)
         ? (0, c.jsx)("div", {
-              className: i6.Un,
+              className: i9.Un,
               children: (0, c.jsx)(F.E, {
                   color: "interactive-text-default",
                   variant: "body-sm/semibold",
@@ -2802,14 +2802,14 @@ let lr = () => {
               }),
           })
         : (0, c.jsxs)("div", {
-              className: i6.kL,
+              className: i9.kL,
               children: [
                   (0, c.jsx)(F.E, { variant: "body-sm/semibold", children: h }),
                   (0, c.jsx)(M.$, {
                       variant: "overlay-primary",
                       text: Q.intl.string(Q.t.NcC759),
                       onClick: function () {
-                          let e = i9.A.generateNonce();
+                          let e = i6.A.generateNonce();
                           (i5.w.set(le, e), i5.w.set(lt, Date.now() + ln));
                           let t = new URL(L.J$u),
                               n = new URLSearchParams(window.location.search);
@@ -4325,7 +4325,7 @@ function lz(e) {
           });
 }
 f.Ay.initialize();
-var lX = n(50302);
+var lX = n(67640);
 f.Ay.initialize();
 class lY extends u.PureComponent {
     state = { error: null, continueOnWeb: !1, currentUser: null, sentVerification: !1, fetchingUser: !1 };
@@ -4687,7 +4687,7 @@ function l5(e) {
         ],
     });
 }
-function l9(e, t, n) {
+function l6(e, t, n) {
     (e.preventDefault(),
         b.default.track(L.HAw.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
@@ -4699,7 +4699,7 @@ function l9(e, t, n) {
         l = null != i ? i : e$.default.getId();
     eT.A.openMobileApp(n.state === lm.QB.RESOLVED ? t : void 0, l);
 }
-function l6(e) {
+function l9(e) {
     let { code: t } = e,
         n = (0, f.bG)([eS.A], () => eS.A.getGuildTemplate(t));
     return (u.useEffect(() => {
@@ -4716,7 +4716,7 @@ function l6(e) {
                         children: (0, c.jsx)(M.$, {
                             text: Q.intl.string(Q.t["a3Gl+e"]),
                             fullWidth: !0,
-                            onClick: (e) => l9(e, t, n),
+                            onClick: (e) => l6(e, t, n),
                         }),
                     }),
                 ],
@@ -4724,7 +4724,7 @@ function l6(e) {
           : (0, c.jsx)(e5, {
                 text: Q.intl.string(Q.t["e/rZ2n"]),
                 buttonCta: Q.intl.string(Q.t.HAvYn0),
-                onClick: (e) => l9(e, t, n),
+                onClick: (e) => l6(e, t, n),
             });
 }
 (f.Ay.initialize(), n(938796));
@@ -5261,7 +5261,7 @@ let sP = iC(lv),
                                               guild_id: t.guild?.id,
                                               channel_id: t.channel?.id,
                                               inviter_id: t.inviter?.id,
-                                              user_is_member: null != t.guild && null != e6.A.getGuild(t.guild.id),
+                                              user_is_member: null != t.guild && null != e9.A.getGuild(t.guild.id),
                                               size_total: t.approximate_member_count,
                                               invite_type: null != t.type ? ty.Xd[t.type] : void 0,
                                           },
@@ -6054,7 +6054,7 @@ class s4 extends u.PureComponent {
                             transitionTo: l = eU.pX,
                         } = e;
                         return m.Fr || m.v1
-                            ? (0, c.jsx)(l6, { code: t }, t)
+                            ? (0, c.jsx)(l9, { code: t }, t)
                             : (0, c.jsx)(sB, {
                                   code: t ?? "",
                                   location: i,

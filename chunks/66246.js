@@ -766,7 +766,7 @@ function eU() {
         ],
     });
 }
-var eB = n(601454);
+var eB = n(379073);
 function eF(e) {
     let { progressBarRef: t } = e,
         { quest: n, taskDetails: i } = r.useContext(H.$0),

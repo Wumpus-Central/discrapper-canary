@@ -28,7 +28,7 @@ async function b(e) {
     return (await t(l), l);
 }
 var A = s(381991),
-    E = s(191850),
+    E = s(258576),
     w = s(792996);
 class C extends Error {}
 var I = s(705427),
@@ -1141,12 +1141,12 @@ function e0(e) {
 function e1(e) {
     0 !== e.length && e0([...eQ.getState().attachments, ...e.map(eX)]);
 }
-function e9(e) {
+function e5(e) {
     let { attachments: t } = eQ.getState(),
         s = t.find((t) => t.draft.localId === e);
     null != s && (eJ(s), e0(t.filter((e) => e !== s)));
 }
-function e5(e) {
+function e9(e) {
     e.forEach(eJ);
 }
 eW.h.subscribe("LOGOUT", function () {
@@ -1194,7 +1194,7 @@ function e7(e) {
                 )),
                 addFiles: e1,
                 pasteFiles: a,
-                removeAttachment: e9,
+                removeAttachment: e5,
                 hasErrors: y.some((e) => "error" === e.draft.status),
             }),
         { attachments: es, addFiles: el } = ee,
@@ -1275,11 +1275,11 @@ function e7(e) {
                         let l = e6;
                         try {
                             let e = await t(s);
-                            return (e5(s), e);
+                            return (e9(s), e);
                         } catch (t) {
                             throw (
                                 e6 !== l
-                                    ? e5(s)
+                                    ? e9(s)
                                     : ("" === D.A.getDraft(M) && (0, S.I)(M, e),
                                       e0([...s, ...eQ.getState().attachments])),
                                 t

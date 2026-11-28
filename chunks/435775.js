@@ -67,11 +67,11 @@ function P(e, a) {
 }
 t(758836);
 var W = t(901123),
-    F = t(17268),
+    F = t(777462),
     K = t(792996);
 (t(46788), v.A.getArticleURL(I.MVz.ORBS_REWARDS_FAQ), t(762493));
 var V = t(682901),
-    X = t(631502),
+    X = t(735980),
     z = t(226068),
     q = t(268920),
     G = t(633217);

@@ -9,7 +9,7 @@ var a = n(877784),
     u = n(420663),
     h = n(190443),
     m = n(979563),
-    f = n(683825);
+    f = n(636107);
 let p = {
         [m.d.HatTrick]: a.RibbonIcon,
         [m.d.AerialGoal]: t.GoalIcon,

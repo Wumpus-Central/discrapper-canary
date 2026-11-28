@@ -123,7 +123,7 @@ var Z = n(214947),
     q = n(448645),
     X = n(682901);
 n(88001);
-var $ = n(107198);
+var $ = n(707328);
 let ee = [
         { Icon: Z.FriendsIcon, getText: () => D.intl.formatToPlainString($.default.eP3Ar7, { totalSeats: 6 }) },
         { Icon: V.NitroWheelIcon, getText: () => D.intl.string($.default.woz1Kg) },

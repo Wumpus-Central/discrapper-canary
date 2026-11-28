@@ -586,7 +586,7 @@ var i = {
     "./HeadphonesSlashIcon.web.tsx": ["990836", []],
     "./CircleQuestionIcon.web.tsx": ["290136", []],
     "./ConnectionFineIcon.web.tsx": ["200192", []],
-    "./EmojiElatedFaceIcon.web.tsx": ["742542", [361283]],
+    "./EmojiElatedFaceIcon.web.tsx": ["742542", [583664]],
     "./SkipForwardIcon.web.tsx": ["898196", [698101]],
     "./BlueskyBrandIcon.web.tsx": ["429790", [359379]],
     "./ChevronSmallDownIcon.web.tsx": ["847374", []],

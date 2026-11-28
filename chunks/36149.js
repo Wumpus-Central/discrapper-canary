@@ -11,7 +11,7 @@ var o = n(207560),
 (n(787301), n(96358));
 var _ = n(40449),
     E = n(204925),
-    A = n(664188),
+    A = n(46742),
     f = n(792996);
 let h = new Set([u.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, u.q1.START_STAGE_PROMPT, u.q1.STAGE_CHANNEL_RAISE_HAND]),
     I = new Set([

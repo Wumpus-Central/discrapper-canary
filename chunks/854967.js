@@ -3443,7 +3443,7 @@ var nx = a(825484),
     n_ = a(967198),
     nN = a(942370),
     nA = a(792996),
-    nk = a(86495),
+    nk = a(124105),
     nI = a(681135);
 function nD() {
     var e;
@@ -8639,7 +8639,7 @@ function rq() {
         }),
     });
 }
-var rJ = a(95498),
+var rJ = a(989324),
     rQ = a(855522),
     rX = a(37646);
 function rZ() {
@@ -8984,7 +8984,7 @@ let oe = {
     "discord_app/images/burst_reactions/BurstReaction_Bubbles_v03.lottiejson": () =>
         a.e(91770).then(a.t.bind(a, 95553, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Portal_v03.lottiejson": () =>
-        a.e(196515).then(a.t.bind(a, 956481, 19)),
+        a.e(196515).then(a.t.bind(a, 178862, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Slime_v02.lottiejson": () =>
         a.e(109302).then(a.t.bind(a, 16341, 19)),
     "discord_app/images/burst_reactions/mobile/fullscreen/SuperReactions_Mobile_Send_Slime_v1.lottiejson": () =>
@@ -9018,7 +9018,7 @@ let oe = {
     "discord_app/modules/poggermode/images/enable_animation.lottiejson": () =>
         a.e(504660).then(a.t.bind(a, 662336, 19)),
     "discord_app/modules/premium/powerups/web/images/server_boost_highlight.json": () =>
-        a.e(867807).then(a.t.bind(a, 217762, 19)),
+        a.e(90188).then(a.t.bind(a, 217762, 19)),
     "discord_app/modules/quests/images/confetti.lottiejson": () => a.e(40119).then(a.t.bind(a, 718698, 19)),
     "discord_app/modules/quests/web/images/quest_bar_background.json": () => a.e(837316).then(a.t.bind(a, 599279, 19)),
     "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => a.e(897536).then(a.t.bind(a, 478979, 19)),
@@ -9307,12 +9307,12 @@ let ol = {
                     a.e(37786),
                     a.e(214530),
                     a.e(886692),
-                    a.e(850298),
+                    a.e(248648),
                     a.e(675933),
                     a.e(865191),
                     a.e(916373),
                     a.e(528038),
-                    a.e(114751),
+                    a.e(540085),
                     a.e(932747),
                     a.e(93685),
                     a.e(118504),
@@ -9337,7 +9337,7 @@ let ol = {
                     a.e(876401),
                     a.e(113446),
                     a.e(606053),
-                    a.e(96961),
+                    a.e(613831),
                     a.e(632607),
                     a.e(229030),
                     a.e(700201),
@@ -9794,7 +9794,7 @@ let ow = {
     NUFModal: async () => {
         let { default: e } = await Promise.all([
             a.e(188406),
-            a.e(315907),
+            a.e(538288),
             a.e(122326),
             a.e(533651),
             a.e(944492),
@@ -10011,7 +10011,7 @@ let ow = {
         return (t) => (0, r.jsx)(e, { ...t, detected: { applicationId: "123456789", name: "Test Game" } });
     },
     AppealIngestionModal: async () => {
-        let { default: e } = await Promise.all([a.e(726464), a.e(637867), a.e(480098)]).then(a.bind(a, 894683));
+        let { default: e } = await Promise.all([a.e(726464), a.e(637867), a.e(257717)]).then(a.bind(a, 894683));
         return (t) => (0, r.jsx)(e, { ...t, classificationId: "123456789" });
     },
     CreateTagModal: async () => {
@@ -10650,7 +10650,7 @@ let ow = {
         let { default: e } = await Promise.all([
                 a.e(36781),
                 a.e(713710),
-                a.e(139032),
+                a.e(42994),
                 a.e(910404),
                 a.e(259375),
                 a.e(364174),
@@ -10674,7 +10674,7 @@ let ow = {
         let { default: e } = await Promise.all([
                 a.e(36781),
                 a.e(713710),
-                a.e(139032),
+                a.e(42994),
                 a.e(910404),
                 a.e(259375),
                 a.e(617171),
@@ -10822,7 +10822,7 @@ let ow = {
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
             a.e(188406),
-            a.e(315907),
+            a.e(538288),
             a.e(122326),
             a.e(533651),
             a.e(260634),

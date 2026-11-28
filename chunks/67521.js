@@ -32,7 +32,7 @@ let r = {
                     (0, d.qn)() && (0, n.d)(i.q1.AUTOMATED_UNDERAGE_APPEALS))
                 ) {
                     if (await (0, s.L)(i.q1.AUTOMATED_UNDERAGE_APPEALS)) {
-                        let { default: e } = await Promise.all([A.e(585503), A.e(409609)]).then(A.bind(A, 475376));
+                        let { default: e } = await Promise.all([A.e(787813), A.e(409609)]).then(A.bind(A, 475376));
                         return (t) => (0, a.jsx)(e, { ...t });
                     }
                     let { default: e } = await Promise.all([

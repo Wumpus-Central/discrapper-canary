@@ -2,7 +2,7 @@ var l = n(997101),
     i = n(278416),
     r = n(166532),
     a = n(682901),
-    s = n(379912),
+    s = n(60498),
     o = n(792996);
 let u = [r.pn.REVIEW, r.pn.ADD_PAYMENT_STEPS];
 function c(e) {

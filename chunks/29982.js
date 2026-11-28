@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"u72Prd":["Transmite en resoluci\xf3n HD con Nitro"],"uwMBDo":["Compartir audio de la aplicaci\xf3n"],"3wwZ/Q":["Empezar a transmitir"],"OsS9Ll":["Dejar de transmitir"],"j+eAMQ":["Audio de la transmisi\xf3n"],"/XSr8v":["Modo de transmisi\xf3n"],"ibH7vy":["Calidad y rendimiento equilibrados (",[1,"resolution"],"p, ",[1,"fps"]," FPS)"],"2qmQ8N":["Predeterminado"],"q4gYBi":["Para v\xeddeo y juegos (",[1,"resolution"],"p, ",[1,"fps"]," FPS)"],"nMcXo1":["Alta calidad"],"fN0UQY":["Optimizado para dispositivos m\xe1s lentos (",[1,"resolution"],"p, ",[1,"fps"]," FPS)"],"5eO4/m":["Rendimiento"],"CrNjqp":["Ajustes de la transmisi\xf3n"]}',
+);

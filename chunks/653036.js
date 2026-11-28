@@ -1,8 +1,8 @@
 var n = l(477900);
 l(582128);
 var a = l(430392),
-    r = l(323384),
-    i = l(127062),
+    i = l(323384),
+    r = l(127062),
     s = l(280645),
     u = l(687966),
     o = l(231483),
@@ -13,13 +13,13 @@ var a = l(430392),
     g = l(625903),
     p = l(331322),
     h = l(834730),
-    v = l(191850),
+    v = l(258576),
     x = l(792996),
     b = l(32924);
 let y = {
     bots: a.RobotIcon,
-    channels: r.AppsIcon,
-    test_app: i.BeakerIcon,
+    channels: i.AppsIcon,
+    test_app: r.BeakerIcon,
     profile_widget: s.IdCardIcon,
     overlay: u.GameControllerIcon,
     automod: o.ShieldIcon,

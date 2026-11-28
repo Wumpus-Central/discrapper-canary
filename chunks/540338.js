@@ -1,11 +1,11 @@
 var n = l(477900);
 l(582128);
 var a = l(331322),
-    r = l(834730);
-if (221552 == l.j) var i = l(825484);
+    i = l(834730);
+if (221552 == l.j) var r = l(825484);
 var s = l(821609),
     u = l(709753),
-    o = l(191850),
+    o = l(258576),
     d = l(792996);
 l.d(
     t,
@@ -20,27 +20,27 @@ l.d(
                 role: "group",
                 "aria-label": d.intl.string(o.default.W4DsVo),
                 children: [
-                    (0, n.jsx)(r.E, {
+                    (0, n.jsx)(i.E, {
                         variant: "body-xs/semibold",
                         color: "text-brand",
                         tag: "span",
                         children: d.intl.string(o.default.W4DsVo),
                     }),
-                    (0, n.jsx)(r.E, {
+                    (0, n.jsx)(i.E, {
                         variant: "body-sm/normal",
                         color: "text-default",
                         selectable: !0,
                         children: d.intl.format(o.default.E4Gc7e, { host: f }),
                     }),
                     "" !== m
-                        ? (0, n.jsx)(r.E, {
+                        ? (0, n.jsx)(i.E, {
                               variant: "body-sm/normal",
                               color: "text-muted",
                               selectable: !0,
                               children: d.intl.format(o.default["5poqiN"], { reason: m }),
                           })
                         : null,
-                    (0, n.jsxs)(i.e, {
+                    (0, n.jsxs)(r.e, {
                         size: "sm",
                         direction: "horizontal",
                         children: [
@@ -74,18 +74,18 @@ l.d(
                       role: "group",
                       "aria-label": d.intl.string(o.default.Ufr2wk),
                       children: [
-                          (0, n.jsx)(r.E, {
+                          (0, n.jsx)(i.E, {
                               variant: "body-md/medium",
                               color: "text-strong",
                               children: d.intl.string(o.default.Ufr2wk),
                           }),
-                          (0, n.jsx)(r.E, {
+                          (0, n.jsx)(i.E, {
                               variant: "body-sm/normal",
                               color: "text-muted",
                               children: d.intl.string(o.default.wremls),
                           }),
                           0 === l.length
-                              ? (0, n.jsx)(r.E, {
+                              ? (0, n.jsx)(i.E, {
                                     variant: "body-sm/normal",
                                     color: "text-muted",
                                     children: d.intl.string(o.default.AweHIi),
@@ -100,7 +100,7 @@ l.d(
                                             role: "group",
                                             "aria-label": e,
                                             children: [
-                                                (0, n.jsx)(r.E, {
+                                                (0, n.jsx)(i.E, {
                                                     variant: "body-sm/normal",
                                                     color: "text-default",
                                                     selectable: !0,

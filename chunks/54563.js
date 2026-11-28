@@ -15,10 +15,10 @@ var p = n(156150),
     h = n(665260),
     g = n(683063),
     A = n(265872),
-    C = n(460905),
-    E = n(110384),
-    x = n(939249),
-    v = n(834730),
+    E = n(460905),
+    C = n(110384),
+    v = n(939249),
+    x = n(834730),
     _ = n(138399),
     b = n(565645),
     y = n(822123),
@@ -55,8 +55,8 @@ var O = n(451909),
     P = n(747926),
     k = n(46653),
     L = n(734057),
-    w = n(188567),
-    D = n(475815);
+    D = n(188567),
+    w = n(475815);
 let U = (0, n(945810).mj)({
     kind: "user",
     name: "2026-05-clips-media-comments",
@@ -65,7 +65,7 @@ let U = (0, n(945810).mj)({
 });
 var G = n(307731),
     F = n(381941),
-    B = n(683825),
+    B = n(636107),
     V = n(792996),
     H = n(455871);
 function W(e, t) {
@@ -185,7 +185,7 @@ function z(e) {
                             ref: et,
                             type: "button",
                             className: H.x6,
-                            children: (0, i.jsx)(C.ReactionIcon, { size: "sm" }),
+                            children: (0, i.jsx)(E.ReactionIcon, { size: "sm" }),
                         }),
                     }),
             }),
@@ -197,7 +197,7 @@ function z(e) {
                     className: H.x6,
                     onClick: function (e) {
                         if ((e.stopPropagation(), null == q || null == Y || null == Z?.current?.currentTime)) return;
-                        D._U(Z.current) && D.sP(Z.current);
+                        w._U(Z.current) && w.sP(Z.current);
                         let t = Y.author.id === k.default.getId();
                         ((0, M.Yf)({
                             channel: q,
@@ -206,9 +206,9 @@ function z(e) {
                             showMentionToggle: !q.isPrivate() && !t,
                             mediaMention: W(m, Z),
                         }),
-                            w._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
+                            D._.dispatch(j.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: q.id }));
                     },
-                    children: (0, i.jsx)(E.ArrowAngleLeftUpIcon, { size: "sm" }),
+                    children: (0, i.jsx)(C.ArrowAngleLeftUpIcon, { size: "sm" }),
                 }),
             }),
             ei > 0 &&
@@ -216,14 +216,14 @@ function z(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(K, {}),
-                        (0, i.jsx)(x.D, {
+                        (0, i.jsx)(v.D, {
                             className: H.jC,
                             tag: "span",
                             onClick: function (e) {
-                                (e.stopPropagation(), null != Q && (D._U(Z.current) && D.sP(Z.current), (0, P.JA)(Q)));
+                                (e.stopPropagation(), null != Q && (w._U(Z.current) && w.sP(Z.current), (0, P.JA)(Q)));
                             },
                             "aria-label": el,
-                            children: (0, i.jsx)(v.E, {
+                            children: (0, i.jsx)(x.E, {
                                 variant: "body-sm/semibold",
                                 color: "text-link",
                                 lineClamp: 1,
@@ -264,12 +264,12 @@ function el(e) {
         { enableMediaComments: d } = U.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
         m = (0, h.Lt)(n.flags ?? 0, j.sbO.HAS_TIMELINE_COMMENTS),
         { isActive: g, isControlBarExpanded: A } = (0, f.X$)(),
-        C = (0, u.bG)([N.A], () => N.A.getMessage(s, o), [s, o]),
-        { data: E } = R(n, s, a, C?.author.id, d && m && g);
+        E = (0, u.bG)([N.A], () => N.A.getMessage(s, o), [s, o]),
+        { data: C } = R(n, s, a, E?.author.id, d && m && g);
     return (l.useEffect(() => {
-        g && R.refetch(n, s, a, C?.author.id, d && m && g);
-    }, [g, n, s, a, C?.author.id, d, m]),
-    !d || null == E || r <= 0)
+        g && R.refetch(n, s, a, E?.author.id, d && m && g);
+    }, [g, n, s, a, E?.author.id, d, m]),
+    !d || null == C || r <= 0)
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -282,7 +282,7 @@ function el(e) {
                               ? (0, p.to)([t.to({ range: [0, 1], output: [60, 0] })], (e) => `translateY(${e}px)`)
                               : "translateY(60px)",
                       },
-                      children: E.map((e) => (0, i.jsx)(ea, { hidden: c, message: e, durationSeconds: r }, e.id)),
+                      children: C.map((e) => (0, i.jsx)(ea, { hidden: c, message: e, durationSeconds: r }, e.id)),
                   }),
               ],
           });
@@ -309,8 +309,8 @@ function ea(e) {
         u = "" !== t.content ? o : null,
         { videoRef: c, isActive: d, isControlBarExpanded: m } = (0, f.X$)(),
         [h, A] = l.useState(!1),
-        [C, E] = l.useState(!1),
-        [v, y] = l.useState(!1);
+        [E, C] = l.useState(!1),
+        [x, y] = l.useState(!1);
     l.useEffect(() => {
         let e = c.current;
         if (null != e) return (e.addEventListener("timeupdate", n), () => e.removeEventListener("timeupdate", n));
@@ -321,7 +321,7 @@ function ea(e) {
             null != i && A(1e3 >= Math.abs(1e3 * n - i));
         }
     }, [t?.mediaMention?.timestamp, c]);
-    let T = h || !d || C,
+    let T = h || !d || E,
         [S, I] = (0, q.z)(() => ({ ...ei(T), config: { ...Y.n } }));
     if (
         (l.useEffect(() => {
@@ -340,12 +340,12 @@ function ea(e) {
         null == t)
     )
         return null;
-    let N = (0, i.jsx)(x.D, {
+    let N = (0, i.jsx)(v.D, {
         className: en.xL,
         style: { left: a, display: r ? "none" : "block" },
         inert: r,
-        onMouseEnter: () => E(!0),
-        onMouseLeave: () => E(!1),
+        onMouseEnter: () => C(!0),
+        onMouseLeave: () => C(!1),
         onClick: function (e) {
             e.stopPropagation();
             let n = t.messageReference?.channel_id,
@@ -378,7 +378,7 @@ function ea(e) {
         ? N
         : (0, i.jsx)(g.u, {
               positionKey: `${m}`,
-              forceOpen: h && null == s && !v,
+              forceOpen: h && null == s && !x,
               asset: (0, i.jsx)(X.eu, {
                   src: t.author.getAvatarURL(void 0, 16),
                   size: Z._3.SIZE_16,
@@ -421,9 +421,9 @@ var ef = n(419490),
     eh = n(42502),
     eg = n(110742),
     eA = n(352527),
-    eC = n(996682),
-    eE = n(27989);
-function ex(e) {
+    eE = n(996682),
+    eC = n(27989);
+function ev(e) {
     let {
             size: t = "md",
             width: n,
@@ -432,11 +432,11 @@ function ex(e) {
             colorClass: a = "",
             ...s
         } = e,
-        o = (0, eE.J)(t),
+        o = (0, eC.J)(t),
         u = o?.width ?? n,
         c = o?.height ?? l;
     return (0, i.jsxs)("svg", {
-        ...(0, eC.A)(s),
+        ...(0, eE.A)(s),
         width: u,
         height: c,
         viewBox: "0 0 32 32",
@@ -468,7 +468,7 @@ function ex(e) {
         ],
     });
 }
-var ev = n(879241);
+var ex = n(879241);
 function e_(e) {
     let { attachment: t, channelId: n, messageId: r, isControlBarExpanded: s, isPlayerActive: o } = e,
         { enableDistributedClips: c } = ep.A.useConfig({ location: "DistributedClipShareCTA" }),
@@ -520,11 +520,11 @@ function e_(e) {
         );
     return c && null != d && !p && f
         ? (0, i.jsxs)("button", {
-              className: a()(ev.eZ, { [ev.vu]: s, [ev.jn]: !o }),
+              className: a()(ex.eZ, { [ex.vu]: s, [ex.jn]: !o }),
               onClick: h,
               children: [
-                  (0, i.jsx)(ex, { size: "refresh_sm", color: $.A.colors.WHITE }),
-                  (0, i.jsx)(v.E, {
+                  (0, i.jsx)(ev, { size: "refresh_sm", color: $.A.colors.WHITE }),
+                  (0, i.jsx)(x.E, {
                       variant: "body-xs/semibold",
                       color: "text-overlay-light",
                       children: V.intl.string(B.default.YKst58),
@@ -544,10 +544,10 @@ function ey(e) {
             attachment: h,
             guildId: g,
             isFullScreen: A,
-            showParticipants: C,
-            showTextContent: E,
-            channelId: x,
-            messageId: v,
+            showParticipants: E,
+            showTextContent: C,
+            channelId: v,
+            messageId: x,
             showSpeakingIndicators: _,
             clipUserIds: b,
             durationSeconds: y,
@@ -567,7 +567,7 @@ function ey(e) {
                 children: [
                     (0, i.jsx)(es.A, {
                         createdAt: null != h.clip_created_at ? Date.parse(h.clip_created_at) : void 0,
-                        participantIds: C ? b : [],
+                        participantIds: E ? b : [],
                         applicationId: h.application?.id,
                         title: h.title,
                         guildId: g,
@@ -575,49 +575,49 @@ function ey(e) {
                         isControlBarExpanded: l,
                         isFullScreen: A,
                         activeLayer: j,
-                        showTextContent: E,
+                        showTextContent: C,
                         isGridView: I,
                         setIsGridView: S,
                     }),
                     !I &&
-                        null != v &&
                         null != x &&
+                        null != v &&
                         (0, i.jsx)(e_, {
                             isControlBarExpanded: l,
                             isPlayerActive: r,
                             attachment: h,
-                            messageId: v,
-                            channelId: x,
+                            messageId: x,
+                            channelId: v,
                         }),
                     !I &&
                         _ &&
                         null != h.clip_events_timeline &&
-                        null != x &&
-                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: b, channelId: x }),
+                        null != v &&
+                        (0, i.jsx)(em, { guildId: g, timeline: h.clip_events_timeline, userIds: b, channelId: v }),
                     r &&
                         null != g &&
-                        null != x &&
                         null != v &&
+                        null != x &&
                         (0, i.jsx)(d.NA.Provider, {
                             value: N,
                             children: (0, i.jsx)(z, {
                                 controlBarAnimationSpring: n,
                                 attachment: h,
-                                channelId: x,
-                                messageId: v,
+                                channelId: v,
+                                messageId: x,
                                 guildId: g,
                                 containerWidth: O,
                                 hidden: !l || p,
                             }),
                         }),
                     null != g &&
-                        null != x &&
                         null != v &&
+                        null != x &&
                         (0, i.jsx)(el, {
                             controlBarAnimationSpring: n,
                             attachment: h,
-                            channelId: x,
-                            messageId: v,
+                            channelId: v,
+                            messageId: x,
                             guildId: g,
                             durationSeconds: h.duration_secs ?? y,
                             hidden: !T,

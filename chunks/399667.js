@@ -2,7 +2,7 @@ n(321073);
 var i = n(817379),
     r = n(503235),
     a = n(51104),
-    s = n(852717),
+    s = n(547507),
     l = n(792996);
 let o = [r.v7.BASE, r.v7.FACE, r.v7.OUTFIT, r.v7.OUTFIT_COLOR, r.v7.HAT, r.v7.SHOES, r.v7.WEARABLE, r.v7.AURA];
 n.d(

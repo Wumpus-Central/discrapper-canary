@@ -1,11 +1,11 @@
 var n = l(582128),
     a = l(855986),
-    r = l(513425),
-    i = l(540665),
+    i = l(513425),
+    r = l(540665),
     s = l(569319),
     u = l(285411),
     o = l(805330),
-    d = l(191850),
+    d = l(258576),
     c = l(792996);
 l.d(
     t,
@@ -13,8 +13,8 @@ l.d(
     {
         L: function (e, t) {
             let { id: l, status: s, error: u } = t,
-                f = (0, a.bG)([i.Ay], () => "open" === i.Ay.getConnState(e), [e]),
-                m = (0, a.bG)([r.A], () => !r.A.isThinking(e) && !r.A.isCompacting(e), [e]),
+                f = (0, a.bG)([r.Ay], () => "open" === r.Ay.getConnState(e), [e]),
+                m = (0, a.bG)([i.A], () => !i.A.isThinking(e) && !i.A.isCompacting(e), [e]),
                 [g, p] = n.useState(null),
                 h = n.useCallback(() => p({ frame: t, ok: (0, o.yR)(e, l) }), [t, e, l]),
                 v = g?.frame === t ? g : null,

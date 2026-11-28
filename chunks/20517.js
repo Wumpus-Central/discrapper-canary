@@ -4,7 +4,7 @@ var i = n(830845),
     s = n(652215),
     l = n(746080),
     o = n(792996),
-    d = n(191850);
+    d = n(258576);
 let c = s.BVt.CHANNEL(r.pv.guildId(), l.VV.CONJURE, ":projectId?"),
     u = s.BVt.CHANNEL(r.pv.guildId(), r.pv.channelId(), ":messageId?");
 function _(e) {

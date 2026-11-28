@@ -4,7 +4,7 @@ var r = n(477900),
     s = n(778712),
     t = n(834730),
     d = n(427262),
-    c = n(191850),
+    c = n(258576),
     l = n(792996);
 function o(a) {
     let { creator: e, guildId: n, color: o = "none" } = a;

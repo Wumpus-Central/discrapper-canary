@@ -1,21 +1,41 @@
-var e = l(855986),
-    r = l(782068);
-function u(t) {
-    return (0, e.bG)([r.A], () => (null == t ? null : r.A.getCopy(t)), [t]);
-}
-l.d(
-    n,
-    {},
-    {
-        AJ: function (t) {
-            return null != u(t);
+n.r(t);
+let { createLoader: i } = n(989324),
+    r = i(
+        {
+            bg: () => n.e(113723).then(n.t.bind(n, 793654, 19)),
+            cs: () => n.e(145228).then(n.t.bind(n, 513991, 19)),
+            da: () => n.e(29607).then(n.t.bind(n, 157914, 19)),
+            de: () => n.e(886643).then(n.t.bind(n, 758270, 19)),
+            el: () => n.e(786285).then(n.t.bind(n, 272188, 19)),
+            "en-GB": () => n.e(567231).then(n.t.bind(n, 174722, 19)),
+            "es-419": () => n.e(407531).then(n.t.bind(n, 931494, 19)),
+            "es-ES": () => n.e(615511).then(n.t.bind(n, 719178, 19)),
+            fi: () => n.e(203233).then(n.t.bind(n, 575864, 19)),
+            fr: () => n.e(206634).then(n.t.bind(n, 871537, 19)),
+            hi: () => n.e(754771).then(n.t.bind(n, 241246, 19)),
+            hr: () => n.e(814952).then(n.t.bind(n, 743771, 19)),
+            hu: () => n.e(508383).then(n.t.bind(n, 531554, 19)),
+            it: () => n.e(153665).then(n.t.bind(n, 861848, 19)),
+            ja: () => n.e(760925).then(n.t.bind(n, 369004, 19)),
+            ko: () => n.e(531944).then(n.t.bind(n, 185435, 19)),
+            lt: () => n.e(428386).then(n.t.bind(n, 216313, 19)),
+            nl: () => n.e(16628).then(n.t.bind(n, 830687, 19)),
+            no: () => n.e(905239).then(n.t.bind(n, 834442, 19)),
+            pl: () => n.e(435030).then(n.t.bind(n, 155637, 19)),
+            "pt-BR": () => n.e(276063).then(n.t.bind(n, 380642, 19)),
+            ro: () => n.e(116579).then(n.t.bind(n, 581678, 19)),
+            ru: () => n.e(625217).then(n.t.bind(n, 991128, 19)),
+            "sv-SE": () => n.e(26030).then(n.t.bind(n, 633917, 19)),
+            th: () => n.e(191494).then(n.t.bind(n, 794277, 19)),
+            tr: () => n.e(813028).then(n.t.bind(n, 973135, 19)),
+            uk: () => n.e(881722).then(n.t.bind(n, 284865, 19)),
+            vi: () => n.e(647153).then(n.t.bind(n, 948040, 19)),
+            "zh-CN": () => n.e(326478).then(n.t.bind(n, 254685, 19)),
+            "zh-TW": () => n.e(745666).then(n.t.bind(n, 738201, 19)),
+            "en-US": () => n.e(615640).then(n.bind(n, 492171)),
         },
-        Ay: u,
-        GB: function (t) {
-            return (0, e.bG)([r.A], () => r.A.getDownstreamUpdates(t), [t]);
-        },
-        cg: function (t) {
-            return (0, e.bG)([r.A], () => r.A.getLastSync(t), [t]);
-        },
-    },
-);
+        "en-US",
+    ),
+    { makeMessagesProxy: a } = n(989324),
+    s = a(r);
+n.d(t, {}, { default: s, messagesLoader: r });

@@ -641,7 +641,7 @@ var ey = n(831259),
     ek = n(758836),
     eO = n(49999),
     eT = n(818348),
-    eR = n(105518),
+    eR = n(53776),
     eD = n(196064);
 let eP = "GAME_SERVER_HOSTING_BANNER";
 function eM(e) {

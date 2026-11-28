@@ -39,8 +39,8 @@ var a = t(477900),
     V = t(42119),
     H = t(818348),
     J = t(792996),
-    O = t(958904),
-    X = t(557441),
+    O = t(40694),
+    X = t(418555),
     $ = t(438221);
 function F(e) {
     return L.A.getGuild(e)?.features.has(S.GuildFeatures.GUILD_THEME) === !0;

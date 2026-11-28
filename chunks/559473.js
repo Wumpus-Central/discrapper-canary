@@ -57,7 +57,7 @@ function W(e) {
         l = (0, C.bG)([S.A], () => S.A.inTestModeForApplication(e), [e]);
     return t || n || l;
 }
-var w = n(86495),
+var w = n(124105),
     G = n(753114);
 function F(e) {
     let { application: t, tools: n, onOpenTool: l, returnFocusToolId: s } = e,
@@ -179,7 +179,7 @@ var el =
     l);
 let ei = "embed-builder";
 var es = n(652215),
-    ea = n(25082),
+    ea = n(804280),
     er = n(645429);
 function eo() {
     let { config: e, selectedIds: t, actions: l } = (0, j.qZ)((e) => e),
@@ -354,7 +354,7 @@ function eo() {
                                                         n.e(481647),
                                                         n.e(543039),
                                                         n.e(976759),
-                                                        n.e(398125),
+                                                        n.e(620506),
                                                         n.e(749248),
                                                         n.e(221825),
                                                         n.e(143613),
@@ -410,8 +410,8 @@ function eo() {
                                                         n.e(35403),
                                                         n.e(628439),
                                                         n.e(964320),
-                                                        n.e(108634),
-                                                        n.e(35757),
+                                                        n.e(913376),
+                                                        n.e(374003),
                                                         n.e(570506),
                                                         n.e(539620),
                                                         n.e(225990),
@@ -440,7 +440,7 @@ function eo() {
                                                         n.e(182408),
                                                         n.e(561216),
                                                         n.e(692835),
-                                                        n.e(21219),
+                                                        n.e(943657),
                                                         n.e(829177),
                                                         n.e(106943),
                                                         n.e(348674),
@@ -449,7 +449,7 @@ function eo() {
                                                         n.e(422891),
                                                         n.e(790244),
                                                         n.e(121435),
-                                                        n.e(491279),
+                                                        n.e(146733),
                                                         n.e(398793),
                                                         n.e(592731),
                                                         n.e(723794),
@@ -522,9 +522,9 @@ function eo() {
                                                         n.e(496715),
                                                         n.e(115754),
                                                         n.e(122266),
-                                                        n.e(474055),
+                                                        n.e(129721),
                                                         n.e(781202),
-                                                        n.e(104513),
+                                                        n.e(837811),
                                                         n.e(744385),
                                                         n.e(29664),
                                                         n.e(471064),

@@ -97,7 +97,7 @@ let M = {
     };
 var R = l(825484),
     O = l(821609),
-    w = l(307805);
+    w = l(964079);
 let L = (e) => {
     let t,
         {
@@ -874,20 +874,20 @@ let e2 = (e) => {
         ],
     });
 };
-var e8 = l(120337);
-let e5 = (e) => {
+var e9 = l(120337);
+let e8 = (e) => {
     let { guild: t } = e;
     return (0, n.jsxs)("div", {
-        className: e8.kL,
+        className: e9.kL,
         children: [
-            (0, n.jsx)(p.D, { className: e8.wx, variant: "heading-xs/medium", children: E.intl.string(E.t["0ox7Hq"]) }),
+            (0, n.jsx)(p.D, { className: e9.wx, variant: "heading-xs/medium", children: E.intl.string(E.t["0ox7Hq"]) }),
             (0, n.jsx)("div", {
-                className: e8.bo,
+                className: e9.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e8.OA,
+                    className: e9.OA,
                     children: [
                         (0, n.jsx)("div", {
-                            className: e8.$f,
+                            className: e9.$f,
                             children: (0, n.jsx)(eZ.Ay, { guild: t, size: eZ.Ay.Sizes.LARGE }),
                         }),
                         (0, n.jsx)("div", {
@@ -903,27 +903,27 @@ let e5 = (e) => {
         ],
     });
 };
-var e9 = l(285496);
+var e5 = l(285496);
 let e6 = (e) => {
     let { event: t } = e,
         l = (0, G.bG)([eX.A], () => eX.A.getGuild(t.guild_id));
     return null == l
         ? null
         : (0, n.jsxs)("div", {
-              className: e9.kL,
+              className: e5.kL,
               children: [
                   (0, n.jsx)(p.D, {
-                      className: e9.wx,
+                      className: e5.wx,
                       variant: "heading-xs/medium",
                       children: E.intl.string(E.t.SDTOL7),
                   }),
                   (0, n.jsxs)("div", {
-                      className: e9.bo,
+                      className: e5.bo,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: e9.OA,
+                              className: e5.OA,
                               children: [
-                                  (0, n.jsx)(eZ.Ay, { guild: l, size: eZ.Ay.Sizes.MINI, className: e9.$f }),
+                                  (0, n.jsx)(eZ.Ay, { guild: l, size: eZ.Ay.Sizes.MINI, className: e5.$f }),
                                   (0, n.jsx)(U.E, {
                                       color: "text-default",
                                       variant: "body-sm/normal",
@@ -1556,23 +1556,23 @@ let t2 = (e) => {
         ],
     });
 };
-var t8 = l(766529),
-    t5 = l(287809),
-    t9 = l(818972);
+var t9 = l(766529),
+    t8 = l(287809),
+    t5 = l(818972);
 let t6 = (e) => {
         let { widget: t, userId: l } = e,
-            a = (0, G.bG)([t5.default], () => t5.default.getUser(l));
+            a = (0, G.bG)([t8.default], () => t8.default.getUser(l));
         return null == a
             ? null
             : (0, n.jsxs)("div", {
-                  className: t9.k,
+                  className: t5.k,
                   children: [
                       (0, n.jsx)(p.D, {
-                          className: t9.w,
+                          className: t5.w,
                           variant: "heading-xs/medium",
                           children: E.intl.string(E.t.SpsnDY),
                       }),
-                      (0, n.jsx)(t8.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
+                      (0, n.jsx)(t9.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
                   ],
               });
     },
@@ -1820,7 +1820,7 @@ let ln = (e) => {
                     null != lt(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(t6, { widget: l.widget, userId: l.user_id })
                         : null,
-                    null != lt(t, "guild_preview") && "guild" === l.name ? (0, n.jsx)(e5, { guild: l.record }) : null,
+                    null != lt(t, "guild_preview") && "guild" === l.name ? (0, n.jsx)(e8, { guild: l.record }) : null,
                     null != lt(t, "breadcrumbs") && (0, n.jsx)(ei, { isModeratorReport: P, history: r }),
                     (function (e) {
                         let { elements: t } = e;

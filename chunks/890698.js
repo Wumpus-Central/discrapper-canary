@@ -60,7 +60,7 @@ let b = new h(u.h, {
 });
 var _ = l(786986),
     P = l(991238),
-    S = l(191850),
+    S = l(258576),
     m = l(792996);
 function w(t) {
     return _.n_.some((n) => null != t.getGuild(n));

@@ -101,8 +101,8 @@ var d = n(975807),
     b = n(88001),
     v = n(818348),
     P = n(792996),
-    M = n(50302),
-    U = n(107198);
+    M = n(67640),
+    U = n(707328);
 let w = {
         PAYMENT_SOURCE_MANAGEMENT: "https://support.apple.com/HT201266",
         BILLING_HISTORY: "https://support.apple.com/HT201266",

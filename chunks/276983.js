@@ -1,6 +1,6 @@
 n(205816);
 var i = n(723702),
-    r = n(191850),
+    r = n(258576),
     a = n(792996);
 let s = {
         screen_capture: { isSupported: i.xl, getLabel: () => a.intl.string(r.default["2KIefJ"]) },

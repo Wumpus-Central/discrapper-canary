@@ -1,6 +1,6 @@
 var i,
     r = n(218546),
-    a = n(852717),
+    a = n(547507),
     s = (((i = {})[(i.V2025 = 0)] = "V2025"), (i[(i.V2026 = 1)] = "V2026"), i);
 let l = [
         { list: "gamesByPlayers", label: a.default.b4s18j },

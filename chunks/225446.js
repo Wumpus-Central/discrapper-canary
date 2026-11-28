@@ -1,10 +1,10 @@
 var n = l(477900),
     a = l(582128),
-    r = l(646514),
-    i = l(194261),
+    i = l(646514),
+    r = l(194261),
     s = l(534514),
     u = l(834730),
-    o = l(191850),
+    o = l(258576),
     d = l(792996),
     c = l(211514);
 l.d(
@@ -23,9 +23,9 @@ l.d(
                         children: [
                             (0, n.jsx)("span", {
                                 className: c.oL,
-                                children: (0, n.jsx)(i.LockIcon, {
+                                children: (0, n.jsx)(r.LockIcon, {
                                     size: "sm",
-                                    color: r.A.colors.ICON_SUBTLE,
+                                    color: i.A.colors.ICON_SUBTLE,
                                     "aria-hidden": !0,
                                 }),
                             }),

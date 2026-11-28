@@ -1,8 +1,8 @@
 var n = l(477900);
 l(582128);
 var a = l(834730),
-    r = l(383668),
-    i = l(191850),
+    i = l(383668),
+    r = l(258576),
     s = l(792996),
     u = l(391284);
 function o(e) {
@@ -35,7 +35,7 @@ l.d(
                                       id: p,
                                       variant: "body-xs/normal",
                                       color: "text-muted",
-                                      children: s.intl.string(i.default["3q5CYS"]),
+                                      children: s.intl.string(r.default["3q5CYS"]),
                                   })
                                 : null,
                             null != m ? (0, n.jsx)("span", { className: u.h5, children: m }) : null,
@@ -44,7 +44,7 @@ l.d(
                     null != d && "" !== d
                         ? (0, n.jsx)("div", {
                               id: h,
-                              children: (0, n.jsx)(r.A, {
+                              children: (0, n.jsx)(i.A, {
                                   text: d,
                                   variant: "body-sm/normal",
                                   color: "text-subtle",

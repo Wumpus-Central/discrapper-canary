@@ -1,6 +1,6 @@
 var i = n(927813),
     r = n(518782),
-    a = n(135294),
+    a = n(925440),
     s = n(792996);
 let l = {
     [r.zu.COMPETITION_ENDED]: {

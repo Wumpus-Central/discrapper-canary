@@ -1505,7 +1505,7 @@ class e8 {
                 this.element.style.setProperty("--custom-rolling-cell", String(e))));
     }
 }
-function e7(e) {
+function e9(e) {
     let { digit: t, rules: a } = e,
         i = s.useRef(null),
         [n] = s.useState(() => new e8(a, t)),
@@ -1527,21 +1527,21 @@ function e7(e) {
         }),
     });
 }
-let e9 = /^[0-9]$/;
+let e7 = /^[0-9]$/;
 function te(e) {
     let { value: t, forwardsOnly: a = !1 } = e,
         i = a ? e4 : e6,
         n = t.toLocaleString(),
         r = n.split(""),
-        l = r.filter((e) => e9.test(e)).length;
+        l = r.filter((e) => e7.test(e)).length;
     return (0, o.jsxs)("span", {
         className: e2.PB,
         children: [
             (0, o.jsx)("span", { className: e2.HD, children: n }),
             r.map((e, t) => {
-                if (!e9.test(e)) return (0, o.jsx)("span", { "aria-hidden": !0, children: e }, `separator-${t}`);
+                if (!e7.test(e)) return (0, o.jsx)("span", { "aria-hidden": !0, children: e }, `separator-${t}`);
                 let a = l--;
-                return (0, o.jsx)(e7, { digit: Number(e), rules: i }, a);
+                return (0, o.jsx)(e9, { digit: Number(e), rules: i }, a);
             }),
         ],
     });
@@ -3431,7 +3431,7 @@ void main() {
   rgb = min(rgb, vec3(alpha));
   fragColor = vec4(rgb, alpha);
 }`;
-function t7(e, t, a, i, n) {
+function t9(e, t, a, i, n) {
     let r = 2 * a + 1;
     for (let o = 0; o < 256; o++)
         for (let s = 0; s < 3; s++) {
@@ -3449,7 +3449,7 @@ function t7(e, t, a, i, n) {
             }
         }
 }
-let t9 = `#version 300 es
+let t7 = `#version 300 es
 in vec2 aPosition;
 out vec2 vTex;
 void main() {
@@ -4004,7 +4004,7 @@ function ag(e) {
                 let $ = {
                     scene: t_(t, t4, t8),
                     rocks: t_(t, ao, as),
-                    lens: i ? t_(t, t9, ae) : null,
+                    lens: i ? t_(t, t7, ae) : null,
                     present: t_(t, at, aa),
                 };
                 ((eb = $),
@@ -4380,8 +4380,8 @@ function ag(e) {
                                                                                 );
                                                                             i.set(t);
                                                                             for (let e = 0; e < 3; e++)
-                                                                                (t7(i, n, s, !0, r),
-                                                                                    t7(n, i, s, !1, r));
+                                                                                (t9(i, n, s, !0, r),
+                                                                                    t9(n, i, s, !1, r));
                                                                             let u = 65536 * e * 4;
                                                                             for (let e = 0; e < 65536; e++)
                                                                                 ((a[u + 4 * e] = i[3 * e]),
@@ -4532,11 +4532,11 @@ function ag(e) {
                                                     eA.uniform1f(eb("uImpactFlareSize"), 0.09),
                                                     eA.uniform1f(eb("uImpactLift"), 0),
                                                     eA.uniform1f(eb("uImpactBulge"), 0.04));
-                                                let e7 = eQ.pulses,
-                                                    e9 = Math.max(0, e7.length - 6),
+                                                let e9 = eQ.pulses,
+                                                    e7 = Math.max(0, e9.length - 6),
                                                     te = 0;
-                                                for (let e = e9; e < e7.length; e++) {
-                                                    let t = e7[e];
+                                                for (let e = e7; e < e9.length; e++) {
+                                                    let t = e9[e];
                                                     ((N[2 * te] = (eq - t.bornAt) / 1e3), (N[2 * te + 1] = t.gain));
                                                     let a = j.get(t);
                                                     (null == a && ((a = V++ % 64), j.set(t, a)),
@@ -4882,7 +4882,7 @@ function ag(e) {
                                                                         tI(f[2] / d),
                                                                     ]);
                                                             }
-                                                        })(e7, e3, eq, eE.pulse, eG),
+                                                        })(e9, e3, eq, eE.pulse, eG),
                                                         t.bindFramebuffer(t.FRAMEBUFFER, null)));
                                             },
                                             showPlate: function (e) {
@@ -5639,7 +5639,7 @@ function aE() {
     return { voided: S.A.getDisplayedTotal() ?? 0, balance: S.A.getDisplayedBalance() ?? 0 };
 }
 a(475489);
-var aF = a(371902),
+var aF = a(991104),
     aP = a(792996),
     aL = a(227273);
 function aC(e) {

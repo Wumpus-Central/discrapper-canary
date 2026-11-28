@@ -86,7 +86,7 @@ var ts = i(621466),
     tc = i(934058),
     td = i(71393),
     tf = i(427589),
-    tA = i(191850),
+    tA = i(258576),
     tp = i(985966),
     ty = i(387755),
     tm = i(597798),
@@ -111,7 +111,7 @@ var ts = i(621466),
     tM = i(485045),
     tV = i(609145),
     tj = i(46282),
-    tw = i(861089);
+    tw = i(902435);
 function tP(t, e, i, n, l) {
     if (w.A.isNotificationDisabled(H.KS.RequestToStream) || null != I.A.getCurrentUserActiveStream()) return null;
     let a = i.username,
@@ -187,7 +187,7 @@ var tK = i(941971),
     t9 = i(135621),
     t4 = i(381941),
     t5 = i(158602);
-function t7(t) {
+function t3(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
         a = (0, t9.A)(),
         { placeholder: r, accessibilityLabel: o } = (0, tQ.A)({ channel: n }),
@@ -247,8 +247,8 @@ function t7(t) {
         }),
     });
 }
-var t3 = i(119191),
-    t6 = i(361729);
+var t7 = i(119191),
+    t6 = i(313855);
 function et(t) {
     t && (0, tB.Ak)(k.c, 0.4, void 0, void 0, { trackNotificationFailure: !0 });
 }
@@ -726,7 +726,7 @@ let ew = new ej(s.h, {
                         : (0, $.jsx)("img", { src: i(513653), className: ef.Kk, alt: "" }),
                 title: o,
                 hint: function () {
-                    return (0, t3.sI)((0, F.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
+                    return (0, t7.sI)((0, F.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
                 },
                 ...a,
                 onNotificationShow: (t) => {
@@ -931,13 +931,13 @@ let ew = new ej(s.h, {
                     hint: (t, e) =>
                         t || !e || (!l && (0, tW.$)())
                             ? null
-                            : (0, t3.sI)((0, F.Jn)(), l ? t6.default.VMcw8s : J.t.ykjOAJ),
+                            : (0, t7.sI)((0, F.Jn)(), l ? t6.default.VMcw8s : J.t.ykjOAJ),
                     maxBodyLines: 2,
                     renderFooter: (i, n, a) =>
                         l || (0, tW.$)()
                             ? null
                             : i && !a
-                              ? (0, $.jsx)(t7, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
+                              ? (0, $.jsx)(t3, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
                               : null,
                     onNotificationShow: () => {
                         (et(n), s());

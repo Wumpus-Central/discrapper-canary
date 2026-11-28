@@ -90,7 +90,7 @@ function L(s) {
     });
 }
 var R = a(975571),
-    B = a(586428),
+    B = a(912510),
     M = a(427629);
 function O(s) {
     let { powerup: e } = s;

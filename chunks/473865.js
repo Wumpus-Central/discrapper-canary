@@ -38,7 +38,7 @@ var y = s(501803),
     M = s(646514),
     O = s(48736),
     R = s(317097),
-    w = s(842671),
+    w = s(873909),
     Y = s(792996);
 function F(e, l) {
     return t.useMemo(
@@ -650,7 +650,7 @@ var eI = s(834730),
     eT = s(73392),
     e_ = s(262560),
     eL = s(455207),
-    eD = s(701256),
+    eD = s(464066),
     eP = s(850250);
 function eM(e) {
     let { selectedFontId: l, setSelectedFontId: s, displayName: n } = e,

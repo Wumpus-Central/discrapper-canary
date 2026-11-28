@@ -157,7 +157,7 @@ var eC = n(778747),
     eN = n(219444);
 n(938796);
 var eS = n(279116),
-    e_ = n(137005),
+    e_ = n(685415),
     ef =
         (((i = {}).ALL_CONTENT = "all_content"),
         (i.SUMMARIES = "summaries"),
@@ -292,7 +292,7 @@ var eY = n(976860),
     e8 = n(280513),
     e3 = n(837011),
     e4 = n(90084);
-function e9(e) {
+function e6(e) {
     let { guildId: t, channelType: n, className: i } = e,
         { guildProfile: s, fetchGuildProfile: r, fetchStatus: o } = (0, e4.u)(t),
         d = o !== e3.X.FETCHED,
@@ -317,11 +317,11 @@ function e9(e) {
               ),
           });
 }
-var e2 = n(746080),
-    e6 = n(290261),
+var e9 = n(746080),
+    e2 = n(290261),
     te = n(307731),
     tt = n(818348),
-    tn = n(354817),
+    tn = n(657371),
     ti = n(236048);
 let tl = "GAME_INVITES_CHANNEL_OPTION";
 function ta(e) {
@@ -605,7 +605,7 @@ class td extends a.PureComponent {
                 contentFlags: b,
             } = this.state,
             N = ta(A),
-            S = ((A === tl ? e2.lx.IS_GAME_INVITES_CHANNEL : null) ?? 0) | b | ((l?.flags ?? 0) & eM),
+            S = ((A === tl ? e9.lx.IS_GAME_INVITES_CHANNEL : null) ?? 0) | b | ((l?.flags ?? 0) & eM),
             _ = (function (e) {
                 if (e === tl) return [{ name: "No Mic" }];
             })(A),
@@ -627,9 +627,9 @@ class td extends a.PureComponent {
                         let { row: n } = e;
                         null != n.id &&
                             "" !== n.id &&
-                            (n.rowType === e6.T6.ROLE
+                            (n.rowType === e2.T6.ROLE
                                 ? t.push((0, eQ.j)(n.id, ei.r2.ROLE))
-                                : n.rowType === e6.T6.MEMBER && t.push((0, eQ.j)(n.id, ei.r2.MEMBER)));
+                                : n.rowType === e2.T6.MEMBER && t.push((0, eQ.j)(n.id, ei.r2.MEMBER)));
                     }));
             }
             this.setState({ errors: {}, submitting: !0 });
@@ -1046,7 +1046,7 @@ class td extends a.PureComponent {
                         s === ek.rbe.GUILD_STORE ? this.renderStoreOptions() : null,
                         n === tl ? this.renderGameInvitesChannelOptions() : null,
                         s === ek.rbe.GUILD_APP && null == d ? this.renderAppChannelOptions() : null,
-                        (0, l.jsx)(e9, { guildId: r, channelType: s, className: ti.wI }),
+                        (0, l.jsx)(e6, { guildId: r, channelType: s, className: ti.wI }),
                         s === ek.rbe.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions(),
                         null == d
                             ? (0, l.jsx)(eX, {

@@ -13,7 +13,7 @@ var t = l(855986),
     g = l(287809),
     A = l(977997),
     f = l(652215),
-    m = l(361729),
+    m = l(313855),
     v = l(792996);
 let x = { channelId: null, channelName: null, channel: null, guild: null, canJoin: !1, isAlreadyConnected: !1 };
 l.d(

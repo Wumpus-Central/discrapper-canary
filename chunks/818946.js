@@ -24,9 +24,9 @@ var i = n(477900),
     y = n(192308),
     N = n(682901),
     C = n(652215),
-    v = n(50302),
+    v = n(67640),
     j = n(792996),
-    O = n(379912),
+    O = n(60498),
     D = n(808532);
 let P = new S.A("GiftedSubscriptionsSection");
 function R(e) {

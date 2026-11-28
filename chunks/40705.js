@@ -207,7 +207,7 @@ var z = n(91034),
     W = n(710434),
     Z = n(634156),
     q = n(652215),
-    J = n(302034);
+    J = n(230972);
 let ee = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
     et = ee[0],
     en = ee[ee.length - 1];
@@ -390,8 +390,8 @@ function er(e) {
         ));
     let e4 = U.intl.string(0 === eS ? U.t.YqAjXy : U.t.w4m945),
         { icon: e8, label: e9 } = K[t],
-        e3 = U.intl.string(e9),
-        e7 = (0, r.jsx)(G, {
+        e7 = U.intl.string(e9),
+        e3 = (0, r.jsx)(G, {
             iconComponent: Y,
             visible: a,
             onClick: eW,
@@ -445,8 +445,8 @@ function er(e) {
                     (0, r.jsx)(G, {
                         iconComponent: e8,
                         visible: a,
-                        ariaLabel: e3,
-                        tooltipLabel: e3,
+                        ariaLabel: e7,
+                        tooltipLabel: e7,
                         shortcut: c.TJ.PLAYBACK,
                         onClick: V,
                         ref: e_,
@@ -489,7 +489,7 @@ function er(e) {
                         ? (0, r.jsx)("div", {
                               className: _.RD,
                               "data-testid": "discord-web-video-player-volume-control",
-                              children: e7,
+                              children: e3,
                           })
                         : eo
                           ? (0, r.jsx)(f.Y, {
@@ -524,7 +524,7 @@ function er(e) {
                                         onKeyDown: e1,
                                         className: _.RD,
                                         "data-testid": "discord-web-video-player-volume-control",
-                                        children: e7,
+                                        children: e3,
                                     }),
                             })
                           : (0, r.jsxs)("div", {
@@ -535,7 +535,7 @@ function er(e) {
                                 className: i()(_.RD, _.u3),
                                 "data-testid": "discord-web-video-player-volume-control",
                                 children: [
-                                    e7,
+                                    e3,
                                     (0, r.jsx)(u.animated.div, {
                                         className: _.MQ,
                                         "data-testid": "discord-web-video-player-volume-slider",

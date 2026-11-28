@@ -1500,7 +1500,7 @@ function nv(e, t, n) {
 function ny(e) {
     return (0, nA.W)(e, nm.U.VOICE_CHANNEL);
 }
-var nE = n(786739);
+var nE = n(532413);
 let nN = "none";
 function nS(e) {
     let { channel: t, guildId: n, onChange: i } = e;

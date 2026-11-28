@@ -14,39 +14,39 @@ var i = n(477900),
     h = n(97808),
     g = n(778712),
     A = n(339350),
-    C = n(834730);
-function E(e, t) {
+    E = n(834730);
+function C(e, t) {
     return t >= e.startSec && t < e.startSec + e.durationSec;
 }
-function x(e, t, n) {
+function v(e, t, n) {
     return (
-        !E(t, n) ||
+        !C(t, n) ||
         (null != e &&
             !(e.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) &&
             !e.seeking &&
             0.35 >= Math.abs(e.currentTime - (n - t.startSec)))
     );
 }
-function v(e, t) {
+function x(e, t) {
     if (t < e.startSec) return e.startSec - t;
     let n = e.startSec + e.durationSec;
     return t >= n ? n - t : 0;
 }
-var _ = n(683825),
+var _ = n(636107),
     b = n(792996),
     y = n(243189);
 let T = l.memo(function (e) {
     let t,
-        { source: n, masterSec: r, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: x } = e,
+        { source: n, masterSec: r, isPlaying: s, playbackRate: o, isGridView: c, onMediaElement: d, children: v } = e,
         T = l.useRef(null),
         [S, I] = l.useState(!1),
-        N = E(n, r),
+        N = C(n, r),
         j = r - n.startSec,
         R = r < n.startSec,
-        O = Math.ceil(v(n, r)),
+        O = Math.ceil(x(n, r)),
         M = (0, p.rB)(O),
         P = n.owner?.name ?? n.label ?? b.intl.string(_.default["6XuC8e"]),
-        { ref: k, width: L, height: w } = (0, u.Ay)();
+        { ref: k, width: L, height: D } = (0, u.Ay)();
     (l.useEffect(() => {
         let e = T.current;
         if (null != e) {
@@ -59,7 +59,7 @@ let T = l.memo(function (e) {
         }
     }, [N, j, s, o, S]),
         l.useEffect(() => (d?.(n.id, T.current), () => d?.(n.id, null)), [d, n.id]));
-    let D = c && !N && 0 !== O;
+    let w = c && !N && 0 !== O;
     return (
         c && N
             ? (t = b.intl.formatToPlainString(_.default.zc1itm, { name: P }))
@@ -74,11 +74,11 @@ let T = l.memo(function (e) {
                     ref: k,
                     className: a()(y.iH, { [y.om]: c }),
                     children: [
-                        x ??
+                        v ??
                             (0, i.jsx)(m.A, {
                                 ref: T,
-                                className: a()(y.cr, { [y.qb]: D }),
-                                poster: (0, f.s)(n.poster, n, L, w),
+                                className: a()(y.cr, { [y.qb]: w }),
+                                poster: (0, f.s)(n.poster, n, L, D),
                                 preload: "auto",
                                 playsInline: !0,
                                 muted: !0,
@@ -101,13 +101,13 @@ let T = l.memo(function (e) {
                             }),
                     ],
                 }),
-                D &&
+                w &&
                     (0, i.jsxs)("div", {
                         className: y.rm,
                         "aria-hidden": !0,
                         children: [
                             (0, i.jsx)(A.HourglassIcon, { size: "xs", color: "currentColor" }),
-                            (0, i.jsx)(C.E, { variant: "body-xs/medium", color: "none", children: M }),
+                            (0, i.jsx)(E.E, { variant: "body-xs/medium", color: "none", children: M }),
                         ],
                     }),
             ],
@@ -119,10 +119,10 @@ var S = n(683063),
 let N = l.memo(function (e) {
     let { source: t, label: n, isActive: l, isOriginal: r, currentMasterTimeSec: s, onSelect: o } = e,
         d = t.owner?.name ?? n ?? b.intl.string(_.default["6XuC8e"]),
-        m = E(t, s),
-        { ref: C, width: x, height: y } = (0, u.Ay)(m, l, r);
+        m = C(t, s),
+        { ref: E, width: v, height: y } = (0, u.Ay)(m, l, r);
     if (!m && !l && !r) {
-        let e = (0, p.rB)(v(t, s));
+        let e = (0, p.rB)(x(t, s));
         return (0, i.jsx)(S.u, {
             asset: (0, i.jsx)(A.HourglassIcon, { size: "xs" }),
             assetSize: 16,
@@ -153,9 +153,9 @@ let N = l.memo(function (e) {
                 children:
                     null != t.poster &&
                     (0, i.jsx)("img", {
-                        ref: C,
+                        ref: E,
                         className: I.a1,
-                        src: (0, f.s)(t.poster, t, x, y),
+                        src: (0, f.s)(t.poster, t, v, y),
                         alt: "",
                         "aria-hidden": !0,
                     }),
@@ -179,8 +179,8 @@ function R(e) {
             isScrubbing: h,
             onTimeUpdate: g,
             onEnded: A,
-            onLoadedMetadata: C,
-            onError: v,
+            onLoadedMetadata: E,
+            onError: x,
             onPlay: y,
             onPause: S,
             children: I,
@@ -191,13 +191,13 @@ function R(e) {
             suppressSourceSelection: k = !1,
             ...L
         } = e,
-        w = l.useRef(null),
-        { ref: D, width: U, height: G } = (0, u.Ay)(),
+        D = l.useRef(null),
+        { ref: w, width: U, height: G } = (0, u.Ay)(),
         F = l.useCallback(
             (e) => {
-                ((w.current = e), (D.current = e));
+                ((D.current = e), (w.current = e));
             },
-            [D],
+            [w],
         ),
         [B, V] = l.useState(R.durationSec ?? 0),
         [H, W] = l.useState(R.id),
@@ -266,7 +266,7 @@ function R(e) {
                     releaseFreezeFrame: o,
                 }
             );
-        })(w),
+        })(D),
         en = l.useMemo(() => [{ ...R, startSec: 0, durationSec: B }, ...O], [R, O, B]),
         ei = en.find((e) => e.id === H) ?? en[0],
         {
@@ -297,7 +297,7 @@ function R(e) {
                             i = t.current;
                         if (null == i || i.paused || !n) return;
                         let { sources: l, getSourceElement: r } = f.current;
-                        l.every((t) => x(r(t), t, e)) ||
+                        l.every((t) => v(r(t), t, e)) ||
                             ((c.current = !0), (o.current = e), i.pause(), i.dispatchEvent(new Event("waiting")), s(e));
                     },
                     [t],
@@ -326,7 +326,7 @@ function R(e) {
                     },
                     [h],
                 ),
-                C = l.useCallback(() => {
+                E = l.useCallback(() => {
                     if (c.current) {
                         c.current = !1;
                         return;
@@ -338,7 +338,7 @@ function R(e) {
                     if (null == a) return;
                     let e = n.map(m).filter((e) => null != e);
                     function t() {
-                        n.every((e) => x(m(e), e, a)) && g(!0);
+                        n.every((e) => v(m(e), e, a)) && g(!0);
                     }
                     let i = setTimeout(() => g(!0), 2500);
                     return (
@@ -364,10 +364,10 @@ function R(e) {
                     raiseSyncGate: h,
                     clearSyncGate: g,
                     handleDriverPlay: A,
-                    handleDriverPause: C,
+                    handleDriverPause: E,
                 }
             );
-        })({ elementRef: w, sources: en, activeSourceId: ei.id, isGridView: M }),
+        })({ elementRef: D, sources: en, activeSourceId: ei.id, isGridView: M }),
         ec = l.useRef(null),
         ed = l.useRef(null),
         em = l.useRef(R.id),
@@ -376,13 +376,13 @@ function R(e) {
         eh = l.useRef(null);
     function eg() {
         null != eh.current &&
-            (clearTimeout(eh.current), (eh.current = null), w.current?.dispatchEvent(new Event("canplay")));
+            (clearTimeout(eh.current), (eh.current = null), D.current?.dispatchEvent(new Event("canplay")));
     }
     function eA() {
         let e = ep.current;
-        null != e && ((ep.current = null), eg(), eC(e.sourceId, e.masterSec));
+        null != e && ((ep.current = null), eg(), eE(e.sourceId, e.masterSec));
     }
-    function eC(e, t) {
+    function eE(e, t) {
         let n = en.find((t) => t.id === e);
         if (null == n) return;
         if (n.id === R.id) ((ep.current = null), eg());
@@ -390,18 +390,18 @@ function R(e) {
             let e;
             ((ep.current = { sourceId: n.id, masterSec: t }),
                 null == eh.current &&
-                    null != (e = w.current) &&
+                    null != (e = D.current) &&
                     (e.dispatchEvent(new Event("waiting")),
                     (e.preload = "metadata"),
                     e.load(),
                     (eh.current = setTimeout(() => {
-                        ((ef.current = !0), ex.current.applyDeferredSwitch());
+                        ((ef.current = !0), ev.current.applyDeferredSwitch());
                     }, 5e3))));
             return;
         }
-        let i = o()(t, 0, ex.current.masterDurationSec),
-            l = w.current;
-        if (n.id === ex.current.activeSource.id) {
+        let i = o()(t, 0, ev.current.masterDurationSec),
+            l = D.current;
+        if (n.id === ev.current.activeSource.id) {
             ((ed.current = null), null != l && (l.currentTime = i - n.startSec));
             return;
         }
@@ -412,34 +412,34 @@ function R(e) {
                 playbackRate: l?.playbackRate ?? 1,
             }),
             (ed.current = i),
-            (ex.current = { ...ex.current, activeSource: n }),
+            (ev.current = { ...ev.current, activeSource: n }),
             W(n.id),
             K(i));
     }
-    function eE(e) {
-        eC(R.id, e);
+    function eC(e) {
+        eE(R.id, e);
     }
-    let ex = l.useRef({
+    let ev = l.useRef({
         activeSource: ei,
         masterDurationSec: B,
         isScrubbing: h,
-        revertToOriginal: eE,
+        revertToOriginal: eC,
         applyDeferredSwitch: eA,
     });
     l.useLayoutEffect(() => {
-        ex.current = {
-            ...ex.current,
+        ev.current = {
+            ...ev.current,
             activeSource: ei,
             masterDurationSec: B,
             isScrubbing: h,
-            revertToOriginal: eE,
+            revertToOriginal: eC,
             applyDeferredSwitch: eA,
         };
     });
-    let ev = l.useRef(null);
+    let ex = l.useRef(null);
     (l.useLayoutEffect(
         () => (
-            (ev.current ??= (function (e) {
+            (ex.current ??= (function (e) {
                 let t = null;
                 function n() {
                     let n = e.getElement();
@@ -485,28 +485,28 @@ function R(e) {
                     },
                 );
             })({
-                getElement: () => w.current,
-                getDurationSec: () => ex.current.masterDurationSec,
-                getActiveStartSec: () => ex.current.activeSource.startSec,
+                getElement: () => D.current,
+                getDurationSec: () => ev.current.masterDurationSec,
+                getActiveStartSec: () => ev.current.activeSource.startSec,
                 getCurrentTimeSec: () => {
                     let e = ed.current;
                     return null != e
                         ? e
-                        : Math.max(0, ex.current.activeSource.startSec + (w.current?.currentTime ?? 0));
+                        : Math.max(0, ev.current.activeSource.startSec + (D.current?.currentTime ?? 0));
                 },
                 seekTo: (e) => {
-                    let t = o()(e, 0, ex.current.masterDurationSec);
-                    if ((K(t), E(ex.current.activeSource, t))) {
+                    let t = o()(e, 0, ev.current.masterDurationSec);
+                    if ((K(t), C(ev.current.activeSource, t))) {
                         ed.current = null;
-                        let e = w.current;
-                        (null != e && (e.currentTime = t - ex.current.activeSource.startSec),
-                            ex.current.isScrubbing || ea(t));
+                        let e = D.current;
+                        (null != e && (e.currentTime = t - ev.current.activeSource.startSec),
+                            ev.current.isScrubbing || ea(t));
                         return;
                     }
-                    ((ed.current = t), ex.current.isScrubbing || ex.current.revertToOriginal(t));
+                    ((ed.current = t), ev.current.isScrubbing || ev.current.revertToOriginal(t));
                 },
             })),
-            t(ev.current),
+            t(ex.current),
             () => {
                 t(null);
             }
@@ -521,20 +521,20 @@ function R(e) {
         ));
     let e_ = l.useRef(H);
     function eb(e) {
-        e.id !== ei.id && eC(e.id, z);
+        e.id !== ei.id && eE(e.id, z);
     }
     function ey(e) {
         er() || L.onCanPlay?.(e);
     }
     (l.useEffect(() => {
-        e_.current !== H && ((e_.current = H), w.current?.load());
+        e_.current !== H && ((e_.current = H), D.current?.load());
     }, [H]),
         l.useEffect(() => {
             if (h) return;
             let e = ed.current;
-            null == e || null != ec.current || E(ex.current.activeSource, e) || ex.current.revertToOriginal(e);
+            null == e || null != ec.current || C(ev.current.activeSource, e) || ev.current.revertToOriginal(e);
         }, [h]));
-    let eT = !E(ei, z);
+    let eT = !C(ei, z);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(c.D, {
@@ -556,19 +556,19 @@ function R(e) {
                                 onCanPlay: ey,
                                 onCanPlayThrough: ey,
                                 onTimeUpdate: function (e) {
-                                    let t = w.current;
+                                    let t = D.current;
                                     if (null != t && null == ec.current && null == ed.current) {
                                         $(t.playbackRate);
                                         let e = Math.max(0, ei.startSec + t.currentTime);
-                                        (K(e), ei.id !== R.id && e >= ei.startSec + ei.durationSec - 0.12 && eE(e));
+                                        (K(e), ei.id !== R.id && e >= ei.startSec + ei.durationSec - 0.12 && eC(e));
                                     }
                                     g?.(e);
                                 },
                                 onEnded: function (e) {
-                                    ei.id !== R.id ? eE(ei.startSec + ei.durationSec) : A?.(e);
+                                    ei.id !== R.id ? eC(ei.startSec + ei.durationSec) : A?.(e);
                                 },
                                 onLoadedMetadata: function (e) {
-                                    let t = w.current,
+                                    let t = D.current,
                                         n = ec.current;
                                     if (
                                         (H === R.id &&
@@ -576,10 +576,10 @@ function R(e) {
                                             ((ef.current = !0),
                                             Number.isFinite(t.duration) &&
                                                 (V(t.duration),
-                                                (ex.current = { ...ex.current, masterDurationSec: t.duration }))),
+                                                (ev.current = { ...ev.current, masterDurationSec: t.duration }))),
                                         null == n)
                                     ) {
-                                        (C?.(e), eA());
+                                        (E?.(e), eA());
                                         return;
                                     }
                                     if (((ec.current = null), null != t)) {
@@ -592,7 +592,7 @@ function R(e) {
                                     ((ed.current = null), et());
                                 },
                                 onError: function (e) {
-                                    ei.id !== R.id ? eE(ei.startSec + (w.current?.currentTime ?? 0)) : v?.(e);
+                                    ei.id !== R.id ? eC(ei.startSec + (D.current?.currentTime ?? 0)) : x?.(e);
                                 },
                                 onPlay: function (e) {
                                     (q(!0), eo(z), y?.(e));
@@ -658,10 +658,10 @@ function R(e) {
                                 if ((e.stopPropagation(), M)) {
                                     (er() && es(!0), P(!1));
                                     let e = en.find((e) => e.id === em.current);
-                                    eC(null != e && E(e, z) ? e.id : R.id, z);
+                                    eE(null != e && C(e, z) ? e.id : R.id, z);
                                     return;
                                 }
-                                ((em.current = ei.id), P(!0), ea(z, !0), eC(R.id, z));
+                                ((em.current = ei.id), P(!0), ea(z, !0), eE(R.id, z));
                             },
                             "data-testid": "discord-web-multi-video-player-grid-toggle",
                             children: (0, i.jsx)(d.GridSquareIcon, { size: "xs", color: "currentColor" }),

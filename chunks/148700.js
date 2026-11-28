@@ -60,9 +60,9 @@ var L = n(742534),
     P = n(746080),
     w = n(49999),
     V = n(628049),
-    H = n(586428),
+    H = n(912510),
     k = n(792996),
-    B = n(105518),
+    B = n(53776),
     F = n(120336);
 function W(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: s } = e;

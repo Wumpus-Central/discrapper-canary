@@ -25,7 +25,7 @@ var r = n(855986),
     b = n(471865),
     C = n(211824),
     I = n(236814),
-    k = n(701256),
+    k = n(464066),
     _ = n(792996);
 function P(e) {
     let { type: t, iconSize: n = I.N8.SIZE_48, className: P } = e,

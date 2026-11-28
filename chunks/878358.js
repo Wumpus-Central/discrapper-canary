@@ -26,8 +26,8 @@ var i = a(477900),
     N = a(486020),
     T = a(48763),
     R = a(792996),
-    O = a(350363),
-    M = a(852717),
+    O = a(298533),
+    M = a(547507),
     y = a(241802);
 let L = {
     "--custom-checkpoint-card-logo-size": "44px",

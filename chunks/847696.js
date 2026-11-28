@@ -5,7 +5,7 @@ var a = n(713608),
     r = n(369606),
     d = n(106983),
     c = n(171251),
-    s = n(683825);
+    s = n(636107);
 let u = {
         [d.C.Kill]: a.ModerationIcon,
         [d.C.MultiKill]: a.ModerationIcon,

@@ -47,7 +47,7 @@ var T = r(503698),
     B = r(809291),
     Y = r(705912),
     K = r(133986),
-    Z = r(894880),
+    Z = r(672499),
     V = r(624018),
     X = r(351906),
     J = r(5990),
@@ -1108,10 +1108,10 @@ let e0 = function (e) {
           });
 };
 var e1 = r(798549);
-let e5 = "searchToken";
-function e2(e) {
+let e2 = "searchToken";
+function e5(e) {
     let { attributes: t, children: r, leaf: l } = e,
-        s = l[e5];
+        s = l[e2];
     return s === P.v1.FILTER
         ? (0, n.jsx)("span", { ...t, className: e1.nM, children: r })
         : s === P.v1.ANSWER
@@ -1147,12 +1147,12 @@ function tt(e) {
     for (let e of (0, S._o)(t.text)) {
         let t = P.Ay[e.type];
         null != t &&
-            l.push({ anchor: { path: r, offset: e.start }, focus: { path: r, offset: e.end }, [e5]: t.componentType });
+            l.push({ anchor: { path: r, offset: e.start }, focus: { path: r, offset: e.end }, [e2]: t.componentType });
     }
     return l;
 }
 function tr(e) {
-    return (0, n.jsx)(e2, { ...e });
+    return (0, n.jsx)(e5, { ...e });
 }
 function tl(e) {
     let { children: t, attributes: r } = e;

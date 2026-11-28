@@ -46,7 +46,7 @@ var i,
     $ = n(265872),
     X = n(827827),
     z = n(481045),
-    q = n(966756),
+    q = n(478566),
     Q = n(792996),
     J = n(293686);
 function Z(e) {
@@ -561,7 +561,7 @@ let tH = new Set([
     "1124358970618953818",
     "1441987315235946546",
 ]);
-var tj = n(105518);
+var tj = n(53776);
 function tW(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, E.bG)([tV.A], () => null != a && tV.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -692,8 +692,8 @@ let t5 = a.memo(function (e) {
                     n.e(236946),
                     n.e(338601),
                     n.e(944727),
-                    n.e(114792),
-                    n.e(758913),
+                    n.e(235426),
+                    n.e(54219),
                     n.e(489876),
                 ]).then(n.bind(n, 742527));
                 return (t) =>
@@ -721,8 +721,8 @@ let t5 = a.memo(function (e) {
                           n.e(236946),
                           n.e(338601),
                           n.e(944727),
-                          n.e(114792),
-                          n.e(758913),
+                          n.e(235426),
+                          n.e(54219),
                           n.e(489876),
                       ]).then(n.bind(n, 742527));
                       return (n) =>
@@ -1018,7 +1018,7 @@ var n_ = n(734066),
     nh = n(780964),
     nI = n(766075),
     np = n(271597),
-    nm = n(683825);
+    nm = n(636107);
 let ng = [A.M.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION],
     nT = [];
 function nS(e) {
@@ -1084,7 +1084,7 @@ var nC = n(37595),
     ny = n(887287),
     nD = n(532624),
     nb = n(350535),
-    nv = n(191850),
+    nv = n(258576),
     nP = n(369409);
 let nM = [A.M.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT],
     nU = [];
@@ -1380,7 +1380,7 @@ let nW = {
 };
 var nY = n(534952),
     nK = n(731854),
-    n$ = n(920155),
+    n$ = n(978337),
     nX = n(821095),
     nz = n(268920),
     nq = n(633217);

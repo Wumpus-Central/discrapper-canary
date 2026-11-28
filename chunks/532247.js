@@ -1,10 +1,10 @@
-var n = l(191850),
+var n = l(258576),
     a = l(792996);
-let r = {
+let i = {
         enable: ["sandbox", "files", "packages", "prepare", "build", "server", "reload"],
         disable: ["snapshot", "stopping", "reload"],
     },
-    i = {
+    r = {
         sandbox: n.default.wYBwzU,
         files: n.default["5hvVF1"],
         packages: n.default.DKR23W,
@@ -25,11 +25,11 @@ function u(e, t) {
         d = o ?? u;
     if (null == d) return null;
     l = null == o ? "reload" : "starting" === e ? t : "stopping" === e ? "stopping" : "snapshot";
-    let c = r[d];
+    let c = i[d];
     return {
         direction: d,
         title: a.intl.string("enable" === d ? n.default.NeoP8L : n.default["3+DCLs"]),
-        stepLabel: null == l ? null : a.intl.string(i[l]),
+        stepLabel: null == l ? null : a.intl.string(r[l]),
         stepIndex: null == l ? 0 : Math.max(0, c.indexOf(l)),
         stepCount: c.length,
     };

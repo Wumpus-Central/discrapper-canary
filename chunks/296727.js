@@ -15,7 +15,7 @@ function x(e) {
     let { gameOrganization: n, application: l } = e;
     return (0, a.jsx)("img", { className: f.H, src: n.iconUrl ?? l?.getIconURL(96) ?? "", alt: n.name });
 }
-var h = l(213570),
+var h = l(652180),
     S = l(792996),
     g = l(809049);
 function b(e) {

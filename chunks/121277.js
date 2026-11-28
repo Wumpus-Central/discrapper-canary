@@ -226,7 +226,7 @@ var K = n(716357),
     eg = n(646514),
     ef = n(775602),
     eh = n(855823),
-    em = n(135294),
+    em = n(925440),
     eE = n(792996),
     ep = n(517228);
 function eA(e) {
@@ -1396,9 +1396,9 @@ function e3(e) {
 var e6 = n(191023),
     e9 = n(241326),
     e5 = n(534514),
-    e7 = n(22231),
-    e8 = n(654107),
-    e4 = n(682163),
+    e4 = n(22231),
+    e7 = n(654107),
+    e8 = n(682163),
     te = n(837011),
     tt = n(649640),
     tn = n(2553),
@@ -1417,7 +1417,7 @@ function td(e) {
         E = (0, a.bG)([te.A], () => te.A.getProfile(t), [t]),
         p = (0, tt.b2)().hex(),
         A = null == g ? null : tr.Ay.getGuildIconURL({ id: g.id, icon: g.icon, size: 64 }),
-        C = (0, e8.Ay)(A, p),
+        C = (0, e7.Ay)(A, p),
         I = (0, tt.n6)(E?.brandColorPrimary ?? C),
         _ = i.useMemo(
             () =>
@@ -1481,10 +1481,10 @@ function td(e) {
                   (0, l.jsxs)("div", {
                       className: tu.D_,
                       children: [
-                          (0, l.jsx)(e4.Ay, {
+                          (0, l.jsx)(e8.Ay, {
                               className: tu.Kk,
                               guild: g,
-                              size: e4.Ay.Sizes.LARGE,
+                              size: e8.Ay.Sizes.LARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
@@ -1554,7 +1554,7 @@ function td(e) {
                   r &&
                       !s &&
                       (0, l.jsx)(ea.$, {
-                          icon: e7.PencilIcon,
+                          icon: e4.PencilIcon,
                           text: eE.intl.string(em.default.KcOpCm),
                           size: "sm",
                           onClick: () => (0, j.Wd)(t),

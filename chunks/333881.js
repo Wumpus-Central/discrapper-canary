@@ -20,7 +20,7 @@ async function E(e) {
     let n = new Image();
     return ((n.crossOrigin = "anonymous"), (n.src = e), await n.decode(), n);
 }
-var _ = t(852717),
+var _ = t(547507),
     b = t(50268),
     S = t(373963),
     x = t(115184),
@@ -172,18 +172,18 @@ var eY = t(110384),
     e8 = t(554146),
     e1 = t(111159),
     e6 = t(138134),
-    e3 = t(964486),
-    e5 = t(865116),
+    e5 = t(964486),
+    e3 = t(865116),
     e7 = t(263775),
-    e2 = t(928658),
-    e9 = t(400528),
+    e9 = t(928658),
+    e2 = t(400528),
     e4 = t(374710),
     ne = t(715757),
     nn = t(967198),
     nt = t(287809),
     ni = t(628691),
     nl = t(49999),
-    na = t(307805),
+    na = t(964079),
     no = t(663417),
     nr = t(965407),
     ns = t(249700),
@@ -311,11 +311,11 @@ function nH(e) {
         {
             message: n1,
             channel: n6,
-            mediaItem: n3,
-            textSelection: n5,
+            mediaItem: n5,
+            textSelection: n3,
             favoriteableType: n7,
-            favoriteableId: n2,
-            favoriteableName: n9,
+            favoriteableId: n9,
+            favoriteableName: n2,
             itemHref: n4,
             itemSrc: te,
             itemSafeSrc: tn,
@@ -390,8 +390,8 @@ function nH(e) {
                       ),
                   })
                 : null),
-        tA = (0, S.A)(n5),
-        tm = (0, M.A)(n5),
+        tA = (0, S.A)(n3),
+        tm = (0, M.A)(n3),
         tf = (function (e, n) {
             let { reducedMotion: t } = a.useContext(Q.C),
                 i = (0, es.Id)(n),
@@ -885,31 +885,31 @@ function nH(e) {
                 ? (0, l.jsx)(r.Dr, {
                       id: "report",
                       label: nz ? I.intl.string(I.t.n5EBAJ) : I.intl.string(I.t.GwbdGe),
-                      action: () => (0, e2.V2)(n1, "web_message_context_menu"),
+                      action: () => (0, e9.V2)(n1, "web_message_context_menu"),
                       icon: nz ? e1.ClydeIcon : e6.FlagIcon,
                       leadingAccessory: { type: "icon", icon: nz ? e1.ClydeIcon : e6.FlagIcon },
                       color: "danger",
                   })
                 : null),
         tU =
-            ((nV = (0, C.bG)([e5.Ay], () => e5.Ay.get("iar_testing"))),
+            ((nV = (0, C.bG)([e3.Ay], () => e3.Ay.get("iar_testing"))),
             (nJ = (0, C.bG)([nt.default], () => nt.default.getCurrentUser())),
             (0, ni.ul)(n1) && null != nJ && nJ.isStaff() && nV
                 ? (0, l.jsx)(r.Dr, {
                       id: "staff-test-message-report",
                       label: "[STAFF] Test Message Report",
-                      action: () => (0, e2.Rj)(n1, "web_message_context_menu"),
+                      action: () => (0, e9.Rj)(n1, "web_message_context_menu"),
                       icon: e6.FlagIcon,
                       leadingAccessory: { type: "icon", icon: e6.FlagIcon },
                       color: "danger",
                   })
                 : null),
         tB = (function (e) {
-            let n = (0, C.bG)([e9.A], () => e9.A.hasReportedMessage(e.channel_id, e.id)),
+            let n = (0, C.bG)([e2.A], () => e2.A.hasReportedMessage(e.channel_id, e.id)),
                 t = (0, e4.KB)(e),
                 i = t ? [e8.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, o] = (0, e7.kn)(i);
-            return ((0, e3.l0)(() => {
+            return ((0, e5.l0)(() => {
                 t && o(nl.i.AUTO_DISMISS);
             }),
             t)
@@ -917,7 +917,7 @@ function nH(e) {
                       id: "report-to-mod",
                       label: n ? I.intl.string(na.default["8wsdng"]) : I.intl.string(na.default["1D+vqy"]),
                       action: () => {
-                          (o(nl.i.USER_DISMISS), (0, e2.dy)(e));
+                          (o(nl.i.USER_DISMISS), (0, e9.dy)(e));
                       },
                       icon: e6.FlagIcon,
                       disabled: n,
@@ -927,7 +927,7 @@ function nH(e) {
                   })
                 : null;
         })(n1),
-        tX = (0, eL.A)({ type: n7, id: n2, name: n9 }),
+        tX = (0, eL.A)({ type: n7, id: n9, name: n2 }),
         tF = (function (e, n) {
             let { perGuildMaxCount: t } = B.i$[W],
                 { isLoading: i, saveRule: o, errorMessage: s } = (0, X.S)(),
@@ -1041,30 +1041,30 @@ function nH(e) {
                     children: j,
                 })
             );
-        })(n5, n6.getGuildId()),
+        })(n3, n6.getGuildId()),
         tH = (0, x.A)(tn, n1, {
             shouldHideMediaOptions: tc,
-            contentType: n3?.contentType,
-            originalContentType: n3?.originalContentType,
+            contentType: n5?.contentType,
+            originalContentType: n5?.originalContentType,
         }),
         tK =
             ((nW = (0, nk.Fg)(n1)),
-            (nZ = null != n3 && (0, nk.qo)({ type: nR.D.GenericMedia, media: n3 }, nW)),
-            null != n3 && nZ
+            (nZ = null != n5 && (0, nk.qo)({ type: nR.D.GenericMedia, media: n5 }, nW)),
+            null != n5 && nZ
                 ? (0, l.jsx)(
                       r.Dr,
                       {
                           id: "report-image-false-positive",
                           label: I.intl.string(I.t.ZH7P2h),
                           action: function () {
-                              null != n3 &&
+                              null != n5 &&
                                   (0, ez.mM)(async () => {
                                       let { default: e } = await t(544135);
                                       return (n) =>
                                           (0, l.jsx)(e, {
                                               channelId: n1.channel_id,
                                               messageId: n1.id,
-                                              mediaItemUrl: n3.url,
+                                              mediaItemUrl: n5.url,
                                               ...n,
                                           });
                                   });
@@ -1125,12 +1125,12 @@ function nH(e) {
                 : null,
         tV =
             ((n = { shouldHideMediaOptions: tc }),
-            (nQ = n3?.url ?? ""),
+            (nQ = n5?.url ?? ""),
             (n0 = (0, C.bG)([nB.Ay], () => nB.Ay.isVideoStatsEnabled(nQ))),
             (n8 = a.useCallback(() => {
                 "" !== nQ && (0, nB.FM)(nQ);
             }, [nQ])),
-            null != n3 && (0, nX.XB)(n3.contentType) && n?.shouldHideMediaOptions !== !0
+            null != n5 && (0, nX.XB)(n5.contentType) && n?.shouldHideMediaOptions !== !0
                 ? (0, l.jsx)(r.sL, {
                       id: "video-stats-for-nerds",
                       label: "Stats for Nerds",
@@ -1198,7 +1198,7 @@ function nH(e) {
                         }),
                 ],
             });
-        })({ messageId: n1.id, itemId: n2, type: n7, imageSrc: te }),
+        })({ messageId: n1.id, itemId: n9, type: n7, imageSrc: te }),
         t$ = (0, l.jsx)(r.rX, { children: tZ ?? tW }),
         tY = (0, l.jsxs)(r.rX, { children: [tX, tF, tH, tK, tq, tz, tV] });
     return (0, l.jsxs)(s.W, {
@@ -1210,7 +1210,7 @@ function nH(e) {
         children: [
             (0, l.jsx)(r.rX, { children: tA }),
             (0, l.jsx)(r.rX, { children: tm }),
-            (0, l.jsxs)(r.rX, { children: ["" === n5 ? tg : null, tf, tw] }),
+            (0, l.jsxs)(r.rX, { children: ["" === n3 ? tg : null, tf, tw] }),
             (0, l.jsxs)(r.rX, { children: [tp, th, ty, tI] }),
             (0, l.jsxs)(r.rX, { children: [tE, t_, tb, tS, tx, tj, tM, tD, tv, tC, tT, tG, tL, tN] }),
             (0, l.jsxs)(r.rX, { children: [tO, tR, tk, ti && tP, ti && tU, tB] }),

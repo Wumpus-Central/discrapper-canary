@@ -33,10 +33,10 @@ let y = (0, O.mj)({
     defaultConfig: { enabled: !1, searchBarWidthPx: T.hE.DEFAULT },
     variations: { 0: { enabled: !1, searchBarWidthPx: T.hE.DEFAULT }, 1: { enabled: !0, searchBarWidthPx: T.hE.WIDE } },
 });
-var R = n(662829),
+var R = n(107591),
     k = n(724874),
     M = n(652215),
-    P = n(143461),
+    P = n(419619),
     G = n(792996),
     D = n(848913);
 let B = "collectibles-search-suggestions",
@@ -304,7 +304,7 @@ var K = n(278416),
     es = n(44724),
     ea = n(486020),
     ei = n(22007),
-    er = n(105518);
+    er = n(53776);
 let eo = [
     { tab: T.G2.OFFER_ELIGIBLE, labelKey: G.t.hY8Ft1 },
     { tab: T.G2.AVATAR_DECORATIONS, labelKey: G.t.dRZYNE },

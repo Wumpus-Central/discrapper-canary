@@ -48,11 +48,11 @@ function N(e) {
 }
 var E = l(367974),
     w = l(376595),
-    A = l(773503),
-    I = l(923904);
+    I = l(773503),
+    A = l(923904);
 let R = [],
-    S = [];
-function L() {
+    L = [];
+function S() {
     let {
             subscribe: e,
             soundboardAudioEnabled: t,
@@ -62,7 +62,7 @@ function L() {
             speakerMuteSupported: s,
             speakerVolumeSupported: o,
             clip: c,
-        } = (0, I.T)(),
+        } = (0, A.T)(),
         u = c.decision?.timestamp ?? 0,
         d = a.useMemo(() => new w.H(c.timeline ?? []), [c.timeline]),
         m = u - c.length,
@@ -87,9 +87,9 @@ function L() {
         () => (l ? h.speakingUserIds.filter((e) => !(s && i.includes(e)) && !(o && 0 === r[e])) : R),
         [l, i, r, s, o, h.speakingUserIds],
     );
-    return (0, n.jsx)(A.A, {
+    return (0, n.jsx)(I.A, {
         speakingUserIds: v,
-        activeSoundboards: t ? h.activeSoundboards : S,
+        activeSoundboards: t ? h.activeSoundboards : L,
         userIds: c.users,
         guildId: c.guildId,
         channelId: c.channelId,
@@ -196,7 +196,7 @@ function z(e) {
         onLoadedMetadata: u,
     });
 }
-function $(e) {
+function U(e) {
     let { overlay: t, cropFraming: l, frameAspectRatio: i, loop: r = !0, ref: s } = e,
         {
             cropStart: o,
@@ -211,22 +211,22 @@ function $(e) {
             mutedSpeakerIds: C,
             applicationVolume: k,
             soundboardVolume: w,
-            speakerVolumeSupported: A,
+            speakerVolumeSupported: I,
             speakerMuteSupported: R,
-            clip: S,
-        } = (0, I.T)(),
-        P = _(A ? k / 100 : void 0),
-        $ = a.useRef({}),
-        U = a.useRef(null),
+            clip: L,
+        } = (0, A.T)(),
+        P = _(I ? k / 100 : void 0),
+        U = a.useRef({}),
+        $ = a.useRef(null),
         G = a.useRef(!1),
         [V, B] = a.useState([]),
         X = a.useCallback(() => {
-            let e = $.current.main;
+            let e = U.current.main;
             if (null == e) return;
             let t = (0, v.round)(e.currentTime, 3),
                 l = (0, v.round)(o, 3);
             if (t >= (null != c ? (0, v.round)(c, 3) : (0, v.round)(e.duration, 3)) || t < l) {
-                for (let e of Object.values($.current)) null != e && (e.currentTime = o);
+                for (let e of Object.values(U.current)) null != e && (e.currentTime = o);
                 return !0;
             }
         }, [o, c]),
@@ -241,15 +241,15 @@ function $(e) {
             B(t);
         }, []),
         F = a.useCallback(() => {
-            for (let e of ((G.current = !0), X(), Object.values($.current))) null != e && e.play();
+            for (let e of ((G.current = !0), X(), Object.values(U.current))) null != e && e.play();
         }, [X]),
         W = a.useCallback(() => {
-            for (let e of Object.values($.current)) null != e && e.pause();
+            for (let e of Object.values(U.current)) null != e && e.pause();
         }, []);
     (0, g.A)(() => {
         if (G.current) {
             if (!r) {
-                let e = $.current.main;
+                let e = U.current.main;
                 if (null != e) {
                     let t = null != c ? (0, v.round)(c, 3) : (0, v.round)(e.duration, 3);
                     if ((0, v.round)(e.currentTime, 3) >= t) {
@@ -262,59 +262,59 @@ function $(e) {
         }
     });
     let K = a.useCallback((e) => {
-            for (let t of ($.current.main?.paused && (G.current = !1), Object.values($.current)))
+            for (let t of (U.current.main?.paused && (G.current = !1), Object.values(U.current)))
                 null != t && (t.currentTime = e);
         }, []),
         Y = a.useCallback(() => {
-            $.current.main?.paused ? F() : W();
+            U.current.main?.paused ? F() : W();
         }, [F, W]),
         Z = a.useCallback((e) => {
-            $.current.main = e;
+            U.current.main = e;
         }, []),
         Q = a.useCallback((e, t) => {
-            $.current[t] = e;
+            U.current[t] = e;
         }, []),
         q = a.useCallback(
             (e) => {
-                (($.current["main:application"] = e), P(e));
+                ((U.current["main:application"] = e), P(e));
             },
             [P],
         );
     a.useImperativeHandle(s, () => {
-        let e = { play: F, seek: K, pause: W, videoElement: $.current.main };
+        let e = { play: F, seek: K, pause: W, videoElement: U.current.main };
         return (u(e), e);
     }, [F, K, W, u]);
     let J = a.useCallback(() => {
         K(o);
     }, [K, o]);
     a.useLayoutEffect(() => {
-        let e = $.current;
+        let e = U.current;
         return () => {
             for (let t of Object.values(e)) (0, E.A)(t);
         };
     }, []);
-    let ee = S.type === T.nQ.VOICE_CLIP,
+    let ee = L.type === T.nQ.VOICE_CLIP,
         et = {
             applicationAudioEnabled: f,
             voiceAudioEnabled: h,
             soundboardAudioEnabled: x,
             isVoiceClip: ee,
-            speakerVolumes: A ? j : {},
+            speakerVolumes: I ? j : {},
             mutedSpeakerIds: R ? C : [],
-            applicationVolume: A ? k : 100,
-            soundboardVolume: A ? w : 100,
+            applicationVolume: I ? k : 100,
+            soundboardVolume: I ? w : 100,
         },
         el = !0 === l && !ee && null != i;
     return (a.useLayoutEffect(() => {
-        let e = U.current;
+        let e = $.current;
         if (null == e) return;
         if (!el) {
             ((e.style.width = ""), (e.style.height = ""));
             return;
         }
         function t() {
-            let e = U.current,
-                t = $.current.main;
+            let e = $.current,
+                t = U.current.main;
             null != e &&
                 null != t &&
                 ((e.style.width = ""),
@@ -331,7 +331,7 @@ function $(e) {
     null == d)
         ? null
         : (0, n.jsxs)("div", {
-              ref: U,
+              ref: $,
               className: p()(M.DV, el && M.Ln),
               children: [
                   ee
@@ -351,7 +351,7 @@ function $(e) {
                             preload: "auto",
                             onLoadedData: J,
                         }),
-                  (0, n.jsx)(L, {}),
+                  (0, n.jsx)(S, {}),
                   t,
                   (0, n.jsx)("audio", {
                       id: "ClipsPlayerAudioTrack:application",
@@ -370,7 +370,7 @@ function $(e) {
                               audioTrackLabel: e,
                               src: m,
                               gain: (function (e) {
-                                  if (!A) return;
+                                  if (!I) return;
                                   let t = (0, y.V)(e);
                                   return null != t
                                       ? (j[t] ?? 100) / 100
@@ -386,13 +386,13 @@ function $(e) {
               ],
           });
 }
-function U(e, t) {
+function $(e, t) {
     let l = e / 30;
     return (t && (l /= 10), l);
 }
 var G = l(22745);
 function V() {
-    let { clip: e } = (0, I.T)();
+    let { clip: e } = (0, A.T)();
     return "" !== e.thumbnail
         ? (0, n.jsx)("img", { className: G.T, src: e.thumbnail, alt: "", "aria-hidden": !0 })
         : null;
@@ -429,7 +429,7 @@ function ec(e) {
 }
 function eu(e) {
     let { onBack: t } = e,
-        { clip: l } = (0, I.T)(),
+        { clip: l } = (0, A.T)(),
         a = (0, Z.h)(l.applicationId),
         i = (0, B.yK)([en.default], () => l.users.map(en.default.getUser).filter(ei.Vq)),
         r = (0, B.bG)([el.A], () => (null != l.guildId ? el.A.getGuild(l.guildId) : null)),
@@ -488,7 +488,7 @@ function eu(e) {
 var ed = l(973177);
 let em = { [T.yz.ORIGINAL]: null, [T.yz.PORTRAIT_9_16]: 9 / 16, [T.yz.LANDSCAPE_16_9]: 16 / 9 };
 function ef() {
-    let { cropPreset: e, videoPlayerRef: t } = (0, I.T)(),
+    let { cropPreset: e, videoPlayerRef: t } = (0, A.T)(),
         l = a.useRef(null),
         i = a.useRef(null);
     return (
@@ -565,7 +565,7 @@ function ex(e) {
         N = a.useRef(i),
         E = a.useRef(r),
         w = a.useRef(d),
-        A = a.useCallback(
+        I = a.useCallback(
             (e) => {
                 let t,
                     l = y.current;
@@ -586,7 +586,7 @@ function ex(e) {
             [u],
         ),
         R = (function (e, t) {
-            let { videoPlayerRef: l } = (0, I.T)(),
+            let { videoPlayerRef: l } = (0, A.T)(),
                 n = a.useRef(null);
             return (
                 a.useEffect(() => {
@@ -613,13 +613,13 @@ function ex(e) {
                 }, [e, t, l]),
                 n
             );
-        })(j, A);
+        })(j, I);
     a.useEffect(() => {
         ((k.current = l), (N.current = i), (E.current = r), (w.current = d));
         let e = R.current;
-        null != e && A(e);
-    }, [l, i, r, d, A, R]);
-    let S = a.useCallback(
+        null != e && I(e);
+    }, [l, i, r, d, I, R]);
+    let L = a.useCallback(
             (e) => {
                 let t = C.current,
                     l = R.current,
@@ -648,18 +648,18 @@ function ex(e) {
             },
             [g, o, c, R],
         ),
-        L = a.useCallback(() => {
+        S = a.useCallback(() => {
             C.current = null;
         }, []);
     a.useEffect(
         () => (
-            document.addEventListener("mousemove", S),
-            document.addEventListener("mouseup", L),
+            document.addEventListener("mousemove", L),
+            document.addEventListener("mouseup", S),
             () => {
-                (document.removeEventListener("mousemove", S), document.removeEventListener("mouseup", L));
+                (document.removeEventListener("mousemove", L), document.removeEventListener("mouseup", S));
             }
         ),
-        [S, L],
+        [L, S],
     );
     let M = a.useCallback(
             (e) => (t) => {
@@ -765,11 +765,11 @@ function eg(e, t, l, n) {
     return (180 * Math.atan2(n - t, l - e)) / Math.PI;
 }
 var eb = l(1093),
-    ej = l(683825),
+    ej = l(636107),
     ey = l(545052);
 function eC(e) {
     let { track: t, selected: l, onSelect: i } = e,
-        { useCurrentTime: r } = (0, I.T)(),
+        { useCurrentTime: r } = (0, A.T)(),
         { updateImageTrackData: s } = (0, eb.fn)(),
         o = r(),
         { src: c, position: u, rotationDeg: d, widthFraction: m, naturalWidth: f, naturalHeight: h } = t.data,
@@ -819,7 +819,7 @@ function eC(e) {
 var ek = l(637526);
 function eN(e) {
     let { track: t, selected: l, onSelect: i } = e,
-        { useCurrentTime: r } = (0, I.T)(),
+        { useCurrentTime: r } = (0, A.T)(),
         { updateTextTrackData: s } = (0, eb.fn)(),
         o = r(),
         { text: c, position: u, style: d } = t.data,
@@ -869,11 +869,11 @@ function eN(e) {
 }
 var eE = l(164636),
     ew = l(461150),
-    eA = l(782134),
-    eI = l(113494),
+    eI = l(782134),
+    eA = l(113494),
     eR = l(898196),
-    eS = l(559106),
-    eL = l(765671),
+    eL = l(559106),
+    eS = l(765671),
     eT = l(531685);
 (l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162));
 var eM = l(646514),
@@ -884,7 +884,7 @@ let e_ = new Map(),
     ez = a.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: r, className: s, alwaysRenderContainer: o = !1 } = e,
             c = a.useRef(null),
-            { ref: u, width: d, height: m } = (0, eL.Ay)(),
+            { ref: u, width: d, height: m } = (0, eS.Ay)(),
             [f, h] = a.useState(null),
             v = (0, eD.r)(eM.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (a.useEffect(
@@ -966,8 +966,8 @@ let e_ = new Map(),
                   }),
               });
     });
-var e$ = l(683063),
-    eU = l(565645),
+var eU = l(683063),
+    e$ = l(565645),
     eG = l(562153),
     eV = l(608333),
     eB = l(931540);
@@ -979,7 +979,7 @@ function eH(e) {
 }
 function eF(e) {
     let { icon: t, title: l, body: a, position: i, compact: r } = e;
-    return (0, n.jsx)(e$.u, {
+    return (0, n.jsx)(eU.u, {
         title: l,
         body: a,
         position: "top",
@@ -997,14 +997,14 @@ function eK(e) {
         o = (0, eG.tx)(a, null, s);
     return null == l.emojiId && null == l.emojiName
         ? (0, n.jsx)(eF, { icon: t, title: l.name, body: o, position: i, compact: r })
-        : (0, n.jsx)(e$.u, {
+        : (0, n.jsx)(eU.u, {
               title: l.name,
               body: o,
               position: "top",
               children: (0, n.jsx)("div", {
                   className: p()(eB.H, { [eB.c]: r }),
                   style: { left: `${i}%` },
-                  children: (0, n.jsx)(eU.A, {
+                  children: (0, n.jsx)(e$.A, {
                       emojiId: l.emojiId ?? null,
                       emojiName: l.emojiName ?? null,
                       animated: l.emojiAnimated,
@@ -1274,17 +1274,17 @@ function e0(e) {
             [r, o, c, m],
         ),
         w = 0 === c ? 0 : (r / c) * 100,
-        A = 0 === c ? 0 : ((o - r) / c) * 100;
+        I = 0 === c ? 0 : ((o - r) / c) * 100;
     return (0, n.jsx)("div", {
         className: eJ.nM,
         children: (0, n.jsxs)("div", {
             ref: f,
             className: eJ.hz,
             children: [
-                (0, n.jsx)(eS.vN, {
+                (0, n.jsx)(eL.vN, {
                     children: (0, n.jsx)(s.D, {
                         className: p()(eJ.u4, { [eJ.jX]: u }),
-                        style: { left: `${w}%`, width: `${A}%`, backgroundColor: i },
+                        style: { left: `${w}%`, width: `${I}%`, backgroundColor: i },
                         onMouseDown: C("move"),
                         onKeyDown: k,
                         "aria-label": t,
@@ -1299,7 +1299,7 @@ function e0(e) {
                         }),
                     }),
                 }),
-                (0, n.jsx)(eS.vN, {
+                (0, n.jsx)(eL.vN, {
                     children: (0, n.jsx)("button", {
                         className: eJ.YQ,
                         style: { left: `${w}%` },
@@ -1314,10 +1314,10 @@ function e0(e) {
                         children: (0, n.jsx)("div", { className: eJ.gt }),
                     }),
                 }),
-                (0, n.jsx)(eS.vN, {
+                (0, n.jsx)(eL.vN, {
                     children: (0, n.jsx)("button", {
                         className: eJ.JZ,
-                        style: { left: `${w + A}%` },
+                        style: { left: `${w + I}%` },
                         onMouseDown: C("end"),
                         onKeyDown: E,
                         role: "slider",
@@ -1333,7 +1333,7 @@ function e0(e) {
         }),
     });
 }
-var e1 = l(302034),
+var e1 = l(230972),
     e5 = l(503535);
 function e3(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
@@ -1366,12 +1366,12 @@ function e6(e) {
             clip: b,
             generateThumbnails: j,
             videoDimensions: y,
-        } = (0, I.T)(),
+        } = (0, A.T)(),
         { tracks: C, selectedTrackId: k, setSelectedTrackId: N, updateTrackRange: E } = (0, eb.fn)(),
         w = i(),
-        [A, R] = a.useState(null),
-        S = a.useRef(null),
+        [I, R] = a.useState(null),
         L = a.useRef(null),
+        S = a.useRef(null),
         [M, D] = a.useState(!1),
         [O, P] = a.useState(null);
     a.useEffect(
@@ -1383,7 +1383,7 @@ function e6(e) {
             }),
         [x],
     );
-    let { ref: _, width: z = 0, height: $ = 0 } = (0, eL.Ay)(),
+    let { ref: _, width: z = 0, height: U = 0 } = (0, eS.Ay)(),
         G = (0, eE.bG)([eT.A], () => eT.A.windowSize()),
         V = a.useRef(null),
         B = a.useCallback(() => {
@@ -1402,16 +1402,16 @@ function e6(e) {
                 if (null == r || null == O) return;
                 let l = (((0, v.clamp)(e, O.left, O.right) - O.left) / O.width) * r,
                     n = (0, v.clamp)(l, 0, r),
-                    a = A;
+                    a = I;
                 (null == a && t && ((a = "playhead"), s && (h(), D(!0)), R(a)),
                     "start" === a ? d(n) : "end" === a ? m(n) : "playhead" === a && g((0, v.clamp)(n, o, c)));
             },
-            [r, O, A, o, c, s, h, d, m, g],
+            [r, O, I, o, c, s, h, d, m, g],
         ),
         F = a.useCallback(
             (e) => {
                 if (null == r) return;
-                let t = U(r, e.shiftKey),
+                let t = $(r, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -1427,7 +1427,7 @@ function e6(e) {
         K = a.useCallback(
             (e) => {
                 if (null == r) return;
-                let t = U(r, e.shiftKey),
+                let t = $(r, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -1473,23 +1473,23 @@ function e6(e) {
     );
     let { numberOfPreviews: J, timelinePreviewWidth: ee } = a.useMemo(() => {
         if (null == y) return { numberOfPreviews: 0, timelinePreviewWidth: 0 };
-        let e = Math.ceil($ * (y.width / y.height));
+        let e = Math.ceil(U * (y.width / y.height));
         return { numberOfPreviews: Math.ceil(z / e), timelinePreviewWidth: e };
-    }, [$, z, y]);
+    }, [U, z, y]);
     a.useEffect(() => {
         if (0 === J || 0 === ee) return;
         let e = _.current;
         if (null == e) return;
-        ((e.height = $), (e.width = z));
+        ((e.height = U), (e.width = z));
         let t = e.getContext("2d");
         if (null == t) return;
-        ((t.fillStyle = "transparent"), t.fillRect(0, 0, z, $));
+        ((t.fillStyle = "transparent"), t.fillRect(0, 0, z, U));
         let l = [];
         for (let e = 0; e < J; e++) l.push((ee / z) * r * e);
-        return j(l, ee, $, (e) => {
-            for (let l = 0; l < e.length; l++) (t.drawImage(e[l], ee * l, 0, ee, $), e[l].close());
+        return j(l, ee, U, (e) => {
+            for (let l = 0; l < e.length; l++) (t.drawImage(e[l], ee * l, 0, ee, U), e[l].close());
         });
-    }, [$, _, r, J, ee, j, z]);
+    }, [U, _, r, J, ee, j, z]);
     let et = w - o,
         el = a.useCallback(() => {
             g(Math.max(o, w - 10));
@@ -1515,7 +1515,7 @@ function e6(e) {
                     (0, n.jsx)("div", {
                         className: e5.k2,
                         children: (0, n.jsx)("div", {
-                            ref: L,
+                            ref: S,
                             className: e5.re,
                             children: (0, n.jsxs)(H.E, {
                                 variant: "body-xs/medium",
@@ -1541,7 +1541,7 @@ function e6(e) {
                             }),
                             (0, n.jsx)(W.K, {
                                 size: "sm",
-                                icon: s ? eI.PauseIcon : eA.PlayIcon,
+                                icon: s ? eA.PauseIcon : eI.PlayIcon,
                                 onClick: ea,
                                 "aria-label": es.intl.string(s ? es.t.ZcgDJX : es.t.RscU7I),
                                 variant: "icon-only",
@@ -1578,14 +1578,14 @@ function e6(e) {
                                 (0, n.jsx)("div", {
                                     className: e5.PH,
                                     children: (0, n.jsxs)("div", {
-                                        className: p()(e5.IO, { [e5.Dg]: null != A }),
+                                        className: p()(e5.IO, { [e5.Dg]: null != I }),
                                         onMouseDown: Y,
                                         children: [
                                             (0, n.jsx)("canvas", { className: e5.Ay, ref: _ }),
-                                            (0, n.jsx)(eS.vN, {
+                                            (0, n.jsx)(eL.vN, {
                                                 children: (0, n.jsx)("div", {
                                                     tabIndex: 0,
-                                                    ref: S,
+                                                    ref: L,
                                                     className: e5.lG,
                                                     children: (0, n.jsx)("svg", {
                                                         className: e5.$6,
@@ -1609,7 +1609,7 @@ function e6(e) {
                                                     right: null != r ? `${((r - c) / r) * 100}%` : "0",
                                                 },
                                                 children: [
-                                                    (0, n.jsx)(eS.vN, {
+                                                    (0, n.jsx)(eL.vN, {
                                                         children: (0, n.jsxs)("button", {
                                                             className: e5.uI,
                                                             onMouseDown: Z("start"),
@@ -1642,7 +1642,7 @@ function e6(e) {
                                                             ],
                                                         }),
                                                     }),
-                                                    (0, n.jsx)(eS.vN, {
+                                                    (0, n.jsx)(eL.vN, {
                                                         children: (0, n.jsxs)("button", {
                                                             className: e5.H1,
                                                             onMouseDown: Z("end"),
@@ -1735,12 +1735,12 @@ function e2(e) {
             activeTool: b,
             cropPreset: j,
             videoDimensions: y,
-        } = (0, I.T)(),
+        } = (0, A.T)(),
         { analyticsLocations: C } = (0, c.Ay)(o.A.CLIPS_EDITOR),
         { tracks: k, selectedTrackId: N, setSelectedTrackId: E, removeTrack: w } = (0, eb.fn)(),
-        A = g.type === T.nQ.SCREENSHOT;
+        I = g.type === T.nQ.SCREENSHOT;
     a.useEffect(() => {
-        if (!A) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
+        if (!I) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         function e(e) {
             if ((0, i.Cw)(document.activeElement)) return;
             if ("Delete" === e.key) {
@@ -1751,7 +1751,7 @@ function e2(e) {
             if (null == t) return;
             let l = p.current?.videoElement;
             if (null == l) return;
-            let n = U(l.duration, e.shiftKey),
+            let n = $(l.duration, e.shiftKey),
                 a = !1;
             switch (e.key) {
                 case " ":
@@ -1765,9 +1765,9 @@ function e2(e) {
             }
             a && (e.stopPropagation(), e.preventDefault());
         }
-    }, [p, A, g.type, m, h, N, w]);
+    }, [p, I, g.type, m, h, N, w]);
     let R = a.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
-        S = a.useCallback(() => {
+        L = a.useCallback(() => {
             (0, u.R)(
                 {
                     items: [{ type: "IMAGE", url: g.thumbnail, proxyUrl: g.thumbnail, alt: g.name ?? "" }],
@@ -1777,7 +1777,7 @@ function e2(e) {
                 "stack",
             );
         }, [g.thumbnail, g.name]);
-    if (A)
+    if (I)
         return (0, n.jsxs)("div", {
             className: ed.OJ,
             children: [
@@ -1791,7 +1791,7 @@ function e2(e) {
                                   className: M.zT,
                                   children: (0, n.jsx)(s.D, {
                                       className: M.xS,
-                                      onClick: S,
+                                      onClick: L,
                                       children: (0, n.jsx)("img", {
                                           className: M.V_,
                                           src: g.thumbnail,
@@ -1803,7 +1803,7 @@ function e2(e) {
                       }),
             ],
         });
-    let L = null == v || t !== r.ip.ENTERED,
+    let S = null == v || t !== r.ip.ENTERED,
         D = g.type === T.nQ.VOICE_CLIP,
         O = b === d.Y.CROP,
         P = null != y ? y.width / y.height : null,
@@ -1843,14 +1843,14 @@ function e2(e) {
                     (0, n.jsx)(V, {}),
                     (0, n.jsx)("div", {
                         className: ed.zT,
-                        children: L
+                        children: S
                             ? (0, n.jsx)(f, {})
                             : (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(eu, { onBack: l }),
                                       (0, n.jsx)("div", {
                                           className: ed.x3,
-                                          children: (0, n.jsx)($, {
+                                          children: (0, n.jsx)(U, {
                                               ref: p,
                                               cropFraming: !D,
                                               frameAspectRatio: _,

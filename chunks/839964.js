@@ -84,7 +84,7 @@ function ed(e) {
     });
 }
 var ex = n(652215),
-    eh = n(820249),
+    eh = n(229595),
     ef = n(792996),
     em = n(788868);
 let eg = "Friends Sidebar Add Friend Popout";

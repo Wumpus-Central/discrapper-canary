@@ -1,7 +1,7 @@
 var n = l(477900),
     a = l(582128),
-    r = l(189213),
-    i = l(858899),
+    i = l(189213),
+    r = l(858899),
     s = l(192308),
     u = l(331322),
     o = l(691885),
@@ -9,7 +9,7 @@ var n = l(477900),
     c = l(777847),
     f = l(125372),
     m = l(653036),
-    g = l(191850),
+    g = l(258576),
     p = l(792996);
 function h(e) {
     let { projectId: t, transitionState: l, onClose: h } = e,
@@ -25,7 +25,7 @@ function h(e) {
                 })),
             [y],
         );
-    return (0, n.jsx)(r.a, {
+    return (0, n.jsx)(i.a, {
         transitionState: l,
         onClose: h,
         title: p.intl.formatToPlainString(b ? g.default.M4jq44 : g.default.PE4egI, { app: x }),
@@ -39,7 +39,7 @@ function h(e) {
                     let e = await v.submit();
                     null != e &&
                         null != j &&
-                        ((0, i.P0)({ text: e, variant: "success" }),
+                        ((0, r.P0)({ text: e, variant: "success" }),
                         (0, s.s7)(),
                         (0, c.n0)(t, x, { kind: "server", guildId: j.id, name: j.name }));
                 },
