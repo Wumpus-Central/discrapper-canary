@@ -914,13 +914,13 @@ var eR = n(46653),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "681769",
-        r = "8ad6450a88be6082ee0edba89302f98860252aba".substring(0, 7),
+        n = "681776",
+        r = "8fda3067e8e50a4b31be52b29a5224524198e49b".substring(0, 7),
         i = eU.A?.app.getVersion(),
         s = eU.A?.app.getBuildNumber(),
         o = eU.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != c ? (0, eZ.A)("1795826352561", !1) : null,
+        u = null != c ? (0, eZ.A)("1795830032956", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         h = (function () {
             let e = eX()?.os?.toString();
@@ -1086,9 +1086,9 @@ function e5() {
     });
 }
 var e2 = n(402651),
-    e6 = n(669067),
-    e8 = n(830543),
-    e3 = n(953056);
+    e3 = n(669067),
+    e6 = n(830543),
+    e8 = n(953056);
 let e9 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
     e4 = new Map([[eD.X.SESSIONS_PANEL, i.ImpressionNames.USER_SETTINGS_SESSIONS]]);
 function e7(e) {
@@ -1100,7 +1100,7 @@ function e7(e) {
         [m, g] = r.useState(!1);
     return (r.useLayoutEffect(() => {
         function e() {
-            null == ew.default.getCurrentUser() && (g(!0), (0, e8.default)());
+            null == ew.default.getCurrentUser() && (g(!0), (0, e6.default)());
         }
         return (
             eR.default.addChangeListener(e),
@@ -1117,7 +1117,7 @@ function e7(e) {
               emptyState: tt,
               sidebarFooter: e5,
               onViewChange: function (e) {
-                  e9.has(e) || (0, e6._)(e);
+                  e9.has(e) || (0, e3._)(e);
                   let t = e4.get(e);
                   (null != t &&
                       (0, c.x)({
@@ -1156,14 +1156,14 @@ function te() {
             [],
         ),
         (0, l.jsx)("div", {
-            className: e3.P,
+            className: e8.P,
             children: (0, l.jsx)(s.I, { size: "md", query: e, onFocus: n, onBlur: i, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, l.jsxs)("div", {
-        className: e3.t,
+        className: e8.t,
         children: [
             (0, l.jsx)(a.E, { variant: "body-sm/semibold", color: "text-strong", children: F.intl.string(F.t.zihbmv) }),
             (0, l.jsx)(a.E, { variant: "body-sm/normal", color: "text-subtle", children: F.intl.string(F.t.XclvsB) }),
